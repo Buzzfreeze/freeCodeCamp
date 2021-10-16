@@ -92,6 +92,13 @@
           ""
         ]
       },
+      "registration-form": {
+        "title": "Registration Form",
+        "intro": [
+          "",
+          ""
+        ]
+      },
       "accessibility-quiz": {
         "title": "Teste de acessibilidade",
         "intro": [
