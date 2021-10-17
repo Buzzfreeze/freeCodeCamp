@@ -15,7 +15,8 @@ const availableLangs = {
     'chinese',
     'chinese-traditional',
     'italian',
-    'portuguese'
+    'portuguese',
+    'thai'
   ],
   curriculum: [
     'english',
@@ -23,7 +24,8 @@ const availableLangs = {
     'chinese',
     'chinese-traditional',
     'italian',
-    'portuguese'
+    'portuguese',
+    'thai'
   ]
 };
 
@@ -78,6 +80,18 @@ const auditedCerts = {
     'machine-learning-with-python'
   ],
   portuguese: [
+    'responsive-web-design',
+    'javascript-algorithms-and-data-structures',
+    'front-end-development-libraries',
+    'data-visualization',
+    'back-end-development-and-apis',
+    'quality-assurance',
+    'scientific-computing-with-python',
+    'data-analysis-with-python',
+    'information-security',
+    'machine-learning-with-python'
+  ],
+  thai: [
     'responsive-web-design',
     'javascript-algorithms-and-data-structures',
     'front-end-development-libraries',
