@@ -14,14 +14,14 @@ dashedName: loading-data-and-advanced-indexing
 
 ## --text--
 
-Given a file named `data.txt` with these contents:
+กำหนดไฟล์ชื่อ `data.txt` พร้อมเนื้อหาเหล่านี้: 
 
 <pre>
 29,97,32,100,45
 15,88,5,75,22
 </pre>
 
-What code would produce the following array?
+code ใดที่จะสร้าง array ต่อไปนี้?
 
 ```py
 [29. 32. 45. 15.  5. 22.]

@@ -14,7 +14,7 @@ dashedName: basics-of-numpy
 
 ## --text--
 
-What will the following code print?
+ผลลัพธ์จะเกิดอะไรขึ้น เมื่อ code ทำการ print ออกมา?
 
 ```python
 b = np.array([[1.0,2.0,3.0],[3.0,4.0,5.0]])

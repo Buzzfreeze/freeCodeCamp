@@ -12,7 +12,7 @@ dashedName: introduction-to-data-analysis
 
 # --description--
 
-More resources:
+แหล่งเรียนรู้เพิ่มเติม:
 
 \- [Slides](https://docs.google.com/presentation/d/1cUIt8b2ySz-85_ykfeuuWsurccwTAuFPn782pZBzFsU/edit?usp=sharing)
 
@@ -20,23 +20,23 @@ More resources:
 
 ## --text--
 
-Which of the following is **not** part of Data Analysis?
+ข้อไหน** ไม่ใช่** เป็นส่วนหนึ่งของงานด้าน Data Analysis?
 
 ## --answers--
 
-Building statistical models and data visualizations.
+การสร้าง Model ทางสถิติ และการทำ data visualization
 
 ---
 
-Picking a desired conclusion for the analysis.
+การเลือกข้อสรุปที่ต้องการสำหรับการวิเคราะห์ 
 
 ---
 
-Fixing incorrect values and removing invalid data.
+แก้ไขค่าที่ไม่ถูกต้องและลบข้อมูลที่ไม่ถูกต้อง 
 
 ---
 
-Transforming data into an appropriate data structure.
+แปลงข้อมูลให้เป็นโครงสร้างข้อมูลที่เหมาะสม 
 
 ## --video-solution--
 

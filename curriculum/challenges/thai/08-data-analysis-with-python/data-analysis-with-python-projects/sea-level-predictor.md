@@ -8,17 +8,17 @@ dashedName: sea-level-predictor
 
 # --description--
 
-In this project, you will analyze a dataset of the global average sea level change since 1880. You will use the data to predict the sea level change through year 2050.
+ใน project นี้ ผู้เรียนจะวิเคราะห์ชุดข้อมูลการเปลี่ยนแปลงระดับน้ำทะเลเฉลี่ยทั่วโลกตั้งแต่ปี 1880 และผู้เรียนจะใช้ข้อมูลดังกล่าว เพื่อคาดการณ์การเปลี่ยนแปลงระดับน้ำทะเลตลอดปี 2050 
 
-You can access [the full project description and starter code on Replit](https://replit.com/github/freeCodeCamp/boilerplate-sea-level-predictor).
+ผู้เรียนสามารถเข้าถึงข้อมูล [คำอธิบาย Project และ code เริ่มต้น สามารถดูได้บน Replit ](https://replit.com/github/freeCodeCamp/boilerplate-sea-level-predictor)
 
-After going to that link, fork the project. Once you complete the project based on the instructions in 'README.md', submit your project link below.
+หลังจากไปที่ลิงก์นั้นแล้ว ให้แยก Project ออก เมื่อผู้เรียนทำโปรเจ็กต์ตามคำแนะนำใน 'README.md' เสร็จแล้ว ให้ส่งลิงค์ Project ของผู้เรียนไว้ด้านล่าง
 
-We are still developing the interactive instructional part of the data analysis with Python curriculum. For now, you will have to use other resources to learn how to pass this challenge.
+เรายังคงพัฒนาส่วนการสอนแบบ interactive ของการวิเคราะห์ข้อมูลในหลักสูตร Python สำหรับตอนนี้ ผู้เรียนจะต้องใช้แหล่งเรียนรู้อื่นๆ เพื่อเรียนรู้วิธีผ่านการทดสอบ challenge นี้ 
 
 # --hints--
 
-It should pass all Python tests.
+ควรผ่านการทดสอบ Python ทั้งหมด 
 
 ```js
 

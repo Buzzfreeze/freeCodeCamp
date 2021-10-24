@@ -12,9 +12,9 @@ dashedName: python-introduction
 
 # --description--
 
-*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
+*ผู้เรียนสามารถใช้ Google Colab แทน notebooks.ai ที่สาธิตใน Videoได้*
 
-More resources:
+แหล่งเรียนรู้เพิ่มเติม:
 
 -   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/ds-content-python-under-10-minutes)
 -   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
@@ -23,23 +23,23 @@ More resources:
 
 ## --text--
 
-How do we define blocks of code in the body of functions in Python?
+เราสามารถระบุบล็อกของ code (blocks of code) ของ function ใน Python ได้อย่างไร? 
 
 ## --answers--
 
-We use a set of curly braces, one on either side of each new block of our code.
+เราใช้วงเล็บปีกกา (curly braces) เปิด-ปิด โดยด้านใดด้านหนึ่งของแต่ละบล็อกใหม่ของ code เรา
 
 ---
 
-We use indentation, usually right-aligned 4 spaces.
+เราเคาะเยื้องบรรทัด (tab) ซึ่งเท่ากับการเคาะ Space bar 4 ครั้ง
 
 ---
 
-We do not denote blocks of code.
+เราไม่ได้ประกาศบล็อกของ code
 
 ---
 
-We could use curly braces or indentation to denote blocks of code.
+เราสามารถใช้วงเล็บปีกกา (curly braces) หรือการเยื้องบรรทัด (tab) เพื่อประกาศบล็อกใหม่ของ code ได้
 
 ## --video-solution--
 
