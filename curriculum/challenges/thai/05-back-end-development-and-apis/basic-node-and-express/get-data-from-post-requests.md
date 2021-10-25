@@ -8,27 +8,28 @@ dashedName: get-data-from-post-requests
 
 # --description--
 
-Mount a POST handler at the path `/name`. It’s the same path as before. We have prepared a form in the html frontpage. It will submit the same data of exercise 10 (Query string). If the body-parser is configured correctly, you should find the parameters in the object `req.body`. Have a look at the usual library example:
+เชื่อมต่อตัวจัดการโพสต์ที่เส้นทาง `/name` ซึ่งเป็นเส้นทางเดียวกับอันก่อน พวกเราเตรียมแบบฟอร์มในหน้าเพจ HTML โดยจะส่งดาต้าที่เหมือนกันจำนวน 10 ชุด (Query string) 
+ถ้าหากกำหนดค่าตัวแยกวิเคราะห์เนื้อหาได้อย่างถูกต้อง คุณจะพบพารามิเตอร์ในอ็อบเจ็กต์ `req.body` คุณสามารถดูตัวอย่างจากไลบราลี่ได้ตามนี้:
 
 <blockquote>route: POST '/library'<br>urlencoded_body: userId=546&#x26;bookId=6754 <br>req.body: {userId: '546', bookId: '6754'}</blockquote>
 
-Respond with the same JSON object as before: `{name: 'firstname lastname'}`. Test if your endpoint works using the html form we provided in the app frontpage.
+ตอบสนองต่ออ็อบเจ็กท์ของ JSON ซึ่งเป็นเดียวกันกับอันก่อนด้วย `{name: 'firstname lastname'}` ในทดสอบ จุดปลายทางของคุณทำงานต้องด้วยรูปแบบ html ที่พวกเราให้ไว้ในหน้าแรกของแอปด้วย
 
-Tip: There are several other http methods other than GET and POST. And by convention there is a correspondence between the http verb, and the operation you are going to execute on the server. The conventional mapping is:
+ิทิป :  มีวิธีมากมายหลายวิธีเขียน http นอกเหนือจาก GET และ POST แต่ว่าโดยปกติจะมีส่วนที่สอดคล้องกันระหว่าง http และการดำเนินการที่คุณจะต้องดำเนินการบนเซิร์ฟเวอร์ ตามแบบปกติคือ:
 
-POST (sometimes PUT) - Create a new resource using the information sent with the request,
+POST หรือ PUT - สร้างรีซอร์ทใหม่โดยใช้ข้อมูลที่ส่งพร้อมกับคำขอ
 
-GET - Read an existing resource without modifying it,
+GET - อ่านรีซอร์สที่มีอยู่ที่มีอยู่โดยห้ามแก้ไข
 
-PUT or PATCH (sometimes POST) - Update a resource using the data sent,
+PUT หรือ PATCH/POST - อัปเดตรีซอร์ท โดยใช้ข้อมูลที่ส่ง
 
-DELETE => Delete a resource.
+DELETE => ลบข้อมูลในรีซอร์ท.
 
-There are also a couple of other methods which are used to negotiate a connection with the server. Except from GET, all the other methods listed above can have a payload (i.e. the data into the request body). The body-parser middleware works with these methods as well.
+นอกจากนี้ยังมีวิธีอื่นๆ อีกสองสามวิธีที่ใช้ในการเชื่อมต่อกับเซิร์ฟเวอร์ ยกเว้น GET ซึ่งวิธีอื่นๆ ทั้งหมดที่ระบุไว้ข้างต้นสามารถมีเพย์โหลดได้ (ยกตัวอย่างเช่น ดาต้าในรีเควสบอดี้) และมิดเดิลแวร์ส่วน body-parser ก็สามารถทำงานกับวิธีการเหล่านี้เช่นกัน
 
 # --hints--
 
-Test 1 : Your API endpoint should respond with the correct name
+การทดสอบที่ 1 : จุดปลายทาง API ของคุณต้องตอบด้วยชื่อที่ถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -46,7 +47,7 @@ Test 1 : Your API endpoint should respond with the correct name
   );
 ```
 
-Test 2 : Your API endpoint should respond with the correct name
+การทดสอบรอบที่ 2 : จุดปลายทาง API ของคุณต้องตอบด้วยชื่อที่ถูกต้อง
 
 ```js
 (getUserInput) =>

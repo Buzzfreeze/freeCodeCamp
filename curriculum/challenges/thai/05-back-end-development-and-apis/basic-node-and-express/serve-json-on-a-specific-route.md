@@ -8,17 +8,17 @@ dashedName: serve-json-on-a-specific-route
 
 # --description--
 
-While an HTML server serves HTML, an API serves data. A <dfn>REST</dfn> (REpresentational State Transfer) API allows data exchange in a simple way, without the need for clients to know any detail about the server. The client only needs to know where the resource is (the URL), and the action it wants to perform on it (the verb). The GET verb is used when you are fetching some information, without modifying anything. These days, the preferred data format for moving information around the web is JSON. Simply put, JSON is a convenient way to represent a JavaScript object as a string, so it can be easily transmitted.
+แม้ว่าเซิร์ฟเวอร์ HTML จะให้บริการ HTML แต่ว่า API จะให้บริการแค่ข้อมูล คำสั่งนี้ <dfn>REST</dfn> (REpresentational State Transfer) API ช่วยให้การแลกเปลี่ยนข้อมูลง่ายมากขึ้น โดยที่ลูกค้าไม่จำเป็นต้องทราบรายละเอียดใดๆ เกี่ยวกับเซิร์ฟเวอร์เลย ลูกค้าเพียงต้องการทราบแค่ว่ารีซอร์สอยู่ที่ไหน (URL) และการดำเนินการเกิดขึ้นที่ไหน (verb) เราจะใช้ GET verb เมื่อต้องดึงข้อมูลบางอย่างโดยไม่ต้องแก้ไข ปัจจุบันนี้ รูปแบบข้อมูลสำหรับการย้ายข้อมูลในเว็บที่นิยมคือ JSON  หรือพูดง่ายๆ คือ JSON เป็นวิธีที่สะดวกในการแสดงออบเจ็กต์ของ JavaScript เป็นแบบสตริง ดังนั้นจึงสามารถส่งผ่านข้อมูลได้อย่างง่ายดาย
 
-Let's create a simple API by creating a route that responds with JSON at the path `/json`. You can do it as usual, with the `app.get()` method. Inside the route handler, use the method `res.json()`, passing in an object as an argument. This method closes the request-response loop, returning the data. Behind the scenes, it converts a valid JavaScript object into a string, then sets the appropriate headers to tell your browser that you are serving JSON, and sends the data back. A valid object has the usual structure `{key: data}`. `data` can be a number, a string, a nested object or an array. `data` can also be a variable or the result of a function call, in which case it will be evaluated before being converted into a string.
+ต่อมาเรามาสร้าง API อย่างง่าย โดยการสร้างเส้นทางที่ตอบสนองต่อ JSON ด้วยคำสั่ง `/json` ซึ่งคุณสามารถทำได้ตามปกติโดยใช้ `app.get()` ส่วนภายในตัวจัดการเส้นทาง(route handler) ใช้ `res.json()` ส่งผ่านอ็อบเจ็กต์เพื่อเป็นอาร์กิวเมนต์ วิธีนี้ทำให้ปิดลูปการตอบกลับคำขอและการส่งคืนข้อมูล วิธีนี้ทำงานโดย แปลงออบเจ็กต์ JavaScript เป็นสตริง จากนั้นตั้งค่าเฮดเดอร์ที่เหมาะสมเพื่อบอกเบราว์เซอร์ของคุณว่าคุณกำลัทำงานบน JSON อยู่และส่งข้อมูลกลับมา ออบเจ็กต์ที่ถูกต้องจะมีโครงสร้าง `{key: data}` และ`data` เป็นตัวเลข, สตริง, วัตถุที่ซ้อนกัน หรืออาร์เรย์ก็ได้ ซึ่ง `data` ยังสามารถเป็นตัวแปรหรือผลลัพธ์ของการเรียกใช้ฟังก์ชันก็ได้ สำหรับในกรณีนี้ ข้อมูลจะถูกประเมินก่อนที่จะแปลงเป็นสตริง
 
 # --instructions--
 
-Serve the object `{"message": "Hello json"}` as a response, in JSON format, to GET requests to the `/json` route. Then point your browser to `your-app-url/json`, you should see the message on the screen.
+ในการให้บริการอ็อบเจ็กต์ `{"message": "Hello json"}` จะเป็นการตอบกลับในรูปแบบ JSON เพื่อทำการรับคำขอไปยังเส้นทาง `/json` หลังจากนั้นค่อยชี้เบราว์เซอร์ของคุณไปที่ `your-app-url/json` เสร็จแล้ว คุณควรเห็นข้อความปรากฎอยู่บนหน้าจอ
 
 # --hints--
 
-The endpoint `/json` should serve the json object `{"message": "Hello json"}`
+จุดปลายทาง `/json` ควรที่จะให้บริการกับอ็อบเจ็กต์ JSON ตามคำสั่ง `{"message": "Hello json"}`
 
 ```js
 (getUserInput) =>

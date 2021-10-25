@@ -8,17 +8,17 @@ dashedName: request-header-parser-microservice
 
 # --description--
 
-Build a full stack JavaScript app that is functionally similar to this: <https://request-header-parser-microservice.freecodecamp.rocks/>. Working on this project will involve you writing your code using one of the following methods:
+สร้างแอพแบบ full stack ด้วย JavaScript ที่ทำงานคล้ายกับเว็บไซต์ <https://request-header-parser-microservice.freecodecamp.rocks/>  การทำโปรเจคนี้ คุณจะต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งดังต่อไปนี้
 
--   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-headerparser/) and complete your project locally.
--   Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-headerparser) to complete your project.
--   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
+-   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-headerparser/)  ในการทำโปรเจค โดยทำให้เสร็จทีละส่วน
+-   ใช้เว็บไซต์ [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-headerparser)ในการทำโปรเจคให้เสร็จสมบูรณ์
+-   ใช้ตัวสร้างไซต์ที่คุณเลือก ทำโปรเจคให้เสร็จสมบูรณ์ และอย่าลืมรวมไฟล์ทั้งหมดจาก GitHub repo ของคุณด้วย
 
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
+เมื่อคุณทำเสร็จแล้ว ตรวจสอบให้แน่ใจด้วยว่า ไฟล์โปรเจคของคุณอยู่ในสถานะที่ทุกคนสามารถมองเห็นได้(public) หลังจากนั้นส่งลิงก์ URL ไว้ใน `Solution Link` หรือส่งลิงก์ซอร์สโค้ดของโปรเจคไว้ใน `GitHub Link` อีกช่องทางหนึ่งก็ได้
 
 # --hints--
 
-You should provide your own project, not the example URL.
+คุณควรที่จะให้แหล่งโปรเจคของคุณ ไม่ใช่ตัวอย่างจาก URL
 
 ```js
 (getUserInput) => {
@@ -30,7 +30,7 @@ You should provide your own project, not the example URL.
 };
 ```
 
-A request to `/api/whoami` should return a JSON object with your IP address in the `ipaddress` key.
+คำขอ `/api/whoami` ควรคืนค่าอ็อบเจ็กต์ของ JSON พร้อมกับที่อยู่ IP ใน `ipaddress` คีย์
 
 ```js
 (getUserInput) =>
@@ -42,7 +42,7 @@ A request to `/api/whoami` should return a JSON object with your IP address in t
   );
 ```
 
-A request to `/api/whoami` should return a JSON object with your preferred language in the `language` key.
+คำขอ `/api/whoami` ควรคืนค่าอ็อบเจ็กต์ของ JSON พร้อมกับภาษาที่คุณต้องการใน `language` คีย์
 
 ```js
 (getUserInput) =>
@@ -54,7 +54,7 @@ A request to `/api/whoami` should return a JSON object with your preferred langu
   );
 ```
 
-A request to `/api/whoami` should return a JSON object with your software in the `software` key.
+คำขอ `/api/whoami` ควรคืนค่าอ็อบเจ็กต์ของ JSON พร้อมกับซอฟต์แวร์ของคุณใน `software` คีย์
 
 ```js
 (getUserInput) =>

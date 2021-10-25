@@ -8,9 +8,9 @@ dashedName: chain-middleware-to-create-a-time-server
 
 # --description--
 
-Middleware can be mounted at a specific route using `app.METHOD(path, middlewareFunction)`. Middleware can also be chained inside route definition.
+สามารถติดตั้งมิดเดิลแวร์ในเส้นทางที่กำหนดได้โดยการใช้ `app.METHOD(path, MiddlewareFunction)` และมิดเดิลแวร์ยังสามารถถูกเชน(chained) ในการกำหนดเส้นทางอีกด้วย
 
-Look at the following example:
+ดูตามตัวอย่างดังต่อไปนี้ :
 
 ```js
 app.get('/user', function(req, res, next) {
@@ -21,17 +21,17 @@ app.get('/user', function(req, res, next) {
 });
 ```
 
-This approach is useful to split the server operations into smaller units. That leads to a better app structure, and the possibility to reuse code in different places. This approach can also be used to perform some validation on the data. At each point of the middleware stack you can block the execution of the current chain and pass control to functions specifically designed to handle errors. Or you can pass control to the next matching route, to handle special cases. We will see how in the advanced Express section.
+วิธีนี้มีประโยชน์ในการแบ่งการทำงานของเซิร์ฟเวอร์ออกเป็นหน่วยย่อยๆ ซึ่งนำไปสู่โครงสร้างแอปที่ดีขึ้น,ยังเพิ่มความสามารถในการนำโค้ดมาใช้ซ้ำในที่ต่างๆ, วิธีนี้สามารถใช้เพื่อตรวจสอบความถูกต้องของข้อมูลได้ ในแต่ละจุดของมิดเดิลแวร์สแต็ค (middleware stack)นอกจากนี้คุณยังสามารถบล็อกการทำงานของเชนปัจจุบันและผ่านการควบคุมไปยังฟังก์ชันที่ออกแบบเพื่อจัดการกับข้อผิดพลาดโดยเฉพาะ หรือคุณสามารถส่งการควบคุมไปยังเส้นทาง(route)ที่ตรงกันในครั้งถัดไป เพื่อจัดการกับกรณีพิเศษ เราจะพาคุณมาดูกันในส่วน Express ขั้นสูงนี้
 
 # --instructions--
 
-In the route `app.get('/now', ...)` chain a middleware function and the final handler. In the middleware function you should add the current time to the request object in the `req.time` key. You can use `new Date().toString()`. In the handler, respond with a JSON object, taking the structure `{time: req.time}`.
+`app.get('/now', ...)`สามารถโยงกับฟังก์ชันมิดเดิลแวร์และไฟนอลแฮนด์เลอร์(final handler) ได้ ในมิดเดิลแวร์ฟังก์ชัน คุณควรที่จะเพิ่มกระแสเวลา(the current time)เพื่อที่จะขออ็อบเจ็กท์ในคีย์ `req.time` และคุณสามารถใช้ `new Date().toString()` ในตัวแฮนเดอร์ เพื่อตอบสนองต่ออ็อบเจ็กท์ JSON โดยใช้โครงงาน แบบ`{time: req.time}`
 
-**Note:** The test will not pass if you don’t chain the middleware. If you mount the function somewhere else, the test will fail, even if the output result is correct.
+**Note:** การทดสอบจะไม่ผ่าน ถ้าคุณไม่เชื่อมต่อกับมิดเดิ้ลแวร์ และถ้าคุณไม่เชื่อมต่อฟังก์ชันกับซอร์ฟแวร์ที่ไหนสักที่ การทดสอบจะล้มเหลว ถึงแม่ว่าผลลัพธ์จะถูกต้องแล้วก็ตาม
 
 # --hints--
 
-The /now endpoint should have mounted middleware
+ณ จุดปลายทาง /now ควรที่จะเชื่อมต่อกับมิดเดิ้ลแวร์ด้วย
 
 ```js
 (getUserInput) =>
@@ -49,7 +49,7 @@ The /now endpoint should have mounted middleware
   );
 ```
 
-The /now endpoint should return a time that is +/- 20 secs from now
+ณ จุดปลายทาง /now ควรที่จะเผื่อเวลาในการส่งค่าคืน +- 20 วินาทีจากตอนที่ส่ง
 
 ```js
 (getUserInput) =>

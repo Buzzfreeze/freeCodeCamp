@@ -8,11 +8,12 @@ dashedName: create-and-save-a-record-of-a-model
 
 # --description--
 
-In this challenge you will have to create and save a record of a model.
+ในโจทย์นี้ คุณจะต้องสร้างและบันทึกข้อมูลของโมเดลให้ได้
 
 # --instructions--
 
-Within the `createAndSavePerson` function, create a document instance using the `Person` model constructor you built before. Pass to the constructor an object having the fields `name`, `age`, and `favoriteFoods`. Their types must conform to the ones in the `personSchema`. Then, call the method `document.save()` on the returned document instance. Pass to it a callback using the Node convention. This is a common pattern; all the following CRUD methods take a callback function like this as the last argument.
+ภายในฟังก์ชัน `createAndSavePerson` ให้สร้างตัวอย่างเอกสารโดยใช้ตัวสร้างโมเดล `Person` ที่คุณสร้างไว้ก่อนหน้านี้ ส่งผ่านอ็อบเจ็กท์ `name`, `age`, และ `favoriteFoods`  ประเภทเหล่านี้ต้องสอดคล้องกับ `personSchema` จากนั้นเรียก `document.save()` บนตัวอย่างเอกสารที่ส่งคืน โดยส่งการเรียกกลับให้ใช้ Node 
+นี่เป็นรูปแบบทั่วไปของวิธี CRUD โดยต่อไปนี้ทั้งหมดจะใช้ฟังก์ชันเรียกกลับเป็นอาร์กิวเมนต์สุดท้าย
 
 ```js
 /* Example */
@@ -25,7 +26,7 @@ person.save(function(err, data) {
 
 # --hints--
 
-Creating and saving a db item should succeed
+การสร้างและการบันทึกใน db ควรที่จะสำเร็จ
 
 ```js
 (getUserInput) =>

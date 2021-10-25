@@ -8,9 +8,9 @@ dashedName: use-the-tilde-character-to-always-use-the-latest-patch-version-of-a-
 
 # --description--
 
-In the last challenge, you told npm to only include a specific version of a package. That’s a useful way to freeze your dependencies if you need to make sure that different parts of your project stay compatible with each other. But in most use cases, you don’t want to miss bug fixes since they often include important security patches and (hopefully) don’t break things in doing so.
+ในโจทย์ท้าทายล่าสุด คุณให้ npm รวมเวอร์ชันเฉพาะของแพ็คเกจเท่านั้น ซึ่งนั่นเป็นวิธีที่มีดีในการหยุด dependencies สำหรับการที่คุณต้องการให้ส่วนต่างๆ ของโปรเจคของคุณยังคงทำงานร่วมกันได้ แต่ส่วนใหญ่ที่ใช้กัน ไม่อยากแก้ไขข้อบกพร่องกัน เนื่องจากมักจะมีแพตช์ความปลอดภัยที่สำคัญ และ (หวังว่า) จะไม่ทำลายสิ่งต่างๆ ในการทำแบบนั้น
 
-To allow an npm dependency to update to the latest PATCH version, you can prefix the dependency’s version with the tilde (`~`) character. Here's an example of how to allow updates to any 1.3.x version.
+หากต้องการให้ npm dependency อัปเดตเป็น PATCH เวอร์ชันล่าสุด คุณควรใช้เครื่องหมายตัวหนอน (`~`) เป็นตัวนำหน้าเวอร์ชัน dependency ตัวอย่างวิธีการอัปเดตเวอร์ชัน 1.3.x ใดๆ
 
 ```json
 "package": "~1.3.8"
@@ -18,15 +18,15 @@ To allow an npm dependency to update to the latest PATCH version, you can prefix
 
 # --instructions--
 
-In the package.json file, your current rule for how npm may upgrade moment is to use a specific version (2.10.2). But now, you want to allow the latest 2.10.x version.
+ในไฟล์ package.json บังคับให้ใช้วิธีที่ npm อัปเกรด moment เฉพาะเวอร์ชั่นเท่านั้น คือการใช้เวอร์ชันเฉพาะ (2.10.2) แต่ตอนนี้ คุณแค่ต้องการอัพเดตให้เป็นเวอร์ชัน 2.10.x ล่าสุด
 
-Use the tilde (`~`) character to prefix the version of moment in your dependencies, and allow npm to update it to any new PATCH release.
+ใช้เครื่องหมายตัวหนอน (`~`) เพื่อนำหน้าเวอร์ชันของ moment ใน dependencies ของคุณและอนุญาตให้ npm อัปเดตเป็น PATCH รุ่นใหม่ล่าสุด
 
-**Note:** The version numbers themselves should not be changed.
+**Note:** คุณไม่ควรเปลี่ยนหมายเลขเวอร์ชันด้วยตนเอง!
 
 # --hints--
 
-"dependencies" should include "moment"
+"dependencies" ควรรวมอยู่ใน "moment"
 
 ```js
 (getUserInput) =>
@@ -45,7 +45,7 @@ Use the tilde (`~`) character to prefix the version of moment in your dependenci
   );
 ```
 
-"moment" version should match "~2.10.2"
+"moment" ควรที่จะแมชท์กับเวอร์ชั่น "~2.10.2"
 
 ```js
 (getUserInput) =>

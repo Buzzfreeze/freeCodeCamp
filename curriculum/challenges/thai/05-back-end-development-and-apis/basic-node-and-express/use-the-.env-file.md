@@ -8,23 +8,28 @@ dashedName: use-the--env-file
 
 # --description--
 
-The `.env` file is a hidden file that is used to pass environment variables to your application. This file is secret, no one but you can access it, and it can be used to store data that you want to keep private or hidden. For example, you can store API keys from external services or your database URI. You can also use it to store configuration options. By setting configuration options, you can change the behavior of your application, without the need to rewrite some code.
+ไฟล์ `.env` เป็นไฟล์ลับ ที่ใช้ในการส่งผ่านตัวแปรสภาพแวดล้อม(environment variable)ไปยังแอปพลิเคชันของคุณ ซึ่งไฟล์ลับนี้ ไม่มีใครสามารถเข้าถึงได้นอกจากตัวคุณ เองและมันยังสามารถใช้ในการจัดเก็บข้อมูลส่วนตัวหรือซ่อนไว้ของคุณได้อีกด้วย ตัวอย่างเช่น คุณสามารถจัดเก็บคีย์ API จากการทำงานภายนอกหรือ URI ของฐานข้อมูลของคุณ คุณยังสามารถใช้เพื่อจัดเก็บองค์ประกอบตัวเลือกได้อีกด้วย ด้วยการตั้งค่าองค์ประกอบตัวเลือก คุณสามารถเปลี่ยนลักษณะการทำงานของแอปพลิเคชันได้ โดยไม่ต้องเขียนโค้ดใหม่
 
-The environment variables are accessible from the app as `process.env.VAR_NAME`. The `process.env` object is a global Node object, and variables are passed as strings. By convention, the variable names are all uppercase, with words separated by an underscore. The `.env` is a shell file, so you don’t need to wrap names or values in quotes. It is also important to note that there cannot be space around the equals sign when you are assigning values to your variables, e.g. `VAR_NAME=value`. Usually, you will put each variable definition on a separate line.
+
+ตัวแปรสภาพแวดล้อมสามารถเข้าถึงได้จากแอปในชื่อ `process.env.VAR_NAME` 
+ออบเจ็กต์ `process.env` เป็นอ็อบเจ็กต์ของ NODE และเป็นตัวแปรจะถูกส่งผ่านเป็นสตริง โดยปกติแล้ว ชื่อตัวแปรจะเป็นตัวพิมพ์ใหญ่ทั้งหมดและคั่นด้วยอันเดอร์สกร์อ(_) 
+ไฟล์ `.env` เป็นไฟล์เชลล์ คุณจึงไม่จำเป็นต้องใส่ชื่อหรือเครื่องหมายคำพูด แต่สิ่งสำคัญที่ควรทราบคือต้องไม่มีที่ว่างรอบเครื่องหมายเท่ากับเมื่อคุณกำหนดค่าให้กับตัวแปรของคุณ เช่น `VAR_NAME=value` โดยปกติ คุณจะใส่นิยามของตัวแปรแต่ละตัวในบรรทัดที่แยกจากกัน
 
 # --instructions--
 
-Let's add an environment variable as a configuration option.
+เรามาทำการใส่ตัวแปรสภาพแวดล้อมลงในองค์ประกอบตัวเลือกกัน!
 
-Create a `.env` file in the root of your project directory, and store the variable `MESSAGE_STYLE=uppercase` in it.
+ลองสร้างไฟล์ `.env` ตรงรูธของโปรเจคไดเรกทอรี่ดู แล้วจัดเก็บตัวแปรไว้ใน `MESSAGE_STYLE=uppercase`
 
-Then, in the `/json` GET route handler you created in the last challenge, transform the response object's message to uppercase if `process.env.MESSAGE_STYLE` equals `uppercase`. The response object should either be `{"message": "Hello json"}` or `{"message": "HELLO JSON"}`, depending on the `MESSAGE_STYLE` value.
+จากนั้น ในตัวจัดการเส้นทาง `/json` ของ GET ที่คุณสร้างในโจทย์ท้าทายล่าสุด แปลงข้อความของอ็อบเจ็กต์ตอบกลับเป็นตัวพิมพ์ใหญ่ ถ้า `process.env.MESSAGE_STYLE` เท่ากับ `uppercase` ถ้าเป็นอย่างนั้น ออบเจ็กต์การตอบกลับควรเป็น `{"message": "Hello json"}` หรือ `{"message": "HELLO JSON"}` ทั้งนี้ขึ้นอยู่กับค่า `MESSAGE_STYLE`
 
-**Note:** If you are using Replit, you cannot create a `.env` file. Instead, use the built-in <dfn>SECRETS</dfn> tab to add the variable.
+**Note:** ถ้าคุณใช้ Replit คุณจะไม่สามารถสร้างไฟล์ `.env` ได้ ให้สร้างtab <dfn>SECRETS</dfn> เพื่อเพิ่มตัวแปรแทน
+
+ถ้าคุณกำลังทำงานเฉพาะที่ คุณจำเป็นต้องใช้ `dotenv` มันจะช่วยโหลดตัวแปรสภาพแวดล้อมจากไฟล์ `.env` ไปยัง `process.env` ในการติดตั้งทำได้โดยใช้ `npm install dotenv` หลังจากนั้นใส่ `myApp.js` ที่บนหัวของไฟล์ นำเข้าและโหลดตัวแปรพร้อมกับคำสั่ง `require('dotenv').config()`
 
 # --hints--
 
-The response of the endpoint `/json` should change according to the environment variable `MESSAGE_STYLE`
+การตอบสนองจุดปลายทาง `/json` ควรเปลี่ยนตามตัวแปรสภาพแวดล้อม `MESSAGE_STYLE`
 
 ```js
 (getUserInput) =>

@@ -8,21 +8,22 @@ dashedName: url-shortener-microservice
 
 # --description--
 
-Build a full stack JavaScript app that is functionally similar to this: <https://url-shortener-microservice.freecodecamp.rocks/>. Working on this project will involve you writing your code using one of the following methods:
+สร้างแอพแบบ full stack ด้วย JavaScript ที่ทำงานคล้ายกับเว็บไซต์ <https://url-shortener-microservice.freecodecamp.rocks/>  การทำโปรเจคนี้ คุณจะต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งดังต่อไปนี้
 
--   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-urlshortener/) and complete your project locally.
--   Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-urlshortener) to complete your project.
--   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
+-   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-urlshortener/)  ในการทำโปรเจค โดยทำให้เสร็จทีละส่วน
+-   ใช้เว็บไซต์ [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-urlshortener) ในการทำโปรเจคให้เสร็จสมบูรณ์
+-   ใช้ตัวสร้างไซต์ที่คุณเลือก ทำโปรเจคให้เสร็จสมบูรณ์ และอย่าลืมรวมไฟล์ทั้งหมดจาก GitHub repo ของคุณด้วย
 
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your projects source code in the `GitHub Link` field.
+เมื่อคุณทำเสร็จแล้ว ตรวจสอบให้แน่ใจด้วยว่า ไฟล์โปรเจคของคุณอยู่ในสถานะที่ทุกคนสามารถมองเห็นได้(public) หลังจากนั้นส่งลิงก์ URL ไว้ใน `Solution Link` หรือส่งลิงก์ซอร์สโค้ดของโปรเจคไว้ใน `GitHub Link` อีกช่องทางหนึ่งก็ได้
+
 
 # --instructions--
 
-**HINT:** Do not forget to use a body parsing middleware to handle the POST requests. Also, you can use the function `dns.lookup(host, cb)` from the `dns` core module to verify a submitted URL.
+**HINT:** อย่าลืมใช้มิดเดิลแวร์(middleware) ในการแยกวิเคราะห์เนื้อหาเพื่อจัดการกับคำขอของ POST และคุณควรจะใช้ฟังก์ชัน `dns.lookup(host, cb)` จากคอร์โมดูล (core module) เพื่อยืนยัน URL ที่ส่งมา
 
 # --hints--
 
-You should provide your own project, not the example URL.
+คุณควรที่จะให้แหล่งโปรเจคของคุณ ไม่ใช่ตัวอย่างจาก URL
 
 ```js
 (getUserInput) => {
@@ -34,7 +35,7 @@ You should provide your own project, not the example URL.
 };
 ```
 
-You can POST a URL to `/api/shorturl` and get a JSON response with `original_url` and `short_url` properties. Here's an example: `{ original_url : 'https://freeCodeCamp.org', short_url : 1}`
+คุณสามารถโพสต์ URL ที่ `/api/shorturl` และรับการตอบสนอง(response)ของ JSON ด้วยคุณสมบัติ `original_url` และ `short_url` , นี่คือตัวอย่าง `{ original_url : 'https://freeCodeCamp.org', short_url : 1}`
 
 ```js
 async (getUserInput) => {
@@ -56,7 +57,7 @@ async (getUserInput) => {
 };
 ```
 
-When you visit `/api/shorturl/<short_url>`, you will be redirected to the original URL.
+ถ้าคุณไปสู่คำสั่ง `/api/shorturl/<short_url>` คุณจะถูกเปลี่ยนเส้นทางไปยัง URL หลัก
 
 ```js
 async (getUserInput) => {
@@ -88,7 +89,7 @@ async (getUserInput) => {
 };
 ```
 
-If you pass an invalid URL that doesn't follow the valid `http://www.example.com` format, the JSON response will contain `{ error: 'invalid url' }`
+ถ้าคุณใส่ URL ที่ไม่ถูกต้องหรือไม่เป็นไปตามรูปแบบของ `http://www.example.com` JSON จะตอบกลับมาว่า  `{ error: 'invalid url' }`
 
 ```js
 async (getUserInput) => {

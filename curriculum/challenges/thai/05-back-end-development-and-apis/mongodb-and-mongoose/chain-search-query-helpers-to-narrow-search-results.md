@@ -8,15 +8,16 @@ dashedName: chain-search-query-helpers-to-narrow-search-results
 
 # --description--
 
-If you don’t pass the callback as the last argument to `Model.find()` (or to the other search methods), the query is not executed. You can store the query in a variable for later use. This kind of object enables you to build up a query using chaining syntax. The actual db search is executed when you finally chain the method `.exec()`. You always need to pass your callback to this last method. There are many query helpers, here we'll use the most commonly used.
+query จะไม่ทำงาน ถ้าหากไม่ส่งการเรียกกลับเป็นอาร์กิวเมนต์ไปยัง `Model.find()` (หรือวิธีการค้นหาอื่นๆ) ซึ่งคุณสามารถจัดเก็บ query ในตัวแปรเพื่อใช้งานในภายหลังได้ ออบเจ็คประเภทนี้ช่วยให้คุณสร้าง query โดยใช้ซินแท็คการโยง(chaining syntax) 
+ในการค้นหา db จะดำเนินการเมื่อคุณเชื่อมโยงกับวิธี `.exec()` คุณต้องส่งการส่งกลับของคุณไปยังวิธีสุดท้ายนี้เสมอ เนื่องจากมีตัวช่วย query จำนวนมาก และยังใช้งานกันมากที่สุดอีกด้วย
 
 # --instructions--
 
-Modify the `queryChain` function to find people who like the food specified by the variable named `foodToSearch`. Sort them by `name`, limit the results to two documents, and hide their age. Chain `.find()`, `.sort()`, `.limit()`, `.select()`, and then `.exec()`. Pass the `done(err, data)` callback to `exec()`.
+แก้ไขฟังก์ชัน `queryChain` เพื่อค้นหาผู้คนที่ชื่นชอบอาหารเป็นอย่างๆ โดยตัวแปรชื่อ `foodToSearch` จัดเรียงตาม `name` และจำกัดผลลัพธ์ไว้ที่เอกสารสองฉบับและซ่อนอายุ เช่น `.find()`, `.sort()`, `.limit()`, `.select()`, `.exec()` ส่งการเรียกกลับด้วย `done(err, data)` ไปที่ `exec()`
 
 # --hints--
 
-Chaining query helpers should succeed
+ตัวช่วย query แบบผูกมัด (chaining) จะช่วยให้สำเร็จมากขึ้น
 
 ```js
 (getUserInput) =>
