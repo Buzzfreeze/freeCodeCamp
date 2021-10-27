@@ -8,23 +8,24 @@ dashedName: add-id-attributes-to-bootstrap-elements
 
 # --description--
 
-Recall that in addition to class attributes, you can give each of your elements an `id` attribute.
+นอกจากการกำหนด class attributes แล้ว เรายังสามารถกำหนด `id` attribute ในแต่ละ element ได้ด้วย
 
-Each id must be unique to a specific element and used only once per page.
+แต่ละชื่อ id จะต้องเป็น id เฉพาะของ element นั้นๆ เลย และใช้กำหนดชื่อ id นั้นได้เพียงครั้งเดียวบนเพจนั้นๆ
 
-Let's give a unique id to each of our `div` elements of class `well`.
+มาลองกำหนด id เฉพาะ ให้กับแต่ละ `div` ที่มี class ชื่อว่า `well` กัน
 
-Remember that you can give an element an id like this:
+ดูตัวอย่างการกำหนด id ให้ element ด้านล่างนี้:
 
 ```html
 <div class="well" id="center-well">
 ```
 
-Give the well on the left the id of `left-well`. Give the well on the right the id of `right-well`.
+ลองกำหนด class well ทางซ้ายให้มี id ชื่อว่า `left-well` และ กำหนด class well ทางขวาให้มี id ชื่อว่า `right-well`
+
 
 # --hints--
 
-Your left `well` should have the id of `left-well`.
+`well` ทางซ้ายมือ จะต้องมี id ชื่อว่า `left-well`
 
 ```js
 assert(
@@ -33,7 +34,7 @@ assert(
 );
 ```
 
-Your right `well` should have the id of `right-well`.
+`well` ทางขวามือ จะต้องมี id ชื่อว่า `right-well`
 
 ```js
 assert(

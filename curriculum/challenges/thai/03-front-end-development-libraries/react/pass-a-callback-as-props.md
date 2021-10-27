@@ -8,17 +8,17 @@ dashedName: pass-a-callback-as-props
 
 # --description--
 
-You can pass `state` as props to child components, but you're not limited to passing data. You can also pass handler functions or any method that's defined on a React component to a child component. This is how you allow child components to interact with their parent components. You pass methods to a child just like a regular prop. It's assigned a name and you have access to that method name under `this.props` in the child component.
+คุณสามารถส่ง `state` เป็น props ไปยัง child component ได้ แต่ไม่จำกัดเพียงแค่การส่งข้อมูลเท่านั้น คุณยังสามารถส่งผ่านฟังก์ชันตัวจัดการหรือ method ใดๆ ที่กำหนดไว้บน React component ไปยัง child component ได้ นี่คือวิธีที่คุณอนุญาตให้ child component โต้ตอบกับ parent component ได้ คุณส่งต่อ method ให้กับ child เหมือนกับ prop ทั่วไป มีการกำหนดชื่อและคุณสามารถเข้าถึงชื่อ method นั้นภายใต้ `this.props` ใน child component
 
 # --instructions--
 
-There are three components outlined in the code editor. The `MyApp` component is the parent that will render the `GetInput` and `RenderInput` child components. Add the `GetInput` component to the render method in `MyApp`, then pass it a prop called `input` assigned to `inputValue` from `MyApp`'s `state`. Also create a prop called `handleChange` and pass the input handler `handleChange` to it.
+มีสามองค์ประกอบที่ระบุไว้ใน code editor ให้ `MyApp` component เป็น parent ที่จะเรนเดอร์ `GetInput` และ `RenderInput` child component เพิ่ม `GetInput` component ให้กับ render method ใน `MyApp` จากนั้นส่ง prop ที่เรียกว่า `input` ให้มันที่กำหนดให้กับ `inputValue` จาก `state` ของ `MyApp` แล้วสร้าง prop ที่เรียกว่า `handleChange` และส่ง input handler 'handleChange' ไปให้
 
-Next, add `RenderInput` to the render method in `MyApp`, then create a prop called `input` and pass the `inputValue` from `state` to it. Once you are finished you will be able to type in the `input` field in the `GetInput` component, which then calls the handler method in its parent via props. This updates the input in the `state` of the parent, which is passed as props to both children. Observe how the data flows between the components and how the single source of truth remains the `state` of the parent component. Admittedly, this example is a bit contrived, but should serve to illustrate how data and callbacks can be passed between React components.
+ถัดไป เพิ่ม 'RenderInput' ให้กับ render method ใน `MyApp` จากนั้นสร้าง prop ที่เรียกว่า `input` และส่ง `inputValue` จาก `state` ไปให้มัน เมื่อคุณทำเสร็จแล้ว คุณจะสามารถพิมพ์ใน `input` field ใน `GetInput` component ซึ่งจะเรียก handler method ใน parent ของมันผ่าน props สิ่งนี้จะอัปเดต input ใน `state` ของ parent ซึ่งส่งผ่านเป็น props ให้กับ child ทั้งสอง สังเกตว่าข้อมูลไหลระหว่าง component อย่างไร และแหล่งที่มาของความจริงเพียงแหล่งเดียวยังคงเป็น "สถานะ" ขององค์ประกอบหลัก ตัวอย่างนี้ค่อนข้างยุ่งยาก แต่ควรทำให้สำเร็จเพื่อแสดงให้เห็นว่าข้อมูลและ callback สามารถส่งผ่านระหว่าง React component ได้อย่างไร
 
 # --hints--
 
-The `MyApp` component should render.
+`MyApp` component ควรจะเรนเดอร์
 
 ```js
 assert(
@@ -29,7 +29,8 @@ assert(
 );
 ```
 
-The `GetInput` component should render.
+`GetInput` component ควรจะเรนเดอร์
+
 
 ```js
 assert(
@@ -40,7 +41,7 @@ assert(
 );
 ```
 
-The `RenderInput` component should render.
+`RenderInput` component ควรจะเรนเดอร์
 
 ```js
 assert(
@@ -51,7 +52,7 @@ assert(
 );
 ```
 
-The `GetInput` component should receive the `MyApp` state property `inputValue` as props and contain an `input` element which modifies `MyApp` state.
+`GetInput` component ควรได้รับ `MyApp` state property `inputValue` เป็น props และ มี `input` element ที่จะปรับแต่ง `MyApp` state
 
 ```js
 async () => {
@@ -74,7 +75,7 @@ async () => {
 };
 ```
 
-The `RenderInput` component should receive the `MyApp` state property `inputValue` as props.
+`RenderInput` component ควรจะได้รับ `MyApp` state property `inputValue` เป็น props
 
 ```js
 async () => {

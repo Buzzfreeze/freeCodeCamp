@@ -8,9 +8,9 @@ dashedName: create-reusable-css-with-mixins
 
 # --description--
 
-In Sass, a <dfn>mixin</dfn> is a group of CSS declarations that can be reused throughout the style sheet.
+ใน Sass <dfn>mixin</dfn> คือกลุ่มของการประกาศ CSS ที่สามารถนำมาใช้ซ้ำได้ตลอดทั้งสไตล์ชีต
 
-Newer CSS features take time before they are fully adopted and ready to use in all browsers. As features are added to browsers, CSS rules using them may need vendor prefixes. Consider `box-shadow`:
+ฟีเจอร์ของ CSS ที่ใหม่กว่าต้องใช้เวลาในการพัฒนาก่อนที่จะนำมาใช้โดยสมบูรณ์และพร้อมใช้งานในทุกเบราว์เซอร์ เมื่อมีการเพิ่มฟีเจอร์ในเบราว์เซอร์ กฎ CSS ที่ใช้ฟีเจอร์เหล่านี้อาจต้องมี vendor prefixes ลองดูโค้ดสำหรับ `box-shadow` ด้านล่าง:
 
 ```scss
 div {
@@ -21,7 +21,7 @@ div {
 }
 ```
 
-It's a lot of typing to re-write this rule for all the elements that have a `box-shadow`, or to change each value to test different effects. Mixins are like functions for CSS. Here is how to write one:
+มันเป็นการพิมพ์ที่เยอะมากสำหรับการเขียนกฎเหล่านี้ใหม่ทุกครั้ง สำหรับ element ทุกตัวที่มี `box-shadow` หรือการที่จะเปลี่ยนค่าแต่ละค่าในการทดสอบเอฟเฟคอื่นๆ ซึ่ง Mixin นั้นเหมือนฟังก์ชันสำหรับ CSS ข้างล่างนี้คือตัวอย่างในการใช้ Mixin:
 
 ```scss
 @mixin box-shadow($x, $y, $blur, $c){ 
@@ -32,7 +32,7 @@ It's a lot of typing to re-write this rule for all the elements that have a `box
 }
 ```
 
-The definition starts with `@mixin` followed by a custom name. The parameters (the `$x`, `$y`, `$blur`, and `$c` in the example above) are optional. Now any time a `box-shadow` rule is needed, only a single line calling the mixin replaces having to type all the vendor prefixes. A mixin is called with the `@include` directive:
+โค้ดนั้นเริ่มด้วย `@mixin` ตามมาด้วยชื่อที่กำหนดเอง ตัวพารามิเตอร์ (`$x`, `$y`, `$blur` และ `$c` ในตัวอย่างด้านบน)เป็นทางเลือกที่มีก็ได้ไม่ดีก็ได้ ที่นี้เมื่อใดก็ตามที่ต้องการใช้กฎ `box-shadow` คุณสามารถใช้การเรียกใช้ mixin ในการเขียนโค้ดแค่บรรทัดเดียวแทนที่จะต้องพิมพ์ vendor prefix ทั้งหมดลงไป คุณสามารถเรียกใช้ mixin ด้วยคำสัง `@include` ดังนี้:
 
 ```scss
 div {
@@ -42,17 +42,17 @@ div {
 
 # --instructions--
 
-Write a mixin for `border-radius` and give it a `$radius` parameter. It should use all the vendor prefixes from the example. Then use the `border-radius` mixin to give the `#awesome` element a border radius of `15px`.
+ให้เขียน mixin สำหรับ `border-radius` และกำหนดพารามิเตอร์ `$radius` มันควรมี vendor prefixes ทั้งหมดจากตัวอย่างข้างต้น หลังจากนั้นใช้ `border-radius` mixin เพื่อกำหนดให้ `#awesome` element มี border radius ที่ `15px` 
 
 # --hints--
 
-Your code should declare a mixin named `border-radius` which has a parameter named `$radius`.
+โค้ดของคุณควรประกาศ mixin ชื่อว่า `border-radius` ที่มีพารามิเตอร์ชื่อ `$radius`
 
 ```js
 assert(code.match(/@mixin\s+?border-radius\s*?\(\s*?\$radius\s*?\)\s*?{/gi));
 ```
 
-Your code should include the `-webkit-border-radius` vendor prefix that uses the `$radius` parameter.
+โค้ดของคุณควรมี `-webkit-border-radius` vendor prefix ที่ใช้พารามิเตอร์ `$radius`
 
 ```js
 assert(
@@ -60,7 +60,7 @@ assert(
 );
 ```
 
-Your code should include the `-moz-border-radius` vendor prefix that uses the `$radius` parameter.
+โค้ดของคุณควรมี `-moz-border-radius` vendor prefix ที่ใช้พารามิเตอร์ `$radius`
 
 ```js
 assert(
@@ -68,13 +68,13 @@ assert(
 );
 ```
 
-Your code should include the `-ms-border-radius` vendor prefix that uses the `$radius` parameter.
+โค้ดของคุณควรมี `-ms-border-radius` vendor prefix ที่ใช้พารามิเตอร์ `$radius`
 
 ```js
 assert(__helpers.removeWhiteSpace(code).match(/-ms-border-radius:\$radius;/gi));
 ```
 
-Your code should include the general `border-radius` rule that uses the `$radius` parameter.
+โค้ดของคุณควรมีกฎ `border-radius` ทั่วไปใช้พารามิเตอร์ `$radius`
 
 ```js
 assert(
@@ -83,7 +83,7 @@ assert(
 );
 ```
 
-Your code should call the `border-radius mixin` using the `@include` keyword, setting it to `15px`.
+โค้ดของคุณควรเรียกใช้ `border-radius mixin` โดยใช้คีย์เวิร์ด `@include` ให้ตั้งค่ามันเป็น `15px`
 
 ```js
 assert(code.match(/@include\s+?border-radius\(\s*?15px\s*?\)\s*;/gi));

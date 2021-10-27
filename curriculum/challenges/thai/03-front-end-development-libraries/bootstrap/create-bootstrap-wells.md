@@ -8,25 +8,25 @@ dashedName: create-bootstrap-wells
 
 # --description--
 
-Bootstrap has a class called `well` that can create a visual sense of depth for your columns.
+Bootstrap มี class ที่เรียกว่า `well` ซึ่งจะทำให้เกิดกรอบที่ดูเหมือนคอลัมน์นั้นๆ มีความลึกขึ้นมา
 
-Nest one `div` element with the class `well` within each of your `col-xs-6` `div` elements.
+มาลองเพิ่ม `div` element ที่มี class `well` ภายในทุกๆ `div` element ที่มี class `col-xs-6` ดู
 
 # --hints--
 
-You should add a `div` element with the class `well` inside each of your `div` elements with the class `col-xs-6`
+ต้องเพิ่ม `div` element ที่มี class `well` ไปใน ทุก `div` ที่มี class `col-xs-6`
 
 ```js
 assert($('div.col-xs-6').not(':has(>div.well)').length < 1);
 ```
 
-Both of your `div` elements with the class `col-xs-6` should be nested within your `div` element with the class `row`.
+และ `div` element ที่มี class `col-xs-6` ทั้งสองอันนั้น ควรจะต้องอยู่ภายใน `div` ที่มี class ว่า `row`
 
 ```js
 assert($('div.row > div.col-xs-6').length > 1);
 ```
 
-All your `div` elements should have closing tags.
+อย่าลืม tag ปิด ของทุก `div` element
 
 ```js
 assert(

@@ -8,17 +8,17 @@ dashedName: optimize-re-renders-with-shouldcomponentupdate
 
 # --description--
 
-So far, if any component receives new `state` or new `props`, it re-renders itself and all its children. This is usually okay. But React provides a lifecycle method you can call when child components receive new `state` or `props`, and declare specifically if the components should update or not. The method is `shouldComponentUpdate()`, and it takes `nextProps` and `nextState` as parameters.
+จนถึงตอนนี้หาก component ใดได้รับ `state` ใหม่หรือ `props` ใหม่ component นั้นจะเรนเดอร์ตัวเองและ child ทั้งหมดอีกครั้ง นี่เป็นเรื่องปกติ แต่ React มี lifecycle method ที่คุณสามารถเรียกใช้งานได้เมื่อ child component ได้รับ `state` ใหม่หรือ `props` ใหม่และประกาศเฉพาะว่า component ควรอัปเดตหรือไม่ method นั้นคือ `shouldComponentUpdate()` และใช้ `nextProps` และ `nextState` เป็นพารามิเตอร์
 
-This method is a useful way to optimize performance. For example, the default behavior is that your component re-renders when it receives new `props`, even if the `props` haven't changed. You can use `shouldComponentUpdate()` to prevent this by comparing the `props`. The method must return a `boolean` value that tells React whether or not to update the component. You can compare the current props (`this.props`) to the next props (`nextProps`) to determine if you need to update or not, and return `true` or `false` accordingly.
+วิธีนี้เป็นวิธีที่มีประโยชน์ในการเพิ่มประสิทธิภาพ ตัวอย่างเช่นลักษณะการทำงานเริ่มต้นคือ component ของคุณเรนเดอร์ใหม่เมื่อได้รับ `props` ใหม่ แม้ว่า `props` จะไม่มีการเปลี่ยนแปลงก็ตาม คุณสามารถใช้ `shouldComponentUpdate()` เพื่อป้องกันเหตุการณ์นี้โดยการเปรียบเทียบ `props` method นี้ต้อง return ค่า `Boolean` ที่บอก React ว่าจะอัพเดต component หรือไม่ คุณสามารถเปรียบเทียบ props ปัจจุบัน (`this.props`) กับ props ถัดไป (`nextProps`) เพื่อตรวจสอบว่าคุณจำเป็นต้องอัปเดตหรือไม่ และ return เป็น `true` หรือ `false` ตามตามเงื่อนไขนั้นๆ
 
 # --instructions--
 
-The `shouldComponentUpdate()` method is added in a component called `OnlyEvens`. Currently, this method returns `true` so `OnlyEvens` re-renders every time it receives new `props`. Modify the method so `OnlyEvens` updates only if the `value` of its new props is even. Click the `Add` button and watch the order of events in your browser's console as the lifecycle hooks are triggered.
+เพิ่ม`shouldComponentUpdate()` method ใน component ที่เรียกว่า `OnlyEvens` ในขณะนี้ method นี้ return `true` ดังนั้น `OnlyEvens` จะเรนเดอร์ใหม่ทุกครั้งที่ได้รับ `props` ใหม่ แก้ไข method เพื่อให้ `OnlyEvens` อัปเดตก็ต่อเมื่อ `value` ของ props ใหม่นั้นเท่ากัน คลิกปุ่ม `add` และดูลำดับของ event ในคอนโซลของเบราว์เซอร์ของคุณเมื่อมีการทำให้ lifecycle hook ทำงาน
 
 # --hints--
 
-The `Controller` component should render the `OnlyEvens` component as a child.
+`Controller` component ควรเรนเดอร์ `OnlyEvens` component เป็น child
 
 ```js
 assert(
@@ -32,7 +32,7 @@ assert(
 );
 ```
 
-The `shouldComponentUpdate` method should be defined on the `OnlyEvens` component.
+`shouldComponentUpdate` method ควรถูกกำหนดบน `OnlyEvens` component
 
 ```js
 assert(
@@ -45,7 +45,7 @@ assert(
 );
 ```
 
-The `OnlyEvens` component should return an `h1` tag which renders the value of `this.props.value`.
+`OnlyEvens` component ควร return `h1` tag ที่เรนเดอร์ค่าของ `this.props.value`
 
 ```js
 (() => {
@@ -64,7 +64,7 @@ The `OnlyEvens` component should return an `h1` tag which renders the value of `
 })();
 ```
 
-`OnlyEvens` should re-render only when `nextProps.value` is even.
+`OnlyEvens` ควรเรนเดอร์ใหม่เมื่อ `nextProps.value` เป็นจำนวนคู่
 
 ```js
 (() => {

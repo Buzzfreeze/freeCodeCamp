@@ -8,31 +8,29 @@ dashedName: ditch-custom-css-for-bootstrap
 
 # --description--
 
-We can clean up our code and make our Cat Photo App look more conventional by using Bootstrap's built-in styles instead of the custom styles we created earlier.
+เราสามารถทำให้โค้ดของแอป Cat Photo ดูสะอาดตาขึ้นและซับซ้อนน้อยลงโดยการแทนโค้ดในการเขียน style ต่างๆ ก่อนหน้านี้ด้วย built-in styles ของ Bootstrap
 
-Don't worry - there will be plenty of time to customize our CSS later.
+ลองลบ CSS declaration `.red-text`, `p` และ `.small-image` ออกจาก `style` element ให้เหลือแค่ `h2` และ `thick-green-border` เท่านั้น
 
-Delete the `.red-text`, `p`, and `.smaller-image` CSS declarations from your `style` element so that the only declarations left in your `style` element are `h2` and `thick-green-border`.
+ลบ `p` element ที่มีลิงก์ที่ใช้งานไม่ได้อยู่ข้างในออก จากนั้นลบ class `red-text` ออกจาก `h2` element และแทนที่ด้วย class `text-primary` จาก Bootstrap
 
-Then delete the `p` element that contains a dead link. Then remove the `red-text` class from your `h2` element and replace it with the `text-primary` Bootstrap class.
-
-Finally, remove the `smaller-image` class from your first `img` element and replace it with the `img-responsive` class.
+แล้วก็เอา class `smaller-image` ออกจาก `img` element อันแรก และใส่ class `img-responsive` แทน
 
 # --hints--
 
-Your `h2` element should no longer have the class `red-text`.
+`h2` element จะต้องไม่มี class `red-text` แล้ว
 
 ```js
 assert(!$('h2').hasClass('red-text'));
 ```
 
-Your `h2` element should now have the class `text-primary`.
+`h2` element จะต้องมี class `textprimary` แทน
 
 ```js
 assert($('h2').hasClass('text-primary'));
 ```
 
-Your paragraph elements should no longer use the font `Monospace`.
+ฟอนต์ใน elements ต่างๆ ใน paragraph จะไม่ใช่ฟอนต์ `Monospace` อีกต่อไป
 
 ```js
 assert(
@@ -42,13 +40,13 @@ assert(
 );
 ```
 
-The `smaller-image` class should be removed from your top image.
+จะต้องลบ class `smaller-image` ออกจาก element ของรูปบนสุด
 
 ```js
 assert(!$('img').hasClass('smaller-image'));
 ```
 
-You should add the `img-responsive` class to your top image.
+แล้วเพิ่ม class `img-responsive` ไปแทน
 
 ```js
 assert($('.img-responsive').length > 1);

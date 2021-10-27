@@ -8,19 +8,21 @@ dashedName: send-action-data-to-the-store
 
 # --description--
 
-By now you've learned how to dispatch actions to the Redux store, but so far these actions have not contained any information other than a `type`. You can also send specific data along with your actions. In fact, this is very common because actions usually originate from some user interaction and tend to carry some data with them. The Redux store often needs to know about this data.
+ถึงตอนนี้ คุณได้เรียนรู้วิธีส่ง actions ไปยัง Redux store แล้ว แต่จนถึงตอนนี้ actions เหล่านี้ยังไม่มีข้อมูลอื่นใดนอกจาก `type` คุณยังสามารถส่งข้อมูลเฉพาะพร้อมกับ actions ของคุณ อันที่จริง นี่เป็นเรื่องปกติมากเพราะ actions มักเกิดจากการโต้ตอบของผู้ใช้และมีแนวโน้มที่จะนำข้อมูลบางอย่างติดตัวไปด้วย และ Redux store มักต้องการทราบเกี่ยวกับข้อมูลนี้
 
 # --instructions--
 
-There's a basic `notesReducer()` and an `addNoteText()` action creator defined in the code editor. Finish the body of the `addNoteText()` function so that it returns an `action` object. The object should include a `type` property with a value of `ADD_NOTE`, and also a `text` property set to the `note` data that's passed into the action creator. When you call the action creator, you'll pass in specific note information that you can access for the object.
+มี action creator `notesReducer()` และ `addNoteText()` พื้นฐานที่ถูกกำหนดไว้แล้วใน code editor ให้เติม body ของฟังก์ชัน `addNoteText()` ให้สำเร็จเพื่อให้ return `action` object และ object นั้น ควรมี `type` property ที่มีค่า `ADD_NOTE` และ`text` property ที่ตั้งค่าเป็นข้อมูล `note` ที่ส่งผ่านไปยัง action creator เมื่อคุณเรียกใช้ action creator คุณจะต้องส่งผ่านข้อมูล note เฉพาะที่คุณสามารถเข้าถึงสำหรับ object
+
+ถัดไป ให้เขียนคำสั่ง `switch' ใน `notesReducer()` ให้เสร็จสิ้น คุณต้องเพิ่มเคสที่จัดการการดำเนินการ `addNoteText()` กรณีนี้ควรทริกเกอร์ทุกครั้งที่มีการดำเนินการประเภท "ADD_NOTE" และควรส่งคืนคุณสมบัติ "ข้อความ" ใน "การดำเนินการ" ขาเข้าเป็น "สถานะ" ใหม่
 
 Next, finish writing the `switch` statement in the `notesReducer()`. You need to add a case that handles the `addNoteText()` actions. This case should be triggered whenever there is an action of type `ADD_NOTE` and it should return the `text` property on the incoming `action` as the new `state`.
 
-The action is dispatched at the bottom of the code. Once you're finished, run the code and watch the console. That's all it takes to send action-specific data to the store and use it when you update store `state`.
+action จะถูกส่งไปที่ด้านล่างของโค้ด เมื่อคุณทำเสร็จแล้วให้รันโค้ดและดูคอนโซล นั่นคือทั้งหมดที่ใช้ในการส่งข้อมูล action เฉพาะ ไปยัง store และใช้งานเมื่อคุณอัปเดต `state` ของ store
 
 # --hints--
 
-The action creator `addNoteText` should return an object with keys `type` and `text`.
+action creator `addNoteText` ควรจะ return object ที่มี keys `type` และ `text`
 
 ```js
 assert(
@@ -31,7 +33,7 @@ assert(
 );
 ```
 
-Dispatching an action of type `ADD_NOTE` with the `addNoteText` action creator should update the `state` to the string passed to the action creator.
+การส่ง action ของ type `ADD_NOTE` กับ `addNoteText` action creator ควรอัปเดต `state` ไปยัง string ที่ถูกส่งไปยัง action creator
 
 ```js
 assert(

@@ -8,23 +8,23 @@ dashedName: disable-an-element-using-jquery
 
 # --description--
 
-You can also change the non-CSS properties of HTML elements with jQuery. For example, you can disable buttons.
+คุณสามารถเปลี่ยนคุณสมบัติของ HTML ส่วนที่ไม่ได้เกี่ยวข้องกับ CSS ด้วย jQuery อย่างเช่น คุณสามารถยกเลิกการใช้งานของปุ่มได้
 
-When you disable a button, it will become grayed-out and can no longer be clicked.
+เมื่อคุณยกเลิกการใช้งานปุ่มใดๆ ปุ่มนั้นจะเปลี่ยนเป็นสีเทาและคลิกไม่ได้อีก
 
-jQuery has a function called `.prop()` that allows you to adjust the properties of elements.
+jQuery มีฟังก์ชันที่เรียกว่า `.prop()` ที่จะทำให้คุณปรับแต่งคุณสมบัติของ element ต่างๆ ได้
 
-Here's how you would disable all buttons:
+มาดูวิธีการยกเลิกการใช้งานของปุ่มกัน:
 
 ```js
 $("button").prop("disabled", true);
 ```
 
-Disable only the `target1` button.
+ให้ลองยกเลิกการใช้งานของปุ่ม `target1`
 
 # --hints--
 
-Your `target1` button should be disabled.
+ปุ่ม `target1` ของคุณไม่ควรจะใช้งานได้
 
 ```js
 assert(
@@ -34,13 +34,13 @@ assert(
 );
 ```
 
-No other buttons should be disabled.
+ปุ่มอื่นควรใช้งานได้ตามปกติ
 
 ```js
 assert($('#target2') && !$('#target2').prop('disabled'));
 ```
 
-You should only use jQuery to add these classes to the element.
+คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ดังกล่าวให้แก่ element ที่ต้องการ
 
 ```js
 assert(!code.match(/disabled[^<]*>/g));

@@ -8,35 +8,35 @@ dashedName: clone-an-element-using-jquery
 
 # --description--
 
-In addition to moving elements, you can also copy them from one place to another.
+นอกจากการเคลื่อนที่ element ต่างๆ คุณยังสามารถก๊อปปี้ element ใดๆ จากที่นึงไปยังที่นึงได้
 
-jQuery has a function called `clone()` that makes a copy of an element.
+jQuery มีฟังก์ชันที่เรียกว่า `clone()` ที่ทำสำเนาของ element ได้
 
-For example, if we wanted to copy `target2` from our `left-well` to our `right-well`, we would use:
+ยกตัวอย่างเช่น หากเราอยากจะก็อปปี้ `target2` จากใน `left-well` ไปยัง `right-well` แล้ว เราจะต้องพิมพ์โค้ดว่า: 
 
 ```js
 $("#target2").clone().appendTo("#right-well");
 ```
 
-Did you notice this involves sticking two jQuery functions together? This is called <dfn>function chaining</dfn> and it's a convenient way to get things done with jQuery.
+สังเกตเห็นไหมว่าโค้ดข้างบนเป็นการใช้ฟังก์ชันของ jQuery สองฟังก์ชันในคราวเดียวกัน ซึ่งเราจะเรียกมันว่า <dfn>function chaining</dfn> ซึ่งเป็นวิธีการที่สะดวกเลยทีเดียวในการใช้ jQuery
 
-Clone your `target5` element and append it to your `left-well`.
+มาลองโคลน `target5` element และเพิ่มไปยัง `left-well` กัน
 
 # --hints--
 
-Your `target5` element should be inside your `right-well`.
+`target5` element จะต้องอยู่ใน `right-well`
 
 ```js
 assert($('#right-well').children('#target5').length > 0);
 ```
 
-A copy of your `target5` element should also be inside your `left-well`.
+ตัวโคลนของ `target5` element จะต้องไปอยู่ใน `left-well`
 
 ```js
 assert($('#left-well').children('#target5').length > 0);
 ```
 
-You should only use jQuery to move these elements.
+คุณต้องใช้ jQuery เท่านั้นในการทำโจทย์นี้
 
 ```js
 assert(!code.match(/class.*animated/g));

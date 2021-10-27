@@ -8,15 +8,15 @@ dashedName: remove-an-item-from-an-array
 
 # --description--
 
-Time to practice removing items from an array. The spread operator can be used here as well. Other useful JavaScript methods include `slice()` and `concat()`.
+ถึงเวลาฝึกการลบรายการออกจาก array ซึ่งสามารถใช้ spread operator ในที่นี่ได้เช่นกัน JavaScript methods ที่มีประโยชน์อื่นๆ ได้แก่ `slice()` และ `concat()`
 
 # --instructions--
 
-The reducer and action creator were modified to remove an item from an array based on the index of the item. Finish writing the reducer so a new state array is returned with the item at the specific index removed.
+reducer และ action creator ได้รับการแก้ไขเพื่อลบรายการออกจาก array ตามดัชนีของรายการ ลองเขียน reducer เพื่อให้ state array ใหม่ถูก return พร้อมกับรายการที่ดัชนีเฉพาะถูกลบออกให้สำเร็จ
 
 # --hints--
 
-The Redux store should exist and initialize with a state equal to `[0,1,2,3,4,5]`
+ควรมี Redux store และเริ่มต้นด้วย state ที่เท่ากับ `[0,1,2,3,4,5]`
 
 ```js
 assert(
@@ -30,7 +30,7 @@ assert(
 );
 ```
 
-`removeItem` and `immutableReducer` both should be functions.
+ทั้ง `removeItem` และ `immutableReducer` ควรเป็นฟังก์ชัน
 
 ```js
 assert(
@@ -38,7 +38,7 @@ assert(
 );
 ```
 
-Dispatching the `removeItem` action creator should remove items from the state and should NOT mutate state.
+การส่ง `removeItem` action creator ควรที่จะลบรายการจาก state และไม่ควรเปลี่ยนแปลง state
 
 ```js
 assert(

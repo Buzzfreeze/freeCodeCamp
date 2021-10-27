@@ -8,19 +8,19 @@ dashedName: render-a-class-component-to-the-dom
 
 # --description--
 
-You may remember using the ReactDOM API in an earlier challenge to render JSX elements to the DOM. The process for rendering React components will look very similar. The past few challenges focused on components and composition, so the rendering was done for you behind the scenes. However, none of the React code you write will render to the DOM without making a call to the ReactDOM API.
+คุณอาจจำได้ว่าใช้ ReactDOM API ในแบบทดสอบก่อนหน้านี้เพื่อแสดง JSX elements ไปยัง DOM ขั้นตอนการเรนเดอร์ React components จะดูคล้ายกันมาก แบบทดสอบที่ผ่านมาสองสามข้อมุ่งเน้นไปที่ components และ composition ดังนั้นการเรนเดอร์ในแบบทดสอบนี้จึงทำให้ในเบื้องหลัง อย่างไรก็ตามไม่มีโค้ดใด React ที่คุณเขียนจะเรนเดอร์ไปยัง DOM โดยไม่ต้องเรียกใช้ ReactDOM API
 
-Here's a refresher on the syntax: `ReactDOM.render(componentToRender, targetNode)`. The first argument is the React component that you want to render. The second argument is the DOM node that you want to render that component within.
+นี่คือการทบทวน syntax: `ReactDOM.render(componentToRender, targetNode)` argument แรกคือ React component ที่คุณต้องการเรนเดอร์ argument ที่สองคือ DOM node ที่คุณต้องการเรนเดอร์ component นั้นภายใน
 
-React components are passed into `ReactDOM.render()` a little differently than JSX elements. For JSX elements, you pass in the name of the element that you want to render. However, for React components, you need to use the same syntax as if you were rendering a nested component, for example `ReactDOM.render(<ComponentToRender />, targetNode)`. You use this syntax for both ES6 class components and functional components.
+React components จะถูกส่งต่อไปยัง `ReactDOM.render()` ซึ่งแตกต่างจากองค์ประกอบ JSX เล็กน้อยจาก JSX elements คุณต้องส่งชื่อของ element ที่คุณต้องการเรนเดอร์ อย่างไรก็ตามสำหรับ React components คุณต้องใช้ syntax เดียวกันราวกับว่าคุณกำลังเรนเดอร์ component ที่ซ้อนกัน เช่น `ReactDOM.render(<ComponentToRender />, targetNode)` คุณใช้ syntax นี้สำหรับทั้ง ES6 class components และ functional components
 
 # --instructions--
 
-Both the `Fruits` and `Vegetables` components are defined for you behind the scenes. Render both components as children of the `TypesOfFood` component, then render `TypesOfFood` to the DOM. There is a `div` with `id='challenge-node'` available for you to use.
+ทั้ง`Fruits` and `Vegetables` components ถูกกำหนดไว้สำหรับคุณไว้ก่อนแล้วเบื้องหลัง เรนเดอร์ components ทั้งสองเป็น children ของ 'TypesOfFood' component จากนั้นเรนเดอร์ 'TypesOfFood' ไปยัง DOM มี `div` ที่มี `id='challenge-node'` ให้คุณใช้งาน
 
 # --hints--
 
-The `TypesOfFood` component should return a single `div` element.
+`TypesOfFood` component ควร return `div` element เดียว
 
 ```js
 assert(
@@ -31,7 +31,7 @@ assert(
 );
 ```
 
-The `TypesOfFood` component should render the `Fruits` component after the `h1` element.
+`TypesOfFood` component ควรเรนเดอร์ `Fruits` component ต่อหลังจาก `h1` element
 
 ```js
 assert(
@@ -42,7 +42,7 @@ assert(
 );
 ```
 
-The `TypesOfFood` component should render the `Vegetables` component after `Fruits`.
+`TypesOfFood` component ควรเรนเดอร์ `Vegetables` component ต่อหลังจาก `Fruits`
 
 ```js
 assert(
@@ -53,7 +53,7 @@ assert(
 );
 ```
 
-The `TypesOfFood` component should render to the DOM within the `div` with the id `challenge-node`.
+`TypesOfFood` component ควรเรนเดอร์ไปยัง DOM ภายใน `div` ที่มี id `challenge-node`
 
 ```js
 assert(

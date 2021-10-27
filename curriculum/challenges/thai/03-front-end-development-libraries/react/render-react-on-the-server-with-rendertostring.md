@@ -8,17 +8,17 @@ dashedName: render-react-on-the-server-with-rendertostring
 
 # --description--
 
-So far, you have been rendering React components on the client. Normally, this is what you will always do. However, there are some use cases where it makes sense to render a React component on the server. Since React is a JavaScript view library and you can run JavaScript on the server with Node, this is possible. In fact, React provides a `renderToString()` method you can use for this purpose.
+ถึงตอนนี้คุณได้ลองเรนเดอร์ React components บน client และนี้จะเป็นสิ่งที่คุณจะได้ทำบ่อยๆ อย่างไรก็ตามมีบางกรณีการใช้งานที่มันจะเหมาะสมกว่าในการเรนเดอร์ React component บนเซิร์ฟเวอร์ เนื่องจาก React เป็น JavaScript view library และคุณสามารถเรียกใช้ JavaScript บนเซิร์ฟเวอร์ด้วย Node ได้ อันที่จริง React มี `renderToString()` method ที่คุณสามารถใช้ได้เพื่อจุดประสงค์นี้
 
-There are two key reasons why rendering on the server may be used in a real world app. First, without doing this, your React apps would consist of a relatively empty HTML file and a large bundle of JavaScript when it's initially loaded to the browser. This may not be ideal for search engines that are trying to index the content of your pages so people can find you. If you render the initial HTML markup on the server and send this to the client, the initial page load contains all of the page's markup which can be crawled by search engines. Second, this creates a faster initial page load experience because the rendered HTML is smaller than the JavaScript code of the entire app. React will still be able to recognize your app and manage it after the initial load.
+มีเหตุผลหลักสองประการที่ทำให้การเรนเดอร์บนเซิร์ฟเวอร์อาจถูกใช้ในแอปในการใช้งานจริง ข้อแรกเลยหากไม่ทำเช่นนี้แอป React ของคุณจะประกอบด้วยไฟล์ HTML ที่ค่อนข้างว่างเปล่าและชุด JavaScript ขนาดใหญ่เมื่อโหลดเข้าสู่เบราว์เซอร์ในตอนแรก ซึ่งอาจไม่เหมาะ search engines ที่พยายามจัดทำดัชนีเนื้อหาของหน้าเว็บเพื่อให้ผู้อื่นสามารถค้นหาคุณได้ หากคุณแสดงมาร์กอัป HTML เริ่มต้นบนเซิร์ฟเวอร์และส่งไปยัง client การโหลดหน้าแรกจะมีมาร์กอัปของหน้าเว็บทั้งหมดซึ่ง search engines สามารถรวบรวมข้อมูลได้ ประการที่สองการทำเช่นนี้จะสร้างประสบการณ์การโหลดหน้าแรกที่เร็วขึ้น เนื่องจาก HTML ที่ถูกเรนเดอร์มีขนาดเล็กกว่าโค้ด JavaScript ของแอปทั้งหมด React จะยังคงสามารถจดจำแอปของคุณและจัดการได้หลังจากการโหลดครั้งแรก
 
 # --instructions--
 
-The `renderToString()` method is provided on `ReactDOMServer`, which is available here as a global object. The method takes one argument which is a React element. Use this to render `App` to a string.
+`renderToString()` method มีให้ใน `ReactDOMServer' ซึ่งเป็น global object และ method นี่รับหนึ่ง argument ซึ่งเป็น React element ให้ใช้สิ่งนี้เพื่อเรนเดอร์ `App` เป็น string
 
 # --hints--
 
-The `App` component should render to a string using `ReactDOMServer.renderToString`.
+`App` component ควรเรนเดอร์เป็น string โดยใช้ `ReactDOMServer.renderToString`
 
 ```js
 (getUserInput) =>

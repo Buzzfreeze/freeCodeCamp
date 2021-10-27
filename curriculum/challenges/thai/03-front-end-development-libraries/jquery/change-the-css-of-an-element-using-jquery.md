@@ -10,31 +10,33 @@ dashedName: change-the-css-of-an-element-using-jquery
 
 # --description--
 
-We can also change the CSS of an HTML element directly with jQuery.
+เราสามารถเปลี่ยนสไตล์ CSS ของ HTML element โดยตรงด้วย jQuery
 
-jQuery has a function called `.css()` that allows you to change the CSS of an element.
+jQuery มีฟังก์ชันที่เรียกว่า `.css()` ที่ทำให้คุณสามารถเปลี่ยน CSS ของ element ใดๆ ได้
 
-Here's how we would change its color to blue:
+มาลองเปลี่ยนสี element เป็นสีน้ำเงินกัน:
 
 ```js
 $("#target1").css("color", "blue");
 ```
 
-This is slightly different from a normal CSS declaration, because the CSS property and its value are in quotes, and separated with a comma instead of a colon.
+การใช้งานฟังก์ชันนี้จะแตกต่างจากการประกาศฟังก์ชัน CSS ทั่วไปเล็กน้อย ซึง CSS property และ value จะต้องครอบดด้วยเครื่องหมายคำพูด และกั้นด้วย comma แทนที่จะเป็น colon แบบเดิม
 
-Delete your jQuery selectors, leaving an empty `document ready function`.
 
-Select `target1` and change its color to red.
+ให้ลบ jQuery selectors ทั้งหมดออก แล้วปล่อยให้ `document ready function` นั้นว่าง
+
+ให้เลือก `target1` และเปลี่ยนสีของมันให้เป็นสีแดง
 
 # --hints--
 
-Your `target1` element should have red text.
+`target1` element จะต้องมีข้อความที่เป็นสีแดง
 
 ```js
 assert($('#target1').css('color') === 'rgb(255, 0, 0)');
 ```
 
-You should only use jQuery to add these classes to the element.
+ต้องใช้ jQuery เท่านั้นในการเพิ่ม class ต่างๆ ไปยัง element
+
 
 ```js
 assert(!code.match(/class.*animated/g));

@@ -12,27 +12,27 @@ dashedName: responsively-style-checkboxes
 
 # --description--
 
-Since Bootstrap's `col-xs-*` classes are applicable to all `form` elements, you can use them on your checkboxes too! This way, the checkboxes will be evenly spread out across the page, regardless of how wide the screen resolution is.
+เราสามารถใช้คุณสมบัติของ class `col-xs-*` ของ Bootstrap กับทุกๆ `form` element ได้ ดังนั้นถ้าเราเอาไปใช้กับฟอร์ม checkbox ก็จะทำให้ตัว checkbox ต่างๆ จัดเรียงเท่าๆ กันไปตามความกว้างเพจ ไม่ว่าจะไปเปิดที่หน้าจอขนาดเท่าใดก็ตาม
 
 # --instructions--
 
-Nest all three of your checkboxes in a `<div class="row">` element. Then nest each of them in a `<div class="col-xs-4">` element.
+นำ checkbox ทั้งหมดไปไว้ใน `<div class="row">` element แล้วให้นำ checkbox แต่ละอันแยกไปไว้ในแต่ละ `<div class="col-xs-4">` element
 
 # --hints--
 
-All of your checkboxes should be nested inside one `div` with the class `row`.
+checkbox ทั้งหมดจะต้องอยู่ภายใน `div` หนึ่ง `div` ที่มี class `row`
 
 ```js
 assert($('div.row:has(input[type="checkbox"])').length > 0);
 ```
 
-Each of your checkboxes should be nested inside its own `div` with the class `col-xs-4`.
+ให้ฝัง checkbox แต่ละอันไปใน `div` ที่มี class `col-xs-4` แยกแต่ละ `div` เลย
 
 ```js
 assert($('div.col-xs-4:has(input[type="checkbox"])').length > 2);
 ```
 
-All of your `div` elements should have closing tags.
+อย่าลืม tag ปิด สำหรับทุกๆ `div` elements
 
 ```js
 assert(

@@ -8,21 +8,21 @@ dashedName: use-the-spread-operator-on-arrays
 
 # --description--
 
-One solution from ES6 to help enforce state immutability in Redux is the spread operator: `...`. The spread operator has a variety of applications, one of which is well-suited to the previous challenge of producing a new array from an existing array. This is relatively new, but commonly used syntax. For example, if you have an array `myArray` and write:
+โซลูชันหนึ่งจาก ES6 เพื่อช่วยบังคับใช้ state immutability ใน Redux คือ spread operator: `...` spread operator มีการใช้งานที่หลากหลาย ซึ่งหนึ่งในนั้นถูกนำมาใช้กับแบบทดสอบครั้งก่อนในการผลิต array ใหม่จาก array ที่มีอยู่ นี่เป็น syntax ที่ค่อนข้างใหม่ แต่มันก็ได้เอาไปใช้กันโดยทั่วไป ตัวอย่างเช่น หากคุณมี array `myArray` และเขียนดังนี้:
 
 ```js
 let newArray = [...myArray];
 ```
 
-`newArray` is now a clone of `myArray`. Both arrays still exist separately in memory. If you perform a mutation like `newArray.push(5)`, `myArray` doesn't change. The `...` effectively *spreads* out the values in `myArray` into a new array. To clone an array but add additional values in the new array, you could write `[...myArray, 'new value']`. This would return a new array composed of the values in `myArray` and the string `new value` as the last value. The spread syntax can be used multiple times in array composition like this, but it's important to note that it only makes a shallow copy of the array. That is to say, it only provides immutable array operations for one-dimensional arrays.
+ตอนนี้ `newArray` เป็นโคลนของ `myArray` ซึ่ง array ทั้งสองยังคงอยู่แยกจากกันในหน่วยความจำ หากคุณ mutation เช่น `newArray.push(5)` แล้วนั้น `myArray` จะคงไม่เปลี่ยนแปลง `...` ได้ *กระจาย* ค่าใน `myArray' อย่างมีประสิทธิภาพไปยัง array ใหม่ ในการโคลน array และยังเพิ่มค่าเพิ่มเติมใน array ใหม่ คุณสามารถเขียน `[...myArray, 'new value']` ซึ่งจะ return array ใหม่ที่ประกอบด้วยค่าใน `myArray` และ string `new value` เป็นค่าสุดท้าย Spread syntax สามารถใช้ได้หลายครั้งในองค์ประกอบ array เช่นนี้ แต่สิ่งสำคัญคือต้องสังเกตว่ามันสร้างสำเนา array ที่ง่ายๆ เท่านั้น กล่าวคือ มีการดำเนินการ array ที่ไม่เปลี่ยนรูปสำหรับ array แบบหนึ่งมิติเท่านั้น
 
 # --instructions--
 
-Use the spread operator to return a new copy of state when a to-do is added.
+ให้ใช้ spread operator เพื่อ return สำเนาใหม่ของ state เมื่อมีการเพิ่ม to-do
 
 # --hints--
 
-The Redux store should exist and initialize with a state equal to `["Do not mutate state!"]`.
+ควรมี Redux store และเริ่มต้นด้วย state ที่เท่ากับ `["Do not mutate state!"]`
 
 ```js
 assert(
@@ -36,13 +36,13 @@ assert(
 );
 ```
 
-`addToDo` and `immutableReducer` both should be functions.
+ทั้ง `addToDo` และ `immutableReducer`ควรเป็นฟังก์ชัน
 
 ```js
 assert(typeof addToDo === 'function' && typeof immutableReducer === 'function');
 ```
 
-Dispatching an action of type `ADD_TO_DO` on the Redux store should add a `todo` item and should NOT mutate state.
+การส่ง action ของ type `ADD_TO_DO` บน Redux store ควรเพิ่มรายการ `todo` และไม่ควรเปลี่ยนแปลง state
 
 ```js
 assert(
@@ -57,7 +57,7 @@ assert(
 );
 ```
 
-The spread operator should be used to return new state.
+spread operator ควรถูกใช้เพื่อ return state ใหม่
 
 ```js
 (getUserInput) => assert(getUserInput('index').includes('...state'));

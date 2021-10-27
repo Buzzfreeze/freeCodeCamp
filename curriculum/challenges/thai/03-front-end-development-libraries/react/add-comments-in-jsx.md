@@ -8,35 +8,35 @@ dashedName: add-comments-in-jsx
 
 # --description--
 
-JSX is a syntax that gets compiled into valid JavaScript. Sometimes, for readability, you might need to add comments to your code. Like most programming languages, JSX has its own way to do this.
+JSX คือ syntax ที่ถูก compile เป็น JavaScript ที่ถูกต้อง ในบางครั้งเพื่อให้ทำความเข้าใจโค้ดได้ง่ายมากขึ้น คุณอาจะต้องการเพิ่ม comment ไปในโค้ดด้วย เช่นเดียวกับการเขียนโปรแกรมทั่วไป JSX มีวิธีการของมันในการเขียน comment
 
-To put comments inside JSX, you use the syntax `{/* */}` to wrap around the comment text.
+เพื่อที่จะใส่ comment ใน JSX คุณจะต้องใช้ syntax `{/* */}` ครอบข้อความ comment นั้น
 
 # --instructions--
 
-The code editor has a JSX element similar to what you created in the last challenge. Add a comment somewhere within the provided `div` element, without modifying the existing `h1` or `p` elements.
+ในส่วนที่เขียนโค้ดมี JSX element คล้ายกับสิ่งที่คุณได้สร้างในแบบทดสอบที่ผ่านมา ให้คุณเพิ่ม comment ในที่ใดก็ได้ภายใน `div` element ที่ให้มา โดยที่ไม่ต้องแก้ไข `h1` หรือ `p` element ที่มีอยู่
 
 # --hints--
 
-The constant `JSX` should return a `div` element.
+ค่าคงที่ `JSX` ควรจะ return `div` element
 
 ```js
 assert(JSX.type === 'div');
 ```
 
-The `div` should contain an `h1` tag as the first element.
+`div` นั้นควรจะต้องมี `h1` tag ที่เป็น element แรกข้างใน
 
 ```js
 assert(JSX.props.children[0].type === 'h1');
 ```
 
-The `div` should contain a `p` tag as the second element.
+`div` นั้นควรจะต้องมี `p` tag ที่เป็น element ที่สองข้างใน
 
 ```js
 assert(JSX.props.children[1].type === 'p');
 ```
 
-The existing `h1` and `p` elements should not be modified.
+ไม่ควรที่จะแก้ไขอะไร กับ `h1` และ `p` element ที่มีอยู่
 
 ```js
 assert(
@@ -45,7 +45,7 @@ assert(
 );
 ```
 
-The `JSX` should use valid comment syntax.
+`JSX` ควรใช้ comment syntax ที่ถูกต้อง
 
 ```js
 assert(/<div>[\s\S]*{\s*\/\*[\s\S]*\*\/\s*}[\s\S]*<\/div>/.test(code));

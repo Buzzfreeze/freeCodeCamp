@@ -8,17 +8,17 @@ dashedName: compose-react-components
 
 # --description--
 
-As the challenges continue to use more complex compositions with React components and JSX, there is one important point to note. Rendering ES6 style class components within other components is no different than rendering the simple components you used in the last few challenges. You can render JSX elements, stateless functional components, and ES6 class components within other components.
+เนื่องจากแบบทดสอบจะใช้องค์ประกอบที่ซับซ้อนมากขึ้นกับ React components และ JSX จึงมีประเด็นที่ควรทราบ การเรนเดอร์ ES6 style class components ภายใน component อื่นๆ ไม่ได้แตกต่างจากการเรนเดอร์ component ธรรมดาที่คุณได้เคยใช้มาแล้วในแบบทดสอบก่อนหน้านี้ คุณสามารถเรนเดอร์ JSX element, stateless functional components, แลพ ES6 class components ภายใน component อื่นๆได้
 
 # --instructions--
 
-In the code editor, the `TypesOfFood` component is already rendering a component called `Vegetables`. Also, there is the `Fruits` component from the last challenge.
+ใน code editor นั้น `TypesOfFood` component ได้เรนเดอร์ component ที่เรียกว่า `Vegetables` เรียบร้อยแล้ว และยังมี `Fruits` component จากแบบทดสอบที่ผ่านมาอีกด้วย
 
-Nest two components inside of `Fruits` — first `NonCitrus`, and then `Citrus`. Both of these components are provided for you behind the scenes. Next, nest the `Fruits` class component into the `TypesOfFood` component, below the `h1` header and above `Vegetables`. The result should be a series of nested components, which uses two different component types.
+ให้นำ 2 component นี้ไปอยู่ใน `Fruits` อย่างแรกคือ `NonCitrus` และจากนั้น `Citrus` component ทั้งสองนี้ได้ถูกเตรียมไว้ให้คุณในเบื้องหลังแล้ว ต่อไปให้นำ `Fruits` class component ไปไว้ใน `TypesOfFood` component ใต้ header `h1` และเหนือ `Vegetables` ผลลัพธ์ที่ได้ควรเป็นชุดของ component ที่ซ้อนกัน ซึ่งใช้ประเภทของ component 2 อย่างที่ต่างกัน
 
 # --hints--
 
-The `TypesOfFood` component should return a single `div` element.
+`TypesOfFood` component ควรจะต้อง return `div` element 1 element
 
 ```js
 assert(
@@ -29,7 +29,7 @@ assert(
 );
 ```
 
-The `TypesOfFood` component should return the `Fruits` component.
+`TypesOfFood` component ควรจะต้อง return `Fruits` component
 
 ```js
 assert(
@@ -40,7 +40,7 @@ assert(
 );
 ```
 
-The `Fruits` component should return the `NonCitrus` component and the `Citrus` component.
+`Fruits` component ควรจะต้อง return `NonCitrus` component และ `Citrus` component
 
 ```js
 assert(
@@ -55,7 +55,7 @@ assert(
 );
 ```
 
-The `TypesOfFood` component should return the `Vegetables` component below the `Fruits` component.
+`TypesOfFood` component ควรจะต้อง return `Vegetables` component ใต้ `Fruits` component
 
 ```js
 assert(

@@ -8,17 +8,17 @@ dashedName: override-default-props
 
 # --description--
 
-The ability to set default props is a useful feature in React. The way to override the default props is to explicitly set the prop values for a component.
+ความสามารถในการตั้งค่า props เริ่มต้นเป็นคุณสมบัติที่มีประโยชน์ใน React วิธีการตั้งค่า props เริ่มต้นคือการตั้งค่า prop สำหรับ component
 
 # --instructions--
 
-The `ShoppingCart` component now renders a child component `Items`. This `Items` component has a default prop `quantity` set to the integer `0`. Override the default prop by passing in a value of `10` for `quantity`.
+ตอนนี้คอมโพเนนต์ "ShoppingCart" เรนเดอร์ในส่วนของ child component ชื่อว่า `Items` ซึ่ง `Items` component นี้มี prop เริ่มต้นชื่อว่า `quantity` ที่ตั้งค่าเป็นจำนวนเต็ม `0` คุณสามารถแทนที่ prop เริ่มต้นโดยส่งค่า `10` ให้  `quantity`
 
-**Note:** Remember that the syntax to add a prop to a component looks similar to how you add HTML attributes. However, since the value for `quantity` is an integer, it won't go in quotes but it should be wrapped in curly braces. For example, `{100}`. This syntax tells JSX to interpret the value within the braces directly as JavaScript.
+**Note:** โปรดจำไว้ว่า syntax ในการเพิ่ม prop ให้กัย component จะคล้ายกับวิธีที่คุณเพิ่ม HTML attribute อย่างไรก็ตามเนื่องจากค่าของ `quantity` เป็นจำนวนเต็ม ค่านั้นจะไม่อยู่ในเครื่องหมายคำพูด แต่ควรอยู่ในวงเล็บปีกกา ตัวอย่างเช่น `{100}` Syntax นี้บอกให้ JSX ตีความค่าภายในเครื่องหมายปีกกาโดยตรงเป็น JavaScript
 
 # --hints--
 
-The component `ShoppingCart` should render.
+component `ShoppingCart` จะต้องเรนเดอร์
 
 ```js
 assert(
@@ -29,7 +29,7 @@ assert(
 );
 ```
 
-The component `Items` should render.
+component `Items` จะต้องเรนเดอร์
 
 ```js
 assert(
@@ -40,7 +40,7 @@ assert(
 );
 ```
 
-The `Items` component should have a prop of `{ quantity: 10 }` passed from the `ShoppingCart` component.
+`Items` component ควรมี prop เป็น `{ quantity: 10 }` ที่ถูกส่งต่อมาจาก `ShoppingCart` component
 
 ```js
 (getUserInput) =>

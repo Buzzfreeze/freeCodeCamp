@@ -8,27 +8,27 @@ dashedName: change-text-inside-an-element-using-jquery
 
 # --description--
 
-Using jQuery, you can change the text between the start and end tags of an element. You can even change HTML markup.
+การใช้ jQuery ทำให้คุณสามารถเปลี่ยนข้อความที่อยู่ระหว่าง tag เปิดและปิดของ element ใดๆ หรือจะเปลี่ยน HTML markup ไปเลยก็ยังได้
 
-jQuery has a function called `.html()` that lets you add HTML tags and text within an element. Any content previously within the element will be completely replaced with the content you provide using this function.
+jQuery มีฟังก์ชันที่เรียกว่า `.html()` ที่ทำให้คุณสามารถที่จะเพิ่ม HTML tag และ ข้อความข้างใน element ได้ เนื้อหาใดๆ ที่มีใน element ก่อนหน้านี้จะถูกแทนที่ทั้งหมดด้วยเนื้อหาใหม่ที่คุณเพิ่มมันเข้ามาจากการใช้ฟังก์ชันนี้
 
-Here's how you would rewrite and emphasize the text of our heading:
+มาลองใส่ข้อความใหม่และทำการเน้นข้อความใน heading ของเรากัน:
 
 ```js
 $("h3").html("<em>jQuery Playground</em>");
 ```
 
-jQuery also has a similar function called `.text()` that only alters text without adding tags. In other words, this function will not evaluate any HTML tags passed to it, but will instead treat it as the text you want to replace the existing content with.
+jQuery ยังมีฟังก์ชันที่คล้ายกันคือ `.text()` ที่จะเปลี่ยนเพียงแค่ข้อความข้างในแต่ไม่ได้เพิ่ม tag อธิบายง่ายๆ ก็คือ ฟังก์ชันนี้ไม่ได้มีผลใดๆ ต่อ HTML tag เพียงแค่เปลี่ยนข้อความในเนื้อหาเดิมเท่านั้น
 
-Change the button with id `target4` by emphasizing its text.
+เปลี่ยนการเน้นข้อความในปุ่มที่มีไอดีว่า `target4`
 
-[View our news article for &lt;em>](https://www.freecodecamp.org/news/html-elements-explained-what-are-html-tags/#em-element) to learn the difference between `<i>` and `<em>` and their uses.
+ดูบทความนี้ [View our news article for &lt;em>](https://www.freecodecamp.org/news/html-elements-explained-what-are-html-tags/#em-element) เพื่อเรียนรู้ความแตกต่างระหว่าง `<i>` และ `<em>` รวมถึงการนำไปใช้
 
-Note that while the `<i>` tag has traditionally been used to emphasize text, it has since been adopted for use as a tag for icons. The `<em>` tag is now widely accepted as the tag for emphasis. Either will work for this challenge.
+โปรดจำไว้ว่าในอดีตนั้น `<i>` tag จะถูกใช้เพื่อการเน้นข้อความ แต่เดี๋ยวนี้กลับนิยมนำมาใช้เป็น tag สำหรับการใช้ไอคอนต่างๆ แทน ขณะเดียวกันก็มี `<em>` tag มาแทนในการเน้นข้อความ แต่คุณก็สามารถใช้ tag ทั้งสองได้ในแบบทดสอบนี้
 
 # --hints--
 
-You should emphasize the text in your `target4` button by adding HTML tags.
+คุณจะต้องเน้นข้อความในปุ่ม `target4` โดยการเพิ่ม HTML tag เข้าไป
 
 ```js
 assert.isTrue(
@@ -36,25 +36,25 @@ assert.isTrue(
 );
 ```
 
-The text should otherwise remain unchanged.
+แต่ข้อความข้างในยังคงเดิม
 
 ```js
 assert($('#target4') && $('#target4').text().trim() === '#target4');
 ```
 
-You should not alter any other text.
+คุณไม่ควรแก้ไขข้อความอื่นใด
 
 ```js
 assert.isFalse(/<em>|<i>/gi.test($('h3').html()));
 ```
 
-You should be using `.html()` and not `.text()`.
+ควรใช้ฟังก์ชัน `.html()` ไม่ควรใช้ `.text()` ในกรณีนี้
 
 ```js
 assert(code.match(/\.html\(/g));
 ```
 
-You should select `button id="target4"` with jQuery.
+คุณควรเลือกปุ่ม `button id="target4"` ด้วย jQuery
 
 ```js
 assert(code.match(/\$\(\s*?(\"|\')#target4(\"|\')\s*?\)\.html\(/));

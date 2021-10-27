@@ -10,21 +10,21 @@ dashedName: target-even-elements-using-jquery
 
 # --description--
 
-You can also target elements based on their positions using `:odd` or `:even` selectors.
+คุณสามารถเลือก element เป้าหมายอาศัยการระบุตำแหน่งคู่หรือคี่ โดยใช้ `:odd` or `:even` selector
 
-Note that jQuery is zero-indexed which means the first element in a selection has a position of 0. This can be a little confusing as, counter-intuitively, `:odd` selects the second element (position 1), fourth element (position 3), and so on.
+โปรดทราบว่า jQuery คือ zero-indexed ซึ่งหมายความว่า element ตัวแรกสุดในลำดับการเลือกนั้นจะมีตำแหน่งที่ 0 นี่อาจจะทำให้สับสนได้ เพราะขัดแย้งกับหลักคิดพื้นฐานของเรา จะเห็นได้ว่า `:odd` จะเลือก element ตัวที่ 2 (ตำแหน่งที่ 1), element ตัวที่ 4 (ตำแหน่งที่ 3) ต่อไปเรื่อยๆ
 
-Here's how you would target all the odd elements with class `target` and give them classes:
+นี่คือวิธีการที่คุณจะสามารถเลือกเป้าหมาย elementที่มี class `target` ที่มีตำแหน่งคี่ทั้งหมด แล้วเพิ่ม class ต่างๆ ให้กับมัน
 
 ```js
 $(".target:odd").addClass("animated shake");
 ```
 
-Try selecting all the even `target` elements and giving them the classes of `animated` and `shake`. Remember that **even** refers to the position of elements with a zero-based system in mind.
+มาลองเลือก `target` element ที่มีตำแหน่งคู่ทั้งหมด และเพิ่ม class `animated` และ `shake` ให้ โปรดจำไว้ว่า **even** หมายถึงตำแหน่งของ element ที่เป็นระบบ zero-based
 
 # --hints--
 
-All of the `target` elements that jQuery considers to be even should shake.
+`target` element ทั้งหมดที่ jQuery เลือกให้เป็นตำแหน่งคู่จะต้องมีเอฟเฟคสั่น
 
 ```js
 assert(
@@ -32,13 +32,13 @@ assert(
 );
 ```
 
-You should use the `:even` selector to modify these elements.
+คุณจะต้องใช้ `:even` selector ในการปรับแต่ง element นี้
 
 ```js
 assert(code.match(/\:even/g));
 ```
 
-You should only use jQuery to add these classes to the element.
+คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
 
 ```js
 assert(

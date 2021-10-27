@@ -11,17 +11,17 @@ dashedName: add-font-awesome-icons-to-all-of-our-buttons
 
 # --description--
 
-Font Awesome is a convenient library of icons. These icons can be web fonts or vector graphics. These icons are treated just like fonts. You can specify their size using pixels, and they will assume the font size of their parent HTML elements.
+Font Awesome คือ library ไอคอนที่ใช้งานง่าย ซึ่งเป็นได้ทั้ง เว็บฟอนต์ หรือรูปเวกเตอร์ โดยที่จะมีคุณสมบัติเหมือนฟอนต์ คือ สามารถกำหนดขนาดเป็นหน่วย pixel ได้ หรือถ้าหากไม่ได้กำหนด ก็จะมีขนาดเท่ากันกับขนาดฟอนต์ใน parent element ของ HTML นั้น
 
 # --instructions--
 
-Use Font Awesome to add an `info-circle` icon to your info button and a `trash` icon to your delete button.
+ให้ลองใช้ไอคอนจาก Font Awesome โดยเพิ่ม ไอคอน `info-circle` ในปุ่ม info และ ไอคอน `trash` ในปุ่ม delete
 
-**Note:** The `span` element is an acceptable alternative to the `i` element for the directions below.
+**Note:** สามารถใช้ element `span` แทน `i` สำหรับคำแนะนำข้างล่างได้
 
 # --hints--
 
-You should add a `<i class="fas fa-info-circle"></i>` within your `info` button element.
+เพิ่ม `<i class="fas fa-info-circle"></i>` ใน element ปุ่ม `info`
 
 ```js
 assert(
@@ -30,7 +30,8 @@ assert(
 );
 ```
 
-You should add a `<i class="fas fa-trash"></i>` within your `delete` button element.
+และเพิ่ม `<i class="fas fa-trash"></i>` ใน element ปุ่ม `delete`
+
 
 ```js
 assert(
@@ -39,7 +40,8 @@ assert(
 );
 ```
 
-Each of your `i` elements should have a closing tag and `<i class="fas fa-thumbs-up"></i>` is in your `like` button element.
+อย่าลืมปิด tag `</i>` ทุกอัน ลองดูการใช้ `<i class="fas fa-thumbs-up"></i>` ใน element ปุ่ม `like` ในโจทย์ข้างล่าง
+
 
 ```js
 assert(

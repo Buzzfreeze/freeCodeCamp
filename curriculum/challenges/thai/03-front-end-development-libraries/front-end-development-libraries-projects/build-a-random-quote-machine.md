@@ -8,39 +8,40 @@ dashedName: build-a-random-quote-machine
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/qRZeGZ>.
+**Objective:** ลองทำแอป [CodePen.io](https://codepen.io) app that is ให้มีฟังก์ชันเหมือนกับ: <https://codepen.io/freeCodeCamp/full/qRZeGZ>.
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story) and get all of the tests to pass. Give it your own personal style.
+ลองดู [user stories](https://en.wikipedia.org/wiki/User_story) ข้างล่าง และทำให้ระบบ Test ทังหมด run ผ่าน โดยสามารถออกแบบหน้าตาแอปตามสไตล์ของคุณเองได้เลย
 
-You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and jQuery to complete this project. You should use a frontend framework (like React for example) because this section is about learning frontend frameworks. Additional technologies not listed above are not recommended and using them is at your own risk. We are looking at supporting other frontend frameworks like Angular and Vue, but they are not currently supported. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
+คุณสามารถใช้ HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux และ jQuery รวมกันได้ในการทำโปรเจคนี้ เนื่องจากบทเรียนนี้คือบทเรียนเกี่ยวกับ frontend framework คุณจึงควรนำ frontend framework มาใช้งานด้วย (อย่าง React เป็นต้น) ไม่แนะนำให้ใช้ภาษาหรือเทคโนโลยีอื่นๆ นอกจากที่ให้ไว้ข้างบน เราจะช่วยแก้ไขหรือช่วยเหลือหากเกิดบักหรือปัญหาจากภาษาที่แนะนำข้างต้นเท่านั้น 
 
-**User Story #1:** I can see a wrapper element with a corresponding `id="quote-box"`.
+**User Story #1:** จะต้องมี element ที่เป็นกรอบที่มีไอดี `id="quote-box"`
 
-**User Story #2:** Within `#quote-box`, I can see an element with a corresponding `id="text"`.
+**User Story #2:** ภายใน `#quote-box` จะต้องมี element ที่มีไอดี `id="text"`
 
-**User Story #3:** Within `#quote-box`, I can see an element with a corresponding `id="author"`.
+**User Story #3:** ภายใน `#quote-box จะต้องมี element ที่มีไอดี `id="author"`
 
-**User Story #4:** Within `#quote-box`, I can see a clickable element with a corresponding `id="new-quote"`.
+**User Story #4:** ภายใน `#quote-box` จะต้องมี
+ element ที่สามารถคลิกได้และมีไอดี `id="new-quote"`
 
-**User Story #5:** Within `#quote-box`, I can see a clickable `a` element with a corresponding `id="tweet-quote"`.
+**User Story #5:** ภายใน `#quote-box`จะต้องมี `a` ที่สามารถคลิกได้และมีไอดี `id="tweet-quote"`
 
-**User Story #6:** On first load, my quote machine displays a random quote in the element with `id="text"`.
+**User Story #6:** ในการโหลดครั้งแรก แอป quote machine จะแสดง quote แบบสุ่มภายใน element ที่มีไอดี `id="text"`
 
-**User Story #7:** On first load, my quote machine displays the random quote's author in the element with `id="author"`.
+**User Story #7:** ในการโหลดครั้งแรก แอป quote machine จะแสดงผู้แต่ง quote ที่มาจากการสุ่มภายใน element ที่มีไอดี `id="author"`
 
-**User Story #8:** When the `#new-quote` button is clicked, my quote machine should fetch a new quote and display it in the `#text` element.
+**User Story #8:** เมื่อคลิกที่ปุ่ม `#new-quote` แอป quote machine จะดึง quote ใหม่และแสดง quote นั้นใน `#text` element
 
-**User Story #9:** My quote machine should fetch the new quote's author when the `#new-quote` button is clicked and display it in the `#author` element.
+**User Story #9:** แอป quote machine ควรที่จะดึงชื่อผู้แต่ง quote ใหม่มาเมื่อปุ่ม `#new-quote` ถูกคลิก และแสดงผลใน `#author` element
 
-**User Story #10:** I can tweet the current quote by clicking on the `#tweet-quote` `a` element. This `a` element should include the `"twitter.com/intent/tweet"` path in its `href` attribute to tweet the current quote.
+**User Story #10:** ฉันสามารถทวีต quote ในขณะนั้นโดยการคลิกที่ปุ่ม `a` element ที่มีไอดี `#tweet-quote`  ซึ่ง `a` element จะต้องลิงก์ไปยัง `"twitter.com/intent/tweet"` ใน `href` attribute เพื่อที่จะทวีต quote ได้
 
-**User Story #11:** The `#quote-box` wrapper element should be horizontally centered. Please run tests with browser's zoom level at 100% and page maximized.
+**User Story #11:** ตัว element กรอบที่มีไอดี `#quote-box` จะต้องอยู่ตรงกลางในแนวนอน  โปรดทำการทดสอบด้วยระดับการซูมของเบราว์เซอร์ที่ 100% และขยายหน้าให้ใหญ่สุด
 
-You can build your project by <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> and clicking `Save` to create your own pen. Or you can use this CDN link to run the tests in any environment you like: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
+คุณสามารถสร้างโปรเจคของคุณโดย <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>ใช้ CodePen template นี้</a> แล้วคลิก `Save` เพื่อสร้าง pen ของคุณเอง หรือคุณสามารถใช้ลิงก์ CND นี้ เพื่อรันการทดสอบใน environment ที่คุณต้องการ: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
 
-Once you're done, submit the URL to your working project with all its tests passing.
+ให้ submit ส่ง URL ของโปรเจคที่ทำสำเร็จและได้รันการทดสอบผ่านหมดแล้ว เมื่อเสร็จงาน
 
-**Note:** Twitter does not allow links to be loaded in an iframe. Try using the `target="_blank"` or `target="_top"` attribute on the `#tweet-quote` element if your tweet won't load. `target="_top"` will replace the current tab so make sure your work is saved.
+**Note:** หากทวีตของคุณไม่โหลด อาจะเป็นเพราะ Twitter ไม่อนุญาตให้โหลดลิงก์ใน iframe ลองใช้ attribute `target="_blank"` หรือ `target="_top"` ใน `#tweet-quote` element อย่าลืมเซฟงานของคุณก่อนที่จะใช้ `target="_top"` เพราะมันจะโหลดทวีตในแท็บปัจจุบัน
 
 # --solutions--
 
