@@ -178,6 +178,7 @@ function createGetPasswordlessAuth(app) {
           if (emailChange) {
             req.flash('success', 'flash.email-valid');
           } else {
+            console.log('Sign in success in authentication.js');
             req.flash('success', 'flash.signin-success');
           }
           return res.redirectWithFlash(`${origin}/learn`);

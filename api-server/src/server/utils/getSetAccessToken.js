@@ -23,6 +23,10 @@ export function setAccessTokenToResponse(
     ...createCookieConfig(req),
     maxAge: accessToken.ttl || 77760000000
   };
+  console.log(jwtCookieNS);
+  console.log(accessToken);
+  console.log(cookieConfig);
+  console.log(jwtSecret);
   const jwtAccess = jwt.sign({ accessToken }, jwtSecret);
   res.cookie(jwtCookieNS, jwtAccess, cookieConfig);
   return;

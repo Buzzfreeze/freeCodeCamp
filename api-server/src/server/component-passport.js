@@ -126,6 +126,7 @@ export const createPassportCallbackAuthenticator =
         const { provider } = config;
         if (accessToken && accessToken.id) {
           if (provider === 'auth0') {
+            console.log('Sign in success in component-passport.js');
             req.flash('success', 'flash.signin-success');
           } else if (user.email) {
             req.flash(
@@ -136,6 +137,7 @@ we recommend using your email address: ${user.email} to sign in instead.
             `
             );
           }
+          console.log('Set Access Token ' + accessToken);
           setAccessTokenToResponse({ accessToken }, req, res);
           req.login(user);
         }
