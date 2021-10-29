@@ -57,7 +57,7 @@ export const UniversalNav = ({
       <div className='universal-nav-middle'>
         <Link id='universal-nav-logo' to='/learn'>
           <NavLogo />
-          <span className='sr-only'>freeCodeCamp.org</span>
+          <span className='sr-only'>careervio.com</span>
         </Link>
       </div>
       <div className='universal-nav-right main-nav'>
