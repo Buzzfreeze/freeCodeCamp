@@ -114,14 +114,17 @@ export const createPassportCallbackAuthenticator =
       strategy,
       { session: false },
       (err, user, userInfo) => {
+        console.log('Enter createPassportCallbackAuthenticator ');
         if (err) {
+          console.log('error');
+          console.log(err);
           return next(err);
         }
 
         if (!user || !userInfo) {
           return res.redirect('/signin');
         }
-
+        console.log('prepare to set access token');
         const { accessToken } = userInfo;
         const { provider } = config;
         if (accessToken && accessToken.id) {
