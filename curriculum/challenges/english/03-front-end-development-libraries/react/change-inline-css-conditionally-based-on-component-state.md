@@ -8,17 +8,17 @@ dashedName: change-inline-css-conditionally-based-on-component-state
 
 # --description--
 
-At this point, you've seen several applications of conditional rendering and the use of inline styles. Here's one more example that combines both of these topics. You can also render CSS conditionally based on the state of a React component. To do this, you check for a condition, and if that condition is met, you modify the styles object that's assigned to the JSX elements in the render method.
+มาถึงตอนนี้ คุณได้เห็นการใช้งานหลายอย่างของ การ render แบบมีเงื่อนไข และการใช้ inline styles ไปแล้ว และต่อจากนี้จะเป็นอีกตัวอย่างที่รวมเราทั้งสองหัวข้อนี้ไว้ด้วยกัน คุณสามารถ render CSS แบบมีเงื่อนไขที่ขึ้นอยู่กับสถานะของ React component ทำได้โดยให้คุณตรวจสอบเงื่อนไขก่อน และเงื่อนไขนั้นตรงตามที่กำหนดมา คุณจึงแก้ไข styles object ที่กำหนดให้กับ JSX elements ใน render method
 
-This paradigm is important to understand because it is a dramatic shift from the more traditional approach of applying styles by modifying DOM elements directly (which is very common with jQuery, for example). In that approach, you must keep track of when elements change and also handle the actual manipulation directly. It can become difficult to keep track of changes, potentially making your UI unpredictable. When you set a style object based on a condition, you describe how the UI should look as a function of the application's state. There is a clear flow of information that only moves in one direction. This is the preferred method when writing applications with React.
+ตัวอย่างนี้เป็นสิ่งสำคัญที่ต้องทำความเข้าใจ เพราะมันเป็นการเปลี่ยนแปลงอย่างมากจากวิธีการดั้งเดิมในการใช้ style โดยการปรับแต่ง DOM element โดยตรง (ซึ่งเป็นเรื่องที่ใช้ทำกันมากกับ jQuery) ในวิธีการนั้นคุณจะต้องติดตามเมื่อ element มีการเปลี่ยนแปลง และยังต้องจัดการการเปลี่ยนแปลงนั้นโดยตรง การติดตามการเปลี่ยนแปลงต่างๆ อาจจะเป็นเรื่องยาก และอาจจะทำให้ UI ของคุณนั้นคาดการณ์ไม่ได้ เมื่อคุณตั้งค่า style object ตามเงื่อนไข และคุณได้กำหนดว่า UI ควรดูว่าเป็นฟังก์ชันของสถานะของแอปพลิเคชันอย่างไร มีการส่งผ่านข้อมูลที่ชัดเจนที่เคลื่อนที่ไปในทิศทางเดียวเท่านั้น นี่เป็นวิธีการที่ยอมรับในการเขียนแอปพลิเคชันด้วย React
 
 # --instructions--
 
-The code editor has a simple controlled input component with a styled border. You want to style this border red if the user types more than 15 characters of text in the input box. Add a condition to check for this and, if the condition is valid, set the input border style to `3px solid red`. You can try it out by entering text in the input.
+ในส่วนของ code editor มี input component ควบคุมที่เรียบง่าย พร้อมกับมีกรอบที่ถูกตกแต่งมาแล้ว คุณต้องการที่จะตกแต่งกรอบนี้ให้เป็นสีแดงถ้าหาก user พิมพ์ข้อความเข้ามามากกว่า 15 ตัวอักษรในกล่อง input เพิ่มเงื่อนไขในการตรวจสอบเหตุการณ์นี้ และ เมื่อเงื่อนไขนั้นถูกต้อง ให้ตั้ง style ของกรอบ input เป็น `3px solid red` คุณสามารถลองตรวจสอบโดยการพิมพ์ข้อความใน input
 
 # --hints--
 
-The `GateKeeper` component should render a `div` element.
+`GateKeeper` component จะต้องแสดงผล `div` element
 
 ```js
 assert(
@@ -29,7 +29,7 @@ assert(
 );
 ```
 
-The `GateKeeper` component should be initialized with a state key `input` set to an empty string.
+`GateKeeper` component จะต้องเริ่มด้วยคีย์สถานะ `input` ตั้งค่าเป็น string ว่าง
 
 ```js
 assert(
@@ -40,7 +40,7 @@ assert(
 );
 ```
 
-The `GateKeeper` component should render an `h3` tag and an `input` tag.
+`GateKeeper` component จะต้องแสดงผลของ `h3` tag และ `input` tag
 
 ```js
 assert(
@@ -54,7 +54,7 @@ assert(
 );
 ```
 
-The `input` tag should initially have a style of `1px solid black` for the `border` property.
+`input` tag ควรมีค่า style เริ่มต้นคือ `1px solid black` สำหรับ `border` property
 
 ```js
 assert(
@@ -67,7 +67,7 @@ assert(
 );
 ```
 
-The `input` tag should be styled with a border of `3px solid red` if the input value in state is longer than 15 characters.
+`input` tag จะต้องเปลี่ยน style ของ border เป็น `3px solid red` หากค่า input ในสถานะมีความยาวเกิน 15 ตัวอักษร
 
 ```js
 async () => {

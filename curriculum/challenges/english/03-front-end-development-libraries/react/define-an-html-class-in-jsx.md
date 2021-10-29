@@ -8,27 +8,28 @@ dashedName: define-an-html-class-in-jsx
 
 # --description--
 
-Now that you're getting comfortable writing JSX, you may be wondering how it differs from HTML.
+เมื่อคุณเริ่มคุ้นเคยกับการเขียน JSX แล้ว คุณอาจสงสัยว่ามันแตกต่างจาก HTML อย่างไร
 
-So far, it may seem that HTML and JSX are exactly the same.
+จนถึงตอนนี้ ดูเหมือนว่า HTML และ JSX จะเหมือนกันทุกประการ
 
-One key difference in JSX is that you can no longer use the word `class` to define HTML classes. This is because `class` is a reserved word in JavaScript. Instead, JSX uses `className`.
+ความแตกต่างที่สำคัญอย่างหนึ่งใน JSX คือคุณไม่สามารถใช้คำว่า `class` เพื่อกำหนดคลาส HTML ได้อีกต่อไป ทั้งนี้เป็นเพราะ `class` เป็นคำสงวนใน JavaScript ดังนั้น JSX จึงใช้ `className` แทน
 
-In fact, the naming convention for all HTML attributes and event references in JSX become camelCase. For example, a click event in JSX is `onClick`, instead of `onclick`. Likewise, `onchange` becomes `onChange`. While this is a subtle difference, it is an important one to keep in mind moving forward.
+อันที่จริงหลักการตั้งชื่อสำหรับ HTML attribute และการอ้างอิง event ทั้งหมดใน JSX จะเป็น camelCase ตัวอย่างเช่น click event ใน JSX คือ `onClick` แทนที่จะเป็น `onclick` ในทำนองเดียวกัน `onchange` จะกลายเป็น `onChange` แม้ว่าสิ่งนี้จะมีความแตกต่างเพียงเล็กน้อย แต่ก็เป็นสิ่งสำคัญที่ต้องคำนึงถึงการเรียนรู้ต่อๆ ไป
 
 # --instructions--
 
+ใช้คลาสของ `myDiv` กับ `div` ที่ให้ไว้ในโค้ด JSX
 Apply a class of `myDiv` to the `div` provided in the JSX code.
 
 # --hints--
 
-The constant `JSX` should return a `div` element.
+constant `JSX` ควรจะ return `div` element
 
 ```js
 assert.strictEqual(JSX.type, 'div');
 ```
 
-The `div` should have a class of `myDiv`.
+`div` ดังกล่าวควรมี class ว่า `myDiv`
 
 ```js
 assert.strictEqual(JSX.props.className, 'myDiv');

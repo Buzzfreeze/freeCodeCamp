@@ -12,9 +12,9 @@ dashedName: data-cleaning-duplicates
 
 # --description--
 
-*ผู้เรียนสามารถใช้ Google Colab แทน notebooks.ai ที่สาธิตใน Videoได้*
+*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
 
-แหล่งเรียนรู้เพิ่มเติม:
+More resources:
 
 -   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/data-cleaning-rmotr-freecodecamp)
 -   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
@@ -23,19 +23,19 @@ dashedName: data-cleaning-duplicates
 
 ## --text--
 
- ตัว Method ของ Python ชื่อ  duplicated() จะคืนค่าเป็นชุด boolean ใน DataFrame โดยค่า `True` เป็นค่าที่คืนจากแถวนั้น:
+The Python method `.duplicated()` returns a boolean Series for your DataFrame. `True` is the return value for rows that:
 
 ## --answers--
 
-เมื่อมีรายการที่ซ้ำกัน โดยที่ค่าสำหรับแถวประกอบด้วยค่าที่เกิดขึ้นครั้งแรก 
+contain a duplicate, where the value for the row contains the first occurrence of that value.
 
 ---
 
-เมื่อมีรายการที่ซ้ำกัน  โดยที่ค่าสำหรับแถวอย่างน้อยเป็นรายการที่สองของค่านั้น 
+contain a duplicate, where the value for the row is at least the second occurrence of that value.
 
 ---
 
-มีรายการที่ซ้ำกัน โดยที่ค่าสำหรับแถวประกอบด้วยการเกิดขึ้นครั้งแรกหรือครั้งที่สอง 
+contain a duplicate, where the value for the row contains either the first or second occurrence.
 
 ## --video-solution--
 

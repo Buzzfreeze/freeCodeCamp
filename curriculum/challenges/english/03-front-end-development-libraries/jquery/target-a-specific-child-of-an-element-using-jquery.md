@@ -10,23 +10,24 @@ dashedName: target-a-specific-child-of-an-element-using-jquery
 
 # --description--
 
-You've seen why id attributes are so convenient for targeting with jQuery selectors. But you won't always have such neat ids to work with.
 
-Fortunately, jQuery has some other tricks for targeting the right elements.
+คุณเห็นแล้วว่าทำไมการใช้ id attribute นั้นสะดวกสำหรับการกำหนดเป้าหมายให้กับ jQuery selector แต่ในบางกรณีเราก็ไม่จำเป็นต้องใช้ตัวไอดีในเลือกเป้าหมาย
 
-jQuery uses CSS Selectors to target elements. The `target:nth-child(n)` CSS selector allows you to select all the nth elements with the target class or element type.
+jQuery นั้นมีวิธีการอย่างอื่นอีกในการกำหนดเป้าหมายให้กับ element ที่ถูกต้อง
 
-Here's how you would give the third element in each well the bounce class:
+jQuery ยังใช้ CSS selector เพื่อที่จะกำหนดเป้าหมายให้กับ element ต่างๆ ได้ อย่างการใช้ `target:nth-child(n)` CSS selector ที่จะทำให้คุณสามารถเลือก element ที่ n ทั้งหมด ของ class หรือ element เป้าหมาย
+
+นี้คือวิธีการที่คุณจะสามารถเพิ่ม bounce class ให้แก่ element ลำดับที่สามของแต่ละ well ได้:
 
 ```js
 $(".target:nth-child(3)").addClass("animated bounce");
 ```
 
-Make the second child in each of your well elements bounce. You must select the elements' children with the `target` class.
+มาลองทำให้ element ลูกลำดับที่ 2 ภายใน well element เกิดเอฟเฟคเด้งขึ้นมากัน โดยการเลือก element ลูก ที่มี class เป้าหมาย
 
 # --hints--
 
-The second element in your `target` elements should bounce.
+Element ที่สองใน `target` element จะต้องมีเอฟเฟคเด้ง
 
 ```js
 assert(
@@ -35,19 +36,19 @@ assert(
 );
 ```
 
-Only two elements should bounce.
+ซึ่งจะมีทั้งหมด 2 element ที่เด้ง
 
 ```js
 assert($('.animated.bounce').length === 2);
 ```
 
-You should use the `:nth-child()` selector to modify these elements.
+คุณควรใช้ selector `:nth-child()` เพื่อที่จะปรับแต่ง element นี้
 
 ```js
 assert(code.match(/\:nth-child\(/g));
 ```
 
-You should only use jQuery to add these classes to the element.
+คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
 
 ```js
 assert(

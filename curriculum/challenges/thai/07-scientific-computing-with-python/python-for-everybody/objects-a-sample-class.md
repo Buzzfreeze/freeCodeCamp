@@ -14,7 +14,7 @@ dashedName: objects-a-sample-class
 
 ## --text--
 
-เมื่อรันโค๊ดต่อไปนี้ โปรแกรมจะแสดงผลลัพธ์ในข้อใด ?
+What will the following program print?:
 
 ```python
 class PartyAnimal:
@@ -59,3 +59,4 @@ So far 2
 ## --video-solution--
 
 4
+

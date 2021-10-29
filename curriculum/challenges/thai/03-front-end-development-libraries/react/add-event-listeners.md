@@ -8,18 +8,19 @@ dashedName: add-event-listeners
 
 # --description--
 
-`componentDidMount()` method เป็น method ที่ดีที่สุดที่จะสามารถแนบ event listener ที่คุณต้องการเพิ่มเพื่อฟังก์ชันเฉพาะ 
-React นั้นมีระบบ event สังเคราะห์ที่ล้อมรอบระบบ event ดั้งเดิมที่แสดงผลในเบราว์เซอร์ สิ่งนี้หมายถึงระบบ event สังเคราะห์มีการทำงานที่เหมือนกันทุกประการโดยที่ไม่ต้องคำนึงถึงเบราว์เซอร์ของ user แม้ว่า ระบบ event ดั้งเดิมจะทำงานแตกต่างกันไปในแต่ละเบราว์เซอร์ก็ตาม
+The `componentDidMount()` method is also the best place to attach any event listeners you need to add for specific functionality. React provides a synthetic event system which wraps the native event system present in browsers. This means that the synthetic event system behaves exactly the same regardless of the user's browser - even if the native events may behave differently between different browsers.
 
-คุณได้ลองใช้ตัวจัดการ event สังเคราะห์มาบ้างแล้ว เช่น `onClick()` ระบบ event สังเคราะห์ของ React ใช้งานได้ยอดเยี่ยมสำหรับการโต้ตอบส่วนมากบน DOM element ที่คุณจะต้องจัดการ อย่างไรก็ตาม หากคุณต้องการที่จะแนบตัวจัดการ event ไปกับ document หรือ window objects คุณต้องทำสิ่งเหล่านี้โดยตรง
+You've already been using some of these synthetic event handlers such as `onClick()`. React's synthetic event system is great to use for most interactions you'll manage on DOM elements. However, if you want to attach an event handler to the document or window objects, you have to do this directly.
 
 # --instructions--
 
-แนบ event listener ใน `componentDidMount()` method สำหรับ `keydown` event และทำให้ event นี้ไปทำให้ callback `handleKeyPress()` ทำงาน คุณสามารถใช้ `document.addEventListener()` ซึ่งรับ event (ในเครื่องหมายคำพูด) เป็น argument แรก และ callback เป็น argument ที่สอง แนวทางปฏิบัติที่ดีสำหรับการใช้ lifecycle method เพื่อล้างข้อมูล React component ก่อนที่จะถูกถอนและทำลาย การนำ event listener ออกเป็นตัวอย่างนึงของการดำเนินการล้างข้อมูลดังกล่าว
+Attach an event listener in the `componentDidMount()` method for `keydown` events and have these events trigger the callback `handleKeyPress()`. You can use `document.addEventListener()` which takes the event (in quotes) as the first argument and the callback as the second argument.
+
+Then, in `componentWillUnmount()`, remove this same event listener. You can pass the same arguments to `document.removeEventListener()`. It's good practice to use this lifecycle method to do any clean up on React components before they are unmounted and destroyed. Removing event listeners is an example of one such clean up action.
 
 # --hints--
 
-`MyComponent` ควรต้องแสดงผลเป็น `div` element ที่ครอบ `h1` tag
+`MyComponent` should render a `div` element which wraps an `h1` tag.
 
 ```js
 assert(
@@ -30,7 +31,7 @@ assert(
 );
 ```
 
-`keydown` listener ควรจะต้องถูกแนบไปกับ document ใน `componentDidMount`
+A `keydown` listener should be attached to the document in `componentDidMount`.
 
 ```js
 assert(
@@ -46,8 +47,7 @@ assert(
 );
 ```
 
-`keydown` listener จะต้องถูกลบจาก document ใน `componentWillUnmount`
-
+The `keydown` listener should be removed from the document in `componentWillUnmount`.
 
 ```js
 assert(
@@ -63,7 +63,7 @@ assert(
 );
 ```
 
-เมื่อติดตั้ง component แล้ว การกด `enter` จะต้องเป็นการอัปเดตสถานะของมัน และ `h1` tag ที่แสดงผล
+Once the component has mounted, pressing `enter` should update its state and the rendered `h1` tag.
 
 ```js
 async () => {

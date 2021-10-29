@@ -8,17 +8,17 @@ dashedName: write-a-react-component-from-scratch
 
 # --description--
 
-Now that you've learned the basics of JSX and React components, it's time to write a component on your own. React components are the core building blocks of React applications so it's important to become very familiar with writing them. Remember, a typical React component is an ES6 `class` which extends `React.Component`. It has a render method that returns HTML (from JSX) or `null`. This is the basic form of a React component. Once you understand this well, you will be prepared to start building more complex React projects.
+เมื่อคุณได้เรียนรู้พื้นฐานของ JSX และ React components แล้ว ก็ถึงเวลาเขียน component ด้วยตัวเอง React component เป็นบล็อกโครงสร้างหลักของแอปพลิเคชัน React ดังนั้นจึงเป็นเรื่องสำคัญที่ต้องทำความคุ้นเคยกับการเขียนพวกมัน โปรดจำไว้ว่า React component ทั่วไปคือ `class` ของ ES6 ซึ่งขยาย `React.Component` มี render method ที่ return HTML (จาก JSX) หรือ `null` นี่เป็นรูปแบบพื้นฐานของ React component เมื่อคุณเข้าใจสิ่งนี้ดีแล้ว คุณก็พร้อมที่จะเริ่มสร้างโปรเจค React ที่ซับซ้อนมากขึ้น
 
 # --instructions--
 
-Define a class `MyComponent` that extends `React.Component`. Its render method should return a `div` that contains an `h1` tag with the text: `My First React Component!` in it. Use this text exactly, the case and punctuation matter. Make sure to call the constructor for your component, too.
+กำหนดคลาส `MyComponent` ที่ขยาย `React.Component` และ render method ของมันควร return `div` ที่มีแท็ก `h1` พร้อมข้อความ: `My First React Component!` อยู่ในนั้น ใช้ข้อความตามนี้ทุกประการทั้งตัวพิมพ์เล็กและตัวพิมพ์ใหญ่ อย่าลืมเรียกใช้ Constructor สำหรับ component ของคุณด้วย
 
-Render this component to the DOM using `ReactDOM.render()`. There is a `div` with `id='challenge-node'` available for you to use.
+เรนเดอร์ component นี้ไปยัง DOM โดยใช้ `ReactDOM.render()` มันมี `div` ที่มี `id='challenge-node'` ให้คุณใช้งาน
 
 # --hints--
 
-There should be a React component called `MyComponent`.
+มันควรมี React component ชื่อว่า `MyComponent`
 
 ```js
 (getUserInput) =>
@@ -29,7 +29,7 @@ There should be a React component called `MyComponent`.
   );
 ```
 
-`MyComponent` should contain an `h1` tag with text `My First React Component!` Case and punctuation matter.
+`MyComponent` ควรมี `h1` tag พร้อมกับข้อความ `My First React Component!` ควรพิมพ์ตัวพิมพ์เล็กและตัวพิมพ์ใหญ่ตามโจทย์ทุกประการ
 
 ```js
 assert(
@@ -40,13 +40,14 @@ assert(
 );
 ```
 
-`MyComponent` should render to the DOM.
+
+`MyComponent` ควรเรนเดอร์ไปที่ DOM
 
 ```js
 assert(document.getElementById('challenge-node').childNodes.length === 1);
 ```
 
-`MyComponent` should have a constructor calling `super` with `props`.
+`MyComponent` ควรมี constructor ที่เรียกใช้ `super` กับ `props`
 
 ```js
 assert(

@@ -14,7 +14,7 @@ dashedName: python-lists
 
 ## --text--
 
-เมื่อรันโค๊ดต่อไปนี้ โปรแกรมจะแสดงค่าของ x เป็นข้อใด ?
+What is the value of x after running this code:
 
 ```python
 fruit = "banana"
@@ -40,3 +40,4 @@ True
 ## --video-solution--
 
 2
+

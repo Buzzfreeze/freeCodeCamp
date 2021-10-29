@@ -14,7 +14,7 @@ dashedName: iterations-loop-idioms
 
 ## --text--
 
-จากโค๊ดด้านล่าง บรรทัดไหน ที่จะทำให้โค๊ดชุดนี้ทำงานผิดจากที่ต้องการ ?
+Below is code to find the smallest value from a list of values. One line has an error that will cause the code to not work as expected. Which line is it?:
 
 ```python
 smallest = None
@@ -46,3 +46,4 @@ print("Smallest:", smallest)
 ## --video-solution--
 
 3
+

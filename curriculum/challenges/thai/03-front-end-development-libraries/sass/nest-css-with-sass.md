@@ -8,9 +8,9 @@ dashedName: nest-css-with-sass
 
 # --description--
 
-Sass สามารถฝังกฎ CSS ได้ ซึ่งเป็นวิธีที่มีประสิทธิภาพในการจัดระเบียบสไตลชีต
+Sass allows nesting of CSS rules, which is a useful way of organizing a style sheet.
 
-โดยปกติแล้วแต่ละ element นั้นถูกตั้งเป้าหมายในโค้ดคนละบรรทัดในการสไตล์ ดังเช่น:
+Normally, each element is targeted on a different line to style it, like so:
 
 ```scss
 nav {
@@ -26,7 +26,7 @@ nav ul li {
 }
 ```
 
-ในโปรเจคที่ใหญ่ๆ ไฟล์ CSS นั้นเต็มไปด้วยบรรทัดและกฎต่างๆ ซึ่งการ nesting (ฝัง) จะเข้ามามีส่วนในการจัดระเบียบโค้ดของคุณโดยการวางกฎสไตล์ที่เป็น child ภายใน parent element ของมัน
+For a large project, the CSS file will have many lines and rules. This is where nesting can help organize your code by placing child style rules within the respective parent elements:
 
 ```scss
 nav {
@@ -45,11 +45,11 @@ nav {
 
 # --instructions--
 
-ใช้เทคนิค nesting ดังที่แสดงข้างบนในการจัดระเบียบกฎ CSS ต่างๆ ใหม่ ให้ child ทั้งสองของ `.blog-post` element เพื่อให้ test ผ่าน `h1` ควรมาก่อน `p` element
+Use the nesting technique shown above to re-organize the CSS rules for both children of `.blog-post` element. For testing purposes, the `h1` should come before the `p` element.
 
 # --hints--
 
-โค้ดของคุณควรจัดระเบียบกฎ CSS ใหม่ ดังนั้น `h1` และ `p` ควรถูกฝังใน `.blog-post` element ที่เป็น parent
+Your code should re-organize the CSS rules so the `h1` and `p` are nested in the `.blog-post` parent element.
 
 ```js
 assert(

@@ -14,21 +14,20 @@ dashedName: introduction-hardware-architecture
 
 ## --text--
 
-Where are your programs stored when they are running?
+โปรแกรมถูกเก็บไว้ที่ไหนเมื่อโปรแกรมทำงาน ?
 
 ## --answers--
 
-Hard Drive.
+ฮาร์ดไดรฟ์ (Hard Drive)
 
 ---
 
-Memory.
+หน่วยความจำ (Memory)
 
 ---
 
-Central Processing Unit.
+หน่วยประมวลผลกลาง (CPU)
 
 ## --video-solution--
 
 2
-

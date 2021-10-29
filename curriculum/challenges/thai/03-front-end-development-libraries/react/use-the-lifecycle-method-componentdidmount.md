@@ -8,17 +8,17 @@ dashedName: use-the-lifecycle-method-componentdidmount
 
 # --description--
 
-ในบางครั้งนักพัฒนาเว็บส่วนใหญ่จำเป็นต้องเรียกจุดปลาย API เพื่อดึงข้อมูล หากคุณกำลังทำงานกับ React สิ่งสำคัญคือต้องรู้ว่าต้องทำการนี้ที่ไหน
+Most web developers, at some point, need to call an API endpoint to retrieve data. If you're working with React, it's important to know where to perform this action.
 
-แนวปฏิบัติที่ดีที่สุดเกี่ยวกับ React คือการเรียกใช้งาน API หรือการเรียกใช้งานใดๆ ไปยังเซิร์ฟเวอร์ของคุณใน lifecycle method `componentDidMount()` ซึ่ง method นี้ถูกเรียกใช้งานหลังจากติดตั้ง component กับ DOM การเรียกใช้งานใดๆ ของ `setState()` ในที่นี่จะสั่งในเรนเดอร์ component ของคุณอีกครั้ง เมื่อคุณเรียกใช้ API ใน method นี้ และตั้งค่า state ของคุณด้วยข้อมูลที่ API return มา มันจะสั่งอัปเดตโดยอัตโนมัติเมื่อคุณได้รับข้อมูลมา
+The best practice with React is to place API calls or any calls to your server in the lifecycle method `componentDidMount()`. This method is called after a component is mounted to the DOM. Any calls to `setState()` here will trigger a re-rendering of your component. When you call an API in this method, and set your state with the data that the API returns, it will automatically trigger an update once you receive the data.
 
 # --instructions--
 
-มีการเรียกใช้ API จำลองใน `componentDidMount()` มันตั้งค่า state หลังจาก 2.5 วินาทีเพื่อจำลองการเรียกใช้เซิร์ฟเวอร์เพื่อดึงข้อมูล ตัวอย่างนี้ขอ users ที่ใช้งานอยู่ทั้งหมดในปัจจุบันบนเว็บไซต์ ใน render method ให้เรนเดอร์ค่าของ `activeUsers` ใน `h1` หลังข้อความ `Active Users:` ลองดูว่าเกิดอะไรขึ้นในพรีวิว และอย่าลังเลที่จะเปลี่ยนระยะเวลา timeout เพื่อดูเอฟเฟกต์ต่างๆ
+There is a mock API call in `componentDidMount()`. It sets state after 2.5 seconds to simulate calling a server to retrieve data. This example requests the current total active users for a site. In the render method, render the value of `activeUsers` in the `h1` after the text `Active Users:`. Watch what happens in the preview, and feel free to change the timeout to see the different effects.
 
 # --hints--
 
-`MyComponent` ควรเรนเดอร `div` element ที่ครอบ `h1` tag
+`MyComponent` should render a `div` element which wraps an `h1` tag.
 
 ```js
 assert(
@@ -32,7 +32,7 @@ assert(
 );
 ```
 
-Component state ควรถูกอัปเดตด้วยระยะเวลา timeout function ใน `componentDidMount`
+Component state should be updated with a timeout function in `componentDidMount`.
 
 ```js
 assert(
@@ -45,7 +45,7 @@ assert(
 );
 ```
 
-`h1` tag ควรเรนเดอร์ค่า `activeUsers` จาก state ของ `MyComponent`
+The `h1` tag should render the `activeUsers` value from `MyComponent`'s state.
 
 ```js
 (() => {

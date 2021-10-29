@@ -8,33 +8,33 @@ dashedName: call-out-optional-actions-with-btn-info
 
 # --description--
 
-Bootstrap มาพร้อมกับสีพื้นฐานที่กำหนดมาก่อนแล้วสำหรับปุ่มต่างๆ อย่างเช่น `btn-info` class ซึ่งเป็นสีของปุ่มที่ดึงดูดความสนใจของผู้ใช้สำหรับตัวเลือกปุ่มอื่นๆ
+Bootstrap comes with several pre-defined colors for buttons. The `btn-info` class is used to call attention to optional actions that the user can take.
 
-มาลองสร้างปุ่มแบบ block-level จาก Bootstrap ใส่ข้อความว่า `Info` และกำหนด class `btn-info` และ `btn-block` จาก Bootstrap ด้วย โดยให้อยู่ด้านล่างของปุ่ม `Like`
+Create a new block-level Bootstrap button below your `Like` button with the text `Info`, and add Bootstrap's `btn-info` and `btn-block` classes to it.
 
-หมายเหตุ ทั้งปุ่ม `Like` และ `Info` นี้ยังต้องกำหนด class `btn` และ `btn-block` ด้วยเช่นกัน
+Note that these buttons still need the `btn` and `btn-block` classes.
 
 # --hints--
 
-สร้าง `button` element ใหม่ ที่มีข้อความ `Info`
+You should create a new `button` element with the text `Info`.
 
 ```js
 assert(new RegExp('info', 'gi').test($('button').text()));
 ```
 
-ทั้งปุ่ม `Like` และ `Info` ต้องมี class `btn` และ `btn-block` ของ Bootstrap
+Both of your Bootstrap buttons should have the `btn` and `btn-block` classes.
 
 ```js
 assert($('button.btn-block.btn').length > 1);
 ```
 
-ในปุ่ม `Info` นั้น ต้องกำหนด class `btn-info` ด้วย
+Your new button should have the class `btn-info`.
 
 ```js
 assert($('button').hasClass('btn-info'));
 ```
 
-อย่าลืม tag ปิด สำหรับ `button` element ทั้งหมด
+All of your `button` elements should have closing tags.
 
 ```js
 assert(

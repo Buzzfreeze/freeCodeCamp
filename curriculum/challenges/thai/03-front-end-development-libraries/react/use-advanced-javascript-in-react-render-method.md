@@ -8,17 +8,17 @@ dashedName: use-advanced-javascript-in-react-render-method
 
 # --description--
 
-ในแบบทดสอบครั้งก่อน คุณได้เรียนรู้วิธีใส่โค้ด JavaScript ลงในโค้ด JSX โดยใช้วงเล็บปีกกา `{ }` สำหรับงานต่างๆ เช่น การเข้าถึง props การส่ง props การเข้าถึง state การแทรก comment ในโค้ดของคุณ และล่าสุดการจัดตกแต่งสไตล์ components ของคุณ นี่เป็นกรณีการใช้งานทั่วไปทั้งหมดในการใส่ JavaScript ใน JSX แต่ไม่ใช่วิธีเดียวที่คุณสามารถใช้โค้ด JavaScript ใน React components ของคุณได้
+In previous challenges, you learned how to inject JavaScript code into JSX code using curly braces, `{ }`, for tasks like accessing props, passing props, accessing state, inserting comments into your code, and most recently, styling your components. These are all common use cases to put JavaScript in JSX, but they aren't the only way that you can utilize JavaScript code in your React components.
 
-คุณยังสามารถเขียน JavaScript ได้โดยตรงใน`render` methods ก่อนคำสั่ง `return` ***โดยไม่ต้อง*** เขียนเข้าไปในวงเล็บปีกกา เนื่องจากมันยังไม่อยู่ในโค้ด JSX เมื่อคุณต้องการใช้ตัวแปรภายหลังในโค้ด JSX *ภายใน* คำสั่ง `return` คุณถึงจะเขียนชื่อตัวแปรไว้ในวงเล็บปีกกา
+You can also write JavaScript directly in your `render` methods, before the `return` statement, ***without*** inserting it inside of curly braces. This is because it is not yet within the JSX code. When you want to use a variable later in the JSX code *inside* the `return` statement, you place the variable name inside curly braces.
 
 # --instructions--
 
-ในโค้ดที่ให้มา `render` method มี array ที่ประกอบด้วย 20 วลีเพื่อเป็นคำตอบที่พบในของเล่นคลาสสิก Magic Eight Ball ช่วงทศวรรษ 1980 ให้ click event ของปุ่มถูกผูกไว้ `ask` method ดังนั้นทุกครั้งที่มีการคลิกปุ่ม จะมีการสร้างตัวเลขสุ่มและจัดเก็บเป็น `randomIndex` ใน state ในบรรทัดที่ 52 ให้ลบสตริง `change me!` และกำหนด const `answer` ใหม่เพื่อให้โค้ดของคุณสุ่มเข้าถึงดัชนีต่างๆ ของ `possibleAnswers` array ในทุกครั้งที่ component เดต สุดท้ายใส่ค่า const `answer` ลงในแท็ก `p`
+In the code provided, the `render` method has an array that contains 20 phrases to represent the answers found in the classic 1980's Magic Eight Ball toy. The button click event is bound to the `ask` method, so each time the button is clicked a random number will be generated and stored as the `randomIndex` in state. On line 52, delete the string `change me!` and reassign the `answer` const so your code randomly accesses a different index of the `possibleAnswers` array each time the component updates. Finally, insert the `answer` const inside the `p` tags.
 
 # --hints--
 
-`MagicEightBall` component ควรมีและเรนเดอร์ยังเพจ
+The `MagicEightBall` component should exist and should render to the page.
 
 ```js
 assert.strictEqual(
@@ -28,7 +28,7 @@ assert.strictEqual(
 );
 ```
 
-Child แรกของ `MagicEightBall` ควรเป็น `input` element
+`MagicEightBall`'s first child should be an `input` element.
 
 ```js
 assert.strictEqual(
@@ -40,7 +40,7 @@ assert.strictEqual(
 );
 ```
 
-Child ที่สามของ `MagicEightBall` ควรเป็น `button` element
+`MagicEightBall`'s third child should be a `button` element.
 
 ```js
 assert.strictEqual(
@@ -52,8 +52,7 @@ assert.strictEqual(
 );
 ```
 
-State ของ `MagicEightBall` ควรเริ่มด้วย property ของ `userInput` และ property ของ `randomIndex` ที่ตั้ง value ไว้เป็น string ว่าง
-
+`MagicEightBall`'s state should be initialized with a property of `userInput` and a property of `randomIndex` both set to a value of an empty string.
 
 ```js
 assert(
@@ -72,7 +71,7 @@ assert(
 );
 ```
 
-เมื่อข้อความถูกพิมพ์ลงไปใน `input` element และ มีการคลิกปุ่ม `MagicEightBall` component ควรจะต้อง return `p` element ที่มี element ที่สุ่มมาจาก `possibleAnswers` array
+When text is entered into the `input` element and the button is clicked, the `MagicEightBall` component should return a `p` element that contains a random element from the `possibleAnswers` array.
 
 ```js
 (() => {

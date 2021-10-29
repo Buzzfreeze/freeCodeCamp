@@ -8,19 +8,19 @@ dashedName: review-using-props-with-stateless-functional-components
 
 # --description--
 
-ยกเว้นแบบทดสอบที่ผ่านมา คุณได้ส่ง props ไปยัง stateless functional components components เหล่านี้ทำหน้าที่เหมือนฟังก์ชันธรรมดา พวกมันยอมรับ props เป็น input และ return มุมมองเดิมทุกครั้งที่ถูกส่ง props เดียวกัน คุณอาจสงสัยว่า state คืออะไรในแบบทดสอบต่อไปจะกล่าวถึงมันในรายละเอียดเพิ่มเติม ก่อนอื่นนี่คือการทบทวนคำศัพท์ต่างๆ สำหรับ components
+Except for the last challenge, you've been passing props to stateless functional components. These components act like pure functions. They accept props as input and return the same view every time they are passed the same props. You may be wondering what state is, and the next challenge will cover it in more detail. Before that, here's a review of the terminology for components.
 
-*stateless functional component* คือฟังก์ชันใดๆ ที่คุณเขียนซึ่งยอมรับ props และ return JSX ในทางกลับกัน *stateless component* เป็นคลาสที่ขยาย `React.Component` แต่ไม่ได้ใช้ state ภายใน (จะอธิบายในแบบทดสอบถัดไป) สุดท้าย *stateful component* เป็น class component ที่รักษา state ภายในของตัวเอง คุณอาจเห็น stateful components ที่เรียกสั้นๆ ว่า components หรือ React components
+A *stateless functional component* is any function you write which accepts props and returns JSX. A *stateless component*, on the other hand, is a class that extends `React.Component`, but does not use internal state (covered in the next challenge). Finally, a *stateful component* is a class component that does maintain its own internal state. You may see stateful components referred to simply as components or React components.
 
-โดยทั่วไปแล้วเราจะพยายามลด statefulness ให้เหลือน้อยที่สุดและสร้าง stateless functional components ในทุกที่ที่ทำได้ ซึ่งจะช่วยให้มีการจัดการ state ในพื้นที่เฉพาะของแอปพลิเคชันของคุณ สิ่งนี้ช่วยปรับปรุงการพัฒนาและบำรุงรักษาแอปของคุณโดยทำให้ง่ายต่อการติดตามว่าการเปลี่ยนแปลง state ส่งผลต่อพฤติกรรมของแอปอย่างไร
+A common pattern is to try to minimize statefulness and to create stateless functional components wherever possible. This helps contain your state management to a specific area of your application. In turn, this improves development and maintenance of your app by making it easier to follow how changes to state affect its behavior.
 
 # --instructions--
 
-code editor มี `CampSite` component ที่เรนเดอร์ `Camper` component เป็น child กำหนดให้ `Camper` component และกำหนด props เริ่มต้นของ `{ name: 'CamperBot' }` ให้เรนเดอร์โค้ดใดๆ ที่คุณต้องการภายใน`Camper` component แต่ต้องให้มี `p` element หนึ่งรายการที่มีเฉพาะ`name` value ที่ส่งผ่านเป็น `prop` สุดท้ายกำหนด `propTypes` บน`Camper` component เพื่อเรียกให้ระบุ `name` เป็น prop และตรวจสอบว่าเป็นประเภท `string`
+The code editor has a `CampSite` component that renders a `Camper` component as a child. Define the `Camper` component and assign it default props of `{ name: 'CamperBot' }`. Inside the `Camper` component, render any code that you want, but make sure to have one `p` element that includes only the `name` value that is passed in as a `prop`. Finally, define `propTypes` on the `Camper` component to require `name` to be provided as a prop and verify that it is of type `string`.
 
 # --hints--
 
-`CampSite` component ควรเรนเดอร์
+The `CampSite` component should render.
 
 ```js
 assert(
@@ -31,7 +31,7 @@ assert(
 );
 ```
 
-`Camper` component ควรเรนเดอร์
+The `Camper` component should render.
 
 ```js
 assert(
@@ -42,7 +42,7 @@ assert(
 );
 ```
 
-`Camper` component ควรมี props เริ่มต้นที่มีการระบุ string `CamperBot` ไปยัง key `name`
+The `Camper` component should include default props which assign the string `CamperBot` to the key `name`.
 
 ```js
 assert(
@@ -52,7 +52,7 @@ assert(
 );
 ```
 
-`Camper` component ควรมี prop types ที่กำหนดให้ `name` prop เป็น `string`
+The `Camper` component should include prop types which require the `name` prop to be of type `string`.
 
 ```js
 assert(
@@ -62,7 +62,7 @@ assert(
 );
 ```
 
-`Camper` component ควรมี `p` element ที่มีเพียงข้อความจาก `name` prop
+The `Camper` component should contain a `p` element with only the text from the `name` prop.
 
 ```js
 assert(

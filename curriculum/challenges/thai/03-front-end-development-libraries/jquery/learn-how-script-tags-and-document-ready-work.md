@@ -8,23 +8,23 @@ dashedName: learn-how-script-tags-and-document-ready-work
 
 # --description--
 
-พร้อมที่เรียนรู้เกี่ยวกับ jQuery ที่เป็นเครื่องมือ JavaScript ยอดนิยมตลอดกาลหรือยัง?
+Now we're ready to learn jQuery, the most popular JavaScript tool of all time.
 
-ก่อนที่จะเริ่มใช้งาน jQuery นั้น เราจำเป็นจะต้องเติมบางอย่างให้กับ HTML ของเรา
+Before we can start using jQuery, we need to add some things to our HTML.
 
-เริ่มจาก เพิ่ม `script` element ในส่วนบนของ HTML แล้วอย่าลืม tag ปิดด้วย
+First, add a `script` element at the top of your page. Be sure to close it on the following line.
 
-เบราว์เซอร์ของคุณจะเรียกใช้ JavaScript ใดๆ ใน `script` element รวมถึง jQuery
+Your browser will run any JavaScript inside a `script` element, including jQuery.
 
-เพิ่มโค้ดต่อไปนี้: `$(document).ready(function() {` ภายใน `script` element แล้วปิดด้วย `});` (ยังคงอยู่ภายใน `script` element)
+Inside your `script` element, add this code: `$(document).ready(function() {` to your `script`. Then close it on the following line (still inside your `script` element) with: `});`
 
-เราจะเรียนรู้เกี่ยว `functions` ต่างๆ ภายหลัง สิ่งสำคัญที่ควรรู้ก็คือโค้ดต่างๆ ที่คุณเขียนใน `function` นี้จะทำงานทันทีที่เบราว์เซอร์โหลดหน้าเว็บของคุณ 
+We'll learn more about `functions` later. The important thing to know is that code you put inside this `function` will run as soon as your browser has loaded your page.
 
-สิ่งสำคัญก็คือ หากไม่มี `document ready function` แล้ว โค้ดของคุณอาจจะทำงานก่อนการแสดงผลของ HTML ซึ่งอาจจะก่อให้เกิด bug ได้
+This is important because without your `document ready function`, your code may run before your HTML is rendered, which would cause bugs.
 
 # --hints--
 
-คุณจะต้องสร้าง `script` element ที่ถูกต้องและมี tag ปิดด้วย
+You should create a `script` element making sure it is valid and has a closing tag.
 
 ```js
 assert(
@@ -39,7 +39,7 @@ assert(
 );
 ```
 
-คุณต้องเพิ่ม `$(document).ready(function() {` ในส่วนต้นของ `script` element
+You should add `$(document).ready(function() {` to the beginning of your `script` element.
 
 ```js
 assert(
@@ -49,7 +49,7 @@ assert(
 );
 ```
 
-แล้วคุณต้องปิดฟังก์ชัน `$(document).ready(function() {` ด้วย `});`
+You should close your `$(document).ready(function() {` function with `});`
 
 ```js
 assert(code.match(/\n*?\s*?\}\s*?\);/g));

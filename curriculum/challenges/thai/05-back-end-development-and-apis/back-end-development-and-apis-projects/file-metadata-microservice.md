@@ -8,21 +8,21 @@ dashedName: file-metadata-microservice
 
 # --description--
 
-สร้างแอพแบบ full stack ด้วย JavaScript ที่ทำงานคล้ายกับเว็บไซต์ <https://file-metadata-microservice.freecodecamp.rocks/>  การทำโปรเจคนี้ คุณจะต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งดังต่อไปนี้
+Build a full stack JavaScript app that is functionally similar to this: <https://file-metadata-microservice.freecodecamp.rocks/>. Working on this project will involve you writing your code using one of the following methods:
 
-- Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-filemetadata/)  ในการทำโปรเจค โดยทำให้เสร็จทีละส่วน
-- ใช้เว็บไซต์ [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-filemetadata) ในการทำโปรเจคให้เสร็จสมบูรณ์
-- ใช้ตัวสร้างไซต์ที่คุณเลือก ทำโปรเจคให้เสร็จสมบูรณ์ และอย่าลืมรวมไฟล์ทั้งหมดจาก GitHub repo ของคุณด้วย
+-   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-filemetadata/) and complete your project locally.
+-   Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-filemetadata) to complete your project.
+-   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
 
-เมื่อคุณทำเสร็จแล้ว ตรวจสอบให้แน่ใจด้วยว่า ไฟล์โปรเจคของคุณอยู่ในสถานะที่ทุกคนสามารถมองเห็นได้(public) หลังจากนั้นส่งลิงก์ URL ไว้ใน `Solution Link` หรือส่งลิงก์ซอร์สโค้ดของโปรเจคไว้ใน `GitHub Link` อีกช่องทางหนึ่งก็ได้
+When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your projects source code in the `GitHub Link` field.
 
 # --instructions--
 
-**HINT:** คุณสามารถใช้  `multer` npm ในการอัพโหลดไฟล์
+**HINT:** You can use the `multer` npm package to handle file uploading.
 
 # --hints--
 
-คุณควรที่จะให้แหล่งโปรเจคของคุณ ไม่ใช่ตัวอย่างจาก URL
+You should provide your own project, not the example URL.
 
 ```js
 (getUserInput) => {
@@ -34,7 +34,7 @@ dashedName: file-metadata-microservice
 };
 ```
 
-คุณสามารถส่งแบบฟอร์มที่มีการอัปโหลดไฟล์
+You can submit a form that includes a file upload.
 
 ```js
 async (getUserInput) => {
@@ -45,8 +45,7 @@ async (getUserInput) => {
 };
 ```
 
-แบบฟอร์มที่ใส่ค่าในฟิล์ด ต้องมีแอตทริบิวต์ `name` เพื่อที่จะตั้งค่า `upfile`
-
+The form file input field has the `name` attribute set to `upfile`.
 
 ```js
 async (getUserInput) => {
@@ -57,7 +56,7 @@ async (getUserInput) => {
 };
 ```
 
-เมื่อคุณส่งไฟล์แล้ว คุณจะได้รับไฟล์ประเภท `name`, `type`, และ `size` เป็นไบต์ภายในการตอบกลับ(respond) ของ JSON
+When you submit a file, you receive the file `name`, `type`, and `size` in bytes within the JSON response.
 
 ```js
 async (getUserInput) => {

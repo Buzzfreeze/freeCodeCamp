@@ -8,27 +8,27 @@ dashedName: define-an-action-creator
 
 # --description--
 
-หลังจากสร้าง action ขั้นตอนต่อไปคือการส่ง action ไปยัง Redux store เพื่อให้สามารถอัปเดต state ได้ ใน Redux คุณกำหนด action creators เพื่อทำสิ่งนี้ให้สำเร็จ action creators เป็นเพียงฟังก์ชัน JavaScript ที่ return action กล่าวอีกนัยหนึ่ง action creators สร้าง object ที่แสดงถึง action events
+After creating an action, the next step is sending the action to the Redux store so it can update its state. In Redux, you define action creators to accomplish this. An action creator is simply a JavaScript function that returns an action. In other words, action creators create objects that represent action events.
 
 # --instructions--
 
-กำหนดฟังก์ชันชื่อ `actionCreator()` ซึ่งจะ return `action` object เมื่อมีการเรียกใช้งาน
+Define a function named `actionCreator()` that returns the `action` object when called.
 
 # --hints--
 
-ควรมีฟังก์ชัน `actionCreator`
+The function `actionCreator` should exist.
 
 ```js
 assert(typeof actionCreator === 'function');
 ```
 
-การใช้งานฟังก์ชัน `actionCreator` ควร return `action` object
+Running the `actionCreator` function should return the `action` object.
 
 ```js
 assert(typeof action === 'object');
 ```
 
-`action` ที่ถูก return มาควรมี key property `type` ที่มีค่าเป็น `LOGIN`
+The returned `action` should have a key property `type` with value `LOGIN`.
 
 ```js
 assert(action.type === 'LOGIN');

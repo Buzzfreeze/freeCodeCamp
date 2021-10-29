@@ -8,12 +8,11 @@ dashedName: create-a-stateless-functional-component
 
 # --description--
 
+Components are the core of React. Everything in React is a component and here you will learn how to create one.
 
- Component เป็นแกนหลักของ React ทุกอย่างใน React เป็น component และคุณจะได้เรียนรู้วิธีการสร้างสิ่งนี้
+There are two ways to create a React component. The first way is to use a JavaScript function. Defining a component in this way creates a *stateless functional component*. The concept of state in an application will be covered in later challenges. For now, think of a stateless component as one that can receive data and render it, but does not manage or track changes to that data. (We'll cover the second way to create a React component in the next challenge.)
 
-มีสองวิธีในการสร้าง React component วิธีแรกคือการใช้ฟังก์ชัน JavaScript การกำหนด component ในลักษณะนี้จะสร้าง *stateless functional component* แนวคิดเกี่ยวกับ state ในแอปพลิเคชันถูกอธิบายในแบบทดสอบถัดๆ ไป ในตอนนี้ลองนึกถึง stateless component เป็น component ที่สามารถรับข้อมูลและเรนเดอร์ข้อมูลนั้นได้ แต่ไม่สามารถจัดการหรือติดตามการเปลี่ยนแปลงของข้อมูลนั้นได้ (เราจะพูดถึงวิธีที่สองในการสร้าง React component ในแบบทดสอบครั้งต่อไป)
-
-ในการสร้าง component ด้วยฟังก์ชัน คุณเพียงแค่เขียนฟังก์ชัน JavaScript ที่ return JSX หรือ `null` สิ่งสำคัญอย่างหนึ่งที่ควรทราบคือ React กำหนดให้ชื่อฟังก์ชันของคุณขึ้นต้นด้วยอักษรตัวใหญ่ ต่อไปนี้คือตัวอย่างของ stateless functional component ที่กำหนดคลาส HTML ใน JSX:
+To create a component with a function, you simply write a JavaScript function that returns either JSX or `null`. One important thing to note is that React requires your function name to begin with a capital letter. Here's an example of a stateless functional component that assigns an HTML class in JSX:
 
 ```jsx
 const DemoComponent = function() {
@@ -23,19 +22,19 @@ const DemoComponent = function() {
 };
 ```
 
-หลังจากได้รับการ transpile แล้ว `<div>` จะมี CSS class เป็น `customClass`
+After being transpiled, the `<div>` will have a CSS class of `customClass`.
 
-เนื่องจาก JSX component แสดงถึง HTML คุณจึงสามารถรวมหลาย component เข้าด้วยกันเพื่อสร้างหน้า HTML ที่ซับซ้อนยิ่งขึ้นได้ นี่เป็นหนึ่งในข้อได้เปรียบที่สำคัญของสถาปัตยกรรม component ที่ React มีให้ มันช่วยให้คุณสามารถรวบรวม UI จาก component ที่แยกจากกันจำนวนมาก ทำให้ง่ายต่อการสร้างและบำรุงรักษาส่วน user interface ที่ซับซ้อน
+Because a JSX component represents HTML, you could put several components together to create a more complex HTML page. This is one of the key advantages of the component architecture React provides. It allows you to compose your UI from many separate, isolated components. This makes it easier to build and maintain complex user interfaces.
 
 # --instructions--
 
-ใน code editor มีฟังก์ชันที่เรียกว่า `MyComponent` ทำฟังก์ชันนี้ให้สมบูรณ์เพื่อให้มันสามารถ return `div' element เดียวซึ่งมี string ข้อความบางส่วน
+The code editor has a function called `MyComponent`. Complete this function so it returns a single `div` element which contains some string of text.
 
-**Note:** ข้อความถือเป็น child "div" element ดังนั้น คุณจะไม่สามารถใช้แท็กปิดตัวมันเองได้
+**Note:** The text is considered a child of the `div` element, so you will not be able to use a self-closing tag.
 
 # --hints--
 
-`MyComponent` ควรที่จะ return JSX
+`MyComponent` should return JSX.
 
 ```js
 assert(
@@ -46,7 +45,7 @@ assert(
 );
 ```
 
-`MyComponent` ควรที่จะ return `div` element เดียว
+`MyComponent` should return a `div` element.
 
 ```js
 assert(
@@ -57,7 +56,7 @@ assert(
 );
 ```
 
-`div` element ควรที่จะมี string ของข้อความ
+The `div` element should contain a string of text.
 
 ```js
 assert(

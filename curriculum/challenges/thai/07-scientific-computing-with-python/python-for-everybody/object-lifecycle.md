@@ -14,7 +14,7 @@ dashedName: object-lifecycle
 
 ## --text--
 
-เมื่อรันโค๊ดต่อไปนี้ โปรแกรมจะแสดงผลลัพธ์ในข้อใด ?
+What will the following program print?:
 
 ```python
 class PartyAnimal:
@@ -68,3 +68,4 @@ Miya party count 1
 ## --video-solution--
 
 2
+

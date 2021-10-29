@@ -12,15 +12,15 @@ dashedName: intermediate-strings
 
 # --description--
 
-ตัวอย่างเพิ่มเติม:
+More resources:
 
-\- [ตัวอย่างที่ 1](https://www.youtube.com/watch?v=1bSqHot-KwE)
+\- [Exercise](https://www.youtube.com/watch?v=1bSqHot-KwE)
 
 # --question--
 
 ## --text--
 
-ค่าของ i ที่ได้จากโค๊ดด้านล่างนี้ คืออะไร ?
+What is the value of i in the following code?
 
 ```python
 word = "bananana"
@@ -50,3 +50,4 @@ na
 ## --video-solution--
 
 2
+

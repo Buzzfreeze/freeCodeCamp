@@ -10,38 +10,37 @@ dashedName: delete-your-jquery-functions
 
 # --description--
 
-อนิเมชันที่เราด้ำมาแล้วนั้นเจ๋งดีอยู่ แต่คราวนี้มันเริ่มจะน่าเบื่อไปนิดนึง
+These animations were cool at first, but now they're getting kind of distracting.
 
-มาลองลบฟังก์ชันทั้ง 3 ของ jQuery เหล่านี้ออกไปจาก `document ready function` กัน ยังคงตัว `document ready function` ไว้เหมือนเดิม
+Delete all three of these jQuery functions from your `document ready function`, but leave your `document ready function` itself intact.
 
 # --hints--
 
-ฟังก์ชันทั้ง 3 ของ jQuery ต้องถูกลบออกจาก `document ready function`
+All three of your jQuery functions should be deleted from your `document ready function`.
 
 ```js
 assert(code.match(/\{\s*\}\);/g));
 ```
 
-ให้ `script` element ยังอยู่เหมือนเดิม
+You should leave your `script` element intact.
 
 ```js
 assert(code.match(/<script>/g));
 ```
 
-ปล่อยให้ `$(document).ready(function() {` ในส่วนหน้าของ `script` element ยังอยู่เช่นเดิม
+You should leave your `$(document).ready(function() {` at the beginning of your `script` element.
 
 ```js
 assert(code.match(/\$\(document\)\.ready\(function\(\)\s?\{/g));
 ```
 
-ปล่อยให้ `})` ปีกกาปิดของ `document.ready` ยังอยู่เหมือนเดิม
+You should leave the `document.ready` function's closing `})` intact.
 
 ```js
 assert(code.match(/.*\s*\}\);/g));
 ```
 
-และให้ tag ปิดของ `script` element อยู่เหมือนเดิม
-
+You should leave your `script` element closing tag intact.
 
 ```js
 assert(

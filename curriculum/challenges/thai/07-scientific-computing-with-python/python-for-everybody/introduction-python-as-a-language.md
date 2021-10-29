@@ -14,8 +14,7 @@ dashedName: introduction-python-as-a-language
 
 ## --text--
 
-สิ่งที่จะพิมพ์ออกมาหลังจากรันโค้ดสองบรรทัดนี้ คืออะไร ?
-
+What will print out after running these two lines of code:
 
 ```python
 x = 6
@@ -41,3 +40,4 @@ x = 6
 ## --video-solution--
 
 2
+

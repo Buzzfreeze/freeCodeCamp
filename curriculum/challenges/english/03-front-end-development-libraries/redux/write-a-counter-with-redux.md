@@ -8,33 +8,33 @@ dashedName: write-a-counter-with-redux
 
 # --description--
 
-Now you've learned all the core principles of Redux! You've seen how to create actions and action creators, create a Redux store, dispatch your actions against the store, and design state updates with pure reducers. You've even seen how to manage complex state with reducer composition and handle asynchronous actions. These examples are simplistic, but these concepts are the core principles of Redux. If you understand them well, you're ready to start building your own Redux app. The next challenges cover some of the details regarding `state` immutability, but first, here's a review of everything you've learned so far.
+ตอนนี้คุณได้เรียนรู้หลักการสำคัญของ Redux ทั้งหมดแล้ว! คุณได้เห็นวิธีสร้าง actions และ action creators, สร้าง Redux Store, ส่ง actions ของคุณกับ store และออกแบบการอัปเดต state ด้วย reducer ที่แท้จริง คุณยังได้เห็นวิธีจัดการ state ที่ซับซ้อนด้วย reducer composition และจัดการ asynchronous actions แล้ว ซึ่งเป็นตัวอย่างแบบเข้าใจง่าย แต่แนวคิดเหล่านี้เป็นหลักการสำคัญของ Redux หากคุณเข้าใจดี คุณก็พร้อมที่จะเริ่มสร้างแอป Redux ของคุณเองแล้ว แบบทดสอบต่อไปจะพูดถึงรายละเอียดบางอย่างเกี่ยวกับความไม่สามารถเปลี่ยนแปลงได้ของ `state` แต่ก่อนอื่น นี่คือการทบทวนทุกสิ่งที่คุณได้เรียนรู้ไปแล้ว
 
 # --instructions--
 
-In this lesson, you'll implement a simple counter with Redux from scratch. The basics are provided in the code editor, but you'll have to fill in the details! Use the names that are provided and define `incAction` and `decAction` action creators, the `counterReducer()`, `INCREMENT` and `DECREMENT` action types, and finally the Redux `store`. Once you're finished you should be able to dispatch `INCREMENT` or `DECREMENT` actions to increment or decrement the state held in the `store`. Good luck building your first Redux app!
+ในบทเรียนนี้ คุณจะใช้ตัวนับอย่างง่ายกับ Redux ตั้งแต่เริ่มต้น ข้อมูลโค้ดพื้นฐานมีให้อยู่ใน code editor แล้ว แต่คุณจะต้องเติมรายละเอียดเพิ่มเติมเอง! ใช้ชื่อที่ให้มาและกำหนด `incAction` และ `decAction` action creators, `counterReducer()`, `INCREMENT` และ `DECREMENT` action types และสุดท้ายคือ Redux `store` เมื่อคุณทำเสร็จแล้วคุณควรสามารถส่ง 'INCREMENT' หรือ 'DECREMENT' actions เพื่อเพิ่มหรือลด state ที่เก็บไว้ใน `store` ขอให้โชคดีในการสร้างแอป Redux แรกของคุณ!
 
 # --hints--
 
-The action creator `incAction` should return an action object with `type` equal to the value of `INCREMENT`
+action creator `incAction` ควร return action object ด้วย `type` มีค่าเท่ากับ `INCREMENT`
 
 ```js
 assert(incAction().type === INCREMENT);
 ```
 
-The action creator `decAction` should return an action object with `type` equal to the value of `DECREMENT`
+action creator `decAction` ควร return action object ด้วย `type` มีค่าเท่ากับ `DECREMENT`
 
 ```js
 assert(decAction().type === DECREMENT);
 ```
 
-The Redux store should initialize with a `state` of 0.
+Redux store ควรเริ่มต้นด้วย `state` ของ 0
 
 ```js
 assert(store.getState() === 0);
 ```
 
-Dispatching `incAction` on the Redux store should increment the `state` by 1.
+การส่ง `incAction` บน Redux store ควรเพิ่ม `state` ทีละ 1
 
 ```js
 assert(
@@ -47,7 +47,7 @@ assert(
 );
 ```
 
-Dispatching `decAction` on the Redux store should decrement the `state` by 1.
+การส่ง `decAction` บน Redux store ควรลด `state` ทีละ 1
 
 ```js
 assert(
@@ -60,7 +60,7 @@ assert(
 );
 ```
 
-`counterReducer` should be a function
+`counterReducer` ควรเป็นฟังก์ชัน
 
 ```js
 assert(typeof counterReducer === 'function');

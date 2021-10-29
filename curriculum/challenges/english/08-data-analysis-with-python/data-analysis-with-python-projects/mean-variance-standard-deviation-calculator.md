@@ -8,17 +8,16 @@ dashedName: mean-variance-standard-deviation-calculator
 
 # --description--
 
-Create a function that uses Numpy to output the mean, variance, and standard deviation of the rows, columns, and elements in a 3 x 3 matrix.
+สร้าง function ที่ใช้ Numpy เพื่อแสดงค่า mean, variance,  standard deviation ของแถว คอลัมน์ และ metrix ขนาด 3 x 3
 
-You can access [the full project description and starter code on Replit](https://replit.com/github/freeCodeCamp/boilerplate-mean-variance-standard-deviation-calculator).
+ผู้เรียนสามารถเข้าถึงข้อมูล [คำอธิบาย Project และ code เริ่มต้น สามารถดูได้บน Replit](https://replit.com/github/freeCodeCamp/boilerplate-mean-variance-standard-deviation-calculator)
 
-After going to that link, fork the project. Once you complete the project based on the instructions in 'README.md', submit your project link below.
+หลังจากไปที่ลิงก์นั้นแล้ว ให้แยก Projec tออก เมื่อผู้เรียนทำโปรเจ็กต์ตามคำแนะนำใน 'README.md' เสร็จแล้ว ให้ส่งลิงค์ Project ของผู้เรียนไว้ด้านล่าง
 
-We are still developing the interactive instructional part of the data analysis with Python curriculum. For now, you will have to use other resources to learn how to pass this challenge.
-
+เรายังคงพัฒนาส่วนการสอนแบบ interactive ของการวิเคราะห์ข้อมูลในหลักสูตร Python สำหรับตอนนี้ ผู้เรียนจะต้องใช้แหล่งเรียนรู้อื่นๆ เพื่อเรียนรู้วิธีผ่านการทดสอบ challenge นี้ 
 # --hints--
 
-It should pass all Python tests.
+ควรผ่านการทดสอบ Python ทั้งหมด 
 
 ```js
 

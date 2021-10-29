@@ -12,9 +12,9 @@ dashedName: jupyter-notebooks-cells
 
 # --description--
 
-*ผู้เรียนสามารถใช้ Google Colab แทน notebooks.ai ที่สาธิตใน Videoได้*
+*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
 
-แหล่งเรียนรู้เพิ่มเติม:
+More resources:
 
 -   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/ds-content-interactive-jupyterlab-tutorial)
 -   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
@@ -23,19 +23,19 @@ dashedName: jupyter-notebooks-cells
 
 ## --text--
 
-Cell สามประเภทหลักใน Jupyter Notebook มีอะไรบ้าง? 
+What are the three main types of Jupyter Notebook Cell?
 
 ## --answers--
 
-Code, Markdown และภาษา Python
+Code, Markdown, and Python
 
 ---
 
-Code, Markdown และ Raw
+Code, Markdown, and Raw
 
 ---
 
-Markdown, ภาษา Python และ Raw
+Markdown, Python, and Raw
 
 ## --video-solution--
 

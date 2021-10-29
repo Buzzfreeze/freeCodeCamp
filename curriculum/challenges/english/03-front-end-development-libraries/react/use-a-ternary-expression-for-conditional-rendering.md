@@ -8,7 +8,7 @@ dashedName: use-a-ternary-expression-for-conditional-rendering
 
 # --description--
 
-Before moving on to dynamic rendering techniques, there's one last way to use built-in JavaScript conditionals to render what you want: the <dfn>ternary operator</dfn>. The ternary operator is often utilized as a shortcut for `if/else` statements in JavaScript. They're not quite as robust as traditional `if/else` statements, but they are very popular among React developers. One reason for this is because of how JSX is compiled, `if/else` statements can't be inserted directly into JSX code. You might have noticed this a couple challenges ago — when an `if/else` statement was required, it was always *outside* the `return` statement. Ternary expressions can be an excellent alternative if you want to implement conditional logic within your JSX. Recall that a ternary operator has three parts, but you can combine several ternary expressions together. Here's the basic syntax:
+ก่อนที่จะไปยังเทคนิคการเรนเดอร์แบบไดนามิก มันมีวิธีสุดท้ายในการใช้เงื่อนไข JavaScript ในตัวเพื่อเรนเดอร์สิ่งที่คุณต้องการ: <dfn>ternary operator</dfn> ternary operator มักจะถูกใช้เป็นทางลัดสำหรับคำสั่ง `if/else` ใน JavaScript พวกมันไม่ค่อยแข็งแกร่งเท่าคำสั่ง `if/else` แบบดั้งเดิม แต่เป็นที่นิยมอย่างมากในหมู่นักพัฒนา React สาเหตุหนึ่งเป็นเพราะวิธีการคอมไพล์ JSX คำสั่ง `if/else` ไม่สามารถแทรกลงในโค้ด JSX ได้โดยตรง คุณอาจสังเกตเห็นได้ในแบบทดสอบสองสามครั้งที่ผ่านมา — เมื่อจำเป็นต้องมีคำสั่ง `if/else` มันมักจะ *อยู่นอก* คำสั่ง `return` เสมอ Ternary expressions อาจเป็นทางเลือกที่ดีหากคุณต้องการใช้ตรรกะแบบมีเงื่อนไขภายใน JSX ของคุณ จำได้ว่า ternary operator มีสามส่วน แต่คุณสามารถรวม ternary expressions หลายตัวเข้าด้วยกันได้ และนี่คือ syntax พื้นฐาน:
 
 ```jsx
 condition ? expressionIfTrue : expressionIfFalse;
@@ -16,13 +16,13 @@ condition ? expressionIfTrue : expressionIfFalse;
 
 # --instructions--
 
-The code editor has three constants defined within the `CheckUserAge` component's `render()` method. They are called `buttonOne`, `buttonTwo`, and `buttonThree`. Each of these is assigned a simple JSX expression representing a button element. First, initialize the state of `CheckUserAge` with `input` and `userAge` both set to values of an empty string.
+code editor มีค่าคงที่ 3 ค่าที่กำหนดไว้ภายใน `render()` method ของ `CheckUserAge` component เรียกว่า `buttonOne`, `buttonTwo` และ `buttonThree` แต่ละรายการเหล่านี้ถูกกำหนดนิพจน์ JSX อย่างง่ายซึ่งแสดง button element ขั้นแรกให้เริ่มต้น state ของ `CheckUserAge` โดย `input` และ `userAge` ทั้งสองตั้งค่าเป็นค่าของ string ว่าง
 
-Once the component is rendering information to the page, users should have a way to interact with it. Within the component's `return` statement, set up a ternary expression that implements the following logic: when the page first loads, render the submit button, `buttonOne`, to the page. Then, when a user enters their age and clicks the button, render a different button based on the age. If a user enters a number less than `18`, render `buttonThree`. If a user enters a number greater than or equal to `18`, render `buttonTwo`.
+เมื่อ component เรนเดอร์ข้อมูลไปยังเพจแล้ว users ควรมีวิธีการโต้ตอบกับมัน ภายในคำสั่ง `return` ของ component ให้ตั้งค่า ternary expression ที่ใช้ตรรกะต่อไปนี้: เมื่อโหลดหน้าเว็บครั้งแรกให้เรนเดอร์ปุ่ม submit หรือ `buttonOne` ไปยังเพจ จากนั้นเมื่อ user กรอกอายุและคลิกปุ่มนั้น ให้เรนเดอร์ปุ่มที่แตกต่างกันตามอายุ หาก user ป้อนตัวเลขที่น้อยกว่า `18` ให้เรนเดอร์ `buttonThree` หากผู้ใช้ป้อนตัวเลขที่มากกว่าหรือเท่ากับ `18` ให้เรนเดอร์ `buttonTwo`
 
 # --hints--
 
-The `CheckUserAge` component should render with a single `input` element and a single `button` element.
+`CheckUserAge` component ควรเรนเดอร์ด้วย `input` element และ `button` element อย่างละหนึ่ง
 
 ```js
 assert(
@@ -33,7 +33,7 @@ assert(
 );
 ```
 
-The `CheckUserAge` component's state should be initialized with a property of `userAge` and a property of `input`, both set to a value of an empty string.
+State ของ `CheckUserAge` component ควรเริ่มต้นด้วย property ของ `userAge` และ property ของ `input` ให้ทั้งคู่มี value เท่ากับ string ว่าง
 
 ```js
 assert(
@@ -42,7 +42,7 @@ assert(
 );
 ```
 
-When the `CheckUserAge` component is first rendered to the DOM, the `button`'s inner text should be Submit.
+เมื่อ `CheckUserAge` component เรนเดอร์ครั้งแรกไปยัง DOM ข้อความข้างในของ `button` ควรเป็น Submit
 
 ```js
 assert(
@@ -51,7 +51,7 @@ assert(
 );
 ```
 
-When a number of less than 18 is entered into the `input` element and the `button` is clicked, the `button`'s inner text should read `You Shall Not Pass`.
+เมื่อได้รับการใส่ตัวเลขที่น้อยกว่า 18 เข้ามาที่ `input` element และ `button` ได้โดนถูกคลิก ข้อความข้างใน `button` จะถูกเปลี่ยนเป็นคำว่า `You Shall Not Pass`
 
 ```js
 (() => {
@@ -83,7 +83,7 @@ When a number of less than 18 is entered into the `input` element and the `butto
 })();
 ```
 
-When a number greater than or equal to 18 is entered into the `input` element and the `button` is clicked, the `button`'s inner text should read `You May Enter`.
+เมื่อได้รับการใส่ตัวเลขที่มากกว่าหรือเท่ากับ 18 เข้ามาที่ `input` element และ `button` ได้โดนถูกคลิก ข้อความข้างใน `button` จะถูกเปลี่ยนเป็นคำว่า `You May Enter`
 
 ```js
 (() => {
@@ -115,7 +115,7 @@ When a number greater than or equal to 18 is entered into the `input` element an
 })();
 ```
 
-Once a number has been submitted, and the value of the `input` is once again changed, the `button` should return to reading `Submit`.
+เมื่อตัวเลขได้ส่งมากแล้ว ค่าของ `input` ได้เปลี่ยนไปอีกครั้ง ข้อความใน `button` ควรจะกลับไปเป็น `Submit`
 
 ```js
 (() => {
@@ -156,7 +156,7 @@ Once a number has been submitted, and the value of the `input` is once again cha
 })();
 ```
 
-Your code should not contain any `if/else` statements.
+โค้ดของคุณไม่ควรมีคำสั่ง `if/else` เลย
 
 ```js
 assert(

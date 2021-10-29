@@ -8,35 +8,35 @@ dashedName: use-a-switch-statement-to-handle-multiple-actions
 
 # --description--
 
-คุณสามารถบอก Redux store ถึงวิธีจัดการกับ action หลายประเภท สมมติว่าคุณกำลังจัดการการตรวจสอบสิทธิ์ผู้ใช้ใน Redux store ของคุณ คุณต้องการให้แสดง state เมื่อผู้ใช้เข้าสู่ระบบและออกจากระบบ คุณแสดงสิ่งนี้ด้วย state object เดียวที่มี property `authenticated` คุณยังต้องการ action creators ที่สร้าง actions ที่ตอบสนองต่อการเข้าสู่ระบบของผู้ใช้และออกจากระบบของผู้ใช้ พร้อมกับต้องใช้ action objects เองด้วย
+You can tell the Redux store how to handle multiple action types. Say you are managing user authentication in your Redux store. You want to have a state representation for when users are logged in and when they are logged out. You represent this with a single state object with the property `authenticated`. You also need action creators that create actions corresponding to user login and user logout, along with the action objects themselves.
 
 # --instructions--
 
-code editor มี store, actionsม และ action creators ที่เซ็ทไว้แล้วสำหรับคุณ ให้เติมฟังก์ชัน `reducer` เพื่อ actions ตรวจสอบสิทธิ์หลายรายการ ให้ใช้คำสั่ง JavaScript `switch` ใน `reducer` เพื่อตอบสนองต่อ action events ต่างๆ นี่เป็นรูปแบบมาตรฐานในการเขียนร Redux reducers คำสั่ง switch ควรสลับไปที่ `action.type` และ return state การตรวจสอบสิทธิ์ที่เหมาะสม
+The code editor has a store, actions, and action creators set up for you. Fill in the `reducer` function to handle multiple authentication actions. Use a JavaScript `switch` statement in the `reducer` to respond to different action events. This is a standard pattern in writing Redux reducers. The switch statement should switch over `action.type` and return the appropriate authentication state.
 
-**Note:** ณ จุดนี้ ไม่ต้องกังวลเกี่ยวกับ state immutability เนื่องจากแบบฝึกหัดนี้มีขนาดเล็กและเรียบง่าย สำหรับแต่ละ action คุณสามารถ return object ใหม่ได้ ตัวอย่างเช่น `{authenticated: true}` นอกจากนี้อย่าลืมเขียน `default` case ในคำสั่ง switch ของคุณที่ return `state` ปัจจุบัน นี่เป็นสิ่งสำคัญเพราะเมื่อแอปของคุณมี reducers หลายตัว พวกมันจะทำงานทุกครั้งที่มีการส่ง action แม้ว่า action จะไม่เกี่ยวข้องกับ reducer นั้นก็ตาม ในกรณีเช่นนี้คุณต้องแน่ใจว่าคุณจะต้อง return `state` ปัจจุบัน
+**Note:** At this point, don't worry about state immutability, since it is small and simple in this example. For each action, you can return a new object — for example, `{authenticated: true}`. Also, don't forget to write a `default` case in your switch statement that returns the current `state`. This is important because once your app has multiple reducers, they are all run any time an action dispatch is made, even when the action isn't related to that reducer. In such a case, you want to make sure that you return the current `state`.
 
 # --hints--
 
-การเรียกใช้ฟังก์ชัน `loginUser` ควร return object ด้วย type property ที่มีค่าเป้น string `LOGIN`
+Calling the function `loginUser` should return an object with type property set to the string `LOGIN`.
 
 ```js
 assert(loginUser().type === 'LOGIN');
 ```
 
-การเรียกใช้ฟังก์ชัน `logoutUser` ควร return object ด้วย type property ที่มีค่าเป้น string `LOGOUT`
+Calling the function `logoutUser` should return an object with type property set to the string `LOGOUT`.
 
 ```js
 assert(logoutUser().type === 'LOGOUT');
 ```
 
-Store ควรเริ่มต้นด้วย object ที่มี `authenticated` property เป็น `false`
+The store should be initialized with an object with an `authenticated` property set to `false`.
 
 ```js
 assert(store.getState().authenticated === false);
 ```
 
-การส่ง `loginUser` ควรอัปเดต `authenticated` property ใน store state ให้เป็น `true`
+Dispatching `loginUser` should update the `authenticated` property in the store state to `true`.
 
 ```js
 assert(
@@ -51,7 +51,7 @@ assert(
 );
 ```
 
-การส่ง `loginUser` ควรอัปเดต `authenticated` property ใน store state ให้เป็น `false`
+Dispatching `logoutUser` should update the `authenticated` property in the store state to `false`.
 
 ```js
 assert(
@@ -67,7 +67,7 @@ assert(
 );
 ```
 
-`authReducer` function ควรจัดการหลาย action types ด้วย `switch` statement
+The `authReducer` function should handle multiple action types with a `switch` statement.
 
 ```js
 (getUserInput) =>

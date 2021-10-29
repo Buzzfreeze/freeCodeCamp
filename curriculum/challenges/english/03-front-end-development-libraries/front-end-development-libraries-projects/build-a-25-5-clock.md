@@ -8,71 +8,71 @@ dashedName: build-a-25--5-clock
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/XpKrrW>.
+**Objective:** ลองทำแอป [CodePen.io](https://codepen.io) ให้มีฟังก์ชันเหมือนกับ: <https://codepen.io/freeCodeCamp/full/XpKrrW>
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story) and get all of the tests to pass. Give it your own personal style.
+ลองดู [user stories](https://en.wikipedia.org/wiki/User_story) ข้างล่าง และทำให้ระบบ Test ทังหมด run ผ่าน โดยสามารถออกแบบหน้าตาแอปตามสไตล์ของคุณเองได้เลย
 
-You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and jQuery to complete this project. You should use a frontend framework (like React for example) because this section is about learning frontend frameworks. Additional technologies not listed above are not recommended and using them is at your own risk. We are looking at supporting other frontend frameworks like Angular and Vue, but they are not currently supported. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
+คุณสามารถใช้ HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux และ jQuery รวมกันได้ในการทำโปรเจคนี้ เนื่องจากบทเรียนนี้คือบทเรียนเกี่ยวกับ frontend framework คุณจึงควรนำ frontend framework มาใช้งานด้วย (อย่าง React เป็นต้น) ไม่แนะนำให้ใช้ภาษาหรือเทคโนโลยีอื่นๆ นอกจากที่ให้ไว้ข้างบน เราจะช่วยแก้ไขหรือช่วยเหลือหากเกิดบักหรือปัญหาจากภาษาที่แนะนำข้างต้นเท่านั้น 
 
-**User Story #1:** I can see an element with `id="break-label"` that contains a string (e.g. "Break Length").
+**User Story #1:** จะต้องมี element ที่มี `id="break-label"` และมี string (เช่น "Break Length")
 
-**User Story #2:** I can see an element with `id="session-label"` that contains a string (e.g. "Session Length").
+**User Story #2:** จะต้องมี element ที่มี `id="session-label"` และมี string (เช่น "Session Length").
 
-**User Story #3:** I can see two clickable elements with corresponding IDs: `id="break-decrement"` and `id="session-decrement"`.
+**User Story #3:** จะต้องมี element ที่สามารถคลิกได้ 2 element ที่มี ไอดี: `id="break-decrement"` และ `id="session-decrement"` ตามลำดับ
 
-**User Story #4:** I can see two clickable elements with corresponding IDs: `id="break-increment"` and `id="session-increment"`.
+**User Story #4:** จะต้องมี element ที่สามารถคลิกได้ 2 element ที่มี ไอดี: `id="break-increment"` และ `id="session-increment"` ตามลำดับ
 
-**User Story #5:** I can see an element with a corresponding `id="break-length"`, which by default (on load) displays a value of 5.
+**User Story #5:** จะต้องมี element ที่มีไอดี `id="break-length"` โดยมีค่าเริ่มต้น (ตอนโหลด) จะแสดงค่าเป็น 5
 
-**User Story #6:** I can see an element with a corresponding `id="session-length"`, which by default displays a value of 25.
+**User Story #6:** จะต้องมี element ที่มีไอดี `id="session-length"`โดยมีค่าเริ่มต้นจะแสดงค่าเป็น 25
 
-**User Story #7:** I can see an element with a corresponding `id="timer-label"`, that contains a string indicating a session is initialized (e.g. "Session").
+**User Story #7:** จะต้องมี element ที่มีไอดี `id="timer-label"` ที่มี string ระบุว่า session is initialized (เช่น "Session")
 
-**User Story #8:** I can see an element with corresponding `id="time-left"`. NOTE: Paused or running, the value in this field should always be displayed in `mm:ss` format (i.e. 25:00).
+**User Story #8:** จะต้องมี element ที่มีไอดี `id="time-left"` หมายเหตุ: ค่าใน field นี้จะต้องแสดงในรูปแบบ `mm:ss` เสมอไม่ว่าเวลาจะเดินหรือหยุดอยู่ (เช่น 25:00)
 
-**User Story #9:** I can see a clickable element with a corresponding `id="start_stop"`.
+**User Story #9:** จะต้องมี element ที่สามารถคลิกได้ที่มีไอดี `id="start_stop"`.
 
-**User Story #10:** I can see a clickable element with a corresponding `id="reset"`.
+**User Story #10:** จะต้องมี element ที่สามารถคลิกได้ที่มีไอดี `id="reset"`.
 
-**User Story #11:** When I click the element with the id of `reset`, any running timer should be stopped, the value within `id="break-length"` should return to `5`, the value within `id="session-length"` should return to 25, and the element with `id="time-left"` should reset to its default state.
+**User Story #11:** เมื่อฉันคลิก element ที่มีไอดีว่า `reset` แล้ว ตัวจับเวลาที่กำลังทำงานอยู่ทุกตัวจะต้องหยุด ค่าที่อยู่ใน `id="break-length"` จะต้องกลับไปที่ 5 ค่าที่อยู่ใน `id="session-length"` ต้องกลับไปที่ 25 และ element ที่มี `id="time-left"` จะต้องรีเซ็ตไปที่จุดเดิม
 
-**User Story #12:** When I click the element with the id of `break-decrement`, the value within `id="break-length"` decrements by a value of 1, and I can see the updated value.
+**User Story #12:** เมื่อฉันคลิก element ที่มีไอดี `break-decrement` จะทำให้ค่าที่อยู่ใน `id="break-length"` ลดลงไป 1 พร้อมกับแสดงผลค่าล่าสุดให้เห็นด้วย
 
-**User Story #13:** When I click the element with the id of `break-increment`, the value within `id="break-length"` increments by a value of 1, and I can see the updated value.
+**User Story #13:** เมื่อฉันคลิก element ที่มีไอดี `break-increment` จะทำให้ค่าที่อยู่ใน `id="break-length"` เพิ่มขึ้นมา 1 พร้อมกับแสดงผลค่าล่าสุดให้เห็นด้วย
 
-**User Story #14:** When I click the element with the id of `session-decrement`, the value within `id="session-length"` decrements by a value of 1, and I can see the updated value.
+**User Story #14:** เมื่อฉันคลิก element ที่มีไอดี `session-decrement` จะทำให้ค่าที่อยู่ใน` `id="session-length"` ลดลงไป 1 พร้อมกับแสดงผลค่าล่าสุดให้เห็นด้วย
 
-**User Story #15:** When I click the element with the id of `session-increment`, the value within `id="session-length"` increments by a value of 1, and I can see the updated value.
+**User Story #15:** เมื่อฉันคลิก element ที่มีไอดี `session-increment` จะทำให้ค่าที่อยู่ใน` `id="session-length"` เพิ่มขึ้นมา 1 พร้อมกับแสดงผลค่าล่าสุดให้เห็นด้วย
 
-**User Story #16:** I should not be able to set a session or break length to &lt;= 0.
+**User Story #16:** ฉันไม่สามารถตั้งค่า session หรือ breal length ที่ &lt;= 0 ได้
 
-**User Story #17:** I should not be able to set a session or break length to > 60.
+**User Story #17:** ฉันไม่สามารถตั้งค่า session หรือ breal length ที่ > 60
 
-**User Story #18:** When I first click the element with `id="start_stop"`, the timer should begin running from the value currently displayed in `id="session-length"`, even if the value has been incremented or decremented from the original value of 25.
+**User Story #18:** เมื่อฉันคลิก element ที่มี `id="start_stop"` ครั้งแรกนั้น ตัวจับเวลาควรจะต้องเริ่มนับเวลาจากค่าปัจจุบันที่แสดงผลอยู่ใน `id="session-length"` ถึงแม้ว่าค่าดังกล่าวจะถูกทำให้เพิ่มขึ้นหรือลดลงไปจากค่าตั้งต้นที่ 25
 
-**User Story #19:** If the timer is running, the element with the id of `time-left` should display the remaining time in `mm:ss` format (decrementing by a value of 1 and updating the display every 1000ms).
+**User Story #19:** เมื่อตัวจับเวลากำลังทำงานและ element ที่มีไอดี `time-left` จะต้องแสดงค่าเวลาที่เหลือในรูปแบบ `mm:ss` (ลดลงไปด้วยค่าของ 1 และอัปเดตค่าที่เปลี่ยนแปลงไปทุกๆ 1000ms)
 
-**User Story #20:** If the timer is running and I click the element with `id="start_stop"`, the countdown should pause.
+**User Story #20:** เมื่อตัวจับเวลากำลังทำงาน และฉันคลิกไปที่ element ที่มีไอดี `id="start_stop"` การนับเวลาถอยหลังจะหยุดทำงาน
 
-**User Story #21:** If the timer is paused and I click the element with `id="start_stop"`, the countdown should resume running from the point at which it was paused.
+**User Story #21:** เมื่อตัวจับเวลาหยุดทำงาน และฉันคลิกไปที่ element ที่มีไอดี `id="start_stop"` การนับเวลาถอยหลังจะเริ่มทำงานต่อเนื่องจากก่อนหน้าที่ได้หยุดการทำงานไว้
 
-**User Story #22:** When a session countdown reaches zero (NOTE: timer MUST reach 00:00), and a new countdown begins, the element with the id of `timer-label` should display a string indicating a break has begun.
+**User Story #22:** เมื่อการนับเวลาถอยหลังของช่วง session ถึงเลข 0  (หมายเหตุ: ตัวนับเวลาจะต้องแสดงเป็น 00:00) แล้วเมื่อเริ่มการจับเวลาใหม่นั้น element ที่มีไอดี `timer-label` จะต้องแสดง string ที่บอกว่าช่วงเวลา break ได้เริ่มขึ้นแล้ว
 
-**User Story #23:** When a session countdown reaches zero (NOTE: timer MUST reach 00:00), a new break countdown should begin, counting down from the value currently displayed in the `id="break-length"` element.
+**User Story #23:** เมื่อการนับเวลาถอยหลังของช่วง session ถึงเลข 0  (หมายเหตุ: ตัวนับเวลาจะต้องแสดงเป็น 00:00) การนับเวลาถอยหลังในช่วง break จะเริ่มต้นขึ้น และเริ่มนับถอยหลังจากเวลาที่แสดงอยู่ใน element ที่มีไอดี `id="break-length"`
 
-**User Story #24:** When a break countdown reaches zero (NOTE: timer MUST reach 00:00), and a new countdown begins, the element with the id of `timer-label` should display a string indicating a session has begun.
+**User Story #24:** เมื่อการนับเวลาถอยหลังของช่วง break ถึงเลข 0  (หมายเหตุ: ตัวนับเวลาจะต้องแสดงเป็น 00:00) แล้วเมื่อเริ่มการจับเวลาใหม่นั้น element ที่มีไอดี `timer-label` จะต้องแสดง string ที่บอกว่าช่วงเวลา session ได้เริ่มขึ้นแล้ว
 
-**User Story #25:** When a break countdown reaches zero (NOTE: timer MUST reach 00:00), a new session countdown should begin, counting down from the value currently displayed in the `id="session-length"` element.
+**User Story #25:** เมื่อการนับเวลาถอยหลังของช่วง break ถึงเลข 0  (หมายเหตุ: ตัวนับเวลาจะต้องแสดงเป็น 00:00) การนับเวลาถอยหลังในช่วง session จะเริ่มต้นขึ้น และเริ่มนับถอยหลังจากเวลาที่แสดงอยู่ใน element ที่มีไอดี `id="session-length"`
 
-**User Story #26:** When a countdown reaches zero (NOTE: timer MUST reach 00:00), a sound indicating that time is up should play. This should utilize an HTML5 `audio` tag and have a corresponding `id="beep"`.
+**User Story #26:** เมื่อการนับเวลาถอยหลังถึงเลข 0  (หมายเหตุ: ตัวนับเวลาจะต้องแสดงเป็น 00:00) แอปจะต้องเล่นเสียงที่ทำให้รู้ว่าเวลาหมดแล้ว ซึ่งก็คือการทำให้ tag `audio` ของ HTML5 ทำงาน และ tag นี้ให้กำหนดไอดีว่า `id="beep"`
 
-**User Story #27:** The audio element with `id="beep"` must be 1 second or longer.
+**User Story #27:** element เสียงที่มีไอดี `id="beep"` ต้องมีความยาวเสียงอย่างน้อย 1 วินาทีหรือยาวกว่านั้น
 
-**User Story #28:** The audio element with id of `beep` must stop playing and be rewound to the beginning when the element with the id of `reset` is clicked.
+**User Story #28:** element เสียงที่มีไอดี `beep` จะต้องหยุดเล่นและย้อนกลับไปยังจุดเริ่มต้นเมื่อคลิก element ที่มีไอดี `reset`
 
-You can build your project by <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> and clicking `Save` to create your own pen. Or you can use this CDN link to run the tests in any environment you like: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
+คุณสามารถสร้างโปรเจคของคุณโดย <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>ใช้ CodePen template นี้ </a> แล้วคลิก `Save` เพื่อสร้าง pen ของคุณเอง หรือคุณสามารถใช้ลิงก์ CND นี้ เพื่อรันการทดสอบใน environment ที่คุณต้องการ: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
 
-Once you're done, submit the URL to your working project with all its tests passing.
+ให้ submit ส่ง URL ของโปรเจคที่ทำสำเร็จและได้รันการทดสอบผ่านหมดแล้ว เมื่อเสร็จงาน
 
 # --solutions--
 

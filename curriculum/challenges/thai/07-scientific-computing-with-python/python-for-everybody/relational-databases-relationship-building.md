@@ -14,23 +14,21 @@ dashedName: relational-databases-relationship-building
 
 ## --text--
 
-คำสั่ง INSERT ใช้ทำอะไรใน SQL ?
+What does the INSERT command do in SQL?
 
 ## --answers--
 
-กำหนดแถวใหม่ โดยแสดงรายการฟิลด์ที่เราต้องการรวม ตามด้วยค่าที่เราต้องการวางในแถวใหม่
+It defines a new row by listing the fields we want to include followed by the values we want placed in the new row.
 
 ---
 
-กำหนดคอลัมน์ใหม่ โดยแสดงรายการแถวที่เราต้องการรวมตามด้วยค่าที่เราต้องการวางไว้ในคอลัมน์ใหม่
-
+It defines a new column by listing the rows we want to include followed by the values we want placed in the new column.
 
 ---
 
-
-กำหนดตารางใหม่ โดยแสดงรายการแถวและฟิลด์ที่เราต้องการรวม ตามด้วยค่าที่เราต้องการวางลงในตาราง
-
+It defines a new table by listing the rows and fields we want to include followed by the values that we want placed in the table.
 
 ## --video-solution--
 
 1
+

@@ -14,7 +14,7 @@ dashedName: strings-in-python
 
 ## --text--
 
-What will the following code print?:
+เมื่อรันโค๊ดต่อไปนี้ จะแสดงค่าอะไรออกมา ?
 
 ```python
 for n in "banana":
@@ -60,4 +60,3 @@ a
 ## --video-solution--
 
 4
-

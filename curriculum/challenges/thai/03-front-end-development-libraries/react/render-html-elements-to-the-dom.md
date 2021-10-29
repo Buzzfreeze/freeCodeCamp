@@ -8,37 +8,37 @@ dashedName: render-html-elements-to-the-dom
 
 # --description--
 
-ถึงตอนนี้คุณได้เรียนรู้แล้วว่า JSX เป็นเครื่องมือที่สะดวกในการเขียน HTML ที่อ่านได้ภายใน JavaScript และด้วย React เราสามารถเรนเดอร์ JSX นี้โดยตรงไปยัง HTML DOM โดยใช้ API การเรนเดอร์ของ React ที่รู้จักกันในชื่อ ReactDOM
+So far, you've learned that JSX is a convenient tool to write readable HTML within JavaScript. With React, we can render this JSX directly to the HTML DOM using React's rendering API known as ReactDOM.
 
-ReactDOM นำเสนอ method ง่ายๆ ในการเรนเดอร์ React elements ไปยัง DOM ซึ่งเขียนได้ดังนี้: `ReactDOM.render(componentToRender, targetNode)` โดยที่ argument แรกคือ React element หรือ component ที่คุณต้องการเรนเดอร์ และ argument ที่สองคือ DOM node ที่คุณต้องการเรนเดอร์ component ไป
+ReactDOM offers a simple method to render React elements to the DOM which looks like this: `ReactDOM.render(componentToRender, targetNode)`, where the first argument is the React element or component that you want to render, and the second argument is the DOM node that you want to render the component to.
 
-อย่างที่คุณคาดไว้จะต้องเรียกใช้ `ReactDOM.render()` หลังจากการประกาศ JSX element แล้ว เช่นเดียวกับที่คุณต้องประกาศตัวแปรก่อนใช้งานพวกมัน
+As you would expect, `ReactDOM.render()` must be called after the JSX element declarations, just like how you must declare variables before using them.
 
-# --instructions—
+# --instructions--
 
-code editor มี JSX component อย่างง่าย ให้ใช้ `ReactDOM.render()` method เพื่อเรนเดอร์ component นี้ไปยังหน้าเพจ คุณสามารถส่งผ่าน JSX elements ที่กำหนดไว้โดยตรงให้เป็น argument แรก และใช้ `document.getElementById()` เพื่อเลือก DOM node เพื่อเรนเดอร์พวกมันไปยัง node นั้น มี `div` ที่มี `id='challenge-node'` ให้คุณใช้งาน ตรวจสอบให้แน่ใจว่าคุณไม่ได้เปลี่ยนค่าคงที่ `JSX` constant
+The code editor has a simple JSX component. Use the `ReactDOM.render()` method to render this component to the page. You can pass defined JSX elements directly in as the first argument and use `document.getElementById()` to select the DOM node to render them to. There is a `div` with `id='challenge-node'` available for you to use. Make sure you don't change the `JSX` constant.
 
 # --hints--
 
-constant `JSX` ควรจะ return `div` element เดียว
+The constant `JSX` should return a `div` element.
 
 ```js
 assert(JSX.type === 'div');
 ```
 
-`div` นั้นควรมี `h1` tag เป็น element แรก
+The `div` should contain an `h1` tag as the first element.
 
 ```js
 assert(JSX.props.children[0].type === 'h1');
 ```
 
-`div` นั้นควรมี `p` tag เป็น element ที่สอง
+The `div` should contain a `p` tag as the second element.
 
 ```js
 assert(JSX.props.children[1].type === 'p');
 ```
 
-JSX elemen ที่มีให้ควรเรนเดอร์ไปยัง DOM node ด้วย id `challenge-node`
+The provided JSX element should render to the DOM node with id `challenge-node`.
 
 ```js
 assert(

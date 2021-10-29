@@ -8,21 +8,21 @@ dashedName: copy-an-object-with-object-assign
 
 # --description--
 
-หลายแบบทดสอบที่ผ่านมีนั้นเราทำงานกับ array แต่ก็มีหลายวิธีที่จะช่วยบังคับใช้ state ไม่เปลี่ยนรูปเมื่อ state เป็น `object` ด้วย เครื่องมือที่มีประโยชน์สำหรับการจัดการ object คือ`Object.assign()` utility ตัว `Object.assign()` นี้นำ object เป้าหมายและ object ต้นทาง และแมป properties จาก object ต้นทางไปยัง object เป้าหมาย properties ที่ตรงกันจะถูกเขียนทับโดย properties ใน object ต้นทาง ลักษณะการทำงานนี้มักใช้เพื่อสร้างสำเนาของ object แบบง่ายๆ โดยการส่งผ่าน object ว่างเป็น argument แรกตามด้วย object ที่คุณต้องการคัดลอก นี่คือตัวอย่าง:
+The last several challenges worked with arrays, but there are ways to help enforce state immutability when state is an `object`, too. A useful tool for handling objects is the `Object.assign()` utility. `Object.assign()` takes a target object and source objects and maps properties from the source objects to the target object. Any matching properties are overwritten by properties in the source objects. This behavior is commonly used to make shallow copies of objects by passing an empty object as the first argument followed by the object(s) you want to copy. Here's an example:
 
 ```js
 const newObject = Object.assign({}, obj1, obj2);
 ```
 
-สิ่งนี้จะสร้าง `newObject` เป็น `object` ใหม่ ซึ่งมี properties ที่มีอยู่ในปัจจุบันใน `obj1` และ `obj2`
+This creates `newObject` as a new `object`, which contains the properties that currently exist in `obj1` and `obj2`.
 
 # --instructions--
 
-Redux state และ actions ได้รับการแก้ไขเพื่อจัดการกับ `object` สำหรับ ` state` ให้แก้ไขโค้ดเพื่อ return `state` object ใหม่สำหรับ actions ด้วย type `ONLINE` ซึ่งตั้งค่า `status` property เป็น string `online` พยายามลองใช้ `Object.assign()` เพื่อทำภารกิจให้สำเร็จ
+The Redux state and actions were modified to handle an `object` for the `state`. Edit the code to return a new `state` object for actions with type `ONLINE`, which set the `status` property to the string `online`. Try to use `Object.assign()` to complete the challenge.
 
 # --hints--
 
-ควรมี Redux store และ เริ่มตันด้วย state ที่เท่ากับ `defaultState` object ที่ถูกประกาศในบรรทัดที่ 1
+The Redux store should exist and initialize with a state that is equivalent to the `defaultState` object declared on line 1.
 
 ```js
 assert(
@@ -39,13 +39,13 @@ assert(
 );
 ```
 
-`wakeUp` และ `immutableReducer` ควรเป็นฟังก์ชันทั้งสอง
+`wakeUp` and `immutableReducer` both should be functions.
 
 ```js
 assert(typeof wakeUp === 'function' && typeof immutableReducer === 'function');
 ```
 
-การส่ง actions เป็น type `ONLINE` ควรอัปเดต property `status` ใน state เป็น `online` และไม่ควรเปลี่ยน state
+Dispatching an action of type `ONLINE` should update the property `status` in state to `online` and should NOT mutate state.
 
 ```js
 assert(
@@ -65,8 +65,7 @@ assert(
 );
 ```
 
-`Object.assign` ควรถูกใช้เพื่อ return state ใหม่
-
+`Object.assign` should be used to return new state.
 
 ```js
 (getUserInput) => assert(getUserInput('index').includes('Object.assign'));

@@ -14,20 +14,21 @@ dashedName: web-services-service-oriented-approach
 
 ## --text--
 
-การทำ services oriented approach ข้อมูลที่ได้นั้นมาจากที่ใด ?
+With a services oriented approach to developing web apps, where is the data located?
 
 ## --answers--
 
-มาจากหลายๆระบบ ที่มีคอมพิวเตอร์จำนวนมาก ที่เชื่อมต่ออินเทอร์เน็ตหรือเครือข่ายภายใน
+Spread across many computer systems connected via the internet or internal network.
 
 ---
 
-หลายๆ ส่วนบนเว็บเซิร์ฟเวอร์หลัก
+Within different services on the main web server.
 
 ---
 
-บนฐานข้อมูลที่แยกไว้เฉพาะ
+On a separate database server.
 
 ## --video-solution--
 
 1
+

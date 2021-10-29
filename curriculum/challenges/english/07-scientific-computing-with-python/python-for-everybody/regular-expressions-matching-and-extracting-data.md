@@ -14,7 +14,7 @@ dashedName: regular-expressions-matching-and-extracting-data
 
 ## --text--
 
-What will the following program print?:
+เมื่อรันโค๊ดต่อไปนี้ โปรแกรมจะแสดงผลลัพธ์ในข้อใด ?
 
 ```python
 import re
@@ -42,4 +42,3 @@ print(lst)
 ## --video-solution--
 
 1
-

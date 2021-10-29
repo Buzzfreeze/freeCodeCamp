@@ -14,7 +14,7 @@ dashedName: reorganizing-arrays
 
 ## --text--
 
-code ใดที่จะสร้าง array ต่อไปนี้? 
+What code would produce the following array?
 
 ```py
 [[1. 1.]

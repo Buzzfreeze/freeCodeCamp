@@ -8,19 +8,19 @@ dashedName: house-our-page-within-a-bootstrap-container-fluid-div
 
 # --description--
 
-มาลองทำให้คอนเทนท์ในเพจที่เราสร้างนั้นเป็น mobile-responsive กัน
+Now let's make sure all the content on your page is mobile-responsive.
 
-โดยย้าย `h3` element ให้ไปอยู่ใน `div` element ที่มี class `container-fluid`
+Let's nest your `h3` element within a `div` element with the class `container-fluid`.
 
 # --hints--
 
-สร้าง `div` element และกำหนดให้มี class ชื่อว่า `container-fluid`
+Your `div` element should have the class `container-fluid`.
 
 ```js
 assert($('div').hasClass('container-fluid'));
 ```
 
-อย่าลืม tag ปิด สำหรับ `div` element
+Each of your `div` elements should have closing tags.
 
 ```js
 assert(
@@ -30,7 +30,7 @@ assert(
 );
 ```
 
-นำ `h3` element ไปใส่ไว้ใน `div` element ที่สร้างขึ้นมา
+Your `h3` element should be nested inside a `div` element.
 
 ```js
 assert($('div').children('h3').length > 0);

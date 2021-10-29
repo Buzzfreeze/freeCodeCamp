@@ -8,18 +8,17 @@ dashedName: perform-new-updates-on-a-document-using-model-findoneandupdate
 
 # --description--
 
-Mongoose เวอร์ชันล่าสุดมีวิธีทำให้การอัปเดตเอกสารง่ายขึ้นมาก คุณลักษณะขั้นสูงบางอย่าง (เช่น hooks pre/post การตรวจสอบความถูกต้อง) มีการทำงานแตกต่างไปจากวิธีนี้ ดังนั้นวิธีการแบบคลาสสิกจึงยังคงเป็นประโยชน์อย่างมากในหลายๆสถานการณ์  เช่น
-`findByIdAndUpdate()` สามารถใช้เมื่อค้นหาด้วย id
+Recent versions of Mongoose have methods to simplify documents updating. Some more advanced features (i.e. pre/post hooks, validation) behave differently with this approach, so the classic method is still useful in many situations. `findByIdAndUpdate()` can be used when searching by id.
 
 # --instructions--
 
-แก้ไขฟังก์ชัน `findAndUpdate` เพื่อหาบุคคลใน `Name` เเละตั้งค่าอายุของบุคคลได้ด้วย `20` ใช้พารามิเตอร์ `personName` เป็นคีย์ในการค้นหา
+Modify the `findAndUpdate` function to find a person by `Name` and set the person's age to `20`. Use the function parameter `personName` as the search key.
 
-**Note:** คุณควรส่งคืนค่าเอกสารที่อัปเดตได้ ซึ่งในการทำเช่นนั้น คุณต้องส่งเอกสารตัวเลือก `{ new: true }` เป็นอาร์กิวเมนต์ที่ 3 ไปยัง `findOneAndUpdate()`  วิธีนี้จะคืนค่าอ็อบเจ็คที่ไม่ได้แก้ไข โดยค่าเริ่มต้น
+**Note:** You should return the updated document. To do that, you need to pass the options document `{ new: true }` as the 3rd argument to `findOneAndUpdate()`. By default, these methods return the unmodified object.
 
 # --hints--
 
-ค้นหา findOneAndUpdate ได้สำเร็จ
+findOneAndUpdate an item should succeed
 
 ```js
 (getUserInput) =>

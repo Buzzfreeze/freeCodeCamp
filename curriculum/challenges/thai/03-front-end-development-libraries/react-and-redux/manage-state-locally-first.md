@@ -8,19 +8,19 @@ dashedName: manage-state-locally-first
 
 # --description--
 
-คุณจะสร้าง `DisplayMessages` component ให้สำเร็จในแบบทดสอบนี้
+Here you'll finish creating the `DisplayMessages` component.
 
 # --instructions--
 
-ขั้นแรกใน `render()` method ให้ component เรนเดอร์ `input` element, `button` element, และ `ul` element เมื่อ`input` element เปลี่ยนไป มันทำให้ `handleChange()` method ทำงาน นอกจากนี้ `input` element ควรเรนเดอร์ค่าของ `input` ที่อยู่ใน state ของ component `button` element ควรทำให้ `submitMessage()` method ทำงาน เมื่อตัวมันถูกคลิก
+First, in the `render()` method, have the component render an `input` element, `button` element, and `ul` element. When the `input` element changes, it should trigger a `handleChange()` method. Also, the `input` element should render the value of `input` that's in the component's state. The `button` element should trigger a `submitMessage()` method when it's clicked.
 
-ขั้นต่อมาให้เขียนสอง methods นี้ คือ `handleChange()` method ที่จะต้องอัปเดต `input` ด้วยข้อความที่ user กำลังพิมพ์ และ `submitMessage()` method ควรเชื่อมข้อความปัจจุบัน (เก็บไว้ใน `input`) กับ `messages' array ใน local state และล้างค่าของ `input`
+Second, write these two methods. The `handleChange()` method should update the `input` with what the user is typing. The `submitMessage()` method should concatenate the current message (stored in `input`) to the `messages` array in local state, and clear the value of the `input`.
 
-สุดท้าย ใช้ `ul` เพื่อ map array ของ `messages` และเรนเดอร์ไปยังบนหน้าจอเป็นลิสต์ของ `li` elements 
+Finally, use the `ul` to map over the array of `messages` and render it to the screen as a list of `li` elements.
 
 # --hints--
 
-`DisplayMessages` component ควรมีค่าเริ่มต้นด้วย state เท่ากับ `{ input: "", messages: [] }`
+The `DisplayMessages` component should initialize with a state equal to `{ input: "", messages: [] }`.
 
 ```js
 assert(
@@ -36,7 +36,7 @@ assert(
 );
 ```
 
-`DisplayMessages` component ควรเรนเดอร์ `div` ที่มี `h2` element, `button` element, `ul` element และ `li` `element เป็น child ของมัน
+The `DisplayMessages` component should render a `div` containing an `h2` element, a `button` element, a `ul` element, and `li` elements as children.
 
 ```js
 async () => {
@@ -58,13 +58,13 @@ async () => {
 };
 ```
 
-`.map` ควรถูกใช้บน `messages` array
+`.map` should be used on the `messages` array.
 
 ```js
 assert(code.match(/this\.state\.messages\.map/g));
 ```
 
-`input` element ควรเรนเดอร์ค่าของ `input` ใน local state
+The `input` element should render the value of `input` in local state.
 
 ```js
 async () => {
@@ -83,7 +83,7 @@ async () => {
 };
 ```
 
-การเรียกใช้ method `handleChange` ควรอัปเดตค่า `input` ใน state เป็น input ปัจจุบัน
+Calling the method `handleChange` should update the `input` value in state to the current input.
 
 ```js
 async () => {
@@ -106,7 +106,7 @@ async () => {
 };
 ```
 
-การคลิก `Add message` button ควรเรียกใช้ method `submitMessage` ที่จะเพิ่ม `input` ปัจจุบันไปใน `messages` array ใน state
+Clicking the `Add message` button should call the method `submitMessage` which should add the current `input` to the `messages` array in state.
 
 ```js
 async () => {
@@ -149,7 +149,7 @@ async () => {
 };
 ```
 
-`submitMessage` method ควรเคลีย input ปัจจุบัน
+The `submitMessage` method should clear the current input.
 
 ```js
 async () => {

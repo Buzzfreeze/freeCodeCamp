@@ -8,21 +8,21 @@ dashedName: use-array-map-to-dynamically-render-elements
 
 # --description--
 
-การเรนเดอร์แบบมีเงื่อนไขมีประโยชน์ แต่คุณอาจต้องการให้ components ของคุณเรนเดอร์ elements ที่ไม่ทราบจำนวนจนมากเกินไป บ่อยครั้งในการเขียนโปรแกรมเชิงโต้ตอบ โปรแกรมเมอร์ไม่มีทางรู้ได้เลยว่าแอพพลิเคชั่นนั้นอยู่ในสถานะใดจนถึงรันไทม์ เพราะโดยมากอยู่กับการโต้ตอบของผู้ใช้กับโปรแกรมนั้น โปรแกรมเมอร์จำเป็นต้องเขียนโค้ดเพื่อจัดการกับสถานะที่ไม่รู้จักนั้นอย่างถูกต้องล่วงหน้า การใช้ `Array.map()` ใน React แสดงให้เห็นภาพถึงแนวคิดนี้
+Conditional rendering is useful, but you may need your components to render an unknown number of elements. Often in reactive programming, a programmer has no way to know what the state of an application is until runtime, because so much depends on a user's interaction with that program. Programmers need to write their code to correctly handle that unknown state ahead of time. Using `Array.map()` in React illustrates this concept.
 
-ตัวอย่างเช่น เมื่อคุณสร้างแอป "To Do List" แบบง่ายๆ ในฐานะโปรแกรมเมอร์คุณไม่มีทางรู้ได้เลยว่าผู้ใช้อาจมีไอเท็มกี่รายการในลิสต์ของพวกเขา คุณต้องตั้งค่า component ของคุณเพื่อเรนเดอร์จำนวน list elements ที่ถูกต้องแบบไดนามิกมาก่อนที่ผู้ใช้โปรแกรมจะตัดสินใจว่าวันนี้เป็นวันซักผ้า
+For example, you create a simple "To Do List" app. As the programmer, you have no way of knowing how many items a user might have on their list. You need to set up your component to dynamically render the correct number of list elements long before someone using the program decides that today is laundry day.
 
 # --instructions--
 
-code editor มีการเซ็ท `MyToDoList` component เกือบทั้งหมดไว้แล้ว โค้ดบางส่วนนี้อาจดูคุ้นเคยหากคุณทำโจทย์ controlled form เสร็จแล้ว คุณจะสังเกตเห็น `textarea` และ `button` พร้อมด้วย method สองสาม method ที่ใช้ติดตาม states ของพวกมัน แต่ยังไม่มีการเรนเดอร์ไปยังหน้าเพจ
+The code editor has most of the `MyToDoList` component set up. Some of this code should look familiar if you completed the controlled form challenge. You'll notice a `textarea` and a `button`, along with a couple of methods that track their states, but nothing is rendered to the page yet.
 
-ภายใน `constructor` ให้สร้าง `this.state` object และกำหนดสอง state คือ: `userInput` ให้เริ่มต้นเป็น string ว่าง และ `toDoList`" ให้เริ่มต้นเป็น array ว่าง แล้วให้ลบ comment ใน `render()` method ข้างตัวแปร `items` ให้ map `toDoList` array ที่จัดเก็บไว้ใน state ภายในของ component และเรนเดอร์ `li` สำหรับแต่ละรายการแบบไดนามิก ลองป้อน string `eat, code, sleep, repeat` ลงใน `textarea` จากนั้นคลิกปุ่มและดูว่าเกิดอะไรขึ้น
+Inside the `constructor`, create a `this.state` object and define two states: `userInput` should be initialized as an empty string, and `toDoList` should be initialized as an empty array. Next, delete the comment in the `render()` method next to the `items` variable. In its place, map over the `toDoList` array stored in the component's internal state and dynamically render a `li` for each item. Try entering the string `eat, code, sleep, repeat` into the `textarea`, then click the button and see what happens.
 
-**Note:** คุณอาจรู้ว่า child elements ที่อยู่ใน parent เดียวกันทั้งหมดที่สร้างขึ้นโดยการ mapping เช่นนี้ จำเป็นต้องมีการกำหนด `key` attribute ที่ไม่ซ้ำกัน แต่ไม่ต้องกังวลนี่เป็นหัวข้อของแบบทดสอบต่อไป
+**Note:** You may know that all sibling child elements created by a mapping operation like this do need to be supplied with a unique `key` attribute. Don't worry, this is the topic of the next challenge.
 
 # --hints--
 
-MyToDoList component ควรมีและเรนเดอร์บนหน้าเพจ
+The MyToDoList component should exist and render to the page.
 
 ```js
 assert(
@@ -33,7 +33,7 @@ assert(
 );
 ```
 
-Child แรกของ `MyToDoList` ควรเป็น `textarea` element
+The first child of `MyToDoList` should be a `textarea` element.
 
 ```js
 assert(
@@ -47,7 +47,7 @@ assert(
 );
 ```
 
-Child ที่สองของ `MyToDoList` ควรเป็น `br` element
+The second child of `MyToDoList` should be a `br` element.
 
 ```js
 assert(
@@ -60,7 +60,7 @@ assert(
 );
 ```
 
-Child ที่สามของ `MyToDoList` ควรเป็น `button` element
+The third child of `MyToDoList` should be a `button` element.
 
 ```js
 assert(
@@ -74,7 +74,7 @@ assert(
 );
 ```
 
-State ของ `MyToDoList` ควรเริ่มต้นด้วย `toDoList` ที่เป็น array ว่าง
+The state of `MyToDoList` should be initialized with `toDoList` as an empty array.
 
 ```js
 assert(
@@ -89,7 +89,7 @@ assert(
 );
 ```
 
-State ของ `MyToDoList` ควรเริ่มต้นด้วย `userInput` ที่เป็น string ว่าง
+The state of `MyToDoList` should be initialized with `userInput` as an empty string.
 
 ```js
 assert(
@@ -104,7 +104,7 @@ assert(
 );
 ```
 
-เมื่อปุ่ม `Create List` ถูกคลิก `MyToDoList` ควร return ul แบบไดนามิก ที่มีรายการของ item element ของทุกลิสต์รายการที่แยกด้วย comma ที่ถูกพิมพ์ลงไปใน `textarea` element
+When the `Create List` button is clicked, the `MyToDoList` component should dynamically return an unordered list that contains a list item element for every item of a comma-separated list entered into the `textarea` element.
 
 ```js
 (() => {

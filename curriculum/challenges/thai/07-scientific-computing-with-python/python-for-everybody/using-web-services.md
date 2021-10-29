@@ -14,7 +14,7 @@ dashedName: using-web-services
 
 ## --text--
 
-2 วิธีใด ที่นิยมใช้ในการส่งข้อมูลผ่าน internet ?
+What are the two most common ways to send data over the internet?
 
 ## --answers--
 
@@ -39,3 +39,4 @@ PHP and TXT
 ## --video-solution--
 
 2
+

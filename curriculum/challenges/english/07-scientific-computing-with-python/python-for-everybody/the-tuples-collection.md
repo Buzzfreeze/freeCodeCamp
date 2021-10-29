@@ -14,7 +14,7 @@ dashedName: the-tuples-collection
 
 ## --text--
 
-What will the following code print?:
+เมื่อรันโค๊ดต่อไปนี้ โปรแกรมจะแสดงผลลัพธ์ในข้อใด ? 
 
 ```python
 d = dict()
@@ -60,4 +60,3 @@ kris 9
 ## --video-solution--
 
 3
-

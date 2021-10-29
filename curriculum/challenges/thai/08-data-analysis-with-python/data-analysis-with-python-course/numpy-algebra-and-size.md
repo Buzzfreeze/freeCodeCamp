@@ -12,9 +12,9 @@ dashedName: numpy-algebra-and-size
 
 # --description--
 
-*ผู้เรียนสามารถใช้ Google Colab แทน notebooks.ai ที่สาธิตใน Videoได้*
+*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
 
-แหล่งเรียนรู้เพิ่มเติม:
+More resources:
 
 -   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/freecodecamp-intro-to-numpy)
 -   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
@@ -23,23 +23,24 @@ dashedName: numpy-algebra-and-size
 
 ## --text--
 
-อะไรคือความสัมพันธ์ระหว่างขนาด (size) ของ object (เช่นรายการและประเภทข้อมูล) ในหน่วยความจำใน library ทั่วไปของ Python และ library ของ NumPy แล้วจะส่งผลต่อประสิทธิภาพการทำงานอย่างไร? 
+What is the relationship between size of objects (such as lists and datatypes) in memory in Python's standard library and the NumPy library? Knowing this, what are the implications for performance?
 
 ## --answers--
 
-object มาตรฐานของ Python ใช้หน่วยความจำในการจัดเก็บมากกว่า object ของ NumPy ; เมื่อเปรียบเทียบการดำเนินการระหว่าง object ของ Python และ NumPy มีระยะเวลาเสร็จสิ้นในเวลาใกล้เคียงกัน 
+Standard Python objects take up much more memory to store than NumPy objects; operations on comparable standard Python and NumPy objects complete in roughly the same time.
 
 ---
 
-object ของ NumPy ใช้หน่วยความจำมากกว่า object มาตรฐานของ Python มาตรฐาน; การดำเนินการกับ object ของ NumPy จะเสร็จสมบูรณ์อย่างรวดเร็วกว่า เมื่อเปรียบเทียบกับ object มาตรฐานของ Python 
+NumPy objects take up much more memory than standard Python objects; operations on NumPy objects complete very quickly compared to comparable objects in standard Python.
 
 ---
 
-object ของ NumPy ใช้หน่วยความจำน้อยกว่า object มาตรฐานของ Python มาก การดำเนินการกับ object มาตรฐานของ Standard Python จะเสร็จสมบูรณ์อย่างรวดเร็วกว่า เมื่อเปรียบเทียบกับ object ของ NumPy 
+NumPy objects take up much less memory than Standard Python objects; operations on Standard Python objects complete very quickly compared to comparable objects on NumPy Object.
 
 ---
 
-object มาตรฐานของ Python ใช้หน่วยความจำมากกว่า object ของ NumPy การดำเนินการกับ object ของ NumPy จะเสร็จสมบูรณ์อย่างรวดเร็วกว่า เมื่อเปรียบเทียบกับ object มาตรฐานของ Python 
+Standard Python objects take up more memory than NumPy objects; operations on NumPy objects complete very quickly compared to comparable objects in standard Python.
+
 ## --video-solution--
 
 4

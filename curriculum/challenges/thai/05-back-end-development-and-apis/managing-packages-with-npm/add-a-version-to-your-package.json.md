@@ -8,7 +8,7 @@ dashedName: add-a-version-to-your-package-json
 
 # --description--
 
-`version` เป็นคำสั่งหนึ่งที่บังคับให้ไฟล์ package.json ของคุณใส่ลงไป เนื่องจากจะอธิบายถึงเวอร์ชันล่าสุดของโ)รเจคของคุณ นี่คือตัวอย่าง 
+A `version` is one of the required fields of your package.json file. This field describes the current version of your project. Here's an example:
 
 ```json
 "version": "1.2.0",
@@ -16,11 +16,11 @@ dashedName: add-a-version-to-your-package-json
 
 # --instructions--
 
-กรุณาใส่ `version` ลงไฟล์ package.json ในโปรเจคคุณ 
+Add a `version` to the package.json file of your project.
 
 # --hints--
 
-package.json ควรที่จะมีคีย์ "version" ที่ถูกต้อง
+package.json should have a valid "version" key
 
 ```js
 (getUserInput) =>

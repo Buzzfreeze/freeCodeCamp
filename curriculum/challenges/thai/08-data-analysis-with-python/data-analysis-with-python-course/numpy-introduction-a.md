@@ -12,9 +12,9 @@ dashedName: numpy-introduction-a
 
 # --description--
 
-*ผู้เรียนสามารถใช้ Google Colab แทน notebooks.ai ที่สาธิตใน Videoได้*
+*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
 
-แหล่งเรียนรู้เพิ่มเติม:
+More resources:
 
 -   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/freecodecamp-intro-to-numpy)
 -   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
@@ -23,19 +23,19 @@ dashedName: numpy-introduction-a
 
 ## --text--
 
-ทำไม Numpy จึงสำคัญ แต่ library ไม่เป็นที่นิยม? 
+Why is Numpy an important, but unpopular Python library?
 
 ## --answers--
 
-เราอาจจะไม่ทำงานโดยตรงกับ Numpy บ่อยครั้ง
+Often you won't work directly with Numpy.
 
 ---
 
-ช้ามาก 
+It is extremely slow.
 
 ---
 
-การทำงานกับ Numpy นั้น ยากมาก 
+Working with Numpy is difficult.
 
 ## --video-solution--
 

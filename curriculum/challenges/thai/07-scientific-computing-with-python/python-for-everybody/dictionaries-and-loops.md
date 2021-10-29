@@ -12,15 +12,15 @@ dashedName: dictionaries-and-loops
 
 # --description--
 
-ตัวอย่างเพิ่มเติม:
+More resources:
 
-\- [ตัวอย่างที่ 1](https://www.youtube.com/watch?v=PrhZ9qwBDD8)
+\- [Exercise](https://www.youtube.com/watch?v=PrhZ9qwBDD8)
 
 # --question--
 
 ## --text--
 
-เมื่อรันโค๊ดด้านล่าง จะได้ผลลัพธ์ข้อใด ?
+What will the following code print?:
 
 ```python
 counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}

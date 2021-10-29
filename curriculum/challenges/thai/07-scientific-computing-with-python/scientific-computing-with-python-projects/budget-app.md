@@ -8,17 +8,13 @@ dashedName: budget-app
 
 # --description--
 
-สร้างคลาส "Category" ที่สามารถใช้สร้างหมวดหมู่ ของงบต่างๆ
+Create a "Category" class that can be used to create different budget categories.
 
+You can access [the full project description and starter code on Replit](https://replit.com/github/freeCodeCamp/boilerplate-budget-app).
 
-หรือเข้าที่นี่ [ คำอธิบายฉบับเต็มและ starter code บน Replit ](https://replit.com/github/freeCodeCamp/boilerplate-budget-app).
+After going to that link, fork the project. Once you complete the project based on the instructions in 'README.md', submit your project link below.
 
-หลังจากกดที่ลิงค์แล้ว ให้แยกโปรเจ็กต์ เมื่อคุณทำโปรเจ็กต์เสร็จแล้วตามคำแนะนำใน 'README.md' ให้ส่งลิงค์โปรเจ็กต์ ด้านล่าง
-
-เรายังคงพัฒนาส่วนการสอนแบบโต้ตอบของหลักสูตร Python สำหรับตอนนี้ นี่คือวิดีโอบางส่วนในช่อง freeCodeCamp.org YouTube ที่จะสอนทุกสิ่งที่คุณจำเป็นต้องรู้เพื่อทำโครงการนี้ให้สำเร็จ:
-
-เรายังคงพัฒนาส่วนการสอนแบบ interactive ในหลักสูตรของ Python นี่คือวิดีโอบางส่วนในช่อง freeCodeCamp.org ที่จะสอนทุกอย่างที่จำเป็นต้องรู้ เพื่อให้ทำ Project นี้ให้สำเร็จ
-
+We are still developing the interactive instructional part of the Python curriculum. For now, here are some videos on the freeCodeCamp.org YouTube channel that will teach you everything you need to know to complete this project:
 
 <ul>
   <li>
@@ -31,7 +27,7 @@ dashedName: budget-app
 
 # --hints--
 
-สร้าง Category class ให้ถูกต้อง และผ่านทุก tests
+It should create a Category class and pass all tests.
 
 ```js
 

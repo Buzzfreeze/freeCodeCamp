@@ -8,17 +8,17 @@ dashedName: render-state-in-the-user-interface-another-way
 
 # --description--
 
-There is another way to access `state` in a component. In the `render()` method, before the `return` statement, you can write JavaScript directly. For example, you could declare functions, access data from `state` or `props`, perform computations on this data, and so on. Then, you can assign any data to variables, which you have access to in the `return` statement.
+มีอีกวิธีหนึ่งในการเข้าถึง `state` ใน component ใน `render()` method ก่อนคำสั่ง `return` คุณสามารถเขียน JavaScript ได้โดยตรง ตัวอย่างเช่น คุณสามารถประกาศฟังก์ชัน เข้าถึงข้อมูลจาก `state` หรือ `props` แล้วคำนวณข้อมูลนี้ และอื่นๆ จากนั้นคุณสามารถกำหนดข้อมูลใดๆ ให้กับตัวแปร ซึ่งคุณสามารถเข้าถึงได้ในคำสั่ง `return`
 
 # --instructions--
 
-In the `MyComponent` render method, define a `const` called `name` and set it equal to the name value in the component's `state`. Because you can write JavaScript directly in this part of the code, you don't have to enclose this reference in curly braces.
+ใน`MyComponent` render method ให้กำหนด `const` ที่เรียกว่า `name` และตั้งค่าให้เท่ากับค่า  name ใน `state` ของ component เนื่องจากคุณสามารถเขียน JavaScript ได้โดยตรงในส่วนนี้ของโค้ด คุณไม่จำเป็นต้องเขียนโค้ดนี้ในวงเล็บปีกกา
 
-Next, in the return statement, render this value in an `h1` tag using the variable `name`. Remember, you need to use the JSX syntax (curly braces for JavaScript) in the return statement.
+ถัดไปในคำสั่ง return ให้เรนเดอร์ค่านี้ในแท็ก `h1` โดยใช้ตัวแปร `name` จำไว้ว่าคุณต้องใช้ JSX syntax (วงเล็บปีกกาสำหรับเขียน JavaScript) ในคำสั่ง return
 
 # --hints--
 
-`MyComponent` should have a key `name` with value `freeCodeCamp` stored in its state.
+`MyComponent` ควรมี key `name` ที่มีค่า `freeCodeCamp` อยู่ใน state ของมัน
 
 ```js
 assert(
@@ -27,7 +27,7 @@ assert(
 );
 ```
 
-`MyComponent` should render an `h1` header enclosed in a single `div`.
+`MyComponent` ควรเรนเดอร์ `h1` header อยู่ภายใน `div` เดียว
 
 ```js
 assert(
@@ -37,14 +37,14 @@ assert(
 );
 ```
 
-The rendered `h1` tag should include a reference to `{name}`.
+`h1` tag ที่ถูกเรนเดอร์ควรอ้างอิงถึง `{name}`
 
 ```js
 (getUserInput) =>
   assert(/<h1>\n*\s*\{\s*name\s*\}\s*\n*<\/h1>/.test(getUserInput('index')));
 ```
 
-The rendered `h1` header should contain text rendered from the component's state.
+`h1` header ที่ถูกเรนเดอร์ควรมีข้อความที่ถูกเรนเดอร์จาก component's state
 
 ```js
 async () => {

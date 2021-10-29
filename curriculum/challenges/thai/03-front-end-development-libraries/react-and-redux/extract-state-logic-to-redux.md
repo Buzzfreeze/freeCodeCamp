@@ -8,23 +8,23 @@ dashedName: extract-state-logic-to-redux
 
 # --description--
 
-เมื่อคุณสร้าง React component เสร็จแล้ว คุณต้องย้ายตรรกะที่ทำงานอยู่ใน `state` ไปไว้ใน Redux นี่เป็นขั้นตอนแรกในการเชื่อมต่อแอป React อย่างง่ายกับ Redux ฟังก์ชันเดียวที่แอปของคุณมีคือการเพิ่มข้อความใหม่จากผู้ใช้ไปยัง unordered list ตัวอย่างง่าย ๆ นี้แสดงให้เห็นว่า React และ Redux ทำงานร่วมกันอย่างไร
+Now that you finished the React component, you need to move the logic it's performing locally in its `state` into Redux. This is the first step to connect the simple React app to Redux. The only functionality your app has is to add new messages from the user to an unordered list. The example is simple in order to demonstrate how React and Redux work together.
 
 # --instructions--
 
-ขั้นแรก กำหนดประเภทการดำเนินการ `ADD` และตั้ง const `ADD` ถัดไปกำหนด action creator `addMessage()` ซึ่งสร้างการดำเนินการเพื่อเพิ่มข้อความ คุณจะต้องส่ง `message` ไปยัง action creator นี้ และรวมข้อความไว้ใน `action` ที่ return
+First, define an action type `ADD` and set it to a const `ADD`. Next, define an action creator `addMessage()` which creates the action to add a message. You'll need to pass a `message` to this action creator and include the message in the returned `action`.
 
-จากนั้นสร้าง reducer ชื่อ `messageReducer()` ที่จัดการ state ของข้อความต่างๆ state เริ่มต้นควรเป็น array ว่าง reducer นี้ควรเพิ่มข้อความไปยัง array ของข้อความที่อยู่ใน state หรือ return state ปัจจุบัน สุดท้ายสร้างร้าน Redux และส่งผ่าน reducer
+Then create a reducer called `messageReducer()` that handles the state for the messages. The initial state should equal an empty array. This reducer should add a message to the array of messages held in state, or return the current state. Finally, create your Redux store and pass it the reducer.
 
 # --hints--
 
-ควรมี const `ADD` และมีค่า เท่ากับ string `ADD`
+The const `ADD` should exist and hold a value equal to the string `ADD`
 
 ```js
 assert(ADD === 'ADD');
 ```
 
-action creator `addMessage` ควร return object ด้วย `type` เท่ากับ `ADD` และ `message` เท่ากับข้อความที่ถูกส่งต่อมา
+The action creator `addMessage` should return an object with `type` equal to `ADD` and `message` equal to the message that is passed in.
 
 ```js
 assert(
@@ -35,13 +35,13 @@ assert(
 );
 ```
 
-`messageReducer` ควรเป็นฟังก์ชัน
+`messageReducer` should be a function.
 
 ```js
 assert(typeof messageReducer === 'function');
 ```
 
-จะต้องมี store และมี state ค่าเริ่มต้นตั้งให้เป็น array ว่าง
+The store should exist and have an initial state set to an empty array.
 
 ```js
 assert(
@@ -52,7 +52,7 @@ assert(
 );
 ```
 
-การส่ง `addMessage` ต่อ store ควรเพิ่มข้อความใหม่ไปยัง array ของข้อความที่อยู่ใน state โดยไม่เปลี่ยนรูป
+Dispatching `addMessage` against the store should immutably add a new message to the array of messages held in state.
 
 ```js
 assert(
@@ -66,7 +66,7 @@ assert(
 );
 ```
 
-`messageReducer` ควร return state ปัจจุบัน ถ้าหากถูกเรียกใช้งานกับ action อื่น
+The `messageReducer` should return the current state if called with any other actions.
 
 ```js
 assert(

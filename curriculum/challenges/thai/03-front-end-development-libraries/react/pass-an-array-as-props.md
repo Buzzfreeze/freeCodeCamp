@@ -8,7 +8,7 @@ dashedName: pass-an-array-as-props
 
 # --description--
 
-แบบทดสอบที่ผ่านมาแสดงให้เห็นวิธีการส่งผ่านข้อมูลจาก parent component ไปยัง child component เป็น `props` หรือ properties ในแบบทดสอบนี้จะเราจะดูว่า array สามารถส่งผ่านเป็น `props` ได้อย่างไร ในการส่งผ่าน array ไปยัง JSX element จะต้องถือเป็น JavaScript และใส่วงเล็บปีกกา
+The last challenge demonstrated how to pass information from a parent component to a child component as `props` or properties. This challenge looks at how arrays can be passed as `props`. To pass an array to a JSX element, it must be treated as JavaScript and wrapped in curly braces.
 
 ```jsx
 <ParentComponent>
@@ -16,16 +16,15 @@ dashedName: pass-an-array-as-props
 </ParentComponent>
 ```
 
-child component จะสามารถเข้าถึง array property `colors` คุณสามารถใช้ Array methods เช่น `join()`เพื่อเข้าถึง property 
-`const ChildComponent = (props) => <p>{props.colors.join(', ')}</p>` ซึ่งจะรวมรายการ`colors` array ทั้งหมดลงใน string ที่คั่นด้วย comma และสร้าง: `<p>green, blue, red</p>` ต่อมาเราจะเรียนรู้เกี่ยวกับ method ทั่วไปอื่น ๆ ในการเรนเดอร์ array ของข้อมูลใน React
+The child component then has access to the array property `colors`. Array methods such as `join()` can be used when accessing the property. `const ChildComponent = (props) => <p>{props.colors.join(', ')}</p>` This will join all `colors` array items into a comma separated string and produce: `<p>green, blue, red</p>` Later, we will learn about other common methods to render arrays of data in React.
 
 # --instructions--
 
-มี `List` และ `ToDo` component ใน code editor เมื่อเรนเดอร์ `List` แต่ละรายการจาก`ToDo` component ให้ส่งผ่าน `tasks` property ที่กำหนดให้กับ array ของ to-do tasks เช่น `["walk dog", "workout"]` จากนั้นข้าถึง `tasks` array นี้ใน `List` component โดยแสดงค่าภายใน `p` element ใช้ `join(", ")` เพื่อแสดง `props.tasks`array ใน `p` element เป็นรายการที่คั่นด้วย comma ส่วนของ list วันนี้ควรมีอย่างน้อย 2 tasks และของพรุ่งนี้ควรมีอย่างน้อย 3 tasks
+There are `List` and `ToDo` components in the code editor. When rendering each `List` from the `ToDo` component, pass in a `tasks` property assigned to an array of to-do tasks, for example `["walk dog", "workout"]`. Then access this `tasks` array in the `List` component, showing its value within the `p` element. Use `join(", ")` to display the `props.tasks`array in the `p` element as a comma separated list. Today's list should have at least 2 tasks and tomorrow's should have at least 3 tasks.
 
 # --hints--
 
-`ToDo` component ควร return `div` ชั้นนอกสุด 1 อัน
+The `ToDo` component should return a single outer `div`.
 
 ```js
 assert(
@@ -36,7 +35,7 @@ assert(
 );
 ```
 
-Child ลำดับที่ 3 ของ `ToDo` component ควรเป็นรายการของ `List` component
+The third child of the `ToDo` component should be an instance of the `List` component.
 
 ```js
 assert(
@@ -47,7 +46,7 @@ assert(
 );
 ```
 
-Child ลำดับที่ 5 ของ `ToDo` component ควรเป็นรายการของ `List` component
+The fifth child of the `ToDo` component should be an instance of the `List` component.
 
 ```js
 assert(
@@ -58,7 +57,7 @@ assert(
 );
 ```
 
-รายการทั้ง 2 ของ `List` component ควรมี property ชื่อว่า `tasks` และ `tasks` ควรเป็น array
+Both instances of the `List` component should have a property called `tasks` and `tasks` should be of type array.
 
 ```js
 assert(
@@ -72,7 +71,7 @@ assert(
 );
 ```
 
-`List` component แรกแสดงถึง tasks สำหรับวันนี้ที่ควรมีอย่างน้อย 2 รายการ
+The first `List` component representing the tasks for today should have 2 or more items.
 
 ```js
 assert(
@@ -83,7 +82,7 @@ assert(
 );
 ```
 
-`List` component ที่สองแสดงถึง tasks สำหรับวันพรุ่งนี้ที่ควรมีอย่างน้อย 3 รายการ
+The second `List` component representing the tasks for tomorrow should have 3 or more items.
 
 ```js
 assert(
@@ -94,7 +93,7 @@ assert(
 );
 ```
 
-`List` component ควรเรนเดอร์ค่าจาก `tasks` prop ใน `p` tag
+The `List` component should render the value from the `tasks` prop in the `p` tag.
 
 ```js
 assert(

@@ -8,17 +8,17 @@ dashedName: create-many-records-with-model-create
 
 # --description--
 
-บางครั้งคุณจำเป็นต้องสร้างตัวอย่างหลายตัวในโมเดลของคุณ เช่น เมื่อทำการ seed ฐานข้อมูลด้วยข้อมูล `Model.create()` , การรับอาร์เรย์ของอ็อบเจ็ค เช่น `[{name: 'John', ...}, {...}, ...]` เป็นอาร์กิวเมนต์แรก และบันทึกทั้งหมดไว้ใน db .
+Sometimes you need to create many instances of your models, e.g. when seeding a database with initial data. `Model.create()` takes an array of objects like `[{name: 'John', ...}, {...}, ...]` as the first argument, and saves them all in the db.
 
 # --instructions--
 
-แก้ไขฟังก์ชั่น  `createManyPeople` เพื่อทำให้คนใช้งานได้หลายคนโดยการใช้ `Model.create()` ด้วยอาร์กิวเมนต์ `arrayOfPeople`
+Modify the `createManyPeople` function to create many people using `Model.create()` with the argument `arrayOfPeople`.
 
-**Note:** คุณสามารถใช้โมเดลที่คุณสร้างจากตัวอย่างในแบบฝึกหัดก่อนหน้าซ้ำได้
+**Note:** You can reuse the model you instantiated in the previous exercise.
 
 # --hints--
 
-ควรที่จะกสร้างรายการ db หลายรายการพร้อมกันได้สำเร็จ
+Creating many db items at once should succeed
 
 ```js
 (getUserInput) =>

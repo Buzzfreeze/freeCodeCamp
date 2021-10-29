@@ -12,15 +12,15 @@ dashedName: comparing-and-sorting-tuples
 
 # --description--
 
-More resources:
+ตัวอย่างเพิ่มเติม :
 
-\- [Exercise](https://www.youtube.com/watch?v=EhQxwzyT16E)
+\- [ตัวอย่างที่ 1](https://www.youtube.com/watch?v=EhQxwzyT16E)
 
 # --question--
 
 ## --text--
 
-Which does the same thing as the following code?:
+โค๊ดในข้อใด ให้ผลลัพธ์เหมือนกับโค๊ดที่ให้มา ?
 
 ```python
 lst = []
@@ -58,4 +58,3 @@ print( [ (k,v) for k,v in counts.values().sort() ] )
 ## --video-solution--
 
 1
-

@@ -8,31 +8,33 @@ dashedName: use-the-bootstrap-grid-to-put-elements-side-by-side
 
 # --description--
 
-Boostrap ใช้ระบบ responsive 12-column grid ซึ่งทำให้ง่ายในการจัดการ element ต่างๆ ใน แต่ละ row ให้มีความกว้างที่สัมพันธ์กัน และ class ส่วนมากของ Bootstrap สามารถนำไปใช้ได้กับ `div` element
+Bootstrap uses a responsive 12-column grid system, which makes it easy to put elements into rows and specify each element's relative width. Most of Bootstrap's classes can be applied to a `div` element.
 
-Bootstrap มีคุณลักษณะความกว้างของ column ที่แตกต่างกันไปขึ้นอยู่กับความกว้างหน้าจอของ user อย่างเช่น หน้าจอโทรศัพท์มือถือที่แคบ และ หน้าจอแลปท็อปที่กว้างกว่า
+Bootstrap has different column width attributes that it uses depending on how wide the user's screen is. For example, phones have narrow screens, and laptops have wider screens.
 
-ยกตัวอย่างเช่น class `col-md-*` ของ Bootstrap ที่ `md` จะหมายถึงขนาดกลาง และ `*` จะแทนด้วยตัวเลขที่ระบุว่า element นี้จะกว้างเป็นจำนวนกี่ column โดยรวมแล้วกล่าวได้ว่า ความกว้างของ column ของ element นี้บนหน้าจอขนาดกลาง อย่างเช่นแลปท็อป จะมีขนาดเท่ากับจำนวน * ที่ระบุไว้
+Take for example Bootstrap's `col-md-*` class. Here, `md` means medium, and `*` is a number specifying how many columns wide the element should be. In this case, the column width of an element on a medium-sized screen, such as a laptop, is being specified.
 
-ในแอป Cat Photo ที่เราได้สร้างมาแล้ว เราจะใช้ `col-xs-*` โดยที่ `xs` หมายถึงขนาดเล็กพิเศษ (เช่น จอมือถือ) และ `*` คือตัวเลขที่ระบุว่า element นี้จะกว้างเป็นจำนวนกี่ column
+In the Cat Photo App that we're building, we'll use `col-xs-*`, where `xs` means extra small (like an extra-small mobile phone screen), and `*` is the number of columns specifying how many columns wide the element should be.
 
-นำปุ่ม `Like`, `Info` และ `Delete` มาเรียงในบรรทัดเดียวกัน โดยการย้ายปุ่มทั้ง 3 ไปอยู่ไว้ใน `<div class="row">` และฝังแต่ละปุ่มใน `<div class="col-xs-4">`
+Put the `Like`, `Info` and `Delete` buttons side-by-side by nesting all three of them within one `<div class="row">` element, then each of them within a `<div class="col-xs-4">` element.
+
+The `row` class is applied to a `div`, and the buttons themselves can be nested within it.
 
 # --hints--
 
-ปุ่มทั้ง 3 จะต้องอยู่ภายใน `div` element ที่มี class `row`
+Your buttons should all be nested within the same `div` element with the class `row`.
 
 ```js
 assert($('div.row:has(button)').length > 0);
 ```
 
-แล้วแต่ละปุ่มนั้นจะต้องอยู่ใน `div` element ที่มี class `col-xs-4` ของตัวเองแต่ละอันอีกที
+Each of your Bootstrap buttons should be nested within its own `div` element with the class `col-xs-4`.
 
 ```js
 assert($('div.col-xs-4:has(button)').length > 2);
 ```
 
-อย่าลืม tag ปิดสำหรับทุกๆ `button` elements
+Each of your `button` elements should have a closing tag.
 
 ```js
 assert(
@@ -42,7 +44,7 @@ assert(
 );
 ```
 
-รวมถึง tag ปิดสำหรับ `div` elements ทุกอันด้วย
+Each of your `div` elements should have a closing tag.
 
 ```js
 assert(

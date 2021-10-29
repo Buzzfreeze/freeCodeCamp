@@ -8,15 +8,15 @@ dashedName: give-each-element-a-unique-id
 
 # --description--
 
-We will also want to be able to use jQuery to target each button by its unique id.
+เราสามารถที่จะใช้ jQuery ในการระบุเป้าหมายในแต่ละปุ่ม (button) โดยการระบุไอดีเฉพาะให้มัน
 
-Give each of your buttons a unique id, starting with `target1` and ending with `target6`.
+เรามาลองใส่ไอดีเฉพาะให้กับปุ่มต่างๆ โดยเริ่มจาก id ชื่อว่า `target1` ไปจนถึง `target6`
 
-Make sure that `target1` to `target3` are in `#left-well`, and `target4` to `target6` are in `#right-well`.
+ให้ใส่ไอดี `target1` ถึง `target3` ในปุ่มที่อยู่ใน `div` ที่มีไอดี `#left-well` และใส่ไอดี `target4` ถึง `target6` ในปุ่มที่อยู่ใน `div` ที่มีไอดี `#right-well`
 
 # --hints--
 
-One `button` element should have the id `target1`.
+เพิ่มไอดี `target1` ให้แก่ปุ่ม `button` element
 
 ```js
 assert(
@@ -25,7 +25,7 @@ assert(
 );
 ```
 
-One `button` element should have the id `target2`.
+เพิ่มไอดี `target2` ให้แก่ปุ่ม `button` element
 
 ```js
 assert(
@@ -34,7 +34,7 @@ assert(
 );
 ```
 
-One `button` element should have the id `target3`.
+เพิ่มไอดี `target3` ให้แก่ปุ่ม `button` element
 
 ```js
 assert(
@@ -43,7 +43,7 @@ assert(
 );
 ```
 
-One `button` element should have the id `target4`.
+เพิ่มไอดี `target4` ให้แก่ปุ่ม `button` element
 
 ```js
 assert(
@@ -52,7 +52,7 @@ assert(
 );
 ```
 
-One `button` element should have the id `target5`.
+เพิ่มไอดี `target5` ให้แก่ปุ่ม `button` element
 
 ```js
 assert(
@@ -61,7 +61,7 @@ assert(
 );
 ```
 
-One `button` element should have the id `target6`.
+เพิ่มไอดี `target6` ให้แก่ปุ่ม `button` element
 
 ```js
 assert(

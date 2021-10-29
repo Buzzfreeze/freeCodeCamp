@@ -14,7 +14,7 @@ dashedName: working-with-lists
 
 ## --text--
 
-วิธีการใด ที่ใช้เพิ่ม item เข้าไปเป็นตัวสุดท้ายของ list ?
+Which method is used to add an item at the end of a list?
 
 ## --answers--
 
@@ -35,3 +35,4 @@ new
 ## --video-solution--
 
 3
+

@@ -8,15 +8,15 @@ dashedName: use-default-props
 
 # --description--
 
-React ยังมีตัวเลือกในการตั้งค่า props เริ่มต้นอีกด้วย คุณสามารถกำหนด props เริ่มต้นให้กับ component เป็น property บน component เองได้ และ React จะกำหนด prop เริ่มต้นหากจำเป็น วิธีนี้ช่วยให้คุณระบุได้ว่าค่า prop ควรเป็นเท่าใดหากไม่มีการระบุค่าไว้อย่างชัดเจน ตัวอย่างเช่น หากคุณประกาศ `MyComponent.defaultProps = { location: 'San Francisco' }` แสดงว่าคุณได้กำหนดตำแหน่ง prop ที่ตั้งค่าเป็น string `San Francisco` เว้นแต่คุณจะระบุเป็นอย่างอื่น React จะกำหนด props เริ่มต้นหาก props ไม่ได้ถูกกำหนดไว้ แต่ถ้าคุณส่งค่า `null` เป็นค่าสำหรับ prop ค่านั้นจะยังคงเป็น `null`
+React also has an option to set default props. You can assign default props to a component as a property on the component itself and React assigns the default prop if necessary. This allows you to specify what a prop value should be if no value is explicitly provided. For example, if you declare `MyComponent.defaultProps = { location: 'San Francisco' }`, you have defined a location prop that's set to the string `San Francisco`, unless you specify otherwise. React assigns default props if props are undefined, but if you pass `null` as the value for a prop, it will remain `null`.
 
 # --instructions--
 
-code editor ได้แสดง `ShoppingCart` component ให้กำหนด props เริ่มต้นใน component นี้ซึ่งระบุ prop `items` ด้วยค่า `0`
+The code editor shows a `ShoppingCart` component. Define default props on this component which specify a prop `items` with a value of `0`.
 
 # --hints--
 
-`ShoppingCart` component ควรเรนเดอร์
+The `ShoppingCart` component should render.
 
 ```js
 assert(
@@ -27,7 +27,7 @@ assert(
 );
 ```
 
-`ShoppingCart` component ควรมี prop เริ่มต้นเป็น `{ items: 0 }`
+The `ShoppingCart` component should have a default prop of `{ items: 0 }`.
 
 ```js
 assert(

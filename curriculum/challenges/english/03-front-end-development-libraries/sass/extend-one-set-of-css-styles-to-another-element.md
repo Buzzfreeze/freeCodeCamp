@@ -8,9 +8,9 @@ dashedName: extend-one-set-of-css-styles-to-another-element
 
 # --description--
 
-Sass has a feature called `extend` that makes it easy to borrow the CSS rules from one element and build upon them in another.
+Sass มีฟีเจอร์ที่เรียกว่า `extend` ซึ่งทำให้การยืมกฎ CSS จาก element หนึ่ง และ สร้างกฎนั้นๆ ใน element อื่นๆ เป็นเรื่องที่ง่าย
 
-For example, the below block of CSS rules style a `.panel` class. It has a `background-color`, `height` and `border`.
+ยกตัวอย่างเช่น กฎ CSS ข้างล่างใช้ตกแต่งคลาส `.panel` ซึ่งมี `background-color`, `height` และ `border`
 
 ```scss
 .panel{
@@ -20,7 +20,7 @@ For example, the below block of CSS rules style a `.panel` class. It has a `back
 }
 ```
 
-Now you want another panel called `.big-panel`. It has the same base properties as `.panel`, but also needs a `width` and `font-size`. It's possible to copy and paste the initial CSS rules from `.panel`, but the code becomes repetitive as you add more types of panels. The `extend` directive is a simple way to reuse the rules written for one element, then add more for another:
+ตอนนี้คุณต้องการ panel ใหม่ชื่อ `.big-panel` มันมี property พื้นฐานเหมือนกับ `.panel` แต่มี `width` และ `font-size` เพิ่มมา คุณสามารถก็อปปี้กฎ CSS มาเริ่มต้นได้จาก `.panel` แต่มันจะทำให้เกิดโค้ดที่ซ้ำกันมากหากคุณต้องการ panel แบบอื่นๆ เพิ่มอีก คำสั่ง `extend` คือวิธีที่ง่ายในการนำกฎที่เขียนสำหรับ element ใดๆ มาใช้ซ้ำและสามารถเพิ่มเติมอีกได้ด้วย:
 
 ```scss
 .big-panel{
@@ -30,15 +30,15 @@ Now you want another panel called `.big-panel`. It has the same base properties 
 }
 ```
 
-The `.big-panel` will have the same properties as `.panel` in addition to the new styles.
+`.big-panel` จะมี property ต่างๆ เหมือนกับ `.panel` นอกเหนือจาก สไตล์ใหม่ที่เพิ่มมา
 
 # --instructions--
 
-Make a class `.info-important` that extends `.info` and also has a `background-color` set to magenta.
+ให้สร้างคลาส `.info-important` ที่ขยายมากจาก `.info` แล้วเพิ่ม `background-color` เป็น magenta
 
 # --hints--
 
-Your `info-important` class should have a `background-color` set to `magenta`.
+คลาส `info-important` ของคุณควรมีค่า `background-color` เป็น `magenta`
 
 ```js
 assert(
@@ -48,7 +48,7 @@ assert(
 );
 ```
 
-Your `info-important` class should use `@extend` to inherit the styling from the `info` class.
+คลาส `info-important` ของคุณควรใช้ `@extend` เพื่อรับสไตล์จากคลาส `info`
 
 ```js
 assert(

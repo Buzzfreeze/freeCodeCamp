@@ -8,19 +8,21 @@ dashedName: how-to-use-package-json-the-core-of-any-node-js-project-or-npm-packa
 
 # --description--
 
-Working on these challenges will involve you writing your code using one of the following methods:
+การทำงานกับโจทย์ท้าทายเหล่านี้ คุณต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งต่อไปนี้:
 
-- Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-npm/) and complete these challenges locally.
-- Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-npm) to complete these challenges.
-- Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
+- Clone  [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-npm/)  ในการทำโปรเจค โดยทำให้เสร็จทีละส่วน
+- ใช้เว็บไซต์ [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-npm) ในการทำโปรเจคให้เสร็จสมบูรณ์
+- ใช้ตัวสร้างไซต์ที่คุณเลือก ทำโปรเจคให้เสร็จสมบูรณ์ และอย่าลืมรวมไฟล์ทั้งหมดจาก GitHub repo ของคุณด้วย
 
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
+เมื่อคุณทำเสร็จแล้ว ตรวจสอบให้แน่ใจด้วยว่า ไฟล์โปรเจคของคุณอยู่ในสถานะที่ทุกคนสามารถมองเห็นได้(public) หลังจากนั้นส่งลิงก์ URL ไว้ใน `Solution Link` หรือส่งลิงก์ซอร์สโค้ดของโปรเจคไว้ใน `GitHub Link` อีกช่องทางหนึ่งก็ได้
 
-The `package.json` file is the center of any Node.js project or npm package. It stores information about your project, similar to how the &lt;head> section of an HTML document describes the content of a webpage. It consists of a single JSON object where information is stored in key-value pairs. There are only two required fields; "name" and "version", but it’s good practice to provide additional information about your project that could be useful to future users or maintainers.
 
-If you look at the file tree of your project, you will find the package.json file on the top level of the tree. This is the file that you will be improving in the next couple of challenges.
+ไฟล์ `package.json` เป็นศูนย์กลางของโปรเจค Node.js หรือแพ็กเกจ npm มันเก็บข้อมูลเกี่ยวกับโปรเจคของคุณ คล้ายกับที่ส่วน &lt;head> ของเอกสาร HTML อธิบายเนื้อหาบนหน้าเว็บ. `package.json` จะประกอบด้วยอ็อบเจ็กต์ JSON เดียวกันกับที่เก็บข้อมูลเป็น คีย์-ค่า และมีเพียงสองฟิลด์ที่จำเป็นเท่านั้นคือ "name" และ "version" ซึ่งมันเป็นประโยชน์อย่างมากในการให้ข้อมูลเพิ่มเติมเกี่ยวกับโปรเจคของคุณกับผู้ใช้หรือผู้ดูแลในอนาคต
 
-One of the most common pieces of information in this file is the `author` field. It specifies who created the project, and can consist of a string or an object with contact or other details. An object is recommended for bigger projects, but a simple string like the following example will do for this project.
+หากคุณดูไฟล์ tree บนโปรเจคของคุณ คุณจะพบไฟล์ package.json อยู่บนสุดของไฟล์ tree นี่คือไฟล์ที่คุณจะปรับปรุงพัฒนาในโจทย์ท้าทายครั้งต่อไป
+
+
+ข้อมูลทั่วไปอย่างหนึ่งที่สำคัญไฟล์นี้คือ `author` ระบุว่าใครเป็นผู้สร้างโปรเจคและประกอบด้วยสตริงหรืออ็อบเจ็กต์ที่มีผู้ติดต่อหรือรายละเอียดอื่่นๆ แนะนำให้ใช้อ็อบเจ็กต์สำหรับโปรเจคที่ใหญ่กว่า แต่สตริงเช่นตัวอย่างต่อไปนี้จะทำสำหรับโปรเจคนี้
 
 ```json
 "author": "Jane Doe",
@@ -28,13 +30,13 @@ One of the most common pieces of information in this file is the `author` field.
 
 # --instructions--
 
-Add your name as the `author` of the project in the package.json file.
+กรุณาเพิ่มชื่อ `author` บนโปรเจคของคุณในไฟล์ package.json ด้วย
 
-**Note:** Remember that you’re writing JSON, so all field names must use double-quotes (") and be separated with a comma (,).
+**Note:** โปรดจำไว้ว่าในการเขียน JSON การใส่ชื่อของทุกฟิล์ดต้องมีเครื่องหมาย (") และถ้าจะแยกออกจากกันให้ใช้เครื่องหมาย (,)
 
 # --hints--
 
-package.json should have a valid "author" key
+package.json ควรที่จะมีคีย์ "author" ที่ถูกต้อง
 
 ```js
 (getUserInput) =>

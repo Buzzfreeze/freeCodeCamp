@@ -8,11 +8,11 @@ dashedName: add-a-description-to-your-package-json
 
 # --description--
 
+The next part of a good package.json file is the `description` field; where a short, but informative description about your project belongs.
 
-ส่วนถัดไปของไฟล์ package.json คือส่วนของ `description` ที่มีคำอธิบายสั้นๆ แต่มันให้ข้อมูลเกี่ยวกับโปรเจคของคุณ
-หากคุณมีแผนที่จะเผยแพร่แพ็คเกจไปสู่ npm  มันคือสตริงที่มีไอเดียของคุณเผยแพร่ให้กับเหล่าผู้ใช้ ถึงแม้ว่าพวกเขาติดตั้งแพ็คเกจนั้นหรือไม่ก็ตาม  แต่ว่านั่นไม่ใช่การใช้งานสำหรับ description เพียงอย่างเดียว แต่เป็นวิธีที่ดีในการสรุปสิ่งที่โปรเจคทำด้วย ซึ่งป็นสิ่งสำคัญในโปรเจค Node.js ที่จะช่วยให้นักพัฒนาคนอื่นๆ ผู้ดูแลในอนาคต หรือแม้แต่ตัวคุณเองในอนาคตเข้าใจโปรเจคอย่างรวดเร็ว
+If you some day plan to publish a package to npm, this is the string that should sell your idea to the user when they decide whether to install your package or not. However, that’s not the only use case for the description, it’s a great way to summarize what a project does. It’s just as important in any Node.js project to help other developers, future maintainers or even your future self understand the project quickly.
 
-ไม่ว่าคุณจะวางแผนอะไรในโปรเจคของคุณ พวกเราขอแนะนำให้ใช้คำอธิบายตามที่เราให้  และนี่คือตัวอย่าง:
+Regardless of what you plan for your project, a description is definitely recommended. Here's an example:
 
 ```json
 "description": "A project that does something awesome",
@@ -20,13 +20,13 @@ dashedName: add-a-description-to-your-package-json
 
 # --instructions--
 
-เพิ่ม `description` ที่ package.json ในไฟล์โปรเจคของคุณ
+Add a `description` to the package.json file of your project.
 
-**Note:**โปรดจำไว้ว่า เครื่องหมาย (") สำหรับใส่ field-names และ (,)ใช้สำหรับการแยก field
+**Note:** Remember to use double-quotes for field-names (") and commas (,) to separate fields.
 
 # --hints--
 
-package.json ควรที่จะมีคีย์ "description" ที่ถูกต้อง
+package.json should have a valid "description" key
 
 ```js
 (getUserInput) =>

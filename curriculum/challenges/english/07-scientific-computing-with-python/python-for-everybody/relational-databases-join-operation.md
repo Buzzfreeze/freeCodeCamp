@@ -14,21 +14,20 @@ dashedName: relational-databases-join-operation
 
 ## --text--
 
-When using a JOIN clause in an SQL statement, what does ON do?
+คำสั่ง ON จะทำอะไร เมื่อใช้คำสั่ง JOIN ใน SQL ?
 
 ## --answers--
 
-It indicates what tables to perform the JOIN on.
+บอกว่าตารางใด ที่จะทำการดำเนินการ JOIN
 
 ---
 
-It specifies the fields to use for the JOIN.
+ระบุตำแหน่ง ที่จะใช้สำหรับทำการ JOIN
 
 ---
 
-It indicates how the two tables are to be joined.
+บอกว่า ทั้งสองตารางจะรวมกัน โดยเชื่อมกันอย่างไร
 
 ## --video-solution--
 
 3
-

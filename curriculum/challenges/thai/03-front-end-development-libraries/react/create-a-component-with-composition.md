@@ -8,9 +8,9 @@ dashedName: create-a-component-with-composition
 
 # --description--
 
-ตอนนี้เรามาดูว่าเราจะสามารถประกอบ React component หลายๆ component ด้วยกันได้อย่างไร ลองคิดดูว่าถ้าคุณกำลังทำแอปและได้สร้าง 3 component: `Navbar`, Dashboard, และ `Footer`
+Now we will look at how we can compose multiple React components together. Imagine you are building an app and have created three components: a `Navbar`, `Dashboard`, and `Footer`.
 
-เพื่อประกอบรวม component เหล่านี้ด้วยกัน คุณต้องสร้าง `App` component ที่เป็น *parent* ที่เรนเดอร์ ทุกๆ 3 component ข้างต้นนี้เป็น *children* ในการเรนเดอร์ child component ใน React component นั้นคุณจะต้องรวมชื่อ component ที่เขียนเป็น HTML tag ที่กำหนดเองใน JSX ตัวอย่างเช่น ใน `render' method คุณสามารถเขียน:
+To compose these components together, you could create an `App` *parent* component which renders each of these three components as *children*. To render a component as a child in a React component, you include the component name written as a custom HTML tag in the JSX. For example, in the `render` method you could write:
 
 ```jsx
 return (
@@ -22,17 +22,17 @@ return (
 )
 ```
 
-เมื่อ React พบ HTML tag ที่กำหนดเองที่อ้างอิงถึง component อื่น (ชื่อ component ที่อยู่ใน `< />` ดังเช่นตัวอย่างข้างบน) มันจะเรนเดอร์ markup สำหรับ component นั้นที่อยู่ในตำแหน่งของ tag นั้น สิ่งนี้จะแสดงให้เห็นถึงความสัมพันธ์ของ parent/child ระหว่าง `App` component กับ `Navbar`, `Dashboard`, และ `Footer`
+When React encounters a custom HTML tag that references another component (a component name wrapped in `< />` like in this example), it renders the markup for that component in the location of the tag. This should illustrate the parent/child relationship between the `App` component and the `Navbar`, `Dashboard`, and `Footer`.
 
 # --instructions--
 
-ใน code editor มี component ที่ทำงานอย่างง่ายชื่อ `ChildComponent` และ class component ชื่อ `ParentComponent` ประกอบรวมทั้งสองเข้าด้วยกันโดยการเรนเดอร์ `ChildComponent` ภายใน `ParentComponent` และอย่าลืมปิด `ChildComponent` tag ด้วย `\`
+In the code editor, there is a simple functional component called `ChildComponent` and a class component called `ParentComponent`. Compose the two together by rendering the `ChildComponent` within the `ParentComponent`. Make sure to close the `ChildComponent` tag with a forward slash.
 
-**Note:** `ChildComponent` ถูกกำหนดด้วย ES6 arrow function เพราะนี่เป็นวิธีปฏิบัติทั่วไปเมื่อใช้ React อย่างไรก็ตาม โปรดทราบว่านี่เป็นเพียงฟังก์ชัน หากคุณไม่คุ้นเคยกับ arrow function syntax โปรดศึกษาที่ส่วน JavaScript เพิ่มเติม
+**Note:** `ChildComponent` is defined with an ES6 arrow function because this is a very common practice when using React. However, know that this is just a function. If you aren't familiar with the arrow function syntax, please refer to the JavaScript section.
 
 # --hints--
 
-React component ควรจะ return `div` element เดียว
+The React component should return a single `div` element.
 
 ```js
 assert(
@@ -43,7 +43,7 @@ assert(
 );
 ```
 
-Component นี้ควรจะต้อง return 2 element ที่ซ้อนอยู่ภายใน
+The component should return two nested elements.
 
 ```js
 assert(
@@ -54,7 +54,7 @@ assert(
 );
 ```
 
-Component นี้ควรจะต้อง return `ChildComponent` เป็น child ที่สอง
+The component should return the `ChildComponent` as its second child.
 
 ```js
 assert(

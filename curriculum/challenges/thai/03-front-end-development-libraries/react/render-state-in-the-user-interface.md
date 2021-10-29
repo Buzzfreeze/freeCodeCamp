@@ -8,23 +8,23 @@ dashedName: render-state-in-the-user-interface
 
 # --description--
 
-เมื่อคุณกำหนดสถานะเริ่มต้นของ component แล้ว คุณสามารถแสดงส่วนใดของมันก็ได้ใน UI ที่ถูกเรนเดอร์ หาก component เป็นแบบ stateful ก็จะสามารถเข้าถึงข้อมูลใน `state` ใน `render()` method ได้เสมอ คุณสามารถเข้าถึงข้อมูลด้วย `this.state`
+Once you define a component's initial state, you can display any part of it in the UI that is rendered. If a component is stateful, it will always have access to the data in `state` in its `render()` method. You can access the data with `this.state`.
 
-หากคุณต้องการเข้าถึงค่า state ภายใน `return` ของ render method คุณต้องใส่ค่าไว้ในวงเล็บปีกกา
+If you want to access a state value within the `return` of the render method, you have to enclose the value in curly braces.
 
-`state` เป็นหนึ่งในคุณสมบัติที่ทรงพลังที่สุดของ components ใน React ช่วยให้คุณติดตามข้อมูลสำคัญในแอปของคุณและเรนเดอร์ UI เพื่อตอบสนองต่อการเปลี่ยนแปลงในข้อมูลนี้ หากข้อมูลของคุณเปลี่ยนแปลง UI ของคุณจะเปลี่ยนไป React ใช้สิ่งที่เรียกว่า Virtual DOM เพื่อติดตามการเปลี่ยนแปลงในเบื้องหลัง เมื่อข้อมูล state อัปเดต จะเกิดการเรนเดอร์ components อีกครั้งโดยใช้ข้อมูลนั้น ซึ่งรวมถึง child components ที่ได้รับข้อมูลเป็น props แม้ว่า React จะอัปเดต DOM จริง แต่เฉพาะเมื่อจำเป็นเท่านั้น ซึ่งหมายความว่าคุณไม่ต้องกังวลกับการเปลี่ยน DOM คุณเพียงแค่ประกาศว่า UI ควรมีลักษณะอย่างไร
+`state` is one of the most powerful features of components in React. It allows you to track important data in your app and render a UI in response to changes in this data. If your data changes, your UI will change. React uses what is called a virtual DOM, to keep track of changes behind the scenes. When state data updates, it triggers a re-render of the components using that data - including child components that received the data as a prop. React updates the actual DOM, but only where necessary. This means you don't have to worry about changing the DOM. You simply declare what the UI should look like.
 
-โปรดทราบว่าหากคุณกำหนดให้ component เป็นแบบ stateful ก็จะไม่มี component อื่นใดที่ทราบ `state` ของมัน ซึ่ง `state` ของมันจะถูกห่อหุ้มไว้อย่างสมบูรณ์ หรือเฉพาะกับ component นั้น เว้นแต่คุณจะส่งข้อมูล state ไปยัง child component เป็น `props` แนวคิดเรื่อง `state` ที่ห่อหุ้มไว้นี้มีความสำคัญมาก เนื่องจากมันช่วยให้คุณสามารถเขียน logic บางอย่าง จากนั้นจึงบรรจุ logic นั้นและแยกไว้ในที่เดียวในโค้ดของคุณ
+Note that if you make a component stateful, no other components are aware of its `state`. Its `state` is completely encapsulated, or local to that component, unless you pass state data to a child component as `props`. This notion of encapsulated `state` is very important because it allows you to write certain logic, then have that logic contained and isolated in one place in your code.
 
 # --instructions--
 
-ใน code editor มี `MyComponent` เป็น component แบบ stateful กำหนดแท็ก `h1` ใน render method ของ component ซึ่งเรนเดอร์ค่าของ `name` จาก state ของ component
+In the code editor, `MyComponent` is already stateful. Define an `h1` tag in the component's render method which renders the value of `name` from the component's state.
 
-**Note:** `h1` ควรเรนเดอร์ค่าจาก `state` ที่เดียวเท่านั้น ใน JSX นั้นโค้ดใดก็ตามที่คุณเขียนไว้ในวงเล็บปีกกา `{ }` จะถือว่าเป็น JavaScript ดังนั้นเพื่อจะเข้าถึงค่าจาก `state` เพียงแค่นำโค้ดอ้างอิงไปใส่ไว้ในวงเล็บปีกกา
+**Note:** The `h1` should only render the value from `state` and nothing else. In JSX, any code you write with curly braces `{ }` will be treated as JavaScript. So to access the value from `state` just enclose the reference in curly braces.
 
 # --hints--
 
-`MyComponent` ควรมี key `name` ที่มีค่าเป็น `freeCodeCamp` อยู่ใน state ของมัน
+`MyComponent` should have a key `name` with value `freeCodeCamp` stored in its state.
 
 ```js
 assert(
@@ -33,7 +33,7 @@ assert(
 );
 ```
 
-`MyComponent` ควรเรนเดอร์ `h1` header อยู่ภายใน `div` หนึ่ง
+`MyComponent` should render an `h1` header enclosed in a single `div`.
 
 ```js
 assert(
@@ -43,7 +43,7 @@ assert(
 );
 ```
 
-`h1` ที่ถูกเรนเดอร์ควรมีแค่ข้อความที่ถูกเรนเดอร์จาก component's state
+The rendered `h1` header should only contain text rendered from the component's state.
 
 ```js
 async () => {

@@ -8,9 +8,9 @@ dashedName: implement-a-root-level-request-logger-middleware
 
 # --description--
 
-Earlier, you were introduced to the `express.static()` middleware function. Now it’s time to see what middleware is, in more detail. Middleware functions are functions that take 3 arguments: the request object, the response object, and the next function in the application’s request-response cycle. These functions execute some code that can have side effects on the app, and usually add information to the request or response objects. They can also end the cycle by sending a response when some condition is met. If they don’t send the response when they are done, they start the execution of the next function in the stack. This triggers calling the 3rd argument, `next()`.
+ก่อนหน้านี้ คุณได้คุ้นเคยกับฟังก์ชันมิดเดิลแวร์ `express.static()` แล้ว ตอนนี้ได้เวลาดูว่ามิดเดิลแวร์คืออะไรในในเชิงลึกมากขึ้น ฟังก์ชันมิดเดิลแวร์คือฟังก์ชันที่รับ 3 อาร์กิวเมนต์ ได้แก่ ออบเจ็กต์คำขอ ออบเจ็กต์การตอบสนอง และฟังก์ชันถัดไปในวงจร request-response cycle ของแอปพลิเคชัน ซึ่งฟังก์ชันเหล่านี้รันโค้ดบางอย่างได้ แต่จะอาจมีไซด์เอฟเฟคหรือผลข้างเคียงในแอป และมักจะเพิ่มข้อมูลไปยังออบเจกต์คำขอหรืออ็อบเจ็กต์การตอบสนอง พวกเขายังสามารถหยุดการทำงานด้วยการส่งคำตอบเมื่อตรงตามเงื่อนไขบางประการได้อีกด้วย แต่ถ้า หากพวกเขาไม่ส่งการตอบกลับเมื่อทำเสร็จสิ้นแล้ว พวกเขาจะเริ่มดำเนินการสแต็กในฟังก์ชันถัดไป สิ่งเหล่านี้จะเรียกว่า อาร์กิวเมนต์ที่ 3 หรือ `next()`
 
-Look at the following example:
+คุณสามารถดูตัวอย่างได้ตามนี้:
 
 ```js
 function(req, res, next) {
@@ -19,17 +19,17 @@ function(req, res, next) {
 }
 ```
 
-Let’s suppose you mounted this function on a route. When a request matches the route, it displays the string “I’m a middleware…”, then it executes the next function in the stack. In this exercise, you are going to build root-level middleware. As you have seen in challenge 4, to mount a middleware function at root level, you can use the `app.use(<mware-function>)` method. In this case, the function will be executed for all the requests, but you can also set more specific conditions. For example, if you want a function to be executed only for POST requests, you could use `app.post(<mware-function>)`. Analogous methods exist for all the HTTP verbs (GET, DELETE, PUT, …).
+สมมติว่า คุณติดตั้งฟังก์ชันบนเส้นทาง เมื่อคำขอตรงกับเส้นทาง มันจะแสดงผลสตริง “I'm a middleware...” หลังนั้นจึงเรียกใช้ฟังก์ชันถัดไปในสแต็ก ในแบบฝึกหัดนี้ คุณจะต้องสร้างมิดเดิลแวร์ระดับรูท (root-level) ดังที่คุณเห็นในโจทย์ Challengeข้อที่ 4 เพื่อที่จะติดตั้งฟังก์ชันมิดเดิลแวร์ที่ระดับรูท คุณสามารถใช้วิธี `app.use(<mware-function>)` ได้ สำหรับกรณีนี้ ฟังก์ชันจะทำงานตามคำขอทั้งหมด และคุณก็สามารถกำหนดเงื่อนไขเฉพาะเพิ่มเติมได้เช่นกัน ยกตัวอย่างเช่น ต้องการให้ฟังก์ชันทำงานเฉพาะสำหรับคำขอ POST คุณสามารถใช้ `app.post(<mware-function>)` ได้เลย นอกจากนี้ยังมีเวิร์บ http ที่ทำงานคล้ายกันทั้งหมด (GET, DELETE, PUT, …)
 
 # --instructions--
 
-Build a simple logger. For every request, it should log to the console a string taking the following format: `method path - ip`. An example would look like this: `GET /json - ::ffff:127.0.0.1`. Note that there is a space between `method` and `path` and that the dash separating `path` and `ip` is surrounded by a space on both sides. You can get the request method (http verb), the relative route path, and the caller’s ip from the request object using `req.method`, `req.path` and `req.ip`. Remember to call `next()` when you are done, or your server will be stuck forever. Be sure to have the ‘Logs’ opened, and see what happens when some request arrives.
+ในการสร้าง ล็อคเกอร์แบบง่าย ควรเข้าสู่คอนโซลด้วยสตริงที่มีรูปแบบต่อไปนี้ `method path - ip` ในทุกคำขอ เช่น `GET /json - ::ffff:127.0.0.1` เราจะเห็นว่ามีช่องว่างระหว่าง `method` กับ `path` และเส้นประที่แยก `path` กับ `ip` ที่ล้อมรอบด้วยช่องว่างทั้งสองด้าน คุณสามารถใช้วิธีการขอ(request method, http method), เส้นทางที่เกี่ยวข้องกัน และ IP จากอ็อบเจกต์รีเควส ด้วยการใช้ `req.method`, `req.path` และ `req.ip` จำเอาไว้เสมอว่า ต้องเรียกใช้ `next()` ทุกครั้งเมื่อคุณทำเสร็จ ไม่อย่างนั้นเซิร์ฟเวอร์ของคุณจะติดหรือรันไม่ออก และอย่างสุดท้าย ต้องมั่นใจว่าเปิดล็อคแล้ว และต้องเช็คด้วยว่าเกิดอะไรขึ้นเมื่อมีคำขอบางอย่างมาถึง
 
-**Note:** Express evaluates functions in the order they appear in the code. This is true for middleware too. If you want it to work for all the routes, it should be mounted before them.
+**Note:** การประเมินฟังก์ชั่นนั้น จะทำตามลำดับที่ปรากฏในโค้ด ซึ่งรวมถึงกรณีของมิดเดิลแวร์ด้วย ถ้าหากคุณต้องการให้มันใช้งานได้กับทุกเส้นทาง ก็ควรติดตั้งไว้ในลำดับก่อนหน้านั้นด้วย
 
 # --hints--
 
-Root level logger middleware should be active
+มิดเดิลแวร์ระดับรูทล็อคเกอร์ควรเปิดใช้งานอยู่
 
 ```js
 (getUserInput) =>

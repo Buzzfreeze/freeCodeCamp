@@ -14,7 +14,7 @@ dashedName: web-services-json
 
 ## --text--
 
-What will the following code print?:
+เมื่อรันโค๊ดต่อไปนี้ โปรแกรมจะแสดงผลลัพธ์ในข้อใด ?
 
 ```python
 import json
@@ -57,4 +57,3 @@ Mrugesh
 ## --video-solution--
 
 2
-

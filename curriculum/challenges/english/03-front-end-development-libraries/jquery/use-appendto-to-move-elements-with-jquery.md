@@ -8,33 +8,33 @@ dashedName: use-appendto-to-move-elements-with-jquery
 
 # --description--
 
-Now let's try moving elements from one `div` to another.
+คราวนี้มาลองย้าย element จาก `div` นึง ไป `div` อื่นกัน
 
-jQuery has a function called `appendTo()` that allows you to select HTML elements and append them to another element.
+jQuery มีฟังก์ชันที่เรียกว่า `appendTo()` ที่ทำให้คุณสามารถเลือก HTML element และ ผนวกเข้ากับ element อื่นๆ
 
-For example, if we wanted to move `target4` from our right well to our left well, we would use:
+มาดูตัวอย่างข้างล่าง ถ้าคุณต้องการย้าย `target4` จาก right well ไปยัง left well เราจะใช้:
 
 ```js
 $("#target4").appendTo("#left-well");
 ```
 
-Move your `target2` element from your `left-well` to your `right-well`.
+ย้าย `target2` element จาก `left-well` ไปยัง `right-well`
 
 # --hints--
 
-Your `target2` element should not be inside your `left-well`.
+`target2` element จะต้องไม่อยู่ใน `left-well`
 
 ```js
 assert($('#left-well').children('#target2').length === 0);
 ```
 
-Your `target2` element should be inside your `right-well`.
+`target2` element จะต้องย้ายไปอยู่ใน `right-well`.
 
 ```js
 assert($('#right-well').children('#target2').length > 0);
 ```
 
-You should only use jQuery to move these elements.
+คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
 
 ```js
 assert(!code.match(/class.*animated/g));

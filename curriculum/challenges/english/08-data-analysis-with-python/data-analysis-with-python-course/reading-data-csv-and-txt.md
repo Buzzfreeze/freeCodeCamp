@@ -12,9 +12,9 @@ dashedName: reading-data-csv-and-txt
 
 # --description--
 
-*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
+*ผู้เรียนสามารถใช้ Google Colab แทน notebooks.ai ที่สาธิตใน Videoได้*
 
-More resources:
+แหล่งเรียนรู้เพิ่มเติม:
 
 -   [Notebooks on GitHub](https://github.com/krishnatray/RDP-Reading-Data-with-Python-and-Pandas)
 -   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
@@ -23,7 +23,7 @@ More resources:
 
 ## --text--
 
-How would you import the CSV file `data.csv` and store it in a DataFrame using the Pandas module?
+เราจะ import ไฟล์ CSV `data.csv` และเก็บไว้ใน DataFrame โดยใช้ Pandas ได้อย่างไร?
 
 ## --answers--
 

@@ -14,24 +14,25 @@ dashedName: python-objects
 
 ## --text--
 
-ิข้อใดไม่เป็นจริงในเกี่ยวกับ objects ใน Python ?
+Which is NOT true about objects in Python?
 
 ## --answers--
 
-Objects ได้รับการสร้างและใช้งาน
+Objects get created and used.
 
 ---
 
-Objects เป็นบิตของโค้ดและข้อมูล
+Objects are bits of code and data.
 
 ---
 
-Objects ซ่อนรายละเอียดไว้
+Objects hide detail.
 
 ---
 
-Objects เป็นหนึ่งในห้าของ ประเภทของข้อมูล
+Objects are one of the five standard data types.
 
 ## --video-solution--
 
 4
+

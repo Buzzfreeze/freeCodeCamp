@@ -8,11 +8,11 @@ dashedName: combine-multiple-reducers
 
 # --description--
 
-When the state of your app begins to grow more complex, it may be tempting to divide state into multiple pieces. Instead, remember the first principle of Redux: all app state is held in a single state object in the store. Therefore, Redux provides reducer composition as a solution for a complex state model. You define multiple reducers to handle different pieces of your application's state, then compose these reducers together into one root reducer. The root reducer is then passed into the Redux `createStore()` method.
+เมื่อ state ของแอปเริ่มซับซ้อนมากขึ้น การแบ่ง state ออกเป็นหลายๆ ส่วนอาจเป็นเรื่องที่น่าสนใจ ให้จำหลักการแรกของ Redux ซึ่งคือ state แอปทั้งหมดจะอยู่ใน state object เดียวใน store ดังนั้น Redux จึงมี reducer composition เป็นวิธีแก้ปัญหาสำหรับโมเดล state ที่ซับซ้อน คุณกำหนด reducer หลายตัวเพื่อจัดการกับส่วนต่าง ๆ ของ state ของแอปพลิเคชันของคุณ จากนั้นจึงรวม reducer เหล่านี้เข้าด้วยกันเป็น root reducer ตัวเดียว ซึ่ง root reducer จะถูกส่งผ่านไปยัง`createStore()` method ของ Redux
 
-In order to let us combine multiple reducers together, Redux provides the `combineReducers()` method. This method accepts an object as an argument in which you define properties which associate keys to specific reducer functions. The name you give to the keys will be used by Redux as the name for the associated piece of state.
+Redux มี`combineReducers()` method เพื่อให้เรารวม reducer หลายตัวเข้าด้วยกัน เมธอดนี้ยอมรับ object เป็น argument ที่คุณกำหนด properties ซึ่งเชื่อมโยงคีย์กับ reducer functions เฉพาะ ชื่อที่คุณกำหนดให้กับคีย์จะถูกใช้โดย Redux เป็นชื่อสำหรับ state ที่เกี่ยวข้อง
 
-Typically, it is a good practice to create a reducer for each piece of application state when they are distinct or unique in some way. For example, in a note-taking app with user authentication, one reducer could handle authentication while another handles the text and notes that the user is submitting. For such an application, we might write the `combineReducers()` method like this:
+โดยปกติแล้ว จะเป็นแนวปฏิบัติที่ดีในการสร้าง reducer สำหรับ state แอปพลิเคชันแต่ละส่วนเมื่อพวกมันมีความชัดเจนหรือไม่ซ้ำกันในทางใดทางหนึ่ง ตัวอย่างเช่นในแอพจดบันทึกที่มีการตรวจสอบสิทธิ์ user reducer หนึ่งสามารถจัดการการตรวจสอบสิทธิ์ ในขณะที่อีก reducer หนึ่งจัดการข้อความและบันทึกที่ผู้ใช้ส่ง submit มา สำหรับแอปพลิเคชันดังกล่าว เราอาจเขียน`combineReducers()` method ดังนี้:
 
 ```js
 const rootReducer = Redux.combineReducers({
@@ -21,15 +21,15 @@ const rootReducer = Redux.combineReducers({
 });
 ```
 
-Now, the key `notes` will contain all of the state associated with our notes and handled by our `notesReducer`. This is how multiple reducers can be composed to manage more complex application state. In this example, the state held in the Redux store would then be a single object containing `auth` and `notes` properties.
+ตอนนี้ key `notes` จะมี state ทั้งหมดที่เกี่ยวข้องกับ notes ของเราและจัดการโดย `notesReducer` ของเรา นี่คือวิธีการประกอบ reducer หลายตัวเพื่อจัดการ state แอปพลิเคชันที่ซับซ้อนมากขึ้น ในตัวอย่างนี้ state ที่อยู่ใน Redux store จะเป็น object เดียวที่มี properties `auth` และ `notes`
 
 # --instructions--
 
-There are `counterReducer()` and `authReducer()` functions provided in the code editor, along with a Redux store. Finish writing the `rootReducer()` function using the `Redux.combineReducers()` method. Assign `counterReducer` to a key called `count` and `authReducer` to a key called `auth`.
+มีฟังก์ชัน `counterReducer()` และ `authReducer()` ที่ให้ไว้ใน code editor พร้อมกับ Redux store ให้เขียนฟังก์ชัน `rootReducer()` ให้เสร็จ โดยใช้ด `Redux.combineReducers()` method ให้กำหนด `counterReducer` ให้กับคีย์ชื่อ `count` และ `authReducer` ให้กับคีย์ชื่อ `auth`
 
 # --hints--
 
-The `counterReducer` should increment and decrement the `state`.
+`counterReducer` ควรทำการเพิ่มหรือลด `state`
 
 ```js
 assert(
@@ -45,7 +45,7 @@ assert(
 );
 ```
 
-The `authReducer` should toggle the `state` of `authenticated` between `true` and `false`.
+`authReducer` ควรสลับค่า `state` ของ `authenticated` ระหว่าง `true` และ `false`
 
 ```js
 assert(
@@ -59,7 +59,7 @@ assert(
 );
 ```
 
-The store `state` should have two keys: `count`, which holds a number, and `auth`, which holds an object. The `auth` object should have a property of `authenticated`, which holds a boolean.
+`state` ของ store ควรมี key 2 key คือ `count` ที่เป็นตัวเลข และ `auth` ที่เป็น object ซึ่ง `auth` object ควรมี property ของ `authenticated` ที่เป็น boolean
 
 ```js
 assert(
@@ -74,7 +74,7 @@ assert(
 );
 ```
 
-The `rootReducer` should be a function that combines the `counterReducer` and the `authReducer`.
+`rootReducer` ควรเป็นฟังก์ชันที่รวม `counterReducer` และ `authReducer` เข้าด้วยกัน
 
 ```js
 (getUserInput) =>

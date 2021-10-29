@@ -8,13 +8,13 @@ dashedName: add-elements-within-your-bootstrap-wells
 
 # --description--
 
-ลองดูโค้ดข้างล่างจะเห็น `div` ซ้อน `div` หลายๆ ชั้น ภายในแต่ละ column ของ row
+Now we're several `div` elements deep on each column of our row. This is as deep as we'll need to go. Now we can add our `button` elements.
 
-ให้เพิ่ม 3 `button` element ภายใน `div` ที่อยู่ข้างในสุด ที่มี class ชื่อว่า `well` 
+Nest three `button` elements within each of your `div` elements having the class name `well`.
 
 # --hints--
 
-`button` element ทั้ง 3 จะต้องอยู่ภายใน `div` ที่มี class ชื่อว่า `well`
+Three `button` elements should be nested within each of your `div` elements with class `well`.
 
 ```js
 assert(
@@ -23,13 +23,13 @@ assert(
 );
 ```
 
-ดังนั้นจะต้องเพิ่มทั้งหมด 6 `button` element
+You should have a total of 6 `button` elements.
 
 ```js
 assert($('button') && $('button').length > 5);
 ```
 
-อย่าลืมปิด tag `button` ทั้ง 6 ด้วย
+All of your `button` elements should have closing tags.
 
 ```js
 assert(

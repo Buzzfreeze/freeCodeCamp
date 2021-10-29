@@ -8,9 +8,11 @@ dashedName: use-body-parser-to-parse-post-requests
 
 # --description--
 
-Besides GET, there is another common HTTP verb, it is POST. POST is the default method used to send client data with HTML forms. In REST convention, POST is used to send data to create new items in the database (a new user, or a new blog post). You don’t have a database in this project, but you are going to learn how to handle POST requests anyway.
+นอกจาก GET ที่เป็นโพสต์แล้ว ยังมี HTTP verb ทั่วไปอีกตัวหนึ่งเป็นโพสต์ ด้วย 
+ ซึ่งโพสต์เป็นวิธีการเริ่มต้นที่มักจะใช้ในการส่งข้อมูลลูกค้าพร้อมกับแบบฟอร์ม HTML 
+ ในกรณี REST convention โพสต์จะถูกใช้เพื่อส่งข้อมูลและสร้างไอเทมใหม่ในฐานข้อมูล (สำหรับผู้ใช้ใหม่ หรือบล็อกโพสต์ใหม่) ถึงแม้ว่าคุณไม่มีฐานข้อมูลในโปรเจคนี้ คุณก็จำเป็นที่จะเรียนรู้วิธีจัดการคำขอของโพสต์อยู่ดี
 
-In these kind of requests, the data doesn’t appear in the URL, it is hidden in the request body. The body is a part of the HTTP request, also called the payload. Even though the data is not visible in the URL, this does not mean that it is private. To see why, look at the raw content of an HTTP POST request:
+ในคำขอเหล่านี้ ข้อมูลจะไม่ปรากฏอยู่ใน URL แต่มันจะซ่อนอยู่ในตัวเนื้อหา ซึ่งเนื้อหาเหล่านี้เป็นส่วนหนึ่งของคำขอ HTTP หรือที่เรียกว่าเพย์โหลด แม้ว่าข้อมูลจะไม่ปรากฏอยู่ใน URL แต่ก็ไม่ได้หมายความว่าข้อมูลนั้นเป็นข้อมูลส่วนตัว หากสงสัย ให้ดูเนื้อหาของคำขอ HTTP โพสต์:
 
 ```http
 POST /path/subpath HTTP/1.0
@@ -22,19 +24,20 @@ Content-Length: 20
 name=John+Doe&age=25
 ```
 
-As you can see, the body is encoded like the query string. This is the default format used by HTML forms. With Ajax, you can also use JSON to handle data having a more complex structure. There is also another type of encoding: multipart/form-data. This one is used to upload binary files. In this exercise, you will use a urlencoded body. To parse the data coming from POST requests, you have to install the `body-parser` package. This package allows you to use a series of middleware, which can decode data in different formats.
+เป็นอย่างที่คุณเห็นว่า เนื้อหาถูกเข้ารหัสจะเป็นเหมือนสตริงสืบค้น เพราะว่านี่เป็นรูปแบบเริ่มต้นที่ใช้แบบฟอร์ม HTML 
+สำหรับ Ajax คุณยังสามารถใช้ JSON เพื่อจัดการข้อมูลที่มีโครงสร้างที่ซับซ้อนมากขึ้นได้ นอกจากนี้ยังมีการเข้ารหัสอีกรูปแบบหนึ่ง: multipart/form-data อันนี้ใช้สำหรับการอัพโหลดไฟล์ไบนารี 
+ในแบบฝึกหัดนี้ คุณจะต้องใช้ urlencoded เพื่อวิเคราะห์ข้อมูลที่มาจากคำขอโพสต์ โดยคุณต้องติดตั้ง `body-parser` ด้วย เพราะจะช่วยให้คุณใช้ชุดมิดเดิลแวร์ถอดรหัสข้อมูลในรูปแบบต่างๆ ได้
 
 # --instructions--
 
-Install the `body-parser` module in your `package.json`. Then, `require` it at the top of the file. Store it in a variable named `bodyParser`. The middleware to handle urlencoded data is returned by `bodyParser.urlencoded({extended: false})`. Pass the function returned by the previous method call to `app.use()`. As usual, the middleware must be mounted before all the routes that depend on it.
+การติดตั้งโมดูล `body-parser` บน `package.json` ตั้งให้ `require` อยู่บนส่วนหัวของไฟล์ แล้วเก็บมันไว้ในตัวแปรที่ชื่อ  `bodyParser` ส่วนมิดเดิ้ลแวร์ที่จัดการกับข้อมูล urlencoded จะถูกส่งกลับด้วย `bodyParser.urlencoded({extended: false})` ส่งฟังก์ชันส่งกลับโดยการเรียกใช้วิธีก่อนหน้าที่เรียก `app.use()` โดยปกติแล้ว มิดเดิ้ลแวร์ จะต้องติดตั้งก่อนที่จะเชื่อมต่อกับเส้นทางทั้งหมด
 
-**Note:** `extended` is a configuration option that tells `body-parser` which parsing needs to be used. When `extended=false` it uses the classic encoding `querystring` library. When `extended=true` it uses `qs` library for parsing. 
+**Note:** `extended` เป็นองค์ประกอบทางเลือกที่บอกถึง `body-parser` ใช้การแยกวิเคราะห์ประโยค(parsing) ถ้า `extended=false` ระบบจะเข้ารหัสโดยใช้ `querystring` ไลบรารี่ แต่ถ้า `extended=true`  ระบบจะใช้ `qs` ไลบรารี่ในการแยกวิเคราะห์ประโยค(parsing)
 
-When using `extended=false`, values can be only strings or arrays. The object returned when using `querystring` does not prototypically inherit from the default JavaScript `Object`, which means functions like `hasOwnProperty`, `toString` will not be available. The extended version allows more data flexibility, but it is outmatched by JSON.
-
+เมื่อใช้ `extended=false` ค่าที่ได้จะเป็นเพียงสตริงหรืออาร์เรย์เท่านั้น อ็อบเจ็กต์ที่ถูกส่งคืน ของ `querystring` ไม่ส่งต่อต้นแบบจาก `Object` ของ JavaScript ซึ่งหมายความว่าฟังก์ชัน `hasOwnProperty`และ `toString` จะไม่สามารถใช้ได้ ถือได้ว่า เป็นการช่วยขยายความยืดหยุ่นของข้อมูล แต่ว่าก็ยังเทียบกับ JSON ไม่ได้อยู่ดี
 # --hints--
 
-The 'body-parser' middleware should be mounted
+มิดเดิ้ลแวร์ 'body-parser'ควรที่จะติดตั้งเอาไว้
 
 ```js
 (getUserInput) =>

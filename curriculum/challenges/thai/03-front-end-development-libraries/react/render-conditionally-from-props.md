@@ -8,21 +8,21 @@ dashedName: render-conditionally-from-props
 
 # --description--
 
-จนถึงตอนนี้ คุณได้เห็นวิธีการใช้ `if/else`, `&&` และ ternary operator (`condition ? expressionIfTrue : expressionIfFalse`) เพื่อการตัดสินใจแบบมีเงื่อนไขว่าจะเรนเดอร์อะไรและเมื่อใด อย่างไรก็ตามยังมีหัวข้อสำคัญที่จะเราพูดคุยกันซึ่งจะช่วยให้คุณรวมแนวคิดบางอย่างหรือทั้งหมดเหล่านี้เข้ากับฟีเจอร์ของ React อันทรงพลังอย่าง props การใช้ props เพื่อเรนเดอร์โค้ดแบบมีเงื่อนไขนั้นเป็นเรื่องธรรมดามากสำหรับนักพัฒนา React นั่นคือพวกเขาใช้ค่าของ prop ที่กำหนดเพื่อตัดสินใจโดยอัตโนมัติเกี่ยวกับสิ่งที่จะเรนเดอร์
+So far, you've seen how to use `if/else`, `&&`, and the ternary operator (`condition ? expressionIfTrue : expressionIfFalse`) to make conditional decisions about what to render and when. However, there's one important topic left to discuss that lets you combine any or all of these concepts with another powerful React feature: props. Using props to conditionally render code is very common with React developers — that is, they use the value of a given prop to automatically make decisions about what to render.
 
-ในแบบทดสอบนี้คุณจะต้องตั้งค่า child component เพื่อทำการตัดสินใจในการเรนเดอร์ตาม props คุณอาจจะใช้ ternary operator แต่คุณสามารถดูว่าแนวคิดอื่นๆ ที่ได้ลองทำนแบบทดสอบสองสามครั้งล่าสุดมีประโยชน์ในการนำมาใช้เพียงใดในบริบทนี้
+In this challenge, you'll set up a child component to make rendering decisions based on props. You'll also use the ternary operator, but you can see how several of the other concepts that were covered in the last few challenges might be just as useful in this context.
 
 # --instructions--
 
-code editor มี components สองส่วนที่กำหนดไว้แล้วสำหรับคุณบางส่วน: parent ชื่อ `GameOfChance` และ child ที่เรียกว่า `Results` ใช้สำหรับสร้างเกมง่ายๆ ที่ user กดปุ่มเพื่อดูว่าชนะหรือแพ้
+The code editor has two components that are partially defined for you: a parent called `GameOfChance`, and a child called `Results`. They are used to create a simple game where the user presses a button to see if they win or lose.
 
-ขั้นแรก คุณจะต้องใช้ expression ทั่วไปที่สุ่ม return ค่าที่แตกต่างกันทุกครั้งที่เรียกใช้ คุณสามารถใช้ `Math.random()` method นี้ return ค่าระหว่าง "0" (รวม 0 ไปด้วย) และ "1" (ไม่รวม 1) ทุกครั้งที่มีการเรียกใช้ ดังนั้นสำหรับอัตราต่อรอง 50/50 ให้ใช้ `Math.random() >= .5` ใน expression ของคุณ ตามสถิติ expression นี้จะ return `true` 50% ของการเรียกใช้งาน และ `false` อีก 50% ในวิธีการเรนเดอร์ให้แทนที่ `null` ด้วย expression ด้านบนเพื่อสิ้นสุดการประกาศตัวแปร
+First, you'll need a simple expression that randomly returns a different value every time it is run. You can use `Math.random()`. This method returns a value between `0` (inclusive) and `1` (exclusive) each time it is called. So for 50/50 odds, use `Math.random() >= .5` in your expression. Statistically speaking, this expression will return `true` 50% of the time, and `false` the other 50%. In the render method, replace `null` with the above expression to complete the variable declaration.
 
-ตอนนี้คุณมี expression ที่คุณสามารถใช้ตัดสินใจแบบสุ่มใน expression ได้ ถัดไปคุณต้องเรียกใช้ expression นี้ เรนเดอร์`Results` component เป็น child ของ `GameOfChance` และส่ง `expression` เป็น prop ที่เรียกว่า `fiftyFifty` ใน `Results` component ให้เขียน ternary expression ที่จะเรนเดอร์ `h1` element ที่มีข้อความ `You Win!` หรือ `You Lose!` `fiftyFifty` prop ที่ถูกส่งผ่านมาจาก `GameOfChance` สุดท้ายตรวจสอบให้แน่ใจว่า`handleClick()` method นับแต่ละเทิร์นอย่างถูกต้อง เพื่อให้ user รู้ว่าพวกเขาเล่นไปกี่ครั้งแล้ว นอกจากนี้ยังทำหน้าที่แจ้งให้ user ทราบว่า component ได้รับการอัปเดตจริงในกรณีที่พวกเขาชนะหรือแพ้สองครั้งติดต่อกัน
+Now you have an expression that you can use to make a randomized decision in the code. Next you need to implement this. Render the `Results` component as a child of `GameOfChance`, and pass in `expression` as a prop called `fiftyFifty`. In the `Results` component, write a ternary expression to render the `h1` element with the text `You Win!` or `You Lose!` based on the `fiftyFifty` prop that's being passed in from `GameOfChance`. Finally, make sure the `handleClick()` method is correctly counting each turn so the user knows how many times they've played. This also serves to let the user know the component has actually updated in case they win or lose twice in a row.
 
 # --hints--
 
-`GameOfChance` component ควรมีอยู่และเรนเดอรืไปยังเพจ
+The `GameOfChance` component should exist and render to the page.
 
 ```js
 assert.strictEqual(
@@ -31,7 +31,7 @@ assert.strictEqual(
 );
 ```
 
-`GameOfChance` ควร return 1 `button` element
+`GameOfChance` should return a single `button` element.
 
 ```js
 assert.strictEqual(
@@ -40,7 +40,7 @@ assert.strictEqual(
 );
 ```
 
-`GameOfChance` ควร return 1 ผลของ `Results` component ที่มี prop ชื่อว่า `fiftyFifty`
+`GameOfChance` should return a single instance of the `Results` component, which has a prop called `fiftyFifty`.
 
 ```js
 assert(
@@ -53,7 +53,7 @@ assert(
 );
 ```
 
-`GameOfChance` state ควรจะเริ่มต้นด้วย property ของ `counter` ที่มีค่าเป็น `1`
+`GameOfChance` state should be initialized with a property of `counter` set to a value of `1`.
 
 ```js
 assert.strictEqual(
@@ -62,7 +62,7 @@ assert.strictEqual(
 );
 ```
 
-เมื่อ `GameOfChance` component ถูกเรนเดอร์ไปยัง DOM ครั้งแรก `p` element ควรถูก return ด้วยข้อความข้างในว่า `Turn: 1`
+When the `GameOfChance` component is first rendered to the DOM, a `p` element should be returned with the inner text of `Turn: 1`.
 
 ```js
 assert.strictEqual(
@@ -71,7 +71,7 @@ assert.strictEqual(
 );
 ```
 
-ทุกครั้งที่ปุ่มถูกคลิก counter state จะต้องถูกเพิ่งค่าที่ละ 1 และ `p` element จะถูกเรนเดอร์ไปยัง DOM ที่มีข้อความ `Turn: N` โดยที่ `N` คือค่าของ counter state
+Each time the button is clicked, the counter state should be incremented by a value of 1, and a single `p` element should be rendered to the DOM that contains the text `Turn: N`, where `N` is the value of the counter state.
 
 ```js
 (() => {
@@ -123,7 +123,7 @@ assert.strictEqual(
 })();
 ```
 
-เมื่อ `GameOfChance` component ถูกติดตั้งไปยัง DOM เป็นครั้งแรก และในทุกครั้งที่ปุ่มถูกคลิก หลังจากนั้นจะต้อง return `h1` element เดียวที่แสดงผลแบบสุ่มว่า `You Win!` หรือ `You Lose!`
+When the `GameOfChance` component is first mounted to the DOM and each time the button is clicked thereafter, a single `h1` element should be returned that randomly renders either `You Win!` or `You Lose!`.
 
 ```js
 (() => {

@@ -8,15 +8,15 @@ dashedName: label-bootstrap-wells
 
 # --description--
 
-เรามาใส่ไอดีให้แต่ละ well เพื่อให้รู้ชัดว่า well ไหนเป็น well ไหนดีกว่า
+For the sake of clarity, let's label both of our wells with their ids.
 
-โดยให้เพิ่ม `h4` element ข้างบน left-well ใส่ข้อความว่า `#left-well` ไว้ใน `div` element ที่มี class `col-xs-6` ที่ครอบ `div` ที่มีไอดี `left-well` อยู่
+Above your left-well, inside its `col-xs-6` `div` element, add a `h4` element with the text `#left-well`.
 
-และเพิ่ม `h4` element ข้างบน right-well ใส่ข้อความว่า `#right-well` ไว้ใน `div` element ที่มี class `col-xs-6` ที่ครอบ `div` ที่มีไอดี `right-well` อยู่
+Above your right-well, inside its `col-xs-6` `div` element, add a `h4` element with the text `#right-well`.
 
 # --hints--
 
-เพิ่ม `h4` element ไว้ใน `<div class="col-xs-6">` ทั้งสองอัน
+You should add an `h4` element to each of your `<div class="col-xs-6">` elements.
 
 ```js
 assert(
@@ -24,19 +24,19 @@ assert(
 );
 ```
 
-ใส่ข้อความ `#left-well` ให้กับหนึ่งใน `h4` element ที่เพิ่มมา
+One `h4` element should have the text `#left-well`.
 
 ```js
 assert(new RegExp('#left-well', 'gi').test($('h4').text()));
 ```
 
-และข้อความ `#right-well` ให้กับ `h4` element ที่เหลือ
+One `h4` element should have the text `#right-well`.
 
 ```js
 assert(new RegExp('#right-well', 'gi').test($('h4').text()));
 ```
 
-อย่าลืม tag ปิด สำหรับแต่ละ `h4` element
+All of your `h4` elements should have closing tags.
 
 ```js
 assert(

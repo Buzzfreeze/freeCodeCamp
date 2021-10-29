@@ -8,17 +8,17 @@ dashedName: write-a-simple-counter
 
 # --description--
 
-You can design a more complex stateful component by combining the concepts covered so far. These include initializing `state`, writing methods that set `state`, and assigning click handlers to trigger these methods.
+คุณสามารถออกแบบ stateful component ที่ซับซ้อนมากขึ้นได้โดยการรวมแนวคิดที่ได้เรียนรู้จนถึงตอนนี้ ซึ่งรวมถึงการเริ่มต้น `state` การเขียน method ที่กำหนด `state` และการกำหนดclick handler เพื่อเรียกใช้งาน method เหล่านี้
 
 # --instructions--
 
-The `Counter` component keeps track of a `count` value in `state`. There are two buttons which call methods `increment()` and `decrement()`. Write these methods so the counter value is incremented or decremented by 1 when the appropriate button is clicked. Also, create a `reset()` method so when the reset button is clicked, the count is set to 0.
+`Counter` component จะติดตามค่า `count` ใน `state` มันมีสองปุ่มที่เรียกใช้ methods `increment()` และ `decrement()` ให้เขียน methods เหล่านี้เพื่อให้ค่า counter เพิ่มขึ้นหรือลดลงทีละ 1 เมื่อคลิกปุ่มที่เหมาะสม นอกจากนี้ให้สร้าง method `reset()` เพื่อเวลาที่คลิกปุ่มรีเซ็ต count จะถูกตั้งเป็น 0
 
-**Note:** Make sure you don't modify the `className`s of the buttons. Also, remember to add the necessary bindings for the newly-created methods in the constructor.
+**Note:** ตรวจสอบให้แน่ใจว่าคุณไม่ได้แก้ไข `className` ของปุ่มต่างๆ นอกจากนี้อย่าลืมเพิ่มการเชื่อมที่จำเป็นสำหรับ methods ที่สร้างขึ้นใหม่ใน constructor
 
 # --hints--
 
-`Counter` should return a `div` element which contains three buttons with text content in this order `Increment!`, `Decrement!`, `Reset`.
+`Counter` ควร return `div element ที่มีปุ่ม 3 ปุ่ม ที่มีข้อความว่า `Increment!`, `Decrement!`, `Reset` ตามลำดับ
 
 ```js
 assert(
@@ -33,14 +33,14 @@ assert(
 );
 ```
 
-The state of `Counter` should initialize with a `count` property set to `0`.
+State ของ `Counter` ควรเริ่มต้นด้วย `count` property ที่มีค่าเป็น `0`
 
 ```js
 const mockedComponent = Enzyme.mount(React.createElement(Counter));
 assert(mockedComponent.find('h1').text() === 'Current Count: 0');
 ```
 
-Clicking the increment button should increment the count by `1`.
+การคลิกที่ปุ่มเพิ่มควรเป็นการเพิ่มค่า count ที่ละ `1`
 
 ```js
 const mockedComponent = Enzyme.mount(React.createElement(Counter));
@@ -48,7 +48,7 @@ mockedComponent.find('.inc').simulate('click');
 assert(mockedComponent.find('h1').text() === 'Current Count: 1');
 ```
 
-Clicking the decrement button should decrement the count by `1`.
+การคลิกที่ปุ่มลดควรเป็นการลดค่า count ที่ละ `1`
 
 ```js
 const mockedComponent = Enzyme.mount(React.createElement(Counter));
@@ -56,7 +56,7 @@ mockedComponent.find('.dec').simulate('click');
 assert(mockedComponent.find('h1').text() === 'Current Count: -1');
 ```
 
-Clicking the reset button should reset the count to `0`.
+การคลิกปุ่มรีเซ็ตควรเป็นการรีเช็ตค่า count เป็น `0`
 
 ```js
 const mockedComponent = Enzyme.mount(React.createElement(Counter));

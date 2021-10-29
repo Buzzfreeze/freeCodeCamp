@@ -8,39 +8,39 @@ dashedName: make-images-mobile-responsive
 
 # --description--
 
-ก่อนอื่นให้เพิ่มรูปใหม่ไว้ข้างล่างรูปเก่า โดยกำหนด `src` attribute เป็น `https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg`.
+First, add a new image below the existing one. Set its `src` attribute to `https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg`.
 
-หากต้องการให้รูปที่เราเพิ่งเพิ่มมานี้มีความกว้างที่พอดีกับหน้าจอมือถือของเราล่ะ?
+It would be great if this image could be exactly the width of our phone's screen.
 
-วิธีที่ง่ายวิธีการนึงคือการใช้ Bootstrap เพียงแค่การเพิ่ม class `img-responsive` ให้ tag image เท่านี้รูปของเราก็จะพอดีกับความกว้างของเพจแล้ว
+Fortunately, with Bootstrap, all we need to do is add the `img-responsive` class to your image. Do this, and the image should perfectly fit the width of your page.
 
 # --hints--
 
-จะต้องมีรูปภาพในทั้งหมด 2 ภาพในเพจ
+You should have a total of two images.
 
 ```js
 assert($('img').length === 2);
 ```
 
-รูปภาพใหม่ที่เพิ่มเข้ามาจะต้องอยู่ใต้รูปภาพเก่า และมี class `img-responsive`.
+Your new image should be below your old one and have the class `img-responsive`.
 
 ```js
 assert($('img:eq(1)').hasClass('img-responsive'));
 ```
 
-ไม่ต้องเพิ่ม class `smaller-image` ให้รูปภาพใหม่ที่เพิ่มมา
+Your new image should not have the class `smaller-image`.
 
 ```js
 assert(!$('img:eq(1)').hasClass('smaller-image'));
 ```
 
-ให้ใช้ `src` เป็น `https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg` สำหรับรูปภาพใหม่
+Your new image should have a `src` of `https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg`.
 
 ```js
 assert($('img:eq(1)').attr('src') === 'https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg');
 ```
 
-อย่าลืมใส่ `>` เพื่อปิด tag img
+Your new `img` element should have a closing angle bracket.
 
 ```js
 assert(

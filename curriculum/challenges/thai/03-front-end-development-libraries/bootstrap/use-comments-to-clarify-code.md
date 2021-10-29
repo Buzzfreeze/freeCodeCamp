@@ -7,35 +7,36 @@ dashedName: use-comments-to-clarify-code
 ---
 
 # --description--
-การใช้ comment เป็นการเพิ่มข้อความบางอย่างในโค้ดของเรา แต่ข้อความเหล่านี้จะไม่ได้รับการ compile เมื่อรันงาน โดยส่วนใหญ่จะใช้ในกรณีต้องาการสื่อสารบางอย่างแก่ผู้ที่เข้ามาอ่านโค้ดของเรา เช่นกรณี เมื่อเราเริ่มใช้งาน jQuery เราจะสามารถแก้ไข element ของ HTML โดยที่ไม่ต้องแก้ไขโค้ดจริงๆ ในตัว HTML เอง
 
-เราอาจจะใช้การ comment เพื่อบอกกับคนที่มาอ่านโค้ดของเราว่าไม่ควรแก้ไขโดยตรง
+When we start using jQuery, we will modify HTML elements without needing to actually change them in HTML.
 
-โดยการลองเพิ่ม comment ที่ส่วนบนสุดของ HTML ว่า `Code below this line should not be changed`
+Let's make sure that everyone knows they shouldn't actually modify any of this code directly.
 
-เพิ่ม comment โดยใส่ `<!--` ก่อนข้อความใน comment และปิดด้วย `-->`
+Remember that you can start a comment with `<!--` and end a comment with `-->`
+
+Add a comment at the top of your HTML that says `Code below this line should not be changed`
 
 # --hints--
 
-เริ่มข้อความ comment ด้วย `<!--` ในส่วนบนสุดของ HTML
+You should start a comment with `<!--` at the top of your HTML.
 
 ```js
 assert(code.match(/^\s*<!--/));
 ```
 
-ข้อความใน comment คือ `Code below this line should not be changed`
+Your comment should have the text `Code below this line should not be changed`.
 
 ```js
 assert(code.match(/<!--(?!(>|->|.*-->.*this line))\s*.*this line.*\s*-->/gi));
 ```
 
-และปิด comment ด้วย `-->`
+You should close your comment with `-->`.
 
 ```js
 assert(code.match(/-->.*\n+.+/g));
 ```
 
-ใช้ `<!--` เปิด comment เท่าไหร่ ก็จะต้องปิดด้วย `-->` เท่านั้น
+You should have the same number of comment openers and closers.
 
 ```js
 assert(code.match(/<!--/g).length === code.match(/-->/g).length);

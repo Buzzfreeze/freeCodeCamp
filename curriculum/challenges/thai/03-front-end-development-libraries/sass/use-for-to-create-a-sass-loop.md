@@ -8,11 +8,11 @@ dashedName: use-for-to-create-a-sass-loop
 
 # --description--
 
-คำสั่ง `@for` นั้นเพิ่มสไตล์ในลูป ซึ่งคล้ายกันมากกับ `for` loop ใน JavaScript
+The `@for` directive adds styles in a loop, very similar to a `for` loop in JavaScript.
 
-`@for` นั้นถูกใช้ในสองกรณี คือ "start through end" หรือ "start to end" ข้อแตกต่างที่สำคัยคือ "start **to** end" จะ *ไม่รวม* จำนวนสุดท้ายในการนับ ส่วน "start **through** end" จะ *รวม* จำนวนสุดท้ายในการนับด้วย
+`@for` is used in two ways: "start through end" or "start to end". The main difference is that the "start **to** end" *excludes* the end number as part of the count, and "start **through** end" *includes* the end number as part of the count.
 
-ข้างล่างนี้เป็นตัวอย่างของ start **through**:
+Here's a start **through** end example:
 
 ```scss
 @for $i from 1 through 12 {
@@ -20,7 +20,7 @@ dashedName: use-for-to-create-a-sass-loop
 }
 ```
 
-ส่วน `#{$i}` คือ syntax ส่วนที่รวมตัวแปร (`i`) กับข้อความเพื่อสร้าง string เมื่อไฟล์ Sass แปลงไปเป็น CSS จะมีหน้าตา ดังนี้:
+The `#{$i}` part is the syntax to combine a variable (`i`) with text to make a string. When the Sass file is converted to CSS, it looks like this:
 
 ```scss
 .col-1 {
@@ -38,47 +38,47 @@ dashedName: use-for-to-create-a-sass-loop
 }
 ```
 
-มันคือวิธีที่ทรงพลังในการสร้างกริตเลย์เอาท์ ตอนนี้คุณมี 12 ทางเลือกที่เป็นคลาส CSS สำหรับขนาดความกว้างของคอลัมน์
+This is a powerful way to create a grid layout. Now you have twelve options for column widths available as CSS classes.
 
-# --instructions—
+# --instructions--
 
-ให้เขียนคำสั่ง `@for` ที่รับตัวแปร `$j` ที่วนลูปจาก 1 **to** 6 
+Write a `@for` directive that takes a variable `$j` that goes from 1 **to** 6.
 
-ซึ่งมันควรจะสร้างคลาสทั้งหมด 5 คลาสที่มีชื่อตั้งแต่ `.text-1` ไป `.text-5` ซึ่งแต่ละคลาสมี ค่า `font-size` ตั้งไว้ที่ 15pxคูณด้วย index
+It should create 5 classes called `.text-1` to `.text-5` where each has a `font-size` set to 15px multiplied by the index.
 
 # --hints--
 
-โค้ดของคุณควรใช้คำสั่ง `@for`
+Your code should use the `@for` directive.
 
 ```js
 assert(code.match(/@for /g));
 ```
 
-คลาส `.text-1` ควรมีขนาด `font-size` เป็น 15px
+Your `.text-1` class should have a `font-size` of 15px.
 
 ```js
 assert($('.text-1').css('font-size') == '15px');
 ```
 
-คลาส `.text-2` ควรมีขนาด `font-size` เป็น 30px
+Your `.text-2` class should have a `font-size` of 30px.
 
 ```js
 assert($('.text-2').css('font-size') == '30px');
 ```
 
-คลาส `.text-3` ควรมีขนาด `font-size` เป็น 45px
+Your `.text-3` class should have a `font-size` of 45px.
 
 ```js
 assert($('.text-3').css('font-size') == '45px');
 ```
 
-คลาส `.text-4` ควรมีขนาด `font-size` เป็น 60px
+Your `.text-4` class should have a `font-size` of 60px.
 
 ```js
 assert($('.text-4').css('font-size') == '60px');
 ```
 
-คลาส `.text-5` ควรมีขนาด `font-size` เป็น 75px
+Your `.text-5` class should have a `font-size` of 75px.
 
 ```js
 assert($('.text-5').css('font-size') == '75px');

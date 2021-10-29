@@ -12,9 +12,9 @@ dashedName: jupyter-notebooks-importing-and-exporting-data
 
 # --description--
 
-*ผู้เรียนสามารถใช้ Google Colab แทน notebooks.ai ที่สาธิตใน Videoได้*
+*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
 
-แหล่งเรียนรู้เพิ่มเติม:
+More resources:
 
 -   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/ds-content-interactive-jupyterlab-tutorial)
 -   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
@@ -23,27 +23,27 @@ dashedName: jupyter-notebooks-importing-and-exporting-data
 
 ## --text--
 
-ข้อมูลประเภทใดที่สามารถนำเข้าและใช้งานใน Jupyter Notebook ได้?
+What kind of data can you import and work with in a Jupyter Notebook?
 
 ## --answers--
 
-ไฟล์ Excel
+Excel files.
 
 ---
 
-ไฟล์ CSV
+CSV files.
 
 ---
 
-ไฟล์ XML
+XML files.
 
 ---
 
-ข้อมูลจาก API
+Data from an API.
 
 ---
 
-ทั้งหมดตามที่กล่าวมาข้างต้น 
+All of the above.
 
 ## --video-solution--
 

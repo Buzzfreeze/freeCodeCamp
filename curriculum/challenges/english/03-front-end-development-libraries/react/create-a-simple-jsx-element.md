@@ -8,29 +8,31 @@ dashedName: create-a-simple-jsx-element
 
 # --description--
 
-React is an Open Source view library created and maintained by Facebook. It's a great tool to render the User Interface (UI) of modern web applications.
+React เป็นไลบรารีมุมมองโอเพ่นซอร์สที่สร้างและดูแลโดย Facebook เป็นเครื่องมือที่ยอดเยี่ยมในการแสดงผล User Interface (UI) ของเว็บแอปพลิเคชันสมัยใหม่
 
-React uses a syntax extension of JavaScript called JSX that allows you to write HTML directly within JavaScript. This has several benefits. It lets you use the full programmatic power of JavaScript within HTML, and helps to keep your code readable. For the most part, JSX is similar to the HTML that you have already learned, however there are a few key differences that will be covered throughout these challenges.
+React ใช้ส่วนขยาย syntax ของ JavaScript ที่เรียกว่า JSX ที่ให้คุณเขียน HTML ได้โดยตรงภายใน JavaScript สิ่งนี้มีประโยชน์หลายประการ ช่วยให้คุณสามารถใช้ความสามารถในการโปรแกรมมิ่งเต็มรูปแบบของ JavaScript ภายใน HTML และช่วยให้โค้ดของคุณอ่านเข้าใจได้ง่าย โดยส่วนใหญ่ JSX จะคล้ายกับ HTML ที่คุณได้เรียนรู้ไปแล้ว อย่างไรก็ตาม มีข้อแตกต่างที่สำคัญบางประการที่จะที่จะอธิบายในแบบทดสอบต่างๆ ต่อไปนี้
 
-For instance, because JSX is a syntactic extension of JavaScript, you can actually write JavaScript directly within JSX. To do this, you simply include the code you want to be treated as JavaScript within curly braces: `{ 'this is treated as JavaScript code' }`. Keep this in mind, since it's used in several future challenges.
+ตัวอย่างเช่น เนื่องจาก JSX เป็นส่วนขยาย syntax ของ JavaScript คุณจึงสามารถเขียน JavaScript ได้โดยตรงภายใน JSX คุณเพียงแค่ใส่โค้ดที่คุณต้องการให้เป็น JavaScript ไว้ในวงเล็บปีกกา: `{ 'this is suitable as JavaScript code' }` ซึ่งวิธีการนี้จะถูกใช้ในแบบทดสอบต่อๆไป
 
-However, because JSX is not valid JavaScript, JSX code must be compiled into JavaScript. The transpiler Babel is a popular tool for this process. For your convenience, it's already added behind the scenes for these challenges. If you happen to write syntactically invalid JSX, you will see the first test in these challenges fail.
+อย่างไรก็ตาม เนื่องจาก JSX ไม่ใช่ JavaScript ที่ถูกต้อง จึงต้องคอมไพล์โค้ด JSX เป็น JavaScript Transpiler Babel เป็นเครื่องมือยอดนิยมสำหรับกระบวนการนี้ เพื่อความสะดวกของคุณ เราได้เพิ่มเบื้องหลังของความท้าทายเหล่านี้ไว้แล้ว หากคุณบังเอิญเขียน JSX ที่ไม่ถูกต้อง คุณจะเห็นว่าการทดสอบครั้งแรกในการท้าทายเหล่านี้ล้มเหลว
 
-It's worth noting that under the hood the challenges are calling `ReactDOM.render(JSX, document.getElementById('root'))`. This function call is what places your JSX into React's own lightweight representation of the DOM. React then uses snapshots of its own DOM to optimize updating only specific parts of the actual DOM.
+อย่างไรก็ตาม เนื่องจาก JSX ไม่ใช่ JavaScript ที่แท้จริง จึงต้องคอมไพล์โค้ด JSX เป็น JavaScript Transpiler Babel เป็นเครื่องมือยอดนิยมสำหรับกระบวนการนี้ เราได้เพิ่มเครื่องมือนี้เข้ามาเรียบร้อยแล้วในแบบทดสอบนี้เพื่อความสะดวกของคุณ หากคุณบังเอิญเขียน JSX ที่ไม่ถูกต้อง คุณจะเห็นว่าการ test ครั้งแรกในแบบทดสอบเหล่านี้ไม่ผ่าน
+
+เป็นที่น่าสังเกตว่าแบบทดสอบนี้กำลังเรียกใช้งาน `ReactDOM.render(JSX, document.getElementById('root'))` การเรียกใช้ฟังก์ชันนี้เป็นการวาง JSX ของคุณลงในการแสดง DOM ที่มีน้ำหนักเบาของ React จากนั้น React จะใช้สแน็ปช็อตของ DOM ของตัวเองเพื่อเพิ่มประสิทธิภาพการอัปเดตเฉพาะบางส่วนของ DOM จริง
 
 # --instructions--
 
-The current code uses JSX to assign a `div` element to the constant `JSX`. Replace the `div` with an `h1` element and add the text `Hello JSX!` inside it.
+โค้ดปัจจุบันใช้ JSX เพื่อกำหนด `div` element ให้กับค่าคงที่ `JSX` แทนที่ `div` ด้วย `h1` element และเพิ่มข้อความ `Hello JSX!` เข้าไปข้างใน
 
 # --hints--
 
-The constant `JSX` should return an `h1` element.
+ค่าคงที่ `JSX` ควรจะต้อง return `h1` element
 
 ```js
 assert(JSX.type === 'h1');
 ```
 
-The `h1` tag should include the text `Hello JSX!`
+`h1` tag ควรจะต้องมีข้อความว่า `Hello JSX!`
 
 ```js
 assert(Enzyme.shallow(JSX).contains('Hello JSX!'));

@@ -8,15 +8,15 @@ dashedName: create-a-complex-jsx-element
 
 # --description--
 
-แบบทดสอบก่อนหน้านี้เป็นตัวอย่างของ JSX แบบง่ายๆ แต่ JSX ยังสามารถแทน HTML ที่ซับซ้อนกว่าได้ด้วย
+The last challenge was a simple example of JSX, but JSX can represent more complex HTML as well.
 
-สิ่งสำคัญอย่างหนึ่งที่ต้องรู้เกี่ยวกับ JSX ที่ซ้อนกันคือต้อง return component เดียว
+One important thing to know about nested JSX is that it must return a single element.
 
-ใน parent element 1 อันนี้จะรวม element ที่ซ้อนกันระดับอื่นๆ ทั้งหมด
+This one parent element would wrap all of the other levels of nested elements.
 
-ตัวอย่างเช่น JSX element หลายตัวที่ถูกเขียนเพื่อให้เป็น child โดยที่ไม่มี parent element ครอบนั้นจะไม่ transpile
+For instance, several JSX elements written as siblings with no parent wrapper element will not transpile.
 
-ดูตัวอย่างด้านล่าง:
+Here's an example:
 
 **Valid JSX:**
 
@@ -38,39 +38,39 @@ dashedName: create-a-complex-jsx-element
 
 # --instructions--
 
-กำหนด constant `JSX` ใหม่ ที่เรนเดอร์ `div` ที่ประกอบไปด้วย element ต่างๆ ตามลำดับดังนี้:
+Define a new constant `JSX` that renders a `div` which contains the following elements in order:
 
-`h1`, `p`, และ unordered list ที่มี 3 `li` คุณสามารถเพิ่มข้อความอะไรก็ได้ภายใน element แต่ละอัน
+An `h1`, a `p`, and an unordered list that contains three `li` items. You can include any text you want within each element.
 
-**Note:** เมื่อเรนดเดอร์หลายๆ element อย่างนี้ คุณสามารถรวบทุกอย่างไว้ในวงเล็บได้ แต่จะทำหรือไม่ก็ได้ไม่เคร่ง  นอกจากนี้โปรดสังเกตว่าแบบทดสอบนี้ใช้ `div` tag เพื่อรวบ child element ทุกอันไว้ภายใน parent element เดียว ถ้าคุณลบ `div` ออก JSX ก็จะไม่สามารถ transpile ได้อีกต่อไป จำในส่วนนี้ไว้ให้ดีๆ เพราะต้องนำไปใช้เมื่อคุณจะ return JSX element ใน React component
+**Note:** When rendering multiple elements like this, you can wrap them all in parentheses, but it's not strictly required. Also notice this challenge uses a `div` tag to wrap all the child elements within a single parent element. If you remove the `div`, the JSX will no longer transpile. Keep this in mind, since it will also apply when you return JSX elements in React components.
 
-# --hints—
+# --hints--
 
-constant `JSX` ควรจะต้อง return `div` element
+The constant `JSX` should return a `div` element.
 
 ```js
 assert(JSX.type === 'div');
 ```
 
-`div` นี้ควรจะต้องมี `h1` tag เป็น element แรก
+The `div` should contain an `h1` tag as the first element.
 
 ```js
 assert(JSX.props.children[0].type === 'h1');
 ```
 
-`div` นี้ควรจะต้องมี `p` tag เป็น element ที่สอง
+The `div` should contain a `p` tag as the second element.
 
 ```js
 assert(JSX.props.children[1].type === 'p');
 ```
 
-`div` นี้ควรจะต้องมี `ul` tag เป็น element ที่สาม
+The `div` should contain a `ul` tag as the third element.
 
 ```js
 assert(JSX.props.children[2].type === 'ul');
 ```
 
-`ul` ควรจะต้องมี 3 `li` element
+The `ul` should contain three `li` elements.
 
 ```js
 assert(

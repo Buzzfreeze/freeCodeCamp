@@ -14,7 +14,7 @@ dashedName: dictionaries-common-applications
 
 ## --text--
 
-เมื่อรันโค๊ดด้านล่าง จะได้ผลลัพธ์ข้อใด ?
+What will the following code print?
 
 ```python
 counts = { 'quincy' : 1 , 'mrugesh' : 42, 'beau': 100, '0': 10}
@@ -39,8 +39,9 @@ quincy
 
 ---
 
-[จะขึ้นว่า error]
+[will return error]
 
 ## --video-solution--
 
 3
+

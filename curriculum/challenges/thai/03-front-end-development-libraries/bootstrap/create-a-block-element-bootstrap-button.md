@@ -8,45 +8,45 @@ dashedName: create-a-block-element-bootstrap-button
 
 # --description--
 
-โดยทั่วไปแล้ว `button` element ที่มี class `btn` และ `btn-default` จะมีความกว้างตามขนาดของข้อความข้างในปุ่ม เช่น:
+Normally, your `button` elements with the `btn` and `btn-default` classes are only as wide as the text that they contain. For example:
 
 ```html
 <button class="btn btn-default">Submit</button>
 ```
 
-ปุ่มนี้มีความกว้างตามขนาดของคำว่า `Submit` เท่านั้น
+This button would only be as wide as the word `Submit`.
 
 <button class='btn btn-default'>Submit</button>
-การเพิ่ม class `btn-block` จะทำให้ปุ่มนั้นๆ กลายเป็น block element ก็คือ ความกว้างของปุ่มจะขนาดตามวามกว้างตามแนวนอนของหน้าเพจนั้น และ element ที่อยู่ถัดไปก็จะไปอยู่ใน "บรรทัดใหม่" ข้างล่างปุ่ม block element นั้น
 
+By making them block elements with the additional class of `btn-block`, your button will stretch to fill your page's entire horizontal space and any elements following it will flow onto a "new line" below the block.
 
 ```html
 <button class="btn btn-default btn-block">Submit</button>
 ```
 
-ปุ่มนี้มีความกว้างเต็ม 100% ของความกว้างของเพจ
+This button would take up 100% of the available width.
 
 <button class='btn btn-default btn-block'>Submit</button>
 
-หมายเหตุ การสร้างปุ่ม block element ยังต้องกำหนด class `btn` ด้วย
+Note that these buttons still need the `btn` class.
 
-มาลองสร้างปุ่ม ที่มี class `btn-block` ของ Bootstrap กัน
+Add Bootstrap's `btn-block` class to your Bootstrap button.
 
 # --hints--
 
-ปุ่มนี้ยังต้องมี class `btn` และ `btn-deffault` อยู่เหมือนเดิม
+Your button should still have the `btn` and `btn-default` classes.
 
 ```js
 assert($('button').hasClass('btn') && $('button').hasClass('btn-default'));
 ```
 
-ให้เพิ่ม class `btn-block`
+Your button should have the class `btn-block`.
 
 ```js
 assert($('button').hasClass('btn-block'));
 ```
 
-อย่าลืม tag ปิด สำหรับ `button` element
+All of your `button` elements should have closing tags.
 
 ```js
 assert(

@@ -14,7 +14,7 @@ dashedName: web-services-xml
 
 ## --text--
 
-ข้อใดผิด เมื่ออยู่ในฟอร์แมตของ XML ?
+What is wrong with the following XML?:
 
 ```xml
 <person>
@@ -27,21 +27,21 @@ dashedName: web-services-xml
 
 ## --answers--
 
-ที่ Email tag ไม่มี closing tag
+Email tag is missing closing tag.
 
 ---
 
-การเว้นวรรค ทำให้ XML ไม่ถูกต้อง
+Spacing will cause XML to be invalid.
 
 ---
 
-Phone tag ไม่มี closing tag
+Phone tag is missing closing tag.
 
 ---
 
-้ข้อความ ควรเข้ารหัสโดยใช้ UTF-8
-
+Plain text should be encoded using UTF-8.
 
 ## --video-solution--
 
 3
+

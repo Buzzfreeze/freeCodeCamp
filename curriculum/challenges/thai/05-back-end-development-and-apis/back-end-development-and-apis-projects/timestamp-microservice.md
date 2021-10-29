@@ -8,17 +8,17 @@ dashedName: timestamp-microservice
 
 # --description--
 
-สร้างแอพแบบ full stack ด้วย JavaScript ที่ทำงานคล้ายกับเว็บไซต์ <https://timestamp-microservice.freecodecamp.rocks/>  การทำโปรเจคนี้ คุณจะต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งดังต่อไปนี้
+Build a full stack JavaScript app that is functionally similar to this: <https://timestamp-microservice.freecodecamp.rocks/>. Working on this project will involve you writing your code using one of the following methods:
 
--   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-timestamp/) ในการทำโปรเจค โดยทำให้เสร็จทีละส่วน
--   ใช้เว็บไซต์ [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-timestamp) ในการทำโปรเจคให้เสร็จสมบูรณ์
--   ใช้ตัวสร้างไซต์ที่คุณเลือก ทำโปรเจคให้เสร็จสมบูรณ์ และอย่าลืมรวมไฟล์ทั้งหมดจาก GitHub repo ของคุณด้วย
+-   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-timestamp/) and complete your project locally.
+-   Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-timestamp) to complete your project.
+-   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
 
-เมื่อคุณทำเสร็จแล้ว ตรวจสอบให้แน่ใจด้วยว่า ไฟล์โปรเจคของคุณอยู่ในสถานะที่ทุกคนสามารถมองเห็นได้(public) หลังจากนั้นส่งลิงก์ URL ไว้ใน `Solution Link` หรือส่งลิงก์ซอร์สโค้ดของโปรเจคไว้ใน `GitHub Link` อีกช่องทางหนึ่งก็ได้
+When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your projects source code in the `GitHub Link` field.
 
 # --hints--
 
-คุณควรที่จะให้แหล่งโปรเจคของคุณ ไม่ใช่ตัวอย่างจาก URL
+You should provide your own project, not the example URL.
 
 ```js
 (getUserInput) => {
@@ -28,7 +28,7 @@ dashedName: timestamp-microservice
 };
 ```
 
-คำขอ `/api/:date?` พร้อมกับวันที่ที่ถูกต้อง ควรที่จะคืนค่าอ็อบเจ็กต์ของ JSON ด้วย `unix` คีย์ ซึ่งก็คือ Unix timestamp ของวันที่อินพุตในหน่วยของมิลลิวินาที
+A request to `/api/:date?` with a valid date should return a JSON object with a `unix` key that is a Unix timestamp of the input date in milliseconds
 
 ```js
 (getUserInput) =>
@@ -46,7 +46,7 @@ dashedName: timestamp-microservice
   );
 ```
 
-คำขอ `/api/:date?` พร้อมกับวันที่ที่ถูกต้อง ควรที่จะคืนค่าอ็อบเจ็กต์ของ JSON ด้วย `utc` คีย์ นั่นคือสตริงของวันที่อินพุตในรูปแบของ `Thu, 01 Jan 1970 00:00:00 GMT`
+A request to `/api/:date?` with a valid date should return a JSON object with a `utc` key that is a string of the input date in the format: `Thu, 01 Jan 1970 00:00:00 GMT`
 
 ```js
 (getUserInput) =>
@@ -64,7 +64,7 @@ dashedName: timestamp-microservice
   );
 ```
 
-คำขอที่ `/api/1451001600000` ควรที่จะคืนค่า `{ unix: 1451001600000, utc: "Fri, 25 Dec 2015 00:00:00 GMT" }`
+A request to `/api/1451001600000` should return `{ unix: 1451001600000, utc: "Fri, 25 Dec 2015 00:00:00 GMT" }`
 
 ```js
 (getUserInput) =>
@@ -81,7 +81,7 @@ dashedName: timestamp-microservice
   );
 ```
 
-โปรเจคของคุณสามารถจัดการวันที่ได้ด้วยการวิคราะห์คำได้เป็นอย่างดี โดยการใช้ `new Date(date_string)`
+Your project can handle dates that can be successfully parsed by `new Date(date_string)`
 
 ```js
 (getUserInput) =>
@@ -98,7 +98,7 @@ dashedName: timestamp-microservice
   );
 ```
 
-หากเราอินพุตค่าสตริงวันที่ไม่ถูกต้อง API จะส่งคืนค่าอ็อบเจ็กต์ในรูปแบบ `{ error : "Invalid Date" }`
+If the input date string is invalid, the api returns an object having the structure `{ error : "Invalid Date" }`
 
 ```js
 (getUserInput) =>
@@ -112,7 +112,7 @@ dashedName: timestamp-microservice
   );
 ```
 
-ในส่วนของพารามิเตอร์วันที่ที่ว่างเปล่า ระบบจะส่งคืนค่าเป็นเวลา ปัจจุบันในรูปแบบของอ็อบเจ็กต์ของ JSON พร้อมกับ `unix` คีย์
+An empty date parameter should return the current time in a JSON object with a `unix` key
 
 ```js
 (getUserInput) =>
@@ -127,7 +127,7 @@ dashedName: timestamp-microservice
   );
 ```
 
-พารามิเตอร์วันที่ที่ว่างเปล่า ระบบจะส่งคืนค่าเป็นเวลา ปัจจุบันในรูปแบบของอ็อบเจ็กต์ของ JSON พร้อมกับ `utc` คีย์
+An empty date parameter should return the current time in a JSON object with a `utc` key
 
 ```js
 (getUserInput) =>

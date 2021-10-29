@@ -8,21 +8,21 @@ dashedName: remove-a-package-from-your-dependencies
 
 # --description--
 
-You have now tested a few ways you can manage dependencies of your project by using the package.json's dependencies section. You have also included external packages by adding them to the file and even told npm what types of versions you want, by using special characters such as the tilde or the caret.
+คุณได้มีการทดสอบสองสามวิธีในการจัดการ dependencies ของโปรเจ็กต์ของคุณแล้ว โดยใช้ส่วน dependencies ของ package.json และคุณยังรวมแพ็คเกจภายนอก(external packages)โดยการเพิ่มไฟล์ลงและสั่ง npm ว่าคุณต้องการเวอร์ชันประเภทใด โดยใช้อักขระพิเศษ เช่น ตัวหนอน(tilde) หรือเครื่องหมายคาเร็ต (caret)
 
-But what if you want to remove an external package that you no longer need? You might already have guessed it, just remove the corresponding key-value pair for that package from your dependencies.
+แล้วถ้าคุณไม่ต้องการแพ็คเกจภายนอกล่ะ? ทำยังไงดี? คุณอาจพอเดาได้บ้างใช่ไหมครับ? เพียงลบคู่ คีย์-ค่า ที่เกี่ยวข้องสำหรับแพ็คเกจนั้นออกจาก dependencies ของคุณก็เสร็จแล้ว
 
-This same method applies to removing other fields in your package.json as well
+วิธีการเดียวกันนี้สามารถใช้กับการลบฟิลด์อื่นๆ ใน package.json ของคุณได้อีกด้วย
 
 # --instructions--
 
-Remove the moment package from your dependencies.
+ลบแพ็คเกจ Moment ออกจาก dependencies ของคุณ
 
-**Note:** Make sure you have the right amount of commas after removing it.
+**Note:** ตรวจสอบให้แน่ใจว่าคุณมีเครื่องหมายจุลภาคหลังจากลบออก
 
 # --hints--
 
-"dependencies" should not include "moment"
+"dependencies" ไม่ควรรวมอยู่ใน "moment"
 
 ```js
 (getUserInput) =>

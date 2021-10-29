@@ -12,33 +12,33 @@ dashedName: style-text-inputs-as-form-controls
 
 # --description--
 
-คุณสามารถเพิ่มไอคอน `fa-paper-plane` จาก Font Awesome โดยการเพิ่ม `<i class="fa fa-paper-plane"></i>` ไปใน tag ปุ่ม submit `button` element
+You can add the `fa-paper-plane` Font Awesome icon by adding `<i class="fa fa-paper-plane"></i>` within your submit `button` element.
 
-ลองเพิ่ม class `form-control` ให้กับ text input ในฟอร์มของคุณ เพิ่ม class `btn btn-primary` กับปุ่ม submit ของฟอร์ม รวมถึงเพิ่มไอคอน `fa-paper-plane` จาก Font Awesome ด้วย
+Give your form's text input field a class of `form-control`. Give your form's submit button the classes `btn btn-primary`. Also give this button the Font Awesome icon of `fa-paper-plane`.
 
-ส่วนที่เป็นฟอร์มสำหรับข้อความต่างๆ อย่าง `<input>`, `<textarea>` และ `<select>` เมื่อเราเพิ่ม class `.form-control` ให้แล้วจะทำให้มีความกว้างเป็น 100%
+All textual `<input>`, `<textarea>`, and `<select>` elements with the class `.form-control` have a width of 100%.
 
 # --hints--
 
-ปุ่ม submit ในฟอร์มของคุณจะต้องมี class `btn btn-primary`
+The submit button in your form should have the classes `btn btn-primary`.
 
 ```js
 assert($('button[type="submit"]').hasClass('btn btn-primary'));
 ```
 
-ให้เพิ่ม `<i class="fa fa-paper-plane"></i>` ภายใน submit `button` element
+You should add a `<i class="fa fa-paper-plane"></i>` within your submit `button` element.
 
 ```js
 assert($('button[type="submit"]:has(i.fa.fa-paper-plane)').length > 0);
 ```
 
-ส่วน `input` ที่เป็นข้อความในฟอร์มจะต้องมี class `form-control`
+The text `input` in your form should have the class `form-control`.
 
 ```js
 assert($('input[type="text"]').hasClass('form-control'));
 ```
 
-อย่าลืม tag ปิด สำหรับทุกๆ `i` element​​​​​​
+Each of your `i` elements should have a closing tag.
 
 ```js
 assert(code.match(/<\/i>/g) && code.match(/<\/i/g).length > 3);

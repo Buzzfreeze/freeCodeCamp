@@ -12,9 +12,9 @@ dashedName: parsing-html-and-saving-data
 
 # --description--
 
-*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
+*ผู้เรียนสามารถใช้ Google Colab แทน notebooks.ai ที่สาธิตใน Videoได้*
 
-More resources:
+แหล่งเรียนรู้เพิ่มเติม:
 
 -   [Notebooks on GitHub](https://github.com/krishnatray/RDP-Reading-Data-with-Python-and-Pandas)
 -   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
@@ -23,7 +23,7 @@ More resources:
 
 ## --text--
 
-What Python library has the `.read_html()` method we can use for parsing HTML documents and extracting tables?
+Library ของ Python ใดที่มี method `.read_html()` ที่เราสามารถใช้ Parse โครงสร้าง HTML และสกัดตาราง (table) ออกมาได้ ?
 
 ## --answers--
 

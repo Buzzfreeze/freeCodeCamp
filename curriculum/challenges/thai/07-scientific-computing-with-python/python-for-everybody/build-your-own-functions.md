@@ -12,15 +12,15 @@ dashedName: build-your-own-functions
 
 # --description--
 
-ตัวอย่างเพิ่มเติม:
+More resources:
 
-\- [ตัวอย่างที่ 1](https://www.youtube.com/watch?v=ksvGhDsjtpw)
+\- [Exercise](https://www.youtube.com/watch?v=ksvGhDsjtpw)
 
 # --question--
 
 ## --text--
 
-เมื่อรันโค๊ดต่อไปนี้ โปรแกรมจะแสดงผลลัพธ์ในข้อใด ?
+What will the following Python program print out?:
 
 ```python
 def fred():
@@ -68,3 +68,4 @@ Zap</pre>
 ## --video-solution--
 
 4
+

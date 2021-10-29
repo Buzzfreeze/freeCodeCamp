@@ -8,7 +8,7 @@ dashedName: create-a-react-component
 
 # --description--
 
-อีกวิธีหนึ่งในการกำหนด React component คือการใช้ ES6 `class` syntax ในตัวอย่างต่อไปนี้ `kitten` ขยาย `React.Component`:
+The other way to define a React component is with the ES6 `class` syntax. In the following example, `Kitten` extends `React.Component`:
 
 ```jsx
 class Kitten extends React.Component {
@@ -24,21 +24,21 @@ class Kitten extends React.Component {
 }
 ```
 
-สิ่งนี้จะสร้าง ES6 class `Kitten` ซึ่งขยาย `React.Component` class ดังนั้น `Kitten` class จึงสามารถเข้าถึงคุณสมบัติ React ที่มีประโยชน์มากมาย เช่น local state และ lifecycle hooks อย่ากังวลหากคุณยังไม่คุ้นเคยกับคำศัพท์เหล่านี้ เราจะกล่าวถึงรายละเอียดเพิ่มเติมในแบบทดสอบอื่นๆ ข้างหน้า นอกจากนี้ให้สังเกตว่า `Kitten` class มี `constructor` ที่ถูกกำหนดไว้ภายในคลาสมันเองซึ่งเรียกการทำงานของ `super()` มันใช้ `super()` เพื่อเรียกการทำงาน constructor ของ parent class ในกรณีนี้คือ `React.Component` Constructor เป็น method พิเศษที่ใช้ในระหว่างการเริ่มต้นของ object ที่สร้างด้วยคีย์เวิร์ด `class` แนวทางปฏิบัติที่ดีที่สุดคือการเรียก `Constructor` ของ component ด้วย `super` และส่งผ่าน `props` ไปยังทั้งคู่ เพื่อให้แน่ใจว่าcomponent ได้เริ่มทำงานอย่างถูกต้อง สำหรับตอนนี้ให้รู้ว่ามันเป็นมาตรฐานปกติสำหรับการรวมโค้ดนี้ไปด้วยกัน คุณจะเห็นการใช้งานอื่นๆ สำหรับ constructor เช่นเดียวกับ `props` ในอีกไม่ช้า
+This creates an ES6 class `Kitten` which extends the `React.Component` class. So the `Kitten` class now has access to many useful React features, such as local state and lifecycle hooks. Don't worry if you aren't familiar with these terms yet, they will be covered in greater detail in later challenges. Also notice the `Kitten` class has a `constructor` defined within it that calls `super()`. It uses `super()` to call the constructor of the parent class, in this case `React.Component`. The constructor is a special method used during the initialization of objects that are created with the `class` keyword. It is best practice to call a component's `constructor` with `super`, and pass `props` to both. This makes sure the component is initialized properly. For now, know that it is standard for this code to be included. Soon you will see other uses for the constructor as well as `props`.
 
 # --instructions--
 
-`MyComponent` ถูกกำหนดใน code editor โดยใช้ class syntax เขียน `render` method ให้เสร็จ แล้วมันจึงจะสามารถ return `div` element ที่มี `h1` ที่มีข้อความว่า `Hello React!`
+`MyComponent` is defined in the code editor using class syntax. Finish writing the `render` method so it returns a `div` element that contains an `h1` with the text `Hello React!`.
 
 # --hints--
 
-React component ควรจะต้อง return `div` element
+The React component should return a `div` element.
 
 ```js
 assert(Enzyme.shallow(React.createElement(MyComponent)).type() === 'div');
 ```
 
-`div` ที่ถูก return มานั้นจะต้องเรนเดอร์ `h1` header อยู่ภายใน
+The returned `div` should render an `h1` header within it.
 
 ```js
 assert(
@@ -48,7 +48,7 @@ assert(
 );
 ```
 
-`h1` header ควรจะต้องมี string `Hello React!`
+The `h1` header should contain the string `Hello React!`.
 
 ```js
 assert(

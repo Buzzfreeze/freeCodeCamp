@@ -12,32 +12,33 @@ dashedName: files-as-a-sequence
 
 # --description--
 
-ตัวอย่างเพิ่มเติม:
+More resources:
 
-\- [ตัวอย่างที่ 1](https://www.youtube.com/watch?v=il1j4wkte2E)
+\- [Exercise](https://www.youtube.com/watch?v=il1j4wkte2E)
 
 # --question--
 
 ## --text--
 
-สิ่งที่คำสั่ง 'continue' จะทำในระหว่างลูป คืออะไร ?
+What does the word 'continue' do in the middle of a loop?
 
 ## --answers--
 
-ข้ามไปที่ โค๊ดหลังจากลูป
+Skips to the code directly after the loop.
 
 ---
 
-ข้ามไปที่ บรรทัดใหม่ของโค๊ด
+Skips to the next line in the code.
 
 ---
 
-ข้ามไปที่ การวนซ้ำ ลำดับถัดไปของลูป
+Skips to the next iteration of the loop.
 
 ---
 
-ข้ามไปที่บล็อคถัดไปของโค๊ด
+Skips the next block of code.
 
 ## --video-solution--
 
 3
+

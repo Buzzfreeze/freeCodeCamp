@@ -10,31 +10,31 @@ dashedName: remove-classes-from-an-element-with-jquery
 
 # --description--
 
-เช่นเดียวกับการเพิ่ม class ให้กับ element ด้วย jQuery กับฟังก์ชัน `addClass()` คุณก็ยังสามารถลบ class ด้วย jQuery โดยใช้ฟังก์ชัน `removeClass()`
+In the same way you can add classes to an element with jQuery's `addClass()` function, you can remove them with jQuery's `removeClass()` function.
 
-นี่คือวิธีการลบ class จาดปุ่มใดๆ:
+Here's how you would do this for a specific button:
 
 ```js
 $("#target2").removeClass("btn-default");
 ```
 
-ลองลบ class `btn-default` จาก `button` element ทั้งหมดของเรากัน
+Let's remove the `btn-default` class from all of our `button` elements.
 
 # --hints--
 
-Class `btn-default` จะต้องถูกลบจาก `button` element ทั้งหมด
+The `btn-default` class should be removed from all of your `button` elements.
 
 ```js
 assert($('.btn-default').length === 0);
 ```
 
-คุณต้องใช้เพียง jQuery เท่านั้นในการลบ class นี้ออกจาก element ที่กำหนด
+You should only use jQuery to remove this class from the element.
 
 ```js
 assert(code.match(/btn btn-default/g));
 ```
 
-คุณควรจะลบแค่ `btn-default` class เท่านั้น
+You should only remove the `btn-default` class.
 
 ```js
 assert(

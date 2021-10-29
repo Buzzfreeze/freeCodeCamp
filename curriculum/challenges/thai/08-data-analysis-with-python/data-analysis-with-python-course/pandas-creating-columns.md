@@ -12,9 +12,9 @@ dashedName: pandas-creating-columns
 
 # --description--
 
-*ผู้เรียนสามารถใช้ Google Colab แทน notebooks.ai ที่สาธิตใน Videoได้*
+*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
 
-แหล่งเรียนรู้เพิ่มเติม:
+More resources:
 
 -   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/freecodecamp-intro-to-pandas)
 -   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
@@ -23,7 +23,7 @@ dashedName: pandas-creating-columns
 
 ## --text--
 
-code ใดที่จะเพิ่มคอลัมน์ "Certificates per month" ใน`certificates_earned` DataFrame  เช่นเดียวกับตารางด้านล่าง? 
+What code would add a "Certificates per month" column to the `certificates_earned` DataFrame like the one below?
 
 <pre>      Certificates  Time (in months)  Certificates per month
 Tom               8                16                    0.50

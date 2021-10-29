@@ -8,21 +8,21 @@ dashedName: get-state-from-the-redux-store
 
 # --description--
 
-Redux store object มี method หลายอย่างที่อนุญาตให้คุณโต้ตอบกับมัน ตัวอย่างเช่น คุณสามารถดึงข้อมูล `state` ปัจจุบันที่เก็บไว้ใน Redux store object ด้วยเมธอด `getState()`
+The Redux store object provides several methods that allow you to interact with it. For example, you can retrieve the current `state` held in the Redux store object with the `getState()` method.
 
 # --instructions--
 
-โค้ดจากแบบทดสอบครั้งก่อนถูกเขียนใหม่ให้กระชับยิ่งขึ้นใน code editor ให้ใช้ `store.getState()` เพื่อดึง `state` จาก `store` และกำหนดสิ่งนี้ให้กับตัวแปร `currentState` ใหม่
+The code from the previous challenge is re-written more concisely in the code editor. Use `store.getState()` to retrieve the `state` from the `store`, and assign this to a new variable `currentState`.
 
 # --hints--
 
-Redux store ควรมีค่าเป็น 5 สำหรับ state เริ่มต้น
+The Redux store should have a value of 5 for the initial state.
 
 ```js
 assert(store.getState() === 5);
 ```
 
-ควรมีตัวแปร `currentState` และควรถูกกำหนดให้เป็น state ของ Redux store
+A variable `currentState` should exist and should be assigned the current state of the Redux store.
 
 ```js
 (getUserInput) =>

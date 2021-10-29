@@ -12,15 +12,15 @@ dashedName: iterations-more-patterns
 
 # --description--
 
-ตัวอย่างเพิ่มเติม:
+More resources:
 
-\- [ตัวอย่างที่ 1](https://www.youtube.com/watch?v=kjxXZQw0uPg)
+\- [Exercise](https://www.youtube.com/watch?v=kjxXZQw0uPg)
 
 # --question--
 
 ## --text--
 
-ข้อใดถูกให้ผล เป็นเท็จ เมื่อใช้งาน ?
+Which of these evaluates to False?
 
 ## --answers--
 
@@ -49,3 +49,4 @@ dashedName: iterations-more-patterns
 ## --video-solution--
 
 2
+

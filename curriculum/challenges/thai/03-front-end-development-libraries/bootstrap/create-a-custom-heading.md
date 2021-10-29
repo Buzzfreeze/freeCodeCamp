@@ -8,23 +8,23 @@ dashedName: create-a-custom-heading
 
 # --description--
 
-เราจะสร้าง heading ง่ายๆ สำหรับแอป Cat Photo โดยใส่ชื่อ title รูปแมวน่ารักๆ ในแถว (row) เดียวกัน
+We will make a simple heading for our Cat Photo App by putting the title and relaxing cat image in the same row.
 
-จำไว้เลยว่า Bootstrap ใช้ระบบ responsive grid ที่ทำให้ง่ายต่อการใส่ element ต่างๆ ไปใน row เดียวกัน แล้วทำให้แต่ element ใน row นั้นๆ มีความกว้างที่สัมพันธ์กัน ซึ่ง class ส่วนใหญ่ของ Bootstrap สามารถนำไปใช้ได้กับ `div` element
+Remember, Bootstrap uses a responsive grid system, which makes it easy to put elements into rows and specify each element's relative width. Most of Bootstrap's classes can be applied to a `div` element.
 
-มาลองใส่ภาพแรกและ `h2` element ไว้ใน `<div class="row">` element โดยการใส่ `h2` element ไว้ใน `<div class="col-xs-8">` และ รูปภาพ ไว้ใน `<div class="col-xs-4">` ซึ่งจะทำให้ ทั้ง 2 element นี้อยู่ในบรรทัดหรือแถวเดียวกัน
+Nest your first image and your `h2` element within a single `<div class="row">` element. Nest your `h2` element within a `<div class="col-xs-8">` and your image in a `<div class="col-xs-4">` so that they are on the same line.
 
-ให้สังเกตว่าตอนนี้ภาพที่เราเพิ่มเข้ามามีขนาดที่เหมาะสมกับข้อความ `h2` หรือไม่
+Notice how the image is now just the right size to fit along the text?
 
 # --hints--
 
-`h2` element และ `img` element บนสุดจะต้องอยู่ด้วยกัน ใน tag `div` element ที่มี class ว่า `row`
+Your `h2` element and topmost `img` element should both be nested together within a `div` element with the class `row`.
 
 ```js
 assert($('div.row:has(h2)').length > 0 && $('div.row:has(img)').length > 0);
 ```
 
-`img` element บนสุดจะต้องอยู่ภายใน `div` ที่มี class ว่า `col-xs-4` อีกที
+Your topmost `img` element should be nested within a `div` with the class `col-xs-4`.
 
 ```js
 assert(
@@ -33,7 +33,7 @@ assert(
 );
 ```
 
-`h2` element ก็จะต้องอยู่ใน `div` ที่มี class ว่า `col-xs-8`
+Your `h2` element should be nested within a `div` with the class `col-xs-8`.
 
 ```js
 assert(
@@ -42,7 +42,7 @@ assert(
 );
 ```
 
-อย่าลืม tag ปิด สำหรับทุกๆ `div` element
+All of your `div` elements should have closing tags.
 
 ```js
 assert(

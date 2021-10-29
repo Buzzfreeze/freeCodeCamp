@@ -8,37 +8,37 @@ dashedName: map-state-to-props
 
 # --description--
 
-`Provider` component อนุญาตให้คุณระบุ `state` และ `dispatch` ให้กับ React component ของคุณ แต่คุณต้องระบุให้แน่ชัดว่าต้องการ state และ action ใด ด้วยวิธีนี้คุณต้องแน่ใจว่าแต่ละ component สามารถเข้าถึง state ที่ต้องการได้เท่านั้น คุณทำได้โดยสร้างสองฟังก์ชัน: `mapStateToProps()` และ `mapDispatchToProps()`
+The `Provider` component allows you to provide `state` and `dispatch` to your React components, but you must specify exactly what state and actions you want. This way, you make sure that each component only has access to the state it needs. You accomplish this by creating two functions: `mapStateToProps()` and `mapDispatchToProps()`.
 
-ในฟังก์ชันเหล่านี้ คุณจะประกาศส่วนของ state ที่คุณต้องการเข้าถึงและ action creators ใดที่คุณต้องสามารถ dispatch ได้ เมื่อฟังก์ชันเหล่านี้พร้อมแล้ว คุณจะเห็นวิธีใช้ `connect` method ของ React Redux เพื่อเชื่อมต่อกับ component ของคุณในแบบทดสอบอื่นๆ
+In these functions, you declare what pieces of state you want to have access to and which action creators you need to be able to dispatch. Once these functions are in place, you'll see how to use the React Redux `connect` method to connect them to your components in another challenge.
 
-**Note:** ในเบื้องหลัง React Redux ใช้ `store.subscribe()` method เพื่อใช้งาน `mapStateToProps()`
+**Note:** Behind the scenes, React Redux uses the `store.subscribe()` method to implement `mapStateToProps()`.
 
 # --instructions--
 
-ลองสร้างฟังก์ชัน `mapStateToProps()` ฟังก์ชันนี้ควรใช้ `state` เป็น argument จากนั้น return object map ที่ระบุชื่อ property เฉพาะ ซึ่ง property เหล่านี้จะเข้าถึง component ของคุณได้ผ่าน `props` เนื่องจากตัวอย่างนี้เก็บ state ทั้งหมดของแอปไว้ใน array เดียว คุณจึงสามารถส่ง state ทั้งหมดนั้นไปยัง component ของคุณได้ โดยสร้าง property `messages` ใน object ที่ถูก return และตั้งค่าเป็น `state`
+Create a function `mapStateToProps()`. This function should take `state` as an argument, then return an object which maps that state to specific property names. These properties will become accessible to your component via `props`. Since this example keeps the entire state of the app in a single array, you can pass that entire state to your component. Create a property `messages` in the object that's being returned, and set it to `state`.
 
 # --hints--
 
-const `state` จะต้องเป็น array เปล่า
+The const `state` should be an empty array.
 
 ```js
 assert(Array.isArray(state) && state.length === 0);
 ```
 
-`mapStateToProps` ควรเป็นฟังก์ชัน
+`mapStateToProps` should be a function.
 
 ```js
 assert(typeof mapStateToProps === 'function');
 ```
 
-`mapStateToProps` ควร return object
+`mapStateToProps` should return an object.
 
 ```js
 assert(typeof mapStateToProps() === 'object');
 ```
 
-การส่ง array เป็น state ไปยัง `mapStateToProps` ควร return array นี้ที่กำหนดให้กับ key ของ `messages`
+Passing an array as state to `mapStateToProps` should return this array assigned to a key of `messages`.
 
 ```js
 assert(mapStateToProps(['messages']).messages.pop() === 'messages');

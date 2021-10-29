@@ -10,35 +10,35 @@ dashedName: target-html-elements-with-selectors-using-jquery
 
 # --description--
 
-ตอนนี้เรามีฟังก์ชัน `document ready` แล้ว
+Now we have a `document ready` function.
 
-คราวนี้มาลองเขียนคำสั่ง jQuery แรกกันเลย โดยฟังก์ชันต่างๆ ของ jQuery จะเริ่มต้นด้วย `$` โดยปกติแล้วจะเครื่องหมายนี้จะสื่อถึง เครื่องหมายดอลลาร์ หรือ คำว่า bling
+Now let's write our first jQuery statement. All jQuery functions start with a `$`, usually referred to as a dollar sign operator, or as bling.
 
-jQuery นั้นจะเลือก HTML element เป้าหมายด้วย <dfn>selector</dfn> ก่อนที่จะเพิ่มฟังก์ชันให้ element นั้น
+jQuery often selects an HTML element with a <dfn>selector</dfn>, then does something to that element.
 
-มาลองทำ `button` element ให้มีเอฟเฟคเด้ง เพียงแค่เพิ่มโค้ดดังตัวอย่างข้างล่างไปใน document ready function
+For example, let's make all of your `button` elements bounce. Just add this code inside your document ready function:
 
 ```js
 $("button").addClass("animated bounce");
 ```
 
-หมายเหตุ เราได้ติดตั้งทั้ง jQuery library และ Animate.css library ไว้เรียบร้อยแล้ว คุณสามารถใช้มันใน editor ได้เลย ในการใช้ jQuery ในการเพิ่ม class Animate.css `bounce` ให้กับ `button` element
+Note that we've already included both the jQuery library and the Animate.css library in the background so that you can use them in the editor. So you are using jQuery to apply the Animate.css `bounce` class to your `button` elements.
 
 # --hints--
 
-คุณจะต้องใช้ฟังก์ชัน jQuery `addClass()` เพื่อเพิ่ม classes `animated` และ `bounce` ให้กับ `button` element
+You should use the jQuery `addClass()` function to give the classes `animated` and `bounce` to your `button` elements.
 
 ```js
 assert($('button').hasClass('animated') && $('button').hasClass('bounce'));
 ```
 
-คุณจะต้องใช้แค่ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
+You should only use jQuery to add these classes to the element.
 
 ```js
 assert(!code.match(/class.*animated/g));
 ```
 
-คุณจะต้องเขียนโค้ด jQuery ไว้ในฟังก์ชัน `$(document).ready();`
+Your jQuery code should be within the `$(document).ready();` function.
 
 ```js
 assert(

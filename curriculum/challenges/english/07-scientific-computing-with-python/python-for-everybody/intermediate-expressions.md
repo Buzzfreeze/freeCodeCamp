@@ -12,17 +12,18 @@ dashedName: intermediate-expressions
 
 # --description--
 
-More resources:
+ตัวอย่างเพิ่มเติม :
 
-\- [Exercise 1](https://youtu.be/t_4DPwsaGDY)
+\- [ตัวอย่างที่ 1](https://youtu.be/t_4DPwsaGDY)
 
-\- [Exercise 2](https://youtu.be/wgkC8SxraAQ)
+\- [ตัวอย่างที่ 2](https://youtu.be/wgkC8SxraAQ)
 
 # --question--
 
 ## --text--
 
-What will print out after running this code:
+หลังจากรันโค้ดนี้ จะพิมพ์อะไรออกมา
+
 
 ```python
 width = 15
@@ -53,4 +54,3 @@ print(height/3)
 ## --video-solution--
 
 3
-

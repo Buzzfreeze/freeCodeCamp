@@ -12,17 +12,17 @@ dashedName: more-conditional-structures
 
 # --description--
 
-ตัวอย่างเพิ่มเติม :
+More resources:
 
-\- [ตัวอย่างที่ 1](https://www.youtube.com/watch?v=crLerB4ZxMI)
+\- [Exercise 1](https://www.youtube.com/watch?v=crLerB4ZxMI)
 
-\- [ตัวอย่างที่ 2](https://www.youtube.com/watch?v=KJN3-7HH6yk)
+\- [Exercise 2](https://www.youtube.com/watch?v=KJN3-7HH6yk)
 
 # --question--
 
 ## --text--
 
-จากโค๊ดด้านล่าง :
+Given the following code:
 
 ```python
 temp = "5 degrees"
@@ -32,7 +32,7 @@ cel = (fahr - 32.0) * 5.0 / 9.0
 print(cel)
 ```
 
-บรรทัดไหนบ้างที่ ควรใช้ `try` block มาช่วย ?
+Which line/lines should be surrounded by `try` block?
 
 ## --answers--
 
@@ -57,3 +57,4 @@ None
 ## --video-solution--
 
 3
+

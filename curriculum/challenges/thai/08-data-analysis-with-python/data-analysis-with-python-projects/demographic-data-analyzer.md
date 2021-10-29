@@ -8,17 +8,17 @@ dashedName: demographic-data-analyzer
 
 # --description--
 
-ใน challenge นี้ ผู้เรียนต้องวิเคราะห์ข้อมูลประชากรโดยใช้ Pandas โดยผู้เรียนจะได้รับชุดข้อมูล (dataset) องข้อมูลประชากรที่ดึงมาจากฐานข้อมูลสำมะโนประชากรปี 1994
+In this challenge you must analyze demographic data using Pandas. You are given a dataset of demographic data that was extracted from the 1994 Census database.
 
-ผู้เรียนสามารถเข้าถึงข้อมูล [คำอธิบาย Project และ code เริ่มต้น สามารถดูได้บน Replit ](https://replit.com/github/freeCodeCamp/boilerplate-demographic-data-analyzer)
+You can access [the full project description and starter code on Replit](https://replit.com/github/freeCodeCamp/boilerplate-demographic-data-analyzer).
 
-หลังจากไปที่ลิงก์นั้นแล้ว ให้แยก Project ออก เมื่อผู้เรียนทำโปรเจ็กต์ตามคำแนะนำใน 'README.md' เสร็จแล้ว ให้ส่งลิงค์ Projec tของผู้เรียนไว้ด้านล่าง
+After going to that link, fork the project. Once you complete the project based on the instructions in 'README.md', submit your project link below.
 
-เรายังคงพัฒนาส่วนการสอนแบบ interactive ของการวิเคราะห์ข้อมูลในหลักสูตร Python สำหรับตอนนี้ ผู้เรียนจะต้องใช้แหล่งเรียนรู้อื่นๆ เพื่อเรียนรู้วิธีผ่านการทดสอบ challenge นี้ 
+We are still developing the interactive instructional part of the data analysis with Python curriculum. For now, you will have to use other resources to learn how to pass this challenge.
 
 # --hints--
 
-ควรผ่านการทดสอบ Python ทั้งหมด 
+It should pass all Python tests.
 
 ```js
 

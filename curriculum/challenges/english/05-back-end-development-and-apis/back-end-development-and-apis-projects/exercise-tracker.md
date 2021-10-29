@@ -8,17 +8,17 @@ dashedName: exercise-tracker
 
 # --description--
 
-Build a full stack JavaScript app that is functionally similar to this: <https://exercise-tracker.freecodecamp.rocks/>. Working on this project will involve you writing your code using one of the following methods:
+สร้างแอพแบบ full stack ด้วย JavaScript ที่ทำงานคล้ายกับเว็บไซต์ <https://exercise-tracker.freecodecamp.rocks/>  การทำโปรเจคนี้ คุณจะต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งดังต่อไปนี้
 
--   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-exercisetracker/) and complete your project locally.
--   Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-exercisetracker) to complete your project.
--   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
+- clone  [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-exercisetracker/)  ในการทำโปรเจค โดยทำให้เสร็จทีละส่วน
+- ใช้เว็บไซต์ [Replit starter project ของพวกเรา](https://replit.com/github/freeCodeCamp/boilerplate-project-exercisetracker) ในการทำโปรเจคให้เสร็จสมบูรณ์
+- ใช้ตัวสร้างไซต์ที่คุณเลือก ทำโปรเจคให้เสร็จสมบูรณ์ และอย่าลืมรวมไฟล์ทั้งหมดจาก GitHub repo ของคุณด้วย
 
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
+เมื่อคุณทำเสร็จแล้ว ตรวจสอบให้แน่ใจด้วยว่า ไฟล์โปรเจคของคุณอยู่ในสถานะที่ทุกคนสามารถมองเห็นได้(public) หลังจากนั้นส่งลิงก์ URL ไว้ใน `Solution Link` หรือส่งลิงก์ซอร์สโค้ดของโปรเจคไว้ใน `GitHub Link` อีกช่องทางหนึ่งก็ได้
 
 # --instructions--
 
-Your responses should have the following structures.
+คำตอบ(responses) ของคุณควรที่จะมีโครงสร้างตามต่อไปนี้
 
 Exercise:
 
@@ -56,11 +56,11 @@ Log:
 }
 ```
 
-**Hint:** For the `date` property, the `toDateString` method of the `Date` API can be used to achieve the expected output.
+**Hint:** สำหรับคุณสมบัติ `date` , และวิธี `toDateString` ของ  `Date` API สามารถใช้เป็นผลลัพธ์หรือคำตอบที่คาดหวังได้
 
 # --hints--
 
-You should provide your own project, not the example URL.
+คุณควรที่จะให้แหล่งโปรเจคของคุณ ไม่ใช่ตัวอย่างจาก URL
 
 ```js
 (getUserInput) => {
@@ -71,7 +71,7 @@ You should provide your own project, not the example URL.
 };
 ```
 
-You can `POST` to `/api/users` with form data `username` to create a new user.
+คุณสามารถใช้ `POST` ไปที่ `/api/users` พร้อมกับข้อมูลแบบฟอร์ม `username` เพื่อสร้างยูเซอร์(USER)ใหม่
 
 ```js
 async (getUserInput) => {
@@ -88,7 +88,7 @@ async (getUserInput) => {
 };
 ```
 
-The returned response from `POST /api/users` with form data `username` will be an object with `username` and `_id` properties.
+คำตอบที่ตอบกลับจาก `POST /api/users` ด้วยรูปแบบข้อมูล `username` จะเป็นวัตถุ(object)ที่มีคุณสมบัติ `username` และ `_id`
 
 ```js
 async (getUserInput) => {
@@ -108,7 +108,7 @@ async (getUserInput) => {
 };
 ```
 
-You can make a `GET` request to `/api/users` to get a list of all users.
+คุณสามารถสร้างคำสั่ง `GET` ที่`/api/users` เพื่อรับรายชื่อผู้ใช้(user)ทั้งหมด
 
 ```js
 async(getUserInput) => {
@@ -121,7 +121,7 @@ async(getUserInput) => {
 };
 ```
 
-The `GET` request to `/api/users` returns an array.
+คำสั่ง `GET` ที่ `/api/users` ในการคืนค่าอาร์เรย์(array)
 
 ```js
 async(getUserInput) => {
@@ -136,7 +136,7 @@ async(getUserInput) => {
 };
 ```
 
-Each element in the array returned from `GET /api/users` is an object literal containing a user's `username` and `_id`.
+แต่ละเอเลเมนท์ในอาร์เรย์จะส่งคืนจาก `GET /api/users` จะเป็นอ็อบเจ็กต์ตามตัวอักษรที่มี `username` และ  `_id` ของผู้ใช้
 
 ```js
 async(getUserInput) => {
@@ -156,7 +156,7 @@ async(getUserInput) => {
 };
 ```
 
-You can `POST` to `/api/users/:_id/exercises` with form data `description`, `duration`, and optionally `date`. If no date is supplied, the current date will be used. 
+คุณสามารถใช้ `POST` เป็น `/api/users/:_id/exercises` ด้วยรูปแบบข้อมูล `description`, `duration` หรือจะใช้ `date`  ในกรณีที่ไม่ได้ระบุวันที่ ระบบจะใช้วันที่ปัจจุบัน 
 
 ```js
 async (getUserInput) => {
@@ -190,7 +190,7 @@ async (getUserInput) => {
 };
 ```
 
-The response returned from `POST /api/users/:_id/exercises` will be the user object with the exercise fields added.
+คำตอบที่ตอบกลับจาก `POST /api/users/:_id/exercises` จะเป็นออบเจ็กต์ของผู้ใช้กับเพิ่ม exercise ฟิลด์
 
 ```js
 async (getUserInput) => {
@@ -229,7 +229,7 @@ async (getUserInput) => {
 };
 ```
 
-You can make a `GET` request to `/api/users/:_id/logs` to retrieve a full exercise log of any user.
+คุณสามารถสร้างคำสั่ง `GET` ที่ `/api/users/:_id/logs` เพื่อดึงบันทึก exercise ทั้งหมดของผู้ใช้
 
 ```js
 async (getUserInput) => {
@@ -268,7 +268,7 @@ async (getUserInput) => {
 };
 ```
 
-A request to a user's log `GET /api/users/:_id/logs` returns a user object with a `count` property representing the number of exercises that belong to that user.
+คำขอที่ส่งไปยังบันทึกของผู้ใช้ `GET /api/users/:_id/logs` จะคืนค่าออบเจ็กต์ของผู้ใช้ โดยมีคุณสมบัติ `count` แทนจำนวน exercise ที่เป็นของผู้ใช้รายนั้น
 
 ```js
 async (getUserInput) => {
@@ -309,7 +309,7 @@ async (getUserInput) => {
 };
 ```
 
-A `GET` request to `/api/users/:id/logs` will return the user object with a `log` array of all the exercises added.
+คำสั่ง `GET` ที่ `/api/users/:id/logs` จะคืนค่าอ็อบเจ็กต์ของผู้ใช้ในรูปแบบของอาร์เรย์ `log` โดยจะเป็น exercise ทั้งหมดที่เพิ่มเข้ามา
 
 ```js
 async(getUserInput) => {
@@ -353,7 +353,7 @@ async(getUserInput) => {
 };
 ```
 
-Each item in the `log` array that is returned from `GET /api/users/:id/logs` is an object that should have a `description`, `duration`, and `date` properties.
+สมาชิกแต่ละตัวในอาร์เรย์ `log` ที่ส่งคืนจาก `GET /api/users/:id/logs` จะเป็นอ็อบเจ็กต์ที่อยู่ในรูปแบบของคุณสมบัติ `description`, `duration`, และ `date`
 
 ```js
 async(getUserInput) => {
@@ -400,7 +400,7 @@ async(getUserInput) => {
 };
 ```
 
-The `description` property of any object in the `log` array that is returned from `GET /api/users/:id/logs` should be a string.
+คุณสมบัติ `description` ของอ็อบเจ็กต์ใดๆ ในอาร์เรย์ `log` ที่ส่งคืนจาก `GET /api/users/:id/logs` ควรจะเป็นค่าสตริง(string)
 
 ```js
 async(getUserInput) => {
@@ -447,7 +447,7 @@ async(getUserInput) => {
 };
 ```
 
-The `duration` property of any object in the `log` array that is returned from `GET /api/users/:id/logs` should be a number.
+คุณสมบัติ `duration` ของอ็อบเจ็กต์ใดๆ ของอาร์เรย์ `log` ที่ส่งคืนจาก `GET /api/users/:id/logs` ควรจะเป็นค่าตัวเลข
 
 ```js
 async(getUserInput) => {
@@ -494,7 +494,7 @@ async(getUserInput) => {
 };
 ```
 
-The `date` property of any object in the `log` array that is returned from `GET /api/users/:id/logs` should be a string.. Use the `dateString` format of the `Date` API.
+คุณสมบัติ `date` ของอ็อบเจ็กต์ใดๆ ในอาร์เรย์ `log` ที่ส่งคืนจาก `GET /api/users/:id/logs` ควรเป็นสตริง(string).. โดยใช้รูปแบบ `dateString` ของ `Date` API
 
 ```js
 async(getUserInput) => {
@@ -541,7 +541,7 @@ async(getUserInput) => {
 };
 ```
 
-You can add `from`, `to` and `limit` parameters to a `GET /api/users/:_id/logs` request to retrieve part of the log of any user. `from` and `to` are dates in `yyyy-mm-dd` format. `limit` is an integer of how many logs to send back.
+คุณสามารถเพิ่มพารามิเตอร์ `from`, `to` และ `limit` ที่คำสั่ง `GET /api/users/:_id/logs` เพื่อดึงบันทึกส่วนหนึ่งของผู้ใช้ โดย `from` และ `to` จะเป็นวันที่ในรูปแบบ `yyyy-mm-dd` และ `limit` จะเป็นตัวเลขของจำนวนบันทึกที่จะส่งกลับ
 
 ```js
 async (getUserInput) => {

@@ -12,9 +12,9 @@ dashedName: reading-data-from-databases
 
 # --description--
 
-*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
+*ผู้เรียนสามารถใช้ Google Colab แทน notebooks.ai ที่สาธิตใน Videoได้*
 
-More resources:
+แหล่งเรียนรู้เพิ่มเติม:
 
 -   [Notebooks on GitHub](https://github.com/krishnatray/RDP-Reading-Data-with-Python-and-Pandas)
 -   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
@@ -23,19 +23,19 @@ More resources:
 
 ## --text--
 
-What method does a `Cursor` instance have and what does it allow?
+instance `Cursor` มีอะไรและอนุญาตให้ทำอะไร?
 
 ## --answers--
 
-The `Cursor` instance has a `.run()` method which allows you to run SQL queries.
+instance `Cursor` มี method `.run()` ซึ่งช่วยให้สามารถเรียกใช้คำสั่ง SQL ได้ 
 
 ---
 
-The `Cursor` instance has a `.select()` method which allows you to select records.
+instance `Cursor` มี method `.select()` ซึ่งช่วยให้สามารถเลือก records ได้ 
 
 ---
 
-The `Cursor` instance has an `.execute()` method which will receive SQL parameters to run against the database.
+instance `Cursor` มี method `.execute()` ซึ่งจะรับค่าพารามิเตอร์ SQL เพื่อทำงานกับฐานข้อมูลได้
 
 ## --video-solution--
 

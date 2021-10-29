@@ -8,34 +8,35 @@ dashedName: learn-about-self-closing-jsx-tags
 
 # --description--
 
-จนถึงตอนนี้คุณได้เห็นแล้วว่า JSX แตกต่างจาก HTML อย่างไรด้วยการใช้ `className` กับ `class` เพื่อกำหนดคลาส HTML
-อีกวิธีสำคัญที่ JSX แตกต่างจาก HTML คือแนวคิดของแท็กปิดตัวเอง (self-closing tag)
+So far, you’ve seen how JSX differs from HTML in a key way with the use of `className` vs. `class` for defining HTML classes.
 
-ใน HTML แท็กเกือบทั้งหมดมีทั้งแท็กเปิดและปิด: `<div></div>`; แท็กปิดมักจะมีเครื่องหมาย `\`ก่อนชื่อแท็กที่คุณกำลังปิด อย่างไรก็ตามมีตัวอย่างพิเศษใน HTML ที่เรียกว่า “self-closing tags” หรือแท็กที่ไม่ต้องการทั้งแท็กเปิดและแท็กปิดก่อนที่แท็กอื่นจะสามารถเริ่มต้นได้
+Another important way in which JSX differs from HTML is in the idea of the self-closing tag.
 
-ตัวอย่างเช่น แท็กตัวแบ่งบรรทัดสามารถเขียนเป็น `<br>` หรือ `<br />` ได้ แต่ไม่ควรเขียนเป็น `<br></br>` เนื่องจากไม่มีเนื้อหาใดๆ ในนั้น
+In HTML, almost all tags have both an opening and closing tag: `<div></div>`; the closing tag always has a forward slash before the tag name that you are closing. However, there are special instances in HTML called “self-closing tags”, or tags that don’t require both an opening and closing tag before another tag can start.
 
-หลักการจะแตกต่างกันเล็กน้อยใน JSX ซึ่ง JSX element ใดๆ สามารถเขียนได้ด้วยแท็กปิดตัวเอง และทุกองค์ประกอบต้องปิด ตัวอย่างเช่น แท็กตัวแบ่งบรรทัดต้องเขียนเป็น `<br />` เสมอ เพื่อที่จะเป็น JSX ที่ถูกต้องทำให้สามารถ transpile ได้ ในทางกลับกัน `<div>` สามารถเขียนเป็น `<div />` หรือ `<div></div>` ได้ ความแตกต่างคือใน syntax เวอร์ชันแรกไม่มีทางที่จะเพิ่มสิ่งใดใน `<div />` คุณจะเห็นในแบบทดสอบอื่นๆ ภายหลังว่า syntax นี้มีประโยชน์เมื่อทำการเรนเดอร์ React component
+For example the line-break tag can be written as `<br>` or as `<br />`, but should never be written as `<br></br>`, since it doesn't contain any content.
 
-# --instructions—
+In JSX, the rules are a little different. Any JSX element can be written with a self-closing tag, and every element must be closed. The line-break tag, for example, must always be written as `<br />` in order to be valid JSX that can be transpiled. A `<div>`, on the other hand, can be written as `<div />` or `<div></div>`. The difference is that in the first syntax version there is no way to include anything in the `<div />`. You will see in later challenges that this syntax is useful when rendering React components.
 
-แก้ไขข้อผิดพลาดใน code editor เพื่อให้เป็น JSX ที่ถูกต้อง และ transpile ได้สำเร็จ ตรวจสอบให้แน่ใจว่าคุณไม่ได้เปลี่ยนแปลงเนื้อหาใดๆ คุณต้องปิดแท็กเมื่อจำเป็นเท่านั้น
+# --instructions--
+
+Fix the errors in the code editor so that it is valid JSX and successfully transpiles. Make sure you don't change any of the content - you only need to close tags where they are needed.
 
 # --hints--
 
-constant `JSX` ควร return `div` element
+The constant `JSX` should return a `div` element.
 
 ```js
 assert.strictEqual(JSX.type, 'div');
 ```
 
-`div` ควรมี `br` tag
+The `div` should contain a `br` tag.
 
 ```js
 assert(Enzyme.shallow(JSX).find('br').length === 1);
 ```
 
-`div` ควรมี `hr` tag
+The `div` should contain an `hr` tag.
 
 ```js
 assert(Enzyme.shallow(JSX).find('hr').length === 1);

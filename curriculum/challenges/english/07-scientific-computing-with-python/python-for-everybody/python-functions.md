@@ -14,29 +14,28 @@ dashedName: python-functions
 
 ## --text--
 
-What is the purpose of the "def" keyword in Python?
+คีย์เวิร์ด "def" ใน Python คืออะไร ?
 
 ## --answers--
 
-It is slang that means "The following code is really cool."
+เป็นคำแสลงที่ีความหมายว่า "โค้ดนี้มันสุดยอด"
 
 ---
 
-It indicates the start of a function.
+เป็นจุดเริ่มต้นของฟังก์ชัน
 
 ---
 
-It indicates that the following indented section of code is to be stored for later.
+เป็นตัวบอกว่า เก็บโค๊ดส่วนนี้ไว้ เพื่อจะเรียกใช้ในภายหลัง
 
 ---
 
-It indicates the start of a function, and the following indented section of code is to be stored for later.
+เป็นจุดเริ่มต้นของฟังก์ชัน และ เก็บโค๊ดส่วนนี้ไว้ เพื่อจะเรียกใช้ในภายหลัง
 
 ---
 
-None of the above.
+ไม่มีข้อใดถูก
 
 ## --video-solution--
 
 4
-

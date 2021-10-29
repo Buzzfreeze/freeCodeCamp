@@ -8,21 +8,21 @@ dashedName: create-a-controlled-form
 
 # --description--
 
-แบบทดสอบที่ผ่านมาแสดงให้เห็นว่า React สามารถควบคุมสถานะภายในสำหรับ element บางอย่าง เช่น `input` และ `textarea` ซึ่งทำให้พวกมันกลายเป็น component ควบคุม สิ่งนี้ใช้กับ form element อื่นๆ เช่นกัน รวมถึง HTML `form` element ปกติด้วย
+The last challenge showed that React can control the internal state for certain elements like `input` and `textarea`, which makes them controlled components. This applies to other form elements as well, including the regular HTML `form` element.
 
 # --instructions--
 
-"MyForm" component ถูกตั้งค่าด้วย `form` ที่ว่างเปล่าพร้อม submit handler ซึ่งจะถูกเรียกใช้งานเมื่อฟอร์มได้ถูก submit
+The `MyForm` component is set up with an empty `form` with a submit handler. The submit handler will be called when the form is submitted.
 
-เราได้เพิ่มปุ่มสำหรับ submit แบบฟอร์ม คุณจะเห็นว่ามีการตั้งค่า `type` เป็น submit ซึ่งระบุว่าเป็นปุ่มที่ควบคุมแบบฟอร์ม เพิ่ม `input` element ใน `form` และตั้งค่า `value` และ `onChange()` attribute เหมือนกับแบบทดสอบก่อนหน้านี้ จากนั้นคุณควรสร้าง `handleSubmit` method ให้สำเร็จ เพื่อให้ตั้งค่าคุณสมบัติสถานะ component `submit` เป็นค่า input ปัจจุบันใน local `state`
+We've added a button which submits the form. You can see it has the `type` set to `submit` indicating it is the button controlling the form. Add the `input` element in the `form` and set its `value` and `onChange()` attributes like the last challenge. You should then complete the `handleSubmit` method so that it sets the component state property `submit` to the current input value in the local `state`.
 
-**Note:** คุณต้องเรียก `event.preventDefault()` ใน submit handler เพื่อป้องกันลักษณะการ submit ฟอร์มเริ่มต้นซึ่งจะรีเฟรชหน้าเว็บ เพื่อความสะดวกผู้เรียน ลักษณะเริ่มต้นนี้ถูกปิดใช้งานที่นี่เพื่อป้องกันการรีเฟรชจากการรีเซ็ตโค้ดของแบบทดสอบนี้
+**Note:** You also must call `event.preventDefault()` in the submit handler, to prevent the default form submit behavior which will refresh the web page. For camper convenience, the default behavior has been disabled here to prevent refreshes from resetting challenge code.
 
-สุดท้าย ให้สร้าง `h1` tag หลัง `form` ซึ่งเรนเดอร์ค่า `submit` จาก `state` ของ component จากนั้นคุณสามารถพิมพ์กรอกแบบฟอร์มและคลิกปุ่ม (หรือกด Enter) และคุณควรเห็นข้อมูลที่คุณป้อนเข้าไปถูกแสดงบนหน้าเพจ
+Finally, create an `h1` tag after the `form` which renders the `submit` value from the component's `state`. You can then type in the form and click the button (or press enter), and you should see your input rendered to the page.
 
 # --hints--
- 
-`MyForm` ควรจะต้อง return 1 `div` element ที่มี `form` และ an `h1` tag ข้างใน ฟอร์มนี้ควรจะต้องมี `input` และ `button` ด้วย
+
+`MyForm` should return a `div` element which contains a `form` and an `h1` tag. The form should include an `input` and a `button`.
 
 ```js
 assert(
@@ -38,7 +38,7 @@ assert(
 );
 ```
 
-สถานะของ `MyForm` ควรเริ่มต้นด้วย `input` และ `submit` properties ที่ถูกตั้งค่าให้เป็น string เปล่า
+The state of `MyForm` should initialize with `input` and `submit` properties, both set to empty strings.
 
 ```js
 assert(
@@ -47,7 +47,7 @@ assert(
 );
 ```
 
-การพิมพ์กรอกข้อมูลใน `input` ควรจะต้องมีการอัปเดต `input` property ของสถานะของ component
+Typing in the `input` element should update the `input` property of the component's state.
 
 ```js
 (() => {
@@ -75,7 +75,7 @@ assert(
 })();
 ```
 
-การ submit ฟอร์มควรจะต้องทำให้ `handleSubmit` ทำงาน ซึ่งจะเป็นการตั้งค่า `submit` property ในสถานะที่เท่ากับ input ปัจจุบัน
+Submitting the form should run `handleSubmit` which should set the `submit` property in state equal to the current input.
 
 ```js
 (() => {
@@ -98,7 +98,7 @@ assert(
 })();
 ```
 
-`handleSubmit` ควรจะต้องเรียกใช้งาน `event.preventDefault`
+`handleSubmit` should call `event.preventDefault`
 
 ```js
 assert(
@@ -109,7 +109,7 @@ assert(
 );
 ```
 
-`h1` header ควรจะต้องเรนเดอร์ ค่าของ `submit` field จากสถานะของ component
+The `h1` header should render the value of the `submit` field from the component's state.
 
 ```js
 (() => {

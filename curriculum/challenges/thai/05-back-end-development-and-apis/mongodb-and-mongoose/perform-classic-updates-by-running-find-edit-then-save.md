@@ -8,18 +8,17 @@ dashedName: perform-classic-updates-by-running-find-edit-then-save
 
 # --description--
 
-ในสมัยก่อน นี่คือสิ่งที่คุณต้องทำหากต้องการแก้ไขเอกสารและใช้งานได้ (เช่น การส่งกลับในการตอบกลับของเซิร์ฟเวอร์) 
-Mongoose มีวิธีการอัปเดตเฉพาะด้วย `Model.update()` โดยมันเชื่อมไว้กับไดรเวอร์ low-level Mongo  มันสามารถแก้ไขเอกสารจำนวนมากให้ตรงกับเกณฑ์บางอย่างทีละเป็นกลุ่มๆได้ แต่จะไม่ส่งเอกสารที่อัปเดตกลับคืนมา มีเพียงแค่ข้อความ 'สถานะ'เท่านั้น ยิ่งไปกว่านั้น วิธีนี้ทำให้การตรวจสอบโมเดลทำได้ยาก เพราะมันแค่เรียกไดรเวอร์ mongo โดยตรงเท่านั้น
+In the good old days, this was what you needed to do if you wanted to edit a document, and be able to use it somehow (e.g. sending it back in a server response). Mongoose has a dedicated updating method: `Model.update()`. It is bound to the low-level mongo driver. It can bulk-edit many documents matching certain criteria, but it doesn’t send back the updated document, only a 'status' message. Furthermore, it makes model validations difficult, because it just directly calls the mongo driver.
 
 # --instructions--
 
-แก้ไขฟังก์ชัน `findEditThenSave` เพื่อหาบุคคลที่อยู่ใน `_id` (หรือจะใช้วิธีข้างบนก็ได้) ด้วยพารามิเตอร์ `personId`โดยคนจากคีย์ เพิ่ม `"hamburger"` ที่ลิสท์ของบุคคล `favoriteFoods` (หรือคุณอาจจะใช้ `Array.push()`) จากนั้นเรียกการคืนกลับภายใน และใช้ `save()` เพื่ออัพเดต `Person`
+Modify the `findEditThenSave` function to find a person by `_id` (use any of the above methods) with the parameter `personId` as search key. Add `"hamburger"` to the list of the person's `favoriteFoods` (you can use `Array.push()`). Then - inside the find callback - `save()` the updated `Person`.
 
-**Note:** มันอาจจะเป็นเรื่องยาก หากใน Schema ของคุณ คุณประกาศ `favoriteFoods` เป็น Array โดยไม่ระบุประเภท (เช่น `[String]`) ถ้ากรณีดังกล่าวเกิดขึ้น ค่าเริ่มต้นของ `favoriteFoods` ข้อมูลจะผสมกันไม่แยกประเภท และคุณต้องแก้ไขด้วยตัวเอง ถ้าแก้เสร็จให้ระบุว่า `document.markModified('edited-field')` สามารถดูตัวอย่างได้จาก [Mongoose documentation](https://mongoosejs.com/docs/schematypes.html#Mixed)
+**Note:** This may be tricky, if in your Schema, you declared `favoriteFoods` as an Array, without specifying the type (i.e. `[String]`). In that case, `favoriteFoods` defaults to Mixed type, and you have to manually mark it as edited using `document.markModified('edited-field')`. See [Mongoose documentation](https://mongoosejs.com/docs/schematypes.html#Mixed)
 
 # --hints--
 
-สามารถ ค้นหา-แก้ไข-อัปเดตรายการได้สำเร็จ
+Find-edit-update an item should succeed
 
 ```js
 (getUserInput) =>

@@ -8,19 +8,19 @@ dashedName: use-a-span-to-target-inline-elements
 
 # --description--
 
-You can use spans to create inline elements. Remember when we used the `btn-block` class to make the button fill the entire row?
+คุณสามารถใช้ span ในการทำ inline element ในทางกลับกัน ยังจำตอนที่เราใช้ class `btn-block` เพื่อทำให้ปุ่มนั้นขยายเต็มบรรทัดนั้นได้หรือเปล่า?
 
 <button class='btn' style='background-color: rgb(0, 100, 0);  color: rgb(255, 255, 255);'>normal button</button>
 
 <button class='btn btn-block' style='background-color: rgb(0, 100, 0);  color: rgb(255, 255, 255);'>btn-block button</button>
 
-That illustrates the difference between an "inline" element and a "block" element.
+โค้ดข้างบนนั้นแสดงให้เห็นความแตกต่างระหว่าง element แบบ "inline" และ "block"
 
-By using the inline `span` element, you can put several elements on the same line, and even style different parts of the same line differently.
+เมื่อใช้ `span` element คุณสามารถรวม element หลายๆ element ให้อยู่ในบรรทัดเดียวกันได้ หรือแม้กระทั้งการตกแต่ง style ให้แตกต่างกันของ element ต่างๆ ที่อยู่ในบรรทัดเดียวกันได้
 
-Using a `span` element, nest the word `love` inside the `p` element that currently has the text `Things cats love`. Then give the `span` the class `text-danger` to make the text red.
+มาลองใช้ `span` element โดยการ ใช้ span ครอบคำว่า `love` ที่อยู่ในส่วนหนึ่งของประโยค `Things cats love` ภายใน `p` element แล้วกำหนด class ให้ `span` เป็น `text-danger` เพื่อทำให้ข้อความเป็นสีแดง
 
-Here's how you would do this for the `p` element that has the text `Top 3 things cats hate`:
+คุณสามารถใช้วิธีการนี้ในการตกแต่งคำว่า hate จากประโยค `Top 3 things cats hate` ใน `p` element ได้ด้วยเช่นกัน:
 
 ```html
 <p>Top 3 things cats <span class="text-danger">hate:</span></p>
@@ -28,13 +28,13 @@ Here's how you would do this for the `p` element that has the text `Top 3 things
 
 # --hints--
 
-Your `span` element should be inside your `p` element.
+`span` element จะต้องอยู่ใน `p` element
 
 ```js
 assert($('p span') && $('p span').length > 0);
 ```
 
-Your `span` element should have just the text `love`.
+`span` element จะต้องมีแค่คำว่า `love` อยู่ภายใน
 
 ```js
 assert(
@@ -46,13 +46,13 @@ assert(
 );
 ```
 
-Your `span` element should have class `text-danger`.
+`span` element จะต้องมี class `text-danger`
 
 ```js
 assert($('span').hasClass('text-danger'));
 ```
 
-Your `span` element should have a closing tag.
+อย่าลืม tag ปิด สำหรับ `span` element
 
 ```js
 assert(

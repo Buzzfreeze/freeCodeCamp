@@ -8,15 +8,15 @@ dashedName: register-a-store-listener
 
 # --description--
 
-Another method you have access to on the Redux `store` object is `store.subscribe()`. This allows you to subscribe listener functions to the store, which are called whenever an action is dispatched against the store. One simple use for this method is to subscribe a function to your store that simply logs a message every time an action is received and the store is updated.
+อีก method หนึ่งที่คุณสามารถเข้าถึงได้บน Redux `store` object คือ `store.subscribe()` สิ่งนี้ทำให้คุณสามารถเพิ่ม listener function ไปยัง store ซึ่งจะถูกเรียกใช้เมื่อใดก็ตามที่มีการส่ง action กับ store วิธีหนึ่งที่ใช้ง่าย ๆ สำหรับ method นี้คือเพิ่มฟังก์ชันกับ store ของคุณ โดยจะบันทึกข้อความทุกครั้งที่ได้รับ action และ store ได้รับการอัปเดต
 
 # --instructions--
 
-Write a callback function that increments the global variable `count` every time the store receives an action, and pass this function in to the `store.subscribe()` method. You'll see that `store.dispatch()` is called three times in a row, each time directly passing in an action object. Watch the console output between the action dispatches to see the updates take place.
+ลองเขียน callback function ที่เพิ่มตัวแปร global `count` ทุกครั้งที่ store ได้รับ action และส่งฟังก์ชันนี้ไปยังเมธอด `store.subscribe()` คุณจะเห็นว่า `store.dispatch()` ถูกเรียกใช้สามครั้งติดต่อกัน แต่ละครั้งจะส่งผ่าน action object โดยตรง ดู console output ระหว่าง action ที่ส่งไปเพื่อดูการอัปเดตที่เกิดขึ้น
 
-# --hints--
+# --hints—
 
-Dispatching the `ADD` action on the store should increment the state by `1`.
+การส่ง `ADD` action บน store ควรเพิ่ม state ทีละ `1`
 
 ```js
 assert(
@@ -29,19 +29,20 @@ assert(
 );
 ```
 
-There should be a listener function subscribed to the store using `store.subscribe`.
+มันควรมี listener function เพิ่มลงไปที่ store โดยการใช้ `store.subscribe`
 
 ```js
 (getUserInput) => assert(getUserInput('index').match(/store\s*\.\s*subscribe\(/gm));
 ```
 
-The `store.subscribe` should receive a function.
+
+`store.subscribe` ควรรับฟังก์ชันหนึ่งมา
 
 ```js
 (getUserInput) => assert(getUserInput('index').match(/(\s*function\s*)|(\s*\(\s*\)\s*=>)/gm)) 
 ```
 
-The callback to `store.subscribe` should also increment the global `count` variable as the store is updated.
+การ callback ไปยัง `store.subscribe` ควรที่จะเพิ่มตัวแปร global `count` ตอนที่ store มีการอัปเดต
 
 ```js
 assert(store.getState() === count);

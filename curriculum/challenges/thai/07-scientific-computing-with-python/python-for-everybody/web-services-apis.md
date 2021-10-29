@@ -14,7 +14,7 @@ dashedName: web-services-apis
 
 ## --text--
 
-API ย่อมาจากอะไร ?
+What does API stand for?
 
 ## --answers--
 
@@ -35,3 +35,4 @@ Action Portable Interface
 ## --video-solution--
 
 3
+

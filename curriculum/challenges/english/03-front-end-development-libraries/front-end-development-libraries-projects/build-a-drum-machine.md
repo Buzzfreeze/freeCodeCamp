@@ -8,29 +8,29 @@ dashedName: build-a-drum-machine
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/MJyNMd>.
+**Objective:** ลองทำแอป [CodePen.io](https://codepen.io) ให้มีฟังก์ชันเหมือนกับ: <https://codepen.io/freeCodeCamp/full/MJyNMd>
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story) and get all of the tests to pass. Give it your own personal style.
+ลองดู [user stories](https://en.wikipedia.org/wiki/User_story) ข้างล่าง และทำให้ระบบ Test ทังหมด run ผ่าน โดยสามารถออกแบบหน้าตาแอปตามสไตล์ของคุณเองได้เลย
 
-You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and jQuery to complete this project. You should use a frontend framework (like React for example) because this section is about learning frontend frameworks. Additional technologies not listed above are not recommended and using them is at your own risk. We are looking at supporting other frontend frameworks like Angular and Vue, but they are not currently supported. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
+คุณสามารถใช้ HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux และ jQuery รวมกันได้ในการทำโปรเจคนี้ เนื่องจากบทเรียนนี้คือบทเรียนเกี่ยวกับ frontend framework คุณจึงควรนำ frontend framework มาใช้งานด้วย (อย่าง React เป็นต้น) ไม่แนะนำให้ใช้ภาษาหรือเทคโนโลยีอื่นๆ นอกจากที่ให้ไว้ข้างบน เราจะช่วยแก้ไขหรือช่วยเหลือหากเกิดบักหรือปัญหาจากภาษาที่แนะนำข้างต้นเท่านั้น 
 
-**User Story #1:** I should be able to see an outer container with a corresponding `id="drum-machine"` that contains all other elements.
+**User Story #1:** จะต้องมี container ชั้นนอกสุดที่มีไอดี `id="drum-machine"` ที่ครอบ element ทุกอย่างไว้ในนี้
 
-**User Story #2:** Within `#drum-machine` I can see an element with a corresponding `id="display"`.
+**User Story #2:** ภายใน `#drum-machine` จะต้องมี element ที่มีไอดี `id="display"`.
 
-**User Story #3:** Within `#drum-machine` I can see 9 clickable drum pad elements, each with a class name of `drum-pad`, a unique id that describes the audio clip the drum pad will be set up to trigger, and an inner text that corresponds to one of the following keys on the keyboard: `Q`, `W`, `E`, `A`, `S`, `D`, `Z`, `X`, `C`. The drum pads MUST be in this order.
+**User Story #3:** ภายใน `#drum-machine` จะต้องมี element ที่เป็นสำหรับปุ่ม drum pad  9 element ซึ่งทุกอันที่ class ขื่อว่า `drum-pad` และแต่ละ drum pad element นี้จะมีไอดีเฉพาะเพื่อการระบุคลิปเสียงที่ drum pad นั้นๆ ได้ถูกตั้งค่าให้เล่น และมีตัวอักษรบน pad ที่สอดคล้องกับปุ่มอักษรของ keyboard ที่ใช้ในการกดคือ: `Q`, `W`, `E`, `A`, `S`, `D`, `Z`, `X`, `C` ตามลำดับนี้เท่านั้น
 
-**User Story #4:** Within each `.drum-pad`, there should be an HTML5 `audio` element which has a `src` attribute pointing to an audio clip, a class name of `clip`, and an id corresponding to the inner text of its parent `.drum-pad` (e.g. `id="Q"`, `id="W"`, `id="E"` etc.).
+**User Story #4:** ภายใน `.drum-pad` แต่ละอัน จะต้องมี HTML5 `audio` element ที่ระบุ `src` ไปยังคลิปเสียง ให้มีชื่อ class ชื่อ `clip` และ ไอดีสอดคล้องกับข้อความภายในของ element `.drum-pad` (เช่น `id="Q"`, `id="W"`, `id="E"` เป็นต้น)
 
-**User Story #5:** When I click on a `.drum-pad` element, the audio clip contained in its child `audio` element should be triggered.
+**User Story #5:** เมื่อฉันคลิกที่ element `.drum-pad` คลิปเสียงที่อยู่ใน element `audio` ซึ่งเป็น element ลูกของ `.drum-pad` จะถูกเล่น
 
-**User Story #6:** When I press the trigger key associated with each `.drum-pad`, the audio clip contained in its child `audio` element should be triggered (e.g. pressing the `Q` key should trigger the drum pad which contains the string `Q`, pressing the `W` key should trigger the drum pad which contains the string `W`, etc.).
+**User Story #6:** เมื่อฉันกดคีย์บนแป้นพิมพ์ที่ตรงกับ `.drum-pad` แต่ละอัน คลิปเสียงที่อยู่ใน element `audio` ซึ่งเป็น element ลูกของ `.drum-pad` จะถูกเล่น (เช่น กดแป้นพิมพ์ตัว `Q` จะต้องเล่นเสียงที่อยู่ใน drum pad ที่มี string `Q` อยู่  หรือ เมื่อกดแป้นพิมพ์ตัว `W` จะต้องเล่นเสียงที่อยู่ใน drum pad ที่มี string `W` อยู่ เป็นต้น).
 
-**User Story #7:** When a `.drum-pad` is triggered, a string describing the associated audio clip is displayed as the inner text of the `#display` element (each string must be unique).
+**User Story #7:** เมื่อ `.drum-pad` ใดๆ ถูกทำให้ทำงาน จะทำให้ข้อความ string ที่เกี่ยวข้องกับคลิปเสียงนั้นถูกแสดงภายใน element ที่มีไอดี `#display` (ข้อความ string แต่ละอันจะต้องไม่ซ้ำกัน)
 
-You can build your project by <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> and clicking `Save` to create your own pen. Or you can use this CDN link to run the tests in any environment you like: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
+คุณสามารถสร้างโปรเจคของคุณโดย <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>ใช้ CodePen template นี้ </a> แล้วคลิก `Save` เพื่อสร้าง pen ของคุณเอง หรือคุณสามารถใช้ลิงก์ CND นี้ เพื่อรันการทดสอบใน environment ที่คุณต้องการ: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
 
-Once you're done, submit the URL to your working project with all its tests passing.
+ให้ submit ส่ง URL ของโปรเจคที่ทำสำเร็จและได้รันการทดสอบผ่านหมดแล้ว เมื่อเสร็จงาน
 
 # --solutions--
 

@@ -8,21 +8,21 @@ dashedName: use--for-a-more-concise-conditional
 
 # --description--
 
-The `if/else` statements worked in the last challenge, but there's a more concise way to achieve the same result. Imagine that you are tracking several conditions in a component and you want different elements to render depending on each of these conditions. If you write a lot of `else if` statements to return slightly different UIs, you may repeat code which leaves room for error. Instead, you can use the `&&` logical operator to perform conditional logic in a more concise way. This is possible because you want to check if a condition is `true`, and if it is, return some markup. Here's an example:
+คำสั่ง `if/else` ได้ผลในแบบทดสอบที่ผ่านมาก แต่มีวิธีที่กระชับกว่าในการบรรลุผลลัพธ์แบบเดียวกัน ลองนึกภาพว่าคุณกำลังติดตามหลายเงื่อนไขใน component หนึ่ง และคุณต้องการให้ elements ที่แตกต่างกันนั้นเรนเดอร์ตามแต่ละเงื่อนไขเหล่านี้ หากคุณเขียนคำสั่ง `else if` จำนวนมากเพื่อ return  UI ที่แตกต่างกันเล็กน้อย คุณอาจเขียนโค้ดซ้ำๆ ซึ่งจะทำให้เกิดข้อผิดพลาดได้ คุณสามารถใช้ logical operator `&&` เพื่อดำเนินการตรรกะตามเงื่อนไขในลักษณะที่กระชับยิ่งขึ้นแทน สิ่งนี้เป็นไปได้เนื่องจากคุณต้องการตรวจสอบว่าเงื่อนไขเป็น `true` หรือไม่ และหากเป็น ให้ return มาร์กอัปบางส่วน ดูตัวอย่างข้างล่าง:
 
 ```jsx
 {condition && <p>markup</p>}
 ```
 
-If the `condition` is `true`, the markup will be returned. If the condition is `false`, the operation will immediately return `false` after evaluating the `condition` and return nothing. You can include these statements directly in your JSX and string multiple conditions together by writing `&&` after each one. This allows you to handle more complex conditional logic in your `render()` method without repeating a lot of code.
+หาก `condition` เป็น `true` มาร์กอัปจะถูก return แต่หากเงื่อนไขเป็น `false` การดำเนินการจะ return `false` ทันทีหลังจากประเมิน `condition` และไม่ return สิ่งใด คุณสามารถรวมคำสั่งเหล่านี้โดยตรงใน JSX และ string หลายเงื่อนไขเข้าด้วยกันโดยเขียน `&&` หลังแต่ละรายการ วิธีนี้ช่วยให้คุณจัดการกับตรรกะแบบมีเงื่อนไขที่ซับซ้อนมากขึ้นใน `render()` method โดยไม่ต้องเขียนโค้ดซ้ำหลายครั้ง
 
 # --instructions--
 
-Solve the previous example again, so the `h1` only renders if `display` is `true`, but use the `&&` logical operator instead of an `if/else` statement.
+มาลองแก้ไขตัวอย่างก่อนหน้านี้อีกครั้ง จะให้ `h1` จะเรนเดอร์ก็ต่อเมื่อ `display` เป็น `true` แต่ใช้ตัวดำเนินการตรรกะ `&&` แทนคำสั่ง `if/else`
 
-# --hints--
+# --hints—
 
-`MyComponent` should exist and render.
+`MyComponent` ควรมีอยู่และเรนเดอร์
 
 ```js
 assert(
@@ -33,7 +33,7 @@ assert(
 );
 ```
 
-When `display` is set to `true`, a `div`, `button`, and `h1` should render.
+เมื่อ `display` ถูกตั้งค่าเป็น `true` ให้เรนเดอร์ `div`, `button` และ `h1`
 
 ```js
 async () => {
@@ -54,7 +54,7 @@ async () => {
 };
 ```
 
-When `display` is set to `false`, only a `div` and `button` should render.
+เมื่อ `display` ถูกตั้งค่าเป็น `false` ให้เรนเดอร์เพียงแค่ `div`และ `button`
 
 ```js
 async () => {
@@ -75,7 +75,7 @@ async () => {
 };
 ```
 
-The render method should use the `&&` logical operator to check the condition of `this.state.display`.
+render method ควรใช้ `&&` logical operator เพื่อเช็คเงื่อนไขของ `this.state.display`
 
 ```js
 (getUserInput) => assert(getUserInput('index').includes('&&'));

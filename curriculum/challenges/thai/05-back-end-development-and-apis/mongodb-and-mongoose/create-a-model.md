@@ -8,16 +8,13 @@ dashedName: create-a-model
 
 # --description--
 
-**C**RUD พาร์ท 1 - การสร้าง (CREATE) 
+**C**RUD Part I - CREATE
 
+First of all we need a Schema. Each schema maps to a MongoDB collection. It defines the shape of the documents within that collection. Schemas are building block for Models. They can be nested to create complex models, but in this case we'll keep things simple. A model allows you to create instances of your objects, called documents.
 
-ก่อนอื่นเราจะต้องมี Schema ในแต่ละ Schema จะเชื่อมกับคอลเล็กชัน MongoDB โดยกำหนดรูปร่างของเอกสารภายในคอลเล็กชันนั้น 
-Schema เป็นส่วนสำคัญสำหรับโมเดล โดย Schema สามารถซ้อนทับกันเพื่อสร้างแบบจำลองที่ซับซ้อนได้ และในกรณีที่ เราจะสร้างสิ่งต่าง ๆ แบบเรียบง่าย โมเดลนี้ช่วยให้คุณสร้างออบเจ็กต์ที่เรียกว่าเอกสารได้ทันที
+Replit is a real server, and in real servers the interactions with the database happen in handler functions. These functions are executed when some event happens (e.g. someone hits an endpoint on your API). We’ll follow the same approach in these exercises. The `done()` function is a callback that tells us that we can proceed after completing an asynchronous operation such as inserting, searching, updating, or deleting. It's following the Node convention, and should be called as `done(null, data)` on success, or `done(err)` on error.
 
-
-Replit เป็นเซิร์ฟเวอร์จริง และในเซิร์ฟเวอร์จริงจะมีการเชื่อมกันของฐานข้อมูลในฟังก์ชันตัวจัดการ ฟังก์ชันเหล่านี้จะดำเนินการเมื่อมีเหตุการณ์บางอย่างเกิดขึ้น (เช่น มีคนเข้าถึงจุดปลายบน API ของคุณ) เราจะปฏิบัติตามแนวทางเดียวกันในแบบฝึกหัดเหล่านี้ ฟังก์ชัน `done()` เป็นการเรียกกลับที่บอกเราว่าเราสามารถดำเนินการได้หลังจากเสร็จสิ้นการดำเนินการแบบอะซิงโครนัส เช่น การแทรก การค้นหา การอัปเดต หรือการลบ มันเป็นไปตามแบบแผนของ Node และควรเรียกว่า `done(null, data)` เมื่อสำเร็จ หรือ `done(err)` เมื่อมีข้อผิดพลาด
-
-คำเตือน - เมื่อมีการเชื่อมต่อระยะไกล อาจจะเกิดข้อผิดพลาดขึ้น!
+Warning - When interacting with remote services, errors may occur!
 
 ```js
 /* Example */
@@ -31,7 +28,7 @@ const someFunc = function(done) {
 
 # --instructions--
 
-สร้าง schema ที่เรียกว่า `personSchema` โดยมีต้นแบบดังนี้ :
+Create a person schema called `personSchema` having this prototype:
 
 ```markup
 - Person Prototype -
@@ -41,13 +38,13 @@ age :  number
 favoriteFoods : array of strings (*)
 ```
 
-ใช้ schema พื้นฐานของ Mongoose ถ้าคุณต้องการที่จะเพิ่มฟิลด์อื่นๆได้ หรือจะใช้ตัวตรวจสอบความถูกต้องอย่างง่าย เช่น จำเป็นหรือไม่,ลักษณะเฉพาะ และตั้งค่าเริ่มต้น สามารถดูใน [Mongoose docs](http://mongoosejs.com/docs/guide.html).
+Use the Mongoose basic schema types. If you want you can also add more fields, use simple validators like required or unique, and set default values. See the [Mongoose docs](http://mongoosejs.com/docs/guide.html).
 
-ตอนนี้ เรามาสร้างโมเดลที่เรียกว่า  `Person` จาก `personSchema` กัน
+Now, create a model called `Person` from the `personSchema`.
 
 # --hints--
 
-สร้างตัวอย่างจาก mongoose schema ควรที่จะสำเร็จ
+Creating an instance from a mongoose schema should succeed
 
 ```js
 (getUserInput) =>

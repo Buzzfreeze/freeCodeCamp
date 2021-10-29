@@ -8,9 +8,9 @@ dashedName: use-provider-to-connect-redux-to-react
 
 # --description--
 
-ในแบบทดสอบที่ผ่านมา คุณได้สร้าง Redux store เพื่อจัดการ array ข้อความและสร้าง action สำหรับการเพิ่มข้อความใหม่ ขั้นตอนต่อไปคือการให้การเข้าถึง React กับ Redux store และ action ที่จำเป็นในการส่งการอัปเดต ซึ่ง React Redux มีแพ็คเกจ `react-redux` เพื่อช่วยให้งานเหล่านี้สำเร็จ
+In the last challenge, you created a Redux store to handle the messages array and created an action for adding new messages. The next step is to provide React access to the Redux store and the actions it needs to dispatch updates. React Redux provides its `react-redux` package to help accomplish these tasks.
 
-React Redux มี API ขนาดเล็กพร้อมคุณสมบัติหลักสองประการ คือ: `Provider` และ `connect` ในแบบทดสอบอื่นๆ จะอธิบายครอบคลุมเนื้อหาของ `connect` ในส่วนของ `Provider` นั้นเป็น wrapper component จาก React Redux ที่รวมแอพ React ของคุณ ส่วน Wrapper นี้ช่วยให้คุณเข้าถึงฟังก์ชัน Redux `store` และ `dispatch` ทั่วทั้งโครงสร้าง component ของคุณ ตัว `Provider` นั้นรับ prop สองรายการ ได้แก่ Redux store และ child components แอปของคุณ การกำหนด `Provider` สำหรับ component แอปเขียนโค้ดได้ดังนี้:
+React Redux provides a small API with two key features: `Provider` and `connect`. Another challenge covers `connect`. The `Provider` is a wrapper component from React Redux that wraps your React app. This wrapper then allows you to access the Redux `store` and `dispatch` functions throughout your component tree. `Provider` takes two props, the Redux store and the child components of your app. Defining the `Provider` for an App component might look like this:
 
 ```jsx
 <Provider store={store}>
@@ -20,13 +20,13 @@ React Redux มี API ขนาดเล็กพร้อมคุณสมบ
 
 # --instructions--
 
-ตอนนี้ code editor จะแสดงโค้ด Redux และ React ทั้งหมดของคุณจากแบบบทดสอบต่างๆ ที่ผ่านมา มันประกอบด้วย Redux store, actions และ `DisplayMessages` component สิ่งใหม่ที่เพิ่มมาสิ่งเดียวคือ `AppWrapper` component ที่ด้านล่าง ใช้ component ระดับบนสุดนี้เพื่อเรนเดอร์ `Provider` จาก `ReactRedux` และส่งผ่าน Redux store เป็น prop จากนั้นเรนเดอร์`DisplayMessages` component เป็น child ของมัน เมื่อคุณทำเสร็จแล้ว คุณควรเห็น React component ของคุณเรนเดอร์ไปยังหน้าเพจ
+The code editor now shows all your Redux and React code from the past several challenges. It includes the Redux store, actions, and the `DisplayMessages` component. The only new piece is the `AppWrapper` component at the bottom. Use this top level component to render the `Provider` from `ReactRedux`, and pass the Redux store as a prop. Then render the `DisplayMessages` component as a child. Once you are finished, you should see your React component rendered to the page.
 
-**Note:** ในที่นี้ React Redux พร้อมใช้งานในฐานะ ตัวแปร global ดังนั้นคุณจึงสามารถเข้าถึง Provider ด้วยเครื่องหมายจุด โค้ดใน editor ใช้ประโยชน์จากสิ่งนี้และตั้งค่าให้เป็น constant `Provider` เพื่อให้คุณใช้ใน`AppWrapper` render method 
+**Note:** React Redux is available as a global variable here, so you can access the Provider with dot notation. The code in the editor takes advantage of this and sets it to a constant `Provider` for you to use in the `AppWrapper` render method.
 
 # --hints--
 
-ควรเรนเดอร์ `AppWrapper`
+The `AppWrapper` should render.
 
 ```js
 assert(
@@ -37,7 +37,7 @@ assert(
 );
 ```
 
-`Provider` wrapper component ควรมี prop จาก `store` ที่ถูกส่งมาที่มันซึ่งก็คือ Redux store
+The `Provider` wrapper component should have a prop of `store` passed to it, equal to the Redux store.
 
 ```js
 (getUserInput) =>
@@ -51,7 +51,7 @@ assert(
   );
 ```
 
-`DisplayMessages` ควรเรนเดอร์เป็น child ของ `AppWrapper`
+`DisplayMessages` should render as a child of `AppWrapper`.
 
 ```js
 assert(
@@ -64,7 +64,7 @@ assert(
 );
 ```
 
-`DisplayMessages` component ควรเรนเดอร์ `h2`, `input`, `button` และ `ul` element
+The `DisplayMessages` component should render an `h2`, `input`, `button`, and `ul` element.
 
 ```js
 assert(

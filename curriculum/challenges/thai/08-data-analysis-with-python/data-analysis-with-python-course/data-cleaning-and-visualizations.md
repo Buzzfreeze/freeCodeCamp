@@ -12,9 +12,9 @@ dashedName: data-cleaning-and-visualizations
 
 # --description--
 
-*ผู้เรียนสามารถใช้ Google Colab แทน notebooks.ai ที่สาธิตใน Videoได้*
+*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
 
-แหล่งเรียนรู้เพิ่มเติม:
+More resources:
 
 -   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/data-cleaning-rmotr-freecodecamp)
 -   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
@@ -23,7 +23,7 @@ dashedName: data-cleaning-and-visualizations
 
 ## --text--
 
-เมื่อใช้ Global API ของ Matplotlib ลำดับของตัวเลขมีหมายความว่าอย่างไร?
+When using Matplotlib's global API, what does the order of numbers mean here?
 
 ```py
 plt.subplot(1, 2, 1)
@@ -31,15 +31,15 @@ plt.subplot(1, 2, 1)
 
 ## --answers--
 
-รูปของผมจะมีหนึ่งคอลัมน์ สองแถว และผมจะเริ่มวาดในพล็อตแรก (ซ้าย) 
+My figure will have one column, two rows, and I am going to start drawing in the first (left) plot.
 
 ---
 
-ผมก็จะเริ่มวาดในพล็อตแรก (ซ้าย) รูปของผมจะมีสองแถว และหนึ่งคอลัมน์ 
+I am going to start drawing in the first (left) plot, my figure will have two rows, and my figure will have one column.
 
 ---
 
-รูปของผมจะมีหนึ่งแถว สองคอลัมน์ เและผมจะเริ่มวาดในพล็อตแรก (ซ้าย) 
+My figure will have one row, two columns, and I am going to start drawing in the first (left) plot.
 
 ## --video-solution--
 

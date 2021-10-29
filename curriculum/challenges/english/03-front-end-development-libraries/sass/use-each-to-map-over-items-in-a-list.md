@@ -8,7 +8,7 @@ dashedName: use-each-to-map-over-items-in-a-list
 
 # --description--
 
-The last challenge showed how the `@for` directive uses a starting and ending value to loop a certain number of times. Sass also offers the `@each` directive which loops over each item in a list or map. On each iteration, the variable gets assigned to the current value from the list or map.
+แบบทดสอบที่ผ่านมานั้นได้แสดงให้เห็นว่าคำสั่ง `@for`ใช้ค่าเริ่มต้นและค่าสิ้นสุดเพื่อวนลูปซ้ำจำนวนหนึ่งอย่างไร Sass ยังมีคำสั่ง `@each` ที่ทำการลูปซ้ำตามจำนวนรายหรือ map ในการวนซ้ำแต่ละครั้ง ตัวแปรถูกกำหนดให้เป็นค่าปัจจุบันจากรายการหรือ map
 
 ```scss
 @each $color in blue, red, green {
@@ -16,7 +16,7 @@ The last challenge showed how the `@for` directive uses a starting and ending va
 }
 ```
 
-A map has slightly different syntax. Here's an example:
+สำหรับ map นั้นมี syntax ที่แตกต่างไปเล็กหน่อย ดังนี้:
 
 ```scss
 $colors: (color1: blue, color2: red, color3: green);
@@ -26,7 +26,7 @@ $colors: (color1: blue, color2: red, color3: green);
 }
 ```
 
-Note that the `$key` variable is needed to reference the keys in the map. Otherwise, the compiled CSS would have `color1`, `color2`... in it. Both of the above code examples are converted into the following CSS:
+โปรดจำไว้ว่าตัวแปร `$key` ต้องได้อ้างอิงถึง key ใน map ไม่อย่างนั้น CSS ที่ประมวลผลแล้วจะมี `color1`, `color2`... ข้างใน โค้ดทั้งสองข้างบนถูกเปลี่ยนไปเป็น CSS ดังข้างล่าง:
 
 ```scss
 .blue-text {
@@ -44,29 +44,29 @@ Note that the `$key` variable is needed to reference the keys in the map. Otherw
 
 # --instructions--
 
-Write an `@each` directive that goes through a list: `blue, black, red` and assigns each variable to a `.color-bg` class, where the `color` part changes for each item. Each class should set the `background-color` the respective color.
+ให้เขียนคำสั่ง `@each` ที่วนไปในลิสต์ `blue, black, red` และกำหนดตัวแปรแต่ละตัวไปใน คลาส `.color-bg` ที่ในส่วน `color` เปลี่ยนไปในแต่ละรายการ คลาสแต่ละคลาสจะต้องตั้งค่า `background-color` ไปตามสีข้างต้น
 
 # --hints--
 
-Your code should use the `@each` directive.
+โค้ดของคุณควรใช้คำสั่ง `@each`
 
 ```js
 assert(code.match(/@each /g));
 ```
 
-Your `.blue-bg` class should have a `background-color` of blue.
+คลาส `.blue-bg` ของคุณควรมี `background-color` เป็นสี blue
 
 ```js
 assert($('.blue-bg').css('background-color') == 'rgb(0, 0, 255)');
 ```
 
-Your `.black-bg` class should have a `background-color` of black.
+คลาส `.black-bg` ของคุณควรมี `background-color` เป็นสี black
 
 ```js
 assert($('.black-bg').css('background-color') == 'rgb(0, 0, 0)');
 ```
 
-Your `.red-bg` class should have a `background-color` of red.
+คลาส `.red-bg` ของคุณควรมี `background-color` เป็นสี red
 
 ```js
 assert($('.red-bg').css('background-color') == 'rgb(255, 0, 0)');

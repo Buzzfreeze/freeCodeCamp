@@ -14,7 +14,7 @@ dashedName: mathematics
 
 ## --text--
 
- หลังจาก run โค้ดต่อไปนี้ ค่าของ `b` เป็นเท่าใด ?
+What is the value of `b` after running the following code?
 
 ```py
 import numpy as np

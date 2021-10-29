@@ -8,23 +8,23 @@ dashedName: add-keywords-to-your-package-json
 
 # --description--
 
-The `keywords` field is where you can describe your project using related keywords. Here's an example:
+`keywords` คือที่ที่คุณสามารถอธิบายโปรเจคของคุณได้ โดยใช้คีย์เวิร์ดที่เกี่ยวข้อง นี่คือตัวอย่างการใช้ :
 
 ```json
 "keywords": [ "descriptive", "related", "words" ],
 ```
 
-As you can see, this field is structured as an array of double-quoted strings.
+คุณจะเห็นว่า โครงสร้างคำสั่งนี้เป็นอาร์เรย์ที่ใช้เครื่องหมาย  (") รอบสตริง
 
 # --instructions--
 
-Add an array of suitable strings to the `keywords` field in the package.json file of your project.
+กรุณาเพิ่มอาร์เรย์ในสตริงให้เหมาะสมลงใน `keywords` ของไฟล์ package.json ในโปรเจคของคุณ
 
-One of the keywords should be "freecodecamp".
+หนึ่งในคีย์เวิร์ดที่ควรมี คือ "freecodecamp"
 
 # --hints--
 
-package.json should have a valid "keywords" key
+package.json ควรที่จะมีคีย์ "keywords" ที่ถูกต้อง
 
 ```js
 (getUserInput) =>

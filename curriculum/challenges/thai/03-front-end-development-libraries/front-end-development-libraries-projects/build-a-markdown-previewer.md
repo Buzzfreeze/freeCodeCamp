@@ -8,29 +8,29 @@ dashedName: build-a-markdown-previewer
 
 # --description--
 
-**Objective:** ลองทำแอป [CodePen.io](https://codepen.io) app that is ให้มีฟังก์ชันเหมือนกับ: <https://codepen.io/freeCodeCamp/full/GrZVVO>
+**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/GrZVVO>.
 
-ลองดู [user stories](https://en.wikipedia.org/wiki/User_story) ข้างล่าง และทำให้ระบบ Test ทังหมด run ผ่าน โดยสามารถออกแบบหน้าตาแอปตามสไตล์ของคุณเองได้เลย
+Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story) and get all of the tests to pass. Give it your own personal style.
 
-คุณสามารถใช้ HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux และ jQuery รวมกันได้ในการทำโปรเจคนี้ เนื่องจากบทเรียนนี้คือบทเรียนเกี่ยวกับ frontend framework คุณจึงควรนำ frontend framework มาใช้งานด้วย (อย่าง React เป็นต้น) ไม่แนะนำให้ใช้ภาษาหรือเทคโนโลยีอื่นๆ นอกจากที่ให้ไว้ข้างบน เราจะช่วยแก้ไขหรือช่วยเหลือหากเกิดบักหรือปัญหาจากภาษาที่แนะนำข้างต้นเท่านั้น 
+You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and jQuery to complete this project. You should use a frontend framework (like React for example) because this section is about learning frontend frameworks. Additional technologies not listed above are not recommended and using them is at your own risk. We are looking at supporting other frontend frameworks like Angular and Vue, but they are not currently supported. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
 
-**User Story #1:** จะต้องมี element `textarea` ที่มีไอดี `id="editor"`
+**User Story #1:** I can see a `textarea` element with a corresponding `id="editor"`.
 
-**User Story #2:** จะต้องมี element ที่มีไอดี `id="preview"`
+**User Story #2:** I can see an element with a corresponding `id="preview"`.
 
-**User Story #3:** เมื่อฉันพิมพ์ข้อความไปใน element `#editor` ส่วนของ `#preview` element จะอัปเดตเนื้อหาพร้อมกับขณะเดียวกันกับที่ฉันพิมพ์ เพื่อนำเนื้อหานั้นไปแสดง
+**User Story #3:** When I enter text into the `#editor` element, the `#preview` element is updated as I type to display the content of the textarea.
 
-**User Story #4:** เมื่อฉันป้อน markdown ที่มาจาก Github ไปยัง `#editor` element ข้อความนั้นจะถูกแสดงเป็น HTML ใน `#preview` element ในขณะที่ฉันพิมพ์ (คำแนะนำ: คุณไม่จำเป็นต้องแยก markdown ต่างๆ ด้วยตัวเอง สามารถ import library ที่ maked เรียบร้อยแล้วได้ที่ <https://cdnjs.com/libraries/marked>)
+**User Story #4:** When I enter GitHub flavored markdown into the `#editor` element, the text is rendered as HTML in the `#preview` element as I type (HINT: You don't need to parse Markdown yourself - you can import the Marked library for this: <https://cdnjs.com/libraries/marked>).
 
-**User Story #5:** ในการโหลดครั้งแรกของแอป markdown previewer นี้ ข้อความเริ่มต้นในส่วนของ `#editor` จะต้องมีตัว markdown ที่ถูกต้องที่แสดงถึง element ต่อไปนี้อย่างน้อย 1 element ดังนี้: header (ขนาดเท่า H1), sub header (ขนาดเท่า h2), link, inline code, code block, list item, blockquote, image และ bolded text
+**User Story #5:** When my markdown previewer first loads, the default text in the `#editor` field should contain valid markdown that represents at least one of each of the following elements: a header (H1 size), a sub header (H2 size), a link, inline code, a code block, a list item, a blockquote, an image, and bolded text.
 
-**User Story #6:** ในการโหลดครั้งแรกของแอป markdown previewer markdown เริ่มต้นที่อยู่ในส่วนของ `#editor` ต้องแสดงผลเป็น HTTML ในส่วน `#preview` element
+**User Story #6:** When my markdown previewer first loads, the default markdown in the `#editor` field should be rendered as HTML in the `#preview` element.
 
-**Optional Bonus (you do not need to make this test pass):** แอป markdown previewer จะแปลงการขึ้นบรรทัดใหม่ และแสดงผลของมันเป็น tag `br` (ตัวแบ่งบรรทัด)
+**Optional Bonus (you do not need to make this test pass):** My markdown previewer interprets carriage returns and renders them as `br` (line break) elements.
 
-คุณสามารถสร้างโปรเจคของคุณโดย <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>ใช้ CodePen template นี้</a> แล้วคลิก `Save` เพื่อสร้าง pen ของคุณเอง หรือคุณสามารถใช้ลิงก์ CND นี้ เพื่อรันการทดสอบใน environment ที่คุณต้องการ: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
+You can build your project by <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> and clicking `Save` to create your own pen. Or you can use this CDN link to run the tests in any environment you like: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
 
-ให้ submit ส่ง URL ของโปรเจคที่ทำสำเร็จและได้รันการทดสอบผ่านหมดแล้ว เมื่อเสร็จงาน
+Once you're done, submit the URL to your working project with all its tests passing.
 
 # --solutions--
 

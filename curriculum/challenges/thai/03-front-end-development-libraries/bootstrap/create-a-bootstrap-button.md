@@ -8,13 +8,13 @@ dashedName: create-a-bootstrap-button
 
 # --description--
 
-Bootstrap มีสไตล์ต่างๆ สำหรับ `button` element ที่ดูดีกว่า HTML ธรรมดามาก
+Bootstrap has its own styles for `button` elements, which look much better than the plain HTML ones.
 
-มาลองสร้าง `button` element ข้างใต้รูปน้องแมว ให้มี class `btn` และ `btn-default` มีข้อความว่า `Like` กัน
+Create a new `button` element below your large kitten photo. Give it the `btn` and `btn-default` classes, as well as the text of `Like`.
 
 # --hints--
 
-ให้สร้าง `button` element ใหม่ ที่มีข้อความว่า `Like`
+You should create a new `button` element with the text `Like`.
 
 ```js
 assert(
@@ -23,13 +23,13 @@ assert(
 );
 ```
 
-ปุ่มที่สร้างใหม่นี้ต้องมี class `btn` และ `btn-default`
+Your new button should have two classes: `btn` and `btn-default`.
 
 ```js
 assert($('button').hasClass('btn') && $('button').hasClass('btn-default'));
 ```
 
-อย่าลืม tag ปิด สำหรับ `button` element ทุกอัน
+All of your `button` elements should have closing tags.
 
 ```js
 assert(

@@ -8,7 +8,7 @@ dashedName: use-state-to-toggle-an-element
 
 # --description--
 
-บางครั้งคุณอาจจำเป็นต้องทราบ state ก่อนหน้าเมื่อมีการอัปเดต state อย่างไรก็ตาม การอัปเดต state อาจเป็นแบบ asynchronous ซึ่งหมายความว่า React อาจรวมการเรียกใช้งานของ `setState()` หลายชุดไว้ในการอัปเดตครั้งเดียว ซึ่งหมายความว่าคุณไม่สามารถพึ่งพาค่าก่อนหน้าของ `this.state` หรือ `this.props` เมื่อกำลังคำนวณค่าถัดไป ดังนั้น คุณไม่ควรใช้โค้ดเช่นนี้:
+Sometimes you might need to know the previous state when updating the state. However, state updates may be asynchronous - this means React may batch multiple `setState()` calls into a single update. This means you can't rely on the previous value of `this.state` or `this.props` when calculating the next value. So, you should not use code like this:
 
 ```jsx
 this.setState({
@@ -16,7 +16,7 @@ this.setState({
 });
 ```
 
-คุณควรส่งฟังก์ชัน `setState` ที่อนุญาตให้คุณเข้าถึง state และ props แทน การใช้ฟังก์ชันที่มี `setState` จะรับประกันว่าคุณกำลังทำงานกับค่า state และ props ที่เป็นปัจจุบันที่สุด ซึ่งคุณควรเขียนโค้ดข้างต้นใหม่เป็น:
+Instead, you should pass `setState` a function that allows you to access state and props. Using a function with `setState` guarantees you are working with the most current values of state and props. This means that the above should be rewritten as:
 
 ```jsx
 this.setState((state, props) => ({
@@ -24,7 +24,7 @@ this.setState((state, props) => ({
 }));
 ```
 
-คุณยังสามารถใช้แบบฟอร์มที่ไม่มี `props` หากคุณต้องการเพียง `state`:
+You can also use a form without `props` if you need only the `state`:
 
 ```jsx
 this.setState(state => ({
@@ -32,21 +32,21 @@ this.setState(state => ({
 }));
 ```
 
-โปรดทราบว่าคุณต้อง object ในวงเล็บ มิฉะนั้น JavaScript จะคิดว่าเป็นบล็อกของโค้ด
+Note that you have to wrap the object literal in parentheses, otherwise JavaScript thinks it's a block of code.
 
 # --instructions--
 
-`MyComponent` มี `visibility` property ซึ่งค่าเริ่มต้นเป็น `false` ซึ่ง render method จะreturn มุมมองหนึ่งหากค่าของ `visibility` เป็นจริง และมุมมองอื่นหากเป็นเท็จ
+`MyComponent` has a `visibility` property which is initialized to `false`. The render method returns one view if the value of `visibility` is true, and a different view if it is false.
 
-ตอนนี้ยังไม่มีวิธีอัปเดต `visibility` property ใน `state` ของ component ค่าของมันควรสลับไปมาระหว่างจริงและเท็จ มันมี click handler บนปุ่มซึ่งเรียกใช้งาน class method ที่เรียกว่า `toggleVisibility()` ส่งฟังก์ชันไปที่ `setState` เพื่อกำหนด method นี้ เพื่อให้ `state` ของ ` visibility` สลับเป็นค่าที่ตรงกันข้ามเมื่อมีการเรียกใช้งาน method ส่งผลให้หาก `visibility` เป็น `false` method จะตั้งค่าเป็น `true` และในทางกลับกันก็จะตั้งค่าเป็น `false`
+Currently, there is no way of updating the `visibility` property in the component's `state`. The value should toggle back and forth between true and false. There is a click handler on the button which triggers a class method called `toggleVisibility()`. Pass a function to `setState` to define this method so that the `state` of `visibility` toggles to the opposite value when the method is called. If `visibility` is `false`, the method sets it to `true`, and vice versa.
 
-สุดท้าย ให้คลิกปุ่มเพื่อดูการเรนเดอร์ตามเงื่อนไขของ component ตาม `state` ของมัน
+Finally, click the button to see the conditional rendering of the component based on its `state`.
 
-**Hint:** อย่าลืมผูกคีย์เวิร์ด `this` กับ method ใน `constructor`!
+**Hint:** Don't forget to bind the `this` keyword to the method in the `constructor`!
 
 # --hints--
 
-`MyComponent` ควร return `div` element ที่มี `button` ข้างใน
+`MyComponent` should return a `div` element which contains a `button`.
 
 ```js
 assert.strictEqual(
@@ -56,7 +56,7 @@ assert.strictEqual(
 );
 ```
 
-State ของ `MyComponent` ควรมีค่าเริ่มต้นด้วย `visibility` property ตั้งค่าเป็น `false`
+The state of `MyComponent` should initialize with a `visibility` property set to `false`.
 
 ```js
 assert.strictEqual(
@@ -65,7 +65,7 @@ assert.strictEqual(
 );
 ```
 
-การคลิก element ปุ่มควรจะเป็นการสลับค่า `visibility` property ใน state เป็นค่าระหว่าง `true` และ `false`
+Clicking the button element should toggle the `visibility` property in state between `true` and `false`.
 
 ```js
 (() => {
@@ -89,7 +89,7 @@ assert.strictEqual(
 })();
 ```
 
-ฟังก์ชันที่ไม่ระบุชื่อควรถูกส่งไปยัง `setState`
+An anonymous function should be passed to `setState`.
 
 ```js
 const paramRegex = '[a-zA-Z$_]\\w*(,[a-zA-Z$_]\\w*)?';
@@ -104,7 +104,7 @@ assert(
 );
 ```
 
-`this` ไม่ควรถูกใช้ภายใน `setState`
+`this` should not be used inside `setState`
 
 ```js
 assert(!/this\.setState\([^}]*this/.test(code));

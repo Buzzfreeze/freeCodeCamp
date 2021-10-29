@@ -12,9 +12,9 @@ dashedName: data-analysis-example-b
 
 # --description--
 
-*ผู้เรียนสามารถใช้ Google Colab แทน notebooks.ai ที่สาธิตใน Videoได้*
+*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
 
-แหล่งเรียนรู้เพิ่มเติม:
+More resources:
 
 -   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/FreeCodeCamp-Pandas-Real-Life-Example)
 -   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
@@ -23,19 +23,19 @@ dashedName: data-analysis-example-b
 
 ## --text--
 
-คำสั่ง `loc` เอาไว้ทำอะไร?
+What does the `loc` method allow you to do?
 
 ## --answers--
 
-ดึงชุดข้อมูลแถวและคอลัมน์บางส่วน โดยระบุอาร์กิวเมนต์ เป็นเลข (integer)
+Retrieve a subset of rows and columns by supplying integer-location arguments.
 
 ---
 
-เข้าถึงกลุ่มของแถวและคอลัมน์โดยระบุอาร์กิวเมนต์ โดยใช้ชื่อกำกับ
+Access a group of rows and columns by supplying label(s) arguments.
 
 ---
 
-คืนค่าแถว `n` แรกตามอาร์กิวเมนต์จำนวนเลขที่ระบุ 
+Returns the first `n` rows based on the integer argument supplied.
 
 ## --video-solution--
 

@@ -14,7 +14,7 @@ dashedName: variables-expressions-and-statements
 
 ## --text--
 
-What is the symbol used in an assignment statement?
+สัญลักษณ์ใด ที่ใช้ในการกำหนดค่าให้กับ statement ?
 
 ## --answers--
 
@@ -35,4 +35,3 @@ What is the symbol used in an assignment statement?
 ## --video-solution--
 
 3
-

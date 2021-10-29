@@ -8,19 +8,19 @@ dashedName: pass-state-as-props-to-child-components
 
 # --description--
 
-คุณเห็นตัวอย่างมากมายที่ส่งผ่าน props ไปยัง child JSX elements และ child React components ในแบบทดสอบครั้งก่อน คุณอาจสงสัยว่า props เหล่านั้นมาจากไหน รูปแบบทั่วไปคือการมี stateful component ที่มี `state` ที่สำคัญต่อแอปของคุณ ซึ่งจะเรนเดอร์ child components ต่อ คุณต้องการให้ components เหล่านี้เข้าถึงบางส่วนของ `state` นั้น ซึ่งถูกส่งผ่านเป็น props
+You saw a lot of examples that passed props to child JSX elements and child React components in previous challenges. You may be wondering where those props come from. A common pattern is to have a stateful component containing the `state` important to your app, that then renders child components. You want these components to have access to some pieces of that `state`, which are passed in as props.
 
-ตัวอย่างเช่นคุณอาจมี `App` component ที่แสดง `Navbar` รวมถึง components อื่นๆ คุณมี `state` ที่มีข้อมูล user จำนวนมากภายใน `App` แต่ `Navbar` ต้องการสิทธิ์เข้าถึง username ของ user เท่านั้นจึงจะสามารถแสดงผลได้ คุณส่งชิ้นส่วนของ `state` นั้นไปยัง ` Navbar` component เป็น prop
+For example, maybe you have an `App` component that renders a `Navbar`, among other components. In your `App`, you have `state` that contains a lot of user information, but the `Navbar` only needs access to the user's username so it can display it. You pass that piece of `state` to the `Navbar` component as a prop.
 
-รูปแบบนี้แสดงให้เห็นถึงรูปแบบที่สำคัญบางอย่างใน React อย่างแรกคือ *unidirectional data flow* State เคลื่อนไปในทิศทางเดียวตามแผนผังของ components ของแอปพลิเคชันของคุณ ตั้งแต่ stateful parent component ไปจนถึง child components โดย child components จะได้รับข้อมูล state ที่ต้องการเท่านั้น อย่างที่สองคือ stateful apps ที่ซับซ้อนสามารถแบ่งออกเป็นส่วนน้อยหรืออาจเป็น stateful component เพียงส่วนเดียว components ที่เหลือของคุณเพียงแค่รับ state จาก parent เป็น props และเรนเดอร์ UI จาก state นั้น มันเริ่มสร้างการแยกที่มีการจัดการ state ในส่วนของโค้ดและการเรนเดอร์ UI ในส่วนอื่น หลักการแยก state logic ออกจาก UI logic นี้เป็นหนึ่งในหลักการสำคัญของ React เมื่อใช้อย่างถูกต้องจะทำให้การออกแบบ stateful applications ที่ซับซ้อนได้ง่ายขึ้นมาก
+This pattern illustrates some important paradigms in React. The first is *unidirectional data flow*. State flows in one direction down the tree of your application's components, from the stateful parent component to child components. The child components only receive the state data they need. The second is that complex stateful apps can be broken down into just a few, or maybe a single, stateful component. The rest of your components simply receive state from the parent as props, and render a UI from that state. It begins to create a separation where state management is handled in one part of code and UI rendering in another. This principle of separating state logic from UI logic is one of React's key principles. When it's used correctly, it makes the design of complex, stateful applications much easier to manage.
 
 # --instructions--
 
-component `MyApp` มีการเก็บ state และเรนเดอร์ `Navbar` component เป็น child ส่งคุณสมบัติ `name` property ใน `state` ลงไปที่ child component จากนั้นแสดง `name` ในแท็ก `h1` ซึ่งเป็นส่วนหนึ่งของ method การเรนเดอร์ `Navbar` `name` ควรปรากฏหลังข้อความ `Hello, my name is:`
+The `MyApp` component is stateful and renders a `Navbar` component as a child. Pass the `name` property in its `state` down to the child component, then show the `name` in the `h1` tag that's part of the `Navbar` render method. `name` should appear after the text `Hello, my name is:`.
 
 # --hints--
 
-`MyApp` component ควรเรนเดอร์ให้มี `Navbar` component ข้างใน
+The `MyApp` component should render with a `Navbar` component inside.
 
 ```js
 assert(
@@ -34,7 +34,7 @@ assert(
 );
 ```
 
-`Navbar` component ควรรับ `MyApp` state property `name` เป็น props
+The `Navbar` component should receive the `MyApp` state property `name` as props.
 
 ```js
 async () => {
@@ -50,7 +50,7 @@ async () => {
 };
 ```
 
-`h1` element ใน `Navbar` ควรเรนเดอร์ `name` prop
+The `h1` element in `Navbar` should render the `name` prop.
 
 ```js
 async () => {

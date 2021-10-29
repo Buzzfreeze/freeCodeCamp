@@ -14,23 +14,23 @@ dashedName: what-is-numpy
 
 ## --text--
 
-ทำไม array ของ Numpy จึงเร็วกว่า Lists ของ Python?
+Why are Numpy arrays faster than regular Python lists?
 
 ## --answers--
 
-Numpy ไม่ได้ทำการ check ประเภท ในขณะที่กำลังวนซ้ำ (iterate) ผ่าน object
+Numpy does not perform type checking while iterating through objects.
 
 ---
 
-Numpy ใช้ประเภทคงที่ (fixed type)
+Numpy uses fixed types.
 
 ---
 
-Numpy ใช้หน่วยความจำที่ต่อเนื่องกัน (contiguous memory)
+Numpy uses contiguous memory.
 
 ---
 
-ทั้งหมดข้างต้นดังที่กล่าวมา
+All of the above.
 
 ## --video-solution--
 

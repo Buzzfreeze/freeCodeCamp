@@ -12,9 +12,9 @@ dashedName: python-iteration-and-modules
 
 # --description--
 
-*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
+*ผู้เรียนสามารถใช้ Google Colab แทน notebooks.ai ที่สาธิตใน Videoได้*
 
-More resources:
+แหล่งเรียนรู้เพิ่มเติม:
 
 -   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/ds-content-python-under-10-minutes)
 -   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
@@ -23,7 +23,7 @@ More resources:
 
 ## --text--
 
-How would you iterate over and print the keys and values of a dictionary named `user`?
+เราจะทำการวนซ้ำ (iterate) และ print ตัว key และ value ของ dictionary ชื่อ `user` ได้อย่างไร?
 
 ## --answers--
 

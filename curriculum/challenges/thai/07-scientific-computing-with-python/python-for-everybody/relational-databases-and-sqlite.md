@@ -14,8 +14,7 @@ dashedName: relational-databases-and-sqlite
 
 ## --text--
 
-ข้อใดไม่ใช่ โครงสร้างหลัก ในฐานข้อมูล ?
-
+Which is NOT a primary data structure in a database?
 
 ## --answers--
 
@@ -36,3 +35,4 @@ column
 ## --video-solution--
 
 1
+

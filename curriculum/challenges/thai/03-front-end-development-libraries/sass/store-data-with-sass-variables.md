@@ -8,18 +8,18 @@ dashedName: store-data-with-sass-variables
 
 # --description--
 
-ฟีเจอร์หนึ่งของ Sass ที่แตกต่างจาก CSS คือมันมีการใช้ตัวแปร ซึ่งถูกประกาศและตั้งค่าให้เก็บข้อมูลคล้าย JavaScript
+One feature of Sass that's different than CSS is it uses variables. They are declared and set to store data, similar to JavaScript.
 
-ใน JavaScript ตัวแปรถูกกำหนดให้ใช้คีย์เวิร์ด `let` และ `const` ใน Sass ตัวแปรจะเริ่มด้วย `$` ตามด้วยชื่อของตัวแปรนั้น
+In JavaScript, variables are defined using the `let` and `const` keywords. In Sass, variables start with a `$` followed by the variable name.
 
-ข้างล่างนี้คือตัวอย่างบางส่วน:
+Here are a couple examples:
 
 ```scss
 $main-fonts: Arial, sans-serif;
 $headings-color: green;
 ```
 
-และนำตัวแปรมาใช้โดย:
+And to use the variables:
 
 ```scss
 h1 {
@@ -28,33 +28,33 @@ h1 {
 }
 ```
 
-ตัวอย่างในการใช้งานตัวแปรคือเมื่อต้องการ element จำนวนหนึ่งมีสีเดียวกัน หากมีการเปลี่ยนสีขึ้น เพียงแค่การแก้ไขที่ตัวแปรเพียงที่เดียวก็สามารถเปลี่ยนได้แล้ว
+One example where variables are useful is when a number of elements need to be the same color. If that color is changed, the only place to edit the code is the variable value.
 
 # --instructions--
 
-ให้สร้างตัวแปร `$text-color` และให้ตั้งแค่เป็น `red` แล้วเปลี่ยนค่าของ property `color` ให้กับ `.blog-post` และ `h2` ไปเป็นตัวแปร `$text-color`
+Create a variable `$text-color` and set it to `red`. Then change the value of the `color` property for the `.blog-post` and `h2` to the `$text-color` variable.
 
 # --hints--
 
-โค้ดของคุณควรมีตัวแปร Sass ที่ประกาศชื่อว่า `$text-color` และมีค่าเป็น `red`
+Your code should have a Sass variable declared for `$text-color` with a value of `red`.
 
 ```js
 assert(code.match(/\$text-color\s*:\s*?red\s*;/g));
 ```
 
-โค้ดของคุณควรใช้ตัวแปร `$text-color` ในการเปลี่ยน `color` ให้กับ `.blog-post` และ `h2` 
+Your code should use the `$text-color` variable to change the `color` for the `.blog-post` and `h2` items.
 
 ```js
 assert(code.match(/color\s*:\s*\$text-color\s*;?/g));
 ```
 
-`.blog-post` element ของคุณควรจะมี `color` เป็นสีแดง
+Your `.blog-post` element should have a `color` of red.
 
 ```js
 assert($('.blog-post').css('color') == 'rgb(255, 0, 0)');
 ```
 
-`h2` element ของคุณควรจะมี `color` เป็นสีแดง
+Your `h2` elements should have a `color` of red.
 
 ```js
 assert($('h2').css('color') == 'rgb(255, 0, 0)');

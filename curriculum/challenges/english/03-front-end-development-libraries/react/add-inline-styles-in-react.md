@@ -8,41 +8,43 @@ dashedName: add-inline-styles-in-react
 
 # --description--
 
-You may have noticed in the last challenge that there were several other syntax differences from HTML inline styles in addition to the `style` attribute set to a JavaScript object. First, the names of certain CSS style properties use camel case. For example, the last challenge set the size of the font with `fontSize` instead of `font-size`. Hyphenated words like `font-size` are invalid syntax for JavaScript object properties, so React uses camel case. As a rule, any hyphenated style properties are written using camel case in JSX.
 
-All property value length units (like `height`, `width`, and `fontSize`) are assumed to be in `px` unless otherwise specified. If you want to use `em`, for example, you wrap the value and the units in quotes, like `{fontSize: "4em"}`. Other than the length values that default to `px`, all other property values should be wrapped in quotes.
+คุณอาจจะสังเกตได้ในแบบทดสอบก่อนหน้านี้ว่ามีความแตกต่างของ syntax อื่นๆ อีกหลายประการจาก HTML inline styles นอกเหนือจาก `style` attribute ที่มีใน JavaScript object 
+อันดับแรกชื่อต่างๆ ของ CSS style properties ใช้หลัก camel case ยกตัวอย่างเช่น แบบทดสอบที่ผ่านมานั้นกำหนดให้ขนาดของฟอนต์ด้วย `fontSize` แทนที่จะใช้ `font-size` คำที่ใช่ `-` นั้นเป็น syntax ที่ไม่ถูกต้องสำหรับ JavaScript object properties ดังนั้น React จึงต้องใช้ camel case ด้วย ด้วยกฎข้อนี้ style properties ที่ใช่ `-` เขียนจะถูกเขียนเป็น canel case ใน JSX
+
+หน่วยความยาวของ property ทั้งหมด (เช่น `height`, `width`, และ `fontSize`) จะเป็น `px` โดยเบื้องต้นหากไม่มีการระบุเฉพาะก่อน หากคุณต้องการใช้หน่วย `em` คุณต้องพิมพ์ทั้งค่าและหน่วยในเครื่องหมายคำพูด เช่น `{fontSize: "4em"}` ซึ่งหากไม่ได้ระบุหน่วยในเครื่องหมายคำพูดแล้ว หน่วยของค่าดังกล่าวจะเป็น `px` โดยทันที
 
 # --instructions--
 
-If you have a large set of styles, you can assign a style `object` to a constant to keep your code organized. Declare your styles constant as a global variable at the top of the file. Initialize `styles` constant and assign an `object` with three style properties and their values to it. Give the `div` a color of `purple`, a font-size of `40`, and a border of `2px solid purple`. Then set the `style` attribute equal to the `styles` constant.
+หากคุณมีชุดของ style จำนวนมาก คุณสามารกำหนด style `object` ให้เป็น constant เพื่อให้โค้ดเป็นระเบียบ ประกาศ styles constant ของคุณเป็นตัวแปร global ในด้านบนของไฟล์ เริ่มสร้าง `style` constant และกำหนด `object` ให้มี 3 style properties พร้อมทั้งค่าต่างๆ ด้วย กำหนดให้ `div` มีสี `purple`, มี font-size ที่ `40`, และ border ที่ `2px solid purple` จากนั้นตั้งค่า `style` attribute ให้เท่ากับ `style` constant
 
 # --hints--
 
-The `styles` variable should be an `object` with three properties.
+ตัวแปร `styles` ควรจะต้องเป็น `object` ที่มี 3 property
 
 ```js
 assert(Object.keys(styles).length === 3);
 ```
 
-The `styles` variable should have a `color` property set to a value of `purple`.
+ตัวแปร `styles` ควรจะต้องมี `color` property ที่มีค่า `purple`
 
 ```js
 assert(styles.color === 'purple');
 ```
 
-The `styles` variable should have a `fontSize` property set to a value of `40`.
+ตัวแปร `styles` ควรจะต้องมี `fontSize` property ที่มีค่า `40`
 
 ```js
 assert(styles.fontSize === 40);
 ```
 
-The `styles` variable should have a `border` property set to a value of `2px solid purple`.
+ตัวแปร `styles` ควรจะต้องมี `border` property ที่มีค่า `2px solid purple`
 
 ```js
 assert(styles.border === '2px solid purple');
 ```
 
-The component should render a `div` element.
+Component จะต้องแสดงผลของ `div` element
 
 ```js
 assert(
@@ -53,7 +55,7 @@ assert(
 );
 ```
 
-The `div` element should have its styles defined by the `styles` object.
+`div` element ควรจะต้องมี style ที่กำหนดโดย `style` object
 
 ```js
 assert(

@@ -8,27 +8,27 @@ dashedName: taste-the-bootstrap-button-color-rainbow
 
 # --description--
 
-The `btn-primary` class is the main color you'll use in your app. It is useful for highlighting actions you want your user to take.
+class `btn-primary` จะให้สีปุ่มที่เป็นสีหลักของแอปที่คุณสร้าง ซึ่งจะเป็นประโยชน์ในการเน้น action ต่างๆ ที่คุณต้องการให้ user ทำ
 
-Replace Bootstrap's `btn-default` class with `btn-primary` in your button.
+ลองเปลี่ยน Bootstrap class จาก `btn-default` เป็น `btn-primary` ให้ปุ่มของคุณ
 
-Note that this button will still need the `btn` and `btn-block` classes.
+หมายเหตุ ปุ่มนั้นยังต้องมี class `btn` และ `btn-block` อยู่เหมือนเดิม
 
 # --hints--
 
-Your button should have the class `btn-primary`.
+ปุ่มของคุณจะต้องมี class `btn-primary`
 
 ```js
 assert($('button').hasClass('btn-primary'));
 ```
 
-Your button should still have the `btn` and `btn-block` classes.
+ปุ่มนั้นยังต้องมี class `btn` และ `btn-block` เหมือนเดิม
 
 ```js
 assert($('button').hasClass('btn-block') && $('button').hasClass('btn'));
 ```
 
-All your `button` elements should have closing tags.
+อย่าลืม tag ปิดสำหรับทุกๆ `button` elements
 
 ```js
 assert(

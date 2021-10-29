@@ -8,9 +8,9 @@ dashedName: expand-your-project-with-external-packages-from-npm
 
 # --description--
 
-หนึ่งในเหตุผลที่สำคัญที่สุดในการใช้ package manager คือ การจัดการกับ dependency  โดยปกติจะต้องตรวจสอบให้แน่ใจว่าคุณได้รับ dependencies ทั้งหมดทุกครั้งที่คุณตั้งค่าโปรเจคบนคอมพิวเตอร์เครื่องใหม่ แต่ว่า npm ที่ติดตั้งบนเครื่องของคุณจะทำทุกอย่างให้คุณโดยอัตโนมัติแทน แล้ว npm จะรู้ได้อย่างไรว่าโปรเจคเราต้องการอะไร?  เราจะไปดูกันในส่วน `dependencies` ของไฟล์ package.json ของคุณ
+One of the biggest reasons to use a package manager, is their powerful dependency management. Instead of manually having to make sure that you get all dependencies whenever you set up a project on a new computer, npm automatically installs everything for you. But how can npm know exactly what your project needs? Meet the `dependencies` section of your package.json file.
 
-ในส่วนนี้ แพ็คเกจของโปรเจคคุณจะถูกจัดเก็บโดยใช้รูปแบบต่อไปนี้:
+In this section, packages your project requires are stored using the following format:
 
 ```json
 "dependencies": {
@@ -22,13 +22,13 @@ dashedName: expand-your-project-with-external-packages-from-npm
 
 # --instructions--
 
-กรุณาเพิ่มเวอร์ชั่น "2.14.0" ลงใน "moment" เพื่อที่ส่ง `dependencies` ไปที่ไฟล์ package.json
+Add version "2.14.0" of the "moment" package to the `dependencies` field of your package.json file.
 
-**Note:** 
-Moment เป็นไลบรารี่ที่มีประโยชน์สำหรับการทำงานที่ต้องใช้เวลาและวันที่
+**Note:** Moment is a handy library for working with time and dates.
+
 # --hints--
 
-"dependencies" ควรที่จะรวม "moment" ด้วย
+"dependencies" should include "moment"
 
 ```js
 (getUserInput) =>
@@ -47,7 +47,7 @@ Moment เป็นไลบรารี่ที่มีประโยชน�
   );
 ```
 
-"moment" ควรจะเป็นเวอร์ชั่น "2.14.0"
+"moment" version should be "2.14.0"
 
 ```js
 (getUserInput) =>

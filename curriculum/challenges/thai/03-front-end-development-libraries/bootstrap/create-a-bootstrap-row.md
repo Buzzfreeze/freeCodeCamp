@@ -8,13 +8,13 @@ dashedName: create-a-bootstrap-row
 
 # --description--
 
-มาลองสร้าง Bootstrap row สำหรับ inline element กัน
+Now we'll create a Bootstrap row for our inline elements.
 
-โดยเริ่มจากสร้าง `div` element ข้างล่าง tag `h3` แล้วใส่ class ว่า `row`
+Create a `div` element below the `h3` tag, with a class of `row`.
 
 # --hints--
 
-เพิ่ม `div` element ใต้ `h3` element
+You should add a `div` element below your `h3` element.
 
 ```js
 assert(
@@ -25,19 +25,19 @@ assert(
 );
 ```
 
-`div` element ที่เพิ่มมาจะต้อง class ชื่อว่า `row`
+Your `div` element should have the class `row`
 
 ```js
 assert($('div').hasClass('row'));
 ```
 
-`row div` ที่สร้างขึ้นจะต้องอยู่ใน `div` ที่มี class `container-fluid`
+Your `row div` should be nested inside the `container-fluid div`
 
 ```js
 assert($('div.container-fluid div.row').length > 0);
 ```
 
-อย่าลืม tag ปิดสำหรับ `div` element นี้
+Your `div` element should have a closing tag.
 
 ```js
 assert(

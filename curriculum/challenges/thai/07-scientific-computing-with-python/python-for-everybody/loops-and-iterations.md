@@ -14,7 +14,7 @@ dashedName: loops-and-iterations
 
 ## --text--
 
-้เมื่อรันโค๊ดต่อไปนี้ โปรแกรมจะแสดงผลลัพธ์ในข้อใด ?
+What will the following code print out?:
 
 ```python
 n = 0
@@ -52,3 +52,4 @@ while True:
 ## --video-solution--
 
 1
+

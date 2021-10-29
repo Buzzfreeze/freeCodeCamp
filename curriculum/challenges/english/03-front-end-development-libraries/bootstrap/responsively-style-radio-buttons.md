@@ -12,27 +12,27 @@ dashedName: responsively-style-radio-buttons
 
 # --description--
 
-You can use Bootstrap's `col-xs-*` classes on `form` elements, too! This way, our radio buttons will be evenly spread out across the page, regardless of how wide the screen resolution is.
+เราสามารถใช้คุณสมบัติของ class `col-xs-*` ของ Bootstrap กับทุกๆ `form` element ได้ ดังนั้นถ้าเราเอาไปใช้กับปุ่ม radio button ก็จะทำให้ตัว radio button ต่างๆ จัดเรียงเท่าๆ กันไปตามความกว้างเพจ ไม่ว่าจะไปเปิดที่หน้าจอขนาดเท่าใดก็ตาม
 
-Nest both your radio buttons within a `<div class="row">` element. Then nest each of them within a `<div class="col-xs-6">` element.
+นำ radio button ทั้งสองไปไว้ใน `<div class="row">` element แล้วให้นำ radio button แต่ละอันแยกไปไว้ในแต่ละ `<div class="col-xs-6">` element
 
-**Note:** As a reminder, radio buttons are `input` elements of type `radio`.
+**Note:** ปุ่ม radio button คือ `input` element ที่มี type เป็น `radio`
 
 # --hints--
 
-All of your radio buttons should be nested inside one `div` with the class `row`.
+radio button ทั้งสองจะต้องอยู่ใน `div` ที่มี class `row`
 
 ```js
 assert($('div.row:has(input[type="radio"])').length > 0);
 ```
 
-Each of your radio buttons should be nested inside its own `div` with the class `col-xs-6`.
+ให้นำ radio button แต่ละอันแยกไปไว้ใน `div` ที่มี class `col-xs-6` อีกที
 
 ```js
 assert($('div.col-xs-6:has(input[type="radio"])').length > 1);
 ```
 
-All of your `div` elements should have closing tags.
+อย่าลืม tag ปิด สำหรับทุกๆ `div` elements
 
 ```js
 assert(

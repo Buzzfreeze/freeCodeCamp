@@ -12,19 +12,19 @@ dashedName: networking-web-scraping-with-python
 
 # --description--
 
-More resources:
+ตัวอย่างเพิ่มเติม:
 
-\- [Exercise: socket1](https://www.youtube.com/watch?v=dWLdI143W-g)
+\- [ตัวอย่างที่ 1: socket1](https://www.youtube.com/watch?v=dWLdI143W-g)
 
-\- [Exercise: urllib](https://www.youtube.com/watch?v=8yis2DvbBkI)
+\- [ตัวอย่างที่ 2: urllib](https://www.youtube.com/watch?v=8yis2DvbBkI)
 
-\- [Exercise: urllinks](https://www.youtube.com/watch?v=g9flPDG9nnY)
+\- [ตัวอย่างที่ 3: urllinks](https://www.youtube.com/watch?v=g9flPDG9nnY)
 
 # --question--
 
 ## --text--
 
-What Python library is used for parsing HTML documents and extracting data from HTML documents?
+ไลบรารีของ Python ในข้อใด ที่ใช้ในการวิเคราะห์เอกสาร HTML และดึงข้อมูลจากเอกสาร HTML ?
 
 ## --answers--
 
@@ -57,4 +57,3 @@ GrunkleStan
 ## --video-solution--
 
 3
-

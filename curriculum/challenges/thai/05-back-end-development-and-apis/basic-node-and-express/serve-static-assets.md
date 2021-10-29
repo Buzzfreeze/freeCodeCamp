@@ -8,24 +8,23 @@ dashedName: serve-static-assets
 
 # --description--
 
-เซิร์ฟเวอร์ HTML มักจะมีไดเร็กทอรีหนึ่งหรือมากกว่าหนึ่งไดเร็กทอรี เพื่อให้ผู้ใช้สามารถเข้าถึงได้ คุณสามารถวางเนื้อหาแบบสแตติกที่ต้องการไว้ที่แอปพลิเคชันของคุณได้ เช่น สไตล์ชีต, สคริปต์, รูปภาพ
+An HTML server usually has one or more directories that are accessible by the user. You can place there the static assets needed by your application (stylesheets, scripts, images).
 
-ในกรณีต้องการส่งแบบเร่งด่วน คุณสามารถติดตั้งฟังก์ชันนี้ด้วยมิดเดิ้ลแวร์ `express.static(path)`  โดยที่พารามิเตอร์ `path` จะเป็นเส้นทางสัมบูรณ์ของโฟลเดอร์เนื้อหา
+In Express, you can put in place this functionality using the middleware `express.static(path)`, where the `path` parameter is the absolute path of the folder containing the assets.
 
-แต่ถ้าหากคุณไม่รู้ว่ามิดเดิ้ลแวร์คืออะไร...ไม่ต้องกังวลไป พวกเราจะสอนคุณแบบละเอียดในภายหลัง ซึ่งโดยปกติแล้ว มิดเดิ้ลแวร์คือ ฟังก์ชันที่เอาไว้สกัดกั้นตัวเส้นทางแฮดเดอร์หรือบางครั้งก็ทำหน้าที่เพิ่มข้อมูลบางอย่าง ในการติดตั้งมิดเดิ้ลแวร์ต้องใช้วิธี `app.use(path, middlewareFunction)` โดยอาร์กิวเม้นท์ แรก `path` นั้นเป็นทางเลือก ถ้าคุณรันไม่ผ่าน วิดเดิ้ลแวร์จะทำการกำจัดคำขอทั้งหมด
+If you don’t know what middleware is... don’t worry, we will discuss in detail later. Basically, middleware are functions that intercept route handlers, adding some kind of information. A middleware needs to be mounted using the method `app.use(path, middlewareFunction)`. The first `path` argument is optional. If you don’t pass it, the middleware will be executed for all requests.
 
 # --instructions--
 
-การติดตั้งมิดเดิลแวร์ `express.static()` ไปยังเส้นทาง `/public` ด้วย  `app.use()` ในแสดงเส้นทางที่สมบูรณ์(absolute path) ไปยังโฟลเดอร์เนื้อหาคือ `__dirname + /public`
+Mount the `express.static()` middleware to the path `/public` with `app.use()`. The absolute path to the assets folder is `__dirname + /public`.
 
-ตอนนี้แอปของคุณควรที่จะทำงานบนสไตล์ชีต CSS ได้ โปรดรู้ไว้ด้วยว่าไฟล์ `/public/style.css` นั้นจะมีการอ้างอิงใน `/views/index.html` ของต้นแบบโครงการบอยด์ลิงเพลต ซึ่งจะทำให้หน้าแรกของคุณดูดีขึ้น!
+Now your app should be able to serve a CSS stylesheet. Note that the `/public/style.css` file is referenced in the `/views/index.html` in the project boilerplate. Your front-page should look a little better now!
 
 # --hints--
 
-แอปของคุณควรที่จะทำงานบนโฟลเดอร์เนื้อหาจากไดเร็กทอรี `/public` ไปยังเส้นทาง `/public`
+Your app should serve asset files from the `/public` directory to the `/public` path
 
 ```js
-
 (getUserInput) =>
   $.get(getUserInput('url') + '/public/style.css').then(
     (data) => {
@@ -39,7 +38,6 @@ dashedName: serve-static-assets
       throw new Error(xhr.responseText);
     }
   );
-  
 ```
 
 # --solutions--

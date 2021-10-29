@@ -7,9 +7,10 @@ dashedName: center-text-with-bootstrap
 ---
 
 # --description--
-เราสามารถใช้ Bootstrap กำหนดให้ heading element ให้อยู่ตำแหน่งตรงกลาง ได้ง่ายๆ เพียงแค่เพิ่ม class `text-center` ไปใน `h2` element 
 
-อย่าลืมว่าเราสามารถเพิ่ม class ได้ หลายๆ คลาสใน element เดียวกัน โดยการเว้นวรรคระหว่างชื่อ class แต่ละ class ตามตัวอย่างนี้:
+Now that we're using Bootstrap, we can center our heading element to make it look better. All we need to do is add the class `text-center` to our `h2` element.
+
+Remember that you can add several classes to the same element by separating each of them with a space, like this:
 
 ```html
 <h2 class="red-text text-center">your text</h2>
@@ -17,13 +18,13 @@ dashedName: center-text-with-bootstrap
 
 # --hints--
 
-ข้อความใน `h2` element จะต้องอยู่ในตำแหน่งตรงกลาง โดยการเพิ่ม class `text-center`
+Your `h2` element should be centered by applying the class `text-center`
 
 ```js
 assert($('h2').hasClass('text-center'));
 ```
 
-ใน `h2` element ยังคงมี class `red-text` เหมือนเดิม
+Your `h2` element should still have the class `red-text`
 
 ```js
 assert($('h2').hasClass('red-text'));

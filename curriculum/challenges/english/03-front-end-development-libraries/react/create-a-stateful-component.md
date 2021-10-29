@@ -8,9 +8,9 @@ dashedName: create-a-stateful-component
 
 # --description--
 
-One of the most important topics in React is `state`. State consists of any data your application needs to know about, that can change over time. You want your apps to respond to state changes and present an updated UI when necessary. React offers a nice solution for the state management of modern web applications.
+หนึ่งในหัวข้อที่สำคัญที่สุดใน React คือ `state' ซึ่งประกอบด้วยข้อมูลใดๆ ที่แอปพลิเคชันของคุณต้องทราบ ซึ่งสามารถเปลี่ยนแปลงได้เมื่อเวลาผ่านไป คุณต้องการให้แอปของคุณตอบสนองต่อการเปลี่ยนแปลง state และแสดงเป็น UI ที่อัปเดตเมื่อจำเป็น React นำเสนอโซลูชันที่ดีสำหรับการจัดการ state ของเว็บแอปพลิเคชันสมัยใหม่
 
-You create state in a React component by declaring a `state` property on the component class in its `constructor`. This initializes the component with `state` when it is created. The `state` property must be set to a JavaScript `object`. Declaring it looks like this:
+คุณสร้าง state ใน React component โดยการประกาศ `state` property ใน component classใน `constructor` สิ่งนี้เริ่มต้น component ด้วย `state` เมื่อถูกสร้างขึ้น ต้องตั้งค่า `state` property เป็น `object` ของ JavaScript ประกาศตามโค้ดข้างล่างนี้:
 
 ```jsx
 this.state = {
@@ -18,15 +18,15 @@ this.state = {
 }
 ```
 
-You have access to the `state` object throughout the life of your component. You can update it, render it in your UI, and pass it as props to child components. The `state` object can be as complex or as simple as you need it to be. Note that you must create a class component by extending `React.Component` in order to create `state` like this.
+คุณสามารถเข้าถึง `state` object ได้ตลอดอายุของ component ของคุณ คุณสามารถอัปเดต  แสดงผลใน UI ของคุณ และส่งผ่านเป็น props ไปยัง child component ต่างๆ  `state` object อาจซับซ้อนหรือเรียบง่ายขึ้นอยู่กับความต้องการของคุณ โปรดทราบว่าคุณต้องสร้าง class componentโดยขยาย `React.Component` เพื่อสร้าง `state` เช่นนี้
 
 # --instructions--
 
-There is a component in the code editor that is trying to render a `name` property from its `state`. However, there is no `state` defined. Initialize the component with `state` in the `constructor` and assign your name to a property of `name`.
+มี component ใน code editor ที่พยายามแสดง `name` property จาก `state` ของมัน อย่างไรก็ตาม ไม่มี `state` ที่กำหนดไว้ เริ่มต้น component ด้วย `state` ใน `constructor` และกำหนดชื่อให้กับ `name` property
 
 # --hints--
 
-`StatefulComponent` should exist and render.
+`StatefulComponent` ควรมีอยู่และเรนเดอร์ด้วย
 
 ```js
 assert(
@@ -39,7 +39,7 @@ assert(
 );
 ```
 
-`StatefulComponent` should render a `div` and an `h1` element.
+`StatefulComponent` ควรเรนเดอร์ `div` และ `h1` element
 
 ```js
 assert(
@@ -55,7 +55,7 @@ assert(
 );
 ```
 
-The state of `StatefulComponent` should be initialized with a property `name` set to a string.
+State ของ `StatefulComponent` ควรจะเริ่มต้นด้วย `name` property ที่มีค่าเป็น string
 
 ```js
 assert(
@@ -71,7 +71,7 @@ assert(
 );
 ```
 
-The property `name` in the state of `StatefulComponent` should render in the `h1` element.
+property `name`ใน state ของ `StatefulComponent` ควรจะต้องเรนเดอร์ใน `h1` element
 
 ```js
 assert(

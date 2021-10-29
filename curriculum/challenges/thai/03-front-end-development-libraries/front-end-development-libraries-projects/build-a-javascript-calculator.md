@@ -8,52 +8,52 @@ dashedName: build-a-javascript-calculator
 
 # --description--
 
-**Objective:** ลองทำแอป [CodePen.io](https://codepen.io) ให้มีฟังก์ชันเหมือนกับ: <https://codepen.io/freeCodeCamp/full/wgGVVX>.
+**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/wgGVVX>.
 
-ลองดู [user stories](https://en.wikipedia.org/wiki/User_story) ข้างล่าง และทำให้ระบบ Test ทังหมด run ผ่าน โดยสามารถออกแบบหน้าตาแอปตามสไตล์ของคุณเองได้เลย
+Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story) and get all of the tests to pass. Give it your own personal style.
 
-คุณสามารถใช้ HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux และ jQuery รวมกันได้ในการทำโปรเจคนี้ เนื่องจากบทเรียนนี้คือบทเรียนเกี่ยวกับ frontend framework คุณจึงควรนำ frontend framework มาใช้งานด้วย (อย่าง React เป็นต้น) ไม่แนะนำให้ใช้ภาษาหรือเทคโนโลยีอื่นๆ นอกจากที่ให้ไว้ข้างบน เราจะช่วยแก้ไขหรือช่วยเหลือหากเกิดบักหรือปัญหาจากภาษาที่แนะนำข้างต้นเท่านั้น 
+You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and jQuery to complete this project. You should use a frontend framework (like React for example) because this section is about learning frontend frameworks. Additional technologies not listed above are not recommended and using them is at your own risk. We are looking at supporting other frontend frameworks like Angular and Vue, but they are not currently supported. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
 
-**User Story #1:** เครื่องคิดเลขของฉันจะต้องมี element ที่คลิกได้ มีเครื่องหมาย `=` (เครื่องหมายเท่ากับ) ให้กำหนดให้มีไอดีที่สอดคล้องกันคือ `id="equals"`
+**User Story #1:** My calculator should contain a clickable element containing an `=` (equal sign) with a corresponding `id="equals"`.
 
-**User Story #2:** เครื่องคิดเลขของฉันจะต้องมี 10 elements ที่คลิกได้  แต่ละอันจะมีตัวเลข 1 ตัว ไล่กันไปตั้งแต่ 0-9  และกำหนดให้มีไอดีที่สอดคล้องกันคือ: `id="zero"`, `id="one"`, `id="two"`, `id="three"`, `id="four"`, `id="five"`, `id="six"`, `id="seven"`, `id="eight"` และ `id="nine"`
+**User Story #2:** My calculator should contain 10 clickable elements containing one number each from 0-9, with the following corresponding IDs: `id="zero"`, `id="one"`, `id="two"`, `id="three"`, `id="four"`, `id="five"`, `id="six"`, `id="seven"`, `id="eight"`, and `id="nine"`.
 
-**User Story #3:** เครื่องคิดเลขของฉันจะต้องมี 4 elements ที่คลิกได้ แต่ละอันจะมีเครื่องหมาย operator ทางคณิตศาสตร์ตั้งต้น (บวก ลบ คูณ และหาร) และกำหนดให้มีไอดีที่สอดคล้องกันคือ: `id="add"`, `id="subtract"`, `id="multiply"`, `id="divide"`
+**User Story #3:** My calculator should contain 4 clickable elements each containing one of the 4 primary mathematical operators with the following corresponding IDs: `id="add"`, `id="subtract"`, `id="multiply"`, `id="divide"`.
 
-**User Story #4:** เครื่องคิดเลขของฉันจะต้องมี element ที่คลิกได้ คือเครื่องหมาย `.` (จุดทศนิยม) และกำหนดให้มีไอดีที่สอดคล้องกันคือ `id="decimal"`.
+**User Story #4:** My calculator should contain a clickable element containing a `.` (decimal point) symbol with a corresponding `id="decimal"`.
 
-**User Story #5:** เครื่องคิดเลขของฉันจะต้องมี element ที่คลิกได้ และกำหนดให้มีไอดีว่า `id="clear"`.
+**User Story #5:** My calculator should contain a clickable element with an `id="clear"`.
 
-**User Story #6:** เครื่องคิดเลขของฉันจะต้องมี element สำหรับการแสดงค่าตัวเลข และกำหนดให้มีไอดี `id="display"`.
+**User Story #6:** My calculator should contain an element to display values with a corresponding `id="display"`.
 
-**User Story #7:** เมื่อไหร่ก็ตามที่กดปุ่ม `clear` จะทำการเคลียทั้งค่า input และ output และทำให้เครื่องคิดเลขกลับไปสู่สถานะเริ่มต้น: เลข 0 จะต้องเป็นค่าที่ถูกแสดงบน element ที่มีไอดี `display`
+**User Story #7:** At any time, pressing the `clear` button clears the input and output values, and returns the calculator to its initialized state; 0 should be shown in the element with the id of `display`.
 
-**User Story #8:** เมื่อฉันใส่ input เป็นค่าตัวเลขต่างๆ ฉันจะต้องสามารถเห็นตัวเลขเหล่านั้นถูกแสดงบน element ที่มีไอดี `display`.
+**User Story #8:** As I input numbers, I should be able to see my input in the element with the id of `display`.
 
-**User Story #9:** ไม่ว่าในลำดับใด ฉันสามารถที่จะเพิ่ม operator บวก ลบ คูณ และ หาร จำนวนของตัวเลขที่ไม่จำกัดความยาว และเมื่อฉันกด `=` ผลลัพธ์ที่ถูกต้องจะถูกแสดงบน element ที่มีไอดี `display`.
+**User Story #9:** In any order, I should be able to add, subtract, multiply and divide a chain of numbers of any length, and when I hit `=`, the correct result should be shown in the element with the id of `display`.
 
-**User Story #10:** เพื่อกด input ตัวเลขเข้าไป เครื่องคิดเลขของฉันจะไม่ยอมให้กดตัวเลขที่ขึ้นต้นด้วย 0 หลายตัวได้
+**User Story #10:** When inputting numbers, my calculator should not allow a number to begin with multiple zeros.
 
-**User Story #11:** เมื่อกด decimal element เครื่องหมาย `.` จะต้องปรากฎต่อจากค่าที่แสดงอยู่ปัจจุบัน การเพิ่ม `.` ในตัวเลขชุดเดียวกันมากกว่า 1 ตัวไม่สามารถทำได้
+**User Story #11:** When the decimal element is clicked, a `.` should append to the currently displayed value; two `.` in one number should not be accepted.
 
-**User Story #12:** ฉันสามารถทำการคำนวณได้ทั้ง บอก ลบ คูณ หาร กับตัวเลขที่มีจุดทศนิยมได้
+**User Story #12:** I should be able to perform any operation (`+`, `-`, `*`, `/`) on numbers containing decimal points.
 
-**User Story #13:** หากมี 2 operator ถูกกดเข้ามาต่อจากกัน การคำนวณจะต้องถูกคิดจาก operator ตัวหลังสุด (ไม่รวมกรณีของจำนวนตัวเลขที่เป็นลบ (`-`)) ตัวอย่างเช่น  ถ้าหากใส่ค่า `5 + * 7 =` ผลลัพธ์จะต้องเท่ากับ `35` (คือการคำนวณจาก `5 * 7`) และถ้าใส่ค่า `5 * - 5 =` is ผลลัพธ์จะต้องเท่ากับ `-25` (คือการคำนวณจาก `5 * (-5)`).
+**User Story #13:** If 2 or more operators are entered consecutively, the operation performed should be the last operator entered (excluding the negative (`-`) sign). For example, if `5 + * 7 =` is entered, the result should be `35` (i.e. `5 * 7`); if `5 * - 5 =` is entered, the result should be `-25` (i.e. `5 * (-5)`).
 
-**User Story #14:** การกด operator หลังจากเครื่องหมาย `=` จะเป็นการเพิ่มเครื่องหมาย operator ต่อจากผลลัพธ์ก่อนหน้านี้ เพื่อเริ่มคำนวณใหม่
+**User Story #14:** Pressing an operator immediately following `=` should start a new calculation that operates on the result of the previous evaluation.
 
-**User Story #15:** เพื่อความแม่นยำ เครื่องคิดเลขของฉันควรจะมีผลลัพธ์ที่มีทศนิยมที่เหมาะสมหลายๆ ตำแหน่ง ก่อนที่จะทำการปัดเศษ (หมายเหตุ ควรจะมีทศนิยมอย่างน้อย 4 ตำแหน่ง เพื่อเหตุผลในด้านความแม่นยำ เพื่อรับมือกับผลลัพธ์ที่มีทศนิยมหลายตำแหน่ง เช่นกรณี `2 / 7` เป็นต้น)
+**User Story #15:** My calculator should have several decimal places of precision when it comes to rounding (note that there is no exact standard, but you should be able to handle calculations like `2 / 7` with reasonable precision to at least 4 decimal places).
 
-**Note On Calculator Logic:** โปรดทราบไว้ว่ามันมีหลักการคำนวณของเครื่องคิดเลขโดยหลัก 2 หลักการด้วยกัน คือ <dfn>immediate execution logic</dfn> และ <dfn>formula logic</dfn> ตัวอย่างของเรานั้นจะใช้หลักการ formula logic และการสังเกตลำดับความสำคัญของ opertor แต่ไม่ได้ใช้ immediate execution logic แต่เรายอมรับได้ทั้งสอง logic และโปรดทราบไว้ว่าในกรณีที่คุณเลือกใช้ logic ใด logic หนึ่ง ผลลัพธ์จากเครื่องคิดเลขของคุณอาจจะไม่ตรงกันกับของเราในบางสมการ (ดูตัวอย่างข้างล่าง) อย่ามองว่ากรณีนี้เป็น bug ตราบใดที่ผลลัพธ์ของคุณยังตรงกันกับเครื่องคิดเลขทั่วไปอื่นๆ  
+**Note On Calculator Logic:** It should be noted that there are two main schools of thought on calculator input logic: <dfn>immediate execution logic</dfn> and <dfn>formula logic</dfn>. Our example utilizes formula logic and observes order of operation precedence, immediate execution does not. Either is acceptable, but please note that depending on which you choose, your calculator may yield different results than ours for certain equations (see below example). As long as your math can be verified by another production calculator, please do not consider this a bug.
 
 **EXAMPLE:** `3 + 5 x 6 - 2 / 4 =`  
 
 -   **Immediate Execution Logic:** `11.5`
 -   **Formula/Expression Logic:** `32.5`
 
-คุณสามารถสร้างโปรเจคของคุณโดย <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>ใช้ CodePen template นี้</a> แล้วคลิก `Save` เพื่อสร้าง pen ของคุณเอง หรือคุณสามารถใช้ลิงก์ CND นี้ เพื่อรันการทดสอบใน environment ที่คุณต้องการ: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
+You can build your project by <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> and clicking `Save` to create your own pen. Or you can use this CDN link to run the tests in any environment you like: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
 
-ให้ submit ส่ง URL ของโปรเจคที่ทำสำเร็จและได้รันการทดสอบผ่านหมดแล้ว เมื่อเสร็จงาน
+Once you're done, submit the URL to your working project with all its tests passing.
 
 # --solutions--
 

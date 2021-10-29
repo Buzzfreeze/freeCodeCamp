@@ -10,15 +10,15 @@ dashedName: target-elements-by-id-using-jquery
 
 # --description--
 
-You can also target elements by their id attributes.
+คุณสามารถเลือกกำหนดเป้า element โดยใช้ id attribute ได้
 
-First target your `button` element with the id `target3` by using the `$("#target3")` selector.
+โดยเริ่มจาก เลือกเป้าหมายเป็น `button` element ที่มี id `target3` โดยใช้ `$("#target3")` selector
 
-Note that, just like with CSS declarations, you type a `#` before the id's name.
+โปรดทราบว่าคุณจะต้องพิมพ์ `#` หน้าชื่อ id เช่นเดียวกับการประกาศคำสั่ง CSS
 
-Then use jQuery's `.addClass()` function to add the classes `animated` and `fadeOut`.
+หลังจากนั้นให้ใช้ฟังก์ชัน `.addClass()` ของ jQuery เพื่อเพิ่ม class `animated` และ `fadeOut`
 
-Here's how you'd make the `button` element with the id `target6` fade out:
+นี่คือวิธีการที่คุณจะทำให้ `button` element ที่มี id `target6` มีเอฟเฟค fade out
 
 ```js
 $("#target6").addClass("animated fadeOut");
@@ -26,13 +26,13 @@ $("#target6").addClass("animated fadeOut");
 
 # --hints--
 
-You should select the `button` element with the `id` of `target3` and use the jQuery `addClass()` function to give it the class of `animated`.
+คุณจะต้องเลือก `button` element ที่มี `id` ว่า `target3` และใช้ฟังก์ชัน jQuery `addClass()` เพื่อที่จะเพิ่ม class `animated` เข้าไป
 
 ```js
 assert($('#target3').hasClass('animated'));
 ```
 
-You should target the element with the id `target3` and use the jQuery `addClass()` function to give it the class `fadeOut`.
+ควรเลือกเป้าหมาย element ที่มี id `target3` และใช้ฟังก์ชัน jQuery `addClass()` เพื่อที่จะเพิ่ม class `fadeOut` เข้าไป
 
 ```js
 assert(
@@ -41,7 +41,7 @@ assert(
 );
 ```
 
-You should only use jQuery to add these classes to the element.
+คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
 
 ```js
 assert(!code.match(/class.*animated/g));

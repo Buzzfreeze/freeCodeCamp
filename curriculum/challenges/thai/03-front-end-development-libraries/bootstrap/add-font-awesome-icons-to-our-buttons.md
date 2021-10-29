@@ -11,37 +11,37 @@ dashedName: add-font-awesome-icons-to-our-buttons
 
 # --description--
 
-Font Awesome คือ library ไอคอนที่ใช้งานง่าย ซึ่งเป็นได้ทั้ง เว็บฟอนต์ หรือรูปเวกเตอร์ โดยที่จะมีคุณสมบัติเหมือนฟอนต์ คือ สามารถกำหนดขนาดเป็นหน่วย pixel ได้ หรือถ้าหากไม่ได้กำหนด ก็จะมีขนาดเท่ากันกับขนาดฟอนต์ใน parent element ของ HTML นั้น
+Font Awesome is a convenient library of icons. These icons can be webfonts or vector graphics. These icons are treated just like fonts. You can specify their size using pixels, and they will assume the font size of their parent HTML elements.
 
-โดยสามารถติดตั้ง Font Awesome ในแอปไหนก็ได้ แค่ใส่โค้ดข้างล่างในส่วน head ของ HTML:
+You can include Font Awesome in any app by adding the following code to the top of your HTML:
 
 ```html
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 ```
 
-เราได้ติดตั้ง Font Awesome ไว้แล้วบนเพจนี้ ไม่จำเป็นต้องใส่โค้ดข้างบนอีก ในการใช้งาน
+In this case, we've already added it for you to this page behind the scenes.
 
-เดิมทีนั้น `i` element ถูกใช้เพื่อทำให้ฟอนต์เป็นตัวเอียง แต่ปัจจุบันถูกนำมาใช้เพื่อเพิ่มไอคอนมากกว่า ซึ่งคุณสามารถเพิ่ม class ต่างๆ ของ Font Awesome ใน `i` element เพื่อเปลี่ยนเป็นไอคอน ตัวอย่างเช่น:
+The `i` element was originally used to make other elements italic, but is now commonly used for icons. You can add the Font Awesome classes to the `i` element to turn it into an icon, for example:
 
 ```html
 <i class="fas fa-info-circle"></i>
 ```
 
-หมายเหตุ `span` element ก็สามารถใช้เพื่อเพิ่มไอคอนแทน `i` ได้เช่นกัน
+Note that the `span` element is also acceptable for use with icons.
 
 # --instructions--
 
-ลองใช้ Font Awesome ในการเพิ่มไอคอน `thumbs-up` ไปในปุ่ม Like โดยใช้ `i` element ที่มี class ชื่อว่า `fas` และ `fa-thumbs-up` แล้วให้คำว่า `Like` อยู่ตามหลังไอคอน
+Use Font Awesome to add a `thumbs-up` icon to your like button by giving it an `i` element with the classes `fas` and `fa-thumbs-up`. Make sure to keep the text `Like` next to the icon.
 
 # --hints--
 
-ใส่ class `fas` และ `fa-thumbs-up` ไปใน `i` element
+You should add an `i` element with the classes `fas` and `fa-thumbs-up`.
 
 ```js
 assert($('i').is('.fas.fa-thumbs-up') || $('span').is('.fas.fa-thumbs-up'));
 ```
 
-ไอคอน `fa-thumbs-up` จะต้องอยู่ภายในปุ่ม Like
+Your `fa-thumbs-up` icon should be located within the Like button.
 
 ```js
 assert(
@@ -52,7 +52,7 @@ assert(
 );
 ```
 
-`i` element ควรจะต้องอยู่ใน `button` element
+Your `i` element should be nested within your `button` element.
 
 ```js
 assert(
@@ -61,7 +61,7 @@ assert(
 );
 ```
 
-อย่าลืมปิด tag `i`
+Your icon element should have a closing tag.
 
 ```js
 assert(code.match(/<\/i>|<\/span>/g));

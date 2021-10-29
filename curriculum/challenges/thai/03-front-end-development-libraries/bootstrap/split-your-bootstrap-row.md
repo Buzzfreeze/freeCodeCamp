@@ -8,19 +8,19 @@ dashedName: split-your-bootstrap-row
 
 # --description--
 
-ตอนนี้เราได้สร้าง row ของ Bootstrap เรียบร้อยแล้ว เราลองมาสร้าง column 2 column เพื่อที่จะใส่ element อื่นๆ ข้างใน
+Now that we have a Bootstrap Row, let's split it into two columns to house our elements.
 
-เพิ่ม 2 `div` elements ภายใน row แล้วให้ทั้งสอง `div` มี class `col-xs-6`
+Create two `div` elements within your row, both with the class `col-xs-6`.
 
 # --hints--
 
-`div class="col-xs-6"` ทั้ง 2 ต้องอยู่ภายใน `div class="row"` element
+Two `div class="col-xs-6"` elements should be nested within your `div class="row"` element.
 
 ```js
 assert($('div.row > div.col-xs-6').length > 1);
 ```
 
-อย่าลืม tag ปิด สำหรับทุกๆ `div` elements
+All your `div` elements should have closing tags.
 
 ```js
 assert(

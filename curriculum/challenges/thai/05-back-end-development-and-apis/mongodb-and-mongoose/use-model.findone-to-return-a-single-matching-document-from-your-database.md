@@ -8,15 +8,15 @@ dashedName: use-model-findone-to-return-a-single-matching-document-from-your-dat
 
 # --description--
 
-`Model.findOne()` จะทำงานเหมือน `Model.find()` แต่จะส่งคืนเอกสารเพียงฉบับเดียว (ที่ไม่ใช่อาร์เรย์) แม้ว่าจะมีหลายรายการก็ตาม วิธีนี้มีประโยชน์อย่างยิ่ง เมื่อทำการค้นหาโดยคุณสมบัติที่คุณได้ประกาศไว้แบบไม่ซ้ำกัน
+`Model.findOne()` behaves like `Model.find()`, but it returns only one document (not an array), even if there are multiple items. It is especially useful when searching by properties that you have declared as unique.
 
 # --instructions--
 
-แก้ไขฟังก์ชั่น `findOneByFood` เพื่อที่จะค้นหาบุคคลที่เมีอาหารบางอย่างในรายการโปรด ใช้ฟังก์ชัน `Model.findOne() -> Person` และใช้ฟังก์ชั่นอาร์กิวเมนต์ `food` เป็นคีย์ในการค้นหา
+Modify the `findOneByFood` function to find just one person which has a certain food in the person's favorites, using `Model.findOne() -> Person`. Use the function argument `food` as search key.
 
 # --hints--
 
-สามารถค้นหาไอเทมได้สำเร็จ
+Find one item should succeed
 
 ```js
 (getUserInput) =>

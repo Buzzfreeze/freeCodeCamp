@@ -14,7 +14,7 @@ dashedName: initializing-different-arrays
 
 ## --text--
 
-ผลลัพธ์จะเกิดอะไรขึ้น เมื่อ code ทำการ print ออกมา?
+What will the following code print?
 
 ```py
 a = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])

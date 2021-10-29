@@ -8,7 +8,7 @@ dashedName: use-array-filter-to-dynamically-filter-an-array
 
 # --description--
 
-The `map` array method is a powerful tool that you will use often when working with React. Another method related to `map` is `filter`, which filters the contents of an array based on a condition, then returns a new array. For example, if you have an array of users that all have a property `online` which can be set to `true` or `false`, you can filter only those users that are online by writing:
+`map` array method เป็นเครื่องมืออันทรงพลังที่คุณจะใช้บ่อยเมื่อทำงานกับ React อีก method หนึ่งที่เกี่ยวข้องกับ `map` คือ `filter` ซึ่งกรองเนื้อหาของ array ตามเงื่อนไข แล้ว return array ใหม่ ตัวอย่างเช่น หากคุณมี array ของ users ที่ทุกคนมี property `online` ซึ่งสามารถตั้งค่าเป็น `true` หรือ `false` คุณสามารถกรองเฉพาะ users ที่ออนไลน์โดยการเขียน:
 
 ```js
 let onlineUsers = users.filter(user => user.online);
@@ -16,11 +16,11 @@ let onlineUsers = users.filter(user => user.online);
 
 # --instructions--
 
-In the code editor, `MyComponent`'s `state` is initialized with an array of users. Some users are online and some aren't. Filter the array so you see only the users who are online. To do this, first use `filter` to return a new array containing only the users whose `online` property is `true`. Then, in the `renderOnline` variable, map over the filtered array, and return a `li` element for each user that contains the text of their `username`. Be sure to include a unique `key` as well, like in the last challenges.
+ใน code editor นั้น `state` ของ `MyComponent` จะเริ่มต้นด้วย array ของ users ซึ่ง users บางคนออนไลน์และบางคนไม่ได้ออนไลน์ ให้ลองกรอง array เพื่อให้คุณเห็นเฉพาะ users ที่ออนไลน์ ลองทำโดยก่อนอื่นให้ใช้ `filter` เพื่อ return array ใหม่ที่มีเฉพาะ users ที่มี`online` property เป็น `true` จากนั้นในตัวแปร `renderOnline` ให้ map array ที่กรองแล้ว return `li` element สำหรับ user แต่ละรายที่มีข้อความของ `username` อย่าลืมใส่ `key` เฉพาะที่ไม่ซ้ำใครด้วย เช่นเดียวกับในแบบทดสอบครั้งก่อน
 
 # --hints--
 
-`MyComponent` should exist and render to the page.
+`MyComponent` ควรมีและเรนเดอร์ไปยังเพจ
 
 ```js
 assert.strictEqual(
@@ -29,7 +29,7 @@ assert.strictEqual(
 );
 ```
 
-`MyComponent`'s state should be initialized to an array of six users.
+State ของ `MyComponent` ควรเริ่มต้นด้วย array ของ 6 users
 
 ```js
 assert(
@@ -40,7 +40,7 @@ assert(
 );
 ```
 
-`MyComponent` should return a `div`, an `h1`, and then an unordered list containing `li` elements for every user whose online status is set to `true`.
+`MyComponent` ควร return `div`, `h1` และตามด้วย `ul` ที่มี `li` element สำหรับแต่ละ user ที่สถานะออนไลน์ถูกตั้งไว้ที่ `true`
 
 ```js
 (() => {
@@ -83,7 +83,7 @@ assert(
 })();
 ```
 
-`MyComponent` should render `li` elements that contain the `username` of each online user.
+`MyComponent` ควรเรนเดอร์ `li` elements ที่มี `username` ของแต่ละ user ที่ ออนไลน์
 
 ```js
 (() => {
@@ -109,7 +109,8 @@ assert(
 })();
 ```
 
-Each list item element should have a unique `key` attribute.
+แต่ละ list item element ควรมี `key` attribute เฉพาะไม่ซ้ำกัน
+
 
 ```js
 assert(

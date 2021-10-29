@@ -14,7 +14,7 @@ dashedName: networking-using-urllib-in-python
 
 ## --text--
 
-ผลลัพธ์ของโค้ดต่อไปนี้ จะเป็นอย่างไร ?
+What will the output of the following code be like?:
 
 ```python
 import urllib.request
@@ -25,16 +25,17 @@ for line in fhand:
 
 ## --answers--
 
-เนื้อหาของ "romeo.txt"
+Just contents of "romeo.txt".
 
 ---
 
-หัวข้อและเนื้อหาของ "romeo.txt"
+A header and the contents of "romeo.txt".
 
 ---
 
-ห้อข้อด้านบน ด้านล่าง และเนื้อหาของ "romeo.txt"
+A header, a footer, and the contents of "romeo.txt".
 
 ## --video-solution--
 
 1
+

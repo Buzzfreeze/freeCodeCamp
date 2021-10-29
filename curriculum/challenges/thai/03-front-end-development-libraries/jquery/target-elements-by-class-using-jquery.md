@@ -10,17 +10,17 @@ dashedName: target-elements-by-class-using-jquery
 
 # --description--
 
-คุณได้รู้วิธีการทำให้ `button` element ทั้งหมดของคุณมีเอฟเฟคเด้งมาแล้ว โดยการเลือกเป้าหมายด้วย `$("button")` แล้วจึงเพิ่ม CSS class ให้ ด้วย `.addClass("animated bounce");`
+You see how we made all of your `button` elements bounce? We selected them with `$("button")`, then we added some CSS classes to them with `.addClass("animated bounce");`.
 
-`.addClass()` เป็นฟังก์ชันที่ทำให้คุณสามารถเพิ่ม class ให้กับ element ได้
+You just used jQuery's `.addClass()` function, which allows you to add classes to elements.
 
-อย่างแรก ลองเล็งเป้าหมาย `div` elements ที่มี class `well` โดยการใช้ `$(".well")` selector
+First, let's target your `div` elements with the class `well` by using the `$(".well")` selector.
 
-โปรดทราบว่าคุณจะต้องพิมพ์ `.` หน้าชื่อ class เช่นเดียวกับการประกาศคำสั่ง CSS
+Note that, just like with CSS declarations, you type a `.` before the class's name.
 
-จากนั้นให้ใช้ฟังก์ชัน `.addClass()` ของ jQuery เพื่อเพิ่ม class `animated` และ `shake`
+Then use jQuery's `.addClass()` function to add the classes `animated` and `shake`.
 
-อย่างเช่น จะทำให้ element ทั้งหมดที่มี class `text-primary` มีเอฟเฟคสั่นโดยการเพิ่มโค้ดข้างล่างไปใน `document ready function`:
+For example, you could make all the elements with the class `text-primary` shake by adding the following to your `document ready function`:
 
 ```js
 $(".text-primary").addClass("animated shake");
@@ -28,13 +28,13 @@ $(".text-primary").addClass("animated shake");
 
 # --hints--
 
-คุณจะต้องใช้ฟังก์ชัน jQuery `addClass()` เพื่อเพิ่ม class animated` และ `shake`ให้แก่ element ทุกอันที่มี class `well`
+You should use the jQuery `addClass()` function to give the classes `animated` and `shake` to all your elements with the class `well`.
 
 ```js
 assert($('.well').hasClass('animated') && $('.well').hasClass('shake'));
 ```
 
-คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
+You should only use jQuery to add these classes to the element.
 
 ```js
 assert(!code.match(/class\.\*animated/g));

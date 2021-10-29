@@ -8,17 +8,17 @@ dashedName: get-route-parameter-input-from-the-client
 
 # --description--
 
-เมื่อสร้าง API เราช่วยให้ผู้ใช้สามารถสื่อสารกับเราถึงสิ่งที่พวกเขาต้องการพร้อมได้รับจากบริการจากเรา ตัวอย่างเช่น หากลูกค้าร้องขอข้อมูลเกี่ยวกับผู้ใช้ในฐานข้อมูล พวกเขาต้องแจ้งให้เราทราบว่าพวกเขาสนใจผู้ใช้รายไหน อีกวิธีหนึ่งที่เป็นไปได้ในการบรรลุผลลัพธ์นี้คือการใช้พารามิเตอร์เส้นทาง ซึ่งพารามิเตอร์เส้นทางคือส่วนของ URL ที่คั่นด้วยเครื่องหมายทับ (/) และแต่ละส่วนจะบันทึกค่าของส่วน URL ที่ตรงกับตำแหน่ง ค่าที่จับได้สามารถพบได้ใน `req.params`อ็อบเจ็กต์ 
+When building an API, we have to allow users to communicate to us what they want to get from our service. For example, if the client is requesting information about a user stored in the database, they need a way to let us know which user they're interested in. One possible way to achieve this result is by using route parameters. Route parameters are named segments of the URL, delimited by slashes (/). Each segment captures the value of the part of the URL which matches its position. The captured values can be found in the `req.params` object.
 
 <blockquote>route_path: '/user/:userId/book/:bookId'<br>actual_request_URL: '/user/546/book/6754' <br>req.params: {userId: '546', bookId: '6754'}</blockquote>
 
 # --instructions--
 
-สร้างเซิร์ฟเวอร์ echo ด้วยการติดตั้งที่ `GET /:word/echo` การตอบสนองด้วยอ็อบเจ็กต์ของ JSON สามารถทำได้ โดยใช้โครงสร้าง `{echo: word}` และคุณสามารถค้นหาคำซ้ำได้ด้วยคำสั่ง `req.params.word` นอกจากนี้คุณสามารถทดสอบเส้นทางได้จากแถบที่อยู่ของเบราว์เซอร์ ,
+Build an echo server, mounted at the route `GET /:word/echo`. Respond with a JSON object, taking the structure `{echo: word}`. You can find the word to be repeated at `req.params.word`. You can test your route from your browser's address bar, visiting some matching routes, e.g. `your-app-rootpath/freecodecamp/echo`.
 
 # --hints--
 
-การทดสอบที่ 1 : เซิร์ฟเวอร์ echo ของคุณควรที่จะหาคำซ้ำได้อย่างถูกต้อง
+Test 1 : Your echo server should repeat words correctly
 
 ```js
 (getUserInput) =>
@@ -36,7 +36,7 @@ dashedName: get-route-parameter-input-from-the-client
   );
 ```
 
-การทดสอบที่ 2 : เซิร์ฟเวอร์ echo ของคุณควรที่จะหาคำซ้ำได้อย่างถูกต้อง
+Test 2 : Your echo server should repeat words correctly
 
 ```js
 (getUserInput) =>

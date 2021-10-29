@@ -8,23 +8,23 @@ dashedName: create-a-bootstrap-headline
 
 # --description--
 
-เรามาเริ่มสร้างแอปจากศูนย์กันดีกว่า เพื่อฝึกทักษะการใช้ HTML, CSS และ Bootstrap
+Now let's build something from scratch to practice our HTML, CSS and Bootstrap skills.
 
-เราจะสร้างแอปที่ชื่อว่า jQuery playground ซึ่งจะใช้ต่อยอดในแบบฝึกหัด jQuery ในบทเรียนต่อๆ ไป
+We'll build a jQuery playground, which we'll soon put to use in our jQuery challenges.
 
-โดยเริ่มจากสร้าง `h3` element ที่มีข้อความว่า `jQuery Playground`
+To start with, create an `h3` element, with the text `jQuery Playground`.
 
-เปลี่ยนสี `h3` element ด้วย class `text-primary` ของ Bootstrap และกำหนดให้ข้อความอยู่ตรงกลางด้วย Bootstrap class `text-center`
+Color your `h3` element with the `text-primary` Bootstrap class, and center it with the `text-center` Bootstrap class.
 
 # --hints--
 
-เพิ่ม `h3` element บนเพจ
+You should add an `h3` element to your page.
 
 ```js
 assert($('h3') && $('h3').length > 0);
 ```
 
-อย่าลืม tag ปิด ของ `h3` element
+Your `h3` element should have a closing tag.
 
 ```js
 assert(
@@ -34,19 +34,19 @@ assert(
 );
 ```
 
-เพิ่มสีของ `h3` element โดยการใส่ class ชื่อ `text-primary`
+Your `h3` element should be colored by applying the class `text-primary`
 
 ```js
 assert($('h3').hasClass('text-primary'));
 ```
 
-ทำให้ `h3` element อยู่ตรงกลางเพจ โดยการใส่ class ชื่อ `text-center`
+Your `h3` element should be centered by applying the class `text-center`
 
 ```js
 assert($('h3').hasClass('text-center'));
 ```
 
-ใส่ข้อความใน `h3` element ว่า `jQuery Playground`
+Your `h3` element should have the text `jQuery Playground`.
 
 ```js
 assert.isTrue(/jquery(\s)+playground/gi.test($('h3').text()));

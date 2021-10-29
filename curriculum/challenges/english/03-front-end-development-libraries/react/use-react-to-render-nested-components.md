@@ -8,23 +8,23 @@ dashedName: use-react-to-render-nested-components
 
 # --description--
 
-The last challenge showed a simple way to compose two components, but there are many different ways you can compose components with React.
+แบบทดสอบที่ผ่านมาได้แสดงให้เห็นวิธีง่ายๆ ในการรวม components สองส่วน แต่มีหลายวิธีที่คุณสามารถรวม components ด้วย React ได้
 
-Component composition is one of React's powerful features. When you work with React, it is important to start thinking about your user interface in terms of components like the App example in the last challenge. You break down your UI into its basic building blocks, and those pieces become the components. This helps to separate the code responsible for the UI from the code responsible for handling your application logic. It can greatly simplify the development and maintenance of complex projects.
+การประกอบ Component เป็นหนึ่งในคุณสมบัติที่ทรงพลังของ React เมื่อคุณทำงานกับ React สิ่งสำคัญคือต้องเริ่มคิดเกี่ยวกับ user interface ของคุณในแง่ของ components ต่างๆ เช่น แอปในแบบทดสอบที่ผ่านมา คุณแบ่ง UI ของคุณออกเป็น building blocks พื้นฐาน และชิ้นส่วนเหล่านั้นจะกลายเป็น components ซึ่งจะช่วยแยกโค้ดที่รับผิดชอบในส่วน UI ออกจากโค้ดที่รับผิดชอบในการจัดการ logic ของแอปพลิเคชันของคุณ มันสามารถลดความซับซ้อนในการพัฒนาและบำรุงรักษาโปรเจคที่ซับซ้อนได้อย่างมาก
 
 # --instructions--
 
-There are two functional components defined in the code editor, called `TypesOfFruit` and `Fruits`. Take the `TypesOfFruit` component and compose it, or *nest* it, within the `Fruits` component. Then take the `Fruits` component and nest it within the `TypesOfFood` component. The result should be a child component, nested within a parent component, which is nested within a parent component of its own!
+มีสอง functional components ที่กำหนดไว้ใน code editor เรียกว่า `TypesOfFruit` และ `Fruits` ให้นำ `TypesOfFruit` component มาประกอบ หรือนำไป *ซ้อน* ภายใน `Fruits` component จากนั้นนำ `Fruits` component มาซ้อนไว้ใน `TypesOfFood` component ผลลัพธ์ที่ได้ควรเป็น child component ซ้อนอยู่ภายใน parent component ซึ่งซ้อนอยู่ภายใน parent component ของมันเอง!
 
 # --hints--
 
-The `TypesOfFood` component should return a single `div` element.
+`TypesOfFood` component ควร return `div` element เดียว
 
 ```js
 assert(Enzyme.shallow(React.createElement(TypesOfFood)).type() === 'div');
 ```
 
-The `TypesOfFood` component should return the `Fruits` component.
+`TypesOfFood` component ควร return `Fruits` component
 
 ```js
 assert(
@@ -33,7 +33,7 @@ assert(
 );
 ```
 
-The `Fruits` component should return the `TypesOfFruit` component.
+`Fruits` component ควร return `TypesOfFruit` component
 
 ```js
 assert(
@@ -42,7 +42,7 @@ assert(
 );
 ```
 
-The `TypesOfFruit` component should return the `h2` and `ul` elements.
+`TypesOfFruit` component ควร return `h2` และ `ul` elements
 
 ```js
 assert(

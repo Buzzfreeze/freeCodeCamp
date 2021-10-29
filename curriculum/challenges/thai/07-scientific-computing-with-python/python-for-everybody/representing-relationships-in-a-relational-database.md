@@ -14,24 +14,25 @@ dashedName: representing-relationships-in-a-relational-database
 
 ## --text--
 
-ข้อใดคือ foreign key ?
+What is a foreign key?
 
 ## --answers--
 
-key ที่ไม่ควรจะมี
+A key that is not supposed to be there.
 
 ---
 
-key ที่ใช้ ตัวอักษรที่ไม่ใช่ภาษาละติน
+A key that uses non-latin characters.
 
 ---
 
-ตัวเลข ที่บอก primary key ของแถวที่เกี่ยวข้องในตารางอื่น
+A number that points to the primary key of an associated row in a different table.
 
 ---
 
-key ที่ใช้เพื่อค้นหาแถว
+A key that the "real world" might use to look up a row.
 
 ## --video-solution--
 
 3
+

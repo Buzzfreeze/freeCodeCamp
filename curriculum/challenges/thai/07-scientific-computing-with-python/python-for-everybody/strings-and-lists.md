@@ -12,15 +12,15 @@ dashedName: strings-and-lists
 
 # --description--
 
-ตัวอย่างเพิ่มเติม:
+More resources:
 
-\- [ตัวอย่างที่ 1](https://www.youtube.com/watch?v=-9TfJF2dwHI)
+\- [Exercise](https://www.youtube.com/watch?v=-9TfJF2dwHI)
 
 # --question--
 
 ## --text--
 
-จากโค๊ดด้านล่าง n มีค่าเท่ากับอะไร ?
+What does n equal in this code?
 
 ```python
 words = 'His e-mail is q-lar@freecodecamp.org'
@@ -48,3 +48,4 @@ lar
 ## --video-solution--
 
 4
+

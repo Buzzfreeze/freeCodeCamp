@@ -8,17 +8,17 @@ dashedName: use-the-lifecycle-method-componentwillmount
 
 # --description--
 
-React components มี method พิเศษหลายอย่างที่ให้โอกาสในการดำเนินการ ณ จุดเฉพาะใน lifecycle ของ component สิ่งเหล่านี้เรียกว่า lifecycle methods หรือ lifecycle hooks ที่จะช่วยให้คุณสามารถจับ components ได้ในบางช่วงเวลา ซึ่งอาจจะเกิดขึ้นก่อนเรนเดอร์ ก่อนอัปเดต ก่อนรับ props ก่อนเลิกต่อเชื่อม และอื่นๆ ต่อไปนี้คือลิสต์รายการของ lifecycle methods: `componentWillMount()` `componentDidMount()` `shouldComponentUpdate()` `componentDidUpdate()` `componentWillUnmount()` บทเรียนต่อไปจะอธิบายครอบคลุมถึงกรณีการใช้งานพื้นฐานบางส่วนของ lifecycle methods เหล่านี้
+React components have several special methods that provide opportunities to perform actions at specific points in the lifecycle of a component. These are called lifecycle methods, or lifecycle hooks, and allow you to catch components at certain points in time. This can be before they are rendered, before they update, before they receive props, before they unmount, and so on. Here is a list of some of the main lifecycle methods: `componentWillMount()` `componentDidMount()` `shouldComponentUpdate()` `componentDidUpdate()` `componentWillUnmount()` The next several lessons will cover some of the basic use cases for these lifecycle methods.
 
-**Note:** `componentWillMount` lifecycle methods จะเลิกใช้งานในเวอร์ชันอนาคตของ 16.X และถูกถอดออกในเวอร์ชัน 17  [(ที่มา)](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
+**Note:** The `componentWillMount` Lifecycle method will be deprecated in a future version of 16.X and removed in version 17. [(Source)](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
 
 # --instructions--
 
-`componentWillMount()` method ถูกเรียกใช้ก่อน `render()` method เมื่อ component ถูกเชื่อมเข้ากับ DOM บันทึกบางอย่างลงในคอนโซลภายใน `componentWillMount()` - คุณอาจต้องเปิดคอนโซลเบราว์เซอร์ของคุณเพื่อดูผลลัพธ์
+The `componentWillMount()` method is called before the `render()` method when a component is being mounted to the DOM. Log something to the console within `componentWillMount()` - you may want to have your browser console open to see the output.
 
 # --hints--
 
-`MyComponent` ควรเรนเดอร์ `div` element
+`MyComponent` should render a `div` element.
 
 ```js
 assert(
@@ -29,7 +29,7 @@ assert(
 );
 ```
 
-`console.log` ควรถูกเรียกใช้ใน `componentWillMount`
+`console.log` should be called in `componentWillMount`.
 
 ```js
 assert(

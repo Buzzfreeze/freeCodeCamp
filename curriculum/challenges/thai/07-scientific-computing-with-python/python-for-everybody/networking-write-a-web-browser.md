@@ -14,7 +14,7 @@ dashedName: networking-write-a-web-browser
 
 ## --text--
 
-เมื่อรันโค๊ดต่อไปนี้ จะเป็นการสร้างอะไรออกมา ?
+What does the following code create?:
 
 ```py
 import socket
@@ -34,20 +34,21 @@ mysock.close()
 
 ## --answers--
 
-web server อย่างง่าย
+A simple web server.
 
 ---
 
-email client อย่างง่าย
+A simple email client.
 
 ---
 
-todo list อย่างง่าย
+A simple todo list.
 
 ---
 
-web browser อย่างง่าย
+A simple web browser.
 
 ## --video-solution--
 
 4
+

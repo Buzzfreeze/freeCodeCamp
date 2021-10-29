@@ -12,27 +12,27 @@ dashedName: data-visualization-mailing-lists
 
 # --description--
 
-ตัวอย่างเพิ่มเติม:
+More resources:
 
-\- [ตัวอย่างที่ 1 : Geodata](https://www.youtube.com/watch?v=KfhslNzopxo)
+\- [Exercise: Geodata](https://www.youtube.com/watch?v=KfhslNzopxo)
 
-\- [ตัวอย่างที่ 2 : Gmane Model](https://www.youtube.com/watch?v=wSpl1-7afAk)
+\- [Exercise: Gmane Model](https://www.youtube.com/watch?v=wSpl1-7afAk)
 
-\- [ตัวอย่างที่ 3 : Gmane Spider](https://www.youtube.com/watch?v=H3w4lOFBUOI)
+\- [Exercise: Gmane Spider](https://www.youtube.com/watch?v=H3w4lOFBUOI)
 
-\- [ตัวอย่างที่ 4 : Gmane Viz](https://www.youtube.com/watch?v=LRqVPMEXByw)
+\- [Exercise: Gmane Viz](https://www.youtube.com/watch?v=LRqVPMEXByw)
 
-\- [ตัวอย่างที่ 5 : Page Rank](https://www.youtube.com/watch?v=yFRAZBkBDBs)
+\- [Exercise: Page Rank](https://www.youtube.com/watch?v=yFRAZBkBDBs)
 
-\- [ตัวอย่างที่ 6 : Page Spider](https://www.youtube.com/watch?v=sXedPQ_AnWA)
+\- [Exercise: Page Spider](https://www.youtube.com/watch?v=sXedPQ_AnWA)
 
-\- [ตัวอย่างที่ 7 : Page Viz](https://www.youtube.com/watch?v=Fm0hpkxsZoo)
+\- [Exercise: Page Viz](https://www.youtube.com/watch?v=Fm0hpkxsZoo)
 
 # --question--
 
 ## --text--
 
-ข้อใดเป็น JavaScript visualization library ?
+Which is a common JavaScript visualization library?
 
 ## --answers--
 
@@ -53,3 +53,4 @@ DATA6
 ## --video-solution--
 
 2
+

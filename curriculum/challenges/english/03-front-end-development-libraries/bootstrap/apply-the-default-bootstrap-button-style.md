@@ -8,19 +8,19 @@ dashedName: apply-the-default-bootstrap-button-style
 
 # --description--
 
-Bootstrap has another button class called `btn-default`.
+Bootstrap ยังมี class ของปุ่มอีกอัน ชื่อว่า `btn-default`
 
-Apply both the `btn` and `btn-default` classes to each of your `button` elements.
+มาลองใช้ทั้ง `btn` และ `btn-default` class ในแต่ละ  `button` element กัน
 
 # --hints--
 
-You should apply the `btn` class to each of your `button` elements.
+ให้เพิ่ม `btn` class ในทุก `button` element
 
 ```js
 assert($('.btn').length > 5);
 ```
 
-You should apply the `btn-default` class to each of your `button` elements.
+และเพิ่ม `btn-default` class ในทุก `button` element ด้วย
 
 ```js
 assert($('.btn-default').length > 5);

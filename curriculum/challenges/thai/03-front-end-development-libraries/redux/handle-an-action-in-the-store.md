@@ -8,29 +8,29 @@ dashedName: handle-an-action-in-the-store
 
 # --description--
 
-หลังจากสร้างและส่ง action แล้วนั้น Redux store จำเป็นต้องรู้วิธีตอบสนองต่อ action นั้น นี่คืองานของฟังก์ชัน `reducer` ซึ่ง Reducers ใน Redux มีหน้าที่ในการแก้ไข state ที่เกิดขึ้นเพื่อตอบสนองต่อ actions `reducer` ใช้ `state` และ `action` เป็น argument และจะ return `state` ใหม่เสมอ สิ่งสำคัญคือต้องเห็นว่านี่เป็นบทบาท **เท่านั้น** ของ reducer มันไม่มีผลข้างเคียงและมันไม่เคยเรียกใช้ API endpoint และไม่เคยมีความประหลาดใจที่ซ่อนอยู่ reducer เป็นเพียงฟังก์ชันบริสุทธิ์ที่รับ state และ action จากนั้น return state ใหม่
+After an action is created and dispatched, the Redux store needs to know how to respond to that action. This is the job of a `reducer` function. Reducers in Redux are responsible for the state modifications that take place in response to actions. A `reducer` takes `state` and `action` as arguments, and it always returns a new `state`. It is important to see that this is the **only** role of the reducer. It has no side effects — it never calls an API endpoint and it never has any hidden surprises. The reducer is simply a pure function that takes state and action, then returns new state.
 
-หลักการสำคัญอีกประการหนึ่งใน Redux คือ `state` เป็นแบบอ่านอย่างเดียว กล่าวอีกนัยหนึ่งฟังก์ชัน `reducer` จะต้อง  return สำเนาใหม่ของ `state`  **เสมอ** และไม่แก้ไข state โดยตรง Redux ไม่ได้บังคับใช้ state immutability นี้ อย่างไรก็ตามคุณต้องรับผิดชอบในการบังคับใช้ในโค้ดของฟังก์ชัน reducer ของคุณ คุณจะฝึกฝนสิ่งนี้ในแบบทดสอบต่อไป
+Another key principle in Redux is that `state` is read-only. In other words, the `reducer` function must **always** return a new copy of `state` and never modify state directly. Redux does not enforce state immutability, however, you are responsible for enforcing it in the code of your reducer functions. You'll practice this in later challenges.
 
 # --instructions--
 
-code editor มีตัวอย่างโค้ดก่อนหน้านี้และจุดเริ่มต้นของฟังก์ชัน `reducer` สำหรับคุณ ให้เติม bodyของฟังก์ชัน `reducer` เพื่อที่ว่าหากมันได้รับ action ของ type `'LOGIN'` มันก็จะ return state object ด้วยค่า `login` ที่เป็น `true` มิฉะนั้นจะ return `state` ปัจจุบัน โปรดทราบว่า `state` ปัจจุบันและ `action` จะถูกส่งไปยัง reducer ดังนั้นคุณจึงสามารถเข้าถึง action's type ได้โดยตรงด้วย `action.type`
+The code editor has the previous example as well as the start of a `reducer` function for you. Fill in the body of the `reducer` function so that if it receives an action of type `'LOGIN'` it returns a state object with `login` set to `true`. Otherwise, it returns the current `state`. Note that the current `state` and the dispatched `action` are passed to the reducer, so you can access the action's type directly with `action.type`.
 
 # --hints--
 
-การเรียกใช้ฟังก์ชัน `loginAction` ควร return object ที่มี type property ที่ตั้งค่า string เป็น `LOGIN`
+Calling the function `loginAction` should return an object with type property set to the string `LOGIN`.
 
 ```js
 assert(loginAction().type === 'LOGIN');
 ```
 
-Store ควรเริ่มต้นด้วย object ที่มี property `login` ที่เป็น `false`
+The store should be initialized with an object with property `login` set to `false`.
 
 ```js
 assert(store.getState().login === false);
 ```
 
-การส่ง `loginAction` ควรอัปเดต `login` property ใน store state เป็น `true`
+Dispatching `loginAction` should update the `login` property in the store state to `true`.
 
 ```js
 assert(
@@ -43,7 +43,7 @@ assert(
 );
 ```
 
-ถ้า action ไม่ใช่ type `LOGIN` store ควรจะต้อง return state ปัจจุบัน
+If the action is not of type `LOGIN`, the store should return the current state.
 
 ```js
 assert(

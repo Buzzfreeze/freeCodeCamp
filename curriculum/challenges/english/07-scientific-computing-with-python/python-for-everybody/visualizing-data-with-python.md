@@ -14,15 +14,15 @@ dashedName: visualizing-data-with-python
 
 ## --text--
 
-Most data needs to be \_\_\_\_\_\_ before using it.
+ทำไม ข้อมูลส่วนใหญ่ ต้องเป็น \_\_\_\_\_\_ ก่อนใช้งาน ?
 
 ## --answers--
 
-converted to JSON format
+แปลงเป็น JSON format
 
 ---
 
-graphed
+แปลงเป็นกราฟ
 
 ---
 
@@ -34,9 +34,8 @@ memorized
 
 ---
 
-turned into song
+เปลี่ยนเป็นเพลง
 
 ## --video-solution--
 
 3
-

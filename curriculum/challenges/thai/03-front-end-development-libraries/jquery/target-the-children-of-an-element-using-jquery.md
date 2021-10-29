@@ -8,11 +8,11 @@ dashedName: target-the-children-of-an-element-using-jquery
 
 # --description--
 
-เมื่อ HTML element ใดๆ ซ้อนอยู่ใน element อีกที เราจะเรียก element นั้นว่า <dfn>children</dfn> ของ elementที่มันซ้อนอยู่ ตัวอย่างเช่น button element ที่มีข้อความ `#target1`, `#target2`, และ `#target3` ทั้งหมดในแบบทดสอบนี้ เป็น children ของ `<div class="well" id="left-well">` element
+When HTML elements are placed one level below another they are called <dfn>children</dfn> of that element. For example, the button elements in this challenge with the text `#target1`, `#target2`, and `#target3` are all children of the `<div class="well" id="left-well">` element.
 
-jQuery มีฟังก์ชันที่เรียกว่า `children()` ที่จะให้ให้คุณเข้าถึง children ของ element ใดๆที่คุณได้เลือกมา
+jQuery has a function called `children()` that allows you to access the children of whichever element you've selected.
 
-ข้างล่างคือตัวอย่างของการใช้ฟังก์ชัน `children()` เพื่อเปลี่ยน children ของ `left-well` element เป็นสี `blue`:
+Here's an example of how you would use the `children()` function to give the children of your `left-well` element the color `blue`:
 
 ```js
 $("#left-well").children().css("color", "blue")
@@ -20,24 +20,23 @@ $("#left-well").children().css("color", "blue")
 
 # --instructions--
 
-ทำให้ children ของ `right-well` element เป็นสีส้ม
+Give all the children of your `right-well` element the color orange.
 
 # --hints--
 
-Children ของ `#right-well` ทั้งหมด จะต้องมีข้อความที่เป็นสีส้ม
+All children of `#right-well` should have orange text.
 
 ```js
 assert($('#right-well').children().css('color') === 'rgb(255, 165, 0)');
 ```
 
-คุณจะต้องใช้ฟังก์ชัน `children()` ในการปรับแต่ง element
+You should use the `children()` function to modify these elements.
 
 ```js
 assert(code.match(/\.children\(\)\.css/g));
 ```
 
-คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
-
+You should only use jQuery to add these classes to the element.
 
 ```js
 assert(code.match(/<div class="well" id="right-well">/g));

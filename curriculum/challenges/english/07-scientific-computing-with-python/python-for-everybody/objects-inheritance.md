@@ -14,25 +14,24 @@ dashedName: objects-inheritance
 
 ## --text--
 
-What is inheritance in object-oriented programming?
+การสืบทอดคลาส (inheritance) ใน การเขียนโปรแกรมเชิงวัตถุ คืออะไร?
 
 ## --answers--
 
-A new class created when a parent class is extended.
+คลาสใหม่ ที่ถูกสร้างขึ้นเมื่อ คลาสตั้งต้นถูกขยาย
 
 ---
 
-A constructed instance of a class.
+ตัวอย่างที่สร้างขึ้นของคลาส
 
 ---
 
-The ability to create a new class by extending an existing class.
+ความสามารถในการสร้างคลาสใหม่ จากการขยายคลาสเดิมที่มีอยู่
 
 ---
 
-A method that is called at the moment when a class is being used to construct an object.
+วิธี ที่ใช้เรียกในขณะที่คลาสกำลังถูกใช้เพื่อสร้างอ็อบเจกต์
 
 ## --video-solution--
 
 3
-

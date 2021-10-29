@@ -14,7 +14,7 @@ dashedName: initialize-array-problem
 
 ## --text--
 
-มีวิธีอื่นอะไรบ้าง ในการสร้าง array ดังข้างล่างนี้? 
+What is another way to produce the following array?
 
 ```py
 [[0. 0. 0. 0. 0. 0. 0.]

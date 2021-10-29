@@ -8,17 +8,17 @@ dashedName: connect-redux-to-the-messages-app
 
 # --description--
 
-เมื่อคุณเข้าใจวิธีใช้ `connect` เพื่อเชื่อมต่อ React กับ Redux แล้ว คุณสามารถใช้สิ่งที่คุณได้เรียนรู้กับ React component ที่ใช้จัดการข้อความได้
+Now that you understand how to use `connect` to connect React to Redux, you can apply what you've learned to your React component that handles messages.
 
-ในบทเรียนที่แล้ว component ที่คุณเชื่อมต่อกับ Redux มีชื่อว่า `Presentational` และสิ่งนี้ไม่ได้เกิดขึ้นโดยบังเอิญ คำนี้ *โดยทั่วไป* หมายถึง React components ที่ไม่ได้เชื่อมต่อโดยตรงกับ Redux พวกมันมีหน้าที่รับผิดชอบในการนำเสนอ UI และทำสิ่งนี้เป็นเสมือน function ของ props ที่พวกเขาได้รับ ในทางตรงกันข้าม container components เชื่อมต่อกับ Redux โดยทั่วไปแล้วสิ่งเหล่านี้จะรับผิดชอบในปล่อย action ต่างๆ ไปยังหน่วยความจำ และมักจะส่งผ่าน state ของหน่วยความจำ ไปยัง child components เป็น props
+In the last lesson, the component you connected to Redux was named `Presentational`, and this wasn't arbitrary. This term *generally* refers to React components that are not directly connected to Redux. They are simply responsible for the presentation of UI and do this as a function of the props they receive. By contrast, container components are connected to Redux. These are typically responsible for dispatching actions to the store and often pass store state to child components as props.
 
 # --instructions--
 
-จนถึงตอนนี้ code editor มีโค้ดทั้งหมดที่คุณได้เขียนไปแล้วในบทเรียนนี้ การเปลี่ยนแปลงเพียงอย่างเดียวคือ React component ถูกเปลี่ยนชื่อเป็น `Presentational` ให้คุณสร้าง component ใหม่ที่ถูกเก็บไว้ใน constant ที่เรียกว่า `Container` ซึ่งใช้ `connect` เพื่อเชื่อมต่อ `Presentational` component กับ Redux จากนั้นใน `AppWrapper` ให้เรนเดอร์ React Redux `Provider` component ส่ง `Provider` ไปที่ Redux `store` ให้เป็น prop และเรนเดอร์ `Container` เป็น child เมื่อตั้งค่าทุกอย่างแล้ว คุณจะเห็นแอปข้อความถูกเรนเดอร์ในหน้าเพจอีกครั้ง
+The code editor has all the code you've written in this section so far. The only change is that the React component is renamed to `Presentational`. Create a new component held in a constant called `Container` that uses `connect` to connect the `Presentational` component to Redux. Then, in the `AppWrapper`, render the React Redux `Provider` component. Pass `Provider` the Redux `store` as a prop and render `Container` as a child. Once everything is setup, you will see the messages app rendered to the page again.
 
 # --hints--
 
-`AppWrapper` ควรเรนเดอร์ไปที่หน้าเพจ
+The `AppWrapper` should render to the page.
 
 ```js
 assert(
@@ -29,7 +29,7 @@ assert(
 );
 ```
 
-`Presentational` component ควรเรนเดอร์ไปที่หน้าเพจ
+The `Presentational` component should render to page.
 
 ```js
 assert(
@@ -40,7 +40,7 @@ assert(
 );
 ```
 
-`Presentational` component ควรเรนเดอร์ `h2`, `input`, `button` และ `ul` elements
+The `Presentational` component should render an `h2`, `input`, `button`, and `ul` elements.
 
 ```js
 assert(
@@ -57,7 +57,7 @@ assert(
 );
 ```
 
-`Presentational` component ควรครับค่า `messages` จาก Redux store เป็น prop
+The `Presentational` component should receive `messages` from the Redux store as a prop.
 
 ```js
 assert(
@@ -70,7 +70,7 @@ assert(
 );
 ```
 
-`Presentational` component ควรรับ `submitMessage` action creator เป็น prop
+The `Presentational` component should receive the `submitMessage` action creator as a prop.
 
 ```js
 assert(

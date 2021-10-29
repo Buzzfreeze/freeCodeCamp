@@ -8,32 +8,31 @@ dashedName: use-responsive-design-with-bootstrap-fluid-containers
 
 # --description--
 
-ในบทเรียน HTML5 และ CSS ที่เราได้สร้างแอป Cat Photo ตอนนี้เราจะกลับไปเพิ่ม style ให้เพจนี้โดยการใช้ responsive CSS framework ที่ได้รับความนิยมอย่าง Bootstrap
+In the HTML5 and CSS section of freeCodeCamp we built a Cat Photo App. Now let's go back to it. This time, we'll style it using the popular Bootstrap responsive CSS framework.
 
-Bootstrap จะหาว่าหน้าจอที่แสดงผลโค้ดนี้กว้างเท่าไหร่ แล้วจึงปรับขนาด element ต่างๆ ของ HTML ให้เหมาะสมกับขนาดหน้าจอนั้น โดยสิ่งนี้เรียกว่า  <dfn>responsive design</dfn>.
+Bootstrap will figure out how wide your screen is and respond by resizing your HTML elements - hence the name <dfn>responsive design</dfn>.
 
-Responsive Design จะทำให้เราไม่ต้องเขียนโค้ดแยกในการแสดงผลของเว็บสำหรับ mobile version มันจะช่วยปรับให้สวยงามได้เองบนหน้าจอขนาดใดก็ตาม
+With responsive design, there is no need to design a mobile version of your website. It will look good on devices with screens of any width.
 
-คุณสามารถเพิ่ม Bootstrap ให้กับแอปใดๆ ก็ได้ของคุณ โดยการเพิ่มโค้ดข้างล่างนี้ในส่วน head ของ HTML:
+You can add Bootstrap to any app by adding the following code to the top of your HTML:
 
 ```html
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 ```
 
-สำหรับแบบฝึกหัดนี้เราได้เพิ่ม Bootstrap ไว้ให้แล้ว ไม่จำเป็นต้องเพิ่มโค้ดข้างบนอีก
-หมายเหตุ เราสามารถใช้ทั้ง `>` หรือ `/>` เพื่อปิด tag `link` นี้
+In this case, we've already added it for you to this page behind the scenes. Note that using either `>` or `/>` to close the `link` tag is acceptable.
 
-เรามาเริ่มลองใช้ Bootstrap โดยการย้ายโค้ด HTML ทั้งหมด (ยกเว้น tag `link` และ `style` element) ไปไว้ใน `div` element ที่มี class `container-fluid`
+To get started, we should nest all of our HTML (except the `link` tag and the `style` element) in a `div` element with the class `container-fluid`.
 
 # --hints--
 
-สร้าง `div` element ที่มี class `container-fluid`
+Your `div` element should have the class `container-fluid`.
 
 ```js
 assert($('div').hasClass('container-fluid'));
 ```
 
-อย่าลืม tag ปิด สำหรับ `div` element
+Your `div` element should have a closing tag.
 
 ```js
 assert(
@@ -43,7 +42,7 @@ assert(
 );
 ```
 
-ย้าย element ต่างๆ ของ HTML ที่อยู่หลังจาก tag ปิดของ `style` tag ไปอยู่ใน `div` class `.container-fluid`
+All HTML elements after the closing `style` tag should be nested in `.container-fluid`.
 
 ```js
 assert($('.container-fluid').children().length >= 8 && !$('.container-fluid').has("style").length && !$('.container-fluid').has("link").length);

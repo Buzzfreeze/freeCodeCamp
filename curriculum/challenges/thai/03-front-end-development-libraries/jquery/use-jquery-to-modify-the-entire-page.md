@@ -10,14 +10,6 @@ dashedName: use-jquery-to-modify-the-entire-page
 
 # --description--
 
-เราพอใจกับการเล่นแอป jQuery playground แล้ว ตอนนี้เรามาแยกส่วนมันดีกว่า
-
-jQuery สามารถกำหนดเป้าหมายกับ `body` element ได้เหมือนกัน
-
-เราสามารถทำให้ทั้ง body ของแอปเรา fade out ไปได้ด้วยโค้ด: `$("body").addClass("animated fadeOut");`
-
-แต่มาลองอะไรที่น่าตื่นเต้นมากกว่านี้ดีกว่า ให้เพิ่ม class `animated` และ `hinge` ให้แก่ `body` element กัน
-
 We're done playing with our jQuery playground. Let's tear it down!
 
 jQuery can target the `body` element as well.
@@ -28,7 +20,7 @@ But let's do something more dramatic. Add the classes `animated` and `hinge` to 
 
 # --hints--
 
-คุณจะต้องเพิ่ม class `animated` และ `hinge` ให้แก่ `body` element
+You should add the classes `animated` and `hinge` to your `body` element.
 
 ```js
 assert($('body').hasClass('animated') && $('body').hasClass('hinge'));

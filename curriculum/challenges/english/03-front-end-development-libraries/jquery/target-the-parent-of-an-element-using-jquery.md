@@ -8,23 +8,23 @@ dashedName: target-the-parent-of-an-element-using-jquery
 
 # --description--
 
-Every HTML element has a `parent` element from which it `inherits` properties.
+HTML element ทุก element มี `parent` element ที่พวกมัน `inherits` คุณสมบัติต่างๆ มา
 
-For example, your `jQuery Playground` `h3` element has the parent element of `<div class="container-fluid">`, which itself has the parent `body`.
+ตัวอย่างเช่น `h3` element ในแอป `jQuery Playground` มี `<div class="container-fluid">` เป็น parent element และ container นี้ก็มี `body` เป็น parent อีกที
 
-jQuery has a function called `parent()` that allows you to access the parent of whichever element you've selected.
+jQuery มีฟังก์ชันที่เรียกว่า `parent()` ที่จะทำให้คุณเข้าถึง parent ของ element ที่คุณเลือกได้
 
-Here's an example of how you would use the `parent()` function if you wanted to give the parent element of the `left-well` element a background color of blue:
+ข้างล่างนี้คือตัวอย่างการใช้ฟังก์ชัน `parent()` ในการเปลี่ยนพื้นหลัง parent element ของ `left-well` element เป็นสีน้ำเงิน:
 
 ```js
 $("#left-well").parent().css("background-color", "blue")
 ```
 
-Give the parent of the `#target1` element a background-color of red.
+จงเปลี่ยนสีพื้นหลัง parent ของ `#target1` element เป็นสีแดง
 
 # --hints--
 
-Your `left-well` element should have a red background.
+`left-well` element จะต้องมีพื้นหลังเป็นสีแดง
 
 ```js
 assert(
@@ -35,13 +35,14 @@ assert(
 );
 ```
 
+คุณจะต้องใช้ฟังก์ชัน `.parent()` ในการแก้ไข element
 You should use the `.parent()` function to modify this element.
 
 ```js
 assert(code.match(/\.parent\s*\(\s*\)\s*\.css/g));
 ```
 
-The `.parent()` method should be called on the `#target1` element.
+`.parent()` method จะต้องถูกเรียกใช้บน `#target1` element
 
 ```js
 assert(
@@ -49,7 +50,7 @@ assert(
 );
 ```
 
-You should only use jQuery to add these classes to the element.
+คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
 
 ```js
 assert(code.match(/<div class="well" id="left-well">/g));

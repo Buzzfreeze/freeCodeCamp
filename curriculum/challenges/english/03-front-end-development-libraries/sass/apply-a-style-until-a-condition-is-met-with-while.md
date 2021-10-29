@@ -8,9 +8,9 @@ dashedName: apply-a-style-until-a-condition-is-met-with-while
 
 # --description--
 
-The `@while` directive is an option with similar functionality to the JavaScript `while` loop. It creates CSS rules until a condition is met.
+คำสั่ง `@while` เป็นตัวเลือกที่มีฟังก์ชันการทำงานคล้ายกับ JavaScript `while` loop มันสร้างกฎ CSS จนกว่าจะตรงตามเงื่อนไข
 
-The `@for` challenge gave an example to create a simple grid system. This can also work with `@while`.
+แบบทดสอบ `@for` ได้ยกตัวอย่างเพื่อสร้างระบบกริดอย่างง่าย นอกจากนี้ยังสามารถทำงานกับ `@while`
 
 ```scss
 $x: 1;
@@ -20,59 +20,59 @@ $x: 1;
 }
 ```
 
-First, define a variable `$x` and set it to 1. Next, use the `@while` directive to create the grid system *while* `$x` is less than 13. After setting the CSS rule for `width`, `$x` is incremented by 1 to avoid an infinite loop.
+ขั้นแรกกำหนดตัวแปร `$x` และตั้งค่าเป็น 1 จากนั้นใช้คำสั่ง `@while` เพื่อสร้างระบบกริด *ในขณะที่* `$x` น้อยกว่า 13 หลังจากตั้งค่ากฎ CSS สำหรับ `width`แล้ว `$x` จะเพิ่มขึ้นทีละ 1 เพื่อหลีกเลี่ยงลูปอนันต์
 
 # --instructions--
 
-Use `@while` to create a series of classes with different `font-sizes`.
+ใช้ `@while` เพื่อสร้างชุดของคลาสที่มี `font-sizes` ที่ต่างกัน
 
-There should be 5 different classes from `text-1` to `text-5`. Then set `font-size` to `15px` multiplied by the current index number. Make sure to avoid an infinite loop!
+มันควรมี 5 คลาสแตกต่างกันไป ตั้งแต่ `text-1` ถึง `text-5` จากนั้นตั้งค่า `font-sizes` เป็น `15px` คูณด้วยหมายเลข index ปัจจุบัน และระวังไม่เกิดลูปที่ไม่มีที่สิ้นสุด!
 
 # --hints--
 
-Your code should use the `@while` directive.
+โค้ดของคุณควรใช้คำสั่ง `@while`
 
 ```js
 assert(code.match(/@while /g));
 ```
 
-Your code should use an index variable which starts at an index of 1.
+โค้ดของคุณควรใช้ตัวแปร index ที่เริ่มต้นที่ index ของ 1
 
 ```js
 assert(code.match(/\$.*:\s*?1;/gi));
 ```
 
-Your code should increment the counter variable.
+โค้ดของคุณควรเพิ่มค่าของตัวแปร counter
 
 ```js
 assert(code.match(/\$(.*)\s*?:\s*\$\1\s*\+\s*1\s*;/gi));
 ```
 
-Your `.text-1` class should have a `font-size` of `15px`.
+คลาส `.text-1` ของคุณควรมี `font-size` ที่ `15px`
 
 ```js
 assert($('.text-1').css('font-size') == '15px');
 ```
 
-Your `.text-2` class should have a `font-size` of `30px`.
+คลาส `.text-2` ของคุณควรมี `font-size` ที่ `30px`
 
 ```js
 assert($('.text-2').css('font-size') == '30px');
 ```
 
-Your `.text-3` class should have a `font-size` of `45px`.
+คลาส `.text-3` ของคุณควรมี `font-size` ที่ `45px`
 
 ```js
 assert($('.text-3').css('font-size') == '45px');
 ```
 
-Your `.text-4` class should have a `font-size` of `60px`.
+คลาส `.text-4` ของคุณควรมี `font-size` ที่ `60px`
 
 ```js
 assert($('.text-4').css('font-size') == '60px');
 ```
 
-Your `.text-5` class should have a `font-size` of `75px`.
+คลาส `.text-5` ของคุณควรมี `font-size` ที่ `75px`
 
 ```js
 assert($('.text-5').css('font-size') == '75px');

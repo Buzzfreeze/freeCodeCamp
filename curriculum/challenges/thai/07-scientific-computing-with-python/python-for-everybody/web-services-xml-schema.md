@@ -14,15 +14,15 @@ dashedName: web-services-xml-schema
 
 ## --text--
 
-XSD คืออะไร ?
+What is XSD?
 
 ## --answers--
 
-รูปแบบของ W3C ที่เฉพาะสำหรับ XML
+The W3C Schema specification for XML.
 
 ---
 
-รูปแบบมาตรฐานของ JSON จาก MOZ
+The standard JSON schema from MOZ.
 
 ---
 
@@ -31,3 +31,4 @@ Extensible Situational Driver
 ## --video-solution--
 
 1
+

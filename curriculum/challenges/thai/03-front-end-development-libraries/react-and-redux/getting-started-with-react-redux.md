@@ -8,19 +8,19 @@ dashedName: getting-started-with-react-redux
 
 # --description--
 
-แบบทดสอบชุดนี้จะอธิบายวิธีการใช้ Redux กับ React อันดับแรกนี่คือการทบทวนหลักการสำคัญบางประการของแต่ละเทคโนโลยี React คือไลบรารีมุมมองที่คุณจัดเตรียมไว้กับข้อมูล จากนั้นจึงเรนเดอร์มุมมองด้วยวิธีที่มีประสิทธิภาพและคาดการณ์ได้ Redux เป็นเฟรมเวิร์กการจัดการ state ที่คุณสามารถใช้เพื่อทำให้การจัดการสถานะแอปพลิเคชันของคุณง่ายขึ้น โดยปกติในแอป React Redux คุณจะสร้างร้าน Redux เดียวที่จัดการสถานะของแอปทั้งหมดของคุณ React components ของคุณจะเข้าไปใช้งานเฉพาะส่วนของข้อมูลใน store ที่เกี่ยวข้องกับบทบาทของพวกมัน จากนั้นคุณส่ง action ต่างๆ โดยตรงจาก React components ซึ่งทำให้การอัปเดต store  ทำงาน
+This series of challenges introduces how to use Redux with React. First, here's a review of some of the key principles of each technology. React is a view library that you provide with data, then it renders the view in an efficient, predictable way. Redux is a state management framework that you can use to simplify the management of your application's state. Typically, in a React Redux app, you create a single Redux store that manages the state of your entire app. Your React components subscribe to only the pieces of data in the store that are relevant to their role. Then, you dispatch actions directly from React components, which then trigger store updates.
 
-แม้ว่า React component สามารถจัดการ state ของตนเองในเครื่องได้ แต่เมื่อคุณมีแอปที่ซับซ้อน โดยทั่วไป การรักษา state ของแอปไว้ในที่เดียวด้วย Redux จะเป็นวิธีดีกว่า มีข้อยกเว้นเมื่อ components แต่ละรายการอาจมี state เฉพาะสำหรับ components เหล่านั้นเท่านั้น สุดท้าย เนื่องจาก Redux ไม่ได้ออกแบบมาให้ทำงานกับ React ได้ตั้งแต่เริ่มต้น คุณจึงต้องใช้แพ็คเกจ `react-redux` มันมีวิธีให้คุณส่ง Redux `state` และ `dispatch` ไปยัง React component ของคุณเป็น `props`
+Although React components can manage their own state locally, when you have a complex app, it's generally better to keep the app state in a single location with Redux. There are exceptions when individual components may have local state specific only to them. Finally, because Redux is not designed to work with React out of the box, you need to use the `react-redux` package. It provides a way for you to pass Redux `state` and `dispatch` to your React components as `props`.
 
-ในอีกสองสามแบบทดสอบหลังจากนี้ คุณจะต้องสร้าง React component แบบง่ายๆ ซึ่งช่วยให้คุณสามารถป้อนข้อความใหม่ได้ ข้อความเหล่านี้จะถูกเพิ่มลงใน array และนำแสดงใน view นี่ควรเป็นการทบทวนที่ดีเกี่ยวกับสิ่งที่คุณได้เรียนรู้ในบทเรียน React จากนั้นคุณจะต้องสร้าง Redux store และ actions ที่จัดการสถานะของ array ข้อความ สุดท้ายคุณจะต้องใช้ `react-redux` เพื่อเชื่อมต่อ Redux store กับ component ของคุณ ซึ่งจะแยก state ในเครื่องออกจาก Redux store
+Over the next few challenges, first, you'll create a simple React component which allows you to input new text messages. These are added to an array that's displayed in the view. This should be a nice review of what you learned in the React lessons. Next, you'll create a Redux store and actions that manage the state of the messages array. Finally, you'll use `react-redux` to connect the Redux store with your component, thereby extracting the local state into the Redux store.
 
 # --instructions--
 
-เริ่มต้น`DisplayMessages` component ให้เพิ่ม constructor ให้กับ component นี้และเริ่มมันด้วย state ที่มี 2 property คือ: `input` ที่ตั้งค่าเป็น string ว่าง และ `messages` ที่ตั้งค่าเป็น array ว่าง
+Start with a `DisplayMessages` component. Add a constructor to this component and initialize it with a state that has two properties: `input`, that's set to an empty string, and `messages`, that's set to an empty array.
 
 # --hints--
 
-`DisplayMessages` component ควรเรนเดอร์ `div` element เปล่า
+The `DisplayMessages` component should render an empty `div` element.
 
 ```js
 assert(
@@ -31,7 +31,7 @@ assert(
 );
 ```
 
-`DisplayMessages` constructor ควรถูกเรียกใช้อย่างถูกต้องด้วย `super` ส่งต่อใน `props`
+The `DisplayMessages` constructor should be called properly with `super`, passing in `props`.
 
 ```js
 (getUserInput) =>
@@ -46,7 +46,7 @@ assert(
   );
 ```
 
-`DisplayMessages` component ควรมี state เริ่มต้นเท่ากับ `{input: "", messages: []}`
+The `DisplayMessages` component should have an initial state equal to `{input: "", messages: []}`.
 
 ```js
 assert(

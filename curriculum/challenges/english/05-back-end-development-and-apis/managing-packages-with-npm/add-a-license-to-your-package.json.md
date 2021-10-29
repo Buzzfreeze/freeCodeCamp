@@ -8,9 +8,11 @@ dashedName: add-a-license-to-your-package-json
 
 # --description--
 
-The `license` field is where you inform users of what they are allowed to do with your project.
+`license` คือที่ที่คุณแจ้งให้ผู้ใช้ทราบถึงสิ่งที่พวกเขาได้รับอนุญาตในการทำโปรเจคของคุณ
 
-Some common licenses for open source projects include MIT and BSD. License information is not required, and copyright laws in most countries will give you ownership of what you create by default. However, it’s always a good practice to explicitly state what users can and can’t do. Here's an example of the license field:
+license ทั่วไปเหมาะสำหรับโปรเจคโอเพ่นซอร์สอย่าง MIT และ BSD 
+โดยปกติแล้ว license อาจจะไม่มีความจำเป็น เนื่องจากมีกฎหมายลิขสิทธิ์ในประเทศส่วนใหญ่รองรับ
+อย่างไรก็ตาม ในทางที่ดีคุณควรที่จะระบุอย่างชัดเจนให้ผู้ใช้ทราบว่า สามารถทำอะไรได้หรือไม่สามารถทำอะไรได้ นี่คือตัวอย่างของ license:
 
 ```json
 "license": "MIT",
@@ -18,11 +20,11 @@ Some common licenses for open source projects include MIT and BSD. License infor
 
 # --instructions--
 
-Fill the `license` field in the package.json file of your project as you find suitable.
+กรุณาใส่ `license` ลงไฟล์ package.json ในโปรเจคคุณ เพื่อเพิ่มความสะดวกมากยิ่งขึ้น
 
 # --hints--
 
-package.json should have a valid "license" key
+package.json ควรที่จะมีคีย์ "license" ที่ถูกต้อง
 
 ```js
 (getUserInput) =>

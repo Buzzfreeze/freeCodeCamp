@@ -14,8 +14,7 @@ dashedName: relational-database-design
 
 ## --text--
 
-โดยปกติแล้ว เราควรเก็บข้อมูลไว้ในฐานข้อมูลกี่ครั้ง ?
-
+What is the best practice for how many times a piece of string data should be stored in a database?
 
 ## --answers--
 
@@ -36,3 +35,4 @@ dashedName: relational-database-design
 ## --video-solution--
 
 2
+

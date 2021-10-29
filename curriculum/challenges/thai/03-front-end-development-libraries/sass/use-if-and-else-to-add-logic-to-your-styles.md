@@ -8,7 +8,7 @@ dashedName: use-if-and-else-to-add-logic-to-your-styles
 
 # --description--
 
-คำสั่ง `@if` ใน Sass มีประโยชน์เพื่อการทดสอบในกรณีเฉพาะ มันทำงานเหมือนกับคำสั่ง `if` ใน JavaScript
+The `@if` directive in Sass is useful to test for a specific case - it works just like the `if` statement in JavaScript.
 
 ```scss
 @mixin make-bold($bool) {
@@ -18,7 +18,7 @@ dashedName: use-if-and-else-to-add-logic-to-your-styles
 }
 ```
 
-และเหมือนกับใน JavaScript `@elese if` และ `@else` ใช้ทดสอบสำหรับเงื่อนไขที่มากกว่า:
+And just like in JavaScript, `@else if` and `@else` test for more conditions:
 
 ```scss
 @mixin text-effect($val) {
@@ -39,7 +39,7 @@ dashedName: use-if-and-else-to-add-logic-to-your-styles
 
 # --instructions--
 
-ให้สร้าง mixin ที่เรียกว่า `border-stroke` มีรับพารามิเตอร์ `$val` ซึ่ง mixin นั้นควรตรวจสอบเงื่อนไขดังต่อไปนี้โดยใช้ `@if`, `@else if`, และ `@else`:
+Create a mixin called `border-stroke` that takes a parameter `$val`. The mixin should check for the following conditions using `@if`, `@else if`, and `@else`:
 
 ```scss
 light - 1px solid black
@@ -47,17 +47,17 @@ medium - 3px solid black
 heavy - 6px solid black
 ```
 
-ถ้า `$val` ไม่ใช่ `light`, `medium`, หรือ `heavy` แล้ว border ควรมีค่าเป็น `none`
+If `$val` is not `light`, `medium`, or `heavy`, the border should be set to `none`.
 
 # --hints--
 
-โค้ดของคุณควรประกาศ mixin ที่มีชื่อว่า `border-stroke` ที่มีพารามิเตอร์ชื่อว่า `$val`
+Your code should declare a mixin named `border-stroke` which has a parameter named `$val`.
 
 ```js
 assert(code.match(/@mixin\s+?border-stroke\s*?\(\s*?\$val\s*?\)\s*?{/gi));
 ```
 
-Mixin ของคุณควรมีคำสั่ง `@if` เพื่อตรวจสอบว่า `@val` มีค่าเป็น `light` หรือไม่ ถ้าใช่ให้ตั้งค่า `border` เป็น `1px solid black`
+Your mixin should have an `@if` statement to check if `$val` is `light`, and to set the `border` to `1px solid black`.
 
 ```js
 assert(
@@ -67,7 +67,7 @@ assert(
 );
 ```
 
-Mixin ของคุณควรมีคำสั่ง `@else if` เพื่อตรวจสอบว่า `@val` มีค่าเป็น `medium` หรือไม่ ถ้าใช่ให้ตั้งค่า `border` เป็น `3px solid black`
+Your mixin should have an `@else if` statement to check if `$val` is `medium`, and to set the `border` to `3px solid black`.
 
 ```js
 assert(
@@ -77,7 +77,7 @@ assert(
 );
 ```
 
-Mixin ของคุณควรมีคำสั่ง `@else if` เพื่อตรวจสอบว่า `@val` มีค่าเป็น ` heavy ` หรือไม่ ถ้าใช่ให้ตั้งค่า `border` เป็น `6px solid black`
+Your mixin should have an `@else if` statement to check if `$val` is `heavy`, and to set the `border` to `6px solid black`.
 
 ```js
 assert(
@@ -87,7 +87,7 @@ assert(
 );
 ```
 
-Mixin ของคุณควรมีคำสั่ง `@else` เพื่อให้ตั้งค่า `border` เป็น `none`
+Your mixin should have an `@else` statement to set the `border` to `none`.
 
 ```js
 assert(code.match(/@else\s*?{\s*?border\s*?:\s*?none\s*?;\s*?}/gi));

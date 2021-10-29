@@ -12,9 +12,9 @@ dashedName: numpy-introduction-b
 
 # --description--
 
-*ผู้เรียนสามารถใช้ Google Colab แทน notebooks.ai ที่สาธิตใน Videoได้*
+*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
 
-แหล่งเรียนรู้เพิ่มเติม:
+More resources:
 
 -   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/freecodecamp-intro-to-numpy)
 -   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
@@ -23,8 +23,9 @@ dashedName: numpy-introduction-b
 
 ## --text--
 
-จำนวนเต็มเลข '5' ใช้หน่วยความจำเท่าใดใน Python?
+About how much memory does the integer `5` consume in plain Python?
 
+## --answers--
 
 32 bits
 

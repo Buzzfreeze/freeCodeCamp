@@ -14,7 +14,7 @@ dashedName: regular-expressions-practical-applications
 
 ## --text--
 
-ใน regular expression อะไรที่ใช้ค้นหา "$" ?
+What will search for a "$" in a regular expression?
 
 ## --answers--
 
@@ -35,3 +35,4 @@ $
 ## --video-solution--
 
 3
+

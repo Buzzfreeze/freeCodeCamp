@@ -14,7 +14,7 @@ dashedName: reading-files
 
 ## --text--
 
-What is used to indicate a new line in a string?
+ข้อใดใช้ในการ ขึ้นบรรทัดใหม่ในสตริง ?
 
 ## --answers--
 
@@ -39,4 +39,3 @@ What is used to indicate a new line in a string?
 ## --video-solution--
 
 1
-

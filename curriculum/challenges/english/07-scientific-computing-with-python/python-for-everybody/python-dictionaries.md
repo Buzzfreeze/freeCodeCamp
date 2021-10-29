@@ -14,7 +14,7 @@ dashedName: python-dictionaries
 
 ## --text--
 
-What does dict equal after running this code?:
+เมื่อรันโค๊ดต่อไปนี้ โปรแกรมจะแสดงผลลัพธ์ของ dict เท่ากับข้อใด ?
 
 ```python
 dict = {"Fri": 20, "Thu": 6, "Sat": 1}
@@ -56,4 +56,3 @@ dict["Sun"] = 9
 ## --video-solution--
 
 5
-

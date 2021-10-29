@@ -8,17 +8,17 @@ dashedName: render-with-an-if-else-condition
 
 # --description--
 
-การประยุกต์ใช้งานอื่นๆ ของการใช้ JavaScript เพื่อควบคุมมุมมองที่เรนเดอร์ของคุณคือการผูก elements ที่ถูกเรนเดอร์กับเงื่อนไข เมื่อเงื่อนไขเป็นจริงจะเรนเดอร์มุมมองหนึ่ง เมื่อมันผิดก็เป็นมุมมองที่ต่างออกไป คุณสามารถทำได้โดยใช้คำสั่ง `if/else` มาตรฐานในเมธอด `render()` ของ React component
+Another application of using JavaScript to control your rendered view is to tie the elements that are rendered to a condition. When the condition is true, one view renders. When it's false, it's a different view. You can do this with a standard `if/else` statement in the `render()` method of a React component.
 
 # --instructions--
 
-MyComponent มี `boolean` ใน state ของมัน ซึ่งจะติดตามว่าคุณต้องการแสดง element บางอย่างใน UI หรือไม่ โดยมี `button` ที่จะคอยสลับ state ของค่านี้ ตอนนี้มันจะเรนเดอร์ UI เดิมทุกครั้ง ให้เขียน`render()` method ใหม่ด้วยคำสั่ง `if/else` เพื่อที่ว่าถ้า `display` เป็น `true` คุณจะreturn ค่ามาร์กอัปปัจจุบัน หรือไม่ก็ให้ return มาร์กอัปโดยไม่มี `h1` element เมื่อเป็น `false`
+MyComponent contains a `boolean` in its state which tracks whether you want to display some element in the UI or not. The `button` toggles the state of this value. Currently, it renders the same UI every time. Rewrite the `render()` method with an `if/else` statement so that if `display` is `true`, you return the current markup. Otherwise, return the markup without the `h1` element.
 
-**Note:** คุณต้องเขียน `if/else` ให้ผ่าน test การใช้ ternary operator จะทำให้ test ไม่ผ่านในแบบทดสอบนี้
+**Note:** You must write an `if/else` to pass the tests. Use of the ternary operator will not pass here.
 
 # --hints--
 
-`MyComponent` ควรมีและเรนเดอร์
+`MyComponent` should exist and render.
 
 ```js
 assert(
@@ -29,7 +29,7 @@ assert(
 );
 ```
 
-เมื่อ `display` ถูกตั้งค่าเป็น `true` จะต้องเรนเดอร์ `div`, `button` และ `h1`
+When `display` is set to `true`, a `div`, `button`, and `h1` should render.
 
 ```js
 async () => {
@@ -50,7 +50,7 @@ async () => {
 };
 ```
 
-เมื่อ `display` ถูกตั้งค่าเป็น `false` จะต้องเรนเดอร์แค่ `div` และ `button`
+When `display` is set to `false`, only a `div` and `button` should render.
 
 ```js
 async () => {
@@ -71,7 +71,7 @@ async () => {
 };
 ```
 
-ใน render method ควรใช้คำสั่ง `if/else` เพื่อตรวจสอบเงื่อนไขของ `this.state.display`
+The render method should use an `if/else` statement to check the condition of `this.state.display`.
 
 ```js
 (getUserInput) =>

@@ -8,9 +8,9 @@ dashedName: use-the-caret-character-to-use-the-latest-minor-version-of-a-depende
 
 # --description--
 
-คล้ายกับที่เครื่องหมานตัวหนอนที่เราได้เรียนรู้ในโจทย์ท้าทายล่าสุด ทำให้ npm ติดตั้ง PATCH ล่าสุดสำหรับ dependency ส่วนเครื่องหมายคาเร็ต (`^`) จะเป็นตัวอนุญาตให้ npm ที่ติดตั้งอัปเดตในอนาคตได้เช่นกัน ซึ่งข้อแตกต่างคือคาเร็ตจะอนุญาตทั้งการอัปเดต MINOR และ PATCH
+Similar to how the tilde we learned about in the last challenge allows npm to install the latest PATCH for a dependency, the caret (`^`) allows npm to install future updates as well. The difference is that the caret will allow both MINOR updates and PATCHes.
 
-เวอร์ชั่นล่าสุดของ moment ควรจะเป็น "~2.10.2" ซึ่งเป็นไปตาม npm ที่ติดตั้งในเวอร์ชั่นล่าสุด 2.10.x ถ้าหากคุณใช้เครื่องหมาย (^) เป็นตัวนำหน้า npmจะอนุญาตให้คุณอัพเดตไปเป็นเวอร์ชั่น 2.x.x อื่นๆได้
+Your current version of moment should be "~2.10.2" which allows npm to install to the latest 2.10.x version. If you were to use the caret (^) as a version prefix instead, npm would be allowed to update to any 2.x.x version.
 
 ```json
 "package": "^1.3.8"
@@ -20,13 +20,13 @@ This would allow updates to any 1.x.x version of the package.
 
 # --instructions--
 
-ใช้เครื่องหมายคาเร็ต (`^`) เพื่อนำหน้าเวอร์ชันของ moment ใน dependencies ของคุณและอนุญาตให้ npm อัปเดตเป็น MINOR รุ่นใหม่ล่าสุด
+Use the caret (`^`) to prefix the version of moment in your dependencies and allow npm to update it to any new MINOR release.
 
-**Note:** คุณไม่ควรเปลี่ยนหมายเลขเวอร์ชันด้วยตนเอง!
+**Note:** The version numbers themselves should not be changed.
 
 # --hints--
 
-"dependencies" ควรรวมอยู่ใน "moment"
+"dependencies" should include "moment"
 
 ```js
 (getUserInput) =>
@@ -45,7 +45,7 @@ This would allow updates to any 1.x.x version of the package.
   );
 ```
 
-"moment" ควรที่จะแมทช์กับเวอร์ชั่น "^2.x.x"
+"moment" version should match "^2.x.x"
 
 ```js
 (getUserInput) =>

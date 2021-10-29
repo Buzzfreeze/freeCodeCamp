@@ -14,7 +14,7 @@ dashedName: networking-with-python
 
 ## --text--
 
-ไลบรารี Python ใด ที่ใช้ในการเข้าถึง TCP Sockets ?
+What Python library gives access to TCP Sockets?
 
 ## --answers--
 
@@ -35,3 +35,4 @@ port
 ## --video-solution--
 
 2
+

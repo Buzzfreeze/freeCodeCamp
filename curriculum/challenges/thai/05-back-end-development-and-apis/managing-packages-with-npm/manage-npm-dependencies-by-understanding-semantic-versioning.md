@@ -8,24 +8,23 @@ dashedName: manage-npm-dependencies-by-understanding-semantic-versioning
 
 # --description--
 
-`Versions` ของ npm packages ที่เป็นส่วนหนึ่งของ dependencies ในไฟล์ package.json ติดตามสิ่งที่เรียกว่า Semantic Versioning (SemVer) มาตรฐานอุตสาหกรรมสำหรับการกำหนดเวอร์ชันซอฟต์แวร์โดยมีเป้าหมายเพื่อให้ง่ายต่อการจัดการการพึ่งพา ไลบรารี เฟรมเวิร์ก หรือเครื่องมืออื่นๆ ที่เผยแพร่บน npm ควรใช้ SemVer เพื่อสื่อสารอย่างชัดเจนว่าโปรเจคจะเปลี่ยนแปลงอย่างไร หากมีการเปลี่ยนแปลง 
+`Versions` of the npm packages in the dependencies section of your package.json file follow what’s called Semantic Versioning (SemVer), an industry standard for software versioning aiming to make it easier to manage dependencies. Libraries, frameworks or other tools published on npm should use SemVer in order to clearly communicate what kind of changes projects can expect if they update.
 
-
-การรู้จัก SemVer จะมีประโยชน์อย่างมาก เมื่อคุณพัฒนาซอฟต์แวร์ที่ใช้ dependencies ภายนอก (ซึ่งคุณทำเองเกือบทุกครั้ง) ถ้าเกิดอยู่มาวันหนึ่ง การเข้าใจในตัวเลขเหล่านี้จะช่วยคุณเข้าใจในการเปลี่ยนแปลงในโปรเจคของคุณว่าทำไมวันนี้รันไม่ได้ ทั้งๆที่เมื่อวานรันได้อยู่  นี่คือวิธีการทำงานของ Semantic Versioning ตามเว็บไซต์ทางการ:
+Knowing SemVer can be useful when you develop software that uses external dependencies (which you almost always do). One day, your understanding of these numbers will save you from accidentally introducing breaking changes to your project without understanding why things that worked yesterday suddenly don’t work today. This is how Semantic Versioning works according to the official website:
 
 ```json
 "package": "MAJOR.MINOR.PATCH"
 ```
 
-เวอร์ชัน MAJOR ควรเพิ่ม เมื่อคุณทำการเปลี่ยนแปลง API แล้วเข้ากันไม่ได้ ส่วนเวอร์ชัน MINOR ควรเพิ่มขึ้น เมื่อคุณเพิ่มฟังก์ชันการทำงานในลักษณะที่เข้ากันได้แบบย้อนหลัง เวอร์ชัน PATCH ควรเพิ่มขึ้น เมื่อคุณแก้ไขจุดบกพร่องที่เข้ากันได้แบบย้อนหลัง ซึ่งหมายความว่า PATCH เป็นการแก้ไขจุดบกพร่อง และ MINORs เป็นการเพิ่มคุณลักษณะใหม่ ๆ แต่ไม่มีสิ่งใดที่ทำงานได้ก่อนหน้านี้ สุดท้าย MAJOR ได้เพิ่มการเปลี่ยนแปลงที่ไม่สามารถใช้ได้กับเวอร์ชันก่อนหน้า
+The MAJOR version should increment when you make incompatible API changes. The MINOR version should increment when you add functionality in a backwards-compatible manner. The PATCH version should increment when you make backwards-compatible bug fixes. This means that PATCHes are bug fixes and MINORs add new features but neither of them break what worked before. Finally, MAJORs add changes that won’t work with earlier versions.
 
 # --instructions--
 
-ในส่วนของ dependencies ของไฟล์ package.json ให้เปลี่ยน `version` ของช่วงเวลาที่ตรงกับ MAJOR เวอร์ชัน 2, MINOR เวอร์ชัน 10 และ PATCH เวอร์ชัน 2
+In the dependencies section of your package.json file, change the `version` of moment to match MAJOR version 2, MINOR version 10 and PATCH version 2
 
 # --hints--
 
-"dependencies" ควรที่จะรวม "moment" ด้วย
+"dependencies" should include "moment"
 
 ```js
 (getUserInput) =>
@@ -44,7 +43,7 @@ dashedName: manage-npm-dependencies-by-understanding-semantic-versioning
   );
 ```
 
-"moment" ควรที่จะเป็นเวอร์ชั่น "2.10.2"
+"moment" version should be "2.10.2"
 
 ```js
 (getUserInput) =>

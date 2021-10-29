@@ -8,29 +8,32 @@ dashedName: meet-the-node-console
 
 # --description--
 
-Working on these challenges will involve you writing your code using one of the following methods:
+การทำงานบนโจทย์ที่ท้าทายเหล่านี้ คุณจะต้องเขียนโค้ดภาษาใด ภาษาหนึ่ง ตามวิธีต่อไปนี้:
 
-- Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-express/) and complete these challenges locally.
-- Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-express) to complete these challenges.
-- Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
 
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field.
+- Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-express/)  ในการทำโปรเจค โดยทำให้เสร็จทีละส่วน
+- ใช้เว็บไซต์ [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-express) ในการทำโปรเจคให้เสร็จสมบูรณ์
+- ใช้ตัวสร้างไซต์ที่คุณเลือก ทำโปรเจคให้เสร็จสมบูรณ์ และอย่าลืมรวมไฟล์ทั้งหมดจาก GitHub repo ของคุณด้วย
 
-During the development process, it is important to be able to check what’s going on in your code.
+เมื่อคุณทำเสร็จแล้ว ตรวจสอบให้แน่ใจด้วยว่า ไฟล์โปรเจคของคุณอยู่ในสถานะที่ทุกคนสามารถมองเห็นได้(public) หลังจากนั้นส่งลิงก์ URL ไว้ใน `Solution Link`
 
-Node is just a JavaScript environment. Like client side JavaScript, you can use the console to display useful debug information. On your local machine, you would see console output in a terminal. On Replit, a terminal is open in the right pane by default.
+ระหว่างขั้นตอนการพัฒนานั้น มันเป็นสิ่งที่สำคัญมากที่จะสามารถตรวจสอบได้ว่าเกิดอะไรขึ้นบนโค้ดของคุณเอง
 
-We recommend to keep the terminal open while working at these challenges. By reading the output in the terminal, you can see any errors that may occur.
+
+Node คล้ายๆกับ JavaScript environment เช่นเดียวกับ JavaScript ของฝั่งลูกค้า ที่คุณสามารถใช้คอนโซลเพื่อแสดงข้อมูลการดีบักแล้วนำมาใช้ประโยชน์ได้ และบนเครื่องโลคอลแมชชีน(local machine)ของคุณ คุณจะเห็นเอาต์พุตคอนโซลในเทอร์มินัลได้ ส่วนบน Replit เทอร์มินัลจะเปิดแสดงหน้าต่างด้านขวา โดยเป็นค่าเริ่มต้น
+
+พวกเราขอแนะนำว่าควรให้เทอร์มินัลเปิดอยู่ตลอดเวลา ขณะที่กำลังทำโจทย์ Challenges เหล่านี้ สำหรับในการอ่านเอ้าพุตในเทอร์มินัล คุณสามารถดูข้อผิดพลาดที่อาจเกิดขึ้นได้
 
 # --instructions--
 
-Modify the `myApp.js` file to log "Hello World" to the console.
+แก้ไขไฟล์ `myApp.js` เพื่อบันทึก "Hello World" ลงในคอนโซล
 
 # --hints--
 
-`"Hello World"` should be in the console
+`"Hello World"` ควรอยู่ในคอนโซล
 
 ```js
+
 (getUserInput) =>
   $.get(getUserInput('url') + '/_api/hello-console').then(
     (data) => {
@@ -40,6 +43,7 @@ Modify the `myApp.js` file to log "Hello World" to the console.
       throw new Error(xhr.responseText);
     }
   );
+  
 ```
 
 # --solutions--

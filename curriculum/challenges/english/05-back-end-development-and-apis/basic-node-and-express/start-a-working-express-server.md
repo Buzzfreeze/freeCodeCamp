@@ -8,9 +8,9 @@ dashedName: start-a-working-express-server
 
 # --description--
 
-In the first two lines of the file `myApp.js`, you can see how easy it is to create an Express app object. This object has several methods, and you will learn many of them in these challenges. One fundamental method is `app.listen(port)`. It tells your server to listen on a given port, putting it in running state. For testing reasons, we need the app to be running in the background so we added this method in the `server.js` file for you.
+ในส่วน 2 บรรทักแรกของไฟล์ `myApp.js` คุณจะเห็นว่าการสร้างออบเจ็กต์แอป Express นั้นง่ายมาก อ็อบเจ็กต์นร้มีหลายวิธีในการสร้าง ซึ่งคุณจะได้เรียนรู้การสร้างพวกนี้ในโจทย์ท้าทายเหล่านี้ วิธีพื้นฐานหนึ่งที่นิยมกัน คือ `app.listen(port)` มันจะบอกให้เซิร์ฟเวอร์ของคุณฟังคำสั่งบนพอร์ต ทำให้มันอยู่ในสถานะการทำงาน สำหรับการทดสอบตรรกะ เราต้องการให้แอปทำงานในพื้นหลังที่พวกเราเพิ่มลงไปในไฟล์ของคุณ ซึ่งก็คือ `server.js`
 
-Let’s serve our first string! In Express, routes takes the following structure: `app.METHOD(PATH, HANDLER)`. METHOD is an http method in lowercase. PATH is a relative path on the server (it can be a string, or even a regular expression). HANDLER is a function that Express calls when the route is matched. Handlers take the form `function(req, res) {...}`, where req is the request object, and res is the response object. For example, the handler
+มาเริ่มทำงานบนสตริงตัวแรกกัน! ในกรณี Express เส้นทางนี้จะใช้โครงสร้างแบบ `app.METHOD(PATH, HANDLER)` ซึ่ง METHOD ในโครงสร้าง หมายถึงวิธีของ http ในโลเวอร์เคส, PATH คือ เส้นทางที่สัมพันธ์กันในเซอร์เวอร์ (มันอาจจะเป็นสตริงหรือนิพจน์ทั่วไปก็ได้), HANDLER คือฟังก์ขันที่เรียก express เมื่อเส้นทางจับคู่กัน ซึ่งฟอร์มที่ใช้ใน HANDLER คือ `function(req, res) {...}` โดยที่ req คืออ็อบเจ็กต์คำขอ ส่วน res หมายถึง อ็อบเจ็กต์ตอบสนอง ยกตัวอย่างเช่น :
 
 ```js
 function(req, res) {
@@ -18,17 +18,17 @@ function(req, res) {
 }
 ```
 
-will serve the string 'Response String'.
+จะทำงานบนสตริง Response String
 
 # --instructions--
 
-Use the `app.get()` method to serve the string "Hello Express" to GET requests matching the `/` (root) path. Be sure that your code works by looking at the logs, then see the results in the preview if you are using Replit.
+การใช้วิธี `app.get()` นั้นจะทำงานบนสตริง "Hello Express" เพื่อที่คำขอ GET ตรงกับ `/` ของเส้นทางรูท อย่าลืมตรวจสอบให้แน่ใจด้วย ว่าโค้ดของคุณทำงานบนล็อค(Logs)จากนั้นดูผลลัพธ์ของการแสดงตัวอย่างในกรณีที่คุณใช้ Replit ด้วย
 
-**Note:** All the code for these lessons should be added in between the few lines of code we have started you off with.
+**Note:** โค้ดทั้งหมดในบทเรียนควรที่จะเพิ่มโค้ดอีกสัก 2-3 บรรทัด เพื่อให้พวกเราเริ่มต้นไปพร้อมกับคุณ
 
 # --hints--
 
-Your app should serve the string 'Hello Express'
+แอพของคุณควรที่จะทำงานบนสตริง "Hello Express"
 
 ```js
 (getUserInput) =>

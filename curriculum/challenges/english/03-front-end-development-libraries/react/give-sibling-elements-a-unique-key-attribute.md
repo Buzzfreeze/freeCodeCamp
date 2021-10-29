@@ -8,19 +8,19 @@ dashedName: give-sibling-elements-a-unique-key-attribute
 
 # --description--
 
-The last challenge showed how the `map` method is used to dynamically render a number of elements based on user input. However, there was an important piece missing from that example. When you create an array of elements, each one needs a `key` attribute set to a unique value. React uses these keys to keep track of which items are added, changed, or removed. This helps make the re-rendering process more efficient when the list is modified in any way.  
+แบบทดสอบล่าสุดแสดงให้เห็นว่าว `map` method ถูกใช้เพื่อเรนเดอร์ element จำนวนหนึ่งแบบไดนามิกตามข้อมูลที่ user ป้อน อย่างไรก็ตามมีชิ้นส่วนสำคัญที่ขาดหายไปจากตัวอย่างนั้น เมื่อคุณสร้าง array ของ element แต่ละรายการต้องมี `key` attribute ที่ตั้งค่าเป็นค่าที่ไม่ซ้ำกัน React ใช้คีย์เหล่านี้เพื่อติดตามว่ารายการใดถูกเพิ่ม เปลี่ยนแปลง หรือลบออก ซึ่งช่วยให้กระบวนการเรนเดอร์ใหม่มีประสิทธิภาพมากขึ้นเมื่อมีการแก้ไขรายการไม่ว่าในทางใด
 
-**Note:** Keys only need to be unique between sibling elements, they don't need to be globally unique in your application.
+**Note:** คีย์ต้องไม่ซ้ำกันระหว่าง element พี่น้องเท่านั้น ไม่จำเป็นต้องเป็นคีย์เฉพาะแบบ global ในแอปพลิเคชันของคุณ
 
 # --instructions--
 
-The code editor has an array with some front end frameworks and a stateless functional component named `Frameworks()`. `Frameworks()` needs to map the array to an unordered list, much like in the last challenge. Finish writing the `map` callback to return an `li` element for each framework in the `frontEndFrameworks` array. This time, make sure to give each `li` a `key` attribute, set to a unique value. The `li` elements should also contain text from `frontEndFrameworks`.
+Code editor มี array ที่มี front end frameworks บางอันและ stateless functional component ชื่อ `Frameworks()` `Frameworks()` จำเป็นต้อง map array กับ unordered list เช่นเดียวกับแบบทดสอบที่ผ่านมา เขียน callback `map` ให้เสร็จเพื่อ return `li` element สำหรับแต่ละเฟรมเวิร์กใน `frontEndFrameworks` array แล้วตรวจสอบให้แน่ใจว่าได้กำหนด `key` attribute ให้กับ `li` แต่ละรายการ โดยตั้งค่าเป็นค่าที่ไม่ซ้ำกัน `li` element เหล่านั้นควรมีข้อความจาก `frontEndFrameworks` ด้วย
 
-Normally, you want to make the key something that uniquely identifies the element being rendered. As a last resort the array index may be used, but typically you should try to use a unique identification.
+โดยปกติ คุณต้องการทำให้คีย์เป็นสิ่งที่ระบุ element ที่กำลังถูกเรนเดอร์โดยไม่ซ้ำกัน วิธีสุดท้ายคืออาจใช้ array index แต่โดยทั่วไปแล้ว คุณควรพยายามใช้ชื่อเฉพาะที่ไม่ซ้ำกัน
 
 # --hints--
 
-The `Frameworks` component should exist and render to the page.
+`Frameworks` component ควรมีและเรนเดอร์ในหน้าเพจ
 
 ```js
 assert(
@@ -28,19 +28,19 @@ assert(
 );
 ```
 
-`Frameworks` should render an `h1` element.
+`Frameworks` ควรเรนเดอร์ `h1` element
 
 ```js
 assert(Enzyme.mount(React.createElement(Frameworks)).find('h1').length === 1);
 ```
 
-`Frameworks` should render a `ul` element.
+`Frameworks` ควรเรนเดอร์ `ul` element.
 
 ```js
 assert(Enzyme.mount(React.createElement(Frameworks)).find('ul').length === 1);
 ```
 
-The `ul` tag should render 6 child `li` elements.
+`ul` tag ควรเรนเดอร์ 6 child `li` element
 
 ```js
 assert(
@@ -54,7 +54,7 @@ assert(
 );
 ```
 
-Each list item element should have a unique `key` attribute.
+แต่ละ `li` element ควรมี `key` arttibute ที่ไม่ซ้ำกัน
 
 ```js
 assert(
@@ -73,7 +73,7 @@ assert(
 );
 ```
 
-Each list item element should contain text from `frontEndFrameworks`.
+แต่ละ `li` elem ควรมีข้อความจาก `frontEndFrameworks`
 
 ```js
 assert(

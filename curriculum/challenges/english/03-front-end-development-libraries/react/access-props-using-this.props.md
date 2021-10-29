@@ -8,17 +8,19 @@ dashedName: access-props-using-this-props
 
 # --description--
 
-The last several challenges covered the basic ways to pass props to child components. But what if the child component that you're passing a prop to is an ES6 class component, rather than a stateless functional component? The ES6 class component uses a slightly different convention to access props.
+แบบทดสอบหลายบทที่ผ่านมาได้มีเนื้อหาครอบคลุมพื้นฐานในการส่งผ่าน props ต่างๆ ให้กับ child component แต่ถ้า child component ที่คุณส่งผ่าน props นั้นเป็น ES6 class component แทนที่จะเป็น stateless functional component หละ? ES6 class component ใช้รูปแบบที่แตกต่างกันเล็กน้อยในการเข้าถึง props ต่างๆ
 
-Anytime you refer to a class component within itself, you use the `this` keyword. To access props within a class component, you preface the code that you use to access it with `this`. For example, if an ES6 class component has a prop called `data`, you write `{this.props.data}` in JSX.
+เมื่อใดก็ตามที่คุณอ้างถึง class component ภายในตัวมันเอง คุณสามารถใช้คีย์เวิร์ด `this` 
+เพื่อที่จะเข้าถึง props ภายใน class component คุณเพียงแค่เพิ่มคำว่า `this` ข้างหน้าโค้ดที่คุณใช้เข้าถึง ตัวอย่างเช่น ถ้า ES6 class component มี prop ชื่อว่า `data` คุณจะต้องเขียนโค้ดว่า `{this.props.data}` ใน JSX
 
 # --instructions--
 
-Render an instance of the `ReturnTempPassword` component in the parent component `ResetPassword`. Here, give `ReturnTempPassword` a prop of `tempPassword` and assign it a value of a string that is at least 8 characters long. Within the child, `ReturnTempPassword`, access the `tempPassword` prop within the `strong` tags to make sure the user sees the temporary password.
+แสดง instance ของ `ReturnTempPassword` component ใน parent component `ResetPassword` แล้วให้เพิ่ม prop `tempPassword` แก่ `ReturnTempPassword`
+และกำหนดค่าของ string ที่มีความยาวอย่างน้อย 8 ตัวอักษร ให้เข้าถึง `tempPassword` prop ภายใน `strong` tag ที่อยู่ภายใน `ReturnTempPassword` อีกที เพื่อให้มั่นใจว่า user จะเห็นรหัสผ่านชั่วคราวได้
 
 # --hints--
 
-The `ResetPassword` component should return a single `div` element.
+`ResetPassword` component ควรจะ return `div` element เดียว
 
 ```js
 assert(
@@ -29,7 +31,7 @@ assert(
 );
 ```
 
-The fourth child of `ResetPassword` should be the `ReturnTempPassword` component.
+Child ตำแหน่งที่ 4 ของ `ResetPassword` ควรจะต้องเป็น `ReturnTempPassword` component
 
 ```js
 assert(
@@ -42,7 +44,7 @@ assert(
 );
 ```
 
-The `ReturnTempPassword` component should have a prop called `tempPassword`.
+`ReturnTempPassword` component ควรจะต้องมี prop ที่เรียกว่า `tempPassword`
 
 ```js
 assert(
@@ -53,7 +55,7 @@ assert(
 );
 ```
 
-The `tempPassword` prop of `ReturnTempPassword` should be equal to a string of at least 8 characters.
+`tempPassword` prop ของ `ReturnTempPassword` ควรที่จะมีค่าเท่ากับ string ของตัวอักษร 8 ตัว
 
 ```js
 assert(
@@ -66,7 +68,7 @@ assert(
 );
 ```
 
-The `ReturnTempPassword` component should display the password you create as the `tempPassword` prop within `strong` tags.
+`ReturnTempPassword` component ควรที่จะแสดงรหัสผ่านที่คุณสร้างขึ้นเป็น `tempPassword` prop ภายใน `strong` tags
 
 ```js
 assert(

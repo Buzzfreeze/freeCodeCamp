@@ -14,7 +14,7 @@ dashedName: introduction-elements-of-python
 
 ## --text--
 
-สิ่งที่โปรแกรมจะแสดงออกมา คืออะไร ?
+What will the following program print out:
 
 ```python
 x = 43
@@ -37,3 +37,4 @@ x + 1
 ## --video-solution--
 
 3
+

@@ -8,17 +8,17 @@ dashedName: use-model-find-to-search-your-database
 
 # --description--
 
-ในการใช้งานที่ง่ายที่สุด, `Model.find()` ยอมรับ query (อ็อบเจ็กต์ JSON) เป็นอาร์กิวเมนต์แรก จากนั้นจึงเรียกกลับ และส่งคืนอาร์เรย์ที่แมทช์กัน นอกจากนี้ยังรองรับตัวเลือกการค้นหาที่หลากหลาย ซึ่งคุณสามารถอ่านเพิ่มเติมในเอกสาร
+In its simplest usage, `Model.find()` accepts a query document (a JSON object) as the first argument, then a callback. It returns an array of matches. It supports an extremely wide range of search options. Read more in the docs.
 
 # --instructions--
 
-แก้ไขฟังก์ชัน `findPeopleByName` เพื่อค้นหาชื่อของบุคคลทุกคน โดยใช้โค้ด <code>Model.find() -\> [Person]</code>
+Modify the `findPeopleByName` function to find all the people having a given name, using <code>Model.find() -\> [Person]</code>
 
-สามารถใช้ฟังก์ชันอาร์กิวเมนต์ `personName` เป็นคีย์ในการค้นหา
+Use the function argument `personName` as the search key.
 
 # --hints--
 
-สามารถค้นหารายการทั้งหมดที่สอดคล้องกับเกณฑ์ได้สำเร็จ
+Find all items corresponding to a criteria should succeed
 
 ```js
 (getUserInput) =>
