@@ -14,7 +14,7 @@ dashedName: networking-text-processing
 
 ## --text--
 
-Which type of encoding do most websites use?
+เว็บไซต์ส่วนใหญ่ ใช้การเข้ารหัสประเภทใด ?
 
 ## --answers--
 
@@ -31,4 +31,3 @@ UTF-32
 ## --video-solution--
 
 1
-

@@ -14,21 +14,20 @@ dashedName: data-visualization-page-rank
 
 ## --text--
 
-How does the PageRank algorithm work?
+การทำงานของ PageRank ทำงานอย่างไร
 
 ## --answers--
 
-It determines which pages are most highly connected.
+หาว่าหน้าใด มีการเชื่อมต่อกันมากที่สุด
 
 ---
 
-It ranks pages based on view counts.
+จัดอันดับตาม จำนวนการดู
 
 ---
 
-It figures out which pages contain the most important content.
+หาว่าหน้าใด มีเนื้อหาที่สำคัญที่สุด
 
 ## --video-solution--
 
 1
-

@@ -14,7 +14,7 @@ dashedName: networking-protocol
 
 ## --text--
 
-What type of HTTP request is usually used to access a website?
+request ของ HTTP ประเภทใด มักใช้ในการเข้าถึงเว็บไซต์ ?
 
 ## --answers--
 
@@ -35,4 +35,3 @@ ACCESS
 ## --video-solution--
 
 2
-

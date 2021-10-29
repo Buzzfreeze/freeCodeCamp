@@ -12,21 +12,21 @@ dashedName: web-services-api-rate-limiting-and-security
 
 # --description--
 
-More resources:
+ตัวอย่างเพิ่มเติม :
 
-\- [Exercise: GeoJSON](https://www.youtube.com/watch?v=TJGJN0T8tak)
+\- [ตัวอย่างที่ 1: GeoJSON](https://www.youtube.com/watch?v=TJGJN0T8tak)
 
-\- [Exercise: JSON](https://www.youtube.com/watch?v=vTmw5RtfGMY)
+\- [ตัวอย่างที่ 2: JSON](https://www.youtube.com/watch?v=vTmw5RtfGMY)
 
-\- [Exercise: Twitter](https://www.youtube.com/watch?v=2c7YwhvpCro)
+\- [ตัวอย่างที่ 3: Twitter](https://www.youtube.com/watch?v=2c7YwhvpCro)
 
-\- [Exercise: XML](https://www.youtube.com/watch?v=AopYOlDa-vY)
+\- [ตัวอย่างที่ 4: XML](https://www.youtube.com/watch?v=AopYOlDa-vY)
 
 # --question--
 
 ## --text--
 
-When making a request from the Twitter API, what information must always be sent with the request?
+ข้อมูลใดที่ต้องส่งไปพร้อมกับคำขอ เมื่อส่งคำขอไปที่ Twitter API ?
 
 ## --answers--
 
@@ -47,4 +47,3 @@ key
 ## --video-solution--
 
 4
-

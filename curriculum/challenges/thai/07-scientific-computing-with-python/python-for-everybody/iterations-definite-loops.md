@@ -14,7 +14,7 @@ dashedName: iterations-definite-loops
 
 ## --text--
 
-How many lines will the following code print?:
+เมื่อรันโค๊ดด้านล่างนี้ จะแสดงผลลัพธ์ออกมากี่บรรทัด ?
 
 ```python
 for i in [2,1,5]:
@@ -40,4 +40,3 @@ for i in [2,1,5]:
 ## --video-solution--
 
 3
-

@@ -14,8 +14,7 @@ dashedName: conditional-execution
 
 ## --text--
 
-Which code is indented correctly to print "Yes" if x = 0 and y = 10?
-
+การเว้นย่อหน้าแบบใดที่ เมื่อให้ x = 0 และ y = 10 จะปริ้นค่า Yes ออกมา ?
 ## --answers--
 
 ```python
@@ -51,4 +50,3 @@ if 0 == x:
 ## --video-solution--
 
 4
-

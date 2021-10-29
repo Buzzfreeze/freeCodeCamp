@@ -16,31 +16,30 @@ dashedName: introduction-why-program
 
 # --description--
 
-More resources:
+แหล่งข้อมูล:
 
-\- [Install Python on Windows](https://youtu.be/F7mtLrYzZP8)
+\- [การติดตั้ง Python บน Windows](https://youtu.be/F7mtLrYzZP8)
 
-\- [Install Python on MacOS](https://youtu.be/wfLnZP-4sZw)
+\- [การติดตั้ง Python บน MacOS](https://youtu.be/wfLnZP-4sZw)
 
 # --question--
 
 ## --text--
 
-Who should learn to program?
+ใครบ้าง ที่ควรเรียนการเขียนโปรแกรม ?
 
 ## --answers--
 
-College students.
+นิสิต นักศึกษา
 
 ---
 
-People who want to become software developers.
+คนที่อยากจะเป็น Software Developers
 
 ---
 
-Everyone.
+ทุกๆคน
 
 ## --video-solution--
 
 3
-

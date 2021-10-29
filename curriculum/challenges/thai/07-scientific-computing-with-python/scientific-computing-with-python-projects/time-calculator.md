@@ -8,11 +8,17 @@ dashedName: time-calculator
 
 # --description--
 
-Write a function named "add_time" that can add a duration to a start time and return the result.
+เขียนฟังก์ชันชื่อ "add_time" ที่สามารถเพิ่มระยะเวลา ให้กับ เวลาที่เริ่มต้น และแสดงผลลัพธ์เวลาสุดท้ายได้
 
-You can access [the full project description and starter code on Replit](https://replit.com/github/freeCodeCamp/boilerplate-time-calculator). After going to that link, fork the project. Once you complete the project based on the instructions in 'README.md', submit your project link below.
 
-We are still developing the interactive instructional part of the Python curriculum. For now, here are some videos on the freeCodeCamp.org YouTube channel that will teach you everything you need to know to complete this project:
+หรือเข้าที่นี่ [ คำอธิบายฉบับเต็มและ starter code บน Replit ](https://replit.com/github/freeCodeCamp/boilerplate-time-calculator).
+
+หลังจากกดที่ลิงค์แล้ว ให้แยกโปรเจ็กต์ เมื่อคุณทำโปรเจ็กต์เสร็จแล้วตามคำแนะนำใน 'README.md' ให้ส่งลิงค์โปรเจ็กต์ ด้านล่าง
+
+เรายังคงพัฒนาส่วนการสอนแบบโต้ตอบของหลักสูตร Python สำหรับตอนนี้ นี่คือวิดีโอบางส่วนในช่อง freeCodeCamp.org YouTube ที่จะสอนทุกสิ่งที่คุณจำเป็นต้องรู้เพื่อทำโครงการนี้ให้สำเร็จ:
+
+เรายังคงพัฒนาส่วนการสอนแบบ interactive ในหลักสูตรของ Python นี่คือวิดีโอบางส่วนในช่อง freeCodeCamp.org ที่จะสอนทุกอย่างที่จำเป็นต้องรู้ เพื่อให้ทำ Project นี้ให้สำเร็จ
+
 
 <ul>
   <li>
@@ -25,7 +31,7 @@ We are still developing the interactive instructional part of the Python curricu
 
 # --hints--
 
-It should correctly add times and pass all tests.
+เพิ่มเวลาให้ถูกต้อง และผ่านทุก tests
 
 ```js
 

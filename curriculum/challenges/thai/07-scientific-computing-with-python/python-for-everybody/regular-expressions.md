@@ -14,7 +14,7 @@ dashedName: regular-expressions
 
 ## --text--
 
-Which regex matches only a white space character?
+การกำหนดรูปแบบอักขระใด ตรงกับ white space ?
 
 ## --answers--
 
@@ -39,4 +39,3 @@ Which regex matches only a white space character?
 ## --video-solution--
 
 2
-
