@@ -119,7 +119,8 @@ const i18nextCodes = {
   chinese: 'zh',
   'chinese-traditional': 'zh-Hant',
   italian: 'it',
-  portuguese: 'pt-BR'
+  portuguese: 'pt-BR',
+  thai: 'th'
 };
 
 // These are for the language selector dropdown menu in the footer
@@ -129,7 +130,8 @@ const langDisplayNames = {
   chinese: '中文（简体字）',
   'chinese-traditional': '中文（繁體字）',
   italian: 'Italiano',
-  portuguese: 'Português'
+  portuguese: 'Português',
+  thai: 'ไทย'
 };
 
 /* These are for formatting dates and numbers. Used with JS .toLocaleString().
@@ -142,7 +144,8 @@ const langCodes = {
   chinese: 'zh',
   'chinese-traditional': 'zh-Hant',
   italian: 'it',
-  portuguese: 'pt-BR'
+  portuguese: 'pt-BR',
+  thai: 'th'
 };
 
 exports.availableLangs = availableLangs;
