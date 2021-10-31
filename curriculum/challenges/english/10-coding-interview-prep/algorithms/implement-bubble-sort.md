@@ -8,23 +8,42 @@ dashedName: implement-bubble-sort
 
 # --description--
 
-This is the first of several challenges on sorting algorithms. Given an array of unsorted items, we want to be able to return a sorted array. We will see several different methods to do this and learn some tradeoffs between these different approaches. While most modern languages have built-in sorting methods for operations like this, it is still important to understand some of the common basic approaches and learn how they can be implemented.
+ในหัวข้อนี้เราจะให้อาร์เรย์ ที่ยังไม่ได้มีการจัดเรียง แล้วจะให้จัดเรียงอาร์เรย์นี้
 
-Here we will see bubble sort. The bubble sort method starts at the beginning of an unsorted array and 'bubbles up' unsorted values towards the end, iterating through the array until it is completely sorted. It does this by comparing adjacent items and swapping them if they are out of order. The method continues looping through the array until no swaps occur at which point the array is sorted.
+มีหลายวิธีการในการทำ พยายามเรียนรู้วิธีการต่างๆ แม้ว่าในปัจจุบันภาษาสมัยใหม่ส่วนใหญจะมี built-in มาช่วยในการจัดเรียง
 
-This method requires multiple iterations through the array and for average and worst cases has quadratic time complexity. While simple, it is usually impractical in most situations.
+แต่ก็ยังเป็นเรื่องสำคัญที่ควรจะต้องเข้าใจวิธีการพื้นฐานทั่วไปและเรียนรู้วิธีนำไปใช้
 
-**Instructions:** Write a function `bubbleSort` which takes an array of integers as input and returns an array of these integers in sorted order from least to greatest.
+
+
+วิธีการเรียงลำดับของอาร์เรย์ที่ยังเรียงไม่เสร็จสิ้น  ให้เริ่มจากตัวที่ยังไม่ได้เรียง
+
+นำค่าที่ไม่ได้เรียงลำดับ ไปไว้ยังส่วนท้าย และวนซ้ำผ่านอาร์เรย์ จนกว่าจะได้รับการจัดเรียงอย่างสมบูรณ์
+
+ทำได้โดยเปรียบเทียบรายการที่อยู่ติดกันและสลับกันหากรายการไม่เป็นระเบียบ เมธอดจะวนซ้ำผ่านอาร์เรย์จนกว่าจะไม่มีการสลับเกิดขึ้น ณ จุดที่เรียงลำดับอาร์เรย์
+
+โดยจะทำการเปรียบเทียบรายการที่อยู่ติดกันและสลับกัน หากรายการยังไม่จัดเรียง โดยจะวนซ้ำผ่านอาร์เรย์ไปเรื่อยๆ จนกว่าจะไม่มีการสลับกันเกิดขึ้น
+
+ณ จุดที่ไม่มีการสลับตำแหน่งนั้น คือจุดที่อาร์เรย์นี้จัดเรียงเสร็จสิ้นแล้ว
+
+
+
+วิธีการนี้ ต้องใช้การวนซ้ำหลายครั้งในอาร์เรย์ ซึ่งโดยทั่วไปจะใช้เวลานาน
+
+ถึงแม้ว่าวิธีการนี้ จะดูง่าย แต่มันมักจะใช้ไม่ได้ในสถานการณ์ส่วนใหญ่
+
+
+**คำแนะนำ:** เขียนฟังก์ชัน "bubbleSort" ที่รับอาร์เรย์ เป็นจำนวนเต็ม และส่งกลับอาร์เรย์ของจำนวนเต็มเหล่านี้ โดยเรียงลำดับจากน้อยไปมาก
 
 # --hints--
 
-`bubbleSort` should be a function.
+`bubbleSort` ควรเป็น function.
 
 ```js
 assert(typeof bubbleSort == 'function');
 ```
 
-`bubbleSort` should return a sorted array (least to greatest).
+`bubbleSort` ควรได้เป็น array ( โดยเรียงจาก น้อยไปมาก ).
 
 ```js
 assert(
@@ -52,7 +71,7 @@ assert(
 );
 ```
 
-`bubbleSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])` should return an array that is unchanged except for order.
+`bubbleSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])` ควรเป็น array ที่ไม่เปลี่ยนแปลง ยกเว้นสั่งมัน
 
 ```js
 assert.sameMembers(
@@ -79,7 +98,7 @@ assert.sameMembers(
 );
 ```
 
-`bubbleSort` should not use the built-in `.sort()` method.
+`bubbleSort` ต้องไม่ใช้ built-in function `.sort()`
 
 ```js
 assert(isBuiltInSortUsed());

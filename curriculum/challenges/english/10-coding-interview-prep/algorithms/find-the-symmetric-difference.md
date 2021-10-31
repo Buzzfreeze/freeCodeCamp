@@ -8,77 +8,94 @@ dashedName: find-the-symmetric-difference
 
 # --description--
 
-The mathematical term <dfn>symmetric difference</dfn> (`△` or `⊕`) of two sets is the set of elements which are in either of the two sets but not in both. For example, for sets `A = {1, 2, 3}` and `B = {2, 3, 4}`, `A △ B = {1, 4}`.
+ในการดำเนินการทางคณิตศาตร์ จากแผนภาพของ เวนน์-ออยเลอร์ กำหนดให้ (`△` or `⊕`) คือ <dfn>symmetric difference</dfn> ระหว่าง 2 Sets
+โดยเป็นการ สมาชิกของเซตมารวมกัน (Union) แต่ไม่นับเอาสมาชิกมีเหมือนกัน (Intersection) ตัวอย่างเช่น
 
-Symmetric difference is a binary operation, which means it operates on only two elements. So to evaluate an expression involving symmetric differences among *three* elements (`A △ B △ C`), you must complete one operation at a time. Thus, for sets `A` and `B` above, and `C = {2, 3}`, `A △ B △ C = (A △ B) △ C = {1, 4} △ {2, 3} = {1, 2, 3, 4}`.
+`A = {1, 2, 3}` และ `B = {2, 3, 4}`, `A △ B = {1, 4}`
+
+Note เพิ่มเติม. จากตัวอย่างด้านบน A ∪ B = {1, 2, 3, 4}  และ A ∩ B = {2, 3}
+A △ B = (A ∪ B) - (A ∩ B)
+
+
+Symmetric difference เป็นการดำเนินการแบบ binary กล่าวง่ายๆคือ สามารถดำเนินการได้ทีละคู่เท่านั้น
+ดังนั้นการหาค่าที่มีตั้งแต่ 3 องค์ประกอบขึ้นไป  จะต้องดำเนินการทีละคู่ เช่น กำหนดให้ `A = {1, 2, 3}`, `B = {2, 3, 4}` และ  `C = {2, 3}`
+
+
+`A △ B △ C` จะกลายเป็น (A △ B) △ C  และเนื่องจาก `A △ B = {1, 4}` และ  `C = {2, 3}`
+
+จะได้เป็น `A △ B △ C    =   (A △ B) △ C     =    {1, 4} △ {2, 3}      =      {1, 2, 3, 4}`
+
+
+
 
 # --instructions--
 
-Create a function that takes two or more arrays and returns an array of their symmetric difference. The returned array must contain only unique values (*no duplicates*).
+สร้างฟังก์ชันที่รับอาร์เรย์ตั้งแต่สองอาร์เรย์ขึ้นไป และส่งคืนอาร์เรย์ที่มีความแตกต่างของจำนวนสมาชิก โดยที่ อาร์เรย์ที่ส่งคืนต้องมี เฉพาะค่าที่ไม่ซ้ำกัน (*ค่าใน อาร์เรย์ ไม่ซ้ำกัน*).
 
 # --hints--
 
-`sym([1, 2, 3], [5, 2, 1, 4])` should return `[3, 4, 5]`.
+`sym([1, 2, 3], [5, 2, 1, 4])` ควรได้ผลลัพธ์เป็น `[3, 4, 5]`.
 
 ```js
 assert.sameMembers(sym([1, 2, 3], [5, 2, 1, 4]), [3, 4, 5]);
 ```
 
-`sym([1, 2, 3], [5, 2, 1, 4])` should contain only three elements.
+`sym([1, 2, 3], [5, 2, 1, 4])` ต้องมีสมาชิกเพียง 3 ตัว
+
 
 ```js
 assert.equal(sym([1, 2, 3], [5, 2, 1, 4]).length, 3);
 ```
 
-`sym([1, 2, 3, 3], [5, 2, 1, 4])` should return `[3, 4, 5]`.
+`sym([1, 2, 3, 3], [5, 2, 1, 4])` ควรได้ผลลัพธ์เป็น `[3, 4, 5]`.
 
 ```js
 assert.sameMembers(sym([1, 2, 3, 3], [5, 2, 1, 4]), [3, 4, 5]);
 ```
 
-`sym([1, 2, 3, 3], [5, 2, 1, 4])` should contain only three elements.
+`sym([1, 2, 3, 3], [5, 2, 1, 4])` ต้องมีสมาชิกเพียง 3 ตัว
 
 ```js
 assert.equal(sym([1, 2, 3, 3], [5, 2, 1, 4]).length, 3);
 ```
 
-`sym([1, 2, 3], [5, 2, 1, 4, 5])` should return `[3, 4, 5]`.
+`sym([1, 2, 3], [5, 2, 1, 4, 5])` ควรได้ผลลัพธ์เป็น `[3, 4, 5]`.
 
 ```js
 assert.sameMembers(sym([1, 2, 3], [5, 2, 1, 4, 5]), [3, 4, 5]);
 ```
 
-`sym([1, 2, 3], [5, 2, 1, 4, 5])` should contain only three elements.
+`sym([1, 2, 3], [5, 2, 1, 4, 5])` ต้องมีสมาชิกเพียง 3 ตัว
 
 ```js
 assert.equal(sym([1, 2, 3], [5, 2, 1, 4, 5]).length, 3);
 ```
 
-`sym([1, 2, 5], [2, 3, 5], [3, 4, 5])` should return `[1, 4, 5]`
+`sym([1, 2, 5], [2, 3, 5], [3, 4, 5])` ควรได้ผลลัพธ์เป็น `[1, 4, 5]`
 
 ```js
 assert.sameMembers(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]), [1, 4, 5]);
 ```
 
-`sym([1, 2, 5], [2, 3, 5], [3, 4, 5])` should contain only three elements.
+`sym([1, 2, 5], [2, 3, 5], [3, 4, 5])` ต้องมีสมาชิกเพียง 3 ตัว
 
 ```js
 assert.equal(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]).length, 3);
 ```
 
-`sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])` should return `[1, 4, 5]`.
+`sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])` ควรได้ผลลัพธ์เป็น `[1, 4, 5]`.
 
 ```js
 assert.sameMembers(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]), [1, 4, 5]);
 ```
 
-`sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])` should contain only three elements.
+`sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])` ต้องมีสมาชิกเพียง 3 ตัว
 
 ```js
 assert.equal(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]).length, 3);
 ```
 
-`sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])` should return `[2, 3, 4, 6, 7]`.
+`sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])` ควรได้ผลลัพธ์เป็น `[2, 3, 4, 6, 7]`.
 
 ```js
 assert.sameMembers(
@@ -87,7 +104,7 @@ assert.sameMembers(
 );
 ```
 
-`sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])` should contain only five elements.
+`sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])` ต้องมีสมาชิกเพียง 5 ตัว
 
 ```js
 assert.equal(
@@ -96,7 +113,7 @@ assert.equal(
 );
 ```
 
-`sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])` should return `[1, 2, 4, 5, 6, 7, 8, 9]`.
+`sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])` ควรได้ผลลัพธ์เป็น `[1, 2, 4, 5, 6, 7, 8, 9]`.
 
 ```js
 assert.sameMembers(
@@ -112,7 +129,7 @@ assert.sameMembers(
 );
 ```
 
-`sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])` should contain only eight elements.
+`sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])` ต้องมีสมาชิกเพียง 8 ตัว
 
 ```js
 assert.equal(

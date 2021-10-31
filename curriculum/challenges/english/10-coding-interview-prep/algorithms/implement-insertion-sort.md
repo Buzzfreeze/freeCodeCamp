@@ -8,19 +8,33 @@ dashedName: implement-insertion-sort
 
 # --description--
 
-The next sorting method we'll look at is insertion sort. This method works by building up a sorted array at the beginning of the list. It begins the sorted array with the first element. Then it inspects the next element and swaps it backwards into the sorted array until it is in sorted position. It continues iterating through the list and swapping new items backwards into the sorted portion until it reaches the end. This algorithm has quadratic time complexity in the average and worst cases.
+ใดหัวข้อนี้ เราจะใช้วิธีการเรียงลำดับโดยใช้การแทรก
 
-**Instructions:** Write a function `insertionSort` which takes an array of integers as input and returns an array of these integers in sorted order from least to greatest.
+โดยวิธีการคือ  (ในกรณีตัวอย่างนี้ เรียงจากน้อยไปมาก) จะเริ่มจากค่าในอาร์เรยตัวที่ 2 เปรียบเทียบกับตัวก่อนหน้า
+
+ถ้ามากกว่า จะแทรกอยู่หลังตำแหน่งนั้น แต่ถ้าหากน้อยกว่า มันจะไปแทรกที่ตำแหน่งก่อนหน้า
+
+วนซ้ำไปที่ ค่าในอาร์เรย์ตัวที่ สาม สี่ ห้า และสลับตำแหน่งเพื่อแทรกตัวเอง ไปเรื่อยๆจนกว่าจะเสร็จทุกรายการในลิส
+
+โดยทั่วไป วิธีการนี้จะใช้เวลานาน
+
+
+(กล่าวง่ายๆ คือ นำข้อมูลที่จะทำการจัดเรียงนั้นๆ ไปจัดเรียงทีละตัว โดยการแทรกตัวที่จะเรียงไว้ในตำแหน่งที่เหมาะสมของข้อมูล
+
+เปรียบเทียบค่ากับตำแหน่งก่อนหน้า แล้วสลับตำแหน่งให้อยู่ในตำแหน่งที่เหมาะสม)
+
+
+**คำแนะนำ:** เขียนฟังก์ชัน `insertionSort`  ที่รับอาร์เรย์ เป็นจำนวนเต็ม และส่งกลับอาร์เรย์ของจำนวนเต็มเหล่านี้ โดยเรียงลำดับจากน้อยไปมาก
 
 # --hints--
 
-`insertionSort` should be a function.
+`insertionSort` ควรเป็น function.
 
 ```js
 assert(typeof insertionSort == 'function');
 ```
 
-`insertionSort` should return a sorted array (least to greatest).
+`insertionSort` ควรได้เป็น array ( โดยเรียงจาก น้อยไปมาก ).
 
 ```js
 assert(
@@ -48,7 +62,7 @@ assert(
 );
 ```
 
-`insertionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])` should return an array that is unchanged except for order.
+`insertionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])` ควรเป็น array ที่ไม่เปลี่ยนแปลง ยกเว้นสั่งมัน.
 
 ```js
 assert.sameMembers(
@@ -75,13 +89,13 @@ assert.sameMembers(
 );
 ```
 
-`insertionSort([5, 4, 33, 2, 8])` should return `[2, 4, 5, 8, 33]`.
+`insertionSort([5, 4, 33, 2, 8])` ควรได้ผลลัพธ์เป็น `[2, 4, 5, 8, 33]`.
 
 ```js
 assert.deepEqual(insertionSort([5, 4, 33, 2, 8]), [2, 4, 5, 8, 33])
 ```
 
-`insertionSort` should not use the built-in `.sort()` method.
+`insertionSort` ต้องไม่ใช้ built-in function `.sort()`
 
 ```js
 assert(isBuiltInSortUsed());
