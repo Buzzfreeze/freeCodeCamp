@@ -10,19 +10,19 @@ dashedName: how-deep-neural-networks-work
 
 ## --text--
 
-Why is it better to calculate the gradient (slope) directly rather than numerically?
+ทำไมการคำนวณความชันถึงดีกว่าการคำนวณแบบตัวเลขล่ะ?
 
 ## --answers--
 
-It is computationally expensive to go back through the entire neural network and adjust the weights for each layer of the neural network.
+การคำนวณย้อนกลับผ่านทางโครงข่ายประสาทเทียม(neural network)ทั้งหมดและการปรับการให้น้ำหนักแต่ละชั้นของโครงข่ายประสาทเทียม(neural network)นั้นมีค่าใช้จ่ายที่สูง
 
 ---
 
-It is more accurate.
+มันได้ค่าที่แม่นยำกว่า
 
 ---
 
-There is no difference between the two methods.
+ไม่มีความแตกต่างระหว่างการใช้ทั้ง 2 วิธี
 
 ## --video-solution--
 

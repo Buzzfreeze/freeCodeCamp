@@ -8,17 +8,17 @@ dashedName: neural-network-sms-text-classifier
 
 # --description--
 
-In this challenge, you need to create a machine learning model that will classify SMS messages as either "ham" or "spam". A "ham" message is a normal message sent by a friend. A "spam" message is an advertisement or a message sent by a company.
+ในโจทย์ข้อนี้ คุฯจะต้องสร้างโมเดลแมชชีนเลิร์นนิ่งที่สามารถจำแนกข้อความเอสเอ็มเอส  "ham" หรือ "spam" โดย "ham" จะเป็นข้อความปกติที่ส่งถึงเพื่อน แต่ "spam" จะเป็นข้อความโฆษณาที่ส่งมาจากบริษัท
 
-You can access [the full project instructions and starter code on Google Colaboratory](https://colab.research.google.com/github/freeCodeCamp/boilerplate-neural-network-sms-text-classifier/blob/master/fcc_sms_text_classification.ipynb).
+คุณสามารถเข้าได้จาก  [the full project instructions and starter code on Google Colaboratory](https://colab.research.google.com/github/freeCodeCamp/boilerplate-neural-network-sms-text-classifier/blob/master/fcc_sms_text_classification.ipynb).
 
-After going to that link, create a copy of the notebook either in your own account or locally. Once you complete the project and it passes the test (included at that link), submit your project link below. If you are submitting a Google Colaboratory link, make sure to turn on link sharing for "anyone with the link."
+หลังจากที่กดลิงก์นี้เข้าไปแล้ว ให้คุณสร้างโฟลเดอร์บันทึกไฟล์ในบัญชีของคุณเองหรือในเครื่อง เพื่อกรณีที่คุณผ่านโปรเจคแล้วและผ่านการทดสอบ (รวมอยู่ในลิงค์นั้น) ให้ส่งลิงค์โปรเจคของคุณจากในโฟลเดอร์ หรือหากคุณกำลังส่งลิงก์ใน Google Colaboratory อย่าลืมเปิดการแชร์ลิงก์ "anyone with the link."
 
-We are still developing the interactive instructional content for the machine learning curriculum. For now, you can go through the video challenges in this certification. You may also have to seek out additional learning resources, similar to what you would do when working on a real-world project.
+พวกเรายังคงพยายามพัฒนาเนื้อหาการเรียนการสอนในรูปแบบโต้ตอบ สำหรับหลักสูตรแมชชีนเลิร์นนิง ซึ่งในตอนนี้ คุณสามารถเรียนผ่านโจทย์ท้าทายวิดีโอในส่วนนี้ได้ ในการทำโจทย์นั้น คุณอาจต้องหาแหล่งเรียนรู้อื่นเพิ่มเติมในการทำโปรเจคนี้
 
 # --hints--
 
-It should pass all Python tests.
+คุณควรที่จะทำข้อสอบ Python ผ่านทั้งหมด
 
 ```js
 

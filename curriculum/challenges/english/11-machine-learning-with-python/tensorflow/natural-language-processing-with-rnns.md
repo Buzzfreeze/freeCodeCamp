@@ -14,19 +14,19 @@ dashedName: natural-language-processing-with-rnns
 
 ## --text--
 
-Natural Language Processing is a branch of artificial intelligence that...:
+Natural Language Processing เป็นสาขาหนึ่งของปัญญาประดิษฐ์ (AI) ที่...:
 
 ## --answers--
 
-deals with how computers understand and process natural/human languages.
+เกี่ยวข้องกับวิธีที่คอมพิวเตอร์ทำความเข้าใจและประมวลผลภาษาธรรมชาติ/มนุษย์
 
 ---
 
-translates image data into natural/human languages.
+แปลข้อมูลภาพมาเป็นภาษาธรรมชาติ/มนุษย์
 
 ---
 
-is focused on translating computer languages into natural/human languages.
+มุ่งเน้นไปที่การแปลภาษาคอมพิวเตอร์เป็นภาษาธรรมชาติ/มนุษย์
 
 ## --video-solution--
 

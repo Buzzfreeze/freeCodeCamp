@@ -14,7 +14,7 @@ dashedName: neural-networks-activation-functions
 
 ## --text--
 
-Which activation function switches values between -1 and 1?
+ฟังก์ชันการเปิดใช้งานในข้อใดสลับค่าระหว่าง -1 ถึง 1?
 
 ## --answers--
 

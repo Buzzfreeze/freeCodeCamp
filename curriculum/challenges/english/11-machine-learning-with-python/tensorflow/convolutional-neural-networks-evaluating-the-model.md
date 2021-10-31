@@ -14,19 +14,19 @@ dashedName: convolutional-neural-networks-evaluating-the-model
 
 ## --text--
 
-What is **not** a good way to increase the accuracy of a convolutional neural network?
+ข้อใดคือวิธีที่**ไม่ใช่**ในเพิ่มความแม่นยำของโครงข่ายประสาทเทียม(convolutional neural network)?
 
 ## --answers--
 
-Augmenting the data you already have.
+การเพิ่มข้อมูลที่คุณมีอยู่แล้ว
 
 ---
 
-Using a pre-trained model.
+โดยการใช้โมเดลที่ฝึกไว้ล่วงหน้า(pre-trained)
 
 ---
 
-Using your test data to retrain the model.
+การใช้ข้อมูลทดสอบของคุณ เพื่อฝึกโมเดลใหม่
 
 ## --video-solution--
 

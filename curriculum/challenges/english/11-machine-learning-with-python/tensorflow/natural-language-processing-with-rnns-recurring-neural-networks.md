@@ -14,23 +14,23 @@ dashedName: natural-language-processing-with-rnns-recurring-neural-networks
 
 ## --text--
 
-What is true about Recurrent Neural Networks?
+ข้อใดคือความจริงเกี่ยวกับ Recurrent Neural Networks?
 
 ## --answers--
 
-1: They are a type of feed-forward neural network.
+1: เป็นโครงข่ายประสาทฟีดฟอร์เวิร์ด (feed-forward neural network) ประเภทหนึ่ง
 
 ---
 
-2: They maintain an internal memory/state of the input that was already processed.
+2: เป็นการรักษาหน่วยความจำภายใน / สถานะของอินพุตที่ได้รับการประมวลผลแล้ว
 
 ---
 
-3: RNN's contain a loop and process one piece of input at a time.
+3: RNN มีลูปและการประมวลผลอินพุตหนึ่งครั้งต่อรอบ
 
 ---
 
-4: Both 2 and 3.
+4: ทั้งข้อ 2 และข้อ 3.
 
 ## --video-solution--
 

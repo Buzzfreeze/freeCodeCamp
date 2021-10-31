@@ -14,19 +14,19 @@ dashedName: reinforcement-learning-with-q-learning
 
 ## --text--
 
-The key components of reinforcement learning are...
+องค์ประกอบสำคัญของ reinforcement learning คือ...
 
 ## --answers--
 
-environment, representative, state, reaction, and reward.
+สิ่งแวดล้อม(environment), ตัวแทน(representative), สถานะ(state), ปฏิกิริยา(reaction) ,และรางวัล(reward)
 
 ---
 
-environment, agent, state, action, and reward.
+สิ่งแวดล้อม(environment), เอเจนท์(agent), สถานะ(state), การกระทำ(action), และรางวัล(reward)
 
 ---
 
-habitat, agent, state, action, and punishment.
+แหล่งที่อยู่(habitat), เอเจนท์(agent), สถานะ(state), การกระทำ(action), and การทำโทษ(punishment).
 
 ## --video-solution--
 

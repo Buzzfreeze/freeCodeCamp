@@ -14,19 +14,19 @@ dashedName: natural-language-processing-with-rnns-part-2
 
 ## --text--
 
-Word embeddings are...:
+การฝังคำ(Word embeddings)คือ...:
 
 ## --answers--
 
-an unordered group of encoded words that describes the frequency of words in a given document.
+กลุ่มของคำเข้ารหัสที่ไม่มีเรียงลำดับซึ่งอธิบายถึงความถี่ของคำในเอกสารที่กำหนด
 
 ---
 
-a group of encoded words that preserves the original order of the words in a given document.
+กลุ่มของคำที่เอาไว้เข้ารหัสที่รักษาลำดับเดิมของคำไว้ในเอกสารที่กำหนด
 
 ---
 
-a vectorized representation of words in a given document that places words with similar meanings near each other.
+การแสดงคำแบบเวกเตอร์ในเอกสารที่กำหนดซึ่งเป็นการวางคำที่มีความหมายใกล้เคียงกันไว้ใกล้กัน
 
 ## --video-solution--
 

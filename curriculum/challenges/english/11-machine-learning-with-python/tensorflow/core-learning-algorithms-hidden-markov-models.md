@@ -14,19 +14,19 @@ dashedName: core-learning-algorithms-hidden-markov-models
 
 ## --text--
 
-What makes a Hidden Markov model different than linear regression or classification?
+ข้อใดที่ทำให้โมเดล Hidden Markov แตกต่างจากการถดถอยเชิงเส้น(linear regression)หรือการจำแนกประเภทแบบclassification?
 
 ## --answers--
 
-It uses probability distributions to predict future events or states.
+ใช้การแจกแจงความน่าจะเป็นเพื่อทำนายเหตุการณ์หรืออีเว้นท์ในอนาคต
 
 ---
 
-It analyzes the relationship between independent and dependent variables to make predictions.
+ใช้วิเคราะห์ความสัมพันธ์ระหว่างตัวแปรอิสระและตัวแปรตามเพื่อการทำนาย
 
 ---
 
-It separates data points into separate categories.
+แยกจุดข้อมูลออกเป็นหมวดหมู่แยกออกจากกัน
 
 ## --video-solution--
 

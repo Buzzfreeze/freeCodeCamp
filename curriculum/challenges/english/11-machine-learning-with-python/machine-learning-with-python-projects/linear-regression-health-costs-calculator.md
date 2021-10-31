@@ -8,19 +8,19 @@ dashedName: linear-regression-health-costs-calculator
 
 # --description--
 
-In this challenge, you will predict healthcare costs using a regression algorithm.
+ในโจทย์ข้อนี้ คุณจะต้องทำนายค่ารักษาพยาบาลโดยใช้อัลกอริทึมแบบถดถอย (regression algorithm)
 
-You are given a dataset that contains information about different people including their healthcare costs. Use the data to predict healthcare costs based on new data.
+คุณจะได้รับข้อมูลดาต้าเซตที่ประกอบไปด้วยข้อมูลค่ารักษาพยาบาลของแต่ละบุคคล โดยคุณจะต้องใช้ดาต้าเหล่านี้ทำนายค่ารักษาพยาบาลด้วยข้อมูลชุดใหม่
 
-You can access [the full project instructions and starter code on Google Colaboratory](https://colab.research.google.com/github/freeCodeCamp/boilerplate-linear-regression-health-costs-calculator/blob/master/fcc_predict_health_costs_with_regression.ipynb).
+คุณสามารถเข้าได้จาก  [the full project instructions and starter code on Google Colaboratory](https://colab.research.google.com/github/freeCodeCamp/boilerplate-linear-regression-health-costs-calculator/blob/master/fcc_predict_health_costs_with_regression.ipynb).
 
-After going to that link, create a copy of the notebook either in your own account or locally. Once you complete the project and it passes the test (included at that link), submit your project link below. If you are submitting a Google Colaboratory link, make sure to turn on link sharing for "anyone with the link."
+หลังจากที่กดลิงก์นี้เข้าไปแล้ว ให้คุณสร้างโฟลเดอร์บันทึกไฟล์ในบัญชีของคุณเองหรือในเครื่อง เพื่อกรณีที่คุณผ่านโปรเจคแล้วและผ่านการทดสอบ (รวมอยู่ในลิงค์นั้น) ให้ส่งลิงค์โปรเจคของคุณจากในโฟลเดอร์ หรือหากคุณกำลังส่งลิงก์ใน Google Colaboratory อย่าลืมเปิดการแชร์ลิงก์ "anyone with the link."
 
-We are still developing the interactive instructional content for the machine learning curriculum. For now, you can go through the video challenges in this certification. You may also have to seek out additional learning resources, similar to what you would do when working on a real-world project.
+พวกเรายังคงพยายามพัฒนาเนื้อหาการเรียนการสอนในรูปแบบโต้ตอบ สำหรับหลักสูตรแมชชีนเลิร์นนิง ซึ่งในตอนนี้ คุณสามารถเรียนผ่านโจทย์ท้าทายวิดีโอในส่วนนี้ได้ ในการทำโจทย์นั้น คุณอาจต้องหาแหล่งเรียนรู้อื่นเพิ่มเติมในการทำโปรเจคนี้
 
 # --hints--
 
-It should pass all Python tests.
+คุณควรที่จะทำข้อสอบ Python ผ่านทั้งหมด
 
 ```js
 

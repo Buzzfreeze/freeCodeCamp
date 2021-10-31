@@ -14,19 +14,19 @@ dashedName: core-learning-algorithms-training-and-testing-data
 
 ## --text--
 
-What is categorical data?
+Categorical data คืออะไร?
 
 ## --answers--
 
-Another term for one-hot encoding.
+หรือเรียกอีกชื่อหนึ่งว่า one-hot encoding
 
 ---
 
-Any data that is not numeric.
+ข้อมูลใดๆ ที่ไม่ใช่ตัวเลข
 
 ---
 
-Any data that is represented numerically.
+ข้อมูลใด ๆ ที่แสดงเป็นตัวเลข
 
 ## --video-solution--
 

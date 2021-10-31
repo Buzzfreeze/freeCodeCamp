@@ -14,19 +14,19 @@ dashedName: convolutional-neural-networks-the-convolutional-layer
 
 ## --text--
 
-What are the three main properties of each convolutional layer?
+คุณสมบัติหลัก 3 อย่างของแต่ละ convolutional layer คืออะไร?
 
 ## --answers--
 
-Input size, the number of filters, and the sample size of the filters.
+ขนาดของอินพุต จำนวนตัวกรอง และขนาดของจำนวนตัวอย่างในตัวกรอง
 
 ---
 
-Input size, input dimensions, and the color values of the input.
+ขนาดของอินพุต มิติของอินพุต และค่าของสีในอินพุต
 
 ---
 
-Input size, input padding, and stride.
+ขนาดของอินพุต ช่องว่างภายในอินพุต และระยะก้าว
 
 ## --video-solution--
 

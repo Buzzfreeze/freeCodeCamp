@@ -14,7 +14,7 @@ dashedName: convolutional-neural-networks-picking-a-pretrained-model
 
 ## --text--
 
-Fill in the blanks below to use Google's pre-trained MobileNet V2 model as a base for a convolutional neural network:
+กรอกข้อมูลในช่องว่างด้านล่างเพื่อใช้โมเดล MobileNet V2 ที่ผ่านการฝึกอบรมล่วงหน้า(pre-trained) ของ Google เพื่อที่จะเป็นฐานสำหรับโครงข่ายประสาทเทียม(convolutional neural network) :
 
 ```py
 base_model = tf.__A__.applications.__B__(input_shape=(160, 160, 3),

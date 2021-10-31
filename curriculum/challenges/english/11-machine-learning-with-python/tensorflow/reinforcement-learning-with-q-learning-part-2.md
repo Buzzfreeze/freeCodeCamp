@@ -14,15 +14,15 @@ dashedName: reinforcement-learning-with-q-learning-part-2
 
 ## --text--
 
-What can happen if the agent does not have a good balance of taking random actions and using learned actions?
+ข้อใดต่อไปนี้ คือสิ่งที่จะเกิดอะไรขึ้นหากเอเจนท์(agent)ไม่มีความบาลานซ์ของการดำเนินการสุ่มและการเรียนรู้แบบการกระทำที่เรียนรู้?
 
 ## --answers--
 
-The agent will always try to minimize its reward for the current state/action, leading to local minima.
+เอเจนท์(agent)จะพยายามลดรางวัลให้น้อยที่สุดสำหรับสถานะ/การกระทำในปัจจุบัน ซึ่งนำไปสู่ค่าต่ำสุดในโลคอล (local minima)
 
 ---
 
-The agent will always try to maximize its reward for the current state/action, leading to local maxima.
+เอเจนท์(agent)จะพยายามเพิ่มรางวัลให้สูงสุดสำหรับสถานะ/การกระทำในปัจจุบันเสมอ ซึ่งนำไปสู่จุดสูงสุดในโลคอล(local maxima)
 
 ## --video-solution--
 

@@ -14,7 +14,7 @@ dashedName: reinforcement-learning-with-q-learning-example
 
 ## --text--
 
-Fill in the blanks to complete the following Q-Learning equation:
+กรอกข้อมูลในช่องว่างต่อไปนี้ เพื่อทำให้สมการ Q-Learningสมบูรณ์:
 
 ```py
 Q[__A__, __B__] = Q[__A__, __B__] + LEARNING_RATE * (reward + GAMMA * np.max(Q[__C__, :]) - Q[__A__, __B__])

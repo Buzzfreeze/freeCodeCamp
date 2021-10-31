@@ -14,19 +14,19 @@ dashedName: neural-networks-optimizers
 
 ## --text--
 
-What is an optimizer function?
+การเพิ่มประสิทธิภาพฟังก์ชันคืออะไร?
 
 ## --answers--
 
-A function that increases the accuracy of a model's predictions.
+ฟังก์ชันที่เพิ่มความแม่นยำของการทำนายของโมเดล
 
 ---
 
-A function that implements the gradient descent and backpropagation algorithms for you.
+ฟังก์ชันที่ใช้อัลกอริธึมในการไล่ระดับสีและ backpropagation 
 
 ---
 
-A function that reduces the time a model needs to train.
+ฟังก์ชันที่ช่วยลดเวลาของโมเดลที่ต้องเทรนนิ่ง
 
 ## --video-solution--
 

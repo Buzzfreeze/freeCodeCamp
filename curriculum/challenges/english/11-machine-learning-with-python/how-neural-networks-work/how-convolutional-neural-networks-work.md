@@ -10,19 +10,19 @@ dashedName: how-convolutional-neural-networks-work
 
 ## --text--
 
-When are Convolutional Neural Networks not useful?
+แล้วเมื่อไหร่ที่ Convolutional Neural Networks ไม่ได้ใช้งานล่ะ?
 
 ## --answers--
 
-If your data can't be made to look like an image, or if you can rearrange elements of your data and it's still just as useful.
+หากข้อมูลนั้นไม่สามารถทำให้มันดูเหมือนรูปภาพได้ หรือ หากไม่สามารถเรียงเอเลเมนต์หรือองค์ประของของข้อมูลได้ ก็ถือว่ามันก็ยังมีประโยชน์อยู่
 
 ---
 
-If your data is made up of different 2D or 3D images.
+หากข้อมูลของคุณเกิดจากความแตกต่างของภาพ 2มิติ หรือ 3มิติ
 
 ---
 
-If your data is text or sound based.
+หากข้อมูลของคุณเป็นแบบข้อความหรือแบบเสียง
 
 ## --video-solution--
 

@@ -14,7 +14,7 @@ dashedName: creating-a-convolutional-neural-network
 
 ## --text--
 
-Fill in the blanks below to complete the architecture for a convolutional neural network:
+กรอกข้อมูลในช่องว่างด้านล่างเพื่อสร้างโครงสร้างสำหรับโครงข่ายประสาทเทียม:
 
 ```py
 model = models.__A__()

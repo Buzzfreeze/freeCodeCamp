@@ -14,19 +14,19 @@ dashedName: neural-networks-with-tensorflow
 
 ## --text--
 
-A densely connected neural network is one in which...:
+โครงข่ายประสาทเทียมที่เชื่อมต่อกันอย่างหนาแน่นเป็นหนึ่งในเครือข่ายที่...:
 
 ## --answers--
 
-all the neurons in the current layer are connected to one neuron in the previous layer.
+เซลล์ประสาท(neurons)ทั้งหมดในเลเยอร์ชั้นปัจจุบันเชื่อมต่อกับเซลล์ประสาท(neurons)หนึ่งเซลล์ในเลเยอร์ชั้นก่อนหน้า
 
 ---
 
-all the neurons in each layer are connected randomly.
+เซลล์ประสาท(neurons)ทั้งหมดในแต่ละชั้นจะเชื่อมต่อกันแบบสุ่ม
 
 ---
 
-all the neurons in the current layer are connected to every neuron in the previous layer.
+เซลล์ประสาท(neurons)ทั้งหมดในเลเยอร์ชั้นปัจจุบันเชื่อมต่อกับเซลล์ประสาท(neurons)ทุกเซลล์ในเลเยอร์ชั้นก่อนหน้า
 
 ## --video-solution--
 

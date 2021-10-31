@@ -14,19 +14,19 @@ dashedName: core-learning-algorithms-classification
 
 ## --text--
 
-What is classification?
+การจำแนกประเภทแบบ classification คืออะไร?
 
 ## --answers--
 
-The process of separating data points into different classes.
+กระบวนการในการแยกดาต้าพอยด์ในคลาสที่แตกต่างกัน
 
 ---
 
-Predicting a numeric value or forecast based on independent and dependent variables.
+การทำนายค่าตัวเลขหรือการคาดการณ์ตามตัวแปรอิสระและตัวแปรตาม
 
 ---
 
-None of the above.
+ไม่มีจากที่กล่าวมาข้างต้น
 
 ## --video-solution--
 

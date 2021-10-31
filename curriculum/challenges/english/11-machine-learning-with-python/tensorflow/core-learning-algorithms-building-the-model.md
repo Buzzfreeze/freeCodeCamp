@@ -14,7 +14,7 @@ dashedName: core-learning-algorithms-building-the-model
 
 ## --text--
 
-What kind of estimator/model does TensorFlow recommend using for classification?
+TensorFlow ใช้ตัวประมาณการหรือโมเดลใดในการจำแนกประเภทแบบ classification ?
 
 ## --answers--
 

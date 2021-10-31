@@ -8,17 +8,17 @@ dashedName: cat-and-dog-image-classifier
 
 # --description--
 
-For this challenge, you will use TensorFlow 2.0 and Keras to create a convolutional neural network that correctly classifies images of cats and dogs with at least 63% accuracy.
+สำหรับโจทย์ท้าทายข้อนี้ คุณจะต้องใช้ TensorFlow 2.0 และ Keras ในการสร้าง convolutional neural network เพื่อที่จะจำแนกภาพแมวและสุนัขอย่างถูกต้องแม่นยำอย่างน้อย 63%
 
-You can access [the full project instructions and starter code on Google Colaboratory](https://colab.research.google.com/github/freeCodeCamp/boilerplate-cat-and-dog-image-classifier/blob/master/fcc_cat_dog.ipynb).
+คุณสามารถเข้าได้จาก  [the full project instructions and starter code on Google Colaboratory](https://colab.research.google.com/github/freeCodeCamp/boilerplate-cat-and-dog-image-classifier/blob/master/fcc_cat_dog.ipynb).
 
-After going to that link, create a copy of the notebook either in your own account or locally. Once you complete the project and it passes the test (included at that link), submit your project link below. If you are submitting a Google Colaboratory link, make sure to turn on link sharing for "anyone with the link."
+หลังจากที่กดลิงก์นี้เข้าไปแล้ว ให้คุณสร้างโฟลเดอร์บันทึกไฟล์ในบัญชีของคุณเองหรือในเครื่อง เพื่อกรณีที่คุณผ่านโปรเจคแล้วและผ่านการทดสอบ (รวมอยู่ในลิงค์นั้น) ให้ส่งลิงค์โปรเจคของคุณจากในโฟลเดอร์ หรือหากคุณกำลังส่งลิงก์ใน Google Colaboratory อย่าลืมเปิดการแชร์ลิงก์ "anyone with the link."
 
-We are still developing the interactive instructional content for the machine learning curriculum. For now, you can go through the video challenges in this certification. You may also have to seek out additional learning resources, similar to what you would do when working on a real-world project.
+พวกเรายังคงพยายามพัฒนาเนื้อหาการเรียนการสอนในรูปแบบโต้ตอบ สำหรับหลักสูตรแมชชีนเลิร์นนิง ซึ่งในตอนนี้ คุณสามารถเรียนผ่านโจทย์ท้าทายวิดีโอในส่วนนี้ได้ ในการทำโจทย์นั้น คุณอาจต้องหาแหล่งเรียนรู้อื่นเพิ่มเติมในการทำโปรเจคนี้
 
 # --hints--
 
-It should pass all Python tests.
+คุณควรที่จะทำข้อสอบ Python ผ่านทั้งหมด
 
 ```js
 

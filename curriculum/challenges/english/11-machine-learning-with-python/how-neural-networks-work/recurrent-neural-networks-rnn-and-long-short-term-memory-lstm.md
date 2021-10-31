@@ -10,19 +10,19 @@ dashedName: recurrent-neural-networks-rnn-and-long-short-term-memory-lstm
 
 ## --text--
 
-What are the main neural network components that make up a Long Short Term Memory network?
+อะไรคือส่วนประกอบหลักของโครงข่ายประสาทเทียมที่ประกอบกันเป็นเครือข่ายหน่วยความจำระยะสั้น-ระยะยาว?
 
 ## --answers--
 
-New information and prediction.
+ข้อมูลใหม่และการทำนาย
 
 ---
 
-Prediction, collected possibilities, and selection.
+การทำนาย, การเก็บรวบรวมความเป็นไปได้ทั้งหมด, และการเลือก
 
 ---
 
-Prediction, ignoring, forgetting, and selection.
+การทำนาย, การไม่สนใจ, การฟอร์เก็ตติ้ง(การลืม) และการเลือก
 
 ## --video-solution--
 

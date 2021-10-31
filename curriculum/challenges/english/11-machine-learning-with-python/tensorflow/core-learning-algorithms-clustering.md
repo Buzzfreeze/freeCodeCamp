@@ -14,27 +14,27 @@ dashedName: core-learning-algorithms-clustering
 
 ## --text--
 
-Which of the following steps is **not** part of the K-Means algorithm?
+ขั้นตอนใดต่อไปนี้ **ไม่ใช่** ส่วนหนึ่งของอัลกอริทึมแบบ K-Means
 
 ## --answers--
 
-Randomly pick K points to place K centeroids.
+การสุ่มเลือกจุด K เพื่อวาง K centeroids
 
 ---
 
-Assign each K point to the closest K centeroid.
+การกำหนดจุด K ของแต่ละจุดให้กับจุดศูนย์กลาง K ที่ใกล้ที่สุด
 
 ---
 
-Move each K centeroid into the middle of all of their data points.
+การย้าย K centeroid แต่ละตัวไปไว้ตรงกลางของจุดข้อมูลทั้งหมด
 
 ---
 
-Shuffle the K points so they're redistributed randomly.
+การสับเปลี่ยนจุด K แบบกากระจายแบบสุ่ม
 
 ---
 
-Reassign each K point to the closest K centeroid.
+การกำหนดจุด K ของแต่ละจุดให้กับจุด K centeroid ที่ใกล้ที่สุด
 
 ## --video-solution--
 

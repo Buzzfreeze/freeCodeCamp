@@ -14,19 +14,19 @@ dashedName: conclusion
 
 ## --text--
 
-Most people that are experts in AI or machine learning usually...:
+คนส่วนใหญ่ที่เชี่ยวชาญในด้าน AI หรือ Machine Learning(ML)มักจะ...:
 
 ## --answers--
 
-have one specialization.
+มีความเชี่ยวชาญในอย่างใดอย่างหนึ่ง
 
 ---
 
-have many specializations.
+มีความเชี่ยวชาญมากมายหลายด้าน
 
 ---
 
-have a deep understanding of many different frameworks.
+มีความเข้าใจอย่างลึกซึ้งในเฟรมเวิร์คต่างๆ
 
 ## --video-solution--
 

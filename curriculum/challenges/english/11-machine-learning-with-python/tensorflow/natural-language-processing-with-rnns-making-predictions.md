@@ -14,19 +14,19 @@ dashedName: natural-language-processing-with-rnns-making-predictions
 
 ## --text--
 
-Before you make a prediction with your own review, you should...:
+ก่อนที่คุณจะทำการทำนายด้วยรีวิวของคุณเอง คุณควรที่จะ...:
 
 ## --answers--
 
-decode the training dataset and compare the results to the test data.
+ถอดรหัสชุดข้อมูลการเทรนนิ่งและเปรียบเทียบผลลัพธ์กับชุดข้อมูลของการทดสอบ
 
 ---
 
-use the encodings from the training dataset to encode your review.
+ใช้การเข้ารหัสจากชุดข้อมูลของกาเทรนนิ่งเพื่อเข้ารหัสที่รีวิวของคุณ
 
 ---
 
-assign random values between 0 and the maximum number of vocabulary in your dataset to each word in your review.
+กำหนดค่าสุ่มระหว่าง 0 กับตัวเลขสูงสุดในชุดข้อมูลของคุณในแต่ละคำในรีวิวของคุณ
 
 ## --video-solution--
 

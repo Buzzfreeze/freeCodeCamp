@@ -14,7 +14,7 @@ dashedName: neural-networks-creating-a-model
 
 ## --text--
 
-Fill in the blanks below to build a sequential model of dense layers:
+กรอกข้อมูลในช่องว่างด้านล่างเพื่อสร้างโมเดลแบบลำดับชั้นหนาแน่น(dense layers):
 
 ```py
 model = __A__.__B__([

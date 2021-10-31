@@ -14,19 +14,19 @@ dashedName: core-learning-algorithms-the-training-process
 
 ## --text--
 
-What are epochs?
+Epochs คืออะไร?
 
 ## --answers--
 
-The number of times the model will see the same data.
+จำนวนครั้งที่โมเดลเห็นข้อมูลชุดเดียวกัน
 
 ---
 
-A type of graph.
+ประเภทของกราฟ
 
 ---
 
-The number of elements you feed to the model at once.
+จำนวนของเอเลเมนต์ที่คุณฟีดไปยังโมเดลในแต่ละครั้ง
 
 ## --video-solution--
 

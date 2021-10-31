@@ -14,7 +14,7 @@ dashedName: introduction-to-tensorflow
 
 ## --text--
 
-Which of the following is **not** a type of tensor?
+ข้อใดต่อไปนี้ **ไม่ใช่** ประเภทของเทนเซอร์(tensor)?
 
 ## --answers--
 

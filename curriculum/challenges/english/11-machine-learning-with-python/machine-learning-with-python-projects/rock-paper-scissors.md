@@ -8,17 +8,17 @@ dashedName: rock-paper-scissors
 
 # --description--
 
-For this challenge, you will create a program to play Rock, Paper, Scissors. A program that picks at random will usually win 50% of the time. To pass this challenge your program must play matches against four different bots, winning at least 60% of the games in each match.
+จากโจทย์ข้อนี้ คุณจะต้องสร้างโปรแกรมที่เล่นเกมเป่ายิงฉุบด้วย ค้อน, กรรไกร, กระดาษ ในโปรแกรมจะเป็นการเลือกแบบสุ่ม โดยมีโอกาสชนะ 50% ในแต่ละครั้ง เพื่อผ่านโจทย์ข้อนี้ โปรแกรมของคุณต้องเล่นเกมกับบอทที่แตกต่างกันสี่ตัว ชนะอย่างน้อย 60% ของเกมในแต่ละเกมการแข่งขัน
 
-You can access [the full project description and starter code on Replit](https://replit.com/github/freeCodeCamp/boilerplate-rock-paper-scissors).
+คุณสามารถเข้าได้จาก  [the full project description and starter code on Replit](https://replit.com/github/freeCodeCamp/boilerplate-rock-paper-scissors).
 
-After going to that link, fork the project. Once you complete the project based on the instructions in 'README.md', submit your project link below.
+หลังจากที่เข้าลิงน์ไปแล้ว ให้ทำการแยกโปรเจค เมื่อคุณทำโปรเจคเสร็จแล้วตามคำแนะนำใน 'README.md' ให้ส่งลิงค์โปรเจคของคุณลงในลิงก์ด้วย
 
-We are still developing the interactive instructional part of the machine learning curriculum. For now, you will have to use other resources to learn how to pass this challenge.
+พวกเรายังคงพยายามพัฒนาเนื้อหาการเรียนการสอนในรูปแบบโต้ตอบ สำหรับหลักสูตรแมชชีนเลิร์นนิง  แต่จากนี้ คุณจะต้องหาแหล่งเรียนรู้อื่นเพิ่มเติมในการที่จะผ่านโจทย์ข้อนี้ได้
 
 # --hints--
 
-It should pass all Python tests.
+คุณควรที่จะทำข้อสอบ Python ผ่านทั้งหมด
 
 ```js
 

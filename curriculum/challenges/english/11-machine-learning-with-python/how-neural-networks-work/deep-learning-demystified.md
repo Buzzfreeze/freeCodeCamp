@@ -10,23 +10,23 @@ dashedName: deep-learning-demystified
 
 ## --text--
 
-How should you assign weights to input neurons before training your network for the first time?
+เราควรจะให้น้ำหนักความสำคัญให้กับการอินพุตเซลล์ประสาท(input neurons)ก่อนการฝึกเครือข่ายครั้งแรกอย่างไร?
 
 ## --answers--
 
-From smallest to largest.
+ตอบ...จากสิ่งเล็กๆก้าวไปสู่สิ่งๆที่ใหญ่ขึ้น
 
 ---
 
-Completely randomly.
+โดยการสุ่มทั้งหมด
 
 ---
 
-Alphabetically.
+เรียงตามตัวอักษร
 
 ---
 
-None of the above.
+ไม่มีอะไรสักอย่าง
 
 ## --video-solution--
 

@@ -14,19 +14,19 @@ dashedName: introduction-machine-learning-fundamentals
 
 ## --text--
 
-Which statement below is **false**?
+ข้อใดต่อไปนี้ **เป็นเท็จ**?
 
 ## --answers--
 
-Neural networks are modeled after the way the human brain works.
+โครงข่ายประสาทเทียมถูกจำลองตามวิธีการทำงานของสมองมนุษย์
 
 ---
 
-Computer programs that play tic-tac-toe or chess against human players are examples of simple artificial intelligence.
+โปรแกรมคอมพิวเตอร์ที่เล่นเกม tic-tac-toe หรือเกมหมากรุกกับผู้เล่นที่เป็นมนุษย์ เพื่อเป็นตัวอย่างของ AI อย่างง่าย
 
 ---
 
-Machine learning is a subset of artificial intelligence.
+แมชชีนเลิร์นนิ่ง(Machine learning)เป็นซับเซตของ AI
 
 ## --video-solution--
 

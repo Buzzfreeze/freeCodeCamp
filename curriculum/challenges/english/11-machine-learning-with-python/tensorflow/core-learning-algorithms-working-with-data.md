@@ -14,19 +14,19 @@ dashedName: core-learning-algorithms-working-with-data
 
 ## --text--
 
-What does the pandas `.head()` function do?
+ฟังก์ชัน `.head()` ใน pandas ใช้ทำอะไร?
 
 ## --answers--
 
-Returns the number of entries in a data frame.
+ใช้ส่งกลับจำนวนของรายการ(entries)ในดาต้าเฟรม
 
 ---
 
-Returns the number of columns in a data frame.
+ใช้ส่งกลับจำนวนของคอลัมน์(column)ในดาต้าเฟรม
 
 ---
 
-By default, shows the first five rows or entries in a data frame.
+โดยเริ่มต้น จะแสดงห้าแถวแรกหรือรายการแรก(entries)ในดาต้าเฟรม
 
 ## --video-solution--
 

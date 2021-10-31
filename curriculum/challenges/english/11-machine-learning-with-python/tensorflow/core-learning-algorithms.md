@@ -14,9 +14,9 @@ dashedName: core-learning-algorithms
 
 ## --text--
 
-Which type of analysis would be best suited for the following problem?:
+การวิเคราะห์ประเภทใดที่เหมาะสมที่สุดสำหรับโจทย์ปัญหาต่อไปนี้:
 
-You have the average temperature in the month of March for the last 100 years. Using this data, you want to predict the average temperature in the month of March 5 years from now.
+คุณมีข้อมูลอุณหภูมิเฉลี่ยในเดือนมีนาคมในช่วง 100 ปีที่ผ่านมา เมื่อใช้ข้อมูลนี้ ทำนายอุณหภูมิเฉลี่ยในเดือน 5 มีนาคม นับจากนี้เป็นต้นไป 
 
 ## --answers--
 

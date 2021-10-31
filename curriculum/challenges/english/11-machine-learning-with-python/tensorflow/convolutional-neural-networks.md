@@ -14,19 +14,19 @@ dashedName: convolutional-neural-networks
 
 ## --text--
 
-Dense neural networks analyze input on a global scale and recognize patterns in specific areas. Convolutional neural networks...:
+โครงข่ายประสาทเทียมแบบหนาแน่น(Dense neural networks)เป็นการวิเคราะห์อินพุตในระดับโกลบอลสเกลและจดจำรูปแบบในพื้นที่ที่เฉพาะเจาะจง. โครงข่ายประสาทเทียม(Convolutional neural networks)...:
 
 ## --answers--
 
-also analyze input globally and extract features from specific areas.
+สามารถวิเคราะห์อินพุตอย่างกว้างขวางและแยกคุณสมบัติจากพื้นที่ที่เฉพาะเจาะจง
 
 ---
 
-do not work well for image classification or object detection.
+สามารถทำงานได้บ้าง (ไม่100%) สำหรับการจัดประเภทรูปภาพหรือการตรวจจับวัตถุ
 
 ---
 
-scan through the entire input a little at a time and learn local patterns.
+สแกนข้อมูลทั้งหมดได้ หรืออินพุตทีละน้อยในแต่ละครั้งและเรียนรู้รูปแบบของโลคอลได้
 
 ## --video-solution--
 
