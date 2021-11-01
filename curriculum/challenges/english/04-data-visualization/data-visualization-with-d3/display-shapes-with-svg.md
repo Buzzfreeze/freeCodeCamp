@@ -8,47 +8,48 @@ dashedName: display-shapes-with-svg
 
 # --description--
 
-The last challenge created an `svg` element with a given width and height, which was visible because it had a `background-color` applied to it in the `style` tag. The code made space for the given width and height.
+สร้าง `svg` element ที่มีทั้งความกว้างและความสูง ส่วนนี้เราจะสามารถมองเห็นได้เพราะว่ามี `background-color` ที่ apply ค่าใน `style` tag
 
-The next step is to create a shape to put in the `svg` area. There are a number of supported shapes in SVG, such as rectangles and circles. They are used to display data. For example, a rectangle (`<rect>`) SVG shape could create a bar in a bar chart.
+ขั้นตอนต่อไปคือการสร้าง shape สำหรับ `svg` ซึ่งใน SVG สามารถรองรับได้หลายรูปแบบเช่น สี่เหลี่ยมผืนผ้าและวงกลม
+ยกตัวอย่างเช่น rectangle (`<rect>`) SVG shape สามารถสร้าง a bar ใน a bar chart ได้
 
-When you place a shape into the `svg` area, you can specify where it goes with `x` and `y` coordinates. The origin point of (0, 0) is in the upper-left corner. Positive values for `x` push the shape to the right, and positive values for `y` push the shape down from the origin point.
+เมื่อจะวาง shape ใน `svg` area เราสามารถ specify ค่า `x` and `y` coordinates ได้ origin point (0, 0) จะอยู่ตรงที่ upper-left corner คเมื่อบวกค่าให้กับ `x` shape จะขยับไปอยู่ทางขวา และเมื่อเพิ่มค่า `y` shape จะขยับลงจาก origin point
 
-To place a shape in the middle of the 500 (width) x 100 (height) `svg` from last challenge, the `x` coordinate would be 250 and the `y` coordinate would be 50.
+เพื่อวาง shape เพื่อให้อยู่ตรงกลสงของ 500 (width) x 100 (height) `svg` จากโจทย์ข้อก่อนหน้า ให้ค่า `x` coordinate เป็น 250 และค่าของ `y` coordinate เป็น 50.
 
-An SVG `rect` has four attributes. There are the `x` and `y` coordinates for where it is placed in the `svg` area. It also has a `height` and `width` to specify the size.
+SVG `rect` มีทั้งหมด 4 attributes ประกอบไปด้วย `x` และ `y` coordinates ที่จะแสดงตำแหน่งใน `svg` area อีกทั้งยังมี `height` และ `width` เพื่อ specify size
 
 # --instructions--
 
-Add a `rect` shape to the `svg` using `append()`, and give it a `width` attribute of `25` and `height` attribute of `100`. Also, give the `rect` `x` and `y` attributes each set to `0`.
+เพิ่ม `rect` shape ให้กับ `svg` โดยใช้ `append()` ซึ่งให้มี `width` attribute เป็ร `25` และ `height` attribute เป็น `100`และให้ `rect` `x` และ `y` attributes มีค่าเป็น `0`.
 
 # --hints--
 
-Your document should have 1 `rect` element.
+document ควรมี 1 `rect` element.
 
 ```js
 assert($('rect').length == 1);
 ```
 
-The `rect` element should have a `width` attribute set to `25`.
+`rect` element ควรมี `width` attribute set ค่าเป็น `25`.
 
 ```js
 assert($('rect').attr('width') == '25');
 ```
 
-The `rect` element should have a `height` attribute set to `100`.
+`rect` element ควรมี `height` attribute set ค่าเป็น `100`.
 
 ```js
 assert($('rect').attr('height') == '100');
 ```
 
-The `rect` element should have an `x` attribute set to `0`.
+`rect` element ควรมี `x` attribute set ค่าเป็น `0`.
 
 ```js
 assert($('rect').attr('x') == '0');
 ```
 
-The `rect` element should have a `y` attribute set to `0`.
+`rect` element ควรมี `y` attribute set ค่าเป็น `0`.
 
 ```js
 assert($('rect').attr('y') == '0');

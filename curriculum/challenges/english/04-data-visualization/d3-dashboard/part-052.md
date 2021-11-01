@@ -7,9 +7,10 @@ dashedName: part-52
 
 # --description--
 
-Set the `y` values for `tumblrLine` using a "d function" again. Use your `yScale` and `d.followers.tumblr` to calculate their values just like you did for the Twitter line.
+ให้ค่า `y` เป็น `tumblrLine` โดยใช้ "d function" อักครั้ง 
+ใช้ `yScale` และ `d.followers.tumblr` เพื่อคำนวรค่าให้กับ Twitter line
 
-The x values for each line will be the same, but the y values will use the data from the different platforms.
+ค่า x ของแต่ละ line จะมีค่าเท่ากัน แต่ค่า y จะใช้ data จาก platforms อื่น
 
 # --hints--
 

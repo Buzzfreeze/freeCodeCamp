@@ -7,9 +7,7 @@ dashedName: part-146
 
 # --description--
 
-The last thing is that the legend title always shows 2020. Change the `text` of the `legendTitle` to a template literal that shows the currently displayed year followed by a space and `followers`.
-
-That's it, your dashboard is finished! Don't forget to admire your hard work.
+legend title จะแสดง 2020 ให้เปลี่ยน `text` ของ `legendTitle` ไปเป็น template literal เพื่อแสดงปีปัจจุบันพท้นที่ของ year และ `followers`
 
 # --hints--
 

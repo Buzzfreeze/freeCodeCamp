@@ -8,19 +8,19 @@ dashedName: create-a-scatterplot-with-svg-circles
 
 # --description--
 
-A scatter plot is another type of visualization. It usually uses circles to map data points, which have two values each. These values tie to the `x` and `y` axes, and are used to position the circle in the visualization.
+scatter plot เป็นอีกประเภทของ visualization มันใช้เพื่อจับคู่ค่าในแต่ละ data points ที่มีค่าสองจำนวน ค่าเหล่านี้เป็นไปตามแกน `x` และ `y` ค่าเหล่านี้ใช้สำหรับระบุตำแหน่งของวงกลมใน visualization.
 
-SVG has a `circle` tag to create the circle shape. It works a lot like the `rect` elements you used for the bar chart.
+SVG มี `circle` tag เพื่อสร้าง circle shape มันทำงานแบบ `rect` elements ที่ใช้สำหรับเพื่อสร้าง bar chart
 
 # --instructions--
 
-Use the `data()`, `enter()`, and `append()` methods to bind `dataset` to new `circle` elements that are appended to the SVG canvas.
+ใช้ `data()`, `enter()`, และ `append()` methods เพื่อซ่อนค่าของ `dataset` ให้กับ `circle` elements ที่ค่าเพิ่มให้กับ SVG canvas
 
-**Note:** The circles won't be visible because we haven't set their attributes yet. We'll do that in the next challenge.
+**Note:** ตอนนี้จะไม่เห็นวงกลมเพราะว่าเรายังไม่สามารถ set ค่าให้กับ attributes 
 
 # --hints--
 
-Your code should have 10 `circle` elements.
+ควรมี 10 `circle` elements.
 
 ```js
 assert($('circle').length == 10);

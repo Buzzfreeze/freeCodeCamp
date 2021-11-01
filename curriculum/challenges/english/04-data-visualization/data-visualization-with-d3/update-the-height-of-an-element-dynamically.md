@@ -1,20 +1,20 @@
 ---
 id: 587d7fa8367417b2b2512bc9
-title: Update the Height of an Element Dynamically
+title: Update the Height เป็น an Element Dynamically
 challengeType: 6
 forumTopicId: 301493
-dashedName: update-the-height-of-an-element-dynamically
+dashedName: update-the-height-เป็น-an-element-dynamically
 ---
 
 # --description--
 
-The previous challenges covered how to display data from an array and how to add CSS classes. You can combine these lessons to create a simple bar chart. There are two steps to this:
+จากโจทย์ที่ผ่านมาเราสามารถแสดง data ในแบบของรูปภาพได้จาก array และเพิ่ม CSS classes ในบทเรียนนี้เราสามารถรวมความรู้ทั้งสองแบบเข้าด้วยกันเพื่อสร้าง bar chart อย่างง่ายๆ ตามขั้นตอนด้านล่าง
 
-1) Create a `div` for each data point in the array
+1) สร้าง `div` fสำหรับแต่ละ data point ใน array
 
-2) Give each `div` a dynamic height, using a callback function in the `style()` method that sets height equal to the data value
+2) กำหนดให้ `div` เป็น dynamic height โดยใช้ callback function ใน `style()` method ที่กำหนดค่า height เท่ากับ data value
 
-Recall the format to set a style using a callback function:
+format เพื่อกำหนด style โดยใช้ callback function:
 
 ```js
 selection.style("cssProperty", (d) => d)
@@ -22,59 +22,59 @@ selection.style("cssProperty", (d) => d)
 
 # --instructions--
 
-Add the `style()` method to the code in the editor to set the `height` property for each element. Use a callback function to return the value of the data point with the string `px` added to it.
+เพิ่ม `style()` method เพื่อกำหนดค่า `height` property ของแต่ละ element โดยใช้ callback function เพื่อ return ค่าของแต่ละ data point กลับมาและเพิ่ม string `px` ให้กับกับมัน
 
 # --hints--
 
-The first `div` should have a `height` of `12` pixels.
+อันดับที่ 1) `div` ควรมีค่า `height` เป็น `12` pixels.
 
 ```js
 assert($('div').eq(0)[0].style.height === '12px');
 ```
 
-The second `div` should have a `height` of `31` pixels.
+อันดับที่ 2) `div` ควรมีค่า `height` เป็น `31` pixels.
 
 ```js
 assert($('div').eq(1)[0].style.height === '31px');
 ```
 
-The third `div` should have a `height` of `22` pixels.
+อันดับที่ 3) `div` ควรมีค่า `height` เป็น `22` pixels.
 
 ```js
 assert($('div').eq(2)[0].style.height === '22px');
 ```
 
-The fourth `div` should have a `height` of `17` pixels.
+อันดับที่ 4) `div` ควรมีค่า `height` เป็น `17` pixels.
 
 ```js
 assert($('div').eq(3)[0].style.height === '17px');
 ```
 
-The fifth `div` should have a `height` of `25` pixels.
+อันดับที่ 5) `div` ควรมีค่า `height` เป็น `25` pixels.
 
 ```js
 assert($('div').eq(4)[0].style.height === '25px');
 ```
 
-The sixth `div` should have a `height` of `18` pixels.
+อันดับที่ 6) `div` ควรมีค่า `height` เป็น `18` pixels.
 
 ```js
 assert($('div').eq(5)[0].style.height === '18px');
 ```
 
-The seventh `div` should have a `height` of `29` pixels.
+อันดับที่ 7) `div` ควรมีค่า `height` เป็น `29` pixels.
 
 ```js
 assert($('div').eq(6)[0].style.height === '29px');
 ```
 
-The eighth `div` should have a `height` of `14` pixels.
+อันดับที่ 8) `div` ควรมีค่า `height` เป็น `14` pixels.
 
 ```js
 assert($('div').eq(7)[0].style.height === '14px');
 ```
 
-The ninth `div` should have a `height` of `9` pixels.
+อันดับที่ 9) `div` ควรมีค่า `height` เป็น `9` pixels.
 
 ```js
 assert($('div').eq(8)[0].style.height === '9px');

@@ -7,7 +7,7 @@ dashedName: part-74
 
 # --description--
 
-Use the `attr` function to set the `r` to `6`, the `fill` to `white`, and the `stroke` to your `tumblrColor` variable.
+ใช้ `attr` function เพื่อกำหนด `r` เป็น `6`, `fill` เป็น `white`, และ `stroke` ให้กับ `tumblrColor` variable
 
 # --hints--
 

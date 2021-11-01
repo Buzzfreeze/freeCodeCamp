@@ -8,43 +8,46 @@ dashedName: visualize-data-with-a-bar-chart
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/GrZVaM>.
+**Objective:** สร้างแอพพลิเคชันจาก [CodePen.io](https://codepen.io) ที่มีfunctionเหมือนกับ <https://codepen.io/freeCodeCamp/full/GrZVaM>.
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story) and get all of the tests to pass. Give it your own personal style.
+กรอกข้อมูลด้านล่าง [user stories](https://en.wikipedia.org/wiki/User_story) และทำtestทั้งหมดให้ผ่าน 
 
-You can use HTML, JavaScript, CSS, and the D3 svg-based visualization library. The tests require axes to be generated using the D3 axis property, which automatically generates ticks along the axis. These ticks are required for passing the D3 tests because their positions are used to determine alignment of graphed elements. You will find information about generating axes at <https://github.com/d3/d3/blob/master/API.md#axes-d3-axis>. Required (non-virtual) DOM elements are queried on the moment of each test. If you use a frontend framework (like Vue for example), the test results may be inaccurate for dynamic content. We hope to accommodate them eventually, but these frameworks are not currently supported for D3 projects.
+สามารถใช้ HTML, JavaScript, CSS, and the D3 svg-based visualization library เพื่อสร้างแกนที่มีลักษณะแบบD3และมีขีดบอกสเกลตามแนวแกนโดยอัตโนมัติ โดยขีดต้องผ่านการทดสอบจากD3 เนื่องจากต้องใช้ตำแหน่งหา elements ของกราฟ 
 
-**User Story #1:** My chart should have a title with a corresponding `id="title"`.
+ข้อมูลเกี่ยวกับการสร้างแกนหาเพื่มเติมได้จาก <https://github.com/d3/d3/blob/master/API.md#axes-d3-axis>
+DOM (non-virtual) elements จะถูกเรียกใช้ขณะทำการ test ถ้าหากใช้ frontend framework อย่างเช่น Vue ผลการทดสอบแบบ dynamic จะไม่ตรง เนืื่องจากframeworkเหล่านี้ไม่support D3 projects
 
-**User Story #2:** My chart should have a `g` element x-axis with a corresponding `id="x-axis"`.
+**User Story #1:** chart ควรจะมี title ที่มีความสอดคล้องกับ `id="title"`
 
-**User Story #3:** My chart should have a `g` element y-axis with a corresponding `id="y-axis"`.
+**User Story #2:** chart ควรจะมี `g` ซึ่งเป็นelementของแกน x พร้อมค่าที่มีความสอดคล้องกับ`id="x-axis"`
 
-**User Story #4:** Both axes should contain multiple tick labels, each with a corresponding `class="tick"`.
+**User Story #3:** chart ควรจะมี `g` ซึ่งเป็นelementของแกน y พร้อมค่าที่มีความสอดคล้องกับ `id="y-axis"`
 
-**User Story #5:** My chart should have a `rect` element for each data point with a corresponding `class="bar"` displaying the data.
+**User Story #4:** ทั้งสองแกน(x, y)ควรมีlabels(ป้ายกำกับ)ของแต่ละแกนที่มีค่าที่สอดคล้องกันเช่น  `class="tick"`
 
-**User Story #6:** Each bar should have the properties `data-date` and `data-gdp` containing `date` and `GDP` values.
+**User Story #5:** chart ควรจะมี `rect` ซึ่งเป็นelementสำหรับข้อมูลแต่ละจุด พร้อมค่าที่มีความสอดคล้องกับ`class="bar"` เพื่อแสดงข้อมูล
 
-**User Story #7:** The bar elements' `data-date` properties should match the order of the provided data.
+**User Story #6:** แต่ละ bar ควรจะมีproperties ของ `data-date` และ `data-gdp` ที่มีค่า `date` และ `GDP`
 
-**User Story #8:** The bar elements' `data-gdp` properties should match the order of the provided data.
+**User Story #7:** bar elements' `data-date` properties ควรตรงกับลำดับของข้อมูลที่ระบุ
 
-**User Story #9:** Each bar element's height should accurately represent the data's corresponding `GDP`.
+**User Story #8:** bar elements' `data-gdp` properties ควรตรงกับลำดับของข้อมูลที่ระบุ
 
-**User Story #10:** The `data-date` attribute and its corresponding bar element should align with the corresponding value on the x-axis.
+**User Story #9:** แต่ละbar element's ความสูงควรแสดงข้อมูลสอดคล้องกับ `GDP` อย่างถูกต้อง
 
-**User Story #11:** The `data-gdp` attribute and its corresponding bar element should align with the corresponding value on the y-axis.
+**User Story #10:**  `data-date` attribute และ bar element ที่เกี่ยวข้องควรมีค่าที่สอดคล้องกับค่าบนแกน x
 
-**User Story #12:** I can mouse over an area and see a tooltip with a corresponding `id="tooltip"` which displays more information about the area.
+**User Story #11:** `data-gdp` attribute และ bar element ที่เกี่ยวข้องควรมีค่าที่สอดคล้องกับค่าบนแกน y
 
-**User Story #13:** My tooltip should have a `data-date` property that corresponds to the `data-date` of the active area.
+**User Story #12:** สามารถ mouse over พื้นที่และเห็น tooltip ที่มีความสอดคล้องกับ `id="tooltip"` ที่แสดงข้อมูลเพิ่มเติมเกี่ยวกับพื้นที่
 
-Here is the dataset you will need to complete this project: `https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json`
+**User Story #13:** tooltip ควรจะมี `data-date` property ที่เกี่ยวข้องกับ `data-date` ของพื้นที่
 
-You can build your project by <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> and clicking `Save` to create your own pen. Or you can use this CDN link to run the tests in any environment you like: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`.
+datasetสำหรับprojectนี้ `https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json`
 
-Once you're done, submit the URL to your working project with all its tests passing.
+สามารถสร้างprojectจาก <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'> using this CodePen template</a> และclickที่ `Save`  หรือใช้ CDN link เพื่อ run tests ในenvironmentที่ต้องการ `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`.
+
+หลังจากเสร็จแล้ว ให้ส่ง URL ของ project พร้อมทั้ง tests ที่ผ่านการทดสอบทั้งหมด
 
 # --solutions--
 

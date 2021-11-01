@@ -7,7 +7,7 @@ dashedName: part-89
 
 # --description--
 
-Set the `domain` of the scale to `data[8].followers`. This will be three items, one for each platform.
+กำหนด `domain` สำหรับ scale `data[8].followers` ให้กับ items ในแต่ละ platform
 
 # --hints--
 

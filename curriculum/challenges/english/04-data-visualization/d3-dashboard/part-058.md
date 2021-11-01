@@ -7,7 +7,8 @@ dashedName: part-58
 
 # --description--
 
-Appropriately set the `y` values for `instagramLine` like you did for the other two lines. Use the Instagram followers data this time.
+กำหนดค่า `y` ให้กับ `instagramLine` เหมือนที่เราได้สร้าง lines 2 อันก่อนหน้า
+โดยให้ใช้ Instagram followers data 
 
 # --hints--
 

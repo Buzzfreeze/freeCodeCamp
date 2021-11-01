@@ -7,9 +7,9 @@ dashedName: part-100
 
 # --description--
 
-The pie graph is being drawn at the `0, 0` coordinates of the SVG. Back on your `pieGraphData` variable, add an attribute that changes the `transform` to `translate(100, 100)`.
+pie graph จะเริ่มวาดที่ตำแหน่ง `0, 0` coordinates ของ SVG โดยที่ `pieGraphData` variable จะเพิ่ม attribute ที่เปลี่ยนจาก `transform` เป็น `translate(100, 100)`
 
-Since the pie chart has a radius of 100, and the SVG is 200 by 200, this will move it so it is centered.
+ดังนั้น pie chart จะมี radius เป็น 100 และ SVG จะมีขนาด 200 : 200 และจะถูกย้ายไปที่ center
 
 # --hints--
 

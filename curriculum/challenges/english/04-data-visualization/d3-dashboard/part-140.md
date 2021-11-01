@@ -7,9 +7,10 @@ dashedName: part-140
 
 # --description--
 
-There's a problem, each time you hover a label it adds all the elements to the container again. If you empty the container at the top of the function, it will redraw them where they need to be.
+ปัญหาคือเมื่อ hover label มันจะเพิ่มทุก elements ให้กับ container อีกครั้ง 
 
-Go back to the top of the function and use `d3.select` to select the `.dashboard` element and chain the `html` function to it with an empty string as it parameter. Empty means no spaces.
+Gกลับไปที่ top ของ function และใช้ `d3.select` เพื่อเลือก `.dashboard` element ใน `html` function โดยที่มี empty string เป็น parameter
+Empty หมายถึง no spaces
 
 # --hints--
 

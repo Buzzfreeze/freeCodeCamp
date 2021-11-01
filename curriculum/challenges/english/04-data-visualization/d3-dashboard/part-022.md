@@ -7,7 +7,7 @@ dashedName: part-22
 
 # --description--
 
-D3 has a bunch of functions for working with scales as well. One of them is `domain`. It takes an array that is used to describe the highest and lowest values of the data for this scale. After a quick look at the data, the values of the "followers" go from about 0 to 5000. Chain the `domain` function to the `yScale` and pass it the array `[0, 5000]`.
+D3 เป็นกลุ่มของ functions ที่ใช้สำหรับ scales โดยใช้ `domain` ที่อยู่ในรูปของ array ที่ถูกใช้เพื่ออธิบายค่า highest และค่า lowest ของ data ที่จะทำการ scale หลังจากสำรวจdataแล้ว จะพบว่าค่าของ "followers" เริ่มจาก 0 ถึง 5000 และเมื่อใช้ `domain` function ให้กับ `yScale` โดย pass ค่า array `[0, 5000]`
 
 # --hints--
 

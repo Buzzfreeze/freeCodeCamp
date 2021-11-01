@@ -7,7 +7,7 @@ dashedName: part-26
 
 # --description--
 
-The range for this scale will go from the left of your graph to the right, with 2012 on the left and 2020 on the right. Add the `range` function to the `xScale` and pass it an array with the values: `svgMargin` and `svgWidth - svgMargin`. This will translate to `[70, 630]`. So 2012 will use 70 as is x-coordinate and 2020 will use 630 as its x-coordinate.
+range สำหรับ scale จะเริ่มจากด้านซ้ายของ graph ไปด้านขวา เช่นปี 2012 จะอยู่ฝั่งซ้ายและปี 2020 จะอยู่ฝั่งขวา เพิ่ม `range` function ให้กับ `xScale` และส่งค่าผ่าน array ด้วยค่า: `svgMargin` และ `svgWidth - svgMargin` จากนั้นจะแปลงค่าไปเป็น `[70, 630]` ดังนั้นปี 2012 จะอยู่ที่ตำแหน่ง 70 บน x-coordinate และปี 2020 จะอยู่ที่ตำแหน่ง 630 บน x-coordinate
 
 # --hints--
 

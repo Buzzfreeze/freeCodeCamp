@@ -7,7 +7,7 @@ dashedName: part-113
 
 # --description--
 
-Set the `font` to `12px verdana` using the `style` function.
+กำหนด `font` เป็น `12px verdana` โดยใช้ `style` function
 
 # --hints--
 

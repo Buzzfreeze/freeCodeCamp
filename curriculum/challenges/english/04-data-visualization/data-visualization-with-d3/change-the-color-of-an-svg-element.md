@@ -8,17 +8,17 @@ dashedName: change-the-color-of-an-svg-element
 
 # --description--
 
-The bars are in the right position, but they are all the same black color. SVG has a way to change the color of the bars.
+ bars ควรจะอยู่มนตำแหน่งที่ถูกต้อง แต่บางครั้งสีของมันเป็นสีดำ SVG จะช่วยให้สามารถเปลี่ยนสีของ bars ได้
 
-In SVG, a `rect` shape is colored with the `fill` attribute. It supports hex codes, color names, and rgb values, as well as more complex options like gradients and transparency.
+ใน SVG  `rect` shape สามารถกำหนดให้มันได้ด้วย `fill` attribute ซึ่ง support hex codes, color names, และ rgb values รวมไปถึง option ที่ซับซ้อนเช่น gradients และ transparency
 
 # --instructions--
 
-Add an `attr()` method to set the `fill` of all the bars to the color navy.
+ใช้ `attr()` method ใช้สำหรับกำหนด `fill` ของทุก bars ให้เป็นสี navy
 
 # --hints--
 
-The bars should all have a `fill` color of navy.
+bars ควรมีทุก `fill` color เป็นสี navy
 
 ```js
 assert($('rect').css('fill') == 'rgb(0, 0, 128)');

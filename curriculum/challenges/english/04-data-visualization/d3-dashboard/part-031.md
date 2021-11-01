@@ -7,9 +7,9 @@ dashedName: part-31
 
 # --description--
 
-After all that work, something is finally displayed on the graph. It's the y-axis and all the numbers are hidden on the left.
+หลายครั้งที่ y-axis หรือตัวเลขจะถูกบังที่ฝั่งซ้าย
 
-Move the axis your `svgMargin` to the right by chaining an `attr` function to the selection. Use it to set the `transform` to `translate(${svgMargin}, 0)`. Use a template literal (backticks) to set the value so you can put your variable in there.
+เพื่อให้ axis `svgMargin` ขยับไปทางด้สนขวา เราจะใช้ `attr` function เพื่อทำการ selection และกำหนด `transform` เป็น `translate(${svgMargin}, 0)` และใช้ template literal (backticks) เพื่อกำหนดค่า variable ในนั้น
 
 # --hints--
 

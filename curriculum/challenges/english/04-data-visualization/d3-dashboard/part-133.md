@@ -7,7 +7,7 @@ dashedName: part-133
 
 # --description--
 
-The legend has all the information is needs, but the title looks a little misaligned. Go to where you created your `legendTitle` variable and set the `position` to `relative` and the `left` to `20px` using `style` functions.
+legend จะมี information ที่ต้องการแต่ว่า title ยัง misaligned อยู่ ให้สร้าง `legendTitle` variable และกำหนด `position` เป็น `relative` และค่า `left` เป็น `20px` โดยใช้ `style` functions
 
 # --hints--
 

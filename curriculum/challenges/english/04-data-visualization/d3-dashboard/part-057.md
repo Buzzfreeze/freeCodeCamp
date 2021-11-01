@@ -7,7 +7,7 @@ dashedName: part-57
 
 # --description--
 
-Appropriately set the `x` values for `instagramLine` like you did for the other two lines.
+กำหนดค่า `x` ให้กับ `instagramLine` เหมือนที่เราสสร้าง lines สองอันก่อนหน้า
 
 # --hints--
 

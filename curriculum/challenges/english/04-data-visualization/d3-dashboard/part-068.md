@@ -7,7 +7,8 @@ dashedName: part-68
 
 # --description--
 
-Circles also need an `r` (radius) attribute so they know how big to be. Use the `attr` function to set the `r` to `6`.
+Circles จำเป็นต้องใช้ `r` (radius) attribute เพื่อที่จะได้รู้ขนาดของวงกลม 
+ใช้ `attr` function เพื่อกำหนด `r` เป็น `6`
 
 # --hints--
 

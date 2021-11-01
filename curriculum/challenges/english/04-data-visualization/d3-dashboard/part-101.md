@@ -7,7 +7,7 @@ dashedName: part-101
 
 # --description--
 
-Back at the bottom, where you draw the chart. Use the `attr` function to set the `fill` to a "d function". In the "d function", use your `pieColors` scale to get the color value for the platform(`d.data.key`). So when each platform is passed to your scale, is will get the appropriate color to use as the fill from the scales range.
+กลับไปที่ bottomเมื่อวาด chart ให้ใช้ `attr` function เพื่อกำหนด `fill` เป็น "d function" โดยใน "d function" ให้ใช้`pieColors` scale เพื่อรับ color value สำหรับ platform(`d.data.key`) ดังนั้นเมื่อแต่ละ platform ถูก passe scale เราจะได้สีที่เหมาะสมเพื่อใช้งาน
 
 # --hints--
 

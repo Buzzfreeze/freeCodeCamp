@@ -7,7 +7,8 @@ dashedName: part-42
 
 # --description--
 
-In the same spot, chain the `tickPadding` function to the `xAxis` and pass it `10`. This will add a little padding to the ticks so the labels are better aligned.
+จุดๆเดียวกัน ใช้ `tickPadding` function ให้กับตัวแปร `xAxis` และส่งค่าเป็น `10`
+เป้นการเพิ่ม padding ให้กับ ticks เพื่อ labels จะได้อยู่ในตำแหน่งที่เหมาะสม
 
 # --hints--
 

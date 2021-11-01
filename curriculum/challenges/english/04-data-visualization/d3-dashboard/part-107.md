@@ -7,7 +7,7 @@ dashedName: part-107
 
 # --description--
 
-Create another variable named `percent` and set it equal to `d.data.value` divided by your `sum` variable.
+สร้าง variable ชื่อ `percent` และกำหนดให้เท่ากับ `d.data.value` หารโดย `sum` variable
 
 # --hints--
 

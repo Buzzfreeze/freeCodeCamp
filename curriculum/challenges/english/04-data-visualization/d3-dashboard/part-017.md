@@ -7,7 +7,8 @@ dashedName: part-17
 
 # --description--
 
-When you added the D3 library earlier, it put an object named `d3` in your project with a bunch of functions. One of them is `select`; you can use dot notation to access this and the other functions from the object. Create a new variable named `lineGraph` and use `d3.select` to select the `.dashboard` element. Here's an example of something similar:
+ก่อนหน้านี้ได้เพิ่ม D3 library ในบทเรียนนี้ให้เพิ่ม object ที่มีชื่อ `d3` ใน project พร้อมกับ functions
+ใช้ `select` โดยใช้ dot notation เพื่อเข้าถึง object จากนั้นสร้าง variable ขึ้นมาใหม่โดยใช้ชื่อ `lineGraph` และใช้ `d3.select` เพื่อเลือก `.dashboard` element
 
 ```js
 const variableName = d3.select('.className')

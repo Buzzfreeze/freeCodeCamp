@@ -8,13 +8,14 @@ dashedName: dynamically-set-the-coordinates-for-each-bar
 
 # --description--
 
-The last challenge created and appended a rectangle to the `svg` element for each point in `dataset` to represent a bar. Unfortunately, they were all stacked on top of each other.
+สร้างและเพิ่ม rectangle ใน `svg` element สำหรับแต่ละ point ใน `dataset` เพื่อแสดงบน bar แต่ทั้งหมดจะถูกวางซ้อนกัน
 
-The placement of a rectangle is handled by the `x` and `y` attributes. They tell D3 where to start drawing the shape in the `svg` area. The last challenge set them each to 0, so every bar was placed in the upper-left corner.
+วาง rectangle ตาม the `x` and `y` attributes เป็นการบอก D3 ว่าจะเริ่มวาด shape บน `svg` area ตรงไหน จากโจทย์ล่าสุดค่าถูก set ไว้ที่ 0 ดังนั้นทุกๆ bar จะถูกวางที่ตำแหน่ง upper-left corner
 
-For a bar chart, all of the bars should sit on the same vertical level, which means the `y` value stays the same (at 0) for all bars. The `x` value, however, needs to change as you add new bars. Remember that larger `x` values push items farther to the right. As you go through the array elements in `dataset`, the `x` value should increase.
+สำหรับ bar chart ทุก bars ควรจะวางในตำแหน่ง vertical level เดียวกัน ซึ่งหมายความว่าค่า `y` จะอยู่ที่จุดเดียวกัน (ที่ 0) สำหรับทุก bars สำหรับค่า `x` จำเป็นต้องเปลี่ยนตามที่เพิ่มในค่า bar
+อบ่าลืม หากค่า `x` มากตำแหน่งของ items จะอยู่ฝั่งขวา และค่า `x` ใน array ของ `dataset` ควรจะเพิ่มตาม
 
-The `attr()` method in D3 accepts a callback function to dynamically set that attribute. The callback function takes two arguments, one for the data point itself (usually `d`) and one for the index of the data point in the array. The second argument for the index is optional. Here's the format:
+`attr()` method ใน D3 จะใช้ a callback function เพื่อ set ค่า attribute โดยที่ callback function จะมี 2 arguments ตัวแรกสำหรับ data point (สำหรับ `d`) และอีกตัวสำหรับค่า index ของ data point ใน array (ซึ่งเป็นค่า optional)
 
 ```js
 selection.attr("property", (d, i) => {
@@ -22,65 +23,66 @@ selection.attr("property", (d, i) => {
 })
 ```
 
-It's important to note that you do NOT need to write a `for` loop or use `forEach()` to iterate over the items in the data set. Recall that the `data()` method parses the data set, and any method that's chained after `data()` is run once for each item in the data set.
+ไม่จำเป็นต้องใช้ `for` loop หรือใช้ `forEach()` เพื่อ iterate items ใน data set ให้เรียกใช้ `data()` method เพื่อแยกวิเคราะห์ data set และทุกๆ method จะถูกเรียกใช้หลังจาก `data()` ของแต่ละ item ถูก run ใน data set
 
 # --instructions--
 
-Change the `x` attribute callback function so it returns the index times 30.
+เปลี่ยนค่า `x` attribute callback function เพื่อให้ returns index 30 ค่า
 
-**Note:** Each bar has a width of 25, so increasing each `x` value by 30 adds some space between the bars. Any value greater than 25 would work in this example.
+**Note:** แต่ละ bar มี width ที่ 25 ดังนั้นการเพิ่มค่า `x` โดยให้แต่ละ bars มี space ระยะห่างที่ 30 
+ค่าของ space ที่มีมากกว่า 25 จะมีการใช้งานตามตัวอย่าง
 
 # --hints--
 
-The first `rect` should have an `x` value of `0`.
+อันดับที่ 1) `rect` ควรมีค่า `x` เป็น `0`.
 
 ```js
 assert($('rect').eq(0).attr('x') == '0');
 ```
 
-The second `rect` should have an `x` value of `30`.
+อันดับที่ 2)`rect` ควรมีค่า `x` เป็น `30`.
 
 ```js
 assert($('rect').eq(1).attr('x') == '30');
 ```
 
-The third `rect` should have an `x` value of `60`.
+อันดับที่ 3) `rect` ควรมีค่า `x` เป็น `60`.
 
 ```js
 assert($('rect').eq(2).attr('x') == '60');
 ```
 
-The fourth `rect` should have an `x` value of `90`.
+อันดับที่ 4) `rect` ควรมีค่า `x` เป็น `90`.
 
 ```js
 assert($('rect').eq(3).attr('x') == '90');
 ```
 
-The fifth `rect` should have an `x` value of `120`.
+อันดับที่ 5) `rect` ควรมีค่า `x` เป็น `120`.
 
 ```js
 assert($('rect').eq(4).attr('x') == '120');
 ```
 
-The sixth `rect` should have an `x` value of `150`.
+อันดับที่ 6) `rect` ควรมีค่า `x` เป็น `150`.
 
 ```js
 assert($('rect').eq(5).attr('x') == '150');
 ```
 
-The seventh `rect` should have an `x` value of `180`.
+อันดับที่ 7) `rect` ควรมีค่า `x` เป็น `180`.
 
 ```js
 assert($('rect').eq(6).attr('x') == '180');
 ```
 
-The eighth `rect` should have an `x` value of `210`.
+อันดับที่ 8) `rect` ควรมีค่า `x` เป็น `210`.
 
 ```js
 assert($('rect').eq(7).attr('x') == '210');
 ```
 
-The ninth `rect` should have an `x` value of `240`.
+อันดับที่ 9) `rect` ควรมีค่า `x` เป็น `240`.
 
 ```js
 assert($('rect').eq(8).attr('x') == '240');

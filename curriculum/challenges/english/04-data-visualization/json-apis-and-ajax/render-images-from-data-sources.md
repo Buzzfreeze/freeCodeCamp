@@ -8,11 +8,11 @@ dashedName: render-images-from-data-sources
 
 # --description--
 
-The last few challenges showed that each object in the JSON array contains an `imageLink` key with a value that is the URL of a cat's image.
+จากที่ผ่านมา เราพบว่า object ใน JSON array ประกอบไปด้วย `imageLink` key ที่มีค่าเป็น URL ของรูปแมว
 
-When you're looping through these objects, you can use this `imageLink` property to display this image in an `img` element.
+เมื่อเรา looping ผ่าน objects เราสามารถใช้ `imageLink` property เพื่อแสดงรูปใน `img` element
 
-Here's the code that does this:
+ดังตัวอย่างด้สนล่าง
 
 ```js
 html += "<img src = '" + val.imageLink + "' " + "alt='" + val.altText + "'>";
@@ -20,17 +20,17 @@ html += "<img src = '" + val.imageLink + "' " + "alt='" + val.altText + "'>";
 
 # --instructions--
 
-Add code to use the `imageLink` and `altText` properties in an `img` tag.
+เพิ่ม `imageLink` และ `altText` properties ใน `img` tag
 
 # --hints--
 
-You should use the `imageLink` property to display the images.
+ควรใช้ `imageLink` property เพื่อแสดงณุป
 
 ```js
 assert(code.match(/val\.imageLink/g));
 ```
 
-You should use the `altText` for the `alt` attribute values of the images.
+ควรใช้ `altText` สำหรับค่า `alt` attribute ของรูป
 
 ```js
 assert(code.match(/val\.altText/g));

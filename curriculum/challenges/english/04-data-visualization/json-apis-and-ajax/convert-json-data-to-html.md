@@ -8,13 +8,12 @@ dashedName: convert-json-data-to-html
 
 # --description--
 
-Now that you're getting data from a JSON API, you can display it in the HTML.
+สามารถดึงข้อมูลจาก JSON API เพื่อไปแสดงบน HTML
 
-You can use a `forEach` method to loop through the data since the cat photo objects are held in an array. As you get to each item, you can modify the HTML elements.
+สามารถใช้ `forEach` method เพื่อ loop data ของ cat photo objects ที่อยู่ใน array เราสามารถดึง item และปรับเปลี่ยนค่าให้กับ HTML elements
 
-First, declare an html variable with `let html = "";`.
-
-Then, loop through the JSON, adding HTML to the variable that wraps the key names in `strong` tags, followed by the value. When the loop is finished, you render it.
+สร้าง html variable โดบใช้ `let html = "";`
+จากนั้น loop ข้อมูล ผ่าน JSON และเพื่ม HTML ให้กับ variable เพื่อรวม key names ไปใน `strong` tags ตามด้วยค่า value เมื่อ loop data เสร็จ จึงจะทำการ render 
 
 Here's the code that does this:
 
@@ -30,13 +29,13 @@ json.forEach(function(val) {
 });
 ```
 
-**Note:** For this challenge, you need to add new HTML elements to the page, so you cannot rely on `textContent`. Instead, you need to use `innerHTML`, which can make a site vulnerable to cross-site scripting attacks.
+**Note:** จำเป็นต้อวสร้าง HTML elements ให้กับ page ดังนั้นจะไม่สามารถ อ้างอิงได้จาก `textContent` การ`innerHTML` อาจจะเสี่ยงต่อการโจมตีแบบ cross-site scripting
 
 # --instructions--
 
-Add a `forEach` method to loop over the JSON data and create the HTML elements to display it.
+เพิ่ม a `forEach` method เพื่อ loop JSON data และสร้าง the HTML elements เพื่อแสดงค่า
 
-Here is some example JSON:
+ตัวอย่าง JSON:
 
 ```json
 [

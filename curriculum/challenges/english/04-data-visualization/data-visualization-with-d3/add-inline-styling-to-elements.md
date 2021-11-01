@@ -8,9 +8,10 @@ dashedName: add-inline-styling-to-elements
 
 # --description--
 
-D3 lets you add inline CSS styles on dynamic elements with the `style()` method.
+D3 สามารถเพิ่ม inline CSS styles บน dynamic elements กับ `style()` method
 
-The `style()` method takes a comma-separated key-value pair as an argument. Here's an example to set the selection's text color to blue:
+`style()` method ใช้ comma-separated key-value คู่กับ argument 
+ตัวอย่างสำหรับ set สีของข้อความที่เลือกให้เป็นสีน้ำเงิน:
 
 ```js
 selection.style("color","blue");
@@ -18,17 +19,17 @@ selection.style("color","blue");
 
 # --instructions--
 
-Add the `style()` method to the code in the editor to make all the displayed text have a `font-family` of `verdana`.
+เพิ่ม `style()` method ใน editor เพื่อให้ text เป็นแบบ `font-family` ของ `verdana`
 
 # --hints--
 
-Your `h2` elements should have a `font-family` of `verdana`.
+`h2` elements ควรมี `font-family` ของ `verdana`.
 
 ```js
 assert($('h2').css('font-family') == 'verdana');
 ```
 
-Your code should use the `style()` method.
+ควรใช้ `style()` method
 
 ```js
 assert(code.match(/\.style/g));

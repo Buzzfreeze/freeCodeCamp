@@ -1,14 +1,14 @@
 ---
 id: 587d7fa9367417b2b2512bcf
-title: Dynamically Change the Height of Each Bar
+title: Dynamically Change the Height เป็น Each Bar
 challengeType: 6
 forumTopicId: 301486
-dashedName: dynamically-change-the-height-of-each-bar
+dashedName: dynamically-change-the-height-เป็น-each-bar
 ---
 
 # --description--
 
-The height of each bar can be set to the value of the data point in the array, similar to how the `x` value was set dynamically.
+height ของแต่ละ bar สามารถกำหนดค่าของแต่ละ data point ใน array เหมือนกับการ set ค่า `x` โดยอัตโนมัติ
 
 ```js
 selection.attr("property", (d, i) => {
@@ -16,65 +16,65 @@ selection.attr("property", (d, i) => {
 })
 ```
 
-Here `d` would be the data point value, and `i` would be the index of the data point in the array.
+`d` เป็นค่า data point และ `i` เป็นค่า index ของ data point ใน array
 
 # --instructions--
 
-Change the callback function for the `height` attribute to return the data value times 3.
+เปลี่ยน callback function สำหรับ `height` attribute เพื่อ return ค่า data เป็นสามเท่า
 
-**Note:** Remember that multiplying all data points by the same constant scales the data (like zooming in). It helps to see the differences between bar values in this example.
+**Note:** อย่าลืมคูณทุก data points โดยค่าคงที่ของ data scales (เหมือนกับการ zoom) จะช่วยให้เห็นความแตกต่างของ bar values
 
 # --hints--
 
-The first `rect` should have a `height` of `36`.
+อันดับที่ 1 `rect` ควรมีค่า `height` เป็น `36`.
 
 ```js
 assert($('rect').eq(0).attr('height') == '36');
 ```
 
-The second `rect` should have a `height` of `93`.
+อันดับที่ 2 `rect` ควรมีค่า `height` เป็น `93`.
 
 ```js
 assert($('rect').eq(1).attr('height') == '93');
 ```
 
-The third `rect` should have a `height` of `66`.
+อันดับที่ 3 `rect` ควรมีค่า `height` เป็น `66`.
 
 ```js
 assert($('rect').eq(2).attr('height') == '66');
 ```
 
-The fourth `rect` should have a `height` of `51`.
+อันดับที่ 4 `rect` ควรมีค่า `height` เป็น `51`.
 
 ```js
 assert($('rect').eq(3).attr('height') == '51');
 ```
 
-The fifth `rect` should have a `height` of `75`.
+อันดับที่ 5 `rect` ควรมีค่า `height` เป็น `75`.
 
 ```js
 assert($('rect').eq(4).attr('height') == '75');
 ```
 
-The sixth `rect` should have a `height` of `54`.
+อันดับที่ 6 `rect` ควรมีค่า `height` เป็น `54`.
 
 ```js
 assert($('rect').eq(5).attr('height') == '54');
 ```
 
-The seventh `rect` should have a `height` of `87`.
+อันดับที่ 7 `rect` ควรมีค่า `height` เป็น `87`.
 
 ```js
 assert($('rect').eq(6).attr('height') == '87');
 ```
 
-The eighth `rect` should have a `height` of `42`.
+อันดับที่ 8 `rect` ควรมีค่า `height` เป็น `42`.
 
 ```js
 assert($('rect').eq(7).attr('height') == '42');
 ```
 
-The ninth `rect` should have a `height` of `27`.
+อันดับที่ 9 `rect` ควรมีค่า `height` เป็น `27`.
 
 ```js
 assert($('rect').eq(8).attr('height') == '27');

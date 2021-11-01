@@ -7,7 +7,7 @@ dashedName: part-87
 
 # --description--
 
-Chain `innerRadius` to the arc and pass it `0` (zero). This is set to zero to make a traditional pie chart, you would use a larger inner radius to create a doughnut chart.
+กำหนด `innerRadius` ให้กับ arc โดบ pass ค่าเป็น `0` (zero) การกำหนดค่าเป็น 0 จะทำให้เกิด traditional pie chart ซึ่งเราจะสามารถใช้ inner radius เพื่อสร้างเป็น doughnut chart ในตอนต่อไปได้
 
 # --hints--
 

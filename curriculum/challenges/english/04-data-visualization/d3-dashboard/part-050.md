@@ -7,7 +7,7 @@ dashedName: part-50
 
 # --description--
 
-On a new line, create a new `const` named `tumblrLine` and set it equal to `d3.line()`.
+ให้สร้าง `const` ชื่อ `tumblrLine` และกำหนดให้ค่าเป็น `d3.line()`
 
 # --hints--
 

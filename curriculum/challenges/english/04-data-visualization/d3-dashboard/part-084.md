@@ -7,7 +7,7 @@ dashedName: part-84
 
 # --description--
 
-Add two `attr` functions that set the `width` and `height` of the new SVG to `200`.
+เพิ่ม 2 `attr` functions ที่กำหนดค่า `width` และ `height` ให้กับ SVG เป็น `200`
 
 # --hints--
 

@@ -8,9 +8,9 @@ dashedName: get-json-with-the-javascript-fetch-method
 
 # --description--
 
-Another way to request external data is to use the JavaScript `fetch()` method. It is equivalent to `XMLHttpRequest`, but the syntax is considered easier to understand.
+วิธีที่จะ request external data คือเรียกใช้ JavaScript `fetch()` method ซึ่งมันจะมีค่าเท่ากับ `XMLHttpRequest`แต่ syntax ง่ายกว่า
 
-Here is the code for making a GET request to `/json/cats.json`
+การใช้ GET request to `/json/cats.json`
 
 ```js
 
@@ -22,29 +22,28 @@ fetch('/json/cats.json')
 
 ```
 
-Take a look at each piece of this code.
+หลังจากที่ดู code
+บรรทัดแรกจะทำการ request ดังนั้น `fetch(URL)` เหมือนกับ `GET` request ให้กับ specific URL โดนที่ method นี้จะ returns Promise
 
-The first line is the one that makes the request. So, `fetch(URL)` makes a `GET` request to the URL specified. The method returns a Promise.
+หลังจาก Promise ถูก returned ถ้า request สำเร็จ จากนั้น `then` method จะถูก executed เพื่อเปลี่ยนไปเป็น JSON format
 
-After a Promise is returned, if the request was successful, the `then` method is executed, which takes the response and converts it to JSON format.
+`then` method สามารถ returns Promise ให้กับค่าที่อยู่ถัดจาก `then` method argument ลำดับที่สองของ `then` เป็นมีค่าเป็น JSON object 
 
-The `then` method also returns a Promise, which is handled by the next `then` method. The argument in the second `then` is the JSON object you are looking for!
-
-Now, it selects the element that will receive the data by using `document.getElementById()`. Then it modifies the HTML code of the element by inserting a string created from the JSON object returned from the request.
+ให้เลือก element ที่จะใช้รับค่า data โดบใช้ `document.getElementById()` จากนั้นแปลง HTML code ของ element โดย insert string mujlihk'0kd JSON object ที่ได้จากการ return request
 
 # --instructions--
 
-Update the code to create and send a `GET` request to the freeCodeCamp Cat Photo API. But this time, using the `fetch` method instead of `XMLHttpRequest`.
+ให้สร้างและส่ง `GET` request ใน freeCodeCamp Cat Photo API โดยใช้ `fetch` method แทน `XMLHttpRequest`.
 
 # --hints--
 
-Your code should make a `GET` request with `fetch`.
+ครใช้ `GET` request กับ `fetch`
 
 ```js
 assert(code.match(/fetch\s*\(\s*('|")\/json\/cats\.json\1\s*\)/g));
 ```
 
-Your code should use `then` to convert the response to JSON.
+ควรใช้ `then` เพื่อเปลี่ยน response ให้ JSON
 
 ```js
 assert(
@@ -54,13 +53,13 @@ assert(
 );
 ```
 
-Your code should use `then` to handle the data converted to JSON by the other `then`.
+ควรใช้ `then` เพื่อเปลี่ยน data เป็น JSON 
 
 ```js
 assert(__helpers.removeWhiteSpace(code).match(/\.then\(\(?\w+\)?=>{[^}]*}\)/g));
 ```
 
-Your code should get the element with id `message` and change its inner HTML to the string of JSON data.
+ควรใช้ element กับ id `message` และเปลี่ยน inner HTML ไปเป็น string ของ JSON data
 
 ```js
 assert(

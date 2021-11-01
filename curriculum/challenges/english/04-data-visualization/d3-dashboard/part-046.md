@@ -7,11 +7,11 @@ dashedName: part-46
 
 # --description--
 
-Chain the `y` function to the line and pass it a "d function" that returns your `yScale` with `d.followers.twitter` as its argument.
+ใช้ `y` function ให้กับ line และ pass ให้กับ "d function" ซึ่งจะส่งค่า `yScale` กับ `d.followers.twitter` เป็น argument
 
-This is similar to how you set the x values. It will use the values of your Twitter followers and your `yScale` to set the y coordinate for each item.
+นี่เหมืือนกับการกำหนด x values มันจะใช้ค่าของจำนวน followers ใน Twitter และ `yScale` จะใช้ set ค่าให้กับ y coordinate แต่ละ items
 
-These "d functions" use implicit returns. But if you add curly brackets and a return statement, you can put any JavaScript in there that you want. Including `console.log` statements that can be useful for debugging.
+ "d functions" ใช้เพื่อ returns ค่าได้โดยตรง แต่ถ้าหากเพิ่ม curly brackets และ return statement เราจะสามารถใช้ทุก JavaScript ตามที่ต้องการได้ รวมไปถึง `console.log` statements ที่มีประโยชน์ในการ debugging
 
 # --hints--
 

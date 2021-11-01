@@ -7,7 +7,8 @@ dashedName: part-53
 
 # --description--
 
-On a new line, `append` a `path` element to the `lineGraph` variable. This one will be for displaying the `tumblrLine`.
+ให้ใช้ `append` ให้กับ `path` element สำหรับ `lineGraph` variable
+เพื่อที่จะทำการแสดง`tumblrLine`
 
 # --hints--
 

@@ -7,7 +7,7 @@ dashedName: part-121
 
 # --description--
 
-Add the `enter` and `append` functions to the selection. Pass the string `tr` to the append function to add three table row elements. These elements will be for displaying each platform's name.
+เพิ่ม `enter` และ`append` functions ให้เป็น selection และ pass string `tr` ให้กับ append function เพื่อเพิ่ม 3 table row elements โดยที่ elements จะแสดง displaying ในแต่ละ platform
 
 # --hints--
 

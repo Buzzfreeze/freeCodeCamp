@@ -8,25 +8,26 @@ dashedName: add-labels-to-scatter-plot-circles
 
 # --description--
 
-You can add text to create labels for the points in a scatter plot.
+สามารถเพิ่ม text เพื่อสร้าง labels  สำหรับแต่ละจุดใน scatter plot
 
-The goal is to display the comma-separated values for the first (`x`) and second (`y`) fields of each item in `dataset`.
+เป้าหมายคือเพื่อแสดง comma-separated values สำหรับค่าของ (`x`) และค่าของ (`y`) ของแต่ละ item ใน `dataset`
 
-The `text` nodes need `x` and `y` attributes to position it on the SVG canvas. In this challenge, the `y` value (which determines height) can use the same value that the `circle` uses for its `cy` attribute. The `x` value can be slightly larger than the `cx` value of the `circle`, so the label is visible. This will push the label to the right of the plotted point.
+`text` nodes จำเป็นต้องมี `x` และ `y` attributes เพื่อระบุตำแหน่งบน SVG canvas โดยที่ค่า `y` (ใช้หาความสูง) สามารถใช้ค่าเดียวกันกับ `circle` ใน `cy` attribute สำหรับค่า `x` สามารถมากกว่าค่า `cx` ของ `circle` ได้เล็กน้อย 
+label จึงจะสามารถมองเห็นได้ โดยที่ label จะแสดงไว้ที่ขวามือของตำแหน่งนั้นๆ
 
 # --instructions--
 
-Label each point on the scatter plot using the `text` elements. The text of the label should be the two values separated by a comma and a space. For example, the label for the first point is `34, 78`. Set the `x` attribute so it's `5` units more than the value you used for the `cx` attribute on the `circle`. Set the `y` attribute the same way that's used for the `cy` value on the `circle`.
+สร้าง label ของแต่ละจุดบน scatter plot โดยใช้ `text` elements โดย text ของ label ควรจะมีค่าสองค่าที่คั่นกลางด้วย comma ยกตัวอย่างเช่นจุดแรกเป็น `34, 78` ให้กำหนดค่าของ `x` attribute มากกว่า `5` units ของ `cx` attribute ของ `circle` และ กำหนดค่าของ `y` attribute ให้เหมือนกับค่า `cy` ของ `circle`
 
 # --hints--
 
-Your code should have 10 `text` elements.
+ควรจะมี 10 `text` elements
 
 ```js
 assert($('text').length == 10);
 ```
 
-The first label should have text of `34, 78`, an `x` value of `39`, and a `y` value of `422`.
+อันดับที่ 1) label ควรมี text เป็น `34, 78`, ค่า `x` เป็น `39`, และค่า `y` เป็น `422`
 
 ```js
 assert(
@@ -36,7 +37,7 @@ assert(
 );
 ```
 
-The second label should have text of `109, 280`, an `x` value of `114`, and a `y` value of `220`.
+อันดับที่ 2) label ควรมี text เป็น `109, 280`, ค่า `x` เป็น `114`,และค่า `y` เป็น `220`
 
 ```js
 assert(
@@ -46,7 +47,7 @@ assert(
 );
 ```
 
-The third label should have text of `310, 120`, an `x` value of `315`, and a `y` value of `380`.
+อันดับที่ 3) label ควรมี text เป็น of `310, 120`, ค่า `x` เป็น `315`, และค่า `y` เป็น `380`
 
 ```js
 assert(
@@ -56,7 +57,7 @@ assert(
 );
 ```
 
-The fourth label should have text of `79, 411`, an `x` value of `84`, and a `y` value of `89`.
+อันดับที่ 4) label ควรมี text เป็น `79, 411`, ค่า `x` เป็น `84`, และค่า `y` เป็น `89`
 
 ```js
 assert(
@@ -66,7 +67,7 @@ assert(
 );
 ```
 
-The fifth label should have text of `420, 220`, an `x` value of `425`, and a `y` value of `280`.
+อันดับที่ 5) label ควรมี text เป็น`420, 220`, ค่า `x` เป็น `425`, และค่า `y` เป็น `280`
 
 ```js
 assert(
@@ -76,7 +77,7 @@ assert(
 );
 ```
 
-The sixth label should have text of `233, 145`, an `x` value of `238`, and a `y` value of `355`.
+ุอันดับที่ 6) label ควรมี text เป็น `233, 145`, ค่า `x` เป็น `238`, ค่า `y` เป็น `355`
 
 ```js
 assert(
@@ -86,7 +87,7 @@ assert(
 );
 ```
 
-The seventh label should have text of `333, 96`, an `x` value of `338`, and a `y` value of `404`.
+ึึอันดับที่ 7) label ควรมี text เป็น `333, 96`, ค่า `x` เป็น `338`,และค่า `y` เป็น `404`
 
 ```js
 assert(
@@ -96,7 +97,7 @@ assert(
 );
 ```
 
-The eighth label should have text of `222, 333`, an `x` value of `227`, and a `y` value of `167`.
+อันดับที่ 8) label ควรมี text เป็น `222, 333`, ค่า `x` เป็น `227`,และค่า `y` เป็น `167`
 
 ```js
 assert(
@@ -106,7 +107,7 @@ assert(
 );
 ```
 
-The ninth label should have text of `78, 320`, an `x` value of `83`, and a `y` value of `180`.
+อันดับที่ 9) label ควรมี text เป็น `78, 320`, ค่า `x` เป็น `83`, และค่า `y` เป็น `180`
 
 ```js
 assert(
@@ -116,7 +117,7 @@ assert(
 );
 ```
 
-The tenth label should have text of `21, 123`, an `x` value of `26`, and a `y` value of `377`.
+อันดับที่ 10) label ควรมี text เป็น `21, 123`, ค่า `x` เป็น `26`, และค่า `y` เป็น `377`
 
 ```js
 assert(

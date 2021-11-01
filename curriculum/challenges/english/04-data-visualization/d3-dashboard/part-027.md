@@ -7,7 +7,8 @@ dashedName: part-27
 
 # --description--
 
-The two scales you defined will be used to create the axes and lines. First is the y-axis, it will be a line with some labels on the left of the graph. Create a new `const` named `yAxis` and set it equal to `d3.axisLeft(yScale)`. This will use the information from the `yScale` variable to build the axis.
+scale ค่า 2 ค่า ที่กำหนดเพื่อสร้าง axes และ lines ขั้นแรกคือ y-axis จะเป็น line กับ labels ทางด้านซ้ายของ graph
+สร้่าง `const` ชื่อ `yAxis` และกำหนดให้เท่ากับ `d3.axisLeft(yScale)` โดยใช้ข้อมูลจาก `yScale` variable เพื่อสร้าง axis
 
 # --hints--
 

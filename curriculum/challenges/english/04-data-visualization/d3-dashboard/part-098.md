@@ -7,7 +7,8 @@ dashedName: part-98
 
 # --description--
 
-On a new line, `append` a `path` element to your `pieGraphData` variable. This is where you will start to draw the pie chart.
+ใช้ `append` สำหรับเพิ่ม `path` element ให้กับ `pieGraphData` variable
+ขั้นตอนนี้เป็นการเริ่มวาด pie chart
 
 # --hints--
 

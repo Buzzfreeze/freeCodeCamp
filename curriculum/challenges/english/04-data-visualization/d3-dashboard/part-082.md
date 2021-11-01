@@ -7,7 +7,7 @@ dashedName: part-82
 
 # --description--
 
-Use `append` to add a `div` element to the selection. This will put a div as another child of the dashboard container to hold the pie graph and legend.
+ใช้ `append` เพื่อเพิ่ม `div` element เป็น selection เพิ่ม div ให้กับ child ของ dashboard container เพื่อสร้าง pie graph และ legend
 
 # --hints--
 

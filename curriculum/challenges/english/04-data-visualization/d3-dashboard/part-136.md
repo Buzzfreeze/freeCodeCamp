@@ -7,9 +7,8 @@ dashedName: part-136
 
 # --description--
 
-Finally! You have all the elements displayed and they look good. The last thing you will do is make it so you can see the data from whatever year you want.
-
-Wrap all the code in the script you've been working with in a function named `drawDashboard` and give it a parameter named `year`. Then, at the bottom of the script, call the function you created and pass it the number `2020`.
+ให้รวม code ทั้งหมดไปอยู่ใน function ชื่อ`drawDashboard` โดยให้ parameter ชื่อ `year` จากที่ bottom ของ script ให้เรียก function ที่สร้างขึ้นและ pass `2020`
+เพื่อดูค่าต่างๆในปีนั้น
 
 # --hints--
 

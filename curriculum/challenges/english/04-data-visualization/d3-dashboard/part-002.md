@@ -7,7 +7,7 @@ dashedName: part-2
 
 # --description--
 
-Next, add opening and closing `html`, `head` and `body` tags below the doctype. Be sure to nest them properly.
+เพิ่ม opening และ closing `html`, `head` และ `body` tags ข้างล่าง doctype
 
 # --hints--
 

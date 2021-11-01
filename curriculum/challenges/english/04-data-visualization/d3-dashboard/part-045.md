@@ -7,9 +7,9 @@ dashedName: part-45
 
 # --description--
 
-Instead of simply using the year(`d.year`) for the x-coordinate, you need to pass each year to the `xScale` so it can set the appropriate coordinate based on your scale.
+แทนที่จะใช้ (`d.year`) สำหรับ the x-coordinate เราจึงจำเป็นต้อง pass ค่าแต่ละ year ให้กับ `xScale` เพื่อ set coordinate ที่อ้างอิงจาก scale ให้เหมาะสม
 
-In the "d function" you created, return `xScale(d.year)` instead of `d.year`.
+ภายใน "d function" เราสามารถสร้างและ return `xScale(d.year)` แทนที่ `d.year` ได้
 
 # --hints--
 

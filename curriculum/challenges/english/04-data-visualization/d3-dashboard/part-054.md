@@ -7,7 +7,7 @@ dashedName: part-54
 
 # --description--
 
-Tell the new path how to be drawn by setting the `d` attribute to `tumblrLine(data)` using the `attr` function.
+สร้าง new path เพื่อวาดรูปใหม่ โดยกำหนด `d` attribute ให้กับ `tumblrLine(data)` โดยใช้ `attr` function
 
 # --hints--
 

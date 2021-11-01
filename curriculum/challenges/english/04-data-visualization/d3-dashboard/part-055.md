@@ -7,7 +7,11 @@ dashedName: part-55
 
 # --description--
 
-Add three `attr` functions to the selection; one to set the `stroke` to your `tumblrColor` variable, another to set the `stroke-width` to `3`, and a third to set the `fill` to `transparent`.
+เพิ่ม `attr` functions เพืื่อทำการ selection
+
+1. กำหนด `stroke` ให้กับ `tumblrColor` variable
+2. กำหนด `stroke-width` เป็น `3`
+3. กำหนด`fill` เป็น `transparent`
 
 # --hints--
 

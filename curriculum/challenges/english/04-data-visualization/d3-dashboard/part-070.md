@@ -7,7 +7,7 @@ dashedName: part-70
 
 # --description--
 
-Use the `style` function to set the `cursor` to `pointer`. Like your year labels, this will be an indicator for a hover effect you will add later.
+ใช้ `style` function เพื่อกำหนด `cursor` เป็น `pointer` เพื่อสำหรับการใช้ hover ในขั้นตอนต่อไป
 
 # --hints--
 

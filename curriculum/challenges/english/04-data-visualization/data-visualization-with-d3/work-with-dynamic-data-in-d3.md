@@ -8,75 +8,76 @@ dashedName: work-with-dynamic-data-in-d3
 
 # --description--
 
-The last two challenges cover the basics of displaying data dynamically with D3 using the `data()` and `enter()` methods. These methods take a data set and, together with the `append()` method, create a new DOM element for each entry in the data set.
+`data()` และ `enter()` methods ควรจะใช้ data set พร้อมกับ `append()` method ได้ 
+เพื่อสร้าง DOM element ใหม่สำหรับ data set
 
-In the previous challenge, you created a new `h2` element for each item in the `dataset` array, but they all contained the same text, `New Title`. This is because you have not made use of the data that is bound to each of the `h2` elements.
+จากโจทย์ก่อนหน้า เราได้สร้าง `h2` element ขึ้นมาใหม่fสำหรับ item แต่ละตัวใน `dataset` array แต่พวกมันมีข้อความที่เหมือนกันคือ `New Title` เนื่องจากเราไม่ได้ใช้ data ที่ผูกไว้กับ `h2` elements แต่ละตัว
 
-The D3 `text()` method can take a string or a callback function as an argument:
+D3 `text()` method สามารถใช้ string หรือ callback function เป็น argument ได้:
 
 ```js
 selection.text((d) => d)
 ```
 
-In the example above, the parameter `d` refers to a single entry in the dataset that a selection is bound to.
+จะเห็นว่า parameter `d` อ้างถึง single entry ใน dataset 
 
-Using the current example as context, the first `h2` element is bound to 12, the second `h2` element is bound to 31, the third `h2` element is bound to 22, and so on.
+ใช้ `h2` element ตัวแรกผูกกับ 12, `h2` element ลำดับที่สอง ผูกกับ 31 และ`h2` element ลำดับที่สามผูกกับ 22 ตามลำดับ
 
 # --instructions--
 
-Change the `text()` method so that each `h2` element displays the corresponding value from the `dataset` array with a single space and the string `USD`. For example, the first heading should be `12 USD`.
+เปลี่ยน `text()` method ของแต่ละ `h2` element เพื่อแสดงค่าที่สอดคล้องกับ array ของ `dataset` กับ single space และ string `USD`. ตัวอย่างเช่น heading ควรจะแสดงผลเป็น `12 USD`
 
 # --hints--
 
-The first `h2` should have the text `12 USD`.
+อันดับที่ 1) `h2` ควรแสดง text เป็น `12 USD`.
 
 ```js
 assert($('h2').eq(0).text() == '12 USD');
 ```
 
-The second `h2` should have the text `31 USD`.
+อันดับที่ 2) `h2` ควรแสดง text เป็น `31 USD`.
 
 ```js
 assert($('h2').eq(1).text() == '31 USD');
 ```
 
-The third `h2` should have the text `22 USD`.
+อันดับที่ 3) `h2` ควรแสดง text เป็น `22 USD`.
 
 ```js
 assert($('h2').eq(2).text() == '22 USD');
 ```
 
-The fourth `h2` should have the text `17 USD`.
+อันดับที่ 4) `h2` ควรแสดง text เป็น `17 USD`.
 
 ```js
 assert($('h2').eq(3).text() == '17 USD');
 ```
 
-The fifth `h2` should have the text `25 USD`.
+อันดับที่ 5) `h2` ควรแสดง text เป็น `25 USD`.
 
 ```js
 assert($('h2').eq(4).text() == '25 USD');
 ```
 
-The sixth `h2` should have the text `18 USD`.
+อันดับที่ 6) `h2` ควรแสดง text เป็น `18 USD`.
 
 ```js
 assert($('h2').eq(5).text() == '18 USD');
 ```
 
-The seventh `h2` should have the text `29 USD`.
+อันดับที่ 7) `h2` ควรแสดง text เป็น `29 USD`.
 
 ```js
 assert($('h2').eq(6).text() == '29 USD');
 ```
 
-The eighth `h2` should have the text `14 USD`.
+อันดับที่ 8)`h2` ควรแสดง text เป็น `14 USD`.
 
 ```js
 assert($('h2').eq(7).text() == '14 USD');
 ```
 
-The ninth `h2` should have the text `9 USD`.
+อันดับที่ 9) `h2` ควรแสดง text เป็น `9 USD`.
 
 ```js
 assert($('h2').eq(8).text() == '9 USD');

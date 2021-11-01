@@ -7,7 +7,7 @@ dashedName: part-135
 
 # --description--
 
-Lastly, where you created your `pieGraph` variable, add a `position` of `relative` and a `left` of `20px` using `style` functions.
+ให้สร้าง `pieGraph` variable และแพิ่ม `position` เป็น `relative` และ `left` เป็น `20px` โดยใช้ `style` functions
 
 # --hints--
 

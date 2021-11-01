@@ -7,7 +7,7 @@ dashedName: part-33
 
 # --description--
 
-On a new line, append another `g` element to your `lineGraph` variable like you did before. This one will be for the x-axis.
+ให้เพิ่ม `g` element เป็น `lineGraph` variable เหมือนที่ทำก่อนหน้า เพื่อจะใช้สำหรับ x-axis
 
 # --hints--
 

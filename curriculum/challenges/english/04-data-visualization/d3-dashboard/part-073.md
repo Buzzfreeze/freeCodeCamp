@@ -7,7 +7,7 @@ dashedName: part-73
 
 # --description--
 
-Set the `cx` and `cy` attributes for the Tumblr circles to their appropriate values.
+กำหนด `cx` และ `cy` attributes สำหรับ Tumblr circles เพื่อค่าที่เหมาะสม
 
 # --hints--
 

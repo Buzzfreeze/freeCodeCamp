@@ -7,7 +7,7 @@ dashedName: part-6
 
 # --description--
 
-You are now looking at the stylesheet that you linked to earlier. At the top of this file, target the `body` of the HTML document and give it a `background-color` of `#ccc`.
+ที่ stylesheet ที่ได้ทำการ link ก่อนหน้าในส่วนข้างบนของ file ตรงส่วน `body` ใน HTML document ให้เพิ่ม `background-color` เป็น `#ccc`
 
 # --hints--
 

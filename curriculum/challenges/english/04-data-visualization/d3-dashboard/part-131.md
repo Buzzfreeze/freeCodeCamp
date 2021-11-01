@@ -7,7 +7,7 @@ dashedName: part-131
 
 # --description--
 
-Set the `text` to a "d function" that returns the value(`d.value`) for each data point.
+กำหนด `text` ให้กับ "d function" ที่ returns value(`d.value`) สำหรับแต่ละ data point.
 
 # --hints--
 

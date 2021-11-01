@@ -8,47 +8,50 @@ dashedName: visualize-data-with-a-scatterplot-graph
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/bgpXyK>.
+**Objective:** สร้างแอพพลิเคชันจาก [CodePen.io](https://codepen.io) ที่มีfunctionเหมือนกับ  <https://codepen.io/freeCodeCamp/full/bgpXyK>.
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story) and get all of the tests to pass. Give it your own personal style.
+กรอกข้อมูลด้านล่าง[user stories](https://en.wikipedia.org/wiki/User_story) และทำtestทั้งหมดให้ผ่าน
 
-You can use HTML, JavaScript, CSS, and the D3 svg-based visualization library. The tests require axes to be generated using the D3 axis property, which automatically generates ticks along the axis. These ticks are required for passing the D3 tests because their positions are used to determine alignment of graphed elements. You will find information about generating axes at <https://github.com/d3/d3/blob/master/API.md#axes-d3-axis>. Required (non-virtual) DOM elements are queried on the moment of each test. If you use a frontend framework (like Vue for example), the test results may be inaccurate for dynamic content. We hope to accommodate them eventually, but these frameworks are not currently supported for D3 projects.
+สามารถใช้ HTML, JavaScript, CSS, and the D3 svg-based visualization library เพื่อสร้างแกนที่มีลักษณะแบบD3และมีขีดบอกสเกลตามแนวแกนโดยอัตโนมัติ โดยขีดต้องผ่านการทดสอบจากD3 เนื่องจากต้องใช้ตำแหน่งหา elements ของกราฟ 
 
-**User Story #1:** I can see a title element that has a corresponding `id="title"`.
+ข้อมูลเกี่ยวกับการสร้างแกนหาเพื่มเติมได้จาก <https://github.com/d3/d3/blob/master/API.md#axes-d3-axis>
+DOM (non-virtual) elements จะถูกเรียกใช้ขณะทำการ test ถ้าหากใช้ frontend framework อย่างเช่น Vue ผลการทดสอบแบบ dynamic จะไม่ตรง เนืื่องจากframeworkเหล่านี้ไม่support D3 projects
 
-**User Story #2:** I can see an x-axis that has a corresponding `id="x-axis"`.
+**User Story #1:** สามารถแสดง title element ที่มีความสอดคล้องกับ `id="title"`.
 
-**User Story #3:** I can see a y-axis that has a corresponding `id="y-axis"`.
+**User Story #2:** สามารถแสดงแกน x ที่มีความสอดคล้องกับ `id="x-axis"`.
 
-**User Story #4:** I can see dots, that each have a class of `dot`, which represent the data being plotted.
+**User Story #3:** สามารถแสดงแกน y ที่มีความสอดคล้องกับ `id="y-axis"`.
 
-**User Story #5:** Each dot should have the properties `data-xvalue` and `data-yvalue` containing their corresponding `x` and `y` values.
+**User Story #4:** สามารถแสดงจุด(dotsฺ) ที่มี class ของ `dot` ซึ่งจะแสดงข้อมูลขณะที่ทำการplot
 
-**User Story #6:** The `data-xvalue` and `data-yvalue` of each dot should be within the range of the actual data and in the correct data format. For `data-xvalue`, integers (full years) or `Date` objects are acceptable for test evaluation. For `data-yvalue` (minutes), use `Date` objects.
+**User Story #5:** แต่ละ dot ควรจะมี properties ของ`data-xvalue` และ `data-yvalue` ที่มีความสอดคล้องกับค่าบนแกน `x` and `y` 
 
-**User Story #7:** The `data-xvalue` and its corresponding dot should align with the corresponding point/value on the x-axis.
+**User Story #6:** ค่า `data-xvalue` และ `data-yvalue` ของแต่ละ dot ควรอยู่ใน range ของ actual data และ correct data format สำหรับ `data-xvalue` ให้ใข้ในรูปของ integers (full years) หรือ `Date` สามารถใช้ในรูปของ objects ได้เพื่อทำ test evaluation ส่วน `data-yvalue` (minutes) ให้ใข้ `Date` เป็นแบบ objects
 
-**User Story #8:** The `data-yvalue` and its corresponding dot should align with the corresponding point/value on the y-axis.
+**User Story #7:** ค่า `data-xvalue` ควรจะสอดคล้องกับ point/value บนแกน x
 
-**User Story #9:** I can see multiple tick labels on the y-axis with `%M:%S` time format.
+**User Story #8:** ค่า `data-yvalue` ควรจะสอดคล้องกับ point/value บนแกน y
 
-**User Story #10:** I can see multiple tick labels on the x-axis that show the year.
+**User Story #9:** สามารถแสดงป้ายกำกับของแกน y ที่มีร฿ปแบบเป็น `%M:%S` ของ time format
 
-**User Story #11:** I can see that the range of the x-axis labels are within the range of the actual x-axis data.
+**User Story #10:** สามารถแสดงป้ายกำกับบนแกน x ที่แสดงปี 
 
-**User Story #12:** I can see that the range of the y-axis labels are within the range of the actual y-axis data.
+**User Story #11:** ค่าของป้ายกำกับบนแกน x ควรอยู่ใน range ของข้อมูลสำหรับแกน x
 
-**User Story #13:** I can see a legend containing descriptive text that has `id="legend"`.
+**User Story #12:** ค่าของป้ายกำกับบนแกน y ควรอยู่ใน range ของข้อมูลสำหรับแกน y
 
-**User Story #14:** I can mouse over an area and see a tooltip with a corresponding `id="tooltip"` which displays more information about the area.
+**User Story #13:** สามารถแสดง legend ที่มีข้อความอธิบายของ `id="legend"`.
 
-**User Story #15:** My tooltip should have a `data-year` property that corresponds to the `data-xvalue` of the active area.
+**User Story #14:** สามารถ mouse over พื้นที่และเห็น tooltip ที่มีความสอดคล้องกับ `id="tooltip"` ที่แสดงข้อมูลเพิ่มเติมเกี่ยวกับพื้นที่
 
-Here is the dataset you will need to complete this project: `https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json`
+**User Story #15:** tooltip ควรจะมี `data-year` property ที่มีความสอดคล้องกับ `data-xvalue` ที่แสดงข้อมูลเพิ่มเติมเกี่ยวกับพื้นที่
 
-You can build your project by <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> and clicking `Save` to create your own pen. Or you can use this CDN link to run the tests in any environment you like: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
+datasetสำหรับprojectนี้ : `https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json`
 
-Once you're done, submit the URL to your working project with all its tests passing.
+สามารถสร้างprojectจาก <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> และclickที่ `Save` หรือใช้ CDN link เพื่อ run tests ในenvironmentที่ต้องการ  `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
+
+หลังจากเสร็จแล้ว ให้ส่ง URL ของ project พร้อมทั้ง tests ที่ผ่านการทดสอบทั้งหมด
 
 # --solutions--
 

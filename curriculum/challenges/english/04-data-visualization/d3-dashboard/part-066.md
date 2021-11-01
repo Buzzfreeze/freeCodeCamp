@@ -7,9 +7,10 @@ dashedName: part-66
 
 # --description--
 
-Each circle needs a `cx` and `cy` attribute so it knows where to display on the SVG. These are similar to the x and y coordinates for the lines and will be calculated in the same way. The difference is that, for circles, the `cx` and `cy` are attributes, so you need to use the `attr` function.
+แต่ละ circle จำเป็นต้องมี `cx` และ `cy` attribute เพื่อที่จะได้รู้ว่าจะแสดงตำแหน่งไหนบน SVG เหมือนกับ y coordinates สำหรับ lines และวิธีคำนวณก็ใช้แบบเดียวกัน แต่ความแตกต่างอยู่ที่ใน circles ตรงค่า `cx` และ `cy` เป็น attributes
+ดังนั้นจึงจำเป็นต้องใช้ `attr` function
 
-Use the `attr` function to set the `cx` to `d => xScale(d.year)`.
+ใ้ `attr` function เพื่อกำหนดค่า `cx` เป็น `d => xScale(d.year)`
 
 # --hints--
 

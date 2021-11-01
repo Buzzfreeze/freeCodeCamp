@@ -7,7 +7,7 @@ dashedName: part-134
 
 # --description--
 
-The legend and pie graph look a little off as well. Go to where you created your `legend` variable and add a `position` of `relative` and a `top` of `30px` using `style` functions.
+legend และ pie graph น่าจะมีจุดที่เหลื่อมล้ำล็กน้อย แก้โดยการสร้าง `legend` variable และเพิ่ม `position` ของ `relative` และให้ค่า `top` เป็น `30px` โดยใช้ `style` functions
 
 # --hints--
 

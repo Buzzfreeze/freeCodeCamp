@@ -2,41 +2,41 @@
 id: 587d7fa8367417b2b2512bcb
 title: Learn About SVG in D3
 challengeType: 6
-forumTopicId: 301489
+fหรือumTopicId: 301489
 dashedName: learn-about-svg-in-d3
 ---
 
 # --description--
 
-<dfn>SVG</dfn> stands for <dfn>Scalable Vector Graphics</dfn>.
+<dfn>SVG</dfn> stands fหรือ <dfn>Scalable Vectหรือ Graphics</dfn>.
 
-Here "scalable" means that, if you zoom in or out on an object, it would not appear pixelated. It scales with the display system, whether it's on a small mobile screen or a large TV monitor.
+"scalable" หมายความว่าถ้า zoom in หรือ zoom out บน object จะไม่แสดง pixelated เนื่องจากเป็นระบบการปรับขนาดด้วยจอแสดงผล ไม่ว่าจะเป็นบนหน้าจอมือถือขนาดเล็กหรือจอทีวีขนาดใหญ่
 
-SVG is used to make common geometric shapes. Since D3 maps data into a visual representation, it uses SVG to create the shapes for the visualization. SVG shapes for a web page must go within an HTML `svg` tag.
+SVG ถูกใช้สำหรับ geometric shapes ทั่วไปและ D3 จะแสดง data เป็นภาพ ดังนั้นจึงใช้ SVG เพื่อสร้าง shapes สำหรับการแสดงภาพ SVG shapes สำหรับ web page ต้องใช้ภายใน aHTML `svg` tag
 
-CSS can be scalable when styles use relative units (such as `vh`, `vw`, or percentages), but using SVG is more flexible to build data visualizations.
+CSS สามารถปรับขนาดเมื่อรูปแบบถูกใช้สำหรับ relative units (เช่น `vh`, `vw`, หรือ percentages) แต่การใช้ SVG ต้องมีความ flexible มากกว่าเพื่อสร้าง data visualizations
 
 # --instructions--
 
-Add an `svg` node to the `body` using `append()`. Give it a `width` attribute set to the provided `w` constant and a `height` attribute set to the provided `h` constant using the `attr()` or `style()` methods for each. You'll see it in the output because there's a `background-color` of pink applied to it in the `style` tag.
+เพิ่ม `svg` node ใน `body` โดยใช้ `append()` กำหนดให้ `width` attribute กำหนดค่าคงที่ของ `w` และ `height` attribute กำหนดค่าคงที่ของ `h` โดยใช้ `attr()` หรือ `style()` methods  จะสามารถเห็น output ได้เนื่องจากมี `background-colหรือ` การกำหนดสี pink ใน `style` tag
 
-**Note:** When using `attr()` width and height attributes do not have units. This is the building block of scaling - the element will always have a 5:1 width to height ratio, no matter what the zoom level is.
+**Note:** เมื่่อใช้ `attr()` width และ height attributes ไม่จำเป็นต้องมี units Tเนื่องจากมีการสร้าง block ของ scaling ของแต่ละ element ไว้อยู่แล้วที่ 5:1 อัตราส่วนของความกว้าง : ความสูง
 
 # --hints--
 
-Your document should have 1 `svg` element.
+document ควรมี 1 `svg` element
 
 ```js
 assert($('svg').length == 1);
 ```
 
-The `svg` element should have a `width` attribute set to `500` or styled to have a width of `500px`.
+`svg` element ควรมีค่า  `width` attribute เป็น `500` หรือ styled มีค่าของ width ที่ `500px`.
 
 ```js
 assert($('svg').attr('width') == '500' || $('svg').css('width') == '500px');
 ```
 
-The `svg` element should have a `height` attribute set to `100` or styled to have a height of `100px`.
+`svg` element ควรมีค่า  `height` attribute เป็น `100` หรือ styled มีค่าของ height ที่ `100px`.
 
 ```js
 assert($('svg').attr('height') == '100' || $('svg').css('height') == '100px');
@@ -49,7 +49,7 @@ assert($('svg').attr('height') == '100' || $('svg').css('height') == '100px');
 ```html
 <style>
   svg {
-    background-color: pink;
+    background-colหรือ: pink;
   }
 </style>
 <body>

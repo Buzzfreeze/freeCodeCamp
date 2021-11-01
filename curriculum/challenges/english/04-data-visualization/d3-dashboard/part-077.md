@@ -7,7 +7,7 @@ dashedName: part-77
 
 # --description--
 
-Add the three functions necessary to append the new circle elements. Remember that they won't actually be visible yet.
+เพิ่ท 3 functions เพื่อเพื่อ circle elements
 
 # --hints--
 

@@ -7,11 +7,12 @@ dashedName: part-15
 
 # --description--
 
-The script at the top is the `data.js` file you added. I have placed it here so you can see the data and recommend taking a look at it. The second script is the one you just added and where you will build the rest of the project.
+script ตัวแรกจะเป็น `data.js` file ที่เราได้เพิ่มเข้ามา ซึ่งเราจะสามารถเห็น  data and recommend  ส่วน script ลำดับที่สอง เราจะทำการเพิ่มเพื่อบอกว่า ที่ไหนที่เราจะใช้สำหรับการสร้าง project
 
-In the second script, create three `const` variables; `svgMargin` with a value of `70`, `svgWidth` with a value of `700`, and `svgHeight` equal to `500`. The first part of the dashboard will be a line graph. It will use these variables as its dimensions.
+ใน script ลำดับที่สอง ให้สร้าง `const` variables ขึ้นมาสามตัว, กำหยดค่า `svgMargin` เป็น `70`,ค่า `svgWidth` เป็น `700` และค่า `svgHeight` เท่ากับ `500`  dashboard ส่วนแรกจะเป็น line graph มันจะใช้ variables เหล่านี้เป็น dimensions
 
-The line graph will have the years from your data variable across the bottom, and a scale on the left to show the numbers of followers. Each platform will have a line going across the graph that shows how many followers you had for each year.
+line graph จะประกอบไปด้วย years จาก data variable ส่วน bottom และ scale ทางข้างซ้ายเพื่อแสดงจำนวนของ followers
+แต่ละ platform จะมี line ที่ไปสัมผัสกับ graph เพื่อแสดงจำนวนของ followers ของคุณในแต่ละปี
 
 # --hints--
 

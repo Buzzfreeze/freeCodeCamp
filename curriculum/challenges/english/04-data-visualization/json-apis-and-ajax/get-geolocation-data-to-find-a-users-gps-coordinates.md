@@ -8,13 +8,12 @@ dashedName: get-geolocation-data-to-find-a-users-gps-coordinates
 
 # --description--
 
-Another cool thing you can do is access your user's current location. Every browser has a built in navigator that can give you this information.
+เพื่อเข้าถึง user's location ปัจจุบัน browser สมารถสร้าง navigator ที่ให้ข้อมูลเหล่านี้ได้
 
-The navigator will get the user's current longitude and latitude.
+navigator จะ get ค่า longitude และ latitude ของ user
 
-You will see a prompt to allow or block this site from knowing your current location. The challenge can be completed either way, as long as the code is correct.
-
-By selecting allow, you will see the text on the output phone change to your latitude and longitude.
+เราสามารถ allow หรือ block จาก knowing your current location ได้
+ถ้าเลือก allow เราจะเห็น text บนหน้าจอโทรศัทท์เพื่อเปลี่ยนค่า latitude และ longitude
 
 Here's code that does this:
 
@@ -30,29 +29,29 @@ First, it checks if the `navigator.geolocation` object exists. If it does, the `
 
 # --instructions--
 
-Add the example code inside the `script` tags to check a user's current location and insert it into the HTML.
+เพิ่ม code ภายใน `script` tags เพื่อตรวจสอบ location ของ user ปัจจุบันและ insert ไปใน HTML
 
 # --hints--
 
-Your code should use `navigator.geolocation` to access the user's current location.
+ควรใช้ `navigator.geolocation` เพื่อเข้าถึง user's current location
 
 ```js
 assert(code.match(/navigator\.geolocation\.getCurrentPosition/g));
 ```
 
-Your code should use `position.coords.latitude` to display the user's latitudinal location.
+ควรใช้ `position.coords.latitude` เพื่อแสดงค่า user's latitudinal location
 
 ```js
 assert(code.match(/position\.coords\.latitude/g));
 ```
 
-Your code should use `position.coords.longitude` to display the user's longitudinal location.
+ควรใช้ `position.coords.longitude` เพื่อแสดงค่า user's longitudinal location
 
 ```js
 assert(code.match(/position\.coords\.longitude/g));
 ```
 
-You should display the user's position within the `div` element with `id="data"`.
+เพื่อแสดงค่า user's position ภายใน `div` element กับ `id="data"`
 
 ```js
 assert(

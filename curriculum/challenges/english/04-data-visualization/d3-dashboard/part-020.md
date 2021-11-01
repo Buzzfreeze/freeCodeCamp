@@ -7,7 +7,7 @@ dashedName: part-20
 
 # --description--
 
-Chain another `attr` function that sets the `height` as the `svgHeight` variable you created.
+ใ้ช้ `attr` function เพื่อกำหนดค่า `height` เป็น `svgHeight` variable 
 
 # --hints--
 

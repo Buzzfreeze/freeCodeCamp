@@ -7,7 +7,7 @@ dashedName: part-95
 
 # --description--
 
-You want the array passed to `pie` to be an array of key/value objects for the 2020 followers. `d3.entries` will build that array for you. Here's how that looks:
+หากต้องการ pass array ให้กับ `pie` เพื่อให้ array เป็น key/value objects สำหรับ 2020 followers `d3.entries` จะสร้าง array ให้กับเราได้
 
 ```js
 d3.entries(data[8].followers))

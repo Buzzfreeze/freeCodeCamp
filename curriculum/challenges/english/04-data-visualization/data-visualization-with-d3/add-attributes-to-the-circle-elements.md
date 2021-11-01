@@ -8,27 +8,32 @@ dashedName: add-attributes-to-the-circle-elements
 
 # --description--
 
-The last challenge created the `circle` elements for each point in the `dataset`, and appended them to the SVG canvas. But D3 needs more information about the position and size of each `circle` to display them correctly.
+โจทย์ที่ผ่านมาได้สร้าง `circle` elements สำหรับแต่ละจุดใน `dataset` และเพิ่มมันให้กับ SVG canva 
+แต่ D3 จำเป็นต้องใช้ข้อมูลเกี่ยวกับตำแหน่งและขนาดสำหรับแต่ละ`circle` เพื่อที่จะได้แสดงอย่างถูกต้อง
 
-A `circle` in SVG has three main attributes. The `cx` and `cy` attributes are the coordinates. They tell D3 where to position the *center* of the shape on the SVG canvas. The radius (`r` attribute) gives the size of the `circle`.
+`circle` ใน SVG มีสาม attributes โดยที่ `cx` และ `cy` attributes เป็น coordinates. 
+พวกมันสามารถบอก D3 ได้ว่าตำแหน่งของ *center* อยู่ตรงส่วนไหนของ SVG canvas
+Radius (`r` attribute) จะใช้บอกขนาดของ `circle`
+เหมือนกับ `rect` `y` coordinate,  `cy` attribute สำหรับ `circle` ที่วัดจาก top ของ SVG canvas ไม่ได้วัดจาก bottom
 
-Just like the `rect` `y` coordinate, the `cy` attribute for a `circle` is measured from the top of the SVG canvas, not from the bottom.
-
-All three attributes can use a callback function to set their values dynamically. Remember that all methods chained after `data(dataset)` run once per item in `dataset`. The `d` parameter in the callback function refers to the current item in `dataset`, which is an array for each point. You use bracket notation, like `d[0]`, to access the values in that array.
+ทั้งสาม attributes สามารถใช้ callback function เพื่อกำหนดค่า 
+ทุก methods จะใช้ `data(dataset)` หลังจาก run ในแต่ละ item ใน `dataset` 
+ส่วน `d` parameter iใน callback function อ้างอิงถึง item ปัจจุบันใน array ของ `dataset` 
+สามารถใช้ bracket notation ได้เช่น `d[0]` เพื่อเข้าถึงค่าในarray
 
 # --instructions--
 
-Add `cx`, `cy`, and `r` attributes to the `circle` elements. The `cx` value should be the first number in the array for each item in `dataset`. The `cy` value should be based off the second number in the array, but make sure to show the chart right-side-up and not inverted. The `r` value should be `5` for all circles.
+เพิ่ม `cx`, `cy`, และ `r` attributes ให้กับ `circle` elements โดยที่ค่าของ `cx` ควรจะอยู่เป็นอันดับแรกของ array แต่บะ item ใน `dataset` ค่าของ `cy` ควรจะอยู่เป็นอันดับที่สองของ array เพื่อให้มั่นใจว่าสามารถแสดง chart แบบ right-side-up และไม่กลับด้าน ส่วนค่าของ `r` ควรจะมีค่าเท่ากับ `5` สำหรับทุก circles
 
 # --hints--
 
-Your code should have 10 `circle` elements.
+ควรจะมี 10 `circle` elements.
 
 ```js
 assert($('circle').length == 10);
 ```
 
-The first `circle` element should have a `cx` value of `34`, a `cy` value of `422`, and an `r` value of `5`.
+อันดับที่ 1 `circle` element ควรมีค่า `cx` เป็น `34`, ค่า `cy` เป็น `422`, และค่า `r` เป็น `5`
 
 ```js
 assert(
@@ -38,7 +43,7 @@ assert(
 );
 ```
 
-The second `circle` element should have a `cx` value of `109`, a `cy` value of `220`, and an `r` value of `5`.
+อันดับที่ 2) `circle` element ควรมีค่า `cx` เป็น `109`, ค่า `cy` เป็น `220`, และค่า `r` เป็น `5`
 
 ```js
 assert(
@@ -48,7 +53,7 @@ assert(
 );
 ```
 
-The third `circle` element should have a `cx` value of `310`, a `cy` value of `380`, and an `r` value of `5`.
+อันดับที่ 3) `circle` element ควรมีค่า `cx` เป็ฯ `310`, ค่า `cy` เป็น `380`, และค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -58,7 +63,7 @@ assert(
 );
 ```
 
-The fourth `circle` element should have a `cx` value of `79`, a `cy` value of `89`, and an `r` value of `5`.
+อันดับที่ 4) `circle` element ควรมีค่า `cx` เป็น `79`, ค่า `cy` เป็น `89`, และค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -68,7 +73,7 @@ assert(
 );
 ```
 
-The fifth `circle` element should have a `cx` value of `420`, a `cy` value of `280`, and an `r` value of `5`.
+อันดับที่ 5) `circle` element ควรมีค่า `cx` เป็น `420`, ค่า `cy` เป็น `280`, และค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -78,7 +83,7 @@ assert(
 );
 ```
 
-The sixth `circle` element should have a `cx` value of `233`, a `cy` value of `355`, and an `r` value of `5`.
+ุอันดับที่ 6) `circle` element ควรมีค่า `cx` เป็น `233`, ค่า `cy` เป็น `355`, และค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -88,7 +93,7 @@ assert(
 );
 ```
 
-The seventh `circle` element should have a `cx` value of `333`, a `cy` value of `404`, and an `r` value of `5`.
+ึอันดับที่ 7) `circle` element ควรมีค่า `cx` เป็น `333`, ค่า `cy` เป็น `404`, และค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -98,7 +103,7 @@ assert(
 );
 ```
 
-The eighth `circle` element should have a `cx` value of `222`, a `cy` value of `167`, and an `r` value of `5`.
+อันดับที่ 8) `circle` element ควรมีค่า `cx` เป็น `222`, ค่า `cy` เป็น `167`, และค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -108,7 +113,7 @@ assert(
 );
 ```
 
-The ninth `circle` element should have a `cx` value of `78`, a `cy` value of `180`, and an `r` value of `5`.
+อันดับที่ 9) `circle` element ควรมีค่า `cx` เป็น `78`, ค่า `cy` เป็น `180`, และค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -118,7 +123,7 @@ assert(
 );
 ```
 
-The tenth `circle` element should have a `cx` value of `21`, a `cy` value of `377`, and an `r` value of `5`.
+อันดับที่ 10) `circle` element ควรมีค่า `cx` เป็น `21`, ค่า `cy` เป็น `377`, และค่า `r` เป็น `5`.
 
 ```js
 assert(

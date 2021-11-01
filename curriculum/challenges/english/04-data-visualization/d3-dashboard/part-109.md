@@ -7,9 +7,9 @@ dashedName: part-109
 
 # --description--
 
-The text elements are at the center of the pie graph, you need to use the `centroid` from the D3 arc API to tell them where to go. Add an `attr` function to set the `transform` to a `d` function that returns this template literal: `translate(${ pieArc.centroid(d) })`
+text elements อยู่ที่ center ของ pie graph เราจำเป็นต้องใช้ `centroid` จาก D3 arc API เพื่อบอกทิศทาง โดยให้เพิ่ม `attr` function เพื่อกำหนด `transform` ให้กับ `d` function ที่ returns template literal: `translate(${ pieArc.centroid(d) })`
 
-The `centroid` function will find the midpoint of each slice for each text element.
+โดยที่ `centroid` function จะหา midpoint ของแต่ละ slice สำหรับ text element
 
 # --hints--
 

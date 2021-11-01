@@ -7,7 +7,7 @@ dashedName: part-130
 
 # --description--
 
-On a new line, append another `td` to the `legendRows` variable for the last group of items. It will display the number of followers for each platform.
+append `td` ให้กับ`legendRows` variable สำหรับ items กลุ่มสุดท้าย ซึ่งมันจะแสดงจำนวนของ followers สำหรับแต่ละ platform
 
 # --hints--
 

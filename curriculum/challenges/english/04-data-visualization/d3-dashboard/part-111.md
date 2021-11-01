@@ -7,7 +7,7 @@ dashedName: part-111
 
 # --description--
 
-The last component you are going to add is a legend to display the name of each platform and the number of followers for the year. Create a new `const` named `legend` and use it to `append` a `table` to your `rightDashboard` variable. This looks similar to the code where you created your `pieGraph` variable.
+legend ที่ใช้แสดงชื่อของแต่ละ platform และจำนวน followers ของแต่ละปี สามารถทำได้โดยสร้าง `const` ชื่อ `legend` aและใช้ `append` ให้กับ `table` สำหรับ `rightDashboard` variable ซึ่งจะเหมือนกับ `pieGraph` variable ที่ทำก่อนหน้า
 
 # --hints--
 

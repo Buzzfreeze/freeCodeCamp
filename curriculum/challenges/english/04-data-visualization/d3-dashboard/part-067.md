@@ -7,9 +7,9 @@ dashedName: part-67
 
 # --description--
 
-Next, set the `cy` attribute to `d => xScale(d.followers.twitter)`.
+กำหนด `cy` attribute เป็น `d => xScale(d.followers.twitter)`
 
-As a reminder, this will pass each value of your Twitter followers to the `xScale` function where it will determine the y coordinate to use.
+โดยการ pass แต่ละค่าให้กับ Twitter followers โดย `xScale` function จะหา y coordinate เพื่อใช้งาน
 
 # --hints--
 

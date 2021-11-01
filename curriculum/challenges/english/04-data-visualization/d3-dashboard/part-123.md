@@ -7,7 +7,7 @@ dashedName: part-123
 
 # --description--
 
-Use the `text` function to set the text of each `td` to the `key` of each data point by using a "d function" to return `d.key`.
+ใช้ `text` function เพื่อกำหนด text ให้แต่บะ `td` สำหรับ `key` ของแต่บะ data point โดยใช้ "d function" เพื่อ return `d.key`
 
 # --hints--
 

@@ -7,7 +7,7 @@ dashedName: part-75
 
 # --description--
 
-Set the `cursor` to `pointer` using the `style` function.
+เพิ่ม `cursor` เป็น `pointer` โดยใช้ `style` function
 
 # --hints--
 

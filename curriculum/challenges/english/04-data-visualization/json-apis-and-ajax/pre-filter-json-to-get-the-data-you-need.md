@@ -8,9 +8,9 @@ dashedName: pre-filter-json-to-get-the-data-you-need
 
 # --description--
 
-If you don't want to render every cat photo you get from the freeCodeCamp Cat Photo API, you can pre-filter the JSON before looping through it.
+ถ้าไม่ต้องการ render รูปแมวทั้งหมดจาก freeCodeCamp Cat Photo API เราสามารถใช่ pre-filter ใน JSON ก่อน looping พวกมัน
 
-Given that the JSON data is stored in an array, you can use the `filter` method to filter out the cat whose `id` key has a value of `1`.
+ให้ JSON data เก็บค่าใน array โดยใช้ `filter` method เพื่อ filter แมวที่มี `id` key มีค่าเป็น `1`
 
 Here's the code to do this:
 
@@ -22,11 +22,11 @@ json = json.filter(function(val) {
 
 # --instructions--
 
-Add code to `filter` the json data to remove the cat with the `id` value of `1`.
+เพื่ม `filter` ให้กับ json data เพ่ิมลบ cat กับ `id` ที่มีค่าเป็น `1`
 
 # --hints--
 
-Your code should use the `filter` method.
+ควรใช้ `filter` method
 
 ```js
 assert(code.match(/json\.filter/g));

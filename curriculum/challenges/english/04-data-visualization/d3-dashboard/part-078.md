@@ -7,7 +7,7 @@ dashedName: part-78
 
 # --description--
 
-Appropriately set the `cx` and `cy` attributes for the Instagram circles.
+กำหนด `cx` และ `cy` attributes ให้กับ Instagram circles
 
 # --hints--
 

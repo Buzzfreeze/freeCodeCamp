@@ -7,7 +7,7 @@ dashedName: part-25
 
 # --description--
 
-The `year` values of your data will be used for the x-scale. Chain the `domain` function to `xScale` and pass it an array with the first and last years of your data.
+ค่า `year` ของ data จะใช้สำหรับ x-scale และ `domain` function จะใช้สำหรับ `xScale` โดยการ pass ค่าไปใน array ที่เป็นค่าปีแรกและค่าปีสุดท้าย
 
 # --hints--
 

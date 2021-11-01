@@ -7,7 +7,7 @@ dashedName: part-97
 
 # --description--
 
-Use `append` to add three `g` elements for the pie.
+ใช้ `append` เพื่อเพิ่ม `g` 3 elements ให้กับ pie
 
 # --hints--
 

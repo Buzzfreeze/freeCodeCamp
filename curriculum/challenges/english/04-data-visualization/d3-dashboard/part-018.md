@@ -7,7 +7,7 @@ dashedName: part-18
 
 # --description--
 
-Your dashboard element is now "selected". D3 has a number of functions for working with a selection; one of them is `append`. It is used to add an element. Chain the `append` function to your selection and use it to add an `svg` element. Here's an example of how that might be done:
+dashboard element ใช้ "selected" โดยที่ D3 มีจำนวน functions ที่ทำงานกับ selection คือ `append` ที่ใช้สำหรับเพิ่ม elements ใช้ `append` function สำหรับการเลือกและเพิ่ม `svg` element 
 
 ```js
 const variableName = d3.select('selectedElement')

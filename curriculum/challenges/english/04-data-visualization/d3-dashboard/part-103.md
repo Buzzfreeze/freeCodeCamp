@@ -7,7 +7,7 @@ dashedName: part-103
 
 # --description--
 
-Your chart needs some labels in each slice. On a new line, append `text` elements to your `pieGraphData` variable.
+chart จะมี labels ในแต่ละส่วน ให้ append `text` elements ให้กับ `pieGraphData` variable
 
 # --hints--
 

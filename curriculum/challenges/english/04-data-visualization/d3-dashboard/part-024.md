@@ -7,7 +7,7 @@ dashedName: part-24
 
 # --description--
 
-Create a new `const` named `xScale`. Use it to create another linear scale like you did for the y-scale. This will be the horizontal or "x" axis.
+สร้าง `const` โดยใช้ชื่อ `xScale` เราจะใช้มันเพื่อสร้าง linear scale เหมือนที่คุณทำกับ y-scale แต่นี่จะเป็นแกนนอนหรือแกน x
 
 # --hints--
 

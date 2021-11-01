@@ -7,7 +7,7 @@ dashedName: part-8
 
 # --description--
 
-Give the dashboard a `background-color` of `white` and a `box-shadow` of `5px 5px 5px 5px #888` to give it a little depth.
+ให้ dashboard มี `background-color` เป็น `white` และ `box-shadow` เป็น `5px 5px 5px 5px #888` เพื่อให้มี depth เล็กน้อย
 
 # --hints--
 

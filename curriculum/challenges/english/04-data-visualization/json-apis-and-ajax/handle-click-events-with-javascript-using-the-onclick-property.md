@@ -8,7 +8,7 @@ dashedName: handle-click-events-with-javascript-using-the-onclick-property
 
 # --description--
 
-You want your code to execute only once your page has finished loading. For that purpose, you can attach a JavaScript event to the document called `DOMContentLoaded`. Here's the code that does this:
+หากคุณต้องการให้โค้ดของคุณทำงานต่อเมื่อหน้าของคุณโหลดเสร็จแล้ว ให้ attach JavaScript event ไปที่ document โดยจะเรียกว่า`DOMContentLoaded`
 
 ```js
 document.addEventListener('DOMContentLoaded', function() {
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-You can implement event handlers that go inside of the `DOMContentLoaded` function. You can implement an `onclick` event handler which triggers when the user clicks on the element with id `getMessage`, by adding the following code:
+สามารถใช้ตัวจัดการเหตุการณ์ที่อยู่ภายใน `DOMContentLoaded` functionและจัดการ `onclick` event เมื่อ user click ที่ element id `getMessage` โดยสามารถเพิ่มโค้ดได้ตามตัวอย่างข้างล่างนี้
 
 ```js
 document.getElementById('getMessage').onclick = function(){};
@@ -24,17 +24,17 @@ document.getElementById('getMessage').onclick = function(){};
 
 # --instructions--
 
-Add a click event handler inside of the `DOMContentLoaded` function for the element with id of `getMessage`.
+เพิ่ม click event ภายใน `DOMContentLoaded` function สำหรับ element id `getMessage`
 
 # --hints--
 
-Your code should use the `document.getElementById` method to select the `getMessage` element.
+ควรใช้ `document.getElementById` method เพื่อเลือก `getMessage` element.
 
 ```js
 assert(code.match(/document\s*\.getElementById\(\s*?('|")getMessage\1\s*?\)/g));
 ```
 
-Your code should add an `onclick` event handler.
+ควรเพิ่ม `onclick` event 
 
 ```js
 assert(typeof document.getElementById('getMessage').onclick === 'function');

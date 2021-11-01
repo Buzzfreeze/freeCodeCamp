@@ -7,7 +7,7 @@ dashedName: part-122
 
 # --description--
 
-On a new line, `append` a `td` to your `legendRows` variable. `td` is for an individual cell in the row of the table.
+ใช้`append` สำหรับ `td` สำหรับ `legendRows` variable. `td` เป็น individual cell ใน row ของ table.
 
 # --hints--
 

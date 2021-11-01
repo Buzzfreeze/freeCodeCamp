@@ -7,7 +7,8 @@ dashedName: part-86
 
 # --description--
 
-Chain the function `outerRadius(100)` to the arc. This will set the outer radius of the pie chart to 100.
+ใช้ function `outerRadius(100)` สำหรับ arc T
+เพื่อกำหนด outer radius ให้กับ pie chart มีค่าเป็น 100
 
 # --hints--
 

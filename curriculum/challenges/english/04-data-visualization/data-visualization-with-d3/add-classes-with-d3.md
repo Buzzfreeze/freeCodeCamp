@@ -8,29 +8,29 @@ dashedName: add-classes-with-d3
 
 # --description--
 
-Using a lot of inline styles on HTML elements gets hard to manage, even for smaller apps. It's easier to add a class to elements and style that class one time using CSS rules. D3 has the `attr()` method to add any HTML attribute to an element, including a class name.
+การใช้ inline styles ใน HTML elements ทำให้จัดการได้ยาก ถึงแม้จะเป็น apps ที่มีขนาดเล็กก็ตาม วิธีที่ง่ายกว่าคือการเพิ่ม class ให้กับ elements และ style ซึ่ง class จะถูกเรียกใช้แค่ครั้งเดียวตามกฎของ CSS ส่วน D3 จะใช้ `attr()` method เพิ่มทุก HTML attribute ให้กับ elementรวมถึงชื่อของ class 
 
-The `attr()` method works the same way that `style()` does. It takes comma-separated values, and can use a callback function. Here's an example to add a class of `container` to a selection:
+ `attr()` method ทำงานเหมือนกับ `style()` พวกมันใช้สามารถใช้ comma-separated values และ callback function ได้ ตัวอย่างของการเพิ่ม class `container` ให้กับ selection:
 
 ```js
 selection.attr("class", "container");
 ```
 
-Note that the `class` parameter will remain the same whenever you need to add a class and only the `container` parameter will change.
+Note: `class` parameter จะมีจำนวนเท่าเดิม เฉพาะ `container` parameter ที่จะเปลี่ยน
 
 # --instructions--
 
-Add the `attr()` method to the code in the editor and put a class of `bar` on the `div` elements.
+เพิ่ม `attr()` method ใน editor แลพเพิ่ม class ของ `bar` ใน `div` elements.
 
 # --hints--
 
-Your `div` elements should have a class of `bar`.
+ `div` elements ควรจะมี class `bar`
 
 ```js
 assert($('div').attr('class').trim().split(/\s+/g).includes('bar'));
 ```
 
-Your code should use the `attr()` method.
+ควรจะใช้ `attr()` method.
 
 ```js
 assert(code.match(/\.attr/g));

@@ -7,7 +7,8 @@ dashedName: part-41
 
 # --description--
 
-Go back to where you defined your `xAis` variable and chain the `tickFormat` function to it. Pass it `d3.format('')`. This will remove the commas in the year labels of the x-axis.
+เมื่อกำหนด `xAis` variable ใช้ `tickFormat` function เพื่อทำการส่งค่าไปใน `d3.format('')` 
+นี่เป็นการลบcommas ใน labels ของปีบนแกน x
 
 # --hints--
 

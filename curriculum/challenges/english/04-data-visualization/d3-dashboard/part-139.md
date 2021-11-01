@@ -7,13 +7,13 @@ dashedName: part-139
 
 # --description--
 
-Go to where you `call` the `xAxis` and create a `mouseover` event for the labels. Chain the `on` function to them, pass it the string `mouseover`, and give it a value of a "d function" that calls `drawDashboard` with `d` as the argument. It will look like this:
+ไปที่ `call` สำหรับ `xAxis` ให้สร้าง `mouseover` event สำหรับ labels โดยใช้ `on` function และ pass string `mouseover` และกำหนดค่าเป็น "d function" ที่เรียกใช้ `drawDashboard` ที่ให้ `d` เป็น argument เช่น
 
 ```js
 .on('mouseover', d => drawDashboard(d))
 ```
 
-So now, when you hover a label, the function will be called with the year that is being hovered.
+เมื่อ hover label function จะเรียกค่าปีที่ถูก hover
 
 # --hints--
 

@@ -7,7 +7,7 @@ dashedName: part-112
 
 # --description--
 
-Give the table a `width` of `200` and a `height` of `120` using `attr`.
+สร้่างตารางที่มีขนาด `width` เป็น `200` และให้ `height` เป็น `120` โดยใช้ `attr`
 
 # --hints--
 

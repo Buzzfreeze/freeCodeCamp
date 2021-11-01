@@ -7,7 +7,7 @@ dashedName: part-126
 
 # --description--
 
-Set the `align` attribute to `center`.
+กำหนด `align` attribute เป็น `center`
 
 # --hints--
 

@@ -7,9 +7,9 @@ dashedName: part-92
 
 # --description--
 
-Chain a `value` function to `pie` and pass it `d => d.value`. Each piece of data(`d`) will have a `key`(platform) and a `value`(number of followers), you want to return the number of followers here. The pie function will create an array of objects from these values that describe the angles and sizes the pie chart needs.
+ใช้ `value` function สำหรับ `pie` และ pass ให้กับ `d => d.value` แต่บ่ะส่วนของ data(`d`) จะมี `key`(platform) และ `value`(number of followers) เราต้องการ return จำนวนของ followers ดังนั้น pie function จำสร้าง array ของ objects จากค่าที่ angles และ sizes ที่ pie chart ต้องการ
 
-In a few steps, you will make an array out of your data variable that will be passed to this function.
+สร้าง array นอกเหนือจาก data variable ที่ใช้สำหรับ passed ให้กับ function
 
 # --hints--
 

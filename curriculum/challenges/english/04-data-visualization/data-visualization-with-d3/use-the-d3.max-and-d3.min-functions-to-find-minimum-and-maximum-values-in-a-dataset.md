@@ -11,11 +11,12 @@ dashedName: >-
 
 # --description--
 
-The D3 methods `domain()` and `range()` set that information for your scale based on the data. There are a couple methods to make that easier.
+D3 methods `domain()` และ `range()` ใช้กำหนด information เพื่อ scale ค่าต่างๆอ้างอิงจาก data ที่มี 
+การใช้ทั้งสอง methods ร่วมกันจะทำงานง่ายกว่า
 
-Often when you set the domain, you'll want to use the minimum and maximum values within the data set. Trying to find these values manually, especially in a large data set, may cause errors.
+หลายๆครั้งที่ set domain เราต้องใช้ค่า minimum และ maximum ของ data set โดยการ manual หาค่าเหล่านั้น ถ้าหากว่า data set มีขนาดใหญ่ จะเกิดความผิดพลาดได้ง่าย
 
-D3 has two methods - `min()` and `max()` to return this information. Here's an example:
+ใน D3 มี 2 methods - `min()` และ `max()` เพื่อใช้สำหรับ return ค่าสูงสุดและต่ำสุดตามลำดับ ดังตัวอย่าง:
 
 ```js
 const exampleData = [34, 234, 73, 90, 6, 52];
@@ -23,7 +24,8 @@ d3.min(exampleData)
 d3.max(exampleData)
 ```
 
-A dataset may have nested arrays, like the `[x, y]` coordinate pairs that were in the scatter plot example. In that case, you need to tell D3 how to calculate the maximum and minimum. Fortunately, both the `min()` and `max()` methods take a callback function. In this example, the callback function's argument `d` is for the current inner array. The callback needs to return the element from the inner array (the `x` or `y` value) over which you want to compute the maximum or minimum. Here's an example for how to find the min and max values with an array of arrays:
+dataset อาจจะเป็นแบบ nested arrays เช่น `[x, y]` coordinate ที่ใช้ใน scatter plot ทั้ง `min()` และ `max()` methods สามารถใช้ callback function เพื่อหาค่าสูงสุดและต่ำสุดใน nested arrays ได้ โดยใช้ argument ของ callback function `d` สำหรับค่าใน inner array โดยที่ callback จะ return element จาก inner array (ค่า`x` หรือ `y` ) มาให้  
+ตัวอย่างของการหาค่า min และ max แบบ array ซ้อน arrays
 
 ```js
 const locationData = [[1, 7],[6, 3],[8, 3]];
@@ -34,17 +36,17 @@ const minX = d3.min(locationData, (d) => d[0]);
 
 # --instructions--
 
-The `positionData` array holds sub arrays of x, y, and z coordinates. Use a D3 method to find the maximum value of the z coordinate (the third value) from the arrays and save it in the `output` variable.
+`positionData` array มี sub arrays of x, y, และ z coordinates. ให้ใช้ D3 method เพื่อหาค่า maximum ของ z coordinate (ค่าลำดับที่สาม) จาก arrays และ save ไว้ใน `output` variable
 
 # --hints--
 
-The text in the `h2` should be `8`.
+text ใน `h2` ควรเป็น `8`
 
 ```js
 assert(output == 8 && $('h2').text() == '8');
 ```
 
-Your code should use the `max()` method.
+ควนใช้ `max()` method
 
 ```js
 assert(

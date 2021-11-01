@@ -7,7 +7,7 @@ dashedName: part-91
 
 # --description--
 
-Create a new `const` named `pie` and set it equal to `d3.pie()`. This is the D3 pie chart generator.
+สร้าง `const` ชื่อ `pie` กำหนดให้เท่ากับ `d3.pie()` เพื่อเป็นการใช้งาน D3 pie chart generator
 
 # --hints--
 

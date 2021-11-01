@@ -7,9 +7,9 @@ dashedName: part-145
 
 # --description--
 
-Change the `fill` of the `tumblr-circles` and `instagram-circles` to use a "d function" that returns their respective color variables when `d.year` equals `year`, leave it `white` when they don't. This is similar to how you set the fill of the Twitter circles.
+เปลี่ยน `fill` ของ `tumblr-circles` และ `instagram-circles` เพื่อใช้ "d function" เพื่อ return color variables เมื่อ `d.year` เท่ากับ `year` และไม่ใช้ `white` เหมือนกับตอนที่กำหนด fill ของ Twitter circles
 
-Then, all of the circles will get filled in for the currently displayed year.
+ทุก circles จะถูกเติมสีให้กับปีปัจจุบัน
 
 # --hints--
 

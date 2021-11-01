@@ -7,7 +7,7 @@ dashedName: part-76
 
 # --description--
 
-The circles have been added to two of the lines and look good, on to the last one. On a new line, create another empty selection like you did before. Use the string: `instagram-circles` this time.
+ให้สร้าง empty selection เหมือนก่อนหน้า โดยใช้ string: `instagram-circles` 
 
 # --hints--
 

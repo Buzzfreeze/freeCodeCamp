@@ -7,7 +7,7 @@ dashedName: part-102
 
 # --description--
 
-Next, set the `stroke` to `white` and the `stroke-width` to `2`.
+กำหนด `stroke` ให้เป็น `white` และ `stroke-width` เป็น `2`
 
 # --hints--
 

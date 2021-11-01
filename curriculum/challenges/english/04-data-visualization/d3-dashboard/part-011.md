@@ -7,7 +7,7 @@ dashedName: part-11
 
 # --description--
 
-Later on, you will be adding more elements to the dashboard container. Set the `display` to `flex` and the `align-items` to `center` so those items will be vertically centered.
+เราสามารถเพิ่ม elements ให้กับ the dashboard container ได้อีก โดยกำหนดค่า `display` เป็น `flex` และ `align-items` เป็น `center` เพื่อให้ items อยู่ที่ในลักษณะ vertically centered
 
 # --hints--
 

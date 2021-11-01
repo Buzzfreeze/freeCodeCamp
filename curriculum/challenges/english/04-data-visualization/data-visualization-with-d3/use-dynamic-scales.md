@@ -8,13 +8,13 @@ dashedName: use-dynamic-scales
 
 # --description--
 
-The D3 `min()` and `max()` methods are useful to help set the scale.
+D3 `min()` และ `max()` methods ช่วยในการ set scale
 
-Given a complex data set, one priority is to set the scale so the visualization fits the SVG container's width and height. You want all the data plotted inside the SVG canvas so it's visible on the web page.
+กำหนดให้ complex data set ต้องมีการ set scale เพื่อแสดงภาพที่พอดีกับค่าอwidth และ height ของ SVG container หาต้องการ plot data ทั้งหมดใน SVG canvas เพื่อแสดงผลบนหน้า web page
 
-The example below sets the x-axis scale for scatter plot data. The `domain()` method passes information to the scale about the raw data values for the plot. The `range()` method gives it information about the actual space on the web page for the visualization.
+ตัวอย่างข้างล่างคือการกำหนด x-axis scale สำหรับ scatter plot data โดยที่ `domain()` method จะส่ง information ของ raw dat ไปให้ scale ค่าก่อนทำการ plot ส่วน `range()` method จะส่ง information ของ actual space บนหน้า web page ที่จะทำการแสดงผล
 
-In the example, the domain goes from 0 to the maximum in the set. It uses the `max()` method with a callback function based on the x values in the arrays. The range uses the SVG canvas' width (`w`), but it includes some padding, too. This puts space between the scatter plot dots and the edge of the SVG canvas.
+ในตัวอย่างจะพบว่า domain มีค่าเริ่มจาก 0 ไปถึง maximum  ซึ่งมันใช้ `max()` method และ callback function โดยอ้างอิงจากค่า x ใน arrays โดย range ที่ใช้ใน SVG canvas จะเป็นค่า width (`w`) ที่รวมค่า padding ของ space ระหว่างแต่ละ scatter plot dots กับ พื้นที่ขอบของ SVG canvas ไปด้วย
 
 ```js
 const dataset = [
@@ -38,29 +38,29 @@ const xScale = d3.scaleLinear()
   .range([padding, w - padding]);
 ```
 
-The padding may be confusing at first. Picture the x-axis as a horizontal line from 0 to 500 (the width value for the SVG canvas). Including the padding in the `range()` method forces the plot to start at 30 along that line (instead of 0), and end at 470 (instead of 500).
+อาจจะมีความสับสนสำหรับค่า padding กำหนดให้รูปภาพมีแกน x เป็น horizontal line จาก 0 ถึง 500 (ค่า width สำหรับ SVG canvas) และ padding อยู่ใน `range()` method ที่กำหนดให้ plot เริ่มจาก 30 ตามเส้นตรง (แทนที่ค่า 0) และไปสิ้นสุดที่ 470 (แทนที่ค่า 500)
 
 # --instructions--
 
-Use the `yScale` variable to create a linear y-axis scale. The domain should start at zero and go to the maximum `y` value in the set. The range should use the SVG height (`h`) and include padding.
+ใช้ `yScale` variable สร้าง linear y-axis scale โดยที่ domain ควรเริ่มจาก 0 ไปจนถึงค่า maximum ของ `y` ใน set และ range ควรใช้ค่า SVG height (`h`) ที่รวมค่า padding ไปด้วย
 
-**Note:** Remember to keep the plot right-side-up. When you set the range for the y coordinates, the higher value (height minus padding) is the first argument, and the lower value is the second argument.
+**Note:** อย่าลืม plot ที่ตำแหน่ง right-side-up เมื่อกำหนด range สำหรับ y coordinates ให้ใช้ค่า argument แรกมีค่า (height - padding) ที่มากกว่า argument ที่สอง
 
 # --hints--
 
-The text in the `h2` should be `30`.
+text ใน `h2` ควรเป็น `30`.
 
 ```js
 assert(output == 30 && $('h2').text() == '30');
 ```
 
-The `domain()` of yScale should be equivalent to `[0, 411]`.
+`domain()` ของ yScale ควรเท่ากับ `[0, 411]`.
 
 ```js
 assert(JSON.stringify(yScale.domain()) == JSON.stringify([0, 411]));
 ```
 
-The `range()` of yScale should be equivalent to `[470, 30]`.
+`range()` ของ yScale ควรเท่ากับ `[470, 30]`.
 
 ```js
 assert(JSON.stringify(yScale.range()) == JSON.stringify([470, 30]));

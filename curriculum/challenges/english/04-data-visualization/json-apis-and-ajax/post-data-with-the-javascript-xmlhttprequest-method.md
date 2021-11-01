@@ -8,9 +8,10 @@ dashedName: post-data-with-the-javascript-xmlhttprequest-method
 
 # --description--
 
-In the previous examples, you received data from an external resource. You can also send data to an external resource, as long as that resource supports AJAX requests and you know the URL.
+จากตัวอย่างที่ผ่านมาเราจะสามารรับ data จาก external resource ได้ และเราสามารถส่ง data ไปให้ external resource ได้เช่นกันเหมือนกับ resource supports AJAX requests 
 
-JavaScript's `XMLHttpRequest` method is also used to post data to a server. Here's an example:
+JavaScript's `XMLHttpRequest` method iใช้เพื่อ post data ไปที่ server
+ดังตัวอย่างด้านล่าง
 
 ```js
 const xhr = new XMLHttpRequest();
@@ -26,27 +27,29 @@ const body = JSON.stringify({ userName: userName, suffix: ' loves cats!' });
 xhr.send(body);
 ```
 
-You've seen several of these methods before. Here the `open` method initializes the request as a `POST` to the given URL of the external resource, and uses the `true` Boolean to make it asynchronous. The `setRequestHeader` method sets the value of an HTTP request header, which contains information about the sender and the request. It must be called after the `open` method, but before the `send` method. The two parameters are the name of the header and the value to set as the body of that header. Next, the `onreadystatechange` event listener handles a change in the state of the request. A `readyState` of `4` means the operation is complete, and a `status` of `201` means it was a successful request. The document's HTML can be updated. Finally, the `send` method sends the request with the `body` value, which the `userName` key was given by the user in the `input` field.
+ `open` method จะเรื่มต้น request `POST` เพื่อให้ URL ของ external resource และใช้ `true` Boolean เพื่อทำให้เป็น asynchronous โดย `setRequestHeader` method จะใช้กำหนดค่าให้กับ HTTP request ทีประกอบด้วย information เกี่ยวกับ sender และ request Iซึ่งจะถูกเรียกใช้หลัง `open` method แต่ก่อน `send` method parameters 2 ตัว เป็นเป็นชื้อส่วนหัว header และค่าที่กำหยดให้กับส่วน body ของส่วนหัว จากนั้น `onreadystatechange` event listener จะเปลี่ยน state ของ request โดยที่ `readyState` ของ `4` หมายถึงดำเนินการเสร็จแล้วและ`status` ของ`201` หมายถึง request สำเร็จ โดยที่ document ของ HTML สามารถอัพเดทได้ สุดท้าย `send` method จะส่ง request ไปกับค่าของ `body` ที่มี `userName` key ถูกกำหนดจาก user ใน `input` 
 
 # --instructions--
 
-Update the code so it makes a `POST` request to the API endpoint. Then type your name in the input field and click `Send Message`. Your AJAX function should replace `Reply from Server will be here.` with data from the server. Format the response to display your name appended with the text ` loves cats`.
+สร้าง `POST` request ให้กับ API endpoint จากนั้นพิมพ์ชื่อของงคุณใน input และคลิก `Send Message`
+AJAX function ควนจะถูกแทนที่ด้วย `Reply from Server will be here.` พร้อมกับ data จาก server
+Format จะแสดงข้อความเป็นชื่อของคุฯพร้อมกับ text ` loves cats`.
 
 # --hints--
 
-Your code should create a new `XMLHttpRequest`.
+ควรสร้าง`XMLHttpRequest` ขึ้นมาใหม่
 
 ```js
 assert(code.match(/new\s+?XMLHttpRequest\(\s*?\)/g));
 ```
 
-Your code should use the `open` method to initialize a `POST` request to the server.
+ควรใช้ `open` method เพื่อเริ่ม `POST` request ให้กับ server
 
 ```js
 assert(code.match(/\.open\(\s*?('|")POST\1\s*?,\s*?url\s*?,\s*?true\s*?\)/g));
 ```
 
-Your code should use the `setRequestHeader` method.
+ควรใช้ `setRequestHeader` 
 
 ```js
 assert(
@@ -56,13 +59,13 @@ assert(
 );
 ```
 
-Your code should have an `onreadystatechange` event handler set to a function.
+ควรจะมี `onreadystatechange` event เพื่อกำหนดให้กับ function
 
 ```js
 assert(code.match(/\.onreadystatechange\s*?=/g));
 ```
 
-Your code should get the element with class `message` and change its `textContent` to `userName loves cats`
+ควรมี element ใน class `message` และเปลี่ยน `textContent` ไปเป็น `userName loves cats`
 
 ```js
 assert(
@@ -72,7 +75,7 @@ assert(
 );
 ```
 
-Your code should use the `send` method.
+ควรใช้ `send` method
 
 ```js
 assert(code.match(/\.send\(\s*?body\s*?\)/g));

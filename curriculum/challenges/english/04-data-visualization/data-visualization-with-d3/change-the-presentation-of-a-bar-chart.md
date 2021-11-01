@@ -1,28 +1,30 @@
 ---
 id: 587d7fa8367417b2b2512bca
-title: Change the Presentation of a Bar Chart
+title: Change the Presentation เป็น a Bar Chart
 challengeType: 6
 forumTopicId: 301481
-dashedName: change-the-presentation-of-a-bar-chart
+dashedName: change-the-presentation-เป็น-a-bar-chart
 ---
 
 # --description--
 
-The last challenge created a bar chart, but there are a couple of formatting changes that could improve it:
+โจทย์สุดท้ายสำหรับสร้าง bar chart 
 
-1) Add space between each bar to visually separate them, which is done by adding a margin to the CSS for the `bar` class
-
-2) Increase the height of the bars to better show the difference in values, which is done by multiplying the value by a number to scale the height
+1) เพิ่มพื้นที่ระหว่างแต่ละ bar เพื่อแยะพวกมันออกจากกัน สามารถทำได้โดยการเพิ่ม margin ใน CSS สำหรับ `bar` class
+2) เพิ่ม height ของแต่ละ bars เพื่อให้เห็นความแตกต่างอย่างชัดเจน สามารถทำได้โดย
+การคูณค่าให้กับ scale ของ height
 
 # --instructions--
 
-First, add a `margin` of `2px` to the `bar` class in the `style` tag. Next, change the callback function in the `style()` method so it returns a value `10` times the original data value (plus the `px`).
+เพิ่ม `margin` `2px` ให้กับ `bar` class ใน `style` tag จากนั้นเปลี่ยน callback function ใน `style()` method 
+ซึ่งจะreturnค่ากลับเป็น `10` เท่าของ original data (plus the `px`)
 
-**Note:** Multiplying each data point by the *same* constant only alters the scale. It's like zooming in, and it doesn't change the meaning of the underlying data.
+**Note:** คูณแต่ละ data point โดยค่าคงที่ (*same* constant) เฉพาะการเปลี่ยนscale 
+มันเหมือนกับการซูมเข้า แต่ไม่ได้เปลี่ยนความหมายของข้อมูล
 
 # --hints--
 
-The first `div` should have a `height` of `120` pixels and a `margin` of `2` pixels.
+อันดับที่ 1) `div` ควรมีค่า `height` เป็น `120` pixels และมีค่า `margin` เป็น `2` pixels.
 
 ```js
 assert(
@@ -31,7 +33,7 @@ assert(
 );
 ```
 
-The second `div` should have a `height` of `310` pixels and a `margin` of `2` pixels.
+อันดับที่ 2) `div` ควรมีค่า `height` เป็น `310` pixels และมีค่า `margin` เป็น `2` pixels.
 
 ```js
 assert(
@@ -40,7 +42,7 @@ assert(
 );
 ```
 
-The third `div` should have a `height` of `220` pixels and a `margin` of `2` pixels.
+อันดับที่ 3) `div` ควรมีค่า `height` เป็น `220` pixels และมีค่า `margin` เป็น `2` pixels.
 
 ```js
 assert(
@@ -49,7 +51,7 @@ assert(
 );
 ```
 
-The fourth `div` should have a `height` of `170` pixels and a `margin` of `2` pixels.
+อันดับที่ 4) `div` ควรมีค่า `height` เป็น `170` pixels และมีค่า `margin` เป็น `2` pixels.
 
 ```js
 assert(
@@ -58,7 +60,7 @@ assert(
 );
 ```
 
-The fifth `div` should have a `height` of `250` pixels and a `margin` of `2` pixels.
+อันดับที่ 5) `div` ควรมีค่า `height` เป็น `250` pixels และมีค่า `margin` เป็น `2` pixels.
 
 ```js
 assert(
@@ -67,7 +69,7 @@ assert(
 );
 ```
 
-The sixth `div` should have a `height` of `180` pixels and a `margin` of `2` pixels.
+อันดับที่ 6) `div` ควรมีค่า `height` เป็น `180` pixels และมีค่า `margin` เป็น `2` pixels.
 
 ```js
 assert(
@@ -76,7 +78,7 @@ assert(
 );
 ```
 
-The seventh `div` should have a `height` of `290` pixels and a `margin` of `2` pixels.
+อันดับที่ 7) `div` ควรมีค่า `height` เป็น `290` pixels และมีค่า `margin` เป็น `2` pixels.
 
 ```js
 assert(
@@ -85,7 +87,7 @@ assert(
 );
 ```
 
-The eighth `div` should have a `height` of `140` pixels and a `margin` of `2` pixels.
+อันดับที่ 8) `div` ควรมีค่า `height` เป็น `140` pixels และมีค่า `margin` เป็น `2` pixels.
 
 ```js
 assert(
@@ -94,7 +96,7 @@ assert(
 );
 ```
 
-The ninth `div` should have a `height` of `90` pixels and a `margin` of `2` pixels.
+อันดับที่ 9) `div` ควรมีค่า `height` เป็น `90` pixels และมีค่า `margin` เป็น `2` pixels.
 
 ```js
 assert(

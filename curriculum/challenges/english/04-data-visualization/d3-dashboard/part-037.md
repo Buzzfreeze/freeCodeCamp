@@ -7,7 +7,8 @@ dashedName: part-37
 
 # --description--
 
-I want the text elements to be rotated slightly. Chain the `style` function to set the `transform` to `translate(-12px, 0) rotate(-50deg)`. This will put them at an angle.
+ต้องการให้ text elements ถูก rotated ไปกี่องศา เราหากสามารถใช้ e `style` function และกำหนดค่าให้กับ `transform` เป็น 
+`translate(-12px, 0) rotate(-50deg)` 
 
 # --hints--
 

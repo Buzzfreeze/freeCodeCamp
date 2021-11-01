@@ -7,7 +7,7 @@ dashedName: part-119
 
 # --description--
 
-Add a `selectAll` function to the selection and pass it the string `tr`.
+เพิ่ม `selectAll` function เพื่อ selection และ pass ให้กับ string `tr`
 
 # --hints--
 

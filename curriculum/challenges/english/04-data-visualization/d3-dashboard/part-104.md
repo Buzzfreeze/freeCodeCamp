@@ -7,7 +7,7 @@ dashedName: part-104
 
 # --description--
 
-Chain a `text` function to set the text of each pie slice to a percentage. Set the value to a "d function" with curly brackets and leave the function empty for now. It should look like this:
+ให้ `text` function กำหนด text ให้กับแต่ละ pie slice เป็นแบบ percentage โดยให้กำหนดค่าให้กับ "d function" กับ curly brackets และสร้าง function empty ดังตัวอย่าง
 
 ```js
 .text(d => {
@@ -15,11 +15,11 @@ Chain a `text` function to set the text of each pie slice to a percentage. Set t
 })
 ```
 
-The method for getting the percent of each slice will take a few steps:
+วิธีการ getting percent ของแต่ละ slice ทำตามด้านล่าง:
 
-1.  Find the total number of followers for the displayed year
-2.  Divide the followers of a single platform by that total
-3.  Turn it into a string to display
+1.  หา total number ของ followers ที่จะในแต่ละปี
+2.  หาร followers ของแต่ละ platform ด้วยค่า total
+3.  เปลี่ยนค่าที่ได้เป็น string เพื่อ display
 
 # --hints--
 

@@ -8,41 +8,41 @@ dashedName: create-a-linear-scale-with-d3
 
 # --description--
 
-The bar and scatter plot charts both plotted data directly onto the SVG canvas. However, if the height of a bar or one of the data points were larger than the SVG height or width values, it would go outside the SVG area.
+bar and scatter plot charts จะทำการ plot data โดยตรงลงไปที่ SVG canvas อย่างไรก็ตามถ้าความสูงของ bar หรือ data points จดใดจุดนึง มีค่ามากกว่าความกว้างหรือความยาวของ SVG ค่าเหล่าน้นขะไปอยู่ที่ด้านนอกของพื้นที่ของ SVG
 
-In D3, there are scales to help plot data. `scales` are functions that tell the program how to map a set of raw data points onto the pixels of the SVG canvas.
+ใน D3 มี scales ที่ใช่ในการช่วย plot data `scales` เป็น functions ที่บอก program ว่าจะ set raw data points ไปเป็น pixels ใน the SVG canvas อย่างไร
 
-For example, say you have a 100x500-sized SVG canvas and you want to plot Gross Domestic Product (GDP) for a number of countries. The set of numbers would be in the billion or trillion-dollar range. You provide D3 a type of scale to tell it how to place the large GDP values into that 100x500-sized area.
+ตัวอย่างเช่น หากเรามี 100x500-sized SVG canvas และต้องการ plot Gross Domestic Product (GDP) สำหรับจำนวนของประเทศ set ของจำนวนอาจจะมีช่วงความกว้างเป็นพันล้าน แต่เราสามารถใช้ D3 เพื่อ scale ค่าของ GDP ไปสู่พื่นที่ขนาด 100x500-sized ได้
 
-It's unlikely you would plot raw data as-is. Before plotting it, you set the scale for your entire data set, so that the `x` and `y` values fit your canvas width and height.
+ซึ่งจะไม่เหมือนกับการ plot raw data ที่ก่อน plot เราสามารถ scale data set ทั้งหทดได้ ทำให้ค่า `x` และ `y` พอดีกับความกว่้างและความยาวของ canvas
 
-D3 has several scale types. For a linear scale (usually used with quantitative data), there is the D3 method `scaleLinear()`:
+D3 มีหลาย scale types สำหรับ linear scale (ใช้งานบ่อยใน quantitative data)จะมี D3 method `scaleLinear()`:
 
 ```js
 const scale = d3.scaleLinear()
 ```
 
-By default, a scale uses the identity relationship. The value of the input is the same as the value of the output. A separate challenge covers how to change this.
+scale ใช้ระบุความสัมพันธ์ ค่าของ input จะเท่ากับค่าของ output ในบทเรียนอื่นจะพูดถึงอีกครั้งสำหรับการเปลี่ยนค่าเหล่านี้
 
 # --instructions--
 
-Change the `scale` variable to create a linear scale. Then set the `output` variable to the scale called with an input argument of `50`.
+เปลี่ยน `scale` variable เพื่อสร้าง linear scale. จากนั้นกำหนด `output` variable สำหรัยเรียกใช้ scale ด้วย argument ที่เท่ากับ `50`.
 
 # --hints--
 
-The text in the `h2` should be `50`.
+text ใน `h2` ควรเป็น `50`.
 
 ```js
 assert($('h2').text() == '50');
 ```
 
-Your code should use the `scaleLinear()` method.
+ควรใช้ `scaleLinear()` method.
 
 ```js
 assert(code.match(/\.scaleLinear/g));
 ```
 
-The `output` variable should call `scale` with an argument of `50`.
+`output` variable ควรถูกเรียกใช้ `scale` ที่มี argument เป็น `50`.
 
 ```js
 assert(output == 50 && code.match(/scale\(\s*?50\s*?\)/g));

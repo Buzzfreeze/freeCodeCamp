@@ -7,15 +7,15 @@ dashedName: part-44
 
 # --description--
 
-The line needs x and y values for each point of data. Chain `x` to the line and pass it a "d function". Here's how that will look:
+line จำเป็นต้องมีค่า x and y สำหรับแต่ละ data point โดยเชื่อม `x` ให้กับ line และส่งค่า "d function" เช่นตัวอย่างด้านล่าง
 
 ```js
 .x(d => d.year)
 ```
 
-You will be passing your `data` array to this line function, where it will go through each item in the array(`d`) and create an x value based on the year(`d.year`).
+เราจะส่งค่า `data` array ให้ line function ผ่านแต่ละ item ใน array(`d`) และสร้าง x value อ้างอิงจากปี (`d.year`)
 
-This is the first place you have seen a "d function". These are common in D3 and that is how I will refer to them throughout this project.
+โดย "d function" จะเหมือนกับ D3 ที่ใช้ในโปรเจคนี้
 
 # --hints--
 

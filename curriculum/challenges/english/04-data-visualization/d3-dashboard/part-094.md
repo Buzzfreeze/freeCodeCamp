@@ -7,7 +7,8 @@ dashedName: part-94
 
 # --description--
 
-Add the `data` function to the selection. Pass it your `pie` function with an empty array as its argument for now. The next step will get the correct array to put there.
+เพิ่ม `data` function เพิ่ททำการ selection โดย Pass `pie` function และ empty array ที่เป็น argument 
+ 
 
 # --hints--
 

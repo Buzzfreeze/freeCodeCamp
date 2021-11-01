@@ -8,23 +8,23 @@ dashedName: add-document-elements-with-d3
 
 # --description--
 
-D3 has several methods that let you add and change elements in your document.
+D3 มีหลายวิธีสำหรับเพิ่มและเปลี่ยน elements ใน document
 
-The `select()` method selects one element from the document. It takes an argument for the name of the element you want and returns an HTML node for the first element in the document that matches the name. Here's an example:
+ `select()` method เป็นการเลือก element จาก document โดยระบุ argument ท่ีเป็นชื่อของ element ที่ต้องการ เพื่อส่งค่ากลับ HTML node สำหรับ element ของ document ที่ตรงกับชื่อ ดังตัวอย่าง:
 
 ```js
 const anchor = d3.select("a");
 ```
 
-The above example finds the first anchor tag on the page and saves an HTML node for it in the variable `anchor`. You can use the selection with other methods. The `d3` part of the example is a reference to the D3 object, which is how you access D3 methods.
+จากตัวอย่างด้านบน จะทำการหา anchor tag ใน page ก่อนและ saves HTML node เพื่อสำหรับ variable `anchor` โดยสามารถใช้ selection กับ methods อืื่นๆได้อีกด้วย สำหรับ `d3` ในตัวอย่างจะอ้างอิงถึง D3 object โ
 
-Two other useful methods are `append()` and `text()`.
+วิธีที่มีประสิทธิภาพคือ `append()` และ `text()`
 
-The `append()` method takes an argument for the element you want to add to the document. It appends an HTML node to a selected item, and returns a handle to that node.
+`append()` method ใช้สำหรับเพิ่ม element ที่ต้องการให้กับ document การเพิ่ม HTML node เพื่อเลือก items และส่งค่ากลับไปยัง node เดิม
 
-The `text()` method either sets the text of the selected node, or gets the current text. To set the value, you pass a string as an argument inside the parentheses of the method.
+`text()` method เป็นการตั้งค่าข้อความของ node ที่เลือกหรือรับข้อความปัจจุบัน สามารถ set ค่าได้โดยการ pass string ไปเป็น argument ข้างในวงเล็บ 
 
-Here's an example that selects an unordered list, appends a list item, and adds text:
+ตัวอย่างการเลือกใช้ unordered list, เพิ่ม list item, และ text:
 
 ```js
 d3.select("ul")
@@ -32,45 +32,45 @@ d3.select("ul")
   .text("Very important item");
 ```
 
-D3 allows you to chain several methods together with periods to perform a number of actions in a row.
+D3 อนุญาตให้ใช้หลาย methods ร่วมกันได้ เพื่อให้เกิด action หลายๆอย่างต่อเนื่องกัน
 
 # --instructions--
 
-Use the `select` method to select the `body` tag in the document. Then `append` an `h1` tag to it, and add the text `Learning D3` into the `h1` element.
+ใช้ `select` method เพื่อเลือก `body` tag ใน document จากนั้นใช้ `append` `h1` tag และเพิ่ม text `Learning D3` ให้กับ `h1` element.
 
 # --hints--
 
-The `body` should have one `h1` element.
+`body` ควรมี `h1` element
 
 ```js
 assert($('body').children('h1').length == 1);
 ```
 
-The `h1` element should have the text `Learning D3` in it.
+`h1` element ควรมี text `Learning D3` in 
 
 ```js
 assert($('h1').text() == 'Learning D3');
 ```
 
-Your code should access the `d3` object.
+ควรเข้าถึง `d3` object
 
 ```js
 assert(code.match(/d3/g));
 ```
 
-Your code should use the `select` method.
+ควรใช้ `select` method
 
 ```js
 assert(code.match(/\.select/g));
 ```
 
-Your code should use the `append` method.
+ควรใช้ `append` method
 
 ```js
 assert(code.match(/\.append/g));
 ```
 
-Your code should use the `text` method.
+ควรใช้ `text` method
 
 ```js
 assert(code.match(/\.text/g));

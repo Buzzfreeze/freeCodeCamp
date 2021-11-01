@@ -7,7 +7,8 @@ dashedName: part-43
 
 # --description--
 
-The axes and labels are looking good. Next, you will start to add some of the lines for the data. First is the line for the Twitter data. On a new line, create a new `const` named `twitterLine` and set it equal to `d3.line()`. `line` is a D3 function for creating a line.
+axes และ labels อยู่ในตำแหน่งที่เหมาะสมแล้ว เราจะเพิ่ม line ให้กับ data โดย line แรกคือข้อมูลจาก Twitter 
+บน line ใหม่ให้สร้าง `const` ชื่อ `twitterLine` และกำหยดค่าให้เป็น `d3.line()` โดยที่ `line` คือ D3 function สำหรับการสร้าง line ใหม่
 
 # --hints--
 

@@ -7,7 +7,7 @@ dashedName: part-63
 
 # --description--
 
-Add the D3 `data` function to your selection and pass it the data array like this:
+เพิ่ม D3 `data` function ให้กับ selection และ pass data array ดังเช่น
 
 ```js
 .data(data)

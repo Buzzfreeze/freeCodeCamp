@@ -7,11 +7,13 @@ dashedName: part-64
 
 # --description--
 
-Next, chain the `enter()` function to the selection.
+ `enter()` function ใช้สำหรับ selection
 
-The enter function identifies elements that need to be added when the data array is longer than the selection array. This is why you wanted the `selectAll` to be an empty array before.
+enter function identifies elements จำเป็นเมื่อต้องการเพิ่ม data array ที่ยาวกว่า selection array 
+นี่เป็นสาเหตุว่าทำไมต้องใช้ `selectAll` เป็น empty array 
 
-In this case, the `twitter-circles` selection has a length of 0, and the data array has a length of 9. So nine elements will be added when you use `append` in the next step.
+เมื่อ `twitter-circles` selection มี length เป็น 0 และ data array มี length เท่ากับ 9
+ดังนั้น 9 elements จะถูกเพิ่มโดยใช้ `append` ในขั้นตอนถัดไป
 
 # --hints--
 

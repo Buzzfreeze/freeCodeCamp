@@ -7,7 +7,7 @@ dashedName: part-10
 
 # --description--
 
-Give the container some space by adding a `padding` of `100px 10px` to the `body` element.
+กำหนดให้ container มี space ได้โดยเพิ่ม `padding` เป็น `100px 10px` ให้กับ `body` element
 
 # --hints--
 

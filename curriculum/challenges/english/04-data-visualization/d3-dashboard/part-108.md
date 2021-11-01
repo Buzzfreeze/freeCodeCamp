@@ -7,13 +7,14 @@ dashedName: part-108
 
 # --description--
 
-Your percent values are numbers less than one. You will need to multiply it by 100, round of the decimals, and add a `%` sign. Use a template literal to return this to the `text` function:
+ตอนนี้ percent values เป็นจำนวนที่ เราจึงต้องคูณมันด้วย 100 และปัด decimals พร้อมทั้งเพิ่ม `%` ให้กับจำนวนเหล่านั้น
+ให้ใช้ template literal เพื่อ return เป็น `text` function
 
 ```js
 ${Math.round(percent * 100)}%
 ```
 
-Don't forget that you need a `return` statement here since you aren't using an implicit return.
+อย่าลืม `return` statement เนื่องจากเาใช้ implicit return
 
 # --hints--
 

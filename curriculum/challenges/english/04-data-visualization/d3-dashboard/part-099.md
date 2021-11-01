@@ -7,7 +7,7 @@ dashedName: part-99
 
 # --description--
 
-Set the `d` attribute to your `pieArc` variable. Just like the `d` in your lines, this is an SVG attribute for path elements that describes how to draw things. Your `pieArc` variable will determine what this value is for you.
+กำหนด `d` attribute ให้กับ `pieArc` variable เหมือนกับ `d` ใน lines ซึ่งจะเป็น SVG attribute ให้กับแต่ละ path elements  โดยที่ `pieArc` variable จะหาค่าให้ทราว่าควรจะวาด pie อย่างไร
 
 # --hints--
 

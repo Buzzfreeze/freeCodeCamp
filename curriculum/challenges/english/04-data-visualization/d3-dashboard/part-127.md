@@ -7,7 +7,7 @@ dashedName: part-127
 
 # --description--
 
-Append a `div` element to the selection. Each `div` will be a small square for each color.
+Append `div` element ให้เป็น selection โดยแต่ละ `div` จะมีกล่องสี่เหลี่ยมเล็กๆสำหรับแต่ละสี 
 
 # --hints--
 

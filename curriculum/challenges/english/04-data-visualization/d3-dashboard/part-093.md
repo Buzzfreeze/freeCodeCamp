@@ -7,7 +7,7 @@ dashedName: part-93
 
 # --description--
 
-Create a new `const` named `pieGraphData` and set the value equal to `pieGraph.selectAll('pieSlices')`. This is an empty selection similar circles you created earlier.
+สร้าง `const` ชื่อ `pieGraphData` และกำหยดค่าให้เป็น `pieGraph.selectAll('pieSlices')` โดยที่ empty selection sจะเหมือนกับการสร้างให้กับ circles ก่อนหน้า
 
 # --hints--
 

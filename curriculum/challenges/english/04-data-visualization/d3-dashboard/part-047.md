@@ -7,7 +7,8 @@ dashedName: part-47
 
 # --description--
 
-The first line is created and ready to be displayed, which will take a couple steps. On a new line, `append` a `path` element to your `lineGraph` variable. This is similar to how you appended the `g` before.
+ขึ้นบรรทัดใหม่และใช้ `append` ส่วน `path` element ให้กับ `lineGraph` variable
+เหมือนกับการ appended ค่า `g` ก่อนหน้า
 
 # --hints--
 

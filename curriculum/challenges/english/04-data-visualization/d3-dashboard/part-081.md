@@ -7,7 +7,8 @@ dashedName: part-81
 
 # --description--
 
-The line graph is looking good. All the empty space to the right will be for the pie graph and legend. Create a new `const` named `rightDashboard` and set equal to `d3.select('.dashboard')`. This will select your dashboard container again which currently only has the SVG element as a child.
+สร้าง`const` ชื่ิอ `rightDashboard` และกำหนดให้เท่ากับ `d3.select('.dashboard')`
+ให้เลือก dashboard container อีกครั้งโดยที่มี SVG element เป็น child
 
 # --hints--
 

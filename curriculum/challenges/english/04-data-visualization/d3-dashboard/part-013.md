@@ -7,9 +7,10 @@ dashedName: part-13
 
 # --description--
 
-Add another `script` below the one you just added. Give it a `src` attribute of `./data.js`.
+`script` ข้างล่าง  ให้เพิ่ม `src` attribute เป็น `./data.js`
 
-This adds a `data` variable to your project that contains your number of social media followers, it is an array of objects. Each object has the year and your followers for three different platforms. You will see what it looks like shortly.
+เพิ่ม `data` variable ให้กับ project ที่ประกอบด้วย social media followers ในรูปแบบของ array objects
+แต่ละ object จะมีบอกปีและจำนวน followers สำหรับสาม platforms 
 
 # --hints--
 

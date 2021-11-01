@@ -7,7 +7,7 @@ dashedName: part-38
 
 # --description--
 
-Add another `style` function to set the `text-anchor` to `end`. This will change the spot that each text element rotates around to the `end` of the element so they will align better.
+`style` function ใช้กำหนด `text-anchor` เป็น `end` ได้ เพื่อเปลี่ยน spot ของแต่ละ text element ให้ rotates ไปรอบๆ จุดที่กำหนด โดย `end` element จะช่วยให้จัดตำแหน่งได้ดีขึ้น
 
 # --hints--
 

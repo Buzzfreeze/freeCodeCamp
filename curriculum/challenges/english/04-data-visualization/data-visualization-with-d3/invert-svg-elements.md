@@ -8,73 +8,72 @@ dashedName: invert-svg-elements
 
 # --description--
 
-You may have noticed the bar chart looked like it's upside-down, or inverted. This is because of how SVG uses (x, y) coordinates.
+เราจะสามารถสังเกตุได้ว่า bar chart นั้นกลับด้านอยู่ นี่เป็นเพราะวิธีการของ SVG ที่ใช้ (x, y) coordinates
+จาก SVG จะพบว่า origin point ของ coordinates จะอยู่ที่ the upper-left สำหรับ `x` coordinate ถูกวางไว้ที่ 0 ตรงที่ขอบซ้ายของ SVG area สำหรับ `y` coordinate จะถูกวางไว้ที่ 0 ตรง top edge ของ SVG area เมื่อค่าของ `x` มากขึ้น rectangle จะขยับไปอยู่ฝั่งขวา ส่วนเมื่อค่า `y` มากขึ้น rectangle จะถูกขยับลงไปด้านล่าง
 
-In SVG, the origin point for the coordinates is in the upper-left corner. An `x` coordinate of 0 places a shape on the left edge of the SVG area. A `y` coordinate of 0 places a shape on the top edge of the SVG area. Higher `x` values push the rectangle to the right. Higher `y` values push the rectangle down.
+เพื่อกำหนดให้ bars อยู่ตรงที่ right-side-up จึงจำเป็นต้องเปลี่ยนวิธีการคำนวณสำหรับ `y` coordinate เพื่อปรับทั้งค่า height ของ bar และ total height ของ SVG area
 
-To make the bars right-side-up, you need to change the way the `y` coordinate is calculated. It needs to account for both the height of the bar and the total height of the SVG area.
+ค่า height ของ SVG area เป็น 100 ถ้าหาก data point มีค่าเป็น 0 และต้องการให้ค่า bar เริ่มต้นที่ bottom ของ SVG area (ไม่ใช่ top) ต้องกำหนดให้ค่า `y` coordinate มีค่าเป็น 100 แล้วถ้าหากค่า data point value เป็น 1 ต้องกำหนดค่าเริ่มต้นให้ `y` coordinate เป็น 100 เพื่อให้ bar อยู่ที่ bottom ดัวนั้นจึงจำเป็นที่ต้องกำหนดค่า height ของ bar เป็น 1เพื่อค่าสุดท้ายของ `y` coordinate จะได้เป็น 99
 
-The height of the SVG area is 100. If you have a data point of 0 in the set, you would want the bar to start at the bottom of the SVG area (not the top). To do this, the `y` coordinate needs a value of 100. If the data point value were 1, you would start with a `y` coordinate of 100 to set the bar at the bottom. Then you need to account for the height of the bar of 1, so the final `y` coordinate would be 99.
-
-The `y` coordinate that is `y = heightOfSVG - heightOfBar` would place the bars right-side-up.
+`y` coordinate คือ `y = heightOfSVG - heightOfBar` เพื่อที่ bars จะได้อยู่ที่ตำแหน่ง right-side-up
 
 # --instructions--
 
-Change the callback function for the `y` attribute to set the bars right-side-up. Remember that the `height` of the bar is 3 times the data value `d`.
+เปลี่ยน callback function สำหรับ `y` attribute เพื่อ set ค่า bars ให้อยู่ที่ตำแหน่ง right-side-up อย่าลืมว่าค่า `height` ของ bar จะมีค่าเป็น 3 เท่าของ `d`
 
-**Note:** In general, the relationship is `y = h - m * d`, where `m` is the constant that scales the data points.
+**Note:** ความสัมพันธ์ `y = h - m * d` โดยที่ `m` เป็นค่าคงที่ของแต่ละ data points
 
 # --hints--
 
-The first `rect` should have a `y` value of `64`.
+อันดับที่ 1) `rect` ควรจะมีค่า `y` เป็น `64`.
 
 ```js
 assert($('rect').eq(0).attr('y') == h - dataset[0] * 3);
 ```
 
-The second `rect` should have a `y` value of `7`.
+อันดับที่ 2) `rect` ควรจะมีค่า `y` เป็น `7`.
 
 ```js
 assert($('rect').eq(1).attr('y') == h - dataset[1] * 3);
 ```
 
-The third `rect` should have a `y` value of `34`.
+อันดับที่ 3) `rect` ควรจะมีค่า `y` เป็น `34`.
 
 ```js
 assert($('rect').eq(2).attr('y') == h - dataset[2] * 3);
 ```
 
-The fourth `rect` should have a `y` value of `49`.
+อันดับที่ 4) `rect` ควรจะมีค่า `y` เป็น `49`.
 
 ```js
 assert($('rect').eq(3).attr('y') == h - dataset[3] * 3);
 ```
 
-The fifth `rect` should have a `y` value of `25`.
+อันดับที่ 5) `rect` ควรจะมีค่า `y` เป็น `25`.
 
 ```js
 assert($('rect').eq(4).attr('y') == h - dataset[4] * 3);
 ```
 
-The sixth `rect` should have a `y` value of `46`.
+อันดับที่ 6) `rect` ควรจะมีค่า `y` เป็น `46`.
 
 ```js
 assert($('rect').eq(5).attr('y') == h - dataset[5] * 3);
 ```
 
-The seventh `rect` should have a `y` value of `13`.
+อันดับที่ 7) `rect` ควรจะมีค่า `y` เป็น `13`.
 
 ```js
 assert($('rect').eq(6).attr('y') == h - dataset[6] * 3);
 ```
 
-The eighth `rect` should have a `y` value of `58`.
+อันดับที่ 8) `rect` ควรจะมีค่า `y` เป็น `58`.
 
 ```js
 assert($('rect').eq(7).attr('y') == h - dataset[7] * 3);
 ```
 
-The ninth `rect` should have a `y` value of `73`.
+อันดับที่ 9) `rect` ควรจะมีค่า `y` เป็น `73`.
 
 ```js
 assert($('rect').eq(8).attr('y') == h - dataset[8] * 3);

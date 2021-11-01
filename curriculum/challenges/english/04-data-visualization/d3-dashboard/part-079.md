@@ -7,7 +7,7 @@ dashedName: part-79
 
 # --description--
 
-Appropriately set the radius (`r`), `fill`, and `stroke` for these circles.
+กำหนดค่า radius (`r`), `fill`, และ `stroke` ให้กับ circles
 
 # --hints--
 

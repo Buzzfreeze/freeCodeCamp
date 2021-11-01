@@ -7,7 +7,8 @@ dashedName: part-5
 
 # --description--
 
-Next, add a container for the dashboard. Put an empty `div` element in the body with class of `dashboard`. You will be appending all the dashboard elements to this div.
+การเพิ่ม container สำหรับ dashboard ทำได้โดยการเพิ่ม `div` element ใน body ที่มี class ของ `dashboard` ด้วย
+จากนั้นเราจะสามารถเพิ่ม dashboard elements ให้กับ div นี้ได้
 
 # --hints--
 

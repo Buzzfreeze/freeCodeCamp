@@ -8,9 +8,10 @@ dashedName: change-styles-based-on-data
 
 # --description--
 
-D3 is about visualization and presentation of data. It's likely you'll want to change the styling of elements based on the data. You can use a callback function in the `style()` method to change the styling for different elements.
+D3 จะเกี่ยวข้องกับ visualization และการแสดงผลขอ data เราสามารถเปลี่ยน style ของ elements ได้อย่างที่เราต้องการโดยอ้างอิงจาก data ที่มีอยู่ ยังสามารถใช้ callback function ใน `style()` method ได้อีกด้วย เพื่อเปลี่ยน style ของ elements ที่ต่างกัน
 
-For example, you may want to color a data point blue if it has a value less than 20, and red otherwise. You can use a callback function in the `style()` method and include the conditional logic. The callback function uses the `d` parameter to represent the data point:
+ตัวอย่างเช่น เราสามารถกำหนดีให้กับจุดๆหนึ่งได้ หากมีค่าน้อยกว่า 20 แต่หากมีค่ามากกว่านั้น สีจะเป็นเป็นสีแดง และยังสามารถใช้ callback function ใน `style()` method ได้อีกเวย รวมไปถึง conditional logic 
+สำหรับ callback function จะใช้ `d` parameter เพื่อแสดง data point
 
 ```js
 selection.style("color", (d) => {
@@ -18,65 +19,65 @@ selection.style("color", (d) => {
 });
 ```
 
-The `style()` method is not limited to setting the `color` - it can be used with other CSS properties as well.
+`style()` method ไม่มีข้อจำกัดในการ setting `color` ซึ่งยังสามารถใช้กัย CSS properties อื่นๆได้อีกด้วย
 
 # --instructions--
 
-Add the `style()` method to the code in the editor to set the `color` of the `h2` elements conditionally. Write the callback function so if the data value is less than 20, it returns red, otherwise it returns green.
+เพิ่ม `style()` method โดยกำหนด `color` ให้กับ `h2` elements เขียน callback function เพื่อให้ค่าของ data ที่น้อยกว่า 20 เป็นสีแดง ส่วนค่าอื่นๆเป็นสีเขียว
 
-**Note:** You can use if-else logic, or the ternary operator.
+**Note:** สามารถใช้ if-else logic หรือ ternary operator
 
 # --hints--
 
-The first `h2` should have a `color` of red.
+อันดับที่ 1) `h2` ควรมี `color` เป็น red.
 
 ```js
 assert($('h2').eq(0).css('color') == 'rgb(255, 0, 0)');
 ```
 
-The second `h2` should have a `color` of green.
+อันดับที่ 2) `h2` ควรมี `color` เป็น green.
 
 ```js
 assert($('h2').eq(1).css('color') == 'rgb(0, 128, 0)');
 ```
 
-The third `h2` should have a `color` of green.
+อันดับที่ 3) `h2` ควรมี `color` เป็น green.
 
 ```js
 assert($('h2').eq(2).css('color') == 'rgb(0, 128, 0)');
 ```
 
-The fourth `h2` should have a `color` of red.
+อันดับที่ 4) `h2` ควรมี `color` เป็น red.
 
 ```js
 assert($('h2').eq(3).css('color') == 'rgb(255, 0, 0)');
 ```
 
-The fifth `h2` should have a `color` of green.
+อันดับที่ 5) `h2` ควรมี `color` เป็น green.
 
 ```js
 assert($('h2').eq(4).css('color') == 'rgb(0, 128, 0)');
 ```
 
-The sixth `h2` should have a `color` of red.
+อันดับที่ 6) `h2` ควรมี `color` เป็น red.
 
 ```js
 assert($('h2').eq(5).css('color') == 'rgb(255, 0, 0)');
 ```
 
-The seventh `h2` should have a `color` of green.
+อันดับที่ 7) `h2` ควรมี `color` เป็น green.
 
 ```js
 assert($('h2').eq(6).css('color') == 'rgb(0, 128, 0)');
 ```
 
-The eighth `h2` should have a `color` of red.
+อันดับที่ 8) `h2` ควรมี `color` เป็น red.
 
 ```js
 assert($('h2').eq(7).css('color') == 'rgb(255, 0, 0)');
 ```
 
-The ninth `h2` should have a `color` of red.
+อันดับที่ 9) `h2` ควรมี `color` เป็น red.
 
 ```js
 assert($('h2').eq(8).css('color') == 'rgb(255, 0, 0)');

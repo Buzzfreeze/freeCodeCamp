@@ -7,7 +7,8 @@ dashedName: part-96
 
 # --description--
 
-Add the `enter` function to the current selection. Just like before, the initial selection here has a length of zero and the data has a length of three. So when you append elements in the next step, three will be created; one for each slice of the pie.
+เพิ่ม `enter` function ให้กับ selection เหมือนกับก่อนหน้าที่ selection มี length เป็น 0 และ data มี length เป็น 3
+เมื่อเพิ่ม elements ในขั้นตอนต่อไป จะมี 3 element ที่ถูกสร้างขึ้นสำหรับแต่ละ pie
 
 # --hints--
 

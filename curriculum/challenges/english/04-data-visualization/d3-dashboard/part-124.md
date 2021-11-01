@@ -7,7 +7,7 @@ dashedName: part-124
 
 # --description--
 
-This is the first column of your table. Set the `align` attribute to `right` to align the text to the right of each cell.
+ column แรกของ table. ให้กำหนด `align` attribute เป้น `right` เพื่อให้ text อยู่ด้านขวาของ cell
 
 # --hints--
 

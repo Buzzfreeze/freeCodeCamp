@@ -7,7 +7,7 @@ dashedName: part-28
 
 # --description--
 
-Create a new `const` named `xAxis` and set the value equal to `d3.axisBottom(xScale)`. This will create another axis for the bottom of the graph using the information from `xScale`. Although the axes do not display yet, they have the information they need to display correctly.
+สร้าง`const` ชื่อ `xAxis` และกำหนดค่าให้เท่ากับ `d3.axisBottom(xScale)` จากนั้นให้สร้าง axis อื่นสำหรับ bottom ของ graph โดยใ้ข้อมูลจาก `xScale` แม้ว่า axes จะยังไม่แสดงแต่พวกมันมีข้อมูลเพื่อที่จะแสดงค่าได้แย่างถูกต้อง
 
 # --hints--
 

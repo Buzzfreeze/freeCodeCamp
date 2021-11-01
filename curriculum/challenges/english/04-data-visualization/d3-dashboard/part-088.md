@@ -7,9 +7,10 @@ dashedName: part-88
 
 # --description--
 
-The pie chart needs a new scale to set the colors. Create a new `const` named `pieColors` and set it equal to `d3.scaleOrdinal()`. An ordinal scale is for a set of data that will have exactly one item in the range specifically for it.
+pie chart จำเป็นต้องกำหนด scale ของสี ให้สร้าง `const` ชื่อ `pieColors` และกำหนดให้เท่ากับ `d3.scaleOrdinal()`
+ordinal scale เป็นการกำนด data ที่จะมีเพียง 1 item เท่านั้นใน specific range 
 
-In this case, each platform of followers you have will map directly to a single color with nothing in between.
+แต่ละ platform ของ followers เราสามารถใช้สีที่เหมือนกันได้
 
 # --hints--
 

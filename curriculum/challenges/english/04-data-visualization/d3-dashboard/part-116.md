@@ -7,7 +7,7 @@ dashedName: part-116
 
 # --description--
 
-Use the `text` function to set the text of the selection to `2020 followers`.
+ใช้ `text` function เพื่อกำหนด text ให้กับ selection เป็น `2020 followers`
 
 # --hints--
 

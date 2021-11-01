@@ -7,7 +7,7 @@ dashedName: part-34
 
 # --description--
 
-Use the `call` function to draw the x-axis onto the SVG like you did for the y-axis.
+ใช้`call` function เพื่อวาด x-axis บน SVG เหมือนที่ทำเช่นเดียวกับ y-axis
 
 # --hints--
 

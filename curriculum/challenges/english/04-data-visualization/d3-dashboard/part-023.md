@@ -7,11 +7,11 @@ dashedName: part-23
 
 # --description--
 
-The `range` function describes how to map the domain values for display on the graph. For example, a value of 5000 followers can't use 5000 as it y-coordinate on the SVG or it would be off the graph. You need to tell the range where the top and bottom of the graph is so the scale can give appropriate values for the y-coordinate.
+`range` function ใช้อธิบายเพื่อ map domain values เพื่อแสดงค่าบนกราฟ ตัวอย่างเช่นมี 5000 followers เราจะไม่สามารถแสดงค่า 5000 บน y-coordinate ใน SVG หรือบน graph ดังนั้นเราจึงจำเป็นต้องปรับค่าให้เหมาะสมและอยู๋ใน range ของ top และ bottom ของ graph 
 
-Chain the `range` function below the `domain` and pass it an array with `svgHeight - svgMargin` and `svgMargin` as the values. That will translate to `[430, 70]`. This is where the top and bottom of the graph are. So a data point of 5000 followers will map to a value of 430 to use as its y-coordinate and 0 followers will use 70 as its y-coordinate. Any value in between will scale linearly.
+`range` function ข้างล่าง จะใช้`domain` เพื่อปรับค่าให้อยู่ใน range โดยpass ค่าไปใน array ด้วย `svgHeight - svgMargin` และ `svgMargin` ซึ่งจะแปลงค่าไปเป็น `[430, 70]` ซึ่งค่าพวกนี้จะเป็นค่าของ top และ bottom ของ graph ดังนั้น data point ที่มี 5000 followers จะ map ค่าไปเป็น 430 บน y-coordinate และ 0 followers จะอยู่ที่ตำแหน่ง 70 บน y-coordinate 
 
-Your graph will have a margin around it for things like axes and labels. The actual line data will display on the inside of this margin area, which is why you use those values. This will become more clear as you progress through the project.
+graph จะมี margin เหมือน axes และ labels โดย data จะแสดงค่าภายใน margin area
 
 # --hints--
 

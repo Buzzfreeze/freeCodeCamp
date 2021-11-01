@@ -7,7 +7,7 @@ dashedName: part-30
 
 # --description--
 
-`call` is another function to use with selections. Chain a `call` function to the selection and pass your `yAxis` variable to it. This will draw your y-axis on the SVG.
+`call` เป็นอีก function ที่ใช้สำหรับ selections  โดยใช้ `call` function เพื่อ selection โดย pass `yAxis` variable ให้กับ `call` function จากนั้น y-axis จะแสดงบน SVG
 
 # --hints--
 

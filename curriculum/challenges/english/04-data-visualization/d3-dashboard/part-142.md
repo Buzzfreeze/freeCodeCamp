@@ -7,7 +7,8 @@ dashedName: part-142
 
 # --description--
 
-Create another `mouseover` event for when you hover one of the `twitter-circles`. It will look like the other `mouseover` event you created except the `drawDashboard` function will take `d.year` instead of `d`.
+สร้าง `mouseover` event เมื่อ hoverที่ `twitter-circles` มันจะเหมือนกับ `mouseover` event ที่สร้างขึ้น 
+ยกเว้น `drawDashboard` function ที่จะใช้ `d.year` แทนที่ `d`
 
 # --hints--
 

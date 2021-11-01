@@ -7,7 +7,7 @@ dashedName: part-117
 
 # --description--
 
-Your table is going to have three columns, one for the platform name, one for the color it is using on your dashboard, and a third to display the number of followers. So you want the title to take up all three columns. Set the `colspan` attribute of the `th` to `3` so it spans all three of these columns.
+table จะมี 3 columns ประกอบไปด้วย platform name, color สำหรับ dashboard, และจำนวนของ followers. หาเราต้องการ title สำหรับทั้ง 3 columns ให้กำหนด `colspan` attribute ของ `th` เป็น `3` เพื่อ spans columns ทั้ง 3 
 
 # --hints--
 

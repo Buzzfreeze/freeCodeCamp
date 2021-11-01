@@ -8,21 +8,21 @@ dashedName: select-a-group-of-elements-with-d3
 
 # --description--
 
-D3 also has the `selectAll()` method to select a group of elements. It returns an array of HTML nodes for all the items in the document that match the input string. Here's an example to select all the anchor tags in a document:
+D3 มี `selectAll()` method ที่ใช้เลือกกลุ่มของ elementsเช่นกัน มันจะส่งค่าของ array ใน HTML nodes สำหรับทุก items ใน document ที่มีค่า input match กับค่า string ตัวอย่างเช่น anchor tags ใน document ด้านล่าง:
 
 ```js
 const anchors = d3.selectAll("a");
 ```
 
-Like the `select()` method, `selectAll()` supports method chaining, and you can use it with other methods.
+เหมือนเช่นกับ `select()` method, `selectAll()` supports method chaining และยังสามารถใช้ได้กับ methods อื่นๆด้วย
 
 # --instructions--
 
-Select all of the `li` tags in the document, and change their text to the string `list item` by chaining the `.text()` method.
+เลือกทุก `li` tags ใน document และเปลี่ยน text ไปเป็น string `list item` โดยใช้ `.text()` method.
 
 # --hints--
 
-There should be 3 `li` elements on the page, and the text in each one should say `list item`. Capitalization and spacing should match exactly.
+ควรจะมี 3 `li` elements ใน page และแต่ละ text ควรจะระบุ `list item` Capitalization และ spacing ควรจะ match กันด้วย
 
 ```js
 assert(
@@ -32,13 +32,13 @@ assert(
 );
 ```
 
-Your code should access the `d3` object.
+ควรสามารถเข้าถึง `d3` object 
 
 ```js
 assert(code.match(/d3/g));
 ```
 
-Your code should use the `selectAll` method.
+ควรใช้ `selectAll` method
 
 ```js
 assert(code.match(/\.selectAll/g));

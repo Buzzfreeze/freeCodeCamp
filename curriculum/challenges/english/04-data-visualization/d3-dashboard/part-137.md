@@ -7,9 +7,9 @@ dashedName: part-137
 
 # --description--
 
-At the top of the function create a new `const` named `index`. You are going to use it to find the item in the `data` array with the year that is passed to the function.
+ที่ top ของ function ให้สร้าง `const` ชื่อ `index` เพื่อใช้หา item ใน `data` array กับจำนวน year ที่ passed ไปให้ function
 
-Use JavaScript's `findIndex` function to set your `index` variable to the index of the item in the `data` array where the year is the same as the year passed to your `drawDashboard` function. Here's an example:
+ใช้ JavaScript's `findIndex` function เพื่อกำหนด `index` variable ให้กับ index ของแต่ละ item ใน `data` array ขณะที่ปีจะมีค่าเท่ากับ year pass ใน `drawDashboard` function ดังตัวอย่าง:
 
 ```js
 array.findIndex(d => 
@@ -18,7 +18,7 @@ array.findIndex(d =>
 )
 ```
 
-After this, you will be able to use `data[index]` to get that item in the array.
+หลังจากนี้จะสามารถใช้ `data[index]` เพื่อ get item ใน array
 
 # --hints--
 

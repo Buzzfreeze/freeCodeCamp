@@ -7,7 +7,7 @@ dashedName: part-35
 
 # --description--
 
-The axis has the right size and labels, but needs to be moved down. Use the `attr` function to set the `transform` like you did before. This time move it down your `svgHeight` minus the `svgMargin`.
+axis ที่มีขนาดและ labels ถูกต้องแต่จำเป็นต้องย้ายหรือขยับลงไปด้านล่าง ให้ใช้ `attr` function เพื่อกำหนดค่า `transform` เหมือนที่ทำก่อนหน้า ต่าของ `svgHeight` ที่ถูกเลื่อนลงจะลบกับ `svgMargin`
 
 # --hints--
 

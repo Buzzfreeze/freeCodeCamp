@@ -6,8 +6,8 @@ dashedName: part-51
 ---
 
 # --description--
-
-Set the `x` values for `tumblrLine` using another "d function". Use your `xScale` and the `d.year` to calculate their values just like you did for the Twitter line.
+ให้ค่า `x` เป็น `tumblrLine` โดยใช้ "d function" อื่น 
+ใช้ `xScale` และ `d.year` เพื่อคำนวณค่าให้กับ Twitter line
 
 # --hints--
 

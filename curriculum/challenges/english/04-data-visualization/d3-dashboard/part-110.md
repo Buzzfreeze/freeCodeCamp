@@ -7,9 +7,9 @@ dashedName: part-110
 
 # --description--
 
-The function you just added, placed the start of the text at the midpoint of each slice. Change the `style` of the text to give it a `text-anchor` of `middle` so the middle of the text is in the middle of the slice.
+หากจะกำหนดให้ text อยู่ที่ midpoint ของ slice ให้เปลี่ยน `style` ของ text โดยใช้ `text-anchor` ที่มีค่าเป็น `middle` 
 
-After that, set the `font` to `10px verdana`.
+กำหนด `font` ให้เป็น `10px verdana`
 
 # --hints--
 

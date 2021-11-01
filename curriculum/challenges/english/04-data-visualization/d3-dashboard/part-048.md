@@ -7,11 +7,12 @@ dashedName: part-48
 
 # --description--
 
-Tell the path what data to use. Add an `attr` function and set the `d` to `twitterLine(data)`. This will the build the path using the `twitterLine` function you created and your data variable.
+path ถูกใช้เพื่อบอกว่า data ใช้งานอย่างไร 
+เพิ่ม `attr` function และกำหนด `d` ให้กับ `twitterLine(data)`เพื่อ path ที่ใช้งานใน `twitterLine` function 
 
-Note that the `d` in this case is a path attribute for drawing a line and is different from a "d function".
+Note: `d` ใช้ในกรณีที่ path attribute จะวาด line ซึ่งแตกต่างจาก "d function"
 
-After you have added your code, take a look at the data flow to help understand what is happening. You pass the data array to your `twitterLine` function where it sets the x and y values using your "d functions". The "d functions" go through each item in the array, passing part of the item to each scale to find the appropriate coordinates. When it's done, the value you are setting here is created and sent back. The result ends up being a confusing string of numbers and coordinates to tell the path how to be drawn.
+หลังจากที่เพิ่ม code จะเห็น data flow เพิ่มความเข้าใจว่าจะเกิดเหตุการณ์อะไรบ้าง หาก pass data array ให้กับ `twitterLine` function เมื่อกำหนดค่า x and y ที่ใช้ใน "d functions" โดยที่ "d functions" จะ pass แต่ละ item ใน array และจะ pass item สำหรับแต่ละ scale เพื่อหา coordinates ที่เหมาะสมเมื่อขั้นตอนเหล่านี้เสร็จแล้วค่าที่กำหนดจะถูกสร้างขึ้นและส่งกลับ โดยผลจะเป็น string ของจำนวนและ coordinates จะบิก path สำหรับการวาด
 
 # --hints--
 

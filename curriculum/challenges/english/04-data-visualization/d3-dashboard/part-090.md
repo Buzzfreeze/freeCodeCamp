@@ -7,7 +7,7 @@ dashedName: part-90
 
 # --description--
 
-Since the domain has three items, the range also needs to have three items. If it had less, the values would repeat, putting the same color on the pie chart multiple times. Add the `range` function to the scale and pass it an array with your three color variables. Put them in the same order in which they are defined.
+เนื่องจากมี domain 3 items ดังนั้น range ก็จะเป็นต้องมี 3 items เช่นกัน ถ้ามีน้อยกว่านี้ค่าจะถูกวนซ้ำโดยสีใน pie chart จะซ้ำกัน ให้เพิ่ม `range` function เพื่อ scale และ pass ใน array ที่มี 3 color variables 
 
 # --hints--
 

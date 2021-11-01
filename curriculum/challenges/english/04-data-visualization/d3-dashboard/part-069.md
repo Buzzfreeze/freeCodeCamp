@@ -7,7 +7,7 @@ dashedName: part-69
 
 # --description--
 
-The circles are now visible, but I don't like the color. Use the appropriate function to set the `fill` to `white` and the `stroke` to your `twitterColor` variable.
+กำหนด `fill` เป็น `white` และกำหนด `stroke` ให้กัย `twitterColor` variable.
 
 # --hints--
 

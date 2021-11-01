@@ -7,7 +7,8 @@ dashedName: part-56
 
 # --description--
 
-Two lines down, only one more to add for the Instagram followers. On a new line, create a new `const` named `instagramLine` and use the D3 `line` function to create another line like you did for the other two.
+สอง lines ข้างล่าง จะใช้เพิ่ม Instagram followers 
+สร้าง `const` ชื่อ `instagramLine` และใช้ `line` function เพื่อสร้างอีก line ซึ่งจะเหมือนกับว่าตอนนี้เรามี 2 line
 
 # --hints--
 

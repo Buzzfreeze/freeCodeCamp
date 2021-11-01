@@ -7,15 +7,15 @@ dashedName: part-105
 
 # --description--
 
-In the function you just created, create a `const` named `values`. Use the `d3.values` function to get the values of the 2020 followers and set the result to your `values` variable. Here's how to get the values:
+สร้าง `const` ใช้ชื่อ `values` และใช้ `d3.values` function เพื่อรับค่า followers ของปี 2020 และกำหนดค่าให้เป็น `values` variable ดังตัวอย่าง
 
 ```js
 d3.values(data[8].followers)
 ```
 
-It will be an array with the values of the followers for the three platforms in 2020.
+array จะมีค่าของ followers สำหรับ 3 platforms ในปี 2020
 
-Note that this "d function" has curly brackets. So you could `console.log(values)` in there to see it's value.
+"d function" จะมี curly brackets ดังนั้นสามารถใช้ `console.log(values)` เพื่อดูค่า
 
 # --hints--
 

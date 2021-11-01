@@ -7,7 +7,7 @@ dashedName: part-114
 
 # --description--
 
-Create a new `const` named `legendTitle` and use it to `append` a `thead` to your `legend` variable. `thead` is used with the HTML table element and is for the top row of the table.
+สร้าง `const` ชื่อ `legendTitle` และใช้ `append` สำหรับ `thead` เพื่อ `legend` variable โดย `thead` จะใช้กับ HTML table element ซึ่งจะอยู่บนแถวแรกของตาราง 
 
 # --hints--
 

@@ -7,7 +7,7 @@ dashedName: part-120
 
 # --description--
 
-Use the `data` function to set the data for the rows to an array of your 2020 followers. To get the array use `d3.entries(data[8].followers)`. Remember, this will create an array of key/value pairs of your followers for that year.
+ใช้ `data` function tเพื่อกำหนด data สำหรับ rows ให้กับ array ของ followers ในปี 2020 เพื่อรับ array ให้ใช้ `d3.entries(data[8].followers)`. อย่าลืมที่จะสร้าง array ของ key/value สำหรับจำนวน followers ในแต่ละ year
 
 # --hints--
 

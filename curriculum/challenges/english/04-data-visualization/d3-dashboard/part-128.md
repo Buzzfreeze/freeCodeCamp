@@ -7,7 +7,7 @@ dashedName: part-128
 
 # --description--
 
-Set the `width` to `16px` and the `height` to `16px` using the `style` function.
+กำหนด `width` เป็น `16px` และ `height` เป็น `16px` โดยใช้ `style` function
 
 # --hints--
 

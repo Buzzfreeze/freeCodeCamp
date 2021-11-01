@@ -8,37 +8,39 @@ dashedName: access-the-json-data-from-an-api
 
 # --description--
 
-In the previous challenge, you saw how to get JSON data from the freeCodeCamp Cat Photo API.
+จากโทย์ล่าสุด เราจะเห็นวิธีการ get JSON data จาก freeCodeCamp Cat Photo API.
 
-Now you'll take a closer look at the returned data to better understand the JSON format. Recall some notation in JavaScript:
+เพื่อเข้าใจ JSON format ให้ทำความเข้าใจ notation JavaScript ก่อน
 
-<blockquote>[ ] -> Square brackets represent an array<br>{ } -> Curly brackets represent an object<br>" " -> Double quotes represent a string. They are also used for key names in JSON</blockquote>
+<blockquote>[ ] -> Square brackets แสดง array<br>{ } -> Curly brackets แสดง object<br>" " -> Double quotes แสดง string เครื่องหมายเหล่านี้ใช้สำหรับ key names ใน JSON</blockquote>
 
-Understanding the structure of the data that an API returns is important because it influences how you retrieve the values you need.
+structure ของ data เป็น API ที่ returns ค่าที่สำคัญเพราะมันมีอิทธิพลต่อการดึงค่าที่คุณต้องการ
 
-On the right, click the `Get Message` button to load the freeCodeCamp Cat Photo API JSON into the HTML.
+click ปุ่ม `Get Message` เพื่อ load  freeCodeCamp Cat Photo API JSON ไปเป็น HTML
 
-The first and last character you see in the JSON data are square brackets `[ ]`. This means that the returned data is an array. The second character in the JSON data is a curly `{` bracket, which starts an object. Looking closely, you can see that there are three separate objects. The JSON data is an array of three objects, where each object contains information about a cat photo.
+ในลักษณะแรหและสุดท้าย เราจะเห็นว่า JSON data มี square brackets `[ ]` หมายความว่า data แสดงเป็นแบบ array หาก JSON data มี curly `{` bracket แสดงว่าเป็น object 
+เราจะสังเกตุเห็นว่ามันมี 3 objects โดยที่ JSON data มี array ของ 3 objects และแต่ละ object จะมีข้อมูลของรูปภาพของแมว
 
-You learned earlier that objects contain "key-value pairs" that are separated by commas. In the Cat Photo example, the first object has `"id":0` where `id` is a key and `0` is its corresponding value. Similarly, there are keys for `imageLink`, `altText`, and `codeNames`. Each cat photo object has these same keys, but with different values.
+objects ประกอบไปด้วย "key-value pairs" ที่แบ่งแยกด้วย comma จากตัวอย่างของรูปแมว object แรกจะเป็น `"id":0` โดยมี `id`  เป็น และค่า `0` เป็น corresponding value เหมือนกับค่า keys สำหรับ `imageLink`, `altText`, และ `codeNames` object ของรูปแมวแต่บะรูปจะมี keys ที่เหมือนกันแต่มี corresponding value ที่ต่างกัน
 
-Another interesting "key-value pair" in the first object is `"codeNames":["Juggernaut","Mrs. Wallace","ButterCup"]`. Here `codeNames` is the key and its value is an array of three strings. It's possible to have arrays of objects as well as a key with an array as a value.
+ส่วนที่น่าสนใจคือ "key-value pair" ใน object คือ `"codeNames":["Juggernaut","Mrs. Wallace","ButterCup"]` โดย`codeNames` เป็น key ที่มีค่าเป็น array ของ strings 3 ค่า 
 
-Remember how to access data in arrays and objects. Arrays use bracket notation to access a specific index of an item. Objects use either bracket or dot notation to access the value of a given property. Here's an example that prints the `altText` property of the first cat photo - note that the parsed JSON data in the editor is saved in a variable called `json`:
+อย่าลืมวิธีการ access data ใน arrays และ objects โดยที่ Arrays ขะใช้ bracket notation เพื่อ access specific index ของแต่ละ item ส่วน Objects สามารถใช้ได้ทั้ง bracket หรือ dot notation เพื่อเข้าถึงค่าของ property เช่น จะ prints the `altText` property แรกของรูปแมว ให้ใช้ตัวอย่างดังข้างล่าง
 
 ```js
 console.log(json[0].altText);
 ```
 
-The console would display the string `A white cat wearing a green helmet shaped melon on its head.`.
+console จะแสดง string `A white cat wearing a green helmet shaped melon on its head.`.
 
 # --instructions--
 
-For the cat with the `id` of 2, print to the console the second value in the `codeNames` array. You should use bracket and dot notation on the object (which is saved in the variable `json`) to access the value.
+สำหรับแมวที่มี `id` เป็น 2 ให้แสดงค่าออกทาง console โดยแสดงค่าลำดับที่สองของ `codeNames` array
+ควรใช้ bracket และ dot notation กับ object (saved variable `json`) เพื่อเข้าถึงค่า
 
 # --hints--
 
-Your code should use bracket and dot notation to access the proper code name, and print `Loki` to the console.
+ควรใช้ bracket และ dot notation เพื่อเข้าถึง code name และ print `Loki` ออกมาทาง console
 
 ```js
 assert(

@@ -7,10 +7,13 @@ dashedName: part-36
 
 # --description--
 
-The axis labels are `text` elements within the `g`, you can use the `selectAll` function to select them. Chain the `selectAll` function to select the `text` elements in this group. You can do that like this:
+axis labels เป็น `text` elements ของ `g` สามารถใช้ `selectAll` function เพื่อเลือกพวก elements ทั้งหมดในกลุ่ม 
+เช่นตัวอย่าง
 
 ```js
+
 .selectAll('element')
+
 ```
 
 # --hints--

@@ -8,71 +8,72 @@ dashedName: add-a-tooltip-to-a-d3-element
 
 # --description--
 
-A tooltip shows more information about an item on a page when the user hovers over that item. There are several ways to add a tooltip to a visualization, this challenge uses the SVG `title` element.
+Tooltip ใช้แสดงข้อมูลเกี่ยวกับ item บนแต่ละหน้า เมื่อ user นำ mouse ไปชี้ มีหลายวิธีที่สามารถเพิ่ม tooltip ใน visualization อย่างเช่นใช้ SVG `title` element
 
-`title` pairs with the `text()` method to dynamically add data to the bars.
+`title` จับคู่กับ `text()` method เพื่อเพิ่มข้อมูลในแต่ละ bar 
 
 # --instructions--
 
-Append a `title` element under each `rect` node. Then call the `text()` method with a callback function so the text displays the data value.
+เพิ่ม `title` element ภายใต้แต่ละ `rect` node จากนั้นเรียก `text()` method กับ callback function 
+จะเห็นมี text แสดง data value
 
 # --hints--
 
-Your code should have 9 `title` elements.
+ควรจะมี 9 `title` elements.
 
 ```js
 assert($('title').length == 9);
 ```
 
-The first `title` element should have tooltip text of `12`.
+อันดับที่ 1 `title` element ควรมี tooltip text `12`
 
 ```js
 assert($('title').eq(0).text() == '12');
 ```
 
-The second `title` element should have tooltip text of `31`.
+อันดับที่ 2 `title` element ควรมี tooltip text `31`
 
 ```js
 assert($('title').eq(1).text() == '31');
 ```
 
-The third `title` element should have tooltip text of `22`.
+อันดับที่ 3 `title` element ควรมี tooltip text  `22`
 
 ```js
 assert($('title').eq(2).text() == '22');
 ```
 
-The fourth `title` element should have tooltip text of `17`.
+อันดับที่ 4 `title` element ควรมี tooltip text  `17`.
 
 ```js
 assert($('title').eq(3).text() == '17');
 ```
 
-The fifth `title` element should have tooltip text of `25`.
+อันดับที่ 5 `title` element ควรมี tooltip text  `25`.
 
 ```js
 assert($('title').eq(4).text() == '25');
 ```
 
-The sixth `title` element should have tooltip text of `18`.
+อันดับที่ 6 `title` element ควรมี tooltip text  `18`.
 
 ```js
 assert($('title').eq(5).text() == '18');
 ```
 
-The seventh `title` element should have tooltip text of `29`.
+อันดับที่ 7 `title` element ควรมี tooltip text  `29`.
 
 ```js
 assert($('title').eq(6).text() == '29');
 ```
 
-The eighth `title` element should have tooltip text of `14`.
+อันดับที่ 8 `title` element ควรมี tooltip text  `14`.
 
 ```js
 assert($('title').eq(7).text() == '14');
 ```
 
-The ninth `title` element should have tooltip text of `9`.
+อันดับที่ 9 `title` element ควรมี tooltip text  `9`.
 
 ```js
 assert($('title').eq(8).text() == '9');

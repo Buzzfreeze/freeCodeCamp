@@ -7,7 +7,7 @@ dashedName: part-9
 
 # --description--
 
-Now you can see your dashboard element. Center it by adding a `margin` of `auto` to it.
+ที่ dashboard element สามารถกำหนดค่าให้เป็น center ได้โดยเพิ่ม `margin` เป็น `auto` 
 
 # --hints--
 

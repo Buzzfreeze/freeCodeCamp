@@ -7,9 +7,10 @@ dashedName: part-40
 
 # --description--
 
-There are a number of D3 functions to work with how the "ticks" or your axis labels are displayed; one of them is `ticks`. Go back to where you defined the `yAxis` variable and chain a `ticks` function to it and pass it these two arguments: `6, '~s'`.
+มี D3 functions จำนวนมากมายที่ใช้แสดง "ticks" หรือ axis labels เช่น  `ticks`
+เมื่อกำหนด `yAxis` variable และ `ticks` function และpass arguments สองตัวคือ `6, '~s'`
 
-The `6` will set the number of ticks used to 6, and the `~s` will make the labels display the number of thousands followed by a `k`. For example, `4000` will become `4k`.
+โดยที่ `6` จะกำหนดจำนวนของ ticks เป็น 6 และ `~s` จะเป็น labels แสดงจำนวน followed ที่ต่อท้ายด้วย `k` ที่เป็นตัวย่อของหลักพัน เช่น`4000` จะเป็น `4k`
 
 # --hints--
 

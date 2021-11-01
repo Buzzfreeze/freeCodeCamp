@@ -7,7 +7,7 @@ dashedName: part-12
 
 # --description--
 
-Back in the HTML file, add a `script` tag at the bottom of the head element and give it a `src` attribute of `./d3-5.9.2.min.js`. Don't forget the closing tag. This will add the D3 library to your project from a downloaded copy.
+กลับไปที่ HTML file ให้เพิ่ม `script` tag ที่ด้านล่างของ head element และกำหนดให้ `src` attribute เป็น `./d3-5.9.2.min.js` อย่าลืม closing tag ขั้นตอนนี้เป็นการเพิ่ม D3 library ให้กับ project จาก downloaded copy
 
 # --hints--
 

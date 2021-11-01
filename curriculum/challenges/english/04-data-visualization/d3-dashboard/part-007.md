@@ -7,7 +7,7 @@ dashedName: part-7
 
 # --description--
 
-Next, target the `dashboard` class you created and give it a `width` of `980px` and a `height` of `500px`.
+ตรงส่วนของ `dashboard` class ให้กำหนดค่า`width` เป็น `980px`และค่า `height` เป็น `500px`
 
 # --hints--
 

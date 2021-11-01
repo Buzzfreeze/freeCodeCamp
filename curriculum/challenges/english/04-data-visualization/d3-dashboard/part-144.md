@@ -7,9 +7,9 @@ dashedName: part-144
 
 # --description--
 
-Add a `mouseover` event to the `tumblr-circles` and `instagram-circles` in the same way that you did for the `twitter-circles`.
+เพิ่ม `mouseover` event ให้กับ `tumblr-circles` และ `instagram-circles` เหมอืนตอนที่ทำ `twitter-circles`
 
-After that, you will be able hover any of the circles or year labels to get the information for that year.
+หลังจากนั้นเราจะสามารถ hover ทุก circles และ year labels เพื่อทราบ information ของปีนั้นได้
 
 # --hints--
 

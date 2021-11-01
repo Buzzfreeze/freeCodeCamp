@@ -7,7 +7,7 @@ dashedName: part-14
 
 # --description--
 
-Add a third script just before the closing body tag. It will be the JavaScript file you will use to create the rest of the dashboard. Give the script a `src` of `./dashboard.js`.
+เพิ่ม script ก่อน closing tag ของ body ซึ่งเป็นการเพิ่ม JavaScript file สำหรับที่จะใช้สร้าง dashboard ข้างใน script tag ให้เพิ่ม `src` เป็น `./dashboard.js`
 
 # --hints--
 

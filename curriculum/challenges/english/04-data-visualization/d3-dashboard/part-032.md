@@ -7,7 +7,8 @@ dashedName: part-32
 
 # --description--
 
-`style` is a function similar to `attr`, but is more for manipulating CSS styles rather than element attributes. Add a `style` function to the selection that sets the `font` to `10px verdana`.
+`style` เป็น function ที่เหมือนกับ `attr` แต่ไม่สามารถควบคุมหรทอบังคับ CSS styles ให้เป็น element attributes ได้ 
+ให้เพิ่ม `style` function และให้กำหนดค่า `font` เป็น `10px verdana`
 
 # --hints--
 

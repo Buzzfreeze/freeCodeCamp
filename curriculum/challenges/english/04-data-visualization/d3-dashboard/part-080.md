@@ -7,7 +7,7 @@ dashedName: part-80
 
 # --description--
 
-Apply the appropriate `cursor` style for these circles.
+กำหนด `cursor` style สำหรับ circles
 
 # --hints--
 

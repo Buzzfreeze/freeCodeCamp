@@ -7,7 +7,7 @@ dashedName: part-143
 
 # --description--
 
-Similar to how you made the text bold for the label of the displayed year; change the `fill` of the `twitter-circles` to your `twitterColor` for the currently displayed year. To do this, use a "d function" that returns the `twitterColor` when `d.year` equals `year`, and leave it `white` if it doesn't.
+เหมือนกับที่ทำ text bold สำหรับ label ของปี ให้เปลี่ยน `fill` ของ `twitter-circles` ไปเป็น `twitterColor` เพื่อแสดงปีปัจจุบัน โดยใช้ "d function" ที่ returns `twitterColor` เมื่อ `d.year` เท่ากับ `year`และละ `white` ไว้
 
 # --hints--
 

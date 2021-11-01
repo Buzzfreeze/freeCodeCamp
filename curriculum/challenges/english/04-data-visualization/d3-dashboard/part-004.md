@@ -7,7 +7,7 @@ dashedName: part-4
 
 # --description--
 
-Below the title, link to your external stylesheet by adding a `link` element with a `rel` attribute of `stylesheet` and an `href` attribute of `./dashboard.css`. Remember that link elements do not need a closing tag. You will be adding some styles to this file shortly.
+ข้างล่าง title ให้ link external stylesheet โดยเพิ่ม `link` element กับ `rel` attribute ของ `stylesheet` และ `href` attribute ของ`./dashboard.css` อย่างลืมว่า link elements ไม่จำเป็นต้องมี closing tag
 
 # --hints--
 

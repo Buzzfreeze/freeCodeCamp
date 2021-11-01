@@ -7,7 +7,7 @@ dashedName: part-3
 
 # --description--
 
-In the head, add a `title` of `D3 Dashboard`.
+ข้างใน head ให้เพิ่ม `title` ของ `D3 Dashboard`
 
 # --hints--
 

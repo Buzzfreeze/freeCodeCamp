@@ -7,7 +7,7 @@ dashedName: part-115
 
 # --description--
 
-`append` a `tr` element to the selection and then append a `th` element right after it. `tr` is for defining a row of the table, and `th` is for defining the header cells of the table.
+`append` ใช้สำหรับ `tr` element เพื่อ selection และใช้เพื่อกำหนดแถวของ table ส่วน`th` ใช้กำหนด header cells ของ table
 
 # --hints--
 

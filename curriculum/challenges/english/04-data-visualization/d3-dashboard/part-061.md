@@ -7,7 +7,7 @@ dashedName: part-61
 
 # --description--
 
-Set the `stroke`, `stroke-width`, and `fill` attributes to their appropriate values for this line. The `stroke-width` and `fill` are the same as the other two.
+กำหนด `stroke`, `stroke-width`, และ `fill` attributes ให้กับ line อย่างเหมาะสม โดยที่ `stroke-width` และ `fill` จะเหมือนกัน
 
 # --hints--
 

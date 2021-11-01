@@ -7,7 +7,7 @@ dashedName: part-65
 
 # --description--
 
-Add the `append` function to the selection, and use it to add `circle` elements. This will add the nine `circle` elements for your Twitter circles. They will be invisible to start, but the elements are there.
+เพิ่ม`append` function ให้กับ selection และเพิ่ม `circle` elements และเพิ่ม `circle` จำนวน 9 elements ให้กับ Twitter circles
 
 # --hints--
 

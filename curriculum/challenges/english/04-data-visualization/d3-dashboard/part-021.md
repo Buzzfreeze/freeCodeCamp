@@ -7,9 +7,10 @@ dashedName: part-21
 
 # --description--
 
-Your line graph needs some scales so it knows how to translate the data into visual distances. The first one is the scale for the y-axis. It will be to show the number of followers. D3 has many utilities for creating scales. You want to use it's `scaleLinear` method for this scale.
+line graph จำเป็นต้อง scales เพื่อแปลง data ไปเป็น visual distances
+ขั้นแรกให้ scale แกน y เพื่อแสดงค่าจำนวนของ followers โดย D3 จะถูกใช้เพื่อ scales ค่า โดยใช้`scaleLinear` method เพื่อ scale
 
-Create a new `const` named `yScale`, and set it equal to `d3.scaleLinear()`.
+สร้าง`const` ใช้ชื่อ `yScale` และกำหนดค่าให้เป็น `d3.scaleLinear()`
 
 # --hints--
 

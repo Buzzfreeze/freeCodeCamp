@@ -7,7 +7,11 @@ dashedName: part-49
 
 # --description--
 
-Add three more `attr` functions to the path; one to set the `stroke` to your `twitterColor` variable, another to set the `stroke-width` to `3`, and a third to set the `fill` to `transparent`.
+เพื่ม `attr` functions 3 ตัว ให้กับ path 
+
+1. กำหนด `stroke` ให้กับ `twitterColor` variable,
+2. กำหนด `stroke-width` เป็น `3`, 
+3. กำหนด `fill` เป็น `transparent`
 
 # --hints--
 

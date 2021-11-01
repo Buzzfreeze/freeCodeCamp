@@ -7,9 +7,10 @@ dashedName: part-72
 
 # --description--
 
-Add the same `data`, `enter`, and `append` functions here that you added for the `twitter-circles`, passing in the same arguments. Make sure they are in the same order.
+เพิ่ม `data`, `enter`, และ `append` functions เหมือนกับที่เพิ่ม `twitter-circles` โดยการ pass arguments ที่เหมือนกัน 
+ต้องแน่ใจว่าพวกมันอยู่ในลำดับเดียวกัน
 
-Remember that this will take the difference in length between the `tumblr-circles` selection(0) and the data array(9) and append that many circle elements.
+ความยาวที่แตกต่างของ `tumblr-circles` selection(0) และ data array(9) และการเพิ่มหลาย circle elements
 
 # --hints--
 

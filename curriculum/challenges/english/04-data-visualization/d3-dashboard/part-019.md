@@ -7,9 +7,9 @@ dashedName: part-19
 
 # --description--
 
-You can't see it, but there is now an `svg` element nested in your dashboard container. When you appended it, it became the "selection" for this area of code. Any functions you chain after it will be used on this selection.
-
-`attr` is a function to set attributes. You need to pass it the attribute you want to set, and the value you want to give it. Here's an example of how to chain `attr` to a selection:
+สำหรับ `svg` element nested ที่ใช้ใน dashboard container จะถูกใช้เป็น "selection" 
+และ `attr` เป็น function ที่ใช้กำหนดค่า attributes จึงจำเป็นต้อง pass attribute ตามที่ต้องการกำหนด 
+ตัวอย่างของ `attr` สำหรับ selection
 
 ```js
 const variableName = d3.select('element')
@@ -17,7 +17,7 @@ const variableName = d3.select('element')
   .attr('attribute', 'value')
 ```
 
-Chain an `attr` function to the selection that sets the `width` as the `svgWidth` variable you created earlier. When using a variable as a value, you do not need to put it in any kind of quotations.
+ใช้ `attr` function เพื่อเลือกค่า `width` ที่เป็น `svgWidth` variable จากที่ได้สร้างมาก่อนหน้า เมื่อใช้ค่า variable  ไม่จำเป็นต้องใส่ quotation ให้มัน
 
 # --hints--
 

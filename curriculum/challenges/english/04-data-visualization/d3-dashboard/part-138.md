@@ -7,14 +7,14 @@ dashedName: part-138
 
 # --description--
 
-There are four places in the file where you used `data[8]` to set data to the year 2020. Change all five of them to `data[index]` so you can pass in any year to the function to display the data from that year.
+มี 5 จุดใน file ที่ใช้ `data[8]` เพื่อกำหนด data ของปี 2020 ให้เปลี่ยนทั้งหมดไปเป็น `data[index]` เพื่อที่จะสามารถ pass ไปให้ปีอื่นๆได้ด้วย 
 
-The five spots are:
+โดยแก้เป็น
 
-1.  The `domain` for `pieColors`.
-2.  The `data` for `pieGraphData`.
-3.  The `text` for your pie slice text.
-4.  The `data` for your `legendRows`.
+1.  `domain` สำหรับ `pieColors`
+2.  `data` สำหรับ `pieGraphData`
+3.  `text` สำหรับ pie slice text
+4.  `data` สำหรับ `legendRows`
 
 # --hints--
 

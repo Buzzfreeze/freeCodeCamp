@@ -8,15 +8,17 @@ dashedName: work-with-data-in-d3
 
 # --description--
 
-The D3 library focuses on a data-driven approach. When you have a set of data, you can apply D3 methods to display it on the page. Data comes in many formats, but this challenge uses a simple array of numbers.
+D3 library ใช้สำหรับ data-driven เมื่อมี set ของ data เราสามารถประยุกต์ใช้ D3 methods เพื่อนแสดงข้อมูลบน page ข้อมูลอาจจะมีหลากหลาย formats แต่เราสามารถปรับมันให้อยู่ในรูปของตัวเลขที่อยู่ใน array 
 
-The first step is to make D3 aware of the data. The `data()` method is used on a selection of DOM elements to attach the data to those elements. The data set is passed as an argument to the method.
+`data()` method ถูกใช้เพื่อเลือก DOM elements สำหรับ attach data ให้กับ elements เหล่านั้น 
+โดยที่ data set จะถูกส่งผ่าน argument ของ method
 
-A common workflow pattern is to create a new element in the document for each piece of data in the set. D3 has the `enter()` method for this purpose.
+workflow pattern จะถูกสร้างสำหรับ element ใหม่ๆใน document ในแต่บะส่วนของ data set 
+D3 มี `enter()` method เพื่อใช้ในวัตถุประสงค์นี้โดนเฉพาะ
 
-When `enter()` is combined with the `data()` method, it looks at the selected elements from the page and compares them to the number of data items in the set. If there are fewer elements than data items, it creates the missing elements.
+เมื่อรวม `enter()` กับ `data()` method ก็จะเหมือนกับการเลือก elements จาก page และเปรียบเทียบกับจำนวนของ data items ในแต่ละ set ถ้าหามีจำนวน elements น้อยกว่า data items มันจะสร้าง missing elements ขึ้นมา
 
-Here is an example that selects a `ul` element and creates a new list item based on the number of entries in the array:
+ตัวอย่างในการเลือก `ul` element และสร้าง list item ใหม่ อ้างอิงจากจำนวนของ array ทั้งหมด:
 
 ```html
 <body>
@@ -32,21 +34,22 @@ Here is an example that selects a `ul` element and creates a new list item based
 </body>
 ```
 
-It may seem confusing to select elements that don't exist yet. This code is telling D3 to first select the `ul` on the page. Next, select all list items, which returns an empty selection. Then the `data()` method reviews the dataset and runs the following code three times, once for each item in the array. The `enter()` method sees there are no `li` elements on the page, but it needs 3 (one for each piece of data in `dataset`). New `li` elements are appended to the `ul` and have the text `New item`.
+จากตัวอย่างด้านบน D3 ทำการเลือก `ul` บน page เป็นอันดับแรก จากนั้นจึงเลือกทุก list items ที่ return empty selection หลังจากนั้น `data()` method จะรีวิว review dataset และ run code สามครั้ง ครั้งแรกสำหรับทุก item ใน array  `enter()` method จะเห็นว่าไม่มี `li` elements บน page จึงจำเป็นต้อง run 3 ครั้ง (สำหรับข้อมูลแต่ละตัวใน `dataset`) สำหรับ `li` elements ตัวใหม่จะถูกเพิ่มให้กับ `ul` พร้อมทั้งข้อความ `New item`
 
 # --instructions--
 
-Select the `body` node, then select all `h2` elements. Have D3 create and append an `h2` tag for each item in the `dataset` array. The text in the `h2` should say `New Title`. Your code should use the `data()` and `enter()` methods.
+เลือก `body` node จากนั้นเลือก `h2` ทั้งหมด ให้ใช้ D3 เพื่อสร้างและเพิ่ม `h2` tag สำหรับแต่ละ item ใน `dataset` array
+text ใน `h2` ควรเป็น `New Title` โดยใช้ `data()` และ `enter()` methods
 
 # --hints--
 
-Your document should have 9 `h2` elements.
+document ควรมี 9 `h2` elements.
 
 ```js
 assert($('h2').length == 9);
 ```
 
-The text in the `h2` elements should say `New Title`. The capitalization and spacing should match exactly.
+text ใน `h2` elements ควรมี `New Title` ประกอบไปด้วย capitalization และ space ที่สอดคล้องกัน
 
 ```js
 assert(
@@ -56,13 +59,13 @@ assert(
 );
 ```
 
-Your code should use the `data()` method.
+ควรใช้ `data()` method.
 
 ```js
 assert(code.match(/\.data/g));
 ```
 
-Your code should use the `enter()` method.
+ควรใช้ `enter()` method.
 
 ```js
 assert(code.match(/\.enter/g));

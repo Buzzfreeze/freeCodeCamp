@@ -7,7 +7,7 @@ dashedName: part-29
 
 # --description--
 
-On a new line, append a new `g` element to your `lineGraph` variable. `lineGraph.append('g')` will do that for you. This will add a `g` to your SVG and be for displaying the y-axis. `g` is an SVG element that stands for "group".
+บรรทัดใหม่ ให้เพิ่ม`g` element ให้กับ `lineGraph` variable ดังเช่น `lineGraph.append('g')` โดยการเพิ่ม `g` ให้กับ SVG เพื่อให้แสดงค่าบน y-axis โดย `g` เป็น SVG element ที่ย่อมาจาก "group"
 
 # --hints--
 

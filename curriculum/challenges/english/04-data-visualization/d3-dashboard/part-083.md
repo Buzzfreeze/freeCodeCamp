@@ -7,7 +7,7 @@ dashedName: part-83
 
 # --description--
 
-Create a new `const` named `pieGraph` and set it equal to `rightDashboard.append('svg')`. This will add an SVG element for the pie graph as a child of the div you just added. The pie graph will have three slices, one for each platform. It will display a percentage of how many followers each platform has for the displayed year.
+สร้าง `const` ชื่อ `pieGraph` และกำหนดให้เท่ากับ `rightDashboard.append('svg')` โดยจะเพิ่ม SVG element ให้กับ pie graph ของ child ที่มี div ที่เพิ่งถูกเพิ่มเข้าไป โดยที่ pie graph จะมีสามส่วนของแต่ละ platform ซึ่งจะ percentage ของ followers ของแต่ละ platform ในแต่ละปี
 
 # --hints--
 

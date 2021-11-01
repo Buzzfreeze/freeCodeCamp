@@ -7,7 +7,7 @@ dashedName: part-129
 
 # --description--
 
-Using the `style` function again, set the `background-color` of each div to a "d function". Using the "d function", pass the key(`d.key`) of each data point to your `pieColors` scale so it knows what color to use.
+ใช้ `style` function เพื่อกำหนด `background-color` ให้แต่ละ div สำหรับ "d function" โดยการใช้ "d function" จะ pass key(`d.key`) ให้แต่ละ data point สำหรับ  `pieColors` scale เพื่อให้ทราบสีที่จะใช้
 
 # --hints--
 

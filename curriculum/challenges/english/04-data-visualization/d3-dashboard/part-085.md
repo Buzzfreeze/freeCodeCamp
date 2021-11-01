@@ -7,7 +7,7 @@ dashedName: part-85
 
 # --description--
 
-Create a new `const` named `pieArc` and set it equal to `d3.arc()`. This will be used to create the angles for the lines of the pie chart using the D3 arc generator.
+สร้าง `const` ที่มีชื่อ `pieArc` และกำหนดค่าให้เท่ากับ `d3.arc()` ซึ่งจะถูกใช้สำหรับสร้างมุมให้กับ lines ของ pie chart โดยใช้ D3 arc generator
 
 # --hints--
 

@@ -7,7 +7,7 @@ dashedName: part-132
 
 # --description--
 
-Set the `align` attribute to `left` for this selection.
+กำหนด `align` attribute เป่น `left` สำหรับการ selection
 
 # --hints--
 

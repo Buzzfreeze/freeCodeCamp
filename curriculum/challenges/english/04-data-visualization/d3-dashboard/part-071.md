@@ -7,7 +7,7 @@ dashedName: part-71
 
 # --description--
 
-On a new line, use the `selectAll` function on your `lineGraph` variable again and pass it the string `tumblr-circles` this time. The next few steps will be for adding circles to the Tumblr line.
+ใช้ `selectAll` function ที่ `lineGraph` variable อีกครั้งและ pass ไปเป็น string `tumblr-circles`  และจะเพิ่ม circles ให้กับ Tumblr line
 
 # --hints--
 

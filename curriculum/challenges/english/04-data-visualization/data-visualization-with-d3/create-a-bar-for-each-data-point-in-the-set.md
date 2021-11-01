@@ -8,9 +8,9 @@ dashedName: create-a-bar-for-each-data-point-in-the-set
 
 # --description--
 
-The last challenge added only one rectangle to the `svg` element to represent a bar. Here, you'll combine what you've learned so far about `data()`, `enter()`, and SVG shapes to create and append a rectangle for each data point in `dataset`.
+การเพิ่ม rectangle ให้กับ `svg` element เพื่อแสดง bar สามารถทำได้โดยการรวม `data()`, `enter()`, และ SVG shapes เพื่อสร้างและเพิ่ม rectangle ให้กับแต่ละ data point ใน `dataset`
 
-A previous challenge showed the format for how to create and append a `div` for each item in `dataset`:
+ืก่อนหน้าเราได้ทำการเพิ่ม `div` ให้กับแต่ละ item ใน `dataset`:
 
 ```js
 d3.select("body").selectAll("div")
@@ -19,33 +19,33 @@ d3.select("body").selectAll("div")
   .append("div")
 ```
 
-There are a few differences working with `rect` elements instead of `div` elements. The `rect` elements must be appended to an `svg` element, not directly to the `body`. Also, you need to tell D3 where to place each `rect` within the `svg` area. The bar placement will be covered in the next challenge.
+การทำงานระหว่าง `rect` elements แทนการใช้ `div` elements จะมีความแตกต่างกันเล็กน้อย โดยที่ `rect` elements ต้องถูกเพิ่มให้กับ `svg` element ไม่ได้ถูกเรียกใช้งานโดยตรงใน `body` ดังนั้นจึงจำเป็นที่จะเรียกใช้ D3 เมื่อจะใช้งาน `rect` ภายในพื้นที่ของ `svg`  
 
 # --instructions--
 
-Use the `data()`, `enter()`, and `append()` methods to create and append a `rect` for each item in `dataset`. The bars should display all on top of each other; this will be fixed in the next challenge.
+ใช้ `data()`, `enter()`และ`append()` methods เพื่อสร้างและเพิ่ม `rect` สำหรับแต่ละ item ใน `dataset` โดยที่ bars ควรจะแสดงในส่วนของ top 
 
 # --hints--
 
-Your document should have 9 `rect` elements.
+document ควรมี 9 `rect` elements.
 
 ```js
 assert($('rect').length == 9);
 ```
 
-Your code should use the `data()` method.
+ควรใช้ `data()` method.
 
 ```js
 assert(code.match(/\.data/g));
 ```
 
-Your code should use the `enter()` method.
+ควรใช้ `enter()` method.
 
 ```js
 assert(code.match(/\.enter/g));
 ```
 
-Your code should use the `append()` method.
+ควรใช้ `append()` method.
 
 ```js
 assert(code.match(/\.append/g));

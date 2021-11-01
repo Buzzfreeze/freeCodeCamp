@@ -8,17 +8,17 @@ dashedName: add-a-hover-effect-to-a-d3-element
 
 # --description--
 
-It's possible to add effects that highlight a bar when the user hovers over it with the mouse. So far, the styling for the rectangles is applied with the built-in D3 and SVG methods, but you can use CSS as well.
+เราสามารถเพิ่ม effects เช่น highlight bar ได้ เมื่อuserใช้ mouse ไปชี้(hovers) บนbar การสร้าง hover effect สามารถสร้างได้จาก built-in D3, SVG methods และ CSS 
 
-You set the CSS class on the SVG elements with the `attr()` method. Then the `:hover` pseudo-class for your new class holds the style rules for any hover effects.
+ตั้งค่า CSS class ใน SVG elements และ `attr()` method จากนั้นใช้ `:hover` pseudo-class สำหรับสร้าง class ใหม่ 
 
 # --instructions--
 
-Use the `attr()` method to add a class of `bar` to all the `rect` elements. This changes the `fill` color of the bar to brown when you mouse over it.
+ใช้ `attr()` method เพื่อเพิ่ม class ของทุก `bar` สำหรับ `rect` elements ซึ่งจะเปลี่ยนสี `fill` color ของ bar ไปเป็นสีน้ำตาลเมื่อนำ mouse ไปชี้ที่ bar
 
 # --hints--
 
-Your `rect` elements should have a class of `bar`.
+ `rect` elements ควรจะมี class `bar`.
 
 ```js
 assert($('rect').attr('class').trim().split(/\s+/g).includes('bar'));

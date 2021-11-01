@@ -7,7 +7,7 @@ dashedName: part-60
 
 # --description--
 
-Use your `instagramLine` variable and your data to set the `d` attribute for this path like you did for the other two.
+ใช้ `instagramLine` variable และ data เพื่อกำหนดค่า `d` attribute ให้กับ path เหมือนกับที่ทำก่อนหน้า
 
 # --hints--
 

@@ -8,11 +8,11 @@ dashedName: change-text-with-click-events
 
 # --description--
 
-When the click event happens, you can use JavaScript to update an HTML element.
+เมื่อ click ที่ event เราสามารถใช้ JavaScript เพื่อ update HTML element
 
-For example, when a user clicks the `Get Message` button, it changes the text of the element with the class `message` to say `Here is the message`.
+เช่นเมื่อ user clicks ที่ `Get Message` button มันจะมีการเปลี่ยนแปลงของ text ภายใน element ที่มี class `message` เพื่อแสดง `Here is the message`
 
-This works by adding the following code within the click event:
+เราสามารถเพิ่มการทำงานโดยเพิ่ม code ภายใน click event:
 
 ```js
 document.getElementsByClassName('message')[0].textContent="Here is the message";
@@ -20,11 +20,11 @@ document.getElementsByClassName('message')[0].textContent="Here is the message";
 
 # --instructions--
 
-Add code inside the `onclick` event handler to change the text inside the `message` element to say `Here is the message`.
+เพิ่ม code ใน`onclick` event เพื่อเปลี่ยน text ใน `message` element ให้แสดง `Here is the message`
 
 # --hints--
 
-Your code should use the `document.getElementsByClassName` method to select the element with class `message` and set its `textContent` to the given string.
+ควรใช้ `document.getElementsByClassName` method เพื่อเลือก element ใน class `message` และ set  `textContent` ให้เป็นค่า string
 
 ```js
 assert(

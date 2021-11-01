@@ -7,7 +7,7 @@ dashedName: part-125
 
 # --description--
 
-On a new line, append another `td` element to your `legendRows` variable. This will be for colored squares in the center column.
+append `td` element ให้กับ `legendRows` variable นี่จะใช้สำหรับกำหนดสีให้กับ center column
 
 # --hints--
 

@@ -7,9 +7,7 @@ dashedName: part-39
 
 # --description--
 
-Add two more `style` functions; one to set the `cursor` to `pointer`, and another to set the `font` to `10px verdana`.
-
-You will add some hover effects later, so the pointer will make for a better experience.
+เพื่ม `style` functions 2 ตัวได้แก่ ให้กำหนดค่า `cursor` เป็น `pointer` และแีกตัวกำหนด `font` เป็น `10px verdana`
 
 # --hints--
 

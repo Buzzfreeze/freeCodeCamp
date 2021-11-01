@@ -8,32 +8,32 @@ dashedName: use-a-pre-defined-scale-to-place-elements
 
 # --description--
 
-With the scales set up, it's time to map the scatter plot again. The scales are like processing functions that turn the `x` and `y` raw data into values that fit and render correctly on the SVG canvas. They keep the data within the screen's plotting area.
+การกำหนด scales สำหรับ scatter plot เป็นกระบวณการเปลี่ยนค่า`x` และ `y` ของ raw data ไปเป็นค่าที่ fit เพื่อ render ได้อย่างถูกต้องบน SVG canvas และทำให้ค่าแต่ละจุดอยู่บน plotting area ได้อย่างเหมาะสมไม่หลุดออกไปข้างนอกพื้นที่
 
-You set the coordinate attribute values for an SVG shape with the scaling function. This includes `x` and `y` attributes for `rect` or `text` elements, or `cx` and `cy` for `circles`. Here's an example:
+กำหนดค่า coordinate attribute สำหรับแต่ละ SVG shape กับ scaling function ซึ่งประกอบด้วยค่า `x` และ `y` attributes สำหรับ `rect` หรือ `text` elements หรือ `cx` และ `cy` สำหรับ`circles` ตัวอย่างเช่น:
 
 ```js
 shape
   .attr("x", (d) => xScale(d[0]))
 ```
 
-Scales set shape coordinate attributes to place the data points onto the SVG canvas. You don't need to apply scales when you display the actual data value, for example, in the `text()` method for a tooltip or label.
+กำหนด Scales ของ shape coordinate attributes เพื่อplot data points บน SVG canvas ไม่จำเป็นต้อง apply scales เมื่อต้องการแสดงค่า actual data เช่นใน `text()` method สำหรับ tooltip หรือ label
 
 # --instructions--
 
-Use `xScale` and `yScale` to position both the `circle` and `text` shapes onto the SVG canvas. For the `circles`, apply the scales to set the `cx` and `cy` attributes. Give them a radius of `5` units, too.
+ใช้ `xScale` และ`yScale` เพื่อกำหนดตำแหน่งให้ทั้ง `circle` และ `text` บน SVG canvas สำหรับ `circles` ที่ apply scales ให้กับ `cx` และ `cy` attributes ให้กำหนดค่า radius ของทั้งสองเป็น `5` units
 
-For the `text` elements, apply the scales to set the `x` and `y` attributes. The labels should be offset to the right of the dots. To do this, add `10` units to the `x` data value before passing it to the `xScale`.
+ให้กำหนดค่า `x` และ `y` attributes สำหรับ `text` elements  โดย labels ควรอยู่ในตำแหน่งด้านขวาของ dots โดยเพิ่มค่า `10` units ให้กับค่า `x` ก่อนส่งค่าเข้าไปใน `xScale`
 
 # --hints--
 
-Your code should have 10 `circle` elements.
+ควรจะมี 10 `circle` elements
 
 ```js
 assert($('circle').length == 10);
 ```
 
-The first `circle` element should have a `cx` value of approximately `91` and a `cy` value of approximately `368` after applying the scales. It should also have an `r` value of `5`.
+อันดับที่ 1 `circle` element ควรมีค่า `cx` อยู่ที่ประมาณ `91` และค่า `cy` อยู่ที่ประมาณ `368` หลังจาก apply scales. และควรจะมีค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -43,7 +43,7 @@ assert(
 );
 ```
 
-The second `circle` element should have a `cx` value of approximately `159` and a `cy` value of approximately `181` after applying the scales. It should also have an `r` value of `5`.
+อันดับที่ 2 `circle` element ควรมีค่า `cx` อยู่ที่ประมาณ `159` และค่า `cy` อยู่ที่ประมาณ `181` หลังจาก apply scales. และควรจะมีค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -53,7 +53,7 @@ assert(
 );
 ```
 
-The third `circle` element should have a `cx` value of approximately `340` and a `cy` value of approximately `329` after applying the scales. It should also have an `r` value of `5`.
+อันดับที่ 3 `circle` element ควรมีค่า `cx` อยู่ที่ประมาณ `340` และค่า `cy` อยู่ที่ประมาณ `329` หลังจาก apply scales. และควรจะมีค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -63,7 +63,7 @@ assert(
 );
 ```
 
-The fourth `circle` element should have a `cx` value of approximately `131` and a `cy` value of approximately `60` after applying the scales. It should also have an `r` value of `5`.
+อันดับที่ 4 `circle` element ควรมีค่า `cx` อยู่ที่ประมาณ `131` และค่า `cy` อยู่ที่ประมาณ `60` หลังจาก apply scales. และควรจะมีค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -73,7 +73,7 @@ assert(
 );
 ```
 
-The fifth `circle` element should have a `cx` value of approximately `440` and a `cy` value of approximately `237` after applying the scales. It should also have an `r` value of `5`.
+อันดับที่ 5 `circle` element ควรมีค่า `cx` อยู่ที่ประมาณ `440` และค่า `cy` อยู่ที่ประมาณ `237` หลังจาก apply scales. และควรจะมีค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -83,7 +83,7 @@ assert(
 );
 ```
 
-The sixth `circle` element should have a `cx` value of approximately `271` and a `cy` value of approximately `306` after applying the scales. It should also have an `r` value of `5`.
+อันดับที่ 6 `circle` element ควรมีค่า `cx` อยู่ที่ประมาณ `271` และค่า `cy` อยู่ที่ประมาณ `306` หลังจาก apply scales. และควรจะมีค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -93,7 +93,7 @@ assert(
 );
 ```
 
-The seventh `circle` element should have a `cx` value of approximately `361` and a `cy` value of approximately `351` after applying the scales. It should also have an `r` value of `5`.
+อันดับที่ 7 `circle` element ควรมีค่า `cx` อยู่ที่ประมาณ `361` และค่า `cy` อยู่ที่ประมาณ `351` หลังจาก apply scales. และควรจะมีค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -103,7 +103,7 @@ assert(
 );
 ```
 
-The eighth `circle` element should have a `cx` value of approximately `261` and a `cy` value of approximately `132` after applying the scales. It should also have an `r` value of `5`.
+อันดับที่ 8 `circle` element ควรมีค่า `cx` อยู่ที่ประมาณ `261` และค่า `cy` อยู่ที่ประมาณ `132` หลังจาก apply scales. และควรจะมีค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -113,7 +113,7 @@ assert(
 );
 ```
 
-The ninth `circle` element should have a `cx` value of approximately `131` and a `cy` value of approximately `144` after applying the scales. It should also have an `r` value of `5`.
+อันดับที่ 9 `circle` element ควรมีค่า `cx` อยู่ที่ประมาณ `131` และค่า `cy` อยู่ที่ประมาณ `144` หลังจาก apply scales. และควรจะมีค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -123,7 +123,7 @@ assert(
 );
 ```
 
-The tenth `circle` element should have a `cx` value of approximately `79` and a `cy` value of approximately `326` after applying the scales. It should also have an `r` value of `5`.
+อันดับที่ 10 `circle` element ควรมีค่า `cx` อยู่ที่ประมาณ `79` และค่า `cy` อยู่ที่ประมาณ `326` หลังจาก apply scales. และควรจะมีค่า `r` เป็น `5`.
 
 ```js
 assert(
@@ -133,13 +133,13 @@ assert(
 );
 ```
 
-Your code should have 10 `text` elements.
+ควรจะมี 10 `text` elements.
 
 ```js
 assert($('text').length == 10);
 ```
 
-The first label should have an `x` value of approximately `100` and a `y` value of approximately `368` after applying the scales.
+อันดับที่ 1) label ควรมีค่า `x` อยู่ที่ประมาณ `100` และค่า `y` อยู่ที่ประมาณ `368` หลังจาก apply scales.
 
 ```js
 assert(
@@ -148,7 +148,7 @@ assert(
 );
 ```
 
-The second label should have an `x` value of approximately `168` and a `y` value of approximately `181` after applying the scales.
+อันดับที่ 2) label ควรมีค่า `x` อยู่ที่ประมาณ `168` และค่า `y` อยู่ที่ประมาณ `181` หลังจาก apply scales.
 
 ```js
 assert(
@@ -157,7 +157,7 @@ assert(
 );
 ```
 
-The third label should have an `x` value of approximately `350` and a `y` value of approximately `329` after applying the scales.
+อันดับที่ 3) label ควรมีค่า `x` อยู่ที่ประมาณ `350` และค่า `y` อยู่ที่ประมาณ `329` หลังจาก apply scales.
 
 ```js
 assert(
@@ -166,7 +166,7 @@ assert(
 );
 ```
 
-The fourth label should have an `x` value of approximately `141` and a `y` value of approximately `60` after applying the scales.
+อันดับที่ 4) label ควรมีค่า `x` อยู่ที่ประมาณ `141` และค่า `y` อยู่ที่ประมาณ `60` หลังจาก apply scales.
 
 ```js
 assert(
@@ -175,7 +175,7 @@ assert(
 );
 ```
 
-The fifth label should have an `x` value of approximately `449` and a `y` value of approximately `237` after applying the scales.
+อันดับที่ 5) label ควรมีค่า `x` อยู่ที่ประมาณ `449` และค่า `y` อยู่ที่ประมาณ `237` หลังจาก apply scales.
 
 ```js
 assert(
@@ -184,7 +184,7 @@ assert(
 );
 ```
 
-The sixth label should have an `x` value of approximately `280` and a `y` value of approximately `306` after applying the scales.
+อันดับที่ 6) label ควรมีค่า `x` อยู่ที่ประมาณ `280` และค่า `y` อยู่ที่ประมาณ `306` หลังจาก apply scales.
 
 ```js
 assert(
@@ -193,7 +193,7 @@ assert(
 );
 ```
 
-The seventh label should have an `x` value of approximately `370` and a `y` value of approximately `351` after applying the scales.
+อันดับที่ 7) label ควรมีค่า `x` อยู่ที่ประมาณ `370` และค่า `y` อยู่ที่ประมาณ `351` หลังจาก apply scales.
 
 ```js
 assert(
@@ -202,7 +202,7 @@ assert(
 );
 ```
 
-The eighth label should have an `x` value of approximately `270` and a `y` value of approximately `132` after applying the scales.
+อันดับที่ 8) label ควรมีค่า `x` อยู่ที่ประมาณ `270` และค่า `y` อยู่ที่ประมาณ `132` หลังจาก apply scales.
 
 ```js
 assert(
@@ -211,7 +211,7 @@ assert(
 );
 ```
 
-The ninth label should have an `x` value of approximately `140` and a `y` value of approximately `144` after applying the scales.
+อันดับที่ 9) label ควรมีค่า `x` อยู่ที่ประมาณ `140` และค่า `y` อยู่ที่ประมาณ `144` หลังจาก apply scales.
 
 ```js
 assert(
@@ -220,7 +220,7 @@ assert(
 );
 ```
 
-The tenth label should have an `x` value of approximately `88` and a `y` value of approximately `326` after applying the scales.
+อันดับที่ 10) label ควรมีค่า `x` อยู่ที่ประมาณ `88` และค่า `y` อยู่ที่ประมาณ `326` หลังจาก apply scales.
 
 ```js
 assert(

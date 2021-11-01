@@ -1,22 +1,23 @@
 ---
 id: 587d7fad367417b2b2512bdf
-title: Add Axes to a Visualization
+title: Add Axes  a Visualization
 challengeType: 6
 forumTopicId: 301472
-dashedName: add-axes-to-a-visualization
+dashedName: add-axes--a-visualization
 ---
 
 # --description--
 
-Another way to improve the scatter plot is to add an x-axis and a y-axis.
+พัฒนาทักษะด้าน scatter plot โดยการเพิ่ม  x-axis และ y-axis
 
-D3 has two methods, `axisLeft()` and `axisBottom()`, to render the y-axis and x-axis, respectively. Here's an example to create the x-axis based on the `xScale` in the previous challenges:
+D3 มีสอง methods, `axisLeft()` และ `axisBottom()` สำหรับการ render แกน y-axis และ x-axis ตามลำดับ 
+ตัวอย่างของการสร้าง x-axis จาก `xScale` ในโจทย์ก่อนหน้า
 
 ```js
 const xAxis = d3.axisBottom(xScale);
 ```
 
-The next step is to render the axis on the SVG canvas. To do so, you can use a general SVG component, the `g` element. The `g` stands for group. Unlike `rect`, `circle`, and `text`, an axis is just a straight line when it's rendered. Because it is a simple shape, using `g` works. The last step is to apply a `transform` attribute to position the axis on the SVG canvas in the right place. Otherwise, the line would render along the border of SVG canvas and wouldn't be visible. SVG supports different types of `transforms`, but positioning an axis needs `translate`. When it's applied to the `g` element, it moves the whole group over and down by the given amounts. Here's an example:
+ขั้นตอนต่อไปสำหรับ render แกน ใน SVG canvas สามารถใช้ SVG component ได้โดย `g` element ที่หมายถึง group ไม่เหมือน  `rect`, `circle`, และ `text`, ที่แกนจะเป็นเหมือนเส้นตรงเมื่อทำการ render เพราะว่าเป็น simple shape ในขั้นตอนสุดท้ายคือ apply `transform` attribute ให้แต่ละ position บนแกนใน SVG canvas เส้นตรงทีุู่ก render จะอยู่ชิดขอบของ SVG canvas และจะไม่ปรากฏให้เห็น SVG support ถึง types ที่แตกต่างของแต่ละ `transforms` แต่สำหรับ position บนแกนจำเป็นต้องใช้ `translate` เมื่อมันถูก apply ให้กับ `g` element มันจะย้าย group ทั้งหมดลงตามค่าที่กำหนด ตามตัวอย่างข้างล่าง
 
 ```js
 const xAxis = d3.axisBottom(xScale);
@@ -26,21 +27,22 @@ svg.append("g")
    .call(xAxis);
 ```
 
-The above code places the x-axis at the bottom of the SVG canvas. Then it's passed as an argument to the `call()` method. The y-axis works in the same way, except the `translate` argument is in the form `(x, 0)`. Because `translate` is a string in the `attr()` method above, you can use concatenation to include variable values for its arguments.
+code ด้านบนสามารถอธิบายได้ว่า วางแกน x ไว้ที่ bottom ของ SVG canvas จากนั้น pass argument `call()` method โดยที่แกน y ก็ทำแบบเดียวกัน ยกเว้น `translate` argument ที่อยู่อยู่ในรูปของ `(x, 0)` เนื่องจาก `translate` เป็น string ใน `attr()` method ด้านบน คุณสามารถใช้วิธี concatenation เพื่อรวมค่าสำหรับ arguments
 
 # --instructions--
 
-The scatter plot now has an x-axis. Create a y-axis in a variable named `yAxis` using the `axisLeft()` method. Then render the axis using a `g` element. Make sure to use a `transform` attribute to translate the axis by the amount of padding units right, and `0` units down. Remember to `call()` the axis.
+scatter plot มี x-axisอยู่แล้ว ให้สร้าง y-axis พร้อมกับ variable named `yAxis` โดยใช้ `axisLeft()` method จากนั้นให้ render แกนโดยใช้ `g` element ตรวจสอบเพื่อให้มั่นใจว่า `transform` attribute  ได้ทำการ translate แกนโดยตามจำนวน padding ได้อย่างถูกต้องและไม่มี `0` units down 
+อย่าลืม  `call()` axis
 
 # --hints--
 
-Your code should use the `axisLeft()` method with `yScale` passed as the argument.
+ควรจะใช้ `axisLeft()` method และ `yScale` เพื่อ passed argument.
 
 ```js
 assert(code.match(/\.axisLeft\(yScale\)/g));
 ```
 
-The y-axis `g` element should have a `transform` attribute to translate the axis by `(60, 0)`.
+y-axis `g` element ควรมี `transform` attribute เพื่อ translate แกนจาก `(60, 0)`.
 
 ```js
 assert(
@@ -51,7 +53,7 @@ assert(
 );
 ```
 
-Your code should call the `yAxis`.
+ควรเรียกใช้ `yAxis`
 
 ```js
 assert(code.match(/\.call\(\s*yAxis\s*\)/g));

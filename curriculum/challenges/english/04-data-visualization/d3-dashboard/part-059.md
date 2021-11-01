@@ -7,7 +7,7 @@ dashedName: part-59
 
 # --description--
 
-On a new line, `append` a new `path` for the Instagram line like you did for the other two lines.
+ให้ใช้ `append` สำหรับ `path` ใหม่เพื่อสร้าง Instagram line เหมือนกับที่ได้สร้าง line 2 อันก่อนหน้า
 
 # --hints--
 

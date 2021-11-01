@@ -7,13 +7,17 @@ dashedName: part-62
 
 # --description--
 
-Okay, your graph is coming along. All the lines are drawn, but they look a little plain. The next series of code additions will add circles to each point on each line. First is the Twitter line. On a new line, use the `selectAll` function on your `lineGraph` variable and pass it the string `twitter-circles`. It will look like this:
+ต่อไปจะทำการเพิ่ม circles ให้แต่ละ point และ line
+สำหรับ Twitter line ใช้ `selectAll` function กับ `lineGraph` variable และให้ pass string `twitter-circles`
+ดังตัวอย่างเช่น
 
 ```js
+
 lineGraph.selectAll('twitter-circles')
+
 ```
 
-`twitter-circles` don't exist and this selection will be an empty array, but it's needed. For now, you can just think of this string as a reference, similar to a variable name, so you know what elements you are working with.
+selection ที่ empty array  โดยอ้างอิง string ที่เหมือนกับ variable name ดังนั้นเราจะรู้ว่าใช้งาน elements ไหนอยู่
 
 # --hints--
 
