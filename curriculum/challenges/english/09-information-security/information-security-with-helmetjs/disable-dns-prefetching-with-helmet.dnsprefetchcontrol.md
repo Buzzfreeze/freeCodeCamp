@@ -8,17 +8,17 @@ dashedName: disable-dns-prefetching-with-helmet-dnsprefetchcontrol
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
+โปรดทราบว่าโปรเจคนี้ถูกสร้างจากโปรเจคเริ่มต้นบน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec) หรือโคลนมาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/)
 
-To improve performance, most browsers prefetch DNS records for the links in a page. In that way the destination ip is already known when the user clicks on a link. This may lead to over-use of the DNS service (if you own a big website, visited by millions people…), privacy issues (one eavesdropper could infer that you are on a certain page), or page statistics alteration (some links may appear visited even if they are not). If you have high security needs you can disable DNS prefetching, at the cost of a performance penalty.
+ในการปรับปรุงประสิทธิภาพ เบราว์เซอร์ส่วนใหญ่จะดึงระเบียน DNS ล่วงหน้าสำหรับลิงก์ในหน้าเพจ ด้วยวิธีนี้ IP ปลายทางจะทราบอยู่แล้วเมื่อผู้ใช้คลิกที่ลิงค์ ซึ่งอาจนำไปสู่การใช้บริการ DNS มากเกินไป (หากคุณเป็นเจ้าของเว็บไซต์ขนาดใหญ่ มีผู้เข้าชมหลายล้านคน…) ปัญหาความเป็นส่วนตัว (ผู้แอบฟังคนหนึ่งอาจอนุมานว่าคุณอยู่ในหน้าเพจใดหน้าเพจหนึ่ง) หรือการเปลี่ยนแปลงสถิติหน้าเพจ (บางลิงก์อาจ ปรากฏว่าเข้าเยี่ยมชมแม้ว่าจะไม่ใช่ก็ตาม) หากคุณมีความต้องการด้านความปลอดภัยสูง คุณสามารถปิดใช้งานการดึงข้อมูล DNS ล่วงหน้าได้ โดยต้องแลกกับประสิทธิภาพที่ลดลง
 
 # --instructions--
 
-Use the `helmet.dnsPrefetchControl()` method on your server.
+ใช้ `helmet.dnsPrefetchControl()` method บนเซิร์ฟเวอร์ของคุณ
 
 # --hints--
 
-helmet.dnsPrefetchControl() middleware should be mounted correctly
+helmet.dnsPrefetchControl() middleware ควรถูกติดตั้งอย่างถูกต้อง
 
 ```js
 (getUserInput) =>

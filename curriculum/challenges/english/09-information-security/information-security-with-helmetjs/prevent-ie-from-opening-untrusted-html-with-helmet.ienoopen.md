@@ -8,17 +8,17 @@ dashedName: prevent-ie-from-opening-untrusted-html-with-helmet-ienoopen
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
+โปรดทราบว่าโปรเจคนี้ถูกสร้างจากโปรเจคเริ่มต้นบน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec) หรือโคลนมาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
 
-Some web applications will serve untrusted HTML for download. Some versions of Internet Explorer by default open those HTML files in the context of your site. This means that an untrusted HTML page could start doing bad things in the context of your pages. This middleware sets the X-Download-Options header to noopen. This will prevent IE users from executing downloads in the trusted site’s context.
+เว็บแอปพลิเคชันบางตัวจะแสดง HTML ที่ไม่น่าเชื่อถือสำหรับการดาวน์โหลด ตามค่าเริ่มต้น Internet Explorer บางรุ่นจะเปิดไฟล์ HTML เหล่านั้นในแวดล้อมของไซต์ของคุณ ซึ่งหมายความว่าหน้า HTML ที่ไม่น่าเชื่อถือสามารถเริ่มทำสิ่งเลวร้ายในแวดล้อมของหน้าเว็บของคุณได้ middleware นี้จะตั้งค่า X-Download-Options header เป็น noopen ซึ่งจะป้องกันไม่ให้ผู้ใช้ IE ดำเนินการดาวน์โหลดในแวดล้อมของไซต์ที่เชื่อถือได้
 
 # --instructions--
 
-Use the `helmet.ieNoOpen()` method on your server.
+ให้ใช้ `helmet.ieNoOpen()` method บนเซิร์ฟเวอร์ของคุณ
 
 # --hints--
 
-helmet.ieNoOpen() middleware should be mounted correctly
+helmet.ieNoOpen() middleware ควรถูกติดตั้งอย่างถูกต้อง
 
 ```js
 (getUserInput) =>

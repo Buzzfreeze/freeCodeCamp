@@ -8,25 +8,27 @@ dashedName: install-and-require-helmet
 
 # --description--
 
-Working on these challenges will involve you writing your code using one of the following methods:
+ในการทำงานในแบบทดสอบนี้จะทำให้คุณเขียนโค้ด ที่มี method ต่างๆ ด้านล่างนี้: 
 
-- Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-infosec/) and complete these challenges locally.
-- Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-infosec) to complete these challenges.
-- Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
+- Clone [Github repo นี้](https://github.com/freeCodeCamp/boilerplate-infosec/)  แล้วนำมาใช้กับแบบทดสอบนี้บนเครื่องของคุณเอง
+- ให้ใช้ [โปรเจค  Replit starter ของเรา](https://replit.com/github/freeCodeCamp/boilerplate-infosec) กับแบบทดสอบนี้
+- ใช้ตัวสร้างเว็บไซต์ที่คุณต้องการในการทำโปรเจคนี้ อย่าลืมรวมไฟล์ทั้งหมดจาด Github repo ของเราลงไปด้วย
 
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field.
+เมื่อทำโปรเจคนี้เสร็จแล้ว ให้อัปโหลดงานเดโมที่ใช้งานได้ไปบนโฮสต์ที่ไหนก็ได้ที่เป็น public หลังจากนั้นส่ง URL นั้นมาในช่อง `Solution Link`
 
-Helmet helps you secure your Express apps by setting various HTTP headers.
+Helmet จะช่วยให้ Express app ของคุณปลอดภัยมากขึ้นโดยการตั้งค่า HTTP headers ต่างๆ
 
 # --instructions--
 
-All your code for these lessons goes in the `myApp.js` file between the lines of code we have started you off with. Do not change or delete the code we have added for you.
+โค้ดทั้งหมดของคุณสำหรับบทเรียนเหล่านี้จะอยู่ในไฟล์ `myApp.js` ระหว่างบรรทัดของโค้ดที่เราเริ่มต้นให้คุณ อย่าเปลี่ยนหรือลบรหัสที่เราได้เริ่มไว้ให้คุณก่อนแล้ว
+
+ติดตั้ง Helmet เวอร์ชัน `3.21.3` จากนั้นจึง require มัน คุณสามารถติดตั้งเวอร์ชันที่ต้องการของแพ็คเกจด้วย `npm install --save-exact package@version` หรือโดยการเพิ่มลงใน `package.json` โดยตรง
 
 Install Helmet version `3.21.3`, then require it. You can install a specific version of a package with `npm install --save-exact package@version`, or by adding it to your `package.json` directly.
 
 # --hints--
 
-`helmet` version `3.21.3` should be in `package.json`
+`helmet` เวอร์ชัน `3.21.3` ควรอยู่ใน `package.json`
 
 ```js
 (getUserInput) =>

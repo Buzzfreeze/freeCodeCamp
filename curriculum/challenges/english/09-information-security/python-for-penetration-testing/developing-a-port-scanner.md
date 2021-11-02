@@ -14,19 +14,19 @@ dashedName: developing-a-port-scanner
 
 ## --text--
 
-What is the main difference between the `.connect()` and `.connect_ex()` methods?
+อะไรคือข้อแตกต่างหลักระหว่าง `.connect()` และ `.connect_ex()` methods
 
 ## --answers--
 
-There is no difference between the two methods.
+ไม่มีข้อแตกต่างใดระหว่าง 2 method นี้
 
 ---
 
-If there is an error or if no host is found, `.connect()` returns an error code while `.connect_ex()` raises an exception.
+หากมีข้อผิดพลาดหรือไม่พบโฮสต์ `.connect()` จะ return รหัสข้อผิดพลาดในขณะที่ `.connect_ex()` ทำให้เกิดข้อยกเว้น
 
 ---
 
-If there is an error or if no host is found, `.connect()` raises an exception while `.connect_ex()` returns an error code.
+หากมีข้อผิดพลาดหรือไม่พบโฮสต์ `.connect()` จะทำให้เกิดข้อยกเว้นในขณะที่ `.connect_ex()` จะ return รหัสข้อผิดพลาด
 
 ## --video-solution--
 

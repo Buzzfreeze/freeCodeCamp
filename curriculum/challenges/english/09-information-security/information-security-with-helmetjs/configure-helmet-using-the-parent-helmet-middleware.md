@@ -8,9 +8,9 @@ dashedName: configure-helmet-using-the-parent-helmet-middleware
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
+โปรดทราบว่าโปรเจคนี้ถูกสร้างจากโปรเจคเริ่มต้นบน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec) หรือโคลนมาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/)
 
-`app.use(helmet())` will automatically include all the middleware introduced above, except `noCache()`, and `contentSecurityPolicy()`, but these can be enabled if necessary. You can also disable or configure any other middleware individually, using a configuration object.
+`app.use(helmet())` จะรวม middleware ทั้งหมดที่แนะนำข้างต้นโดยอัตโนมัติ ยกเว้น `noCache()` และ `contentSecurityPolicy()` แต่สิ่งเหล่านี้สามารถเปิดใช้งานได้หากจำเป็น คุณยังสามารถปิดใช้งานหรือกำหนดค่า middleware อื่นๆ แยกกันได้โดยใช้ configuration object
 
 **Example:**
 
@@ -29,11 +29,12 @@ app.use(helmet({
 }))
 ```
 
-We introduced each middleware separately for teaching purposes and for ease of testing. Using the ‘parent’ `helmet()` middleware is easy to implement in a real project.
+เราได้แนะนำ middleware แยกกันเพื่อเหตุผลทางการสอนและเพื่อความสะดวกในการ test การใช้ ‘parent’ `helmet()`
+ middleware ในโปรเจคจริงๆ นั้นง่ายมาก
 
 # --hints--
 
-no tests - it's a descriptive challenge
+ไม่มีการ test นี้เป็นเพียงแบบทดสอบเพื่ออธิบายเท่านั้น
 
 ```js
 assert(true);

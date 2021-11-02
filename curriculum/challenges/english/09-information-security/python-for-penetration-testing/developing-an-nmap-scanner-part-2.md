@@ -14,7 +14,7 @@ dashedName: developing-an-nmap-scanner-part-2
 
 ## --text--
 
-Which of the following allows you to scan for UDP ports between 21 to 443?
+ข้อใดต่อไปนี้ให้คุณสแกนหาพอร์ต UDP ระหว่าง 21 ถึง 443
 
 ## --answers--
 

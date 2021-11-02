@@ -8,15 +8,15 @@ dashedName: avoid-inferring-the-response-mime-type-with-helmet-nosniff
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/). Browsers can use content or MIME sniffing to override response `Content-Type` headers to guess and process the data using an implicit content type. While this can be convenient in some scenarios, it can also lead to some dangerous attacks. This middleware sets the X-Content-Type-Options header to `nosniff`, instructing the browser to not bypass the provided `Content-Type`.
+โปรดทราบว่าโปรเจคนี้ถูกสร้างจากโปรเจคเริ่มต้นบน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec) หรือโคลนมาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/) เบราว์เซอร์สามารถใช้ content หรือ MIME sniffing เพื่อแทนที่การตอบสนอง `Content-Type` header เพื่อคาดเดาและประมวลผลข้อมูลโดยใช้ implicit content type แม้ว่าสิ่งนี้จะสะดวกในบางสถานการณ์ แต่ก็สามารถนำไปสู่การโจมตีที่เป็นอันตรายได้เช่นกัน middleware นี้ตั้งค่า X-Content-Type-Options header เป็น `nosniff` โดยสั่งให้เบราว์เซอร์ไม่ข้าม `Content-Type` ที่ให้มา
 
 # --instructions--
 
-Use the `helmet.noSniff()` method on your server.
+ให้ใช้ `helmet.noSniff()` method บนเวิร์ฟเวอร์ของคุณ
 
 # --hints--
 
-helmet.noSniff() middleware should be mounted correctly
+helmet.noSniff() middleware ควรถูกติดตั้งอย่างถูกต้อง
 
 ```js
 (getUserInput) =>

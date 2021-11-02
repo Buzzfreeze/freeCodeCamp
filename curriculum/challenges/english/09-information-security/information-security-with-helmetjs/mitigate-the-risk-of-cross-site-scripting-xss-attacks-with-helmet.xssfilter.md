@@ -10,23 +10,23 @@ dashedName: mitigate-the-risk-of-cross-site-scripting-xss-attacks-with-helmet-xs
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
+โปรดทราบว่าโปรเจคนี้ถูกสร้างจากโปรเจคเริ่มต้นบน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec) หรือโคลนมาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
 
-Cross-site scripting (XSS) is a frequent type of attack where malicious scripts are injected into vulnerable pages, with the purpose of stealing sensitive data like session cookies, or passwords.
+Cross-site scripting (XSS) เป็นการโจมตีประเภทหนึ่งซึ่งมีการแทรกสคริปต์ที่เป็นอันตรายลงในหน้าเว็บที่มีช่องโหว่ โดยมีวัตถุประสงค์เพื่อขโมยข้อมูลที่ละเอียดอ่อน เช่น session cookies หรือรหัสผ่าน
 
-The basic rule to lower the risk of an XSS attack is simple: “Never trust user’s input”. As a developer you should always sanitize all the input coming from the outside. This includes data coming from forms, GET query urls, and even from POST bodies. Sanitizing means that you should find and encode the characters that may be dangerous e.g. &lt;, >.
+กฎพื้นฐานในการลดความเสี่ยงของการโจมตี XSS นั้นง่ายมาก คือ “อย่าเชื่อถือข้อมูลที่ผู้ใช้ input เข้ามา” ในฐานะนักพัฒนาคุณควรล้าง input ทั้งหมดที่มาจากภายนอกอยู่เสมอ ซึ่งรวมถึงข้อมูลที่มาจากฟอร์ม, GET query url, และแม้แต่จาก POST bodies ก็ตาม การฆ่าเชื้อ (Sanitizing) หมายความว่าคุณควรค้นหาและเข้ารหัสอักขระที่อาจเป็นอันตรายเช่น &lt;, >
 
-Modern browsers can help mitigating the risk by adopting better software strategies. Often these are configurable via http headers.
+เบราว์เซอร์สมัยใหม่สามารถช่วยลดความเสี่ยงด้วยการใช้ software strategies ที่ดีกว่า บ่อยครั้งสิ่งเหล่านี้สามารถกำหนดค่าได้ผ่าน http header
 
-The X-XSS-Protection HTTP header is a basic protection. The browser detects a potential injected script using a heuristic filter. If the header is enabled, the browser changes the script code, neutralizing it. It still has limited support.
+X-XSS-Protection HTTP header เป็นการป้องกันขั้นพื้นฐาน เบราว์เซอร์ตรวจพบสคริปต์ที่เป็นไปได้ที่ถูกยิงเข้ามาโดยใช้ตัวกรองการวิเคราะห์พฤติกรรม (heuristic filter) หากเปิดใช้งาน header แล้วเบราว์เซอร์จะเปลี่ยนรหัสสคริปต์ ทำให้เป็นกลาง ยังคงมีการสนับสนุนการทำงานในส่วนนี้ที่จำกัด
 
 # --instructions--
 
-Use `helmet.xssFilter()` to sanitize input sent to your server.
+ให้ใช้ `helmet.xssFilter()` ในการ sanitize input ต่างๆ ที่ถูกส่งมายังเซิร์ฟเวอร์ของคุณ
 
 # --hints--
 
-helmet.xssFilter() middleware should be mounted correctly
+helmet.xssFilter() middleware ควรถูกติดตั้งอย่างถูกต้อง
 
 ```js
 (getUserInput) =>

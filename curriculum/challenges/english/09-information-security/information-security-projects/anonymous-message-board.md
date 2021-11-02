@@ -8,38 +8,38 @@ dashedName: anonymous-message-board
 
 # --description--
 
-Build a full stack JavaScript app that is functionally similar to this: <https://anonymous-message-board.freecodecamp.rocks/>.
+ลองสร้างแอป full stack จาก JavaScript ที่มีฟังก์ชันเหมือนกับ: <https://anonymous-message-board.freecodecamp.rocks/>
 
-Working on this project will involve you writing your code using one of the following methods:
+ในการทำโปรเจคนี้จะทำให้คุณเขียนโค้ด ที่มี method ต่างๆ ด้านล่างนี้: 
 
--   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-messageboard/) and complete your project locally.
--   Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-messageboard) to complete your project.
--   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
+- Clone [Github repo นี้](https://github.com/freeCodeCamp/boilerplate-project-messageboard/) แล้วนำมาใช้กับโปรเจคของคุณบนเครื่องของคุณเอง
+- ให้ใช้ [โปรเจค  Replit starter ของเรา](https://replit.com/github/freeCodeCamp/boilerplate-project-messageboard)  กับโปรเจคนี้
+- ใช้ตัวสร้างเว็บไซต์ที่คุณต้องการในการทำโปรเจคนี้ อย่าลืมรวมไฟล์ทั้งหมดจาด Github repo ของเราลงไปด้วย
 
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your projects source code in the `GitHub Link` field.
+เมื่อทำโปรเจคนี้เสร็จแล้ว ให้อัปโหลดงานเดโมที่ใช้งานได้ไปบนโฮสต์ที่ไหนก็ได้ที่เป็น public หลังจากนั้นส่ง URL นั้นมาในช่อง `Solution Link` และคุณสามารถส่งลิงก์ source code ของโปรเจคคุณมาในช่อง `GitHub Link` ด้วยหรือไม่ก็ได้
 
 # --instructions--
 
-1.  Set `NODE_ENV` to test without quotes when ready to write tests and DB to your databases connection string (in `.env`)
-2.  Recommended to create controllers/handlers and handle routing in `routes/api.js`
-3.  You will add any security features to `server.js`
+1. ตั้งค่า `NODE_ENV` เพื่อทดสอบโดยไม่ใส่เครื่องหมายคำพูด เมื่อพร้อมที่จะเขียนการทดสอบและ DB ไปยังสตริงการเชื่อมต่อฐานข้อมูลของคุณ (ใน `.env`)
+2. แนะนำให้สร้าง controllers/handlers และ handle routing ใน `routes/api.js`
+3. คุณสามารถเพิ่มฟีเจอร์ด้านความปลอดภัยต่างๆ ในไฟล์ `server.js`
 
-Write the following tests in `tests/2_functional-tests.js`:
+เขียน test ต่างๆ ด้านล่างนี้ ใน `tests/2_functional-tests.js`
 
--   Creating a new thread: POST request to `/api/threads/{board}`
--   Viewing the 10 most recent threads with 3 replies each: GET request to `/api/threads/{board}`
--   Deleting a thread with the incorrect password: DELETE request to `/api/threads/{board}` with an invalid `delete_password`
--   Deleting a thread with the correct password: DELETE request to `/api/threads/{board}` with a valid `delete_password`
--   Reporting a thread: PUT request to `/api/threads/{board}`
--   Creating a new reply: POST request to `/api/replies/{board}`
--   Viewing a single thread with all replies: GET request to `/api/replies/{board}`
--   Deleting a reply with the incorrect password: DELETE request to `/api/replies/{board}` with an invalid `delete_password`
--   Deleting a reply with the correct password: DELETE request to `/api/replies/{board}` with a valid `delete_password`
--   Reporting a reply: PUT request to `/api/replies/{board}`
+- สร้าง thread ใหม่คือ: ใช้ POST ที่เรียกไปยัง `/api/threads/{board}`
+- สามารถดู 10  thread ล่าสุดโดยมีการตอบกลับ 3 ครั้งในแต่ละ thread : ใช้ GET เรียกไปที่ `/api/threads/{board}`
+- ลบ thread ด้วยพาสเวิร์ดที่ไม่ถูกต้อง: ใช้ DELETE เรียกไปยัง `/api/threads/{board}` กับ `delete_password` ที่ไม่ถูกต้อง
+- ลบ thread ด้วยพาสเวิร์ดที่ถูกต้อง: ใช้ DELETE เรียกไปยัง `/api/threads/{board}` กับ `delete_password` ที่ถูกต้อง
+- รายงาน thread : ใช้ PUT เรียกไปยัง `/api/threads/{board}`
+- สร้าง reply ใหม่: ใช้ POST เรียกไปยัง `/api/replies/{board}`
+- ดู thread เดียวพร้อมกับ reply ทั้งหมด: ใช้ GET เรียกไปยัง `/api/replies/{board}`
+- ลบ reply ด้วยพาสเวิร์ดที่ไม่ถูกต้อง: ใช้ DELETE เรียกไปยัง `/api/replies/{board}` กับ `delete_password` ที่ไม่ถูกต้อง
+- ลบ reply ด้วยพาสเวิร์ดที่ถูกต้อง: ใช้ DELETE เรียกไปยัง `/api/replies/{board}` กับ `delete_password` ที่ถูกต้อง
+- รายงาน reply: ใช้ PUT เรียกไปยัง `/api/replies/{board}`
 
 # --hints--
 
-You can provide your own project, not the example URL.
+คุณสามารถสร้างโปรเจ็คของคุณเองได้โดยไม่ต้องใช้ URL ตัวอย่าง
 
 ```js
 (getUserInput) => {
@@ -51,7 +51,7 @@ You can provide your own project, not the example URL.
 };
 ```
 
-Only allow your site to be loaded in an iFrame on your own pages.
+อนุญาตให้โหลดเว็บไซต์ของคุณใน iFrame บนหน้าเพจของคุณเองเท่านั้น
 
 ```js
 async (getUserInput) => {
@@ -61,7 +61,7 @@ async (getUserInput) => {
 };
 ```
 
-Do not allow DNS prefetching.
+ไม่อนุญาตให้ดึงข้อมูล DNS ล่วงหน้า
 
 ```js
 async (getUserInput) => {
@@ -71,7 +71,7 @@ async (getUserInput) => {
 };
 ```
 
-Only allow your site to send the referrer for your own pages.
+อนุญาตให้ไซต์ของคุณส่ง referrer สำหรับหน้าเพจของคุณเองเท่านั้น
 
 ```js
 async (getUserInput) => {
@@ -81,7 +81,7 @@ async (getUserInput) => {
 };
 ```
 
-You can send a POST request to `/api/threads/{board}` with form data including `text` and `delete_password`. The saved database record will have at least the fields `_id`, `text`, `created_on`(date & time), `bumped_on`(date & time, starts same as `created_on`), `reported` (boolean), `delete_password`, & `replies` (array).
+คุณสามารถส่ง POST request ไปยัง `/api/threads/{board}` พร้อมกับข้อมูลของฟอร์มที่มี `text` และ `delete_password` ซึ่งข้อมูลที่ถูกเซฟจะต้องมีรายละเอียดอย่างน้อย ดังนี้ `_id`, `text`, `created_on`(วัน & เวลา), `bumped_on`(วัน & เวลา, เริ่มต้นพร้อมกับ `created_on`), `reported` (boolean), `delete_password`, & `replies` (array)
 
 ```js
 async (getUserInput) => {
@@ -113,49 +113,49 @@ async (getUserInput) => {
 };
 ```
 
-You can send a POST request to `/api/replies/{board}` with form data including `text`, `delete_password`, & `thread_id`. This will update the `bumped_on` date to the comment's date. In the thread's `replies` array, an object will be saved with at least the properties `_id`, `text`, `created_on`, `delete_password`, & `reported`.
+คุณสามารถส่ง POST request ไปยัง `/api/replies/{board}` พร้อมกับข้อมูลของฟอร์มที่มี `text`, `delete_password`, และ `thread_id` สิ่งเหล่านี้จะไปอัปเดตข้อมูลวันที่ `bumped_on` ให้กับ วันของ comment ต่างๆ ใน `replies` array ของ thread  object ที่จะถูกเซฟจะต้องมี property อย่างน้อย ดังนี้ `_id`, `text`, `created_on`, `delete_password`, และ `reported`
 
 ```js
 
 ```
 
-You can send a GET request to `/api/threads/{board}`. Returned will be an array of the most recent 10 bumped threads on the board with only the most recent 3 replies for each. The `reported` and `delete_password` fields will not be sent to the client.
+คุณสามารถส่ง GET request ไปยัง `/api/threads/{board}` สิ่งที่ return มาจะเป็น array ของ thread ที่มีข้อมูลอัปเดตเข้ามาล่าสุดพร้อมแสดง 3 reply ล่าสุดของแต่ละ thread นั้นทั้งหมด 10  thread  ในส่วนของ `reported` และ `delete_password` จะไม่ถูกส่งไปยังฝั่ง client
 
 ```js
 
 ```
 
-You can send a GET request to `/api/replies/{board}?thread_id={thread_id}`. Returned will be the entire thread with all its replies, also excluding the same fields from the client as the previous test.
+คุณสามารถส่ง GET request ไปยัง `/api/replies/{board}?thread_id={thread_id}` ซึ่ง return จะเป็น thread นั้นพร้อม reply ของมันทั้งหมดด้วย และยังไม่รวมส่วนที่เหมือนกันของ test ก่อนหน้านี้จากฝั่ง client
 
 ```js
 
 ```
 
-You can send a DELETE request to `/api/threads/{board}` and pass along the `thread_id` & `delete_password` to delete the thread. Returned will be the string `incorrect password` or `success`.
+คุณสามารถส่ง DELETE request ไปยัง `/api/threads/{board}` และส่งผ่าน `thread_id` และ `delete_password` เพื่อลบ thread  ซึ่งจะ return สตริง `incorrect password` หรือ `success`
 
 ```js
 
 ```
 
-You can send a DELETE request to `/api/replies/{board}` and pass along the `thread_id`, `reply_id`, & `delete_password`. Returned will be the string `incorrect password` or `success`. On success, the text of the `reply_id` will be changed to `[deleted]`.
+คุณสามารถส่ง DELETE request ไปยัง `/api/replies/{board}` ส่งผ่าน `thread_id`, `reply_id`, และ `delete_password` ซึ่งจะ return สตริง `incorrect password` หรือ `success` ถ้าเป็น success แล้ว ข้อความของ `reply_id` จะเปลี่ยนเป็น `[deleted]`
 
 ```js
 
 ```
 
-You can send a PUT request to `/api/threads/{board}` and pass along the `thread_id`. Returned will be the string `success`. The `reported` value of the `thread_id` will be changed to `true`.
+คุณสามารถส่ง PUT request ไปยัง `/api/threads/{board}` ส่งผ่าน `thread_id` ซึ่งจะ return สตริง `success` ค่าของ `report` ของ `thread_id จะถูกเปลี่ยนเป็น `true`
 
 ```js
 
 ```
 
-You can send a PUT request to `/api/replies/{board}` and pass along the `thread_id` & `reply_id`. Returned will be the string `success`. The `reported` value of the `reply_id` will be changed to `true`.
+คุณสามารถส่ง PUT request ไปยัง `/api/replies/{board}` ส่งผ่าน `thread_id` และ `reply_id` ซึ่งจะ return สตริง `success` `success` ค่าของ `report` ของ `reply_id จะถูกเปลี่ยนเป็น `true`
 
 ```js
 
 ```
 
-All 10 functional tests are complete and passing.
+การทดสอบฟังก์ชันทั้งหมด 10 รายการจะต้องเสร็จสมบูรณ์และ test ผ่าน
 
 ```js
 

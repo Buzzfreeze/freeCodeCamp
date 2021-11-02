@@ -8,31 +8,31 @@ dashedName: hash-and-compare-passwords-synchronously
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-bcrypt), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-bcrypt/).
+โปรดทราบว่าโปรเจคนี้ถูกสร้างจากโปรเจคเริ่มต้นบน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-bcrypt) หรือโคลนมาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-bcrypt/)
 
-Hashing synchronously is just as easy to do but can cause lag if using it server side with a high cost or with hashing done very often. Hashing with this method is as easy as calling
+การแฮชแบบซิงโครนัสนั้นง่ายพอๆ กัน แต่อาจทำให้เกิดความล่าช้าได้หากใช้ฝั่งเซิร์ฟเวอร์ที่มีค่าใช้จ่ายสูงหรือมีการแฮชบ่อยมาก การแฮชด้วยวิธีนี้ง่ายโดยการเรียกฟังก์ชันนี้
 
 ```js
 var hash = bcrypt.hashSync(myPlaintextPassword, saltRounds);
 ```
 
-Add this method of hashing to your code and then log the result to the console. Again, the variables used are already defined in the server so you won't need to adjust them. You may notice even though you are hashing the same password as in the async function, the result in the console is different- this is due to the salt being randomly generated each time as seen by the first 22 characters in the third string of the hash. Now to compare a password input with the new sync hash, you would use the compareSync method:
+เพิ่มวิธีการแฮชนี้ในโค้ดของคุณ แล้วบันทึกผลลัพธ์ลงในคอนโซล อีกครั้ง ตัวแปรที่ใช้ถูกกำหนดไว้แล้วในเซิร์ฟเวอร์ ดังนั้นคุณจึงไม่จำเป็นต้องปรับเปลี่ยนพวกมัน คุณอาจสังเกตเห็นว่าแม้ว่าคุณกำลังแฮชรหัสผ่านเดียวกันกับในฟังก์ชัน async แต่ผลลัพธ์ในคอนโซลจะแตกต่างกัน เนื่องจาก salt ถูกสร้างขึ้นแบบสุ่มในแต่ละครั้งตามที่เห็นโดยอักขระ 22 ตัวแรกในสตริงที่สามของแฮช ในตอนนี้ เพื่อเปรียบเทียบการป้อนรหัสผ่านกับแฮชการซิงค์ใหม่ คุณจะต้องใช้เมธอด CompareSync:
 
 ```js
 var result = bcrypt.compareSync(myPlaintextPassword, hash);
 ```
 
-with the result being a boolean true or false.
+ด้วยผลลัพธ์ที่เป็น Boolean ที่เป็น true หรือ false
 
 # --instructions--
 
-Add the function in and log the result to the console to see it working.
+เพิ่มฟังกันเข้าไปและบันทึกผลลัพธ์ไปที่คอนโซลเพื่อดูว่ามันทำงานหรือไม่
 
-Submit your page when you think you've got it right.
+ส่งหน้าเพจของคุณมาเมื่อคุณคิดว่าคุณได้ทำมันสำเร็จแล้ว
 
 # --hints--
 
-Sync hash should be generated and correctly compared.
+ควรสร้าง Sync hash และ ได้รับการเปรียบเทียบอย่างถูกต้อง
 
 ```js
 (getUserInput) =>

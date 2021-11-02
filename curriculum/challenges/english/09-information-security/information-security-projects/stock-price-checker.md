@@ -8,38 +8,38 @@ dashedName: stock-price-checker
 
 # --description--
 
-Build a full stack JavaScript app that is functionally similar to this: <https://stock-price-checker.freecodecamp.rocks/>.
+ลองสร้างแอป full stack จาก JavaScript ที่มีฟังก์ชันเหมือนกับ: <https://stock-price-checker.freecodecamp.rocks/>
 
-Since all reliable stock price APIs require an API key, we've built a workaround. Use <https://stock-price-checker-proxy.freecodecamp.rocks/> to get up-to-date stock price information without needing to sign up for your own key.
+เนื่องจาก API ราคาหุ้นที่เชื่อถือได้ทั้งหมดต้องใช้คีย์ API เราจึงสร้างวิธีแก้ปัญหาชั่วคราว ให้ใช้ [Link นี้](https://stock-price-checker-proxy.freecodecamp.rocks/) เพื่อรับข้อมูลราคาหุ้นที่อัปเดตแล้วโดยที่ไม่ต้องลงทะเบียนสำหรับคีย์ของคุณเอง
 
-Working on this project will involve you writing your code using one of the following methods:
+ในการทำโปรเจคนี้จะทำให้คุณเขียนโค้ด ที่มี method ต่างๆ ด้านล่างนี้: 
 
--   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-stockchecker/) and complete your project locally.
--   Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-stockchecker) to complete your project.
--   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
+- Clone [Github repo นี้](https://github.com/freeCodeCamp/boilerplate-project-stockchecker/) แล้วนำมาใช้กับโปรเจคของคุณบนเครื่องของคุณเอง
+- ให้ใช้ [โปรเจค  Replit starter ของเรา](https://replit.com/github/freeCodeCamp/boilerplate-project-stockchecker)   กับโปรเจคนี้
+- ใช้ตัวสร้างเว็บไซต์ที่คุณต้องการในการทำโปรเจคนี้ อย่าลืมรวมไฟล์ทั้งหมดจาด Github repo ของเราลงไปด้วย
 
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your projects source code in the `GitHub Link` field.
+เมื่อทำโปรเจคนี้เสร็จแล้ว ให้อัปโหลดงานเดโมที่ใช้งานได้ไปบนโฮสต์ที่ไหนก็ได้ที่เป็น public หลังจากนั้นส่ง URL นั้นมาในช่อง `Solution Link` และคุณสามารถส่งลิงก์ source code ของโปรเจคคุณมาในช่อง `GitHub Link` ด้วยหรือไม่ก็ได้
 
 # --instructions--
 
-1.  SET `NODE_ENV` to `test` without quotes and set `DB` to your MongoDB connection string
-2.  Complete the project in `routes/api.js` or by creating a handler/controller
-3.  You will add any security features to `server.js`
-4.  You will create all of the functional tests in `tests/2_functional-tests.js`
+1. ตั้งค่า `NODE_ENV` เพื่อทดสอบโดยไม่ใส่เครื่องหมายคำพูด เมื่อพร้อมที่จะเขียนการทดสอบและ DB ไปยังสตริงการเชื่อมต่อฐานข้อมูลของคุณ 
+2. ทำโปรเจคให้เสร็จใน `routes/api.js` หรือ โอยการสร้าง handler/controller
+3. คุณสามารถเพิ่มฟีเจอร์ด้านความปลอดภัยต่างๆ ในไฟล์ `server.js`
+4. คุณจะต้องเขียน test ฟังก์ชันต่างๆ ทั้งหมดใน `tests/2_functional-tests.js`
 
-**Note** Privacy Considerations: Due to the requirement that only 1 like per IP should be accepted, you will have to save IP addresses. It is important to remain compliant with data privacy laws such as the General Data Protection Regulation. One option is to get permission to save the user's data, but it is much simpler to anonymize it. For this challenge, remember to anonymize IP addresses before saving them to the database. If you need ideas on how to do this, you may choose to hash the data, truncate it, or set part of the IP address to 0.
+**Note** ในข้อพิจารณาด้านความเป็นส่วนตัว: เนื่องจากข้อกำหนดที่ควรยอมรับเพียง 1 ไลค์ต่อ IP คุณจะต้องบันทึกที่อยู่ IP สิ่งสำคัญคือต้องปฏิบัติตามกฎหมายความเป็นส่วนตัวของข้อมูล เช่น ระเบียบว่าด้วยการคุ้มครองข้อมูลทั่วไป ทางเลือกหนึ่งคือการขออนุญาตบันทึกข้อมูลของผู้ใช้ แต่การไม่เปิดเผยชื่อนั้นง่ายกว่ามาก สำหรับแบบทดสอบนี้ อย่าลืมปิดบังที่อยู่ IP ก่อนบันทึกลงในฐานข้อมูล หากคุณต้องการหลักการเกี่ยวกับวิธีการนี้ คุณอาจเลือกที่จะแฮชข้อมูล ตัดทอนข้อมูล หรือตั้งค่าส่วนหนึ่งของที่อยู่ IP เป็น 0
 
-Write the following tests in `tests/2_functional-tests.js`:
+เขียน test ข้างล่างนี้ใน `tests/2_functional-tests.js`:
 
--   Viewing one stock: GET request to `/api/stock-prices/`
--   Viewing one stock and liking it: GET request to `/api/stock-prices/`
--   Viewing the same stock and liking it again: GET request to `/api/stock-prices/`
--   Viewing two stocks: GET request to `/api/stock-prices/`
--   Viewing two stocks and liking them: GET request to `/api/stock-prices/`
+- การดูหุ้นหนึ่งหุ้น: GET request ไปยัง `/api/stock-prices/`
+- การดูหุ้นหนึ่งหุ้นและกดไลค์มัน: GET request ไปยัง `/api/stock-prices/`
+- การดูหุ้นเดิมและกดไลค์มันอีกครั้ง: GET request ไปยัง `/api/stock-prices/`
+- การดูหุ้นสองหุ้นพร้อมกัน: GET request ไปยัง `/api/stock-prices/`
+- การดูหุ้นสองหุ้นและกดไลค์พวกมัน: GET request ไปยัง `/api/stock-prices/`
 
 # --hints--
 
-You can provide your own project, not the example URL.
+คุณสามารถสร้างโปรเจ็คของคุณเองได้โดยไม่ต้องใช้ URL ตัวอย่าง
 
 ```js
 (getUserInput) => {
@@ -49,7 +49,7 @@ You can provide your own project, not the example URL.
 };
 ```
 
-You should set the content security policies to only allow loading of scripts and CSS from your server.
+คุณควรตั้งค่านโยบายการรักษาความปลอดภัยของเนื้อหาให้อนุญาตเฉพาะการโหลดสคริปต์และ CSS จากเซิร์ฟเวอร์ของคุณ
 
 ```js
 async (getUserInput) => {
@@ -64,7 +64,7 @@ async (getUserInput) => {
 };
 ```
 
-You can send a `GET` request to `/api/stock-prices`, passing a NASDAQ stock symbol to a `stock` query parameter. The returned object will contain a property named `stockData`.
+คุณสามารถส่ง `GET` request ไปยัง `/api/stock-prices` พร้อมส่งสัญลักษณ์หุ้น NASDAQ ไปยัง `stock` query parameter ซึ่งจะ return object ที่มี property ชื่อว่า `stockData`
 
 ```js
 async (getUserInput) => {
@@ -76,7 +76,7 @@ async (getUserInput) => {
 };
 ```
 
-The `stockData` property includes the `stock` symbol as a string, the `price` as a number, and `likes` as a number.
+`stockData` property มีสัญลักษณ์ `stock` ที่เป็นสตริง `price` เป็น number และ `likes` เป็น number
 
 ```js
 async (getUserInput) => {
@@ -91,13 +91,13 @@ async (getUserInput) => {
 };
 ```
 
-You can also pass along a `like` field as `true` (boolean) to have your like added to the stock(s). Only 1 like per IP should be accepted.
+คุณสามารถส่งผ่านข้อมูลช่อง `like` เป็น `true` (Boolean) เพื่อเพิ่มไลค์ไปยังหุ้น ควรยอมรับได้เพียง 1 ไลค์ต่อ 1 IP
 
 ```js
 
 ```
 
-If you pass along 2 stocks, the returned value will be an array with information about both stocks. Instead of `likes`, it will display `rel_likes` (the difference between the likes on both stocks) for both `stockData` objects.
+ถ้าหากคุณส่งผ่าน 2 หุ้น ค่าที่ return จะเป็น array ที่มีข้อมูลเกี่ยวกับหุ้นทั้งสองนั้น แทนที่จะเป็น `likes` มันจะแสดง `rel_likes` (ความแตกต่างของยอดไลค์ของหุ้นทั้งสอง) สำหรับ `stockData` object ทั้งสอง
 
 ```js
 async (getUserInput) => {
@@ -112,7 +112,7 @@ async (getUserInput) => {
 };
 ```
 
-All 5 functional tests are complete and passing.
+การทดสอบฟังก์ชันทั้งหมด 5 รายการต้องเสร็จสมบูรณ์ และ test ผ่าน
 
 ```js
 async (getUserInput) => {

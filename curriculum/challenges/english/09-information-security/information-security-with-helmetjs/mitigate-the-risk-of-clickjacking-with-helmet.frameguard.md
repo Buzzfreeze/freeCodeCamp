@@ -8,19 +8,19 @@ dashedName: mitigate-the-risk-of-clickjacking-with-helmet-frameguard
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
+โปรดทราบว่าโปรเจคนี้ถูกสร้างจากโปรเจคเริ่มต้นบน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec)หรือโคลนมาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/)
 
-Your page could be put in a `<frame>` or `<iframe>` without your consent. This can result in clickjacking attacks, among other things. Clickjacking is a technique of tricking a user into interacting with a page different from what the user thinks it is. This can be obtained executing your page in a malicious context, by mean of iframing. In that context a hacker can put a hidden layer over your page. Hidden buttons can be used to run bad scripts. This middleware sets the X-Frame-Options header. It restricts who can put your site in a frame. It has three modes: DENY, SAMEORIGIN, and ALLOW-FROM.
+หน้าเว็บของคุณสามารถถูกนำไปใส่ใน `<frame>` หรือ `<iframe>` โดยไม่ต้องได้รับความยินยอมจากคุณ ซึ่งอาจส่งผลให้เกิดการโจมตีแบบ Clickjacking เหนือสิ่งอื่นใด Clickjacking เป็นเทคนิคในการหลอกให้ผู้ใช้โต้ตอบกับหน้าเว็บที่แตกต่างจากที่ผู้ใช้คิด สามารถรับได้จากการรันเว็บเพจของคุณในบริบทที่เป็นอันตราย โดยใช้ iframe ในบริบทนั้น แฮ็กเกอร์สามารถวางเลเยอร์ทับซ่อนอยู่บนเพจของคุณได้ ปุ่มที่ซ่อนอยู่สามารถใช้เพื่อเรียกใช้สคริปต์ที่ไม่ดีได้ middleware นี้ตั้งค่าส่วน X-Frame-Options header มันจะจำกัดผู้ที่สามารถวางเว็บไซต์ของคุณใน frame  ซึ่งมีสามโหมด: DENY, SAMEORIGIN และ ALLOW-FROM
 
-We don’t need our app to be framed.
+ซึ่งโดยทั่วไปแล้วเราไม่ต้องการให้เว็บเพจของเราได้รับการ frame 
 
 # --instructions--
 
-Use `helmet.frameguard()` passing with the configuration object `{action: 'deny'}`.
+ให้ใช้ `helmet.frameguard()` ส่งผ่านด้วย configuration object `{action: 'deny'}`
 
 # --hints--
 
-helmet.frameguard() middleware should be mounted correctly
+helmet.frameguard() middleware ควรถูกติดตั้งอย่างถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -38,7 +38,7 @@ helmet.frameguard() middleware should be mounted correctly
   );
 ```
 
-helmet.frameguard() 'action' should be set to 'DENY'
+'action' ของ helmet.frameguard() ควรตั้งค่าให้เป็น 'DENY'
 
 ```js
 (getUserInput) =>

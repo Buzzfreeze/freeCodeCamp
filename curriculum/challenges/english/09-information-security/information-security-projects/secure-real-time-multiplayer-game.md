@@ -8,21 +8,21 @@ dashedName: secure-real-time-multiplayer-game
 
 # --description--
 
-Develop a 2D real time multiplayer game using the HTML Canvas API and [Socket.io](https://socket.io/) that is functionally similar to this: <https://secure-real-time-multiplayer-game.freecodecamp.rocks/>. Working on this project will involve you writing your code using one of the following methods:
+การพัฒนาเกม 2D real time multiplayer โดยใช้ HTML Canvas API และ [Socket.io](https://socket.io/) ที่มีฟังก์ชันเหมือนกับ: <https://secure-real-time-multiplayer-game.freecodecamp.rocks/> ในการทำโปรเจคนี้จะทำให้คุณเขียนโค้ด ที่มี method ต่างๆ ด้านล่างนี้: 
 
--   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-secure-real-time-multiplayer-game/) and complete your project locally.
--   Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-secure-real-time-multiplayer-game) to complete your project.
--   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
-
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
+- Clone [Github repo นี้](https://github.com/freeCodeCamp/boilerplate-project-secure-real-time-multiplayer-game/) แล้วนำมาใช้กับโปรเจคของคุณบนเครื่องของคุณเอง
+- ให้ใช้ [โปรเจค  Replit starter ของเรา](https://replit.com/github/freeCodeCamp/boilerplate-project-secure-real-time-multiplayer-game) กับโปรเจคนี้
+- ใช้ตัวสร้างเว็บไซต์ที่คุณต้องการในการทำโปรเจคนี้ อย่าลืมรวมไฟล์ทั้งหมดจาด Github repo ของเราลงไปด้วย
+เมื่อทำโปรเจคนี้เสร็จแล้ว ให้อัปโหลดงานเดโมที่ใช้งานได้ไปบนโฮสต์ที่ไหนก็ได้ที่เป็น public หลังจากนั้นส่ง URL นั้นมาในช่อง `Solution Link` และคุณสามารถส่งลิงก์ source code ของโปรเจคคุณมาในช่อง `GitHub Link` ด้วยหรือไม่ก็ได้
 
 # --instructions--
 
-**Note**: `helmet@^3.21.3` is needed for the user stories. This means you will need to use the previous version of Helmet's docs, for information on how to achieve the user stories.
+**Note**: ต้องใช้ `helmet@^3.21.3` สำหรับ user stories. ซึ่งหมายความว่าคุณต้องใช้ Helmet’s docs ของเวอร์ชันก่อนหน้านี้สำหรับข้อมูลในการทำ user stories ให้สำเร็จ
 
 # --hints--
 
-You can provide your own project, not the example URL.
+คุณสามารถสร้างโปรเจ็คของคุณเองได้โดยไม่ต้องใช้ URL ตัวอย่าง
+
 
 ```js
 (getUserInput) => {
@@ -34,91 +34,91 @@ You can provide your own project, not the example URL.
 };
 ```
 
-Multiple players can connect to a server and play.
+ผู้เล่นหลายคนสามารถเชื่อมต่อกับเซิร์ฟเวอร์และเล่นได้
 
 ```js
 
 ```
 
-Each player has an avatar.
+ผู้เล่นแต่ละคนมีอวาตาร์
 
 ```js
 
 ```
 
-Each player is represented by an object created by the `Player` class in `Player.mjs`.
+ผู้เล่นแต่ละคนจะถูกแทนค่าด้วย object ที่ถูกสร้างโดย `Player` class ในไฟล์  `Player.mjs`
 
 ```js
 
 ```
 
-At a minimum, each player object should contain a unique `id`, a `score`, and `x` and `y` coordinates representing the player's current position.
+ให้อย่างน้อย player object แต่ละอันจะต้องมี `id` เฉพาะ, `score` และ `x` กับ `y` coordinates ที่แสดงถึงตำแหน่งที่อยู่ปัจจุบันของผู้เล่น
 
 ```js
 
 ```
 
-The game has at least one type of collectible item. Complete the `Collectible` class in `Collectible.mjs` to implement this.
+ให้เกมต้องมีต้องมีชนิดของ collectible item อย่างน้อย 1 ชนิด ให้สร้าง `Collectible` class ใน `Collectible.mjs` ให้สำเร็จเพื่อทำให้เกิด collectible item นี้
 
 ```js
 
 ```
 
-At a minimum, each collectible item object created by the `Collectible` class should contain a unique `id`, a `value`, and `x` and `y` coordinates representing the item's current position.
+ให้อย่างน้อย collectible item object แต่ละอันที่ถูกสร้างโดย `Collectible` class ควรจะต้องมี `id` เฉพาะ, `value`, `x` กับ `y` coordinates ที่แสดงถึงตำแหน่งที่อยู่ปัจจุบันของไอเทมนั้น
 
 ```js
 
 ```
 
-Players can use the WASD and/or arrow keys to move their avatar. Complete the `movePlayer` method in `Player.mjs` to implement this.
+ผู้เล่นสามารถใช้คีย์ WASD และ/หรือ ลูกศร เพื่อเคลื่อนที่อวาตาร์ของตัวเองด้วย เขียน `movePlayer` method ใน `Player.mjs` ให้สำเร็จเพื่อทำให้เงื่อนไขนี้เกิดขึ้น
 
 ```js
 
 ```
 
-The `movePlayer` method should accept two arguments: a string of "up", "down", "left", or "right", and a number for the amount of pixels the player's position should change. `movePlayer` should adjust the `x` and `y` coordinates of the player object it's called from.
+`movePlayer` method ควรยอมรับ 2 argument คือ สตริงของ "up", "down", "left", หรือ "right" และ และตัวเลขของจำนวนพิกเซลที่ตำแหน่งของผู้เล่นที่จะเคลื่อนไป `movePlayer` ควรจะปรับ `x` กับ `y` coordinates ของ player object ที่มันถูกเรียกใช้
 
 ```js
 
 ```
 
-The player's score should be used to calculate their rank among the other players. Complete the `calculateRank` method in the `Player` class to implement this.
+คะแนนของผู้เล่นควรใช้ในการคำนวณอันดับของผู้เล่นต่อผู้เล่นคนอื่นๆ เขียน `calculateRank` method ให้สำเร็จใน `Player` class เพื่อให้เงื่อนไขนี้เกิดขึ้น
 
 ```js
 
 ```
 
-The `calculateRank` method should accept an array of objects representing all connected players and return the string `Rank: currentRanking/totalPlayers`. For example, in a game with two players, if Player A has a score of 3 and Player B has a score of 5, `calculateRank` for Player A should return `Rank: 2/2`.
+`calculateRank` method ควรยอมรับ array ของ object ที่แสดงถึงที่เชื่อมต่อกันทั้งหมด และ return สตริง `Rank: currentRanking/totalPlayers` ตัวอย่างเช่น สมมติว่าในเกมมีผู้เล่นสองคน หากผู้เล่น A มีคะแนนเท่ากับ 3 และ ผู้เล่นบีมี 5 คะแนน `calculateRank` สำหรับผู้เล่น A จะต้อง return `Rank: 2/2`
 
 ```js
 
 ```
 
-Players can collide with a collectible item. Complete the `collision` method in `Player.mjs` to implement this.
+ผู้เล่นสามารถรวบรวมกับ collectible item ได้ เขียน `collision` method ให้สำเร็จ เพื่อให้เงื่อนไขนี้เกิดขึ้น
 
 ```js
 
 ```
 
-The `collision` method should accept a collectible item's object as an argument. If the player's avatar intersects with the item, the `collision` method should return `true`.
+`collision` method ควรยอมรับ collectible item's object เป็น argument ถ้าอวาตาร์ของผู้เล่นรวมไอเทมได้ `collision` method ควร retrun `true`
 
 ```js
 
 ```
 
-All players are kept in sync.
+ผู้เล่นทุกคนจะได้รับการซิงค์
 
 ```js
 
 ```
 
-Players can disconnect from the game at any time.
+ผู้เล่นสามารถยกเลิกการเชื่อมต่อจากเกมได้ตลอดเวลา
 
 ```js
 
 ```
 
-Prevent the client from trying to guess / sniff the MIME type.
+ป้องกันไม่ให้ client พยายามเดา/เซาะหา MIME type
 
 ```js
 async (getUserInput) => {
@@ -128,7 +128,7 @@ async (getUserInput) => {
 };
 ```
 
-Prevent cross-site scripting (XSS) attacks.
+ป้องกันการโจมตีจาก cross-site scripting (XSS)
 
 ```js
 async (getUserInput) => {
@@ -138,7 +138,7 @@ async (getUserInput) => {
 };
 ```
 
-Nothing from the website is cached in the client.
+ไม่มีสิ่งใดจากเว็บไซต์ถูกแคชใน client
 
 ```js
 async (getUserInput) => {
@@ -154,7 +154,7 @@ async (getUserInput) => {
 };
 ```
 
-The headers say that the site is powered by "PHP 7.4.3" even though it isn't (as a security measure).
+ในส่วน header ให้มีข้อความว่า the site is powered by "PHP 7.4.3" ถึงแม้ว่ามันจะไม่ก็ตาม (เป็นมาตรการรักษาความปลอดภัย)
 
 ```js
 async (getUserInput) => {

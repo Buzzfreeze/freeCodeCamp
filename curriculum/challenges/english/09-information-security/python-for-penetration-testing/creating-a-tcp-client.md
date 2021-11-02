@@ -14,7 +14,7 @@ dashedName: creating-a-tcp-client
 
 ## --text--
 
-Which socket object method lets you set the maximum amount of data your client accepts at once?
+socket object method ใดให้คุณกำหนดจำนวนข้อมูลสูงสุดที่ไคลเอนต์ของคุณยอมรับได้ในครั้งเดียว
 
 ## --answers--
 

@@ -8,9 +8,9 @@ dashedName: hash-and-compare-passwords-asynchronously
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-bcrypt), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-bcrypt/).
+โปรดทราบว่าโปรเจคนี้ถูกสร้างจากโปรเจคเริ่มต้นบน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-bcrypt) หรือโคลนมาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-bcrypt/)
 
-As hashing is designed to be computationally intensive, it is recommended to do so asynchronously on your server as to avoid blocking incoming connections while you hash. All you have to do to hash a password asynchronous is call
+เนื่องจากการแฮชได้รับการออกแบบให้มีการประมวลผลแบบเข้มข้น ขอแนะนำให้ทำแบบ asynchronous บนเซิร์ฟเวอร์ของคุณเพื่อหลีกเลี่ยงการบล็อกการเชื่อมต่อขาเข้าในขณะที่คุณแฮช สิ่งที่คุณต้องทำเพื่อแฮชรหัสผ่านแบบ asynchronous คือการเรียกฟังก์ชันนี้
 
 ```js
 bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
@@ -20,9 +20,9 @@ bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
 
 # --instructions--
 
-Add this hashing function to your server(we've already defined the variables used in the function for you to use) and log it to the console for you to see! At this point you would normally save the hash to your database.
+เพิ่มฟังก์ชันการแฮชนี้ในเซิร์ฟเวอร์ของคุณ (เราได้กำหนดตัวแปรที่ใช้ในฟังก์ชันให้คุณใช้แล้ว) และบันทึกลงในคอนโซลเพื่อให้คุณดู! ณ จุดนี้ คุณจะบันทึกแฮชไปยังฐานข้อมูลของคุณตามปกติ
 
-Now when you need to figure out if a new input is the same data as the hash you would just use the compare function.
+เมื่อคุณต้องการหาว่าอินพุตใหม่เป็นข้อมูลเดียวกับแฮชหรือไม่ คุณก็แค่ใช้ฟังก์ชันเปรียบเทียบ
 
 ```js
 bcrypt.compare(myPlaintextPassword, hash, (err, res) => {
@@ -30,7 +30,9 @@ bcrypt.compare(myPlaintextPassword, hash, (err, res) => {
 });
 ```
 
-Add this into your existing hash function(since you need to wait for the hash to complete before calling the compare function) after you log the completed hash and log 'res' to the console within the compare. You should see in the console a hash then 'true' is printed! If you change 'myPlaintextPassword' in the compare function to 'someOtherPlaintextPassword' then it should say false.
+เพิ่มสิ่งนี้ลงในฟังก์ชันแฮชที่มีอยู่ของคุณ (เนื่องจากคุณต้องรอให้แฮชเสร็จสิ้นก่อนที่จะเรียกใช้ฟังก์ชันเปรียบเทียบ) หลังจากที่คุณบันทึกแฮชที่เสร็จสิ้นแล้วและบันทึก 'res' ไปยังคอนโซลภายในการเปรียบเทียบ คุณควรเห็นแฮชในคอนโซลจากนั้นพิมพ์ 'จริง'! หากคุณเปลี่ยน 'myPlaintextPassword' ในฟังก์ชันการเปรียบเทียบเป็น 'someOtherPlaintextPassword' ก็ควรเป็นเท็จ
+
+เพิ่มสิ่งนี้ลงในฟังก์ชันแฮชที่มีอยู่ของคุณ (เนื่องจากคุณต้องรอให้แฮชเสร็จสิ้นก่อนที่จะเรียกใช้ฟังก์ชันเปรียบเทียบ) หลังจากที่คุณบันทึกแฮชที่เสร็จสิ้นแล้วและบันทึก 'res' ไปยังคอนโซลภายในการเปรียบเทียบ คุณควรเห็นแฮชในคอนโซลจากนั้น 'true' จะถูกพิมพ์ออกมา! แต่หากคุณเปลี่ยน 'myPlaintextPassword' ในฟังก์ชันการเปรียบเทียบเป็น 'someOtherPlaintextPassword' ก็ควรเป็น false
 
 ```js
 bcrypt.hash('passw0rd!', 13, (err, hash) => {
@@ -43,11 +45,11 @@ bcrypt.hash('passw0rd!', 13, (err, hash) => {
 
 ```
 
-Submit your page when you think you've got it right.
+ส่งหน้าเพจของคุณมาเมื่อคุณคิดว่าคุณได้ทำมันสำเร็จแล้ว
 
 # --hints--
 
-Async hash should be generated and correctly compared.
+ควรสร้าง Async hash และ ได้รับการเปรียบเทียบอย่างถูกต้อง
 
 ```js
 (getUserInput) =>

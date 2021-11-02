@@ -8,19 +8,20 @@ dashedName: ask-browsers-to-access-your-site-via-https-only-with-helmet-hsts
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
+โปรดทราบว่าโปรเจคนี้ถูกสร้างจากโปรเจคเริ่มต้นบน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec) หรือโคลนมาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/)
 
-HTTP Strict Transport Security (HSTS) is a web security policy which helps to protect websites against protocol downgrade attacks and cookie hijacking. If your website can be accessed via HTTPS you can ask user’s browsers to avoid using insecure HTTP. By setting the header Strict-Transport-Security, you tell the browsers to use HTTPS for the future requests in a specified amount of time. This will work for the requests coming after the initial request.
+HTTP Strict Transport Security (HSTS) เป็นนโยบายความปลอดภัยเว็บที่ช่วยปกป้องเว็บไซต์จากการโจมตี protocol downgrade และ cookie hijacking หากเว็บไซต์ของคุณสามารถเข้าถึงได้ผ่าน HTTPS คุณสามารถขอให้เบราว์เซอร์ของผู้ใช้หลีกเลี่ยงการใช้ HTTP ที่ไม่ปลอดภัย ด้วยการตั้งค่าส่วน header ให้ Strict-Transport-Security โดยที่คุณบอกให้เบราว์เซอร์ใช้ HTTPS สำหรับคำขอในอนาคตในระยะเวลาที่กำหนด สิ่งนี้จะใช้ได้สำหรับคำขอที่มาหลังจากคำขอเริ่มต้น
 
 # --instructions--
 
-Configure `helmet.hsts()` to use HTTPS for the next 90 days. Pass the config object `{maxAge: timeInSeconds, force: true}`. You can create a variable `ninetyDaysInSeconds = 90*24*60*60;` to use for the `timeInSeconds`. Replit already has hsts enabled. To override its settings you need to set the field "force" to true in the config object. We will intercept and restore the Replit header, after inspecting it for testing.
+กำหนดค่า `helmet.hsts()` เพื่อใช้ HTTPS ในอีก 90 วันข้างหน้า ส่งผ่าน config object `{maxAge: timeInSeconds, force: true}` คุณสามารถสร้างตัวแปร `ninetyDaysInSeconds = 90*24*60*60;` เพื่อใช้สำหรับ `timeInSeconds` Replit ได้เปิดใช้งาน hsts แล้ว หากต้องการเขียนทับการตั้งค่าของมันคุณต้องตั้งค่าฟิลด์ "force" ให้เป็น true ใน config object เราจะสกัดกั้นและกู้คืนส่วนหัวของ Replit หลังจากตรวจสอบเพื่อ test แล้ว
 
-Note: Configuring HTTPS on a custom website requires the acquisition of a domain, and a SSL/TLS Certificate.
+
+Note: การกำหนดค่า HTTPS บนเว็บไซต์ที่กำหนดเองจำเป็นต้องมีการได้มาซึ่งโดเมน และใบรับรอง SSL/TLS
 
 # --hints--
 
-helmet.hsts() middleware should be mounted correctly
+helmet.hsts() middleware ควรติดตั้งอย่างถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -35,7 +36,7 @@ helmet.hsts() middleware should be mounted correctly
   );
 ```
 
-maxAge should be equal to 7776000 s (90 days)
+maxAge ควรจะต้องเท่ากับ 7776000 s (90 วัน)
 
 ```js
 (getUserInput) =>

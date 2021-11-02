@@ -14,7 +14,7 @@ dashedName: developing-a-banner-grabber
 
 ## --text--
 
-Fill in the blanks to complete the `banner` function below:
+กรอกข้อมูลในช่องว่างเพื่อทำให้ `banner` function ด้านล่างสมบูรณ์
 
 ```py
 def banner(ip, port):

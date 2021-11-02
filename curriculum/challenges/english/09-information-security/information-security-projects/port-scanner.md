@@ -9,13 +9,13 @@ dashedName: port-scanner
 
 # --description--
 
-Create a port scanner using Python.
+สร้าง port scanner ด้วย Python
 
-You can access [the full project description and starter code on Replit](https://replit.com/github/freeCodeCamp/boilerplate-port-scanner).
+คุณสามารถเข้าไปดู[คำอธิบายทั้งโปรเจคนี้และโค้ดเริ่มต้นบน Replit](https://replit.com/github/freeCodeCamp/boilerplate-port-scanner)
 
-After going to that link, fork the project. Once you complete the project based on the instructions in 'README.md', submit your project link below.
+หลังจากไปที่ลิงก์นั้นแล้วให้แยกโปรเจคนั้นมา เมื่อคุณทำโปรเจคสำเร็จแล้วตามคำแนะนำในไฟล์ 'README.md' ให้ส่งลิงก์ของโปรเจคคุณที่ด้านล่างนี้
 
-We are still developing the interactive instructional part of the Python curriculum. For now, here are some videos on the freeCodeCamp.org YouTube channel that will teach you some of the Python skills required for this project:
+เรากำลังพัฒนาส่วนการสอนแบบโต้ตอบของหลักสูตร Python สำหรับตอนนี้นี่คือวิดีโอบางส่วนในช่อง freeCodeCamp.org บน YouTube ที่จะสอนทักษะ Python ที่จำเป็นสำหรับโปรเจคนี้:
 
 <ul>
   <li>
@@ -28,7 +28,7 @@ We are still developing the interactive instructional part of the Python curricu
 
 # --hints--
 
-It should pass all Python tests.
+จะต้องผ่าน test Python ทั้งหมด
 
 ```js
 

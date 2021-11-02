@@ -8,21 +8,21 @@ dashedName: set-a-content-security-policy-with-helmet-contentsecuritypolicy
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
+โปรดทราบว่าโปรเจคนี้ถูกสร้างจากโปรเจคเริ่มต้นบน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec) หรือโคลนมาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
 
-This challenge highlights one promising new defense that can significantly reduce the risk and impact of many type of attacks in modern browsers. By setting and configuring a Content Security Policy you can prevent the injection of anything unintended into your page. This will protect your app from XSS vulnerabilities, undesired tracking, malicious frames, and much more. CSP works by defining an allowed list of content sources which are trusted. You can configure them for each kind of resource a web page may need (scripts, stylesheets, fonts, frames, media, and so on…). There are multiple directives available, so a website owner can have a granular control. See HTML 5 Rocks, KeyCDN for more details. Unfortunately CSP is unsupported by older browser.
+แบบทดสอบนี้เน้นย้ำถึงการป้องกันใหม่ที่มีแนวโน้มว่าจะลดความเสี่ยงและผลกระทบของการโจมตีหลายประเภทในเบราว์เซอร์สมัยใหม่ได้อย่างมาก ด้วยการตั้งค่าและกำหนดค่านโยบายการรักษาความปลอดภัยของเนื้อหา (Content Security Policy) คุณสามารถป้องกันการแทรกข้อมูลใดๆ ที่ไม่ได้ตั้งใจลงในเว็บเพจของคุณได้ วิธีนี้จะปกป้องแอปของคุณจากช่องโหว่ XSS การติดตามที่ไม่ต้องการ เฟรมที่เป็นอันตราย และอื่นๆ อีกมากมาย CSP ทำงานโดยกำหนดรายการที่อนุญาตของแหล่งเนื้อหาที่เชื่อถือได้ คุณสามารถกำหนดค่าเหล่านี้สำหรับทรัพยากรแต่ละประเภทที่หน้าเว็บอาจต้องการ (scripts, stylesheets, fonts, frames, media และอื่นๆ...) มันมีคำสั่งให้ใช้หลายคำสั่ง ดังนั้นเจ้าของเว็บไซต์จึงสามารถควบคุมได้อย่างละเอียด ดู HTML 5 Rocks, KeyCDN สำหรับรายละเอียดเพิ่มเติม หมายเหตุ CSP ไม่รองรับเบราว์เซอร์รุ่นเก่า
 
-By default, directives are wide open, so it’s important to set the defaultSrc directive as a fallback. Helmet supports both defaultSrc and default-src naming styles. The fallback applies for most of the unspecified directives.
+โดยตามค่าเริ่มต้น คำสั่งต่างๆ จะเป็นไปอยางกว้างๆ ดังนั้นการตั้งค่าคำสั่ง defaultSrc เป็นทางเลือกสำรองจึงเป็นสิ่งสำคัญ Helmet รองรับทั้งรูปแบบการตั้งชื่อ defaultSrc และ default-src ทางเลือกนี้ใช้กับคำสั่งที่ไม่ระบุส่วนใหญ่
 
 # --instructions--
 
-In this exercise, use `helmet.contentSecurityPolicy()`. Configure it by adding a `directives` object. In the object, set the `defaultSrc` to `["'self'"]` (the list of allowed sources must be in an array), in order to trust only your website address by default. Also set the `scriptSrc` directive so that you only allow scripts to be downloaded from your website (`'self'`), and from the domain `'trusted-cdn.com'`.
+ในแบบฝึกหัดนี้ ใช้ `helmet.contentSecurityPolicy()` ให้กำหนดค่ามันโดยเพิ่ม `directives` object ใน ovject นั้นตั้งค่า `defaultSrc` เป็น `["'self'"]` (รายชื่อแหล่งที่มาที่อนุญาตต้องอยู่ใน array) เพื่อให้เชื่อถือเฉพาะที่อยู่เว็บไซต์ของคุณโดยค่าเริ่มต้น นอกจากนี้ ให้ตั้งค่าคำสั่ง `scriptSrc` เพื่อให้คุณอนุญาตให้ดาวน์โหลดสคริปต์จากเว็บไซต์ของคุณเท่านั้น (`'self'`) และจากโดเมน `'trusted-cdn.com'`
 
-Hint: in the `'self'` keyword, the single quotes are part of the keyword itself, so it needs to be enclosed in double quotes to be working.
+คำแนะนำ: ในคีย์เวิร์ด `'self'` เครื่องหมายคำพูดเดี่ยวเป็นส่วนหนึ่งของคีย์เวิร์ด ดังนั้นจึงต้องปิดเครื่องหมายคำพูดคู่จึงจะใช้งานได้
 
 # --hints--
 
-helmet.contentSecurityPolicy() middleware should be mounted correctly
+helmet.contentSecurityPolicy() ควรถูกติดตั้งอย่างถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -36,7 +36,7 @@ helmet.contentSecurityPolicy() middleware should be mounted correctly
   );
 ```
 
-Your csp config is not correct. defaultSrc should be ["'self'"] and scriptSrc should be ["'self'", 'trusted-cdn.com']
+การตั้งค่า csp ของคุณนั้นยังไม่ถูกต้อง defaultSrc ควรต้องเป็น ["'self'"] และ scriptSrc ควรเป็น ["'self'", 'trusted-cdn.com']
 
 ```js
 (getUserInput) =>

@@ -8,23 +8,23 @@ dashedName: understand-bcrypt-hashes
 
 # --description--
 
-For the following challenges, you will be working with a new starter project that is different from the previous one. You can find the new starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-bcrypt), or clone it from [GitHub](https://github.com/freeCodeCamp/boilerplate-bcrypt/).
+Fแบบทดสอบหลังจากนนี้ คุณจะต้องทำงานกับ project starter ใหม่ที่แตกต่างจากก่อนหนานี้ ดู starter project ที่จะใช้ได้ที่ [Replit](https://replit.com/github/freeCodeCamp/boilerplate-bcrypt) หรือโคลนจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-bcrypt/)
 
-BCrypt hashes are very secure. A hash is basically a fingerprint of the original data- always unique. This is accomplished by feeding the original data into an algorithm and returning a fixed length result. To further complicate this process and make it more secure, you can also *salt* your hash. Salting your hash involves adding random data to the original data before the hashing process which makes it even harder to crack the hash.
+Bcrypt hashes  มีความปลอดภัยมาก โดยพื้นฐานแล้วแฮชคือลายนิ้วมือของข้อมูลดั้งเดิม ซึ่งไม่ซ้ำกันเสมอ ทำได้โดยการป้อนข้อมูลต้นฉบับลงในอัลกอริทึมและส่งคืนผลลัพธ์ที่มีความยาวคงที่ เพื่อทำให้กระบวนการนี้ซับซ้อนยิ่งขึ้นและทำให้ปลอดภัยยิ่งขึ้น คุณยังสามารถ *salt*  แฮชของคุณได้อีกด้วย การ salt แฮชของคุณเกี่ยวข้องกับการเพิ่มข้อมูลแบบสุ่มไปยังข้อมูลดั้งเดิมก่อนกระบวนการแฮช ซึ่งทำให้ถอดรหัสแฮชยากขึ้นอีก
 
-BCrypt hashes will always looks like `$2a$13$ZyprE5MRw2Q3WpNOGZWGbeG7ADUre1Q8QO.uUUtcbqloU0yvzavOm` which does have a structure. The first small bit of data `$2a` is defining what kind of hash algorithm was used. The next portion `$13` defines the *cost*. Cost is about how much power it takes to compute the hash. It is on a logarithmic scale of 2^cost and determines how many times the data is put through the hashing algorithm. For example, at a cost of 10 you are able to hash 10 passwords a second on an average computer, however at a cost of 15 it takes 3 seconds per hash... and to take it further, at a cost of 31 it would takes multiple days to complete a hash. A cost of 12 is considered very secure at this time. The last portion of your hash `$ZyprE5MRw2Q3WpNOGZWGbeG7ADUre1Q8QO.uUUtcbqloU0yvzavOm`, looks like one large string of numbers, periods, and letters but it is actually two separate pieces of information. The first 22 characters is the salt in plain text, and the rest is the hashed password!
+BCrypt hashes จะมีหน้าตาประมาณ `$2a$13$ZyprE5MRw2Q3WpNOGZWGbeG7ADUre1Q8QO.uUUtcbqloU0yvzavOm` ซึ่งมีโครงสร้างเสมอ ข้อมูลขนาดเล็กชิ้นแรก `$2a` เป็นตัวกำหนดว่ามีการใช้อัลกอริธึมแฮชประเภทใด ส่วนถัดไป `$13` กำหนด *cost* ซึ่ง cost จะเกี่ยวกับพลังงานที่ใช้ในการคำนวณแฮช มันอยู่ในมาตราส่วนลอการิทึม 2^cost และกำหนดจำนวนครั้งที่ข้อมูลถูกใส่ผ่านอัลกอริธึมการแฮช ตัวอย่างเช่น ที่ cost 10 คุณสามารถแฮชรหัสผ่านได้ 10 รหัสต่อวินาทีบนคอมพิวเตอร์โดยเฉลี่ย อย่างไรก็ตาม ที่cost 15 จะใช้เวลา 3 วินาทีต่อแฮช... และอย่างกรณีที่มากกว่านั้น cost 31 อาจจะใช้เวลาหลายวันกว่าจะแฮชสำเร็จ cost 12 ถือว่าปลอดภัยมากในขณะนี้ ในส่วนสุดท้ายของแฮชของคุณ `$ZyprE5MRw2Q3WpNOGZWGbeG7ADUre1Q8QO.uUUtcbqloU0yvzavOm` มันอาจจะดูเหมือนชุดตัวเลข เครื่องหมายจุด และตัวอักษรจำนวนมาก แต่จริงๆ แล้วเป็นข้อมูลสองส่วนแยกกัน อักขระ 22 ตัวแรกเป็น salt ในข้อความธรรมดาและส่วนที่เหลือเป็นรหัสผ่านที่แฮช!
 
 # --instructions--
 
-To begin using BCrypt, add it as a dependency in your project and require it as 'bcrypt' in your server.
+เริ่มการใช้งาน BCrypt โดยการเพิ่มมันเป็น dependency ในโปรเจคของคุณ และ require มันเป็น 'bcrypt' ในเซิร์ฟเวอร์ของคุณ
 
-Add all your code for these lessons in the `server.js` file between the code we have started you off with. Do not change or delete the code we have added for you.
+เพิ่มโค้ดของคุณสำหรับบทเรียนนี้ในไฟล์ `server.js` ภายในโค้ดที่เราได้เริ่มไว้ให้คุณแล้ว อย่าเปลี่ยนหรือลบโค้ดที่เราได้เตรียมไว้ให้คุณ
 
-Submit your page when you think you've got it right.
+ส่งเว็บเพจของคุณมา เมื่อคุณคิดว่าทำสำเร็จแล้ว
 
 # --hints--
 
-BCrypt should be a dependency.
+BCrypt ควรเป็น dependency.
 
 ```js
 (getUserInput) =>
@@ -43,7 +43,7 @@ BCrypt should be a dependency.
   );
 ```
 
-BCrypt should be properly required.
+BCrypt ควรถูก require อย่างถูกต้อง
 
 ```js
 (getUserInput) =>
