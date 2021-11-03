@@ -1,589 +1,577 @@
 {
   "responsive-web-design": {
-    "title": "Design responsivo para a web",
-    "intro": [
-      "Nessa certificação de Design responsivo para a web, você aprenderá as linguagens que os desenvolvedores usam para construir sites: HTML (Linguagem de Marcação de Hipertexto) para o conteúdo e CSS (Folha de Estilo em Cascata) para o design.",
-      "Primeiro, você vai construir um aplicativo de fotos de gato para aprender o básico de HTML e CSS. Mais tarde, você aprenderá técnicas modernas como variáveis CSS construindo um pinguim, e melhores práticas de acessibilidade criando um formulário web.",
-      "Finalmente, você vai aprender a fazer páginas web que respondem a diferentes tamanhos de telas construindo um card do Twitter com Flexbox, e um layout complexo de blog com o CSS Grid."
+    "title": "Responsive Web Design",
+    "intro": [ 
+      "......ในการออกแบบ Responsive Web Design Certification นี้ คุณจะได้เรียนรู้โค้ดภาษาที่นักพัฒนาใช้ในการสร้างหน้าเว็บ: HTML (Hypertext Markup Language) สำหรับการออกแบบเนื้อหา และ CSS (Cascading Style Sheets) สำหรับการออกแบบหน้าเว็บไซต์",
+       "ก่อนอื่น คุณจะต้องสร้างแอปรูปถ่ายแมวเพื่อเรียนรู้พื้นฐานของ HTML และ CSS ต่อมา คุณจะได้เรียนรู้เทคนิคสมัยใหม่ เช่น ตัวแปรของ CSS โดยการสร้าง Penguin และแนวทางที่ดีที่สุดสำหรับการสร้างเว็บฟอร์ม",
+       "โดยท้ายที่สุดแล้ว คุณจะได้เรียนรู้วิธีสร้างหน้าเว็บที่ตอบสนองต่อขนาดหน้าจอต่างๆ โดยการสร้างการ์ด Twitter ด้วย Flexbox และรูปแบบบล็อกที่ซับซ้อนด้วย CSS Grid"
+
     ],
-    "note": "Observação: algumas extensões de navegador, como bloqueadores de anúncios e extensões de modo escuro podem interferir nos testes. Se você tiver problemas, recomendamos desabilitar extensões que modifiquem o conteúdo ou o layout das páginas durante o curso.",
+    "note": "โน้ต : การใช้เบราเซอร์เอ็กซ์เทนชันต่างๆ เช่น บล็อคโฆษณา, การใช้งานดาร์กโหมด อาจจะไปติดขัดในช่วงการทดสอบบ้างอย่าง ถ้าคุณเจอปัญหาเหล่านี้ พวกเราแนะนำให้คุณปิดการใช้งานเบราเซอร์เอ็กซ์เทนชันต่างๆ ขณะที่ทำการเรียนอยู่",
     "blocks": {
       "basic-html-and-html5": {
-        "title": "HTML e HTML5 básicos",
+        "title": "Basic HTML and HTML5",
         "intro": [
-          "HTML é uma linguagem de marcação que usa uma sintaxe ou notação especial para descrever a estrutura de uma página da Web para o navegador. Os elementos HTML geralmente têm tags de abertura e fechamento que os circundam e dão significado ao conteúdo. Elementos diferentes, por exemplo, podem descrever o texto como um título, um parágrafo ou item da lista.",
-          "Neste curso, você vai construir um aplicativo de fotografia de gatos para aprender alguns dos elementos HTML mais comuns: os blocos de construção de qualquer página da web."
+          "HTML เป็นภาษากำกับข้อความ(มาร์กอัพ)ที่ใช้ซินแท็กซ์หรือสัญลักษณ์พิเศษเพื่ออธิบายโครงสร้างของหน้าเว็บไปยังเบราว์เซอร์ ซึ่งองค์ประกอบของ HTML จะมีแท็กเปิด แท็กปิดอยู่รอบๆที่ให้ความหมายกับเนื้อหาคอนเทนต์ เช่น องค์ประกอบต่างๆ ที่ใช้อธิบายข้อความที่เป็นหัวเรื่อง ย่อหน้า หรือรายการได้",
+          "ในหลักสูตรนี้ คุณจะต้องสร้างแอปภาพถ่ายแมว เพื่อเรียนรู้องค์ประกอบของ HTML ที่พบบ่อยที่สุด ซึ่งเป็นส่วนประกอบสำคัญของหน้าเว็บได้"
+
         ]
       },
       "basic-css": {
-        "title": "CSS básico",
+        "title": "Basic CSS",
         "intro": [
-          "O CSS, ou Folhas de Estilo em Cascata, diz ao navegador como exibir o texto e outros conteúdos que você escreve em HTML. Com o CSS, você pode controlar a cor, fonte, tamanho, espaçamento e muitos outros aspectos dos elementos HTML.",
-          "Agora que você descreveu a estrutura do seu aplicativo de fotos de gatos, aplique um pouco de estilo com o CSS."
+          "CSS หรือ Cascading Style Sheets ทำหน้าที่บอกเบราว์เซอร์ ถึงวิธีการแสดงข้อความและเนื้อหาอื่น ๆ ที่คุณเขียนในภาษา HTML และด้วยภาษา CSS คุณสามารถควบคุมสี แบบอักษร ขนาด ระยะห่าง และองค์ประกอบของ HTML อื่น ๆ อีกมากมาย",
+          "ถึงตอนนี้แล้ว คุณจะต้องอธิบายโครงสร้างของแอปรูปถ่ายแมวของคุณ โดยกำหนดสไตล์ด้วยภาษา CSS"
+
         ]
       },
       "applied-visual-design": {
-        "title": "Design visual aplicado",
+        "title": "Applied Visual Design",
         "intro": [
-          "O design visual é uma combinação de tipografia, teoria de cores, gráficos, animação, layout da página e mais para ajudar a entregar sua mensagem única.",
-          "Neste curso, você vai aprender como aplicar esses diferentes elementos do design visual em suas páginas da web."
+          "การออกแบบภาพ (Visual design) เป็นการผสมผสานระหว่างการออกแบบตัวอักษร ทฤษฎีสี กราฟิก แอนิเมชั่น เค้าโครงหน้า และอื่นๆ เพื่อช่วยนำเสนอข้อความที่เป็นเอกลักษณ์ของคุณ",
+          "ในหลักสูตรนี้ คุณจะได้เรียนรู้วิธีใช้องค์ประกอบต่างๆ ของการออกแบบภาพกับหน้าเว็บของคุณ"
         ]
       },
       "applied-accessibility": {
-        "title": "Acessibilidade aplicada",
+        "title": "Applied Accessibility",
         "intro": [
-          "No desenvolvimento web, a acessibilidade refere-se ao conteúdo da web e uma UI (interface do usuário) que pode ser compreendida, navegada e interagida por um público amplo. Isto inclui pessoas com deficiência visual, auditiva, de mobilidade ou cognitiva.",
-          "Nesse curso, você aprenderá as melhores práticas para a construção de páginas da Web que sejam acessíveis a todos."
+          "ในการพัฒนาเว็บไซต์ การเข้าถึง (accessibility) จะอ้างอิงถึงเนื้อหาเว็บไซต์และ UI (user interface)ที่จะช่วยให้สามารถเข้าใจ นำทางและโต้ตอบกับผู้ใช้ในวงกว้างได้ รวมถึงผู้ที่มีความบกพร่องทางการมองเห็น การได้ยิน การเคลื่อนไหว หรือการรับรู้",
+          "ในหลักสูตรนี้ คุณจะได้เรียนรู้แนวทางในการปฏิบัติที่ดีที่สุดสำหรับการสร้างหน้าเว็บที่ทำให้ทุกคนสามารถเข้าถึงได้"
+
         ]
       },
       "responsive-web-design-principles": {
-        "title": "Princípios do design responsivo para a web",
+        "title": "Responsive Web Design Principles",
         "intro": [
-          "Existem muitos dispositivos que podem acessar a Internet, de todas as formas e tamanhos. O Design responsivo para a web é a prática de se projetar sites flexíveis, que podem responder a diferentes tamanhos de telas, orientações e resoluções.",
-          "Neste curso, você vai aprender a usar CSS para fazer suas páginas ficarem bonitas, não importa em qual dispositivo elas estão sendo visualizadas."
+          "มีอุปกรณ์มากมายที่ช่วยให้เข้าถึงเว็บได้ สามารถมาได้ทั้งแบบรูปทรงและขนาดต่างๆ ซึ่งการออกแบบเว็บให้ตอบสนอง ตามอุปกรณ์ คือ แนวทางปฏิบัติของการออกแบบเว็บไซต์ที่ดี ค่อนข้างยืดหยุ่นและสามารถตอบสนองต่อขนาดหน้าจอ การวางแนว และความละเอียดต่างๆ ได้",
+          "ในหลักสูตรนี้ คุณจะได้เรียนรู้วิธีใช้ CSS เพื่อทำให้หน้าเว็บของคุณดูดี ไม่ว่าจะดูบนอุปกรณ์ใดก็ตาม"
+
         ]
       },
       "css-flexbox": {
         "title": "CSS Flexbox",
         "intro": [
-          "O Flexbox é um método de layout poderoso e com bastante suporte, que foi introduzido na versão mais recente do CSS, o CSS3. Com o Flexbox, é fácil centralizar os elementos na página e criar interfaces dinâmicas que diminuem e aumentam de tamanho automaticamente.",
-          "Nesse curso, você aprenderá os fundamentos de flexbox e layouts dinâmicos construindo um card do Twitter."
+          "Flexbox เป็นวิธีการจัดวางที่มีประสิทธิภาพและได้รับการยอมรับเป็นอย่างดี ซึ่งได้รับการแนะนำด้วยภาษา CSS เวอร์ชั่นล่าสุดหรือ CSS3  ใน Flexbox จะช่วยให้ง่ายต่อการจัดองค์ประกอบบนหน้าเว็บไซต์และสร้าง UI แบบไดนามิกที่สามารถย่อและขยายโดยอัตโนมัติ",
+          "ในหลักสูตรนี้ คุณจะได้เรียนรู้พื้นฐานการวางเลย์เอาท์แบบ Flexbox และแบบไดนามิก จากการสร้างการ์ด Twitter"
+
         ]
       },
       "css-grid": {
         "title": "CSS Grid",
         "intro": [
-          "O CSS Grid é um padrão mais recente, que torna fácil construir layouts responsivos complexos. Ele funciona transformando um elemento HTML em uma grade e permite que você coloque elementos filhos em qualquer lugar dentro dele.",
-          "Nesse curso, você aprenderá os fundamentos do CSS Grid construindo diferentes layouts complexos, incluindo um blog."
+          " CSS grid คือมาตรฐานใหม่ที่ช่วยให้ง่ายต่อการสร้างเลย์เอาท์ที่ตอบสนองแบบซับซ้อนได้ ทำงานได้โดยเปลี่ยนองค์ประกอบของ HTML ให้เป็น grid และให้วางองค์ประกอบย่อยไว้ที่ภายในเลย์เอาท์",
+          "ในหลักสูตรนี้ คุณจะได้เรียนรู้พื้นฐานของ CSS grid โดยการสร้างเลย์เอาท์ที่ซับซ้อนแบบต่างๆ รวมถึงบล็อก(Blog)ด้วย"
         ]
       },
       "responsive-web-design-projects": {
-        "title": "Projetos do design responsivo para a web",
+        "title": "Responsive Web Design Projects",
         "intro": [
-          "Hora de colocar suas novas habilidades aprendidas para funcionar. Ao trabalhar nestes projetos, você terá a oportunidade de aplicar todas as competências, princípios e conceitos que você aprendeu até agora: HTML, CSS, Visual Design, Acessibilidade e muito mais.",
-          "Conclua os cinco projetos de programação web abaixo para ganhar a sua Certificação de Design responsivo para a web."
+          "ถึงเวลาที่จะนำทักษะที่คุณเรียนรู้ไปใช้งานแล้ว การทำงานในโปรเจคนี้ คุณจะต้องใช้ทักษะ หลักการ และแนวคิดทั้งหมดที่คุณได้เรียนรู้มาใน: HTML, CSS, การออกแบบภาพ, การช่วยสำหรับการเข้าถึง(Accessibility) และเรื่องอื่นๆ .",
+          "การทำโปรเจคเขียนเว็บทั้ง 5 โปรเจคด้านล่างนี้ ได้สำเร็จ จะได้รับประกาศนียบัตรด้านการออกแบบเว็บที่ตอบสนองตามอุปกรณ์ (Responsive Web Design)"
+
         ]
       },
       "basic-html-cat-photo-app": {
-        "title": "Aplicativo básico de fotos de gatos em HTML",
-        "intro": [
-          "",
-          ""
-        ]
+        "title": "Basic HTML Cat Photo App",
+        "intro": ["", ""]
       },
       "basic-css-cafe-menu": {
-        "title": "Menu de uma cafeteria em CSS básico",
-        "intro": [
-          "",
-          ""
-        ]
+        "title": "Basic CSS Cafe Menu",
+        "intro": ["", ""]
       },
       "css-box-model": {
-        "title": "Modelo da caixa do CSS",
+        "title": "CSS Box Model",
         "intro": [
-          "Mark Rothko era conhecido por seu estilo abstrato de pintura. As pinturas de Rothko comumente retratavam regiões retangulares coloridas em tamanhos variados.",
-          "Nesta lição, você usará o CSS para criar sua própria pintura no estilo de Rothko. Você usará muitas das habilidades que você já está praticando, bem como novas ferramentas do CSS como o desfoque (blur) e a transformação (transform)."
+          "Mark Rothko เป็นจิตรกรที่มีชื่อเสียง โดยการวาดภาพนามธรรมของเขา ภาพวาดของ Rothko มักจะแสดงถึงฟิล์มสี่เหลี่ยมสีในขนาดต่างๆ",
+          "ในบทเรียนนี้ คุณจะใช้ CSS เพื่อสร้างภาพวาดของคุณเองตามสไตล์ของ Rothko โดยคุณจะใช้ทักษะมากมายที่คุณได้ฝึกฝนมาแล้ว รวมถึงเครื่องมือของ CSS ใหม่ เช่น การเบลอและการแปลงภาพอีกด้วย"
         ]
       },
       "css-variables-skyline": {
-        "title": "Horizonte com variáveis de CSS",
-        "intro": [
-          "",
-          ""
-        ]
+        "title": "CSS Variables Skyline",
+        "intro": ["", ""]
       },
+      "registration-form": { "title": "Registration Form", "intro": ["", ""] },
       "accessibility-quiz": {
-        "title": "Teste de acessibilidade",
-        "intro": [
-          "",
-          ""
-        ]
+        "title": "Accessibility Quiz",
+        "intro": ["", ""]
       },
       "css-picasso-painting": {
-        "title": "Pintura de Picasso em CSS",
+        "title": "CSS Picasso Painting",
         "intro": [
-          "Pablo Picasso era conhecido pelo seu estilo de pintura, o Cubismo, um estilo reconhecido pelas representações de objetos quebrados e remontados a partir de múltiplas perspectivas. As pinturas de Picasso são muitas vezes muito abstratas e fazem pensar.",
-          "Neste curso, você usará o CSS para criar sua própria pintura ao estilo de Picasso. Você aprenderá sobre os ícones SVG FontAwesome, posicionamento em CSS e reforçará as habilidades que você já está aprendendo."
+          "Pablo Picasso เป็นที่รู้จักจากรูปแบบการวาดภาพแบบคิวบิสม์ของเขา ซึ่งเป็นรูปแบบที่แสดงถึงวัตถุที่พังทลายและประกอบขึ้นใหม่จากหลายมุมมอง ภาพวาดของ Picasso มักเป็นแสดงถึงนามธรรมขั้นสูงและการกระตุ้นความคิด",
+          "ในหลักสูตรนี้ คุณจะใช้ CSS เพื่อสร้างภาพวาดของคุณเองตามสไตล์ของ Picasso คุณจะได้เรียนรู้เกี่ยวกับไอคอน FontAwesome SVG การวางตำแหน่งของ CSS และเสริมทักษะที่คุณพึ่งจะได้เรียนรู้ไป"
+
         ]
       },
       "css-piano": {
-        "title": "Piano em CSS",
-        "intro": [
-          "",
-          ""
-        ]
+        "title": "CSS Piano",
+        "intro": ["", ""]
       }
     }
   },
   "javascript-algorithms-and-data-structures": {
-    "title": "Algoritmos e estruturas de dados em JavaScript",
+    "title": "JavaScript Algorithms and Data Structures",
     "intro": [
-      "Enquanto o HTML e o CSS controlam o conteúdo e o estilo de uma página, o JavaScript é usado para torná-lo interativo. Na certificação de Algoritmos e Estruturas de Dados em JavaScript, você aprenderá os fundamentos do JavaScript, incluindo variáveis, arrays, objetos, laços e funções.",
-      "Assim que souber os fundamentos abaixo, você aplicará esse conhecimento, criando algoritmos para manipular strings, fatorar números e até mesmo calcular a órbita da Estação Espacial Internacional.",
-      "Durante o processo, você também aprenderá dois estilos ou paradigmas de programação importantes: a Programação Orientada a Objetos (POO) e a Programação Funcional (PF)."
+        "ในขณะที่ภาษา HTML และ CSS ควบคุมส่วนเนื้อหาและการจัดรูปแบบหน้าเว็บ แต่ JavaScript นั้นจะถูกใช้เพื่อทำให้เว็บไซต์สามารถโต้ตอบกับผู้ใช้ได้ ในคอร์ส JavaScript Algorithm and Data Structures Certification นี้คุณจะได้เรียนรู้พื้นฐานของภาษา JavaScript รวมถึงตัวแปร อาร์เรย์ อ็อบเจ็กต์ ลูป และฟังก์ชันด้วย .",
+        "ถ้าคุณมีพื้นฐานอยู่แล้ว คุณสามารถนำความรู้นั้นไปใช้ได้เลย โดยอาจจะสร้างอัลกอริธึมเพื่อจัดการกับสตริง แยกตัวประกอบตัวเลข และแม้แต่คำนวณวงโคจรของสถานีอวกาศนานาชาติ",
+        "ในระหว่างการเรียนนี้ คุณจะได้เรียนรู้รูปแบบการเขียนโปรแกรมหรือตัวอย่างที่สำคัญ อยู่สองรูปแบบคือ: Object Oriented Programming (OOP) และ Functional Programming (FP)" 
     ],
-    "note": "Observação: algumas extensões de navegador, como bloqueadores de anúncios e bloqueadores de scripts, podem interferir nos testes. Se você tiver problemas, recomendamos desabilitar extensões que modifiquem ou bloqueiem o conteúdo das páginas durante o curso.",
+    "note": "โน้ต : การใช้เบราเซอร์เอ็กซ์เทนชันต่างๆ เช่น บล็อคโฆษณา, การใช้งานดาร์กโหมด อาจจะไปติดขัดในช่วงการทดสอบบ้างอย่าง ถ้าคุณเจอปัญหาเหล่านี้ พวกเราแนะนำให้คุณปิดการใช้งานเบราเซอร์เอ็กซ์เทนชันต่างๆ ขณะที่ทำการเรียนอยู่",
     "blocks": {
       "basic-javascript": {
-        "title": "JavaScript básico",
+        "title": "Basic JavaScript",
         "intro": [
-          "O JavaScript é uma linguagem de script que você pode usar para tornar as páginas da web interativas. É uma das principais tecnologias da web, juntamente com o HTML e o CSS e tem o suporte de todos os navegadores modernos.",
-          "Neste curso, você aprenderá conceitos básicos de programação em JavaScript. Você vai começar com estruturas básicas de dados, como números e strings. Então, você aprenderá a trabalhar com arrays, objetos, funções, laços, instruções if/else e muito mais."
+            "JavaScript เป็นภาษาโปรแกรมที่สามารถใช้เพื่อทำให้หน้าเว็บโต้ตอบกลับผู้ใช้ได้ ซึ่งเป็นหนึ่งในเทคโนโลยีหลักของเว็บ พร้อมด้วย HTML และ CSS และเป็นที่นิยมของเบราว์เซอร์สมัยใหม่ทั้งหมด",
+            "ในหลักสูตรนี้ คุณจะได้เรียนรู้แนวคิดการเขียนโปรแกรมพื้นฐานใน JavaScript เริ่มต้นด้วยโครงสร้างข้อมูลพื้นฐาน เช่น ตัวเลขและสตริง หลังจากนั้น คุณจะได้เรียนรู้การทำงานกับอาร์เรย์ อ็อปเจ็กต์ ฟังก์ชัน ลูป คำสั่ง if/else และ อื่นๆ." 
         ]
       },
       "es6": {
         "title": "ES6",
         "intro": [
-          "ECMAScript, ou ES, é uma versão padronizada do JavaScript. Como todos os principais navegadores seguem essa especificação, os termos ECMAScript e JavaScript são intercambiáveis.",
-          "A maior parte do JavaScript que você aprendeu até este momento estava na ES5 (ECMAScript 5), que foi finalizada em 2009. Mesmo que você ainda possa escrever programas em ES5, saiba que o JavaScript está constantemente em evolução e, por isso, novas funcionalidades são lançadas todos os anos.",
-          "O ES6, lançado em 2015, adicionou muitos recursos novos e poderosos à linguagem. Neste curso, você aprenderá quais são eles, incluindo <code>let</code> e <code>const</code>, arrow functions, classes, promises e módulos."
+            "ECMAScript หรือ ES คือเวอร์ชั่นมาตรฐานของภาษา JavaScript เนื่องจากเบราว์เซอร์หลักทั้งหลายเป็นไปตามข้อกำหนดของ ECMAScript และ JavaScript จึงทำให้สามารถใช้แทนกันได้",
+            " ในภาษา JavaScript ส่วนใหญ่ที่คุณได้เรียนรู้มาจนถึงตอนนี้จะเขียนอยู่ใน ES5 (ECMAScript 5) ซึ่งปรับปรุงล่าสุดในปี 2552 ในขณะที่คุณยังคงเขียนโปรแกรมใน ES5 ได้ แต่ JavaScript มีการพัฒนาอย่างต่อเนื่องและมีการเปิดตัวคุณสมบัติใหม่ทุกปี" ,
+            "ES6 ที่เปิดตัวในปี 2015 ได้เพิ่มคุณสมบัติใหม่ๆ ที่มีประสิทธิภาพให้มากขึ้น ในหลักสูตรนี้ คุณจะได้เรียนรู้คุณลักษณะใหม่เหล่านี้ รวมถึง <code>let</code> และ <code>const</code> ฟังก์ชันลูกศร คลาส(classes) โพรมมิส(promises) และโมดูล" 
         ]
       },
       "regular-expressions": {
-        "title": "Expressões regulares",
+        "title": "Regular Expressions",
         "intro": [
-          "Expressões regulares, muitas vezes abreviadas como \"regex\" ou \"regexp\", são padrões que ajudam programadores a encontrar correspondências, pesquisar e substituir texto. Expressões regulares são muito poderosas, mas podem ser difíceis de ler porque usam caracteres especiais para fazer correspondências mais complexas e flexíveis.",
-          "Neste curso, você aprenderá a usar caracteres especiais, grupos de captura, buscas positivas e negativas e outras técnicas para encontrar correspondências com o texto desejado."
+            "นิพจน์ทั่วไป (Regular expression) มักจะย่อเป็น \"regex\" หรือ \"regexp\" ซึ่งเป็นรูปแบบที่ช่วยให้โปรแกรมเมอร์จับคู่ ค้นหา หรือแทนที่ข้อความได้ นิพจน์ทั่วไปนั้นมีประสิทธิภาพมาก แต่อาจจะอ่านค่อนข้างยาก เนื่องจากมีการใช้อักขระพิเศษ มีการสร้างแมตช์ที่ซับซ้อนและมีความยืดหยุ่นมาก",
+            "ในหลักสูตรนี้ คุณจะได้เรียนรู้วิธีใช้อักขระพิเศษ, แคปเจอร์กรุ๊ป (Capture groups), Positive lookaheads, Negative lookaheads และเทคนิคอื่นๆ เพื่อจับคู่ข้อความตามที่คุณต้องการ" 
         ]
       },
       "debugging": {
-        "title": "Depuração",
+        "title": "Debugging",
         "intro": [
-          "A depuração é o processo de revisão de código, procurando qualquer problema e corrigindo-o.",
-          "Os problemas no código geralmente chegam em três formas: erros de sintaxe, que impedem que o programa seja executado, erros de tempo de execução, onde o código tem um comportamento inesperado, ou erros lógicos, onde o código não faz o que você pretendia.",
-          "Neste curso, você aprenderá a usar o console do JavaScript para depurar programas e prevenir erros comuns antes de que aconteçam."
+            "ดีบัก (Debugging) เป็นขั้นตอนในระหว่างการเขียนโค้ด ขณะที่พบปัญหา คุณต้องทำการแก้ไขปัญหานั้น",
+            "ปัญหาในโค้ดโดยทั่วไปมีอยู่สามรูปแบบ: 1. ข้อผิดพลาดทางซินแทกซ์ (Syntax errors) ที่ป้องกันไม่ให้โปรแกรมของคุณทำงาน 2. ข้อผิดพลาดทางรันไทม์ (Runtime errors) ที่โค้ดของคุณมีพฤติกรรมที่ไม่คาดคิด 3. ข้อผิดพลาดทางด้านตรรกะ (Logical errors) ที่โค้ดของคุณไม่ทำในสิ่งที่คุณตั้งใจไว้",
+            "ในหลักสูตรนี้ คุณจะได้เรียนรู้วิธีใช้คอนโซลของ JavaScript เพื่อการดีบักโปรแกรมและป้องกันปัญหาทั่วไปก่อนที่จะเกิดขึ้น" 
         ]
       },
       "basic-data-structures": {
-        "title": "Estruturas de dados básicas",
+        "title": "Basic Data Structures",
         "intro": [
-          "Os dados podem ser guardados e acessados de muitas formas. Você já conhece algumas estruturas de dados comuns em JavaScript: os arrays e os objetos.",
-          "Neste curso de Estruturas de Dados Básicas, você vai aprender mais sobre as diferenças entre arrays e objetos, e qual deles usar em diferentes situações. Também aprenderá a usar métodos úteis do JS, como <code>splice()</code> e <code>Object.keys()</code>, para acessar e manipular dados."
+            "ข้อมูลสามารถจัดเก็บและเข้าถึงได้หลายวิธี คุณก็รู้อยู่แล้วคือ โครงสร้างข้อมูลโดยทั่วไปของ JavaScript เช่น อาร์เรย์และออปเจ็ค",
+            "ในหลักสูตรนี้ โครงสร้างข้อมูลพื้นฐาน คุณจะได้เรียนรู้เพิ่มเติมเกี่ยวกับความแตกต่างระหว่างอาร์เรย์และออปเจ็ค และสิ่งที่ควรใช้ในสถานการณ์ต่างๆ รวมทั้งยังจะได้เรียนรู้วิธีการใช้วิธีของ JS ที่เป็นประโยชน์ในการเขียนโค้ด เช่น <code>splice()</code > และ <code>Object.keys()</code> เพื่อเข้าถึงและจัดการข้อมูลได้" 
         ]
       },
       "basic-algorithm-scripting": {
-        "title": "Programação de algoritmos básicos",
+        "title": "Basic Algorithm Scripting",
         "intro": [
-          "Um algoritmo é uma série de instruções passo a passo, que descrevem como fazer alguma coisa.",
-          "Para escrever um algoritmo eficiente, é importante saber dividir o problema em partes menores e pensar atentamente sobre maneiras de resolver cada uma dessas partes com código.",
-          "Nesse curso, você aprenderá os fundamentos do raciocínio algorítmico escrevendo algoritmos que fazem de tudo, desde a conversão de temperaturas ao tratamento de arrays bidimensionais complexos."
+            "อัลกอริทึม คือ ชุดคำสั่งที่ทำที่ละขั้นตอน เพื่ออธิบายถึงวิธีการของการทำบางสิ่งบางอย่าง",
+            "ในการเขียนอัลกอริธึมให้มีประสิทธิภาพ ต้องการแยกปัญหาออกเป็นส่วนย่อย ๆ และคิดอย่างรอบด้านเกี่ยวกับวิธีแก้ปัญหาแต่ละส่วน ด้วยโค้ด",
+            "ในหลักสูตรนี้ คุณจะได้เรียนรู้พื้นฐานของการคิดอัลกอริธึมโดยการเขียนอัลกอริธึมที่ทำทุกอย่างตั้งแต่การแปลงอุณหภูมิไปจนถึงการจัดการอาร์เรย์ 2 มิติที่ซับซ้อน"
+ 
         ]
       },
       "object-oriented-programming": {
-        "title": "Programação Orientada a Objetos",
+        "title": "Object Oriented Programming",
         "intro": [
-          "A POO, ou Programação Orientada a Objetos, é uma das abordagens principais do processo de desenvolvimento de software. Na POO, os objetos e as classes são usados para organizar o código, descrever coisas e o que elas podem fazer.",
-          "Neste curso, você aprenderá os princípios básicos de POO em JavaScript, incluindo a palavra-chave <code>this</code>, cadeias de protótipos, construtores e herança."
+            "OOP หรือ Object Oriented Programming เป็นหนึ่งในแนวทางที่สำคัญในกระบวนการพัฒนาซอฟต์แวร์ ใน OOP ออปเจ็คและคลาสจะทำการจัดระเบียบโค้ดเพื่ออธิบายสิ่งต่างๆ และสิ่งที่สามารถทำได้",
+            "ในหลักสูตรนี้ คุณจะได้เรียนรู้หลักการพื้นฐานของ OOP ใน JavaScript รวมถึงคีย์เวิร์ด <code>this</code>  โปรโตไทป์เชน (Prototype chain), คอนสตรัคเตอร์ (constructors), และอินเฮอริแทนซ์ (Inheritance)" 
         ]
       },
       "functional-programming": {
-        "title": "Programação Funcional",
+        "title": "Functional Programming",
         "intro": [
-          "Programação funcional é outra abordagem popular em desenvolvimento de software. Na programação funcional, o código é organizado em funções menores e básicas, que podem ser combinadas para criar programas complexos.",
-          "Neste curso, você aprenderá os conceitos principais da Programação Funcional, incluindo funções puras, como evitar mutações e como escrever código mais limpo com métodos como <code>.map()</code> e <code>.filter()</code>."
+            "Functional Programming เป็นแนวทางอีกแนวทางหนึ่งที่ได้รับความนิยมในการพัฒนาซอฟต์แวร์ ใน Functional Programming จะทำให้โค้ดที่เป็นฟังก์ชันพื้นฐานมีขนาดเล็กลง ซึ่งสามารถนำมารวมกันเพื่อสร้างเป็นโปรแกรมที่ซับซ้อนได้",
+            "ในหลักสูตรนี้ คุณจะได้เรียนรู้แนวคิดหลักของ Functional Programming รวมถึงฟังก์ชันต่าง ๆ รวมถึงวิธีหลีกเลี่ยงการกลายพันธุ์ (Mutations) และวิธีเขียนโค้ดให้คลีน (Cleaner code) ด้วยวิธีการต่างๆ เช่น <code>.map()</code> และ <code>.filter ()</code>" 
         ]
       },
       "intermediate-algorithm-scripting": {
-        "title": "Programação de algoritmos intermediários",
+        "title": "Intermediate Algorithm Scripting",
         "intro": [
-          "Agora que você conhece as noções básicas de raciocínio algorítmico, juntamente com POO e Programação Funcional, teste suas habilidades com os desafios de Programação de Algoritmos Intermediários."
+            "ถึงตอนนี้ คุณก็มีความรู้พื้นฐานของการคิดอัลกอริธึมพร้อมกับ OOP และ Functional Programming แล้ว  ในหัวข้อ Intermediate Algorithm Scripting นี้ จะมีโจทย์ให้คุณทดสอบทักษะที่คุณได้เรียนรู้มาเรียบร้อยแล้ว"
         ]
       },
       "javascript-algorithms-and-data-structures-projects": {
-        "title": "Projetos de algoritmos e estruturas de dados em JavaScript",
+        "title": "JavaScript Algorithms and Data Structures Projects",
         "intro": [
-          "É hora de colocar suas novas habilidades em JavaScript para funcionar. Estes projetos são similares aos desafios de programação de algoritmos que você fez antes — só que muito mais difíceis.",
-          "Conclua estes 5 projetos de JavaScript para ganhar a certificação de Algoritmos e Estruturas de Dados do JavaScript."
+            "ถึงเวลาแล้วที่จะนำทักษะ JavaScript อันใหม่ของคุณไปใช้งานจริง โปรเจคเหล่านี้คล้ายกับโจทย์ความท้าทายในการเขียนสคริปต์อัลกอริทึมที่คุณเคยทำมาก่อนหน้านี้ แต่ว่าจะมีความยากกว่ามาก ให้คุณได้ลองมาทดลองเขียนกัน",
+            "ทำโปรเจค JavaScript ทั้ง 5 โปรเจคให้สำเร็จ เพื่อรับใบประกาศไปรษณียบัตร JavaScript Algorithms and Data Structures"
+ 
         ]
       },
       "basic-javascript-rpg-game": {
-        "title": "Jogo básico de RPG em JavaScript",
-        "intro": [
-          "",
-          ""
-        ]
+        "title": "Basic JavaScript RPG Game",
+        "intro": ["", ""]
       },
       "intermediate-javascript-calorie-counter": {
-        "title": "Contador de calorias JavaScript Intermediário",
-        "intro": [
-          "",
-          ""
-        ]
+        "title": "Intermediate JavaScript Calorie Counter",
+        "intro": ["", ""]
       },
       "functional-programming-spreadsheet": {
-        "title": "Planilha de programação funcional",
-        "intro": [
-          "",
-          ""
-        ]
+        "title": "Functional Programming Spreadsheet",
+        "intro": ["", ""]
       }
     }
   },
   "front-end-development-libraries": {
-    "title": "Bibliotecas de desenvolvimento em front-end",
+    "title": "Front End Development Libraries",
     "intro": [
-      "Agora que você está familiarizado com HTML, CSS e JavaScript, melhore suas habilidades aprendendo algumas das bibliotecas front-end mais populares do setor.",
-      "Na certificação de bibliotecas de desenvolvimento em front-end, você aprenderá a estilizar seu site rapidamente com Bootstrap. Você também aprenderá a adicionar a lógica aos seus estilos CSS e a ampliá-los com Sass.",
-      "Mais tarde, você construirá um carrinho de compras e outras aplicações para aprender a criar Aplicativos de Página Única (Single Page Applications - SPA) poderosos com React e Redux."
+        "เมื่อคุณคุ้นเคยกับภาษา HTML, CSS และ JavaScript แล้ว ต่อมาจะมาเพิ่มระดับทักษะของคุณด้วยการเรียนรู้ Frond-end libraries ที่เป็นที่นิยมในอุตสาหกรรม",
+        "ซึ่งใน Front End Development Libraries Certification คุณจะได้เรียนรู้วิธีจัดรูปแบบเว็บไซต์ของคุณอย่างรวดเร็วด้วย Bootstrap และเรียนรู้วิธีเพิ่มตรรกะให้กับสไตล์ของ CSS รวมถึงการขยายรูปด้วย Sass",
+        "หลังจากนั้น คุณจะได้เรียนรู้ในการสร้างตะกร้าสินค้าและแอปพลิเคชันอื่นๆ เพื่อเรียนรู้วิธีสร้างอย่าง Single Page Application (SPA) อันทรงพลังด้วย React และ Redux" 
     ],
     "note": "",
     "blocks": {
       "bootstrap": {
         "title": "Bootstrap",
         "intro": [
-          "O Bootstrap é um framework de front-end usado para projetar páginas da web e aplicativos responsivos. Ele adota uma abordagem mobile-first para o desenvolvimento na web e inclui estilos e classes CSS pré-construídos, além de algumas funcionalidades JavaScript.",
-          "Neste curso, você aprenderá a criar sites responsivos com Bootstrap, e usará as classes que ele tem para estilizar botões, imagens, formulários, navegação e outros elementos comuns."
+            "Bootstrap เป็น Front-End framework ที่ใช้ในการออกแบบหน้าเว็บและแอปพลิเคชันที่มีการตอบสนองกับผู้ใช้ ซึ่งต้องใช้โมบายเฟิร์ส(Mobile-first)ในการพัฒนาเว็บไซต์ และรวมถึงรูปแบบและคลาส CSS ที่สร้างไว้ล่วงหน้า บวกกับฟังก์ชันการทำงานของ JavaScript บางอย่าง",
+            "ในหลักสูตรนี้ คุณจะได้เรียนรู้วิธีสร้างเว็บไซต์ที่ตอบสนองด้วย Bootstrap และใช้คลาสที่รวมไว้เพื่อจัดรูปแบบปุ่ม รูปภาพ แบบฟอร์ม การนำทาง และองค์ประกอบทั่วไป ๆ" 
         ]
       },
       "jquery": {
         "title": "jQuery",
         "intro": [
-          "O jQuery é uma das bibliotecas JavaScript mais usadas no mundo.",
-          "Em 2006, quando foi lançado, todos os principais navegadores lidavam com JavaScript de forma ligeiramente diferente. O jQuery simplificou o processo de escrita de JavaScript do lado do cliente, além de assegurar que seu código funcionasse da mesma forma em todos os navegadores.",
-          "Neste curso, você aprenderá a usar jQuery para selecionar, remover, clonar e modificar diferentes elementos na página."
+            "jQuery เป็นหนึ่งในไลบรารีของ JavaScript ที่ใช้กันอย่างแพร่หลายมากที่สุดในโลก",
+            "ในปีค.ศ. 2006 เมื่อทำการเปิดตัว jQuery ทำให้เบราว์เซอร์หลักที่ใช้ JavaScript นั้นแตกต่างกันเล็กน้อย ซึ่ง jQuery ทำให้กระบวนการเขียน JavaScript ฝั่งไคลเอ็นต์ง่ายขึ้น และยังช่วยให้มั่นใจว่าโค้ดของคุณทำงานในลักษณะเดียวกันในทุกเบราว์เซอร์",
+            "ในหลักสูตรนี้ คุณจะได้เรียนรู้วิธีใช้ jQuery เพื่อทำการเลือก ลบ โคลน และแก้ไของค์ประกอบต่างๆ ในหน้าเว็บเพจ" 
         ]
       },
       "sass": {
         "title": "SASS",
         "intro": [
-          "Sass, ou \"Stylesheets Sintaticamente Incríveis\", do inglês \"Syntactically Awesome StyleSheets\", é uma extensão da linguagem CSS. A extensão adiciona recursos que não estão disponíveis no CSS básico, facilitando a simplificação e manutenção dos arquivos de estilo de seus projetos.",
-          "Neste curso sobre Sass, você aprenderá a armazenar dados em variáveis, aninhar CSS, criar estilos reutilizáveis com mixins, adicionar lógica e loops aos seus estilos, e mais."
+            "Sass หรือ \"Syntactically Awesome StyleSheets\" เป็นส่วนขยายภาษาของ CSS ทำหน้าที่เพิ่มคุณสมบัติที่ไม่มีใน CSS พื้นฐาน ซึ่งทำให้ง่ายต่อการดูแลและรักษาสไตล์ชีต (Stylesheet) สำหรับโปรเจคของคุณ",
+            "ในหลักสูตร Sass นี้ คุณจะได้เรียนรู้วิธีจัดเก็บข้อมูลในตัวแปร, nest CSS, สร้างสไตล์ที่นำกลับมาใช้ใหม่ได้ด้วยมิกซ์อินต่างๆ, เพิ่มตรรกะและลูปให้เข้ากับสไตล์ของคุณ และอื่นๆ"
         ]
       },
       "react": {
         "title": "React",
         "intro": [
-          "React é uma biblioteca JavaScript popular para a criação de interfaces de usuário reutilizáveis e orientadas por componentes para páginas ou aplicações.",
-          "O React combina HTML com funcionalidade JavaScript em sua própria linguagem markup, chamada JSX. Ele também facilita a gestão do fluxo de dados por toda a aplicação.",
-          "Neste curso, você vai aprender a criar diferentes componentes do React, a gerenciar dados na forma de propriedades de estado (\"state props\"), a utilizar diferentes métodos de ciclo de vida, como o <code>componentDidMount</code>, e muito mais."
+            "React เป็นไลบรารีของ JavaScript ที่มีความยอดนิยมมาก ในการทำให้สร้างอินเทอร์เฟซผู้ใช้ (UI) ใช้ซ้ำได้และเป็นตัวขับเคลื่อน component สำหรับการสร้างหน้าเว็บหรือแอปพลิเคชัน",
+            "React นั้นเป็นการรวม HTML กับฟังก์ชันของ JavaScript เข้าด้วยกัน เป็นภาษามาร์กอัปของตัวเองที่เรียกว่า JSX นอกจากนี้ React ยังช่วยให้การจัดการการไหลของข้อมูลทั่วทั้งแอปพลิเคชันได้ง่ายขึ้น",
+            "ในหลักสูตรนี้ คุณจะได้เรียนรู้วิธีสร้าง React components ต่างๆ จัดการข้อมูลในรูปแบบของ State props และใช้วิธี lifecycle ต่างๆ เช่น <code>componentDidMount</code> และอื่นๆ อีกมากมาย" 
         ]
       },
       "redux": {
         "title": "Redux",
         "intro": [
-          "À medida que as aplicações crescem em tamanho e escopo, o gerenciamento de dados compartilhados torna-se muito mais difícil. O Redux é definido como um \"contêiner de estado previsível para aplicações JavaScript\", o que ajuda a garantir que suas aplicações funcionem de forma previsível e que sejam mais fáceis de testar.",
-          "Embora você possa usar o Redux com qualquer biblioteca de visualizações, apresentamos o Redux aqui antes de combiná-lo com React no próximo conjunto de cursos.",
-          "Nesse curso, você vai aprender os fundamentos das stores, actions, reducers e middlewares do Redux para gerenciar dados por toda sua aplicação."
+            "เมื่อแอปพลิเคชันมีขนาดและขอบเขตใหญ่ขึ้น การจัดการข้อมูลที่แชร์กันก็จะ ยากขึ้นด้วย ซึ่ง Redux จะถูกกำหนดให้เป็น \"Container state ที่สามารถคาดการณ์ได้สำหรับแอป JavaScript\" ที่ช่วยให้มั่นใจว่าแอปของคุณทำงานได้อย่างมีทิศทาง และทดสอบได้ง่ายขึ้น",
+            "ในขณะที่คุณสามารถใช้ Redux กับวิวไลบรารี่ใดๆ ก็ตาม พวกเราได้แนะนำ Redux ที่นี่ก่อนที่จะรวมเข้ากับ React ในชุดหลักสูตรถัดไป",
+            "ในหลักสูตรนี้ คุณจะได้เรียนรู้พื้นฐานของการกักเก็บ(store) การดำเนินการ รีดิวเซอร์ และมิดเดิลแวร์ของ Redux เพื่อจัดการข้อมูลทั้งแอปพลิเคชันของคุณ" 
         ]
       },
       "react-and-redux": {
-        "title": "React e Redux",
+        "title": "React and Redux",
         "intro": [
-          "React e Redux são muitas vezes mencionados juntos, e por uma boa razão. O desenvolvedor que criou o Redux era um desenvolvedor do React que queria facilitar o compartilhamento de dados entre diferentes componentes.",
-          "Agora que você sabe como gerenciar o fluxo de dados compartilhados com Redux, é hora de combinar esse conhecimento com React. Nos cursos do React e Redux, você vai construir um componente React e aprender como gerenciar estado localmente, ao nível do componente e por toda aplicação com Redux."
+            "React และ Redux มักจะพูดถึงร่วมกันและด้วยเหตุผลที่ดี นักพัฒนาที่สร้าง Redux ก็เป็นนักพัฒนา React ที่ต้องการทำให้การแบ่งปันข้อมูลใน component ต่างๆ ง่ายขึ้น",
+            "ถึงตอนนี้ คุณรู้วิธีการจัดการการไหลของข้อมูลที่แชร์กับ Redux แล้ว ก็ถึงเวลานำความรู้นั้นกับ React ในหลักสูตร React และ Redux ของคุณมาสร้าง React components และเรียนรู้เกี่ยวกับวิธีจัดการกับ stage ในส่วนของ component ตลอดทั้งแอปพลิเคชันด้วย Redux"
+ 
         ]
       },
       "front-end-development-libraries-projects": {
-        "title": "Projetos de desenvolvimento com bibliotecas de front-end",
+        "title": "Front End Development Libraries Projects",
         "intro": [
-          "É hora de testar suas habilidades nas bibliotecas de desenvolvimento de front-end. Use Bootstrap, jQuery, Sass, React e Redux para criar 5 projetos que testarão tudo o que você aprendeu até agora.",
-          "Complete todos os 5 projetos e você ganhará a certificação em Bibliotecas de Desenvolvimento Front-End."
+            "ถึงเวลาแล้ว ที่จะลองนำทักษะความรู้ด้าน Front-end development และไลบราลี่ของคุณ ใช้ Bootstrap, jQuery, Sass, React และ Redux นี้ทำโปรเจคทั้ง 5 โปรเจคนี้ เพื่อที่จะทดสอบสิ่งที่คุณได้เรียนรู้มาจนถึงตอนนี้",
+            "ทำโปรเจคทั้ง 5 โปรเจคให้สำเร็จ เพื่อรับใบประกาศไปรษณียบัตรด้าน Front End Development Libraries" 
         ]
       }
     }
   },
   "data-visualization": {
-    "title": "Visualização de dados",
+    "title": "Data Visualization",
     "intro": [
-      "Os dados estão ao nosso redor, mas isso não quer dizer muita coisa se eles não tiverem forma ou contexto.",
-      "Na certificação de visualização de dados, você criará tabelas, gráficos e mapas para apresentar diferentes tipos de dados com a biblioteca D3.js.",
-      "Você também aprenderá sobre JSON (JavaScript Object Notation) e sobre como trabalhar com dados on-line usando uma API (Application Programming Interface)."
+      "ข้อมูล ดาต้า ข่าวสารมีอยู่มากมายรายล้อมรอบตัวเรา แต่ก็ไม่ได้มีความหมายมากนักหากไม่มีรูปร่างหรือบริบทที่ชัดเจน",
+      "ในการรับรองการแสดงข้อมูลหรือ Data Visualization คุณจะต้องนำข้อมูลมาสร้างแผนภูมิ กราฟ หรือแผนที่เพื่อนำเสนอข้อมูลประเภทต่างๆ โดยสามารถทำได้ด้วยการใช้ไลบรารี D3.js",
+      "นอกจากนี้ คุณยังจะได้เรียนรู้เกี่ยวกับ JSON (JavaScript Object Notation) และวิธีการทำงานกับข้อมูลออนไลน์โดยใช้ API (Application Programming Interface) อีกด้วย"
     ],
     "note": "",
     "blocks": {
       "data-visualization-with-d3": {
-        "title": "Visualização de dados com D3",
+        "title": "Data Visualization with D3",
         "intro": [
-          "D3, ou D3.js, significa Documentos Orientados aos Dados. É uma biblioteca JavaScript para criar visualizações de dados dinâmicas e interativas no navegador.",
-          "O D3 foi criado para funcionar com padrões web comuns, como o HTML, o CSS e os Scalable Vector Graphics (SVG).",
-          "O D3 suporta vários tipos diferentes de formatos de dados de entrada. Usando os poderosos métodos integrados do D3, você consegue transformar esses dados em diferentes gráficos, diagramas e mapas.",
-          "Nos cursos de visualização de dados com o D3, você aprenderá a trabalhar com dados para criar diferentes diagramas, gráficos, elementos \"hover\" e outros componentes para gerar visualizações de dados dinâmicas e atrativas."
+          "D3 หรือ D3.js ย่อมาจาก Data Driven Documents เป็นไลบรารีอย่างหนึ่งของ JavaScript มีหน้าที่สร้างการแสดงข้อมูลแบบไดนามิกหรือการโต้ตอบกับผู้ใช้ในเบราว์เซอร์",
+          "โดย D3 สร้างขึ้นมาทำงานร่วมกับเว็บทั่วไป นั่นก็คือ HTML, CSS และ Scalable Vector Graphics (SVG)",
+          "D3 สามารถรองรับรูปแบบการอินพุตข้อมูลได้หลายประเภท โดยเมื่อรับข้อมูลมาแล้วจะใช้วิธีการที่มีประสิทธิภาพในการ Build-in ข้อมูลและจะแปลงข้อมูลเหล่านั้นเป็นแผนภูมิ กราฟ หรือแผนที่ต่างๆ ได้",
+          "ในหลักสูตร Data Visualization with D3 คุณจะได้เรียนรู้วิธีการทำงานกับข้อมูลต่างๆ เพื่อสร้างแผนภูมิ กราฟ เอเลเมนท์แบบโฮเวอร์ (Hover elements) และ ingredients อื่นๆ เพื่อสร้างการแสดงข้อมูลแบบไดนามิกที่มีอินเตอร์เล็กชั่นและมีความน่าสนใจ"
+
         ]
       },
       "json-apis-and-ajax": {
-        "title": "APIs JSON e AJAX",
+        "title": "JSON APIs and AJAX",
         "intro": [
-          "Da mesma forma como as IUs ajudam as pessoas a usarem os programas, as APIs (Interfaces de Programação de Aplicação) ajudam programas a interagir com outros programas. As APIs são ferramentas que os computadores usam para se comunicarem uns com os outros, em parte, para enviar e receber dados.",
-          "Programadores frequentemente usam AJAX (JavaScript e XML assíncronos) quando estão trabalhando com APIs. AJAX refere-se a um conjunto de tecnologias que faz solicitações assíncronas para um servidor transferir dados e, em seguida, carregar os dados que forem retornados para a página. Os dados transferidos entre o navegador e o servidor frequentemente estão em um formato chamado JSON (JavaScript Object Notation).",
-          "Este curso ensinará o básico sobre como trabalhar com APIs e diferentes tecnologias AJAX no browser."
+          "JSON มีลักษณะเหมือนกับวิธีที่ UI ประเภทต่างๆ ที่ช่วยให้ผู้ใช้ใช้โปรแกรม API (Application Programming Interfaces) ได้และช่วยให้โปรแกรมสามารถโต้ตอบกับโปรแกรมอื่นๆได้ ส่วน API เป็นเครื่องมือที่คอมพิวเตอร์ใช้ในการสื่อสารระหว่างกัน ส่วนหนึ่งใช้ในการส่งและอีกส่วนหนึ่งรับข้อมูล",
+          "โปรแกรมเมอร์มักจะใช้ AJAX (Asynchronous JavaScript และ XML) ร่วมกับ APIs ต่างๆ โดย AJAX คือกลุ่มเทคโนโลยีที่ส่งคำขอแบบ Asynchronous ไปยังเซิร์ฟเวอร์เพื่อถ่ายโอนข้อมูล จากนั้นจะโหลดข้อมูลที่ส่งคืนมายังเว็บเพจ และข้อมูลที่ถูกถ่ายโอนระหว่างเบราว์เซอร์กับเซิร์ฟเวอร์ ซึ่งจะอยู่ในรูปแบบที่เรียกว่า JSON (JavaScript Object Notation)",
+          "ในหลักสูตรนี้จะสอนพื้นฐานเกี่ยวกับการทำงานของ API และเทคโนโลยี AJAX ต่างๆ ในเบราว์เซอร์"
+
         ]
       },
       "data-visualization-projects": {
-        "title": "Projetos de visualização de dados",
+        "title": "Data Visualization Projects",
         "intro": [
-          "Agora que você aprendeu a trabalhar com D3, APIs e tecnologias AJAX, teste suas habilidades com esses 5 projetos de Visualização de Dados.",
-          "Nestes projetos, você precisará buscar dados e analisar um conjunto de dados e, em seguida, usar D3 para criar diferentes visualizações de dados. Conclua todos para receber a sua certificação de Visualização de Dados."
+          "ถึงตอนนี้แล้ว คุณคงจะได้เรียนรู้วิธีทำงานกับเทคโนโลยีใน D3, API และ AJAX มาบ้างแล้ว งั้นเรามามาทดสอบทักษะของคุณกับโปรเจค Data Visualization ทั้ง 5 โครงการกัน",
+          "ในโปรเจคเหล่านี้ คุณจะต้องทำการดึงข้อมูล, แยกและวิเคราะห์ชุดข้อมูล หลังจากนั้นใช้ D3 สร้างการแสดงข้อมูลในรูปแบบต่าง ๆ",
+          "การทำโปรเจคทั้ง 5 ได้สำเร็จจะได้รับประกาศไปรษณียบัตรทางด้าน Data Visualization"
         ]
       },
-      "d3-dashboard": {
-        "title": "Painel do D3",
-        "intro": [
-          "",
-          ""
-        ]
-      }
+      "d3-dashboard": { "title": "D3 Dashboard", "intro": ["", ""] }
     }
   },
   "relational-databases": {
-    "title": "Bancos de dados relacionais",
+    "title": "Relational Databases",
     "intro": [
-      "Para estes cursos, você usará ferramentas e software reais de desenvolvedor, incluindo o VS Code, PostgreSQL e a linha de comando do Linux/Unix para completar tutoriais interativos e criar projetos."
+      "สำหรับหลักสูตรนี้ คุณจะได้ใช้เครื่องมือและซอฟต์แวร์สำหรับนักพัฒนาจริงๆ ซึ่งรวมถึงการใช้โปรแกรม VS Code, PostgreSQL และ Command line ใน Linux / Unix เพื่อทำแบบฝึกหัดเกี่ยวกับการโต้ตอบและสร้างโปรเจค"
     ],
     "blocks": {
       "learn-relational-databases": {
-        "title": "Aprenda bancos de dados relacionais",
+        "title": "Learn Relational Databases",
         "intro": [
-          "Estes cursos começam com comandos básicos do Bash. Usando o terminal, você aprenderá tudo, de navegar e manipular um sistema de arquivos e fazer scripts no Bash, até usos mais avançados.",
-          "Depois, você aprenderá a criar e trabalhar com bancos de dados relacionados usando o PostgreSQL, um sistema de gerenciamento de banco de dados, e o SQL, a linguagem destes bancos de dados.",
-          "Por fim, você aprenderá o Git, um sistema de controle de versão, e o GitHub, um serviço de hospedagem e repositório de código - duas ferramentas essenciais para todo o desenvolvedor."
+          "ในหลักสูตรนี้ เริ่มต้นด้วยการใช้คำสั่งพื้นฐานของ Bash โดยการใช้เทอร์มินัล (Terminal) นี้ คุณจะได้เรียนรู้ทุกอย่างตั้งแต่การนำทาง (Navigating), การจัดการระบบไฟล์ (Manipulating), การเขียนสคริปต์ใน Bash ไปจนถึงการใช้งานขั้นสูง",
+          "ต่อไป คุณจะได้เรียนรู้วิธีการสร้างและทำงานกับฐานข้อมูลเชิงสัมพันธ์ (Relational databases) โดยใช้ PostgreSQL ซึ่งเป็นระบบจัดการฐานข้อมูล และ SQL ซึ่งเป็นภาษาของฐานข้อมูลเหล่านี้",
+          "และสุดท้าย คุณจะได้เรียนรู้ Git ในระบบควบคุมเวอร์ชัน และ GitHub ซึ่งเป็นโฮสต์สำหรับที่เก็บโค้ด ซึ่งเป็นเครื่องมือสำคัญสองอย่างสำหรับนักพัฒนาซอฟต์แวร์ทุกคน"
+
         ]
       }
     }
   },
   "back-end-development-and-apis": {
-    "title": "APIs e desenvolvimento de back-end",
+    "title": "Back End Development and APIs",
     "intro": [
-      "Até esse ponto, você usou JavaScript apenas no front-end para adicionar interatividade a uma página, resolver desafios de algoritmos ou construir uma SPA. Mas o JavaScript também pode ser usado no back-end, ou servidor, para construir aplicações web inteiras.",
-      "Hoje em dia, uma das formas populares de se criar aplicações é através do uso de microsserviços, que são pequenas aplicações modulares que trabalham em conjunto para formar uma aplicação maior inteira.",
-      "Na certificação de APIs e desenvolvimento de back-end, você aprenderá a escrever aplicações de back-end com o Node.js e o npm (Node Package Manager). Você também vai construir aplicações web com o framework Express e criará um microsserviço de localização de pessoas com o MongoDB e com a biblioteca Mongoose."
+      "จนถึงตอนนี้ คุณคงจะคุ้นกับการใช้ JavaScript ทางด้าน Frond-end เพื่อเพิ่มการโต้ตอบในหน้าเพจ, แก้ปัญหาอัลกอริทึม หรือสร้าง SPA แล้ว แต่ว่า JavaScript ยังมีสามารถที่ใช้ในด้าน Back-end หรือส่วนของเซิร์ฟเวอร์อีกด้วย ซึ่งทำหน้าที่ในการสร้างเว็บแอปพลิเคชันทั้งหมด .",
+      "ในปัจจุบัน วิธีหนึ่งที่ได้รับความนิยมมากที่สุดในการสร้างแอปพลิเคชัน คงจะเป็นการสร้างผ่านไมโครเซอร์วิส ซึ่งเป็นแอปพลิเคชันโมดูลาร์ขนาดเล็กที่ทำงานร่วมกันเพื่อสร้างภาพรวมที่ใหญ่ขึ้น",
+      "ใน Back-End Development และ APIs Certification นั้น คุณจะได้เรียนรู้วิธีเขียนแอปแบบ Back-End ด้วย Node.js และ npm (Node Package Manager) นอกจากนี้คุณยังจะได้สร้างเว็บแอปพลิเคชันด้วย Express Framework และสร้างไมโครเซอร์วิสของ People Finder ด้วย MongoDB และไลบราลี่ Mongoose อีกด้วย"
     ],
     "note": "",
     "blocks": {
       "managing-packages-with-npm": {
-        "title": "Gerenciamento de pacotes com o NPM",
+        "title": "Managing Packages with NPM",
         "intro": [
-          "O npm (Node Package Manager) é uma ferramenta de linha de comando para instalar, criar e compartilhar pacotes de código JavaScript escritos para Node.js. Há muitos pacotes de código aberto disponíveis no npm. Então, antes de iniciar um projeto, explore os pacotes que já existem para que você não acabe recriando do zero coisas como trabalhar com datas ou buscar dados de uma API.",
-          "Neste curso, você aprenderá o básico sobre como usar o npm, incluindo como trabalhar com o <code>package.json</code> e como gerenciar suas dependências instaladas."
+          "npm (Node Package Manager) คือ เครื่องมือ command line ที่ใช้ในการติดตั้ง สร้าง และแชร์ package ของโค้ด JavaScript ที่เขียนขึ้นใน Node.js ซึ่งใน npm มีโอเพ่นซอร์ส package มากมาย ที่สามารถนำมาใช้ได้เลย ดังนั้นก่อนที่จะเริ่มทำโปรเจคของคุณ ให้คุณใช้เวลาในการศึกษาเพิ่มเติม เพื่อที่คุณจะได้ไม่ต้องสร้างโค้ดใหม่สำหรับบางสิ่ง ที่มีอยู่แล้วใน npm เช่น การทำงานเกี่ยวกับวันที่หรือการดึงข้อมูลจาก API",
+          "ซึ่งในหลักสูตรนี้ คุณจะได้เรียนรู้พื้นฐานของการใช้ npm รวมถึงวิธีการทำงานกับ <code>package.json</code> และวิธีการจัดการ dependencies ที่คุณติดตั้งไว้"
         ]
       },
       "basic-node-and-express": {
-        "title": "Básico sobre Node e Express",
+        "title": "Basic Node and Express",
         "intro": [
-          "O Node.js é um ambiente de execução em Javascript que permite que os desenvolvedores escrevam programas de back-end (no lado do servidor) em JavaScript. O Node.js vem com diversos módulos internos — pequenos programas independentes — que ajudam com isso. Alguns dos principais módulos incluem o HTTP, que atua como um servidor, e um sistema de arquivos, que atua como um módulo para ler e modificar arquivos.",
-          "Nos últimos cursos, você aprendeu a instalar e gerenciar pacotes a partir do npm, que são coleções de pequenos módulos. Estes pacotes podem ajudá-lo a construir aplicações maiores e mais complexas.",
-          "O Express é um framework leve para a criação de aplicações web, sendo um dos pacotes mais populares no npm. O Express torna muito mais fácil criar um servidor e lidar com o roteamento para seu aplicativo, lidando com coisas como direcionar as pessoas para a página correta quando elas visitam um determinado endpoint, como <pre>/blog</pre>.",
-          "Neste curso, você aprenderá o básico do Node e do Express, incluindo como criar um servidor, manusear arquivos diferentes e manipular diferentes solicitações de um navegador."
+          "Node.js คือ JavaScript แบบ runtime ที่มีไว้เพื่อช่วยให้นักพัฒนาสามารถเขียนโปรแกรม Back-end (Server-side) ใน JavaScript ได้อย่างราบรื่นขึ้น ซึ่ง Node.js มาพร้อมกับโมดูล Build-in ที่เป็นโปรแกรมอิสระขนาดเล็ก สามารถช่วยในเรื่องนี้ได้ บางโมดูลหลัก (core module) รวมถึง HTTP ที่ทำหน้าที่เหมือนกับเป็นเซิร์ฟเวอร์ และ File System ซึ่งเป็นโมดูลสำหรับอ่านและแก้ไขไฟล์",
+          "ซึ่งในหลักสูตรล่าสุดที่คุณเรียน วิธีการติดตั้งและจัดการ package จาก npm ซึ่งเป็นคอลเล็กชัน(Collections) ของโมดูลย่อย ซึ่ง package เหล่านี้สามารถช่วยให้คุณสร้างแอปพลิเคชันขนาดใหญ่และซับซ้อนยิ่งขึ้นได้",
+          "Express คือ เฟรมเวิร์กของเว็บแอปพลิเคชันไลท์เวท (lightweight web application framework) และเป็นหนึ่งใน package ที่นิยมใช้บน npm, ซึ่ง Express ช่วยให้การสร้างเซิร์ฟเวอร์และจัดการการกำหนดเส้นทางสำหรับแอปพลิเคชันของคุณง่ายขึ้นมาก ซึ่งช่วยจัดการสิ่งต่างๆ เช่น นำผู้คนไปยังหน้าที่ถูกต้องเมื่อพวกเขาเยี่ยมชม ปลายทางบางอย่าง เช่น  <pre>/blog</pre>",
+          "ในหลักสูตรนี้ คุณจะได้เรียนรู้พื้นฐานของ Node และ Express รวมถึงวิธีการสร้างเซิร์ฟเวอร์ ที่ให้บริการไฟล์ต่างๆ และจัดการคำขอต่างๆ จากเบราว์เซอร์อีกด้วย"
         ]
       },
       "mongodb-and-mongoose": {
-        "title": "MongoDB e Mongoose",
+        "title": "MongoDB and Mongoose",
         "intro": [
-          "O MongoDB é uma aplicação de banco de dados que armazena documentos JSON (ou registros) que podem ser usados em sua aplicação. Ao contrário do SQL, outro tipo de banco de dados, o Mongo é um banco de dados não relacional ou \"NoSQL\". Isto significa que o Mongo armazena todos os dados associados dentro de um registro, em vez de armazená-los em muitas tabelas predefinidas, como em um banco de dados SQL.",
-          "O Mongoose é um pacote popular do npm que é frequentemente instalado junto com MongoDB. Com o Mongoose, você pode usar objetos JavaScript simples em vez de JSON, o que torna mais fácil trabalhar com o Mongo. Além disso, ele permite que você crie projetos para seus documentos, chamados schemas, para que você não salve acidentalmente o tipo errado de dados e cause bugs mais tarde.",
-          "Nos cursos de MongoDB e Mongoose, você aprenderá os fundamentos de trabalhar com dados persistentes, incluindo como configurar um modelo, salvar, excluir e buscar documentos no banco de dados."
+          "MongoDB เป็นแอปพลิเคชันฐานข้อมูลที่เอาไว้เก็บเอกสารใน JSON (หรือ record) ซึ่งคุณสามารถนำใช้ได้ในแอปพลิเคชันของคุณได้เลย ซึ่งแตกต่างจาก SQL ที่เป็นฐานข้อมูลอีกรูปแบบหนึ่ง ที่เก็บข้อมูลแบบเป็นตารางที่ตั้งไว้ล่วงหน้า(Preset table) ส่วน Mongo นั้นจะจัดเก็บที่เกี่ยวข้องทั้งหมดใน record ที่เดียว ซึ่ง Mongo นั้นเป็นฐานข้อมูลที่ไม่เกี่ยวข้องกับฐานข้อมูล \"NoSQL\" เลย ",
+          "Mongoose เป็น package ยอดนิยมบน npm ที่มักจะติดตั้งควบคู่ไปกับ Mongo, ด้วย Mongoose ของคุณสามารถใช้ออปเจ็คแบบธรรมดาของ JavaScript แทน JSON ได้ ซึ่งทำให้การทำงานกับ Mongo ทำได้ง่ายขึ้น นอกจากนี้ยังช่วยให้คุณสร้างบูลปริ้นท์ (blueprint) ในเอกสารของคุณที่ เรียกว่า Schema ได้อีกด้วย เพื่อเป็นการป้องกัน ไม่ให้คุณบันทึกข้อมูลผิดประเภทโดยที่ไม่ได้ตั้งใจหรือทำให้เกิดข้อผิดพลาดบั๊ก (Bugs) ในภายหลัง",
+          "ในหลักสูตรของ MongoDB และ Mongoose คุณจะได้เรียนรู้เกี่ยวกับพื้นฐานของการทำงานกับข้อมูลถาวร รวมถึงวิธีการตั้งค่าโมเดล และการบันทึก การลบ และการค้นหาเอกสารในฐานข้อมูลดาต้าเบสอีกด้วย"
+
         ]
       },
       "back-end-development-and-apis-projects": {
-        "title": "Projetos de APIs e desenvolvimento de back-end",
+        "title": "Back End Development and APIs Projects",
         "intro": [
-          "Você já trabalhou com APIs antes, mas agora que você conhece o npm, Node, Express, MongoDB e o Mongoose, é hora de construir a sua própria API. Utilize tudo o que você aprendeu até esse ponto para criar 5 microsserviços diferentes – aplicações menores e com escopo limitado.",
-          "Depois de criá-las, você terá 5 APIs de microsserviço sensacionais, que poderão ser mostradas para amigos, familiares e potenciais empregadores. Ah, e você também terá uma Certificação em APIs e desenvolvimento de back-end novinha."
+          "คุณคงอาจจะทำงานกับ API มาก่อนหน้านี้ แต่ตอนนี้เมื่อคุณรู้จักกับ npm, Node, Express, MongoDB และ Mongoose แล้ว ก็ถึงเวลาสร้างแอปพลิเคชันของคุณเอง ให้คุณใช้ความคิดเกี่ยวกับสิ่งที่คุณได้เรียนรู้มาจนถึงปัจจุบัน เพื่อสร้าง microservices 5 ตัวที่แตกต่างกัน ซึ่งจะเป็นแอปพลิเคชันขนาดเล็กที่มีขอบเขตที่จำกัด",
+          "หลังจากสร้างแอปพลิเคชันเหล่านี้ คุณจะมี microservices API เจ๋งๆ 5 ตัวที่คุณสามารถเอาไปอวดเพื่อน ครอบครัว หรือนายจ้างของคุณได้ และคุณอาจจะได้เป็น Back-End Development รุ่นใหม่ที่ยอดเยี่ยมรวมถึงยังได้รับ APIs Certification อีกด้วย"
         ]
       }
     }
   },
   "quality-assurance": {
-    "title": "Garantia de qualidade",
+    "title": "Quality Assurance",
     "intro": [
-      "À medida que seus programas ou aplicativos da web se tornam mais complexos, você vai querer testá-los para garantir que novas alterações não quebrem as funcionalidades originais.",
-      "Na certificação de garantia de qualidade, você aprenderá a escrever testes com o Chai para garantir que suas aplicações funcionem da maneira que você espera.",
-      "Em seguida, você vai construir uma aplicação de chat para aprender conceitos avançados de Node e Express. Você também usará o Pug como um modelo de motor, o Passport, para autenticação, e o Socket.io, para comunicação em tempo real entre o servidor e os clientes conectados."
+      "เนื่องจากโปรแกรมหรือเว็บแอปพลิเคชันของคุณนั้นมีความซับซ้อนที่มากขึ้น คุณจะต้องทำการทดสอบ เพื่อให้แน่ใจว่าการปรับเปลี่ยนใหม่นั้นจะไม่ทำให้ฟังก์ชันการทำงานเดิมเสียหาย",
+      "ในการรับรองการประกันคุณภาพ(Quality Assurance) คุณจะได้เรียนรู้วิธีเขียนโค้ดการทดสอบกับ Chai เพื่อรับรองให้แน่ใจว่าแอปพลิเคชันของคุณทำงานตามแบบที่คุณคิดไว้",
+      "หลังจากนั้น คุณจะต้องสร้างแอปพลิเคชันแชทเพื่อเรียนรู้แนวคิดขั้นสูงของ Node และ Express นอกจากนี้ คุณยังต้องใช้ Pug เป็นเอ็นจิ้นเทมเพลต(Template engine) อีกรวมถึงใช้ Passport เพื่อทำการตรวจสอบสิทธิ์ และ Socket.io สำหรับการสื่อสารแบบเรียลไทม์ระหว่างเซิร์ฟเวอร์และไคลเอ็นต์ที่เชื่อมต่อ"
     ],
     "note": "",
     "blocks": {
       "quality-assurance-and-testing-with-chai": {
-        "title": "Garantia de qualidade e teste com o Chai",
+        "title": "Quality Assurance and Testing with Chai",
         "intro": [
-          "O Chai é uma biblioteca de testes do JavaScript que ajuda você a confirmar que seu programa ainda se comporta como você espera após realizar alterações no código.",
-          "Usando o Chai, você pode escrever testes que descrevem as exigências do programa e ver se o programa as satisfaz.",
-          "Neste curso, você aprenderá sobre afirmações, igualdade profunda, condição de verdade, testes de APIs e outros fundamentos para testar aplicações JavaScript."
+          " Chai คือไลบรารีทดสอบของ JavaScript ที่ช่วยทำให้ยืนยันได้ว่าโปรแกรมสามารถทำงานตามที่คุณคาดหวังได้หลังจากที่คุณทำการปรับเปลี่ยนโค้ดแล้ว",
+          "การใช้ Chai คุณสามารถเขียนโค้ดการทดสอบที่อธิบายข้อกำหนดของโปรแกรมของคุณและดูว่าโปรแกรมของคุณตรงตามข้อกำหนดได้หรือไม่",
+          "ในหลักสูตรนี้ คุณจะได้เรียนรู้เกี่ยวกับการยืนยัน(assertion) ความเท่าเทียมกันแบบลึก(Deep equality) ความจริง(Truthiness) การทดสอบ API และพื้นฐานอื่นๆ สำหรับการทดสอบแอปพลิเคชันใน JavaScript"
         ]
       },
       "advanced-node-and-express": {
-        "title": "Node e Express avançado",
+        "title": "Advanced Node and Express",
         "intro": [
-          "Agora é hora de fazer um mergulho profundo no Node.js e no Express.js, construindo uma aplicação de chat com um sistema de login.",
-          "Para implementar o sistema de login de forma segura, você precisará saber sobre autenticação. Este é o ato de verificar a identidade de uma pessoa ou um processo.",
-          "Neste curso, você aprenderá a usar o Passport, para gerenciar a autenticação, o Pug, para criar modelos reutilizáveis para a construção rápida do front-end, e web sockets, para a comunicação em tempo real entre os clientes e o servidor."
+          "ถึงเวลาเจาะลึกเกี่ยวกับ Node.js และ Express.js ด้วยการสร้างแอปพลิเคชันแชทด้วยระบบลงชื่อเข้าใช้ (sign-in system)",
+          "ในการใช้ระบบลงชื่อเข้าใช้ (sign-in system) อย่างปลอดภัย คุณจะต้องเรียนรู้เกี่ยวกับการรับรองความถูกต้อง รวมถึงการตรวจสอบตัวตนของบุคคลหรือกระบวนการด้วย",
+          "ในหลักสูตรนี้ คุณจะได้เรียนรู้วิธีใช้ Passport เพื่อจัดการการพิสูจน์ตัวตน และการใช้ Pug เพื่อสร้างเทมเพลตที่ใช้ซ้ำกันได้ ในส่วนการสร้าง Front-end แบบรวดเร็ว หรือ Web sockets สำหรับการสื่อสารแบบเรียลไทม์ระหว่างฝั่งไคลเอนต์กับฝั่งเซิร์ฟเวอร์"
+
         ]
       },
       "quality-assurance-projects": {
-        "title": "Projetos de garantia de qualidade",
+        "title": "Quality Assurance Projects",
         "intro": [
-          "Agora que você conhece bem o front-end e o back-end, chegou a hora de aplicar todas as habilidades e conceitos que você aprendeu até agora. Você vai construir 5 aplicações web diferentes e escrever testes para cada uma, para garantir que estão funcionando e que podem lidar com casos diferentes.",
-          "Depois de concluir estes projetos de garantia de qualidade (QA), você terá mais 5 projetos e uma nova certificação para exibir em seu portfólio."
+          "เมื่อคุณมีความรู้และมีความเชี่ยวชาญทางด้าน Front-end และ Back-end แล้ว ก็ถึงเวลาที่จะใช้ทักษะและแนวคิดเหล่านี้มาใช้ทำงานจริงๆ โดยคุณจะต้องสร้างเว็บแอปพลิเคชันที่แตกต่างกันทั้งหมด 5 แบบ และทำการทดสอบสำหรับแต่ละเว็บแอปพลิเคชัน เพื่อให้แน่ใจว่าใช้งานได้และสามารถจัดการกับเคสกรณีต่างๆ ได้อย่างถูกต้อง",
+          "หลังจากเสร็จสิ้นการทำ Quality Assurance เหล่านี้แล้ว คุณก็จะได้มีโปรเจคอีก 5 โปรเจคและใบประกาศนียบัตรใหม่ เพื่อเป็นการรับรองและสามารถนำโปรเจคที่คุณสร้างนำเข้า Portfolio ของคุณอีกด้วย"
         ]
       }
     }
   },
   "scientific-computing-with-python": {
-    "title": "Computação científica com Python",
+    "title": "Scientific Computing with Python",
     "intro": [
-      "Python é uma das linguagens de programação mais populares e flexíveis atualmente. Você pode usá-la para tudo, desde programação básica até aprendizagem de máquina.",
-      "Na certificação em computação científica com Python, você aprenderá o básico sobre Python, como variáveis, \"loops\", condicionais e funções. Depois, você vai evoluir rapidamente para estruturas de dados complexas, redes, bancos de dados relacionais e visualização de dados."
+      "Python เป็นหนึ่งในภาษาการเขียนโปรแกรมที่มีความยืดหยุ่นและได้รับความนิยมมากที่สุดในปัจจุบัน ซึ่งคุณสามารถใช้มันได้กับทุกอย่าง ตั้งแต่การเขียนสคริปต์ขั้นพื้นฐาน (Basic scripting) จนไปถึงการสร้าง Machine learning",
+      "ใน Scientific Computing with Python Certification นั้นคุ ณจะได้เรียนรู้พื้นฐานของ Python เช่น ตัวแปร ลูป เงื่อนไข และฟังก์ชันต่างๆ จากนั้นจะเรียนเพิ่มเกี่ยวกับโครงสร้างข้อมูลที่ซับซ้อน(Complex data structure) เครือข่าย(Networking) ฐานข้อมูลเชิงสัมพันธ์(Relational database) และการแสดงข้อมูล(Data vusualization)"
     ],
     "note": "",
     "blocks": {
       "python-for-everybody": {
-        "title": "Python para todos",
+        "title": "Python for Everybody",
         "intro": [
-          "Python para todos é uma série gratuita vídeos de cursos que ensina o básico para usar o Python 3.",
-          "Os cursos foram criados pelo Dr. Charles Severance (também conhecido como Dr. Chuck). Ele é Professor Clínico na Escola de Informação da Universidade de Michigan, onde leciona vários cursos orientados à tecnologia, incluindo programação, projeto de banco de dados e desenvolvimento web."
+          "ในหลักสูตร Python for everybody เป็นหลักสูตรวิดีโอฟรีที่สอนเกี่ยวกับพื้นฐานการใช้ Python3",
+          "ในหลักสูตรนี้สร้างขึ้นโดย Dr. Charles Severance (หรือที่รู้จักในชื่อ Dr. Chuck) เขาเป็นศาสตราจารย์ที่โรงเรียนสารสนเทศแห่งมหาวิทยาลัยมิชิแกน ซึ่งเขาสอนหลักสูตรที่เน้นด้านเทคโนโลยีต่างๆ รวมถึงการเขียนโปรแกรม การออกแบบฐานข้อมูล และการพัฒนาเว็บ ."
         ]
       },
       "scientific-computing-with-python-projects": {
-        "title": "Computação científica com projetos em Python",
+        "title": "Scientific Computing with Python Projects",
         "intro": [
-          "Está na hora de testar suas habilidades em Python. Ao completar esses projetos, você demonstrará que possui um bom conhecimento fundamental em Python e se qualificará para a certificação em computação científica em Python."
+          "ถึงเวลาทดสอบทักษะ Python ของคุณแล้ว โดยจะให้คุณทำโปรเจคเหล่านี้ให้สำเร็จ เพื่อที่จะแสดงให้เห็นว่าคุณมีความรู้พื้นฐานที่ดีเกี่ยวกับ Python และมีคุณสมบัติสำหรับการได้รับการรับรองทางScientific Computing with Python Certification อีกด้วย"
         ]
       }
     }
   },
   "data-analysis-with-python": {
-    "title": "Análise de dados com Python",
+    "title": "Data Analysis with Python",
     "intro": [
-      "A análise de dados já existe há um bom tempo. Porém, até poucos anos atrás, os desenvolvedores praticavam-na apenas usando ferramentas caras e de código fechado, como o Tableau. Recentemente, Python, SQL e outras bibliotecas abertas começaram a mudar a análise de dados para sempre.",
-      "Na certificação em análise de dados com Python, você aprenderá os fundamentos da análise de dados com Python. No final desta certificação, você saberá ler dados de fontes como CSVs e SQL, além de usar bibliotecas como Numpy, Pandas, Matplolib e Seaborn para processar e visualizar dados."
+      "การวิเคราะห์ข้อมูลหรือ Data Analysis มีมาอย่างยาวนาน แต่ในช่วงไม่กี่ปีที่ผ่านมา นักพัฒนาได้ฝึกฝนโดยใช้เครื่องมือโอเพนซอร์สราคาแพงต่างๆ  เช่น Tableau หรือแม้กระทั่งเครื่องมือในปัจจุบันอย่าง Python, SQL และโอเพ่นไลบรารีอื่นๆ ทำให้ Data Analysis นั้นได้เปลี่ยนไปตลอดกาล" ,
+      "ในหลักสูตร Data Analysis with Python Certification นี้ คุณจะได้เรียนรู้พื้นฐานของการวิเคราะห์ข้อมูลด้วย Python เมื่อสิ้นสุดหลักสูตรนี้ คุณจะรู้วิธีการอ่านข้อมูลจากแหล่งต่างๆ เช่น CSV และ SQL และวิธีใช้ไลบรารีอย่าง Numpy , Pandas, Matplotlib และ Seaborn เพื่อประมวลผลและแสดงข้อมูลเป็นภาพได้อย่างมีประสิทธิภาพ"
     ],
     "note": "",
     "blocks": {
       "data-analysis-with-python-course": {
-        "title": "Análise de dados com Python",
+        "title": "Data Analysis with Python",
         "intro": [
-          "Nestes cursos completos em vídeo, criados por Santiago Basulto, você aprenderá todo o processo de análise de dados. Você fará a leitura de dados a partir de múltiplas fontes (CSV, SQL, Excel), processará estes dados usando NumPy e Pandas, e os visualizará usando Matplotlib e Seaborn.",
-          "Além disso, incluímos um curso completo sobre o Jupyter Notebook, bem como uma referência rápida para o Python para atualizar suas habilidades em programação."
+          "ในหลักสูตรวิดีโอที่ครอบคลุมเนื้อหาเหล่านี้ซึ่งสร้างโดย Santiago Basulto ซึ่งคุณจะได้เรียนรู้เกี่ยวกับกระบวนการทั้งหมดของการวิเคราะห์ข้อมูล รวมถึงการอ่านข้อมูลจากหลายแหล่ง เช่น (CSV, SQL, Excel) การประมวลผลข้อมูลโดยใช้ NumPy และ Pandas และแสดงเป็นภาพ โดยใช้ Matplotlib และ Seaborn",
+          "นอกจากนี้ เรายังได้รวมหลักสูตร Jupyter Notebook อย่างละเอียดและการอ้างอิง Python ฉบับย่อเพื่อรีเฟรชทักษะการเขียนโปรแกรมของคุณให้อีกด้วย"
         ]
       },
       "numpy": {
         "title": "Numpy",
         "intro": [
-          "Aprenda os conceitos básicos da biblioteca NumPy nos vídeos do curso a seguir, criado por Keith Galli.",
-          "Neste curso, você vai aprender como a NumPy funciona e como ela se compara às listas incorporadas do Python. Você também aprenderá a escrever código com NumPy, indexação, remodelação, estatísticas aplicadas e muito mais."
+          "การเรียนรู้พื้นฐานของไลบรารี NumPy ในเนื้อหาของหลักสูตรนี้ จะสอนโดย Keith Galli",
+          "ในหลักสูตรนี้ คุณจะได้เรียนรู้วิธีการทำงานของไลบรารี NumPy และการเปรียบเทียบกับ built-in อื่นๆ ของ Python นอกจากนี้คุณยังจะได้เรียนรู้วิธีการเขียนโค้ดพร้อมกับการใช้ NumPy การจัดทำดัชนี(Indexing) การปรับรูปร่าง(Reshaping) การประยุกต์ใช้สถิติ และอื่นๆ อีกมากมาย"
         ]
       },
       "data-analysis-with-python-projects": {
-        "title": "Projetos de análise de dados com Python",
+        "title": "Data Analysis with Python Projects",
         "intro": [
-          "Existem muitas maneiras de analisar dados com o Python. Ao completar esses projetos, você vai demonstrar que tem um bom conhecimento fundamental de análise de dados com Python.",
-          "Conclua todos os cursos para solicitar a certificação em Análise de Dados com Python."
+          "มีหลายวิธีในการวิเคราะห์ข้อมูลด้วย Python ซึ่งการทำโปรเจคเหล่านี้ให้สำเร็จ จะถือว่าเป็นโอกาสที่ดีจะแสดงให้เห็นว่าคุณมีความรู้พื้นฐานที่ดีเกี่ยวกับการวิเคราะห์ข้อมูลด้วย Python",
+          "การทำโปรเจคให้เสร็จสิ้นทั้งหมดจะได้รับสิทธิ์ประกาศไปรษณียบัตรในด้าย Data Analysis with Python"
         ]
       }
     }
   },
   "information-security": {
-    "title": "Segurança da informação",
+    "title": "Information Security",
     "intro": [
-      "Com tudo o que fazemos on-line, há uma grande quantidade de informações sensíveis em risco: endereços de e-mail, senhas, números de telefone e muito mais.",
-      "Com o certificado de segurança da informação, você criará um aplicativo web seguro com o HelmetJS para aprender os fundamentos de proteção de informações on-line.",
-      "Você também vai construir um cliente TCP, um Nmap e um scanner de portas em Python. Isso ajudará você a aprender o básico do teste de intrusão — um componente importante de boa segurança da informação."
+      "ในปัจจุบันมีการทำหลายๆอย่างด้วยระบบทางออนไลน์ ทำให้มีข้อมูลที่สำคัญจำนวนมากตกอยู่ในความเสี่ยง ไม่ว่าจะเป็น: ที่อยู่อีเมล รหัสผ่าน หมายเลขโทรศัพท์ หรือข้อมูลอื่นๆ ",
+      "ด้วยการรับรองความปลอดภัยของข้อมูลหรือ Information Security นี้ คุณจะสร้างเว็บที่ปลอดภัยด้วย HelmetJS เพื่อเรียนรู้พื้นฐานของการปกป้องข้อมูลของผู้คนทางออนไลน์",
+      "นอกจากนี้ คุณยังจะสร้างTCP Client และ Nmap และ Port Scanner ใน Python ที่จะช่วยให้คุณได้เรียนรู้เกี่ยวกับพื้นฐานของการทดสอบการเจาะระบบ ซึ่งเป็นองค์ประกอบที่สำคัญของการรักษาความปลอดภัยข้อมูลที่ดี"
     ],
     "note": "",
     "blocks": {
       "information-security-with-helmetjs": {
-        "title": "Segurança da informação com HelmetJS",
+        "title": "Information Security with HelmetJS",
         "intro": [
-          "Este curso de programação se concentra no HelmetJS, um tipo de middleware para aplicativos baseados em Express que define automaticamente os cabeçalhos HTTP. Desta forma, ele pode prevenir que informações confidenciais sejam transmitidas involuntariamente entre o servidor e o cliente.",
-          "A conclusão dos cursos abaixo ajudará você a entender como proteger seu site de comportamentos maliciosos."
+          "หลักสูตรการเขียนโปรแกรมนี้ จะเน้นที่ HelmetJS ซึ่งเป็นประเภทของมิดเดิลแวร์สำหรับแอปพลิเคชันที่ใช้ Express ซึ่งจะใช้ส่วนหัว HTTP โดยอัตโนมัติ วิธีนี้จะช่วยป้องกันไม่ให้ข้อมูลที่สำคัญส่งผ่านระหว่างเซิร์ฟเวอร์และไคลเอ็นต์โดยไม่ได้ตั้งใจ",
+          "การเรียนหลักสูตรด้านล่างนี้จะช่วยให้คุณมีความเข้าใจวิธีป้องกันเว็บไซต์ของคุณจากพฤติกรรมสุ่มเสี่ยงหรือการโจมตีทางโลกไซเบอร์ได้"
         ]
       },
       "python-for-penetration-testing": {
-        "title": "Python para testes de intrusão",
+        "title": "Python for Penetration Testing",
         "intro": [
-          "Estes cursos por vídeo ensinam você a fazer o teste de intrusão com Python. Também conhecido como pen test, o teste de intrusão é um ataque simulado a um sistema para verificar vulnerabilidades.",
-          "Neste curso, você aprenderá a respeito de sockets, criará um cliente e um servidor TCP, construirá um scanner Nmap, além de outras ferramentas e técnicas que os testadores de intrusão usam diariamente."
+          "ในหลักสูตรวิดีโอเหล่านี้ จะสอนเกี่ยวกับการทดสอบการเจาะระบบด้วย Python หรือที่รู้จักกันว่า Pen test การทดสอบการเจาะคือการจำลองการโจมตีต่อระบบเพื่อตรวจสอบช่องโหว่ภายในระบบของเรา",
+          "ในหลักสูตรนี้ คุณจะได้เรียนรู้เกี่ยวกับ socket, วิธีการสร้าง TCP server และ client, การสร้าง Nmap scanner, และเครื่องมือและเทคนิคอื่นๆ เกี่ยวกับ pen test ที่ใช้ในทุกๆวัน"
         ]
       },
       "information-security-projects": {
-        "title": "Projetos de segurança da informação",
+        "title": "Information Security Projects",
         "intro": [
-          "Agora é hora de colocar suas novas habilidades em segurança da informação para funcionar. Estes projetos darão a chance de você praticar as habilidades, princípios e conceitos de segurança da informação que aprendeu.",
-          "Quando você tiver terminado, você terá aprendido diversos projetos de segurança da informação, juntamente com uma certificação que poderá mostrar a amigos, familiares e empregadores."
+          "ตอนนี้ได้เวลานำทักษะการรักษาความปลอดภัยข้อมูลใหม่ของคุณไปใช้งานจริงกัน โดยโปรเจคเหล่านี้จะทำให้คุณมีโอกาสในการใช้ทักษะ หลักการ และแนวคิดของ infosec ที่คุณได้เรียนรู้มาก่อนหน้านี้",
+          "เมื่อคุณทำโปรเจคเสร็จแล้ว คุณจะมีโปรเจคการรักษาความปลอดภัยของข้อมูลมากมาย พร้อมกับประกาศไปรษณียบัตรที่สามารถนำไปใส่ portfolio ของคุณได้อีกด้วย"
         ]
       }
     }
   },
   "machine-learning-with-python": {
-    "title": "Aprendizado de máquina com Python",
+    "title": "Machine Learning with Python",
     "intro": [
-      "A aprendizagem de máquina tem várias aplicações práticas que você pode usar em seus projetos ou no trabalho.",
-      "Na certificação de aprendizagem de máquina com Python, você usará o framework chamado TensorFlow para construir várias redes neurais e explorar técnicas mais avançadas, como o processamento de linguagem natural e a aprendizagem por reforço.",
-      "Você também vai mergulhar em redes neurais e aprender os princípios por trás de como as redes neurais profundas, recorrentes e convolucionais funcionam."
+      "Machine Learning มีแอปพลิเคชันที่สามารถใช้ฝึกฝนรวมถึงทำงานได้หลากหลาย ซึ่งคุณสามารถนำไปใช้ในโปรเจคของคุณหรือในงานได้",
+      "ใน Machine Learning นั้นใช้งานด้วย Python Certification ซึ่งคุณจะต้องใช้ TensorFlow เป็น Framework เพื่อสร้างโครงข่ายประสาทเทียม (Neural network) หลายเครือข่าย รวมถึงเทคนิคขั้นสูงอื่นๆ เช่น Natural language processing และ Reinforcement learning",
+      "และคุณยังจะได้เรียนรู้เกี่ยวกับสู่โครงข่ายประสาทเทียม และเรียนรู้หลักการเบื้องหลังการทำงานของโครงข่ายประสาทแบบลึก (Deep) แบบการเกิดซ้ำ (Recurrent) และแบบบิดเบี้ยว (Convolutional)"
     ],
     "note": "",
     "blocks": {
       "tensorflow": {
         "title": "Tensorflow",
         "intro": [
-          "O TensorFlow é um framework de código aberto que facilita o uso da aprendizagem de máquina e das redes neurais.",
-          "O curso por vídeos a seguir foi criado por Tim Ruscica, também conhecido como \"Tech With Tim\". Ele ajudará você a entender o TensorFlow e algumas de suas capacidades poderosas."
+          "TensorFlow เป็นFramework แบบ open source ที่จะทำให้ Machine Learning และ Neural Networking ใช้งานง่ายขึ้น",
+          "ในหลักสูตรนี้สอนโดย Tim Ruscica หรือจะเรียกว่า “Tech With Tim” ก็ได้ ซึ่งจะช่วยสอนคุณให้เข้าใจ ถึง TensorFlow และความสามารถของ TensorFlow ที่จะทำให้คุณทึ่งได้"
         ]
       },
       "how-neural-networks-work": {
-        "title": "Como as redes neurais funcionam",
+        "title": "How Neural Networks Work",
         "intro": [
-          "As redes neurais estão no núcleo daquilo a que hoje chamamos de inteligência artificial. Mas, historicamente, elas foram difíceis de entender, especialmente para os iniciantes no campo de aprendizagem de máquina.",
-          "Mesmo se você for completamente novo em redes neurais, esses cursos por vídeo de Brandon Rohrer farão com que você se sinta confortável com os conceitos e com a matemática por trás deles."
+          "โครงข่ายประสาทเทียมหรือ Neural network คือสาระสำคัญของสิ่งที่เราเรียกว่าปัญญาประดิษฐ์ (AI) ในปัจจุบัน แต่ในอดีตนั้น มีความยากและซับซ้อนมาก โดยเฉพาะอย่างยิ่งสำหรับผู้เริ่มต้นใน Machine Learning",
+          "แม้ว่าคุณจะพึ่งรู้จักกับโครงข่ายประสาทเทียม แต่หลักสูตรวิดีโอเหล่านี้ที่สอนโดย Brandon Rohrer จะช่วยให้คุณคุ้นเคยกับแนวคิดและคณิตศาสตร์เบื้องหลังเกี่ยวกับเรื่อง Neural network มากขึ้น"
         ]
       },
       "machine-learning-with-python-projects": {
-        "title": "Projetos de aprendizagem de máquina com Python",
+        "title": "Machine Learning with Python Projects",
         "intro": [
-          "A aprendizagem de máquina tem muitas aplicações práticas. Ao completar estes projetos de programação gratuitos e desafiadores, você vai demonstrar que tem um bom conhecimento nos fundamentos de aprendizagem de máquina, além de se qualificar para sua certificação em aprendizagem de máquina com Python."
+          " Machine Learning มีแอปพลิเคชันที่ช่วยให้คุณสามารถฝึกฝนได้อย่างมากมาย โดยสามารถทำโปรเจคการเขียนโปรแกรมที่ท้าทายและฟรีให้สำเร็จได้ จะแสดงให้เห็นว่าคุณมีความรู้พื้นฐานมากพอในเรื่อง Machine Learning และยังได้รับใบประกาศไปรษณียบัตรในด้าน Machine Learning with Python certification อีกด้วย "
         ]
       }
     }
   },
   "coding-interview-prep": {
-    "title": "Preparação para entrevistas de programação",
+    "title": "Coding Interview Prep",
     "intro": [
-      "Se estiver procurando exercícios gratuitos de programação para se preparar para sua próxima entrevista de emprego, nós temos o que você precisa.",
-      "Esta seção contém centenas de desafios de programação que testam seu conhecimento de algoritmos, estruturas de dados e matemática. Ela também possui vários projetos adicionais, que você pode usar para fortalecer suas habilidades ou adicionar ao seu portfólio."
+      "ถ้าหากคุณกำลังมองหาแบบฝึกหัดเขียนโค้ดฟรี สำหรับการเตรียมพร้อมในการสัมภาษณ์งานหรือใส่ลงใน Portfolio ของคุณ  พวกเราก็มีแหล่งการเรียนรู้ให้แก่พวกคุณได้เรียนรู้กัน",
+      "ในส่วนนี้ จะมีโจทย์ความท้าทายในการเขียนโค้ดนับร้อยที่เอาไว้ทดสอบความรู้ของคุณเกี่ยวกับด้านอัลกอริทึม โครงสร้างของข้อมูล และคณิตศาสตร์ในการเขียนโปรแกรม นอกจากนี้ยังมีโปรเจคจำนวนหนึ่งที่คุณได้ทำเพื่อเสริมทักษะของคุณได้ หรือแม้กระทั่งนำโปรเจคที่ทำเพิ่มลงใน Portfolio ของคุณได้อีกด้วย"
     ],
     "note": "",
     "blocks": {
       "algorithms": {
-        "title": "Algoritmos",
+        "title": "Algorithms",
         "intro": [
-          "Esses exercícios de programação gratuitos ensinam alguns algoritmos comuns que você provavelmente encontrará na vida real. Eles são uma grande oportunidade para melhorar suas habilidades de lógica e programação.",
-          "Estes algoritmos são frequentemente usados em entrevistas de trabalho para testar as habilidades de um candidato. Nós vamos oferecer explicações claras e concisas sobre como esses vários algoritmos funcionam para que você possa implementar uma solução para cada um."
+          "ในแบบฝึกหัดการเขียนโปรแกรมฟรีเหล่านี้จะสอนคุณเกี่ยวกับอัลกอริธึมทั่วไปที่สามารถพบได้ในชีวิตจริง ซึ่งถือว่าเป็นโอกาสที่ดีในการพัฒนาตรรกะและทักษะการเขียนโปรแกรมของคุณ",
+          "อัลกอริธึมเหล่านี้ มักจะถูกใช้ในการสัมภาษณ์งานเพื่อทดสอบทักษะของผู้สมัคร พวกเราจะให้คำอธิบายที่กระชับและชัดเจนเกี่ยวกับวิธีการทำงานของอัลกอริธึมต่างๆ เหล่านี้ เพื่อให้คุณสามารถใช้โซลูชันสำหรับแต่ละขั้นตอนและยังเป็นแนวทางให้คุณได้"
         ]
       },
       "data-structures": {
-        "title": "Estruturas de dados",
+        "title": "Data Structures",
         "intro": [
-          "Esses cursos de programação gratuitos têm o objetivo de ajudá-lo a lidar com estruturas de dados grandes e complexas com as quais você ainda não está familiarizado.",
-          "Trabalhando com os cursos abaixo, você aprenderá sobre cada tipo de estrutura de dados e implementará algoritmos para reforçar seu entendimento sobre eles."
+          "หลักสูตรการเขียนโปรแกรมฟรีเหล่านี้ มีไว้เพื่อช่วยให้คุณจัดการกับโครงสร้างข้อมูลขนาดใหญ่และซับซ้อนที่คุณอาจยังไม่คุ้นเคยและเพิ่มประสบการณ์ให้แก่คุณ",
+          "ในการทำโจทย์ของหลักสูตรด้านล่างนี้ จะช่วยให้คุณได้เรียนรู้เกี่ยวกับโครงสร้างข้อมูลแต่ละประเภท และใช้อัลกอริธึมเพื่อเสริมสร้างความเข้าใจให้แก่คุณ"
         ]
       },
       "take-home-projects": {
-        "title": "Projetos para levar para casa",
+        "title": "Take Home Projects",
         "intro": [
-          "Entrevistas de programação sempre foram estressantes. Os candidatos a empregos às vezes recebem um projeto para levar para casa, a ser concluído fora da entrevista. Esses tipos de entrevistas geralmente exigem muito trabalho, mas são uma ótima maneira para os empregadores verem como você se sairia no trabalho.",
-          "Realize os projetos de codificação adicionais abaixo para uma prática extra. Não tenha pressa, melhore-os e coloque no seu currículo ou portfólio para mostrar a possíveis empregadores."
+          "การสัมภาษณ์งานเขียนโปรแกรมนั้น เป็นเรื่องที่ค่อนข้างน่ากังวลใจอยู่เสมอ บางครั้งผู้สมัครงานเองอาจได้รับงานTake Home แล้วทำให้สำเร็จนอกรอบการสัมภาษณ์อีก การสัมภาษณ์ประเภทนี้ คุณจะต้องมีความรู้ในการงานจำนวนมาก แต่ก็ถือว่าเป็นวิธีที่ดีสำหรับนายจ้างที่จะเห็นว่าคุณมีตรรกะ ความคิดอย่างไรต่อการทำงานปฏิบัติหน้าที่",
+          "โบนัสเพิ่มเติม! สำหรับโจทย์การทำโปรเจค เพื่อให้คุณได้ฝึกฝนเพิ่มเติม ถ้าคุณใช้เวลาของคุณ ทำให้โปรเจคออกมาได้อย่างยอดเยี่ยม คุณสามารถนำโปรเจคเหล่านี้ใส่ลงใน Portfolio ของคุณเพื่อแสดงถึงศักยภาพของคุณแก่นายจ้าง เพื่อเพิ่มความเป็นไปได้ในการเข้าทำงาน!"
         ]
       },
       "rosetta-code": {
         "title": "Rosetta Code",
         "intro": [
-          "Aumente o nível de suas habilidades criativas de resolução de problemas com essas tarefas de programação gratuitas da biblioteca clássica do Rosetta Code.",
-          "Esses desafios podem ser difíceis, mas levarão sua lógica de algoritmos a novos patamares."
+          "ไลบรารี Rosetta Code จะช่วยให้คุณยกระดับทักษะการแก้ปัญหาอย่างสร้างสรรค์ของคุณด้วยงานเขียนโปรแกรมฟรี",
+          "โจทย์ท้าทายเหล่านี้เป็นเรื่องยากในการแก้ปัญหา แต่ว่าโจทย์เหล่านี้จะผลักดันตรรกะของอัลกอริทึมของคุณให้สูงขึ้นไปอีก"
         ]
       },
       "project-euler": {
-        "title": "Projeto Euler",
+        "title": "Project Euler",
         "intro": [
-          "Complete os desafios de programação abaixo, diretamente dos grandes arquivos do Projeto Euler. Isso fortalecerá seu conhecimento de algoritmos e de matemática.",
-          "Esses problemas variam em dificuldade e, para muitos, a experiência é uma aprendizagem em sequência indutiva. Ou seja, ao resolver um problema, você será exposto a um novo conceito que permite a você resolver um problema que antes era inacessível. Você consegue concluir todos eles?"
+          " สำหรับโจทย์ Project Euler ขนาดใหญ่นี้ จะช่วยให้คุณเสริมสร้างความรู้ด้านอัลกอริทึมและคณิตศาสตร์ของคุณให้แข็งแกร่งยิ่งขึ้น ยกระดับยิ่งขึ้น อัพเลเวลของคุณมากขึ้น ถ้าหากคุณสามารถเขียนโค้ดพิชิตปัญหาโจทย์นี้ได้สำเร็จ",
+          "ซึ่งโจทย์ปัญหานี้มีดีกรีความยากอยู่ในระดับสูง และยังต้องการประสบการณ์มากในการแก้ปัญหาแบบต่อเนื่องขึ้นเรื่อย ๆ หรือจะพูดอีกอย่างก็คือ การแก้ปัญหาหนึ่งปัญหาจะทำให้คุณได้รับแนวคิดใหม่ที่อาจจะช่วยให้คุณแก้ไขปัญหาก่อนหน้านี้ที่คุณยังไม่สามารถผ่านมันไปได้นั่นเอง “แล้วคุณล่ะ พร้อมที่จะพิชิตโจทย์ทุกข้อแล้วรึยัง” "
         ]
       }
     }
   },
   "misc-text": {
-    "certification": "Certificação {{cert}}",
-    "browse-other": "Navegue por nossas outras certificações gratuitas\n(recomendamos fazer isto em sequência)",
-    "courses": "Cursos",
-    "steps": "Passos",
-    "expand": "Expandir",
-    "collapse": "Recolher"
+    "certification": "{{cert}} Certification",
+    "browse-other": "Browse our other free certifications\n(we recommend doing these in order)",
+    "courses": "Courses",
+    "steps": "Steps",
+    "expand": "Expand",
+    "collapse": "Collapse"
   }
 }
