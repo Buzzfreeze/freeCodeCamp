@@ -8,31 +8,31 @@ dashedName: build-a-simon-game
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: [https://codepen.io/freeCodeCamp/full/obYBjE](https://codepen.io/freeCodeCamp/full/obYBjE).
+**เป้าหมายของโปรเจคนี้ :** สร้างแอพพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานเหมือนกับลิงค์นี้ : [https://codepen.io/freeCodeCamp/full/obYBjE](https://codepen.io/freeCodeCamp/full/obYBjE).
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
+ดูว่าผู้ใช้งานอยากได้อะไร [user stories](https://en.wikipedia.org/wiki/User_story). สามารถใช้ ไลบรารีหรือ API ใดก็ได้ที่ต้องการ
 
-**User Story:** I am presented with a random series of button presses.
+**User Story:** จะขึ้นชุดการกดปุ่มแบบสุ่ม
 
-**User Story:** Each time I input a series of button presses correctly, I see the same series of button presses but with an additional step.
+**User Story:** ทุกครั้งที่กดชุดการกดปุ่มที่ถูกต้องเข้าไป จะเห็นการกดปุ่มแบบเดียวกันแต่มีขั้นตอนเพิ่มเติม
 
-**User Story:** I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button.
+**User Story:** เมื่อกดปุ่มเองกับเมื่อกดปุ่มตามชุดการกด จะได้ยินเสียงที่สอดคล้องกับแต่ละปุ่ม
 
-**User Story:** If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again.
+**User Story:** ถ้ากดปุ่มผิด จะขึ้นว่ากดผิด จากนั้นจะขึ้นปุ่มให้เริ่มใหม่อีกครั้ง
 
-**User Story:** I can see how many steps are in the current series of button presses.
+**User Story:** สามารถดูจำนวนระดับขั้น ในการกดปัจจุบันได้
 
-**User Story:** If I want to restart, I can hit a button to do so, and the game will return to a single step.
+**User Story:** สามารถกดปุ่มเพื่อรีสตาร์ทได้ และเกมจะกลับไปที่ระดับเริ่มต้น
 
-**User Story:** I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses.
+**User Story:** สามารถเล่นโหมดที่ยากขึ้นได้ โดยหากกดปุ่มผิด ระบบจะแจ้งว่ากดผิด แล้วเกมจะรีสตาร์ทโดยจะกลับไประดับเริ่มต้น
 
-**User Story:** I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over.
+**User Story:** จะชนะเกมเมื่อผ่านระดับที่ 20 โดยจะขึ้นว่า เป็นผู้ชนะ จากนั้นเกมจะเริ่มต้นใหม่
 
-**Hint:** Here are mp3s you can use for each button: `https://s3.amazonaws.com/freecodecamp/simonSound1.mp3`, `https://s3.amazonaws.com/freecodecamp/simonSound2.mp3`, `https://s3.amazonaws.com/freecodecamp/simonSound3.mp3`, `https://s3.amazonaws.com/freecodecamp/simonSound4.mp3`.
+**Hint:** ไฟล์ mp3 ไว้ใช้สำหรับปุ่มต่างๆ: `https://s3.amazonaws.com/freecodecamp/simonSound1.mp3`, `https://s3.amazonaws.com/freecodecamp/simonSound2.mp3`, `https://s3.amazonaws.com/freecodecamp/simonSound3.mp3`, `https://s3.amazonaws.com/freecodecamp/simonSound4.mp3`.
 
-When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "I've completed this challenge"
 
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
+สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 

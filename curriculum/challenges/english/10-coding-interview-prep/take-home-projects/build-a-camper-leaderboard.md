@@ -8,21 +8,21 @@ dashedName: build-a-freecodecamp-forum-homepage
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/JqdoMV>.
+**เป้าหมายของโปรเจคนี้ :** สร้างแอพพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานเหมือนกับลิงค์นี้ : <https://codepen.io/freeCodeCamp/full/JqdoMV>.
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
+ดูว่าผู้ใช้งานอยากได้อะไร [user stories](https://en.wikipedia.org/wiki/User_story). สามารถใช้ ไลบรารีหรือ API ใดก็ได้ที่ต้องการ
 
-**User Story:** I can see a list of the most recent posts on the freeCodeCamp forum.
+**User Story:** สามารถเห็นรายการโพสต์ล่าสุดบน freeCodeCamp forum.
 
-**User Story:** For each topic, I can see the title and a list of links to users who have recently posted in it.
+**User Story:** สำหรับแต่ละหัวข้อ สามารถดูชื่อและ ลิงค์ไปยังผู้ใช้ที่เพิ่งโพสต์ในนั้นได้
 
-**User Story:** I can see the number of replies and views that each topic has had, and a timestamp of when the topic was last active.
+**User Story:** สามารถเห็นจำนวนการตอบกลับ และจำนวนการเข้าชมในแต่ละหัวข้อได้ และมีการบอกเวลาที่หัวข้อนั้นมีการใช้งานล่าสุด
 
-**Hint:** To get the 30 most recent forum posts: <https://forum-proxy.freecodecamp.rocks/latest>.
+**Hint:** เพื่อรับ 30 โพสต์ล่าสุด: <https://forum-proxy.freecodecamp.rocks/latest>.
 
-When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "I've completed this challenge"
 
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
+สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 

@@ -8,21 +8,21 @@ dashedName: manage-a-book-trading-club
 
 # --description--
 
-**Objective:** Build a [Replit](https://replit.com/) app that is functionally similar to this: <https://manage-a-book-trading-club.freecodecamp.rocks/>.
+**เป้าหมายของโปรเจคนี้ :** สร้างแอพพลิเคชั่น [Replit](https://replit.com/) ที่มีการทำงานเหมือนกับลิงค์นี้ : <https://manage-a-book-trading-club.freecodecamp.rocks/>.
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
+ดูว่าผู้ใช้งานอยากได้อะไร [user stories](https://en.wikipedia.org/wiki/User_story). สามารถใช้ ไลบรารีหรือ API ใดก็ได้ที่ต้องการ
 
-**User Story:** I can view all books posted by every user.
+**User Story:** สามารถดูหนังสือทั้งหมดที่โพสต์โดยผู้ใช้ทุกคนได้
 
-**User Story:** I can add a new book.
+**User Story:** สามารถเพิ่มหนังสือเล่มใหม่ได้
 
-**User Story:** I can update my settings to store my full name, city, and state.
+**User Story:** ฉันสามารถอัปเดตการตั้งค่า เพื่อเก็บชื่อ เมือง และรัฐได้
 
-**User Story:** I can propose a trade and wait for the other user to accept the trade.
+**User Story:** สามารถเสนอการซื้อขายและรอให้ผู้ใช้รายอื่นยอมรับการซื้อขายได้
 
-Once you've finished implementing these user stories, enter the URL to your live app and, optionally, your GitHub repository. Then click the "I've completed this challenge" button.
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์ URL หรือ GitHub ด้านล่าง แล้วกดปุุ่ม "I've completed this challenge"
 
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
+สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 

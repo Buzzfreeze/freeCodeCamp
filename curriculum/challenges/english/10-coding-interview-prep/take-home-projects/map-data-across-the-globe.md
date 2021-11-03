@@ -8,21 +8,21 @@ dashedName: map-data-across-the-globe
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/mVEJag>.
+**เป้าหมายของโปรเจคนี้ :** สร้างแอพพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานเหมือนกับลิงค์นี้ : <https://codepen.io/freeCodeCamp/full/mVEJag>.
 
-Fulfill the following [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
+ดูว่าผู้ใช้งานอยากได้อะไร [user stories](https://en.wikipedia.org/wiki/User_story). สามารถใช้ ไลบรารีหรือ API ใดก็ได้ที่ต้องการ
 
-**User Story:** I can see where all Meteorites landed on a world map.
+**User Story:** สามารถดูได้ว่าอุกกาบาตทั้งหมดตกลงที่ไหนบ้าง บนแผนที่โลก
 
-**User Story:** I can tell the relative size of the meteorite, just by looking at the way it's represented on the map.
+**User Story:** สามารถบอกขนาดของอุกกาบาตได้ โดยการดูจากลักษณะที่ปรากฏบนแผนที่
 
-**User Story:** I can mouse over the meteorite's data point for additional data.
+**User Story:** เมื่อวางเมาส์ บนจุดข้อมูลของอุกกาบาตจะแสดงข้อมูลเพิ่มเติม
 
-**Hint:** Here's a dataset you can use to build this: <https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/meteorite-strike-data.json>
+**Hint:** ชุดข้อมูลทีจะใช้สร้าง: <https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/meteorite-strike-data.json>
 
-When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "I've completed this challenge"
 
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
+สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 

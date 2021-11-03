@@ -8,29 +8,29 @@ dashedName: build-the-game-of-life
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/BpwMZv/>.
+**เป้าหมายของโปรเจคนี้ :** สร้างแอพพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานเหมือนกับลิงค์นี้ : <https://codepen.io/freeCodeCamp/full/BpwMZv/>.
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
+ดูว่าผู้ใช้งานอยากได้อะไร [user stories](https://en.wikipedia.org/wiki/User_story). สามารถใช้ ไลบรารีหรือ API ใดก็ได้ที่ต้องการ
 
-**User Story:** When I first arrive at the game, it will randomly generate a board and start playing.
+**User Story:** เมื่อเล่นเกมครั้งแรก เกมจะสุ่มสร้างกระดานและพร้อมเริ่มเล่น
 
-**User Story:** I can start and stop the board.
+**User Story:** สามารถ เริ่มและหยุดกระดานได้
 
-**User Story:** I can set up the board.
+**User Story:** สามารถตั้งค่ากระดานได้
 
-**User Story:** I can clear the board.
+**User Story:** สามารถเคลียร์กระดานได้
 
-**User Story:** When I press start, the game will play out.
+**User Story:** เมื่อกด start เกมจะเข้าเล่น
 
-**User Story:** Each time the board changes, I can see how many generations have gone by.
+**User Story:** ทุกครั้งที่มีการเปลี่ยนกระดาน จะสามารถเห็นว่าผ่านไปกี่ generations แล้ว
 
-**Hint:** Here's an explanation of Conway's Game of Life from John Conway himself: <https://www.youtube.com/watch?v=E8kUJL04ELA>
+**Hint:** คำอธิบายเกม Conway's Game of Life จาก John Conway : <https://www.youtube.com/watch?v=E8kUJL04ELA>
 
-**Hint:** Here's an overview of Conway's Game of Life with rules for your reference: <https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life>
+**Hint:** ภาพรวมของเกม Conway's Game of Life พร้อมกฎสำหรับอ้างอิง: <https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life>
 
-When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "I've completed this challenge"
 
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
+สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 

@@ -8,27 +8,25 @@ dashedName: build-a-voting-app
 
 # --description--
 
-Build a full stack JavaScript app that is functionally similar to this: <https://voting-app.freecodecamp.rocks/>. Use a site builder of your choice to complete the project.
+สร้าง full stack JavaScript app ที่มีการทำงานเหมือนกับลิงค์นี้ : <https://voting-app.freecodecamp.rocks/>
 
-Here are the specific user stories you should implement for this project:
+**User Story:** เมื่อผู้ใช้ "ผ่าน" การตรวจสอบสิทธิ์  สามารถเก็บแบบสำรวจและเข้าถึงใหม่ได้ในภายหลังได้
 
-**User Story:** As an authenticated user, you can keep my polls and come back later to access them.
+**User Story:** เมื่อผู้ใช้ "ผ่าน" การตรวจสอบสิทธิ์  สามารถแชร์แบบสำรวจกับเพื่อนๆได้
 
-**User Story:** As an authenticated user, you can share my polls with my friends.
+**User Story:** เมื่อผู้ใช้ "ผ่าน" การตรวจสอบสิทธิ์  สามารถดูผลรวมแบบสำรวจของได้
 
-**User Story:** As an authenticated user, you can see the aggregate results of my polls.
+**User Story:** เมื่อผู้ใช้ "ผ่าน" การตรวจสอบสิทธิ์  สามารถลบแบบสำรวจที่ไม่ต้องการได้
 
-**User Story:** As an authenticated user, you can delete polls that I decide I don't want anymore.
+**User Story:** เมื่อผู้ใช้ "ผ่าน" การตรวจสอบสิทธิ์  สามารถสร้างแบบสำรวจที่มีรายการจำนวนเท่าใดก็ได้
 
-**User Story:** As an authenticated user, you can create a poll with any number of possible items.
+**User Story:** ไม่ว่าผู้ใช้จะ "ผ่านหรือไม่ผ่าน" การตรวจสอบสิทธิ์ สามารถดูและลงคะแนนในแบบสำรวจของทุกคนได้
 
-**User Story:** As an unauthenticated or authenticated user, you can see and vote on everyone's polls.
+**User Story:** ไม่ว่าผู้ใช้จะ "ผ่านหรือไม่ผ่าน" การตรวจสอบสิทธิ์ สามารถดูผลการสำรวจในรูปแบบแผนภูม (สามารถทำได้โดยใช้ Chart.js หรือ Google Charts)
 
-**User Story:** As an unauthenticated or authenticated user, you can see the results of polls in chart form. (This could be implemented using Chart.js or Google Charts.)
+**User Story:** เมื่อผู้ใช้ "ผ่าน" การตรวจสอบสิทธิ์ สามารถสร้างตัวเลือกใหม่ได้ หากไม่ชอบตัวเลือกในแบบสำรวจ
 
-**User Story:** As an authenticated user, if you don't like the options on a poll, you can create a new option.
-
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
+เมื่อทำเสร็จแล้ว ตรวจสอบให้แน่ใจว่าโปรเจคเป็นสาธารณะ จากนั้นส่ง URL ไปที่ช่อง "Solution Link" หรือส่งใน "GitHub Link"
 
 # --solutions--
 

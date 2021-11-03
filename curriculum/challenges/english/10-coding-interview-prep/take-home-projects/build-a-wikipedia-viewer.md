@@ -8,23 +8,23 @@ dashedName: build-a-wikipedia-viewer
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/wGqEga/>.
+**เป้าหมายของโปรเจคนี้ :** สร้างแอพพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานเหมือนกับลิงค์นี้ : <https://codepen.io/freeCodeCamp/full/wGqEga/>.
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
+ดูว่าผู้ใช้งานอยากได้อะไร [user stories](https://en.wikipedia.org/wiki/User_story). สามารถใช้ ไลบรารีหรือ API ใดก็ได้ที่ต้องการ
 
-**User Story:** I can search Wikipedia entries in a search box and see the resulting Wikipedia entries.
+**User Story:** สามารถค้นหารายการ Wikipedia ในช่องค้นหาและดูผลลัพธ์ได้
 
-**User Story:** I can click a button to see a random Wikipedia entry.
+**User Story:** สามารถคลิกปุ่มเพื่อดูรายการ Wikipedia แบบสุ่มได้
 
-Hint #1: Here's a URL you can use to get a random Wikipedia article: `https://en.wikipedia.org/wiki/Special:Random`.
+Hint #1: URL ที่สามารถใช้เพื่อรับบทความ Wikipedia แบบสุ่ม: `https://en.wikipedia.org/wiki/Special:Random`.
 
-Hint #2: Here's an entry on using Wikipedia's API: `https://www.mediawiki.org/wiki/API:Main_page`.
+Hint #2: รายการเกี่ยวกับการใช้ API ของ Wikipedia: `https://www.mediawiki.org/wiki/API:Main_page`.
 
-Hint #3: Use this [link](https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=jsonfm) to experiment with Wikipedia's API.
+Hint #3: ใช้ลิงค์นี้้เพื่อทดสอบกับ API ของ Wikipedia [link](https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=jsonfm) to experiment with Wikipedia's API.
 
-When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "I've completed this challenge"
 
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
+สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 

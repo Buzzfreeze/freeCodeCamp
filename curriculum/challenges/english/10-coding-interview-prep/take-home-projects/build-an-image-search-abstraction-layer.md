@@ -8,17 +8,15 @@ dashedName: build-an-image-search-abstraction-layer
 
 # --description--
 
-Build a full stack JavaScript app that allows you to search for images like this: <https://image-search-abstraction-layer.freecodecamp.rocks/query/lolcats%20funny?page=10> and browse recent search queries like this: <https://image-search-abstraction-layer.freecodecamp.rocks/recent/>. Use a site builder of your choice to complete the project.
+สร้าง full stack JavaScript app ที่ช่วยให้สามารถค้นหารูปภาพ ที่มีการทำงานเหมือนกับลิงค์นี้ : <https://image-search-abstraction-layer.freecodecamp.rocks/query/lolcats%20funny?page=10>  และสามารถเรียกดูคำค้นหาล่าสุด แบบนี้ได้ : <https://image-search-abstraction-layer.freecodecamp.rocks/recent/>
 
-Here are the specific user stories you should implement for this project:
+**User Story:** สามารถรับ URL ของรูปภาพพร้อมคำอธิบาย และ URL ของหน้าสำหรับชุดรูปภาพที่เกี่ยวข้องกับที่ระบุในการค้นหา
 
-**User Story:** You can get the image URLs, description and page URLs for a set of images relating to a given search string.
+**User Story:** สามารถบอกเลขหน้า โดยการเพิ่ม `?page=2` ลงใน URL
 
-**User Story:** You can paginate through the responses by adding a `?page=2` parameter to the URL.
+**User Story:** สามารถดูลิสรายการค้นหาล่าสุดได้
 
-**User Story:** You can get a list of the most recently submitted search strings.
-
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
+เมื่อทำเสร็จแล้ว ตรวจสอบให้แน่ใจว่าโปรเจคเป็นสาธารณะ จากนั้นส่ง URL ไปที่ช่อง "Solution Link" หรือส่งใน "GitHub Link"
 
 # --solutions--
 

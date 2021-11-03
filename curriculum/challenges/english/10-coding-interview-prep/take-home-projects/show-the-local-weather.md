@@ -8,23 +8,25 @@ dashedName: show-the-local-weather
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/bELRjV>.
+**เป้าหมายของโปรเจคนี้ :** สร้างแอพพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานเหมือนกับลิงค์นี้ : <https://codepen.io/freeCodeCamp/full/bELRjV>.
 
-**Rule #1:** Don't look at the example project's code. Figure it out for yourself.
+**กฏข้อที่ #1:** ห้ามดูโค้ดของ example project ให้พยายามหาคำตอบด้วยตัวเอง
 
-**Rule #2:** Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
+**กฏข้อที่ #2:** ดูว่าผู้ใช้งานอยากได้อะไร [user stories](https://en.wikipedia.org/wiki/User_story). สามารถใช้ ไลบรารีหรือ API ใดก็ได้ที่ต้องการ
 
-**User Story:** I can see the weather in my current location.
+**User Story:** ฉันสามารถรู้ สภาพอากาศในตำแหน่งปัจจุบัน
 
-**User Story:** I can see a different icon or background image (e.g. snowy mountain, hot desert) depending on the weather.
+**User Story:** ฉันสามารถเห็นไอคอนหรือภาพพื้นหลังที่แตกต่างกัน (เช่น ภูเขา ทะเล ฝนตก) ขึ้นอยู่กับสภาพอากาศ
 
-**User Story:** I can push a button to toggle between Fahrenheit and Celsius.
+**User Story:** ฉันสามารถกดปุ่มสลับไปมาระหว่าง ฟาเรนไฮต์และเซลเซียส
 
-**Note:** Many internet browsers now require an HTTP Secure (`https://`) connection to obtain a user's locale via HTML5 Geolocation. For this reason, we recommend using HTML5 Geolocation to get user location and then use the freeCodeCamp Weather API <https://weather-proxy.freecodecamp.rocks/> which uses an HTTP Secure connection for the weather. Also, be sure to connect to [CodePen.io](https://codepen.io) via `https://`.
+**หมายเหตุ:** ในปัจจุบัน อินเทอร์เน็ตเบราว์เซอร์จำนวนมากต้องการการเชื่อมต่อแบบ HTTP Secure (`https://`) เพื่อรับตำแหน่งของผู้ใช้ผ่าน HTML5 Geolocation
 
-When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
+ เราจึงแนะนำให้ใช้ HTML5 Geolocation เพื่อรับตำแหน่งของผู้ใช้ จากนั้นใช้ freeCodeCamp Weather API <https://weather-proxy.freecodecamp.rocks/> ซึ่งใช้การเชื่อมต่อแบบ HTTP Secure สำหรับสภาพอากาศ และ อย่าลืมเชื่อมต่อกับ [CodePen.io](https://codepen.io) ผ่าน `https://`
 
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "I've completed this challenge"
+
+สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 

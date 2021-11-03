@@ -8,23 +8,23 @@ dashedName: build-a-pong-game
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/satyamdev/full/pdMmBp>.
+**เป้าหมายของโปรเจคนี้ :** สร้างแอพพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานเหมือนกับลิงค์นี้ : <https://codepen.io/satyamdev/full/pdMmBp>.
 
-**Rule #1:** Don't look at the example project's code. Figure it out for yourself.
+**กฏข้อที่ #1:** ห้ามดูโค้ดของ example project ให้พยายามหาคำตอบด้วยตัวเอง
 
-**Rule #2:** Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
+**กฏข้อที่ #2:** ดูว่าผู้ใช้งานอยากได้อะไร [user stories](https://en.wikipedia.org/wiki/User_story). สามารถใช้ ไลบรารีหรือ API ใดก็ได้ที่ต้องการ
 
-**User Story:** I can control a paddle.
+**User Story:** ฉันสามารถบังคับ ไม้ของฉันได้
 
-**User Story:** The computer can control the other paddle.
+**User Story:** คอมพิวเตอร์สามารถควบคุมไม้อีกอันได้
 
-**User Story:** The computer's paddle is unbeatable. It should never miss the ball.
+**User Story:** การจะชนะคอมพิวเตอร์ต้องยาก และมันควรจะรับลูกไม่พลาดเลย
 
-**User Story:** The game keeps track of the player and computer's score.
+**User Story:** มีคะแนนของทั้งคอมพิวเตอร์และผู้เล่นบอก ระหว่างเล่น
 
-When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "I've completed this challenge"
 
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
+สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 

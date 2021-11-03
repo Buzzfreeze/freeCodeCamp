@@ -8,27 +8,27 @@ dashedName: build-a-light-bright-app
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/eyLYXE>.
+**เป้าหมายของโปรเจคนี้ :** สร้างแอพพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานเหมือนกับลิงค์นี้ : <https://codepen.io/freeCodeCamp/full/eyLYXE>.
 
-**Rule #1:** Don't look at the example project's code. Figure it out for yourself.
+**กฏข้อที่ #1:** ห้ามดูโค้ดของ example project ให้พยายามหาคำตอบด้วยตัวเอง
 
-**Rule #2:** Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
+**กฏข้อที่ #2:** ดูว่าผู้ใช้งานอยากได้อะไร [user stories](https://en.wikipedia.org/wiki/User_story). สามารถใช้ ไลบรารีหรือ API ใดก็ได้ที่ต้องการ
 
-**User Story:** I can click or drag the mouse cursor to color the circles.
+**User Story:** สามารถคลิกหรือลากเคอร์เซอร์ของเมาส์ เพื่อเติมสีให้กับวงกลม
 
-**User Story:** I can double-click on a colored circle to remove the color.
+**User Story:** สามารถดับเบิลคลิกที่วงกลมสี เพื่อลบสีออก
 
-**User Story:** I can click on a colored circle to change its color.
+**User Story:** สามารถคลิกที่วงกลมสี เพื่อเปลี่ยนสีได้
 
-**User Story:** I should get a circle of different color on each click.
+**User Story:** ควรจะได้วงกลมที่มีสีต่างกันในแต่ละคลิก
 
-**User Story:** I can click on the 'Reset' button to remove the recent color.
+**User Story:** สามารถคลิกที่ปุ่ม 'Reset' เพื่อลบสีล่าสุด
 
-**User Story:** I can click on the 'Reset All' button to remove all the colors from the circles.
+**User Story:** สามารถคลิกที่ปุ่ม 'Reset All' เพื่อลบสีทั้งหมดออกจากวงกลม
 
-When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "I've completed this challenge"
 
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
+สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 

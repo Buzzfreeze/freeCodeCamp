@@ -8,19 +8,17 @@ dashedName: chart-the-stock-market
 
 # --description--
 
-Build a full stack JavaScript app that is functionally similar to this: <https://chart-the-stock-market.freecodecamp.rocks/>. Use a site builder of your choice to complete the project.
+สร้าง full stack JavaScript app ที่มีการทำงานเหมือนกับลิงค์นี้ : <https://chart-the-stock-market.freecodecamp.rocks/>
 
-Here are the specific user stories you should implement for this project:
+**User Story:** สามารถดูกราฟที่แสดงเส้นแนวโน้มล่าสุดของหุ้นแต่ละตัวที่เพิ่มเข้ามา
 
-**User Story:** You can view a graph displaying the recent trend lines for each added stock.
+**User Story:** สามารถเพิ่มหุ้นใหม่โดยใช้ชื่อสัญลักษณ์
 
-**User Story:** You can add new stocks by their symbol name.
+**User Story:** สามารถลบหุ้นได้
 
-**User Story:** You can remove stocks.
+**User Story:** สามารถเห็นการเปลี่ยนแปลงแบบเรียลไทม์เมื่อมีผู้ใช้รายอื่นเพิ่มหรือนำหุ้นออก  ดังนั้น คุณจำเป็นที่จะต้องใช้ Web Sockets
 
-**User Story:** You can see changes in real-time when any other user adds or removes a stock. For this you will need to use Web Sockets.
-
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
+เมื่อทำเสร็จแล้ว ตรวจสอบให้แน่ใจว่าโปรเจคเป็นสาธารณะ จากนั้นส่ง URL ไปที่ช่อง "Solution Link" หรือส่งใน "GitHub Link"
 
 # --solutions--
 

@@ -8,25 +8,27 @@ dashedName: use-the-twitch-json-api
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/Myvqmo/>.
+**เป้าหมายของโปรเจคนี้ :** สร้างแอพพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานเหมือนกับลิงค์นี้ : <https://codepen.io/freeCodeCamp/full/Myvqmo/>.
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
+ดูว่าผู้ใช้งานอยากได้อะไร [user stories](https://en.wikipedia.org/wiki/User_story). สามารถใช้ ไลบรารีหรือ API ใดก็ได้ที่ต้องการ
 
-**User Story:** I can see whether freeCodeCamp is currently streaming on Twitch.tv.
+**User Story:** สามารถดูได้ว่า freeCodeCamp กำลังสตรีมบน Twitch.tv หรือไม่
 
-**User Story:** I can click the status output and be sent directly to the freeCodeCamp's Twitch.tv channel.
+**User Story:** สามารถคลิก status output เพื่อส่งไปยังช่อง Twitch.tv ของ freeCodeCamp ได้
 
-**User Story:** if a Twitch user is currently streaming, I can see additional details about what they are streaming.
+**User Story:** หากผู้ใช้ Twitch กำลังสตรีมอยู่ ฉันสามารถดูรายละเอียดเกี่ยวกับ สิ่งที่พวกเขากำลังสตรีมได้
 
-**Hint:** The relevant documentation about Twitch.tv's JSON API is here: <https://dev.twitch.tv/docs/api/reference/#get-streams>.
+**Hint:** เอกสารที่เกี่ยวข้องเกี่ยวกับ JSON API ของ Twitch.tv: <https://dev.twitch.tv/docs/api/reference/#get-streams>.
 
-**Hint:** Here's an array of the Twitch.tv usernames of people who regularly stream: `["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"]`
+**Hint:** อาร์เรย์ชื่อผู้ใช้ Twitch.tv ของผู้ที่สตรีมเป็นประจำ: `["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"]`
 
-**UPDATE:** Due to a change in conditions on API usage, Twitch.tv requires an API key, but we've built a workaround. Use <https://twitch-proxy.freecodecamp.rocks/> instead of Twitch's API base URL (i.e. `https://api.twitch.tv/helix` ) and you'll still be able to get account information, without needing to sign up for an API key.
+**UPDATE:** เนื่องจากการเปลี่ยนแปลงในเงื่อนไขในการใช้งาน API Twitch.tv ทำให้ต้องใช้ API key
 
-When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
+เราเลยเปลี่ยนมาใช้ <https://twitch-proxy.freecodecamp.rocks/> แทน Twitch's API และยังสามารถรับข้อมูลของบัญชี โดยไม่ต้องสมัครใช้ API key
 
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "I've completed this challenge"
+
+สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 

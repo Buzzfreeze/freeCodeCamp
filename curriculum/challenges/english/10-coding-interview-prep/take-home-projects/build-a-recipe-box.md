@@ -8,27 +8,27 @@ dashedName: build-a-recipe-box
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/dNVazZ/>.
+**เป้าหมายของโปรเจคนี้ :** สร้างแอพพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานเหมือนกับลิงค์นี้ : <https://codepen.io/freeCodeCamp/full/dNVazZ/>.
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
+ดูว่าผู้ใช้งานอยากได้อะไร [user stories](https://en.wikipedia.org/wiki/User_story). สามารถใช้ ไลบรารีหรือ API ใดก็ได้ที่ต้องการ
 
-**User Story:** I can create recipes that have names and ingredients.
+**User Story:** สามารถสร้างสูตรอาหารที่มีชื่อและส่วนผสมได้
 
-**User Story:** I can see an index view where the names of all the recipes are visible.
+**User Story:** มี index view ที่สามารถมองเห็นชื่อของสูตรอาหารทั้งหมดได้
 
-**User Story:** I can click into any of those recipes to view it.
+**User Story:** สามารถคลิกเพื่อดูสูตรได้
 
-**User Story:** I can edit these recipes.
+**User Story:** แก้ไขสูตรเหล่านั้นได้
 
-**User Story:** I can delete these recipes.
+**User Story:** สามารถลบสูตรเหล่านั้นได้
 
-**User Story:** All new recipes I add are saved in my browser's local storage. If I refresh the page, these recipes will still be there.
+**User Story:** สูตรใหม่ที่เพิ่มจะถูกบันทึกไว้ใน พื้นที่เก็บข้อมูลของเบราว์เซอร์แบบ local ถ้ารีเฟรช สูตรเหล่านี้จะยังอยู่
 
-**Hint:** You should prefix your local storage keys on CodePen, i.e. `_username_recipes`
+**Hint:** ควรใช้ prefix ของ local storage บน CodePen, เช่น. `_username_recipes`
 
-When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "I've completed this challenge"
 
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
+สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 
