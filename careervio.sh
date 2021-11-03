@@ -1,4 +1,5 @@
 sudo ls
+rm -Rf client/.cache/
 npm run ensure-env && npm run build:curriculum && npm run build:server
 pm2 reload org
 cd client
