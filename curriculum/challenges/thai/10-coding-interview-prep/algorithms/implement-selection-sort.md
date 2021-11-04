@@ -8,19 +8,28 @@ dashedName: implement-selection-sort
 
 # --description--
 
-Here we will implement selection sort. Selection sort works by selecting the minimum value in a list and swapping it with the first value in the list. It then starts at the second position, selects the smallest value in the remaining list, and swaps it with the second element. It continues iterating through the list and swapping elements until it reaches the end of the list. Now the list is sorted. Selection sort has quadratic time complexity in all cases.
+ในหัวข้อนี้ เราจะจัดเรียงข้อมูลโดยใช้การเลือก (Selection Sort)
 
-**Instructions**: Write a function `selectionSort` which takes an array of integers as input and returns an array of these integers in sorted order from least to greatest.
+การเรียงลำดับวิธีนี้ ทำได้โดยนำค่าต่ำสุดของรายการ มาสลับกับค่าที่ตำแหน่งแรกของรายการ
+
+จากนั้น ให้เริ่มต้นที่ตำแหน่งถัดไป นำค่าที่น้อยที่สุดของรายการที่เหลืออยู่มาสลับกับค่าที่ตำแหน่งนั้น
+
+วนซ้ำด้วยวิธีการนี้ไปที่ตำแหน่งที่ สอง สาม สี่ ไปเรื่อยๆจนกว่าจะเสร็จทุกรายการในลิส
+
+
+ในการเรียงลำดับวิธีนี้ จะใช้เวลานานที่สุดกว่าวิธีอื่นๆ
+
+**คำแนะนำ:** เขียนฟังก์ชัน `selectionSort`  ที่รับอาร์เรย์ เป็นจำนวนเต็ม และส่งกลับอาร์เรย์ของจำนวนเต็มเหล่านี้ โดยเรียงลำดับจากน้อยไปมาก
 
 # --hints--
 
-`selectionSort` should be a function.
+`selectionSort` ควรเป็น function.
 
 ```js
 assert(typeof selectionSort == 'function');
 ```
 
-`selectionSort` should return a sorted array (least to greatest).
+`selectionSort` ควรได้เป็น array ( โดยเรียงจาก น้อยไปมาก ).
 
 ```js
 assert(
@@ -48,7 +57,7 @@ assert(
 );
 ```
 
-`selectionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])` should return an array that is unchanged except for order.
+`selectionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])` ควรเป็น array ที่ไม่เปลี่ยนแปลง ยกเว้นสั่งมัน.
 
 ```js
 assert.sameMembers(
@@ -75,7 +84,7 @@ assert.sameMembers(
 );
 ```
 
-`selectionSort` should not use the built-in `.sort()` method.
+`selectionSort`  ต้องไม่ใช้ built-in function`.sort()`.
 
 ```js
 assert(isBuiltInSortUsed());

@@ -8,11 +8,16 @@ dashedName: inventory-update
 
 # --description--
 
-Compare and update the inventory stored in a 2D array against a second 2D array of a fresh delivery. Update the current existing inventory item quantities (in `arr1`). If an item cannot be found, add the new item and quantity into the inventory array. The returned inventory array should be in alphabetical order by item.
+เปรียบเทียบและอัพเดต คลังสินค้าที่อยู่ในอาร์เรย์ โดยเปรียบเทียบกันระหว่าง คลังสินค้าเดิม กับ คลังสินค้าที่เพิ่งได้รับ
+
+อัพเดตปริมาณสินค้าปัจจุบัน (ใน `arr1`) หากไม่พบรายการสินค้า ให้เพิ่มรายการและปริมาณสินค้าลงในอาร์เรย์ของคลังสินค้า
+
+ผลลัพธ์ของอาร์เรย์ที่เป็นคลังสินค้า ควรเรียงลำดับตามตัวอักษรของสินค้า
+
 
 # --hints--
 
-The function `updateInventory` should return an array.
+ฟังชั่น `updateInventory` ควรได้ผลลัพธ์เป็นอาร์เรย์ (return an array)
 
 ```js
 assert.isArray(
@@ -33,7 +38,7 @@ assert.isArray(
 );
 ```
 
-`updateInventory([[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"], [5, "Microphone"]], [[2, "Hair Pin"], [3, "Half-Eaten Apple"], [67, "Bowling Ball"], [7, "Toothpaste"]])` should return an array with a length of 6.
+`updateInventory([[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"], [5, "Microphone"]], [[2, "Hair Pin"], [3, "Half-Eaten Apple"], [67, "Bowling Ball"], [7, "Toothpaste"]])` ควรได้ผลลัพธ์เป็นอาร์เรย์ และมีจำนวนเป็น 6
 
 ```js
 assert.equal(
@@ -55,7 +60,7 @@ assert.equal(
 );
 ```
 
-`updateInventory([[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"], [5, "Microphone"]], [[2, "Hair Pin"], [3, "Half-Eaten Apple"], [67, "Bowling Ball"], [7, "Toothpaste"]])` should return `[[88, "Bowling Ball"], [2, "Dirty Sock"], [3, "Hair Pin"], [3, "Half-Eaten Apple"], [5, "Microphone"], [7, "Toothpaste"]]`.
+`updateInventory([[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"], [5, "Microphone"]], [[2, "Hair Pin"], [3, "Half-Eaten Apple"], [67, "Bowling Ball"], [7, "Toothpaste"]])` ควรได้ผลลัพธ์เป็น `[[88, "Bowling Ball"], [2, "Dirty Sock"], [3, "Hair Pin"], [3, "Half-Eaten Apple"], [5, "Microphone"], [7, "Toothpaste"]]`.
 
 ```js
 assert.deepEqual(
@@ -84,7 +89,7 @@ assert.deepEqual(
 );
 ```
 
-`updateInventory([[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"], [5, "Microphone"]], [])` should return `[[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"], [5, "Microphone"]]`.
+`updateInventory([[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"], [5, "Microphone"]], [])` ควรได้ผลลัพธ์เป็น `[[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"], [5, "Microphone"]]`.
 
 ```js
 assert.deepEqual(
@@ -106,7 +111,7 @@ assert.deepEqual(
 );
 ```
 
-`updateInventory([], [[2, "Hair Pin"], [3, "Half-Eaten Apple"], [67, "Bowling Ball"], [7, "Toothpaste"]])` should return `[[67, "Bowling Ball"], [2, "Hair Pin"], [3, "Half-Eaten Apple"], [7, "Toothpaste"]]`.
+`updateInventory([], [[2, "Hair Pin"], [3, "Half-Eaten Apple"], [67, "Bowling Ball"], [7, "Toothpaste"]])` ควรได้ผลลัพธ์เป็น `[[67, "Bowling Ball"], [2, "Hair Pin"], [3, "Half-Eaten Apple"], [7, "Toothpaste"]]`.
 
 ```js
 assert.deepEqual(
@@ -128,7 +133,7 @@ assert.deepEqual(
 );
 ```
 
-`updateInventory([[0, "Bowling Ball"], [0, "Dirty Sock"], [0, "Hair Pin"], [0, "Microphone"]], [[1, "Hair Pin"], [1, "Half-Eaten Apple"], [1, "Bowling Ball"], [1, "Toothpaste"]])` should return `[[1, "Bowling Ball"], [0, "Dirty Sock"], [1, "Hair Pin"], [1, "Half-Eaten Apple"], [0, "Microphone"], [1, "Toothpaste"]]`.
+`updateInventory([[0, "Bowling Ball"], [0, "Dirty Sock"], [0, "Hair Pin"], [0, "Microphone"]], [[1, "Hair Pin"], [1, "Half-Eaten Apple"], [1, "Bowling Ball"], [1, "Toothpaste"]])` ควรได้ผลลัพธ์เป็น `[[1, "Bowling Ball"], [0, "Dirty Sock"], [1, "Hair Pin"], [1, "Half-Eaten Apple"], [0, "Microphone"], [1, "Toothpaste"]]`.
 
 ```js
 assert.deepEqual(

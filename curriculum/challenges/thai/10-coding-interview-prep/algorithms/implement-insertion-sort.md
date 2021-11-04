@@ -8,19 +8,42 @@ dashedName: implement-insertion-sort
 
 # --description--
 
-The next sorting method we'll look at is insertion sort. This method works by building up a sorted array at the beginning of the list. It begins the sorted array with the first element. Then it inspects the next element and swaps it backwards into the sorted array until it is in sorted position. It continues iterating through the list and swapping new items backwards into the sorted portion until it reaches the end. This algorithm has quadratic time complexity in the average and worst cases.
+การจัดเรียงข้อมูลแบบ Insertion Sort จะแยกส่วนข้อมูลออกเป็น 2 ส่วน คือ ข้อมูลส่วนที่จัดเรียงแล้ว และข้อมูลส่วนที่ยังไม่ได้จัดเรียง
 
-**Instructions:** Write a function `insertionSort` which takes an array of integers as input and returns an array of these integers in sorted order from least to greatest.
+เริ่มจากนำข้อมูลในอาร์เรย์ตำแหน่งที่ 0 คือ 55 กำหนดให้เป็นส่วนที่จัดเรียง และข้อมูลในตำแหน่งที่ 1 เป็นข้อมูลแรกในส่วนที่ยังไม่ได้จัดเรียงข้อมูล คือ 20
+
+มาอยู่ในกลุ่มจัดเรียงข้อมูล แล้วจัดเรียงใหม่เฉพาะในกลุ่มจัดเรียงข้อมูล ต่อไปนำข้อมูลแรกในกลุ่มที่ไม่ได้จัดเรียง คือ 50 เพิ่มเข้าไปในส่วนกลุ่มจัดเรียง แล้วจัดเรียงใหม่ในกลุ่มจัดเรียงข้อมูล
+
+ทำอย่างนี้จนถึงข้อมูลสุดท้ายของกลุ่มข้อมูลที่ยังไม่ได้จัดเรียงข้อมูล
+
+ตัวอย่างจากด้านบน   แสดงข้อมูลในอาร์เรย์
+
+55, 20, 50, 65, 43    คัดลอก 20
+55, 55, 50, 65, 43    เลื่อน 55 มาตำแหน่งถัดไป
+20, 55, 50, 65, 43    เพิ่ม 20, คัดลอก 50
+
+20, 55, 55, 65, 43    เลื่อน 55
+20, 50, 55, 65, 43    เพิ่ม 50,คัดลอก 65
+20, 50, 55, 65, 43    คัดลอก 43
+
+20, 50, 50, 55, 65    เลื่อน 65, 55, 50
+20, 43, 50, 55, 65    เพิ่ม 43
+20, 43, 50, 55, 65    ผลการจัดเรียง
+
+
+โดยทั่วไป วิธีการนี้จะใช้เวลานาน
+
+**คำแนะนำ:** เขียนฟังก์ชัน `insertionSort`  ที่รับอาร์เรย์ เป็นจำนวนเต็ม และส่งกลับอาร์เรย์ของจำนวนเต็มเหล่านี้ โดยเรียงลำดับจากน้อยไปมาก
 
 # --hints--
 
-`insertionSort` should be a function.
+`insertionSort` ควรเป็น function.
 
 ```js
 assert(typeof insertionSort == 'function');
 ```
 
-`insertionSort` should return a sorted array (least to greatest).
+`insertionSort` ควรได้เป็น array ( โดยเรียงจาก น้อยไปมาก ).
 
 ```js
 assert(
@@ -48,7 +71,7 @@ assert(
 );
 ```
 
-`insertionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])` should return an array that is unchanged except for order.
+`insertionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])` ควรเป็น array ที่ไม่เปลี่ยนแปลง ยกเว้นสั่งมัน.
 
 ```js
 assert.sameMembers(
@@ -75,13 +98,13 @@ assert.sameMembers(
 );
 ```
 
-`insertionSort([5, 4, 33, 2, 8])` should return `[2, 4, 5, 8, 33]`.
+`insertionSort([5, 4, 33, 2, 8])` ควรได้ผลลัพธ์เป็น `[2, 4, 5, 8, 33]`.
 
 ```js
 assert.deepEqual(insertionSort([5, 4, 33, 2, 8]), [2, 4, 5, 8, 33])
 ```
 
-`insertionSort` should not use the built-in `.sort()` method.
+`insertionSort` ต้องไม่ใช้ built-in function `.sort()`
 
 ```js
 assert(isBuiltInSortUsed());
