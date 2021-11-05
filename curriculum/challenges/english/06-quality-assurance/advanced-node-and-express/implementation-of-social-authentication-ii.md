@@ -8,11 +8,11 @@ dashedName: implementation-of-social-authentication-ii
 
 # --description--
 
-The last part of setting up your GitHub authentication is to create the strategy itself. For this, you will need to add the dependency of `passport-github@~1.1.0` to your project and require it in your `auth.js` as `GithubStrategy` like this: `const GitHubStrategy = require('passport-github').Strategy;`. Do not forget to require and configure `dotenv` to use your environment variables.
+ส่วนสุดท้ายของการตั้งค่าการรับรองความถูกต้อง GitHub ของคุณคือการสร้างกลยุทธ์เอง จะต้องเพิ่ม dependency ของ `passport-github@~1.1.0` ให้กับโปรเจ็กต์ และต้องมีใน `auth.js` ของคุณเป็น `GithubStrategy` ดังนี้: `const GitHubStrategy = require('passport-github').Strategy;` อย่าลืมกำหนดและกำหนดค่า `dotenv เพื่อใช้ตัวแปรสภาพแวดล้อม
 
-To set up the GitHub strategy, you have to tell Passport to use an instantiated `GitHubStrategy`, which accepts 2 arguments: an object (containing `clientID`, `clientSecret`, and `callbackURL`) and a function to be called when a user is successfully authenticated, which will determine if the user is new and what fields to save initially in the user's database object. This is common across many strategies, but some may require more information as outlined in that specific strategy's GitHub README. For example, Google requires a *scope* as well which determines what kind of information your request is asking to be returned and asks the user to approve such access. The current strategy we are implementing has its usage outlined [here](https://github.com/jaredhanson/passport-github/), but we're going through it all right here on freeCodeCamp!
+ในการตั้งค่ากลยุทธ์ GitHub คุณต้องบอกให้ Passport ใช้ "GitHubStrategy" ที่สร้างอินสแตนซ์ ซึ่งยอมรับ 2 อาร์กิวเมนต์: object (ประกอบด้วย "clientID", "clientSecret" และ "callbackURL") และฟังก์ชันที่จะเรียกเมื่อ ผู้ใช้ได้รับการพิสูจน์ตัวตนเรียบร้อยแล้ว ซึ่งจะเป็นตัวกำหนดว่าเป็นผู้ใช้รายใหม่หรือไม่ และฟิลด์ใดที่จะบันทึกในขั้นต้นในวัตถุฐานข้อมูลของผู้ใช้ นี่เป็นเรื่องปกติในหลาย ๆ กลยุทธ์ แต่บางคนอาจต้องการข้อมูลเพิ่มเติมตามที่ระบุไว้ใน GitHub README ของกลยุทธ์เฉพาะนั้น ตัวอย่างเช่น Google ต้องมี *ขอบเขต* ซึ่งกำหนดว่าคำขอของคุณ ต้องการให้ส่งคืนข้อมูลประเภทใด และขอให้ผู้ใช้อนุมัติการเข้าถึงดังกล่าว กลยุทธ์ปัจจุบันที่เรากำลังดำเนินการได้อธิบายการใช้งานที่นี่ [here](https://github.com/jaredhanson/passport-github/) แต่เรากำลังทำทั้งหมดบน freeCodeCamp !
 
-Here's how your new strategy should look at this point:
+กลยุทธ์ใหม่ของคุณควรมีลักษณะดังนี้:
 
 ```js
 passport.use(new GitHubStrategy({
@@ -27,13 +27,13 @@ passport.use(new GitHubStrategy({
 ));
 ```
 
-Your authentication won't be successful yet, and it will actually throw an error without the database logic and callback, but it should log your GitHub profile to your console if you try it!
+การรับรองความถูกต้องยังไม่สำเร็จ และจริง ๆ แล้วจะทำให้เกิดข้อผิดพลาดโดยไม่มี logic ฐานข้อมูลและ callback แต่ควรบันทึกโปรไฟล์ GitHub ของผู้เรียนไปที่ console หากต้องการลอง! 
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point [here](https://gist.github.com/camperbot/ff3a1166684c1b184709ac0bee30dee6).
+ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [here](https://gist.github.com/camperbot/ff3a1166684c1b184709ac0bee30dee6).
 
 # --hints--
 
-passport-github dependency should be added.
+passport-github dependency ควรเพิ่ม
 
 ```js
 (getUserInput) =>
@@ -52,7 +52,7 @@ passport-github dependency should be added.
   );
 ```
 
-passport-github should be required.
+passport-github ต้องใช้
 
 ```js
 (getUserInput) =>

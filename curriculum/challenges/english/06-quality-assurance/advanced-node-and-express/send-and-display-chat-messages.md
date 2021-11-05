@@ -8,7 +8,7 @@ dashedName: send-and-display-chat-messages
 
 # --description--
 
-It's time you start allowing clients to send a chat message to the server to emit to all the clients! In your `client.js` file, you should see there is already a block of code handling when the message form is submitted.
+ถึงเวลาที่คุณเริ่มอนุญาตให้ลูกค้าส่งข้อความแชทไปยังเซิร์ฟเวอร์เพื่อส่งไปยังไคลเอนต์ทั้งหมด! ในไฟล์ "client.js" ควรเห็นว่ามีบล๊อคของการจัดการ code อยู่แล้วเมื่อส่งแบบฟอร์มข้อความ
 
 ```js
 $('form').submit(function() {
@@ -16,23 +16,23 @@ $('form').submit(function() {
 });
 ```
 
-Within the form submit code, you should emit an event after you define `messageToSend` but before you clear the text box `#m`. The event should be named `'chat message'` and the data should just be `messageToSend`.
+ภายใน code ส่งแบบฟอร์ม ควรปล่อยเหตุการณ์หลังจากที่กำหนด "messageToSend" แต่ก่อนที่จะล้างกล่องข้อความ "#m" เหตุการณ์ควรมีชื่อว่า  `'chat message'` และข้อมูลควรเป็น `messageToSend`.
 
 ```js
 socket.emit('chat message', messageToSend);
 ```
 
-Now, on your server, you should be listening to the socket for the event `'chat message'` with the data being named `message`. Once the event is received, it should emit the event `'chat message'` to all sockets `io.emit` with the data being an object containing `name` and `message`.
+ตอนนี้บนเซิร์ฟเวอร์ ควรฟัง socketสำหรับเหตุการณ์ `'chat message'` โดยใช้ข้อมูลชื่อว่า`message` เมื่อได้รับกิจกรรมแล้ว ควรปล่อยเหตุการณ์ `'chat message'`'ไปยัง socket ทั้งหมด 'io.emit' โดยที่ข้อมูลเป็นวัตถุที่มี `name` และ `message`
 
-In `client.js`, you should now listen for event `'chat message'` and, when received, append a list item to `#messages` with the name, a colon, and the message!
+ใน `client.js` คุณควรฟังเหตุการณ์ `'chat message'` และเมื่อได้รับ ให้เพิ่มรายการต่อท้าย `#messages` ด้วยชื่อ colon และข้อความ!
 
-At this point, the chat should be fully functional and sending messages across all clients!
+ณ จุดนี้ แชทควรจะทำงานได้อย่างสมบูรณ์และส่งข้อความไปยังไคลเอนต์ทั้งหมด!
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point [here](https://gist.github.com/camperbot/d7af9864375207e254f73262976d2016).
+ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [here](https://gist.github.com/camperbot/d7af9864375207e254f73262976d2016)
 
 # --hints--
 
-Server should listen for `'chat message'` and then emit it properly.
+เซิร์ฟเวอร์ควรฟัง `'chat message'` แล้วจึงปล่อยออกมาอย่างถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -50,7 +50,7 @@ Server should listen for `'chat message'` and then emit it properly.
   );
 ```
 
-Client should properly handle and display the new data from event `'chat message'`.
+ลูกค้าควรจัดการและแสดงข้อมูลใหม่จากเหตุการณ์ `'chat message'` อย่างเหมาะสม
 
 ```js
 (getUserInput) =>

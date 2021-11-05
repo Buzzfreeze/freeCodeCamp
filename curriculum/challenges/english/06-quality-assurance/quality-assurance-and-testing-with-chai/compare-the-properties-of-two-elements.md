@@ -8,15 +8,15 @@ dashedName: compare-the-properties-of-two-elements
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+Project นี้ สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/) 
 
 # --instructions--
 
-Within `tests/1_unit-tests.js` under the test labelled `#8` in the `Comparisons` suite, change each `assert` to either `assert.isAbove` or `assert.isAtMost` to make the test pass (should evaluate to `true`). Do not alter the arguments passed to the asserts.
+ภายใน `tests/1_unit-tests.js` ภายใต้ test ที่มีป้ายกำกับ `#8' ใน`Comparisons` ให้เปลี่ยน 'assert' แต่ละรายการเป็น `assert.isAbove` หรือ  `assert.isAtMost` เพื่อให้ test ผ่าน (ควรประเมินว่า `true`) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยัง assert
 
 # --hints--
 
-All tests should pass.
+ควรผ่านการทดสอบทั้งหมด
 
 ```js
 (getUserInput) =>
@@ -30,7 +30,7 @@ All tests should pass.
   );
 ```
 
-You should choose the correct method for the first assertion - `isAbove` vs. `isAtMost`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `isAbove` กับ `isAtMost`
 
 ```js
 (getUserInput) =>
@@ -48,7 +48,7 @@ You should choose the correct method for the first assertion - `isAbove` vs. `is
   );
 ```
 
-You should choose the correct method for the second assertion - `isAbove` vs. `isAtMost`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `isAbove` กับ `isAtMost`
 
 ```js
 (getUserInput) =>
@@ -62,7 +62,7 @@ You should choose the correct method for the second assertion - `isAbove` vs. `i
   );
 ```
 
-You should choose the correct method for the third assertion - `isAbove` vs. `isAtMost`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สาม - `isAbove` กับ `isAtMost`
 
 ```js
 (getUserInput) =>
@@ -80,7 +80,7 @@ You should choose the correct method for the third assertion - `isAbove` vs. `is
   );
 ```
 
-You should choose the correct method for the fourth assertion - `isAbove` vs. `isAtMost`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สี่ - `isAbove` กับ `isAtMost`
 
 ```js
 (getUserInput) =>

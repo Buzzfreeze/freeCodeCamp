@@ -8,27 +8,28 @@ dashedName: communicate-by-emitting
 
 # --description--
 
-<dfn>Emit</dfn> is the most common way of communicating you will use. When you emit something from the server to 'io', you send an event's name and data to all the connected sockets. A good example of this concept would be emitting the current count of connected users each time a new user connects!
 
-Start by adding a variable to keep track of the users, just before where you are currently listening for connections.
+<dfn>Emit</dfn> เป็นวิธีการสื่อสารทั่วไปที่จะใช้ เมื่อส่งสัญญาณบางอย่างจากเซิร์ฟเวอร์ไปที่ 'io' จะส่งชื่อและข้อมูลของเหตุการณ์ไปยัง socket ที่เชื่อมต่อทั้งหมด ตัวอย่างที่ดี คือการปล่อยจำนวนผู้ใช้ที่เชื่อมต่อในปัจจุบันทุกครั้งที่ผู้ใช้ใหม่เชื่อมต่อ!
+
+เริ่มต้นด้วยการเพิ่มตัวแปรเพื่อติดตามผู้ใช้ ก่อนที่จะรับฟังการเชื่อมต่อจากที่ใด 
 
 ```js
 let currentUsers = 0;
 ```
 
-Now, when someone connects, you should increment the count before emitting the count. So, you will want to add the incrementer within the connection listener.
+ตอนนี้ เมื่อมีคนเชื่อมต่อ ควรเพิ่มจำนวนก่อนที่จะปล่อยการนับ ดังนั้น จะต้องเพิ่มตัวเพิ่มภายในตัว connection listener
 
 ```js
 ++currentUsers;
 ```
 
-Finally, after incrementing the count, you should emit the event (still within the connection listener). The event should be named 'user count', and the data should just be the `currentUsers`.
+สุดท้าย หลังจากเพิ่มจำนวนแล้ว ควรปล่อยเหตุการณ์ (ยังอยู่ในตัว connection listener) เหตุการณ์ควรตั้งชื่อว่า 'user count' และข้อมูลควรเป็น `currentUsers` เท่านั้น 
 
 ```js
 io.emit('user count', currentUsers);
 ```
 
-Now, you can implement a way for your client to listen for this event! Similar to listening for a connection on the server, you will use the `on` keyword.
+ตอนนี้สามารถใช้วิธีให้ลูกค้าของคุณฟังเหตุการณ์นี้ได้! คล้ายกับการรับฟังการเชื่อมต่อบนเซิร์ฟเวอร์ คุณจะใช้คีย์เวิร์ด `on`
 
 ```js
 socket.on('user count', function(data) {
@@ -36,13 +37,13 @@ socket.on('user count', function(data) {
 });
 ```
 
-Now, try loading up your app, authenticate, and you should see in your client console '1' representing the current user count! Try loading more clients up, and authenticating to see the number go up.
+ตอนนี้ ลองโหลดแอปของคุณ ตรวจสอบสิทธิ์ แล้วคุณจะเห็นใน console ไคลเอ็นต์ '1' แสดงถึงจำนวนผู้ใช้ปัจจุบัน! ลองโหลดไคลเอ็นต์เพิ่มและรับรองความถูกต้องเพื่อดูจำนวนที่เพิ่มขึ้น
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point [here](https://gist.github.com/camperbot/28ef7f1078f56eb48c7b1aeea35ba1f5).
+ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [here](https://gist.github.com/camperbot/28ef7f1078f56eb48c7b1aeea35ba1f5)
 
 # --hints--
 
-currentUsers should be defined.
+currentUsers ควรถูกระบุ.
 
 ```js
 (getUserInput) =>
@@ -60,7 +61,7 @@ currentUsers should be defined.
   );
 ```
 
-Server should emit the current user count at each new connection.
+เซิร์ฟเวอร์ควรปล่อยจำนวนผู้ใช้ปัจจุบันในการเชื่อมต่อใหม่แต่ละครั้ง 
 
 ```js
 (getUserInput) =>
@@ -78,7 +79,7 @@ Server should emit the current user count at each new connection.
   );
 ```
 
-Your client should be listening for 'user count' event.
+ลูกค้าของคุณควรรับฟังเหตุการณ์ 'user count' 
 
 ```js
 (getUserInput) =>

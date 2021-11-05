@@ -8,15 +8,15 @@ dashedName: test-if-a-variable-or-function-is-defined
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
 # --instructions--
 
-Within `tests/1_unit-tests.js` under the test labelled `#2` in the `Basic Assertions` suite, change each `assert` to either `assert.isDefined()` or `assert.isUndefined()` to make the test pass (should evaluate to `true`). Do not alter the arguments passed to the asserts.
+ภายใน `tests/1_unit-tests.js` ภายใต้การทดสอบที่มีป้ายกำกับ `#2' ในชุด `Basic Assertions` ให้เปลี่ยน `assert' แต่ละรายการเป็น `assert.isDefined()` หรือ `assert.isUndefined()` เพื่อทำ ผ่านการทดสอบ (ควรประเมินเป็น `true`) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน
 
 # --hints--
 
-All tests should pass.
+การทดสอบทั้งหมดควรผ่าน
 
 ```js
 (getUserInput) =>
@@ -30,7 +30,7 @@ All tests should pass.
   );
 ```
 
-You should choose the correct method for the first assertion - `isDefined` vs. `isUndefined`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `isDefined` กับ `isUndefined`
 
 ```js
 (getUserInput) =>
@@ -48,7 +48,7 @@ You should choose the correct method for the first assertion - `isDefined` vs. `
   );
 ```
 
-You should choose the correct method for the second assertion - `isDefined` vs. `isUndefined`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `isDefined` กับ `isUndefined`
 
 ```js
 (getUserInput) =>
@@ -66,7 +66,7 @@ You should choose the correct method for the second assertion - `isDefined` vs. 
   );
 ```
 
-You should choose the correct method for the third assertion - `isDefined` vs. `isUndefined`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สาม - `isDefined` กับ `isUndefined`
 
 ```js
 (getUserInput) =>

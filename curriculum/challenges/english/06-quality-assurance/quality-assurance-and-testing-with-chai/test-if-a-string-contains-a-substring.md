@@ -8,17 +8,17 @@ dashedName: test-if-a-string-contains-a-substring
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-`include()` and `notInclude()` work for strings too! `include()` asserts that the actual string contains the expected substring.
+`include()` และ `notInclude()` ใช้ได้กับ string ด้วยเช่นกัน! `include()` ยืนยันว่า string แท้จริงมี substring ที่ต้องการ
 
 # --instructions--
 
-Within `tests/1_unit-tests.js` under the test labelled `#14` in the `Strings` suite, change each `assert` to either `assert.include` or `assert.notInclude` to make the test pass (should evaluate to `true`). Do not alter the arguments passed to the asserts.
+ภายใน `tests/1_unit-tests.js`  ภายใต้การทดสอบที่มีป้ายกำกับ "#14" ในชุด `Strings`  ให้เปลี่ยน `assert`  แต่ละรายการเป็น `assert.include` หรือ `assert.notInclude`  เพื่อให้ผ่านการทดสอบ (ควร ประเมินค่า `true` ) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน
 
 # --hints--
 
-All tests should pass.
+การทดสอบทั้งหมดควรผ่าน
 
 ```js
 (getUserInput) =>
@@ -32,7 +32,7 @@ All tests should pass.
   );
 ```
 
-You should choose the correct method for the first assertion - `include` vs. `notInclude`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `include`  กับ `notInclude`
 
 ```js
 (getUserInput) =>
@@ -50,7 +50,7 @@ You should choose the correct method for the first assertion - `include` vs. `no
   );
 ```
 
-You should choose the correct method for the second assertion - `include` vs. `notInclude`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `include`  กับ `notInclude`
 
 ```js
 (getUserInput) =>

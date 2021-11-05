@@ -8,11 +8,12 @@ dashedName: registration-of-new-users
 
 # --description--
 
-Now we need to allow a new user on our site to register an account. On the `res.render` for the home page add a new variable to the object passed along--`showRegistration: true`. When you refresh your page, you should then see the registration form that was already created in your `index.pug` file! This form is set up to **POST** on `/register`, so this is where we should set up to accept the **POST** and create the user object in the database.
 
-The logic of the registration route should be as follows: Register the new user > Authenticate the new user > Redirect to /profile
+ตอนนี้เราต้องอนุญาตให้ผู้ใช้ใหม่บนไซต์ของเราลงทะเบียนบัญชี ใน `res.render' สำหรับโฮมเพจ ให้เพิ่มตัวแปรใหม่ให้กับวัตถุที่ส่งผ่าน --`showRegistration: true` เมื่อคุณรีเฟรชหน้าของคุณ คุณควรเห็นแบบฟอร์มการลงทะเบียนที่สร้างไว้แล้วในไฟล์ `index.pug` ของคุณ! แบบฟอร์มนี้ตั้งค่าเป็น **POST** บน `/register' ดังนั้นนี่คือที่ที่เราควรตั้งค่าให้ยอมรับ **POST** และสร้างวัตถุผู้ใช้ในฐานข้อมูล
 
-The logic of step 1, registering the new user, should be as follows: Query database with a findOne command > if user is returned then it exists and redirect back to home *OR* if user is undefined and no error occurs then 'insertOne' into the database with the username and password, and, as long as no errors occur, call *next* to go to step 2, authenticating the new user, which we've already written the logic for in our POST */login* route.
+logic ของเส้นทางการลงทะเบียนควรเป็นดังนี้:  Register the new user > Authenticate the new user > Redirect to /profile
+
+logic ของขั้นตอนที่ 1 การลงทะเบียนผู้ใช้ใหม่ควรเป็นดังนี้: สืบค้นฐานข้อมูลด้วยคำสั่ง findOne > หากผู้ใช้ถูกส่งคืน แสดงว่ามีอยู่แล้วและเปลี่ยนเส้นทางกลับไปที่หน้าแรก *หรือ* หากผู้ใช้ไม่ได้กำหนดและไม่มีข้อผิดพลาดเกิดขึ้น ให้ป้อน 'insertOne' ลงในฐานข้อมูลด้วยชื่อผู้ใช้และรหัสผ่าน และตราบใดที่ไม่มี error เกิดขึ้น ให้ call *ถัดไป* เพื่อไปยังขั้นตอนที่ 2 ตรวจสอบสิทธิ์ผู้ใช้ใหม่ ซึ่งเราได้เขียน logic ไว้แล้วในเส้นทาง POST */login* ของเรา .
 
 ```js
 app.route('/register')
@@ -47,13 +48,13 @@ app.route('/register')
   );
 ```
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point [here](https://gist.github.com/camperbot/b230a5b3bbc89b1fa0ce32a2aa7b083e).
+ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [here](https://gist.github.com/camperbot/b230a5b3bbc89b1fa0ce32a2aa7b083e).
 
-**NOTE:** From this point onwards, issues can arise relating to the use of the *picture-in-picture* browser. If you are using an online IDE which offers a preview of the app within the editor, it is recommended to open this preview in a new tab.
+**หมายเหตุ:** จากจุดนี้เป็นต้นไป ปัญหาอาจเกิดขึ้นเกี่ยวกับการใช้เบราว์เซอร์ *ภาพซ้อนภาพ* หากกำลังใช้ IDE ออนไลน์ซึ่งมีการแสดงตัวอย่างของแอปภายในตัวแก้ไข ขอแนะนำให้เปิดการแสดงตัวอย่างนี้ในแท็บใหม่
 
 # --hints--
 
-You should register route and display on home.
+คุณควรลงทะเบียน route และแสดงที่ home
 
 ```js
 (getUserInput) =>
@@ -76,7 +77,7 @@ You should register route and display on home.
   );
 ```
 
-Registering should work.
+การลงทะเบียนควรใช้งานได้
 
 ```js
 async (getUserInput) => {
@@ -104,7 +105,7 @@ async (getUserInput) => {
 };
 ```
 
-Login should work.
+การเข้าสู่ระบบควรใช้งานได้
 
 ```js
 async (getUserInput) => {
@@ -153,7 +154,7 @@ async (getUserInput) => {
 };
 ```
 
-Logout should work.
+ออกจากระบบควรทำงาน
 
 ```js
 (getUserInput) =>
@@ -171,7 +172,7 @@ Logout should work.
   );
 ```
 
-Profile should no longer work after logout.
+โปรไฟล์จะไม่ทำงานอีกต่อไปหลังจากออกจากระบบ
 
 ```js
 (getUserInput) =>

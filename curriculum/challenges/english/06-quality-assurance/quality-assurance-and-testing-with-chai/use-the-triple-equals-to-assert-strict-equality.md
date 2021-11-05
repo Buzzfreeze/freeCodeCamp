@@ -8,17 +8,17 @@ dashedName: use-the-triple-equals-to-assert-strict-equality
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-`strictEqual()` compares objects using `===`.
+`strictEqual()` เปรียบเทียบ object โดยใช้  `===`
 
 # --instructions--
 
-Within `tests/1_unit-tests.js` under the test labelled `#6` in the `Equality` suite, change each `assert` to either `assert.strictEqual` or `assert.notStrictEqual` to make the test pass (should evaluate to `true`). Do not alter the arguments passed to the asserts.
+ภายใน "tests/1_unit-tests.js" ภายใต้การทดสอบที่มีป้ายกำกับ "#6" ในชุด "Equality" ให้เปลี่ยน "assert" แต่ละรายการเป็น "assert.strictEqual" หรือ "assert.notStrictEqual" เพื่อให้ผ่านการทดสอบ (ควร ประเมินค่า `true`) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน
 
 # --hints--
 
-All tests should pass.
+การทดสอบทั้งหมดควรผ่าน
 
 ```js
 (getUserInput) =>
@@ -32,7 +32,7 @@ All tests should pass.
   );
 ```
 
-You should choose the correct method for the first assertion - `strictEqual` vs. `notStrictEqual`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `strictEqual` กับ `notStrictEqual`
 
 ```js
 (getUserInput) =>
@@ -50,7 +50,7 @@ You should choose the correct method for the first assertion - `strictEqual` vs.
   );
 ```
 
-You should choose the correct method for the second assertion - `strictEqual` vs. `notStrictEqual`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `strictEqual` กับ `notStrictEqual`
 
 ```js
 (getUserInput) =>
@@ -64,7 +64,7 @@ You should choose the correct method for the second assertion - `strictEqual` vs
   );
 ```
 
-You should choose the correct method for the third assertion - `strictEqual` vs. `notStrictEqual`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สาม - `strictEqual` กับ `notStrictEqual`
 
 ```js
 (getUserInput) =>
@@ -82,7 +82,7 @@ You should choose the correct method for the third assertion - `strictEqual` vs.
   );
 ```
 
-You should choose the correct method for the fourth assertion - `strictEqual` vs. `notStrictEqual`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สี่ - `strictEqual` กับ `notStrictEqual`
 
 ```js
 (getUserInput) =>

@@ -8,15 +8,15 @@ dashedName: set-up-passport
 
 # --description--
 
-It's time to set up *Passport* so we can finally start allowing a user to register or login to an account! In addition to Passport, we will use Express-session to handle sessions. Using this middleware saves the session id as a cookie in the client and allows us to access the session data using that id on the server. This way we keep personal account information out of the cookie used by the client to verify to our server they are authenticated and just keep the *key* to access the data stored on the server.
+คราวนี้ จะตั้งค่า *Passport* เพื่อให้เราสามารถเริ่มอนุญาตให้ผู้ใช้ลงทะเบียนหรือเข้าสู่ระบบบัญชีได้! นอกจาก Passport แล้ว เราจะใช้ Express-session เพื่อจัดการเซสชัน การใช้มิดเดิลแวร์นี้จะบันทึก ID เซสชันเป็น cookie ในไคลเอนต์ และทำให้เราสามารถเข้าถึงข้อมูลเซสชันโดยใช้ ID นั้นบนเซิร์ฟเวอร์ วิธีนี้ช่วยให้ข้อมูลบัญชีส่วนบุคคลไม่อยู่ใน cookie ที่ลูกค้าใช้เพื่อยืนยันกับเซิร์ฟเวอร์ของเรา ข้อมูลเหล่านั้นได้รับการตรวจสอบสิทธิ์แล้ว และเพียงเก็บ *key* เพื่อเข้าถึงข้อมูลที่จัดเก็บไว้ในเซิร์ฟเวอร์
 
-To set up Passport for use in your project, you will need to add it as a dependency first in your package.json. `passport@~0.4.1`
+ในการตั้งค่า Passport สำหรับใช้ใน project จะต้องเพิ่มเป็น dependency ก่อนใน package.json ของคุณ `passport@~0.4.1`
 
-In addition, add Express-session as a dependency now as well. Express-session has a ton of advanced features you can use but for now we're just going to use the basics! `express-session@~1.17.1`
+นอกจากนี้ เพิ่ม Express-session เป็นการขึ้นต่อกันตอนนี้ด้วย Express-session มีฟีเจอร์ขั้นสูงมากมายที่สามารถใช้ได้ แต่สำหรับตอนนี้ เราจะใช้แค่พื้นฐานเท่านั้น! `express-session@~1.17.1`
 
-You will need to set up the session settings now and initialize Passport. Be sure to first create the variables 'session' and 'passport' to require 'express-session' and 'passport' respectively.
+คุณจะต้องตั้งค่าเซสชันทันทีและเริ่มต้น Passport อย่าลืมสร้างตัวแปร 'session' และ 'passport' เพื่อให้ต้องใช้ 'express-session' และ 'passport' ตามลำดับ
 
-To set up your express app to use the session we'll define just a few basic options. Be sure to add 'SESSION_SECRET' to your .env file and give it a random value. This is used to compute the hash used to encrypt your cookie!
+ในการตั้งค่าแอปด่วนเพื่อใช้เซสชัน เราจะกำหนดตัวเลือกพื้นฐานเพียงไม่กี่ตัว อย่าลืมเพิ่ม 'SESSION_SECRET' ลงในไฟล์ .env และกำหนดค่าแบบสุ่ม ใช้สำหรับคำนวณแฮชที่ใช้ในการเข้ารหัส cookie!
 
 ```js
 app.use(session({
@@ -28,12 +28,13 @@ app.use(session({
 ```
 
 As well you can go ahead and tell your express app to **use** 'passport.initialize()' and 'passport.session()'. (For example, `app.use(passport.initialize());`)
+เรายังสามารถบอก express app ว่า **use** 'passport.initialize()' และ 'passport.session()' (ตัวอย่างเช่น `app.use(passport.initialize());`)
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point [here](https://gist.github.com/camperbot/4068a7662a2f9f5d5011074397d6788c).
+ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [here](https://gist.github.com/camperbot/4068a7662a2f9f5d5011074397d6788c).
 
 # --hints--
 
-Passport and Express-session should be dependencies.
+Passport และ Express-session ควรเป็น dependency
 
 ```js
 (getUserInput) =>
@@ -57,7 +58,7 @@ Passport and Express-session should be dependencies.
   );
 ```
 
-Dependencies should be correctly required.
+จำเป็นต้องมี dependency อย่างถูกต้อง 
 
 ```js
 (getUserInput) =>
@@ -80,7 +81,7 @@ Dependencies should be correctly required.
   );
 ```
 
-Express app should use new dependencies.
+Express app ควรใช้ dependency ใหม่
 
 ```js
 (getUserInput) =>
@@ -103,7 +104,7 @@ Express app should use new dependencies.
   );
 ```
 
-Session and session secret should be correctly set up.
+ควรตั้งค่าความลับของเซสชันและเซสชันอย่างถูกต้อง
 
 ```js
 (getUserInput) =>

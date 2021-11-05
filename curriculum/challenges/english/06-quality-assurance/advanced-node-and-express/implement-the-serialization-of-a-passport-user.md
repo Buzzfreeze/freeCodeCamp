@@ -8,11 +8,11 @@ dashedName: implement-the-serialization-of-a-passport-user
 
 # --description--
 
-Right now, we're not loading an actual user object since we haven't set up our database. This can be done many different ways, but for our project we will connect to the database once when we start the server and keep a persistent connection for the full life-cycle of the app. To do this, add your database's connection string (for example: `mongodb+srv://:@cluster0-jvwxi.mongodb.net/?retryWrites=true&w=majority`) to the environment variable `MONGO_URI`. This is used in the `connection.js` file.
+ขณะนี้ เราไม่ได้โหลด object ผู้ใช้จริงเนื่องจากเรายังไม่ได้ตั้งค่าฐานข้อมูลของเรา ซึ่งสามารถทำได้หลายวิธี แต่สำหรับโครงการของเรา เราจะเชื่อมต่อกับฐานข้อมูลหนึ่งครั้งเมื่อเราเริ่มเซิร์ฟเวอร์และคงการเชื่อมต่อแบบถาวรตลอดวงจรชีวิตทั้งหมดของแอป ในการดำเนินการนี้ ให้เพิ่ม string การเชื่อมต่อของฐานข้อมูลของคุณ (เช่น: `mongodb+srv://:@cluster0-jvwxi.mongodb.net/?retryWrites=true&w=majority`) ให้กับตัวแปรสภาพแวดล้อม `MONGO_URI` ใช้ในไฟล์ `connection.js`
 
-*You can set up a free database on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).*
+*คุณสามารถตั้งค่าฐานข้อมูลฟรีบน [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)*
 
-Now we want to connect to our database then start listening for requests. The purpose of this is to not allow requests before our database is connected or if there is a database error. To accomplish this, you will want to encompass your serialization and your app routes in the following code:
+ตอนนี้เราต้องการเชื่อมต่อกับฐานข้อมูลของเราแล้วเริ่มฟังคำขอ จุดประสงค์ของการดำเนินการนี้คือไม่อนุญาตให้มีการร้องขอก่อนที่จะเชื่อมต่อฐานข้อมูลของเราหรือหากมีข้อผิดพลาดของฐานข้อมูล ในการทำให้สำเร็จ จะต้องรวมการซีเรียลไลซ์เซชั่นและเส้นทางของแอพด้วย code ต่อไปนี้:
 
 ```js
 myDB(async client => {
@@ -38,13 +38,13 @@ myDB(async client => {
 // app.listen out here...
 ```
 
-Be sure to uncomment the `myDataBase` code in `deserializeUser`, and edit your `done(null, null)` to include the `doc`.
+ตรวจสอบให้แน่ใจว่าได้ยกเลิกการใส่เครื่องหมายรหัส `myDataBase` ใน `deserializeUser` และแก้ไข `done(null, null)` ของคุณเพื่อรวม `doc`
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point [here](https://gist.github.com/camperbot/175f2f585a2d8034044c7e8857d5add7).
+ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [here](https://gist.github.com/camperbot/175f2f585a2d8034044c7e8857d5add7).
 
 # --hints--
 
-Database connection should be present.
+ควรมีการเชื่อมต่อฐานข้อมูล
 
 ```js
 (getUserInput) =>
@@ -62,7 +62,7 @@ Database connection should be present.
   );
 ```
 
-Deserialization should now be correctly using the DB and `done(null, null)` should be called with the `doc`.
+ตอนนี้การดีซีเรียลไลซ์เซชั่นควรจะถูกต้อง โดยใช้ฐานข้อมูล และ `done(null, null)` ควรถูกเรียกด้วย `doc`
 
 ```js
 (getUserInput) =>

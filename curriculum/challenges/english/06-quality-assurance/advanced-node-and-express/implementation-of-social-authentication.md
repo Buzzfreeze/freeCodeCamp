@@ -8,21 +8,22 @@ dashedName: implementation-of-social-authentication
 
 # --description--
 
-The basic path this kind of authentication will follow in your app is:
+เส้นทางพื้นฐานของการตรวจสอบสิทธิ์ประเภทนี้จะตามมาในแอป:
 
-1.  User clicks a button or link sending them to our route to authenticate using a specific strategy (e.g. GitHub).
-2.  Your route calls `passport.authenticate('github')` which redirects them to GitHub.
-3.  The page the user lands on, on GitHub, allows them to login if they aren't already. It then asks them to approve access to their profile from our app.
-4.  The user is then returned to our app at a specific callback url with their profile if they are approved.
-5.  They are now authenticated, and your app should check if it is a returning profile, or save it in your database if it is not.
 
-Strategies with OAuth require you to have at least a *Client ID* and a *Client Secret* which is a way for the service to verify who the authentication request is coming from and if it is valid. These are obtained from the site you are trying to implement authentication with, such as GitHub, and are unique to your app--**THEY ARE NOT TO BE SHARED** and should never be uploaded to a public repository or written directly in your code. A common practice is to put them in your `.env` file and reference them like so: `process.env.GITHUB_CLIENT_ID`. For this challenge we're going to use the GitHub strategy.
+1. ผู้ใช้คลิกปุ่มหรือลิงก์เพื่อส่งไปยังเส้นทางของเราเพื่อตรวจสอบสิทธิ์โดยใช้กลยุทธ์เฉพาะ (เช่น GitHub)
+2. เส้นทางเรียก `passport.authenticate('github')` ซึ่งเปลี่ยนเส้นทางไปยัง GitHub
+3. หน้าที่ผู้ใช้ไปถึงบน GitHub อนุญาตให้ผู้ใช้เข้าสู่ระบบหากยังไม่ได้ทำ จากนั้นจะขอให้ผู้ใช้อนุมัติการเข้าถึงโปรไฟล์จากแอพของเรา
+4. จากนั้นผู้ใช้จะถูกส่งกลับไปยังแอปของเราที่ URL โทรกลับที่ระบุพร้อมกับโปรไฟล์หากได้รับการอนุมัติ
+5. ตอนนี้ผู้ใช้ได้รับการตรวจสอบสิทธิ์แล้ว และแอปควรตรวจสอบว่าเป็นโปรไฟล์ที่ส่งคืนหรือไม่ หรือบันทึกไว้ในฐานข้อมูลของคุณหากไม่ใช่
 
-Obtaining your *Client ID and Secret* from GitHub is done in your account profile settings under 'developer settings', then '[OAuth applications](https://github.com/settings/developers)'. Click 'Register a new application', name your app, paste in the url to your Replit homepage (**Not the project code's url**), and lastly, for the callback url, paste in the same url as the homepage but with `/auth/github/callback` added on. This is where users will be redirected for us to handle after authenticating on GitHub. Save the returned information as `'GITHUB_CLIENT_ID'` and `'GITHUB_CLIENT_SECRET'` in your `.env` file.
+กลยุทธ์กับ OAuth กำหนดให้คุณต้องมี *Client ID* และ *Client Secret* เป็นอย่างน้อย ซึ่งเป็นวิธีการสำหรับบริการในการตรวจสอบว่าคำขอตรวจสอบสิทธิ์นั้นมาจากใครและคำขอนั้นถูกต้องหรือไม่ สิ่งเหล่านี้ได้มาจากไซต์พยายามใช้การรับรองความถูกต้องด้วย เช่น GitHub และมีความเฉพาะสำหรับแอป -- ** ไม่ควรแชร์** และไม่ควรอัปโหลดไปยังที่เก็บสาธารณะหรือเขียนโดยตรงใน รหัส. แนวทางปฏิบัติทั่วไปคือการใส่ไว้ในไฟล์ `.env' และอ้างอิงดังนี้: `process.env.GITHUB_CLIENT_ID` สำหรับความท้าทายนี้ เราจะใช้กลยุทธ์ GitHub
 
-In your `routes.js` file, add `showSocialAuth: true` to the homepage route, after `showRegistration: true`. Now, create 2 routes accepting GET requests: `/auth/github` and `/auth/github/callback`. The first should only call passport to authenticate `'github'`. The second should call passport to authenticate `'github'` with a failure redirect to `/`, and then if that is successful redirect to `/profile` (similar to our last project).
+การรับ *Client ID and Secret* จาก GitHub ทำได้ในการตั้งค่าโปรไฟล์บัญชีของคุณภายใต้ 'developer settings' จากนั้น '[แอปพลิเคชัน OAuth](https://github.com/settings/developers)' คลิก 'Register a new application' ตั้งชื่อแอป วาง URL ไปยังหน้าแรกของ Replit (**ไม่ใช่ url ของรหัสโครงการ**) และสุดท้าย สำหรับ url การ callback ให้วาง URL เดียวกันกับหน้าแรก แต่มี เพิ่ม `/auth/github/callback' นี่คือที่ที่ผู้ใช้จะถูกเปลี่ยนเส้นทางให้เราจัดการหลังจากตรวจสอบสิทธิ์บน GitHub บันทึกข้อมูลที่ส่งคืนเป็น `'GITHUB_CLIENT_ID'` และ `'GITHUB_CLIENT_SECRET'` ในไฟล์ `.env`
 
-An example of how `/auth/github/callback` should look is similar to how we handled a normal login:
+ในไฟล์ "routes.js" ให้เพิ่ม "showSocialAuth: true" ในเส้นทางของหน้าแรก ต่อจาก "showRegistration: true" ตอนนี้ สร้าง 2 เส้นทางที่ยอมรับคำขอ GET: `/auth/github` และ `/auth/github/callback` อันดับแรกควรเรียกหนังสือเดินทางเพื่อตรวจสอบสิทธิ์ "github" เท่านั้น ประการที่สอง ควรเรียก passport เพื่อตรวจสอบสิทธิ์ `'github'` โดยล้มเหลวในการเปลี่ยนเส้นทางไปที่ `/` จากนั้นหากเปลี่ยนเส้นทางไปที่ `/profile' ได้สำเร็จ (คล้ายกับ project ที่แล้วของเรา)
+
+ตัวอย่างของ `/auth/github/callback` ควรมีลักษณะอย่างไร คล้ายกับที่เราจัดการกับการเข้าสู่ระบบปกติ:
 
 ```js
 app.route('/login')
@@ -31,11 +32,11 @@ app.route('/login')
   });
 ```
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out the project up to this point [here](https://gist.github.com/camperbot/1f7f6f76adb178680246989612bea21e).
+ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [here](https://gist.github.com/camperbot/1f7f6f76adb178680246989612bea21e).
 
 # --hints--
 
-Route `/auth/github` should be correct.
+Route `/auth/github` ควรถูกต้อง
 
 ```js
 async (getUserInput) => {
@@ -66,7 +67,7 @@ async (getUserInput) => {
 }
 ```
 
-Route `/auth/github/callback` should be correct.
+Route `/auth/github/callback` ควรถูกต้อง
 
 ```js
 async (getUserInput) => {

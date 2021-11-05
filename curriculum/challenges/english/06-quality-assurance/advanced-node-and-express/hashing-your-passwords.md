@@ -8,13 +8,13 @@ dashedName: hashing-your-passwords
 
 # --description--
 
-Going back to the information security section, you may remember that storing plaintext passwords is *never* okay. Now it is time to implement BCrypt to solve this issue.
+กลับไปที่ส่วนความปลอดภัยของข้อมูล อาจจำได้ว่าการจัดเก็บรหัสผ่านแบบข้อความธรรมดานั้น *ไม่* โอเค ตอนนี้ถึงเวลาที่จะใช้ BCrypt เพื่อแก้ปัญหานี้
 
-Add `bcrypt@~5.0.0` as a dependency, and require it in your server. You will need to handle hashing in 2 key areas: where you handle registering/saving a new account, and when you check to see that a password is correct on login.
+เพิ่ม `bcrypt@~5.0.0` เป็นการขึ้นต่อกัน และต้องใช้ในเซิร์ฟเวอร์ของคุณ จะต้องจัดการกับการแฮชใน 2 ส่วนสำคัญ: ที่ที่จัดการการลงทะเบียน/บันทึกบัญชีใหม่ และเมื่อตรวจสอบเพื่อดูว่ารหัสผ่านถูกต้องเมื่อเข้าสู่ระบบ
 
-Currently on our registration route, you insert a user's password into the database like so: `password: req.body.password`. An easy way to implement saving a hash instead is to add the following before your database logic `const hash = bcrypt.hashSync(req.body.password, 12);`, and replacing the `req.body.password` in the database saving with just `password: hash`.
+ขณะนี้อยู่ในเส้นทางการลงทะเบียนของเรา ใส่รหัสผ่านของผู้ใช้ลงในฐานข้อมูลดังนี้: `รหัสผ่าน: req.body.password' วิธีง่ายๆ ในการใช้การบันทึกแฮชแทนคือการเพิ่มสิ่งต่อไปนี้ก่อนตรรกะฐานข้อมูลของคุณ `const hash = bcrypt.hashSync(req.body.password, 12);` และแทนที่ `req.body.password' ในฐานข้อมูล บันทึกด้วยเพียง `รหัสผ่าน: แฮช'
 
-Finally, on our authentication strategy, we check for the following in our code before completing the process: `if (password !== user.password) { return done(null, false); }`. After making the previous changes, now `user.password` is a hash. Before making a change to the existing code, notice how the statement is checking if the password is **not** equal then return non-authenticated. With this in mind, your code could look as follows to properly check the password entered against the hash:
+สุดท้าย ในกลยุทธ์การตรวจสอบสิทธิ์ของเรา เราจะตรวจสอบสิ่งต่อไปนี้ในโค้ดของเราก่อนที่จะดำเนินการให้เสร็จสิ้น: `if (password !== user.password) { return done(null, false); }`. หลังจากทำการเปลี่ยนแปลงก่อนหน้านี้ ตอนนี้ `user.password` เป็นแฮช ก่อนทำการเปลี่ยนแปลงรหัสที่มีอยู่ ให้สังเกตว่าคำสั่งตรวจสอบอย่างไรว่ารหัสผ่าน **ไม่** เท่ากัน จากนั้นส่งคืนแบบไม่ตรวจสอบสิทธิ์ ด้วยเหตุนี้ รหัสจึงอาจมีลักษณะดังนี้ เพื่อตรวจสอบรหัสผ่านที่ป้อนกับแฮชอย่างถูกต้อง:
 
 ```js
 if (!bcrypt.compareSync(password, user.password)) { 
@@ -22,13 +22,13 @@ if (!bcrypt.compareSync(password, user.password)) {
 }
 ```
 
-That is all it takes to implement one of the most important security features when you have to store passwords!
+นี้คือทั้งหมดที่ใช้ในการติดตั้งหนึ่งในคุณสมบัติ security ที่สำคัญที่สุดเมื่อต้องเก็บรหัสผ่าน! 
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point [here](https://gist.github.com/camperbot/dc16cca09daea4d4151a9c36a1fab564).
+ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [here](https://gist.github.com/camperbot/dc16cca09daea4d4151a9c36a1fab564).
 
 # --hints--
 
-BCrypt should be a dependency.
+BCrypt ควรเป็น dependency.
 
 ```js
 (getUserInput) =>
@@ -47,7 +47,7 @@ BCrypt should be a dependency.
   );
 ```
 
-BCrypt should be correctly required and implemented.
+BCrypt ควรมีความจำเป็นและนำไปใช้อย่างถูกต้อง 
 
 ```js
 (getUserInput) =>

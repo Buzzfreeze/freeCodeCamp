@@ -8,19 +8,19 @@ dashedName: use-assert-isok-and-assert-isnotok
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-`isOk()` will test for a truthy value, and `isNotOk()` will test for a falsy value.
+`isOk()` จะทดสอบหาค่าที่เป็น true และ `isNotOk()` จะทดสอบหาค่าที่เป็น false
 
-To learn more about truthy and falsy values, try our [Falsy Bouncer](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/falsy-bouncer) challenge.
+หากต้องการเรียนรู้เพิ่มเติมเกี่ยวกับค่าความจริง (true) และค่าเท็จ (false) ลองไปดู challenge ที่ [Falsy Bouncer](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/falsy-bouncer)
 
 # --instructions--
 
-Within `tests/1_unit-tests.js` under the test labelled `#3` in the `Basic Assertions` suite, change each `assert` to either `assert.isOk()` or `assert.isNotOk()` to make the test pass (should evaluate to `true`). Do not alter the arguments passed to the asserts.
+ภายใน `tests/1_unit-tests.js` ภายใต้การทดสอบที่มีป้ายกำกับ `#3' ในชุด `Basic Assertions` ให้เปลี่ยน `assert' แต่ละรายการเป็น `assert.isOk()` หรือ `asssert.isNotOk()` เพื่อทำ ผ่านการทดสอบ (ควรประเมินค่า `true`) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน
 
 # --hints--
 
-All tests should pass.
+การทดสอบทั้งหมดควรผ่าน
 
 ```js
 (getUserInput) =>
@@ -34,7 +34,7 @@ All tests should pass.
   );
 ```
 
-You should choose the correct method for the first assertion - `isOk` vs. `isNotOk`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `isOk` กับ `isNotOk`
 
 ```js
 (getUserInput) =>
@@ -48,7 +48,7 @@ You should choose the correct method for the first assertion - `isOk` vs. `isNot
   );
 ```
 
-You should choose the correct method for the second assertion - `isOk` vs. `isNotOk`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `isOk` กับ `isNotOk`
 
 ```js
 (getUserInput) =>
@@ -62,7 +62,7 @@ You should choose the correct method for the second assertion - `isOk` vs. `isNo
   );
 ```
 
-You should choose the correct method for the third assertion - `isOk` vs. `isNotOk`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สาม - `isOk` กับ `isNotOk`
 
 ```js
 (getUserInput) =>

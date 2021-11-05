@@ -8,7 +8,7 @@ dashedName: implementation-of-social-authentication-iii
 
 # --description--
 
-The final part of the strategy is handling the profile returned from GitHub. We need to load the user's database object if it exists, or create one if it doesn't, and populate the fields from the profile, then return the user's object. GitHub supplies us a unique *id* within each profile which we can use to search with to serialize the user with (already implemented). Below is an example implementation you can use in your project--it goes within the function that is the second argument for the new strategy, right below where `console.log(profile);` currently is:
+ส่วนสุดท้ายของกลยุทธ์คือการจัดการโปรไฟล์ที่ส่งคืนจาก GitHub เราจำเป็นต้องโหลดออบเจ็กต์ฐานข้อมูลของผู้ใช้ หากมี หรือสร้างออบเจ็กต์หากไม่มี และเติมฟิลด์จากโปรไฟล์ จากนั้นส่งคืนอ็อบเจ็กต์ของผู้ใช้ GitHub ให้ *id* ที่ไม่ซ้ำกันแก่เราในแต่ละโปรไฟล์ ซึ่งเราสามารถใช้ในการค้นหาเพื่อจัดลำดับผู้ใช้ด้วย (ใช้งานแล้ว) ด้านล่างนี้คือตัวอย่างการใช้งานที่สามารถใช้ได้ใน project ของผู้เรียน โดยจะอยู่ภายในฟังก์ชันที่เป็นอาร์กิวเมนต์ที่สองสำหรับกลยุทธ์ใหม่ ด้านล่างที่ `console.log(profile);` ในปัจจุบันคือ:
 
 ```js
 myDataBase.findOneAndUpdate(
@@ -38,15 +38,17 @@ myDataBase.findOneAndUpdate(
 );
 ```
 
-`findOneAndUpdate` allows you to search for an object and update it. If the object doesn't exist, it will be inserted and made available to the callback function. In this example, we always set `last_login`, increment the `login_count` by `1`, and only populate the majority of the fields when a new object (new user) is inserted. Notice the use of default values. Sometimes a profile returned won't have all the information filled out or the user will keep it private. In this case, you handle it to prevent an error.
 
-You should be able to login to your app now--try it!
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point [here](https://gist.github.com/camperbot/183e968f0e01d81dde015d45ba9d2745).
+`findOneAndUpdate` ช่วยให้คุณค้นหา object และอัปเดต object ได้ หากไม่มี object อยู่ จะถูกแทรกและทำให้ใช้งานได้กับฟังก์ชัน callback ในตัวอย่างนี้ เราตั้งค่า "last_login" เสมอ เพิ่ม "login_count" โดย "1" และเติมเฉพาะฟิลด์ส่วนใหญ่เมื่อมีการแทรก object ใหม่ (ผู้ใช้ใหม่) สังเกตการใช้ค่าเริ่มต้น บางครั้งโปรไฟล์ที่ส่งคืนจะไม่มีการกรอกข้อมูลทั้งหมดหรือผู้ใช้จะเก็บไว้เป็นส่วนตัว ในกรณีนี้ คุณจัดการเพื่อป้องกัน error
+
+ผู้เรียนควรจะสามารถลงชื่อเข้าใช้แอปได้แล้ว ลองเลย!
+
+ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [here](https://gist.github.com/camperbot/183e968f0e01d81dde015d45ba9d2745).
 
 # --hints--
 
-GitHub strategy setup should be complete.
+GitHub strategy setup ควรเสร็จสมบูรณ์
 
 ```js
 (getUserInput) =>

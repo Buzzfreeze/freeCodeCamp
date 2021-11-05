@@ -8,23 +8,23 @@ dashedName: use-a-template-engines-powers
 
 # --description--
 
-One of the greatest features of using a template engine is being able to pass variables from the server to the template file before rendering it to HTML.
+หนึ่งใน feaature ที่ยอดเยี่ยมที่สุดของการใช้ template engine คือสามารถส่งตัวแปรจากเซิร์ฟเวอร์ไปยังไฟล์เทมเพลตก่อนที่จะแสดงผลเป็น HTML
 
-In your Pug file, you're able to use a variable by referencing the variable name as `#{variable_name}` inline with other text on an element or by using an equal sign on the element without a space such as `p=variable_name` which assigns the variable's value to the p element's text.
+ในไฟล์ Pug ของคุณ คุณสามารถใช้ตัวแปรโดยอ้างอิงชื่อตัวแปรว่า `#{variable_name}` แบบอินไลน์กับข้อความอื่นบน element หนึ่งๆ หรือโดยการใช้เครื่องหมายเท่ากับบน element โดยไม่มีการเว้นวรรค เช่น `p=variable_name ` ซึ่งกำหนดค่าของตัวแปรให้กับข้อความของ element p
 
-We strongly recommend looking at the syntax and structure of Pug [here](https://github.com/pugjs/pug) on GitHub's README. Pug is all about using whitespace and tabs to show nested elements and cutting down on the amount of code needed to make a beautiful site.
+เราขอแนะนำอย่างยิ่งให้ดูที่ syntax และโครงสร้างของ Pug [here](https://github.com/pugjs/pug) บน README ของ GitHub Pug เป็นข้อมูลเกี่ยวกับการใช้ช่องว่างและแท็บเพื่อแสดง element ที่ซ้อนกัน และลดจำนวน code ที่จำเป็นในการสร้างเว็บไซต์ที่สวยงาม
 
-Looking at our pug file 'index.pug' included in your project, we used the variables *title* and *message*.
+เมื่อดูที่ไฟล์ pug 'index.pug' ที่รวมอยู่ในโปรเจ็กต์ของคุณ เราใช้ตัวแปร *title* และ *message*
 
-To pass those along from our server, you will need to add an object as a second argument to your *res.render* with the variables and their values. For example, pass this object along setting the variables for your index view: `{title: 'Hello', message: 'Please login'}`
+ในการส่งต่อสิ่งเหล่านี้จากเซิร์ฟเวอร์ของเรา จะต้องเพิ่ม object เป็นอาร์กิวเมนต์ที่สองใน *res.render* ด้วยตัวแปรและค่า ตัวอย่างเช่น ส่งผ่าน object นี้พร้อมการตั้งค่าตัวแปรสำหรับ index view: `{title: 'Hello', message: 'Please login'}`
 
-It should look like: `res.render(process.cwd() + '/views/pug/index', {title: 'Hello', message: 'Please login'});` Now refresh your page and you should see those values rendered in your view in the correct spot as laid out in your index.pug file!
+ควรมีลักษณะดังนี้: `res.render(process.cwd() + '/views/pug/index', {title: 'Hello', message: 'Please login'});` รีเฟรชหน้าของคุณและคุณจะเห็น ค่าเหล่านั้นแสดงในมุมมองในจุดที่ถูกต้องตามที่วางไว้ในไฟล์ index.pug !
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point [here](https://gist.github.com/camperbot/4af125119ed36e6e6a8bb920db0c0871).
+ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [here](https://gist.github.com/camperbot/4af125119ed36e6e6a8bb920db0c0871).
 
 # --hints--
 
-Pug should correctly render variables.
+Pug ควรแสดงผลตัวแปรอย่างถูกต้อง
 
 ```js
 (getUserInput) =>

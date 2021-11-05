@@ -8,60 +8,60 @@ dashedName: sudoku-solver
 
 # --description--
 
-Build a full stack JavaScript app that is functionally similar to this: <https://sudoku-solver.freecodecamp.rocks/>. Working on this project will involve you writing your code using one of the following methods:
+สร้างแอพ full stack JavaScript ซึ่งมีฟังก์ชันการทำงานคล้าย link นี้ : <https://sudoku-solver.freecodecamp.rocks/>  ทำงานใน project นี้ เขียน code โดยใช้วิธีใดวิธีหนึ่งต่อไปนี้: 
 
--   Clone [this GitHub repo](https://github.com/freecodecamp/boilerplate-project-sudoku-solver) and complete your project locally.
--   Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-sudoku-solver) to complete your project.
--   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
+- ทำการ clone repo [GitHub นี้](https://github.com/freecodecamp/boilerplate-project-sudoku-solver) เพื่อสร้าง project ในนั้นให้สำเร็จ
+- ใช้  project เริ่มต้นจาก [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-sudoku-solver) เพื่อสร้าง project ให้สำเร็จ
+- ใช้ site builder ที่ผู้เรียนเลือก เพื่อสร้าง project ให้เสร็จ อย่าลืมรวมไฟล์ทั้งหมดจาก repo GitHub 
 
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
+เมื่อผู้เรียนทำเสร็จแล้ว ตรวจสอบให้แน่ใจว่าตัว Demo ของ project ของคุณตั้งค่า Host เป็น Public จากนั้นส่ง URL ไปที่ช่อง `Solution Link` หรือส่งลิงก์ไปยัง source code ของ project ผู้เรียน ตรง `GitHub Link`
 
 # --instructions--
 
-- All puzzle logic can go into `/controllers/sudoku-solver.js`
-  - The `validate` function should take a given puzzle string and check it to see if it has 81 valid characters for the input.
-  - The `check` functions should be validating against the *current* state of the board.
-  - The `solve` function should handle solving any given valid puzzle string, not just the test inputs and solutions. You are expected to write out the logic to solve this.
-- All routing logic can go into `/routes/api.js`
-- See the `puzzle-strings.js` file in `/controllers` for some sample puzzles your application should solve
-- To run the challenge tests on this page, set `NODE_ENV` to `test` without quotes in the `.env` file
-- To run the tests in the console, use the command `npm run test`. To open the Replit console, press Ctrl+Shift+P (Cmd if on a Mac) and type "open shell"
+- puzzle logic ทั้งหมด สามารถไปที่ `/controllers/sudoku-solver.js`
+  - ฟังก์ชัน `validate` ควรใช้อักขระปริศนาที่กำหนด และตรวจสอบเพื่อดูว่ามีอักขระที่ถูกต้อง 81 ตัวสำหรับอินพุตหรือไม่
+  - ฟังก์ชัน `check` ควรตรวจสอบกับสถานะ *ปัจจุบัน* ของกระดาน
+  - ฟังก์ชัน `solve` ควรจัดการกับการแก้อักขระปริศนาที่ถูกต้อง ไม่ใช่แค่อินพุตทดสอบและวิธีแก้ปัญหา คาดหวังให้ผู้เรียนเขียน logic เพื่อแก้ปัญหานี้
+- logic การกำหนดเส้นทางทั้งหมดสามารถไปที่ `/routes/api.js`
+- ดูไฟล์ `puzzle-strings.js` ใน `/controllers' สำหรับปริศนาตัวอย่างที่แอปพลิเคชันควรแก้
+- หากต้องการchallenge ในหน้านี้ ให้ตั้งค่า "NODE_ENV" เป็น "test" โดยไม่มีเครื่องหมายคำพูดในไฟล์ ".env"
+- ในการรันการทดสอบในคอนโซล ให้ใช้คำสั่ง `npm run test` หากต้องการเปิดคอนโซล Replit ให้กด Ctrl+Shift+P (Cmd หากใช้ Mac) แล้วพิมพ์ "open shell" 
 
-Write the following tests in `tests/1_unit-tests.js`:
+เขียนการทดสอบต่อไปนี้ใน `tests/1_unit-tests.js`:
 
--   Logic handles a valid puzzle string of 81 characters
--   Logic handles a puzzle string with invalid characters (not 1-9 or `.`)
--   Logic handles a puzzle string that is not 81 characters in length
--   Logic handles a valid row placement
--   Logic handles an invalid row placement
--   Logic handles a valid column placement
--   Logic handles an invalid column placement
--   Logic handles a valid region (3x3 grid) placement
--   Logic handles an invalid region (3x3 grid) placement
--   Valid puzzle strings pass the solver
--   Invalid puzzle strings fail the solver
--   Solver returns the expected solution for an incomplete puzzle
+- logic จัดการอักขระปริศนาที่ถูกต้อง 81 อักขระ
+- logic จัดการกับอักขระปริศนาที่มีอักขระที่ไม่ถูกต้อง (ไม่ใช่ 1-9 หรือ `.`)
+- logic จัดการกับอักขระปริศนาที่มีความยาวไม่เกิน 81 อักขระ
+- logic จัดการตำแหน่งแถวที่ถูกต้อง
+- logic จัดการตำแหน่งแถวที่ไม่ถูกต้อง
+- logic จัดการตำแหน่งคอลัมน์ที่ถูกต้อง
+- logic จัดการตำแหน่งคอลัมน์ที่ไม่ถูกต้อง
+- logic จัดการตำแหน่งที่ถูกต้อง (ตาราง 3x3)
+- logic จัดการกับตำแหน่งที่ไม่ถูกต้อง (ตาราง 3x3)
+- อักขระปริศนาที่ถูกต้องผ่านตัวแก้
+- อักขระปริศนาที่ไม่ถูกต้อง ล้มเหลวในการแก้
+- Solver คืนค่าบอกวิธีแก้ปัญหาสำหรับ puzzle ที่ไม่เสร็จสมบูรณ์ 
 
-Write the following tests in `tests/2_functional-tests.js`
+เขียนการทดสอบต่อไปนี้ใน  `tests/2_functional-tests.js`
 
--   Solve a puzzle with valid puzzle string: POST request to `/api/solve`
--   Solve a puzzle with missing puzzle string: POST request to `/api/solve`
--   Solve a puzzle with invalid characters: POST request to `/api/solve`
--   Solve a puzzle with incorrect length: POST request to `/api/solve`
--   Solve a puzzle that cannot be solved: POST request to `/api/solve`
--   Check a puzzle placement with all fields: POST request to `/api/check`
--   Check a puzzle placement with single placement conflict: POST request to `/api/check`
--   Check a puzzle placement with multiple placement conflicts: POST request to `/api/check`
--   Check a puzzle placement with all placement conflicts: POST request to `/api/check`
--   Check a puzzle placement with missing required fields: POST request to `/api/check`
--   Check a puzzle placement with invalid characters: POST request to `/api/check`
--   Check a puzzle placement with incorrect length: POST request to `/api/check`
--   Check a puzzle placement with invalid placement coordinate: POST request to `/api/check`
--   Check a puzzle placement with invalid placement value: POST request to `/api/check`
+- แก้ puzzle ด้วยอักขระตัวต่อที่ถูกต้อง: POST คำขอไปที่ `/api/solve`
+- แก้ puzzle ด้วยอักขระปริศนาที่ขาดหายไป: POST คำขอไปที่ `/api/solve`
+- แก้ puzzle ด้วยอักขระที่ไม่ถูกต้อง: POST คำขอไปที่ `/api/solve`
+- แก้ puzzle ที่มีความยาวไม่ถูกต้อง: POST คำขอไปที่ `/api/solve`
+- แก้ puzzle ที่ไม่สามารถแก้ไขได้: POST คำขอไปที่ `/api/solve`
+- ตรวจสอบตำแหน่ง puzzle ที่มีทุกช่อง: POST คำขอไปที่ `/api/check`
+- ตรวจสอบตำแหน่ง puzzle ที่ขัดแย้งตำแหน่งเดียว: POST คำขอไปที่ `/api/check`
+- ตรวจสอบตำแหน่ง puzzle ที่ขัดแย้งกันหลายตำแหน่ง: POST คำขอไปที่ `/api/check`
+- ตรวจสอบตำแหน่ง puzzle ที่ขัดแย้งของตำแหน่งทั้งหมด: โพสต์คำขอไปที่ `/api/check`
+- ตรวจสอบตำแหน่ง puzzle ที่ไม่มีฟิลด์บังคับ:  POST คำขอไปที่ `/api/check`
+- ตรวจสอบตำแหน่ง puzzle ที่มีอักขระที่ไม่ถูกต้อง: POST คำขอไปที่ `/api/check`
+- ตรวจสอบตำแหน่งของ puzzle ที่มีความยาวไม่ถูกต้อง: POST คำขอไปที่ `/api/check`
+- ตรวจสอบตำแหน่ง puzzle ที่มีพิกัดตำแหน่งที่ไม่ถูกต้อง: POST คำขอไปที่`/api/check`
+- ตรวจสอบตำแหน่ง puzzle ด้วยค่าตำแหน่งที่ไม่ถูกต้อง: POST คำขอไปที่ `/api/check` 
 
 # --hints--
 
-You should provide your own project, not the example URL.
+ผู้เรียนควรจัดทำ project ของผู้เรียนเอง โดยไม่ใช้ URL ตัวอย่าง 
 
 ```js
 (getUserInput) => {
@@ -70,7 +70,7 @@ You should provide your own project, not the example URL.
 };
 ```
 
-You can `POST` `/api/solve` with form data containing `puzzle` which will be a string containing a combination of numbers (1-9) and periods `.` to represent empty spaces. The returned object will contain a `solution` property with the solved puzzle.
+ผู้เรียนสามารถ `POST` `/api/solve` ด้วยข้อมูลในแบบฟอร์มที่มี `puzzle` ซึ่งจะเป็น string ที่ประกอบด้วยผสมกันระหว่างตัวเลข (1-9) และจุด `.` เพื่อแสดงถึงช่องว่าง object ที่ส่งคืนจะมีคุณสมบัติ `solution` puzzle ที่แก้ไขแล้ว 
 
 ```js
 async (getUserInput) => {
@@ -89,7 +89,7 @@ async (getUserInput) => {
 };
 ```
 
-If the object submitted to `/api/solve` is missing `puzzle`, the returned value will be `{ error: 'Required field missing' }`
+หาก object ที่ส่งไปยัง `/api/solve' ไม่มี `puzzle' ค่าที่ส่งคืนจะเป็น `{ error: 'Required field missing' }` 
 
 ```js
 async (getUserInput) => {
@@ -107,7 +107,7 @@ async (getUserInput) => {
 };
 ```
 
-If the puzzle submitted to `/api/solve` contains values which are not numbers or periods, the returned value will be `{ error: 'Invalid characters in puzzle' }`
+หาก puzzle ที่ส่งไปยัง `/api/solve` มีค่าที่ไม่ใช่ตัวเลขหรือจุด ค่าที่ส่งคืนจะเป็น `{ error: 'Invalid characters in puzzle' }` 
 
 ```js
 async (getUserInput) => {
@@ -125,7 +125,7 @@ async (getUserInput) => {
 };
 ```
 
-If the puzzle submitted to `/api/solve` is greater or less than 81 characters, the returned value will be `{ error: 'Expected puzzle to be 81 characters long' }`
+หาก puzzle ที่ส่งไปยัง `/api/solve` มากกว่าหรือน้อยกว่า 81 อักขระ ค่าที่ส่งคืนจะเป็น `{ error: 'Expected puzzle to be 81 characters long' }`
 
 ```js
 async (getUserInput) => {
@@ -143,7 +143,7 @@ async (getUserInput) => {
 };
 ```
 
-If the puzzle submitted to `/api/solve` is invalid or cannot be solved, the returned value will be `{ error: 'Puzzle cannot be solved' }`
+หาก puzzle ที่ส่งไปยัง `/api/solve` ไม่ถูกต้องหรือไม่สามารถแก้ไขได้ ค่าที่ส่งคืนจะเป็น  `{ error: 'Puzzle cannot be solved' }`
 
 ```js
 async (getUserInput) => {
@@ -161,7 +161,7 @@ async (getUserInput) => {
 };
 ```
 
-You can `POST` to `/api/check` an object containing `puzzle`, `coordinate`, and `value` where the `coordinate` is the letter A-I indicating the row, followed by a number 1-9 indicating the column, and `value` is a number from 1-9.
+ผู้เรียนสามารถ "POST" เป็น "/api/check" object ที่มี `puzzle`, `coordinate` และ `value` โดยที่ `coordinate`  คือตัวอักษร A-I ระบุแถว ตามด้วยตัวเลข 1-9 ที่ระบุคอลัมน์ และ `value` คือตัวเลขตั้งแต่ 1-9 
 
 ```js
 async (getUserInput) => {
@@ -180,7 +180,7 @@ async (getUserInput) => {
 };
 ```
 
-The return value from the `POST` to `/api/check` will be an object containing a `valid` property, which is `true` if the number may be placed at the provided coordinate and `false` if the number may not. If false, the returned object will also contain a `conflict` property which is an array containing the strings `"row"`, `"column"`, and/or `"region"` depending on which makes the placement invalid.
+ค่าที่ส่งคืนจาก `POST` ถึง `/api/check`" จะเป็น object ที่มีคุณสมบัติ `valid`ซึ่งเป็น `true` หากวางตัวเลขไว้ที่พิกัดที่ให้ไว้ และจะเป็น `false` หากตัวเลขนั้นไม่ใช่ หากเป็นเท็จ object ที่ส่งคืนจะมีคุณสมบัติ `conflict ซึ่งเป็น array ที่มีสตริง `"row"` , `"column"` และ/หรือ `"region"`  ทั้งนี้ขึ้นอยู่กับว่าตำแหน่งใดไม่ถูกต้อง 
 
 ```js
 async (getUserInput) => {
@@ -203,7 +203,7 @@ async (getUserInput) => {
 };
 ```
 
-If `value` submitted to `/api/check` is already placed in `puzzle` on that `coordinate`, the returned value will be an object containing a `valid` property with `true` if `value` is not conflicting.
+หาก `value` ที่ส่งไปยัง "/api/check" ถูกวางไว้ใน `puzzle`บน `coordinate` นั้น ค่าที่ส่งคืนจะเป็น object ที่มีคุณสมบัติ `valid` โดยมี `true`หาก `value`  ไม่ขัดแย้งกัน 
 
 ```js
 async (getUserInput) => {
@@ -222,7 +222,7 @@ async (getUserInput) => {
 };
 ```
 
-If the puzzle submitted to `/api/check` contains values which are not numbers or periods, the returned value will be `{ error: 'Invalid characters in puzzle' }`
+หาก puzzle ที่ส่งไปยัง `/api/check` มีค่าที่ไม่ใช่ตัวเลขหรือจุด ค่าที่ส่งคืนจะเป็น `{ error: 'Invalid characters in puzzle' }` 
 
 ```js
 async (getUserInput) => {
@@ -242,7 +242,7 @@ async (getUserInput) => {
 };
 ```
 
-If the puzzle submitted to `/api/check` is greater or less than 81 characters, the returned value will be `{ error: 'Expected puzzle to be 81 characters long' }`
+หากpuzzle ที่ส่งไปยัง `/api/check' นั้นมากกว่าหรือน้อยกว่า 81 อักขระ ค่าที่ส่งคืนจะเป็น `{ error: 'Expected puzzle to be 81 characters long' }` 
 
 ```js
 async (getUserInput) => {
@@ -262,7 +262,7 @@ async (getUserInput) => {
 };
 ```
 
-If the object submitted to `/api/check` is missing `puzzle`, `coordinate` or `value`, the returned value will be `{ error: Required field(s) missing }`
+หาก object ที่ส่งไปยัง "/api/check" ไม่มี `puzzle`, `coordinate`  หรือ `value`ค่าที่ส่งคืนจะเป็น `{ error: Required field(s) missing }`
 
 ```js
 async (getUserInput) => {
@@ -280,7 +280,7 @@ async (getUserInput) => {
 };
 ```
 
-If the coordinate submitted to `api/check` does not point to an existing grid cell, the returned value will be `{ error: 'Invalid coordinate'}`
+หากพิกัดที่ส่งไปยัง `api/check` ไม่ชี้ไปที่ grid cell ที่มีอยู่ ค่าที่ส่งคืนจะเป็น`{ error: 'Invalid coordinate'}`
 
 ```js
 async (getUserInput) => {
@@ -300,7 +300,7 @@ async (getUserInput) => {
 };
 ```
 
-If the `value` submitted to `/api/check` is not a number between 1 and 9, the returned values will be `{ error: 'Invalid value' }`
+หาก `value` ที่ส่งไปยัง `/api/check` ไม่ใช่ตัวเลขระหว่าง 1 ถึง 9 ค่าที่ส่งคืนจะเป็น `{ error: 'Invalid value' }` 
 
 ```js
 async (getUserInput) => {
@@ -320,7 +320,7 @@ async (getUserInput) => {
 };
 ```
 
-All 12 unit tests are complete and passing. See `/tests/1_unit-tests.js` for the expected behavior you should write tests for.
+การทดสอบ (unit test) ทั้งหมด 12 หน่วยเสร็จสมบูรณ์ และผ่าน ให้ไปดูที่ `/tests/1_unit-tests.js` สำหรับดูวิธีการเขียน Test ที่คาดหวังให้ผู้เรียนควรเขียน
 
 ```js
 async (getUserInput) => {
@@ -343,7 +343,7 @@ async (getUserInput) => {
 };
 ```
 
-All 14 functional tests are complete and passing. See `/tests/2_functional-tests.js` for the functionality you should write tests for.
+การทดสอบ functional test ทั้ง 14 แบบ เสร็จสมบูรณ์และผ่าน ให้ไปดูที่ `/tests/2_functional-tests.js` สำหรับฟังก์ชันที่ให้ผู้เรียนควรเขียน
 
 ```js
 async (getUserInput) => {

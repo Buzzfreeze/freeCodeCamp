@@ -8,9 +8,10 @@ dashedName: clean-up-your-project-with-modules
 
 # --description--
 
-Right now, everything you have is in your `server.js` file. This can lead to hard to manage code that isn't very expandable. Create 2 new files: `routes.js` and `auth.js`
 
-Both should start with the following code:
+ตอนนี้ ทุกสิ่งที่คุณมีอยู่ในไฟล์ `server.js` ซึ่งอาจนำไปสู่การจัดการ code ที่ยากซึ่งขยายได้ไม่มากนัก สร้าง 2 ไฟล์ใหม่: `routes.js` และ `auth.js`
+
+ทั้งสองควรเริ่มต้นด้วย code ต่อไปนี้: 
 
 ```js
 module.exports = function (app, myDataBase) {
@@ -18,19 +19,19 @@ module.exports = function (app, myDataBase) {
 }
 ```
 
-Now, in the top of your server file, require these files like so: `const routes = require('./routes.js');` Right after you establish a successful connection with the database, instantiate each of them like so: `routes(app, myDataBase)`
+ตอนนี้ ที่ด้านบนสุดของไฟล์เซิร์ฟเวอร์ของคุณ ต้องการไฟล์: `const routes = require('./routes.js');` หลังจากที่สร้างการเชื่อมต่อกับฐานข้อมูลได้สำเร็จ ให้ยกตัวอย่างเช่น: `routes(app, myDataBase)`
 
-Finally, take all of the routes in your server and paste them into your new files, and remove them from your server file. Also take the `ensureAuthenticated` function, since it was specifically created for routing. Now, you will have to correctly add the dependencies in which are used, such as `const passport = require('passport');`, at the very top, above the export line in your `routes.js` file.
+สุดท้าย ใช้ route ทั้งหมดในเซิร์ฟเวอร์ของผู้เรียน แล้ววางลงในไฟล์ใหม่ของผู้เรียนเอง แล้วลบออกจากไฟล์เซิร์ฟเวอร์ ใช้ฟังก์ชัน `ensureAuthenticated` ด้วย เนื่องจากถูกสร้างขึ้นสำหรับการกำหนด route โดยเฉพาะ ตอนนี้ คุณจะต้องเพิ่ม dependencies ที่ใช้อย่างถูกต้อง เช่น `const passport = require('passport');` ที่ด้านบนสุด เหนือบรรทัดการส่งออกในไฟล์ `route.js` ของคุณ
 
-Keep adding them until no more errors exist, and your server file no longer has any routing (**except for the route in the catch block**)!
+เพิ่มไปเรื่อยๆ จนกว่าจะไม่มีข้อผิดพลาด และไฟล์เซิร์ฟเวอร์ของคุณไม่มีการกำหนด route อีกต่อไป (**ยกเว้น route ในบล็อก catch**)!
 
-Now do the same thing in your auth.js file with all of the things related to authentication such as the serialization and the setting up of the local strategy and erase them from your server file. Be sure to add the dependencies in and call `auth(app, myDataBase)` in the server in the same spot.
+ตอนนี้ทำสิ่งเดียวกันในไฟล์ auth.js กับทุกสิ่งที่เกี่ยวข้องกับการรับรองความถูกต้อง เช่น การทำให้เป็น serialization และการตั้งค่า local strategy ในเครื่อง แล้วลบออกจากไฟล์เซิร์ฟเวอร์ของคุณ อย่าลืมเพิ่ม dependencies และเรียก `auth(app, myDataBase)` ในเซิร์ฟเวอร์ในจุดเดียวกัน
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out an example of the completed project [here](https://gist.github.com/camperbot/2d06ac5c7d850d8cf073d2c2c794cc92).
+ส่งเพจของคุณเมื่อคุณคิดว่าคุณทำถูกต้องแล้ว หากพบข้อผิดพลาด ดูตัวอย่างโครงการที่เสร็จสมบูรณ์ได้ [here](https://gist.github.com/camperbot/2d06ac5c7d850d8cf073d2c2c794cc92)
 
 # --hints--
 
-Modules should be present.
+ควรมี Module แสดงออกมา
 
 ```js
 (getUserInput) =>

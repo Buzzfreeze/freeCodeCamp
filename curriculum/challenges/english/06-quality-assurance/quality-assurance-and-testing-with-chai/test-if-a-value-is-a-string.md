@@ -8,17 +8,17 @@ dashedName: test-if-a-value-is-a-string
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-`isString` or `isNotString` asserts that the actual value is a string.
+`isString' หรือ `isNotString' ยืนยันว่าค่าจริงคือ String
 
 # --instructions--
 
-Within `tests/1_unit-tests.js` under the test labelled `#13` in the `Strings` suite, change each `assert` to either `assert.isString` or `assert.isNotString` to make the test pass (should evaluate to `true`). Do not alter the arguments passed to the asserts.
+ภายใน `tests/1_unit-tests.js` ภายใต้การทดสอบที่มีป้ายกำกับ `#13' ในชุด `Strings` ให้เปลี่ยน `assert' แต่ละรายการเป็น `asssert.isString` หรือ `assert.isNotString` เพื่อให้ผ่านการทดสอบ (ควร ประเมินค่า `true`) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน
 
 # --hints--
 
-All tests should pass.
+การทดสอบทั้งหมดควรผ่าน
 
 ```js
 (getUserInput) =>
@@ -32,7 +32,7 @@ All tests should pass.
   );
 ```
 
-You should choose the correct method for the first assertion - `isString` vs. `isNotString`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `isString' กับ `isNotString'
 
 ```js
 (getUserInput) =>
@@ -50,7 +50,7 @@ You should choose the correct method for the first assertion - `isString` vs. `i
   );
 ```
 
-You should choose the correct method for the second assertion - `isString` vs. `isNotString`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `isString' กับ `isNotString'
 
 ```js
 (getUserInput) =>
@@ -68,7 +68,7 @@ You should choose the correct method for the second assertion - `isString` vs. `
   );
 ```
 
-You should choose the correct method for the third assertion - `isString` vs. `isNotString`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สาม - `isString' กับ `isNotString'
 
 ```js
 (getUserInput) =>

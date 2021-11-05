@@ -8,27 +8,27 @@ dashedName: run-functional-tests-using-a-headless-browser-ii
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+Project นี้ สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
 # --instructions--
 
-Within `tests/2_functional-tests.js`, in the `'Submit the surname "Vespucci" in the HTML form'` test (`// #5`), automate the following:
+ภายใน `tests/2_functional-tests.js` ใน `'Submit the surname "Vespucci" in the HTML form'` test (`// #5`) ให้ทำสิ่งต่อไปนี้:
 
-1.  Fill in the form with the surname `Vespucci`
-2.  Press the submit button
+1. กรอกแบบฟอร์มด้วยนามสกุล `Vespucci`
+2. กดปุ่มส่ง
 
-And within the `pressButton` callback:
+และภายในการโทรกลับ `pressButton':
 
-1.  Assert that status is OK `200`
-2.  Assert that the text inside the element `span#name` is `'Amerigo'`
-3.  Assert that the text inside the element `span#surname` is `'Vespucci'`
-4.  Assert that the element(s) `span#dates` exist and their count is `1`
+1. ยืนยันว่าสถานะ OK `200`
+2. ยืนยันว่าข้อความภายใน element `span#name' คือ `'Amerigo'`
+3. ยืนยันว่าข้อความภายใน element `span#surname' คือ `'Vespucci'`
+4. ยืนยันว่า element `span#dates` มีอยู่และจำนวนนับ คือ `1`
 
-Do not forget to remove the `assert.fail()` call.
+อย่าลืมลบการเรียก `assert.fail()` 
 
 # --hints--
 
-All tests should pass.
+ควรผ่านการทดสอบทั้งหมด
 
 ```js
 (getUserInput) =>
@@ -42,7 +42,7 @@ All tests should pass.
   );
 ```
 
-You should assert that the headless browser request succeeded.
+ผู้เรียนควรยืนยันว่า request เบราว์เซอร์ที่ไม่มี head สำเร็จ 
 
 ```js
 (getUserInput) =>
@@ -56,7 +56,7 @@ You should assert that the headless browser request succeeded.
   );
 ```
 
-You should assert that the text inside the element `span#name` is `'Amerigo'`.
+ผู้เรียนควรยืนยันว่าข้อความภายใน element "span#name" คือ `'Amerigo'`
 
 ```js
 (getUserInput) =>
@@ -72,7 +72,7 @@ You should assert that the text inside the element `span#name` is `'Amerigo'`.
   );
 ```
 
-You should assert that the text inside the element `span#surname` is `'Vespucci'`.
+ผู้เรียนควรยืนยันว่าข้อความภายใน element "span#surname" คือ `'Vespucci'`
 
 ```js
 (getUserInput) =>
@@ -88,7 +88,7 @@ You should assert that the text inside the element `span#surname` is `'Vespucci'
   );
 ```
 
-You should assert that the element `span#dates` exist and its count is 1.
+ผู้เรียนควรยืนยันว่าข้อความภายใน  element `span#dates` มีอยู่และจำนวนนับ คือ `1`
 
 ```js
 (getUserInput) =>

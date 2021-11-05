@@ -8,25 +8,25 @@ dashedName: personal-library
 
 # --description--
 
-Build a full stack JavaScript app that is functionally similar to this: <https://personal-library.freecodecamp.rocks/>. Working on this project will involve you writing your code using one of the following methods:
+สร้างแอพ full stack JavaScript ซึ่งมีฟังก์ชันการทำงานคล้าย link นี้ : <https://personal-library.freecodecamp.rocks/>  ทำงานใน project นี้ เขียน code โดยใช้วิธีใดวิธีหนึ่งต่อไปนี้: 
 
--   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-library) and complete your project locally.
--   Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-library) to complete your project.
--   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
+- ทำการ clone repo [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-project-library) เพื่อสร้าง project ในนั้นให้สำเร็จ
+- ใช้  project เริ่มต้นจาก [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-library) เพื่อสร้าง project ให้สำเร็จ
+- ใช้ site builder ที่ผู้เรียนเลือก เพื่อสร้าง project ให้เสร็จ อย่าลืมรวมไฟล์ทั้งหมดจาก repo GitHub 
 
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
+เมื่อผู้เรียนทำเสร็จแล้ว ตรวจสอบให้แน่ใจว่าตัว Demo ของ project ของคุณตั้งค่า Host เป็น Public จากนั้นส่ง URL ไปที่ช่อง `Solution Link` หรือส่งลิงก์ไปยัง source code ของ project ผู้เรียน ตรง `GitHub Link`
 
 # --instructions--
 
-1.  Add your MongoDB connection string to `.env` without quotes as `DB`
-    Example: `DB=mongodb://admin:pass@1234.mlab.com:1234/fccpersonallib`
-2.  In your `.env` file set `NODE_ENV` to `test`, without quotes
-3.  You need to create all routes within `routes/api.js`
-4.  You will create all functional tests in `tests/2_functional-tests.js`
+1. เพิ่ม string การเชื่อมต่อ MongoDB ไปที่ `.env' โดยไม่มีเครื่องหมายคำพูดเป็น `DB`
+     ตัวอย่าง: `DB=mongodb://admin:pass@1234.mlab.com:1234/fccpersonallib`
+2. ในไฟล์ ".env" ของคุณ ให้ตั้งค่า "NODE_ENV" เป็น "ทดสอบ" โดยไม่มีเครื่องหมายคำพูด
+3. ต้องสร้าง route ทั้งหมดภายใน `routes/api.js`
+4. จะต้องสร้างการทดสอบการทำงานทั้งหมดใน `tests/2_functional-tests.js` 
 
 # --hints--
 
-You can provide your own project, not the example URL.
+ผู้เรียนสามารถจัดหา project ของผู้เรียนเองได้ โดยไม่ใช้ URL ตัวอย่าง 
 
 ```js
 (getUserInput) => {
@@ -36,7 +36,7 @@ You can provide your own project, not the example URL.
 };
 ```
 
-You can send a <b>POST</b> request to `/api/books` with `title` as part of the form data to add a book.  The returned response will be an object with the `title` and a unique `_id` as keys.  If `title` is not included in the request, the returned response should be the string `missing required field title`.
+ผู้เรียนสามารถส่งคำขอ <b>POST</b> request ไปที่ `/api/books` โดยมี `title' เป็นส่วนหนึ่งของข้อมูลในแบบฟอร์มเพื่อ add หนังสือ การ response จะเป็น object ที่มี `title` และ "_id" ที่ไม่ซ้ำกันเป็น key หลัก หากไม่มี `title`อยู่ในคำขอ การ response ส่งคืนควรเป็น string `missing required field title`
 
 ```js
 async (getUserInput) => {
@@ -57,7 +57,7 @@ async (getUserInput) => {
 };
 ```
 
-You can send a <b>GET</b> request to `/api/books` and receive a JSON response representing all the books. The JSON response will be an array of objects with each object (book) containing `title`, `_id`, and `commentcount` properties.
+ผู้เรียนสามารถส่งคำขอ <b>GET</b> request ไปที่ `/api/books` และรับ JSON ที่แสดงถึงหนังสือทั้งหมดได้ โดย JSON จะ response เป็น array ของ object โดยแต่ละ object (หนังสือ) ประกอบด้วย`title`, `_id` และ `commentcount`
 
 ```js
 async (getUserInput) => {
@@ -83,9 +83,10 @@ async (getUserInput) => {
     throw new Error(err.responseText || err.message);
   }
 };
+
 ```
 
-You can send a <b>GET</b> request to `/api/books/{_id}` to retrieve a single object of a book containing the properties `title`, `_id`, and a `comments` array (empty array if no comments present). If no book is found, return the string `no book exists`.
+ผู้เรียนสามารถส่งคำขอ <b>GET</b> request ไปที่ `/api/books/{_id}` เพื่อดึงobject เดี่ยวของหนังสือที่มีคุณสมบัติ array ประกอบด้วย `title', `_id` และ `comments`  ( array จะว่าง หากไม่มีความคิดเห็น) หากไม่พบหนังสือ ให้ส่งคืน string `no book exists`
 
 ```js
 async (getUserInput) => {
@@ -109,7 +110,7 @@ async (getUserInput) => {
 };
 ```
 
-You can send a <b>POST</b> request containing `comment` as the form body data to `/api/books/{_id}` to add a comment to a book. The returned response will be the books object similar to <b>GET</b> `/api/books/{_id}` request in an earlier test. If `comment` is not included in the request, return the string `missing required field comment`. If no book is found, return the string `no book exists`.
+ผู้เรียนสามารถส่งคำขอ <b>POST</b> ที่มี `comment`เป็นข้อมูลเนื้อหาของแบบฟอร์มไปที่ `/api/books/{_id}` เพื่อเพิ่มความคิดเห็นในหนังสือ การตอบกลับจะเป็น object หนังสือที่คล้ายกับคำขอ <b>GET</b> `/api/books/{_id}` ในการทดสอบก่อนหน้านี้ หากไม่มี `comment` อยู่ในคำขอ ให้ส่งคืน string `missing required field comment`หากไม่พบหนังสือ ให้ส่งคืน string`no book exists`
 
 ```js
 async (getUserInput) => {
@@ -147,7 +148,7 @@ async (getUserInput) => {
 };
 ```
 
-You can send a <b>DELETE</b> request to `/api/books/{_id}` to delete a book from the collection. The returned response will be the string `delete successful` if successful. If no book is found, return the string `no book exists`.
+ผู้เรียนสามารถส่งคำขอ <b>DELETE</b> request ไปที่ `/api/books/{_id}` เพื่อลบหนังสือออกจากคอลเลกชั่น หากสำเร็จ การ response ที่ส่งคืนจะเป็น string `delete successful`หากไม่พบหนังสือ ให้ส่งคืน string `no book exists`
 
 ```js
 async (getUserInput) => {
@@ -171,7 +172,7 @@ async (getUserInput) => {
 };
 ```
 
-You can send a <b>DELETE</b> request to `/api/books` to delete all books in the database. The returned response will be the string `'complete delete successful` if successful.
+ผู้เรียนสามารถส่งคำขอ <b>DELETE</b> request ไปที่ `/api/books` เพื่อลบหนังสือทั้งหมดในฐานข้อมูล หากสำเร็จ การ response ที่ส่งคืนจะเป็น string `'complete delete successful`  
 
 ```js
 async (getUserInput) => {
@@ -188,7 +189,7 @@ async (getUserInput) => {
 };
 ```
 
-All 10 functional tests required are complete and passing.
+การทดสอบการใช้งาน (functional tests) ทั้งหมด 10 รายการเสร็จสมบูรณ์และผ่าน 
 
 ```js
 async (getUserInput) => {

@@ -8,11 +8,11 @@ dashedName: run-functional-tests-on-an-api-response-using-chai-http-iii---put-me
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
-When you test a `PUT` request, you'll often send data along with it. The data you include with your `PUT` request is called the body of the request.
+Project นี้ สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/). 
 
-To send a `PUT` request and a JSON object to the `'/travellers'` endpoint, you can use `chai-http` plugin's `put` and `send` methods:
+
+เมื่อผู้เรียน test คำขอ `PUT` ผู้เรียนมักจะส่งข้อมูลไปพร้อมกับคำ  request นั้น ข้อมูลที่คุณรวมไว้ในคำขอ `PUT` เรียกว่า body of the request ในการส่งคำขอ "PUT" และ JSON object ไปยังปลายทาง "/travellers" ผู้เรียนสามารถใช้วิธี "put" และ "send" ของปลั๊กอิน "chai-http": 
 
 ```js
 chai
@@ -25,6 +25,7 @@ chai
 ```
 
 And the route responds with:
+และ route ตอบกลับด้วย: 
 
 ```json
 {
@@ -34,13 +35,13 @@ And the route responds with:
 }
 ```
 
-See the server code for the different responses to the `'/travellers'` endpoint.
+ดู code เซิร์ฟเวอร์สำหรับการ response ที่แตกต่างกัน ที่ปลายทาง `'/travellers'' 
 
 # --instructions--
 
-Within `tests/2_functional-tests.js`, alter the `'Send {surname: "Colombo"}'` test (`// #3`) and use the `put` and `send` methods to test the  `'/travellers'` endpoint.
+ภายใน `tests/2_functional-tests.js` ให้เปลี่ยนการทดสอบ `'Send {surname: "Colombo"}'' (`// #3`) และใช้วิธี `put` และ `send` เพื่อทดสอบ`'/travellers'`
 
-Send the following JSON object with your PUT request:
+ส่ง JSON object ต่อไปนี้พร้อมกับคำขอ PUT request: 
 
 ```json
 {
@@ -48,18 +49,17 @@ Send the following JSON object with your PUT request:
 }
 ```
 
-Check for the following within the `request.end` callback:
+ตรวจสอบสิ่งต่อไปนี้ในการ callback `request.end`:
 
-1.  The `status` should be `200`
-2.  The `type` should be `application/json`
-3.  The `body.name` should be `Cristoforo`
-4.  The `body.surname` should be `Colombo`
+1. `สถานะ' ควรเป็น `200`
+2. `ประเภท' ควรเป็น `application/json`
+3. `body.name` ควรเป็น `Cristoforo`
+4. `body.surname` ควรเป็น `Colombo` 
 
-Follow the assertion order above - we rely on it. Also, be sure to remove `assert.fail()` once complete.
-
+ปฏิบัติตามคำสั่งยืนยันข้างต้น - นอกจากนี้ อย่าลืมลบ `assert.fail()` เมื่อเสร็จสิ้น 
 # --hints--
 
-All tests should pass.
+ควรผ่านการทดสอบทั้งหมด
 
 ```js
 (getUserInput) =>
@@ -73,7 +73,7 @@ All tests should pass.
   );
 ```
 
-You should test for `res.status` to be 200.
+ผู้เรียนควรทดสอบ `res.status` เป็น 200
 
 ```js
 (getUserInput) =>
@@ -89,7 +89,7 @@ You should test for `res.status` to be 200.
   );
 ```
 
-You should test for `res.type` to be `'application/json'`.
+ผู้เรียนควรทดสอบ  `res.type`  เป็น `'application/json'`
 
 ```js
 (getUserInput) =>
@@ -105,7 +105,7 @@ You should test for `res.type` to be `'application/json'`.
   );
 ```
 
-You should test for `res.body.name` to be `'Cristoforo'`.
+ผู้เรียนควรทดสอบ `res.body.surname' เป็น `'Cristoforo'`
 
 ```js
 (getUserInput) =>
@@ -121,7 +121,7 @@ You should test for `res.body.name` to be `'Cristoforo'`.
   );
 ```
 
-You should test for `res.body.surname` to be `'Colombo'`.
+ผู้เรียนควรทดสอบ `res.body.surname' เป็น `'Colombo'` 
 
 ```js
 (getUserInput) =>

@@ -8,62 +8,62 @@ dashedName: american-british-translator
 
 # --description--
 
-Build a full stack JavaScript app that is functionally similar to this: <https://american-british-translator.freecodecamp.rocks/>. Working on this project will involve you writing your code using one of the following methods:
+สร้างแอพ full stack JavaScript ซึ่งมีฟังก์ชันการทำงานคล้าย link นี้ : <https://american-british-translator.freecodecamp.rocks/> ทำงานใน project นี้ เขียน code โดยใช้วิธีใดวิธีหนึ่งต่อไปนี้: 
 
--   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-american-british-english-translator/) and complete your project locally.
--   Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-american-british-english-translator) to complete your project.
--   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
+- ทำการ clone repo [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-project-american-british-english-translator/) เพื่อสร้าง project ในนั้นให้สำเร็จ
+- ใช้  project เริ่มต้นจาก [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-american-british-english-translator) เพื่อสร้าง project ให้สำเร็จ
+- ใช้ site builder ที่ผู้เรียนเลือก เพื่อสร้าง project ให้เสร็จ อย่าลืมรวมไฟล์ทั้งหมดจาก repo GitHub 
 
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
+เมื่อผู้เรียนทำเสร็จแล้ว ตรวจสอบให้แน่ใจว่าตัว Demo ของ project ของคุณตั้งค่า Host เป็น Public  จากนั้นส่ง URL ไปที่ช่อง `Solution Link` หรือส่งลิงก์ไปยัง source code ของ project ผู้เรียน ตรง `GitHub Link`
 
 # --instructions--
 
--   All logic can go into `/components/translator.js`
--   Complete the `/api/translate` route in `/routes/api.js`
--   Create all of the unit/functional tests in `tests/1_unit-tests.js` and `tests/2_functional-tests.js`
--   See the JavaScript files in `/components` for the different spelling and terms your application should translate
--   To run the tests on Replit, set `NODE_ENV` to `test` without quotes in the `.env` file
--   To run the tests in the console, use the command `npm run test`. To open the Replit console, press Ctrl+Shift+P (Cmd if on a Mac) and type "open shell"
+- logic ทั้งหมดสามารถเข้าไปดูที่ `/components/translator.js`
+- สร้าง `/api/translate' ใน  route `/routes/api.js`
+- สร้าง unit/functional tests ทั้งหมดใน `tests/1_unit-tests.js` และ `tests/2_functional-tests.js`
+- ดูไฟล์ JavaScript ใน `/components` สำหรับการสะกดคำและคำศัพท์ต่างๆ ที่แอปพลิเคชันควรแปลออกมา
+- หากต้องการ run code ทดสอบบน Replit ให้ตั้งค่า "NODE_ENV" เป็น "test" โดยตัดเครื่องหมายคำพูดออกในไฟล์ ".env" ออกไป
+- ในการ run code ทดสอบใน console ให้ใช้คำสั่ง `npm run test` หากต้องการเปิด console ของ Replit ให้ใช้คีย์ลัด Ctrl+Shift+P (Cmd หากใช้ Mac) แล้วพิมพ์คำว่า "open shell" 
 
-Write the following tests in `tests/1_unit-tests.js`:
+เขียนการทดสอบต่อไปนี้ใน `tests/1_unit-tests.js`: 
 
--   Translate `Mangoes are my favorite fruit.` to British English
--   Translate `I ate yogurt for breakfast.` to British English
--   Translate `We had a party at my friend's condo.` to British English
--   Translate `Can you toss this in the trashcan for me?` to British English
--   Translate `The parking lot was full.` to British English
--   Translate `Like a high tech Rube Goldberg machine.` to British English
--   Translate `To play hooky means to skip class or work.` to British English
--   Translate `No Mr. Bond, I expect you to die.` to British English
--   Translate `Dr. Grosh will see you now.` to British English
--   Translate `Lunch is at 12:15 today.` to British English
--   Translate `We watched the footie match for a while.` to American English
--   Translate `Paracetamol takes up to an hour to work.` to American English
--   Translate `First, caramelise the onions.` to American English
--   Translate `I spent the bank holiday at the funfair.` to American English
--   Translate `I had a bicky then went to the chippy.` to American English
--   Translate `I've just got bits and bobs in my bum bag.` to American English
--   Translate `The car boot sale at Boxted Airfield was called off.` to American English
--   Translate `Have you met Mrs Kalyani?` to American English
--   Translate `Prof Joyner of King's College, London.` to American English
--   Translate `Tea time is usually around 4 or 4.30.` to American English
--   Highlight translation in `Mangoes are my favorite fruit.`
--   Highlight translation in `I ate yogurt for breakfast.`
--   Highlight translation in `We watched the footie match for a while.`
--   Highlight translation in `Paracetamol takes up to an hour to work.`
+- แปลประโยค `Mangoes are my favorite fruit.` เป็นภาษาอังกฤษ
+- แปลประโยค `I ate yogurt for breakfast.` เป็นภาษาอังกฤษ
+- แปลประโยค `We had a party at my friend's condo.` เป็นภาษาอังกฤษ
+- แปลประโยค `Can you toss this in the trashcan for me?` เป็นภาษาอังกฤษ
+- แปลประโยค `The parking lot was full.` to British English
+- แปลประโยค `Like a high tech Rube Goldberg machine.` เป็นภาษาอังกฤษ
+- แปลประโยค `To play hooky means to skip class or work.` เป็นภาษาอังกฤษ
+- แปลประโยค `No Mr. Bond, I expect you to die.` เป็นภาษาอังกฤษ
+- แปลประโยค `Dr. Grosh will see you now.` เป็นภาษาอังกฤษ
+- แปลประโยค `Lunch is at 12:15 today.` เป็นภาษาอังกฤษ
+- แปลประโยค `We watched the footie match for a while.` เป็นภาษาอังกฤษ
+- แปลประโยค `Paracetamol takes up to an hour to work.` เป็นภาษาอังกฤษ
+- แปลประโยค `First, caramelise the onions.` เป็นภาษาอังกฤษ
+- แปลประโยค `I spent the bank holiday at the funfair.` เป็นภาษาอังกฤษ
+- แปลประโยค `I had a bicky then went to the chippy.` เป็นภาษาอังกฤษ
+- แปลประโยค `I've just got bits and bobs in my bum bag.` เป็นภาษาอังกฤษ
+- แปลประโยค `The car boot sale at Boxted Airfield was called off.` เป็นภาษาอังกฤษ
+- แปลประโยค `Have you met Mrs Kalyani?` เป็นภาษาอังกฤษ
+- แปลประโยค `Prof Joyner of King's College, London.` เป็นภาษาอังกฤษ
+- แปลประโยค `Tea time is usually around 4 or 4.30.` เป็นภาษาอังกฤษ
+- เน้นคำแปลในประโยค `Mangoes are my favorite fruit.`
+- เน้นคำแปลในประโยค `I ate yogurt for breakfast.`
+- เน้นคำแปลในประโยค `We watched the footie match for a while.`
+- เน้นคำแปลในประโยค `Paracetamol takes up to an hour to work.`
 
-Write the following tests in `tests/2_functional-tests.js`:
+เขียนการทดสอบต่อไปนี้ใน `tests/2_functional-tests.js`: 
 
--   Translation with text and locale fields: POST request to `/api/translate`
--   Translation with text and invalid locale field: POST request to `/api/translate`
--   Translation with missing text field: POST request to `/api/translate`
--   Translation with missing locale field: POST request to `/api/translate`
--   Translation with empty text: POST request to `/api/translate`
--   Translation with text that needs no translation: POST request to `/api/translate`
+- การแปลช่องข้อความและ text : ให้ POST คำขอไปที่ `/api/translate`
+- การแปล text แล locale field ไม่ถูกต้อง: ให้ POST คำขอไปที่ `/api/translate`
+- การแปล โดยไม่มี text : ให้ POST ไปที่ `/api/translate`
+- การแปล โดยไม่มี locale field: ให้ POST ไปที่ `/api/translate`
+- การแปล text ว่าง: ให้ POST ไปที่ `/api/translate`
+- การแปล text ที่ไม่ต้องการการแปล: ให้ POST ไปที่ `/api/translate` 
 
 # --hints--
 
-I can provide my own project, not the example URL.
+ตัวอย่างที่ให้ใน project โดยที่ไม่ใช่ URL ตัวอย่าง 
 
 ```js
 (getUserInput) => {
@@ -75,7 +75,7 @@ I can provide my own project, not the example URL.
 };
 ```
 
-You can `POST` to `/api/translate` with a body containing `text` with the text to translate and `locale` with either `american-to-british` or `british-to-american`. The returned object should contain the submitted `text` and `translation` with the translated text.
+ผู้เรียนสามารถ 'POST' ที่ '/api/translate' ด้วยเนื้อหาที่มี 'text' พร้อม text ที่จะแปล และ 'locale' ด้วย 'american-to-british' หรือ 'british-to-american' โดย object ที่คืนค่าควรมี `text` และ `translation` ที่ส่งมาพร้อมข้อความที่แปลแล้ว 
 
 ```js
 async (getUserInput) => {
@@ -103,7 +103,7 @@ async (getUserInput) => {
 };
 ```
 
-The `/api/translate` route should handle the way time is written in American and British English. For example, ten thirty is written as "10.30" in British English and "10:30" in American English. The `span` element should wrap the entire time string, i.e. `<span class="highlight">10:30</span>`.
+ใน route`/api/translate` ควรสามารถจัดการกับเวลาที่เขียนเป็นภาษาอังกฤษในรูปแบบแบบอเมริกัน และอังกฤษ  เช่น ten thirty (สิบ-สามสิบ) รูปแบบอังกฤษ จะเขียนเป็น "10.30" และของอเมริกัน  จะเขียนเป็น "10:30" // และ "span" element ครอบ string เกี่ยวกับเวลาทั้งหมด เช่น `<span class="highlight">10:30</span>` 
 
 ```js
 async (getUserInput) => {
@@ -130,7 +130,7 @@ async (getUserInput) => {
 };
 ```
 
-The `/api/translate` route should also handle the way titles/honorifics are abbreviated in American and British English. For example, Doctor Wright is abbreviated as "Dr Wright" in British English and "Dr. Wright" in American English. See `/components/american-to-british-titles.js` for the different titles your application should handle.
+ใน route`/api/translate` ควรจัดการกับชื่อย่อนำหน้า/คำให้เกียรติ ในภาษาอังกฤษรูปแบบอเมริกันและอังกฤษแบบอังกฤษ เช่น Doctor Wright ในอังกฤษจะใช้ว่า "Dr Wright" ส่วนอเมริกันจะใช้ว่า "Dr. Wright" // ดูได้ที่ `/components/american-to-british-titles.js` สำหรับชื่อต่างๆ ที่ควรจัดการ 
 
 ```js
 async (getUserInput) => {
@@ -157,7 +157,7 @@ async (getUserInput) => {
 };
 ```
 
-Wrap any translated spelling or terms with `<span class="highlight">...</span>` tags so they appear in green.
+ครอบการสะกดหรือคำศัพท์ที่แปลแล้วด้วย tag `<span class="highlight">...</span>` เพื่อให้ปรากฏเป็นสีเขียว 
 
 ```js
 async (getUserInput) => {
@@ -185,7 +185,7 @@ async (getUserInput) => {
 };
 ```
 
-If one or more of the required fields is missing, return `{ error: 'Required field(s) missing' }`.
+หากไม่มีช่องที่ต้องกรอกอย่างน้อย 1 ช่อง ให้ส่งคืนค่า `{ error: 'Required field(s) missing' }` 
 
 ```js
 async (getUserInput) => {
@@ -206,7 +206,7 @@ async (getUserInput) => {
 };
 ```
 
-If `text` is empty, return `{ error: 'No text to translate' }`
+หาก `text` ว่างเปล่า ให้ส่งคืนค่า `{ error: 'No text to translate' }`
 
 ```js
 async (getUserInput) => {
@@ -227,7 +227,7 @@ async (getUserInput) => {
 };
 ```
 
-If `locale` does not match one of the two specified locales, return `{ error: 'Invalid value for locale field' }`.
+หาก `locale` ไม่ตรงกับหนึ่งในสองภาษาที่ระบุ ให้ส่งคืนค่า `{ error: 'Invalid value for locale field' }` 
 
 ```js
 async (getUserInput) => {
@@ -249,7 +249,7 @@ async (getUserInput) => {
 };
 ```
 
-If `text` requires no translation, return `"Everything looks good to me!"` for the `translation` value.
+หาก `text` ไม่ต้องการการแปล ให้ส่งคืนค่า `"Everything looks good to me!"` สำหรับค่า `translation`
 
 ```js
 async (getUserInput) => {
@@ -276,8 +276,8 @@ async (getUserInput) => {
 };
 ```
 
-All 24 unit tests are complete and passing. See `/tests/1_unit-tests.js` for the expected behavior you should write tests for.
-
+การทดสอบ (unit test) ทั้งหมด 24 หน่วยเสร็จสมบูรณ์ และผ่าน ให้ไปดูที่ `/tests/1_unit-tests.js` สำหรับดูวิธีการเขียน Test ที่คาดหวังให้ผู้เรียนควรเขียน
+ 
 ```js
 async (getUserInput) => {
   try {
@@ -301,7 +301,7 @@ async (getUserInput) => {
 };
 ```
 
-All 6 functional tests are complete and passing. See `/tests/2_functional-tests.js` for the functionality you should write tests for.
+การทดสอบ functional test ทั้ง 6 แบบ เสร็จสมบูรณ์และผ่าน ให้ไปดูที่ `/tests/2_functional-tests.js` สำหรับฟังก์ชันที่ให้ผู้เรียนควรเขียน
 
 ```js
 async (getUserInput) => {

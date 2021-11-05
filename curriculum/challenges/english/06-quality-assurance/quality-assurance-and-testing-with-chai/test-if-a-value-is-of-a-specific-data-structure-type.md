@@ -8,17 +8,17 @@ dashedName: test-if-a-value-is-of-a-specific-data-structure-type
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-`#typeOf` asserts that value's type is the given string, as determined by `Object.prototype.toString`.
+`#typeOf` ยืนยันว่าประเภทของค่านั้นเป็น string ที่กำหนด ตามที่กำหนดโดย `Object.prototype.toString'
 
 # --instructions--
 
-Within `tests/1_unit-tests.js` under the test labelled `#17` in the `Objects` suite, change each `assert` to either `assert.typeOf` or `assert.notTypeOf` to make the test pass (should evaluate to `true`). Do not alter the arguments passed to the asserts.
+ภายใน `tests/1_unit-tests.js` ภายใต้การทดสอบที่มีป้ายกำกับ `#17` ในชุด `Objects` ให้เปลี่ยน `assert` แต่ละรายการเป็น `assert.typeOf` หรือ `assert.notTypeOf` เพื่อให้ผ่านการทดสอบ (ควร ประเมินค่า `true`) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน
 
 # --hints--
 
-All tests should pass.
+การทดสอบทั้งหมดควรผ่าน
 
 ```js
 (getUserInput) =>
@@ -32,7 +32,7 @@ All tests should pass.
   );
 ```
 
-You should choose the correct method for the first assertion - `typeOf` vs. `notTypeOf`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `typeOf` กับ `notTypeOf`
 
 ```js
 (getUserInput) =>
@@ -50,7 +50,7 @@ You should choose the correct method for the first assertion - `typeOf` vs. `not
   );
 ```
 
-You should choose the correct method for the second assertion - `typeOf` vs. `notTypeOf`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `typeOf` กับ `notTypeOf`
 
 ```js
 (getUserInput) =>
@@ -68,7 +68,7 @@ You should choose the correct method for the second assertion - `typeOf` vs. `no
   );
 ```
 
-You should choose the correct method for the third assertion - `typeOf` vs. `notTypeOf`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สาม - `typeOf` กับ `notTypeOf`
 
 ```js
 (getUserInput) =>
@@ -86,7 +86,7 @@ You should choose the correct method for the third assertion - `typeOf` vs. `not
   );
 ```
 
-You should choose the correct method for the fourth assertion - `typeOf` vs. `notTypeOf`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สี่ - `typeOf` กับ `notTypeOf`
 
 ```js
 (getUserInput) =>
@@ -104,7 +104,7 @@ You should choose the correct method for the fourth assertion - `typeOf` vs. `no
   );
 ```
 
-You should choose the correct method for the fifth assertion - `typeOf` vs. `notTypeOf`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่ห้า - `typeOf` กับ `notTypeOf`
 
 ```js
 (getUserInput) =>

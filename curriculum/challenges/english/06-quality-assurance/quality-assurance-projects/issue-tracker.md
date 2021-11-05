@@ -8,42 +8,43 @@ dashedName: issue-tracker
 
 # --description--
 
-Build a full stack JavaScript app that is functionally similar to this: <https://issue-tracker.freecodecamp.rocks/>. Working on this project will involve you writing your code using one of the following methods:
+สร้างแอพ full stack JavaScript ซึ่งมีฟังก์ชันการทำงานคล้าย link นี้ : <https://issue-tracker.freecodecamp.rocks/>  ทำงานใน project นี้ เขียน code โดยใช้วิธีใดวิธีหนึ่งต่อไปนี้: 
 
--   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-issuetracker/) and complete your project locally.
--   Use [this Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-issuetracker) to complete your project.
--   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
+- ทำการ clone repo [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-project-issuetracker/) เพื่อสร้าง project ในนั้นให้สำเร็จ
+- ใช้  project เริ่มต้นจาก [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-issuetracker) เพื่อสร้าง project ให้สำเร็จ
+- ใช้ site builder ที่ผู้เรียนเลือก เพื่อสร้าง project ให้เสร็จ อย่าลืมรวมไฟล์ทั้งหมดจาก repo GitHub 
 
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
+เมื่อผู้เรียนทำเสร็จแล้ว ตรวจสอบให้แน่ใจว่าตัว Demo ของ project ของคุณตั้งค่า Host เป็น Public จากนั้นส่ง URL ไปที่ช่อง `Solution Link` หรือส่งลิงก์ไปยัง source code ของ project ผู้เรียน ตรง `GitHub Link`
 
 # --instructions--
 
--   Complete the necessary routes in `/routes/api.js`
--   Create all of the functional tests in `tests/2_functional-tests.js`
--   Copy the `sample.env` file to `.env` and set the variables appropriately
--   To run the tests uncomment `NODE_ENV=test` in your `.env` file
--   To run the tests in the console, use the command `npm run test`. To open the Replit console, press Ctrl+Shift+P (Cmd if on a Mac) and type "open shell"
+- logic ทั้งหมดสามารถเข้าไปดูที่ `/components/translator.js`
+- สร้าง route ที่จำเป็นใน `/routes/api.js`
+- สร้างการทดสอบการทำงาน (functional tests) ทั้งหมดใน `tests/2_functional-tests.js`
+- Copy ไฟล์ `sample.env` ไปที่ `.env` และตั้งตัวแปรอย่างเหมาะสม 
+- หากต้องการ run code ทดสอบ uncomment ให้ตั้งค่า `NODE_ENV=test` ในไฟล์ ".env"
+- ในการ run code ทดสอบใน console ให้ใช้คำสั่ง `npm run test` หากต้องการเปิด console ของ Replit ให้ใช้คีย์ลัด Ctrl+Shift+P (Cmd หากใช้ Mac) แล้วพิมพ์คำว่า "open shell" 
 
-Write the following tests in `tests/2_functional-tests.js`:
+เขียนการทดสอบต่อไปนี้ใน `tests/2_functional-tests.js`: 
 
--   Create an issue with every field: POST request to `/api/issues/{project}`
--   Create an issue with only required fields: POST request to `/api/issues/{project}`
--   Create an issue with missing required fields: POST request to `/api/issues/{project}`
--   View issues on a project: GET request to `/api/issues/{project}`
--   View issues on a project with one filter: GET request to `/api/issues/{project}`
--   View issues on a project with multiple filters: GET request to `/api/issues/{project}`
--   Update one field on an issue: PUT request to `/api/issues/{project}`
--   Update multiple fields on an issue: PUT request to `/api/issues/{project}`
--   Update an issue with missing `_id`: PUT request to `/api/issues/{project}`
--   Update an issue with no fields to update: PUT request to `/api/issues/{project}`
--   Update an issue with an invalid `_id`: PUT request to `/api/issues/{project}`
--   Delete an issue: DELETE request to `/api/issues/{project}`
--   Delete an issue with an invalid `_id`: DELETE request to `/api/issues/{project}`
--   Delete an issue with missing `_id`: DELETE request to `/api/issues/{project}`
+- สร้าง issue กับทุก field: POST คำขอไปยัง `/api/issues/{project}`
+- สร้าง issue กับ field ที่จำเป็นเท่านั้น: POST คำขอไปยัง `/api/issues/{project}`
+- สร้าง issue กับ field จำเป็นที่ขาดหายไป: POST คำขอไปยัง `/api/issues/{project}`
+- ดูหลาย issue ที่เกิดบน Project: GET รับคำขอไปที่ `/api/issues/{project}`
+- ดูหลาย issue ที่เกิดบน Project ที่มีตัวกรองเดียว (filter): GET รับคำขอไปที่ `/api/issues/{project}`
+- ดูหลาย issue ที่เกิดบน Project ที่มีตัวกรองหลายตัว (multiple filters): GET  รับคำขอไปที่ `/api/issues/{project}`
+- อัปเดตหนึ่ง field ที่เกี่ยวกับ issue : PUT คำขอไปที่ `/api/issues/{project}`
+- อัปเดตหลาย field ที่เกี่ยวกับ issue: PUT คำขอไปที่ `/api/issues/{project}`
+- อัปเดต issue ที่ไม่มี `_id': PUT คำขอไปที่ `/api/issues/{project}`
+- อัปเดต issue ที่ไม่มีช่องให้อัปเดต: PUT คำขอไปที่ `/api/issues/{project}`
+- อัปเดต issue ด้วย `_id' ที่ไม่ถูกต้อง: PUT คำขอไปที่ `/api/issues/{project}`
+- Delete ตัว issue: DELETE คำขอไปยัง `/api/issues/{project}`
+- Delete ตัว issueที่มี `_id' ไม่ถูกต้อง: DELETE คำขอไปยัง `/api/issues/{project}`
+- Delete ตัว issueที่ไม่มี `_id': DELETE คำขอไปยัง `/api/issues/{project}` 
 
 # --hints--
 
-You can provide your own project, not the example URL.
+ผู้เรียนสามารถจัดหา project ของผู้เรียนเองได้ โดยไม่ใช้ URL ตัวอย่าง 
 
 ```js
 (getUserInput) => {
@@ -51,7 +52,7 @@ You can provide your own project, not the example URL.
 };
 ```
 
-You can send a `POST` request to `/api/issues/{projectname}` with form data containing the required fields `issue_title`, `issue_text`, `created_by`, and optionally `assigned_to` and `status_text`.
+ผู้เรียนส่งคำขอ "POST" ไปที่ "/api/issues/{projectname}" ได้ด้วยข้อมูลในแบบฟอร์มที่มีช่องที่ต้องระบุ "issue_title", "issue_text", "created_by" และ "assigned_to" และ "status_text" หรือไม่ก็ได้ 
 
 ```js
 async (getUserInput) => {
@@ -73,7 +74,7 @@ async (getUserInput) => {
 };
 ```
 
-The `POST` request to `/api/issues/{projectname}` will return the created object, and must include all of the submitted fields. Excluded optional fields will be returned as empty strings. Additionally, include `created_on` (date/time), `updated_on` (date/time), `open` (boolean, `true` for open - default value, `false` for closed), and `_id`.
+คำขอ `POST` ถึง `/api/issues/{projectname}` จะส่งคืน object ที่สร้างขึ้น และต้องรวม field ที่ส่งทั้งหมด field ตัวเลือกที่ยกเว้นจะถูกคืนค่าเป็น string ว่าง นอกจากนี้ ให้รวม `created_on` (วันที่/เวลา), `updated_on` (วันที่/เวลา), `open' open` (boolean, `true` for open - default value, `false` for closed) และ `_id` 
 
 ```js
 async (getUserInput) => {
@@ -107,7 +108,7 @@ async (getUserInput) => {
 };
 ```
 
-If you send a `POST` request to `/api/issues/{projectname}` without the required fields, returned will be the error `{ error: 'required field(s) missing' }`
+หากผู้เรียนส่งคำขอ "POST" ไปยัง `/api/issues/{projectname}` โดยไม่มี field ที่จำเป็น การส่งคืนจะเกิด error `{ error: 'required field(s) missing' }` 
 
 ```js
 async (getUserInput) => {
@@ -125,7 +126,7 @@ async (getUserInput) => {
 };
 ```
 
-You can send a `GET` request to `/api/issues/{projectname}` for an array of all issues for that specific `projectname`, with all the fields present for each issue.
+ผู้เรียนสามารถส่งคำขอ `GET` ไปที่ `/api/issues/{projectname}` สำหรับarray ของissues ทั้งหมดสำหรับเฉพาะ `projectname' นั้น โดยมี field ทั้งหมดสำหรับแต่ละissue
 
 ```js
 async (getUserInput) => {
@@ -172,7 +173,7 @@ async (getUserInput) => {
 };
 ```
 
-You can send a `GET` request to `/api/issues/{projectname}` and filter the request by also passing along any field and value as a URL query (ie. `/api/issues/{project}?open=false`). You can pass one or more field/value pairs at once.
+ผู้เรียนสามารถส่งคำขอ `GET` ไปที่ `/api/issues/{projectname}` และกรอง (filter) คำขอโดยส่งผ่าน field และ value ใดๆ ไปเป็นข้อความค้นหา URL (เช่น `/api/issues/{project}?open= false`) ผู้เรียนสามารถส่งคู่ field/value ได้ตั้งแต่หนึ่งคู่ขึ้นไปในครั้งเดียว 
 
 ```js
 async (getUserInput) => {
@@ -213,7 +214,7 @@ async (getUserInput) => {
 };
 ```
 
-You can send a `PUT` request to `/api/issues/{projectname}` with an `_id` and one or more fields to update. On success, the `updated_on` field should be updated, and returned should be `{  result: 'successfully updated', '_id': _id }`.
+ผู้เรียนส่งคำขอ "PUT" ไปที่ "/api/issues/{projectname}" ได้ โดยใช้ "_id" และช่องที่จะอัปเดตอย่างน้อย 1 field // เมื่อทำสำเร็จ ตรง field `updated_on` ควรได้รับการอัปเดต และค่าที่ส่งคืนควรเป็น `{ result: 'successfully updated', '_id': _id }` 
 
 ```js
 async (getUserInput) => {
@@ -248,7 +249,7 @@ async (getUserInput) => {
 };
 ```
 
-When the `PUT` request sent to `/api/issues/{projectname}` does not include an `_id`, the return value is `{ error: 'missing _id' }`.
+เมื่อคำขอ "PUT" ที่ส่งไปยัง `/api/issues/{projectname}` ไม่รวม `_id` .ให้ค่าที่ส่งคืนคือ `{ error: 'missing _id' }` 
 
 ```js
 async (getUserInput) => {
@@ -264,7 +265,7 @@ async (getUserInput) => {
 };
 ```
 
-When the `PUT` request sent to `/api/issues/{projectname}` does not include update fields, the return value is `{ error: 'no update field(s) sent', '_id': _id }`. On any other error, the return value is `{ error: 'could not update', '_id': _id }`.
+เมื่อคำขอ "PUT" ที่ส่งไปยัง `/api/issues/{projectname}` ไม่มีช่องอัปเดต ค่าที่ส่งคืนคือ `{ error: 'no update field(s) send', '_id': _id }` สำหรับ error อื่นๆ ค่าที่ส่งคืนคือ `{ error: 'could not update', '_id': _id }` 
 
 ```js
 async (getUserInput) => {
@@ -292,9 +293,10 @@ async (getUserInput) => {
     throw new Error(err.responseText || err.message);
   }
 };
+
 ```
 
-You can send a `DELETE` request to `/api/issues/{projectname}` with an `_id` to delete an issue. If no `_id` is sent, the return value is `{ error: 'missing _id' }`. On success, the return value is `{ result: 'successfully deleted', '_id': _id }`. On failure, the return value is `{ error: 'could not delete', '_id': _id }`.
+ผู้เรียนสามารถส่งคำขอ `DELETE` ไปที่ `/api/issues/{projectname}` ด้วย `_id` เพื่อลบ issue ที่เกิด หากไม่มีการส่ง `_id' ค่าที่ส่งคืนจะเป็น `{ error: 'missing _id' }` เมื่อสำเร็จ ค่าที่ส่งคืนคือ `{ result: 'successfully deleted', '_id': _id }` หากล้มเหลว ค่าที่ส่งคืนคือ `{ error: 'could not delete', '_id': _id }` 
 
 ```js
 async (getUserInput) => {
@@ -336,7 +338,7 @@ async (getUserInput) => {
 };
 ```
 
-All 14 functional tests are complete and passing.
+การทดสอบการใช้งาน (functional tests) ทั้งหมด 14 รายการเสร็จสมบูรณ์และผ่าน 
 
 ```js
 async (getUserInput) => {

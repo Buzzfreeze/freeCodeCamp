@@ -8,23 +8,23 @@ dashedName: test-if-a-value-falls-within-a-specific-range
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
 ```javascript
 .approximately(actual, expected, delta, [message])
 ```
 
-Asserts that the `actual` is equal to `expected`, to within a +/- `delta` range.
+ยืนยันว่า `actual` เท่ากับ `expected` ภายในช่วง +/- `delta`
 
 # --instructions--
 
-Within `tests/1_unit-tests.js` under the test labelled `#10` in the `Comparisons` suite, change each `assert` to `assert.approximately` to make the test pass (should evaluate to `true`).
+ภายใน `tests/1_unit-tests.js` ภายใต้การทดสอบที่ระบุว่า "#10" ในชุด `Comparisons` ให้เปลี่ยน `assert` แต่ละรายการเป็น `assert.approximately` เพื่อให้ผ่านการทดสอบ (ควรประเมินค่า `true`)
 
-Choose the minimum range (3rd parameter) to make the test always pass. It should be less than 1.
+เลือกช่วงต่ำสุด (parameter ที่ 3) เพื่อให้การทดสอบผ่านเสมอ ควรน้อยกว่า 1
 
 # --hints--
 
-All tests should pass.
+การทดสอบทั้งหมดควรผ่าน
 
 ```js
 (getUserInput) =>
@@ -38,7 +38,7 @@ All tests should pass.
   );
 ```
 
-You should choose the correct range for the first assertion - `approximately(actual, expected, range)`.
+ผู้เรียนควรเลือกช่วงที่ถูกต้องสำหรับการยืนยันครั้งแรก -`approximately(actual, expected, range)`
 
 ```js
 (getUserInput) =>
@@ -57,7 +57,7 @@ You should choose the correct range for the first assertion - `approximately(act
   );
 ```
 
-You should choose the correct range for the second assertion - `approximately(actual, expected, range)`.
+ผู้เรียนควรเลือกช่วงที่ถูกต้องสำหรับการยืนยันครั้งที่สอง -`approximately(actual, expected, range)`
 
 ```js
 (getUserInput) =>

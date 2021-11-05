@@ -8,11 +8,12 @@ dashedName: run-functional-tests-on-api-endpoints-using-chai-http
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+Project นี้ สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-Mocha allows you to test asynchronous operations like calls to API endpoints with a plugin called `chai-http`.
 
-The following is an example of a test using `chai-http` for a suite called `'GET /hello?name=[name] => "hello [name]"'`:
+Mocha ให้ผู้เรียนทดสอบการทำงานแบบ asynchronous เช่น การเรียกไปยังจุดปลาย API ด้วยปลั๊กอินชื่อ `chai-http`
+
+ต่อไปนี้คือตัวอย่างการทดสอบโดยใช้ `chai-http` สำหรับชุดชื่อ `'GET /hello?name=[name] => "hello [name]"'`: 
 
 ```js
 suite('GET /hello?name=[name] => "hello [name]"', function () {
@@ -29,21 +30,21 @@ suite('GET /hello?name=[name] => "hello [name]"', function () {
 });
 ```
 
-The test sends a `GET` request to the server with a name as a URL query string (`?name=John`). In the `end` method's callback function, the response object (`res`) is received and contains the `status` property.
+การทดสอบจะส่งคำขอ "GET" ไปยังเซิร์ฟเวอร์โดยใช้ชื่อเป็นสตริงการสืบค้น URL (`?name=John`) ในฟังก์ชันการเรียกกลับของเมธอด `end` วัตถุการตอบสนอง (`res`) ที่ได้รับและมีคุณสมบัติ `status'
 
-The first `assert.equal` checks if the status is equal to `200`. The second `assert.equal` checks that the response string (`res.text`) is equal to `"hello John"`.
+`assert.equal` ตัวแรกจะตรวจสอบว่าสถานะเท่ากับ `200` หรือไม่ `assert.equal` ที่สองตรวจสอบว่า string ตอบกลับ (`res.text`) เท่ากับ `"hello John"`
 
-Also, notice the `done` parameter in the test's callback function. Calling it without an argument at the end of a test is necessary to signal that the asynchronous operation is complete.
+นอกจากนี้ ให้สังเกตพารามิเตอร์ `done` ในฟังก์ชันเรียกกลับของการทดสอบ การเรียกโดยไม่มีอาร์กิวเมนต์ เมื่อสิ้นสุดการทดสอบจำเป็นต้องส่งสัญญาณว่าการดำเนินการแบบ asynchronous เสร็จสมบูรณ์ 
 
 # --instructions--
 
-Within `tests/2_functional-tests.js`, alter the `'Test GET /hello with no name'` test (`// #1`) to assert the `status` and the `text` of the response to make the test pass. Do not alter the arguments passed to the asserts.
+ภายใน `tests/2_functional-tests.js` ให้แก้ไข `'Test GET /hello with no name'` test (`// #1`) เพื่อยืนยัน `status` และ `text` ของการตอบกลับ เพื่อทำให้ผ่านการทดสอบ // อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน
 
-There should be no URL query. Without a name URL query, the endpoint responds with `hello Guest`.
+ไม่ควรมีการสืบค้น URL หากไม่มีการสืบค้นชื่อ URL ปลายทางจะตอบกลับด้วย `hello Guest' 
 
 # --hints--
 
-All tests should pass
+ควรผ่านการทดสอบทั้งหมด
 
 ```js
 (getUserInput) =>
@@ -57,7 +58,7 @@ All tests should pass
   );
 ```
 
-You should test for `res.status` == 200
+ผู้เรียนควรทดสอบ `res.status` เป็น 200
 
 ```js
 (getUserInput) =>
@@ -73,7 +74,7 @@ You should test for `res.status` == 200
   );
 ```
 
-You should test for `res.text` == `'hello Guest'`
+ผู้เรียนควรทดสอบ `res.text` == `'hello Guest'`
 
 ```js
 (getUserInput) =>

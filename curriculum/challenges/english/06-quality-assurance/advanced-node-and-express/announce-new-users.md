@@ -8,9 +8,9 @@ dashedName: announce-new-users
 
 # --description--
 
-Many chat rooms are able to announce when a user connects or disconnects and then display that to all of the connected users in the chat. Seeing as though you already are emitting an event on connect and disconnect, you will just have to modify this event to support such a feature. The most logical way of doing so is sending 3 pieces of data with the event: the name of the user who connected/disconnected, the current user count, and if that name connected or disconnected.
+ห้องสนทนาจำนวนมากสามารถประกาศเมื่อผู้ใช้เชื่อมต่อหรือยกเลิกการเชื่อมต่อ แล้วแสดงต่อผู้ใช้งานที่เชื่อมต่อทั้งหมดในการสนทนา ขณะผู้เรียนกำลังมีเหตุการณ์ในการเชื่อมต่อและยกเลิกการเชื่อมต่อ ผู้เรียนจะต้องแก้ไขเหตุการณ์นี้เพื่อรองรับ feature ดังกล่าว วิธีดีที่สุด คือ การส่งข้อมูล 3 ส่วนพร้อมกับเหตุการณ์: ชื่อของผู้ใช้ที่เชื่อมต่อ/ตัดการเชื่อมต่อ, จำนวนผู้ใช้ปัจจุบัน และหากชื่อนั้นเชื่อมต่อหรือถูกตัดการเชื่อมต่อ
 
-Change the event name to `'user'`, and pass an object along containing the fields 'name', 'currentUsers', and 'connected' (to be `true` in case of connection, or `false` for disconnection of the user sent). Be sure to change both 'user count' events and set the disconnect one to send `false` for the field 'connected' instead of `true` like the event emitted on connect.
+เปลี่ยนชื่อเหตุการณ์เป็น `'user'` และส่งผ่านวัตถุพร้อมกับฟิลด์  'name',  'currentUsers' และ 'connected' (ให้เป็น `true` ในกรณีเชื่อมต่อ หรือ `false` สำหรับไม่มีตัดการเชื่อมต่อของผู้ใช้งาน) อย่าลืมเปลี่ยนทั้งเหตุการณ์ 'user count' และตั้งค่าการยกเลิกการเชื่อมต่อเพื่อส่ง `false`สำหรับฟิลด์'connected' แทนที่จะเป็น `true` เช่นเดียวกับเหตุการณ์ที่ปล่อยออกมาเมื่อมีการเชื่อมต่อ 
 
 ```js
 io.emit('user', {
@@ -20,9 +20,9 @@ io.emit('user', {
 });
 ```
 
-Now your client will have all the necessary information to correctly display the current user count and announce when a user connects or disconnects! To handle this event on the client side we should listen for `'user'`, then update the current user count by using jQuery to change the text of `#num-users` to `'{NUMBER} users online'`, as well as append a `<li>` to the unordered list with id `messages` with `'{NAME} has {joined/left} the chat.'`.
+ตอนนี้ลูกค้าของคุณจะมีข้อมูลที่จำเป็นทั้งหมด เพื่อแสดงจำนวนผู้ใช้ปัจจุบัน และประกาศเมื่อผู้ใช้เชื่อมต่อ หรือยกเลิกการเชื่อมต่อ! ในการจัดการเหตุการณ์นี้ในฝั่ง client  เราควรฟัง `'user'' จากนั้นอัปเดตจำนวนผู้ใช้ปัจจุบันโดยใช้ jQuery เพื่อเปลี่ยนข้อความของ `#num-users' เป็น `'{NUMBER} users online'` รวมทั้งผนวก `<li>` ต่อท้ายรายการที่ไม่เรียงลำดับด้วย id `ข้อความ' ที่มี `'{NAME} has {joined/left} the chat.'`
 
-An implementation of this could look like the following:
+การดำเนินการ มีลักษณะดังนี้: 
 
 ```js
 socket.on('user', data => {
@@ -34,11 +34,12 @@ socket.on('user', data => {
 });
 ```
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point [here](https://gist.github.com/camperbot/bf95a0f74b756cf0771cd62c087b8286).
+ส่ง page ของผู้เรียน เมื่อผู้เรียนคิดว่าทำถูกต้องแล้ว หากผู้เรียนพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสมบูรณ์ได้ [here](https://gist.github.com/camperbot/bf95a0f74b756cf0771cd62c087b8286).
 
 # --hints--
 
 Event `'user'` should be emitted with name, currentUsers, and connected.
+เหตุการณ์ `'user'` ควรมี name, currentUsers และ  connected.
 
 ```js
 (getUserInput) =>
@@ -56,7 +57,7 @@ Event `'user'` should be emitted with name, currentUsers, and connected.
   );
 ```
 
-Client should properly handle and display the new data from event `'user'`.
+ลูกค้าควรจัดการและแสดงข้อมูลใหม่จากเหตุการณ์ `'user'` อย่างเหมาะสม
 
 ```js
 (getUserInput) =>

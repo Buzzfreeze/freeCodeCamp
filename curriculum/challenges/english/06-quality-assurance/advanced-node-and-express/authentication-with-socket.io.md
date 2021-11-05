@@ -8,9 +8,9 @@ dashedName: authentication-with-socket-io
 
 # --description--
 
-Currently, you cannot determine who is connected to your web socket. While `req.user` contains the user object, that's only when your user interacts with the web server, and with web sockets you have no `req` (request) and therefore no user data. One way to solve the problem of knowing who is connected to your web socket is by parsing and decoding the cookie that contains the passport session then deserializing it to obtain the user object. Luckily, there is a package on NPM just for this that turns a once complex task into something simple!
+ขณะนี้ ผู้เรียนไม่สามารถระบุได้ว่าใครเชื่อมต่อกับweb socket แม้ว่า `req.user` จะมีอ็อบเจ็กต์ผู้ใช้ แต่นั่นก็ต่อเมื่อผู้ใช้ของคุณโต้ตอบกับเว็บเซิร์ฟเวอร์ และ web socket ไม่มี `req' (request) ดังนั้นจึงไม่มีข้อมูลผู้ใช้ วิธีหนึ่งในการแก้ปัญหารู้ว่าใครเชื่อมต่อกับ web socket คือการแยกวิเคราะห์และถอดรหัส cookie ที่มีเซสชันพาสปอร์ต จากนั้นทำการดีซีเรียลเพื่อขอรับ object ผู้ใช้ โชคดีที่มีแพ็คเกจ NPM ที่เปลี่ยนงานที่ซับซ้อนให้กลายเป็นเรื่องง่าย!
 
-Add `passport.socketio@~3.7.0`, `connect-mongo@~3.2.0`, and `cookie-parser@~1.4.5` as dependencies and require them as `passportSocketIo`, `MongoStore`, and `cookieParser` respectively. Also, we need to initialize a new memory store, from `express-session` which we previously required. It should look like this:
+เพิ่ม `passport.socketio@~3.7.0`, `connect-mongo@~3.2.0` และ `cookie-parser@~1.4.5` เป็นการอ้างอิงและกำหนดให้เป็น `passportSocketIo`, `MongoStore` และ ` cookieParser` ตามลำดับ นอกจากนี้ เราจำเป็นต้องเริ่มต้นที่เก็บหน่วยความจำใหม่ จาก `express-session' ที่เราต้องการก่อนหน้านี้ ควรมีลักษณะดังนี้: 
 
 ```js
 const MongoStore = require('connect-mongo')(session);
@@ -18,7 +18,8 @@ const URI = process.env.MONGO_URI;
 const store = new MongoStore({ url: URI });
 ```
 
-Now we just have to tell Socket.IO to use it and set the options. Be sure this is added before the existing socket code and not in the existing connection listener. For your server, it should look like this:
+ตอนนี้เราแค่ต้องบอก Socket.IO ให้ใช้และตั้งค่าตัวเลือก ตรวจสอบให้แน่ใจว่าได้เพิ่มสิ่งนี้ก่อน code socket ที่มีอยู่ และไม่ใช่ใน Listener การเชื่อมต่อที่มีอยู่ สำหรับเซิร์ฟเวอร์ ควรมีลักษณะดังนี้:
+เราต้องบอก  Socket.IO และ
 
 ```js
 io.use(
@@ -33,15 +34,15 @@ io.use(
 );
 ```
 
-Note that configuring Passport authentication for Socket.IO is very similar to the way we configured the `session` middleware for the API. This is because they are meant to use the same authentication method — get the session id from a cookie and validate it.
+การกำหนดค่าการตรวจสอบสิทธิ์ Passport สำหรับ Socket.IO นั้นคล้ายกับวิธีที่เรากำหนดค่ามิดเดิลแวร์ `session` สำหรับ API นั่นเป็นเพราะความตั้งใจที่จะใช้วิธีการตรวจสอบสิทธิ์แบบเดียวกัน — รับรหัสเซสชันจากคุกกี้และตรวจสอบความถูกต้อง
 
-Previously, when we configured the `session` middleware, we didn't explicitly set the cookie name for session (`key`). This is because the `session` package was using the default value. Now that we've added another package which needs access to the same value from the cookies, we need to explicitly set the `key` value in both configuration objects.
+ก่อนหน้านี้ เมื่อเรากำหนดค่ามิดเดิลแวร์ `session` เราไม่ได้ตั้งชื่อคุกกี้สำหรับเซสชัน (`key`) อย่างชัดเจน เนื่องจากแพ็กเกจ `session`  ใช้ค่าเริ่มต้น ตอนนี้เราได้เพิ่มแพ็คเกจอื่นที่ต้องการเข้าถึงค่าเดียวกันจากคุกกี้แล้ว เราจำเป็นต้องตั้งค่า `key` ในออบเจ็กต์การกำหนดค่าทั้งสองอย่างชัดเจน
 
-Be sure to add the `key` with the cookie name to the `session` middleware that matches the Socket.IO key. Also, add the `store` reference to the options, near where we set `saveUninitialized: true`. This is necessary to tell Socket.IO which session to relate to.
+อย่าลืมเพิ่ม`key` ด้วยชื่อคุกกี้ในมิดเดิลแวร์ `session`  ที่ตรงกับคีย์ Socket.IO นอกจากนี้ ให้เพิ่มการอ้างอิง `store` ให้กับตัวเลือก ใกล้กับตำแหน่งที่เราตั้งค่า `saveUninitialized: true` เพื่อบอก Socket.IO ว่าเซสชันใดที่เกี่ยวข้อง 
 
 <hr>
 
-Now, define the `success`, and `fail` callback functions:
+ตอนนี้ กำหนดฟังก์ชัน `success` และ `fail` callback functions: 
 
 ```js
 function onAuthorizeSuccess(data, accept) {
@@ -57,15 +58,15 @@ function onAuthorizeFail(data, message, error, accept) {
 }
 ```
 
-The user object is now accessible on your socket object as `socket.request.user`. For example, now you can add the following:
+ขณะนี้ object ผู้ใช้สามารถเข้าถึงได้บน socket เป็น `socket.request.user' ตัวอย่างเช่น สามารถเพิ่มสิ่งต่อไปนี้ได้:
 
 ```js
 console.log('user ' + socket.request.user.name + ' connected');
 ```
 
-It will log to the server console who has connected!
+ทำการ log ใน console เซิร์ฟเวอร์ที่เชื่อมต่อ! 
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out the project up to this point [here](https://gist.github.com/camperbot/1414cc9433044e306dd7fd0caa1c6254).
+ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ได้ [here](https://gist.github.com/camperbot/1414cc9433044e306dd7fd0caa1c6254) 
 
 # --hints--
 
@@ -88,7 +89,7 @@ Submit your page when you think you've got it right. If you're running into erro
   );
 ```
 
-`cookie-parser` should be a dependency.
+`cookie-parser` ควรเป็น dependency.
 
 ```js
 (getUserInput) =>
@@ -107,7 +108,7 @@ Submit your page when you think you've got it right. If you're running into erro
   );
 ```
 
-passportSocketIo should be properly required.
+PassportSocketIo ควรจะถูกต้อง 
 
 ```js
 (getUserInput) =>
@@ -125,7 +126,7 @@ passportSocketIo should be properly required.
   );
 ```
 
-passportSocketIo should be properly setup.
+PassportSocketIo ควรตั้งค่าอย่างถูกต้อง 
 
 ```js
 (getUserInput) =>

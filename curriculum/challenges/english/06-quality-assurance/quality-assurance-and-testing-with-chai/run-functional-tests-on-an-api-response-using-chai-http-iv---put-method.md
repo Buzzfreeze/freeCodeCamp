@@ -8,17 +8,17 @@ dashedName: run-functional-tests-on-an-api-response-using-chai-http-iv---put-met
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+Project นี้ สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-This exercise is similar to the previous one.
+แบบฝึกหัดนี้คล้ายกับแบบฝึกหัดก่อนหน้า 
 
-Now that you know how to test a `PUT` request, it's your turn to do it from scratch.
+ตอนนี้ผู้เรียนรู้วิธีทดสอบคำขอ `PUT  แล้ว ถึงเวลาที่ผู้เรียนต้องทำใหม่ตั้งแต่ต้น 
 
 # --instructions--
 
-Within `tests/2_functional-tests.js`, alter the `'Send {surname: "da Verrazzano"}'` test (`// #4`) and use the `put` and `send` methods to test the  `'/travellers'` endpoint.
+ภายใน `tests/2_functional-tests.js` ให้เปลี่ยนการทดสอบ `'Send {surname: "da Verrazzano"}'' (`// #4`) และใช้วิธี `put` และ `send` เพื่อทดสอบจุดสิ้นสุด '/travellers'
 
-Send the following JSON object with your PUT request:
+ส่ง JSON object ต่อไปนี้พร้อมกับคำขอ PUT request: 
 
 ```json
 {
@@ -26,18 +26,18 @@ Send the following JSON object with your PUT request:
 }
 ```
 
-Check for the following within the `request.end` callback:
+ตรวจสอบสิ่งต่อไปนี้ในการ callback `request.end`:
 
-1.  The `status` should be `200`
-2.  The `type` should be `application/json`
-3.  The `body.name` should be `Giovanni`
-4.  The `body.surname` should be `da Verrazzano`
+1. `status` ควรเป็น `200`
+2. `type` ควรเป็น `application/json`
+3. `body.name` ควรเป็น `Giovanni`
+4. `body.surname' ควรเป็น `da Verrazzano` 
 
-Follow the assertion order above - we rely on it. Also, be sure to remove `assert.fail()` once complete.
+ปฏิบัติตามคำสั่งยืนยันข้างต้น - นอกจากนี้ อย่าลืมลบ `assert.fail()` เมื่อเสร็จสิ้น 
 
 # --hints--
 
-All tests should pass
+ควรผ่านการทดสอบทั้งหมด
 
 ```js
 (getUserInput) =>
@@ -51,7 +51,7 @@ All tests should pass
   );
 ```
 
-You should test for `res.status` to be 200
+ผู้เรียนควรทดสอบ `res.status` เป็น 200
 
 ```js
 (getUserInput) =>
@@ -67,7 +67,7 @@ You should test for `res.status` to be 200
   );
 ```
 
-You should test for `res.type` to be `'application/json'`
+ผู้เรียนควรทดสอบ  `res.type`  เป็น `'application/json'`
 
 ```js
 (getUserInput) =>
@@ -83,7 +83,7 @@ You should test for `res.type` to be `'application/json'`
   );
 ```
 
-You should test for `res.body.name` to be `'Giovanni'`
+ผู้เรียนควรทดสอบ `res.body.surname' เป็น  `'Giovanni'`
 
 ```js
 (getUserInput) =>
@@ -99,7 +99,7 @@ You should test for `res.body.name` to be `'Giovanni'`
   );
 ```
 
-You should test for `res.body.surname` to be `'da Verrazzano'`
+ผู้เรียนควรทดสอบ `res.body.surname' เป็น `'da Verrazzano'`
 
 ```js
 (getUserInput) =>

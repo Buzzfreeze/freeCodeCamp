@@ -8,21 +8,21 @@ dashedName: learn-how-javascript-assertions-work
 
 # --description--
 
-Working on these challenges will involve you writing your code using one of the following methods:
+การทำ challenge นี้จะทำให้ผู้เรียนจะต้องเขียน code โดยใช้วิธีใดวิธีหนึ่งต่อไปนี้ :
 
-- Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-mochachai/) and complete these challenges locally.
-- Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) to complete these challenges.
-- Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
+- Clone repo [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-mochachai/) และทำแบบทดสอบเฉพาะส่วนนี้ให้สำเร็จ
+- ใช้ [โครงการเริ่มต้น Replit ของเรา](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) เพื่อทำแบบทดสอบเหล่านี้ให้สำเร็จ
+- ใช้ site builder ที่ผู้เรียนเลือก เพื่อสร้าง project ให้เสร็จ อย่าลืมรวมไฟล์ทั้งหมดจาก repo GitHub 
 
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field.
+เมื่อผู้เรียนทำเสร็จแล้ว ตรวจสอบให้แน่ใจว่าตัว Demo ของ project ของคุณตั้งค่า Host เป็น Public  จากนั้นส่ง URL ไปที่ช่อง `Solution Link` 
 
 # --instructions--
 
-Within `tests/1_unit-tests.js` under the test labelled `#1` in the `Basic Assertions` suite, change each `assert` to either `assert.isNull` or `assert.isNotNull` to make the test pass (should evaluate to `true`). Do not alter the arguments passed to the asserts.
+ภายใน `tests/1_unit-tests.js` ภายใต้ test ที่มีป้ายกำกับ `#1' ใน 'Basic Assertions' ให้เปลี่ยน 'assert' แต่ละรายการเป็น `assert.isNull` หรือ `assert.isNotNull` เพื่อให้ test ผ่าน (ควรประเมินว่า `true`) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยัง assert
 
 # --hints--
 
-All tests should pass.
+ควรผ่านการทดสอบทั้งหมด
 
 ```js
 (getUserInput) =>
@@ -36,7 +36,7 @@ All tests should pass.
   );
 ```
 
-You should choose the correct method for the first assertion - `isNull` vs. `isNotNull`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `isNull` กับ `isNotNull`
 
 ```js
 (getUserInput) =>
@@ -50,7 +50,7 @@ You should choose the correct method for the first assertion - `isNull` vs. `isN
   );
 ```
 
-You should choose the correct method for the second assertion - `isNull` vs. `isNotNull`.
+คุณควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `isNull` กับ `isNotNull` 
 
 ```js
 (getUserInput) =>

@@ -7,37 +7,37 @@ dashedName: simulate-actions-using-a-headless-browser
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone แบบมาจาก [GitHub](https://github.com) /freeCodeCamp/boilerplate-mochachai/).
 
-In the next challenges, you'll simulate human interaction with a page by using a headless browser.
+ใน challenges ครั้งต่อไป ผู้เรียนจะต้องจำลองการโต้ตอบของคน กับหน้าเว็บโดยใช้ headless browser
 
-Headless browsers are web browsers without a GUI. They are able to render and interpret HTML, CSS, and JavaScript the same way a regular browser would, making them particularly useful for testing web pages.
+headless browser คือเว็บเบราว์เซอร์ที่ไม่มี GUI สามารถแสดงผลและแปลง HTML, CSS และ JavaScript ได้เช่นเดียวกับเบราว์เซอร์ทั่วไป ทำให้มีประโยชน์อย่างยิ่งสำหรับการทดสอบหน้าเว็บ
 
-For the following challenges you'll use Zombie.js, which is a lightweight headless browser that doesn't rely on additional binaries to be installed. This feature makes it usable in limited environments like Replit. But there are many other, more powerful headless browser options.
+สำหรับ challenge ต่อไปนี้ ผู้เรียนจะต้องใช้ Zombie.js ซึ่งเป็น headless browser ที่มีน้ำหนักเบาซึ่งไม่ต้องอาศัยไบนารีเพิ่มเติมในการติดตั้ง ฟีเจอร์นี้ทำให้ใช้งานได้ในสภาพแวดล้อมที่จำกัด เช่น Replit แต่มีตัวเลือกheadless browser อื่น ๆ ที่มีประสิทธิภาพมากกว่า
 
-Mocha allows you to run some code before any of the actual tests run. This can be useful to do things like add entries to a database which will be used in the rest of the tests.
+Mocha อนุญาตให้เรียกใช้ code ก่อนที่จะทำการทดสอบจริง สิ่งนี้มีประโยชน์ในการทำสิ่งต่างๆ เช่น เพิ่มรายการลงในฐานข้อมูล ซึ่งจะใช้ในการทดสอบที่เหลือ
 
-With a headless browser, before running tests, you need to **visit** the page you'll test.
+เมื่อใช้ headless browserว ก่อนทำการทดสอบ จะต้อง **ไปที่** หน้าที่จะทดสอบ
 
-The `suiteSetup` hook is executed only once at the beginning of a test suite.
+hook `suiteSetup` ทำงานเพียงครั้งเดียวที่จุดเริ่มต้นของชุดทดสอบ
 
-There are several other hook types that can execute code before each test, after each test, or at the end of a test suite. See the Mocha docs for more information.
+มี hook ประเภทอื่นๆ อีกหลายประเภทที่สามารถรันโค้ดก่อนการทดสอบแต่ละครั้ง หลังการทดสอบแต่ละครั้ง หรือเมื่อสิ้นสุดชุดการทดสอบ ดูเอกสาร Mocha สำหรับข้อมูลเพิ่มเติม 
 
 # --instructions--
 
-Within `tests/2_functional-tests.js`, immediately after the `Browser` declaration, add your project URL to the `site` property of the variable:
+ภายใน "tests/2_functional-tests.js" หลังจากประกาศ `Browser` ให้เพิ่ม URL โปรเจ็กต์ของผู้เรียนไปที่ property `site` ของตัวแปร: 
 
 ```js
 Browser.site = 'https://boilerplate-mochachai.your-username.repl.co'; // Your URL here
 ```
 
-Then at the root level of the `'Functional Tests with Zombie.js'` suite, instantiate a new instance of the `Browser` object with the following code:
+จากนั้นที่ระดับ root ของชุด `'Functional Tests with Zombie.js'`  ให้สร้างอินสแตนซ์ใหม่ของ object `Browser` ด้วย code ต่อไปนี้:
 
 ```js
 const browser = new Browser();
 ```
 
-And use the `suiteSetup` hook to direct the `browser` to the `/` route with the following code:
+และใช้ hook  "suiteSetup" เพื่อกำหนดเส้นทาง route `browser` ไปยังเส้นทาง `/`ด้วย code ต่อไปนี้: 
 
 ```js
 suiteSetup(function(done) {
@@ -47,7 +47,7 @@ suiteSetup(function(done) {
 
 # --hints--
 
-All tests should pass.
+การทดสอบทั้งหมดควรผ่าน 
 
 ```js
 (getUserInput) =>

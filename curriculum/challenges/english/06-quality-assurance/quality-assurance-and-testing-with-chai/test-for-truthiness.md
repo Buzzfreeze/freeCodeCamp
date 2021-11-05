@@ -8,9 +8,10 @@ dashedName: test-for-truthiness
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-`isTrue()` will test for the boolean value `true` and `isNotTrue()` will pass when given anything but the boolean value of `true`.
+
+`isTrue()` จะทดสอบหาค่า boolean `true` และ `isNotTrue()` จะส่งผ่านเมื่อได้รับค่าใดๆ ยกเว้นค่า boolean ของ `true' 
 
 ```js
 assert.isTrue(true, 'This will pass with the boolean value true');
@@ -18,15 +19,15 @@ assert.isTrue('true', 'This will NOT pass with the string value "true"');
 assert.isTrue(1, 'This will NOT pass with the number value 1');
 ```
 
-`isFalse()` and `isNotFalse()` also exist, and behave similarly to their true counterparts except they look for the boolean value of `false`.
+`isFalse()` และ `isNotFalse()` ก็มีอยู่เช่นกัน และทำงานคล้ายกับคู่จริง ยกเว้นว่ามองหาค่าบูลีนของ `false' 
 
 # --instructions--
 
-Within `tests/1_unit-tests.js` under the test labelled `#4` in the `Basic Assertions` suite, change each `assert` to either `assert.isTrue` or `assert.isNotTrue` to make the test pass (should evaluate to `true`). Do not alter the arguments passed to the asserts.
+ภายใน `tests/1_unit-tests.js` ภายใต้การทดสอบที่มีป้ายกำกับ `#4' ในชุด `Basic Assertions` ให้เปลี่ยน `assert' แต่ละรายการเป็น `assert.isTrue` หรือ `asssert.isNotTrue` เพื่อให้ผ่านการทดสอบ ( ควรประเมินเป็นค่า `true`) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน 
 
 # --hints--
 
-All tests should pass.
+การทดสอบทั้งหมดควรผ่าน 
 
 ```js
 (getUserInput) =>
@@ -40,7 +41,7 @@ All tests should pass.
   );
 ```
 
-You should choose the correct method for the first assertion - `isTrue` vs. `isNotTrue`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `isTrue` กับ `isNotTrue`
 
 ```js
 (getUserInput) =>
@@ -54,7 +55,7 @@ You should choose the correct method for the first assertion - `isTrue` vs. `isN
   );
 ```
 
-You should choose the correct method for the second assertion - `isTrue` vs. `isNotTrue`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `isTrue` กับ `isNotTrue`
 
 ```js
 (getUserInput) =>
@@ -72,7 +73,7 @@ You should choose the correct method for the second assertion - `isTrue` vs. `is
   );
 ```
 
-You should choose the correct method for the third assertion - `isTrue` vs. `isNotTrue`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สาม - `isTrue` กับ `isNotTrue` 
 
 ```js
 (getUserInput) =>

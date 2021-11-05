@@ -8,17 +8,17 @@ dashedName: test-if-an-object-has-a-property
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-`property` asserts that the actual object has a given property.
-
+`property` ยืนยันว่า object จริงมี property ที่กำหนด 
+ 
 # --instructions--
 
-Within `tests/1_unit-tests.js` under the test labelled `#16` in the `Objects` suite, change each `assert` to either `assert.property` or `assert.notProperty` to make the test pass (should evaluate to `true`). Do not alter the arguments passed to the asserts.
+ภายใน `tests/1_unit-tests.js` ภายใต้การทดสอบที่มีป้ายกำกับ `#16' ในชุด `Objects` ให้เปลี่ยน `assert' แต่ละรายการเป็น `assert.property` หรือ `assert.notProperty` เพื่อให้ผ่านการทดสอบ (ควร ประเมินค่า `true`) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน
 
 # --hints--
 
-All tests should pass.
+การทดสอบทั้งหมดควรผ่าน
 
 ```js
 (getUserInput) =>
@@ -32,7 +32,7 @@ All tests should pass.
   );
 ```
 
-You should choose the correct method for the first assertion - `property` vs. `notProperty`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `property`  กับ `notProperty`.
 
 ```js
 (getUserInput) =>
@@ -50,7 +50,7 @@ You should choose the correct method for the first assertion - `property` vs. `n
   );
 ```
 
-You should choose the correct method for the second assertion - `property` vs. `notProperty`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `property`  กับ `notProperty`.
 
 ```js
 (getUserInput) =>
@@ -68,7 +68,8 @@ You should choose the correct method for the second assertion - `property` vs. `
   );
 ```
 
-You should choose the correct method for the third assertion - `property` vs. `notProperty`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สาม - `property`  กับ `notProperty`.
+
 
 ```js
 (getUserInput) =>

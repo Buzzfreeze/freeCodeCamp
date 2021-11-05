@@ -8,27 +8,27 @@ dashedName: how-to-put-a-profile-together
 
 # --description--
 
-Now that we can ensure the user accessing the `/profile` is authenticated, we can use the information contained in `req.user` on our page!
+ตอนนี้เราสามารถตรวจสอบสิทธิ์ผู้ใช้ที่เข้าถึง  `/profile` แล้ว เราจึงสามารถใช้ข้อมูลที่มีอยู่ใน `req.user' บนหน้าเว็บของเราได้!
 
-Pass an object containing the property `username` and value of `req.user.username` as the second argument for the render method of the profile view. Then, go to your `profile.pug` view, and add the following line below the existing `h1` element, and at the same level of indentation:
+ส่งผ่านวัตถุที่มีคุณสมบัติ `username`  และค่าของ `req.user.username` เป็นอาร์กิวเมนต์ที่สองสำหรับวิธีการ render ของมุมมองโปรไฟล์ จากนั้นไปที่มุมมอง "profile.pug" และเพิ่มบรรทัดต่อไปนี้ใต้องค์ประกอบ "h1" ที่มีอยู่ และที่ระดับการเยื้องเดียวกัน:
 
 ```pug
 h2.center#welcome Welcome, #{username}!
 ```
 
-This creates an `h2` element with the class '`center`' and id '`welcome`' containing the text '`Welcome,`' followed by the username.
+สิ่งนี้จะสร้าง element  "h2" ที่มี class "center" และ id  '`welcome`' ที่มีข้อความ'`Welcome,`' ตามด้วยชื่อผู้ใช้
 
-Also, in `profile.pug`, add a link referring to the `/logout` route, which will host the logic to unauthenticate a user.
+นอกจากนี้ ใน "profile.pug" ให้เพิ่มลิงก์ที่อ้างอิงถึงเส้นทาง`/logout` ซึ่งจะโฮสต์ยกเลิกการตรวจสอบสิทธิ์ผู้ใช้
 
 ```pug
 a(href='/logout') Logout
 ```
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point [here](https://gist.github.com/camperbot/136b3ad611cc80b41cab6f74bb460f6a).
+ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [here](https://gist.github.com/camperbot/136b3ad611cc80b41cab6f74bb460f6a).
 
 # --hints--
 
-You should correctly add a Pug render variable to /profile.
+คุณควรเพิ่มตัวแปรการแสดงผล Pug  /profile อย่างถูกต้อง
 
 ```js
 (getUserInput) =>

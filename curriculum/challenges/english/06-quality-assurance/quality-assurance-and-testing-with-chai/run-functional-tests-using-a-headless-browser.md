@@ -8,13 +8,13 @@ dashedName: run-functional-tests-using-a-headless-browser
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+Project นี้ สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-On the page there's an input form. It sends data to the `PUT /travellers` endpoint as an AJAX request.
+บนหน้า page มีแบบฟอร์มป้อนข้อมูล โดยฟอร์มส่งข้อมูลไปยังปลายทาง `PUT /travellers` ตามคำขอ AJAX 
 
-When the request successfully completes, the client code appends a `<div>` containing the information in the response to the DOM.
+เมื่อคำขอเสร็จสมบูรณ์ client code จะเพิ่ม `<div>` ต่อท้ายซึ่งมีข้อมูลในการ response ต่อ DOM
 
-Here's an example of how to use Zombie.js to interact with the form:
+ตัวอย่างวิธีการใช้ Zombie.js เพื่อโต้ตอบกับแบบฟอร์ม: 
 
 ```js
 test('Submit the surname "Polo" in the HTML form', function (done) {
@@ -30,38 +30,40 @@ test('Submit the surname "Polo" in the HTML form', function (done) {
 });
 ```
 
-First, the `fill` method of the `browser` object fills the `surname` field of the form with the value `'Polo'`. `fill` returns a promise, so `then` is chained off of it.
 
-Within the `then` callback, the `pressButton` method of the `browser` object is used to invoke the form's `submit` event listener. The `pressButton` method is asynchronous.
+ขั้นแรก วิธี `fill` ของ object `browser`  เติมฟิลด์ `surname` ของแบบฟอร์มด้วยค่า `'Polo'` `fill' ส่งคืน promise ดังนั้น 'then' จะถูกตรึงเอาไว้
 
-Then, once a response is received from the AJAX request, a few assertions are made confirming:
+ภายใน callback `then` เมธอด "pressButton" ของ object `browser` จะใช้เพื่อเรียกใช้ event listener `submit` ของแบบฟอร์ม เมธอด `pressButton' เป็นแบบ asynchronous
 
-1.  The status of the response is `200`
-2.  The text within the `<span id='name'></span>` element matches `'Marco'`
-3.  The text within the `<span id='surname'></span>` element matches `'Polo'`
-4.  There is `1` `<span id='dates'></span>` element.
+จากนั้น เมื่อได้รับการตอบกลับจากคำขอ AJAX แล้ว จะมีการยืนยันดังนี้:
 
-Finally, the `done` callback is invoked, which is needed due to the asynchronous test.
+1. สถานะของการตอบกลับคือ `200`
+2. ข้อความภายใน element `<span id='name'></span>` ตรงกับ `'Marco'`
+3. ข้อความภายใน element `<span id='surname'></span>` ตรงกับ `'Polo'`
+4. มี element `1` `<span id='dates'></span>`
+
+ในที่สุด การเรียกกลับที่ `done` จะถูกเรียกใช้ ซึ่งเป็นสิ่งจำเป็น เนื่องเป็นการทดสอบแบบ asynchronous
+
 
 # --instructions--
 
-Within `tests/2_functional-tests.js`, in the `'Submit the surname "Colombo" in the HTML form'` test (`// #5`), automate the following:
+ภายใน `tests/2_functional-tests.js` ใน `'ส่งนามสกุล "Colombo" ในรูปแบบ HTML'` test (`// #5`) ให้ automate ต่อไปนี้:
 
-1.  Fill in the form with the surname `Colombo`
-2.  Press the submit button
+1. กรอกแบบฟอร์มด้วยนามสกุล `Colombo`
+2. กดปุ่มส่ง 
 
-And within the `pressButton` callback:
+และภายใน callback `pressButton':
 
-1.  Assert that status is OK `200`
-2.  Assert that the text inside the element `span#name` is `'Cristoforo'`
-3.  Assert that the text inside the element `span#surname` is `'Colombo'`
-4.  Assert that the element(s) `span#dates` exist and their count is `1`
+1. ยืนยันว่าสถานะ OK `200`
+2. ยืนยันว่าข้อความภายใน element `span#name' คือ `'Cristoforo'`
+3. ยืนยันว่าข้อความภายใน element `span#surname' คือ `'Colombo'`
+4. ยืนยันว่า element `span#dates` มีอยู่และจำนวนนับ คือ `1`
 
-Do not forget to remove the `assert.fail()` call.
+อย่าลืมลบการเรียก `assert.fail()` 
 
 # --hints--
 
-All tests should pass.
+ควรผ่านการทดสอบทั้งหมด
 
 ```js
 (getUserInput) =>
@@ -75,7 +77,7 @@ All tests should pass.
   );
 ```
 
-You should assert that the headless browser request succeeded.
+ผู้เรียนควรยืนยันว่า request เบราว์เซอร์ที่ไม่มี head สำเร็จ 
 
 ```js
 (getUserInput) =>
@@ -89,7 +91,7 @@ You should assert that the headless browser request succeeded.
   );
 ```
 
-You should assert that the text inside the element `span#name` is `'Cristoforo'`.
+ผู้เรียนควรยืนยันว่าข้อความภายใน element "span#name" คือ "Cristoforo" 
 
 ```js
 (getUserInput) =>
@@ -105,7 +107,7 @@ You should assert that the text inside the element `span#name` is `'Cristoforo'`
   );
 ```
 
-You should assert that the text inside the element `span#surname` is `'Colombo'`.
+ผู้เรียนควรยืนยันว่าข้อความภายใน element "span#surname" คือ `'Colombo'`.
 
 ```js
 (getUserInput) =>
@@ -121,7 +123,7 @@ You should assert that the text inside the element `span#surname` is `'Colombo'`
   );
 ```
 
-You should assert that the element `span#dates` exist and its count is 1.
+ผู้เรียนควรยืนยันว่าข้อความภายใน  element `span#dates` มีอยู่และจำนวนนับ คือ `1`
 
 ```js
 (getUserInput) =>

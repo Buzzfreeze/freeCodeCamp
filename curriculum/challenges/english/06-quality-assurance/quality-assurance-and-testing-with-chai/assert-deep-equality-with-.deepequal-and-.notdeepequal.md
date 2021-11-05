@@ -8,17 +8,16 @@ dashedName: assert-deep-equality-with--deepequal-and--notdeepequal
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
-
-`deepEqual()` asserts that two objects are deep equal.
+Project นี้ สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com) /freeCodeCamp/boilerplate-mochachai/). 
+`deepEqual()` ยืนยันว่า objects ทั้งสองมีค่าเท่ากัน 
 
 # --instructions--
 
-Within `tests/1_unit-tests.js` under the test labelled `#7` in the `Equality` suite, change each `assert` to either `assert.deepEqual` or `assert.notDeepEqual` to make the test pass (should evaluate to `true`). Do not alter the arguments passed to the asserts.
+ภายใน `tests/1_unit-tests.js` ภายใต้ test ที่มีป้ายกำกับ `#7' ใน 'Equality' ให้เปลี่ยน 'assert' แต่ละรายการเป็น 'assert.deepEqual' หรือ 'assert.notDeepEqual' เพื่อให้ test ผ่าน (ควรประเมินว่า `true`) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยัง assert
 
 # --hints--
 
-All tests should pass.
+ควรผ่านการทดสอบทั้งหมด
 
 ```js
 (getUserInput) =>
@@ -32,7 +31,7 @@ All tests should pass.
   );
 ```
 
-You should choose the correct method for the first assertion - `deepEqual` vs. `notDeepEqual`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `deepEqual` กับ `notDeepEqual` 
 
 ```js
 (getUserInput) =>
@@ -50,7 +49,7 @@ You should choose the correct method for the first assertion - `deepEqual` vs. `
   );
 ```
 
-You should choose the correct method for the second assertion - `deepEqual` vs. `notDeepEqual`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `deepEqual` กับ `notDeepEqual` 
 
 ```js
 (getUserInput) =>

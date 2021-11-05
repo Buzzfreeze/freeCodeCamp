@@ -8,11 +8,11 @@ dashedName: authentication-strategies
 
 # --description--
 
-A strategy is a way of authenticating a user. You can use a strategy for allowing users to authenticate based on locally saved information (if you have them register first) or from a variety of providers such as Google or GitHub. For this project, we will set up a local strategy. To see a list of the hundreds of strategies, visit Passport's site [here](http://passportjs.org/).
+กลยุทธ์คือวิธีการตรวจสอบผู้ใช้งาน ผู้เรียนสามารถใช้กลยุทธ์ในการอนุญาตให้ผู้ใช้ตรวจสอบสิทธิ์ตามข้อมูลที่บันทึกไว้ในเครื่อง (หากผู้เรียนให้คน register ก่อน) หรือจากผู้ให้บริการต่างๆ เช่น Google หรือ GitHub สำหรับ project นี้ เราจะกำหนด local strategy หากต้องการดูรายการกลยุทธ์นับร้อย ไปที่เว็บไซต์ของ Passport [here](http://passportjs.org/)
 
-Add `passport-local@~1.0.0` as a dependency and add it to your server as follows: `const LocalStrategy = require('passport-local');`
+เพิ่ม `passport-local@~1.0.0` เป็น dependency และเพิ่มไปยังเซิร์ฟเวอร์ดังนี้: `const LocalStrategy = require('passport-local');`
 
-Now you will have to tell passport to **use** an instantiated LocalStrategy object with a few settings defined. Make sure this (as well as everything from this point on) is encapsulated in the database connection since it relies on it!
+ตอนนี้ จะต้องบอก passport ให้ **ใช้** LocalStrategy ที่สร้างอินสแตนซ์ด้วยการตั้งค่าบางอย่างที่กำหนดไว้ ตรวจสอบให้แน่ใจว่าสิ่งนี้ (ทุกอย่างตั้งแต่จุดนี้เป็นต้นไป) ถูกห่อหุ้ม ( encapsulated) ในการเชื่อมต่อฐานข้อมูล ต้องอาศัยการเชื่อมต่อนี้! 
 
 ```js
 passport.use(new LocalStrategy(
@@ -28,17 +28,17 @@ passport.use(new LocalStrategy(
 ));
 ```
 
-This is defining the process to use when we try to authenticate someone locally. First, it tries to find a user in our database with the username entered, then it checks for the password to match, then finally, if no errors have popped up that we checked for, like an incorrect password, the `user`'s object is returned and they are authenticated.
+การกำหนดกระบวนการที่จะใช้ เมื่อเราพยายามรับรองความถูกต้องของใครบางคน ขั้นแรก ให้พยายามค้นหาผู้ใช้ในฐานข้อมูลของเรา โดยป้อนชื่อผู้ใช้ จากนั้นจะตรวจสอบรหัสผ่านที่ตรงกัน  ถ้าไม่มีข้อผิดพลาดปรากฏขึ้นที่เราตรวจสอบ เช่น รหัสผ่านที่ไม่ถูกต้อง อ็อบเจ็กต์ของ `user` จะถูกส่งคืนและจะตรวจสอบความถูกต้อง
 
-Many strategies are set up using different settings, but generally it is easy to set it up based on the README in that strategy's repository. A good example of this is the GitHub strategy where we don't need to worry about a username or password because the user will be sent to GitHub's auth page to authenticate. As long as they are logged in and agree then GitHub returns their profile for us to use.
+กลยุทธ์จำนวนมากถูกตั้งค่าโดยใช้การตั้งค่าที่แตกต่างกัน แต่โดยทั่วไปแล้ว การตั้งค่าตาม README ใน repo ของกลยุทธ์นั้นจะง่าย ตัวอย่างที่ดี คือกลยุทธ์ GitHub ที่เราไม่ต้องกังวลเกี่ยวกับชื่อผู้ใช้หรือรหัสผ่าน เนื่องจากผู้ใช้จะถูกส่งไปยังหน้าตรวจสอบสิทธิ์ของ GitHub เพื่อตรวจสอบสิทธิ์ ตราบใดที่พวกเขาลงชื่อเข้าใช้และตกลง GitHub จะส่งคืนโปรไฟล์ให้เราใช้
 
-In the next step, we will set up how to actually call the authentication strategy to validate a user based on form data!
+ในขั้นตอนต่อไป เราจะตั้งค่าวิธีการเรียกใช้กลยุทธ์การตรวจสอบสิทธิ์จริงเพื่อตรวจสอบผู้ใช้ตามข้อมูลในแบบฟอร์ม!
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point [here](https://gist.github.com/camperbot/53b495c02b92adeee0aa1bd3f3be8a4b).
+ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [ที่นี่](https://gist.github.com/camperbot/53b495c02b92adeee0aa1bd3f3be8a4b) 
 
 # --hints--
 
-Passport-local should be a dependency.
+Passport-local ควรเป็น dependency
 
 ```js
 (getUserInput) =>
@@ -57,7 +57,7 @@ Passport-local should be a dependency.
   );
 ```
 
-Passport-local should be correctly required and setup.
+Passport-local ควรต้องมีและตั้งค่าอย่างถูกต้อง 
 
 ```js
 (getUserInput) =>

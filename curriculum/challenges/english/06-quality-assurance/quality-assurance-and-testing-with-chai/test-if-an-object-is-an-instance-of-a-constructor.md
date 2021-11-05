@@ -8,17 +8,17 @@ dashedName: test-if-an-object-is-an-instance-of-a-constructor
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-`#instanceOf` asserts that an object is an instance of a constructor.
+`#instanceOf` ยืนยันว่า object เป็นตัวอย่างของ constructor
 
 # --instructions--
 
-Within `tests/1_unit-tests.js` under the test labelled `#18` in the `Objects` suite, change each `assert` to either `assert.instanceOf` or `assert.notInstanceOf` to make the test pass (should evaluate to `true`). Do not alter the arguments passed to the asserts.
+ภายใน `tests/1_unit-tests.js` ภายใต้การทดสอบที่มีป้ายกำกับ `#18' ในชุด `Objects` ให้เปลี่ยน `assert' แต่ละรายการเป็น `assert.instanceOf` หรือ `assert.notInstanceOf` เพื่อให้ผ่านการทดสอบ (ควร ประเมินค่า `true`) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน
 
 # --hints--
 
-All tests should pass.
+การทดสอบทั้งหมดควรผ่าน
 
 ```js
 (getUserInput) =>
@@ -32,7 +32,7 @@ All tests should pass.
   );
 ```
 
-You should choose the correct method for the first assertion - `instanceOf` vs. `notInstanceOf`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `instanceOf` กับ `notInstanceOf`
 
 ```js
 (getUserInput) =>
@@ -50,7 +50,7 @@ You should choose the correct method for the first assertion - `instanceOf` vs. 
   );
 ```
 
-You should choose the correct method for the second assertion - `instanceOf` vs. `notInstanceOf`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `instanceOf` กับ `notInstanceOf`
 
 ```js
 (getUserInput) =>
@@ -68,7 +68,7 @@ You should choose the correct method for the second assertion - `instanceOf` vs.
   );
 ```
 
-You should choose the correct method for the third assertion - `instanceOf` vs. `notInstanceOf`.
+ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สาม - `instanceOf` กับ `notInstanceOf`
 
 ```js
 (getUserInput) =>
@@ -86,7 +86,7 @@ You should choose the correct method for the third assertion - `instanceOf` vs. 
   );
 ```
 
-You should choose the correct method for the fourth assertion - `instanceOf` vs. `notInstanceOf`.
+คุณควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สี่ - `instanceOf` กับ `notInstanceOf`
 
 ```js
 (getUserInput) =>

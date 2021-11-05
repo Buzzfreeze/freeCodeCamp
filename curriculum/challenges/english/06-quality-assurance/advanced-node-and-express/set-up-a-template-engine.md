@@ -8,31 +8,31 @@ dashedName: set-up-a-template-engine
 
 # --description--
 
-Working on these challenges will involve you writing your code using one of the following methods:
+การทำ challenge นี้ จะทำให้ผู้เรียนต้องเขียน code โดยใช้วิธีใดวิธีหนึ่งต่อไปนี้
 
-- Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-advancednode/) and complete these challenges locally.
-- Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-advancednode) to complete these challenges.
-- Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
+- clone [repo GitHub นี้](https://github.com/freeCodeCamp/boilerplate-advancednode/) และทำ challenge นี้ในพื้นที่
+- ใช้ [ project เริ่มต้น Replit ของเรา](https://replit.com/github/freeCodeCamp/boilerplate-advancednode) เพื่อทำ challenge เหล่านี้ให้สำเร็จ
+- ใช้ site builder ที่ผู้เรียนเลือก เพื่อสร้าง project ให้เสร็จ อย่าลืมรวมไฟล์ทั้งหมดจาก repo GitHub 
 
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field.
+เมื่อผู้เรียนทำเสร็จแล้ว ตรวจสอบให้แน่ใจว่าตัว Demo ของ project ของคุณตั้งค่า Host เป็น Public  จากนั้นส่ง URL ไปที่ช่อง `Solution Link` หรือส่งลิงก์ไปยัง source code ของ project ผู้เรียน ตรง `GitHub Link`
 
-A template engine enables you to use static template files (such as those written in *Pug*) in your app. At runtime, the template engine replaces variables in a template file with actual values which can be supplied by your server. Then it transforms the template into a static HTML file that is sent to the client. This approach makes it easier to design an HTML page and allows for displaying variables on the page without needing to make an API call from the client.
+template engine ช่วยให้ใช้ไฟล์ static template (เช่น ไฟล์ที่เขียนด้วย *Pug*) ในแอป ที่ runtime  template engine จะแทนที่ตัวแปรในไฟล์เทมเพลตด้วยค่าจริงที่เซิร์ฟเวอร์ของคุณสามารถจัดหาได้ จากนั้นจะแปลงเทมเพลตเป็นไฟล์ static HTML ส่งไปยังไคลเอ็นต์ วิธีนี้ทำให้ง่ายต่อการออกแบบหน้า HTML และช่วยให้สามารถแสดงตัวแปรบนหน้าได้โดยไม่ต้องทำการเรียก API จากลูกค้า
 
-Add `pug@~3.0.0` as a dependency in your `package.json` file.
+เพิ่ม `pug@~3.0.0` เป็นการขึ้นต่อกันในไฟล์ `package.json` ของคุณ
 
-Express needs to know which template engine you are using. We will use the `set` method to assign `pug` as the `view engine` property's value: `app.set('view engine', 'pug')`
+Express ต้องการทราบว่าเรากำลังใช้ template engine ใด เราจะใช้วิธี `set` เพื่อกำหนด `pug` เป็นค่าของคุณสมบัติ `view engine`: `app.set('view engine', 'pug')`
 
-Your page will not load until you correctly render the index file in the `views/pug` directory.
+หน้าเว็บจะไม่โหลดจนกว่าจะแสดงผล index file อย่างถูกต้องใน directory`views/pug'
 
-Change the argument of the `res.render()` declaration in the `/` route to be the file path to the `views/pug` directory. The path can be a relative path (relative to views), or an absolute path, and does not require a file extension.
+เปลี่ยนอาร์กิวเมนต์ของการประกาศ `res.render()` ในเส้นทาง `/` ให้เป็นเส้นทางของไฟล์ไปยัง directory `views/pug` path อาจเป็น relative path หรือ absolute path และไม่ต้องการนามสกุลไฟล์
 
-If all went as planned, your app home page will stop showing the message "`Pug template is not defined.`" and will now display a message indicating you've successfully rendered the Pug template!
+หากทุกอย่างเป็นไปตามนี้ หน้าแรกของแอปจะหยุดแสดงข้อความ "`Pug template is not defined.`" และตอนนี้จะแสดงข้อความระบุว่า คุณแสดงผลเทมเพลต Pug สำเร็จแล้ว!
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point [here](https://gist.github.com/camperbot/3515cd676ea4dfceab4e322f59a37791).
+ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [here](https://gist.github.com/camperbot/3515cd676ea4dfceab4e322f59a37791).
 
 # --hints--
 
-Pug should be a dependency.
+Pug ควรเป็น dependency.
 
 ```js
 (getUserInput) =>
@@ -51,7 +51,7 @@ Pug should be a dependency.
   );
 ```
 
-View engine should be Pug.
+View engine ควรเป็น Pug.
 
 ```js
 (getUserInput) =>
@@ -69,7 +69,7 @@ View engine should be Pug.
   );
 ```
 
-Use the correct ExpressJS method to render the index page from the response.
+ใช้เมธอด ExpressJS ที่ถูกต้องเพื่อแสดง index page จากการตอบกลับ
 
 ```js
 (getUserInput) =>
@@ -87,7 +87,7 @@ Use the correct ExpressJS method to render the index page from the response.
   );
 ```
 
-Pug should be working.
+Pug ควรจะทำงาน
 
 ```js
 (getUserInput) =>

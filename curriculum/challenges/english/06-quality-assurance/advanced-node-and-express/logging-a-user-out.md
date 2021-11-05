@@ -8,9 +8,9 @@ dashedName: logging-a-user-out
 
 # --description--
 
-Creating the logout logic is easy. The route should just unauthenticate the user and redirect to the home page instead of rendering any view.
+การสร้าง logic การออกจากระบบเป็นเรื่องง่าย route ควรยกเลิกการตรวจสอบสิทธิ์ผู้ใช้และเปลี่ยนเส้นทางไปยังโฮมเพจแทนการแสดงมุมมองใดๆ
 
-In passport, unauthenticating a user is as easy as just calling `req.logout();` before redirecting.
+ใน passport การยกเลิกการตรวจสอบสิทธิ์ผู้ใช้ทำได้ง่ายเพียงแค่เรียก `req.logout();` ก่อนเปลี่ยนเส้นทาง
 
 ```js
 app.route('/logout')
@@ -20,7 +20,7 @@ app.route('/logout')
 });
 ```
 
-You may have noticed that we're not handling missing pages (404). The common way to handle this in Node is with the following middleware. Go ahead and add this in after all your other routes:
+อาจสังเกตเห็นว่าเราไม่ได้จัดการหน้าที่หายไป (404) วิธีทั่วไปในการจัดการสิ่งนี้ใน Node คือการใช้มิดเดิลแวร์ต่อไปนี้ไว้ข้างหน้าและเพิ่มสิ่งนี้หลังจากเส้นทางอื่น ๆ ทั้งหมด:
 
 ```js
 app.use((req, res, next) => {
@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 });
 ```
 
-Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point [here](https://gist.github.com/camperbot/c3eeb8a3ebf855e021fd0c044095a23b).
+ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้  [here](https://gist.github.com/camperbot/c3eeb8a3ebf855e021fd0c044095a23b).
 
 # --hints--
 
@@ -52,7 +52,7 @@ Submit your page when you think you've got it right. If you're running into erro
   );
 ```
 
-Logout should redirect to the home page.
+Logout ออกจากระบบควรเปลี่ยนเส้นทางไปยังโฮมเพจ 
 
 ```js
 (getUserInput) =>
