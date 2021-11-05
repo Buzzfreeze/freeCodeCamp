@@ -8,39 +8,40 @@ dashedName: problem-70-totient-permutation
 
 # --description--
 
-Euler's Totient function, ${\phi}(n)$ (sometimes called the phi function), is used to determine the number of positive numbers less than or equal to `n` which are relatively prime to `n`. For example, as 1, 2, 4, 5, 7, and 8, are all less than nine and relatively prime to nine, ${\phi}(9) = 6$. The number 1 is considered to be relatively prime to every positive number, so ${\phi}(1) = 1$.
+Euler's Totient function, ${\phi}(n)$ (phi function) 
+ใช้เพื่อกำหนดจำนวนของจำนวนบวกที่น้อยกว่าหรือเท่ากับ `n` ซึ่งค่อนข้างสำคัญสำหรับ `n` ตัวอย่างเช่น เนื่องจาก 1, 2, 4, 5, 7 และ 8 มีค่าน้อยกว่าเก้าและค่อนข้างเฉพาะกับเก้า ${\phi}(9) = 6$ จำนวน 1 ถือเป็นจำนวนเฉพาะของจำนวนบวกทุกตัว ดังนั้น ${\phi}(1) = 1$
 
-Interestingly, ${\phi}(87109) = 79180$, and it can be seen that 87109 is a permutation of 79180.
+${\phi}(87109) = 79180$ จะเห็นว่า 87109 เป็น permutation ของ 79180
 
-Find the value of `n`, 1 &lt; `n` &lt; `limit`, for which ${\phi}(n)$ is a permutation of `n` and the ratio $\displaystyle\frac{n}{{\phi}(n)}$ produces a minimum.
+หาค่าของ `n`, 1 &lt; `n` &lt; `limit` ของแต่ละ ${\phi}(n)$ ที่เป็น permutation ของ `n` และมี ratio $\displaystyle\frac{n}{{\phi}(n)}$ ที่น้อยที่สุด
 
 # --hints--
 
-`totientPermutation(10000)` should return a number.
+`totientPermutation(10000)` ควร return number.
 
 ```js
 assert(typeof totientPermutation(10000) === 'number');
 ```
 
-`totientPermutation(10000)` should return `4435`.
+`totientPermutation(10000)` ควร return `4435`.
 
 ```js
 assert.strictEqual(totientPermutation(10000), 4435);
 ```
 
-`totientPermutation(100000)` should return `75841`.
+`totientPermutation(100000)` ควร return `75841`.
 
 ```js
 assert.strictEqual(totientPermutation(100000), 75841);
 ```
 
-`totientPermutation(500000)` should return `474883`.
+`totientPermutation(500000)` ควร return `474883`.
 
 ```js
 assert.strictEqual(totientPermutation(500000), 474883);
 ```
 
-`totientPermutation(10000000)` should return `8319823`.
+`totientPermutation(10000000)` ควร return `8319823`.
 
 ```js
 assert.strictEqual(totientPermutation(10000000), 8319823);

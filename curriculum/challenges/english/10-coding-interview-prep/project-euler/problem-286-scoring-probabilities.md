@@ -8,15 +8,15 @@ dashedName: problem-286-scoring-probabilities
 
 # --description--
 
-Barbara is a mathematician and a basketball player. She has found that the probability of scoring a point when shooting from a distance $x$ is exactly ($1 - \frac{x}{q}$), where $q$ is a real constant greater than 50.
+Barbara เป็นนักคณิตศาสตร์และนักบาสเกตบอล เธอพบว่าความน่าจะเป็นที่จะได้คะแนนเมื่อยิงจากระยะไกล $x$ คือ ($1 - \frac{x}{q}$) โดยที่ $q$ เป็นค่าคงที่จริงที่มากกว่า 50
 
-During each practice run, she takes shots from distances $x = 1, x = 2, \ldots, x = 50$ and, according to her records, she has precisely a 2 % chance to score a total of exactly 20 points.
+ในระหว่างการฝึกซ้อมแต่ละครั้ง เธอยิงจากระยะทาง $x = 1, x = 2, \ldots, x = 50$ และตามบันทึกของเธอ เธอมีโอกาสอย่างแม่นยำ 2% ที่จะทำคะแนนรวมทั้งหมด 20 คะแนน
 
-Find $q$ and give your answer rounded to 10 decimal places.
+หา $q$ และให้คำตอบของคุณเป็นทศนิยม 10 ตำแหน่ง
 
 # --hints--
 
-`scoringProbabilities()` should return `52.6494571953`.
+`scoringProbabilities()` ควร return `52.6494571953`.
 
 ```js
 assert.strictEqual(scoringProbabilities(), 52.6494571953);

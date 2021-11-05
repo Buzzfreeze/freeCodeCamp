@@ -8,9 +8,9 @@ dashedName: problem-124-ordered-radicals
 
 # --description--
 
-The radical of $n, rad(n)$, is the product of the distinct prime factors of $n$. For example, $504 = 2^3 × 3^2 × 7$, so $rad(504) = 2 × 3 × 7 = 42$.
+รากของ $n, rad(n)$, เป็นผลคูณของตัวประกอบเฉพาะเฉพาะของ $n$ ตัวอย่างเช่น $504 = 2^3 × 3^2 × 7$ ดังนั้น $rad(504) = 2 × 3 × 7 = 42$
 
-If we calculate $rad(n)$ for $1 ≤ n ≤ 10$, then sort them on $rad(n)$, and sorting on $n$ if the radical values are equal, we get:
+หากเราคำนวณ $rad(n)$ สำหรับ $1 ≤ n ≤ 10$ ให้จัดเรียงตาม $rad(n)$ และเรียงลำดับที่ $n$ หากค่ารากเท่ากัน เราจะได้:
 
 <div style="text-align: center;">
   <table cellpadding="2" cellspacing="0" border="0" align="center">
@@ -112,11 +112,11 @@ If we calculate $rad(n)$ for $1 ≤ n ≤ 10$, then sort them on $rad(n)$, and s
   </table>
 </div><br>
 
-Let $E(k)$ be the $k$th element in the sorted $n$ column; for example, $E(4) = 8$ and $E(6) = 9$. If $rad(n)$ is sorted for $1 ≤ n ≤ 100000$, find $E(10000)$.
+ให้ $E(k)$ เป็นองค์ประกอบ $k$th ในคอลัมน์ $n$ ที่เรียงลำดับ ตัวอย่างเช่น $E(4) = 8$ และ $E(6) = 9$ ถ้า $rad(n)$ ถูกจัดเรียงสำหรับ $1 ≤ n ≤ 100000$ ให้หา $E(10000)$
 
 # --hints--
 
-`orderedRadicals()` should return `21417`.
+`orderedRadicals()` ควร return `21417`.
 
 ```js
 assert.strictEqual(orderedRadicals(), 21417);

@@ -8,13 +8,13 @@ dashedName: problem-334-spilling-the-beans
 
 # --description--
 
-In Plato's heaven, there exist an infinite number of bowls in a straight line. Each bowl either contains some or none of a finite number of beans. A child plays a game, which allows only one kind of move: removing two beans from any bowl, and putting one in each of the two adjacent bowls. The game ends when each bowl contains either one or no beans.
+ในสวรรค์ของเพลโต มีชามจำนวนนับไม่ถ้วนเป็นเส้นตรง ชามแต่ละใบมีถั่วจำนวนหนึ่งหรือไม่มีเลย เด็กคนหนึ่งเล่นเกมซึ่งอนุญาตให้เคลื่อนไหวได้เพียงประเภทเดียว: นำถั่วสองอันออกจากชามใด ๆ แล้วใส่หนึ่งในชามที่อยู่ติดกันสองอัน เกมจะจบลงเมื่อแต่ละชามมีถั่วหนึ่งหรือไม่มีเลย
 
-For example, consider two adjacent bowls containing 2 and 3 beans respectively, all other bowls being empty. The following eight moves will finish the game:
+ตัวอย่างเช่น พิจารณาชามที่อยู่ติดกันสองชามที่มีถั่ว 2 และ 3 ถั่วตามลำดับ ชามอื่นๆ ทั้งหมดจะว่างเปล่า แปดท่าต่อไปนี้จะจบเกม
 
 <img class="img-responsive center-block" alt="animation of game when two adjacent bowls contains 2 and 3 beans respectivelly" src="https://cdn.freecodecamp.org/curriculum/project-euler/spilling-the-beans.gif" style="background-color: white; padding: 10px;">
 
-You are given the following sequences:
+จะได้รับลำดับต่อไปนี้:
 
 $$\begin{align}
   & t_0 = 123456, \\\\
@@ -26,13 +26,13 @@ $$\begin{align}
   & b_i = (t_i\bmod 2^{11}) + 1.
 \end{align}$$
 
-The first two terms of the last sequence are $b_1 = 289$ and $b_2 = 145$. If we start with $b_1$ and $b_2$ beans in two adjacent bowls, 3419100 moves would be required to finish the game.
+สองเทอมแรกของลำดับสุดท้ายคือ $b_1 = 289$ และ $b_2 = 145$ ถ้าเราเริ่มต้นด้วย $b_1$ และ $b_2$ beans ในสองชามที่อยู่ติดกัน จะต้องเคลื่อนไหว 3419100 เพื่อจบเกม
 
-Consider now 1500 adjacent bowls containing $b_1, b_2, \ldots, b_{1500}$ beans respectively, all other bowls being empty. Find how many moves it takes before the game ends.
+พิจารณาตอนนี้ 1500 ชามที่อยู่ติดกันที่มี $b_1, b_2, \ldots, b_{1500}$ ถั่วตามลำดับ ชามอื่นๆ ทั้งหมดว่างเปล่า ค้นหาว่าต้องใช้กี่ท่าก่อนที่เกมจะจบลง
 
 # --hints--
 
-`spillingTheBeans()` should return `150320021261690850`.
+`spillingTheBeans()` ควร return `150320021261690850`.
 
 ```js
 assert.strictEqual(spillingTheBeans(), 150320021261690850);

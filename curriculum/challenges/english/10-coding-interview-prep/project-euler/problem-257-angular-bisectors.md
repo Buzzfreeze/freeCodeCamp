@@ -8,19 +8,19 @@ dashedName: problem-257-angular-bisectors
 
 # --description--
 
-Given is an integer sided triangle $ABC$ with sides $a ≤ b ≤ c$. ($AB = c$, $BC = a$ and $AC = b$).
+รูปสามเหลี่ยมด้านเท่าจำนวนเต็ม $ABC$ ที่มีด้าน $a ≤ b ≤ c$ ($AB = c$, $BC = a$ และ $AC = b$)
 
-The angular bisectors of the triangle intersect the sides at points $E$, $F$ and $G$ (see picture below).
+เส้นแบ่งครึ่งเชิงมุมของสามเหลี่ยมตัดกันที่จุด $E$, $F$ และ $G$ (ดูภาพด้านล่าง)
 
 <img class="img-responsive center-block" alt="triangle ABC, with angular bisectors intersecting sides at the points E, F and G" src="https://cdn.freecodecamp.org/curriculum/project-euler/angular-bisectors.gif" style="background-color: white; padding: 10px;">
 
-The segments $EF$, $EG$ and $FG$ partition the triangle $ABC$ into four smaller triangles: $AEG$, $BFE$, $CGF$ and $EFG$. It can be proven that for each of these four triangles the ratio $\frac{\text{area}(ABC)}{\text{area}(\text{subtriangle})}$ is rational. However, there exist triangles for which some or all of these ratios are integral.
+ส่วน $EF$, $EG$ และ $FG$ แบ่งสามเหลี่ยม $ABC$ เป็นสามเหลี่ยมเล็กสี่รูป: $AEG$, $BFE$, $CGF$ และ $EFG$ สามารถพิสูจน์ได้ว่าสำหรับสามเหลี่ยมทั้งสี่เหล่านี้แต่ละรูป อัตราส่วน $\frac{\text{area}(ABC)}{\text{area}(\text{subtriangle})}$ เป็นจำนวนตรรกยะ อย่างไรก็ตาม มีรูปสามเหลี่ยมซึ่งอัตราส่วนบางส่วนหรือทั้งหมดเป็นintegral
 
-How many triangles $ABC$ with perimeter $≤ 100\\,000\\,000$ exist so that the ratio $\frac{\text{area}(ABC)}{\text{area}(AEG)}$ is integral?
+มีสามเหลี่ยม $ABC$ กี่รูปที่มีเส้นรอบวง $≤ 100\\,000\\,000$ เพื่อให้อัตราส่วน $\frac{\text{area}(ABC)}{\text{area}(AEG)}$ เป็น integral?
 
 # --hints--
 
-`angularBisectors()` should return `139012411`.
+`angularBisectors()` ควร return `139012411`.
 
 ```js
 assert.strictEqual(angularBisectors(), 139012411);

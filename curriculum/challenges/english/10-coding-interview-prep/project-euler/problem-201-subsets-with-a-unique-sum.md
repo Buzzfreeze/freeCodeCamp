@@ -8,9 +8,9 @@ dashedName: problem-201-subsets-with-a-unique-sum
 
 # --description--
 
-For any set $A$ of numbers, let $sum(A)$ be the sum of the elements of $A$.
+สำหรับชุดตัวเลข $A$ ใดๆ ให้ $sum(A)$ เป็นผลรวมขององค์ประกอบของ $A$
 
-Consider the set $B = \\{1,3,6,8,10,11\\}$. There are 20 subsets of $B$ containing three elements, and their sums are:
+พิจารณาชุด $B = \\{1,3,6,8,10,11\\}$ มี 20 ชุดย่อยของ $B$ ที่มีสามองค์ประกอบ และผลรวมของพวกมันคือ:
 
 $$\begin{align}
   & sum(\\{1,3,6\\}) = 10 \\\\
@@ -35,15 +35,15 @@ $$\begin{align}
   & sum(\\{8,10,11\\}) = 29
 \\end{align}$$
 
-Some of these sums occur more than once, others are unique. For a set $A$, let $U(A,k)$ be the set of unique sums of $k$-element subsets of $A$, in our example we find $U(B,3) = \\{10,12,14,18,21,25,27,29\\}$ and $sum(U(B,3)) = 156$.
+จำนวนเงินเหล่านี้บางส่วนเกิดขึ้นมากกว่าหนึ่งครั้ง ส่วนจำนวนอื่นๆ จะไม่ซ้ำกัน สำหรับชุด $A$ ให้ $U(A,k)$ เป็นเซตของผลรวมเฉพาะของ $k$-องค์ประกอบย่อยของ $A$ ในตัวอย่างของเรา เราจะพบ $U(B,3) = \\{ 10,12,14,18,21,25,27,29\\}$ และ $sum(U(B,3)) = 156$
 
-Now consider the $100$-element set $S = \\{1^2, 2^2, \ldots , {100}^2\\}$. $S$ has $100\\,891\\,344\\,545\\,564\\,193\\,334\\,812\\,497\\,256\\;$ $50$-element subsets.
+ตอนนี้ให้พิจารณาชุดองค์ประกอบ $100$ $S = \\{1^2, 2^2, \ldots , {100}^2\\}$ $S$ มี $100\\,891\\,344\\,545\\,564\\,193\\,334\\,812\\,497\\,256\\;$ $50$-องค์ประกอบย่อย
 
-Determine the sum of all integers which are the sum of exactly one of the $50$-element subsets of $S$, i.e. find $sum(U(S,50))$.
+หาผลรวมของจำนวนเต็มทั้งหมดซึ่งเป็นผลรวมของ $50$-องค์ประกอบย่อยของ $S$ เช่น find $sum(U(S,50))$
 
 # --hints--
 
-`uniqueSubsetsSum()` should return `115039000`.
+`uniqueSubsetsSum()` ควร return `115039000`.
 
 ```js
 assert.strictEqual(uniqueSubsetsSum(), 115039000);

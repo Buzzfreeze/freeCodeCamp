@@ -8,19 +8,19 @@ dashedName: problem-285-pythagorean-odds
 
 # --description--
 
-Albert chooses a positive integer $k$, then two real numbers $a$, $b$ are randomly chosen in the interval [0,1] with uniform distribution.
+Albert เลือกจำนวนเต็มบวก $k$ จากนั้นจำนวนจริงสองจำนวน $a$ $b$ จะถูกสุ่มเลือกในช่วง [0,1] โดยมีการแจกแจงแบบสม่ำเสมอ
 
-The square root of the sum ${(ka + 1)}^2 + {(kb + 1)}^2$ is then computed and rounded to the nearest integer. If the result is equal to $k$, he scores $k$ points; otherwise he scores nothing.
+square root ของผลรวม ${(ka + 1)}^2 + {(kb + 1)}^2$ จะถูกคำนวณและปัดเศษเป็นจำนวนเต็มที่ใกล้เคียงที่สุด หากผลลัพธ์เท่ากับ $k$ เขาจะได้คะแนน $k$ มิฉะนั้นเขาจะไม่ได้คะแนนอะไรเลย
 
-For example, if $k = 6$, $a = 0.2$ and $b = 0.85$, then ${(ka + 1)}^2 + {(kb + 1)}^2 = 42.05$. The square root of 42.05 is 6.484... and when rounded to the nearest integer, it becomes 6. This is equal to $k$, so he scores 6 points.
+ตัวอย่างเช่น ถ้า $k = 6$ $a = 0.2$ และ $b = 0.85$ แล้ว ${(ka + 1)}^2 + {(kb + 1)}^2 = 42.05$ square rootของ 42.05 คือ 6.484... และเมื่อปัดเศษเป็นจำนวนเต็มที่ใกล้เคียงที่สุด มันจะกลายเป็น 6 ซึ่งเท่ากับ $k$ ดังนั้นเขาได้คะแนน 6 คะแนน
 
-It can be shown that if he plays 10 turns with $k = 1, k = 2, \ldots, k = 10$, the expected value of his total score, rounded to five decimal places, is 10.20914.
+แสดงให้เห็นว่าหากเขาเล่น 10 เทิร์นด้วย $k = 1, k = 2, \ldots, k = 10$ มูลค่าที่คาดไว้ของคะแนนรวมของเขา ปัดเศษทศนิยมห้าตำแหน่ง คือ 10.20914
 
-If he plays ${10}^5$ turns with $k = 1, k = 2, k = 3, \ldots, k = {10}^5$, what is the expected value of his total score, rounded to five decimal places?
+ถ้าเขาเล่น ${10}^5$ เทิร์นด้วย $k = 1, k = 2, k = 3, \ldots, k = {10}^5$ มูลค่าที่คาดหวังของคะแนนรวมของเขาเป็นเท่าใด ปัดเศษเป็นห้า ทศนิยม?
 
 # --hints--
 
-`pythagoreanOdds()` should return `157055.80999`.
+`pythagoreanOdds()` ควร return `157055.80999`.
 
 ```js
 assert.strictEqual(pythagoreanOdds(), 157055.80999);

@@ -8,13 +8,13 @@ dashedName: problem-197-investigating-the-behaviour-of-a-recursively-defined-seq
 
 # --description--
 
-Given is the function $f(x) = ⌊{2}^{30.403243784 - x^2}⌋ × {10}^{-9}$ ( ⌊ ⌋ is the floor-function), the sequence $u_n$ is defined by $u_0 = -1$ and $u_{n + 1} = f(u_n)$.
+กำหนดให้เป็นฟังก์ชัน $f(x) = ⌊{2}^{30.403243784 - x^2}⌋ × {10}^{-9}$ ( ⌊ ⌋ คือฟังก์ชันพื้น) ลำดับที่ $u_n$ ถูกกำหนด โดย $u_0 = -1$ และ $u_{n + 1} = f(u_n)$
 
-Find $u_n + u_{n + 1}$ for $n = {10}^{12}$. Give your answer with 9 digits after the decimal point.
+หา $u_n + u_{n + 1}$ สำหรับ $n = {10}^{12}$ ให้คำตอบด้วยตัวเลข 9 หลักหลังจุดทศนิยม
 
 # --hints--
 
-`recursivelyDefinedSequence()` should return `1.710637717`.
+`recursivelyDefinedSequence()` ควร return `1.710637717`.
 
 ```js
 assert.strictEqual(recursivelyDefinedSequence(), 1.710637717);

@@ -8,21 +8,21 @@ dashedName: problem-267-billionaire
 
 # --description--
 
-You are given a unique investment opportunity.
+คุณได้รับโอกาสในการลงทุนที่ไม่เหมือนใคร
 
-Starting with £1 of capital, you can choose a fixed proportion, $f$, of your capital to bet on a fair coin toss repeatedly for 1000 tosses.
+เริ่มต้นด้วยเงินทุน 1 ปอนด์ คุณสามารถเลือกสัดส่วนคงที่ $f$ ของเงินทุนของคุณเพื่อเดิมพันในการโยนเหรียญที่ยุติธรรมซ้ำๆ สำหรับการโยน 1,000 ครั้ง
 
-Your return is double your bet for heads and you lose your bet for tails.
+ผลตอบแทนของคุณเป็นสองเท่าของการเดิมพันหัว และคุณแพ้การเดิมพันสำหรับก้อย
 
-For example, if $f = \frac{1}{4}$, for the first toss you bet £0.25, and if heads comes up you win £0.5 and so then have £1.5. You then bet £0.375 and if the second toss is tails, you have £1.125.
+ตัวอย่างเช่น ถ้า $f = \frac{1}{4}$ สำหรับการโยนครั้งแรก คุณเดิมพัน 0.25 ปอนด์ และถ้าหัวขึ้นมา คุณจะชนะ 0.5 ปอนด์ และเท่ากับว่าได้ 1.5 ปอนด์ จากนั้นคุณเดิมพัน 0.375 ปอนด์ และหากการทอยครั้งที่สองเป็นก้อย คุณมีเงิน 1.125 ปอนด์
 
-Choosing $f$ to maximize your chances of having at least £1,000,000,000 after 1,000 flips, what is the chance that you become a billionaire?
+การเลือก $f$ เพื่อเพิ่มโอกาสในการมีอย่างน้อย 1,000,000,000 ปอนด์หลังจากการพลิก 1,000 ครั้ง โอกาสที่คุณจะเป็นมหาเศรษฐีคืออะไร?
 
-All computations are assumed to be exact (no rounding), but give your answer rounded to 12 digits behind the decimal point in the form 0.abcdefghijkl.
+การคำนวณทั้งหมดจะถือว่าถูกต้อง (ไม่มีการปัดเศษ) แต่ให้คำตอบของคุณปัดเศษเป็น 12 หลักหลังจุดทศนิยมในรูปแบบ 0.abcdefghijkl
 
 # --hints--
 
-`billionaire()` should return `0.999992836187`.
+`billionaire()` ควร return `0.999992836187`.
 
 ```js
 assert.strictEqual(billionaire(), 0.999992836187);

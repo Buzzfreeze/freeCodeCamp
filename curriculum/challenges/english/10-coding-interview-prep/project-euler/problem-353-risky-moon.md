@@ -8,23 +8,23 @@ dashedName: problem-353-risky-moon
 
 # --description--
 
-A moon could be described by the sphere $C(r)$ with centre (0, 0, 0) and radius $r$.
+ดวงจันทร์สามารถอธิบายได้โดยทรงกลม $C(r)$ โดยมีจุดศูนย์กลาง (0, 0, 0) และรัศมี $r$
 
-There are stations on the moon at the points on the surface of $C(r)$ with integer coordinates. The station at (0, 0, $r$) is called North Pole station, the station at (0, 0, $-r$) is called South Pole station.
+มีสถานีบนดวงจันทร์ที่จุดบนพื้นผิวของ $C(r)$ ด้วยพิกัดจำนวนเต็ม สถานีที่ (0, 0, $r$) เรียกว่าสถานีขั้วโลกเหนือ สถานีที่ (0, 0, $-r$) เรียกว่าสถานีขั้วโลกใต้
 
-All stations are connected with each other via the shortest road on the great arc through the stations. A journey between two stations is risky. If $d$ is the length of the road between two stations, $\{\left(\frac{d}{πr}\right)}^2$ is a measure for the risk of the journey (let us call it the risk of the road). If the journey includes more than two stations, the risk of the journey is the sum of risks of the used roads.
+ทุกสถานีเชื่อมต่อกันผ่านถนนที่สั้นที่สุดบนโค้งใหญ่ผ่านสถานีต่างๆ การเดินทางระหว่างสองสถานีมีความเสี่ยง ถ้า $d$ เป็นความยาวของถนนระหว่างสองสถานี $\{\left(\frac{d}{πr}\right)}^2$ เป็นตัวชี้วัดความเสี่ยงของการเดินทาง (ให้เราเรียกมันว่า เสี่ยงติดถนน) หากการเดินทางมีมากกว่าสองสถานี ความเสี่ยงของการเดินทางคือผลรวมของความเสี่ยงของถนนที่ใช้แล้ว
 
-A direct journey from the North Pole station to the South Pole station has the length $πr$ and risk 1. The journey from the North Pole station to the South Pole station via (0, $r$, 0) has the same length, but a smaller risk:
+การเดินทางตรงจากสถานีขั้วโลกเหนือไปยังสถานีขั้วโลกใต้มีความยาว $πr$ และมีความเสี่ยง 1 การเดินทางจากสถานีขั้วโลกเหนือไปยังสถานีขั้วโลกใต้ผ่าน (0, $r$, 0) มีความยาวเท่ากัน แต่มีความเสี่ยงน้อยกว่า:
 
 $${\left(\frac{\frac{1}{2}πr}{πr}\right)}^2+{\left(\frac{\frac{1}{2}πr}{πr}\right)}^2 = 0.5$$
 
-The minimal risk of a journey from the North Pole station to the South Pole station on $C(r)$ is $M(r)$.
+ความเสี่ยงน้อยที่สุดในการเดินทางจากสถานีขั้วโลกเหนือไปยังสถานีขั้วโลกใต้ด้วยราคา $C(r)$ คือ $M(r)$
 
-You are given that $M(7) = 0.178\\,494\\,399\\,8$ rounded to 10 digits behind the decimal point.
+คุณจะได้รับ $M(7) = 0.178\\,494\\,399\\,8$ ปัดเศษเป็น 10 หลักหลังจุดทศนิยม
 
-Find $\displaystyle\sum_{n = 1}^{15} M(2^n - 1)$.
+หา $\displaystyle\sum_{n = 1}^{15} M(2^n - 1)$
 
-Give your answer rounded to 10 digits behind the decimal point in the form a.bcdefghijk.
+ให้คำตอบของคุณปัดเศษเป็น 10 หลักหลังจุดทศนิยมในรูปแบบ a.bcdefghijk
 
 # --hints--
 

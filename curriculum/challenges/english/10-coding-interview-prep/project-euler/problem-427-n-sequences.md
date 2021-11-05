@@ -8,21 +8,21 @@ dashedName: problem-427-n-sequences
 
 # --description--
 
-A sequence of integers $S = \\{s_i\\}$ is called an $n$-sequence if it has $n$ elements and each element $s_i$ satisfies $1 ≤ s_i ≤ n$. Thus there are $n^n$ distinct $n$-sequences in total.
+ลำดับของจำนวนเต็ม $S = \\{s_i\\}$ เรียกว่า $n$-sequence หากมีองค์ประกอบ $n$ และแต่ละอิลิเมนต์ $s_i$ เป็นไปตาม $1 ≤ s_i ≤ n$ ดังนั้นจึงมี $n^n$ ที่แตกต่างกัน $n$-sequences ทั้งหมด
 
-For example, the sequence $S = \\{1, 5, 5, 10, 7, 7, 7, 2, 3, 7\\}$ is a 10-sequence.
+ตัวอย่างเช่น ลำดับ $S = \\{1, 5, 5, 10, 7, 7, 7, 2, 3, 7\\}$ คือ 10 ลำดับ
 
-For any sequence $S$, let $L(S)$ be the length of the longest contiguous subsequence of $S$ with the same value. For example, for the given sequence $S$ above, $L(S) = 3$, because of the three consecutive 7's.
+สำหรับลำดับ $S$ ใดๆ ให้ $L(S)$ เป็นความยาวของลำดับย่อยที่ต่อเนื่องกันที่ยาวที่สุดของ $S$ ด้วยค่าเดียวกัน ตัวอย่างเช่น สำหรับลำดับที่กำหนด $S$ ด้านบน $L(S) = 3$ เนื่องจาก 7 ตัวติดต่อกันสามตัว
 
-Let $f(n) = \sum L(S)$ for all $n$-sequences $S$.
+ให้ $f(n) = \sum L(S)$ สำหรับ $n$-sequences ทั้งหมด $S$
 
-For example, $f(3) = 45$, $f(7) = 1\\,403\\,689$ and $f(11) = 481\\,496\\,895\\,121$.
+ตัวอย่างเช่น $f(3) = 45$, $f(7) = 1\\,403\\,689$ และ $f(11) = 481\\,496\\,895\\,121$
 
-Find $f(7\\,500\\,000)\bmod 1\\,000\\,000\\,009$.
+หา $f(7\\,500\\,000)\bmod 1\\,000\\,000\\,009$.
 
 # --hints--
 
-`nSequences()` should return `97138867`.
+`nSequences()` ควร return `97138867`.
 
 ```js
 assert.strictEqual(nSequences(), 97138867);

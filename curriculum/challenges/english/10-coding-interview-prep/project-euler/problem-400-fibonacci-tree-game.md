@@ -8,23 +8,23 @@ dashedName: problem-400-fibonacci-tree-game
 
 # --description--
 
-A Fibonacci tree is a binary tree recursively defined as:
+Fibonacci tree กำหนดเป็น
 
-- $T(0)$ is the empty tree.
-- $T(1)$ is the binary tree with only one node.
-- $T(k)$ consists of a root node that has $T(k - 1)$ and $T(k - 2)$ as children.
+- $T(0)$ เป็นFibonacci treeที่ว่างเปล่า
+- $T(1)$ เป็นไบนารีทรีที่มีโหนดเดียวเท่านั้น
+- $T(k)$ ประกอบด้วยรูทโหนดที่มี $T(k - 1)$ และ $T(k - 2)$ เป็นเด็ก
 
-On such a tree two players play a take-away game. On each turn a player selects a node and removes that node along with the subtree rooted at that node. The player who is forced to take the root node of the entire tree loses.
+บนFibonacci treeดังกล่าว ผู้เล่นสองคนเล่นเกมซื้อกลับบ้าน ในแต่ละเทิร์น ผู้เล่นจะเลือกโหนดและลบโหนดนั้นพร้อมกับทรีย่อยที่รูทที่โหนดนั้น ผู้เล่นที่ถูกบังคับให้ใช้โหนดรากของFibonacci treeทั้งหมดจะแพ้
 
-Here are the winning moves of the first player on the first turn for $T(k)$ from $k = 1$ to $k = 6$.
+นี่คือการเคลื่อนไหวที่ชนะของผู้เล่นคนแรกในเทิร์นแรกสำหรับ $T(k)$ จาก $k = 1$ ถึง $k = 6$
 
 <img class="img-responsive center-block" alt="winning moves of first player, on the first turn for k = 1 to k = 6" src="https://cdn.freecodecamp.org/curriculum/project-euler/fibonacci-tree-game.png" style="background-color: white; padding: 10px;">
 
-Let $f(k)$ be the number of winning moves of the first player (i.e. the moves for which the second player has no winning strategy) on the first turn of the game when this game is played on $T(k)$.
+ให้ $f(k)$ เป็นจำนวนท่าที่ชนะของผู้เล่นคนแรก (เช่น ท่าที่ผู้เล่นคนที่สองไม่มีกลยุทธ์ในการชนะ) ในเทิร์นแรกของเกมเมื่อเกมนี้เล่นบน $T(k)$ .
 
-For example, $f(5) = 1$ and $f(10) = 17$.
+ตัวอย่างเช่น $f(5) = 1$ และ $f(10) = 17$
 
-Find $f(10000)$. Give the last 18 digits of your answer.
+หา $f(10000)$ ให้ 18 หลักสุดท้ายของคำตอบของคุณ.
 
 # --hints--
 

@@ -8,9 +8,9 @@ dashedName: problem-83-path-sum-four-ways
 
 # --description--
 
-**Note:** This problem is a significantly more challenging version of Problem 81.
+**Note:** ปัญหา 81 เวอร์ชันที่ท้าทายมากขึ้นอย่างเห็นได้ชัด
 
-In the 5 by 5 matrix below, the minimal path sum from the top left to the bottom right, by moving left, right, up, and down, is indicated in bold red and is equal to `2297`.
+ในเมทริกซ์ขนาด 5 คูณ 5 ด้านล่าง ผลรวมของเส้นทางขั้นต่ำจากบนซ้ายไปขวาล่าง โดยเลื่อนไปทางซ้าย ขวา ขึ้น และลง จะแสดงด้วยสีแดงตัวหนาและเท่ากับ `2297`
 
   $$\begin{pmatrix}
   \color{red}{131} & 673 & \color{red}{234} & \color{red}{103} & \color{red}{18}\\\\
@@ -20,23 +20,23 @@ In the 5 by 5 matrix below, the minimal path sum from the top left to the bottom
   805 & 732 & 524 & \color{red}{37} & \color{red}{331}
   \end{pmatrix}$$
 
-Find the minimal path sum from the top left to the bottom right by moving left, right, up, and down in `matrix`, a 2D array representing a matrix. The maximum matrix size used in tests will be 80 by 80.
+หาผลรวมเส้นทางขั้นต่ำจากซ้ายบนไปขวาล่างโดยเลื่อนไปทางขวาและลงเท่านั้น `matrix` 2D array แทนเมทริกซ์ ขนาดเมทริกซ์สูงสุดที่ใช้ในการทดสอบคือ 80 คูณ 80
 
 # --hints--
 
-`pathSumFourWays(testMatrix1)` should return a number.
+`pathSumFourWays(testMatrix1)` ควร return number.
 
 ```js
 assert(typeof pathSumFourWays(_testMatrix1) === 'number');
 ```
 
-`pathSumFourWays(testMatrix1)` should return `2297`.
+`pathSumFourWays(testMatrix1)` ควร return `2297`.
 
 ```js
 assert.strictEqual(pathSumFourWays(_testMatrix1), 2297);
 ```
 
-`pathSumFourWays(testMatrix2)` should return `425185`.
+`pathSumFourWays(testMatrix2)` ควร return `425185`.
 
 ```js
 assert.strictEqual(pathSumFourWays(_testMatrix2), 425185);

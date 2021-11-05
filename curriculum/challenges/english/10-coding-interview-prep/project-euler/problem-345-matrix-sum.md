@@ -8,9 +8,9 @@ dashedName: problem-345-matrix-sum
 
 # --description--
 
-We define the Matrix Sum of a matrix as the maximum sum of matrix elements with each element being the only one in his row and column.
+เรากำหนดผลรวมเมทริกซ์ของเมทริกซ์เป็นผลรวมสูงสุดขององค์ประกอบเมทริกซ์โดยแต่ละองค์ประกอบเป็นองค์ประกอบเดียวในแถวและคอลัมน์ของเขา
 
-For example, the Matrix Sum of the matrix below equals $3315 ( = 863 + 383 + 343 + 959 + 767)$:
+ตัวอย่างเช่น ผลรวมเมทริกซ์ของเมทริกซ์ด้านล่างเท่ากับ $3315 ( = 863 + 383 + 343 + 959 + 767)$
 
 $$\begin{array}{rrrrr}
     7                &  53                & 183                & 439                & \color{lime}{863} \\\\
@@ -20,7 +20,7 @@ $$\begin{array}{rrrrr}
   \color{lime}{767} & 473                & 103                & 699                & 303
 \end{array}$$
 
-Find the Matrix Sum of:
+ค้นหาผลรวมเมทริกซ์ของ:
 
 $$\\begin{array}{r}
     7 &  53 & 183 & 439 & 863 & 497 & 383 & 563 &  79 & 973 & 287 &  63 & 343 & 169 & 583 \\\\
@@ -42,7 +42,7 @@ $$\\begin{array}{r}
 
 # --hints--
 
-`matrixSum()` should return `13938`.
+`matrixSum()` ควร return `13938`.
 
 ```js
 assert.strictEqual(matrixSum(), 13938);

@@ -8,9 +8,9 @@ dashedName: problem-93-arithmetic-expressions
 
 # --description--
 
-By using each of the digits from the set, {1, 2, 3, 4}, exactly once, and making use of the four arithmetic operations (+, −, \*, /) and brackets/parentheses, it is possible to form different positive integer targets.
+การใช้ตัวเลขแต่ละหลักจากเซต {1, 2, 3, 4} เพียงครั้งเดียว และใช้การดำเนินการเลขคณิตทั้งสี่ (+, −, \*, /) และวงเล็บ/วงเล็บ สร้างเป้าหมายจำนวนเต็มบวกที่แตกต่างกัน
 
-For example,
+เช่น
 
 <div style='margin-left: 4em;'>
   8 = (4 * (1 + 3)) / 2<br>
@@ -19,21 +19,21 @@ For example,
   36 = 3 * 4 * (2 + 1)
 </div>
 
-Note that concatenations of the digits, like 12 + 34, are not allowed.
+ไม่อนุญาตให้ใช้การเรียงต่อกันของตัวเลข เช่น 12 + 34.
 
-Using the set, {1, 2, 3, 4}, it is possible to obtain thirty-one different target numbers of which 36 is the maximum, and each of the numbers 1 to 28 can be obtained before encountering the first non-expressible number.
+การใช้เซต {1, 2, 3, 4} เป็นไปได้ที่จะได้รับหมายเลขเป้าหมายที่แตกต่างกัน 31 ตัวซึ่ง 36 เป็นจำนวนสูงสุดและแต่ละหมายเลข 1 ถึง 28 สามารถรับได้ก่อนที่จะพบกับตัวแรกที่ไม่แสดงออก ตัวเลข.
 
-Find the set of four distinct digits, `a` &lt; `b` &lt; `c` &lt; `d`, for which the longest set of consecutive positive integers, 1 to `n`, can be obtained, giving your answer as a string: `abcd`.
+ค้นหาชุดตัวเลขที่แตกต่างกันสี่หลัก `a` &lt; `b` &lt; `ค` &lt; `d` ซึ่งสามารถหาชุดของจำนวนเต็มบวกต่อเนื่องที่ยาวที่สุดได้ตั้งแต่ 1 ถึง `n` โดยให้คำตอบเป็น string: `abcd`
 
 # --hints--
 
-`arithmeticExpressions()` should return a number.
+`arithmeticExpressions()` ควร return number.
 
 ```js
 assert(typeof arithmeticExpressions() === 'number');
 ```
 
-`arithmeticExpressions()` should return 1258.
+`arithmeticExpressions()` ควร return 1258.
 
 ```js
 assert.strictEqual(arithmeticExpressions(), 1258);

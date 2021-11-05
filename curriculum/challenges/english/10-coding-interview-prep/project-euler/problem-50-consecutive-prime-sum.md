@@ -8,31 +8,31 @@ dashedName: problem-50-consecutive-prime-sum
 
 # --description--
 
-The prime 41, can be written as the sum of six consecutive primes:
+เลข prime 41 สามารถเขียนผลรวมได้เป็นแบบ consecutive primes
 
 <div style='text-align: center;'>41 = 2 + 3 + 5 + 7 + 11 + 13</div>
 
-This is the longest sum of consecutive primes that adds to a prime below one-hundred.
+ค่าที่ยาวที่สุดเมื่อ sum consecutive primes ที่น้อยกว่า 1000
 
-The longest sum of consecutive primes below one-thousand that adds to a prime, contains 21 terms, and is equal to 953.
+ค่าที่ยาวที่สุดเมื่อ sum consecutive primes ที่น้อยกว่า 10 มีทั้งหมด 21 จำนวนและเท่ากับ 953.
 
-Which prime, below one-million, can be written as the sum of the most consecutive primes?
+ค่า prime ที่ต่ำกว่า one-million เขียนเป็นผลรวมของ consecutive primes ได้เท่ากับเท่าไหร่
 
 # --hints--
 
-`consecutivePrimeSum(1000)` should return a number.
+`consecutivePrimeSum(1000)` ควร return number
 
 ```js
 assert(typeof consecutivePrimeSum(1000) === 'number');
 ```
 
-`consecutivePrimeSum(1000)` should return 953.
+`consecutivePrimeSum(1000)` ควร return 953.
 
 ```js
 assert.strictEqual(consecutivePrimeSum(1000), 953);
 ```
 
-`consecutivePrimeSum(1000000)` should return 997651.
+`consecutivePrimeSum(1000000)` ควร return 997651.
 
 ```js
 assert.strictEqual(consecutivePrimeSum(1000000), 997651);

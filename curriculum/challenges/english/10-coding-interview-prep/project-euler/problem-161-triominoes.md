@@ -8,21 +8,22 @@ dashedName: problem-161-triominoes
 
 # --description--
 
-A triomino is a shape consisting of three squares joined via the edges.
+triomino เป็นรูปทรงที่ประกอบด้วยสี่เหลี่ยมสามช่องที่เชื่อมกันที่ขอบ
 
-There are two basic forms:
+มีสองรูปแบบพื้นฐาน
 
 <img class="img-responsive center-block" alt="two basic triominoes forms" src="https://cdn.freecodecamp.org/curriculum/project-euler/triominoes-1.gif" style="background-color: white; padding: 10px;">
 
-If all possible orientations are taken into account there are six:
+หากคำนึงถึงทิศทางที่เป็นไปได้ทั้งหมดมีหก
 
 <img class="img-responsive center-block" alt="triominoes forms including orientation" src="https://cdn.freecodecamp.org/curriculum/project-euler/triominoes-2.gif" style="background-color: white; padding: 10px;">
 
-Any n by m grid for which nxm is divisible by 3 can be tiled with triominoes. If we consider tilings that can be obtained by reflection or rotation from another tiling as different there are 41 ways a 2 by 9 grid can be tiled with triominoes:
+ตารางขนาด n คูณ m ใดๆ ที่ nxm หารด้วย 3 ลงตัวสามารถเรียงต่อกันด้วยtriomino หากเราพิจารณาการปูกระเบื้องที่ได้มาจากการสะท้อนหรือการหมุนจากการปูกระเบื้องอื่นว่าแตกต่างกัน มี 41 วิธีในการปูกระเบื้องขนาด 2 คูณ 9 ด้วยtriomino:
 
 <img class="img-responsive center-block" alt="animation showing 41 ways of filling 2x9 grid with triominoes" src="https://cdn.freecodecamp.org/curriculum/project-euler/triominoes-3.gif" style="background-color: white; padding: 10px;">
 
-In how many ways can a 9 by 12 grid be tiled in this way by triominoes?
+
+ตาราง 9 คูณ 12 สามารถเรียงต่อกันด้วยวิธีtriominoesได้กี่วิธี 
 
 # --hints--
 

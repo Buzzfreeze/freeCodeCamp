@@ -8,27 +8,27 @@ dashedName: problem-99-largest-exponential
 
 # --description--
 
-Comparing two numbers written in index form like $2^{11}$ and $3^7$ is not difficult, as any calculator would confirm that $2^{11} = 2048 &lt; 3^7 = 2187$.
+การเปรียบเทียบตัวเลขสองตัวที่เขียนในรูปindex เช่น $2^{11}$ และ $3^7$ นั้นไม่ใช่เรื่องยาก เนื่องจากเครื่องคิดเลขใดๆ จะยืนยันว่า $2^{11} = 2048 &lt; 3^7 = 2187 ดอลลาร์
 
-However, confirming that $632382^{518061} &lt; 519432^{525806}$ would be much more difficult, as both numbers contain over three million digits.
+อย่างไรก็ตาม การยืนยันว่า $632382^{518061} &lt; 519432^{525806}$ จะยากกว่ามาก เนื่องจากตัวเลขทั้งสองมีจำนวนมากกว่าสามล้านหลัก
 
-Using the 2D `baseExp` array of base/exponent pairs, determine pair with the greatest numerical value and return it.
+ใช้ 2D `baseExp` array ของคู่ฐาน/เลขชี้กำลัง กำหนดคู่ที่มีค่าตัวเลขมากที่สุดแล้วreturn
 
 # --hints--
 
-`largestExponential(testArray1)` should return an array.
+`largestExponential(testArray1)` ควร return array.
 
 ```js
 assert(Array.isArray(largestExponential(_testArray1)));
 ```
 
-`largestExponential(testArray1)` should return `[840237, 507276]`.
+`largestExponential(testArray1)` ควร return `[840237, 507276]`.
 
 ```js
 assert.deepEqual(largestExponential(_testArray1), [840237, 507276]);
 ```
 
-`largestExponential(testArray2)` should return `[895447, 504922]`.
+`largestExponential(testArray2)` ควร return `[895447, 504922]`.
 
 ```js
 assert.deepEqual(largestExponential(_testArray2), [895447, 504922]);

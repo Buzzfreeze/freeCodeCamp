@@ -8,15 +8,15 @@ dashedName: problem-432-totient-sum
 
 # --description--
 
-Let $S(n, m) = \sum φ(n × i)$ for $1 ≤ i ≤ m$. ($φ$ is Euler's totient function)
+ให้ $S(n, m) = \sum φ(n × i)$ สำหรับ $1 ≤ i ≤ m$ ($φ$ เป็นฟังก์ชัน totient ของออยเลอร์)
 
-You are given that $S(510\\,510, {10}^6) = 45\\,480\\,596\\,821\\,125\\,120$.
+คุณจะได้รับ $S(510\\,510, {10}^6) = 45\\,480\\,596\\,821\\,125\\,120$
 
-Find $S(510\\,510, {10}^{11})$. Give the last 9 digits of your answer.
+หา $S(510\\,510, {10}^{11})$ ให้ 9 หลักสุดท้ายของคำตอบของคุณ
 
 # --hints--
 
-`totientSum()` should return `754862080`.
+`totientSum()` ควร return `754862080`.
 
 ```js
 assert.strictEqual(totientSum(), 754862080);

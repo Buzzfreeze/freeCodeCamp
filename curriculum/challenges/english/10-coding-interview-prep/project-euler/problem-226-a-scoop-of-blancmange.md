@@ -8,19 +8,19 @@ dashedName: problem-226-a-scoop-of-blancmange
 
 # --description--
 
-The blancmange curve is the set of points ($x$,$y$) such that $0 ≤ x ≤ 1$ and $\displaystyle y = \sum_{n = 0}^{\infty} \frac{s(2^nx)}{2^n}$, where $s(x)$ is the distance from $x$ to the nearest integer.
+เส้นโค้ง blancmange คือเซตของคะแนน ($x$,$y$) โดยที่ $0 ≤ x ≤ 1$ และ $\displaystyle y = \sum_{n = 0}^{\infty} \frac{s(2^ nx)}{2^n}$ โดยที่ $s(x)$ คือระยะทางจาก $x$ ถึงจำนวนเต็มที่ใกล้เคียงที่สุด
 
-The area under the blancmange curve is equal to $\frac{1}{2}$, shown in pink in the diagram below.
+พื้นที่ใต้เส้นโค้ง blancmange เท่ากับ $\frac{1}{2}$ แสดงเป็นสีชมพูในแผนภาพด้านล่าง
 
 <img class="img-responsive center-block" alt="diagram of blancmange curve, with circle C shown on diagram" src="https://cdn.freecodecamp.org/curriculum/project-euler/a-scoop-of-blancmange.gif" style="background-color: white; padding: 10px;">
 
-Let $C$ be the circle with centre ($\frac{1}{4}$,$\frac{1}{2}$) and radius $\frac{1}{4}$, shown in black in the diagram.
+ให้ $C$ เป็นวงกลมที่มีจุดศูนย์กลาง ($\frac{1}{4}$,$\frac{1}{2}$) และรัศมี $\frac{1}{4}$ แสดงเป็นสีดำใน ไดอะแกรม
 
-What area under the blancmange curve is enclosed by $C$? Give your answer rounded to eight decimal places in the form 0.abcdefgh
+พื้นที่ใดใต้เส้นโค้ง blancmange ที่ล้อมรอบด้วย $C$ ให้คำตอบของคุณปัดเศษทศนิยมแปดตำแหน่งในรูปแบบ 0.abcdefgh
 
 # --hints--
 
-`scoopOfBlancmange()` should return `0.11316017`.
+`scoopOfBlancmange()` ควร return `0.11316017`.
 
 ```js
 assert.strictEqual(scoopOfBlancmange(), 0.11316017);

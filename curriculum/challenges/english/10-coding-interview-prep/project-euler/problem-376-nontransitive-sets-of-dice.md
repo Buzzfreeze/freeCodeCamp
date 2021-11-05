@@ -8,7 +8,7 @@ dashedName: problem-376-nontransitive-sets-of-dice
 
 # --description--
 
-Consider the following set of dice with nonstandard pips:
+พิจารณาชุดลูกเต๋าต่อไปนี้ด้วย pip ที่ไม่เป็นมาตรฐาน:
 
 $$\begin{array}{}
   \text{Die A: } & 1 & 4 & 4 & 4 & 4 & 4 \\\\
@@ -16,36 +16,36 @@ $$\begin{array}{}
   \text{Die C: } & 3 & 3 & 3 & 3 & 3 & 6 \\\\
 \end{array}$$
 
-A game is played by two players picking a die in turn and rolling it. The player who rolls the highest value wins.
+เกมนี้เล่นโดยผู้เล่นสองคนเลือกลูกเต๋าและหมุนมัน ผู้เล่นที่ทอยได้มูลค่าสูงสุดจะเป็นผู้ชนะ
 
-If the first player picks die $A$ and the second player picks die $B$ we get
-
-$P(\text{second player wins}) = \frac{7}{12} > \frac{1}{2}$
-
-If the first player picks die $B$ and the second player picks die $C$ we get
+ถ้าผู้เล่นคนแรกเลือกตาย $A$ และผู้เล่นคนที่สองเลือกตาย $B$ เราจะได้
 
 $P(\text{second player wins}) = \frac{7}{12} > \frac{1}{2}$
 
-If the first player picks die $C$ and the second player picks die $A$ we get
+ถ้าผู้เล่นคนแรกเลือกตาย $B$ และผู้เล่นคนที่สองเลือกตาย $C$ เราจะได้
+
+$P(\text{second player wins}) = \frac{7}{12} > \frac{1}{2}$
+
+ถ้าผู้เล่นคนแรกเลือกตาย $B$ และผู้เล่นคนที่สองเลือกตาย $C$ เราจะได้
 
 $P(\text{second player wins}) = \frac{25}{36} > \frac{1}{2}$
 
-So whatever die the first player picks, the second player can pick another die and have a larger than 50% chance of winning. A set of dice having this property is called a nontransitive set of dice.
+ดังนั้น ไม่ว่าการตายใดที่ผู้เล่นคนแรกเลือก ผู้เล่นคนที่สองสามารถเลือกการตายอื่นและมีโอกาสชนะมากกว่า 50% เซตของลูกเต๋าที่มีคุณสมบัตินี้เรียกว่าเซตของลูกเต๋าแบบไม่แปรเปลี่ยน
 
-We wish to investigate how many sets of nontransitive dice exist. We will assume the following conditions:
+เราต้องการตรวจสอบว่ามีลูกเต๋าที่ไม่เปลี่ยนรูปกี่ชุด เราจะถือว่าเงื่อนไขต่อไปนี้
 
-- There are three six-sided dice with each side having between 1 and $N$ pips, inclusive.
-- Dice with the same set of pips are equal, regardless of which side on the die the pips are located.
-- The same pip value may appear on multiple dice; if both players roll the same value neither player wins.
-- The sets of dice $\\{A, B, C\\}$, $\\{B, C, A\\}$ and $\\{C, A, B\\}$ are the same set.
+- มีลูกเต๋าหกด้านสามลูกโดยแต่ละด้านมีจุดระหว่าง 1 ถึง $N$ pips
+- ลูกเต๋าที่มี pip ชุดเดียวกันจะเท่ากัน ไม่ว่าลูกเต๋าจะอยู่ที่ด้านใด
+- ค่า pip เดียวกันอาจปรากฏบนลูกเต๋าหลายลูก ถ้าผู้เล่นทั้งสองทอยมูลค่าเท่ากันทั้งสองผู้เล่นจะไม่ชนะ
+- ชุดลูกเต๋า $\\{A, B, C\\}$, $\\{B, C, A\\}$ และ $\\{C, A, B\\}$ เป็นชุดเดียวกัน .
 
-For $N = 7$ we find there are 9780 such sets.
+สำหรับ $N = 7$ เราพบว่ามีชุดดังกล่าว 9780 ชุด
 
-How many are there for $N = 30$?
+มีกี่เหรียญสำหรับ $N = 30$?
 
 # --hints--
 
-`nontransitiveSetsOfDice()` should return `973059630185670`.
+`nontransitiveSetsOfDice()` ควร return `973059630185670`.
 
 ```js
 assert.strictEqual(nontransitiveSetsOfDice(), 973059630185670);

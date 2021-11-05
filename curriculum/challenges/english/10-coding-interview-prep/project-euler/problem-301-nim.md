@@ -8,31 +8,30 @@ dashedName: problem-301-nim
 
 # --description--
 
-Nim is a game played with heaps of stones, where two players take it in turn to remove any number of stones from any heap until no stones remain.
+Nim เป็นเกมที่เล่นด้วยกองหิน โดยผู้เล่นสองคนจะผลัดกันเอาหินจำนวนเท่าใดก็ได้ออกจากกองใดๆ จนกว่าจะไม่มีหินเหลืออยู่
 
-We'll consider the three-heap normal-play version of Nim, which works as follows:
+เราจะพิจารณา Nim เวอร์ชันเล่นปกติสามฮีปซึ่งทำงานดังนี้:
 
-- At the start of the game there are three heaps of stones.
-- On his turn the player removes any positive number of stones from any single heap.
-- The first player unable to move (because no stones remain) loses.
+- ในตอนเริ่มเกมมีหินอยู่สามกอง
+- ในเทิร์นของเขา ผู้เล่นจะลบหินจำนวนบวกออกจากกองใดๆ
+- ผู้เล่นคนแรกที่ไม่สามารถเคลื่อนที่ได้ (เพราะไม่มีหินเหลืออยู่) แพ้
 
-If ($n_1$, $n_2$, $n_3$) indicates a Nim position consisting of heaps of size $n_1$, $n_2$ and $n_3$ then there is a simple function $X(n_1,n_2,n_3)$ — that you may look up or attempt to deduce for yourself — that returns:
+ถ้า ($n_1$, $n_2$, $n_3$) ระบุตำแหน่ง Nim ที่ประกอบด้วยขนาดจำนวนมาก $n_1$, $n_2$ และ $n_3$ แสดงว่ามีฟังก์ชันง่ายๆ $X(n_1,n_2,n_3)$ - ที่คุณอาจค้นหาหรือพยายามอนุมานด้วยตัวเอง - ผลตอบแทนที่ได้:
 
-- zero if, with perfect strategy, the player about to move will eventually lose; or
-- non-zero if, with perfect strategy, the player about to move will eventually win.
+- ศูนย์หากด้วยกลยุทธ์ที่สมบูรณ์แบบ ผู้เล่นที่กำลังจะย้ายจะแพ้ในที่สุด หรือ
+- ไม่เป็นศูนย์หากด้วยกลยุทธ์ที่สมบูรณ์แบบ ผู้เล่นที่กำลังจะย้ายทีมจะชนะในที่สุด
 
-For example $X(1, 2, 3) = 0$ because, no matter what the current player does, his opponent can respond with a move that leaves two heaps of equal size, at which point every move by the current player can be mirrored by his opponent until no stones remain; so the current player loses. To illustrate:
+ตัวอย่างเช่น $X(1, 2, 3) = 0$ เพราะไม่ว่าผู้เล่นปัจจุบันจะทำอะไร ฝ่ายตรงข้ามของเขาสามารถตอบโต้ด้วยท่าทีที่ทิ้งกองไว้สองกองที่มีขนาดเท่ากัน ซึ่งทุกการเคลื่อนไหวโดยผู้เล่นปัจจุบันสามารถ สะท้อนโดยคู่ต่อสู้ของเขาจนไม่มีก้อนหินเหลืออยู่ ดังนั้นผู้เล่นปัจจุบันจึงแพ้ เพื่อแสดงให้เห็น:
 
-- current player moves to (1,2,1)
-- opponent moves to (1,0,1)
-- current player moves to (0,0,1)
-- opponent moves to (0,0,0), and so wins.
+- ผู้เล่นปัจจุบันย้ายไปที่ (1,2,1)
+- ฝ่ายตรงข้ามย้ายไปที่ (1,0,1)
+- ผู้เล่นปัจจุบันย้ายไปที่ (0,0,1)
+- ฝ่ายตรงข้ามย้ายไปที่ (0,0,0) และชนะ
 
-For how many positive integers $n ≤ 2^{30}$ does $X(n, 2n, 3n) = 0$?
-
+จำนวนเต็มบวก $n ≤ 2^{30}$ $X(n, 2n, 3n) = 0$ เป็นจำนวนเท่าใด
 # --hints--
 
-`nim()` should return `2178309`.
+`nim()` ควร return `2178309`.
 
 ```js
 assert.strictEqual(nim(), 2178309);

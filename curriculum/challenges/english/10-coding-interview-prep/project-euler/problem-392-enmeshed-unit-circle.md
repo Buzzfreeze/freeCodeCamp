@@ -8,31 +8,31 @@ dashedName: problem-392-enmeshed-unit-circle
 
 # --description--
 
-A rectilinear grid is an orthogonal grid where the spacing between the gridlines does not have to be equidistant.
+เส้นตารางเส้นตรงเป็นเส้นตารางมุมฉากที่ระยะห่างระหว่างเส้นตารางไม่จำเป็นต้องเท่ากัน
 
-An example of such grid is logarithmic graph paper.
+ตัวอย่างของตารางดังกล่าวคือกระดาษกราฟลอการิทึม
 
-Consider rectilinear grids in the Cartesian coordinate system with the following properties:
+พิจารณากริดเส้นตรงในระบบพิกัดคาร์ทีเซียนที่มีคุณสมบัติดังต่อไปนี้:
 
-- The gridlines are parallel to the axes of the Cartesian coordinate system.
-- There are $N + 2$ vertical and $N + 2$ horizontal gridlines. Hence there are $(N + 1) \times (N + 1)$ rectangular cells.
-- The equations of the two outer vertical gridlines are $x = -1$ and $x = 1$.
-- The equations of the two outer horizontal gridlines are $y = -1$ and $y = 1$.
-- The grid cells are colored red if they overlap with the unit circle, black otherwise.
+- เส้นตารางขนานกับแกนของระบบพิกัดคาร์ทีเซียน
+- มีเส้นตารางแนวตั้ง $N + 2$ และเส้นตารางแนวนอน $N + 2$ ดังนั้นจึงมีเซลล์สี่เหลี่ยม $(N + 1) \times (N + 1)$
+- สมการของเส้นตารางแนวตั้งด้านนอกสองเส้นคือ $x = -1$ และ $x = 1$
+- สมการของเส้นตารางแนวนอนด้านนอกสองเส้นคือ $y = -1$ และ $y = 1$
+- เซลล์กริดจะเป็นสีแดงหากซ้อนทับกับวงกลมหน่วย มิฉะนั้นจะเป็นสีดำ
 
-For this problem we would like you to find the positions of the remaining $N$ inner horizontal and $N$ inner vertical gridlines so that the area occupied by the red cells is minimized.
+สำหรับปัญหานี้ เราอยากให้คุณค้นหาตำแหน่งของเส้นตารางแนวตั้งด้านในของ $N$ ในแนวนอน และ $N$ ในแนวตั้ง เพื่อให้พื้นที่สีแดงถูกย่อให้เล็กสุด
 
-E.g. here is a picture of the solution for $N = 10$:
+เช่น. นี่คือรูปภาพของโซลูชันสำหรับ $N = 10$:
 
 <img class="img-responsive center-block" alt="solution for N = 10" src="https://cdn.freecodecamp.org/curriculum/project-euler/enmeshed-unit-circle.png" style="background-color: white; padding: 10px;">
 
-The area occupied by the red cells for $N = 10$ rounded to 10 digits behind the decimal point is 3.3469640797.
+พื้นที่ที่ถูกครอบครองโดยเซลล์สีแดงสำหรับ $N = 10$ ปัดเศษเป็น 10 หลักหลังจุดทศนิยมคือ 3.3469640797
 
-Find the positions for $N = 400$. Give as your answer the area occupied by the red cells rounded to 10 digits behind the decimal point.
+หาตำแหน่งสำหรับ $N = 400$ ให้พื้นที่สีแดงเป็นคำตอบของคุณ โดยปัดเศษเป็น 10 หลักหลังจุดทศนิยม
 
 # --hints--
 
-`enmeshedUnitCircle()` should return `3.1486734435`.
+`enmeshedUnitCircle()` ควร return `3.1486734435`.
 
 ```js
 assert.strictEqual(enmeshedUnitCircle(), 3.1486734435);

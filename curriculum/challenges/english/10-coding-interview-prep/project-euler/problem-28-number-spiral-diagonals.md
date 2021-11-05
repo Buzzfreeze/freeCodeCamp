@@ -8,7 +8,7 @@ dashedName: problem-28-number-spiral-diagonals
 
 # --description--
 
-Starting with the number 1 and moving to the right in a clockwise direction a 5 by 5 spiral is formed as follows:
+เริ่มจาก 1 aและเลื่อนไปทางขวาตามเข็มนาฬิกาแบบ 5 ต่อ 5 spiral ตามสูตรด้านล่าง:
 
 <div style='padding-left: 4em;'>
   <div style='color: red; display: inline;'>21</div> 22 23 24 <div style='color: red; display: inline;'>25</div><br>
@@ -18,37 +18,37 @@ Starting with the number 1 and moving to the right in a clockwise direction a 5 
   <div style='color: red; display: inline;'>17</div> 16 15 14 <div style='color: red; display: inline;'>13</div><br>
 </div>
 
-It can be verified that the sum of the numbers on the diagonals is 101.
+ผลรวมของ diagonals คือ 101
 
-What is the sum of the numbers on the diagonals in an `n` by `n` spiral formed in the same way?
+ให้หาผลรวมของ diagonals ใน `n` ต่อ `n` spiral จากวิธีเดียวกัน
 
 # --hints--
 
-`spiralDiagonals(101)` should return a number.
+`spiralDiagonals(101)` ควร return number.
 
 ```js
 assert(typeof spiralDiagonals(101) === 'number');
 ```
 
-`spiralDiagonals(101)` should return 692101.
+`spiralDiagonals(101)` ควร return 692101.
 
 ```js
 assert(spiralDiagonals(101) == 692101);
 ```
 
-`spiralDiagonals(303)` should return 18591725.
+`spiralDiagonals(303)` ควร return 18591725.
 
 ```js
 assert(spiralDiagonals(303) == 18591725);
 ```
 
-`spiralDiagonals(505)` should return 85986601.
+`spiralDiagonals(505)` ควร return 85986601.
 
 ```js
 assert(spiralDiagonals(505) == 85986601);
 ```
 
-`spiralDiagonals(1001)` should return 669171001.
+`spiralDiagonals(1001)` ควร return 669171001.
 
 ```js
 assert(spiralDiagonals(1001) == 669171001);

@@ -8,7 +8,7 @@ dashedName: problem-456-triangles-containing-the-origin-ii
 
 # --description--
 
-Define:
+กำหนด
 
 $$\begin{align}
   & x_n = ({1248}^n\bmod 32323) - 16161 \\\\
@@ -16,10 +16,10 @@ $$\begin{align}
   & P_n = \\{(x_1, y_1), (x_2, y_2), \ldots, (x_n, y_n)\\}
 \end{align}$$
 
-For example,
+เช่น
 $$P_8 = \\{(-14913, -6630), (-10161, 5625), (5226, 11896), (8340, -10778), (15852, -5203), (-15165, 11295), (-1427, -14495), (12407, 1060)\\}$$
 
-Let $C(n)$ be the number of triangles whose vertices are in $P_n$ which contain the origin in the interior.
+ให้ $C(n)$ เป็นจำนวนสามเหลี่ยมที่มีจุดยอดอยู่ใน $P_n$ ซึ่งมีจุดกำเนิดอยู่ภายใน
 
 Examples:
 
@@ -29,11 +29,11 @@ $$\begin{align}
   & C(40\\,000) = 2\\,666\\,610\\,948\\,988
 \end{align}$$
 
-Find $C(2\\,000\\,000)$.
+หา $C(2\\,000\\,000)$.
 
 # --hints--
 
-`trianglesContainingOriginTwo()` should return `333333208685971500`.
+`trianglesContainingOriginTwo()` ควร return `333333208685971500`.
 
 ```js
 assert.strictEqual(trianglesContainingOriginTwo(), 333333208685971500);

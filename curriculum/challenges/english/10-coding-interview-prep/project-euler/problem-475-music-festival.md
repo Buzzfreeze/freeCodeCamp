@@ -8,21 +8,21 @@ dashedName: problem-475-music-festival
 
 # --description--
 
-$12n$ musicians participate at a music festival. On the first day, they form $3n$ quartets and practice all day.
+นักดนตรี $12n$ คนเข้าร่วมงานเทศกาลดนตรี ในวันแรก พวกเขาสร้าง $3n$ quartets และฝึกฝนทั้งวัน
 
-It is a disaster. At the end of the day, all musicians decide they will never again agree to play with any member of their quartet.
+มันเป็นหายนะ ในตอนท้ายของวัน นักดนตรีทุกคนตัดสินใจว่าพวกเขาจะไม่ตกลงที่จะเล่นกับสมาชิกในวงของพวกเขาอีก
 
-On the second day, they form $4n$ trios, each musician avoiding his previous quartet partners.
+ในวันที่สอง พวกเขาสร้างทริโอมูลค่า 4 ล้านดอลลาร์ นักดนตรีแต่ละคนหลีกเลี่ยงคู่หูสี่คนก่อนหน้านี้
 
-Let $f(12n)$ be the number of ways to organize the trios amongst the $12n$ musicians.
+ให้ $f(12n)$ เป็นจำนวนวิธีในการจัดระเบียบทริโอในหมู่นักดนตรี $12n$
 
-You are given $f(12) = 576$ and $f(24)\bmod 1\\,000\\,000\\,007 = 509\\,089\\,824$.
+คุณจะได้รับ $f(12) = 576$ และ $f(24)\bmod 1\\,000\\,000\\,007 = 509\\,089\\,824$
 
-Find $f(600)\bmod 1\\,000\\,000\\,007$.
+หา $f(600)\bmod 1\\,000\\,000\\,007$.
 
 # --hints--
 
-`musicFestival()` should return `75780067`.
+`musicFestival()` ควร return `75780067`.
 
 ```js
 assert.strictEqual(musicFestival(), 75780067);

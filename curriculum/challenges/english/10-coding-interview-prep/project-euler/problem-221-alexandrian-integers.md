@@ -8,7 +8,7 @@ dashedName: problem-221-alexandrian-integers
 
 # --description--
 
-We shall call a positive integer $A$ an "Alexandrian integer", if there exist integers $p$, $q$, $r$ such that:
+เราจะเรียกจำนวนเต็มบวก $A$ ว่า "Alexandrian integer" ถ้ามีจำนวนเต็ม $p$, $q$, $r$ ในลักษณะที่ว่า:
 
 $$A = p \times q \times r$$
 
@@ -17,13 +17,13 @@ and
 $$\frac{1}{A} = \frac{1}{p} + \frac{1}{q} + \frac{1}{r}$$
 
 
-For example, 630 is an Alexandrian integer ($p = 5$, $q = −7$, $r = −18$). In fact, 630 is the 6th Alexandrian integer, the first 6 Alexandrian integers being: 6, 42, 120, 156, 420 and 630.
+ตัวอย่างเช่น 630 เป็น Alexandrian integer ($p = 5$, $q = −7$, $r = −18$) อันที่จริง 630 เป็น Alexandrian integer ที่ 6 โดย Alexandrian integer 6 ตัวแรกคือ: 6, 42, 120, 156, 420 และ 630
 
-Find the 150000th Alexandrian integer.
+หาลำดับที่ 150000th Alexandrian integer.
 
 # --hints--
 
-`alexandrianIntegers()` should return `1884161251122450`.
+`alexandrianIntegers()` ควร return `1884161251122450`.
 
 ```js
 assert.strictEqual(alexandrianIntegers(), 1884161251122450);

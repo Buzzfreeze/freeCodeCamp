@@ -8,17 +8,17 @@ dashedName: problem-241-perfection-quotients
 
 # --description--
 
-For a positive integer $n$, let $σ(n)$ be the sum of all divisors of $n$, so e.g. $σ(6) = 1 + 2 + 3 + 6 = 12$.
+สำหรับจำนวนเต็มบวก $n$ ให้ $σ(n)$ เป็นผลรวมของตัวหารทั้งหมดของ $n$ เช่น $σ(6) = 1 + 2 + 3 + 6 = 12$
 
-A perfect number, as you probably know, is a number with $σ(n) = 2n$.
+จำนวนสมบูรณ์อย่างที่คุณอาจทราบคือตัวเลขที่มี $σ(n) = 2n$
 
-Let us define the perfection quotient of a positive integer as $p(n) = \frac{σ(n)}{n}$.
+ให้เรากำหนดผลหารสมบูรณ์ของจำนวนเต็มบวกเป็น $p(n) = \frac{σ(n)}{n}$
 
-Find the sum of all positive integers $n ≤ {10}^{18}$ for which $p(n)$ has the form $k + \frac{1}{2}$, where $k$ is an integer.
+หาผลรวมของจำนวนเต็มบวกทั้งหมด $n ≤ {10}^{18}$ ซึ่ง $p(n)$ มีรูปแบบ $k + \frac{1}{2}$ โดยที่ $k$ เป็นจำนวนเต็ม
 
 # --hints--
 
-`perfectionQuotients()` should return `482316491800641150`.
+`perfectionQuotients()` ควร return `482316491800641150`.
 
 ```js
 assert.strictEqual(perfectionQuotients(), 482316491800641150);

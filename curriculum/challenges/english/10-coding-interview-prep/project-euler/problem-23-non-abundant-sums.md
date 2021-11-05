@@ -8,41 +8,43 @@ dashedName: problem-23-non-abundant-sums
 
 # --description--
 
-A perfect number is a number for which the sum of its proper divisors is exactly equal to the number. For example, the sum of the proper divisors of 28 would be 1 + 2 + 4 + 7 + 14 = 28, which means that 28 is a perfect number.
+perfect number จะมีผลรวมของตัวหารที่มีค่าน้อยกว่าตัวมัน เท่ากับจำนวนตัวมันเอง 
+เช่นผลนวมของเลขที่หารด้วย 28 ลงตัวมี 1 + 2 + 4 + 7 + 14 = 28 ดังนั้น 28 เป็น perfect number
 
-A number `n` is called deficient if the sum of its proper divisors is less than `n` and it is called abundant if this sum exceeds `n`.
+เมื่อจำนวน `n` มีผลรวมของตัวหารมากกว่า `n` จะเรียกว่า abundant number
 
-As 12 is the smallest abundant number, 1 + 2 + 3 + 4 + 6 = 16, the smallest number that can be written as the sum of two abundant numbers is 24. By mathematical analysis, it can be shown that all integers greater than 28123 can be written as the sum of two abundant numbers. However, this upper limit cannot be reduced any further by analysis even though it is known that the greatest number that cannot be expressed as the sum of two abundant numbers is less than this limit.
+เช่น 12 เป็นเลขน้อยสุดของ abundant number 1 + 2 + 3 + 4 + 6 = 16, จำนวนที่น้อยที่สุดสามารถเป็นผลรวมของ abundant numbers สองตัวคือ 24 
+เราสามารถแสดงค่าที่มากกว่า 28123 สามารถเขียนเป็นผลรวมของ abundant numbers สองตัวได้ อย่าไรก็ตาม upper limit ไม่สามารถถูกลดได้แม้จะทราบค่าที่มากที่สุดและไม่สามารถอธิบายในรูปค่าผลรวมของ abundant numbers ที่น้อยกว่า limit ได้
 
-Find the sum of all positive integers &lt;= `n` which cannot be written as the sum of two abundant numbers.
+หาผลรวมของค่าบวกทุกค่าที่ &lt;= `n` ไม่สามารถเขียนในรูปของ abundant numbers สองจำนวนได้
 
 # --hints--
 
-`sumOfNonAbundantNumbers(10000)` should return a number.
+`sumOfNonAbundantNumbers(10000)` ควร return number.
 
 ```js
 assert(typeof sumOfNonAbundantNumbers(10000) === 'number');
 ```
 
-`sumOfNonAbundantNumbers(10000)` should return 3731004.
+`sumOfNonAbundantNumbers(10000)` ควร return 3731004.
 
 ```js
 assert(sumOfNonAbundantNumbers(10000) === 3731004);
 ```
 
-`sumOfNonAbundantNumbers(15000)` should return 4039939.
+`sumOfNonAbundantNumbers(15000)` ควร return 4039939.
 
 ```js
 assert(sumOfNonAbundantNumbers(15000) === 4039939);
 ```
 
-`sumOfNonAbundantNumbers(20000)` should return 4159710.
+`sumOfNonAbundantNumbers(20000)` ควร return 4159710.
 
 ```js
 assert(sumOfNonAbundantNumbers(20000) === 4159710);
 ```
 
-`sumOfNonAbundantNumbers(28123)` should return 4179871.
+`sumOfNonAbundantNumbers(28123)` ควร return 4179871.
 
 ```js
 assert(sumOfNonAbundantNumbers(28123) === 4179871);

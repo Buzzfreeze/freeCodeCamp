@@ -8,27 +8,27 @@ dashedName: problem-329-prime-frog
 
 # --description--
 
-Susan has a prime frog.
+Susan มี prime frog.
 
-Her frog is jumping around over 500 squares numbered 1 to 500.
+กบของเธอกำลังกระโดดไปรอบ ๆ กว่า 500 สี่เหลี่ยมที่มีหมายเลข 1 ถึง 500
 
-He can only jump one square to the left or to the right, with equal probability, and he cannot jump outside the range [1;500]. (if it lands at either end, it automatically jumps to the only available square on the next move.)
+เขาสามารถกระโดดได้เพียงหนึ่งช่องสี่เหลี่ยมไปทางซ้ายหรือทางขวา โดยมีความน่าจะเป็นเท่ากัน และเขาไม่สามารถกระโดดออกนอกขอบเขต [1;500] ได้ (ถ้ามันลงที่ปลายด้านใดด้านหนึ่ง มันจะข้ามไปที่ช่องเดียวที่มีในการย้ายถัดไปโดยอัตโนมัติ)
 
-When he is on a square with a prime number on it, he croaks 'P' (PRIME) with probability $\frac{2}{3}$ or 'N' (NOT PRIME) with probability $\frac{1}{3}$ just before jumping to the next square. When he is on a square with a number on it that is not a prime he croaks 'P' with probability $\frac{1}{3}$ or 'N' with probability $\frac{2}{3}$ just before jumping to the next square.
+เมื่อเขาอยู่บนสี่เหลี่ยมจัตุรัสที่มีจำนวนเฉพาะอยู่บนนั้น เขาจะโครก 'P' (PRIME) ด้วยความน่าจะเป็น $\frac{2}{3}$ หรือ 'N' (ไม่ใช่ PRIME) ด้วยความน่าจะเป็น $\frac{1}{ 3}$ ก่อนกระโดดไปที่ช่องถัดไป เมื่อเขาอยู่บนสี่เหลี่ยมที่มีตัวเลขซึ่งไม่ใช่จำนวนเฉพาะ เขาจะบ่น 'P' ด้วยความน่าจะเป็น $\frac{1}{3}$ หรือ 'N' ด้วยความน่าจะเป็น $\frac{2}{3}$ เพียง ก่อนจะกระโดดไปที่จัตุรัสถัดไป
 
-Given that the frog's starting position is random with the same probability for every square, and given that she listens to his first 15 croaks, what is the probability that she hears the sequence PPPPNNPPPNPPNPN?
+เนื่องจากตำแหน่งเริ่มต้นของกบนั้นสุ่มโดยมีความน่าจะเป็นเท่ากันในทุกตาราง และเมื่อเธอฟังเสียงบ่น 15 ครั้งแรกของเขา ความน่าจะเป็นที่เธอจะได้ยินลำดับ PPPPNNPPPNPPNPN เป็นเท่าใด
 
-Give your answer as a string as a fraction `p/q` in reduced form.
+ให้คำตอบของคุณเป็นสตริงในรูปเศษส่วน "p/q" ในรูปแบบย่อ
 
 # --hints--
 
-`primeFrog()` should return a string.
+`primeFrog()` ควร return string.
 
 ```js
 assert(typeof primeFrog() === 'string');
 ```
 
-`primeFrog()` should return the string `199740353/29386561536000`.
+`primeFrog()` ควร return string `199740353/29386561536000`.
 
 ```js
 assert.strictEqual(primeFrog(), '199740353/29386561536000');

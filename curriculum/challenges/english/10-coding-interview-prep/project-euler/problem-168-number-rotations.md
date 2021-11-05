@@ -8,17 +8,17 @@ dashedName: problem-168-number-rotations
 
 # --description--
 
-Consider the number 142857. We can right-rotate this number by moving the last digit (7) to the front of it, giving us 714285.
+พิจารณาเลข 142857 เราหมุนเลขนี้ไปทางขวาได้โดยเลื่อนหลักสุดท้าย (7) ไปไว้ข้างหน้า จะได้ 714285
 
-It can be verified that $714285 = 5 × 142857$.
+สามารถตรวจสอบได้ว่า $714285 = 5 × 142857$
 
-This demonstrates an unusual property of 142857: it is a divisor of its right-rotation.
+สิ่งนี้แสดงให้เห็นคุณสมบัติที่ผิดปกติของ 142857: เป็นตัวหารของการหมุนขวา
 
-Find the last 5 digits of the sum of all integers $n$, $10 &lt; n &lt; 10100$, that have this property.
+หา 5 หลักสุดท้ายของผลรวมของจำนวนเต็มทั้งหมด $n$, $10 &lt; น &lt; 10100$ ที่มีคุณสมบัตินี้
 
 # --hints--
 
-`numberRotations()` should return `59206`.
+`numberRotations()` ควร return `59206`.
 
 ```js
 assert.strictEqual(numberRotations(), 59206);

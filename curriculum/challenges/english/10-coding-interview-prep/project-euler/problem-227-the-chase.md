@@ -8,23 +8,23 @@ dashedName: problem-227-the-chase
 
 # --description--
 
-"The Chase" is a game played with two dice and an even number of players.
+"The Chase" เป็นเกมที่เล่นด้วยลูกเต๋าสองลูกและผู้เล่นจำนวนเท่ากัน
 
-The players sit around a table; the game begins with two opposite players having one die each. On each turn, the two players with a die roll it.
+ผู้เล่นนั่งรอบโต๊ะ เกมเริ่มต้นด้วยผู้เล่นสองคนที่ตายกันคนละคน ในแต่ละเทิร์น ผู้เล่นสองคนที่ทอยลูกเต๋าได้
 
-If the player rolls a 1, he passes the die to his neighbour on the left.
+หากผู้เล่นทอยได้ 1 เขาจะส่งต่อลูกเต๋าให้เพื่อนบ้านทางด้านซ้าย
 
-If the player rolls a 6, he passes the die to his neighbour on the right.
+หากผู้เล่นทอยได้ 6 เขาจะส่งต่อให้เพื่อนบ้านทางด้านขวา
 
-Otherwise, he keeps the die for the next turn.
+มิฉะนั้น เขาจะเก็บตายสำหรับเทิร์นถัดไป
 
-The game ends when one player has both dice after they have been rolled and passed; that player has then lost.
+เกมจะจบลงเมื่อผู้เล่นคนใดคนหนึ่งได้ลูกเต๋าทั้งสองหลังจากที่ทอยและผ่านแล้ว ผู้เล่นคนนั้นแพ้แล้ว
 
-In a game with 100 players, what is the expected number of turns the game lasts? Give your answer rounded to ten significant digits.
+ในเกมที่มีผู้เล่น 100 คน จำนวนรอบที่คาดหวังของเกมจะเป็นเท่าใด ให้คำตอบของคุณปัดเศษเป็นตัวเลขนัยสำคัญสิบหลัก
 
 # --hints--
 
-`theChase()` should return `3780.618622`.
+`theChase()` ควร return `3780.618622`.
 
 ```js
 assert.strictEqual(theChase(), 0.618622);

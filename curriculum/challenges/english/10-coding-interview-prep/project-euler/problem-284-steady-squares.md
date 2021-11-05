@@ -8,23 +8,23 @@ dashedName: problem-284-steady-squares
 
 # --description--
 
-The 3-digit number 376 in the decimal numbering system is an example of numbers with the special property that its square ends with the same digits: ${376}^2 = 141376$. Let's call a number with this property a steady square.
+ตัวเลข 3 หลัก 376 ในระบบเลขฐานสิบเป็นตัวอย่างของตัวเลขที่มีคุณสมบัติพิเศษซึ่งกำลังสองลงท้ายด้วยตัวเลขเดียวกัน: ${376}^2 = 141376$ ลองเรียกตัวเลขที่มีคุณสมบัตินี้ว่ากำลังสองคงที่
 
-Steady squares can also be observed in other numbering systems. In the base 14 numbering system, the 3-digit number $c37$ is also a steady square: $c37^2 = aa0c37$, and the sum of its digits is $c+3+7=18$ in the same numbering system. The letters $a$, $b$, $c$ and $d$ are used for the 10, 11, 12 and 13 digits respectively, in a manner similar to the hexadecimal numbering system.
+สามารถสังเกตกำลังสองคงที่ได้ในระบบการนับอื่นๆ ในระบบเลขฐาน 14 ตัวเลข 3 หลัก $c37$ ยังเป็นกำลังสองคงที่: $c37^2 = aa0c37$ และผลรวมของหลักคือ $c+3+7=18$ ในระบบการนับเดียวกัน . ตัวอักษร $a$, $b$, $c$ และ $d$ ใช้สำหรับตัวเลข 10, 11, 12 และ 13 หลักตามลำดับ ในลักษณะที่คล้ายกับระบบเลขฐานสิบหก
 
-For $1 ≤ n ≤ 9$, the sum of the digits of all the $n$-digit steady squares in the base 14 numbering system is $2d8$ (582 decimal). Steady squares with leading 0's are not allowed.
+สำหรับ $1 ≤ n ≤ 9$ ผลรวมของตัวเลขของกำลังสองคงที่ $n$-digit ในระบบการนับเลขฐาน 14 คือ $2d8$ (582 ทศนิยม) ไม่อนุญาตให้ใช้ช่องสี่เหลี่ยมคงที่ที่มี 0 นำหน้า
 
-Find the sum of the digits of all the $n$-digit steady squares in the base 14 numbering system for $1 ≤ n ≤ 10000$ (decimal) and give your answer as a string in the base 14 system using lower case letters where necessary.
+หาผลรวมของตัวเลขของสี่เหลี่ยมคงที่ $n$-digit ทั้งหมดในระบบเลขฐาน 14 สำหรับ $1 ≤ n ≤ 10000$ (ทศนิยม) และให้คำตอบของคุณเป็นสตริงในระบบฐาน 14 โดยใช้อักษรตัวพิมพ์เล็กในกรณีที่จำเป็น
 
 # --hints--
 
-`steadySquares()` should return a string.
+`steadySquares()` ควร return string.
 
 ```js
 assert(typeof steadySquares() === 'string');
 ```
 
-`steadySquares()` should return the string `5a411d7b`.
+`steadySquares()` ควร return string `5a411d7b`.
 
 ```js
 assert.strictEqual(steadySquares(), '5a411d7b');

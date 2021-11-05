@@ -8,25 +8,25 @@ dashedName: problem-41-pandigital-prime
 
 # --description--
 
-We shall say that an `n`-digit number is pandigital if it makes use of all the digits 1 to `n` exactly once. For example, 2143 is a 4-digit pandigital and is also prime.
+`n`-digit number เป็น pandigital ถ้าทำให้ทุกจาก digits 1 ถึง `n` มีเลขไม่ซ้ำกัน เช่น 2143 เป็น 4-digit pandigital และเป็นเลข prime
 
-What is the largest `n`-length digit pandigital prime that exists?
+หาค่ามากที่สุดของ `n`-length digit pandigital prime 
 
 # --hints--
 
-`pandigitalPrime(4)` should return a number.
+`pandigitalPrime(4)` ควร return number.
 
 ```js
 assert(typeof pandigitalPrime(4) === 'number');
 ```
 
-`pandigitalPrime(4)` should return 4231.
+`pandigitalPrime(4)` ควร return 4231.
 
 ```js
 assert(pandigitalPrime(4) == 4231);
 ```
 
-`pandigitalPrime(7)` should return 7652413.
+`pandigitalPrime(7)` ควร return 7652413.
 
 ```js
 assert(pandigitalPrime(7) == 7652413);

@@ -8,43 +8,43 @@ dashedName: problem-352-blood-tests
 
 # --description--
 
-Each one of the 25 sheep in a flock must be tested for a rare virus, known to affect 2% of the sheep population.
+แกะ 25 ตัวแต่ละตัวในฝูงต้องได้รับการทดสอบหาไวรัสหายาก ซึ่งทราบกันดีว่ามีผลกระทบต่อประชากรแกะ 2%
 
-An accurate and extremely sensitive PCR test exists for blood samples, producing a clear positive / negative result, but it is very time-consuming and expensive.
+มีการทดสอบ PCR ที่แม่นยำและละเอียดอ่อนอย่างยิ่งสำหรับตัวอย่างเลือด ซึ่งให้ผลบวก/ลบที่ชัดเจน แต่ใช้เวลานานและมีราคาแพง
 
-Because of the high cost, the vet-in-charge suggests that instead of performing 25 separate tests, the following procedure can be used instead:
+เนื่องจากมีค่าใช้จ่ายสูง สัตวแพทย์แนะนำว่าแทนที่จะทำการทดสอบแยกกัน 25 รายการ สามารถใช้ขั้นตอนต่อไปนี้แทนได้
 
-The sheep are split into 5 groups of 5 sheep in each group. For each group, the 5 samples are mixed together and a single test is performed. Then,
+แกะแบ่งออกเป็น 5 กลุ่ม กลุ่มละ 5 แกะ สำหรับแต่ละกลุ่ม ตัวอย่าง 5 ตัวอย่างจะถูกผสมเข้าด้วยกันและทำการทดสอบครั้งเดียว แล้ว,
 
-- If the result is negative, all the sheep in that group are deemed to be virus-free.
-- If the result is positive, 5 additional tests will be performed (a separate test for each animal) to determine the affected individual(s).
+- หากผลลัพธ์เป็นลบ แกะทั้งหมดในกลุ่มนั้นถือว่าปลอดไวรัส
+- หากผลเป็นบวก จะทำการทดสอบเพิ่มเติม 5 ครั้ง (แยกการทดสอบสำหรับสัตว์แต่ละตัว) เพื่อระบุบุคคลที่ได้รับผลกระทบ
 
-Since the probability of infection for any specific animal is only 0.02, the first test (on the pooled samples) for each group will be:
+เนื่องจากความน่าจะเป็นของการติดเชื้อในสัตว์ชนิดใดชนิดหนึ่งมีเพียง 0.02 เท่านั้น การทดสอบครั้งแรก (ในตัวอย่างที่รวบรวมไว้) สำหรับแต่ละกลุ่มจะเป็นดังนี้
 
-- Negative (and no more tests needed) with probability ${0.98}^5 = 0.9039207968$.
-- Positive (5 additional tests needed) with probability $1 - 0.9039207968 = 0.0960792032$.
+- ค่าลบ (และไม่จำเป็นต้องทำการทดสอบเพิ่มเติม) โดยมีความน่าจะเป็น ${0.98}^5 = 0.9039207968$
+- เป็นบวก (จำเป็นต้องมีการทดสอบเพิ่มเติม 5 ครั้ง) โดยมีความน่าจะเป็น $1 - 0.9039207968 = 0.0960792032$
 
-Thus, the expected number of tests for each group is $1 + 0.0960792032 × 5 = 1.480396016$.
+ดังนั้น จำนวนการทดสอบที่คาดไว้สำหรับแต่ละกลุ่มคือ $1 + 0.0960792032 × 5 = 1.480396016$
 
-Consequently, all 5 groups can be screened using an average of only $1.480396016 × 5 = \mathbf{7.40198008}$ tests, which represents a huge saving of more than 70%!
+ดังนั้น ทั้ง 5 กลุ่มสามารถคัดกรองได้โดยใช้ค่าเฉลี่ยเพียง $1.480396016 × 5 = \mathbf{7.40198008}$ การทดสอบ ซึ่งแสดงถึงการประหยัดมากกว่า 70%!
 
-Although the scheme we have just described seems to be very efficient, it can still be improved considerably (always assuming that the test is sufficiently sensitive and no adverse effects are caused by mixing different samples). E.g.:
+แม้ว่ารูปแบบที่เราเพิ่งอธิบายไปดูเหมือนจะมีประสิทธิภาพมาก แต่ก็ยังสามารถปรับปรุงได้อย่างมาก (โดยสมมติเสมอว่าการทดสอบมีความละเอียดอ่อนเพียงพอและไม่มีผลกระทบที่เกิดจากการผสมตัวอย่างต่างๆ) เช่น.:
 
-- We may start by running a test on a mixture of all the 25 samples. It can be verified that in about 60.35% of the cases this test will be negative, thus no more tests will be needed. Further testing will only be required for the remaining 39.65% of the cases.
-- If we know that at least one animal in a group of 5 is infected and the first 4 individual tests come out negative, there is no need to run a test on the fifth animal (we know that it must be infected).
-- We can try a different number of groups / different number of animals in each group, adjusting those numbers at each level so that the total expected number of tests will be minimised.
+- เราอาจเริ่มต้นด้วยการทดสอบกับตัวอย่างทั้งหมด 25 ตัวอย่าง สามารถตรวจสอบได้ว่าในประมาณ 60.35% ของกรณีการทดสอบนี้จะเป็นลบ ดังนั้นจึงไม่จำเป็นต้องทำการทดสอบอีก จำเป็นต้องมีการทดสอบเพิ่มเติมสำหรับกรณีที่เหลือ 39.65% เท่านั้น
+- หากเรารู้ว่าสัตว์อย่างน้อยหนึ่งตัวในกลุ่ม 5 ตัวติดเชื้อและการทดสอบเดี่ยว 4 ตัวแรกออกมาเป็นลบ ไม่จำเป็นต้องทำการทดสอบกับสัตว์ตัวที่ห้า (เรารู้ว่าต้องติดเชื้อ)
+- เราสามารถลองจำนวนกลุ่มที่แตกต่างกัน / จำนวนสัตว์ที่แตกต่างกันในแต่ละกลุ่มโดยปรับตัวเลขเหล่านั้นในแต่ละระดับเพื่อลดจำนวนการทดสอบที่คาดหวังทั้งหมด
 
-To simplify the very wide range of possibilities, there is one restriction we place when devising the most cost-efficient testing scheme: whenever we start with a mixed sample, all the sheep contributing to that sample must be fully screened (i.e. a verdict of infected / virus-free must be reached for all of them) before we start examining any other animals.
+เพื่อลดความซับซ้อนของความเป็นไปได้ที่หลากหลาย มีข้อ จำกัด ประการหนึ่งที่เรากำหนดไว้เมื่อคิดแผนการทดสอบที่คุ้มค่าที่สุด: เมื่อใดก็ตามที่เราเริ่มต้นด้วยตัวอย่างแบบผสม แกะทั้งหมดที่มีส่วนร่วมในตัวอย่างนั้นจะต้องได้รับการตรวจคัดกรองอย่างสมบูรณ์ (เช่น คำตัดสินของการติดเชื้อ / ปลอดไวรัสทุกตัว) ก่อนที่เราจะเริ่มตรวจสัตว์อื่นๆ
 
-For the current example, it turns out that the most cost-efficient testing scheme (we'll call it the optimal strategy) requires an average of just <strong>4.155452</strong> tests!
+สำหรับตัวอย่างปัจจุบัน ปรากฎว่าแผนการทดสอบที่คุ้มค่าที่สุด (เราจะเรียกมันว่ากลยุทธ์ที่เหมาะสมที่สุด) ต้องการค่าเฉลี่ยเพียง <strong>4.155452</strong> การทดสอบ!
 
-Using the optimal strategy, let $T(s, p)$ represent the average number of tests needed to screen a flock of $s$ sheep for a virus having probability $p$ to be present in any individual. Thus, rounded to six decimal places, $T(25, 0.02) = 4.155452$ and $T(25, 0.10) = 12.702124$.
+ใช้กลยุทธ์ที่เหมาะสมที่สุด ให้ $T(s, p)$ แทนจำนวนการทดสอบโดยเฉลี่ยที่จำเป็นในการคัดกรองฝูงแกะ $s$ สำหรับไวรัสที่มีความเป็นไปได้ที่ $p$ จะปรากฏในแต่ละคน ดังนั้น ปัดเศษเป็นทศนิยมหกตำแหน่ง $T(25, 0.02) = 4.155452$ และ $T(25, 0.10) = 12.702124$
 
-Find $\sum T(10\\,000, p)$ for $p = 0.01, 0.02, 0.03, \ldots 0.50$. Give your answer rounded to six decimal places.
+หา $\sum T(10\\,000, p)$ สำหรับ $p = 0.01, 0.02, 0.03, \ldots 0.50$ ให้คำตอบของคุณเป็นทศนิยมหกตำแหน่ง
 
 # --hints--
 
-`bloodTests()` should return `378563.260589`.
+`bloodTests()` ควร return `378563.260589`
 
 ```js
 assert.strictEqual(bloodTests(), 378563.260589);

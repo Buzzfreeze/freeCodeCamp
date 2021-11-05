@@ -8,11 +8,11 @@ dashedName: problem-322-binomial-coefficients-divisible-by-10
 
 # --description--
 
-Let $T(m, n)$ be the number of the binomial coefficients ${}^iC_n$ that are divisible by 10 for $n ≤ i &lt; m$ ($i$, $m$ and $n$ are positive integers).
+ให้ $T(m, n)$ เป็นจำนวนของสัมประสิทธิ์ทวินาม ${}^iC_n$ ที่หารด้วย 10 ลงตัวสำหรับ $n ≤ i &lt; m$ ($i$, $m$ และ $n$ เป็นจำนวนเต็มบวก)
 
-You are given that $T({10}^9, {10}^7 - 10) = 989\\,697\\,000$.
+จะได้รับ $T({10}^9, {10}^7 - 10) = 989\\,697\\,000$
 
-Find $T({10}^{18}, {10}^{12} - 10)$.
+หา $T({10}^{18}, {10}^{12} - 10)$
 
 # --hints--
 

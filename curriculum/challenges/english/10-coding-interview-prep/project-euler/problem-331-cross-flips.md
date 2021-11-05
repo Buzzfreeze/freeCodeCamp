@@ -8,25 +8,25 @@ dashedName: problem-331-cross-flips
 
 # --description--
 
-N×N disks are placed on a square game board. Each disk has a black side and white side.
+N×N disks วางบนกระดานเกมสี่เหลี่ยม แต่ละดิสก์มีด้านดำและด้านขาว
 
-At each turn, you may choose a disk and flip all the disks in the same row and the same column as this disk: thus $2 × N - 1$ disks are flipped. The game ends when all disks show their white side. The following example shows a game on a 5×5 board.
+ในแต่ละเทิร์น คุณสามารถเลือกดิสก์และพลิกดิสก์ทั้งหมดในแถวเดียวกันและคอลัมน์เดียวกับดิสก์นี้: ดังนั้นดิสก์ $2 × N - 1$ จะถูกพลิก เกมจะจบลงเมื่อดิสก์ทั้งหมดแสดงด้านสีขาว ตัวอย่างต่อไปนี้แสดงเกมบนกระดาน 5×5
 
 <img class="img-responsive center-block" alt="animation showing game on 5x5 board" src="https://cdn.freecodecamp.org/curriculum/project-euler/cross-flips.gif" style="background-color: white; padding: 10px;">
 
-It can be proven that 3 is the minimal number of turns to finish this game.
+สามารถพิสูจน์ได้ว่า 3 เป็นจำนวนเทิร์นที่น้อยที่สุดในการจบเกมนี้
 
-The bottom left disk on the $N×N$ board has coordinates (0, 0); the bottom right disk has coordinates ($N - 1$,$0$) and the top left disk has coordinates ($0$,$N - 1$).
+ดิสก์ด้านล่างซ้ายบนกระดาน $N×N$ มีพิกัด (0, 0); ดิสก์ด้านล่างขวามีพิกัด ($N - 1$,$0$) และดิสก์บนซ้ายมีพิกัด ($0$,$N - 1$)
 
-Let $C_N$ be the following configuration of a board with $N × N$disks: A disk at ($x$, $y$) satisfying $N - 1 \le \sqrt{x^2 + y^2} \lt N$, shows its black side; otherwise, it shows its white side. $C_5$ is shown above.
+ให้ $C_N$ เป็นการกำหนดค่าต่อไปนี้ของบอร์ดที่มี $N × N$disks: ดิสก์ที่ ($x$, $y$) เป็นไปตาม $N - 1 \le \sqrt{x^2 + y^2} \ lt N$ แสดงด้านสีดำ มิฉะนั้นจะแสดงด้านสีขาว $C_5$ แสดงไว้ด้านบน
 
-Let $T(N)$ be the minimal number of turns to finish a game starting from configuration $C_N$ or 0 if configuration $C_N$ is unsolvable. We have shown that $T(5) = 3$. You are also given that $T(10) = 29$ and $T(1\\,000) = 395\\,253$.
+ให้ $T(N)$ เป็นจำนวนรอบขั้นต่ำในการจบเกมโดยเริ่มจากการกำหนดค่า $C_N$ หรือ 0 หากการกำหนดค่า $C_N$ ไม่สามารถแก้ไขได้ เราได้แสดงให้เห็นว่า $T(5) = 3$ คุณยังได้รับว่า $T(10) = 29$ และ $T(1\\,000) = 395\\,253$
 
-Find $\displaystyle \sum_{i = 3}^{31} T(2^i - i)$.
+หา $\displaystyle \sum_{i = 3}^{31} T(2^i - i)$
 
 # --hints--
 
-`crossFlips()` should return `467178235146843500`.
+`crossFlips()` ควร return `467178235146843500`.
 
 ```js
 assert.strictEqual(crossFlips(), 467178235146843500);

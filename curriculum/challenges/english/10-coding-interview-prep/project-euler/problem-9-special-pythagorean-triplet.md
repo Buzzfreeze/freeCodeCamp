@@ -8,35 +8,35 @@ dashedName: problem-9-special-pythagorean-triplet
 
 # --description--
 
-A Pythagorean triplet is a set of three natural numbers, `a` &lt; `b` &lt; `c`, for which,
+Pythagorean triplet คือค่าที่ได้จากเซ็ตของตัวเลขสามตัว, `a` &lt; `b` &lt; `c`, แต่ละตัวจะเป็นดังเช่น
 
 <div style='text-align: center;'><var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup></div>
 
-For example, 3<sup>2</sup> + 4<sup>2</sup> = 9 + 16 = 25 = 5<sup>2</sup>.
+เช่น 3<sup>2</sup> + 4<sup>2</sup> = 9 + 16 = 25 = 5<sup>2</sup>.
 
-There exists exactly one Pythagorean triplet for which `a` + `b` + `c` = 1000. Find the product `abc` such that `a` + `b` + `c` = `n`.
+ Pythagorean triplet จะมีค่าเพียงค่าเดียว เช่น `a` + `b` + `c` = 1000. หาผลคูณของ `abc` ที่เหมือนตัวอย่าง `a` + `b` + `c` = `n`.
 
 # --hints--
 
-`specialPythagoreanTriplet(24)` should return a number.
+`specialPythagoreanTriplet(24)` ควร return number
 
 ```js
 assert(typeof specialPythagoreanTriplet(24) === 'number');
 ```
 
-`specialPythagoreanTriplet(24)` should return 480.
+`specialPythagoreanTriplet(24)` ควร return 480
 
 ```js
 assert.strictEqual(specialPythagoreanTriplet(24), 480);
 ```
 
-`specialPythagoreanTriplet(120)` should return 49920, 55080 or 60000
+`specialPythagoreanTriplet(120)` ควร return 49920, 55080 หรือ 60000
 
 ```js
 assert([49920, 55080, 60000].includes(specialPythagoreanTriplet(120)));
 ```
 
-`specialPythagoreanTriplet(1000)` should return 31875000.
+`specialPythagoreanTriplet(1000)` ควร return 31875000
 
 ```js
 assert.strictEqual(specialPythagoreanTriplet(1000), 31875000);

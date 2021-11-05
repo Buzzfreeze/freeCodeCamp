@@ -8,17 +8,17 @@ dashedName: problem-379-least-common-multiple-count
 
 # --description--
 
-Let $f(n)$ be the number of couples ($x$, $y$) with $x$ and $y$ positive integers, $x ≤ y$ and the least common multiple of $x$ and $y$ equal to $n$.
+ห้ $f(n)$ เป็นจำนวนคู่ ($x$, $y$) โดยมี $x$ และ $y$ เป็นจำนวนเต็มบวก $x ≤ y$ และตัวคูณร่วมน้อยของ $x$ และ $y$ เท่ากับ $n$
 
-Let $g$ be the summatory function of $f$, i.e.: $g(n) = \sum f(i)$ for $1 ≤ i ≤ n$.
+ให้ $g$ เป็นฟังก์ชันสรุปของ $f$ เช่น: $g(n) = \sum f(i)$ สำหรับ $1 ≤ i ≤ n$
 
-You are given that $g({10}^6) = 37\\,429\\,395$.
+จะได้ $g({10}^6) = 37\\,429\\,395$
 
-Find $g({10}^{12})$.
+หา $g({10}^{12})$
 
 # --hints--
 
-`leastCommonMultipleCount()` should return `132314136838185`.
+`leastCommonMultipleCount()` ควร return `132314136838185`.
 
 ```js
 assert.strictEqual(leastCommonMultipleCount(), 132314136838185);

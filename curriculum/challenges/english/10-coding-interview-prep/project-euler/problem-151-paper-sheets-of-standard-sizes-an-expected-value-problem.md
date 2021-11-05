@@ -8,25 +8,25 @@ dashedName: problem-151-paper-sheets-of-standard-sizes-an-expected-value-problem
 
 # --description--
 
-A printing shop runs 16 batches (jobs) every week and each batch requires a sheet of special colour-proofing paper of size A5.
+โรงพิมพ์แห่งหนึ่งดำเนินการ 16 ชุด (งาน) ทุกสัปดาห์ และแต่ละชุดต้องใช้กระดาษป้องกันสีพิเศษขนาด A5 แผ่นหนึ่ง
 
-Every Monday morning, the foreman opens a new envelope, containing a large sheet of the special paper with size A1.
+ทุกเช้าวันจันทร์ หัวหน้าจะเปิดซองใหม่ซึ่งมีกระดาษพิเศษขนาด A1 แผ่นใหญ่
 
-He proceeds to cut it in half, thus getting two sheets of size A2. Then he cuts one of them in half to get two sheets of size A3 and so on until he obtains the A5-size sheet needed for the first batch of the week.
+เขาดำเนินการผ่าครึ่งจึงได้ขนาด A2 สองแผ่น จากนั้นเขาก็ผ่าครึ่งแผ่นเพื่อให้ได้ขนาด A3 สองแผ่น และต่อไปเรื่อยๆ จนกว่าเขาจะได้แผ่นขนาด A5 ที่จำเป็นสำหรับชุดแรกของสัปดาห์
 
-All the unused sheets are placed back in the envelope.
+แผ่นที่ไม่ได้ใช้ทั้งหมดจะถูกใส่กลับเข้าไปในซองจดหมาย
 
 <img class="img-responsive center-block" alt="A1-size sheet split into: A2, A3, A4 and two A5 sheets" src="https://cdn.freecodecamp.org/curriculum/project-euler/paper-sheets-of-standard-sizes-an-expected-value-problem.png" style="background-color: white; padding: 10px;">
 
-At the beginning of each subsequent batch, he takes one sheet of paper from the envelope at random. If it is of size A5, he uses it. If it is larger, he repeats the 'cut-in-half' procedure until he has what he needs, and any remaining sheets are always placed back in the envelope.
+นตอนต้นของแต่ละชุดต่อๆ มา เขาสุ่มหยิบกระดาษหนึ่งแผ่นจากซองจดหมาย ถ้าเป็นขนาด A5 เขาจะใช้มัน หากมีขนาดใหญ่ขึ้น เขาจะทำซ้ำขั้นตอน 'ตัดครึ่ง' จนกว่าเขาจะได้สิ่งที่ต้องการ และกระดาษที่เหลือจะถูกใส่กลับเข้าไปในซองจดหมายเสมอ
 
-Excluding the first and last batch of the week, find the expected number of times (during each week) that the foreman finds a single sheet of paper in the envelope.
+ไม่รวมชุดแรกและชุดสุดท้ายของสัปดาห์ ให้หาจำนวนครั้งที่คาดหวัง (ในแต่ละสัปดาห์) ที่หัวหน้าคนงานพบกระดาษแผ่นเดียวในซองจดหมาย
 
-Give your answer rounded to six decimal places using the format `x.xxxxxx`.
+ให้คำตอบของคุณเป็นทศนิยมหกตำแหน่งโดยใช้รูปแบบ "x.xxxxxx"
 
 # --hints--
 
-`expectedValueProblem()` should return `0.464399`.
+`expectedValueProblem()` ควร return `0.464399`.
 
 ```js
 assert.strictEqual(expectedValueProblem(), 0.464399);

@@ -8,11 +8,11 @@ dashedName: problem-57-square-root-convergents
 
 # --description--
 
-It is possible to show that the square root of two can be expressed as an infinite continued fraction.
+แสดง square root ของ two สามารถอธิบาย infinite continued fraction.
 
 <div style='text-align: center;'>$\sqrt 2 =1+ \frac 1 {2+ \frac 1 {2 +\frac 1 {2+ \dots}}}$</div>
 
-By expanding this for the first four iterations, we get:
+4 iterations แรก:
 
 $1 + \\frac 1 2 = \\frac 32 = 1.5$
 
@@ -22,31 +22,31 @@ $1 + \\frac 1 {2 + \\frac 1 {2+\\frac 1 2}} = \\frac {17}{12} = 1.41666 \\dots$
 
 $1 + \\frac 1 {2 + \\frac 1 {2+\\frac 1 {2+\\frac 1 2}}} = \\frac {41}{29} = 1.41379 \\dots$
 
-The next three expansions are $\\frac {99}{70}$, $\\frac {239}{169}$, and $\\frac {577}{408}$, but the eighth expansion, $\\frac {1393}{985}$, is the first example where the number of digits in the numerator exceeds the number of digits in the denominator.
+expansions ที่ 3 คือ $\\frac {99}{70}$, $\\frac {239}{169}$, และ $\\frac {577}{408}$, แต่ expansion ที่ 8, $\\frac {1393}{985}$คือตัวอย่างแรกที่มีจำนวนของ digits ใน numerator eมากกว่าจำนวนของ digits ใน denominator
 
-In the first `n` expansions, how many fractions contain a numerator with more digits than denominator?
+ใน `n` expansions มีเศษส่วนกี่ตัวที่มี numerator ที่มี digits มากกว่า denominator?
 
 # --hints--
 
-`squareRootConvergents(10)` should return a number.
+`squareRootConvergents(10)` ควร return number.
 
 ```js
 assert(typeof squareRootConvergents(10) === 'number');
 ```
 
-`squareRootConvergents(10)` should return 1.
+`squareRootConvergents(10)` ควร return 1.
 
 ```js
 assert.strictEqual(squareRootConvergents(10), 1);
 ```
 
-`squareRootConvergents(100)` should return 15.
+`squareRootConvergents(100)` ควร return 15.
 
 ```js
 assert.strictEqual(squareRootConvergents(100), 15);
 ```
 
-`squareRootConvergents(1000)` should return 153.
+`squareRootConvergents(1000)` ควร return 153.
 
 ```js
 assert.strictEqual(squareRootConvergents(1000), 153);

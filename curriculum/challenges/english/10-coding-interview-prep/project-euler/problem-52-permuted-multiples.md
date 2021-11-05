@@ -8,25 +8,25 @@ dashedName: problem-52-permuted-multiples
 
 # --description--
 
-It can be seen that the number, 125874, and its double, 251748, contain exactly the same digits, but in a different order.
+จำนวน 125874 และ 251748(สองเท่าของค่าแรก) มี digits ที่เหมือนกัน แต่ลำดับต่างกัน
 
-Find the smallest positive integer, such that multiplied by integers $\\{2, 3, \ldots, n\\}$, contain the same digits.
+หา integer ที่น้อยที่สุดและเป็นค่าบวก ที่คูณด้วย integers $\\{2, 3, \ldots, n\\}$, และมีลำดับที่เหมือนกัน
 
 # --hints--
 
-`permutedMultiples(2)` should return a number.
+`permutedMultiples(2)` ควร return number.
 
 ```js
 assert(typeof permutedMultiples(2) === 'number');
 ```
 
-`permutedMultiples(2)` should return `125874`.
+`permutedMultiples(2)` ควร return `125874`.
 
 ```js
 assert.strictEqual(permutedMultiples(2), 125874);
 ```
 
-`permutedMultiples(6)` should return `142857`.
+`permutedMultiples(6)` ควร return `142857`.
 
 ```js
 assert.strictEqual(permutedMultiples(6), 142857);

@@ -8,15 +8,15 @@ dashedName: problem-249-prime-subset-sums
 
 # --description--
 
-Let $S = \\{2, 3, 5, \ldots, 4999\\}$ be the set of prime numbers less than 5000.
+ให้ $S = \\{2, 3, 5, \ldots, 4999\\}$ เป็นเซตของจำนวนเฉพาะที่น้อยกว่า 5000
 
-Find the number of subsets of $S$, the sum of whose elements is a prime number.
+หาจำนวนเซตย่อยของ $S$ ผลรวมขององค์ประกอบที่เป็นจำนวนเฉพาะ
 
-Enter the rightmost 16 digits as your answer.
+ป้อนตัวเลข 16 หลักขวาสุดเป็นคำตอบ
 
 # --hints--
 
-`primeSubsetSums()` should return `9275262564250418`.
+`primeSubsetSums()` ควรreturn `9275262564250418`.
 
 ```js
 assert.strictEqual(primeSubsetSums(), 9275262564250418);

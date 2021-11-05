@@ -8,32 +8,32 @@ dashedName: problem-287-quadtree-encoding-a-simple-compression-algorithm
 
 # --description--
 
-The quadtree encoding allows us to describe a $2^N×2^N$ black and white image as a sequence of bits (0 and 1). Those sequences are to be read from left to right like this:
+การเข้ารหัสแบบ quadtree ช่วยให้เราสามารถอธิบายภาพขาวดำ $2^N×2^N$ เป็นลำดับของbit (0 และ 1) ลำดับเหล่านั้นจะต้องอ่านจากซ้ายไปขวาดังนี้:
 
-- the first bit deals with the complete $2^N×2^N$ region;
-- "0" denotes a split:
-  - the current $2^n×2^n$ region is divided into 4 sub-regions of dimension $2^{n - 1}×2^{n - 1}$,
-  - the next bits contains the description of the top left, top right, bottom left and bottom right sub-regions - in that order;
-- "10" indicates that the current region contains only black pixels;
-- "11" indicates that the current region contains only white pixels.
+- bitแรกเกี่ยวข้องกับภูมิภาค $2^N×2^N$ ที่สมบูรณ์
+- "0" หมายถึงการแบ่ง:
+  - พื้นที่ $2^n×2^n$ ปัจจุบัน แบ่งออกเป็น 4 ภูมิภาคย่อยของมิติ $2^{n - 1}×2^{n - 1}$,
+  - bitถัดไปประกอบด้วยคำอธิบายของภูมิภาคย่อยซ้ายบน ขวาบน ซ้ายล่าง และขวาล่าง - ตามลำดับ
+- "10" แสดงว่าภูมิภาคปัจจุบันมีเพียงพิกเซลสีดำเท่านั้น
+- "11" แสดงว่าพื้นที่ปัจจุบันมีเพียงพิกเซลสีขาวเท่านั้น
 
-Consider the following 4×4 image (colored marks denote places where a split can occur):
+พิจารณาภาพ 4 × 4 ต่อไปนี้ (เครื่องหมายสีแสดงถึงตำแหน่งที่สามารถเกิดการแตกได้):
 
 <img class="img-responsive center-block" alt="4x4 image with colored marks denoting place where split can occur" src="https://cdn.freecodecamp.org/curriculum/project-euler/quadtree-encoding-a-simple-compression-algorithm.gif" style="background-color: white; padding: 10px;">
 
-This image can be described by several sequences, for example : "<strong><span style="color: red">0</span></strong><strong><span style="color: blue">0</span></strong>10101010<strong><span style="color: green">0</span></strong>1011111011<strong><span style="color: orange">0</span></strong>10101010", of length 30, or "<strong><span style="color: red">0</span></strong>10<strong><span style="color: green">0</span></strong>101111101110", of length 16, which is the minimal sequence for this image.
+รูปภาพนี้สามารถอธิบายได้หลายลำดับ เช่น "<strong><span style="color: red">0</span></strong><strong><span style="color: blue">0< /span></strong>10101010<strong><span style="color: green">0</span></strong>1011111011<strong><span style="color: orange">0</span>< /strong>10101010" ยาว 30 หรือ "<strong><span style="color: red">0</span></strong>10<strong><span style="color: green">0< /span></strong>101111101110" ความยาว 16 ซึ่งเป็นลำดับขั้นต่ำสำหรับภาพนี้
 
-For a positive integer $N$, define $D_N$ as the $2^N×2^N$ image with the following coloring scheme:
+สำหรับจำนวนเต็มบวก $N$ ให้กำหนด $D_N$ เป็นรูปภาพ $2^N×2^N$ ด้วยรูปแบบการระบายสีต่อไปนี้:
 
-- the pixel with coordinates $x = 0$, $y = 0$ corresponds to the bottom left pixel,
-- if ${(x - 2^{N - 1})}^2 + {(y - 2^{N - 1})}^2 ≤ 2^{2N - 2}$ then the pixel is black,
-- otherwise the pixel is white.
+- พิกเซลที่มีพิกัด $x = 0$, $y = 0$ สอดคล้องกับพิกเซลล่างซ้าย
+- ถ้า ${(x - 2^{N - 1})}^2 + {(y - 2^{N - 1})}^2 ≤ 2^{2N - 2}$ แล้ว พิกเซลจะเป็นสีดำ
+- มิฉะนั้นพิกเซลจะเป็นสีขาว
 
-What is the length of the minimal sequence describing $D_{24}$?
+ความยาวของลำดับขั้นต่ำที่อธิบาย $D_{24}$ คือเท่าใด
 
 # --hints--
 
-`quadtreeEncoding()` should return `313135496`.
+`quadtreeEncoding()` ควร return `313135496`.
 
 ```js
 assert.strictEqual(quadtreeEncoding(), 313135496);

@@ -8,17 +8,17 @@ dashedName: problem-339-peredur-fab-efrawg
 
 # --description--
 
-"And he came towards a valley, through which ran a river; and the borders of the valley were wooded, and on each side of the river were level meadows. And on one side of the river he saw a flock of white sheep, and on the other a flock of black sheep. And whenever one of the white sheep bleated, one of the black sheep would cross over and become white; and when one of the black sheep bleated, one of the white sheep would cross over and become black." - Peredur the Son of Evrawc
+“แล้วพระองค์เสด็จมาถึงหุบเขาแห่งหนึ่ง มีแม่น้ำไหลผ่าน พรมแดนของหุบเขานั้นเป็นป่าไม้ และทุกด้านของแม่น้ำเป็นทุ่งหญ้าราบ ด้านหนึ่งของแม่น้ำทรงเห็นฝูงแกะขาวฝูงหนึ่ง และ อีกฝูงหนึ่งเป็นแกะดำ และเมื่อใดที่แกะขาวตัวหนึ่งส่งเสียงร้อง แกะดำตัวหนึ่งจะข้ามไปและกลายเป็นขาว และเมื่อแกะดำตัวหนึ่งส่งเสียงร้อง แกะขาวตัวหนึ่งจะข้ามไปและกลายเป็นสีดำ ." - Peredur บุตรแห่ง Evrawc
 
-Initially, each flock consists of $n$ sheep. Each sheep (regardless of color) is equally likely to be the next sheep to bleat. After a sheep has bleated and a sheep from the other flock has crossed over, Peredur may remove a number of white sheep in order to maximize the expected final number of black sheep. Let $E(n)$ be the expected final number of black sheep if Peredur uses an optimal strategy.
+ในขั้นต้น แต่ละฝูงประกอบด้วยแกะ $n$ แกะแต่ละตัว (โดยไม่คำนึงถึงสี) มีแนวโน้มที่จะเป็นแกะตัวต่อไปที่ร้องโหยหวนเท่ากัน หลังจากที่แกะตัวหนึ่งร้องคร่ำครวญและแกะจากฝูงอื่นข้ามไป Peredur อาจนำแกะขาวจำนวนหนึ่งออกเพื่อเพิ่มจำนวนแกะดำสุดท้ายที่คาดหวังให้ได้มากที่สุด ให้ $E(n)$ เป็นจำนวนสุดท้ายของแกะดำที่คาดไว้หาก Peredur ใช้กลยุทธ์ที่เหมาะสมที่สุด
 
-You are given that $E(5) = 6.871346$ rounded to 6 places behind the decimal point.
+คุณจะได้รับ $E(5) = 6.871346$ ที่ปัดเศษเป็น 6 ตำแหน่งหลังจุดทศนิยม
 
-Find $E(10\\,000)$ and give your answer rounded to 6 places behind the decimal point.
+หา $E(10\\,000)$ และให้คำตอบของคุณปัดเศษเป็น 6 ตำแหน่งหลังจุดทศนิยม
 
 # --hints--
 
-`peredurFabEfrawg()` should return `19823.542204`.
+`peredurFabEfrawg()`ควร return `19823.542204`.
 
 ```js
 assert.strictEqual(peredurFabEfrawg(), 19823.542204);

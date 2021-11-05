@@ -8,11 +8,11 @@ dashedName: problem-358-cyclic-numbers
 
 # --description--
 
-A cyclic number with $n$ digits has a very interesting property:
+เลขวัฏจักรที่มีตัวเลข $n$ มีคุณสมบัติที่น่าสนใจมาก:
 
-When it is multiplied by 1, 2, 3, 4, ... $n$, all the products have exactly the same digits, in the same order, but rotated in a circular fashion!
+เมื่อคูณด้วย 1, 2, 3, 4, ... $n$ ผลิตภัณฑ์ทั้งหมดมีตัวเลขเหมือนกันทุกประการในลำดับเดียวกัน แต่หมุนเป็นวงกลม!
 
-The smallest cyclic number is the 6-digit number 142857:
+หมายเลขไซเคิลที่เล็กที่สุดคือตัวเลข 6 หลัก 142857
 
 $$\begin{align}
   & 142857 × 1 = 142857 \\\\
@@ -23,7 +23,7 @@ $$\begin{align}
   & 142857 × 6 = 857142
 \end{align}$$
 
-The next cyclic number is 0588235294117647 with 16 digits:
+เลขถัดไปคือ 0588235294117647 มี 16 หลัก
 
 $$\begin{align}
   & 0588235294117647 × 1 = 0588235294117647 \\\\
@@ -33,13 +33,13 @@ $$\begin{align}
   & 0588235294117647 × 16 = 9411764705882352
 \end{align}$$
 
-Note that for cyclic numbers, leading zeros are important.
+Note that เลขวงจร ศูนย์นำหน้ามีความสำคัญ
 
-There is only one cyclic number for which, the eleven leftmost digits are 00000000137 and the five rightmost digits are 56789 (i.e., it has the form $00000000137\ldots56789$ with an unknown number of digits in the middle). Find the sum of all its digits.
+มีเลขวนรอบเดียวเท่านั้น โดยที่ 11 หลักซ้ายสุดคือ 00000000137 และห้าหลักขวาสุดคือ 56789 (กล่าวคือ มีรูปแบบ $00000000137\ldots56789$ โดยไม่ทราบจำนวนหลักที่อยู่ตรงกลาง) หาผลรวมของตัวเลขทั้งหมด
 
 # --hints--
 
-`cyclicNumbers()` should return `3284144505`.
+`cyclicNumbers()` ควร return `3284144505`.
 
 ```js
 assert.strictEqual(cyclicNumbers(), 3284144505);

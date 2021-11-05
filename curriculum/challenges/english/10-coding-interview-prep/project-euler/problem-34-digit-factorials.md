@@ -8,21 +8,21 @@ dashedName: problem-34-digit-factorials
 
 # --description--
 
-145 is a curious number, as 1! + 4! + 5! = 1 + 24 + 120 = 145.
+145 เป็น curious number เช่น 1! + 4! + 5! = 1 + 24 + 120 = 145.
 
-Find the numbers and the sum of the numbers which are equal to the sum of the factorial of their digits.
+หาตัวเลขและผลรวมของตัวเลขที่เท่ากับผลรวมของ factorial ของ digits ของตัวมันเอง
 
-**Note:** as 1! = 1 and 2! = 2 are not sums they are not included.
+**Note:** เช่น 1! = 1 และ 2! = 2 ไม่ได้ถูกรวม
 
 # --hints--
 
-`digitFactorial()` should return an object.
+`digitFactorial()` ควร return object
 
 ```js
 assert.typeOf(digitFactorial(), 'object');
 ```
 
-`digitFactorial()` should return { sum: 40730, numbers: [145, 40585] }.
+`digitFactorial()` ควร return { sum: 40730, numbers: [145, 40585] }.
 
 ```js
 assert.deepEqual(digitFactorial(), { sum: 40730, numbers: [145, 40585] });

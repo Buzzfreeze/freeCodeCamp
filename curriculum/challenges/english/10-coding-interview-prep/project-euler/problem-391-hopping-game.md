@@ -8,32 +8,32 @@ dashedName: problem-391-hopping-game
 
 # --description--
 
-Let $s_k$ be the number of 1’s when writing the numbers from 0 to $k$ in binary.
+ให้ $s_k$ เป็นจำนวน 1 เมื่อเขียนตัวเลขตั้งแต่ 0 ถึง $k$ ในรูปแบบไบนารี
 
-For example, writing 0 to 5 in binary, we have 0, 1, 10, 11, 100, 101. There are seven 1’s, so $s_5 = 7$.
+ตัวอย่างเช่น การเขียน 0 ถึง 5 ในรูปแบบไบนารี เรามี 0, 1, 10, 11, 100, 101 มี 1 เจ็ดตัว ดังนั้น $s_5 = 7$
 
-The sequence $S = \\{s_k : k ≥ 0\\}$ starts $\\{0, 1, 2, 4, 5, 7, 9, 12, \ldots\\}$.
+ลำดับ $S = \\{s_k : k ≥ 0\\}$ เริ่ม $\\{0, 1, 2, 4, 5, 7, 9, 12, \ldots\\}$
 
-A game is played by two players. Before the game starts, a number $n$ is chosen. A counter $c$ starts at 0. At each turn, the player chooses a number from 1 to $n$ (inclusive) and increases $c$ by that number. The resulting value of $c$ must be a member of $S$. If there are no more valid moves, the player loses.
+เกมเล่นโดยผู้เล่นสองคน ก่อนเริ่มเกม จะเลือกหมายเลข $n$ ตัวนับ $c$ เริ่มต้นที่ 0 ในแต่ละเทิร์น ผู้เล่นจะเลือกตัวเลขตั้งแต่ 1 ถึง $n$ (รวม) และเพิ่ม $c$ ด้วยตัวเลขนั้น ค่าผลลัพธ์ของ $c$ จะต้องเป็นสมาชิกของ $S$ หากไม่มีการเคลื่อนไหวที่ถูกต้องอีกต่อไป ผู้เล่นจะแพ้
 
-For example, with $n = 5$ and starting with $c = 0$:
+ตัวอย่างเช่น ด้วย $n = 5$ และเริ่มต้นด้วย $c = 0$:
 
-- Player 1 chooses 4, so $c$ becomes $0 + 4 = 4$.
-- Player 2 chooses 5, so $c$ becomes $4 + 5 = 9$.
-- Player 1 chooses 3, so $c$ becomes $9 + 3 = 12$.
-- etc.
+- ผู้เล่น 1 เลือก 4 ดังนั้น $c$ จะกลายเป็น $0 + 4 = 4$
+- ผู้เล่น 2 เลือก 5 ดังนั้น $c$ จะกลายเป็น $4 + 5 = 9$
+- ผู้เล่น 1 เลือก 3 ดังนั้น $c$ จะกลายเป็น $9 + 3 = 12$
+- ฯลฯ
 
-Note that $c$ must always belong to $S$, and each player can increase $c$ by at most $n$.
+โปรดทราบว่า $c$ ต้องเป็นของ $S$ เสมอ และผู้เล่นแต่ละคนสามารถเพิ่ม $c$ ได้สูงสุด $n$
 
-Let $M(n)$ be the highest number the first player can choose at her first turn to force a win, and $M(n) = 0$ if there is no such move. For example, $M(2) = 2$, $M(7) = 1$ and $M(20) = 4$.
+ให้ $M(n)$ เป็นจำนวนสูงสุดที่ผู้เล่นคนแรกสามารถเลือกได้ในเทิร์นแรกของเธอเพื่อบังคับให้ชนะ และ $M(n) = 0$ หากไม่มีการเคลื่อนไหวดังกล่าว ตัวอย่างเช่น $M(2) = 2$, $M(7) = 1$ และ $M(20) = 4$
 
-It can be verified $\sum M{(n)}^3 = 8150$ for $1 ≤ n ≤ 20$.
+สามารถตรวจสอบได้ $\sum M{(n)}^3 = 8150$ สำหรับ $1 ≤ n ≤ 20$
 
-Find $\sum M{(n)}^3$ for $1 ≤ n ≤ 1000$.
+หา $\sum M{(n)}^3$ สำหรับ $1 ≤ n ≤ 1000$
 
 # --hints--
 
-`hoppingGame()` should return `61029882288`.
+`hoppingGame()` ควร return `61029882288`.
 
 ```js
 assert.strictEqual(hoppingGame(), 61029882288);

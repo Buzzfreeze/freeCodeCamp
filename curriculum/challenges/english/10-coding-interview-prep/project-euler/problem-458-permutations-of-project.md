@@ -8,17 +8,17 @@ dashedName: problem-458-permutations-of-project
 
 # --description--
 
-Consider the alphabet $A$ made out of the letters of the word `project`: $A = \\{c, e, j, o, p, r, t\\}$.
+พิจารณาตัวอักษร $A$ ที่สร้างจากตัวอักษรของคำว่า `project`: $A = \\{c, e, j, o, p, r, t\\}$
 
-Let $T(n)$ be the number of strings of length $n$ consisting of letters from $A$ that do not have a substring that is one of the 5040 permutations of `project`.
+ให้ $T(n)$ เป็นจำนวนstringที่มีความยาว $n$ ซึ่งประกอบด้วยตัวอักษรจาก $A$ ที่ไม่มีstringย่อยที่เป็นหนึ่งในการเปลี่ยนแปลง 5040 ของ `project`.
 
 $T(7) = 7^7 - 7! = 818\\,503$.
 
-Find $T({10}^{12})$. Give the last 9 digits of your answer.
+หา  $T({10}^{12})$. มีคำตอบ 9 หลัก
 
 # --hints--
 
-`permutationsOfProject()` should return `423341841`.
+`permutationsOfProject()` ควร return `423341841`.
 
 ```js
 assert.strictEqual(permutationsOfProject(), 423341841);

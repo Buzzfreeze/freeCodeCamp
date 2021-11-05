@@ -8,17 +8,17 @@ dashedName: problem-135-same-differences
 
 # --description--
 
-Given the positive integers, $x$, $y$, and $z$, are consecutive terms of an arithmetic progression, the least value of the positive integer, $n$, for which the equation, $x^2 − y^2 − z^2 = n$, has exactly two solutions is $n = 27$:
+จากจำนวนเต็มบวก $x$, $y$ และ $z$ เป็นพจน์ต่อเนื่องของความก้าวหน้าทางคณิตศาสตร์ ค่าที่น้อยที่สุดของจำนวนเต็มบวก $n$ ซึ่งสมการ $x^2 − y^ 2 − z^2 = n$ มีสองคำตอบคือ $n = 27$:
 
 $$34^2 − 27^2 − 20^2 = 12^2 − 9^2 − 6^2 = 27$$
 
-It turns out that $n = 1155$ is the least value which has exactly ten solutions.
+ปรากฎว่า $n = 1155$ เป็นค่าที่น้อยที่สุดซึ่งมีสิบคำตอบพอดี
 
-How many values of $n$ less than one million have exactly ten distinct solutions?
+ค่าของ $n$ ที่น้อยกว่าหนึ่งล้านมีค่าเท่าใดที่มีคำตอบที่แตกต่างกันอยู่สิบ
 
 # --hints--
 
-`sameDifferences()` should return `4989`.
+`sameDifferences()` ควร return `4989`.
 
 ```js
 assert.strictEqual(sameDifferences(), 4989);

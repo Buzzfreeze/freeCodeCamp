@@ -8,15 +8,15 @@ dashedName: problem-111-primes-with-runs
 
 # --description--
 
-Considering 4-digit primes containing repeated digits it is clear that they cannot all be the same: 1111 is divisible by 11, 2222 is divisible by 22, and so on. But there are nine 4-digit primes containing three ones:
+เมื่อพิจารณาจำนวนเฉพาะ 4 หลักที่มีตัวเลขซ้ำกัน จะเห็นได้ชัดว่าแต่ละจำนวนไม่เหมือนกัน: 1111 หารด้วย 11 ลงตัว 2222 หารด้วย 22 ลงตัว เป็นต้น แต่มีเลขจำนวนเฉพาะ 4 หลักเก้าตัวที่มีสามตัว:
 
 $$1117, 1151, 1171, 1181, 1511, 1811, 2111, 4111, 8111$$
 
-We shall say that $M(n, d)$ represents the maximum number of repeated digits for an n-digit prime where d is the repeated digit, $N(n, d)$ represents the number of such primes, and $S(n, d)$ represents the sum of these primes.
+เราจะบอกว่า $M(n, d)$ หมายถึงจำนวนสูงสุดของตัวเลขที่ซ้ำกันสำหรับจำนวนเฉพาะ n-digit โดยที่ d คือจำนวนหลักที่ซ้ำกัน $N(n, d)$ แทนจำนวนของจำนวนเฉพาะดังกล่าว และ $S (n, d)$ แทนผลรวมของจำนวนเฉพาะเหล่านี้
 
-So $M(4, 1) = 3$ is the maximum number of repeated digits for a 4-digit prime where one is the repeated digit, there are $N(4, 1) = 9$ such primes, and the sum of these primes is $S(4, 1) = 22275$. It turns out that for d = 0, it is only possible to have $M(4, 0) = 2$ repeated digits, but there are $N(4, 0) = 13$ such cases.
+ดังนั้น $M(4, 1) = 3$ คือจำนวนสูงสุดของตัวเลขที่ซ้ำกันสำหรับจำนวนเฉพาะ 4 หลัก โดยที่หนึ่งคือหลักที่ซ้ำกัน มี $N(4, 1) = 9$ จำนวนเฉพาะดังกล่าว และผลรวมของ จำนวนเฉพาะเหล่านี้คือ $S(4, 1) = 22275$ ปรากฎว่าสำหรับ d = 0, เป็นไปได้เท่านั้นที่จะมี $M(4, 0) = 2$ หลักซ้ำ แต่มี $N(4, 0) = 13$ กรณีดังกล่าว
 
-In the same way we obtain the following results for 4-digit primes.
+ในทำนองเดียวกัน เราได้ผลลัพธ์ต่อไปนี้สำหรับจำนวนเฉพาะ 4 หลัก
 
 | Digit, d | $M(4, d)$ | $N(4, d)$ | $S(4, d)$ |
 |----------|-----------|-----------|-----------|
@@ -31,11 +31,11 @@ In the same way we obtain the following results for 4-digit primes.
 | 8        | 3         | 1         | 8887      |
 | 9        | 3         | 7         | 48073     |
 
-For d = 0 to 9, the sum of all $S(4, d)$ is 273700. Find the sum of all $S(10, d)$.
+ให้ d = 0 to 9 ผลรวม $S(4, d)$ คือ 273700. หาผลรวม $S(10, d)$.
 
 # --hints--
 
-`primesWithRuns()` should return `612407567715`.
+`primesWithRuns()` ควร return `612407567715`.
 
 ```js
 assert.strictEqual(primesWithRuns(), 612407567715);

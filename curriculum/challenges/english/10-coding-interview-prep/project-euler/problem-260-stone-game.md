@@ -8,33 +8,34 @@ dashedName: problem-260-stone-game
 
 # --description--
 
-A game is played with three piles of stones and two players.
+เกมหนึ่งเล่นด้วยหินสามกองและผู้เล่นสองคน
 
-On each player's turn, the player removes one or more stones from the piles. However, if the player takes stones from more than one pile, the same number of stones must be removed from each of the selected piles.
+ในตาของผู้เล่นแต่ละคน ผู้เล่นจะหยิบก้อนหินออกจากกองหนึ่งก้อนหรือมากกว่า อย่างไรก็ตาม หากผู้เล่นนำหินออกจากกองมากกว่าหนึ่งกอง จะต้องนำหินจำนวนเท่ากันออกจากแต่ละกองที่เลือก
 
-In other words, the player chooses some $N > 0$ and removes:
+กล่าวอีกนัยหนึ่ง ผู้เล่นเลือก $N > 0$ และลบ:
 
-- $N$ stones from any single pile; or
-- $N$ stones from each of any two piles ($2N$ total); or
-- $N$ stones from each of the three piles ($3N$ total).
+- $N$ หินจากกองเดียว; หรือ
+- $N$ หินจากแต่ละกองสองกอง (รวม $2N$); หรือ
+- $N$ สโตนจากแต่ละกอง (ทั้งหมด 3N$)
 
-The player taking the last stone(s) wins the game.
+ผู้เล่นที่ได้รับหินก้อนสุดท้ายจะเป็นผู้ชนะ
 
-A winning configuration is one where the first player can force a win.
+การกำหนดค่าที่ชนะคือสิ่งที่ผู้เล่นคนแรกสามารถบังคับให้ชนะได้
 
-For example, (0,0,13), (0,11,11) and (5,5,5) are winning configurations because the first player can immediately remove all stones.
+ตัวอย่างเช่น (0,0,13), (0,11,11) และ (5,5,5) ชนะการกำหนดค่าเพราะผู้เล่นคนแรกสามารถลบหินทั้งหมดได้ทันที
 
-A losing configuration is one where the second player can force a win, no matter what the first player does.
+การกำหนดค่าที่แพ้คือสิ่งที่ผู้เล่นคนที่สองสามารถบังคับให้ชนะ ไม่ว่าผู้เล่นคนแรกจะทำอะไรก็ตาม
 
-For example, (0,1,2) and (1,3,3) are losing configurations: any legal move leaves a winning configuration for the second player.
+ตัวอย่างเช่น (0,1,2) และ (1,3,3) กำลังสูญเสียการกำหนดค่า: การย้ายทางกฎหมายใด ๆ ออกจากการกำหนดค่าที่ชนะสำหรับผู้เล่นคนที่สอง
 
-Consider all losing configurations ($x_i$,$y_i$,$z_i$) where $x_i ≤ y_i ≤ z_i ≤ 100$. We can verify that $\sum (x_i + y_i + z_i) = 173\\,895$ for these.
+พิจารณาการสูญเสียการกำหนดค่าทั้งหมด ($x_i$,$y_i$,$z_i$) โดยที่ $x_i ≤ y_i ≤ z_i ≤ 100$ เราสามารถยืนยันได้ว่า $\sum (x_i + y_i + z_i) = 173\\,895$ สำหรับสิ่งเหล่านี้
 
-Find $\sum (x_i + y_i + z_i)$ where ($x_i$,$y_i$,$z_i$) ranges over the losing configurations with $x_i ≤ y_i ≤ z_i ≤ 1000$.
+หา $\sum (x_i + y_i + z_i)$ โดยที่ ($x_i$,$y_i$,$z_i$) อยู่ในช่วงการกำหนดค่าที่สูญเสียไปกับ 
+$x_i ≤ y_i ≤ z_i ≤ 1000$
 
 # --hints--
 
-`stoneGame()` should return `167542057`.
+`stoneGame()` ควร return `167542057`.
 
 ```js
 assert.strictEqual(stoneGame(), 167542057);

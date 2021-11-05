@@ -8,19 +8,19 @@ dashedName: problem-403-lattice-points-enclosed-by-parabola-and-line
 
 # --description--
 
-For integers $a$ and $b$, we define $D(a, b)$ as the domain enclosed by the parabola $y = x^2$ and the line $y = ax + b: D(a, b) = \\{ (x, y) | x^2 ≤ y ≤ ax + b \\}$.
+สำหรับจำนวนเต็ม $a$ และ $b$ เรากำหนด $D(a, b)$ เป็นโดเมนที่ล้อมรอบด้วยพาราโบลา $y = x^2$ และบรรทัด $y = ax + b: D(a, b) = \\{ (x, y) | x^2 ≤ y ≤ ขวาน + b \\}$
 
-$L(a, b)$ is defined as the number of lattice points contained in $D(a, b)$. For example, $L(1, 2) = 8$ and $L(2, -1) = 1$.
+$L(a, b)$ ถูกกำหนดให้เป็นจำนวนจุดที่แตะที่มีอยู่ใน $D(a, b)$ ตัวอย่างเช่น $L(1, 2) = 8$ และ $L(2, -1) = 1$
 
-We also define $S(N)$ as the sum of $L(a, b)$ for all the pairs ($a$, $b$) such that the area of $D(a, b)$ is a rational number and $|a|,|b| ≤ N$.
+นอกจากนี้เรายังกำหนด $S(N)$ เป็นผลรวมของ $L(a, b)$ สำหรับคู่ทั้งหมด ($a$, $b$) เพื่อให้พื้นที่ของ $D(a, b)$ เป็นตรรกยะ ตัวเลขและ $|a|,|b| ≤ N$
 
-We can verify that $S(5) = 344$ and $S(100) = 26\\,709\\,528$.
+เราสามารถยืนยันได้ว่า $S(5) = 344$ และ $S(100) = 26\\,709\\,528$
 
-Find $S({10}^{12})$. Give your answer $\bmod {10}^8$.
+หา $S({10}^{12})$ ให้คำตอบของคุณ $\bmod {10}^8$
 
 # --hints--
 
-`latticePoints()` should return `18224771`.
+`latticePoints()` ควร return `18224771`.
 
 ```js
 assert.strictEqual(latticePoints(), 18224771);

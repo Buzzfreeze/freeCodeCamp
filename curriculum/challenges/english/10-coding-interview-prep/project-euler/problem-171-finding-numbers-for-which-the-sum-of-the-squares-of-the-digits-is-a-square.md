@@ -11,7 +11,7 @@ dashedName: >-
 
 # --description--
 
-For a positive integer $n$, let $f(n)$ be the sum of the squares of the digits (in base 10) of $n$, e.g.
+สำหรับจำนวนเต็มบวก $n$ ให้ $f(n)$ เป็นผลรวมของกำลังสองของตัวเลข (ในฐาน 10) ของ $n$ เช่น
 
 $$\begin{align}
   & f(3) = 3^2 = 9 \\\\
@@ -19,11 +19,11 @@ $$\begin{align}
   & f(442) = 4^2 + 4^2 + 2^2 = 16 + 16 + 4 = 36 \\\\
 \end{align}$$
 
-Find the last nine digits of the sum of all $n$, $0 &lt; n &lt; {10}^{20}$, such that $f(n)$ is a perfect square.
+ค้นหาเก้าหลักสุดท้ายของผลรวมของ $n$, $0 &lt; น &lt; {10}^{20}$ ดังนั้น $f(n)$ จะเป็นกำลังสองสมบูรณ์
 
 # --hints--
 
-`lastDigitsSumOfPerfectSquare()` should return `142989277`.
+`lastDigitsSumOfPerfectSquare()` ควร return `142989277`.
 
 ```js
 assert.strictEqual(lastDigitsSumOfPerfectSquare(), 142989277);

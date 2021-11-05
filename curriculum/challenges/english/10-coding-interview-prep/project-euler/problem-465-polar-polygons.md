@@ -8,27 +8,27 @@ dashedName: problem-465-polar-polygons
 
 # --description--
 
-The kernel of a polygon is defined by the set of points from which the entire polygon's boundary is visible. We define a polar polygon as a polygon for which the origin is strictly contained inside its kernel.
+kernel ของรูปหลายเหลี่ยมถูกกำหนดโดยชุดของจุดที่มองเห็นขอบเขตของรูปหลายเหลี่ยมทั้งหมด เรากำหนดรูปหลายเหลี่ยมแบบมีขั้วเป็นรูปหลายเหลี่ยมซึ่งมีจุดกำเนิดอยู่ภายในkernelอย่างเคร่งครัด
 
-For this problem, a polygon can have collinear consecutive vertices. However, a polygon still cannot have self-intersection and cannot have zero area.
+สำหรับปัญหานี้ รูปหลายเหลี่ยมสามารถมีจุดยอดที่ต่อเนื่องกันแบบ collinear อย่างไรก็ตาม รูปหลายเหลี่ยมยังคงไม่มีจุดตัดตัวเองและไม่สามารถมีพื้นที่ศูนย์ได้
 
-For example, only the first of the following is a polar polygon (the kernels of the second, third, and fourth do not strictly contain the origin, and the fifth does not have a kernel at all):
+ตัวอย่างเช่น เฉพาะค่าแรกจากค่าต่อไปนี้คือรูปหลายเหลี่ยมแบบมีขั้ว (เมล็ดของเม็ดที่สอง สาม และสี่ไม่มีต้นกำเนิดอย่างเคร่งครัด และส่วนที่ห้าไม่มีkernelเลย):
 
 <img class="img-responsive center-block" alt="five example polygons" src="https://cdn.freecodecamp.org/curriculum/project-euler/polar-polygons.png" style="background-color: white; padding: 10px;">
 
-Notice that the first polygon has three consecutive collinear vertices.
+สังเกตว่ารูปหลายเหลี่ยมแรกมีจุดยอด collinear สามจุดติดต่อกัน
 
-Let $P(n)$ be the number of polar polygons such that the vertices $(x, y)$ have integer coordinates whose absolute values are not greater than $n$.
+ให้ $P(n)$ เป็นจำนวนรูปหลายเหลี่ยมเชิงขั้ว โดยที่จุดยอด $(x, y)$ มีพิกัดจำนวนเต็มที่มีค่าสัมบูรณ์ไม่เกิน $n$
 
-Note that polygons should be counted as different if they have different set of edges, even if they enclose the same area. For example, the polygon with vertices [(0,0), (0,3), (1,1), (3,0)] is distinct from the polygon with vertices [(0,0), (0,3), (1,1), (3,0), (1,0)].
+โปรดทราบว่ารูปหลายเหลี่ยมควรนับว่าต่างกันหากมีชุดขอบต่างกัน แม้ว่าจะล้อมรอบพื้นที่เดียวกันก็ตาม ตัวอย่างเช่น รูปหลายเหลี่ยมที่มีจุดยอด [(0,0), (0,3), (1,1), (3,0)] แตกต่างจากรูปหลายเหลี่ยมที่มีจุดยอด [(0,0), (0,3 ), (1,1), (3,0), (1,0)].
 
-For example, $P(1) = 131$, $P(2) = 1\\,648\\,531$, $P(3) = 1\\,099\\,461\\,296\\,175$ and $P(343)\bmod 1\\,000\\,000\\,007 = 937\\,293\\,740$.
+เช่น $P(1) = 131$, $P(2) = 1\\,648\\,531$, $P(3) = 1\\,099\\,461\\,296\\,175$ and $P(343)\bmod 1\\,000\\,000\\,007 = 937\\,293\\,740$.
 
-Find $P(7^{13})\bmod 1\\,000\\,000\\,007$.
+หา $P(7^{13})\bmod 1\\,000\\,000\\,007$.
 
 # --hints--
 
-`polarPolygons()` should return `585965659`.
+`polarPolygons()` ควร return `585965659`.
 
 ```js
 assert.strictEqual(polarPolygons(), 585965659);

@@ -14,43 +14,43 @@ If we list the set of reduced proper fractions for `d` ≤ 8 in ascending order 
 
 $$\frac{1}{8}, \frac{1}{7}, \frac{1}{6}, \frac{1}{5}, \frac{1}{4}, \frac{2}{7}, \frac{1}{3}, \frac{3}{8}, \frac{\textbf2}{\textbf5}, \frac{3}{7}, \frac{1}{2}, \frac{4}{7}, \frac{3}{5}, \frac{5}{8}, \frac{2}{3}, \frac{5}{7}, \frac{3}{4}, \frac{4}{5}, \frac{5}{6}, \frac{6}{7}, \frac{7}{8}$$
 
-It can be seen that $\frac{2}{5}$ is the fraction immediately to the left of $\frac{3}{7}$.
+จะเห็นได้ว่า $\frac{2}{5}$ เป็นเศษส่วนทางซ้ายของ $\frac{3}{7}$
 
-By listing the set of reduced proper fractions for `d` ≤ `limit` in ascending order of size, find the numerator of the fraction immediately to the left of $\frac{3}{7}$.
+โดยแสดงsetเศษส่วนที่เหมาะสมที่ลดแล้วสำหรับ `d` ≤ `limit` เรียงลำดับขนาดจากน้อยไปหามาก ให้หาตัวเศษของเศษส่วนทางซ้ายของ $\frac{3}{7}$.
 
 # --hints--
 
-`orderedFractions(8)` should return a number.
+`orderedFractions(8)` ควร return number.
 
 ```js
 assert(typeof orderedFractions(8) === 'number');
 ```
 
-`orderedFractions(8)` should return `2`.
+`orderedFractions(8)` ควร return `2`.
 
 ```js
 assert.strictEqual(orderedFractions(8), 2);
 ```
 
-`orderedFractions(10)` should return `2`.
+`orderedFractions(10)` ควร return `2`.
 
 ```js
 assert.strictEqual(orderedFractions(10), 2);
 ```
 
-`orderedFractions(9994)` should return `4283`.
+`orderedFractions(9994)` ควร return `4283`.
 
 ```js
 assert.strictEqual(orderedFractions(9994), 4283);
 ```
 
-`orderedFractions(500000)` should return `214283`.
+`orderedFractions(500000)` ควร return `214283`.
 
 ```js
 assert.strictEqual(orderedFractions(500000), 214283);
 ```
 
-`orderedFractions(1000000)` should return `428570`.
+`orderedFractions(1000000)` ควร return `428570`.
 
 ```js
 assert.strictEqual(orderedFractions(1000000), 428570);

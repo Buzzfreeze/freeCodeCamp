@@ -8,21 +8,21 @@ dashedName: problem-389-platonic-dice
 
 # --description--
 
-An unbiased single 4-sided die is thrown and its value, $T$, is noted.
+เป็นกลางถูกโยนทิ้ง และมีค่า $T$ ถูกบันทึกไว้
 
-$T$ unbiased 6-sided dice are thrown and their scores are added together. The sum, $C$, is noted.
+โยนลูกเต๋า 6 ด้านแบบไม่เอนเอียง $T$ และรวมคะแนนเข้าด้วยกัน ผลรวม $C$ ถูกบันทึกไว้
 
-$C$ unbiased 8-sided dice are thrown and their scores are added together. The sum, $O$, is noted.
+ลูกเต๋า 8 ด้านที่ไม่เอนเอียง $C$ จะถูกโยนและรวมคะแนนเข้าด้วยกัน ผลรวม $O$ ถูกบันทึกไว้
 
-$O$ unbiased 12-sided dice are thrown and their scores are added together. The sum, $D$, is noted.
+$O$ ลูกเต๋า 12 ด้านที่ไม่เอนเอียงและรวมคะแนนเข้าด้วยกัน ผลรวม $D$ ถูกบันทึกไว้
 
-$D$ unbiased 20-sided dice are thrown and their scores are added together. The sum, $I$, is noted.
+ลูกเต๋า 20 ด้านที่ไม่เอนเอียง $D$ จะถูกโยนและรวมคะแนนเข้าด้วยกัน มีการจดบันทึกผลรวม $I$
 
-Find the variance of $I$, and give your answer rounded to 4 decimal places.
+หาความแปรปรวนของ $I$ และให้คำตอบของคุณเป็นทศนิยม 4 ตำแหน่ง
 
 # --hints--
 
-`platonicDice()` should return `2406376.3623`.
+`platonicDice()` ควร return `2406376.3623`.
 
 ```js
 assert.strictEqual(platonicDice(), 2406376.3623);

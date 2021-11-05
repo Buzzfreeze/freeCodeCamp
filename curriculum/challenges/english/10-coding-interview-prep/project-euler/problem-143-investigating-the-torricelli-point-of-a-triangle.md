@@ -8,19 +8,19 @@ dashedName: problem-143-investigating-the-torricelli-point-of-a-triangle
 
 # --description--
 
-Let ABC be a triangle with all interior angles being less than 120 degrees. Let X be any point inside the triangle and let $XA = p$, $XC = q$, and $XB = r$.
+ให้ ABC เป็นรูปสามเหลี่ยมที่มีมุมภายในทั้งหมดน้อยกว่า 120 องศา ให้ X เป็นจุดใดก็ได้ภายในสามเหลี่ยม แล้วให้ $XA = p$, $XC = q$ และ $XB = r$
 
-Fermat challenged Torricelli to find the position of X such that p + q + r was minimised.
+Fermat challenged Torricelli เพื่อหาตำแหน่งของ X ที่ p + q + r ถูกย่อให้เล็กสุด
 
-Torricelli was able to prove that if equilateral triangles AOB, BNC and AMC are constructed on each side of triangle ABC, the circumscribed circles of AOB, BNC, and AMC will intersect at a single point, T, inside the triangle. Moreover he proved that T, called the Torricelli/Fermat point, minimises $p + q + r$. Even more remarkable, it can be shown that when the sum is minimised, $AN = BM = CO = p + q + r$ and that AN, BM and CO also intersect at T.
+Torricelli สามารถพิสูจน์ได้ว่าถ้ารูปสามเหลี่ยมด้านเท่า AOB, BNC และ AMC ถูกสร้างขึ้นในแต่ละด้านของสามเหลี่ยม ABC วงกลมที่ล้อมรอบของ AOB, BNC และ AMC จะตัดกันที่จุดเดียว T ภายในรูปสามเหลี่ยม นอกจากนี้เขายังพิสูจน์ว่า T ซึ่งเรียกว่าจุด Torricelli/Fermat ย่อขนาด $p + q + r$ ให้เล็กสุด ที่น่าทึ่งยิ่งกว่านั้น สามารถแสดงให้เห็นได้ว่าเมื่อผลรวมลดลง $AN = BM = CO = p + q + r$ และ AN, BM และ CO จะตัดกันที่ T
 
 <img class="img-responsive center-block" alt="equilateral triangles AOB, BNC and AMC constructed on each side of triangle ABC; with the circumscribed circles of AOB, BNC, and AMC will intersecting at a single point, T, inside the triangle" src="https://cdn.freecodecamp.org/curriculum/project-euler/investigating-the-torricelli-point-of-a-triangle.png" style="background-color: white; padding: 10px;">
 
-If the sum is minimised and a, b, c, p, q and r are all positive integers we shall call triangle ABC a Torricelli triangle. For example, $a = 399$, $b = 455$, $c = 511$ is an example of a Torricelli triangle, with $p + q + r = 784$. Find the sum of all distinct values of $p + q + r ≤ 120000$ for Torricelli triangles.
+หากผลรวมถูกย่อให้เล็กสุดและ a, b, c, p, q และ r เป็นจำนวนเต็มบวกทั้งหมด เราจะเรียกสามเหลี่ยม ABC ว่าสามเหลี่ยม Torricelli ตัวอย่างเช่น $a = 399$, $b = 455$, $c = 511$ เป็นตัวอย่างของสามเหลี่ยม Torricelli โดยที่ $p + q + r = 784$ หาผลรวมของค่าที่แตกต่างกันทั้งหมดของ $p + q + r ≤ 120000$ สำหรับสามเหลี่ยม Torricelli
 
 # --hints--
 
-`sumTorricelliTriangles()` should return `30758397`.
+`sumTorricelliTriangles()` ควร return `30758397`.
 
 ```js
 assert.strictEqual(sumTorricelliTriangles(), 30758397);

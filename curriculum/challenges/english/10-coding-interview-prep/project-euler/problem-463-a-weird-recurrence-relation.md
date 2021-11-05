@@ -8,7 +8,7 @@ dashedName: problem-463-a-weird-recurrence-relation
 
 # --description--
 
-The function $f$ is defined for all positive integers as follows:
+ฟังก์ชัน $f$ ถูกกำหนดสำหรับจำนวนเต็มบวกทั้งหมดดังนี้:
 
 $$\begin{align}
   & f(1) = 1 \\\\
@@ -18,15 +18,15 @@ $$\begin{align}
   & f(4n + 3) = 3f(2n + 1) - 2f(n)
 \end{align}$$
 
-The function $S(n)$ is defined as $\sum_{i=1}^{n} f(i)$.
+function $S(n)$ กำหนด $\sum_{i=1}^{n} f(i)$.
 
-$S(8) = 22$ and $S(100) = 3604$.
+$S(8) = 22$ และ $S(100) = 3604$.
 
-Find $S(3^{37})$. Give the last 9 digits of your answer.
+หา $S(3^{37})$ คำตอบมี 9 หลัก
 
 # --hints--
 
-`weirdRecurrenceRelation()` should return `808981553`.
+`weirdRecurrenceRelation()` ควร return `808981553`.
 
 ```js
 assert.strictEqual(weirdRecurrenceRelation(), 808981553);

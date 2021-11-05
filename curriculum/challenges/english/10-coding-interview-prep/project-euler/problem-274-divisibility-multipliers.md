@@ -8,25 +8,25 @@ dashedName: problem-274-divisibility-multipliers
 
 # --description--
 
-For each integer $p > 1$ coprime to 10 there is a positive divisibility multiplier $m &lt; p$ which preserves divisibility by $p$ for the following function on any positive integer, $n$:
+สำหรับแต่ละจำนวนเต็ม $p > 1$ coprime ถึง 10 จะมีตัวคูณหารบวก $m &lt; p$ ซึ่งคงการหารด้วย $p$ ไว้สำหรับฟังก์ชันต่อไปนี้ในจำนวนเต็มบวกใดๆ $n$:
 
 $f(n) = (\text{all but the last digit of} \\; n) + (\text{the last digit of} \\; n) \times m$
 
-That is, if $m$ is the divisibility multiplier for $p$, then $f(n)$ is divisible by $p$ if and only if $n$ is divisible by $p$.
+นั่นคือ ถ้า $m$ เป็นตัวคูณหารสำหรับ $p$ แล้ว $f(n)$ จะหารด้วย $p$ ลงตัวก็ต่อเมื่อ $n$ หารด้วย $p$ ลงตัว
 
-(When $n$ is much larger than $p$, $f(n)$ will be less than $n$ and repeated application of $f$ provides a multiplicative divisibility test for $p$.)
+(เมื่อ $n$ มากกว่า $p$ มาก $f(n)$ จะน้อยกว่า $n$ และการใช้ $f$ ซ้ำๆ จะเป็นการทดสอบการหารแบบทวีคูณสำหรับ $p$)
 
-For example, the divisibility multiplier for 113 is 34.
+ตัวอย่างเช่น ตัวคูณหารหารสำหรับ 113 คือ 34
 
-$f(76275) = 7627 + 5 \times 34 = 7797$: 76275 and 7797 are both divisible by 113
+$f(76275) = 7627 + 5 \times 34 = 7797$: 76275 และ 7797 หารด้วย 113 ลงตัว
 
-$f(12345) = 1234 + 5 \times 34 = 1404$: 12345 and 1404 are both not divisible by 113
+$f(12345) = 1234 + 5 \times 34 = 1404$: 12345 และ 1404 ไม่หารด้วย 113
 
-The sum of the divisibility multipliers for the primes that are coprime to 10 and less than 1000 is 39517. What is the sum of the divisibility multipliers for the primes that are coprime to 10 and less than ${10}^7$?
+ผลรวมของตัวคูณการหารสำหรับจำนวนเฉพาะที่มีค่า coprime ถึง 10 และน้อยกว่า 1000 คือ 39517 ผลรวมของตัวคูณการหารสำหรับจำนวนเฉพาะที่มีค่า coprime ถึง 10 และน้อยกว่า ${10}^7$ เป็นเท่าใด
 
 # --hints--
 
-`divisibilityMultipliers()` should return `1601912348822`.
+`divisibilityMultipliers()` ควร return `1601912348822`.
 
 ```js
 assert.strictEqual(divisibilityMultipliers(), 1601912348822);

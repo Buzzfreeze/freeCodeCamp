@@ -8,19 +8,19 @@ dashedName: problem-139-pythagorean-tiles
 
 # --description--
 
-Let (a, b, c) represent the three sides of a right angle triangle with integral length sides. It is possible to place four such triangles together to form a square with length c.
+ให้ (a, b, c) แทนด้านทั้งสามของสามเหลี่ยมมุมฉากที่มีด้านยาวครบส่วน เป็นไปได้ที่จะวางสามเหลี่ยมดังกล่าวเข้าด้วยกันเพื่อสร้างสี่เหลี่ยมจัตุรัสที่มีความยาว c
 
-For example, (3, 4, 5) triangles can be placed together to form a 5 by 5 square with a 1 by 1 hole in the middle and it can be seen that the 5 by 5 square can be tiled with twenty-five 1 by 1 squares.
+ตัวอย่างเช่น (3, 4, 5) สามารถวางสามเหลี่ยมเข้าด้วยกันเพื่อสร้างสี่เหลี่ยมจัตุรัสขนาด 5 คูณ 5 โดยมีรูตรงกลางขนาด 1 ต่อ 1 และจะเห็นได้ว่าสี่เหลี่ยมจัตุรัสขนาด 5 คูณ 5 สามารถปูกระเบื้องได้ 25 อัน โดย 1 สี่เหลี่ยม
 
 <img class="img-responsive center-block" alt="two 5 x 5 squares: one with four 3x4x5 triangles placed to create 1x1 hole in the middle; second with twenty-five 1x1 squares" src="https://cdn.freecodecamp.org/curriculum/project-euler/pythagorean-tiles.png" style="background-color: white; padding: 10px;">
 
-However, if (5, 12, 13) triangles were used, the hole would measure 7 by 7. These 7 by 7 squares could not be used to tile the 13 by 13 square.
+อย่างไรก็ตาม หากใช้รูปสามเหลี่ยม (5, 12, 13) รูจะวัดได้ 7 คูณ 7 สี่เหลี่ยมขนาด 7 คูณ 7 เหล่านี้ไม่สามารถใช้ปูกระเบื้องขนาด 13 คูณ 13 ได้
 
-Given that the perimeter of the right triangle is less than one-hundred million, how many Pythagorean triangles would allow such a tiling to occur?
+เนื่องจากเส้นรอบวงของสามเหลี่ยมมุมฉากมีค่าน้อยกว่าหนึ่งร้อยล้าน จะมีสามเหลี่ยมพีทาโกรัสกี่รูปที่จะยอมให้มีการปูกระเบื้องดังกล่าวได้?
 
 # --hints--
 
-`pythagoreanTiles()` should return `10057761`.
+`pythagoreanTiles()` ควร return `10057761`.
 
 ```js
 assert.strictEqual(pythagoreanTiles(), 10057761);

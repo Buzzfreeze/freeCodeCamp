@@ -8,13 +8,14 @@ dashedName: problem-118-pandigital-prime-sets
 
 # --description--
 
-Using all of the digits 1 through 9 and concatenating them freely to form decimal integers, different sets can be formed. Interestingly with the set $\\{2, 5, 47, 89, 631\\}$, all of the elements belonging to it are prime.
 
-How many distinct sets containing each of the digits one through nine exactly once contain only prime elements?
+การใช้ตัวเลข 1 ถึง 9 ทั้งหมดและการต่อกันอย่างอิสระเพื่อสร้างจำนวนเต็มทศนิยม สามารถสร้างเซตต่างๆ ได้ น่าสนใจกับเซต $\\{2, 5, 47, 89, 631\\}$ องค์ประกอบทั้งหมดที่เป็นของมันนั้นเป็นprime
+
+มีชุดที่แตกต่างกันกี่ชุดที่มีแต่ละหลักตั้งแต่หนึ่งถึงเก้าในคราวเดียวที่มีองค์ประกอบเฉพาะ prime elements เท่านั้น
 
 # --hints--
 
-`pandigitalPrimeSets()` should return `44680`.
+`pandigitalPrimeSets()` ควร return `44680`.
 
 ```js
 assert.strictEqual(pandigitalPrimeSets(), 44680);

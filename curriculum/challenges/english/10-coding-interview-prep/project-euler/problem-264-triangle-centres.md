@@ -8,15 +8,16 @@ dashedName: problem-264-triangle-centres
 
 # --description--
 
-Consider all the triangles having:
 
-- All their vertices on lattice points.
-- Circumcentre at the origin O.
-- Orthocentre at the point H(5, 0).
+พิจารณาสามเหลี่ยมทั้งหมดที่มี:
 
-There are nine such triangles having a $\text{perimeter} ≤ 50$.
+- จุดยอดทั้งหมดบนจุดขัดแตะ
+- Circumcentre ที่จุดกำเนิด O.
+- Orthocentre ที่จุด H(5, 0).
 
-Listed and shown in ascending order of their perimeter, they are:
+มีเก้ารูปสามเหลี่ยมดังกล่าวที่มี $\text{perimeter} ≤ 50$
+
+เรียงและเรียงจากน้อยไปมากของperimeterได้แก่
 
 <table>
   <tbody>
@@ -39,13 +40,13 @@ A(9, 2), B(2, -9), C(-6, 7)<br>
   </tbody>
 </table>
 
-The sum of their perimeters, rounded to four decimal places, is 291.0089.
+ผลรวมของเส้นรอบรูป ปัดเศษเป็นทศนิยมสี่ตำแหน่ง คือ 291.0089
 
-Find all such triangles with a $\text{perimeter} ≤ {10}^5$. Enter as your answer the sum of their perimeters rounded to four decimal places.
+หาสามเหลี่ยมดังกล่าวทั้งหมดที่มี $\text{perimeter} ≤ {10}^5$ ป้อนเป็นคำตอบของคุณเป็นผลรวมของperimeterที่ปัดเศษทศนิยมสี่ตำแหน่ง
 
 # --hints--
 
-`triangleCentres()` should return `2816417.1055`.
+`triangleCentres()` ควร return `2816417.1055`.
 
 ```js
 assert.strictEqual(triangleCentres(), 2816417.1055);

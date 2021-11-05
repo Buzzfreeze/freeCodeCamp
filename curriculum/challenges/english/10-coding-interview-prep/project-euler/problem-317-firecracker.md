@@ -8,15 +8,15 @@ dashedName: problem-317-firecracker
 
 # --description--
 
-A firecracker explodes at a height of 100 m above level ground. It breaks into a large number of very small fragments, which move in every direction; all of them have the same initial velocity of 20 $\frac{\text{m}}{\text{s}}$.
+ประทัดระเบิดที่ความสูง 100 เมตรเหนือระดับพื้นดิน มันแตกออกเป็นชิ้นเล็กชิ้นน้อยจำนวนมากซึ่งเคลื่อนที่ไปทุกทิศทุกทาง ทั้งหมดมีความเร็วเริ่มต้นเท่ากันที่ 20 $\frac{\text{m}}{\text{s}}$
 
-We assume that the fragments move without air resistance, in a uniform gravitational field with $g=9.81 \frac{\text{m}}{\text{s}^2}$.
+เราคิดว่าชิ้นส่วนเคลื่อนที่โดยไม่มีแรงต้านของอากาศ ในสนามโน้มถ่วงที่สม่ำเสมอด้วย $g=9.81 \frac{\text{m}}{\text{s}^2}$
 
-Find the volume (in $\text{m}^3$) of the region through which the fragments move before reaching the ground. Give your answer rounded to four decimal places.
+หาปริมาตร (เป็น $\text{m}^3$) ของพื้นที่ที่ชิ้นส่วนเคลื่อนที่ก่อนถึงพื้น ให้คำตอบของคุณปัดเศษทศนิยมสี่ตำแหน่ง
 
 # --hints--
 
-`firecracker()` should return `1856532.8455`.
+`firecracker()` ควร return `1856532.8455`.
 
 ```js
 assert.strictEqual(firecracker(), 1856532.8455);

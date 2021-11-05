@@ -8,7 +8,7 @@ dashedName: problem-196-prime-triplets
 
 # --description--
 
-Build a triangle from all positive integers in the following way:
+สร้างสามเหลี่ยมจากจำนวนเต็มบวกทั้งหมดด้วยวิธีต่อไปนี้:
 
 $$\begin{array}{rrr}
   &  1 \\\\
@@ -25,23 +25,23 @@ $$\begin{array}{rrr}
   & \cdots
 \end{array}$$
 
-Each positive integer has up to eight neighbours in the triangle.
+จำนวนเต็มบวกแต่ละตัวมีเพื่อนบ้านไม่เกินแปดตัวในรูปสามเหลี่ยม
 
-A set of three primes is called a prime triplet if one of the three primes has the other two as neighbours in the triangle.
+ชุดของจำนวนเฉพาะสามจำนวนเรียกว่าไพรเพล็ตเฉพาะถ้าหนึ่งในสามจำนวนเฉพาะมีอีกสองตัวเป็นเพื่อนบ้านในรูปสามเหลี่ยม
 
-For example, in the second row, the prime numbers 2 and 3 are elements of some prime triplet.
+ตัวอย่างเช่น ในแถวที่สอง จำนวนเฉพาะ 2 และ 3 เป็นองค์ประกอบของtriplet
 
-If row 8 is considered, it contains two primes which are elements of some prime triplet, i.e. 29 and 31. If row 9 is considered, it contains only one prime which is an element of some prime triplet: 37.
+หากพิจารณาแถวที่ 8 จะประกอบด้วยจำนวนเฉพาะสองจำนวนซึ่งเป็นองค์ประกอบของtriplet นั่นคือ 29 และ 31 หากพิจารณาถึงแถวที่ 9 จะมีเฉพาะจำนวนเฉพาะหนึ่งตัวซึ่งเป็นองค์ประกอบของกลุ่มtriplet: 37
 
-Define $S(n)$ as the sum of the primes in row $n$ which are elements of any prime triplet. Then $S(8) = 60$ and $S(9) = 37$.
+กำหนด $S(n)$ เป็นผลรวมของจำนวนเฉพาะในแถว $n$ ซึ่งเป็นองค์ประกอบของtriplet จากนั้น $S(8) = 60$ และ $S(9) = 37$
 
-You are given that $S(10000) = 950007619$.
+กำหนด $S(10000) = 950007619$.
 
-Find $S(5678027) + S(7208785)$.
+หา $S(5678027) + S(7208785)$.
 
 # --hints--
 
-`primeTriplets()` should return `322303240771079940`.
+`primeTriplets()` ควร return `322303240771079940`.
 
 ```js
 assert.strictEqual(primeTriplets(), 322303240771079940);

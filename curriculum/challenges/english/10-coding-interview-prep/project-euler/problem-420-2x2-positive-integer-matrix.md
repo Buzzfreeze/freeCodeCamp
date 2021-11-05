@@ -8,9 +8,9 @@ dashedName: problem-420-2x2-positive-integer-matrix
 
 # --description--
 
-A positive integer matrix is a matrix whose elements are all positive integers.
+เมทริกซ์จำนวนเต็มบวกคือเมทริกซ์ที่มีองค์ประกอบเป็นจำนวนเต็มบวกทั้งหมด
 
-Some positive integer matrices can be expressed as a square of a positive integer matrix in two different ways. Here is an example:
+เมทริกซ์จำนวนเต็มบวกบางตัวสามารถแสดงเป็นกำลังสองของเมทริกซ์จำนวนเต็มบวกได้สองวิธี นี่คือตัวอย่าง
 
 $$\begin{pmatrix}
   40 & 12 \\\\
@@ -25,15 +25,15 @@ $$\begin{pmatrix}
   4 & 6
 \end{pmatrix}}^2$$
 
-We define $F(N)$ as the number of the 2x2 positive integer matrices which have a trace less than N and which can be expressed as a square of a positive integer matrix in two different ways.
+เรากำหนด $F(N)$ เป็นจำนวนของเมทริกซ์จำนวนเต็มบวก 2x2 ซึ่งมีการติดตามน้อยกว่า N และสามารถแสดงเป็นกำลังสองของเมทริกซ์จำนวนเต็มบวกในสองวิธีที่ต่างกัน
 
-We can verify that $F(50) = 7$ and $F(1000) = 1019$.
+เราสามารถยืนยันได้ว่า $F(50) = 7$ และ $F(1000) = 1019$
 
-Find $F({10}^7)$.
+หา $F({10}^7)$.
 
 # --hints--
 
-`positiveIntegerMatrix()` should return `145159332`.
+`positiveIntegerMatrix()` ควร return `145159332`.
 
 ```js
 assert.strictEqual(positiveIntegerMatrix(), 145159332);

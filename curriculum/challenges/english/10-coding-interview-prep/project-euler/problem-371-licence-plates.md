@@ -8,21 +8,21 @@ dashedName: problem-371-licence-plates
 
 # --description--
 
-Oregon licence plates consist of three letters followed by a three digit number (each digit can be from [0...9]).
+ป้ายทะเบียน Oregon ประกอบด้วยตัวอักษรสามตัวตามด้วยตัวเลขสามหลัก (แต่ละหลักสามารถมาจาก [0...9])
 
-While driving to work Seth plays the following game:
+ขณะขับรถไปทำงาน Seth เล่นเกมต่อไปนี้:
 
-Whenever the numbers of two licence plates seen on his trip add to 1000 that's a win.
+เมื่อใดก็ตามที่เห็นป้ายทะเบียนสองแผ่นในการเดินทางของเขาเพิ่มเป็น 1,000 นั่นคือชัยชนะ
 
-E.g. `MIC-012` and `HAN-988` is a win and `RYU-500` and `SET-500` too. (as long as he sees them in the same trip).
+เช่น. `MIC-012` และ `HAN-988` เป็นผู้ชนะ และ `RYU-500` และ `SET-500` ก็เช่นกัน (ตราบเท่าที่เขาเห็นพวกเขาในทริปเดียวกัน)
 
-Find the expected number of plates he needs to see for a win. Give your answer rounded to 8 decimal places behind the decimal point.
+หาจำนวนจานที่คาดไว้ที่เขาต้องการเห็นเพื่อชัยชนะ ให้คำตอบของคุณปัดเศษทศนิยม 8 ตำแหน่งหลังจุดทศนิยม
 
-**Note:** We assume that each licence plate seen is equally likely to have any three digit number on it.
+**Note:** ป้ายทะเบียนแต่ละใบที่เห็นนั้นมีแนวโน้มที่จะมีตัวเลขสามหลักเท่ากัน
 
 # --hints--
 
-`licensePlates()` should return `40.66368097`.
+`licensePlates()` ควร return `40.66368097`.
 
 ```js
 assert.strictEqual(licensePlates(), 40.66368097);

@@ -8,31 +8,31 @@ dashedName: problem-246-tangents-to-an-ellipse
 
 # --description--
 
-A definition for an ellipse is:
+คำจำกัดความของวงรีคือ:
 
-Given a circle $c$ with centre $M$ and radius $r$ and a point $G$ such that $d(G, M) < r$, the locus of the points that are equidistant from $c$ and $G$ form an ellipse.
+กำหนดวงกลม $c$ โดยมีจุดศูนย์กลาง $M$ และรัศมี $r$ และจุด $G$ ให้ $d(G, M) < r$ เป็นตำแหน่งของจุดที่เท่ากันจาก $c$ และ $G $ สร้างวงรี
 
-The construction of the points of the ellipse is shown below.
+การสร้างจุดของวงรีแสดงอยู่ด้านล่าง
 
 <img class="img-responsive center-block" alt="animation of ellipse construction" src="https://cdn.freecodecamp.org/curriculum/project-euler/tangents-to-an-ellipse-1.gif" style="background-color: white; padding: 10px;">
 
-Given are the points $M(-2000, 1500)$ and $G(8000, 1500)$.
+ที่ได้รับคือคะแนน $M(-2000, 1500)$ และ $G(8000, 1500)$
 
-Given is also the circle $c$ with centre $M$ and radius $15\\,000$.
+ให้ยังเป็นวงกลม $c$ ที่มีศูนย์ $M$ และรัศมี $15\\,000$
 
-The locus of the points that are equidistant from $G$ and $c$ form an ellipse $e$.
+ตำแหน่งของจุดที่มีระยะห่างเท่ากันจาก $G$ และ $c$ จะสร้างวงรี $e$
 
-From a point $P$ outside $e$ the two tangents $t_1$ and $t_2$ to the ellipse are drawn.
+จากจุด $P$ นอก $e$ สองแทนเจนต์ $t_1$ และ $t_2$ ถึงวงรีจะถูกวาด
 
-Let the points where $t_1$ and $t_2$ touch the ellipse be $R$ and $S$.
+ให้จุดที่ $t_1$ และ $t_2$ สัมผัสวงรีเป็น $R$ และ $S$
 
 <img class="img-responsive center-block" alt="circle c with the centre M, radius 15000, and point P outsie of ellipse e; from point P two tangents t_1 and t_2 are drawn to the ellipse, with points touching ellipse are R and S" src="https://cdn.freecodecamp.org/curriculum/project-euler/tangents-to-an-ellipse-2.gif" style="background-color: white; padding: 10px;">
 
-For how many lattice points $P$ is angle $RPS$ greater than 45°?
+$P$ เป็นมุม $RPS$ ที่มากกว่า 45° มีจุดlatticeกี่จุด
 
 # --hints--
 
-`tangentsToAnEllipse()` should return `810834388`.
+`tangentsToAnEllipse()` ควร return `810834388`.
 
 ```js
 assert.strictEqual(tangentsToAnEllipse(), 810834388);

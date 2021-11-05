@@ -8,23 +8,23 @@ dashedName: problem-364-comfortable-distance
 
 # --description--
 
-There are $N$ seats in a row. $N$ people come after each other to fill the seats according to the following rules:
+มีที่นั่ง $N$ ต่อแถว คน $N$ มาตามกันเพื่อเติมที่นั่งตามกฎต่อไปนี้:
 
-1. If there is any seat whose adjacent seat(s) are not occupied take such a seat.
-2. If there is no such seat and there is any seat for which only one adjacent seat is occupied take such a seat.
-3. Otherwise take one of the remaining available seats.
+1. หากมีที่นั่งใดที่ไม่มีที่นั่งติดกัน ให้เลือกที่นั่งนั้น
+2. หากไม่มีที่นั่งดังกล่าวและมีที่นั่งใดๆ ที่มีที่นั่งติดกันเพียงที่นั่งเดียว ให้เลือกที่นั่งดังกล่าว
+3. มิฉะนั้น ให้ใช้หนึ่งในที่นั่งที่เหลืออยู่
 
-Let $T(N)$ be the number of possibilities that $N$ seats are occupied by $N$ people with the given rules. The following figure shows $T(4) = 8$.
+ให้ $T(N)$ เป็นจำนวนความเป็นไปได้ที่ $N$ ที่นั่งจะถูกครอบครองโดย $N$ ตามกฎที่กำหนด รูปต่อไปนี้แสดง $T(4) = 8$
 
 <img class="img-responsive center-block" alt="eight ways for N seats to be occupied by N people" src="https://cdn.freecodecamp.org/curriculum/project-euler/comfortable-distance.gif" style="background-color: white; padding: 10px;">
 
-We can verify that $T(10) = 61\\,632$ and $T(1\\,000)\bmod 100\\,000\\,007 = 47\\,255\\,094$.
+เราสามารถยืนยันได้ว่า $T(10) = 61\\,632$ และ $T(1\\,000)\bmod 100\\,000\\,007 = 47\\,255\\,094$
 
-Find $T(1\\,000\\,000)\bmod 100\\,000\\,007$.
+หา $T(1\\,000\\,000)\bmod 100\\,000\\,007$
 
 # --hints--
 
-`comfortableDistance()` should return `44855254`.
+`comfortableDistance()` ควร return `44855254`.
 
 ```js
 assert.strictEqual(comfortableDistance(), 44855254);

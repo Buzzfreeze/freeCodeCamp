@@ -11,9 +11,9 @@ dashedName: >-
 
 # --description--
 
-Define $f(0)=1$ and $f(n)$ to be the number of different ways $n$ can be expressed as a sum of integer powers of 2 using each power no more than twice.
+กำหนด $f(0)=1$ และ $f(n)$ เป็นจำนวนวิธีต่างๆ ที่ $n$ สามารถแสดงเป็นผลรวมของเลขยกกำลังจำนวนเต็ม 2 โดยใช้กำลังแต่ละค่าไม่เกินสองครั้ง
 
-For example, $f(10)=5$ since there are five different ways to express 10:
+ตัวอย่างเช่น $f(10)=5$ เนื่องจากมีห้าวิธีที่แตกต่างกันในการแสดง 10:
 
 $$\begin{align}
   & 1 + 1 + 8 \\\\
@@ -23,11 +23,11 @@ $$\begin{align}
   & 2 + 8
 \end{align}$$
 
-What is $f({10}^{25})$?
+หาค่าของ $f({10}^{25})$
 
 # --hints--
 
-`numberOfWaysToExpress()` should return `178653872807`.
+`numberOfWaysToExpress()` ควร return `178653872807`.
 
 ```js
 assert.strictEqual(numberOfWaysToExpress(), 178653872807);

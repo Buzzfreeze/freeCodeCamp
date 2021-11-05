@@ -8,17 +8,17 @@ dashedName: problem-121-disc-game-prize-fund
 
 # --description--
 
-A bag contains one red disc and one blue disc. In a game of chance a player takes a disc at random and its colour is noted. After each turn the disc is returned to the bag, an extra red disc is added, and another disc is taken at random.
+ถุงหนึ่งประกอบด้วยดิสก์สีแดงหนึ่งแผ่นและดิสก์สีน้ำเงินหนึ่งแผ่น ในเกมเสี่ยงโชค ผู้เล่นสุ่มเลือกแผ่นดิสก์และระบุสี หลังจากแต่ละเทิร์น ดิสก์จะถูกส่งกลับไปยังกระเป๋า ดิสก์สีแดงพิเศษจะถูกเพิ่ม และดิสก์อื่นจะถูกสุ่ม
 
-The player pays £1 to play and wins if they have taken more blue discs than red discs at the end of the game.
+ผู้เล่นจ่าย 1ปอนด์เพื่อเล่นและชนะหากพวกเขาได้รับแผ่นสีน้ำเงินมากกว่าแผ่นสีแดงเมื่อสิ้นสุดเกม
 
-If the game is played for four turns, the probability of a player winning is exactly 11/120, and so the maximum prize fund the banker should allocate for winning in this game would be £10 before they would expect to incur a loss. Note that any payout will be a whole number of pounds and also includes the original £1 paid to play the game, so in the example given the player actually wins £9.
+หากเล่นเกมเป็นเวลาสี่เทิร์น ความน่าจะเป็นที่ผู้เล่นจะชนะคือ 11/120 เท่านั้น ดังนั้นเงินรางวัลสูงสุดที่นายธนาคารควรจัดสรรสำหรับการชนะในเกมนี้จะเป็น 10 ปอนด์ ก่อนที่พวกเขาคาดว่าจะขาดทุน โปรดทราบว่าการจ่ายเงินใด ๆ จะเป็นจำนวนเต็มของปอนด์ และยังรวมถึงเงินเดิม 1 ปอนด์ที่จ่ายเพื่อเล่นเกม ดังนั้นในตัวอย่างที่ระบุว่าผู้เล่นชนะจริง 9 ปอนด์
 
-Find the maximum prize fund that should be allocated to a single game in which fifteen turns are played.
+หาเงินรางวัลสูงสุดที่ควรจัดสรรให้กับเกมเดียวที่มีการเล่นสิบห้ารอบ
 
 # --hints--
 
-`discGamePrize()` should return `2269`.
+`discGamePrize()` ควร return `2269`.
 
 ```js
 assert.strictEqual(discGamePrize(), 2269);

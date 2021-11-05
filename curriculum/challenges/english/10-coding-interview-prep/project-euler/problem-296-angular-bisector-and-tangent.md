@@ -8,17 +8,17 @@ dashedName: problem-296-angular-bisector-and-tangent
 
 # --description--
 
-Given is an integer sided triangle $ABC$ with $BC ≤ AC ≤ AB$. $k$ is the angular bisector of angle $ACB$. $m$ is the tangent at $C$ to the circumscribed circle of $ABC$. $n$ is a line parallel to $m$ through $B$.
+กำหนดให้เป็นรูปสามเหลี่ยมด้านเท่าจำนวนเต็ม $ABC$ โดยมี $BC ≤ AC ≤ AB$ $k$ คือเส้นแบ่งครึ่งเชิงมุมของมุม $ACB$ $m$ คือtangentที่ $C$ กับวงกลมที่ล้อมรอบ $ABC$ $n$ เป็นเส้นขนานกับ $m$ ถึง $B$
 
-The intersection of $n$ and $k$ is called $E$.
+จุดตัดของ $n$ และ $k$ เรียกว่า $E$
 
 <img class="img-responsive center-block" alt="triangle ABC, with k - the angular bisector of angle ACB, m - tangent at point C, n - line parallel to m through B, and point E - intersection of k and n" src="https://cdn.freecodecamp.org/curriculum/project-euler/angular-bisector-and-tangent.gif" style="background-color: white; padding: 10px;">
 
-How many triangles $ABC$ with a perimeter not exceeding $100\\,000$ exist such that $BE$ has integral length?
+มีสามเหลี่ยม $ABC$ กี่รูปที่มีเส้นรอบรูปไม่เกิน $100\\,000$ ที่ $BE$ มีความยาวintegral?
 
 # --hints--
 
-`angularBisectorAndTangent()` should return `1137208419`.
+`angularBisectorAndTangent()` ควร return `1137208419`.
 
 ```js
 assert.strictEqual(angularBisectorAndTangent(), 1137208419);

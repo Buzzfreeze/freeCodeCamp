@@ -8,11 +8,11 @@ dashedName: problem-206-concealed-square
 
 # --description--
 
-Find the unique positive integer whose square has the form 1_2_3_4_5_6_7_8_9_0, where each "_" is a single digit.
+ค้นหาจำนวนเต็มบวกเฉพาะซึ่งกำลังสองที่มีรูปแบบ 1_2_3_4_5_6_7_8_9_0 โดยที่ "_" แต่ละตัวเป็นตัวเลขหลักเดียว
 
 # --hints--
 
-`concealedSquare()` should return `1389019170`.
+`concealedSquare()` ควร return `1389019170`.
 
 ```js
 assert.strictEqual(concealedSquare(), 1389019170);

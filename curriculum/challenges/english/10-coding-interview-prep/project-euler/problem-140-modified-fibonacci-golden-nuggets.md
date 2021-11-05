@@ -8,11 +8,12 @@ dashedName: problem-140-modified-fibonacci-golden-nuggets
 
 # --description--
 
-Consider the infinite polynomial series $A_G(x) = xG_1 + x^2G_2 + x^3G_3 + \cdots$, where $G_k$ is the $k$th term of the second order recurrence relation $G_k = G_{k − 1} + G_{k − 2}, G_1 = 1$ and $G_2 = 4$; that is, $1, 4, 5, 9, 14, 23, \ldots$.
 
-For this problem we shall be concerned with values of $x$ for which $A_G(x)$ is a positive integer.
+พิจารณาอนุกรมพหุนามอนันต์ $A_G(x) = xG_1 + x^2G_2 + x^3G_3 + \cdots$ โดยที่ $G_k$ เป็นเทอม $k$th ของความสัมพันธ์การเกิดซ้ำลำดับที่สอง $G_k = G_{k − 1 } + G_{k − 2}, G_1 = 1$ และ $G_2 = 4$; นั่นคือ $1, 4, 5, 9, 14, 23, \ldots$.
 
-The corresponding values of $x$ for the first five natural numbers are shown below.
+สำหรับปัญหานี้ เราจะพิจารณาถึงค่าของ $x$ ซึ่ง $A_G(x)$ เป็นจำนวนเต็มบวก
+
+ค่าที่สอดคล้องกันของ $x$ สำหรับตัวเลขห้าตัวแรกแสดงอยู่ด้านล่าง
 
 | $x$                         | $A_G(x)$ |
 |-----------------------------|----------|
@@ -22,11 +23,13 @@ The corresponding values of $x$ for the first five natural numbers are shown bel
 | $\frac{\sqrt{137} − 5}{14}$ | $4$      |
 | $\frac{1}{2}$               | $5$      |
 
-We shall call $A_G(x)$ a golden nugget if $x$ is rational because they become increasingly rarer; for example, the 20th golden nugget is 211345365. Find the sum of the first thirty golden nuggets.
+เราจะเรียก $A_G(x)$ ว่า golden nuggets  ถ้า $x$ เป็นเหตุเป็นผลเพราะมันหายากขึ้นเรื่อยๆ ตัวอย่างเช่น golden nuggets ตัวที่ 20 คือ 211345365
+
+หาผลรวมของ golden nuggets 30 ลำดับแรก
 
 # --hints--
 
-`modifiedGoldenNuggets()` should return `5673835352990`
+`modifiedGoldenNuggets()` ควร return `5673835352990`
 
 ```js
 assert.strictEqual(modifiedGoldenNuggets(), 5673835352990);

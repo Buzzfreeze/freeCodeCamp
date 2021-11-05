@@ -8,27 +8,27 @@ dashedName: problem-422-sequence-of-points-on-a-hyperbola
 
 # --description--
 
-Let $H$ be the hyperbola defined by the equation $12x^2 + 7xy - 12y^2 = 625$.
+ให้ $H$ เป็นไฮเปอร์โบลาที่กำหนดโดยสมการ $12x^2 + 7xy - 12y^2 = 625$
 
-Next, define $X$ as the point (7, 1). It can be seen that $X$ is in $H$.
+ถัดไป กำหนด $X$ เป็นจุด (7, 1) จะเห็นได้ว่า $X$ อยู่ใน $H$
 
-Now we define a sequence of points in $H, \\{P_i : i ≥ 1\\}$, as:
+ตอนนี้เรากำหนดลำดับของคะแนนใน $H, \\{P_i : i ≥ 1\\}$ เป็น:
 
 - $P_1 = (13, \frac{61}{4})$.
 - $P_2 = (\frac{-43}{6}, -4)$.
-- For $i > 2$, $P_i$ is the unique point in $H$ that is different from $P_{i - 1}$ and such that line $P_iP_{i - 1}$ is parallel to line $P_{i - 2}X$. It can be shown that $P_i$ is well-defined, and that its coordinates are always rational.
+- สำหรับ $i > 2$ $P_i$ คือจุดเฉพาะใน $H$ ซึ่งแตกต่างจาก $P_{i - 1}$ และเส้นนั้น $P_iP_{i - 1}$ ขนานกับบรรทัดที่ $P_{i - 2}X$. สามารถแสดงให้เห็นได้ว่า $P_i$ มีการกำหนดไว้อย่างดี และพิกัดนั้นมีเหตุผลเสมอ.
 
 <img class="img-responsive center-block" alt="animation showing defining points P_1 to P_6" src="https://cdn.freecodecamp.org/curriculum/project-euler/sequence-of-points-on-a-hyperbola.gif" style="background-color: white; padding: 10px;">
 
-You are given that $P_3 = (\frac{-19}{2}, \frac{-229}{24})$, $P_4 = (\frac{1267}{144}, \frac{-37}{12})$ and $P_7 = (\frac{17\\,194\\,218\\,091}{143\\,327\\,232}, \frac{274\\,748\\,766\\,781}{1\\,719\\,926\\,784})$.
+จะได้ $P_3 = (\frac{-19}{2}, \frac{-229}{24})$, $P_4 = (\frac{1267}{144}, \frac{-37}{ 12})$ และ $P_7 = (\frac{17\\,194\\,218\\,091}{143\\,327\\,232}, \frac{274\\,748\\,766 \\,781}{1\\,719\\,926\\,784})$.
 
-Find $P_n$ for $n = {11}^{14}$ in the following format: If $P_n = (\frac{a}{b}, \frac{c}{d})$ where the fractions are in lowest terms and the denominators are positive, then the answer is $(a + b + c + d)\bmod 1\\,000\\,000\\,007$.
+หา $P_n$ สำหรับ $n = {11}^{14}$ ในรูปแบบต่อไปนี้: ถ้า $P_n = (\frac{a}{b}, \frac{c}{d})$ โดยที่เศษส่วนอยู่ ค่าต่ำสุดและตัวส่วนเป็นค่าบวก จากนั้นคำตอบคือ $(a + b + c + d)\bmod 1\\,000\\,000\\,007$
 
-For $n = 7$, the answer would have been: $806\\,236\\,837$.
+สำหรับ $n = 7$ คำตอบจะเป็น: $806\\,236\\,837$
 
 # --hints--
 
-`sequenceOfPointsOnHyperbola()` should return `92060460`.
+`sequenceOfPointsOnHyperbola()` ควร return `92060460`.
 
 ```js
 assert.strictEqual(sequenceOfPointsOnHyperbola(), 92060460);

@@ -8,13 +8,14 @@ dashedName: problem-289-eulerian-cycles
 
 # --description--
 
-Let $C(x,y)$ be a circle passing through the points ($x$, $y$), ($x$, $y + 1$), ($x + 1$, $y$) and ($x + 1$, $y + 1$).
 
-For positive integers $m$ and $n$, let $E(m,n)$ be a configuration which consists of the $m·n$ circles: { $C(x,y)$: $0 ≤ x &lt; m$, $0 ≤ y &lt; n$, $x$ and $y$ are integers }
+ให้ $C(x,y)$ เป็นวงกลมผ่านจุด ($x$, $y$), ($x$, $y + 1$), ($x + 1$, $y$) และ ($x + 1$, $y + 1$).
 
-An Eulerian cycle on $E(m,n)$ is a closed path that passes through each arc exactly once. Many such paths are possible on $E(m,n)$, but we are only interested in those which are not self-crossing: A non-crossing path just touches itself at lattice points, but it never crosses itself.
+สำหรับจำนวนเต็มบวก $m$ และ $n$ ให้ $E(m,n)$ เป็นการกำหนดค่าซึ่งประกอบด้วยวงกลม $m·n$: { $C(x,y)$: $0 ≤ x &lt; m$, $0 ≤ y &lt; n$, $x$ และ $y$ เป็นจำนวนเต็ม }
 
-The image below shows $E(3,3)$ and an example of an Eulerian non-crossing path.
+Eulerian cycle บน $E(m,n)$ เป็นเส้นทางปิดที่ผ่านแต่ละส่วนโค้งเพียงครั้งเดียว เส้นทางดังกล่าวเป็นไปได้มากมายบน $E(m,n)$ แต่เราสนใจเฉพาะเส้นทางที่ไม่ข้ามตัวเอง: เส้นทางที่ไม่ข้ามเพียงแค่สัมผัสตัวเองที่จุดขัดแตะ แต่มันไม่เคยข้ามตัวเอง
+
+ภาพด้านล่างแสดง $E(3,3)$ และตัวอย่างของเส้นทางที่ไม่ผ่านEulerian non-crossing path
 
 <img class="img-responsive center-block" alt="Eulerian cycle E(3, 3) and Eulerian non-crossing path" src="https://cdn.freecodecamp.org/curriculum/project-euler/eulerian-cycles.gif" style="background-color: white; padding: 10px;">
 

@@ -8,19 +8,19 @@ dashedName: problem-130-composites-with-prime-repunit-property
 
 # --description--
 
-A number consisting entirely of ones is called a repunit. We shall define $R(k)$ to be a repunit of length $k$; for example, $R(6) = 111111$.
+จำนวนที่ประกอบด้วยจำนวนทั้งหมดเรียกว่าการทำซ้ำ เราจะกำหนด $R(k)$ ให้เป็นหน่วยของความยาว $k$; ตัวอย่างเช่น $R(6) = 111111$
 
-Given that $n$ is a positive integer and $GCD(n, 10) = 1$, it can be shown that there always exists a value, $k$, for which $R(k)$ is divisible by $n$, and let $A(n)$ be the least such value of $k$; for example, $A(7) = 6$ and $A(41) = 5$.
+เนื่องจาก $n$ เป็นจำนวนเต็มบวกและ $GCD(n, 10) = 1$ จึงสามารถแสดงว่ามีค่าอยู่เสมอ $k$ ซึ่ง $R(k)$ หารด้วย $n$ ลงตัว และให้ $A(n)$ เป็นมูลค่าที่น้อยที่สุดของ $k$; ตัวอย่างเช่น $A(7) = 6$ และ $A(41) = 5$
 
-You are given that for all primes, $p > 5$, that $p − 1$ is divisible by $A(p)$. For example, when $p = 41, A(41) = 5$, and 40 is divisible by 5.
+คุณจะได้รับสำหรับจำนวนเฉพาะทั้งหมด $p > 5$ ซึ่ง $p − 1$ หารด้วย $A(p)$ ลงตัว ตัวอย่างเช่น เมื่อ $p = 41, A(41) = 5$ และ 40 หารด้วย 5 ลงตัว
 
-However, there are rare composite values for which this is also true; the first five examples being 91, 259, 451, 481, and 703.
+อย่างไรก็ตาม มีค่าที่หายากซึ่งสิ่งนี้ก็เป็นจริงเช่นกัน ตัวอย่างห้าตัวอย่างแรกคือ 91, 259, 451, 481 และ 703
 
-Find the sum of the first twenty-five composite values of $n$ for which $GCD(n, 10) = 1$ and $n − 1$ is divisible by $A(n)$.
+จงหาผลรวมของค่า25 ค่าแรกของ $n$ โดยที่ $GCD(n, 10) = 1$ และ $n − 1$ หารด้วย $A(n)$ ลงตัว
 
 # --hints--
 
-`compositeRepunit()` should return `149253`.
+`compositeRepunit()`ควร return `149253`.
 
 ```js
 assert.strictEqual(compositeRepunit(), 149253);

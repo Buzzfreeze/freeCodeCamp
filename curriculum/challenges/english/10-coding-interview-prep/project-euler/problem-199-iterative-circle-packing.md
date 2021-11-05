@@ -8,29 +8,29 @@ dashedName: problem-199-iterative-circle-packing
 
 # --description--
 
-Three circles of equal radius are placed inside a larger circle such that each pair of circles is tangent to one another and the inner circles do not overlap. There are four uncovered "gaps" which are to be filled iteratively with more tangent circles.
+วงกลมสามวงที่มีรัศมีเท่ากันจะถูกวางไว้ในวงกลมที่ใหญ่กว่า โดยที่วงกลมแต่ละคู่จะสัมผัสกัน และวงกลมด้านในจะไม่ทับซ้อนกัน มี "ช่องว่าง" ที่เปิดอยู่สี่ช่องซึ่งจะต้องเติมซ้ำด้วยวงกลมแทนเจนต์มากขึ้น
 
 <img class="img-responsive center-block" alt="a diagram of non-overlapping concentric circles" src="https://cdn-media-1.freecodecamp.org/project-euler/199-circles-in-circles.gif" style="background-color: white; padding: 10px;">
 
-At each iteration, a maximally sized circle is placed in each gap, which creates more gaps for the next iteration. After 3 iterations (pictured), there are 108 gaps and the fraction of the area which is not covered by circles is 0.06790342, rounded to eight decimal places.
+ในการวนซ้ำแต่ละครั้ง วงกลมที่มีขนาดสูงสุดจะถูกวางไว้ในแต่ละช่องว่าง ซึ่งจะสร้างช่องว่างมากขึ้นสำหรับการวนซ้ำครั้งต่อไป หลังจากทำซ้ำ 3 ครั้ง (ในภาพ) มีช่องว่าง 108 ช่อง และเศษส่วนของพื้นที่ที่ไม่ครอบคลุมด้วยวงกลมคือ 0.06790342 ปัดเศษเป็นทศนิยมแปดตำแหน่ง
 
-What fraction of the area is not covered by circles after `n` iterations? Give your answer rounded to eight decimal places using the format x.xxxxxxxx .
+ส่วนใดของพื้นที่ที่วงกลมไม่ครอบคลุมหลังจากการวนซ้ำ `n` ให้คำตอบของคุณเป็นทศนิยมแปดตำแหน่งโดยใช้รูปแบบ x.xxxxxxxx
 
 # --hints--
 
-`iterativeCirclePacking(10)` should return a number.
+`iterativeCirclePacking(10)` ควร return number.
 
 ```js
 assert(typeof iterativeCirclePacking(10) === 'number');
 ```
 
-`iterativeCirclePacking(10)` should return `0.00396087`.
+`iterativeCirclePacking(10)` ควร return `0.00396087`.
 
 ```js
 assert.strictEqual(iterativeCirclePacking(10), 0.00396087);
 ```
 
-`iterativeCirclePacking(3)` should return `0.06790342`.
+`iterativeCirclePacking(3)` ควร return `0.06790342`.
 
 ```js
 assert.strictEqual(iterativeCirclePacking(3), 0.06790342);

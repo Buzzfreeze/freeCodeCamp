@@ -8,21 +8,21 @@ dashedName: problem-270-cutting-squares
 
 # --description--
 
-A square piece of paper with integer dimensions $N×N$ is placed with a corner at the origin and two of its sides along the $x$- and $y$-axes. Then, we cut it up respecting the following rules:
+กระดาษสี่เหลี่ยมจัตุรัสที่มีขนาดเป็นจำนวนเต็ม $N×N$ วางด้วยมุมที่จุดเริ่มต้นและด้านสองด้านตามแนวแกน $x$- และ $y$- จากนั้นเราตัดมันตามกฎต่อไปนี้:
 
-- We only make straight cuts between two points lying on different sides of the square, and having integer coordinates.
-- Two cuts cannot cross, but several cuts can meet at the same border point.
-- Proceed until no more legal cuts can be made.
+- เราตัดตรงระหว่างจุดสองจุดที่อยู่บนด้านต่างๆ ของสี่เหลี่ยมจัตุรัสและมีพิกัดเป็นจำนวนเต็มเท่านั้น
+- การตัดสองครั้งไม่สามารถข้ามได้ แต่อาจมีการตัดหลายครั้งที่จุดชายแดนเดียวกัน
+- ดำเนินการต่อไปจนกว่าจะไม่มีการตัดทอนทางกฎหมายอีกต่อไป
 
-Counting any reflections or rotations as distinct, we call $C(N)$ the number of ways to cut an $N×N$ square. For example, $C(1) = 2$ and $C(2) = 30$ (shown below).
+การนับการสะท้อนหรือการหมุนใดๆ ให้ชัดเจน เราเรียก $C(N)$ ว่าจำนวนวิธีในการตัด $N×N$ สี่เหลี่ยมจัตุรัส ตัวอย่างเช่น $C(1) = 2$ และ $C(2) = 30$ (แสดงด้านล่าง)
 
 <img class="img-responsive center-block" alt="ways to cut 2x2 square, counting reflections and rotations as distinct" src="https://cdn.freecodecamp.org/curriculum/project-euler/cutting-squares.gif" style="background-color: white; padding: 10px;">
 
-What is $C(30)\bmod {10}^8$ ?
+หาค่า $C(30)\bmod {10}^8$ ?
 
 # --hints--
 
-`cuttingSquares()` should return `82282080`.
+`cuttingSquares()` ควร return `82282080`.
 
 ```js
 assert.strictEqual(cuttingSquares(), 82282080);

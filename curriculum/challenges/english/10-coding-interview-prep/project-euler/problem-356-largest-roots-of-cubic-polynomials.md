@@ -8,17 +8,17 @@ dashedName: problem-356-largest-roots-of-cubic-polynomials
 
 # --description--
 
-Let an be the largest real root of a polynomial $g(x) = x^3 - 2^n \times x^2 + n$.
+ให้รากจริงที่ใหญ่ที่สุดของพหุนาม $g(x) = x^3 - 2^n \times x^2 + n$
 
-For example, $a_2 = 3.86619826\ldots$
+ตัวอย่างเช่น $a_2 = 3.86619826\ldots$
 
-Find the last eight digits of $\displaystyle\sum_{i = 1}^{30} \lfloor {a_i}^{987654321}\rfloor$.
+ค้นหาแปดหลักสุดท้ายของ $\displaystyle\sum_{i = 1}^{30} \lfloor {a_i}^{987654321}\rfloor$
 
-**Note:** $\lfloor a\rfloor$ represents the floor function.
+**Note:** $\lfloor a\rfloor$ เป็น floor function.
 
 # --hints--
 
-`rootsOfCubicPolynomials()` should return `28010159`.
+`rootsOfCubicPolynomials()` ควร return `28010159`.
 
 ```js
 assert.strictEqual(rootsOfCubicPolynomials(), 28010159);

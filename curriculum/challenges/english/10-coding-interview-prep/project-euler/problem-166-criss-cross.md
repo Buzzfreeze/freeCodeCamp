@@ -8,9 +8,9 @@ dashedName: problem-166-criss-cross
 
 # --description--
 
-A 4x4 grid is filled with digits $d$, $0 ≤ d ≤ 9$.
+ตาราง 4x4 เต็มไปด้วยตัวเลข $d$, $0 ≤ d ≤ 9$
 
-It can be seen that in the grid
+จะเห็นได้ว่าในตาราง
 
 $$\begin{array}{}
   6 & 3 & 3 & 0 \\\\
@@ -19,13 +19,13 @@ $$\begin{array}{}
   1 & 2 & 4 & 5
 \end{array}$$
 
-the sum of each row and each column has the value 12. Moreover the sum of each diagonal is also 12.
+ผลรวมของแต่ละแถวและแต่ละคอลัมน์มีค่า 12 นอกจากนี้ ผลรวมของแต่ละเส้นทแยงมุมยังเป็น 12 ด้วย
 
-In how many ways can you fill a 4x4 grid with the digits $d$, $0 ≤ d ≤ 9$ so that each row, each column, and both diagonals have the same sum?
+สามารถเติมตาราง 4x4 ด้วยตัวเลข $d$, $0 ≤ d ≤ 9$ ในตาราง 4x4 ได้กี่วิธี เพื่อให้แต่ละแถว แต่ละคอลัมน์ และเส้นทแยงมุมทั้งสองมีผลรวมเท่ากัน
 
 # --hints--
 
-`crissCross()` should return `7130034`.
+`crissCross()` ควร return `7130034`.
 
 ```js
 assert.strictEqual(crissCross(), 7130034);

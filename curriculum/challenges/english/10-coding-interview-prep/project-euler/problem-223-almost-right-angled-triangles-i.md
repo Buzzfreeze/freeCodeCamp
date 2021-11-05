@@ -8,13 +8,12 @@ dashedName: problem-223-almost-right-angled-triangles-i
 
 # --description--
 
-Let us call an integer sided triangle with sides $a ≤ b ≤ c$ barely acute if the sides satisfy $a^2 + b^2 = c^2 + 1$.
+ให้เราเรียกสามเหลี่ยมด้านเท่าจำนวนเต็มที่มีด้าน $a ≤ b ≤ c$ แทบจะไม่รุนแรง ถ้าด้านเป็นไปตาม $a^2 + b^2 = c^2 + 1$
 
-How many barely acute triangles are there with perimeter $≤ 25\\,000\\,000$?
-
+มีสามเหลี่ยมแหลมแทบทั้งหมดกี่รูปที่มีเส้นรอบวง $≤ 25\\,000\\,000$?
 # --hints--
 
-`almostRightAngledTrianglesOne()` should return `61614848`.
+`almostRightAngledTrianglesOne()` ควร return `61614848`.
 
 ```js
 assert.strictEqual(almostRightAngledTrianglesOne(), 61614848);

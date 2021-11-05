@@ -8,41 +8,41 @@ dashedName: problem-366-stone-game-iii
 
 # --description--
 
-Two players, Anton and Bernhard, are playing the following game.
+ผู้เล่นสองคนคือ Anton และ Bernhard กำลังเล่นเกมต่อไปนี้
 
-There is one pile of $n$ stones.
+มีก้อนหิน $n$ หนึ่งกอง
 
-The first player may remove any positive number of stones, but not the whole pile.
+ผู้เล่นคนแรกสามารถเอาหินจำนวนบวกออกได้ แต่ไม่ใช่ทั้งกอง
 
-Thereafter, each player may remove at most twice the number of stones his opponent took on the previous move.
+หลังจากนั้น ผู้เล่นแต่ละคนสามารถถอดหินออกได้มากเป็นสองเท่าของจำนวนหินที่คู่ต่อสู้ของเขาทำในครั้งก่อน
 
-The player who removes the last stone wins.
+ผู้เล่นที่เอาหินก้อนสุดท้ายออกจะเป็นผู้ชนะ
 
-E.g. $n = 5$
+เช่น. $n = 5$
 
-If the first player takes anything more than one stone the next player will be able to take all remaining stones.
+หากผู้เล่นคนแรกรับหินมากกว่าหนึ่งก้อน ผู้เล่นคนต่อไปจะสามารถรับหินที่เหลือทั้งหมดได้
 
-If the first player takes one stone, leaving four, his opponent will take also one stone, leaving three stones.
+ถ้าผู้เล่นคนแรกหยิบหินได้หนึ่งก้อน เหลือสี่ก้อน ฝ่ายตรงข้ามก็จะหยิบหินไปหนึ่งก้อนด้วย เหลือหินสามก้อน
 
-The first player cannot take all three because he may take at most $2 \times 1 = 2$ stones. So let's say he also takes one stone, leaving 2.
+ผู้เล่นคนแรกไม่สามารถรับทั้งสามได้ เพราะเขาอาจรับได้มากสุด $2 \ ครั้ง 1 = 2$ ก้อนหิน สมมุติว่าเขาเอาหินไปหนึ่งก้อน เหลือ 2 ก้อน
 
-The second player can take the two remaining stones and wins.
+ผู้เล่นคนที่สองสามารถรับหินสองก้อนที่เหลือและชนะได้
 
-So 5 is a losing position for the first player.
+ดังนั้น 5 จึงเป็นตำแหน่งที่แพ้สำหรับผู้เล่นคนแรก
 
-For some winning positions there is more than one possible move for the first player.
+สำหรับตำแหน่งที่ชนะบางตำแหน่ง มีการย้ายที่เป็นไปได้มากกว่าหนึ่งครั้งสำหรับผู้เล่นคนแรก
 
-E.g. when $n = 17$ the first player can remove one or four stones.
+เช่น. เมื่อ $n = 17$ ผู้เล่นคนแรกสามารถถอดหินได้หนึ่งหรือสี่ก้อน
 
-Let $M(n)$ be the maximum number of stones the first player can take from a winning position at his first turn and $M(n) = 0$ for any other position.
+ให้ $M(n)$ เป็นจำนวนหินสูงสุดที่ผู้เล่นคนแรกสามารถรับได้จากตำแหน่งที่ชนะในเทิร์นแรกของเขา และ $M(n) = 0$ สำหรับตำแหน่งอื่น
 
-$\sum M(n)$ for $n ≤ 100$ is 728.
+$\sum M(n)$ สำหรับ $n ≤ 100$ คือ 728
 
-Find $\sum M(n)$ for $n ≤ {10}^{18}$. Give your answer modulo ${10}^8$.
+หา $\sum M(n)$ สำหรับ $n ≤ {10}^{18}$ ให้คำตอบแบบmodulo ${10}^8$
 
 # --hints--
 
-`stoneGameThree()` should return `88351299`.
+`stoneGameThree()` ควร return `88351299`.
 
 ```js
 assert.strictEqual(stoneGameThree(), 88351299);

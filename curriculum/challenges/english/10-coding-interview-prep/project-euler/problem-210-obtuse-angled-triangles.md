@@ -8,19 +8,19 @@ dashedName: problem-210-obtuse-angled-triangles
 
 # --description--
 
-Consider the set $S(r)$ of points ($x$,$y$) with integer coordinates satisfying $|x| + |y| ≤ r$.
+พิจารณาเซ็ต $S(r)$ ของคะแนน ($x$,$y$) โดยมีพิกัดจำนวนเต็มเท่ากับ $|x| + |y| ≤ r$
 
-Let $O$ be the point (0,0) and $C$ the point ($\frac{r}{4}$,$\frac{r}{4}$).
+ให้ $O$ เป็นจุด (0,0) และ $C$ เป็นจุด ($\frac{r}{4}$,$\frac{r}{4}$)
 
-Let $N(r)$ be the number of points $B$ in $S(r)$, so that the triangle $OBC$ has an obtuse angle, i.e. the largest angle $α$ satisfies $90°&lt;α&lt;180°$.
+ให้ $N(r)$ เป็นจำนวนจุด $B$ ใน $S(r)$ เพื่อให้สามเหลี่ยม $OBC$ มีมุมป้าน นั่นคือมุมที่ใหญ่ที่สุด $α$ เท่ากับ $90°&lt;α&lt;180 °$.
 
-So, for example, $N(4)=24$ and $N(8)=100$.
+ตัวอย่างเช่น $N(4)=24$ และ $N(8)=100$
 
-What is $N(1\\,000\\,000\\,000)$?
+$N(1\\,000\\,000\\,000)$ คืออะไร?
 
 # --hints--
 
-`obtuseAngledTriangles()` should return `1598174770174689500`.
+`obtuseAngledTriangles()` ควร return `1598174770174689500`.
 
 ```js
 assert.strictEqual(obtuseAngledTriangles(), 1598174770174689500);

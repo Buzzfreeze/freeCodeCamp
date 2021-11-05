@@ -8,31 +8,31 @@ dashedName: problem-387-harshad-numbers
 
 # --description--
 
-A Harshad or Niven number is a number that is divisible by the sum of its digits.
+ตัวเลข Harshad หรือ Niven คือตัวเลขที่หารด้วยผลรวมของตัวเลขลงตัว
 
-201 is a Harshad number because it is divisible by 3 (the sum of its digits.)
+201 เป็นจำนวน Harshad เนื่องจากหารด้วย 3 ลงตัว (ผลรวมของตัวเลข)
 
-When we truncate the last digit from 201, we get 20, which is a Harshad number.
+เมื่อเราตัดหลักสุดท้ายจาก 201 เราจะได้ 20 ซึ่งเป็นเลขหรษัท
 
-When we truncate the last digit from 20, we get 2, which is also a Harshad number.
+เมื่อเราตัดตัวเลขสุดท้ายจาก 20 เราจะได้ 2 ซึ่งเป็นเลขหรษัทด้วย
 
-Let's call a Harshad number that, while recursively truncating the last digit, always results in a Harshad number a right truncatable Harshad number.
+เรามาเรียกหมายเลข Harshad ซึ่งในขณะที่ตัดตัวเลขสุดท้ายซ้ำๆ กัน ส่งผลให้หมายเลข Harshad เป็นหมายเลข Harshad ที่ตัดทอนได้เสมอ
 
-Also:
+อีกทั้ง
 
-$\frac{201}{3} = 67$ which is prime.
+$\frac{201}{3} = 67$ เป็น prime.
 
-Let's call a Harshad number that, when divided by the sum of its digits, results in a prime a strong Harshad number.
+ลองเรียกหมายเลข Harshad ที่เมื่อหารด้วยผลรวมของตัวเลข จะส่งผลให้จำนวนเฉพาะเป็นจำนวน Harshad ที่คาดเดายาก
 
-Now take the number 2011 which is prime. When we truncate the last digit from it we get 201, a strong Harshad number that is also right truncatable. Let's call such primes strong, right truncatable Harshad primes.
+ตอนนี้ใช้หมายเลข 2011 ซึ่งเป็นจำนวนเฉพาะ เมื่อเราตัดเลขหลักสุดท้ายออก เราจะได้ 201 ซึ่งเป็นตัวเลข Harshad ที่ชัดเจนซึ่งตัดทอนได้ถูกต้อง ลองเรียกจำนวนเฉพาะดังกล่าวว่าจำนวนเฉพาะของ Harshad ที่แข็งแรงและตัดทอนได้ถูกต้อง
 
-You are given that the sum of the strong, right truncatable Harshad primes less than 10000 is 90619.
+คุณจะได้รับว่าผลรวมของจำนวนเฉพาะของ Harshad ที่ตัดทอนได้ถูกต้องซึ่งน้อยกว่า 10000 คือ 90619
 
-Find the sum of the strong, right truncatable Harshad primes less than ${10}^{14}$.
+หาผลรวมของจำนวนเฉพาะของ Harshad ที่ตัดทอนได้ถูกต้องซึ่งน้อยกว่า ${10}^{14}$
 
 # --hints--
 
-`harshadNumbers()` should return `696067597313468`.
+`harshadNumbers()` ควร return `696067597313468`.
 
 ```js
 assert.strictEqual(harshadNumbers(), 696067597313468);

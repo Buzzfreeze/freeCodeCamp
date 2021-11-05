@@ -8,23 +8,23 @@ dashedName: problem-411-uphill-paths
 
 # --description--
 
-Let $n$ be a positive integer. Suppose there are stations at the coordinates $(x, y) = (2^i\bmod n, 3^i\bmod n)$ for $0 ≤ i ≤ 2n$. We will consider stations with the same coordinates as the same station.
+ให้ $n$ เป็นจำนวนเต็มบวก สมมติว่ามีสถานีอยู่ที่พิกัด $(x, y) = (2^i\bmod n, 3^i\bmod n)$ สำหรับ $0 ≤ i ≤ 2n$ เราจะพิจารณาสถานีที่มีพิกัดเดียวกันเป็นสถานีเดียวกัน
 
-We wish to form a path from (0, 0) to ($n$, $n$) such that the $x$ and $y$ coordinates never decrease.
+เราต้องการสร้างเส้นทางจาก (0, 0) ถึง ($n$, $n$) เพื่อให้พิกัด $x$ และ $y$ ไม่ลดลง
 
-Let $S(n)$ be the maximum number of stations such a path can pass through.
+ให้ $S(n)$ เป็นจำนวนสถานีสูงสุดที่เส้นทางสามารถผ่านได้
 
-For example, if $n = 22$, there are 11 distinct stations, and a valid path can pass through at most 5 stations. Therefore, $S(22) = 5$. The case is illustrated below, with an example of an optimal path:
+ตัวอย่างเช่น ถ้า $n = 22$ มี 11 สถานีที่แตกต่างกัน และเส้นทางที่ถูกต้องสามารถผ่านได้ไม่เกิน 5 สถานี ดังนั้น $S(22) = 5$ กรณีนี้แสดงไว้ด้านล่าง พร้อมตัวอย่างเส้นทางที่เหมาะสมที่สุด:
 
 <img class="img-responsive center-block" alt="valid path passing through 5 stations, for n = 22, with 11 distinct stations" src="https://cdn.freecodecamp.org/curriculum/project-euler/uphill-paths.png" style="background-color: white; padding: 10px;">
 
-It can also be verified that $S(123) = 14$ and $S(10\\,000) = 48$.
+นอกจากนี้ยังสามารถตรวจสอบได้ว่า $S(123) = 14$ และ $S(10\\,000) = 48$
 
-Find $\sum S(k^5)$ for $1 ≤ k ≤ 30$.
+หา $\sum S(k^5)$ สำหรับ $1 ≤ k ≤ 30$
 
 # --hints--
 
-`uphillPaths()` should return `9936352`.
+`uphillPaths()` ควร return `9936352`.
 
 ```js
 assert.strictEqual(uphillPaths(), 9936352);

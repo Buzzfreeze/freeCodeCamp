@@ -8,7 +8,7 @@ dashedName: problem-186-connectedness-of-a-network
 
 # --description--
 
-Here are the records from a busy telephone system with one million users:
+นี่คือบันทึกจากระบบโทรศัพท์ที่มีผู้ใช้หนึ่งล้านคนพลุกพล่าน:
 
 | RecNr | Caller | Called |
 |-------|--------|--------|
@@ -17,21 +17,22 @@ Here are the records from a busy telephone system with one million users:
 |   3   | 600863 | 701497 |
 |  ...  |  ...   |  ...   |
 
-The telephone number of the caller and the called number in record $n$ are $Caller(n) = S_{2n - 1}$ and $Called(n) = S_{2n}$ where ${S}_{1,2,3,\ldots}$ come from the "Lagged Fibonacci Generator":
 
-For $1 ≤ k ≤ 55$, $S_k = [100003 - 200003k + 300007{k}^3]\\;(\text{modulo}\\;1000000)$
+หมายเลขโทรศัพท์ของผู้โทรและหมายเลขที่โทรในบันทึก $n$ คือ $Caller(n) = S_{2n - 1}$ และ $Called(n) = S_{2n}$ โดยที่ ${S}_{1, 2,3,\ldots}$ มาจาก "Lagged Fibonacci Generator":
+
+สำหรับ $1 ≤ k ≤ 55$, $S_k = [100003 - 200003k + 300007{k}^3]\\;(\text{modulo}\\;1000000)$
 
 For $56 ≤ k$, $S_k = [S_{k - 24} + S_{k - 55}]\\;(\text{modulo}\\;1000000)$
 
 If $Caller(n) = Called(n)$ then the user is assumed to have misdialled and the call fails; otherwise the call is successful.
 
-From the start of the records, we say that any pair of users $X$ and $Y$ are friends if $X$ calls $Y$ or vice-versa. Similarly, $X$ is a friend of a friend of $Z$ if $X$ is a friend of $Y$ and $Y$ is a friend of $Z$; and so on for longer chains.
+จากจุดเริ่มต้นของบันทึก เราบอกว่าผู้ใช้คู่หนึ่ง $X$ และ $Y$ เป็นเพื่อนกันถ้า $X$ โทร $Y$ หรือในทางกลับกัน ในทำนองเดียวกัน $X$ เป็นเพื่อนของเพื่อนของ $Z$ ถ้า $X$ เป็นเพื่อนของ $Y$ และ $Y$ เป็นเพื่อนของ $Z$; และอื่นๆ สำหรับโซ่ที่ยาวกว่า
 
-The Prime Minister's phone number is 524287. After how many successful calls, not counting misdials, will 99% of the users (including the PM) be a friend, or a friend of a friend etc., of the Prime Minister?
+หมายเลขโทรศัพท์ของนายกรัฐมนตรีคือ 524287 หลังจากโทรสำเร็จกี่ครั้งโดยไม่นับการโทรผิด 99% ของผู้ใช้ (รวมถึง PM) จะเป็นเพื่อนหรือเพื่อนของเพื่อน ฯลฯ ของนายกรัฐมนตรีหรือไม่?
 
 # --hints--
 
-`connectednessOfANetwork()` should return `2325629`.
+`connectednessOfANetwork()` ควร return `2325629`.
 
 ```js
 assert.strictEqual(connectednessOfANetwork(), 2325629);

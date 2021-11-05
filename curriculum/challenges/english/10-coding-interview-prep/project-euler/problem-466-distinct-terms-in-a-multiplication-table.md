@@ -8,9 +8,9 @@ dashedName: problem-466-distinct-terms-in-a-multiplication-table
 
 # --description--
 
-Let $P(m,n)$ be the number of distinct terms in an $m×n$ multiplication table.
+ให้ $P(m,n)$ เป็นจำนวนใน $m×n$ multiplication table.
 
-For example, a 3×4 multiplication table looks like this:
+ตัวอย่าง 3×4 multiplication table :
 
 $$\begin{array}{c}
   ×          & \mathbf{1} & \mathbf{2} & \mathbf{3} & \mathbf{4}  \\\\
@@ -19,9 +19,9 @@ $$\begin{array}{c}
   \mathbf{3} & 3          & 6          & 9          & 12
 \end{array}$$
 
-There are 8 distinct terms {1, 2, 3, 4, 6, 8, 9, 12}, therefore $P(3, 4) = 8$.
+มี 8 ค่า {1, 2, 3, 4, 6, 8, 9, 12}, ดังนั้น $P(3, 4) = 8$.
 
-You are given that:
+กำหนดให้:
 
 $$\begin{align}
   & P(64, 64) = 1\\,263, \\\\
@@ -29,11 +29,11 @@ $$\begin{align}
   & P(32, {10}^{15}) = 13\\,826\\,382\\,602\\,124\\,302. \\\\
 \end{align}$$
 
-Find $P(64, {10}^{16})$.
+ให้หา $P(64, {10}^{16})$.
 
 # --hints--
 
-`multiplicationTable()` should return `258381958195474750`.
+`multiplicationTable()` ควร return `258381958195474750`.
 
 ```js
 assert.strictEqual(multiplicationTable(), 258381958195474750);

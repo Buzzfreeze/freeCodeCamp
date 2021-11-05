@@ -8,25 +8,25 @@ dashedName: problem-362-squarefree-factors
 
 # --description--
 
-Consider the number 54.
+พิจารณาหมายเลข 54
 
-54 can be factored in 7 distinct ways into one or more factors larger than 1:
+54 สามารถแยกตัวประกอบใน 7 วิธีที่แตกต่างกันออกเป็นปัจจัยหนึ่งตัวหรือมากกว่าที่มากกว่า 1:
 
 $$54, 2 × 27, 3 × 18, 6 × 9, 3 × 3 × 6, 2 × 3 × 9 \text{ and } 2 × 3 × 3 × 3$$
 
-If we require that the factors are all squarefree only two ways remain: $3 × 3 × 6$ and $2 × 3 × 3 × 3$.
+หากเราต้องการให้ตัวประกอบเป็นสี่เหลี่ยมจัตุรัสทั้งหมด จะเหลือเพียงสองวิธีเท่านั้น: $3 × 3 × 6$ และ $2 × 3 × 3 × 3$
 
-Let's call $Fsf(n)$ the number of ways $n$ can be factored into one or more squarefree factors larger than 1, so $Fsf(54) = 2$.
+เรียก $Fsf(n)$ ว่าจำนวนวิธีที่ $n$ สามารถแยกตัวประกอบเป็นปัจจัยสี่เหลี่ยมจัตุรัสที่มากกว่า 1 ได้หนึ่งตัวหรือมากกว่า ดังนั้น $Fsf(54) = 2$
 
-Let $S(n)$ be $\sum Fsf(k)$ for $k = 2$ to $n$.
+ให้ $S(n)$ เป็น $\sum Fsf(k)$ สำหรับ $k = 2$ ถึง $n$
 
 $S(100) = 193$.
 
-Find $S(10\\,000\\,000\\,000)$.
+หา $S(10\\,000\\,000\\,000)$.
 
 # --hints--
 
-`squarefreeFactors()` should return `457895958010`.
+`squarefreeFactors()` ควร return `457895958010`.
 
 ```js
 assert.strictEqual(squarefreeFactors(), 457895958010);

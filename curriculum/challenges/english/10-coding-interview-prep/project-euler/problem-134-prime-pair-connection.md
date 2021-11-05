@@ -8,15 +8,15 @@ dashedName: problem-134-prime-pair-connection
 
 # --description--
 
-Consider the consecutive primes $p_1 = 19$ and $p_2 = 23$. It can be verified that 1219 is the smallest number such that the last digits are formed by $p_1$ whilst also being divisible by $p_2$.
+พิจารณาจำนวนเฉพาะที่ต่อเนื่องกัน $p_1 = 19$ และ $p_2 = 23$ สามารถตรวจสอบได้ว่า 1219 เป็นจำนวนที่น้อยที่สุด โดยที่ตัวเลขสุดท้ายประกอบด้วย $p_1$ ในขณะที่ $p_2$ หารด้วยลงตัว
 
-In fact, with the exception of $p_1 = 3$ and $p_2 = 5$, for every pair of consecutive primes, $p_2 > p_1$, there exist values of $n$ for which the last digits are formed by $p_1$ and $n$ is divisible by $p_2$. Let $S$ be the smallest of these values of $n$.
+ยกเว้น $p_1 = 3$ และ $p_2 = 5$ สำหรับทุกคู่ของจำนวนเฉพาะที่ต่อเนื่องกัน $p_2 > p_1$ มีค่า $n$ ซึ่งตัวเลขสุดท้ายถูกสร้างขึ้นโดย $p_1$ และ $n$ หารด้วย $p_2$ ลงตัว ให้ $S$ เป็นค่าที่น้อยที่สุดของค่าเหล่านี้ของ $n$
 
-Find $\sum{S}$ for every pair of consecutive primes with $5 ≤ p_1 ≤ 1000000$.
+หา $\sum{S}$ สำหรับทุกคู่ของจำนวนเฉพาะที่ต่อเนื่องกันด้วย $5 ≤ p_1 ≤ 1000000$
 
 # --hints--
 
-`primePairConnection()` should return `18613426663617120`.
+`primePairConnection()` ควร return `18613426663617120`.
 
 ```js
 assert.strictEqual(primePairConnection(), 18613426663617120);

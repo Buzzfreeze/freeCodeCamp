@@ -8,19 +8,19 @@ dashedName: problem-251-cardano-triplets
 
 # --description--
 
-A triplet of positive integers ($a$,$b$,$c$) is called a Cardano Triplet if it satisfies the condition:
+Triplet ของจำนวนเต็มบวก ($a$,$b$,$c$) เรียกว่า Cardano Triplet หากเป็นไปตามเงื่อนไข:
 
 $$\sqrt[3]{a + b \sqrt{c}} + \sqrt[3]{a - b \sqrt{c}} = 1$$
 
-For example, (2,1,5) is a Cardano Triplet.
+ตัวอย่างเช่น (2,1,5) คือ Cardano Triplet
 
-There exist 149 Cardano Triplets for which $a + b + c ≤ 1000$.
+มี 149 Cardano Triplets ซึ่ง $a + b + c ≤ 1,000$
 
-Find how many Cardano Triplets exist such that $a + b + c ≤ 110\\,000\\,000$.
+หาจำนวน Cardano Triplets ที่มีอยู่เพื่อให้ $a + b + c ≤ 110\\,000\\,000$
 
 # --hints--
 
-`cardanoTriplets()` should return `18946051`.
+`cardanoTriplets()` ควร return `18946051`.
 
 ```js
 assert.strictEqual(cardanoTriplets(), 18946051);

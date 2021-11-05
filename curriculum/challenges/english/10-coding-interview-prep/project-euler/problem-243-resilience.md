@@ -8,23 +8,23 @@ dashedName: problem-243-resilience
 
 # --description--
 
-A positive fraction whose numerator is less than its denominator is called a proper fraction.
+เศษส่วนบวกที่มีตัวเศษน้อยกว่าตัวส่วนเรียกว่าเศษส่วนที่เหมาะสม
 
-For any denominator, $d$, there will be $d−1$ proper fractions; for example, with $d = 12$:
+สำหรับตัวส่วนใดๆ $d$ จะมี $d−1$ เศษส่วนที่เหมาะสม ตัวอย่างเช่น กับ $d = 12$:
 
 $$\frac{1}{12}, \frac{2}{12}, \frac{3}{12}, \frac{4}{12}, \frac{5}{12}, \frac{6}{12}, \frac{7}{12}, \frac{8}{12}, \frac{9}{12}, \frac{10}{12}, \frac{11}{12}$$
 
-We shall call a fraction that cannot be cancelled down a resilient fraction.
+เราจะเรียกเศษส่วนที่ไม่สามารถหักลงเป็นเศษส่วนที่ยืดหยุ่นได้
 
-Furthermore we shall define the resilience of a denominator, $R(d)$, to be the ratio of its proper fractions that are resilient; for example, $R(12) = \frac{4}{11}$.
+นอกจากนี้ เราจะกำหนดความยืดหยุ่นของตัวส่วน $R(d)$ ให้เป็นอัตราส่วนของเศษส่วนที่เหมาะสมที่มีความยืดหยุ่น ตัวอย่างเช่น $R(12) = \frac{4}{11}$
 
-In fact, $d = 12$ is the smallest denominator having a resilience $R(d) &lt; \frac{4}{10}$.
+อันที่จริง $d = 12$ เป็นตัวหารที่น้อยที่สุดที่มีความยืดหยุ่น $R(d) &lt; \frac{4}{10}$.
 
-Find the smallest denominator $d$, having a resilience $R(d) &lt; \frac{15\\,499}{94\\,744}$.
+หาตัวหารที่น้อยที่สุด $d$ โดยมีค่า $R(d) &lt; \frac{15\\,499}{94\\,744}$.
 
 # --hints--
 
-`resilience()` should return `892371480`.
+`resilience()` ควร return `892371480`.
 
 ```js
 assert.strictEqual(resilience(), 892371480);

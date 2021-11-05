@@ -8,29 +8,29 @@ dashedName: problem-478-mixtures
 
 # --description--
 
-Let us consider mixtures of three substances: $A$, $B$ and $C$. A mixture can be described by a ratio of the amounts of $A$, $B$, and $C$ in it, i.e., $(a : b : c)$. For example, a mixture described by the ratio (2 : 3 : 5) contains 20% $A$, 30% $B$ and 50% $C$.
+ห้เราพิจารณาส่วนผสมของสารสามชนิด: $A$, $B$ และ $C$ ส่วนผสมสามารถอธิบายได้โดยอัตราส่วนของปริมาณ $A$, $B$ และ $C$ ในนั้น นั่นคือ $(a : b : c)$ ตัวอย่างเช่น ส่วนผสมที่อธิบายโดยอัตราส่วน (2 : 3 : 5) ประกอบด้วย 20% $A$, 30% $B$ และ 50% $C$
 
-For the purposes of this problem, we cannot separate the individual components from a mixture. However, we can combine different amounts of different mixtures to form mixtures with new ratios.
+สำหรับจุดประสงค์ของปัญหานี้ เราไม่สามารถแยกส่วนประกอบแต่ละส่วนออกจากของผสมได้ อย่างไรก็ตาม เราสามารถผสมส่วนผสมต่างๆ ในปริมาณที่แตกต่างกันเพื่อสร้างส่วนผสมที่มีอัตราส่วนใหม่ได้
 
-For example, say we have three mixtures with ratios (3 : 0 : 2), (3 : 6 : 11) and (3 : 3 : 4). By mixing 10 units of the first, 20 units of the second and 30 units of the third, we get a new mixture with ratio (6 : 5 : 9), since: ($10 \times \frac{3}{5} + 20 \times \frac{3}{20} + 30 \times \frac{3}{10}$ : $10 \times \frac{0}{5} + 20 \times \frac{6}{20} + 30 \times \frac{3}{10}$ : $10 \times \frac{2}{5} + 20 \times \frac{11}{20} + 30 \times \frac{4}{10}$) = (18 : 15 : 27) = (6 : 5 : 9)
+ตัวอย่างเช่น สมมติว่าเรามีส่วนผสมสามอย่างที่มีอัตราส่วน (3 : 0 : 2), (3 : 6 : 11) และ (3 : 3 : 4) โดยการผสม 10 หน่วยของตัวแรก 20 หน่วยของวินาทีและ 30 หน่วยของหน่วยที่สาม เราได้ส่วนผสมใหม่ที่มีอัตราส่วน (6 : 5 : 9) เนื่องจาก: ($10 \times \frac{3}{5} + 20 \times \frac{3}{20} + 30 \times \frac{3}{10}$ : $10 \times \frac{0}{5} + 20 \times \frac{6}{20} + 30 \times \frac{3}{10}$ : $10 \times \frac{2}{5} + 20 \times \frac{11}{20} + 30 \times \frac{4}{10}$) = (18 : 15 : 27) = (6 : 5 : 9)
 
-However, with the same three mixtures, it is impossible to form the ratio (3 : 2 : 1), since the amount of $B$ is always less than the amount of $C$.
+อย่างไรก็ตาม ด้วยส่วนผสมสามอย่างเดียวกัน เป็นไปไม่ได้ที่จะสร้างอัตราส่วน (3 : 2 : 1) เนื่องจากจำนวน $B$ จะน้อยกว่าจำนวน $C$ เสมอ
 
-Let $n$ be a positive integer. Suppose that for every triple of integers $(a, b, c)$ with $0 ≤ a, b, c ≤ n$ and $gcd(a, b, c) = 1$, we have a mixture with ratio $(a : b : c)$. Let $M(n)$ be the set of all such mixtures.
+ให้ $n$ เป็นจำนวนเต็มบวก สมมติว่าสำหรับทุก ๆ สามของจำนวนเต็ม $(a, b, c)$ กับ $0 ≤ a, b, c ≤ n$ และ $gcd(a, b, c) = 1$ เรามีส่วนผสมที่มีอัตราส่วน $(a : b : c)$. ให้ $M(n)$ เป็นเซตของสารผสมดังกล่าวทั้งหมด
 
-For example, $M(2)$ contains the 19 mixtures with the following ratios:
+ตัวอย่างเช่น $M(2)$ มี 19 ส่วนผสมที่มีอัตราส่วนต่อไปนี้:
 
 {(0 : 0 : 1), (0 : 1 : 0), (0 : 1 : 1), (0 : 1 : 2), (0 : 2 : 1), (1 : 0 : 0), (1 : 0 : 1), (1 : 0 : 2), (1 : 1 : 0), (1 : 1 : 1), (1 : 1 : 2), (1 : 2 : 0), (1 : 2 : 1), (1 : 2 : 2), (2 : 0 : 1), (2 : 1 : 0), (2 : 1 : 1), (2 : 1 : 2), (2 : 2 : 1)}.
 
-Let $E(n)$ be the number of subsets of $M(n)$ which can produce the mixture with ratio (1 : 1 : 1), i.e., the mixture with equal parts $A$, $B$ and $C$.
+ให้ $E(n)$ เป็นจำนวนชุดย่อยของ $M(n)$ ซึ่งสามารถสร้างส่วนผสมที่มีอัตราส่วน (1 : 1 : 1) นั่นคือส่วนผสมที่มีส่วนเท่ากัน $A$, $B$ และ $ C$.
 
-We can verify that $E(1) = 103$, $E(2) = 520\\,447$, $E(10)\bmod {11}^8 = 82\\,608\\,406$ and $E(500)\bmod {11}^8 = 13\\,801\\,403$.
+เราสามารถยืนยันได้ว่า $E(1) = 103$, $E(2) = 520\\,447$, $E(10)\bmod {11}^8 = 82\\,608\\,406$ and $E(500)\bmod {11}^8 = 13\\,801\\,403$.
 
-Find $E(10\\,000\\,000)\bmod {11}^8$.
+หา $E(10\\,000\\,000)\bmod {11}^8$
 
 # --hints--
 
-`mixtures()` should return `59510340`.
+`mixtures()` ควร return `59510340`.
 
 ```js
 assert.strictEqual(mixtures(), 59510340);

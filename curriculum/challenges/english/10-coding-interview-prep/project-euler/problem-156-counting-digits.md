@@ -8,11 +8,11 @@ dashedName: problem-156-counting-digits
 
 # --description--
 
-Starting from zero the natural numbers are written down in base 10 like this:
+เริ่มจากศูนย์ ตัวเลขจะถูกเขียนลงในฐาน 10 ดังนี้:
 
 0 1 2 3 4 5 6 7 8 9 10 11 12....
 
-Consider the digit $d = 1$. After we write down each number n, we will update the number of ones that have occurred and call this number $f(n, 1)$. The first values for $f(n, 1)$, then, are as follows:
+พิจารณาตัวเลข $d = 1$ หลังจากที่เราจดแต่ละหมายเลข n เราจะอัปเดตจำนวนที่เกิดขึ้นและเรียกหมายเลขนี้ $f(n, 1)$ ค่าแรกสำหรับ $f(n, 1)$ จะเป็นดังนี้:
 
 | $n$ | $f(n, 1)$ |
 |-----|-----------|
@@ -30,19 +30,19 @@ Consider the digit $d = 1$. After we write down each number n, we will update th
 | 11  | 4         |
 | 12  | 5         |
 
-Note that $f(n, 1)$ never equals 3.
+Note $f(n, 1)$ ไม่เท่ากับ 3
 
-So the first two solutions of the equation $f(n, 1) = n$ are $n = 0$ and $n = 1$. The next solution is $n = 199981$. In the same manner the function $f(n, d)$ gives the total number of digits d that have been written down after the number $n$ has been written.
+ดังนั้นสองคำตอบแรกของสมการ $f(n, 1) = n$ คือ $n = 0$ และ $n = 1$ วิธีแก้ไขต่อไปคือ $n = 199981$ ในลักษณะเดียวกัน ฟังก์ชัน $f(n, d)$ ให้จำนวนหลักทั้งหมด d ที่เขียนลงไปหลังจากเขียนหมายเลข $n$ แล้ว
 
-In fact, for every digit $d ≠ 0$, 0 is the first solution of the equation $f(n, d) = n$. Let $s(d)$ be the sum of all the solutions for which $f(n, d) = n$.
+อันที่จริง สำหรับทุก ๆ หลัก $d ≠ 0$ 0 คือคำตอบแรกของสมการ $f(n, d) = n$ ให้ $s(d)$ เป็นผลรวมของคำตอบทั้งหมดที่ $f(n, d) = n$
 
-You are given that $s(1) = 22786974071$. Find $\sum{s(d)}$ for $1 ≤ d ≤ 9$.
+จะได้รับ $s(1) = 22786974071$ ค้นหา $\sum{s(d)}$ สำหรับ $1 ≤ d ≤ 9$
 
-Note: if, for some $n$, $f(n, d) = n$ for more than one value of $d$ this value of $n$ is counted again for every value of $d$ for which $f(n, d) = n$.
+Note: ถ้าสำหรับ $n$ บางส่วน $f(n, d) = n$ สำหรับค่ามากกว่าหนึ่งค่าของ $d$ ค่าของ $n$ จะถูกนับอีกครั้งสำหรับทุกค่าของ $d$ ซึ่ง $f(n, ง) = n$
 
 # --hints--
 
-`countingDigits()` should return `21295121502550`.
+`countingDigits()` ควร return `21295121502550`.
 
 ```js
 assert.strictEqual(countingDigits(), 21295121502550);

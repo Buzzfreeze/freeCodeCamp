@@ -8,21 +8,20 @@ dashedName: problem-469-empty-chairs
 
 # --description--
 
-In a room $N$ chairs are placed around a round table.
+ในห้องหนึ่งมีเก้าอี้ $N$ วางไว้รอบโต๊ะกลม
 
-Knights enter the room one by one and choose at random an available empty chair.
+อัศวินเข้ามาในห้องทีละคนและสุ่มเลือกเก้าอี้ว่างที่มีอยู่
 
-To have enough elbow room the knights always leave at least one empty chair between each other.
+เพื่อให้มีพื้นที่ข้อศอกเพียงพอ อัศวินจะทิ้งเก้าอี้ว่างไว้อย่างน้อยหนึ่งตัวระหว่างกัน
 
-When there aren't any suitable chairs left, the fraction $C$ of empty chairs is determined. We also define $E(N)$ as the expected value of $C$.
+เมื่อไม่มีเก้าอี้ที่เหมาะสมเหลืออยู่ จะมีการกำหนดเศษเก้าอี้ว่าง $C$ นอกจากนี้เรายังกำหนด $E(N)$ เป็นมูลค่าที่คาดไว้ของ $C$
 
-We can verify that $E(4) = \frac{1}{2}$ and $E(6) = \frac{5}{9}$.
+เราสามารถยืนยันได้ว่า $E(4) = \frac{1}{2}$ และ $E(6) = \frac{5}{9}$
 
-Find $E({10}^{18})$. Give your answer rounded to fourteen decimal places in the form 0.abcdefghijklmn.
-
+หา $E({10}^{18})$. ให้คำตอบของคุณปัดเศษทศนิยมสิบสี่ตำแหน่งในรูปแบบ 0.abcdefghijklmn
 # --hints--
 
-`emptyChairs()` should return `0.56766764161831`.
+`emptyChairs()` ควร return `0.56766764161831`.
 
 ```js
 assert.strictEqual(emptyChairs(), 0.56766764161831);

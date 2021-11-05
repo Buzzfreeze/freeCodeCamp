@@ -8,17 +8,17 @@ dashedName: problem-133-repunit-nonfactors
 
 # --description--
 
-A number consisting entirely of ones is called a repunit. We shall define $R(k)$ to be a repunit of length $k$; for example, $R(6) = 111111$.
+จำนวนที่ประกอบด้วยจำนวนทั้งหมดเรียกว่าการทำซ้ำ เราจะกำหนด $R(k)$ ให้เป็นหน่วยของความยาว $k$; ตัวอย่างเช่น $R(6) = 111111$
 
-Let us consider repunits of the form $R({10}^n)$.
+ให้เราพิจารณาการทำซ้ำของรูปแบบ $R({10}^n)$
 
-Although $R(10)$, $R(100)$, or $R(1000)$ are not divisible by 17, $R(10000)$ is divisible by 17. Yet there is no value of n for which $R({10}^n)$ will divide by 19. Remarkably, 11, 17, 41, and 73 are the only four primes below one-hundred that can be a factor of $R({10}^n)$.
+แม้ว่า $R(10)$, $R(100)$ หรือ $R(1000)$ จะไม่หารด้วย 17 ลงตัว แต่ $R(10000)$ หารด้วย 17 ลงตัว แต่ยังไม่มีค่า n ซึ่ง $R ({10}^n)$ จะหารด้วย 19 อย่างน่าทึ่ง 11, 17, 41 และ 73 เป็นเพียงสี่จำนวนเฉพาะที่ต่ำกว่าร้อยที่สามารถเป็นตัวประกอบของ $R({10}^n)$
 
-Find the sum of all the primes below one-hundred thousand that will never be a factor of $R({10}^n)$.
+จงหาผลรวมของจำนวนเฉพาะทั้งหมดที่ต่ำกว่าหนึ่งแสนที่ไม่เป็นตัวประกอบของ $R({10}^n)$
 
 # --hints--
 
-`repunitNonfactors()` should return `453647705`.
+`repunitNonfactors()` ควร return `453647705`.
 
 ```js
 assert.strictEqual(repunitNonfactors(), 453647705);

@@ -8,13 +8,12 @@ dashedName: problem-222-sphere-packing
 
 # --description--
 
-What is the length of the shortest pipe, of internal radius 50mm, that can fully contain 21 balls of radii 30mm, 31mm, ..., 50mm?
+ความยาวของท่อที่สั้นที่สุดที่มีรัศมีภายใน 50 มม. ที่สามารถบรรจุรัศมี 30 มม., 31 มม., ..., 50 มม. ได้ทั้งหมด 21 ลูกคือเท่าไร?
 
-Give your answer in micrometres (${10}^{-6}$ m) rounded to the nearest integer.
-
+ให้คำตอบเป็นไมโครมิเตอร์ (${10}^{-6}$ m) โดยปัดเศษเป็นจำนวนเต็มที่ใกล้เคียงที่สุด
 # --hints--
 
-`spherePacking()` should return `1590933`.
+`spherePacking()` ควร return `1590933`.
 
 ```js
 assert.strictEqual(spherePacking(), 1590933);

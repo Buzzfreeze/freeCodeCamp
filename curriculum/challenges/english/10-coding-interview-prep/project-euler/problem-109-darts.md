@@ -8,17 +8,17 @@ dashedName: problem-109-darts
 
 # --description--
 
-In the game of darts a player throws three darts at a target board which is split into twenty equal sized sections numbered one to twenty.
+ในเกมปาเป้า ผู้เล่นขว้างปาเป้าสามลูกไปที่กระดานเป้าหมาย ซึ่งแบ่งออกเป็นยี่สิบส่วนที่มีขนาดเท่ากันโดยมีจำนวนหนึ่งถึงยี่สิบ
 
 <img class="img-responsive center-block" alt="Darts board" src="https://cdn.freecodecamp.org/curriculum/project-euler/darts.png" style="background-color: white; padding: 10px;">
 
-The score of a dart is determined by the number of the region that the dart lands in. A dart landing outside the red/green outer ring scores zero. The black and cream regions inside this ring represent single scores. However, the red/green outer ring and middle ring score double and treble scores respectively.
+คะแนนของลูกดอกพิจารณาจากจำนวนของพื้นที่ที่ลูกดอกตกลงมา ลูกดอกที่ตกลงสู่พื้นนอกวงแหวนรอบนอกสีแดง/เขียวจะมีคะแนนเป็นศูนย์ บริเวณสีดำและสีครีมภายในวงแหวนนี้แสดงถึงคะแนนเดี่ยว อย่างไรก็ตาม วงแหวนรอบนอกสีแดง/เขียวและวงแหวนกลางได้คะแนนสองเท่าและเสียงแหลมตามลำดับ
 
-At the center of the board are two concentric circles called the bull region, or bulls-eye. The outer bull is worth 25 points and the inner bull is a double, worth 50 points.
+ที่ศูนย์กลางของกระดานมีวงกลมสองวงที่มีจุดศูนย์กลางเรียกว่าบริเวณกระทิงหรือตาวัว ตัวนอกมีค่า 25 แต้ม และตัวในเป็นคู่ มีค่า 50 แต้ม
 
-There are many variations of rules but in the most popular game the players will begin with a score of 301 or 501 and the first player to reduce their running total to zero is a winner. However, it is normal to play a "doubles out" system, which means that the player must land a double (including the double bulls-eye at the center of the board) on their final dart to win; any other dart that would reduce their running total to one or lower means the score for that set of three darts is "bust".
+มีกฎหลากหลายรูปแบบ แต่ในเกมที่ได้รับความนิยมมากที่สุด ผู้เล่นจะเริ่มต้นด้วยคะแนน 301 หรือ 501 และผู้เล่นคนแรกที่ลดผลรวมการวิ่งเป็นศูนย์จะเป็นผู้ชนะ อย่างไรก็ตาม เป็นเรื่องปกติที่จะเล่นระบบ "ดับเบิ้ลเอาต์" ซึ่งหมายความว่าผู้เล่นจะต้องวางดับเบิล (รวมถึงดับเบิลบูลส์อายที่กึ่งกลางกระดาน) ในการโผครั้งสุดท้ายเพื่อชนะ ลูกดอกอื่นใดที่จะลดผลรวมการวิ่งของพวกเขาให้เหลือหนึ่งหรือต่ำกว่านั้นหมายความว่าคะแนนสำหรับชุดลูกดอกสามชุดนั้นคือ "เสีย"
 
-When a player is able to finish on their current score it is called a "checkout" and the highest checkout is 170: T20 T20 D25 (two treble 20s and double bull). There are exactly eleven distinct ways to checkout on a score of 6:
+เมื่อผู้เล่นสามารถจบด้วยคะแนนปัจจุบันได้ จะเรียกว่า "เช็คเอาต์" และเช็คเอาต์สูงสุดคือ 170: T20 T20 D25 (สองเสียงแหลม 20 และดับเบิลบูล) มีสิบเอ็ดวิธีที่แตกต่างกันในการชำระเงินด้วยคะแนน 6
 
 $$\begin{array}
   \text{D3} &    &    \\\\
@@ -34,11 +34,11 @@ $$\begin{array}
   S2        & S2 & D1
 \end{array}$$
 
-Note that D1 D2 is considered different from D2 D1 as they finish on different doubles. However, the combination S1 T1 D1 is considered the same as T1 S1 D1. In addition, we shall not include misses in considering combinations; for example, D3 is the same as 0 D3 and 0 0 D3. Incredibly there are 42336 distinct ways of checking out in total. How many distinct ways can a player checkout with a score less than 100?
+โปรดทราบว่า D1 D2 ถือว่าแตกต่างจาก D2 D1 เมื่อจบด้วยคู่ผสมที่แตกต่างกัน อย่างไรก็ตาม ชุดค่าผสม S1 T1 D1 ถือว่าเหมือนกับ T1 S1 D1 นอกจากนี้ เราจะไม่รวมการพลาดในการพิจารณาชุดค่าผสม ตัวอย่างเช่น D3 เหมือนกับ 0 D3 และ 0 0 D3 มีวิธีการชำระเงินทั้งหมด 42336 วิธีที่แตกต่างกันอย่างไม่น่าเชื่อ ผู้เล่นสามารถชำระเงินด้วยคะแนนน้อยกว่า 100 ได้กี่วิธี
 
 # --hints--
 
-`darts()` should return `38182`.
+`darts()` ควร return `38182`.
 
 ```js
 assert.strictEqual(darts(), 38182);

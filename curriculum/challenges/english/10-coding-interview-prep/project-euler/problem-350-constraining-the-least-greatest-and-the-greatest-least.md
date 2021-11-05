@@ -8,13 +8,13 @@ dashedName: problem-350-constraining-the-least-greatest-and-the-greatest-least
 
 # --description--
 
-A list of size $n$ is a sequence of $n$ natural numbers. Examples are (2, 4, 6), (2, 6, 4), (10, 6, 15, 6), and (11).
+รายการขนาด $n$ เป็นลำดับของตัวเลขธรรมชาติ $n$ ตัวอย่าง ได้แก่ (2, 4, 6), (2, 6, 4), (10, 6, 15, 6) และ (11)
 
-The greatest common divisor, or $gcd$, of a list is the largest natural number that divides all entries of the list. Examples: $gcd(2, 6, 4) = 2$, $gcd(10, 6, 15, 6) = 1$ and $gcd(11) = 11$.
+ตัวหารร่วมมากหรือ $gcd$ ของรายการคือจำนวนธรรมชาติที่ใหญ่ที่สุดที่หารรายการทั้งหมดของรายการ ตัวอย่าง: $gcd(2, 6, 4) = 2$, $gcd(10, 6, 15, 6) = 1$ และ $gcd(11) = 11$
 
-The least common multiple, or $lcm$, of a list is the smallest natural number divisible by each entry of the list. Examples: $lcm(2, 6, 4) = 12$, $lcm(10, 6, 15, 6) = 30$ and $lcm(11) = 11$.
+ตัวคูณร่วมน้อยหรือ $lcm$ ของรายการคือจำนวนธรรมชาติที่น้อยที่สุดที่หารด้วยแต่ละรายการของรายการ ตัวอย่าง: $lcm(2, 6, 4) = 12$, $lcm(10, 6, 15, 6) = 30$ และ $lcm(11) = 11$
 
-Let $f(G, L, N)$ be the number of lists of size $N$ with $gcd ≥ G$ and $lcm ≤ L$. For example:
+ให้ $f(G, L, N)$ เป็นจำนวนรายการของขนาด $N$ โดยที่ $gcd ≥ G$ และ $lcm ≤ L$ ตัวอย่างเช่น:
 
 $$\begin{align}
   & f(10, 100, 1) = 91 \\\\
@@ -23,11 +23,11 @@ $$\begin{align}
   & f(10, 100, 1000)\bmod {101}^4 = 3\\,286\\,053
 \end{align}$$
 
-Find $f({10}^6, {10}^{12}, {10}^{18})\bmod {101}^4$.
+หา $f({10}^6, {10}^{12}, {10}^{18})\bmod {101}^4$.
 
 # --hints--
 
-`leastGreatestAndGreatestLeast()` should return `84664213`.
+`leastGreatestAndGreatestLeast()` ควร return `84664213`.
 
 ```js
 assert.strictEqual(leastGreatestAndGreatestLeast(), 84664213);

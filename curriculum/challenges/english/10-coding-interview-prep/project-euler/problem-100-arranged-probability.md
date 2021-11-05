@@ -8,47 +8,48 @@ dashedName: problem-100-arranged-probability
 
 # --description--
 
-If a box contains twenty-one colored discs, composed of fifteen blue discs and six red discs, and two discs were taken at random, it can be seen that the probability of taking two blue discs.
+
+ถ้ากล่องหนึ่งมีแผ่นสี 21 แผ่น ประกอบด้วยแผ่นสีน้ำเงิน 15 แผ่น และแผ่นสีแดง 6 แผ่น และสุ่มหยิบแผ่นสองแผ่น จะเห็นได้ว่าความน่าจะเป็นที่จะได้แผ่นสีน้ำเงินสองแผ่น
 
 $${P(BB)} = \frac{15}{21}×\frac{14}{20} = \frac{1}{2}$$
 
-The next such arrangement, for which there is exactly a 50% chance of taking two blue discs at random, is a box containing eighty-five blue discs and thirty-five red discs.
+การจัดเรียงครั้งต่อไปซึ่งมีโอกาส 50% ที่จะสุ่มเลือกแผ่นสีน้ำเงินสองแผ่น คือกล่องที่ประกอบด้วยแผ่นสีน้ำเงิน 85 แผ่นและแผ่นสีแดง 35 แผ่น
 
-By finding the first arrangement to contain over `limit` discs in total, determine the number of blue discs that the box would contain.
+จากการจัดเรียงที่ครั้งแรกที่มีดิสก์ `limit` ทั้งหมด ให้หาจำนวนดิสก์สีน้ำเงินที่ในกล่องจะมี
 
 # --hints--
 
-`arrangedProbability(20)` should return a number.
+`arrangedProbability(20)` ควร return number.
 
 ```js
 assert(typeof arrangedProbability(10) === 'number');
 ```
 
-`arrangedProbability(20)` should return `15`.
+`arrangedProbability(20)` ควร return `15`.
 
 ```js
 assert.strictEqual(arrangedProbability(20), 15);
 ```
 
-`arrangedProbability(100)` should return `85`.
+`arrangedProbability(100)` ควร return `85`.
 
 ```js
 assert.strictEqual(arrangedProbability(100), 85);
 ```
 
-`arrangedProbability(100000)` should return `97513`.
+`arrangedProbability(100000)` ควร return `97513`.
 
 ```js
 assert.strictEqual(arrangedProbability(100000), 97513);
 ```
 
-`arrangedProbability(1000000000)` should return `3822685023`.
+`arrangedProbability(1000000000)` ควร return `3822685023`.
 
 ```js
 assert.strictEqual(arrangedProbability(1000000000), 3822685023);
 ```
 
-`arrangedProbability(1000000000000)` should return `756872327473`.
+`arrangedProbability(1000000000000)` ควร return `756872327473`.
 
 ```js
 assert.strictEqual(arrangedProbability(1000000000000), 756872327473);

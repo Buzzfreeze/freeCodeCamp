@@ -11,22 +11,22 @@ dashedName: >-
 
 # --description--
 
-Take the number 6 and multiply it by each of 1273 and 9854:
+นำเลข 6 มาคูณด้วย 1273 และ 9854 แต่ละตัว
 
 $$\begin{align}
   & 6 × 1273 = 7638 \\\\
   & 6 × 9854 = 59124 \\\\
 \end{align}$$
 
-By concatenating these products we get the 1 to 9 pandigital 763859124. We will call 763859124 the "concatenated product of 6 and (1273, 9854)". Notice too, that the concatenation of the input numbers, 612739854, is also 1 to 9 pandigital.
+โดยการต่อผลิตภัณฑ์เหล่านี้เข้าด้วยกัน เราได้ 1 ถึง 9 pandigital 763859124 เราจะเรียก 763859124 ว่า "ผลิตภัณฑ์ที่ต่อกันของ 6 และ (1273, 9854)" โปรดสังเกตด้วยว่าการต่อกันของตัวเลขอินพุต 612739854 เป็น pandigital 1 ถึง 9 เช่นกัน
 
-The same can be done for 0 to 9 pandigital numbers.
+สามารถทำได้เหมือนกันสำหรับตัวเลข pandigital 0 ถึง 9
 
-What is the largest 0 to 9 pandigital 10-digit concatenated product of an integer with two or more other integers, such that the concatenation of the input numbers is also a 0 to 9 pandigital 10-digit number?
+ผลคูณที่ต่อกัน 10 หลัก 0 ถึง 9 ที่ใหญ่ที่สุดของเลขจำนวนเต็มที่มีจำนวนเต็มอื่นตั้งแต่สองจำนวนขึ้นไปคืออะไร การต่อตัวเลขที่ป้อนเข้าจะเป็นตัวเลข 10 หลักของเลขpandigital 0 ถึง 9 ด้วย
 
 # --hints--
 
-`largestPandigital()` should return `9857164023`.
+`largestPandigital()` ควร return `9857164023`.
 
 ```js
 assert.strictEqual(largestPandigital(), 9857164023);

@@ -8,23 +8,23 @@ dashedName: problem-470-super-ramvok
 
 # --description--
 
-Consider a single game of Ramvok:
+พิจารณาเกมเดียวของ Ramvok:
 
-Let $t$ represent the maximum number of turns the game lasts. If $t = 0$, then the game ends immediately. Otherwise, on each turn $i$, the player rolls a die. After rolling, if $i &lt; t$ the player can either stop the game and receive a prize equal to the value of the current roll, or discard the roll and try again next turn. If $i = t$, then the roll cannot be discarded and the prize must be accepted. Before the game begins, $t$ is chosen by the player, who must then pay an up-front cost $ct$ for some constant $c$. For $c = 0$, $t$ can be chosen to be infinite (with an up-front cost of 0). Let $R(d, c)$ be the expected profit (i.e. net gain) that the player receives from a single game of optimally-played Ramvok, given a fair $d$-sided die and cost constant $c$. For example, $R(4, 0.2) = 2.65$. Assume that the player has sufficient funds for paying any/all up-front costs.
+ให้ $t$ แทนจำนวนรอบสูงสุดของเกม ถ้า $t = 0$ เกมจะจบลงทันที มิฉะนั้น ในแต่ละเทิร์น $i$ ผู้เล่นจะทอยลูกเต๋า หลังจากกลิ้งแล้ว ถ้า $i &lt; t$ ผู้เล่นสามารถหยุดเกมและรับรางวัลเท่ากับมูลค่าการทอยปัจจุบัน หรือทิ้งการทอยแล้วลองอีกครั้งในเทิร์นถัดไป หาก $i = t$ จะไม่สามารถทิ้งทอยได้และต้องยอมรับรางวัล ก่อนที่เกมจะเริ่มต้น ผู้เล่นจะเลือก $t$ ซึ่งจะต้องจ่ายเงินล่วงหน้า $ct$ สำหรับค่าคงที่ $c$ สำหรับ $c = 0$ สามารถเลือก $t$ ให้เป็นอนันต์ได้ (โดยมีค่าใช้จ่ายล่วงหน้าเท่ากับ 0) ให้ $R(d, c)$ เป็นกำไรที่คาดหวัง (เช่น กำไรสุทธิ) ที่ผู้เล่นได้รับจากเกมเดียวของ Ramvok ที่เล่นอย่างเหมาะสมที่สุด โดยให้ลูกเต๋าด้าน $d$ ที่ยุติธรรมและต้นทุนคงที่ $c$ ตัวอย่างเช่น $R(4, 0.2) = 2.65$ สมมติว่าผู้เล่นมีเงินเพียงพอสำหรับการชำระค่าใช้จ่ายล่วงหน้าใดๆ/ทั้งหมด
 
-Now consider a game of Super Ramvok:
+พิจารณาเกม Super Ramvok:
 
-In Super Ramvok, the game of Ramvok is played repeatedly, but with a slight modification. After each game, the die is altered. The alteration process is as follows: The die is rolled once, and if the resulting face has its pips visible, then that face is altered to be blank instead. If the face is already blank, then it is changed back to its original value. After the alteration is made, another game of Ramvok can begin (and during such a game, at each turn, the die is rolled until a face with a value on it appears). The player knows which faces are blank and which are not at all times. The game of Super Ramvok ends once all faces of the die are blank.
+ใน Super Ramvok เกม Ramvok เล่นซ้ำแล้วซ้ำอีก แต่มีการปรับเปลี่ยนเล็กน้อย หลังจากแต่ละเกม การตายจะเปลี่ยนไป กระบวนการเปลี่ยนแปลงมีดังนี้: แม่พิมพ์ถูกรีดหนึ่งครั้ง และหากหน้าผลลัพธ์มีจุดปรากฏให้เห็น ใบหน้านั้นจะเปลี่ยนเป็นว่างเปล่าแทน หากใบหน้าว่างเปล่าอยู่แล้ว จะเปลี่ยนกลับเป็นค่าเดิม หลังจากทำการเปลี่ยนแปลงแล้ว เกม Ramvok อีกเกมหนึ่งสามารถเริ่มต้นได้ (และในระหว่างเกมดังกล่าว ในแต่ละเทิร์น ดายจะถูกทอยจนหน้ามีค่าปรากฏ) ผู้เล่นรู้ว่าใบหน้าใดว่างเปล่าและหน้าใดไม่ว่างตลอดเวลา เกม Super Ramvok จะจบลงเมื่อใบหน้าของผู้ตายว่างเปล่า
 
-Let $S(d, c)$ be the expected profit that the player receives from an optimally-played game of Super Ramvok, given a fair $d$-sided die to start (with all sides visible), and cost constant $c$. For example, $S(6, 1) = 208.3$.
+ให้ $S(d, c)$ เป็นกำไรที่ผู้เล่นคาดหวังจากเกม Super Ramvok ที่เล่นอย่างเหมาะสมที่สุด โดยให้ $d$ ด้านที่ยุติธรรมในการเริ่ม (โดยที่ทุกด้านมองเห็นได้) และต้นทุนคงที่ $c $. ตัวอย่างเช่น $S(6, 1) = 208.3$
 
-Let $F(n) = \sum_{4 ≤ d ≤ n} \sum_{0 ≤ c ≤ n} S(d, c)$.
+ให้ $F(n) = \sum_{4 ≤ d ≤ n} \sum_{0 ≤ c ≤ n} S(d, c)$
 
-Calculate $F(20)$, rounded to the nearest integer.
+คำนวณ $F(20)$ ปัดเศษเป็นจำนวนเต็มที่ใกล้เคียงที่สุด
 
 # --hints--
 
-`superRamvok()` should return `147668794`.
+`superRamvok()` ควร return `147668794`.
 
 ```js
 assert.strictEqual(superRamvok(), 147668794);

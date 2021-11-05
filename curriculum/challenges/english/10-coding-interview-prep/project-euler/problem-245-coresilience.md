@@ -8,17 +8,17 @@ dashedName: problem-245-coresilience
 
 # --description--
 
-We shall call a fraction that cannot be cancelled down a resilient fraction.
+เราจะเรียกเศษส่วนที่ไม่สามารถหักลงเป็นเศษส่วนที่ยืดหยุ่นได้
 
-Furthermore we shall define the resilience of a denominator, $R(d)$, to be the ratio of its proper fractions that are resilient; for example, $R(12) = \frac{4}{11}$.
+นอกจากนี้ เราจะกำหนดความยืดหยุ่นของตัวส่วน $R(d)$ ให้เป็นอัตราส่วนของเศษส่วนที่เหมาะสมที่มีความยืดหยุ่น ตัวอย่างเช่น $R(12) = \frac{4}{11}$
 
-The resilience of a number $d > 1$ is then $\frac{φ(d)}{d − 1}$ , where $φ$ is Euler's totient function.
+ความยืดหยุ่นของตัวเลข $d > 1$ ก็คือ $\frac{φ(d)}{d − 1}$ โดยที่ $φ$ เป็นฟังก์ชัน totient ของออยเลอร์
 
-We further define the coresilience of a number $n > 1$ as $C(n) = \frac{n − φ(n)}{n − 1}$.
+เรากำหนดแกนกลางของตัวเลขเพิ่มเติม $n > 1$ เป็น $C(n) = \frac{n − φ(n)}{n − 1}$
 
-The coresilience of a prime $p$ is $C(p) = \frac{1}{p − 1}$.
+Coresilience ของไพรม์ $p$ คือ $C(p) = \frac{1}{p − 1}$
 
-Find the sum of all composite integers $1 &lt; n ≤ 2 × {10}^{11}$, for which $C(n)$ is a unit fraction.
+หาผลรวมของจำนวนเต็มรวม $1 &lt; n ≤ 2 × {10}^{11}$ โดยที่ $C(n)$ เป็นเศษส่วนหน่วย
 
 # --hints--
 

@@ -8,11 +8,11 @@ dashedName: problem-122-efficient-exponentiation
 
 # --description--
 
-The most naive way of computing $n^{15}$ requires fourteen multiplications:
+วิธีคำนวณที่ไร้เดียงสาที่สุด $n^{15}$ ต้องการการคูณสิบสี่:
 
 $$n × n × \ldots × n = n^{15}$$
 
-But using a "binary" method you can compute it in six multiplications:
+แต่โดยใช้วิธี "binary" คุณสามารถคำนวณได้หกคูณ:
 
 $$\begin{align}
   & n × n = n^2\\\\
@@ -23,8 +23,7 @@ $$\begin{align}
   & n^{14} × n = n^{15}
 \end{align}$$
 
-However it is yet possible to compute it in only five multiplications:
-
+อย่างไรก็ตาม ยังสามารถคำนวณได้ด้วยการคูณห้าครั้งเท่านั้น:
 $$\begin{align}
   & n × n = n^2\\\\
   & n^2 × n = n^3\\\\
@@ -33,13 +32,13 @@ $$\begin{align}
   & n^{12} × n^3 = n^{15}
 \end{align}$$
 
-We shall define $m(k)$ to be the minimum number of multiplications to compute $n^k$; for example $m(15) = 5$.
+เราจะกำหนด $m(k)$ ให้เป็นจำนวนขั้นต่ำของการคูณในการคำนวณ $n^k$; ตัวอย่างเช่น $m(15) = 5$.
 
-For $1 ≤ k ≤ 200$, find $\sum{m(k)}$.
+สำหรับ $1 ≤ k ≤ 200$ หา $\sum{m(k)}$
 
 # --hints--
 
-`efficientExponentation()` should return `1582`.
+`efficientExponentation()` ควร return `1582`.
 
 ```js
 assert.strictEqual(efficientExponentation(), 1582);

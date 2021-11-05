@@ -8,15 +8,15 @@ dashedName: problem-198-ambiguous-numbers
 
 # --description--
 
-A best approximation to a real number $x$ for the denominator bound $d$ is a rational number $\frac{r}{s}$ (in reduced form) with $s ≤ d$, so that any rational number $\frac{p}{q}$ which is closer to $x$ than $\frac{r}{s}$ has $q > d$.
+การประมาณค่าจำนวนจริง $x$ ที่ดีที่สุดสำหรับตัวส่วนที่ถูกผูกไว้ $d$ คือจำนวนตรรกยะ $\frac{r}{s}$ (ในรูปแบบลดขนาด) ด้วย $s ≤ d$ ดังนั้นจำนวนตรรกยะใดๆ $\ frac{p}{q}$ ซึ่งใกล้กับ $x$ มากกว่า $\frac{r}{s}$ มี $q > d$
 
-Usually the best approximation to a real number is uniquely determined for all denominator bounds. However, there are some exceptions, e.g. $\frac{9}{40}$ has the two best approximations $\frac{1}{4}$ and $\frac{1}{5}$ for the denominator bound $6$. We shall call a real number $x$ ambiguous, if there is at least one denominator bound for which $x$ possesses two best approximations. Clearly, an ambiguous number is necessarily rational.
+โดยปกติ การประมาณค่าที่ดีที่สุดสำหรับจำนวนจริงจะถูกกำหนดอย่างเฉพาะเจาะจงสำหรับขอบเขตตัวส่วนทั้งหมด อย่างไรก็ตาม มีข้อยกเว้นบางประการเช่น $\frac{9}{40}$ มีการประมาณค่าที่ดีที่สุดสองค่าคือ $\frac{1}{4}$ และ $\frac{1}{5}$ สำหรับตัวส่วนที่ถูกผูกไว้ $6$ เราจะเรียกจำนวนจริง $x$ คลุมเครือ ถ้ามีตัวส่วนอย่างน้อยหนึ่งตัวที่ $x$ มีค่าประมาณที่ดีที่สุดสองค่า เห็นได้ชัดว่าจำนวนที่คลุมเครือจำเป็นต้องมีเหตุผล
 
-How many ambiguous numbers $x = \frac{p}{q}$, $0 &lt; x &lt; \frac{1}{100}$, are there whose denominator $q$ does not exceed ${10}^8$?
+จำนวนตัวเลข$ x = \ frac {p} {Q} $, $ 0 & lt; x &lt; \frac{1}{100}$ มีตัวส่วน $q$ ไม่เกิน ${10}^8$ หรือไม่
 
 # --hints--
 
-`ambiguousNumbers()` should return `52374425`.
+`ambiguousNumbers()` ควร return `52374425`.
 
 ```js
 assert.strictEqual(ambiguousNumbers(), 52374425);

@@ -8,33 +8,33 @@ dashedName: problem-17-number-letter-counts
 
 # --description--
 
-If the numbers 1 to 5 are written out in words: one, two, three, four, five, then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
+ถ้าจำนวนของ 1 ถึง 5 ถูกเขียนเป็นคำเช่น: one, two, three, four, five, และมี 3 + 3 + 5 + 4 + 4 = 19 ตัวอักษรที่ใช้ทั้งหทด
 
-If all the numbers from 1 to given `limit` inclusive were written out in words, how many letters would be used?
+ทุกจำนวนจาก 1 ไปจนถึง `limit` ถูกเขียนเป็นคำ, จะมีกกี่ตัวอักษรที่ถูกใช้?
 
-**Note:** Do not count spaces or hyphens. For example, 342 (three hundred and forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters. The use of "and" when writing out numbers is in compliance with British usage.
+**Note:** ไม่ต้องนับ spaces หรือ hyphens ตัวอย่างเช่น 342 (three hundred and forty-two) มี 23 ตัวอักษร และ 115 (one hundred and fifteen) มี 20 ตัวอักษร ใช้ "and" เมื่อเขียนจำนวนเป็นแบบ British usage
 
 # --hints--
 
-`numberLetterCounts(5)` should return a number.
+`numberLetterCounts(5)` ควร return number
 
 ```js
 assert(typeof numberLetterCounts(5) === 'number');
 ```
 
-`numberLetterCounts(5)` should return 19.
+`numberLetterCounts(5)` ควร return 19
 
 ```js
 assert.strictEqual(numberLetterCounts(5), 19);
 ```
 
-`numberLetterCounts(150)` should return 1903.
+`numberLetterCounts(150)` ควร return 1903
 
 ```js
 assert.strictEqual(numberLetterCounts(150), 1903);
 ```
 
-`numberLetterCounts(1000)` should return 21124.
+`numberLetterCounts(1000)` ควร return 21124
 
 ```js
 assert.strictEqual(numberLetterCounts(1000), 21124);

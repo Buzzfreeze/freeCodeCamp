@@ -8,21 +8,20 @@ dashedName: problem-112-bouncy-numbers
 
 # --description--
 
-Working from left-to-right if no digit is exceeded by the digit to its left it is called an increasing number; for example, 134468.
+การทำงานจากซ้ายไปขวาหากไม่มีตัวเลขใดเกินหลักทางซ้ายจะเรียกว่าจำนวนที่เพิ่มขึ้น ตัวอย่างเช่น 134468
 
-Similarly if no digit is exceeded by the digit to its right it is called a decreasing number; for example, 66420.
+ในทำนองเดียวกันหากไม่มีตัวเลขใดเกินจากหลักทางด้านขวาจะเรียกว่าจำนวนที่ลดลง ตัวอย่างเช่น 66420
 
-We shall call a positive integer that is neither increasing nor decreasing a "bouncy" number; for example, 155349.
+เราจะเรียกจำนวนเต็มบวกที่ไม่เพิ่มหรือลดจำนวน "เด้ง" ตัวอย่างเช่น 155349
 
-Clearly there cannot be any bouncy numbers below one-hundred, but just over half of the numbers below one-thousand (525) are bouncy. In fact, the least number for which the proportion of bouncy numbers first reaches 50% is 538.
+เห็นได้ชัดว่าไม่มีตัวเลขเด้งกลับที่ต่ำกว่าหนึ่งร้อย แต่มีมากกว่าครึ่งของตัวเลขที่ต่ำกว่าหนึ่งพัน (525) ที่เด้ง อันที่จริง จำนวนที่น้อยที่สุดที่สัดส่วนของตัวเลขเด้งขึ้นก่อนถึง 50% คือ 538
 
-Surprisingly, bouncy numbers become more and more common and by the time we reach 21780 the proportion of bouncy numbers is equal to 90%.
+น่าแปลกที่ตัวเลขเด้งกลับมีมากขึ้นเรื่อยๆ และเมื่อเราถึง 21780 สัดส่วนของตัวเลขเด้งกลับจะเท่ากับ 90%
 
-Find the least number for which the proportion of bouncy numbers is exactly 99%.
-
+หาจำนวนที่น้อยที่สุดที่สัดส่วนของตัวเลขเด้งคือ 99%
 # --hints--
 
-`bouncyNumbers()` should return `1587000`.
+`bouncyNumbers()` ควร return `1587000`.
 
 ```js
 assert.strictEqual(bouncyNumbers(), 1587000);

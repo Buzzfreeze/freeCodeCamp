@@ -8,43 +8,43 @@ dashedName: problem-461-almost-pi
 
 # --description--
 
-Let `f(k, n)` = $e^\frac{k}{n} - 1$, for all non-negative integers `k`.
+ให้ `f(k, n)` = $e^\frac{k}{n} - 1$ สำหรับจำนวนเต็มที่ไม่เป็นลบ `k`
 
-Remarkably, `f(6, 200) + f(75, 200) + f(89, 200) + f(226, 200)` = 3.1415926… ≈ π.
+อย่างน่าทึ่ง `f(6, 200) + f(75, 200) + f(89, 200) + f(226, 200)` = 3.1415926… ≈ π
 
-In fact, it is the best approximation of π of the form `f(a, 200) + f(b, 200) + f(c, 200) + f(d, 200)`.
+อันที่จริง มันเป็นค่าประมาณที่ดีที่สุดของ π ของรูปแบบ `f(a, 200) + f(b, 200) + f(c, 200) + f(d, 200)`
 
-Let `almostPi(n)` = a<sup>2</sup> + b<sup>2</sup> + c<sup>2</sup> + d<sup>2</sup> for a, b, c, d that minimize the error: $\lvert f(a,n) + f(b,n) + f(c,n) + f(d,n) - \Pi\rvert$
+ให้ `almostPi(n)` = a<sup>2</sup> + b<sup>2</sup> + c<sup>2</sup> + d<sup>2</sup> สำหรับ a, b, c, d ที่ลดข้อผิดพลาด: $\lvert f(a,n) + f(b,n) + f(c,n) + f(d,n) - \Pi\rvert$
 
-You are given `almostPi(200)` = 6<sup>2</sup> + 75<sup>2</sup> + 89<sup>2</sup> + 226<sup>2</sup> = 64658.
+ได้รับ `almostPi(200)` = 6<sup>2</sup> + 75<sup>2</sup> + 89<sup>2</sup> + 226<sup>2</sup> = 64658.
 
 # --hints--
 
-`almostPi` should be a function.
+`almostPi` ควรเป็น function.
 
 ```js
 assert(typeof almostPi === 'function')
 ```
 
-`almostPi` should return a number.
+`almostPi` ควร return number.
 
 ```js
 assert.strictEqual(typeof almostPi(10), 'number');
 ```
 
-`almostPi(29)` should return `1208`.
+`almostPi(29)` ควร return `1208`.
 
 ```js
 assert.strictEqual(almostPi(29), 1208);
 ```
 
-`almostPi(50)` should return `4152`.
+`almostPi(50)` ควร return `4152`.
 
 ```js
 assert.strictEqual(almostPi(50), 4152);
 ```
 
-`almostPi(200)` should return `64658`.
+`almostPi(200)` ควร return `64658`.
 
 ```js
 assert.strictEqual(almostPi(200), 64658);

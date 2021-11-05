@@ -8,15 +8,14 @@ dashedName: problem-187-semiprimes
 
 # --description--
 
-A composite is a number containing at least two prime factors. For example, $15 = 3 × 5; 9 = 3 × 3; 12 = 2 × 2 × 3$.
+composite คือตัวเลขที่มีตัวประกอบเฉพาะอย่างน้อยสองตัว ตัวอย่างเช่น $15 = 3 × 5; 9 = 3 × 3; 12 = 2 × 2 × 3$
 
-There are ten composites below thirty containing precisely two, not necessarily distinct, prime factors: 4, 6, 9, 10, 14, 15, 21, 22, 25, 26.
-
-How many composite integers, $n &lt; {10}^8$, have precisely two, not necessarily distinct, prime factors?
+มีองค์ประกอบสิบอย่างต่ำกว่าสามสิบองค์ประกอบที่มีตัวประกอบเฉพาะสองตัวที่ไม่จำเป็นต้องชัดเจน: 4, 6, 9, 10, 14, 15, 21, 22, 25, 26
+มี composite integers กี่ตัวที่ $n &lt; {10}^8$ มีปัจจัยเฉพาะสองอย่างเท่านั้น ไม่จำเป็นมีprime?
 
 # --hints--
 
-`semiPrimes()` should return `17427258`.
+`semiPrimes()` ควร return `17427258`.
 
 ```js
 assert.strictEqual(euler187(), 17427258);

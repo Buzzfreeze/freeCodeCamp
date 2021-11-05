@@ -8,19 +8,19 @@ dashedName: problem-454-diophantine-reciprocals-iii
 
 # --description--
 
-In the following equation $x$, $y$, and $n$ are positive integers.
+ในสมการต่อไปนี้ $x$, $y$ และ $n$ เป็นจำนวนเต็มบวก
 
 $$\frac{1}{x} + \frac{1}{y} = \frac{1}{n}$$
 
-For a limit $L$ we define $F(L)$ as the number of solutions which satisfy $x &lt; y ≤ L$.
+สำหรับขีดจำกัด $L$ เรากำหนด $F(L)$ เป็นจำนวนของโซลูชันที่ตรงตาม $x &lt; y ≤ L$
 
-We can verify that $F(15) = 4$ and $F(1000) = 1069$.
+สามารถยืนยันได้ว่า $F(15) = 4$ และ $F(1000) = 1069$
 
-Find $F({10}^{12})$.
+หา $F({10}^{12})$.
 
 # --hints--
 
-`diophantineReciprocalsThree()` should return `5435004633092`.
+`diophantineReciprocalsThree()` ควร return `5435004633092`.
 
 ```js
 assert.strictEqual(diophantineReciprocalsThree(), 5435004633092);

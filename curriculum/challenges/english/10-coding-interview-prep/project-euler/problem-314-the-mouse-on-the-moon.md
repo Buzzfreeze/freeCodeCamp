@@ -8,23 +8,23 @@ dashedName: problem-314-the-mouse-on-the-moon
 
 # --description--
 
-The moon has been opened up, and land can be obtained for free, but there is a catch. You have to build a wall around the land that you stake out, and building a wall on the moon is expensive. Every country has been allotted a 500 m by 500 m square area, but they will possess only that area which they wall in. 251001 posts have been placed in a rectangular grid with 1 meter spacing. The wall must be a closed series of straight lines, each line running from post to post.
+ดวงจันทร์ถูกเปิดขึ้นและสามารถรับที่ดินได้ฟรี แต่มีการจับ คุณต้องสร้างกำแพงรอบๆ ดินแดนที่คุณออกไป และการสร้างกำแพงบนดวงจันทร์นั้นมีราคาแพง ทุกประเทศได้รับการจัดสรรพื้นที่ 500 ม. คูณ 500 ตร.ม. แต่จะมีเฉพาะพื้นที่ที่มีกำแพงล้อมรอบเท่านั้น 251001 เสาถูกวางในตารางสี่เหลี่ยมที่มีระยะห่าง 1 เมตร ผนังต้องเป็นเส้นตรงแบบปิด แต่ละเส้นวิ่งจากเสาหนึ่งไปอีกเสาหนึ่ง
 
-The bigger countries of course have built a 2000 m wall enclosing the entire 250 000 $\text{m}^2$ area. The Duchy of Grand Fenwick, has a tighter budget, and has asked you (their Royal Programmer) to compute what shape would get best maximum $\frac{\text{enclosed-area}}{\text{wall-length}}$ ratio.
+แน่นอนว่าประเทศที่ใหญ่กว่าได้สร้างกำแพงขนาด 2,000 ม. ซึ่งล้อมรอบพื้นที่ $\text{m}^2$ ทั้งหมด 250,000 $\text{m}^2$ ดัชชีแห่งแกรนด์เฟนวิกมีงบประมาณจำกัด และขอให้คุณ (โปรแกรมเมอร์หลวงของพวกเขา) คำนวณว่ารูปร่างใดจะได้ค่าสูงสุด $\frac{\text{enclosed-area}}{\text{wall-length}}$ อัตราส่วน
 
-You have done some preliminary calculations on a sheet of paper. For a 2000 meter wall enclosing the 250 000 $\text{m}^2$ area the $\frac{\text{enclosed-area}}{\text{wall-length}}$ ratio is 125.
+คุณได้ทำการคำนวณเบื้องต้นบนกระดาษแผ่นหนึ่งแล้ว สำหรับกำแพง 2,000 เมตรที่ล้อมรอบพื้นที่ $\text{m}^2$ $\frac{\text{enclosed-area}}{\text{wall-length}}$ คือ 125
 
-Although not allowed, but to get an idea if this is anything better: if you place a circle inside the square area touching the four sides the area will be equal to $π \times {250}^2 \text{m}^2$ and the perimeter will be $π \times 500 \text{m}$, so the $\frac{\text{enclosed-area}}{\text{wall-length}}$ ratio will also be 125.
+แม้ว่าจะไม่ได้รับอนุญาต แต่เพื่อให้เกิดความคิดว่าสิ่งนี้ดีกว่าไหม: หากคุณวางวงกลมในพื้นที่สี่เหลี่ยมจัตุรัสโดยสัมผัสทั้งสี่ด้าน พื้นที่จะเท่ากับ $π \times {250}^2 \text{m}^2 $ และปริมณฑลจะเป็น $π \times 500 \text{m}$ ดังนั้นอัตราส่วน $\frac{\text{enclosed-area}}{\text{wall-length}}$ ก็จะเท่ากับ 125
 
-However, if you cut off from the square four triangles with sides 75 m, 75 m and $75\sqrt{2}$ m the total area becomes 238750 $\text{m}^2$ and the perimeter becomes $1400 + 300\sqrt{2}$ m. So this gives an $\frac{\text{enclosed-area}}{\text{wall-length}}$ ratio of 130.87, which is significantly better.
+อย่างไรก็ตาม หากคุณตัดออกจากสี่เหลี่ยมจัตุรัสสี่รูปสามเหลี่ยมที่มีด้าน 75 ม. 75 ม. และ $75\sqrt{2}$ ม. พื้นที่ทั้งหมดจะกลายเป็น 238750 $\text{m}^2$ และปริมณฑลจะกลายเป็น $1400 + 300\sqrt {2}$ ม. ดังนั้นสิ่งนี้จึงให้อัตราส่วน $\frac{\text{enclosed-area}}{\text{wall-length}}$ เท่ากับ 130.87 ซึ่งดีกว่าอย่างมาก
 
 <img class="img-responsive center-block" alt="picture showing difference in encosed-area between circle and square with cut off four triangles" src="https://cdn.freecodecamp.org/curriculum/project-euler/the-mouse-on-the-moon.gif" style="background-color: white; padding: 10px;">
 
-Find the maximum $\frac{\text{enclosed-area}}{\text{wall-length}}$ ratio. Give your answer rounded to 8 places behind the decimal point in the form abc.defghijk.
+หาอัตราส่วน $\frac{\text{enclosed-area}}{\text{wall-length}}$ สูงสุด ให้คำตอบของคุณปัดเศษเป็น 8 ตำแหน่งหลังจุดทศนิยมในรูปแบบ abc.defghijk
 
 # --hints--
 
-`theMouseOnTheMoon()` should return `132.52756426`.
+`theMouseOnTheMoon()` ควร return `132.52756426`.
 
 ```js
 assert.strictEqual(theMouseOnTheMoon(), 132.52756426);

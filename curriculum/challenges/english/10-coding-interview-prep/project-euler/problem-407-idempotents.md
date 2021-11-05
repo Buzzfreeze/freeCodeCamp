@@ -8,17 +8,17 @@ dashedName: problem-407-idempotents
 
 # --description--
 
-If we calculate $a^2\bmod 6$ for $0 ≤ a ≤ 5$ we get: 0, 1, 4, 3, 4, 1.
+ถ้าเราคำนวณ $a^2\bmod 6$ สำหรับ $0 ≤ a ≤ 5$ เราจะได้: 0, 1, 4, 3, 4, 1
 
-The largest value of a such that $a^2 ≡ a\bmod 6$ is $4$.
+ค่าสูงสุดของ a ที่ $a^2 ≡ a\bmod 6$ คือ $4$
 
-Let's call $M(n)$ the largest value of $a &lt; n$ such that $a^2 ≡ a (\text{mod } n)$. So $M(6) = 4$.
+เรียก $M(n)$ ว่าค่าที่ใหญ่ที่สุดของ $a &lt; n$ นั้น $a^2 ≡ a (\text{mod } n)$. ดังนั้น $M(6) = 4$
 
-Find $\sum M(n)$ for $1 ≤ n ≤ {10}^7$.
+หา $\sum M(n)$ สำหรับ $1 ≤ n ≤ {10}^7$
 
 # --hints--
 
-`idempotents()` should return `39782849136421`.
+`idempotents()` ควร return `39782849136421`.
 
 ```js
 assert.strictEqual(idempotents(), 39782849136421);

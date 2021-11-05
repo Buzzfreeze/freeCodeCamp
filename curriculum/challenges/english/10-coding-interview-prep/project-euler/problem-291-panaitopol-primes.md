@@ -8,13 +8,13 @@ dashedName: problem-291-panaitopol-primes
 
 # --description--
 
-A prime number $p$ is called a Panaitopol prime if $p = \frac{x^4 - y^4}{x^3 + y^3}$ for some positive integers $x$ and $y$.
+จำนวนเฉพาะ $p$ เรียกว่า Panaitopol primesถ้า $p = \frac{x^4 - y^4}{x^3 + y^3}$ สำหรับจำนวนเต็มบวกบางตัว $x$ และ $y$
 
-Find how many Panaitopol primes are less than $5 × {10}^{15}$.
+หาจำนวนPanaitopol primesที่น้อยกว่า $5 × {10}^{15}$
 
 # --hints--
 
-`panaitopolPrimes()` should return `4037526`.
+`panaitopolPrimes()` ควร return `4037526`.
 
 ```js
 assert.strictEqual(panaitopolPrimes(), 4037526);

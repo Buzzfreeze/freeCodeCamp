@@ -8,17 +8,17 @@ dashedName: problem-207-integer-partition-equations
 
 # --description--
 
-For some positive integers $k$, there exists an integer partition of the form $4^t = 2^t + k$,
+สำหรับจำนวนเต็มบวกจำนวนหนึ่ง $k$ มีpartitionจำนวนเต็มอยู่ในรูปแบบ $4^t = 2^t + k$
 
-where $4^t$, $2^t$, and $k$ are all positive integers and $t$ is a real number.
+โดยที่ $4^t$, $2^t$ และ $k$ เป็นจำนวนเต็มบวกทั้งหมด และ $t$ เป็นจำนวนจริง
 
-The first two such partitions are $4^1 = 2^1 + 2$ and $4^{1.584\\,962\\,5\ldots} = 2^{1.584\\,962\\,5\ldots} + 6$.
+สองpartitionแรกดังกล่าวคือ $4^1 = 2^1 + 2$ และ $4^{1.584\\,962\\,5\ldots} = 2^{1.584\\,962\\,5\ldots} + 6 $.
 
-Partitions where $t$ is also an integer are called perfect. For any $m ≥ 1$ let $P(m)$ be the proportion of such partitions that are perfect with $k ≤ m$.
+partitionที่ $t$ เป็นจำนวนเต็มเรียกว่าสมบูรณ์แบบ สำหรับ $m ≥ 1$ ใดๆ ให้ $P(m)$ เป็นสัดส่วนของpartitionที่เหมาะสมกับ $k ≤ m$
 
-Thus $P(6) = \frac{1}{2}$.
+ดังนั้น $P(6) = \frac{1}{2}$
 
-In the following table are listed some values of $P(m)$
+ในตารางต่อไปนี้แสดงค่าบางอย่างของ $P(m)$
 
 $$\begin{align}
   & P(5) = \frac{1}{1}    \\\\
@@ -32,11 +32,10 @@ $$\begin{align}
   & P(185) = \frac{3}{13}
 \end{align}$$
 
-Find the smallest $m$ for which $P(m) &lt; \frac{1}{12\\,345}$
-
+หา $m$ ที่เล็กที่สุดที่ $P(m) &lt; \frac{1}{12\\,345}$
 # --hints--
 
-`integerPartitionEquations()` should return `44043947822`.
+`integerPartitionEquations()` ควร return `44043947822`.
 
 ```js
 assert.strictEqual(integerPartitionEquations(), 44043947822);

@@ -8,25 +8,25 @@ dashedName: problem-405-a-rectangular-tiling
 
 # --description--
 
-We wish to tile a rectangle whose length is twice its width.
+เราต้องการปูกระเบื้องสี่เหลี่ยมที่มีความยาวเป็นสองเท่าของความกว้าง
 
-Let $T(0)$ be the tiling consisting of a single rectangle.
+ให้ $T(0)$ เป็นไทล์ที่ประกอบด้วยสี่เหลี่ยมเดียว
 
-For $n > 0$, let $T(n)$ be obtained from $T( n- 1)$ by replacing all tiles in the following manner:
+สำหรับ $n > 0$ ให้รับ $T(n)$ จาก $T( n- 1)$ โดยแทนที่ไทล์ทั้งหมดในลักษณะต่อไปนี้:
 
 <img class="img-responsive center-block" alt="obtaining T(n) from T(n - 1)" src="https://cdn.freecodecamp.org/curriculum/project-euler/a-rectangular-tiling-1.png" style="background-color: white; padding: 10px;">
 
-The following animation demonstrates the tilings $T(n)$ for $n$ from 0 to 5:
+ภาพเคลื่อนไหวต่อไปนี้สาธิตการเรียงต่อกันของ $T(n)$ สำหรับ $n$ ตั้งแต่ 0 ถึง 5:
 
 <img class="img-responsive center-block" alt="animation with tilings T(n) for n from 0 to 5" src="https://cdn.freecodecamp.org/curriculum/project-euler/a-rectangular-tiling-2.gif" style="background-color: white; padding: 10px;">
 
-Let $f(n)$ be the number of points where four tiles meet in $T(n)$. For example, $f(1) = 0$, $f(4) = 82$ and $f({10}^9)\bmod {17}^7 = 126\\,897\\,180$.
+ให้ $f(n)$ เป็นจำนวนจุดที่สี่แผ่นมาบรรจบกันใน $T(n)$ ตัวอย่างเช่น $f(1) = 0$, $f(4) = 82$ and $f({10}^9)\bmod {17}^7 = 126\\,897\\,180$.
 
-Find $f({10}^k)$ for $k = {10}^{18}$, give your answer modulo ${17}^7$.
+ค้นหา $f({10}^k)$ สำหรับ $k = {10}^{18}$ ให้คำตอบ modulo ${17}^7$
 
 # --hints--
 
-`rectangularTiling()` should return `237696125`.
+`rectangularTiling()` ควร return `237696125`.
 
 ```js
 assert.strictEqual(rectangularTiling(), 237696125);

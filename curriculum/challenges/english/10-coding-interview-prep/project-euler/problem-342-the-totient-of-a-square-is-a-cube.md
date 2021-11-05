@@ -8,18 +8,18 @@ dashedName: problem-342-the-totient-of-a-square-is-a-cube
 
 # --description--
 
-Consider the number 50.
+พิจารณาหมายเลข 50
 
-${50}^2 = 2500 = 2^2 × 5^4$, so $φ(2500) = 2 × 4 × 5^3 = 8 × 5^3 = 2^3 × 5^3$. $φ$ denotes Euler's totient function.
+${50}^2 = 2500 = 2^2 × 5^4$ ดังนั้น $φ(2,500) = 2 × 4 × 5^3 = 8 × 5^3 = 2^3 × 5^3$ $φ$ หมายถึง Euler's totient function
 
-So 2500 is a square and $φ(2500)$ is a cube.
+ดังนั้น 2500 เป็นสี่เหลี่ยมจัตุรัส และ $φ(2,500)$ เป็นลูกบาศก์
 
-Find the sum of all numbers $n$, $1 &lt; n &lt; {10}^{10}$ such that $φ(n^2)$ is a cube.
+หาผลรวมของตัวเลขทั้งหมด $n$, $1 &lt; น &lt; {10}^{10}$ โดยที่ $φ(n^2)$ เป็นลูกบาศก์
 
 
 # --hints--
 
-`totientOfSquare()` should return `5943040885644`.
+`totientOfSquare()` ควร return `5943040885644`.
 
 ```js
 assert.strictEqual(totientOfSquare(), 5943040885644);

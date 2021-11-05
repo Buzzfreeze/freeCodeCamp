@@ -8,9 +8,9 @@ dashedName: problem-43-sub-string-divisibility
 
 # --description--
 
-The number, 1406357289, is a 0 to 9 pandigital number because it is made up of each of the digits 0 to 9 in some order, but it also has a rather interesting sub-string divisibility property.
+เลข 1406357289 มี 0 ถึง 9 pandigital number เพราะว่าประกอบด้วย digits จาก 0 ถึง 9 แต่มันประกอบด้วยคุณสมบัติการแบ่ง string ย่อยที่น่าสนใจ
 
-Let $d_1$ be the $1^{st}$ digit, $d_2$ be the $2^{nd}$ digit, and so on. In this way, we note the following:
+ให้ $d_1$ เป็น $1^{st}$ digit, $d_2$ เป็น $2^{nd}$ digit ตามลำดับ 
 
 - ${d_2}{d_3}{d_4} = 406$ is divisible by 2
 - ${d_3}{d_4}{d_5} = 063$ is divisible by 3
@@ -20,37 +20,37 @@ Let $d_1$ be the $1^{st}$ digit, $d_2$ be the $2^{nd}$ digit, and so on. In this
 - ${d_7}{d_8}{d_9} = 728$ is divisible by 13
 - ${d_8}{d_9}{d_{10}} = 289$ is divisible by 17
 
-Find the sum of all 0 to `n` pandigital numbers with sub-strings fulfilling `n - 2` of these divisibility properties.
+จากผลรวมตั้งแต่ 0 ถึง `n` pandigital numbers กับ sub-strings เติมจาก`n - 2` ของการแบ่งproperties
 
-**Note:** Pandigital numbers starting with `0` are to be considered in the result.
+**Note:** Pandigital numbers เริ่มจาก `0` ถูกพิจารณาเป็น result
 
 # --hints--
 
-`substringDivisibility(5)` should return a number.
+`substringDivisibility(5)` ควร return number.
 
 ```js
 assert(typeof substringDivisibility(5) === 'number');
 ```
 
-`substringDivisibility(5)` should return `12444480`.
+`substringDivisibility(5)` ควร return `12444480`.
 
 ```js
 assert.strictEqual(substringDivisibility(5), 12444480)
 ```
 
-`substringDivisibility(7)` should return `1099210170`.
+`substringDivisibility(7)` ควร return `1099210170`.
 
 ```js
 assert.strictEqual(substringDivisibility(7), 1099210170)
 ```
 
-`substringDivisibility(8)` should return `1113342912`.
+`substringDivisibility(8)` ควร return `1113342912`.
 
 ```js
 assert.strictEqual(substringDivisibility(8), 1113342912)
 ```
 
-`substringDivisibility(9)` should return `16695334890`.
+`substringDivisibility(9)` ควร return `16695334890`.
 
 ```js
 assert.strictEqual(substringDivisibility(9), 16695334890)

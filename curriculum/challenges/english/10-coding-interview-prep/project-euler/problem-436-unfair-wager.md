@@ -8,29 +8,29 @@ dashedName: problem-436-unfair-wager
 
 # --description--
 
-Julie proposes the following wager to her sister Louise.
+Julie เสนอการเดิมพันต่อไปนี้ให้กับหลุยส์ น้องสาวของเธอ
 
-She suggests they play a game of chance to determine who will wash the dishes.
+เธอแนะนำให้พวกเขาเล่นเกมเพื่อหาโอกาสที่จะล้างจาน
 
-For this game, they shall use a generator of independent random numbers uniformly distributed between 0 and 1.
+สำหรับเกมนี้ พวกเขาจะใช้ตัวสร้างตัวเลขสุ่มอิสระที่แจกแจงอย่างสม่ำเสมอระหว่าง 0 ถึง 1
 
-The game starts with $S = 0$.
+เกมเริ่มต้นด้วย $S = 0$
 
-The first player, Louise, adds to $S$ different random numbers from the generator until $S > 1$ and records her last random number '$x$'.
+ผู้เล่นคนแรกคือ Louise เพิ่มตัวเลขสุ่มที่แตกต่างกันเป็น $S$ จากเครื่องกำเนิดจนถึง $S > 1$ และบันทึกหมายเลขสุ่มสุดท้ายของเธอ '$x$'
 
-The second player, Julie, continues adding to $S$ different random numbers from the generator until $S > 2$ and records her last random number '$y$'.
+ผู้เล่นคนที่สอง Julie ยังคงเพิ่มตัวเลขสุ่มที่แตกต่างกันของ $S$ จากเครื่องกำเนิดจนถึง $S > 2$ และบันทึกหมายเลขสุ่มล่าสุดของเธอ '$y$'
 
-The player with the highest number wins and the loser washes the dishes, i.e. if $y > x$ the second player wins.
+ผู้เล่นที่มีหมายเลขสูงสุดจะเป็นผู้ชนะ และผู้แพ้ล้างจาน เช่น ถ้า $y > x$ ผู้เล่นคนที่สองชนะ
 
-For example, if the first player draws 0.62 and 0.44, the first player turn ends since $0.62 + 0.44 > 1$ and $x = 0.44$. If the second players draws 0.1, 0.27 and 0.91, the second player turn ends since $0.62 + 0.44 + 0.1 + 0.27 + 0.91 > 2$ and $y = 0.91$. Since $y > x$, the second player wins.
+ตัวอย่างเช่น หากผู้เล่นคนแรกดึง 0.62 และ 0.44 เทิร์นของผู้เล่นคนแรกจะสิ้นสุดตั้งแต่ 0.62 ดอลลาร์ + 0.44 > 1$ และ $x = 0.44$ หากผู้เล่นคนที่สองดึง 0.1 0.27 และ 0.91 ผู้เล่นคนที่สองจะสิ้นสุดตั้งแต่ 0.62 เหรียญ + 0.44 + 0.1 + 0.27 + 0.91 > 2$ และ $y = 0.91$ ตั้งแต่ $y > x$ ผู้เล่นคนที่สองชนะ
 
-Louise thinks about it for a second, and objects: "That's not fair".
+หลุยส์ครุ่นคิดอยู่ครู่หนึ่งและคัดค้าน: "ไม่ยุติธรรมเลย"
 
-What is the probability that the second player wins? Give your answer rounded to 10 places behind the decimal point in the form 0.abcdefghij
+ความน่าจะเป็นที่ผู้เล่นคนที่สองชนะเป็นเท่าไหร่? ให้คำตอบของคุณปัดเศษเป็น 10 ตำแหน่งหลังจุดทศนิยมในรูปแบบ 0.abcdefghij
 
 # --hints--
 
-`unfairWager()` should return `0.5276662759`.
+`unfairWager()` ควร return `0.5276662759`.
 
 ```js
 assert.strictEqual(unfairWager(), 0.5276662759);

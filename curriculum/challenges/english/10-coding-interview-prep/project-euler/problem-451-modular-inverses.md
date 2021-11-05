@@ -8,11 +8,11 @@ dashedName: problem-451-modular-inverses
 
 # --description--
 
-Consider the number 15.
+พิจารณาเลข 15
 
-There are eight positive numbers less than 15 which are coprime to 15: 1, 2, 4, 7, 8, 11, 13, 14.
+มีตัวเลขบวกแปดตัวที่น้อยกว่า 15 ซึ่งเป็น coprime ถึง 15: 1, 2, 4, 7, 8, 11, 13, 14
 
-The modular inverses of these numbers modulo 15 are: 1, 8, 4, 13, 2, 11, 7, 14 because
+moduloผกผันของตัวเลขเหล่านี้ โมดูโล 15 คือ: 1, 8, 4, 13, 2, 11, 7, 14 เพราะ
 
 $$\begin{align}
   & 1  \times 1\bmod 15 = 1 \\\\
@@ -23,17 +23,16 @@ $$\begin{align}
   & 14 \times 14 = 196\bmod 15 = 1
 \end{align}$$
 
-Let $I(n)$ be the largest positive number $m$ smaller than $n - 1$ such that the modular inverse of $m$ modulo $n$ equals $m$ itself.
+ให้ $I(n)$ เป็นจำนวนบวกที่มากที่สุด $m$ น้อยกว่า $n - 1$ เพื่อให้ค่าผกผันmoduloของ $m$ modulo $n$ เท่ากับ $m$ เอง
 
-So $I(15) = 11$.
+ดังนั้น $I(15) = 11$
 
-Also $I(100) = 51$ and $I(7) = 1$.
-
-Find $\sum I(n)$ for $3 ≤ n ≤ 2 \times {10}^7$
+นอกจากนี้ $I(100) = 51$ และ $I(7) = 1$
+หา $\sum I(n)$ for $3 ≤ n ≤ 2 \times {10}^7$
 
 # --hints--
 
-`modularInverses()` should return `153651073760956`.
+`modularInverses()` ควร return `153651073760956`.
 
 ```js
 assert.strictEqual(modularInverses(), 153651073760956);

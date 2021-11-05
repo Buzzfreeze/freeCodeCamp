@@ -8,19 +8,19 @@ dashedName: problem-215-crack-free-walls
 
 # --description--
 
-Consider the problem of building a wall out of 2×1 and 3×1 bricks (horizontal×vertical dimensions) such that, for extra strength, the gaps between horizontally-adjacent bricks never line up in consecutive layers, i.e. never form a "running crack".
+พิจารณาปัญหาการสร้างกำแพงจากอิฐ 2×1 และ 3×1 (ขนาดแนวนอน×แนวตั้ง) เพื่อให้มีความแข็งแรงมากขึ้น ช่องว่างระหว่างอิฐในแนวนอนจะไม่เรียงเป็นชั้นๆ แตก".
 
-For example, the following 9×3 wall is not acceptable due to the running crack shown in red:
+ตัวอย่างเช่น ผนังขนาด 9×3 ต่อไปนี้ไม่ยอมรับเนื่องจากรอยแตกที่ทำงานเป็นสีแดง:
 
 <img class="img-responsive center-block" alt="9x3 wall with one lined up gap between horizontally-adjacent bricks" src="https://cdn.freecodecamp.org/curriculum/project-euler/crack-free-walls.gif" style="background-color: white; padding: 10px;">
 
-There are eight ways of forming a crack-free 9×3 wall, written $W(9,3) = 8$.
+มีแปดวิธีในการสร้างกำแพง 9×3 ที่ไม่มีการแตกร้าว เขียนเป็น $W(9,3) = 8$
 
-Calculate $W(32,10)$.
+คำนวณ $W(32,10)$
 
 # --hints--
 
-`crackFreeWalls()` should return `806844323190414`.
+`crackFreeWalls()` ควร return `806844323190414`.
 
 ```js
 assert.strictEqual(crackFreeWalls(), 806844323190414);

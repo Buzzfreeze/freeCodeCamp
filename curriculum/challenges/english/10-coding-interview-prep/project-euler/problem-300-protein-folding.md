@@ -8,29 +8,29 @@ dashedName: problem-300-protein-folding
 
 # --description--
 
-In a very simplified form, we can consider proteins as strings consisting of hydrophobic (H) and polar (P) elements, e.g. HHPPHHHPHHPH.
+ในรูปแบบที่เรียบง่าย เราสามารถพิจารณาโปรตีนเป็นสายที่ประกอบด้วยธาตุไม่ชอบน้ำ (H) และขั้ว (P) เช่น ป.ล.
 
-For this problem, the orientation of a protein is important; e.g. HPP is considered distinct from PPH. Thus, there are $2^n$ distinct proteins consisting of $n$ elements.
+สำหรับปัญหานี้ การวางแนวของโปรตีนมีความสำคัญ เช่น. HPP ถือว่าแตกต่างจาก PPH ดังนั้น มีโปรตีนที่แตกต่างกัน $2^n$ ซึ่งประกอบด้วยองค์ประกอบ $n$
 
-When one encounters these strings in nature, they are always folded in such a way that the number of H-H contact points is as large as possible, since this is energetically advantageous.
+เมื่อพบเชือกเหล่านี้ในธรรมชาติ พวกมันจะถูกพับเก็บในลักษณะที่จุดสัมผัส H-H มีจำนวนมากที่สุดเท่าที่จะเป็นไปได้ เนื่องจากสิ่งนี้มีประโยชน์อย่างมาก
 
-As a result, the H-elements tend to accumulate in the inner part, with the P-elements on the outside.
+เป็นผลให้องค์ประกอบ H มีแนวโน้มที่จะสะสมในส่วนด้านในโดยที่องค์ประกอบ P อยู่ด้านนอก
 
-Natural proteins are folded in three dimensions of course, but we will only consider protein folding in <u>two dimensions</u>.
+แน่นอนว่าโปรตีนธรรมชาติถูกพับเป็นสามมิติ แต่เราจะพิจารณาเฉพาะการพับโปรตีนใน <u>สองมิติ</u> เท่านั้น
 
-The figure below shows two possible ways that our example protein could be folded (H-H contact points are shown with red dots).
+รูปด้านล่างแสดงวิธีที่เป็นไปได้สองวิธีในการพับโปรตีนตัวอย่างของเรา (จุดสัมผัส H-H แสดงด้วยจุดสีแดง)
 
 <img class="img-responsive center-block" alt="two possible ways to fold example protein" src="https://cdn.freecodecamp.org/curriculum/project-euler/protein-folding.gif" style="background-color: white; padding: 10px;">
 
-The folding on the left has only six H-H contact points, thus it would never occur naturally. On the other hand, the folding on the right has nine H-H contact points, which is optimal for this string.
+การพับด้านซ้ายมีจุดสัมผัส H-H เพียงหกจุด ดังนั้นจึงไม่มีทางเกิดขึ้นตามธรรมชาติ ในทางกลับกัน การพับทางด้านขวามีจุดสัมผัส H-H เก้าจุด ซึ่งเหมาะสมที่สุดสำหรับสตริงนี้
 
-Assuming that H and P elements are equally likely to occur in any position along the string, the average number of H-H contact points in an optimal folding of a random protein string of length 8 turns out to be $\frac{850}{2^8} = 3.3203125$.
+สมมติว่าองค์ประกอบ H และ P มีแนวโน้มเท่ากันที่จะเกิดขึ้นในตำแหน่งใดๆ ตามเส้นเชือก จำนวนจุดสัมผัส HH โดยเฉลี่ยในการพับที่เหมาะสมที่สุดของสายโปรตีนสุ่มที่มีความยาว 8 จะกลายเป็น $\frac{850}{2^ 8} = 3.3203125$
 
-What is the average number of H-H contact points in an optimal folding of a random protein string of length 15? Give your answer using as many decimal places as necessary for an exact result.
+จำนวนจุดสัมผัส HH โดยเฉลี่ยในการพับที่เหมาะสมที่สุดของสตริงโปรตีนสุ่มที่มีความยาว 15 เป็นเท่าใด ให้คำตอบโดยใช้ตำแหน่งทศนิยมมากเท่าที่จำเป็นเพื่อให้ได้ผลลัพธ์ที่แน่นอน
 
 # --hints--
 
-`proteinFolding()` should return `8.0540771484375`.
+`proteinFolding()` ควร return `8.0540771484375`.
 
 ```js
 assert.strictEqual(proteinFolding(), 8.0540771484375);

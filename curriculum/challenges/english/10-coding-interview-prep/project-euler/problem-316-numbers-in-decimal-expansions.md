@@ -8,31 +8,31 @@ dashedName: problem-316-numbers-in-decimal-expansions
 
 # --description--
 
-Let $p = p_1 p_2 p_3 \ldots$ be an infinite sequence of random digits, selected from {0,1,2,3,4,5,6,7,8,9} with equal probability.
+ให้ $p = p_1 p_2 p_3 \ldots$ เป็นลำดับอนันต์ของตัวเลขสุ่ม เลือกจาก {0,1,2,3,4,5,6,7,8,9} ที่มีความน่าจะเป็นเท่ากัน
 
-It can be seen that $p$ corresponds to the real number $0.p_1 p_2 p_3 \ldots$.
+จะเห็นได้ว่า $p$ สอดคล้องกับจำนวนจริง $0.p_1 p_2 p_3 \ldots$
 
-It can also be seen that choosing a random real number from the interval [0,1) is equivalent to choosing an infinite sequence of random digits selected from {0,1,2,3,4,5,6,7,8,9} with equal probability.
+จะเห็นได้ว่าการเลือกจำนวนจริงแบบสุ่มจากช่วง [0,1) นั้นเทียบเท่ากับการเลือกลำดับอนันต์ของตัวเลขสุ่มที่เลือกจาก {0,1,2,3,4,5,6,7,8, 9} ที่มีความน่าจะเป็นเท่ากัน
 
-For any positive integer $n$ with $d$ decimal digits, let $k$ be the smallest index such that $p_k, p_{k + 1}, \ldots p_{k + d - 1}$ are the decimal digits of $n$, in the same order.
+สำหรับจำนวนเต็มบวกใดๆ $n$ ที่มีเลขทศนิยม $d$ ให้ $k$ เป็นดัชนีที่เล็กที่สุดโดยที่ $p_k, p_{k + 1}, \ldots p_{k + d - 1}$ เป็นเลขฐานสิบของ $n$ ในลำดับเดียวกัน
 
-Also, let $g(n)$ be the expected value of $k$; it can be proven that $g(n)$ is always finite and, interestingly, always an integer number.
+นอกจากนี้ ให้ $g(n)$ เป็นค่าที่คาดไว้ของ $k$; สามารถพิสูจน์ได้ว่า $g(n)$ เป็นจำนวนจำกัดเสมอ และที่น่าสนใจคือ เป็นจำนวนเต็มเสมอ
 
-For example, if $n = 535$, then
+ตัวอย่างเช่น ถ้า $n = 535$ แล้ว
 
-for $p = 31415926\mathbf{535}897\ldots$, we get $k = 9$
+สำหรับ $p = 31415926\mathbf{535}897\ldots$ เราจะได้ $k = 9$
 
-for $p = 35528714365004956000049084876408468\mathbf{535}4\ldots$, we get $k = 36$
+สำหรับ $p = 35528714365004956000049084876408468\mathbf{535}4\ldots$ เราจะได้ $k = 36$
 
-etc and we find that $g(535) = 1008$.
+และเราพบว่า $g(535) = 1008$
 
-Given that $\displaystyle\sum_{n = 2}^{999} g\left(\left\lfloor\frac{{10}^6}{n}\right\rfloor\right) = 27280188$, find $\displaystyle\sum_{n = 2}^{999\\,999} g\left(\left\lfloor\frac{{10}^{16}}{n}\right\rfloor\right)$.
+ระบุว่า $\displaystyle\sum_{n = 2}^{999} g\left(\left\lfloor\frac{{10}^6}{n}\right\rfloor\right) = 27280188$ ค้นหา $\ displaystyle\sum_{n = 2}^{999\\,999} g\left(\left\lfloor\frac{{10}^{16}}{n}\right\rfloor\right)$.
 
-**Note:** $\lfloor x\rfloor$ represents the floor function.
+**Note:** $\lfloor x\rfloor$ แสดงถึง floor function
 
 # --hints--
 
-`numbersInDecimalExpansion()` should return `542934735751917760`.
+`numbersInDecimalExpansion()` ควร return `542934735751917760`.
 
 ```js
 assert.strictEqual(numbersInDecimalExpansion(), 542934735751917760);

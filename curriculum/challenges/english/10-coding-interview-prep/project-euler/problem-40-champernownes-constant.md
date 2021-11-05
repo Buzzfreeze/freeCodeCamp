@@ -8,37 +8,37 @@ dashedName: problem-40-champernownes-constant
 
 # --description--
 
-An irrational decimal fraction is created by concatenating the positive integers:
+irrational decimal fraction หาจากการต่อกันของจำนวนที่มีค่าบวก:
 
 0.12345678910**1**112131415161718192021...
 
-It can be seen that the 12<sup>th</sup> digit of the fractional part is 1.
+เห็นว่า 12<sup>th</sup> digit ของเศษส่วนคือ 1.
 
-If *d<sub>n</sub>* represents the *n*<sup>th</sup> digit of the fractional part, find the value of the following expression.
+ถ้า *d<sub>n</sub>* แสดงถึง *n*<sup>th</sup> digit ของเศษส่วน ให้หาค่าของ
 
 d<sub>1</sub> × d<sub>10</sub> × d<sub>100</sub> × d<sub>1000</sub> × d<sub>10000</sub> × d<sub>100000</sub> × d<sub>1000000</sub>
 
 # --hints--
 
-`champernownesConstant(100)` should return a number.
+`champernownesConstant(100)` ควร return number.
 
 ```js
 assert(typeof champernownesConstant(100) === 'number');
 ```
 
-`champernownesConstant(100)` should return 5.
+`champernownesConstant(100)` ควร return 5.
 
 ```js
 assert.strictEqual(champernownesConstant(100), 5);
 ```
 
-`champernownesConstant(1000)` should return 15.
+`champernownesConstant(1000)` ควร return 15.
 
 ```js
 assert.strictEqual(champernownesConstant(1000), 15);
 ```
 
-`champernownesConstant(1000000)` should return 210.
+`champernownesConstant(1000000)` ควร return 210.
 
 ```js
 assert.strictEqual(champernownesConstant(1000000), 210);

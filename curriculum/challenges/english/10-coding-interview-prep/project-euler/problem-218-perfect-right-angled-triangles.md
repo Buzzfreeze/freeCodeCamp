@@ -8,29 +8,29 @@ dashedName: problem-218-perfect-right-angled-triangles
 
 # --description--
 
-Consider the right-angled triangle with sides $a=7$, $b=24$ and $c=25$.
+พิจารณาสามเหลี่ยมมุมฉากที่มีด้าน $a=7$, $b=24$ และ $c=25$
 
-The area of this triangle is 84, which is divisible by the perfect numbers 6 and 28.
+พื้นที่ของสามเหลี่ยมนี้คือ 84 ซึ่งหารด้วยเลขสมบูรณ์ 6 และ 28 ลงตัว
 
-Moreover it is a primitive right-angled triangle as $gcd(a,b) = 1$ and $gcd(b,c) = 1$.
+นอกจากนี้ มันคือสามเหลี่ยมมุมฉากดั้งเดิม เช่น $gcd(a,b) = 1$ และ $gcd(b,c) = 1$
 
-Also $c$ is a perfect square.
+นอกจากนี้ $c$ ยังเป็นกำลังสองสมบูรณ์
 
-We will call a right-angled triangle perfect if:
+เราจะเรียกสามเหลี่ยมมุมฉากว่าสมบูรณ์ถ้า:
 
-- it is a primitive right-angled triangle
-- its hypotenuse is a perfect square
+- เป็นรูปสามเหลี่ยมมุมฉากดั้งเดิม
+- ด้านตรงข้ามมุมฉากเป็นกำลังสองสมบูรณ์
 
-We will call a right-angled triangle super-perfect if:
+เราจะเรียกสามเหลี่ยมมุมฉากว่าสมบูรณ์แบบมากถ้า:
 
-- it is a perfect right-angled triangle
-- its area is a multiple of the perfect numbers 6 and 28.
+- เป็นรูปสามเหลี่ยมมุมฉากที่สมบูรณ์แบบ
+- พื้นที่ของมันคือผลคูณของจำนวนเต็ม 6 และ 28
 
-How many perfect right-angled triangles with $c ≤ {10}^{16}$ exist that are not super-perfect?
+มีสามเหลี่ยมมุมฉากสมบูรณ์จำนวนกี่รูปที่มี $c ≤ {10}^{16}$ ที่ไม่สมบูรณ์แบบ
 
 # --hints--
 
-`perfectRightAngledTriangles()` should return `0`.
+`perfectRightAngledTriangles()` ควร return `0`.
 
 ```js
 assert.strictEqual(perfectRightAngledTriangles(), 0);

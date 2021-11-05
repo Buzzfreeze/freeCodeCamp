@@ -8,11 +8,11 @@ dashedName: problem-147-rectangles-in-cross-hatched-grids
 
 # --description--
 
-In a 3x2 cross-hatched grid, a total of 37 different rectangles could be situated within that grid as indicated in the sketch.
+ในตารางแบบ cross-hatch ขนาด 3x2 สามารถใส่รูปสี่เหลี่ยมผืนผ้าที่แตกต่างกันทั้งหมด 37 รูปภายในตารางนั้นตามที่ระบุไว้ในภาพร่าง
 
 <img class="img-responsive center-block" alt="ways of situating different rectangles wihtin cross-hatched 3x2 grid" src="https://cdn.freecodecamp.org/curriculum/project-euler/rectangles-in-cross-hatched-grids.png" style="background-color: white; padding: 10px;">
 
-There are 5 grids smaller than 3x2, vertical and horizontal dimensions being important, i.e. 1x1, 2x1, 3x1, 1x2 and 2x2. If each of them is cross-hatched, the following number of different rectangles could be situated within those smaller grids:
+มี 5 ช่องตารางที่เล็กกว่า 3x2 ขนาดแนวตั้งและแนวนอนมีความสำคัญ เช่น 1x1, 2x1, 3x1, 1x2 และ 2x2 หากแต่ละอันเป็นแบบ cross-hatch จำนวนสี่เหลี่ยมที่แตกต่างกันต่อไปนี้อาจอยู่ภายในกริดที่เล็กกว่าเหล่านั้น:
 
 $$\begin{array}{|c|c|}
 \hline
@@ -23,13 +23,13 @@ $$\begin{array}{|c|c|}
   2 \times 2 & 18 \\\\ \hline
 \end{array}$$
 
-Adding those to the 37 of the 3x2 grid, a total of 72 different rectangles could be situated within 3x2 and smaller grids.
+การเพิ่มสิ่งเหล่านั้นลงใน 37 ของตาราง 3x2 นั้นจะมีรูปสี่เหลี่ยมผืนผ้าที่แตกต่างกันทั้งหมด 72 รูปอยู่ภายใน 3x2 และกริดที่เล็กกว่า
 
-How many different rectangles could be situated within 47x43 and smaller grids?
+สามารถวางสี่เหลี่ยมที่แตกต่างกันได้กี่รูปภายใน 47x43 และกริดที่เล็กกว่า
 
 # --hints--
 
-`crossHatchedRectangles()` should return `846910284`.
+`crossHatchedRectangles()` ควร return `846910284`.
 
 ```js
 assert.strictEqual(crossHatchedRectangles(), 846910284);

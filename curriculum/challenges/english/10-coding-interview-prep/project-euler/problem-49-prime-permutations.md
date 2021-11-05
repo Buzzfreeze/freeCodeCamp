@@ -8,21 +8,21 @@ dashedName: problem-49-prime-permutations
 
 # --description--
 
-The arithmetic sequence, 1487, 4817, 8147, in which each of the terms increases by 3330, is unusual in two ways: (i) each of the three terms are prime, and, (ii) each of the 4-digit numbers are permutations of one another.
+arithmetic sequence 1487, 4817, 8147 ของแต่ละตัวถูกเพิ่มจาก 3330 มีสองวิธีที่เป็น unusual: (i) แต่ละตัวเป็นค่า prime และ (ii) แต่ละ digit สามารถเป็น permutations ของเลขอื่นได้
 
-There are no arithmetic sequences made up of three 1-, 2-, or 3-digit primes, exhibiting this property, but there is one other 4-digit increasing sequence.
+ไม่มี arithmetic sequences ที่เกิดจาก 1-, 2-, หรือ 3-digit primes มีคุณสมบัตินี้แต่มี 4-digit เพิ่ม sequence
 
-What 12-digit number do you form by concatenating the three terms in this sequence?
+12-digit number ที่มีรูปแบบของ concatenating ทั้งหมด 3 terms ใน sequence นี้คืออะไร
 
 # --hints--
 
-`primePermutations()` should return a number.
+`primePermutations()` ควร return number.
 
 ```js
 assert(typeof primePermutations() === 'number');
 ```
 
-`primePermutations()` should return 296962999629.
+`primePermutations()` ควร return 296962999629.
 
 ```js
 assert.strictEqual(primePermutations(), 296962999629);

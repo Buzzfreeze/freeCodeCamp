@@ -8,13 +8,13 @@ dashedName: problem-165-intersections
 
 # --description--
 
-A segment is uniquely defined by its two endpoints. By considering two line segments in plane geometry there are three possibilities: the segments have zero points, one point, or infinitely many points in common.
+segment ถูกกำหนดโดยไม่ซ้ำกันโดยจุดปลายทั้งสอง เมื่อพิจารณาส่วนของเส้นตรงสองส่วนในเรขาคณิตระนาบ มีความเป็นไปได้สามประการ: ส่วนดังกล่าวมีจุดศูนย์ จุดหนึ่งจุด หรือจุดร่วมกันอย่างไม่สิ้นสุด
 
-Moreover when two segments have exactly one point in common it might be the case that that common point is an endpoint of either one of the segments or of both. If a common point of two segments is not an endpoint of either of the segments it is an interior point of both segments.
+นอกจากนี้ เมื่อทั้งสองส่วนมีจุดร่วมกันเพียงจุดเดียว อาจเป็นกรณีที่จุดร่วมนั้นเป็นจุดสิ้นสุดของส่วนใดส่วนหนึ่งหรือของทั้งสองส่วน ถ้าจุดร่วมของสองส่วนไม่ใช่จุดสิ้นสุดของส่วนใดส่วนหนึ่ง ก็จะเป็นจุดภายในของทั้งสองส่วน
 
-We will call a common point $T$ of two segments $L_1$ and $L_2$ a true intersection point of $L_1$ and $L_2$ if $T$ is the only common point of $L_1$ and $L_2$ and $T$ is an interior point of both segments.
+เราจะเรียกจุดร่วม $T$ ของสองส่วน $L_1$ และ $L_2$ ว่าเป็นจุดตัดจริงของ $L_1$ และ $L_2$ ถ้า $T$ เป็นจุดร่วมเพียงจุดเดียวของ $L_1$ และ $L_2$ และ $ T$ เป็นจุดภายในของทั้งสองส่วน
 
-Consider the three segments $L_1$, $L_2$, and $L_3$:
+พิจารณาสาม segments $L_1$, $L_2$, และ $L_3$:
 
 $$\begin{align}
   & L_1: (27, 44) \\;\text{to}\\; (12, 32) \\\\
@@ -22,9 +22,10 @@ $$\begin{align}
   & L_3: (46, 70) \\;\text{to}\\; (22, 40) \\\\
 \end{align}$$
 
-It can be verified that line segments $L_2$ and $L_3$ have a true intersection point. We note that as the one of the end points of $L_3$: (22, 40) lies on $L_1$ this is not considered to be a true point of intersection. $L_1$ and $L_2$ have no common point. So among the three line segments, we find one true intersection point.
 
-Now let us do the same for 5000 line segments. To this end, we generate 20000 numbers using the so-called "Blum Blum Shub" pseudo-random number generator.
+สามารถตรวจสอบได้ว่าส่วนของเส้นตรง $L_2$ และ $L_3$ มีจุดตัดจริง เราสังเกตว่าจุดสิ้นสุดจุดหนึ่งของ $L_3$: (22, 40) อยู่ที่ $L_1$ ซึ่งไม่ถือเป็นจุดตัดจริง $L_1$ และ $L_2$ ไม่มีจุดร่วม ดังนั้นในสามส่วนของเส้นตรง เราพบจุดตัดจริงจุดเดียว
+
+ตอนนี้ ให้เราทำเช่นเดียวกันสำหรับส่วนของเส้น 5,000 เส้น ด้วยเหตุนี้ เราจึงสร้างตัวเลข 20000 หมายเลขโดยใช้ตัวสร้างตัวเลขสุ่มหลอกที่เรียกว่า "Blum Blum Shub"
 
 $$\begin{align}
   & s_0 = 290797 \\\\
@@ -32,17 +33,18 @@ $$\begin{align}
   & t_n = s_n (\text{modulo}\\; 500) \\\\
 \end{align}$$
 
-To create each line segment, we use four consecutive numbers $t_n$. That is, the first line segment is given by:
+ในการสร้างแต่ละส่วนของเส้นตรง เราใช้ตัวเลขสี่ตัวติดกัน $t_n$ นั่นคือส่วนของบรรทัดแรกถูกกำหนดโดย:
 
-($_t$1, $t_2$) to ($t_3$, $t_4$)
+($_t$1, $t_2$) ถึง ($t_3$, $t_4$)
 
-The first four numbers computed according to the above generator should be: 27, 144, 12 and 232. The first segment would thus be (27, 144) to (12, 232).
 
-How many distinct true intersection points are found among the 5000 line segments?
+ตัวเลขสี่ตัวแรกที่คำนวณตามตัวสร้างข้างต้นควรเป็น: 27, 144, 12 และ 232 ส่วนแรกจะเป็น (27, 144) ถึง (12, 232)
+
+มีจุดตัดจริงที่แตกต่างกันกี่จุดในกลุ่มเส้น 5,000 เส้น
 
 # --hints--
 
-`distinctIntersections()` should return `2868868`.
+`distinctIntersections()` ควร return `2868868`.
 
 ```js
 assert.strictEqual(distinctIntersections(), 2868868);

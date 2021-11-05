@@ -8,23 +8,23 @@ dashedName: problem-189-tri-colouring-a-triangular-grid
 
 # --description--
 
-Consider the following configuration of 64 triangles:
+พิจารณาการกำหนดค่าต่อไปนี้ของ 64 สามเหลี่ยม
 
 <img class="img-responsive center-block" alt="64 triangles arranged to create larger triangle with side length of 8 triangles" src="https://cdn.freecodecamp.org/curriculum/project-euler/tri-colouring-a-triangular-grid-1.gif" style="background-color: white; padding: 10px;">
 
-We wish to colour the interior of each triangle with one of three colours: red, green or blue, so that no two neighbouring triangles have the same colour. Such a colouring shall be called valid. Here, two triangles are said to be neighbouring if they share an edge. Note: if they only share a vertex, then they are not neighbours.
+ต้องการระบายสีภายในของสามเหลี่ยมแต่ละรูปด้วยสีใดสีหนึ่งจากสามสี ได้แก่ สีแดง สีเขียว หรือสีน้ำเงิน เพื่อไม่ให้มีรูปสามเหลี่ยมที่อยู่ติดกันสองรูปมีสีเดียวกัน สีดังกล่าวให้เรียกว่าถูกต้อง ในที่นี้ กล่าวกันว่ารูปสามเหลี่ยมสองรูปอยู่ติดกันหากพวกมันมีส่วนขอบ หมายเหตุ: หากพวกเขาแบ่งปันเฉพาะจุดยอด แสดงว่าพวกเขาไม่ใช่เพื่อนบ้าน
 
-For example, here is a valid colouring of the above grid:
+ตัวอย่างเช่น นี่คือสีที่ถูกต้องของตารางด้านบน:
 
 <img class="img-responsive center-block" alt="colored grid of 64 triangles" src="https://cdn.freecodecamp.org/curriculum/project-euler/tri-colouring-a-triangular-grid-2.gif" style="background-color: white; padding: 10px;">
 
-A colouring C' which is obtained from a colouring C by rotation or reflection is considered distinct from C unless the two are identical.
+การระบายสี C' ซึ่งได้มาจากการระบายสี C โดยการหมุนหรือการสะท้อนถือว่าแตกต่างจาก C เว้นแต่ทั้งสองจะเหมือนกัน
 
-How many distinct valid colourings are there for the above configuration?
+การกำหนดค่าด้านบนมีสีที่ถูกต้องแตกต่างกันกี่สี
 
 # --hints--
 
-`triangularGridColoring()` should return `10834893628237824`.
+`triangularGridColoring()` ควร return `10834893628237824`.
 
 ```js
 assert.strictEqual(triangularGridColoring(), 10834893628237824);

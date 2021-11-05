@@ -8,19 +8,19 @@ dashedName: problem-429-sum-of-squares-of-unitary-divisors
 
 # --description--
 
-A unitary divisor $d$ of a number $n$ is a divisor of $n$ that has the property $gcd(d, \frac{n}{d}) = 1$.
+ตัวหารรวม $d$ ของตัวเลข $n$ เป็นตัวหารของ $n$ ที่มีคุณสมบัติ $gcd(d, \frac{n}{d}) = 1$
 
-The unitary divisors of $4! = 24$ are 1, 3, 8 and 24.
+ตัวหารรวมของ $4! = 24$ คือ 1, 3, 8 และ 24
 
-The sum of their squares is $12 + 32 + 82 + 242 = 650$.
+ผลรวมของกำลังสองของพวกเขาคือ $12 + 32 + 82 + 242 = 650$
 
-Let $S(n)$ represent the sum of the squares of the unitary divisors of $n$. Thus $S(4!) = 650$.
+ให้ $S(n)$ แทนผลรวมของกำลังสองของตัวหารรวมของ $n$ ดังนั้น $S(4!) = 650$
 
-Find $S(100\\,000\\,000!)$ modulo $1\\,000\\,000\\,009$.
+หา $S(100\\,000\\,000!)$ modulo $1\\,000\\,000\\,009$
 
 # --hints--
 
-`sumSquaresOfUnitaryDivisors()` should return `98792821`.
+`sumSquaresOfUnitaryDivisors()` ควร return `98792821`.
 
 ```js
 assert.strictEqual(sumSquaresOfUnitaryDivisors(), 98792821);

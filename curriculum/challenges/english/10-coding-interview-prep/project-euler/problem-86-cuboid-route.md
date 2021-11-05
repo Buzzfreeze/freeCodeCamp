@@ -8,43 +8,43 @@ dashedName: problem-86-cuboid-route
 
 # --description--
 
-A spider, S, sits in one corner of a cuboid room, measuring 6 by 5 by 3, and a fly, F, sits in the opposite corner. By travelling on the surfaces of the room the shortest "straight line" distance from S to F is 10 and the path is shown on the diagram.
+แมงมุม S นั่งอยู่ที่มุมหนึ่งของห้องทรงลูกบาศก์ขนาด 6 คูณ 5 คูณ 3 และแมลงวัน F นั่งอยู่ในมุมตรงข้าม โดยการเดินทางบนพื้นผิวของห้อง ระยะทาง "เส้นตรง" ที่สั้นที่สุดจาก S ถึง F คือ 10 และเส้นทางจะแสดงบนแผนภาพ
 
 <img class="img-responsive center-block" alt="a diagram of a spider and fly's path from one corner of a cuboid room to the opposite corner" src="https://cdn-media-1.freecodecamp.org/project-euler/cuboid-route.png" style="background-color: white; padding: 10px;">
 
-However, there are up to three "shortest" path candidates for any given cuboid and the shortest route doesn't always have integer length.
+อย่างไรก็ตาม มีผู้สมัครเส้นทางที่ "สั้นที่สุด" สูงสุดสามรายการสำหรับทรงลูกบาศก์ที่กำหนด และเส้นทางที่สั้นที่สุดไม่ได้มีความยาวจำนวนเต็มเสมอไป
 
-It can be shown that there are exactly `2060` distinct cuboids, ignoring rotations, with integer dimensions, up to a maximum size of M by M by M, for which the shortest route has integer length when M = 100. This is the least value of M for which the number of solutions first exceeds two thousand; the number of solutions when M = 99 is `1975`.
+สามารถแสดงให้เห็นว่ามีลูกบาศก์ที่แตกต่างกัน `2060` โดยไม่สนใจการหมุนที่มีขนาดจำนวนเต็มถึงขนาดสูงสุด M คูณ M โดย M ซึ่งเส้นทางที่สั้นที่สุดมีความยาวจำนวนเต็มเมื่อ M = 100 นี่คือค่าน้อยที่สุด ค่าของ M ซึ่งจำนวนวิธีแก้ปัญหาก่อนเกินสองพัน จำนวนวิธีแก้ปัญหาเมื่อ M = 99 คือ `1975`
 
-Find the least value of M such that the number of solutions first exceeds `n`.
+จงหาค่าที่น้อยที่สุดของ M เพื่อให้จำนวนการแก้ปัญหาที่ไม่เกิน `n`
 
 # --hints--
 
-`cuboidRoute(2000)` should return a number.
+`cuboidRoute(2000)` ควร return number.
 
 ```js
 assert(typeof cuboidRoute(2000) === 'number');
 ```
 
-`cuboidRoute(2000)` should return `100`.
+`cuboidRoute(2000)` ควร return `100`.
 
 ```js
 assert.strictEqual(cuboidRoute(2000), 100);
 ```
 
-`cuboidRoute(25000)` should return `320`.
+`cuboidRoute(25000)` ควร return `320`.
 
 ```js
 assert.strictEqual(cuboidRoute(25000), 320);
 ```
 
-`cuboidRoute(500000)` should return `1309`.
+`cuboidRoute(500000)` ควร return `1309`.
 
 ```js
 assert.strictEqual(cuboidRoute(500000), 1309);
 ```
 
-`cuboidRoute(1000000)` should return `1818`.
+`cuboidRoute(1000000)` ควร return `1818`.
 
 ```js
 assert.strictEqual(cuboidRoute(1000000), 1818);

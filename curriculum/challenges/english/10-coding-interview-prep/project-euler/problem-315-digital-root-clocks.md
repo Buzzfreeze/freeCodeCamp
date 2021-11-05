@@ -10,43 +10,43 @@ dashedName: problem-315-digital-root-clocks
 
 <img class="img-responsive center-block" alt="animation of Sam's and Max's clocks calculating digital roots starting from 137" src="https://cdn.freecodecamp.org/curriculum/project-euler/digital-root-clocks.gif" style="background-color: white; padding: 10px;">
 
-Sam and Max are asked to transform two digital clocks into two "digital root" clocks.
+แซมและแม็กซ์ถูกขอให้แปลงนาฬิกาดิจิทัลสองนาฬิกาเป็นนาฬิกา "รูทดิจิทัล" สองเรือน
 
-A digital root clock is a digital clock that calculates digital roots step by step.
+นาฬิการูทดิจิทัลคือนาฬิกาดิจิทัลที่คำนวณรูทดิจิทัลทีละขั้นตอน
 
-When a clock is fed a number, it will show it and then it will start the calculation, showing all the intermediate values until it gets to the result. For example, if the clock is fed the number 137, it will show: `137` → `11` → `2` and then it will go black, waiting for the next number.
+เมื่อป้อนตัวเลข นาฬิกาจะแสดง จากนั้นจะเริ่มการคำนวณ โดยแสดงค่ากลางทั้งหมดจนกว่าจะถึงผลลัพธ์ ตัวอย่างเช่น หากนาฬิกาป้อนตัวเลข 137 มันจะแสดง: `137` → `11` → `2` จากนั้นจะเป็นสีดำเพื่อรอหมายเลขถัดไป
 
-Every digital number consists of some light segments: three horizontal (top, middle, bottom) and four vertical (top-left, top-right, bottom-left, bottom-right). Number `1` is made of vertical top-right and bottom-right, number `4` is made by middle horizontal and vertical top-left, top-right and bottom-right. Number `8` lights them all.
+ตัวเลขดิจิทัลทุกหมายเลขประกอบด้วยส่วนของแสงบางส่วน: แนวนอนสามส่วน (บน กลาง ล่าง) และสี่แนวตั้ง (ซ้ายบน ขวาบน ล่างซ้าย ล่างขวา) หมายเลข `1' ทำจากแนวตั้งบนขวาและล่างขวา หมายเลข `4' สร้างจากแนวนอนตรงกลางและแนวตั้งด้านซ้ายบน ด้านบนขวา และด้านล่างขวา หมายเลข `8` ส่องสว่างทั้งหมด
 
-The clocks consume energy only when segments are turned on/off. To turn on a `2` will cost 5 transitions, while a `7` will cost only 4 transitions.
+นาฬิกาใช้พลังงานเมื่อมีการเปิด/ปิดส่วนเท่านั้น ในการเปิดใช้ "2" จะมีค่าใช้จ่าย 5 ครั้ง ขณะที่ "7" จะเสียค่าใช้จ่ายเพียง 4 ครั้งเท่านั้น
 
-Sam and Max built two different clocks.
+แซมและแม็กซ์สร้างนาฬิกาสองเรือนที่แตกต่างกัน
 
-Sam's clock is fed e.g. number 137: the clock shows `137`, then the panel is turned off, then the next number (`11`) is turned on, then the panel is turned off again and finally the last number (`2`) is turned on and, after some time, off.
+นาฬิกาของแซมถูกป้อนเช่น หมายเลข 137: นาฬิกาแสดง '137' จากนั้นแผงปิด จากนั้นเปิดหมายเลขถัดไป ('11') จากนั้นแผงปิดอีกครั้ง และสุดท้ายหมายเลขสุดท้าย ('2') เปิด และหลังจากนั้นสักครู่ก็ดับ
 
-For the example, with number 137, Sam's clock requires:
+ตัวอย่างเช่น ด้วยหมายเลข 137 นาฬิกาของแซมต้องการ:
 
-- `137`: $(2 + 5 + 4) × 2 = 22$ transitions (`137` on/off).
-- `11`: $(2 + 2) × 2 = 8$ transitions (`11` on/off).
-- `2`: $(5) × 2 = 10$ transitions (`2` on/off).
+- `137`: $(2 + 5 + 4) × 2 = 22$ การเปลี่ยน (เปิด/ปิด`137`)
+- `11`: $(2 + 2) × 2 = 8$ การเปลี่ยน (เปิด/ปิด `11`)
+- `2`: $(5) × 2 = 10$ การเปลี่ยน (เปิด/ปิด `2`)
 
-For a grand total of 40 transitions.
+รวมทั้งหมด 40 ทรานสิชั่น
 
-Max's clock works differently. Instead of turning off the whole panel, it is smart enough to turn off only those segments that won't be needed for the next number.
+นาฬิกาของ Max ทำงานแตกต่างออกไป แทนที่จะปิดทั้งแผง มันฉลาดพอที่จะปิดเฉพาะส่วนที่ไม่ต้องการสำหรับหมายเลขถัดไป
 
-For number 137, Max's clock requires:
+สำหรับหมายเลข 137 นาฬิกาของ Max ต้องการ:
 
-- `137` : $2 + 5 + 4 = 11$ transitions (`137` on), $7$ transitions (to turn off the segments that are not needed for number `11`).
-- `11` : $0$ transitions (number `11` is already turned on correctly), $3$ transitions (to turn off the first `1` and the bottom part of the second `1`; the top part is common with number `2`).
-- `2` : $4$ transitions (to turn on the remaining segments in order to get a `2`), $5$ transitions (to turn off number `2`).
+- `137` : $2 + 5 + 4 = การเปลี่ยนภาพ 11$ (เปิด `137`) การเปลี่ยนภาพ $7$ (เพื่อปิดเซ็กเมนต์ที่ไม่จำเป็นสำหรับหมายเลข `11`)
+- `11` : $0$ การเปลี่ยน (หมายเลข `11` เปิดใช้งานอย่างถูกต้องแล้ว), $3$ การเปลี่ยนภาพ (เพื่อปิด `1` แรกและส่วนล่างของ `1` ที่สอง; ส่วนบนจะมีตัวเลขร่วมกัน `2`).
+- `2` : $4$ การเปลี่ยนภาพ (เพื่อเปิดส่วนที่เหลือเพื่อให้ได้ `2`), $5$ การเปลี่ยนภาพ (เพื่อปิดหมายเลข `2`)
 
-For a grand total of 30 transitions.
+สำหรับการเปลี่ยนทั้งหมด 30 ครั้ง
 
-Of course, Max's clock consumes less power than Sam's one. The two clocks are fed all the prime numbers between $A = {10}^7$ and $B = 2 × {10}^7$. Find the difference between the total number of transitions needed by Sam's clock and that needed by Max's one.
+แน่นอนว่านาฬิกาของ Max ใช้พลังงานน้อยกว่านาฬิกาของ Sam สองนาฬิกาถูกป้อนจำนวนเฉพาะทั้งหมดระหว่าง $A = {10}^7$ และ $B = 2 × {10}^7$ ค้นหาความแตกต่างระหว่างจำนวนทรานซิชันทั้งหมดที่นาฬิกาของแซมต้องการกับนาฬิกาของแม็กซ์
 
 # --hints--
 
-`digitalRootClocks()` should return `13625242`.
+`digitalRootClocks()` ควร return `13625242`.
 
 ```js
 assert.strictEqual(digitalRootClocks(), 13625242);

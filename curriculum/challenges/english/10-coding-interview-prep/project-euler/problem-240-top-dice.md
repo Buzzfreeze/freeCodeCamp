@@ -8,7 +8,7 @@ dashedName: problem-240-top-dice
 
 # --description--
 
-There are 1111 ways in which five 6-sided dice (sides numbered 1 to 6) can be rolled so that the top three sum to 15. Some examples are:
+มี 1111 วิธีในการทอยลูกเต๋า 6 ด้าน 5 ตัว (ด้านหมายเลข 1 ถึง 6) เพื่อให้สามอันดับแรกรวมเป็น 15 ตัวอย่างบางส่วน ได้แก่
 
 $$\begin{align}
   & D_1,D_2,D_3,D_4,D_5 = 4,3,6,3,5 \\\\
@@ -17,11 +17,11 @@ $$\begin{align}
   & D_1,D_2,D_3,D_4,D_5 = 6,6,3,3,3
 \end{align}$$
 
-In how many ways can twenty 12-sided dice (sides numbered 1 to 12) be rolled so that the top ten sum to 70?
+สามารถทอยลูกเต๋า 12 ด้านจำนวน 20 ลูก (ด้านที่ 1 ถึง 12) ได้กี่วิธีเพื่อให้ผลรวมสิบอันดับแรกเป็น 70?
 
 # --hints--
 
-`topDice()` should return `7448717393364182000`.
+`topDice()` ควร return `7448717393364182000`.
 
 ```js
 assert.strictEqual(topDice(), 7448717393364182000);

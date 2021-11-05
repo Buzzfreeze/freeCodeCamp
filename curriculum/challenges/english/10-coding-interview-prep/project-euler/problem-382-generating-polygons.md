@@ -8,38 +8,38 @@ dashedName: problem-382-generating-polygons
 
 # --description--
 
-A polygon is a flat shape consisting of straight line segments that are joined to form a closed chain or circuit. A polygon consists of at least three sides and does not self-intersect.
+รูปหลายเหลี่ยมเป็นรูปหลายเหลี่ยมที่ประกอบด้วยส่วนของเส้นตรงที่ต่อกันเพื่อสร้างห่วงโซ่หรือวงจรปิด รูปหลายเหลี่ยมประกอบด้วยอย่างน้อยสามด้านและไม่ตัดกัน
 
-A set $S$ of positive numbers is said to generate a polygon $P$ if:
+ตัวเลขบวก $S$ ถูกกล่าวว่าสร้างรูปหลายเหลี่ยม $P$ หาก:
 
-- no two sides of $P$ are the same length,
-- the length of every side of $P$ is in $S$, and
-- $S$ contains no other value.
+- ไม่มีสองด้านของ $P$ ที่มีความยาวเท่ากัน
+- ความยาวของทุกด้านของ $P$ เป็น $S$ และ
+- $S$ ไม่มีค่าอื่น
 
-For example:
+ตัวอย่างเช่น:
 
-The set {3, 4, 5} generates a polygon with sides 3, 4, and 5 (a triangle).
+ชุด {3, 4, 5} สร้างรูปหลายเหลี่ยมที่มีด้าน 3, 4 และ 5 (รูปสามเหลี่ยม)
 
-The set {6, 9, 11, 24} generates a polygon with sides 6, 9, 11, and 24 (a quadrilateral).
+ชุด {6, 9, 11, 24} สร้างรูปหลายเหลี่ยมที่มีด้าน 6, 9, 11 และ 24 (รูปสี่เหลี่ยม)
 
-The sets {1, 2, 3} and {2, 3, 4, 9} do not generate any polygon at all.
+ชุด {1, 2, 3} และ {2, 3, 4, 9} จะไม่สร้างรูปหลายเหลี่ยมเลย
 
-Consider the sequence $s$, defined as follows:
+พิจารณาลำดับ $s$ กำหนดดังนี้:
 
 - $s_1 = 1$, $s_2 = 2$, $s_3 = 3$
 - $s_n = s_{n - 1} + s_{n - 3}$ for $n > 3$.
 
-Let $U_n$ be the set $\\{s_1, s_2, \ldots, s_n\\}$. For example, $U_{10} = \\{1, 2, 3, 4, 6, 9, 13, 19, 28, 41\\}$.
+ให้ $U_n$ เป็นเซต $\\{s_1, s_2, \ldots, s_n\\}$ ตัวอย่างเช่น $U_{10} = \\{1, 2, 3, 4, 6, 9, 13, 19, 28, 41\\}$
 
-Let $f(n)$ be the number of subsets of $U_n$ which generate at least one polygon.
+ให้ $f(n)$ เป็นจำนวนชุดย่อยของ $U_n$ ซึ่งสร้างรูปหลายเหลี่ยมอย่างน้อยหนึ่งรูป
 
-For example, $f(5) = 7$, $f(10) = 501$ and $f(25) = 18\\,635\\,853$.
+ตัวอย่างเช่น $f(5) = 7$, $f(10) = 501$ และ $f(25) = 18\\,635\\,853$
 
-Find the last 9 digits of $f({10}^{18})$.
+หา 9 หลักสุดท้ายของ $f({10}^{18})$
 
 # --hints--
 
-`generatingPolygons()` should return `697003956`.
+`generatingPolygons()` ควร return `697003956`.
 
 ```js
 assert.strictEqual(generatingPolygons(), 697003956);

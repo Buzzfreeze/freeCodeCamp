@@ -8,29 +8,29 @@ dashedName: problem-277-a-modified-collatz-sequence
 
 # --description--
 
-A modified Collatz sequence of integers is obtained from a starting value $a_1$ in the following way:
+ลำดับจำนวนเต็มของ Colatz ที่แก้ไขได้มาจากค่าเริ่มต้น $a_1$ ด้วยวิธีต่อไปนี้:
 
-$a_{n + 1} = \frac{a_n}{3}$ if $a_n$ is divisible by 3. We shall denote this as a large downward step, "D".
+$a_{n + 1} = \frac{a_n}{3}$ ถ้า $a_n$ หารด้วย 3 ลงตัว เราจะแสดงว่านี่เป็นการก้าวลงครั้งใหญ่ "D"
 
-$a_{n + 1} = \frac{4a_n + 2}{3}$ if $a_n$ divided by 3 gives a remainder of 1. We shall denote this as an upward step, "U".
+$a_{n + 1} = \frac{4a_n + 2}{3}$ ถ้า $a_n$ หารด้วย 3 ได้เศษ 1 เราจะแสดงว่านี่เป็นขั้นที่สูงขึ้น "U"
 
-$a_{n + 1} = \frac{2a_n - 1}{3}$ if $a_n$ divided by 3 gives a remainder of 2. We shall denote this as a small downward step, "d".
+$a_{n + 1} = \frac{2a_n - 1}{3}$ ถ้า $a_n$ หารด้วย 3 ให้เหลือเศษ 2 เราจะแสดงว่านี่เป็นการก้าวลง "d"
 
-The sequence terminates when some $a_n = 1$.
+ลำดับจะสิ้นสุดลงเมื่อ $a_n = 1$
 
-Given any integer, we can list out the sequence of steps. For instance if $a_1 = 231$, then the sequence $\\{a_n\\} = \\{231, 77, 51, 17, 11, 7, 10, 14, 9, 3, 1\\}$ corresponds to the steps "DdDddUUdDD".
+ด้วยจำนวนเต็มใดๆ เราสามารถแสดงลำดับขั้นตอนได้ ตัวอย่างเช่น ถ้า $a_1 = 231$ ดังนั้นลำดับ $\\{a_n\\} = \\{231, 77, 51, 17, 11, 7, 10, 14, 9, 3, 1\\}$ จะสอดคล้องกัน ไปยังขั้นตอน "DdDddUUdDD"
 
-Of course, there are other sequences that begin with that same sequence "DdDddUUdDD....".
+แน่นอนว่ายังมีsequenceอื่นๆ ที่ขึ้นต้นด้วยsequenceเดียวกันนั้น "DdDddUUdDD...."
 
-For instance, if $a_1 = 1004064$, then the sequence is DdDddUUdDDDdUDUUUdDdUUDDDUdDD.
+ตัวอย่างเช่น ถ้า $a_1 = 1004064$ ลำดับจะเป็น DdDddUUdDDDdUDUUUdDdUUDDDUdDD
 
-In fact, 1004064 is the smallest possible $a_1 > {10}^6$ that begins with the sequence DdDddUUdDD.
+อันที่จริง 1004064 เป็น $a_1 > {10}^6$ ที่เล็กที่สุดที่ขึ้นต้นด้วยลำดับ DdDddUUDD
 
-What is the smallest $a_1 > {10}^{15}$ that begins with the sequence "UDDDUdddDDUDDddDdDddDDUDDdUUDd"?
+$a_1 > {10}^{15}$ ที่เล็กที่สุดที่ขึ้นต้นด้วยลำดับ "UDDDUdddDDUDDddDdDddDDUDDdUUDd" คืออะไร
 
 # --hints--
 
-`modifiedCollatzSequence()` should return `1125977393124310`.
+`modifiedCollatzSequence()` ควร return `1125977393124310`.
 
 ```js
 assert.strictEqual(modifiedCollatzSequence(), 1125977393124310);

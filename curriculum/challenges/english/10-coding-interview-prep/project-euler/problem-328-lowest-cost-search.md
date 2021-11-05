@@ -8,29 +8,29 @@ dashedName: problem-328-lowest-cost-search
 
 # --description--
 
-We are trying to find a hidden number selected from the set of integers {1, 2, ..., $n$} by asking questions. Each number (question) we ask, has a <u>cost equal to the number asked</u> and we get one of three possible answers:
+เรากำลังพยายามค้นหาตัวเลขที่ซ่อนอยู่ซึ่งเลือกจากชุดของจำนวนเต็ม {1, 2, ..., $n$} โดยถามคำถาม แต่ละหมายเลข (คำถาม) ที่เราถามมี <u>ค่าใช้จ่ายเท่ากับจำนวนที่ถาม</u> และเราได้รับหนึ่งในสามคำตอบที่เป็นไปได้:
 
-- "Your guess is lower than the hidden number", or
-- "Yes, that's it!", or
-- "Your guess is higher than the hidden number".
+- "การเดาของคุณต่ำกว่าตัวเลขที่ซ่อนอยู่" หรือ
+- "ใช่แล้ว!" หรือ
+- "การเดาของคุณสูงกว่าตัวเลขที่ซ่อนอยู่"
 
-Given the value of $n$, an optimal strategy minimizes the total cost (i.e. the sum of all the questions asked) <u>for the worst possible case</u>. E.g.
+ด้วยมูลค่า $n$ กลยุทธ์ที่เหมาะสมจะลดต้นทุนทั้งหมด (เช่น ผลรวมของคำถามที่ถาม) <u>สำหรับกรณีที่แย่ที่สุด</u> เช่น.
 
-If $n = 3$, the best we can do is obviously to ask the number "<strong>2</strong>". The answer will immediately lead us to find the hidden number (at a total cost = 2).
+ถ้า $n = 3$ สิ่งที่ดีที่สุดที่เราสามารถทำได้คือการถามหมายเลข "<strong>2</strong>" คำตอบจะพาเราไปหาเลขที่ซ่อนอยู่ทันที (ราคารวม = 2)
 
-If $n = 8$, we might decide to use a "binary search" type of strategy: Our first question would be "<strong>4</strong>" and if the hidden number is higher than 4 we will need one or two additional questions. Let our second question be "<strong>6</strong>". If the hidden number is still higher than 6, we will need a third question in order to discriminate between 7 and 8. Thus, our third question will be "<strong>7</strong>" and the total cost for this worst-case scenario will be $4 + 6 + 7 = \mathbf{\color{red}{17}}$.
+หาก $n = 8$ เราอาจตัดสินใจใช้กลยุทธ์ประเภท "การค้นหาแบบไบนารี": คำถามแรกของเราคือ "<strong>4</strong>" และหากจำนวนที่ซ่อนอยู่มากกว่า 4 เราจะต้องหนึ่งหรือ สองคำถามเพิ่มเติม ให้คำถามที่สองของเราคือ "<strong>6</strong>" หากจำนวนที่ซ่อนอยู่ยังคงสูงกว่า 6 เราจะต้องถามคำถามที่สามเพื่อแยกแยะระหว่าง 7 ถึง 8 ดังนั้นคำถามที่สามของเราคือ "<strong>7</strong>" และค่าใช้จ่ายทั้งหมดสำหรับที่เลวร้ายที่สุดนี้- สถานการณ์กรณีจะเป็น $4 + 6 + 7 = \mathbf{\color{red}{17}}$
 
-We can improve considerably the worst-case cost for $n = 8$, by asking "<strong>5</strong>" as our first question. If we are told that the hidden number is higher than 5, our second question will be "<strong>7</strong>", then we'll know for certain what the hidden number is (for a total cost of $5 + 7 = \mathbf{\color{blue}{12}}$). If we are told that the hidden number is lower than 5, our second question will be "<strong>3</strong>" and if the hidden number is lower than 3 our third question will be "<strong>1</strong>", giving a total cost of $5 + 3 + 1 = \mathbf{\color{blue}{9}}$. Since $\mathbf{\color{blue}{12 > 9}}$, the worst-case cost for this strategy is <strong><span style="color: red;">12</span></strong>. That's better than what we achieved previously with the "binary search" strategy; it is also better than or equal to any other strategy. So, in fact, we have just described an optimal strategy for $n = 8$.
+เราสามารถปรับปรุงราคาในกรณีที่แย่ที่สุดได้มากสำหรับ $n = 8$ โดยถาม "<strong>5</strong>" เป็นคำถามแรก หากเราได้รับแจ้งว่าจำนวนที่ซ่อนอยู่มากกว่า 5 คำถามที่สองของเราคือ "<strong>7</strong>" จากนั้นเราจะทราบอย่างแน่ชัดว่าหมายเลขที่ซ่อนอยู่คืออะไร (ราคารวม $5 + 7 = \mathbf{\color{blue}{12}}$) หากเราได้รับแจ้งว่าจำนวนที่ซ่อนอยู่ต่ำกว่า 5 คำถามที่สองของเราคือ "<strong>3</strong>" และหากจำนวนที่ซ่อนอยู่ต่ำกว่า 3 คำถามที่สามของเราจะเป็น "<strong>1</strong >" ให้ราคารวม $5 + 3 + 1 = \mathbf{\color{blue}{9}}$ เนื่องจาก $\mathbf{\color{blue}{12 > 9}}$ ต้นทุนกรณีที่เลวร้ายที่สุดสำหรับกลยุทธ์นี้คือ <strong><span style="color: red;">12</span></strong> . ดีกว่าที่เราทำได้ก่อนหน้านี้ด้วยกลยุทธ์ "การค้นหาแบบไบนารี" ก็ยังดีกว่าหรือเท่ากับกลยุทธ์อื่นๆ ที่จริงแล้ว เราเพิ่งอธิบายกลยุทธ์ที่เหมาะสมที่สุดสำหรับ $n = 8$
 
-Let $C(n)$ be the worst-case cost achieved by an optimal strategy for $n$, as described above. Thus $C(1) = 0$, $C(2) = 1$, $C(3) = 2$ and $C(8) = 12$.
+ให้ $C(n)$ เป็นต้นทุนกรณีที่เลวร้ายที่สุดที่ทำได้โดยกลยุทธ์ที่เหมาะสมที่สุดสำหรับ $n$ ตามที่อธิบายไว้ข้างต้น ดังนั้น $C(1) = 0$, $C(2) = 1$, $C(3) = 2$ และ $C(8) = 12$
 
-Similarly, $C(100) = 400$ and $\displaystyle\sum_{n = 1}^{100} C(n) = 17575$.
+ในทำนองเดียวกัน $C(100) = 400$ และ $\displaystyle\sum_{n = 1}^{100} C(n) = 17575$
 
-Find $\displaystyle\sum_{n = 1}^{200\\,000} C(n)$.
+หา $\displaystyle\sum_{n = 1}^{200\\,000} C(n)$
 
 # --hints--
 
-`lowestCostSearch()` should return `260511850222`.
+`lowestCostSearch()` ควร return `260511850222`.
 
 ```js
 assert.strictEqual(lowestCostSearch(), 260511850222);

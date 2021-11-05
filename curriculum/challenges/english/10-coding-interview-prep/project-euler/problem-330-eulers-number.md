@@ -8,7 +8,7 @@ dashedName: problem-330-eulers-number
 
 # --description--
 
-An infinite sequence of real numbers $a(n)$ is defined for all integers $n$ as follows:
+ลำดับอนันต์ของจำนวนจริง $a(n)$ ถูกกำหนดสำหรับจำนวนเต็มทั้งหมด $n$ ดังนี้:
 
 $$ a(n) =
 \begin{cases}
@@ -17,7 +17,7 @@ $$ a(n) =
 \end{cases}
 $$
 
-For example,
+เช่น
 
 $$\begin{align}
   & a(0) = \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \ldots = e − 1 \\\\
@@ -25,17 +25,17 @@ $$\begin{align}
   & a(2) = \frac{2e − 3}{1!} + \frac{e − 1}{2!} + \frac{1}{3!} + \ldots = \frac{7}{2} e − 6
 \end{align}$$
 
-with $e = 2.7182818\ldots$ being Euler's constant.
+กับ $e = 2.7182818\ldots$ เป็น Euler's constant.
 
-It can be shown that $a(n)$ is of the form $\displaystyle\frac{A(n)e + B(n)}{n!}$ for integers $A(n)$ and $B(n)$.
+สามารถแสดงว่า $a(n)$ อยู่ในรูปแบบ $\displaystyle\frac{A(n)e + B(n)}{n!}$ สำหรับจำนวนเต็ม $A(n)$ และ $B(n )$.
 
-For example $\displaystyle a(10) = \frac{328161643e − 652694486}{10!}$.
+ตัวอย่างเช่น $\displaystyle a(10) = \frac{328161643e − 652694486}{10!}$
 
-Find $A({10}^9)$ + $B({10}^9)$ and give your answer $\bmod 77\\,777\\,777$.
+หา $A({10}^9)$ + $B({10}^9)$ แล้วให้คำตอบ $\bmod 77\\,777\\,777$
 
 # --hints--
 
-`eulersNumber()` should return `15955822`.
+`eulersNumber()` ควร return `15955822`.
 
 ```js
 assert.strictEqual(eulersNumber(), 15955822);

@@ -8,22 +8,22 @@ dashedName: problem-237-tours-on-a-4-x-n-playing-board
 
 # --description--
 
-Let $T(n)$ be the number of tours over a 4 × $n$ playing board such that:
+ให้ $T(n)$ เป็นจำนวนทัวร์บนกระดานเล่น 4 × $n$ ในลักษณะที่ว่า:
 
-- The tour starts in the top left corner.
-- The tour consists of moves that are up, down, left, or right one square.
-- The tour visits each square exactly once.
-- The tour ends in the bottom left corner.
+- ทัวร์เริ่มต้นที่มุมบนซ้าย
+- ทัวร์ประกอบด้วยการเคลื่อนไหวที่ขึ้น ลง ซ้าย หรือขวาหนึ่งตาราง
+- ทัวร์เข้าชมแต่ละตารางเพียงครั้งเดียว
+- ทัวร์สิ้นสุดที่มุมล่างซ้าย
 
-The diagram shows one tour over a 4 × 10 board:
+แผนภาพแสดงหนึ่งทัวร์บนกระดาน 4 × 10:
 
 <img class="img-responsive center-block" alt="one tour over 4 x 10 board" src="https://cdn.freecodecamp.org/curriculum/project-euler/tours-on-a-4-x-n-playing-board.gif" style="background-color: white; padding: 10px;">
 
-$T(10)$ is 2329. What is $T({10}^{12})$ modulo ${10}^8$?
+$T(10)$ คือ 2329 $T({10}^{12})$ modulo ${10}^8$ คืออะไร
 
 # --hints--
 
-`toursOnPlayingBoard()` should return `15836928`.
+`toursOnPlayingBoard()` ควร return `15836928`.
 
 ```js
 assert.strictEqual(toursOnPlayingBoard(), 15836928);

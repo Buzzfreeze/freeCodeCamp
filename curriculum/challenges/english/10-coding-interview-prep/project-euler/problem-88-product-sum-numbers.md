@@ -8,11 +8,12 @@ dashedName: problem-88-product-sum-numbers
 
 # --description--
 
-A natural number, `N`, that can be written as the sum and product of a given set of at least two natural numbers, $\\{a_1, a_2, \ldots , a_k\\}$ is called a product-sum number: $N = a_1 + a_2 + \cdots + a_k = a_1 × a_2 × \cdots × a_k$.
+จำนวนธรรมชาติ `N` ที่สามารถเขียนเป็นผลรวมและผลคูณของsetที่กำหนดของจำนวนธรรมชาติอย่างน้อยสองตัว $\\{a_1, a_2, \ldots , a_k\\}$ เรียกว่าผลรวมผลคูณ จำนวน: $N = a_1 + a_2 + \cdots + a_k = a_1 × a_2 × \cdots × a_k$
 
-For example, 6 = 1 + 2 + 3 = 1 × 2 × 3.
+เช่น 6 = 1 + 2 + 3 = 1 × 2 × 3.
 
-For a given set of size, `k`, we shall call the smallest N with this property a minimal product-sum number. The minimal product-sum numbers for sets of size, `k` = 2, 3, 4, 5, and 6 are as follows.
+
+สำหรับsetขนาดที่กำหนด `k` เราจะเรียก N ที่เล็กที่สุดด้วยคุณสมบัตินี้ว่าหมายเลขผลรวมขั้นต่ำ จำนวนรวมขั้นต่ำสำหรับsetขนาด `k` = 2, 3, 4, 5 และ 6 มีดังนี้
 
 <div style='margin-left: 4em;'>
   <var>k</var>=2: 4 = 2 × 2 = 2 + 2<br>
@@ -22,45 +23,46 @@ For a given set of size, `k`, we shall call the smallest N with this property a 
   <var>k</var>=6: 12 = 1 × 1 × 1 × 1 × 2 × 6 = 1 + 1 + 1 + 1 + 2 + 6
 </div><br>
 
-Hence for 2 ≤ `k` ≤ 6, the sum of all the minimal product-sum numbers is 4 + 6 + 8 + 12 = 30; note that `8` is only counted once in the sum.
+สำหรับ 2 ≤ `k` ≤ 6 ผลรวมของจำนวนรวมขั้นต่ำคือ 4 + 6 + 8 + 12 = 30 โปรดทราบว่า `8` จะถูกนับเพียงครั้งเดียวในผลรวม
 
-In fact, as the complete set of minimal product-sum numbers for 2 ≤ `k` ≤ 12 is $\\{4, 6, 8, 12, 15, 16\\}$, the sum is `61`.
 
-What is the sum of all the minimal product-sum numbers for 2 ≤ `k` ≤ `limit`?
+อันที่จริง เนื่องจากชุดที่สมบูรณ์ของจำนวนผลรวมขั้นต่ำสำหรับ 2 ≤ `k` ≤ 12 คือ $\\{4, 6, 8, 12, 15, 16\\}$ ผลรวมคือ `61`
+
+ผลรวมของตัวเลขผลรวมขั้นต่ำทั้งหมดสำหรับ 2 ≤ `k` ≤ `limit` เป็นเท่าใด
 
 # --hints--
 
-`productSumNumbers(6)` should return a number.
+`productSumNumbers(6)` ควร return number.
 
 ```js
 assert(typeof productSumNumbers(6) === 'number');
 ```
 
-`productSumNumbers(6)` should return `30`.
+`productSumNumbers(6)` ควร return `30`.
 
 ```js
 assert.strictEqual(productSumNumbers(6), 30);
 ```
 
-`productSumNumbers(12)` should return `61`.
+`productSumNumbers(12)` ควร return `61`.
 
 ```js
 assert.strictEqual(productSumNumbers(12), 61);
 ```
 
-`productSumNumbers(300)` should return `12686`.
+`productSumNumbers(300)` ควร return `12686`.
 
 ```js
 assert.strictEqual(productSumNumbers(300), 12686);
 ```
 
-`productSumNumbers(6000)` should return `2125990`.
+`productSumNumbers(6000)` ควร return `2125990`.
 
 ```js
 assert.strictEqual(productSumNumbers(6000), 2125990);
 ```
 
-`productSumNumbers(12000)` should return `7587457`.
+`productSumNumbers(12000)` ควร return `7587457`.
 
 ```js
 assert.strictEqual(productSumNumbers(12000), 7587457);

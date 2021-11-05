@@ -8,15 +8,15 @@ dashedName: problem-369-badugi
 
 # --description--
 
-In a standard 52 card deck of playing cards, a set of 4 cards is a Badugi if it contains 4 cards with no pairs and no two cards of the same suit.
+ในสำรับไพ่มาตรฐาน 52 ใบ ชุดไพ่ 4 ใบคือ Badugi หากมีไพ่ 4 ใบที่ไม่มีคู่และไม่มีไพ่สองใบในชุดเดียวกัน
 
-Let $f(n)$ be the number of ways to choose $n$ cards with a 4 card subset that is a Badugi. For example, there are $2\\,598\\,960$ ways to choose five cards from a standard 52 card deck, of which $514\\,800$ contain a 4 card subset that is a Badugi, so $f(5) = 514800$.
+ให้ $f(n)$ เป็นจำนวนวิธีในการเลือกไพ่ $n$ ที่มีชุดย่อยไพ่ 4 ใบที่เป็น Badugi ตัวอย่างเช่น มีวิธี $2\\,598\\,960$ ในการเลือกไพ่ห้าใบจากสำรับไพ่มาตรฐาน 52 ใบ ซึ่ง $514\\,800$ มีชุดย่อยไพ่ 4 ใบที่เป็น Badugi ดังนั้น $f(5 ) = 514800$.
 
-Find $\sum f(n)$ for $4 ≤ n ≤ 13$.
+หา $\sum f(n)$ สำหรับ $4 ≤ n ≤ 13$
 
 # --hints--
 
-`badugi()` should return `862400558448`.
+`badugi()` ควร return `862400558448`.
 
 ```js
 assert.strictEqual(badugi(), 862400558448);

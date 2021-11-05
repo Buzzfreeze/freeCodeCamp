@@ -8,21 +8,21 @@ dashedName: problem-441-the-inverse-summation-of-coprime-couples
 
 # --description--
 
-For an integer $M$, we define $R(M)$ as the sum of $\frac{1}{p·q}$ for all the integer pairs $p$ and $q$ which satisfy all of these conditions:
+สำหรับจำนวนเต็ม $M$ เรากำหนด $R(M)$ เป็นผลรวมของ $\frac{1}{p·q}$ สำหรับคู่จำนวนเต็ม $p$ และ $q$ ซึ่งเป็นไปตามเงื่อนไขเหล่านี้ทั้งหมด:
 
 - $1 ≤ p &lt; q ≤ M$
 - $p + q ≥ M$
-- $p$ and $q$ are coprime.
+- $p$ และ $q$ เป็น coprime
 
-We also define $S(N)$ as the sum of $R(i)$ for $2 ≤ i ≤ N$.
+นอกจากนี้เรายังกำหนด $S(N)$ เป็นผลรวมของ $R(i)$ สำหรับ $2 ≤ i ≤ N$
 
-We can verify that $S(2) = R(2) = \frac{1}{2}$, $S(10) ≈ 6.9147$ and $S(100) ≈ 58.2962$.
+เราสามารถยืนยันได้ว่า $S(2) = R(2) = \frac{1}{2}$, $S(10) ≈ 6.9147$ and $S(100) ≈ 58.2962$
 
-Find $S({10}^7)$. Give your answer rounded to four decimal places.
+หา $S({10}^7)$ ให้คำตอบของคุณปัดเศษทศนิยมสี่ตำแหน่ง
 
 # --hints--
 
-`inverseSummationCoprimeCouples()` should return `5000088.8395`.
+`inverseSummationCoprimeCouples()` ควร return `5000088.8395`.
 
 ```js
 assert.strictEqual(inverseSummationCoprimeCouples(), 5000088.8395);

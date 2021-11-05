@@ -8,59 +8,58 @@ dashedName: problem-65-convergents-of-e
 
 # --description--
 
-The square root of 2 can be written as an infinite continued fraction.
+square root ของ 2 สามารถเขียนในรูป infinite continued fraction
 
 $\\sqrt{2} = 1 + \\dfrac{1}{2 + \\dfrac{1}{2 + \\dfrac{1}{2 + \\dfrac{1}{2 + ...}}}}$
 
-The infinite continued fraction can be written, $\\sqrt{2} = \[1; (2)]$ indicates that 2 repeats *ad infinitum*. In a similar way, $\\sqrt{23} = \[4; (1, 3, 1, 8)]$. It turns out that the sequence of partial values of continued fractions for square roots provide the best rational approximations. Let us consider the convergents for $\\sqrt{2}$.
+infinite continued fraction สามารถเขียน $\\sqrt{2} = \[1; (2)]$ กำหนดให้มี repeats สองครั้ง *ad infinitum* มีวิธีที่เหมือนกันคือ $\\sqrt{23} = \[4; (1, 3, 1, 8)]$ ปรากฎว่าลำดับของค่าบางส่วนของเศษส่วนต่อเนื่องสำหรับรากที่สองให้ค่าประมาณที่เป็นเหตุเป็นผลดีที่สุด ให้เราพิจารณา $\\sqrt{2}$
 
 $1 + \\dfrac{1}{2} = \\dfrac{3}{2}\\\\ 1 + \\dfrac{1}{2 + \\dfrac{1}{2}} = \\dfrac{7}{5}\\\\ 1 + \\dfrac{1}{2 + \\dfrac{1}{2 + \\dfrac{1}{2}}} = \\dfrac{17}{12}\\\\ 1 + \\dfrac{1}{2 + \\dfrac{1}{2 + \\dfrac{1}{2 + \\dfrac{1}{2}}}} = \\dfrac{41}{29}$
 
-Hence the sequence of the first ten convergents for $\\sqrt{2}$ are:
+ดังนั้นลำดับสิบอันดับแรกของ convergents สำหรับ $\\sqrt{2}$ คือ
 
 $1, \\dfrac{3}{2}, \\dfrac{7}{5}, \\dfrac{17}{12}, \\dfrac{41}{29}, \\dfrac{99}{70}, \\dfrac{239}{169}, \\dfrac{577}{408}, \\dfrac{1393}{985}, \\dfrac{3363}{2378}, ...$
 
-What is most surprising is that the important mathematical constant, $e = \[2; 1, 2, 1, 1, 4, 1, 1, 6, 1, ... , 1, 2k, 1, ...]$. The first ten terms in the sequence of convergents for `e` are:
+ที่น่าประหลาดใจที่สุดคือค่าคงที่ทางคณิตศาสตร์ที่สำคัญ, $e = \[2; 1, 2, 1, 1, 4, 1, 1, 6, 1, ... , 1, 2k, 1, ...]$. ดังนั้นลำดับสิบอันดับแรกของ convergents สำหรับ `e` คือ
 
 $2, 3, \\dfrac{8}{3}, \\dfrac{11}{4}, \\dfrac{19}{7}, \\dfrac{87}{32}, \\dfrac{106}{39}, \\dfrac{193}{71}, \\dfrac{1264}{465}, \\dfrac{1457}{536}, ...$
 
-The sum of digits in the numerator of the 10<sup>th</sup> convergent is $1 + 4 + 5 + 7 = 17$.
-
-Find the sum of digits in the numerator of the `n`<sup>th</sup> convergent of the continued fraction for `e`.
+ผลรวมของตัวเลขในตัวเศษของ 10<sup>th</sup> convergent คือ $1 + 4 + 5 + 7 = 17$
+หาผลรวมของตัวเลขในตัวเศษของ `n`<sup>th</sup> convergent ของcontinued fraction สำหรับ `e`.
 
 # --hints--
 
-`convergentsOfE(10)` should return a number.
+`convergentsOfE(10)` ควร return number.
 
 ```js
 assert(typeof convergentsOfE(10) === 'number');
 ```
 
-`convergentsOfE(10)` should return `17`.
+`convergentsOfE(10)` ควร return `17`.
 
 ```js
 assert.strictEqual(convergentsOfE(10), 17);
 ```
 
-`convergentsOfE(30)` should return `53`.
+`convergentsOfE(30)` ควร return `53`.
 
 ```js
 assert.strictEqual(convergentsOfE(30), 53);
 ```
 
-`convergentsOfE(50)` should return `91`.
+`convergentsOfE(50)` ควร return `91`.
 
 ```js
 assert.strictEqual(convergentsOfE(50), 91);
 ```
 
-`convergentsOfE(70)` should return `169`.
+`convergentsOfE(70)` ควร return `169`.
 
 ```js
 assert.strictEqual(convergentsOfE(70), 169);
 ```
 
-`convergentsOfE(100)` should return `272`.
+`convergentsOfE(100)` ควร return `272`.
 
 ```js
 assert.strictEqual(convergentsOfE(100), 272);

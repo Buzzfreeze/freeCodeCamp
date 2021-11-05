@@ -8,19 +8,19 @@ dashedName: problem-216-investigating-the-primality-of-numbers-of-the-form-2n2-1
 
 # --description--
 
-Consider numbers $t(n)$ of the form $t(n) = 2n^2 - 1$ with $n > 1$.
+พิจารณาตัวเลข $t(n)$ ของรูปแบบ $t(n) = 2n^2 - 1$ โดยที่ $n > 1$
 
-The first such numbers are 7, 17, 31, 49, 71, 97, 127 and 161.
+ตัวเลขตัวแรกคือ 7, 17, 31, 49, 71, 97, 127 และ 161
 
-It turns out that only $49 = 7 \times 7$ and $161 = 7 \times 23$ are not prime.
+ปรากฎว่าเพียง $49 = 7 \times 7$ และ $161 = 7 \times 23$ เท่านั้นที่ไม่เป็นจำนวนเฉพาะ
 
-For $n ≤ 10000$ there are 2202 numbers $t(n)$ that are prime.
+สำหรับ $n ≤ 10000$ จะมีตัวเลข 2202 $t(n)$ ที่เป็นจำนวนเฉพาะ
 
-How many numbers $t(n)$ are prime for $n ≤ 50\\,000\\,000$?
+จำนวน $t(n)$ จำนวนเท่าใดที่เป็นจำนวนเฉพาะสำหรับ $n ≤ 50\\,000\\,000$?
 
 # --hints--
 
-`primalityOfNumbers()` should return `5437849`.
+`primalityOfNumbers()`ควร return `5437849`.
 
 ```js
 assert.strictEqual(primalityOfNumbers(), 5437849);

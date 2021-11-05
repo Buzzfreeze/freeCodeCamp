@@ -11,21 +11,21 @@ dashedName: >-
 
 # --description--
 
-Taking three different letters from the 26 letters of the alphabet, character strings of length three can be formed.
+การใช้ตัวอักษรสามตัวที่ต่างกันจาก 26 ตัวอักษรของตัวอักษร สามารถสร้างสตริงอักขระที่มีความยาวสามตัวได้
 
-Examples are 'abc', 'hat' and 'zyx'.
+ตัวอย่าง ได้แก่ 'abc', 'hat' และ 'zyx'
 
-When we study these three examples we see that for 'abc' two characters come lexicographically after its neighbour to the left.
+เมื่อเราศึกษาตัวอย่างทั้งสามนี้ เราจะเห็นว่าสำหรับ 'abc' อักขระสองตัวนั้นมาเรียงตามลำดับศัพท์หลังทางซ้าย
 
-For 'hat' there is exactly one character that comes lexicographically after its neighbour to the left. For 'zyx' there are zero characters that come lexicographically after its neighbour to the left.
+สำหรับ 'หมวก' มีอักขระหนึ่งตัวที่มาศัพท์ตามหลังทางซ้ายเท่านั้น สำหรับ 'zyx' ไม่มีอักขระที่มา lexicographically หลังจากทางซ้าย
 
-In all there are 10400 strings of length 3 for which exactly one character comes lexicographically after its neighbour to the left.
+มีทั้งหมด 10,400 สตริงที่มีความยาว 3 ซึ่งอักขระหนึ่งตัวมาเรียงตามลำดับศัพท์หลังจากทางซ้าย
 
-We now consider strings of $n ≤ 26$ different characters from the alphabet.
+ตอนนี้เราพิจารณาสตริงของ $n ≤ 26$ อักขระที่แตกต่างจากตัวอักษร
 
-For every $n$, $p(n)$ is the number of strings of length $n$ for which exactly one character comes lexicographically after its neighbour to the left.
+สำหรับทุก ๆ $n$ $p(n)$ คือจำนวนสตริงที่มีความยาว $n$ โดยที่อักขระหนึ่งตัวจะเรียงตามลำดับศัพท์หลังจากทางซ้าย
 
-What is the maximum value of $p(n)$?
+ค่าสูงสุดของ $p(n)$ คืออะไร?
 
 # --hints--
 

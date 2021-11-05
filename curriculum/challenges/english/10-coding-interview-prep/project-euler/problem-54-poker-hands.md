@@ -8,7 +8,7 @@ dashedName: problem-54-poker-hands
 
 # --description--
 
-In the card game poker, a hand consists of five cards and are ranked, from lowest to highest, in the following way:
+card game poker มี 5 cards ตามลำดับจากมากสุดไปต่ำสุด:
 
 <ul>
   <li>High Card: Highest value card.</li>
@@ -23,11 +23,11 @@ In the card game poker, a hand consists of five cards and are ranked, from lowes
   <li>Royal Flush: Ten, Jack, Queen, King, Ace, in same suit.</li>
 </ul>
 
-The cards are valued in the order: 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King, Ace.
+ cards มีค่าตามลำดับ: 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King, Ace.
 
-If two players have the same ranked hands then the rank made up of the highest value wins; for example, a pair of eights beats a pair of fives (see example 1 below). But if two ranks tie, for example, both players have a pair of queens, then highest cards in each hand are compared (see example 4 below); if the highest cards tie then the next highest cards are compared, and so on.
+ถ้า 2 players มี rank ที่เหมือนกัน ดังนั้น rank จะนับจากค่าสูงสุดถึงจะชนะ เช่น คู่แปดกับคู้ห้า (example 1). แต่มีสอง ranks ที่เสมอกันเช่นผู้เล่นมีคู่ queens cards ที่สูงกว่าต้องถูกนำออกมาเปรียบเทียบ (example 4) ถ้า cards เสมอมีค่าสูงสุดต้องเทียบจากคู่ต่อไป ตามลำดับ
 
-Consider the following five hands dealt to two players:
+พิจารณาห้ามือต่อไปนี้ที่แจกให้กับผู้เล่นสองคน
 
 | Hand               | Player 1                                                  | Player 2                                                   | Winner   |
 | ------------------ | --------------------------------------------------------- | ---------------------------------------------------------- | -------- |
@@ -37,25 +37,25 @@ Consider the following five hands dealt to two players:
 | <strong>4</strong> | 4D 6S 9H QH QC <br> Pair of Queens <br> Highest card Nine | 3D 6D 7H QD QS <br> Pair of Queens <br> Highest card Seven | Player 1 |
 | <strong>5</strong> | 2H 2D 4C 4D 4S <br> Full House <br> with Three Fours      | 3C 3D 3S 9S 9D <br> Full House <br> with Three Threes      | Player 1 |
 
-The global array (`handsArr`) passed to the function, contains one-thousand random hands dealt to two players. Each line of the file contains ten cards (separated by a single space): the first five are Player 1's cards and the last five are Player 2's cards. You can assume that all hands are valid (no invalid characters or repeated cards), each player's hand is in no specific order, and in each hand there is a clear winner.
+global array (`handsArr`) passed ค่าให้ function มี one-thousand random hands สำหรับ 2 players แต่ละกล่องมี cards 10 ใบ (แยกจาก single space): ห้าใบแรกเป็นของ Player 1 และห้าใบหลังเป็นของ Player 2  คุณสามารถสันนิษฐานได้ว่าทั้งหมดถูกต้อง (ไม่มีการให้ซ้ำ),และไม่มีการกำหนดลำดับ
 
-How many hands does Player 1 win?
+Player 1 ชนะกี่ครั้ง
 
 # --hints--
 
-`pokerHands(testArr)` should return a number.
+`pokerHands(testArr)` ควร return number.
 
 ```js
 assert(typeof pokerHands(testArr) === 'number');
 ```
 
-`pokerHands(testArr)` should return 2.
+`pokerHands(testArr)` ควร return 2.
 
 ```js
 assert.strictEqual(pokerHands(testArr), 2);
 ```
 
-`pokerHands(handsArr)` should return 376.
+`pokerHands(handsArr)` ควร return 376.
 
 ```js
 assert.strictEqual(pokerHands(handsArr), 376);

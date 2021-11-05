@@ -8,34 +8,34 @@ dashedName: problem-444-the-roundtable-lottery
 
 # --description--
 
-A group of $p$ people decide to sit down at a round table and play a lottery-ticket trading game. Each person starts off with a randomly-assigned, unscratched lottery ticket. Each ticket, when scratched, reveals a whole-pound prize ranging anywhere from £1 to £$p$, with no two tickets alike. The goal of the game is for each person to maximize his ticket winnings upon leaving the game.
+กลุ่มคน $p$ ตัดสินใจนั่งลงที่โต๊ะกลมและเล่นเกมซื้อขายลอตเตอรี แต่ละคนเริ่มต้นด้วยตั๋วลอตเตอรีที่ไม่มีรอยขีดข่วนแบบสุ่ม ตั๋วแต่ละใบ เมื่อขูดแล้ว จะเผยให้เห็นรางวัลเต็มปอนด์ตั้งแต่ 1 ถึง £$p$ โดยไม่มีตั๋วสองใบเหมือนกัน เป้าหมายของเกมคือให้แต่ละคนเพิ่มเงินรางวัลตั๋วของเขาให้สูงสุดเมื่อออกจากเกม
 
-An arbitrary person is chosen to be the first player. Going around the table, each player has only one of two options:
+บุคคลทั่วไปได้รับเลือกให้เป็นผู้เล่นคนแรก เมื่อเดินไปรอบๆ โต๊ะ ผู้เล่นแต่ละคนมีทางเลือกอย่างใดอย่างหนึ่งจากสองตัวเลือกเท่านั้น:
 
-1.  The player can scratch his ticket and reveal its worth to everyone at the table.
-2.  The player can trade his unscratched ticket for a previous player's scratched ticket, and then leave the game with that ticket. The previous player then scratches his newly-acquired ticket and reveals its worth to everyone at the table.
+1. ผู้เล่นสามารถขูดตั๋วของเขาและเปิดเผยมูลค่าของมันให้กับทุกคนที่โต๊ะ
+2. ผู้เล่นสามารถแลกเปลี่ยนตั๋วที่ไม่มีรอยขีดข่วนของเขากับตั๋วที่มีรอยขีดข่วนของผู้เล่นคนก่อน จากนั้นออกจากเกมด้วยตั๋วนั้น จากนั้นผู้เล่นคนก่อนก็ขูดตั๋วที่ได้มาใหม่และเผยให้เห็นคุณค่าของมันต่อทุกคนที่โต๊ะ
 
-The game ends once all tickets have been scratched. All players still remaining at the table must leave with their currently-held tickets.
+เกมจะจบลงเมื่อตั๋วทั้งหมดถูกขีดข่วนแล้ว ผู้เล่นทุกคนที่ยังคงอยู่ที่โต๊ะจะต้องออกไปพร้อมกับตั๋วที่ถืออยู่ในปัจจุบัน
 
-Assume that each player uses the optimal strategy for maximizing the expected value of his ticket winnings.
+สมมติว่าผู้เล่นแต่ละคนใช้กลยุทธ์ที่เหมาะสมที่สุดเพื่อเพิ่มมูลค่าที่คาดหวังจากการชนะสลากของเขา
 
-Let $E(p)$ represent the expected number of players left at the table when the game ends in a game consisting of $p$ players (e.g. $E(111) = 5.2912$ when rounded to 5 significant digits).
+ให้ $E(p)$ แทนจำนวนผู้เล่นที่คาดว่าจะเหลืออยู่ที่โต๊ะเมื่อเกมจบลงในเกมที่ประกอบด้วยผู้เล่น $p$ (เช่น $E(111) = 5.2912$ เมื่อปัดเศษเป็น 5 หลักนัยสำคัญ)
 
-Let $S_1(N) = \displaystyle\sum_{p = 1}^N E(p)$.
+ให้ $S_1(N) = \displaystyle\sum_{p = 1}^N E(p)$
 
-Let $S_k(N) = \displaystyle\sum_{p = 1}^N S_{k - 1}(p)$ for $k > 1$.
+ให้ $S_k(N) = \displaystyle\sum_{p = 1}^N S_{k - 1}(p)$ สำหรับ $k > 1$
 
-Find $S_{20}({10}^{14})$ and write the answer as a string in scientific notation rounded to 10 significant digits. Use a lowercase `e` to separate mantissa and exponent. For example, the answer for $S_3(100)$ would be `5.983679014e5`.
+หา $S_{20}({10}^{14})$ และเขียนคำตอบเป็นสตริงในรูปแบบสัญกรณ์วิทยาศาสตร์ที่ปัดเศษขึ้นเป็น 10 หลักที่มีนัยสำคัญ ใช้ตัวพิมพ์เล็ก `e` เพื่อแยก mantissa และเลขชี้กำลัง ตัวอย่างเช่น คำตอบสำหรับ $S_3(100)$ จะเป็น `5.983679014e5`
 
 # --hints--
 
-`roundtableLottery()` should return a string.
+`roundtableLottery()` ควร return string.
 
 ```js
 assert(typeof roundtableLottery() === 'string');
 ```
 
-`roundtableLottery()` should return the string `1.200856722e263`.
+`roundtableLottery()` ควร return string `1.200856722e263`.
 
 ```js
 assert.strictEqual(roundtableLottery(), '1.200856722e263');

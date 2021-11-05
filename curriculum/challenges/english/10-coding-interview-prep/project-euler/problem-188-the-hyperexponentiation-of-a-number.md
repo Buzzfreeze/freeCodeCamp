@@ -8,17 +8,18 @@ dashedName: problem-188-the-hyperexponentiation-of-a-number
 
 # --description--
 
-The hyperexponentiation or tetration of a number $a$ by a positive integer $b$, denoted by $a↑↑b$ or ${}^ba$, is recursively defined by:
+hyperexponentiation หรือ tetration ของตัวเลข $a$ ด้วยจำนวนเต็มบวก $b$ แทนด้วย $a↑↑b$ หรือ ${}^ba$ กำหนดแบบเรียกซ้ำโดย:
 
 $a↑↑1 = a$,
 
 $a↑↑(k+1) = a^{(a↑↑k)}$.
 
-Thus we have e.g. $3↑↑2 = 3^3 = 27$, hence $3↑↑3 = 3^{27} = 7625597484987$ and $3↑↑4$ is roughly ${10}^{3.6383346400240996 \times {10}^{12}}$. Find the last 8 digits of $1777↑↑1855$.
+ดังนั้นเช่น $3↑↑2 = 3^3 = 27$ ดังนั้น $3↑↑3 = 3^{27} = 7625597484987$ และ $3↑↑4$ คือประมาณ ${10}^{3.6383346400240996 \times {10}^{12} }$
+หา 8 หลักสุดท้ายของ $1777↑↑1855$
 
 # --hints--
 
-`hyperexponentation()` should return `95962097`.
+`hyperexponentation()` ควร return `95962097`.
 
 ```js
 assert.strictEqual(hyperexponentation(), 95962097);

@@ -8,61 +8,61 @@ dashedName: problem-14-longest-collatz-sequence
 
 # --description--
 
-The following iterative sequence is defined for the set of positive integers:
+ลำดับข้างล่างใช้กำหนด set ของจำนวนเต็มบวก:
 
 <div style='padding-left: 4em;'><var>n</var> → <var>n</var>/2 (<var>n</var> is even)</div>
 
 <div style='padding-left: 4em;'><var>n</var> → 3<var>n</var> + 1 (<var>n</var> is odd)</div>
 
-Using the rule above and starting with 13, we generate the following sequence:
+ใช้กฎข้างบนและเริ่มที่ 13 เราจะได้ลำดับดังต่อไปนี้
 
 <div style='text-align: center;'>13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1</div>
 
-It can be seen that this sequence (starting at 13 and finishing at 1) contains 10 terms. Although it has not been proved yet (Collatz Problem), it is thought that all starting numbers finish at 1.
+เราสามารถเห็นลำดับ (เริ่มจาก 13 และสิ้นสุดที่ 1) ทั้งหมด 10 ลำดับ แม้ว่ายังไม่ได้ถูกพิสูจน์ (Collatz Problem) แต่ไม่ว่าจะหาเริ่มจากจำนวนไหนก็ตามก็จะสิ้นสดที่1
 
-Which starting number, under the given `limit`, produces the longest chain?
+ให้จำนวนที่เริ่มอยู่ภายใต้ `limit` จะมีความยาวที่สุดของลำดับตัวเลขเป็นเท่าไหร่
 
-**Note:** Once the chain starts the terms are allowed to go above one million.
+**Note:** เริ่มจากค่าหนึ่งล้านได้
 
 # --hints--
 
-`longestCollatzSequence(14)` should return a number.
+`longestCollatzSequence(14)` ควร return number
 
 ```js
 assert(typeof longestCollatzSequence(14) === 'number');
 ```
 
-`longestCollatzSequence(14)` should return 9.
+`longestCollatzSequence(14)` ควร return 9
 
 ```js
 assert.strictEqual(longestCollatzSequence(14), 9);
 ```
 
-`longestCollatzSequence(5847)` should return 3711.
+`longestCollatzSequence(5847)` ควร return 3711
 
 ```js
 assert.strictEqual(longestCollatzSequence(5847), 3711);
 ```
 
-`longestCollatzSequence(46500)` should return 35655.
+`longestCollatzSequence(46500)` ควร return 35655
 
 ```js
 assert.strictEqual(longestCollatzSequence(46500), 35655);
 ```
 
-`longestCollatzSequence(54512)` should return 52527.
+`longestCollatzSequence(54512)` ควร return 52527
 
 ```js
 assert.strictEqual(longestCollatzSequence(54512), 52527);
 ```
 
-`longestCollatzSequence(100000)` should return 77031.
+`longestCollatzSequence(100000)` ควร return 77031
 
 ```js
 assert.strictEqual(longestCollatzSequence(100000), 77031);
 ```
 
-`longestCollatzSequence(1000000)` should return 837799.
+`longestCollatzSequence(1000000)` ควร return 837799
 
 ```js
 assert.strictEqual(longestCollatzSequence(1000000), 837799);

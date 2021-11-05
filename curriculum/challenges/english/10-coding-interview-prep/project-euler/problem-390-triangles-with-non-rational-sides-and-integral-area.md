@@ -8,19 +8,19 @@ dashedName: problem-390-triangles-with-non-rational-sides-and-integral-area
 
 # --description--
 
-Consider the triangle with sides $\sqrt{5}$, $\sqrt{65}$ and $\sqrt{68}$. It can be shown that this triangle has area 9.
+พิจารณาสามเหลี่ยมที่มีด้าน $\sqrt{5}$, $\sqrt{65}$ และ $\sqrt{68}$ แสดงว่าสามเหลี่ยมนี้มีพื้นที่ 9
 
-$S(n)$ is the sum of the areas of all triangles with sides $\sqrt{1 + b^2}$, $\sqrt{1 + c^2}$ and $\sqrt{b^2 + c^2}$ (for positive integers $b$ and $c$) that have an integral area not exceeding $n$.
+$S(n)$ คือผลรวมของพื้นที่ของสามเหลี่ยมทั้งหมดที่มีด้าน $\sqrt{1 + b^2}$, $\sqrt{1 + c^2}$ และ $\sqrt{b^2 + c ^2}$ (สำหรับจำนวนเต็มบวก $b$ และ $c$) ที่มีพื้นที่ปริพันธ์ไม่เกิน $n$
 
-The example triangle has $b = 2$ and $c = 8$.
+สามเหลี่ยมตัวอย่างมี $b = 2$ และ $c = 8$
 
 $S({10}^6) = 18\\,018\\,206$.
 
-Find $S({10}^{10})$.
+หา $S({10}^{10})$
 
 # --hints--
 
-`nonRationalSidesAndIntegralArea()` should return `2919133642971`.
+`nonRationalSidesAndIntegralArea()` ควร return `2919133642971`.
 
 ```js
 assert.strictEqual(nonRationalSidesAndIntegralArea(), 2919133642971);

@@ -8,19 +8,19 @@ dashedName: problem-413-one-child-numbers
 
 # --description--
 
-We say that a $d$-digit positive number (no leading zeros) is a one-child number if exactly one of its sub-strings is divisible by $d$.
+ตัวเลขบวก $d$-digit (ไม่มีเลขศูนย์นำหน้า) เป็นตัวเลขลูกเดียว ถ้าหนึ่งในสตริงย่อยของมันถูกหารด้วย $d$ ลงตัว
 
-For example, 5671 is a 4-digit one-child number. Among all its sub-strings 5, 6, 7, 1, 56, 67, 71, 567, 671 and 5671, only 56 is divisible by 4.
+ตัวอย่างเช่น 5671 เป็นตัวเลขลูกเดียว 4 หลัก ในบรรดาสตริงย่อยทั้งหมด 5, 6, 7, 1, 56, 67, 71, 567, 671 และ 5671 มีเพียง 56 เท่านั้นที่หารด้วย 4
 
-Similarly, 104 is a 3-digit one-child number because only 0 is divisible by 3. 1132451 is a 7-digit one-child number because only 245 is divisible by 7.
+ในทำนองเดียวกัน 104 เป็นตัวเลขลูกเดียว 3 หลักเพราะมีเพียง 0 เท่านั้นที่หารด้วย 3 ได้ 1132451 เป็นตัวเลขลูกเดียว 7 หลักเพราะมีเพียง 245 ที่หารด้วย 7 ลงตัว
 
-Let $F(N)$ be the number of the one-child numbers less than $N$. We can verify that $F(10) = 9$, $F({10}^3) = 389$ and $F({10}^7) = 277\\,674$.
+ให้ $F(N)$ เป็นจำนวนลูกคนเดียวที่น้อยกว่า $N$ เราสามารถยืนยันได้ว่า $F(10) = 9$, $F({10}^3) = 389$ and $F({10}^7) = 277\\,674$
 
-Find $F({10}^{19})$.
+หา $F({10}^{19})$.
 
 # --hints--
 
-`oneChildNumbers()` should return `3079418648040719`.
+`oneChildNumbers()` ควร return `3079418648040719`.
 
 ```js
 assert.strictEqual(oneChildNumbers(), 3079418648040719);

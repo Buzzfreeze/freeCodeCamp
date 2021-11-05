@@ -8,7 +8,8 @@ dashedName: problem-81-path-sum-two-ways
 
 # --description--
 
-In the 5 by 5 matrix below, the minimal path sum from the top left to the bottom right, by **only moving to the right and down**, is indicated in bold red and is equal to `2427`.
+
+ในเมทริกซ์ขนาด 5 คูณ 5 ด้านล่าง ผลรวมของเส้นทางต่ำสุดจากซ้ายบนไปขวาล่าง โดย **only moving to the right and down**, ถูกระบุด้วยตัวหนาสีแดงและมีค่าเท่ากับ `2427`.
 
   $$\begin{pmatrix}
   \color{red}{131} & 673 & 234 & 103 & 18\\\\
@@ -18,23 +19,23 @@ In the 5 by 5 matrix below, the minimal path sum from the top left to the bottom
   805 & 732 & 524 & \color{red}{37} & \color{red}{331}
   \end{pmatrix}$$
 
-Find the minimal path sum from the top left to the bottom right by only moving right and down in `matrix`, a 2D array representing a matrix. The maximum matrix size used in the tests will be 80 by 80.
+หาผลรวมเส้นทางขั้นต่ำจากซ้ายบนไปขวาล่างโดยเลื่อนไปทางขวาและลงเท่านั้น `matrix` 2D array แทนเมทริกซ์ ขนาดเมทริกซ์สูงสุดที่ใช้ในการทดสอบคือ 80 คูณ 80
 
 # --hints--
 
-`pathSumTwoWays(testMatrix1)` should return a number.
+`pathSumTwoWays(testMatrix1)` ควร return number.
 
 ```js
 assert(typeof pathSumTwoWays(_testMatrix1) === 'number');
 ```
 
-`pathSumTwoWays(testMatrix1)` should return `2427`.
+`pathSumTwoWays(testMatrix1)` ควร return `2427`.
 
 ```js
 assert.strictEqual(pathSumTwoWays(_testMatrix1), 2427);
 ```
 
-`pathSumTwoWays(testMatrix2)` should return `427337`.
+`pathSumTwoWays(testMatrix2)` ควร return `427337`.
 
 ```js
 assert.strictEqual(pathSumTwoWays(_testMatrix2), 427337);

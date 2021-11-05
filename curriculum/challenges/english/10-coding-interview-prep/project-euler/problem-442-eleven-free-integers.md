@@ -8,17 +8,17 @@ dashedName: problem-442-eleven-free-integers
 
 # --description--
 
-An integer is called eleven-free if its decimal expansion does not contain any substring representing a power of 11 except 1.
+จำนวนเต็มเรียกว่า eleven-free หากการขยายทศนิยมไม่มีสตริงย่อยใด ๆ ที่แสดงกำลัง 11 ยกเว้น 1
 
-For example, 2404 and 13431 are eleven-free, while 911 and 4121331 are not.
+ตัวอย่างเช่น 2404 และ 13431 ไม่มี11ในขณะที่ 911 และ 4121331 ไม่ใช่
 
-Let $E(n)$ be the $n$th positive eleven-free integer. For example, $E(3) = 3$, $E(200) = 213$ and $E(500\\,000) = 531\\,563$.
+ให้ $E(n)$ เป็นจำนวนเต็มบวก 11 ฟรีที่ $n$ ตัวอย่างเช่น $E(3) = 3$, $E(200) = 213$ และ $E(500\\,000) = 531\\,563$
 
-Find $E({10}^{18})$.
+หา $E({10}^{18})$
 
 # --hints--
 
-`elevenFreeIntegers()` should return `1295552661530920200`.
+`elevenFreeIntegers()` ควร return `1295552661530920200`.
 
 ```js
 assert.strictEqual(elevenFreeIntegers(), 1295552661530920200);

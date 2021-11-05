@@ -8,23 +8,23 @@ dashedName: problem-302-strong-achilles-numbers
 
 # --description--
 
-A positive integer $n$ is powerful if $p^2$ is a divisor of $n$ for every prime factor $p$ in $n$.
+จำนวนเต็มบวก $n$ จะมีประสิทธิภาพถ้า $p^2$ เป็นตัวหารของ $n$ สำหรับทุกปัจจัยเฉพาะ $p$ ใน $n$
 
-A positive integer $n$ is a perfect power if $n$ can be expressed as a power of another positive integer.
+จำนวนเต็มบวก $n$ เป็นกำลังสมบูรณ์ ถ้า $n$ สามารถแสดงเป็นกำลังของจำนวนเต็มบวกอื่นได้
 
-A positive integer $n$ is an Achilles number if $n$ is powerful but not a perfect power. For example, 864 and 1800 are Achilles numbers: $864 = 2^5 \times 3^3$ and $1800 = 2^3 \times 3^2 \times 5^2$.
+จำนวนเต็มบวก $n$ คือจำนวน Achilles ถ้า $n$ ทรงพลังแต่ไม่ใช่กำลังสมบูรณ์ ตัวอย่างเช่น 864 และ 1800 เป็นตัวเลขจุดอ่อน: $864 = 2^5 \times 3^3$ และ $1800 = 2^3 \times 3^2 \times 5^2$
 
-We shall call a positive integer $S$ a Strong Achilles number if both $S$ and $φ(S)$ are Achilles numbers. $φ$ denotes Euler's totient function.
+เราจะเรียกจำนวนเต็มบวก $S$ เป็นจำนวนStrong Achilles numbers ถ้าทั้ง $S$ และ $φ(S)$ เป็นจำนวนจุดอ่อน $φ$ หมายถึง ฟังก์ชันtotientของออยเลอร์
 
-For example, 864 is a Strong Achilles number: $φ(864) = 288 = 2^5 \times 3^2$. However, 1800 isn't a Strong Achilles number because: $φ(1800) = 480 = 2^5 \times 3^1 \times 5^1$.
+ตัวอย่างเช่น 864 เป็นตัวเลขStrong Achilles numbers: $φ(864) = 288 = 2^5 \times 3^2$ อย่างไรก็ตาม 1800 ไม่ใช่ตัวเลขStrong Achilles numbersเพราะ: $φ(1800) = 480 = 2^5 \times 3^1 \times 5^1$
 
-There are 7 Strong Achilles numbers below ${10}^4$ and 656 below ${10}^8$.
+มีตัวเลขStrong Achilles numbers 7 ตัวที่ต่ำกว่า ${10}^4$ และ 656 ต่ำกว่า ${10}^8$
 
-How many Strong Achilles numbers are there below ${10}^{18}$?
+จำนวนStrong Achilles numbersมีจำนวนเท่าใดที่ต่ำกว่า ${10}^{18}$
 
 # --hints--
 
-`strongAchillesNumbers()` should return `1170060`.
+`strongAchillesNumbers()` ควร return `1170060`.
 
 ```js
 assert.strictEqual(strongAchillesNumbers(), 1170060);

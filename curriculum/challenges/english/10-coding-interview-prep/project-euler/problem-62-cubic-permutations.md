@@ -8,37 +8,38 @@ dashedName: problem-62-cubic-permutations
 
 # --description--
 
-The cube, 41063625 ($345^3$), can be permuted to produce two other cubes: 56623104 ($384^3$) and 66430125 ($405^3$). In fact, 41063625 is the smallest cube which has exactly three permutations of its digits which are also cube.
+cube, 41063625 ($345^3$) สามารถเรียงสับเปลี่ยนเพื่อผลิตลูกบาศก์อีกสองก้อน: 56623104 ($384^3$) และ 66430125 ($405^3$) ซึ่ง 41063625 จะเล็กที่สุดเมื่อมี 3 permutations -v' digits ที่เป็น cube
 
-Find the smallest cube for which exactly `n` permutations of its digits are cube.
+หาค่าลูกบาศก์ที่น้อยที่สุดของ `n` permutations โดยตัวเลขของมันคือลูกบาศก์
+
 
 # --hints--
 
-`cubicPermutations(2)` should return a number.
+`cubicPermutations(2)` ควร return number.
 
 ```js
 assert(typeof cubicPermutations(2) === 'number');
 ```
 
-`cubicPermutations(2)` should return `125`.
+`cubicPermutations(2)` ควร return `125`.
 
 ```js
 assert.strictEqual(cubicPermutations(2), 125);
 ```
 
-`cubicPermutations(3)` should return `41063625`.
+`cubicPermutations(3)` ควร return `41063625`.
 
 ```js
 assert.strictEqual(cubicPermutations(3), 41063625);
 ```
 
-`cubicPermutations(4)` should return `1006012008`.
+`cubicPermutations(4)` ควร return `1006012008`.
 
 ```js
 assert.strictEqual(cubicPermutations(4), 1006012008);
 ```
 
-`cubicPermutations(5)` should return `127035954683`.
+`cubicPermutations(5)` ควร return `127035954683`.
 
 ```js
 assert.strictEqual(cubicPermutations(5), 127035954683);

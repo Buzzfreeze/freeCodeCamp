@@ -8,17 +8,17 @@ dashedName: problem-129-repunit-divisibility
 
 # --description--
 
-A number consisting entirely of ones is called a repunit. We shall define $R(k)$ to be a repunit of length $k$; for example, $R(6) = 111111$.
+จำนวนที่ประกอบด้วยจำนวนทั้งหมดเรียกว่าการทำซ้ำ เราจะกำหนด $R(k)$ ให้เป็นหน่วยของความยาว $k$; ตัวอย่างเช่น $R(6) = 111111$
 
-Given that $n$ is a positive integer and $GCD(n, 10) = 1$, it can be shown that there always exists a value, $k$, for which $R(k)$ is divisible by $n$, and let $A(n)$ be the least such value of $k$; for example, $A(7) = 6$ and $A(41) = 5$.
+เนื่องจาก $n$ เป็นจำนวนเต็มบวกและ $GCD(n, 10) = 1$ จึงสามารถแสดงว่ามีค่าอยู่เสมอ $k$ ซึ่ง $R(k)$ หารด้วย $n$ ลงตัว และให้ $A(n)$ เป็นมูลค่าที่น้อยที่สุดของ $k$; ตัวอย่างเช่น $A(7) = 6$ และ $A(41) = 5$
 
-The least value of $n$ for which $A(n)$ first exceeds ten is 17.
+ค่าที่น้อยที่สุดของ $n$ ซึ่ง $A(n)$ มีค่ามากกว่าสิบอันดับแรกคือ 17
 
-Find the least value of $n$ for which $A(n)$ first exceeds one-million.
+หาค่าที่น้อยที่สุดของ $n$ ที่ $A(n)$ มีค่าเกินหนึ่งล้าน
 
 # --hints--
 
-`repunitDivisibility()` should return `1000023`.
+`repunitDivisibility()` ควร return `1000023`.
 
 ```js
 assert.strictEqual(repunitDivisibility(), 1000023);

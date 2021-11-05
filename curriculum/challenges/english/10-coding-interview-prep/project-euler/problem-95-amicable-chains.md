@@ -8,47 +8,47 @@ dashedName: problem-95-amicable-chains
 
 # --description--
 
-The proper divisors of a number are all the divisors excluding the number itself. For example, the proper divisors of 28 are 1, 2, 4, 7, and 14. As the sum of these divisors is equal to 28, we call it a perfect number.
+ตัวหารที่ถูกต้องของตัวเลขคือตัวหารทั้งหมดยกเว้นตัวตัวเลข ตัวอย่างเช่น ตัวหารที่เหมาะสมของ 28 คือ 1, 2, 4, 7 และ 14 เนื่องจากผลรวมของตัวหารเหล่านี้เท่ากับ 28 เราจึงเรียกมันว่าจำนวนสมบูรณ์
 
-Interestingly the sum of the proper divisors of 220 is 284 and the sum of the proper divisors of 284 is 220, forming a chain of two numbers. For this reason, 220 and 284 are called an amicable pair.
+ที่น่าสนใจคือผลรวมของตัวหารที่เหมาะสมของ 220 คือ 284 และผลรวมของตัวหารที่เหมาะสมของ 284 คือ 220 ทำให้เกิดห่วงโซ่ของตัวเลขสองตัว ด้วยเหตุนี้ 220 และ 284 จึงเรียกว่าคู่มิตร
 
-Perhaps less well known are longer chains. For example, starting with 12496, we form a chain of five numbers:
+บางทีที่รู้จักกันดีน้อยกว่าก็คือโซ่ที่ยาวกว่า ตัวอย่างเช่น เริ่มต้นด้วย 12496 เราสร้างห่วงโซ่ของตัวเลขห้าตัว:
 
 $$
   12496 → 14288 → 15472 → 14536 → 14264 \\,(→ 12496 → \cdots)
 $$
 
-Since this chain returns to its starting point, it is called an amicable chain.
+เนื่องจากห่วงโซ่นี้กลับสู่จุดเริ่มต้น จึงเรียกว่า amicable chain.
 
-Find the smallest member of the longest amicable chain with no element exceeding `limit`.
+หาสมาชิกที่เล็กที่สุดของห่วงโซ่ที่เป็นมิตรที่ยาวที่สุดที่มีองค์ประกอบไม่เกิน `limit`
 
 # --hints--
 
-`amicableChains(300)` should return a number.
+`amicableChains(300)` ควร return number.
 
 ```js
 assert(typeof amicableChains(300) === 'number');
 ```
 
-`amicableChains(300)` should return `220`.
+`amicableChains(300)` ควร return `220`.
 
 ```js
 assert.strictEqual(amicableChains(300), 220);
 ```
 
-`amicableChains(15000)` should return `220`.
+`amicableChains(15000)` ควร return `220`.
 
 ```js
 assert.strictEqual(amicableChains(15000), 220);
 ```
 
-`amicableChains(100000)` should return `12496`.
+`amicableChains(100000)` ควร return `12496`.
 
 ```js
 assert.strictEqual(amicableChains(100000), 12496);
 ```
 
-`amicableChains(1000000)` should return `14316`.
+`amicableChains(1000000)` ควร return `14316`.
 
 ```js
 assert.strictEqual(amicableChains(1000000), 14316);

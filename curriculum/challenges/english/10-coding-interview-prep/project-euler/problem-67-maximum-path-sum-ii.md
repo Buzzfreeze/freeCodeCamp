@@ -8,7 +8,7 @@ dashedName: problem-67-maximum-path-sum-ii
 
 # --description--
 
-By starting at the top of the triangle below and moving to adjacent numbers on the row below, the maximum total from top to bottom is 23.
+โดยเริ่มจากด้านบนของสามเหลี่ยมด้านล่างแล้วเลื่อนไปยังตัวเลขที่อยู่ติดกันในแถวด้านล่าง ผลรวมสูงสุดจากบนลงล่างคือ 23
 
 <div style='text-align: center;'>
   <strong style='color: red;'>3</strong><br>
@@ -17,27 +17,30 @@ By starting at the top of the triangle below and moving to adjacent numbers on t
   8 5 <strong style='color: red;'>9</strong> 3
 </div>
 
-That is, 3 + 7 + 4 + 9 = 23.
+โดย 3 + 7 + 4 + 9 = 23.
 
-Find the maximum total from top to bottom in `numTriangle`, a 2D array defined in the background containing a triangle with one-hundred rows.
 
-**Note:** This is a much more difficult version of Problem 18. It is not possible to try every route to solve this problem, as there are 2<sup>99</sup> altogether! If you could check one trillion (10<sup>12</sup>) routes every second it would take over twenty billion years to check them all. There is an efficient algorithm to solve it. ;o)
+หาผลรวมสูงสุดจากบนลงล่างใน `numTriangle` 2D array กำหนดไว้ในพื้นหลังที่มีรูปสามเหลี่ยมที่มีหนึ่งร้อยแถว
+
+**Note:** 
+นี่เป็นปัญหาที่ 18 เวอร์ชันที่ยากกว่ามาก ไม่สามารถลองทุกเส้นทางเพื่อแก้ปัญหานี้ได้ เนื่องจากมี 2<sup>99</sup>  หากคุณตรวจสอบได้หนึ่งล้านล้าน (10<sup>12</sup>) 
+เส้นทางทุกวินาทีจะใช้เวลากว่าสองหมื่นล้านปีในการตรวจสอบทั้งหมด มีอัลกอริธึมที่มีประสิทธิภาพในการแก้ปัญหา ;o)
 
 # --hints--
 
-`maximumPathSumII(testTriangle)` should return a number.
+`maximumPathSumII(testTriangle)` ควร return number.
 
 ```js
 assert(typeof maximumPathSumII(_testTriangle) === 'number');
 ```
 
-`maximumPathSumII(testTriangle)` should return 23.
+`maximumPathSumII(testTriangle)` ควร return 23.
 
 ```js
 assert.strictEqual(maximumPathSumII(_testTriangle), 23);
 ```
 
-`maximumPathSumII(numTriangle)` should return 7273.
+`maximumPathSumII(numTriangle)` ควร return 7273.
 
 ```js
 assert.strictEqual(maximumPathSumII(_numTriangle), 7273);

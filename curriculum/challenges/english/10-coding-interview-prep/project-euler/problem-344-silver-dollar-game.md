@@ -8,29 +8,29 @@ dashedName: problem-344-silver-dollar-game
 
 # --description--
 
-One variant of N.G. de Bruijn's silver dollar game can be described as follows:
+ตัวแปรหนึ่งของ N.G. เกมเงินดอลลาร์ของ de Bruijn สามารถอธิบายได้ดังนี้:
 
-On a strip of squares a number of coins are placed, at most one coin per square. Only one coin, called the silver dollar, has any value. Two players take turns making moves. At each turn a player must make either a regular or a special move.
+บนแถบสี่เหลี่ยมมีเหรียญจำนวนหนึ่งวาง อย่างมากที่สุดหนึ่งเหรียญต่อตาราง มีเพียงเหรียญเดียวที่เรียกว่าเงินดอลลาร์มีค่าเท่าใดก็ได้ ผู้เล่นสองคนผลัดกันเคลื่อนไหว ในแต่ละเทิร์นผู้เล่นจะต้องทำการเคลื่อนไหวปกติหรือการเคลื่อนไหวพิเศษ
 
-A regular move consists of selecting one coin and moving it one or more squares to the left. The coin cannot move out of the strip or jump on or over another coin.
+การเคลื่อนไหวปกติประกอบด้วยการเลือกเหรียญหนึ่งเหรียญและเลื่อนไปทางซ้ายอย่างน้อยหนึ่งช่อง เหรียญไม่สามารถเคลื่อนออกจากแถบหรือกระโดดข้ามเหรียญอื่นได้
 
-Alternatively, the player can choose to make the special move of pocketing the leftmost coin rather than making a regular move. If no regular moves are possible, the player is forced to pocket the leftmost coin.
+อีกทางหนึ่ง ผู้เล่นสามารถเลือกที่จะทำการเคลื่อนไหวพิเศษของการแทงเหรียญซ้ายสุด แทนที่จะทำการเคลื่อนไหวปกติ หากไม่มีการเคลื่อนไหวตามปกติ ผู้เล่นจะถูกบังคับให้ใส่เหรียญที่อยู่ทางซ้ายสุด
 
-The winner is the player who pockets the silver dollar.
+ผู้ชนะคือผู้เล่นที่ใส่เงินดอลลาร์
 
 <img class="img-responsive center-block" alt="silver dollar game" src="https://cdn.freecodecamp.org/curriculum/project-euler/silver-dollar-game.gif" style="background-color: white; padding: 10px;">
 
-A winning configuration is an arrangement of coins on the strip where the first player can force a win no matter what the second player does.
+การกำหนดค่าที่ชนะคือการจัดเรียงเหรียญบนแถบที่ผู้เล่นคนแรกสามารถบังคับให้ชนะไม่ว่าผู้เล่นคนที่สองจะทำอะไร
 
-Let $W(n, c)$ be the number of winning configurations for a strip of $n$ squares, $c$ worthless coins and one silver dollar.
+ให้ $W(n, c)$ เป็นจำนวนการกำหนดค่าที่ชนะสำหรับแถบสี่เหลี่ยม $n$ เหรียญไร้ค่า $c$ และหนึ่งเหรียญเงิน
 
-You are given that $W(10, 2) = 324$ and $W(100, 10) = 1\\,514\\,704\\,946\\,113\\,500$.
+คุณจะได้รับ $W(10, 2) = 324$ และ $W(100, 10) = 1\\,514\\,704\\,946\\,113\\,500$
 
-Find $W(1\\,000\\,000, 100)$ modulo the semiprime $1000\\,036\\,000\\,099 (= 1\\,000\\,003 \times 1\\,000\\,033)$.
+หา $W(1\\,000\\,000, 100)$ โมดูโลกึ่งไพรม์ $1000\\,036\\,000\\,099 (= 1\\,000\\,003 \times 1\\, 000\\,033)$.
 
 # --hints--
 
-`silverDollarGame()` should return `65579304332`.
+`silverDollarGame()` ควร return `65579304332`.
 
 ```js
 assert.strictEqual(silverDollarGame(), 65579304332);

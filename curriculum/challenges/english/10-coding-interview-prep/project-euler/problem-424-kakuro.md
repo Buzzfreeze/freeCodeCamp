@@ -10,35 +10,35 @@ dashedName: problem-424-kakuro
 
 <img class="img-responsive center-block" alt="kakuro example" src="https://cdn.freecodecamp.org/curriculum/project-euler/kakuro.gif" style="background-color: white; padding: 10px;">
 
-The above is an example of a cryptic kakuro (also known as cross sums, or even sums cross) puzzle, with its final solution on the right. (The common rules of kakuro puzzles can be found easily on numerous internet sites. Other related information can also be currently found at krazydad.com whose author has provided the puzzle data for this challenge.)
+Tข้างต้นเป็นตัวอย่างของปริศนาคาคุโระที่คลุมเครือ (หรือที่เรียกว่าผลรวมไขว้ หรือแม้แต่ผลรวมกากบาท) โดยมีคำตอบสุดท้ายอยู่ทางด้านขวา (กฎทั่วไปของปริศนาคาคุโระสามารถพบได้ง่ายในเว็บไซต์อินเทอร์เน็ตจำนวนมาก ข้อมูลที่เกี่ยวข้องอื่น ๆ สามารถดูได้ที่ krazydad.com ซึ่งผู้เขียนได้ให้ข้อมูลปริศนาสำหรับความท้าทายนี้)
 
-The `testPuzzles` array contains the description of 200 such puzzles, a mix of 5x5 and 6x6 types. The first puzzle in the file is the above example which is coded as string as follows:
+อาร์เรย์ `testPuzzles' มีคำอธิบายของปริศนาดังกล่าว 200 ปริศนา ซึ่งประกอบด้วยประเภท 5x5 และ 6x6 จิ๊กซอว์แรกในไฟล์คือตัวอย่างด้านบนซึ่งมีการเข้ารหัสเป็นสตริงดังนี้:
 
 `6,X,X,(vCC),(vI),X,X,X,(hH),B,O,(vCA),(vJE),X,(hFE,vD),O,O,O,O,(hA),O,I,(hJC,vB),O,O,(hJC),H,O,O,O,X,X,X,(hJE),O,O,X`
 
-The first character is a numerical digit indicating the size of the information grid. It would be either a 6 (for a 5x5 kakuro puzzle) or a 7 (for a 6x6 puzzle) followed by a comma (,). The extra top line and left column are needed to insert information.
+อักขระตัวแรกเป็นตัวเลขที่ระบุขนาดของตารางข้อมูล มันจะเป็น 6 (สำหรับปริศนาคาคุโระ 5x5) หรือ 7 (สำหรับปริศนา 6x6) ตามด้วยเครื่องหมายจุลภาค (,) จำเป็นต้องใช้บรรทัดบนสุดพิเศษและคอลัมน์ด้านซ้ายเพื่อแทรกข้อมูล
 
-The content of each cell is then described and followed by a comma, going left to right and starting with the top line.
+เนื้อหาของแต่ละเซลล์จะถูกอธิบายและตามด้วยเครื่องหมายจุลภาค ไปทางซ้ายไปขวาและเริ่มต้นด้วยบรรทัดบนสุด
 
-`X` = Gray cell, not required to be filled by a digit.
+`X` = เซลล์สีเทา ไม่จำเป็นต้องเติมด้วยตัวเลข
 
-`O` (upper case letter)= White empty cell to be filled by a digit.
+`O` (ตัวพิมพ์ใหญ่)= เซลล์ว่างสีขาวเพื่อเติมตัวเลข
 
-`A` = Or any one of the upper case letters from A to J to be replaced by its equivalent digit in the solved puzzle.
+`A` = หรืออักษรตัวพิมพ์ใหญ่ตัวใดตัวหนึ่งจาก A ถึง J ที่จะแทนที่ด้วยตัวเลขที่เท่ากันในปริศนาที่ไขแล้ว
 
-`( )` = Location of the encrypted sums. Horizontal sums are preceded by a lower case "h" and vertical sums are preceded by a lower case "v". Those are followed by one or two upper case letters depending if the sum is a single digit or double digit one. For double digit sums, the first letter would be for the "tens" and the second one for the "units". When the cell must contain information for both a horizontal and a vertical sum, the first one is always for the horizontal sum and the two are separated by a comma within the same set of brackets, ex.: (hFE,vD). Each set of brackets is also immediately followed by a comma.
+`( )` = ตำแหน่งของผลรวมที่เข้ารหัส ผลรวมแนวนอนนำหน้าด้วยตัวพิมพ์เล็ก "h" และผลรวมแนวตั้งนำหน้าด้วยตัวพิมพ์เล็ก "v" ตามด้วยอักษรตัวพิมพ์ใหญ่หนึ่งหรือสองตัวขึ้นอยู่กับว่าผลรวมเป็นตัวเลขหลักเดียวหรือสองหลัก สำหรับผลรวมสองหลัก ตัวอักษรตัวแรกจะเป็น "สิบ" และตัวที่สองสำหรับ "หน่วย" เมื่อเซลล์ต้องมีข้อมูลสำหรับผลรวมแนวนอนและแนวตั้ง เซลล์แรกจะเป็นผลรวมแนวนอนเสมอ และทั้งสองจะถูกคั่นด้วยเครื่องหมายจุลภาคภายในวงเล็บชุดเดียวกัน เช่น (hFE,vD) วงเล็บแต่ละชุดจะตามด้วยเครื่องหมายจุลภาคทันที
 
-The description of the last cell is followed by a Carriage Return/Line Feed (CRLF) instead of a comma.
+คำอธิบายของเซลล์สุดท้ายตามด้วย Carriage Return/Line Feed (CRLF) แทนที่จะเป็นเครื่องหมายจุลภาค
 
-The required answer to each puzzle is based on the value of each letter necessary to arrive at the solution and according to the alphabetical order. As indicated under the example puzzle, its answer would be 8426039571. At least 9 out of the 10 encrypting letters are always part of the problem description. When only 9 are given, the missing one must be assigned the remaining digit.
+คำตอบที่จำเป็นสำหรับปริศนาแต่ละตัวจะขึ้นอยู่กับค่าของตัวอักษรแต่ละตัวที่จำเป็นในการหาคำตอบและตามลำดับตัวอักษร ตามที่ระบุไว้ในตัวอย่างปริศนา คำตอบของมันคือ 8426039571 อย่างน้อย 9 ใน 10 ตัวอักษรที่เข้ารหัสมักจะเป็นส่วนหนึ่งของคำอธิบายปัญหาเสมอ เมื่อให้มาเพียง 9 ตัว จะต้องกำหนดหมายเลขที่หายไปเป็นตัวเลขที่เหลือ
 
-You are given that the sum of the answers for the first 10 puzzles in `testPuzzles` is 64414157580.
+คุณจะได้รับผลรวมของคำตอบสำหรับ 10 ปริศนาแรกใน `testPuzzles' คือ 64414157580
 
-Find the sum of the answers for `puzzles` array.
+ค้นหาผลรวมของคำตอบสำหรับ `puzzles` array
 
 # --hints--
 
-`kakuro(testPuzzles)` should return `1059760019628`.
+`kakuro(testPuzzles)`ควร return `1059760019628`.
 
 ```js
 assert.strictEqual(kakuro(_testPuzzles), 1059760019628);

@@ -8,15 +8,15 @@ dashedName: problem-213-flea-circus
 
 # --description--
 
-A 30×30 grid of squares contains 900 fleas, initially one flea per square.
+ตารางสี่เหลี่ยมขนาด 30 × 30 มีหมัด 900 ตัว หมัดแรกต่อหนึ่งตาราง
 
-When a bell is rung, each flea jumps to an adjacent square at random (usually 4 possibilities, except for fleas on the edge of the grid or at the corners).
+เมื่อเสียงกริ่งดังขึ้น หมัดแต่ละตัวจะกระโดดไปที่ช่องสี่เหลี่ยมที่อยู่ติดกันแบบสุ่ม (โดยปกติเป็นไปได้ 4 อย่าง ยกเว้นหมัดที่ขอบตะแกรงหรือที่มุม)
 
-What is the expected number of unoccupied squares after 50 rings of the bell? Give your answer rounded to six decimal places.
+จำนวนช่องสี่เหลี่ยมว่างที่คาดไว้หลังจากเสียงกริ่ง 50 รอบจะเป็นเท่าใด ให้คำตอบของคุณเป็นทศนิยมหกตำแหน่ง
 
 # --hints--
 
-`fleaCircus()` should return `330.721154`.
+`fleaCircus()` ควร return `330.721154`.
 
 ```js
 assert.strictEqual(fleaCircus(), 330.721154);

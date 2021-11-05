@@ -8,29 +8,29 @@ dashedName: problem-256-tatami-free-rooms
 
 # --description--
 
-Tatami are rectangular mats, used to completely cover the floor of a room, without overlap.
+Tatami เป็นเสื่อสี่เหลี่ยม ใช้ปูพื้นห้องให้มิดชิด ไม่ทับซ้อนกัน
 
-Assuming that the only type of available tatami has dimensions 1×2, there are obviously some limitations for the shape and size of the rooms that can be covered.
+สมมติว่าเสื่อทาทามิแบบเดียวเท่านั้นที่มีขนาด 1×2 จึงมีข้อจำกัดบางประการสำหรับรูปร่างและขนาดของห้องที่สามารถคลุมได้
 
-For this problem, we consider only rectangular rooms with integer dimensions $a$, $b$ and even size $s = a \times b$. We use the term 'size' to denote the floor surface area of the room, and — without loss of generality — we add the condition $a ≤ b$.
+สำหรับปัญหานี้ เราจะพิจารณาเฉพาะห้องสี่เหลี่ยมที่มีขนาดเป็นจำนวนเต็ม $a$, $b$ และแม้แต่ขนาด $s = a \times b$ เราใช้คำว่า 'ขนาด' เพื่อระบุพื้นที่พื้นผิวของห้อง และ — โดยไม่สูญเสียความทั่วถึง — เราเพิ่มเงื่อนไข $a ≤ b$
 
-There is one rule to follow when laying out tatami: there must be no points where corners of four different mats meet. For example, consider the two arrangements below for a 4×4 room:
+มีกฎข้อหนึ่งที่ต้องปฏิบัติตามเมื่อวางเสื่อทาทามิ: ต้องไม่มีจุดที่มุมของเสื่อที่แตกต่างกันสี่ผืนมาบรรจบกัน ตัวอย่างเช่น พิจารณาการจัดเตรียมสองแบบด้านล่างสำหรับห้อง 4×4:
 
 <img class="img-responsive center-block" alt="two arragements of mats in 4x4 room" src="https://cdn.freecodecamp.org/curriculum/project-euler/tatami-free-rooms.gif" style="background-color: white; padding: 10px;">
 
-The arrangement on the left is acceptable, whereas the one on the right is not: a red "<strong><span style="color: red;">X</span></strong>" in the middle, marks the point where four tatami meet.
+การจัดเรียงทางซ้ายเป็นสิ่งที่ยอมรับได้ ในขณะที่การจัดเรียงทางขวาไม่ใช่: สีแดง "<strong><span style="color: red;">X</span></strong>" ตรงกลาง จะทำเครื่องหมาย จุดที่สี่เสื่อทาทามิมาบรรจบกัน
 
-Because of this rule, certain even-sized rooms cannot be covered with tatami: we call them tatami-free rooms. Further, we define $T(s)$ as the number of tatami-free rooms of size $s$.
+เนื่องด้วยกฎข้อนี้ ห้องบางห้องที่มีขนาดเท่ากันจึงไม่สามารถปูเสื่อทาทามิได้ เราเรียกห้องนี้ว่าห้องที่ไม่มีเสื่อทาทามิ นอกจากนี้ เรากำหนด $T(s)$ เป็นจำนวนห้องปลอดเสื่อทาทามิขนาด $s$
 
-The smallest tatami-free room has size $s = 70$ and dimensions 7×10. All the other rooms of size $s = 70$ can be covered with tatami; they are: 1×70, 2×35 and 5×14. Hence, $T(70) = 1$.
+ห้องที่ไม่มีเสื่อทาทามิที่เล็กที่สุดมีขนาด $s = 70$ และขนาด 7×10 ห้องอื่นๆ ที่มีขนาด $s = 70$ สามารถปูเสื่อทาทามิได้ ได้แก่ 1×70, 2×35 และ 5×14 ดังนั้น $T(70) = 1$
 
-Similarly, we can verify that $T(1320) = 5$ because there are exactly 5 tatami-free rooms of size $s = 1320$: 20×66, 22×60, 24×55, 30×44 and 33×40. In fact, $s = 1320$ is the smallest room-size $s$ for which $T(s) = 5$.
+ในทำนองเดียวกัน เราสามารถยืนยันได้ว่า $T(1320) = 5$ เนื่องจากมีห้องปลอดเสื่อทาทามิ 5 ห้องขนาด $s = 1320$: 20×66, 22×60, 24×55, 30×44 and 33×40 . อันที่จริง $s = 1320$ เป็นขนาดห้องที่เล็กที่สุด $s$ ซึ่ง $T(s) = 5$
 
-Find the smallest room-size $s$ for which $T(s) = 200$.
+หาขนาดห้องที่เล็กที่สุด $s$ ซึ่ง $T(s) = 200$
 
 # --hints--
 
-`tatamiFreeRooms()` should return `85765680`.
+`tatamiFreeRooms()` ควร return `85765680`.
 
 ```js
 assert.strictEqual(tatamiFreeRooms(), 85765680);

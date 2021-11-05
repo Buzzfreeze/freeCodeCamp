@@ -8,25 +8,25 @@ dashedName: problem-338-cutting-rectangular-grid-paper
 
 # --description--
 
-A rectangular sheet of grid paper with integer dimensions $w$ × $h$ is given. Its grid spacing is 1.
+กระดาษตารางสี่เหลี่ยมที่มีขนาดจำนวนเต็ม $w$ × $h$ ถูกกำหนด ระยะห่างของกริดคือ 1
 
-When we cut the sheet along the grid lines into two pieces and rearrange those pieces without overlap, we can make new rectangles with different dimensions.
+เมื่อเราตัดแผ่นงานตามแนวเส้นตารางเป็นสองส่วนและจัดเรียงชิ้นส่วนเหล่านั้นใหม่โดยไม่ทับซ้อนกัน เราสามารถสร้างสี่เหลี่ยมใหม่ที่มีขนาดต่างกันได้
 
-For example, from a sheet with dimensions 9 × 4, we can make rectangles with dimensions 18 × 2, 12 × 3 and 6 × 6 by cutting and rearranging as below:
+ตัวอย่างเช่น จากแผ่นงานที่มีขนาด 9 × 4 เราสามารถสร้างสี่เหลี่ยมที่มีขนาด 18 × 2, 12 × 3 และ 6 × 6 โดยการตัดและจัดเรียงใหม่ดังนี้:
 
 <img class="img-responsive center-block" alt="sheet with 9 x 4 dimensions cut in three different ways to make rectangles with 18 x 2, 12 x 3 and 6 x 6 dimensions" src="https://cdn.freecodecamp.org/curriculum/project-euler/cutting-rectangular-grid-paper.gif" style="background-color: white; padding: 10px;">
 
-Similarly, from a sheet with dimensions 9 × 8, we can make rectangles with dimensions 18 × 4 and 12 × 6.
+ในทำนองเดียวกัน จากแผ่นงานที่มีขนาด 9 × 8 เราสามารถสร้างสี่เหลี่ยมที่มีขนาด 18 × 4 และ 12 × 6
 
-For a pair $w$ and $h$, let $F(w, h)$ be the number of distinct rectangles that can be made from a sheet with dimensions $w$ × $h$. For example, $F(2, 1) = 0$, $F(2, 2) = 1$, $F(9, 4) = 3$ and $F(9, 8) = 2$. Note that rectangles congruent to the initial one are not counted in $F(w, h)$. Note also that rectangles with dimensions $w$ × $h$ and dimensions $h$ × $w$ are not considered distinct.
+สำหรับคู่ $w$ และ $h$ ให้ $F(w, h)$ เป็นจำนวนสี่เหลี่ยมที่แตกต่างกันซึ่งสามารถสร้างจากแผ่นงานที่มีขนาด $w$ × $h$ ตัวอย่างเช่น $F(2, 1) = 0$, $F(2, 2) = 1$, $F(9, 4) = 3$ and $F(9, 8) = 2$. โปรดทราบว่าสี่เหลี่ยมผืนผ้าที่สอดคล้องกับรูปสี่เหลี่ยมผืนผ้าจะไม่ถูกนับใน $F(w, h)$ โปรดทราบว่าสี่เหลี่ยมผืนผ้าที่มีขนาด $w$ × $h$ และขนาด $h$ × $w$ ไม่ถือว่าแตกต่างกัน
 
-For an integer $N$, let $G(N)$ be the sum of $F(w, h)$ for all pairs $w$ and $h$ which satisfy $0 &lt; h ≤ w ≤ N$. We can verify that $G(10) = 55$, $G({10}^3) = 971\\,745$ and $G({10}^5) = 9\\,992\\,617\\,687$.
+สำหรับจำนวนเต็ม $N$ ให้ $G(N)$ เป็นผลรวมของ $F(w, h)$ สำหรับคู่ทั้งหมด $w$ และ $h$ ซึ่งเป็นไปตาม $0 &lt; ชั่วโมง ≤ w ≤ N$ เราสามารถยืนยันได้ว่า $G(10) = 55$, $G({10}^3) = 971\\,745$ and $G({10}^5) = 9\\,992\\,617\ \,687$.
 
-Find $G({10}^{12})$. Give your answer modulo ${10}^8$.
+หา $G({10}^{12})$ ให้คำตอบแบบmodulo ${10}^8$
 
 # --hints--
 
-`cuttingRectangularGridPaper()` should return `15614292`.
+`cuttingRectangularGridPaper()` ควร return `15614292`.
 
 ```js
 assert.strictEqual(cuttingRectangularGridPaper(), 15614292);

@@ -8,11 +8,11 @@ dashedName: problem-191-prize-strings
 
 # --description--
 
-A particular school offers cash rewards to children with good attendance and punctuality. If they are absent for three consecutive days or late on more than one occasion then they forfeit their prize.
+โรงเรียนบางแห่งให้รางวัลเงินสดแก่เด็กที่เข้าเรียนและตรงต่อเวลา หากพวกเขาไม่อยู่เป็นเวลาสามวันติดต่อกันหรือมาสายมากกว่าหนึ่งครั้ง พวกเขาจะริบรางวัล
 
-During an n-day period a trinary string is formed for each child consisting of L's (late), O's (on time), and A's (absent).
+ในช่วงระยะเวลา n วัน trinary stringsถูกสร้างขึ้นสำหรับเด็กแต่ละคนซึ่งประกอบด้วย L's (สาย), O's (ตรงเวลา) และ A's (ขาด)
 
-Although there are eighty-one trinary strings for a 4-day period that can be formed, exactly forty-three strings would lead to a prize:
+แม้ว่าจะมีtrinary stringsแปดสิบเอ็ดสำหรับช่วงเวลา 4 วันที่สามารถสร้างได้ แต่สตริงที่สี่สิบสามจะนำไปสู่รางวัล
 
 ```
 OOOO OOOA OOOL OOAO OOAA OOAL OOLO OOLA OAOO OAOA
@@ -22,11 +22,12 @@ AALO AALA ALOO ALOA ALAO ALAA LOOO LOOA LOAO LOAA
 LAOO LAOA LAAO
 ```
 
-How many "prize" strings exist over a 30-day period?
+
+มีกี่ string "รางวัล" ในช่วง 30 วัน?
 
 # --hints--
 
-`prizeStrings()` should return `1918080160`.
+`prizeStrings()` ควร return `1918080160`.
 
 ```js
 assert.strictEqual(prizeStrings(), 1918080160);

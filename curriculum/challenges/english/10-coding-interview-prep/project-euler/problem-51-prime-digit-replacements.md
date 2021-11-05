@@ -8,33 +8,33 @@ dashedName: problem-51-prime-digit-replacements
 
 # --description--
 
-By replacing the 1st digit of the 2-digit number \*3, it turns out that six of the nine possible values: 13, 23, 43, 53, 73, and 83, are all prime.
+แทนที่ 1st digit ด้วย 2-digit number \*3, จะได้ค่าที่เป็นไปได้มั้งหมดคือ 13, 23, 43, 53, 73, and 83 และทุกค่าเป็นค่า prime.
 
-By replacing the 3rd and 4th digits of 56\*\*3 with the same digit, this 5-digit number is the first example having seven primes among the ten generated numbers, yielding the family: 56003, 56113, 56333, 56443, 56663, 56773, and 56993. Consequently 56003, being the first member of this family, is the smallest prime with this property.
+แทนที่ 3rd และ 4th digits ด้วย 56\*\*3 ที่มี digit เดียวกัน จะมี 5-digit number ที่มี primes 7 ตัว ใน generated numbers 10 ตัวและผลลัพธ์คือ: 56003, 56113, 56333, 56443, 56663, 56773, และ 56993. ดังนั้น 56003 เป็นค่าแรกที่มีค่าน้อยที่สุดในกลุ่มนี้
 
-Find the smallest prime which, by replacing part of the number (not necessarily adjacent digits) with the same digit, is part of an `n` prime value family.
+หาค่า prime ที่น้อยที่สุด โดยแทนค่าของตัวเลข (ไม่จำเป็นต้องเป็น adjacent digits) ที่อยู่ digit เดียวกัน `n` prime 
 
 # --hints--
 
-`primeDigitReplacements(6)` should return a number.
+`primeDigitReplacements(6)` ควร return number
 
 ```js
 assert(typeof primeDigitReplacements(6) === 'number');
 ```
 
-`primeDigitReplacements(6)` should return `13`.
+`primeDigitReplacements(6)` ควร return `13`.
 
 ```js
 assert.strictEqual(primeDigitReplacements(6), 13);
 ```
 
-`primeDigitReplacements(7)` should return `56003`.
+`primeDigitReplacements(7)` ควร return `56003`.
 
 ```js
 assert.strictEqual(primeDigitReplacements(7), 56003);
 ```
 
-`primeDigitReplacements(8)` should return `121313`.
+`primeDigitReplacements(8)` ควร return `121313`.
 
 ```js
 assert.strictEqual(primeDigitReplacements(8), 121313);

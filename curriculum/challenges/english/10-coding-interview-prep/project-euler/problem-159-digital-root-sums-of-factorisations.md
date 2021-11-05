@@ -8,9 +8,9 @@ dashedName: problem-159-digital-root-sums-of-factorisations
 
 # --description--
 
-A composite number can be factored many different ways.
+จำนวนประกอบสามารถแยกตัวประกอบได้หลายวิธี
 
-For instance, not including multiplication by one, 24 can be factored in 7 distinct ways:
+ตัวอย่างเช่น ไม่รวมการคูณด้วยหนึ่ง 24 สามารถแยกตัวประกอบใน 7 วิธีที่แตกต่างกัน:
 
 $$\begin{align}
   & 24 = 2 \times 2 \times 2 \times 3\\\\
@@ -22,9 +22,9 @@ $$\begin{align}
   & 24 = 24
 \end{align}$$
 
-Recall that the digital root of a number, in base 10, is found by adding together the digits of that number, and repeating that process until a number arrives at less than 10. Thus the digital root of 467 is 8.
+รากดิจิทัลของตัวเลขในฐาน 10 นั้นหาได้จากการบวกตัวเลขของตัวเลขนั้นเข้าด้วยกัน และทำซ้ำกระบวนการนั้นจนกระทั่งตัวเลขนั้นน้อยกว่า 10 ดังนั้นรากดิจิทัลของ 467 จึงเป็น 8
 
-We shall call a Digital Root Sum (DRS) the sum of the digital roots of the individual factors of our number. The chart below demonstrates all of the DRS values for 24.
+เราจะเรียกผลรวมรากดิจิทัล (DRS) ว่าผลรวมของรากดิจิทัลของปัจจัยแต่ละส่วนในจำนวนของเรา แผนภูมิด้านล่างแสดงค่า DRS ทั้งหมดสำหรับ 24
 
 | Factorisation | Digital Root Sum |
 |---------------|------------------|
@@ -36,13 +36,14 @@ We shall call a Digital Root Sum (DRS) the sum of the digital roots of the indiv
 |      2x12     |        5         |
 |      24       |        6         |
 
-The maximum Digital Root Sum of 24 is 11. The function $mdrs(n)$ gives the maximum Digital Root Sum of $n$. So $mdrs(24) = 11$.
 
-Find $\sum{mdrs(n)}$ for $1 &lt; n &lt; 1,000,000$.
+ผลรวมรากดิจิทัลสูงสุดของ 24 คือ 11 ฟังก์ชัน $mdrs(n)$ ให้ผลรวมรากดิจิทัลสูงสุดของ $n$ ดังนั้น $mdrs(24) = 11$
+
+หา $\sum{mdrs(n)}$ สำหรับ $1 &lt; น &lt; 1,000,000$.
 
 # --hints--
 
-`euler159()` should return `14489159`.
+`euler159()` ควร return `14489159`.
 
 ```js
 assert.strictEqual(euler159(), 14489159);

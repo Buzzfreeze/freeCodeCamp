@@ -8,15 +8,15 @@ dashedName: problem-233-lattice-points-on-a-circle
 
 # --description--
 
-Let $f(N)$ be the number of points with integer coordinates that are on a circle passing through $(0,0)$, $(N,0)$,$(0,N)$, and $(N,N)$.
+ห้ $f(N)$ เป็นจำนวนจุดที่มีพิกัดจำนวนเต็มบนวงกลมที่ผ่าน $(0,0)$, $(N,0)$,$(0,N)$ และ $(N) ,N)$.
 
-It can be shown that $f(10000) = 36$.
+จะได้ว่า $f(10000) = 36$
 
-What is the sum of all positive integers $N ≤ {10}^{11}$ such that $f(N) = 420$?
+ผลรวมของจำนวนเต็มบวกทั้งหมด $N ≤ {10}^{11}$ ทำให้ $f(N) = 420$ เป็นเท่าใด
 
 # --hints--
 
-`latticePointsOnACircle()` should return `271204031455541300`.
+`latticePointsOnACircle()` ควร return `271204031455541300`.
 
 ```js
 assert.strictEqual(latticePointsOnACircle(), 271204031455541300);

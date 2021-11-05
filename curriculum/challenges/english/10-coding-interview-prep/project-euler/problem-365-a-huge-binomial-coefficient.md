@@ -8,15 +8,15 @@ dashedName: problem-365-a-huge-binomial-coefficient
 
 # --description--
 
-The binomial coefficient $\displaystyle\binom{{10}^{18}}{{10}^9}$ is a number with more than 9 billion ($9 × {10}^9$) digits.
+สัมประสิทธิ์ทวินาม $\displaystyle\binom{{10}^{18}}{{10}^9}$ เป็นตัวเลขที่มีตัวเลขมากกว่า 9 พันล้าน ($9 × {10}^9$)
 
-Let $M(n, k, m)$ denote the binomial coefficient $\displaystyle\binom{n}{k}$ modulo $m$.
+ให้ $M(n, k, m)$ แทนค่าสัมประสิทธิ์ทวินาม $\displaystyle\binom{n}{k}$ modulo $m$
 
-Calculate $\sum M({10}^{18}, {10}^9, p \times q \times r)$ for $1000 &lt; p &lt; q &lt; r &lt; 5000$ and $p$, $q$, $r$ prime.
+คำนวณ $\sum M({10}^{18}, {10}^9, p \times q \times r)$ for $1000 &lt; พี &lt; ถาม &lt; ร &lt; 5000$ และ $p$, $q$, $r$ primes
 
 # --hints--
 
-`hugeBinomialCoefficient()` should return `162619462356610300`.
+`hugeBinomialCoefficient()` ควร return `162619462356610300`.
 
 ```js
 assert.strictEqual(hugeBinomialCoefficient(), 162619462356610300);

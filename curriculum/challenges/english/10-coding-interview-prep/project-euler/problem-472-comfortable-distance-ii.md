@@ -8,29 +8,29 @@ dashedName: problem-472-comfortable-distance-ii
 
 # --description--
 
-There are $N$ seats in a row. $N$ people come one after another to fill the seats according to the following rules:
+มีที่นั่ง $N$ ต่อแถว คน $N$ มาทีละคนเพื่อเติมที่นั่งตามกฎต่อไปนี้:
 
-1. No person sits beside another.
-1. The first person chooses any seat.
-1. Each subsequent person chooses the seat furthest from anyone else already seated, as long as it does not violate rule 1. If there is more than one choice satisfying this condition, then the person chooses the leftmost choice.
+1. ไม่มีใครนั่งข้างกัน
+1. คนแรกเลือกที่นั่งใดก็ได้
+1. บุคคลต่อมาแต่ละคนเลือกที่นั่งที่ไกลที่สุดจากคนอื่นที่นั่งอยู่แล้ว ตราบใดที่ไม่ละเมิดกฎข้อที่ 1 หากมีทางเลือกมากกว่าหนึ่งตัวเลือกที่ตรงตามเงื่อนไขนี้ บุคคลนั้นจะเลือกตัวเลือกซ้ายสุด
 
-Note that due to rule 1, some seats will surely be left unoccupied, and the maximum number of people that can be seated is less than $N$ (for $N > 1$).
+Note that เนื่องจากกฎข้อ 1 ที่นั่งบางที่นั่งจะว่างแน่นอน และจำนวนคนสูงสุดที่สามารถนั่งได้นั้นน้อยกว่า $N$ (สำหรับ $N > 1$)
 
-Here are the possible seating arrangements for $N = 15$:
+นี่คือการจัดที่นั่งที่เป็นไปได้สำหรับ $N = 15$
 
 <img class="img-responsive center-block" alt="seating arrangements for N = 15" src="https://cdn.freecodecamp.org/curriculum/project-euler/comfortable-distance-ii.png" style="background-color: white; padding: 10px;">
 
-We see that if the first person chooses correctly, the 15 seats can seat up to 7 people. We can also see that the first person has 9 choices to maximize the number of people that may be seated.
+เราจะเห็นว่าถ้าคนแรกเลือกถูก 15 ที่นั่งก็นั่งได้ถึง 7 คน นอกจากนี้เรายังสามารถเห็นได้ว่าคนแรกมี 9 ตัวเลือกเพื่อเพิ่มจำนวนคนที่อาจจะนั่งได้มากที่สุด
 
-Let $f(N)$ be the number of choices the first person has to maximize the number of occupants for $N$ seats in a row. Thus, $f(1) = 1$, $f(15) = 9$, $f(20) = 6$, and $f(500) = 16$.
+ให้ $f(N)$ เป็นจำนวนตัวเลือกที่บุคคลแรกต้องเพิ่มจำนวนผู้โดยสารสูงสุดสำหรับที่นั่ง $N$ ติดต่อกัน ดังนั้น $f(1) = 1$, $f(15) = 9$, $f(20) = 6$ และ $f(500) = 16$
 
-Also, $\sum f(N) = 83$ for $1 ≤ N ≤ 20$ and $\sum f(N) = 13\\,343$ for $1 ≤ N ≤ 500$.
+นอกจากนี้ $\sum f(N) = 83$ สำหรับ $1 ≤ N ≤ 20$ และ $\sum f(N) = 13\\,343$ สำหรับ $1 ≤ N ≤ 500$
 
-Find $\sum f(N)$ for $1 ≤ N ≤ {10}^{12}$. Give the last 8 digits of your answer.
+หา $\sum f(N)$ for $1 ≤ N ≤ {10}^{12}$ ให้คำตอยมี 8 หลัก
 
 # --hints--
 
-`comfortableDistanceTwo()` should return `73811586`.
+`comfortableDistanceTwo()` ควร return `73811586`.
 
 ```js
 assert.strictEqual(comfortableDistanceTwo(), 73811586);

@@ -8,9 +8,9 @@ dashedName: problem-102-triangle-containment
 
 # --description--
 
-Three distinct points are plotted at random on a Cartesian plane, for which -1000 ≤ x, y ≤ 1000, such that a triangle is formed.
+จุดที่แตกต่างกันสามจุดจะถูกพล็อตแบบสุ่มบนระนาบคาร์ทีเซียน โดยที่ -1000 ≤ x, y ≤ 1000 เพื่อให้เกิดรูปสามเหลี่ยม
 
-Consider the following two triangles:
+พิจารณารูปสามเหลี่ยมสองรูปต่อไปนี้:
 
 ```js
 const exampleTriangles = [
@@ -19,31 +19,32 @@ const exampleTriangles = [
 ];
 ```
 
-It can be verified that first triangle contains the origin, whereas second triangle does not.
+สามารถตรวจสอบได้ว่าสามเหลี่ยมแรกมีจุดกำเนิด ในขณะที่สามเหลี่ยมที่สองไม่มี
 
-Using the `triangles` array containing coordinates of triangles, find the number of triangles for which the interior contains the origin.
+ใช้อาร์เรย์ `triangles` ที่มีพิกัดของสามเหลี่ยม หาจำนวนสามเหลี่ยมที่ด้านในมีจุดกำเนิด
+
 
 # --hints--
 
-`triangleContainment(exampleTriangles)` should return a number.
+`triangleContainment(exampleTriangles)` ควร return number.
 
 ```js
 assert(typeof triangleContainment(_exampleTriangles) === 'number');
 ```
 
-`triangleContainment(exampleTriangles)` should return `1`.
+`triangleContainment(exampleTriangles)` ควร return `1`.
 
 ```js
 assert.strictEqual(triangleContainment(_exampleTriangles), 1);
 ```
 
-`triangleContainment(testTriangles1)` should return `19`.
+`triangleContainment(testTriangles1)` ควร return `19`.
 
 ```js
 assert.strictEqual(triangleContainment(_testTriangles1), 19);
 ```
 
-`triangleContainment(testTriangles2)` should return `228`.
+`triangleContainment(testTriangles2)` ควร return `228`.
 
 ```js
 assert.strictEqual(triangleContainment(_testTriangles2), 228);

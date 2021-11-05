@@ -8,9 +8,10 @@ dashedName: problem-5-smallest-multiple
 
 # --description--
 
-2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+2520 เป็นจำนวนที่น้อยที่สุดที่สามารถถูกหารได้จากทุกจำนวนตั้งแต่ 1 ถึง 10 โดยไม่มีเศษ
 
-What is the smallest positive number that is evenly divisible by all of the numbers from 1 to `n`?
+จำนวนบวกที่น้อยที่สุดที่หารด้วยเลขคู่ทั้งหมดตั้งแต่ 1 ถึง `n` ลงตัวคืออะไร?
+
 
 # --hints--
 

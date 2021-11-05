@@ -8,29 +8,29 @@ dashedName: problem-363-bzier-curves
 
 # --description--
 
-A cubic Bézier curve is defined by four points: $P_0$, $P_1$, $P_2$ and $P_3$.
+เส้นโค้งลูกบาศก์Bézierถูกกำหนดโดยสี่จุด: $P_0$, $P_1$, $P_2$ และ $P_3$
 
-The curve is constructed as follows:
+เส้นโค้งถูกสร้างขึ้นดังนี้:
 
 <img class="img-responsive center-block" alt="construction of Bézier curve" src="https://cdn.freecodecamp.org/curriculum/project-euler/bzier-curves.png" style="background-color: white; padding: 10px;">
 
-On the segments $P_0P_1$, $P_1P_2$ and $P_2P_3$ the points $Q_0$,$Q_1$ and $Q_2$ are drawn such that $\frac{P_0Q_0}{P_0P_1} = \frac{P_1Q_1}{P_1P_2} = \frac{P_2Q_2}{P_2P_3} = t$, with $t$ in [0,1].
+ในส่วน $P_0P_1$, $P_1P_2$ และ $P_2P_3$ จุด $Q_0$,$Q_1$ และ $Q_2$ ถูกวาดออกมาในลักษณะที่ว่า $\frac{P_0Q_0}{P_0P_1} = \frac{P_1Q_1}{P_1P_2} = \frac{P_2Q_2}{P_2P_3} = t$ โดยที่ $t$ เป็น [0,1]
 
-On the segments $Q_0Q_1$ and $Q_1Q_2$ the points $R_0$ and $R_1$ are drawn such that $\frac{Q_0R_0}{Q_0Q_1} = \frac{Q_1R_1}{Q_1Q_2} = t$ for the same value of $t$.
+ในส่วน $Q_0Q_1$ และ $Q_1Q_2$ จุด $R_0$ และ $R_1$ จะถูกวาดเพื่อให้ $\frac{Q_0R_0}{Q_0Q_1} = \frac{Q_1R_1}{Q_1Q_2} = t$ สำหรับค่าเดียวกันของ $ t$
 
-On the segment $R_0R_1$ the point $B$ is drawn such that $\frac{R_0B}{R_0R_1} = t$ for the same value of $t$.
+ในส่วน $R_0R_1$ จุด $B$ จะถูกวาดโดย $\frac{R_0B}{R_0R_1} = t$ สำหรับค่าเดียวกันของ $t$
 
-The Bézier curve defined by the points $P_0$, $P_1$, $P_2$, $P_3$ is the locus of $B$ as $Q_0$ takes all possible positions on the segment $P_0P_1$. (Please note that for all points the value of $t$ is the same.)
+ส้นโค้งBézierที่กำหนดโดยจุด $P_0$, $P_1$, $P_2$, $P_3$ คือตำแหน่งของ $B$ เนื่องจาก $Q_0$ รับตำแหน่งที่เป็นไปได้ทั้งหมดในส่วน $P_0P_1$ (โปรดทราบว่ามูลค่าของ $t$ เท่ากันทุกแต้ม)
 
-From the construction it is clear that the Bézier curve will be tangent to the segments $P_0P_1$ in $P_0$ and $P_2P_3$ in $P_3$.
+จากการก่อสร้าง จะเห็นได้ชัดเจนว่าเส้นโค้งBézierจะสัมผัสกับส่วน $P_0P_1$ ใน $P_0$ และ $P_2P_3$ ใน $P_3$
 
-A cubic Bézier curve with $P_0 = (1, 0)$, $P_1 = (1, v)$, $P_2 = (v, 1)$ and $P_3 = (0, 1)$ is used to approximate a quarter circle. The value $v > 0$ is chosen such that the area enclosed by the lines $OP_0$, $OP_3$ and the curve is equal to $\frac{π}{4}$ (the area of the quarter circle).
+ใช้เส้นโค้งBézierลูกบาศก์ที่มี $P_0 = (1, 0)$, $P_1 = (1, v)$, $P_2 = (v, 1)$ และ $P_3 = (0, 1)$ เพื่อประมาณหนึ่งในสี่ วงกลม. ค่า $v > 0$ ถูกเลือกเพื่อให้พื้นที่ที่ล้อมรอบด้วยเส้น $OP_0$, $OP_3$ และเส้นโค้งเท่ากับ $\frac{π}{4}$ (พื้นที่ของวงกลมของไตรมาส)
 
-By how many percent does the length of the curve differ from the length of the quarter circle? That is, if $L$ is the length of the curve, calculate $100 × \displaystyle\frac{L − \frac{π}{2}}{\frac{π}{2}}$. Give your answer rounded to 10 digits behind the decimal point.
+ความยาวของเส้นโค้งแตกต่างจากความยาวของวงกลมกี่เปอร์เซ็นต์? นั่นคือ ถ้า $L$ เป็นความยาวของเส้นโค้ง ให้คำนวณ $100 × \displaystyle\frac{L − \frac{π}{2}}{\frac{π}{2}}$ ให้คำตอบของคุณปัดเศษเป็น 10 หลักหลังจุดทศนิยม
 
 # --hints--
 
-`bezierCurves()` should return `0.0000372091`.
+`bezierCurves()` ควร return `0.0000372091`.
 
 ```js
 assert.strictEqual(bezierCurves(), 0.0000372091);

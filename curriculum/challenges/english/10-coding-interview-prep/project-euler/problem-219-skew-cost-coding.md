@@ -8,23 +8,23 @@ dashedName: problem-219-skew-cost-coding
 
 # --description--
 
-Let $A$ and $B$ be bit strings (sequences of 0's and 1's).
+ให้ $A$ และ $B$ เป็นbit strings  (ลำดับของ 0 และ 1)
 
-If $A$ is equal to the <u>left</u>most length($A$) bits of $B$, then $A$ is said to be a prefix of $B$.
+ถ้า $A$ เท่ากับบิต <u>ซ้าย</u>ยาวที่สุด($A$) ของ $B$ แล้ว $A$ จะเป็นคำนำหน้าของ $B$
 
-For example, 00110 is a prefix of <u>00110</u>1001, but not of 00111 or 100110.
+ตัวอย่างเช่น 00110 เป็นคำนำหน้าของ <u>00110</u>1001 แต่ไม่ใช่ 00111 หรือ 100110
 
-A prefix-free code of size $n$ is a collection of $n$ distinct bit strings such that no string is a prefix of any other. For example, this is a prefix-free code of size 6:
+Aรหัสที่ไม่มีคำนำหน้าขนาด $n$ คือคอลเล็กชันของ $n$ bit strings ที่แตกต่างกัน โดยที่สตริงไม่มีส่วนนำหน้าใดๆ ตัวอย่างเช่น รหัสนี้ไม่มีคำนำหน้าขนาด 6:
 
 $$0000, 0001, 001, 01, 10, 11$$
 
-Now suppose that it costs one penny to transmit a '0' bit, but four pence to transmit a '1'. Then the total cost of the prefix-free code shown above is 35 pence, which happens to be the cheapest possible for the skewed pricing scheme in question. In short, we write $Cost(6) = 35$.
+ทีนี้ สมมติว่ามันจ่ายหนึ่งเพนนีเพื่อส่งบิต '0' แต่สี่เพนนีเพื่อส่ง '1' จากนั้น ต้นทุนรวมของรหัสที่ไม่มีคำนำหน้าที่แสดงด้านบนคือ 35 เพนนี ซึ่งเป็นราคาที่ถูกที่สุดสำหรับรูปแบบการกำหนดราคาแบบเบ้ที่เป็นปัญหา ในระยะสั้น เราเขียน $Cost(6) = 35$
 
-What is $Cost(10^9)$?
+หาค่า $Cost(10^9)$?
 
 # --hints--
 
-`skewCostCoding()` should return `64564225042`.
+`skewCostCoding()` ควร return `64564225042`.
 
 ```js
 assert.strictEqual(skewCostCoding(), 64564225042);

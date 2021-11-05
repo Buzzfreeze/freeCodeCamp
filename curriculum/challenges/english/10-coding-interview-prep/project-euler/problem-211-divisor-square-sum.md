@@ -8,15 +8,15 @@ dashedName: problem-211-divisor-square-sum
 
 # --description--
 
-For a positive integer $n$, let $σ_2(n)$ be the sum of the squares of its divisors. For example,
+สำหรับจำนวนเต็มบวก $n$ ให้ $σ_2(n)$ เป็นผลรวมของกำลังสองของตัวหาร ตัวอย่างเช่น,
 
 $$σ_2(10) = 1 + 4 + 25 + 100 = 130$$
 
-Find the sum of all $n$, $0 &lt; n &lt; 64\\,000\\,000$ such that $σ_2(n)$ is a perfect square.
+หาผลรวมของ $n$, $0 &lt; น &lt; 64\\,000\\,000$ โดยที่ $σ_2(n)$ เป็นกำลังสองสมบูรณ์
 
 # --hints--
 
-`divisorSquareSum()` should return `1922364685`.
+`divisorSquareSum()` ควร return `1922364685`.
 
 ```js
 assert.strictEqual(divisorSquareSum(), 1922364685);

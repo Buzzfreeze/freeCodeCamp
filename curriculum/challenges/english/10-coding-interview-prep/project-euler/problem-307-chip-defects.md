@@ -8,15 +8,15 @@ dashedName: problem-307-chip-defects
 
 # --description--
 
-$k$ defects are randomly distributed amongst $n$ integrated-circuit chips produced by a factory (any number of defects may be found on a chip and each defect is independent of the other defects).
+ข้อบกพร่อง $k$ จะถูกสุ่มแจกจ่ายระหว่างชิปวงจรรวม $n$ ที่ผลิตโดยโรงงาน (อาจพบข้อบกพร่องจำนวนเท่าใดก็ได้บนชิป และข้อบกพร่องแต่ละข้อไม่ขึ้นกับข้อบกพร่องอื่นๆ)
 
-Let $p(k,n)$ represent the probability that there is a chip with at least 3 defects. For instance $p(3,7) ≈ 0.0204081633$.
+ให้ $p(k,n)$ แทนความน่าจะเป็นที่จะมีchipที่มีข้อบกพร่องอย่างน้อย 3 รายการ ตัวอย่างเช่น $p(3,7) ≈ 0.0204081633$
 
-Find $p(20\\,000, 1\\,000\\,000)$ and give your answer rounded to 10 decimal places in the form 0.abcdefghij
+หา $p(20\\,000, 1\\,000\\,000)$ และให้คำตอบของคุณเป็นทศนิยม 10 ตำแหน่งในรูปแบบ 0.abcdefghij
 
 # --hints--
 
-`chipDefects()` should return `0.7311720251`.
+`chipDefects()` ควร return `0.7311720251`.
 
 ```js
 assert.strictEqual(chipDefects(), 0.7311720251);

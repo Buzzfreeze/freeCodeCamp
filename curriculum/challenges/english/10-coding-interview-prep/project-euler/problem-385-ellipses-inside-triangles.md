@@ -8,28 +8,28 @@ dashedName: problem-385-ellipses-inside-triangles
 
 # --description--
 
-For any triangle $T$ in the plane, it can be shown that there is a unique ellipse with largest area that is completely inside $T$.
+สำหรับสามเหลี่ยม $T$ ในระนาบ แสดงว่ามีวงรีเฉพาะที่มีพื้นที่ใหญ่ที่สุดอยู่ภายใน $T$
 
 <img class="img-responsive center-block" alt="ellipse completely insisde of triangle" src="https://cdn.freecodecamp.org/curriculum/project-euler/ellipses-inside-triangles.png" style="background-color: white; padding: 10px;">
 
-For a given $n$, consider triangles $T$ such that:
+สำหรับ $n$ ที่กำหนด ให้พิจารณาสามเหลี่ยม $T$ ว่า:
 
--   the vertices of $T$ have integer coordinates with absolute value $≤ n$, and
--   the foci<sup>1</sup> of the largest-area ellipse inside $T$ are $(\sqrt{13}, 0)$ and $(-\sqrt{13}, 0)$.
+- จุดยอดของ $T$ มีพิกัดจำนวนเต็มที่มีค่าสัมบูรณ์ $≤ n$ และ
+- จุดโฟกัส<sup>1</sup> ของวงรีพื้นที่ที่ใหญ่ที่สุดภายใน $T$ คือ $(\sqrt{13}, 0)$ และ $(-\sqrt{13}, 0)$
 
-Let $A(n)$ be the sum of the areas of all such triangles.
+ให้ $A(n)$ เป็นผลรวมของพื้นที่ของสามเหลี่ยมดังกล่าวทั้งหมด
 
-For example, if $n = 8$, there are two such triangles. Their vertices are (-4,-3), (-4,3), (8,0) and (4,3), (4,-3), (-8,0), and the area of each triangle is 36. Thus $A(8) = 36 + 36 = 72$.
+ตัวอย่างเช่น ถ้า $n = 8$ จะมีสามเหลี่ยมสองรูปดังกล่าว จุดยอดคือ (-4,-3), (-4,3), (8,0) และ (4,3), (4,-3), (-8,0) และพื้นที่ของสามเหลี่ยมแต่ละรูป คือ 36 ดังนั้น $A(8) = 36 + 36 = 72$
 
-It can be verified that $A(10) = 252$, $A(100) = 34\\,632$ and $A(1000) = 3\\,529\\,008$.
+สามารถตรวจสอบได้ว่า $A(10) = 252$, $A(100) = 34\\,632$ and $A(1000) = 3\\,529\\,008$.
 
-Find $A(1\\,000\\,000\\,000)$.
+หา $A(1\\,000\\,000\\,000)$
 
-<sup>1</sup>The foci (plural of focus) of an ellipse are two points $A$ and $B$ such that for every point $P$ on the boundary of the ellipse, $AP + PB$ is constant.
+<sup>1</sup>จุดโฟกัส (พหูพจน์ของจุดโฟกัส) ของวงรีคือสองจุด $A$ และ $B$ ดังนั้นสำหรับทุกจุด $P$ บนขอบเขตของวงรี $AP + PB$ เป็นค่าคงที่
 
 # --hints--
 
-`ellipsesInsideTriangles()` should return `3776957309612154000`.
+`ellipsesInsideTriangles()` ควร return `3776957309612154000`.
 
 ```js
 assert.strictEqual(ellipsesInsideTriangles(), 3776957309612154000);

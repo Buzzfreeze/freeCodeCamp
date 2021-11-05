@@ -8,29 +8,29 @@ dashedName: problem-367-bozo-sort
 
 # --description--
 
-Bozo sort, not to be confused with the slightly less efficient bogo sort, consists out of checking if the input sequence is sorted and if not swapping randomly two elements. This is repeated until eventually the sequence is sorted.
+การเรียงลำดับ Bozo เพื่อไม่ให้สับสนกับการเรียงลำดับ bogo ที่มีประสิทธิภาพน้อยกว่าเล็กน้อย ประกอบด้วยการตรวจสอบว่าลำดับอินพุตถูกจัดเรียงหรือไม่ และถ้าไม่สลับสององค์ประกอบแบบสุ่ม นี้ซ้ำจนกระทั่งในที่สุดลำดับจะถูกเรียงลำดับ
 
-If we consider all permutations of the first 4 natural numbers as input the expectation value of the number of swaps, averaged over all $4!$ input sequences is $24.75$.
+หากเราพิจารณาการเรียงสับเปลี่ยนของตัวเลขธรรมชาติ 4 ตัวแรกเป็นอินพุต ค่าคาดหวังของจำนวนสวอป โดยเฉลี่ยแล้ว $4!$ ลำดับอินพุตทั้งหมดคือ $24.75$
 
-The already sorted sequence takes 0 steps.
+ลำดับที่จัดเรียงแล้วใช้เวลา 0 ขั้นตอน
 
-In this problem we consider the following variant on bozo sort.
+ในปัญหานี้ เราจะพิจารณาตัวแปรต่อไปนี้ในการจัดเรียง bozo
 
-If the sequence is not in order we pick three elements at random and shuffle these three elements randomly.
+หากลำดับไม่อยู่ในลำดับ เราจะสุ่มเลือกองค์ประกอบสามรายการและสลับองค์ประกอบทั้งสามแบบสุ่ม
 
-All $3! = 6$ permutations of those three elements are equally likely.
+ทั้งหมด 3 เหรียญ! = 6$ พีชคณิตของทั้งสามองค์ประกอบมีแนวโน้มเท่าเทียมกัน
 
-The already sorted sequence will take 0 steps.
+ลำดับที่เรียงลำดับแล้วจะใช้เวลา 0 ขั้นตอน
 
-If we consider all permutations of the first 4 natural numbers as input the expectation value of the number of shuffles, averaged over all $4!$ input sequences is $27.5$.
+หากเราพิจารณาการเรียงสับเปลี่ยนทั้งหมดของตัวเลขธรรมชาติ 4 ตัวแรกเป็นอินพุต ค่าที่คาดหวังของจำนวนการสับเปลี่ยน ค่าเฉลี่ยของลำดับอินพุต $4!$ ทั้งหมดคือ $27.5$
 
-Consider as input sequences the permutations of the first 11 natural numbers.
+พิจารณาเป็นลำดับอินพุตของการเรียงสับเปลี่ยนของตัวเลขธรรมชาติ 11 ตัวแรก
 
-Averaged over all $11!$ input sequences, what is the expected number of shuffles this sorting algorithm will perform? Give your answer rounded to the nearest integer.
+ค่าเฉลี่ยจากลำดับอินพุตทั้งหมด $11!$ จำนวนที่คาดไว้ของการสับเปลี่ยนอัลกอริธึมการจัดเรียงนี้จะทำงานเป็นเท่าใด ให้คำตอบของคุณปัดเศษเป็นจำนวนเต็มที่ใกล้เคียงที่สุด
 
 # --hints--
 
-`bozoSort()` should return `48271207`.
+`bozoSort()` ควร return `48271207`.
 
 ```js
 assert.strictEqual(bozoSort(), 48271207);

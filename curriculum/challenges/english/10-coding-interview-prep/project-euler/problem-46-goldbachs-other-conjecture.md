@@ -8,7 +8,7 @@ dashedName: problem-46-goldbachs-other-conjecture
 
 # --description--
 
-It was proposed by Christian Goldbach that every odd composite number can be written as the sum of a prime and twice a square.
+สมมติว่า Christian Goldbach ทุกๆตัวของเลขคี่เป็น composite number สามารถเขียนเป็นผรวมของ prime และ twice square
 
 <div style='margin-left: 2em;'>
   9 = 7 + 2×1<sup>2</sup><br>
@@ -19,19 +19,19 @@ It was proposed by Christian Goldbach that every odd composite number can be wri
   33 = 31 + 2×1<sup>2</sup>
 </div>
 
-It turns out that the conjecture was false.
+ถ้าเป็น conjecture จะผิด
 
-What is the smallest odd composite that cannot be written as the sum of a prime and twice a square?
+ค่าที่น้อยที่สุดของ odd composite ที่ไม่สามารถเขียนในรูปผลรวมของ prime และ twice square
 
 # --hints--
 
-`goldbachsOtherConjecture()` should return a number.
+`goldbachsOtherConjecture()` ควร return number.
 
 ```js
 assert(typeof goldbachsOtherConjecture() === 'number');
 ```
 
-`goldbachsOtherConjecture()` should return 5777.
+`goldbachsOtherConjecture()` ควร return 5777.
 
 ```js
 assert.strictEqual(goldbachsOtherConjecture(), 5777);

@@ -8,26 +8,25 @@ dashedName: problem-425-prime-connection
 
 # --description--
 
-Two positive numbers $A$ and $B$ are said to be connected (denoted by "$A ↔ B$") if one of these conditions holds:
+ตัวเลขบวกสองตัวที่ $A$ และ $B$ ถูกกล่าวว่าเชื่อมต่อกัน (แสดงโดย "$A ↔ B$") หากเงื่อนไขข้อใดข้อหนึ่งต่อไปนี้ถือ:
 
-1. $A$ and $B$ have the same length and differ in exactly one digit; for example, $123 ↔ 173$.
-2. Adding one digit to the left of $A$ (or $B$) makes $B$ (or $A$); for example, $23 ↔ 223$ and $123 ↔ 23$.
+1. $A$ และ $B$ มีความยาวเท่ากันและแตกต่างกันในหลักเดียว ตัวอย่างเช่น $123 ↔ 173$
+2. การเพิ่มหนึ่งหลักทางด้านซ้ายของ $A$ (หรือ $B$) ทำให้ $B$ (หรือ $A$); ตัวอย่างเช่น $23 ↔ 223$ และ $123 ↔ 23$
 
-We call a prime $P$ a 2's relative if there exists a chain of connected primes between 2 and $P$ and no prime in the chain exceeds $P$.
+เราเรียกเกี่ยวข้องกับprime $P$ กับ 2 ถ้ามีสายของprimeที่เชื่อมต่อกันระหว่าง 2 ถึง $P$ และไม่มีprimeใดในเชนที่เกิน $P$
 
-For example, 127 is a 2's relative. One of the possible chains is shown below:
-
+ตัวอย่างเช่น 127 เป็นเกี่ยวข้องกับ 2 หนึ่งในห่วงโซ่ที่เป็นไปได้แสดงไว้ด้านล่าง:
 $$2 ↔ 3 ↔ 13 ↔ 113 ↔ 103 ↔ 107 ↔ 127$$
 
-However, 11 and 103 are not 2's relatives.
+อย่างไรก็ตาม 11 และ 103 ไม่เกี่ยวข้องกับ 2
 
-Let $F(N)$ be the sum of the primes $≤ N$ which are not 2's relatives. We can verify that $F({10}^3) = 431$ and $F({10}^4) = 78\\,728$.
+ให้ $F(N)$ เป็นผลรวมของจำนวนเฉพาะ $≤ N$ ซึ่งไม่เกี่ยวข้องกับ 2 เราสามารถยืนยันได้ว่า $F({10}^3) = 431$ และ $F({10}^4) = 78\\,728$
 
-Find $F({10}^7)$.
+หา $F({10}^7)$.
 
 # --hints--
 
-`primeConnection()` should return `46479497324`.
+`primeConnection()` ควร return `46479497324`.
 
 ```js
 assert.strictEqual(primeConnection(), 46479497324);

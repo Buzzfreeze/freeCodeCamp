@@ -8,11 +8,11 @@ dashedName: problem-142-perfect-square-collection
 
 # --description--
 
-Find the smallest $x + y + z$ with integers $x > y > z > 0$ such that $x + y$, $x − y$, $x + z$, $x − z$, $y + z$, $y − z$ are all perfect squares.
+หา $x + y + z$ ที่เล็กที่สุดด้วยจำนวนเต็ม $x > y > z > 0$ เพื่อให้ $x + y$, $x − y$, $x + z$, $x − z$, $y + z$, $y − z$ เป็นกำลังสองสมบูรณ์
 
 # --hints--
 
-`perfectSquareCollection()` should return `1006193`.
+`perfectSquareCollection()` ควร return `1006193`.
 
 ```js
 assert.strictEqual(perfectSquareCollection(), 1006193);

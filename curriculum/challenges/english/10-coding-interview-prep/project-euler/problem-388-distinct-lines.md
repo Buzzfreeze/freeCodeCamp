@@ -8,17 +8,17 @@ dashedName: problem-388-distinct-lines
 
 # --description--
 
-Consider all lattice points ($a$, $b$, $c$) with $0 ≤ a, b, c ≤ N$.
+พิจารณาจุดขัดแตะทั้งหมด ($a$, $b$, $c$) ด้วย $0 ≤ a, b, c ≤ N$
 
-From the origin $O(0, 0, 0)$ all lines are drawn to the other lattice points. Let $D(N)$ be the number of distinct such lines.
+จากจุดเริ่มต้น $O(0, 0, 0)$ เส้นทั้งหมดจะถูกลากไปยังจุดขัดแตะอื่น ๆ ให้ $D(N)$ เป็นจำนวนบรรทัดที่แตกต่างกัน
 
-You are given that $D(1\\,000\\,000) = 831\\,909\\,254\\,469\\,114\\,121$.
+คุณจะได้รับ $D(1\\,000\\,000) = 831\\,909\\,254\\,469\\,114\\,121$
 
-Find $D({10}^{10})$. Give as your answer the first nine digits followed by the last nine digits.
+หา $D({10}^{10})$ ให้เก้าหลักแรกเป็นคำตอบของคุณตามด้วยเก้าหลักสุดท้าย
 
 # --hints--
 
-`distinctLines()` should return `831907372805130000`.
+`distinctLines()` ควร return `831907372805130000`.
 
 ```js
 assert.strictEqual(distinctLines(), 831907372805130000);

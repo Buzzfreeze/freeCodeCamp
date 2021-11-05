@@ -8,17 +8,17 @@ dashedName: problem-205-dice-game
 
 # --description--
 
-Peter has nine four-sided (pyramidal) dice, each with faces numbered 1, 2, 3, 4.
+ปีเตอร์มีลูกเต๋าสี่ด้าน (พีระมิด) เก้าลูก แต่ละลูกมีเลขหน้า 1, 2, 3, 4
 
-Colin has six six-sided (cubic) dice, each with faces numbered 1, 2, 3, 4, 5, 6.
+Colin มีลูกเต๋าหกด้าน (ลูกบาศก์) หกลูก แต่ละลูกมีหน้าเป็นเลข 1, 2, 3, 4, 5, 6
 
-Peter and Colin roll their dice and compare totals: the highest total wins. The result is a draw if the totals are equal.
+ปีเตอร์และโคลินทอยลูกเต๋าและเปรียบเทียบผลรวม: ชัยชนะทั้งหมดสูงสุด ผลที่ได้คือเสมอถ้าผลรวมเท่ากัน
 
-What is the probability that Pyramidal Pete beats Cubic Colin? Give your answer rounded to seven decimal places in the form 0.abcdefg
+ความน่าจะเป็นที่พีระมิดพีทชนะคิวบิกโคลินเป็นเท่าใด ให้คำตอบของคุณปัดเศษทศนิยมเจ็ดตำแหน่งในรูปแบบ 0.abcdefg
 
 # --hints--
 
-`diceGame()` should return `0.5731441`.
+`diceGame()` ควร return `0.5731441`.
 
 ```js
 assert.strictEqual(diceGame(), 0.5731441);

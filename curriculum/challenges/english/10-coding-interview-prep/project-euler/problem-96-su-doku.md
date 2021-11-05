@@ -8,7 +8,7 @@ dashedName: problem-96-su-doku
 
 # --description--
 
-Su Doku (Japanese meaning *number place*) is the name given to a popular puzzle concept. Its origin is unclear, but credit must be attributed to Leonhard Euler who invented a similar, and much more difficult, puzzle idea called Latin Squares. The objective of Su Doku puzzles, however, is to replace the blanks (or zeros) in a 9 by 9 grid in such that each row, column, and 3 by 3 box contains each of the digits 1 to 9. Below is an example of a typical starting puzzle grid and its solution grid.
+Su Doku (Japanese meaning *number place*) เป็นชื่อที่มอบให้กับแนวคิดปริศนายอดนิยม ที่มาของมันไม่ชัดเจน แต่ต้องให้เครดิตกับ Leonhard Euler ผู้คิดค้นแนวคิดปริศนาที่คล้ายกันและยากกว่ามากที่เรียกว่า Latin Squares วัตถุประสงค์ของปริศนา Su Doku คือการแทนที่ช่องว่าง (หรือศูนย์) ในตาราง 9 คูณ 9 โดยที่แต่ละแถว คอลัมน์ และกล่อง 3 คูณ 3 มีตัวเลข 1 ถึง 9 แต่ละหลัก ด้านล่างเป็นตัวอย่าง ของตารางปริศนาเริ่มต้นทั่วไปและตารางการแก้ปัญหา
 
 <div style="margin: auto; background-color: white; padding: 10px; width: 80%; text-align: center;">
   <table border="0" cellpadding="0" cellspacing="0" align="center">
@@ -100,27 +100,27 @@ Su Doku (Japanese meaning *number place*) is the name given to a popular puzzle 
   </table>
 </div>
 
-A well constructed Su Doku puzzle has a unique solution and can be solved by logic, although it may be necessary to employ "guess and test" methods in order to eliminate options (there is much contested opinion over this). The complexity of the search determines the difficulty of the puzzle; the example above is considered easy because it can be solved by straight forward direct deduction.
+ปริศนา Su Doku ที่สร้างขึ้นอย่างดีมีวิธีแก้ปัญหาที่ไม่เหมือนใครและสามารถแก้ไขได้ด้วยตรรกะ แม้ว่าอาจจำเป็นต้องใช้วิธีการ "คาดเดาและทดสอบ" เพื่อกำจัดตัวเลือกต่างๆ (มีความคิดเห็นที่โต้แย้งกันมากในเรื่องนี้) ความซับซ้อนของการค้นหาเป็นตัวกำหนดความยากของตัวต่อ ตัวอย่างข้างต้นถือว่าง่ายเพราะสามารถแก้ไขได้โดยการหักโดยตรงโดยตรง
 
-The `puzzlesArr` array contains different Su Doku puzzle strings ranging in difficulty, but all with unique solutions.
+`puzzlesArr` array มีstringปริศนา Su Doku ที่แตกต่างกันซึ่งมีความยาก แต่ทั้งหมดมีวิธีแก้ปัญหาที่ไม่เหมือนใคร
 
-By solving all puzzles in `puzzlesArr`, find the sum of the 3-digit numbers found in the top left corner of each solution grid; for example, 483 is the 3-digit number found in the top left corner of the solution grid above.
+แก้ปัญหา puzzles ใน `puzzlesArr`, ค้นหาผลรวมของตัวเลข 3 หลักที่มุมซ้ายบนของตารางโซลูชันแต่ละอัน ตัวอย่างเช่น 483 คือตัวเลข 3 หลักที่มุมซ้ายบนของตารางโซลูชันด้านบน
 
 # --hints--
 
-`suDoku(testPuzzles1)` should return a number.
+`suDoku(testPuzzles1)` ควร return number.
 
 ```js
 assert(typeof suDoku(_testPuzzles1) === 'number');
 ```
 
-`suDoku(testPuzzles1)` should return `1190`.
+`suDoku(testPuzzles1)` ควร return `1190`.
 
 ```js
 assert.strictEqual(suDoku(_testPuzzles1), 1190);
 ```
 
-`suDoku(testPuzzles2)` should return `24702`.
+`suDoku(testPuzzles2)` ควร return `24702`.
 
 ```js
 assert.strictEqual(suDoku(_testPuzzles2), 24702);

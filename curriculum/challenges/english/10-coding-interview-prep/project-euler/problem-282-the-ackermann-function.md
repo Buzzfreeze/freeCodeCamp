@@ -8,7 +8,7 @@ dashedName: problem-282-the-ackermann-function
 
 # --description--
 
-For non-negative integers $m$, $n$, the Ackermann function $A(m, n)$ is defined as follows:
+สำหรับจำนวนเต็มที่ไม่เป็นค่าลบ $m$, $n$ ฟังก์ชัน Ackermann $A(m, n)$ ถูกกำหนดดังนี้:
 
 $$A(m, n) =
 \begin{cases}
@@ -17,13 +17,13 @@ A(m - 1, 1)           & \text{if $m > 0$ and $n = 0$} \\\\
 A(m - 1, A(m, n - 1)) & \text{if $m > 0$ and $n > 0$}
 \end{cases}$$
 
-For example $A(1, 0) = 2$, $A(2, 2) = 7$ and $A(3, 4) = 125$.
+ตัวอย่างเช่น $A(1, 0) = 2$, $A(2, 2) = 7$ และ $A(3, 4) = 125$
 
-Find $\displaystyle\sum_{n = 0}^6 A(n, n)$ and give your answer mod ${14}^8$.
+หา $\displaystyle\sum_{n = 0}^6 A(n, n)$ และให้คำตอบของคุณ mod ${14}^8$
 
 # --hints--
 
-`ackermanFunction()` should return `1098988351`.
+`ackermanFunction()` ควร return `1098988351`.
 
 ```js
 assert.strictEqual(ackermanFunction(), 1098988351);

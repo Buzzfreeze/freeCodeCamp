@@ -8,19 +8,19 @@ dashedName: problem-64-odd-period-square-roots
 
 # --description--
 
-All square roots are periodic when written as continued fractions and can be written in the form:
+ทุก square roots เป็น periodic เมื่อเขียนแบบ continued fractions และเขียนในรูปแบบของ
 
 $\\displaystyle \\quad \\quad \\sqrt{N}=a_0+\\frac 1 {a_1+\\frac 1 {a_2+ \\frac 1 {a3+ \\dots}}}$
 
-For example, let us consider $\\sqrt{23}:$:
+เช่น $\\sqrt{23}:$:
 
 $\\quad \\quad \\sqrt{23}=4+\\sqrt{23}-4=4+\\frac 1 {\\frac 1 {\\sqrt{23}-4}}=4+\\frac 1 {1+\\frac{\\sqrt{23}-3}7}$
 
-If we continue we would get the following expansion:
+และเมื่อพิจารณา
 
 $\\displaystyle \\quad \\quad \\sqrt{23}=4+\\frac 1 {1+\\frac 1 {3+ \\frac 1 {1+\\frac 1 {8+ \\dots}}}}$
 
-The process can be summarized as follows:
+จะได้
 
 $\\quad \\quad a_0=4, \\frac 1 {\\sqrt{23}-4}=\\frac {\\sqrt{23}+4} 7=1+\\frac {\\sqrt{23}-3} 7$
 
@@ -38,9 +38,9 @@ $\\quad \\quad a_6=3, \\frac 2 {\\sqrt{23}-3}=\\frac {2(\\sqrt{23}+3)} {14}=1+\\
 
 $\\quad \\quad a_7=1, \\frac 7 {\\sqrt{23}-4}=\\frac {7(\\sqrt{23}+4)} {7}=8+\\sqrt{23}-4$
 
-It can be seen that the sequence is repeating. For conciseness, we use the notation $\\sqrt{23}=\[4;(1,3,1,8)]$, to indicate that the block (1,3,1,8) repeats indefinitely.
+จะเห็น sequence ที่ซ้ำกัน เราจึงใช้ notation $\\sqrt{23}=\[4;(1,3,1,8)]$ เพื่อกำหนด block (1,3,1,8) ที่ซ้ำกัน
 
-The first ten continued fraction representations of (irrational) square roots are:
+สิบตัวแรกของ continued fraction แสดง (irrational) square roots คือ
 
 $\\quad \\quad \\sqrt{2}=\[1;(2)]$, period = 1
 
@@ -62,37 +62,37 @@ $\\quad \\quad \\sqrt{12}=\[3;(2,6)]$, period = 2
 
 $\\quad \\quad \\sqrt{13}=\[3;(1,1,1,1,6)]$, period = 5
 
-Exactly four continued fractions, for $N \\le 13$, have an odd period.
+ความจริงมีแค่ 4 continued fractions สำหรับ $N \\le 13$ ที่มี odd period
 
-How many continued fractions for $N \\le n$ have an odd period?
+มี continued fractions สำหรับ $N \\le n$ ที่มี odd period กี่ตัว
 
 # --hints--
 
-`oddPeriodSqrts(13)` should return a number.
+`oddPeriodSqrts(13)` ควร return number.
 
 ```js
 assert(typeof oddPeriodSqrts(13) === 'number');
 ```
 
-`oddPeriodSqrts(500)` should return `83`.
+`oddPeriodSqrts(500)` ควร return `83`.
 
 ```js
 assert.strictEqual(oddPeriodSqrts(500), 83);
 ```
 
-`oddPeriodSqrts(1000)` should return `152`.
+`oddPeriodSqrts(1000)` ควร return `152`.
 
 ```js
 assert.strictEqual(oddPeriodSqrts(1000), 152);
 ```
 
-`oddPeriodSqrts(5000)` should return `690`.
+`oddPeriodSqrts(5000)` ควร return `690`.
 
 ```js
 assert.strictEqual(oddPeriodSqrts(5000), 690);
 ```
 
-`oddPeriodSqrts(10000)` should return `1322`.
+`oddPeriodSqrts(10000)` ควร return `1322`.
 
 ```js
 assert.strictEqual(oddPeriodSqrts(10000), 1322);

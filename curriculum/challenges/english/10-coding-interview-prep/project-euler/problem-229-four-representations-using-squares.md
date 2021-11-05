@@ -8,8 +8,7 @@ dashedName: problem-229-four-representations-using-squares
 
 # --description--
 
-Consider the number 3600. It is very special, because
-
+พิจารณาเลข 3600 เพราะ
 $$\begin{align}
   & 3600 = {48}^2 + {36}^2   \\\\
   & 3600 = {20}^2 + {2×40}^2 \\\\
@@ -17,9 +16,9 @@ $$\begin{align}
   & 3600 = {45}^2 + {7×15}^2 \\\\
 \end{align}$$
 
-Similarly, we find that $88201 = {99}^2 + {280}^2 = {287}^2 + 2 × {54}^2 = {283}^2 + 3 × {52}^2 = {197}^2 + 7 × {84}^2$.
+เหมือนกับการหา $88201 = {99}^2 + {280}^2 = {287}^2 + 2 × {54}^2 = {283}^2 + 3 × {52}^2 = {197}^2 + 7 × {84}^2$.
 
-In 1747, Euler proved which numbers are representable as a sum of two squares. We are interested in the numbers $n$ which admit representations of all of the following four types:
+ในปี ค.ศ. 1747 ออยเลอร์ได้พิสูจน์ว่าตัวเลขใดแทนผลรวมของสองกำลังสอง เรามีความสนใจในตัวเลข $n$ ซึ่งยอมรับการเป็นตัวแทนของสี่ประเภทต่อไปนี้ทั้งหมด
 
 $$\begin{align}
   & n = {a_1}^2 + {b_1}^2  \\\\
@@ -28,15 +27,15 @@ $$\begin{align}
   & n = {a_7}^2 + 7{b_7}^2 \\\\
 \end{align}$$
 
-where the $a_k$ and $b_k$ are positive integers.
+โดยที่ $a_k$ และ $b_k$ เป็นจำนวนเต็มบวก
 
-There are 75373 such numbers that do not exceed ${10}^7$.
+มี 75373 ตัวเลขที่ไม่เกิน ${10}^7$
 
-How many such numbers are there that do not exceed $2 × {10}^9$?
+จำนวนดังกล่าวมีจำนวนเท่าใดที่ไม่เกิน $2 × {10}^9$?
 
 # --hints--
 
-`representationsUsingSquares()` should return `11325263`.
+`representationsUsingSquares()` ควร return `11325263`.
 
 ```js
 assert.strictEqual(representationsUsingSquares(), 11325263);

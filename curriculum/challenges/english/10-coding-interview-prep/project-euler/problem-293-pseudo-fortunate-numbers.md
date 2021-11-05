@@ -8,19 +8,19 @@ dashedName: problem-293-pseudo-fortunate-numbers
 
 # --description--
 
-An even positive integer $N$ will be called admissible, if it is a power of 2 or its distinct prime factors are consecutive primes.
+จำนวนเต็มบวกที่เป็นค่าคู่ $N$ จะถูกเรียกว่า admissible ถ้ามันเป็นเลขยกกำลัง 2 หรือตัวประกอบเฉพาะที่แตกต่างกันนั้นเป็นจำนวนเฉพาะที่ต่อเนื่องกัน
 
-The first twelve admissible numbers are 2, 4, 6, 8, 12, 16, 18, 24, 30, 32, 36, 48.
+ตัวเลขที่อนุญาตสิบสองตัวแรกคือ 2, 4, 6, 8, 12, 16, 18, 24, 30, 32, 36, 48
 
-If $N$ is admissible, the smallest integer $M > 1$ such that $N + M$ is prime, will be called the pseudo-Fortunate number for $N$.
+ถ้ายอมรับ $N$ จำนวนเต็มที่น้อยที่สุด $M > 1$ ที่ $N + M$ เป็นจำนวนเฉพาะ จะถูกเรียกว่าpseudo-Fortunate สำหรับ $N$
 
-For example, $N = 630$ is admissible since it is even and its distinct prime factors are the consecutive primes 2, 3, 5 and 7. The next prime number after 631 is 641; hence, the pseudo-Fortunate number for 630 is $M = 11$. It can also be seen that the pseudo-Fortunate number for 16 is 3.
+ตัวอย่างเช่น $N = 630$ เป็นที่ยอมรับได้เนื่องจากเป็นจำนวนคู่และปัจจัยเฉพาะที่แตกต่างกันคือจำนวนเฉพาะที่ต่อเนื่องกัน 2, 3, 5 และ 7 จำนวนเฉพาะตัวถัดไปหลังจาก 631 คือ 641; ดังนั้นเpseudo-Fortunate สำหรับ 630 คือ $M = 11$ จะเห็นได้ว่าpseudo-Fortunate สำหรับ 16 คือ 3
 
-Find the sum of all distinct pseudo-Fortunate numbers for admissible numbers $N$ less than ${10}^9$.
+หาผลรวมของตัวเลขpseudo-Fortunateที่แตกต่างกันทั้งหมดสำหรับadmissible numbers $N$ น้อยกว่า ${10}^9$
 
 # --hints--
 
-`pseudoFortunateNumbers()` should return `2209`.
+`pseudoFortunateNumbers()` ควร return `2209`.
 
 ```js
 assert.strictEqual(pseudoFortunateNumbers(), 2209);

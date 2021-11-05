@@ -8,11 +8,11 @@ dashedName: problem-108-diophantine-reciprocals-i
 
 # --description--
 
-In the following equation x, y, and n are positive integers.
+ในสมการต่อไปนี้ x, y และ n เป็นจำนวนเต็มบวก
 
 $$\frac{1}{x} + \frac{1}{y} = \frac{1}{n}$$
 
-For `n` = 4 there are exactly three distinct solutions:
+สำหรับ `n` = 4 มีวิธีแก้ปัญหาที่แตกต่างกันสามประการ:
 
 $$\begin{align}
   & \frac{1}{5} + \frac{1}{20} = \frac{1}{4}\\\\
@@ -22,11 +22,11 @@ $$\begin{align}
   & \frac{1}{8} + \frac{1}{8} = \frac{1}{4}
 \end{align}$$
 
-What is the least value of `n` for which the number of distinct solutions exceeds one-thousand?
+อะไรคือค่าที่น้อยที่สุดของ `n` ซึ่งจำนวนของคำตอบที่แตกต่างกันเกินหนึ่งพัน
 
 # --hints--
 
-`diophantineOne()` should return `180180`.
+`diophantineOne()` ควร return `180180`.
 
 ```js
 assert.strictEqual(diophantineOne(), 180180);

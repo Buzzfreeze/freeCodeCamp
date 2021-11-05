@@ -8,19 +8,19 @@ dashedName: problem-208-robot-walks
 
 # --description--
 
-A robot moves in a series of one-fifth circular arcs (72°), with a free choice of a clockwise or an anticlockwise arc for each step, but no turning on the spot.
+หุ่นยนต์เคลื่อนที่เป็นชุดของส่วนโค้งวงกลมหนึ่งในห้า (72°) โดยสามารถเลือกส่วนโค้งตามเข็มนาฬิกาหรือทวนเข็มนาฬิกาได้ฟรีสำหรับแต่ละขั้นตอน แต่จะไม่มีการเลี้ยวที่จุดนั้น
 
-One of 70932 possible closed paths of 25 arcs starting northward is
+หนึ่งใน 70932 เส้นทางปิดที่เป็นไปได้จาก 25 ส่วนโค้งเริ่มต้นทางเหนือคือ
 
 <img class="img-responsive center-block" alt="closed path of 25 arcs, starting northward" src="https://cdn.freecodecamp.org/curriculum/project-euler/robot-walks.gif" style="background-color: white; padding: 10px;">
 
-Given that the robot starts facing North, how many journeys of 70 arcs in length can it take that return it, after the final arc, to its starting position?
+เนื่องจากหุ่นยนต์เริ่มหันหน้าไปทางทิศเหนือ การเดินทางด้วยระยะทาง 70 โค้งสามารถนำมันกลับไปยังตำแหน่งเริ่มต้นได้หลังจากโค้งสุดท้าย
 
-**Note:** Any arc may be traversed multiple times.
+**Note:** ส่วนโค้งใด ๆ อาจถูกข้ามได้หลายครั้ง
 
 # --hints--
 
-`robotWalks()` should return `331951449665644800`.
+`robotWalks()` ควร return `331951449665644800`.
 
 ```js
 assert.strictEqual(robotWalks(), 331951449665644800);

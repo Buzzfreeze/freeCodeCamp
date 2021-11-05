@@ -8,9 +8,9 @@ dashedName: problem-55-lychrel-numbers
 
 # --description--
 
-If we take 47, reverse and add, 47 + 74 = 121, which is palindromic.
+ถ้ามี 47 และตัวที่กลับกัน นำมาบวกกัน 47 + 74 = 121 จะเป็น palindromic
 
-Not all numbers produce palindromes so quickly. For example,
+ทุกจำนวนไม่ได้เป็นแบบ palindromes
 
 <div style="margin-left: 4em;">
   349 + 943 = 1292,<br>
@@ -18,49 +18,49 @@ Not all numbers produce palindromes so quickly. For example,
   4213 + 3124 = 7337<br>
 </div>
 
-That is, 349 took three iterations to arrive at a palindrome.
+349 มี 3 iterations สำหรับ palindrome
 
-Although no one has proved it yet, it is thought that some numbers, like 196, never produce a palindrome. A number that never forms a palindrome through the reverse and add process is called a Lychrel number. Due to the theoretical nature of these numbers, and for the purpose of this problem, we shall assume that a number is Lychrel until proven otherwise. In addition you are given that for every number below ten-thousand, it will either (i) become a palindrome in less than fifty iterations, or, (ii) no one, with all the computing power that exists, has managed so far to map it to a palindrome. In fact, 10677 is the first number to be shown to require over fifty iterations before producing a palindrome: 4668731596684224866951378664 (53 iterations, 28-digits).
+แม้จะยังไม่มีใครพิสูจน์ได้ แต่ก็คิดว่าตัวเลขบางตัว เช่น 196 ไม่ใช่ palindrome แม้ว่าจะกลับกัน จึงเพิ่มกระบวนการเรียกว่า Lychrel number แม้ว่า theoretical nature ของจำนวน ของจุดประสงค์ของปัญหานี้ เรียกจำนวนนี้ว่า Lychrel  นอกจากนี้จะได้ทราบว่าสำหรับทุกเลขที่ต่ำกว่า ten-thousand จะเป็นดังเช่น (i) เป็น palindrome ที่น้อยกว่า 50 iterations หรือ (ii) ไม่มี computing power เพื่อ map ไปเป็น palindrome ในจำนวน 10677 มีเลขแรกที่มีมากกว่า 50 iterations ก่อนที่จะเป็น palindrome: 4668731596684224866951378664 (53 iterations, 28-digits).
 
-Surprisingly, there are palindromic numbers that are themselves Lychrel numbers; the first example is 4994.
+มี palindromic numbers เป็น Lychrel numbers เช่น 4994
 
-How many Lychrel numbers are there below `num`?
+Lychrel กี่ตัวที่มีค่าน้อยกว่า `num`
 
-**Note:** Wording was modified slightly on 24 April 2007 to emphasize the theoretical nature of Lychrel numbers.
+**Note:** Wording ถูกปรับเปลี่ยนจาก 24 April 2007  ไปเป็น theoretical nature of Lychrel numbers
 
 # --hints--
 
-`countLychrelNumbers(1000)` should return a number.
+`countLychrelNumbers(1000)` ควร return number.
 
 ```js
 assert(typeof countLychrelNumbers(1000) === 'number');
 ```
 
-`countLychrelNumbers(1000)` should return 13.
+`countLychrelNumbers(1000)` ควร return 13.
 
 ```js
 assert.strictEqual(countLychrelNumbers(1000), 13);
 ```
 
-`countLychrelNumbers(3243)` should return 39.
+`countLychrelNumbers(3243)` ควร return 39.
 
 ```js
 assert.strictEqual(countLychrelNumbers(3243), 39);
 ```
 
-`countLychrelNumbers(5000)` should return 76.
+`countLychrelNumbers(5000)` ควร return 76.
 
 ```js
 assert.strictEqual(countLychrelNumbers(5000), 76);
 ```
 
-`countLychrelNumbers(7654)` should return 140.
+`countLychrelNumbers(7654)` ควร return 140.
 
 ```js
 assert.strictEqual(countLychrelNumbers(7654), 140);
 ```
 
-`countLychrelNumbers(10000)` should return 249.
+`countLychrelNumbers(10000)` ควร return 249.
 
 ```js
 assert.strictEqual(countLychrelNumbers(10000), 249);

@@ -8,17 +8,16 @@ dashedName: problem-294-sum-of-digits---experience-23
 
 # --description--
 
-For a positive integer $k$, define $d(k)$ as the sum of the digits of $k$ in its usual decimal representation. Thus $d(42) = 4 + 2 = 6$.
+สำหรับจำนวนเต็มบวก $k$ ให้นิยาม $d(k)$ เป็นผลรวมของตัวเลขของ $k$ ในรูปแบบทศนิยมปกติ ดังนั้น $d(42) = 4 + 2 = 6$
 
-For a positive integer $n$, define $S(n)$ as the number of positive integers $k &lt; {10}^n$ with the following properties:
+สำหรับจำนวนเต็มบวก $n$ ให้กำหนด $S(n)$ เป็นจำนวนเต็มบวก $k &lt; {10}^n$ ที่มีคุณสมบัติดังต่อไปนี้:
 
-- $k$ is divisible by 23 and,
-- $d(k) = 23$.
+- $k$ หารด้วย 23 ลงตัว และ
+- $d(k) = 23$
 
-You are given that $S(9) = 263\\,626$ and $S(42) = 6\\,377\\,168\\,878\\,570\\,056$.
+คุณจะได้รับ $S(9) = 263\\,626$ และ $S(42) = 6\\,377\\,168\\,878\\,570\\,056$
 
-Find $S({11}^{12})$ and give your answer $\bmod {10}^9$.
-
+หา $S({11}^{12})$ และให้คำตอบ $\bmod {10}^9$
 # --hints--
 
 `experience23()` should return `789184709`.

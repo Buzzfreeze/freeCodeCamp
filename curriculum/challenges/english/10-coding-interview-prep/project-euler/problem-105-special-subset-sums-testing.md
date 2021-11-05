@@ -8,20 +8,20 @@ dashedName: problem-105-special-subset-sums-testing
 
 # --description--
 
-Let $S(A)$ represent the sum of elements in set A of size n. We shall call it a special sum set if for any two non-empty disjoint subsets, B and C, the following properties are true:
+ให้ $S(A)$ แทนผลรวมขององค์ประกอบในชุด A ขนาด n เราจะเรียกมันว่าเซตผลรวมพิเศษ ถ้าสำหรับเซตย่อยที่ไม่เป็นค่าว่างสองชุดใด ๆ คือ B และ C คุณสมบัติต่อไปนี้เป็นจริง:
 
-1. $S(B) ≠ S(C)$; that is, sums of subsets cannot be equal.
-2. If B contains more elements than C then $S(B) > S(C)$.
+1. $S(B) ≠ S(C)$; นั่นคือผลรวมของเซตย่อยต้องไม่เท่ากัน
+2. ถ้า B มีองค์ประกอบมากกว่า C แล้ว $S(B) > S(C)$
 
-For example, {81, 88, 75, 42, 87, 84, 86, 65} is not a special sum set because 65 + 87 + 88 = 75 + 81 + 84, whereas {157, 150, 164, 119, 79, 159, 161, 139, 158} satisfies both rules for all possible subset pair combinations and $S(A) = 1286$.
+ตัวอย่างเช่น {81, 88, 75, 42, 87, 84, 86, 65} ไม่ใช่ชุดผลรวมพิเศษเพราะ 65 + 87 + 88 = 75 + 81 + 84 ในขณะที่ {157, 150, 164, 119, 79 , 159, 161, 139, 158} เป็นไปตามกฎทั้งสองสำหรับชุดคู่ย่อยที่เป็นไปได้ทั้งหมด และ $S(A) = 1286$
 
-Using `sets`, an array with one-hundred sets, containing seven to twelve elements (the two examples given above are the first two sets), identify all the special sum sets, $A_1, A_2, \ldots, A_k$, and find the value of $(A_1) + S(A_2) + \cdots + S(A_k)$.
+ใช้ `sets` array มีหนึ่งร้อยชุด มีเจ็ดถึงสิบสององค์ประกอบ (สองตัวอย่างที่ให้ไว้ข้างต้นคือสองชุดแรก) ระบุชุดผลรวมพิเศษทั้งหมด $A_1, A_2, \ldots, A_k$ และหาค่าของ $(A_1) + S(A_2) + \cdots + S(A_k)$.
 
-**Note:** This problem is related to Problem 103 and Problem 106.
+**Note:** ปัญหานี้เกี่ยวข้องกับปัญหา 103 และปัญหา 106
 
 # --hints--
 
-`testingSpecialSubsetSums(testSets)` should return `73702`.
+`testingSpecialSubsetSums(testSets)` ควร return `73702`.
 
 ```js
 assert.strictEqual(testingSpecialSubsetSums(_testSets), 73702);

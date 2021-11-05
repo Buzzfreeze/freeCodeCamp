@@ -8,19 +8,19 @@ dashedName: problem-305-reflexive-position
 
 # --description--
 
-Let's call $S$ the (infinite) string that is made by concatenating the consecutive positive integers (starting from 1) written down in base 10.
+เรามาเรียก $S$ ว่าสตริง (อนันต์) ที่สร้างขึ้นโดยการต่อจำนวนเต็มบวกที่ต่อเนื่องกัน (เริ่มจาก 1) ที่เขียนลงในฐาน 10
 
-Thus, $S = 1234567891011121314151617181920212223242\ldots$
+ดังนั้น $S = 1234567891011121314151617181920212223242\ldots$
 
-It's easy to see that any number will show up an infinite number of times in $S$.
+ง่ายที่จะเห็นว่าตัวเลขใดๆ จะแสดงจำนวนครั้งเป็นอนันต์ใน $S$
 
-Let's call $f(n)$ the starting position of the $n^{\text{th}}$ occurrence of $n$ in $S$. For example, $f(1) = 1$, $f(5) = 81$, $f(12) = 271$ and $f(7780) = 111\\,111\\,365$.
+เรามาเรียก $f(n)$ ตำแหน่งเริ่มต้นของ $n^{\text{th}}$ ที่เกิดขึ้นของ $n$ ใน $S$ ตัวอย่างเช่น $f(1) = 1$, $f(5) = 81$, $f(12) = 271$ and $f(7780) = 111\\,111\\,365$.
 
-Find $\sum f(3^k) for 1 ≤ k ≤ 13$.
+หา $\sum f(3^k) สำหรับ 1 ≤ k ≤ 13$.
 
 # --hints--
 
-`reflexivePosition()` should return `18174995535140`.
+`reflexivePosition()` ควร return `18174995535140`.
 
 ```js
 assert.strictEqual(reflexivePosition(), 18174995535140);

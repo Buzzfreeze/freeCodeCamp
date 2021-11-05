@@ -8,15 +8,15 @@ dashedName: problem-239-twenty-two-foolish-primes
 
 # --description--
 
-A set of disks numbered 1 through 100 are placed in a line in random order.
+ชุดของดิสก์หมายเลข 1 ถึง 100 จะถูกวางในลำดับแบบสุ่ม
 
-What is the probability that we have a partial derangement such that exactly 22 prime number discs are found away from their natural positions? (Any number of non-prime disks may also be found in or out of their natural positions.)
+ความน่าจะเป็นที่เรามีความผิดปกติบางส่วนจนพบแผ่นดิสก์จำนวนเฉพาะ 22 แผ่นห่างจากตำแหน่งตามธรรมชาติเป็นเท่าใด (อาจพบดิสก์ที่ไม่ใช่ไพรม์จำนวนเท่าใดก็ได้ในหรือนอกตำแหน่งตามธรรมชาติ)
 
-Give your answer rounded to 12 places behind the decimal point in the form 0.abcdefghijkl.
+ให้คำตอบของคุณปัดเศษเป็น 12 ตำแหน่งหลังจุดทศนิยมในรูปแบบ 0.abcdefghijkl
 
 # --hints--
 
-`twentyTwoFoolishPrimes()` should return `0.001887854841`.
+`twentyTwoFoolishPrimes()` ควร return `0.001887854841`.
 
 ```js
 assert.strictEqual(twentyTwoFoolishPrimes(), 0.001887854841);

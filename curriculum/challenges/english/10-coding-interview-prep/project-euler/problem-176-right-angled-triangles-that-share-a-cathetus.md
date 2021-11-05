@@ -8,13 +8,13 @@ dashedName: problem-176-right-angled-triangles-that-share-a-cathetus
 
 # --description--
 
-The four right-angled triangles with sides (9,12,15), (12,16,20), (5,12,13) and (12,35,37) all have one of the shorter sides (catheti) equal to 12. It can be shown that no other integer sided right-angled triangle exists with one of the catheti equal to 12.
+สามเหลี่ยมมุมฉากสี่รูปที่มีด้าน (9,12,15), (12,16,20), (5,12,13) ​​และ (12,35,37) ทั้งหมดมีด้านที่สั้นกว่า (catheti) เท่ากัน ถึง 12 แสดงว่าไม่มีรูปสามเหลี่ยมมุมฉากด้านจำนวนเต็มอื่นใดที่มีหนึ่งในสายสวนเท่ากับ 12
 
-Find the smallest integer that can be the length of a cathetus of exactly 47547 different integer sided right-angled triangles.
+หาจำนวนเต็มที่น้อยที่สุดที่สามารถเป็นความยาวของสายสวนของรูปสามเหลี่ยมมุมฉากที่มีด้านเป็นจำนวนเต็มต่างกัน 47547 รูป
 
 # --hints--
 
-`trianglesSharingCathetus()` should return `96818198400000`.
+`trianglesSharingCathetus()` ควร return `96818198400000`.
 
 ```js
 assert.strictEqual(trianglesSharingCathetus(), 96818198400000);

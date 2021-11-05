@@ -8,11 +8,11 @@ dashedName: problem-145-how-many-reversible-numbers-are-there-below-one-billion
 
 # --description--
 
-Some positive integers $n$ have the property that the sum [ $n + reverse(n)$ ] consists entirely of odd (decimal) digits. For instance, $36 + 63 = 99$ and $409 + 904 = 1313$. We will call such numbers reversible; so 36, 63, 409, and 904 are reversible. Leading zeroes are not allowed in either $n$ or $reverse(n)$.
+จำนวนเต็มบวกบางจำนวน $n$ มีคุณสมบัติที่ผลรวม [ $n + reverse(n)$ ] ประกอบด้วยเลขคี่ (ทศนิยม) ทั้งหมด ตัวอย่างเช่น $36 + 63 = 99$ และ $409 + 904 = 1313$ เราจะเรียกหมายเลขreversible numbers ดังนั้น 36, 63, 409 และ 904 จึงreversible numbersได้ ไม่อนุญาตให้ใช้เลขศูนย์นำหน้าใน $n$ หรือ $reverse(n)$
 
-There are 120 reversible numbers below one-thousand.
+มี 120 ตัวเลขreversible numbersได้ต่ำกว่าหนึ่งพัน
 
-How many reversible numbers are there below one-billion (${10}^9$)?
+จำนวนreversible numbersได้จำนวนเท่าใดที่ต่ำกว่าหนึ่งพันล้าน (${10}^9$)
 
 # --hints--
 

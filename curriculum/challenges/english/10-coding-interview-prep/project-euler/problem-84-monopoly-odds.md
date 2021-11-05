@@ -8,7 +8,7 @@ dashedName: problem-84-monopoly-odds
 
 # --description--
 
-In the game, *Monopoly*, the standard board is set up in the following way:
+game, *Monopoly* บอร์ดมาตรฐานถูกตั้งค่าดังนี้:
 
 <div style="text-align: center;">
   <table cellspacing="1" cellpadding="5" border="0" style="background-color: black; color: black;" align="center">
@@ -88,11 +88,11 @@ In the game, *Monopoly*, the standard board is set up in the following way:
   </table>
 </div><br>
 
-A player starts on the GO square and adds the scores on two 6-sided dice to determine the number of squares they advance in a clockwise direction. Without any further rules we would expect to visit each square with equal probability: 2.5%. However, landing on G2J (Go To Jail), CC (community chest), and CH (chance) changes this distribution.
+ผู้เล่นเริ่มต้นที่จัตุรัส GO และเพิ่มคะแนนบนลูกเต๋า 6 ด้านสองลูกเพื่อกำหนดจำนวนช่องสี่เหลี่ยมที่พวกเขาเลื่อนไปในทิศทางตามเข็มนาฬิกา หากไม่มีกฎเกณฑ์ใดๆ เพิ่มเติม เราคาดว่าจะเข้าชมแต่ละช่องด้วยความน่าจะเป็นที่เท่ากัน: 2.5% อย่างไรก็ตาม การลงจอดบน G2J (Go To Jail), CC (community chest), และ CH (chance) เปลี่ยน distribution.
 
-In addition to G2J, and one card from each of CC and CH, that orders the player to go directly to jail, if a player rolls three consecutive doubles, they do not advance the result of their 3rd roll. Instead they proceed directly to jail.
+มากกว่านั้น G2J และไพ่หนึ่งใบจากแต่ละ CC และ CH ที่สั่งให้ผู้เล่นเข้าคุกโดยตรง หากผู้เล่นทอยสามคู่ติดต่อกัน พวกเขาจะไม่เลื่อนผลของการทอยครั้งที่ 3 ออกไป กลับเข้าคุกโดยตรง
 
-At the beginning of the game, the CC and CH cards are shuffled. When a player lands on CC or CH they take a card from the top of the respective pile and, after following the instructions, it is returned to the bottom of the pile. There are sixteen cards in each pile, but for the purpose of this problem we are only concerned with cards that order a movement; any instruction not concerned with movement will be ignored and the player will remain on the CC/CH square.
+ในตอนเริ่มเกม ไพ่ CC และ CH จะสับเปลี่ยน เมื่อผู้เล่นตกลงบน CC หรือ CH พวกเขาจะหยิบไพ่จากด้านบนของกองนั้น ๆ และหลังจากทำตามคำแนะนำแล้ว มันจะกลับไปที่ด้านล่างของกอง มีไพ่สิบหกใบในแต่ละกอง แต่สำหรับจุดประสงค์ของปัญหานี้ เราเกี่ยวข้องกับไพ่ที่สั่งการเคลื่อนไหวเท่านั้น คำสั่งใดๆ ที่ไม่เกี่ยวข้องกับการเคลื่อนไหวจะถูกละเว้น และผู้เล่นจะยังคงอยู่ในช่อง CC/CH
 
 <ul>
   <li>Community Chest (2/16 cards):</li>
@@ -116,41 +116,41 @@ At the beginning of the game, the CC and CH cards are shuffled. When a player la
   </ol>
 </ul>
 
-The heart of this problem concerns the likelihood of visiting a particular square. That is, the probability of finishing at that square after a roll. For this reason it should be clear that, with the exception of G2J for which the probability of finishing on it is zero, the CH squares will have the lowest probabilities, as 5/8 request a movement to another square, and it is the final square that the player finishes at on each roll that we are interested in. We shall make no distinction between "Just Visiting" and being sent to JAIL, and we shall also ignore the rule about requiring a double to "get out of jail", assuming that they pay to get out on their next turn.
+หัวใจของปัญหานี้เกี่ยวข้องกับความน่าจะเป็นของการเยี่ยมชมจัตุรัสแห่งใดแห่งหนึ่ง นั่นคือความน่าจะเป็นที่จะจบที่จตุรัสนั้นหลังจากการทอย ด้วยเหตุผลนี้ จึงควรมีความชัดเจนว่า ยกเว้น G2J ที่ความน่าจะเป็นที่จะจบเป็นศูนย์ ช่องสี่เหลี่ยม CH จะมีความน่าจะเป็นต่ำที่สุด เนื่องจาก 5/8 ขอย้ายไปยังช่องสี่เหลี่ยมอื่น และถือเป็นที่สิ้นสุด ตารางที่ผู้เล่นทำเสร็จในแต่ละม้วนที่เราสนใจ เราจะไม่แยกความแตกต่างระหว่าง "เพียงแค่เยี่ยม" และถูกส่งไปยัง JAIL และเราจะเพิกเฉยต่อกฎเกณฑ์เกี่ยวกับการกำหนดให้สองเท่าเพื่อ "ออกจากคุก" สมมติว่าพวกเขาจ่ายเงินเพื่อออกไปในเทิร์นถัดไป
 
-By starting at GO and numbering the squares sequentially from 00 to 39 we can concatenate these two-digit numbers to produce strings that correspond with sets of squares.
+โดยเริ่มต้นที่ GO และกำหนดหมายเลขช่องสี่เหลี่ยมตามลำดับจาก 00 ถึง 39 เราสามารถเชื่อมตัวเลขสองหลักเหล่านี้เพื่อสร้างสตริงที่สอดคล้องกับชุดของช่องสี่เหลี่ยม
 
-Statistically it can be shown that the three most popular squares, in order, are JAIL (6.24%) = Square 10, E3 (3.18%) = Square 24, and GO (3.09%) = Square 00. So these three most popular squares can be listed with the six-digit modal string `102400`.
+จากสถิติจะเห็นได้ว่าช่องสี่เหลี่ยมที่ได้รับความนิยมสูงสุดสามช่องตามลำดับคือ JAIL (6.24%) = Square 10, E3 (3.18%) = Square 24 และ GO (3.09%) = Square 00 ดังนั้นช่องสี่เหลี่ยมยอดนิยมทั้งสามช่องนี้ สามารถแสดงด้วยโมเดลหกหลัก string `102400`
 
-If, instead of using two 6-sided dice, two `n`-sided dice are used, find the six-digit modal string.
+ถ้าแทนที่จะใช้ลูกเต๋า 6 ด้าน 2 ลูก ใช้ลูกเต๋า 'n' สองลูก ให้หาเลขหกหลัก modal string
 
 # --hints--
 
-`monopolyOdds(8)` should return a string.
+`monopolyOdds(8)` ควร return string.
 
 ```js
 assert(typeof monopolyOdds(8) === 'string');
 ```
 
-`monopolyOdds(8)` should return string `102400`.
+`monopolyOdds(8)` ควร return string `102400`.
 
 ```js
 assert.strictEqual(monopolyOdds(8), '102400');
 ```
 
-`monopolyOdds(10)` should return string `100024`.
+`monopolyOdds(10)` ควร return string `100024`.
 
 ```js
 assert.strictEqual(monopolyOdds(10), '100024');
 ```
 
-`monopolyOdds(20)` should return string `100005`.
+`monopolyOdds(20)` ควร return string `100005`.
 
 ```js
 assert.strictEqual(monopolyOdds(20), '100005');
 ```
 
-`monopolyOdds(4)` should return string `101524`.
+`monopolyOdds(4)` ควร return string `101524`.
 
 ```js
 assert.strictEqual(monopolyOdds(4), '101524');

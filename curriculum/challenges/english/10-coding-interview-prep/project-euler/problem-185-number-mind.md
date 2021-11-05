@@ -8,11 +8,11 @@ dashedName: problem-185-number-mind
 
 # --description--
 
-The game Number Mind is a variant of the well known game Master Mind.
+เกม Number Mind เป็นตัวแปรของเกม Master Mind ที่รู้จักกันดี
 
-Instead of coloured pegs, you have to guess a secret sequence of digits. After each guess you're only told in how many places you've guessed the correct digit. So, if the sequence was 1234 and you guessed 2036, you'd be told that you have one correct digit; however, you would NOT be told that you also have another digit in the wrong place.
+แทนที่จะต้องตอกหมุดสี คุณต้องเดาลำดับตัวเลขที่เป็นความลับ หลังจากการเดาแต่ละครั้ง คุณจะได้รับการบอกเฉพาะว่าคุณเดาตัวเลขที่ถูกต้องได้กี่แห่ง ดังนั้น ถ้าลำดับคือ 1234 และคุณเดาปี 2036 คุณจะได้รับแจ้งว่าคุณมีหลักที่ถูกต้องหนึ่งหลัก อย่างไรก็ตามคุณจะไม่ได้รับแจ้งว่าคุณมีตัวเลขอื่นผิดตำแหน่งด้วย
 
-For instance, given the following guesses for a 5-digit secret sequence,
+ตัวอย่างเช่น ให้เดาต่อไปนี้สำหรับลำดับความลับ 5 หลัก,
 
 $$\begin{align}
   & 90342 ;2\\;\text{correct}\\\\
@@ -23,9 +23,9 @@ $$\begin{align}
   & 12531 ;1\\;\text{correct}
 \end{align}$$
 
-The correct sequence 39542 is unique.
+ลำดับที่ถูกต้อง 39542 ไม่ซ้ำกัน
 
-Based on the following guesses,
+จากการคาดเดาต่อไปนี้
 
 $$\begin{align}
   & 5616185650518293 ;2\\;\text{correct}\\\\
@@ -52,11 +52,12 @@ $$\begin{align}
   & 2659862637316867 ;2\\;\text{correct}
 \end{align}$$
 
-Find the unique 16-digit secret sequence.
+ค้นหาลำดับความลับ 16 หลักที่ไม่เหมือนใคร
+หาunique 16-digit secret sequence.
 
 # --hints--
 
-`numberMind()` should return `4640261571849533`.
+`numberMind()` ควร return `4640261571849533`.
 
 ```js
 assert.strictEqual(numberMind(), 4640261571849533);

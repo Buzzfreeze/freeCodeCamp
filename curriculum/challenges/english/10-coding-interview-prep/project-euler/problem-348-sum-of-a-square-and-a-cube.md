@@ -8,11 +8,11 @@ dashedName: problem-348-sum-of-a-square-and-a-cube
 
 # --description--
 
-Many numbers can be expressed as the sum of a square and a cube. Some of them in more than one way.
+ตัวเลขจำนวนมากสามารถแสดงเป็นผลรวมของสี่เหลี่ยมจัตุรัสและลูกบาศก์ได้ บางส่วนของพวกเขามากกว่าหนึ่งวิธี
 
-Consider the palindromic numbers that can be expressed as the sum of a square and a cube, both greater than 1, in exactly 4 different ways.
+พิจารณาจำนวนpalindromที่สามารถแสดงเป็นผลรวมของกำลังสองและลูกบาศก์ ทั้งคู่มากกว่า 1 ใน 4 วิธีที่แตกต่างกัน
 
-For example, 5229225 is a palindromic number and it can be expressed in exactly 4 different ways:
+ตัวอย่างเช่น 5229225 เป็นจำนวนpalindromและสามารถแสดงได้ 4 วิธีที่แตกต่างกัน:
 
 $$\begin{align}
   & {2285}^2 + {20}^3 \\\\
@@ -21,11 +21,11 @@ $$\begin{align}
   & {1197}^2 + {156}^3
 \end{align}$$
 
-Find the sum of the five smallest such palindromic numbers.
+จงหาผลรวมของจำนวนpalindromicที่เล็กที่สุดห้าจำนวนดังกล่าว
 
 # --hints--
 
-`sumOfSquareAndCube()` should return `1004195061`.
+`sumOfSquareAndCube()` ควร return `1004195061`.
 
 ```js
 assert.strictEqual(sumOfSquareAndCube(), 1004195061);

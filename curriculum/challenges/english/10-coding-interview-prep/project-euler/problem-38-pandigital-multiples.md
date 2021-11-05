@@ -8,7 +8,7 @@ dashedName: problem-38-pandigital-multiples
 
 # --description--
 
-Take the number 192 and multiply it by each of 1, 2, and 3:
+จำนวนเลข 192 คูณโดย of 1, 2, และ 3:
 
 $$\begin{align}
   192 × 1 = 192\\\\
@@ -16,27 +16,27 @@ $$\begin{align}
   192 × 3 = 576\\\\
 \end{align}$$
 
-By concatenating each product we get the 1 to 9 pandigital, 192384576. We will call 192384576 the concatenated product of 192 and (1, 2, 3).
+ผลคูณจะมีเลข 1 ถึง 9 เมื่อนำมาเรียงตือ 192384576 เราจะเรียกว่า 192384576 เป็น concatenated product ของ 192 และ (1, 2, 3)
 
-The same can be achieved by starting with 9 and multiplying by 1, 2, 3, 4, and 5, giving the pandigital, 918273645, which is the concatenated product of 9 and (1, 2, 3, 4, 5).
+หาเริ่มจาก 9 และคูณโดย 1, 2, 3, 4, และ 5 เป็น pandigital 918273645 ที่เป็น concatenated product ของ 9 และ (1, 2, 3, 4, 5).
 
-What is the largest 1 to `k` pandigital `k`-digit number that can be formed as the concatenated product of an integer with (1, 2, ..., `n`) where `n` > 1?
+ค่ามากที่สุดของ 1 ถึง `k` pandigital `k`-digit number ที่สามารถอยู่ในรูปของ concatenated product ของจำนวน (1, 2, ..., `n`) โดยที่ `n` > 1?
 
 # --hints--
 
-`pandigitalMultiples(8)` should return a number.
+`pandigitalMultiples(8)` ควร return a number.
 
 ```js
 assert(typeof pandigitalMultiples(8) === 'number');
 ```
 
-`pandigitalMultiples(8)` should return `78156234`.
+`pandigitalMultiples(8)` ควร return `78156234`.
 
 ```js
 assert.strictEqual(pandigitalMultiples(8), 78156234);
 ```
 
-`pandigitalMultiples(9)` should return `932718654`.
+`pandigitalMultiples(9)` ควร return `932718654`.
 
 ```js
 assert.strictEqual(pandigitalMultiples(9), 932718654);

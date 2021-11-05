@@ -8,7 +8,7 @@ dashedName: problem-87-prime-power-triples
 
 # --description--
 
-The smallest number expressible as the sum of a prime square, prime cube, and prime fourth power is `28`. In fact, there are exactly four numbers below fifty that can be expressed in such a way:
+จำนวนที่น้อยที่สุดที่แสดงเป็นผลรวมของจำนวนเฉพาะกำลังสอง prime square, prime cube และกำลังสี่เฉพาะคือ `28` อันที่จริงมีตัวเลขสี่ตัวที่ต่ำกว่าห้าสิบที่สามารถแสดงในลักษณะดังกล่าวได้:
 
 <div style='margin-left: 4em;'>
   28 = 2<sup>2</sup> + 2<sup>3</sup> + 2<sup>4</sup><br>
@@ -17,41 +17,41 @@ The smallest number expressible as the sum of a prime square, prime cube, and pr
   47 = 2<sup>2</sup> + 3<sup>3</sup> + 2<sup>4</sup>
 </div><br>
 
-How many numbers below `n` can be expressed as the sum of a prime square, prime cube, and prime fourth power?
+จำนวนตัวเลขที่น้อยกว่า `n` สามารถแสดงเป็นผลรวมของจำนวนเฉพาะของจำนวนเฉพาะ เลขจำนวนเฉพาะ และกำลังสี่จำนวนเฉพาะ
 
 # --hints--
 
-`primePowerTriples(50)` should return a number.
+`primePowerTriples(50)` ควร return  number.
 
 ```js
 assert(typeof primePowerTriples(50) === 'number');
 ```
 
-`primePowerTriples(50)` should return `4`.
+`primePowerTriples(50)` ควร return `4`.
 
 ```js
 assert.strictEqual(primePowerTriples(50), 4);
 ```
 
-`primePowerTriples(10035)` should return `684`.
+`primePowerTriples(10035)` ควร return `684`.
 
 ```js
 assert.strictEqual(primePowerTriples(10035), 684);
 ```
 
-`primePowerTriples(500000)` should return `18899`.
+`primePowerTriples(500000)` ควร return `18899`.
 
 ```js
 assert.strictEqual(primePowerTriples(500000), 18899);
 ```
 
-`primePowerTriples(5000000)` should return `138932`.
+`primePowerTriples(5000000)` ควร return `138932`.
 
 ```js
 assert.strictEqual(primePowerTriples(5000000), 138932);
 ```
 
-`primePowerTriples(50000000)` should return `1097343`.
+`primePowerTriples(50000000)` ควร return `1097343`.
 
 ```js
 assert.strictEqual(primePowerTriples(50000000), 1097343);

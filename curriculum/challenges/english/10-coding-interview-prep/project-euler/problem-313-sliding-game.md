@@ -8,21 +8,21 @@ dashedName: problem-313-sliding-game
 
 # --description--
 
-In a sliding game a counter may slide horizontally or vertically into an empty space. The objective of the game is to move the red counter from the top left corner of a grid to the bottom right corner; the space always starts in the bottom right corner. For example, the following sequence of pictures show how the game can be completed in five moves on a 2 by 2 grid.
+ในเกมเลื่อน เคาน์เตอร์อาจเลื่อนในแนวนอนหรือแนวตั้งเข้าไปในพื้นที่ว่าง วัตถุประสงค์ของเกมคือการย้ายตัวนับสีแดงจากมุมซ้ายบนของตารางไปที่มุมล่างขวา ช่องว่างเริ่มต้นที่มุมล่างขวาเสมอ ตัวอย่างเช่น ลำดับภาพต่อไปนี้แสดงให้เห็นว่าเกมสามารถเล่นให้จบได้อย่างไรในห้ากระบวนท่าบนตาราง 2 คูณ 2
 
 <img class="img-responsive center-block" alt="completing game in five moves on grid 2x2" src="https://cdn.freecodecamp.org/curriculum/project-euler/sliding-game-1.gif" style="background-color: white; padding: 10px;">
 
-Let $S(m, n)$ represent the minimum number of moves to complete the game on an $m$ by $n$ grid. For example, it can be verified that $S(5, 4) = 25$.
+ให้ $S(m, n)$ แทนจำนวนการเคลื่อนไหวขั้นต่ำเพื่อจบเกมในตาราง $m$ คูณ $n$ ตัวอย่างเช่น สามารถยืนยันได้ว่า $S(5, 4) = 25$
 
 <img class="img-responsive center-block" alt="initial grid state and final grid state for game on grid 5x4" src="https://cdn.freecodecamp.org/curriculum/project-euler/sliding-game-2.gif" style="background-color: white; padding: 10px;">
 
-There are exactly 5482 grids for which $S(m, n) = p^2$, where $p &lt; 100$ is prime.
+มี 5482 กริดที่ $S(m, n) = p^2$ โดยที่ $p &lt; 100$ เป็นจำนวนเฉพาะ
 
-How many grids does $S(m, n) = p^2$, where $p &lt; {10}^6$ is prime?
+$S(m, n) = p^2$ มีกริดกี่กริด โดยที่ $p &lt; {10}^6$ เป็นจำนวนเฉพาะ
 
 # --hints--
 
-`slidingGame()` should return `2057774861813004`.
+`slidingGame()` หา return `2057774861813004`.
 
 ```js
 assert.strictEqual(slidingGame(), 2057774861813004);

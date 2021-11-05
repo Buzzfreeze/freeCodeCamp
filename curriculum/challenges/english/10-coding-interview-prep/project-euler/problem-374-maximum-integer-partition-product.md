@@ -8,27 +8,26 @@ dashedName: problem-374-maximum-integer-partition-product
 
 # --description--
 
-An integer partition of a number $n$ is a way of writing $n$ as a sum of positive integers.
+partitionจำนวนเต็มของจำนวน $n$ เป็นวิธีการเขียน $n$ เป็นผลรวมของจำนวนเต็มบวก
 
-Partitions that differ only in the order of their summands are considered the same. A partition of $n$ into distinct parts is a partition of $n$ in which every part occurs at most once.
+partitionที่แตกต่างกันเฉพาะในลำดับของผลรวมจะถือว่าเหมือนกัน partitionของ $n$ ออกเป็นส่วนต่าง ๆ คือpartitionของ $n$ ซึ่งทุกส่วนจะเกิดขึ้นพร้อมกันมากที่สุด
 
-The partitions of 5 into distinct parts are:
+partitionของ 5 เป็นส่วนที่แตกต่างกันคือ:
 
-5, 4 + 1 and 3 + 2.
+5, 4 + 1 และ 3 + 2
 
-Let $f(n)$ be the maximum product of the parts of any such partition of $n$ into distinct parts and let $m(n)$ be the number of elements of any such partition of $n$ with that product.
+ให้ $f(n)$ เป็นผลิตภัณฑ์สูงสุดของส่วนต่าง ๆ ของpartition $n$ ให้เป็นส่วนที่แตกต่างกัน และให้ $m(n)$ เป็นจำนวนขององค์ประกอบของpartitionของ $n$ กับผลิตภัณฑ์นั้น
 
-So $f(5) = 6$ and $m(5) = 2$.
+ดังนั้น $f(5) = 6$ และ $m(5) = 2$
 
-For $n = 10$ the partition with the largest product is $10 = 2 + 3 + 5$, which gives $f(10) = 30$ and $m(10) = 3$. And their product, $f(10) \times m(10) = 30 \times 3 = 90$
+สำหรับ $n = 10$ พาร์ติชันที่มีผลิตภัณฑ์ที่ใหญ่ที่สุดคือ $10 = 2 + 3 + 5$ ซึ่งให้ $f(10) = 30$ และ $m(10) = 3$ และผลิตภัณฑ์ของพวกเขา $f(10) \times m(10) = 30 \times 3 = 90$
 
-It can be verified that $\sum f(n) \times m(n)$ for $1 ≤ n ≤ 100 = 1\\,683\\,550\\,844\\,462$.
+สามารถตรวจสอบได้ว่า $\sum f(n) \times m(n)$ สำหรับ $1 ≤ n ≤ 100 = 1\\,683\\,550\\,844\\,462$
 
-Find $\sum f(n) \times m(n)$ for $1 ≤ n ≤ {10}^{14}$. Give your answer modulo $982\\,451\\,653$, the 50 millionth prime.
-
+หา $\sum f(n) \times m(n)$ สำหรับ $1 ≤ n ≤ {10}^{14}$ ให้คำตอบแบบmodulo $982\\,451\\,653$ ไพรม์ที่ 50 ล้าน
 # --hints--
 
-`maximumIntegerPartitionProduct()` should return `334420941`.
+`maximumIntegerPartitionProduct()` ควร return `334420941`.
 
 ```js
 assert.strictEqual(maximumIntegerPartitionProduct(), 334420941);

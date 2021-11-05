@@ -8,15 +8,15 @@ dashedName: problem-398-cutting-rope
 
 # --description--
 
-Inside a rope of length $n$, $n - 1$ points are placed with distance 1 from each other and from the endpoints. Among these points, we choose $m - 1$ points at random and cut the rope at these points to create $m$ segments.
+ภายในเชือกที่มีความยาว $n$, $n - 1$ วางจุดด้วยระยะห่าง 1 จากกันและกันและจากจุดสิ้นสุด ในบรรดาจุดเหล่านี้ เราสุ่มเลือกคะแนน $m - 1$ และตัดเชือกที่จุดเหล่านี้เพื่อสร้างส่วน $m$
 
-Let $E(n, m)$ be the expected length of the second-shortest segment. For example, $E(3, 2) = 2$ and $E(8, 3) = \frac{16}{7}$. Note that if multiple segments have the same shortest length the length of the second-shortest segment is defined as the same as the shortest length.
+ให้ $E(n, m)$ เป็นความยาวที่คาดไว้ของส่วนที่สั้นที่สุดเป็นอันดับสอง ตัวอย่างเช่น $E(3, 2) = 2$ และ $E(8, 3) = \frac{16}{7}$ โปรดทราบว่าหากหลายส่วนมีความยาวสั้นที่สุดเท่ากัน ความยาวของส่วนที่สั้นที่สุดเป็นอันดับสองจะถูกกำหนดเหมือนกับความยาวที่สั้นที่สุด
 
-Find $E({10}^7, 100)$. Give your answer rounded to 5 decimal places behind the decimal point.
+หา $E({10}^7, 100)$ ให้คำตอบของคุณปัดเศษทศนิยม 5 ตำแหน่งหลังจุดทศนิยม
 
 # --hints--
 
-`cuttingRope()` should return `2010.59096`.
+`cuttingRope()` ควร return `2010.59096`.
 
 ```js
 assert.strictEqual(cuttingRope(), 2010.59096);

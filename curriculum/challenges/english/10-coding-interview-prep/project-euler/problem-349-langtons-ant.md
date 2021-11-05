@@ -8,18 +8,18 @@ dashedName: problem-349-langtons-ant
 
 # --description--
 
-An ant moves on a regular grid of squares that are coloured either black or white.
+มดเคลื่อนที่ไปตามตารางปกติของช่องสี่เหลี่ยมที่มีสีดำหรือสีขาว
 
-The ant is always oriented in one of the cardinal directions (left, right, up or down) and moves from square to adjacent square according to the following rules:
+มดจะอยู่ในทิศทางใดทิศทางหนึ่งเสมอ (ซ้าย ขวา ขึ้นหรือลง) และย้ายจากสี่เหลี่ยมจัตุรัสไปยังสี่เหลี่ยมที่อยู่ติดกันตามกฎต่อไปนี้:
 
-- if it is on a black square, it flips the color of the square to white, rotates 90° counterclockwise and moves forward one square.
-- if it is on a white square, it flips the color of the square to black, rotates 90° clockwise and moves forward one square.
+- ถ้าอยู่บนสี่เหลี่ยมสีดำ มันจะพลิกสีของสี่เหลี่ยมจัตุรัสเป็นสีขาว หมุน 90° ทวนเข็มนาฬิกา และเคลื่อนไปข้างหน้าหนึ่งสี่เหลี่ยม
+- หากอยู่บนสี่เหลี่ยมสีขาว มันจะพลิกสีของสี่เหลี่ยมจัตุรัสเป็นสีดำ หมุนตามเข็มนาฬิกา 90° แล้วเคลื่อนไปข้างหน้าหนึ่งสี่เหลี่ยม
 
-Starting with a grid that is entirely white, how many squares are black after ${10}^{18}$ moves of the ant?
+เริ่มจากตารางที่เป็นสีขาวทั้งหมด มีสี่เหลี่ยมสีดำกี่ช่องหลังจากมดเคลื่อนที่ ${10}^{18}$ ${10}^{18}$
 
 # --hints--
 
-`langtonsAnt()` should return `115384615384614940`.
+`langtonsAnt()` ควร return `115384615384614940`.
 
 ```js
 assert.strictEqual(langtonsAnt(), 115384615384614940);

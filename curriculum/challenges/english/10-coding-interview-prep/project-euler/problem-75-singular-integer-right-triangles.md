@@ -8,7 +8,8 @@ dashedName: problem-75-singular-integer-right-triangles
 
 # --description--
 
-It turns out that 12 cm is the smallest length of wire that can be bent to form an integer sided right angle triangle in exactly one way, but there are many more examples.
+ปรากฎว่า 12 ซม. เป็นความยาวของเส้นลวดที่เล็กที่สุดที่สามารถโค้งงอเพื่อสร้างสามเหลี่ยมมุมฉากด้านจำนวนเต็มได้
+ในลักษณะเดียว แต่มีตัวอย่างอีกมากมาย
 
 <div style='margin-left: 4em;'>
   <strong>12 cm:</strong> (3,4,5)<br>
@@ -19,41 +20,41 @@ It turns out that 12 cm is the smallest length of wire that can be bent to form 
   <strong>48 cm:</strong> (12,16,20)<br><br>
 </div>
 
-In contrast, some lengths of wire, like 20 cm, cannot be bent to form an integer sided right angle triangle, and other lengths allow more than one solution to be found; for example, using 120 cm it is possible to form exactly three different integer sided right angle triangles.
+นทางตรงกันข้าม ความยาวของเส้นลวด เช่น 20 ซม. ไม่สามารถโค้งงอให้เป็นรูปสามเหลี่ยมมุมฉากด้านจำนวนเต็มไม่ได้ และความยาวอื่นๆ ยอมให้พบวิธีแก้ปัญหามากกว่าหนึ่งวิธี ตัวอย่างเช่น การใช้ 120 ซม. สามารถสร้างสามเหลี่ยมมุมฉากด้านจำนวนเต็มที่แตกต่างกันสามรูป
 
 <div style='margin-left: 4em;'>
   <strong>120 cm:</strong> (30,40,50), (20,48,52), (24,45,51)<br><br>
 </div>
 
-Given that L is the length of the wire, for how many values of L ≤ `n` can exactly one, integer sided right angle, triangle be formed?
+เนื่องจาก L คือความยาวของเส้นลวด สำหรับค่าของ L ≤ `n` สามารถสร้างมุมขวาด้านจำนวนเต็มของสามเหลี่ยมได้กี่ค่า
 
 # --hints--
 
-`singularIntRightTriangles(48)` should return a number.
+`singularIntRightTriangles(48)` ควร return number.
 
 ```js
 assert(typeof singularIntRightTriangles(48) === 'number');
 ```
 
-`singularIntRightTriangles(48)` should return `6`.
+`singularIntRightTriangles(48)` ควร return `6`.
 
 ```js
 assert.strictEqual(singularIntRightTriangles(48), 6);
 ```
 
-`singularIntRightTriangles(700000)` should return `75783`.
+`singularIntRightTriangles(700000)` ควร return `75783`.
 
 ```js
 assert.strictEqual(singularIntRightTriangles(700000), 75783);
 ```
 
-`singularIntRightTriangles(1000000)` should return `107876`.
+`singularIntRightTriangles(1000000)` ควร return `107876`.
 
 ```js
 assert.strictEqual(singularIntRightTriangles(1000000), 107876);
 ```
 
-`singularIntRightTriangles(1500000)` should return `161667`.
+`singularIntRightTriangles(1500000)` ควร return `161667`.
 
 ```js
 assert.strictEqual(singularIntRightTriangles(1500000), 161667);

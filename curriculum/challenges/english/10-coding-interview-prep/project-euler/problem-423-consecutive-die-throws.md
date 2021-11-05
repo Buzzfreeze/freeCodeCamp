@@ -8,11 +8,11 @@ dashedName: problem-423-consecutive-die-throws
 
 # --description--
 
-Let $n$ be a positive integer.
+ให้ $n$ เป็นจำนวนเต็มบวก
 
-A 6-sided die is thrown $n$ times. Let $c$ be the number of pairs of consecutive throws that give the same value.
+ลูกเต๋า 6 ด้านถูกโยน $n$ ครั้ง ให้ $c$ เป็นจำนวนคู่ของการโยนต่อเนื่องที่ให้ค่าเท่ากัน
 
-For example, if $n = 7$ and the values of the die throws are (1, 1, 5, 6, 6, 6, 3), then the following pairs of consecutive throws give the same value:
+ตัวอย่างเช่น ถ้า $n = 7$ และค่าของการโยนลูกเต๋าคือ (1, 1, 5, 6, 6, 6, 3) ดังนั้นคู่ต่อไปนี้ของการโยนลูกต่อเนื่องจะให้ค่าเดียวกัน
 
 $$\begin{align}
   & (\underline{1}, \underline{1}, 5, 6, 6, 6, 3) \\\\
@@ -20,23 +20,23 @@ $$\begin{align}
   & (1, 1, 5, 6, \underline{6}, \underline{6}, 3)
 \end{align}$$
 
-Therefore, $c = 3$ for (1, 1, 5, 6, 6, 6, 3).
+ดังนั้น, $c = 3$ for (1, 1, 5, 6, 6, 6, 3).
 
-Define $C(n)$ as the number of outcomes of throwing a 6-sided die $n$ times such that $c$ does not exceed $π(n)$.<sup>1</sup>
+กำหนด $C(n)$ เป็นจำนวนผลลัพธ์ของการโยนลูกเต๋า 6 ด้าน $n$ ครั้งเพื่อให้ $c$ ไม่เกิน $π(n)$.<sup>1</sup>
 
-For example, $C(3) = 216$, $C(4) = 1290$, $C(11) = 361\\,912\\,500$ and $C(24) = 4\\,727\\,547\\,363\\,281\\,250\\,000$.
+ตัวอย่างเช่น $C(3) = 216$, $C(4) = 1290$, $C(11) = 361\\,912\\,500$ and $C(24) = 4\\,727\ \,547\\,363\\,281\\,250\\,000$.
 
-Define $S(L)$ as $\sum C(n)$ for $1 ≤ n ≤ L$.
+กำหนด $S(L)$ เป็น $\sum C(n)$ สำหรับ $1 ≤ n ≤ L$
 
-For example, $S(50)\bmod 1\\,000\\,000\\,007 = 832\\,833\\,871$.
+ตัวอย่างเช่น $S(50)\bmod 1\\,000\\,000\\,007 = 832\\,833\\,871$
 
-Find $S(50\\,000\\,000)\bmod 1\\,000\\,000\\,007$.
+หา $S(50\\,000\\,000)\bmod 1\\,000\\,000\\,007$.
 
-<sup>1</sup> $π$ denotes the prime-counting function, i.e. $π(n)$ is the number of primes $≤ n$.
+<sup>1</sup> $π$ หมายถึงฟังก์ชันการนับจำนวนเฉพาะ เช่น $π(n)$ คือจำนวนของจำนวนเฉพาะ $≤ n$
 
 # --hints--
 
-`consecutiveDieThrows()` should return `653972374`.
+`consecutiveDieThrows()` ควร return `653972374`.
 
 ```js
 assert.strictEqual(consecutiveDieThrows(), 653972374);

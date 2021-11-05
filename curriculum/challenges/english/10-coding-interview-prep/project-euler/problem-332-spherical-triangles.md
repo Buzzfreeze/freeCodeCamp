@@ -8,25 +8,25 @@ dashedName: problem-332-spherical-triangles
 
 # --description--
 
-A spherical triangle is a figure formed on the surface of a sphere by three great circular arcs intersecting pairwise in three vertices.
+สามเหลี่ยมทรงกลมคือรูปที่เกิดขึ้นบนพื้นผิวของทรงกลมโดยมีส่วนโค้งวงกลมขนาดใหญ่สามส่วนตัดกันเป็นคู่ในจุดยอดสามจุด
 
 <img class="img-responsive center-block" alt="spherical triangle formed on the surface of a sphere" src="https://cdn.freecodecamp.org/curriculum/project-euler/spherical-triangles.jpg" style="background-color: white; padding: 10px;">
 
-Let $C(r)$ be the sphere with the centre (0,0,0) and radius $r$.
+ให้ $C(r)$ เป็นทรงกลมโดยมีจุดศูนย์กลาง (0,0,0) และรัศมี $r$
 
-Let $Z(r)$ be the set of points on the surface of $C(r)$ with integer coordinates.
+ให้ $Z(r)$ เป็นเซตของจุดบนพื้นผิวของ $C(r)$ ด้วยพิกัดจำนวนเต็ม
 
-Let $T(r)$ be the set of spherical triangles with vertices in $Z(r)$. Degenerate spherical triangles, formed by three points on the same great arc, are <u>not</u> included in $T(r)$.
+ให้ $T(r)$ เป็นเซตของสามเหลี่ยมทรงกลมที่มีจุดยอดเป็น $Z(r)$ รูปสามเหลี่ยมทรงกลมที่เสื่อมโทรม ซึ่งเกิดจากสามจุดบนส่วนโค้งเดียวกันนั้น <u>ไม่</u> รวมอยู่ใน $T(r)$
 
-Let $A(r)$ be the area of the smallest spherical triangle in $T(r)$.
+ให้ $A(r)$ เป็นพื้นที่ของสามเหลี่ยมทรงกลมที่เล็กที่สุดใน $T(r)$
 
-For example $A(14)$ is 3.294040 rounded to six decimal places.
+ตัวอย่างเช่น $A(14)$ คือ 3.294040 ปัดเศษทศนิยมหกตำแหน่ง
 
-Find $\displaystyle \sum_{r = 1}^{50} A(r)$. Give your answer rounded to six decimal places.
+หา $\displaystyle \sum_{r = 1}^{50} A(r)$ ให้คำตอบของคุณเป็นทศนิยมหกตำแหน่ง
 
 # --hints--
 
-`sphericalTriangles()` should return `2717.751525`.
+`sphericalTriangles()` ควร return `2717.751525`.
 
 ```js
 assert.strictEqual(sphericalTriangles(), 2717.751525);

@@ -8,39 +8,39 @@ dashedName: problem-39-integer-right-triangles
 
 # --description--
 
-If `p` is the perimeter of a right angle triangle with integral length sides, {a,b,c}, there are exactly three solutions for p = 120.
+ถ้า `p` เป็น perimeter ของ right angle triangle กับ integral length sides โดยที่ {a,b,c} มีสามวิธีสำหรับ p = 120.
 
 {20,48,52}, {24,45,51}, {30,40,50}
 
-For which value of `p` ≤ `n`, is the number of solutions maximized?
+ค่าของ `p` ≤ `n` มีทั้งหมดกี่คำตอบ
 
 # --hints--
 
-`intRightTriangles(500)` should return a number.
+`intRightTriangles(500)` ควร return number.
 
 ```js
 assert(typeof intRightTriangles(500) === 'number');
 ```
 
-`intRightTriangles(500)` should return 420.
+`intRightTriangles(500)` ควร return 420.
 
 ```js
 assert(intRightTriangles(500) == 420);
 ```
 
-`intRightTriangles(800)` should return 720.
+`intRightTriangles(800)` ควร return 720.
 
 ```js
 assert(intRightTriangles(800) == 720);
 ```
 
-`intRightTriangles(900)` should return 840.
+`intRightTriangles(900)` ควร return 840.
 
 ```js
 assert(intRightTriangles(900) == 840);
 ```
 
-`intRightTriangles(1000)` should return 840.
+`intRightTriangles(1000)` ควร return 840.
 
 ```js
 assert(intRightTriangles(1000) == 840);

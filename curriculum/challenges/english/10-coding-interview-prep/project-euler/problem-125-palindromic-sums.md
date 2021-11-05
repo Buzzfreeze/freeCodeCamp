@@ -8,15 +8,15 @@ dashedName: problem-125-palindromic-sums
 
 # --description--
 
-The palindromic number 595 is interesting because it can be written as the sum of consecutive squares: $6^2 + 7^2 + 8^2 + 9^2 + 10^2 + 11^2 + 12^2$.
+เลขpalindromic 595 นั้นน่าสนใจเพราะสามารถเขียนเป็นผลรวมของกำลังสองที่ต่อเนื่องกัน: $6^2 + 7^2 + 8^2 + 9^2 + 10^2 + 11^2 + 12^2$
 
-There are exactly eleven palindromes below one-thousand that can be written as consecutive square sums, and the sum of these palindromes is 4164. Note that $1 = 0^2 + 1^2$ has not been included as this problem is concerned with the squares of positive integers.
+มี palindromes สิบเอ็ดตัวที่ต่ำกว่าหนึ่งพันซึ่งสามารถเขียนเป็นผลรวมกำลังสองติดต่อกัน และผลรวมของ palindromes เหล่านี้คือ 4164 โปรดทราบว่า $1 = 0^2 + 1^2$ ไม่ได้ถูกรวมไว้เนื่องจากปัญหานี้เกี่ยวข้องกับ กำลังสองของจำนวนเต็มบวก
 
-Find the sum of all the numbers less than $10^8$ that are both palindromic and can be written as the sum of consecutive squares.
+หาผลรวมของตัวเลขทั้งหมดที่น้อยกว่า $10^8$ ที่เป็นpalindromesทั้งคู่ และสามารถเขียนเป็นผลรวมของกำลังสองที่ต่อเนื่องกัน
 
 # --hints--
 
-`palindromicSums()` should return `2906969179`.
+`palindromicSums()` ควร return `2906969179`.
 
 ```js
 assert.strictEqual(palindromicSums(), 2906969179);

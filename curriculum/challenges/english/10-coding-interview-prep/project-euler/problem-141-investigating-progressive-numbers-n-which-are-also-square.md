@@ -8,19 +8,19 @@ dashedName: problem-141-investigating-progressive-numbers-n-which-are-also-squar
 
 # --description--
 
-A positive integer, $n$, is divided by $d$ and the quotient and remainder are $q$ and $r$ respectively. In addition $d$, $q$, and $r$ are consecutive positive integer terms in a geometric sequence, but not necessarily in that order.
+จำนวนเต็มบวก $n$ หารด้วย $d$ และผลหารและเศษที่เหลือคือ $q$ และ $r$ ตามลำดับ นอกจากนี้ $d$, $q$ และ $r$ เป็นพจน์จำนวนเต็มบวกต่อเนื่องกันในลำดับเรขาคณิต แต่ไม่จำเป็นต้องอยู่ในลำดับนั้น
 
-For example, 58 divided by 6 has a quotient of 9 and a remainder of 4. It can also be seen that 4, 6, 9 are consecutive terms in a geometric sequence (common ratio $\frac{3}{2}$).
+ตัวอย่างเช่น 58 หารด้วย 6 มีผลหาร 9 และเศษ 4 จะเห็นได้ว่า 4, 6, 9 เป็นพจน์ที่ต่อเนื่องกันในลำดับเรขาคณิต (อัตราส่วนร่วม $\frac{3}{2}$) 
 
-We will call such numbers, $n$, progressive.
+เราจะเรียกตัวเลขดังกล่าวว่า $n$ ก้าวหน้า
 
-Some progressive numbers, such as 9 and 10404 = ${102}^2$, also happen to be perfect squares. The sum of all progressive perfect squares below one hundred thousand is 124657.
+จำนวนก้าวหน้าบางจำนวน เช่น 9 และ 10404 = ${102}^2$ ก็เป็นกำลังสองสมบูรณ์เช่นกัน ผลรวมของกำลังสองสมบูรณ์ก้าวหน้าทั้งหมดที่ต่ำกว่าหนึ่งแสนคือ 124657
 
-Find the sum of all progressive perfect squares below one trillion (${10}^{12}$).
+หาผลรวมของกำลังสองสมบูรณ์แบบก้าวหน้าทั้งหมดที่ต่ำกว่าหนึ่งล้านล้าน (${10}^{12}$)
 
 # --hints--
 
-`progressivePerfectSquares()` should return `878454337159`.
+`progressivePerfectSquares()` ควร return `878454337159`.
 
 ```js
 assert.strictEqual(progressivePerfectSquares(), 878454337159);

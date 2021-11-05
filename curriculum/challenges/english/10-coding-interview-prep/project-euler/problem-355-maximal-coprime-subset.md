@@ -8,15 +8,15 @@ dashedName: problem-355-maximal-coprime-subset
 
 # --description--
 
-Define $Co(n)$ to be the maximal possible sum of a set of mutually co-prime elements from $\\{1, 2, \ldots, n\\}$. For example $Co(10)$ is 30 and hits that maximum on the subset $\\{1, 5, 7, 8, 9\\}$.
+กำหนด $Co(n)$ ให้เป็นผลรวมสูงสุดของชุดขององค์ประกอบ co-prime ร่วมกันจาก $\\{1, 2, \ldots, n\\}$ ตัวอย่างเช่น $Co(10)$ คือ 30 และจำนวนครั้งสูงสุดในเซ็ตย่อย $\\{1, 5, 7, 8, 9\\}$
 
-You are given that $Co(30) = 193$ and $Co(100) = 1356$.
+คุณจะได้รับ $Co(30) = 193$ และ $Co(100) = 1356$
 
-Find $Co(200\\,000)$.
+หา $Co(200\\,000)$
 
 # --hints--
 
-`maximalCoprimeSubset()` should return `1726545007`.
+`maximalCoprimeSubset()` ควร return `1726545007`.
 
 ```js
 assert.strictEqual(maximalCoprimeSubset(), 1726545007);

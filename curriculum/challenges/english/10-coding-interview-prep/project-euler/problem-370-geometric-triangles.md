@@ -8,17 +8,17 @@ dashedName: problem-370-geometric-triangles
 
 # --description--
 
-Let us define a geometric triangle as an integer sided triangle with sides $a ≤ b ≤ c$ so that its sides form a geometric progression, i.e. $b^2 = a \times c$.
+ให้เรากำหนดสามเหลี่ยมเรขาคณิตเป็นรูปสามเหลี่ยมด้านเท่าจำนวนเต็มที่มีด้าน $a ≤ b ≤ c$ เพื่อให้ด้านของมันสร้างความก้าวหน้าทางเรขาคณิต นั่นคือ $b^2 = a \times c$
 
-An example of such a geometric triangle is the triangle with sides $a = 144$, $b = 156$ and $c = 169$.
+ตัวอย่างของสามเหลี่ยมเรขาคณิตดังกล่าวคือสามเหลี่ยมที่มีด้าน $a = 144$, $b = 156$ และ $c = 169$
 
-There are $861\\,805$ geometric triangles with $\text{perimeter} ≤ {10}^6$.
+มี $861\\,805$ สามเหลี่ยมเรขาคณิตที่มี $\text{perimeter} ≤ {10}^6$
 
-How many geometric triangles exist with $\text{perimeter} ≤ 2.5 \times {10}^{13}$?
+มีสามเหลี่ยมเรขาคณิตกี่รูปที่มี $\text{perimeter} ≤ 2.5 \times {10}^{13}$
 
 # --hints--
 
-`geometricTriangles()` should return `41791929448408`.
+`geometricTriangles()` ควร return `41791929448408`.
 
 ```js
 assert.strictEqual(geometricTriangles(), 41791929448408);

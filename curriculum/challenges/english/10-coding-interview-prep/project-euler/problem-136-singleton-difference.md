@@ -8,13 +8,13 @@ dashedName: problem-136-singleton-difference
 
 # --description--
 
-The positive integers, $x$, $y$, and $z$, are consecutive terms of an arithmetic progression. Given that $n$ is a positive integer, the equation, $x^2 − y^2 − z^2 = n$, has exactly one solution when $n = 20$:
+จำนวนเต็มบวก $x$, $y$ และ $z$ เป็นพจน์ที่ต่อเนื่องกันของความก้าวหน้าทางคณิตศาสตร์ เนื่องจาก $n$ เป็นจำนวนเต็มบวก สมการ $x^2 − y^2 − z^2 = n$ มีคำตอบเดียวเมื่อ $n = 20$
 
 $$13^2 − 10^2 − 7^2 = 20$$
 
-In fact, there are twenty-five values of $n$ below one hundred for which the equation has a unique solution.
+ในความเป็นจริง มีค่า $n$ ต่ำกว่า 100 ค่า 25 ค่า ซึ่งสมการนี้มีคำตอบเฉพาะ
 
-How many values of $n$ less than fifty million have exactly one solution?
+ค่าของ $n$ ที่น้อยกว่าห้าสิบล้านมีกี่ solution
 
 # --hints--
 

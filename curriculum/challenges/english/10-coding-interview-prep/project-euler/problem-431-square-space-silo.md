@@ -8,21 +8,21 @@ dashedName: problem-431-square-space-silo
 
 # --description--
 
-Fred the farmer arranges to have a new storage silo installed on his farm and having an obsession for all things square he is absolutely devastated when he discovers that it is circular. Quentin, the representative from the company that installed the silo, explains that they only manufacture cylindrical silos, but he points out that it is resting on a square base. Fred is not amused and insists that it is removed from his property.
+Fred ชาวนาจัดการติดตั้งไซโลเก็บของใหม่ในฟาร์มของเขา และมีความหลงใหลในทุกสิ่ง เขาต้องเสียใจอย่างยิ่งเมื่อเขาพบว่ามันเป็นวงกลม เควนติน ตัวแทนจากบริษัทที่ติดตั้งไซโล อธิบายว่าพวกเขาผลิตเฉพาะไซโลทรงกระบอก แต่เขาชี้ให้เห็นว่าไซโลวางอยู่บนฐานสี่เหลี่ยม เฟร็ดไม่ขบขันและยืนยันว่าจะถูกลบออกจากทรัพย์สินของเขา
 
-Quick thinking Quentin explains that when granular materials are delivered from above a conical slope is formed and the natural angle made with the horizontal is called the angle of repose. For example if the angle of repose, $\alpha = 30°$, and grain is delivered at the centre of the silo then a perfect cone will form towards the top of the cylinder. In the case of this silo, which has a diameter of 6m, the amount of space wasted would be approximately 32.648388556 m<sup>3</sup>. However, if grain is delivered at a point on the top which has a horizontal distance of $x$ metres from the centre then a cone with a strangely curved and sloping base is formed. He shows Fred a picture.
+เควนตินคิดอย่างรวดเร็วว่าเมื่อส่งวัสดุที่เป็นเม็ดเล็ก ๆ จากด้านบน จะเกิดความชันรูปกรวยขึ้น และมุมธรรมชาติที่สร้างจากแนวนอนเรียกว่ามุมพักผ่อน ตัวอย่างเช่น ถ้ามุมของการพักผ่อน $\alpha = 30°$ และเกรนถูกส่งไปที่ศูนย์กลางของไซโล กรวยที่สมบูรณ์แบบจะก่อตัวขึ้นที่ส่วนบนของกระบอกสูบ ในกรณีของไซโลนี้ซึ่งมีเส้นผ่านศูนย์กลาง 6 ม. ปริมาณพื้นที่ที่สูญเปล่าจะอยู่ที่ประมาณ 32.648388556 ม.<sup>3</sup> อย่างไรก็ตาม หากส่งเมล็ดพืชที่จุดด้านบนซึ่งมีระยะห่างในแนวนอน $x$ เมตรจากจุดศูนย์กลาง ก็จะเกิดรูปกรวยที่มีฐานโค้งและลาดเอียงอย่างประหลาด เขาให้เฟร็ดดูรูป
 
 <img class="img-responsive center-block" alt="image presenting forming of the perfect cone towards the top of the cylinder" src="https://cdn.freecodecamp.org/curriculum/project-euler/square-space-silo.png" style="background-color: white; padding: 10px;">
 
-We shall let the amount of space wasted in cubic metres be given by $V(x)$. If $x = 1.114\\,785\\,284$, which happens to have three squared decimal places, then the amount of space wasted, $V(1.114\\,785\\,284) \approx 36$. Given the range of possible solutions to this problem there is exactly one other option: $V(2.511\\,167\\,869) \approx 49$. It would be like knowing that the square is king of the silo, sitting in splendid glory on top of your grain.
+เราจะให้ปริมาณพื้นที่ที่เสียไปเป็นลูกบาศก์เมตรโดย $V(x)$ ถ้า $x = 1.114\\,785\\,284$ ซึ่งมีทศนิยมสามตำแหน่ง ดังนั้น ปริมาณของพื้นที่ที่เสียไป $V(1.114\\,785\\,284) \ประมาณ 36$ จากช่วงของวิธีแก้ปัญหาที่เป็นไปได้สำหรับปัญหานี้ มีอีกตัวเลือกหนึ่งเท่านั้น: $V(2.511\\,167\\,869) \ประมาณ 49$ 
 
-Fred's eyes light up with delight at this elegant resolution, but on closer inspection of Quentin's drawings and calculations his happiness turns to despondency once more. Fred points out to Quentin that it's the radius of the silo that is 6 metres, not the diameter, and the angle of repose for his grain is 40­°. However, if Quentin can find a set of solutions for this particular silo then he will be more than happy to keep it.
+ดวงตาของ Fred เปล่งประกายด้วยความยินดีกับความละเอียดที่สง่างามนี้ แต่เมื่อตรวจสอบภาพวาดและการคำนวณของ Quentin อย่างใกล้ชิด ความสุขของเขากลับกลายเป็นความสิ้นหวังอีกครั้ง เฟร็ดชี้ให้เควนตินทราบว่ารัศมีของไซโลคือ 6 เมตร ไม่ใช่เส้นผ่านศูนย์กลาง และมุมพักผ่อนสำหรับเมล็ดพืชของเขาคือ 40° อย่างไรก็ตาม หากเควนตินสามารถหาชุดวิธีแก้ปัญหาสำหรับไซโลแห่งนี้ได้ เขาก็ยินดีที่จะเก็บมันไว้
 
-If Quick thinking Quentin is to satisfy frustratingly fussy Fred the farmer's appetite for all things square then determine the values of $x$ for all possible square space wastage options and calculate $\sum x$ correct to 9 decimal places.
+หากเควนตินคิดอย่างรวดเร็วเพื่อสนองความอยากอาหารของชาวนาที่หงุดหงิดกับทุกสิ่งที่เป็นสี่เหลี่ยมจัตุรัส ให้กำหนดค่าของ $x$ สำหรับตัวเลือกการสูญเสียพื้นที่สี่เหลี่ยมที่เป็นไปได้ทั้งหมด และคำนวณ $\sum x$ ให้ถูกต้องเป็นทศนิยม 9 ตำแหน่ง
 
 # --hints--
 
-`squareSpaceSilo()` should return `23.386029052`.
+`squareSpaceSilo()` ควร return `23.386029052`.
 
 ```js
 assert.strictEqual(squareSpaceSilo(), 23.386029052);

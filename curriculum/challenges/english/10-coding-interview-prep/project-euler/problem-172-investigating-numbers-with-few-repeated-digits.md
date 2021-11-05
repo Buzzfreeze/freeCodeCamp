@@ -8,11 +8,12 @@ dashedName: problem-172-investigating-numbers-with-few-repeated-digits
 
 # --description--
 
-How many 18-digit numbers $n$ (without leading zeros) are there such that no digit occurs more than three times in $n$?
+
+มีตัวเลข 18 หลัก $n$ กี่ตัว (ไม่มีศูนย์นำหน้า) ที่ไม่มีตัวเลขใดเกิดขึ้นมากกว่าสามครั้งใน $n$
 
 # --hints--
 
-`numbersWithRepeatedDigits()` should return `227485267000992000`.
+`numbersWithRepeatedDigits()` ควร return `227485267000992000`.
 
 ```js
 assert.strictEqual(numbersWithRepeatedDigits(), 227485267000992000);

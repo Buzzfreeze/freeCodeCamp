@@ -8,19 +8,19 @@ dashedName: problem-217-balanced-numbers
 
 # --description--
 
-A positive integer with $k$ (decimal) digits is called balanced if its first $⌈\frac{k}{2}⌉$ digits sum to the same value as its last $⌈\frac{k}{2}⌉$ digits, where $⌈x⌉$, pronounced ceiling of $x$, is the smallest integer $≥ x$, thus $⌈π⌉ = 4$ and $⌈5⌉ = 5$.
+จำนวนเต็มบวกที่มีตัวเลข $k$ (ทศนิยม) เรียกว่าบาลานซ์ ถ้าตัวเลข $⌈\frac{k}{2}⌉$ หลักแรกรวมเป็นค่าเดียวกับ $⌈\frac{k}{2}⌉$ ตัวสุดท้าย ตัวเลข โดยที่ $⌈x⌉$ เพดานเด่นชัดของ $x$ เป็นจำนวนเต็มที่น้อยที่สุด $≥ x$ ดังนั้น $⌈π⌉ = 4$ และ $⌈5⌉ = 5$
 
-So, for example, all palindromes are balanced, as is 13722.
+ตัวอย่างเช่น พาลินโดรมทั้งหมดมีความสมดุล เช่นเดียวกับ 13722
 
-Let $T(n)$ be the sum of all balanced numbers less than $10^n$.
+ให้ $T(n)$ เป็นผลรวมของจำนวนที่สมดุลทั้งหมดที่น้อยกว่า $10^n$
 
-Thus: $T(1) = 45$, $T(2) = 540$ and $T(5) = 334\\,795\\,890$.
+ดังนั้น: $T(1) = 45$, $T(2) = 540$ และ $T(5) = 334\\,795\\,890$
 
-Find $T(47)\\,mod\\,3^{15}$
+ค้นหา $T(47)\\,mod\\,3^{15}$
 
 # --hints--
 
-`balancedNumbers()` should return `6273134`.
+`balancedNumbers()` ควร return `6273134`.
 
 ```js
 assert.strictEqual(balancedNumbers(), 6273134);

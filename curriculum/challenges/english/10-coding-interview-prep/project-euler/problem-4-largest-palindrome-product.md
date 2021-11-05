@@ -8,25 +8,25 @@ dashedName: problem-4-largest-palindrome-product
 
 # --description--
 
-A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+palindromic number คือเลขที่ไม่ว่าจะอ่านจากหน้าไปหลังหรือหลังมาหน้าจะได้จำนวนที่มีค่าเท่ากัน ค่าที่มากที่่สุดของ palindrome เกิดจากการคูณกันของเลขสองหลักจำนวนสองตัวคือ 9009 = 91 × 99.
 
-Find the largest palindrome made from the product of two `n`-digit numbers.
+หาค่ามากที่สุดของ palindrome ที่ได้จากการคูณกันของ `n`หลัก สองจำนวน
 
 # --hints--
 
-`largestPalindromeProduct(2)` should return a number.
+`largestPalindromeProduct(2)` ควร return เป็น number
 
 ```js
 assert(typeof largestPalindromeProduct(2) === 'number');
 ```
 
-`largestPalindromeProduct(2)` should return 9009.
+`largestPalindromeProduct(2)` ควร return เป็น 9009
 
 ```js
 assert.strictEqual(largestPalindromeProduct(2), 9009);
 ```
 
-`largestPalindromeProduct(3)` should return 906609.
+`largestPalindromeProduct(3)` ควร return เป็น 906609
 
 ```js
 assert.strictEqual(largestPalindromeProduct(3), 906609);

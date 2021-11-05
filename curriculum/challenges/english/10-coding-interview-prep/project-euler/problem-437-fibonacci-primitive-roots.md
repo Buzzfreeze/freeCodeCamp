@@ -8,13 +8,11 @@ dashedName: problem-437-fibonacci-primitive-roots
 
 # --description--
 
-When we calculate $8^n$ modulo 11 for $n = 0$ to 9 we get: 1, 8, 9, 6, 4, 10, 3, 2, 5, 7.
+เมื่อเราคำนวณ $8^n$ โมดูโล 11 สำหรับ $n = 0$ ถึง 9 เราได้รับ: 1, 8, 9, 6, 4, 10, 3, 2, 5, 7
 
-As we see all possible values from 1 to 10 occur. So 8 is a primitive root of 11.
+เนื่องจากเราเห็นค่าที่เป็นไปได้ทั้งหมดตั้งแต่ 1 ถึง 10 เกิดขึ้น 8 จึงเป็นรากดั้งเดิมของ 11
 
-But there is more:
-
-If we take a closer look we see:
+หากเรามองใกล้ ๆ เราจะเห็น
 
 $$\begin{align}
   & 1 + 8 = 9 \\\\
@@ -28,15 +26,15 @@ $$\begin{align}
   & 5 + 7 = 12 ≡ 1\bmod 11.
 \end{align}$$
 
-So the powers of 8 mod 11 are cyclic with period 10, and $8^n + 8^{n + 1} ≡ 8^{n + 2} (\text{mod } 11)$. 8 is called a Fibonacci primitive root of 11.
+ดังนั้นพลังของ 8 mod 11 จึงเป็นวงจรที่มีจุด 10 และ $8^n + 8^{n + 1} ≡ 8^{n + 2} (\text{mod } 11)$ 8 เรียกว่า Fibonacci primitive root ของ 11
 
-Not every prime has a Fibonacci primitive root. There are 323 primes less than 10000 with one or more Fibonacci primitive roots and the sum of these primes is 1480491.
+ไม่ใช่ทุกจำนวนเฉพาะที่มีรากFibonacci มีจำนวนเฉพาะ 323 ตัวที่น้อยกว่า 10,000 ตัวที่มีรากดั้งเดิมของFibonacciตั้งแต่หนึ่งตัวขึ้นไป และผลรวมของจำนวนเฉพาะเหล่านี้คือ 1480491
 
-Find the sum of the primes less than $100\\,000\\,000$ with at least one Fibonacci primitive root.
+หาผลรวมของจำนวนเฉพาะที่น้อยกว่า $100\\,000\\,000$ ที่มีรากพื้นฐาน Fibonacci อย่างน้อยหนึ่งตัว
 
 # --hints--
 
-`fibonacciPrimitiveRoots()` should return `74204709657207`.
+`fibonacciPrimitiveRoots()` ควร return `74204709657207`.
 
 ```js
 assert.strictEqual(fibonacciPrimitiveRoots(), 74204709657207);

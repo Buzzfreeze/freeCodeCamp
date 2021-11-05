@@ -8,24 +8,24 @@ dashedName: problem-368-a-kempner-like-series
 
 # --description--
 
-The harmonic series $1 + \dfrac{1}{2} + \dfrac{1}{3} + \dfrac{1}{4} + \ldots$ is well known to be divergent.
+harmonic series $1 + \dfrac{1}{2} + \dfrac{1}{3} + \dfrac{1}{4} + \ldots$ เป็นที่รู้จักกันดีว่าแตกต่าง
 
-If we however omit from this series every term where the denominator has a 9 in it, the series remarkably enough converges to approximately 22.9206766193. This modified harmonic series is called the Kempner series.
+อย่างไรก็ตาม หากเราละเว้นจากอนุกรมนี้ทุกเทอมที่ตัวส่วนมี 9 อยู่ในนั้น อนุกรมนี้ก็จะมาบรรจบกันที่ประมาณ 22.9206766193 ได้อย่างน่าทึ่ง ชุดharmonicที่ได้รับการดัดแปลงนี้เรียกว่าชุด Kempner
 
-Let us now consider another modified harmonic series by omitting from the harmonic series every term where the denominator has 3 or more equal consecutive digits. One can verify that out of the first 1200 terms of the harmonic series, only 20 terms will be omitted.
+ให้เราพิจารณาชุดharmonicที่แก้ไขแล้วอีกชุดหนึ่งโดยละเว้นจากอนุกรมharmonicทุกเทอมโดยที่ตัวส่วนมีตัวเลขเรียงกันตั้งแต่ 3 หลักขึ้นไป เราสามารถยืนยันได้ว่าจาก 1200 เงื่อนไขแรกของชุดharmonic จะละเว้นเพียง 20 เงื่อนไขเท่านั้น
 
-These 20 omitted terms are:
+20 เงื่อนไขที่ละเว้นเหล่านี้คือ:
 
 $$\dfrac{1}{111}, \dfrac{1}{222}, \dfrac{1}{333}, \dfrac{1}{444}, \dfrac{1}{555}, \dfrac{1}{666}, \dfrac{1}{777}, \dfrac{1}{888}, \dfrac{1}{999}, \dfrac{1}{1000}, \dfrac{1}{1110}, \\\\
 \dfrac{1}{1111}, \dfrac{1}{1112}, \dfrac{1}{1113}, \dfrac{1}{1114}, \dfrac{1}{1115}, \dfrac{1}{1116}, \dfrac{1}{1117}, \dfrac{1}{1118}, \dfrac{1}{1119}$$
 
-This series converges as well.
+series converges 
 
-Find the value the series converges to. Give your answer rounded to 10 digits behind the decimal point.
+หาค่าของ series converges ให้คำตอบของคุณปัดเศษเป็น 10 หลักหลังจุดทศนิยม
 
 # --hints--
 
-`kempnerLikeSeries()` should return `253.6135092068`.
+`kempnerLikeSeries()` ควร return `253.6135092068`.
 
 ```js
 assert.strictEqual(kempnerLikeSeries(), 253.6135092068);

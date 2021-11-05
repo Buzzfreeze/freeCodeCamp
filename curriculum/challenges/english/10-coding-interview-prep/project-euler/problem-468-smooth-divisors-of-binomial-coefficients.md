@@ -8,11 +8,11 @@ dashedName: problem-468-smooth-divisors-of-binomial-coefficients
 
 # --description--
 
-An integer is called B-smooth if none of its prime factors is greater than $B$.
+จำนวนเต็มเรียกว่า B-smooth หากไม่มีตัวประกอบเฉพาะตัวใดที่มากกว่า $B$
 
-Let $SB(n)$ be the largest B-smooth divisor of $n$.
+ให้ $SB(n)$ เป็นตัวหารเรียบ B ที่ใหญ่ที่สุดของ $n$
 
-Examples:
+ตัวอย่าง:
 
 $$\begin{align}
   & S_1(10) = 1 \\\\
@@ -20,9 +20,9 @@ $$\begin{align}
   & S_{17}(2\\,496\\,144) = 5\\,712
 \end{align}$$
 
-Define $F(n) = \displaystyle\sum_{B = 1}^n \sum_{r = 0}^n S_B(\displaystyle\binom{n}{r})$. Here, $\displaystyle\binom{n}{r}$ denotes the binomial coefficient.
+กำหนด $F(n) = \displaystyle\sum_{B = 1}^n \sum_{r = 0}^n S_B(\displaystyle\binom{n}{r})$ ในที่นี้ $\displaystyle\binom{n}{r}$ หมายถึงสัมประสิทธิ์ทวินาม
 
-Examples:
+ตัวอย่าง:
 
 $$\begin{align}
   & F(11) = 3132 \\\\
@@ -30,11 +30,11 @@ $$\begin{align}
   & F(111\\,111)\bmod 1\\,000\\,000\\,993 = 22\\,156\\,169
 \end{align}$$
 
-Find $F(11\\,111\\,111)\bmod 1\\,000\\,000\\,993$.
+หา $F(11\\,111\\,111)\bmod 1\\,000\\,000\\,993$.
 
 # --hints--
 
-`smoothDivisorsOfBinomialCoefficients()` should return `852950321`.
+`smoothDivisorsOfBinomialCoefficients()` ควร return `852950321`.
 
 ```js
 assert.strictEqual(smoothDivisorsOfBinomialCoefficients(), 852950321);

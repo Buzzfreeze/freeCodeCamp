@@ -8,17 +8,17 @@ dashedName: problem-303-multiples-with-small-digits
 
 # --description--
 
-For a positive integer $n$, define $f(n)$ as the least positive multiple of $n$ that, written in base 10, uses only digits $≤ 2$.
+สำหรับจำนวนเต็มบวก $n$ ให้นิยาม $f(n)$ เป็นจำนวนเต็มบวกน้อยที่สุดของ $n$ ซึ่งเขียนด้วยเลขฐาน 10 ใช้เฉพาะตัวเลข $≤ 2$
 
-Thus $f(2) = 2$, $f(3) = 12$, $f(7) = 21$, $f(42) = 210$, $f(89) = 1\\,121\\,222$.
+ดังนั้น $f(2) = 2$, $f(3) = 12$, $f(7) = 21$, $f(42) = 210$, $f(89) = 1\\,121\\ ,222$.
 
-Also, $\displaystyle\sum_{n = 1}^{100} \frac{f(n)}{n} = 11\\,363\\,107$.
+นอกจากนี้ $\displaystyle\sum_{n = 1}^{100} \frac{f(n)}{n} = 11\\,363\\,107$
 
-Find $\displaystyle\sum_{n = 1}^{10\\,000} \frac{f(n)}{n}$.
+หา $\displaystyle\sum_{n = 1}^{10\\,000} \frac{f(n)}{n}$
 
 # --hints--
 
-`multiplesWithSmallDigits()` should return `1111981904675169`.
+`multiplesWithSmallDigits()` ควร return `1111981904675169`.
 
 ```js
 assert.strictEqual(multiplesWithSmallDigits(), 1111981904675169);

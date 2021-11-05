@@ -8,17 +8,17 @@ dashedName: problem-104-pandigital-fibonacci-ends
 
 # --description--
 
-The Fibonacci sequence is defined by the recurrence relation:
+Fibonacci sequence กำหนดโดย recurrence relation:
 
 $F_n = F_{n − 1} + F_{n − 2}$, where $F_1 = 1$ and $F_2 = 1$
 
-It turns out that $F_{541}$, which contains 113 digits, is the first Fibonacci number for which the last nine digits are 1 - 9 pandigital (contain all the digits 1 to 9, but not necessarily in order). And $F_{2749}$, which contains 575 digits, is the first Fibonacci number for which the first nine digits are 1 - 9 pandigital.
+ปรากฎว่า $F_{541}$ ซึ่งมี 113 หลัก เป็นตัวเลขFibonacciที่เก้าหลักสุดท้ายคือ 1 - 9 pandigital (ประกอบด้วยตัวเลข 1 ถึง 9 ทั้งหมด แต่ไม่จำเป็นต้องเรียงตามลำดับ) และ $F_{2749}$ ซึ่งมี 575 หลัก เป็นตัวเลขFibonacciที่ตัวเลขเก้าหลักแรกคือ 1 - 9 ตัวเลขหลัก
 
-Given that $F_k$ is the first Fibonacci number for which the first nine digits AND the last nine digits are 1 - 9 pandigital, find `k`.
+ระบุว่า $F_k$ เป็นเลขFibonacciแรกที่เก้าหลักแรกและเก้าหลักสุดท้ายคือ 1 - 9 pandigital หา `k'
 
 # --hints--
 
-`pandigitalFibonacciEnds()` should return `329468`.
+`pandigitalFibonacciEnds()` ควร return `329468`.
 
 ```js
 assert.strictEqual(pandigitalFibonacciEnds(), 329468);

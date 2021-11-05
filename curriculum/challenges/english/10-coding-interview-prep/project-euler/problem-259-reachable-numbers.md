@@ -8,22 +8,22 @@ dashedName: problem-259-reachable-numbers
 
 # --description--
 
-A positive integer will be called reachable if it can result from an arithmetic expression obeying the following rules:
+จำนวนเต็มบวกจะเรียกว่าสามารถเข้าถึงได้ หากเป็นผลมาจากนิพจน์เลขคณิตที่ปฏิบัติตามกฎต่อไปนี้:
 
-- Uses the digits 1 through 9, in that order and exactly once each.
-- Any successive digits can be concatenated (for example, using the digits 2, 3 and 4 we obtain the number 234).
-- Only the four usual binary arithmetic operations (addition, subtraction, multiplication and division) are allowed.
-- Each operation can be used any number of times, or not at all.
-- Unary minus is not allowed.
-- Any number of (possibly nested) parentheses may be used to define the order of operations.
+- ใช้ตัวเลข 1 ถึง 9 ตามลำดับและทุกประการ
+- ตัวเลขที่ต่อเนื่องกันสามารถต่อกันได้ (เช่น ใช้ตัวเลข 2, 3 และ 4 เพื่อให้ได้ตัวเลข 234)
+- อนุญาตเฉพาะการคำนวณเลขฐานสองปกติสี่ตัวเท่านั้น (การบวก การลบ การคูณ และการหาร)
+- การดำเนินการแต่ละครั้งสามารถใช้ได้กี่ครั้งก็ได้ หรือไม่ใช้เลยก็ได้
+- ไม่อนุญาตให้ใช้ยูนารีลบ
+- อาจใช้วงเล็บ (อาจซ้อนกัน) จำนวนเท่าใดก็ได้เพื่อกำหนดลำดับการดำเนินการ
 
-For example, 42 is reachable, since $\frac{1}{23} \times ((4 \times 5) - 6) \times (78 - 9) = 42$.
+ตัวอย่างเช่น สามารถเข้าถึงได้ 42 เนื่องจาก $\frac{1}{23} \times ((4 \times 5) - 6) \times (78 - 9) = 42$
 
-What is the sum of all positive reachable integers?
+ผลรวมของจำนวนเต็มบวกที่เข้าถึงได้ทั้งหมดเป็นเท่าใด
 
 # --hints--
 
-`reachableNumbers()` should return `20101196798`.
+`reachableNumbers()` ควร return `20101196798`.
 
 ```js
 assert.strictEqual(reachableNumbers(), 20101196798);

@@ -8,7 +8,7 @@ dashedName: problem-78-coin-partitions
 
 # --description--
 
-Let ${p}(n)$ represent the number of different ways in which `n` coins can be separated into piles. For example, five coins can be separated into piles in exactly seven different ways, so ${p}(5) = 7$.
+ให้ ${p}(n)$ แทนจำนวนวิธีต่างๆ ที่เหรียญ `n` สามารถแยกออกเป็นกองได้ ตัวอย่างเช่น สามารถแยกเหรียญห้าเหรียญออกเป็นกองได้เจ็ดวิธี ดังนั้น ${p}(5) = 7$
 
 <div style='text-align: center;'>
 
@@ -24,35 +24,35 @@ Let ${p}(n)$ represent the number of different ways in which `n` coins can be se
 
 </div><br>
 
-Find the least value of `n` for which ${p}(n)$ is divisible by `divisor`.
+ค้นหาค่าที่น้อยที่สุดของ `n` ซึ่ง ${p}(n)$ หารด้วย `divisor` ลงตัว
 
 # --hints--
 
-`coinPartitions(7)` should return a number.
+`coinPartitions(7)` ควร return number.
 
 ```js
 assert(typeof coinPartitions(7) === 'number');
 ```
 
-`coinPartitions(7)` should return `5`.
+`coinPartitions(7)` ควร return `5`.
 
 ```js
 assert.strictEqual(coinPartitions(7), 5);
 ```
 
-`coinPartitions(10000)` should return `599`.
+`coinPartitions(10000)` ควร return `599`.
 
 ```js
 assert.strictEqual(coinPartitions(10000), 599);
 ```
 
-`coinPartitions(100000)` should return `11224`.
+`coinPartitions(100000)` ควร return `11224`.
 
 ```js
 assert.strictEqual(coinPartitions(100000), 11224);
 ```
 
-`coinPartitions(1000000)` should return `55374`.
+`coinPartitions(1000000)` ควร return `55374`.
 
 ```js
 assert.strictEqual(coinPartitions(1000000), 55374);

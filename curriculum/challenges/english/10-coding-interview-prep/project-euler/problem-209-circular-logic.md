@@ -8,7 +8,7 @@ dashedName: problem-209-circular-logic
 
 # --description--
 
-A $k$-input binary truth table is a map from $k$ input bits (binary digits, 0 [false] or 1 [true]) to 1 output bit. For example, the $2$-input binary truth tables for the logical $AND$ and $XOR$ functions are:
+ตารางความจริงbinary $k$-input เป็นแผนที่จากบิตอินพุต $k$ (เลขฐานสอง 0 [false] หรือ 1 [true]) ถึง 1 บิตเอาต์พุต ตัวอย่างเช่น ตารางความจริงbinaryอินพุต $2$-input สำหรับฟังก์ชันตรรกะ $AND$ และ $XOR$ คือ:
 
 | x | y | x AND y |
 |---|---|---------|
@@ -24,15 +24,15 @@ A $k$-input binary truth table is a map from $k$ input bits (binary digits, 0 [f
 | 1 | 0 |    1    |
 | 1 | 1 |    0    |
 
-How many $6$-input binary truth tables, $τ$, satisfy the formula
+$6$-input binary ตาม truth tables, $τ$, satisfy formula มีเท่าไหร่
 
 $$τ(a, b, c, d, e, f) \\; AND \\; τ(b, c, d, e, f, a \\; XOR \\; (b \\; AND \\; c)) = 0$$
 
-for all $6$-bit inputs ($a$, $b$, $c$, $d$, $e$, $f$)?
+สำหรับทุก $6$-bit inputs ($a$, $b$, $c$, $d$, $e$, $f$)?
 
 # --hints--
 
-`circularLogic()` should return `15964587728784`.
+`circularLogic()` ควร return `15964587728784`.
 
 ```js
 assert.strictEqual(circularLogic(), 15964587728784);

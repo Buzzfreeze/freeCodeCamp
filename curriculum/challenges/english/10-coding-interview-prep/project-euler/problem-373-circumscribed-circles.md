@@ -8,17 +8,17 @@ dashedName: problem-373-circumscribed-circles
 
 # --description--
 
-Every triangle has a circumscribed circle that goes through the three vertices. Consider all integer sided triangles for which the radius of the circumscribed circle is integral as well.
+สามเหลี่ยมทุกรูปมีวงกลมล้อมรอบซึ่งผ่านจุดยอดทั้งสาม พิจารณาสามเหลี่ยมด้านเท่าจำนวนเต็มทั้งหมดที่รัศมีของวงกลมที่ล้อมรอบเป็นอินทิกรัลด้วย
 
-Let $S(n)$ be the sum of the radii of the circumscribed circles of all such triangles for which the radius does not exceed $n$.
+ให้ $S(n)$ เป็นผลรวมของรัศมีของวงกลมที่ล้อมรอบของสามเหลี่ยมดังกล่าวทั้งหมดที่รัศมีไม่เกิน $n$
 
-$S(100) = 4\\,950$ and $S(1\\,200) = 1\\,653\\,605$.
+$S(100) = 4\\,950$ และ $S(1\\,200) = 1\\,653\\,605$
 
-Find $S({10}^7)$.
+หา $S({10}^7)$
 
 # --hints--
 
-`circumscribedCircles()` should return `727227472448913`.
+`circumscribedCircles()` ควร return `727227472448913`.
 
 ```js
 assert.strictEqual(circumscribedCircles(), 727227472448913);

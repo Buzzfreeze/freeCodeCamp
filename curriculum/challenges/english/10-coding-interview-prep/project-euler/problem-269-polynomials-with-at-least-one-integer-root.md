@@ -8,27 +8,27 @@ dashedName: problem-269-polynomials-with-at-least-one-integer-root
 
 # --description--
 
-A root or zero of a polynomial $P(x)$ is a solution to the equation $P(x) = 0$.
+รากหรือศูนย์ของพหุนาม $P(x)$ คือคำตอบของสมการ $P(x) = 0$
 
-Define $P_n$ as the polynomial whose coefficients are the digits of $n$.
+กำหนด $P_n$ เป็นพหุนามที่มีค่าสัมประสิทธิ์เป็นตัวเลขของ $n$
 
-For example, $P_{5703}(x) = 5x^3 + 7x^2 + 3$.
+ตัวอย่างเช่น $P_{5703}(x) = 5x^3 + 7x^2 + 3$
 
-We can see that:
+เราจะเห็นได้ว่า:
 
-- $P_n(0)$ is the last digit of $n$,
-- $P_n(1)$ is the sum of the digits of $n$,
-- $Pn(10)$ is $n$ itself.
+- $P_n(0)$ เป็นตัวเลขสุดท้ายของ $n$
+- $P_n(1)$ คือผลรวมของตัวเลขของ $n$
+- $Pn(10)$ คือ $n$ เอง
 
-Define $Z(k)$ as the number of positive integers, $n$, not exceeding $k$ for which the polynomial $P_n$ has at least one integer root.
+กำหนด $Z(k)$ เป็นจำนวนเต็มบวก $n$ ไม่เกิน $k$ ซึ่งพหุนาม $P_n$ มีรากจำนวนเต็มอย่างน้อยหนึ่งราก
 
-It can be verified that $Z(100\\,000)$ is 14696.
+สามารถตรวจสอบได้ว่า $Z(100\\,000)$ คือ 14696
 
-What is $Z({10}^{16})$?
+หาค่า $Z({10}^{16})$?
 
 # --hints--
 
-`polynomialsWithOneIntegerRoot()` should return `1311109198529286`.
+`polynomialsWithOneIntegerRoot()` ควร return `1311109198529286`.
 
 ```js
 assert.strictEqual(polynomialsWithOneIntegerRoot(), 1311109198529286);

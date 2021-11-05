@@ -8,19 +8,19 @@ dashedName: problem-408-admissible-paths-through-a-grid
 
 # --description--
 
-Let's call a lattice point ($x$, $y$) inadmissible if $x$, $y$ and $x + y$ are all positive perfect squares.
+จุดแลตทิซ ($x$, $y$) ใช้ไม่ได้ถ้า $x$, $y$ และ $x + y$ เป็นกำลังสองสมบูรณ์ที่เป็นบวกทั้งหมด
 
-For example, (9, 16) is inadmissible, while (0, 4), (3, 1) and (9, 4) are not.
+ตัวอย่างเช่น (9, 16) ไม่สามารถยอมรับได้ ในขณะที่ (0, 4), (3, 1) และ (9, 4) ไม่เป็นที่ยอมรับ
 
-Consider a path from point ($x_1$, $y_1$) to point ($x_2$, $y_2$) using only unit steps north or east. Let's call such a path admissible if none of its intermediate points are inadmissible.
+พิจารณาเส้นทางจากจุด ($x_1$, $y_1$) ไปยังจุด ($x_2$, $y_2$) โดยใช้ขั้นตอนหน่วยเหนือหรือตะวันออกเท่านั้น เรียกได้ว่าเป็นเส้นทางที่ยอมรับได้หากไม่มีจุดกึ่งกลางที่ยอมรับไม่ได้
 
-Let $P(n)$ be the number of admissible paths from (0, 0) to ($n$, $n$). It can be verified that $P(5) = 252$, $P(16) = 596\\,994\\,440$ and $P(1\\,000)\bmod 1\\,000\\,000\\,007 = 341\\,920\\,854$.
+ให้ $P(n)$ เป็นจำนวนเส้นทางที่อนุญาตจาก (0, 0) ถึง ($n$, $n$) $P(5) = 252$, $P(16) = 596\\,994\\,440$ and $P(1\\,000)\bmod 1\\,000\\, 000\\,007 = 341\\,920\\,854$
 
-Find $P(10\\,000\\,000)\bmod 1\\,000\\,000\\,007$.
+หา $P(10\\,000\\,000)\bmod 1\\,000\\,000\\,007$
 
 # --hints--
 
-`admissiblePaths()` should return `299742733`.
+`admissiblePaths()` ควร return `299742733`.
 
 ```js
 assert.strictEqual(admissiblePaths(), 299742733);

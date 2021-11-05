@@ -8,9 +8,9 @@ dashedName: problem-318-2011-nines
 
 # --description--
 
-Consider the real number $\sqrt{2} + \sqrt{3}$.
+พิจารณาจำนวนจริง $\sqrt{2} + \sqrt{3}$
 
-When we calculate the even powers of $\sqrt{2} + \sqrt{3}$ we get:
+เมื่อเราคำนวณกำลังคู่ของ $\sqrt{2} + \sqrt{3}$ เราจะได้:
 
 $$\begin{align}
   & {(\sqrt{2} + \sqrt{3})}^2 = 9.898979485566356\ldots \\\\
@@ -23,15 +23,15 @@ $$\begin{align}
   & {(\sqrt{2} + \sqrt{3})}^{16} = 92198401.99999998915\ldots \\\\
 \end{align}$$
 
-It looks like that the number of consecutive nines at the beginning of the fractional part of these powers is non-decreasing. In fact it can be proven that the fractional part of ${(\sqrt{2} + \sqrt{3})}^{2n}$ approaches 1 for large $n$.
+ดูเหมือนว่าจำนวนที่ต่อเนื่องกันที่จุดเริ่มต้นของส่วนที่เป็นเศษส่วนของพลังเหล่านี้จะไม่ลดลง อันที่จริงสามารถพิสูจน์ได้ว่าเศษส่วนของ ${(\sqrt{2} + \sqrt{3})}^{2n}$ เข้าใกล้ 1 สำหรับ $n$ ขนาดใหญ่
 
-Consider all real numbers of the form $\sqrt{p} + \sqrt{q}$ with $p$ and $q$ positive integers and $p &lt; q$, such that the fractional part of ${(\sqrt{p} + \sqrt{q})}^{2n}$ approaches 1 for large $n$.
+พิจารณาจำนวนจริงทั้งหมดของรูปแบบ $\sqrt{p} + \sqrt{q}$ ด้วยจำนวนเต็มบวก $p$ และ $q$ และ $p &lt; q$ เพื่อให้เศษส่วนของ ${(\sqrt{p} + \sqrt{q})}^{2n}$ เข้าใกล้ 1 สำหรับ $n$ ขนาดใหญ่
 
-Let $C(p,q,n)$ be the number of consecutive nines at the beginning of the fractional part of ${(\sqrt{p} + \sqrt{q})}^{2n}$.
+ให้ $C(p,q,n)$ เป็นจำนวนที่ต่อเนื่องกันที่จุดเริ่มต้นของส่วนที่เป็นเศษส่วนของ ${(\sqrt{p} + \sqrt{q})}^{2n}$
 
-Let $N(p,q)$ be the minimal value of $n$ such that $C(p,q,n) ≥ 2011$.
+ให้ $N(p,q)$ เป็นค่าต่ำสุดของ $n$ เพื่อให้ $C(p,q,n) ≥ 2011$
 
-Find $\sum N(p,q)$ for $p + q ≤ 2011$.
+หา $\sum N(p,q)$ สำหรับ $p + q ≤ 2011$
 
 # --hints--
 

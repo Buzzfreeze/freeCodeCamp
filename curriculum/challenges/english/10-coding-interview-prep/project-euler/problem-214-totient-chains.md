@@ -8,9 +8,9 @@ dashedName: problem-214-totient-chains
 
 # --description--
 
-Let $φ$ be Euler's totient function, i.e. for a natural number $n$, $φ(n)$ is the number of $k$, $1 ≤ k ≤ n$, for which $gcd(k,n) = 1$.
+ให้ $φ$ เป็นฟังก์ชัน totient ของออยเลอร์ เช่น สำหรับจำนวน $n$, $φ(n)$ คือจำนวนของ $k$, $1 ≤ k ≤ n$ ซึ่ง $gcd(k,n) = 1 $.
 
-By iterating $φ$, each positive integer generates a decreasing chain of numbers ending in 1. E.g. if we start with 5 the sequence 5,4,2,1 is generated. Here is a listing of all chains with length 4:
+โดยการวนซ้ำ $φ$ จำนวนเต็มบวกแต่ละจำนวนจะสร้างลำดับของตัวเลขที่ลงท้ายด้วย 1 ลดลง เช่น ถ้าเราเริ่มต้นด้วย 5 ลำดับ 5,4,2,1 จะถูกสร้างขึ้น นี่คือรายการของโซ่ทั้งหมดที่มีความยาว 4:
 
 $$\begin{align}
    5,4,2,1 & \\\\
@@ -23,13 +23,13 @@ $$\begin{align}
   18,6,2,1 &
 \end{align}$$
 
-Only two of these chains start with a prime, their sum is 12.
+มีเพียงสองโซ่เหล่านี้ที่เริ่มต้นด้วยจำนวนเฉพาะ ผลรวมของมันคือ 12
 
-What is the sum of all primes less than $40\\,000\\,000$ which generate a chain of length 25?
+อะไรคือผลรวมของจำนวนเฉพาะทั้งหมดที่น้อยกว่า $40\\,000\\,000$ ซึ่งสร้างห่วงโซ่ที่มีความยาว 25?
 
 # --hints--
 
-`totientChains()` should return `1677366278943`.
+`totientChains()` ควร return `1677366278943`.
 
 ```js
 assert.strictEqual(totientChains(), 1677366278943);

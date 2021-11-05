@@ -8,27 +8,27 @@ dashedName: problem-183-maximum-product-of-parts
 
 # --description--
 
-Let $N$ be a positive integer and let $N$ be split into $k$ equal parts, $r = \frac{N}{k}$, so that $N = r + r + \cdots + r$.
+ให้ $N$ เป็นจำนวนเต็มบวก และให้ $N$ แบ่งออกเป็น $k$ ส่วนเท่าๆ กัน $r = \frac{N}{k}$ ดังนั้น $N = r + r + \cdots + r$
 
-Let $P$ be the product of these parts, $P = r × r × \cdots × r = r^k$.
+ให้ $P$ เป็นผลคูณของส่วนเหล่านี้ $P = r × r × \cdots × r = r^k$
 
-For example, if 11 is split into five equal parts, 11 = 2.2 + 2.2 + 2.2 + 2.2 + 2.2, then $P = {2.2}^5 = 51.53632$.
+ตัวอย่างเช่น ถ้า 11 ถูกแบ่งออกเป็นห้าส่วนเท่าๆ กัน 11 = 2.2 + 2.2 + 2.2 + 2.2 + 2.2 แล้ว $P = {2.2}^5 = 51.53632$
 
-Let $M(N) = P_{max}$ for a given value of $N$.
+ให้ $M(N) = P_{max}$ สำหรับค่าที่กำหนดเป็น $N$
 
-It turns out that the maximum for $N = 11$ is found by splitting eleven into four equal parts which leads to $P_{max} = {(\frac{11}{4})}^4$; that is, $M(11) = \frac{14641}{256} = 57.19140625$, which is a terminating decimal.
+ปรากฎว่าค่าสูงสุดของ $N = 11$ หาได้จากการแยกส่วนสิบเอ็ดออกเป็นสี่ส่วนเท่าๆ กัน ซึ่งนำไปสู่ ​​$P_{max} = {(\frac{11}{4})}^4$; นั่นคือ $M(11) = \frac{14641}{256} = 57.19140625$ ซึ่งเป็นจุดสิ้นสุดของทศนิยม
 
-However, for $N = 8$ the maximum is achieved by splitting it into three equal parts, so $M(8) = \frac{512}{27}$, which is a non-terminating decimal.
+อย่างไรก็ตาม สำหรับ $N = 8$ ค่าสูงสุดทำได้โดยแบ่งออกเป็นสามส่วนเท่าๆ กัน ดังนั้น $M(8) = \frac{512}{27}$ ซึ่งเป็นทศนิยมที่ไม่สิ้นสุด
 
-Let $D(N) = N$ if $M(N)$ is a non-terminating decimal and $D(N) = -N$ if $M(N)$ is a terminating decimal.
+ห้ $D(N) = N$ ถ้า $M(N)$ เป็นทศนิยมที่ไม่สิ้นสุด และ $D(N) = -N$ ถ้า $M(N)$ เป็นทศนิยมที่สิ้นสุด
 
-For example, $\sum D(N)$ for $5 ≤ N ≤ 100$ is 2438.
+ตัวอย่างเช่น $\sum D(N)$ สำหรับ $5 ≤ N ≤ 100$ คือ 2438
 
-Find $\sum D(N)$ for $5 ≤ N ≤ 10000$.
+หา $\sum D(N)$ สำหรับ $5 ≤ N ≤ 10000$
 
 # --hints--
 
-`maximumProductOfParts()` should return `48861552`.
+`maximumProductOfParts()` ควร return `48861552`.
 
 ```js
 assert.strictEqual(maximumProductOfParts(), 48861552);

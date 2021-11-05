@@ -8,21 +8,21 @@ dashedName: problem-273-sum-of-squares
 
 # --description--
 
-Consider equations of the form: $a^2 + b^2 = N$, $0 ≤ a ≤ b$, $a$, $b$ and $N$ integer.
+พิจารณาสมการของรูปแบบ: $a^2 + b^2 = N$, $0 ≤ a ≤ b$, $a$, $b$ และ $N$ จำนวนเต็ม
 
-For $N = 65$ there are two solutions:
+สำหรับ $N = 65$ มีสองวิธีแก้ไข:
 
-$a = 1, b = 8$ and $a = 4, b = 7$.
+$a = 1, b = 8$ และ $a = 4, b = 7$
 
-We call $S(N)$ the sum of the values of $a$ of all solutions of $a^2 + b^2 = N$, $0 ≤ a ≤ b$, $a$, $b$ and $N$ integer.
+เราเรียก $S(N)$ ผลรวมของค่าของ $a$ ของคำตอบทั้งหมดของ $a^2 + b^2 = N$, $0 ≤ a ≤ b$, $a$, $b$ และ $N จำนวนเต็ม $
 
-Thus $S(65) = 1 + 4 = 5$.
+ดังนั้น $S(65) = 1 + 4 = 5$
 
-Find $\sum S(N)$, for all squarefree $N$ only divisible by primes of the form $4k + 1$ with $4k + 1 &lt; 150$.
+หา $\sum S(N)$ สำหรับ squarefree ทั้งหมด $N$ หารด้วยจำนวนเฉพาะของรูปแบบ $4k + 1$ ด้วย $4k + 1 &lt; 150$.
 
 # --hints--
 
-`sumOfSquares()` should return `2032447591196869000`.
+`sumOfSquares()` ควร return `2032447591196869000`.
 
 ```js
 assert.strictEqual(sumOfSquares(), 2032447591196869000);

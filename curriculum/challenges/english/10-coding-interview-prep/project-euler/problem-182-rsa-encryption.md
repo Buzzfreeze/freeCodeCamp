@@ -8,58 +8,58 @@ dashedName: problem-182-rsa-encryption
 
 # --description--
 
-The RSA encryption is based on the following procedure:
+การเข้ารหัส RSA ขึ้นอยู่กับขั้นตอนต่อไปนี้:
 
-Generate two distinct primes `p` and `q`.
-Compute `n=p*q` and `φ=(p-1)(q-1)`.
-Find an integer `e`, `1 < e < φ`, such that `gcd(e,φ) = 1`
+สร้างสองจำนวนเฉพาะ `p` และ `q`
+คำนวณ `n=p*q` และ `φ=(p-1)(q-1)`
+ค้นหาจำนวนเต็ม `e`, `1 < e < φ` เพื่อให้ `gcd(e,φ) = 1`
 
-A message in this system is a number in the interval `[0,n-1]`.
-A text to be encrypted is then somehow converted to messages (numbers in the interval `[0,n-1]`).
-To encrypt the text, for each message, `m`, c=m<sup>e</sup> mod n is calculated.
+ข้อความในระบบนี้เป็นตัวเลขในช่วง `[0,n-1]`
+จากนั้นข้อความที่จะเข้ารหัสจะถูกแปลงเป็นข้อความ (ตัวเลขในช่วง `[0,n-1]`)
+ในการเข้ารหัสข้อความ สำหรับแต่ละข้อความ `m`, c=m<sup>e</sup> mod n จะถูกคำนวณ
 
-To decrypt the text, the following procedure is needed: calculate `d` such that `ed=1 mod φ`, then for each encrypted message, `c`, calculate m=c<sup>d</sup> mod n.
+ในการถอดรหัสข้อความ จำเป็นต้องมีขั้นตอนต่อไปนี้: คำนวณ `d` ให้เท่ากับ `ed=1 mod φ` จากนั้นสำหรับแต่ละข้อความที่เข้ารหัส `c` คำนวณ m=c<sup>d</sup> mod n
 
-There exist values of `e` and `m` such that m<sup>e</sup> mod n = m.
-We call messages `m` for which m<sup>e</sup> mod n=m unconcealed messages.
+มีค่าของ `e` และ `m` ซึ่ง m<sup>e</sup> mod n = m
+เราเรียกข้อความ `m` ซึ่ง m<sup>e</sup> mod n=m ข้อความที่ไม่ปกปิด
 
-An issue when choosing `e` is that there should not be too many unconcealed messages.
-For instance, let `p=19` and `q=37`.
-Then `n=19*37=703` and `φ=18*36=648`.
-If we choose `e=181`, then, although `gcd(181,648)=1` it turns out that all possible messages
-m `(0≤m≤n-1)` are unconcealed when calculating m<sup>e</sup> mod n.
-For any valid choice of `e` there exist some unconcealed messages.
-It's important that the number of unconcealed messages is at a minimum.
+ปัญหาในการเลือก "e" คือไม่ควรมีข้อความที่ไม่ปกปิดมากเกินไป
+ตัวอย่างเช่น ให้ `p=19` และ `q=37`
+จากนั้น `n=19*37=703` และ `φ=18*36=648`
+หากเราเลือก `e=181` ถึงแม้ว่า `gcd(181,648)=1` ปรากฎว่าข้อความที่เป็นไปได้ทั้งหมด
+m `(0≤m≤n-1)` ไม่ถูกปกปิดเมื่อคำนวณ m<sup>e</sup> mod n
+สำหรับตัวเลือกที่ถูกต้องของ "e" มีข้อความที่ไม่ปกปิดอยู่บ้าง
+สิ่งสำคัญคือต้องมีข้อความที่ไม่ปกปิดเป็นอย่างน้อย
 
-For any given `p` and `q`, find the sum of all values of `e`, `1 < e < φ(p,q)` and `gcd(e,φ)=1`, so that the number of unconcealed messages for this value of `e` is at a minimum.
+สำหรับ `p` และ `q` ที่ให้มา ให้หาผลรวมของค่าทั้งหมดของ `e`, `1 < e < φ(p,q)` และ `gcd(e,φ)=1` เพื่อให้ตัวเลข ของข้อความที่ไม่ปกปิดสำหรับค่า `e` นี้เป็นอย่างน้อย
 
 # --hints--
 
-`RSAEncryption` should be a function.
+`RSAEncryption` ควรเป็น function.
 
 ```js
 assert(typeof RSAEncryption === 'function')
 ```
 
-`RSAEncryption` should return a number.
+`RSAEncryption` ควร return  number.
 
 ```js
 assert.strictEqual(typeof RSAEncryption(19, 37), 'number');
 ```
 
-`RSAEncryption(19, 37)` should return `17766`.
+`RSAEncryption(19, 37)` ควร return `17766`.
 
 ```js
 assert.strictEqual(RSAEncryption(19, 37), 17766);
 ```
 
-`RSAEncryption(283, 409)` should return `466196580`.
+`RSAEncryption(283, 409)` ควร return `466196580`.
 
 ```js
 assert.strictEqual(RSAEncryption(283, 409), 466196580);
 ```
 
-`RSAEncryption(1009, 3643)` should return `399788195976`.
+`RSAEncryption(1009, 3643)` ควร return `399788195976`.
 
 ```js
 assert.strictEqual(RSAEncryption(19, 37), 17766);

@@ -8,15 +8,15 @@ dashedName: problem-27-quadratic-primes
 
 # --description--
 
-Euler discovered the remarkable quadratic formula:
+Euler ค้นพบพบ quadratic formula:
 
 <div style='margin-left: 4em;'>$n^2 + n + 41$</div>
 
-It turns out that the formula will produce 40 primes for the consecutive integer values $0 \\le n \\le 39$. However, when $n = 40, 40^2 + 40 + 41 = 40(40 + 1) + 41$ is divisible by 41, and certainly when $n = 41, 41^2 + 41 + 41$ is clearly divisible by 41.
+บ่งบอกว่า formula จะมีค่าเลขเฉพาะ 40 primes สำหรับค่าที่เรียงติดกันของ $0 \\le n \\le 39$. อย่างไรก็ตามเมื่อ $n = 40, 40^2 + 40 + 41 = 40(40 + 1) + 41$ ถูกหารโดย 41 และเมื่อ $n = 41, 41^2 + 41 + 41$ และเมื่อถูกหารโดย 41.
 
-The incredible formula $n^2 - 79n + 1601$ was discovered, which produces 80 primes for the consecutive values $0 \\le n \\le 79$. The product of the coefficients, −79 and 1601, is −126479.
+สูตร $n^2 - 79n + 1601$ ถูกพบว่าเมื่อมี 80 primes สำหรับค่าที่เรียงติดกันของ $0 \\le n \\le 79$.  coefficients จะมีค่าผลคูณของ −79 และ 1601 คือ −126479
 
-Considering quadratics of the form:
+พิจารณา quadratics ในรูปของ:
 
 <div style='margin-left: 4em;'>
   $n^2 + an + b$, where $|a| < range$ and $|b| \le range$<br>
@@ -24,35 +24,35 @@ Considering quadratics of the form:
   e.g. $|11| = 11$ and $|-4| = 4$<br>
 </div>
 
-Find the product of the coefficients, $a$ and $b$, for the quadratic expression that produces the maximum number of primes for consecutive values of $n$, starting with $n = 0$.
+หาผลคูณของ coefficients $a$ และ $b$ ในรูป quadratic ที่ผลคูณของค่าสูงสุดของจำนวนเฉพาะเป็นค่าที่เรียงติดกัน $n$, โดยเริ่มจาก $n = 0$
 
 # --hints--
 
-`quadraticPrimes(200)` should return a number.
+`quadraticPrimes(200)` ควร return number.
 
 ```js
 assert(typeof quadraticPrimes(200) === 'number');
 ```
 
-`quadraticPrimes(200)` should return -4925.
+`quadraticPrimes(200)` ควร return -4925.
 
 ```js
 assert(quadraticPrimes(200) == -4925);
 ```
 
-`quadraticPrimes(500)` should return -18901.
+`quadraticPrimes(500)` ควร return -18901.
 
 ```js
 assert(quadraticPrimes(500) == -18901);
 ```
 
-`quadraticPrimes(800)` should return -43835.
+`quadraticPrimes(800)` ควร return -43835.
 
 ```js
 assert(quadraticPrimes(800) == -43835);
 ```
 
-`quadraticPrimes(1000)` should return -59231.
+`quadraticPrimes(1000)` ควร return -59231.
 
 ```js
 assert(quadraticPrimes(1000) == -59231);

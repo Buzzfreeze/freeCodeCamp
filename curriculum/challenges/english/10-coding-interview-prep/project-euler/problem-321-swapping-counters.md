@@ -8,25 +8,25 @@ dashedName: problem-321-swapping-counters
 
 # --description--
 
-A horizontal row comprising of $2n + 1$ squares has $n$ red counters placed at one end and $n$ blue counters at the other end, being separated by a single empty square in the center. For example, when $n = 3$.
+แถวแนวนอนที่ประกอบด้วยสี่เหลี่ยม $2n + 1$ มีตัวนับสีแดง $n$ วางที่ปลายด้านหนึ่งและตัวนับสีน้ำเงิน $n$ ที่ปลายอีกด้านหนึ่ง คั่นด้วยสี่เหลี่ยมว่างเดียวตรงกลาง ตัวอย่างเช่น เมื่อ $n = 3$
 
 <img class="img-responsive center-block" alt="three squares with red and blue counters placed on opposite ends of the row, separated by one empty square" src="https://cdn.freecodecamp.org/curriculum/project-euler/swapping-counters-1.gif" style="background-color: white; padding: 10px;">
 
-A counter can move from one square to the next (slide) or can jump over another counter (hop) as long as the square next to that counter is unoccupied.
+ตัวนับสามารถย้ายจากสี่เหลี่ยมหนึ่งไปยังอีกช่องหนึ่ง (สไลด์) หรือสามารถกระโดดข้ามตัวนับอื่น (กระโดด) ได้ตราบใดที่สี่เหลี่ยมที่อยู่ถัดจากตัวนับนั้นว่างอยู่
 
 <img class="img-responsive center-block" alt="allowed moves of the counter" src="https://cdn.freecodecamp.org/curriculum/project-euler/swapping-counters-2.gif" style="background-color: white; padding: 10px;">
 
-Let $M(n)$ represent the minimum number of moves/actions to completely reverse the positions of the colored counters; that is, move all the red counters to the right and all the blue counters to the left.
+ให้ $M(n)$ แทนจำนวนการเคลื่อนไหว/การกระทำขั้นต่ำเพื่อย้อนกลับตำแหน่งของตัวนับสีทั้งหมด นั่นคือย้ายเคาน์เตอร์สีแดงทั้งหมดไปทางขวาและย้ายเคาน์เตอร์สีน้ำเงินทั้งหมดไปทางซ้าย
 
-It can be verified $M(3) = 15$, which also happens to be a triangle number.
+สามารถตรวจสอบได้ $M(3) = 15$ ซึ่งเป็นตัวเลขสามเหลี่ยมเช่นกัน
 
-If we create a sequence based on the values of n for which $M(n)$ is a triangle number then the first five terms would be: 1, 3, 10, 22, and 63, and their sum would be 99.
+หากเราสร้างลำดับตามค่าของ n ซึ่ง $M(n)$ เป็นตัวเลขสามเหลี่ยม ห้าเทอมแรกจะเป็น: 1, 3, 10, 22 และ 63 และผลรวมของพวกมันจะเท่ากับ 99
 
-Find the sum of the first forty terms of this sequence.
+หาผลรวมของสี่สิบเทอมแรกของลำดับนี้
 
 # --hints--
 
-`swappingCounters()` should return `2470433131948040`.
+`swappingCounters()` ควร return `2470433131948040`.
 
 ```js
 assert.strictEqual(swappingCounters(), 2470433131948040);

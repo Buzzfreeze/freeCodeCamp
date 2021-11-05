@@ -8,26 +8,26 @@ dashedName: problem-265-binary-circles
 
 # --description--
 
-$2^N$ binary digits can be placed in a circle so that all the $N$-digit clockwise subsequences are distinct.
+$2^N$ เลขฐานสองสามารถวางในวงกลมเพื่อให้การเรียงตามเข็มนาฬิกา $N$-หลักทั้งหมดแตกต่างกัน
 
-For $N = 3$, two such circular arrangements are possible, ignoring rotations:
+สำหรับ $N = 3$ สามารถจัดเรียงแบบวงกลมได้สองแบบ โดยไม่สนใจการหมุน:
 
 <img class="img-responsive center-block" alt="two circular arrangements for N = 3" src="https://cdn.freecodecamp.org/curriculum/project-euler/binary-circles.gif" style="background-color: white; padding: 10px;">
 
-For the first arrangement, the 3-digit subsequences, in clockwise order, are: 000, 001, 010, 101, 011, 111, 110 and 100.
+สำหรับการจัดเรียงแรก ลำดับรอง 3 หลักในลำดับตามเข็มนาฬิกาคือ: 000, 001, 010, 101, 011, 111, 110 และ 100
 
-Each circular arrangement can be encoded as a number by concatenating the binary digits starting with the subsequence of all zeros as the most significant bits and proceeding clockwise. The two arrangements for $N = 3$ are thus represented as 23 and 29:
+การจัดเรียงแบบวงกลมแต่ละครั้งสามารถเข้ารหัสเป็นตัวเลขได้โดยการต่อเลขฐานสองโดยเริ่มจากการเรียงเลขศูนย์ตามลำดับเป็นบิตที่สำคัญที่สุดและดำเนินการตามเข็มนาฬิกา การจัดเตรียมสองแบบสำหรับ $N = 3$ จึงแสดงเป็น 23 และ 29:
 
 $${00010111}_2 = 23\\\\
 {00011101}_2 = 29$$
 
-Calling $S(N)$ the sum of the unique numeric representations, we can see that $S(3) = 23 + 29 = 52$.
+เมื่อเรียก $S(N)$ ผลรวมของการแทนค่าตัวเลขที่ไม่ซ้ำกัน เราจะเห็นได้ว่า $S(3) = 23 + 29 = 52$
 
-Find $S(5)$.
+หา $S(5)$.
 
 # --hints--
 
-`binaryCircles()` should return `209110240768`.
+`binaryCircles()` ควร return `209110240768`.
 
 ```js
 assert.strictEqual(binaryCircles(), 209110240768);

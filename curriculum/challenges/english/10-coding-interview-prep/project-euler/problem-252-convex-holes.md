@@ -8,13 +8,13 @@ dashedName: problem-252-convex-holes
 
 # --description--
 
-Given a set of points on a plane, we define a convex hole to be a convex polygon having as vertices any of the given points and not containing any of the given points in its interior (in addition to the vertices, other given points may lie on the perimeter of the polygon).
+จากชุดของจุดบนระนาบ เรากำหนดรูนูนให้เป็นรูปหลายเหลี่ยมนูนที่มีจุดยอดเป็นจุดใดๆ และไม่มีจุดที่กำหนดภายใน (นอกเหนือจากจุดยอด จุดที่กำหนดอื่นๆ อาจอยู่ บนปริมณฑลของรูปหลายเหลี่ยม)
 
-As an example, the image below shows a set of twenty points and a few such convex holes. The convex hole shown as a red heptagon has an area equal to 1049694.5 square units, which is the highest possible area for a convex hole on the given set of points.
+ตัวอย่างเช่น รูปภาพด้านล่างแสดงชุดจุดยี่สิบจุดและรูนูนสองสามรู รูนูนที่แสดงเป็นรูปหกเหลี่ยมสีแดงมีพื้นที่เท่ากับ 1049694.5 ตารางหน่วย ซึ่งเป็นพื้นที่สูงสุดที่เป็นไปได้สำหรับรูนูนบนชุดจุดที่กำหนด
 
 <img class="img-responsive center-block" alt="set of twenty points and convex holes on plane" src="https://cdn.freecodecamp.org/curriculum/project-euler/convex-holes.gif" style="background-color: white; padding: 10px;">
 
-For our example, we used the first 20 points ($T_{2k − 1}$, $T_{2k}$), for $k = 1, 2, \ldots, 20$, produced with the pseudo-random number generator:
+สำหรับตัวอย่างของ เราใช้ 20 คะแนนแรก ($T_{2k − 1}$, $T_{2k}$) สำหรับ $k = 1, 2, \ldots, 20$ ที่ผลิตด้วยตัวสร้างตัวเลขสุ่มหลอก :
 
 $$\begin{align}
   S_0 & = 290\\,797 \\\\
@@ -24,11 +24,11 @@ $$\begin{align}
 
 i.e. (527, 144), (−488, 732), (−454, −947), …
 
-What is the maximum area for a convex hole on the set containing the first 500 points in the pseudo-random sequence? Specify your answer including one digit after the decimal point.
+พื้นที่สูงสุดสำหรับconvex holeในชุดที่มี 500 จุดแรกในลำดับสุ่มหลอกคือเท่าใด ระบุคำตอบโดยใส่ตัวเลขหลังจุดทศนิยมหนึ่งหลัก
 
 # --hints--
 
-`convexHoles()` should return `104924`.
+`convexHoles()` ควร return `104924`.
 
 ```js
 assert.strictEqual(convexHoles(), 104924);

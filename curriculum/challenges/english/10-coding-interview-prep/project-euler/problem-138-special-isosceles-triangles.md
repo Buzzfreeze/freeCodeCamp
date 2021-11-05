@@ -8,19 +8,19 @@ dashedName: problem-138-special-isosceles-triangles
 
 # --description--
 
-Consider the isosceles triangle with base length, $b = 16$, and legs, $L = 17$.
+พิจารณาสามเหลี่ยมหน้าจั่วที่มีความยาวฐาน $b = 16$ และขา $L = 17$
 
 <img class="img-responsive center-block" alt="isosceles triangle with edges named as L - two edges with the same length and base of the triangle as b; and height of the triangle - h from the base of the triangle to the angle between L edges" src="https://cdn.freecodecamp.org/curriculum/project-euler/special-isosceles-triangles.png" style="background-color: white; padding: 10px;">
 
-By using the Pythagorean theorem, it can be seen that the height of the triangle, $h = \sqrt{{17}^2 − 8^2} = 15$, which is one less than the base length.
+โดยใช้ทฤษฎีบทพีทาโกรัส จะเห็นได้ว่าความสูงของสามเหลี่ยม $h = \sqrt{{17}^2 − 8^2} = 15$ ซึ่งน้อยกว่าความยาวฐานหนึ่งจุด
 
-With $b = 272$ and $L = 305$, we get $h = 273$, which is one more than the base length, and this is the second smallest isosceles triangle with the property that $h = b ± 1$.
+ด้วย $b = 272$ และ $L = 305$ เราจะได้ $h = 273$ ซึ่งมากกว่าความยาวฐานหนึ่งอัน และนี่คือสามเหลี่ยมหน้าจั่วที่เล็กที่สุดเป็นอันดับสองที่มีคุณสมบัติที่ $h = b ± 1$
 
-Find $\sum{L}$ for the twelve smallest isosceles triangles for which $h = b ± 1$ and $b$, $L$ are positive integers.
+ค้นหา $\sum{L}$ สำหรับสามเหลี่ยมหน้าจั่วที่เล็กที่สุดสิบสองรูป โดยที่ $h = b ± 1$ และ $b$, $L$ เป็นจำนวนเต็มบวก
 
 # --hints--
 
-`isoscelesTriangles()` should return `1118049290473932`.
+`isoscelesTriangles()` ควร return `1118049290473932`.
 
 ```js
 assert.strictEqual(isoscelesTriangles(), 1118049290473932);

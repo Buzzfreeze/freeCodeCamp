@@ -8,43 +8,43 @@ dashedName: problem-31-coin-sums
 
 # --description--
 
-In England the currency is made up of pound, £, and pence, p, and there are eight coins in general circulation:
+สกุลเงินในอังกฤษคือ pound, £, และ pence, p, และมี 8 coins ในกระแส:
 
 <div style='margin-left: 4em;'>1p, 2p, 5p, 10p, 20p, 50p, £1 (100p) and £2 (200p).</div>
 
-It is possible to make £2 in the following way:
+ถ้าจะใช้ £2 มีวิธี:
 
 <div style='margin-left: 4em;'>1×£1 + 1×50p + 2×20p + 1×5p + 1×2p + 3×1p</div>
 
-How many different ways can `n` pence be made using any number of coins?
+มีกี่วิธีที่ `n` pence ที่จะใช้ได้กับทุก coins?
 
 # --hints--
 
-`coinSums(50)` should return a number.
+`coinSums(50)` ควร return number.
 
 ```js
 assert(typeof coinSums(50) === 'number');
 ```
 
-`coinSums(50)` should return 451.
+`coinSums(50)` ควร return 451.
 
 ```js
 assert(coinSums(50) == 451);
 ```
 
-`coinSums(100)` should return 4563.
+`coinSums(100)` ควร return 4563.
 
 ```js
 assert(coinSums(100) == 4563);
 ```
 
-`coinSums(150)` should return 21873.
+`coinSums(150)` ควร return 21873.
 
 ```js
 assert(coinSums(150) == 21873);
 ```
 
-`coinSums(200)` should return 73682.
+`coinSums(200)` ควร return 73682.
 
 ```js
 assert(coinSums(200) == 73682);

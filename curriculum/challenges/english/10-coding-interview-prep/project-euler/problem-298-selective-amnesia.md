@@ -8,11 +8,11 @@ dashedName: problem-298-selective-amnesia
 
 # --description--
 
-Larry and Robin play a memory game involving of a sequence of random numbers between 1 and 10, inclusive, that are called out one at a time. Each player can remember up to 5 previous numbers. When the called number is in a player's memory, that player is awarded a point. If it's not, the player adds the called number to his memory, removing another number if his memory is full.
+Larry และ Robin เล่นเกมความจำที่เกี่ยวข้องกับลำดับของตัวเลขสุ่มระหว่าง 1 ถึง 10 ซึ่งรวมถึงการโทรออกทีละตัว ผู้เล่นแต่ละคนสามารถจำตัวเลขก่อนหน้าได้สูงสุด 5 หมายเลข เมื่อหมายเลขที่เรียกอยู่ในหน่วยความจำของผู้เล่น ผู้เล่นนั้นจะได้รับคะแนน หากไม่เป็นเช่นนั้น ผู้เล่นจะเพิ่มหมายเลขที่เรียกเข้าในหน่วยความจำของเขา โดยจะลบหมายเลขอื่นออกหากหน่วยความจำเต็ม
 
-Both players start with empty memories. Both players always add new missed numbers to their memory but use a different strategy in deciding which number to remove: Larry's strategy is to remove the number that hasn't been called in the longest time. Robin's strategy is to remove the number that's been in the memory the longest time.
+ผู้เล่นทั้งสองเริ่มต้นด้วยความทรงจำที่ว่างเปล่า ผู้เล่นทั้งสองจะเพิ่มหมายเลขใหม่ที่ไม่ได้รับลงในหน่วยความจำของตนเสมอ แต่ใช้กลยุทธ์อื่นในการตัดสินใจว่าจะลบหมายเลขใด: กลยุทธ์ของแลร์รี่คือการลบหมายเลขที่ไม่ได้เรียกมาเป็นเวลานานที่สุด กลยุทธ์ของโรบินคือการลบตัวเลขที่อยู่ในความทรงจำให้นานที่สุด
 
-Example game:
+เกมตัวอย่าง:
 
 | Turn | Called number | Larry's memory | Larry's score | Robin's memory | Robin's score |
 |------|---------------|---------------:|---------------|----------------|---------------|
@@ -27,11 +27,11 @@ Example game:
 |   9  |       4       |     1,2,4,8,10 |       1       |     2,4,6,8,10 |       3       |
 |  10  |       1       |     1,2,4,8,10 |       2       |     1,4,6,8,10 |       3       |
 
-Denoting Larry's score by $L$ and Robin's score by $R$, what is the expected value of $|L - R|$ after 50 turns? Give your answer rounded to eight decimal places using the format x.xxxxxxxx .
+ระบุคะแนนของแลร์รี่โดย $L$ และคะแนนของโรบินโดย $R$ มูลค่าที่คาดหวังของ $|L - R|$ หลังจาก 50 รอบเป็นเท่าใด ให้คำตอบของคุณเป็นทศนิยมแปดตำแหน่งโดยใช้รูปแบบ x.xxxxxxxx
 
 # --hints--
 
-`selectiveAmnesia()` should return `1.76882294`.
+`selectiveAmnesia()` ควร return `1.76882294`.
 
 ```js
 assert.strictEqual(selectiveAmnesia(), 1.76882294);

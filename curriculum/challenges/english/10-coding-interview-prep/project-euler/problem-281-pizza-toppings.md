@@ -8,19 +8,19 @@ dashedName: problem-281-pizza-toppings
 
 # --description--
 
-You are given a pizza (perfect circle) that has been cut into $m·n$ equal pieces and you want to have exactly one topping on each slice.
+คุณจะได้รับพิซซ่า (วงกลมที่สมบูรณ์แบบ) ที่หั่นเป็นชิ้นขนาดเท่ากัน $m·n$ และคุณต้องการมีท็อปปิ้งอย่างละชิ้น
 
-Let $f(m,n)$ denote the number of ways you can have toppings on the pizza with $m$ different toppings ($m ≥ 2$), using each topping on exactly $n$ slices ($n ≥ 1$). Reflections are considered distinct, rotations are not.
+ให้ $f(m,n)$ แทนจำนวนวิธีที่คุณสามารถเติมท็อปปิ้งบนพิซซ่าด้วยท็อปปิ้ง $m$ ที่แตกต่างกัน ($m ≥ 2$) โดยใช้ท็อปปิ้งแต่ละอันบนชิ้น $n$ ($n ≥ 1$ ). การสะท้อนกลับถือว่าชัดเจน การหมุนไม่ใช่
 
-Thus, for instance, $f(2,1) = 1$, $f(2,2) = f(3,1) = 2$ and $f(3,2) = 16$. $f(3,2)$ is shown below:
+ตัวอย่างเช่น $f(2,1) = 1$, $f(2,2) = f(3,1) = 2$ และ $f(3,2) = 16$ $f(3,2)$ แสดงอยู่ด้านล่าง:
 
 <img class="img-responsive center-block" alt="animation with 16 ways to have 3 different toppings on 2 slices each" src="https://cdn.freecodecamp.org/curriculum/project-euler/pizza-toppings.gif" style="background-color: white; padding: 10px;">
 
-Find the sum of all $f(m,n)$ such that $f(m,n) ≤ {10}^{15}$.
+จงหาผลรวมของ $f(m,n)$ ทั้งหมดที่ $f(m,n) ≤ {10}^{15}$
 
 # --hints--
 
-`pizzaToppings()` should return `1485776387445623`.
+`pizzaToppings()` ควร return `1485776387445623`.
 
 ```js
 assert.strictEqual(pizzaToppings(), 1485776387445623);

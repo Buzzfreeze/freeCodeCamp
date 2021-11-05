@@ -8,31 +8,31 @@ dashedName: problem-336-maximix-arrangements
 
 # --description--
 
-A train is used to transport four carriages in the order: $ABCD$. However, sometimes when the train arrives to collect the carriages they are not in the correct order.
+รถไฟใช้เพื่อขนส่งตู้สี่ตู้ตามลำดับ: $ABCD$ อย่างไรก็ตาม บางครั้งเมื่อรถไฟมาถึงเพื่อไปรับตู้รถไฟ ขบวนรถไฟก็อาจไม่อยู่ในลำดับที่ถูกต้อง
 
-To rearrange the carriages, they are all shunted onto a large rotating turntable. After the carriages are uncoupled at a specific point, the train moves off the turntable pulling the carriages still attached with it. The remaining carriages are rotated 180°. All of the carriages are then rejoined and this process is repeated as often as necessary in order to obtain the least number of uses of the turntable.
+ในการจัดเรียงตู้โดยสารใหม่ ทั้งหมดจะถูกแบ่งไปยังแท่นหมุนขนาดใหญ่ หลังจากถอดตู้โดยสารออกจากจุดที่กำหนดแล้ว รถไฟจะเคลื่อนออกจากแท่นหมุนโดยดึงตู้โดยสารที่ยังติดอยู่กับรางรถไฟ ตู้โดยสารที่เหลือหมุนได้ 180° จากนั้นตู้โดยสารทั้งหมดจะถูกเชื่อมต่อใหม่ และกระบวนการนี้จะทำซ้ำบ่อยเท่าที่จำเป็น เพื่อให้ได้จานเสียงจำนวนน้อยที่สุด
 
-Some arrangements, such as $ADCB$, can be solved easily: the carriages are separated between $A$ and $D$, and after $DCB$ are rotated the correct order has been achieved.
+การเตรียมการบางอย่าง เช่น $ADCB$ สามารถแก้ไขได้ง่าย: รถม้าถูกแยกระหว่าง $A$ และ $D$ และหลังจาก $DCB$ ถูกหมุนเวียน ลำดับที่ถูกต้องก็สำเร็จ
 
-However, Simple Simon, the train driver, is not known for his efficiency, so he always solves the problem by initially getting carriage $A$ in the correct place, then carriage $B$, and so on.
+อย่างไรก็ตาม Simple Simon คนขับรถไฟไม่เป็นที่รู้จักสำหรับประสิทธิภาพของเขา ดังนั้นเขาจึงแก้ปัญหาโดยเริ่มรับรถ $A$ ในตำแหน่งที่ถูกต้อง จากนั้นค่อยขึ้นรถ $B$ เป็นต้น
 
-Using four carriages, the worst possible arrangements for Simon, which we shall call maximix arrangements, are $DACB$ and $DBAC$; each requiring him five rotations (although, using the most efficient approach, they could be solved using just three rotations). The process he uses for $DACB$ is shown below.
+การใช้ตู้โดยสารสี่ตู้ การจัดเตรียมที่แย่ที่สุดสำหรับ Simon ซึ่งเราจะเรียกว่าการจัดเตรียม maximix คือ $DACB$ และ $DBAC$; แต่ละอันต้องการให้เขาหมุนห้ารอบ (แม้ว่าโดยใช้วิธีการที่มีประสิทธิภาพที่สุด พวกเขาสามารถแก้ไขได้โดยใช้การหมุนสามครั้ง) กระบวนการที่เขาใช้สำหรับ $DACB$ แสดงอยู่ด้านล่าง
 
 <img class="img-responsive center-block" alt="five rotations for maximix arrangement DACB" src="https://cdn.freecodecamp.org/curriculum/project-euler/maximix-arrangements.gif" style="background-color: white; padding: 10px;">
 
-It can be verified that there are 24 maximix arrangements for six carriages, of which the tenth lexicographic maximix arrangement is $DFAECB$.
+สามารถตรวจสอบได้ว่ามีการจัดวางแม็กซิมิกซ์ 24 ตู้สำหรับตู้โดยสารหกตู้ โดยการจัดวางแม็กซิมิกซ์ศัพท์บัญญัติที่สิบเป็น $DFAECB$
 
-Find the ${2011}^{\text{th}}$ lexicographic maximix arrangement for eleven carriages.
+หา ${2011}^{\text{th}}$ การจัดเรียงแม็กซิมิกซ์พจนานุกรมสำหรับรถ 11 ตู้
 
 # --hints--
 
-`maximixArrangements()` should return a string.
+`maximixArrangements()` ควร return string.
 
 ```js
 assert(typeof maximixArrangements() === 'string');
 ```
 
-`maximixArrangements()` should return the string `CAGBIHEFJDK`.
+`maximixArrangements()` ควร return string `CAGBIHEFJDK`.
 
 ```js
 assert.strictEqual(maximixArrangements(), 'CAGBIHEFJDK');

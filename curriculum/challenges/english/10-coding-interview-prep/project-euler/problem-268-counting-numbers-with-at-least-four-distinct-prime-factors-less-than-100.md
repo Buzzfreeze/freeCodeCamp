@@ -11,13 +11,13 @@ dashedName: >-
 
 # --description--
 
-It can be verified that there are 23 positive integers less than 1000 that are divisible by at least four distinct primes less than 100.
+สามารถตรวจสอบได้ว่ามีจำนวนเต็มบวก 23 จำนวนที่น้อยกว่า 1,000 ที่หารด้วยจำนวนเฉพาะที่แตกต่างกันอย่างน้อยสี่จำนวนที่น้อยกว่า 100
 
-Find how many positive integers less than ${10}^{16}$ are divisible by at least four distinct primes less than 100.
+หาจำนวนเต็มบวกที่น้อยกว่า ${10}^{16}$ หารด้วยจำนวนเฉพาะที่แตกต่างกันอย่างน้อยสี่จำนวนที่น้อยกว่า 100
 
 # --hints--
 
-`fourDistinctPrimeFactors()` should return `785478606870985`.
+`fourDistinctPrimeFactors()` ควร return `785478606870985`.
 
 ```js
 assert.strictEqual(fourDistinctPrimeFactors(), 785478606870985);

@@ -8,21 +8,21 @@ dashedName: problem-440-gcd-and-tiling
 
 # --description--
 
-We want to tile a board of length $n$ and height 1 completely, with either 1 × 2 blocks or 1 × 1 blocks with a single decimal digit on top:
+เราต้องการเรียงกระดานที่มีความยาว $n$ และสูง 1 ให้สมบูรณ์ โดยมีบล็อก 1 × 2 หรือบล็อก 1 × 1 ที่มีทศนิยมเพียงหลักเดียว
 
 <img class="img-responsive center-block" alt="ten blocks 1x1 with single decimal digit on top, and 1x2 block" src="https://cdn.freecodecamp.org/curriculum/project-euler/gcd-and-tiling-1.png" style="background-color: white; padding: 10px;">
 
-For example, here are some of the ways to tile a board of length $n = 8$:
+ตัวอย่างเช่น ต่อไปนี้คือวิธีบางส่วนในการเรียงต่อกันกระดานที่มีความยาว $n = 8$
 
 <img class="img-responsive center-block" alt="examples of ways to tile a board of length n = 8" src="https://cdn.freecodecamp.org/curriculum/project-euler/gcd-and-tiling-2.png" style="background-color: white; padding: 10px;">
 
-Let $T(n)$ be the number of ways to tile a board of length $n$ as described above.
+ให้ $T(n)$ เป็นจำนวนวิธีการเรียงต่อกันของกระดานที่มีความยาว $n$ ตามที่อธิบายไว้ข้างต้น
 
-For example, $T(1) = 10$ and $T(2) = 101$.
+ตัวอย่างเช่น $T(1) = 10$ และ $T(2) = 101$
 
-Let $S(L)$ be the triple sum $\sum_{a, b, c} gcd(T(c^a), T(c^b))$ for $1 ≤ a, b, c ≤ L$.
+ให้ $S(L)$ เป็นผลรวมสามเท่า $\sum_{a, b, c} gcd(T(c^a), T(c^b))$ สำหรับ $1 ≤ a, b, c ≤ L$
 
-For example:
+ตัวอย่างเช่น
 
 $$\begin{align}
   & S(2) = 10\\,444 \\\\
@@ -30,11 +30,11 @@ $$\begin{align}
   & S(4)\bmod 987\\,898\\,789 = 670\\,616\\,280.
 \end{align}$$
 
-Find $S(2000)\bmod 987\\,898\\,789$.
+หา $S(2000)\bmod 987\\,898\\,789$.
 
 # --hints--
 
-`gcdAndTiling()` should return `970746056`.
+`gcdAndTiling()` ควร return `970746056`.
 
 ```js
 assert.strictEqual(gcdAndTiling(), 970746056);

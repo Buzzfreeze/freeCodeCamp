@@ -8,20 +8,20 @@ dashedName: problem-418-factorisation-triples
 
 # --description--
 
-Let $n$ be a positive integer. An integer triple ($a$, $b$, $c$) is called a factorisation triple of $n$ if:
+ให้ $n$ เป็นจำนวนเต็มบวก จำนวนเต็มสามเท่า ($a$, $b$, $c$) เรียกว่าตัวประกอบสามเท่าของ $n$ ถ้า:
 
 - $1 ≤ a ≤ b ≤ c$
 - $a \times b \times c = n$.
 
-Define $f(n)$ to be $a + b + c$ for the factorisation triple ($a$, $b$, $c$) of $n$ which minimises $\frac{c}{a}$. One can show that this triple is unique.
+กำหนด $f(n)$ ให้เป็น $a + b + c$ สำหรับการแยกตัวประกอบสามเท่า ($a$, $b$, $c$) ของ $n$ ซึ่งย่อให้เล็กสุด $\frac{c}{a}$ หนึ่งสามารถแสดงให้เห็นว่าสามนี้มีเอกลักษณ์เฉพาะ
 
-For example, $f(165) = 19$, $f(100\\,100) = 142$ and $f(20!) = 4\\,034\\,872$.
+ตัวอย่างเช่น $f(165) = 19$, $f(100\\,100) = 142$ และ $f(20!) = 4\\,034\\,872$
 
-Find $f(43!)$.
+หา $f(43!)$
 
 # --hints--
 
-`factorisationTriples()` should return `1177163565297340400`.
+`factorisationTriples()` ควร return `1177163565297340400`.
 
 ```js
 assert.strictEqual(factorisationTriples(), 1177163565297340400);

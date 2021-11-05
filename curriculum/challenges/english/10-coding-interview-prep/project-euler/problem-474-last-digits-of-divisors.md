@@ -8,17 +8,17 @@ dashedName: problem-474-last-digits-of-divisors
 
 # --description--
 
-For a positive integer $n$ and digits $d$, we define $F(n, d)$ as the number of the divisors of $n$ whose last digits equal $d$.
+สำหรับจำนวนเต็มบวก $n$ และหลัก $d$ เรากำหนด $F(n, d)$ เป็นจำนวนของตัวหารของ $n$ ซึ่งหลักสุดท้ายเท่ากับ $d$
 
-For example, $F(84, 4) = 3$. Among the divisors of 84 (1, 2, 3, 4, 6, 7, 12, 14, 21, 28, 42, 84), three of them (4, 14, 84) have the last digit 4.
+ตัวอย่างเช่น $F(84, 4) = 3$ ในบรรดาตัวหารของ 84 (1, 2, 3, 4, 6, 7, 12, 14, 21, 28, 42, 84) สามตัว (4, 14, 84) มีตัวเลขสุดท้าย 4
 
-We can also verify that $F(12!, 12) = 11$ and $F(50!, 123) = 17\\,888$.
+เรายังสามารถตรวจสอบได้ว่า $F(12!, 12) = 11$ และ $F(50!, 123) = 17\\,888$
 
-Find $F({10}^6!, 65\\,432) \text{ modulo } ({10}^{16} + 61)$.
+หา $F({10}^6!, 65\\,432) \text{ modulo } ({10}^{16} + 61)$.
 
 # --hints--
 
-`lastDigitsOfDivisors()` should return `9690646731515010`.
+`lastDigitsOfDivisors()` ควร return `9690646731515010`.
 
 ```js
 assert.strictEqual(lastDigitsOfDivisors(), 9690646731515010);

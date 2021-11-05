@@ -8,15 +8,15 @@ dashedName: problem-66-diophantine-equation
 
 # --description--
 
-Consider quadratic Diophantine equations of the form:
+พิจารณา quadratic Diophantine equations:
 
 <div style='text-align: center;'>x<sup>2</sup> – Dy<sup>2</sup> = 1</div>
 
-For example, when D=13, the minimal solution in x is 649<sup>2</sup> – 13×180<sup>2</sup> = 1.
+เช่นเมื่อ D=13 มี solution ของ x เป็น 649<sup>2</sup> – 13×180<sup>2</sup> = 1.
 
-It can be assumed that there are no solutions in positive integers when D is square.
+สามารถสันนิษฐานได้ว่าไม่มีคำตอบในจำนวนเต็มบวก เมื่อ Dเป็น square
 
-By finding minimal solutions in x for D = {2, 3, 5, 6, 7}, we obtain the following:
+หาค่า solutions ของ x สำหรับ D = {2, 3, 5, 6, 7}:
 
 <div style='margin-left: 2em;'>
   3<sup>2</sup> – 2×2<sup>2</sup> = 1<br>
@@ -26,43 +26,43 @@ By finding minimal solutions in x for D = {2, 3, 5, 6, 7}, we obtain the followi
   8<sup>2</sup> – 7×3<sup>2</sup> = 1<br>
 </div>
 
-Hence, by considering minimal solutions in `x` for D ≤ 7, the largest `x` is obtained when D=5.
+เมื่อดู solutions ใน `x` สำหรับ D ≤ 7 ค่ามากสุดเป็น `x` ที่ถูกกำหนด D=5.
 
-Find the value of D ≤ `n` in minimal solutions of `x` for which the largest value of `x` is obtained.
+หาค่าของ D ≤ `n` ใน solutions ของ `x` ที่ค่ามากสุดของ `x` ถูกกำหนด
 
 # --hints--
 
-`diophantineEquation(7)` should return a number.
+`diophantineEquation(7)` ควร return number.
 
 ```js
 assert(typeof diophantineEquation(7) === 'number');
 ```
 
-`diophantineEquation(7)` should return `5`.
+`diophantineEquation(7)` ควร return `5`.
 
 ```
 assert.strictEqual(diophantineEquation(7), 5);
 ```
 
-`diophantineEquation(100)` should return `61`.
+`diophantineEquation(100)` ควร return `61`.
 
 ```
 assert.strictEqual(diophantineEquation(100), 61);
 ```
 
-`diophantineEquation(409)` should return `409`.
+`diophantineEquation(409)` ควร return `409`.
 
 ```
 assert.strictEqual(diophantineEquation(409), 409);
 ```
 
-`diophantineEquation(500)` should return `421`.
+`diophantineEquation(500)` ควร return `421`.
 
 ```
 assert.strictEqual(diophantineEquation(500), 421);
 ```
 
-`diophantineEquation(1000)` should return `661`.
+`diophantineEquation(1000)` ควร return `661`.
 
 ```js
 assert.strictEqual(diophantineEquation(1000), 661);

@@ -8,21 +8,20 @@ dashedName: problem-89-roman-numerals
 
 # --description--
 
-For a number written in Roman numerals to be considered valid there are basic rules which must be followed. Even though the rules allow some numbers to be expressed in more than one way there is always a *best* way of writing a particular number.
+สำหรับตัวเลขที่เขียนด้วยตัวเลขโรมันถือว่าถูกต้อง มีกฎพื้นฐานที่ต้องปฏิบัติตาม แม้ว่ากฎจะอนุญาตให้แสดงตัวเลขได้มากกว่าหนึ่งวิธี แต่ก็มีอยู่เสมอ *best* วิธีการเขียนตัวเลขเฉพาะ
 
-- Numerals must be arranged in descending order of size.
-- M, C, and X cannot be equaled or exceeded by smaller denominations.
-- D, L, and V can each only appear once.
+- ตัวเลขต้องเรียงจากมากไปน้อยของขนาด
+- M, C และ X ไม่สามารถเท่ากับหรือเกินด้วยนิกายที่เล็กกว่า
+- D, L และ V สามารถปรากฏได้เพียงครั้งเดียว
 
-In addition to the three rules given above, if subtractive combinations are used then the following four rules must be followed.
+นอกเหนือจากกฎสามข้อที่ระบุข้างต้น หากใช้ชุดค่าผสมแบบลบแล้ว จะต้องปฏิบัติตามกฎสี่ข้อต่อไปนี้
 
-- Only one I, X, and C can be used as the leading numeral in part of a subtractive pair.
-- I can only be placed before V and X.
-- X can only be placed before L and C.
-- C can only be placed before D and M.
+- มีเพียง I, X และ C เท่านั้นที่สามารถใช้เป็นตัวเลขนำหน้าในส่วนของคู่ลบได้
+- ฉันสามารถอยู่ข้างหน้า V และ X เท่านั้น
+- X วางได้ก่อน L และ C เท่านั้น
+- C วางได้ก่อน D และ M เท่านั้น
 
-For example, it would appear that there are at least six ways of writing the number sixteen:
-
+ตัวอย่างเช่น ดูเหมือนว่ามีอย่างน้อยหกวิธีในการเขียนเลขสิบหก:
 <div style="margin-left: 4em; font-family: 'courier new', monospace;">
   IIIIIIIIIIIIIIII<br>
   VIIIIIIIIIII<br>
@@ -32,29 +31,29 @@ For example, it would appear that there are at least six ways of writing the num
   XVI<br><br>
 </div>
 
-However, according to the rules only XIIIIII and XVI are valid, and the last example is considered to be the most efficient, as it uses the least number of numerals.
+อย่างไรก็ตาม ตามกฎแล้ว มีเพียง XIIIIII และ XVI เท่านั้นที่ใช้ได้ และตัวอย่างสุดท้ายถือว่ามีประสิทธิภาพมากที่สุด เนื่องจากใช้ตัวเลขน้อยที่สุด
 
-The array, `roman`, will contain numbers written with valid, but not necessarily minimal, Roman numerals.
+array `roman` จะมีตัวเลขที่เขียนด้วยตัวเลขโรมันที่ถูกต้องแต่ไม่จำเป็นต้องน้อยที่สุด
 
-Find the number of characters saved by writing each of these in their minimal form.
+หาจำนวนอักขระที่บันทึกโดยการเขียนแต่ละอักขระในรูปแบบอย่างต่ำ
 
-**Note:** You can assume that all the Roman numerals in the array contain no more than four consecutive identical units.
+**Note:** คุณสามารถสมมติได้ว่าเลขโรมันทั้งหมดในอาร์เรย์มีหน่วยที่เหมือนกันไม่เกินสี่หน่วยติดต่อกัน
 
 # --hints--
 
-`romanNumerals(testNumerals1)` should return a number.
+`romanNumerals(testNumerals1)` ควร return number.
 
 ```js
 assert(typeof romanNumerals(_testNumerals1) === 'number');
 ```
 
-`romanNumerals(testNumerals1)` should return `19`.
+`romanNumerals(testNumerals1)` ควร return `19`.
 
 ```js
 assert.strictEqual(romanNumerals(_testNumerals1), 19);
 ```
 
-`romanNumerals(testNumerals2)` should return `743`.
+`romanNumerals(testNumerals2)` ควร return `743`.
 
 ```js
 assert.strictEqual(romanNumerals(_testNumerals2), 743);

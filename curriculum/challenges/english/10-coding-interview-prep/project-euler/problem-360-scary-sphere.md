@@ -8,21 +8,21 @@ dashedName: problem-360-scary-sphere
 
 # --description--
 
-Given two points ($x_1$, $y_1$, $z_1$) and ($x_2$, $y_2$, $z_2$) in three dimensional space, the Manhattan distance between those points is defined as $|x_1 - x_2| + |y_1 - y_2| + |z_1 - z_2|$.
+ให้สองจุด ($x_1$, $y_1$, $z_1$) และ ($x_2$, $y_2$, $z_2$) ในพื้นที่สามมิติ ระยะทางแมนฮัตตันระหว่างจุดเหล่านั้นถูกกำหนดเป็น $|x_1 - x_2| + |y_1 - y_2| + |z_1 - z_2|$.
 
-Let $C(r)$ be a sphere with radius $r$ and center in the origin $O(0, 0, 0)$.
+ให้ $C(r)$ เป็นทรงกลมที่มีรัศมี $r$ และจุดศูนย์กลางอยู่ที่จุดกำเนิด $O(0, 0, 0)$
 
-Let $I(r)$ be the set of all points with integer coordinates on the surface of $C(r)$.
+ให้ $I(r)$ เป็นเซตของจุดทั้งหมดที่มีพิกัดจำนวนเต็มบนพื้นผิวของ $C(r)$
 
-Let $S(r)$ be the sum of the Manhattan distances of all elements of $I(r)$ to the origin $O$.
+ให้ $S(r)$ เป็นผลรวมของระยะทางแมนฮัตตันขององค์ประกอบทั้งหมดของ $I(r)$ ไปยังจุดกำเนิด $O$
 
-E.g. $S(45)=34518$.
+เช่น $S(45)=34518$
 
-Find $S({10}^{10})$.
+หา $S({10}^{10})$
 
 # --hints--
 
-`scarySphere()` should return `878825614395267100`.
+`scarySphere()` ควร return `878825614395267100`.
 
 ```js
 assert.strictEqual(scarySphere(), 878825614395267100);

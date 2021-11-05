@@ -8,39 +8,41 @@ dashedName: problem-153-investigating-gaussian-integers
 
 # --description--
 
-As we all know the equation $x^2 = -1$ has no solutions for real $x$.
+อย่างที่เราทราบกันดีว่าสมการ $x^2 = -1$ ไม่มีคำตอบสำหรับ $x$ จริง
 
-If we however introduce the imaginary number $i$ this equation has two solutions: $x = i$ and $x = -i$.
+อย่างไรก็ตาม หากเราแนะนำจำนวนจินตภาพ $i$ สมการนี้มีคำตอบสองข้อ: $x = i$ และ $x = -i$
 
-If we go a step further the equation ${(x - 3)}^2 = -4$ has two complex solutions: $x = 3 + 2i$ and $x = 3 - 2i$, which are called each others' complex conjugate.
 
-Numbers of the form $a + bi$ are called complex numbers.
+หากเราก้าวไปอีกขั้น สมการ ${(x - 3)}^2 = -4$ มีสองคำตอบเชิงซ้อน: $x = 3 + 2i$ และ $x = 3 - 2i$ ซึ่งเรียกว่าเชิงซ้อนของกันและกัน
 
-In general $a + bi$ and $a − bi$ are each other's complex conjugate. A Gaussian Integer is a complex number $a + bi$ such that both $a$ and $b$ are integers.
+ตัวเลขในรูปแบบ $a + bi$ เรียกว่าจำนวนเชิงซ้อน
 
-The regular integers are also Gaussian integers (with $b = 0$).
+โดยทั่วไป $a + bi$ และ $a − bi$ เป็นคอนจูเกตที่ซับซ้อนของกันและกัน จำนวนเต็มเกาส์เซียนเป็นจำนวนเชิงซ้อน $a + bi$ โดยที่ทั้ง $a$ และ $b$ เป็นจำนวนเต็ม
 
-To distinguish them from Gaussian integers with $b ≠ 0$ we call such integers "rational integers."
+จำนวนเต็มปกติยังเป็นจำนวนเต็มเกาส์เซียนด้วย (ด้วย $b = 0$)
 
-A Gaussian integer is called a divisor of a rational integer $n$ if the result is also a Gaussian integer.
 
-If for example we divide 5 by $1 + 2i$ we can simplify in the following manner:
+เพื่อแยกความแตกต่างจากจำนวนเต็มเกาส์เซียนด้วย $b ≠ 0$ เราเรียกจำนวนเต็มดังกล่าวว่า "จำนวนเต็มตรรกยะ"
 
-Multiply numerator and denominator by the complex conjugate of $1 + 2i$: $1 − 2i$.
+จำนวนเต็มเกาส์เซียนเรียกว่าตัวหารของจำนวนเต็มตรรกยะ $n$ ถ้าผลลัพธ์เป็นจำนวนเต็ม Gaussian 
 
-The result is:
+ตัวอย่างเช่น หากเราหาร 5 ด้วย $1 + 2i$ เราสามารถลดความซับซ้อนได้ดังนี้:
+
+คูณตัวเศษและส่วนด้วยคอนจูเกตเชิงซ้อนของ $1 + 2i$: $1 − 2i$
+
+ผลลัพธ์คือ:
 
 $$\frac{5}{1 + 2i} = \frac{5}{1 + 2i} \frac{1 - 2i}{1 - 2i} = \frac{5(1 - 2i)}{1 - {(2i)}^2} = \frac{5(1 - 2i)}{1 - (-4)} = \frac{5(1 - 2i)}{5} = 1 - 2i$$
 
-So $1 + 2i$ is a divisor of 5.
+ดังนั้น $1 + 2i$ เป็นตัวหารของ 5
 
-Note that $1 + i$ is not a divisor of 5 because:
+โปรดทราบว่า $1 + i$ ไม่ใช่ตัวหารของ 5 เพราะ:
 
 $$\frac{5}{1 + i} = \frac{5}{2} - \frac{5}{2}i$$
 
-Note also that if the Gaussian Integer ($a + bi$) is a divisor of a rational integer $n$, then its complex conjugate ($a − bi$) is also a divisor of $n$. In fact, 5 has six divisors such that the real part is positive: {1, 1 + 2i, 1 − 2i, 2 + i, 2 − i, 5}.
+โปรดทราบว่าหากจำนวนเต็มเกาส์เซียน ($a + bi$) เป็นตัวหารของจำนวนเต็มตรรกยะ $n$ แล้วคอนจูเกตที่ซับซ้อน ($a − bi$) ก็เป็นตัวหารของ $n$ เช่นกัน อันที่จริง 5 มีตัวหารหกตัวโดยที่ส่วนจริงเป็นบวก: {1, 1 + 2i, 1 − 2i, 2 + i, 2 − i, 5}
 
-The following is a table of all of the divisors for the first five positive rational integers:
+ต่อไปนี้เป็นตารางของตัวหารทั้งหมดสำหรับจำนวนเต็มตรรกยะบวกห้าตัวแรก:
 
 | n | Gaussian integer divisors with positive real part | Sum s(n) of these divisors |
 |---|---------------------------------------------------|----------------------------|
@@ -50,15 +52,15 @@ The following is a table of all of the divisors for the first five positive rati
 | 4 | 1, 1 + i, 1 - i, 2, 2 + 2i, 2 - 2i, 4             | 13                         |
 | 5 | 1, 1 + 2i, 1 - 2i, 2 + i, 2 - i, 5                | 12                         |
 
-For divisors with positive real parts, then, we have: $\displaystyle\sum_{n=1}^5 s(n) = 35$.
+สำหรับตัวหารที่มีส่วนจริงบวก เรามี: $\displaystyle\sum_{n=1}^5 s(n) = 35$
 
-For $1 ≤ n ≤ {10}^5$, $\displaystyle\sum_{n = 1}^{{10}^5} s(n) = 17924657155$.
+สำหรับ $1 ≤ n ≤ {10}^5$, $\displaystyle\sum_{n = 1}^{{10}^5} s(n) = 17924657155$
 
-What is $\displaystyle\sum_{n=1}^{{10}^8} s(n)$?
+$\displaystyle\sum_{n=1}^{{10}^8} s(n)$ คืออะไร
 
 # --hints--
 
-`sumGaussianIntegers()` should return `17971254122360636`.
+`sumGaussianIntegers()` ควร return `17971254122360636`.
 
 ```js
 assert.strictEqual(sumGaussianIntegers(), 17971254122360636);

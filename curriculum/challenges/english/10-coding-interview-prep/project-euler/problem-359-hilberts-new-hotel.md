@@ -8,24 +8,24 @@ dashedName: problem-359-hilberts-new-hotel
 
 # --description--
 
-An infinite number of people (numbered 1, 2, 3, etc.) are lined up to get a room at Hilbert's newest infinite hotel. The hotel contains an infinite number of floors (numbered 1, 2, 3, etc.), and each floor contains an infinite number of rooms (numbered 1, 2, 3, etc.).
+ผู้คนมากมายนับไม่ถ้วน (หมายเลข 1, 2, 3 ฯลฯ) เข้าแถวกันเพื่อเข้าพักในโรงแรมที่ไม่มีที่สิ้นสุดแห่งใหม่ล่าสุดของฮิลเบิร์ต โรงแรมมีจำนวนชั้นไม่สิ้นสุด (หมายเลข 1, 2, 3 ฯลฯ) และแต่ละชั้นมีจำนวนห้องพักไม่จำกัด (หมายเลข 1, 2, 3 เป็นต้น)
 
-Initially the hotel is empty. Hilbert declares a rule on how the $n^{\text{th}}$ person is assigned a room: person $n$ gets the first vacant room in the lowest numbered floor satisfying either of the following:
+เริ่มแรกโรงแรมว่างเปล่า ฮิลเบิร์ตประกาศกฎว่า $n^{\text{th}}$ บุคคลได้รับห้องอย่างไร: บุคคล $n$ ได้ห้องว่างห้องแรกในชั้นที่มีหมายเลขต่ำสุด โดยเป็นไปตามข้อใดข้อหนึ่งต่อไปนี้:
 
-- the floor is empty
-- the floor is not empty, and if the latest person taking a room in that floor is person $m$, then $m + n$ is a perfect square
+- พื้นว่างเปล่า
+- พื้นไม่ว่าง และถ้าคนล่าสุดที่เข้าพักในห้องนั้นคือ $m$ แล้ว $m + n$ จะเป็นสี่เหลี่ยมจัตุรัสที่สมบูรณ์แบบ
 
-Person 1 gets room 1 in floor 1 since floor 1 is empty.
+คนที่ 1 ได้ห้อง 1 ในชั้น 1 เนื่องจากชั้น 1 ว่างเปล่า
 
-Person 2 does not get room 2 in floor 1 since 1 + 2 = 3 is not a perfect square.
+คนที่ 2 ไม่ได้ห้อง 2 ในชั้น 1 เนื่องจาก 1 + 2 = 3 ไม่ใช่สี่เหลี่ยมที่สมบูรณ์แบบ
 
-Person 2 instead gets room 1 in floor 2 since floor 2 is empty.
+บุคคลที่ 2 ได้ห้อง 1 ในชั้น 2 แทน เนื่องจากชั้น 2 ว่างเปล่า
 
-Person 3 gets room 2 in floor 1 since 1 + 3 = 4 is a perfect square.
+คนที่ 3 ได้ห้อง 2 ในชั้น 1 เนื่องจาก 1 + 3 = 4 เป็นสี่เหลี่ยมจัตุรัสที่สมบูรณ์แบบ
 
-Eventually, every person in the line gets a room in the hotel.
+ในที่สุดทุกคนในสายจะได้ห้องในโรงแรม
 
-Define $P(f, r)$ to be $n$ if person $n$ occupies room $r$ in floor $f$, and 0 if no person occupies the room. Here are a few examples:
+กำหนด $P(f, r)$ เป็น $n$ ถ้าบุคคล $n$ อยู่ในห้อง $r$ ในชั้น $f$ และ 0 ถ้าไม่มีใครอยู่ในห้อง นี่คือตัวอย่างบางส่วน:
 
 $$\begin{align}
   & P(1, 1) = 1 \\\\
@@ -36,11 +36,11 @@ $$\begin{align}
   & P(99, 100) = 19454
 \end{align}$$
 
-Find the sum of all $P(f, r)$ for all positive $f$ and $r$ such that $f × r = 71\\,328\\,803\\,586\\,048$ and give the last 8 digits as your answer.
+หาผลรวมของ $P(f, r)$ สำหรับค่าบวกทั้งหมด $f$ และ $r$ โดยที่ $f × r = 71\\,328\\,803\\,586\\,048$ แล้วให้ 8 หลักสุดท้ายเป็นคำตอบของคุณ
 
 # --hints--
 
-`hilbertsNewHotel()` should return `40632119`.
+`hilbertsNewHotel()` ควร return `40632119`.
 
 ```js
 assert.strictEqual(hilbertsNewHotel(), 40632119);

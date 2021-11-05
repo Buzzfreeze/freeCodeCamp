@@ -8,19 +8,19 @@ dashedName: problem-202-laserbeam
 
 # --description--
 
-Three mirrors are arranged in the shape of an equilateral triangle, with their reflective surfaces pointing inwards. There is an infinitesimal gap at each vertex of the triangle through which a laser beam may pass.
+กระจกสามบานจัดเรียงเป็นรูปสามเหลี่ยมด้านเท่า โดยให้พื้นผิวสะท้อนแสงชี้เข้าด้านใน มีช่องว่างเล็ก ๆ น้อย ๆ ในแต่ละจุดยอดของสามเหลี่ยมซึ่งลำแสงเลเซอร์อาจผ่าน
 
-Label the vertices $A$, $B$ and $C$. There are 2 ways in which a laser beam may enter vertex $C$, bounce off 11 surfaces, then exit through the same vertex: one way is shown below; the other is the reverse of that.
+ติดป้ายจุดยอด $A$, $B$ และ $C$ มี 2 ​​วิธีในการที่ลำแสงเลเซอร์จะเข้าสู่จุดยอด $C$ กระเด็นออกจากพื้นผิว 11 แห่ง จากนั้นออกจากจุดยอดเดียวกัน: วิธีหนึ่งแสดงไว้ด้านล่าง อีกอย่างคือสิ่งที่ตรงกันข้าม
 
 <img class="img-responsive center-block" alt="one way in which laser beam may enter vertex C, bounce off 11 surfaces and exit through the same vertex" src="https://cdn.freecodecamp.org/curriculum/project-euler/laserbeam.gif" style="background-color: white; padding: 10px;">
 
-There are 80840 ways in which a laser beam may enter vertex $C$, bounce off 1000001 surfaces, then exit through the same vertex.
+มี 80840 วิธีที่ลำแสงเลเซอร์อาจเข้าสู่จุดยอด $C$ กระเด็นออกจากพื้นผิว 1000000 แล้วออกจากจุดยอดเดียวกัน
 
-In how many ways can a laser beam enter at vertex $C$, bounce off 12017639147 surfaces, then exit through the same vertex?
+ลำแสงเลเซอร์สามารถเข้าที่จุดยอด $C$ กระเด็นออกจาก12017639147 surfaces แล้วออกจากจุดยอดเดียวกันได้กี่วิธี
 
 # --hints--
 
-`laserbeam()` should return `1209002624`.
+`laserbeam()` ควร return `1209002624`.
 
 ```js
 assert.strictEqual(laserbeam(), 1209002624);

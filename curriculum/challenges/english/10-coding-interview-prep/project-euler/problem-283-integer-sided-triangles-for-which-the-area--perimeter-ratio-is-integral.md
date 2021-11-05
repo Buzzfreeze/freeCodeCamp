@@ -11,19 +11,19 @@ dashedName: >-
 
 # --description--
 
-Consider the triangle with sides 6, 8 and 10. It can be seen that the perimeter and the area are both equal to 24.
+พิจารณาสามเหลี่ยมที่มีด้าน 6, 8 และ 10 จะเห็นได้ว่าเส้นรอบรูปและพื้นที่ทั้งสองมีค่าเท่ากับ 24
 
-So the $\frac{\text{area}}{\text{perimeter}}$ ratio is equal to 1.
+ดังนั้นอัตราส่วน $\frac{\text{area}}{\text{perimeter}}$ เท่ากับ 1
 
-Consider also the triangle with sides 13, 14 and 15. The perimeter equals 42 while the area is equal to 84.
+พิจารณาสามเหลี่ยมที่มีด้าน 13, 14 และ 15 ด้วย ปริมณฑลเท่ากับ 42 ในขณะที่พื้นที่เท่ากับ 84
 
-So for this triangle the $\frac{\text{area}}{\text{perimeter}}$ ratio is equal to 2.
+ดังนั้นสำหรับสามเหลี่ยมนี้ อัตราส่วน $\frac{\text{area}}{\text{perimeter}}$ เท่ากับ 2
 
-Find the sum of the perimeters of all integer sided triangles for which the area/perimeter ratios are equal to positive integers not exceeding 1000.
+จงหาผลรวมของเส้นรอบรูปของสามเหลี่ยมด้านเท่าจำนวนเต็มที่มีอัตราส่วนพื้นที่/ปริมณฑลเท่ากับจำนวนเต็มบวกที่ไม่เกิน 1,000
 
 # --hints--
 
-`integralAreaPerimeterRatio()` should return `28038042525570324`.
+`integralAreaPerimeterRatio()` ควร return `28038042525570324`.
 
 ```js
 assert.strictEqual(integralAreaPerimeterRatio(), 28038042525570324);

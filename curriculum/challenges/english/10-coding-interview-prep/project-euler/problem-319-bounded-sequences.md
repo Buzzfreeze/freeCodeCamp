@@ -8,17 +8,17 @@ dashedName: problem-319-bounded-sequences
 
 # --description--
 
-Let $x_1, x_2, \ldots, x_n$ be a sequence of length $n$ such that:
+ให้ $x_1, x_2, \ldots, x_n$ เป็นลำดับของความยาว $n$ เพื่อให้:
 
 - $x_1 = 2$
-- for all $1 &lt; i ≤ n : x_{i - 1} &lt; x_i$
-- for all $i$ and $j$ with $1 ≤ i, j ≤ n : {(x_i)}^j &lt; {(x_j + 1)}^i$
+- สำหรับ $1 &lt; ผม ≤ n : x_{i - 1} &lt; x_i$
+- สำหรับ $i$ และ $j$ ทั้งหมดที่มี $1 ≤ i, j ≤ n : {(x_i)}^j &lt; {(x_j + 1)}^i$
 
-There are only five such sequences of length 2, namely: {2,4}, {2,5}, {2,6}, {2,7} and {2,8}. There are 293 such sequences of length 5; three examples are given below: {2,5,11,25,55}, {2,6,14,36,88}, {2,8,22,64,181}.
+มีเพียงห้าลำดับดังกล่าวของความยาว 2 คือ: {2,4}, {2,5}, {2,6}, {2,7} และ {2,8} มี 293 ลำดับความยาว 5; สามตัวอย่างได้รับด้านล่าง: {2,5,11,25,55}, {2,6,14,36,88}, {2,8,22,64,181}
 
-Let $t(n)$ denote the number of such sequences of length $n$. You are given that $t(10) = 86195$ and $t(20) = 5227991891$.
+ให้ $t(n)$ แทนจำนวนลำดับของความยาว $n$ คุณจะได้รับ $t(10) = 86195$ และ $t(20) = 5227991891$
 
-Find $t({10}^{10})$ and give your answer modulo $10^9$.
+หา $t({10}^{10})$ และให้คำตอบแบบ modulo $10^9$
 
 # --hints--
 

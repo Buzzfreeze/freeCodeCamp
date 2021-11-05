@@ -8,47 +8,48 @@ dashedName: problem-32-pandigital-products
 
 # --description--
 
-We shall say that an `n`-digit number is pandigital if it makes use of all the digits 1 to `n` exactly once; for example, the 5-digit number, 15234, is 1 through 5 pandigital.
+จำนวน `n`-digit number เป็น pandigital ถ้าใช้ทุก digits จาก 1 ถึง `n` digit ละครั้ง
+เช่น 5-digit number, 15234, มี 1 ถึง 5 เป็น pandigital
 
-The product 7254 is unusual, as the identity, 39 × 186 = 7254, containing multiplicand, multiplier, and product is 1 through 9 pandigital.
+ตัวคูณของ 7254 มาจาก 39 × 186 = 7254 ที่มีทั้งตัวคูณและผลคูณมาจาก 1 ถึง 9 เป็นแบบ pandigital
 
-Find the sum of all products whose multiplicand/multiplier/product identity can be written as a 1 through `n` pandigital.
+หาผลรวมของทั้งตัวคูณและผลคูณที่มีตัวเลขประกอบตั้งแต่ 1 ถึง `n` pandigital
 
-**Hint:** Some products can be obtained in more than one way so be sure to only include it once in your sum.
+**Hint:** บางผลลัพธ์มีมากกว่าหนึ่งวิธี ทำให้แน่ใจเมื่อนำผลลัพธ์มารวมกัน
 
 # --hints--
 
-`pandigitalProducts(4)` should return a number.
+`pandigitalProducts(4)` ควร return number.
 
 ```js
 assert(typeof pandigitalProducts(4) === 'number');
 ```
 
-`pandigitalProducts(4)` should return `12`.
+`pandigitalProducts(4)` ควร return `12`.
 
 ```js
 assert.strictEqual(pandigitalProducts(4), 12);
 ```
 
-`pandigitalProducts(6)` should return `162`.
+`pandigitalProducts(6)` ควร return `162`.
 
 ```js
 assert.strictEqual(pandigitalProducts(6), 162);
 ```
 
-`pandigitalProducts(7)` should return `0`.
+`pandigitalProducts(7)` ควร return `0`.
 
 ```js
 assert.strictEqual(pandigitalProducts(7), 0);
 ```
 
-`pandigitalProducts(8)` should return `13458`.
+`pandigitalProducts(8)` ควร return `13458`.
 
 ```js
 assert.strictEqual(pandigitalProducts(8), 13458);
 ```
 
-`pandigitalProducts(9)` should return `45228`.
+`pandigitalProducts(9)` ควร return `45228`.
 
 ```js
 assert.strictEqual(pandigitalProducts(9), 45228);

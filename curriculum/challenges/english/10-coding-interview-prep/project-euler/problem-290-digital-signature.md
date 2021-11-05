@@ -8,11 +8,11 @@ dashedName: problem-290-digital-signature
 
 # --description--
 
-How many integers $0 ≤ n &lt; {10}^{18}$ have the property that the sum of the digits of $n$ equals the sum of digits of $137n$?
+จำนวนเต็ม $0 ≤ n &lt; {10}^{18}$ มีคุณสมบัติที่ผลรวมของหลักของ $n$ เท่ากับผลรวมของหลัก $137n$ หรือไม่
 
 # --hints--
 
-`digitalSignature()` should return `20444710234716470`.
+`digitalSignature()` ควร return `20444710234716470`.
 
 ```js
 assert.strictEqual(digitalSignature(), 20444710234716470);

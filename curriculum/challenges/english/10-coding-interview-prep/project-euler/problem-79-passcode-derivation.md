@@ -8,33 +8,33 @@ dashedName: problem-79-passcode-derivation
 
 # --description--
 
-A common security method used for online banking is to ask the user for three random characters from a passcode. For example, if the passcode was `531278`, they may ask for the 2nd, 3rd, and 5th characters; the expected reply would be: `317`.
+วิธีการรักษาความปลอดภัยทั่วไปที่ใช้สำหรับธนาคารออนไลน์คือการขอให้ผู้ใช้สุ่มอักขระสามตัวจากรหัสผ่าน ตัวอย่างเช่น หากรหัสผ่านคือ `531278` พวกเขาอาจถามถึงอักขระที่ 2, 3 และ 5 คำตอบที่คาดหวังจะเป็น: `317`
 
-The arrays, `keylog1`, `keylog2`, and `keylog3`, contains fifty successful login attempts.
+arrays, `keylog1`, `keylog2`, และ `keylog3`, มีการพยายามเข้าสู่ระบบสำเร็จห้าสิบครั้ง
 
-Given that the three characters are always asked for in order, analyze the array so as to determine the shortest possible secret passcode of unknown length.
+เนื่องจากมีการถามอักขระสามตัวตามลำดับเสมอ ให้วิเคราะห์arrayเพื่อกำหนดรหัสผ่านลับที่สั้นที่สุดเท่าที่จะเป็นไปได้ซึ่งไม่ทราบความยาว
 
 # --hints--
 
-`passcodeDerivation(keylog1)` should return a number.
+`passcodeDerivation(keylog1)` ควร return number.
 
 ```js
 assert(typeof passcodeDerivation(_keylog1) === 'number');
 ```
 
-`passcodeDerivation(keylog1)` should return `531278`.
+`passcodeDerivation(keylog1)` ควร return `531278`.
 
 ```js
 assert.strictEqual(passcodeDerivation(_keylog1), 531278);
 ```
 
-`passcodeDerivation(keylog2)` should return `1230567`.
+`passcodeDerivation(keylog2)` ควร return `1230567`.
 
 ```js
 assert.strictEqual(passcodeDerivation(_keylog2), 1230567);
 ```
 
-`passcodeDerivation(keylog3)` should return `73162890`.
+`passcodeDerivation(keylog3)` ควร return `73162890`.
 
 ```js
 assert.strictEqual(passcodeDerivation(_keylog3), 73162890);

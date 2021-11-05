@@ -8,27 +8,27 @@ dashedName: problem-306-paper-strip-game
 
 # --description--
 
-The following game is a classic example of Combinatorial Game Theory:
+เกมต่อไปนี้เป็นตัวอย่างคลาสสิกของทฤษฎีเกมผสมผสาน:
 
-Two players start with a strip of $n$ white squares and they take alternate turns. On each turn, a player picks two contiguous white squares and paints them black. The first player who cannot make a move loses.
+ผู้เล่นสองคนเริ่มต้นด้วยแถบสี่เหลี่ยมสีขาว $n$ และผลัดกันสลับกัน ในแต่ละเทิร์น ผู้เล่นจะเลือกช่องสี่เหลี่ยมสีขาวสองช่องที่ติดกันและทาให้เป็นสีดำ ผู้เล่นคนแรกที่ไม่สามารถเคลื่อนไหวได้จะแพ้
 
-- $n = 1$: No valid moves, so the first player loses automatically.
-- $n = 2$: Only one valid move, after which the second player loses.
-- $n = 3$: Two valid moves, but both leave a situation where the second player loses.
-- $n = 4$: There are three valid moves for the first player; who is able to win the game by painting the two middle squares.
-- $n = 5$: Four valid moves for the first player (shown below in red); but no matter what the player does, the second player (blue) wins.
+- $n = 1$: ไม่มีการเคลื่อนไหวที่ถูกต้อง ดังนั้นผู้เล่นคนแรกจะแพ้โดยอัตโนมัติ
+- $n = 2$: ย้ายที่ถูกต้องเพียงครั้งเดียว หลังจากนั้นผู้เล่นคนที่สองแพ้
+- $n = 3$: การเคลื่อนไหวที่ถูกต้องสองครั้ง แต่ทั้งคู่ออกจากสถานการณ์ที่ผู้เล่นคนที่สองแพ้
+- $n = 4$: มีสามการเคลื่อนไหวที่ถูกต้องสำหรับผู้เล่นคนแรก; ที่สามารถชนะเกมได้ด้วยการวาดภาพสี่เหลี่ยมตรงกลางสองช่อง
+- $n = 5$: การเคลื่อนไหวที่ถูกต้องสี่ครั้งสำหรับผู้เล่นคนแรก (แสดงเป็นสีแดงด้านล่าง); แต่ไม่ว่าผู้เล่นจะทำอะไร ผู้เล่นคนที่สอง (สีน้ำเงิน) ชนะ
 
 <img class="img-responsive center-block" alt="valid starting moves for strip with 5 squares" src="https://cdn.freecodecamp.org/curriculum/project-euler/paper-strip-game.gif" style="background-color: white; padding: 10px;">
 
-So, for $1 ≤ n ≤ 5$, there are 3 values of $n$ for which the first player can force a win.
+ดังนั้น สำหรับ $1 ≤ n ≤ 5$ มี 3 ค่าของ $n$ ซึ่งผู้เล่นคนแรกสามารถบังคับให้ชนะได้
 
-Similarly, for $1 ≤ n ≤ 50$, there are 40 values of $n$ for which the first player can force a win.
+ในทำนองเดียวกัน สำหรับ $1 ≤ n ≤ 50$ มี 40 ค่าของ $n$ ซึ่งผู้เล่นคนแรกสามารถบังคับให้ชนะได้
 
-For $1 ≤ n ≤ 1\\,000\\,000$, how many values of $n$ are there for which the first player can force a win?
+สำหรับ $1 ≤ n ≤ 1\\,000\\,000$ มีค่าเท่าใดของ $n$ ที่ผู้เล่นคนแรกสามารถบังคับให้ชนะได้
 
 # --hints--
 
-`paperStripGame()` should return `852938`.
+`paperStripGame()` ควร return `852938`.
 
 ```js
 assert.strictEqual(paperStripGame(), 852938);

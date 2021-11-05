@@ -8,19 +8,19 @@ dashedName: problem-113-non-bouncy-numbers
 
 # --description--
 
-Working from left-to-right if no digit is exceeded by the digit to its left it is called an increasing number; for example, 134468.
+การทำงานจากซ้ายไปขวาหากไม่มีตัวเลขใดเกินหลักทางซ้ายจะเรียกว่าจำนวนที่เพิ่มขึ้น ตัวอย่างเช่น 134468
 
-Similarly if no digit is exceeded by the digit to its right it is called a decreasing number; for example, 66420.
+ในทำนองเดียวกันหากไม่มีตัวเลขใดเกินจากหลักทางด้านขวาจะเรียกว่าจำนวนที่ลดลง ตัวอย่างเช่น 66420
 
-We shall call a positive integer that is neither increasing nor decreasing a "bouncy" number; for example, 155349.
+เราจะเรียกจำนวนเต็มบวกที่ไม่เพิ่มหรือลดจำนวน "เด้ง" ตัวอย่างเช่น 155349
 
-As n increases, the proportion of bouncy numbers below n increases such that there are only 12951 numbers below one-million that are not bouncy and only 277032 non-bouncy numbers below ${10}^{10}$.
+เมื่อ n เพิ่มขึ้น สัดส่วนของตัวเลขตีกลับที่ต่ำกว่า n จะเพิ่มขึ้นจนมีเพียง 12951 ตัวเลขที่ต่ำกว่าหนึ่งล้านเท่านั้นที่ไม่เด้ง และมีเพียง 277032 ตัวเลขที่ไม่เด้งที่ต่ำกว่า ${10}^{10}$
 
-How many numbers below a googol (${10}^{100}$) are not bouncy?
+จำนวนที่ต่ำกว่า googol (${10}^{100}$) มีจำนวนเท่าใดที่ไม่เด้ง
 
 # --hints--
 
-`nonBouncyNumbers()` should return `51161058134250`.
+`nonBouncyNumbers()` ควร return `51161058134250`.
 
 ```js
 assert.strictEqual(nonBouncyNumbers(), 51161058134250);

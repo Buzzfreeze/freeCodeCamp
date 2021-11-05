@@ -8,39 +8,40 @@ dashedName: problem-94-almost-equilateral-triangles
 
 # --description--
 
-It is easily proved that no equilateral triangle exists with integral length sides and integral area. However, the almost equilateral triangle 5-5-6 has an area of 12 square units.
+พิสูจน์ได้ง่าย ๆ ว่าไม่มีสามเหลี่ยมด้านเท่าที่มีด้านยาวครบหนึ่งส่วนและพื้นที่ปริพันธ์ อย่างไรก็ตาม สามเหลี่ยมด้านเท่าเกือบ 5-5-6 มีพื้นที่ 12 ตารางหน่วย
 
-We shall define an <dfn>almost equilateral triangle</dfn> to be a triangle for which two sides are equal and the third differs by no more than one unit.
+กำหนดให้ <dfn>almost equilateral triangle</dfn> 
+ให้เป็นสามเหลี่ยมที่มีด้านสองด้านเท่ากันและด้านที่สามต่างกันไม่เกินหนึ่งหน่วย
 
-Find the sum of the perimeters of all almost equilateral triangles with integral side lengths and area and whose perimeters do not exceed `limit`.
+จงหาผลรวมของเส้นรอบรูปของรูปสามเหลี่ยมด้านเท่าเกือบทั้งหมดที่มีความยาวด้านปริพันธ์และพื้นที่รวม และเส้นรอบรูปไม่เกิน `limit`
 
 # --hints--
 
-`almostEquilateralTriangles(50)` should return a number.
+`almostEquilateralTriangles(50)` ควร return number.
 
 ```js
 assert(typeof almostEquilateralTriangles(50) === 'number');
 ```
 
-`almostEquilateralTriangles(50)` should return `66`.
+`almostEquilateralTriangles(50)` ควร return `66`.
 
 ```js
 assert.strictEqual(almostEquilateralTriangles(50), 66);
 ```
 
-`almostEquilateralTriangles(10000)` should return `3688`.
+`almostEquilateralTriangles(10000)` ควร return `3688`.
 
 ```js
 assert.strictEqual(almostEquilateralTriangles(10000), 3688);
 ```
 
-`almostEquilateralTriangles(10000000)` should return `9973078`.
+`almostEquilateralTriangles(10000000)` ควร return `9973078`.
 
 ```js
 assert.strictEqual(almostEquilateralTriangles(10000000), 9973078);
 ```
 
-`almostEquilateralTriangles(1000000000)` should return `518408346`.
+`almostEquilateralTriangles(1000000000)` ควร return `518408346`.
 
 ```js
 assert.strictEqual(almostEquilateralTriangles(1000000000), 518408346);

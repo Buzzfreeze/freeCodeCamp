@@ -8,9 +8,9 @@ dashedName: problem-324-building-a-tower
 
 # --description--
 
-Let $f(n)$ represent the number of ways one can fill a $3×3×n$ tower with blocks of $2×1×1$. You're allowed to rotate the blocks in any way you like; however, rotations, reflections etc of the tower itself are counted as distinct.
+ให้ $f(n)$ แทนจำนวนวิธีที่เราสามารถเติมหอคอย $3×3×n$ ด้วยบล็อก $2×1×1$ คุณสามารถหมุนบล็อคได้ตามที่คุณต้องการ อย่างไรก็ตาม การหมุน การสะท้อน ฯลฯ ของตัวหอคอยนั้นนับว่าแตกต่างออกไป
 
-For example (with $q = 100\\,000\\,007$):
+ตัวอย่างเช่น (ด้วย $q = 100\\,000\\,007$):
 
 $$\begin{align}
   & f(2) = 229, \\\\
@@ -20,11 +20,11 @@ $$\begin{align}
   & f({10}^6)\bmod q = 30\\,808\\,124.
 \end{align}$$
 
-Find $f({10}^{10000})\bmod 100\\,000\\,007$.
+หา $f({10}^{10000})\bmod 100\\,000\\,007$
 
 # --hints--
 
-`buildingTower()` should return `96972774`.
+`buildingTower()` ควร return `96972774`.
 
 ```js
 assert.strictEqual(buildingTower(), 96972774);

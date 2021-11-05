@@ -8,23 +8,24 @@ dashedName: problem-155-counting-capacitor-circuits
 
 # --description--
 
-An electric circuit uses exclusively identical capacitors of the same value C.
+วงจรไฟฟ้าใช้เฉพาะตัวเก็บประจุที่มีค่า C เท่ากันเท่านั้น
 
-The capacitors can be connected in series or in parallel to form sub-units, which can then be connected in series or in parallel with other capacitors or other sub-units to form larger sub-units, and so on up to a final circuit.
+ตัวเก็บประจุสามารถเชื่อมต่อแบบอนุกรมหรือขนานกันเพื่อสร้างยูนิตย่อย ซึ่งสามารถต่อแบบอนุกรมหรือขนานกับตัวเก็บประจุอื่นๆ หรือยูนิตย่อยอื่นๆ เพื่อสร้างยูนิตย่อยที่ใหญ่ขึ้น และต่อเนื่องไปจนถึงวงจรสุดท้าย
 
-Using this simple procedure and up to n identical capacitors, we can make circuits having a range of different total capacitances. For example, using up to $n = 3$ capacitors of $60 μF$ each, we can obtain the following 7 distinct total capacitance values:
+ด้วยขั้นตอนง่ายๆ นี้และตัวเก็บประจุที่เหมือนกันมากถึง n ตัว เราสามารถสร้างวงจรที่มีช่วงของความจุรวมที่แตกต่างกันได้ ตัวอย่างเช่น การใช้ตัวเก็บประจุสูงสุด $n = 3$ ตัวละ $60 μF$ เราสามารถรับค่าความจุรวมที่แตกต่างกัน 7 ค่าต่อไปนี้:
 
 <img class="img-responsive center-block" alt="example circuits having up to three capacitors, each of 60 μF" src="https://cdn.freecodecamp.org/curriculum/project-euler/counting-capacitor-circuits.gif" style="background-color: white; padding: 10px;">
 
-If we denote by $D(n)$ the number of distinct total capacitance values we can obtain when using up to $n$ equal-valued capacitors and the simple procedure described above, we have: $D(1) = 1, D(2) = 3, D(3)=7, \ldots$
+ถ้าเราระบุด้วย $D(n)$ จำนวนของค่าความจุรวมที่แตกต่างกันที่เราสามารถรับได้เมื่อใช้ตัวเก็บประจุที่มีมูลค่าเท่ากันถึง $n$ และขั้นตอนง่าย ๆ ที่อธิบายข้างต้น เรามี: $D(1) = 1, D (2) = 3, D(3)=7, \ldots$
 
-Find $D(18)$.
+หา $D(18)$
 
-Reminder: When connecting capacitors $C_1$, $C_2$ etc in parallel, the total capacitance is $C_T = C_1 + C_2 + \cdots$, whereas when connecting them in series, the overall capacitance is given by: $\frac{1}{C_T} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots$.
+Reminder: 
+เมื่อเชื่อมต่อตัวเก็บประจุ $C_1$, $C_2$ ฯลฯ แบบขนาน ความจุรวมคือ $C_T = C_1 + C_2 + \cdots$ ในขณะที่เมื่อเชื่อมต่อเป็นอนุกรม ความจุโดยรวมจะได้รับจาก: $\frac{1}{ C_T} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots$
 
 # --hints--
 
-`capacitanceValues()` should return `3857447`.
+`capacitanceValues()` ควร return `3857447`.
 
 ```js
 assert.strictEqual(capacitanceValues(), 3857447);

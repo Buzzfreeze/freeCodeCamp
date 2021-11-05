@@ -8,23 +8,23 @@ dashedName: problem-325-stone-game-ii
 
 # --description--
 
-A game is played with two piles of stones and two players. On each player's turn, the player may remove a number of stones from the larger pile. The number of stones removes must be a positive multiple of the number of stones in the smaller pile.
+เกมนี้เล่นด้วยหินสองกองและผู้เล่นสองคน ในตาของผู้เล่นแต่ละคน ผู้เล่นอาจเอาหินจำนวนหนึ่งออกจากกองที่ใหญ่กว่า จำนวนหินที่นำออกต้องเป็นจำนวนบวกของจำนวนหินในกองที่เล็กกว่า
 
-E.g., let the ordered pair (6,14) describe a configuration with 6 stones in the smaller pile and 14 stones in the larger pile, then the first player can remove 6 or 12 stones from the larger pile.
+เช่น ให้คู่ที่สั่ง (6,14) อธิบายการกำหนดค่าด้วยหิน 6 ก้อนในกองที่เล็กกว่าและ 14 ก้อนในกองที่ใหญ่กว่า จากนั้นผู้เล่นคนแรกสามารถเอาหิน 6 หรือ 12 ก้อนออกจากกองที่ใหญ่กว่าได้
 
-The player taking all the stones from a pile wins the game.
+ผู้เล่นที่นำหินทั้งหมดจากกองเป็นฝ่ายชนะเกม
 
-A winning configuration is one where the first player can force a win. For example, (1,5), (2,6) and (3,12) are winning configurations because the first player can immediately remove all stones in the second pile.
+การกำหนดค่าที่ชนะคือสิ่งที่ผู้เล่นคนแรกสามารถบังคับให้ชนะได้ ตัวอย่างเช่น (1,5), (2,6) และ (3,12) ชนะการกำหนดค่าเนื่องจากผู้เล่นคนแรกสามารถลบหินทั้งหมดในกองที่สองได้ทันที
 
-A losing configuration is one where the second player can force a win, no matter what the first player does. For example, (2,3) and (3,4) are losing configurations: any legal move leaves a winning configuration for the second player.
+การกำหนดค่าที่แพ้คือสิ่งที่ผู้เล่นคนที่สองสามารถบังคับให้ชนะ ไม่ว่าผู้เล่นคนแรกจะทำอะไรก็ตาม ตัวอย่างเช่น (2,3) และ (3,4) กำลังสูญเสียการกำหนดค่า: การย้ายทางกฎหมายใด ๆ ออกจากการกำหนดค่าที่ชนะสำหรับผู้เล่นคนที่สอง
 
-Define $S(N)$ as the sum of ($x_i + y_i$) for all losing configurations ($x_i$, $y_i$), $0 &lt; x_i &lt; y_i ≤ N$. We can verify that $S(10) = 211$ and $S({10}^4) = 230\\,312\\,207\\,313$.
+กำหนด $S(N)$ เป็นผลรวมของ ($x_i + y_i$) สำหรับการกำหนดค่าที่สูญเสียทั้งหมด ($x_i$, $y_i$), $0 &lt; x_i &lt; y_i ≤ N$ เราสามารถยืนยันได้ว่า $S(10) = 211$ และ $S({10}^4) = 230\\,312\\,207\\,313$
 
-Find $S({10}^{16})\bmod 7^{10}$.
+หา $S({10}^{16})\bmod 7^{10}$
 
 # --hints--
 
-`stoneGameTwo()` should return `54672965`.
+`stoneGameTwo()` ควร return `54672965`.
 
 ```js
 assert.strictEqual(stoneGameTwo(), 54672965);

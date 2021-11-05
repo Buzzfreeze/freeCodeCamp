@@ -8,33 +8,34 @@ dashedName: problem-80-square-root-digital-expansion
 
 # --description--
 
-It is well known that if the square root of a natural number is not an integer, then it is irrational. The decimal expansion of such square roots is infinite without any repeating pattern at all.
+เป็นที่ทราบกันดีว่าหากรากที่สองของจำนวนธรรมชาติไม่ใช่จำนวนเต็ม แสดงว่าไม่ลงตัว การขยายทศนิยมของรากที่สองนั้นไม่มีที่สิ้นสุดโดยไม่มีรูปแบบซ้ำเลย
 
-The square root of two is `1.41421356237309504880...`, and the digital sum of the first one hundred decimal digits is `475`.
+รากที่สองของสองคือ
+ `1.41421356237309504880...`, และผลรวมของทศนิยมหลักร้อยหลักร้อยเป็น `475`.
 
-For the first `n` natural numbers, find the total of the digital sums of the first one hundred decimal digits for all the irrational square roots.
+สำหรับจำนวนธรรมชาติ `n` แรก ให้หาผลรวมดิจิทัลของหลักทศนิยมหนึ่งร้อยหลักแรกสำหรับรากที่สองที่ไม่ลงตัวทั้งหมด
 
 # --hints--
 
-`sqrtDigitalExpansion(2)` should return a number.
+`sqrtDigitalExpansion(2)` ควร return number.
 
 ```js
 assert(typeof sqrtDigitalExpansion(2) === 'number');
 ```
 
-`sqrtDigitalExpansion(2)` should return `475`.
+`sqrtDigitalExpansion(2)` ควร return `475`.
 
 ```js
 assert.strictEqual(sqrtDigitalExpansion(2), 475);
 ```
 
-`sqrtDigitalExpansion(50)` should return `19543`.
+`sqrtDigitalExpansion(50)` ควร return `19543`.
 
 ```js
 assert.strictEqual(sqrtDigitalExpansion(50), 19543);
 ```
 
-`sqrtDigitalExpansion(100)` should return `40886`.
+`sqrtDigitalExpansion(100)` ควร return `40886`.
 
 ```js
 assert.strictEqual(sqrtDigitalExpansion(100), 40886);

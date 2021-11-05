@@ -8,24 +8,25 @@ dashedName: problem-292-pythagorean-polygons
 
 # --description--
 
-We shall define a pythagorean polygon to be a convex polygon with the following properties:
+เราจะกำหนดรูปหลายเหลี่ยมพีทาโกรัสให้เป็นรูปหลายเหลี่ยมนูนที่มีคุณสมบัติดังต่อไปนี้:
 
-- there are at least three vertices,
-- no three vertices are aligned,
-- each vertex has integer coordinates,
-- each edge has integer length.
+- มีจุดยอดอย่างน้อยสามจุด
+- ไม่มีจุดยอดสามจุดเรียงกัน
+- แต่ละจุดยอดมีพิกัดจำนวนเต็ม
+- ขอบแต่ละด้านมีความยาวเป็นจำนวนเต็ม
 
-For a given integer $n$, define $P(n)$ as the number of distinct pythagorean polygons for which the perimeter is $≤ n$.
+สำหรับจำนวนเต็มที่กำหนด $n$ ให้กำหนด $P(n)$ เป็นจำนวนรูปหลายเหลี่ยมพีทาโกรัสที่แตกต่างกัน ซึ่งเส้นรอบรูปคือ $≤ n$
 
-Pythagorean polygons should be considered distinct as long as none is a translation of another.
 
-You are given that $P(4) = 1$, $P(30) = 3655$ and $P(60) = 891045$.
+รูปหลายเหลี่ยมพีทาโกรัสควรได้รับการพิจารณาให้แตกต่างออกไป ตราบใดที่ไม่มีการแปลของอีกรูปหนึ่ง
 
-Find $P(120)$.
+คุณจะได้รับ $P(4) = 1$, $P(30) = 3655$ and $P(60) = 891045$.
+
+หา $P(120)$
 
 # --hints--
 
-`pythagoreanPolygons()` should return `3600060866`.
+`pythagoreanPolygons()` ควร return `3600060866`.
 
 ```js
 assert.strictEqual(pythagoreanPolygons(), 3600060866);

@@ -8,30 +8,28 @@ dashedName: problem-464-mbius-function-and-intervals
 
 # --description--
 
-The Möbius function, denoted $μ(n)$, is defined as:
+ฟังก์ชัน Möbius ระบุ $μ(n)$ ถูกกำหนดเป็น:
 
-- $μ(n) = (-1)^{ω(n)}$ if $n$ is squarefree (where $ω(n)$ is the number of distinct prime factors of $n$)
-- $μ(n) = 0$ if $n$ is not squarefree.
+- $μ(n) = (-1)^{ω(n)}$ ถ้า $n$ เป็นสี่เหลี่ยมจัตุรัสฟรี (โดยที่ $ω(n)$ คือจำนวนของปัจจัยเฉพาะที่แตกต่างกันของ $n$)
+- $μ(n) = 0$ ถ้า $n$ ไม่เป็นสี่เหลี่ยมจัตุรัส
 
-Let $P(a, b)$ be the number of integers $n$ in the interval $[a, b]$ such that $μ(n) = 1$.
+ห้ $P(a, b)$ เป็นจำนวนเต็ม $n$ ในช่วง $[a, b]$ โดยที่ $μ(n) = 1$
 
-Let $N(a, b)$ be the number of integers $n$ in the interval $[a, b]$ such that $μ(n) = -1$.
+ให้ $N(a, b)$ เป็นจำนวนเต็ม $n$ ในช่วง $[a, b]$ โดยที่ $μ(n) = -1$
 
-For example, $P(2, 10) = 2$ and $N(2, 10) = 4$.
+ตัวอย่างเช่น $P(2, 10) = 2$ และ $N(2, 10) = 4$
 
-Let $C(n)$ be the number of integer pairs $(a, b)$ such that:
+ให้ $P(a, b)$ เป็นจำนวนเต็ม $n$ ในช่วง $[a, b]$ โดยที่ $μ(n) = 1$
 
-- $1 ≤ a ≤ b ≤ n$,
-- $99 \times N(a, b) ≤ 100 \times P(a, b)$, and
-- $99 \times P(a, b) ≤ 100 \times N(a, b)$.
+ให้ $N(a, b)$ เป็นจำนวนเต็ม $n$ ในช่วง $[a, b]$ โดยที่ $μ(n) = -1$
 
-For example, $C(10) = 13$, $C(500) = 16\\,676$ and $C(10\\,000) = 20\\,155\\,319$.
+ตัวอย่างเช่น $P(2, 10) = 2$ และ $N(2, 10) = 4$
 
-Find $C(20\\,000\\,000)$.
+หา $C(20\\,000\\,000)$.
 
 # --hints--
 
-`mobiusFunctionAndIntervals()` should return `198775297232878`.
+`mobiusFunctionAndIntervals()` ควร return `198775297232878`.
 
 ```js
 assert.strictEqual(mobiusFunctionAndIntervals(), 198775297232878);

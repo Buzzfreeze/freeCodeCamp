@@ -8,29 +8,30 @@ dashedName: problem-406-guessing-game
 
 # --description--
 
-We are trying to find a hidden number selected from the set of integers {1, 2, ..., $n$} by asking questions. Each number (question) we ask, we get one of three possible answers:
+เรากำลังพยายามค้นหาตัวเลขที่ซ่อนอยู่ซึ่งเลือกจากชุดของจำนวนเต็ม {1, 2, ..., $n$} โดยถามคำถาม แต่ละหมายเลข (คำถาม) ที่เราถาม เราได้รับหนึ่งในสามคำตอบที่เป็นไปได้:
 
-- "Your guess is lower than the hidden number" (and you incur a cost of a), or
-- "Your guess is higher than the hidden number" (and you incur a cost of b), or
-- "Yes, that's it!" (and the game ends).
+- "การเดาของคุณต่ำกว่าตัวเลขที่ซ่อนอยู่" (และคุณมีค่าใช้จ่าย a) หรือ
+- "การเดาของคุณมากกว่าตัวเลขที่ซ่อนอยู่" (และคุณมีค่าใช้จ่าย b) หรือ
+- "ใช่นั่นแหล่ะ!" (และเกมก็จบลง)
 
-Given the value of $n$, $a$, and $b$, an optimal strategy minimizes the total cost <u>for the worst possible case</u>.
+ด้วยมูลค่าของ $n$, $a$ และ $b$ กลยุทธ์ที่เหมาะสมจะลดต้นทุนทั้งหมด <u>for the worst possible case</u>.
 
-For example, if $n = 5$, $a = 2$, and $b = 3$, then we may begin by asking "<strong>2</strong>" as our first question.
+ตัวอย่างเช่น ถ้า $n = 5$, $a = 2$ และ $b = 3$ เราอาจเริ่มด้วยการถาม "<strong>2</strong>" เป็นคำถามแรกของเรา
 
-If we are told that 2 is higher than the hidden number (for a cost of $b = 3$), then we are sure that "<strong>1</strong>" is the hidden number (for a total cost of <strong><span style="color: blue;">3</span></strong>).
+หากเราบอกว่า 2 สูงกว่าจำนวนที่ซ่อนอยู่ (สำหรับราคา $b = 3$) เราก็มั่นใจว่า "<strong>1</strong>" เป็นตัวเลขที่ซ่อนอยู่ (สำหรับค่าใช้จ่ายทั้งหมด <strong><span style="color: blue;">3</span></strong>).
 
-If we are told that 2 is lower than the hidden number (for a cost of $a = 2$), then our next question will be "<strong>4</strong>".
+หากเราได้รับแจ้งว่า 2 ต่ำกว่าจำนวนที่ซ่อนอยู่ (สำหรับราคา $a = 2$) คำถามต่อไปของเราคือ "<strong>4</strong>".
 
-If we are told that 4 is higher than the hidden number (for a cost of $b = 3$), then we are sure that "<strong>3</strong>" is the hidden number (for a total cost of $2 + 3 = \color{blue}{\mathbf{5}}$).
+หากเราบอกว่า 4 สูงกว่าจำนวนที่ซ่อนอยู่ (สำหรับราคา $b = 3$) เราก็มั่นใจว่า "<strong>3</strong>" เป็นตัวเลขที่ซ่อนอยู่ (สำหรับราคารวม $2 + 3 = \color{blue}{\mathbf{5}}$)
 
-If we are told that 4 is lower than the hidden number (for a cost of $a = 2$), then we are sure that "<strong>5</strong>" is the hidden number (for a total cost of $2 + 2 = \color{blue}{\mathbf{4}}$).
+หากเราบอกว่า 4 ต่ำกว่าจำนวนที่ซ่อนอยู่ (สำหรับราคา $a = 2$) เราก็มั่นใจว่า "<strong>5</strong>" เป็นตัวเลขที่ซ่อนอยู่ (สำหรับราคารวม $2 + 2 = \color{blue}{\mathbf{4}}$)
 
-Thus, the worst-case cost achieved by this strategy is <strong><span style="color: red">5</span></strong>. It can also be shown that this is the lowest worst-case cost that can be achieved. So, in fact, we have just described an optimal strategy for the given values of $n$, $a$, and $b$.
+ดังนั้น ต้นทุนกรณีที่เลวร้ายที่สุดที่กลยุทธ์นี้ทำได้คือ <strong><span style="color: red">5</span></strong> นอกจากนี้ยังสามารถแสดงให้เห็นว่านี่เป็นต้นทุนกรณีที่เลวร้ายที่สุดที่ต่ำที่สุดที่สามารถทำได้ ดังนั้น ที่จริงแล้ว เราเพิ่งอธิบายกลยุทธ์ที่เหมาะสมที่สุดสำหรับค่าที่กำหนดของ $n$, $a$ และ $b$
 
-Let $C(n, a, b)$ be the worst-case cost achieved by an optimal strategy for the given values of $n$, $a$, and $b$.
+ให้ $C(n, a, b)$ 
+เป็นต้นทุนกรณีที่เลวร้ายที่สุดที่ทำได้โดยกลยุทธ์ที่เหมาะสมที่สุดสำหรับค่าที่กำหนดของ $n$, $a$ และ $b$
 
-Here are a few examples:
+เช่น
 
 $$\begin{align}
   & C(5, 2, 3) = 5 \\\\
@@ -39,13 +40,13 @@ $$\begin{align}
   & C(2\\,000\\,000, √5, √7) = 49.637\\,559\\,55\ldots \\\\
 \end{align}$$
 
-Let $F_k$ be the Fibonacci numbers: $F_k = F_{k - 1} + F_{k - 2}$ with base cases $F_1 = F_2 = 1$.
+ให้ $F_k$ เป็นตัวเลขFibonacci: $F_k = F_{k - 1} + F_{k - 2}$ ด้วยตัวพิมพ์พื้นฐาน $F_1 = F_2 = 1$
 
-Find $\displaystyle\sum_{k = 1}^{30} C({10}^{12}, \sqrt{k}, \sqrt{F_k})$, and give your answer rounded to 8 decimal places behind the decimal point.
+ค้นหา $\displaystyle\sum_{k = 1}^{30} C({10}^{12}, \sqrt{k}, \sqrt{F_k})$ และให้คำตอบของคุณปัดเศษทศนิยม 8 ตำแหน่งหลัง จุดทศนิยม
 
 # --hints--
 
-`guessingGame()` should return `36813.12757207`.
+`guessingGame()` ควร return `36813.12757207`.
 
 ```js
 assert.strictEqual(guessingGame(), 36813.12757207);

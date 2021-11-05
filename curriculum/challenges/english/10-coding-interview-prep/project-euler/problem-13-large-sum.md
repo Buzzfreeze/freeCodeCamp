@@ -8,7 +8,7 @@ dashedName: problem-13-large-sum
 
 # --description--
 
-Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
+10 หลักแรกของผลรวมของผลรวมของตัวเลขหนึ่งร้อย 50 หลักต่อไปนี้
 
 <div style='padding-left: 4em;'>
   37107287533902102798797998220837590246510135740250<br>
@@ -115,19 +115,19 @@ Work out the first ten digits of the sum of the following one-hundred 50-digit n
 
 # --hints--
 
-`largeSum(testNums)` should return a number.
+`largeSum(testNums)` ควร return  number
 
 ```js
 assert(typeof largeSum(testNums) === 'number');
 ```
 
-`largeSum(testNums)` should return 8348422521.
+`largeSum(testNums)` ควร return 8348422521
 
 ```js
 assert.strictEqual(largeSum(testNums), 8348422521);
 ```
 
-`largeSum(fiftyDigitNums)` should return 5537376230.
+`largeSum(fiftyDigitNums)` ควร return 5537376230
 
 ```js
 assert.strictEqual(largeSum(fiftyDigitNums), 5537376230);

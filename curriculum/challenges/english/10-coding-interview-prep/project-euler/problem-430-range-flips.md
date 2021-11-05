@@ -8,23 +8,23 @@ dashedName: problem-430-range-flips
 
 # --description--
 
-$N$ disks are placed in a row, indexed 1 to $N$ from left to right.
+$N$ disks วางเรียงกันเป็นแถว ดัชนี 1 ถึง $N$ จากซ้ายไปขวา
 
-Each disk has a black side and white side. Initially all disks show their white side.
+ดิสก์แต่ละแผ่นมีด้านดำและด้านขาว เริ่มแรกดิสก์ทั้งหมดแสดงด้านสีขาว
 
-At each turn, two, not necessarily distinct, integers $A$ and $B$ between 1 and $N$ (inclusive) are chosen uniformly at random. All disks with an index from $A$ to $B$ (inclusive) are flipped.
+ในแต่ละเทิร์น สองจำนวนเต็ม $A$ และ $B$ ที่ไม่จำเป็นต้องแตกต่างกันสองค่าระหว่าง 1 ถึง $N$ (รวม) จะถูกสุ่มเลือกอย่างสม่ำเสมอ ดิสก์ทั้งหมดที่มีดัชนีตั้งแต่ $A$ ถึง $B$ (รวม) จะถูกพลิก
 
-The following example shows the case $N = 8$. At the first turn $A = 5$ and $B = 2$, and at the second turn $A = 4$ and $B = 6$.
+ตัวอย่างต่อไปนี้แสดงกรณี $N = 8$ ในเทิร์นแรก $A = 5$ และ $B = 2$ และในเทิร์นที่สอง $A = 4$ และ $B = 6$
 
 <img class="img-responsive center-block" alt="example for N = 8, with first turn A = 5 and B = 2, and second turn A = 4 and B = 6" src="https://cdn.freecodecamp.org/curriculum/project-euler/range-flips.gif" style="background-color: white; padding: 10px;">
 
-Let $E(N, M)$ be the expected number of disks that show their white side after $M$ turns. We can verify that $E(3, 1) = \frac{10}{9}$, $E(3, 2) = \frac{5}{3}$, $E(10, 4) ≈ 5.157$ and $E(100, 10) ≈ 51.893$.
+ให้ $E(N, M)$ เป็นจำนวนดิสก์ที่คาดไว้ซึ่งแสดงด้านสีขาวหลังจาก $M$ หมุน เราสามารถยืนยันได้ว่า $E(3, 1) = \frac{10}{9}$, $E(3, 2) = \frac{5}{3}$, $E(10, 4) ≈ 5.157$ และ $E(100, 10) ≈ 51.893$
 
-Find $E({10}^{10}, 4000)$. Give your answer rounded to 2 decimal places behind the decimal point.
+หา $E({10}^{10}, 4000)$ ให้คำตอบของคุณปัดเศษทศนิยม 2 ตำแหน่งหลังจุดทศนิยม
 
 # --hints--
 
-`rangeFlips()` should return `5000624921.38`.
+`rangeFlips()` ควร return `5000624921.38`.
 
 ```js
 assert.strictEqual(rangeFlips(), 5000624921.38);

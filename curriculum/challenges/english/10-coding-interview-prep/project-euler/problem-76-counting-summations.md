@@ -8,7 +8,7 @@ dashedName: problem-76-counting-summations
 
 # --description--
 
-It is possible to write five as a sum in exactly six different ways:
+เป็นไปได้ที่จะเขียนห้าเป็นผลรวม ในหกวิธีที่แตกต่างกัน
 
 <div style='margin-left: 4em;'>
   4 + 1<br>
@@ -19,35 +19,35 @@ It is possible to write five as a sum in exactly six different ways:
   1 + 1 + 1 + 1 + 1<br><br>
 </div>
 
-How many different ways can `n` be written as a sum of at least two positive integers?
+สามารถเขียน `n' เป็นผลรวมของจำนวนเต็มบวกอย่างน้อยสองจำนวนได้กี่วิธี
 
 # --hints--
 
-`countingSummations(5)` should return a number.
+`countingSummations(5)` ควร return number
 
 ```js
 assert(typeof countingSummations(5) === 'number');
 ```
 
-`countingSummations(5)` should return `6`.
+`countingSummations(5)` ควร return `6`.
 
 ```js
 assert.strictEqual(countingSummations(5), 6);
 ```
 
-`countingSummations(20)` should return `626`.
+`countingSummations(20)` ควร return `626`.
 
 ```js
 assert.strictEqual(countingSummations(20), 626);
 ```
 
-`countingSummations(50)` should return `204225`.
+`countingSummations(50)` ควร return `204225`.
 
 ```js
 assert.strictEqual(countingSummations(50), 204225);
 ```
 
-`countingSummations(100)` should return `190569291`.
+`countingSummations(100)` ควร return `190569291`.
 
 ```js
 assert.strictEqual(countingSummations(100), 190569291);

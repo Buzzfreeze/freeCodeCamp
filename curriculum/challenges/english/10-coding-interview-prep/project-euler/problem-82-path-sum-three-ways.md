@@ -8,9 +8,9 @@ dashedName: problem-82-path-sum-three-ways
 
 # --description--
 
-**Note:** This problem is a more challenging version of Problem 81.
+**Note:** ปัญหา 81 ที่ท้าทายยิ่งขึ้น
 
-The minimal path sum in the 5 by 5 matrix below, by starting in any cell in the left column and finishing in any cell in the right column, and only moving up, down, and right, is indicated in red and bold; the sum is equal to `994`.
+ผลรวมของพาธที่น้อยที่สุดในเมทริกซ์ขนาด 5 คูณ 5 ด้านล่าง โดยเริ่มต้นในเซลล์ใดๆ ในคอลัมน์ด้านซ้ายและสิ้นสุดในเซลล์ใดๆ ในคอลัมน์ด้านขวา และมีเพียงการเลื่อนขึ้น ลง และขวาเท่านั้นที่แสดงด้วยสีแดงและตัวหนา ผลรวมเท่ากับ `994`.
 
   $$\begin{pmatrix}
   131 & 673 & \color{red}{234} & \color{red}{103} & \color{red}{18}\\\\
@@ -20,7 +20,7 @@ The minimal path sum in the 5 by 5 matrix below, by starting in any cell in the 
   805 & 732 & 524 & 37 & 331
   \end{pmatrix}$$
 
-Find the minimal path sum from the left column to the right column in `matrix`, a 2D array representing a matrix. The maximum matrix size used in tests will be 80 by 80.
+หาผลรวมเส้นทางขั้นต่ำจากซ้ายบนไปขวาล่างโดยเลื่อนไปทางขวาและลงเท่านั้น `matrix` 2D array แทนเมทริกซ์ ขนาดเมทริกซ์สูงสุดที่ใช้ในการทดสอบคือ 80 คูณ 80
 
 # --hints--
 

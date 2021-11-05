@@ -8,35 +8,35 @@ dashedName: problem-477-number-sequence-game
 
 # --description--
 
-The number sequence game starts with a sequence $S$ of $N$ numbers written on a line.
+เกมลำดับตัวเลขเริ่มต้นด้วยลำดับ $S$ ของตัวเลข $N$ ที่เขียนในบรรทัด
 
-Two players alternate turns. At his turn, a player must select and remove either the first or the last number remaining in the sequence.
+ผู้เล่นสองคนสลับกัน ในเทิร์นของเขา ผู้เล่นต้องเลือกและลบหมายเลขแรกหรือหมายเลขสุดท้ายที่เหลืออยู่ในลำดับ
 
-The player score is the sum of all the numbers he has taken. Each player attempts to maximize his own sum.
+คะแนนของผู้เล่นคือผลรวมของตัวเลขทั้งหมดที่เขาได้รับ ผู้เล่นแต่ละคนพยายามที่จะเพิ่มผลรวมของตัวเองให้ได้มากที่สุด
 
-If $N = 4$ and $S = \\{1, 2, 10, 3\\}$, then each player maximizes his score as follows:
+หาก $N = 4$ และ $S = \\{1, 2, 10, 3\\}$ ผู้เล่นแต่ละคนจะเพิ่มคะแนนสูงสุดดังนี้
 
-- Player 1: removes the first number (1)
-- Player 2: removes the last number from the remaining sequence (3)
-- Player 1: removes the last number from the remaining sequence (10)
-- Player 2: removes the remaining number (2)
+- ผู้เล่น 1: ลบตัวเลขแรก (1)
+- ผู้เล่น 2: ลบหมายเลขสุดท้ายออกจากลำดับที่เหลือ (3)
+- ผู้เล่น 1: ลบหมายเลขสุดท้ายออกจากลำดับที่เหลือ (10)
+- ผู้เล่น 2: ลบจำนวนที่เหลือ (2)
 
-Player 1 score is $1 + 10 = 11$.
+ผู้เล่น 1 คะแนนคือ 1 เหรียญ + 10 = 11 เหรียญ
 
-Let $F(N)$ be the score of player 1 if both players follow the optimal strategy for the sequence $S = \\{s_1, s_2, \ldots, s_N\\}$ defined as:
+ให้ $F(N)$ เป็นคะแนนของผู้เล่น 1 ถ้าผู้เล่นทั้งสองปฏิบัติตามกลยุทธ์ที่เหมาะสมที่สุดสำหรับลำดับ $S = \\{s_1, s_2, \ldots, s_N\\}$ กำหนดเป็น
 
 - $s_1 = 0$
 - $s_{i + 1} = ({s_i}^2 + 45)$ modulo $1\\,000\\,000\\,007$
 
-The sequence begins with $S = \\{0, 45, 2\\,070, 4\\,284\\,945, 753\\,524\\,550, 478\\,107\\,844, 894\\,218\\,625, \ldots\\}$.
+มีลำดับเป็น $S = \\{0, 45, 2\\,070, 4\\,284\\,945, 753\\,524\\,550, 478\\,107\\,844, 894\\,218\\,625, \ldots\\}$.
 
-You are given $F(2) = 45$, $F(4) = 4\\,284\\,990$, $F(100) = 26\\,365\\,463\\,243$, $F(104) = 2\\,495\\,838\\,522\\,951$.
+กำหนดให้ $F(2) = 45$, $F(4) = 4\\,284\\,990$, $F(100) = 26\\,365\\,463\\,243$, $F(104) = 2\\,495\\,838\\,522\\,951$.
 
-Find $F({10}^8)$.
+หา $F({10}^8)$.
 
 # --hints--
 
-`numberSequenceGame()` should return `25044905874565164`.
+`numberSequenceGame()` ควร return `25044905874565164`.
 
 ```js
 assert.strictEqual(numberSequenceGame(), 25044905874565164);

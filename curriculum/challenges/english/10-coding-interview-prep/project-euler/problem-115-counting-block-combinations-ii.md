@@ -8,23 +8,24 @@ dashedName: problem-115-counting-block-combinations-ii
 
 # --description--
 
-A row measuring `n` units in length has red blocks with a minimum length of `m` units placed on it, such that any two red blocks (which are allowed to be different lengths) are separated by at least one black square.
+แถวที่วัดความยาวหน่วย `n` มีบล็อกสีแดงที่มีความยาวต่ำสุดของหน่วย `m` วางไว้บนบล็อกสีแดงสองบล็อก (ซึ่งอนุญาตให้มีความยาวต่างกัน) คั่นด้วยสี่เหลี่ยมสีดำอย่างน้อยหนึ่งอัน
 
-Let the fill-count function, $F(m, n)$, represent the number of ways that a row can be filled.
+ให้ฟังก์ชันการนับจำนวน $F(m, n)$ แทนจำนวนวิธีที่สามารถเติมแถวได้
 
-For example, $F(3, 29) = 673135$ and $F(3, 30) = 1089155$.
+ตัวอย่างเช่น $F(3, 29) = 673135$ และ $F(3, 30) = 1089155$
 
-That is, for m = 3, it can be seen that n = 30 is the smallest value for which the fill-count function first exceeds one million.
+นั่นคือสำหรับ m = 3 จะเห็นได้ว่า n = 30 เป็นค่าที่น้อยที่สุดที่ฟังก์ชันการนับการเติมก่อนจะเกินหนึ่งล้าน
 
-In the same way, for m = 10, it can be verified that $F(10, 56) = 880711$ and $F(10, 57) = 1148904$, so n = 57 is the least value for which the fill-count function first exceeds one million.
 
-For m = 50, find the least value of `n` for which the fill-count function first exceeds one million.
+ในทำนองเดียวกัน สำหรับ m = 10 ก็สามารถตรวจสอบได้ว่า $F(10, 56) = 880711$ และ $F(10, 57) = 1148904$ ดังนั้น n = 57 เป็นค่าที่น้อยที่สุดที่ ฟังก์ชั่นการนับครั้งแรกเกินหนึ่งล้าน
 
-**Note:** This is a more difficult version of Problem 114.
+สำหรับ m = 50 ให้หาค่าที่น้อยที่สุดของ `n` ซึ่งฟังก์ชันการนับการเติมก่อนหนึ่งล้าน
+
+**Note:** นี่เป็นเวอร์ชั่นที่ยากกว่าของ Problem 114
 
 # --hints--
 
-`countingBlockTwo()` should return `168`.
+`countingBlockTwo()` ควร return `168`.
 
 ```js
 assert.strictEqual(countingBlockTwo(), 168);

@@ -8,19 +8,20 @@ dashedName: problem-204-generalised-hamming-numbers
 
 # --description--
 
-A Hamming number is a positive number which has no prime factor larger than 5.
 
-So the first few Hamming numbers are 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15.
+จำนวนhammingเป็นจำนวนบวกที่ไม่มีตัวประกอบเฉพาะที่มากกว่า 5
 
-There are 1105 Hamming numbers not exceeding ${10}^8$.
+ดังนั้นตัวเลขhammingสองสามตัวแรกคือ 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15.
 
-We will call a positive number a generalised Hamming number of type $n$, if it has no prime factor larger than $n$. Hence the Hamming numbers are the generalised Hamming numbers of type 5.
+มี 1105 หมายเลขhammingไม่เกิน ${10}^8$
 
-How many generalised Hamming numbers of type 100 are there which don't exceed ${10}^9$?
+เราจะเรียกจำนวนบวกว่าจำนวน Hamming ทั่วไปของประเภท $n$ หากไม่มีตัวประกอบเฉพาะที่มากกว่า $n$ ดังนั้นตัวเลข Hamming จึงเป็นตัวเลข Hamming ทั่วไปของประเภท 5
+
+มีหมายเลข Hamming ทั่วไปประเภท 100 จำนวนเท่าใดที่ไม่เกิน ${10}^9$
 
 # --hints--
 
-`generalisedHammingNumbers()` should return `2944730`.
+`generalisedHammingNumbers()` ควร return `2944730`.
 
 ```js
 assert.strictEqual(generalisedHammingNumbers(), 2944730);

@@ -8,19 +8,20 @@ dashedName: problem-178-step-numbers
 
 # --description--
 
-Consider the number 45656.
 
-It can be seen that each pair of consecutive digits of 45656 has a difference of one.
+พิจารณาเลข 45656
 
-A number for which every pair of consecutive digits has a difference of one is called a step number.
+จะเห็นได้ว่าเลขเรียงกันของ 45656 แต่ละคู่มีความแตกต่างกันหนึ่งหลัก
 
-A pandigital number contains every decimal digit from 0 to 9 at least once.
+ตัวเลขที่ตัวเลขต่อเนื่องกันทุกคู่มีความแตกต่างกันเรียกว่าหมายเลขขั้นตอน
 
-How many pandigital step numbers less than ${10}^{40}$ are there?
+เลขpandigitalประกอบด้วยตัวเลขทศนิยมทุกหลักตั้งแต่ 0 ถึง 9 อย่างน้อยหนึ่งครั้ง
+
+มีเลข pandigital ที่น้อยกว่า ${10}^{40}$ จำนวนเท่าใด
 
 # --hints--
 
-`stepNumbers()` should return `126461847755`.
+`stepNumbers()` ควร return `126461847755`.
 
 ```js
 assert.strictEqual(stepNumbers(), 126461847755);

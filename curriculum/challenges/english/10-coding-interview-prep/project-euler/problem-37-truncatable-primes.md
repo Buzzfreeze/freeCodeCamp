@@ -8,39 +8,39 @@ dashedName: problem-37-truncatable-primes
 
 # --description--
 
-The number 3797 has an interesting property. Being prime itself, it is possible to continuously remove digits from left to right, and remain prime at each stage: 3797, 797, 97, and 7. Similarly we can work from right to left: 3797, 379, 37, and 3.
+จำนวน 3797 มีส่วนประกอบที่น่าสนใจ เริ่มจากเลข prime ของตัวมันเอง และเมื่อลบ digits จากซ้ายไปขวา จะเหลือ prime เป็น: 3797, 797, 97, และ 7 ซึ่งเหมือนกับเราทำสลับด้านจากขวามาซ้าย: 3797, 379, 37, and 3
 
-Find the sum of the only `n` (8 ≤ `n` ≤ 11) primes that are both truncatable from left to right and right to left.
+หาผลรวมของ `n` (8 ≤ `n` ≤ 11) primes ที่สามารถ truncatable จากซ้ายไปขวาและขวามาซ้ายได้
 
-NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes.
+NOTE: 2, 3, 5, และ 7 ไม่เป็น truncatable primes.
 
 # --hints--
 
-`truncatablePrimes(8)` should return a number.
+`truncatablePrimes(8)` ควร return  number
 
 ```js
 assert(typeof truncatablePrimes(8) === 'number');
 ```
 
-`truncatablePrimes(8)` should return 1986.
+`truncatablePrimes(8)` ควร return 1986.
 
 ```js
 assert(truncatablePrimes(8) == 1986);
 ```
 
-`truncatablePrimes(9)` should return 5123.
+`truncatablePrimes(9)` ควร return 5123.
 
 ```js
 assert(truncatablePrimes(9) == 5123);
 ```
 
-`truncatablePrimes(10)` should return 8920.
+`truncatablePrimes(10)` ควร return 8920.
 
 ```js
 assert(truncatablePrimes(10) == 8920);
 ```
 
-`truncatablePrimes(11)` should return 748317.
+`truncatablePrimes(11)` ควร return 748317.
 
 ```js
 assert(truncatablePrimes(11) == 748317);

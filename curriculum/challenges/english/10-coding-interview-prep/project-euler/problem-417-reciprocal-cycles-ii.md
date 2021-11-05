@@ -8,7 +8,7 @@ dashedName: problem-417-reciprocal-cycles-ii
 
 # --description--
 
-A unit fraction contains 1 in the numerator. The decimal representation of the unit fractions with denominators 2 to 10 are given:
+เศษส่วนมี 1 ในตัวเศษ การแสดงทศนิยมของเศษส่วนหน่วยที่มีตัวส่วน 2 ถึง 10 จะได้รับ
 
 $$\begin{align}
   & \frac{1}{2}  = 0.5 \\\\
@@ -22,17 +22,16 @@ $$\begin{align}
   & \frac{1}{10} = 0.1 \\\\
 \end{align}$$
 
-Where $0.1(6)$ means $0.166666\ldots$, and has a 1-digit recurring cycle. It can be seen that $\frac{1}{7}$ has a 6-digit recurring cycle.
+โดยที่ $0.1(6)$ หมายถึง $0.166666\ldots$ และมีรอบการเกิดซ้ำ 1 หลัก จะเห็นได้ว่า $\frac{1}{7}$ มีรอบการเกิดซ้ำ 6 หลัก
 
-Unit fractions whose denominator has no other prime factors than 2 and/or 5 are not considered to have a recurring cycle. We define the length of the recurring cycle of those unit fractions as 0.
+เศษส่วนหน่วยที่ตัวส่วนไม่มีตัวประกอบเฉพาะอื่นใดนอกจาก 2 และ/หรือ 5 จะไม่ถือว่ามีวัฏจักรที่เกิดซ้ำ เรากำหนดความยาวของวัฏจักรที่เกิดซ้ำของเศษส่วนหน่วยเหล่านั้นเป็น 0
 
-Let $L(n)$ denote the length of the recurring cycle of $\frac{1}{n}$. You are given that $\sum L(n)$ for $3 ≤ n ≤ 1\\,000\\,000$ equals $55\\,535\\,191\\,115$.
+ให้ $L(n)$ แทนความยาวของรอบที่เกิดซ้ำของ $\frac{1}{n}$ คุณจะได้รับ $\sum L(n)$ สำหรับ $3 ≤ n ≤ 1\\,000\\,000$ เท่ากับ $55\\,535\\,191\\,115$
 
-Find $\sum L(n)$ for $3 ≤ n ≤ 100\\,000\\,000$.
-
+หา $\sum L(n)$ สำหรับ $3 ≤ n ≤ 100\\,000\\,000$
 # --hints--
 
-`reciprocalCyclesTwo()` should return `446572970925740`.
+`reciprocalCyclesTwo()` ควร return `446572970925740`.
 
 ```js
 assert.strictEqual(reciprocalCyclesTwo(), 446572970925740);

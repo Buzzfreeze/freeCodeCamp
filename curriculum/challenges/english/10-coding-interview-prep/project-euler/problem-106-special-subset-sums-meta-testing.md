@@ -8,22 +8,22 @@ dashedName: problem-106-special-subset-sums-meta-testing
 
 # --description--
 
-Let $S(A)$ represent the sum of elements in set A of size n. We shall call it a special sum set if for any two non-empty disjoint subsets, B and C, the following properties are true:
+ให้ $S(A)$ แทนผลรวมขององค์ประกอบในชุด A ขนาด n เราจะเรียกมันว่าเซตผลรวมพิเศษ ถ้าสำหรับเซตย่อยที่ไม่เป็นค่าว่างสองชุดใด ๆ คือ B และ C คุณสมบัติต่อไปนี้เป็นจริง:
 
-1. $S(B) ≠ S(C)$; that is, sums of subsets cannot be equal.
-2. If B contains more elements than C then $S(B) > S(C)$.
+1. $S(B) ≠ S(C)$; นั่นคือผลรวมของเซตย่อยต้องไม่เท่ากัน
+2. ถ้า B มีองค์ประกอบมากกว่า C แล้ว $S(B) > S(C)$
 
-For this problem we shall assume that a given set contains n strictly increasing elements and it already satisfies the second rule.
+สำหรับปัญหานี้ เราจะถือว่าชุดที่กำหนดมีองค์ประกอบที่เพิ่มขึ้นอย่างเคร่งครัด n รายการ และเป็นไปตามกฎข้อที่สองแล้ว
 
-Surprisingly, out of the 25 possible subset pairs that can be obtained from a set for which n = 4, only 1 of these pairs need to be tested for equality (first rule). Similarly, when n = 7, only 70 out of the 966 subset pairs need to be tested.
+น่าแปลกที่จากคู่ย่อยที่เป็นไปได้ 25 คู่ที่สามารถรับได้จากชุดที่ n = 4 มีเพียง 1 คู่ในเซตที่จำเป็นต้องได้รับการทดสอบเพื่อความเท่าเทียมกัน (กฎข้อแรก) ในทำนองเดียวกัน เมื่อ n = 7 ต้องทดสอบเพียง 70 คู่จาก 966 คู่ย่อยเท่านั้น
 
-For n = 12, how many of the 261625 subset pairs that can be obtained need to be tested for equality?
+สำหรับ n = 12 คู่เซตย่อย 261625 ที่สามารถรับได้นั้นต้องได้รับการทดสอบเพื่อความเท่าเทียมกันกี่คู่
 
-**Note:** This problem is related to Problem 103 and Problem 105.
+**Note:** ปัญหานี้เกี่ยวข้องกับปัญหา 103 และปัญหา 106
 
 # --hints--
 
-`subsetSumsMetaTesting()` should return `21384`.
+`subsetSumsMetaTesting()` ควร return `21384`.
 
 ```js
 assert.strictEqual(subsetSumsMetaTesting(), 21384);

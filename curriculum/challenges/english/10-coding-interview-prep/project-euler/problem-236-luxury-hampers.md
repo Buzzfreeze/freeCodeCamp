@@ -7,9 +7,7 @@ dashedName: problem-236-luxury-hampers
 ---
 
 # --description--
-
-Suppliers 'A' and 'B' provided the following numbers of products for the luxury hamper market:
-
+ซัพพลายเออร์ 'A' และ 'B' จัดหาผลิตภัณฑ์สำหรับตลาดกระเช้าสินค้าหรูหราจำนวนดังต่อไปนี้:
 |       Product      | 'A'  | 'B'  |
 |--------------------|------|------|
 |    Beluga Caviar   | 5248 | 640  |
@@ -18,28 +16,28 @@ Suppliers 'A' and 'B' provided the following numbers of products for the luxury 
 |    Vintage Port    | 5760 | 3776 |
 | Champagne Truffles | 3936 | 5664 |
 
-Although the suppliers try very hard to ship their goods in perfect condition, there is inevitably some spoilage - i.e. products gone bad.
+แม้ว่าซัพพลายเออร์จะพยายามอย่างมากในการจัดส่งสินค้าของตนในสภาพที่สมบูรณ์ แต่ก็มีการเน่าเสียบางอย่างอย่างหลีกเลี่ยงไม่ได้ นั่นคือ สินค้าเสียหาย
 
-The suppliers compare their performance using two types of statistic:
+ซัพพลายเออร์เปรียบเทียบประสิทธิภาพของพวกเขาโดยใช้สถิติสองประเภท:
 
-- The five per-product spoilage rates for each supplier are equal to the number of products gone bad divided by the number of products supplied, for each of the five products in turn.
-- The overall spoilage rate for each supplier is equal to the total number of products gone bad divided by the total number of products provided by that supplier.
+- อัตราการเน่าเสียต่อผลิตภัณฑ์ห้ารายการสำหรับซัพพลายเออร์แต่ละรายจะเท่ากับจำนวนผลิตภัณฑ์ที่ไม่ดีหารด้วยจำนวนผลิตภัณฑ์ที่จัดหา สำหรับแต่ละผลิตภัณฑ์ห้ารายการในทางกลับกัน
+- อัตราการเน่าเสียโดยรวมสำหรับซัพพลายเออร์แต่ละรายจะเท่ากับจำนวนสินค้าที่เสียหายทั้งหมด หารด้วยจำนวนผลิตภัณฑ์ทั้งหมดที่ซัพพลายเออร์จัดหาให้
 
-To their surprise, the suppliers found that each of the five per-product spoilage rates was worse (higher) for 'B' than for 'A' by the same factor (ratio of spoilage rates), $m > 1$; and yet, paradoxically, the overall spoilage rate was worse for 'A' than for 'B', also by a factor of $m$.
+ที่น่าแปลกใจก็คือ ซัพพลายเออร์พบว่าอัตราการเน่าเสียต่อผลิตภัณฑ์แต่ละอย่างในห้าอัตรานั้นแย่กว่า (สูงกว่า) สำหรับ 'B' มากกว่าสำหรับ 'A' ด้วยปัจจัยเดียวกัน (อัตราส่วนของอัตราการเน่าเสีย), $m > 1$; และยังขัดแย้งกัน อัตราการเน่าเสียโดยรวมสำหรับ 'A' นั้นแย่กว่าสำหรับ 'B' ด้วย $m$ ด้วย
 
-There are thirty-five $m > 1$ for which this surprising result could have occurred, the smallest of which is $\frac{1476}{1475}$.
+มี 35 $m > 1$ ซึ่งผลลัพธ์ที่น่าประหลาดใจนี้อาจเกิดขึ้นได้ ค่าที่น้อยที่สุดคือ $\frac{1476}{1475}$
 
-What's the largest possible value of $m$? Give your answer as a string with fraction reduced to its lowest terms, in the form `u/v`.
+มูลค่าสูงสุดที่เป็นไปได้ของ $m$ คือเท่าใด ให้คำตอบของคุณเป็นสตริงโดยลดเศษส่วนเป็นพจน์ต่ำสุด ในรูปแบบ "u/v"
 
 # --hints--
 
-`luxuryHampers()` should return a string.
+`luxuryHampers()` ควร return string.
 
 ```js
 assert(typeof luxuryHampers() === 'string');
 ```
 
-`luxuryHampers()` should return the string `123/59`.
+`luxuryHampers()` ควร return string `123/59`.
 
 ```js
 assert.strictEqual(luxuryHampers(), '123/59');

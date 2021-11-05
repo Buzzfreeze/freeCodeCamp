@@ -11,15 +11,14 @@ dashedName: >-
 
 # --description--
 
-Having three black objects $B$ and one white object $W$ they can be grouped in 7 ways like this:
+มีวัตถุสีดำสามตัว $B$ และวัตถุสีขาวหนึ่งตัว $W$ สามารถจัดกลุ่มได้ 7 วิธีดังนี้:
 
 $$(BBBW)\\;(B,BBW)\\;(B,B,BW)\\;(B,B,B,W)\\;(B,BB,W)\\;(BBB,W)\\;(BB,BW)$$
 
-In how many ways can sixty black objects $B$ and forty white objects $W$ be thus grouped?
-
+วัตถุสีดำหกสิบ $B$ และวัตถุสีขาว $W$ สี่สิบชิ้นสามารถจัดกลุ่มได้กี่วิธี?
 # --hints--
 
-`colorsGrouping()` should return `83735848679360670`.
+`colorsGrouping()` ควร return `83735848679360670`.
 
 ```js
 assert.strictEqual(colorsGrouping(), 83735848679360670);

@@ -8,9 +8,9 @@ dashedName: problem-455-powers-with-trailing-digits
 
 # --description--
 
-Let $f(n)$ be the largest positive integer $x$ less than ${10}^9$ such that the last 9 digits of $n^x$ form the number $x$ (including leading zeros), or zero if no such integer exists.
+ให้ $f(n)$ เป็นจำนวนเต็มบวกที่ใหญ่ที่สุด $x$ น้อยกว่า ${10}^9$ เพื่อให้ 9 หลักสุดท้ายของ $n^x$ เป็นตัวเลข $x$ (รวมศูนย์นำหน้า) หรือศูนย์ หากไม่มีจำนวนเต็มดังกล่าว
 
-For example:
+เช่น
 
 $$\begin{align}
   & f(4) = 411\\,728\\,896 (4^{411\\,728\\,896} = ...490\underline{411728896}) \\\\
@@ -19,11 +19,11 @@ $$\begin{align}
   & Σf(n), 2 ≤ n ≤ 103 = 442\\,530\\,011\\,399
 \end{align}$$
 
-Find $\sum f(n)$, $2 ≤ n ≤ {10}^6$.
+หา $\sum f(n)$, $2 ≤ n ≤ {10}^6$.
 
 # --hints--
 
-`powersWithTrailingDigits()` should return `450186511399999`.
+`powersWithTrailingDigits()` ควร return `450186511399999`.
 
 ```js
 assert.strictEqual(powersWithTrailingDigits(), 450186511399999);

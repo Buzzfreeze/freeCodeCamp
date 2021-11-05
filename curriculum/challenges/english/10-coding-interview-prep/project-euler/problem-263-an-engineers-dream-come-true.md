@@ -8,30 +8,30 @@ dashedName: problem-263-an-engineers-dream-come-true
 
 # --description--
 
-Consider the number 6. The divisors of 6 are: 1,2,3 and 6.
+พิจารณาเลข 6 ตัวหารของ 6 คือ: 1,2,3 และ 6
 
-Every number from 1 up to and including 6 can be written as a sum of distinct divisors of 6:
+ทุกตัวเลขตั้งแต่ 1 ถึงและรวมถึง 6 สามารถเขียนเป็นผลรวมของตัวหารที่แตกต่างกันของ 6:
 
 $1 = 1$, $2 = 2$, $3 = 1 + 2$, $4 = 1 + 3$, $5 = 2 + 3$, $6 = 6$.
 
-A number $n$ is called a practical number if every number from 1 up to and including $n$ can be expressed as a sum of distinct divisors of $n$.
+จำนวน $n$ จะถูกเรียกว่าเป็นจำนวนเชิงปฏิบัติ ถ้าทุกจำนวนตั้งแต่ 1 ถึงและรวมถึง $n$ สามารถแสดงเป็นผลรวมของตัวหารไม่ซ้ำกันของ $n$
 
-A pair of consecutive prime numbers with a difference of six is called a sexy pair (since "sex" is the Latin word for "six"). The first sexy pair is (23, 29).
+คู่จำนวนเฉพาะที่ต่อเนื่องกันซึ่งมีความแตกต่างเป็นหกเรียกว่าsexy pair (เนื่องจาก "เพศ" เป็นคำภาษาละตินที่แปลว่า "หก") คู่เซ็กซี่คู่แรกคือ (23, 29)
 
-We may occasionally find a triple-pair, which means three consecutive sexy prime pairs, such that the second member of each pair is the first member of the next pair.
+เราอาจพบtriple-pairในบางครั้ง ซึ่งหมายถึงคู่ไพรม์สุดเซ็กซี่สามคู่ติดต่อกัน โดยที่สมาชิกตัวที่สองของแต่ละคู่จะเป็นสมาชิกตัวแรกของคู่ต่อไป
 
-We shall call a number $n$ such that:
+เราจะเรียกหมายเลข $n$ ว่า:
 
-- ($n - 9$, $n - 3$), ($n - 3$, $n + 3$), ($n + 3$, $n + 9$) form a triple-pair, and
-- the numbers $n - 8$, $n - 4$, $n$, $n + 4$ and $n + 8$ are all practical,
+- ($n - 9$, $n - 3$), ($n - 3$, $n + 3$), ($n + 3$, $n + 9$) สร้างคู่สามคู่ และ
+- ตัวเลข $n - 8$, $n - 4$, $n$, $n + 4$ และ $n + 8$ ใช้ได้จริงทั้งหมด
 
-an engineers’ paradise.
+engineers’ paradise.
 
-Find the sum of the first four engineers’ paradises.
+หาผลรวมของสี่ตัวแรก engineers’ paradises.
 
 # --hints--
 
-`engineersDreamComeTrue()` should return `2039506520`.
+`engineersDreamComeTrue()` ควร return `2039506520`.
 
 ```js
 assert.strictEqual(engineersDreamComeTrue(), 2039506520);

@@ -8,7 +8,7 @@ dashedName: problem-203-squarefree-binomial-coefficients
 
 # --description--
 
-The binomial coefficients $\displaystyle\binom{n}{k}$ can be arranged in triangular form, Pascal's triangle, like this:
+สัมประสิทธิ์ทวินาม $\displaystyle\binom{n}{k}$ สามารถจัดเรียงในรูปสามเหลี่ยม สามเหลี่ยมของ Pascal ได้ดังนี้:
 
 $$\begin{array}{ccccccccccccccc}
    &   &   &   &    &    &    &  1 &    &    &    &   &   &   &   \\\\
@@ -22,15 +22,15 @@ $$\begin{array}{ccccccccccccccc}
    &   &   &   &    &    &    & \ldots
 \end{array}$$
 
-It can be seen that the first eight rows of Pascal's triangle contain twelve distinct numbers: 1, 2, 3, 4, 5, 6, 7, 10, 15, 20, 21 and 35.
+จะเห็นได้ว่าแปดแถวแรกของสามเหลี่ยมปาสกาลประกอบด้วยตัวเลขที่แตกต่างกันสิบสองจำนวน: 1, 2, 3, 4, 5, 6, 7, 10, 15, 20, 21 and 35.
 
-A positive integer n is called squarefree if no square of a prime divides n. Of the twelve distinct numbers in the first eight rows of Pascal's triangle, all except 4 and 20 are squarefree. The sum of the distinct squarefree numbers in the first eight rows is 105.
+จำนวนเต็มบวก n เรียกว่า squarefree ถ้าไม่มีกำลังสองของจำนวนเฉพาะหาร n จากจำนวนที่แตกต่างกันสิบสองจำนวนในแปดแถวแรกของสามเหลี่ยมปาสกาล ทั้งหมดยกเว้น 4 และ 20 เป็นสี่เหลี่ยมจัตุรัส ผลรวมของจำนวนสแควร์ฟรีที่แตกต่างกันในแปดแถวแรกคือ 105
 
-Find the sum of the distinct squarefree numbers in the first 51 rows of Pascal's triangle.
+หาผลรวมของจำนวนยกกำลังสองที่แตกต่างกันใน 51 แถวแรกของ Pascal's triangle.
 
 # --hints--
 
-`squarefreeBinomialCoefficients()` should return `34029210557338`.
+`squarefreeBinomialCoefficients()` ควร return `34029210557338`.
 
 ```js
 assert.strictEqual(squarefreeBinomialCoefficients(), 34029210557338);

@@ -8,19 +8,19 @@ dashedName: problem-234-semidivisible-numbers
 
 # --description--
 
-For an integer $n ≥ 4$, we define the lower prime square root of $n$, denoted by $lps(n)$, as the $\text{largest prime} ≤ \sqrt{n}$ and the upper prime square root of $n$, $ups(n)$, as the $\text{smallest prime} ≥ \sqrt{n}$.
+สำหรับจำนวนเต็ม $n ≥ 4$ เรากำหนดรากที่สองของจำนวนเฉพาะที่ต่ำกว่าของ $n$ ซึ่งแสดงโดย $lps(n)$ เป็น $\text{largest prime} ≤ \sqrt{n}$ และจำนวนเฉพาะตัวบน รากที่สองของ $n$, $ups(n)$ เป็น $\text{smallest prime} ≥ \sqrt{n}$
 
-So, for example, $lps(4) = 2 = ups(4)$, $lps(1000) = 31$, $ups(1000) = 37$.
+ตัวอย่างเช่น $lps(4) = 2 = ups(4)$, $lps(1000) = 31$, $ups(1000) = 37$
 
-Let us call an integer $n ≥ 4$ semidivisible, if one of $lps(n)$ and $ups(n)$ divides $n$, but not both.
+ให้เราเรียกจำนวนเต็ม $n ≥ 4$ กึ่งหาร ถ้าหนึ่งใน $lps(n)$ และ $ups(n)$ หาร $n$ แต่ไม่ใช่ทั้งสองอย่าง
 
-The sum of the semidivisible numbers not exceeding 15 is 30, the numbers are 8, 10 and 12. 15 is not semidivisible because it is a multiple of both $lps(15) = 3$ and $ups(15) = 5$. As a further example, the sum of the 92 semidivisible numbers up to 1000 is 34825.
+ผลรวมของจำนวนหารกึ่งหารได้ไม่เกิน 15 คือ 30 ตัวเลขคือ 8, 10 และ 12 15 ไม่สามารถแบ่งครึ่งได้เนื่องจากเป็นผลคูณของทั้ง $lps(15) = 3$ และ $ups(15) = 5$ ตัวอย่างเช่น ผลรวมของตัวเลขกึ่งหาร 92 ตัวที่มากถึง 1,000 คือ 34825
 
-What is the sum of all semidivisible numbers not exceeding 999966663333?
+ผลรวมของตัวเลขกึ่งหารทั้งหมดไม่เกิน 999966663333 คืออะไร?
 
 # --hints--
 
-`semidivisibleNumbers()` should return `1259187438574927000`.
+`semidivisibleNumbers()` ควร return `1259187438574927000`.
 
 ```js
 assert.strictEqual(semidivisibleNumbers(), 1259187438574927000);

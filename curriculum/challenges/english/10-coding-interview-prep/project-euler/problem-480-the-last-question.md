@@ -8,13 +8,13 @@ dashedName: problem-480-the-last-question
 
 # --description--
 
-Consider all the words which can be formed by selecting letters, in any order, from the phrase:
+พิจารณาคำทั้งหมดที่สามารถเกิดขึ้นได้โดยการเลือกตัวอักษรในลำดับใดก็ได้จากวลี:
 
 $$\mathbf{\text{thereisasyetinsufficientdataforameaningfulanswer}}$$
 
-Suppose those with 15 letters or less are listed in alphabetical order and numbered sequentially starting at 1.
+สมมติว่าตัวอักษรที่มี 15 ตัวอักษรหรือน้อยกว่านั้นเรียงตามลำดับตัวอักษรและเรียงลำดับโดยเริ่มจาก 1
 
-The list would include:
+list จะมี:
 
 $$\begin{align}
   & 1: \text{a} \\\\
@@ -46,13 +46,13 @@ $$\begin{align}
   & 525069350231428029: \text{ywuuttttssssrrr} \\\\
 \end{align}$$
 
-Define $P(w)$ as the position of the word $w$.
+กำหนด $P(w)$ ที่มีตำแหน่งของคำเป็น $w$.
 
-Define $W(p)$ as the word in position $p$.
+กำหนด $W(p)$ ที่ตำอยู่ในตำแหน่ง $p$.
 
-We can see that $P(w)$ and $W(p)$ are inverses: $P(W(p)) = p$ and $W(P(w)) = w$.
+จะเห็นว่า $P(w)$ และ $W(p)$ จะกลับกัน $P(W(p)) = p$ และ $W(P(w)) = w$.
 
-Examples:
+เช่น
 
 $$\begin{align}
   & W(10) = \text{ aaaaaacdee} \\\\
@@ -61,20 +61,20 @@ $$\begin{align}
   & P(\text{euler}) = 115246685191495243 \\\\
 \end{align}$$
 
-Find
+ให้หา
 $$W(P(\text{legionary}) + P(\text{calorimeters}) - P(\text{annihilate}) + P(\text{orchestrated}) - P(\text{fluttering})).$$
 
-Give your answer using lowercase characters (no punctuation or space).
+ให้คำตอบโดยใช้อักษรตัวพิมพ์เล็ก (no punctuation or space).
 
 # --hints--
 
-`euler480()` should return a string.
+`euler480()` ควร return string.
 
 ```js
 assert(typeof euler480() === 'string');
 ```
 
-`euler480()` should return the string `turnthestarson`.
+`euler480()` ควร return string `turnthestarson`.
 
 ```js
 assert.strictEqual(euler480(), 'turnthestarson');

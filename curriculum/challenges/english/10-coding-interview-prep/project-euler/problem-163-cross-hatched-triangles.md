@@ -8,26 +8,26 @@ dashedName: problem-163-cross-hatched-triangles
 
 # --description--
 
-Consider an equilateral triangle in which straight lines are drawn from each vertex to the middle of the opposite side, such as in the size 1 triangle in the sketch below.
+พิจารณารูปสามเหลี่ยมด้านเท่าที่มีเส้นตรงลากจากจุดยอดแต่ละจุดไปยังกึ่งกลางของด้านตรงข้าม เช่น ในรูปสามเหลี่ยมขนาด 1 ในภาพร่างด้านล่าง
 
 <img class="img-responsive center-block" alt="triangles with size 1 and size 2" src="https://cdn.freecodecamp.org/curriculum/project-euler/cross-hatched-triangles.gif" style="background-color: white; padding: 10px;">
 
-Sixteen triangles of either different shape or size or orientation or location can now be observed in that triangle. Using size 1 triangles as building blocks, larger triangles can be formed, such as the size 2 triangle in the above sketch. One-hundred and four triangles of either different shape or size or orientation or location can now be observed in that size 2 triangle.
+ขณะนี้สามารถสังเกตสามเหลี่ยมสิบหกรูปที่มีรูปร่างหรือขนาดต่างกัน การวางแนวหรือตำแหน่งได้ในรูปสามเหลี่ยมนั้น การใช้สามเหลี่ยมขนาด 1 เป็นตัวสร้าง สามารถสร้างสามเหลี่ยมขนาดใหญ่ขึ้นได้ เช่น สามเหลี่ยมขนาด 2 ในภาพร่างด้านบน ขณะนี้สามารถสังเกตสามเหลี่ยมหนึ่งร้อยสี่รูปที่มีรูปร่างหรือขนาดต่างกัน การวางแนวหรือตำแหน่งได้ในรูปสามเหลี่ยมขนาด 2 นั้น
 
-It can be observed that the size 2 triangle contains 4 size 1 triangle building blocks. A size 3 triangle would contain 9 size 1 triangle building blocks and a size $n$ triangle would thus contain $n^2$ size 1 triangle building blocks.
+สามารถสังเกตได้ว่าสามเหลี่ยมขนาด 2 มี 4 แบบสำเร็จรูปขนาด 1 รูปสามเหลี่ยม 4 ชิ้น สามเหลี่ยมขนาด 3 จะมีบล็อคการสร้างรูปสามเหลี่ยมขนาด 1 จำนวน 9 ชิ้น และรูปสามเหลี่ยมขนาด $n$ จะประกอบด้วยบล็อคการสร้างรูปสามเหลี่ยมขนาด $n^2$ ได้
 
-If we denote $T(n)$ as the number of triangles present in a triangle of size $n$, then
+ถ้าเราระบุ $T(n)$ เป็นจำนวนสามเหลี่ยมที่มีอยู่ในรูปสามเหลี่ยมขนาด $n$ 
 
 $$\begin{align}
   & T(1) = 16 \\\\
   & T(2) = 104
 \end{align}$$
 
-Find $T(36)$.
+หา $T(36)$.
 
 # --hints--
 
-`crossHatchedTriangles()` should return `343047`.
+`crossHatchedTriangles()` ควร return `343047`.
 
 ```js
 assert.strictEqual(crossHatchedTriangles(), 343047);

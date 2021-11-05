@@ -8,17 +8,17 @@ dashedName: problem-235-an-arithmetic-geometric-sequence
 
 # --description--
 
-Given is the arithmetic-geometric sequence $u(k) = (900 - 3k)r^{k - 1}$.
+กำหนดเป็นลำดับเลขคณิต-เรขาคณิต $u(k) = (900 - 3k)r^{k - 1}$
 
-Let $s(n) = \sum_{k=1 \ldots n} u(k)$.
+ให้ $s(n) = \sum_{k=1 \ldots n} u(k)$
 
-Find the value of $r$ for which $s(5000) = -600\\,000\\,000\\,000$.
+หาค่าของ $r$ ซึ่ง $s(5000) = -600\\,000\\,000\\,000$
 
-Give your answer rounded to 12 places behind the decimal point.
+ให้คำตอบของคุณปัดเศษเป็น 12 ตำแหน่งหลังจุดทศนิยม
 
 # --hints--
 
-`arithmeticGeometricSequence()` should return `1.002322108633`.
+`arithmeticGeometricSequence()` ควร return `1.002322108633`.
 
 ```js
 assert.strictEqual(arithmeticGeometricSequence(), 1.002322108633);

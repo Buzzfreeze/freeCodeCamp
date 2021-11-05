@@ -8,23 +8,23 @@ dashedName: problem-232-the-race
 
 # --description--
 
-Two players share an unbiased coin and take it in turns to play "The Race".
+ผู้เล่นสองคนแบ่งปันเหรียญที่เป็นกลางและผลัดกันเล่น "The Race"
 
-On Player 1's turn, he tosses the coin once: if it comes up Heads, he scores one point; if it comes up Tails, he scores nothing.
+ในเทิร์นของผู้เล่นที่ 1 เขาโยนเหรียญหนึ่งครั้ง: ถ้ามันขึ้นมาหัว เขาทำคะแนนได้หนึ่งคะแนน ถ้ามันขึ้นมาก้อย เขาไม่ได้คะแนนอะไรเลย
 
-On Player 2's turn, she chooses a positive integer $T$ and tosses the coin $T$ times: if it comes up all Heads, she scores $2^{T - 1}$ points; otherwise, she scores nothing.
+ในเทิร์นของผู้เล่นที่ 2 เธอเลือกจำนวนเต็มบวก $T$ และโยนเหรียญ $T$ ครั้ง: ถ้ามันโผล่หัวออกมาทั้งหมด เธอจะได้ $2^{T - 1}$ คะแนน; มิฉะนั้น เธอไม่ได้คะแนนอะไรเลย
 
-Player 1 goes first. The winner is the first to 100 or more points.
+ผู้เล่น 1 ไปก่อน ผู้ชนะคือคนแรกที่มีคะแนน 100 หรือมากกว่า
 
-On each turn Player 2 selects the number, $T$, of coin tosses that maximises the probability of her winning.
+ในแต่ละเทิร์น ผู้เล่นที่ 2 จะเลือกตัวเลข $T$ ของการโยนเหรียญที่เพิ่มโอกาสสูงสุดในการชนะของเธอ
 
-What is the probability that Player 2 wins?
+ความน่าจะเป็นที่ผู้เล่น 2 จะชนะคืออะไร?
 
-Give your answer rounded to eight decimal places in the form 0.abcdefgh .
+ให้คำตอบของคุณเป็นทศนิยมแปดตำแหน่งในรูปแบบ 0.abcdefgh
 
 # --hints--
 
-`theRace()` should return `0.83648556`.
+`theRace()` ควร return `0.83648556`.
 
 ```js
 assert.strictEqual(theRace(), 0.83648556);

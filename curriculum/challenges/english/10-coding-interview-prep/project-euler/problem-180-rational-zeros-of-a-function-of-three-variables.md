@@ -8,7 +8,7 @@ dashedName: problem-180-rational-zeros-of-a-function-of-three-variables
 
 # --description--
 
-For any integer $n$, consider the three functions
+สำหรับจำนวนเต็ม $n$ ใดๆ ให้พิจารณาสามฟังก์ชัน
 
 $$\begin{align}
   & f_{1,n}(x,y,z) = x^{n + 1} + y^{n + 1} − z^{n + 1}\\\\
@@ -16,23 +16,23 @@ $$\begin{align}
   & f_{3,n}(x,y,z) = xyz \times (x^{n - 2} + y^{n - 2} − z^{n - 2})
 \end{align}$$
 
-and their combination
+และพวกมันถูก combination
 
 $$\begin{align}
   & f_n(x,y,z) = f_{1,n}(x,y,z) + f_{2,n}(x,y,z) − f_{3,n}(x,y,z)
 \end{align}$$
 
-We call $(x,y,z)$ a golden triple of order $k$ if $x$, $y$, and $z$ are all rational numbers of the form $\frac{a}{b}$ with $0 &lt; a &lt; b ≤ k$ and there is (at least) one integer $n$, so that $f_n(x,y,z) = 0$.
+เราเรียก $(x,y,z)$ golden triple ของ order $k$ ถ้า $x$, $y$, และ $z$ เป็นจำนวนตรรกยะของรูปแบบ $\frac{a}{b}$ ด้วย $0 &lt; &lt; b ≤ k$ และมี (อย่างน้อย) หนึ่งจำนวนเต็ม $n$ ดังนั้น $f_n(x,y,z) = 0$
 
-Let $s(x,y,z) = x + y + z$.
+ให้ $s(x,y,z) = x + y + z$
 
-Let $t = \frac{u}{v}$ be the sum of all distinct $s(x,y,z)$ for all golden triples $(x,y,z)$ of order 35. All the $s(x,y,z)$ and $t$ must be in reduced form.
+ให้ $t = \frac{u}{v}$ เป็นผลรวมของ $s(x,y,z)$ ที่แตกต่างกันทั้งหมดสำหรับ Golden Triples ทั้งหมด $(x,y,z)$ ของลำดับ 35 $s ทั้งหมด (x,y,z)$ และ $t$ ต้องอยู่ในรูปแบบที่ลดลง
 
-Find $u + v$.
+หาค่า $u + v$.
 
 # --hints--
 
-`rationalZeros()` should return `285196020571078980`.
+`rationalZeros()` ควร return `285196020571078980`.
 
 ```js
 assert.strictEqual(rationalZeros(), 285196020571078980);

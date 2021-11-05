@@ -8,19 +8,19 @@ dashedName: problem-110-diophantine-reciprocals-ii
 
 # --description--
 
-In the following equation x, y, and n are positive integers.
+ในสมการต่อไปนี้ x, y และ n เป็นจำนวนเต็มบวก
 
 $$\frac{1}{x} + \frac{1}{y} = \frac{1}{n}$$
 
-It can be verified that when `n` = 1260 there are 113 distinct solutions and this is the least value of `n` for which the total number of distinct solutions exceeds one hundred.
+สามารถตรวจสอบได้ว่าเมื่อ `n` = 1260 มี 113 คำตอบที่แตกต่างกัน และนี่คือค่าที่น้อยที่สุดของ `n` ซึ่งจำนวนรวมของโซลูชันที่แตกต่างกันเกินหนึ่งร้อย
 
-What is the least value of `n` for which the number of distinct solutions exceeds four million?
+ค่าที่น้อยที่สุดของ `n` ซึ่งจำนวนของsolutionsที่แตกต่างกันเกินสี่ล้าน?
 
-**Note:** This problem is a much more difficult version of Problem 108 and as it is well beyond the limitations of a brute force approach it requires a clever implementation.
+**Note:** ปัญหาข้อนี้ยากกว่า 108 
 
 # --hints--
 
-`diophantineTwo()` should return `9350130049860600`.
+`diophantineTwo()` ควร return `9350130049860600`.
 
 ```js
 assert.strictEqual(diophantineTwo(), 9350130049860600);

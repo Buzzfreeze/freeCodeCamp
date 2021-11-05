@@ -8,17 +8,17 @@ dashedName: problem-476-circle-packing-ii
 
 # --description--
 
-Let $R(a, b, c)$ be the maximum area covered by three non-overlapping circles inside a triangle with edge lengths $a$, $b$ and $c$.
+ให้ $R(a, b, c)$ เป็นพื้นที่สูงสุดที่วงกลมสามวงไม่ทับซ้อนกันภายในสามเหลี่ยมที่มีความยาวขอบ $a$, $b$ และ $c$
 
-Let $S(n)$ be the average value of $R(a, b, c)$ over all integer triplets $(a, b, c)$ such that $1 ≤ a ≤ b ≤ c &lt; a + b ≤ n$.
+ให้ $S(n)$ เป็นค่าเฉลี่ยของ $R(a, b, c)$ เหนือจำนวนเต็มสามเท่าทั้งหมด $(a, b, c)$ โดยที่ $1 ≤ a ≤ b ≤ c &lt; a + b ≤ n$
 
-You are given $S(2) = R(1, 1, 1) ≈ 0.31998$, $S(5) ≈ 1.25899$.
+คุณจะได้รับ $S(2) = R(1, 1, 1) ≈ 0.31998$, $S(5) ≈ 1.25899$
 
-Find $S(1803)$ rounded to 5 decimal places behind the decimal point.
+หา $S(1803)$ ที่ปัดเศษทศนิยม 5 ตำแหน่งหลังจุดทศนิยม
 
 # --hints--
 
-`circlePackingTwo()` should return `110242.87794`.
+`circlePackingTwo()` ควร return `110242.87794`.
 
 ```js
 assert.strictEqual(circlePackingTwo(), 110242.87794);

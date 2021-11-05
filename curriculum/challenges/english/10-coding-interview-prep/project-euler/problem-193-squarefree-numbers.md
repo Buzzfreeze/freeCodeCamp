@@ -8,13 +8,14 @@ dashedName: problem-193-squarefree-numbers
 
 # --description--
 
-A positive integer $n$ is called squarefree, if no square of a prime divides $n$, thus 1, 2, 3, 5, 6, 7, 10, 11 are squarefree, but not 4, 8, 9, 12.
 
-How many squarefree numbers are there below $2^{50}$?
+จำนวนเต็มบวก $n$ เรียกว่า squarefree ถ้าไม่มีกำลังสองของจำนวนเฉพาะหาร $n$ ดังนั้น 1, 2, 3, 5, 6, 7, 10, 11 จะเป็นกำลังสอง แต่ไม่ใช่ 4, 8, 9, 12
+
+จำนวนsquarefreeมีจำนวนเท่าใดที่ต่ำกว่า $2^{50}$
 
 # --hints--
 
-`squarefreeNumbers()` should return `684465067343069`.
+`squarefreeNumbers()` ควร return `684465067343069`.
 
 ```js
 assert.strictEqual(squarefreeNumbers(), 684465067343069);

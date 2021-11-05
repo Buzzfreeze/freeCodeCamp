@@ -8,11 +8,11 @@ dashedName: problem-279-triangles-with-integral-sides-and-an-integral-angle
 
 # --description--
 
-How many triangles are there with integral sides, at least one integral angle (measured in degrees), and a perimeter that does not exceed ${10}^8$?
+มีสามเหลี่ยมที่มีด้านครบจำนวนกี่รูป มุมอินทิกรัลอย่างน้อยหนึ่งมุม (วัดเป็นองศา) และperimeterที่ไม่เกิน ${10}^8$?
 
 # --hints--
 
-`trianglesWithIntegralSidesAndAngle()` should return `416577688`.
+`trianglesWithIntegralSidesAndAngle()` ควร return `416577688`.
 
 ```js
 assert.strictEqual(trianglesWithIntegralSidesAndAngle(), 416577688);

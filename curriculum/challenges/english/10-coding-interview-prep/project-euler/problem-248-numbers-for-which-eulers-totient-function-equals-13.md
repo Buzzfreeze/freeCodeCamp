@@ -8,13 +8,13 @@ dashedName: problem-248-numbers-for-which-eulers-totient-function-equals-13
 
 # --description--
 
-The first number $n$ for which $φ(n) = 13!$ is $6\\,227\\,180\\,929$.
+ตัวเลขแรก $n$ ซึ่ง $φ(n) = 13!$ คือ $6\\,227\\,180\\,929$
 
-Find the ${150\\,000}^{\text{th}}$ such number.
+หาจำนวนดังกล่าว ${150\\,000}^{\text{th}}$
 
 # --hints--
 
-`eulersTotientFunctionEquals()` should return `23507044290`.
+`eulersTotientFunctionEquals()` ควร return `23507044290`.
 
 ```js
 assert.strictEqual(eulersTotientFunctionEquals(), 23507044290);

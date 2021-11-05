@@ -8,19 +8,19 @@ dashedName: problem-393-migrating-ants
 
 # --description--
 
-An $n × n$ grid of squares contains $n^2$ ants, one ant per square.
+ตาราง $n × n$ ของสี่เหลี่ยมประกอบด้วยมด $n^2$ มดหนึ่งตัวต่อตาราง
 
-All ants decide to move simultaneously to an adjacent square (usually 4 possibilities, except for ants on the edge of the grid or at the corners).
+มดทั้งหมดตัดสินใจย้ายพร้อมกันไปยังสี่เหลี่ยมที่อยู่ติดกัน (โดยปกติเป็นไปได้ 4 อย่าง ยกเว้นมดที่ขอบตารางหรือที่มุม)
 
-We define $f(n)$ to be the number of ways this can happen without any ants ending on the same square and without any two ants crossing the same edge between two squares.
+เรากำหนดให้ $f(n)$ เป็นจำนวนวิธีที่สามารถเกิดขึ้นได้โดยไม่มีมดที่ลงท้ายด้วยช่องสี่เหลี่ยมเดียวกัน และไม่มีมดสองตัวข้ามขอบเดียวกันระหว่างสองช่องสี่เหลี่ยม
 
-You are given that $f(4) = 88$.
+จะได้ $f(4) = 88$
 
-Find $f(10)$.
+หา $f(10)$
 
 # --hints--
 
-`migratingAnts()` should return `112398351350823100`.
+`migratingAnts()` ควร return `112398351350823100`.
 
 ```js
 assert.strictEqual(migratingAnts(), 112398351350823100);

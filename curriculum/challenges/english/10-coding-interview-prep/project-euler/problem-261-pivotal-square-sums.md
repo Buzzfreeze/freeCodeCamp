@@ -8,11 +8,11 @@ dashedName: problem-261-pivotal-square-sums
 
 # --description--
 
-Let us call a positive integer $k$ a square-pivot, if there is a pair of integers $m > 0$ and $n ≥ k$, such that the sum of the ($m + 1$) consecutive squares up to $k$ equals the sum of the $m$ consecutive squares from ($n + 1$) on:
+เรียกจำนวนเต็มบวก $k$ a square-pivot ถ้ามีคู่ของจำนวนเต็ม $m > 0$ และ $n ≥ k$ โดยที่ผลรวมของ ($m + 1$) กำลังสองที่เรียงต่อกัน $k$ เท่ากับผลรวมของช่องสี่เหลี่ยมต่อเนื่อง $m$ จาก ($n + 1$) บน:
 
 $${(k - m)}^2 + \ldots + k^2 = {(n + 1)}^2 + \ldots + {(n + m)}^2$$
 
-Some small square-pivots are
+มี square-pivots สี่เหลี่ยมเล็ก ๆ อยู่บ้าง
 
 $$\begin{align}
   & \mathbf{4}: 3^2 + \mathbf{4}^2 = 5^2 \\\\
@@ -21,11 +21,11 @@ $$\begin{align}
   & \mathbf{110}: {108}^2 + {109}^2 + \mathbf{110}^2 = {133}^2 + {134}^2 \\\\
 \end{align}$$
 
-Find the sum of all distinct square-pivots $≤ {10}^{10}$.
+หาผลรวมของ square-pivots ที่แตกต่างกันทั้งหมด $≤ {10}^{10}$
 
 # --hints--
 
-`pivotalSquareSums()` should return `238890850232021`.
+`pivotalSquareSums()` ควร return `238890850232021`.
 
 ```js
 assert.strictEqual(pivotalSquareSums(), 238890850232021);

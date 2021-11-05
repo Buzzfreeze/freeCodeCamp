@@ -11,11 +11,11 @@ dashedName: >-
 
 # --description--
 
-How many 20 digit numbers $n$ (without any leading zero) exist such that no three consecutive digits of $n$ have a sum greater than 9?
+จำนวน 20 หลักที่ $n$ (ไม่มีศูนย์นำหน้า) มีอยู่จำนวนเท่าใด โดยที่ไม่มีตัวเลขสามหลักต่อเนื่องกันของ $n$ มีผลรวมมากกว่า 9
 
 # --hints--
 
-`consecutiveDigitsSum()` should return `378158756814587`.
+`consecutiveDigitsSum()` ควร return `378158756814587`.
 
 ```js
 assert.strictEqual(consecutiveDigitsSum(), 378158756814587);
