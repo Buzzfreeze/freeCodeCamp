@@ -25,6 +25,7 @@
     "clean": "gatsby clean",
     "predevelop": "node ../tools/scripts/build/ensure-env.js && npm run build:workers -- --env development",
     "develop": "node --max_old_space_size=4000 node_modules/gatsby-cli develop --inspect=9230",
+    "developLog": "node --max_old_space_size=4000 node_modules/gatsby-cli develop --inspect=9230 --verbose ",
     "lint": "node ./i18n/schema-validation.js",
     "serve": "gatsby serve -p 8000",
     "serve-ci": "serve -l 8000 -c ../serve.json public",

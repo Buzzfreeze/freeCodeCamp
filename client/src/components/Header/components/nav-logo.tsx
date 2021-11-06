@@ -1,5 +1,4 @@
 import React from 'react';
-import FreeCodeCampLogo from '../../../assets/icons/FreeCodeCamp-logo';
 import './nav-logo.css';
 
 const NavLogo = (): JSX.Element => {

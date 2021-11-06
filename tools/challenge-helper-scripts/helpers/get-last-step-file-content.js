@@ -20,6 +20,8 @@ function getLastStepFileContent() {
   });
 
   const fileName = filesArr[filesArr.length - 1];
+  console.log(projectPath);
+  console.log(fileName);
   let lastStepFileNum = fileName.split('.')[0].split('-')[1];
   lastStepFileNum = parseInt(lastStepFileNum, 10);
   if (filesArr.length !== lastStepFileNum) {

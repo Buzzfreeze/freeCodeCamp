@@ -1,0 +1,14 @@
+{
+  "name": "Test Test",
+  "isUpcomingChange": false,
+  "usesMultifileEditor": true,
+  "dashedName": "test-test",
+  "order": 42,
+  "time": "5 hours",
+  "template": "",
+  "required": [],
+  "superBlock": "pre-camp-software-engineer",
+  "superOrder": 12,
+  "isBeta": true,
+  "challengeOrder": [["6186512480b43e3eeae8a5b9", "Part 1"]]
+}

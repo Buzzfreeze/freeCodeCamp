@@ -249,7 +249,8 @@ export const certificatesByNameSelector = username => state => {
     isSciCompPyCertV7,
     isDataAnalysisPyCertV7,
     isMachineLearningPyCertV7,
-    isRelationalDatabasesCertV8
+    isRelationalDatabasesCertV8,
+    isPreCampSoftwareEngineerCert
   } = userByNameSelector(username)(state);
   return {
     hasModernCert:
@@ -264,7 +265,8 @@ export const certificatesByNameSelector = username => state => {
       isSciCompPyCertV7 ||
       isDataAnalysisPyCertV7 ||
       isMachineLearningPyCertV7 ||
-      isRelationalDatabasesCertV8,
+      isRelationalDatabasesCertV8 ||
+      isPreCampSoftwareEngineerCert,
     hasLegacyCert:
       isFrontEndCert || isBackEndCert || isDataVisCert || isInfosecQaCert,
     isFullStackCert,
@@ -323,6 +325,11 @@ export const certificatesByNameSelector = username => state => {
         show: isRelationalDatabasesCertV8,
         title: 'Relational Databases Certification',
         certSlug: 'relational-databases-v8'
+      },
+      {
+        show: isPreCampSoftwareEngineerCert,
+        title: 'Pre Camp Software Engineer Certification',
+        certSlug: 'pre-camp-software-engineer'
       }
     ],
     legacyCerts: [

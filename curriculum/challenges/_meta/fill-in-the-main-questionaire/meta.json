@@ -1,0 +1,27 @@
+{
+  "name": "Fill In the Main Questionaire",
+  "isUpcomingChange": false,
+  "usesMultifileEditor": true,
+  "dashedName": "fill-in-the-main-questionaire",
+  "order": 3,
+  "time": "5 hours",
+  "template": "",
+  "required": [],
+  "superBlock": "pre-camp-software-engineer",
+  "superOrder": 12,
+  "isBeta": true,
+  "challengeOrder": [
+    [
+      "61862b10712669613753c201",
+      "Part 1"
+    ],
+    [
+      "6186463d15b07727981abf59",
+      "Part 2"
+    ],
+    [
+      "6186466113ab2f282ef763c2",
+      "Part 3"
+    ]
+  ]
+}

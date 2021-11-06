@@ -14,7 +14,8 @@ const certTypes = {
   dataAnalysisPyV7: 'isDataAnalysisPyCertV7',
   machineLearningPyV7: 'isMachineLearningPyCertV7',
   fullStack: 'isFullStackCert',
-  relationalDatabasesV8: 'isRelationalDatabasesCertV8'
+  relationalDatabasesV8: 'isRelationalDatabasesCertV8',
+  preCampSoftwareEngineer: 'isPreCampSoftwareEngineerCert'
 };
 
 const certIds = {
@@ -33,7 +34,8 @@ const certIds = {
   sciCompPyV7Id: '5e44431b903586ffb414c951',
   dataAnalysisPyV7Id: '5e46fc95ac417301a38fb934',
   machineLearningPyV7Id: '5e46fc95ac417301a38fb935',
-  relationalDatabasesV8Id: '606243f50267e718b1e755f4'
+  relationalDatabasesV8Id: '606243f50267e718b1e755f4',
+  preCampSoftwareEngineerId: '618603dc9428ed1258ca8d14'
 };
 
 const completionHours = {
@@ -52,7 +54,8 @@ const completionHours = {
   [certTypes.sciCompPyV7]: 300,
   [certTypes.dataAnalysisPyV7]: 300,
   [certTypes.machineLearningPyV7]: 300,
-  [certTypes.relationalDatabasesV8]: 300
+  [certTypes.relationalDatabasesV8]: 300,
+  [certTypes.preCampSoftwareEngineer]: 100
 };
 
 const certSlugTypeMap = {
@@ -76,7 +79,8 @@ const certSlugTypeMap = {
   'scientific-computing-with-python-v7': certTypes.sciCompPyV7,
   'data-analysis-with-python-v7': certTypes.dataAnalysisPyV7,
   'machine-learning-with-python-v7': certTypes.machineLearningPyV7,
-  'relational-databases-v8': certTypes.relationalDatabasesV8
+  'relational-databases-v8': certTypes.relationalDatabasesV8,
+  'pre-camp-software-engineer': certTypes.preCampSoftwareEngineer
 };
 
 const superBlockCertTypeMap = {
@@ -98,7 +102,8 @@ const superBlockCertTypeMap = {
   'scientific-computing-with-python': certTypes.sciCompPyV7,
   'data-analysis-with-python': certTypes.dataAnalysisPyV7,
   'machine-learning-with-python': certTypes.machineLearningPyV7,
-  'relational-databases': certTypes.relationalDatabasesV8
+  'relational-databases': certTypes.relationalDatabasesV8,
+  'pre-camp-software-engineer': certTypes.preCampSoftwareEngineer
 };
 
 const certTypeIdMap = {
@@ -117,7 +122,8 @@ const certTypeIdMap = {
   [certTypes.sciCompPyV7]: certIds.sciCompPyV7Id,
   [certTypes.dataAnalysisPyV7]: certIds.dataAnalysisPyV7Id,
   [certTypes.machineLearningPyV7]: certIds.machineLearningPyV7Id,
-  [certTypes.relationalDatabasesV8]: certIds.relationalDatabasesV8Id
+  [certTypes.relationalDatabasesV8]: certIds.relationalDatabasesV8Id,
+  [certTypes.preCampSoftwareEngineer]: certIds.preCampSoftwareEngineerId
 };
 
 const certTypeTitleMap = {
@@ -136,7 +142,8 @@ const certTypeTitleMap = {
   [certTypes.sciCompPyV7]: 'Scientific Computing with Python',
   [certTypes.dataAnalysisPyV7]: 'Data Analysis with Python',
   [certTypes.machineLearningPyV7]: 'Machine Learning with Python',
-  [certTypes.relationalDatabasesV8]: 'Relational Databases'
+  [certTypes.relationalDatabasesV8]: 'Relational Databases',
+  [certTypes.preCampSoftwareEngineer]: 'Pre Camp Software Engineer'
 };
 
 exports.oldDataVizId = '561add10cb82ac38a17513b3';

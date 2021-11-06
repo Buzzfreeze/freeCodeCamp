@@ -17,7 +17,8 @@ const idToTitle = new Map(
     '561add10cb82ac38a17213bd': 'Legacy Full Stack',
     '5e44431b903586ffb414c951': 'Scientific Computing with Python',
     '5e46fc95ac417301a38fb934': 'Data Analysis with Python',
-    '5e46fc95ac417301a38fb935': 'Machine Learning with Python'
+    '5e46fc95ac417301a38fb935': 'Machine Learning with Python',
+    '618603dc9428ed1258ca8d14': 'Pre Camp Software Engineer'
   })
 );
 

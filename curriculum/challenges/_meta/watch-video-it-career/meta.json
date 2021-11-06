@@ -1,0 +1,23 @@
+{
+  "name": "Watch Video It Career",
+  "isUpcomingChange": false,
+  "usesMultifileEditor": true,
+  "dashedName": "watch-video-it-career",
+  "order": 1,
+  "time": "5 hours",
+  "template": "",
+  "required": [],
+  "superBlock": "pre-camp-software-engineer",
+  "superOrder": 12,
+  "isBeta": true,
+  "challengeOrder": [
+    [
+      "61864369b2690020570d377a",
+      "Part 1"
+    ],
+    [
+      "61864858357a562c1c0adf02",
+      "Part 2"
+    ]
+  ]
+}

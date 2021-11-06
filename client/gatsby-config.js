@@ -19,7 +19,7 @@ module.exports = {
     DEV_SSR: false
   },
   siteMetadata: {
-    title: 'freeCodeCamp',
+    title: 'careerVio',
     siteUrl: homeLocation
   },
   pathPrefix: pathPrefix,

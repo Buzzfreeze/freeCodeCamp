@@ -1,0 +1,23 @@
+{
+  "name": "Watch Video test",
+  "isUpcomingChange": false,
+  "usesMultifileEditor": true,
+  "dashedName": "watch-video",
+  "order": 2,
+  "time": "5 hours",
+  "template": "",
+  "required": [],
+  "superBlock": "pre-camp-software-engineer",
+  "superOrder": 12,
+  "isBeta": true,
+  "challengeOrder": [
+    [
+      "618643816f0e2121a4cc161b",
+      "Part 1"
+    ],
+    [
+      "6186484f6b1a1b2ba55bfaec",
+      "Part 2"
+    ]
+  ]
+}

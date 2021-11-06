@@ -18,7 +18,8 @@ const superBlocks = [
   'data-analysis-with-python',
   'information-security',
   'machine-learning-with-python',
-  'coding-interview-prep'
+  'coding-interview-prep',
+  'pre-camp-software-engineer'
 ] as const;
 
 type SuperBlock = typeof superBlocks[number];

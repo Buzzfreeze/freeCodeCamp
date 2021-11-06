@@ -1,0 +1,16 @@
+---
+id: 618603dc9428ed1258ca8d14
+title: Pre Camp Software Engineer Certification
+challengeType: 7
+isPrivate: true
+tests:
+  - id: bd7158d8c443edefaeb5bdef
+    title: Timestamp Microservice
+  - id: bd7158d8c443edefaeb5bdff
+    title: Request Header Parser Microservice
+  - id: bd7158d8c443edefaeb5bd0e
+    title: URL Shortener Microservice
+  - id: 5a8b073d06fa14fcfde687aa
+    title: Exercise Tracker
+  - id: bd7158d8c443edefaeb5bd0f
+    title: File Metadata Microservice

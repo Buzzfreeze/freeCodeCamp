@@ -103,6 +103,7 @@ export const User = PropTypes.shape({
   isSciCompPyCertV7: PropTypes.bool,
   isDataAnalysisPyCertV7: PropTypes.bool,
   isMachineLearningPyCertV7: PropTypes.bool,
+  isPreCampSoftwareEngineer: PropTypes.bool,
   linkedin: PropTypes.string,
   location: PropTypes.string,
   name: PropTypes.string,
@@ -318,6 +319,7 @@ export type isCertifiedTypes = {
   isSciCompPyCertV7: boolean;
   isDataAnalysisPyCertV7: boolean;
   isMachineLearningPyCertV7: boolean;
+  isPreCampSoftwareEngineer: boolean;
 };
 
 export type CompletedChallenge = {

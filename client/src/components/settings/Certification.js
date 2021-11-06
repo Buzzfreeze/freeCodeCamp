@@ -49,6 +49,7 @@ const propTypes = {
   isInfosecQaCert: PropTypes.bool,
   isJsAlgoDataStructCert: PropTypes.bool,
   isMachineLearningPyCertV7: PropTypes.bool,
+  isPreCampSoftwareEngineer: PropTypes.bool,
   isQaCertV7: PropTypes.bool,
   isRespWebDesignCert: PropTypes.bool,
   isSciCompPyCertV7: PropTypes.bool,
@@ -74,7 +75,8 @@ const isCertSelector = ({
   isRespWebDesignCert,
   isSciCompPyCertV7,
   isDataAnalysisPyCertV7,
-  isMachineLearningPyCertV7
+  isMachineLearningPyCertV7,
+  isPreCampSoftwareEngineer
 }) => ({
   is2018DataVisCert,
   isApisMicroservicesCert,
@@ -90,7 +92,8 @@ const isCertSelector = ({
   isRespWebDesignCert,
   isSciCompPyCertV7,
   isDataAnalysisPyCertV7,
-  isMachineLearningPyCertV7
+  isMachineLearningPyCertV7,
+  isPreCampSoftwareEngineer
 });
 
 const isCertMapSelector = createSelector(
@@ -109,7 +112,8 @@ const isCertMapSelector = createSelector(
     isBackEndCert,
     isSciCompPyCertV7,
     isDataAnalysisPyCertV7,
-    isMachineLearningPyCertV7
+    isMachineLearningPyCertV7,
+    isPreCampSoftwareEngineer
   }) => ({
     'Responsive Web Design': isRespWebDesignCert,
     'JavaScript Algorithms and Data Structures': isJsAlgoDataStructCert,
@@ -121,6 +125,7 @@ const isCertMapSelector = createSelector(
     'Scientific Computing with Python': isSciCompPyCertV7,
     'Data Analysis with Python': isDataAnalysisPyCertV7,
     'Machine Learning with Python': isMachineLearningPyCertV7,
+    'Pre Camp Software Engineer': isPreCampSoftwareEngineer,
     'Legacy Front End': isFrontEndCert,
     'Legacy Data Visualization': isDataVisCert,
     'Legacy Back End': isBackEndCert,

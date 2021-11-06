@@ -36,7 +36,8 @@ const {
   infosecV7Id,
   sciCompPyV7Id,
   dataAnalysisPyV7Id,
-  machineLearningPyV7Id
+  machineLearningPyV7Id,
+  preCampSoftwareEngineerId
 } = certIds;
 
 const log = debug('fcc:certification');
@@ -112,6 +113,10 @@ function createCertTypeIds(allChallenges) {
     [certTypes.machineLearningPyV7]: getCertById(
       machineLearningPyV7Id,
       allChallenges
+    ),
+    [certTypes.preCampSoftwareEngineer]: getCertById(
+      preCampSoftwareEngineerId,
+      allChallenges
     )
   };
 }
@@ -147,7 +152,8 @@ function sendCertifiedEmail(
     isInfosecCertV7,
     isSciCompPyCertV7,
     isDataAnalysisPyCertV7,
-    isMachineLearningPyCertV7
+    isMachineLearningPyCertV7,
+    isPreCampSoftwareEngineer
   },
   send$
 ) {
@@ -162,14 +168,15 @@ function sendCertifiedEmail(
     !isInfosecCertV7 ||
     !isSciCompPyCertV7 ||
     !isDataAnalysisPyCertV7 ||
-    !isMachineLearningPyCertV7
+    !isMachineLearningPyCertV7 ||
+    !isPreCampSoftwareEngineer
   ) {
     return Observable.just(false);
   }
   const notifyUser = {
     type: 'email',
     to: email,
-    from: 'quincy@freecodecamp.org',
+    from: 'careervio@buzzfreeze.com',
     subject: dedent`
       Congratulations on completing all of the
       freeCodeCamp certifications!
@@ -198,7 +205,8 @@ function getUserIsCertMap(user) {
     isFullStackCert = false,
     isSciCompPyCertV7 = false,
     isDataAnalysisPyCertV7 = false,
-    isMachineLearningPyCertV7 = false
+    isMachineLearningPyCertV7 = false,
+    isPreCampSoftwareEngineer = false
   } = user;
 
   return {
@@ -216,7 +224,8 @@ function getUserIsCertMap(user) {
     isFullStackCert,
     isSciCompPyCertV7,
     isDataAnalysisPyCertV7,
-    isMachineLearningPyCertV7
+    isMachineLearningPyCertV7,
+    isPreCampSoftwareEngineer
   };
 }
 
@@ -359,6 +368,7 @@ function createShowCert(app) {
       isSciCompPyCertV7: true,
       isDataAnalysisPyCertV7: true,
       isMachineLearningPyCertV7: true,
+      isPreCampSoftwareEngineer: true,
       isHonest: true,
       username: true,
       name: true,
@@ -527,6 +537,7 @@ function createVerifyCanClaim(certTypeIds, app) {
       isSciCompPyCertV7: true,
       isDataAnalysisPyCertV7: true,
       isMachineLearningPyCertV7: true,
+      isPreCampSoftwareEngineer: true,
       username: true,
       name: true,
       isHonest: true,

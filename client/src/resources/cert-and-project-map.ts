@@ -30,6 +30,8 @@ const legacyDataVisFrontEndBase = feLibsBase;
 const legacyDataVisTakeHomeBase = takeHomeBase;
 const legacyInfosecQaQaBase = qaBase;
 const legacyInfosecQaInfosecBase = infoSecBase;
+const preCampSoftwareEngineerBase =
+  '/learn/pre-camp-software-engineer/pre-camp-software-engineer-projects';
 
 // TODO: generate this automatically in a separate file
 // from the md/meta.json files for each cert and projects
@@ -702,6 +704,38 @@ const certMap = [
         title: 'Neural Network SMS Text Classifier',
         link: `${machineLearningPyBase}/neural-network-sms-text-classifier`,
         certSlug: 'machine-learning-with-python-v7'
+      }
+    ]
+  },
+  {
+    id: '618603dc9428ed1258ca8d14',
+    title: 'Pre Camp Software Engineer',
+    certSlug: 'pre-camp-software-engineer',
+    flag: 'isPreCampSoftwareEngineerCert',
+    projects: [
+      {
+        id: '61862b10712669613753c201',
+        title: 'Fill In the Main Questionaire',
+        link: `${preCampSoftwareEngineerBase}/fill-in-the-main-questionaire`,
+        certSlug: 'pre-camp-software-engineer'
+      },
+      {
+        id: '61862b10712669613753c201',
+        title: 'Fill In the Main Questionaire',
+        link: `${preCampSoftwareEngineerBase}/fill-in-the-main-questionaire`,
+        certSlug: 'pre-camp-software-engineer'
+      },
+      {
+        id: '61862b10712669613753c201',
+        title: 'Fill In the Main Questionaire',
+        link: `${preCampSoftwareEngineerBase}/fill-in-the-main-questionaire`,
+        certSlug: 'pre-camp-software-engineer'
+      },
+      {
+        id: '61862b10712669613753c201',
+        title: 'Fill In the Main Questionaire',
+        link: `${preCampSoftwareEngineerBase}/fill-in-the-main-questionaire`,
+        certSlug: 'pre-camp-software-engineer'
       }
     ]
   }

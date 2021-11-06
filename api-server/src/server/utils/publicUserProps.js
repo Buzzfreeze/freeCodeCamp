@@ -30,6 +30,7 @@ export const publicUserProps = [
   'isSciCompPyCertV7',
   'isDataAnalysisPyCertV7',
   'isMachineLearningPyCertV7',
+  'isPreCampSoftwareEngineer',
   'linkedin',
   'location',
   'name',

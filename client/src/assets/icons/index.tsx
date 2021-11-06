@@ -24,7 +24,8 @@ const iconMap = {
   'data-analysis-with-python': Analytics,
   'information-security': Shield,
   'machine-learning-with-python': TensorflowIcon,
-  'coding-interview-prep': Algorithm
+  'coding-interview-prep': Algorithm,
+  'pre-camp-software-engineer': ResponsiveDesign
 };
 
 type SuperBlock = keyof typeof iconMap;

@@ -168,7 +168,7 @@ const SuperBlockIntroductionPage = props => {
       : t(`intro:misc-text.certification`, {
           cert: i18nSuperBlock
         });
-
+  console.log(superBlock);
   return (
     <>
       <Helmet>

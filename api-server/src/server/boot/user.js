@@ -179,6 +179,7 @@ function postResetProgress(req, res, next) {
       isSciCompPyCertV7: false,
       isDataAnalysisPyCertV7: false,
       isMachineLearningPyCertV7: false,
+      isPreCampSoftwareEngineer: false,
       completedChallenges: []
     },
     function (err) {
@@ -222,9 +223,9 @@ function createPostReportUserProfile(app) {
     return Email.send$(
       {
         type: 'email',
-        to: 'support@freecodecamp.org',
+        to: 'careervio@buzzfreeze.com',
         cc: user.email,
-        from: 'team@freecodecamp.org',
+        from: 'careervio@buzzfreeze.com',
         subject: `Abuse Report : Reporting ${username}'s profile.`,
         text: dedent(`
         Hello Team,\n
