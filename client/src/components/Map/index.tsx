@@ -40,7 +40,8 @@ const linkSpacingStyle = {
 };
 
 function renderLandingMap(nodes: ChallengeNodeType[]) {
-  nodes = nodes.filter(node => node.superBlock !== 'coding-interview-prep');
+  // nodes = nodes.filter(node => node.superBlock !== 'coding-interview-prep');
+  // console.log(nodes);
   return (
     <ul data-test-label='certifications'>
       {nodes.map((node, i) => (
