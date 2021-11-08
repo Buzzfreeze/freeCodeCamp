@@ -66,8 +66,10 @@ export class SolutionForm extends Component<FormProps> {
 
     const options = {
       types: {
-        solution: 'url',
-        githubLink: 'url'
+        // solution: 'url', // Oak Comment to make the solution more flexible
+        // githubLink: 'url'
+        solution: 'text',
+        githubLink: 'text'
       },
       required: ['solution'],
       isEditorLinkAllowed: false,
