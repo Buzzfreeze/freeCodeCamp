@@ -37,7 +37,7 @@ dashedName: fill-in-the-main-questionaire-1
          
         },
         body: JSON.stringify({
-  "query": `query{surveyResults(where:{email:"${getUserInput('url')}"}){id email}}`
+  "query": `query{surveyResults(where:{survey: 1,email:"${getUserInput('url')}"}){id email}}`
 })})
         .then(res => {
           if (res.status !== 200) {
