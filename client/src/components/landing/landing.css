@@ -28,7 +28,7 @@
 .landing-page h1,
 .landing-page h2,
 .landing-page p {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Prompt';
 }
 
 p.caption {
@@ -119,7 +119,7 @@ p.caption {
 
 .testimonials p,
 .testimonials strong {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Prompt';
   font-size: 1.1rem;
   margin: 0;
   color: var(--quaternary-color);
