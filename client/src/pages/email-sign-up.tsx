@@ -65,7 +65,7 @@ function AcceptPrivacyTerms({
   ) : (
     <>
       <Helmet>
-        <title>{t('misc.email-signup')} | freeCodeCamp.org</title>
+        <title>{t('misc.email-signup')} | careervio.com</title>
       </Helmet>
       <Grid
         className='default-page-wrapper email-sign-up'

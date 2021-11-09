@@ -1,3 +1,3 @@
 export function getEmailSender() {
-  return process.env.SES_MAIL_FROM || 'team@freecodecamp.org';
+  return process.env.SES_MAIL_FROM || 'careervio@buzzfreeze.com';
 }

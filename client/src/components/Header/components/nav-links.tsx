@@ -11,7 +11,7 @@
 // @ts-nocheck
 import {
   faCheckSquare,
-  faHeart,
+  // faHeart,
   faSquare,
   faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons';
@@ -20,10 +20,10 @@ import React, { Component, Fragment } from 'react';
 import { TFunction, withTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
 import envData from '../../../../../config/env.json';
-import {
-  availableLangs,
-  langDisplayNames
-} from '../../../../../config/i18n/all-langs';
+// import {
+//   availableLangs,
+//   langDisplayNames
+// } from '../../../../../config/i18n/all-langs';
 import { hardGoTo as navigate } from '../../../redux';
 import { updateUserFlag } from '../../../redux/settings';
 import createLanguageRedirect from '../../create-language-redirect';
@@ -31,7 +31,7 @@ import { Link } from '../../helpers';
 
 const { clientLocale, radioLocation, apiLocation } = envData;
 
-const locales = availableLangs.client;
+// const locales = availableLangs.client;
 
 export interface NavLinksProps {
   displayMenu?: boolean;
@@ -81,9 +81,9 @@ export class NavLinks extends Component<NavLinksProps, {}> {
       fetchState,
       t,
       toggleNightMode,
-      user: { isDonating = false, username, theme }
+      user: { username, theme }
     }: NavLinksProps = this.props;
-
+    // user: { isDonating = false, username, theme }
     const { pending } = fetchState;
 
     return pending ? (

@@ -213,7 +213,7 @@ class BackEnd extends Component<BackEndProps> {
       >
         <LearnLayout>
           <Helmet
-            title={`${blockNameTitle} | ${t('learn.learn')} | freeCodeCamp.org`}
+            title={`${blockNameTitle} | ${t('learn.learn')} | careervio.com`}
           />
           <Grid>
             <Row>

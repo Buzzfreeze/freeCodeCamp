@@ -189,6 +189,7 @@ p.caption {
 
 .map-ui .btn {
   min-height: 80px;
+  font-family: 'Prompt';
 }
 
 @media (min-width: 500px) {

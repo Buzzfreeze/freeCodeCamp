@@ -2,7 +2,7 @@
   "help-translate-link-url": "https://contribute.freecodecamp.org/#/how-to-translate-files",
   "top-contributors": "https://www.freecodecamp.org/news/freecodecamp-top-contributors/",
   "footer": {
-    "about-url": "https://www.freecodecamp.org/news/about/",
+    "about-url": "https:/news.careervio.com/",
     "shop-url": "https://www.freecodecamp.org/shop/",
     "support-url": "https://www.freecodecamp.org/news/support/",
     "sponsors-url": "https://www.freecodecamp.org/news/sponsors/",
@@ -16,8 +16,8 @@
     "other-ways-url": "https://www.freecodecamp.org/news/how-to-donate-to-free-code-camp"
   },
   "nav": {
-    "forum": "https://forum.freecodecamp.org/",
-    "news": "https://freecodecamp.org/news/"
+    "forum": "https://forum.careervio.com/",
+    "news": "https://news.careervio.com/"
   },
   "help": {
     "HTML-CSS": "HTML-CSS",

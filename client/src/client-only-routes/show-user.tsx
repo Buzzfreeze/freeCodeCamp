@@ -122,7 +122,7 @@ class ShowUser extends Component<IShowUserProps> {
     return (
       <>
         <Helmet>
-          <title>{t('report.portfolio')} | freeCodeCamp.org</title>
+          <title>{t('report.portfolio')} | careervio.com</title>
         </Helmet>
         <Spacer size={2} />
         <Row className='text-center overflow-fix'>

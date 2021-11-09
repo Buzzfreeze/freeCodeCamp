@@ -204,7 +204,7 @@ class ShowVideo extends Component<ShowVideoProps, ShowVideoState> {
       >
         <LearnLayout>
           <Helmet
-            title={`${blockNameTitle} | ${t('learn.learn')} | freeCodeCamp.org`}
+            title={`${blockNameTitle} | ${t('learn.learn')} | careervio.com`}
           />
           <Grid>
             <Row>

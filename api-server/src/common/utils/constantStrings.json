@@ -1,9 +1,9 @@
 {
-  "aboutUrl": "https://www.freecodecamp.org/about",
+  "aboutUrl": "https://news.careervio.com",
   "defaultProfileImage": "https://s3.amazonaws.com/freecodecamp/camper-image-placeholder.png",
   "donateUrl": "https://www.freecodecamp.org/donate",
-  "forumUrl": "https://forum.freecodecamp.org",
-  "githubUrl": "https://github.com/freecodecamp/freecodecamp",
+  "forumUrl": "https://forum.careervio.com",
+  "githubUrl": "https://github.com/CareerVio",
   "RSA": "https://forum.freecodecamp.org/t/the-read-search-ask-methodology-for-getting-unstuck/137307",
-  "homeURL": "https://www.freecodecamp.org"
+  "homeURL": "https://learn.careervio.com"
 }

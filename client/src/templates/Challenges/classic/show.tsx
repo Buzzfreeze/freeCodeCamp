@@ -404,7 +404,7 @@ class ShowClassic extends Component<ShowClassicProps, ShowClassicState> {
           <Helmet
             title={`${t(
               'learn.learn'
-            )} ${this.getBlockNameTitle()} | freeCodeCamp.org`}
+            )} ${this.getBlockNameTitle()} | careervio.com`}
           />
           <Media maxWidth={MAX_MOBILE_WIDTH}>
             <MobileLayout

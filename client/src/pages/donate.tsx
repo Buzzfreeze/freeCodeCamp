@@ -83,7 +83,7 @@ function DonatePage({
     <Loader fullScreen={true} />
   ) : (
     <>
-      <Helmet title={`${t('donate.title')} | freeCodeCamp.org`} />
+      <Helmet title={`${t('donate.title')} | careervio.com`} />
       <Grid className='donate-page-wrapper'>
         <Spacer />
         <Row>

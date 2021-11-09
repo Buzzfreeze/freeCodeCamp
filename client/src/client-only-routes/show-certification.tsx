@@ -241,7 +241,7 @@ const ShowCertification = (props: IShowCertificationProps): JSX.Element => {
   const certDate = new Date(date);
   const certYear = certDate.getFullYear();
   const certMonth = certDate.getMonth();
-  const certURL = `https://freecodecamp.org${pathname}`;
+  const certURL = `https://learn.careervio.com${pathname}`;
 
   const donationCloseBtn = (
     <div>
@@ -358,11 +358,8 @@ const ShowCertification = (props: IShowCertificationProps): JSX.Element => {
         <footer>
           <div className='row signatures'>
             <Image
-              alt="Quincy Larson's Signature"
-              src={
-                'https://cdn.freecodecamp.org' +
-                '/platform/english/images/quincy-larson-signature.svg'
-              }
+              alt="Krissada's Signature"
+              src={'https://topwork.asia' + '/oak-id-sign-new.jpg'}
             />
             <p>
               <strong>Quincy Larson</strong>

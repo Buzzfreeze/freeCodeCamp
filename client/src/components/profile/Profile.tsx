@@ -166,7 +166,7 @@ function Profile({ user, isSessionUser }: IProfileProps): JSX.Element {
   return (
     <>
       <Helmet>
-        <title>{t('buttons.profile')} | freeCodeCamp.org</title>
+        <title>{t('buttons.profile')} | careervio.com</title>
       </Helmet>
       <Spacer />
       <Grid>

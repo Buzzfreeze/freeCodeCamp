@@ -130,7 +130,7 @@ export function ShowSettings(props: IShowSettingsProps): JSX.Element {
 
   return (
     <>
-      <Helmet title={`${t('buttons.settings')} | freeCodeCamp.org`} />
+      <Helmet title={`${t('buttons.settings')} | careervio.com`} />
       <Grid>
         <main>
           <Spacer size={2} />
