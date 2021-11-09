@@ -31,7 +31,7 @@ const legacyDataVisTakeHomeBase = takeHomeBase;
 const legacyInfosecQaQaBase = qaBase;
 const legacyInfosecQaInfosecBase = infoSecBase;
 const preCampSoftwareEngineerBase =
-  '/learn/pre-camp-software-engineer/pre-camp-software-engineer-projects';
+  '/learn/pre-camp-software-engineer/test-test';
 
 // TODO: generate this automatically in a separate file
 // from the md/meta.json files for each cert and projects
@@ -714,27 +714,15 @@ const certMap = [
     flag: 'isPreCampSoftwareEngineerCert',
     projects: [
       {
-        id: '61862b10712669613753c201',
-        title: 'Fill In the Main Questionaire',
-        link: `${preCampSoftwareEngineerBase}/fill-in-the-main-questionaire`,
+        id: '6186512480b43e3eeae8a5b9',
+        title: 'HTML Challenge',
+        link: `${preCampSoftwareEngineerBase}/part-1`,
         certSlug: 'pre-camp-software-engineer'
       },
       {
-        id: '61862b10712669613753c201',
-        title: 'Fill In the Main Questionaire',
-        link: `${preCampSoftwareEngineerBase}/fill-in-the-main-questionaire`,
-        certSlug: 'pre-camp-software-engineer'
-      },
-      {
-        id: '61862b10712669613753c201',
-        title: 'Fill In the Main Questionaire',
-        link: `${preCampSoftwareEngineerBase}/fill-in-the-main-questionaire`,
-        certSlug: 'pre-camp-software-engineer'
-      },
-      {
-        id: '61862b10712669613753c201',
-        title: 'Fill In the Main Questionaire',
-        link: `${preCampSoftwareEngineerBase}/fill-in-the-main-questionaire`,
+        id: '618a84793a524544e4551501',
+        title: 'Javascript Challenge',
+        link: `${preCampSoftwareEngineerBase}/part-2`,
         certSlug: 'pre-camp-software-engineer'
       }
     ]

@@ -1,13 +1,13 @@
 ---
-id: 6186512480b43e3eeae8a5b9
-title: Part 1
+id: 618a84793a524544e4551501
+title: Part 2
 challengeType: 0
-dashedName: part-1
+dashedName: part-2
 ---
 
 # --description--
 
-step 1 instructions
+step 2 instructions
 
 # --hints--
 

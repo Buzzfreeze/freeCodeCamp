@@ -10,5 +10,14 @@
   "superBlock": "pre-camp-software-engineer",
   "superOrder": 12,
   "isBeta": true,
-  "challengeOrder": [["6186512480b43e3eeae8a5b9", "Part 1"]]
+  "challengeOrder": [
+    [
+      "6186512480b43e3eeae8a5b9",
+      "Part 1"
+    ],
+    [
+      "618a84793a524544e4551501",
+      "Part 2"
+    ]
+  ]
 }
