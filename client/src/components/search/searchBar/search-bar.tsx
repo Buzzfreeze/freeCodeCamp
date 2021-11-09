@@ -201,7 +201,7 @@ export class SearchBar extends Component<searchBarPropType, classState> {
               <label className='fcc_sr_only' htmlFor='fcc_instantsearch'>
                 {t ? t('search.label') : ''}
               </label>
-              <ObserveKeys except={['Space']}>
+              {/* <ObserveKeys except={['Space']}>
                 <div onFocus={this.handleFocus} role='textbox'>
                   <SearchBox
                     focusShortcuts={['83', '191']}
@@ -213,7 +213,7 @@ export class SearchBar extends Component<searchBarPropType, classState> {
                     translations={{ placeholder }}
                   />
                 </div>
-              </ObserveKeys>
+              </ObserveKeys> */}
               {isDropdownEnabled && isSearchFocused && (
                 <SearchHits
                   handleHits={this.handleHits}
