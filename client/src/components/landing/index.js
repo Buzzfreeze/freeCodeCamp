@@ -4,10 +4,10 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 
-import AsSeenIn from './components/AsSeenIn';
+// import AsSeenIn from './components/AsSeenIn';
 import Certifications from './components/Certifications';
 import LandingTop from './components/LandingTop';
-import Testimonials from './components/Testimonials';
+// import Testimonials from './components/Testimonials';
 
 import './landing.css';
 
@@ -27,11 +27,11 @@ export const Landing = ({ page = 'landing' }) => {
         <Grid>
           <LandingTop page={page} />
         </Grid>
-        <Grid fluid={true}>
+        {/* <Grid fluid={true}>
           <AsSeenIn />
-        </Grid>
+        </Grid> */}
         <Grid>
-          <Testimonials />
+          {/* <Testimonials /> */}
           <Certifications />
         </Grid>
       </main>

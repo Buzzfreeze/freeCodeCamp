@@ -95,6 +95,7 @@
 }
 
 .nav-link {
+  font-family: 'Prompt';
   margin: 0;
   padding: 2px 15px 0 15px;
   display: flex;

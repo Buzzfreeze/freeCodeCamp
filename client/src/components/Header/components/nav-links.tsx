@@ -90,7 +90,7 @@ export class NavLinks extends Component<NavLinksProps, {}> {
       <div className='nav-skeleton' />
     ) : (
       <div className={'nav-list' + (displayMenu ? ' display-menu' : '')}>
-        {isDonating ? (
+        {/* {isDonating ? (
           <div className='nav-link nav-link-flex nav-link-header' key='donate'>
             <span>{t('donate.thanks')}</span>
             <FontAwesomeIcon icon={faHeart} />
@@ -99,7 +99,7 @@ export class NavLinks extends Component<NavLinksProps, {}> {
           <Link className='nav-link' key='donate' sameTab={false} to='/donate'>
             {t('buttons.donate')}
           </Link>
-        )}
+        )} */}
         {!username && (
           <a
             className='nav-link nav-link-sign-in'
@@ -185,7 +185,7 @@ export class NavLinks extends Component<NavLinksProps, {}> {
             <span className='nav-link-dull'>{t('misc.change-theme')}</span>
           )}
         </button>
-        <div className='nav-link nav-link-header' key='lang-header'>
+        {/* <div className='nav-link nav-link-header' key='lang-header'>
           {t('footer.language')}
         </div>
 
@@ -201,7 +201,7 @@ export class NavLinks extends Component<NavLinksProps, {}> {
               </option>
             ))}
           </select>
-        </div>
+        </div> */}
         {username && (
           <Fragment key='signout-frag'>
             <hr className='nav-line-2' />

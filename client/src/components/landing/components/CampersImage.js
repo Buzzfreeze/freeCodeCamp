@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Media from 'react-responsive';
-import wideImg from '../../../assets/images/landing/wide-image.png';
+import wideImg from '../../../assets/images/landing/oak.png';
 import { Spacer, ImageLoader } from '../../helpers';
 
 const propTypes = {

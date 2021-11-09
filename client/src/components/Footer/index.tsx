@@ -16,7 +16,10 @@ function Footer(): JSX.Element {
             <p>{t('footer.donation-initiatives')}</p>
             <p className='footer-donation'>
               {t('footer.donate-text')}{' '}
-              <Link className='inline' to='/donate'>
+              <Link
+                className='inline'
+                to='้https://www.facebook.com/theselfmadethailand'
+              >
                 {t('footer.donate-link')}
               </Link>
               .
@@ -133,17 +136,45 @@ function Footer(): JSX.Element {
           <div className='col-header'>{t('footer.our-nonprofit')}</div>
           <div className='footer-divder' />
           <div className='our-nonprofit'>
-            <Link external={false} to={t('links:footer.about-url')}>
-              {t('footer.links.about')}
+            <Link
+              external={false}
+              sameTab={false}
+              to={'https://news.careervio.com'}
+            >
+              Blog
             </Link>
             <Link
+              external={false}
+              sameTab={false}
+              to={'https://forum.careervio.com'}
+            >
+              Webboard
+            </Link>
+            <Link
+              external={false}
+              sameTab={false}
+              to={'https://chat.careervio.com'}
+            >
+              Chat
+            </Link>
+            <Link
+              external={false}
+              sameTab={false}
+              to={'https://radio.careervio.com/public/careervio'}
+            >
+              ฟังเพลง
+            </Link>
+            {/* <Link external={false} to={t('links:footer.about-url')}>
+              {t('footer.links.about')}
+            </Link> */}
+            {/* <Link
               external={false}
               sameTab={false}
               to={'https://www.linkedin.com/school/free-code-camp/people/'}
             >
               {t('footer.links.alumni')}
-            </Link>
-            <Link external={false} to={'https://github.com/freeCodeCamp/'}>
+            </Link> */}
+            {/* <Link external={false} to={'https://github.com/freeCodeCamp/'}>
               {t('footer.links.open-source')}
             </Link>
             <Link
@@ -173,7 +204,7 @@ function Footer(): JSX.Element {
             </Link>
             <Link external={false} to={t('links:footer.copyright-url')}>
               {t('footer.links.copyright')}
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

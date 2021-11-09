@@ -14,7 +14,6 @@ dashedName: fill-in-the-main-questionaire-1
 2) หลังจากทำแบบสอบถามที่ [เว็บนี้](https://front.careervio.com) เสร็จแล้วให้นำเอา Email ที่ใช้ในการสมัคร account CareerVio มากรอกที่ช่องว่าง
 3) จากนั้นระบบจะตรวจสอบโดยอัตโนมัติว่าตรวจเจอแบบสอบถามของ Email ของท่านหรือไม่ ถ้าเจอระบบจะให้ผ่าน
 
-
 # --hints--
 
 ทำแบบสอบถามที่ [เว็บนี้](https://front.careervio.com) ด้วยการ Login ด้วย Account CareerVio (ถ้ายังไม่มีสามารถสมัครได้ที่หน้าเว็บเลย)
