@@ -1,0 +1,14 @@
+{
+  "name": "Read Articles and Watch English Videos",
+  "isUpcomingChange": false,
+  "usesMultifileEditor": true,
+  "dashedName": "read-articles-and-watch-english-videos",
+  "order": 7,
+  "time": "5 hours",
+  "template": "",
+  "required": [],
+  "superBlock": "pre-camp-software-engineer",
+  "superOrder": 12,
+  "isBeta": true,
+  "challengeOrder": [["618ad9bc41bcac4e86d53cf2", "Part 1"]]
+}
