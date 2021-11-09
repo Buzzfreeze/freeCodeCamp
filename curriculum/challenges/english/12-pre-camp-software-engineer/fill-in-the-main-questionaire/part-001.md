@@ -1,6 +1,6 @@
 ---
 id: 61862b10712669613753c201
-title: Part 1
+title: กรอกแบบสอบถามก่อนเริ่มเรียน
 challengeType: 2
 forumTopicId: 28
 dashedName: part-1
