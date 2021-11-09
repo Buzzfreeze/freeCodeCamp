@@ -7,11 +7,11 @@ dashedName: part-69
 
 # --description--
 
-Create a variable named `clearForm` and set it equal to a blank arrow function like you did with `clearOutput`.
+จงสร้างตัวแปรชื่อ `clearForm` และกำหนดให้มีค่าเป็น blank arrow function เหมือนกับที่คุณทำกับ `clearOutput`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(typeof clearForm === 'function');

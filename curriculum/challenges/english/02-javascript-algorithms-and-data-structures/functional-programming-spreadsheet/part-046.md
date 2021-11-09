@@ -7,11 +7,11 @@ dashedName: part-46
 
 # --description--
 
-Replace `[end]` with a recursive call to `range`: `[start].concat(range(start + 1, end))`
+แทนที่ `[end]` ด้วย recursive call ของ `range`: `[start].concat(range(start + 1, end))`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(JSON.stringify(range(1, 5)) === '[1,2,3,4,5]');

@@ -7,19 +7,19 @@ dashedName: part-29
 
 # --description--
 
-Now it's time to create the HTML elements that we will add inside of `output`.
+ตอนนี้ให้สร้าง elements ที่เราจะเพิ่มเข้าไปภายใน `output`.
 
-To create an element, use `createElement()`. For example:
+สำหรับการสร้าง element ให้ใช้ `createElement()` ดังตัวอย่าง
 
 ```js
 const myHeading1 = document.createElement('h1')
 ```
 
-Create an `h3` element and assign it to a variable named `result`.
+จงสร้าง `h3` element และกำหนดค่าให้กับตัวแปรชื่อ `result`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

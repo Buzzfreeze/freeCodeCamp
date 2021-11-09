@@ -7,13 +7,13 @@ dashedName: part-99
 
 # --description--
 
-At the end of that line, add a random number between one and the value of `xp`. Here is the formula to get a random number between 1 and 5: `Math.floor(Math.random() * 5) + 1`.
+ตรงท้ายสุดของบรรทัด ให้เพิ่มการสุ่มเลขระหว่าง 1 และค่า `xp` นี่คือสูตรในการสุ่มเลขระหว่าง 1 และ 5: `Math.floor(Math.random() * 5) + 1`.
 
-`Math.random()` returns a decimal or floating point number between 0 and 1, and `Math.floor()` rounds a given number down to the nearest integer.
+`Math.random()` คืนค่าเป็นเลขทศนิยมที่มีค่าระหว่าง 0 และ 1 ส่วน `Math.floor()` ปัดเศษลงให้เป็นจำนวนเต็มที่ใกล้เคียงที่สุด
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 (xp = 1),

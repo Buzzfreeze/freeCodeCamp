@@ -7,13 +7,13 @@ dashedName: part-102
 
 # --description--
 
-Obviously, this was ignored, as all `highPrecedence` does is return a value and this value is ignored.
+เห็นได้ชัดว่า มันถูกเพิกเฉย (ignored) สิ่งที่ `highPrecedence` ทำก็คือการคืนค่าและค่าที่คืนออกมาก็ถูกเพิกเฉย (ignored) 
 
-Now compare `highPrecedence("2*2")` with `highPrecedence("2*2")`, and `console.log` the result.
+ตอนนี้ให้เปรียบเทียบ `highPrecedence("2*2")` กับ `highPrecedence("2*2")` แล้วสัง `console.log` เพื่อแสดงผลลัพธ์
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

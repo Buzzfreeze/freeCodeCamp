@@ -7,11 +7,11 @@ dashedName: part-107
 
 # --description--
 
-Now set the `innerText` properties of `goldText` and `xpText` to the updated values.
+ตอนนี้ให้ `innerText` properties ของ `goldText` และ `xpText` มีค่าเท่ากับค่าที่อัปเดต
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 (xp = 10),

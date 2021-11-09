@@ -7,11 +7,11 @@ dashedName: part-134
 
 # --description--
 
-Now add `median` to `spreadsheetFunctions`, just like you added `sum` and `average`.
+ตอนนี้ให้เพิ่ม `median` ใน `spreadsheetFunctions` เช่นเดียวกับที่คุณเพิ่ม `sum` และ `average`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

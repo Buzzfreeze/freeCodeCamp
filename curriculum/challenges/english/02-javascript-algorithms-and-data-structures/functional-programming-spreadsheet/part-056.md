@@ -7,11 +7,11 @@ dashedName: part-56
 
 # --description--
 
-As `n1` and `n2` are actually strings, replace `n1` and `n2` with `parseInt(n1)` and `parseInt(n2)`.
+เนื่องจาก `n1` และ `n2` จริงๆ แล้วเป็น string ดังนั้นจึงต้องแทนที่ `n1` และ `n2` ด้วย `parseInt(n1)` และ `parseInt(n2)`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

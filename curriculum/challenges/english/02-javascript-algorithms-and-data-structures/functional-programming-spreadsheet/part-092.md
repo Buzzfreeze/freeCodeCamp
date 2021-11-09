@@ -7,13 +7,13 @@ dashedName: part-92
 
 # --description--
 
-The `includes` method works on a string and checks if the argument is its substring.
+`includes` method ทำงานกับ string เพื่อเช็คว่า argument มีอยู่ใน string หรือไม่
 
-Add an empty if statement to `update` which executes if `element.id` is **not** a substring of `value`.
+จงเพิ่ม empty if statement ให้กับ `update` โดย if statement จะรันเมื่อ `element.id`  **ไม่ใช่** substring ของ `value`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

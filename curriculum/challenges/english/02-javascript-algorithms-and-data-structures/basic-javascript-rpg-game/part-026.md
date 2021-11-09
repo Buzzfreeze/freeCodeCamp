@@ -7,11 +7,11 @@ dashedName: part-26
 
 # --description--
 
-Add double quote marks around the word "Store" in the line "You see a sign that says Store." Before each quotation mark add a `\` to signal that the following quote is not the end of the string, but should instead appear inside the string. This is called escaping.
+จงเพิ่ม double quote ครอบคำว่า "Store" ภายในข้อความ "You see a sign that says Store." โดยให้เพิ่ม `\` หน้า quote เพื่อบอกว่า quote ต่อไปนี้ไม่ใช่ตัวจบ string แต่ให้แสดงภายใน string ซึ่งการทำแบบนี้เรียกว่า escaping
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

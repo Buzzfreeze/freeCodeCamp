@@ -7,11 +7,11 @@ dashedName: part-69
 
 # --description--
 
-Remove the `fn` declaration and return statement. Set `varRangeExpanded` to the result of using the `replace` method on `x`, with `rangeRegex` as the first argument and `""` as the second argument. Then, return it.
+จงลบการประกาศ `fn` และ return statement ออก จากนั้นกำหนดให้ `varRangeExpanded` มีค่าเป็นผลจากการนำ `replace` method มาใช้กับ `x` ซึ่ง `replace` method รับ `rangeRegex` เป็น argument แรก และ `""` เป็น argument ที่สอง จากนั้นให้คืนค่า `varRangeExpanded`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

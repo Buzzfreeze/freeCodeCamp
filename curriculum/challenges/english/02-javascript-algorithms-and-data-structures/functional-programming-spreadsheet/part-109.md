@@ -7,13 +7,13 @@ dashedName: part-109
 
 # --description--
 
-The `find` method returns the first element of an array that satisfies the function passed to it.
+`find` method คืนค่าเป็น element แรกของ array ที่ทำให้เงื่อนไขของฟังก์ชันที่ส่งเข้าไปเป็นจริง
 
-Chain `find` onto `cells` and pass it `cell => cell === id`.
+จงนำ `find` ไปใช้กับ `cells` แล้วส่งค่า `cell => cell === id` เข้าไป
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-35
 
 # --description--
 
-The `locations` array currently has one element which is an object. Within the array, and after the object's final curly brace, add a comma. On the next line within the array, add another object with all the same properties as the first object. Keep the property names the same on the second object, but change all the property values to the information from the `goStore` function. Also, set the `name` property to `store`.
+ตอนนี้ `locations` array มี element ตัวเดียวและเป็น object สำหรับขั้นตอนนี้ ภายใน array ให้เพิ่ม comma ต่อจาก "}" ของ object ตัวแรก จากนั้นบรรทัดถัดไป ให้เพิ่ม object อีกตัวนึงที่มี property เหมือนกับ object แรก โดยกำหนดให้ชื่อ property ของ object เหมือนกับ object แรก แต่ value ของ object ให้เปลี่ยนเป็นข้อมูลจากฟังก์ชัน `goStore` นอกจากนี้ให้กำหนดค่าของ `name` property เป็น `store`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert.deepStrictEqual(locations[1], {

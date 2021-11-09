@@ -7,11 +7,11 @@ dashedName: part-98
 
 # --description--
 
-Set `monsterHealth` to `monsterHealth` minus the power of the current weapon (`weapons[currentWeapon].power`).
+ให้กำหนด `monsterHealth` มีค่าเท่ากับ `monsterHealth` ลบด้วยพลังของอาวุธที่ใช้ปัจจุบัน (`weapons[currentWeapon].power`).
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 fightDragon(), (monsterHealth = 20), attack(), assert(monsterHealth === 15);

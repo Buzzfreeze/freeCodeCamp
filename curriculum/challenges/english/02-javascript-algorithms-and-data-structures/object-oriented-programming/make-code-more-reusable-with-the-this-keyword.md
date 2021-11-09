@@ -8,15 +8,15 @@ dashedName: make-code-more-reusable-with-the-this-keyword
 
 # --description--
 
-The last challenge introduced a method to the `duck` object. It used `duck.name` dot notation to access the value for the `name` property within the return statement:
+แบบทดสอบที่แล้ว เราได้กำหนด method ให้กับ object `duck` และใน return statement ได้มีการใช้ `duck.name` ในการเข้าถึงค่าของ property `name` 
 
 ```js
 sayName: function() {return "The name of this duck is " + duck.name + ".";}
 ```
 
-While this is a valid way to access the object's property, there is a pitfall here. If the variable name changes, any code referencing the original name would need to be updated as well. In a short object definition, it isn't a problem, but if an object has many references to its properties there is a greater chance for error.
+แม้ว่าวิธีนี้สามารถเข้าถึง property ของ object ได้ แต่ก็ยังมีข้อควรระวัง กล่าวคือ หาก object `duck` เปลี่ยนชื่อเป็นชื่ออื่น โค้ดต่างๆ ที่อ้างถึง object นี้ก็จะต้องเปลี่ยนชื่อตามไปด้วย ซึ่งหาก object มีโค้ดไม่กี่บรรทัด ก็คงไม่ได้ทำให้เกิดปัญหา แต่หาก object มีโค้ดที่อ้างอิงหลายบรรทัด ก็มีโอกาสที่เราอาจเปลี่ยนชื่อตามไม่ครบและทำให้เกิด error ได้
 
-A way to avoid these issues is with the `this` keyword:
+วิธีการป้องกันไม่ให้เกิดเหตุการณ์นี้คือ การใช้ `this`
 
 ```js
 let duck = {
@@ -26,21 +26,21 @@ let duck = {
 };
 ```
 
-`this` is a deep topic, and the above example is only one way to use it. In the current context, `this` refers to the object that the method is associated with: `duck`. If the object's name is changed to `mallard`, it is not necessary to find all the references to `duck` in the code. It makes the code reusable and easier to read.
+`this` มีเนื้อหาที่มีรายละเอียดค่อนข้างมาก และด้านบนก็เป็นตัวอย่างนึงที่ใช้ `this` โดยบริบทในตัวอย่างนี้ มีการใช้ `this` อ้างอิง object `duck` ภายใน method ซึ่งถ้าชื่อของ object เปลี่ยนเป็น `mallard` เราก็ไม่จำเป็นต้องหาโค้ดทั้งหมดที่อ้างอิงถึง `duck` วิธีนี้ทำให้เราสามารถนำโค้ดกลับมาใช้ซ้ำได้ (reusable) และอ่านโค้ดได้ง่ายด้วย
 
 # --instructions--
 
-Modify the `dog.sayLegs` method to remove any references to `dog`. Use the `duck` example for guidance.
+จงปรับแก้ method `dog.sayLegs` ให้นำการอ้างอิงด้วย `dog` ออก โดยดูตัวอย่าง `duck` ประกอบ
 
 # --hints--
 
-`dog.sayLegs()` should return the given string.
+`dog.sayLegs()` ควรคืนค่าเป็น string
 
 ```js
 assert(dog.sayLegs() === 'This dog has 4 legs.');
 ```
 
-Your code should use the `this` keyword to access the `numLegs` property of `dog`.
+โค้ดของคุณควรใช้ `this` ในการเข้าถึง property `numLegs` ของ object `dog`.
 
 ```js
 assert(code.match(/this\.numLegs/g));

@@ -8,43 +8,44 @@ dashedName: factorialize-a-number
 
 # --description--
 
-Return the factorial of the provided integer.
+แบบทดสอบนี้ให้คำนวณค่าแฟกทอเรียลของเลขจำนวนเต็ม
 
-If the integer is represented with the letter `n`, a factorial is the product of all positive integers less than or equal to `n`.
+ถ้าเลขจำนวนเต็มแทนด้วย `n` ค่าแฟกทอเรียลก็คือผลคูณของเลขจำนวนเต็มบวกทั้งหมดที่น้อยกว่าหรือเท่ากับ `n`
 
-Factorials are often represented with the shorthand notation `n!`
+แฟกทอเรียลมักเขียนแทนด้วย `n!`
 
-For example: `5! = 1 * 2 * 3 * 4 * 5 = 120`
+ตัวอย่างเช่น `5! = 1 * 2 * 3 * 4 * 5 = 120`
 
-Only integers greater than or equal to zero will be supplied to the function.
+เลขจำนวนเต็มที่มากกว่าหรือเท่ากับศูนย์เท่านั้นที่จะใช้กับแฟกทอเรียลได้
+
 
 # --hints--
 
-`factorialize(5)` should return a number.
+`factorialize(5)` ควรได้ผลลัพธ์เป็นตัวเลข
 
 ```js
 assert(typeof factorialize(5) === 'number');
 ```
 
-`factorialize(5)` should return `120`.
+`factorialize(5)` ควรได้ผลลัพธ์เป็น `120`.
 
 ```js
 assert(factorialize(5) === 120);
 ```
 
-`factorialize(10)` should return `3628800`.
+`factorialize(10)` ควรได้ผลลัพธ์เป็น `3628800`.
 
 ```js
 assert(factorialize(10) === 3628800);
 ```
 
-`factorialize(20)` should return `2432902008176640000`.
+`factorialize(20)` ควรได้ผลลัพธ์เป็น `2432902008176640000`.
 
 ```js
 assert(factorialize(20) === 2432902008176640000);
 ```
 
-`factorialize(0)` should return `1`.
+`factorialize(0)` ควรได้ผลลัพธ์เป็น `1`.
 
 ```js
 assert(factorialize(0) === 1);

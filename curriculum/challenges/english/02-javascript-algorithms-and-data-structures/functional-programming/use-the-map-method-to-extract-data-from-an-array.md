@@ -8,19 +8,20 @@ dashedName: use-the-map-method-to-extract-data-from-an-array
 
 # --description--
 
-So far we have learned to use pure functions to avoid side effects in a program. Also, we have seen the value in having a function only depend on its input arguments.
+ที่ผ่านมา เราได้เรียนรู้การใช้ pure function เพื่อป้องกัน side effects ในโปรแกรม นอกจากนี้ เรายังได้เห็นการทำงานของฟังก์ชันที่ประมวลผลต่อ input arguments เท่านั้น
 
-This is only the beginning. As its name suggests, functional programming is centered around a theory of functions.
+นี่เป็นเพียงจุดเริ่มต้นเท่านั้น functional programming เป็นดั่งศูนย์กลางของทฤษฎีฟังก์ชันตามชื่อของมันเลย
 
-It would make sense to be able to pass them as arguments to other functions, and return a function from another function. Functions are considered <dfn>first class objects</dfn> in JavaScript, which means they can be used like any other object. They can be saved in variables, stored in an object, or passed as function arguments.
+เราสามารถนำฟังก์ชันมาเป็น argument ส่งผ่านเข้าไปในอีกฟังก์ชันนึง และคืนค่าเป็นฟังก์ชันจากอีกฟังก์ชันนึง ฟังก์ชันถือเป็น <dfn>first class objects</dfn> ใน JavaScript ซึ่งหมายความว่า เราสามารถใช้งานฟังก์ชันได้เหมือนกับ object อื่นๆ ฟังก์ชันสามารถเก็บค่าใน variable ได้, สามารถเก็บค่าใน object ได้ หรือ สามารถส่งผ่านเป็น function argument ได้
 
-Let's start with some simple array functions, which are methods on the array object prototype. In this exercise we are looking at `Array.prototype.map()`, or more simply `map`.
+มาลองใช้งานฟังก์ชันง่ายๆ ของ array กัน ซึ่งเป็น methods ของ array object prototype ในแบบฝึกหัดนี้ เราจะได้ใช้ `Array.prototype.map()` หรือเขียนย่อๆ ว่า `map`
 
-The `map` method iterates over each item in an array and returns a new array containing the results of calling the callback function on each element. It does this without mutating the original array.
+`map` method วนอ่านค่าแต่ละ item ของ array และคืนค่าเป็น array ตัวใหม่ที่มี item เป็นผลลัพธ์จากการรัน callback function โดย `map` method ไม่เปลี่ยนแปลงค่าของ array ตั้งต้น 
 
-When the callback is used, it is passed three arguments. The first argument is the current element being processed. The second is the index of that element and the third is the array upon which the `map` method was called.
+callback สามารถรับ argument ได้ 3 ค่า โดย argument แรก คือ element ปัจจุบันที่กำลังถูกอ่านค่า ส่วน argument ที่สองคือ index ของ element นั้นๆ และ argument ที่สาม คือ array ที่เรียก `map` method
 
-See below for an example using the `map` method on the `users` array to return a new array containing only the names of the users as elements. For simplicity, the example only uses the first argument of the callback.
+จากตัวอย่างด้านล่าง มีการใช้ `map` method กับ `users` array เพื่อคืนค่าเป็น array ตัวใหม่ที่มี element เป็นชื่อของ users เป็น element 
+เพื่อให้เห็นภาพได้ง่าย ในตัวอย่าง callback จะใช้เพียง argument แรกเท่านั้น
 
 ```js
 const users = [
@@ -33,15 +34,15 @@ const names = users.map(user => user.name);
 console.log(names);
 ```
 
-The console would display the value ` [ 'John', 'Amy', 'camperCat' ]`.
+หน้า console ควรแสดงค่า ` [ 'John', 'Amy', 'camperCat' ]`.
 
 # --instructions--
 
-The `watchList` array holds objects with information on several movies. Use `map` on `watchList` to assign a new array of objects to the `ratings` variable. Each movie in the new array should have only a `title` key with the name of the film, and a `rating` key with the IMDB rating. The code in the editor currently uses a `for` loop to do this, so you should replace the loop functionality with your `map` expression.
+`watchList` array ประกอบด้วย objects ที่มีข้อมูลเกี่ยวกับภาพยนตร์ จงใช้ `map` กับ `watchList` เพื่อกำหนดค่า object ให้กับ array ตัวใหม่ โดย array ตัวใหม่นี้กำหนดชื่อตัวแปรเป็น `ratings` ซึ่ง array ตัวใหม่ควรเก็บเพียง key `title` ที่เป็นชื่อภาพยนต์ และ key `rating` ที่เป็น IMDB rating เท่านั้น แต่อย่างไรก็ตาม โค้ดที่อยู่ใน editor ตอนนี้ ใช้ `for` loop ดังนั้น คุณต้องแทนที่ loop ด้วย `map`
 
 # --hints--
 
-The `watchList` variable should not change.
+ตัวแปร `watchList` ไม่ควรมีการเปลี่ยนแปลง
 
 ```js
 assert(
@@ -49,19 +50,19 @@ assert(
 );
 ```
 
-Your code should not use a `for` loop.
+โค้ดของคุณไม่ควรใช้ `for` loop
 
 ```js
 assert(!code.match(/for\s*?\([\s\S]*?\)/));
 ```
 
-Your code should use the `map` method.
+โค้ดของคุณควรใช้ `map` method
 
 ```js
 assert(code.match(/\.map/g));
 ```
 
-`ratings` should equal `[{"title":"Inception","rating":"8.8"},{"title":"Interstellar","rating":"8.6"},{"title":"The Dark Knight","rating":"9.0"},{"title":"Batman Begins","rating":"8.3"},{"title":"Avatar","rating":"7.9"}]`.
+`ratings` ควรมีค่าเป็น `[{"title":"Inception","rating":"8.8"},{"title":"Interstellar","rating":"8.6"},{"title":"The Dark Knight","rating":"9.0"},{"title":"Batman Begins","rating":"8.3"},{"title":"Avatar","rating":"7.9"}]`.
 
 ```js
 assert.deepEqual(ratings, [

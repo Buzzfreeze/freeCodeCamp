@@ -8,7 +8,7 @@ dashedName: understand-the-immediately-invoked-function-expression-iife
 
 # --description--
 
-A common pattern in JavaScript is to execute a function as soon as it is declared:
+รูปแบบปกติใน JavaScript คือการรันฟังก์ชันทันทีที่ประกาศ
 
 ```js
 (function () {
@@ -16,23 +16,23 @@ A common pattern in JavaScript is to execute a function as soon as it is declare
 })();
 ```
 
-This is an anonymous function expression that executes right away, and outputs `Chirp, chirp!` immediately.
+ตัวอย่างนี้คือ การประกาศ anonymous function ซึ่งรันทันที และได้ผลลัพธ์เป็น `Chirp, chirp!`
 
-Note that the function has no name and is not stored in a variable. The two parentheses () at the end of the function expression cause it to be immediately executed or invoked. This pattern is known as an <dfn>immediately invoked function expression</dfn> or <dfn>IIFE</dfn>.
+หมายเหตุ สำหรับฟังก์ชันที่ไม่มีชื่อและไม่ได้เก็บในตัวแปร เมื่อมี () อยู่ท้ายของการประกาศฟังก์ชัน จะทำให้เกิดการรันหรือเรียกฟังก์ชันนั้นขึ้นมาทำงานทันที ลักษณะแบบนี้เรียกกันว่า <dfn>immediately invoked function expression</dfn> หรือ <dfn>IIFE</dfn>
 
 # --instructions--
 
-Rewrite the function `makeNest` and remove its call so instead it's an anonymous immediately invoked function expression (IIFE).
+จงปรับแก้ฟังก์ชัน `makeNest` ให้กลายเป็น anonymous ที่มีการรันทันที (IIFE) และให้ลบคำสั่งการเรียกด้วยชื่อฟังก์ชัน `makeNest`
 
 # --hints--
 
-The function should be anonymous.
+ฟังก์ชันควรเป็น anonymous
 
 ```js
 assert(/\((function|\(\))(=>|\(\)){?/.test(code.replace(/\s/g, '')));
 ```
 
-Your function should have parentheses at the end of the expression to call it immediately.
+ฟังก์ชันของคุณควรมี () ต่อจากการประกาศฟังก์ชัน เพื่อให้รันฟังก์ชันทันที
 
 ```js
 assert(/\(.*(\)\(|\}\(\))\)/.test(code.replace(/[\s;]/g, '')));

@@ -8,9 +8,9 @@ dashedName: reset-an-inherited-constructor-property
 
 # --description--
 
-When an object inherits its `prototype` from another object, it also inherits the supertype's constructor property.
+เมื่อ object สืบทอด `prototype` มาจากอีก object นึง ก็มีการสืบทอด constructor property มาจาก supertype ด้วย 
 
-Here's an example:
+ดังตัวอย่างนี้
 
 ```js
 function Bird() { }
@@ -19,7 +19,7 @@ let duck = new Bird();
 duck.constructor
 ```
 
-But `duck` and all instances of `Bird` should show that they were constructed by `Bird` and not `Animal`. To do so, you can manually set the constructor property of `Bird` to the `Bird` object:
+แต่ `duck` และ instances อื่นๆ ของ `Bird` ควรแสดงให้เห็นว่า สร้างมาจาก `Bird` ไม่ใช่ `Animal` ในการทำดังกล่าว คุณสามารถกำหนด constructor property ของ `Bird` ให้กับ `Bird` object แบบ manual ได้
 
 ```js
 Bird.prototype.constructor = Bird;
@@ -28,29 +28,29 @@ duck.constructor
 
 # --instructions--
 
-Fix the code so `duck.constructor` and `beagle.constructor` return their respective constructors.
+จงปรับแก้โค้ด โดยให้ `duck.constructor` และ `beagle.constructor` คืนค่าเป้น constructor ของตัวเอง
 
 # --hints--
 
-`Bird.prototype` should be an instance of `Animal`.
+`Bird.prototype` ควรเป็น instance ของ `Animal`.
 
 ```js
 assert(Animal.prototype.isPrototypeOf(Bird.prototype));
 ```
 
-`duck.constructor` should return `Bird`.
+`duck.constructor` ควรคืนค่า `Bird`.
 
 ```js
 assert(duck.constructor === Bird);
 ```
 
-`Dog.prototype` should be an instance of `Animal`.
+`Dog.prototype` ควรเป็น instance ของ `Animal`.
 
 ```js
 assert(Animal.prototype.isPrototypeOf(Dog.prototype));
 ```
 
-`beagle.constructor` should return `Dog`.
+`beagle.constructor` ควรคืนค่า `Dog`.
 
 ```js
 assert(beagle.constructor === Dog);

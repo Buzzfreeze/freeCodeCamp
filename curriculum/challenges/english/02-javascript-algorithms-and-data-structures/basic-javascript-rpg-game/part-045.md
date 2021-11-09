@@ -7,11 +7,11 @@ dashedName: part-45
 
 # --description--
 
-Now update the `goStore` function. The code should look just like the code inside the `goTown` function, except the number 0 should be changed to 1. After this step would be a good time to try out the game so far. You should be able to move between the store and the town square.
+ตอนนี้ให้ปรับแก้ฟังก์ชัน `goStore` ซึ่งโค้ดของฟังก์ชันนี้ควรเหมือนกับโค้ดในฟังก์ชัน `goTown` เว้นแต่เลข 0 ควรเปลี่ยนเป็น 1 หลังจากขั้นตอนนี้ ควรลองรันเกมดู คุณควรสามารถเคลื่อนย้ายระหว่าง store และ town square ได้
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(goStore.toString().match(/update\(locations\[1\]\)/));

@@ -7,13 +7,13 @@ dashedName: part-37
 
 # --description--
 
-Instead of assigning the `innerText` and `onClick` properties to specific strings and functions like it does now, the `update` function will use data from the `location` that is passed into it. First, data needs to be passed into the `update` function. Inside the `goTown` function, call the `update` function.
+แทนที่จะกำหนด `innerText` และ `onClick` properties ให้มีค่าเป็น string หรือ function อย่างที่เราทำในตอนนี้ ก็ให้รับค่าจาก `location` ส่งผ่านเข้ามาในฟังก์ชัน `update` แทน โดยก่อนอื่น ข้อมูลต้องส่งเข้ามายัง `update` แล้วภายในฟังก์ชัน `goTown` ก็เรียกฟังก์ชัน `update` อีกที
 
-Here is how you would call a function named `exampleFunction`: `exampleFunction();`
+คุณสามารถเรียกฟังก์ชัน `exampleFunction` ได้ดังนี้: `exampleFunction();`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(goTown.toString().match(/update\(\)/));

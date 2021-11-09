@@ -7,11 +7,11 @@ dashedName: part-96
 
 # --description--
 
-Now use the `+=` operator to append more text to `text.innerText`. Add the text " You attack it with your \[weapon name]." but replace "\[weapon name]" with the actual weapon name. Remember, you can get the weapon name with `weapons[currentWeapon].name`.
+ตอนนี้ให้ใช้ `+=` operator เพื่อต่อข้อความให้กับ `text.innerText` จงเพิ่มข้อความ " You attack it with your \[weapon name]." แต่แทนที่ค่า "\[weapon name]" ด้วยชื่อของอาวุธ ถ้ายังจำได้ คุณสามารถได้ชื่ออาวุธจากคำสั่ง `weapons[currentWeapon].name`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 (currentWeapon = 3),

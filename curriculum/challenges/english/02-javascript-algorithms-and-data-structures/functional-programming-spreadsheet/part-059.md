@@ -7,11 +7,11 @@ dashedName: part-59
 
 # --description--
 
-Now define `fn` to be `elemValue("1")` (inside `evalFormula` but outside `elemValue`). As `elemValue` returns a function, `fn` is also a function.
+ตอนนี้กำหนด `fn` มีค่าเป็น `elemValue("1")` (ภายใน `evalFormula` แต่นอก `elemValue`) ขณะที่ `elemValue` คืนค่าเป็นฟังก์ชัน `fn` ก็คืนค่าเป็นฟังก์ชันเช่นกัน
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

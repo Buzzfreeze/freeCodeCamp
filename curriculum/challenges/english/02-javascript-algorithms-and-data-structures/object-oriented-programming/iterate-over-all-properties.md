@@ -8,7 +8,7 @@ dashedName: iterate-over-all-properties
 
 # --description--
 
-You have now seen two kinds of properties: <dfn>own properties</dfn> and `prototype` properties. Own properties are defined directly on the object instance itself. And prototype properties are defined on the `prototype`.
+ตอนนี้คุณได้เห็น properties ทั้ง 2 ประเภท คือ <dfn>own properties</dfn> และ `prototype` properties โดย own properties กำหนดโดยตรงภายใน object instance ส่วน prototype properties กำหนดด้วย `prototype` operator
 
 ```js
 function Bird(name) {
@@ -20,7 +20,7 @@ Bird.prototype.numLegs = 2; // prototype property
 let duck = new Bird("Donald");
 ```
 
-Here is how you add `duck`'s own properties to the array `ownProps` and `prototype` properties to the array `prototypeProps`:
+ตัวอย่างด้านล่างนี้เป็นการนำ own properties ของ `duck` ไปเก็บใน array `ownProps` และ `prototype` properties ของ `duck` ไปเก็บใน array `prototypeProps`:
 
 ```js
 let ownProps = [];
@@ -38,27 +38,27 @@ console.log(ownProps);
 console.log(prototypeProps);
 ```
 
-`console.log(ownProps)` would display `["name"]` in the console, and `console.log(prototypeProps)` would display `["numLegs"]`.
+`console.log(ownProps)` ควรแสดง `["name"]` ในหน้า console และ `console.log(prototypeProps)` ควรแสดง `["numLegs"]`
 
 # --instructions--
 
-Add all of the own properties of `beagle` to the array `ownProps`. Add all of the `prototype` properties of `Dog` to the array `prototypeProps`.
+จงนำ own properties ของ `beagle` ไปเก็บใน array `ownProps` และนำ `prototype` properties ของ `Dog` ไปเก็บใน array `prototypeProps`
 
 # --hints--
 
-The `ownProps` array should only contain `name`.
+`ownProps` array ควรเก็บเพียง `name`
 
 ```js
 assert.deepEqual(ownProps, ['name']);
 ```
 
-The `prototypeProps` array should only contain `numLegs`.
+`prototypeProps` array ควรเก็บเพียง `numLegs`
 
 ```js
 assert.deepEqual(prototypeProps, ['numLegs']);
 ```
 
-You should solve this challenge without using the built in method `Object.keys()`.
+แบบทดสอบนี้ห้ามใช้ method `Object.keys()`.
 
 ```js
 assert(!/\Object.keys/.test(code));

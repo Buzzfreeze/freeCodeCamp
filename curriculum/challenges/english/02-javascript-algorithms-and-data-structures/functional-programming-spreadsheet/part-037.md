@@ -7,13 +7,13 @@ dashedName: part-37
 
 # --description--
 
-The `hasOwnProperty` method checks if a key exists in an object. So `spreadsheetFunctions.hasOwnProperty("")` would return `true`, but replacing `""` with anything else would make it return `false`.
+`hasOwnProperty` method ใช้ตรวจสอบว่า มี key ใน object หรือไม่ ดังนั้น `spreadsheetFunctions.hasOwnProperty("")` จึงควรคืนค่า `true` แต่การแทนที่ค่า `""` ด้วยค่าอื่น จะทำให้มันคืนค่าเป็น `false`
 
-Chain `hasOwnProperty` to `spreadsheetFunctions` to check if the `fn.toLowerCase()` key exists in `spreadsheetFunctions`.
+จงนำคำสั่ง `hasOwnProperty` มาใช้กับ `spreadsheetFunctions` เพื่อเช็คว่า มี `fn.toLowerCase()` key ใน `spreadsheetFunctions` หรือไม่
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

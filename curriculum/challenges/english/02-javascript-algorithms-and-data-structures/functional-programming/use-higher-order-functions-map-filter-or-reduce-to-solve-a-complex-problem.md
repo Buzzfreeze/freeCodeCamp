@@ -8,30 +8,33 @@ dashedName: use-higher-order-functions-map-filter-or-reduce-to-solve-a-complex-p
 
 # --description--
 
-Now that you have worked through a few challenges using higher-order functions like `map()`, `filter()`, and `reduce()`, you now get to apply them to solve a more complex challenge.
+ตอนนี้คุณได้ทำแบบทดสอบที่เกี่ยวข้องกับ higher-order functions เช่น `map()`, `filter()` และ `reduce()` แล้ว ถึงเวลาแล้วที่คุณจะได้ใช้ความรู้เหล่านั้นในการทำแบบทดสอบที่ยากมากขึ้น
 
 # --instructions--
 
+จงเขียนโค้ดฟังก์ชัน `squareList` โดยสามารถใช้ `map()`, `filter()` และ `reduce()` ผสมกันได้ และฟังก์ชันนี้ควรคืนค่าเป็น array ตัวใหม่ที่ประกอบด้วยเลขยกกำลังสองของจำนวนเต็มบวก (เลขทศนิยมไม่ใช่เลขจำนวนเต็ม) โดยฟังก์ชันนี้รับ argument เป็น array ของเลขจำนวนจริง 
+ตัวอย่าง array ของเลขจำนวนจริง คือ `[-3, 4.8, 5, 3, -3.2]`
+
 Complete the code for the `squareList` function using any combination of `map()`, `filter()`, and `reduce()`. The function should return a new array containing the squares of *only* the positive integers (decimal numbers are not integers) when an array of real numbers is passed to it. An example of an array of real numbers is `[-3, 4.8, 5, 3, -3.2]`.
 
-**Note:** Your function should not use any kind of `for` or `while` loops or the `forEach()` function.
+**หมายเหตุ:** ฟังก์ชันของคุณไม่ควรใช้ `for` หรือ `while` loops หรือ `forEach()` function
 
 # --hints--
 
-`squareList` should be a `function`.
+`squareList` ควรเป็น `function`.
 
 ```js
 assert.typeOf(squareList, 'function'),
   '<code>squareList</code> should be a <code>function</code>';
 ```
 
-`for`, `while`, and `forEach` should not be used.
+ห้ามใช้ `for`, `while` และ `forEach` 
 
 ```js
 assert(!code.match(/for|while|forEach/g));
 ```
 
-`map`, `filter`, or `reduce` should be used.
+ควรใช้ `map`, `filter` หรือ `reduce`
 
 ```js
 assert(
@@ -41,13 +44,13 @@ assert(
 );
 ```
 
-The function should return an `array`.
+ฟังก์ชันนี้ควรคืนค่าเป็น `array`.
 
 ```js
 assert(Array.isArray(squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2])));
 ```
 
-`squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2])` should return `[16, 1764, 36]`.
+`squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2])` ควรคืนค่าเป็น `[16, 1764, 36]`.
 
 ```js
 assert.deepStrictEqual(squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]), [
@@ -57,7 +60,7 @@ assert.deepStrictEqual(squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]), [
 ]);
 ```
 
-`squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3])` should return `[9, 100, 49]`.
+`squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3])` ควรคืนค่าเป็น `[9, 100, 49]`.
 
 ```js
 assert.deepStrictEqual(squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3]), [

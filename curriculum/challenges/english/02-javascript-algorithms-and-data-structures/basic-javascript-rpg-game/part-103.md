@@ -7,11 +7,11 @@ dashedName: part-103
 
 # --description--
 
-At the end of the code add two empty functions named `defeatMonster` and `lose`.
+ต่อจากโค้ดบรรทัดสุดท้าย ให้เพิ่ม empty functions 2 ตัว ชื่อ`defeatMonster` และ `lose`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(typeof defeatMonster === 'function' && typeof lose === 'function');

@@ -7,13 +7,13 @@ dashedName: part-85
 
 # --description--
 
-Now we'll start working on fighting monsters. Organize your code by moving the `fightDragon` function to the bottom of the code near the other fight functions.
+ตอนนี้เราจะมาเริ่มทำการต่อสู้กับสัตว์ประหลาด (fighting monsters) จงจัดวางโค้ดของคุณ โดยการนำฟังก์ชัน `fightDragon` ไปไว้ที่ส่วนท้าย ใกล้กับฟังก์ชัน fight อื่นๆ
 
-Below where the `weapons` array is defined, define a `monsters` array. Set the contents of the `monsters` array to: `{ name: "slime", level: 2, health: 15 }, {name: "fanged beast", level: 8, health: 60 }, { name: "dragon", level: 20, health: 300 }`. Space out the code similar to the `weapons` array so that it is easier to read.
+ให้ประกาศ `monsters` array ต่อจากการประกาศ `weapons` array จากนั้นกำหนดให้ `monsters` array มีข้อมูลดังนี้: `{ name: "slime", level: 2, health: 15 }, {name: "fanged beast", level: 8, health: 60 }, { name: "dragon", level: 20, health: 300 }` ให้เคาะวรรคในโค้ดให้เหมือนกับ `weapons` array เพื่อให้อ่านโค้ดได้ง่าย
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert.deepStrictEqual(monsters, [

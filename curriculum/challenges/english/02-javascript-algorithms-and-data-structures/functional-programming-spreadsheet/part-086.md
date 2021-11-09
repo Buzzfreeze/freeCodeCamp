@@ -7,11 +7,11 @@ dashedName: part-86
 
 # --description--
 
-Replace `createLabel` with an arrow function with a block body. This would allow us to add more statements. The arrow function should take an argument `x`, and call `createLabel(x)`.
+แทนที่ `createLabel` ด้วย arrow function ที่เป็น block วิธีนี้ทำให้เราเพิ่ม statement ได้ โดย arrow function ควรรับ argument `x` และเรียก `createLabel(x)`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,17 +7,17 @@ dashedName: part-65
 
 # --description--
 
-Create a variable named `clearOutput` and set it equal to a blank arrow function:
+จงสร้างตัวแปรชื่อ `clearOutput` และกำหนดให้มีค่าเท่าเป็น blank arrow function:
 
 ```js
 const clearOutput = () => {}
 ```
 
-This is similar to `function clearOutput () {}`.
+ซึ่งเหมือนกับ `function clearOutput () {}`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(typeof clearOutput === 'function');

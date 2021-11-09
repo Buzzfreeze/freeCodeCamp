@@ -7,13 +7,13 @@ dashedName: part-3
 
 # --description--
 
-Create a variable called `currentWeapon` and set it to 0. When a name has two words, the convention is to use so-called "lowerCamelCase". The first word is all lowercase, and then the first letter of every preceding word is uppercased.
+จงสร้างตัวแปรชื่อ `currentWeapon` และกำหนดเป็น 0 เมื่อชื่อตัวแปรมี 2 คำ เรานิยมทำให้เป็น "lowerCamelCase" ซึ่งคำแรกเป็น lowercase (ตัวอักษรพิมพ์เล็ก) และตัวอักษรแรกของทุกคำต่อๆ มาเป็น uppercased (ตัวอักษรพิมพ์ใหญ่)
 
-When a name has two words, the convention is to use so-called "lowerCamelCase". The variable name should look like this: currentWeapon.
+เมื่อชื่อตัวแปรมี 2 คำ มักทำเป็นรูปแบบ "lowerCamelCase" ดังนั้น ชื่อตัวแปรควรเป็นดังนี้ currentWeapon
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(currentWeapon === 0);

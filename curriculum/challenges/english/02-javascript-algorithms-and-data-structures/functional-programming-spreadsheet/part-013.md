@@ -7,11 +7,11 @@ dashedName: part-13
 
 # --description--
 
-`replace` is a higher order function because it can take a function as argument (higher order functions can also return functions).
+`replace` เป็น higher order function เพราะสามารถรับฟังก์ชันเป็น argument ได้ (higher order functions ก็ยังสามารถคืนค่าเป็นฟังก์ชันได้)
 
-Pass the `+` function from `infixToFunction` to the `replace` method as the second argument.
+จงส่งค่าฟังก์ชัน `+` จาก `infixToFunction` เข้าไปเป็น argument ที่สองของ `replace` method
 
-This is how you would pass the `-` function:
+นี่คือวิธีที่คุณจะส่งค่าฟังก์ชัน `-` เข้าไป:
 
 ```js
 str.replace(regex, infixToFunction["-"])
@@ -19,7 +19,7 @@ str.replace(regex, infixToFunction["-"])
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(infixEval('ab', /(a)b/) === 'aba');

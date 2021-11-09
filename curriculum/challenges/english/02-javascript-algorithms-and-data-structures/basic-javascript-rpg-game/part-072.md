@@ -7,11 +7,11 @@ dashedName: part-72
 
 # --description--
 
-Once a player has the best weapon, they can't buy another one. Wrap all the code in the `buyWeapon` function inside another `if` statement. The condition should check if `currentWeapon` is less than 3 (the index of the last weapon).
+เมื่อใดก็ตามที่ผู้เล่นมีอาวุธที่ดีที่สุดแล้ว พวกเขาจะไม่สามารถซื้ออาวุธได้อีก จงนำโค้ดที่อยู่ในฟังก์ชัน `buyWeapon` ไปใส่ไว้ใน `if` statement อีกอันนึง โดยกำหนดเงื่อนไขของ `if` statement ว่า `currentWeapon` มีค่าน้อยกว่า 3 หรือไม่ (index ของอาวุธชิ้นสุดท้าย)
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

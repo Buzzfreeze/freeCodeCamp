@@ -8,47 +8,48 @@ dashedName: combine-an-array-into-a-string-using-the-join-method
 
 # --description--
 
-The `join` method is used to join the elements of an array together to create a string. It takes an argument for the delimiter that is used to separate the array elements in the string.
+`join` method นำ elements ของ array มาต่อกันเพื่อสร้าง string โดยมี argument เป็น delimiter ที่ใช้เป็นคั่น elements ของ array ใน string
 
-Here's an example:
+ดังตัวอย่างต่อไปนี้
 
 ```js
 var arr = ["Hello", "World"];
 var str = arr.join(" ");
 ```
 
-`str` would have a value of the string `Hello World`.
+`str` ควรมีค่าเป็น string `Hello World`.
+
 # --instructions--
 
-Use the `join` method (among others) inside the `sentensify` function to make a sentence from the words in the string `str`. The function should return a string. For example, `I-like-Star-Wars` would be converted to `I like Star Wars`. For this challenge, do not use the `replace` method.
+จงใช้ `join` method ภายในฟังก์ชัน `sentensify` เพื่อสร้างประโยคจากคำที่อยู่ใน string `str` โดยฟังก์ชันนี้ควรคืนค่าเป็น string ตัวอย่างเช่น `I-like-Star-Wars` ควรเปลี่ยนค่าเป็น `I like Star Wars` สำหรับแบบทดสอบนี้ ห้ามใช้ `replace` method
 
 # --hints--
 
-Your code should use the `join` method.
+โค้ดของคุณควรใช้ `join` method
 
 ```js
 assert(code.match(/\.join/g));
 ```
 
-Your code should not use the `replace` method.
+โค้ดของคุณไม่ควรใช้ `replace` method
 
 ```js
 assert(!code.match(/\.?[\s\S]*?replace/g));
 ```
 
-`sentensify("May-the-force-be-with-you")` should return a string.
+`sentensify("May-the-force-be-with-you")` ควรคืนค่าเป็น string
 
 ```js
 assert(typeof sentensify('May-the-force-be-with-you') === 'string');
 ```
 
-`sentensify("May-the-force-be-with-you")` should return the string `May the force be with you`.
+`sentensify("May-the-force-be-with-you")` ควรคืนค่าเป็น string `May the force be with you`
 
 ```js
 assert(sentensify('May-the-force-be-with-you') === 'May the force be with you');
 ```
 
-`sentensify("The.force.is.strong.with.this.one")` should return the string `The force is strong with this one`.
+`sentensify("The.force.is.strong.with.this.one")` ควรคืนค่าเป็น string `The force is strong with this one`
 
 ```js
 assert(
@@ -57,7 +58,7 @@ assert(
 );
 ```
 
-`sentensify("There,has,been,an,awakening")` should return the string `There has been an awakening`.
+`sentensify("There,has,been,an,awakening")` ควรคืนค่าเป็น string `There has been an awakening`
 
 ```js
 assert(

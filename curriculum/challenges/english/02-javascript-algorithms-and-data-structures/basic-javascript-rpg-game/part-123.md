@@ -7,9 +7,9 @@ dashedName: part-123
 
 # --description--
 
-Now return `hit` from the `getMonsterAttackValue` function. The return value of this function is used in the `attack` function.
+ตอนนี้ให้คืนค่า `hit` จากฟังก์ชัน `getMonsterAttackValue` ซึ่งค่าที่ได้จากฟังก์ชันนี้จะถูกนำไปใช้ต่อในฟังก์ชัน `attack`
 
-Here is an example of a function that returns a value:
+ต่อไปนี้เป็นตัวอย่างของฟังก์ชันที่คืนค่าออกมา:
 
 ```js
 function plusThree(num) {
@@ -22,7 +22,7 @@ const answer = plusThree(5); // 8
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

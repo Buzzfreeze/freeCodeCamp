@@ -7,11 +7,11 @@ dashedName: part-91
 
 # --description--
 
-In the `goFight` function, call the `update` function and pass it `locations[3]`.
+ภายในฟังก์ชัน `goFight` ให้เรียกฟังก์ชัน `update` และส่งค่า `locations[3]` เข้าไป
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(goFight.toString().match(/update\(\s*locations\[\s*3\s*\]\s*\)\;?/));

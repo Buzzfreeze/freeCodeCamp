@@ -7,9 +7,9 @@ dashedName: part-67
 
 # --description--
 
-Now notice that if you click the "Clear" button, the `output` element is empty, but it still has a border around it. This is because we previously added the `bordered-class` class to this element.
+ตอนนี้สังเกตว่า ถ้าคุณคลิกปุ่ม "Clear" จะทำให้ `output` element เป็น empty แต่มันยังคงมีกรอบ (border) ล้อมรอบอยู่ สาเหตุที่เป็นเช่นนี้ เพราะเราได้เพิ่ม `bordered-class` class ให้กับ element นี้ไปก่อนหน้านี้
 
-Remove the `bordered-class` class. For example:
+จงนำ `bordered-class` class ออก ดังตัวอย่าง:
 
 ```js
 document.getElementById('my-div').classList.remove('my-class')
@@ -17,7 +17,7 @@ document.getElementById('my-div').classList.remove('my-class')
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

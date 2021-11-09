@@ -7,11 +7,11 @@ dashedName: part-95
 
 # --description--
 
-We'll build out the `attack` function now. For the first line in the function, update the text message to say "The \[monster name] attacks." but replace "\[monster name]" with the actual name of the monster. Remember, you can get the monster name with `monsters[fighting].name`.
+ตอนนี้เรามาสร้างฟังก์ชัน `attack` กัน ตรงบรรทัดแรกของฟังก์ชัน ให้อัปเดตข้อความเพื่อบอกว่า "The \[monster name] attacks." แต่แทนที่ค่า "\[monster name]" ด้วยชื่อของสัตว์ประหลาด ถ้ายังจำได้ คุณสามารถได้ชื่อสัตว์ประหลาดจากคำสั่ง `monsters[fighting].name`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 fightDragon(), attack(), assert(text.innerText === 'The dragon attacks.');

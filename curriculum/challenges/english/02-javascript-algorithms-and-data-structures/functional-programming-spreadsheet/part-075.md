@@ -7,11 +7,11 @@ dashedName: part-75
 
 # --description--
 
-Replace the `""` in `varExpanded` with `match => document.getElementById(match.toUpperCase()).value`.
+แทนที่ `""` ใน `varExpanded` ด้วย `match => document.getElementById(match.toUpperCase()).value`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

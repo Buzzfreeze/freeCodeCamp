@@ -7,15 +7,15 @@ dashedName: part-104
 
 # --description--
 
-Unfortunately, impure functions are necessary - if you don't use them, the application won't perform any I/O so won't do anything.
+เป็นที่น่าเสียดายที่ impure functions ยังมีความจำเป็น ถ้าคุณไม่ใช้เลย applicaiton จะไม่ทำอะไรกับ I/O นั่นคือการไม่ทำอะไรเลย
 
-But we have an impure function that could be pure - `evalFormula`. It calls `document.getElementById(c + n).value`, but this value can change, even if the arguments don't.
+แต่เรามี impure function ที่อาจเป็น pure function - `evalFormula` โดยฟังก์ชันนี้เรียก `document.getElementById(c + n).value` แต่ค่านี้สามารถเปลี่ยนแปลงได้ แม้ว่า argument ไม่เปลี่ยน
 
-Change these calls to `""` - the function is now pure but doesn't work.
+จงเปลี่ยนการเรียก `document.getElementById(c + n).value` ให้เป็น `""` - ฟังก์ชันตอนนี้เป็น pure แต่ทำงานไม่ได้
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 const nos = code.replace(/\s/g, '');

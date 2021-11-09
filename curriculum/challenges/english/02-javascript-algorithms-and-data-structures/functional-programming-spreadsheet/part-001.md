@@ -7,15 +7,15 @@ dashedName: part-1
 
 # --description--
 
-In functional programming, we prefer immutable values over mutable values.
+ด้วยหลักการ functional programming เรามักทำงานกับตัวแปรที่แก้ไขค่าไม่ได้ มากกว่าตัวแปรที่แก้ไขค่าได้
 
-Mutable values (declared with `var` or `let`) can lead to unexpected behaviors and bugs. Values declared with `const` cannot be reassigned, which makes using them easier because you don't have to keep track of their values.
+ตัวแปรที่แก้ไขค่าได้ (ประกาศด้วย `var` หรือ `let`) อาจทำให้เกิดผลลัพธ์ไม่พึงประสงค์หรือข้อผิดพลาดได้ แต่ตัวแปรที่ประกาศด้วย `const` ไม่สามารถกำหนดค่าได้อีกภายหลัง (reassigned) จึงทำให้ใช้งานง่ายกว่า เนื่องจากคุณไม่ต้องคอยเช็คค่าของตัวแปรอยู่ตลอด
 
-Start by creating an empty `infixToFunction` object using `const`.
+เริ่มด้วยการสร้าง empty `infixToFunction` object โดยใช้ `const`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('constinfixToFunction={}'));

@@ -7,11 +7,11 @@ dashedName: part-110
 
 # --description--
 
-The word "Arg!" should have quotes around it. Besides escaping quotes, there is another way you can include quote marks inside a quote. Change the double quotes to single quotes around the sentence, "The monster screams Arg! as it dies. You gain experience points and find gold". Then add double quotes around "Arg!"
+คำว่า "Arg!" ควรมี quotes (เครื่องหมายคำพูด) ครอบ นอกจากการใช้ escaping quotes แล้ว ยังมีอีกวิธีที่คุณสามารถทำให้ quote อยู่ภายใน quote ได้ นั่นคือการเปลี่ยน double quotes ให้เป็น single quotes ครอบข้อความ "The monster screams Arg! as it dies. You gain experience points and find gold" จากนั้นให้นำ double quotes มาครอบข้อความ "Arg!"
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert.deepStrictEqual(locations[4], {

@@ -7,13 +7,13 @@ dashedName: part-20
 
 # --description--
 
-When a player clicks the 'Go to store' button, the buttons and text in the game should change. Remove the code inside the `goStore` function. Add a new line of code inside the function that updates the text of `button1` so that it says "Buy 10 health (10 gold)".
+เมื่อผู้เล่นคลิกปุ่ม 'Go to store' ปุ่มและข้อความในเกมควรมีการเปลี่ยน จงนำโค้ดที่อยู่ในฟังก์ชัน `goStore` ออก แล้วเพิ่มโค้ดบรรทัดนึงเข้าไปในฟังก์ชัน เพื่อเปลี่ยนข้อความของ `button1` เป็น "Buy 10 health (10 gold)"
 
 For example, this code updates the text of `button` to say "Click Me": `button.innerText = "Click Me";`.
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

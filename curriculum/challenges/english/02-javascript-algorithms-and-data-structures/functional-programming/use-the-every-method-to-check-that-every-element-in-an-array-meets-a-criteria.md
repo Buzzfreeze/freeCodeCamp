@@ -8,9 +8,9 @@ dashedName: use-the-every-method-to-check-that-every-element-in-an-array-meets-a
 
 # --description--
 
-The `every` method works with arrays to check if *every* element passes a particular test. It returns a Boolean value - `true` if all values meet the criteria, `false` if not.
+`every` method ทำงานร่วมกับ array เพื่อตรวจสอบว่า ทุกๆ element ใน array ผ่านเงื่อนไขหนึ่งๆ หรือไม่ หากทุก element ผ่านเงื่อนไข ก็จะคืนค่า Boolean เป็น `true` แต่หากมีบาง element ไม่ผ่านเงื่อนไข ก็จะคืนค่า `false`
 
-For example, the following code would check if every element in the `numbers` array is less than 10:
+ตัวอย่างต่อไปนี้เป็นโค้ดที่ตรวจสอบว่า ทุก element ใน `numbers` array มีค่าน้อยกว่า 10 หรือไม่
 
 ```js
 var numbers = [1, 5, 8, 0, 10, 11];
@@ -19,33 +19,33 @@ numbers.every(function(currentValue) {
 });
 ```
 
-The `every` method would return `false` here.
+ในที่นี้ `every` method ควรคืนค่า `false`
 
 # --instructions--
 
-Use the `every` method inside the `checkPositive` function to check if every element in `arr` is positive. The function should return a Boolean value.
+จงใช้ `every` method ภายในฟังก์ชัน `checkPositive` เพื่อตรวจสอบว่า ทุก element ใน `arr` มีค่าเป็นบวกหรือไม่ โดยฟังก์ชันนี้ควรคืนค่าเป็น Boolean
 
 # --hints--
 
-Your code should use the `every` method.
+โค้ดของคุณควรใช้ `every` method
 
 ```js
 assert(code.match(/\.every/g));
 ```
 
-`checkPositive([1, 2, 3, -4, 5])` should return `false`.
+`checkPositive([1, 2, 3, -4, 5])` ควรคืนค่าเป็น `false`.
 
 ```js
 assert.isFalse(checkPositive([1, 2, 3, -4, 5]));
 ```
 
-`checkPositive([1, 2, 3, 4, 5])` should return `true`.
+`checkPositive([1, 2, 3, 4, 5])` ควรคืนค่าเป็น `true`.
 
 ```js
 assert.isTrue(checkPositive([1, 2, 3, 4, 5]));
 ```
 
-`checkPositive([1, -2, 3, -4, 5])` should return `false`.
+`checkPositive([1, -2, 3, -4, 5])` ควรคืนค่าเป็น `false`.
 
 ```js
 assert.isFalse(checkPositive([1, -2, 3, -4, 5]));

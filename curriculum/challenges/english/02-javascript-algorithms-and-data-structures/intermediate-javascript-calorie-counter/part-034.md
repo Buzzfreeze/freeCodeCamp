@@ -7,13 +7,13 @@ dashedName: part-34
 
 # --description--
 
-Next we want to add the text from the `surplusOrDeficit` variable that we previously created.
+ต่อมาเราต้องการเพิ่มข้อความจากตัวแปร `surplusOrDeficit` ที่เราได้สร้างก่อนหน้านี้
 
-Inside the parentheses of `.createTextNode()` add `+ surplusOrDeficit` after `Math.abs(difference) + ' Calorie '`.
+ภายในวงเล็บของ `.createTextNode()` จงเพิ่ม `+ surplusOrDeficit` ต่อจาก `Math.abs(difference) + ' Calorie '`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

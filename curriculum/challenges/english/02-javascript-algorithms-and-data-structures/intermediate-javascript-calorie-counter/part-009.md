@@ -7,11 +7,11 @@ dashedName: part-9
 
 # --description--
 
-To make the document objects easier to handle, let's turn them into an array. Wrap the `document.getElementsByClassName('cal-control')` portion of your code in an `Array.from()` method.
+เพื่อทำให้ document objects จัดการได้ง่ายขึ้น เรามาแปลงให้เป็น array กัน โดยการนำ `Array.from()` method มาแล้วกำหนด `document.getElementsByClassName('cal-control')` เป็น parameter
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

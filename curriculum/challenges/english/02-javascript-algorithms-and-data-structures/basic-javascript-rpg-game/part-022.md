@@ -7,11 +7,11 @@ dashedName: part-22
 
 # --description--
 
-Now that the text on the buttons have changed, the `onclick` properties on the buttons should change. Inside the goStore function, update the `onclick` property of all three buttons. The new functions should be `buyHealth`, `buyWeapon`, and `goTown`. If you have trouble, look at how the buttons were initialized.
+ตอนนี้ข้อความบนปุ่มได้เปลี่ยนเรียบร้อยแล้ว ต่อมา `onclick` properties ก็ควรเปลี่ยนด้วยเช่นกัน ภายในฟังก์ชัน goStore ให้ทำการเปลี่ยน `onclick` property ของทั้ง 3 ปุ่ม โดยฟังก์ชันใหม่ควรเป็น `buyHealth`, `buyWeapon` และ `goTown` ถ้าคุณติดปัญหา ให้ดูวิธีว่าการสร้างและให้ค่าเริ่มต้นปุ่ม (initialized) ว่าทำอย่างไร
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

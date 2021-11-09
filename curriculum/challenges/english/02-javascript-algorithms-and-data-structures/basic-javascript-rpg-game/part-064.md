@@ -7,11 +7,11 @@ dashedName: part-64
 
 # --description--
 
-Let's tell the player what weapon they bought. In between the two lines you just wrote, use `let` to initialize a new variable called `newWeapon`. Set `newWeapon` to equal `weapons`.
+มาบอกผู้เล่นกันว่าซื้ออาวุธอะไรไป ระหว่าง 2 บรรทัดที่คุณเพิ่งเขียน ให้ใช้ `let` เพื่อประกาศตัวแปรใหม่ชื่อ `newWeapon` แล้วกำหนดให้ `newWeapon` มีค่าเท่ากับ `weapons`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(/let\s*newWeapon\s*\=\s*weapons\;?/.test(code));

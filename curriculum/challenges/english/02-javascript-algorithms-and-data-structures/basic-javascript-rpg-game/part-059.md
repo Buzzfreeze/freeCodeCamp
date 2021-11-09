@@ -7,11 +7,11 @@ dashedName: part-59
 
 # --description--
 
-Inside the `buyWeapon` function, add an `if` statement to check if gold is greater than or equal to 30.
+ภายในฟังก์ชัน `buyWeapon` function ให้เพิ่ม `if` statement เพื่อตรวจสอบว่า gold มากกว่าหรือเท่ากับ 30 หรือไม่
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(buyWeapon.toString().match(/if\s*\(\s*gold\s*\>\=\s*30\)\s*\{\s*\}/));

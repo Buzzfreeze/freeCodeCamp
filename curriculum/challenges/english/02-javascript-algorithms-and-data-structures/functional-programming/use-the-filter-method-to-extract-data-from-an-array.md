@@ -8,13 +8,14 @@ dashedName: use-the-filter-method-to-extract-data-from-an-array
 
 # --description--
 
-Another useful array function is `Array.prototype.filter()`, or simply `filter()`.
+array function อีกตัวที่มีประโยชน์มาก ก็คือ `Array.prototype.filter()` หรือเขียนย่อๆ ว่า `filter()`
 
-`filter` calls a function on each element of an array and returns a new array containing only the elements for which that function returns `true`. In other words, it filters the array, based on the function passed to it. Like `map`, it does this without needing to modify the original array.
+`filter` วนอ่านค่าแต่ละ element ของ array และคืนค่าเป็น array ตัวใหม่ที่มี element ที่ทำให้ callback function คืนค่าเป็น `true` หรือกล่าวได้อีกนัยหนึ่งว่า `filter` ทำการ filter array ตามเงื่อนไขของฟังก์ชันที่ส่งผ่านเข้าไป เช่นเดียวกับ `map` ที่ไม่เปลี่ยนแปลงค่าของ array ตั้งต้น
 
-The callback function accepts three arguments. The first argument is the current element being processed. The second is the index of that element and the third is the array upon which the `filter` method was called.
+callback สามารถรับ argument ได้ 3 ค่า โดย argument แรก คือ element ปัจจุบันที่กำลังถูกอ่านค่า ส่วน argument ที่สองคือ index ของ element นั้นๆ และ argument ที่สาม คือ array ที่เรียก `filter` method
 
-See below for an example using the `filter` method on the `users` array to return a new array containing only the users under the age of 30. For simplicity, the example only uses the first argument of the callback.
+จากตัวอย่างด้านล่าง มีการใช้ `filter` method กับ `users` array เพื่อคืนค่าเป็น array ตัวใหม่ที่มี element เป็น users ที่มีอายุน้อยกว่า 30 ปี 
+เพื่อให้เห็นภาพได้ง่าย ในตัวอย่าง callback จะใช้เพียง argument แรกเท่านั้น
 
 ```js
 const users = [
@@ -27,15 +28,16 @@ const usersUnder30 = users.filter(user => user.age < 30);
 console.log(usersUnder30); 
 ```
 
-The console would display the value `[ { name: 'Amy', age: 20 }, { name: 'camperCat', age: 10 } ]`.
+หน้า console ควรแสดงค่า `[ { name: 'Amy', age: 20 }, { name: 'camperCat', age: 10 } ]`.
 
 # --instructions--
 
-The variable `watchList` holds an array of objects with information on several movies. Use a combination of `filter` and `map` on `watchList` to assign a new array of objects with only `title` and `rating` keys. The new array should only include objects where `imdbRating` is greater than or equal to 8.0. Note that the `rating` values are saved as strings in the object and you may need to convert them into numbers to perform mathematical operations on them.
+`watchList` array ประกอบด้วย objects ที่มีข้อมูลเกี่ยวกับภาพยนตร์ จงใช้ `filter` และ `map` กับ `watchList` เพื่อกำหนดค่า object ให้กับ array ตัวใหม่ โดย array ตัวใหม่นี้เก็บเพียง key `title` และ key `rating` เท่านั้น นอกจากนี้ array ตัวใหม่ควรมีเพียง object ที่มี `imdbRating` มากกว่าหรือเท่ากับ 8.0 เท่านั้น
+หมายเหตุ `rating` เก็บเป็น string ภายใน object ดังนั้น คุณต้องแปลงให้เป็น number ก่อน ถึงค่อยทำการคำนวณทางคณิตศาสตร์
 
 # --hints--
 
-The `watchList` variable should not change.
+ตัวแปร `watchList` ไม่ควรมีการเปลี่ยนแปลง
 
 ```js
 assert(
@@ -43,19 +45,19 @@ assert(
 );
 ```
 
-Your code should use the `filter` method.
+โค้ดของคุณควรใช้ `filter` method
 
 ```js
 assert(code.match(/\s*\.\s*filter/g));
 ```
 
-Your code should not use a `for` loop.
+โค้ดของคุณไม่ควรใช้ `for` loop
 
 ```js
 assert(!code.match(/for\s*?\([\s\S]*?\)/g));
 ```
 
-`filteredList` should equal `[{"title": "Inception","rating": "8.8"},{"title": "Interstellar","rating": "8.6"},{"title": "The Dark Knight","rating": "9.0"},{"title": "Batman Begins","rating": "8.3"}]`.
+`filteredList` ควรมีค่าเป็น `[{"title": "Inception","rating": "8.8"},{"title": "Interstellar","rating": "8.6"},{"title": "The Dark Knight","rating": "9.0"},{"title": "Batman Begins","rating": "8.3"}]`.
 
 ```js
 assert.deepEqual(filteredList, [

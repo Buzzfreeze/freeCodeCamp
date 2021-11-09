@@ -7,11 +7,11 @@ dashedName: part-56
 
 # --description--
 
-Inside the `else` statement, set `text.innerText` to equal "You do not have enough gold to buy health."
+ภายใน `else` statement ให้กำหนด `text.innerText` มีค่าเท่ากับ "You do not have enough gold to buy health."
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 (gold = 5),

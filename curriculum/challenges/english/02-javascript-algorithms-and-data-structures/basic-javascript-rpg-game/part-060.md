@@ -7,11 +7,11 @@ dashedName: part-60
 
 # --description--
 
-Similar to in the `buyHealth` function, set `gold` to equal 30 less than its current value.
+เช่นเดียวกันกับฟังก์ชัน `buyHealth` ให้กำหนด `gold` มีค่าเป็นค่าปัจจุบันลบด้วย 30 ภายในฟังก์ชัน `buyWeapon`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 (gold = 50), buyWeapon(), assert(gold === 20);

@@ -7,11 +7,11 @@ dashedName: part-80
 
 # --description--
 
-Now define a function `createLabel` which takes an argument `name` and has an empty body.
+ตอนนี้ให้สร้างฟังก์ชัน `createLabel` ที่มี argument ชื่อ `name` และยังไม่มีโค้ดใดๆ ภายใน
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

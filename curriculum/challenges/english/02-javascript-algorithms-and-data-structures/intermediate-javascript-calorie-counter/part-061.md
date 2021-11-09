@@ -7,13 +7,13 @@ dashedName: part-61
 
 # --description--
 
-Later we will want to remove these extra `calorieInput` elements that we added. This will happen when the user pushes the "Clear" button.
+ต่อมา เราต้องการนำ `calorieInput` elements ที่เราเพิ่ม ออกไป เหตุการณ์นี้จะเกิดขึ้นเมื่อผู้ใช้งานกดปุ่ม "Clear"
 
-To keep track of them, add the class name `extra-cal-control` to the `calorieInput` element.
+เพื่อจะติดตาม element (keep track) เหล่านี้ ให้เพิ่ม class name `extra-cal-control` ให้กับ `calorieInput` element
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

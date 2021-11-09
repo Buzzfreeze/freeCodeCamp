@@ -7,11 +7,11 @@ dashedName: part-75
 
 # --description--
 
-Add an `else` statement on the end of the outer `if` statement. Inside the `else` statement, set `text.innerText` to "You already have the most powerful weapon!".
+เพิ่ม `else` statement ต่อจาก `if` statement ที่อยู่ชั้นนอก ภายใน `else` statement กำหนดให้ `text.innerText` มีค่าเป็น "You already have the most powerful weapon!"
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

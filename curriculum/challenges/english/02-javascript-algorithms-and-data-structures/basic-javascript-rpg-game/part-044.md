@@ -7,13 +7,13 @@ dashedName: part-44
 
 # --description--
 
-Finally, update `text.innerText` to equal the `text` from the location object.
+สุดท้ายนี้ให้เปลี่ยน `text.innerText` ให้มีค่าเท่ากับ `text` จาก location object
 
-So far we have been accessing properties of the location object using bracket notation. This time use dot notation. Here is how to access a `name` property of an object called `obj` using dot notation: `obj.name`.
+ที่ผ่านมา เราเข้าถึง properties ของ location object โดยการใช้ [] แต่ครั้งนี้เราจะใช้ . (dot notation) แทน ซึ่งวิธีการเข้าถึง `name` property ของ object `obj` ด้วยการใช้ dot notation ทำได้ดังนี้: `obj.name`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(update.toString().match(/text\.innerText\s*\=\s*location\.text\;?/));

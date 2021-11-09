@@ -7,11 +7,11 @@ dashedName: part-39
 
 # --description--
 
-The `locations` array contains two locations: the town square and store. Currently the entire array with both locations is being passed in to the update function. Pass in only the first element of the locations array by adding `[0]` at the end of the name of the array. For example, `exampleFunction(arg[0]);`
+`locations` array ประกอบด้วย 2 locations: town square และ store แต่ในตอนนี้ array ทั้งชุดซึ่งประกอบด้วย 2 locations ถูกส่งเข้าไปในฟังก์ชัน update จงส่งเพียง location แรกของ array โดยการใส่ `[0]` ต่อท้ายชื่อ array ตัวอย่างเช่น `exampleFunction(arg[0]);`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(goTown.toString().match(/update\(locations\[0\]\)/));

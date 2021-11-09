@@ -8,53 +8,53 @@ dashedName: arguments-optional
 
 # --description--
 
-Create a function that sums two arguments together. If only one argument is provided, then return a function that expects one argument and returns the sum.
+ให้สร้างฟังก์ชันที่บวกค่า argument 2 ตัวเข้าด้วยกัน ถ้ามีการส่งค่าเพียง argument เดียว เข้าในฟังก์ชัน ก็ให้คืนค่าเป็นอีกฟังก์ชันที่มี argument 1 ตัว และคืนค่าเป็นผลบวก
 
-For example, `addTogether(2, 3)` should return `5`, and `addTogether(2)` should return a function.
+ตัวอย่างเช่น `addTogether(2, 3)` ควรคืนค่าเป็น `5` และ `addTogether(2)` ควรคืนค่าเป็นฟังก์ชัน
 
-Calling this returned function with a single argument will then return the sum:
+เมื่อมีการเรียกฟังก์ชันที่คืนค่ามา (returned function) พร้อมกับส่งค่า argument เข้าในฟังก์ชันนี้ ก็จะได้ผลลัพธ์เป็นผลบวก
 
 ```js
 var sumTwoAnd = addTogether(2);
 ```
 
-`sumTwoAnd(3)` returns `5`.
+`sumTwoAnd(3)` ได้ผลลัพธ์เป็น `5`
 
-If either argument isn't a valid number, return undefined.
+หาก argument ใด argument หนึ่ง ไม่ใช่ตัวเลข ให้คืนค่าเป็น undefined
 
 # --hints--
 
-`addTogether(2, 3)` should return 5.
+`addTogether(2, 3)` ควรคืนค่าเป็น 5
 
 ```js
 assert.deepEqual(addTogether(2, 3), 5);
 ```
 
-`addTogether(23, 30)` should return 53.
+`addTogether(23, 30)` ควรคืนค่าเป็น 53
 
 ```js
 assert.deepEqual(addTogether(23, 30), 53);
 ```
 
-`addTogether(5)(7)` should return 12.
+`addTogether(5)(7)` ควรคืนค่าเป็น 12
 
 ```js
 assert.deepEqual(addTogether(5)(7), 12);
 ```
 
-`addTogether("https://www.youtube.com/watch?v=dQw4w9WgXcQ")` should return `undefined`.
+`addTogether("https://www.youtube.com/watch?v=dQw4w9WgXcQ")` ควรคืนค่าเป็น `undefined`
 
 ```js
 assert.isUndefined(addTogether('https://www.youtube.com/watch?v=dQw4w9WgXcQ'));
 ```
 
-`addTogether(2, "3")` should return `undefined`.
+`addTogether(2, "3")` ควรคืนค่าเป็น `undefined`
 
 ```js
 assert.isUndefined(addTogether(2, '3'));
 ```
 
-`addTogether(2)([3])` should return `undefined`.
+`addTogether(2)([3])` ควรคืนค่าเป็น `undefined`
 
 ```js
 assert.isUndefined(addTogether(2)([3]));

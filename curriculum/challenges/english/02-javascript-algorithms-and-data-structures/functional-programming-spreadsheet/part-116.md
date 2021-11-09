@@ -7,17 +7,17 @@ dashedName: part-116
 
 # --description--
 
-You can also pass in a negative argument to `slice` to specify that index from the end:
+คุณสามารถส่ง argument ที่เป็นเลขติดลบให้กับ `slice` เพื่อกำหนด index จากท้ายสุด
 
 ```js
 [2, 4, 6, 8, 10].slice(-3); // [6, 8, 10]
 ```
 
-Use a negative index to add a function `lasttwo` which returns the last two elements of an array.
+จงเพิ่มฟังก์ชัน `lasttwo` และใช้ negative index (index ที่เป็นค่าติดลบ) เพื่อคืนค่าเป็น element 2 ตัวสุดท้ายของ array
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

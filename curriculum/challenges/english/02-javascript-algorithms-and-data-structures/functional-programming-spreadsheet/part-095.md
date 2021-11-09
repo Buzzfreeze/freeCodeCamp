@@ -7,13 +7,13 @@ dashedName: part-95
 
 # --description--
 
-You don't have to specify the second argument in `slice`. If you don't, then `slice` will extract from the first argument to the end of the string.
+คุณไม่จำเป็นต้องระบุ argument ที่สองใน `slice` ถ้าคุณไม่ระบุ argument ที่สอง `slice` จะแยก string ตั้งแต่ argument แรกจนถึงตัวสุดท้ายของ string
 
-Change the call to `slice` to log all characters except the first instead.
+จงเปลี่ยนการเรียก `slice` เพื่อให้แสดงทุกตัวอักษร ยกเว้นตัวอักษรแรก
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('console.log(value.slice(1))'));

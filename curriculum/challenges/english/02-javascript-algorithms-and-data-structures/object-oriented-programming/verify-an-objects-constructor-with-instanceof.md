@@ -8,7 +8,7 @@ dashedName: verify-an-objects-constructor-with-instanceof
 
 # --description--
 
-Anytime a constructor function creates a new object, that object is said to be an <dfn>instance</dfn> of its constructor. JavaScript gives a convenient way to verify this with the `instanceof` operator. `instanceof` allows you to compare an object to a constructor, returning `true` or `false` based on whether or not that object was created with the constructor. Here's an example:
+เมื่อใดก็ตามที่ฟังก์ชัน constructor มีการสร้าง object ใหม่ object นั้นก็คือ <dfn>instance</dfn> ของ constructor ซึ่ง JavaScript มีวิธีให้เราตรวจสอบได้สะดวกโดยใช้ `instanceof` operator โดย `instanceof` ทำการเปรียบเทียบ object กับ constructor แล้ว return ค่าเป็น `true` หรือ `false` ขึ้นกับว่า object นั้นมีการสร้างจาก constructor นั้นหรือไม่ ดังตัวอย่างด้านล่างนี้
 
 ```js
 let Bird = function(name, color) {
@@ -22,9 +22,9 @@ let crow = new Bird("Alexis", "black");
 crow instanceof Bird;
 ```
 
-This `instanceof` method would return `true`.
+`instanceof` method นี้จะคืนค่าเป็น `true`
 
-If an object is created without using a constructor, `instanceof` will verify that it is not an instance of that constructor:
+หาก object ไม่ได้ถูกสร้างจาก constructor คำสั่ง `instanceof` จะตรวจสอบว่ามันไม่ใช่ instance ของ constructor:
 
 ```js
 let canary = {
@@ -36,21 +36,21 @@ let canary = {
 canary instanceof Bird;
 ```
 
-This `instanceof` method would return `false`.
+`instanceof` method นี้จะคืนค่าเป็น `false`
 
 # --instructions--
 
-Create a new instance of the `House` constructor, calling it `myHouse` and passing a number of bedrooms. Then, use `instanceof` to verify that it is an instance of `House`.
+จงสร้าง instance ใหม่จาก constructor `House`  แล้วตั้งชื่อว่า `myHouse` แล้วให้ส่ง (pass) ค่าจำนวนห้องนอนเข้าไป จากนั้นให้ใช้`instanceof` เพื่อตรวจสอบว่าเป็น instance ของ `House` หรือไม่
 
 # --hints--
 
-`myHouse` should have a `numBedrooms` attribute set to a number.
+`myHouse` ควรมี `numBedrooms` attribute และกำหนดให้เป็น number
 
 ```js
 assert(typeof myHouse.numBedrooms === 'number');
 ```
 
-You should verify that `myHouse` is an instance of `House` using the `instanceof` operator.
+คุณควรตรวจสอบว่า `myHouse` เป็น instance ของ `House` หรือไม่ โดยใช้ `instanceof` operator
 
 ```js
 assert(/myHouse\s*instanceof\s*House/.test(code));

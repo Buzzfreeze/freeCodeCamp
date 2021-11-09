@@ -7,11 +7,11 @@ dashedName: part-53
 
 # --description--
 
-Create a new function `evalFormula` which takes a single argument, `x`. Set `/([A-J])([1-9][0-9]?):([A-J])([1-9][0-9]?)/gi` to a variable named `rangeRegex`.
+จงสร้างฟังก์ชันใหม่ชื่อ `evalFormula` ที่มี argument เพียงตัวเดียวคือ `x` แล้วกำหนดค่า `/([A-J])([1-9][0-9]?):([A-J])([1-9][0-9]?)/gi` ให้กับตัวแปรชื่อ `rangeRegex`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

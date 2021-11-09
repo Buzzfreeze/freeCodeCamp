@@ -7,13 +7,13 @@ dashedName: part-60
 
 # --description--
 
-Add a class named `cal-control` to the `calorieInput` element. This is similar to how you added a class name to the `foodInput` element previously.
+จงเพิ่ม class ชื่อ `cal-control` ให้กับ `calorieInput` element ซึ่งเหมือนกับวิธีที่คุณเพิ่ม class name ให้กับ `foodInput` element ก่อนหน้านี้
 
-We are adding this class name because in the `calculate()` function you created previously, the `total` is calculated from the elements with the class name `cal-control`.
+เราเพิ่ม class name นี้เข้าไป เนื่องจากในฟังก์ชัน `calculate()` ที่คุณได้สร้างก่อนหน้านี้ ค่า `total` ถูกคำนวณจาก elements ที่มี class name เป็น `cal-control`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

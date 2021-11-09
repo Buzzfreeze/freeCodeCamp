@@ -7,9 +7,9 @@ dashedName: part-126
 
 # --description--
 
-In the `attack` function, move the line `monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;` into the `if` block.
+ภายในฟังก์ชัน `attack` ให้นำบรรทัด `monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;` ไปไว้ใน `if` block
 
-Here is an example of code in an `if` block that logs a message to the console:
+ต่อไปนี้เป็นตัวอย่างของโค้ดใน `if` block ที่ log ข้อความบนหน้า console
 
 ```js
 if (isTrue()) {
@@ -19,7 +19,7 @@ if (isTrue()) {
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

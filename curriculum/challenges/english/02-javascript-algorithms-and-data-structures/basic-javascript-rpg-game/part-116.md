@@ -7,9 +7,9 @@ dashedName: part-116
 
 # --description--
 
-The conditional operator, also called the ternary operator, can be used as a one line if-else expression. The syntax is: `condition ? statement-if-true : statement-if-false;`.
+conditional operator หรือเรียกว่า the ternary operator เป็น if-else expression ที่เขียนเพียงบรรทัดเดียว ซึ่ง syntax มีดังนี้: `condition ? statement-if-true : statement-if-false;`
 
-Change the if-else expression from the last challenge to use the ternary operator instead. Here is an example:
+จงเปลี่ยน if-else expression จากขั้นตอนที่แล้วให้ใช้ ternary operator แทน นี่คือตัวอย่าง:
 
 ```js
 if (age >= 18) {
@@ -25,7 +25,7 @@ age >= 18 ? adultFunction() : kidFunction();
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

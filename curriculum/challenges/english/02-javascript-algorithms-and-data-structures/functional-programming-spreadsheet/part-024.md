@@ -7,11 +7,11 @@ dashedName: part-24
 
 # --description--
 
-Define an object `spreadsheetFunctions`, with a single key - an empty string (`""`). The corresponding value should be the function `x => x`.
+กำหนดให้ object `spreadsheetFunctions` มี key ตัวเดียวคือ empty string (`""`) และ value เป็นฟังก์ชัน `x => x`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(spreadsheetFunctions['']('x') === 'x');

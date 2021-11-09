@@ -7,11 +7,11 @@ dashedName: part-40
 
 # --description--
 
-`range` should set `arr` to `[start]` and should then return `arr`.
+`range` ควรกำหนดให้ `arr` มีค่าเป็น `[start]` แล้วคืนค่าเป็น `arr`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,13 +7,13 @@ dashedName: part-35
 
 # --description--
 
-Note that `applyFunction` can access `toNumberList` from outside of itself. This is called lexical scoping - inner functions can access variables from outer functions.
+จากขั้นตอนที่แล้ว จะเห็นว่า `applyFunction` สามารถเข้าถึง `toNumberList` ที่กำหนดจากภายนอกได้ นี่เรียกว่า scoping หรือกรณีที่ inner functions สามารถเข้าถึงตัวแปรจาก outer functions ได้
 
-Now return `str2.replace(regex, "")` at the end of `applyFn`.
+ตอนนี้ ให้คืนค่า `str2.replace(regex, "")` ที่บรรทัดสุดท้ายของ `applyFn`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(applyFn('2*2fn(1, 2, 3.3)') === '4');

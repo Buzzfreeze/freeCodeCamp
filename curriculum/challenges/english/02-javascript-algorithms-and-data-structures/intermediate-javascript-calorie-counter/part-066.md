@@ -7,13 +7,13 @@ dashedName: part-66
 
 # --description--
 
-We need to remove the contents inside of element with the `id` of `output`.
+เราต้องการนำข้อมูลต่างๆ ที่อยู่ใน element ที่มี `id` เป็น `output` ออก
 
-In the body of the `clearOutput()` function, set the `innerHTML` property of that element equal to an empty string, `''`.
+ในส่วน body ของฟังก์ชัน `clearOutput()` จงกำหนดให้ `innerHTML` property ของ element นั้น มีค่าเท่ากับ empty string, `''`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

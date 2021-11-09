@@ -8,9 +8,9 @@ dashedName: use-the-some-method-to-check-that-any-elements-in-an-array-meet-a-cr
 
 # --description--
 
-The `some` method works with arrays to check if *any* element passes a particular test. It returns a Boolean value - `true` if any of the values meet the criteria, `false` if not.
+`some` method ทำงานร่วมกับ array เพื่อตรวจสอบว่า มี element ใน array ผ่านเงื่อนไขหนึ่งๆ หรือไม่ หากมี element ผ่านเงื่อนไข ก็จะคืนค่า Boolean เป็น `true` แต่หากไม่มี element ผ่านเงื่อนไขเลย ก็จะคืนค่า `false`
 
-For example, the following code would check if any element in the `numbers` array is less than 10:
+ตัวอย่างต่อไปนี้เป็นโค้ดที่ตรวจสอบว่า มี element ใน `numbers` array ที่มีค่าน้อยกว่า 10 หรือไม่
 
 ```js
 var numbers = [10, 50, 8, 220, 110, 11];
@@ -19,33 +19,33 @@ numbers.some(function(currentValue) {
 });
 ```
 
-The `some` method would return `true`.
+`some` ควรคืนค่าเป็น `true`.
 
 # --instructions--
 
-Use the `some` method inside the `checkPositive` function to check if any element in `arr` is positive. The function should return a Boolean value.
+จงใช้ `some` method ภายในฟังก์ชัน `checkPositive` เพื่อตรวจสอบว่า มี element ใน `arr` ที่มีค่าเป็นบวกหรือไม่ โดยฟังก์ชันนี้ควรคืนค่าเป็น Boolean
 
 # --hints--
 
-Your code should use the `some` method.
+โค้ดของคุณควรใช้ `some` method
 
 ```js
 assert(code.match(/\.some/g));
 ```
 
-`checkPositive([1, 2, 3, -4, 5])` should return `true`.
+`checkPositive([1, 2, 3, -4, 5])` ควรคืนค่าเป็น `true`.
 
 ```js
 assert(checkPositive([1, 2, 3, -4, 5]));
 ```
 
-`checkPositive([1, 2, 3, 4, 5])` should return `true`.
+`checkPositive([1, 2, 3, 4, 5])` ควรคืนค่าเป็น `true`.
 
 ```js
 assert(checkPositive([1, 2, 3, 4, 5]));
 ```
 
-`checkPositive([-1, -2, -3, -4, -5])` should return `false`.
+`checkPositive([-1, -2, -3, -4, -5])` ควรคืนค่าเป็น `false`.
 
 ```js
 assert(!checkPositive([-1, -2, -3, -4, -5]));

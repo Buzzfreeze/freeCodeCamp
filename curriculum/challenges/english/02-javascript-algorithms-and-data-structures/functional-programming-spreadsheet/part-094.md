@@ -7,13 +7,13 @@ dashedName: part-94
 
 # --description--
 
-The `slice` method takes two arguments. It extracts characters from the string from the index specified by the first argument up to (but not including) the second argument. The index starts at 0.
+`slice` method รับ argument 2 ค่า และแยก string ย่อยออกมาจาก string หลัก เริ่มจาก index ที่กำหนดใน argument แรก จนถึง (แต่ไม่รวม) argument ที่สอง โดย index นั้นเริ่มจาก 0
 
-Use the `slice` method to log the first two letters of `value` to the console.
+จงใช้ `slice` method เพื่อแสดงตัวอักษร 2 ตัวแรกของ `value` ที่หน้า console
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('console.log(value.slice(0,2))'));

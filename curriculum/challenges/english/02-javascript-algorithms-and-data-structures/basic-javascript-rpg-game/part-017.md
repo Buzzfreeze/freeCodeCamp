@@ -7,7 +7,7 @@ dashedName: part-17
 
 # --description--
 
-For now, make the `goStore` function output the message "Going to store." to the web console. For example, here is a function that outputs the message "Hello World" to the web console (Note that code inside a function should be indented):
+ตอนนี้จงเขียนฟังก์ชัน `goStore` เพื่อแสดงข้อความ "Going to store." ที่ web console ดังเช่นตัวอย่างฟังก์ชันต่อไปนี้ที่แสดงข้อความ "Hello World" ที่ web console (หมายเหตุ โค้ดที่อยู่ภายในฟังก์ชันควรย่อหน้าเข้าไปด้วย):
 
 ```js
 function functionName() {
@@ -17,7 +17,7 @@ function functionName() {
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-133
 
 # --description--
 
-We don't want a player's only weapon to break.
+เราไม่ต้องการให้อาวุธของผู้เล่นที่มีอยู่เพียงชิ้นเดียวถูกทำลาย
 
-Use the "logical and" operator (`&&`) to add a second condition to the `if` expression you just wrote. A player's weapon should only be able to break if `inventory.length` does not equal (`!==`) one.
+จงใช้ "logical and" operator (`&&`) เพื่อเพิ่มเงื่อนไขที่สองให้กับ `if` expression ที่คุณเพิ่งเขีียน โดยอาวุธของผู้เล่นควรสามารถถูกทำลายได้ถ้า `inventory.length` มีค่าไม่เท่ากับ (`!==`) 1
 
-Here is an example of an `if` expression with the conditions that `firstName` equals "Quincy" AND `lastName` does NOT equal "Larson". With `&&`, both conditions must be true or else the entire statement evaluates to false.
+ต่อไปนี้เป็นตัวอย่างของ `if` expression ที่มีเงื่อนไขว่า `firstName` มีค่าเท่ากับ "Quincy" และ `lastName` ไม่เท่ากับ "Larson" เมื่อใช้ `&&` ทั้งสองเงื่อนไขต้องเป็น true มิเช่นนั้นทั้ง statement นี้จะเป็น false
 
 ```js
 if (firstName === "Quincy" && lastName !== "Larson") {
@@ -21,7 +21,7 @@ if (firstName === "Quincy" && lastName !== "Larson") {
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

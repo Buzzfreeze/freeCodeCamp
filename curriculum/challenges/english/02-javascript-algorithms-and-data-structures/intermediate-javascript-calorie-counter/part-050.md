@@ -7,15 +7,15 @@ dashedName: part-50
 
 # --description--
 
-Another way to add styling is to use the `style` property directly, like `output.style.width = '300px'`.
+อีกวิธีที่เพิ่ม style ได้ก็คือ การใช้ `style` property ตรงๆ เช่น `output.style.width = '300px'`
 
-Add a `backgroundColor` style to `output` and set it equal to `'#FFF9C4'`.
+จงเพิ่ม `backgroundColor` style ให้กับ `output` และกำหนดให้มีค่าเท่ากับ `'#FFF9C4'`
 
-The `calculate()` function is now finished!
+ฟังก์ชัน `calculate()` ตอนนี้เสร็จสมบูรณ์แล้ว!
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

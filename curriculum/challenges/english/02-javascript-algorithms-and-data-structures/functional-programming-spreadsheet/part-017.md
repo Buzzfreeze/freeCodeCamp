@@ -7,15 +7,15 @@ dashedName: part-17
 
 # --description--
 
-The `match` parameter is currently unused, which can lead to unused variable warnings in some linters.
+ตอนนี้ไม่ได้มีการเรียกใช้ `match` parameter จึงทำให้โปรแกรม linter บางตัวแสดงคำเตือน (warning) เรื่อง unused variable
 
-To fix this, prefix or replace it with an underscore (`_`) - both ways signal to the reader and linter that you're aware you don't need this.
+เพื่อปิดไม่ให้แสดงคำเตือน ให้รวาง underscore (`_`) ไว้หน้า `match` parameter หรือแทนที่ `match` parameter ด้วย underscore (`_`) วิธีการดังกล่าวเป็นการบอกโปรแกรม reader และโปรแกรม linter ว่า คุณทราบแล้วว่าคุณไม่จำเป้นต้องใช้
 
-Note that a single underscore can only be used once in a function and may conflict with some libraries (Lodash, Underscore.js).
+หมายเหตุ underscore (`_`) สามารถใช้ในฟังก์ชันได้เพียงครั้งเดียว และอาจขัดแย้งกับ library อื่นๆ บางตัว (Lodash, Underscore.js)
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('str.replace(regex,(_'));

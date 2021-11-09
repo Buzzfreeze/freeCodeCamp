@@ -7,13 +7,13 @@ dashedName: part-62
 
 # --description--
 
-Add the `calorieInput` element to the element with the `id` of `entries` by using the `appendChild()` method.
+จงเพิ่ม `calorieInput` element ให้กับ element ที่มี `id` เป็น `entries` โดยใช้ `appendChild()` method
 
-The Add Entry functionality is now finished. You can test it by clicking the "Add Entry" button, entering in food names and their calories, and then clicking the "Calculate" button.
+ตอนนี้กำหนดการทำงานของ Add Entry เสร็จเรียบร้อยแล้ว คุณสามารถทดสอบโดยการคลิกปุ่ม "Add Entry" แล้วกรอกชื่ออาหารและจำนวนแคลอรี่ จากนั้นคลิกปุ่ม "Calculate"
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

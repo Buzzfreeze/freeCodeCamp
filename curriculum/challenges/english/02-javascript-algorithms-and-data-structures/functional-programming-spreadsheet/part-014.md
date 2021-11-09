@@ -7,11 +7,11 @@ dashedName: part-14
 
 # --description--
 
-Replace the second argument of `str.replace` with an anonymous function, which takes `match`, `arg1`, `fn`, and `arg2`, and returns `infixToFunction["+"]`.
+จงแทนที่ argument ที่สองของ `str.replace` ด้วย anonymous function ที่รับค่า `match`, `arg1`, `fn` และ `arg2` เป็น argument และคืนค่าเป็น `infixToFunction["+"]`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

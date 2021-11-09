@@ -7,17 +7,17 @@ dashedName: part-118
 
 # --description--
 
-The `filter` method keeps only the elements of an array that satisfy the function passed to it:
+`filter` method เก็บเพียง elements ของ array ที่ตรงเงื่อนไขของฟังก์ชันที่ส่งเข้าไป
 
 ```js
 [1, 10, 8, 3, 4, 5].filter(x > 3); // [10, 8, 4, 5]
 ```
 
-Use `filter` to add a function called `even` to `spreadsheetFunctions`, which returns all the even elements of an array, `nums`.
+จงใช้ `filter` เพื่อเพิ่มฟังก์ชันชื่อ `even` ใน `spreadsheetFunctions` แล้วคืนค่าเป็น elements ทั้งหมดใน array ที่เป็นเลขคู่ และ array ที่เป็นผลลัพธ์ชื่อ `nums`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

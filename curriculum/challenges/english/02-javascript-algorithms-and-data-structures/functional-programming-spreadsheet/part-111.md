@@ -7,11 +7,11 @@ dashedName: part-111
 
 # --description--
 
-Use the `value` property on the result of `idToText` to return the text inside the cell, rather than the cell itself.
+จงนำ `value` property มาใช้กับผลลัพธ์ของ `idToText` เพื่อคืนค่าเป็นข้อความภายใน cell แทนที่จะคืนค่าเป็นตัว cell เอง
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

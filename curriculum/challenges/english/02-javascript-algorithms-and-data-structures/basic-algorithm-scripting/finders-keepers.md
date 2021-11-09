@@ -8,11 +8,11 @@ dashedName: finders-keepers
 
 # --description--
 
-Create a function that looks through an array `arr` and returns the first element in it that passes a 'truth test'. This means that given an element `x`, the 'truth test' is passed if `func(x)` is `true`. If no element passes the test, return `undefined`.
+แบบทดสอบนี้ให้สร้างฟังก์ชันที่อ่านค่าจาก array `arr` และคืนค่าเป็น element แรกใน array ที่ผ่าน 'truth test' ซึ่งหมายความว่า หากส่ง element `x` ใน array เข้า `func(x)` แล้วมี element ที่ได้ค่า `true` ออกมา ก็แสดงว่าผ่าน 'truth test' แต่หากไม่มี element ใดเลยที่ผ่าน ก็จะได้ค่า `undefined` ออกมา
 
 # --hints--
 
-`findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; })` should return `8`.
+`findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; })` ควรได้ผลลัพธ์คือ `8`.
 
 ```js
 assert.strictEqual(
@@ -23,7 +23,7 @@ assert.strictEqual(
 );
 ```
 
-`findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; })` should return `undefined`.
+`findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; })` ควรได้ผลลัพธ์คือ `undefined`.
 
 ```js
 assert.strictEqual(

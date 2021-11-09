@@ -8,9 +8,9 @@ dashedName: prevent-infinite-loops-with-a-valid-terminal-condition
 
 # --description--
 
-The final topic is the dreaded infinite loop. Loops are great tools when you need your program to run a code block a certain number of times or until a condition is met, but they need a terminal condition that ends the looping. Infinite loops are likely to freeze or crash the browser, and cause general program execution mayhem, which no one wants.
+หัวข้อสุดท้ายคือเรื่อง loop ที่วนไม่รู้จบ (infinite loop) Loop เป็นเครื่องมือที่ยอดเยี่ยม เมื่อคุณต้องการรันโค้ดตามจำนวนรอบที่กำหนด หรือรันโค้ดจนกว่าจะตรงกับเงื่อนไขหนึ่งๆ แต่ Loop จำเป็นต้องมีเงื่อนไขในการสิ้นสุด loop เนื่องจาก loop ที่วนไม่รู้จบจะทำให้ browser หยุดทำงานหรือพัง และยังทำให้โปรแกรมทำงานต่อไม่ได้ ซึ่งเป็นสิ่งที่ไม่มีใครต้องการให้เกิดขึ้น
 
-There was an example of an infinite loop in the introduction to this section - it had no terminal condition to break out of the `while` loop inside `loopy()`. Do NOT call this function!
+ด้านล่างเป็นตัวอย่างของ loop ที่วนไม่รู้จบ ตัวอย่างนี้ไม่มีเงื่อนไขในการสิ้นสุด `while` loop ภายใน `loopy()` ดังนั้น ห้ามเรียกฟังก์ชันนี้
 
 ```js
 function loopy() {
@@ -20,21 +20,22 @@ function loopy() {
 }
 ```
 
-It's the programmer's job to ensure that the terminal condition, which tells the program when to break out of the loop code, is eventually reached. One error is incrementing or decrementing a counter variable in the wrong direction from the terminal condition. Another one is accidentally resetting a counter or index variable within the loop code, instead of incrementing or decrementing it.
+งานของโปรแกรมเมอร์คือการตรวจสอบเงื่อนไขการสิ้นสุด loop ซึ่งบอกให้โปรแกรมออกจาก loop ว่า สุดท้ายแล้วต้องมีการเรียกเสมอ ข้อผิดพลาดนึงที่อาจเกิดขึ้นคือ การเพิ่มหรือลดค่าตัวแปร counter ในทิศทางที่ต่างจากเงื่อนไขการสิ้นสุด loop นอกจากนี้ยังมีการรีเซ็ตตัวแปร counter หรือ index ภายใน loop โดยไม่ตั้งใจ ทำให้ค่า counter หรือ index ไม่เพิ่มหรือลด
+
 
 # --instructions--
 
-The `myFunc()` function contains an infinite loop because the terminal condition `i != 4` will never evaluate to `false` (and break the looping) - `i` will increment by 2 each pass, and jump right over 4 since `i` is odd to start. Fix the comparison operator in the terminal condition so the loop only runs for `i` less than or equal to 4.
+ภายในฟังก์ชัน `myFunc()` มี loop ที่วนไม่รู้จบ เพราะเงื่อนไขการสิ้นสุด loop `i != 4` จะไม่มีทางมีค่าเป็น `false` (และออกจาก loop) - `i` เพิ่มขึ้นทีละ 2 เมื่อวนแต่ละรอบ และข้ามเลข 4 ไป เพราะ `i` มีค่าเริ่มต้นเป็นเลขคี่ จงปรับแก้ comparison operator ที่เงื่อนไขการสิ้นสุด loop เพื่อให้ loop รันด้วยเงื่อนไข `i` น้อยกว่าหรือเท่ากับ 4
 
 # --hints--
 
-Your code should change the comparison operator in the terminal condition (the middle part) of the `for` loop.
+คุณควรปรับแก้ comparison operator ที่เงื่อนไขการสิ้นสุด loop (ที่อยู่ตรงกลาง) ของ `for` loop
 
 ```js
 assert(code.match(/i\s*?<=\s*?4;/g).length == 1);
 ```
 
-Your code should fix the comparison operator in the terminal condition of the loop.
+คุณควรปรับแก้ comparison operator ที่เงื่อนไขการสิ้นสุด loop
 
 ```js
 assert(!code.match(/i\s*?!=\s*?4;/g));

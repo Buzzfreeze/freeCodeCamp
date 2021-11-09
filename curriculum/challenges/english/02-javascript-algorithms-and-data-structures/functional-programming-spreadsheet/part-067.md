@@ -7,17 +7,17 @@ dashedName: part-67
 
 # --description--
 
-You call curried functions like this:
+คุณเรียก curried functions ได้ดังนี้
 
 ```js
 const result = add(1)(2);
 ```
 
-Use `map` on the `charRange` in `addChars`, passing in `x => elemValue(n)(x)` as the argument.
+จงนำ `map` มาใช้กับ `charRange` ภายใน `addChars` โดยส่งค่า `x => elemValue(n)(x)` เข้าไปเป็น argument
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

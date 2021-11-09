@@ -7,11 +7,11 @@ dashedName: part-90
 
 # --description--
 
-In the global scope, define a function called `update` which takes `event` as argument. It should define a variable, `element`, setting it to `event.target`.
+ภายใน global scope กำหนดฟังก์ชันชื่อ `update` ซึ่งรับ `event` เป็น argument โดยมีการประกาศตัวแปร `element` ที่มีค่า `event.target`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

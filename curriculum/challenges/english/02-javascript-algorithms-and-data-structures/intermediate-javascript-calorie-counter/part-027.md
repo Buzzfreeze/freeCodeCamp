@@ -7,17 +7,17 @@ dashedName: part-27
 
 # --description--
 
-If `difference` is positive, the total calories the user ate is more than the `maxCalories` recommended, or a calories surplus -- otherwise, if `difference` is negative, the user has a calorie deficit.
+ถ้า `difference` มีค่าเป็นบวก total calories ที่ผู้ใช้งานกินเข้าไปมีค่ามากกว่า `maxCalories` ที่แนะนำ หรือเรียกว่า calories surplus แต่ในทางกลับกัน หาก `difference` มีค่าติดลบ หมายถึง ผู้ใช้งานได้รับ calorie ไม่เพียงพอ
 
-To determine if this is a calorie surplus or deficit, create a variable named `surplusOrDeficit` to determine if the difference is positive (`difference > 0`).
+ในการหาว่า ได้รับ calorie เกินหรือขาด ให้สร้างตัวแปรชื่อ `surplusOrDeficit` เพื่อตรวจสอบว่าผลต่างเป็นค่าบวกหรือไม่ (`difference > 0`).
 
-If it is positive, `surplusOrDeficit` should be set equal to the string "Surplus", and "Deficit" if negative.
+ถ้าเป็นบวก `surplusOrDeficit` ควรมีค่าเป็น string "Surplus" แต่ถ้าเป็นลบ ให้มีค่า "Deficit"
 
-Use the same ternary syntax that you used to determine `maxCalories`.
+จงใช้ ternary syntax เหมือนกับที่คุณใช้ในการหาค่า `maxCalories`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

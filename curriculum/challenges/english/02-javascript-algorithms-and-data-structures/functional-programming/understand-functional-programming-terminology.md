@@ -8,47 +8,48 @@ dashedName: understand-functional-programming-terminology
 
 # --description--
 
-The FCC Team had a mood swing and now wants two types of tea: green tea and black tea. General Fact: Client mood swings are pretty common.
+ทีม FCC มีอารมณ์แปรปรวนและตอนนี้ต้องการชา 2 ประเภท คือ ชาเชียวและชาดำ 
+ข้อมูลทั่วไป: การที่ลูกค้ามีอารมณ์แปรปรวนเป็นเรื่องที่พบเจอได้ เป็นเรื่องปกติ
 
-With that information, we'll need to revisit the `getTea` function from last challenge to handle various tea requests. We can modify `getTea` to accept a function as a parameter to be able to change the type of tea it prepares. This makes `getTea` more flexible, and gives the programmer more control when client requests change.
+ตามข้อมูลดังกล่าว เราต้องกลับมาดูฟังก์ชัน `getTea` จากแบบทดสอบที่แล้ว เพื่อจัดการกับความต้องการชาที่แตกต่างกัน เราสามารถปรับแก้ `getTea` เพื่อรับค่าฟังก์ชันเป็น parameter เพื่อที่จะสามารถเปลี่ยนประเภทชาที่จัดเตรียมได้ วิธีนี้ทำให้ `getTea` มีความยืดหยุ่นและทำให้โปรแกรมเมอร์สามารถจัดการได้ดีขึ้นเมื่อความต้องการของลูกค้ามีการเปลี่ยนแปลง
 
-But first, let's cover some functional terminology:
+แต่ก่อนอื่น มาดูความหมายของคำจำกัดความต่างๆ เกี่ยวกับเรื่องนี้กัน
 
-<dfn>Callbacks</dfn> are the functions that are slipped or passed into another function to decide the invocation of that function. You may have seen them passed to other methods, for example in `filter`, the callback function tells JavaScript the criteria for how to filter an array.
+<dfn>Callbacks</dfn> เป็นฟังก์ชันที่ถูกส่งเข้าไปยังอีกฟังก์ชันนึง เพื่อกำหนดเงื่อนไขในการรันฟังก์ชัน คุณอาจเห็นว่าฟังก์ชันเหล่านี้ถูกส่งเข้าไปเป็น parameter ของอีก method นึง ตัวอย่างเช่น `filter` ซึ่งเป็น callback function ที่บอก JavaScript ถึงเงื่อนไขของการ filter array
 
-Functions that can be assigned to a variable, passed into another function, or returned from another function just like any other normal value, are called <dfn>first class</dfn> functions. In JavaScript, all functions are first class functions.
+ฟังก์ชันที่สามารถถูกกำหนด (assigned) ค่าให้กับตัวแปร, ส่งผ่านเข้าไปในฟังก์ชันอื่น หรือ คืนค่าจากฟังก์ชันอื่นได้เช่นเดียวกับตัวแปรอื่นๆ เรียกว่า <dfn>first class</dfn> functions ซึ่งใน JavaScript นั้น ทุกฟังก์ชันเป็น first class function
 
-The functions that take a function as an argument, or return a function as a return value are called <dfn>higher order</dfn> functions.
+ฟังก์ชันที่มี argument เป็นฟังก์ชันอื่น หรือคืนค่าเป็นฟังก์ชัน เรียกว่า <dfn>higher order</dfn> functions
 
-When functions are passed in to or returned from another function, then those functions which were passed in or returned can be called a <dfn>lambda</dfn>.
+ฟังก์ชันที่ถูกส่งเข้าไปหรือถูกคืนค่ามาจากอีกฟังก์ชันนึง เรียกว่า <dfn>lambda</dfn>.
 
 # --instructions--
 
-Prepare 27 cups of green tea and 13 cups of black tea and store them in `tea4GreenTeamFCC` and `tea4BlackTeamFCC` variables, respectively. Note that the `getTea` function has been modified so it now takes a function as the first argument.
+จงเตรียมชาเขียว 27 ถ้วย และชาดำ 13 ถ้วย แล้วเก็บไว้ในตัวแปร `tea4GreenTeamFCC` และ `tea4BlackTeamFCC` ตามลำดับ นอกจากนี้ต้องแก้ไขฟังก์ชัน `getTea` เพื่อให้รับค่าฟังก์ชันเป็น argument แรก
 
-Note: The data (the number of cups of tea) is supplied as the last argument. We'll discuss this more in later lessons.
+หมายเหตุ: จำนวนถ้วยชายังคงส่งเข้าฟังก์ชันเป็น argument สุดท้าย เราจะกล่าวถึงอีกครั้งในบทเรียนถัดไป
 
 # --hints--
 
-The `tea4GreenTeamFCC` variable should hold 27 cups of green tea for the team.
+ตัวแปร `tea4GreenTeamFCC` ควรเก็บค่าชาเขียว 27 ถ้วย
 
 ```js
 assert(tea4GreenTeamFCC.length === 27);
 ```
 
-The `tea4GreenTeamFCC` variable should hold cups of green tea.
+ตัวแปร `tea4GreenTeamFCC` ควรเก็บค่าชาเขียว
 
 ```js
 assert(tea4GreenTeamFCC[0] === 'greenTea');
 ```
 
-The `tea4BlackTeamFCC` variable should hold 13 cups of black tea.
+ตัวแปร `tea4BlackTeamFCC` ควรเก็บค่าชาดำ 13 ถ้วย
 
 ```js
 assert(tea4BlackTeamFCC.length === 13);
 ```
 
-The `tea4BlackTeamFCC` variable should hold cups of black tea.
+ตัวแปร `tea4BlackTeamFCC` ควรเก็บค่าชาดำ
 
 ```js
 assert(tea4BlackTeamFCC[0] === 'blackTea');

@@ -7,7 +7,7 @@ dashedName: part-89
 
 # --description--
 
-Add the following code to `letters.forEach`:
+เพิ่มโค้ดต่อไปนี้ให้กับ `letters.forEach`
 
 ```js
 input.type = "text";
@@ -18,7 +18,7 @@ container.appendChild(input);
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

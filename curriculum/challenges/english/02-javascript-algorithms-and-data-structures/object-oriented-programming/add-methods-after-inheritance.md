@@ -8,9 +8,9 @@ dashedName: add-methods-after-inheritance
 
 # --description--
 
-A constructor function that inherits its `prototype` object from a supertype constructor function can still have its own methods in addition to inherited methods.
+ฟังก์ชัน constructor ที่สืบทอด `prototype` object มาจากฟังก์ชัน constructor ของ supertype สามารถมี method ของตนเองเพิ่มเติมจาก method ที่สืบทอดมาได้ 
 
-For example, `Bird` is a constructor that inherits its `prototype` from `Animal`:
+ตัวอย่างเช่น `Bird` เป็น constructor ที่สืบทอด `prototype` มาจาก `Animal`
 
 ```js
 function Animal() { }
@@ -22,7 +22,7 @@ Bird.prototype = Object.create(Animal.prototype);
 Bird.prototype.constructor = Bird;
 ```
 
-In addition to what is inherited from `Animal`, you want to add behavior that is unique to `Bird` objects. Here, `Bird` will get a `fly()` function. Functions are added to `Bird's` `prototype` the same way as any constructor function:
+นอกเหนือจากสิ่งที่สืบทอดมาจาก `Animal` แล้ว คุณต้องการเพิ่มพฤติกรรมเฉพาะตัวของ `Bird` objects อย่างเช่นกรณีนี้ `Bird` จะมีฟังก์ชัน `fly()` ซึ่งเราสามารถเพิ่มฟังก์ชันให้กับ `Bird's` `prototype` ด้วยวิธีเดียวกับฟังก์ชัน constructor อื่นๆ
 
 ```js
 Bird.prototype.fly = function() {
@@ -30,7 +30,7 @@ Bird.prototype.fly = function() {
 };
 ```
 
-Now instances of `Bird` will have both `eat()` and `fly()` methods:
+ตอนนี้ instance ของ `Bird` จะมีทั้ง `eat()` และ `fly()` methods
 
 ```js
 let duck = new Bird();
@@ -38,45 +38,45 @@ duck.eat();
 duck.fly();
 ```
 
-`duck.eat()` would display the string `nom nom nom` in the console, and `duck.fly()` would display the string `I'm flying!`.
+`duck.eat()` ควรแสดงค่า string `nom nom nom` ในหน้า console และ `duck.fly()` ควรแสดงค่า string `I'm flying!`.
 
 # --instructions--
 
-Add all necessary code so the `Dog` object inherits from `Animal` and the `Dog`'s `prototype` constructor is set to `Dog`. Then add a `bark()` method to the `Dog` object so that `beagle` can both `eat()` and `bark()`. The `bark()` method should print `Woof!` to the console.
+จงปรับแก้โค้ด เพื่อให้ `Dog` object สืบทอดมาจาก `Animal` และกำหนดให้ `prototype` constructor ของ `Dog` มีค่าเป็น `Dog` จากนั้นให้เพิ่ม `bark()` method ให้กับ `Dog` object เพื่อให้ `beagle` สามารถทำทั้ง `eat()` และ `bark()` ได้ และ `bark()` method ควรพิมพ์ `Woof!` ในหน้า console
 
 # --hints--
 
-`Animal` should not respond to the `bark()` method.
+`Animal` ไม่ควรเรียก `bark()` method ได้
 
 ```js
 assert(typeof Animal.prototype.bark == 'undefined');
 ```
 
-`Dog` should inherit the `eat()` method from `Animal`.
+`Dog` ควรสืบทอด `eat()` method มาจาก `Animal`
 
 ```js
 assert(typeof Dog.prototype.eat == 'function');
 ```
 
-The `Dog` prototype should have a `bark()` method.
+`Dog` ควรมี `bark()` method
 
 ```js
 assert('bark' in Dog.prototype);
 ```
 
-`beagle` should be an `instanceof` `Animal`.
+`beagle` ควรเป็น `instanceof` `Animal`.
 
 ```js
 assert(beagle instanceof Animal);
 ```
 
-The constructor for `beagle` should be set to `Dog`.
+constructor ของ `beagle` ควรกำหนดเป็น `Dog`
 
 ```js
 assert(beagle.constructor === Dog);
 ```
 
-`beagle.eat()` should log the string `nom nom nom`
+`beagle.eat()` ควรแสดงค่า string `nom nom nom`
 
 ```js
 console.log = function (msg) {
@@ -85,7 +85,7 @@ console.log = function (msg) {
 assert.throws(() => beagle.eat(), 'nom nom nom');
 ```
 
-`beagle.bark()` should log the string `Woof!`
+`beagle.bark()` ควรแสดงค่า string `Woof!`
 
 ```js
 console.log = function (msg) {

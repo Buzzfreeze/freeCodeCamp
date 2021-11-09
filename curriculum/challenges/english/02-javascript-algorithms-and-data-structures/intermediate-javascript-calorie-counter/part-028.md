@@ -7,15 +7,15 @@ dashedName: part-28
 
 # --description--
 
-If you look near the bottom of the HTML page, notice that there is currently an empty `div` element: `<div id="output"></div>`.
+ถ้าคุณมองตรงเกือบๆ ด้านล่างของ HTML page จะเห็น empty `div` element: `<div id="output"></div>`
 
-We will be inserting output inside this `div`, telling the user if they are in a calorie surplus or deficit.
+เราจะแทรก output เข้าไปที่ `div` เพื่อบอกผู้ใช้งานว่า พวกเขาได้รับ calorie เกินหรือขาด
 
-Create a variable named `output` and set it equal to this division element with the `id` of `output`.
+จงสร้างตัวแปรชื่อ `output` และกำหนดให้มีค่าเป็น division element ที่มี `id` เป็น `output`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-73
 
 # --description--
 
-The function in `varRangeExpanded` contains an unused argument. Replace or prefix it with an underscore.
+ฟังก์ชันใน `varRangeExpanded` ประกอบด้วย argument ตัวนึงที่ไม่ได้ใช้งาน จงแทนที่ด้วย underscore หรือวาง underscore ไว้ข้างหน้า argument นั้น
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-6
 
 # --description--
 
-Declare variables named `monsterHealth` and `inventory` without initializing them.
+ประกาศตัวแปรชื่อ `monsterHealth` และ `inventory` โดยยังไม่ต้องกำหนดค่า
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(monsterHealth === undefined && inventory === undefined);

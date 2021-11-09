@@ -7,17 +7,17 @@ dashedName: part-30
 
 # --description--
 
-The `split` method returns an array of strings from a larger string by using its argument to determine where to make each split:
+`split` method แบ่ง string แล้วคืนค่าเป็น array ด้วยตัวคั่นที่ระบุใน argument
 
 ```js
 "a b c".split(" "); // ["a", "b", "c"];
 ```
 
-Add a function `toNumberList` (inside `applyFn`) which takes an argument `args` and splits it by commas. Return `toNumberList`.
+จงเพิ่มฟังก์ชัน `toNumberList` (ภายใน `applyFn`) ซึ่งรับค่า argument `args` และแบ่ง `args` ด้วย commas แล้วคืนค่าเป็น `toNumberList`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(JSON.stringify(applyFn('')('foo,baz,bar')) === '["foo","baz","bar"]');

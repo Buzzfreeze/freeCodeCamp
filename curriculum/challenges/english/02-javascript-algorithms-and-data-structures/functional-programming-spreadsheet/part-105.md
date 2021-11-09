@@ -7,13 +7,13 @@ dashedName: part-105
 
 # --description--
 
-To make this function pure, instead of depending on application state implicitly, we can pass it down explicitly as an argument.
+การทำให้ฟังก์ชัน pure ได้นั้น แทนที่จะขึ้นกับสถานะภายในของ application  เราสามารถส่งค่าเข้าไปให้ชัดเจน (explicit) เป็น argument
 
-Add an argument `cells` to `evalFormula`.
+จงเพิ่ม argument `cells` ให้กับ `evalFormula`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('evalFormula=(x,cells)=>{'));

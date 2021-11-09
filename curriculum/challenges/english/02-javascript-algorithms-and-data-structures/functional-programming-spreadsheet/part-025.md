@@ -7,11 +7,11 @@ dashedName: part-25
 
 # --description--
 
-Define an empty function `applyFn` which takes an argument `str`. Use the curly brace syntax with an anonymous function. Do not wrap parentheses around the parameter.
+จงสร้าง empty function `applyFn` ซึ่งมี argument ตัวเดียวคือ `str` ให้ใช้ {} สำหรับ anonymous function และไม่ใส่ () ล้อมรอบ parameter 
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('constapplyFn=str=>{}'));

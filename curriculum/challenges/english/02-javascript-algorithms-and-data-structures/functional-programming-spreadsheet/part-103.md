@@ -7,13 +7,13 @@ dashedName: part-103
 
 # --description--
 
-This is true, so `highPrecedence` might be a pure function. If you inspect it, you can see that it indeed performs no I/O and doesn't use functions like `Math.random()` - so it's pure.
+ผลที่ได้คือ true ดังนั้น `highPrecedence` อาจเป็น pure function ถ้าคุณตรวจสอบต่อ คุณจะเห็นว่า มันไม่ได้กระทำต่อ I/O และไม่ได้ใช้ฟังก์ชัน เช่น `Math.random()` ดังนั้น จึงเป็น pure
 
-Remove the `console.log` statement.
+ให้นำคำสั่ง `console.log` ออก
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(!code.includes('console.log'));

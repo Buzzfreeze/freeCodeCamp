@@ -7,21 +7,21 @@ dashedName: part-119
 
 # --description--
 
-The `reduce` method takes a function with an accumulator and the current value. The accumulator is initially set to the value at index 0.
+`reduce` method รับค่าเป็นฟังก์ชันที่มี accumulator (ตัวสะสม) และ element ปัจจุบันที่กำลังถูกอ่าน โดย accumulator ถูกกำหนดให้เริ่มอ่านจากค่าที่ index 0
 
-The `reduce` method then goes through each element of the array after that, passing in the element as the current value and the result of the last call as the accumulator.
+จากนั้น `reduce` method จะอ่านและรันแต่ละ element ของ array และผลจากการรัน element รอบที่แล้วก็จะเก็บเป็น accumulator
 
-For example, here's how to multiply all the value in an array:
+ตัวอย่างเช่น ด้านล่างนี้เป็นวิธีการนำทุกค่าใน array มาคูณกัน
 
 ```js
 [2, 3, 4].reduce((a, x) => a * x); // 24
 ```
 
-Using `reduce`, add a function `sum` to `spreadsheetFunctions`, which sums all values in the array passed to it.
+จงใช้ `reduce` และเพิ่มฟังก์ชัน `sum` ให้กับ `spreadsheetFunctions` โด้ยฟังก์ชันนี้จะนำทุกค่าใน array มาบวกกัน
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

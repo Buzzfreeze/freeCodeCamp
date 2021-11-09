@@ -8,17 +8,17 @@ dashedName: everything-be-true
 
 # --description--
 
-Check if the predicate (second argument) is <dfn>truthy</dfn> on all elements of a collection (first argument).
+จงตรวจสอบว่า predicate (argument ตัวที่สอง) มีค่าเป็น <dfn>truthy</dfn> สำหรับทุก element ใน array (first argument) หรือไม่ 
 
-In other words, you are given an array collection of objects. The predicate `pre` will be an object property and you need to return `true` if its value is `truthy`. Otherwise, return `false`.
+กล่าวได้อีกแบบหนึ่งว่า คุณมี array ของ object โดย predicate `pre` ก็คือ object property และหาก value ของทุก object property มีค่า `truthy` ให้คืนค่า `true` แต่ถ้าไม่ ให้คืนค่า `false`
 
-In JavaScript, `truthy` values are values that translate to `true` when evaluated in a Boolean context.
+ใน JavaScript คำว่า `truthy` values หมายถึง ค่าที่แปลงเป็น Boolean แล้วได้ค่าเป็น `true`
 
-Remember, you can access object properties through either dot notation or `[]` notation.
+หมายเหตุ คุณสามารถเข้าถึง object property ได้ โดยใช้ จุด หรือ `[]`
 
 # --hints--
 
-`truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex")` should return `true`.
+`truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex")` ควรคืนค่าเป็น `true`.
 
 ```js
 assert.strictEqual(
@@ -35,7 +35,7 @@ assert.strictEqual(
 );
 ```
 
-`truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex")` should return `false`.
+`truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex")` ควรคืนค่าเป็น `false`.
 
 ```js
 assert.strictEqual(
@@ -52,7 +52,7 @@ assert.strictEqual(
 );
 ```
 
-`truthCheck([{"user": "Tinky-Winky", "sex": "male", "age": 0}, {"user": "Dipsy", "sex": "male", "age": 3}, {"user": "Laa-Laa", "sex": "female", "age": 5}, {"user": "Po", "sex": "female", "age": 4}], "age")` should return `false`.
+`truthCheck([{"user": "Tinky-Winky", "sex": "male", "age": 0}, {"user": "Dipsy", "sex": "male", "age": 3}, {"user": "Laa-Laa", "sex": "female", "age": 5}, {"user": "Po", "sex": "female", "age": 4}], "age")` ควรคืนค่าเป็น `false`.
 
 ```js
 assert.strictEqual(
@@ -69,7 +69,7 @@ assert.strictEqual(
 );
 ```
 
-`truthCheck([{"name": "Pete", "onBoat": true}, {"name": "Repeat", "onBoat": true}, {"name": "FastForward", "onBoat": null}], "onBoat")` should return `false`.
+`truthCheck([{"name": "Pete", "onBoat": true}, {"name": "Repeat", "onBoat": true}, {"name": "FastForward", "onBoat": null}], "onBoat")` ควรคืนค่าเป็น `false`.
 
 ```js
 assert.strictEqual(
@@ -85,7 +85,7 @@ assert.strictEqual(
 );
 ```
 
-`truthCheck([{"name": "Pete", "onBoat": true}, {"name": "Repeat", "onBoat": true, "alias": "Repete"}, {"name": "FastForward", "onBoat": true}], "onBoat")` should return `true`.
+`truthCheck([{"name": "Pete", "onBoat": true}, {"name": "Repeat", "onBoat": true, "alias": "Repete"}, {"name": "FastForward", "onBoat": true}], "onBoat")` ควรคืนค่าเป็น `true`.
 
 ```js
 assert.strictEqual(
@@ -101,13 +101,13 @@ assert.strictEqual(
 );
 ```
 
-`truthCheck([{"single": "yes"}], "single")` should return `true`.
+`truthCheck([{"single": "yes"}], "single")` ควรคืนค่าเป็น `true`.
 
 ```js
 assert.strictEqual(truthCheck([{ single: 'yes' }], 'single'), true);
 ```
 
-`truthCheck([{"single": ""}, {"single": "double"}], "single")` should return `false`.
+`truthCheck([{"single": ""}, {"single": "double"}], "single")` ควรคืนค่าเป็น `false`.
 
 ```js
 assert.strictEqual(
@@ -116,7 +116,7 @@ assert.strictEqual(
 );
 ```
 
-`truthCheck([{"single": "double"}, {"single": undefined}], "single")` should return `false`.
+`truthCheck([{"single": "double"}, {"single": undefined}], "single")` ควรคืนค่าเป็น `false`.
 
 ```js
 assert.strictEqual(
@@ -125,7 +125,7 @@ assert.strictEqual(
 );
 ```
 
-`truthCheck([{"single": "double"}, {"single": NaN}], "single")` should return `false`.
+`truthCheck([{"single": "double"}, {"single": NaN}], "single")` ควรคืนค่าเป็น `false`.
 
 ```js
 assert.strictEqual(

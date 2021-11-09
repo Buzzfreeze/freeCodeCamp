@@ -8,9 +8,9 @@ dashedName: split-a-string-into-an-array-using-the-split-method
 
 # --description--
 
-The `split` method splits a string into an array of strings. It takes an argument for the delimiter, which can be a character to use to break up the string or a regular expression. For example, if the delimiter is a space, you get an array of words, and if the delimiter is an empty string, you get an array of each character in the string.
+`split` method ทำการแตก string ให้เป็น array ของ string โดย method นี้มี argument ที่เป็น delimiter ซึ่งเป็นตัวอักษรที่ใช้ในการแตก string หรือ regular expression ตัวอย่างเช่น หาก delimiter เป็น space คุณจะได้ array ของคำ (word) และหาก delimiter เป็น empty string (string เปล่า) คุณจะได้ array ของตัวอักษรที่อยู่ใน string
 
-Here are two examples that split one string by spaces, then another by digits using a regular expression:
+ด้านล่างนี้แสดง 2 ตัวอย่าง โดยตัวอย่างแรกทำการแตก string ด้วย space ส่วนตัวอย่างที่สอง แตก string ตามตัวอักษร ด้วย regular expression
 
 ```js
 var str = "Hello World";
@@ -20,23 +20,24 @@ var otherString = "How9are7you2today";
 var byDigits = otherString.split(/\d/);
 ```
 
-`bySpace` would have the value `["Hello", "World"]` and `byDigits` would have the value `["How", "are", "you", "today"]`.
+`bySpace` ควรมีค่าเป็น `["Hello", "World"]` และ `byDigits` ควรมีค่าเป็น `["How", "are", "you", "today"]`.
 
-Since strings are immutable, the `split` method makes it easier to work with them.
+เนื่องจาก string ไม่สามารถเปลี่ยนแปลงได้ (immutable) ดังนั้นจึงทำให้การทำงานกับ `split` method ทำได้ง่ายขึ้น
 
 # --instructions--
 
-Use the `split` method inside the `splitify` function to split `str` into an array of words. The function should return the array. Note that the words are not always separated by spaces, and the array should not contain punctuation.
+จงใช้ `split` method ในฟังก์ชัน `splitify` เพื่อแตก `str` ให้เป็น array ของคำ โดยฟังก์ชันควรคืนค่าเป็น array 
+หมายเหตุ คำแต่ละคำไม่จำเป็นต้องแตกด้วย space และ array ไม่ควรมีเครื่องหมายวรรคตอน (punctuation)
 
 # --hints--
 
-Your code should use the `split` method.
+โค้ดของคุณควรใช้ `split` method
 
 ```js
 assert(code.match(/\.split/g));
 ```
 
-`splitify("Hello World,I-am code")` should return `["Hello", "World", "I", "am", "code"]`.
+`splitify("Hello World,I-am code")` ควรคืนค่าเป็น `["Hello", "World", "I", "am", "code"]`.
 
 ```js
 assert(
@@ -45,7 +46,7 @@ assert(
 );
 ```
 
-`splitify("Earth-is-our home")` should return `["Earth", "is", "our", "home"]`.
+`splitify("Earth-is-our home")` ควรคืนค่าเป็น `["Earth", "is", "our", "home"]`.
 
 ```js
 assert(
@@ -54,7 +55,7 @@ assert(
 );
 ```
 
-`splitify("This.is.a-sentence")` should return `["This", "is", "a", "sentence"]`.
+`splitify("This.is.a-sentence")` ควรคืนค่าเป็น `["This", "is", "a", "sentence"]`.
 
 ```js
 assert(

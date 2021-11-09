@@ -7,11 +7,11 @@ dashedName: part-130
 
 # --description--
 
-On every attack, there should be a small chance that the player's weapon breaks. At the end of the `attack` function, add an empty `if` expression with the condition `Math.random() <= .1`.
+ทุกครั้งที่เกิดการต่อสู้ มีโอกาสที่อาวุธของผู้เล่นจะถูกทำลาย แต่เกิดขึ้นได้น้อย ในส่วนท้ายภายในฟังก์ชัน `attack` จงเพิ่ม empty `if` expression ที่มีเงื่อนไขเป็น `Math.random() <= .1`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

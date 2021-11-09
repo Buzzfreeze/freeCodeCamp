@@ -7,9 +7,9 @@ dashedName: part-143
 
 # --description--
 
-A `for` loop runs "for" a specific number of times.
+`for` loop รันซ้ำตามจำนวนรอบที่กำหนด
 
-We will go over how for loops work in the next several steps. In the meantime, just copy the for loop below and paste it at the end of the `pick` function:
+เราจะเรียนรู้การทำงานของ for loop ในอีกขั้นตอนถัดๆ ไป แต่ในขั้นตอนนี้ จงคัดลอก for loop ด้านล่างนี้และวางไว้ล่างสุดภายในฟังก์ชัน `pick`
 
 ```js
 for (let x = 1; x < 5; x++) {
@@ -19,7 +19,7 @@ for (let x = 1; x < 5; x++) {
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(pick.toString().replace(/\s/g, '').includes('for(varx=1;x<5;x++){'));

@@ -7,11 +7,11 @@ dashedName: part-106
 
 # --description--
 
-Set `xp` to equal `xp` plus the monster's level.
+กำหนดให้ `xp` มีค่าเท่ากับ `xp` บวกด้วย monster's level
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 (xp = 10), fightSlime(), defeatMonster(), assert(xp === 12);

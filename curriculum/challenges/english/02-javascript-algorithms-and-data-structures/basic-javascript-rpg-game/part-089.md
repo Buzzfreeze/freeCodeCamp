@@ -7,11 +7,11 @@ dashedName: part-89
 
 # --description--
 
-Add a new object in the `locations` array with all the same properties as the other objects in the array. Set `name` to "fight". Set `"button text"` to `["Attack", "Dodge", "Run"]`. Set `"button functions"` to `[attack, dodge, goTown]`. And set `text` to "You are fighting a monster.".
+จงเพิ่ม object ใหม่ใน `locations` array ให้มี properties เหมือนกับ object อื่นๆ ใน array จากนั้นกำหนด `name` ให้มีค่าเป็น "fight" แล้วกำหนด `"button text"` มีค่าเป็น `["Attack", "Dodge", "Run"]` แล้วกำหนด `"button functions"` มีค่าเป็น `[attack, dodge, goTown]` และกำหนด `text` มีค่าเป็น "You are fighting a monster."
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert.deepStrictEqual(locations[3], {

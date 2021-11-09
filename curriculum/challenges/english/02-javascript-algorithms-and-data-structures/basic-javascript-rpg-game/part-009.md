@@ -7,11 +7,11 @@ dashedName: part-9
 
 # --description--
 
-For now, let's start the player with just the stick. Delete the dagger and sword items in the array. More items will be added to the array during game play.
+ตอนนี้มาเริ่มต้นให้ผู้เล่น (player) ที่มีเพียง stick เท่านั้นก่อน จงลบ dagger และ sword ออกจาก array ส่วน items อื่นๆ จะเพิ่มใน array ให้ภายหลังในระหว่างการเล่นเกม
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(inventory[0] === 'stick' && inventory.length === 1);

@@ -7,11 +7,11 @@ dashedName: part-138
 
 # --description--
 
-Inside `pick`, use `let` to initialize a variable named "numbers" and set it to an empty array.
+ภายใน `pick` จงใช้ `let` เพื่อประกาศตัวแปรชื่อ "numbers" แล้วกำหนดให้มีค่าเท่ากับ empty array
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

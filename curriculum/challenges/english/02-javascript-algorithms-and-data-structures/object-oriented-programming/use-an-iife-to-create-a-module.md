@@ -8,7 +8,7 @@ dashedName: use-an-iife-to-create-a-module
 
 # --description--
 
-An immediately invoked function expression (IIFE) is often used to group related functionality into a single object or <dfn>module</dfn>. For example, an earlier challenge defined two mixins:
+immediately invoked function expression (IIFE) มักใช้ในการรวมกลุ่มฟังก์ชันที่เกี่ยวข้องกันเข้ามาเป็น object เดียวกัน หรือ <dfn>module</dfn> เดียวกัน ตัวอย่างเช่น แบบทดสอบที่ผ่านมามีการกำหนด 2 mixins
 
 ```js
 function glideMixin(obj) {
@@ -23,7 +23,7 @@ function flyMixin(obj) {
 }
 ```
 
-We can group these mixins into a module as follows:
+เราสามารถรวม mixins เหล่านี้ให้อยู่ใน module เดียวกันได้ดังนี้
 
 ```js
 let motionModule = (function () {
@@ -42,7 +42,7 @@ let motionModule = (function () {
 })();
 ```
 
-Note that you have an immediately invoked function expression (IIFE) that returns an object `motionModule`. This returned object contains all of the mixin behaviors as properties of the object. The advantage of the module pattern is that all of the motion behaviors can be packaged into a single object that can then be used by other parts of your code. Here is an example using it:
+หมายเหตุ คุณมี immediately invoked function expression (IIFE) ซึ่งคืนค่าเป็น object `motionModule` โดย object นี้ประกอบด้วย properties ที่เป็นพฤติกรรมต่างๆ ของ mixin ซึ่งข้อดีของการทำให้เป็นรูปแบบ module ก็คือ พฤติกรรมต่างๆ สามารถรวมอยู่ใน object เดียว และสามารถเรียกใช้จากโค้ดส่วนต่างๆ ได้ โค้ดด้านล่างนี้เป็นตัวอย่างการใช้งาน
 
 ```js
 motionModule.glideMixin(duck);
@@ -51,23 +51,23 @@ duck.glide();
 
 # --instructions--
 
-Create a module named `funModule` to wrap the two mixins `isCuteMixin` and `singMixin`. `funModule` should return an object.
+จงสร้าง module ที่มีชื่อว่า `funModule` เพื่อรวบ maxin `isCuteMixin` และ `singMixin` เข้าด้วยกัน โดย `funModule` ควรคืนค่าเป็น object
 
 # --hints--
 
-`funModule` should be defined and return an object.
+`funModule` ควรถูกกำหนดและคืนค่าเป็น object
 
 ```js
 assert(typeof funModule === 'object');
 ```
 
-`funModule.isCuteMixin` should access a function.
+`funModule.isCuteMixin` ควรเข้าถึงฟังก์ชันได้
 
 ```js
 assert(typeof funModule.isCuteMixin === 'function');
 ```
 
-`funModule.singMixin` should access a function.
+`funModule.singMixin` ควรเข้าถึงฟังก์ชันได้
 
 ```js
 assert(typeof funModule.singMixin === 'function');

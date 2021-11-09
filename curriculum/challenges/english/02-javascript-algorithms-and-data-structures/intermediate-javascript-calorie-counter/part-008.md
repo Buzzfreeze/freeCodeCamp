@@ -7,11 +7,11 @@ dashedName: part-8
 
 # --description--
 
-Now assign the document object you just referenced to a variable named `total`. Since this variable will not change, use `const` to create it.
+ตอนนี้ให้นำ document object ที่คุณเพิ่งอ้างอิง กำหนดให้กับตัวแปรชื่อ `total` เนื่องจากตัวแปรนี้จะไม่มีการเปลี่ยนแปลง ดังนั้นให้ใช้ `const` ในการสร้าง
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

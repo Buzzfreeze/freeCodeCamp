@@ -7,11 +7,11 @@ dashedName: part-97
 
 # --description--
 
-Next, set `health` to equal `health` minus the monster's level. You can get the monster's level with `monsters[fighting].level`.
+ต่อมา ให้กำหนด `health` มีค่าเป็น `health` ลบด้วย monster's level (ระดับของสัตว์ประหลาด) คุณสามารถได้ monster's level จากคำสั่ง `monsters[fighting].level`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 (health = 50), fightDragon(), attack(), assert(health === 30);

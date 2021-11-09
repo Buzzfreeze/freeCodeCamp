@@ -8,25 +8,26 @@ dashedName: sum-all-primes
 
 # --description--
 
-A <dfn>prime number</dfn> is a whole number greater than 1 with exactly two divisors: 1 and itself. For example, 2 is a prime number because it is only divisible by 1 and 2. In contrast, 4 is not prime since it is divisible by 1, 2 and 4.
+<dfn>prime number</dfn> (จำนวนเฉพาะ) คือ จำนวนเต็มบวกที่มีค่ามากกว่า 1 และมีตัวหารอยู่ 2 ตัว คือ 1 และตัวมันเอง
+ตัวอย่างเช่น 2 เป็นจำนวนเฉพาะ เพราะมีเพียง 1 และ 2 ที่หารลงตัว ในทางกลับกัน 4 ไม่ใช่จำนวนเฉพาะ เพราะมี 1, 2 และ 4 ที่หารลงตัว
 
-Rewrite `sumPrimes` so it returns the sum of all prime numbers that are less than or equal to num.
+จงเขียน `sumPrimes` เพื่อให้คืนค่าเป็นผลรวมของจำนวนเฉพาะทั้งหมดที่น้อยกว่าหรือเท่ากับ num
 
 # --hints--
 
-`sumPrimes(10)` should return a number.
+`sumPrimes(10)` ควรคืนค่าเป็น  number
 
 ```js
 assert.deepEqual(typeof sumPrimes(10), 'number');
 ```
 
-`sumPrimes(10)` should return 17.
+`sumPrimes(10)` ควรคืนค่าเป็น 7
 
 ```js
 assert.deepEqual(sumPrimes(10), 17);
 ```
 
-`sumPrimes(977)` should return 73156.
+`sumPrimes(977)` ควรคืนค่าเป็น 3156
 
 ```js
 assert.deepEqual(sumPrimes(977), 73156);

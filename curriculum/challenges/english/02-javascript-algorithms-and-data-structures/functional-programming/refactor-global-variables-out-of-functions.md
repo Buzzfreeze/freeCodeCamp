@@ -8,23 +8,23 @@ dashedName: refactor-global-variables-out-of-functions
 
 # --description--
 
-So far, we have seen two distinct principles for functional programming:
+จากบทเรียนที่ผ่านมา เราได้เรียนรู้หลักการของ functional programming 2 ข้อ คือ
 
-1) Don't alter a variable or object - create new variables and objects and return them if need be from a function. Hint: using something like `var newArr = arrVar`, where `arrVar` is an array will simply create a reference to the existing variable and not a copy. So changing a value in `newArr` would change the value in `arrVar`.
+1) อย่าเปลี่ยนแปลงแก้ไข variable หรือ object - ให้สร้าง variable และ object ใหม่ และคืนค่าออกไป หากฟังก์ชันจำเป็นต้องมีการคืนค่า อย่างไรก็ตาม การใช้คำสั่งเช่น `var newArr = arrVar` โดยที่ `arrVar` เป็น array เป็นการชี้ไปยัง address ของ variable ที่มีอยู่แล้ว และไม่ใช่การคัดลอก (copy) ดังนั้น การเปลี่ยนแปลงค่าใน `newArr` จะก่อให้เกิดการเปลี่ยนแปลงค่าใน `arrVar` ด้วย
 
-2) Declare function parameters - any computation inside a function depends only on the arguments passed to the function, and not on any global object or variable.
+2) ประกาศ function parameters - การประมวลผลภายในฟังก์ชันให้ทำกับ argument ที่ส่งผ่านเข้ามาในฟังก์ชันเท่านั้น ไม่ต้องทำกับ global object หรือ global variable
 
-Adding one to a number is not very exciting, but we can apply these principles when working with arrays or more complex objects.
+จากแบบทดสอบที่ผ่านมา การบวก 1 อาจดูไม่น่าตื่นเต้นเท่าไหร่ แต่เราสามารถประยุกต์หลักการนี้ เมื่อต้องทำงานกับ array หรือ object อื่นๆ ที่ซับซ้อนกว่านี้
 
 # --instructions--
 
-Rewrite the code so the global array `bookList` is not changed inside either function. The `add` function should add the given `bookName` to the end of the array passed to it and return a new array (list). The `remove` function should remove the given `bookName` from the array passed to it.
+จงปรับแก้โค้ดให้ global array `bookList` ไม่ถูกแก้ไขภายในฟังก์ชัน โดยฟังก์ชัน `add` ควรสามารถเพิ่ม `bookName` ได้ แล้วนำไปวางที่ตำแหน่งสุดท้ายของ array ที่ถูกส่งเข้ามาในฟังก์ชัน และให้คืนค่าเป็น array ตัวใหม่ ส่วนฟังก์ชัน `remove` ควรลบ `bookName` ที่กำหนดออกจาก array ที่ถูกส่งเข้ามาฟังก์ชัน
 
-**Note:** Both functions should return an array, and any new parameters should be added before the `bookName` parameter.
+**หมายเหตุ:** ทั้งสองฟังก์ชันควรคืนค่าเป็น array และ parameter ใหม่ ควรระบุก่อน `bookName` parameter
 
 # --hints--
 
-`bookList` should not change and still equal `["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"]`.
+`bookList` ไม่ควรเปลี่ยนแปลงและยังคงมีค่าเป็น `["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"]`.
 
 ```js
 assert(
@@ -38,7 +38,7 @@ assert(
 );
 ```
 
-`newBookList` should equal `["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae", "A Brief History of Time"]`.
+`newBookList` ควรมีค่าเป็น `["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae", "A Brief History of Time"]`.
 
 ```js
 assert(
@@ -53,7 +53,7 @@ assert(
 );
 ```
 
-`newerBookList` should equal `["The Hound of the Baskervilles", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"]`.
+`newerBookList` ควรมีค่าเป็น `["The Hound of the Baskervilles", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"]`.
 
 ```js
 assert(
@@ -66,7 +66,7 @@ assert(
 );
 ```
 
-`newestBookList` should equal `["The Hound of the Baskervilles", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae", "A Brief History of Time"]`.
+`newestBookList` ควรมีค่าเป็น `["The Hound of the Baskervilles", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae", "A Brief History of Time"]`.
 
 ```js
 assert(

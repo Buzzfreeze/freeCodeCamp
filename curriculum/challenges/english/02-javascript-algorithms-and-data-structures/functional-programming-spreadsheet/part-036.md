@@ -7,11 +7,11 @@ dashedName: part-36
 
 # --description--
 
-Replace the `""` in `str2.replace(regex, "")` with a function which takes `match`, `fn` and `args` as arguments and returns `spreadsheetFunctions`.
+จงแทนที่ `""` ใน `str2.replace(regex, "")` ด้วยฟังก์ชันที่รับค่า `match`, `fn` และ `args` เป็น arguments แล้วคืนค่าเป็น `spreadsheetFunctions`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-44
 
 # --description--
 
-Replace the call to `arr` in `arr.concat([end])` with `[start]` and remove the `arr` variable and its definition.
+แทนที่ `arr` ใน `arr.concat([end])` ด้วย `[start]` แล้วลบตัวแปร `arr` และการกำหนดค่าออกไป
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

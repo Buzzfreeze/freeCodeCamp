@@ -7,11 +7,11 @@ dashedName: part-57
 
 # --description--
 
-Create a variable named `calorieInput` and set it equal to another `input` document element. This is similar to how you created the `foodInput`.
+จงสร้างตัวแปรชื่อ `calorieInput` และกำหนดให้มีค่าเท่ากับ `input` document element อีกตัวนึง ซึ่งเหมือนกับวิธีที่คุณสร้าง `foodInput` ก่อนหน้านี้
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

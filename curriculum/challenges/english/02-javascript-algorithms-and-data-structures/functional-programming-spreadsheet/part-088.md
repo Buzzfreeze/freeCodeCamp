@@ -7,11 +7,11 @@ dashedName: part-88
 
 # --description--
 
-Inside `letters.forEach`, assign `document.createElement("input")` to `input`.
+ภายใน `letters.forEach` กำหนดค่า `document.createElement("input")` ให้กับ `input`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

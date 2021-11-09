@@ -7,19 +7,19 @@ dashedName: part-46
 
 # --description--
 
-Another way that we can set the text of the `consumed` element is to set the `innerHTML` property.
+อีกวิธีนึงที่เราสามารถกำหนดข้อความของ `consumed` element ได้ คือการกำหนด`innerHTML` property
 
-For example:
+ดังตัวอย่าง:
 
 ```js
 consumed.innerHTML = `Hello world`;
 ```
 
-Set the inner HTML of `consumed` to "XX Consumed Calories", where "XX" is the `total` variable that was previously created. Use template literals.
+กำหนด inner HTML ของ `consumed` ให้เป็น "XX Consumed Calories" โดย "XX" คือตัวแปร `total` ซึ่งสร้างก่อนหน้านี้ จงใช้ template literals
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

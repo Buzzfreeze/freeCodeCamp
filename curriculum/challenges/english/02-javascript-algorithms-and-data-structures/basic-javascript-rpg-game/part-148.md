@@ -7,13 +7,13 @@ dashedName: part-148
 
 # --description--
 
-The `indexOf()` array method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+`indexOf()` เป็น array method ที่ใช้ในการค้นหาข้อความย่อยตัวแรกที่เจอและส่งตำแหน่งแรกของตัวที่เจอกลับมา ในกรณีที่ไม่พบจะส่งค่า -1 กลับมา
 
-After the for loop, add an `if` expression to check if the guessed number is in the `numbers` array. The condition of the `if` expression should check if `numbers.indexOf(guess) !== -1`.
+ถัดจาก for loop ให้เพิ่ม `if` expression เพื่อเช็คว่า เลขที่เดา (guess) อยู่ใน `numbers` array หรือไม่ โดยเงื่อนไขของ `if` ควรเป็นดังนี้ `numbers.indexOf(guess) !== -1`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

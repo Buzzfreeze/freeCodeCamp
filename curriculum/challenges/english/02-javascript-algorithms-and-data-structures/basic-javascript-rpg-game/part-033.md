@@ -7,11 +7,11 @@ dashedName: part-33
 
 # --description--
 
-Add another property in the object with the name `"button functions"`. The value should be an array containing the three `onclick` functions from the `goTown` function. It should look like this: `[goStore, goCave, fightDragon]`
+ให้เพิ่ม property อีกตัวที่ชื่อ `"button functions"` เข้าไปใน object โดยกำหนดให้ value เป็น array ที่ประกอบด้วยฟังก์ชัน `onclick` จากฟังก์ชัน `goTown` ดังนั้น value ควรมีค่าดังนี้: `[goStore, goCave, fightDragon]`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert.deepStrictEqual(locations[0]['button functions'], [

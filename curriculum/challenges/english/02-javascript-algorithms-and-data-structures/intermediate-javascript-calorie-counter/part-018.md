@@ -7,23 +7,23 @@ dashedName: part-18
 
 # --description--
 
-The `reduce()` method takes a callback function with at least two arguments, an accumulator and a current value:
+`reduce()` method รับ callback function ที่มีอย่างน้อย 2 arguments คือ accumulator (ตัวสะสม) และ current value (item ที่อ่านปัจจุบัน)
 
 ```js
 function(accumulator, currentValue) { /* code to run */ }
 ```
 
-or using arrow functions:
+หรือใช้ arrow functions:
 
 ```js
 (accumulator, currentValue) => { /* code to run */ }
 ```
 
-Insert the above callback function as an argument in the `.reduce()` method.
+จงนำ callback function ด้านบนมาเป็น argument ใน `.reduce()` method
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-78
 
 # --description--
 
-Players should not be able to sell their only weapon. Inside the `sellWeapon` function, add an `if` statement with a condition that checks if the length of the `inventory` array is greater than one.
+ผู้เล่นไม่ควรขายอาวุธได้ หากมีเพียงชิ้นเดียว ภายในฟังก์ชัน `sellWeapon` ให้เพิ่ม `if` statement ที่มีเงื่อนไขตรวจสอบความยาวของ `inventory` array ว่ามีค่ามากกว่า 1 หรือไม่
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

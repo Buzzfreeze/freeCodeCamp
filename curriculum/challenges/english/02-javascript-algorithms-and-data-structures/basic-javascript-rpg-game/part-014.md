@@ -7,11 +7,11 @@ dashedName: part-14
 
 # --description--
 
-Designate what the first button in the HTML does by setting the `onclick` property of `button1` to the function name `goStore`. You will create the `goStore` function later. For example, in `button.onclick = openProgram;`, the `onclick` property of `button` is set to `openProgram`.
+การกำหนดให้ปุ่มแรกใน HTML ทำอะไรบ้าง ทำได้โดยกำหนด `onclick` property ของ `button1` ให้กับฟังก์ชัน `goStore` ซึ่งคุณจะได้สร้างฟังก์ชัน `goStore` ในภายหลัง ตัวอย่างเช่น ใน `button.onclick = openProgram;` ค่า `onclick` property ของ `button` ถูกกำหนดให้กับฟังก์ชัน `openProgram`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(/button1\.onclick\s*\=\s*goStore\;?/.test(code));

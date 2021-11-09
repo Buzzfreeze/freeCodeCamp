@@ -7,13 +7,13 @@ dashedName: part-6
 
 # --description--
 
-When a form is submitted, the browser will try to submit it to a server and reload the page. We want to prevent this from happening and do our own processing on the client side.
+เมื่อ form ถูก submit จากนั้น browser จะพยายามนำข้อมูลจาก form ส่งไปยังเซิร์ฟเวอร์ แล้วรีโหลด page แต่เราต้องการไม่ให้เกิดเหตุการณ์นี้และต้องการให้ประมวลผลที่ฝั่ง client เท่านั้น 
 
-Prevent the default behavior of the form submit event by calling `e.preventDefault()` inside of the `calculate` function.
+จงป้องกันการเกิดเหตุการณ์ดังกล่าวซึ่งเป็นค่า default ของ form submit event โดยการเรียก `e.preventDefault()` ภายในฟังก์ชัน `calculate`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(calculate.toString().match(/e\.preventDefault\(\s*\)/));

@@ -8,21 +8,21 @@ dashedName: implement-the-filter-method-on-a-prototype
 
 # --description--
 
-You might learn a lot about the `filter` method if you implement your own version of it. It is recommended you use a `for` loop or `Array.prototype.forEach()`.
+คุณจะมีเชี่ยวชาญขึ้นมากเกี่ยวกับ `filter` method หากคุณได้สร้าง `filter` method ที่เป็นเวอร์ชันของคุณเอง แนะนำให้คุณใช้ `for` loop หรือ `Array.prototype.forEach()`
 
 # --instructions--
 
-Write your own `Array.prototype.myFilter()`, which should behave exactly like `Array.prototype.filter()`. You should not use the built-in `filter` method. The `Array` instance can be accessed in the `myFilter` method using `this`.
+จงเขียน `Array.prototype.myFilter()` ของคุณเอง โดยให้ทำงานเหมือนกับ `Array.prototype.filter()` อย่างไรก็ตาม คุณไม่ควรใช้ built-in `filter` method นอกจากนี้ `Array` instance สามารถเข้าถึงได้ใน `myFilter` method โดยการใช้ `this`
 
 # --hints--
 
-`new_s` should equal `[23, 65, 5]`.
+`new_s` ควรมีค่าเป็น `[23, 65, 5]`.
 
 ```js
 assert(JSON.stringify(new_s) === JSON.stringify([23, 65, 5]));
 ```
 
-Your code should not use the `filter` method.
+โค้ดของคุณไม่ควรใช้ `filter` method
 
 ```js
 assert(!code.match(/\.?[\s\S]*?filter/g));

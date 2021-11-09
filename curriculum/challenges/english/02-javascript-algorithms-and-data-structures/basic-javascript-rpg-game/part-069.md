@@ -7,11 +7,11 @@ dashedName: part-69
 
 # --description--
 
-Up to this point, anytime `text.innerText` was updated, the old text was erased. This time, use the `+=` operator instead of the `=` operator to add text to the end of `text.innerText`. Add the string " In your inventory you have: " (include the spaces at the beginning and end).
+ถึงตอนนี้แล้ว เมื่อไหร่ก็ตามที่ `text.innerText` ถูกอัปเดต ข้อความเดิมจะถูกเขียนทับ ดังนั้น ตอนนี้ให้ใช้ `+=` operator แทนที่จะใช้ `=` operator เพื่อเพิ่มข้อความต่อจาก `text.innerText` จงเพิ่ม string " In your inventory you have: " (ให้เคาะวรรคทั้งต้นและท้าย string).
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

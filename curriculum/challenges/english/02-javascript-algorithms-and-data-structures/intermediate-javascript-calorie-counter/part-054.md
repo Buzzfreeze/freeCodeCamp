@@ -7,11 +7,11 @@ dashedName: part-54
 
 # --description--
 
-Set the `placeholder` property of the `foodInput` equal to `'food name'`.
+กำหนดให้ `placeholder` property ของ `foodInput` มีค่าเท่ากับ `'food name'`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

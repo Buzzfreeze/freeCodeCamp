@@ -8,9 +8,9 @@ dashedName: catch-missing-open-and-closing-parenthesis-after-a-function-call
 
 # --description--
 
-When a function or method doesn't take any arguments, you may forget to include the (empty) opening and closing parentheses when calling it. Often times the result of a function call is saved in a variable for other use in your code. This error can be detected by logging variable values (or their types) to the console and seeing that one is set to a function reference, instead of the expected value the function returns.
+คุณอาจลืมใส่ "()" เวลาเรียกใช้งาน function หรือ method ที่ไม่มี argument บ่อยครั้งที่เรามักกำหนดผลของการเรียกฟังก์ชันให้กับตัวแปร เพื่อนำไปใช้งานในส่วนอื่นของโค้ด ซึ่งการลืมใส่ "()" จะทำให้เกิด error ที่สามารถเห็นได้จากหน้า console เวลาสั่ง log ค่าตัวแปร โดยแสดงเป็นรายละเอียดของฟังก์ชัน (function reference) แทนที่จะเป็นค่าที่คืนมาจากฟังก์ชัน
 
-The variables in the following example are different:
+ตัวแปรในตัวอย่างต่อไปนี้ให้ผลต่างกัน
 
 ```js
 function myFunction() {
@@ -20,21 +20,21 @@ let varOne = myFunction;
 let varTwo = myFunction();
 ```
 
-Here `varOne` is the function `myFunction`, and `varTwo` is the string `You rock!`.
+`varOne` คือ ฟังก์ชัน `myFunction` และ `varTwo` คือ string `You rock!`
 
 # --instructions--
 
-Fix the code so the variable `result` is set to the value returned from calling the function `getNine`.
+จงแก้ไขโค้ด เพื่อให้ตัวแปร `result` มีค่าเป็นตัวเลขที่รับการคืนค่ามาจากฟังก์ชัน `getNine`.
 
 # --hints--
 
-Your code should fix the variable `result` so it is set to the number that the function `getNine` returns.
+โค้ดของคุณควรแก้ไขตัวแปร `result` เพื่อให้มีค่าเป็นตัวเลขที่รับการคืนค่ามาจากฟังก์ชัน `getNine`
 
 ```js
 assert(result == 9);
 ```
 
-Your code should call the `getNine` function.
+โค้ดของคุณควรเรียกฟังก์ชัน `getNine`
 
 ```js
 assert(code.match(/getNine\(\)/g).length == 2);

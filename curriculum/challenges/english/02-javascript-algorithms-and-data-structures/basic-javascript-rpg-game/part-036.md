@@ -7,11 +7,11 @@ dashedName: part-36
 
 # --description--
 
-Now we are can consolidate the code inside the `goTown` and `goStore` functions. Copy the code inside the `goTown` function and paste it in the `update` function. Then delete all the code inside the `goTown` and `goStore` functions.
+ตอนนี้เราก็สามารถนำฟังก์ชัน `goTown` และ `goStore` มารวมกันได้แล้ว วิธีการคือ ให้คัดลอกโค้ดภายในฟังก์ชัน `goTown` แล้ววางไว้ในฟังก์ชัน `update` แล้วลบโค้ดที่อยู่ในฟังก์ชัน `goTown` และ `goStore` 
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

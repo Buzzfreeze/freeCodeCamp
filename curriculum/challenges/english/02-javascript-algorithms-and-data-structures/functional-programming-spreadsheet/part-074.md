@@ -7,11 +7,11 @@ dashedName: part-74
 
 # --description--
 
-Set `varRegex` to `/[A-J][1-9][0-9]?/gi`. Then set `varExpanded` to the result of replacing `varRegex` with an empty string in `varRangeExpanded`. Return `varExpanded`.
+กำหนดให้ `varRegex` มีค่าเป็น `/[A-J][1-9][0-9]?/gi` จากนั้น กำหนด `varExpanded` มีค่าเป็นผลจากการแทนที่ `varRegex` ด้วย empty string ใน `varRangeExpanded` แล้วให้คืนค่าเป็น `varExpanded`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

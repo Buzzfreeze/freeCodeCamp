@@ -8,7 +8,8 @@ dashedName: understand-where-an-objects-prototype-comes-from
 
 # --description--
 
-Just like people inherit genes from their parents, an object inherits its `prototype` directly from the constructor function that created it. For example, here the `Bird` constructor creates the `duck` object:
+object สืบทอด `prototype` มาจากฟังก์ชัน constructor ที่สร้าง object นั้นมา เช่นเดียวกันกับคนที่สืบทอดยีนส์จากบิดามารดา ดังตัวอย่างนี้ `Bird` constructor สร้าง `duck` object
+
 
 ```js
 function Bird(name) {
@@ -18,21 +19,21 @@ function Bird(name) {
 let duck = new Bird("Donald");
 ```
 
-`duck` inherits its `prototype` from the `Bird` constructor function. You can show this relationship with the `isPrototypeOf` method:
+`duck` สืบทอด `prototype` มาจากฟังก์ชัน `Bird` constructor ซึ่งคุณสามารถตรวจสอบความสัมพันธ์โดยใช้ `isPrototypeOf` method
 
 ```js
 Bird.prototype.isPrototypeOf(duck);
 ```
 
-This would return `true`.
+ควรคืนค่า `true`
 
 # --instructions--
 
-Use `isPrototypeOf` to check the `prototype` of `beagle`.
+จงใช้ `isPrototypeOf` เพื่อตรวจสอบ `prototype` ของ `beagle`
 
 # --hints--
 
-You should show that `Dog.prototype` is the `prototype` of `beagle`
+คุณควรแสดงว่า `Dog.prototype` เป็น `prototype` ของ `beagle`
 
 ```js
 assert(/Dog\.prototype\.isPrototypeOf\(beagle\)/.test(code));

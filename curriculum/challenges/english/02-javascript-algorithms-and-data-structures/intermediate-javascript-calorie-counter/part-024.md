@@ -9,11 +9,11 @@ dashedName: part-24
 
 Inspect the Female radio button again and notice that it has a `checked` attribute if it's checked: `<input type="radio" name="sex" id="female" value="F" checked>`
 
-Check to see if the Female radio button is checked or not by chaining on the `.checked` attribute to `document.getElementById('female')`.
+ตรวจสอบว่า Female radio button ถูกเลือกหรือไม่ โดยการนำ `.checked` attribute มา chain (เรียกใช้งานโดยนำคำสั่งมาต่อ) กับ `document.getElementById('female')`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

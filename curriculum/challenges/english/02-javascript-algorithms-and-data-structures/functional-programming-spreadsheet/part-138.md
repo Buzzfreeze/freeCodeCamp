@@ -7,13 +7,13 @@ dashedName: part-138
 
 # --description--
 
-The `Array` function takes an argument `x` and creates an array of size `x` filled with `undefined`.
+ฟังก์ชัน `Array` รับค่า argument `x` และสร้าง array ที่มีขนาด `x` มีค่าเป็น `undefined`
 
-Make `range` return an array of `undefined` with size `end - start + 1`.
+กำหนดให้ `range` คืนค่าเป็น array ของ `undefined` โดยมีขนาด `end - start + 1`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

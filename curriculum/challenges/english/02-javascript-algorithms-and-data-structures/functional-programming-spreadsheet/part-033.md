@@ -7,11 +7,11 @@ dashedName: part-33
 
 # --description--
 
-Now, instead of returning `spreadsheetFunctions`, use bracket notation and `fn.toLowerCase()` to get a specific function from `spreadsheetFunctions`.
+ตอนนี้แทนที่จะคืนค่าเป็น `spreadsheetFunctions` ให้ใช้ [] and `fn.toLowerCase()` เพื่อให้ได้ค่าฟังก์ชันที่ต้องการจาก `spreadsheetFunctions`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

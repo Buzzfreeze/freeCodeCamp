@@ -7,11 +7,11 @@ dashedName: part-122
 
 # --description--
 
-Use the ternary operator in `nodups` to return `a` if `a.includes(x)` and `a.concat(x)` otherwise.
+จงใช้ ternary operator ใน `nodups` เพื่อคืนค่า `a` ถ้า `a.includes(x)` และคืนค่า `a.concat(x)` ถ้าเงื่อนไขเป็นเท็จ
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

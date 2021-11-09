@@ -8,21 +8,21 @@ dashedName: catch-arguments-passed-in-the-wrong-order-when-calling-a-function
 
 # --description--
 
-Continuing the discussion on calling functions, the next bug to watch out for is when a function's arguments are supplied in the incorrect order. If the arguments are different types, such as a function expecting an array and an integer, this will likely throw a runtime error. If the arguments are the same type (all integers, for example), then the logic of the code won't make sense. Make sure to supply all required arguments, in the proper order to avoid these issues.
+กล่าวต่อเรื่องการเรียกฟังก์ชัน ข้อผิดพลาดอีกอย่างที่ควรระวังก็คือ การส่งผ่านค่า argument เข้าในฟังก์ชันผิดลำดับ หาก argument เป็นคนละชนิดข้อมูลกัน เช่น ฟังก์ชันรับค่า array และ integer แบบนี้มันจะขึ้น runtime error แต่ถ้า argument มีชนิดข้อมูลเดียวกัน (เช่นเป็น integer เหมือนกัน) ก็จะทำให้แสดงผลแปลกๆ ได้ ดังนั้น ให้ตรวจสอบให้ดีเมื่อส่งค่า argument เข้าฟังก์ชัน ต้องให้อยู่ในลำดับที่ถูกต้อง เพื่อป้องกันการเกิดเหตุการณ์นี้
 
 # --instructions--
 
-The function `raiseToPower` raises a base to an exponent. Unfortunately, it's not called properly - fix the code so the value of `power` is the expected 8.
+ฟังก์ชัน `raiseToPower` นำเลขฐานมายกกำลัง แต่ตอนนี้ฟังก์ชันนี้รันไม่ถูกต้อง จงปรับแก้โค้ดเพื่อให้ค่า `power` มีค่าเป็น 8
 
 # --hints--
 
-Your code should fix the variable `power` so it equals 2 raised to the 3rd power, not 3 raised to the 2nd power.
+โค้ดของคุณควรแก้ไขตัวแปร `power` เพื่อให้มีค่าเท่ากับ 2 ยกกำลัง 3 ไม่ใช่ 3 ยกกำลัง 2
 
 ```js
 assert(power == 8);
 ```
 
-Your code should use the correct order of the arguments for the `raiseToPower` function call.
+โค้ดของคุณควรเรียงลำดับ argument ของการเรียกฟังก์ชัน `raiseToPower` ให้ถูกต้อง
 
 ```js
 assert(code.match(/raiseToPower\(\s*?base\s*?,\s*?exp\s*?\);/g));

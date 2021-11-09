@@ -7,11 +7,11 @@ dashedName: part-47
 
 # --description--
 
-Now update the `goCave` function using the pattern from `goTown` and `goCave`.
+ตอนนี้ให้ปรับแก้ฟังก์ชัน `goCave` โดยใช้รูปแบบเดียวกับ `goTown` และ `goCave`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(goCave.toString().match(/update\(locations\[2\]\)\;?/));

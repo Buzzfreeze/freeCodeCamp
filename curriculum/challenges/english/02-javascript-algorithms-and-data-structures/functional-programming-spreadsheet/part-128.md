@@ -7,7 +7,7 @@ dashedName: part-128
 
 # --description--
 
-The `sort` method sorts an array alphabetically:
+`sort` method เรียงค่าใน array ตามลำดับตัวอักษร
 
 ```js
 ["B", "C", "A"].sort(); // ["A", "B", "C"]
@@ -17,7 +17,7 @@ Assign the sorted `nums` to `sorted` in `median`.
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

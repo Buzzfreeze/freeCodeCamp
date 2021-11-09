@@ -7,17 +7,17 @@ dashedName: part-65
 
 # --description--
 
-You can add more arguments by simply adding another arrow with another argument name:
+คุณสามารถเพิ่ม argument โดยแค่เพิ่ม arrow และ argument อีกตัว
 
 ```js
 const manyArguments = a => b => c => d => [a, b, c, d]
 ```
 
-Add another argument to `addChars` and add it to the sum: `c1 => c2 => n => c1 + c2 + n`.
+เพิ่ม argument อีกตัวให้กับ `addChars` แล้วบวก argument นั้นเข้าไปในผลรวม: `c1 => c2 => n => c1 + c2 + n`.
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('constaddChars=c1=>c2=>n=>c1+c2+n'));

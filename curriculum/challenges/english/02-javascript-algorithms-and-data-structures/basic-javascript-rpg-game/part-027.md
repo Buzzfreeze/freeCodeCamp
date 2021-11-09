@@ -7,11 +7,11 @@ dashedName: part-27
 
 # --description--
 
-There is repetition in the `goTown` and `goStore` functions. When you have repetition in code, it is a sign that you need a new function.
+จะเห็นว่ามีโค้ดที่ซ้ำกันภายในฟังก์ชัน `goTown` และ `goStore` เมื่อคุณมีโค้ดที่ซ้ำกัน คุณควรสร้างเป็นฟังก์ชันใหม่
 
-Above the `goTown` function, create an empty function called `update`. This time the function should take a parameter named `location` so data can be passed into the function when it is called.
+ตรงด้านบนของฟังก์ชัน `goTown` ให้สร้าง empty function ชื่อ `update` โดยฟังก์ชันนี้รับ parameter ชื่อ `location` เพื่อให้ข้อมูลสามารถส่งผ่านเข้ามาในฟังก์ชันได้ เวลาเรียกใช้ฟังก์ชัน
 
-Here is an example of a function named `testFun` that accepts a parameter named `param`:
+ต่อไปนี้เป็นตัวอย่างของฟังก์ชันชื่อ `testFun` ที่รับค่า parameter ชื่อ `param`:
 
 ```js
 function testFun(param) {
@@ -21,7 +21,7 @@ function testFun(param) {
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(update.toString().match(/function update\(\s*location\)\s*\{\s*\}/));

@@ -7,11 +7,11 @@ dashedName: part-11
 
 # --description--
 
-You can also declare variables with the `const` key word. Since `button1` is a constant that will never change, switch the `let` keyword that declares the variable to `const`.
+คุณสามารถประกาศตัวแปรด้วยคีย์เวิร์ด `const` เนื่องจาก `button1` เป็นค่าคงที่ที่ไม่เปลี่ยนแปลงภายหลัง ให้เปลี่ยนคีย์เวิร์ดที่ใช้ประกาศตัวแปรจาก `let` เป็น `const`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(/const\s+button1\s*/.test(code));

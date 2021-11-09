@@ -7,15 +7,15 @@ dashedName: part-100
 
 # --description--
 
-This is (probably) false, so `random` is certainly impure.
+จากขั้นตอนที่แล้วได้ค่า (อาจจะ) false ดังนั้น แน่นอนว่า `random` เป็น impure
 
-The second property of pure functions is that they perform no side effects, which are state and I/O modifications. If you call a function without assigning the result to a variable, and it does something, then it's an impure function.
+คุณสมบัติที่สองของ pure functions ก็คือ ต้องไม่ก่อให้เกิด side effect ที่ทำให้ state และ I/O เปลี่ยนแปลง ถ้าคุณเรียกฟังก์ชันโดยไม่ได้กำหนดผลลัพธ์ให้กับตัวแปร และมันได้ทำอะไรบางอย่าง นั่นคือ impure function 
 
-Call `window.onload()` in `update`.
+จงเรียก `window.onload()` ภายใน `update`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

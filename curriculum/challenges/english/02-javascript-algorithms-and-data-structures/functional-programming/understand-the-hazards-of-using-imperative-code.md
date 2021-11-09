@@ -8,31 +8,32 @@ dashedName: understand-the-hazards-of-using-imperative-code
 
 # --description--
 
-Functional programming is a good habit. It keeps your code easy to manage, and saves you from sneaky bugs. But before we get there, let's look at an imperative approach to programming to highlight where you may have issues.
+การเขียนโปรแกรมตามหลัก Functional programming เป็นอุปนิสัยที่ดี เนื่องจากทำให้โค้ดง่ายต่อการจัดการ และป้องกันการเกิดข้อผิดพลาดโดยไม่ตั้งใจ แต่ก่อนที่เราจะได้เรียนรู้เรื่องนี้ มาศึกษาเรื่องการเขียนโปรแกรมด้วยวิธี imperative กันก่อน เพื่อเน้นย้ำจุดที่คุณอาจเจอปัญหา
 
-In English (and many other languages), the imperative tense is used to give commands. Similarly, an imperative style in programming is one that gives the computer a set of statements to perform a task.
+ในภาษาอังกฤษและหลายๆ ภาษานั้น imperative tense ใช้ในประโยคคำสั่ง ซึ่งเป็นลักษณะเดียวกันกับการเขียนโปรแกรมแบบ imperative นั่นคือการป้อนคำสั่งให้เครื่องคอมพิวเตอร์ทำงานตามที่เราสั่ง 
 
-Often the statements change the state of the program, like updating global variables. A classic example is writing a `for` loop that gives exact directions to iterate over the indices of an array.
+บ่อยครั้งที่คำสั่งเหล่านั้นมีการเปลี่ยนแปลง state ของโปรแกรม เช่น แก้ไขค่าตัวแปร global ส่วนตัวอย่างที่มักใช้ในการอธิบายเรื่อง imperative programming ก็คือ การเขียน `for` loop ซึ่งอ่านค่าภายใน array ทีละ index
 
-In contrast, functional programming is a form of declarative programming. You tell the computer what you want done by calling a method or function.
+ตรงกันข้าม functional programming ที่อยู่ในรูปแบบของ declarative programming คุณเพียงแค่บอกคอมพิวเตอร์ถึงสิ่งที่คุณต้องการ โดยการเรียก method หรือ function
 
-JavaScript offers many predefined methods that handle common tasks so you don't need to write out how the computer should perform them. For example, instead of using the `for` loop mentioned above, you could call the `map` method which handles the details of iterating over an array. This helps to avoid semantic errors, like the "Off By One Errors" that were covered in the Debugging section.
+JavaScript มี predefined methods มากมายที่จัดการกับงานทั่วไปได้ ดังนั้นคุณไม่จำเป็นต้องเขียนโค้ดแต่ละขั้นตอนเอง ยกตัวอย่างเช่น แทนที่จะใช้ `for` loop คุณก็สามารถใช้ `map` method ซึ่งอ่านค่าภายใน array ทีละตัวได้ วิธีนี้ช่วยป้องกันเรื่อง error จากการเขียนโค้ดผิด เช่น "Off By One Errors" ซึ่งจะกล่าวถึงในหัวข้อ Debugging
 
-Consider the scenario: you are browsing the web in your browser, and want to track the tabs you have opened. Let's try to model this using some simple object-oriented code.
+สมมติว่า คุณกำลังค้นหาข้อมูลในเว็บผ่านเว็บเบราว์เซอร์ และต้องการตรวจสอบแท๊บที่คุณกำลังเปิดอยู่ ลองมาจำลองเหตุการณ์นี้โดยใช้โค้ด object-oriented ง่ายๆ กัน
 
-A Window object is made up of tabs, and you usually have more than one Window open. The titles of each open site in each Window object is held in an array. After working in the browser (opening new tabs, merging windows, and closing tabs), you want to print the tabs that are still open. Closed tabs are removed from the array and new tabs (for simplicity) get added to the end of it.
+Window object ประกอบด้วย tab หลายๆ tab และคุณก็มีหลาย Window เปิดค้างอยู่ ชื่อ title ของเว็บที่เปิดอยู่ในแต่ละ Window object ให้เก็บไว้ใน array หนึ่งๆ หลังจากที่ทำงานบนเบราว์เซอร์เสร็จแล้ว (เปิด tab ใหม่, รวม windows และปิด tab) คุณต้องการพิมพ์ชื่อ tab ที่ยังคงเปิดค้างอยู่ โดย tab ที่ปิดไปแล้วจะต้องถูกนำออกจาก array ส่วน tab ใหม่ต้องเพิ่มเข้าไปใน array ที่ตำแหน่งสุดท้าย
 
-The code editor shows an implementation of this functionality with functions for `tabOpen()`, `tabClose()`, and `join()`. The array `tabs` is part of the Window object that stores the name of the open pages.
+ใน code editor มีฟังก์ชัน `tabOpen()`, `tabClose()` และ `join()` ที่รองรับการทำงานของเบราว์เซอร์มาให้ ส่วน array `tabs` เป็นส่วนหนึ่งของ Window object ที่เก็บชื่อของเว็บที่เปิดค้างไว้อยู่
+
 
 # --instructions--
 
-Examine the code in the editor. It's using a method that has side effects in the program, causing incorrect behaviour. The final list of open tabs, stored in `finalTabs.tabs`, should be `['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium', 'new tab', 'Netflix', 'YouTube', 'Vine', 'GMail', 'Work mail', 'Docs', 'freeCodeCamp', 'new tab']` but the list produced by the code is slightly different.
+ให้ทดสอบโค้ดที่อยู่ใน editor จะเห็นว่า มีการใช้ method ที่มีผลกระทบในโปรแกรม ก่อให้เกิดการทำงานที่ผิดพลาด อย่างไรก็ตาม รายการ tab ที่เปิดค้างจะต้องเก็บใน `finalTabs.tabs` และมีค่าเป็น `['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium', 'new tab', 'Netflix', 'YouTube', 'Vine', 'GMail', 'Work mail', 'Docs', 'freeCodeCamp', 'new tab']` แต่รายการ tab ที่ได้จากโค้ดนี้จะมีค่าต่างไปเล็กน้อย
 
-Change `Window.prototype.tabClose` so that it removes the correct tab.
+จงปรับแก้ `Window.prototype.tabClose` เพื่อให้นำค่า tab ออกได้อย่างถูกต้อง
 
 # --hints--
 
-`finalTabs.tabs` should be `['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium', 'new tab', 'Netflix', 'YouTube', 'Vine', 'GMail', 'Work mail', 'Docs', 'freeCodeCamp', 'new tab']`
+`finalTabs.tabs` ควรเป็น `['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium', 'new tab', 'Netflix', 'YouTube', 'Vine', 'GMail', 'Work mail', 'Docs', 'freeCodeCamp', 'new tab']`
 
 ```js
 assert.deepEqual(finalTabs.tabs, [

@@ -7,11 +7,11 @@ dashedName: part-58
 
 # --description--
 
-Inside `elemValue`, define `fn` to be a function which takes `c` as argument and returns `document.getElementById(c + n).value`. Return `fn` instead of `n`.
+ภายใน `elemValue` กำหนด `fn` ให้เป็นฟังก์ชันที่รับ `c` เป็น argument แล้วคืนค่าเป็น `document.getElementById(c + n).value` จากนั้นให้คืนค่า `fn` แทน `n`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

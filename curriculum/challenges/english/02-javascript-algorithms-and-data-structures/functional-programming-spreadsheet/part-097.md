@@ -7,7 +7,7 @@ dashedName: part-97
 
 # --description--
 
-The array destructuring syntax can be used to extract values from arrays:
+array destructuring syntax ใช้ในการสกัดค่า (extract) จาก array
 
 ```js
 const [x, y] = [1, 2]; // in variables
@@ -18,7 +18,7 @@ Use this syntax to define a function `random` in `spreadsheetFunctions` which ta
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

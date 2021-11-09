@@ -7,13 +7,13 @@ dashedName: part-40
 
 # --description--
 
-Let's create a few more HTML elements to add to the `output`.
+มาสร้าง HTML elements เพิ่ม แล้วเพิ่มให้กับ `output` กัน
 
-Create an `h4` element and assign it to a variable named `recommended`.
+จงสร้าง `h4` element และกำหนดค่าให้กับตัวแปรชื่อ `recommended`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

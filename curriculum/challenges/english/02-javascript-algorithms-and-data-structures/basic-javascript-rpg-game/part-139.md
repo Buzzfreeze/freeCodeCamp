@@ -7,9 +7,9 @@ dashedName: part-139
 
 # --description--
 
-Inside `pick`, create a `while` loop to run the same code multiple times. The code inside the `while` loop should keep repeating while `numbers.length` is less than 10 and stop once that condition is no longer true.
+ภายใน `pick` จงเขียน `while` loop เพื่อรันโค้ดซ้ำหลายๆ รอบ ซึ่งโค้ดที่อยู่ภายใน `while` loop ควรรันซ้ำๆ ตราบใดที่ `numbers.length` มีค่าน้อยกว่า 10 และหยุดเมื่อไม่เข้าเงื่อนไขแล้ว
 
-Here is an example of a while loop that repeats code inside the loop while `i` is less than five.
+ต่อไปนี้คือตัวอย่างของ while loop ที่รันโค้ดซ้ำๆ ภายใน loop ตราบใดที่ `i` มีค่าน้อยกว่า 5
 
 ```js
 let ourArray = [];
@@ -23,7 +23,7 @@ while(i < 5) {
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

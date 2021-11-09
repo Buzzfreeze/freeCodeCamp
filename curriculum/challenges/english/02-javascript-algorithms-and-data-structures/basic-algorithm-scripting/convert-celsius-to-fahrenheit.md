@@ -7,44 +7,44 @@ dashedName: convert-celsius-to-fahrenheit
 ---
 
 # --description--
+สูตรในการแปลงอุณหภูมิองศาเซลเซียสให้เป็นองศาฟาเรนไฮต์คือ ให้นำอุณหภูมิองศาเซลเซียสคูณ `9/5` แล้วบวกด้วย `32` 
 
-The algorithm to convert from Celsius to Fahrenheit is the temperature in Celsius times `9/5`, plus `32`.
+แบบทดสอบนี้ กำหนดให้ตัวแปร `celsius` ใช้แทนค่าอุณหภูมิองศาเซลเซียส ตัวแปร `fahrenheit` ใช้แทนค่าอุณหภูมิองศาฟาเรนไฮต์ และกำหนดให้ตัวแปร `celsius` มีค่าเท่ากับตัวแปร `fahrenheit` จงใช้สูตรที่ได้กล่าวมาแล้วข้างต้น เพื่อแปลงอุณหภูมิองศาเซลเซียสให้เป็นองศาฟาเรนไฮต์
 
-You are given a variable `celsius` representing a temperature in Celsius. Use the variable `fahrenheit` already defined and assign it the Fahrenheit temperature equivalent to the given Celsius temperature. Use the algorithm mentioned above to help convert the Celsius temperature to Fahrenheit.
 
 # --hints--
 
-`convertToF(0)` should return a number
+`convertToF(0)` ควรได้ผลลัพธ์เป็นตัวเลข
 
 ```js
 assert(typeof convertToF(0) === 'number');
 ```
 
-`convertToF(-30)` should return a value of `-22`
+`convertToF(-30)` ควรได้ผลลัพธ์คือ `-22`
 
 ```js
 assert(convertToF(-30) === -22);
 ```
 
-`convertToF(-10)` should return a value of `14`
+`convertToF(-10)` ควรได้ผลลัพธ์คือ `14`
 
 ```js
 assert(convertToF(-10) === 14);
 ```
 
-`convertToF(0)` should return a value of `32`
+`convertToF(0)` ควรได้ผลลัพธ์คือ `32`
 
 ```js
 assert(convertToF(0) === 32);
 ```
 
-`convertToF(20)` should return a value of `68`
+`convertToF(20)` ควรได้ผลลัพธ์คือ `68`
 
 ```js
 assert(convertToF(20) === 68);
 ```
 
-`convertToF(30)` should return a value of `86`
+`convertToF(30)` ควรได้ผลลัพธ์คือ `86`
 
 ```js
 assert(convertToF(30) === 86);

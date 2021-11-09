@@ -7,11 +7,11 @@ dashedName: part-71
 
 # --description--
 
-At the end of the `if` statement inside the `buyWeapon` function, add an `else` statement. Inside the `else` statement, set `text.innerText` to equal "You do not have enough gold to buy a weapon.".
+ให้เพิ่ม `else` statement เข้าไปต่อจาก `if` statement ในฟังก์ชัน `buyWeapon` ซึ่งภายใน `else` statement ให้กำหนด `text.innerText` มีค่าเท่ากับ "You do not have enough gold to buy a weapon."
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-112
 
 # --description--
 
-Change the empty string in `elemValue` to the result of calling `idToText` with `c + n`.
+จงเปลี่ยน empty string ใน `elemValue` ให้เป็นผลจากการเรียก `idToText` ด้วย argument `c + n`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('elemValue=n=>c=>idToText(c+n)'));

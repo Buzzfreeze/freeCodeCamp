@@ -7,11 +7,11 @@ dashedName: part-66
 
 # --description--
 
-Get just the name property of the current weapon by adding `.name` at the end of `weapons[currentWeapon]` (don't use a space).
+ดึงค่า name property ของอาวุธที่ใช้ปัจจุบัน (current weapon) โดยวาง `.name` ที่ท้ายของ `weapons[currentWeapon]` (ห้ามเคาะเว้นวรรค)
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายเลียดด้านบน
 
 ```js
 assert(

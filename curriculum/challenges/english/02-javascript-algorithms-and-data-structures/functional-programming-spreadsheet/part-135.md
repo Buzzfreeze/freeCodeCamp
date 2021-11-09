@@ -7,13 +7,13 @@ dashedName: part-135
 
 # --description--
 
-The `some` method checks if any element of the array satisfies the provided testing function.
+`some` method ตรวจสอบว่า มี element ใน array ที่เข้าเงื่อนไขของฟังก์ชันที่กำหนดหรือไม่
 
-Add `someeven` to `spreadsheetFunctions`, which checks if any of the items passed in are even.
+จงเพิ่ม `someeven` ใน `spreadsheetFunctions` ซึ่งเช็คว่ามี item เป็นเลขคู่หรือไม่
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

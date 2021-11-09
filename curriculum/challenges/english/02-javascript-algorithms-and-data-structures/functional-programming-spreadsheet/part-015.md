@@ -7,13 +7,13 @@ dashedName: part-15
 
 # --description--
 
-Change the `"+"` in the call to `infixToFunction` to `fn`.
+จงเปลี่ยน `"+"` ที่เรียก `infixToFunction` ให้เป็น `fn`
 
-`fn` is the operator that the user inputs (`+`, `-`, `*` or `/`) - we use `infixToFunction` to get the function that corresponds to it.
+`fn` เป็นเครื่องหมายที่ผู้ใช้งานกรอกเข้ามา (`+`, `-`, `*` or `/`)  เราใช้ `infixToFunction` เพื่อเรียกฟังก์ชันที่เกี่ยวข้องกับเครื่องหมายเหล่านั้น
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

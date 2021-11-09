@@ -7,15 +7,16 @@ dashedName: part-1
 
 # --description--
 
-When a browser loads a page, it creates a Document Object Model (DOM) representation of the page which includes all of the HTML elements in a tree structure.
+เมื่อ browser โหลดหน้า page ขึ้นมา จะมีการสร้าง Document Object Model (DOM) ของ page ซึ่งประกอบด้วย ทุก HTML elements ที่อยู่ใน tree structure
 
-In JavaScript, you can access the DOM by referencing the global `document` object.
+ในภาษา JavaScript คุณสามารถเข้าถึง DOM โดยการอ้างถึง global `document` object
 
-To view the DOM, log it to the console with `console.log(document)`.
+การตรวจดู DOM ให้ log ที่หน้า console ด้วยคำสั่ง `console.log(document)`
+
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').match(/console\.log\(document\)/));

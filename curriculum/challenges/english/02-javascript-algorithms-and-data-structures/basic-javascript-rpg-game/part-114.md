@@ -7,13 +7,13 @@ dashedName: part-114
 
 # --description--
 
-At the end of the code, create a `restart` function. Inside the function, set `xp` to 0, set `health` to 100, set `gold` to 50, set `currentWeapon` to 0, and set `inventory` to `["stick"]`. Also, update the `innerText` properties of `goldText`, `healthText`, and `xpText` to their current values. Finally, call the `goTown()` function.
+ต่อจากโค้ดบรรทัดสุดท้าย ให้สร้างฟังก์ชัน `restart` ภายในฟังก์ชัน กำหนดให้ `xp` มีค่าเป็น 0, กำหนด `health` มีค่าเป็น 100, กำหนด `gold` มีค่าเป็น 50, กำหนด `currentWeapon` มีค่าเป็น 0, และกำหนด `inventory` มีค่าเป็น `["stick"]` นอกจากนี้ให้อัปเดต `innerText` properties ของ `goldText`, `healthText` และ `xpText` ให้เป็นค่าปัจจุบัน (current values) และสุดท้ายให้เรียกฟังก์ชัน `goTown()`
 
-After this step is a good time to test the game so far.
+เมื่อทำขั้นตอนนี้แล้ว ให้ลองรันทดสอบเกมดู
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 (currentWeapon = 1),

@@ -7,11 +7,11 @@ dashedName: part-28
 
 # --description--
 
-Set `str2` to `infixEval(noHigh, infix)`.
+กำหนดให้ `str2` มีค่าเป็น `infixEval(noHigh, infix)`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-2
 
 # --description--
 
-Create a variable called `gold` and set it to the value 50.
+สร้างตัวแปรชื่อว่า `gold` และกำหนดให้มีค่า 50
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(gold === 50);

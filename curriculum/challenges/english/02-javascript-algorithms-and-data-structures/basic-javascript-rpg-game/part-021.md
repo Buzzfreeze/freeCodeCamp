@@ -7,11 +7,11 @@ dashedName: part-21
 
 # --description--
 
-After the line that updates `button1`, update the text of `button2` to say "Buy weapon (30 gold)" and update the text of `button3` to say "Go to town square".
+หลังจากเพิ่มโค้ดที่เปลี่ยนข้อความของ `button1`แล้ว ให้เปลียนข้อความของปุ่ม `button2` เป็น "Buy weapon (30 gold)" แล้วเปลี่ยนข้อความของ `button3` เป็น "Go to town square"
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

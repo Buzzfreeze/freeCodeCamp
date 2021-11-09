@@ -7,11 +7,11 @@ dashedName: part-24
 
 # --description--
 
-At the end of the current code, add three new empty functions called `buyHealth`, `buyWeapon`, and `goTown`. After this step, you can test out the game by clicking the "Go to store" button.
+ต่อจากโค้ดบรรทัดล่างสุด ให้เพิ่ม empty functions 3 ตัว ชื่อ `buyHealth`, `buyWeapon` และ `goTown` ถัดจากขั้นตอนนี้ คุณสามารถทดสอบเกม โดยคลิกปุ่ม "Go to store"
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

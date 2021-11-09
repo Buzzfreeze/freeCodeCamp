@@ -7,11 +7,11 @@ dashedName: part-153
 
 # --description--
 
-Congratulations! You are finished! Now try out the game.
+ยินดีด้วย! คุณทำเสร็จแล้ว! ตอนนี้ลองเล่นเกมได้เลย
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 

@@ -8,19 +8,19 @@ dashedName: diff-two-arrays
 
 # --description--
 
-Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
+ให้เปรียบเทียบ array 2 ตัวและคืนค่าเป็น array ตัวใหม่ที่ประกอบด้วย item ที่มีใน array ตัวนึง แต่ไม่มีใน array อีกตัวนึง พูดง่ายๆ คือ ให้คืนค่าที่ทำให้ array ทั้งสองแตกต่างกัน
 
-**Note:** You can return the array with its elements in any order.
+**หมายเหตุ:** คุณสามารถคืนค่า array ที่ไม่ต้องเรียง element ก็ได้
 
 # --hints--
 
-`diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])` should return an array.
+`diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])` ควรคืนค่าเป็น array
 
 ```js
 assert(typeof diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]) === 'object');
 ```
 
-`["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]` should return `["pink wool"]`.
+`["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]` ควรคืนค่าเป็น `["pink wool"]`.
 
 ```js
 assert.sameMembers(
@@ -32,7 +32,7 @@ assert.sameMembers(
 );
 ```
 
-`["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]` should return an array with one item.
+`["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]` ควรคืนค่าเป็น array ที่มี item เดียว
 
 ```js
 assert(
@@ -43,7 +43,7 @@ assert(
 );
 ```
 
-`["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]` should return `["diorite", "pink wool"]`.
+`["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]` ควรคืนค่าเป็น `["diorite", "pink wool"]`.
 
 ```js
 assert.sameMembers(
@@ -55,7 +55,7 @@ assert.sameMembers(
 );
 ```
 
-`["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]` should return an array with two items.
+`["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]` ควรคืนค่าเป็น array ที่มี 2 item
 
 ```js
 assert(
@@ -66,7 +66,7 @@ assert(
 );
 ```
 
-`["andesite", "grass", "dirt", "dead shrub"], ["andesite", "grass", "dirt", "dead shrub"]` should return `[]`.
+`["andesite", "grass", "dirt", "dead shrub"], ["andesite", "grass", "dirt", "dead shrub"]` ควรคืนค่าเป็น `[]`.
 
 ```js
 assert.sameMembers(
@@ -78,7 +78,7 @@ assert.sameMembers(
 );
 ```
 
-`["andesite", "grass", "dirt", "dead shrub"], ["andesite", "grass", "dirt", "dead shrub"]` should return an empty array.
+`["andesite", "grass", "dirt", "dead shrub"], ["andesite", "grass", "dirt", "dead shrub"]` ควรคืนค่าเป็น empty array.
 
 ```js
 assert(
@@ -89,19 +89,19 @@ assert(
 );
 ```
 
-`[1, 2, 3, 5], [1, 2, 3, 4, 5]` should return `[4]`.
+`[1, 2, 3, 5], [1, 2, 3, 4, 5]` ควรคืนค่าเป็น `[4]`.
 
 ```js
 assert.sameMembers(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]), [4]);
 ```
 
-`[1, 2, 3, 5], [1, 2, 3, 4, 5]` should return an array with one item.
+`[1, 2, 3, 5], [1, 2, 3, 4, 5]` ควรคืนค่าเป็น array ที่มี item เดียว
 
 ```js
 assert(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]).length === 1);
 ```
 
-`[1, "calf", 3, "piglet"], [1, "calf", 3, 4]` should return `["piglet", 4]`.
+`[1, "calf", 3, "piglet"], [1, "calf", 3, 4]` ควรคืนค่าเป็น `["piglet", 4]`.
 
 ```js
 assert.sameMembers(diffArray([1, 'calf', 3, 'piglet'], [1, 'calf', 3, 4]), [
@@ -110,13 +110,13 @@ assert.sameMembers(diffArray([1, 'calf', 3, 'piglet'], [1, 'calf', 3, 4]), [
 ]);
 ```
 
-`[1, "calf", 3, "piglet"], [1, "calf", 3, 4]` should return an array with two items.
+`[1, "calf", 3, "piglet"], [1, "calf", 3, 4]` ควรคืนค่าเป็น array ที่มี 2 item
 
 ```js
 assert(diffArray([1, 'calf', 3, 'piglet'], [1, 'calf', 3, 4]).length === 2);
 ```
 
-`[], ["snuffleupagus", "cookie monster", "elmo"]` should return `["snuffleupagus", "cookie monster", "elmo"]`.
+`[], ["snuffleupagus", "cookie monster", "elmo"]` ควรคืนค่าเป็น `["snuffleupagus", "cookie monster", "elmo"]`.
 
 ```js
 assert.sameMembers(diffArray([], ['snuffleupagus', 'cookie monster', 'elmo']), [
@@ -126,13 +126,13 @@ assert.sameMembers(diffArray([], ['snuffleupagus', 'cookie monster', 'elmo']), [
 ]);
 ```
 
-`[], ["snuffleupagus", "cookie monster", "elmo"]` should return an array with three items.
+`[], ["snuffleupagus", "cookie monster", "elmo"]` ควรคืนค่าเป็น array ที่มี 3 item
 
 ```js
 assert(diffArray([], ['snuffleupagus', 'cookie monster', 'elmo']).length === 3);
 ```
 
-`[1, "calf", 3, "piglet"], [7, "filly"]` should return `[1, "calf", 3, "piglet", 7, "filly"]`.
+`[1, "calf", 3, "piglet"], [7, "filly"]` ควรคืนค่าเป็น `[1, "calf", 3, "piglet", 7, "filly"]`.
 
 ```js
 assert.sameMembers(diffArray([1, 'calf', 3, 'piglet'], [7, 'filly']), [
@@ -145,7 +145,7 @@ assert.sameMembers(diffArray([1, 'calf', 3, 'piglet'], [7, 'filly']), [
 ]);
 ```
 
-`[1, "calf", 3, "piglet"], [7, "filly"]` should return an array with six items.
+`[1, "calf", 3, "piglet"], [7, "filly"]` ควรคืนค่าเป็น array ที่มี 6 item
 
 ```js
 assert(diffArray([1, 'calf', 3, 'piglet'], [7, 'filly']).length === 6);

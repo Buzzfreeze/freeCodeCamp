@@ -7,13 +7,14 @@ dashedName: part-13
 
 # --description--
 
-Make a comment to describe what the next few lines of code will do. Comments can be written with either two forward-slashes `//` or with a multi-line sequence `/* */`. For example, here is a single line comment that says "hello world": `// hello world`.
+จงเขียน comment เพื่ออธิบายว่าโค้ดทำงานอะไร โดย comment สามารถเขียนด้วย `//` (single-line comment) หรือ `/* */` (multi-line comment) 
+ตัวอย่างเช่น นี่คือ comment บรรทัดเดียวที่บอกว่า "hello world": `// hello world`
 
-Write a single line comment that says "initialize buttons".
+จงเขียน comment บรรทัดเดียวที่บอกว่า "initialize buttons"
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(/\/\/\s*[iI]nitialize buttons/.test(code));

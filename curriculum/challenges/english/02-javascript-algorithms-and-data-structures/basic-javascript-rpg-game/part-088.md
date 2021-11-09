@@ -7,11 +7,11 @@ dashedName: part-88
 
 # --description--
 
-Write the code for the `fightBeast` and `fightDragon` functions, using the `fightSlime` function as an example. Make sure to delete the line that is already in the `fightDragon` function.
+จงเขียนโค้ดของฟังก์ชัน `fightBeast` และ `fightDragon` โดยดูฟังก์ชัน `fightSlime` เป็นตัวอย่าง อย่าลืมลบบรรทัดที่มีอยู่แล้วในฟังก์ชัน `fightDragon` ออกด้วย
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

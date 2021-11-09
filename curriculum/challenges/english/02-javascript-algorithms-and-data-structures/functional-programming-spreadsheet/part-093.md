@@ -7,11 +7,11 @@ dashedName: part-93
 
 # --description--
 
-Add another condition to the if statement so that it only executes if the first character of `value` is `=`. Do this by adding `&& value[0] === "="` to the if statement.
+จงเพิ่มอีกเงื่อนไขให้กับ if statement เพื่อให้รันก็ต่อเมื่อตัวอักษรแรกของ `value` เป็น `=` ดังนั้น เราจะเพิ่ม `&& value[0] === "="` เข้าไปที่เงื่อนไขของ if statement
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-79
 
 # --description--
 
-Inside the `if` statement, set `gold` equal to 15 more than its current value. Also, update `goldText.innerText` to the new value.
+ภายใน `if` statement กำหนดให้ `gold` เท่ากับค่าในขณะนั้นบวก 15 นอกจากนี้ ให้อัปเดต `goldText.innerText` ให้เป็นค่าใหม่
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

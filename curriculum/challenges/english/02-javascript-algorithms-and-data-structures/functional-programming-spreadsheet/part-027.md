@@ -7,11 +7,11 @@ dashedName: part-27
 
 # --description--
 
-Set `infix` to `/([0-9.]+)([+-])([0-9.]+)/` in `applyFn`.
+กำหนดให้ `infix` มีค่าเป็น `/([0-9.]+)([+-])([0-9.]+)/` ภายใน `applyFn`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

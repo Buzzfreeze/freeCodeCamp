@@ -7,13 +7,13 @@ dashedName: part-105
 
 # --description--
 
-In the `defeatMonster` function, set `gold` to equal `gold` plus the monster's level times 6.7. You can get the monster's level with `monsters[fighting].level`.
+ภายในฟังก์ชัน `defeatMonster` กำหนดให้ `gold` มีค่าเป็น `gold` บวกด้วย monster's level คูณ 6.7 คุณสามารถได้ monster's level จากคำสั่ง `monsters[fighting].level`
 
-Here is how you would set `num` to equal `num` plus five times eight: `num += 5 * 8`. Remember that `Math.floor()` rounds any number passed to it down to the nearest whole number.
+นี่คือวิธีกำหนดให้ `num` มีค่าเป็น `num` บวก 5 คูณ 8: `num += 5 * 8` ถ้ายังจำได้ `Math.floor()` ปัดเศษเลขทศนิยมลงให้เป็นเลขจำนวนเต็มที่ใกล้เคียงที่สุด
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 (gold = 10), fightSlime(), defeatMonster(), assert(gold === 23);

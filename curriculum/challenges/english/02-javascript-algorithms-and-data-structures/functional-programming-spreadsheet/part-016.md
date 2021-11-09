@@ -7,13 +7,13 @@ dashedName: part-16
 
 # --description--
 
-`arg1` and `arg2` are the numbers input by the user in a string such as "1+3".
+`arg1` และ `arg2` เป็นตัวเลขที่ผู้ใช้งานกรอกเข้ามาเป็น string เช่น "1+3"
 
-Pass `parseFloat(arg1)` and `parseFloat(arg2)` as the arguments to `infixToFunction[fn]` (remember `infixToFunction[fn]` is a function).
+จงส่งค่า `parseFloat(arg1)` และ `parseFloat(arg2)` เป็น arguments ให้กับ `infixToFunction[fn]` (ให้นึกถึงว่า `infixToFunction[fn]` คือฟังก์ชัน)
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 const regex = /([0-9.]+)([+-\/*])([0-9.]+)/;

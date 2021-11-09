@@ -7,13 +7,13 @@ dashedName: part-64
 
 # --description--
 
-The technique we just used is called currying - instead of taking multiple arguments, a function takes a single argument and return another function, which also takes a single argument.
+เทคนิคที่เราเพิ่งใช้ เรียกว่า currying คือแทนที่ฟังก์ชันจะรับค่าหลาย argument ก็จะรับเพียง argument เดียว แล้วคืนค่าเป็นฟังก์ชันอีกตัวที่มี argument เดียวเช่นกัน
 
-Define a new curried function, `addChars`, and set it equal to `c1 => c2 => c1 + c2`.
+จงสร้าง curried function ตัวใหม่ชื่อ `addChars` และกำหนดให้มีค่าเป็น `c1 => c2 => c1 + c2`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('constaddChars=c1=>c2=>c1+c2'));

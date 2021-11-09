@@ -8,50 +8,50 @@ dashedName: add-elements-to-the-end-of-an-array-using-concat-instead-of-push
 
 # --description--
 
-Functional programming is all about creating and using non-mutating functions.
+Functional programming เกี่ยวข้องกับการสร้างและใช้งานฟังก์ชันที่ไม่เปลี่ยนแปลงค่าอื่น (non-mutating)
 
-The last challenge introduced the `concat` method as a way to combine arrays into a new one without mutating the original arrays. Compare `concat` to the `push` method. `push` adds an item to the end of the same array it is called on, which mutates that array. Here's an example:
+แบบทดสอบที่แล้วได้แนะนำให้รู้จักกับ `concat` method ที่นำ array มาต่อกัน โดยไม่เปลี่ยนแปลง array ตั้งต้น หากเปรียบเทียบ `concat` method กับ `push` method กล่าวได้ว่า `push` เพิ่ม item เป็นตัวสุดท้ายของ array และเปลี่ยนแปลง array ตั้งต้นด้วย ดังตัวอย่างต่อไปนี้
 
 ```js
 var arr = [1, 2, 3];
 arr.push([4, 5, 6]);
 ```
 
-`arr` would have a modified value of `[1, 2, 3, [4, 5, 6]]`, which is not the functional programming way.
+`arr` จะถูกเปลี่ยนเป็น `[1, 2, 3, [4, 5, 6]]` ซึ่งไม่ใช่ลักษณะของ functional programming
 
-`concat` offers a way to add new items to the end of an array without any mutating side effects.
+`concat` เสนอแนวทางในการเพิ่ม item ใหม่ต่อท้าย array โดยไม่ก่อนให้เกิด mutating side effects
 
 # --instructions--
 
-Change the `nonMutatingPush` function so it uses `concat` to add `newItem` to the end of `original` instead of `push`. The function should return an array.
+จงแก้ไขฟังก์ชัน `nonMutatingPush` ให้ใช้ `concat` นำ `newItem` มาต่อท้าย `original` แทนการใช้ `push` โดยฟังก์ชันนี้ควรคืนค่าเป็น array
 
 # --hints--
 
-Your code should use the `concat` method.
+โค้ดของคุณควรใช้ `concat` method
 
 ```js
 assert(code.match(/\.concat/g));
 ```
 
-Your code should not use the `push` method.
+โค้ดของคุณไม่ควรใช้ `push` method
 
 ```js
 assert(!code.match(/\.?[\s\S]*?push/g));
 ```
 
-The `first` array should not change.
+`first` array ไม่ควรมีการเปลี่ยนแปลง
 
 ```js
 assert(JSON.stringify(first) === JSON.stringify([1, 2, 3]));
 ```
 
-The `second` array should not change.
+`second` array ไม่ควรมีการเปลี่ยนแปลง
 
 ```js
 assert(JSON.stringify(second) === JSON.stringify([4, 5]));
 ```
 
-`nonMutatingPush([1, 2, 3], [4, 5])` should return `[1, 2, 3, 4, 5]`.
+`nonMutatingPush([1, 2, 3], [4, 5])` ควรคืนค่าเป็น `[1, 2, 3, 4, 5]`.
 
 ```js
 assert(

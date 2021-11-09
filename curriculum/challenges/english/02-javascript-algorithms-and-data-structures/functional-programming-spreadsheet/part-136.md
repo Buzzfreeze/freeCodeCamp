@@ -7,13 +7,13 @@ dashedName: part-136
 
 # --description--
 
-The `every` method checks if all elements of an array satisfy the provided testing function.
+`every` method ตรวจสอบว่า ทุก elements ใน array เข้าเงื่อนไขของฟังก์ชันที่กำหนดหรือไม่
 
-Use it to add an `everyeven` function to `spreadsheetFunctions` which checks if all values passed in are even`spreadsheetFunctions` which checks if all values passed in are even.
+จงเพิ่มฟังก์ชัน `everyeven` ใน `spreadsheetFunctions` ซึ่งเช็คว่า ทุก item ที่ส่งเข้าไปเป็นเลขคู่หรือไม่
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

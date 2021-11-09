@@ -7,11 +7,11 @@ dashedName: part-39
 
 # --description--
 
-Add the `line` to the `output` element using the `appendChild()` method.
+เพิ่ม `line` ให้กับ `output` element ด้วย `appendChild()` method
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').match(/output\.appendChild\(line\)/));

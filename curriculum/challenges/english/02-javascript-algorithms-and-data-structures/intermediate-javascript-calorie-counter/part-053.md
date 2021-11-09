@@ -7,13 +7,13 @@ dashedName: part-53
 
 # --description--
 
-Inside the function, create an `input` document element and assign it to a variable named `foodInput`.
+ภายในฟังก์ชัน จงสร้าง `input` document element และกำหนดค่าให้กับตัวแปรชื่อ `foodInput`
 
-This is similar to how you created the `result` element previously.
+ซึ่งเหมือนกับวิธีที่คุณสร้าง `result` element ก่อนหน้านี้
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

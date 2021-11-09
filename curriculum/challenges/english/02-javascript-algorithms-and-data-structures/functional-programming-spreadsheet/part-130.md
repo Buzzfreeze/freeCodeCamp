@@ -7,13 +7,13 @@ dashedName: part-130
 
 # --description--
 
-Unfortunately, `sort` not only returns a new array, but also modifies the existing one. So our function also modifies the array passed to it - it is impure.
+เป็นที่น่าเสียดายที่ `sort` ไม่เพียงคืนค่าเป็น array ใหม่เท่ากัน แต่ยังปรับแก้ array เดิมด้วย ดังนั้นฟังก์ชันของเราจึงปรับแก้ array ที่ส่งผ่านเข้าไป จึงทำให้เป็น impure
 
-You can fix this by adding `.slice()` between `nums` and `sort` - this creates a new array, that is equivalent to `nums`, but is immediately discarded, so it doesn't matter if it changes.
+คุณสามารถแก้ไขได้ด้วยการเพิ่ม `.slice()` ระหว่าง `nums` และ `sort` วิธีนี้เป็นการสร้าง array ตัวใหม่ที่มีค่าเหมือน `nums` ดังนั้นการเปลี่ยนแปลงแก้ไข array ตัวใหม่ก็จะไม่มีผลต่อ `nums` 
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

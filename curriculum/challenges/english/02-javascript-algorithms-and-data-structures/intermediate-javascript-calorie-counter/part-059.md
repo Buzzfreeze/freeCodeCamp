@@ -7,13 +7,13 @@ dashedName: part-59
 
 # --description--
 
-The `calorieInput` element should only accept numbers that are 0 or above.
+`calorieInput` element ควรรับค่าเป็นตัวเลขที่มากกว่าหรือเท่ากับ 0 เท่านั้น
 
-Set the `min` attribute of `calorieInput` to `0`.
+กำหนดให้ `min` attribute ของ `calorieInput` มีค่าเป็น `0`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

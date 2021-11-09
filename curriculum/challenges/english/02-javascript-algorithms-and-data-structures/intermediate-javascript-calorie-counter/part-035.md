@@ -7,19 +7,19 @@ dashedName: part-35
 
 # --description--
 
-The data that we currently pass to `createTextNode()` is `Math.abs(difference) + ' Calorie ' + surplusOrDeficit`.
+ตอนนี้ข้อมูลที่เราส่งเข้าไปใน `createTextNode()` คือ `Math.abs(difference) + ' Calorie ' + surplusOrDeficit`
 
-Some people consider this a little cumbersome and prefer to use template literals instead.
+บางคนมองว่า แบบนี้มันดูเทอะทะและชอบใช้ template literals มากกว่า
 
-Template literals are enclosed in backticks (\`\`), and JavaScript expressions and variables can be embedded by enclosing them in `${}`.
+Template literals ครอบด้วย backticks (\`\`) ซึ่ง JavaScript expressions และตัวแปร ถูกระบุเข้าไปได้ โดยครอบด้วย `${}`.
 
-For example, ``console.log(`Hello ${firstName}, today is ${Date.now()}`)`` is the same as writing `console.log('Hello ' + firstName + ', today is ' + Date.now())`.
+ตัวอย่างเช่น ``console.log(`Hello ${firstName}, today is ${Date.now()}`)`` มีค่าเทียบเท่ากับการเขียน `console.log('Hello ' + firstName + ', today is ' + Date.now())`.
 
-Convert the data inside of `createTextNode()` to be a template literal.
+จงแปลงข้อมูลใน `createTextNode()` ให้เป็น template literal
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

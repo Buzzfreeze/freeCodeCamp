@@ -7,11 +7,11 @@ dashedName: part-110
 
 # --description--
 
-In `idToText`, use the `id` property of `cell` to make sure the argument is equal to the cell's id rather than the cell itself.
+ใน `idToText` จงปรับแก้ให้ `id` property ของ `cell` ตรวจสอบกับ cell's id แทนที่จะตรวจสอบกับ cell เอง
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

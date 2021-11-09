@@ -7,11 +7,11 @@ dashedName: part-106
 
 # --description--
 
-When calling `evalFormula` in `update`, pass in `Array.from(document.getElementById("container").children)` as the `cells` argument.
+เมื่อเรียก `evalFormula` ใน `update` ให้ส่งค่า `Array.from(document.getElementById("container").children)` เข้าไปแทน `cells` argument
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

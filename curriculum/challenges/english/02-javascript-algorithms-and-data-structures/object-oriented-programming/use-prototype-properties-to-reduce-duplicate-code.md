@@ -8,44 +8,44 @@ dashedName: use-prototype-properties-to-reduce-duplicate-code
 
 # --description--
 
-Since `numLegs` will probably have the same value for all instances of `Bird`, you essentially have a duplicated variable `numLegs` inside each `Bird` instance.
+เนื่องด้วย ทุกๆ instance ของ `Bird` อาจมีค่า value ของ `numLegs` ที่เหมือนกันหมด คุณก็จะมีตัวแปร `numLegs`ที่อยู่ในแต่ละ `Bird` instance ที่ซ้ำกัน
 
-This may not be an issue when there are only two instances, but imagine if there are millions of instances. That would be a lot of duplicated variables.
+เรื่องนี้อาจไม่มีปัญหา หากเรามีเพียง 2 instances แต่หากมีเป็นล้านๆ instance ก็จะมี variable จำนวนมากที่ซ้ำๆ กัน
 
-A better way is to use the `prototype` of `Bird`. Properties in the `prototype` are shared among ALL instances of `Bird`. Here's how to add `numLegs` to the `Bird prototype`:
+วิธีการจัดการที่ดีกว่า คือการใช้ `prototype` ของ `Bird` โดย Properties ที่อยู่ใน `prototype` จะแชร์ร่วมกันกับ instance ทั้งหมดของ `Bird` ตัวอย่างต่อไปนี้เป็นการเพิ่ม `numLegs` เข้าไปใน `Bird prototype`:
 
 ```js
 Bird.prototype.numLegs = 2;
 ```
 
-Now all instances of `Bird` have the `numLegs` property.
+ตอนนี้ทุกๆ instance ของ `Bird` ก็จะมี `numLegs` property
 
 ```js
 console.log(duck.numLegs);
 console.log(canary.numLegs);
 ```
 
-Since all instances automatically have the properties on the `prototype`, think of a `prototype` as a "recipe" for creating objects. Note that the `prototype` for `duck` and `canary` is part of the `Bird` constructor as `Bird.prototype`. Nearly every object in JavaScript has a `prototype` property which is part of the constructor function that created it.
+เนื่องด้วยทุก instance จะมี property ที่กำหนดใน `prototype` โดยอัตโนมัติ ให้เรามองว่า `prototype` ก็เหมือน "สูตรสำเร็จ" สำหรับการสร้าง object ดังนั้นแล้ว `prototype` ของ `duck` และ `canary` ก็เป็นส่วนหนึ่งของ `Bird` constructor ซึ่งก็คือ `Bird.prototype` นั่นเอง เกือบทุก JavaScript object ต่างก็มี `prototype` property ซึ่งเป็นส่วนหนึ่งของฟังก์ชัน constructor ที่ใช้ในการสร้าง object
 
 # --instructions--
 
-Add a `numLegs` property to the `prototype` of `Dog`
+จงเพิ่ม `numLegs` property ใน `prototype` ของ `Dog`
 
 # --hints--
 
-`beagle` should have a `numLegs` property.
+`beagle` ควรมี `numLegs` property
 
 ```js
 assert(beagle.numLegs !== undefined);
 ```
 
-`beagle.numLegs` should be a number.
+`beagle.numLegs` ควรเป็น number
 
 ```js
 assert(typeof beagle.numLegs === 'number');
 ```
 
-`numLegs` should be a `prototype` property not an own property.
+`numLegs` ควรเป็น `prototype` property ไม่ใช่ own property
 
 ```js
 assert(beagle.hasOwnProperty('numLegs') === false);

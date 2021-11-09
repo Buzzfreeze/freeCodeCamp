@@ -7,11 +7,11 @@ dashedName: part-113
 
 # --description--
 
-Change the empty string in `varExpanded` to the result of calling `idToText` with `match.toUpperCase()`.
+จงเปลี่ยน empty string ใน `varExpanded` ให้เป็นผลจากการเรียก `idToText` ด้วย argument `match.toUpperCase()`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

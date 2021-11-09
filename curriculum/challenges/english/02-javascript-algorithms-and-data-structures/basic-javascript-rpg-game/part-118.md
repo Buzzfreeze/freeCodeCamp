@@ -7,11 +7,11 @@ dashedName: part-118
 
 # --description--
 
-Add another object in the `locations` array. Everything should be the same as the "lose" element, except the `name` should be "win" and the text should be "You defeat the dragon! YOU WIN THE GAME! 🎉"
+เพิ่ม object อีกตัวนึงใน `locations` array โดยกำหนดให้ทุกอย่างเหมือนกับ "lose" element ยกเว้น `name` ควรเป็น "win" และ text ควรเป็น "You defeat the dragon! YOU WIN THE GAME! 🎉"
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert.deepStrictEqual(locations[6], {

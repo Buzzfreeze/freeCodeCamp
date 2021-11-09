@@ -7,11 +7,11 @@ dashedName: part-11
 
 # --description--
 
-Add similar definitions for `-`, `*` and `/` in `infixToFunction`.
+เพิ่ม key `-`, `*` และ `/` ให้กับ `infixToFunction`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

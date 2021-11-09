@@ -7,11 +7,11 @@ dashedName: part-2
 
 # --description--
 
-Above `infixToFunction`, define an empty function `add` using the `function` keyword. It should accept two parameters, `x` and `y`.
+ตรงบรรทัดบนก่อน `infixToFunction` ให้กำหนด empty function `add` โดยใช้คีย์เวิร์ด `function` ที่รับ parameters 2 ค่าคือ `x` และ `y`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('functionadd(x,y){}'));

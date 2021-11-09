@@ -7,17 +7,17 @@ dashedName: part-78
 
 # --description--
 
-You can define arrow functions without arguments:
+คุณสามารถกำหนด arrow functions ที่ไม่มี arguments ได้
 
 ```js
 const two = () => 2;
 ```
 
-Define an empty arrow function without arguments and assign it to `window.onload`.
+จงสร้าง empty arrow function ที่ไม่มี arguments และกำหนดค่า (assign) ให้กับ `window.onload`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('window.onload=()=>'));

@@ -7,11 +7,11 @@ dashedName: part-47
 
 # --description--
 
-Remove the curly braces and `return` keyword from `range`.
+ลบ {} และคีย์เวิร์ด `return` ออกจาก `range`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-76
 
 # --description--
 
-Once a player has the most powerful weapon, we'll give them the ability to sell their older weapons back. In the else statement, set `button2.innerText` to equal "Sell weapon for 15 gold". Also, set `button2.onclick` to the function name `sellWeapon`.
+เมื่อผู้เล่นมีอาวุธที่ทรงพลังที่สุด เราจะอนุญาตให้พวกเขาสามารถขายอาวุธอันเก่ากลับคืนมาได้ ภายใน else statement กำหนดให้ `button2.innerText` มีค่าเท่ากับ "Sell weapon for 15 gold" นอกจากนี้ กำหนดให้ `button2.onclick` มีค่าเป็นฟังก์ชันชื่อ `sellWeapon`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

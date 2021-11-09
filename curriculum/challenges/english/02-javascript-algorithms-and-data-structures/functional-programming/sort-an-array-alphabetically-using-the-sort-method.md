@@ -8,9 +8,9 @@ dashedName: sort-an-array-alphabetically-using-the-sort-method
 
 # --description--
 
-The `sort` method sorts the elements of an array according to the callback function.
+`sort` method เรียงลำดับ elements ของ array ตามเงื่อนไขใน callback function
 
-For example:
+ตัวอย่าง:
 
 ```js
 function ascendingOrder(arr) {
@@ -21,7 +21,7 @@ function ascendingOrder(arr) {
 ascendingOrder([1, 5, 2, 3, 4]);
 ```
 
-This would return the value `[1, 2, 3, 4, 5]`.
+ตัวอย่างนี้จะคืนค่าเป็น `[1, 2, 3, 4, 5]`.
 
 ```js
 function reverseAlpha(arr) {
@@ -32,23 +32,23 @@ function reverseAlpha(arr) {
 reverseAlpha(['l', 'h', 'z', 'b', 's']);
 ```
 
-This would return the value `['z', 's', 'l', 'h', 'b']`.
+ตัวอย่างนี้จะคืนค่าเป็น `['z', 's', 'l', 'h', 'b']`.
 
-JavaScript's default sorting method is by string Unicode point value, which may return unexpected results. Therefore, it is encouraged to provide a callback function to specify how to sort the array items. When such a callback function, normally called `compareFunction`, is supplied, the array elements are sorted according to the return value of the `compareFunction`: If `compareFunction(a,b)` returns a value less than 0 for two elements `a` and `b`, then `a` will come before `b`. If `compareFunction(a,b)` returns a value greater than 0 for two elements `a` and `b`, then `b` will come before `a`. If `compareFunction(a,b)` returns a value equal to 0 for two elements `a` and `b`, then `a` and `b` will remain unchanged.
+sorting method ดั้งเดิมของ JavaScript เรียงตามค่า Unicode ซึ่งผลลัพธ์ที่ได้อาจไม่ใช่แบบที่เราต้องการ ดังนั้นจึงแนะนำให้ใช้ callback function เพื่อระบุเงื่อนไขในการเรียง array items แล้วเมื่อ callback function (มักเรียกว่า `compareFunction`) ถูกส่งเข้าไปใน sort method ก็จะทำให้ array elements ถูกเรียงตามผลลัพธ์ของ `compareFunction`: หาก `compareFunction(a,b)` ได้ผลเป็นค่าน้อยกว่า 0 สำหรับ element `a` และ `b` หมายความว่า `a` จะมาก่อน `b` แต่ถ้า `compareFunction(a,b)` ได้ผลเป็นค่ามากกว่า 0 สำหรับ element `a` และ `b` หมายความว่า `b` จะมาก่อน `a` และถ้า `compareFunction(a,b)` ได้ผลเป็นค่าเท่ากับ 0 สำหรับ element `a` และ `b` หมายความว่า `a` และ `b` จะไม่มีการเปลี่ยนแปลง
 
 # --instructions--
 
-Use the `sort` method in the `alphabeticalOrder` function to sort the elements of `arr` in alphabetical order. The function should return the sorted array.
+จงใช้ `sort` method ในฟังก์ชัน `alphabeticalOrder` เพื่อเรียง elements ของ `arr` ตามลำดับตัวอักษร โดยฟังก์ชันควรคืนค่าเป็น array ที่เรียงลำดับแล้ว
 
 # --hints--
 
-Your code should use the `sort` method.
+โค้ดของคุณควรใช้ `sort` method
 
 ```js
 assert(code.match(/\.sort/g));
 ```
 
-`alphabeticalOrder(["a", "d", "c", "a", "z", "g"])` should return `["a", "a", "c", "d", "g", "z"]`.
+`alphabeticalOrder(["a", "d", "c", "a", "z", "g"])` ควรคืนค่าเป็น `["a", "a", "c", "d", "g", "z"]`.
 
 ```js
 assert(
@@ -57,7 +57,7 @@ assert(
 );
 ```
 
-`alphabeticalOrder(["x", "h", "a", "m", "n", "m"])` should return `["a", "h", "m", "m", "n", "x"]`.
+`alphabeticalOrder(["x", "h", "a", "m", "n", "m"])` ควรคืนค่าเป็น `["a", "h", "m", "m", "n", "x"]`.
 
 ```js
 assert(
@@ -66,7 +66,7 @@ assert(
 );
 ```
 
-`alphabeticalOrder(["a", "a", "a", "a", "x", "t"])` should return `["a", "a", "a", "a", "t", "x"]`.
+`alphabeticalOrder(["a", "a", "a", "a", "x", "t"])` ควรคืนค่าเป็น `["a", "a", "a", "a", "t", "x"]`.
 
 ```js
 assert(

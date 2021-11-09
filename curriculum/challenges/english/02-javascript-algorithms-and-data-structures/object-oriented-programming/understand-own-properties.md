@@ -8,7 +8,7 @@ dashedName: understand-own-properties
 
 # --description--
 
-In the following example, the `Bird` constructor defines two properties: `name` and `numLegs`:
+จากตัวอย่างต่อไปนี้ `Bird` constructor มีการกำหนด properties 2 ค่า คือ `name` และ `numLegs`:
 
 ```js
 function Bird(name) {
@@ -20,7 +20,7 @@ let duck = new Bird("Donald");
 let canary = new Bird("Tweety");
 ```
 
-`name` and `numLegs` are called <dfn>own properties</dfn>, because they are defined directly on the instance object. That means that `duck` and `canary` each has its own separate copy of these properties. In fact every instance of `Bird` will have its own copy of these properties. The following code adds all of the own properties of `duck` to the array `ownProps`:
+`name` และ `numLegs` เรียกว่า <dfn>own properties</dfn> เนื่องจากมีการกำหนดโดยตรงใน instance object นั่นหมายความว่า `duck` and `canary` ต่างก็มีสำเนาของ property เหล่านี้ในตัวเช่นกัน แต่จริงๆ แล้ว ทุก instance ของ `Bird` ก็จะมีสำเนาของ property เหล่านี้ โค้ดต่อไปนี้เป็นการเพิ่ม properties ของ `duck` เข้าไปใน array `ownProps`:
 
 ```js
 let ownProps = [];
@@ -34,27 +34,27 @@ for (let property in duck) {
 console.log(ownProps);
 ```
 
-The console would display the value `["name", "numLegs"]`.
+console ควรแสดงค่าเป็น `["name", "numLegs"]`.
 
 # --instructions--
 
-Add the own properties of `canary` to the array `ownProps`.
+จงเพิ่ม own properties ของ `canary` เข้าไปใน array `ownProps`.
 
 # --hints--
 
-`ownProps` should include the values `numLegs` and `name`.
+ผลลัพธ์ของ `ownProps` ควรมีค่า `numLegs` และ `name`.
 
 ```js
 assert(ownProps.indexOf('name') !== -1 && ownProps.indexOf('numLegs') !== -1);
 ```
 
-You should solve this challenge without using the built in method `Object.keys()`.
+ห้ามใช้ method `Object.keys()` ในแบบทดสอบนี้
 
 ```js
 assert(!/Object(\.keys|\[(['"`])keys\2\])/.test(code));
 ```
 
-You should solve this challenge without hardcoding the `ownProps` array.
+ห้ามกำหนดค่า `ownProps` array ด้วยวิธี hardcode
 
 ```js
 assert(

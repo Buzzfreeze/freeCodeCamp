@@ -7,13 +7,13 @@ dashedName: part-122
 
 # --description--
 
-Log the value of `hit` to the console to use in debugging.
+ทำการ log ค่า `hit` บนหน้า console เพื่อทำ debugging
 
-Here is how to log the value of `num` to the console: `console.log(num);`.
+ต่อไปนี้คือวิธีการ log ค่าของ `num` บนหน้า console: `console.log(num);`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

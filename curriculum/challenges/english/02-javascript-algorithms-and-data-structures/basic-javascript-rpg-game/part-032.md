@@ -7,13 +7,13 @@ dashedName: part-32
 
 # --description--
 
-Inside the `"button text"` array, add three string elements. Use the three stings assigned to the buttons inside the `goTown` function.
+ให้เพิ่ม string 3 ตัวเข้าไปใน `"button text"` array แล้วนำ string ทั้ง 3 ตัวนั้นกำหนดค่า (assigned) ให้กับปุ่มภายในฟังก์ชัน `goTown`
 
-Here is an example array with three strings: `const arr = ["one", "two", "three"];`.
+ต่อไปนี้เป็นตัวอย่าง array ที่มี string 3 ตัว: `const arr = ["one", "two", "three"];`.
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert.deepStrictEqual(locations[0]['button text'], [

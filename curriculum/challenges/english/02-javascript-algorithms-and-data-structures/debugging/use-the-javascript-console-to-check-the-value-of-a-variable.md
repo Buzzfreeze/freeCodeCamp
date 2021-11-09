@@ -8,13 +8,13 @@ dashedName: use-the-javascript-console-to-check-the-value-of-a-variable
 
 # --description--
 
-Both Chrome and Firefox have excellent JavaScript consoles, also known as DevTools, for debugging your JavaScript.
+Chrome และ Firefox ต่างก็มี JavaScript consoles หรือเรียกกันว่า DevTools ที่ยอดเยี่ยม สำหรับการ debug JavaScript
 
-You can find Developer tools in your Chrome's menu or Web Console in Firefox's menu. If you're using a different browser, or a mobile phone, we strongly recommend switching to desktop Firefox or Chrome.
+คุณสามารถใช้งาน Developer tools ได้ที่เมนูของ Chrome หรือ Web Console ที่เมนูของ Firefox ถ้าคุณใช้เบราว์เซอร์อื่นหรือโทรศัพท์มือถือ เราแนะนำให้คุณเปลี่ยนมาใช้ Firefox หรือ Chrome ที่เป็นเวอร์ชัน desktop
 
-The `console.log()` method, which "prints" the output of what's within its parentheses to the console, will likely be the most helpful debugging tool. Placing it at strategic points in your code can show you the intermediate values of variables. It's good practice to have an idea of what the output should be before looking at what it is. Having check points to see the status of your calculations throughout your code will help narrow down where the problem is.
+`console.log()` method ซึ่งแสดงผลลัพธ์ที่อยู่ในวงเล็บออกมาที่หน้า console เป็น debugging tool ที่ช่วยเราได้มาก การวางคำสั่งนี้ไว้ที่จุดที่หนึ่งๆ ในโค้ด ทำให้คุณสามารถเห็นค่าของตัวแปรได้ทันที การมีผลลัพธ์ในใจว่าควรเป็นอะไร ก่อนเข้าไปตรวจดูว่าตอนนี้มีค่าเป็นอะไรเป็นวิธีการปฏิบัติที่ดี นอกจากนี้การมี check point เพื่อตรวจสอบการทำงานตลอดทั้งโปรแกรมของคุณจะช่วยให้เจาะไปยังจุดที่เกิดปัญหาได้ดียิ่งขึ้น
 
-Here's an example to print the string `Hello world!` to the console:
+ตัวอย่างของการพิมพ์ string `Hello world!` ออกมายังหน้า console
 
 ```js
 console.log('Hello world!');
@@ -22,11 +22,11 @@ console.log('Hello world!');
 
 # --instructions--
 
-Use the `console.log()` method to print the value of the variable `a` where noted in the code.
+จงใช้ `console.log()` method เพื่อพิมพ์ค่าตัวแปร `a` ที่อยู่ในโค้ด
 
 # --hints--
 
-Your code should use `console.log()` to check the value of the variable `a`.
+โค้ดของคุณควรใช้ `console.log()` เพื่อตรวจสอบค่าของตัวแปร `a`
 
 ```js
 assert(code.match(/console\.log\(a\)/g));

@@ -7,13 +7,13 @@ dashedName: part-125
 
 # --description--
 
-The `length` property returns the length of an array. Use this property with the `sum` function to define an `average` function.
+`length` property ให้ผลลัพธ์เป็นความยาวของ array จงใช้ property นี้ร่วมกับฟังก์ชัน `sum` เพื่อกำหนดค่าให้กับฟังก์ชัน `average`
 
-As with `sum`, add this function to both the global scope and to `spreadsheetFunctions`.
+เช่นเดียวกับ `sum` จงเพิ่มฟังก์ชัน `average` ที่ global scope และใน `spreadsheetFunctions`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,13 +7,13 @@ dashedName: part-93
 
 # --description--
 
-The HTML that shows the monster stats that has been hidden using CSS. Display the `monsterStats` HTML element by updating its CSS `display` property to equal `block`.
+็HTML ที่แสดง monster stats ถูกซ่อนไว้ด้วย CSS จงทำให้ `monsterStats` HTML element แสดงขึ้นมา โดยการอัปเดต CSS ให้ `display` property มีค่าเป็น`block`
 
-Here is an example of updating the `display` property of an element named `myElement`: `myElement.style.display = "block";`
+นี่คือตัวอย่างของการอัปเดต `display` property ของ element ชื่อ `myElement`: `myElement.style.display = "block";`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-87
 
 # --description--
 
-Inside the `range` `forEach`, use the `forEach` method on `letters`, passing in a function with argument `x` and an empty body.
+ภายใน `range` `forEach` จงนำ `forEach` method มาใช้กับ `letters` โดยส่ง argument `x` และ empty body (body ว่างๆ ที่ยังไม่มีโค้ดใดๆ) เข้าไปในฟังก์ชัน
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

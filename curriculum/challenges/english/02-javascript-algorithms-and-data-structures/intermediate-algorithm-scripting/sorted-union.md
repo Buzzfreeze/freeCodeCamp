@@ -8,29 +8,26 @@ dashedName: sorted-union
 
 # --description--
 
-Write a function that takes two or more arrays and returns a new array of unique values in the order of the original provided arrays.
-
-In other words, all values present from all arrays should be included in their original order, but with no duplicates in the final array.
-
-The unique numbers should be sorted by their original order, but the final array should not be sorted in numerical order.
-
-Check the assertion tests for examples.
+จงเขียนฟังก์ชันที่รับค่าตั้งแต่ 2 array ขึ้นไป แล้วคืนค่าเป็น array ตัวใหม่ที่มีค่าไม่ซ้ำกัน โดยเรียงลำดับตาม array ตั้งต้น
+หรือกล่าวได้ว่า ค่าที่อยู่ใน array ตัวใหม่จะเป็นค่าที่มาจากทุก array รวมกัน เรียงข้อมูลตามลำดับเดิม แต่ต้องไม่มีข้อมูลซ้ำกัน
+กรณีตัวเลข หากมีการเรียงใน array ตั้งต้นเป็นอย่างไร ก็ยังคงเรียงเป็นอย่างนั้น ส่วน array ตัวใหม่ ไม่ต้องทำการเรียงแต่อย่างใด
+ให้ทำการทดสอบดังตัวอย่างต่อไปนี้
 
 # --hints--
 
-`uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1])` should return `[1, 3, 2, 5, 4]`.
+`uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1])` ควรคืนค่า `[1, 3, 2, 5, 4]`.
 
 ```js
 assert.deepEqual(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]), [1, 3, 2, 5, 4]);
 ```
 
-`uniteUnique([1, 2, 3], [5, 2, 1])` should return `[1, 2, 3, 5]`.
+`uniteUnique([1, 2, 3], [5, 2, 1])` ควรคืนค่า `[1, 2, 3, 5]`.
 
 ```js
 assert.deepEqual(uniteUnique([1, 2, 3], [5, 2, 1]), [1, 2, 3, 5]);
 ```
 
-`uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8])` should return `[1, 2, 3, 5, 4, 6, 7, 8]`.
+`uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8])` ควรคืนค่า `[1, 2, 3, 5, 4, 6, 7, 8]`.
 
 ```js
 assert.deepEqual(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]), [

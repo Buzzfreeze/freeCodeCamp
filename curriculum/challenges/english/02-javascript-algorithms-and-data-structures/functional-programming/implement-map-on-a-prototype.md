@@ -8,25 +8,25 @@ dashedName: implement-map-on-a-prototype
 
 # --description--
 
-As you have seen from applying `Array.prototype.map()`, or simply `map()` earlier, the `map` method returns an array of the same length as the one it was called on. It also doesn't alter the original array, as long as its callback function doesn't.
+จากที่คุณได้เห็นการทำงานของ `Array.prototype.map()` หรือ `map()` ในบทที่แล้ว `map` method คืนค่าเป็น array ที่มีความยาวเท่ากับ array ตั้งต้น และ method นี้จะไม่เปลี่ยนแปลง array ตั้งต้นด้วย ตราบใดที่ callback function ไม่ได้ทำการเปลี่ยน
 
-In other words, `map` is a pure function, and its output depends solely on its inputs. Plus, it takes another function as its argument.
+หรือกล่าวได้ว่า `map` เป็น pure function และผลลัพธ์ที่ได้ก็ขึ้นอยู่กับ input เท่านั้น นอกจากนี้ `map` ยังรับค่าฟังก์ชันอื่นเป็น argument ได้อีกด้วย
 
-You might learn a lot about the `map` method if you implement your own version of it. It is recommended you use a `for` loop or `Array.prototype.forEach()`.
+คุณจะมีเชี่ยวชาญขึ้นมากเกี่ยวกับ `map` method หากคุณได้สร้าง `map` method ที่เป็นเวอร์ชันของคุณเอง แนะนำให้คุณใช้ `for` loop หรือ `Array.prototype.forEach()`
 
 # --instructions--
 
-Write your own `Array.prototype.myMap()`, which should behave exactly like `Array.prototype.map()`. You should not use the built-in `map` method. The `Array` instance can be accessed in the `myMap` method using `this`.
+จงเขียน `Array.prototype.myMap()` ของคุณเอง โดยให้ทำงานเหมือนกับ `Array.prototype.map()` อย่างไรก็ตาม คุณไม่ควรใช้ built-in `map` method นอกจากนี้ `Array` instance สามารถเข้าถึงได้ใน `myMap` method โดยการใช้ `this`
 
 # --hints--
 
-`new_s` should equal `[46, 130, 196, 10]`.
+`new_s` ควรมีค่าเป็น `[46, 130, 196, 10]`.
 
 ```js
 assert(JSON.stringify(new_s) === JSON.stringify([46, 130, 196, 10]));
 ```
 
-Your code should not use the `map` method.
+โค้ดของคุณไม่ควรใช้ `map` method
 
 ```js
 assert(!code.match(/\.?[\s\S]*?map/g));

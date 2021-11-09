@@ -7,15 +7,15 @@ dashedName: part-49
 
 # --description--
 
-You can also add styling with the `setAttribute()` method. This method takes two arguments: the name of the attribute and the value that the attribute should be.
+นอกจากนี้ คุณยังสามารถเพิ่ม style ด้วย `setAttribute()` method โดย method นี้รับ argument 2 ตัว คือ ชื่อของ attribute และค่าที่ต้องการกำหนดให้ attribute
 
-For example, if you want to set the `width` of an `input` element to 100px, you would write `input.setAttribute('width', '100px')`.
+ตัวอย่างเช่น ถ้าคุณต้องการกำหนด `width` ของ `input` element มีค่าเท่ากับ 100px คุณควรเขียน `input.setAttribute('width', '100px')`
 
-Set the `class` attribute of the `output` element equal to a class named `bordered-class`.
+จงกำหนด `class` attribute ของ `output` element ให้มีค่าเท่ากับ class `bordered-class`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

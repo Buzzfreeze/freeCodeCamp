@@ -7,11 +7,11 @@ dashedName: part-150
 
 # --description--
 
-Add an `else` expression. Inside add "Wrong! You lose 10 health!" to the end of `text.innerText`. Also, subtract 10 from `health` and update `healthText.innerText`.
+จงเพิ่ม `else` expression ซึ่งภายในให้เพิ่ม string "Wrong! You lose 10 health!" ต่อจาก `text.innerText` นอกจากนี้ให้นำตัวแปร `health` มาลบด้วย 10 แล้วอัปเดตค่า `health` ที่ `healthText.innerText`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

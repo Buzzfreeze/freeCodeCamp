@@ -7,11 +7,11 @@ dashedName: part-32
 
 # --description--
 
-Define a new function `applyFunction` (inside `applyFn`). It should take two arguments: `fn` and `args`, and should return `spreadsheetFunctions`.
+กำหนดฟังก์ชันใหม่ชื่อ `applyFunction` (ภายใน `applyFn`) โดยฟังก์ชันนี้มี arguments 2 ตัวคือ `fn` และ `args` และควรคืนค่าเป็น `spreadsheetFunctions`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

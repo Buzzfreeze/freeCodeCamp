@@ -7,15 +7,15 @@ dashedName: part-55
 
 # --description--
 
-We want to add the class name `food-control` to the `foodInput` element. We will reference this class name when we remove these inputs later on.
+เราต้องการเพิ่ม class name `food-control` ให้กับ `foodInput` element โดยเราจะอ้างถึง class name นี้เมื่อเรานำ inputs เหล่านี้ออกไปภายหลัง 
 
-In addition to using the `setAttribute` method, we can also update the `classList` property to add a class name, like `myInput.classList.add('my-class)`.
+นอกจากการใช้ `setAttribute` method แล้ว เรายังสามารถอัปเดต `classList` property เพื่อเพิ่ม class name ได้ เช่น `myInput.classList.add('my-class)`
 
-Add the class name `food-control` to the `foodInput` element.
+จงเพิ่ม class name `food-control` ให้กับ `foodInput` element
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

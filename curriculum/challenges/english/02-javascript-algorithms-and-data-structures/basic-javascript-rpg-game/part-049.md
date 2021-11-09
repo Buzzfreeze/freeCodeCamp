@@ -7,13 +7,13 @@ dashedName: part-49
 
 # --description--
 
-Now that the store and cave locations are complete, we'll code the actions at those locations. Inside the `buyHealth` function, set `gold` to equal `gold` minus 10.
+ตอนนี้ store และ cave locations สร้างเสร็จเรียบร้อยแล้ว เราก็จะมาเขียน action (กิจกรรม) ที่ location เหล่านี้ ภายในฟังก์ชัน `buyHealth` ให้กำหนด `gold` มีค่าเป็น `gold` ลบด้วย 10
 
-For example here is how you would set set `num` to equal 5 less than `num`: `num = num - 5;`.
+ตัวอย่างนี้เป็นการกำหนดให้ `num` มีค่าเป็น `num` ลบ 5: `num = num - 5;`.
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 buyHealth(), assert(gold === 40);

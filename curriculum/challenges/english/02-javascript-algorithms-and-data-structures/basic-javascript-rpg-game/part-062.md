@@ -7,7 +7,7 @@ dashedName: part-62
 
 # --description--
 
-You can easily increment or add one to a variable with the `++` operator. All three of these statements add one to a number:
+คุณสามารถเพิ่มหรือบวก 1 ให้กับตัวแปรได้อย่างง่ายๆ โดยการใช้ `++` operator ทั้ง 3 statements ต่อไปนี้เป็นการบวก 1 ให้กับตัวเลข:
 
 ```js
 num = num + 1;
@@ -15,11 +15,11 @@ num += 1;
 num++;
 ```
 
-Change the line `currentWeapon += 1;` to use the `++` operator.
+จงปรับแก้บรรทัด `currentWeapon += 1;` ให้เปลี่ยนเป็น `++` operator.
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(buyWeapon.toString().match(/currentWeapon\s*\+\+\;?/));

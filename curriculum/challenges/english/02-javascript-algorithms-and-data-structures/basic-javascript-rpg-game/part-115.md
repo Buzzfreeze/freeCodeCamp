@@ -7,11 +7,11 @@ dashedName: part-115
 
 # --description--
 
-Inside the `attack` function, update the contents of the `else if` statement. Instead of calling the `defeatMonster` function right away, create an `if` statement with an `else` statement. If the player is fighting the dragon (`fighting === 2`), then call the `winGame` function. Else, call the `defeatMonster` function.
+ภายในฟังก์ชัน `attack` ให้อัปเดตโค้ดใน `else if` statement โดยแทนที่จะเรียกฟังก์ชัน `defeatMonster` ทันที ก็ให้สร้าง `if` statement ที่มี `else` statement ถ้าผู้เล่นกำลังสู้กับมังกร (`fighting === 2`) ให้เรียกฟังก์ชัน `winGame` แต่ถ้าไม่ ให้เรียกฟังก์ขัน `defeatMonster`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

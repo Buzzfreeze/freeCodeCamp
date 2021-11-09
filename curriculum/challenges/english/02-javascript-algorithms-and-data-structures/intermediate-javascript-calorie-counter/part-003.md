@@ -7,19 +7,19 @@ dashedName: part-3
 
 # --description--
 
-Now we need to specify what should be done with the form when the user submits it by clicking the Calculate button.
+ตอนนี้เราต้องกำหนดว่า จะให้ form ทำอะไรต่อ เมื่อผู้ใช้งานกดปุ่ม Calculate เพื่อ submit ข้อมูล
 
-Forms have an `onsubmit` event that can execute a function when the form is submitted.
+form มี `onsubmit` event ที่สามารถรันฟังก์ชันเมื่อ form ถูก submit
 
-For example, in `document.getElementById('my-form').onsubmit = processForm;`, the function `processForm` will run when the form is submitted.
+ตัวอย่างเช่น ในโค้ด `document.getElementById('my-form').onsubmit = processForm;` ฟังก์ชัน `processForm` จะรันเมื่อ form ถูก submit
 
-Assign a function named `calculate` to the `onsubmit` event of your form.
+จงกำหนดฟังก์ชัน `calculate` ให้กับ `onsubmit` event ใน form ของคุณ
 
-You will create the `calculate` function later.
+คุณจะสร้างฟังก์ชัน `calculate` ในภายหลัง
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

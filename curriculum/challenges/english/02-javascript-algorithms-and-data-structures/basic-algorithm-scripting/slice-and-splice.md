@@ -8,29 +8,24 @@ dashedName: slice-and-splice
 
 # --description--
 
-You are given two arrays and an index.
-
-Copy each element of the first array into the second array, in order.
-
-Begin inserting elements at index `n` of the second array.
-
-Return the resulting array. The input arrays should remain the same after the function runs.
+โจทย์มี array 2 ชุด และเลข index มาให้ ให้คุณทำการ copy array แรกมาใส่ใน array ที่สอง โดยให้แทรกที่ index `n` ของ array ที่สอง
+และต้องการให้ฟังก์ชันคืนค่าเป็น array โดยที่ input array มีค่าคงเดิม ไม่มีการเปลี่ยนแปลงหลังจากรันฟังก์ชัน
 
 # --hints--
 
-`frankenSplice([1, 2, 3], [4, 5], 1)` should return `[4, 1, 2, 3, 5]`.
+`frankenSplice([1, 2, 3], [4, 5], 1)` ควรคืนค่าเป็น `[4, 1, 2, 3, 5]`.
 
 ```js
 assert.deepEqual(frankenSplice([1, 2, 3], [4, 5], 1), [4, 1, 2, 3, 5]);
 ```
 
-`frankenSplice([1, 2], ["a", "b"], 1)` should return `["a", 1, 2, "b"]`.
+`frankenSplice([1, 2], ["a", "b"], 1)` ควรคืนค่าเป็น `["a", 1, 2, "b"]`.
 
 ```js
 assert.deepEqual(frankenSplice(testArr1, testArr2, 1), ['a', 1, 2, 'b']);
 ```
 
-`frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2)` should return `["head", "shoulders", "claw", "tentacle", "knees", "toes"]`.
+`frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2)` ควรคืนค่าเป็น `["head", "shoulders", "claw", "tentacle", "knees", "toes"]`.
 
 ```js
 assert.deepEqual(
@@ -43,20 +38,20 @@ assert.deepEqual(
 );
 ```
 
-All elements from the first array should be added to the second array in their original order. `frankenSplice([1, 2, 3, 4], [], 0)` should return `[1, 2, 3, 4]`.
+ตัวอย่างต่อไปนี้ ทุก elements จาก array แรก ถูก copy ไปใส่ใน array ที่สองตามลำดับเดิม `frankenSplice([1, 2, 3, 4], [], 0)` ควรคืนค่าเป็น `[1, 2, 3, 4]`.
 
 ```js
 assert.deepEqual(frankenSplice([1, 2, 3, 4], [], 0), [1, 2, 3, 4]);
 ```
 
-The first array should remain the same after the function runs.
+array แรกควรมีค่าคงเดิมหลังจากรันฟังก์ชัน
 
 ```js
 frankenSplice(testArr1, testArr2, 1);
 assert.deepEqual(testArr1, [1, 2]);
 ```
 
-The second array should remain the same after the function runs.
+array ที่สองควรมีค่าคงเดิมหลังจากรันฟังก์ชัน
 
 ```js
 frankenSplice(testArr1, testArr2, 1);

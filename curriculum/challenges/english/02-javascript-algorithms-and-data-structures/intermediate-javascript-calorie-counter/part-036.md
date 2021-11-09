@@ -7,7 +7,7 @@ dashedName: part-36
 
 # --description--
 
-Now you can append the `resultText` to the `result` with the `appendChild()` method, like this:
+ตอนนี้คุณสามารถนำ `resultText` มาต่อกับ `result` ด้วย `appendChild()` method ดังนี้:
 
 ```js
 result.appendChild(resultText);
@@ -15,7 +15,7 @@ result.appendChild(resultText);
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').match(/result\.appendChild\(resultText\)/));

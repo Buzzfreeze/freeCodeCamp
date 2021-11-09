@@ -7,9 +7,9 @@ dashedName: part-128
 
 # --description--
 
-Now create the `isMonsterHit` function. It will return a boolean to be used in the `if` expression. Return the result of the comparison `Math.random() > .2`.
+ตอนนี้ให้สร้างฟังก์ชัน `isMonsterHit` ที่คืนค่า boolean เพื่อใช้ใน `if` expression โดยฟังก์ชัน `isMonsterHit`ให้ คืนค่าเป็นผลลัพธ์จากการเปรียบเทียบ `Math.random() > .2`
 
-Here is a function that returns the result of a comparison:
+ต่อไปนี้คือฟังก์ชันที่คืนค่าเป็นผลจากการเปรียบเทียบ
 
 ```js
 function flipHeads() {
@@ -19,7 +19,7 @@ function flipHeads() {
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

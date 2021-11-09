@@ -7,9 +7,9 @@ dashedName: part-52
 
 # --description--
 
-We want a function to run every time the user clicks the "Add Entry" button.
+เราต้องการฟังก์ชันที่รันทุกครั้งที่ผู้ใช้งานคลิกปุ่ม "Add Entry"
 
-Chain the `onclick` property to the end of `document.getElementById('add')` and set it equal to an empty function:
+จง chain `onclick` property กับ `document.getElementById('add')` และกำหนดให้มีค่าเท่ากับ empty function
 
 ```js
 function() {}
@@ -17,7 +17,7 @@ function() {}
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

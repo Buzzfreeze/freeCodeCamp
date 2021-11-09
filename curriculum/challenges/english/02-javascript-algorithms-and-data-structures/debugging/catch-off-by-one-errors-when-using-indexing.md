@@ -8,9 +8,9 @@ dashedName: catch-off-by-one-errors-when-using-indexing
 
 # --description--
 
-<dfn>Off by one errors</dfn> (sometimes called OBOE) crop up when you're trying to target a specific index of a string or array (to slice or access a segment), or when looping over the indices of them. JavaScript indexing starts at zero, not one, which means the last index is always one less than the length of the item. If you try to access an index equal to the length, the program may throw an "index out of range" reference error or print `undefined`.
+<dfn>Off by one errors</dfn> (บางครั้งเรียกว่า OBOE) เกิดขึ้นเมื่อคุณพยายามอ้างถึง index ของ string หรือ array (เพื่อตัดหรือเข้าถึง item) หรือวนอ่าน index ที่ไม่มีอยู่ โดย JavaScript index เริ่มที่ 0 ไม่ใช่ 1 ซึ่งหมายความว่า index สุดท้ายต้องเป็นความยาวลบด้วย 1 ดังนั้น ถ้าคุณเข้าถึง index ที่มีค่าเท่ากับความยาว โปรแกรมจะขึ้น reference error "index out of range" หรือแสดงคำว่า `undefined`
 
-When you use string or array methods that take index ranges as arguments, it helps to read the documentation and understand if they are inclusive (the item at the given index is part of what's returned) or not. Here are some examples of off by one errors:
+เมื่อคุณเรียก string หรือ array methods ที่รับ argument เป็นค่าช่วง index (index range) มันจะอ่านและค้นหาว่า index นั้นมีอยู่หรือไม่ (item ที่อยู่ในตำแหน่งของ index เป็นสิ่งที่ถูกคืนค่า) ต่อไปนี้เป็นตัวอย่างของ off by one errors
 
 ```js
 let alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -26,33 +26,33 @@ for (let k = 0; k < len; k++) {
 }
 ```
 
-The first example here loops one too many times, and the second loops one too few times (missing the first index, 0). The third example is correct.
+ตัวอย่างแรกมีการวนลูปเกินไป 1 รอบ, ตัวอย่างที่สองวนลูปน้อยไป 1 รอบ (รอบแรก (index 0) หายไป) ส่วนตัวอย่างที่สามทำงานถูกต้อง
 
 # --instructions--
 
-Fix the two indexing errors in the following function so all the numbers 1 through 5 are printed to the console.
+จงปรับแก้ indexing error ในฟังก์ชัน เพื่อให้ตัวเลข 1 ถึง 5 พิมพ์ออกที่หน้า console
 
 # --hints--
 
-Your code should set the initial condition of the loop so it starts at the first index.
+โค้ดของคุณควรกำหนดเงื่อนไขเริ่มต้นของ loop ให้เริ่มจาก index แรก
 
 ```js
 assert(code.match(/i\s*?=\s*?0\s*?;/g).length == 1);
 ```
 
-Your code should fix the initial condition of the loop so that the index starts at 0.
+คุณควรปรับแก้เงื่อนไขเริ่มต้นของ loop เพื่อให้ index เริ่มต้นจาก 0
 
 ```js
 assert(!code.match(/i\s?=\s*?1\s*?;/g));
 ```
 
-Your code should set the terminal condition of the loop so it stops at the last index.
+คุณควรกำหนดให้เงื่อนไขสุดท้ายของ loop หยุดที่ index สุดท้าย
 
 ```js
 assert(code.match(/i\s*?<\s*?len\s*?;/g).length == 1);
 ```
 
-Your code should fix the terminal condition of the loop so that it stops at 1 before the length.
+คุณควรปรับแก้เงื่อนไขสุดท้ายของ loop ให้หยุดก่อน 1 รอบก่อนถึงความยาว (length)
 
 ```js
 assert(!code.match(/i\s*?<=\s*?len;/g));

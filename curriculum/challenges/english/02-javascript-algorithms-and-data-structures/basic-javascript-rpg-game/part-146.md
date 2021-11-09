@@ -7,13 +7,13 @@ dashedName: part-146
 
 # --description--
 
-The last statement in a `for` loop is the final-expression, and is executed at the end of each loop iteration.
+statement สุดท้ายของ `for` คือ expression สุดท้ายที่รันในแต่ละรอบ
 
-Since we changed the initializer from `x` to `i`, change `x++` to `i++`. This will iterate the initializer `i` by 1 after each loop.
+เนื่องจากเราเปลี่ยนตัวแปรที่กำหนดค่าเริ่มต้นจาก `x` เป็น `i` จงเปลี่ยน `x++` ให้เป็น `i++` ซึ่งจะเพิ่มค่า `i` ด้วย 1 ทุกครั้งที่รัน loop แต่ละรอบ
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(pick.toString().replace(/\s/g, '').includes('for(vari=0;i<10;i++){'));

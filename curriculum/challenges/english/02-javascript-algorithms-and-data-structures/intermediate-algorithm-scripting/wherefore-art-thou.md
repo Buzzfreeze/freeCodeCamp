@@ -8,13 +8,13 @@ dashedName: wherefore-art-thou
 
 # --description--
 
-Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument). Each name and value pair of the source object has to be present in the object from the collection if it is to be included in the returned array.
+ให้เขียนฟังก์ชันที่อ่าน array ของ objects (argument แรก) แล้วคืนค่าเป็น array ของ object ทั้งหมดที่มีค่า name และ value ตรงกับ argument ที่ 2 
 
-For example, if the first argument is `[{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }]`, and the second argument is `{ last: "Capulet" }`, then you must return the third object from the array (the first argument), because it contains the name and its value, that was passed on as the second argument.
+ตัวอย่างเช่น ถ้า argument แรกเป็น `[{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }]` และ argument ที่สองเป็น `{ last: "Capulet" }` คุณต้องคืนค่าเป็น object ตัวที่ 3 ของ array (argument แรก) เพราะ object ตัวที่ 3 มีค่า name/value ที่ตรงกับ argument ตัวที่สอง
 
 # --hints--
 
-`whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" })` should return `[{ first: "Tybalt", last: "Capulet" }]`.
+`whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" })` ควรคืนค่าเป็น `[{ first: "Tybalt", last: "Capulet" }]`.
 
 ```js
 assert.deepEqual(
@@ -30,7 +30,7 @@ assert.deepEqual(
 );
 ```
 
-`whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 })` should return `[{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }]`.
+`whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 })` ควรคืนค่าเป็น `[{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }]`.
 
 ```js
 assert.deepEqual(
@@ -41,7 +41,7 @@ assert.deepEqual(
 );
 ```
 
-`whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 })` should return `[{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }]`.
+`whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 })` ควรคืนค่าเป็น `[{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }]`.
 
 ```js
 assert.deepEqual(
@@ -56,7 +56,7 @@ assert.deepEqual(
 );
 ```
 
-`whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 })` should return `[{ "apple": 1, "bat": 2, "cookie": 2 }]`.
+`whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 })` ควรคืนค่าเป็น `[{ "apple": 1, "bat": 2, "cookie": 2 }]`.
 
 ```js
 assert.deepEqual(
@@ -68,7 +68,7 @@ assert.deepEqual(
 );
 ```
 
-`whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }, { "bat":2 }], { "apple": 1, "bat": 2 })` should return `[{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie":2 }]`.
+`whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }, { "bat":2 }], { "apple": 1, "bat": 2 })` ควรคืนค่าเป็น `[{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie":2 }]`.
 
 ```js
 assert.deepEqual(
@@ -88,7 +88,7 @@ assert.deepEqual(
 );
 ```
 
-`whatIsInAName([{"a": 1, "b": 2, "c": 3}], {"a": 1, "b": 9999, "c": 3})` should return `[]`
+`whatIsInAName([{"a": 1, "b": 2, "c": 3}], {"a": 1, "b": 9999, "c": 3})` ควรคืนค่าเป็น `[]`
 
 ```js
 assert.deepEqual(

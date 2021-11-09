@@ -7,13 +7,13 @@ dashedName: part-124
 
 # --description--
 
-Now use the shorthand syntax to reference `sum` inside of `spreadsheetFunctions`.
+ตอนนี้ให้ใช้ shorthand syntax เพื่ออ้างถึง `sum` ภายใน `spreadsheetFunctions`
 
-This both adds it to the functions you can use in the spreadsheet, and allows you to use it throughout your program.
+วิธีนี้เป็นการเพิ่มฟังก์ชันที่คุณสามารถใช้งานใน spreadsheet ได้ และคุณก็สามารถเรียกใช้ได้ตลอดทั้งโปรแกรมของคุณ
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(/[{,]sum[,}]/.test(code.replace(/\s/g, '')));

@@ -7,9 +7,9 @@ dashedName: part-25
 
 # --description--
 
-Use a ternary operator to assign the value of `maxCalories`. A ternary operator has the following syntax: `condition ? expressionTrue : expressionFalse`.
+จงใช้ ternary operator เพื่อกำหนดค่าของ `maxCalories` ternary operator มี syntax ดังนี้: `condition ? expressionTrue : expressionFalse`.
 
-For example, `(5 - 3 === 4) ? "Yes" : "No"` does the same thing as the following if else statement:
+ยกตัวอย่างเช่น `(5 - 3 === 4) ? "Yes" : "No"` ทำงานเช่นเดียวกับ if else statement:
 
 ```js
 if (5 - 3 === 4) {
@@ -19,11 +19,11 @@ if (5 - 3 === 4) {
 }
 ```
 
-`document.getElementById('female').checked` will return either `true` if it is checked or `false` if it isn't. Use a ternary operator to return 2000 if it is is checked and 2500 if it is not.
+`document.getElementById('female').checked` จะคืนค่า `true` หากมีการคลิกเลือก หรือ `false` หากไม่ได้คลิกเลือก จงใช้ ternary operator เพื่อคืนค่า 2000 หากมีการคลิกเลือก และคืนค่า 2500 หากไม่ได้คลิกเลือก
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

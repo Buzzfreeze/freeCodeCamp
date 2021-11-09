@@ -7,13 +7,13 @@ dashedName: part-58
 
 # --description--
 
-Use the `setAttribute()` method of `calorieInput` to set the `type` of this input to `number`.
+จงใช้ `setAttribute()` method ของ `calorieInput` เพื่อกำหนดให้ `type` ของ input นี้เป็น `number`
 
-This is similar to how to set the class of the `output` element previously.
+ซึ่งเหมือนกับวิธีที่กำหนด class ของ `output` element ก่อนหน้านี้
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-92
 
 # --description--
 
-Next in the `goFight` function, set `monsterHealth` to equal the health of the current monster. You can get the health of the current monster with `monsters[fighting].health`. Try to understand that line before continuing.
+บรรทัดถัดไปในฟังก์ชัน `goFight` ให้กำหนด `monsterHealth` มีค่าเท่ากับ health ของ current monster (สัตว์ประหลาดตัวที่กำลังทำงานอยู่) คุณสามารถทราบค่า health ของ current monster ด้วยคำสั่ง `monsters[fighting].health` ให้ทำความเข้าใจบรรทัดนี้ก่อนทำขั้นตอนถัดไป
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -8,45 +8,46 @@ dashedName: sum-all-odd-fibonacci-numbers
 
 # --description--
 
-Given a positive integer `num`, return the sum of all odd Fibonacci numbers that are less than or equal to `num`.
+กำหนดให้ `num` เป็นเลขจำนวนเต็มบวก จงหาผลรวมของเลขฟีโบนัชชี (Fibonacci) ที่เป็นเลขคี่ที่มีค่าน้อยกว่าหรือเท่ากับ `num`
 
-The first two numbers in the Fibonacci sequence are 1 and 1. Every additional number in the sequence is the sum of the two previous numbers. The first six numbers of the Fibonacci sequence are 1, 1, 2, 3, 5 and 8.
+เลข 2 ตัวแรกของลำดับฟีโบนัชชี คือ 1 และ 1 ส่วนลำดับถัดๆ ไปคือผลรวมของเลข 2 ตัวที่อยู่ลำดับก่อนหน้า
+เลข 6 ตัวแรกของลำดับฟีโบนัชชี คือ 1, 1, 2, 3, 5 และ 8
 
-For example, `sumFibs(10)` should return `10` because all odd Fibonacci numbers less than or equal to `10` are 1, 1, 3, and 5.
+ตัวอย่างเช่น `sumFibs(10)` ควรคืนค่าเป็น `10` เพราะว่าทุก Fibonacci number ที่เป็นเลขคี่ที่น้อยกว่าหรือเท่ากับ `10` คือ 1, 1, 3 และ 5
 
 # --hints--
 
-`sumFibs(1)` should return a number.
+`sumFibs(1)` ควรคืนค่าเป็น number
 
 ```js
 assert(typeof sumFibs(1) === 'number');
 ```
 
-`sumFibs(1000)` should return 1785.
+`sumFibs(1000)` ควรคืนค่าเป็น 1785.
 
 ```js
 assert(sumFibs(1000) === 1785);
 ```
 
-`sumFibs(4000000)` should return 4613732.
+`sumFibs(4000000)` ควรคืนค่าเป็น 4613732.
 
 ```js
 assert(sumFibs(4000000) === 4613732);
 ```
 
-`sumFibs(4)` should return 5.
+`sumFibs(4)` ควรคืนค่าเป็น 5.
 
 ```js
 assert(sumFibs(4) === 5);
 ```
 
-`sumFibs(75024)` should return 60696.
+`sumFibs(75024)` ควรคืนค่าเป็น 60696.
 
 ```js
 assert(sumFibs(75024) === 60696);
 ```
 
-`sumFibs(75025)` should return 135721.
+`sumFibs(75025)` ควรคืนค่าเป็น 135721.
 
 ```js
 assert(sumFibs(75025) === 135721);

@@ -7,15 +7,15 @@ dashedName: part-29
 
 # --description--
 
-Arrays can store any data type, including objects. Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.
+array สามารถเก็บข้อมูลได้ทุกชนิด รวมถึง object ด้วย ซึ่ง object มีลักษณะคล้ายกับ array แต่ต่างกันที่ array ใช้ index ในการเข้าถึงและแก้ไขข้อมูล ส่วน object ใช้ property ในการเข้าถึงข้อมูล
 
-Inside the `locations` array add an empty object using curly braces.
+ภายใน `locations` array ให้เพิ่ม empty object ที่เป็น {}
 
-Here is an example of an array named `arr` with an empty object inside: `const arr = [{}];`
+ต่อไปนี้เป็นตัวอย่างของ array ชื่อ `arr` ที่มี empty object อยู่ภายใน: `const arr = [{}];`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert.deepStrictEqual(JSON.stringify(locations), `[{}]`);

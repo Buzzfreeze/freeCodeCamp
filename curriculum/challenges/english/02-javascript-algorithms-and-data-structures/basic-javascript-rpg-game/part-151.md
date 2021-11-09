@@ -7,11 +7,11 @@ dashedName: part-151
 
 # --description--
 
-At the end of the `else` statement, check if `health` is less than or equal to zero. If so, call the `lose()` function.
+ในส่วนท้ายของ `else` statement ให้เช็คว่า `health` มีค่าน้อยกว่าหรือเท่ากับ 0 หรือไม่ ถ้าใช่ ให้เรียกฟังก์ชัน `lose()`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

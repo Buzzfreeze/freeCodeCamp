@@ -7,15 +7,15 @@ dashedName: part-7
 
 # --description--
 
-If you inspect the inputs in the form, you will notice that they have the class name `cal-control`.
+ถ้าคุณวิเคราะห์ inputs ใน form คุณจะสังเกตว่า inputs เหล่านั้น มี class ชื่อ `cal-control`
 
-To access elements with a certain class name, we use the `getElementsByClassName()` method.
+เราใช้ `getElementsByClassName()` method ในการเข้าถึง elements ด้วยชื่อ class 
 
-Similar to how you referenced the calorie form above (`document.getElementById('calorie-form')`), create a reference to the elements with the class name `cal-control` below `e.preventDefault()`.
+เช่นเดียวกับการอ้างอิง calorie form ด้านบน (`document.getElementById('calorie-form')`) จงอ้างอิง elements ที่มีชื่อ class `cal-control` ต่อจากบรรทัด `e.preventDefault()`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

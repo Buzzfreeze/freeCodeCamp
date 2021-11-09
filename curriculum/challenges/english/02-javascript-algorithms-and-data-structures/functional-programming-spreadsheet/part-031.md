@@ -7,17 +7,17 @@ dashedName: part-31
 
 # --description--
 
-The `map` method takes a function and for each element of an array, it passes the element to the function and replace the element with the return value:
+`map` method รับค่าเป็นฟังก์ชัน แล้วนำ element แต่ละตัวใน array มารันฟังก์ชัน จากนั้นก็แทน element เดิมด้วยผลจากการรันฟังก์ชันแต่ละรอบ
 
 ```js
 [1, 2, 3].map(x => x + 1); // [2, 3, 4]
 ```
 
-In `toNumberList`, chain the `map` method to `args.split(",")` and pass it `parseFloat` to parse each element of the array into a number.
+ภายใน `toNumberList` ให้เรียก `map` method ต่อจาก `args.split(",")` และส่งค่า `parseFloat` เพื่อแปลงแต่ละ element ใน array ให้เป็นตัวเลข
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

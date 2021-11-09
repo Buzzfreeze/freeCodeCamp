@@ -7,11 +7,11 @@ dashedName: part-79
 
 # --description--
 
-In `window.onload`, assign `document.getElementById("container")` to `container`. Also assign `charRange("A", "J")` to `letters`.
+ภายใน `window.onload` กำหนดให้ `container` มีค่าเท่ากับ `document.getElementById("container")` และ `letters` มีค่าเท่ากับ `charRange("A", "J")`  
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

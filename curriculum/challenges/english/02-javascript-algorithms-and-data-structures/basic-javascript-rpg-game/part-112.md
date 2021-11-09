@@ -7,11 +7,11 @@ dashedName: part-112
 
 # --description--
 
-After a monster is defeated the monster stat box should no longer display. On the first line of the `update` function add: `monsterStats.style.display = "none";`.
+หลังจากที่สัตว์ประหลาดแพ้ กล่องแสดงสถานะของสัตว์ประหลาด (monster stat box) ก็ไม่ควรแสดงขึ้นมาแล้ว ตรงบรรทัดแรกของฟังก์ชัน `update` ให้เพิ่ม: `monsterStats.style.display = "none";`.
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 fightSlime(), defeatMonster(), assert(monsterStats.style.display === 'none');

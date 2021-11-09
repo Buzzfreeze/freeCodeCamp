@@ -7,11 +7,11 @@ dashedName: part-51
 
 # --description--
 
-Chain `map` onto `range(start.charCodeAt(0), end.charCodeAt(0))`, with `x => x` as the argument.
+นำคำสั่ง `map` มาใช้กับ `range(start.charCodeAt(0), end.charCodeAt(0))` โดยกำหนด `x => x` เป็น argument
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

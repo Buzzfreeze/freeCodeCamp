@@ -7,11 +7,11 @@ dashedName: part-44
 
 # --description--
 
-Append the `recommended` element to `output`.
+จงนำ `recommended` element มาต่อกับ `output`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').match(/output\.appendChild\(recommended\)/));

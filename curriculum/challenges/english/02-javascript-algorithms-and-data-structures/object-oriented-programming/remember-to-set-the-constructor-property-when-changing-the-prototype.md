@@ -8,7 +8,7 @@ dashedName: remember-to-set-the-constructor-property-when-changing-the-prototype
 
 # --description--
 
-There is one crucial side effect of manually setting the prototype to a new object. It erases the `constructor` property! This property can be used to check which constructor function created the instance, but since the property has been overwritten, it now gives false results:
+การกำหนด prototype ให้มีค่าเป็น object ใหม่แบบ manual ทำให้เกิดผลกระทบที่สำคัญคือ มีการลบ `constructor` property ไปด้วย ซึ่ง `constructor` property สามารถใช้ตรวจสอบว่า instance สร้างจากฟังก์ชัน constructor ใด แต่เนื่องจาก property นี้ถูกเขียนทับ (overwritten) ดังนั้น หากมีการเรียกใช้ property นี้ ก็จะทำให้เกิดผลลัพธ์ที่ผิดได้
 
 ```js
 duck.constructor === Bird;
@@ -16,9 +16,9 @@ duck.constructor === Object;
 duck instanceof Bird;
 ```
 
-In order, these expressions would evaluate to `false`, `true`, and `true`.
+จากคำสั่งด้านบน ได้ผลลัพธ์เป็น `false`, `true` และ `true` ตามลำดับ
 
-To fix this, whenever a prototype is manually set to a new object, remember to define the `constructor` property:
+อย่างไรก็ตาม ปัญหานี้สามารถแก้ไขได้ โดยเมื่อมีการกำหนด prototype ให้มีค่าเป็น object ใหม่แบบ manual ให้เรากำหนด `constructor` property เข้าไปด้วย
 
 ```js
 Bird.prototype = {
@@ -35,11 +35,11 @@ Bird.prototype = {
 
 # --instructions--
 
-Define the `constructor` property on the `Dog` `prototype`.
+กำหนด `constructor` property ให้กับ `Dog` `prototype`
 
 # --hints--
 
-`Dog.prototype` should set the `constructor` property.
+`Dog.prototype` ควรกำหนด `constructor` property
 
 ```js
 assert(Dog.prototype.constructor === Dog);

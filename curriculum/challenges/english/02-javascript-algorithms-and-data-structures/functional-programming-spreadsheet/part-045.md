@@ -7,11 +7,11 @@ dashedName: part-45
 
 # --description--
 
-Use the ternary operator to return `[]` if `start > end` and `[start].concat([end])` otherwise.
+จงใช้ ternary operator เพื่อคืนค่า `[]` ถ้า `start > end` และคืนค่า `[start].concat([end])` ถ้าเงื่อนไขเป็นเท็จ
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

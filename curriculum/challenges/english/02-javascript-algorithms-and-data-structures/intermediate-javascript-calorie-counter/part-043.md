@@ -7,13 +7,13 @@ dashedName: part-43
 
 # --description--
 
-Append the `recommendedText` node to the `recommended` element.
+จงนำ `recommendedText` node มาต่อกับ `recommended` element
 
-This is similar to how the `resultText` is appended to `result` previously.
+ซึ่งเป็นวิธีที่เหมือนกับการนำ `resultText` มาต่อกับ `result` ก่อนหน้านี้
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

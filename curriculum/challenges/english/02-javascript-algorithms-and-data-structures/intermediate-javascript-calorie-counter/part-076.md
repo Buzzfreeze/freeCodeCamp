@@ -7,11 +7,11 @@ dashedName: part-76
 
 # --description--
 
-Congratulations! Have fun playing with your completed calorie counter.
+ยินดีด้วย! ขอให้สนุกกับการเล่น calorie counter ที่คุณทำเสร็จแล้ว
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 

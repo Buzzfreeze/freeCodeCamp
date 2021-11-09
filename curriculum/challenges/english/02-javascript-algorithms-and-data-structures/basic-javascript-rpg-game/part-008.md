@@ -7,9 +7,9 @@ dashedName: part-8
 
 # --description--
 
-Since the inventory can store multiple items, change the value of `inventory` to an array with the items stick, dagger, and sword.
+เนื่องจาก inventory สามารถเก็บได้หลาย items จงเปลี่ยนค่าของ `inventory` ให้เป็น array ของ items ได้แก่ stick, dagger และ sword
 
-Here is an example of a variable sandwich that equals a three-item array:
+ด้านล่างนี้เป็นตัวอย่างของตัวแปร sandwich ที่เป็น array มี 3 items
 
 ```js
 let sandwich = ["peanut butter", "jelly", "bread"];
@@ -17,7 +17,7 @@ let sandwich = ["peanut butter", "jelly", "bread"];
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

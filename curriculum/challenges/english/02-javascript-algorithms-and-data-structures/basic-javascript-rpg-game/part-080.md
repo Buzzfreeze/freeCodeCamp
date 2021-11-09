@@ -7,11 +7,11 @@ dashedName: part-80
 
 # --description--
 
-Use the `let` keyword to create a variable named `currentWeapon`. Don't set it equal to anything yet. Notice that we already have a `currentWeapon` variable from earlier. Since the `let` keyword is used instead of `var`, this new version of `currentWeapon` is scoped only to this `if` statement. At the close of the `if` statement, the old version of `currentWeapon` will be used again.
+ให้ใช้คีย์เวิร์ด `let` ในการสร้างตัวแปรชื่อ `currentWeapon` อย่าเพิ่งกำหนดค่าให้ตัวแปร สังเกตว่า เรามีตัวแปร `currentWeapon` จากขั้นตอนก่อนหน้านี้แล้ว เนื่องจากเราใช้คีย์เวิร์ด `let` แทนการใช้ `var` ดังนั้น `currentWeapon` ก็จะถูกจำกัดให้ใช้ภายใน `if` statement เท่านั้น แต่หากเราใช้ `var` ค่า `currentWeapon` จะสามารถใช้นอก `if` statement ได้
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

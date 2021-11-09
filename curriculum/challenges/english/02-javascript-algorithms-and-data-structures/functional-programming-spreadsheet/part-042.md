@@ -7,20 +7,20 @@ dashedName: part-42
 
 # --description--
 
-This is still valid because we're modifying `arr` in place instead of reassigning to it (which is invalid with the `const` keyword). But doing this still modifies state, and we don't want to do that in functional programming.
+การใช้ `push` method สามารถทำได้ เพราะเราเปลี่ยนแปลงค่าภายใน `arr` ไม่ได้กำหนดค่า `arr` ใหม่ (reassign) (ซึ่งไม่สามารถทำได้เมื่อใช้คีย์เวิร์ด `const`) แต่การทำเช่นนี้ก็ยังเป็นการเปลี่ยนแปลง state และเราก็ไม่ต้องการให้เกิดขึ้นใน functional programming
 
-The `concat` method returns a new array instead of modifying an existing one:
+`concat` method คืนค่าเป็น array ตัวใหม่แทนที่จะแก้ไข array ตัวเดิม
 
 ```js
 [1,2,3].concat(4); // [1, 2, 3, 4]
 [1,2,3].concat(4, 5); // [1, 2, 3, 4, 5]
 ```
 
-Use `concat` instead of `push` to return the result of adding `end` to `arr`.
+จงใช้ `concat` แทนที่ `push` เพื่อคืนค่าเป็นผลลัพธ์ของนำ `end` มาต่อกับ `arr`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

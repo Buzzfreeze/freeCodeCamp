@@ -8,9 +8,9 @@ dashedName: use-a-mixin-to-add-common-behavior-between-unrelated-objects
 
 # --description--
 
-As you have seen, behavior is shared through inheritance. However, there are cases when inheritance is not the best solution. Inheritance does not work well for unrelated objects like `Bird` and `Airplane`. They can both fly, but a `Bird` is not a type of `Airplane` and vice versa.
+คุณได้เห็นมาแล้วว่า การสืบทอดก่อให้เกิดการแชร์พฤติกรรมร่วมกัน อย่างไรก็ตาม การสืบทอดอาจไม่ใช่วิธีแก้ปัญหาที่ดีที่สุด กล่าวคือ การสืบทอดจะทำงานได้ไม่ดีกับ object ที่ไม่เกี่ยวข้องกัน (unrelated objects) เช่น `Bird` และ `Airplane` ทั้งคู่สามารถบินได้ แต่ `Bird` ไม่ได้เป็นประเภทเดียวกับ `Airplane`
 
-For unrelated objects, it's better to use <dfn>mixins</dfn>. A mixin allows other objects to use a collection of functions.
+สำหรับ object ที่ไม่เกี่ยวข้องกัน (unrelated objects) ควรใช้ <dfn>mixins</dfn> ซึ่ง mixin ทำให้ object ต่างกันสามารถใช้งานฟังก์ชันชุดเดียวกันได้
 
 ```js
 let flyMixin = function(obj) {
@@ -20,7 +20,7 @@ let flyMixin = function(obj) {
 };
 ```
 
-The `flyMixin` takes any object and gives it the `fly` method.
+`flyMixin` รับค่าได้ทุก object และทำให้ object เรียกใช้ `fly` method ได้
 
 ```js
 let bird = {
@@ -37,36 +37,36 @@ flyMixin(bird);
 flyMixin(plane);
 ```
 
-Here `bird` and `plane` are passed into `flyMixin`, which then assigns the `fly` function to each object. Now `bird` and `plane` can both fly:
+`bird` และ `plane` ถูกส่งเข้าไปใน `flyMixin` ซึ่งมีการกำหนดฟังก์ชัน `fly` ให้กับแต่ละ object ดังนั้น ตอนนี้ทั้ง `bird` และ `plane` สามารถบินได้ (fly)
 
 ```js
 bird.fly();
 plane.fly();
 ```
 
-The console would display the string `Flying, wooosh!` twice, once for each `.fly()` call.
+หน้าจอ console ควรแสดง string `Flying, wooosh!` สองครั้ง เพราะแต่ละ object มีการเรียก `.fly()`
 
-Note how the mixin allows for the same `fly` method to be reused by unrelated objects `bird` and `plane`.
+นี่เป็นวิธีที่ mixin ทำให้ `fly` method เดียวกัน สามารถเรียกใช้ซ้ำโดย `bird` และ `plane` ซึ่งเป็น object ที่ไม่เกี่ยวข้องกันได้ 
 
 # --instructions--
 
-Create a mixin named `glideMixin` that defines a method named `glide`. Then use the `glideMixin` to give both `bird` and `boat` the ability to glide.
+จงสร้าง mixin ที่มีชื่อว่า `glideMixin` โดยกำหนดให้มี method `glide` จากนั้นให้ใช้ `glideMixin` เพื่อให้ทั้ง `bird` และ `boat` สามารถร่อน (glide) ได้
 
 # --hints--
 
-Your code should declare a `glideMixin` variable that is a function.
+โค้ดของคุณควรกำหนดให้ตัวแปร `glideMixin` เป็นฟังก์ชัน
 
 ```js
 assert(typeof glideMixin === 'function');
 ```
 
-Your code should use the `glideMixin` on the `bird` object to give it the `glide` method.
+โค้ดของคุณควรใช้ `glideMixin` กับ `bird` object เพื่อให้มี `glide` method
 
 ```js
 assert(typeof bird.glide === 'function');
 ```
 
-Your code should use the `glideMixin` on the `boat` object to give it the `glide` method.
+โค้ดของคุณควรใช้ `glideMixin` กับ `boat` object เพื่อให้มี `glide` method
 
 ```js
 assert(typeof boat.glide === 'function');

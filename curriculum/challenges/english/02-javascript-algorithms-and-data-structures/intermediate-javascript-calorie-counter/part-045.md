@@ -7,13 +7,13 @@ dashedName: part-45
 
 # --description--
 
-Similar to the `recommended` element, we are going to create a `consumed` element that will display the amount of calories consumed.
+เช่นเดียวกันกับ `recommended` element เราจะสร้าง `consumed` element ที่แสดงจำนวนแคลอรี่ที่ได้รับ
 
-Create an `h4` element and assign it to a variable named `consumed`.
+จงสร้าง `h4` element และกำหนดค่าให้กับตัวแปรชื่อ `consumed`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

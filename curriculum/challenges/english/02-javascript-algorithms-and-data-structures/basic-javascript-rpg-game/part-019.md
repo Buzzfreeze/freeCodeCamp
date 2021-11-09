@@ -7,13 +7,13 @@ dashedName: part-19
 
 # --description--
 
-Also, create a `fightDragon` function that prints "Fighting dragon." to the console.
+เช่นเดียวกัน จงสร้างฟังก์ชัน `fightDragon` ที่พิมพ์ "Fighting dragon." ที่หน้า console
 
-When you are finished, you can test out your program in the browser.
+เมื่อคุณทำเสร็จแล้ว ให้ทดสอบโปรแกรมใน browser
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

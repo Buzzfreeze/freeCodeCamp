@@ -7,13 +7,13 @@ dashedName: part-37
 
 # --description--
 
-Similarly, append the `result` to the `output` element with the `appendChild()` method.
+เช่นเดียวกัน จงนำ `result` มาต่อกับ `output` element ด้วย `appendChild()` method
 
-Now if you enter in data and push the Calculate button, you will see the text added to the HTML document!
+ตอนนี้ถ้าคุณกรอกข้อมูลแล้วกดปุ่ม Calculate คุณจะเห็นข้อความถูกเพิ่มใน HTML document!
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').match(/output\.appendChild\(result\)/));

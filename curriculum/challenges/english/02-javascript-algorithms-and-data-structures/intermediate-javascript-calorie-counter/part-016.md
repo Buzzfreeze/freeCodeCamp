@@ -7,11 +7,11 @@ dashedName: part-16
 
 # --description--
 
-Now let's simplify the function by refactoring it to use arrow functions. As an example, `function(x) {return x*x}` can be refactored as`x => x*x`.
+ตอนนี้เรามาทำให้ฟังก์ชันดูง่ายขึ้น โดยการใช้ arrow functions กัน ดังตัวอย่าง `function(x) {return x*x}` สามารถแปลงเป็น arrow function ได้ดังนี้ `x => x*x`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').match(/meal\=\>Number\(meal\.value\)/));

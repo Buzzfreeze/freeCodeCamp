@@ -7,13 +7,13 @@ dashedName: part-10
 
 # --description--
 
-In order to update HTML elements on the page, you need to get references to them in your JavaScript code. The code `let el = document.querySelector("#el");` gets a reference to an HTML element with an `id` of `el` and assigns it to the variable `el`.
+การ update ค่าให้กับ HTML elements ในหน้าเพจได้นั้น คุณจะต้องอ้างถึง element ในโค้ด JavaScript ดังตัวอย่าง โค้ด `let el = document.querySelector("#el");` อ้างถึง HTML element ที่มี `id` เป็นค่า `el` แล้วทำการ assign ให้กับตัวแปร `el`
 
-Get a reference to the HTML element with the `id` of `button1` and assign it to a variable with the name `button1`.
+จงอ้างอิงถึง HTML element ที่มี `id` เป็นค่า `button1` แล้ว assign ให้กับตัวแปรชื่อ `button1`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

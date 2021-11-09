@@ -7,11 +7,11 @@ dashedName: part-74
 
 # --description--
 
-Similar to how you removed each `foodInputs` elements, use the `forEach()` function to remove each `calInputs` element.
+เช่นเดียวกับการลบ `foodInputs` elements จงใช้ฟังก์ชัน `forEach()` เพื่อนำแต่ละ `calInputs` element ออก
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

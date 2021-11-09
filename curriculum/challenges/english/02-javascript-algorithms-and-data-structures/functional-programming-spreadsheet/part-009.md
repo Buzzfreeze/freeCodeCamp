@@ -7,11 +7,11 @@ dashedName: part-9
 
 # --description--
 
-In `infixToFunction`, replace `addVar` with `(x, y) => x + y`.
+ใน `infixToFunction` จงแทนที่ `addVar` ด้วย `(x, y) => x + y`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').match(/\+["']:\(x,y\)=>x\+y/));

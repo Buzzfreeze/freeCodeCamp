@@ -7,9 +7,9 @@ dashedName: part-31
 
 # --description--
 
-After the `name` property put a comma. On the next line add a property named `"button text"` that has a value of an empty array. Since the property name has more than one word, there must be quotes around it.
+ให้ใส่เครื่องหมาย "," ต่อจาก `name` property แล้วบรรทัดถัดไปให้เพิ่ม property `"button text"` ที่มีค่าเป็น empty array แต่เนื่องจากชื่อ property มีมากกว่า 1 คำ ดังนั้นต้องใส่ quotes ครอบชื่อ property ด้วย
 
-Here is an example:
+ดังตัวอย่างต่อไปนี้
 
 ```js
 const arr = [
@@ -22,7 +22,7 @@ const arr = [
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert.deepStrictEqual(locations[0]['button text'], []);

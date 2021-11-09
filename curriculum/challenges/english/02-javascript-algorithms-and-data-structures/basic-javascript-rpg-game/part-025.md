@@ -7,11 +7,11 @@ dashedName: part-25
 
 # --description--
 
-Move the `goTown` function to above the `goStore` function. Then, copy and paste the contents of the `goStore` function into the `goTown` function.
+ให้นำฟังก์ชัน `goTown` วางอยู่ด้านบนของฟังก์ชัน `goStore` จากนั้นให้คัดลอกและวางโค้ดภายในฟังก์ชัน `goStore` ไปไว้ในฟังก์ชัน `goTown`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

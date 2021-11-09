@@ -7,11 +7,11 @@ dashedName: part-109
 
 # --description--
 
-Add a new object in the `locations` array with all the same properties as the other objects in the array. Set `name` to "kill monster". Set `"button text"` to `["Go to town square", "Go to town square", "Go to town square"]`. Set `"button functions"` to `[goTown, goTown, goTown]`. And set `text` to "The monster screams Arg! as it dies. You gain experience points and find gold.".
+เพิ่ม object ใหม่เข้าไปใน `locations` array โดยกำหนดให้มี properties เหมือนกับ object อื่นๆ ใน array จากนั้นกำหนดให้ `name` มีค่าเป็น "kill monster" กำหนดให้ `"button text"` มีค่าเป็น `["Go to town square", "Go to town square", "Go to town square"]` กำหนดให้ `"button functions"` มีค่าเป็น `[goTown, goTown, goTown]` และกำหนดให้ `text` มีค่าเป็น "The monster screams Arg! as it dies. You gain experience points and find gold."
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert.deepStrictEqual(locations[4], {

@@ -7,13 +7,13 @@ dashedName: part-5
 
 # --description--
 
-Now you will declare a variable without initializing it.
+แบบทดสอบนี้ คุณจะประกาศตัวแปรโดยที่ไม่ได้กำหนดค่าให้ตัวแปร
 
-Using the `let` keyword, declare a variable called `fighting` but don't set it equal to anything. Just end the line with a semicolon right after the variable name.
+ให้ใช้คีย์เวิร์ด `let` เพื่อประกาศตัวแปรชื่อ `fighting` แต่ไม่ต้องกำหนดค่าให้กับตัวแปร เพียงแค่ใส่ ; ต่อจากชื่อตัวแปร
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(/let\s+fighting\s*;?/.test(code) && fighting === undefined);

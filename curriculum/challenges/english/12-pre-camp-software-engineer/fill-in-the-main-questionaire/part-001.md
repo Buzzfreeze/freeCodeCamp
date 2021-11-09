@@ -1,9 +1,9 @@
 ---
 id: 61862b10712669613753c201
-title: ทำแบบสอบถามเพื่อเตรียมพร้อมสำหรับการจัดกลุ่มในอนาคต
-challengeType: 2 # เป็น form แล้ว สามารถ Validate ได้ด้วย 
+title: Part 1
+challengeType: 2
 forumTopicId: 28
-dashedName: fill-in-the-main-questionaire-1
+dashedName: part-1
 ---
 
 # --description--

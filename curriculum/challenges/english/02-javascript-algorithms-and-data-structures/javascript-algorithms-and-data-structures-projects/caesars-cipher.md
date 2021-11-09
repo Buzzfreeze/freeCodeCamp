@@ -8,35 +8,35 @@ dashedName: caesars-cipher
 
 # --description--
 
-One of the simplest and most widely known <dfn>ciphers</dfn> is a <dfn>Caesar cipher</dfn>, also known as a <dfn>shift cipher</dfn>. In a shift cipher the meanings of the letters are shifted by some set amount.
+<dfn>ciphers</dfn> หรือเทคนิคการเข้ารหัสที่ง่ายและแพร่หลายที่สุด ก็คือ <dfn>Caesar cipher</dfn> หรือที่เรียกกันว่า <dfn>shift cipher</dfn> สาเหตุที่เรียกว่า shift cipher นั้นก็เพราะใช้หลักการแทนที่ตัวอักษรด้วยตัวอักษรที่อยู่ลำดับถัดไปตามจำนวนตัวอักษรที่แน่นอน
 
-A common modern use is the [ROT13](https://en.wikipedia.org/wiki/ROT13) cipher, where the values of the letters are shifted by 13 places. Thus `A ↔ N`, `B ↔ O` and so on.
+อย่างไรก็ตาม เทคนิคที่ทันสมัยและใช้กันทั่วไป ก็คือ [ROT13](https://en.wikipedia.org/wiki/ROT13) cipher ซึ่งมีการแทนที่ตัวอักษรด้วยตัวอักษรที่อยู่ลำดับถัดไป 13 ตัว ดังนั้น `A ↔ N`, `B ↔ O` และอื่นๆ
 
-Write a function which takes a [ROT13](https://en.wikipedia.org/wiki/ROT13) encoded string as input and returns a decoded string.
+จงเขียนฟังก์ชันเพื่อถอดรหัส [ROT13](https://en.wikipedia.org/wiki/ROT13) โดยรับค่า string ที่เข้ารหัส และคืนค่าเป็น string ที่ถอดรหัสแล้ว
 
-All letters will be uppercase. Do not transform any non-alphabetic character (i.e. spaces, punctuation), but do pass them on.
+ตัวอักษรทุกตัวจะเป็นตัวพิมพ์ใหญ่ และไม่ต้องแปลงอักขระที่ไม่ใช่ตัวอักษร (เช่น ช่องว่าง, เครื่องหมายวรรคตอน) แต่อย่างใด เพียงแต่ส่งค่าทั้งหมดเข้าไปเท่านั้น
 
 # --hints--
 
-`rot13("SERR PBQR PNZC")` should decode to the string `FREE CODE CAMP`
+`rot13("SERR PBQR PNZC")` ควรถอดรหัสได้เป็น string `FREE CODE CAMP`
 
 ```js
 assert(rot13('SERR PBQR PNZC') === 'FREE CODE CAMP');
 ```
 
-`rot13("SERR CVMMN!")` should decode to the string `FREE PIZZA!`
+`rot13("SERR CVMMN!")` ควรถอดรหัสได้เป็น string `FREE PIZZA!`
 
 ```js
 assert(rot13('SERR CVMMN!') === 'FREE PIZZA!');
 ```
 
-`rot13("SERR YBIR?")` should decode to the string `FREE LOVE?`
+`rot13("SERR YBIR?")` ควรถอดรหัสได้เป็น string `FREE LOVE?`
 
 ```js
 assert(rot13('SERR YBIR?') === 'FREE LOVE?');
 ```
 
-`rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.")` should decode to the string `THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.`
+`rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.")` ควรถอดรหัสได้เป็น string `THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.`
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-141
 
 # --description--
 
-Congratulations, you've finished your functional programming spreadsheet! Now test it out by crunching some numbers.
+ยินดีด้วย คุณได้ทำ functional programming spreadsheet เสร็จแล้ว! ตอนนี้ลองทดสอบโดยคำนวณตัวเลขดู
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 

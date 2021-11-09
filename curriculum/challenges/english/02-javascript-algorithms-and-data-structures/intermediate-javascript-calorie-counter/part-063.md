@@ -7,13 +7,13 @@ dashedName: part-63
 
 # --description--
 
-Next we need a way to reset the form back to its original state. To do this, we specify what to do when the user clicks the "Clear" button.
+ขั้นตอนถัดไป เราต้องการรีเซ็ต form กลับมาเป็น state เดิม การทำเช่นนี้ได้ เราต้องกำหนดสิ่งที่จะทำเมื่อผู้ใช้งานคลิกปุ่ม "Clear"
 
-Get a reference to the `document` element with the `id` of `clear` and set its `onclick` property to equal to an empty function, `function(){}`.
+จงอ้างถึง `document` element ที่มี `id` มีค่าเป็น `clear` และกำหนดให้ `onclick` property ของ element นี้ มีค่าเท่ากับ empty function, `function(){}`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

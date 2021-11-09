@@ -8,30 +8,30 @@ dashedName: set-the-childs-prototype-to-an-instance-of-the-parent
 
 # --description--
 
-In the previous challenge you saw the first step for inheriting behavior from the supertype (or parent) `Animal`: making a new instance of `Animal`.
+แบบทดสอบที่แล้ว คุณได้เห็นขั้นตอนแรกของการสืบทอดพฤติกรรมจาก supertype (หรือ parent) `Animal` คือการสร้าง instance ใหม่ของ `Animal`
 
-This challenge covers the next step: set the `prototype` of the subtype (or child)—in this case, `Bird`—to be an instance of `Animal`.
+แบบทดสอบนี้จะกล่าวถึงขั้นตอนถัดไป นั่นคือการกำหนด `prototype` ของ subtype (หรือ child) สำหรับกรณีนี้ `Bird` เป็น instance ของ `Animal`
 
 ```js
 Bird.prototype = Object.create(Animal.prototype);
 ```
 
-Remember that the `prototype` is like the "recipe" for creating an object. In a way, the recipe for `Bird` now includes all the key "ingredients" from `Animal`.
+จากที่ได้กล่าวมาแล้วว่า `prototype` เปรียบดัง "สูตรสำเร็จ" ในการสร้าง object ดังนี้แล้ว สูตรของ `Bird` ตอนนี้ประกอบด้วย "ส่วนประกอบ" จาก `Animal`
 
 ```js
 let duck = new Bird("Donald");
 duck.eat();
 ```
 
-`duck` inherits all of `Animal`'s properties, including the `eat` method.
+`duck` สืบทอด properties ทุกอย่างมาจาก `Animal` รวมถึง `eat` method ด้วย
 
 # --instructions--
 
-Modify the code so that instances of `Dog` inherit from `Animal`.
+จงปรับแก้โค้ด เพื่อให้ instance ของ `Dog` สืบทอดจาก `Animal`
 
 # --hints--
 
-`Dog.prototype` should be an instance of `Animal`.
+`Dog.prototype` ควรเป็น instance ของ `Animal`.
 
 ```js
 assert(Animal.prototype.isPrototypeOf(Dog.prototype));

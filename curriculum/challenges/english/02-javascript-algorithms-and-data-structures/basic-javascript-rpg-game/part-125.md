@@ -7,9 +7,9 @@ dashedName: part-125
 
 # --description--
 
-In the `attack` function after the line `health -= getMonsterAttackValue(monsters[fighting].level);`, create an empty if expression. For the condition, put the function call `isMonsterHit()`.
+ภายในฟังก์ชัน `attack` ต่อจากบรรทัด `health -= getMonsterAttackValue(monsters[fighting].level);` ให้สร้าง empty if expression ซึ่งกำหนดเงื่อนไขเป็นการเรียกฟังก์ชัน `isMonsterHit()`
 
-Here is an example of an empty if expression with a function call as the condition:
+ต่อไปนี้เป็นตัวอย่างของ empty if expression ที่มีเงื่อนไขเป็นการเรียกฟังก์ชัน:
 
 ```js
 if (isTrue()) {
@@ -19,7 +19,7 @@ if (isTrue()) {
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(attack.toString().replace(/\s/g, '').includes('if(isMonsterHit()){}'));

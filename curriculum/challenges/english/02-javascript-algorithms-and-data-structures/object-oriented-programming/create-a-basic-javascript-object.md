@@ -8,13 +8,13 @@ dashedName: create-a-basic-javascript-object
 
 # --description--
 
-Think about things people see every day, like cars, shops, and birds. These are all <dfn>objects</dfn>: tangible things people can observe and interact with.
+เมื่อพูดถึง object ให้เรานึกถึงสิ่งต่างๆ ที่เราเห็นทุกวัน เช่น รถยนต์, ร้านค้า, นก ฯลฯ สิ่งต่างๆ เหล่านี้ก็คือ <dfn>objects</dfn> หรือสิ่งต่างๆ ที่เราสามารถมองเห็นหรือสัมผัสได้
 
-What are some qualities of these objects? A car has wheels. Shops sell items. Birds have wings.
+แล้วคุณสมบัติของ object เหล่านี้มีอะไรบ้างล่ะ คำตอบก็เช่น รถยนต์มีล้อรถ, ร้านค้าขายสินค้า, นกมีปีก
 
-These qualities, or <dfn>properties</dfn>, define what makes up an object. Note that similar objects share the same properties, but may have different values for those properties. For example, all cars have wheels, but not all cars have the same number of wheels.
+โดยคุณสมบัติหรือ <dfn>properties</dfn> ใช้กำหนดส่วนประกอบของ object ซึ่ง object ที่คล้ายกันก็มักมี property ที่เหมือนกัน แต่อาจมี value ที่ต่างกัน เช่น รถยนต์มีล้อรถ แต่ไม่ใช่ว่าทุกคันจะมีจำนวนล้อเท่ากัน
 
-Objects in JavaScript are used to model real-world objects, giving them properties and behavior just like their real-world counterparts. Here's an example using these concepts to create a `duck` object:
+object ในภาษา JavaScript มักจำลองแบบจาก object ของโลกแห่งความเป็นจริง โดยมีการกำหนดคุณสมบัติและความสามารถต่างๆ เทียบเคียงกับของจริงเลย ตัวอย่างต่อไปนี้เป็นการนำหลักการดังกล่าวมาสร้าง `duck` object
 
 ```js
 let duck = {
@@ -23,27 +23,27 @@ let duck = {
 };
 ```
 
-This `duck` object has two property/value pairs: a `name` of `Aflac` and a `numLegs` of 2.
+`duck` object นี้มีคู่ property/value อยู่ 2 ชุด คือ a `name` of `Aflac` และ a `numLegs` of 2
 
 # --instructions--
 
-Create a `dog` object with `name` and `numLegs` properties, and set them to a string and a number, respectively.
+ให้สร้าง `dog` object ที่มี property เป็น `name` และ `numLegs` แล้วให้กำหนดค่า string และ number ตามลำดับ 
 
 # --hints--
 
-`dog` should be an object.
+`dog` ควรเป็น object
 
 ```js
 assert(typeof dog === 'object');
 ```
 
-`dog` should have a `name` property set to a string.
+`dog` ควรมี property `name` โดยกำหนดให้เป็น string
 
 ```js
 assert(typeof dog.name === 'string');
 ```
 
-`dog` should have a `numLegs` property set to a number.
+`dog` ควรมี property `numLegs` โดยกำหนดให้เป็น number
 
 ```js
 assert(typeof dog.numLegs === 'number');

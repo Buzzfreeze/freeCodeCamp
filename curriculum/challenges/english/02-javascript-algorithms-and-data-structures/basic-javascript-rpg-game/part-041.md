@@ -7,11 +7,11 @@ dashedName: part-41
 
 # --description--
 
-`location["button text"]` is an array with three elements. Use only the first element of the array by adding `[0]` at the end.
+`location["button text"]` เป็น array ที่มี 3 elements ให้ใช้เพียง element แรกของ array โดยการเพิ่ม `[0]` ต่อท้าย
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,9 +7,9 @@ dashedName: part-54
 
 # --description--
 
-The word "condition" inside the if statement is just a placeholder. Change the condition to check if the amount of gold the player has is greater than or equal to 10.
+คำว่า "condition" ใน if statement เป็นแค่คำที่เราใส่ไว้ชั่วคราว จงเปลี่ยนคำว่า "condition" ให้เป็นเงื่อนไขเพื่อตรวจสอบว่าจำนวน gold ที่ผู้เล่นมีอยู่นั้นมากกว่าหรือเท่ากับ 10 หรือไม่
 
-Here is an `if` statement that checks if `num` is greater than or equal to 5:
+ต่อไปนี้เป็น `if` statement ที่ตรวจสอบว่า `num` มากกว่าหรือเท่ากับ 5 หรือไม่:
 
 ```js
 if (num >= 5) {
@@ -19,7 +19,7 @@ if (num >= 5) {
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(buyHealth.toString().match(/if\s*\(\s*gold\s*\>\=\s*10\s*\)/));

@@ -7,11 +7,11 @@ dashedName: part-12
 
 # --description--
 
-Use arrow function syntax to define a function `infixEval` which takes `str` and `regex` as arguments and returns `str.replace(regex, "")`.
+ใช้ arrow function syntax เพื่อสร้างฟังก์ชัน `infixEval` ที่รับ argument เป็น `str` และ `regex` แล้วคืนค่า `str.replace(regex, "")`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

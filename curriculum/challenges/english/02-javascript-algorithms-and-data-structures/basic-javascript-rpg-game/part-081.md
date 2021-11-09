@@ -7,7 +7,7 @@ dashedName: part-81
 
 # --description--
 
-Use the `shift()` method on the `inventory` array to remove the first element and return that removed element. Set `currentWeapon` to equal returned element.
+จงใช้ `shift()` method กับ `inventory` array เพื่อนำ element แรกออก แล้วคืนค่าเป็น element ที่ถูกนำออก จากนั้นให้กำหนด `currentWeapon` มีค่าเป็น element ที่ถูกนำออก
 
 Here is an example:
 
@@ -19,7 +19,7 @@ let firstElement = arr.shift();
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

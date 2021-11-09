@@ -7,11 +7,11 @@ dashedName: part-47
 
 # --description--
 
-Append the `consumed` element to `output`.
+จงนำ `consumed` element มาต่อกับ `output`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').match(/output\.appendChild\(consumed\)/));

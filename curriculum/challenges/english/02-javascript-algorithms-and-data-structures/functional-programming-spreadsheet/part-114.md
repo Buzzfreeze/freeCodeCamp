@@ -7,13 +7,13 @@ dashedName: part-114
 
 # --description--
 
-`evalFormula` is now pure, as it now has no external dependencies, and as before, performs no side effects.
+`evalFormula` ตอนนี้เป็น pure เนื่องจากไม่มี external dependencies และไม่ทำให้เกิด side effects
 
-Now define a new function, `increment` inside `spreadsheetFunctions`, which takes `nums` as argument and uses `map` to increment each value of `nums` by 1.
+ตอนนี้ให้กำหนดฟังก์ชันใหม่ชื่อ `increment` ภายใน `spreadsheetFunctions` ซึ่งรับค่า `nums` เป็น argument และใช้ `map` เพื่อนำแต่ละ element ของ `nums` มาบวก 1
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(JSON.stringify(spreadsheetFunctions.increment([1, 5, 3])) === '[2,6,4]');

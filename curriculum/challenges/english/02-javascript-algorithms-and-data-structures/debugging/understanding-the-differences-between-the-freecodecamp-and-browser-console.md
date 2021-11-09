@@ -8,25 +8,25 @@ dashedName: understanding-the-differences-between-the-freecodecamp-and-browser-c
 
 # --description--
 
-You may have noticed that some freeCodeCamp challenges include their own console. This console behaves a little differently than the browser console.
+คุณอาจสังเกตว่า แบบทดสอบของ freeCodeCamp มี console ของตัวเองด้วย ซึ่ง console นี้มีลักษณะต่างกับ browser console เล็กน้อย
 
-There are many methods to use with `console` to output messages. `log`, `warn`, and `clear` to name a few. The freeCodeCamp console will only output `log` messages, while the browser console will output all messages. When you make changes to your code, it will automatically run and show the logs. The freeCodeCamp console is then cleared each time your code runs.
+มี methods จำนวนมากที่ใช้กับ `console` เพื่อแสดงผล เช่น `log`, `warn` และ `clear` แต่สำหรับ freeCodeCamp console จะแสดงข้อความ `log` เท่านั้น ในขณะที่ browser console จะแสดงได้ทุกข้อความ เมื่อคุณเปลี่ยนแปลงโค้ด console จะรันให้โดยอัตโนมัติและแสดง log ขึ้นมา และ freeCodeCamp console จะถูกเคลียร์ทุกครั้งที่รันโค้ด
 
 # --instructions--
 
-First, open your browser console so you can see the logs. To do that, you can right-click the freeCodeCamp navigation bar at the top and click `inspect` on most browsers. Then find the `console` tab in the window that opens.
+ขั้นตอนแรก ให้เปิด browser console เพื่อคุณจะได้เห็นหน้าแสดง log วิธีการคือ คลิกขวาที่ freeCodeCamp navigation bar ตรงด้านบนของหน้าจอ แล้วคลิก `inspect` จากนั้นคลิกที่ `console` tab ในหน้าจอ
 
-After that, use `console.log` to log the `output` variable. View the two consoles to see the log. Finally, use `console.clear` after your log to clear the browser console. View the difference in the two consoles.
+แล้วใช้คำสั่ง `console.log` เพื่อแสดง log ของตัวแปร `output` จากนั้นให้ดู log ที่หน้า console ทั้งสอง แล้วใช้คำสั่ง `console.clear` เพื่อทำการเคลียร์ browser console จากนั้นให้ดูความแตกต่างในหน้า console ทั้งสอง
 
 # --hints--
 
-You should use `console.log()` to print the `output` variable.
+คุณควรใช้ `console.log()` เพื่อพิมพ์ `output` variable
 
 ```js
 assert(__helpers.removeWhiteSpace(code).match(/console\.log\(output\)/));
 ```
 
-You should use `console.clear()` to clear the browser console.
+คุณควรใช้ `console.clear()` เพื่อเคลียร์ browser console
 
 ```js
 assert(
@@ -36,7 +36,7 @@ assert(
 );
 ```
 
-You should clear the console after your log.
+คุณควรเคลียร์ console หลังจากแสดง log
 
 ```js
 assert(

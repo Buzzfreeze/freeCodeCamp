@@ -7,11 +7,11 @@ dashedName: part-61
 
 # --description--
 
-The value of `currentWeapon` corresponds to an index in the `weapons` array. The player starts with a stick since `currentWeapon` starts at 0 and `weapons[0]` is the "stick" weapon. In the `buyWeapon` function, add one to `currentWeapon` since the user is buying the next weapon in the `weapons` array.
+ค่าของ `currentWeapon` สอดคล้องกับ index ของ `weapons` array ผู้เล่นเริ่มจากการมี stick เนื่องจาก `currentWeapon` เริ่มต้นที่ 0 และ `weapons[0]` คืออาวุธ "stick" โดยภายในฟังก์ชัน `buyWeapon` ให้บวก 1 ให้กับ `currentWeapon` เนื่องจากผู้เล่นจะซื้ออาวุธถัดไปใน `weapons` array
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 (currentWeapon = 0), buyWeapon(), assert(currentWeapon === 1);

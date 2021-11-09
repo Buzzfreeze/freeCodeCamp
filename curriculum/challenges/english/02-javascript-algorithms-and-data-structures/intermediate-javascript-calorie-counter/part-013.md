@@ -7,19 +7,19 @@ dashedName: part-13
 
 # --description--
 
-Now we need to provide a function to `map()` that will be performed on each item of the array.
+ตอนนี้เราต้องระบุฟังก์ชันให้กับ `map()` ซึ่งฟังก์ชันนี้จะวนรันให้กับแต่ละ item ใน array
 
-This function will take the original item as an argument, in our case we'll call it `meal`. Inside the `.map()` parentheses, insert an empty function that takes `meal` as a parameter, like:
+ฟังก์ชันนี้จะนำ item ใน array เป็น argument สำหรับกรณีของเรา เราจะเรียกว่า `meal` โดยภายในวงเล็บของ `.map()` ให้ระบุ empty function ที่รับ `meal` เป็น parameter แบบนี้:
 
 ```js
 function(meal){}
 ```
 
-Enter in the above function as an argument in between the parentheses of the `.map()` function.
+จงระบุฟังก์ชันด้านบนเป็น argument ใส่ในวงเล็บของฟังก์ชัน `.map()`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').match(/map\(function\(\s*meal\)\{\}\)/));

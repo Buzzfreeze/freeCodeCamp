@@ -7,11 +7,11 @@ dashedName: part-141
 
 # --description--
 
-After the `while` loop, set `text.innerText` to equal "You picked \[guess]. Here are the random numbers:". Replace \[guess] with the actual guess.
+ต่อจาก `while` loop กำหนดให้ `text.innerText` มีค่าเป็น "You picked \[guess]. Here are the random numbers:" โดยแทนที่ \[guess] ด้วยค่า guess (การคาดเดา) จริงๆ
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 pickTwo(),

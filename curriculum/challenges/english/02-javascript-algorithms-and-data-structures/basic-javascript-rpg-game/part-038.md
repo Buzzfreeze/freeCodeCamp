@@ -7,13 +7,13 @@ dashedName: part-38
 
 # --description--
 
-Now change the code you just wrote to call the `update` function so the `locations` array is passed in as an argument.
+ตอนนี้ให้ปรับแก้โค้ดที่คุณเพิ่งเขียนไป ตรงการเรียกฟังก์ชัน `update` โดยให้ระบุ `locations` array เป็น argument ที่ส่งเข้าไป
 
-Here is how you would call a function named `exampleFunction` with an argument called `arg`: `exampleFunction(arg);`
+คุณสามารถเรียกฟังก์ชัน `exampleFunction` ที่มี `arg` เป็น argument ที่ส่งเข้าไปได้ดังนี้: `exampleFunction(arg);`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(goTown.toString().match(/update\(locations\)/));

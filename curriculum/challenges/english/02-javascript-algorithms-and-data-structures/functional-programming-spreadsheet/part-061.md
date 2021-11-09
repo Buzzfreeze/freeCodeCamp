@@ -7,13 +7,13 @@ dashedName: part-61
 
 # --description--
 
-You might think that this wouldn't work because `fn` wouldn't have access to `n` after `elemValue` has finished executing. However, this works because of closures - functions have access to all variables declared at their time of creation.
+คุณอาจคิดว่า วิธีการแบบนี้อาจใช้ไม่ได้ เพราะ `fn` จะไม่สามารถเข้าถึง `n` ได้ เมื่อรัน `elemValue` จบแล้ว อย่างไรก็ตาม วิธีการนี้ยังสามารถใช้งานได้เพราะ closures กล่าวคือ ฟังก์ชันสามารถเข้าถึงตัวแปรทุกตัวที่ถูกประกาศในจังหวะการสร้างฟังก์ชันได้
 
-Inside `elemValue`, remove the variable `fn` and its definition, and replace `return fn` with `return c => document.getElementById(c + n).value`.
+ภายใน `elemValue` ให้ลบตัวแปร `fn` และการกำหนดค่าออกไป และแทนที่ `return fn` ด้วย `return c => document.getElementById(c + n).value`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

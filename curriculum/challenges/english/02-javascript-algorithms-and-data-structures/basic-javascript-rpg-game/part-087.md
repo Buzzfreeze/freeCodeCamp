@@ -7,13 +7,13 @@ dashedName: part-87
 
 # --description--
 
-Inside the `fightSlime` function, set `fighting` to equal 0 (which is the index of the slime in the `monsters` array). On the next line, call the `goFight` function.
+ภายในฟังก์ชัน `fightSlime` กำหนดให้ `fighting` มีค่าเท่ากับ 0 (ซึ่งเป็น index ของ slime ใน `monsters` array) แล้วเรียกฟังก์ชัน `goFight` ที่บรรทัดถัดไป
 
-As a reminder, here is how you would call a function named `myFunc`: `myFunc();`.
+นี่คือวิธีที่คุณจะเรียกใช้ฟังก์ชันชื่อ `myFunc`: `myFunc();`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(fightSlime.toString().match(/fighting\s*\=\s*0\;?\s*goFight\(\s*\)\;?/));

@@ -7,7 +7,7 @@ dashedName: part-117
 
 # --description--
 
-The `%` operator returns the remainder:
+`%` operator ให้ผลลัพธ์เป็นเศษจากการหาร (remainder)
 
 ```js
 4 % 3; // 1
@@ -15,11 +15,11 @@ The `%` operator returns the remainder:
 6 % 3; // 0
 ```
 
-Add an `isEven` function (to the global scope) which returns whether the number passed to it is even.
+จงเพิ่มฟังก์ชัน `isEven` (เป็น global scope) ที่ตรวจสอบว่า เลขที่ส่งเข้าไปนั้นเป็นเลขคู่หรือไม่
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(isEven(20) && !isEven(31));

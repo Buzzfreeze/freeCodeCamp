@@ -7,7 +7,7 @@ dashedName: part-6
 
 # --description--
 
-Anonymous functions are often passed as arguments to other functions, but what if you want to call one later? You can assign anonymous functions to variables and call them with the variable's name:
+Anonymous functions มักถูกส่งเข้าไปเป็น arguments ของฟังก์ชันอื่น แต่หากคุณต้องการเรียกใช้ Anonymous functions ภายหลัง คุณสามารถกำหนดค่า Anonymous functions ให้กับตัวแปร และเรียกใช้ด้วยชื่อตัวแปร 
 
 ```js
 const fn = function(x) {
@@ -17,11 +17,11 @@ const fn = function(x) {
 fn();
 ```
 
-Assign the anonymous function to the variable `addVar`.
+จงกำหนดค่า anonymous function ให้กับตัวแปร `addVar`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('constaddVar=function(x,y){returnx+y'));

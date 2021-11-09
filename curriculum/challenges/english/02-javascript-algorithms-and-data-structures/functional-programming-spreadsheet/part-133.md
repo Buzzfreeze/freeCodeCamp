@@ -7,13 +7,13 @@ dashedName: part-133
 
 # --description--
 
-Use the ternary operator to return `average([sorted[middle], sorted[middle + 1]])` if `length` is even, and `sorted[middle + 0.5]` otherwise.
+จงใช้ ternary operator กำหนดว่า ถ้า `length` เป็นเลขคู่ ให้คืนค่า `average([sorted[middle], sorted[middle + 1]])`  แต่ถ้าไม่ ให้คืนค่า `sorted[middle + 0.5]`
 
-Note that the `middle` variable is close to the middle but is not actually the middle.
+หมายเหตุ ตัวแปร `middle` มีค่าใกล้เคียงกับค่ากลาง และไม่ใช่ค่าตรงกลางจริงๆ
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(median([1, 20, 3]) === 3 && median([27, 7, 20, 10]) === 15);

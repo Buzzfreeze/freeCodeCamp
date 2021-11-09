@@ -7,11 +7,11 @@ dashedName: part-49
 
 # --description--
 
-Make `charRange` return `range(start, end)`.
+ทำให้ `charRange` คืนค่าเป็น `range(start, end)`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(JSON.stringify(charRange(1, 5)) === '[1,2,3,4,5]');

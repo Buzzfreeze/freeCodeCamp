@@ -7,11 +7,11 @@ dashedName: part-77
 
 # --description--
 
-After the `buyWeapon` function, create an empty function called `sellWeapon`.
+ถัดจากฟังก์ชัน `buyWeapon` ให้สร้าง function ชื่อ `sellWeapon`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(typeof sellWeapon === 'function');

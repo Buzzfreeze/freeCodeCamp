@@ -7,13 +7,13 @@ dashedName: part-68
 
 # --description--
 
-The `clearOutput` function is called when the user clicks the "Clear" button. But it also needs to be run when the user clicks the "Calculate" button.
+ฟังก์ชัน `clearOutput` รันเมื่อผู้ใช้งานคลิกปุ่ม "Clear" แต่ฟังก์ชันนี้ก็ควรรันขึ้นมาด้วย เมื่อผู้ใช้งานคลิกปุ่ม "Calculate"
 
-In the `calculate()` function, right after `event.preventDefault()`, call the `clearOutput` function.
+ภายในฟังก์ชัน `calculate()` บรรทัดถัดจาก `event.preventDefault()` ให้ทำการเรียกฟังก์ชัน `clearOutput`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(calculate.toString().match(/clearOutput\(\)/));

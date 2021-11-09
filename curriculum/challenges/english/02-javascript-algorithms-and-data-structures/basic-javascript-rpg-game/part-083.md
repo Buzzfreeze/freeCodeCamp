@@ -7,11 +7,11 @@ dashedName: part-83
 
 # --description--
 
-Now use the `+=` operator to add to `text.innerText`. Add the string " In your inventory you have: " (with spaces at the beginning and end). Then add the `inventory` variable to the end of the string.
+ตอนนี้ให้ใช้ `+=` operator เพิ่มเข้าไปที่ `text.innerText` จงเพิ่ม string " In your inventory you have: " (เคาะวรรคที่ต้นและท้าย string). จากนั้นก็ระบุตัวแปร `inventory` ต่อท้าย string
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 (inventory = ['potato', 'carrot']),

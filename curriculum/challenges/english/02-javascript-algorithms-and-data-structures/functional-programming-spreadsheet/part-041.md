@@ -7,11 +7,11 @@ dashedName: part-41
 
 # --description--
 
-After declaring `arr`, but before returning it, `range` should use the `push` method to add `end` onto `arr`.
+ภายใน `range` บรรทัดถัดจากการประกาศ `arr` แต่ก่อนคำสั่ง return จงใช้ `push` method เพื่อเพิ่ม `end` เข้าไปใน `arr`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(JSON.stringify(range(1, 2)) === '[1,2]' && code.includes('push'));

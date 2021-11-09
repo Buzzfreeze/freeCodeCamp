@@ -7,11 +7,11 @@ dashedName: part-39
 
 # --description--
 
-Now define an empty function `range` which takes `start` and `end` as arguments (define it in the global scope).
+ตอนนี้ให้สร้าง empty function `range` ซึ่งรับค่า `start` และ `end` เป็น arguments (กำหนดให้ฟังก์ชันนี้อยู่ใน global scope)
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('constrange=(start,end)=>'));

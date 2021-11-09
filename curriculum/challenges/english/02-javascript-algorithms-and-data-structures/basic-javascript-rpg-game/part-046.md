@@ -7,13 +7,13 @@ dashedName: part-46
 
 # --description--
 
-Add a third object in the `locations` array with the same properties as the other two objects.
+ให้เพิ่ม object ที่สามเข้าไปใน `locations` array โดยกำหนด property เหมือนกับ object ทั้งสอง
 
-Set `name` to "cave". Set the elements in the `"button text"` array to \["Fight slime", "Fight fanged beast", and "Go to town square". Set te elements in the `"button functions"` array to be "fightSlime", "fightBeast", and "goTown". Set the value of the `text` property to "You enter the cave. You see some monsters.".
+กำหนดค่า `name` ให้กับ "cave" แล้วระบุ elements ใน `"button text"` array ให้เป็น \["Fight slime", "Fight fanged beast", and "Go to town square" จากนั้นกำหนด elements ใน `"button functions"` array ให้เป็น "fightSlime", "fightBeast", and "goTown" แล้วกำหนดค่าของ `text` property ให้เป็น "You enter the cave. You see some monsters."
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert.deepStrictEqual(locations[2], {

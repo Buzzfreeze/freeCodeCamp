@@ -7,11 +7,11 @@ dashedName: part-101
 
 # --description--
 
-Now try calling `highPrecedence` and pass it the string `"2*2"` without assigning it to a variable in `update`.
+ตอนนี้ให้ลองเรียก `highPrecedence` แล้วส่ง string `"2*2"` เข้าไปเลย โดยไม่กำหนดค่านี้ให้กับตัวแปร ภายใน `update`.
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

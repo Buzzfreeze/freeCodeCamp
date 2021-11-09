@@ -7,11 +7,11 @@ dashedName: part-108
 
 # --description--
 
-Add a function `idToText` to `evalFormula`, which takes the argument `id` and returns `cells`.
+เพิ่มฟังก์ชัน `idToText` ให้กับ `evalFormula` โดยฟังก์ชันนี้รับ argument `id` แล้วคืนค่าเป็น `cells`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(/constidToText=\(?id\)?=>cells/.test(code.replace(/\s/g, '')));

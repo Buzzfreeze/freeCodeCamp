@@ -7,7 +7,7 @@ dashedName: part-82
 
 # --description--
 
-Add the following code to `createLabel`:
+เพิ่มโค้ดต่อไปนี้ให้กับ `createLabel`:
 
 ```js
 label.className = "label";
@@ -17,7 +17,7 @@ container.appendChild(label);
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

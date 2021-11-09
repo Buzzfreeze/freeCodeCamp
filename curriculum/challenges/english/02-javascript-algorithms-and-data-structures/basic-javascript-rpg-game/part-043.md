@@ -7,11 +7,11 @@ dashedName: part-43
 
 # --description--
 
-Now update the three `onclick` properties. These will look very similar to the `innerText` properties, except instead of using the `"button text"` part of the `location`, use `"button functions"`.
+ตอนนี้ให้เปลี่ยน `onclick` properties ทั้ง 3 ตัว โดยทำเหมือนกับ `innerText` properties ยกเว้นแทนที่จะใช้ `"button text"` ที่อยู่ใน `location` ก็ใช้เป็น `"button functions"` แทน
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

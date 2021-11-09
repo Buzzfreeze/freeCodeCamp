@@ -7,13 +7,13 @@ dashedName: part-68
 
 # --description--
 
-However, you don't need an arrow function. As `elemValue(n)` is a function, you can pass it to `map` directly.
+อย่างไรก็ตาม คุณไม่จำเป็นต้องใช้ arrow function อย่างเช่น `elemValue(n)` เป็นฟังก์ชัน คุณสามารถส่งเข้าไปยัง `map` ได้โดยตรง
 
-Change `x => elemValue(n)(x)` to `elemValue(n)`.
+จงเปลี่ยน `x => elemValue(n)(x)` ให้เป็น `elemValue(n)`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

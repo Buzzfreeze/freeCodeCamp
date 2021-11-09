@@ -7,11 +7,11 @@ dashedName: part-149
 
 # --description--
 
-Inside the `if` expression, add the following string to the end of `text.innerText`: "Right! You win 20 gold!" Also, add 20 to the value of `gold` and update `goldText.innerText`.
+ภายใน `if` expression จงเพิ่ม string "Right! You win 20 gold!" ต่อจาก `text.innerText` นอกจากนี้ให้นำตัวแปร `gold` มาบวกเพิ่มอีก 20 และอัปเดตค่า `gold` ที่ `goldText.innerText`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

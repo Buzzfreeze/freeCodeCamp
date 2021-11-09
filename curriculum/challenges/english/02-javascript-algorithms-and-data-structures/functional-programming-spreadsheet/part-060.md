@@ -7,11 +7,11 @@ dashedName: part-60
 
 # --description--
 
-Finally, return `fn("A")`.
+สุดท้ายแล้ว คืนค่าเป็น `fn("A")`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

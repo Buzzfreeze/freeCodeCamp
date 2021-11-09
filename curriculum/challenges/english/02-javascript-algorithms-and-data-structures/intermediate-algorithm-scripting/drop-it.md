@@ -8,13 +8,13 @@ dashedName: drop-it
 
 # --description--
 
-Given the array `arr`, iterate through and remove each element starting from the first element (the 0 index) until the function `func` returns `true` when the iterated element is passed through it.
+กำหนด array ชื่อ `arr` จงวนอ่าน array ตั้งแต่ element แรก (index 0) แล้วลบ element ออกจาก array ทีละตัว จนกว่าจะมี element ที่ทำให้ฟังก์ชัน `func` ได้ผลลัพธ์เป็น `true`
 
-Then return the rest of the array once the condition is satisfied, otherwise, `arr` should be returned as an empty array.
+จากนั้นให้คืนค่าเป็น array ที่มี element ที่เหลืออยู่ แต่หากไม่มี element ใดเลยที่ทำให้ฟังก์ชัน `func` ได้ผลลัพธ์เป็น `true` ก็จะทำให้ `arr` คืนค่าเป็น empty array
 
 # --hints--
 
-`dropElements([1, 2, 3, 4], function(n) {return n >= 3;})` should return `[3, 4]`.
+`dropElements([1, 2, 3, 4], function(n) {return n >= 3;})` ควรคืนค่าเป็น `[3, 4]`.
 
 ```js
 assert.deepEqual(
@@ -25,7 +25,7 @@ assert.deepEqual(
 );
 ```
 
-`dropElements([0, 1, 0, 1], function(n) {return n === 1;})` should return `[1, 0, 1]`.
+`dropElements([0, 1, 0, 1], function(n) {return n === 1;})` ควรคืนค่าเป็น `[1, 0, 1]`.
 
 ```js
 assert.deepEqual(
@@ -36,7 +36,7 @@ assert.deepEqual(
 );
 ```
 
-`dropElements([1, 2, 3], function(n) {return n > 0;})` should return `[1, 2, 3]`.
+`dropElements([1, 2, 3], function(n) {return n > 0;})` ควรคืนค่าเป็น `[1, 2, 3]`.
 
 ```js
 assert.deepEqual(
@@ -47,7 +47,7 @@ assert.deepEqual(
 );
 ```
 
-`dropElements([1, 2, 3, 4], function(n) {return n > 5;})` should return `[]`.
+`dropElements([1, 2, 3, 4], function(n) {return n > 5;})` ควรคืนค่าเป็น `[]`.
 
 ```js
 assert.deepEqual(
@@ -58,7 +58,7 @@ assert.deepEqual(
 );
 ```
 
-`dropElements([1, 2, 3, 7, 4], function(n) {return n > 3;})` should return `[7, 4]`.
+`dropElements([1, 2, 3, 7, 4], function(n) {return n > 3;})` ควรคืนค่าเป็น `[7, 4]`.
 
 ```js
 assert.deepEqual(
@@ -69,7 +69,7 @@ assert.deepEqual(
 );
 ```
 
-`dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;})` should return `[3, 9, 2]`.
+`dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;})` ควรคืนค่าเป็น `[3, 9, 2]`.
 
 ```js
 assert.deepEqual(

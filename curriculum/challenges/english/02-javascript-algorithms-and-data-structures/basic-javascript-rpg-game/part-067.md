@@ -7,9 +7,9 @@ dashedName: part-67
 
 # --description--
 
-You can insert variables into a string with the concatenation (`+`) operator. Update the "You now have a new weapon." string so it says "You now have a " and then lists the name of the new weapon. Make sure to add a period at the end of the sentence.
+คุณสามารถนำตัวแปรมาต่อกับ string ด้วย `+` operator จงปรับแก้ string "You now have a new weapon." ให้เป็น "You now have a " แล้วตามด้วยชื่อของอาวุธใหม่ อย่าลืมเติมจุด (.) เพื่อจบประโยคด้วย
 
-Here is an example that creates the string "Hello, our name is freeCodeCamp.":
+ต่อไปนี้เป็นตัวอย่างที่สร้าง string "Hello, our name is freeCodeCamp.":
 
 ```js
 let ourName = "freeCodeCamp";
@@ -18,7 +18,7 @@ let ourStr = "Hello, our name is " + ourName + ".";
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

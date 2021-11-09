@@ -8,7 +8,7 @@ dashedName: understand-the-prototype-chain
 
 # --description--
 
-All objects in JavaScript (with a few exceptions) have a `prototype`. Also, an object’s `prototype` itself is an object.
+ทุก JavaScript object (มีเพียงบาง object ที่ยกเว้น) มี `prototype` นอกจากนี้ `prototype` ของ object เอง ก็ยังเป็น object
 
 ```js
 function Bird(name) {
@@ -18,28 +18,28 @@ function Bird(name) {
 typeof Bird.prototype;
 ```
 
-Because a `prototype` is an object, a `prototype` can have its own `prototype`! In this case, the `prototype` of `Bird.prototype` is `Object.prototype`:
+เนื่องจาก `prototype` เป็น object ดังนั้น `prototype` จึงมี `prototype` ของตัวเองได้ ในกรณีนี้ `prototype` ของ `Bird.prototype` เป็น `Object.prototype`:
 
 ```js
 Object.prototype.isPrototypeOf(Bird.prototype);
 ```
 
-How is this useful? You may recall the `hasOwnProperty` method from a previous challenge:
+คำสั่งนี้มีประโยชน์ไหม? คุณอาจจำ `hasOwnProperty` method ได้ จากแบบทดสอบที่แล้ว
 
 ```js
 let duck = new Bird("Donald");
 duck.hasOwnProperty("name");
 ```
 
-The `hasOwnProperty` method is defined in `Object.prototype`, which can be accessed by `Bird.prototype`, which can then be accessed by `duck`. This is an example of the `prototype` chain. In this `prototype` chain, `Bird` is the `supertype` for `duck`, while `duck` is the `subtype`. `Object` is a `supertype` for both `Bird` and `duck`. `Object` is a `supertype` for all objects in JavaScript. Therefore, any object can use the `hasOwnProperty` method.
+`hasOwnProperty` method มีการกำหนดใน `Object.prototype` ซึ่งสามารถเข้าถึงได้โดย `Bird.prototype` และสามารถเข้าถึงได้โดย `duck` ซึ่งตัวอย่างนี้เรียกว่า `prototype` chain โดยใน `prototype` chain นั้น `Bird` คือ `supertype` ของ `duck` ในขณะที่ `duck` คือ `subtype` ส่วน `Object` คือ `supertype` ของทั้ง `Bird` และ `duck` อีกทั้ง `Object` ก็เป็น `supertype` ของทุก object ใน JavaScript ด้วย ดังนั้น ทุก object จึงสามารถเรียกใช้ `hasOwnProperty` method ได้
 
 # --instructions--
 
-Modify the code to show the correct prototype chain.
+จงแก้ไขโค้ดเพื่อแสดง prototype chain ที่ถูกต้อง
 
 # --hints--
 
-Your code should show that `Object.prototype` is the prototype of `Dog.prototype`
+โค้ดของคุณควรแสดงว่า `Object.prototype` คือ prototype ของ `Dog.prototype`
 
 ```js
 assert(/Object\.prototype\.isPrototypeOf/.test(code));

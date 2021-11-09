@@ -7,7 +7,7 @@ dashedName: part-68
 
 # --description--
 
-Way back at the beginning you created the `inventory` array. Push the `newWeapon` onto the end of the `inventory` array. Here is an example of pushing onto an array:
+ย้อนไปตั้งแต่เริ่มที่คุณได้สร้าง `inventory` array ให้ทำการเพิ่ม `newWeapon` ที่ท้ายสุดของ `inventory` array ต่อไปนี้เป็นตัวอย่างการเพิ่มที่ท้ายสุดของ array โดยใช้ method push:
 
 ```js
 let arr = ["first"];
@@ -18,7 +18,7 @@ arr.push(next);
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 buyWeapon(), assert.deepStrictEqual(inventory, ['stick', 'dagger']);

@@ -7,11 +7,11 @@ dashedName: part-21
 
 # --description--
 
-Now, assign the result of calling `infixEval` with `str` and `regex` to `str2`. Return `str2`.
+จงนำผลลัพธ์ที่ได้จากการเรียกฟังก์ชัน `infixEval` ที่มี argument เป็น `str` และ `regex` ไปกำหนดค่าให้กับตัวแปร `str2` แล้วคืนค่าเป็น `str2`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(highPrecedence('7*6') === '42' && highPrecedence('50/25') === '2');

@@ -7,11 +7,11 @@ dashedName: part-117
 
 # --description--
 
-After the `lose` function, create a function called `winGame`. Inside the `winGame` function, call the `update` function and pass in `locations[6]`.
+ถัดจากฟังก์ชัน `lose` ให้สร้างฟังก์ชันชื่อ `winGame` ภายในฟังก์ชัน `winGame` ให้เรียกฟังก์ชัน `update` แล้วส่งค่า `locations[6]` เข้าไป
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(winGame.toString().replace(/\s/g, '').includes('update(locations[6])'));

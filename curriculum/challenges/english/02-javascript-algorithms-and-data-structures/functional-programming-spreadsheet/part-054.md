@@ -7,11 +7,11 @@ dashedName: part-54
 
 # --description--
 
-Define a function `rangeFromString` in `evalFormula` which takes `n1` and `n2` as arguments and returns `n1`.
+กำหนดฟังก์ชัน `rangeFromString` ภายใน `evalFormula` ซึ่งรับค่า `n1` และ `n2` เป็น arguments แล้วคืนค่าเป็น `n1`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

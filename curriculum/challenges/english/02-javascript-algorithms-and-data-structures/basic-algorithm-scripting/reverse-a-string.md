@@ -8,33 +8,33 @@ dashedName: reverse-a-string
 
 # --description--
 
-Reverse the provided string.
+แบบทดสอบนี้ต้องการให้กลับตัวอักษรของ string จากขวาไปซ้าย
 
-You may need to turn the string into an array before you can reverse it.
+คุณอาจต้องแปลง string ให้เป็น array ก่อน จึงจะสามารถกลับตัวอักษรจากขวาไปซ้ายได้
 
-Your result must be a string.
+ผลลัพธ์ที่ได้ต้องเป็น string
 
 # --hints--
 
-`reverseString("hello")` should return a string.
+`reverseString("hello")` ควรคืนค่าเป็น string
 
 ```js
 assert(typeof reverseString('hello') === 'string');
 ```
 
-`reverseString("hello")` should return the string `olleh`.
+`reverseString("hello")` ควรคืนค่าเป็น string `olleh`.
 
 ```js
 assert(reverseString('hello') === 'olleh');
 ```
 
-`reverseString("Howdy")` should return the string `ydwoH`.
+`reverseString("Howdy")` ควรคืนค่าเป็น string `ydwoH`.
 
 ```js
 assert(reverseString('Howdy') === 'ydwoH');
 ```
 
-`reverseString("Greetings from Earth")` should return the string `htraE morf sgniteerG`.
+`reverseString("Greetings from Earth")` ควรคืนค่าเป็น string `htraE morf sgniteerG`.
 
 ```js
 assert(reverseString('Greetings from Earth') === 'htraE morf sgniteerG');

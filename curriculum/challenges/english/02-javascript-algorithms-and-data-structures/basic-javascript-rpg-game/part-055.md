@@ -7,9 +7,9 @@ dashedName: part-55
 
 # --description--
 
-Now when a player tries to buy health it will only work if they have enough money. If the player does not have enough money, nothing will happen. Add an `else` statement where you can put code to run if a player dees not have enough money.
+เมื่อผู้เล่นจะซื้อ health ได้ก็ต่อเมื่อมีเงินเพียงพอ แต่ถ้าผู้เล่นมีเงินไม่พอ ก็ต้องไม่มีอะไรเกิดขึ้น จงเพิ่ม `else` statement เพื่อรันกรณีที่ผู้เล่นมีเงินไม่พอ
 
-Here is an example of an empty `else` statement:
+ต่อไปนี้เป็นตัวอย่างของ empty `else` statement:
 
 ```js
 if (num >= 5) {
@@ -20,7 +20,7 @@ if (num >= 5) {
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(buyHealth.toString().match(/\}\s*else\s*\{\s*\}/));

@@ -7,7 +7,7 @@ dashedName: part-4
 
 # --description--
 
-Create the `calculate` function that will hold the code to sum up the user's calorie inputs. Leave the body blank for now. Here is an example of an empty function called `square`:
+จงสร้างฟังก์ชัน `calculate` ที่คำนวณจำนวนคลอรี่ที่ผู้ใช้งานกรอกเข้ามา ตอนนี้ปล่อยให้โค้ดส่วน body ว่างไปก่อน ต่อไปนี้เป็นตัวอย่างของ empty function ชื่อ `square`:
 
 ```js
 function square() {}
@@ -15,7 +15,7 @@ function square() {}
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(typeof calculate === 'function');

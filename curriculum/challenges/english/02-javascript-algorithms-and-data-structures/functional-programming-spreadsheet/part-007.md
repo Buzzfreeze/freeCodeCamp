@@ -7,19 +7,19 @@ dashedName: part-7
 
 # --description--
 
-This is possible because the anonymous function has been immediately assigned to a value - this is effectively the same as using a named function.
+แม้ anonymous function กำหนดค่าให้กับตัวแปรได้ แต่จริงๆ แล้วก็ทำงานได้เหมือนกับการใช้ฟังก์ชันปกติ
 
-Rewrite `addVar` using ES6's arrow syntax:
+จงเขียน `addVar` ใหม่ โดยใช้ arrow syntax ใน ES6:
 
 ```js
 const fn = (x, y) => x;
 ```
 
-Note that the value is returned implicitly.
+หมายเหตุ จากตัวอย่างมีการคืนค่าออกมาด้วย
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('constaddVar=(x,y)=>x+y'));

@@ -8,31 +8,31 @@ dashedName: learn-about-functional-programming
 
 # --description--
 
-Functional programming is a style of programming where solutions are simple, isolated functions, without any side effects outside of the function scope: `INPUT -> PROCESS -> OUTPUT`
+Functional programming เป็นรูปแบบนึงของการเขียนโปรแกรมที่มีความเรียบง่าย, มีความโดดเดียว (isolated functions) กล่าวคือ ไม่ก่อให้เกิดผลกระทบต่อข้อมูลที่อยู่ภายนอกขอบเขตของฟังก์ชัน (function scope) นั่นคือ ทำเพียง `INPUT -> PROCESS -> OUTPUT`
 
-Functional programming is about:
+Functional programming เป็นเรื่องเกี่ยวกับ
 
-1) Isolated functions - there is no dependence on the state of the program, which includes global variables that are subject to change
+1) Isolated functions - ไม่ขึ้นอยู่กับ state ของ program รวมถึงไม่มีการแก้ไขตัวแปร global ที่อยู่ภายนอกฟังก์ชัน
 
-2) Pure functions - the same input always gives the same output
+2) Pure functions - ค่าที่ส่งออกมาจากฟังก์ชัน (return value) ต้องเป็นค่าเดิมเสมอ ถ้าส่งค่า Input เดิมเข้าไป
 
-3) Functions with limited side effects - any changes, or mutations, to the state of the program outside the function are carefully controlled
+3) Functions with limited side effects - การเปลี่ยนแปลง state ของ program ที่อยู่ภายนอกฟังก์ชันจะต้องมีการควบคุมอย่างระมัดระวัง
 
 # --instructions--
 
-The members of freeCodeCamp happen to love tea.
+สมาชิกของ freeCodeCamp ชอบรับประทานชา
 
-In the code editor, the `prepareTea` and `getTea` functions are already defined for you. Call the `getTea` function to get 40 cups of tea for the team, and store them in the `tea4TeamFCC` variable.
+ใน code editor มีการกำหนดฟังก์ชัน `prepareTea` และ `getTea` ไว้ให้คุณแล้ว ให้คุณเรียกฟังก์ชัน `getTea` เพื่อทำชา 40 ถ้วย แล้วนำไปเก็บไว้ที่ตัวแปร `tea4TeamFCC`
 
 # --hints--
 
-The `tea4TeamFCC` variable should hold 40 cups of tea for the team.
+ตัวแปร `tea4TeamFCC` ควรเก็บชา 40 ถ้วยให้กับทีม
 
 ```js
 assert(tea4TeamFCC.length === 40);
 ```
 
-The `tea4TeamFCC` variable should hold cups of green tea.
+ตัวแปร `tea4TeamFCC` ควรเก็บค่าที่เป็น 'greenTea'
 
 ```js
 assert(tea4TeamFCC[0] === 'greenTea');

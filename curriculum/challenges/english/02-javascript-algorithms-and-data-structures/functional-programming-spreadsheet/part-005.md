@@ -7,7 +7,7 @@ dashedName: part-5
 
 # --description--
 
-Anonymous functions are functions without names - they are used only once and then forgotten. The syntax is the same as for normal functions but without the name:
+Anonymous functions คือฟังก์ชันที่ไม่มีชื่อ มักถูกเรียกเพียงครั้งเดียวจบ โดย syntax เหมือนกับฟังก์ชันทั่วไปแต่ไม่มีชื่อ
 
 ```js
 function(x) {
@@ -15,11 +15,11 @@ function(x) {
 }
 ```
 
-First, remove the `addVar` definition.
+ขั้นแรก ให้ลบบรรทัดที่ประกาศตัวแปร `addVar` ออก
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(!code.replace(/\s/g, '').includes('constaddVar=add'));

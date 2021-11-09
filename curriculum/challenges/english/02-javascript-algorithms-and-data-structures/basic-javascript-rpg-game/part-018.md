@@ -7,11 +7,11 @@ dashedName: part-18
 
 # --description--
 
-Similar to the `goStore` function, create a `goCave` function that prints "Going to cave." to the console.
+เหมือนกับฟังก์ชัน `goStore` จงสร้างฟังก์ชัน `goCave` ที่พิมพ์ "Going to cave." ที่หน้า console
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

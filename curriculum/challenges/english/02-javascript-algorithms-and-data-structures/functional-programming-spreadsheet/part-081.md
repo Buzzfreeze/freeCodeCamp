@@ -7,11 +7,11 @@ dashedName: part-81
 
 # --description--
 
-Inside `createLabel`, assign `document.createElement("div")` to `label`.
+ภายใน `createLabel` กำหนดค่า `document.createElement("div")` ให้กับ `label`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

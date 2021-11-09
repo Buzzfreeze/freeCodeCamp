@@ -7,11 +7,11 @@ dashedName: part-63
 
 # --description--
 
-Now update the `innerText` property of `goldText` and `text`. `text` should equal "You now have a new weapon.".
+ตอนนี้ให้เปลี่ยนค่า `innerText` property ของ `goldText` และ `text` โดย `text` ควรมีค่าเป็น "You now have a new weapon."
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 buyWeapon(),

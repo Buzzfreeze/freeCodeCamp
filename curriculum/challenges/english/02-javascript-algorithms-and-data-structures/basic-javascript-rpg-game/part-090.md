@@ -7,11 +7,11 @@ dashedName: part-90
 
 # --description--
 
-At the end of the code create empty functions named `attack` and `dodge`.
+ต่อจากโค้ดบรรทัดสุดท้าย ให้สร้าง empty functions ชื่อ `attack` และ `dodge`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(typeof attack === 'function' && typeof dodge === 'function');

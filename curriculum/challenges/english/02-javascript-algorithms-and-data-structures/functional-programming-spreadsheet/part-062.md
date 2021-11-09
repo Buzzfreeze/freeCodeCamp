@@ -7,11 +7,11 @@ dashedName: part-62
 
 # --description--
 
-Now, remove the curly braces and return statement.
+ตอนนี้ให้นำ {} และ return statement ออก
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

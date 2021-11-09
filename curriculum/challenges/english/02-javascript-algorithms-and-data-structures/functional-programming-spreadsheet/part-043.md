@@ -7,7 +7,7 @@ dashedName: part-43
 
 # --description--
 
-The `concat` method can also accept arrays:
+`concat` method สามารถรับค่าเป็น arrays ได้
 
 ```js
 [1,2,3].concat([4, 5]); // [1, 2, 3, 4, 5]
@@ -18,7 +18,7 @@ Use this form of `concat` by passing an array with just `end` to it: `arr.concat
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('returnarr.concat([end])'));

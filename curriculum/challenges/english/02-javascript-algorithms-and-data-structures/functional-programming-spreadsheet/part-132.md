@@ -7,11 +7,11 @@ dashedName: part-132
 
 # --description--
 
-Add a return statement to `median` so that it returns `isEven(length)`.
+เพิ่ม return statement ให้กับ `median` เพื่อให้คืนค่าเป็น `isEven(length)`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(median([1, 2, 3, 4]) && !median([1, 2, 3]));

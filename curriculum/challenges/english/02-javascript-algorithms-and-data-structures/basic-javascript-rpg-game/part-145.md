@@ -7,13 +7,13 @@ dashedName: part-145
 
 # --description--
 
-The second statement in a `for` loop, the condition statement, is evaluated at the beginning of every loop iteration. The loop will continue as long as it evaluates to true.
+statement ที่สองของ `for` loop คือ statement ที่เป็นเงื่อนไข ซึ่งตรวจสอบค่าก่อนรัน loop ทุกรอบ โดย loop จะรันไปเรื่อยๆ ตราบที่เงื่อนไขที่ตรวจสอบให้ผลเป็น true
 
-We want the loop to run 10 times, so change `x < 5` to `i < 10`.
+เราต้องการ loop ที่รัน 10 รอบ ดังนั้นให้แก้จาก `x < 5` เป็น `i < 10`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(pick.toString().replace(/\s/g, '').includes('for(vari=0;i<10;x++){'));

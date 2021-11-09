@@ -7,9 +7,9 @@ dashedName: part-102
 
 # --description--
 
-An `else` statement can be conditional with an `else if` statement. At the end of the `if` statement, add an `else if` statement to check if `monsterHealth` is less than or equal to zero. Inside the `else if` block, call the `defeatMonster()` function.
+`else` statement สามารถใช้ร่วมกับ `else if` statement ได้ ต่อจาก `if` statement ให้เพิ่ม `else if` statement เพื่อเช็คว่า `monsterHealth` มีค่าน้อยกว่าหรือเท่ากับ 0 หรือไม่ และภายใน `else if` block ให้เรียกฟังก์ชัน `defeatMonster()`
 
-Here is an example of an `if` statement with `else if` and `else`:
+ต่อไปนี้เป็นตัวอย่างของ `if` statement ที่มี `else if` และ `else`:
 
 ```js
 if (num > 15) {
@@ -23,7 +23,7 @@ if (num > 15) {
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

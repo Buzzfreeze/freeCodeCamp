@@ -7,11 +7,11 @@ dashedName: part-57
 
 # --description--
 
-Before we write the code for the `buyWeapon` function, use `const` to create a `weapons` variable right above the `locations` array. Set it to equal an empty array.
+ก่อนที่เราจะเขียนโค้ดฟังก์ชัน `buyWeapon` ให้ใช้ `const` เพื่อสร้างตัวแปร `weapons` โดยให้วางไว้ก่อน `locations` array จากนั้นกำหนดให้มีค่าเป็น an empty array
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert.deepStrictEqual(weapons, []);

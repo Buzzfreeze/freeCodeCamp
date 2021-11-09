@@ -7,13 +7,13 @@ dashedName: part-12
 
 # --description--
 
-Here are the ids of the other HTML elements that we want a reference to in the JavaScript code: `button2`, `button3`, `text`, `xpText`, `healthText`, `goldText`, `monsterStats`, `monsterNameText`, `monsterHealthText`.
+id ของ HTML elements ต่อไปนี้ที่เราต้องการอ้างถึง (reference) ใน JavaScript code: `button2`, `button3`, `text`, `xpText`, `healthText`, `goldText`, `monsterStats`, `monsterNameText`, `monsterHealthText`
 
-Just like you did with `storeButton`, create variables and set them equal to the element references.
+เช่นเดียวกับ `storeButton` ให้ทำการสร้างตัวแปรและกำหนดให้อ้างถึง element แต่ละตัว
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

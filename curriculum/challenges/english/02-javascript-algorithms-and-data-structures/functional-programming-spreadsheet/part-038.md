@@ -7,11 +7,11 @@ dashedName: part-38
 
 # --description--
 
-Now use the ternary operator in the last line to return `applyFunction(fn, args)` if the statement is true, and `match` otherwise.
+ตอนนี้ให้ใช้ ternary operator ในบรรทัดสุดท้าย เพื่อคืนค่า `applyFunction(fn, args)` หากเงื่อนไขเป็นจริง และคืนค่า `match` หากเงื่อนไขเป็นเท็จ
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(applyFn('2+2*2') === '6' && applyFn('(2+2)*2') === '4*2');

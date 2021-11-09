@@ -7,11 +7,11 @@ dashedName: part-107
 
 # --description--
 
-Update the recursive call to `evalFormula` by passing in `cells` as the second argument.
+อัปเดต recursive call ให้เป็น `evalFormula` โดยส่งค่า `cells` เป็น argument mี่สอง
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('evalFormula(functionExpanded,cells)'));

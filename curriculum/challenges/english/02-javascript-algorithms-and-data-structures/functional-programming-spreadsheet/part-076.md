@@ -7,11 +7,11 @@ dashedName: part-76
 
 # --description--
 
-Set `functionExpanded` to `applyFn(varExpanded)` in `evalFormula`. Return `functionExpanded`.
+กำหนด `functionExpanded` มีค่าเป็น `applyFn(varExpanded)` ภายใน `evalFormula` แล้วคืนค่าเป็น `functionExpanded`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.includes('functionExpanded') && applyFn('2+2') === '4');

@@ -7,13 +7,13 @@ dashedName: part-129
 
 # --description--
 
-The player should hit if either `Math.random() > .2` OR if the player's health is less than 20. At the end of the return statement, add the "logical or" operator (`||`) and then check if `health` is less than 20.
+ผู้เล่นควรจู่โจม หากถ้า `Math.random() > .2` หรือถ้า health ของผู้เล่นมีค่าน้อยกว่า 20 ตรง return statement ให้เพิ่ม operator (`||`) เพื่อเช็คว่า `health` มีค่าน้อยกว่า 20 หรือไม่
 
-Here is an example that returns true if either a number is less than 10 or more than 20: `num < 10 || num > 20`.
+ต่อไปนี้คือตัวอย่างที่คืนค่า true ถ้าตัวเลขมีค่าน้อยหว่า 10 หรือมากกว่า 20: `num < 10 || num > 20`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

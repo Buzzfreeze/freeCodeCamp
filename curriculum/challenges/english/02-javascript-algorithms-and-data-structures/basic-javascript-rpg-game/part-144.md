@@ -7,15 +7,15 @@ dashedName: part-144
 
 # --description--
 
-For loops are declared with three optional expressions separated by semicolons: `for ([initialization]; [condition]; [final-expression])`.
+For loops ประกอบด้วย 3 expressions แต่ละ expression คั่นด้วย semicolons: `for ([initialization]; [condition]; [final-expression])`
 
-The initialization statement is executed only one time before the loop starts and is often used to define and set up the loop variable. Think of it like declaring a variable to use as a counter in your `for` loop.
+initialization statement ถูกรันเพียงครั้งเดียวก่อนเริ่ม loop และมักใช้ในการประกาศและกำหนดค่าตัวแปร loop ให้มองว่ามันเหมือนกับการประกาศตัวแปรที่ใช้เป็น counter ภายใน `for` loop 
 
-Many `for` loops use `i` as an initializer and start from 0, so change `let x = 1;` to `let i = 0;`.
+สำหรับ `for` loops เรามักกำหนดให้ `i` เป็นตัวแปรที่กำหนดค่าเริ่มต้น และมีค่าเริ่มจาก 0 ดังนั้น จงเปลี่ยน `let x = 1;` เป็น `let i = 0;`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(pick.toString().replace(/\s/g, '').includes('for(vari=0;x<5;x++){'));

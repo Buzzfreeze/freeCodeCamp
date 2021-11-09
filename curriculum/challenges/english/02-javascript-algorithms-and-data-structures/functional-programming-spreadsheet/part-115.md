@@ -7,13 +7,13 @@ dashedName: part-115
 
 # --description--
 
-The `slice` method can also work on arrays.
+`slice` method สามารถใช้กับ array ได้ด้วย
 
-Add a method `firsttwo` to `spreadsheetFunctions` which takes `arr` as argument and uses `slice` to return the first two elements of `arr`.
+จงเพิ่ม method `firsttwo` ใน `spreadsheetFunctions` ซึ่งรับ `arr` เป็น argument และใช้ `slice` เพื่อคืนค่าเป็น 2 elements แรกของ `arr`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

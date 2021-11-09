@@ -7,11 +7,11 @@ dashedName: part-100
 
 # --description--
 
-Update `healthText.innerText` and `monsterHealthText.innerText` to equal `health` and `monsterHealth`.
+อัปเดต `healthText.innerText` และ `monsterHealthText.innerText` ให้เท่ากับ `health` และ `monsterHealth`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 (xp = 1),

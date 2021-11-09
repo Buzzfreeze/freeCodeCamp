@@ -7,11 +7,11 @@ dashedName: part-28
 
 # --description--
 
-Below the list of `const` variables, create a new `const` variable called `locations`. Set it to equal an empty array. This will be used to store all the data for the locations in the game.
+ต่อจากลิสต์ของตัวแปร `const` ให้สร้างตัวแปร `const` อีกตัวชื่อ `locations` กำหนดให้มีค่าเท่ากับ empty array โดยตัวแปรนี้จะใช้เก็บข้อมูลของสถานที่ (location) ในเกม
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(Array.isArray(locations) && locations.length === 0);

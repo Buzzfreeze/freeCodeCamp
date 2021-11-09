@@ -7,15 +7,15 @@ dashedName: part-21
 
 # --description--
 
-To track how the `reduce()` function works, log the values of the `accumulator` and `currentValue` in the callback function before the `return` statement like this: `console.log({ accumulator })`
+เพื่อตรวจดูว่าฟังก์ชัน `reduce()` ทำงานอย่างไร ให้ log ค่าของ `accumulator` และ `currentValue` ใน callback function ก่อน `return` statement ดังนี้: `console.log({ accumulator })`
 
-You can also check your progress by adding `console.log({ total })` at the end of the `calculate()` function.
+คุณสามารถตรวจสอบการทำงาน โดยการเพิ่ม `console.log({ total })` ที่บรรทัดสุดท้ายของฟังก์ชัน `calculate()`
 
-When you enter calorie values in the form and push the Calculate button, you will see the values of `accumulator` and `currentValue` in each iteration of the `reduce()` callback function.
+เมื่อคุณกรอกค่าแคลอรี่ใน form และกดปุ่ม Calculate คุณจะเห็นค่าของ `accumulator` and `currentValue` ในแต่ละรอบของ `reduce()` callback function
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').match(/console.log\({accumulator}\)/));

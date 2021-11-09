@@ -7,11 +7,11 @@ dashedName: part-50
 
 # --description--
 
-After gold is subtracted, add ten to health.
+หลังจากที่ลด gold ลง ก็ให้เพิ่ม health ขึ้นอีก 10
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 buyHealth(), assert(gold === 40 && health === 110);

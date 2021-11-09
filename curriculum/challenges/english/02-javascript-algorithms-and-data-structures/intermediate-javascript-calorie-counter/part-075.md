@@ -7,13 +7,13 @@ dashedName: part-75
 
 # --description--
 
-Finally, it's time to clear the other calories that may have been entered for Breakfast, Lunch, and Dinner. This can be achieved by calling the `reset()` method on the form.
+สุดท้ายนี้ ถึงเวลาที่ต้องเคลียร์ค่า calories ต่างๆ ที่กรอกมาใน Breakfast, Lunch, และ Dinner ซึ่งสามารถทำได้ โดยการเรียก `reset()` method บน form
 
-Get a reference to the document element with the `id` of `calorie-form` and chain the `reset()` method to it.
+จงอ้างถึง document element ที่มี `id` เป็น `calorie-form` และ chain `reset()` method กับ element นี้
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

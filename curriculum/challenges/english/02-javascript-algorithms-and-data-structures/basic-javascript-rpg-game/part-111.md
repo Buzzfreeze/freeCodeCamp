@@ -7,11 +7,11 @@ dashedName: part-111
 
 # --description--
 
-While you're working in the `locations` array, add another object at the end. Set `name` to "lose". Set `"button text"` to `["REPLAY?", "REPLAY?", "REPLAY?"]`. Set `"button functions"` to `[restart, restart, restart]`. And set `text` to "You die. ☠️".
+ใน `locations` array ให้เพิ่ม object อีกตัวนึงเข้าไปท้ายสุด แล้วกำหนด `name` มีค่าเป็น "lose" กำหนด `"button text"` มีค่าเป็น `["REPLAY?", "REPLAY?", "REPLAY?"]` กำหนด `"button functions"` มีค่าเป็น `[restart, restart, restart]` และกำหนด `text` มีค่าเป็น "You die. ☠️".
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert.deepStrictEqual(locations[5], {

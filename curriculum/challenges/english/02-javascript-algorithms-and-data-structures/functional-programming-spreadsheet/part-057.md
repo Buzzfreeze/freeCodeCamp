@@ -7,11 +7,11 @@ dashedName: part-57
 
 # --description--
 
-Now define a function `elemValue`, which takes an argument `n` and returns `n`. Use the curly brace arrow function syntax.
+ตอนนี้ให้กำหนดฟังก์ชัน `elemValue` ที่มี argument `n` และคืนค่าเป็น `n` กำหนดให้ใช้  {} และ arrow function syntax
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

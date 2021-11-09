@@ -7,13 +7,13 @@ dashedName: part-136
 
 # --description--
 
-At the end of the code, add two new functions named `pickTwo` and `pickEight`.
+ต่อจากโค้ดบรรทัดสุดท้าย จงเพิ่มฟังก์ชันใหม่ชื่อ `pickTwo` และ `pickEight`.
 
-Inside each function call the `pick()` function. Pass either "2" or "8" as arguments to `pick` depending on the function name.
+ภายในแต่ละฟังชัน ให้เรียกฟังก์ชัน `pick()` แล้วส่งค่า "2" หรือ "8" เป็น arguments เข้าไปใน `pick` ซึ่งจะเป็น "2" หรือ "8" นั้นขึ้นอยู่กับชื่อฟังก์ชัน
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

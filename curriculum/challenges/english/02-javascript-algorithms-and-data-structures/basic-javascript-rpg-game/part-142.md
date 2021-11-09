@@ -7,11 +7,11 @@ dashedName: part-142
 
 # --description--
 
-Before the final end quote in the string you just added, insert the new line escape sequence (`\n`). This will cause the next part you add to `text.innerText` to appear on a new line.
+ก่อนจบตัว quote (") สุดท้ายของ string ที่คุณเพิ่งเพิ่มเข้าไป ให้ใส่ new line escape sequence (`\n`) ซึ่งจะทำให้ส่วนถัดไปใน `text.innerText` ขึ้นบรรทัดใหม่
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

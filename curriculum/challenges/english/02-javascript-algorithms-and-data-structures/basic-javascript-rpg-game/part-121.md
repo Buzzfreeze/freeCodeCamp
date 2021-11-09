@@ -7,11 +7,11 @@ dashedName: part-121
 
 # --description--
 
-The attack of the monster will be based on the monster's level and player's `xp`. In the `getMonsterAttackValue` function, use `const` to create a variable called `hit`. Set it to equal the equation `(level * 5) - (Math.floor(Math.random() * xp))`.
+ความรุนแรงของการโจมตีของสัตว์ประหลาดขึ้นกับระกับของสัตว์ประหลาด (monster's level) และค่า `xp` ของผู้เล่น ภายในฟังก์ชัน `getMonsterAttackValue` ให้ใช้ `const` เพื่อสร้างตัวแปรชื่อ `hit` และกำหนดค่าเท่ากับ `(level * 5) - (Math.floor(Math.random() * xp))`.
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

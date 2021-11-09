@@ -7,11 +7,11 @@ dashedName: part-58
 
 # --description--
 
-Just like in the `locations` array, all the elements in `weapons` will be objects. Add four objects to the `weapons` array, each with two properties: `name` and `power`. The first should be the `name` "stick" with `power` set to 5. Then, "dagger" with set `power` to 30. Next, "claw hammer" with a `power` of 50. Finally, "sword" with a `power` of 100.
+element ทุกตัวใน `weapons` array จะเป็น object เช่นเดียวกับ `locations` array จงเพิ่ม object 4 ตัวเข้าไปใน `weapons` array แต่ละ object มี 2 properties: `name` และ `power` โดย object แรก มี `name` เป็น "stick" และ `power` เป็น 5, object ที่สอง "dagger" มี `power` เป็น 30, object ที่สาม "claw hammer" มี `power` เป็น 50 และสุดท้าย "sword" มี `power` เป็น 100
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert.deepStrictEqual(weapons, [

@@ -11,15 +11,15 @@ dashedName: >-
 
 # --description--
 
-In the previous challenge, `bird` had a public property `name`. It is considered public because it can be accessed and changed outside of `bird`'s definition.
+จากแบบทดสอบที่แล้ว `bird` มี public property ที่ชื่อว่า `name` สาเหตุที่เป็น public เพราะว่าสามารถเข้าถึงและเปลี่ยนแปลงจากภายนอกของ `bird` ได้ (outside of `bird`'s definition)
 
 ```js
 bird.name = "Duffy";
 ```
 
-Therefore, any part of your code can easily change the name of `bird` to any value. Think about things like passwords and bank accounts being easily changeable by any part of your codebase. That could cause a lot of issues.
+ดังนั้น คุณสามารถแก้ไข name ของ `bird` ด้วยโค้ดส่วนไหนก็ได้อย่างง่ายดาย ให้นึกถึงรหัสผ่านและเลขบัญชี หากสามารถเปลี่ยนแปลงได้โดยง่าย นั่นทำให้เกิดปัญหามากมาย
 
-The simplest way to make this public property private is by creating a variable within the constructor function. This changes the scope of that variable to be within the constructor function versus available globally. This way, the variable can only be accessed and changed by methods also within the constructor function.
+วิธีการที่ง่ายที่สุดที่ทำให้ public property กลายเป็น private ก็คือการสร้างตัวแปรภายในฟังก์ชัน constructor วิธีนี้เป็นการเปลี่ยนแปลงขอบเขตของตัวแปรให้อยู่ภายในฟังก์ชัน constructor แทนที่จะเปิดให้เป็น global ซึ่งวิธีการนี้จะทำให้ตัวแปรสามารถเข้าถึงและเปลี่ยนแปลงโดย method ที่อยู่ภายในฟังก์ชัน constructor เท่านั้น
 
 ```js
 function Bird() {
@@ -33,27 +33,27 @@ let ducky = new Bird();
 ducky.getHatchedEggCount();
 ```
 
-Here `getHatchedEggCount` is a privileged method, because it has access to the private variable `hatchedEgg`. This is possible because `hatchedEgg` is declared in the same context as `getHatchedEggCount`. In JavaScript, a function always has access to the context in which it was created. This is called `closure`.
+`getHatchedEggCount` เป็น method ที่ได้รับสิทธิ์ในการเข้าถึง private variable `hatchedEgg` เนื่องจาก `hatchedEgg` ถูกกำหนดในบริบท (context) เดียวกันกับ `getHatchedEggCount` ซึ่งใน JavaScript ฟังก์ชันสามารถเข้าถึงสิ่งต่างๆ ที่อยู่ในบริบท (context) เดียวกันได้เสมอ ลักษณะนี้เรียกว่า `closure`
 
 # --instructions--
 
-Change how `weight` is declared in the `Bird` function so it is a private variable. Then, create a method `getWeight` that returns the value of `weight` 15.
+จงทำให้ `weight` ที่กำหนดในฟังก์ชัน `Bird` เป็นตัวแปร private จากนั้นให้สร้าง method `getWeight` เพื่อคืนค่า `weight` เป็น 15
 
 # --hints--
 
-The `weight` property should be a private variable and should be assigned the value of `15`.
+`weight` property ควรเป็นตัวแปร private และกำหนดให้มีค่าเป็น `15`
 
 ```js
 assert(code.match(/(var|let|const)\s+weight\s*\=\s*15\;?/g));
 ```
 
-Your code should create a method in `Bird` called `getWeight` that returns the value of the private variable `weight`.
+โค้ของควรควรสร้าง method ภายใน `Bird` ที่มีชื่อว่า `getWeight` โดยคืนค่าของตัวแปร private `weight`
 
 ```js
 assert(new Bird().getWeight() === 15);
 ```
 
-Your `getWeight` function should return the private variable `weight`.
+ฟังก์ชัน `getWeight` ควรคืนค่าตัวแปร private `weight`
 
 ```js
 assert(code.match(/((return\s+)|(\(\s*\)\s*\=\>\s*))weight\;?/g));

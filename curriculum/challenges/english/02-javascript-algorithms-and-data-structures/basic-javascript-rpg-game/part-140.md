@@ -7,11 +7,11 @@ dashedName: part-140
 
 # --description--
 
-Inside the `while` loop, push a random number between 0 and 10 onto the end of the `numbers` array. Get the random number with `Math.floor(Math.random() * 11)`.
+ภายใน `while` loop ให้สุ่มเลขระหว่าง 0 และ 10 แล้วนำไปวางที่ตำแหน่งท้ายสุดของ `numbers` array โดยการสุ่มเลขให้ใช้สูตร `Math.floor(Math.random() * 11)`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

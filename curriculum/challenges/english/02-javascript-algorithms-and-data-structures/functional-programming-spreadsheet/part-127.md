@@ -7,11 +7,11 @@ dashedName: part-127
 
 # --description--
 
-Now define a `median` function which takes an argument `nums` (in the global scope).
+ตอนนี้ให้สร้างฟังก์ชัน `median` ที่รับ argument `nums` (อยู่ใน global scope)
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(/constmedian=\(?nums\)?=>/.test(code.replace(/\s/g, '')));

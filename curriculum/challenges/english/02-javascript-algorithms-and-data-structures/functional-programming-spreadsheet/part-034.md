@@ -7,11 +7,11 @@ dashedName: part-34
 
 # --description--
 
-Apply `toNumberList(args)` to `spreadsheetFunctions[fn.toLowerCase()]`.
+ส่งค่า `toNumberList(args)` เป็น argument ของ `spreadsheetFunctions[fn.toLowerCase()]`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

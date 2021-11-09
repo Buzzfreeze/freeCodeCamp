@@ -7,11 +7,11 @@ dashedName: part-33
 
 # --description--
 
-Inside the parentheses of `.createTextNode()`, add `+ ' Calorie '` after `Math.abs(difference))`.
+ภายในวงเล็บของ `.createTextNode()` ให้เพิ่ม `+ ' Calorie '` ต่อจาก `Math.abs(difference))`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

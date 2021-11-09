@@ -7,13 +7,13 @@ dashedName: part-38
 
 # --description--
 
-Next, let's create and add a horizontal rule (`hr`) element to the output.
+ต่อมา ให้สร้างและเพิ่ม horizontal rule (`hr`) element ให้กับ output
 
-Create an `hr` element and assign it to a variable named `line`.
+จงสร้าง `hr` element และกำหนดค่าให้กับตัวแปรชื่อ `line`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

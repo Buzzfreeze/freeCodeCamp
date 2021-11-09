@@ -8,19 +8,19 @@ dashedName: override-inherited-methods
 
 # --description--
 
-In previous lessons, you learned that an object can inherit its behavior (methods) from another object by referencing its `prototype` object:
+ในบทเรียนที่แล้ว คุณได้เรียนรู้ว่า object สามารถสืบทอดพฤติกรรม (methods) มาจาก object อื่น โดยอ้างอิงถึง `prototype` object
 
 ```js
 ChildObject.prototype = Object.create(ParentObject.prototype);
 ```
 
-Then the `ChildObject` received its own methods by chaining them onto its `prototype`:
+จากนั้น `ChildObject` ก็จะได้รับ methods ของตนเอง โดยการ chain (คล้องโซ๋) กับ `prototype`
 
 ```js
 ChildObject.prototype.methodName = function() {...};
 ```
 
-It's possible to override an inherited method. It's done the same way - by adding a method to `ChildObject.prototype` using the same method name as the one to override. Here's an example of `Bird` overriding the `eat()` method inherited from `Animal`:
+อย่างไรก็ตาม เราสามารถ override method (เขียนทับ method) ที่สืบทอดมาได้ โดยทำวิธีเดียวกัน นั่นคือการเพิ่ม method ให้กับ `ChildObject.prototype` โดยการใช้ชื่อ method เดียวกับ method ที่เราจะ override ตัวอย่างต่อไปนี้ที่ `Bird` override `eat()` method ที่สืบทอดจาก `Animal`
 
 ```js
 function Animal() { }
@@ -36,26 +36,26 @@ Bird.prototype.eat = function() {
 };
 ```
 
-If you have an instance `let duck = new Bird();` and you call `duck.eat()`, this is how JavaScript looks for the method on the `prototype` chain of `duck`:
+ถ้าคุณมี instance `let duck = new Bird();` และคุณเรียก `duck.eat()` ต่อไปนี้เป็นวิธีการที่ JavaScript ใช้ค้นหา method ใน `prototype` chain ของ `duck`:
 
-1.  `duck` => Is `eat()` defined here? No.
-2.  `Bird` => Is `eat()` defined here? => Yes. Execute it and stop searching.
-3.  `Animal` => `eat()` is also defined, but JavaScript stopped searching before reaching this level.
-4.  Object => JavaScript stopped searching before reaching this level.
+1.  `duck` => มี `eat()` กำหนดไว้หรือไม่? ไม่มี
+2.  `Bird` => มี `eat()` กำหนดไว้หรือไม่? => มี ทำการรันและหยุดค้นหาต่อ
+3.  `Animal` => มี `eat()` กำหนดไว้เช่นกัน แต่ JavaScript หยุดค้นหาใน step ก่อนหน้านี้แล้ว จึงไม่ได้ทำที่ step นี้
+4.  Object => JavaScript หยุดค้นหาก่อนถึง step นี้
 
 # --instructions--
 
-Override the `fly()` method for `Penguin` so that it returns the string `Alas, this is a flightless bird.`
+จง override `fly()` method ให้กับ `Penguin` เพื่อให้คืนค่า string `Alas, this is a flightless bird.`
 
 # --hints--
 
-`penguin.fly()` should return the string `Alas, this is a flightless bird.`
+`penguin.fly()` ควรคืนค่าเป็น string `Alas, this is a flightless bird.`
 
 ```js
 assert(penguin.fly() === 'Alas, this is a flightless bird.');
 ```
 
-The `bird.fly()` method should return the string `I am flying!`
+`bird.fly()` method ควรคืนค่าเป็น string `I am flying!`
 
 ```js
 assert(new Bird().fly() === 'I am flying!');

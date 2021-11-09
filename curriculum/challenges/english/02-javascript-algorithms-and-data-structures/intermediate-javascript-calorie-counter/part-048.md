@@ -7,17 +7,17 @@ dashedName: part-48
 
 # --description--
 
-Now it's time to add some styling which can be added directly as attributes or classes.
+ตอนนี้ถึงเวลาเพิ่ม style (เสริมแต่งเพิ่มความสวยงาม) แล้ว ซึ่งสามารถเพิ่มเข้าตรงๆ เป็น attributes หรือ classes
 
-In our CSS file, we have a styling rule for any elements with the class name `green-text`.
+ในไฟล์ CSS ของเรา เรามี styling rule สำหรับ elements ใดก็ตามที่มี class name `green-text`
 
-On line **20**, right after creating the `result` element, set the `className` property of `result` to be equal to `'green-text'`.
+ที่บรรทัด **20** ถัดจากการสร้าง `result` element จงกำหนด `className` property ของ `result` ให้มีค่าเท่ากับ `'green-text'`
 
-Now if you submit the form again and inspect the `result` element, you will see it as `<h3 class="green-text">` and notice that the text is now green.
+ตอนนี้ถ้าคุณ submit form อีกครั้ง และ inspect `result` element คุณจะเห็นว่ามันแสดงเป็น `<h3 class="green-text">` และสังเกตว่า ข้อความตอนนี้เป็นสีเขียว
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

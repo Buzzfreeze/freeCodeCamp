@@ -8,15 +8,17 @@ dashedName: use-the-reduce-method-to-analyze-data
 
 # --description--
 
-`Array.prototype.reduce()`, or simply `reduce()`, is the most general of all array operations in JavaScript. You can solve almost any array processing problem using the `reduce` method.
+`Array.prototype.reduce()` หรือเขียนย่อๆ ว่า `reduce()` เป็น method ที่นำมาใช้ได้มากที่สุดใน JavaScript คุณสามารถขจัดปัญหาที่เกิดขึ้นกับ array ได้เกือบทั้งหมดด้วย `reduce` method
 
-The `reduce` method allows for more general forms of array processing, and it's possible to show that both `filter` and `map` can be derived as special applications of `reduce`. The `reduce` method iterates over each item in an array and returns a single value (i.e. string, number, object, array). This is achieved via a callback function that is called on each iteration.
+`reduce` method เป็นรูปแบบที่ใช้กับการทำงานของ array โดยทั่วไป และเป็นไปได้ว่า ทั้ง `filter` และ `map` เป็นรูปแบบพิเศษที่ถ่ายทอดมาจาก `reduce` โดย `reduce` method อ่าน item ทีละตัวใน array แล้วคืนค่าเป็นค่าเดียว (a single value) เช่น string, number, object, array ซึ่งการทำงานนี้ต้องอาศัย callback function ที่รันเมื่อมีการอ่านแต่ละ item
 
-The callback function accepts four arguments. The first argument is known as the accumulator, which gets assigned the return value of the callback function from the previous iteration, the second is the current element being processed, the third is the index of that element and the fourth is the array upon which `reduce` is called.
+callback function รับค่าได้ 4 arguments โดย argument แรก เรียกว่า accumulator (ตัวสะสม) ซึ่งเก็บค่าที่เป็นผลจาก callback function ที่รันในรอบที่แล้ว, argument ที่สองคือ element ปัจจุบันที่กำลังถูกอ่านค่า, argument ที่สามคือ index ของ element นั้นๆ และ argument ที่สี่ คือ array ที่เรียก `reduce` method
 
-In addition to the callback function, `reduce` has an additional parameter which takes an initial value for the accumulator. If this second parameter is not used, then the first iteration is skipped and the second iteration gets passed the first element of the array as the accumulator.
+นอกเหนือจาก callback function แล้ว `reduce` ยังมี parameter อีกตัวนึงที่ใช้กำหนดค่าเริ่มต้นของ accumulator โดย parameter ที่สองจะไม่ถูกใช้งาน หากข้ามการวนรอบแรก แล้วการวนรอบที่สองก็ได้มีการรับค่าจาก element แรกของ array เข้ามาเก็บใน accumulator แล้ว
 
-See below for an example using `reduce` on the `users` array to return the sum of all the users' ages. For simplicity, the example only uses the first and second arguments.
+
+ด้านล่างเป็นตัวอย่างที่ใช้ `reduce` กับ `users` array เพื่อคืนค่าเป็นผลรวมของอายุ users   
+เพื่อให้เห็นภาพได้ง่าย ในตัวอย่างจะใช้เพียง argument แรกและ argument ที่สองเท่านั้น
 
 ```js
 const users = [
@@ -29,9 +31,9 @@ const sumOfAges = users.reduce((sum, user) => sum + user.age, 0);
 console.log(sumOfAges);
 ```
 
-The console would display the value `64`.
+หน้า console ควรแสดงค่า `64`.
 
-In another example, see how an object can be returned containing the names of the users as properties with their ages as values.
+อีกตัวอย่างนึง จะเห็นวิธีที่คืนค่า object ที่มีค่า key เป็นชื่อของ user และ value เป็นอายุ
 
 ```js
 const users = [
@@ -47,15 +49,16 @@ const usersObj = users.reduce((obj, user) => {
 console.log(usersObj);
 ```
 
-The console would display the value `{ John: 34, Amy: 20, camperCat: 10 }`.
+หน้า console ควรแสดงค่า `{ John: 34, Amy: 20, camperCat: 10 }`.
 
 # --instructions--
 
-The variable `watchList` holds an array of objects with information on several movies. Use `reduce` to find the average IMDB rating of the movies directed by `Christopher Nolan`. Recall from prior challenges how to `filter` data and `map` over it to pull what you need. You may need to create other variables, and return the average rating from `getRating` function. Note that the rating values are saved as strings in the object and need to be converted into numbers before they are used in any mathematical operations.
+`watchList` array ประกอบด้วย objects ที่มีข้อมูลเกี่ยวกับภาพยนตร์ จงใช้ `reduce` คำนวณค่าเฉลี่ย IMDB rating ของภาพยนต์ที่กำกับโดย `Christopher Nolan` จากแบบทดสอบก่อนหน้านี้ คุณได้เรียนรู้การใช้ `filter` และ `map` ในการดึงข้อมูลที่คุณต้องการออกมา คุณอาจจำเป็นต้องสร้างตัวแปรอื่นๆ และคืนค่า rating เฉลี่ยจากฟังก์ชัน `getRating`
+หมายเหตุ rating เก็บเป็น string ภายใน object ดังนั้น คุณต้องแปลงให้เป็น number ก่อน ถึงค่อยทำการคำนวณทางคณิตศาสตร์
 
 # --hints--
 
-The `watchList` variable should not change.
+ตัวแปร `watchList` ไม่ควรมีการเปลี่ยนแปลง
 
 ```js
 assert(
@@ -63,25 +66,25 @@ assert(
 );
 ```
 
-Your code should use the `reduce` method.
+โค้ดของคุณควรใช้ `reduce` method
 
 ```js
 assert(code.match(/\.reduce/g));
 ```
 
-The `getRating(watchList)` should equal 8.675.
+`getRating(watchList)` ควรมีค่าเป็น 8.675
 
 ```js
 assert(getRating(watchList) === 8.675);
 ```
 
-Your code should not use a `for` loop.
+คุณไม่ควรใช้ `for` loop
 
 ```js
 assert(!code.match(/for\s*?\([\s\S]*?\)/g));
 ```
 
-Your code should return the correct output after modifying the `watchList` object.
+โค้ดของคุณควรแสดงผลลัพธ์ที่ถูกต้อง หลังจากแก้ไข `watchList` object
 
 ```js
 assert(getRating(watchList.filter((_, i) => i < 1 || i > 2)) === 8.55);

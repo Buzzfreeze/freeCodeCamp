@@ -7,13 +7,13 @@ dashedName: part-119
 
 # --description--
 
-The game could be complete now, but let's make it more interesting.
+ตอนนี้เกมควรจะเสร็จแล้ว แต่มาทำให้น่าสนใจมากขึ้นกันเถอะ
 
-Inside the `attack` function, change the line `health -= monsters[fighting].level;` to `health -= getMonsterAttackValue(monsters[fighting].level);` This sets `health` to equal `health` minus the return value of the `getMonsterAttackValue` function. Also, pass the level of the monster to `getMonsterAttackValue` as an argument.
+ภายในฟังก์ชัน `attack` ให้เปลี่ยนบรรทัด `health -= monsters[fighting].level;` เป็น `health -= getMonsterAttackValue(monsters[fighting].level);` นี่เป็นการกำหนดให้ `health` มีค่าเท่ากับ `health` ลบด้วยค่าที่คืนจากฟังก์ชัน `getMonsterAttackValue` นอกจากนี้ มีการส่งค่า level of the monster เป็น argument ให้กับ `getMonsterAttackValue` ด้วย
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

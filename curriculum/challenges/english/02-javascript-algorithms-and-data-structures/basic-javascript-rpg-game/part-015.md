@@ -7,11 +7,11 @@ dashedName: part-15
 
 # --description--
 
-Now set the `onclick` property of `button2` and `button3`. The second button should be set to `goCave` and the third button should be set to `fightDragon`.
+ตอนนี้ให้ระบุ `onclick` property ที่ `button2` และ `button3` โดยปุ่มที่สองควรกำหนดค่าเป็น `goCave` และปุ่มที่สามกำหนดเป็น `fightDragon`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

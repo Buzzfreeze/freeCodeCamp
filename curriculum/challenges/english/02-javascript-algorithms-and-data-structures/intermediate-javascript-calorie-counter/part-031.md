@@ -7,15 +7,15 @@ dashedName: part-31
 
 # --description--
 
-We can now use the `difference` variable that we created above.
+ตอนนี้ เราจะนำตัวแปร `difference` ที่เราสร้างก่อนหน้านี้มาใช้
 
-Insert the `difference` variable inside the parentheses of `.createTextNode()`
+ให้แทรกตัวแปร `difference` ภายในวงเล็บของ `.createTextNode()`
 
-If you want to see what the text currently looks like, try `console.log(resultText)`.
+ถ้าคุณต้องการเห็นข้อความตอนนี้ว่าเป็นค่าอะไร ให้ใช้ `console.log(resultText)`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

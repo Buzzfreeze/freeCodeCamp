@@ -7,7 +7,7 @@ dashedName: part-19
 
 # --description--
 
-Arrow functions can have multiple statements:
+Arrow functions สามารถมีได้หลาย statements:
 
 ```js
 const fn = (x, y) => {
@@ -16,11 +16,11 @@ const fn = (x, y) => {
 };
 ```
 
-Use this syntax for the `highPrecedence` function.
+จงใช้ syntax นี้สำหรับฟังก์ชัน `highPrecedence`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('highPrecedence=str=>{returnstr'));

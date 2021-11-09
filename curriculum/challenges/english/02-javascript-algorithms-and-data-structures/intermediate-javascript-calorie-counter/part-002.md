@@ -7,15 +7,15 @@ dashedName: part-2
 
 # --description--
 
-In our HTML document, we have a form element with an `id` attribute: `<form id="calorie-form">`
+ใน HTML document เรามี form element ที่มี attribute: `<form id="calorie-form">`
 
-To reference and access this particular form in JavaScript, we can use the getElementById() method on the document and provide the ID.
+การอ้างอิงและเข้าถึง form หนึ่งๆ ในภาษา JavaScript เราสามารถนำ getElementById() method มาใช้และระบุค่า ID 
 
-The code `document.getElementById('my-form')` gets a reference to an HTML element with an `id` of `my-form`. Get a reference to the HTML element with the `id` of `calorie-form`.
+โค้ด `document.getElementById('my-form')` อ้างอิงถึง HTML element ที่มี `id` มีค่าเป็น `my-form` จงอ้างอิงถึง HTML element ที่มี `id` มีค่าเป็น `calorie-form`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-132
 
 # --description--
 
-Decrement the value of `currentWeapon` using `--`. For example, say `num` equals 5. After running `num--`, `num` now equals 4.
+จงลดค่า `currentWeapon` โดยใช้ `--` ตัวอย่างเช่น ถ้า `num` มีค่าเป็น 5 หลังจากรันคำสั่ง `num--` จะทำให้ค่า `num` ตอนนี้มีค่าเท่ากับ 4
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

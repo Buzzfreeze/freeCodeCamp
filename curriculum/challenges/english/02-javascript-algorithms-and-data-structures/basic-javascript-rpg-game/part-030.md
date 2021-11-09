@@ -7,9 +7,9 @@ dashedName: part-30
 
 # --description--
 
-Inside the object you just added, create a property called `name` with the value of "town square".
+ภายใน object ที่คุณเพิ่งเพิ่มเข้าไป ให้สร้าง property `name` ที่มี value เป็น "town square"
 
-For example, here is an example of an array with an object inside that has a property called `name` with a value of "Quincy Larson" (new lines are used only for the purpose of making the code more readable):
+ต่อไปนี้เป็นตัวอย่างของ array ที่มี object อยู่ภายใน ซึ่ง object มี property `name` ที่มี value เป็น "Quincy Larson" (การขึ้นบรรทัดใหม่เพียงเพื่อทำให้โค้ดอ่านง่ายขึ้น):
 
 ```js
 const arr = [
@@ -21,7 +21,7 @@ const arr = [
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(locations[0].name === 'town square');

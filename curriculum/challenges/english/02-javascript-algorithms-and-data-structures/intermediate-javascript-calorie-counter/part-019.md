@@ -7,9 +7,9 @@ dashedName: part-19
 
 # --description--
 
-Provide the number zero as the initial value of the `reduce()` method by passing it as the second argument.
+กำหนดให้ 0 เป็นค่าเริ่มต้นของ `reduce()` method โดยระบุเป็น argument ที่สอง
 
-Here is an example of a `reduce()` method with an empty object as its initial value:
+ต่อไปนี้เป็นตัวอย่างของ `reduce()` method ที่มี empty object เป็นค่าเริ่มต้น:
 
 ```js
 arr.reduce((accumulator, currentValue) => {
@@ -19,7 +19,7 @@ arr.reduce((accumulator, currentValue) => {
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

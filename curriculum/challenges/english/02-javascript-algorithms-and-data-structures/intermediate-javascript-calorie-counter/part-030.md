@@ -7,19 +7,19 @@ dashedName: part-30
 
 # --description--
 
-Next, we will create a text node that we will later append to the `result` element.
+จากนั้น เราจะสร้าง text node ที่เราจะนำไปต่อกับ `result` element ภายหลัง
 
-JavaScript has a function called `createTextNode()` to accomplish this. For example:
+JavaScript มีฟังก์ชันชื่อ `createTextNode()` ที่ใช้สร้าง text node ดังตัวอย่าง:
 
 ```js
 const myText = document.createTextNode("Hello world!")
 ```
 
-Create a variable named `resultText` and set it equal to a text node. Leave the string empty for now.
+จงสร้างตัวแปรชื่อ `resultText` และกำหนดให้มีค่าเท่ากับ text node ที่เป็น string empty ไปก่อน
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,13 +7,13 @@ dashedName: part-71
 
 # --description--
 
-To remove the items `foodInputs` array, we will iterate through them by using the `forEach()` function.
+การนำ item ออกจาก `foodInputs` array สามารถทำได้ โดยการวนอ่านแต่ละ item ด้วยฟังก์ชัน `forEach()`
 
-Add `foodInputs.forEach()`.
+จงเพิ่ม `foodInputs.forEach()`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').match(/foodInputs.forEach\(\)/));

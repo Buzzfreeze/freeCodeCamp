@@ -7,11 +7,11 @@ dashedName: part-10
 
 # --description--
 
-Remove the now redundant `addVar` definition.
+ตอนนี้ให้ลบบรรทัดประกาศ `addVar` ที่ซ้ำซ้อนออก
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(typeof addVar === 'undefined');

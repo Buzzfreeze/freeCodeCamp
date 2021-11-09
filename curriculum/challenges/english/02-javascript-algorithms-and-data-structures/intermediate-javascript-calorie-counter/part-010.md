@@ -7,11 +7,11 @@ dashedName: part-10
 
 # --description--
 
-Create a variable named `meal` and set it equal to the first index of `total` (`total[0]`). This would be the input for Breakfast on the form.
+จงสร้างตัวแปรชื่อ `meal` และกำหนดให้มีค่าเท่ากับ index แรกของ `total` (`total[0]`) ซึ่งเป็น input สำหรับ Breakfast บน form
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(/const\s*meal\s*=\s*total\[0\]/.test(code));

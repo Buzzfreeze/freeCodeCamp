@@ -7,11 +7,11 @@ dashedName: part-52
 
 # --description--
 
-Now, pass `x` to `String.fromCharCode` in the arrow function.
+ตอนนี้ให้ส่ง `x` เข้าไปยัง `String.fromCharCode` ใน arrow function
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(JSON.stringify(charRange('A', 'C')) === '["A","B","C"]');

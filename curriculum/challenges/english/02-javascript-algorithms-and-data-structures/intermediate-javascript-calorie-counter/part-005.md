@@ -7,9 +7,9 @@ dashedName: part-5
 
 # --description--
 
-By default, `onsubmit` will pass the event object as a parameter to the function it calls. People usually call it `e`, short for event. Update the `calculate()` function to accept `e` as parameter.
+ตามปกติแล้ว `onsubmit` จะส่ง event object เป็น parameter เข้าไปในฟังก์ชันที่เรียก เรามักเรียกกันว่า `e` ย่อมาจาก event จงปรับแก้ฟังก์ชัน `calculate()` ให้รับ `e` เป็น parameter
 
-Here is an example of an empty function called `square` that takes a `number` as a parameter:
+ตัวอย่างต่อไปนี้เป็น empty function ชื่อ `square` ที่รับ `number` เป็น parameter:
 
 ```js
 function square(number) {}
@@ -17,7 +17,7 @@ function square(number) {}
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(calculate.toString().match(/function calculate\(\s*e\)\s*\{\s*\}/));

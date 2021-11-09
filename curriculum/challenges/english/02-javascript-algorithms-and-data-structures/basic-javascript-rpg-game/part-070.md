@@ -7,11 +7,11 @@ dashedName: part-70
 
 # --description--
 
-At the end of the string you just added after the ending quote mark, add `+ inventory` to add the contents of the inventory to the end of the string.
+ถัดจาก string ที่คุณเพิ่งเพิ่มเข้าไป ให้ต่อด้วย `+ inventory` เพื่อเพิ่มข้อมูลของ inventory ที่ท้าย string
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

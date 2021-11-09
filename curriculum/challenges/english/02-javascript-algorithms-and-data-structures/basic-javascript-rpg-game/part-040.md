@@ -7,13 +7,13 @@ dashedName: part-40
 
 # --description--
 
-Now that the `goTown` function calls the `update` function with the first element of the `locations` array, it is time to use that location information to update the `innerText` and `onclick` properties.
+ตอนนี้เราได้ฟังก์ชัน `goTown` ที่เรียกฟังก์ชัน `update` แล้วส่งค่า element แรกของ `locations` array เข้าไปแล้ว ต่อจากนี้ให้นำข้อมูล location มา update ให้กับ `innerText` และ `onclick` properties
 
-Inside the `update` function, change `button1.innerText` to equal `location["button text"]`. That line gets the `"button text"` property of the `location` that was passed into the `update` function\`.
+ภายในฟังก์ชัน `update` ให้เปลี่ยน `button1.innerText` เป็นมีค่าเท่ากับ `location["button text"]` ซึ่งบรรทัดนี้เป็นการดึงค่า `"button text"` property ของ `location` แล้วส่งเข้าไปในฟังก์ชัน `update`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

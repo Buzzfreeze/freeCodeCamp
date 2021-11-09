@@ -7,13 +7,13 @@ dashedName: part-7
 
 # --description--
 
-Now set the inventory to equal the string "stick".
+ตอนนี้กำหนดให้ inventory มีค่าเป็น "stick"
 
-Strings must be surrounded with double quotes `"`, single quotes `'`, or backticks `` ` ``.
+Strings ต้องครอบด้วย double quotes `"`, single quotes `'` หรือ backticks `` ` ``
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(inventory === 'stick');

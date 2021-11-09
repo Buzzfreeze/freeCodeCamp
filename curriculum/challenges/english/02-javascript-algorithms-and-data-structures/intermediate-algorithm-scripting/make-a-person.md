@@ -8,7 +8,7 @@ dashedName: make-a-person
 
 # --description--
 
-Fill in the object constructor with the following methods below:
+จงเพิ่มโค้ดใน object constructor ด้วย method ต่อไปนี้
 
 ```js
 getFirstName()
@@ -19,11 +19,13 @@ setLastName(last)
 setFullName(firstAndLast)
 ```
 
-Run the tests to see the expected output for each method. The methods that take an argument must accept only one argument and it has to be a string. These methods must be the only available means of interacting with the object.
+ลองรันเพื่อดูผลลัพธ์ของแต่ละ method โดย method ที่รับ argument 1 ตัว ต้องรับ argument เพียงตัวเดียวและเป็น string เท่านั้น นอกจากนี้ การโต้ตอบ (interact) ใดๆ ต่อ object ต้องทำผ่าน method เหล่านี้เท่านั้น
+
+เมธอดเหล่านี้ต้องเป็นวิธีการโต้ตอบกับอ็อบเจ็กต์เท่านั้น
 
 # --hints--
 
-No properties should be added. `Object.keys(bob).length` should always return 6.
+ห้ามเพิ่ม properties อื่นๆ เข้าไป และ `Object.keys(bob).length` ควรคืนค่าเป็น 6 เสมอ
 
 ```js
 assert.strictEqual(
@@ -38,43 +40,43 @@ assert.strictEqual(
  );
 ```
 
-`bob instanceof Person` should return `true`.
+`bob instanceof Person` ควรคืนค่าเป็น `true`
 
 ```js
 assert.deepEqual(bob instanceof Person, true);
 ```
 
-`bob.firstName` should return `undefined`.
+`bob.firstName` ควรคืนค่าเป็น `undefined`
 
 ```js
 assert.deepEqual(bob.firstName, undefined);
 ```
 
-`bob.lastName` should return `undefined`.
+`bob.lastName` ควรคืนค่าเป็น `undefined`
 
 ```js
 assert.deepEqual(bob.lastName, undefined);
 ```
 
-`bob.getFirstName()` should return the string `Bob`.
+`bob.getFirstName()` ควรคืนค่าเป็น string `Bob`
 
 ```js
 assert.deepEqual(bob.getFirstName(), 'Bob');
 ```
 
-`bob.getLastName()` should return the string `Ross`.
+`bob.getLastName()` ควรคืนค่าเป็น string `Ross`
 
 ```js
 assert.deepEqual(bob.getLastName(), 'Ross');
 ```
 
-`bob.getFullName()` should return the string `Bob Ross`.
+`bob.getFullName()` ควรคืนค่าเป็น string `Bob Ross`
 
 ```js
 assert.deepEqual(bob.getFullName(), 'Bob Ross');
 ```
 
-`bob.getFullName()` should return the string `Haskell Ross` after `bob.setFirstName("Haskell")`.
+`bob.getFullName()` ควรคืนค่าเป็น string `Haskell Ross` หลังจาก `bob.setFirstName("Haskell")`
 
 ```js
 assert.strictEqual(
@@ -86,7 +88,7 @@ assert.strictEqual(
 );
 ```
 
-`bob.getFullName()` should return the string `Haskell Curry` after `bob.setLastName("Curry")`.
+`bob.getFullName()` ควรคืนค่าเป็น the string `Haskell Curry` หลังจาก `bob.setLastName("Curry")`
 
 ```js
 assert.strictEqual(
@@ -99,7 +101,7 @@ assert.strictEqual(
 );
 ```
 
-`bob.getFullName()` should return the string `Haskell Curry` after `bob.setFullName("Haskell Curry")`.
+`bob.getFullName()` ควรคืนค่าเป็น the string `Haskell Curry` หลังจาก `bob.setFullName("Haskell Curry")`
 
 ```js
 assert.strictEqual(
@@ -111,7 +113,7 @@ assert.strictEqual(
 );
 ```
 
-`bob.getFirstName()` should return the string `Haskell` after `bob.setFullName("Haskell Curry")`.
+`bob.getFirstName()` ควรคืนค่าเป็น the string `Haskell` หลังจาก `bob.setFullName("Haskell Curry")`
 
 ```js
 assert.strictEqual(
@@ -123,7 +125,7 @@ assert.strictEqual(
 );
 ```
 
-`bob.getLastName()` should return the string `Curry` after `bob.setFullName("Haskell Curry")`.
+`bob.getLastName()` ควรคืนค่าเป็น the string `Curry` หลังจาก `bob.setFullName("Haskell Curry")`
 
 ```js
 assert.strictEqual(

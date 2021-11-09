@@ -7,17 +7,18 @@ dashedName: part-22
 
 # --description--
 
-Now let's simplify the `reduce()` callback function by refactoring it.
+ตอนนี้เรามาทำให้ `reduce()` callback function อยู่ในรูปอย่างง่ายกัน
 
-Essentially, the current callback function is `(accumulator, currentValue) => { return accumulator + currentValue }`. Since there's only one expression in the function body, we can omit the `{}`. Additionally, we can omit the `return` keyword since that is implicit when using arrow function syntax.
+ตอนนี้ callback function ปัจจุบันคือ `(accumulator, currentValue) => { return accumulator + currentValue }` เนื่องด้วยมีเพียง expression เดียวใน
+function body เราจึงสามารถละ `{}` ออกได้ นอกจากนี้ เรายังละคีย์เวิร์ด `return` ได้อีกด้วย เนื่องจากเวลาที่ใช้ arrow function ก็จะมีการเรียกใช้คีย์เวิร์ดนี้เบื้องหลังอยู่แล้ว 
 
-So the function can be simplified to just `(accumulator, currentValue) => accumulator + currentValue`.
+ดังนั้น ฟังก์ชันจึงสามารถเขียนในรูปอย่างง่ายคือ `(accumulator, currentValue) => accumulator + currentValue`
 
-Replace the current callback function argument in the `reduce()` function with the simplified callback function from above.
+จงแทนที่ callback function argument ในฟังก์ชัน `reduce()` ให้เป็นรูปอย่างง่ายดังตัวอย่างด้านบน
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-71
 
 # --description--
 
-Replace the `n1` return value in `varRangeExpanded` with `rangeFromString(n1, n2)`.
+แทนที่ค่า `n1` ซึ่งคืนค่ามาจากใน `varRangeExpanded` ด้วย `rangeFromString(n1, n2)`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

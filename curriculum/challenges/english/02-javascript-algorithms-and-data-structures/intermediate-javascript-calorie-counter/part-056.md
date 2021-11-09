@@ -7,15 +7,15 @@ dashedName: part-56
 
 # --description--
 
-Notice that parent container of all of the inputs has an `id` of `entries`: `<div class="grid" id="entries">`.
+สังเกตว่า parent container ของ inputs ทั้งหมด มี `id` มีค่าเป็น `entries`: `<div class="grid" id="entries">`
 
-Get a reference to the document element with the `id` attribute `entries` and append the `foodInput` element to it by chaining on the `.appendChild()` function.
+จงอ้างอิง document element ที่มี `id` attribute มีค่าเป็น `entries` แล้วนำ `foodInput` element มาต่อท้าย โดยการ chain ด้วยฟังก์ชัน `.appendChild()`
 
-This is similar to the other `appendChild()` methods that you have used previously.
+ขั้นตอนนี้เรียกใช้ `appendChild()` methods ซึ่งเหมือนกับที่คุณได้ทำก่อนหน้านี้
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

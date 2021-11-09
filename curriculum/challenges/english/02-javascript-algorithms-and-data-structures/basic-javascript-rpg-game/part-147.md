@@ -7,11 +7,11 @@ dashedName: part-147
 
 # --description--
 
-Inside the for loop, use the `+=` operator to add to the end of `text.innerText`. Add the the number at index `i` in the `numbers` array with `numbers[i]`. Then add a new line. So the entire line inside the for loop should look like: `text.innerText += numbers[i] + "\n";`
+ภายใน for loop จงใช้ `+=` operator ต่อจาก `text.innerText` แล้วเพิ่ม index `i` ใน `numbers` array ให้เป็น `numbers[i]` แล้วขึ้นบรรทัดใหม่ ดังนั้น โค้ดที่อยู่ใน for loop ควรเป็นดังนี้: `text.innerText += numbers[i] + "\n";`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

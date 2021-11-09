@@ -7,13 +7,13 @@ dashedName: part-134
 
 # --description--
 
-The only thing left to add is a mini-game easter egg (a hidden feature).
+อีกอย่างที่ยังไม่ได้เพิ่มเข้าไปก็คือ เกมไข่อีสเตอร์ (ฟีเจอร์ลับ)
 
-Add a new function called `easterEgg` that calls the `update` function and passes in `locations[7]` as an argument.
+จงเพิ่มฟังก์ชันใหม่ชื่อ `easterEgg` ซึ่งเรียกฟังก์ชัน `update` แล้วส่ง `locations[7]` เข้าไปเป็น argument ของฟังก์ชัน `update`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

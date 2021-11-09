@@ -7,7 +7,7 @@ dashedName: part-126
 
 # --description--
 
-The spread operator allow you to pass multiple arguments instead of an array:
+spread operator ทำให้คุณสามารถส่งค่า argument กระจายเข้าไปได้จาก array
 
 ```js
 const arr = [1, 2, 3];
@@ -15,11 +15,11 @@ const sum3 = (a, b, c) => a + b + c;
 sum3(...arr); // 6
 ```
 
-Use the spread operator to add `range` to `spreadsheetFunctions`.
+จงใช้ spread operator เพื่อเพิ่ม `range` ให้กับ `spreadsheetFunctions`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

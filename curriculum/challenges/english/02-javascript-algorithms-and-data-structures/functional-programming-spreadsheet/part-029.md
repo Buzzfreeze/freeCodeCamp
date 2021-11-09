@@ -7,11 +7,11 @@ dashedName: part-29
 
 # --description--
 
-Set `regex` to `/([a-z]*)\(([0-9., ]*)\)(?!.*\()/i` in `applyFn`.
+กำหนดให้ `regex` มีค่าเป็น `/([a-z]*)\(([0-9., ]*)\)(?!.*\()/i` ภายใน `applyFn`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

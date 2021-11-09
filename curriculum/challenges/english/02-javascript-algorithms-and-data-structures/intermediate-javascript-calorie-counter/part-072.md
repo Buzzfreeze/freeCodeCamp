@@ -7,15 +7,15 @@ dashedName: part-72
 
 # --description--
 
-We need to provide a callback function in the parentheses of `forEach()`.
+เราต้องกำหนด callback function ภายในวงเล็บของ `forEach()`
 
-This function will take each input item, in our case we'll call it `input`, as an argument. Then inside the function body, we need to call the `remove()` method.
+ฟังก์ชันนี้จะอ่านแต่ละ input item ซึ่งกรณีของเรา เราจะเรียกว่า `input` โดย `input`เป็น argument จากนั้น ภายในส่วน body ของฟังก์ชัน เราต้องเรียก `remove()` method
 
-In between the parentheses of the `.forEach()` function, enter `input => input.remove()`.
+ภายในวงเล็บของฟังก์ชัน `.forEach()` ให้ระบุเป็น `input => input.remove()`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

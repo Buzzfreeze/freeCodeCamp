@@ -7,19 +7,19 @@ dashedName: part-129
 
 # --description--
 
-But our function takes an array of numbers, not strings. Luckily, you can pass a function `fn` as argument to sort:
+แต่ฟังก์ชันของเรารับค่า array ที่เป็นตัวเลข ไม่ใช่ string แต่โชคดีที่คุณสามารถส่งฟังก์ชัน `fn` เข้าไปเป็น argument เพื่อเรียงลำดับได้
 
 ```js
 [2, 9, 10, 15].sort((a, b) => b - a); // [10, 9, 5, 2]
 ```
 
-If `b - a` is less than 0, then `a` will be placed before `b`. As a result, this sorts the array in descending order.
+ถ้า `b - a` มีค่าน้อยกว่า 0 หมายความว่า `a` มาก่อน `b` จึงมีผลทำให้ array ถูกเรียงจากมากไปหาน้อย
 
-Use `sort` to sort `nums` in ascending order.
+จงใช้ `sort` เพื่อเรียง `nums` จากน้อยไปมาก
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

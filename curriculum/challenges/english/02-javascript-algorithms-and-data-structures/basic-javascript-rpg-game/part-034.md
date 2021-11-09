@@ -7,11 +7,11 @@ dashedName: part-34
 
 # --description--
 
-Add one final property to the object named `text`. The value should be the final text from the `goTown` function.
+เพิ่ม property `text`ซึ่งเป็น property สุดท้ายของ object โดยกำหนด value เป็นข้อความสุดท้ายจากฟังก์ชัน `goTown`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

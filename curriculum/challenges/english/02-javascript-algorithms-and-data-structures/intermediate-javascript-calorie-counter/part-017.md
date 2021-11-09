@@ -7,13 +7,13 @@ dashedName: part-17
 
 # --description--
 
-While you can use a loop to add everything in the `total` array to a variable, JavaScript provides the useful `reduce()` method.
+แม้ว่าคุณสามารถใช้ loop เพื่อนำค่าแต่ละ item ใน `total` array มารวมที่ตัวแปรหนึ่งๆ ได้ แต่ JavaScript ก็มี method ที่มีประโยชน์ก็คือ `reduce()` 
 
-Chain the `reduce()` method to the `Array.from()` expression.
+จงนำ `reduce()` method มาใช้กับ `Array.from()` expression
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').match(/Number\(meal\.value\)\)\.reduce\(\)/));

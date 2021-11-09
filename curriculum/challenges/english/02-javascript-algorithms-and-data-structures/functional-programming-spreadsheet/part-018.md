@@ -7,17 +7,17 @@ dashedName: part-18
 
 # --description--
 
-When defining an arrow function with a single argument, the parentheses can be omitted:
+เมื่อประกาศ arrow function ที่มี argument เดียว เราสามารถละวงเล็บของ argument ได้
 
 ```js
 const greeting = name => `Hello !`;
 ```
 
-Define a function `highPrecedence` which takes a single argument `str` and returns it.
+จงสร้างฟังก์ชัน `highPrecedence` ที่มี argument ตัวเดียวคือ `str` แล้วคืนค่าออกมาเป็น `str`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(highPrecedence('a') === 'a');

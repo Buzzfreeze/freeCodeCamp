@@ -7,19 +7,19 @@ dashedName: part-51
 
 # --description--
 
-When the user clicks the "Add Entry" button, they should be provided with additional text inputs to enter in a food name and calorie amount. These will be included in the `calculate()` function.
+เมื่อผู้ใช้งานคลิกปุ่ม "Add Entry" หน้าจอควรมี text inputs ให้กรอกชื่ออาหารและจำนวนแคลอรี่ ซึ่งสิ่งเหล่านี้จะรวมอยู่ในฟังก์ชัน `calculate()`
 
-In the HTML document, notice that the "Add Entry" button has the `id` attribute `add`:
+ใน HTML document สังเกตว่า ปุ่ม "Add Entry" มี `id` attribute ที่มีค่าเป็น `add`:
 
 ```html
 <button type="button" class="btn-add" id="add">
 ```
 
-Get a reference to the `document` element with the `id` attribute `add`. This is similar to the reference to the `calorie-form` element that you wrote near the top of this document.
+จงอ้างอิงถึง `document` element ที่มี `id` attribute มีค่าเท่ากับ `add` โดยการอ้างอิงนี้คล้ายกับการอ้างอิงถึง `calorie-form` element ที่คุณเขียนตรงส่วนบนของ document นี้
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

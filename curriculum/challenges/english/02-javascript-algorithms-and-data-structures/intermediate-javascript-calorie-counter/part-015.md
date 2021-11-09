@@ -7,11 +7,11 @@ dashedName: part-15
 
 # --description--
 
-Since eventually we'll be adding all of the meal calories in the `total` array, explicitly convert `meal.value` into a number by wrapping it in the `Number()` function.
+ท้ายที่สุดแล้ว เราจะรวมแคลอรี่ของอาหารทุกมือที่อยู่ใน `total` array ดังนั้นจึงต้องแปลง `meal.value` ให้เป็นตัวเลข โดยการใช้ฟังก์ชัน `Number()`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').match(/Number\(meal\.value\)\;?/));

@@ -7,11 +7,11 @@ dashedName: part-104
 
 # --description--
 
-Inside the `dodge` function, set `text.innerText` equal to "You dodge the attack from the \[monster's name]." Instead of "\[monster's name]", get the monster's name with `monsters[fighting].name`.
+ภายในฟังก์ชัน `dodge` กำหนดให้ `text.innerText` มีค่าเป็น "You dodge the attack from the \[monster's name]." แล้วแทนที่ "\[monster's name]", ด้วยชื่อสัตว์ประหลาดที่ได้จากคำสั่ง `monsters[fighting].name`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 fightDragon(),

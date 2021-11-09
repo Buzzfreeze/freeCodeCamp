@@ -7,15 +7,15 @@ dashedName: part-12
 
 # --description--
 
-We need a way to iterate through all the `meal` items in the `total` array and return the values that the user entered as an array.
+คุณต้องการวนอ่าน `meal` items ใน `total` array แล้วคืนค่าที่ผู้ใช้งานกรอกเป็นรูปแบบ array
 
-The `map()` method allows us to do exactly that.
+`map()` method ช่วยเราทำเช่นนั้นได้
 
-Delete `const meal = total[0];` and chain the `.map()` method to the end of your `Array.from()` method. Here's an example of `.map()` chained to an array: `[3, 2, 1].map()`
+จงลบ `const meal = total[0];` แล้วนำ `.map()` method มาใช้กับ `Array.from()` method ต่อไปนี้เป็นตัวอย่างของการนำ `.map()` มาใช้กับ array: `[3, 2, 1].map()`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

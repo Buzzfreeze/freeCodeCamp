@@ -7,9 +7,9 @@ dashedName: part-20
 
 # --description--
 
-Let's says we have an array `[1, 3, 5]` named `arr` and we want to sum up all the numbers.
+เรามี array `[1, 3, 5]` ชื่อ `arr` และเราต้องการนำตัวเลขทั้งหมดมาบวกกัน
 
-We can use the reduce function as follows:
+เราสามารถใช้ฟังก์ชัน reduce function ได้ดังนี้:
 
 ```js
 arr.reduce((accumulator, currentValue) => {
@@ -17,17 +17,17 @@ arr.reduce((accumulator, currentValue) => {
 }, 0);
 ```
 
-At `arr[0]`, the function is `(0, 1) => { return 0 + 1 }`, since `arr[0] = 1 = currentValue`.
+ที่ `arr[0]`, ฟังก์ชันคือ `(0, 1) => { return 0 + 1 }`, เนื่องจาก `arr[0] = 1 = currentValue`.
 
-At `arr[1]`, the function is `(1, 3) => 1 + 3`,
+ที่ `arr[1]`, ฟังก์ชันคือ `(1, 3) => 1 + 3`,
 
-Finally at `arr[2]`, the function is `(4, 5) => 4 + 5`. Now the accumulator is `9` and since we have gone through all of the items in `arr`, the `reduce()` method will return `9`.
+สุดท้ายที่ `arr[2]`, ฟังก์ชันคือ `(4, 5) => 4 + 5` ตอนนี้ accumulator คือ `9` และเนื่องจากเราได้วนอ่านทุก item ใน `arr` แล้ว `reduce()` method จะคืนค่า `9`
 
-In the body of the callback function, replace `/* code to run */` with `return accumulator + currentValue`.
+ในส่วน body ของ the callback function จงแทนที่ `/* code to run */` ด้วย `return accumulator + currentValue`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

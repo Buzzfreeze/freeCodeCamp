@@ -7,13 +7,13 @@ dashedName: part-120
 
 # --description--
 
-The `includes` method checks if an element is in an array.
+`includes` method ใช้ในการเช็คว่า element อยู่ใน array หรือไม่
 
-Add a `has2` function to `spreadsheetFunctions` which checks if the inputted array has the number 2 in it.
+จงเพิ่มฟังก์ชัน `has2` ใน `spreadsheetFunctions` โดยตรวจสอบว่า array ที่ส่งเข้ามามีเลข 2 อยู่หรือไม่
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

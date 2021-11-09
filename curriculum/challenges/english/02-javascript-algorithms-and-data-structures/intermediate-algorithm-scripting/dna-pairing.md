@@ -8,19 +8,19 @@ dashedName: dna-pairing
 
 # --description--
 
-The DNA strand is missing the pairing element. Take each character, get its pair, and return the results as a 2d array.
+สาย DNA เส้นหนึ่งประกอบด้วย element ที่ยังไม่มีคู่มาจับ จงนำ element (ตัวอักษร) แต่ละตัว  มาจับคู่ แล้วคืนค่าเป็น array 2 มิติ
 
-[Base pairs](http://en.wikipedia.org/wiki/Base_pair) are a pair of AT and CG. Match the missing element to the provided character.
+[Base pairs](http://en.wikipedia.org/wiki/Base_pair) คือคู่ element ของ DNA ได้แก่ AT และ CG ให้เราทำการจับคู่ element (ตัวอักษร) ที่หายไปกับ element (ตัวอักษร) ที่มีบนสาย DNA
 
-Return the provided character as the first element in each array.
+แล้วคืนค่าเป็น array โดยให้ element แรกเป็นตัวอักษรที่อยู่บนสาย DNA
 
-For example, for the input `GCG`, return `[["G", "C"], ["C","G"], ["G", "C"]]`
+ยกตัวอย่างเช่น ตัวอักษรที่มีอยู่บนสาย DNA คือ `GCG` ก็จะคืนค่าเป็น `[["G", "C"], ["C","G"], ["G", "C"]]`
 
-The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
+element บนสาย DNA และคู่ของมันจะกับคู่กันเป็น array ตัวนึง และทุกๆ คู่ array จะครอบด้วย array อีกตัวนึง
 
 # --hints--
 
-`pairElement("ATCGA")` should return `[["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]]`.
+`pairElement("ATCGA")` ควรคืนค่าเป็น `[["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]]`.
 
 ```js
 assert.deepEqual(pairElement('ATCGA'), [
@@ -32,7 +32,7 @@ assert.deepEqual(pairElement('ATCGA'), [
 ]);
 ```
 
-`pairElement("TTGAG")` should return `[["T","A"],["T","A"],["G","C"],["A","T"],["G","C"]]`.
+`pairElement("TTGAG")` ควรคืนค่าเป็น `[["T","A"],["T","A"],["G","C"],["A","T"],["G","C"]]`.
 
 ```js
 assert.deepEqual(pairElement('TTGAG'), [
@@ -44,7 +44,7 @@ assert.deepEqual(pairElement('TTGAG'), [
 ]);
 ```
 
-`pairElement("CTCTA")` should return `[["C","G"],["T","A"],["C","G"],["T","A"],["A","T"]]`.
+`pairElement("CTCTA")` ควรคืนค่าเป็น `[["C","G"],["T","A"],["C","G"],["T","A"],["A","T"]]`.
 
 ```js
 assert.deepEqual(pairElement('CTCTA'), [

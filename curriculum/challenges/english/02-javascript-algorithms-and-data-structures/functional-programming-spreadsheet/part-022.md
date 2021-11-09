@@ -7,7 +7,7 @@ dashedName: part-22
 
 # --description--
 
-The ternary operator has the following syntax:
+ternary operator มี syntax ดังนี้
 
 ```js
 const result = condition ? valueIfTrue : valueIfFalse;
@@ -15,11 +15,11 @@ const result = 1 === 1 ? 1 : 0; // 1
 const result = 9 > 10 ? "Yes" : "No"; // "No"
 ```
 
-Use this operator to return `str` if `str === str2`, and an empty string (`""`) otherwise.
+จงใช้ operator นี้ เพื่อคืนค่าเป็น `str` หากเข้าเงื่อนไข `str === str2` และคืนค่าเป็น empty string (`""`) หากไม่เข้าเงื่อนไข 
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,9 +7,9 @@ dashedName: part-131
 
 # --description--
 
-Use the `+=` operator to add "Your \[last item in inventory array] breaks." to the end of `text.innerText`. Instead of the bracketed text, it should show the actual item name.
+ให้ใช้ `+=` operator เพื่อเพิ่ม "Your \[last item in inventory array] breaks." ต่อท้าย `text.innerText` และตรงข้อความในวงเล็บควรแสดงเป็นชื่อ item จริงๆ แทน
 
-Use `inventory.pop()` to both remove the last element from the array AND return that element. For example:
+จงใช้ `inventory.pop()` เพื่อนำ element สุดท้ายออกจาก array และคืนค่า element นั้นออกมา ตัวอย่างเช่น
 
 ```js
 let shoppingList = ["milk", "apples", "cereal"];
@@ -19,7 +19,7 @@ console.log("I bought " + shoppingList.pop() + "."); // Logs "I bought cereal."
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

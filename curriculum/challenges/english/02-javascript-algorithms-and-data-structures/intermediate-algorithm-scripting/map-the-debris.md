@@ -8,19 +8,19 @@ dashedName: map-the-debris
 
 # --description--
 
-Return a new array that transforms the elements' average altitude into their orbital periods (in seconds).
+ให้คืนค่าเป็น array ตัวใหม่ ที่แปลงความสูงเฉลี่ยของ elements เป็นระยะเวลาการโคจร (วินาที)
 
-The array will contain objects in the format `{name: 'name', avgAlt: avgAlt}`.
+array ประกอบด้วย objects ที่อยู่ในรูปแบบ `{name: 'name', avgAlt: avgAlt}`
 
-You can read about orbital periods [on Wikipedia](http://en.wikipedia.org/wiki/Orbital_period).
+คุณสามารถอ่านเกี่ยวกับระยะเวลาโคจรได้ที่ [on Wikipedia](http://en.wikipedia.org/wiki/Orbital_period).
 
-The values should be rounded to the nearest whole number. The body being orbited is Earth.
+ควรปัดเศษผลลัพธ์ให้เป็นจำนวนเต็มที่ใกล้ที่สุด การโคจรนั้นเป็นการโคจรรอบโลก
 
-The radius of the earth is 6367.4447 kilometers, and the GM value of earth is 398600.4418 km<sup>3</sup>s<sup>-2</sup>.
+เส้นผ่านศูนย์กลางของโลกคือ 6367.4447 km และค่า GM ของโลกคือ 398600.4418 km<sup>3</sup>s<sup>-2</sup>.
 
 # --hints--
 
-`orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}])` should return `[{name: "sputnik", orbitalPeriod: 86400}]`.
+`orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}])` ควรคืนค่าเป็น `[{name: "sputnik", orbitalPeriod: 86400}]`
 
 ```js
 assert.deepEqual(orbitalPeriod([{ name: 'sputnik', avgAlt: 35873.5553 }]), [
@@ -28,7 +28,7 @@ assert.deepEqual(orbitalPeriod([{ name: 'sputnik', avgAlt: 35873.5553 }]), [
 ]);
 ```
 
-`orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}])` should return `[{name : "iss", orbitalPeriod: 5557}, {name: "hubble", orbitalPeriod: 5734}, {name: "moon", orbitalPeriod: 2377399}]`.
+`orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}])` ควรคืนค่าเป็น `[{name : "iss", orbitalPeriod: 5557}, {name: "hubble", orbitalPeriod: 5734}, {name: "moon", orbitalPeriod: 2377399}]`
 
 ```js
 assert.deepEqual(

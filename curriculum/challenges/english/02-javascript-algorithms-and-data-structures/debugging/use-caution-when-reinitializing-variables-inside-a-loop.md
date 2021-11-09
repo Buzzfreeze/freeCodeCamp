@@ -8,29 +8,29 @@ dashedName: use-caution-when-reinitializing-variables-inside-a-loop
 
 # --description--
 
-Sometimes it's necessary to save information, increment counters, or re-set variables within a loop. A potential issue is when variables either should be reinitialized, and aren't, or vice versa. This is particularly dangerous if you accidentally reset the variable being used for the terminal condition, causing an infinite loop.
+บางครั้งการเก็บข้อมูล, ตัวนับ (increment counter) หรือ รีเซ็ตค่าตัวแปรภายใน loop ก็เป็นสิ่งจำเป็นต้องทำ ปัญหาที่เกิดขึ้นได้คือ บางกรณีตัวแปรควรถูกประกาศซ้ำ (reinitiallized) แต่เราไม่ได้ประกาศซ้ำ แต่อย่างไรก็ตาม นี่เป็นเรื่องที่อันตราย หากคุณรีเซ็ตค่าตัวแปรที่ใช้เป็นเงื่อนไขในการสิ้นสุด loop โดยไม่ตั้งใจ ก็ทำให้เกิดการวน loop ไม่รู้จบได้
 
-Printing variable values with each cycle of your loop by using `console.log()` can uncover buggy behavior related to resetting, or failing to reset a variable.
+การพิมพ์ค่าตัวแปรในการวน loop แต่ละรอบ โดยใช้ `console.log()`สามารถแสดงให้เห็นถึงค่าตัวแปรที่ถูกรีเซ็ตหรือลืมไม่ได้รีเซ็ตได้
 
 # --instructions--
 
-The following function is supposed to create a two-dimensional array with `m` rows and `n` columns of zeroes. Unfortunately, it's not producing the expected output because the `row` variable isn't being reinitialized (set back to an empty array) in the outer loop. Fix the code so it returns a correct 3x2 array of zeroes, which looks like `[[0, 0], [0, 0], [0, 0]]`.
+ฟังก์ชันต่อไปนี้ควรสร้าง array 2 มิติที่มี `m` rows และ `n` columns และบรรจุเลข 0 ทั้งหมด แต่อย่างไรก็ตาม ตอนนี้ฟังก์ชันนี้แสดงผลไม่ถูกต้อง เพราะตัวแปร `row` ไม่ได้ถูก reinitialized (กำหนดค่ากลับให้เป็น empty array) ภายใน outer loop จงปรับแก้โค้ด เพื่อให้คืนค่าเป็น 3x2 array ที่มี 0 ซึ่งจะมีผลลัพธ์ดังนี้ `[[0, 0], [0, 0], [0, 0]]`
 
 # --hints--
 
-Your code should set the `matrix` variable to an array holding 3 rows of 2 columns of zeroes each.
+โค้ของคุณควรกำหนดตัวแปร `matrix` ให้เป็น array ที่มี 3 rows และ 2 columns และเก็บค่า 0 ทั้งหมด
 
 ```js
 assert(JSON.stringify(matrix) == '[[0,0],[0,0],[0,0]]');
 ```
 
-The `matrix` variable should have 3 rows.
+ตัวแปร `matrix` ควรมี 3 rows
 
 ```js
 assert(matrix.length == 3);
 ```
 
-The `matrix` variable should have 2 columns in each row.
+ตัวแปร `matrix` ควรมี 2 columns ในแต่ละ row
 
 ```js
 assert(
@@ -38,7 +38,7 @@ assert(
 );
 ```
 
-`zeroArray(4,3)` should return an array holding 4 rows of 3 columns of zeroes each.
+`zeroArray(4,3)` ควรคืนค่าเป็น array ที่มี 4 rows 3 columns และเก็บค่า 0 ทั้งหมด
 
 ```js
 assert(JSON.stringify(zeroArray(4,3)) == '[[0,0,0],[0,0,0],[0,0,0],[0,0,0]]');

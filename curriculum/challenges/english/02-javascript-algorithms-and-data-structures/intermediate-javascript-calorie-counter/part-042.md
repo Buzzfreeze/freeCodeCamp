@@ -7,15 +7,15 @@ dashedName: part-42
 
 # --description--
 
-We want the `recommendedText` to say "XX Calories Recommended" where "XX" is the `maxCalories` variable that was previously created.
+เราต้องการให้ `recommendedText` บอกว่า "XX Calories Recommended" โดย "XX" คือตัวแปร `maxCalories` ที่สร้างก่อนหน้านี้
 
-Update text of `recommendedText` to use the `maxCalories` variable in a template literal along with the text "Calories Recommended".
+ปรับแก้ข้อความของ `recommendedText` เพื่อใช้ตัวแปร `maxCalories` ใน template literal และเพิ่มข้อความ "Calories Recommended"
 
-This is similar to template literal syntax previously used to create `resultText`.
+ขั้นตอนนี้เป็นการใช้ template literal syntax ที่ก่อนหน้านี้เคยใช้กับ `resultText`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

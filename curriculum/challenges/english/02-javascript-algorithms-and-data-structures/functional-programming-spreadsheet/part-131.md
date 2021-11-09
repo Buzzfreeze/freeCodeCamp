@@ -7,11 +7,11 @@ dashedName: part-131
 
 # --description--
 
-Now define two variable: `length` which is `sorted.length` and `middle` which is `length / 2 - 1`.
+ตอนนี้ให้กำหนดตัวแปร 2 ตัว คือ `length` มีค่าเป็น `sorted.length` และ `middle` มีค่าเป็น `length / 2 - 1`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-23
 
 # --description--
 
-Right after the `onclick` properties are updated, change the `innerText` property of `text` to "You enter the store."
+หลังจากที่ update ค่า `onclick` properties แล้ว ให้เปลี่ยน `innerText` property ของ `text` เป็น "You enter the store."
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

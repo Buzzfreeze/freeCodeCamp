@@ -7,11 +7,11 @@ dashedName: part-137
 
 # --description--
 
-Add a `pick` function with a parameter named "guess".
+เพิ่มฟังก์ชัน `pick` ที่มี parameter ชื่อ "guess"
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(pick.toString().replace(/\s/g, '').includes('functionpick(guess){}'));

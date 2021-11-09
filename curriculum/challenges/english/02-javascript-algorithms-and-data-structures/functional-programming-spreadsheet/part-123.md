@@ -7,7 +7,7 @@ dashedName: part-123
 
 # --description--
 
-ES6 introduced a shorthand object literal syntax:
+ES6 ได้แนะนำ shorthand object literal syntax:
 
 ```js
 const a = 10;
@@ -15,11 +15,11 @@ const myObject = { a };
 console.log(myObject); // { a: 10 }
 ```
 
-First, move `sum` outside of `spreadsheetFunctions`. `sum` should be a function expression similar to `isEven`.
+เริ่มจากการนำ `sum` ออกมาข้างนอก `spreadsheetFunctions` โดย `sum` ควรเป็น function expression คล้ายกับ `isEven`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(sum([1, 2, 3]) === 6);

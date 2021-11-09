@@ -7,13 +7,13 @@ dashedName: part-41
 
 # --description--
 
-Create a text node and assign it to a variable named `recommendedText`.
+จงสร้าง text node และกำหนดค่าให้กับตัวแปรชื่อ `recommendedText`
 
-This is similar to how your created the `resultText` element previously.
+ซึ่งเป็นวิธีที่เหมือนกับการสร้าง `resultText` element ก่อนหน้านี้
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

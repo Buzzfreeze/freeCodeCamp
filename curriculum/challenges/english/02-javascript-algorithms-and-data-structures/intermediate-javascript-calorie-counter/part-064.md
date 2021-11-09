@@ -7,11 +7,11 @@ dashedName: part-64
 
 # --description--
 
-Inside the `function` body, instruct your code to call two other functions, `clearOutput()` and `clearForm()`. We will create these functions shortly.
+ภายใน `function` body จงเขียนโค้ดให้เรียกฟังก์ชัน 2 ตัวคือ `clearOutput()` และ `clearForm()` เราจะสร้างฟังก์ชันสองตัวนี้เร็วๆ นี้
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(/clearOutput\(\)/.test(code) && /clearForm\(\)/.test(code));

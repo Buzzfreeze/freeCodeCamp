@@ -7,13 +7,13 @@ dashedName: part-14
 
 # --description--
 
-Inside the function body, insert `return meal.value`, since it is the value of the individual `cal-control` inputs that we want.
+ภายใน function body ให้ใส่ `return meal.value` เนื่องจากเป็นค่าของแต่ละ `cal-control` inputs ที่เราต้องการ
 
-If you want, console log `total` to see what results you are getting.
+หากคุณต้องการ ให้ทำ console log `total` เพื่อดูผลลัพธ์ที่คุณจะได้
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

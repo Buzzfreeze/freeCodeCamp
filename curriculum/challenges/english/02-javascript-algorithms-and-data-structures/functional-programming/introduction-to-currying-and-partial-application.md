@@ -8,11 +8,11 @@ dashedName: introduction-to-currying-and-partial-application
 
 # --description--
 
-The <dfn>arity</dfn> of a function is the number of arguments it requires. <dfn>Currying</dfn> a function means to convert a function of N arity into N functions of arity 1.
+<dfn>arity</dfn> ของฟังก์ชัน คือ จำนวน argument ที่ฟังก์ชันต้องการ ส่วน <dfn>Currying</dfn> หมายถึงการแปลงฟังก์ชันที่รับ parameter N ตัว มาเป็นฟังก์ชันที่รับ parameter เพียงตัวเดียว
 
-In other words, it restructures a function so it takes one argument, then returns another function that takes the next argument, and so on.
+กล่าวได้อีกแบบว่า <dfn>Currying</dfn> เป็นการปรับโครงสร้างของฟังก์ชันให้รับ argument ค่าเดียว แล้วคืนค่าเป็นฟังก์ชันอีกตัวนึงที่รับ argument ตัวถัดไป และทำแบบนี้ไปเรื่อยๆ
 
-Here's an example:
+ดังตัวอย่างต่อไปนี้
 
 ```js
 function unCurried(x, y) {
@@ -30,16 +30,16 @@ const curried = x => y => x + y
 curried(1)(2)
 ```
 
-`curried(1)(2)` would return `3`.
+`curried(1)(2)` ควรคืนค่า `3`.
 
-This is useful in your program if you can't supply all the arguments to a function at one time. You can save each function call into a variable, which will hold the returned function reference that takes the next argument when it's available. Here's an example using the curried function in the example above:
+วิธีนี้มีประโยชน์มากในการเขียนโปรแกรม หากคุณไม่สามารถระบุค่าให้กับทุก argument ของฟังก์ชันได้ภายในครั้งเดียว คุณสามารถเก็บการเรียกฟังก์ชันแต่ละครั้งไว้ในตัวแปร โดยตัวแปรจะเก็บ function referece ที่มีการคืนค่าออกมา ซึ่งเราสามารถระบุ argument ตัวถัดไปได้ในภายหลังที่ทราบค่า argument แล้ว ตัวอย่างต่อไปนี้เป็นการเรียกใช้ curried function ที่ประกาศตามตัวอย่างด้านบน
 
 ```js
 var funcForY = curried(1);
 console.log(funcForY(2)); // 3
 ```
 
-Similarly, <dfn>partial application</dfn> can be described as applying a few arguments to a function at a time and returning another function that is applied to more arguments. Here's an example:
+เช่นเดียวกันกับ <dfn>partial application</dfn> เป็นการระบุ argument เพียงบางตัวให้กับฟังก์ชัน แล้วคืนค่าเป็นฟังก์ชันอีกตัวนึงที่เราสามารถระบุ argument ที่เหลือได้ในภายหลัง ดังตัวอย่างต่อไปนี้
 
 ```js
 function impartial(x, y, z) {
@@ -51,29 +51,29 @@ partialFn(10); // 13
 
 # --instructions--
 
-Fill in the body of the `add` function so it uses currying to add parameters `x`, `y`, and `z`.
+จงเขียนโค้ดในฟังก์ชัน `add` เพื่อใช้ currying ในการเพิ่ม parameters `x`, `y` และ `z`
 
 # --hints--
 
-`add(10)(20)(30)` should return `60`.
+`add(10)(20)(30)` ควรคืนค่า `60`.
 
 ```js
 assert(add(10)(20)(30) === 60);
 ```
 
-`add(1)(2)(3)` should return `6`.
+`add(1)(2)(3)` ควรคืนค่า `6`.
 
 ```js
 assert(add(1)(2)(3) === 6);
 ```
 
-`add(11)(22)(33)` should return `66`.
+`add(11)(22)(33)` ควรคืนค่า `66`.
 
 ```js
 assert(add(11)(22)(33) === 66);
 ```
 
-Your code should include a final statement that returns `x + y + z`.
+โค้ดของคุณควรมี statement สุดท้ายที่คืนค่าเป็น `x + y + z`.
 
 ```js
 assert(code.match(/[xyz]\s*?\+\s*?[xyz]\s*?\+\s*?[xyz]/g));

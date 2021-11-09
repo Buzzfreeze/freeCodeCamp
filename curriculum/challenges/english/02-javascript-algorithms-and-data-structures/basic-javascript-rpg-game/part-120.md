@@ -7,11 +7,11 @@ dashedName: part-120
 
 # --description--
 
-Under the `attack` function, create a function with name `getMonsterAttackValue` that takes `level` as a parameter.
+ต่อจากฟังก์ชัน `attack` ให้สร้างฟังก์ชันชื่อ `getMonsterAttackValue` ที่รับ `level` เป็นค่า parameter
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

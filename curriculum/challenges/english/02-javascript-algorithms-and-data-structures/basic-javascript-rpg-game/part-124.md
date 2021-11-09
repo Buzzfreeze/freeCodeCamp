@@ -7,11 +7,11 @@ dashedName: part-124
 
 # --description--
 
-If you play the game in its current state you might notice a bug. If your `xp` is high enough, the `getMonsterAttackValue` function will sometimes return a negative number, which will actually add to your total health when fighting a monster!
+ถ้าคุณรันเกมตอนนี้ คุณอาจพบข้อผิดพลาดข้อหนึ่ง นั่นคือ ถ้าค่า `xp` สูงเพียงพอ บางครั้งฟังก์ชัน `getMonsterAttackValue` จะคืนค่าเป็นค่าติดลบ ซึ่งเมื่อต่อสู้กับสัตว์ประหลาด กลายเป็นค่า health กลับเพิ่มขึ้น 
 
-In `getMonsterAttackValue`, change `return hit` to a ternary operator that returns `hit` if `hit` is greater than 0, or returns 0 if it is not.
+ภายใน `getMonsterAttackValue` ปรับแก้ `return hit` ให้เป็น ternary operator กล่าวคือ ถ้า `hit` มีค่ามากกว่า 0 ให้คืนค่า `hit` แต่ถ้าไม่ ให้คืนค่า 0
 
-For example, here's a function that returns 5 if `tickets` is greater than 3, or returns 0 if it is not:
+ตัวอย่างต่อไปนี้เป็นฟังก์ชันมีเงื่อนไขว่า ถ้า `tickets` มีค่ามากกว่า 2 ให้คืนค่า 5 แต่ถ้าไม่ ให้คืนค่า 0
 
 ```js
 function applyDiscount(tickets) {
@@ -21,7 +21,7 @@ function applyDiscount(tickets) {
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

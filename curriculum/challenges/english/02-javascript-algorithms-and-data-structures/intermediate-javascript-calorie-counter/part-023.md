@@ -7,17 +7,17 @@ dashedName: part-23
 
 # --description--
 
-Now that we have the `total` number of calories that the user entered, we need to determine the maximum calories they should consume.
+ตอนนี้เรามีตัวเลข `total` ของแคลอรี่ที่ผู้ใช้งานกรอกเข้ามาแล้ว จากนั้น เราต้องการหาแคลอรี่สูงสุด (maximum calories) ที่พวกเค้าควรได้รับ
 
-Look at the form and notice that there are radio buttons for Female and Male. If Female is selected, the maximum calories consumed should be 2000, and if Male is selected, the maximum should be 2500.
+ลองดูที่ form และสังเกตว่า มี radio buttons ที่เป็น Female และ Male อยู่ ถ้า Female ถูกเลือก ค่า  maximum calories ที่ควรได้รับ ควรเป็น 2000 แต่ถ้า Male ถูกเลือก ค่า maximum calories ที่ควรได้รับ ควรเป็น 2500
 
-If you inspect the Female radio button you will notice its id: `<input type="radio" name="sex" id="female" value="F" checked="">`
+ถ้าคุณวิเคราะห์ Female radio button ให้คุณสังเกต id: `<input type="radio" name="sex" id="female" value="F" checked="">`
 
-Create a variable named `maxCalories` and set it equal to the document element with the id of `female`.
+จงสร้างตัวแปรชื่อ `maxCalories` และกำหนดให้มีค่าเท่ากับ document element ที่มี id เป็น `female`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

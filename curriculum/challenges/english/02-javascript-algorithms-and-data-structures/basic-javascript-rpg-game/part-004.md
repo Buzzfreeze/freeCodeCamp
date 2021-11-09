@@ -7,13 +7,13 @@ dashedName: part-4
 
 # --description--
 
-We've been declaring variables with the `var` keyword. However, in modern JavaScript, it's better to use `let` instead of `var` because it fixes a number of unusual behaviors with `var` that make it difficult to reason about.
+เราได้ประกาศตัวแปรโดยใช้คีย์เวิร์ด `var` ไปแล้ว อย่างไรก็ตาม ภาษา JavaScript ควรใช้ `let` แทนการใช้ `var` เพราะ `let` แก้ปัญหาการทำงานที่ผิดปกติบางอย่างของ `var` ได้
 
 Change every `var` to `let`.
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

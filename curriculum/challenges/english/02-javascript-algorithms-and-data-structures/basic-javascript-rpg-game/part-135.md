@@ -7,13 +7,13 @@ dashedName: part-135
 
 # --description--
 
-Add a new object to the `locations` array.
+จงเพิ่ม object ใหม่เข้าไปยัง `locations` array
 
-Set `name` to "easter egg", `"button text"` to `["2", "8", "Go to town square?"]`, `"button functions"` to `[pickTwo, pickEight, goTown]`, and `text` to "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!"
+กำหนดให้ `name` มีค่าเป็น "easter egg", `"button text"` มีค่าเป็น `["2", "8", "Go to town square?"]`, `"button functions"` มีค่าเป็น `[pickTwo, pickEight, goTown]` และ `text` มีค่าเป็น "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!"
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert.deepStrictEqual(locations[7], {

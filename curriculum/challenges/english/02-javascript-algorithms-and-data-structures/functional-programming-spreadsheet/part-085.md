@@ -7,11 +7,11 @@ dashedName: part-85
 
 # --description--
 
-Chain `forEach` onto `range(1, 99)`, passing in `createLabel` as an argument.
+จงนำ `forEach` มาใช้กับ `range(1, 99)` โดยส่ง `createLabel` เข้าไปเป็น argument
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

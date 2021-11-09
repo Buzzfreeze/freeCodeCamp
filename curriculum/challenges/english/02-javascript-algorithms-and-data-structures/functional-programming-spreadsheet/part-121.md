@@ -7,7 +7,7 @@ dashedName: part-121
 
 # --description--
 
-The `reduce` method can take a second argument (in addition to the function), specifying the initial accumulator value. In this case, the current value starts from index 0 rather than index 1:
+`reduce` method สามารถรับ argument ที่สอง (เพิ่มเติมให้กับฟังก์ชัน) เพื่อกำหนดค่าเริ่มต้นของ accumulator ในกรณีนี้ ค่าปัจจุบันเริ่มจาก index 0 แทนที่จะเป็น index 1
 
 ```js
 [1, [1, 2, 3], [3, 4, 5]].reduce((a, x) => a.concat(x), []); // [1, 1, 2, 3, 3, 4, 5]
@@ -15,11 +15,11 @@ The `reduce` method can take a second argument (in addition to the function), sp
 // now it first tries [].concat(1) which works 
 ```
 
-Add a function `nodups` to `spreadsheetFunctions`, with the value `arr => arr.reduce((a, x) => a.includes(x), [])`.
+จงเพิ่มฟังก์ชัน `nodups` ใน `spreadsheetFunctions` และกำหนด value เป็น `arr => arr.reduce((a, x) => a.includes(x), [])`.
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

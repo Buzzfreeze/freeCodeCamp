@@ -7,7 +7,7 @@ dashedName: part-16
 
 # --description--
 
-Create the `goStore` function to hold the code that runs whenever the player goes to the store. Here is an example of an empty function called `functionName` (Note the opening curly brace at the end of the first line and the closing curly brace on the second line):
+จงสร้างฟังก์ชัน `goStore` ที่รันเมื่อผู้เล่นมาที่ร้านค้า ตัวอย่างนี้เป็นตัวอย่างของ empty function ชื่อ `functionName` (หมายเหตุ ให้ใส่ { เมื่อจบบรรทัดแรก และใส่ } ที่บรรทัดที่สอง):
 
 ```js
 function functionName() {
@@ -16,7 +16,7 @@ function functionName() {
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(typeof goStore === 'function');

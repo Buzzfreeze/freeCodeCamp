@@ -8,9 +8,9 @@ dashedName: define-a-constructor-function
 
 # --description--
 
-<dfn>Constructors</dfn> are functions that create new objects. They define properties and behaviors that will belong to the new object. Think of them as a blueprint for the creation of new objects.
+<dfn>Constructors</dfn> เป็นฟังก์ชันที่สร้าง object ใหม่ โดยมีการกำหนด property (คุณลักษณะ) และ behavior (พฤติกรรม) ของ object ใหม่เอาไว้ ให้เรามอง Constructor เปรียบดังพิมพ์เขียวที่ใช้สร้าง object ใหม่ 
 
-Here is an example of a constructor:
+โค้ดด้านล่างเป็นตัวอย่างของ Constructor:
 
 ```js
 function Bird() {
@@ -20,29 +20,34 @@ function Bird() {
 }
 ```
 
-This constructor defines a `Bird` object with properties `name`, `color`, and `numLegs` set to Albert, blue, and 2, respectively. Constructors follow a few conventions:
+Constructor นี้กำหนดให้ object `Bird` มี property `name`, `color` และ `numLegs` มีค่าเป็น Albert, blue และ 2 ตามลำดับ อย่างไรก็ดี การสร้าง Contractor มีกฎเกณฑ์ดังนี้ 
 
-<ul><li>Constructors are defined with a capitalized name to distinguish them from other functions that are not <code>constructors</code>.</li><li>Constructors use the keyword <code>this</code> to set properties of the object they will create. Inside the constructor, <code>this</code> refers to the new object it will create.</li><li>Constructors define properties and behaviors instead of returning a value as other functions might.</li></ul>
+Constructor ต้องขึ้นต้นด้วยตัวพิมพ์ใหญ่ เพื่อให้แตกต่างจากฟังก์ชันปกติที่ไม่ใช่ Constructor
+
+
+<ul><li>Constructor ต้องขึ้นต้นด้วยตัวพิมพ์ใหญ่ เพื่อให้แตกต่างจากฟังก์ชันปกติที่ไม่ใช่ <code>Constructor</code>.
+</li><li>Constructors ใช้คีย์เวิร์ด <code>this</code> เพื่อกำหนด properties ให้กับ object ซึ่งภายใน constructor คำว่า <code>this</code> จะอ้างอิงถึง object ใหม่ที่ constructor กำลังสร้าง</li>
+<li>Constructor ทำเพียงกำหนด properties และ behaviors โดยไม่ได้ return ค่าเหมือนกับฟังก์ชันอื่นๆ</li></ul>
 
 # --instructions--
 
-Create a constructor, `Dog`, with properties `name`, `color`, and `numLegs` that are set to a string, a string, and a number, respectively.
+จงสร้าง constructor `Dog` ที่มี property `name`, `color` และ `numLegs` โดยกำหนดให้เป็น string, string และ number ตามลำดับ
 
 # --hints--
 
-`Dog` should have a `name` property set to a string.
+`Dog` ควรมี property `name` กำหนดให้เป็น string
 
 ```js
 assert(typeof new Dog().name === 'string');
 ```
 
-`Dog` should have a `color` property set to a string.
+`Dog` ควรมี property `color` กำหนดให้เป็น string
 
 ```js
 assert(typeof new Dog().color === 'string');
 ```
 
-`Dog` should have a `numLegs` property set to a number.
+`Dog` ควรมี property `numLegs` กำหนดให้เป็น number
 
 ```js
 assert(typeof new Dog().numLegs === 'number');

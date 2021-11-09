@@ -8,7 +8,7 @@ dashedName: use-a-constructor-to-create-objects
 
 # --description--
 
-Here's the `Bird` constructor from the previous challenge:
+นี่คือ `Bird` constructor จากแบบทดสอบที่แล้ว
 
 ```js
 function Bird() {
@@ -20,9 +20,10 @@ function Bird() {
 let blueBird = new Bird();
 ```
 
-**NOTE:** `this` inside the constructor always refers to the object being created.
+**หมายเหตุ:** `this` ที่อยู่ภายใน constructor อ้างอิงถึง object ที่กำลังถูกสร้างเสมอ
 
-Notice that the `new` operator is used when calling a constructor. This tells JavaScript to create a new instance of `Bird` called `blueBird`. Without the `new` operator, `this` inside the constructor would not point to the newly created object, giving unexpected results. Now `blueBird` has all the properties defined inside the `Bird` constructor:
+สังเกตว่า เราใช้คำว่า `new` ในการเรียก (call) constructor โดยเป็นการบอกให้ JavaScript สร้าง instance ของ `Bird` ที่ชื่อว่า `blueBird` หากไม่มีคำว่า `new` ก็จะทำให้ `this` ที่อยู่ภายใน constructor ไม่สามารถชี้ไปยัง object ที่สร้างใหม่ได้ ก่อให้เกิดผลลัพธ์ที่ไม่ถูกต้อง
+ในขั้นตอนนี้ `blueBird` ก็มี properties ทั้งหมดที่กำหนดอยู่ใน `Bird` constructor แล้ว
 
 ```js
 blueBird.name;
@@ -30,7 +31,7 @@ blueBird.color;
 blueBird.numLegs;
 ```
 
-Just like any other object, its properties can be accessed and modified:
+object ที่สร้างจาก Constructor ก็เหมือนกับ object อื่นๆ คือ สามารถเข้าถึงและแก้ไข property ได้
 
 ```js
 blueBird.name = 'Elvira';
@@ -39,17 +40,17 @@ blueBird.name;
 
 # --instructions--
 
-Use the `Dog` constructor from the last lesson to create a new instance of `Dog`, assigning it to a variable `hound`.
+จงใช้ `Dog` constructor จากบทเรียนที่แล้วในการสร้าง instance ใหม่ของ `Dog` แล้วกำหนดชื่อตัวแปรเป็น `hound`
 
 # --hints--
 
-`hound` should be created using the `Dog` constructor.
+ตัวแปร `hound` ถูกสร้างขึ้นมา โดยใช้ `Dog` constructor
 
 ```js
 assert(hound instanceof Dog);
 ```
 
-Your code should use the `new` operator to create an instance of `Dog`.
+โค้ดของคุณควรใช้ `new` operator ในการสร้าง instance ของ `Dog`
 
 ```js
 assert(code.match(/new/g));

@@ -7,11 +7,11 @@ dashedName: part-65
 
 # --description--
 
-Right after the word `weapons` (with no space between), add brackets `[]`. In between the brackets put `currentWeapon`, which is the index number of the weapon the player just bought.
+ถัดจากคำว่า `weapons` (ไม่ต้องเว้นวรรค) ให้เพิ่ม `[]` เข้าไป ภายในวงเล็บ `[]` ให้ใส่ `currentWeapon` ซึ่งเป็นเลข index number ของอาวุธที่ผู้เล่นเพิ่งซื้อไป
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(/let\s*newWeapon\s*\=\s*weapons\s?\[currentWeapon\]\;?/.test(code));

@@ -7,11 +7,11 @@ dashedName: part-82
 
 # --description--
 
-After the line that creates the `currentWeapon` variable, set `text.innerText` to equal `"You sold a " + currentWeapon + "."`
+ต่อจากบรรทัดที่สร้างตัวแปร `currentWeapon` จงกำหนด `text.innerText` ให้มีค่าเท่ากับ `"You sold a " + currentWeapon + "."`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 (inventory = ['potato', 'carrot']),

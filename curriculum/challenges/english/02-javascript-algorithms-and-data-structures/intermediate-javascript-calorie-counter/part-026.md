@@ -7,13 +7,13 @@ dashedName: part-26
 
 # --description--
 
-Now that we have `total` and `maxCalories`, we need to find out the difference between them.
+ตอนนี้เรามี `total` และ `maxCalories` เราต้องการหาผลต่างระหว่างค่าทั้งสอง
 
-Create a variable named `difference` and set it equal to `total - maxCalories`
+จงสร้างตัวแปรชื่อ `difference` และกำหนดให้มีค่าเท่ากับ `total - maxCalories`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(/const\s*difference\s*\=\s*total\s*\-\s*maxCalories?/.test(code));

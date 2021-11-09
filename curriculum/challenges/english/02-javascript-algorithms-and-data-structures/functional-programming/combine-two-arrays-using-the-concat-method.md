@@ -8,39 +8,39 @@ dashedName: combine-two-arrays-using-the-concat-method
 
 # --description--
 
-<dfn>Concatenation</dfn> means to join items end to end. JavaScript offers the `concat` method for both strings and arrays that work in the same way. For arrays, the method is called on one, then another array is provided as the argument to `concat`, which is added to the end of the first array. It returns a new array and does not mutate either of the original arrays. Here's an example:
+<dfn>Concatenation</dfn> หมายถึงการนำ items มาต่อกัน โดย JavaScript มี `concat` method ที่ใช้ได้กับทั้ง strings และ arrays สามารถเรียกใช้ได้ในรูปแบบเดียวกัน สำหรับการใช้งานใน arrays นั้น array ตัวแรกทำการเรียก method ส่วน array ตัวที่สองจะเป็น argument ของ `concat` ซึ่ง array ตัวที่สองจะถูกนำมาต่อท้าย array ตัวแรก อย่างไรก็ตาม method นี้ไม่เปลี่ยนแปลงค่าของ array ตั้งต้นทั้งสองตัว ดังตัวอย่างต่อไปนี้
 
 ```js
 [1, 2, 3].concat([4, 5, 6]);
 ```
 
-The returned array would be `[1, 2, 3, 4, 5, 6]`.
+array ที่เป็นผลลัพธ์มีค่าดังนี้ `[1, 2, 3, 4, 5, 6]`.
 
 # --instructions--
 
-Use the `concat` method in the `nonMutatingConcat` function to concatenate `attach` to the end of `original`. The function should return the concatenated array.
+จงใช้ `concat` method ในฟังก์ชัน `nonMutatingConcat` เพื่อนำ `attach` มาต่อท้าย `original` โดยฟังก์ชันควรคืนค่าเป็น array ที่มีการต่อกันแล้ว (concatenated)
 
 # --hints--
 
-Your code should use the `concat` method.
+โค้ดของคุณควรใช้ `concat` method
 
 ```js
 assert(code.match(/\.concat/g));
 ```
 
-The `first` array should not change.
+`first` array ไม่ควรมีการเปลี่ยนแปลง
 
 ```js
 assert(JSON.stringify(first) === JSON.stringify([1, 2, 3]));
 ```
 
-The `second` array should not change.
+`second` array ไม่ควรมีการเปลี่ยนแปลง
 
 ```js
 assert(JSON.stringify(second) === JSON.stringify([4, 5]));
 ```
 
-`nonMutatingConcat([1, 2, 3], [4, 5])` should return `[1, 2, 3, 4, 5]`.
+`nonMutatingConcat([1, 2, 3], [4, 5])` ควรคืนค่าเป็น `[1, 2, 3, 4, 5]`.
 
 ```js
 assert(

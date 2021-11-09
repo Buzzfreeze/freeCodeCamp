@@ -7,11 +7,11 @@ dashedName: part-108
 
 # --description--
 
-Finish the `defeatMonster` function by calling the `update()` function and pass in `locations[4]`.
+จบฟังก์ชัน `defeatMonster` โดยการเรียกฟังก์ชัน `update()` แล้วส่ง `locations[4]` เข้าไปในฟังก์ชัน `update()`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

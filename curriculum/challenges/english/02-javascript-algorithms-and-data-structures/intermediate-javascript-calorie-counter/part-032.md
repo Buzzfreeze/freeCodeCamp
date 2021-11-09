@@ -7,15 +7,15 @@ dashedName: part-32
 
 # --description--
 
-Notice how if `total` is less than `maxCalories`, `difference` is a negative number.
+สังเกตว่า ถ้า `total` มีค่าน้อยกว่า `maxCalories` จะทำให้ `difference` ติดลบ
 
-We want to show the absolute value of the difference so it displays "300" rather than "-300".
+เราต้องการแสดง absolute value ของผลต่าง ดังนั้น ควรแสดงเป็น "300" แทนที่จะเป็น "-300"
 
-Wrap the `difference` in a `Math.abs()` function.
+จงนำ `difference` ใส่เข้าไปในฟังก์ชัน `Math.abs()`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

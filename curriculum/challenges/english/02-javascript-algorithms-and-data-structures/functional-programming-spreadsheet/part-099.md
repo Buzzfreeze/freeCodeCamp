@@ -7,19 +7,19 @@ dashedName: part-99
 
 # --description--
 
-In functional programming, we strive to use a type of function called "pure functions" as much as possible. The first property of pure functions is that they always return the same value for the same arguments.
+สำหรับเรื่อง functional programming เราพยายามใช้ฟังก์ชันชนิดหนึ่งที่เรียกว่า "pure functions" ให้มากที่สุดเท่าที่เป็นไปได้ คุณสมบัติแรกของ pure functions ก็คือ เมื่อ argument เป็นค่าเดิม ก็จะคืนค่าเป็นค่าเดิมเสมอ
 
-You can check if this is the case by comparing a call to a function with another call (with the same arguments):
+คุณสามารถตรวจสอบว่าเป็นฟังก์ชันดังกล่าวหรือไม่ โดยนำการเรียกฟังก์ชันนึงมาเทียบกับการเรียกอีกฟังก์ชันนึง (ที่มี argument เหมือนกัน)
 
 ```js
 console.log(f(2) === f(2)); // always true for pure functions
 ```
 
-Use this technique to check if the `random` function in `spreadsheetFunctions` is pure by passing in the following array: `[1, 1000]`.
+จงใช้เทคนิคนี้ในการเช็คว่าฟังก์ชัน `random` ใน `spreadsheetFunctions` เป็น pure function หรือไม่ โดยส่ง array ต่อไปนี้เข้าไป: `[1, 1000]`.
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

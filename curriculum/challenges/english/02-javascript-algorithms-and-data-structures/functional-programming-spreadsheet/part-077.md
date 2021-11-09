@@ -7,13 +7,13 @@ dashedName: part-77
 
 # --description--
 
-`evalFormula` should return the value passed to it if this value remained unchanged. Otherwise, it should call itself with the latest value.
+`evalFormula` ควรคืนค่าเป็นค่าเดิมที่ส่งเข้ามา หากค่านั้นไม่มีการเปลี่ยนแปลง แต่หากค่านั้นมีการเปลี่ยนแปลง ให้เรียกตัวเองด้วยค่าล่าสุด
 
-Use the ternary operator in the last line of `evalFormula` to return `functionExpanded` if `x === functionExpanded` and `evalFormula(functionExpanded)` otherwise.
+จงใช้ ternary operator ที่บรรทัดสุดท้ายของ `evalFormula` เพื่อคืนค่าเป็น `functionExpanded` ถ้า `x === functionExpanded` และคืนค่าเป็น `evalFormula(functionExpanded)` ถ้าเงื่อนไขเป็นเท็จ
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(evalFormula('(2+2)*2') === '8');

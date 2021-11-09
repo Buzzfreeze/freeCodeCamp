@@ -7,11 +7,11 @@ dashedName: part-152
 
 # --description--
 
-Inside the `locations` array, on the `kill monster` object, "button functions" is currently set to `[goTown, goTown, goTown]`. Change the third `goTown` to `easterEgg`. This is how a player will access the hidden feature of the game.
+ภายใน `locations` array ตรง `kill monster` object จะเห็นว่า "button functions" มีค่าเป็น `[goTown, goTown, goTown]` ให้เปลี่ยน `goTown` ตัวที่สามเป็น `easterEgg` นี่เป็นวิธีที่ผู้เล่นจะเข้าไปยังฟีเจอร์ลับของเกมได้
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert.deepStrictEqual(locations[4], {

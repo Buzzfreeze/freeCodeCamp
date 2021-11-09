@@ -7,11 +7,11 @@ dashedName: part-113
 
 # --description--
 
-In the `lose` function, call the `update` function and pass in `locations[5]`.
+ภายในฟังก์ชัน `lose` ให้เรียกฟังก์ชัน `update` โดยส่งค่า `locations[5]` เข้าไปในฟังก์ชัน `update`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 update(locations[0]), lose(), assert(text.innerText === 'You die. ☠️');

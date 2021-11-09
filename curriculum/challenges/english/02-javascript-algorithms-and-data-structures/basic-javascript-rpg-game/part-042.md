@@ -7,11 +7,11 @@ dashedName: part-42
 
 # --description--
 
-Now update the `innerText` of the other two buttons. They should be set to equal the same thing as the first button, except the number inside the brackets should be 1 for the second button and 2 for the third button.
+ตอนนี้ให้ทำการเปลี่ยนค่า `innerText` ของปุ่มอีก 2 ปุ่ม โดยทั้ง 2 ปุ่มควรกำหนดค่าเหมือนกับปุ่มแรก ยกเว้นตัวเลขที่อยู่ภายใน [] ควรเป็น 1 สำหรับปุ่มที่สอง และเป็น 2 สำหรับปุ่มที่สาม
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

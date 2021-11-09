@@ -8,7 +8,8 @@ dashedName: extend-constructors-to-receive-arguments
 
 # --description--
 
-The `Bird` and `Dog` constructors from the last challenge worked well. However, notice that all `Birds` that are created with the `Bird` constructor are automatically named Albert, are blue in color, and have two legs. What if you want birds with different values for name and color? It's possible to change the properties of each bird manually but that would be a lot of work:
+
+แม้ว่า `Bird` และ `Dog` constructors ที่ได้จากแบบทดสอบที่แล้วจะทำงานได้ดี แต่สังเกตว่า ทุก `Birds` ที่สร้างจาก `Bird` constructor จะมี  name เป็น Albert มี color สีฟ้าและมี 2 ขาเสมอ ถ้าหากคุณต้องการให้นกแต่ละตัวมี name และ color ต่างกัน ก็มีวิธีที่เปลี่ยน property ของนกทีละตัวอยู่ แต่ค่อนข้างใช้เวลา
 
 ```js
 let swan = new Bird();
@@ -16,7 +17,7 @@ swan.name = "Carlos";
 swan.color = "white";
 ```
 
-Suppose you were writing a program to keep track of hundreds or even thousands of different birds in an aviary. It would take a lot of time to create all the birds, then change the properties to different values for every one. To more easily create different `Bird` objects, you can design your Bird constructor to accept parameters:
+สมมติว่าคุณกำลังเขียนโปรแกรมเพื่อเก็บข้อมูลของนกหลายร้อยหลายพันตัวที่อยู่ในกรง ซึ่งใช้เวลามากในการสร้างนกทั้งหมดและเปลี่ยน property ของแต่ละตัวให้เป็นค่าที่แตกต่างกัน ดังนั้น หากคุณต้องการสร้าง `Bird` objects ที่มีค่าแตกต่างกันให้ง่ายขึ้น คุณต้องออกแบบให้ Bird constructor สามารถรับ parameter ได้
 
 ```js
 function Bird(name, color) {
@@ -26,7 +27,7 @@ function Bird(name, color) {
 }
 ```
 
-Then pass in the values as arguments to define each unique bird into the `Bird` constructor: `let cardinal = new Bird("Bruce", "red");` This gives a new instance of `Bird` with `name` and `color` properties set to `Bruce` and `red`, respectively. The `numLegs` property is still set to 2. The `cardinal` has these properties:
+จากนั้นก็ส่งค่าที่แตกต่างกันนั้นเป็น arguments เพื่อเข้าไปกำหนดคุณสมบัติของนกภายใน `Bird` constructor: `let cardinal = new Bird("Bruce", "red");` คำสั่งนี้เป็นการสร้าง instance ใหม่ของ `Bird` โดยกำหนดให้ `name` และ `color` properties มีค่าเป็น `Bruce` และ `red` ตามลำดับ ส่วน `numLegs` property ก็ยังคงมีค่าเป็น 2 ซึ่ง `cardinal` มี property ดังนี้
 
 ```js
 cardinal.name
@@ -34,33 +35,33 @@ cardinal.color
 cardinal.numLegs
 ```
 
-The constructor is more flexible. It's now possible to define the properties for each `Bird` at the time it is created, which is one way that JavaScript constructors are so useful. They group objects together based on shared characteristics and behavior and define a blueprint that automates their creation.
+การกำหนด constructor แบบนี้มีความยืดหยุ่นมากกว่า เพราะสามารถกำหนด properties ของ `Bird` แต่ละตัวได้ในจังหวะการสร้างเลย ซึ่งวิธีนี้ทำให้ JavaScript constructor มีประโยชน์อย่างมาก เนื่องจากมีการจัดกลุ่ม object เข้าด้วยกันตามคุณสมบัติและพฤติกรรมที่เหมือนกัน และสามารถกำหนดพิมพ์เขียวที่ใช้ในการสร้าง instance ได้
 
 # --instructions--
 
-Create another `Dog` constructor. This time, set it up to take the parameters `name` and `color`, and have the property `numLegs` fixed at 4. Then create a new `Dog` saved in a variable `terrier`. Pass it two strings as arguments for the `name` and `color` properties.
+จงสร้าง `Dog` constructor อีกชุดนึง แต่ครั้งนี้ให้มีการรับค่า parameters `name` และ `color` และกำหนดให้ property `numLegs` มีค่าเป็น 4 จากนั้นให้สร้าง `Dog` instance ใหม่ โดยเก็บในตัวแปร `terrier` แล้วส่ง string 2 ค่าเข้าไปเป็น argument สำหรับ properties `name` และ `color`
 
 # --hints--
 
-`Dog` should receive an argument for `name`.
+`Dog` ควรรับ argument ที่เป็น `name` เข้ามา
 
 ```js
 assert(new Dog('Clifford').name === 'Clifford');
 ```
 
-`Dog` should receive an argument for `color`.
+`Dog` ควรรับ argument ที่เป็น `color` เข้ามา
 
 ```js
 assert(new Dog('Clifford', 'yellow').color === 'yellow');
 ```
 
-`Dog` should have property `numLegs` set to 4.
+`Dog` ควรกำหนดให้ property `numLegs` มีค่าเป็น 4
 
 ```js
 assert(new Dog('Clifford').numLegs === 4);
 ```
 
-`terrier` should be created using the `Dog` constructor.
+`terrier` ควรสร้างจาก `Dog` constructor
 
 ```js
 assert(terrier instanceof Dog);

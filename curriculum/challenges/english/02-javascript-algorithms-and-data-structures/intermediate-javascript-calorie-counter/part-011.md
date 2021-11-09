@@ -7,11 +7,11 @@ dashedName: part-11
 
 # --description--
 
-Log `meal.value` to the console, enter a number in the Breakfast input and hit the Calculate button. You'll notice that it displays what you entered.
+จง log ค่า `meal.value` บนหน้า console แล้วกรอกตัวเลขในช่อง Breakfast แล้วกดปุ่ม Calculate คุณจะเห็นว่า หน้า console แสดงข้อมูลตามที่คุณกรอก
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 

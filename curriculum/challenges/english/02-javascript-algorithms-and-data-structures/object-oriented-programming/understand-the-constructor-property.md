@@ -8,7 +8,7 @@ dashedName: understand-the-constructor-property
 
 # --description--
 
-There is a special `constructor` property located on the object instances `duck` and `beagle` that were created in the previous challenges:
+`constructor` property เป็น property พิเศษที่มีอยู่แล้วใน instances `duck` และ `beagle` ซึ่งสร้างในแบบทดสอบก่อนหน้านี้
 
 ```js
 let duck = new Bird();
@@ -18,9 +18,9 @@ console.log(duck.constructor === Bird);
 console.log(beagle.constructor === Dog);
 ```
 
-Both of these `console.log` calls would display `true` in the console.
+ทั้งสองคำสั่ง `console.log` จะแสดงผลเป็น `true` ใน console
 
-Note that the `constructor` property is a reference to the constructor function that created the instance. The advantage of the `constructor` property is that it's possible to check for this property to find out what kind of object it is. Here's an example of how this could be used:
+หมายเหตุ `constructor` property คือสิ่งที่อ้างอิงฟังก์ชัน constructor ที่ใช้ในการสร้าง instance โดยข้อดีของ `constructor` property ก็คือ เราสามารถใช้ property นี้ในการหาว่า object นี้เป็นประเภทใด ดังตัวอย่างต่อไปนี้
 
 ```js
 function joinBirdFraternity(candidate) {
@@ -32,27 +32,27 @@ function joinBirdFraternity(candidate) {
 }
 ```
 
-**Note:** Since the `constructor` property can be overwritten (which will be covered in the next two challenges) it’s generally better to use the `instanceof` method to check the type of an object.
+**หมายเหตุ:** เนื่องด้วย `constructor` property สามารถถูกเขียนทับได้ (overwritten) (จะกล่าวต่อไปในอีก 2 แบบทดสอบ) ดังนั้น เราจึงควรใช้ method `instanceof` ในการตรวจสอบประเภทของ object มากกว่าที่จะใช้ `constructor` property
 
 # --instructions--
 
-Write a `joinDogFraternity` function that takes a `candidate` parameter and, using the `constructor` property, return `true` if the candidate is a `Dog`, otherwise return `false`.
+จงเขียนฟังก์ชัน `joinDogFraternity` ซึ่งรับค่า `candidate` parameter และใช้ `constructor` property โดยให้ return `true` หาก candidate เป็น `Dog` แต่หากไม่ใช่ `Dog` ให้ return `false`
 
 # --hints--
 
-`joinDogFraternity` should be defined as a function.
+`joinDogFraternity` ควรกำหนดให้เป็นฟังก์ชัน
 
 ```js
 assert(typeof joinDogFraternity === 'function');
 ```
 
-`joinDogFraternity` should return `true` if `candidate` is an instance of `Dog`.
+`joinDogFraternity` ควรคืนค่า `true` ถ้า `candidate` เป็น instance ของ `Dog`
 
 ```js
 assert(joinDogFraternity(new Dog('')) === true);
 ```
 
-`joinDogFraternity` should use the `constructor` property.
+`joinDogFraternity` ควรใช้ `constructor` property
 
 ```js
 assert(/\.constructor/.test(code) && !/instanceof/.test(code));

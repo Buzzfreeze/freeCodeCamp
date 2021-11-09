@@ -7,11 +7,11 @@ dashedName: part-94
 
 # --description--
 
-Now set the `innerText` property of `monsterNameText` to equal `monsters[fighting].name`. Also, set the `innerText` property of `monsterHealthText` to equal `monsterHealth`.
+ตอนนี้ให้กำหนด `innerText` property ของ `monsterNameText` มีค่าเท่ากับ `monsters[fighting].name` แล้วกำหนด `innerText` property ของ `monsterHealthText` ให้มีค่าเท่ากับ `monsterHealth`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

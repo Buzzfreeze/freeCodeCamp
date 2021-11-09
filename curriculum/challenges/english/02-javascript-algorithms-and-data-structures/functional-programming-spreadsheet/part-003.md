@@ -7,11 +7,11 @@ dashedName: part-3
 
 # --description--
 
-Now return the sum of `x` and `y` using the `return` keyword.
+ตอนนี้ให้คืนค่าผลรวมของ `x` และ `y` โดยใช้คีย์เวิร์ด `return`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(add(1, 2) === 3 && add(100, 2000) === 2100);

@@ -8,67 +8,67 @@ dashedName: boo-who
 
 # --description--
 
-Check if a value is classified as a boolean primitive. Return `true` or `false`.
+ในการตรวจสอบค่าหนึ่งๆ ว่าเป็น boolean หรือไม่ ผลจากตรวจสอบจะคืนค่าเป็น `true` หรือ `false`
+โดย boolean สามารถมีค่าเป็น `true` และ `false`
 
-Boolean primitives are `true` and `false`.
 
 # --hints--
 
-`booWho(true)` should return `true`.
+`booWho(true)` ควรคืนค่า `true` ออกมา
 
 ```js
 assert.strictEqual(booWho(true), true);
 ```
 
-`booWho(false)` should return `true`.
+`booWho(false)` ควรคืนค่า `true` ออกมา
 
 ```js
 assert.strictEqual(booWho(false), true);
 ```
 
-`booWho([1, 2, 3])` should return `false`.
+`booWho([1, 2, 3])` ควรคืนค่า `false` ออกมา
 
 ```js
 assert.strictEqual(booWho([1, 2, 3]), false);
 ```
 
-`booWho([].slice)` should return `false`.
+`booWho([].slice)` ควรคืนค่า `false` ออกมา
 
 ```js
 assert.strictEqual(booWho([].slice), false);
 ```
 
-`booWho({ "a": 1 })` should return `false`.
+`booWho({ "a": 1 })` ควรคืนค่า `false` ออกมา
 
 ```js
 assert.strictEqual(booWho({ a: 1 }), false);
 ```
 
-`booWho(1)` should return `false`.
+`booWho(1)` ควรคืนค่า `false` ออกมา
 
 ```js
 assert.strictEqual(booWho(1), false);
 ```
 
-`booWho(NaN)` should return `false`.
+`booWho(NaN)` ควรคืนค่า `false` ออกมา
 
 ```js
 assert.strictEqual(booWho(NaN), false);
 ```
 
-`booWho("a")` should return `false`.
+`booWho("a")` ควรคืนค่า `false` ออกมา
 
 ```js
 assert.strictEqual(booWho('a'), false);
 ```
 
-`booWho("true")` should return `false`.
+`booWho("true")` ควรคืนค่า `false` ออกมา
 
 ```js
 assert.strictEqual(booWho('true'), false);
 ```
 
-`booWho("false")` should return `false`.
+`booWho("false")` ควรคืนค่า `false` ออกมา
 
 ```js
 assert.strictEqual(booWho('false'), false);

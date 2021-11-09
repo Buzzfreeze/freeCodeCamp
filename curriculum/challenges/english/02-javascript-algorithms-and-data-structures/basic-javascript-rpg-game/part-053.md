@@ -7,7 +7,7 @@ dashedName: part-53
 
 # --description--
 
-What if the player doesn't have enough gold to buy health? Put all the code in the `buyHealth` function inside an `if` statement. Here is an example of an `if` statement inside a function:
+ถ้าผู้เล่นมี gold ไม่พอที่จะซื้อ health ล่ะจะให้ทำยังไง? ให้นำโค้ดที่อยู่ในฟังก์ชัน `buyHealth` มาใส่ใน `if` statement ตัวอย่างต่อไปนี้เป็น `if` statement ที่อยู่ในฟังก์ชัน
 
 ```js
 function checkMoney() {
@@ -17,11 +17,11 @@ function checkMoney() {
 }
 ```
 
-Note: For now you should use the word "condition" inside the `if` statement but we'll be changing that next.
+หมายเหตุ: ตอนนี้ให้คุณระบุคำว่า "condition" ใน `if` statement แล้วเราค่อยเปลี่ยนอีกครั้งภายหลัง
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

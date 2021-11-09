@@ -7,13 +7,13 @@ dashedName: part-139
 
 # --description--
 
-The `fill` method takes an argument and replaces all elements of the array with that argument.
+`fill` method รับค่า argument แล้วแทนที่ทุก elements ของ array ด้วยค่า argument นั้น
 
-Use it on the array in `range` to replace everything with `start`.
+จงใช้ method นี้กับ array ใน `range` เพื่อแทนที่ทุก element ด้วย `start`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

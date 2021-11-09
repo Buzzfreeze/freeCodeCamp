@@ -8,83 +8,83 @@ dashedName: mutations
 
 # --description--
 
-Return `true` if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+ให้เขียนฟังก์ชันที่ได้ผลลัพธ์เป็น `true` หาก string ใน element แรกของ array มีตัวอักษรของ string ใน element ที่สองของ array ครบทุกตัว
 
-For example, `["hello", "Hello"]`, should return `true` because all of the letters in the second string are present in the first, ignoring case.
+ตัวอย่างเช่น `["hello", "Hello"]` ควรได้ผลลัพธ์ `true` เนื่องจากตัวอักษรใน string ที่สองมีอยู่ใน string แรก (ไม่สนใจตัวเล็กตัวใหญ่)
 
-The arguments `["hello", "hey"]` should return `false` because the string `hello` does not contain a `y`.
+`["hello", "hey"]` ควรได้ผลลัพธ์ `false` เพราะ `hello` ไม่มีตัวอักษร `y`
 
-Lastly, `["Alien", "line"]`, should return `true` because all of the letters in `line` are present in `Alien`.
+`["Alien", "line"]` ควรได้ผลลัพธ์ `true` เพราะตัวอักษรทุกตัวใน `line` มีใน `Alien`
 
 # --hints--
 
-`mutation(["hello", "hey"])` should return `false`.
+`mutation(["hello", "hey"])` ควรได้ผลลัพธ์คือ `false`.
 
 ```js
 assert(mutation(['hello', 'hey']) === false);
 ```
 
-`mutation(["hello", "Hello"])` should return `true`.
+`mutation(["hello", "Hello"])` ควรได้ผลลัพธ์คือ `true`.
 
 ```js
 assert(mutation(['hello', 'Hello']) === true);
 ```
 
-`mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"])` should return `true`.
+`mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"])` ควรได้ผลลัพธ์คือ `true`.
 
 ```js
 assert(mutation(['zyxwvutsrqponmlkjihgfedcba', 'qrstu']) === true);
 ```
 
-`mutation(["Mary", "Army"])` should return `true`.
+`mutation(["Mary", "Army"])` ควรได้ผลลัพธ์คือ `true`.
 
 ```js
 assert(mutation(['Mary', 'Army']) === true);
 ```
 
-`mutation(["Mary", "Aarmy"])` should return `true`.
+`mutation(["Mary", "Aarmy"])` ควรได้ผลลัพธ์คือ `true`.
 
 ```js
 assert(mutation(['Mary', 'Aarmy']) === true);
 ```
 
-`mutation(["Alien", "line"])` should return `true`.
+`mutation(["Alien", "line"])` ควรได้ผลลัพธ์คือ `true`.
 
 ```js
 assert(mutation(['Alien', 'line']) === true);
 ```
 
-`mutation(["floor", "for"])` should return `true`.
+`mutation(["floor", "for"])` ควรได้ผลลัพธ์คือ `true`.
 
 ```js
 assert(mutation(['floor', 'for']) === true);
 ```
 
-`mutation(["hello", "neo"])` should return `false`.
+`mutation(["hello", "neo"])` ควรได้ผลลัพธ์คือ `false`.
 
 ```js
 assert(mutation(['hello', 'neo']) === false);
 ```
 
-`mutation(["voodoo", "no"])` should return `false`.
+`mutation(["voodoo", "no"])` ควรได้ผลลัพธ์คือ `false`.
 
 ```js
 assert(mutation(['voodoo', 'no']) === false);
 ```
 
-`mutation(["ate", "date"])` should return `false`.
+`mutation(["ate", "date"])` ควรได้ผลลัพธ์คือ `false`.
 
 ```js
 assert(mutation(['ate', 'date']) === false);
 ```
 
-`mutation(["Tiger", "Zebra"])` should return `false`.
+`mutation(["Tiger", "Zebra"])` ควรได้ผลลัพธ์คือ `false`.
 
 ```js
 assert(mutation(['Tiger', 'Zebra']) === false);
 ```
 
-`mutation(["Noel", "Ole"])` should return `true`.
+`mutation(["Noel", "Ole"])` ควรได้ผลลัพธ์คือ `true`.
 
 ```js
 assert(mutation(['Noel', 'Ole']) === true);

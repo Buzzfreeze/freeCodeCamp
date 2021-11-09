@@ -7,11 +7,11 @@ dashedName: part-8
 
 # --description--
 
-Add the key `+` to `infixToFunction` and assign it the value `addVar`.
+เพิ่ม key `+` ให้กับ object `infixToFunction` และกำหนดค่า value `addVar` ให้กับ key
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(infixToFunction['+'].toString() === addVar.toString());

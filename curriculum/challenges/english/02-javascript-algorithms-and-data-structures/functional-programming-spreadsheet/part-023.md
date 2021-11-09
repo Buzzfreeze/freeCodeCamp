@@ -7,13 +7,13 @@ dashedName: part-23
 
 # --description--
 
-Recursion is when a function calls itself. We often use it instead of `while`/`for` loops, as loops usually involve mutable state.
+Recursion คือการที่ฟังก์ชันเรียกตัวเอง เรามักใช้ recursive แทนที่การใช้ `while`/`for` loops เนื่องจาก loops มักเกี่ยวข้องกับการเปลี่ยนแปลง state
 
-Replace the empty string in `highPrecedence` with a call to `highPrecedence` with `str2` as argument.
+จงแทนที่ empty string ใน `highPrecedence` ด้วยการเรียก `highPrecedence` และส่งค่า `str2` เป็น argument
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-74
 
 # --description--
 
-We have to fix an error. The `currentWeapon` variable is the array index. Array indexing starts at zero. The index of the last element in an array is one less than the length of the array. In the `if` condition you are working on, change `weapons.length` to `weapons.length - 1`.
+เราจะต้องแก้ไข error ค่าตัวแปร `currentWeapon` คือ array index ซึ่ง array index เริ่มต้นจาก 0 ส่วน index ของ element สุดท้ายของ array คือ ความยาว array ลบ 1 ในเงื่อนไข `if` ที่คุณกำลังทำงานอยู่ ให้เปลี่ยน `weapons.length` เป็น `weapons.length - 1`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

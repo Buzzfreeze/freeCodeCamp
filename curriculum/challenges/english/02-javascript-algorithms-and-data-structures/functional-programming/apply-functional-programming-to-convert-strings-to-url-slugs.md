@@ -8,45 +8,46 @@ dashedName: apply-functional-programming-to-convert-strings-to-url-slugs
 
 # --description--
 
-The last several challenges covered a number of useful array and string methods that follow functional programming principles. We've also learned about `reduce`, which is a powerful method used to reduce problems to simpler forms. From computing averages to sorting, any array operation can be achieved by applying it. Recall that `map` and `filter` are special cases of `reduce`.
+แบบทดสอบที่ผ่านมาได้กล่าวถึง array method และ string method หลายตัวที่ใช้หลักการ functional programming และเรายังได้เรียนรู้การใช้งาน `reduce` ซึ่งเป็น method ที่มีความสำคัญอย่างมากในการทำให้ปัญหาต่างๆ อยู่ในรูปแบบที่ง่ายขึ้น ไม่ว่าจะเป็นการคำนวณค่าเฉลี่ยหรือการเรียงลำดับหรือ array operation อื่นๆ ก็สามารถนำ `reduce` มาใช้งานได้ ให้เรานึกถึง `map` และ `filter` ซึ่งเป็นรูปแบบพิเศษของ `reduce`
 
-Let's combine what we've learned to solve a practical problem.
+ใช้ความรู้ที่เราได้เรียนมาแก้ปัญหาในชีวิตจริงกัน
 
-Many content management sites (CMS) have the titles of a post added to part of the URL for simple bookmarking purposes. For example, if you write a Medium post titled `Stop Using Reduce`, it's likely the URL would have some form of the title string in it (`.../stop-using-reduce`). You may have already noticed this on the freeCodeCamp site.
+
+content management sites (CMS) ต่างๆ มักนำหัวข้อ (title) ของโพสต์มาเป็นส่วนหนึ่งของ URL ด้วย เพื่อให้เป็นเหมือน bookmark ยกตัวอย่างเช่น ถ้าคุณเขียนโพสต์ที่มีหัวข้อ `Stop Using Reduce` ก็มักมีชื่อหัวข้อเป็นอีกรูปแบบนึงอยู่ใน URL ด้วย (`.../stop-using-reduce`) เช่นเดียวกับเว็บ freeCodeCamp คุณอาจสังเกตว่ามีลักษณะแบบนี้ด้วย
 
 # --instructions--
 
-Fill in the `urlSlug` function so it converts a string `title` and returns the hyphenated version for the URL. You can use any of the methods covered in this section, and don't use `replace`. Here are the requirements:
+จงเติมโค้ดในฟังก์ชัน `urlSlug` เพื่อแปลงค่า string `title` และให้คืนค่าเป็น URL ที่มี "-" คั่นระหว่างคำ คุณสามารถใช้ method ใดก็ได้ที่ได้เรียนรู้ไปแล้วในหัวข้อนี้ แต่ห้ามใช้ `replace` แบบทดสอบนี้มีเงื่อนไขดังนี้
 
-The input is a string with spaces and title-cased words
+input คือ string ที่มีการเว้นวรรคระหว่างคำ และตัวอักษรแรกของแต่ละคำเป็นตัวพิมพ์ใหญ่
 
-The output is a string with the spaces between words replaced by a hyphen (`-`)
+output คือ string ที่มีแต่ละคำคั่นด้วย "-" (hyphen)
 
-The output should be all lower-cased letters
+output ควรเป็นตัวอักษรพิมพ์เล็กทั้งหมด
 
-The output should not have any spaces
+output ไม่ควรมี space ใดๆ
 
 # --hints--
 
-Your code should not use the `replace` method for this challenge.
+โค้ดของคุณไม่ควรใช้ `replace` method
 
 ```js
 assert(!code.match(/\.?[\s\S]*?replace/g));
 ```
 
-`urlSlug("Winter Is Coming")` should return the string `winter-is-coming`.
+`urlSlug("Winter Is Coming")` ควรคืนค่าเป็น string `winter-is-coming`
 
 ```js
 assert(urlSlug('Winter Is Coming') === 'winter-is-coming');
 ```
 
-`urlSlug(" Winter Is  Coming")` should return the string `winter-is-coming`.
+`urlSlug(" Winter Is  Coming")` ควรคืนค่าเป็น string `winter-is-coming`
 
 ```js
 assert(urlSlug(' Winter Is  Coming') === 'winter-is-coming');
 ```
 
-`urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone")` should return the string `a-mind-needs-books-like-a-sword-needs-a-whetstone`.
+`urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone")` ควรคืนค่าเป็น string `a-mind-needs-books-like-a-sword-needs-a-whetstone`
 
 ```js
 assert(
@@ -55,7 +56,7 @@ assert(
 );
 ```
 
-`urlSlug("Hold The Door")` should return the string `hold-the-door`.
+`urlSlug("Hold The Door")` ควรคืนค่าเป็น string `hold-the-door`
 
 ```js
 assert(urlSlug('Hold The Door') === 'hold-the-door');

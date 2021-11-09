@@ -7,11 +7,11 @@ dashedName: part-127
 
 # --description--
 
-Add an `else` expression to the `if` expression. Use the `+=` operator to add the text " You miss." onto the end of `text.innerText`.
+ให้เพิ่ม `else` expression ที่ `if` expression แล้วใช้ `+=` operator เพื่อเพิ่มข้อความ " You miss." ต่อจาก `text.innerText`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

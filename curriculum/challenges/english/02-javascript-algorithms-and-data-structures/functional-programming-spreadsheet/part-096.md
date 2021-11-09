@@ -7,11 +7,11 @@ dashedName: part-96
 
 # --description--
 
-Now change the if statement to set `element.value` to the result of passing `value.slice(1)` to `evalFormula`. There is no need to use `const` because we're modifying `element.value`, not declaring it.
+ตอนนี้ให้ปรับเปลี่ยน if statement โดยการกำหนดให้ `element.value` มีค่าเป็นผลจากการส่ง `value.slice(1)` เข้าไปใน `evalFormula` ในที่นี้ไม่จำเป็นต้องใช้ `const` เพราะเรากำลังเปลี่ยนค่า `element.value` ไม่ใช่การประกาศตัวแปร
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,11 +7,11 @@ dashedName: part-48
 
 # --description--
 
-Create two more empty functions: `fightSlime` and `fightBeast`.
+จงสร้าง empty function อีก 2 ตัว คือ `fightSlime` และ `fightBeast`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(typeof fightSlime === 'function' && typeof fightBeast === 'function');

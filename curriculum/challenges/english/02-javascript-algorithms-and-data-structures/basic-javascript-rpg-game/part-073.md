@@ -7,11 +7,11 @@ dashedName: part-73
 
 # --description--
 
-At some point in the future, you may want to add more weapons. Instead of checking if `currentWeapon` is less than three, check if `currentWeapon` is less than the length of the `weapons` array. For example, here is how you would get the length of an array called `arr`: `arr.length`.
+ในอนาคตข้างหน้า คุณอาจต้องการเพิ่มอาวุธมากกว่านี้ แทนที่จะเช็คว่า `currentWeapon` มีค่าน้อยกว่า 3 หรือไม่ ก็ให้เช็คว่า `currentWeapon` มีค่าน้อยกว่าความยาวของ `weapons` array หรือไม่ ดังตัวอย่างแสดงวิธีที่คุณจะได้ความยาวของ array ชื่อ `arr` ออกมา: `arr.length`.
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

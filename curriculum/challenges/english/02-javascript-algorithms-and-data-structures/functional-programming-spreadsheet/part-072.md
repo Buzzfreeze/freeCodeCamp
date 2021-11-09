@@ -7,13 +7,13 @@ dashedName: part-72
 
 # --description--
 
-Chain the `map` method to `rangeFromString(n1, n2)` and pass it `addChars(c1)(c2)` as an argument.
+จงนำ `map` method มาใช้กับ `rangeFromString(n1, n2)` แล้วส่งค่า `addChars(c1)(c2)` เข้าไปเป็น argument
 
-This returns an `addChars` function, which has `c1` and `c2` (the characters) preset, and only needs a number (`n`) to be passed to it (which we get from the `rangeFromString` array).
+ขั้นตอนนี้มีการคืนค่าจากฟังก์ชัน `addChars` ซึ่งมี `c1` และ `c2` (ตัวอักษร) ถูกกำหนดไว้แต่แรกแล้ว และต้องการเพียงตัวเลข (`n`) ที่ส่งเข้าไป (ซึ่งเราได้จาก `rangeFromString` array)
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

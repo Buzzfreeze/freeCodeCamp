@@ -7,11 +7,11 @@ dashedName: part-84
 
 # --description--
 
-Add `range(1, 99)` to the end of `window.onload` (the result will be discarded for now).
+เพิ่ม `range(1, 99)` ที่บรรทัดสุดท้ายของ `window.onload` (ยังไม่ต้องสนใจผลลัพธ์ตอนนี้)
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(/window\.onload[\s\S]*range\(1,99\);?\}/.test(code.replace(/\s/g, '')));

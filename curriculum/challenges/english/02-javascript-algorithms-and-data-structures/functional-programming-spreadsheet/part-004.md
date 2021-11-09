@@ -7,13 +7,13 @@ dashedName: part-4
 
 # --description--
 
-In JavaScript, functions are first class. This means that they can be used like any other values - for example, they can be assigned to variables.
+ในภาษา JavaScript ฟังก์ชันถือเป็น first class หมายความว่า เราสามารถใช้งานฟังก์ชันได้เหมือนค่าทั่วๆ ไป เช่น สามารถนำฟังก์ชันกำหนดค่า (assigned) ให้กับตัวแปร 
 
-Assign `add` to a new variable `addVar`.
+จงกำหนดค่า `add` ให้กับตัวแปรใหม่ชื่อ `addVar`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('constaddVar=add'));

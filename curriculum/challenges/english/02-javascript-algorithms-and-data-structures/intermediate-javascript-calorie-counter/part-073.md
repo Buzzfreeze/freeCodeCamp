@@ -7,15 +7,15 @@ dashedName: part-73
 
 # --description--
 
-We also need to remove all elements with the class name `extra-cal-control` that are added when the user clicks the "Add" button.
+เช่นกัน เราต้องลบทุก elements ที่มี class name `extra-cal-control` ซึ่งถูกเพิ่มเข้าไปเมื่อผู้ใช้งานคลิกปุ่ม "Add"
 
-Create a variable named `calInputs` and set it equal to an array of elements with the class name `extra-cal-control`.
+ตงสร้างตัวแปรชื่อ `calInputs` และกำหนดให้มีค่าเท่ากับ array ของ elements ที่มี class name `extra-cal-control`
 
-This is similar to how you declared the `foodInputs` variable previously.
+ขั้นตอนนี้ทำเหมือนกับการประกาศตัวแปร `foodInputs` ก่อนหน้านี้
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

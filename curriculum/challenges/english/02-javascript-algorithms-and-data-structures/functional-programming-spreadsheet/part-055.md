@@ -7,11 +7,11 @@ dashedName: part-55
 
 # --description--
 
-Replace the `n1` return value in `rangeFromString` with `range(n1, n2)`.
+จงแทนที่ `n1` ซึ่งเป็นค่าที่ return ออกมา ใน `rangeFromString` ด้วย `range(n1, n2)`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

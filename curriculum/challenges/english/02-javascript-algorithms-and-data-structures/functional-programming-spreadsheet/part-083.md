@@ -7,13 +7,13 @@ dashedName: part-83
 
 # --description--
 
-The `forEach` method takes a function and calls it with each element of the array.
+`forEach` method รับค่าเป็นฟังก์ชันและรันฟังก์ชันให้กับแต่ละ element ใน array
 
-Chain `forEach` to `letters` and pass it the `createLabel` function to create a label for each of the letters.
+จงนำ `forEach` มาใช้กับ `letters` และส่งค่าฟังก์ชัน `createLabel` เข้าไปเพื่อสร้าง label ของแต่ละตัวอักษร
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('letters.forEach(createLabel)'));

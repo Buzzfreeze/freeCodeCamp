@@ -7,11 +7,11 @@ dashedName: part-63
 
 # --description--
 
-You also don't need the parentheses in `elemValue` - it's parsed this way automatically. Remove them.
+คุณไม่จำเป็นต้องใช้ () ใน `elemValue` แล้ว มันจะวิเคราะห์คำสั่งและส่งต่อค่าไปได้เอง ดังนั้นให้นำ () ออก
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

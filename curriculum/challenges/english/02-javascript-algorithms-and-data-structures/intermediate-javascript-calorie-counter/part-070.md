@@ -7,15 +7,15 @@ dashedName: part-70
 
 # --description--
 
-We need to remove all elements with the class name `food-control` that are added when the user clicks the "Add" button.
+เราต้องการลบทุก elements ที่มี class name `food-control` ซึ่ง element เหล่านี้ถูกเพิ่มเข้ามา เมื่อผู้ใช้งานคลิกปุ่ม "Add"
 
-Inside the function body of `clearForm`, create a variable named `foodInputs` and set it equal to an array of elements with the class name `food-control`.
+ภายในส่วน body ของฟังก์ชัน `clearForm` จงสร้างตัวแปรชื่อ `foodInputs` และกำหนดให้มีค่าเท่ากับ array ของ elements ที่มี class name `food-control`
 
-This is similar to how you declared the `total` variable previously in the `calculate` method.
+ขั้นตอนนี้เหมือนกับการที่คุณประกาศตัวแปร `total` ใน `calculate` method ก่อนหน้านี้
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

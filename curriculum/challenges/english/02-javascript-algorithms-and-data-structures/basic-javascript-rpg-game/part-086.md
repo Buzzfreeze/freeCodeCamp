@@ -7,11 +7,11 @@ dashedName: part-86
 
 # --description--
 
-Fighting each type of monster will be very similar so all three fighting functions will call a function named `goFight`. At the end of the code, add an empty function named `goFight`.
+การต่อสู้กับสัตว์ประหลาดแต่ละชนิดจะคล้ายๆ กัน ดังนั้นทั้งฟังก์ชัน fighting ทั้งสามจะเรียกฟังก์ชันชื่อ `goFight` ต่อจากโค้ดที่อยู่ท้ายสุด ให้เพิ่ม empty function ชื่อ `goFight`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(typeof goFight === 'function');

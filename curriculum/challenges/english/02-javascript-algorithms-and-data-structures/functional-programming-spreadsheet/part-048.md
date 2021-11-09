@@ -7,11 +7,11 @@ dashedName: part-48
 
 # --description--
 
-Define a function `charRange` which takes `start` and `end` as arguments. It should return `start`.
+กำหนดฟังก์ชัน `charRange` ที่รับค่า `start` และ `end` เป็น arguments และให้คืนค่าเป็น `start`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('constcharRange=(start,end)=>start'));

@@ -7,11 +7,11 @@ dashedName: part-50
 
 # --description--
 
-Use the `charCodeAt(0)` method on `start` and `end` in `charRange`, like this: `start.charCodeAt(0)`.
+จงนำ `charCodeAt(0)` method มาใช้กับ `start` และ `end` ที่อยู่ใน `charRange` ดังตัวอย่างนี้: `start.charCodeAt(0)`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(JSON.stringify(charRange('A', 'C')) === '[65,66,67]');

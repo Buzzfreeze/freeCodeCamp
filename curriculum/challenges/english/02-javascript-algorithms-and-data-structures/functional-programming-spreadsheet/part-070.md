@@ -7,11 +7,11 @@ dashedName: part-70
 
 # --description--
 
-Replace the `""` in `varRangeExpanded` with a function, which takes `match`, `c1`, `n1`, `c2` and `n2` as arguments, and returns `n1`.
+แทนที่ `""` ใน `varRangeExpanded` ด้วยฟังก์ชันที่รับ `match`, `c1`, `n1`, `c2` และ `n2` เป็น arguments แล้วคืนค่าเป็น `n1`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

@@ -7,13 +7,13 @@ dashedName: part-51
 
 # --description--
 
-There is a shorthand way to add or subtract from a variable called compound assignment. The long way to add to a variable is `num = num + 5`. The shorthand way is `num += 5`. It works the same way with subtraction.
+การนำตัวแปรมาบวกหรือลบด้วยจำนวนหนึ่งๆ สามารถเขียนแบบสั้นได้ เรียกว่า compound assignment ถ้าเป็นแบบยาว จะต้องเขียนแบบนี้ `num = num + 5` แต่ถ้าเป็นแบบสั้น เขียนได้แบบนี้ `num += 5` ซึ่งวิธีเขียนแบบสั้นสามารถใช้ได้กับการลบด้วย
 
-Update both lines inside the `buyHealth` function to use compound assignment.
+จงปรับแก้ทั้งสองบรรทัดในฟังก์ชัน `buyHealth` ให้ใช้ compound assignment
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

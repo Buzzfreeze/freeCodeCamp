@@ -7,11 +7,11 @@ dashedName: part-66
 
 # --description--
 
-Replace the body of `addChars`, so that instead of adding the arguments, it returns a `charRange` between the first two arguments: `c1 => c2 => n => charRange(c1, c2)`.
+แทนที่โค้ดใน `addChars` ดังนั้นแทนที่จะเอา argument มาต่อกัน ก็ให้คืนค่าเป็น `charRange` ซึ่งเป็นตัวอักษรที่อยู่ระหว่าง argument ทั้งสอง: `c1 => c2 => n => charRange(c1, c2)`.
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

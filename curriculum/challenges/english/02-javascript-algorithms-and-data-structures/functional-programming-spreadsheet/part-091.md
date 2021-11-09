@@ -7,11 +7,11 @@ dashedName: part-91
 
 # --description--
 
-Now set `value` to `element.value.replace(/\s/g, "")`. This removes all whitespace from `element` so that we can ignore it.
+ตอนนี้กำหนดให้ `value` มีค่าเป็น `element.value.replace(/\s/g, "")` โดยคำสั่งนี้เป็นการลบ whitespace ทั้งหมดออกจาก `element` เพื่อเราจะได้ไม่ต้องสนใจ whitespace เหล่านั้น
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

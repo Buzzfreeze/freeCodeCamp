@@ -7,11 +7,11 @@ dashedName: part-52
 
 # --description--
 
-Now that the gold and health variables have been updated, we need to update the values displayed on the screen. Inside the `buyHealth` function, add the line `goldText.innerText = gold;`. Then use the same pattern to update `healthText`.
+ตอนนี้ทั้งตัวแปร gold และ health variables ต่างก็มีการเปลี่ยน (update) ค่าแล้ว เราต้องนำค่าที่เปลี่ยนมาแสดงบนหน้าจอ ภายในฟังก์ชัน `buyHealth` ให้เพิ่มบรรทัด `goldText.innerText = gold;` จากนั้น ให้ปรับ `healthText` ให้เป็นแบบเดียวกัน
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

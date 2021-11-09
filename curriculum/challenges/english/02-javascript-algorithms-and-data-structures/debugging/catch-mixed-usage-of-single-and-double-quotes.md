@@ -8,11 +8,11 @@ dashedName: catch-mixed-usage-of-single-and-double-quotes
 
 # --description--
 
-JavaScript allows the use of both single (`'`) and double (`"`) quotes to declare a string. Deciding which one to use generally comes down to personal preference, with some exceptions.
+การประกาศ string ใน JavaScript เราสามารถใช้ได้ทั้ง single quote (`'`) และ double quote (`"`) การติดสินใจว่าจะใช้แบบไหนนั้นขึ้นกับความชอบส่วนบุคคลและข้อจำกัดบางอย่าง
 
-Having two choices is great when a string has contractions or another piece of text that's in quotes. Just be careful that you don't close the string too early, which causes a syntax error.
+การมีทางเลือก 2 ทางมีประโยชน์มากเมื่อ string มีการย่อคำ (เช่นการใช้ It's แทน It is) หรืออยู่ใน quotes แต่ให้ระวังว่า คุณต้องไม่ใส่ quote ปิด string ผิดที่ ซึ่งทำให้เกิด syntax error ได้
 
-Here are some examples of mixing quotes:
+ตัวอย่างต่อไปนี้เป็นการใช้ quote ปนกัน
 
 ```js
 const grouchoContraction = "I've had a perfectly wonderful evening, but this wasn't it.";
@@ -20,9 +20,9 @@ const quoteInString = "Groucho Marx once said 'Quote me as saying I was mis-quot
 const uhOhGroucho = 'I've had a perfectly wonderful evening, but this wasn't it.';
 ```
 
-The first two are correct, but the third is incorrect.
+2 บรรทัดแรกถูกต้อง แต่บรรทัดที่ 3 ไม่ถูกต้อง
 
-Of course, it is okay to use only one style of quotes. You can escape the quotes inside the string by using the backslash (`\`) escape character:
+แน่นอนว่า การใช้เพียง quote แบบเดียวก็ย่อมทำได้ คุณสามารถมี quote ภายใน string ได้โดยการเพิ่ม backslash (`\`) เข้าไปหน้า quote
 
 ```js
 const allSameQuotes = 'I\'ve had a perfectly wonderful evening, but this wasn\'t it.';
@@ -30,17 +30,17 @@ const allSameQuotes = 'I\'ve had a perfectly wonderful evening, but this wasn\'t
 
 # --instructions--
 
-Fix the string so it either uses different quotes for the `href` value, or escape the existing ones. Keep the double quote marks around the entire string.
+จงปรับแก้ string ของค่า `href` โดยทำเป็น quote 2 แบบ หรือเพิ่ม backslash (`\`) เข้าไปหน้า quote ก็ได้ และให้ใส่ double quote ครอบ string ทั้งข้อความ
 
 # --hints--
 
-Your code should fix the quotes around the `href` value `#Home` by either changing or escaping them.
+คุณควรแก้ไข quote ที่อยู่ `href` ตรงค่า `#Home` โดยทำเป็น quote 2 แบบ หรือเพิ่ม backslash (`\`) เข้าไปหน้า quote ก็ได้
 
 ```js
 assert(code.match(/<a href=\s*?('|\\")#Home\1\s*?>/g));
 ```
 
-Your code should keep the double quotes around the entire string.
+โค้ดของคุณยังคงมี double quote ครอบ string ทั้งข้อความ
 
 ```js
 assert(code.match(/"<p>.*?<\/p>";/g));

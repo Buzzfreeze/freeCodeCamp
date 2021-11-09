@@ -7,15 +7,15 @@ dashedName: part-140
 
 # --description--
 
-The function in the `map` method can actually take a second argument: the index of the element.
+ฟังก์ชันใน `map` method สามารถรับ argument ที่สองเป็น index ของ element
 
-This is why you need an arrow function in `charRange` - if you don't use one, then the index will be passed to `String.fromCharCode` as the second argument, leading to unexpected results. However, it is safe for functions like `parseFloat` which take only one argument (but not for `parseInt`).
+นี่คือสาเหตุว่า ทำไมคุณถึงต้องมี arrow function ใน `charRange` - ถ้าคุณไม่ใช้ arrow function ค่า index ก็จะส่งผ่านเข้าไปยัง `String.fromCharCode` เป็น argument ที่สอง ทำให้ได้ผลลัพธ์ที่ไม่ถูกต้อง อย่างไรก็ตาม ยังมีความปลอดภัยสำหรับฟังก์ชัน เช่น `parseFloat` ซึ่งรับเพียง argument เดียว (แต่ไม่สำหรับ `parseInt`) 
 
-Chain `.map((x, i) => x + i)` to `.fill(start)` to add its index to every element in the array in `range`.
+จงนำ `.map((x, i) => x + i)` ไปใช้กับ `.fill(start)` เพื่อเพิ่ม index ให้กับทุก element ใน array ใน `range`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

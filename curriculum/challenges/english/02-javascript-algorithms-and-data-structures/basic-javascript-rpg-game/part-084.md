@@ -7,11 +7,11 @@ dashedName: part-84
 
 # --description--
 
-Add code so that if the length of the inventory is NOT more than one, then a text message appears that says "Don't sell your only weapon!".
+เพิ่มโค้ดเพื่อเช็คว่า ถ้าความยาวของ inventory ไม่มากกว่า 1 ให้ขึ้นข้อความว่า "Don't sell your only weapon!"
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 (inventory = ['potato']),

@@ -7,13 +7,13 @@ dashedName: part-1
 
 # --description--
 
-To keep track of the player's experience points, we've declared a variable called `xp` and assigned it the starting value of 0.
+เราจะประกาศตัวแปรชื่อ `xp` สำหรับการเก็บคะแนนประสบการณ์ (experience point) ของผู้เล่น โดยให้มีค่าเริ่มต้น 0
 
-Create another variable to keep track of health and start it at 100.
+จงสร้างตัวแปรอีกตัวนึงเพื่อเก็บค่าสภาพร่างการ (health) โดยให้มีค่าเริ่มต้น 100
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(health === 100);

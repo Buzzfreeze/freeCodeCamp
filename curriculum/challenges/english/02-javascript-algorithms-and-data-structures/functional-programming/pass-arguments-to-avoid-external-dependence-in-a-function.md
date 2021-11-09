@@ -8,39 +8,39 @@ dashedName: pass-arguments-to-avoid-external-dependence-in-a-function
 
 # --description--
 
-The last challenge was a step closer to functional programming principles, but there is still something missing.
+แบบทดสอบที่แล้วเป็นการขยับเข้ามาหาหลัก functional programming มากขึ้น แต่ก็ยังมีบางอย่างที่ยังไม่ครบถ้วน
 
-We didn't alter the global variable value, but the function `incrementer` would not work without the global variable `fixedValue` being there.
+แม้ว่าเราจะไม่ได้แก้ไขค่า global variable แต่ฟังก์ชัน `incrementer` ก็ไม่สามารถทำงานได้ หากไม่มี global variable `fixedValue`
 
-Another principle of functional programming is to always declare your dependencies explicitly. This means if a function depends on a variable or object being present, then pass that variable or object directly into the function as an argument.
+อีกหลักการนึงของ functional programming ก็คือ ต้องประกาศ dependencies (ความสัมพันธ์) ให้ชัดเจน หมายความว่า ถ้าฟังก์ชันต้องทำงานกับ variable หรือ object หนึ่งๆ ก็ให้ส่งค่า variable หรือ object นั้นเข้ามายังฟังก์ชันในรูปแบบของ argument
 
-There are several good consequences from this principle. The function is easier to test, you know exactly what input it takes, and it won't depend on anything else in your program.
+หลักการนี้ทำให้เกิดข้อดีคือ ทำให้ทดสอบฟังก์ชันได้ง่ายขึ้น เพราะคุณทราบชัดเจนว่า input คืออะไร และฟังก์ชันก็จะไม่เกิดผลกระทบกับสิ่งอื่นใดในโปรแกรมของคุณ
 
-This can give you more confidence when you alter, remove, or add new code. You would know what you can or cannot change and you can see where the potential traps are.
+วิธีนี้ทำให้คุณมั่นใจมากขึ้นเวลาแก้ไข, ลบ หรือ เพิ่มโค้ด เพราะคุณจะทราบว่า สิ่งใดที่คุณสามารถหรือไม่สามารถแก้ไขได้ และคุณยังเห็นสิ่งที่อาจทำให้เกิดข้อผิดพลาดได้ง่ายอีกด้วย
 
-Finally, the function would always produce the same output for the same set of inputs, no matter what part of the code executes it.
+สุดท้ายแล้ว ฟังก์ชันควรให้ผลลัพธ์เหมือนกันทุกครั้ง เมื่อส่งค่า input ที่เหมือนเดิมเข้าไป ไม่ว่าประมวลผลด้วยส่วนใดของโค้ดก็ตาม
 
 # --instructions--
 
-Let's update the `incrementer` function to clearly declare its dependencies.
+จงปรับปรุงฟังก์ชัน `incrementer` ให้มีการประกาศ dependencies (ความสัมพันธ์) อย่างชัดเจน
 
-Write the `incrementer` function so it takes an argument, and then returns a result after increasing the value by one.
+โดยเขียนฟังก์ชัน `incrementer` ให้รับค่า argument และคืนค่าเป็นผลลัพธ์จากการบวก 1
 
 # --hints--
 
-Your function `incrementer` should not change the value of `fixedValue` (which is `4`).
+ฟังก์ชัน `incrementer` ไม่ควรแก้ไขค่า `fixedValue` (ซึ่งมีค่าเป็น `4`).
 
 ```js
 assert(fixedValue === 4);
 ```
 
-Your `incrementer` function should take an argument.
+ฟังก์ชัน `incrementer` ควรรับค่า argument
 
 ```js
 assert(incrementer.length === 1);
 ```
 
-Your `incrementer` function should return a value that is one larger than the `fixedValue` value.
+ฟังก์ชัน `incrementer` ควรคืนค่าเป็น `fixedValue` บวก 1
 
 ```js
 const __newValue = incrementer(fixedValue);

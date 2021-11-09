@@ -7,11 +7,11 @@ dashedName: part-26
 
 # --description--
 
-Set `noHigh` to `highPrecedence(str)` in `applyFn`.
+กำหนดให้ `noHigh` มีค่าเป็น `highPrecedence(str)` ภายใน `applyFn`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

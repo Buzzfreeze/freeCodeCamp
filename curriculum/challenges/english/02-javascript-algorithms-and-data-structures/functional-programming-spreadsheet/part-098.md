@@ -7,11 +7,11 @@ dashedName: part-98
 
 # --description--
 
-Change the `random` function so that it returns `Math.floor(Math.random() * y + x)`. It now returns a random number within a range.
+จงปรับแก้ฟังก์ชัน `random` เพื่อให้คืนค่าเป็น `Math.floor(Math.random() * y + x)` ซึ่งตอนนี้คืนค่าเป็นเลขที่สุ่มจากช่วงตัวเลข (range)
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(

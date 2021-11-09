@@ -8,23 +8,24 @@ dashedName: spinal-tap-case
 
 # --description--
 
-Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+จงแปลง string ให้เป็น spinal case ซึ่ง spinal case ก็คือ คำที่นำมาต่อกันด้วย "-" และเป็นตัวอักษรพิมพ์เล็กทั้งหมด
+ตัวอย่างเช่น all-lowercase-words-joined-by-dashes
 
 # --hints--
 
-`spinalCase("This Is Spinal Tap")` should return the string `this-is-spinal-tap`.
+`spinalCase("This Is Spinal Tap")` ควรคืนค่าเป็น string `this-is-spinal-tap`.
 
 ```js
 assert.deepEqual(spinalCase('This Is Spinal Tap'), 'this-is-spinal-tap');
 ```
 
-`spinalCase("thisIsSpinalTap")` should return the string `this-is-spinal-tap`.
+`spinalCase("thisIsSpinalTap")` ควรคืนค่าเป็น string `this-is-spinal-tap`.
 
 ```js
 assert.strictEqual(spinalCase('thisIsSpinalTap'), 'this-is-spinal-tap');
 ```
 
-`spinalCase("The_Andy_Griffith_Show")` should return the string `the-andy-griffith-show`.
+`spinalCase("The_Andy_Griffith_Show")` ควรคืนค่าเป็น string `the-andy-griffith-show`.
 
 ```js
 assert.strictEqual(
@@ -33,7 +34,7 @@ assert.strictEqual(
 );
 ```
 
-`spinalCase("Teletubbies say Eh-oh")` should return the string `teletubbies-say-eh-oh`.
+`spinalCase("Teletubbies say Eh-oh")` ควรคืนค่าเป็น string `teletubbies-say-eh-oh`.
 
 ```js
 assert.strictEqual(
@@ -42,7 +43,7 @@ assert.strictEqual(
 );
 ```
 
-`spinalCase("AllThe-small Things")` should return the string `all-the-small-things`.
+`spinalCase("AllThe-small Things")` ควรคืนค่าเป็น string `all-the-small-things`.
 
 ```js
 assert.strictEqual(spinalCase('AllThe-small Things'), 'all-the-small-things');

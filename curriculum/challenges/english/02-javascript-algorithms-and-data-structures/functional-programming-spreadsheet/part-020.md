@@ -7,11 +7,11 @@ dashedName: part-20
 
 # --description--
 
-In `highPrecedence`, define `regex` to be `/([0-9.]+)([*\/])([0-9.]+)/`.
+ใน `highPrecedence` จงกำหนด `regex` ให้มีค่า `/([0-9.]+)([*\/])([0-9.]+)/`
 
 # --hints--
 
-See description above for instructions.
+อ่านวิธีทำตามรายละเอียดด้านบน
 
 ```js
 assert(code.replace(/\s/g, '').includes('regex=/([0-9.]+)([*\\/])([0-9.]+)/'));
