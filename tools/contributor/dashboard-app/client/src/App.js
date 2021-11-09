@@ -95,7 +95,7 @@ class App extends Component {
       <>
         <AppNavBar>
           <a
-            href="https://www.freecodecamp.org/"
+            href="https://learn.careervio.com/"
             target="_blank"
             rel="noopener noreferrer"
             style={logoStyle}
