@@ -1,10 +1,10 @@
-import debug from 'debug';
+// import debug from 'debug';
 import { Observable } from 'rx';
 
 import { reportError } from '../middlewares/sentry-error-handler.js';
 import InMemoryCache from '../utils/in-memory-cache';
 
-const log = debug('fcc:boot:donate');
+// const log = debug('fcc:boot:donate');
 const fiveMinutes = 1000 * 60 * 5;
 
 export default function initializeDonation(Donation) {
@@ -43,7 +43,7 @@ export default function initializeDonation(Donation) {
   function seedTheCache() {
     return new Promise((resolve, reject) =>
       Observable.defer(activeDonationsQuery$).subscribe(count => {
-        log('activeDonor count: %d', count);
+        // log('activeDonor count: %d', count);
         activeDonationCountCache.update(() => count);
         return resolve();
       }, reject)
@@ -55,7 +55,7 @@ export default function initializeDonation(Donation) {
       () =>
         Observable.defer(activeDonationsQuery$).subscribe(
           count => {
-            log('activeDonor count: %d', count);
+            // log('activeDonor count: %d', count);
             return activeDonationCountCache.update(() => count);
           },
           err => {
