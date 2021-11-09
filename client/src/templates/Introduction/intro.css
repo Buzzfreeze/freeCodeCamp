@@ -163,6 +163,8 @@ button.map-title {
 .block-ui .block .block-description {
   padding: 0 15px 15px;
   border-bottom: 3px solid var(--secondary-background);
+  font-family: 'Prompt';
+  font-size: 1.17rem;
 }
 
 .map-cert-title > h3 {
@@ -210,6 +212,7 @@ button.map-title {
 .map-challenges-ul {
   padding-inline-start: 0;
   margin-bottom: 0;
+  font-family: 'Prompt';
 }
 
 .map-challenge-title {
