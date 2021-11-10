@@ -133,8 +133,8 @@ function Footer(): JSX.Element {
           </div>
         </div>
         <div className='footer-bottom'>
-          <div className='col-header'>{t('footer.our-nonprofit')}</div>
-          <div className='footer-divder' />
+          {/* <div className='col-header'>{t('footer.our-nonprofit')}</div>
+          <div className='footer-divder' /> */}
           <div className='our-nonprofit'>
             <Link
               external={false}
