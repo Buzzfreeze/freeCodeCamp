@@ -1,28 +1,37 @@
 ---
 id: 61864369b2690020570d377a
-title: Part 1
-challengeType: 1
-dashedName: watch-video-it-career-1
+title: ทำไมเราจำเป็นต้องรู้เรื่องบุคลิกภาพกับสายงาน Digital
+challengeType: 11
+videoId: EagyKkNZzbM
+dashedName: part-1
 ---
 
 # --description--
 
-step 1 instructions
+กรุณาดู Video ด้านบน และตอบคำถามด้านล่าง
 
-# --hints--
+# --question--
 
-Test 1
+## --text--
 
-```js
+ข้อให้เป็นประโยชน์ของการรู้เรื่องบุคลิกภาพ
 
-```
+## --answers--
 
-# --seed--
+นำไปคุยเล่นกับเพื่อนๆ เพื่อหาคนประเภทเดียวกัน
 
-## --seed-contents--
+---
 
-```html
---fcc-editable-region--
+เลือกงานที่เหมาะสมกับตัวเอง ทำให้ทำงานได้ดีขึ้น
 
---fcc-editable-region--
-```
+---
+
+ทำให้บอกพ่อแม่ได้ว่าเป็นคนแบบไหน
+
+---
+
+ไม่มีประโยชน์ใดๆ
+
+## --video-solution--
+
+2

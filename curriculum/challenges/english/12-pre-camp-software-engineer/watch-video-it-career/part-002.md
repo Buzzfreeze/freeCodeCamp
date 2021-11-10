@@ -1,28 +1,37 @@
 ---
 id: 61864858357a562c1c0adf02
-title: Part 2
-challengeType: 0
-dashedName: watch-video-it-career-2
+title: MBTi
+challengeType: 11
+videoId: QDV68mqbcsE
+dashedName: part-2
 ---
 
 # --description--
 
-step 2 instructions
+กรุณาดู Video ด้านบน และตอบคำถามด้านล่าง
 
-# --hints--
+# --question--
 
-Test 1
+## --text--
 
-```js
+ช้อใดผิด
 
-```
+## --answers--
 
-# --seed--
+Extrovert ชอบทำ กิจกรรม ชอบอยู่กับผู้อื่น
 
-## --seed-contents--
+---
 
-```html
---fcc-editable-region--
+Thinking มีระเบียบเป็นขั้นตอน ไม่ใช้ความรู้สึก
 
---fcc-editable-region--
-```
+---
+
+Judgement มีระเบียบแบบแผนที่ดี
+
+---
+
+Intuition มักชอบทำงานที่อยู่กับความเป็นจริง มีความอดทนเป็นพิเศษกับรายละเอียดและข้อเท็จจริงเฉพาะหน้า
+
+## --video-solution--
+
+4

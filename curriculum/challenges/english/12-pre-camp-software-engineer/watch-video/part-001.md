@@ -1,28 +1,37 @@
 ---
 id: 618643816f0e2121a4cc161b
-title: Part 1
-challengeType: 1
-dashedName: watch-video-1
+title: Javascript & HTML & CSS Concept
+challengeType: 11
+videoId: BmSrHooVq4A
+dashedName: part-1
 ---
 
 # --description--
 
-step 1 instructions
+กรุณาดู Video ด้านบน และตอบคำถามด้านล่าง
 
-# --hints--
+# --question--
 
-Test 1
+## --text--
 
-```js
+ข้อใดอธิบายได้ถูกต้องที่สุด
 
-```
+## --answers--
 
-# --seed--
+HTML ใช้ด้านความสวยงาม
 
-## --seed-contents--
+---
 
-```html
---fcc-editable-region--
+Javascript ใช้กับด้านโครงสร้างข้อมูล
 
---fcc-editable-region--
-```
+---
+
+CSS ย่อมาจาก Common System Style
+
+---
+
+CSS ช่วยในเรื่องความสวยงามของ Website
+
+## --video-solution--
+
+4

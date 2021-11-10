@@ -3,7 +3,7 @@
   "isUpcomingChange": false,
   "usesMultifileEditor": true,
   "dashedName": "watch-video-it-career",
-  "order": 2,
+  "order": 1,
   "time": "5 hours",
   "template": "",
   "required": [],
@@ -18,6 +18,22 @@
     [
       "61864858357a562c1c0adf02",
       "Part 2"
+    ],
+    [
+      "618c02e5934d3b4608aa7c5f",
+      "Part 3"
+    ],
+    [
+      "618c02e8fb780e46a1f3c509",
+      "Part 4"
+    ],
+    [
+      "618c02e9745ccb46bca6784d",
+      "Part 5"
+    ],
+    [
+      "618c02eb118f5246df670977",
+      "Part 6"
     ]
   ]
 }
