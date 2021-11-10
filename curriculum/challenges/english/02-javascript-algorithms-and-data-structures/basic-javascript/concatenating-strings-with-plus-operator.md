@@ -9,7 +9,7 @@ dashedName: concatenating-strings-with-plus-operator
 
 # --description--
 
-In JavaScript, when the `+` operator is used with a `String` value, it is called the <dfn>concatenation</dfn> operator. You can build a new string out of other strings by <dfn>concatenating</dfn> them together.
+ใน JavaScript เมื่อเครื่องหมาย `+` ถูกใช้กับค่า `String` จะมีการเรียก <dfn>concatenation</dfn> operator คุณสามารถสร้าง string ใหม่จาก string อื่นๆ โดยการ <dfn>concatenating</dfn> string เข้าด้วยกัน
 
 **Example**
 
@@ -17,40 +17,41 @@ In JavaScript, when the `+` operator is used with a `String` value, it is called
 'My name is Alan,' + ' I concatenate.'
 ```
 
-**Note:** Watch out for spaces. Concatenation does not add spaces between concatenated strings, so you'll need to add them yourself.
+**หมายเหตุ:** โปรดระวัง spaces (การเว้นวรรค) เนื่องจาก Concatenation จะไม่เพิ่มเว้นวรรคระหว่าง string ที่ต่อกัน ดังนั้น คุณจะต้องเพิ่มเอง
 
-Example:
+ตัวอย่าง:
 
 ```js
 var ourStr = "I come first. " + "I come second.";
 ```
 
-The string `I come first. I come second.` would be displayed in the console.
+string `I come first. I come second.` จะแสดงในหน้า console
+
 # --instructions--
 
-Build `myStr` from the strings `This is the start.` and `This is the end.` using the `+` operator. Be sure to include a space between the two strings.
+จงสร้าง `myStr` จาก string `This is the start.` และ `This is the end.` โดยใช้ `+` operator อย่าลืมเพิ่ม space ระหว่าง string ทั้งสองด้วย
 
 # --hints--
 
-`myStr` should have a value of the string `This is the start. This is the end.`
+`myStr` ควรมีค่า string `This is the start. This is the end.`
 
 ```js
 assert(myStr === 'This is the start. This is the end.');
 ```
 
-You should use the `+` operator to build `myStr`.
+คุณควรใช้ `+` operator ในการสร้าง `myStr`
 
 ```js
 assert(code.match(/(["']).*\1\s*\+\s*(["']).*\2/g));
 ```
 
-`myStr` should be created using the `var` keyword.
+`myStr` ควรสร้างโดยใช้คีย์เวิร์ด `var` 
 
 ```js
 assert(/var\s+myStr/.test(code));
 ```
 
-You should assign the result to the `myStr` variable.
+คุณควรกำหนดผลลัพธ์ให้กับตัวแปร `myStr` 
 
 ```js
 assert(/myStr\s*=/.test(code));

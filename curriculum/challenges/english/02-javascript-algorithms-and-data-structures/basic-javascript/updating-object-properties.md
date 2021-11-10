@@ -9,9 +9,9 @@ dashedName: updating-object-properties
 
 # --description--
 
-After you've created a JavaScript object, you can update its properties at any time just like you would update any other variable. You can use either dot or bracket notation to update.
+หลังจากที่คุณสร้าง JavaScript object แล้ว คุณสามารถอัปเดต properties ของ object ได้ตลอดเวลา เช่นเดียวกับที่คุณอัปเดตตัวแปรอื่นๆ คุณสามารถใช้เครื่องหมายจุดหรือวงเล็บเพื่ออัปเดต
 
-For example, let's look at `ourDog`:
+ยกตัวอย่าง `ourDog`
 
 ```js
 var ourDog = {
@@ -22,21 +22,23 @@ var ourDog = {
 };
 ```
 
-Since he's a particularly happy dog, let's change his name to the string `Happy Camper`. Here's how we update his object's name property: `ourDog.name = "Happy Camper";` or `ourDog["name"] = "Happy Camper";` Now when we evaluate `ourDog.name`, instead of getting `Camper`, we'll get his new name, `Happy Camper`.
+เนื่องจากสุนัขตัวนี้มีความสุขเป็นพิเศษ เรามาเปลี่ยนชื่อสุนัขเป็น string `Happy Camper` กัน นี่คือวิธีที่เราอัปเดต name property ของ object `ourDog.name = "Happy Camper";` หรือ `ourDog["name"] = "Happy Camper";` ตอนนี้ถ้าเราเรียก `ourDog.name` แทนที่จะได้รับ `Camper` เราจะได้ชื่อใหม่ว่า `Happy Camper`
+
 
 # --instructions--
 
-Update the `myDog` object's name property. Let's change her name from `Coder` to `Happy Coder`. You can use either dot or bracket notation.
+จงอัปเดต name property ของ object `myDog` จาก `Coder` ให้มีค่าเป็น `Happy Coder` โดยคุณสามารถใช้เครื่องหมายจุดหรือเครื่องหมายวงเล็บก็ได้
+
 
 # --hints--
 
-You should update `myDog`'s `name` property to equal the string `Happy Coder`.
+คุณควรอัปเตต property `name` ของ `myDog` ให้เป็น string `Happy Coder`
 
 ```js
 assert(/happy coder/gi.test(myDog.name));
 ```
 
-You should not edit the `myDog` definition.
+คุณไม่ควรแก้ไข `myDog` definition
 
 ```js
 assert(/"name": "Coder"/.test(code));

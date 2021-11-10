@@ -9,11 +9,11 @@ dashedName: accessing-object-properties-with-bracket-notation
 
 # --description--
 
-The second way to access the properties of an object is bracket notation (`[]`). If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.
+วิธีที่สองที่สามารถเข้าถึง property ของ object คือเครื่องหมายวงเล็บ (`[]`) หากชื่อ property ของ object ที่คุณพยายามเข้าถึงมีเว้นวรรค คุณจะต้องใช้เครื่องหมายวงเล็บ
 
-However, you can still use bracket notation on object properties without spaces.
+อย่างไรก็ตาม คุณยังสามารถใช้เครื่องหมายวงเล็บกับ property ของ object ได้โดยไม่มีเว้นวรรค
 
-Here is a sample of using bracket notation to read an object's property:
+นี่เป็นตัวอย่างการใช้เครื่องหมายวงเล็บเพื่ออ่าน property ของ object
 
 ```js
 var myObj = {
@@ -26,41 +26,43 @@ myObj['More Space'];
 myObj["NoSpace"];
 ```
 
-`myObj["Space Name"]` would be the string `Kirk`, `myObj['More Space']` would be the string `Spock`, and `myObj["NoSpace"]` would be the string `USS Enterprise`.
+ `myObj["Space Name"]` ควรเป็น string `Kirk`, `myObj['More Space']` ควรเป็น string `Spock` และ `myObj["NoSpace"]` ควรเป็น string `USS Enterprise`.
 
-Note that property names with spaces in them must be in quotes (single or double).
+
+โปรดทราบว่าชื่อ property ที่มีเว้นวรรคจะต้องอยู่ในเครื่องหมายคำพูด (single quotes หรือ double quotes)
+
 
 # --instructions--
 
-Read the values of the properties `an entree` and `the drink` of `testObj` using bracket notation and assign them to `entreeValue` and `drinkValue` respectively.
+จงอ่านค่า values ของ properties `an entree` และ `the drink` ของ `testObj` โดยใช้ bracket notation และกำหนดค่านั้นให้กับ `entreeValue` และ `drinkValue` ตามลำดับ
 
 # --hints--
 
-`entreeValue` should be a string
+`entreeValue` ควรเป็น string
 
 ```js
 assert(typeof entreeValue === 'string');
 ```
 
-The value of `entreeValue` should be the string `hamburger`
+ค่าของ `entreeValue` ควรเป็น string `hamburger`
 
 ```js
 assert(entreeValue === 'hamburger');
 ```
 
-`drinkValue` should be a string
+`drinkValue` ควรเป็น string
 
 ```js
 assert(typeof drinkValue === 'string');
 ```
 
-The value of `drinkValue` should be the string `water`
+ค่าของ `drinkValue` ควรเป็น string  `water`
 
 ```js
 assert(drinkValue === 'water');
 ```
 
-You should use bracket notation twice
+คุณควรใช้เครื่องหมายวงเล็บสองครั้ง
 
 ```js
 assert(code.match(/testObj\s*?\[('|")[^'"]+\1\]/g).length > 1);

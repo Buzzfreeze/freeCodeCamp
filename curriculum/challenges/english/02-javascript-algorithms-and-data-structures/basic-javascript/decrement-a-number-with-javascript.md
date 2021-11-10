@@ -9,33 +9,34 @@ dashedName: decrement-a-number-with-javascript
 
 # --description--
 
-You can easily <dfn>decrement</dfn> or decrease a variable by one with the `--` operator.
+คุณสามารถ <dfn>decrement</dfn> หรือลบ 1 ให้กับตัวแปรได้อย่างง่ายๆ โดยใช้ `--` operator
 
 ```js
 i--;
 ```
 
-is the equivalent of
+ด้านบนนี้เทียบเท่ากับ
 
 ```js
 i = i - 1;
 ```
 
-**Note:** The entire line becomes `i--;`, eliminating the need for the equal sign.
+**หมายเหตุ:** ทั้งบรรทัดจะกลายเป็น `i--;` ไม่จำเป็นต้องมีเครื่องหมายเท่ากับ
 
 # --instructions--
 
-Change the code to use the `--` operator on `myVar`.
+จงปรับแก้โค้ดโดยนำ `--` operator มาใช้กับ `myVar`
+
 
 # --hints--
 
-`myVar` should equal `10`.
+`myVar` ควรเท่ากับ `10`
 
 ```js
 assert(myVar === 10);
 ```
 
-`myVar = myVar - 1;` should be changed.
+`myVar = myVar - 1;` ควรถูกเปลี่ยน
 
 ```js
 assert(
@@ -43,13 +44,13 @@ assert(
 );
 ```
 
-You should use the `--` operator on `myVar`.
+คุณควรใช้ตัวดำเนินการ `--` operator กับ `myVar`
 
 ```js
 assert(/[-]{2}\s*myVar|myVar\s*[-]{2}/.test(code));
 ```
 
-You should not change code above the specified comment.
+คุณไม่ควรแก้โค้ดที่อยู่เหนือ comment
 
 ```js
 assert(/var myVar = 11;/.test(code));

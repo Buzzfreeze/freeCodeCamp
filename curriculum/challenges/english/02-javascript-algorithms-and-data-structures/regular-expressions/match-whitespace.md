@@ -8,9 +8,9 @@ dashedName: match-whitespace
 
 # --description--
 
-The challenges so far have covered matching letters of the alphabet and numbers. You can also match the whitespace or spaces between letters.
+แบบทดสอบที่ผ่านมากล่าวถึงการ match อักขระที่เป็นตัวอักษรและตัวเลข อย่างไรก็ตาม คุณสามารถ match whitespace หรือ spaces ระหว่างตัวอักษรได้ด้วย
 
-You can search for whitespace using `\s`, which is a lowercase `s`. This pattern not only matches whitespace, but also carriage return, tab, form feed, and new line characters. You can think of it as similar to the character class `[ \r\t\f\n\v]`.
+คุณสามารถค้นหา whitespace โดยการใช้ `\s`, ซึ่งเป็น `s` ตัวพิมพ์เล็ก โดย pattern นี้ไม่เพียงแต่ match whitespace แต่ยัง match carriage return, tab, form feed และ new line characters ด้วย ซึ่งเทียบเท่ากับ character class `[ \r\t\f\n\v]`
 
 ```js
 let whiteSpace = "Whitespace. Whitespace everywhere!"
@@ -18,26 +18,26 @@ let spaceRegex = /\s/g;
 whiteSpace.match(spaceRegex);
 ```
 
-This `match` call would return `[" ", " "]`.
+การเรียก `match` นี้จะคืนค่า `[" ", " "]`
 # --instructions--
 
-Change the regex `countWhiteSpace` to look for multiple whitespace characters in a string.
+จงปรับแก้ regex `countWhiteSpace` ให้ค้นหา whitespace characters ทั้งหมดใน string
 
 # --hints--
 
-Your regex should use the global flag.
+regex ของคุณควรใช้ global flag.
 
 ```js
 assert(countWhiteSpace.global);
 ```
 
-Your regex should use the shorthand character `\s` to match all whitespace characters.
+regex ของคุณควรใช้ shorthand character `\s` เพื่อ match whitespace characters ทั้งหมด
 
 ```js
 assert(/\\s/.test(countWhiteSpace.source));
 ```
 
-Your regex should find eight spaces in the string `Men are from Mars and women are from Venus.`
+regex ของคุณควรพบ 8 spaces ใน string `Men are from Mars and women are from Venus.`
 
 ```js
 assert(
@@ -46,13 +46,13 @@ assert(
 );
 ```
 
-Your regex should find three spaces in the string `Space: the final frontier.`
+regex ของคุณควรพบ 3 spaces ใน string `Space: the final frontier.`
 
 ```js
 assert('Space: the final frontier.'.match(countWhiteSpace).length == 3);
 ```
 
-Your regex should find no spaces in the string `MindYourPersonalSpace`
+regex ของคุณไม่ควรพบ spaces ใน string `MindYourPersonalSpace`
 
 ```js
 assert('MindYourPersonalSpace'.match(countWhiteSpace) == null);

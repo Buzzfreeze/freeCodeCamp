@@ -8,9 +8,9 @@ dashedName: match-anything-with-wildcard-period
 
 # --description--
 
-Sometimes you won't (or don't need to) know the exact characters in your patterns. Thinking of all words that match, say, a misspelling would take a long time. Luckily, you can save time using the wildcard character: `.`
+บางครั้งคุณไม่ (หรือไม่จำเป็นต้อง) ทราบตัวอักษรที่แน่นอนใน pattern ของคุณ การระบุทุกคำใน pattern ที่ต้องการ match ซึ่งอาจสะกดผิด ทำให้ใช้เวลามาก แต่โชคดีที่คุณสามารถประหยัดเวลาด้วยการใช้ wildcard character: `.`
 
-The wildcard character `.` will match any one character. The wildcard is also called `dot` and `period`. You can use the wildcard character just like any other character in the regex. For example, if you wanted to match `hug`, `huh`, `hut`, and `hum`, you can use the regex `/hu./` to match all four words.
+wildcard character `.` จะ match กับตัวอักษรใดก็ได้ 1 ตัว โดย wildcard มักเรียกกันว่า `dot` และ `period` คุณสามารถใช้ wildcard character ได้เหมือนกับตัวอักษรอื่นๆ ใน regex ยกตัวอย่างเช่น ถ้าคุณต้องการ match `hug`, `huh`, `hut` และ `hum` คุณสามารถใช้ regex `/hu./` เพื่อ match ทั้ง 4 คำ
 
 ```js
 let humStr = "I'll hum a song";
@@ -20,62 +20,62 @@ huRegex.test(humStr);
 huRegex.test(hugStr);
 ```
 
-Both of these `test` calls would return `true`.
+ทั้งสอง `test` จะคืนค่า `true`
 
 # --instructions--
 
-Complete the regex `unRegex` so that it matches the strings `run`, `sun`, `fun`, `pun`, `nun`, and `bun`. Your regex should use the wildcard character.
+จงทำให้ regex `unRegex` สมบูรณ์ เพื่อ match กับ strings `run`, `sun`, `fun`, `pun`, `nun` และ `bun` โดย regex ของคุณควรใช้ wildcard character
 
 # --hints--
 
-You should use the `.test()` method.
+คุณควรใช้ `.test()` method
 
 ```js
 assert(code.match(/\.test\(.*\)/));
 ```
 
-You should use the wildcard character in your regex `unRegex`
+คุณควรใช้ wildcard character ใน regex `unRegex`
 
 ```js
 assert(/\./.test(unRegex.source));
 ```
 
-Your regex `unRegex` should match `run` in the string `Let us go on a run.`
+regex `unRegex` ควร match กับ `run` ใน string `Let us go on a run.`
 
 ```js
 unRegex.lastIndex = 0;
 assert(unRegex.test('Let us go on a run.'));
 ```
 
-Your regex `unRegex` should match `sun` in the string `The sun is out today.`
+regex `unRegex` ควร match กับ `sun` ใน string `The sun is out today.`
 
 ```js
 unRegex.lastIndex = 0;
 assert(unRegex.test('The sun is out today.'));
 ```
 
-Your regex `unRegex` should match `fun` in the string `Coding is a lot of fun.`
+regex `unRegex` ควร match กับ `fun` ใน string `Coding is a lot of fun.`
 
 ```js
 unRegex.lastIndex = 0;
 assert(unRegex.test('Coding is a lot of fun.'));
 ```
 
-Your regex `unRegex` should match `pun` in the string `Seven days without a pun makes one weak.`
+regex `unRegex` ควร match กับ `pun` ใน string `Seven days without a pun makes one weak.`
 
 ```js
 unRegex.lastIndex = 0;
 assert(unRegex.test('Seven days without a pun makes one weak.'));
 ```
 
-Your regex `unRegex` should match `nun` in the string `One takes a vow to be a nun.`
+regex `unRegex` ควร match กับ `nun` ใน string `One takes a vow to be a nun.`
 
 ```js
 unRegex.lastIndex = 0;
 assert(unRegex.test('One takes a vow to be a nun.'));
 ```
 
-Your regex `unRegex` should match `bun` in the string `She got fired from the hot dog stand for putting her hair in a bun.`
+regex `unRegex` ควร match กับ `bun` ใน string `She got fired from the hot dog stand for putting her hair in a bun.`
 
 ```js
 unRegex.lastIndex = 0;
@@ -86,14 +86,14 @@ assert(
 );
 ```
 
-Your regex `unRegex` should not match the string `There is a bug in my code.`
+regex `unRegex` ไม่ควร match กับ string `There is a bug in my code.`
 
 ```js
 unRegex.lastIndex = 0;
 assert(!unRegex.test('There is a bug in my code.'));
 ```
 
-Your regex `unRegex` should not match the string `Catch me if you can.`
+regex `unRegex` ไม่ควร match กับ string `Catch me if you can.`
 
 ```js
 unRegex.lastIndex = 0;

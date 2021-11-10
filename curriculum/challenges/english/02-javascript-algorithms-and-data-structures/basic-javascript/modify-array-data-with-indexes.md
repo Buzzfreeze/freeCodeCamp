@@ -9,7 +9,7 @@ dashedName: modify-array-data-with-indexes
 
 # --description--
 
-Unlike strings, the entries of arrays are <dfn>mutable</dfn> and can be changed freely.
+ต่างกับ string ตรงที่รายการของ array นั้น <dfn>mutable</dfn> (เปลี่ยนแปลงได้) และสามารถเปลี่ยนแปลงได้อย่างอิสระ
 
 **Example**
 
@@ -18,17 +18,18 @@ var ourArray = [50,40,30];
 ourArray[0] = 15;
 ```
 
-`ourArray` now has the value `[15, 40, 30]`.
+`ourArray` ตอนนี้มีค่า `[15, 40, 30]`
 
-**Note:** There shouldn't be any spaces between the array name and the square brackets, like `array [0]`. Although JavaScript is able to process this correctly, this may confuse other programmers reading your code.
+**หมายเหตุ:** ไม่ควรมีช่องว่างระหว่างชื่อ array และ square brackets เช่น `array [0]` แม้ว่า JavaScript สามารถประมวลผลได้อย่างถูกต้อง แต่อาจทำให้โปรแกรมเมอร์คนอื่นอ่านโค้ดของคุณแล้วสับสน
 
 # --instructions--
 
-Modify the data stored at index `0` of `myArray` to a value of `45`.
+จงแก้ไขข้อมูลที่อยู่ใน index `0` ของ `myArray` ให้มีค่า  `45`
+
 
 # --hints--
 
-`myArray` should now be `[45,64,99]`.
+`myArray` ควรมีค่า `[45,64,99]`
 
 ```js
 assert(
@@ -47,7 +48,7 @@ assert(
 );
 ```
 
-You should be using correct index to modify the value in `myArray`.
+คุณควรใช้ index ที่ถูกต้อง เพื่อแก้ไขค่าใน `myArray`
 
 ```js
 assert(

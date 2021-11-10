@@ -9,24 +9,27 @@ dashedName: counting-cards
 
 # --description--
 
-In the casino game Blackjack, a player can gain an advantage over the house by keeping track of the relative number of high and low cards remaining in the deck. This is called [Card Counting](https://en.wikipedia.org/wiki/Card_counting).
+ในเกมคาสิโน Blackjack ผู้เล่นสามารถได้เปรียบเหนือเจ้ามือ โดยการติดตามจำนวนไพ่เลขสูงและต่ำที่เหลืออยู่ในสำรับ เรียกว่า [การนับไพ่](https://en.wikipedia.org/wiki/Card_counting)
 
-Having more high cards remaining in the deck favors the player. Each card is assigned a value according to the table below. When the count is positive, the player should bet high. When the count is zero or negative, the player should bet low.
+# - การมีไพ่สูงเหลืออยู่ในสำรับจะเป็นประโยชน์ต่อผู้เล่น ไพ่แต่ละใบมีค่ากำหนดตามตารางด้านล่าง เมื่อนับเป็นบวก ผู้เล่นควรเดิมพันสูง เมื่อการนับเป็นศูนย์หรือติดลบ ผู้เล่นควรเดิมพันต่ำ
 
 <table class='table table-striped'><thead><tr><th>Count Change</th><th>Cards</th></tr></thead><tbody><tr><td>+1</td><td>2, 3, 4, 5, 6</td></tr><tr><td>0</td><td>7, 8, 9</td></tr><tr><td>-1</td><td>10, 'J', 'Q', 'K', 'A'</td></tr></tbody></table>
 
 You will write a card counting function. It will receive a `card` parameter, which can be a number or a string, and increment or decrement the global `count` variable according to the card's value (see table). The function will then return a string with the current count and the string `Bet` if the count is positive, or `Hold` if the count is zero or negative. The current count and the player's decision (`Bet` or `Hold`) should be separated by a single space.
 
-**Example Outputs:** `-3 Hold` or `5 Bet`
+# - คุณจะเขียนฟังก์ชันการนับไพ่ ที่รับพารามิเตอร์ `card` ซึ่งสามารถเป็น number หรือ string และเพิ่มหรือลดค่าตัวแปร global `count` ตามมูลค่าของไพ่ (ดูตาราง) จากนั้นฟังก์ชันจะคืนค่า string ที่เป็นจำนวนนับปัจจุบัน (current count) และ string `Bet` หากการนับเป็นบวก หรือ string `Hold` หากการนับเป็นศูนย์หรือติดลบ การนับปัจจุบันและการตัดสินใจของผู้เล่น (`Bet` หรือ `Hold`) ควรคั่นด้วยเว้นวรรค
+
+**Example Outputs:** `-3 Hold` หรือ `5 Bet`
 
 **Hint**  
-Do NOT reset `count` to 0 when value is 7, 8, or 9.  
-Do NOT return an array.  
-Do NOT include quotes (single or double) in the output.
+
+# - ห้ามรีเซ็ต `count` เป็น 0 เมื่อมีค่าเท่ากับ 7, 8, หรือ 9
+ห้ามส่งคืนค่าเป็น array
+ห้ามใส่ quote (single หรือ double) ในผลลัพธ์
 
 # --hints--
 
-Cards Sequence 2, 3, 4, 5, 6 should return `5 Bet`
+ลำดับไพ่ 2, 3, 4, 5, 6 ควรได้ผลลัพธ์ `5 Bet`
 
 ```js
 assert(
@@ -45,7 +48,7 @@ assert(
 );
 ```
 
-Cards Sequence 7, 8, 9 should return the string `0 Hold`
+ลำดับไพ่ 7, 8, 9 ควรคืนค่าเป็น string `0 Hold`
 
 ```js
 assert(
@@ -62,7 +65,7 @@ assert(
 );
 ```
 
-Cards Sequence 10, J, Q, K, A should return the string `-5 Hold`
+ลำดับไพ่ 10, J, Q, K, A ควรคืนค่าเป็น string `-5 Hold`
 
 ```js
 assert(
@@ -81,7 +84,7 @@ assert(
 );
 ```
 
-Cards Sequence 3, 7, Q, 8, A should return the string `-1 Hold`
+ลำดับไพ่ 3, 7, Q, 8, A ควรคืนค่าเป็น string `-1 Hold`
 
 ```js
 assert(
@@ -100,7 +103,7 @@ assert(
 );
 ```
 
-Cards Sequence 2, J, 9, 2, 7 should return the string `1 Bet`
+ลำดับไพ่ 2, J, 9, 2, 7 ควรคืนค่าเป็น string `1 Bet`
 
 ```js
 assert(
@@ -119,7 +122,7 @@ assert(
 );
 ```
 
-Cards Sequence 2, 2, 10 should return the string `1 Bet`
+ลำดับไพ่  2, 2, 10  ควรคืนค่าเป็น string `1 Bet`
 
 ```js
 assert(
@@ -136,7 +139,7 @@ assert(
 );
 ```
 
-Cards Sequence 3, 2, A, 10, K should return the string `-1 Hold`
+ลำดับไพ่ 3, 2, A, 10, K ควรคืนค่าเป็น string `-1 Hold`
 
 ```js
 assert(

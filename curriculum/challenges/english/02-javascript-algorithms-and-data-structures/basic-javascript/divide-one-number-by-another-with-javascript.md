@@ -9,9 +9,9 @@ dashedName: divide-one-number-by-another-with-javascript
 
 # --description--
 
-We can also divide one number by another.
+เราสามารถหารตัวเลขหนึ่งด้วยเลขอีกตัวนึงได้
 
-JavaScript uses the `/` symbol for division.
+JavaScript ใช้สัญลักษณ์ `/` สำหรับการหาร
 
 **Example**
 
@@ -19,20 +19,22 @@ JavaScript uses the `/` symbol for division.
 myVar = 16 / 2;
 ```
 
-`myVar` now has the value `8`.
+`myVar` ตอนนี้ควรมีค่า `8`
+
 # --instructions--
 
-Change the `0` so that the `quotient` is equal to `2`.
+จงเปลี่ยน `0` เพื่อให้ `quotient` มีค่าเท่ากับ `2`
 
 # --hints--
 
-The variable `quotient` should be equal to 2.
+ตัวแปร `quotient` ควรมีค่าเท่ากับ 2
 
 ```js
 assert(quotient === 2);
 ```
 
-You should use the `/` operator.
+คุณควรใช้ `/` operator
+
 
 ```js
 assert(/\d+\s*\/\s*\d+/.test(code));

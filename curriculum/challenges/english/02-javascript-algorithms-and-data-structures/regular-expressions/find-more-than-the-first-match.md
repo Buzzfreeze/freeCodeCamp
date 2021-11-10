@@ -8,7 +8,7 @@ dashedName: find-more-than-the-first-match
 
 # --description--
 
-So far, you have only been able to extract or search a pattern once.
+ที่ผ่านมา คุณแยก  (extract) หรือค้นหา  (search) pattern ได้เพียงครั้งเดียว
 
 ```js
 let testStr = "Repeat, Repeat, Repeat";
@@ -16,39 +16,39 @@ let ourRegex = /Repeat/;
 testStr.match(ourRegex);
 ```
 
-Here `match` would return `["Repeat"]`.
+ในที่นี้ `match` จะคืนค่า `["Repeat"]`
 
-To search or extract a pattern more than once, you can use the `g` flag.
+การค้นหาหรือแยกตาม pattern มากกว่า 1 ครั้ง คุณสามารถใช้ `g` flag
 
 ```js
 let repeatRegex = /Repeat/g;
 testStr.match(repeatRegex);
 ```
 
-And here `match` returns the value `["Repeat", "Repeat", "Repeat"]`
+ในที่นี้ `match` คืนค่า `["Repeat", "Repeat", "Repeat"]`
 
 # --instructions--
 
-Using the regex `starRegex`, find and extract both `Twinkle` words from the string `twinkleStar`.
+ให้ใช้ regex `starRegex` เพื่อค้นหาและแยกคำว่า `Twinkle` ทุกคำจาก string `twinkleStar`
 
 **Note**  
-You can have multiple flags on your regex like `/search/gi`
+คุณสามารถใช้ flag ได้หลายตัวกับ regex เช่น `/search/gi`
 
 # --hints--
 
-Your regex `starRegex` should use the global flag `g`
+regex `starRegex` ควรใช้ global flag `g`
 
 ```js
 assert(starRegex.flags.match(/g/).length == 1);
 ```
 
-Your regex `starRegex` should use the case insensitive flag `i`
+regex `starRegex` ควรใช้ case insensitive flag `i`
 
 ```js
 assert(starRegex.flags.match(/i/).length == 1);
 ```
 
-Your match should match both occurrences of the word `Twinkle`
+ควร match คำว่า `Twinkle` ทั้ง 2 คำ
 
 ```js
 assert(
@@ -60,7 +60,7 @@ assert(
 );
 ```
 
-Your match `result` should have two elements in it.
+ผลของการ match `result` ควรมี 2 elements
 
 ```js
 assert(result.length == 2);

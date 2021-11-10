@@ -8,9 +8,9 @@ dashedName: match-everything-but-letters-and-numbers
 
 # --description--
 
-You've learned that you can use a shortcut to match alphanumerics `[A-Za-z0-9_]` using `\w`. A natural pattern you might want to search for is the opposite of alphanumerics.
+คุณได้เรียนรู้แล้วว่า คุณสามารถใช้ shortcut เพื่อ match อักขระที่เป็นตัวเลขและตัวอักษร `[A-Za-z0-9_]` โดยการใช้ `\w` อย่างไรก็ตาม บางครั้งคุณอาจต้องการค้นหาอักขระอื่นที่นอกเหนือจากตัวเลขและตัวอักษร
 
-You can search for the opposite of the `\w` with `\W`. Note, the opposite pattern uses a capital letter. This shortcut is the same as `[^A-Za-z0-9_]`.
+คุณสามารถค้นหาสิ่งตรงข้ามกับ `\w` ด้วย `\W` ซึ่ง pattern ที่ตรงข้ามจะใช้ตัวอักษรพิมพ์ใหญ่ โดย shortcut นี้เทียบเท่ากับ [^A-Za-z0-9_]`
 
 ```js
 let shortHand = /\W/;
@@ -20,21 +20,21 @@ numbers.match(shortHand);
 sentence.match(shortHand);
 ```
 
-The first `match` call would return the value `["%"]` and the second would return `["!"]`.
+การเรียก `match` ครั้งแรกควรคืนค่า `["%"]` และครั้งที่สองควรควรค่า `["!"]`
 
 # --instructions--
 
-Use the shorthand character class `\W` to count the number of non-alphanumeric characters in various quotes and strings.
+จงใช้ shorthand character class `\W` เพื่อนับตัวอักษรและตัวเลขใน strings
 
 # --hints--
 
-Your regex should use the global flag.
+regex ของคุณควรใช้ global flag
 
 ```js
 assert(nonAlphabetRegex.global);
 ```
 
-Your regex should find 6 non-alphanumeric characters in the string `The five boxing wizards jump quickly.`.
+regex ของคุณควรพบอักขระอื่นที่นอกเหนือจากตัวเลขและตัวอักษรจำนวน 6 ตัวใน string `The five boxing wizards jump quickly.`.
 
 ```js
 assert(
@@ -42,13 +42,13 @@ assert(
 );
 ```
 
-Your regex should use the shorthand character to match characters which are non-alphanumeric.
+regex ของคุณควรใช้ shorthand character เพื่อ match อักขระอื่นที่นอกเหนือจากตัวเลขและตัวอักษร (non-alphanumeric)
 
 ```js
 assert(/\\W/.test(nonAlphabetRegex.source));
 ```
 
-Your regex should find 8 non-alphanumeric characters in the string `Pack my box with five dozen liquor jugs.`
+regex ของคุณควรพบอักขระอื่นที่นอกเหนือจากตัวเลขและตัวอักษรจำนวน 8 ตัวใน string `Pack my box with five dozen liquor jugs.`
 
 ```js
 assert(
@@ -56,7 +56,7 @@ assert(
 );
 ```
 
-Your regex should find 6 non-alphanumeric characters in the string `How vexingly quick daft zebras jump!`
+regex ของคุณควรพบอักขระอื่นที่นอกเหนือจากตัวเลขและตัวอักษรจำนวน 6 ตัวใน string `How vexingly quick daft zebras jump!`
 
 ```js
 assert(
@@ -64,7 +64,7 @@ assert(
 );
 ```
 
-Your regex should find 12 non-alphanumeric characters in the string `123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.`
+regex ของคุณควรพบอักขระอื่นที่นอกเหนือจากตัวเลขและตัวอักษรจำนวน 12 ตัวใน string `123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.`
 
 ```js
 assert(

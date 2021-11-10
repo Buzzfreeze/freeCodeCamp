@@ -9,29 +9,30 @@ dashedName: assignment-with-a-returned-value
 
 # --description--
 
-If you'll recall from our discussion of [Storing Values with the Assignment Operator](/learn/javascript-algorithms-and-data-structures/basic-javascript/storing-values-with-the-assignment-operator), everything to the right of the equal sign is resolved before the value is assigned. This means we can take the return value of a function and assign it to a variable.
+หากคุณจำได้จากบทที่ผ่านมาเกี่ยวกับ 
+ [Storing Values ​​with the Assignment Operator](/learn/javascript-algorithms-and-data-structures/basic-javascript/storing-values-with-the-assignment-operator) สิ่งที่อยู่ด้านขวาของเครื่องหมายเท่ากับได้รับการประมวลผลก่อนการกำหนดค่า ซึ่งหมายความว่าเราสามารส่งคืนค่าของฟังก์ชัน มากำหนดให้กับตัวแปรได้
 
-Assume we have pre-defined a function `sum` which adds two numbers together, then:
+สมมติว่าเราได้กำหนดฟังก์ชัน `sum` ไว้ล่วงหน้าซึ่งบวกตัวเลขสองตัวเข้าด้วยกันแล้ว:
 
 ```js
 ourSum = sum(5, 12);
 ```
 
-will call `sum` function, which returns a value of `17` and assigns it to `ourSum` variable.
+จะเรียก function `sum` ซึ่งคืนค่า `17` และกำหนดค่าไปยังตัวแปร `ourSum`
 
 # --instructions--
 
-Call the `processArg` function with an argument of `7` and assign its return value to the variable `processed`.
+จงเรียกใช้ function `processArg` ด้วย argument `7` และกำหนดค่าส่งกลับไปยังตัวแปร `processed`
 
 # --hints--
 
-`processed` should have a value of `2`
+`processed` ควรมีค่า `2`
 
 ```js
 assert(processed === 2);
 ```
 
-You should assign `processArg` to `processed`
+คุณควรกำหนด `processArg` ไปยัง `processed`
 
 ```js
 assert(/processed\s*=\s*processArg\(\s*7\s*\)/.test(code));

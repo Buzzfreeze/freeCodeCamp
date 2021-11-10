@@ -9,9 +9,9 @@ dashedName: store-multiple-values-in-one-variable-using-javascript-arrays
 
 # --description--
 
-With JavaScript `array` variables, we can store several pieces of data in one place.
+ตัวแปร `array` ในภาษา JavaScript ทำให้เราสามารถเก็บข้อมูลหลายตัวไว้ในที่เดียวกันได้
 
-You start an array declaration with an opening square bracket, end it with a closing square bracket, and put a comma between each entry, like this:
+คุณเริ่มจากการประกาศ array ด้วย opening square bracket (วงเล็บเปิด) และปิดด้วย closing square bracket (วงเล็บเปิด) และใส่ comma ระหว่างแต่ละรายการ ดังนี้:
 
 ```js
 var sandwich = ["peanut butter", "jelly", "bread"]
@@ -19,23 +19,24 @@ var sandwich = ["peanut butter", "jelly", "bread"]
 
 # --instructions--
 
-Modify the new array `myArray` so that it contains both a string and a number (in that order).
+จงแก้ไข array ใหม่ `myArray` เพื่อให้มีทั้ง string และ number (ตามลำดับ)
 
 # --hints--
 
-`myArray` should be an array.
+`myArray` ควรเป็น array
 
 ```js
 assert(typeof myArray == 'object');
 ```
 
-The first item in `myArray` should be a string.
+item แรกใน `myArray` ควรเป็น string
 
 ```js
 assert(typeof myArray[0] !== 'undefined' && typeof myArray[0] == 'string');
 ```
 
-The second item in `myArray` should be a number.
+item ที่สองใน `myArray` ควรเป็น number
+
 
 ```js
 assert(typeof myArray[1] !== 'undefined' && typeof myArray[1] == 'number');

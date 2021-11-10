@@ -9,9 +9,11 @@ dashedName: using-objects-for-lookups
 
 # --description--
 
-Objects can be thought of as a key/value storage, like a dictionary. If you have tabular data, you can use an object to lookup values rather than a `switch` statement or an `if/else` chain. This is most useful when you know that your input data is limited to a certain range.
+Object เปรียบได้กับที่เก็บ key/value เช่นเดียวกับพจนานุกรม ถ้าคุณมีข้อมูลแบบตาราง คุณสามารถใช้ object เพื่อค้นหาค่า แทนที่จะใช้คำสั่ง `switch` หรือกลุ่ม `if/else` นอกจากนี้ object ยังมีประโยชน์มาก เมื่อคุณรู้ว่าข้อมูลที่คุณป้อนเข้าไปถูกจำกัดตามช่วงที่กำหนด
 
-Here is an example of a simple reverse alphabet lookup:
+
+นี่เป็นตัวอย่างในการค้นหาตัวอักษรย้อนกลับอย่างง่าย
+
 
 ```js
 var alpha = {
@@ -31,63 +33,63 @@ var value = 2;
 alpha[value];
 ```
 
-`alpha[2]` is the string `Y`, `alpha[24]` is the string `C`, and `alpha[value]` is the string `Y`.
+`alpha[2]` เป็น string `Y`, `alpha[24]` เป็น string `C`, และ `alpha[value]` เป็น string `Y`
 
 # --instructions--
 
-Convert the switch statement into an object called `lookup`. Use it to look up `val` and assign the associated string to the `result` variable.
+จงแปลงคำสั่ง switch ให้เป็น object ชื่อว่า `lookup` เพื่อค้นหา `val` และกำหนดค่า string ที่เกี่ยวข้องให้กับตัวแปร `result`
 
 # --hints--
 
-`phoneticLookup("alpha")` should equal the string `Adams`
+`phoneticLookup("alpha")` ควรเท่ากับ string `Adams`
 
 ```js
 assert(phoneticLookup('alpha') === 'Adams');
 ```
 
-`phoneticLookup("bravo")` should equal the string `Boston`
+`phoneticLookup("bravo")` ควรเท่ากับ string `Boston`
 
 ```js
 assert(phoneticLookup('bravo') === 'Boston');
 ```
 
-`phoneticLookup("charlie")` should equal the string `Chicago`
+`phoneticLookup("charlie")` ควรเท่ากับ string `Chicago`
 
 ```js
 assert(phoneticLookup('charlie') === 'Chicago');
 ```
 
-`phoneticLookup("delta")` should equal the string `Denver`
+`phoneticLookup("delta")` ควรเท่ากับ string `Denver`
 
 ```js
 assert(phoneticLookup('delta') === 'Denver');
 ```
 
-`phoneticLookup("echo")` should equal the string `Easy`
+`phoneticLookup("echo")` ควรเท่ากับ string `Easy`
 
 ```js
 assert(phoneticLookup('echo') === 'Easy');
 ```
 
-`phoneticLookup("foxtrot")` should equal the string `Frank`
+`phoneticLookup("foxtrot")` ควรเท่ากับ string `Frank`
 
 ```js
 assert(phoneticLookup('foxtrot') === 'Frank');
 ```
 
-`phoneticLookup("")` should equal `undefined`
+`phoneticLookup("")` ควรเท่ากับ `undefined`
 
 ```js
 assert(typeof phoneticLookup('') === 'undefined');
 ```
 
-You should not modify the `return` statement
+คุณไม่ควรแก้ไข `return` statement
 
 ```js
 assert(code.match(/return\sresult;/));
 ```
 
-You should not use `case`, `switch`, or `if` statements
+คุณไม่ควรใช้ `case`, `switch` หรือ `if` statements
 
 ```js
 assert(

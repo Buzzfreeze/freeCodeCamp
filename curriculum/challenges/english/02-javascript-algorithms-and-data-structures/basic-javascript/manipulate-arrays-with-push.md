@@ -9,11 +9,12 @@ dashedName: manipulate-arrays-with-push
 
 # --description--
 
-An easy way to append data to the end of an array is via the `push()` function.
+การนำข้อมูลมาต่อท้าย array ทำได้ง่ายๆ โดยการใช้ ฟังก์ชัน `push()`
 
-`.push()` takes one or more <dfn>parameters</dfn> and "pushes" them onto the end of the array.
+`.push()` รับ <dfn>parameter</dfn> ตั้งแต่หนึ่งตัวขึ้นไป แล้ว "pushes (ดัน)" ไปไว้ที่ส่วนท้ายของ array
 
-Examples:
+
+ตัวอย่าง:
 
 ```js
 var arr1 = [1,2,3];
@@ -23,15 +24,15 @@ var arr2 = ["Stimpson", "J", "cat"];
 arr2.push(["happy", "joy"]);
 ```
 
-`arr1` now has the value `[1, 2, 3, 4]` and `arr2` has the value `["Stimpson", "J", "cat", ["happy", "joy"]]`.
+`arr1` ควรมีค่า `[1, 2, 3, 4]` และ `arr2` ควรมีค่า `["Stimpson", "J", "cat", ["happy", "joy"]]`
 
 # --instructions--
 
-Push `["dog", 3]` onto the end of the `myArray` variable.
+จง Push `["dog", 3]` ไปที่ด้านท้ายของตัวแปร `myArray`
 
 # --hints--
 
-`myArray` should now equal `[["John", 23], ["cat", 2], ["dog", 3]]`.
+`myArray` ควรมีค่าเท่ากับ `[["John", 23], ["cat", 2], ["dog", 3]]`
 
 ```js
 assert(

@@ -8,15 +8,15 @@ dashedName: positive-and-negative-lookahead
 
 # --description--
 
-<dfn>Lookaheads</dfn> are patterns that tell JavaScript to look-ahead in your string to check for patterns further along. This can be useful when you want to search for multiple patterns over the same string.
+<dfn>Lookaheads</dfn> คือ pattern ที่บอก JavaScript ให้มองไปข้างหน้าใน string เพื่อตรวจสอบ ซึ่งมีประโยชน์เวลาที่คุณต้องการค้นหาหลาย pattern ที่อยู่ภายใน string เดียว
 
-There are two kinds of lookaheads: <dfn>positive lookahead</dfn> and <dfn>negative lookahead</dfn>.
+มี lookaheads 2 ประเภทคือ <dfn>positive lookahead</dfn> และ <dfn>negative lookahead</dfn>
 
-A positive lookahead will look to make sure the element in the search pattern is there, but won't actually match it. A positive lookahead is used as `(?=...)` where the `...` is the required part that is not matched.
+positive lookahead จะค้นหา element ตาม search pattern อย่างไรก็ตาม element นั้นไม่ได้ match กับ search pattern จริงๆ โดย positive lookahead เขียนได้ดังนี้ `(?=...)` ซึ่ง `...` เป็นส่วนที่ต้องระบุ แต่ไม่ได้นำมา match
 
-On the other hand, a negative lookahead will look to make sure the element in the search pattern is not there. A negative lookahead is used as `(?!...)` where the `...` is the pattern that you do not want to be there. The rest of the pattern is returned if the negative lookahead part is not present.
+ในทางกลับกัน negative lookahead จะค้นหา element ที่ไม่ตรงกับ search pattern โดย negative lookahead เขียนได้ดังนี้ `(?!...)` ซึ่ง `...` คือ pattern ที่ระบุส่วนที่คุณไม่ต้องการให้มี ส่วนที่เหลือของ pattern จะถูกคืนค่า หากไม่เจอส่วนของ negative lookahead
 
-Lookaheads are a bit confusing but some examples will help.
+เรื่อง Lookaheads ค่อนข้างน่าสับสน แต่ตัวอย่างอาจจะช่วยให้เข้าใจมากขึ้น
 
 ```js
 let quit = "qu";
@@ -27,9 +27,9 @@ quit.match(quRegex);
 noquit.match(qRegex);
 ```
 
-Both of these `match` calls would return `["q"]`.
+การเรียก `match` ทั้งสองครั้งจะคืนค่า `["q"]`
 
-A more practical use of lookaheads is to check two or more patterns in one string. Here is a (naively) simple password checker that looks for between 3 and 6 characters and at least one number:
+การใช้งาน lookaheads ในทางปฎิบัติคือ ใช้กับการตรวจสอบตั้งแต่ 2 pattern ขึ้นไปใน string เดียว ในที่นี้คือ การตรวจสอบ password ที่ต้องมีความยาว 3 ถึง 6 ตัวอักษรและมีตัวเลขอย่างน้อย 1 ตัว
 
 ```js
 let password = "abc123";
@@ -39,66 +39,66 @@ checkPass.test(password);
 
 # --instructions--
 
-Use lookaheads in the `pwRegex` to match passwords that are greater than 5 characters long, and have two consecutive digits.
+จงใช้ lookaheads ใน `pwRegex` เพื่อ match passwords ที่มีความยาวมากกว่า 5 ตัวอักษร และมีเลข 2 ตัวเรียงกัน
 
 # --hints--
 
-Your regex should use two positive `lookaheads`.
+regex ของคุณควรมี 2 positive `lookaheads`
 
 ```js
 assert(pwRegex.source.match(/\(\?=.*?\)\(\?=.*?\)/) !== null);
 ```
 
-Your regex should not match the string `astronaut`
+regex ของคุณไม่ควร match กับ string `astronaut`
 
 ```js
 pwRegex.lastIndex = 0;
 assert(!pwRegex.test('astronaut'));
 ```
 
-Your regex should not match the string `banan1`
+regex ของคุณไม่ควร match กับ string `banan1`
 
 ```js
 pwRegex.lastIndex = 0;
 assert(!pwRegex.test('banan1'));
 ```
 
-Your regex should match the string `bana12`
+regex ของคุณควร match กับ string `bana12`
 
 ```js
 pwRegex.lastIndex = 0;
 assert(pwRegex.test('bana12'));
 ```
 
-Your regex should match the string `abc123`
+regex ของคุณควร match กับ string `abc123`
 
 ```js
 pwRegex.lastIndex = 0;
 assert(pwRegex.test('abc123'));
 ```
 
-Your regex should not match the string `12345`
+regex ของคุณไม่ควร match กับ string `12345`
 
 ```js
 pwRegex.lastIndex = 0;
 assert(!pwRegex.test('12345'));
 ```
 
-Your regex should match the string `8pass99`
+regex ของคุณควร match กับ string `8pass99`
 
 ```js
 pwRegex.lastIndex = 0;
 assert(pwRegex.test('8pass99'));
 ```
 
-Your regex should not match the string `1a2bcde`
+regex ของคุณไม่ควร match กับ string `1a2bcde`
 
 ```js
 pwRegex.lastIndex = 0;
 assert(!pwRegex.test('1a2bcde'));
 ```
 
-Your regex should match the string `astr1on11aut`
+regex ของคุณควร match กับ string `astr1on11aut`
 
 ```js
 pwRegex.lastIndex = 0;

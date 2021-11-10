@@ -8,7 +8,7 @@ dashedName: match-literal-strings
 
 # --description--
 
-In the last challenge, you searched for the word `Hello` using the regular expression `/Hello/`. That regex searched for a literal match of the string `Hello`. Here's another example searching for a literal match of the string `Kevin`:
+ในแบบทดสอบที่แล้ว คุณค้นหาคำว่า `Hello` โดยใช้ regular expression `/Hello/` ซึ่ง regex นั้นค้นหาข้อความที่ match กับ string `Hello` ต่อไปนี้เป็นตัวอย่างการค้นหาข้อความที่ match กับ string `Kevin`:
 
 ```js
 let testStr = "Hello, my name is Kevin.";
@@ -16,40 +16,40 @@ let testRegex = /Kevin/;
 testRegex.test(testStr);
 ```
 
-This `test` call will return `true`.
+`test` ในที่นี้คืนค่า `true`
 
-Any other forms of `Kevin` will not match. For example, the regex `/Kevin/` will not match `kevin` or `KEVIN`.
+รูปแบบอื่นของ `Kevin` จะไม่ match ตัวอย่างเช่น regex `/Kevin/` จะไม่ match กับ `kevin` หรือ `KEVIN`
 
 ```js
 let wrongRegex = /kevin/;
 wrongRegex.test(testStr);
 ```
 
-This `test` call will return `false`.
+`test` ในที่นี้คืนค่า `false`
 
-A future challenge will show how to match those other forms as well.
+แบบทดสอบหลังจากนี้จะแสดงวิธีการ match กับรูปแบบอื่นๆ ให้ด้วย
 
 # --instructions--
 
-Complete the regex `waldoRegex` to find `"Waldo"` in the string `waldoIsHiding` with a literal match.
+จงทำให้ regex `waldoRegex` สมบูรณ์ เพื่อค้นหา `"Waldo"` ใน string `waldoIsHiding`
 
 # --hints--
 
-Your regex `waldoRegex` should find the string `Waldo`
+regex `waldoRegex` ควรค้นหา string `Waldo`
 
 ```js
 waldoRegex.lastIndex = 0;
 assert(waldoRegex.test(waldoIsHiding));
 ```
 
-Your regex `waldoRegex` should not search for anything else.
+regex `waldoRegex` ไม่ควรค้นหาข้อความอื่นอีก
 
 ```js
 waldoRegex.lastIndex = 0;
 assert(!waldoRegex.test('Somewhere is hiding in this text.'));
 ```
 
-You should perform a literal string match with your regex.
+คุณควรค้นหา string ตามตัวอักษรที่ match กับ regex ของคุณ
 
 ```js
 assert(!/\/.*\/i/.test(code));

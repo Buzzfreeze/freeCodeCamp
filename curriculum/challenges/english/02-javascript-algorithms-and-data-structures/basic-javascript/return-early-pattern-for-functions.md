@@ -9,7 +9,7 @@ dashedName: return-early-pattern-for-functions
 
 # --description--
 
-When a `return` statement is reached, the execution of the current function stops and control returns to the calling location.
+เมื่อรันถึง `return` statement การทำงานของ function จะหยุดลง และคืนค่าให้กับจุดที่เรียกใช้ฟังก์ชัน 
 
 **Example**
 
@@ -22,54 +22,58 @@ function myFun() {
 myFun();
 ```
 
-The above will display the string `Hello` in the console, and return the string `World`. The string `byebye` will never display in the console, because the function exits at the `return` statement.
+ด้านบนจะแสดง string `Hello` ในหน้า console และคืนค่า string `World` โดย string `byebye` จะไม่แสดงใน console เลย เพราะสิ้นสุดการทำงานของ function ที่คำสั่ง `return` 
+
+
 
 # --instructions--
 
-Modify the function `abTest` so that if `a` or `b` are less than `0` the function will immediately exit with a value of `undefined`.
+จงแก้ไขฟังก์ชัน `abTest` โดยถ้า `a` หรือ `b` น้อยกว่า `0` ฟังก์ชันจะออกจากการทำงานทันทีแล้วคืนค่า `undefined`
 
 **Hint**  
-Remember that [`undefined` is a keyword](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/understanding-uninitialized-variables), not a string.
+
+จำไว้ว่า [`undefined` เป็นคีย์เวิร์ดหนึ่ง](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/understanding-uninitialized-variables) ที่ไม่ใช่ string
 
 # --hints--
 
-`abTest(2,2)` should return a number
+`abTest(2,2)` ควรคืนค่า number
+
 
 ```js
 assert(typeof abTest(2, 2) === 'number');
 ```
 
-`abTest(2,2)` should return `8`
+`abTest(2,2)` ควรคืนค่า `8`
 
 ```js
 assert(abTest(2, 2) === 8);
 ```
 
-`abTest(-2,2)` should return `undefined`
+`abTest(-2,2)` ควรคืนค่า `undefined`
 
 ```js
 assert(abTest(-2, 2) === undefined);
 ```
 
-`abTest(2,-2)` should return `undefined`
+`abTest(2,-2)` ควรคืนค่า `undefined`
 
 ```js
 assert(abTest(2, -2) === undefined);
 ```
 
-`abTest(2,8)` should return `18`
+`abTest(2,8)` ควรคืนค่า `18`
 
 ```js
 assert(abTest(2, 8) === 18);
 ```
 
-`abTest(3,3)` should return `12`
+`abTest(3,3)` ควรคืนค่า `12`
 
 ```js
 assert(abTest(3, 3) === 12);
 ```
 
-`abTest(0,0)` should return `0`
+`abTest(0,0)` ควรคืนค่า `0`
 
 ```js
 assert(abTest(0, 0) === 0);

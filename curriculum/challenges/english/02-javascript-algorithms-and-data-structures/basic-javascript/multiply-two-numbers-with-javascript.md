@@ -9,9 +9,9 @@ dashedName: multiply-two-numbers-with-javascript
 
 # --description--
 
-We can also multiply one number by another.
+เราสามารถคูณตัวเลขหนึ่งกับอีกเลขหนึ่งได้
 
-JavaScript uses the `*` symbol for multiplication of two numbers.
+JavaScript ใช้สัญลักษณ์ `*` สำหรับการคูณ
 
 **Example**
 
@@ -19,21 +19,21 @@ JavaScript uses the `*` symbol for multiplication of two numbers.
 myVar = 13 * 13;
 ```
 
-`myVar` would have the value `169`.
+`myVar` ควรมีค่า `169`.
 
 # --instructions--
 
-Change the `0` so that product will equal `80`.
+จงเปลี่ยน `0` เพื่อให้ผลคูณมีค่าเท่ากับ `80`.
 
 # --hints--
 
-The variable `product` should be equal to 80.
+ตัวแปร `product` ควรมีค่าเท่ากับ 80
 
 ```js
 assert(product === 80);
 ```
 
-You should use the `*` operator.
+คุณควรใช้ `*` operator
 
 ```js
 assert(/\*/.test(code));

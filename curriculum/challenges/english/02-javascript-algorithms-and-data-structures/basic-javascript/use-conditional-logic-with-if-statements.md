@@ -9,9 +9,9 @@ dashedName: use-conditional-logic-with-if-statements
 
 # --description--
 
-`If` statements are used to make decisions in code. The keyword `if` tells JavaScript to execute the code in the curly braces under certain conditions, defined in the parentheses. These conditions are known as `Boolean` conditions and they may only be `true` or `false`.
+`If` statement ใช้ในการตัดสินใจในโค้ด คีย์เวิร์ด `if` บอกให้ JavaScript รันโค้ดในวงเล็บปีกกาภายใต้เงื่อนไขบางอย่าง ซึ่งกำหนดไว้ในวงเล็บ เงื่อนไขเหล่านี้เรียกว่า `Boolean` และอาจเป็น `true` หรือ`false`เท่านั้น
 
-When the condition evaluates to `true`, the program executes the statement inside the curly braces. When the Boolean condition evaluates to `false`, the statement inside the curly braces will not execute.
+เมื่อเงื่อนไขประเมินว่าเป็น `true` โปรแกรมจะรันคำสั่งภายในวงเล็บปีกกา เมื่อเงื่อนไข Boolean ถูกประเมินเป็น `false` คำสั่งภายในวงเล็บปีกกาจะไม่ทำงาน
 
 **Pseudocode**
 
@@ -30,41 +30,45 @@ test(true);
 test(false);
 ```
 
-`test(true)` returns the string `It was true`, and `test(false)` returns the string `It was false`.
+`test(true)` คืนค่า string `It was true` และ `test(false)` คืนค่า string `It was false`.
+
 
 When `test` is called with a value of `true`, the `if` statement evaluates `myCondition` to see if it is `true` or not. Since it is `true`, the function returns `It was true`. When we call `test` with a value of `false`, `myCondition` is *not* `true` and the statement in the curly braces is not executed and the function returns `It was false`.
 
+# - เมื่อเรียกใช้ `test` ด้วยค่า `true` จากนั้น `if` statement จะประเมิน `myCondition` ว่าเป็น `true` หรือไม่ เนื่องจากในที่นี้มีค่าเป็น `true` ดังนั้นฟังก์ชันจึงคืนค่า `It was true` เมื่อเราเรียก `test` ด้วยค่า `false` แล้ว `myCondition` จะไม่เป็น `true` และคำสั่งในวงเล็บปีกกาจะไม่ถูกดำเนินการ และ function จะส่งคืนค่า `It was false`
+
+
 # --instructions--
 
-Create an `if` statement inside the function to return `Yes, that was true` if the parameter `wasThatTrue` is `true` and return `No, that was false` otherwise.
+จงสร้าง`if` statement ภายใน function เพื่อคืนค่า `Yes, that was true` ถ้า parameter `wasThatTrue` มีค่าเป็น `true` และคืนค่า `No, that was false` ถ้าเงื่อนไขมีค่าเป็น `false`
 
 # --hints--
 
-`trueOrFalse` should be a function
+`trueOrFalse` ควรเป็น function
 
 ```js
 assert(typeof trueOrFalse === 'function');
 ```
 
-`trueOrFalse(true)` should return a string
+`trueOrFalse(true)` ควรคืนค่า string
 
 ```js
 assert(typeof trueOrFalse(true) === 'string');
 ```
 
-`trueOrFalse(false)` should return a string
+`trueOrFalse(false)` ควรคืนค่า string
 
 ```js
 assert(typeof trueOrFalse(false) === 'string');
 ```
 
-`trueOrFalse(true)` should return the string `Yes, that was true`
+`trueOrFalse(true)`  ควรคืนค่า string `Yes, that was true`
 
 ```js
 assert(trueOrFalse(true) === 'Yes, that was true');
 ```
 
-`trueOrFalse(false)` should return the string `No, that was false`
+`trueOrFalse(false)` ควรคืนค่า string `No, that was false`
 
 ```js
 assert(trueOrFalse(false) === 'No, that was false');

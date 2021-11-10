@@ -9,7 +9,8 @@ dashedName: comparison-with-the-inequality-operator
 
 # --description--
 
-The inequality operator (`!=`) is the opposite of the equality operator. It means not equal and returns `false` where equality would return `true` and *vice versa*. Like the equality operator, the inequality operator will convert data types of values while comparing.
+inequality operator (`!=`) จะทำงานตรงข้ามกับ equality operator (`==`) ซึ่ง (`!=`) หมายถึง ถ้าค่าข้อมูลเท่า จะส่งคืนค่า `false` ในขณะที่ (`==`) จะคืนค่า `true` อย่างไรก็ตาม เช่นเดียวกับ equality operator (`==`) เมื่อมีการเปรียบเทียบ inequality operator (`!=`) จะทำการแปลงประเภทข้อมุลให้
+
 
 **Examples**
 
@@ -21,45 +22,47 @@ The inequality operator (`!=`) is the opposite of the equality operator. It mean
 0 != false
 ```
 
-In order, these expressions would evaluate to `true`, `false`, `false`, `false`, and `false`.
+ผลลัพธ์แต่ละบรรทัดจะเป็น `true`, `false`, `false`, `false`, และ `false` ตามลำดับ
+
 
 # --instructions--
 
-Add the inequality operator `!=` in the `if` statement so that the function will return the string `Not Equal` when `val` is not equivalent to `99`
+จงเพิ่ม inequality operator `!=` ใน `if` statement เพื่อให้ function คืนค่า string `Not Equal` เมื่อ `val` ไม่เท่ากับ `99`
+
 
 # --hints--
 
-`testNotEqual(99)` should return the string `Equal`
+`testNotEqual(99)` ควรคืนค่า string `Equal`
 
 ```js
 assert(testNotEqual(99) === 'Equal');
 ```
 
-`testNotEqual("99")` should return the string `Equal`
+`testNotEqual("99")` ควรคืนค่า string `Equal`
 
 ```js
 assert(testNotEqual('99') === 'Equal');
 ```
 
-`testNotEqual(12)` should return the string `Not Equal`
+`testNotEqual(12)` ควรคืนค่า string `Not Equal`
 
 ```js
 assert(testNotEqual(12) === 'Not Equal');
 ```
 
-`testNotEqual("12")` should return the string `Not Equal`
+`testNotEqual("12")` ควรคืนค่า string `Not Equal`
 
 ```js
 assert(testNotEqual('12') === 'Not Equal');
 ```
 
-`testNotEqual("bob")` should return the string `Not Equal`
+`testNotEqual("bob")` ควรคืนค่า string `Not Equal`
 
 ```js
 assert(testNotEqual('bob') === 'Not Equal');
 ```
 
-You should use the `!=` operator
+คุณควรใช้เครื่องหมาย `!=` operator
 
 ```js
 assert(code.match(/(?!!==)!=/));

@@ -9,9 +9,9 @@ dashedName: use-multiple-conditional-ternary-operators
 
 # --description--
 
-In the previous challenge, you used a single conditional operator. You can also chain them together to check for multiple conditions.
+ในบทเรียนที่แล้ว คุณใช้เงื่อนไขเดียว (single conditional operator) อย่างไรก็ตาม คุณสามารถนำ conditional operator ต่างๆ มารวมกันเพื่อตรวจสอบเงื่อนไขหลายๆ เงื่อนไขได้
 
-The following function uses `if`, `else if`, and `else` statements to check multiple conditions:
+function ต่อไปนี้ใช้คำสั่ง `if`, `else if`, และ `else` เพื่อเช็คหลายเงื่อนไข
 
 ```js
 function findGreaterOrEqual(a, b) {
@@ -27,7 +27,7 @@ function findGreaterOrEqual(a, b) {
 }
 ```
 
-The above function can be re-written using multiple conditional operators:
+function ด้านบนสามารถเขียนใหม่ได้ โดยใช้ multiple conditional operator
 
 ```js
 function findGreaterOrEqual(a, b) {
@@ -37,7 +37,7 @@ function findGreaterOrEqual(a, b) {
 }
 ```
 
-It is considered best practice to format multiple conditional operators such that each condition is on a separate line, as shown above. Using multiple conditional operators without proper indentation may make your code hard to read. For example:
+ด้านบนนี้ถือเป็นแนวทางปฏิบัติที่ดีที่สุดในการจัดรูปแบบ multiple conditional operators โดยให้แต่ละเงื่อนไขอยู่ในบรรทัดที่แยกจากกัน ดังที่แสดงไว้ด้านบน การใช้ multiple conditional operators โดยไม่มีการเยื้องที่ถูกต้องอาจทำให้โค้ดของคุณอ่านยาก ตัวอย่างเช่น:
 
 ```js
 function findGreaterOrEqual(a, b) {
@@ -47,29 +47,33 @@ function findGreaterOrEqual(a, b) {
 
 # --instructions--
 
-In the `checkSign` function, use multiple conditional operators - following the recommended format used in `findGreaterOrEqual` - to check if a number is positive, negative or zero. The function should return `positive`, `negative` or `zero`.
+ในฟังก์ชัน `checkSign` ให้ใช้ multiple conditional operators - ตามรูปแบบที่แนะนำ ซึ่งใช้ใน `findGreaterOrEqual` เพื่อตรวจสอบว่าตัวเลขเป็นค่าบวก, ค่าลบ หรือศูนย์ ฟังก์ชันควรคืนค่า `positive`, `negative` หรือ `zero`
+
 
 # --hints--
 
-`checkSign` should use multiple conditional operators
+`checkSign` ควรใช้ multiple conditional operators
 
 ```js
 assert(/.+?\s*?\?\s*?.+?\s*?:\s*?.+?\s*?\?\s*?.+?\s*?:\s*?.+?/gi.test(code));
 ```
 
-`checkSign(10)` should return the string `positive`. Note that capitalization matters
+`checkSign(10)` ควรคืนค่า string `positive` 
+หมายเหตุ การใช้อักษรตัวพิมพ์ใหญ่เล็กมีความสำคัญ
 
 ```js
 assert(checkSign(10) === 'positive');
 ```
 
-`checkSign(-12)` should return the string `negative`. Note that capitalization matters
+`checkSign(-12)` ควรคืนค่า string `negative`. 
+หมายเหตุ การใช้อักษรตัวพิมพ์ใหญ่เล็กมีความสำคัญ
 
 ```js
 assert(checkSign(-12) === 'negative');
 ```
 
-`checkSign(0)` should return the string `zero`. Note that capitalization matters
+`checkSign(0)` ควรคืนค่า string `zero`. 
+หมายเหตุ การใช้อักษรตัวพิมพ์ใหญ่เล็กมีความสำคัญ
 
 ```js
 assert(checkSign(0) === 'zero');

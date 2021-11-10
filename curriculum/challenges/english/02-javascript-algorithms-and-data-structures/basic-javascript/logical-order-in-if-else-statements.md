@@ -9,13 +9,13 @@ dashedName: logical-order-in-if-else-statements
 
 # --description--
 
-Order is important in `if`, `else if` statements.
+ลำดับมีความสำคัญอย่างมาก สำหรับ `if`, `else if` statements
 
-The function is executed from top to bottom so you will want to be careful of what statement comes first.
+function จะทำงานจากด้านบนไปด้านล่าง ดังนั้นคุณจะต้องระมัดระวังว่าคำสั่งไหนทำก่อน
 
-Take these two functions as an example.
+ลองดูตัวอย่างของทั้งสอง function
 
-Here's the first:
+ตัวอย่างแรก
 
 ```js
 function foo(x) {
@@ -29,7 +29,7 @@ function foo(x) {
 }
 ```
 
-And the second just switches the order of the statements:
+ตัวอย่างที่สองเพียงแค่สลับลำดับคำสั่ง
 
 ```js
 function bar(x) {
@@ -43,34 +43,35 @@ function bar(x) {
 }
 ```
 
-While these two functions look nearly identical if we pass a number to both we get different outputs.
+ขณะที่ทั้งสอง function ดูเกือบจะเหมือนกัน แต่หากเราส่ง number ให้กับทั้งสอง function เราจะได้ผลลัพธ์ที่ต่างกัน
+
 
 ```js
 foo(0)
 bar(0)
 ```
 
-`foo(0)` will return the string `Less than one`, and `bar(0)` will return the string `Less than two`.
+`foo(0)` จะคืนค่า string `Less than one` ส่วน `bar(0)` จะคืนค่า string `Less than two`
 
 # --instructions--
 
-Change the order of logic in the function so that it will return the correct statements in all cases.
+จงแก้ไขลำดับของ logic ใน function เพื่อให้ส่งค่ากลับมาได้อย่างถูกต้องในทุกเคส
 
 # --hints--
 
-`orderMyLogic(4)` should return the string `Less than 5`
+`orderMyLogic(4)` ควรคืนค่า string `Less than 5`
 
 ```js
 assert(orderMyLogic(4) === 'Less than 5');
 ```
 
-`orderMyLogic(6)` should return the string `Less than 10`
+`orderMyLogic(6)` ควรคืนค่า string `Less than 10`
 
 ```js
 assert(orderMyLogic(6) === 'Less than 10');
 ```
 
-`orderMyLogic(11)` should return the string `Greater than or equal to 10`
+`orderMyLogic(11)` ควรคืนค่า string `Greater than or equal to 10`
 
 ```js
 assert(orderMyLogic(11) === 'Greater than or equal to 10');

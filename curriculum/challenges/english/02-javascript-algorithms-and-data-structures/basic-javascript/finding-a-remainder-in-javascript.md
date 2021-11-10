@@ -9,38 +9,41 @@ dashedName: finding-a-remainder-in-javascript
 
 # --description--
 
-The <dfn>remainder</dfn> operator `%` gives the remainder of the division of two numbers.
+<dfn>remainder</dfn> operator `%` ให้ผลลัพธ์เป็นเศษที่เหลือจากการหารของเลขสองตัว
 
 **Example**
 
 <blockquote>5 % 2 = 1 because<br>Math.floor(5 / 2) = 2 (Quotient)<br>2 * 2 = 4<br>5 - 4 = 1 (Remainder)</blockquote>
 
 **Usage**  
-In mathematics, a number can be checked to be even or odd by checking the remainder of the division of the number by `2`.
 
-<blockquote>17 % 2 = 1 (17 is Odd)<br>48 % 2 = 0 (48 is Even)</blockquote>
+# - ในทางคณิตศาสตร์ สามารถตรวจสอบตัวเลขว่าเป็นเลขคู่หรือเลขคี่ โดยการเช็คเศษที่เหลือจากการหารด้วย `2`
+
+# - <blockquote>17 % 2 = 1 (17 เป็นเลขคี่)<br>48 % 2 = 0 (48 เป็นเลขคู่)</blockquote>
 
 **Note:** The <dfn>remainder</dfn> operator is sometimes incorrectly referred to as the modulus operator. It is very similar to modulus, but does not work properly with negative numbers.
 
+# - **หมายเหตุ:**  <dfn>remainder</dfn> operator บางครั้งถูกมองว่าเป็น modulus operator แต่จริงๆ แล้วไม่ใช่ มันคล้าย modulus แต่ผลที่ได้มักไม่ถูกต้องเมื่อทำงานกับเลขติดลบ
+
 # --instructions--
 
-Set `remainder` equal to the remainder of `11` divided by `3` using the <dfn>remainder</dfn> (`%`) operator.
+จงกำหนด `remainder` ให้มีค่าเท่ากับ remainder ของ `11` หารด้วย `3` โดยใช้ <dfn>remainder</dfn> (`%`) operator
 
 # --hints--
 
-The variable `remainder` should be initialized
+ตัวแปร `remainder` ควรกำหนดเริ่มต้น
 
 ```js
 assert(/var\s+?remainder/.test(code));
 ```
 
-The value of `remainder` should be `2`
+ค่าของ `remainder` ควรเป็น `2`
 
 ```js
 assert(remainder === 2);
 ```
 
-You should use the `%` operator
+คุณควรใช้โอเปอเรเตอร์ `%` operator
 
 ```js
 assert(/\s+?remainder\s*?=\s*?.*%.*;?/.test(code));

@@ -8,9 +8,9 @@ dashedName: use-capture-groups-to-search-and-replace
 
 # --description--
 
-Searching is useful. However, you can make searching even more powerful when it also changes (or replaces) the text you match.
+การค้นหานั้นมีประโยชน์ แต่ถ้าคุณสามารถค้นหาและเปลี่ยน (หรือแทนที่) ข้อความที่ match ได้ก็ย่อมดีกว่า
 
-You can search and replace text in a string using `.replace()` on a string. The inputs for `.replace()` is first the regex pattern you want to search for. The second parameter is the string to replace the match or a function to do something.
+คุณสามารถค้นหาและแทนที่ข้อความใน string โดยใช้ `.replace()` ซึ่ง parameter ตัวแรกของ `.replace()` คือ regex pattern ที่คุณต้องการค้นหา ส่วน parameter ตัวที่สองก็คือ string ที่ต้องการแทนที่คำที่ match หรืออาจเป็นฟังก์ชันที่ให้ทำอะไรต่อ
 
 ```js
 let wrongText = "The sky is silver.";
@@ -18,47 +18,47 @@ let silverRegex = /silver/;
 wrongText.replace(silverRegex, "blue");
 ```
 
-The `replace` call would return the string `The sky is blue.`.
+การเรียก `replace` จะคืนค่าเป็น string `The sky is blue.`
 
-You can also access capture groups in the replacement string with dollar signs (`$`).
+คุณสามารถนำ capture groups มาใช้ในส่วนของ string ที่ต้องการแทนที่ โดยใช้ dollar signs (`$`)
 
 ```js
 "Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1');
 ```
 
-The `replace` call would return the string `Camp Code`.
+การเรียก `replace` จะคืนค่าเป็น string `Camp Code`
 
 # --instructions--
 
-Write a regex `fixRegex` using three capture groups that will search for each word in the string `one two three`. Then update the `replaceText` variable to replace `one two three` with the string `three two one` and assign the result to the `result` variable. Make sure you are utilizing capture groups in the replacement string using the dollar sign (`$`) syntax.
+จงเขียน regex `fixRegex` โดยใช้ capture groups 3 ชุด ซึ่งจะค้นหาแต่ละคำใน string `one two three` จากนั้นอัปเดตตัวแปร `replaceText` เพื่อแทนที่ `one two three` ด้วย string `three two one` แล้วกำหนด (assign) ผลลัพธ์ให้กับตัวแปร `result` อย่าลืมว่าให้นำ capture groups มาใช้ในส่วนของ string ที่ต้องการแทนที่ โดยใช้ dollar sign (`$`) syntax
 
 # --hints--
 
-You should use `.replace()` to search and replace.
+คุณควรใช้ `.replace()` เพื่อค้นหาและแทนที่
 
 ```js
 assert(code.match(/\.replace\(.*\)/));
 ```
 
-Your regex should change the string `one two three` to the string `three two one`
+regex ของคุณควรเปลี่ยน string `one two three` ให้เป็น string `three two one`
 
 ```js
 assert(result === 'three two one');
 ```
 
-You should not change the last line.
+คุณไม่ควรเปลี่ยนบรรทัดสุดท้าย
 
 ```js
 assert(code.match(/result\s*=\s*str\.replace\(.*?\)/));
 ```
 
-`fixRegex` should use at least three capture groups.
+`fixRegex` ควรใช้อย่างน้อย 3 capture groups.
 
 ```js
 assert(new RegExp(fixRegex.source + '|').exec('').length - 1 >= 3);
 ```
 
-`replaceText` should use parenthesized submatch string(s) (i.e. the nth parenthesized submatch string, $n, corresponds to the nth capture group).
+`replaceText` ควรนำแต่ละ submatch string(s) มาใส่วงเล็บ (เช่น submatch string ที่อยู่ในวงเล็บตัวที่ n, $n, จะตรงกันกับ capture group ลำดับที่ n)
 
 ```js
 {

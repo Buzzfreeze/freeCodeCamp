@@ -9,34 +9,34 @@ dashedName: use-bracket-notation-to-find-the-last-character-in-a-string
 
 # --description--
 
-In order to get the last letter of a string, you can subtract one from the string's length.
+เพื่อให้ได้ตัวอักษรตัวสุดท้ายของ string คุณสามารถนำความยาวของ string มาลบด้วยหนึ่ง
 
-For example, if `var firstName = "Ada"`, you can get the value of the last letter of the string by using `firstName[firstName.length - 1]`.
+ยกตัวอย่างเช่น ถ้า `var firstName = "Ada"` คุณสามารถหาตัวอักษรสุดท้ายของ string โดยใช้ `firstName[firstName.length - 1]`
 
-Example:
+ตัวอย่าง:
 
 ```js
 var firstName = "Ada";
 var lastLetter = firstName[firstName.length - 1];
 ```
 
-`lastLetter` would have a value of the string `a`.
+`lastLetter` ควรมีค่า string `a`
 
 # --instructions--
 
-Use <dfn>bracket notation</dfn> to find the last character in the `lastName` variable.
+จงใช้ <dfn>bracket notation</dfn> เพื่อหาอักขระสุดท้ายในตัวแปร `lastName`
 
-**Hint:** Try looking at the example above if you get stuck.
+**Hint:** ลองดูตัวอย่างด้านบน ถ้าคุณติดปัญหา
 
 # --hints--
 
-`lastLetterOfLastName` should be the letter `e`.
+`lastLetterOfLastName` ควรเป็นตัวอักษร `e`
 
 ```js
 assert(lastLetterOfLastName === 'e');
 ```
 
-You should use `.length` to get the last letter.
+คุณควรใช้ `.length` เพื่อให้ได้ตัวอักษรสุดท้าย
 
 ```js
 assert(code.match(/\.length/g).length > 0);

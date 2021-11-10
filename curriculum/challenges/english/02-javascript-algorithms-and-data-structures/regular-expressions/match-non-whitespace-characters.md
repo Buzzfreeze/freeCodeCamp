@@ -8,9 +8,9 @@ dashedName: match-non-whitespace-characters
 
 # --description--
 
-You learned about searching for whitespace using `\s`, with a lowercase `s`. You can also search for everything except whitespace.
+คุณได้เรียนรู้การค้นหา whitespace โดยใช้ `\s`, ที่มีตัวพิมพ์เล็ก `s` แล้ว อย่างไรก็ตาม คุณยังสามารถค้นหาทุกอย่างยกเว้น whitespace ได้อีกด้วย 
 
-Search for non-whitespace using `\S`, which is an uppercase `s`. This pattern will not match whitespace, carriage return, tab, form feed, and new line characters. You can think of it being similar to the character class `[^ \r\t\f\n\v]`.
+การค้นหา non-whitespace ให้ใช้ `\S`, ซึ่งเป็นตัวพิมพ์ใหญ่ `S` โดย pattern นี้จะไม่ match กับ whitespace, carriage return, tab, form feed และ new line characters คุณสามารถนึกถึง `\S` เทียบเท่ากับ character class `[^ \r\t\f\n\v]`
 
 ```js
 let whiteSpace = "Whitespace. Whitespace everywhere!"
@@ -18,27 +18,27 @@ let nonSpaceRegex = /\S/g;
 whiteSpace.match(nonSpaceRegex).length;
 ```
 
-The value returned by the `.length` method would be `32`.
+`.length` method คืนค่าเป็น `32`
 
 # --instructions--
 
-Change the regex `countNonWhiteSpace` to look for multiple non-whitespace characters in a string.
+จงปรับแก้ regex `countNonWhiteSpace` เพื่อค้นหา non-whitespace characters ทุกตัวใน string
 
 # --hints--
 
-Your regex should use the global flag.
+regex ของคุณควรใช้ global flag
 
 ```js
 assert(countNonWhiteSpace.global);
 ```
 
-Your regex should use the shorthand character `\S` to match all non-whitespace characters.
+regex ของคุณควรใช้ shorthand character `\S` เพื่อ match non-whitespace characters ทุกตัว
 
 ```js
 assert(/\\S/.test(countNonWhiteSpace.source));
 ```
 
-Your regex should find 35 non-spaces in the string `Men are from Mars and women are from Venus.`
+regex ของคุณควรพบ non-spaces 35 ตัวใน string `Men are from Mars and women are from Venus.`
 
 ```js
 assert(
@@ -47,13 +47,13 @@ assert(
 );
 ```
 
-Your regex should find 23 non-spaces in the string `Space: the final frontier.`
+regex ของคุณควรพบ non-spaces 23 ตัวใน string `Space: the final frontier.`
 
 ```js
 assert('Space: the final frontier.'.match(countNonWhiteSpace).length == 23);
 ```
 
-Your regex should find 21 non-spaces in the string `MindYourPersonalSpace`
+regex ของคุณควรพบ non-spaces 21 ตัวใน string `MindYourPersonalSpace`
 
 ```js
 assert('MindYourPersonalSpace'.match(countNonWhiteSpace).length == 21);

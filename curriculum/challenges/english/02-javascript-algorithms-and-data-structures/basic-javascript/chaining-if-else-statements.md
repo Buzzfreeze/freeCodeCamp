@@ -9,7 +9,8 @@ dashedName: chaining-if-else-statements
 
 # --description--
 
-`if/else` statements can be chained together for complex logic. Here is <dfn>pseudocode</dfn> of multiple chained `if` / `else if` statements:
+คำสั่ง `if/else` สามารถเชื่อมต่อกันเพื่อสร้าง logic ที่ซับซ้อน ด้านล่างเป็น <dfn>pseudocode</dfn> ของการเชื่อมต่อคำสั่ง `if` / `else if` หลายคำสั่ง
+
 
 ```js
 if (condition1) {
@@ -26,89 +27,89 @@ if (condition1) {
 
 # --instructions--
 
-Write chained `if`/`else if` statements to fulfill the following conditions:
+จงเขียนเชื่อมคำสั่ง `if`/`else if` เพื่อให้เป็นไปตามเงื่อนไขด้านล่าง
 
-`num < 5` - return `Tiny`  
-`num < 10` - return `Small`  
-`num < 15` - return `Medium`  
-`num < 20` - return `Large`  
-`num >= 20` - return `Huge`
+`num < 5` - ส่งคืนค่า `Tiny`  
+`num < 10` - ส่งคืนค่า `Small`  
+`num < 15` - ส่งคืนค่า `Medium`  
+`num < 20` - ส่งคืนค่า `Large`  
+`num >= 20` - ส่งคืนค่า `Huge`
 
 # --hints--
 
-You should have at least four `else` statements
+คุณควรมีคำสั่ง `else` อย่างน้อยสี่คำสั่ง
 
 ```js
 assert(code.match(/else/g).length > 3);
 ```
 
-You should have at least four `if` statements
+คุณควรมีคำสั่ง `if` อย่างน้อยสี่คำสั่ง
 
 ```js
 assert(code.match(/if/g).length > 3);
 ```
 
-You should have at least one `return` statement
+คุณควรมีคำสั่ง `return` อย่างน้อยหนึ่งคำสั่ง
 
 ```js
 assert(code.match(/return/g).length >= 1);
 ```
 
-`testSize(0)` should return the string `Tiny`
+`testSize(0)` ควรคืนค่า string `Tiny`
 
 ```js
 assert(testSize(0) === 'Tiny');
 ```
 
-`testSize(4)` should return the string `Tiny`
+`testSize(4)` ควรคืนค่า string `Tiny`
 
 ```js
 assert(testSize(4) === 'Tiny');
 ```
 
-`testSize(5)` should return the string `Small`
+`testSize(5)` ควรคืนค่า string `Small`
 
 ```js
 assert(testSize(5) === 'Small');
 ```
 
-`testSize(8)` should return the string `Small`
+`testSize(8)` ควรคืนค่า string `Small`
 
 ```js
 assert(testSize(8) === 'Small');
 ```
 
-`testSize(10)` should return the string `Medium`
+`testSize(10)` ควรคืนค่า string `Medium`
 
 ```js
 assert(testSize(10) === 'Medium');
 ```
 
-`testSize(14)` should return the string `Medium`
+`testSize(14)` ควรคืนค่า string `Medium`
 
 ```js
 assert(testSize(14) === 'Medium');
 ```
 
-`testSize(15)` should return the string `Large`
+`testSize(15)` ควรคืนค่า string `Large`
 
 ```js
 assert(testSize(15) === 'Large');
 ```
 
-`testSize(17)` should return the string `Large`
+`testSize(17)` ควรคืนค่า string `Large`
 
 ```js
 assert(testSize(17) === 'Large');
 ```
 
-`testSize(20)` should return the string `Huge`
+`testSize(20)` ควรคืนค่า string `Huge`
 
 ```js
 assert(testSize(20) === 'Huge');
 ```
 
-`testSize(25)` should return the string `Huge`
+`testSize(25)` ควรคืนค่า string `Huge`
 
 ```js
 assert(testSize(25) === 'Huge');

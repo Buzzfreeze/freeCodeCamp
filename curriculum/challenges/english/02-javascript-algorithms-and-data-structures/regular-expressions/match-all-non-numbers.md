@@ -8,59 +8,60 @@ dashedName: match-all-non-numbers
 
 # --description--
 
-The last challenge showed how to search for digits using the shortcut `\d` with a lowercase `d`. You can also search for non-digits using a similar shortcut that uses an uppercase `D` instead.
+แบบทดสอบที่แล้วแสดงวิธีค้นหาตัวเลข โดยใช้ shortcut `\d` ซึ่งเป็นตัวพิมพ์เล็ก `d` อย่างไรก็ตาม คุณสามารถค้นหาอักขระที่ไม่ใช่ตัวเลข (non-digits) โดยใช้ shortcut ที่คล้ายกัน นั่นคือการใช้ตัวพิมพ์ใหญ่ `D`
 
-The shortcut to look for non-digit characters is `\D`. This is equal to the character class `[^0-9]`, which looks for a single character that is not a number between zero and nine.
+
+shortcut ที่ค้นหาอักขระที่ไม่ใช่ตัวเลข ก็คือ `\D` ซึ่งเทียบเท่ากับ character class `[^0-9]` โดยค้นหาอักขระหนึ่งตัวที่ไม่ใช่ตัวเลขระหว่าง 0 ถึง 9
 
 # --instructions--
 
-Use the shorthand character class for non-digits `\D` to count how many non-digits are in movie titles.
+จงใช้ shorthand character class สำหรับอักขระที่ไม่ใช่ตัวเลข (non-digits) `\D` เพื่อนับจำนวนอักขระที่ไม่ใช่ตัวเลขในชื่อภาพยนตร์
 
 # --hints--
 
-Your regex should use the shortcut character to match non-digit characters
+regex ของคุณควรใช้ shortcut character เพื่อ match อักขระที่ไม่ใช่ตัวเลข (non-digit characters)
 
 ```js
 assert(/\\D/.test(noNumRegex.source));
 ```
 
-Your regex should use the global flag.
+regex ของคุณควรใช้ global flag
 
 ```js
 assert(noNumRegex.global);
 ```
 
-Your regex should find no non-digits in the string `9`.
+regex ของคุณไม่ควรพบอักขระที่ไม่ใช่ตัวเลข (non-digit characters) ใน string `9`
 
 ```js
 assert('9'.match(noNumRegex) == null);
 ```
 
-Your regex should find 6 non-digits in the string `Catch 22`.
+regex ของคุณควรพบอักขระที่ไม่ใช่ตัวเลข 6 ตัวใน string `Catch 22`
 
 ```js
 assert('Catch 22'.match(noNumRegex).length == 6);
 ```
 
-Your regex should find 11 non-digits in the string `101 Dalmatians`.
+regex ของคุณควรพบอักขระที่ไม่ใช่ตัวเลข 11 ตัวใน string `101 Dalmatians`
 
 ```js
 assert('101 Dalmatians'.match(noNumRegex).length == 11);
 ```
 
-Your regex should find 15 non-digits in the string `One, Two, Three`.
+regex ของคุณควรพบอักขระที่ไม่ใช่ตัวเลข 15 ตัวใน string `One, Two, Three`
 
 ```js
 assert('One, Two, Three'.match(noNumRegex).length == 15);
 ```
 
-Your regex should find 12 non-digits in the string `21 Jump Street`.
+regex ของคุณควรพบอักขระที่ไม่ใช่ตัวเลข 12 ตัวใน string `21 Jump Street`
 
 ```js
 assert('21 Jump Street'.match(noNumRegex).length == 12);
 ```
 
-Your regex should find 17 non-digits in the string `2001: A Space Odyssey`.
+regex ของคุณควรพบอักขระที่ไม่ใช่ตัวเลข 17 ตัวใน string `2001: A Space Odyssey`
 
 ```js
 assert('2001: A Space Odyssey'.match(noNumRegex).length == 17);

@@ -9,9 +9,9 @@ dashedName: global-vs--local-scope-in-functions
 
 # --description--
 
-It is possible to have both <dfn>local</dfn> and <dfn>global</dfn> variables with the same name. When you do this, the local variable takes precedence over the global variable.
+มีความเป็นไปได้ที่จะมีทั้งตัวแปร <dfn>local</dfn> และ <dfn>global</dfn> ที่ชื่อเหมือนกัน เมื่อเป็นเช่นนี้แล้ว local variable จะมีอภิสิทธิ์เหนือ global variable
 
-In this example:
+ดังตัวอย่างนี้
 
 ```js
 var someVar = "Hat";
@@ -21,27 +21,27 @@ function myFun() {
 }
 ```
 
-The function `myFun` will return the string `Head` because the local version of the variable is present.
+ฟังก์ชัน `myFun` จะคืนค่า string  `Head` เพราะมีตัวแปรที่มีเวอร์ชัน local ใน function ด้วย
 
 # --instructions--
 
-Add a local variable to `myOutfit` function to override the value of `outerWear` with the string `sweater`.
+จงเพิ่ม local variable ให้กับฟังก์ชัน `myOutfit` เพื่อแทนที่ (override) ค่าของ `outerWear` ด้วย string `sweater`
 
 # --hints--
 
-You should not change the value of the global `outerWear`.
+คุณไม่ควรแก้ไขค่าของ global `outerWear`
 
 ```js
 assert(outerWear === 'T-Shirt');
 ```
 
-`myOutfit` should return the string `sweater`.
+`myOutfit` ควรคืนค่า string `sweater`
 
 ```js
 assert(myOutfit() === 'sweater');
 ```
 
-You should not change the return statement.
+คุณไม่ควรแก้ไข return statement
 
 ```js
 assert(/return outerWear/.test(code));

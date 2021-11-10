@@ -9,7 +9,8 @@ dashedName: iterate-with-javascript-do---while-loops
 
 # --description--
 
-The next type of loop you will learn is called a `do...while` loop. It is called a `do...while` loop because it will first `do` one pass of the code inside the loop no matter what, and then continue to run the loop `while` the specified condition evaluates to `true`.
+loop ต่อไปนี้ที่คุณจะได้เรียนเรียกว่า `do...while` loop สาเหตุที่เรียกว่า `do...while` เพราะ `do` โค้ดภายใน loop ก่อนหนึ่งรอบเสมอ จากนั้นจึงรัน loop `while` ต่อหากเงื่อนไขเป็น `true`
+
 
 ```js
 var ourArray = [];
@@ -20,7 +21,7 @@ do {
 } while (i < 5);
 ```
 
-The example above behaves similar to other types of loops, and the resulting array will look like `[0, 1, 2, 3, 4]`. However, what makes the `do...while` different from other loops is how it behaves when the condition fails on the first check. Let's see this in action: Here is a regular `while` loop that will run the code in the loop as long as `i < 5`:
+ตัวอย่างด้านบนทำงานคล้ายกับ loop ประเภทอื่นๆ และผลลัพธ์ของ array ที่ได้ จะมีลัษณะดังนี้ `[0, 1, 2, 3, 4]` อย่างไรก็ตาม สิ่งที่ทำให้ `do...while` แตกต่างจาก loop อื่นๆ คือ ลักษณะการทำงานเมื่อไม่เข้าเงื่อนไขในการตรวจสอบครั้งแรก มาดูตัวอย่างการทำงานกัน: นี่คือ`while` loop ทั่วไปที่จะรันโค้ดใน loop ตราบเท่าที่ `i < 5`:
 
 ```js
 var ourArray = []; 
@@ -31,7 +32,9 @@ while (i < 5) {
 }
 ```
 
-In this example, we initialize the value of `ourArray` to an empty array and the value of `i` to 5. When we execute the `while` loop, the condition evaluates to `false` because `i` is not less than 5, so we do not execute the code inside the loop. The result is that `ourArray` will end up with no values added to it, and it will still look like `[]` when all of the code in the example above has completed running. Now, take a look at a `do...while` loop:
+ในตัวอย่างนี้ เรากำหนดค่าเริ่มต้นของ `ourArray` เป็น empty array และค่าเริ่มต้นของ `i` เป็น 5 เมื่อเรารัน `while` loop ผลลัพธ์ของเงื่อนไข  เป็น `false` เพราะ  `i`  มีค่าไม่น้อยกว่า 5 ดังนั้นโค้ดภายในลูปจะไม่ถูกรัน ผลลัพธ์คือ `ourArray` จะจบลง โดยไม่มีการเพิ่มค่าใด ๆ และจะยังคงเป็น `[]` เมื่อโค้ดทั้งหมดในตัวอย่างด้านบนทำงานเสร็จ 
+
+ตอนนี้ให้ดูที่ `do...while` loop:
 
 ```js
 var ourArray = []; 
@@ -42,27 +45,28 @@ do {
 } while (i < 5);
 ```
 
-In this case, we initialize the value of `i` to 5, just like we did with the `while` loop. When we get to the next line, there is no condition to evaluate, so we go to the code inside the curly braces and execute it. We will add a single element to the array and then increment `i` before we get to the condition check. When we finally evaluate the condition `i < 5` on the last line, we see that `i` is now 6, which fails the conditional check, so we exit the loop and are done. At the end of the above example, the value of `ourArray` is `[5]`. Essentially, a `do...while` loop ensures that the code inside the loop will run at least once. Let's try getting a `do...while` loop to work by pushing values to an array.
+ในกรณีนี้ เรากำหนดค่าเริ่มต้นของ `i` เป็น 5 เช่นเดียวกับที่เราทำกับ `while` loop เมื่อเราดูบรรทัดถัดไป ไม่พบเงื่อนไขใดๆ ดังนั้นเราจึงไปที่โค้ดภายในวงเล็บปีกกา แล้วรัน จากนั้นเพิ่ม element 1 ตัวใน array แล้วนำ `i` มาบวก 1 ก่อนตรวจสอบเงื่อนไข เมื่อเราตรวจสอบเงื่อนไข `i < 5` ในบรรทัดสุดท้าย เราจะเห็นว่า `i` ตอนนี้เป็น 6 ซึ่งไม่เข้าตามเงื่อนไข ดังนั้นเราจึงออกจาก loop และเป็นอันเสร็จสิ้น อย่างไรก็ตาม ที่ส่วนท้ายของตัวอย่างข้างต้น ค่าของ `ourArray` คือ `[5]` โดยหลักแล้ว `do...while` loop ทำให้โค้ดภายใน loop ทำงานอย่างน้อยหนึ่งครั้ง มาลองทำ `do...while` เพื่อส่งค่าไปยัง array กัน
+
 
 # --instructions--
 
-Change the `while` loop in the code to a `do...while` loop so the loop will push only the number `10` to `myArray`, and `i` will be equal to `11` when your code has finished running.
+จงเปลี่ยน `while` loop ในโค้ดเป็น `do...while` loop ดังนั้น loop จะ push เฉพาะตัวเลข `10` เข้าไปยัง `myArray` และ `i` จะมีค่าเท่ากับ `11` เมื่อโค้ดของคุณรันเสร็จแล้ว
 
 # --hints--
 
-You should be using a `do...while` loop for this exercise.
+คุณควรใช้ `do...while` loop ในแบบฝึกหัดนี้
 
 ```js
 assert(code.match(/do/g));
 ```
 
-`myArray` should equal `[10]`.
+`myArray` ควรเท่ากับ `[10]`
 
 ```js
 assert.deepEqual(myArray, [10]);
 ```
 
-`i` should equal `11`
+`i` ควรเท่ากับ `11`
 
 ```js
 assert.equal(i, 11);

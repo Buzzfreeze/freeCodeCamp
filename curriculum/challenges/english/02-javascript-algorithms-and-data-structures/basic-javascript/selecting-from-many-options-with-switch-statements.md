@@ -9,9 +9,9 @@ dashedName: selecting-from-many-options-with-switch-statements
 
 # --description--
 
-If you have many options to choose from, use a <dfn>switch</dfn> statement. A `switch` statement tests a value and can have many <dfn>case</dfn> statements which define various possible values. Statements are executed from the first matched `case` value until a `break` is encountered.
+ถ้าคุณมีหลายตัวเลือก แนะนำให้ใช้ <dfn>switch</dfn> statement โดย `switch` statement ทดสอบค่าและสามารถมีได้หลาย <dfn>case</dfn> statements ซึ่งกำหนดค่าที่เป็นไปได้ได้หลายแบบ Statements จะทำงานจาก `case` แรกที่ match (ตรงกัน) จนถึงคำสั่ง `break` ก็จะหยุด
 
-Here is an example of a `switch` statement:
+นี่เป็นตัวอย่าง`switch` statement
 
 ```js
 switch(lowercaseLetter) {
@@ -24,11 +24,13 @@ switch(lowercaseLetter) {
 }
 ```
 
-`case` values are tested with strict equality (`===`). The `break` tells JavaScript to stop executing statements. If the `break` is omitted, the next statement will be executed.
+ค่า `case` จะถูกทดสอบด้วยเครื่องหมาย (`===`) คำสั่ง `break` ใน Javascript จะหยุดการรัน statements แต่ถ้าไม่ระบุคำสั่ง `break` statements ต่อไปจะทำงาน
+
 
 # --instructions--
 
-Write a switch statement which tests `val` and sets `answer` for the following conditions:  
+จงเขียนคำสั่ง switch เพื่อกำหนดเงื่อนไขของ `val` และกำหนดค่าให้กับ `answer` ตามเงื่อนไขด้านล่าง
+
 `1` - `alpha`  
 `2` - `beta`  
 `3` - `gamma`  
@@ -36,37 +38,38 @@ Write a switch statement which tests `val` and sets `answer` for the following c
 
 # --hints--
 
-`caseInSwitch(1)` should have a value of the string `alpha`
+`caseInSwitch(1)` ควรคืนค่า string `alpha`
 
 ```js
 assert(caseInSwitch(1) === 'alpha');
 ```
 
-`caseInSwitch(2)` should have a value of the string `beta`
+`caseInSwitch(2)` ควรคืนค่า string `beta`
 
 ```js
 assert(caseInSwitch(2) === 'beta');
 ```
 
-`caseInSwitch(3)` should have a value of the string `gamma`
+`caseInSwitch(3)` ควรคืนค่า string `gamma`
 
 ```js
 assert(caseInSwitch(3) === 'gamma');
 ```
 
-`caseInSwitch(4)` should have a value of the string `delta`
+`caseInSwitch(4)` ควรคืนค่า string `delta`
 
 ```js
 assert(caseInSwitch(4) === 'delta');
 ```
 
-You should not use any `if` or `else` statements
+คุณไม่ควรใช้คำสั่ง `if` หรือ `else`
 
 ```js
 assert(!/else/g.test(code) || !/if/g.test(code));
 ```
 
-You should have at least 3 `break` statements
+คุณควรมีคำสั่ง `break` อย่างน้อยสามคำสั่ง
+
 
 ```js
 assert(code.match(/break/g).length > 2);

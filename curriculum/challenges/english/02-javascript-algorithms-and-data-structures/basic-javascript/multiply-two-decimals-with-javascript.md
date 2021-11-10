@@ -9,23 +9,24 @@ dashedName: multiply-two-decimals-with-javascript
 
 # --description--
 
-In JavaScript, you can also perform calculations with decimal numbers, just like whole numbers.
+ใน JavaScript คุณสามารถคำนวณเลขทศนิยมได้เช่นเดียวกับเลขจำนวนเต็ม
 
-Let's multiply two decimals together to get their product.
+ลองคูณเลขทศนิยมสองตัวเพื่อหาผลคูณ
+
 
 # --instructions--
 
-Change the `0.0` so that product will equal `5.0`.
+จงเปลี่ยน `0.0` เพื่อให้ได้ผลลัพย์เท่ากับ `5.0`
 
 # --hints--
 
-The variable `product` should equal `5.0`.
+ตัวแปร `product` ควรเท่ากับ `5.0`
 
 ```js
 assert(product === 5.0);
-```
+``` 
 
-You should use the `*` operator
+คุณควรใช้ `*` operator
 
 ```js
 assert(/\*/.test(code));

@@ -8,11 +8,11 @@ dashedName: match-numbers-and-letters-of-the-alphabet
 
 # --description--
 
-Using the hyphen (`-`) to match a range of characters is not limited to letters. It also works to match a range of numbers.
+การใช้ hyphen (`-`) เพื่อ match ช่วงตัวอักษร ไม่จำกัดการใช้เฉพาะตัวอักษรเท่านั้น แต่ยังใช้กับช่วงตัวเลขได้ด้วย
 
-For example, `/[0-5]/` matches any number between `0` and `5`, including the `0` and `5`.
+ตัวอย่างเช่น `/[0-5]/` match กับตัวเลขที่อยู่ระหว่าง `0` และ `5` รวมถึง `0` และ `5` ด้วย
 
-Also, it is possible to combine a range of letters and numbers in a single character set.
+นอกจากนี้ เรายังสามารถรวมช่วงตัวอักษรและช่วงตัวเลขให้อยู่ใน character set เดียวกันได้ด้วย
 
 ```js
 let jennyStr = "Jenny8675309";
@@ -22,23 +22,23 @@ jennyStr.match(myRegex);
 
 # --instructions--
 
-Create a single regex that matches a range of letters between `h` and `s`, and a range of numbers between `2` and `6`. Remember to include the appropriate flags in the regex.
+จงสร้าง regex ที่ match กับช่วงตัวอักษรระหว่าง `h` และ `s` และช่วงตัวเลขระหว่าง `2` และ `6` โดยสามารถเพิ่ม flag ที่เหมาะสมใน regex ได้
 
 # --hints--
 
-Your regex `myRegex` should match 17 items.
+regex `myRegex` ควร match 17 items
 
 ```js
 assert(result.length == 17);
 ```
 
-Your regex `myRegex` should use the global flag.
+regex `myRegex` ควรใช้ global flag
 
 ```js
 assert(myRegex.flags.match(/g/).length == 1);
 ```
 
-Your regex `myRegex` should use the case insensitive flag.
+regex `myRegex` ควรใช้ case insensitive flag
 
 ```js
 assert(myRegex.flags.match(/i/).length == 1);

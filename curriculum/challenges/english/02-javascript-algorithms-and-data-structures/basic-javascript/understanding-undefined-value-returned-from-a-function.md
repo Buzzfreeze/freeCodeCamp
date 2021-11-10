@@ -9,7 +9,8 @@ dashedName: understanding-undefined-value-returned-from-a-function
 
 # --description--
 
-A function can include the `return` statement but it does not have to. In the case that the function doesn't have a `return` statement, when you call it, the function processes the inner code but the returned value is `undefined`.
+ฟังก์ชันสามารถมี `return` statement ได้ แต่ก็ไม่จำเป้นต้องมี ในกรณีที่ฟังก์ชันไม่มี `return` statement เมื่อเราเรียกฟังก์ชันนี้ จะมีประมวลผลโค้ดภายใน และคืนค่า `undefined` ออกมา
+
 
 **Example**
 
@@ -21,33 +22,34 @@ function addSum(num) {
 addSum(3);
 ```
 
-`addSum` is a function without a `return` statement. The function will change the global `sum` variable but the returned value of the function is `undefined`.
+`addSum` เป็นฟังก์ชันที่ไม่่มี `return` statement ฟังก์ชันนี้จะเปลี่ยนค่าตัวแปร global `sum` แต่คืนค่าเป็น `undefined`
 
 # --instructions--
 
-Create a function `addFive` without any arguments. This function adds 5 to the `sum` variable, but its returned value is `undefined`.
+จงสร้างฟังก์ชัน `addFive` ที่ไม่มี argument โดยฟังก์ชันนี้จะนำ 5 ไปบวกให้กับตัวแปร `sum` แต่คืนค่าเป็น `undefined`
 
 # --hints--
 
-`addFive` should be a function.
+`addFive` ควรเป็นฟังก์ชัน
 
 ```js
 assert(typeof addFive === 'function');
 ```
 
-Once both functions have run, the `sum` should be equal to `8`.
+เมื่อทั้งสองฟังก์ชันรัน `sum` ควรเท่ากับ `8`
 
 ```js
 assert(sum === 8);
 ```
 
-Returned value from `addFive` should be `undefined`.
+ค่าที่คืนจาก `addFive` ควรเป็น `undefined`
+
 
 ```js
 assert(addFive() === undefined);
 ```
 
-Inside the `addFive` function, you should add `5` to the `sum` variable.
+ภายในฟังก์ชัน `addFive` คุณควรบวก `5` กับตัวแปร `sum`
 
 ```js
 assert(

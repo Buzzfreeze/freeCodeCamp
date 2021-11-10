@@ -8,11 +8,11 @@ dashedName: using-the-test-method
 
 # --description--
 
-Regular expressions are used in programming languages to match parts of strings. You create patterns to help you do that matching.
+Regular expressions ใช้ในภาษา programming เพื่อค้นหาข้อความใน string โดยสร้าง pattern ที่ใช้หาข้อความที่ตรง (match) กับ pattern นั้น
 
-If you want to find the word `the` in the string `The dog chased the cat`, you could use the following regular expression: `/the/`. Notice that quote marks are not required within the regular expression.
+ถ้าคุณต้องการค้นหาคำว่า `the` ใน string `The dog chased the cat` คุณสามารถใช้ regular expression `/the/` สังเกตว่า ไม่ต้องใช้ quote mark (เครื่องหมายคำพูด) ใน regular expression
 
-JavaScript has multiple ways to use regexes. One way to test a regex is using the `.test()` method. The `.test()` method takes the regex, applies it to a string (which is placed inside the parentheses), and returns `true` or `false` if your pattern finds something or not.
+JavaScript สามารถใช้งาน regexes ได้หลายวิธี วิธีนึงคือการทดสอบ regex โดยใช้ `.test()` method ซึ่ง `.test()` method นำ regex มาตรวจสอบกับ string (ซึ่งอยู่ภายในวงเล็บ) แล้วคืนค่า `true` หรือ `false` ขึ้นกับว่า pattern ของคุณพบใน string หรือไม่
 
 ```js
 let testStr = "freeCodeCamp";
@@ -20,21 +20,21 @@ let testRegex = /Code/;
 testRegex.test(testStr);
 ```
 
-The `test` method here returns `true`.
+`test` method ในที่นี้คืนค่า `true`
 
 # --instructions--
 
-Apply the regex `myRegex` on the string `myString` using the `.test()` method.
+จงใช้ regex `myRegex` กับ string `myString` โดยใช้ `.test()` method
 
 # --hints--
 
-You should use `.test()` to test the regex.
+คุณควรใช้ `.test()` เพื่อทดสอบ regex
 
 ```js
 assert(code.match(/myRegex.test\(\s*myString\s*\)/));
 ```
 
-Your result should return `true`.
+ผลลัพธ์ควรเป็น `true`
 
 ```js
 assert(result === true);

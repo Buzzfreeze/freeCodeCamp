@@ -9,9 +9,9 @@ dashedName: comparison-with-the-greater-than-or-equal-to-operator
 
 # --description--
 
-The greater than or equal to operator (`>=`) compares the values of two numbers. If the number to the left is greater than or equal to the number to the right, it returns `true`. Otherwise, it returns `false`.
+เครื่องหมายมากกว่าหรือเท่ากับ (`>=`) เปรียบเทียบค่าของตัวเลขสองตัว หากตัวเลขทางซ้ายมากกว่าหรือเท่ากับตัวเลขทางขวา จะแสดงผลเป็น `true` มิฉะนั้น จะส่งกลับ `false`
 
-Like the equality operator, the greater than or equal to operator will convert data types while comparing.
+คล้ายกับเครื่องหมาย (`==`) เครื่องหมายมากกว่าหรือเท่ากับ (`>=`) จะแปลงประเภทข้อมูลขณะที่ทำการเปรียบเทียบ 
 
 **Examples**
 
@@ -22,57 +22,57 @@ Like the equality operator, the greater than or equal to operator will convert d
 '7' >=  9
 ```
 
-In order, these expressions would evaluate to `true`, `true`, `false`, and `false`.
+ผลลัพธ์แต่ละบรรทัดจะเป็น `true`, `true`, `false`, และ `false` ตามลำดับ
 
 # --instructions--
 
-Add the greater than or equal to operator to the indicated lines so that the return statements make sense.
+จงเพิ่มเครื่องหมายมากกว่าหรือเท่ากับในบรรทัดที่กำหนดเพื่อให้การคืนค่าดูสมเหตุสมผล
 
 # --hints--
 
-`testGreaterOrEqual(0)` should return the string `Less than 10`
+`testGreaterOrEqual(0)` ควรคืนค่า string `Less than 10`
 
 ```js
 assert(testGreaterOrEqual(0) === 'Less than 10');
 ```
 
-`testGreaterOrEqual(9)` should return the string `Less than 10`
+`testGreaterOrEqual(9)` ควรคืนค่า string `Less than 10`
 
 ```js
 assert(testGreaterOrEqual(9) === 'Less than 10');
 ```
 
-`testGreaterOrEqual(10)` should return the string `10 or Over`
+`testGreaterOrEqual(10)` ควรคืนค่า string `10 or Over`
 
 ```js
 assert(testGreaterOrEqual(10) === '10 or Over');
 ```
 
-`testGreaterOrEqual(11)` should return the string `10 or Over`
+`testGreaterOrEqual(11)` ควรคืนค่า string `10 or Over`
 
 ```js
 assert(testGreaterOrEqual(11) === '10 or Over');
 ```
 
-`testGreaterOrEqual(19)` should return the string `10 or Over`
+`testGreaterOrEqual(19)` ควรคืนค่า string `10 or Over`
 
 ```js
 assert(testGreaterOrEqual(19) === '10 or Over');
 ```
 
-`testGreaterOrEqual(100)` should return the string `20 or Over`
+`testGreaterOrEqual(100)` ควรคืนค่า string `20 or Over`
 
 ```js
 assert(testGreaterOrEqual(100) === '20 or Over');
 ```
 
-`testGreaterOrEqual(21)` should return the string `20 or Over`
+`testGreaterOrEqual(21)` ควรคืนค่า string `20 or Over`
 
 ```js
 assert(testGreaterOrEqual(21) === '20 or Over');
 ```
 
-You should use the `>=` operator at least twice
+คุณควรใช้เครื่องหมาย `>=` อย่างน้อยสองครั้ง
 
 ```js
 assert(code.match(/val\s*>=\s*('|")*\d+('|")*/g).length > 1);

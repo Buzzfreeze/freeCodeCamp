@@ -9,11 +9,11 @@ dashedName: accessing-object-properties-with-dot-notation
 
 # --description--
 
-There are two ways to access the properties of an object: dot notation (`.`) and bracket notation (`[]`), similar to an array.
+มีสองวิธีในการเข้าถึง properties ของ object คือ เครื่องหมายจุด (`.`) และเครื่องหมายวงเล็บ (`[]`) ซึ่งคล้ายกับ array
 
-Dot notation is what you use when you know the name of the property you're trying to access ahead of time.
+เครื่องหมายจุด (`.`) ใช้ในการเข้าถึงค่าใน object เมื่อทราบชื่อของ property 
 
-Here is a sample of using dot notation (`.`) to read an object's property:
+นี่เป็นตัวอย่างการใช้เครื่องหมายจุด (`.`) เพื่ออ่าน properties ของ object:
 
 ```js
 var myObj = {
@@ -24,38 +24,40 @@ var prop1val = myObj.prop1;
 var prop2val = myObj.prop2;
 ```
 
-`prop1val` would have a value of the string `val1`, and `prop2val` would have a value of the string `val2`.
+`prop1val` ควรมีค่าของ string `val1` และ `prop2val` ควรมีค่า string `val2`
+
 # --instructions--
 
-Read in the property values of `testObj` using dot notation. Set the variable `hatValue` equal to the object's property `hat` and set the variable `shirtValue` equal to the object's property `shirt`.
+จงอ่าน property values ของ `testObj` โดยใช้เครื่องหมายจุด และจงกำหนดตัวแปร `hatValue` ให้มีค่าเท่ากับ property ของ object `hat` และกำหนดค่าตัวแปร `shirtValue` ให้มีค่าเท่ากับ property ของ object `shirt`
 
 # --hints--
 
-`hatValue` should be a string
+`hatValue` ควรเป็น string
 
 ```js
 assert(typeof hatValue === 'string');
 ```
 
-The value of `hatValue` should be the string `ballcap`
+ค่าของ `hatValue` ควรเป็น string `ballcap`
 
 ```js
 assert(hatValue === 'ballcap');
 ```
 
-`shirtValue` should be a string
+`shirtValue` ควรเป็น string
 
 ```js
 assert(typeof shirtValue === 'string');
 ```
 
-The value of `shirtValue` should be the string `jersey`
+ค่าของ `shirtValue` ควรเป็น string `jersey`
 
 ```js
 assert(shirtValue === 'jersey');
 ```
 
-You should use dot notation twice
+
+คุณไม่ควรใช้เครื่องหมายจุดสองครั้ง
 
 ```js
 assert(code.match(/testObj\.\w+/g).length > 1);

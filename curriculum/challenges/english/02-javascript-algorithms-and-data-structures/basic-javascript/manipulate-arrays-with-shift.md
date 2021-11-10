@@ -9,26 +9,27 @@ dashedName: manipulate-arrays-with-shift
 
 # --description--
 
-`pop()` always removes the last element of an array. What if you want to remove the first?
+`pop()` นำ element สุดท้ายของ array ออกเสมอ แต่หากคุณต้องการนำ element แรกออกล่ะ?
 
-That's where `.shift()` comes in. It works just like `.pop()`, except it removes the first element instead of the last.
+นั่นคือสิ่งที่ `.shift()` ทำได้ โดย `.shift()` ทำงานคล้ายกับ `.pop()` แต่ `.shift()` จะนำ element แรกออกแทนที่จะเป็น element สุดท้าย
 
-Example:
+ตัวอย่าง:
 
 ```js
 var ourArray = ["Stimpson", "J", ["cat"]];
 var removedFromOurArray = ourArray.shift();
 ```
 
-`removedFromOurArray` would have a value of the string `Stimpson`, and `ourArray` would have `["J", ["cat"]]`.
+`removedFromOurArray` ควรมีค่า string  `Stimpson` และ `ourArray` ควรมี `["J", ["cat"]]`
+
 
 # --instructions--
 
-Use the `.shift()` function to remove the first item from `myArray`, assigning the "shifted off" value to `removedFromMyArray`.
+จงใช้ฟังก์ชัน `.shift()` เพื่อนำ element แรกออกจาก `myArray` โดยนำ element ที่ดึงออกมากำหนดค่าให้กับ `removedFromMyArray`
 
 # --hints--
 
-`myArray` should now equal `[["dog", 3]]`.
+`myArray` ควรเท่ากับ `[["dog", 3]]`
 
 ```js
 assert(
@@ -42,7 +43,7 @@ assert(
 );
 ```
 
-`removedFromMyArray` should contain `["John", 23]`.
+`removedFromMyArray` ควรมีค่าเป็น `["John", 23]`
 
 ```js
 assert(

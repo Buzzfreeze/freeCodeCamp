@@ -9,9 +9,9 @@ dashedName: iterate-odd-numbers-with-a-for-loop
 
 # --description--
 
-For loops don't have to iterate one at a time. By changing our `final-expression`, we can count by even numbers.
+For loops ไม่จำเป็นต้องวนอ่านแบบเพิ่ม/ลดทีละหนึ่งในแต่ละรอบ การเปลี่ยน expression สุดท้าย ทำให้เราสามารถนับเลขคู่ได้ 
 
-We'll start at `i = 0` and loop while `i < 10`. We'll increment `i` by 2 each loop with `i += 2`.
+เราจะเริ่มต้นด้วย `i = 0` และ loop เมื่อ `i < 10` เราจะเพิ่ม `i` ทีละ 2 ต่อรอบในการวน loop ด้วย `i += 2`
 
 ```js
 var ourArray = [];
@@ -20,21 +20,24 @@ for (var i = 0; i < 10; i += 2) {
 }
 ```
 
-`ourArray` will now contain `[0,2,4,6,8]`. Let's change our `initialization` so we can count by odd numbers.
+ `ourArray` ตอนนี้ประกอบด้วย `[0,2,4,6,8]` ลองเปลี่ยน `initialization` (การกำหนดค่าเริ่มต้น) เพื่อเราจะสามารถนับเลขคี่ได้
+
 
 # --instructions--
 
-Push the odd numbers from 1 through 9 to `myArray` using a `for` loop.
+ให้ push เลขคี่จาก 1 ถึง 9 เข้าไปใน `myArray` โดยใช้ `for` loop
 
 # --hints--
 
-You should be using a `for` loop for this.
+ในที่นี้คุณควรใช้ `for` loop
 
 ```js
 assert(/for\s*\([^)]+?\)/.test(code));
 ```
 
-`myArray` should equal `[1,3,5,7,9]`.
+`myArray` ควรเท่ากับ `[1,3,5,7,9]`.
+
+
 
 ```js
 assert.deepEqual(myArray, [1, 3, 5, 7, 9]);

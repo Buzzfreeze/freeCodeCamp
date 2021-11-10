@@ -9,27 +9,28 @@ dashedName: generate-random-whole-numbers-with-javascript
 
 # --description--
 
-It's great that we can generate random decimal numbers, but it's even more useful if we use it to generate random whole numbers.
+เป็นเรื่องดีที่เราสามารถสุ่มตัวเลขทศนิยม แต่จะมีประโยชน์มากกว่า ถ้าเราใช้เพื่อสุ่มเลขจำนวนเต็ม
 
-<ol><li>Use <code>Math.random()</code> to generate a random decimal.</li><li>Multiply that random decimal by <code>20</code>.</li><li>Use another function, <code>Math.floor()</code> to round the number down to its nearest whole number.</li></ol>
+<ol><li>ใช้ <code>Math.random()</code> เพื่อสุ่มเลขทศนิยม</li><li>คูณตัวเลขทศนิยมสุ่มนี้ด้วย <code>20</code>.</li><li>ใช้อีก function <code>Math.floor()</code> ในการปัดตัวเลขลงให้เป็นจำนวนเต็ม</li></ol>
 
-Remember that `Math.random()` can never quite return a `1` and, because we're rounding down, it's impossible to actually get `20`. This technique will give us a whole number between `0` and `19`.
 
-Putting everything together, this is what our code looks like:
+หากยังจำได้ `Math.random()` ไม่เคยคืนค่า `1` และเพราะเราปัดเศษลง จึงเป็นไปไม่ได้ที่เราจะได้ `20` เทคนิคนี้จะทำให้เราได้ตัวเลขระหว่าง  `0` และ `19`
+
+หากรวมทุกอย่างเข้าด้วยกัน โค้ดของเราจะมีลักษณะดังนี้
 
 ```js
 Math.floor(Math.random() * 20);
 ```
 
-We are calling `Math.random()`, multiplying the result by 20, then passing the value to `Math.floor()` function to round the value down to the nearest whole number.
+เราเรียก `Math.random()` แล้วคูณด้วย 20 จากนั้นนำค่าส่งเข้าใน function `Math.floor()` เพื่อทำการปัดเศษลงให้เป็นจำนวนเต็ม
 
 # --instructions--
 
-Use this technique to generate and return a random whole number between `0` and `9`.
+จงใช้เทคนิคนี้ในการสุ่ม และคืนค่าเป็นเลขจำนวนเต็มระหว่าง `0` และ `9`
 
 # --hints--
 
-The result of `randomWholeNum` should be a whole number.
+ผลลัพธ์ของ `randomWholeNum` ควรเป็นจำนวนเต็ม
 
 ```js
 assert(
@@ -41,13 +42,13 @@ assert(
 );
 ```
 
-You should use `Math.random` to generate a random number.
+คุณควรใช้ `Math.random`เพื่อสุ่มตัวเลข
 
 ```js
 assert(code.match(/Math.random/g).length >= 1);
 ```
 
-You should have multiplied the result of `Math.random` by 10 to make it a number that is between zero and nine.
+คุณควรคูณผลลัพธ์ของ `Math.random` ด้วย 10 เพื่อให้ได้ตัวเลขระหว่างศูนย์ และเก้า
 
 ```js
 assert(
@@ -56,7 +57,7 @@ assert(
 );
 ```
 
-You should use `Math.floor` to remove the decimal part of the number.
+คุณควรใช้ `Math.floor` เพื่อนำเศษทศนิยมออก
 
 ```js
 assert(code.match(/Math.floor/g).length >= 1);

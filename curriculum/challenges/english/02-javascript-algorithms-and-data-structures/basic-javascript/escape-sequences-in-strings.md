@@ -9,36 +9,37 @@ dashedName: escape-sequences-in-strings
 
 # --description--
 
-Quotes are not the only characters that can be <dfn>escaped</dfn> inside a string. There are two reasons to use escaping characters:
+Quotes (เครื่องหมายคำพูด) ไม่ใช่อักขระตัวเดียวที่สามารถ <dfn>escaped</dfn> ได้ใน string มีเหตุผลสองประการในการใช้ escaping characters:
 
-1.  To allow you to use characters you may not otherwise be able to type out, such as a carriage return.
-2.  To allow you to represent multiple quotes in a string without JavaScript misinterpreting what you mean.
+1.  เพื่อให้คุณสามารถใช้อักขระที่คุณอาจไม่สามารถพิมพ์ได้ เช่น carriage return (การขึ้นบรรทัดใหม่)
 
-We learned this in the previous challenge.
+2.  เพื่อให้คุณสามารถแสดง quotes หลายตัวใน string โดยที่ JavaScript ไม่ได้ตีความหมายในสิ่งที่คุณต้องการผิด
+
+เราเรียนสิ่งนี้จากหัวข้อที่แล้ว
 
 <table class='table table-striped'><thead><tr><th>Code</th><th>Output</th></tr></thead><tbody><tr><td><code>\'</code></td><td>single quote</td></tr><tr><td><code>\"</code></td><td>double quote</td></tr><tr><td><code>\\</code></td><td>backslash</td></tr><tr><td><code>\n</code></td><td>newline</td></tr><tr><td><code>\r</code></td><td>carriage return</td></tr><tr><td><code>\t</code></td><td>tab</td></tr><tr><td><code>\b</code></td><td>word boundary</td></tr><tr><td><code>\f</code></td><td>form feed</td></tr></tbody></table>
 
-*Note that the backslash itself must be escaped in order to display as a backslash.*
+*โปรดทราบว่าตัว backslash เองจะต้องถูก escaped เพื่อให้แสดงเป็น backslash ได้*
 
 # --instructions--
 
-Assign the following three lines of text into the single variable `myStr` using escape sequences.
+จงนำข้อความสามบรรทัดนี้เก็บในตัวแปรเดียวกันคือ `myStr` โดยใช้ escape Sequence
 
 <blockquote>FirstLine<br>    \SecondLine<br>ThirdLine</blockquote>
 
-You will need to use escape sequences to insert special characters correctly. You will also need to follow the spacing as it looks above, with no spaces between escape sequences or words.
+คุณจะต้องใช้ Escape Sequence เพื่อแทรกอักขระพิเศษให้ถูกต้อง คุณจะต้องเว้นวรรคดังที่แสดงด้านบน โดยไม่มีช่องว่างระหว่าง escape sequences หรือคำต่างๆ
 
-**Note:** The indentation for `SecondLine` is achieved with the tab escape character, not spaces.
+**หมายเหตุ:** การเยื้องสำหรับ `SecondLine` ทำได้โดยใช้ tab escape character ไม่ใช่การเว้นวรรค
 
 # --hints--
 
-`myStr` should not contain any spaces
+`myStr` ไม่ควรมี space (เว้นวรรค)
 
 ```js
 assert(!/ /.test(myStr));
 ```
 
-`myStr` should contain the strings `FirstLine`, `SecondLine` and `ThirdLine` (remember case sensitivity)
+`myStr` ควรประกอบด้วย string  `FirstLine`, `SecondLine` และ `ThirdLine` (เป็น case sensitivity)
 
 ```js
 assert(
@@ -46,31 +47,31 @@ assert(
 );
 ```
 
-`FirstLine` should be followed by the newline character `\n`
+`FirstLine` ควรตามด้วย newline character `\n`
 
 ```js
 assert(/FirstLine\n/.test(myStr));
 ```
 
-`myStr` should contain a tab character `\t` which follows a newline character
+`myStr` ควรประกอบด้วย tab character `\t` ซึ่งตามด้วย newline character
 
 ```js
 assert(/\n\t/.test(myStr));
 ```
 
-`SecondLine` should be preceded by the backslash character `\`
+`SecondLine` ควรนำหน้าด้วย backslash character `\`
 
 ```js
 assert(/\\SecondLine/.test(myStr));
 ```
 
-There should be a newline character between `SecondLine` and `ThirdLine`
+ควรมี newline character ระหว่าง `SecondLine` และ `ThirdLine`
 
 ```js
 assert(/SecondLine\nThirdLine/.test(myStr));
 ```
 
-`myStr` should only contain characters shown in the instructions
+`myStr` ควรมีเฉพาะอักขระที่แสดงใน instructions เท่านั้น
 
 ```js
 assert(myStr === 'FirstLine\n\t\\SecondLine\nThirdLine');

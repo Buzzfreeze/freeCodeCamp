@@ -9,9 +9,9 @@ dashedName: accessing-nested-objects
 
 # --description--
 
-The sub-properties of objects can be accessed by chaining together the dot or bracket notation.
+property ย่อยของ object สามารถเข้าถึงได้ โดยใช้เครื่องหมายจุด หรือวงเล็บ (brackets)
 
-Here is a nested object:
+ต่อไปนี้เป็น nested object:
 
 ```js
 var ourStorage = {
@@ -30,21 +30,21 @@ ourStorage.cabinet["top drawer"].folder2;
 ourStorage.desk.drawer;
 ```
 
-`ourStorage.cabinet["top drawer"].folder2` would be the string `secrets`, and `ourStorage.desk.drawer` would be the string `stapler`.
+`ourStorage.cabinet["top drawer"].folder2` ควรเป็น string `secrets` และ `ourStorage.desk.drawer` ควรเป็น string `stapler`
 
 # --instructions--
 
-Access the `myStorage` object and assign the contents of the `glove box` property to the `gloveBoxContents` variable. Use dot notation for all properties where possible, otherwise use bracket notation.
+จงเข้าถึง object `myStorage` และกำหนดค่า property ของ `glove box` ให้กับตัวแปร `gloveBoxContents` โดยใช้เครื่องหมายจุด (dot notation) สำหรับทุก property เท่าที่เป็นไปได้ ถ้าไม่ได้ ให้ใช้เครื่องหมายวงเล็บ (bracket notation)
 
 # --hints--
 
-`gloveBoxContents` should equal the string `maps`.
+`gloveBoxContents` ควรเป็น string `maps`.
 
 ```js
 assert(gloveBoxContents === 'maps');
 ```
 
-Your code should use dot and bracket notation to access `myStorage`.
+โค้ดของคุณควรใช้เครื่องหมายจุดและวงเล็บในการเข้าถึง `myStorage`
 
 ```js
 assert(/=\s*myStorage\.car\.inside\[\s*("|')glove box\1\s*\]/g.test(code));

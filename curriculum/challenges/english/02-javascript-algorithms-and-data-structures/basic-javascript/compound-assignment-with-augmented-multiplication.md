@@ -9,13 +9,14 @@ dashedName: compound-assignment-with-augmented-multiplication
 
 # --description--
 
-The `*=` operator multiplies a variable by a number.
+`*=` operator คูณตัวแปรด้วยตัวเลขอีกตัว
 
 ```js
 myVar = myVar * 5;
 ```
 
-will multiply `myVar` by `5`. This can be rewritten as:
+จะคูณ `myVar` ด้วย `5` สามารถเขียนใหม่เป็น:
+
 
 ```js
 myVar *= 5;
@@ -23,35 +24,35 @@ myVar *= 5;
 
 # --instructions--
 
-Convert the assignments for `a`, `b`, and `c` to use the `*=` operator.
+จงแปลง assignments ของ `a`, `b` และ `c` โดยกำหนดให้ใช้ `*=` operator
 
 # --hints--
 
-`a` should equal `25`.
+`a` ควรเท่ากับ `25`
 
 ```js
 assert(a === 25);
 ```
 
-`b` should equal `36`.
+`b` ควรเท่ากับ `36`.
 
 ```js
 assert(b === 36);
 ```
 
-`c` should equal `46`.
+`c` ควรเท่ากับ `46`.
 
 ```js
 assert(c === 46);
 ```
 
-You should use the `*=` operator for each variable.
+คุณควรใช้ `*=` operator กับตัวแปรแต่ละตัว
 
 ```js
 assert(code.match(/\*=/g).length === 3);
 ```
 
-You should not modify the code above the specified comment.
+คุณไม่ควรแก้โค้ดที่อยู่เหนือ comment
 
 ```js
 assert(

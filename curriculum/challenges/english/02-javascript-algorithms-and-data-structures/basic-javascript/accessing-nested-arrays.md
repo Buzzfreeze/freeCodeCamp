@@ -9,9 +9,9 @@ dashedName: accessing-nested-arrays
 
 # --description--
 
-As we have seen in earlier examples, objects can contain both nested objects and nested arrays. Similar to accessing nested objects, array bracket notation can be chained to access nested arrays.
+ดังที่เราได้เห็นในตัวอย่างก่อนหน้านี้ object สามารถมีได้ทั้ง object ที่ซ้อนกันและ array ที่ซ้อนกัน เช่นเดียวกับการเข้าถึง object ที่ซ้อนกัน สัญลักษณ์วงเล็บ (brackets) สามารถเข้าถึง array ที่ซ้อนกันได้
 
-Here is an example of how to access a nested array:
+นี่คือตัวอย่างของวิธีการเข้าถึง array ที่ซ้อนกัน
 
 ```js
 var ourPets = [
@@ -36,21 +36,22 @@ ourPets[0].names[1];
 ourPets[1].names[0];
 ```
 
-`ourPets[0].names[1]` would be the string `Fluffy`, and `ourPets[1].names[0]` would be the string `Spot`.
+`ourPets[0].names[1]` ควรเป็น string `Fluffy`, และ `ourPets[1].names[0]` ควรเป็น string `Spot`
 
 # --instructions--
 
-Using dot and bracket notation, set the variable `secondTree` to the second item in the `trees` list from the `myPlants` object.
+จงใช้เครื่องหมายจุด (dot) และวงเล็บ (bracket) เพื่อกำหนดค่าตัวแปร  `secondTree` ให้กับ item ที่ 2 ใน `trees` list จาก object `myPlants`
 
 # --hints--
 
-`secondTree` should equal the string `pine`.
+`secondTree` ควรเป็น string `pine`
 
 ```js
 assert(secondTree === 'pine');
 ```
 
-Your code should use dot and bracket notation to access `myPlants`.
+
+โค้ดของคุณควรใช้เครื่องหมายจุดและวงเล็บในการเข้าถึง `myPlants`
 
 ```js
 assert(/=\s*myPlants\[1\].list\[1\]/.test(code));

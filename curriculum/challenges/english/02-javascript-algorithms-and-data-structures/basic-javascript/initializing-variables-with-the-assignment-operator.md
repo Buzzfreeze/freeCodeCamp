@@ -9,21 +9,21 @@ dashedName: initializing-variables-with-the-assignment-operator
 
 # --description--
 
-It is common to <dfn>initialize</dfn> a variable to an initial value in the same line as it is declared.
+การ <dfn>initialize</dfn> ค่าให้กับตัวแปร คือการกำหนดค่าเริ่มต้นให้กับตัวแปรในบรรทัดเดียวกันกับการประกาศตัวแปร
 
 ```js
 var myVar = 0;
 ```
 
-Creates a new variable called `myVar` and assigns it an initial value of `0`.
+สร้างตัวแปรใหม่ชื่อ `myVar` และกำหนดค่าเริ่มต้นเป็น `0`
 
 # --instructions--
 
-Define a variable `a` with `var` and initialize it to a value of `9`.
+จงสร้างตัวแปร `a` ด้วย `var` และกำหนดค่าเริ่มต้นเป็น `9`
 
 # --hints--
 
-You should initialize `a` to a value of `9`.
+คุณควรกำหนดค่าเริ่มต้นให้กับ `a` มีค่าเป็น `9`
 
 ```js
 assert(/var\s+a\s*=\s*9(\s*;?\s*)$/.test(code));

@@ -9,23 +9,24 @@ dashedName: find-the-length-of-a-string
 
 # --description--
 
-You can find the length of a `String` value by writing `.length` after the string variable or string literal.
+คุณสามารถหาความยาวของค่า `String` ได้โดยการเขียน `.length` หลังตัวแปร string หรือ string literal
 
 ```js
 console.log("Alan Peter".length);
 ```
 
-The value `10` would be displayed in the console.
+ค่า `10` ควรแสดงใน console
 
-For example, if we created a variable `var firstName = "Ada"`, we could find out how long the string `Ada` is by using the `firstName.length` property.
+ยกตัวอย่างเช่น ถ้าเราสร้างตัวแปร `var firstName = "Ada"` เราสามารถหาความยาวของ string `Ada` โดยใช้ `firstName.length` 
+
 
 # --instructions--
 
-Use the `.length` property to count the number of characters in the `lastName` variable and assign it to `lastNameLength`.
+จงใช้ `.length` property ในการนับจำนวนตัวอักษรของตัวแปร `lastName` และกำหนดค่าให้กับ `lastNameLength`
 
 # --hints--
 
-You should not change the variable declarations in the `// Setup` section.
+คุณไม่ควรแก้ไขการประกาศตัวแปรในส่วน `// Setup`
 
 ```js
 assert(
@@ -34,13 +35,13 @@ assert(
 );
 ```
 
-`lastNameLength` should be equal to eight.
+`lastNameLength` ควรเท่ากับ 8
 
 ```js
 assert(typeof lastNameLength !== 'undefined' && lastNameLength === 8);
 ```
 
-You should be getting the length of `lastName` by using `.length` like this: `lastName.length`.
+คุณควรได้ความยาว `lastName` โดยใช้ `.length` เช่น `lastName.length`
 
 ```js
 assert(code.match(/=\s*lastName\.length/g) && !code.match(/lastName\s*=\s*8/));

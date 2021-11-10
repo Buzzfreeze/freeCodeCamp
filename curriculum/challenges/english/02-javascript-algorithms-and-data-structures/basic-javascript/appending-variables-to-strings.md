@@ -9,9 +9,10 @@ dashedName: appending-variables-to-strings
 
 # --description--
 
-Just as we can build a string over multiple lines out of string <dfn>literals</dfn>, we can also append variables to a string using the plus equals (`+=`) operator.
+เช่นเดียวกับการสร้าง string โดยการนำ string หลายบรรทัดมาต่อกัน เรายังสามารถต่อตัวแปรกับ string โดยใช้ plus equals (`+=`) operator
 
-Example:
+
+ตัวอย่าง:
 
 ```js
 var anAdjective = "awesome!";
@@ -19,21 +20,21 @@ var ourStr = "freeCodeCamp is ";
 ourStr += anAdjective;
 ```
 
-`ourStr` would have the value `freeCodeCamp is awesome!`.
+`ourStr` ควรมีค่า `freeCodeCamp is awesome!`.
 
 # --instructions--
 
-Set `someAdjective` to a string of at least 3 characters and append it to `myStr` using the `+=` operator.
+จงกำหนด `someAdjective` เป็น string ที่มีความยาวอย่างน้อย 3 ตัวอักษร และต่อกับ `myStr` โดยใช้ `+=` operator
 
 # --hints--
 
-`someAdjective` should be set to a string at least 3 characters long.
+`someAdjective` ควรกำหนดค่าเป็น string ที่มีความยาวอย่างน้อย 3 ตัวอักษร
 
 ```js
 assert(typeof someAdjective !== 'undefined' && someAdjective.length > 2);
 ```
 
-You should append `someAdjective` to `myStr` using the `+=` operator.
+คุณควรต่อ `someAdjective` กับ `myStr` โดยใช้ `+=` operator
 
 ```js
 assert(code.match(/myStr\s*\+=\s*someAdjective\s*/).length > 0);

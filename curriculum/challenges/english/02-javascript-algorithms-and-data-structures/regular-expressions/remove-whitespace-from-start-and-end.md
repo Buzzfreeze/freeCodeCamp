@@ -8,35 +8,36 @@ dashedName: remove-whitespace-from-start-and-end
 
 # --description--
 
-Sometimes whitespace characters around strings are not wanted but are there. Typical processing of strings is to remove the whitespace at the start and end of it.
+บางครั้ง whitespace ที่อยู่รอบๆ string ก็เป็นสิ่งที่เราไม่ต้องการ ตามปกติแล้ว ก่อนที่เราจะทำอะไรกับ string ก็ต้องนำ whitespace ที่อยู่หน้าและหลัง string ออกไปก่อน
+
 
 # --instructions--
 
-Write a regex and use the appropriate string methods to remove whitespace at the beginning and end of strings.
+จงเขียน regex และใช้ string methods ที่เหมาะสมในการนำ whitespace ที่อยู่หน้าและท้าย string ออก
 
-**Note:** The `String.prototype.trim()` method would work here, but you'll need to complete this challenge using regular expressions.
+**Note:** แม้ว่า `String.prototype.trim()` method สามารถลบ whitespace ตามที่เราต้องการได้ แต่คุณต้องทำแบบทดสอบนี้โดยการใช้ regular expressions
 
 # --hints--
 
-`result` should be equal to the string `Hello, World!`
+`result` ควรเท่ากับ string `Hello, World!`
 
 ```js
 assert(result === 'Hello, World!');
 ```
 
-Your solution should not use the `String.prototype.trim()` method.
+คุณไม่ควรใช้ `String.prototype.trim()` method
 
 ```js
 assert(!code.match(/\.?[\s\S]*?trim/));
 ```
 
-The `result` variable should not directly be set to a string
+ตัวแปร `result` ไม่ควรกำหนดค่า string โดยตรง
 
 ```js
 assert(!code.match(/result\s*=\s*["'`].*?["'`]/));
 ```
 
-The value of the `hello` variable should not be changed.
+ค่าของตัวแปร `hello` ไม่ควรเปลี่ยน
 
 ```js
 assert(hello === '   Hello, World!  ');

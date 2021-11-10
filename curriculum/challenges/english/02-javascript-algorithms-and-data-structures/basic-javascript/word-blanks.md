@@ -9,11 +9,11 @@ dashedName: word-blanks
 
 # --description--
 
-We will now use our knowledge of strings to build a "[Mad Libs](https://en.wikipedia.org/wiki/Mad_Libs)" style word game we're calling "Word Blanks". You will create an (optionally humorous) "Fill in the Blanks" style sentence.
+ตอนนี้เราจะใช้ความรู้เกี่ยวกับ string เพื่อสร้างเกมคำศัพท์สไตล์ "[Mad Libs](https://en.wikipedia.org/wiki/Mad_Libs)" ที่เราเรียกว่า "Word Blanks" คุณจะสร้างประโยคสไตล์ "เติมคำในช่องว่าง" 
 
-In a "Mad Libs" game, you are provided sentences with some missing words, like nouns, verbs, adjectives and adverbs. You then fill in the missing pieces with words of your choice in a way that the completed sentence makes sense.
+ในเกมส์ "Mad Libs" คุณจะได้รับประโยคที่มีคำที่หายไป เช่น คำนาม กริยา คำคุณศัพท์ และคำวิเศษณ์ จากนั้นคุณเติมส่วนที่ขาดหายไปด้วยคำที่คุณเลือก ให้เป็นประโยคสมบูรณ์
 
-Consider this sentence - It was really **\_\_\_\_**, and we **\_\_\_\_** ourselves **\_\_\_\_**. This sentence has three missing pieces- an adjective, a verb and an adverb, and we can add words of our choice to complete it. We can then assign the completed sentence to a variable as follows:
+พิจารณาประโยคนี้ - It was really **\_\_\_\_**, and we **\_\_\_\_** ourselves **\_\_\_\_** ประโยคนี้มีสามส่วนที่ขาดหายไป - คำคุณศัพท์ กริยา และคำวิเศษณ์ และเราสามารถเพิ่มคำที่เราเลือกเพื่อทำให้สมบูรณ์ได้ จากนั้นเราสามารถนำประโยคที่สมบูรณ์มากำหนดค่าให้กับตัวแปรได้ดังนี้:
 
 ```js
 var sentence = "It was really " + "hot" + ", and we " + "laughed" + " ourselves " + "silly" + ".";
@@ -21,21 +21,21 @@ var sentence = "It was really " + "hot" + ", and we " + "laughed" + " ourselves 
 
 # --instructions--
 
-In this challenge, we provide you with a noun, a verb, an adjective and an adverb. You need to form a complete sentence using words of your choice, along with the words we provide.
+ในแบบทดสอบนี้ เราจัดเตรียมคำนาม กริยา คำคุณศัพท์ และคำวิเศษณ์ ให้กับคุณ คุณต้องเลือกคำตามคำศัพท์ที่เราให้ไว้ เพื่อสร้างประโยคที่สมบูรณ์ 
 
-You will need to use the string concatenation operator `+` to build a new string, using the provided variables: `myNoun`, `myAdjective`, `myVerb`, and `myAdverb`. You will then assign the formed string to the `wordBlanks` variable. You should not change the words assigned to the variables.
+คุณจะต้องใช้ string concatenation operator `+` เพื่อสร้าง string ใหม่ โดยใช้ตัวแปรที่มีให้: `myNoun`, `myAdjective`, `myVerb` และ `myAdverb` จากนั้นคุณจะนำ string ที่เป็นผลลัพธ์ ไปกำหนดค่าให้กับตัวแปร `wordBlanks` โดยคุณไม่ควรแก้ไขคำที่กำหนดให้กับตัวแปร
 
-You will also need to account for spaces in your string, so that the final sentence has spaces between all the words. The result should be a complete sentence.
+คุณต้องคำนึงถึงการเว้นวรรคใน string ด้วย เพื่อว่าประโยคสุดท้ายจะได้มีช่องว่างระหว่างคำทั้งหมด ผลลัพธ์จึงเป็นประโยคที่สมบูรณ์
 
 # --hints--
 
-`wordBlanks` should be a string.
+`wordBlanks` ควรเป็น string
 
 ```js
 assert(typeof wordBlanks === 'string');
 ```
 
-You should not change the values assigned to `myNoun`, `myVerb`, `myAdjective` or `myAdverb`.
+คุณไม่ควรแก้ไขค่าที่กำหนดให้กับ `myNoun`, `myVerb`, `myAdjective` หรือ `myAdverb`
 
 ```js
 assert(
@@ -46,7 +46,7 @@ assert(
 );
 ```
 
-You should not directly use the values `dog`, `ran`, `big`, or `quickly` to create `wordBlanks`.
+คุณไม่ควรนำค่า `dog`, `ran`, `big`, หรือ `quickly` มากำหนดให้กับ `wordBlanks` โดยตรง
 
 ```js
 const newCode = removeAssignments(code);
@@ -58,7 +58,9 @@ assert(
 );
 ```
 
-`wordBlanks` should contain all of the words assigned to the variables `myNoun`, `myVerb`, `myAdjective` and `myAdverb` separated by non-word characters (and any additional words in your madlib).
+`wordBlanks` ควรประกอบด้วยคำทั้งหมดที่กำหนดให้กับตัวแปร `myNoun`, `myVerb`, `myAdjective` และ `myAdverb` คั่นด้วย non-word characters(และคำเพิ่มเติมใน madlib ของคุณ)
+
+
 
 ```js
 assert(

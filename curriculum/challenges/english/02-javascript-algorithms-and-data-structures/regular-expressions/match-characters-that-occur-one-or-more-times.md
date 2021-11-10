@@ -8,33 +8,33 @@ dashedName: match-characters-that-occur-one-or-more-times
 
 # --description--
 
-Sometimes, you need to match a character (or group of characters) that appears one or more times in a row. This means it occurs at least once, and may be repeated.
+บางครั้งคุณต้องการ match ตัวอักษร (หรือกลุ่มตัวอักษร) ที่พบตั้งแต่ 1 ครั้งขึ้นไปในคราวเดียว นั่นหมายความว่า ตัวอักษรหรือกลุ่มตัวอักษรนั้นมีมากกว่า 1
 
-You can use the `+` character to check if that is the case. Remember, the character or pattern has to be present consecutively. That is, the character has to repeat one after the other.
+คุณสามารถใช้ `+` เพื่อตรวจสอบกรณีนี้ หากยังจำได้ ตัวอักษรหรือ pattern จะต้องแสดงอย่างต่อเนื่อง นั่นคือ ตัวอักษรมีการเรียงในลักษณะตัวนึงวางต่อกับอีกตัวนึง ต่อๆ กันไป
 
-For example, `/a+/g` would find one match in `abc` and return `["a"]`. Because of the `+`, it would also find a single match in `aabc` and return `["aa"]`.
+ตัวอย่างเช่น `/a+/g` จะเจอ match 1 ครั้งใน `abc` และคืนค่า `["a"]` และการใช้ `+` จะเจอ match 1 ครั้งใน `aabc` และคืนค่า `["aa"]`
 
-If it were instead checking the string `abab`, it would find two matches and return `["a", "a"]` because the `a` characters are not in a row - there is a `b` between them. Finally, since there is no `a` in the string `bcd`, it wouldn't find a match.
+แต่ถ้าเช็ค `abab` จะเจอ match 2 ครั้ง และคืนค่า `["a", "a"]` เพราะตัวอักษร `a` ไม่ได้อยู่ติดกัน แต่มี `b` คั่นอยู่ และตัวอย่างสุดท้าย เนื่องจากไม่มี `a` ใน string `bcd` จึงไม่ match แต่อย่างใด 
 
 # --instructions--
 
-You want to find matches when the letter `s` occurs one or more times in `Mississippi`. Write a regex that uses the `+` sign.
+คุณต้องการค้นหาด้วยการ match ตัวอักษร `s` ที่พบตั้งแต่ 1 ครั้งขึ้นไปใน `Mississippi` จงเขียน regex โดยใช้ `+`
 
 # --hints--
 
-Your regex `myRegex` should use the `+` sign to match one or more `s` characters.
+regex `myRegex` ควรใช้ `+` เพื่อ match ตัวอักษร `s` ที่พบ ตั้งแต่ 1 ครั้งเป็นต้นไป
 
 ```js
 assert(/\+/.test(myRegex.source));
 ```
 
-Your regex `myRegex` should match 2 items.
+regex `myRegex` ควร match 2 items
 
 ```js
 assert(result.length == 2);
 ```
 
-The `result` variable should be an array with two matches of `ss`
+ตัวแปร `result` ควรเป็น array ที่มี `ss` 2 items
 
 ```js
 assert(result[0] == 'ss' && result[1] == 'ss');

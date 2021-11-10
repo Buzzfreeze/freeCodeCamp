@@ -9,9 +9,10 @@ dashedName: accessing-object-properties-with-variables
 
 # --description--
 
-Another use of bracket notation on objects is to access a property which is stored as the value of a variable. This can be very useful for iterating through an object's properties or when accessing a lookup table.
+การใช้ bracket notation อีกแบบนึงกับ object คือการเข้าถึง property ซึ่งเก็บอยู่ในรูปของตัวแปร การทำเช่นนี้เป็นประโยชน์มากสำหรับการวนอ่าน property ของ object หรือเมื่อเข้าถึง lookup table
 
-Here is an example of using a variable to access a property:
+ต่อไปนี้เป็นตัวอย่างการใช้งานตัวแปรในการเข้าถึง property
+
 
 ```js
 var dogs = {
@@ -22,9 +23,9 @@ var myBreed = dogs[myDog];
 console.log(myBreed);
 ```
 
-The string `Doberman` would be displayed in the console.
+string `Doberman` ควรแสดงในหน้า console
 
-Another way you can use this concept is when the property's name is collected dynamically during the program execution, as follows:
+อีกเหตุผลนึงที่คุณสามารถใช้แนวคิดนี้ คือเมื่อชื่อ property เป็นชื่อแบบ dynamic ระหว่างการทำงานของโปรแกรม ดังตัวอย่างนี้:
 
 ```js
 var someObj = {
@@ -38,47 +39,48 @@ var someProp = propPrefix("Name");
 console.log(someObj[someProp]);
 ```
 
-`someProp` would have a value of the string `propName`, and the string `John` would be displayed in the console.
+`someProp` มีค่าของ string `propName` และ string `John` ควรแสดงในหน้า console
 
-Note that we do *not* use quotes around the variable name when using it to access the property because we are using the *value* of the variable, not the *name*.
+
+หมายเหตุ เรา *ไม่ได้* ใช้เครื่องหมายคำพูดครอบชื่อตัวแปรเมื่อเข้าถึง property เพราะเราใช้ *ค่า* ของตัวแปร ไม่ใช่ *ชื่อ* ตัวแปร
 
 # --instructions--
 
-Set the `playerNumber` variable to `16`. Then, use the variable to look up the player's name and assign it to `player`.
+กำหนดตัวแปร `playerNumber` เป็น `16` จากนั้นใช้ตัวแปรค้นหาชื่อผู้เล่น แล้วกำหนดค่าให้กับ `player`
 
 # --hints--
 
-`playerNumber` should be a number
+`playerNumber` ควรเป็น number
 
 ```js
 assert(typeof playerNumber === 'number');
 ```
 
-The variable `player` should be a string
+ค่าของ `player` ควรเป็น string
 
 ```js
 assert(typeof player === 'string');
 ```
 
-The value of `player` should be the string `Montana`
+ค่าของ `player` ควรเป็น string `Montana`
 
 ```js
 assert(player === 'Montana');
 ```
 
-You should use bracket notation to access `testObj`
+คุณควรใช้วงเล็บในการเข้าถึง `testObj`
 
 ```js
 assert(/testObj\s*?\[.*?\]/.test(code));
 ```
 
-You should not assign the value `Montana` to the variable `player` directly.
+คุณไม่ควรกำหนดค่า `Montana` ให้กับ `player` โดยตรง
 
 ```js
 assert(!code.match(/player\s*=\s*"|\'\s*Montana\s*"|\'\s*;/gi));
 ```
 
-You should be using the variable `playerNumber` in your bracket notation
+คุณไม่ควรใช้ตัวแปร `playerNumber` ในวงเล็บ
 
 ```js
 assert(/testObj\s*?\[\s*playerNumber\s*\]/.test(code));

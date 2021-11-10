@@ -9,7 +9,7 @@ dashedName: return-a-value-from-a-function-with-return
 
 # --description--
 
-We can pass values into a function with <dfn>arguments</dfn>. You can use a `return` statement to send a value back out of a function.
+เราสามารถส่งค่าไปยังฟังก์ชันด้วย <dfn>arguments</dfn> คุณสามารถใช้คำสั่ง `return` เพื่อส่งค่ากลับจากฟังก์ชันได้
 
 **Example**
 
@@ -20,35 +20,35 @@ function plusThree(num) {
 var answer = plusThree(5);
 ```
 
-`answer` has the value `8`.
+`answer` มีค่า `8`.
 
-`plusThree` takes an <dfn>argument</dfn> for `num` and returns a value equal to `num + 3`.
+`plusThree` รับ <dfn>argument</dfn> ผ่านเข้ามายัง `num` และส่งกลับค่าเท่ากับ `num + 3`.
 
 # --instructions--
 
-Create a function `timesFive` that accepts one argument, multiplies it by `5`, and returns the new value.
+จงสร้างฟังก์ชัน `timesFive` ที่รับ argument 1 ตัว นำมาคูณด้วย `5` แล้วคืนค่าเป็นผลลัพธ์ที่คำนวณได้
 
 # --hints--
 
-`timesFive` should be a function
+`timesFive` ควรเป็น function
 
 ```js
 assert(typeof timesFive === 'function');
 ```
 
-`timesFive(5)` should return `25`
+`timesFive(5)` ควรคืนค่า `25`
 
 ```js
 assert(timesFive(5) === 25);
 ```
 
-`timesFive(2)` should return `10`
+ `timesFive(2)` ควรคืนค่า  `10`
 
 ```js
 assert(timesFive(2) === 10);
 ```
 
-`timesFive(0)` should return `0`
+`timesFive(0)` ควรคืนค่า `0`
 
 ```js
 assert(timesFive(0) === 0);

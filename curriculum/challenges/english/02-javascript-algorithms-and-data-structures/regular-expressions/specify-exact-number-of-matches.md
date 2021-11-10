@@ -8,11 +8,11 @@ dashedName: specify-exact-number-of-matches
 
 # --description--
 
-You can specify the lower and upper number of patterns with quantity specifiers using curly brackets. Sometimes you only want a specific number of matches.
+คุณสามารถกำหนดจำนวนขั้นต่ำและจำนวนสูงสุดของ pattern ด้วย quantity specifiers ที่อยู่ใน curly brackets (วงเล็บปีกกา) แต่บางครั้งคุณเพียงต้องการให้ match ตามจำนวนที่ระบุ
 
-To specify a certain number of patterns, just have that one number between the curly brackets.
+การระบุเลขจำนวนหนึ่งๆ ของ pattern นั้น ทำได้โดยการนำตัวเลขมาใส่ใน curly brackets (วงเล็บปีกกา)  
 
-For example, to match only the word `hah` with the letter `a` `3` times, your regex would be `/ha{3}h/`.
+ตัวอย่างเช่น การ match คำว่า `hah` ก็ต่อเมื่อมีตัวอักษร `a` จำนวน `3` ตัว สามารถเขียน regex ได้ดังนี้ `/ha{3}h/`
 
 ```js
 let A4 = "haaaah";
@@ -24,49 +24,49 @@ multipleHA.test(A3);
 multipleHA.test(A100);
 ```
 
-In order, the three `test` calls would return `false`, `true`, and `false`.
+การเรียก `test` 3 ครั้งจะคืนค่า `false`, `true`, และ `false` ตามลำดับ
 
 # --instructions--
 
-Change the regex `timRegex` to match the word `Timber` only when it has four letter `m`'s.
+จงปรับแก้ regex `timRegex` เพื่อ match กับ `Timber` ก็ต่อเมื่อมีตัวอักษร `m` 4 ตัว
 
 # --hints--
 
-Your regex should use curly brackets.
+regex ของคุณควรใช้ curly brackets (วงเล็บปีกกา)
 
 ```js
 assert(timRegex.source.match(/{.*?}/).length > 0);
 ```
 
-Your regex should not match the string `Timber`
+regex ของคุณไม่ควร match กับ string `Timber`
 
 ```js
 timRegex.lastIndex = 0;
 assert(!timRegex.test('Timber'));
 ```
 
-Your regex should not match the string `Timmber`
+regex ของคุณไม่ควร match กับ string `Timmber`
 
 ```js
 timRegex.lastIndex = 0;
 assert(!timRegex.test('Timmber'));
 ```
 
-Your regex should not match the string `Timmmber`
+regex ของคุณไม่ควร match กับ string `Timmmber`
 
 ```js
 timRegex.lastIndex = 0;
 assert(!timRegex.test('Timmmber'));
 ```
 
-Your regex should match the string `Timmmmber`
+regex ของคุณควร match กับ string `Timmmmber`
 
 ```js
 timRegex.lastIndex = 0;
 assert(timRegex.test('Timmmmber'));
 ```
 
-Your regex should not match the string `Timber` with 30 `m`'s in it.
+regex ของคุณไม่ควร match กับ string `Timber` ที่มีตัวอักษร `m` จำนวน 30 ตัว
 
 ```js
 timRegex.lastIndex = 0;

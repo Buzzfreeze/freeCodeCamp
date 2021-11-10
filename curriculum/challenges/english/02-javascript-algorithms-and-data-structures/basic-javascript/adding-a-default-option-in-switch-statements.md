@@ -9,9 +9,10 @@ dashedName: adding-a-default-option-in-switch-statements
 
 # --description--
 
-In a `switch` statement you may not be able to specify all possible values as `case` statements. Instead, you can add the `default` statement which will be executed if no matching `case` statements are found. Think of it like the final `else` statement in an `if/else` chain.
+ใน`switch` statement คุณอาจไม่สามารถระบุค่าที่เป็นไปได้ทั้งหมดด้วย `case` statements อย่างไรก็ตาม คุณสามารถใช้ `default` statement แทนเพื่อรันกรณีที่ไม่ตรงกับเงื่อนไข `case` ใดเลย โดยให้คิดว่าเหมือนกับ `else` statement ของคำสั่ง `if/else` 
 
-A `default` statement should be the last case.
+
+`default` statement ควรเป็น case ท้ายสุด
 
 ```js
 switch (num) {
@@ -30,7 +31,7 @@ switch (num) {
 
 # --instructions--
 
-Write a switch statement to set `answer` for the following conditions:  
+จงเขียนคำสั่ง switch เพื่อกำหนดค่าให้กับ `answer` ด้วยเงื่อนไขต่อไปนี้
 `a` - `apple`  
 `b` - `bird`  
 `c` - `cat`  
@@ -38,49 +39,49 @@ Write a switch statement to set `answer` for the following conditions:
 
 # --hints--
 
-`switchOfStuff("a")` should return the string `apple`
+`switchOfStuff("a")` ควรคืนค่า string `apple`
 
 ```js
 assert(switchOfStuff('a') === 'apple');
 ```
 
-`switchOfStuff("b")` should return the string `bird`
+`switchOfStuff("b")` ควรคืนค่า string `bird`
 
 ```js
 assert(switchOfStuff('b') === 'bird');
 ```
 
-`switchOfStuff("c")` should return the string `cat`
+`switchOfStuff("c")` ควรคืนค่า string `cat`
 
 ```js
 assert(switchOfStuff('c') === 'cat');
 ```
 
-`switchOfStuff("d")` should return the string `stuff`
+`switchOfStuff("d")` ควรคืนค่า string `stuff`
 
 ```js
 assert(switchOfStuff('d') === 'stuff');
 ```
 
-`switchOfStuff(4)` should return the string `stuff`
+`switchOfStuff(4)` ควรคืนค่า string `stuff`
 
 ```js
 assert(switchOfStuff(4) === 'stuff');
 ```
 
-You should not use any `if` or `else` statements
+คุณไม่ควรใช้คำสั่ง `if` หรือ `else`
 
 ```js
 assert(!/else/g.test(code) || !/if/g.test(code));
 ```
 
-You should use a `default` statement
+คุณควรใช้คำสั่ง `default` อย่างน้อยสามคำสั่ง
 
 ```js
 assert(switchOfStuff('string-to-trigger-default-case') === 'stuff');
 ```
 
-You should have at least 3 `break` statements
+คุณควรมีคำสั่ง `break` อย่างน้อยสามคำสั่ง
 
 ```js
 assert(code.match(/break/g).length > 2);

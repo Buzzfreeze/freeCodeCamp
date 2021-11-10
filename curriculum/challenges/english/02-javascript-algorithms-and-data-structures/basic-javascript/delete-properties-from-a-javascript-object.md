@@ -9,13 +9,13 @@ dashedName: delete-properties-from-a-javascript-object
 
 # --description--
 
-We can also delete properties from objects like this:
+เรายังสามารถลบ property ออกจาก object ได้ดังนี้
 
 ```js
 delete ourDog.bark;
 ```
 
-Example:
+ตัวอย่าง:
 
 ```js
 var ourDog = {
@@ -29,7 +29,7 @@ var ourDog = {
 delete ourDog.bark;
 ```
 
-After the last line shown above, `ourDog` looks like:
+หลังจากบรรทัดสุดท้ายด้านบน `ourDog` จะมีหน้าตาดังนี้
 
 ```js
 {
@@ -42,17 +42,17 @@ After the last line shown above, `ourDog` looks like:
 
 # --instructions--
 
-Delete the `tails` property from `myDog`. You may use either dot or bracket notation.
+จงลบ property `tails` ออกจาก `myDog` คุณอาจใช้เครื่องหมายจุด หรือวงเล็บ
 
 # --hints--
 
-You should delete the property `tails` from `myDog`.
+คุณควรลบ property `tails` ออกจาก `myDog`
 
 ```js
 assert(typeof myDog === 'object' && myDog.tails === undefined);
 ```
 
-You should not modify the `myDog` setup.
+คุณไม่ควรแก้ไข `myDog` 
 
 ```js
 assert(code.match(/"tails": 1/g).length > 0);

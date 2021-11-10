@@ -8,9 +8,9 @@ dashedName: match-beginning-string-patterns
 
 # --description--
 
-Prior challenges showed that regular expressions can be used to look for a number of matches. They are also used to search for patterns in specific positions in strings.
+แบบทดสอบที่แล้วแสดงให้เห็นว่า regular expressions สามารถค้นหาการ match ได้หลายครั้ง นอกจากนี้ยังค้นหา pattern ในตำแหน่งที่กำหนดใน string ได้ด้วย
 
-In an earlier challenge, you used the caret character (`^`) inside a character set to create a negated character set in the form `[^thingsThatWillNotBeMatched]`. Outside of a character set, the caret is used to search for patterns at the beginning of strings.
+ในแบบทดสอบที่แล้ว คุณใช้ caret character (`^`) ภายใน character set เพื่อสร้าง negated character set ในรูปแบบ `[^thingsThatWillNotBeMatched]` อย่างไรก็ตาม หากคุณนำ caret character วางไว้นอก character set จะใช้สำหรับค้นหา patterns ที่ตำแหน่งแรกของ string
 
 ```js
 let firstString = "Ricky is first and can be found.";
@@ -20,34 +20,34 @@ let notFirst = "You can't find Ricky now.";
 firstRegex.test(notFirst);
 ```
 
-The first `test` call would return `true`, while the second would return `false`.
+การเรียก `test` ครั้งแรกคืนค่า `true` ขณะที่การเรียกครั้งท่ี่สองคืนค่า `false`
 
 # --instructions--
 
-Use the caret character in a regex to find `Cal` only in the beginning of the string `rickyAndCal`.
+จงใช้ caret character ใน regex เพื่อค้นหา `Cal` ที่อยู่ตำแหน่งเริ่มต้น string `rickyAndCal`
 
 # --hints--
 
-Your regex should search for the string `Cal` with a capital letter.
+regex ของคุณควรค้นหา string `Cal` ที่มีตัวพิมพ์ใหญ่
 
 ```js
 assert(calRegex.source == '^Cal');
 ```
 
-Your regex should not use any flags.
+regex ของคุณไม่ควรใช้ flag ใดๆ
 
 ```js
 assert(calRegex.flags == '');
 ```
 
-Your regex should match the string `Cal` at the beginning of the string.
+regex ของคุณควร match กับ string `Cal` ที่ตำแหน่งเริ่มต้นของ string
 
 ```js
 calRegex.lastIndex = 0;
 assert(calRegex.test('Cal and Ricky both like racing.'));
 ```
 
-Your regex should not match the string `Cal` in the middle of a string.
+regex ของคุณไม่ควร match กับ string `Cal` ที่อยู่กลาง string
 
 ```js
 calRegex.lastIndex = 0;

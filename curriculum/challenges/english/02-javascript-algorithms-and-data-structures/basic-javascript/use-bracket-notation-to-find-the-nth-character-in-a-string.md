@@ -9,34 +9,34 @@ dashedName: use-bracket-notation-to-find-the-nth-character-in-a-string
 
 # --description--
 
-You can also use <dfn>bracket notation</dfn> to get the character at other positions within a string.
+# - คุณยังสามารถใช้ <dfn>bracket notation</dfn> เพื่ออ้างอิงหรือรับค่าตัวอักษรที่ตำแหน่งอื่นภายใน string ได้
 
-Remember that computers start counting at `0`, so the first character is actually the zeroth character.
+จำไว้ว่าคอมพิวเตอร์เริ่มนับจาก `0` ดังนั้นอักขระตัวแรกจึงเป็นอักขระตัวที่ศูนย์
 
-Example:
+ตัวอย่าง:
 
 ```js
 var firstName = "Ada";
 var secondLetterOfFirstName = firstName[1];
 ```
 
-`secondLetterOfFirstName` would have a value of the string `d`.
+`secondLetterOfFirstName` ควรมีค่า string `d`
 
 # --instructions--
 
-Let's try to set `thirdLetterOfLastName` to equal the third letter of the `lastName` variable using bracket notation.
+มาลองกำหนด `thirdLetterOfLastName` ให้มีค่าเท่ากับอักขระตัวที่สามของตัวแปร `lastName` โดยใช้ bracket notation
 
-**Hint:** Try looking at the example above if you get stuck.
+**Hint:** ลองดูตัวอย่างด้านบน ถ้าคุณติดปัญหา
 
 # --hints--
 
-The `thirdLetterOfLastName` variable should have the value of `v`.
+ตัวแปร `thirdLetterOfLastName` ควรมีค่า `v`
 
 ```js
 assert(thirdLetterOfLastName === 'v');
 ```
 
-You should use bracket notation.
+คุณควรใช้ bracket notation
 
 ```js
 assert(code.match(/thirdLetterOfLastName\s*?=\s*?lastName\[.*?\]/));

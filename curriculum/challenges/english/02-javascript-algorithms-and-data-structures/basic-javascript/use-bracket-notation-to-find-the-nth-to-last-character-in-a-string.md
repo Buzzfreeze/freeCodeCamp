@@ -9,9 +9,10 @@ dashedName: use-bracket-notation-to-find-the-nth-to-last-character-in-a-string
 
 # --description--
 
-You can use the same principle we just used to retrieve the last character in a string to retrieve the Nth-to-last character.
+คุณสามารถนำหลักการดึงอักขระตัวสุดท้ายของ string มาใช้กับการดึงอักขระตัวที่ Nth-to-last (ตัวที่ Nth จากสุดท้าย) ได้
 
-For example, you can get the value of the third-to-last letter of the `var firstName = "Augusta"` string by using `firstName[firstName.length - 3]`
+ตัวอย่างเช่น คุณสามารถดึงตัวอักษรที่สามจากตัวสุดท้าย (third-to-last) ของ string `var firstName = "Augusta"` โดยใช้  `firstName[firstName.length - 3]`
+
 
 Example:
 
@@ -20,23 +21,23 @@ var firstName = "Augusta";
 var thirdToLastLetter = firstName[firstName.length - 3];
 ```
 
-`thirdToLastLetter` would have a value of the string `s`.
+`thirdToLastLetter` ควรมีค่า string `s`
 
 # --instructions--
 
-Use <dfn>bracket notation</dfn> to find the second-to-last character in the `lastName` string.
+จงใช้ <dfn>bracket notation</dfn> ในการหาตัวอักษรที่สองจากตัวสุดท้ายใน string `lastName`
 
-**Hint:** Try looking at the example above if you get stuck.
+**Hint:** ลองดูตัวอย่างด้านบน ถ้าคุณติดปัญหา
 
 # --hints--
 
-`secondToLastLetterOfLastName` should be the letter `c`.
+`secondToLastLetterOfLastName` ควรมีตัวอักษร `c`
 
 ```js
 assert(secondToLastLetterOfLastName === 'c');
 ```
 
-You should use `.length` to get the second last letter.
+คุณควรใช้ `.length` เพื่อให้ได้ค่าตัวอักษรที่สองจากท้ายสุด
 
 ```js
 assert(code.match(/\.length/g).length > 0);

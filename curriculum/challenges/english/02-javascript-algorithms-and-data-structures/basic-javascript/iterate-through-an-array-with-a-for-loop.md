@@ -11,6 +11,8 @@ dashedName: iterate-through-an-array-with-a-for-loop
 
 A common task in JavaScript is to iterate through the contents of an array. One way to do that is with a `for` loop. This code will output each element of the array `arr` to the console:
 
+งานทั่วไปของ JavaScript คือการวนอ่านเนื้อหาของ array โดยวิธีหนึ่งที่ทำได้คือใช้ `for` loop อย่างไรก็ตาม โค้ดนี้จะให้ผลลัพธ์เป็นแต่ละ element ของ array `arr` แสดงที่หน้า console:
+
 ```js
 var arr = [10, 9, 8, 7, 6];
 for (var i = 0; i < arr.length; i++) {
@@ -18,33 +20,36 @@ for (var i = 0; i < arr.length; i++) {
 }
 ```
 
-Remember that arrays have zero-based indexing, which means the last index of the array is `length - 1`. Our condition for this loop is `i < arr.length`, which stops the loop when `i` is equal to `length`. In this case the last iteration is `i === 4` i.e. when `i` becomes equal to `arr.length - 1` and outputs `6` to the console. Then `i` increases to `5`, and the loop terminates because `i < arr.length` is `false`.
+โปรดจำไว้ว่า arrays เป็น zero-based index ซึ่งหมายความว่า index สุดท้ายของ array คือ `length - 1` เงื่อนไขสำหรับ loop ของเราคือ `i < arr.length` ซึ่งจะหยุดการวนซ้ำเมื่อ `i` เท่ากับ `length` ในกรณีนี้ การวนซ้ำครั้งสุดท้ายคือ `i === 4` เช่น เมื่อ `i` เท่ากับ `arr.length - 1` และส่งค่า `6` แสดงที่ console จากนั้น `i` จะเพิ่มขึ้นเป็น `5` และการวนซ้ำสิ้นสุดลงเนื่องจาก `i < arr.length` เป็น `false`
 
 # --instructions--
 
-Declare and initialize a variable `total` to `0`. Use a `for` loop to add the value of each element of the `myArr` array to `total`.
+ให้ประกาศตัวแปร `total` และกำหนดค่าเริ่มต้นเป้น `0` จงใช้ `for` loop เพื่อเพิ่มค่า element ของ array `myArr` ให้มีค่าเป็น `total`
 
 # --hints--
 
-`total` should be declared and initialized to 0.
+`total` ควรประกาศและมีค่าเริ่มต้นเป็น 0
 
 ```js
 assert(code.match(/(var|let|const)\s*?total\s*=\s*0.*?;?/));
 ```
 
-`total` should equal 20.
+`total` ควรเท่ากับ 20
+
+
 
 ```js
 assert(total === 20);
 ```
 
-You should use a `for` loop to iterate through `myArr`.
+คุณควรใช้ `for` loop ในการวนเข้าไปยัง `myArr`
 
 ```js
 assert(/for\s*\(/g.test(code) && /myArr\s*\[/g.test(code));
 ```
 
-You should not attempt to directly assign the value 20 to `total`.
+คุณไม่ควรกำหนดค่า 20 ให้กับ `total` โดยตรง
+
 
 ```js
 assert(!__helpers.removeWhiteSpace(code).match(/total[=+-]0*[1-9]+/gm));

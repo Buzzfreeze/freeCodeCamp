@@ -9,9 +9,10 @@ dashedName: comparison-with-the-strict-equality-operator
 
 # --description--
 
-Strict equality (`===`) is the counterpart to the equality operator (`==`). However, unlike the equality operator, which attempts to convert both values being compared to a common type, the strict equality operator does not perform a type conversion.
+Strict equality (`===`)  คล้ายคลึงกับ equality operator (`==`) อย่างไรก็ตาม สิ่งที่แตกต่างกันคือ เครื่องหมาย (`==`) พยายามที่จะแปลงค่า ทั้งสองที่เปรียบเทียบกันให้เป็น common type ส่วนเครื่องหมาย (`===`) ไม่ได้ทำเรื่องการเปลี่ยนประเภทของข้อมูลให้ 
 
-If the values being compared have different types, they are considered unequal, and the strict equality operator will return false.
+ถ้าค่าทั้งสองที่ถูกเปรียบเทียบมีประเภทต่างกัน จะถูกพิจารณาว่าไม่เท่ากัน และ เครื่องหมาย (`===`) จะส่งคืนค่าเป็น false
+
 
 **Examples**
 
@@ -20,35 +21,36 @@ If the values being compared have different types, they are considered unequal, 
 3 === '3'
 ```
 
-These conditions would return `true` and `false` respectively.
+เงื่อนไขนี้จะคืนค่า  `true` และ `false` ตามลำดับ
 
-In the second example, `3` is a `Number` type and `'3'` is a `String` type.
+ในตัวอย่างที่สอง `3` เป็นประเภท `Number` และ `'3'` เป็นประเภท `String`
 
 # --instructions--
 
-Use the strict equality operator in the `if` statement so the function will return the string `Equal` when `val` is strictly equal to `7`
+จงใช้เครื่องหมาย (`===`) ในคำสั่ง `if` เพื่อให้ function คืนค่า string `Equal` เมื่อ `val` เท่ากับ `7` เท่านั้น
 
 # --hints--
 
-`testStrict(10)` should return the string `Not Equal`
+`testStrict(10)` ควรคืนค่า string `Not Equal`
+
 
 ```js
 assert(testStrict(10) === 'Not Equal');
 ```
 
-`testStrict(7)` should return the string `Equal`
+`testStrict(7)` ควรคืนค่า string `Equal`
 
 ```js
 assert(testStrict(7) === 'Equal');
 ```
 
-`testStrict("7")` should return the string `Not Equal`
+`testStrict("7")` ควรคืนค่า string `Not Equal`
 
 ```js
 assert(testStrict('7') === 'Not Equal');
 ```
 
-You should use the `===` operator
+คุณควรใช้เครื่องหมาย `===` 
 
 ```js
 assert(code.match(/(val\s*===\s*\d+)|(\d+\s*===\s*val)/g).length > 0);

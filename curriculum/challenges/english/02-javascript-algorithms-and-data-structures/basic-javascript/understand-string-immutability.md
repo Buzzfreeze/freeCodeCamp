@@ -9,16 +9,16 @@ dashedName: understand-string-immutability
 
 # --description--
 
-In JavaScript, `String` values are <dfn>immutable</dfn>, which means that they cannot be altered once created.
+ใน JavaScript ค่า `String` <dfn>immutable</dfn> ซึ่งหมายความว่าเมื่อสร้างแล้วจะไม่สามารถแก้ไขได้
 
-For example, the following code:
+ยกตัวอย่างตามโค้ดด้านล่าง:
 
 ```js
 var myStr = "Bob";
 myStr[0] = "J";
 ```
 
-cannot change the value of `myStr` to `Job`, because the contents of `myStr` cannot be altered. Note that this does *not* mean that `myStr` cannot be changed, just that the individual characters of a <dfn>string literal</dfn> cannot be changed. The only way to change `myStr` would be to assign it with a new string, like this:
+ไม่สามารถเปลี่ยนค่าของ `myStr` เป็น `Job` เพราะเนื้อหาของ `myStr` ไม่สามารถเปลี่ยนแปลงได้ อย่างไรก็ตาม *ไม่* ได้ หมายความว่า `myStr` ไม่สามารถเปลี่ยนแปลงได้ เพียงแต่ไม่สามารถเปลี่ยนแปลงอักขระแต่ละตัวของ <dfn>string literal</dfn> ได้ วิธีเดียวที่จะเปลี่ยน `myStr` ได้ คือการกำหนดค่าด้วยสตริงใหม่ ดังนี้:
 
 ```js
 var myStr = "Bob";
@@ -27,17 +27,17 @@ myStr = "Job";
 
 # --instructions--
 
-Correct the assignment to `myStr` so it contains the string value of `Hello World` using the approach shown in the example above.
+จงแก้ไขการกำหนดค่าให้กับ `myStr` เพื่อให้มีค่า string เป็น  `Hello World` โดยใช้วิธีการตามตัวอย่างด้านบน
 
 # --hints--
 
-`myStr` should have a value of the string `Hello World`.
+`myStr` ควรมีค่า string `Hello World`
 
 ```js
 assert(myStr === 'Hello World');
 ```
 
-You should not change the code above the specified comment.
+คุณไม่ควรแก้โค้ดเหนือ comment ที่กำหนด
 
 ```js
 assert(/myStr = "Jello World"/.test(code));

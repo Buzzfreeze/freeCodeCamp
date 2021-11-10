@@ -9,11 +9,11 @@ dashedName: comparisons-with-the-logical-or-operator
 
 # --description--
 
-The <dfn>logical or</dfn> operator (`||`) returns `true` if either of the <dfn>operands</dfn> is `true`. Otherwise, it returns `false`.
+# - <dfn>logical or</dfn> operator (`||`) คืนค่า `true` หาก <dfn>operands</dfn> (ค่าที่ทดสอบ) ตัวใดตัวหนึ่งเป็น `true` นอกเหนือจากนั้น จะคืนค่า `false`
 
-The <dfn>logical or</dfn> operator is composed of two pipe symbols: (`||`). This can typically be found between your Backspace and Enter keys.
+<dfn>logical or</dfn> operator ประกอบด้วย pipe symbols 2 อัน (`||`) ซึ่งอยู่ระหว่างปุ่ม Backspace และ Enter
 
-The pattern below should look familiar from prior waypoints:
+รูปแบบด้านล่ารคล้ายกับที่เราเรียนกันมา
 
 ```js
 if (num > 10) {
@@ -25,7 +25,7 @@ if (num < 5) {
 return "Yes";
 ```
 
-will return `Yes` only if `num` is between `5` and `10` (5 and 10 included). The same logic can be written as:
+จะคืนค่า `Yes` ก็ต่อเมื่อ `num` อยู่ระหว่าง  `5` และ `10` (รวม 5 และ 10 ด้วย)  ซึ่ง logic เดียวกันนี้ สามารถเขียนได้ดังนี้:
 
 ```js
 if (num > 10 || num < 5) {
@@ -36,65 +36,65 @@ return "Yes";
 
 # --instructions--
 
-Combine the two `if` statements into one statement which returns the string `Outside` if `val` is not between `10` and `20`, inclusive. Otherwise, return the string `Inside`.
+จงรวมคำสั่ง `if` ทั้งสองคำสั่งให้เป็น if คำสั่งเดียว เพื่อให้คืนค่า string `Outside` ถ้า `val` ไม่ได้อยู่ระหว่าง `10` และ `20` (รวม `10` และ `20` ด้วย) แต่ถ้าเงื่อนไขเป็นเท็จ จะคืนค่า string `Inside`
 
 # --hints--
 
-You should use the `||` operator once
+คุณควรใช้เครื่องหมาย `||` หนึ่งครั้ง
 
 ```js
 assert(code.match(/\|\|/g).length === 1);
 ```
 
-You should only have one `if` statement
+# -คุณควรมีแค่คำสั่ง `if` อันเดียว
 
 ```js
 assert(code.match(/if/g).length === 1);
 ```
 
-`testLogicalOr(0)` should return the string `Outside`
+`testLogicalOr(0)` ควรคืนค่า string `Outside`
 
 ```js
 assert(testLogicalOr(0) === 'Outside');
 ```
 
-`testLogicalOr(9)` should return the string `Outside`
+`testLogicalOr(9)` ควรคืนค่า string `Outside`
 
 ```js
 assert(testLogicalOr(9) === 'Outside');
 ```
 
-`testLogicalOr(10)` should return the string `Inside`
+`testLogicalOr(10)` ควรคืนค่า string `Inside`
 
 ```js
 assert(testLogicalOr(10) === 'Inside');
 ```
 
-`testLogicalOr(15)` should return the string `Inside`
+`testLogicalOr(15)` ควรคืนค่า string `Inside`
 
 ```js
 assert(testLogicalOr(15) === 'Inside');
 ```
 
-`testLogicalOr(19)` should return the string `Inside`
+`testLogicalOr(19)` ควรคืนค่า string `Inside`
 
 ```js
 assert(testLogicalOr(19) === 'Inside');
 ```
 
-`testLogicalOr(20)` should return the string `Inside`
+`testLogicalOr(20)` ควรคืนค่า string `Inside`
 
 ```js
 assert(testLogicalOr(20) === 'Inside');
 ```
 
-`testLogicalOr(21)` should return the string `Outside`
+`testLogicalOr(21)` ควรคืนค่า string `Outside`
 
 ```js
 assert(testLogicalOr(21) === 'Outside');
 ```
 
-`testLogicalOr(25)` should return the string `Outside`
+`testLogicalOr(25)` ควรคืนค่า string `Outside`
 
 ```js
 assert(testLogicalOr(25) === 'Outside');

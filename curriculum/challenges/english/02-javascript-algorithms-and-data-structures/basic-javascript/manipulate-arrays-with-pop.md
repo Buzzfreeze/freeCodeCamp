@@ -9,11 +9,11 @@ dashedName: manipulate-arrays-with-pop
 
 # --description--
 
-Another way to change the data in an array is with the `.pop()` function.
+อีกวิธีในการเปลี่ยนแปลงข้อมูลใน array ก็คือการใช้ฟังก์ชัน `.pop()`
 
-`.pop()` is used to pop a value off of the end of an array. We can store this popped off value by assigning it to a variable. In other words, `.pop()` removes the last element from an array and returns that element.
+`.pop()` ใช้เพื่อดึงข้อมูลที่ส่วนท้ายของ array ออก เราสามารถเก็บค่าที่ดึงออกมานี้ให้กับตัวแปร กล่าวอีกนัยหนึ่งคือ `.pop()` จะลบ element สุดท้ายออกจาก array และคืนค่าเป็น element นั้น
 
-Any type of entry can be popped off of an array - numbers, strings, even nested arrays.
+รายการทุกประเภทสามารถดึงออกจาก array ได้ ไม่ว่าจะเป็น number, string, หรือแม้แต่ array ที่ซ้อนกัน
 
 ```js
 var threeArr = [1, 4, 6];
@@ -22,15 +22,15 @@ console.log(oneDown);
 console.log(threeArr);
 ```
 
-The first `console.log` will display the value `6`, and the second will display the value `[1, 4]`.
+`console.log` ครั้งแรกจะแสดงค่า `6` และครั้งแรกสองจะแสดงค่า `[1, 4]`
 
 # --instructions--
 
-Use the `.pop()` function to remove the last item from `myArray`, assigning the popped off value to `removedFromMyArray`.
+จงใช้ฟังก์ชัน `.pop()` เพื่อลบรายการสุดท้ายออกจาก `myArray` โดยนำ element ที่ดึงออกมากำหนดค่าให้กับ `removedFromMyArray`
 
 # --hints--
 
-`myArray` should only contain `[["John", 23]]`.
+`myArray` ควรมี `[["John", 23]]` เท่านั้น
 
 ```js
 assert(
@@ -44,13 +44,13 @@ assert(
 );
 ```
 
-You should use `pop()` on `myArray`.
+คุณควรใช้ `pop()` กับ `myArray`
 
 ```js
 assert(/removedFromMyArray\s*=\s*myArray\s*.\s*pop\s*(\s*)/.test(code));
 ```
 
-`removedFromMyArray` should only contain `["cat", 2]`.
+`removedFromMyArray` ควรมี `["cat", 2]` เท่านั้น
 
 ```js
 assert(

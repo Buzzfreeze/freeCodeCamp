@@ -9,7 +9,8 @@ dashedName: introducing-else-if-statements
 
 # --description--
 
-If you have multiple conditions that need to be addressed, you can chain `if` statements together with `else if` statements.
+ถ้าคุณมีเงื่อนไขหลายๆ เงื่อนไขที่ต้องเช็ค คุณสามารถใช้คำสั่ง `if` ต่อเนื่องกัน ด้วยคำสั่ง `else if`
+
 
 ```js
 if (num > 15) {
@@ -23,23 +24,26 @@ if (num > 15) {
 
 # --instructions--
 
-Convert the logic to use `else if` statements.
+
+จงเปลี่ยน logic ไปใช้คำสั่ง `else if`
 
 # --hints--
 
-You should have at least two `else` statements
+
+
+คุณควรมีคำสั่ง `else` อย่างน้อยสองคำสั่ง
 
 ```js
 assert(code.match(/else/g).length > 1);
 ```
 
-You should have at least two `if` statements
+คุณควรมีคำสั่ง `if` อย่างน้อยสองคำสั่ง
 
 ```js
 assert(code.match(/if/g).length > 1);
 ```
 
-You should have closing and opening curly braces for each `if else` code block.
+คุณควรมีวงเล็บปีกกาเปิดและปิดสำหรับแต่ละคำสั่ง `if else` 
 
 ```js
 assert(
@@ -49,31 +53,31 @@ assert(
 );
 ```
 
-`testElseIf(0)` should return the string `Smaller than 5`
+`testElseIf(0)` ควรคืนค่า string  `Smaller than 5`
 
 ```js
 assert(testElseIf(0) === 'Smaller than 5');
 ```
 
-`testElseIf(5)` should return the string `Between 5 and 10`
+`testElseIf(5)` ควรคืนค่า string  `Between 5 and 10`
 
 ```js
 assert(testElseIf(5) === 'Between 5 and 10');
 ```
 
-`testElseIf(7)` should return the string `Between 5 and 10`
+`testElseIf(7)` ควรคืนค่า string  `Between 5 and 10`
 
 ```js
 assert(testElseIf(7) === 'Between 5 and 10');
 ```
 
-`testElseIf(10)` should return the string `Between 5 and 10`
+`testElseIf(10)` ควรคืนค่า string  `Between 5 and 10`
 
 ```js
 assert(testElseIf(10) === 'Between 5 and 10');
 ```
 
-`testElseIf(12)` should return the string `Greater than 10`
+`testElseIf(12)` ควรคืนค่า string  `Greater than 10`
 
 ```js
 assert(testElseIf(12) === 'Greater than 10');

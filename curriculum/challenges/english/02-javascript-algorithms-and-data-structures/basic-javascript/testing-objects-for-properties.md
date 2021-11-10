@@ -8,7 +8,7 @@ dashedName: testing-objects-for-properties
 
 # --description--
 
-Sometimes it is useful to check if the property of a given object exists or not. We can use the `.hasOwnProperty(propname)` method of objects to determine if that object has the given property name. `.hasOwnProperty()` returns `true` or `false` if the property is found or not.
+บางครั้งเราอาจต้องการตรวจสอบว่า property มีอยู่ใน object หรือไม่ ซึ่งการตรวจสอบดังกล่าวสามารถใช้ method `.hasOwnProperty(propname)` ของ object ได้ โดย `.hasOwnProperty()` จะคืนค่า `true` เมื่อ object มี property และคืนค่า `false` หากไม่มี property
 
 **Example**
 
@@ -21,15 +21,15 @@ myObj.hasOwnProperty("top");
 myObj.hasOwnProperty("middle");
 ```
 
-The first `hasOwnProperty` returns `true`, while the second returns `false`.
+`hasOwnProperty` คำสั่งแรกคืนค่า `true` ขณะที่คำสั่งที่สองคืนค่า `false`
 
 # --instructions--
 
-Modify the function `checkObj` to test if an object passed to the function (`obj`) contains a specific property (`checkProp`). If the property is found, return that property's value. If not, return `"Not Found"`.
+จงแก้ไขฟังก์ชัน `checkObj` เพื่อตรวจสอบว่า object ส่งผ่านไปยังฟังก์ชัน (`obj`) มี property (`checkProp`) หรือไม่ หากพบ property ให้คืนค่าเป็น value ของ property นั้น แต่ถ้าไม่พบ ให้คืนค่า `"Not Found"`
 
 # --hints--
 
-`checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "gift")` should return the string `pony`.
+`checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "gift")` ควรคืนค่า string `pony`
 
 ```js
 assert(
@@ -37,7 +37,7 @@ assert(
 );
 ```
 
-`checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "pet")` should return the string `kitten`.
+`checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "pet")` ควรคืนค่า string `kitten`
 
 ```js
 assert(
@@ -45,7 +45,7 @@ assert(
 );
 ```
 
-`checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "house")` should return the string `Not Found`.
+`checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "house")` ควรคืนค่า string `Not Found`
 
 ```js
 assert(
@@ -54,19 +54,19 @@ assert(
 );
 ```
 
-`checkObj({city: "Seattle"}, "city")` should return the string `Seattle`.
+`checkObj({city: "Seattle"}, "city")` ควรคืนค่า string `Seattle`
 
 ```js
 assert(checkObj({ city: 'Seattle' }, 'city') === 'Seattle');
 ```
 
-`checkObj({city: "Seattle"}, "district")` should return the string `Not Found`.
+`checkObj({city: "Seattle"}, "district")` ควรคืนค่า string `Not Found`
 
 ```js
 assert(checkObj({ city: 'Seattle' }, 'district') === 'Not Found');
 ```
 
-`checkObj({pet: "kitten", bed: "sleigh"}, "gift")` should return the string `Not Found`.
+`checkObj({pet: "kitten", bed: "sleigh"}, "gift")` ควรคืนค่า string `Not Found`
 
 ```js
 assert(checkObj({ pet: 'kitten', bed: 'sleigh' }, 'gift') === 'Not Found');

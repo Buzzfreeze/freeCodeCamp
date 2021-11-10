@@ -9,41 +9,41 @@ dashedName: stand-in-line
 
 # --description--
 
-In Computer Science a <dfn>queue</dfn> is an abstract <dfn>Data Structure</dfn> where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
+ในวิทยาการคอมพิวเตอร์ <dfn>queue</dfn> เป็น <dfn>โครงสร้างข้อมูล</dfn> ที่เป็นนามธรรม ซึ่งรายการต่างๆ จะถูกจัดวางตามลำดับ โดยรายการใหม่จะเพิ่มที่ด้านหลังของ queue และรายการเก่าจะถูกลบออกจากด้านหน้าของ queue
 
-Write a function `nextInLine` which takes an array (`arr`) and a number (`item`) as arguments.
+เขียน function `nextInLine` ซึ่งรับค่า array (`arr`) และตัวเลข (`item`) เป็น argument
 
-Add the number to the end of the array, then remove the first element of the array.
+เพิ่มตัวเลขไปยังด้านท้ายของ array และลบรายการแรกของ array ออก
 
-The `nextInLine` function should then return the element that was removed.
+function `nextInLine` ควรส่งคืนค่าที่ถูกลบออกไป
 
 # --hints--
 
-`nextInLine([], 5)` should return a number.
+`nextInLine([], 5)` ควรคืนค่าตัวเลข
 
 ```js
 assert.isNumber(nextInLine([], 5));
 ```
 
-`nextInLine([], 1)` should return `1`
+`nextInLine([], 1)` ควรส่งคืนค่า `1`
 
 ```js
 assert(nextInLine([], 1) === 1);
 ```
 
-`nextInLine([2], 1)` should return `2`
+`nextInLine([2], 1)` ควรส่งคืนค่า `2`
 
 ```js
 assert(nextInLine([2], 1) === 2);
 ```
 
-`nextInLine([5,6,7,8,9], 1)` should return `5`
+`nextInLine([5,6,7,8,9], 1)` ควรส่งคืนค่า `5`
 
 ```js
 assert(nextInLine([5, 6, 7, 8, 9], 1) === 5);
 ```
 
-After `nextInLine(testArr, 10)`, `testArr[4]` should be `10`
+จากนั้น `nextInLine(testArr, 10)`, `testArr[4]` ควรส่งคืนค่า  `10`
 
 ```js
 nextInLine(testArr, 10);

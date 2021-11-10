@@ -8,11 +8,11 @@ dashedName: extract-matches
 
 # --description--
 
-So far, you have only been checking if a pattern exists or not within a string. You can also extract the actual matches you found with the `.match()` method.
+ที่ผ่านมา คุณเพียงตรวจสอบว่า pattern พบใน string หรือไม่พบ อย่างไรก็ตาม คุณสามารถแยก (extract) ข้อความที่เจอด้วย `.match()` method
 
-To use the `.match()` method, apply the method on a string and pass in the regex inside the parentheses.
+วิธีใช้ `.match()` method คือ ให้นำ method มาใช้กับ string โดยส่ง regex เข้าไปภายในวงเล็บ
 
-Here's an example:
+ดังตัวอย่างต่อไปนี้
 
 ```js
 "Hello, World!".match(/Hello/);
@@ -21,9 +21,9 @@ let ourRegex = /expressions/;
 ourStr.match(ourRegex);
 ```
 
-Here the first `match` would return `["Hello"]` and the second would return `["expressions"]`.
+ในที่นี้ `match` แรกควรคืนค่า `["Hello"]` และอันที่สองควรคืนค่า `["expressions"]`
 
-Note that the `.match` syntax is the "opposite" of the `.test` method you have been using thus far:
+หมายเหตุ `.match` syntax ใช้งานตรงกันข้ามกับ `.test` method ที่คุณได้เรียนรู้มาก่อนหน้านี้แล้ว:
 
 ```js
 'string'.match(/regex/);
@@ -32,23 +32,23 @@ Note that the `.match` syntax is the "opposite" of the `.test` method you have b
 
 # --instructions--
 
-Apply the `.match()` method to extract the string `coding`.
+จงใช้ `.match()` method เพื่อแยก string `coding` ออกมา
 
 # --hints--
 
-The `result` should have the string `coding`
+`result` ควรมี string `coding`
 
 ```js
 assert(result.join() === 'coding');
 ```
 
-Your regex `codingRegex` should search for the string `coding`
+regex `codingRegex` ควรค้นหา string `coding`
 
 ```js
 assert(codingRegex.source === 'coding');
 ```
 
-You should use the `.match()` method.
+คุณควรใช้ `.match()` method
 
 ```js
 assert(code.match(/\.match\(.*\)/));

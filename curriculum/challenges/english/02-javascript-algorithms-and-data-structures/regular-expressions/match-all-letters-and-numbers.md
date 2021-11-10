@@ -8,9 +8,9 @@ dashedName: match-all-letters-and-numbers
 
 # --description--
 
-Using character classes, you were able to search for all letters of the alphabet with `[a-z]`. This kind of character class is common enough that there is a shortcut for it, although it includes a few extra characters as well.
+การใช้ character class ทำให้คุณสามารถค้นหาตัวอักษรภาษาอังกฤษด้วย regex `[a-z] ได้ ซึ่ง character class นี้มีการใช้งานกันแพร่หลาย จึงได้มีการกำหนด shortcut ขึ้นมา แม้ว่า shortcut นี้จะมีตัวอักษรพิเศษเพิ่มเข้ามาก็ตาม
 
-The closest character class in JavaScript to match the alphabet is `\w`. This shortcut is equal to `[A-Za-z0-9_]`. This character class matches upper and lowercase letters plus numbers. Note, this character class also includes the underscore character (`_`).
+character class ที่ใกล้เคียงที่สุด ในภาษา JavaScript สำหรับ match กับตัวอักษร ก็คือ `\w` ซึ่งเป็น shortcut ที่เท่ากับ `[A-Za-z0-9_]` โดย character class นี้ match ทั้งตัวพิมพ์ใหญ่ ตัวพิมพ์เล็ก และตัวเลข นอกจากนี้ character class ยังรวม underscore character (`_`) ด้วย
 
 ```js
 let longHand = /[A-Za-z0-9_]+/;
@@ -23,29 +23,30 @@ longHand.test(varNames);
 shortHand.test(varNames);
 ```
 
-All four of these `test` calls would return `true`.
+การเรียก `test` ทั้ง 4 ครั้งนี้ คืนค่า `true`
 
-These shortcut character classes are also known as <dfn>shorthand character classes</dfn>.
+shortcut character classes เหล่านี้ เรียกกันว่า <dfn>shorthand character classes</dfn>
+
 
 # --instructions--
 
-Use the shorthand character class `\w` to count the number of alphanumeric characters in various quotes and strings.
+จงใช้ shorthand character class `\w` เพื่อนับจำนวนตัวอักษรและตัวเลขใน strings
 
 # --hints--
 
-Your regex should use the global flag.
+regex ของคุณควรใช้ global flag
 
 ```js
 assert(alphabetRegexV2.global);
 ```
 
-Your regex should use the shorthand character `\w` to match all characters which are alphanumeric.
+regex ของคุณควรใช้ shorthand character `\w` เพื่อ match ทุกอักขระที่เป็นตัวอักษรและตัวเลข
 
 ```js
 assert(/\\w/.test(alphabetRegexV2.source));
 ```
 
-Your regex should find 31 alphanumeric characters in the string `The five boxing wizards jump quickly.`
+regex ของคุณควรค้นพบ 31 อักขระที่เป็นตัวอักษรและตัวเลขจาก string `The five boxing wizards jump quickly.`
 
 ```js
 assert(
@@ -53,7 +54,7 @@ assert(
 );
 ```
 
-Your regex should find 32 alphanumeric characters in the string `Pack my box with five dozen liquor jugs.`
+regex ของคุณควรค้นพบ 32 อักขระที่เป็นตัวอักษรและตัวเลขจาก string `Pack my box with five dozen liquor jugs.`
 
 ```js
 assert(
@@ -62,7 +63,7 @@ assert(
 );
 ```
 
-Your regex should find 30 alphanumeric characters in the string `How vexingly quick daft zebras jump!`
+regex ของคุณควรค้นพบ 30 อักขระที่เป็นตัวอักษรและตัวเลขจาก string `How vexingly quick daft zebras jump!`
 
 ```js
 assert(
@@ -70,7 +71,7 @@ assert(
 );
 ```
 
-Your regex should find 36 alphanumeric characters in the string `123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.`
+regex ของคุณควรค้นพบ 36 อักขระที่เป็นตัวอักษรและตัวเลขจาก string `123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.`
 
 ```js
 assert(

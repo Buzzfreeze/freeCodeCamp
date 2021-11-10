@@ -8,11 +8,11 @@ dashedName: match-single-character-with-multiple-possibilities
 
 # --description--
 
-You learned how to match literal patterns (`/literal/`) and wildcard character (`/./`). Those are the extremes of regular expressions, where one finds exact matches and the other matches everything. There are options that are a balance between the two extremes.
+คุณได้เรียนรู้วิธี match ตามตัวอักษร (`/literal/`) และ match ด้วย wildcard character (`/./`) ซึ่งเป็นวิธีสุดโต่งทั้งคู่ เพราะวิธีแรกหาข้อความตรงตามตัวอักษรทุกประการ ส่วนวิธีที่สองสามารถ match กับตัวอักษรอะไรก็ได้ทั้งหมด อย่างไรก็ตาม มีอีกวิธีนึงที่สมดุลระหว่างสองสุดขั้วนั้น
 
-You can search for a literal pattern with some flexibility with <dfn>character classes</dfn>. Character classes allow you to define a group of characters you wish to match by placing them inside square (`[` and `]`) brackets.
+คุณสามารถค้นหา pattern ที่ตรงตามตัวอักษร แต่มีความยืดหยุ่น โดยใช้ <dfn>character classes</dfn> ซึ่ง Character classes ช่วยให้คุณสามารถกำหนดกลุ่มของตัวอักษรที่คุณต้องการ match โดยนำกลุ่มตัวอักษรเหล่านั้นไปไว้ใน square brackets (`[` และ `]`)
 
-For example, you want to match `bag`, `big`, and `bug` but not `bog`. You can create the regex `/b[aiu]g/` to do this. The `[aiu]` is the character class that will only match the characters `a`, `i`, or `u`.
+ตัวอย่างเช่น คุณต้องการ match `bag`, `big` และ `bug` แต่ไม่ใช่ `bog` คุณสามารถสร้าง regex `/b[aiu]g/` โดย `[aiu]` คือ character class ที่ match กับตัวอักษร `a`, `i` หรือ `u`
 
 ```js
 let bigStr = "big";
@@ -26,41 +26,41 @@ bugStr.match(bgRegex);
 bogStr.match(bgRegex);
 ```
 
-In order, the four `match` calls would return the values `["big"]`, `["bag"]`, `["bug"]`, and `null`.
+การเรียก `match` ทั้ง 4 ครั้งจะคืนค่า `["big"]`, `["bag"]`, `["bug"]` และ `null` ตามลำดับ
 
 # --instructions--
 
-Use a character class with vowels (`a`, `e`, `i`, `o`, `u`) in your regex `vowelRegex` to find all the vowels in the string `quoteSample`.
+จงใช้ character class กำหนดให้มีสระ (`a`, `e`, `i`, `o`, `u`) ใน regex `vowelRegex` เพื่อค้นหาสระทั้งหมดใน string `quoteSample`
 
-**Note:** Be sure to match both upper- and lowercase vowels.
+**Note:** ตรวจเช็คให้มั่นใจว่า match สระที่เป็นทั้งตัวพิมพ์ใหญ่และตัวพิมพ์เล็ก
 
 # --hints--
 
-You should find all 25 vowels.
+คุณควรพบสระทั้งหมด 25 ตัว
 
 ```js
 assert(result.length == 25);
 ```
 
-Your regex `vowelRegex` should use a character class.
+regex `vowelRegex` ควรใช้ character class
 
 ```js
 assert(/\[.*\]/.test(vowelRegex.source));
 ```
 
-Your regex `vowelRegex` should use the global flag.
+regex `vowelRegex` ควรใช้ global flag
 
 ```js
 assert(vowelRegex.flags.match(/g/).length == 1);
 ```
 
-Your regex `vowelRegex` should use the case insensitive flag.
+regex `vowelRegex` ควรใช้ case insensitive flag
 
 ```js
 assert(vowelRegex.flags.match(/i/).length == 1);
 ```
 
-Your regex should not match any consonants.
+regex ไม่ควร match กับพยัญชนะใดๆ
 
 ```js
 assert(!/[b-df-hj-np-tv-z]/gi.test(result.join()));

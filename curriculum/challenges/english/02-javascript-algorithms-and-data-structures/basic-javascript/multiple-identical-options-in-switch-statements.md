@@ -9,7 +9,8 @@ dashedName: multiple-identical-options-in-switch-statements
 
 # --description--
 
-If the `break` statement is omitted from a `switch` statement's `case`, the following `case` statement(s) are executed until a `break` is encountered. If you have multiple inputs with the same output, you can represent them in a `switch` statement like this:
+ถ้าไม่ระบุ `break` statement ในแต่ละ `case` ของคำสั่ง `switch` ก็จะทำให้ `case` ถัดไปทำงานจนกว่าจะเจอคำสั่ง `break` ถ้าคุณมีหลาย input ที่มี output เหมือนกัน คุณสามารถใช้คำสั่ง `switch` ดังนี้
+
 
 ```js
 var result = "";
@@ -24,80 +25,81 @@ switch(val) {
 }
 ```
 
-Cases for 1, 2, and 3 will all produce the same result.
+case สำหรับค่า 1, 2, และ 3 จะให้ผลลัพธ์เดียวกัน
 
 # --instructions--
 
-Write a switch statement to set `answer` for the following ranges:  
+จงเขียนคำสั่ง switch เพื่อกำหนดค่า `answer` ตามช่วงต่อไปนี้: 
+
 `1-3` - `Low`  
 `4-6` - `Mid`  
 `7-9` - `High`
 
-**Note:** You will need to have a `case` statement for each number in the range.
+**หมายเหตุ:** คุณจะต้องมีคำสั่ง `case` สำหรับแต่ละช่วงตัวเลข
 
 # --hints--
 
-`sequentialSizes(1)` should return the string `Low`
+`sequentialSizes(1)` ควรคืนค่า string `Low`
 
 ```js
 assert(sequentialSizes(1) === 'Low');
 ```
 
-`sequentialSizes(2)` should return the string `Low`
+`sequentialSizes(2)` ควรคืนค่า string `Low`
 
 ```js
 assert(sequentialSizes(2) === 'Low');
 ```
 
-`sequentialSizes(3)` should return the string `Low`
+`sequentialSizes(3)` ควรคืนค่า string `Low`
 
 ```js
 assert(sequentialSizes(3) === 'Low');
 ```
 
-`sequentialSizes(4)` should return the string `Mid`
+`sequentialSizes(4)` ควรคืนค่า string `Mid`
 
 ```js
 assert(sequentialSizes(4) === 'Mid');
 ```
 
-`sequentialSizes(5)` should return the string `Mid`
+`sequentialSizes(5)` ควรคืนค่า string `Mid`
 
 ```js
 assert(sequentialSizes(5) === 'Mid');
 ```
 
-`sequentialSizes(6)` should return the string `Mid`
+`sequentialSizes(6)` ควรคืนค่า string `Mid`
 
 ```js
 assert(sequentialSizes(6) === 'Mid');
 ```
 
-`sequentialSizes(7)` should return the string `High`
+`sequentialSizes(7)` ควรคืนค่า string `High`
 
 ```js
 assert(sequentialSizes(7) === 'High');
 ```
 
-`sequentialSizes(8)` should return the string `High`
+`sequentialSizes(8)` ควรคืนค่า string `High`
 
 ```js
 assert(sequentialSizes(8) === 'High');
 ```
 
-`sequentialSizes(9)` should return the string `High`
+`sequentialSizes(9)` ควรคืนค่า string `High`
 
 ```js
 assert(sequentialSizes(9) === 'High');
 ```
 
-You should not use any `if` or `else` statements
+คุณไม่ควรใช้คำสั่ง `if` หรือ `else`
 
 ```js
 assert(!/else/g.test(code) || !/if/g.test(code));
 ```
 
-You should have nine `case` statements
+คุณควรมีคำสั่ง `case` อย่างน้อยเก้าคำสั่ง
 
 ```js
 assert(code.match(/case/g).length === 9);

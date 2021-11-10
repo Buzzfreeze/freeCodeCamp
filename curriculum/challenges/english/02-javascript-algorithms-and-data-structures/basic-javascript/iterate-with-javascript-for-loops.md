@@ -9,21 +9,22 @@ dashedName: iterate-with-javascript-for-loops
 
 # --description--
 
-You can run the same code multiple times by using a loop.
+คุณสามารถรันโค้ดเดียวกันหลายๆ ครั้งโดยใช้ loop
 
-The most common type of JavaScript loop is called a `for` loop because it runs for a specific number of times.
+JavaScript โดยทั่วไปนิยมใช้ `for` loop มากที่สุดเพราะรันตามจำนวนครั้งที่ระบุ
 
-For loops are declared with three optional expressions separated by semicolons:
+For loops มีการประกาศ expression 3 ส่วน แต่ละส่วนคั่นด้วย semicolons  
 
-`for (a; b; c)`, where `a` is the intialization statement, `b` is the condition statement, and `c` is the final expression.
+`for (a; b; c)` ซึ่ง `a` เป็นคำสั่งเริ่มต้น `b` เป็นคำสั่งเงื่อนไข และ `c` เป็น expression ท้ายสุด
 
-The initialization statement is executed one time only before the loop starts. It is typically used to define and setup your loop variable.
+คำสั่งเริ่มต้นจะทำงานหนึ่งครั้งเท่านั้นก่อน loop จะเริ่มต้น โดยทั่วไปมักใช้ในการประกาศ และตั้งค่าตัวแปรให้ loop 
 
-The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it evaluates to `true`. When the condition is `false` at the start of the iteration, the loop will stop executing. This means if the condition starts as false, your loop will never execute.
 
-The final expression is executed at the end of each loop iteration, prior to the next condition check and is usually used to increment or decrement your loop counter.
+คำสั่งเงื่อนไขจะถูกพิจารณาตั้งแต่เริ่มต้นของ loop ทุกครั้ง และจะทำต่อเนื่องไปตราบที่เงื่อนไขยังเป็น `true` ถ้าเงื่อนไขเป็น `false` ตั้งแต่เริ่มต้น loop จะหยุดทำงาน นั่นหมายถึงถ้าเงื่อนไขเริ่มต้นเป็น false แล้ว loop ของจะไม่ทำงานเลย
 
-In the following example we initialize with `i = 0` and iterate while our condition `i < 5` is true. We'll increment `i` by `1` in each loop iteration with `i++` as our final expression.
+expression สุดท้าย จะทำงานท้ายสุดของแต่ละการวน loop ก่อนเงื่อนไขของ loop ถัดไปจะถูกเช็ค และส่วนใหญ่ใช้ในการเพิ่ม หรือลด loop counter (ตัวนับ loop)
+
+ในตัวอย่างด้านล่าง เรากำหนดค่าเริ่มต้นด้วย `i = 0` และวนอ่านหากเงื่อนไข  `i < 5` เป็นจริง เราจะเพิ่มค่า `i` ทีละ `1` ในแต่ละรอบการวน loop ด้วย `i++` ซึ่งเป็น expression สุดท้ายของเรา
 
 ```js
 var ourArray = [];
@@ -32,21 +33,23 @@ for (var i = 0; i < 5; i++) {
 }
 ```
 
-`ourArray` will now have the value `[0,1,2,3,4]`.
+
+`ourArray` ตอนนี้จะมีค่า `[0,1,2,3,4]`
 
 # --instructions--
 
-Use a `for` loop to push the values 1 through 5 onto `myArray`.
+จงใช้ `for` loop เพื่อ push ค่า 1 ถึง 5 ให้กับ `myArray`
 
 # --hints--
 
-You should be using a `for` loop for this.
+
+คุณควรใช้ `for` loop
 
 ```js
 assert(/for\s*\([^)]+?\)/.test(code));
 ```
 
-`myArray` should equal `[1,2,3,4,5]`.
+`myArray` ควรเท่ากับ `[1,2,3,4,5]`
 
 ```js
 assert.deepEqual(myArray, [1, 2, 3, 4, 5]);

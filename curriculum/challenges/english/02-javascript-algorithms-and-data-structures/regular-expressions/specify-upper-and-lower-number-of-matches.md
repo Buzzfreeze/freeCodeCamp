@@ -8,11 +8,11 @@ dashedName: specify-upper-and-lower-number-of-matches
 
 # --description--
 
-Recall that you use the plus sign `+` to look for one or more characters and the asterisk `*` to look for zero or more characters. These are convenient but sometimes you want to match a certain range of patterns.
+จากบทที่ผ่านมา คุณใช้ plus sign `+` ค้นหาตัวอักษร 1 ตัวหรือมากกว่า และ asterisk `*` เพื่อค้นหาตัวอักษร 0 ตัวหรือมากกว่า ทั้งสองตัวนี้ต่างก็ใช้งานสะดวก แต่บางครั้งคุณอาจต้องการ match pattern เป็นช่วง 
 
-You can specify the lower and upper number of patterns with <dfn>quantity specifiers</dfn>. Quantity specifiers are used with curly brackets (`{` and `}`). You put two numbers between the curly brackets - for the lower and upper number of patterns.
+คุณสามารถระบุจำนวนขั้นต่ำ (lower) และจำนวนสูงสุด (upper) ของ pattern ด้วย <dfn>quantity specifiers</dfn> ซึ่ง Quantity specifiers ใช้กับวงเล็บปีกกา (`{` และ `}`) คุณใส่ตัวเลขทั้งสองที่เป็นจำนวนขั้นต่ำและจำนวนสูงสุดของ pattern ภายในวงเล็บปีกกา
 
-For example, to match only the letter `a` appearing between `3` and `5` times in the string `ah`, your regex would be `/a{3,5}h/`.
+ตัวอย่างเช่น การ match ก็ต่อเมื่อมีตัวอักษร `a` จำนวน `3` ถึง `5` ตัวอยู่ใน string `ah` คุณสามารถเขียน regex ได้เป็น `/a{3,5}h/`
 
 ```js
 let A4 = "aaaah";
@@ -22,52 +22,52 @@ multipleA.test(A4);
 multipleA.test(A2);
 ```
 
-The first `test` call would return `true`, while the second would return `false`.
+การเรียก `test` ครั้งแรกคืนค่า `true` ในขณะที่ครั้งที่สองจะคืนค่า `false`
 
 # --instructions--
 
-Change the regex `ohRegex` to match the entire phrase `Oh no` only when it has `3` to `6` letter `h`'s.
+จงปรับแก้ regex `ohRegex` เพื่อ match ก็ต่อเมื่อมีตัวอักษร `h` จำนวน `3` ถึง `6` ตัว อยู่ในวลี `Oh no` 
 
 # --hints--
 
-Your regex should use curly brackets.
+regex ของคุณควรใช้ curly brackets
 
 ```js
 assert(ohRegex.source.match(/{.*?}/).length > 0);
 ```
 
-Your regex should not match the string `Ohh no`
+regex ของคุณไม่ควร match กับ string `Ohh no`
 
 ```js
 ohRegex.lastIndex = 0;
 assert(!ohRegex.test('Ohh no'));
 ```
 
-Your regex should match the string `Ohhh no`
+regex ของคุณควร match กับ string `Ohhh no`
 
 ```js
 assert('Ohhh no'.match(ohRegex)[0].length === 7);
 ```
 
-Your regex should match the string `Ohhhh no`
+regex ของคุณควร match กับ string `Ohhhh no`
 
 ```js
 assert('Ohhhh no'.match(ohRegex)[0].length === 8);
 ```
 
-Your regex should match the string `Ohhhhh no`
+regex ของคุณควร match กับ string `Ohhhhh no`
 
 ```js
 assert('Ohhhhh no'.match(ohRegex)[0].length === 9);
 ```
 
-Your regex should match the string `Ohhhhhh no`
+regex ของคุณควร match กับ string `Ohhhhhh no`
 
 ```js
 assert('Ohhhhhh no'.match(ohRegex)[0].length === 10);
 ```
 
-Your regex should not match the string `Ohhhhhhh no`
+regex ของคุณไม่ควร match กับ string `Ohhhhhhh no`
 
 ```js
 ohRegex.lastIndex = 0;

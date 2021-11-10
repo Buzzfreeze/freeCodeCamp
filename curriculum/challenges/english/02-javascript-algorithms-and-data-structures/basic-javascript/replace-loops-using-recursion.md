@@ -10,7 +10,7 @@ dashedName: replace-loops-using-recursion
 
 # --description--
 
-Recursion is the concept that a function can be expressed in terms of itself. To help understand this, start by thinking about the following task: multiply the first `n` elements of an array to create the product of those elements. Using a `for` loop, you could do this:
+# - Recursion (การเรียกตัวเองซ้ำ) เป็นแนวคิดที่ฟังก์ชันสามารถเรียกซ้ำตัวมันเองได้ เพื่อช่วยให้เข้าใจสิ่งนี้ ให้เริ่มต้นด้วยการนึกถึงงานต่อไปนี้: การนำ element `n` ตัวแรกของ array มาคูณกัน หากใช้ลูป `for` คุณจะสามารถทำได้ดังนี้
 
 ```js
   function multiply(arr, n) {
@@ -22,7 +22,7 @@ Recursion is the concept that a function can be expressed in terms of itself. To
   }
 ```
 
-However, notice that `multiply(arr, n) == multiply(arr, n - 1) * arr[n - 1]`. That means you can rewrite `multiply` in terms of itself and never need to use a loop.
+อย่างไรก็ตาม โปรดสังเกตว่า `multiply(arr, n) == multiply(arr, n - 1) * arr[n - 1]` นั่นหมายความว่าคุณสามารถเขียน `multiply` ในรูปแบบตัวมันเองได้และไม่จำเป็นต้องใช้ loop
 
 ```js
   function multiply(arr, n) {
@@ -34,35 +34,35 @@ However, notice that `multiply(arr, n) == multiply(arr, n - 1) * arr[n - 1]`. Th
   }
 ```
 
-The recursive version of `multiply` breaks down like this. In the <dfn>base case</dfn>, where `n <= 0`, it returns 1. For larger values of `n`, it calls itself, but with `n - 1`. That function call is evaluated in the same way, calling `multiply` again until `n <= 0`. At this point, all the functions can return and the original `multiply` returns the answer.
+`multiply` แบบ recursive จะแบ่งขั้นตอนย่อยดังนี้ ใน <dfn>base case</dfn> โดยที่ `n <= 0` จะคืนค่า 1 แต่ถ้า `n > 0` มันจะเรียกตัวเองด้วย `n - 1` ซึ่งจะมีการเรียก `multiply` อีกครั้งเรื่อยๆ จนกระทั่ง `n <= 0` ณ จุดนี้ ฟังก์ชันทั้งหมดสามารถคืนค่าได้ และ `multiply` เดิมจะคืนค่าผลลัพธ์กลับไป
 
-**Note:** Recursive functions must have a base case when they return without calling the function again (in this example, when `n <= 0`), otherwise they can never finish executing.
+# - **หมายเหตุ:** ฟังก์ชันแบบ Recursive ต้องมี base case เพื่อคืนค่าโดยที่ไม่ต้องเรียกฟังก์ชันอีกครั้ง (ในตัวอย่างนี้ เมื่อ `n <= 0`) แต่หากไม่มี base case ก็จะทำให้ Recursive รันแบบไม่มีที่สิ้นสุด
 
 # --instructions--
 
-Write a recursive function, `sum(arr, n)`, that returns the sum of the first `n` elements of an array `arr`.
+จงเขียน recursive function `sum(arr, n)` ที่คืนค่าเป็นผลบวกของ `n` elements แรกของ array `arr`
 
 # --hints--
 
-`sum([1], 0)` should equal 0.
+`sum([1], 0)` ควรเท่ากับ 0
 
 ```js
 assert.equal(sum([1], 0), 0);
 ```
 
-`sum([2, 3, 4], 1)` should equal 2.
+`sum([2, 3, 4], 1)` ควรเท่ากับ 2
 
 ```js
 assert.equal(sum([2, 3, 4], 1), 2);
 ```
 
-`sum([2, 3, 4, 5], 3)` should equal 9.
+`sum([2, 3, 4, 5], 3)` ควรเท่ากับ 9
 
 ```js
 assert.equal(sum([2, 3, 4, 5], 3), 9);
 ```
 
-Your code should not rely on any kind of loops (`for` or `while` or higher order functions such as `forEach`, `map`, `filter`, or `reduce`.).
+โค้ดของคุณไม่ควรใช้ loop ทุกประเภท ((`for` หรือ `while` หรือ higher order functions เช่น `forEach`, `map`, `filter` หรือ `reduce`))
 
 ```js
 assert(
@@ -70,7 +70,7 @@ assert(
 );
 ```
 
-You should use recursion to solve this problem.
+คุณควรใช้ recursive ในการแก้ปัญหานี้
 
 ```js
 assert(

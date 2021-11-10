@@ -9,37 +9,40 @@ dashedName: global-scope-and-functions
 
 # --description--
 
-In JavaScript, <dfn>scope</dfn> refers to the visibility of variables. Variables which are defined outside of a function block have <dfn>Global</dfn> scope. This means, they can be seen everywhere in your JavaScript code.
+ใน JavaScript <dfn>scope</dfn> หมายถึงขอบเขตการมองเห็นตัวแปร ตัวแปรที่กำหนดนอกบล็อกฟังก์ชันจะมีขอบเขต <dfn>Global</dfn> ซึ่งหมายความว่าสามารถพบเห็นได้ทุกที่ในโค้ด JavaScript ของคุณ
 
-Variables which are declared without the `var` keyword are automatically created in the `global` scope. This can create unintended consequences elsewhere in your code or when running a function again. You should always declare your variables with `var`.
+ตัวแปรที่ประกาศโดยไม่ใช้คีย์เวิร์ด `var` จะถูกสร้างขึ้นโดยอัตโนมัติในขอบเขต `global` ซึ่งทำให้เกิดผลลัพธ์ที่ไม่ได้ตั้งใจในส่วนอื่นๆ ในโค้ดของคุณ หรือเมื่อเรียกใช้ฟังก์ชันอีกครั้ง ดังนั้น คุณควรประกาศตัวแปรของคุณด้วย `var` เสมอ
 
 # --instructions--
 
 Using `var`, declare a global variable named `myGlobal` outside of any function. Initialize it with a value of `10`.
 
-Inside function `fun1`, assign `5` to `oopsGlobal` ***without*** using the `var` keyword.
+จงใช้ `var` ประกาศตัวแปร global ชื่อ `myGlobal` วางไว้ข้างนอกฟังก์ชัน และให้มีค่าเริ่มต้นเป็น `10`
+
+ภายใน function `fun1` จงกำหนดค่า `5` ให้กับ `oopsGlobal` ***โดยไม่ใช้*** คีย์เวิร์ด `var`
+
 
 # --hints--
 
-`myGlobal` should be defined
+`myGlobal` ควรถูกสร้าง
 
 ```js
 assert(typeof myGlobal != 'undefined');
 ```
 
-`myGlobal` should have a value of `10`
+`myGlobal` ควรมีค่า `10`
 
 ```js
 assert(myGlobal === 10);
 ```
 
-`myGlobal` should be declared using the `var` keyword
+`myGlobal` ควรประกาศโดยใช้คีย์เวิร์ด `var`
 
 ```js
 assert(/var\s+myGlobal/.test(code));
 ```
 
-`oopsGlobal` should be a global variable and have a value of `5`
+`oopsGlobal` ควรเป็นตัวแปร global และมีค่า `5`
 
 ```js
 assert(typeof oopsGlobal != 'undefined' && oopsGlobal === 5);

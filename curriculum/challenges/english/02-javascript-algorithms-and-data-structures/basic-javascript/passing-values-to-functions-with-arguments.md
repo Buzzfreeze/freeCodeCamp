@@ -9,9 +9,10 @@ dashedName: passing-values-to-functions-with-arguments
 
 # --description--
 
-<dfn>Parameters</dfn> are variables that act as placeholders for the values that are to be input to a function when it is called. When a function is defined, it is typically defined along with one or more parameters. The actual values that are input (or <dfn>"passed"</dfn>) into a function when it is called are known as <dfn>arguments</dfn>.
+<dfn>Parameters</dfn> คือตัวแปรที่ทำหน้าที่เหมือน placeholders (ข้อความในตัวยึด) ที่รับค่าที่เราจะป้อนเข้าไปให้กับฟังก์ชันเมื่อมีการเรียก เมื่อมีการสร้างฟังก์ชัน โดยทั่วไปจะกำหนด parameter ตั้งแต่หนึ่งตัวขึ้นไป ส่วนค่าจริงๆ ที่ป้อน (หรือ <dfn>"ส่ง"</dfn>) เข้าไปในฟังก์ชันเมื่อมีการเรียก เรียกว่า <dfn>arguments</dfn>
 
-Here is a function with two parameters, `param1` and `param2`:
+
+นี่คือ function ที่มี 2 parameter คือ `param1` และ `param2`
 
 ```js
 function testFun(param1, param2) {
@@ -19,21 +20,23 @@ function testFun(param1, param2) {
 }
 ```
 
-Then we can call `testFun` like this: `testFun("Hello", "World");`. We have passed two string arguments, `Hello` and `World`. Inside the function, `param1` will equal the string `Hello` and `param2` will equal the string `World`. Note that you could call `testFun` again with different arguments and the parameters would take on the value of the new arguments.
+จากนั้นเราสามารถเรียก `testFun` ได้ดังนี้: `testFun("Hello", "World");` เราได้ส่ง string arguments 2 ตัว เข้าไป คือ `Hello` กับ `World` โดยภายในฟังก์ชัน ค่าของ `param1` จะเท่ากับ string `Hello` และค่าของ `param2` จะเท่ากับ string `World` 
+หมายเหตุ คุณสามารถเรียก `testFun` ได้อีกครั้งด้วย argument ที่ต่างออกไป และ parameter ก็จะรับค่าจาก argument ใหม่นั้นเข้าไป
 
 # --instructions--
 
-<ol><li>Create a function called <code>functionWithArgs</code> that accepts two arguments and outputs their sum to the dev console.</li><li>Call the function with two numbers as arguments.</li></ol>
+# - <ol><li>จงสร้างฟังก์ชันชื่อ <code>functionWithArgs</code> ที่รับ argument 2 ตัว และแสดงผลรวมของ argument ทั้งสองตัวนั้นที่หน้า console</li><li>จงเรียกใช้ฟังก์ชัน โดยส่งเลข 2 ตัวเข้าไปเป็น argument </li ></ol>
 
 # --hints--
 
-`functionWithArgs` should be a function.
+`functionWithArgs` ควรเป็น function 
+
 
 ```js
 assert(typeof functionWithArgs === 'function');
 ```
 
-`functionWithArgs(1,2)` should output `3`.
+`functionWithArgs(1,2)` ควรได้ผลลัพธ์ `3`
 
 ```js
 if (typeof functionWithArgs === 'function') {
@@ -44,7 +47,8 @@ if (typeof functionWithArgs === 'function') {
 assert(logOutput == 3);
 ```
 
-`functionWithArgs(7,9)` should output `16`.
+`functionWithArgs(7,9)` ควรได้ผลลัพธ์ `16`
+
 
 ```js
 if (typeof functionWithArgs === 'function') {
@@ -55,7 +59,8 @@ if (typeof functionWithArgs === 'function') {
 assert(logOutput == 16);
 ```
 
-You should call `functionWithArgs` with two numbers after you define it.
+คุณควรเรียกใช้ `functionWithArgs` พร้อมกับส่งเลขสองตัวเข้าไปในฟังก์ชันหลังจากที่คุณสร้างฟังก์ชันแล้ว
+
 
 ```js
 assert(

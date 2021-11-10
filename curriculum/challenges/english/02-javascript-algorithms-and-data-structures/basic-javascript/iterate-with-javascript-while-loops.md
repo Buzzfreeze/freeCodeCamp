@@ -9,9 +9,9 @@ dashedName: iterate-with-javascript-while-loops
 
 # --description--
 
-You can run the same code multiple times by using a loop.
+คุณสามารถรันโค้ดเดียวกันหลายครั้งโดยใช้ loop
 
-The first type of loop we will learn is called a `while` loop because it runs while a specified condition is true and stops once that condition is no longer true.
+loop ประเภทแรกที่เราจะเรียนรู้เรียกว่า `while` loop เพราะรันก็ต่อเมื่อเงื่อนไขเป็นจริง และหยุดเมื่อเงื่อนไขนั้นไม่เป็นจริงแล้ว
 
 ```js
 var ourArray = [];
@@ -22,23 +22,25 @@ while(i < 5) {
 }
 ```
 
-In the code example above, the `while` loop will execute 5 times and append the numbers 0 through 4 to `ourArray`.
+ในโค้ดตัวอย่างด้านบน `while` loop จะทำงาน 5 ครั้ง และจะต่อเลข 0 ถึง 4 เข้าไปใน `ourArray`
 
-Let's try getting a while loop to work by pushing values to an array.
+มาลองทำให้ while loop ทำงาน โดยการ push ค่าเข้าไปยัง array
+
 
 # --instructions--
 
-Add the numbers 5 through 0 (inclusive) in descending order to `myArray` using a `while` loop.
+
+จงเพิ่มตัวเลข 5 ถึง 0 (รวม 5 และ 0) ตามลำดับจากมากไปน้อยใน `myArray` โดยใช้ลูป `while`
 
 # --hints--
 
-You should be using a `while` loop for this.
+ในที่นี้คุณควรใช้ `while` loop 
 
 ```js
 assert(code.match(/while/g));
 ```
 
-`myArray` should equal `[5,4,3,2,1,0]`.
+`myArray` ควรเท่ากับ `[5,4,3,2,1,0]`
 
 ```js
 assert.deepEqual(myArray, [5, 4, 3, 2, 1, 0]);

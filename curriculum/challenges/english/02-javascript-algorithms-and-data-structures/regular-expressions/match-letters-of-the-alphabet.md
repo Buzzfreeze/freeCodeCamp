@@ -8,11 +8,11 @@ dashedName: match-letters-of-the-alphabet
 
 # --description--
 
-You saw how you can use <dfn>character sets</dfn> to specify a group of characters to match, but that's a lot of typing when you need to match a large range of characters (for example, every letter in the alphabet). Fortunately, there is a built-in feature that makes this short and simple.
+คุณได้เรียนรู้การใช้ <dfn>character sets</dfn> เพื่อกำหนดกลุ่มของตัวอักษรที่จะ match แต่ยังต้องพิมพ์เป็นจำนวนมาก หากคุณต้องการ match ช่วงตัวอักษรกว้างๆ (เช่น ทุกตัวอักษรในภาษาอังกฤษ) แต่ยังโชคดีที่มีฟีเจอร์ที่ทำให้เขียนสั้นและง่าย
 
-Inside a character set, you can define a range of characters to match using a hyphen character: `-`.
+ภายใน character set คุณสามารถกำหนดช่วงตัวอักษรที่จะ match โดยใช้ hyphen character: `-`
 
-For example, to match lowercase letters `a` through `e` you would use `[a-e]`.
+ตัวอย่างเช่น ต้องการ match ตัวพิมพ์เล็กตั้งแต่ `a` ถึง `e` คุณกำหนดได้ดังนี้ `[a-e]`
 
 ```js
 let catStr = "cat";
@@ -24,29 +24,29 @@ batStr.match(bgRegex);
 matStr.match(bgRegex);
 ```
 
-In order, the three `match` calls would return the values `["cat"]`, `["bat"]`, and `null`.
+การเรียก `match` ทั้ง 3 ครั้งจะคืนค่า `["cat"]`, `["bat"]` และ `null`
 
 # --instructions--
 
-Match all the letters in the string `quoteSample`.
+จง Match ทุกตัวอักษรใน string `quoteSample`
 
-**Note**: Be sure to match both uppercase and lowercase letters.
+**Note**: ตรวจเช็คให้มั่นใจว่า match ทั้งตัวพิมพ์ใหญ่และตัวพิมพ์เล็ก
 
 # --hints--
 
-Your regex `alphabetRegex` should match 35 items.
+regex `alphabetRegex` ควร match 35 items
 
 ```js
 assert(result.length == 35);
 ```
 
-Your regex `alphabetRegex` should use the global flag.
+regex `alphabetRegex` ควรใช้ global flag
 
 ```js
 assert(alphabetRegex.flags.match(/g/).length == 1);
 ```
 
-Your regex `alphabetRegex` should use the case insensitive flag.
+regex `alphabetRegex` ควรใช้ case insensitive flag
 
 ```js
 assert(alphabetRegex.flags.match(/i/).length == 1);

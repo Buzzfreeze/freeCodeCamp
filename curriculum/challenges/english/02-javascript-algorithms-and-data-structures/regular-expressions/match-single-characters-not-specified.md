@@ -8,31 +8,31 @@ dashedName: match-single-characters-not-specified
 
 # --description--
 
-So far, you have created a set of characters that you want to match, but you could also create a set of characters that you do not want to match. These types of character sets are called <dfn>negated character sets</dfn>.
+ที่ผ่านมา คุณสร้างชุดตัวอักษรที่คุณต้องการ match แต่อย่างไรก็ตาม คุณสามารถสร้างชุดตัวอักษรที่คุณไม่ต้องการ match ได้ ซึ่งประเภทชุดตัวอักษรที่ว่านี้ เรียกว่า <dfn>negated character sets</dfn>
 
-To create a negated character set, you place a caret character (`^`) after the opening bracket and before the characters you do not want to match.
+การสร้าง negated character set ทำได้โดยการนำ caret character (`^`) วางหลังวงเล็บเปิด (opening bracket) และอยู่ก่อนตัวอักษรที่คุณไม่ต้องการ match
 
-For example, `/[^aeiou]/gi` matches all characters that are not a vowel. Note that characters like `.`, `!`, `[`, `@`, `/` and white space are matched - the negated vowel character set only excludes the vowel characters.
+ตัวอย่างเช่น `/[^aeiou]/gi` matche ทุกตัวอักษรที่ไม่ใช่สระ โดยตัวอักษร เช่น `.`, `!`, `[`, `@`, `/` และ white space จะถูก match เพราะ negated vowel character set จะไม่รวมตัวอักษรที่เป็นสระเท่านั้น
 
 # --instructions--
 
-Create a single regex that matches all characters that are not a number or a vowel. Remember to include the appropriate flags in the regex.
+จงสร้าง regex ค่าหนึ่งที่ match กับทุกตัวอักษรที่ไม่ใช่ตัวเลขหรือสระ โดยสามารถเพิ่ม flag ที่เหมาะสมใน regex ได้
 
 # --hints--
 
-Your regex `myRegex` should match 9 items.
+regex `myRegex` ควร match 9 items
 
 ```js
 assert(result.length == 9);
 ```
 
-Your regex `myRegex` should use the global flag.
+regex `myRegex` ควรใช้ global flag
 
 ```js
 assert(myRegex.flags.match(/g/).length == 1);
 ```
 
-Your regex `myRegex` should use the case insensitive flag.
+regex `myRegex` ควรใช้ case insensitive flag
 
 ```js
 assert(myRegex.flags.match(/i/).length == 1);

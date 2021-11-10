@@ -9,42 +9,46 @@ dashedName: practice-comparing-different-values
 
 # --description--
 
-In the last two challenges, we learned about the equality operator (`==`) and the strict equality operator (`===`). Let's do a quick review and practice using these operators some more.
+ในสองบทเรียนที่แล้ว เราได้เรียนรู้เกี่ยวกับ equality operator (`==`) และ strict equality operator (`===`) ลองมาทบทวนและฝึกฝนโดยใช้เครื่องหมายเหล่านี้กัน
 
-If the values being compared are not of the same type, the equality operator will perform a type conversion, and then evaluate the values. However, the strict equality operator will compare both the data type and value as-is, without converting one type to the other.
+ถ้าค่าที่เปรียบเทียบไม่ได้มีประเภทเหมือนกัน เครื่องหมาย (`==`) จะทำการแปลงประเภทข้อมูล แล้วจึงเปรียบเทียบค่า แต่เครื่องหมาย (`===`) จะเปรียบเทียบทั้ง ประเภทข้อมูล และข้อมูลต้องเหมือนกัน โดยไม่มีการแปลงประเภทข้อมูลหนึ่งไปเป็นอีกประเภทหนึ่ง 
+
+
 
 **Examples**
 
-`3 == '3'` returns `true` because JavaScript performs type conversion from string to number. `3 === '3'` returns false because the types are different and type conversion is not performed.
+`3 == '3'` คืนค่า `true` เนื่องจาก JavaScript จะทำการแปลง string เป็น number ส่วน `3 === '3'` จะคืนค่า false เพราะประเภทข้อมูลต่างกัน และไม่ได้ทำการแปลงประเภท
 
-**Note:** In JavaScript, you can determine the type of a variable or a value with the `typeof` operator, as follows:
+**หมายเหตุ:** ใน JavaScript คุณสามารถตรวจสอบประเภทของตัวแปร หรือค่าได้ด้วย `typeof` operator ดังนี้:
+
 
 ```js
 typeof 3
 typeof '3'
 ```
 
-`typeof 3` returns the string `number`, and `typeof '3'` returns the string `string`.
+`typeof 3` จะคืนค่า string `number` และ `typeof '3'` จะคืนค่า string `string`
 
 # --instructions--
 
-The `compareEquality` function in the editor compares two values using the equality operator. Modify the function so that it returns the string `Equal` only when the values are strictly equal.
+ฟังก์ชัน `compareEquality` ใน editor จะเปรียบเทียบค่าสองค่า โดยใช้เครื่องหมาย (`==`) จงปรับแก้ฟังก์ชันเพื่อให้คืนค่า string `Equal` เมื่อข้อมูลเท่ากันทั้งประเภทข้อมูลและค่าข้อมูลเท่านั้น
+
 
 # --hints--
 
-`compareEquality(10, "10")` should return the string `Not Equal`
+`compareEquality(10, "10")` ควรคืนค่า string `Not Equal`
 
 ```js
 assert(compareEquality(10, '10') === 'Not Equal');
 ```
 
-`compareEquality("20", 20)` should return the string `Not Equal`
+`compareEquality("20", 20)` ควรคืนค่า string `Not Equal`
 
 ```js
 assert(compareEquality('20', 20) === 'Not Equal');
 ```
 
-You should use the `===` operator
+คุณควรใช้ `===` operator
 
 ```js
 assert(code.match(/===/g));

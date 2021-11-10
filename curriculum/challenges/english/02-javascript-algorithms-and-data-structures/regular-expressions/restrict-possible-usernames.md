@@ -8,109 +8,109 @@ dashedName: restrict-possible-usernames
 
 # --description--
 
-Usernames are used everywhere on the internet. They are what give users a unique identity on their favorite sites.
+Usernames มีการใช้งานทุกที่บนอินเทอร์เน็ต เป็นเหมือนเอกลักษณ์เฉพาะตัวของผู้ใช้งานในการเข้าใช้งานเว็บไซต์
 
-You need to check all the usernames in a database. Here are some simple rules that users have to follow when creating their username.
+คุณต้องตรวจสอบทุก usernames ในฐานข้อมูล รายการต่อไปนี้เป็นกฎเกณฑ์ที่ผู้ใช้งานต้องปฏิบัติตามเมื่อสร้าง username ของตนเอง
 
-1) Usernames can only use alpha-numeric characters.
+1) Usernames สามารถมีอักขระที่เป็นตัวเลขและตัวอักษรเท่านั้น (alpha-numeric characters)
 
-2) The only numbers in the username have to be at the end. There can be zero or more of them at the end. Username cannot start with the number.
+2) หากมีตัวเลข ต้องอยู่ในตำแหน่งท้ายสุดเท่านั้น และมีได้ 0 ตัวหรือมากกว่า 0 โดย Username ไม่สามารถเริ่มต้นด้วยตัวเลข
 
-3) Username letters can be lowercase and uppercase.
+3) Username สามารถระบุด้วยตัวอักษรพิมพ์เล็กหรือพิมพ์ใหญ่ก็ได้
 
-4) Usernames have to be at least two characters long. A two-character username can only use alphabet letters as characters.
+4) Usernames ต้องมีความยาวอย่างน้อย 2 ตัวอักษร ซึ่งหากมีเพิียง 2 ตัวอักษร ทั้ง 2 ตัวอักษรต้องเป็นพยัญชนะเท่านั้น
 
 # --instructions--
 
-Change the regex `userCheck` to fit the constraints listed above.
+จงปรับแก้ regex `userCheck` เพื่อให้สอดคล้องกับเงื่อนไขที่ระบุด้านบน
 
 # --hints--
 
-Your regex should match the string `JACK`
+regex ของคุณควร match กับ string `JACK`
 
 ```js
 userCheck.lastIndex = 0;
 assert(userCheck.test('JACK'));
 ```
 
-Your regex should not match the string `J`
+regex ของคุณไม่ควร match กับ string `J`
 
 ```js
 userCheck.lastIndex = 0;
 assert(!userCheck.test('J'));
 ```
 
-Your regex should match the string `Jo`
+regex ของคุณควร match กับ string `Jo`
 
 ```js
 userCheck.lastIndex = 0;
 assert(userCheck.test('Jo'));
 ```
 
-Your regex should match the string `Oceans11`
+regex ของคุณควร match กับ string `Oceans11`
 
 ```js
 userCheck.lastIndex = 0;
 assert(userCheck.test('Oceans11'));
 ```
 
-Your regex should match the string `RegexGuru`
+regex ของคุณควร match กับ string `RegexGuru`
 
 ```js
 userCheck.lastIndex = 0;
 assert(userCheck.test('RegexGuru'));
 ```
 
-Your regex should not match the string `007`
+regex ของคุณไม่ควร match กับ string `007`
 
 ```js
 userCheck.lastIndex = 0;
 assert(!userCheck.test('007'));
 ```
 
-Your regex should not match the string `9`
+regex ของคุณไม่ควร match กับ string `9`
 
 ```js
 userCheck.lastIndex = 0;
 assert(!userCheck.test('9'));
 ```
 
-Your regex should not match the string `A1`
+regex ของคุณไม่ควร match กับ string `A1`
 
 ```js
 userCheck.lastIndex = 0;
 assert(!userCheck.test('A1'));
 ```
 
-Your regex should not match the string `BadUs3rnam3`
+regex ของคุณไม่ควร match กับ string `BadUs3rnam3`
 
 ```js
 userCheck.lastIndex = 0;
 assert(!userCheck.test('BadUs3rnam3'));
 ```
 
-Your regex should match the string `Z97`
+regex ของคุณควร match กับ string `Z97`
 
 ```js
 userCheck.lastIndex = 0;
 assert(userCheck.test('Z97'));
 ```
 
-Your regex should not match the string `c57bT3`
+regex ของคุณไม่ควร match กับ string `c57bT3`
 
 ```js
 userCheck.lastIndex = 0;
 assert(!userCheck.test('c57bT3'));
 ```
 
-Your regex should match the string `AB1`
+regex ของคุณควร match กับ string `AB1`
 
 ```js
 userCheck.lastIndex = 0;
 assert(userCheck.test('AB1'));
 ```
 
-Your regex should not match the string `J%4`
+regex ของคุณไม่ควร match กับ string `J%4`
 
 ```js
 userCheck.lastIndex = 0;

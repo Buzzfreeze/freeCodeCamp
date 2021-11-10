@@ -9,77 +9,78 @@ dashedName: golf-code
 
 # --description--
 
-In the game of [golf](https://en.wikipedia.org/wiki/Golf), each hole has a `par`, meaning, the average number of `strokes` a golfer is expected to make in order to sink the ball in the hole to complete the play. Depending on how far above or below `par` your `strokes` are, there is a different nickname.
+ในเกม [golf](https://en.wikipedia.org/wiki/Golf) แต่ละหลุมมี `par` หมายถึงจำนวนเฉลี่ยของ `strokes` ที่นักกอล์ฟทำให้บอลลงหลุมได้ ก็ถือว่าเกมจบ ทั้งนี้ขึ้นอยู่กับว่า `strokes` ของคุณมากหรือน้อยกว่า `par` ก็จะใช้ชื่อเล่นที่ต่างกัน
 
-Your function will be passed `par` and `strokes` arguments. Return the correct string according to this table which lists the strokes in order of priority; top (highest) to bottom (lowest):
+function ของคุณจะรับ argument `par` และ `strokes` แล้วคืนค่า string ที่ถูกต้อง ตามตารางที่ลิสต์ stroke ตามลำดับความสำคัญ top (สูงสุด) ถึง bottom (ต่ำสุด):
+
 
 <table class='table table-striped'><thead><tr><th>Strokes</th><th>Return</th></tr></thead><tbody><tr><td>1</td><td>"Hole-in-one!"</td></tr><tr><td>&#x3C;= par - 2</td><td>"Eagle"</td></tr><tr><td>par - 1</td><td>"Birdie"</td></tr><tr><td>par</td><td>"Par"</td></tr><tr><td>par + 1</td><td>"Bogey"</td></tr><tr><td>par + 2</td><td>"Double Bogey"</td></tr><tr><td>>= par + 3</td><td>"Go Home!"</td></tr></tbody></table>
 
-`par` and `strokes` will always be numeric and positive. We have added an array of all the names for your convenience.
+`par` และ `strokes` จะเป็นตัวเลขที่เป็นบวกเสมอ เราได้เพิ่ม array ของชื่อทั้งหมดเพื่อความสะดวกของคุณ
 
 # --hints--
 
-`golfScore(4, 1)` should return the string `Hole-in-one!`
+`golfScore(4, 1)` ควรคืนค่า string `Hole-in-one!`
 
 ```js
 assert(golfScore(4, 1) === 'Hole-in-one!');
 ```
 
-`golfScore(4, 2)` should return the string `Eagle`
+`golfScore(4, 2)` ควรคืนค่า string `Eagle`
 
 ```js
 assert(golfScore(4, 2) === 'Eagle');
 ```
 
-`golfScore(5, 2)` should return the string `Eagle`
+`golfScore(5, 2)` ควรคืนค่า string `Eagle`
 
 ```js
 assert(golfScore(5, 2) === 'Eagle');
 ```
 
-`golfScore(4, 3)` should return the string `Birdie`
+`golfScore(4, 3)` ควรคืนค่า string `Birdie`
 
 ```js
 assert(golfScore(4, 3) === 'Birdie');
 ```
 
-`golfScore(4, 4)` should return the string `Par`
+`golfScore(4, 4)` ควรคืนค่า string `Par`
 
 ```js
 assert(golfScore(4, 4) === 'Par');
 ```
 
-`golfScore(1, 1)` should return the string `Hole-in-one!`
+`golfScore(1, 1)` ควรคืนค่า string `Hole-in-one!`
 
 ```js
 assert(golfScore(1, 1) === 'Hole-in-one!');
 ```
 
-`golfScore(5, 5)` should return the string `Par`
+`golfScore(5, 5)` ควรคืนค่า string `Par`
 
 ```js
 assert(golfScore(5, 5) === 'Par');
 ```
 
-`golfScore(4, 5)` should return the string `Bogey`
+`golfScore(4, 5)` ควรคืนค่า string `Bogey`
 
 ```js
 assert(golfScore(4, 5) === 'Bogey');
 ```
 
-`golfScore(4, 6)` should return the string `Double Bogey`
+`golfScore(4, 6)` ควรคืนค่า string `Double Bogey`
 
 ```js
 assert(golfScore(4, 6) === 'Double Bogey');
 ```
 
-`golfScore(4, 7)` should return the string `Go Home!`
+`golfScore(4, 7)` ควรคืนค่า string `Go Home!`
 
 ```js
 assert(golfScore(4, 7) === 'Go Home!');
 ```
 
-`golfScore(5, 9)` should return the string `Go Home!`
+`golfScore(5, 9)` ควรคืนค่า string `Go Home!`
 
 ```js
 assert(golfScore(5, 9) === 'Go Home!');

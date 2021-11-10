@@ -10,38 +10,38 @@ dashedName: comment-your-javascript-code
 
 # --description--
 
-Comments are lines of code that JavaScript will intentionally ignore. Comments are a great way to leave notes to yourself and to other people who will later need to figure out what that code does.
+Comment คือบรรทัดของโค้ดที่ JavaScript จะตั้งใจปล่อยผ่าน การ Comment เป็นวิธีในการจดบันทึกให้ตัวคุณ หรือผู้อื่นที่ต้องการทราบในภายหลังว่าโค้ดนั้นใช้ทำอะไร
 
-There are two ways to write comments in JavaScript:
+ในภาษา JavaScript มีการเขียน comments อยู่ 2 วิธี:
 
-Using `//` will tell JavaScript to ignore the remainder of the text on the current line. This is an in-line comment:
+การใช้ `//` จะบอก JavaScript ให้ปล่อยผ่านข้อความที่เหลือในบรรทัดนั้นๆ เรียกว่า in-line comment:
 
 ```js
 // This is an in-line comment.
 ```
 
-You can make a multi-line comment beginning with `/*` and ending with `*/`. This is a multi-line comment:
+คุณสามารถ comment หลายบรรทัด โดยเริ่มต้นด้วย `/*` และจบด้วยด้วย `*/` ซึ่งเรียกว่า multi-line comment:
 
 ```js
 /* This is a
 multi-line comment */
 ```
 
-**NOTE:** As you write code, you should regularly add comments to clarify the function of parts of your code. Good commenting can help communicate the intent of your code—both for others *and* for your future self.
+**หมายเหตุ:** ในขณะที่คุณเขียน code คุณควรใส่ comment เป็นประจำ เพื่ออธิบายการทำงานของส่วนต่างๆ ของ code  การ comment ที่ดี จะช่วยสื่อสารวัตถุประสงค์ของคุณกับผู้อื่น และสำหรับตัวคุณเองในอนาคต
 
 # --instructions--
 
-Try creating one of each type of comment.
+ลองสร้าง comment แต่ละประเภท
 
 # --hints--
 
-You should create a `//` style comment that contains at least five letters.
+คุณควรสร้าง comment โดยใช้ `//` ซึ่ง comment ประกอบด้วยอย่างน้อย 5 ตัวอักษร
 
 ```js
 assert(code.match(/(\/\/)...../g));
 ```
 
-You should create a `/* */` style comment that contains at least five letters.
+คุณควรสร้าง comment โดยใช้ `/* */` ซึ่ง comment ประกอบด้วยอย่างน้อย 5 ตัวอักษร
 
 ```js
 assert(code.match(/(\/\*)([^\/]{5,})(?=\*\/)/gm));

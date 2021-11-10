@@ -9,30 +9,31 @@ dashedName: constructing-strings-with-variables
 
 # --description--
 
-Sometimes you will need to build a string, [Mad Libs](https://en.wikipedia.org/wiki/Mad_Libs) style. By using the concatenation operator (`+`), you can insert one or more variables into a string you're building.
+บางครั้ง คุณต้องการสร้าง string ที่มีรูปแบบ [Mad Libs](https://en.wikipedia.org/wiki/Mad_Libs) หากใช้ concatenation operator (`+`)คุณจะสามารถแทรกตัวแปรตั้งแต่หนึ่งตัวขึ้นไปลงไปใน string ที่คุณกำลังสร้างได้
 
-Example:
+ตัวอย่าง:
 
 ```js
 var ourName = "freeCodeCamp";
 var ourStr = "Hello, our name is " + ourName + ", how are you?";
 ```
 
-`ourStr` would have a value of the string `Hello, our name is freeCodeCamp, how are you?`.
+`ourStr` ควรมีค่า string เป็น `Hello, our name is freeCodeCamp, how are you?`
 
 # --instructions--
 
-Set `myName` to a string equal to your name and build `myStr` with `myName` between the strings `My name is ` and ` and I am well!`
+จงสร้างตัวแปร `myName` เป็น string ที่มีค่าเป็นชื่อของคุณ และสร้างตัวแปร `myStr` โดยนำ `myName` มาวางอยู่ระหว่าง string `My name is ` และ ` and I am well!`
+
 
 # --hints--
 
-`myName` should be set to a string at least 3 characters long.
+`myName`ควรกำหนดเป็น string ที่มีความยาวอย่างน้อย 3 ตัวอักษร
 
 ```js
 assert(typeof myName !== 'undefined' && myName.length > 2);
 ```
 
-You should use two `+` operators to build `myStr` with `myName` inside it.
+คุณควรใช้ `+` operators 2 ตัว ในการสร้าง `myStr` ที่มี `myName` อยู่ภายใน
 
 ```js
 assert(code.match(/["']\s*\+\s*myName\s*\+\s*["']/g).length > 0);

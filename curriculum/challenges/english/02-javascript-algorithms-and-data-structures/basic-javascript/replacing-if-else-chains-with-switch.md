@@ -9,7 +9,7 @@ dashedName: replacing-if-else-chains-with-switch
 
 # --description--
 
-If you have many options to choose from, a `switch` statement can be easier to write than many chained `if`/`else if` statements. The following:
+หากคุณมีหลายตัวเลือกให้เลือก `switch` statement จะสามารถเขียนได้ง่ายกว่า `if`/`else if` statements หลายชุด ดังตัวอย่างต่อไปนี้:
 
 ```js
 if (val === 1) {
@@ -21,7 +21,7 @@ if (val === 1) {
 }
 ```
 
-can be replaced with:
+สามารถเขียนแทนด้วย
 
 ```js
 switch(val) {
@@ -38,65 +38,65 @@ switch(val) {
 
 # --instructions--
 
-Change the chained `if`/`else if` statements into a `switch` statement.
+จงแก้ชุดคำสั่ง `if`/`else if` ให้เป็นคำสั่ง `switch` 
 
 # --hints--
 
-You should not use any `else` statements anywhere in the editor
+คุณไม่ควรใช้คำสั่ง `else` เลยใน editor
 
 ```js
 assert(!/else/g.test(code));
 ```
 
-You should not use any `if` statements anywhere in the editor
+คุณไม่ควรใช้คำสั่ง `if`  เลยใน editor
 
 ```js
 assert(!/if/g.test(code));
 ```
 
-You should have at least four `break` statements
+คุณควรมีคำสั่ง `break` อย่างน้อยสี่คำสั่ง
 
 ```js
 assert(code.match(/break/g).length >= 4);
 ```
 
-`chainToSwitch("bob")` should be the string `Marley`
+`chainToSwitch("bob")` ควรคืนค่า string `Marley`
 
 ```js
 assert(chainToSwitch('bob') === 'Marley');
 ```
 
-`chainToSwitch(42)` should be the string `The Answer`
+`chainToSwitch(42)` ควรคืนค่า string `The Answer`
 
 ```js
 assert(chainToSwitch(42) === 'The Answer');
 ```
 
-`chainToSwitch(1)` should be the string `There is no #1`
+`chainToSwitch(1)` ควรคืนค่า string `There is no #1`
 
 ```js
 assert(chainToSwitch(1) === 'There is no #1');
 ```
 
-`chainToSwitch(99)` should be the string `Missed me by this much!`
+`chainToSwitch(99)` ควรคืนค่า string `Missed me by this much!`
 
 ```js
 assert(chainToSwitch(99) === 'Missed me by this much!');
 ```
 
-`chainToSwitch(7)` should be the string `Ate Nine`
+`chainToSwitch(7)` ควรคืนค่า string `Ate Nine`
 
 ```js
 assert(chainToSwitch(7) === 'Ate Nine');
 ```
 
-`chainToSwitch("John")` should be `""` (empty string)
+`chainToSwitch("John")` ควรเป็น `""` (string เปล่า)
 
 ```js
 assert(chainToSwitch('John') === '');
 ```
 
-`chainToSwitch(156)` should be `""` (empty string)
+`chainToSwitch(156)` ควรเป็น `""` (string เปล่า)
 
 ```js
 assert(chainToSwitch(156) === '');

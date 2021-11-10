@@ -9,21 +9,23 @@ dashedName: nest-one-array-within-another-array
 
 # --description--
 
-You can also nest arrays within other arrays, like below:
+คุณสามารถซ้อน array ไว้ใน array อื่นๆ ได้อีก เช่น ตัวอย่างด้านล่าง:  
+
 
 ```js
 [["Bulls", 23], ["White Sox", 45]]
 ```
 
-This is also called a <dfn>multi-dimensional array</dfn>.
+นี่คือสิ่งที่เรียกว่า <dfn>multi-dimensional array</dfn>.
 
 # --instructions--
 
-Create a nested array called `myArray`.
+จงสร้าง array ซ้อน array ชื่อ `myArray`
 
 # --hints--
 
-`myArray` should have at least one array nested within another array.
+`myArray`  ควรมีอย่างน้อยหนึ่ง array ซ้อนอยู่ใน array อีกตัว 
+
 
 ```js
 assert(Array.isArray(myArray) && myArray.some(Array.isArray));

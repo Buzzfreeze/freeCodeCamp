@@ -9,31 +9,31 @@ dashedName: generate-random-fractions-with-javascript
 
 # --description--
 
-Random numbers are useful for creating random behavior.
+ตัวเลขสุ่มมีประโยชน์สำหรับการสร้างการทำงานแบบสุ่่ม
 
-JavaScript has a `Math.random()` function that generates a random decimal number between `0` (inclusive) and `1` (exclusive). Thus `Math.random()` can return a `0` but never return a `1`.
+JavaScript มี function `Math.random()` ที่สร้างเลขทศนิยมระหว่าง `0` (รวม) ถึง `1` (ไม่รวม) โดย `Math.random()` สามารถคืนค่า `0` แต่ไม่คืนค่า `1`
 
-**Note:** Like [Storing Values with the Assignment Operator](/learn/javascript-algorithms-and-data-structures/basic-javascript/storing-values-with-the-assignment-operator), all function calls will be resolved before the `return` executes, so we can `return` the value of the `Math.random()` function.
+# - **หมายเหตุ:** เช่นเดียวกับ [Storing Values ​​with the Assignment Operator](/learn/javascript-algorithms-and-data-structures/basic-javascript/storing-values-with-the-assign-operator) การเรียกใช้ฟังก์ชันทั้งหมดจะถูกทำงานก่อนที่จะ `return` เพื่อให้เราสามารถ `return` ค่าของฟังก์ชัน `Math.random()` ได้
 
 # --instructions--
 
-Change `randomFraction` to return a random number instead of returning `0`.
+จงแก้ไข `randomFraction` เพื่อคืนค่าตัวเลขสุ่ม แทนที่จะคืนค่า `0`
 
 # --hints--
 
-`randomFraction` should return a random number.
+`randomFraction` ควรคืนค่า random number
 
 ```js
 assert(typeof randomFraction() === 'number');
 ```
 
-The number returned by `randomFraction` should be a decimal.
+ตัวเลขที่คืนค่าด้วย `randomFraction` ควรเป็นทศนิยม
 
 ```js
 assert((randomFraction() + '').match(/\./g));
 ```
 
-You should be using `Math.random` to generate the random decimal number.
+คุณควรใช้  `Math.random` ในการสร้างเลขทศนิยมแบบสุ่ม
 
 ```js
 assert(code.match(/Math\.random/g).length >= 0);

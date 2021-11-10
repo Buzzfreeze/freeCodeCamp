@@ -9,21 +9,20 @@ dashedName: declare-string-variables
 
 # --description--
 
-Previously we have used the code
+ก่อนหน้านี้ เราได้เขียนโค้ด
 
 ```js
 var myName = "your name";
 ```
 
-`"your name"` is called a <dfn>string</dfn> <dfn>literal</dfn>. It is a string because it is a series of zero or more characters enclosed in single or double quotes.
+`"your name"` เรียกว่า <dfn>string</dfn> <dfn>literal</dfn> สาเหตุที่เรียกว่า string เพราะเป็นชุดตัวอักษรตั้งแต่ 0 ตัวขึ้นไป อยู่ในเครื่องหมายคำพูดที่เป็น single quotes หรือ double quotes
 
 # --instructions--
 
-Create two new string variables: `myFirstName` and `myLastName` and assign them the values of your first and last name, respectively.
-
+จงสร้างตัวแปร string 2 ตัว คือ `myFirstName` และ `myLastName` แล้วกำหนดค่าเป็นชื่อและนามสกุลของคุณตามลำดับ
 # --hints--
 
-`myFirstName` should be a string with at least one character in it.
+`myFirstName` ควรเป็น string ที่มีอย่างน้อย 1 ตัวอักษร
 
 ```js
 assert(
@@ -41,7 +40,7 @@ assert(
 );
 ```
 
-`myLastName` should be a string with at least one character in it.
+`myLastName` ควรเป็น string ที่มีอย่างน้อย 1 ตัวอักษร
 
 ```js
 assert(

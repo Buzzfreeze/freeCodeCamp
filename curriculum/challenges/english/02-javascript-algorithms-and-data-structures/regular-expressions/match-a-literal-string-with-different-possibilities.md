@@ -8,63 +8,63 @@ dashedName: match-a-literal-string-with-different-possibilities
 
 # --description--
 
-Using regexes like `/coding/`, you can look for the pattern `coding` in another string.
+การใช้ regexes เช่น `/coding/` ทำให้คุณสามารถค้นหา pattern (รูปแบบ) `coding` ใน string อีกตัวนึง
 
-This is powerful to search single strings, but it's limited to only one pattern. You can search for multiple patterns using the `alternation` or `OR` operator: `|`.
+วิธีนี้มีประสิทธิภาพในการค้นหา string เดียว และจำกัดไว้เพียง pattern เดียวเท่านั้น อย่างไรก็ตาม คุณสามารถค้นหาหลาย patterns โดยใช้ `alternation` หรือ `OR` operator: `|`
 
-This operator matches patterns either before or after it. For example, if you wanted to match the strings `yes` or `no`, the regex you want is `/yes|no/`.
+operator นี้จะทำการ match patterns ที่อยู่ก่อนหน้าหรือหลัง operator ยกตัวอย่างเช่น ถ้าคุณต้องการ match ค่า string `yes` หรือ `no` คุณควรกำหนด regex เป็น `/yes|no/` 
 
-You can also search for more than just two patterns. You can do this by adding more patterns with more `OR` operators separating them, like `/yes|no|maybe/`.
+นอกจากนี้ คุณยังสามารถค้นหามากกว่า 2 patterns โดยการเพิ่ม pattern และใส่ `OR` operators เข้าไป เช่น `/yes|no|maybe/`
 
 # --instructions--
 
-Complete the regex `petRegex` to match the pets `dog`, `cat`, `bird`, or `fish`.
+จงทำให้ regex `petRegex` สมบูรณ์ เพื่อ match สัตว์เลี้ยง `dog`, `cat`, `bird` หรือ `fish`
 
 # --hints--
 
-Your regex `petRegex` should return `true` for the string `John has a pet dog.`
+regex `petRegex` ของคุณควรคืนค่า `true` หากค้นหาใน string `John has a pet dog.`
 
 ```js
 petRegex.lastIndex = 0;
 assert(petRegex.test('John has a pet dog.'));
 ```
 
-Your regex `petRegex` should return `false` for the string `Emma has a pet rock.`
+regex `petRegex` ของคุณควรคืนค่า `false` หากค้นหาใน string `Emma has a pet rock.`
 
 ```js
 petRegex.lastIndex = 0;
 assert(!petRegex.test('Emma has a pet rock.'));
 ```
 
-Your regex `petRegex` should return `true` for the string `Emma has a pet bird.`
+regex `petRegex` ของคุณควรคืนค่า `true` หากค้นหาใน string `Emma has a pet bird.`
 
 ```js
 petRegex.lastIndex = 0;
 assert(petRegex.test('Emma has a pet bird.'));
 ```
 
-Your regex `petRegex` should return `true` for the string `Liz has a pet cat.`
+regex `petRegex` ของคุณควรคืนค่า `true` หากค้นหาใน string `Liz has a pet cat.`
 
 ```js
 petRegex.lastIndex = 0;
 assert(petRegex.test('Liz has a pet cat.'));
 ```
 
-Your regex `petRegex` should return `false` for the string `Kara has a pet dolphin.`
+regex `petRegex` ของคุณควรคืนค่า `false` หากค้นหาใน string `Kara has a pet dolphin.`
 
 ```js
 petRegex.lastIndex = 0;
 assert(!petRegex.test('Kara has a pet dolphin.'));
 ```
 
-Your regex `petRegex` should return `true` for the string `Alice has a pet fish.`
+regex `petRegex` ของคุณควรคืนค่า `true` หากค้นหาใน string `Alice has a pet fish.`
 
 ```js
 petRegex.lastIndex = 0;
 assert(petRegex.test('Alice has a pet fish.'));
 ```
 
-Your regex `petRegex` should return `false` for the string `Jimmy has a pet computer.`
+regex `petRegex` ของคุณควรคืนค่า `false` หากค้นหาใน string `Jimmy has a pet computer.`
 
 ```js
 petRegex.lastIndex = 0;

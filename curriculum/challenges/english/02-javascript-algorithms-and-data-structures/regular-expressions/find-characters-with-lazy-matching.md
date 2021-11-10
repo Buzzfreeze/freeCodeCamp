@@ -8,35 +8,35 @@ dashedName: find-characters-with-lazy-matching
 
 # --description--
 
-In regular expressions, a <dfn>greedy</dfn> match finds the longest possible part of a string that fits the regex pattern and returns it as a match. The alternative is called a <dfn>lazy</dfn> match, which finds the smallest possible part of the string that satisfies the regex pattern.
+ในเรื่อง regular expressions <dfn>greedy</dfn> match ค้นหาส่วนของ string ที่ยาวที่สุดที่ตรงกับ regex pattern แล้วคืนค่าเป็นส่วนของ string นั้น ส่วน <dfn>lazy</dfn> match เป็นการค้นหาส่วนของ string ที่สั้นที่สุดที่ตรงกับ regex pattern
 
-You can apply the regex `/t[a-z]*i/` to the string `"titanic"`. This regex is basically a pattern that starts with `t`, ends with `i`, and has some letters in between.
+คุณสามารถกำหนด regex `/t[a-z]*i/` ให้กับ string `"titanic"` โดย regex นี้มี pattern ที่เริ่มต้นด้วย `t` ลงท้ายด้วย `i` และมีตัวอักษรบางตัวอยู่ระหว่าง `t` กับ `i`
 
-Regular expressions are by default greedy, so the match would return `["titani"]`. It finds the largest sub-string possible to fit the pattern.
+Regular expressions มีค่าเริ่มต้นเป็น greedy ดังนั้นการ match ควรคืนค่าเป็น `["titani"]` เนื่องจากเป็นการค้นหา substring ที่ยาวที่สุดที่ตรงกับ pattern
 
-However, you can use the `?` character to change it to lazy matching. `"titanic"` matched against the adjusted regex of `/t[a-z]*?i/` returns `["ti"]`.
+อย่างไรก็ตาม คุณสามารถใช้ตัวอักษร `?` เพื่อเปลี่ยนให้เป็น lazy matching โดยเมื่อใช้ regex `/t[a-z]*?i/` กับ string `"titanic"` ก็จะคืนค่าเป็น `["ti"]`
 
-**Note:** Parsing HTML with regular expressions should be avoided, but pattern matching an HTML string with regular expressions is completely fine.
+**Note:** ควรหลีกเลี่ยงการวิเคราะห์ HTML ด้วย regular expressions แต่การทำ pattern matching กับ HTML string ด้วย regular expressions สามารถทำได้
 
 # --instructions--
 
-Fix the regex `/<.*>/` to return the HTML tag `<h1>` and not the text `"<h1>Winter is coming</h1>"`. Remember the wildcard `.` in a regular expression matches any character.
+จงปรับแก้ regex `/<.*>/` ให้คืนค่า HTML tag `<h1>` ไม่ใช่ค่า `"<h1>Winter is coming</h1>"` หากยังจำได้ wildcard `.` ใน regular expression สามารถ match ตัวอักษรอะไรก็ได้
 
 # --hints--
 
-The `result` variable should be an array with `<h1>` in it
+ตัวแปร `result` ควรเป็น array ที่มี `<h1>`
 
 ```js
 assert(result[0] == '<h1>');
 ```
 
-`myRegex` should use lazy matching
+`myRegex` ควรใช้ lazy matching
 
 ```js
 assert(/[^\\][\*\+\?]\?/.test(myRegex));
 ```
 
-`myRegex` should not include the string `h1`
+`myRegex` ไม่ควรรวม string `h1`
 
 ```js
 assert(!myRegex.source.match('h1'));

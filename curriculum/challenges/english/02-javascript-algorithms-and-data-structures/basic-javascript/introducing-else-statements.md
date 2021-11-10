@@ -9,7 +9,7 @@ dashedName: introducing-else-statements
 
 # --description--
 
-When a condition for an `if` statement is true, the block of code following it is executed. What about when that condition is false? Normally nothing would happen. With an `else` statement, an alternate block of code can be executed.
+เมื่อเงื่อนไขของคำสั่ง `if` เป็นจริง บล็อกของโค้ดที่ตามมาจะทำงาน แล้วถ้าเงื่อนไขนั้นเป็นเท็จล่ะ? โดยทั่วไปจะไม่มีอะไรเกิดขึ้น แต่ถ้าใช้คำสั่ง `else` บล็อกของโค้ดของ `else` จะทำงานได้
 
 ```js
 if (num > 10) {
@@ -21,47 +21,47 @@ if (num > 10) {
 
 # --instructions--
 
-Combine the `if` statements into a single `if/else` statement.
+จงรวมคำสั่ง `if` ให้เป็นคำสั่ง `if/else`
 
 # --hints--
 
-You should only have one `if` statement in the editor
+คุณควรมีคำสั่ง `if` แค่คำสั่งเดียวใน editor
 
 ```js
 assert(code.match(/if/g).length === 1);
 ```
 
-You should use an `else` statement
+คุณควรใช้คำสั่ง `else` 
 
 ```js
 assert(/else/g.test(code));
 ```
 
-`testElse(4)` should return the string `5 or Smaller`
+`testElse(4)` ควรคืนค่า string  `5 or Smaller`
 
 ```js
 assert(testElse(4) === '5 or Smaller');
 ```
 
-`testElse(5)` should return the string `5 or Smaller`
+`testElse(5)` ควรคืนค่า string  `5 or Smaller`
 
 ```js
 assert(testElse(5) === '5 or Smaller');
 ```
 
-`testElse(6)` should return the string `Bigger than 5`
+`testElse(6)` ควรคืนค่า string  `Bigger than 5`
 
 ```js
 assert(testElse(6) === 'Bigger than 5');
 ```
 
-`testElse(10)` should return the string `Bigger than 5`
+`testElse(10)` ควรคืนค่า string  `Bigger than 5`
 
 ```js
 assert(testElse(10) === 'Bigger than 5');
 ```
 
-You should not change the code above or below the specified comments.
+คุณไม่ควรเปลี่ยนโค้ดด้านบนหรือด้านล่างของ comment ที่กำหนด
 
 ```js
 assert(/var result = "";/.test(code) && /return result;/.test(code));

@@ -9,9 +9,9 @@ dashedName: add-new-properties-to-a-javascript-object
 
 # --description--
 
-You can add new properties to existing JavaScript objects the same way you would modify them.
+คุณสามารถเพิ่ม properties ใหม่ให้กับ JavaScript object ได้ด้วยวิธีเดียวกับการแก้ไข properties
 
-Here's how we would add a `bark` property to `ourDog`:
+นี่เป็นวิธีที่เราเพิ่ม property `bark` ให้กับ `ourDog`
 
 ```js
 ourDog.bark = "bow-wow";
@@ -23,9 +23,9 @@ or
 ourDog["bark"] = "bow-wow";
 ```
 
-Now when we evaluate `ourDog.bark`, we'll get his bark, `bow-wow`.
+ตอนนี้เมื่อเราใช้งาน `ourDog.bark`เราจะได้การเห่า `bow-wow`
 
-Example:
+ตัวอย่าง:
 
 ```js
 var ourDog = {
@@ -40,17 +40,17 @@ ourDog.bark = "bow-wow";
 
 # --instructions--
 
-Add a `bark` property to `myDog` and set it to a dog sound, such as "woof". You may use either dot or bracket notation.
+จงเพิ่ม property `bark` ให้กับ `myDog` และกำหนดค่าเป็นเสียงสุนัข เช่น  "woof" โดยคุณอาจใช้เครื่องหมายจุด หรือวงเล็บ
 
 # --hints--
 
-You should add the property `bark` to `myDog`.
+คุณควรเพิ่ม property `bark` ให้กับ `myDog`
 
 ```js
 assert(myDog.bark !== undefined);
 ```
 
-You should not add `bark` to the initialization of `myDog`.
+คุณไม่ควรเพิ่ม `bark` เป็นค่าเริ่มต้นของ `myDog`
 
 ```js
 assert(!/bark[^\n]:/.test(code));

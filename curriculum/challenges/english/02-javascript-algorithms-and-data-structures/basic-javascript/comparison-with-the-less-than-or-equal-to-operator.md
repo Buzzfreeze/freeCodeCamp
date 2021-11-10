@@ -9,7 +9,8 @@ dashedName: comparison-with-the-less-than-or-equal-to-operator
 
 # --description--
 
-The less than or equal to operator (`<=`) compares the values of two numbers. If the number to the left is less than or equal to the number to the right, it returns `true`. If the number on the left is greater than the number on the right, it returns `false`. Like the equality operator, the less than or equal to operator converts data types.
+เครื่องหมายน้อยกว่าหรือเท่ากับ (`<=`)เปรียบเทียบค่าของตัวเลขสองตัว หากตัวเลขทางซ้ายน้อยกว่าหรือเท่ากับตัวเลขทางขวา จะแสดงผลเป็น `true` 
+ถ้าตัวเลขทางซ้ายมากกว่าตัวเลขทางขวาจะส่งคืนค่า `false` เช่นเดียวกับเครื่องหมาย (`==`) เครื่องหมายน้อยกว่าหรือเท่ากับ (`<=`) จะแปลงประเภทข้อมูลขณะที่ทำการเปรียบเทียบ
 
 **Examples**
 
@@ -21,57 +22,58 @@ The less than or equal to operator (`<=`) compares the values of two numbers. If
 '8' <= 4
 ```
 
-In order, these expressions would evaluate to `true`, `true`, `true`, `false`, and `false`.
+ผลลัพธ์แต่ละบรรทัดจะเป็น `true`, `true`, `true`, `false` และ `false` ตามลำดับ
 
 # --instructions--
 
-Add the less than or equal to operator to the indicated lines so that the return statements make sense.
+จงเพิ่มเครื่องหมายน้อยกว่าหรือเท่ากับในบรรทัดที่กำหนดเพื่อให้การคืนค่าดูสมเหตุสมผล
 
 # --hints--
 
-`testLessOrEqual(0)` should return the string `Smaller Than or Equal to 12`
+`testLessOrEqual(0)` ควรคืนค่า string `Smaller Than or Equal to 12`
 
 ```js
 assert(testLessOrEqual(0) === 'Smaller Than or Equal to 12');
 ```
 
-`testLessOrEqual(11)` should return the string `Smaller Than or Equal to 12`
+`testLessOrEqual(11)` ควรคืนค่า string `Smaller Than or Equal to 12`
 
 ```js
 assert(testLessOrEqual(11) === 'Smaller Than or Equal to 12');
 ```
 
-`testLessOrEqual(12)` should return the string `Smaller Than or Equal to 12`
+`testLessOrEqual(12)` ควรคืนค่า string `Smaller Than or Equal to 12`
 
 ```js
 assert(testLessOrEqual(12) === 'Smaller Than or Equal to 12');
 ```
 
-`testLessOrEqual(23)` should return the string `Smaller Than or Equal to 24`
+`testLessOrEqual(23)` ควรคืนค่า string `Smaller Than or Equal to 24`
 
 ```js
 assert(testLessOrEqual(23) === 'Smaller Than or Equal to 24');
 ```
 
-`testLessOrEqual(24)` should return the string `Smaller Than or Equal to 24`
+`testLessOrEqual(24)` ควรคืนค่า string `Smaller Than or Equal to 24`
 
 ```js
 assert(testLessOrEqual(24) === 'Smaller Than or Equal to 24');
 ```
 
-`testLessOrEqual(25)` should return the string `More Than 24`
+`testLessOrEqual(25)` ควรคืนค่า string `More Than 24`
 
 ```js
 assert(testLessOrEqual(25) === 'More Than 24');
 ```
 
-`testLessOrEqual(55)` should return the string `More Than 24`
+`testLessOrEqual(55)` ควรคืนค่า string `More Than 24`
 
 ```js
 assert(testLessOrEqual(55) === 'More Than 24');
 ```
 
-You should use the `<=` operator at least twice
+คุณควรใช้เครื่องหมาย `<=` อย่างน้อยสองครั้ง
+
 
 ```js
 assert(code.match(/val\s*<=\s*('|")*\d+('|")*/g).length > 1);

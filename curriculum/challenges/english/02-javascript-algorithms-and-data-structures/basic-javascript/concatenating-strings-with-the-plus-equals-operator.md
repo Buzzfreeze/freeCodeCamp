@@ -9,32 +9,34 @@ dashedName: concatenating-strings-with-the-plus-equals-operator
 
 # --description--
 
-We can also use the `+=` operator to <dfn>concatenate</dfn> a string onto the end of an existing string variable. This can be very helpful to break a long string over several lines.
+# - นอกจากนี้เรายังสามารถใช้ `+=` operator เพื่อ <dfn>ต่อ/dfn> string กับตัวแปร string ที่มีอยู่ วิธีนี้จะมีประโยชน์มากในการแยก string ยาวๆ ออกเป็นหลายบรรทัด
 
-**Note:** Watch out for spaces. Concatenation does not add spaces between concatenated strings, so you'll need to add them yourself.
 
-Example:
+**หมายเหตุ:** โปรดระวัง spaces (การเว้นวรรค) เนื่องจาก Concatenation จะไม่เพิ่มเว้นวรรคระหว่าง string ที่ต่อกัน ดังนั้น คุณจะต้องเพิ่มเอง
+
+ตัวอย่าง:
 
 ```js
 var ourStr = "I come first. ";
 ourStr += "I come second.";
 ```
 
-`ourStr` now has a value of the string `I come first. I come second.`.
+`ourStr` ตอนนี้ควรมีค่า string เป็น `I come first. I come second.`.
 
 # --instructions--
 
-Build `myStr` over several lines by concatenating these two strings: `This is the first sentence.` and `This is the second sentence.` using the `+=` operator. Use the `+=` operator similar to how it is shown in the example and be sure to include a space between the two strings. Start by assigning the first string to `myStr`, then add on the second string.
+จงสร้าง `myStr` โดยเชื่อม string 2 ตัวนี้เข้าด้วยกัน: `This is the first sentence.` และ `This is the second sentence.` ด้วย `+=` operator โดยให้ใช้ `+=` operator คล้ายกับที่แสดงในตัวอย่าง และอย่าลืมเว้นวรรคระหว่าง string ทั้งสอง เริ่มจากการกำหนด string แรกให้กับ "myStr" จากนั้นจึงเพิ่ม string ที่สอง
+
 
 # --hints--
 
-`myStr` should have a value of the string `This is the first sentence. This is the second sentence.`
+`myStr` ควรมีค่า string `This is the first sentence. This is the second sentence.`
 
 ```js
 assert(myStr === 'This is the first sentence. This is the second sentence.');
 ```
 
-You should use the `+=` operator to build `myStr`.
+คุณควรใช้ `+=` operator เพื่อสร้าง `myStr`
 
 ```js
 assert(code.match(/myStr\s*\+=\s*(["']).*\1/g));

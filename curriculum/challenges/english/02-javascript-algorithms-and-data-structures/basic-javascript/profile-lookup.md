@@ -9,27 +9,27 @@ dashedName: profile-lookup
 
 # --description--
 
-We have an array of objects representing different people in our contacts lists.
+เรามี array ที่เก็บ object แทนบุคคลต่างๆ ใน contact list ของเรา
 
-A `lookUpProfile` function that takes `name` and a property (`prop`) as arguments has been pre-written for you.
+function `lookUpProfile` รับค่า `name` และ property (`prop`) เป็น argument ได้เขียนรอไว้ให้คุณแล้ว
 
-The function should check if `name` is an actual contact's `firstName` and the given property (`prop`) is a property of that contact.
+function ควรเช็ค ว่า `name` เป็น `firstName` ที่อยู่ใน contact list หรือไม่ และเช็ค property (`prop`) ว่าเป็น property ของ contact หรือไม่
 
-If both are true, then return the "value" of that property.
+ถ้าทั้งคู่เป็นจริง ให้คืนค่า "value" ของ property นั้น
 
-If `name` does not correspond to any contacts then return the string `No such contact`.
+ถ้า `name` ไม่มีใน contacts ให้คืนค่า string `No such contact`
 
-If `prop` does not correspond to any valid properties of a contact found to match `name` then return the string `No such property`.
+ถ้า `prop` ไม่มี property ของ contact ที่ match กับ `name` ให้คืนค่า string `No such property`
 
 # --hints--
 
-`lookUpProfile("Kristian", "lastName")` should return the string `Vos`
+`lookUpProfile("Kristian", "lastName")` ควรคืนค่า string `Vos`
 
 ```js
 assert(lookUpProfile('Kristian', 'lastName') === 'Vos');
 ```
 
-`lookUpProfile("Sherlock", "likes")` should return `["Intriguing Cases", "Violin"]`
+`lookUpProfile("Sherlock", "likes")` ควรคืนค่า `["Intriguing Cases", "Violin"]`
 
 ```js
 assert.deepEqual(lookUpProfile('Sherlock', 'likes'), [
@@ -38,25 +38,25 @@ assert.deepEqual(lookUpProfile('Sherlock', 'likes'), [
 ]);
 ```
 
-`lookUpProfile("Harry", "likes")` should return an array
+`lookUpProfile("Harry", "likes")` ควรคืนค่า array
 
 ```js
 assert(typeof lookUpProfile('Harry', 'likes') === 'object');
 ```
 
-`lookUpProfile("Bob", "number")` should return the string `No such contact`
+`lookUpProfile("Bob", "number")` ควรคืนค่า string `No such contact`
 
 ```js
 assert(lookUpProfile('Bob', 'number') === 'No such contact');
 ```
 
-`lookUpProfile("Bob", "potato")` should return the string `No such contact`
+`lookUpProfile("Bob", "potato")` ควรคืนค่า string `No such contact`
 
 ```js
 assert(lookUpProfile('Bob', 'potato') === 'No such contact');
 ```
 
-`lookUpProfile("Akira", "address")` should return the string `No such property`
+`lookUpProfile("Akira", "address")` ควรคืนค่า string `No such property`
 
 ```js
 assert(lookUpProfile('Akira', 'address') === 'No such property');

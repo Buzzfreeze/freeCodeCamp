@@ -9,33 +9,33 @@ dashedName: understanding-uninitialized-variables
 
 # --description--
 
-When JavaScript variables are declared, they have an initial value of `undefined`. If you do a mathematical operation on an `undefined` variable your result will be `NaN` which means <dfn>"Not a Number"</dfn>. If you concatenate a string with an `undefined` variable, you will get a literal <dfn>string</dfn> of `undefined`.
+เมื่อมีการประกาศตัวแปร JavaScript จะมีค่าเริ่มต้นเป็น `undefined` ถ้าคุณคำนวณทางคณิตศาตร์กับตัวแปร `undefined` ผลที่ได้จะเป็น `NaN` ซึ่งหมายถึง <dfn>"Not a Number"</dfn> (ไม่ใช่ตัวเลข) แต่ถ้าคุณต่อ string กับตัวแปร `undefined` คุณจะได้ <dfn>string</dfn> ที่เป็นคำว่า `undefined`
 
 # --instructions--
 
-Initialize the three variables `a`, `b`, and `c` with `5`, `10`, and `"I am a"` respectively so that they will not be `undefined`.
+จงกำหนดค่าเริ่มต้นให้กับตัวแปร `a`, `b` และ `c` ด้วย `5`, `10` และ `"I am a"` ตามลำดับ เพื่อให้ไม่ตัวแปรเหล่านั้นมีค่า `undefined`
 
 # --hints--
 
-`a` should be defined and evaluated to have the value of `6`.
+`a` ควรกำหนดให้มีค่าเท่ากับ `6`
 
 ```js
 assert(typeof a === 'number' && a === 6);
 ```
 
-`b` should be defined and evaluated to have the value of `15`.
+`b` ควรกำหนดให้มีค่าเท่ากับ `15`
 
 ```js
 assert(typeof b === 'number' && b === 15);
 ```
 
-`c` should not contain `undefined` and should have a value of the string `I am a String!`
+`c` ไม่ควรมีค่าเป็น `undefined` และควรมีค่าเป็น string `I am a String!`
 
 ```js
 assert(!/undefined/.test(c) && c === 'I am a String!');
 ```
 
-You should not change code below the specified comment.
+คุณไม่ควรแก้ไขโค้ดที่อยู่ด้านล่างของ comment ที่กำหนด
 
 ```js
 assert(

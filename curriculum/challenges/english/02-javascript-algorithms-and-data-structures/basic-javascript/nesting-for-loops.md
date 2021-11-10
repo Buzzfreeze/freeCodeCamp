@@ -9,7 +9,7 @@ dashedName: nesting-for-loops
 
 # --description--
 
-If you have a multi-dimensional array, you can use the same logic as the prior waypoint to loop through both the array and any sub-arrays. Here is an example:
+ถ้าคุณมี array หลายมิติ (multi-dimensional array) คุณสามารถใช้ logic เดียวกันกับก่อนหน้านี้ เพื่อ loop เข้าไปใน array และ sub-array ต่อไปนี้เป็นตัวอย่าง:
 
 ```js
 var arr = [
@@ -22,21 +22,24 @@ for (var i=0; i < arr.length; i++) {
 }
 ```
 
-This outputs each sub-element in `arr` one at a time. Note that for the inner loop, we are checking the `.length` of `arr[i]`, since `arr[i]` is itself an array.
+
+โค้ดด้านบนแสดงแต่ละ element ใน array ย่อยของ `arr` ซึ่งภายใน inner loop เรามีการเช็ค `.length` ของ `arr[i]` เนื่องจาก `arr[i]` ก็เป็น array
+
 
 # --instructions--
 
-Modify function `multiplyAll` so that it returns the product of all the numbers in the sub-arrays of `arr`.
+
+จงแก้ไข function `multiplyAll` เพื่อให้คืนค่าเป็นผลคูณของตัวเลขภายใน array ย่อยของ `arr`
 
 # --hints--
 
-`multiplyAll([[1],[2],[3]])` should return `6`
+`multiplyAll([[1],[2],[3]])` ควรคืนค่า `6`
 
 ```js
 assert(multiplyAll([[1], [2], [3]]) === 6);
 ```
 
-`multiplyAll([[1,2],[3,4],[5,6,7]])` should return `5040`
+`multiplyAll([[1,2],[3,4],[5,6,7]])` ควรคืนค่า `5040`
 
 ```js
 assert(
@@ -48,7 +51,7 @@ assert(
 );
 ```
 
-`multiplyAll([[5,1],[0.2, 4, 0.5],[3, 9]])` should return `54`
+`multiplyAll([[5,1],[0.2, 4, 0.5],[3, 9]])` ควรคืนค่า `54`
 
 ```js
 assert(

@@ -9,7 +9,7 @@ dashedName: access-multi-dimensional-arrays-with-indexes
 
 # --description--
 
-One way to think of a <dfn>multi-dimensional</dfn> array, is as an *array of arrays*. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array, and each additional pair of brackets refers to the next level of entries inside.
+คุณอาจนึกถึง <dfn>multi-dimensional</dfn> array ว่าเป็น *อาร์เรย์ซ้อนอาร์เรย์* ก็ได้ เมื่อคุณใช้ brackets (วงเล็บ) เพื่อเข้าถึง array ของคุณ ิbrackets ชุดแรกจะอ้างอิงถึงรายการใน array ที่อยู่นอกสุด (ระดับแรก) และ brackets คู่ถัดมาจะอ้างอิงถึงรายการ array ในระดับถัดไป
 
 **Example**
 
@@ -25,23 +25,23 @@ arr[3][0];
 arr[3][0][1];
 ```
 
-`arr[3]` is `[[10, 11, 12], 13, 14]`, `arr[3][0]` is `[10, 11, 12]`, and `arr[3][0][1]` is `11`.
+`arr[3]` คือ `[[10, 11, 12], 13, 14]`, `arr[3][0]` คือ `[10, 11, 12]` และ `arr[3][0][1]` คือ `11`.
 
-**Note:** There shouldn't be any spaces between the array name and the square brackets, like `array [0][0]` and even this `array [0] [0]` is not allowed. Although JavaScript is able to process this correctly, this may confuse other programmers reading your code.
+**หมายเหตุ:** ไม่ควรมีช่องว่างระหว่างชื่อ array และ square brackets เช่น `array [0][0]` และแม้แต่ `array [0] [0]` แบบนี้ก็ไม่อนุญาต แม้ว่า JavaScript สามารถประมวลผลได้อย่างถูกต้อง แต่อาจทำให้โปรแกรมเมอร์คนอื่นอ่านโค้ดของคุณแล้วสับสน
 
 # --instructions--
 
-Using bracket notation select an element from `myArray` such that `myData` is equal to `8`.
+จงใช้ bracket notation ในการเลือก element จาก `myArray` เพื่อให้ `myData` มีค่าเท่ากับ `8`
 
 # --hints--
 
-`myData` should be equal to `8`.
+`myData` ควรเท่ากับ `8`
 
 ```js
 assert(myData === 8);
 ```
 
-You should be using bracket notation to read the correct value from `myArray`.
+คุณควรใช้ bracket notation ในการอ่านค่าที่ถูกต้องจาก `myArray`
 
 ```js
 assert(/myData=myArray\[2\]\[1\]/.test(__helpers.removeWhiteSpace(code)));

@@ -9,11 +9,11 @@ dashedName: manipulate-arrays-with-unshift
 
 # --description--
 
-Not only can you `shift` elements off of the beginning of an array, you can also `unshift` elements to the beginning of an array i.e. add elements in front of the array.
+นอกจากที่คุณสามารถ `shift` element ออกจากตำแหน่งแรกของ array แล้ว คุณยังสามารถ `unshift` element ที่ตำแหน่งแรกของ array ได้ด้วย เช่น เพิ่ม element ที่ด้านหน้า array
 
-`.unshift()` works exactly like `.push()`, but instead of adding the element at the end of the array, `unshift()` adds the element at the beginning of the array.
+`.unshift()` ทำงานเหมือนกับ `.push()` แต่แทนที่จะเพิ่ม element ที่ส่วนท้ายของ array `unshift()` จะเพิ่ม element ที่จุดเริ่มต้นของ array
 
-Example:
+ตัวอย่าง:
 
 ```js
 var ourArray = ["Stimpson", "J", "cat"];
@@ -21,15 +21,15 @@ ourArray.shift();
 ourArray.unshift("Happy");
 ```
 
-After the `shift`, `ourArray` would have the value `["J", "cat"]`. After the `unshift`, `ourArray` would have the value `["Happy", "J", "cat"]`.
+หลังจาก `shift` แล้ว `ourArray` ควรมีค่า `["J", "cat"]` และหลังจาก `unshift` แล้ว `ourArray` ควรมีค่า `["Happy", "J", "cat"]`.
 
 # --instructions--
 
-Add `["Paul",35]` to the beginning of the `myArray` variable using `unshift()`.
+จงเพิ่ม `["Paul",35]` ที่ตำแหน่งแรกของตัวแปร `myArray` โดยใช้ `unshift()`
 
 # --hints--
 
-`myArray` should now have `[["Paul", 35], ["dog", 3]]`.
+`myArray` ตอนนี้ควรมีค่า `[["Paul", 35], ["dog", 3]]`
 
 ```js
 assert(

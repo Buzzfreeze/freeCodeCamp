@@ -8,11 +8,11 @@ dashedName: check-for-mixed-grouping-of-characters
 
 # --description--
 
-Sometimes we want to check for groups of characters using a Regular Expression and to achieve that we use parentheses `()`.
+บางกรณีเราต้องการเช็คกลุ่มของตัวอักษรด้วย Regular Expression ซึ่งสามารถทำได้ โดยการใช้วงเล็บ `()`
 
-If you want to find either `Penguin` or `Pumpkin` in a string, you can use the following Regular Expression: `/P(engu|umpk)in/g`
+ถ้าคุณต้องการค้นหาคำว่า `Penguin` หรือ `Pumpkin` ใน string คุณสามารถใช้ Regular Expression: `/P(engu|umpk)in/g`
 
-Then check whether the desired string groups are in the test string by using the `test()` method.
+จากนั้น ตรวจสอบว่ากลุ่ม string ที่ต้องการหาอยู่ใน string ทดสอบหรือไม่ โดยการใช้ `test()` method
 
 ```js
 let testStr = "Pumpkin";
@@ -20,51 +20,51 @@ let testRegex = /P(engu|umpk)in/;
 testRegex.test(testStr);
 ```
 
-The `test` method here would return `true`.
+`test` method ในที่นี้ควรคืนค่า `true`
 
 # --instructions--
 
-Fix the regex so that it checks for the names of `Franklin Roosevelt` or `Eleanor Roosevelt` in a case sensitive manner and it should make concessions for middle names.
+จงปรับแก้ regex เพื่อให้ match กับชื่อ `Franklin Roosevelt` หรือ `Eleanor Roosevelt` แบบ case sensitive โดยให้มีชื่อกลางได้ (middle name)
 
-Then fix the code so that the regex that you have created is checked against `myString` and either `true` or `false` is returned depending on whether the regex matches.
+จากนั้นให้ปรับแก้โค้ด เพื่อให้ regex ที่คุณสร้าง เช็ค `myString` แล้วคืนค่า `true` หรือ `false` ทั้งนี้ขึ้นกับ regex ว่า match หรือไม่
 
 # --hints--
 
-Your regex `myRegex` should return `true` for the string `Franklin D. Roosevelt`
+regex ของคุณ `myRegex` ควรคืนค่า `true` สำหรับ string `Franklin D. Roosevelt`
 
 ```js
 myRegex.lastIndex = 0;
 assert(myRegex.test('Franklin D. Roosevelt'));
 ```
 
-Your regex `myRegex` should return `true` for the string `Eleanor Roosevelt`
+regex ของคุณ `myRegex` ควรคืนค่า `true` สำหรับ string `Eleanor Roosevelt`
 
 ```js
 myRegex.lastIndex = 0;
 assert(myRegex.test('Eleanor Roosevelt'));
 ```
 
-Your regex `myRegex` should return `false` for the string `Franklin Rosevelt`
+regex ของคุณ `myRegex` ควรคืนค่า `false` สำหรับ string `Franklin Rosevelt`
 
 ```js
 myRegex.lastIndex = 0;
 assert(!myRegex.test('Franklin Rosevelt'));
 ```
 
-Your regex `myRegex` should return `false` for the string `Frank Roosevelt`
+regex ของคุณ `myRegex` ควรคืนค่า `false` สำหรับ string `Frank Roosevelt`
 
 ```js
 myRegex.lastIndex = 0;
 assert(!myRegex.test('Frank Roosevelt'));
 ```
 
-You should use `.test()` to test the regex.
+คุณควรใช้ `.test()` เพื่อทดสอบ regex
 
 ```js
 assert(code.match(/myRegex.test\(\s*myString\s*\)/));
 ```
 
-Your result should return `true`.
+ผลลัพธ์ของคุณควรเป็น `true`
 
 ```js
 assert(result === true);

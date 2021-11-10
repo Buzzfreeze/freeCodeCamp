@@ -9,9 +9,9 @@ dashedName: local-scope-and-functions
 
 # --description--
 
-Variables which are declared within a function, as well as the function parameters, have <dfn>local</dfn> scope. That means they are only visible within that function.
+ตัวแปรที่ถูกประกาศภายในฟังก์ชัน เช่นเดียวกับ function parameters มีขอบเขต <dfn>local</dfn> นั่นหมายความว่าจะมองเห็นได้เฉพาะในฟังก์ชันนั้นเท่านั้น
 
-Here is a function `myTest` with a local variable called `loc`.
+นี่คือฟังก์ชัน `myTest` ที่มีตัวแปร local ชื่อ `loc`
 
 ```js
 function myTest() {
@@ -22,17 +22,17 @@ myTest();
 console.log(loc);
 ```
 
-The `myTest()` function call will display the string `foo` in the console. The `console.log(loc)` line will throw an error, as `loc` is not defined outside of the function.
+การเรียกฟังก์ชัน `myTest()` ทำให้ string `foo` แสดงออกมาที่ในหน้า console แต่บรรทัด `console.log(loc)` จะแสดง error เนื่องจาก `loc` ไม่ได้ถูกประกาศข้างนอกฟังก์ชัน
 
 # --instructions--
 
-The editor has two `console.log`s to help you see what is happening. Check the console as you code to see how it changes. Declare a local variable `myVar` inside `myLocalScope` and run the tests.
+editor มี `console.log` สองหน้าจอ เพื่อช่วยให้คุณเห็นว่าเกิดอะไรขึ้น จงเช็คที่หน้า console ขณะที่คุณเขียนโค้ด เพื่อดูว่ามีการเปลี่ยนแปลงอย่างไร ให้ประกาศ local variable `myVar` ภายใน `myLocalScope` และรันเพื่อทดสอบ
 
-**Note:** The console will still display `ReferenceError: myVar is not defined`, but this will not cause the tests to fail.
+**หมายเหตุ:** หน้า console จะยังคงแสดง `ReferenceError: myVar is not defined` แต่นี่ไม่ได้ทำให้การทดสอบล้มเหลว
 
 # --hints--
 
-The code should not contain a global `myVar` variable.
+โค้ดไม่ควรมี global variable `myVar`
 
 ```js
 function declared() {
@@ -41,7 +41,7 @@ function declared() {
 assert.throws(declared, ReferenceError);
 ```
 
-You should add a local `myVar` variable.
+คุณควรเพิ่ม local variable `myVar`
 
 ```js
 assert(

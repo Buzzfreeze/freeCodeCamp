@@ -9,7 +9,7 @@ dashedName: comparison-with-the-less-than-operator
 
 # --description--
 
-The less than operator (`<`) compares the values of two numbers. If the number to the left is less than the number to the right, it returns `true`. Otherwise, it returns `false`. Like the equality operator, the less than operator converts data types while comparing.
+เครื่องหมายน้อยกว่า (`<`) เปรียบเทียบค่าของตัวเลขสองตัว หากตัวเลขทางซ้ายน้อยกว่าตัวเลขทางขวา จะแสดงผลเป็น `true` มิฉะนั้น จะส่งกลับ `false` เช่นเดียวกับเครื่องหมาย (`==`) เครื่องหมายน้อยกว่า (`<`) จะแปลงประเภทข้อมูลขณะที่ทำการเปรียบเทียบ
 
 **Examples**
 
@@ -21,51 +21,52 @@ The less than operator (`<`) compares the values of two numbers. If the number t
 '8' < 4
 ```
 
-In order, these expressions would evaluate to `true`, `true`, `false`, `false`, and `false`.
+ผลลัพธ์แต่ละบรรทัดจะเป็น `true`, `true`, `false`, `false` และ `false` ตามลำดับ
 
 # --instructions--
 
-Add the less than operator to the indicated lines so that the return statements make sense.
+จงเพิ่มเครื่องหมายน้อยกว่าในบรรทัดที่กำหนดเพื่อให้การคืนค่าดูสมเหตุสมผล
+
 
 # --hints--
 
-`testLessThan(0)` should return the string `Under 25`
+`testLessThan(0)` ควรคืนค่า string `Under 25`
 
 ```js
 assert(testLessThan(0) === 'Under 25');
 ```
 
-`testLessThan(24)` should return the string `Under 25`
+`testLessThan(24)` ควรคืนค่า string `Under 25`
 
 ```js
 assert(testLessThan(24) === 'Under 25');
 ```
 
-`testLessThan(25)` should return the string `Under 55`
+`testLessThan(25)` ควรคืนค่า string `Under 55`
 
 ```js
 assert(testLessThan(25) === 'Under 55');
 ```
 
-`testLessThan(54)` should return the string `Under 55`
+`testLessThan(54)` ควรคืนค่า string `Under 55`
 
 ```js
 assert(testLessThan(54) === 'Under 55');
 ```
 
-`testLessThan(55)` should return the string `55 or Over`
+`testLessThan(55)` ควรคืนค่า string `55 or Over`
 
 ```js
 assert(testLessThan(55) === '55 or Over');
 ```
 
-`testLessThan(99)` should return the string `55 or Over`
+`testLessThan(99)` ควรคืนค่า string `55 or Over`
 
 ```js
 assert(testLessThan(99) === '55 or Over');
 ```
 
-You should use the `<` operator at least twice
+คุณควรใช้เครื่องหมาย `<` อย่างน้อยสองครั้ง
 
 ```js
 assert(code.match(/val\s*<\s*('|")*\d+('|")*/g).length > 1);

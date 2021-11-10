@@ -8,9 +8,9 @@ dashedName: match-characters-that-occur-zero-or-more-times
 
 # --description--
 
-The last challenge used the plus `+` sign to look for characters that occur one or more times. There's also an option that matches characters that occur zero or more times.
+แบบทดสอบที่แล้วใช้ `+` เพื่อค้นหาตัวอักษรที่พบตั้งแต่ 1 ครั้งขึ้นไป อย่างไรก็ตาม ยังมีอีกทางเลือกนึงที่ค้นหาตัวอักษรที่พบตั้งแต่ 0 ครั้งขึ้นไป
 
-The character to do this is the asterisk or star: `*`.
+ตัวอักษรที่ทำเช่นนี้ได้ก็คือ asterisk หรือ star: `*`
 
 ```js
 let soccerWord = "gooooooooal!";
@@ -22,39 +22,39 @@ gPhrase.match(goRegex);
 oPhrase.match(goRegex);
 ```
 
-In order, the three `match` calls would return the values `["goooooooo"]`, `["g"]`, and `null`.
+การเรียก `match` ทั้ง 3 ครั้ง จะคืนค่า `["goooooooo"]`, `["g"]` และ `null` ตามลำดับ
 
 # --instructions--
 
-For this challenge, `chewieQuote` has been initialized as the string `Aaaaaaaaaaaaaaaarrrgh!` behind the scenes. Create a regex `chewieRegex` that uses the `*` character to match an uppercase `A` character immediately followed by zero or more lowercase `a` characters in `chewieQuote`. Your regex does not need flags or character classes, and it should not match any of the other quotes.
+สำหรับแบบทดสอบนี้ `chewieQuote` กำหนดค่าเริ่มต้นเป็น string `Aaaaaaaaaaaaaaaarrrgh!` ในเบื้องหลัง จงสร้าง regex `chewieRegex` ที่ใช้ `*` เพื่อ match ตัวพิมพ์ใหญ่ `A` ตามด้วยตัวพิมพ์เล็ก `a` จำนวน 0 หรือมากกว่า ที่อยู่ใน `chewieQuote` ซึ่ง regex นี้ไม่ต้องใช้ flags หรือ character classes ใดๆ และไม่ควร match กับ quote อื่นๆ ด้วย
 
 # --hints--
 
-Your regex `chewieRegex` should use the `*` character to match zero or more `a` characters.
+regex `chewieRegex` ควรใช้ `*` เพื่อ match ตัวอักษร `a` จำนวน 0 หรือมากกว่า
 
 ```js
 assert(/\*/.test(chewieRegex.source));
 ```
 
-Your regex should match the string `A` in `chewieQuote`.
+regex ควร match string `A` ใน `chewieQuote`
 
 ```js
 assert(result[0][0] === 'A');
 ```
 
-Your regex should match the string `Aaaaaaaaaaaaaaaa` in `chewieQuote`.
+regex ควร match string `Aaaaaaaaaaaaaaaa` ใน `chewieQuote`
 
 ```js
 assert(result[0] === 'Aaaaaaaaaaaaaaaa');
 ```
 
-Your regex `chewieRegex` should match 16 characters in `chewieQuote`.
+regex `chewieRegex` ควร match 16 ตัวอักษร ใน `chewieQuote`
 
 ```js
 assert(result[0].length === 16);
 ```
 
-Your regex should not match any characters in the string `He made a fair move. Screaming about it can't help you.`
+regex ไม่ควร match ตัวอักษรใดๆ ใน string `He made a fair move. Screaming about it can't help you.`
 
 ```js
 assert(
@@ -62,7 +62,7 @@ assert(
 );
 ```
 
-Your regex should not match any characters in the string `Let him have it. It's not wise to upset a Wookiee.`
+regex ไม่ควร match ตัวอักษรใดๆ ใน string `Let him have it. It's not wise to upset a Wookiee.`
 
 ```js
 assert(

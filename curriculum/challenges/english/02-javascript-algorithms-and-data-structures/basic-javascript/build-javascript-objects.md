@@ -9,13 +9,13 @@ dashedName: build-javascript-objects
 
 # --description--
 
-You may have heard the term `object` before.
+คุณอาจจะเคยได้ยินคำว่า `object` มาก่อน
 
-Objects are similar to `arrays`, except that instead of using indexes to access and modify their data, you access the data in objects through what are called `properties`.
+Objects คล้ายกับ `arrays` เว้นแต่แทนที่จะใช้ indexes ในการเข้าถึง และแก้ไขข้อมูล คุณจะเข้าถึงข้อมูลใน object ผ่านสิ่งที่เรียกว่า `properties`
 
-Objects are useful for storing data in a structured way, and can represent real world objects, like a cat.
+Object มีประโยชน์สำหรับการจัดเก็บข้อมูลในลักษณะที่มีโครงสร้าง และสามารถเป็นสิ่งแทนวัตถุในโลกแห่งความเป็นจริงได้ เช่น แมว
 
-Here's a sample cat object:
+ต่อไปนี้เป็นตัวอย่างของ cat object:
 
 ```js
 var cat = {
@@ -26,7 +26,8 @@ var cat = {
 };
 ```
 
-In this example, all the properties are stored as strings, such as `name`, `legs`, and `tails`. However, you can also use numbers as properties. You can even omit the quotes for single-word string properties, as follows:
+ในตัวอย่างนี้ properties (คุณสมบัติ) ทั้งหมดจะถูกเก็บไว้ใน string เช่น `name`, `legs` และ `tails` อย่างไรก็ตาม คุณสามารถใช้ตัวเลขเป็นค่า properties ได้ คุณยังสามารถละเครื่องหมายคำพูด กรณีที่ค่า properties เป็น string คำเดียวได้ดังนี้:
+
 
 ```js
 var anotherObject = {
@@ -36,17 +37,19 @@ var anotherObject = {
 };
 ```
 
-However, if your object has any non-string properties, JavaScript will automatically typecast them as strings.
+อย่างไรก็ตาม หาก object ของคุณมี properties ที่ไม่ใช่ string JavaScript จะปรับเป็น string โดยอัตโนมัติ
 
 # --instructions--
 
-Make an object that represents a dog called `myDog` which contains the properties `name` (a string), `legs`, `tails` and `friends`.
+จงสร้าง object แทนสุนัข เรียกว่า `myDog` ซึ่งมี properties `name` (string) `legs`, `tails` และ `friends`
 
-You can set these object properties to whatever values you want, as long as `name` is a string, `legs` and `tails` are numbers, and `friends` is an array.
+คุณสามารถกำหนด properties ของ object เหล่านี้ เป็นค่าใดก็ได้ที่คุณต้องการ ตราบใดที่ `name` เป็น string `tails` เป้น numbers  และ `friends` เป็น array
+
 
 # --hints--
 
-`myDog` should contain the property `name` and it should be a `string`.
+`myDog` ควรมี property `name` และควรเป็น `string`
+
 
 ```js
 assert(
@@ -64,7 +67,9 @@ assert(
 );
 ```
 
-`myDog` should contain the property `legs` and it should be a `number`.
+`myDog` ควรมี property  `legs` และควรเป็น`number`.
+
+
 
 ```js
 assert(
@@ -82,7 +87,7 @@ assert(
 );
 ```
 
-`myDog` should contain the property `tails` and it should be a `number`.
+`myDog` ควรมี property  `tails` และควรเป็น`number`.
 
 ```js
 assert(
@@ -100,7 +105,7 @@ assert(
 );
 ```
 
-`myDog` should contain the property `friends` and it should be an `array`.
+`myDog` ควรมี property  `friends` และควรเป็น `array`.
 
 ```js
 assert(
@@ -118,7 +123,7 @@ assert(
 );
 ```
 
-`myDog` should only contain all the given properties.
+`myDog` ควรมีแค่ properties ที่กำหนดให้
 
 ```js
 assert(

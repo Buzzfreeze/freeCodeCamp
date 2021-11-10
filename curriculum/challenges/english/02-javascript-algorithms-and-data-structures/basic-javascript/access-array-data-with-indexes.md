@@ -9,9 +9,9 @@ dashedName: access-array-data-with-indexes
 
 # --description--
 
-We can access the data inside arrays using <dfn>indexes</dfn>.
+เราสามารถเข้าถึงข้อมูลภายใน array โดยใช้ <dfn>indexes</dfn>
 
-Array indexes are written in the same bracket notation that strings use, except that instead of specifying a character, they are specifying an entry in the array. Like strings, arrays use <dfn>zero-based</dfn> indexing, so the first element in an array has an index of `0`.
+Array indexes ใช้ bracket notation เช่นเดียวกับ string เว้นแต่แทนที่จะระบุอักขระ ก็ระบุรายการใน array แทน อย่างไรก็ตาม array ใช้ <dfn>zero-based</dfn> indexing เช่นเดียวกับ string ดังนั้น element แรกของ array จะมี index เป็น `0`
 
 <br>
 
@@ -23,17 +23,17 @@ array[0];
 var data = array[1];
 ```
 
-`array[0]` is now `50`, and `data` has the value `60`.
+`array[0]` ตอนนี้มีค่าเป็น `50` และ `data` มีค่าเป็น `60`
 
-**Note:** There shouldn't be any spaces between the array name and the square brackets, like `array [0]`. Although JavaScript is able to process this correctly, this may confuse other programmers reading your code.
+**หมายเหตุ:** ไม่ควรมีช่องว่างระหว่างชื่อ array และ square brackets เช่น `array [0]` แม้ว่า JavaScript สามารถประมวลผลได้อย่างถูกต้อง แต่อาจทำให้โปรแกรมเมอร์คนอื่นอ่านโค้ดของคุณแล้วสับสน
 
 # --instructions--
 
-Create a variable called `myData` and set it to equal the first value of `myArray` using bracket notation.
+จงสร้างตัวแปร `myData` และกำหนดให้มีค่าเท่ากับค่าแรกของ `myArray` โดยใช้ bracket notation
 
 # --hints--
 
-The variable `myData` should equal the first value of `myArray`.
+ตัวแปร `myData` ควรมีค่าเท่ากับค่าแรกของ `myArray`
 
 ```js
 assert(
@@ -51,7 +51,7 @@ assert(
 );
 ```
 
-The data in variable `myArray` should be accessed using bracket notation.
+ข้อมูลในตัวแปร `myArray` ควรเข้าถึงได้ ด้วยการใช้ bracket notation
 
 ```js
 assert(

@@ -9,27 +9,28 @@ dashedName: divide-one-decimal-by-another-with-javascript
 
 # --description--
 
-Now let's divide one decimal by another.
+ตอนนี้ลองหารเลขทศนิยมนึงด้วยเลขทศนิยมอีกตัวนึง
 
 # --instructions--
 
-Change the `0.0` so that `quotient` will equal to `2.2`.
+จงเปลี่ยน `0.0` เพื่อให้ `quotient` ได้ผลลัพธ์เท่ากับ `2.2`
+
 
 # --hints--
 
-The variable `quotient` should equal `2.2`
+ตัวแปร `quotient` ควรเท่ากับ `2.2`
 
 ```js
 assert(quotient === 2.2);
 ```
 
-You should use the `/` operator to divide 4.4 by 2
+คุณควรใช้เครื่องหมาย `/` เพื่อหาร 4.4 ด้วย 2 
 
 ```js
 assert(/4\.40*\s*\/\s*2\.*0*/.test(code));
 ```
 
-The quotient variable should only be assigned once
+ตัวแปร quotient ควรกำหนดค่าเพียงครั้งเดียว
 
 ```js
 assert(code.match(/quotient/g).length === 1);

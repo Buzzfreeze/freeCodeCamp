@@ -9,9 +9,10 @@ dashedName: returning-boolean-values-from-functions
 
 # --description--
 
-You may recall from [Comparison with the Equality Operator](/learn/javascript-algorithms-and-data-structures/basic-javascript/comparison-with-the-equality-operator) that all comparison operators return a boolean `true` or `false` value.
+# - จากที่ได้เรียนรู้มาแล้วใน [Comparison with the Equality Operator](/learn/javascript-algorithms-and-data-structures/basic-javascript/comparison-with-the-equality-operator) ทุกการเปรียบเทียบจะคืนค่า boolean `true` หรือ `false`
 
-Sometimes people use an `if/else` statement to do a comparison, like this:
+บางครั้งเราใช้ `if/else` statement เพื่อใช้ในการเปรียบเทียบดังนี้ 
+
 
 ```js
 function isEqual(a,b) {
@@ -23,7 +24,7 @@ function isEqual(a,b) {
 }
 ```
 
-But there's a better way to do this. Since `===` returns `true` or `false`, we can return the result of the comparison:
+แต่ยังมีวิธีที่ดีกว่าที่ได้ผลแบบเดียวกัน กล่าวคือ เนื่องจาก `===` คืนค่า `true` หรือ `false` เราจึงสามารถคืนค่าเป็นผลจากการเปรียบเทียบได้ดังนี้
 
 ```js
 function isEqual(a,b) {
@@ -33,23 +34,25 @@ function isEqual(a,b) {
 
 # --instructions--
 
-Fix the function `isLess` to remove the `if/else` statements.
+จงแก้ไข function `isLess` เพื่อนำ `if/else` statement ออก
 
 # --hints--
 
-`isLess(10,15)` should return `true`
+`isLess(10,15)` ควรคืนค่า `true`
 
 ```js
 assert(isLess(10, 15) === true);
 ```
 
-`isLess(15,10)` should return `false`
+`isLess(15,10)` ควรคืนค่า `false`
 
 ```js
 assert(isLess(15, 10) === false);
 ```
 
 You should not use any `if` or `else` statements
+
+คุณไม่ควรใช้ `if` หรือ `else` statements
 
 ```js
 assert(!/if|else/g.test(code));

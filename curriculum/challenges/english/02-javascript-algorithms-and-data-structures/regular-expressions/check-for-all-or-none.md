@@ -8,11 +8,11 @@ dashedName: check-for-all-or-none
 
 # --description--
 
-Sometimes the patterns you want to search for may have parts of it that may or may not exist. However, it may be important to check for them nonetheless.
+บางครั้ง pattern ที่คุณต้องการค้นหา มีบางส่วนที่อาจมีหรืออาจไม่มี อย่างไรก็ตาม การตรวจสอบสิ่งเหล่านี้อาจเป็นสิ่งสำคัญ
 
-You can specify the possible existence of an element with a question mark, `?`. This checks for zero or one of the preceding element. You can think of this symbol as saying the previous element is optional.
+คุณสามารถกำหนดการมีอยู่หรือไม่มีอยู่ของ element ด้วย question mark, `?` ซึ่งเช็คตัวอักษรที่อยู่หน้า `?` ว่าต้องมีจำนวน 0 หรือ 1 คุณสามารถมองว่า สัญลักษณ์นี้เป็นการบอกว่า element ที่อยู่ข้างหน้าจะมีหรือไม่มีก็ได้ (optional)
 
-For example, there are slight differences in American and British English and you can use the question mark to match both spellings.
+ตัวอย่างเช่น มีความแตกต่างเล็กน้อยระหว่างภาษาอังกฤษแบบ American และภาษาอังกฤษแบบ British และคุณสามารถใช้ question mark เพื่อ match การสะกดทั้งสองแบบ
 
 ```js
 let american = "color";
@@ -22,36 +22,36 @@ rainbowRegex.test(american);
 rainbowRegex.test(british);
 ```
 
-Both uses of the `test` method would return `true`.
+การเรียก `test` method ทั้ง 2 ครั้ง จะคืนค่า `true`
 
 # --instructions--
 
-Change the regex `favRegex` to match both the American English (`favorite`) and the British English (`favourite`) version of the word.
+จงปรับแก้ regex `favRegex` เพื่อ match กับคำทั้งภาษาอังกฤษแบบ American (`favorite`) และภาษาอังกฤษแบบ British (`favourite`)
 
 # --hints--
 
-Your regex should use the optional symbol, `?`.
+regex ของคุณควรใช้ optional symbol, `?`
 
 ```js
 favRegex.lastIndex = 0;
 assert(favRegex.source.match(/\?/).length > 0);
 ```
 
-Your regex should match the string `favorite`
+regex ของคุณควร match กับ string `favorite`
 
 ```js
 favRegex.lastIndex = 0;
 assert(favRegex.test('favorite'));
 ```
 
-Your regex should match the string `favourite`
+regex ของคุณควร match กับ string `favourite`
 
 ```js
 favRegex.lastIndex = 0;
 assert(favRegex.test('favourite'));
 ```
 
-Your regex should not match the string `fav`
+regex ของคุณไม่ควร match กับ string `fav`
 
 ```js
 favRegex.lastIndex = 0;

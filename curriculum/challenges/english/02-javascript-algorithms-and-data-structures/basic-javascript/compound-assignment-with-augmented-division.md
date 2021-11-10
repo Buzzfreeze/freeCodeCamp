@@ -9,13 +9,13 @@ dashedName: compound-assignment-with-augmented-division
 
 # --description--
 
-The `/=` operator divides a variable by another number.
+`/=` operator หารตัวแปรด้วยตัวเลขอีกตัว
 
 ```js
 myVar = myVar / 5;
 ```
 
-Will divide `myVar` by `5`. This can be rewritten as:
+จะหาร `myVar` ด้วย `5` สามารถเขียนใหม่เป็น:
 
 ```js
 myVar /= 5;
@@ -23,35 +23,35 @@ myVar /= 5;
 
 # --instructions--
 
-Convert the assignments for `a`, `b`, and `c` to use the `/=` operator.
+จงแปลง assignments ของ `a`, `b` และ `c` โดยกำหนดให้ใช้ `/=` operator
 
 # --hints--
 
-`a` should equal `4`.
+`a` ควรเท่ากับ `4`.
 
 ```js
 assert(a === 4);
 ```
 
-`b` should equal `27`.
+`b` ควรเท่ากับ `27`.
 
 ```js
 assert(b === 27);
 ```
 
-`c` should equal `3`.
+`c` ควรเท่ากับ `3`.
 
 ```js
 assert(c === 3);
 ```
 
-You should use the `/=` operator for each variable.
+# - คุณควรใช้ `/=` operator กับตัวแปรแต่ละตัว
 
 ```js
 assert(code.match(/\/=/g).length === 3);
 ```
 
-You should not modify the code above the specified comment.
+คุณไม่ควรแก้โค้ดที่อยู่เหนือ comment
 
 ```js
 assert(

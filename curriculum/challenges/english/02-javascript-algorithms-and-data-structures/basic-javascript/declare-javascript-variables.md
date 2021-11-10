@@ -9,32 +9,34 @@ dashedName: declare-javascript-variables
 
 # --description--
 
-In computer science, <dfn>data</dfn> is anything that is meaningful to the computer. JavaScript provides eight different <dfn>data types</dfn> which are `undefined`, `null`, `boolean`, `string`, `symbol`, `bigint`, `number`, and `object`.
+ในวิทยาการคอมพิวเตอร์ <dfn>data</dfn> คือสิ่งที่มีความหมายต่อคอมพิวเตอร์ ภาษา JavaScript มี <dfn>ประเภทข้อมูล</dfn> แตกต่างกัน 8 ชนิด ได้แก่ `undefined`, `null`, `boolean`, `string`, `symbol`, `bigint`, `number`, และ `object`
 
-For example, computers distinguish between numbers, such as the number `12`, and `strings`, such as `"12"`, `"dog"`, or `"123 cats"`, which are collections of characters. Computers can perform mathematical operations on a number, but not on a string.
+ตัวอย่างเช่น คอมพิวเตอร์แยกความแตกต่างระหว่างตัวเลข เช่น ตัวเลข `12` และ `strings` อย่างเช่น `"12"`, `"dog"` หรือ `"123 cats"` ซึ่งเป็นชุดตัวอักษร คอมพิวเตอร์จะสามารถคำนวณทางคณิตศาสตร์กับตัวเลขได้ แต่ไม่สามารถทำกับ string ได้ 
 
-<dfn>Variables</dfn> allow computers to store and manipulate data in a dynamic fashion. They do this by using a "label" to point to the data rather than using the data itself. Any of the eight data types may be stored in a variable.
+<dfn>Variables</dfn> (ตัวแปร) ช่วยให้คอมพิวเตอร์จัดเก็บและจัดการข้อมูลในรูปแบบไดนามิก ซึ่งจะทำโดยการใช้ "label" (ป้ายกำกับ) ชี้ไปยังข้อมูลแทนที่จะใช้ตัวข้อมูลเอง ทั้ง 8 ประเภทข้อมูลจะถูกเก็บไว้ใน variable
 
-Variables are similar to the x and y variables you use in mathematics, which means they're a simple name to represent the data we want to refer to. Computer variables differ from mathematical variables in that they can store different values at different times.
+Variable คล้ายกับตัวแปร x และ y ที่คุณใช้ในวิชาคณิตศาสตร์ หมายความว่าเป็นชื่อง่ายๆ ที่ใช้แทนข้อมูลที่เราต้องการอ้างถึง ตัวแปรคอมพิวเตอร์จะต่างจากตัวแปรคณิตศาสตร์ในเรื่องการเก็บค่าที่แตกต่างกันในแต่ละเวลา
 
-We tell JavaScript to create or <dfn>declare</dfn> a variable by putting the keyword `var` in front of it, like so:
+เราบอก JavaScript ให้สร้าง หรือ <dfn>ประกาศ</dfn> ตัวแปรโดยใช้ keyword `var` ไว้ด้านหน้า เช่น:
+
 
 ```js
 var ourName;
 ```
 
-creates a variable called `ourName`. In JavaScript we end statements with semicolons. Variable names can be made up of numbers, letters, and `$` or `_`, but may not contain spaces or start with a number.
+การสร้าง variable ชื่อว่า `ourName` ใน JavaScript เราจะปิดคำสั่งด้วย semicolons ; ชื่อ Variable สามารถเป็นตัวเลข, ตัวอักษร และ `$` หรือ `_` แต่ต้องไม่มีเว้นวรรค หรือเริ่มด้นด้วยตัวเลข
 
 # --instructions--
 
-Use the `var` keyword to create a variable called `myName`.
+จงใช้ keyword `var` ในการสร้าง variable `myName`
 
 **Hint**  
-Look at the `ourName` example above if you get stuck.
+
+ดูที่ตัวอย่าง `ourName` ด้านบน ถ้าคุณติดปัญหา
 
 # --hints--
 
-You should declare `myName` with the `var` keyword, ending with a semicolon
+คุณควรประกาศ `myName` ด้วยคีย์เวิร์ด `var` และจบด้วย semicolon
 
 ```js
 assert(/var\s+myName\s*;/.test(code));

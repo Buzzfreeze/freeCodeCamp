@@ -8,11 +8,11 @@ dashedName: use-recursion-to-create-a-countdown
 
 # --description--
 
-In a [previous challenge](/learn/javascript-algorithms-and-data-structures/basic-javascript/replace-loops-using-recursion), you learned how to use recursion to replace a `for` loop. Now, let's look at a more complex function that returns an array of consecutive integers starting with `1` through the number passed to the function.
+ใน [previous challenge](/learn/javascript-algorithms-and-data-structures/basic-javascript/replace-loops-using-recursion)คุณได้เรียนรู้วิธีใช้ recursion เพื่อแทนที่ `for` loop ตอนนี้ ให้ดูที่ฟังก์ชันที่ซับซ้อนมากขึ้นซึ่งคืนค่าเป็น array ของจำนวนเต็มต่อเนื่องที่เริ่มต้นด้วย `1` จนถึงตัวเลขที่ส่งเข้าไปในฟังก์ชัน
 
-As mentioned in the previous challenge, there will be a <dfn>base case</dfn>. The base case tells the recursive function when it no longer needs to call itself. It is a simple case where the return value is already known. There will also be a <dfn>recursive call</dfn> which executes the original function with different arguments. If the function is written correctly, eventually the base case will be reached.
+ตามที่กล่าวไว้ในบทเรียนที่แล้ว recursive มี <dfn>base case</dfn> โดย base case จะบอก recursive function ว่าเมื่อใดที่ไม่ต้องเรียกตัวเองอีกต่อไป ซึ่ง base case เป็น case ง่ายๆ ที่ทราบค่าที่จะส่งคืนอยู่แล้ว นอกจากนี้ยังมี <dfn>recursive call</dfn> ซึ่งเรียกใช้ฟังก์ชันดั้งเดิมด้วย argument ที่แตกต่างกัน หากฟังก์ชันถูกเขียนอย่างถูกต้อง ท้ายที่สุดแล้ว base case ต้องถูกเรียกขึ้นมา
 
-For example, say you want to write a recursive function that returns an array containing the numbers `1` through `n`. This function will need to accept an argument, `n`, representing the final number. Then it will need to call itself with progressively smaller values of `n` until it reaches `1`. You could write the function as follows:
+ตัวอย่างเช่น สมมติว่าคุณต้องการเขียนฟังก์ชัน recursive ที่คืนค่า array ที่มีตัวเลข `1` ถึง `n` ฟังก์ชันนี้จะรับ argument `n` แทนตัวเลขสุดท้าย จากนั้นจะต้องเรียกตัวเองด้วยค่า `n` ที่น้อยลงเรื่อยๆ จนกว่าจะถึง `1` คุณสามารถเขียนฟังก์ชันได้ดังนี้:
 
 ```javascript
 function countup(n) {
@@ -27,35 +27,35 @@ function countup(n) {
 console.log(countup(5));
 ```
 
-The value `[1, 2, 3, 4, 5]` will be displayed in the console.
+ค่า `[1, 2, 3, 4, 5]` จะถูกแสดงบนหน้า console
 
-At first, this seems counterintuitive since the value of `n` *decreases*, but the values in the final array are *increasing*. This happens because the push happens last, after the recursive call has returned. At the point where `n` is pushed into the array, `countup(n - 1)` has already been evaluated and returned `[1, 2, ..., n - 1]`.
+ในตอนแรก สิ่งนี้ดูขัดกับความรู้สึก เนื่องจากค่าของ `n` *ลดลง* แต่ค่าใน array สุดท้ายคือ *เพิ่มขึ้น* สิ่งนี้เกิดขึ้นเนื่องจากการใส่ค่าล่าสุด หลังจากเรียก recursive กลับมา ณ จุดที่ `n` ถูก push เข้าไปใน array `countup(n - 1)` ได้รับการคำนวนและคืนค่า `[1, 2, ..., n - 1]`
 
 # --instructions--
 
-We have defined a function called `countdown` with one parameter (`n`). The function should use recursion to return an array containing the integers `n` through `1` based on the `n` parameter. If the function is called with a number less than 1, the function should return an empty array. For example, calling this function with `n = 5` should return the array `[5, 4, 3, 2, 1]`. Your function must use recursion by calling itself and must not use loops of any kind.
+# - เราได้ประกาศฟังก์ชันชื่อ `countdown` ด้วยพารามิเตอร์เดียว (`n`) ฟังก์ชันควรใช้ recursion เพื่อคืนค่า array ที่มีจำนวนเต็ม `n` ถึง `1` ตามพารามิเตอร์ `n` หากมีการเรียกใช้ฟังก์ชันด้วยตัวเลขที่น้อยกว่า 1 ฟังก์ชันควรคืนค่า array เปล่า ตัวอย่างเช่น การเรียกใช้ฟังก์ชันนี้ด้วย `n = 5` ควรคืนค่า array `[5, 4, 3, 2, 1]` ฟังก์ชันของคุณต้องใช้ recursion โดยเรียกตัวเองและต้องไม่ใช้ loop ใดๆ
 
 # --hints--
 
-`countdown(-1)` should return an empty array.
+`countdown(-1)` ควรส่งคืนค่า array เปล่า
 
 ```js
 assert.isEmpty(countdown(-1));
 ```
 
-`countdown(10)` should return `[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]`
+`countdown(10)` ควรส่งคืนค่า `[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]`
 
 ```js
 assert.deepStrictEqual(countdown(10), [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
 ```
 
-`countdown(5)` should return `[5, 4, 3, 2, 1]`
+`countdown(5)` ควรส่งคืนค่า `[5, 4, 3, 2, 1]`
 
 ```js
 assert.deepStrictEqual(countdown(5), [5, 4, 3, 2, 1]);
 ```
 
-Your code should not rely on any kind of loops (`for`, `while` or higher order functions such as `forEach`, `map`, `filter`, and `reduce`).
+โค้ดของคุณไม่ควรใช้ loop ทุกประเภท (`for`, `while` หรือ higher order functions เช่น  `forEach`, `map`, `filter`, และ `reduce`)
 
 ```js
 assert(
@@ -63,7 +63,7 @@ assert(
 );
 ```
 
-You should use recursion to solve this problem.
+คุณควรใช้ recursive ในการแก้ปัญหา
 
 ```js
 assert(

@@ -9,11 +9,12 @@ dashedName: add-two-numbers-with-javascript
 
 # --description--
 
-`Number` is a data type in JavaScript which represents numeric data.
+`Number` เป็นประเภทข้อมูลใน JavaScript ซึ่งแทนข้อมูลตัวเลข
 
-Now let's try to add two numbers using JavaScript.
+ขั้นตอนนี้ลองนำตัวเลข 2 ตัวมาบวกกันโดยใช้ JavaScript
 
-JavaScript uses the `+` symbol as an addition operator when placed between two numbers.
+JavaScript ใช้สัญลักษณ์ `+` วางไว้ระหว่างตัวเลขสองตัว เพื่อทำการบวก
+
 
 **Example:**
 
@@ -21,21 +22,21 @@ JavaScript uses the `+` symbol as an addition operator when placed between two n
 myVar = 5 + 10;
 ```
 
-`myVar` now has the value `15`.
+`myVar` ตอนนี้มีค่า `15`
 
 # --instructions--
 
-Change the `0` so that sum will equal `20`.
+จงเปลี่ยน `0` เพื่อให้ผลรวมเท่ากับ `20`
 
 # --hints--
 
-`sum` should equal `20`.
+`sum` ควรเท่ากับ `20`
 
 ```js
 assert(sum === 20);
 ```
 
-You should use the `+` operator.
+คุณควรใช้ `+` operator
 
 ```js
 assert(/\+/.test(code));

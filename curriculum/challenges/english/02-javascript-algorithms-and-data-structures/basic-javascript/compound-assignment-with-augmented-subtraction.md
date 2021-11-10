@@ -9,13 +9,13 @@ dashedName: compound-assignment-with-augmented-subtraction
 
 # --description--
 
-Like the `+=` operator, `-=` subtracts a number from a variable.
+เช่นเดียวกับ `+=` operator, `-=` ใช้ในการลบเลขออกจากตัวแปร
 
 ```js
 myVar = myVar - 5;
 ```
 
-will subtract `5` from `myVar`. This can be rewritten as:
+จะลบ `5` ออกจาก `myVar` เราสามารถเขียนใหม่เป็น:
 
 ```js
 myVar -= 5;
@@ -23,35 +23,35 @@ myVar -= 5;
 
 # --instructions--
 
-Convert the assignments for `a`, `b`, and `c` to use the `-=` operator.
+จงแปลง assignments ของ `a`, `b` และ `c` โดยกำหนดให้ใช้ `-=` operator
 
 # --hints--
 
-`a` should equal `5`.
+`a` ควรเท่ากับ `5`
 
 ```js
 assert(a === 5);
 ```
 
-`b` should equal `-6`.
+`b` ควรเท่ากับ `-6`.
 
 ```js
 assert(b === -6);
 ```
 
-`c` should equal `2`.
+`c` ควรเท่ากับ `2`.
 
 ```js
 assert(c === 2);
 ```
 
-You should use the `-=` operator for each variable.
+คุณควรใช้ `-=` operator กับตัวแปรแต่ละตัว
 
 ```js
 assert(code.match(/-=/g).length === 3);
 ```
 
-You should not modify the code above the specified comment.
+คุณไม่ควรแก้โค้ดที่อยู่เหนือ comment
 
 ```js
 assert(

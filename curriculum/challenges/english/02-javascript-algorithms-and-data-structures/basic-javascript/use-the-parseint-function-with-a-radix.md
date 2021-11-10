@@ -9,53 +9,53 @@ dashedName: use-the-parseint-function-with-a-radix
 
 # --description--
 
-The `parseInt()` function parses a string and returns an integer. It takes a second argument for the radix, which specifies the base of the number in the string. The radix can be an integer between 2 and 36.
+function `parseInt()`แปลง string เป็น Integer และส่งคืน integer โดย function `parseInt()` มี argument ตัวที่สองเป็น redix   ซึ่งระบุเลขฐานของตัวเลขใน string โดย radix สามารถเป็น integer ระหว่าง 2 และ 36
 
-The function call looks like:
+function call ควรมีหน้าตาดังนี้
 
 ```js
 parseInt(string, radix);
 ```
 
-And here's an example:
+และนี่เป็นตัวอย่าง
 
 ```js
 var a = parseInt("11", 2);
 ```
 
-The radix variable says that `11` is in the binary system, or base 2. This example converts the string `11` to an integer `3`.
+ตัวแปร radix บอกว่า `11` อยู่ในระบบ binary หรือเลขฐาน 2 นี่เป็นตัวอย่างในการแปลง string `11` ให้เป็น integer `3`
 
 # --instructions--
 
-Use `parseInt()` in the `convertToInteger` function so it converts a binary number to an integer and returns it.
+จงใช้ `parseInt()` ใน function `convertToInteger` เพื่อแปลงเลข binary ให้เป็นเลขจำนวนเต็ม แล้วคืนค่าออกไป
 
 # --hints--
 
-`convertToInteger` should use the `parseInt()` function
+`convertToInteger` ควรใช้  `parseInt()` function
 
 ```js
 assert(/parseInt/g.test(code));
 ```
 
-`convertToInteger("10011")` should return a number
+`convertToInteger("10011")` ควรคืนค่า number
 
 ```js
 assert(typeof convertToInteger('10011') === 'number');
 ```
 
-`convertToInteger("10011")` should return 19
+`convertToInteger("10011")` ควรคืนค่า 19
 
 ```js
 assert(convertToInteger('10011') === 19);
 ```
 
-`convertToInteger("111001")` should return 57
+`convertToInteger("111001")` ควรคืนค่า 57
 
 ```js
 assert(convertToInteger('111001') === 57);
 ```
 
-`convertToInteger("JamesBond")` should return `NaN`
+`convertToInteger("JamesBond")` ควรคืนค่า `NaN`
 
 ```js
 assert.isNaN(convertToInteger('JamesBond'));

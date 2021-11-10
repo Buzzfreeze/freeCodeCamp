@@ -9,15 +9,15 @@ dashedName: compound-assignment-with-augmented-addition
 
 # --description--
 
-In programming, it is common to use assignments to modify the contents of a variable. Remember that everything to the right of the equals sign is evaluated first, so we can say:
+ในการเขียนโปรแกรม เป็นเรื่องปกติที่ใช้ assignments (การกำหนดค่า) ในการแก้ไขเนื้อหาของตัวแปร หากยังจำได้ ทุกอย่างทางด้านขวาของเครื่องหมายเท่ากับจะถูกคำนวนก่อน ดังนั้นเราสามารถกล่าวได้ว่า:
 
 ```js
 myVar = myVar + 5;
 ```
 
-to add `5` to `myVar`. Since this is such a common pattern, there are operators which do both a mathematical operation and assignment in one step.
+เป็นการนำ `5` มาบวกให้กับ `myVar` เนื่องจากเป็นรูปแบบทั่วไป จึงมี operator ที่ทำทั้งการคำนวณทางคณิตศาสตร์และกำหนดค่าตัวแปรในขั้นตอนเดียว
 
-One such operator is the `+=` operator.
+ตัวอย่างเช่น `+=` operator
 
 ```js
 var myVar = 1;
@@ -25,39 +25,40 @@ myVar += 5;
 console.log(myVar);
 ```
 
-`6` would be displayed in the console.
+`6` ควรแสดงในหน้า console
 
 # --instructions--
 
-Convert the assignments for `a`, `b`, and `c` to use the `+=` operator.
+จงแปลง assignments ของ `a`, `b` และ `c` โดยกำหนดให้ใช้ `+=` operator
 
 # --hints--
 
-`a` should equal `15`.
+`a` ควรเท่ากับ `15`.
 
 ```js
 assert(a === 15);
 ```
 
-`b` should equal `26`.
+`b` ควรเท่ากับ  `26`.
 
 ```js
 assert(b === 26);
 ```
 
-`c` should equal `19`.
+`c` ควรเท่ากับ `19`.
 
 ```js
 assert(c === 19);
 ```
 
-You should use the `+=` operator for each variable.
+คุณควรใช้ `+=` operator กับตัวแปรแต่ละตัว
 
 ```js
 assert(code.match(/\+=/g).length === 3);
 ```
 
-You should not modify the code above the specified comment.
+คุณไม่ควรแก้โค้ดที่อยู่เหนือ comment
+
 
 ```js
 assert(

@@ -9,9 +9,9 @@ dashedName: subtract-one-number-from-another-with-javascript
 
 # --description--
 
-We can also subtract one number from another.
+เราสามารถลบตัวเลขหนึ่งออกจากอีกจำนวนหนึ่งได้
 
-JavaScript uses the `-` symbol for subtraction.
+JavaScript ใช้สัญลักษณ์ `-` สำหรับการลบ
 
 **Example**
 
@@ -19,20 +19,21 @@ JavaScript uses the `-` symbol for subtraction.
 myVar = 12 - 6;
 ```
 
-`myVar` would have the value `6`.
+`myVar` ควรมีค่า `6`.
+
 # --instructions--
 
-Change the `0` so the difference is `12`.
+จงเปลี่ยน `0` เพื่อ `difference` มีค่าเป็น `12`
 
 # --hints--
 
-The variable `difference` should be equal to 12.
+ตัวแปร `difference` ควรเท่ากับ 12.
 
 ```js
 assert(difference === 12);
 ```
 
-You should only subtract one number from 45.
+คุณควรนำตัวเลขหนึ่งตัวมาลบออกจาก 45
 
 ```js
 assert(/difference=45-33;?/.test(__helpers.removeWhiteSpace(code)));
