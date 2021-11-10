@@ -10,5 +10,46 @@
   "superBlock": "pre-camp-software-engineer",
   "superOrder": 12,
   "isBeta": true,
-  "challengeOrder": [["618ad9bc41bcac4e86d53cf2", "Part 1"]]
+  "challengeOrder": [
+    [
+      "618ad9bc41bcac4e86d53cf2",
+      "Part 1"
+    ],
+    [
+      "618b6cc56a6dee7be8d18bd6",
+      "Part 2"
+    ],
+    [
+      "618b6cc9ec281a7c8637f19b",
+      "Part 3"
+    ],
+    [
+      "618b6ccaa688c17cb085e77d",
+      "Part 4"
+    ],
+    [
+      "618b6cccc8f5697d0ee940e9",
+      "Part 5"
+    ],
+    [
+      "618b6ccd2fac057d5514d26b",
+      "Part 6"
+    ],
+    [
+      "618b6ccf1279907d78e2df5b",
+      "Part 7"
+    ],
+    [
+      "618b6cd0afdaf07da04a4bf3",
+      "Part 8"
+    ],
+    [
+      "618b6cd2d9d5d67e1cf911c7",
+      "Part 9"
+    ],
+    [
+      "618b6cd3767c717e41fe5df5",
+      "Part 10"
+    ]
+  ]
 }

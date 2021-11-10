@@ -193,6 +193,8 @@ class ShowVideo extends Component<ShowVideoProps, ShowVideoState> {
     } = this.props;
 
     const blockNameTitle = `${blockName} - ${title}`;
+    console.log('videoId');
+    console.log(videoId);
     return (
       <Hotkeys
         executeChallenge={() => {
@@ -217,24 +219,29 @@ class ShowVideo extends Component<ShowVideoProps, ShowVideoState> {
               >
                 {title}
               </ChallengeTitle>
+              {videoId !== 'notshow' || videoId === null ? (
+                <Col lg={10} lgOffset={1} md={10} mdOffset={1}>
+                  <div className='video-wrapper'>
+                    {!this.state.videoIsLoaded ? (
+                      <div className='video-placeholder-loader'>
+                        <Loader />
+                      </div>
+                    ) : null}
 
-              <Col lg={10} lgOffset={1} md={10} mdOffset={1}>
-                <div className='video-wrapper'>
-                  {!this.state.videoIsLoaded ? (
-                    <div className='video-placeholder-loader'>
-                      <Loader />
-                    </div>
-                  ) : null}
-                  <VideoPlayer
-                    bilibiliIds={bilibiliIds}
-                    onVideoLoad={this.onVideoLoad}
-                    title={title}
-                    videoId={videoId}
-                    videoIsLoaded={this.state.videoIsLoaded}
-                    videoLocaleIds={videoLocaleIds}
-                  />
-                </div>
-              </Col>
+                    <VideoPlayer
+                      bilibiliIds={bilibiliIds}
+                      onVideoLoad={this.onVideoLoad}
+                      title={title}
+                      videoId={videoId}
+                      videoIsLoaded={this.state.videoIsLoaded}
+                      videoLocaleIds={videoLocaleIds}
+                    />
+                  </div>
+                </Col>
+              ) : (
+                <></>
+              )}
+
               <Col md={8} mdOffset={2} sm={10} smOffset={1} xs={12}>
                 <ChallengeDescription description={description} />
                 <PrismFormatted className={'line-numbers'} text={text} />
