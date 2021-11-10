@@ -7,11 +7,11 @@ dashedName: part-25
 
 # --description--
 
-Give the `.key` selector a `border-radius` value of `0 0 3px 3px`.
+จงกำหนดให้ `.key` selector มี `border-radius` เป็น `0 0 3px 3px`.
 
 # --hints--
 
-Your `.key` selector should have a `border-radius` property set to `0 0 3px 3px`.
+`.key` selector ควรมี 1 `border-radius` property ที่เป็น  `0 0 3px 3px`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.key')?.borderRadius === '0px 0px 3px 3px');

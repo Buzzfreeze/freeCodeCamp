@@ -8,34 +8,39 @@ dashedName: build-a-tribute-page
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/zNqgVx>.
+**Objective:** จงสร้างแอปพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานคล้ายแอปพลิเคชั่นนี้: <https://codepen.io/freeCodeCamp/full/zNqgVx>.
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story) and get all of the tests to pass. Give it your own personal style.
+จงทำตามการหลัก [user stories](https://en.wikipedia.org/wiki/User_story) และทดสอบให้ผ่านทุกเทส
+จงทำตามสไตล์ของคุณเอง
 
-You can use HTML, JavaScript, and CSS to complete this project. Plain CSS is recommended because that is what the lessons have covered so far and you should get some practice with plain CSS. You can use Bootstrap or SASS if you choose. Additional technologies (just for example jQuery, React, Angular, or Vue) are not recommended for this project, and using them is at your own risk. Other projects will give you a chance to work with different technology stacks like React. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
+คุณสามารถใช้ HTML, JavaScript, และ CSS เพื่อทำโปรเจคนี้
+Plain CSS นั้นเป็นที่แนะนำเพราะมันคือสิ่งที่บทเรียนของเราได้กล่าวถึงมันไปหมดแล้วและคุณควรจะฝึกทักษะการใช้ plain CSS
+คุณสามารถใช้ Bootstrap หรือ SASS ได้ถ้าคุณอยากใช้
+เทคโนโลยีอื่น ๆ (อย่างเช่น jQuery, React, Angular, หรือ Vue) นั้นยังไม่แนะนำสำหรับโปรเจคนี้ โดยหากคุณจะใช้มันก็เป็นความเสี่ยงของคุณเอง
+โปรเจคอื่น ๆ หลังจากนี้จะเปิดโอกาสให้คุณได้ลองใช้เทคโนโลยีอื่น ๆ เช่น React อย่างแน่นอน
+เราพร้อมจะยอมรับและปรับปรุงปัญหาต่าง ๆ ที่เกิดขึ้นจากการใช้เทคโนโลยีที่ถูกแนะนำในโปรเจคนี้ Happy coding!
 
-**User Story #1:** My tribute page should have an element with a corresponding `id="main"`, which contains all other elements.
+**User Story #1:** tribute page ของฉันควรมี element อันหนึ่งที่มี `id="main"` ซึ่งเก็บ elements อื่น ๆ ไว้
 
-**User Story #2:** I should see an element with a corresponding `id="title"`, which contains a string (i.e. text) that describes the subject of the tribute page (e.g. "Dr. Norman Borlaug").
+**User Story #2:** ฉันควรมองเห็น element อันหนึ่งที่มี `id="title"` ซึ่งเก็บ string (หรือ text) ที่อธิบายหัวเรื่องของ tribute page (เช่น "Dr. Norman Borlaug").
 
-**User Story #3:** I should see a `div` element with a corresponding `id="img-div"`.
+**User Story #3:** ฉันควรมองเห็น`div` element อันหนึ่งที่มี`id="img-div"`.
 
-**User Story #4:** Within the `img-div` element, I should see an `img` element with a corresponding `id="image"`.
+**User Story #4:** ภายใน `img-div` element, ฉันสามารถมองเห็น`img` element อันหนึ่งที่มี`id="image"`.
 
-**User Story #5:** Within the `img-div` element, I should see an element with a corresponding `id="img-caption"` that contains textual content describing the image shown in `img-div`.
+**User Story #5:** ภายใน `img-div` element, ฉันสามารถมองเห็น element อันหนึ่งที่มี `id="img-caption"` ซึ่งเก็บเนื้อหาที่เป็นตัวอักษรที่อธิบายรูปภาพที่ถูกแสดงใน `img-div`.
 
-**User Story #6:** I should see an element with a corresponding `id="tribute-info"`, which contains textual content describing the subject of the tribute page.
+**User Story #6:** ฉันควรมองเห็น element อันหนึ่งที่มี `id="tribute-info"` ซึ่งเก็บเนื้อหาที่เป็นตัวอักษรที่อธิบายหัวเรื่องของ tribute page
 
-**User Story #7:** I should see an `a` element with a corresponding `id="tribute-link"`, which links to an outside site that contains additional information about the subject of the tribute page. HINT: You must give your element an attribute of `target` and set it to `_blank` in order for your link to open in a new tab (i.e. `target="_blank"`).
+**User Story #7:** ฉันควรมองเห็น `a` element อันหนึ่งที่มี `id="tribute-link"` ซึ่งเชื่อมไปยังเว็บไซต์ข้างนอกที่เก็บข้อมูลเพิ่มเติมเกี่ยวกับหัวเรื่องของ tribute page. HINT: คุณสามารถเพิ่ม `target` attribute ให้กับ element ของคุณและกำหนดให้มันมีค่า `_blank` เพื่อที่ลิงค์ของคุณจะได้ถูกเปิดขึ้นมาแท็บใหม่ (หรือ `target="_blank"`).
 
-**User Story #8:** The `img` element should responsively resize, relative to the width of its parent element, without exceeding its original size.
+**User Story #8:** `img` element ควรเป็นแบบ responsive หรือสามารถปรับขนาดให้เข้ากับอุปกรณ์ได้, โดยขึ้นกับความกว้างของ parent element, โดยทำให้เกินขนาด original ของมัน
 
-**User Story #9:** The `img` element should be centered within its parent element.
+**User Story #9:** `img` element ควรอยู่กึ่งกลางภายใน parent element.
 
-You can build your project by <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> and clicking `Save` to create your own pen. Or you can use this CDN link to run the tests in any environment you like: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`.
+คุณสามารถสร้างโปรเจคของคุณได้โดย <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> และกดคลิก `Save` เพื่อสร้าง pen ของคุณเอง หรือว่าคุณจะใช้ CDN link อันนี้เพื่อ run test ใน environment ที่คุณชอบก็ได้เช่นกัน: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`.
 
-Once you're done, submit the URL to your working project with all its tests passing.
-
+เมื่อคุณทำทุกอย่างเสร็จแล้ว จงส่ง URL ที่พาไปยังโปรเจคของคุณพร้อมกับ test ที่ผ่านทั้งหมด 
 # --solutions--
 
 ```html

@@ -7,13 +7,13 @@ dashedName: part-31
 
 # --description--
 
-The `strong` element is used to indicate that some text is of strong importance or urgent.
+`strong` element ถููกใช้เพิ่มบ่งบอกว่าตัวอักษรชุดไหนที่มีความสำคัญหรือมีความเร่งด่วน 
 
-In the `figcaption` you just added, indicate that `hate` is of strong importance by wrapping it in a `strong` element.
+จงทำให้ `hate` ดูมีความสำคัญโดยการล้อมันด้วย `strong` element ใน `figcaption` ที่คุณพึ่งเพิ่มเข้ามา
 
 # --hints--
 
-Your `strong` element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+`strong` element ควรมีแท็กเปิดโดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(document.querySelector('strong'));

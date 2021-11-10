@@ -7,13 +7,14 @@ dashedName: part-47
 
 # --description--
 
-Notice that both radio buttons can be selected at the same time. To make it so selecting one radio button automatically deselects the other, both buttons must have a `name` attribute with the same value.
+จงสังเกตว่า radio buttons ทั้งสองอันสามารถถูกเลือกได้ทั้งคู่ในเวลาเดียวกัน
+เพื่อทำให้มันยกเลิกการเลือก radio button อันหนึ่งทันทีที่ radio button อีกอันถูกเลือก ปุ่มทั้งสองอันจำเป็นต้องมี `name` attribute ที่มีค่าเดียวกัน
 
-Add the `name` attribute with the value `indoor-outdoor` to both radio buttons.
+จงเพิ่ม `name` attribute ที่มาพร้อมกับค่า `indoor-outdoor` ให้กับทั้งสองปุ่ม
 
 # --hints--
 
-Both radio buttons should still be located between opening and closing `label` element tags.
+radio button ทั้งสองอันควรจะอยู่ระหว่างแท็กเปิดและแท็กปิดของ`label` element
 
 ```js
 const labelChildNodes = [...document.querySelectorAll('form > label')].map(

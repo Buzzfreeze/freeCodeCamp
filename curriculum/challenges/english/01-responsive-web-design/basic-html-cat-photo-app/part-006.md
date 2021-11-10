@@ -7,13 +7,16 @@ dashedName: part-6
 
 # --description--
 
-HTML elements are often nested within other HTML elements. In the previous step you nested the `h2` element, comment and `p` element within the `main` element. A nested element is a child of its parent element.
+HTML elements มันถูกเก็บไว้ใน  HTML element อันอื่น
+ในขั้นตอนที่แล้ว คุรได้เก็บ `h2` element, ตอมเมนต์และ `p` element ไว้ใน `main` element
+element ที่อยู่ข้างในจะถูกเรียกว่า child ของ parent element ของมัน
 
-To make HTML easier to read, indent the `h2` element, the comment, and `p` element exactly two spaces to indicate they are children of the `main` element.
+เพื่อทำให้ HTML อ่านง่ายขึ้น จงเพิ่มย่อหน้าให้กับ `h2` element, ตอมเมนต์และ `p` element 2 อันเพื่อแสดงให้เห็นว่าพวกมันเป็น children ของ `main` element
 
 # --hints--
 
-Your should have an `h2` element with text `Cat Photos`. You may have accidentally deleted it, it is missing both opening and closing tags, or the text has changed.
+คุณควรมี `h2` element ที่เก็บข้อความว่า `Cat Photos`
+คุณอาจจะเผลอลบมันไปโดยไม่ได้ตั้งใจ ลืมใส่แท็กเปิดหรือปิด หรือข้อความที่เขียนไม่เหมือนเดิมก็ได้
 
 ```js
 assert(

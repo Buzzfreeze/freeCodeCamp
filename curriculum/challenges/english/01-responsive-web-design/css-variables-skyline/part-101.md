@@ -7,11 +7,12 @@ dashedName: part-101
 
 # --description--
 
-Fill in the windows with your secondary color for this building. Also add a `margin` of `10%` to give the windows some space.
+จงลงสีหน้าต่างของคุณด้วยสีทุติยภูมิของตึกหลังนี้
+นอกจากนี้ จงเพิ่ม `margin` ขนาด `10%` เพื่อให้หน้าต่างมีพื้นที่ว่างนิดหน่อย
 
 # --hints--
 
-You should give `.fb4-window` a `background-color` of `--window-color1`.
+คุณควรกำหนดให้ `.fb4-window` มี `background-color` เป็น `--window-color1`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(".fb4-window")?.backgroundColor.trim(), "var(--window-color1)");

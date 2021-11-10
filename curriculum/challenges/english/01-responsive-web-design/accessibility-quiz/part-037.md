@@ -7,11 +7,11 @@ dashedName: part-37
 
 # --description--
 
-Link the first `label` element to the `select` element, and give the `select` element a `name` attribute.
+จงเชื่อม `label` element อันแรกเข้ากับ `select` element และใส่ `name` attribute 1 อันใน `select` element
 
 # --hints--
 
-You should give the `label` element a `for` attribute.
+คุณควรใส่ `for` attribute ใน `label` element
 
 ```js
 assert.notEmpty(document.querySelector('.question-block > label')?.htmlFor);

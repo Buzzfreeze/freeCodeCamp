@@ -7,11 +7,12 @@ dashedName: part-52
 
 # --description--
 
-Select the `blue-left` element with an `id` selector. Give it a `width` of `500px` and a `height` of `300px`.
+จงเลือก `blue-left` element ที่มี `id` selector
+จงกำหนดให้มันมี `width` เท่ากับ `500px` และ `height` เท่ากับ `300px`.
 
 # --hints--
 
-You should have a `#blue-left` selector.
+คุณควรมี 1 `#blue-left` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#blue-left'));

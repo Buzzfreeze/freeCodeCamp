@@ -9,15 +9,18 @@ dashedName: apply-the-flex-direction-property-to-create-rows-in-the-tweet-embed
 
 # --description--
 
-The `header` and `footer` in the tweet embed example have child items that could be arranged as rows using the `flex-direction` property. This tells CSS to align the children horizontally.
+`header` และ `footer` ในตัวอย่างของ tweet embed นั้นมี child items ที่สามารถถูกจัดให้เป็นแถวได้โดยใช้ `flex-direction` property
+สิ่งนี้จะบอก CSS ให้จัด children เรียงกันเป็นเส้นตรงในแนวนอน
 
 # --instructions--
 
-Add the CSS property `flex-direction` to both the `header` and `footer` and set the value to `row`.
+จงเพิ่ม CSS property `flex-direction` ให้กับทั้ง `header` และ `footer` 
+และจงกำหนดให้ค่าของมันเป็น `row`
 
 # --hints--
 
-Your `.follow-btn` should be rendered on the page. Be sure to turn off any extensions such as ad blockers.
+`.follow-btn` ควรถูกแสดงผลในหน้าเว็บไชต์
+จงเช็คให้มั่นใช่ว่าคุณได้ปิด extension ต่าง ๆ เช่น ตัวปิดกั้นโฆษณาแล้ว
 
 ```js
 assert($('.follow-btn').length > 0 && $('.follow-btn').css('display') !== 'none');

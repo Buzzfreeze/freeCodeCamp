@@ -7,13 +7,14 @@ dashedName: part-5
 
 # --description--
 
-Lastly in the `head`, the `title` element is useful for screen readers to understand the content of a page. Furthermore, it is an important part of _SEO_.
+สิ่งสุดท้ายใน `head`คือ `title` element โดย element นี้มีประโยชน์มากสำหรับ screen readers เพื่อที่มันจะได้เข้าใจเนื้อหาของ page
+ยิ่งไปกว่านั้น มันยังเป็นส่วนสำหรับของ _SEO_
 
-Give your page a `title` that is descriptive and concise.
+จงเพิ่ม `title` ที่ช่วยให้เห็นภาพชัดและกระชับและลงใน page ของคุณ.
 
 # --hints--
 
-You should add a `title` element to the `head`.
+คุณควรเพิ่ม `title` element ลงใน `head`.
 
 ```js
 // TODO: Fix once builder puts head in the right place

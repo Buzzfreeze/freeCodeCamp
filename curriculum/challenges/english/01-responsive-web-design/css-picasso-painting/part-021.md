@@ -7,11 +7,11 @@ dashedName: part-21
 
 # --description--
 
-Give the hat a `position` of `absolute`, a `top` value of `-140px`, and a `left` value of `0`.
+จงกำหนดให้หมวกมี `position` เป็น `absolute`, `top` มีค่า `-140px`, `left` มีค่า `0`
 
 # --hints--
 
-Your `#white-hat` selector should have a `position` property set to `absolute`.
+`#white-hat` selector ควรมี `position` property อันหนึ่งที่เป็น `absolute`.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#white-hat')?.position === 'absolute');

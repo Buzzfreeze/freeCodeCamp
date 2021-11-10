@@ -9,25 +9,33 @@ dashedName: wrap-content-in-the-article-element
 
 # --description--
 
-`article` is another one of the new HTML5 elements that add semantic meaning to your markup. `article` is a sectioning element and is used to wrap independent, self-contained content. The tag works well with blog entries, forum posts, or news articles.
+`article` เป็นอีกหนึ่ง HTML5 elements ที่ช่วยเพื่อความหมายทางภาษาให้กับ markup ของคุณ
+`article` เป็น sectioning element และถูกใช้เป็นล้อมรอบเนื้อหาที่ไม่เกี่ยวข้องหรือขึ้นกับใคร
+tag อันนี้ทำงานได้ดีกับพวกblog entries, forum posts, และ news articles.
 
-Determining whether content can stand alone is usually a judgment call, but you can use a couple of simple tests. Ask yourself if you removed all surrounding context, would that content still make sense? Similarly, for text, would the content hold up if it were in an RSS feed?
+การกำหนดว่าเนื้อหาจะสามารถมาเดี่ยว ๆ ได้ไหมมักจะเป็น judgment call แต่คุณสามารถใช้การทดสอบพื้นฐาน 2-3 อย่าง
+จงถามตัวเองว่า ถ้าคุณลบบริบทที่อยู่รอบ ๆ ออกทุกอัน เนื้อหาอันนั้นจะยังเข้าใจได้อยู่หรือไม่ ? 
+เช่นเดียวกัน สำหรับข้อความจะยังคงเนื้อหาเดิมได้หรือเปล่าถ้ามันอยู่ใน RSS feed?
 
-Remember that folks using assistive technologies rely on organized, semantically meaningful markup to better understand your work.
+จงจำไว้ว่ามีความเชื่อที่ว่าการใช้ assistive technologies พึ่งพา markup ที่เป็นระเบียนและมีความหมายทางภาษาพึ่งที่จะเข้าใจงานของคุณให้ดียิ่งขึ้น
 
-**Note:** The `section` element is also new with HTML5, and has a slightly different semantic meaning than `article`. An `article` is for standalone content, and a `section` is for grouping thematically related content. They can be used within each other, as needed. For example, if a book is the `article`, then each chapter is a `section`. When there's no relationship between groups of content, then use a `div`.
+**Note:** `section` element เป็นเรื่องใหม่สำหรับ HTML5 และมีความต่างทางด้านภาษาเพียงเล็กน้อยเมื่อเทียบกับ`article`
+`article` นั้นถูกใช้สำหรับเนื้อหาที่อยู่เดี่ยว ๆ ได้ และ `section` นั้นถูกใช้เป็นจับกลุ่มเนื้อหาที่มีธีมเกี่ยวข้อกัน
+พวกมันสามารถถูกใช้กับอีกตัวหนึ่งได้ตามความต้องการ ยกตัวอย่างเช่น, ถ้าให้หนังสือเล่มหนึ่งเป็น `article` แล้วแต่ละบทก็คือ `section` นั่นเอง
+ส่วนในกรณีที่ไม่มีความสัมพันธ์ระหว่างกลุ่มเลยเราก็จะใช้ `div`
 
-`<div>` - groups content
-`<section>` - groups related content
-`<article>` - groups independent, self-contained content
+`<div>` - จับกลุ่มเนื้อหา
+`<section>` - จับกลุ่มเนื้อหาที่เกี่ยวข้องกันgroups related content
+`<article>` - จับกลุ่มตัวที่อยู่เดี่ยว ๆ ซึ่งเป็นจัวที่เก็บเนื้อหาของมันเอง
 
 # --instructions--
 
-Camper Cat used `article` tags to wrap the posts on his blog page, but he forgot to use them around the top one. Change the `div` tag to use an `article` tag instead.
+Camper Cat ใช้ `article` tags เป็นล้อมรอบโพสต์ใน blog page ของเขา แต่เขาลืมที่จะใช้มันกับส่วนที่อยู่ด้านบน
+จงเปลี่ยน `div` tag ให้เป็น`article` tag แทน
 
 # --hints--
 
-Your code should have three `article` tags.
+โค้ดของคุณควรมี `article` tags 3 อัน
 
 ```js
 assert($('article').length == 3);

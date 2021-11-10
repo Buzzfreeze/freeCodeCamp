@@ -7,13 +7,14 @@ dashedName: part-89
 
 # --description--
 
-One last step. The FontAwesome icons are a little too small. Target all of them with a `class` selector for `fas`, and set the `font-size` to `30px`.
+ขั้นตอนสุดท้าย FontAwesome icon นั้นมขนาดเล็กมาเกินไป 
+จงชี้ไปที่ icon ทุกตัวที่มี  `class` selector เป็น `fas`, และกำหนดให้มันมีขนาด `font-size` อยู่ที่ `30px`
 
-With that, your Picasso painting is complete!
+ถึงตอนนี้ ภาพ Picasso เสร็จเรียบร้อยแล้ว!
 
 # --hints--
 
-You should create a `.fas` selector.
+คุณควรสร้าง `.fas` selector ขึ้นมาอันหนึ่ง
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.fas'));

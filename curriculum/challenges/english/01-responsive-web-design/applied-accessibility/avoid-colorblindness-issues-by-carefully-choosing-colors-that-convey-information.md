@@ -12,19 +12,22 @@ dashedName: >-
 
 # --description--
 
-There are various forms of colorblindness. These can range from a reduced sensitivity to a certain wavelength of light to the inability to see color at all. The most common form is a reduced sensitivity to detect greens.
+ตาบอดสีนั้นมีหลายประเภท มันสามารถเป็นได้ตั้งแต่แยกสีที่ใกล้เคียงกับได้ยากจนไปถึงไม่สามารถเห็นสีอะไรได้เลย
+อาการที่พบได้บ่อยที่สุดคือ เซลล์รับสีเขียวทำงานได้ไม่ดี
 
-For example, if two similar green colors are the foreground and background color of your content, a colorblind user may not be able to distinguish them. Close colors can be thought of as neighbors on the color wheel, and those combinations should be avoided when conveying important information.
+ยกตัวอย่างเช่น ถ้ามีสีเขียวเฉดใกล้ ๆ กันเป็นสีพื้นหน้าและพื้นหลังของเนื้อหาของคุณ, คนที่ตาบอดสีอาจจะไม่สามารถบอกความแตกต่างของมันได้
+สีที่ใกล้เคียงกันสามารถดูได้จากวงล้อสี และการจับคู่แบบนี้ควรหลีกเลี่ยงเมื่อใช้กับเนื้อหาที่มีความสำคัญ
 
-**Note:** Some online color picking tools include visual simulations of how colors appear for different types of colorblindness. These are great resources in addition to online contrast checking calculators.
+**Note:** บางเครื่องมือเลือกสีในอินเตอร์เน็ตจะมีตัวอย่างการแสดงผลของสีในแต่ละกลุ่มอาการของโรคตาบอดสีให้เห็น เราสามารถใช้มันควบคู่กับเครื่องคิด contrast ratio ได้
 
 # --instructions--
 
-Camper Cat is testing different styles for an important button, but the yellow (`#FFFF33`) `background-color` and the green (`#33FF33`) text `color` are neighboring hues on the color wheel and virtually indistinguishable for some colorblind users. (Their similar lightness also fails the contrast ratio check). Change the text `color` to a dark blue (`#003366`) to solve both problems.
+Camper Cat กำลังทดสอบ styles ที่แตกต่างกันสำหรับปุ่มที่มีความสำคัญ
+แต่ว่าสีเหลือง (`#FFFF33`) `background-color`และสีเขียว (`#33FF33`) สำหรับ `color` ของข้อความนั้นมีความใกล้เคียงกันมากบนวงล้อสีและยากที่จะแยกด้วยตาเปล่าในกลุ่มคนที่ตาบอดสี (ความสว่างที่ใกล้เคียงกันของสองสีนี้ยังมีค่contrast ratio ที่ไม่ผ่านเกณฑ์)จงเปลี่ยน`color` ของข้อความให้เป็นสีน้ำเงินเข้ม (`#003366`) เพื่อแก้ปัญหาทั้งสองอย่าง
 
 # --hints--
 
-Your code should change the text `color` for the `button` to the dark blue.
+โค้ดของคุณควรเปลี่ยน`color` ของข้อความสำหรับ `button` ให้เป็น น้ำเงินเข้ม
 
 ```js
 assert($('button').css('color') == 'rgb(0, 51, 102)');

@@ -7,11 +7,14 @@ dashedName: part-96
 
 # --description--
 
-Only three more building to go. Nest two new `div` elements within the `.fb4` element and give them the classes of `fb4a` and `fb4b`, in that order. Remember that you sort of flipped the location of `.fb4` and `.fb5`, so it's the rightmost purple building you are working on now.
+อีกแค่สามตึกเท่านั้น
+จงเพิ่ม `div` element อันใหม่ 2 อันภายใน `.fb4` element 
+และจงกำหนดให้พวกมันมีคลาสที่ชื่อว่า `fb4a` และ `fb4b` ตามลำดับ
+จงจำไว้ว่าคุณได้สลับตำแหน่งของ `.fb4` และ `.fb5`ไปแล้ว นั้นทำให้มันเป็นตึกสีม่วงขวาสุดที่คุณกำลังสร้างอยู่
 
 # --hints--
 
-You should add two `div` elements within `.fb4`.
+คุณควรเพิ่ม 2 `div` elements ภายใน `.fb4`
 
 ```js
 assert.equal(document.querySelectorAll("div.fb4 > div")?.length, 2);

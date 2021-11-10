@@ -7,11 +7,11 @@ dashedName: part-18
 
 # --description--
 
-To be able to navigate within the page, give each anchor element an `href` corresponding to the `id` of the `h2` elements.
+เพื่อที่จะสามารถนำทางใน page หนึ่ง ๆ ได้ จงเพิ่ม  `href` ที่สัมพันธ์กับ `id` ของ `h2` elements ให้ anchor element แต่ละตัว
 
 # --hints--
 
-You should give the first `a` element an `href` of `#student-info`.
+คุณควรใส่ `href` ของ `#student-info` ลงใน `a` element อันแรก
 
 ```js
 assert.equal(document.querySelectorAll('a')?.[0]?.getAttribute('href'), '#student-info');

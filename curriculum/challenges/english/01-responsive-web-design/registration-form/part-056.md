@@ -7,11 +7,12 @@ dashedName: part-56
 
 # --description--
 
-Speaking of `padding`, the submit button is sitting at the bottom of the `form` element. Add `2em` of `padding` only to the bottom of the `form`.
+พูดถึง `padding`, ปุ่ม submit จะอยู่ที่ด้านล่างของ `form` element
+จงเพิ่ม `padding` ขนาด `2em` เพียงที่ด้านล่างของ`form` เท่านั้น
 
 # --hints--
 
-You should use the `padding-bottom` property.
+คุณควรใช้`padding-bottom` property.
 
 ```js
 assert.isNotEmpty(new __helpers.CSSHelp(document).getStyle('form')?.paddingBottom);

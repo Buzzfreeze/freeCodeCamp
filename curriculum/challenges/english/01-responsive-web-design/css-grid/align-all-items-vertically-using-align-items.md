@@ -9,15 +9,15 @@ dashedName: align-all-items-vertically-using-align-items
 
 # --description--
 
-Using the `align-items` property on a grid container will set the vertical alignment for all the items in our grid.
+การใช้ `align-items` property กับ grid container จะกำหนดให้ item ในกริดของเราตรงกันในแนวตั้ง
 
 # --instructions--
 
-Use it now to move all the items to the end of each cell.
+จงใช้มันตอนนี้เพื่อย้าย item ทั้งหมดไปที่ท้ายสุดของแต่ละช่อง
 
 # --hints--
 
-`container` class should have a `align-items` property that has the value of `end`.
+`container` class ควรมี  `align-items` property อันหนึ่งที่มีค่าเป็น `end`
 
 ```js
 assert(

@@ -9,19 +9,19 @@ dashedName: use-html5-to-require-a-field
 
 # --description--
 
-You can require specific form fields so that your user will not be able to submit your form until he or she has filled them out.
+คุณสามารถกำหนดบอกว่าคุณต้องการบาง form field ได้เพื่อที่ผู้ใช้ของจะจะได้ไม่สามารถส่งแบบฟอร์มตราบใดที่พวกเขายังกรอกข้อมูลในส่วนที่คุณต้องการไม่ครบ 
 
-For example, if you wanted to make a text input field required, you can just add the attribute `required` within your `input` element, like this: `<input type="text" required>`
+ยกตัวอย่างเช่น ถ้าคุณต้องการข้อมูลใน text input field, คุณสามารถเพิ่มคำว่า `required` ข้างใน `input` element แบบนี้: `<input type="text" required>`
 
 # --instructions--
 
-Make your text `input` a `required` field, so that your user can't submit the form without completing this field.
+จงทำให้ text `input` เป็น `required` field, เพื่อที่ผู้ใช้ของคุณจะไม่สามารถส่งแบบฟอร์มได้หากเขาไม่กรอกข้อมูลในช่องนั้น
 
-Then try to submit the form without inputting any text. See how your HTML5 form notifies you that the field is required?
+หลังจากนั้น จงพยายามทส่งแบบฟอร์มโดยที่ไม่ได้กรอกข้อมูลอะไรลงไป และจงดูว่าแบบฟอร์ม HTML5 ได้แจ้งเตือนว่าช่องนี้จำเป็นต้องกรอกหรือเปล่า?
 
 # --hints--
 
-Your text `input` element should have the `required` attribute.
+text `input` element ควรมี  `required` attribute.
 
 ```js
 assert($('input').prop('required'));

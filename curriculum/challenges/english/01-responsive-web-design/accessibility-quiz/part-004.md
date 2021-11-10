@@ -7,13 +7,13 @@ dashedName: part-4
 
 # --description--
 
-Another important `meta` tag for accessibility and SEO is the `description` definition. The value of the `content` attribute is used by search engines to provide a description of your page.
+`meta` tag ที่สำคัญอีกตัวนึงสำหรับการเข้าถึงและ SEO คือ `description` definition โดยค่าใน `content` attribute จะถูก search engines นำมาใช้เพื่อเป็นคำอธิบายของ page
 
-Add a `meta` tag with the `name` attribute set to `description`, and give it a useful `content` attribute.
+จงเพิ่ม `meta` tag อีกหนึ่งอัน ที่ประกอบด้วย `name` attribute ที่ถูกกำหนดใน `description`, และจงเพิ่ม `content` attribute ที่เป็นประโยชน์.
 
 # --hints--
 
-You should add a new `meta` tag to the `head`.
+คุณควรเพิ่ม  `meta` tag อีกอันหนึ่งใน `head`.
 
 ```js
 assert.equal(document.querySelectorAll('meta').length, 3);

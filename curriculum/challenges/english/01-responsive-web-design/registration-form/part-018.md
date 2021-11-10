@@ -7,15 +7,15 @@ dashedName: part-18
 
 # --description--
 
-At this point, you should be able to submit the form. However, you might notice not much happens.
+มาถึงจุดนี้ คุณควรจะสามารถส่งแบบฟอร์มได้แล้ว อย่างไรก็ตาม คุณอาจจะสังเกตได้ว่ามันไม่ค่อยจะมีอะไรเท่าไหร่
 
-To make the form more interactive, add the `required` attribute to the `input` elements in the first `fieldset`.
+เพิื่อทำให้แบบฟอร์มของเรา interact กับผู้ใช้ได้มาขึ้น จงเพิ่ม `required` attribute ให้กับ `input` elements ใน `fieldset` อันแรก
 
-Now, if you try to submit the form without filling in the required fields, you will see an error message.
+ในตอนนี้ ถ้าคุณพยายามที่จะส่งแบบฟอร์มที่ไม่ได้กรอกข้อมูลในช่องที่จำเป็น คุณจะได้รับ error message
 
 # --hints--
 
-You should give the first `input` element a `required` attribute.
+คุณควรเพิ่ม `required` attribute ให้กับ `input` element อันแรก
 
 ```js
 assert.equal(document.querySelector('input')?.required, true);

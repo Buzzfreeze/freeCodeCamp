@@ -7,11 +7,12 @@ dashedName: part-16
 
 # --description--
 
-Using an `id` selector, create a rule for your `offwhite-character` element. Give it a `width` of `300px`, a `height` of `550px`, and a `background-color` of `GhostWhite`.
+จงสร้างกฎสำหรับ `offwhite-character` element โดยใช้ `id` selector
+จงกำหนดให้มันมี `width` เท่ากับ `300px`, `height` เท่ากับ `550px`, และ `background-color` เท่ากับ `GhostWhite`
 
 # --hints--
 
-You should use the `#offwhite-character` selector.
+คุณควรใช้ `#offwhite-character` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#offwhite-character'));

@@ -7,13 +7,13 @@ dashedName: part-57
 
 # --description--
 
-Last, but not least, change the text color of the `terms and conditions` link to `#dfdfe2`.
+สุดท้ายแต่ไม่ท้ายสุด จงเปลี่ยนสีข้อความของลิงค์ `terms and conditions` link ให้เป็น `#dfdfe2`.
 
-Well done! You have completed the final part of the _Registration Form_ practice project.
+ยอดเยี่ยม! คุณทำโปรเจคนี้เสร็จมาจนถึงส่วนสุดท้ายแล้ว 
 
 # --hints--
 
-You should use an `a` element selector.
+คุณควรใช้ `a` element selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('a'));

@@ -7,11 +7,11 @@ dashedName: part-19
 
 # --description--
 
-Set the `background-color` of `.one` to `#efb762`.
+จงกำหนดให้ `background-color` ของ `.one` มีค่าเป็น `#efb762`
 
 # --hints--
 
-You should set the `background-color` property to `#efb762`.
+คุณควรกำหนดให้ `background-color` property มีค่าเป็น `#efb762`.
 
 ```js
 const hasBackground = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style['background-color'] === 'rgb(239, 183, 98)');

@@ -9,15 +9,17 @@ dashedName: use-the-s-tag-to-strikethrough-text
 
 # --description--
 
-To strikethrough text, which is when a horizontal line cuts across the characters, you can use the `s` tag. It shows that a section of text is no longer valid. With the `s` tag, the browser applies the CSS of `text-decoration: line-through;` to the element.
+เพื่อที่จะขีดฆ่าข้อความหรือก็คือการทำให้มีเส้นนอนตัดผ่านตัวอักษร คุณสามารถใช้`s` tag
+มันจะแสดงให้เห็นว่าข้อความส่วนนั้นใช้ไม่ได้แล้ว
+เมื่อใช้ `s` tag browser จะใช้ CSS ที่เป็น `text-decoration: line-through;` กับ element
 
 # --instructions--
 
-Wrap the `s` tag around `Google` inside the `h4` tag and then add the word `Alphabet` beside it without the strikethrough formatting.
+จงใส่ `s` tag รอบ `Google` ที่อยู่ใน `h4` tag และจงเพิ่มคำว่าa `Alphabet` ข้าง ๆ มันโดยไม่ต้องขีดฆ่า
 
 # --hints--
 
-Your code should add one `s` tag to the markup.
+คุณควรเพิ่ม`s` tag ให้กับ markup.
 
 ```js
 assert($('s').length == 1);

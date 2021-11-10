@@ -9,15 +9,16 @@ dashedName: use-grid-row-to-control-spacing
 
 # --description--
 
-Of course, you can make items consume multiple rows just like you can with columns. You define the horizontal lines you want an item to start and stop at using the `grid-row` property on a grid item.
+แน่นอน คุณสามารถทำให้ item กินพื้นที่หลาย ๆ แถวได้เช่นเดียวกับที่คุณทำกับคอลั่มน์
+คุณจะกำหนดเส้นแนวนอนที่คุณต้องการ item เริ่มและสิ้นสุดโดยการใช้ `grid-row` property กับ grid item อันหนึ่ง
 
 # --instructions--
 
-Make the element with the `item5` class consume the last two rows.
+จงทำให้ element ที่มี `item5` class กินพื้นที่สองแถวล่าง
 
 # --hints--
 
-`item5` class should have a `grid-row` property.
+`item5` class ความมี 1 `grid-row` property.
 
 ```js
 assert(

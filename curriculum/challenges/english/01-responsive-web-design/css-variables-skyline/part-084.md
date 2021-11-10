@@ -7,11 +7,11 @@ dashedName: part-84
 
 # --description--
 
-Add your `window-wrap` class to `.fb2b` to position the new window elements.
+จงเพิ่ม `window-wrap` class ให้กับ `.fb2b` เพื่อกำหนดตำแหน่งให้ element ของหน้าต่างอันใหม่
 
 # --hints--
 
-You should add the class `window-wrap` to `.fb2b`.
+คุณควรเพิ่มคลาส `window-wrap` ให้กับ `.fb2b`
 
 ```js
 assert.exists(document.querySelector("div.fb2b.window-wrap"));

@@ -9,9 +9,9 @@ dashedName: add-borders-around-your-elements
 
 # --description--
 
-CSS borders have properties like `style`, `color` and `width`.
+CSS border มีคุณสมบัติเหมือนกับ `style`, `color` และ `width`
 
-For example, if we wanted to create a red, 5 pixel border around an HTML element, we could use this class:
+ยกตัวอย่างเช่น ถ้าเราต้องการสร้างกรอบสีแดงขนาด 5 pixel รอบ HTML element เราสามารถใช้ class นี้ได้: 
 
 ```html
 <style>
@@ -25,9 +25,12 @@ For example, if we wanted to create a red, 5 pixel border around an HTML element
 
 # --instructions--
 
-Create a class called `thick-green-border`. This class should add a 10px, solid, green border around an HTML element. Apply the class to your cat photo.
+จงสร้าง class ที่ชื่อ `thick-green-border`
+คลาสนี้จะเพิ่มขอบสีเขียนขนาด 10px รอบ HTML element
+จงใส่ class ให้กับรูปแมวของคุณ
 
-Remember that you can apply multiple classes to an element using its `class` attribute, by separating each class name with a space. For example:
+จงจำไว้ว่าคุณสามารถใส่ class หลาย ๆ อันให้กับ element โดยใช้ `class` attribute, โดยการแยกชื่อของแต่ละคลาสด้วยช่องว่าง 
+ยกตัวอย่างเช่น:
 
 ```html
 <img class="class1 class2">
@@ -35,7 +38,7 @@ Remember that you can apply multiple classes to an element using its `class` att
 
 # --hints--
 
-Your `img` element should have the class `smaller-image`.
+`img` element ควรมี class `smaller-image`.
 
 ```js
 assert($('img').hasClass('smaller-image'));

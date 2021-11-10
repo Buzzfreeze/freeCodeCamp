@@ -9,9 +9,13 @@ dashedName: modify-fill-mode-of-an-animation
 
 # --description--
 
-That's great, but it doesn't work right yet. Notice how the animation resets after `500ms` has passed, causing the button to revert back to the original color. You want the button to stay highlighted.
+นั่นดีมาก!, แต่มันไม่ค่อยเวิร์คเท่าไหร่
+สังเกตว่า animation จะรีเซ็ตหลังจากผ่านไป `500ms` , ทำให้ปุ่มนั้นกลับไปมีสีเดิม
+คุณต้องการให้ปุ่มยังคงสีที่ถูกไฮไลต์เอาไว้
 
-This can be done by setting the `animation-fill-mode` property to `forwards`. The `animation-fill-mode` specifies the style applied to an element when the animation has finished. You can set it like so:
+สิ่งนี้สามารถทำได้โดยการกำหนด`animation-fill-mode` property ให้มีค่า `forwards`
+`animation-fill-mode` จะระบุสไตล์ที่จะใช้ให้กับ element เมื่อ animation นั้นจบแล้ว
+คุณสามารถกำหนดให้มันเป็นแบบนี้:
 
 ```css
 animation-fill-mode: forwards;
@@ -19,11 +23,11 @@ animation-fill-mode: forwards;
 
 # --instructions--
 
-Set the `animation-fill-mode` property of `button:hover` to `forwards` so the button stays highlighted when a user hovers over it.
+จงกำหนดให้ `animation-fill-mode` property ของ `button:hover` มีค่าเป็น `forwards` เพื่อที่ปุ่มจะได้ถูกไฮไลต์แบบนั้นเมื่อผู้ใช้ hovers มัน
 
 # --hints--
 
-`button:hover` should have a `animation-fill-mode` property with a value of `forwards`.
+`button:hover` ควรมี`animation-fill-mode` property ที่มีค่าเป็น `forwards`
 
 ```js
 assert(

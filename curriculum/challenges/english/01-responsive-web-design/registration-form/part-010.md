@@ -7,11 +7,12 @@ dashedName: part-10
 
 # --description--
 
-As suggested by the title, you are creating a form. So, after the `p` element, insert a `form` with an `action` attribute targetting `https://fcc-registration-form.com`.
+อย่างที่บอกไปแล้ว คุณกำลังจะสร้างแบบฟอร์มขึ้นมาอันหนึ่ง
+ดังนั้น, ต่อจาก `p` element, จงแทรก `form` ที่มี`action` attribute ชี้ไปที่ `https://fcc-registration-form.com`.
 
 # --hints--
 
-You should add a `form` element adjacent the `p` element.
+คุณควรเพิ่ม `form` element ข้างๆ `p` element.
 
 ```js
 assert.exists(document.querySelector('p + form'));

@@ -7,11 +7,12 @@ dashedName: part-49
 
 # --description--
 
-Give `.bb2b` a `width` and `height` of `100%` to make it fill the building container. You will add something on the top a little later.
+จงกำหนดให้ `.bb2b` มีค่า `width` และ `height` เป็น `100%` เพื่อทำให้มันเต็ม building container
+คุณกำลังจะเพิ่มอะไรบางอย่างที่ด้านลบหลังจากนี้
 
 # --hints--
 
-You should give `.bb2b` a `width` of `100%`.
+คุณควรกำหนดให้ `.bb2b` มีค่า `width` เท่ากับ `100%`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.bb2b')?.width, '100%');

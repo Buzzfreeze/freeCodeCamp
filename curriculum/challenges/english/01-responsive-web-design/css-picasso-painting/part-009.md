@@ -7,16 +7,21 @@ dashedName: part-9
 
 # --description--
 
-Typically, HTML is rendered in a top-down manner. Elements at the top of the code are positioned at the top of the page. However, many times you may want to move the elements to different positions. You can do this with the `position` attribute.
+โดยทั่วไป  HTML จะถูกแสดงผลตามทิศทางบนลงล่าง
+Element ที่ด้านบนของโค้ดจะถูกวางไว้ที่ด้านบนของหน้าเว็บไซต์
+อย่างไรก็ตาม มันก็มีหลายครั้งที่คุณต้องการที่จะย้าย element ไปตำแหน่งอื่น ๆ 
+คุณสามารถทำเช่นนี้ได้ด้วย `position` attribute
 
-Set the `position` attribute for the `back-wall` element to `absolute`. An `absolute` position takes the element out of that top-down document flow and allows you to adjust it relative to its container.
+จงกำหนดให้ `position` attribute ของ `back-wall` element กลายเป็น `absolute`
+`absolute` position จะทำให้ element ไม่ถูกจัดวางตามลำดับบนล่างของเอกสารแล้ว และมันทำให้คุณสามารถจัดวาง element ได้โดยอ้างอิงตำแหน่งของ container ของมัน
 
-When an element is manually positioned, you can shift its layout with `top`, `left`, `right`, and `bottom`. Set the `back-wall` to have a `top` value of `0`, and a `left` value of `0`.
+เมื่อ element ถูกจังวางด้วยตัวเราเอง คุณสามารถปรับตำแหน่งมันด้วยคำสั่ง  `top`, `left`, `right`, และ `bottom`
+จงกำหนดให้ `back-wall` มีค่า `top` เป็น `0` และ `left` มีค่าเป็น `0`
 
 
 # --hints--
 
-Your `#back-wall` selector should have the `position` property set to `absolute`.
+`#back-wall` selector ควรมี `position` property ที่มีค่าเป็น `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#back-wall')?.position === 'absolute');

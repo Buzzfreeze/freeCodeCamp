@@ -7,7 +7,8 @@ dashedName: part-27
 
 # --description--
 
-So far you have been using type selectors to style elements. A <dfn>class selector</dfn> is defined by a name with a dot directly in front it, like this:
+Sจนถึงตอนนี้คุณได้ลองใช้ type selector เพื่อตกแต่ง element
+<dfn>class selector</dfn> ถูกกำหนดโดยชื่อพร้อมกับจุดตรงหน้ามัน แบบนี้:
 
 ```css
 .class-name {
@@ -15,11 +16,11 @@ So far you have been using type selectors to style elements. A <dfn>class select
 }
 ```
 
-Change the existing `div` selector into a class selector by replacing `div` with a class named `menu`.
+จงเปลี่ยน `div` selector ที่มีอยู่ให้เป็น class selector โดยการแทนที่ `div` ด้วยชื่อคลาส `menu`
 
 # --hints--
 
-You should have a `.menu` type selector.
+คุรควรมี `.menu` type selector.
 
 ```js
 const hasMenu = new __helpers.CSSHelp(document).getStyle('.menu');

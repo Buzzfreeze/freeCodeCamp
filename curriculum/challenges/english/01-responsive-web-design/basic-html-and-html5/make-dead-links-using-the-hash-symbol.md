@@ -9,19 +9,20 @@ dashedName: make-dead-links-using-the-hash-symbol
 
 # --description--
 
-Sometimes you want to add `a` elements to your website before you know where they will link.
+บางครั้ง คุณก็ต้องการที่จะเพิ่ม `a` elements ให้กับเว็บไซต์ของคุณก่อนที่จะรู้ว่ามันจะลิงค์ไปที่ไหน
 
-This is also handy when you're changing the behavior of a link using `JavaScript`, which we'll learn about later.
+สิ่งนี้ยังมีประโยชน์ เมื่อคุณกำลังจะเปลี่ยนพฤติกรรมของลิงค์โดยใช้ `JavaScript`, ที่เราจะเรียนในภายหลัง
 
 # --instructions--
 
-The current value of the `href` attribute is a link that points to "`https://www.freecatphotoapp.com`". Replace the `href` attribute value with a `#`, also known as a hash symbol, to create a dead link.
+ค่าปัจจุบันของ `href` attribute นั้นได้ชิงค์ไปที่ `https://www.freecatphotoapp.com`"
+จงแทนที่ค่าของ `href` attribute ด้วย `#`เพื่อสร้าง dead link
 
-For example: `href="#"`
+ยกตัวอย่างเช่น: `href="#"`
 
 # --hints--
 
-Your `a` element should be a dead link with the value of the `href` attribute set to "#".
+`a` element ควรมี dead link อันหนึ่งที่มีค่า `href` attribute เป็น "#"
 
 ```js
 assert($('a').attr('href') === '#');

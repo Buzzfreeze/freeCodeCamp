@@ -9,15 +9,18 @@ dashedName: change-the-position-of-overlapping-elements-with-the-z-index-propert
 
 # --description--
 
-When elements are positioned to overlap (i.e. using `position: absolute | relative | fixed | sticky`), the element coming later in the HTML markup will, by default, appear on the top of the other elements. However, the `z-index` property can specify the order of how elements are stacked on top of one another. It must be an integer (i.e. a whole number and not a decimal), and higher values for the `z-index` property of an element move it higher in the stack than those with lower values.
+เมื่อ elements ถูกวางทับกันแล้ว (เช่นการใช้ `position: absolute | relative | fixed | sticky`)
+element ที่มาที่หลังใน HTML markup จะอยู่ที่ด้านหน้าของ element ตัวอื่น ๆ โดยค่าเริ่มต้น
+อย่างไรก็ตาม `z-index` property สามารถระบุลำดับหน้าหลังของ element ที่ซ้อนทับกันอยู่ได้
+มันควรจะเป็นจำนวนเป็น และค่า `z-index` property ที่สูงกว่าจะทำให้ element นั้นมาอยู่ที่ด้านหน้ามากกว่าตัวที่มีค่าน้อยกว่า 
 
 # --instructions--
 
-Add a `z-index` property to the element with the class name of `first` (the red rectangle) and set it to a value of 2 so it covers the other element (blue rectangle).
+จงเพิ่ม `z-index` property ให้ element ที่มีคลาสชื่อ`first` (สี่เหลี่ยมสีแดง) และกำหนดให้มันมีค่าเป็น 2 เพื่อที่มันจะได้บัง element อีกตัว (สี่เหลี่ยมสีฟ้า)
 
 # --hints--
 
-The element with class `first` should have a `z-index` value of 2.
+element ที่มีคลาสชื่อ`first` ควรมี `z-index` เป็น 2
 
 ```js
 assert($('.first').css('z-index') == '2');

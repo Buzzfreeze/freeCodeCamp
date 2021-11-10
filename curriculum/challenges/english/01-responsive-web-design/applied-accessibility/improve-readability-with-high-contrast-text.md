@@ -9,17 +9,21 @@ dashedName: improve-readability-with-high-contrast-text
 
 # --description--
 
-Low contrast between the foreground and background colors can make text difficult to read. Sufficient contrast improves your content's readability, but what exactly does "sufficient" mean?
+contrast ที่น้อยระหว่างสีของพื้นหน้าและพิ้นหลังสามารถทำให้ข้อความนั้นยากที่จะอ่าน
+contrast ที่เพียงพอช่วยให้เนื้อหาของคูณอ่านง่ายขึ้น แต่ว่า "เพียง" ที่ว่าคืออะไรกันแน่? 
 
-The Web Content Accessibility Guidelines (WCAG) recommend at least a 4.5 to 1 contrast ratio for normal text. The ratio is calculated by comparing the relative luminance values of two colors. This ranges from 1:1 for the same color, or no contrast, to 21:1 for white against black, the most substantial contrast. There are many contrast checking tools available online that calculate this ratio for you.
+Web Content Accessibility Guidelines (WCAG) แนะนำว่า contrast ratio ของข้อความทั่วไปควรมีค่าอย่างน้อย 4.5 to 1 
+อัตราส่วนนี้ถูกคำนวณโดยเปรียบเทียบ relative luminance values ของ 2 สี 
+โดยมีค่าตั้งแต่ 1:1 สำหรับสีที่เหมือนกัน หรือ no cont
 
 # --instructions--
 
-Camper Cat's choice of light gray text on a white background for his recent blog post has a 1.5:1 contrast ratio, making it hard to read. Change the `color` of the text from the current gray (`#D3D3D3`) to a darker gray (`#636363`) to improve the contrast ratio to 6:1.
+ตัวเลือกของ Camper Cat สำหรับโพสต์ล่าสุดในบล็อกของเขาซึ่งเป็นข้อความสีเทาอ่อนบนพื้นหลังสีขาวมี contrast ratio แค่ 1.5:1 มันทำให้ยากที่จะอ่าน
+จงเปลี่ยน `color` ของข้อความจากสีเทาตอนนี้ (`#D3D3D3`) ให้เป็นสีเทาที่เข้มขึ้น (`#636363`) เพื่อช่วยให้ contrast ratio มีค่า 6:1.
 
 # --hints--
 
-Your code should change the text `color` for the `body` to the darker gray.
+โค้ดของคุรควรเปลี่ยน `color` ของข้อความสำหรับ `body`ไปเป็นเทาที่เข้มกว่า 
 
 ```js
 assert($('body').css('color') == 'rgb(99, 99, 99)');

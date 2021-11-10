@@ -7,11 +7,12 @@ dashedName: part-100
 
 # --description--
 
-Give the `.fb4-window` elements a `width` of `30%`, `height` of `10%`, and `border-radius` of `50%`. These will make some circular windows for this building.
+จงกำหนดให้ `.fb4-window` elements มี `width` เท่ากับ `30%`, `height` เท่ากับ `10%`, และ `border-radius` เท่ากับ `50%`
+พวกมันจะถูกทำเป้นหน้าต่างวงกลมให้กับตึกนี้
 
 # --hints--
 
-You should give `.fb4-window` a `width` of `30%`.
+คุณควรกำหนดให้`.fb4-window` มี `width` เท่ากับ `30%`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(".fb4-window")?.width, "30%");

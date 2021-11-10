@@ -7,11 +7,11 @@ dashedName: part-24
 
 # --description--
 
-Now make the background color of the `div` element to be `burlywood`.
+ในตอนนี้ จงทำให้สีพื้นหลังของ `div` element เป็น `burlywood`
 
 # --hints--
 
-You should set the `background-color` property to `burlywood`.
+คุณควรกำหนดให้ `background-color` property เท่ากับ `burlywood`
 
 ```js
 const hasBackgroundColor = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style['background-color'] === 'burlywood');

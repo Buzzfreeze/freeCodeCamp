@@ -7,11 +7,12 @@ dashedName: part-53
 
 # --description--
 
-In the next few steps, you are going to use some tricks with CSS borders to turn the `.bb2a` section into a triangle at the top of the building. First, remove the `background-color` from `.bb2` since you don't need it anymore.
+ในอีกไม่กี่ขั้นตอนข้างหน้า คุณจะได้ลองใช้ทริกบางอย่างของ CSS borders เพื่อเปลี่ยน `.bb2a` section ไปเป็นสามเหลี่ยมที่ด้านบนของ building
+ขั้นตอนแรก จงเอา `background-color` ออกจาก `.bb2`เพราะคุณไม่จำเป็นต้องใช้มาอีกแล้ว
 
 # --hints--
 
-You should remove the `background-color` from `.bb2`.
+คุรควรเอา `background-color` ออกจาก `.bb2`.
 
 ```js
 assert.isEmpty(new __helpers.CSSHelp(document).getStyle(".bb2")?.backgroundColor);

@@ -7,13 +7,13 @@ dashedName: part-22
 
 # --description--
 
-Users will be allowed to chose either a `Personal Account` or `Business Account`.
+ผู้ใช้จะต้องเลือกระหว่าง `Personal Account` หรือ `Business Account` อันอย่างเดียว
 
-To do this, within each of the first two `label` elements, add one `input` element with `type="radio"`.
+เพื่อทำสิ่งนี้ จงเพิ่ม `input` element อันหนึ่งที่มี `type="radio"` ภายในแต่ละ `label` elements 2 อันแรก`type="radio"`.
 
 # --hints--
 
-You should add two `input` elements.
+คุณควรเพิ่ม 2 `input` elements.
 
 ```js
 assert.equal(document.querySelectorAll('fieldset:nth-child(2) input')?.length, 2);

@@ -7,13 +7,14 @@ dashedName: part-53
 
 # --description--
 
-Give the `.formrow` elements top margin, and left and right padding. The other padding values should be `0`.
+จงใส่ top margin ให้กับ `.formrow` elements รวมถึง padding ที่ด้านซ้ยและขวา
+สำหรับ padding อื่น ๆ ให้มีค่าเท่ากับ `0`
 
-Then, increase the font size for all `input` elements.
+หลังจากนั้น จงเพิ่มขนาด font ให้กับ `input` elements ทุกตัว
 
 # --hints--
 
-You should use a `.formrow` selector to target the `.formrow` elements.
+คุณควรใช้ `.formrow` selector เพิ่มหา `.formrow` elements.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('.formrow'));

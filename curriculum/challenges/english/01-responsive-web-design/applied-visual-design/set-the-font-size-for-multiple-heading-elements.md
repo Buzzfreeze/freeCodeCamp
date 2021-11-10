@@ -9,7 +9,9 @@ dashedName: set-the-font-size-for-multiple-heading-elements
 
 # --description--
 
-The `font-size` property is used to specify how large the text is in a given element. This rule can be used for multiple elements to create visual consistency of text on a page. In this challenge, you'll set the values for all `h1` through `h6` tags to balance the heading sizes.
+`font-size` property นั้นถูกใช้เพื่อระบุความใหญ่ของตัวอักษรขให้กับ element ที่มีมัน
+rule นี้สามารถถูกใช้กับ element หลาย ๆ อันเพื่อสร้าง visual consistency ของตัวอักษรในหน้าเว็บได้
+ในแบบฝึกหัดนี้ คุณจะได้กำหนดค่าของ  `h1` ถึง `h6` tags เพื่อให้บาลานซ์กับขนาดของ heading 
 
 # --instructions--
 
@@ -26,7 +28,7 @@ The `font-size` property is used to specify how large the text is in a given ele
 
 # --hints--
 
-Your code should set the `font-size` property for the `h1` tag to 68 pixels.
+คุณควรกำหนดให้ `font-size` property ของ `h1` tag มีค่า 68 pixel
 
 ```js
  const fontSizeOfh1 = new __helpers.CSSHelp(document).getStyle('h1')?.getPropertyValue('font-size');

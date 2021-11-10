@@ -7,11 +7,11 @@ dashedName: part-47
 
 # --description--
 
-Give the `white-paper` a `position` of `absolute`, a `top` of `250px`, and a `left` of `-150px` to move it into place.
+จงกำหนดให้ `white-paper` มี `position` เป็นแบบ `absolute`,`top` เท่ากับ `250px`, และ `left` เท่ากับ `-150px` เพื่อย้ายให้มันไปอยู่ในตำแหน่งที่ต้องการ
 
 # --hints--
 
-Your `#white-paper` selector should have a `position` property set to `absolute`.
+`#white-paper` selector คุรควรมี `position` property เป็นแบบ `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#white-paper')?.position === 'absolute');

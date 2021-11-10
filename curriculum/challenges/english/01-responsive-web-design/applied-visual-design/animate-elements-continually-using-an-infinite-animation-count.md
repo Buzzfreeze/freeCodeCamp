@@ -9,21 +9,23 @@ dashedName: animate-elements-continually-using-an-infinite-animation-count
 
 # --description--
 
-The previous challenges covered how to use some of the animation properties and the `@keyframes` rule. Another animation property is the `animation-iteration-count`, which allows you to control how many times you would like to loop through the animation. Here's an example:
+ในแบฝึกหัดที่แล้วได้กล่าวถึงวิธีการใช้ animation properties บางตัวแ `@keyframes` rule
+animation property อีกอันหนึ่งก็คือ `animation-iteration-count`, ซึ่งจะทำให้คุณสามารถควบคุมจำนวนครั้งที่คุณต้องการให้มาวนลูปได้
+นี่คือตัวอย่าง:
 
 ```css
 animation-iteration-count: 3;
 ```
 
-In this case the animation will stop after running 3 times, but it's possible to make the animation run continuously by setting that value to `infinite`.
+ในกรณีนี้ animation จะหยุดเมื่อมันได้วนทำไปครบสามครั้ง แต่มันก็เป็นไปได้ที่จะทำให้ animation วนลูปอย่างต่อเนื่องโดยการกำหนดค่าให้เป็น `infinite`
 
 # --instructions--
 
-To keep the ball bouncing on the right on a continuous loop, change the `animation-iteration-count` property to `infinite`.
+เพื่อที่จะทำให้บอลที่กระดอนอยู่วนลูปเด้งไปมาตลอดเวลา, จงเปลี่ยน `animation-iteration-count` property ให้เป็น `infinite`
 
 # --hints--
 
-The `animation-iteration-count` property should have a value of `infinite`.
+`animation-iteration-count` property ควรมีค่าเป็น `infinite`.
 
 ```js
 assert($('#ball').css('animation-iteration-count') == 'infinite');

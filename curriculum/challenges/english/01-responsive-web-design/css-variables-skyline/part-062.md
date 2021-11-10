@@ -7,11 +7,12 @@ dashedName: part-62
 
 # --description--
 
-The next building will have three sections. Nest three `div` elements within `.bb4`. Give them the classes of `bb4a`, `bb4b` and `bb4c` in that order.
+ตึกถัดไปจะมีสามส่วน จงเก็บ 3 `div` elements ไว้ภายใน `.bb4`
+จงกำหนดให้พวกมันมีคลาสชื่อ `bb4a`, `bb4b` และ `bb4c` ตามลำดับ
 
 # --hints--
 
-You should add three `div` elements within `.bb4`.
+คุณควรเพิ่ม 3 `div` elements ภายใน `.bb4`.
 
 ```js
 assert.equal(document.querySelector("div.bb4")?.children?.length, 3);

@@ -7,13 +7,14 @@ dashedName: part-49
 
 # --description--
 
-The `fieldset` element is used to group related inputs and labels together in a web form. `fieldset` elements are <dfn>block-level elements</dfn>, meaning that they appear on a new line.
+`fieldset` element ถูกใช้เพื่อจับกลุ่ม inputs และ label ที่สัมพันธ์ในแบบฟอร์มของเว็บไซต์
+`fieldset` elements เป็น <dfn>block-level elements</dfn>, ซึ่งแปลว่ามันจะขึ้นบรรทัดใหม่เวลาใช้
 
-Nest the `Indoor` and `Outdoor` radio buttons within a `fieldset` element, and don't forget to indent the buttons.
+จงเก็บ  `Indoor` และ `Outdoor` radio buttons ไว้ใน `fieldset` element อันหนึ่ง และอย่างลืมที่จะย่อหน้าพวกปุ่มเข้าไป
 
 # --hints--
 
-Both radio buttons should still be located between opening and closing `label` element tags.
+radio button ทั้งสองอันควรอยู่ระหว่างแท็กเปิดและแท็กปิดของ `label` element
 
 ```js
 const labelChildNodes = [...$('label')].map((node) => [...node.childNodes]);

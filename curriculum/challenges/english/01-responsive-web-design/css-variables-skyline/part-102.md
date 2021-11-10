@@ -7,11 +7,12 @@ dashedName: part-102
 
 # --description--
 
-Add `display: flex` and `flex-wrap: wrap` to the window container. This will put your windows side by side, and then push them down to a new row when they don't fit.
+จงเพิ่ม `display: flex` และ `flex-wrap: wrap` ให้กับc ontainer ของหน้าต่าง
+นี่จะทำให้หน้าต่างของอยู่ข้างกันและกัน และเลื่อนมันลงไปข้างล่างตรงแถวใหม่เพื่อมันเบียดกันเกินไป
 
 # --hints--
 
-You should give `.fb4b` a `display` of `flex`.
+คุณควรกำหนดให้ `.fb4b` มี `display` เป็นแบบ `flex`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(".fb4b")?.display, "flex");

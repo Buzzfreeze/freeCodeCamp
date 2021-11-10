@@ -9,19 +9,19 @@ dashedName: decrease-the-opacity-of-an-element
 
 # --description--
 
-The `opacity` property in CSS is used to adjust the opacity, or conversely, the transparency for an item.
+`opacity` property ใน CSS ถูกใช้เพื่อปรับ opacity, หรือในทางตรงข้ามก็ทำให้ item โปร่งแสง
 
 <blockquote>A value of 1 is opaque, which isn't transparent at all.<br>A value of 0.5 is half see-through.<br>A value of 0 is completely transparent.</blockquote>
 
-The value given will apply to the entire element, whether that's an image with some transparency, or the foreground and background colors for a block of text.
+ค่าที่ถูกกำหนกให้จะใช้กับ element ทั้งอันไม่ว่ามันจะเป็นรูปที่โปร่งแสงอยู่แล้วหรือสีพื้นหน้าและพื้นหลังของกล่องข้อความ
 
 # --instructions--
 
-Set the `opacity` of the anchor tags to 0.7 using `links` class to select them.
+จงกำหนดให้ `opacity` ของ anchor tags มีค่า 0.7 โดยใช้ `links` class เพื่อเลือกมัน
 
 # --hints--
 
-Your code should set the `opacity` property to 0.7 on the anchor tags by selecting the class of `links`.
+คุณควรกำหนดให้ `opacity` property ของ anchor tags มีค่าเท่ากับ 0.7 โดยใช้ `links` class เพื่อเลือกมัน
 
 ```js
 assert(

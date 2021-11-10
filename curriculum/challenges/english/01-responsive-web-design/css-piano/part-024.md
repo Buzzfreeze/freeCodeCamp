@@ -7,11 +7,12 @@ dashedName: part-24
 
 # --description--
 
-To smooth the sharp edges of the piano and keys, start by giving the `#piano` a `border-radius` of `10px`.
+เพื่อทำให้ขอบของคีย์เปียโนดูมนขึ้น
+จงเริ่มโดยการกำหนดให้ `#piano` มี `border-radius` ขนาด `10px`
 
 # --hints--
 
-Your `#piano` selector should have a `border-radius` property set to `10px`.
+`#piano` selector ควรมี 1 `border-radius` property ที่มีขนาด `10px`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#piano')?.borderRadius === '10px');

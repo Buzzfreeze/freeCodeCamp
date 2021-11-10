@@ -7,11 +7,13 @@ dashedName: part-17
 
 # --description--
 
-Now you need to link the `styles.css` file so the styles will be applied again. Nest a self-closing `link` element in the `head` element. Give it a `rel` attribute value `stylesheet`, a `type` attribute value of `text/css`, and an `href` attribute value of `styles.css`.
+ตอนนี้ คุณจำเป็นต้องลิงค์ `styles.css` เพื่อที่ style จะได้ถูกเรียกใช้งานอีกครั้ง
+จงเก็บ self-closing `link` element ไว้ใน `head` element
+จงกำหนดให้มันมี `rel` attribute เป็น `stylesheet`, `type` attribute เป็น `text/css`, และ `href` attribute เป็น `styles.css`.
 
 # --hints--
 
-Your code should have a `link` element.
+คุณควรสร้าง `link` element
 
 ```js
 // link is removed -> if exists, replaced with style

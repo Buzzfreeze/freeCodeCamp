@@ -7,11 +7,12 @@ dashedName: part-39
 
 # --description--
 
-As with the other input elements and `labels`, link the `textarea` to its corresponding `label` element, and give it a `name` attribute.
+เช่นเดียวกับ input elements อื่น ๆ และ `labels`
+จงเชื่อม `textarea` เข้ากับ `label` element ที่สัมพันธ์กันของมันและใส่ `name` attribute เข้าไปด้วย
 
 # --hints--
 
-You should give the `label` element a `for` attribute.
+คุณควรใส่ `for` attribute 1 อันใน`label` element
 
 ```js
 assert.notEmpty(document.querySelectorAll('.formrow > .question-block')?.[1]?.querySelector('label')?.htmlFor);

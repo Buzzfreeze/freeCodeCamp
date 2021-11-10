@@ -7,7 +7,7 @@ dashedName: part-54
 
 # --description--
 
-Add these properties to `.bb2a`:
+จงเพิ่ม property เหล่านี้ลงใน `.bb2a`:
 
 ```css
 margin: auto;
@@ -19,11 +19,12 @@ border-left: 1vw solid #999;
 border-right: 1vw solid #999;
 ```
 
-After you add these, you can see how a thick border on an element gives you some angles where two sides meet. You are going to use that bottom border as the top of the building.
+หลังจากคุณได้เพิ่มมันลงไปแล้ว คุณจะมองเห็นได้ว่าเส้นหนา ๆ element ประกอบขึ้นเป็นมุมเมื่อสองอันมาบรรจบกัน 
+คุณกำลังจะใช้ขอบล่างเป็นส่วนบนของ building.
 
 # --hints--
 
-You should give `.bb2a` a `margin` of `auto`.
+คุณควรกำหนดให้ `.bb2a` มี `margin` เท่ากับ `auto`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.bb2a')?.margin, "auto");

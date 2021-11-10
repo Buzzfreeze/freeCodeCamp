@@ -7,11 +7,12 @@ dashedName: part-22
 
 # --description--
 
-Start styling the logo by creating a `.logo` selector. Set the `width` to `200px`, a `position` of `absolute` and a `top` set to `23px`.
+จงเริ่มตกแต่ง logo โดยการสร้าง `.logo` selector
+จงกำหนดให้ `width` มีค่าเป็น `200px`, `position` มีค่าเป็น  `absolute` และ `top` มีค่าเป็น  `23px`.
 
 # --hints--
 
-You should have a `.logo` selector.
+คุณควรมี 1 `.logo` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.logo'));

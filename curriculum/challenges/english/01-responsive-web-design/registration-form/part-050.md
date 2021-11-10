@@ -7,19 +7,20 @@ dashedName: part-50
 
 # --description--
 
-To style the submit button, you can use an _attribute_ selector, which selects an element based on the given attribute value. Here is an example:
+คุณสามารถใช้  _attribute_ selector ที่จะเลือก element ตามค่าของ battribute ที่ถูกกำหนดไว้เพื่อปรับแต่งปุ่ม summit.
+นี่คือตัวอย่าง:
 
 ```css
 input[name="password"]
 ```
 
-The above selects `input` elements with a `name` attribute value of `password`.
+ด้านบนจะเลือก `input` elements ที่มี `name` attribute เป็น `password`
 
-Now, use the attribute selector to style the submit button with a `display` of `block`, and a `width` of `60%`.
+ตอนนี้ จงใช้ attribute selector เพื่อปรับแต่งปุ่ม submit ให้มีค่า `display` เป็น `block`และ `width` เท่ากับ `60%`.
 
 # --hints--
 
-You should use an attribute selector of `input[type="submit"]` to style the submit button.
+คุณควรใช้ attribute selector ที่มีค่า `input[type="submit"]` อันหนึ่งเพื่อผปรับแต่งปุ่ม submit 
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('input[type="submit"]'));

@@ -7,13 +7,14 @@ dashedName: part-25
 
 # --description--
 
-You only want one radio input to be selectable at a time. However, the form does not know the radio inputs are related.
+คุณต้องการเพียง radio input อันหนึ่งให้ถูกเลือกได้ในเวลาเดียวกันอย่างไรก็ตาม, แบบฟอร์มไม่รู้ว่า radio input อันไหนเกี่ยวข้องกันบ้าง
 
-To relate the radio inputs, give them the same `name` attribute with a value of `account-type`. Now, it is not possible to select both radio inputs at the same time.
+เพื่อที่จะสร้างความเกี่ยวข้องให้กับ radio input, จงใส่ `name` attribute ที่มีค่า `account-type` ให้พวกพวกมัน
+ตอนนี้ มันเป็นไปไม่ได้แรกที่จะเลือกทั้งสองตัวเลือกในเวลาเดียวกัน 
 
 # --hints--
 
-You should give the first radio input the `name` attribute with a value of `account-type`.
+คุณควรใส่ `name` attribute ที่มีค่า `account-type` ที่ radio input อันแรก
 
 ```js
 assert.equal(document.querySelector('fieldset:nth-child(2) label:nth-child(1) input[type="radio"]')?.name, 'account-type');

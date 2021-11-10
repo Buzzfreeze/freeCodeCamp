@@ -7,11 +7,13 @@ dashedName: part-54
 
 # --description--
 
-To make the first section look more inline, target only the `input` elements within `.info` elements, and set their `width` to `50%`, and left-align their text.
+เพื่อที่ section แรกจะได้ดู inline มากขึ้น
+จงหา `input` elements ใน `.info` elements
+และกำหนด `width` ให้มีค่า `50%` และทำให้ข้อความทั้งหมดชิดด้านซ้าย
 
 # --hints--
 
-You should use either the `.info input` or `.info > input` selector.
+คุณควรใช้ `.info input` หรือ `.info > input` selector.
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);

@@ -7,11 +7,11 @@ dashedName: part-20
 
 # --description--
 
-For the `.key.black--key::after`, set the `width` to `32px` and the `height` to `100px`.
+สำหรับ `.key.black--key::after`, จงกำหนดให้ `width` มีค่า `32px` และ `height` มีค่า `100px`
 
 # --hints--
 
-Your `.key.black--key::after` should have a `width` property set to `32px`.
+`.key.black--key::after` ควรมี 1 `width` property ที่มีค่า `32px`.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.key.black--key::after')?.width === '32px');

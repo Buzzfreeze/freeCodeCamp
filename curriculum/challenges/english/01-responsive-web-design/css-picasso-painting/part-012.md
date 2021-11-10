@@ -7,11 +7,11 @@ dashedName: part-12
 
 # --description--
 
-Inside that `characters` element, create another `div` with an `id` of `offwhite-character`.
+ภายใน `characters` element, จงสร้าง `div` อีกอันที่มี `id` ชื่อ `offwhite-character`
 
 # --hints--
 
-You should only create 1 additional `div` element.
+คุณควรเพิ่มเพียงอีก 1 `div` element.
 
 ```js
 assert(document.querySelectorAll('div').length === 3);

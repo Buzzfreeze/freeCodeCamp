@@ -9,9 +9,9 @@ dashedName: set-the-font-family-of-an-element
 
 # --description--
 
-You can set which font an element should use, by using the `font-family` property.
+คุณสามารถกำหนดว่าจะใช้ฟ้อนต์กับ elementใด โดยการใช้ `font-family` property.
 
-For example, if you wanted to set your `h2` element's font to `sans-serif`, you would use the following CSS:
+ยกตัวอย่างเช่น ถ้าคุณต้องการกำหนดให้ฟ้อนต์ของ `h2` element เป็น `sans-serif`, คุณสามารถใช้ CSS ได้ดังนี้:
 
 ```css
 h2 {
@@ -21,11 +21,11 @@ h2 {
 
 # --instructions--
 
-Make all of your `p` elements use the `monospace` font.
+จงทำให้ `p` elements ทำหมดใช้ `monospace` font.
 
 # --hints--
 
-Your `p` elements should use the font `monospace`.
+ `p` elements ควรใช้ฟ้อนต์ `monospace`.
 
 ```js
 assert(

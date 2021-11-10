@@ -7,13 +7,14 @@ dashedName: part-32
 
 # --description--
 
-If you click on the radio inputs, you might notice both inputs within the same true/false fieldset can be selected at the same time.
+ถ้าคุณคลิกที่ radio inputs คุณจะอาจพบว่า inputs ทั้งสองตัวภายใน rue/false fieldset อันเดียวกันสามารถถูกเลือกได้ในคราวเดียวกัน
 
+จงจับกลุ่ม inputs ที่มีความเกี่ยวข้องกันเข้าด้วยกัน โดยให้มีเพียงหนึ่ง input จาก หนึ่งคู่สามารถถูกเลือกได้ในขณะนั้น
 Group the relevant inputs together such that only one input from a pair can be selected at a time.
 
 # --hints--
 
-You should give the first `input` a `name` attribute.
+คุณควรใส่ `name` attribute ให้กับ`input` ตัวแรก.
 
 ```js
 assert.notEmpty(document.querySelectorAll('ul.answers-list > li > label > input')?.[0]?.name);

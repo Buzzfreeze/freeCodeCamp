@@ -7,11 +7,12 @@ dashedName: part-65
 
 # --description--
 
-The `black-round-hat` should probably be round. Give it a `border-radius` of `50%` to fix this.
+`black-round-hat` should ควรจะดูกลม ๆ 
+จงกำหนดให้มันมี `border-radius` เท่ากับ `50%` เพื่อแก้ไขมัน
 
 # --hints--
 
-Your `#black-round-hat` selector should have a `border-radius` property set to `50%`.
+`#black-round-hat` selector ควรมี `border-radius` property ที่มีค่าเป็น `50%`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#black-round-hat')?.borderRadius === '50%');

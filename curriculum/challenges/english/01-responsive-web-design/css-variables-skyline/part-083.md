@@ -7,11 +7,12 @@ dashedName: part-83
 
 # --description--
 
-Nest three `div` elements within `.fb2b` and give them a class of `fb2-window`. These will be windows for this section of the building.
+จงเพิ่ม `div` elements 3 อันภายใน `.fb2b` และจงกำหนดให้พวกมันมีคลาสชื่อ `fb2-window` เหมือนกัน
+พวกนี้จะเป็นหน้าต่างในส่วนนี้ของตึก
 
 # --hints--
 
-You should add three `div` elements within `.fb2b`.
+คุณควรเพิ่ม 3 `div` elements ภายใน `.fb2b`.
 
 ```js
 assert.equal(document.querySelectorAll("div.fb2b > div")?.length, 3);

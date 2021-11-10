@@ -8,7 +8,9 @@ dashedName: divide-the-grid-into-an-area-template
 
 # --description--
 
-You can group cells of your grid together into an <dfn>area</dfn> and give the area a custom name. Do this by using `grid-template-areas` on the container like this:
+คุณสามารถจับกลุ่มช่องต่าง ๆ ในกริดของคุณให้เป็นY <dfn>area</dfn> 
+จงกำหนดชื่อให้กับพื้นที่นั้น
+จงทำมันโดยใช้ `grid-template-areas` ที่ container แบบนี้:
 
 ```css
 grid-template-areas:
@@ -17,15 +19,18 @@ grid-template-areas:
   "advert footer footer";
 ```
 
-The code above groups the cells of the grid into four areas; `header`, `advert`, `content`, and `footer`. Every word represents a cell and every pair of quotation marks represent a row.
+โค้ดด้านบนจะจับกลุ่มช่องเล็ก ๆ ของกริดให้เป็น 4 ส่วน; `header`, `advert`, `content`, และ `footer`
+ทุก ๆ คำทขะแสดงเป็นช่อง ๆ หนึ่ง และทุก ๆ เครื่องหมายคำพูดคู่หนึ่งจะเป็น 1 แถว
 
 # --instructions--
 
-Change the template so the `footer` area spans the entire bottom row. Defining the areas won't have any visual effect right now. Later, you will make an item use an area to see how it works.
+จงเปลี่ยน template เพื่อที่พื้นที่ `footer` จะครอบคลุมแถวล่างสุดทั้งหมด
+การกำหนดพื้นที่จะยังไม่มีผลอะไรที่มองเห็นได้ในตอนนี้
+หลังจากนี้ คุณจะทำให้ item ใช้พื้นที่เพื่อดูการทำงานของมัน
 
 # --hints--
 
-`container` class should have a `grid-template-areas` property similar to the example but with the `footer` area spanning the whole bottom row.
+`container` class ควรมี`grid-template-areas` property อันหนึ่งที่คล้ายกับตัวอย่าง แต่มีพื้นที่ `footer`ครอบคลุมแถวล่างสุดทั้งหมด
 
 ```js
 assert(

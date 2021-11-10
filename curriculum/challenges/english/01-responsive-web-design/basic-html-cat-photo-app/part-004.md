@@ -7,13 +7,17 @@ dashedName: part-4
 
 # --description--
 
-Commenting allows you to leave messages without affecting the browser display. It also allows you to make code inactive. A comment in HTML starts with `<!--`, contains any number of lines of text, and ends with `-->`. For example, the comment `<!-- TODO: Remove h1 -->` contains the text `TODO: Remove h1`.
+การคอมเมนต์จะทำให้คุณสามารถทิ้งข้อความไว้ได้โดยไม่ส่งผลต่อการแสดงผลในbrowser
+มันยังทำให้โค้ดของคุณไม่ทำงานได้ด้วย
+คอมเมนต์หนึ่งใน HTML จะขึ้นต้นด้วย `<!--` ซึ่งจะสามารถเก็บข้อความจำนวนกี่บบรรทัดก็ได้ แล้วก็จะลงท้ายด้วย `-->`
+ตัวอย่างเช่น คอมเมนต์ `<!-- TODO: Remove h1 -->` จะเก็บตัวอักษรที่เขียนว่า `TODO: Remove h1`
 
-Add a comment above the `p` element with the text `TODO: Add link to cat photos`. \\
+จงเพิ่มคอมมเนต์เหนือ `p` element ที่เขียนว่า `TODO: Add link to cat photos`. \\
 
 # --hints--
 
-Your comment should start with `<!--`. You are missing one or more of the characters that define the start of a comment.
+คอมเมนต์ของคุณควรขึ้นต้นด้วย `<!--`
+แล้วตอนนี้คุณก็ขาดแต่ข้อความที่คุณอยากเขียนคอนเมนต์ไว้เท่านั้น
 
 ```js
 assert(code.match(/<!--/));

@@ -9,17 +9,18 @@ dashedName: create-a-horizontal-line-using-the-hr-element
 
 # --description--
 
-You can use the `hr` tag to add a horizontal line across the width of its containing element. This can be used to define a change in topic or to visually separate groups of content.
+คุณสามารถใช้ `hr` tag เพื่อเพิ่มเส้นทางนอนที่มีความยาวเท่ากับความกว้างของ containing element ของมัน
+เส้นนี้ถูกใช้เพื่อบ่งบอกว่าหัวข้อมีการเปลี่ยนไปแล้ว หรือเพื่อแสดงให้เห็นถึงกลุ่ม content ที่แยกจากกัน
 
 # --instructions--
 
-Add an `hr` tag underneath the `h4` which contains the card title.
+จงเพิ่ม`hr` tag ใต้ `h4`ซึ่งได้เก็บหัวข้อของการ์ดไว้
 
-**Note:** In HTML, `hr` is a self-closing tag, and therefore doesn't need a separate closing tag.
+**Note:** ใน HTML `hr` เป็นself-closing tag ซึ่งทำให้มันไม่ต้องการแท็กปิด
 
 # --hints--
 
-Your code should add an `hr` tag to the markup.
+คุณควรเพิ่ม `hr` tag ให้กับ markup
 
 ```js
 assert($('hr').length == 1);

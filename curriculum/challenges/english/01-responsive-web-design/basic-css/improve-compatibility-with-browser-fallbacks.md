@@ -9,19 +9,26 @@ dashedName: improve-compatibility-with-browser-fallbacks
 
 # --description--
 
-When working with CSS you will likely run into browser compatibility issues at some point. This is why it's important to provide browser fallbacks to avoid potential problems.
+เมื่อทำงานกับ CSS คุณมีโอกาสที่ต้องเผชิญกับปัญหาด้าน browser compatibility ณ จุดใดจุดหนึ่ง
+นี่เป็นสาเหตุที่มันสำคัญที่จะต้องมีการกำหนด fallback ให้กับ browser เพื่อป้องกันปัญหาที่อาจจะเกิดขึ้น
 
-When your browser parses the CSS of a webpage, it ignores any properties that it doesn't recognize or support. For example, if you use a CSS variable to assign a background color on a site, Internet Explorer will ignore the background color because it does not support CSS variables. In that case, the browser will use whatever value it has for that property. If it can't find any other value set for that property, it will revert to the default value, which is typically not ideal.
+เมื่อ browser ของคุณวิเคราะห์ CSS ของหน้าเว็บซักหน้า มันจะไม่สนใจ property ใดก็ตามที่มันหาไม่เจอหรือไม่รอบรับ
+จกตัวอย่างเช่น ถ้าคุณใช้ตัวแปร CSS เพื่อกำหนดค่าให้สีพื้นหลังบนเว้บไซต์ 
+Internet Explorer จะไม่สนใจสีของพื้นหลังเพราะมันไม่ได้รอบรับตัวแปร CSS 
+ในกรณีนั้น browser จะใช้ค่าใดก็ตามที่มันมีสำหรับ property นั้น
+ถ้ามันไม่สามารถหาค่าอื่นได้ มันจะกลับไปใช้ค่าเริ่มต้นซึ่งโดยปกติไม่ค่อยเป็นที่น่าพิใจเท่าไหร่
 
-This means that if you do want to provide a browser fallback, it's as easy as providing another more widely supported value immediately before your declaration. That way an older browser will have something to fall back on, while a newer browser will just interpret whatever declaration comes later in the cascade.
+นี่หมายความว่าถ้าคุณต้องการกำหนด browser fallback, มันก็ง่ายเหมือนกับการกำหนดค่าที่ได้รับการรองรับอื่น ๆ
+เช่นนั้นพวก browser เก่า ๆ ก็จะมีค่าบางอย่างให้ใช้ ในขณะที่ browser ที่ใหม่กว่าจะ interpret การประกาศค่าอะไรก็ตามที่ตามมาใน cascade
 
 # --instructions--
 
-It looks like a variable is being used to set the background color of the `.red-box` class. Let's improve our browser compatibility by adding another `background` declaration right before the existing declaration and set its value to `red`.
+มันเหมือนกับว่าตัวแปรหนึ่งได้ถูกใช้เพื่อกำหนดค่าสีพื้นหลังของ `.red-box` class
+เรามาพัฒนา browser compatibility ของเราโดยการเพิ่ม `background` declaration อีกอันต่อจาก declaration ที่ได้ทำไปแล้วและกำหนดให้มันมีค่าเป็น `red`
 
 # --hints--
 
-Your `.red-box` rule should include a fallback with the `background` set to `red` immediately before the existing `background` declaration.
+`.red-box` rule ควรมี fallback ที่ `background` ถูกำหนดให้เป็น `red` ทันทีก่อน `background` declaration ที่มี
 
 ```js
 assert(

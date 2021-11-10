@@ -8,23 +8,34 @@ dashedName: learn-about-tertiary-colors
 
 # --description--
 
-Computer monitors and device screens create different colors by combining amounts of red, green, and blue light. This is known as the RGB additive color model in modern color theory. Red (R), green (G), and blue (B) are called primary colors. Mixing two primary colors creates the secondary colors cyan (G + B), magenta (R + B) and yellow (R + G). You saw these colors in the Complementary Colors challenge. These secondary colors happen to be the complement to the primary color not used in their creation, and are opposite to that primary color on the color wheel. For example, magenta is made with red and blue, and is the complement to green.
+จอคอมพิวเตอร์และจอของอุปกรณ์อื่น ๆ สร้างสีที่ต่างกันโดยการรวมแสงสีแดง เขียว และน้ำเงินเข้าด้วยกัน
+สิ่งนี้เรียกว่า RGB additive color model ในทฤษฎีสีสมัยใหม่
+แดง(R), เขียว (G), และฟน้ำเงิน (B) นั้นถูกเรียกว่าสีปฐมภูมิ การผสมสีปฐมภูมิสองสีเข้าด้วยกันจะสร้างสีทุติยภูมิโดยมีสี cyan (G + B), magenta (R + B) และเหลือง (R + G)
+คุณสามารถเห็นสีพวกนี้ในแบบฝึกหัด Complementary Colors 
+สีทุติยภูมิพวกนี้เป็นคู่ตรงข้ามของสีปฐมภูมิที่ไม่ได้ถูกนำมาผสมให้เกิดมัน และอยู่ตรงข้ามกับสีปฐมภูมินั้นบนวงล้อสี
+ยกตัวอย่างเช่น, magenta เกิดขึ้นจากสีแดงและน้ำเงิน และเป็นสีคู่ตรงข้ามของสีเขียว
 
-Tertiary colors are the result of combining a primary color with one of its secondary color neighbors. For example, within the RGB color model, red (primary) and yellow (secondary) make orange (tertiary). This adds six more colors to a simple color wheel for a total of twelve.
+สีตติยภูมิเป็นผลจากการผสมสีปฐมภูมิสีหนึ่งกับสีทุติยภูมิที่อยู่ข้าง ๆ กัน
+ยกตัวอย่างเช่น ภายใน RGB color model, แดง (primary) และเหลือง (secondary) จะทำให้เกิดสีส้ม (tertiary)
+ซึ่งมันจะเพิ่มอีก 6 สีเข้าไปในวงล้อสีอย่างง่าย จนตอนนี้มีสีอยู่บนนั้น 12 สีแล้ว
 
-There are various methods of selecting different colors that result in a harmonious combination in design. One example that can use tertiary colors is called the split-complementary color scheme. This scheme starts with a base color, then pairs it with the two colors that are adjacent to its complement. The three colors provide strong visual contrast in a design, but are more subtle than using two complementary colors.
+มันมีหลากหลายวิธีสำหรับการเลือกใช้สีที่แตกต่างกันซึ่งจะทำให้เกิดคู่สีที่เข้ากันในการออกแบบ
+ตัวอย่างหนึ่งที่สามารถใช้สีตติยภูมินั้นถูกเรียกว่าsplit-complementary color scheme
+scheme นี้จะเริ่มจาก base color หนึ่งและก้จับคู่มันกับอีกสองสีที่อยู่ข้าง ๆ สีคู่ตรงข้ามของมัน
+สามสีนี้จะทำให้เกิด visual contrast ในการออกแบบสูงมาก แต่น้อยกว่าการใช้สีคู่ตรงข้ามตรง ๆ
 
-Here are three colors created using the split-complement scheme:
+นี่คือตัวอย่างของสามสีที่เกิดจากกันใช้ split-complement scheme:
 
 <table class='table table-striped'><thead><tr><th>Color</th><th>Hex Code</th></tr></thead><thead></thead><tbody><tr><td>orange</td><td>#FF7F00</td></tr><tr><td>cyan</td><td>#00FFFF</td></tr><tr><td>raspberry</td><td>#FF007F</td></tr></tbody></table>
 
 # --instructions--
 
-Change the `background-color` property of the `orange`, `cyan`, and `raspberry` classes to their respective colors. Make sure to use the hex codes and not the color names.
+จงเปลี่ยน `background-color` property ของ `orange`, `cyan`, และ `raspberry` classes ให้มีค่าตามชื่อคลาสของมัน
+จงเช็คให้มั่นใจว่าคุณได้ใช้ hex codes ไม่ใช่ชื่อสี
 
 # --hints--
 
-The `div` element with class `orange` should have a `background-color` of orange.
+`div` element ภายในคลาส `orange` ควรมี `background-color` เป็นสีส้ม
 
 ```js
 assert($('.orange').css('background-color') == 'rgb(255, 127, 0)');

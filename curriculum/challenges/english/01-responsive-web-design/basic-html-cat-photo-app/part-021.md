@@ -7,11 +7,11 @@ dashedName: part-21
 
 # --description--
 
-After the unordered list, add a new image with an `src` attribute value set to `https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg` and an `alt` attribute value set to `A slice of lasagna on a plate.`
+หต่อจาก unordered list, จงเพิ่มรูปใหม่ที่มี `src` attribute ที่มีค่าเป็น `https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg` และ `alt` attribute ที่มีค่าเป็น `A slice of lasagna on a plate.`
 
 # --hints--
 
-There should be an `img` element right above the second `section` element's closing tag.
+นี่ควรมี `img` element อยู่เหนือแท็กปิดของ `section` element อันที่สอง
 
 ```js
 assert($('section')[1].lastElementChild.nodeName === 'IMG');

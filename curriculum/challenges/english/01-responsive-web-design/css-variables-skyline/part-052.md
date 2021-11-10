@@ -7,11 +7,14 @@ dashedName: part-52
 
 # --description--
 
-You can see the hard color change at the top of the section. Change the gradient type from `linear-gradient` to `repeating-linear-gradient` for this section. This will make the four colors of your gradient repeat until it gets to the bottom of the element; giving you some stripes, and saving you from having to add a bunch of elements to create them.
+คุณสามารถเห็นการเปลี่ยนสีที่ด้านบนของ section
+จงเปลี่ยนประเภทของ gradient จาก `linear-gradient` เป็น `repeating-linear-gradient` สำหรับ section นี้
+นี่จะทำให้สีทั้ง 4 ของคุณไล่วนไปมาจนมันถึงด้านล่างของ element
+เราได้เตรียงโค้ดบางส่วนให้คุณ เพื่อที่คุณจะได้ไม่ต้องเพิ่ม element จำนวนมาก
 
 # --hints--
 
-You should change the `background` property of `.bb2b` from using `linear-gradient` to using `repeating-linear-gradient`.
+คุณควรเปลี่ยนe `background` property ของ `.bb2b` จะแบบ `linear-gradient` ไปเป็น `repeating-linear-gradient`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(`.bb2b`)?.getPropVal('background', true), "repeating-linear-gradient(var(--building-color2),var(--building-color2)6%,var(--window-color2)6%,var(--window-color2)9%)");

@@ -8,48 +8,53 @@ dashedName: build-a-survey-form
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/VPaoNP>.
+**Objective:** จงสร้างแอปพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานคล้ายแอปพลิเคชั่นนี้: <https://codepen.io/freeCodeCamp/full/VPaoNP>.
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story) and get all of the tests to pass. Give it your own personal style.
+จงทำตามการหลัก [user stories](https://en.wikipedia.org/wiki/User_story) และทดสอบให้ผ่านทุกเทส
+จงทำตามสไตล์ของคุณเอง
 
-You can use HTML, JavaScript, and CSS to complete this project. Plain CSS is recommended because that is what the lessons have covered so far and you should get some practice with plain CSS. You can use Bootstrap or SASS if you choose. Additional technologies (just for example jQuery, React, Angular, or Vue) are not recommended for this project, and using them is at your own risk. Other projects will give you a chance to work with different technology stacks like React. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
+คุณสามารถใช้ HTML, JavaScript, และ CSS เพื่อทำโปรเจคนี้
+Plain CSS นั้นเป็นที่แนะนำเพราะมันคือสิ่งที่บทเรียนของเราได้กล่าวถึงมันไปหมดแล้วและคุณควรจะฝึกทักษะการใช้ plain CSS
+คุณสามารถใช้ Bootstrap หรือ SASS ได้ถ้าคุณอยากใช้
+เทคโนโลยีอื่น ๆ (อย่างเช่น jQuery, React, Angular, หรือ Vue) นั้นยังไม่แนะนำสำหรับโปรเจคนี้ โดยหากคุณจะใช้มันก็เป็นความเสี่ยงของคุณเอง
+โปรเจคอื่น ๆ หลังจากนี้จะเปิดโอกาสให้คุณได้ลองใช้เทคโนโลยีอื่น ๆ เช่น React อย่างแน่นอน
+เราพร้อมจะยอมรับและปรับปรุงปัญหาต่าง ๆ ที่เกิดขึ้นจากการใช้เทคโนโลยีที่ถูกแนะนำในโปรเจคนี้ Happy coding!
 
-**User Story #1:** I can see a title with `id="title"` in H1 sized text.
+**User Story #1:** ฉันสามารถมองเห็นหัวข้อที่มี `id="title"` และมีขนาดตัวอักษรเป็นไซส์ของ H1
 
-**User Story #2:** I can see a short explanation with `id="description"` in P sized text.
+**User Story #2:** ฉันสามารถมองเห็นคำอฑิบายสั้น ๆ ทีมี `id="description"` และมีขนาดตัวอักษรเป็นไซส์ของ P
 
-**User Story #3:** I can see a `form` with `id="survey-form"`.
+**User Story #3:** ฉันสามารถมองเห็น  `form` ที่มี `id="survey-form"`
 
-**User Story #4:** Inside the form element, I am required to enter my name in a field with `id="name"`.
+**User Story #4:** ภายในของ form element, ฉันต้องการที่จะใส่ชื่อของฉันในช่องที่มี `id="name"`
 
-**User Story #5:** Inside the form element, I am required to enter an email in a field with `id="email"`.
+**User Story #5:** ภายในของ form element, ฉันต้องการที่จะใส่อีเมลของฉันในช่องที่มี `id="email"`
 
-**User Story #6:** If I enter an email that is not formatted correctly, I will see an HTML5 validation error.
+**User Story #6:** ถ้าฉันกรอกอีเมลที่มี formatไม่ถูกต้อง, ฉันจะเห็น HTML5 validation error.
 
-**User Story #7:** Inside the form, I can enter a number in a field with `id="number"`.
+**User Story #7:** ภายในของ form, ฉันสามารถกรอกตัวเลขในช่องที่มี`id="number"`
 
-**User Story #8:** If I enter non-numbers in the number input, I will see an HTML5 validation error.
+**User Story #8:** ถ้าฉันกรอกค่าที่ไม่ใช่ตัวเลขใน number input, ฉันจะเห็น HTML5 validation error
 
-**User Story #9:** If I enter numbers outside the range of the number input, which are defined by the `min` and `max` attributes, I will see an HTML5 validation error.
+**User Story #9:** ถ้าฉันกรอกตัวเลขที่มีเกิน range ของ number input ซึ่งจะถูกกำหนดโดย `min` และ `max` attributes, ฉันจะเห็น HTML5 validation error
 
-**User Story #10:** For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: `id="name-label"`, `id="email-label"`, and `id="number-label"`.
+**User Story #10:** สำหรับช่องที่เอาไว้ใส่ input ที่เป็นชื่อ, อีเมล, ตัวเลขข้างในฟอร์ม ฉันสามารถมองเห็น labels ที่เหมาะสมที่อธิบายจุดประสงค์ของแต่ละช่องที่มี ids ต่อไปนี้: `id="name-label"`, `id="email-label"`, and `id="number-label"`.
 
-**User Story #11:** For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.
+**User Story #11:** สำหรับช่องที่เอาไว้ใส่ input ที่เป็นชื่อ, อีเมล, ตัวเลข, ฉันสามารถมองเห็น placeholder text ที่ให้คำอธิบายหรือคำสั่งของแต่ละช่อง
 
-**User Story #12:** Inside the form element, I can select an option from a dropdown that has a corresponding `id="dropdown"`.
+**User Story #12:** ภายในของ form element, ฉันสามารถเลือกตัวเลือกจาก dropdown ที่มี id="dropdown"`.
 
-**User Story #13:** Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the `name` attribute.
+**User Story #13:** ภายในของ form element, ฉันสามารถเลือกคำตอบจากกลุ่มของ radio buttons ที่อาจจะมีมากกว่า 1 อัน โดยแต่ละกลุ่มควรถูกจับกลุ่มโดยการใช้ `name` attribute.
 
-**User Story #14:** Inside the form element, I can select several fields from a series of checkboxes, each of which must have a `value` attribute.
+**User Story #14:** ภายในของ form element, ฉันสามารถเลือกคำตอบหลาย ๆ ข้อได้ด้วยเซ็ตของcheckboxes, โดยแต่ละอันต้องมี `value` attribute.
 
-**User Story #15:** Inside the form element, I am presented with a `textarea` at the end for additional comments.
+**User Story #15:** ภายในของ form element, ฉันเห็น `textarea` ที่ด้านล่างของ comments เพิ่มเติม
 
-**User Story #16:** Inside the form element, I am presented with a button with `id="submit"` to submit all my inputs.
+**User Story #16:** ภายในของ form element, ฉันเห็นปุ่มหนึ่งที่มี `id="submit"` เพื่อส่ง inputs ทั้งหมดของฉัน
 
-You can build your project by <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> and clicking `Save` to create your own pen. Or you can use this CDN link to run the tests in any environment you like: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
+คุณสามารถสร้างโปรเจคของคุณได้โดย <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> และกดคลิก `Save` เพื่อสร้าง pen ของคุณเอง หรือว่าคุณจะใช้ CDN link อันนี้เพื่อ run test ใน environment ที่คุณชอบก็ได้เช่นกัน: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
 
-Once you're done, submit the URL to your working project with all its tests passing.
-
+เมื่อคุณทำทุกอย่างเสร็จแล้ว จงส่ง URL ที่พาไปยังโปรเจคของคุณพร้อมกับ test ที่ผ่านทั้งหมด 
 # --solutions--
 
 ```html

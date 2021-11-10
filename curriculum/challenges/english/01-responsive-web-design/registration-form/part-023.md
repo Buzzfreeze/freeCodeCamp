@@ -7,11 +7,12 @@ dashedName: part-23
 
 # --description--
 
-For the terms and conditions, add an `input` of with a `type` of `checkbox` to the third `label` element. Also, as we do not want users to sign up, without having read the terms and conditions, make it `required`.
+สำหรับ "terms and conditions", จงเพิ่ม `input` ที่มีค่า `type` เป็น `checkbox` ไปที่`label` element อันที่สาม
+นอกจากนี้ เพื่อที่ผู้ใช้จะไม่สมัครโดยไม่ได้อ่าน "terms and conditions" อย่างถี่ถ้วน เราจะทำให้มัน `required`
 
 # --hints--
 
-You should add an `input` to the third `label` element.
+คุณควรเพิ่ม`input` อันหนึ่งใน `label` element อันที่สาม
 
 ```js
 assert.exists(document.querySelector('fieldset:nth-child(2) label:nth-child(3) input'));

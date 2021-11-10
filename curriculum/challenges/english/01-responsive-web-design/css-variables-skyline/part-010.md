@@ -7,11 +7,13 @@ dashedName: part-10
 
 # --description--
 
-Nest a `div` with a class of `bb1` in the background buildings container. Give it a `width` of `10%` and `height` of `70%`. "bb" stands for "background building", this will be your first building.
+จงเก็บ  `div` ที่มีคลาสเป็น `bb1` ใน background buildings container
+จงกำหนดให้มันมี `width` เป้น `10%` และ `height` เป็น `70%`
+"bb" นั้นมาจากคำว่า "background building" และนี่จะเป็น building ของคุณ
 
 # --hints--
 
-You should create a new `div` element.
+คุณควรสร้าง `div` element อันใหม่ขึ้นมา 1 อัน
 
 ```js
 assert.equal(document.querySelectorAll('div').length, 2);

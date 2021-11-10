@@ -9,17 +9,17 @@ dashedName: use-css-variables-to-change-several-elements-at-once
 
 # --description--
 
-<dfn>CSS Variables</dfn> are a powerful way to change many CSS style properties at once by changing only one value.
+<dfn>CSS Variables</dfn> เป็นวิธีที่มีอิทธิพลมากในการเปลี่ยนa CSS style properties หลาย ๆ อันในทีเดียวโดยการเปลี่ยนค่าแค่ค่าเดียว
 
-Follow the instructions below to see how changing just three values can change the styling of many elements.
+จงทำตามคำสั่งขั้นล่าง และดูสิ่งที่จะเปลี่ยนแปลงจากการที่ค่าเพียงสามค่าถูกเปลี่ยน
 
 # --instructions--
 
-In the `penguin` class, change the `black` value to `gray`, the `gray` value to `white`, and the `yellow` value to `orange`.
+ใน `penguin` class, จงเปลี่ยน `black` ให้เป็น `gray`, และ `gray` ให้เป็น `white`, และ `yellow` ให้เป็น `orange`
 
 # --hints--
 
-`penguin` class should declare the `--penguin-skin` variable and assign it to `gray`.
+`penguin` class ควรประกาศตัวแปร `--penguin-skin` แล้วกำหนดค่า `gray` ให้มัน
 
 ```js
 assert(

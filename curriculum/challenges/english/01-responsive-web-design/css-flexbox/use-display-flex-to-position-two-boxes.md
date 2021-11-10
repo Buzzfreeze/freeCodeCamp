@@ -9,17 +9,18 @@ dashedName: use-display-flex-to-position-two-boxes
 
 # --description--
 
-This section uses alternating challenge styles to show how to use CSS to position elements in a flexible way. First, a challenge will explain theory, then a practical challenge using a simple tweet component will apply the flexbox concept.
+ในส่วนนี้จะใช้ styles ของอีก challengeเพื่อแสดงให้เห็นวิธีการใช้ CSS เพื่อจัดวาง elements ในรูปแบบที่ยืดหยุ่นขึ้น
+ในตอนแรก challenge จะอธิบายทฤษฎี แล้วหลังจากนั้นจะมี challenge ที่มีตัวอย่างการใช้งาน tweet component อย่างง่ายให้ลองทำดู
 
-Placing the CSS property `display: flex;` on an element allows you to use other flex properties to build a responsive page.
+การวาง CSS property `display: flex;` ใน element หนึ่งช่วยให้คุณสามารถใช้ flex properties แบบอื่นเพื่อสร้างหน้าที่ responsive ได้
 
 # --instructions--
 
-Add the CSS property `display` to `#box-container` and set its value to `flex`.
+จงเพิ่ม CSS property `display` ให้กับ `#box-container` และจงกำหนดค่าให้มันเป็น `flex`.
 
 # --hints--
 
-`#box-container` should have the `display` property set to a value of `flex`.
+`#box-container` ควรมี `display` property ที่ถูกกำหนดค่าให้เป็น `flex`
 
 ```js
 assert($('#box-container').css('display') == 'flex');

@@ -9,15 +9,15 @@ dashedName: set-the-font-size-of-paragraph-text
 
 # --description--
 
-The `font-size` property in CSS is not limited to headings, it can be applied to any element containing text.
+`font-size` property ใน CSS ไม่ได้ถูกจำกัดแค่ที่ headings, มันสามารถถูกใช้กับ element ใดก็ได้ที่เก็บตัวอักษรไว้อยู่
 
 # --instructions--
 
-Change the value of the `font-size` property for the paragraph to 16px to make it more visible.
+จงเปลี่ยนค่าของ `font-size` property ของพารากราฟ ให้มีค่าเป็น 16px เพื่อทำให้มันมองเห็นได้ง่ายขึ้น
 
 # --hints--
 
-Your `p` tag should have a `font-size` of 16 pixels.
+`p` tag ควรมี`font-size` ขนาด 16 pixels
 
 ```js
 assert($('p').css('font-size') == '16px');

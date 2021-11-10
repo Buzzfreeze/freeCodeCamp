@@ -9,25 +9,26 @@ dashedName: use-rgb-values-to-color-elements
 
 # --description--
 
-Another way you can represent colors in CSS is by using `RGB` values.
+อีกทางหนึ่งที่จะแสดงค่าสีใน CSS คือการใช้ค่า `RGB` 
 
-The `RGB` value for black looks like this:
+`RGB` value ของสีดำจะเป็นแบบนี้:
 
 ```css
 rgb(0, 0, 0)
 ```
 
-The `RGB` value for white looks like this:
+`RGB` value ของสีขาวจะเป็นแบบนี้:
 
 ```css
 rgb(255, 255, 255)
 ```
 
-Instead of using six hexadecimal digits like you do with hex code, with `RGB` you specify the brightness of each color with a number between 0 and 255.
+แทนที่จะใช้เลขฐาน 16 เหมือนที่คุณใช้กับ hex code,  `RGB` ทำให้คุรสามารถระบุความสว่างของแต่ละสีได้ด้วยเลขที่อยู่ระหว่าง 0 and 255
 
-If you do the math, the two digits for one color equal 16 times 16, which gives us 256 total values. So `RGB`, which starts counting from zero, has the exact same number of possible values as hex code.
+ถ้าคุณลองคำนวณดู 2 หลักของสีสีหนึ่งจะเท่ากับ 16 x 16, ซึ่งเท่ากับ 256 ค่า
+ดังนั้น `RGB` ซึ่งจะเริ่มนับจาก 0 จะมีจำนวนที่เป็นไปได้เท่ากับ hex code
 
-Here's an example of how you'd change the `body` background to orange using its RGB code.
+นี่คือตัวอย่างของการเปลี่ยนพื้นหลังของ `body` ให้เป็นสีส้มโดยใช้ RGB code.
 
 ```css
 body {
@@ -37,11 +38,11 @@ body {
 
 # --instructions--
 
-Let's replace the hex code in our `body` element's background color with the RGB value for black: `rgb(0, 0, 0)`
+จงแทนที่ hex code ในสีพื้นหลังของ `body` element ด้วยค่า RGB สำหรับสีดำ: `rgb(0, 0, 0)`
 
 # --hints--
 
-Your `body` element should have a black background.
+`body` element ควรมีพื้นหลังสีดำ
 
 ```js
 assert($('body').css('background-color') === 'rgb(0, 0, 0)');

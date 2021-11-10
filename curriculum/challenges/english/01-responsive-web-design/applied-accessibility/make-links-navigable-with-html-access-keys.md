@@ -9,11 +9,13 @@ dashedName: make-links-navigable-with-html-access-keys
 
 # --description--
 
-HTML offers the `accesskey` attribute to specify a shortcut key to activate or bring focus to an element. Adding an `accesskey` attribute can make navigation more efficient for keyboard-only users.
+HTML ได้เสนอ `accesskey` attribute ที่จะไว้กำหนด shortcut key เพื่อใช้ในการ activate หรือดึงความสนใจมาที่element
+จงเพิ่ม `accesskey` attribute สามารถช่วยให้การนำทางมีประสิทธิภาพมากขึ้นสำหรับผู้ใช้ที่ใช้เพียงแค่ keyboard เท่านั้น
 
-HTML5 allows this attribute to be used on any element, but it's particularly useful when it's used with interactive ones. This includes links, buttons, and form controls.
+HTML5 อนุญาตให้ attribute นี้สามารถถูกใช้ได้กับทุก element, แต่มันอาจจะไม่ค่อยมีประโยชน์ดท่าไหร่นักกับ element ที่ interactive กับผู้ใช้
+นี่รวมถึงลิงค์, ปุ่ม, และ form controls
 
-Here's an example:
+นี่คือตัวอย่าง :
 
 ```html
 <button accesskey="b">Important Button</button>
@@ -21,11 +23,12 @@ Here's an example:
 
 # --instructions--
 
-Camper Cat wants the links around the two blog article titles to have keyboard shortcuts so his site's users can quickly navigate to the full story. Add an `accesskey` attribute to both links and set the first one to `g` (for Garfield) and the second one to `c` (for Chuck Norris).
+Camper Cat ต้องการที่จะเชื่อม 2 หัวข้อบทความเข้ากับ keyboard shortcuts เพื่อที่ผู้ใช้ของเขาจะได้ navigate เนื้อหาทั้งหมดไดรวดเร็วมากยิ่งขึ้น
+จงเพิ่ม `accesskey` attribute ให้กับ links ทั้งสองอันและกำหนดของอันแรกให้เป็น `g` (สำหรับ Garfield) และอันที่สองเป็น `c` (สำหรับ Chuck Norris).
 
 # --hints--
 
-Your code should add an `accesskey` attribute to the `a` tag with the `id` of `first`.
+โค้ดของคุณควรเพิ่ม `accesskey` attribute 1 อันให้กับ `a` tag ที่มี `id` ของ `first`
 
 ```js
 assert($('#first').attr('accesskey'));

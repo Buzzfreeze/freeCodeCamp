@@ -9,25 +9,27 @@ dashedName: create-visual-balance-using-the-text-align-property
 
 # --description--
 
-This section of the curriculum focuses on Applied Visual Design. The first group of challenges build on the given card layout to show a number of core principles.
+ส่วนนี้ของหลักสุตรจะโฟกัสที่ Applied Visual Design
+แบบฝึกหัดชุดแรกจะเกี่ยวกับ card layout เพื่อแสดงให้เห็นหลักการสำคัญ ๆ จำนวนหนึ่ง
 
-Text is often a large part of web content. CSS has several options for how to align it with the `text-align` property.
+ตัวอักษรมักจะเป็นส่วนใหญ่ ๆ ใน content
+CSS มีตัวเลือกหลากหลายให้ใช้กับการจัดตัวอักษรพวกนั้นด้วย `text-align` property
 
-`text-align: justify;` causes all lines of text except the last line to meet the left and right edges of the line box.
+`text-align: justify;` ทำให้ข้อความในแต่ละบรรทัดมีความยาวเท่ากัน
 
-`text-align: center;` centers the text
+`text-align: center;` ทำให้ข้อความอยู่ตรงกลาง
 
-`text-align: right;` right-aligns the text
-
-And `text-align: left;` (the default) left-aligns the text.
+`text-align: right;` ทำให้ข้อความชิดขวา
+And `text-align: left;` ทำให้ข้อความชิดซ้าย ซึ่งเป็นค่าเริ่มต้นของมัน
 
 # --instructions--
 
-Align the `h4` tag's text, which says "Google", to the center. Then justify the paragraph tag which contains information about how Google was founded.
+จงจัดข้อความของ `h4` tag ที่เขียนว่า "Google" ให้อยู่ตรงกลาง
+และหลังจากนั้นจงทำให้ paragraph tag ที่เก็บข้อมูลเกี่ยวกับการก่อตั้ง Google มีความยาวในแต่ละบรรทัดเท่ากัน
 
 # --hints--
 
-Your code should use the text-align property on the `h4` tag to set it to `center`.
+คุณควรใช้ text-align property กับ `h4` tag tเพื่อกำหนดให้มันมีค่าเป็น `center`
 
 ```js
 assert($('h4').css('text-align') == 'center');

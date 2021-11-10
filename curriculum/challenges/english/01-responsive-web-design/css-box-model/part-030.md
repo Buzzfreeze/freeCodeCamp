@@ -7,13 +7,13 @@ dashedName: part-30
 
 # --description--
 
-You don't always have to use pixels when sizing an element.
+คุณไม่ต้องใช้ pixel เพื่อกำหนดขนาดให้ element ทุกครั้ง
 
-Create a new rule, `.three`, and set its `width` to `91%`.
+จงสร้างกฎอันใหม่ที่ชื่อ `.three` และจงกำหนดให้มันมี `width` เท่ากับ `91%`
 
 # --hints--
 
-You should use the `.three` selector.
+คุณควรใช้ `.three` selector.
 
 ```js
 const hasThree = new __helpers.CSSHelp(document).getStyle('.three');

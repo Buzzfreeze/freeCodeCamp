@@ -9,17 +9,19 @@ dashedName: center-an-element-horizontally-using-the-margin-property
 
 # --description--
 
-Another positioning technique is to center a block element horizontally. One way to do this is to set its `margin` to a value of auto.
+วิธีการจัดตำแหน่งอีกอย่างก็คือการทำให้ block element อยู่ตรงกลางในแนวนอน 
+วิธที่หนึ่งเพื่อที่จะทำเช่นนี้คือการกำหนดให้ `margin` ของมันมีค่า auto.
 
-This method works for images, too. Images are inline elements by default, but can be changed to block elements when you set the `display` property to `block`.
+วิธีทำงานได้ดีกับรูปภาพเช่นกัน รูปภาพในเป็น inline elements โดยค่าเริ่มต้น
+แต่สามารถถูกเปลี่ยนให้เป็น block element เมื่อคุณกำหนดให้ `display` property เป็น `block`
 
 # --instructions--
 
-Center the `div` on the page by adding a `margin` property with a value of `auto`.
+จงกำให้ `div` ในหน้านี้อยู่ตรงกลางโดยการเพิ่ม `margin` property อันหนึ่งที่มีค่า `auto`
 
 # --hints--
 
-The `div` should have a `margin` set to `auto`.
+`div` should ควรมี `margin` ทีมีค่าเป็น `auto`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('div')?.margin === 'auto');

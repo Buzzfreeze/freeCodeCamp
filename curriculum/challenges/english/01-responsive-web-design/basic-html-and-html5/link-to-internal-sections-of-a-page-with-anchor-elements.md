@@ -9,11 +9,13 @@ dashedName: link-to-internal-sections-of-a-page-with-anchor-elements
 
 # --description--
 
-`a` (*anchor*) elements can also be used to create internal links to jump to different sections within a webpage.
+`a` (*anchor*) elements สามารถใช้เพื่อสร้างลิงค์ภายในที่พาไปยังแต่ละ section ข้างในหน้าเว็บไซต์นั้นได้ด้วย
 
-To create an internal link, you assign a link's `href` attribute to a hash symbol `#` plus the value of the `id` attribute for the element that you want to internally link to, usually further down the page. You then need to add the same `id` attribute to the element you are linking to. An `id` is an attribute that uniquely describes an element.
+เพื่อสร้างิงค์ภายในหน้านั้น คุณต้องเพิ่ม `href` attribute ของลิงค์ให้กับเครื่องหมาย `#` และเพิ่มค่าของ `id` attribute ของ element ที่คุณต้องการจะนำทางไปโดยทั่วไป ก็คือตำแหน่งที่อยู่ลึกลงไปในหน้านั้น
+นอกจากนี้ คุณยังต้องเพิ่ม `id` attribute อันเดียวกับนี้ให้กับ element ที่คุณได้มีการลิงค์ไว้
+`id` เป็น attribute ที่จะกล่าวถึง element ที่แตกต่างกัน
 
-Below is an example of an internal anchor link and its target element:
+ด้านล่างจะเป็นตัวอย่างของ internal anchor link และ target element ขงมัน:
 
 ```html
 <a href="#contacts-header">Contacts</a>
@@ -21,19 +23,19 @@ Below is an example of an internal anchor link and its target element:
 <h2 id="contacts-header">Contacts</h2>
 ```
 
-When users click the `Contacts` link, they'll be taken to the section of the webpage with the **Contacts** header element.
+เมื่อผู้ใช้คลิกที่ `Contacts` link, ผู้เขาจะถูกพาไปที่ section ของเว็บเพจที่มี **Contacts** header element.
 
 # --instructions--
 
-Change your external link to an internal link by changing the `href` attribute to `"#footer"` and the text from `cat photos` to `Jump to Bottom`.
+ขงเปลี่ยน external link ให้เป็น internal link โดยการเปลี่ยน `href` attribute ให้เป้น `"#footer"` และข้อความจาก `cat photos` เป็น `Jump to Bottom`
 
-Remove the `target="_blank"` attribute from the anchor tag since this causes the linked document to open in a new window tab.
+จงเอา `target="_blank"` attribute ออกจาก anchor tag เนื่องจากมันจะทำให้ linked document ถูกเปิดขึ้นมาในอีกหน้าหนึ่ง
 
-Then add an `id` attribute with a value of `footer` to the `<footer>` element at the bottom of the page.
+หลังจากนั้น จงเพิ่ม`id` attribute ที่มีค่าเป็น`footer` ให้ `<footer>` element ที่ด้านล่างของหน้านั้น
 
 # --hints--
 
-There should be only one anchor tag on your page.
+มันควรมี anchor tag แค่อันเดียวในหน้านี้
 
 ```js
 assert($('a').length == 1);

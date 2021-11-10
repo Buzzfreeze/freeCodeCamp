@@ -7,11 +7,12 @@ dashedName: part-40
 
 # --description--
 
-Use an `id` selector to create a rule for your `black-hat` element. Give it a `width` of `0`, a `height` of `0`, and a `border-style` of `solid`.
+จงใช้ `id` selector เพื่อสร้างกฎให้กับ `black-hat` element
+จงกำหนดให้มันมี `width` เท่ากับ `0`, `height` เท่ากับ `0`, และ `border-style` เท่ากับ `solid`
 
 # --hints--
 
-You should have a `#black-hat` selector.
+คุณควรมี 1 `#black-hat` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#black-hat'));

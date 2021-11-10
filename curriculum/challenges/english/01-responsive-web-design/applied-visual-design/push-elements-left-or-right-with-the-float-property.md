@@ -9,15 +9,18 @@ dashedName: push-elements-left-or-right-with-the-float-property
 
 # --description--
 
-The next positioning tool does not actually use `position`, but sets the `float` property of an element. Floating elements are removed from the normal flow of a document and pushed to either the `left` or `right` of their containing parent element. It's commonly used with the `width` property to specify how much horizontal space the floated element requires.
+เครื่องมือในการกำหนดตำแหน่งอันถัดไปไม่ค่อยยุ่งกับ `position`, แต่จะกำหนด `float` property ของ element
+Floating element ถูกเอาออกจาก normal flow ของ document และจะถูกผลักให้ไปอยู่ `left` หรือ `right` ของ parent element ที่เก็บมันไว้
+มันมักจะถูกใช้กับ `width` property เพื่อระบุช่องว่างในแนวนอนที่ floated element ต้องการ
 
 # --instructions--
 
-The given markup would work well as a two-column layout, with the `section` and `aside` elements next to each other. Give the `#left` item a `float` of `left` and the `#right` item a `float` of `right`.
+markup ที่กำหนดให้จะมีลักษณะเป็น two-column layout, ที่มี `section` และ `aside` element อยู่ข้าง ๆ กัน
+จงกำหนดให้ `#left` item มี `float` เป็น `left` และ `#right` item มี `float` เป็น `right`
 
 # --hints--
 
-The element with id `left` should have a `float` value of `left`.
+element ที่มี id `left` ควรมี `float` เป็น `left`
 
 ```js
 assert($('#left').css('float') == 'left');

@@ -7,11 +7,11 @@ dashedName: part-31
 
 # --description--
 
-Set the `height` of `.three` to `28%`.
+จงกำหนดให้ `height` ของง `.three` มีค่า `28%`
 
 # --hints--
 
-You should set the `height` property to `28%`.
+คุณควรกำหนดให้ `height` property มีค่า `28%`
 
 ```js
 const hasHeight = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style.height === '28%');

@@ -9,23 +9,23 @@ dashedName: use-clockwise-notation-to-specify-the-margin-of-an-element
 
 # --description--
 
-Let's try this again, but with `margin` this time.
+เรามาลองกันอีกที แต่รอบนี้จะเป็นกับ `margin` 
 
-Instead of specifying an element's `margin-top`, `margin-right`, `margin-bottom`, and `margin-left` properties individually, you can specify them all in one line, like this:
+แทนที่จะระบุ element `margin-top`, `margin-right`, `margin-bottom`, และ `margin-left` properties เป็นตัว ๆ , คุรสามารถกำหนดค่าให้พวกมันทั้งได้ในบรรทัดเดียว แบบนี้:
 
 ```css
 margin: 10px 20px 10px 20px;
 ```
 
-These four values work like a clock: top, right, bottom, left, and will produce the exact same result as using the side-specific margin instructions.
+ค่าทั้ง 4 ตัวนี้จะเรียงกันตามเข็มนาฬิกา: บน, ขวา, ล่าง, ซ้าย, และจะให้ผลเช่นเดียวกับการใช้คำสั่งที่เป็น side-specific margin 
 
 # --instructions--
 
-Use Clockwise Notation to give the element with the `blue-box` class a margin of `40px` on its top and left side, but only `20px` on its bottom and right side.
+จงใช้ Clockwise Notation เพื่อกำหนดให้ element ที่เป็น `blue-box` class มี margin ขนาด `40px` ที่ด้านบนและซ้ายของมัน และ `20px` ที่ด้านล่างและขวา
 
 # --hints--
 
-Your `blue-box` class should give the top of elements `40px` of `margin`.
+`blue-box` class ควรกำหนดให้ด้านบนของ element มี `40px` เป็นค่าของ `margin`
 
 ```js
 assert($('.blue-box').css('margin-top') === '40px');

@@ -7,13 +7,14 @@ dashedName: part-53
 
 # --description--
 
-Forms commonly use checkboxes for questions that may have more than one answer. For example, here's a checkbox with the option of `tacos`: `<input type="checkbox"> tacos`.
+แบบฟอร์มมันจะใช้ checkboxe กับคำถามประเภทที่อาจจะตอบได้มากกว่า 1 ตัวเลือก
+ยกตัวอย่างเช่น  checkbox อันนี้ที่ให้เลือกตัวเลือกของ `tacos`: `<input type="checkbox"> tacos`.
 
-Under the `legend` element you just added, add an `input` with its `type` attribute set to `checkbox` and give it the option of `Loving`.
+จ่อจาก `legend` element ที่คุณพึ่งใส่เข้ามา จงเพิ่ม`input` ที่ `type` attribute ของมันมีค่าเป็น `checkbox` และจงกำหนดให้มันมีตัวเลือกของ `Loving`.
 
 # --hints--
 
-The `input` element for your checkbox should have an opening tag, but not a closing tag.
+`input` element สำหรับ checkbox ควรมีแค่แท็กเปิด แต่ไม่จำเป็นต้องมีแท็กปิด
 
 ```js
 assert($('fieldset > input') && !code.match(/<\/input\>/g));

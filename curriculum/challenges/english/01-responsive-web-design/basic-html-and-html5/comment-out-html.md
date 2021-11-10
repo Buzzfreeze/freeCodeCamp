@@ -9,17 +9,17 @@ dashedName: comment-out-html
 
 # --description--
 
-Remember that in order to start a comment, you need to use `<!--` and to end a comment, you need to use `-->`
+จงจำไว้ว่าเพื่อที่จะเขียนคอมเมนต์ คุณต้องมี `<!--` และปิดท้าย `-->`
 
-Here you'll need to end the comment before your `h2` element begins.
+คุณจะต้องปิดท้ายคอมเมนต์ก่อนที่จะเริ่ม `h2` element 
 
 # --instructions--
 
-Comment out your `h1` element and your `p` element, but not your `h2` element.
+จงทำให้ `h1` element และ `p` element กลางเป็นแค่คอมเมนต์ แต่ไม่รวม `h2` element.
 
 # --hints--
 
-Your `h1` element should be commented out so that it is not visible on the page.
+`h1` element ควรกลายเป็นคอมเมนต์เพื่อที่มันจะได้ไม่ถูกแสดงผลในหน้าเว็บไซต์
 
 ```js
 assert($('h1').length === 0);

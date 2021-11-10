@@ -9,15 +9,17 @@ dashedName: make-screen-reader-navigation-easier-with-the-footer-landmark
 
 # --description--
 
-Similar to `header` and `nav`, the `footer` element has a built-in landmark feature that allows assistive devices to quickly navigate to it. It's primarily used to contain copyright information or links to related documents that usually sit at the bottom of a page.
+คล้ายคลึงกับ `header` และ `nav`,`footer` element มี built-in landmark feature ตัวหนึ่งที่ทำให้ assistive devices สามารถนำทางมาที่มันได้เร็วขึ้น
+มันถูกใช้เป็นเก็บข้อมูล copyright หรือลิงค์ที่เกี่ยวข้องกับเอกสารที่มักถูกวางไว้ที่ด้านล่างของหน้าหนึ่ง ๆ ในช่วงแรก
 
 # --instructions--
 
-Camper Cat's training page is making good progress. Change the `div` he used to wrap his copyright information at the bottom of the page to a `footer` element.
+หน้า training ของ Camper Cat กำลังไปได้สวย
+จงเปลี่ยน `div` ที่เขาใช้ให้เก็บข้อมูล copyright ของเขาที่ด้านล่างของหน้านี้ไว้ใน `footer` element.
 
 # --hints--
 
-Your code should have one `footer` tag.
+โค้ดของคุณควรมี 1 `footer` tag.
 
 ```js
 assert($('footer').length == 1);

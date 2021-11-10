@@ -7,11 +7,11 @@ dashedName: part-33
 
 # --description--
 
-To prevent unnecessary repetition, target the `before` pseudo-element of the `p` element, and give it a `content` property of `Question #`.
+เพื่อที่จะไม่ให้เกิดความซ้ำซ้อนที่ไม่จำเป็น จงหา `before` pseudo-element ของ `p` element และเพิ่ม,`content` property ของ `Question #` ให้กับ pseudo-element นั้น
 
 # --hints--
 
-You should use the `p::before` selector.
+คุณควรใช้  `p::before` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('p::before'));

@@ -7,11 +7,13 @@ dashedName: part-79
 
 # --description--
 
-Now use a `class` selector to target `guitar`. This will style the two "halves" of your guitar. Set the `width` to `150px`, the `height` to `120px`, the `background-color` to `Goldenrod`, and the `border-radius` to `50%`.
+ในตอนนี้ จงใช้ `class` selector เพื่อชี้ไปที่ `guitar`
+นี่จะกำหนดลักษณะของทั้ง 2 "halves" ของกีต้าร์
+จงกำหนดให้ `width` เท่ากับ `150px`, `height` เท่ากับ `120px`, `background-color` เป็น `Goldenrod`, และ `border-radius` เท่ากับ `50%`
 
 # --hints--
 
-You should create a `.guitar` selector.
+คุณควรสร้าง `.guitar` selector ขึ้นมาใหม่อันหนึ่ง
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.guitar'));

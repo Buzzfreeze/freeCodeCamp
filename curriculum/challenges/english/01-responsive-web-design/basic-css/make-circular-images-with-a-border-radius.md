@@ -9,15 +9,15 @@ dashedName: make-circular-images-with-a-border-radius
 
 # --description--
 
-In addition to pixels, you can also specify the `border-radius` using a percentage.
+นอกเหนือจาก pixels, คุณสามารถระบุค่า `border-radius` โดยใช้ percentage
 
 # --instructions--
 
-Give your cat photo a `border-radius` of `50%`.
+จงกำหนดให้รูปแมวของคุณมี `border-radius` เป็น `50%`.
 
 # --hints--
 
-Your image should have a border radius of `50%`, making it perfectly circular.
+ภาพของคุณควรมี border radius ขนาด `50%`, ซึ่งทำให้มันเป็นวงทั้งหมด
 
 ```js
 assert(parseInt($('img').css('border-top-left-radius')) > 48);

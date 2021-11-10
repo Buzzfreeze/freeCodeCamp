@@ -7,11 +7,11 @@ dashedName: part-67
 
 # --description--
 
-Put the `black-round-hat` on the correct layer with a `z-index` of `-1`.
+จงเทำให้ `black-round-hat` อยู่ใน layer ที่เหมาะสมด้วยการกำหนด `z-index` เป็น `-1`
 
 # --hints--
 
-Your `#black-round-hat` selector should have a `z-index` property set to `-1`.
+`#black-round-hat` selector ควรมี `z-index` property ที่มีค่าเป็น `-1`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#black-round-hat')?.zIndex === '-1');

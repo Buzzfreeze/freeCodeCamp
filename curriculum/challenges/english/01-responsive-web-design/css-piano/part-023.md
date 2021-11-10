@@ -7,11 +7,12 @@ dashedName: part-23
 
 # --description--
 
-The `img` element needs its parent to have a `position` set as a point of reference. Set the `position` of the `#piano` selector to `relative`.
+`img` element ต้องการให้ parent ของมันมี `position` ที่ถูกกำหนดค่าให้อยู่ที่ตำแหน่งอ้างอิง
+จงกำหนดให้ `position` ของ `#piano` selector เป็นแบบ `relative`
 
 # --hints--
 
-Your `#piano` selector should have a `position` property set to `relative`.
+`#piano` selector ควรมี 1 `position` property ที่เป็นแบบ `relative`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#piano')?.position === 'relative');

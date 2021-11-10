@@ -7,11 +7,13 @@ dashedName: part-92
 
 # --description--
 
-Nest three new `div` elements in the first `.fb3a` element. Give them each a class of `fb3-window`. These will be windows for this section.
+จงเพิ่ม `div` element อันใหม่ 3 อันใน `.fb3a` element อันแรก
+และจงกำหนดให้พวกมันมีคลาสชื่อ `fb3-window` คนละอัน
+พวกมันจะเป็นหน้าต่างสำหรับส่วนนี้
 
 # --hints--
 
-You should add three `div` elements within the first `.fb3a` element.
+คุณควรเพิ่ม 3 `div` elements ภายใน `.fb3a` element อันแรก
 
 ```js
 assert.equal(document.querySelectorAll("div.fb3a > div")?.length, 3);

@@ -7,13 +7,13 @@ dashedName: part-17
 
 # --description--
 
-The first `input` element with a `type` of `submit` is automatically set to submit its nearest parent `form` element.
+`input` element อันแรกที่มี `type` ที่มีค่าเป็น `submit` จะถูกตั้งให้  parent `form` element ที่ใกล้ที่สุดโดยอัตโนมัติ
 
-To handle the form submission, after the last `fieldset` element add an `input` element with the `type` attribute set to `submit` and the `value` attribute set to `Submit`.
+เพิ่มจัดการกับการส่งแบบฟอร์ม ต่อจาก `fieldset` element อันสุดท้ายให้เพิ่ม `input` element 1 อันที่มี `type` attribute ที่ถูกกำหนดค่าเท่ากับ `submit` และมี`value` attribute ที่ถูกกำหนดค่าเป็น `Submit`
 
 # --hints--
 
-You should add the `input` element after the last `fieldset` element.
+คุณควรเพิ่ม `input` element ต่อจาก `fieldset` element อันสุดท้าย
 
 ```js
 assert.exists(document.querySelectorAll('fieldset')?.[2]?.nextElementSibling?.tagName, 'input');

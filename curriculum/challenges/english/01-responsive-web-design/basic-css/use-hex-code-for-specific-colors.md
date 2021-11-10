@@ -9,11 +9,19 @@ dashedName: use-hex-code-for-specific-colors
 
 # --description--
 
-Did you know there are other ways to represent colors in CSS? One of these ways is called hexadecimal code, or hex code for short.
+คุณรู้หรือเปล่าว่ายังมีวิธีอื่นเพื่อที่จะแสดงค่าสีใน CSS? 
+หนึ่งในนั้นเรียกว่า hexadecimal code, หรือ hex code 
 
-We usually use <dfn>decimals</dfn>, or base 10 numbers, which use the symbols 0 to 9 for each digit. <dfn>Hexadecimals</dfn> (or <dfn>hex</dfn>) are base 16 numbers. This means it uses sixteen distinct symbols. Like decimals, the symbols 0-9 represent the values zero to nine. Then A,B,C,D,E,F represent the values ten to fifteen. Altogether, 0 to F can represent a digit in hexadecimal, giving us 16 total possible values. You can find more information about [hexadecimal numbers here](https://www.freecodecamp.org/news/hexadecimal-number-system/).
+เรามันจะใช้ <dfn>decimals</dfn>, หรือเลขฐาน 10, ซึ่งจะประกอบด้วยสัญลักษณ์ที่เป็นเลข 0 - 9 
+<dfn>Hexadecimals</dfn> (or <dfn>hex</dfn>) เป็นเลขฐาน 16 ซึ่งแปลว่ามันจะใช้สัญลักษณ์ที่แตกต่างกัน 16 ตัว
+เช่นเดียวกับเลขฐาน 10 สัญลักษณ์ 0-9 จะใช้แสดงค่าตั้งแต่ศูนย์ถึงเก้า ส่วน A,B,C,D,E,F จะแสดงค่าตั้งแต่สิบถึงสิบห้า
+เมื่อเอามารวมกัน 0 ถึง F จะสามารถใช้เพื่อแสดงค่าแต่ละหลักของ hexadecimal ได้โดยการกำหนดค่าที่เป็นไปได้ 16 ตัวแก่เรา
+คุณสามารถอ่านรายละเอียดเพิ่มเติมเกี่ยวกับ  [เลขฐาน 16 ที่นี่](https://www.freecodecamp.org/news/hexadecimal-number-system/).
 
-In CSS, we can use 6 hexadecimal digits to represent colors, two each for the red (R), green (G), and blue (B) components. For example, `#000000` is black and is also the lowest possible value. You can find more information about the [RGB color system here](https://www.freecodecamp.org/news/rgb-color-html-and-css-guide/#whatisthergbcolormodel).
+ใน CSS, เราสามารถใช้เลขฐาน 16 6 ตัวเพื่อแสดงค่าของสี
+ทุกสองตัวจะแทนด้วยองค์ประกอบของสีแดง (R), สีเขียว (G), และสีฟ้า (B)
+ยกตัวอย่างเช่น `#000000` จะเป้นสีดำและมันยังเป็นค่าที่ต่ำที่สุดที่เป็นไปได้
+คุณสามารถอ่านรายละเอียดเกี่ยวกับ [RGB color system ที่นี่](https://www.freecodecamp.org/news/rgb-color-html-and-css-guide/#whatisthergbcolormodel).
 
 ```css
 body {
@@ -23,11 +31,11 @@ body {
 
 # --instructions--
 
-Replace the word `black` in our `body` element's background-color with its hex code representation, `#000000`.
+จงแทนที่คำว่า `black` ในสีพื้นหลังของ `body` element ด้วย hex code, `#000000`.
 
 # --hints--
 
-Your `body` element should have the background-color of black.
+`body` element ควรมีสีพื้นหลังเป็นสีดำ
 
 ```js
 assert($('body').css('background-color') === 'rgb(0, 0, 0)');

@@ -7,11 +7,12 @@ dashedName: part-29
 
 # --description--
 
-Create a new `div` with a `class` value of `three` right under the `.two` element. This will be your third rectangle.
+จงสร้าง  `div` อันใหม่ที่มี `class` เป็น `three` ที่ด้านล่างของ `.two` element
+นี่จะเป็นสี่เหลี่ยมอันที่สามของคุณ
 
 # --hints--
 
-Your existing `.one` and `.two` elements should not be changed.
+`.one` และ `.two` elements ไม่คุณถูกเปลี่ยนอะไรแล้ว
 
 ```js
 assert(document.querySelectorAll('.one').length === 1);

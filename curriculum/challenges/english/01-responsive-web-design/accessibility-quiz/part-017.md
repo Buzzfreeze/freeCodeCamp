@@ -7,15 +7,14 @@ dashedName: part-17
 
 # --description--
 
-Typeface plays an important role in the accessibility of a page. Some fonts are easier to read than others, and this is especially true on low-resolution screens.
+Typeface มีบทบาทสำคัญในการเข้าถึง page
+ฟ้อนต์บางชนิดอ่านง่าายกว่าชนิดอื่น ๆ โดยเฉพาะหน้าจอที่มี resolution ต่ำมาก ๆ 
 
-Change the font for both the `h1` and `h2` elements to `Verdana`, and use another sans-serif _web safe_ font as a fallback.
-
-Also, add a `border-bottom` of `4px solid #dfdfe2` to `h2` elements, to make the sections distinct.
-
+จงเปลี่ยนฟ้อนต์ของ `h1` and `h2` elements ให้เป็น `Verdana` และใช้ sans-serif _web safe_ font ตัวอื่นเป็น fallback
+และจงเพิ่ม `border-bottom` ที่มีคุณสมบัติ `4px solid #dfdfe2` ใน `h2` elements เพื่อให้ section นี้ดูเด่นยิ่งขึ้น
 # --hints--
 
-You should use a multiple element selector to target the `h1` and `h2` elements.
+คุณควรใช้ element selector หลาย ๆ ตัวเพื่อระบุ `h1` และ `h2` elements.
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);

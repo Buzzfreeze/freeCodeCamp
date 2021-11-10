@@ -7,13 +7,14 @@ dashedName: part-21
 
 # --description--
 
-Let us go to the next part of the registration form. This section will ask for the type of account the user is opening, and will confirm the user has read the terms and conditions.
+ต่อมาต่อกันนี้ส่วนที่สองของแบบฟอร์มรับสมัคร
+section นี้จะถามประเภทของบัญชีที่ผู้ใช้อยากสมัคร และต้องการให้ผู้ใช้ยืนยันว่าได้อ่าน "terms and conditions" แล้ว
 
-Start by adding three `label` elements to the second `fieldset`.
+จงเริ่มโดยการเพิ่ม 3 `label` elements ที่ `fieldset` อันที่สอง
 
 # --hints--
 
-You should add three `label` elements to the second `fieldset`.
+คุณควรเพิ่ม 3 `label` elements ที่ `fieldset` อันที่สอง
 
 ```js
 assert.equal(document.querySelectorAll('fieldset')?.[1]?.querySelectorAll('label')?.length, 3);

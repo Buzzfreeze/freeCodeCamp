@@ -7,11 +7,11 @@ dashedName: part-70
 
 # --description--
 
-Give the `eyes-div` a `z-index` of `3`.
+จงกำหนดให้ `eyes-div` มี `z-index` เท่ากับ `3`
 
 # --hints--
 
-Your `#eyes-div` selector should have a `z-index` property set to `3`.
+`#eyes-div` selector ควรมี `z-index` property เท่ากับ `3`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#eyes-div')?.zIndex === '3');

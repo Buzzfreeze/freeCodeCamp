@@ -7,11 +7,11 @@ dashedName: part-10
 
 # --description--
 
-Create an `h2` element in the `section` element and give it the text `Coffee`.
+จงสร้าง `h2` element ไว้ใน `section` element และจงกำหนดให้มันมีข้อความที่เขียนว่า `Coffee`.
 
 # --hints--
 
-You should have an opening `<h2>` tag.
+คุณควรมีแท็กเปิด`<h2>` อันหนึ่ง
 
 ```js
 assert(code.match(/<h2\s*>/i));

@@ -7,11 +7,12 @@ dashedName: part-28
 
 # --description--
 
-Use a class selector to create a rule for the `black-dot` elements. Set the `width` to `10px`, the `height` to `10px`, and the `background-color` to `rgb(45, 31, 19)`.
+จงใช้ class selector อันหนึ่งเพื่อสร้างกฎให้กับ`black-dot` elements
+จงกำหนดให้  `width` เป็น `10px`, `height` เป็น `10px`, และ `background-color` เป็น `rgb(45, 31, 19)`.
 
 # --hints--
 
-You should have a `.black-dot` selector.
+คุณควรมี 1 `.black-dot` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.black-dot'));

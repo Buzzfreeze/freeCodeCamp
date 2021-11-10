@@ -9,21 +9,25 @@ dashedName: understand-absolute-versus-relative-units
 
 # --description--
 
-The last several challenges all set an element's margin or padding with pixels (`px`). Pixels are a type of length unit, which is what tells the browser how to size or space an item. In addition to `px`, CSS has a number of different length unit options that you can use.
+หลาย ๆ แบบฝึกหัดที่ผ่านมาได้กำหนด margin หรือ padding ของ element หนึ่งด้วย pixels (`px`)
+Pixel เป็นหน่วยความยาวประเภทหนึ่ง โดยมันจะบอก browser ถึงขนาดและช่องว่างของมัน
+ยนอกเหนือจาก `px`, CSS ยังมีหน่วยความยาวอีกหลายหน่วยที่คุณสามารถใช้ได้
 
-The two main types of length units are absolute and relative. Absolute units tie to physical units of length. For example, `in` and `mm` refer to inches and millimeters, respectively. Absolute length units approximate the actual measurement on a screen, but there are some differences depending on a screen's resolution.
+หน่วยความยาว 2 ประเภทหลัก คือ absolute และ relative
+หน่วย absolute จะขึ้นกับขนาดจริง ๆ ยกตัวอย่างเช่น `in` และ `mm` ที่หมายถึงนิ้วและมิลลิเมตร 
+หน่วย absolute length จะประมาณค่าจริงบนหน้าจอ แต่มันมีความต่างเล้กน้อยขึ้นกับความละเอียดของ screen
 
-Relative units, such as `em` or `rem`, are relative to another length value. For example, `em` is based on the size of an element's font. If you use it to set the `font-size` property itself, it's relative to the parent's `font-size`.
+หน่วย relative เช่น `em` หรือ `rem`  จะขึ้นกับค่าความยาวอื่น ๆ ยกตัวอย่างเช่น `em` จะขึ้นกับขนาดของฟ้อนต์ของ element'
+ถ้าคุณใช้มันเพื่อกำหนด `font-size` property, มันจะสัมพัทธ์กับ `font-size` ของ parent ของมัน
 
-**Note:** There are several relative unit options that are tied to the size of the viewport. They are covered in the Responsive Web Design Principles section.
+**Note:** มีหลาย relative unit ที่จะขึ้นกับขนาดของ viewport. พวกมันจะถูกกล่าวถึงใน Responsive Web Design Principles section.
 
 # --instructions--
-
-Add a `padding` property to the element with class `red-box` and set it to `1.5em`.
+จงเพิ่ม `padding` property ให้กับ element ที่มีคลาส `red-box` และกำหนดให้มันเท่ากับ `1.5em`.
 
 # --hints--
 
-Your `red-box` class should have a `padding` property.
+ `red-box` class ควรมี`padding` property.
 
 ```js
 assert(

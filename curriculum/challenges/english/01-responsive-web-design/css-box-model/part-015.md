@@ -7,13 +7,13 @@ dashedName: part-15
 
 # --description--
 
-Use margins to adjust the spacing outside of an element.
+จงใช้ margins จัดพื้นที่ว่างด้านนอกของ element ให้เรียบร้อย
 
-Add the `margin` property to `.frame` and set it to `20px auto` to move the frame down 20 pixels and center it horizontally on the page.
+จงเพิ่ม `margin` property ให้กับ `.frame` และกำหนดค่ามันให้เป็น `20px auto` เพื่อย้ายกรอกรูปลงมา 20 pixels และให้อยู่ตรงกลางหน้าเว็บไซต์ในแนวนอน
 
 # --hints--
 
-You should set the `margin` property to `20px auto`.
+คุณควรกำหนดให้ `margin` property มีค่า `20px auto`
 
 ```js
 const hasMargin = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style.margin === '20px auto');

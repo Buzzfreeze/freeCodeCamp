@@ -7,13 +7,15 @@ dashedName: part-39
 
 # --description--
 
-Placeholder text is used to give people a hint about what kind of information to enter into an input. For example, `<input type="text" placeholder="Email address">`.
+Placeholder text ถูกใช้เพื่อให้คำใบ้เก็บกับข้อมูลที่ผู้ใช้ควรใส่เข้ามา
+ยกตัวอย่างเช่น `<input type="text" placeholder="Email address">`
 
-Add the placeholder text `cat photo URL` to your `input` element.
+จงเพิ่ม placeholder text `cat photo URL` ให้กับ `input` element
 
 # --hints--
 
-You have either deleted your `input` element or it has invalid syntax. All attributes' values should be surrounded by quotation marks.
+ถ้าคุณหามันไม่เจอ คุณอาจะเผลอลบ `input` element หรือเขียนคำสั่งของมันได้ไม่ถูกต้อง
+ถ้าคุณทำการเพิ่ม attributes, จงเช็คให้มั่นใจว่าค่าที่ใส่เข้าไปมีการครอบด้วย quotation mark แล้ว
 
 ```js
 assert($('input').length);

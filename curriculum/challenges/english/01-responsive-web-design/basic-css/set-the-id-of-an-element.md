@@ -9,13 +9,16 @@ dashedName: set-the-id-of-an-element
 
 # --description--
 
-In addition to classes, each HTML element can also have an `id` attribute.
+นอกเหนือจาก class, แต่ละ HTML element ยังสามารถมี `id` attribute ได้อันหนึ่ง
 
-There are several benefits to using `id` attributes: You can use an `id` to style a single element and later you'll learn that you can use them to select and modify specific elements with JavaScript.
+มันมีประโยชน์หลายข้อในการใช้ `id` attributes: คุณสามารถใช้ `id` เพื่อตกแต่ง element เดียวได้
+และหลังจากนี้คุณจะได้เรียนวิธีที่คุณใช้มันเพื่อเลือกและปรับเปลี่ยน element ที่กำหนดด้วย JavaScript.
 
-`id` attributes should be unique. Browsers won't enforce this, but it is a widely agreed upon best practice. So please don't give more than one element the same `id` attribute.
+`id` attributes ควรจะแตกต่างกัน
+Browsers ไม่ได้บังคับให้ทำ แต่มันเป็นข้อตกลงทั่วไปซึ่งเป็น best practice
+ดังนั้น จงอย่างกำหนดให้ element มากกว่า 1 ตัวมี `id` attribute อันเเดียวกัน
 
-Here's an example of how you give your `h2` element the id of `cat-photo-app`:
+นี่คือตัวอย่างในการกำหนดให้ `h2` element มี id ชื่อ `cat-photo-app`:
 
 ```html
 <h2 id="cat-photo-app">
@@ -23,11 +26,11 @@ Here's an example of how you give your `h2` element the id of `cat-photo-app`:
 
 # --instructions--
 
-Give your `form` element the id `cat-photo-form`.
+จงกำหนดให้ `form` element ที id ชื่อ `cat-photo-form`.
 
 # --hints--
 
-Your `form` element should have the id of `cat-photo-form`.
+`form` element ควรมี id ชื่อ `cat-photo-form`.
 
 ```js
 assert($('form').attr('id') === 'cat-photo-form');

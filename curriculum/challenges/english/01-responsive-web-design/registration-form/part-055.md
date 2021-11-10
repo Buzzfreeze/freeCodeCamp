@@ -7,13 +7,15 @@ dashedName: part-55
 
 # --description--
 
-Most browsers inject their own default CSS properties and values for different elements. If you look closely, you might be able to notice the file `input` is smaller than the other text `input` elements. By default, a `padding` of `1px 2px` is given to `input` elements you can type in.
+browser ส่วนมากจะใส่ CSS property และค่าเริ่มต้นของของแต่ละ element ของตัวเองไว้แล้ว
+ถ้าคุณสังเกตดูดี ๆ คุณน่าจะเห็นว่า file `input` นั้นเล็กกว่าข้อความอื่น ๆ ของ `input` elements
+โดยค่าเริ่มต้นแล้ว `padding` ที่มีขนาด `1px 2px` จะถูกกำหนดให้กับ `input` elements 
 
-Using another attribute selector, style the `input` with a `type` of `file` to be the same padding as the other `input` elements.
+จงปรับแต่ง `input` ที่มี `type` คือ `file` ให้มี padding เหมือนกับ `input` elements ตัวอื่น โดยใช้ attribute selector อีกอันหนึ่ง
 
 # --hints--
 
-You should use an attribute selector to style the `input` element.
+คณควรใช้ attribute selector เพื่อปรับแต่ง `input` element.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('input[type="file"]'));

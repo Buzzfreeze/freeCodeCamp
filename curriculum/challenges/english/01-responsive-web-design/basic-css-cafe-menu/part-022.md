@@ -7,11 +7,13 @@ dashedName: part-22
 
 # --description--
 
-The goal now is to make the `div` not take up the entire width of the page. The CSS `width` property is perfect for this. Create a new type selector in the style sheet that gives your `div` element a width of `300px`.
+เป้าหมายในตอนนี้คือการทำให้ `div` ไม่กินด้านกว้างทั้งหมดของหน้านี้
+ CSS `width` property นั้นเป็นตัวเลือกที่เหมาะสมสำหรับการนี้
+ จงสร้าง type selector อันใหม่ใน style sheet ซึ่งมันจะกำหนดให้  `div` element มีความกว้างเท่ากับ `300px`.
 
 # --hints--
 
-You should have a `div` type selector.
+คุณควรมี `div` type selector.
 
 ```js
 const hasDiv = new __helpers.CSSHelp(document).getStyle('div');

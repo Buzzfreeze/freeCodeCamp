@@ -7,13 +7,14 @@ dashedName: part-30
 
 # --description--
 
-Although not required for `label` elements with a nested `input`, it is still best-practice to explicitly link a `label` with its corresponding `input` element.
+แม้ว่า `label` elements จะไม่จำเป็นต้องมี `input` แต่มันก็ยังคงเป็น best-practice สำหรับการเชื่อม `label` ตัวหนึ่งกับ `input` element ที่สัมพันธ์กับมัน
 
-Link the `label` elements with their corresponding `input` elements.
+จงเชื่อม `label` elements เข้ากับ `input` element ที่สัมพันธ์กับพวกมัน
+
 
 # --hints--
 
-You should give the first `label` a `for` attribute matching the `id` of its `input` element.
+คุณควรใส่ `for` attribute ที่ตรงกับ `id` ของ `input` element ของมันใน `label` อันแรก
 
 ```js
 const htmlFor = document.querySelectorAll('ul.answers-list > li > label')?.[0]?.htmlFor;

@@ -9,15 +9,18 @@ dashedName: create-texture-by-adding-a-subtle-pattern-as-a-background-image
 
 # --description--
 
-One way to add texture and interest to a background and have it stand out more is to add a subtle pattern. The key is balance, as you don't want the background to stand out too much, and take away from the foreground. The `background` property supports the `url()` function in order to link to an image of the chosen texture or pattern. The link address is wrapped in quotes inside the parentheses.
+วิธีหนึ่งที่จะเพิ่ม textureและความน่าสนใจให้กับพื้นหลังและทำให้มันดูโดดเด่นขึ้นก็คือการเพิ่มแพทเทิร์นง่าย ๆ เข้ามา
+หัวใจหลังของมันคือความบาลานซ์ เพราะคุณไม่ได้ต้องการให้พื้นหลังมันเด่นเกินไป
+`background` property จะรองรับ  `url()` function เพื่อที่จะลิงค์มันไปยังรูปภาพของ texture หรือ pattern ที่เลือกไว้
+ที่อยู่ของลิงค์จะถูกเก็บไว้ใน quotes ข้างในวงเล็บ
 
 # --instructions--
 
-Using the url of `https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png`, set the `background` of the whole page with the `body` selector.
+โดยใช้ url ของ `https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png`, จงกำหนดให้ `background` ของทั้งหน้าด้วย `body` selector.
 
 # --hints--
 
-Your `body` element should have a `background` property set to a `url()` with the given link.
+`body` element ควรมี `background` property ที่กำหนดให้ `url()` มาพร้อมกับลิงค์ที่กำหนดให้
 
 ```js
 assert(

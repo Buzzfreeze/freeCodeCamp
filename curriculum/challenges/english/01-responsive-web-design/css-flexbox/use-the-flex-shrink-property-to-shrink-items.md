@@ -9,19 +9,24 @@ dashedName: use-the-flex-shrink-property-to-shrink-items
 
 # --description--
 
-So far, all the properties in the challenges apply to the flex container (the parent of the flex items). However, there are several useful properties for the flex items.
+จนถึงตอนนี้  property ทั้งหมดใน challenge ได้ถูกใช้กับ (parent ของ flex items)
+อย่างไรก็ตาม ยังมีอีกหลาย property ที่มีประโยชน์สำหรับ flex items
 
-The first is the `flex-shrink` property. When it's used, it allows an item to shrink if the flex container is too small. Items shrink when the width of the parent container is smaller than the combined widths of all the flex items within it.
+อันแรกก็คือ `flex-shrink` property
+เมื่อมันถูกเรียกใช้ มันจะช่วยให้ item มีขนาดเล็กลงถ้า flex container มีขนาดเล็กเกินไป
+Item จะย่อเล็กลงเมื่อความกว้างของ parent container นั้นเล็กกว่าความกว้างรวมของ flex item ที่อยู่ข้างในมันทั้งหมด
 
-The `flex-shrink` property takes numbers as values. The higher the number, the more it will shrink compared to the other items in the container. For example, if one item has a `flex-shrink` value of `1` and the other has a `flex-shrink` value of `3`, the one with the value of `3` will shrink three times as much as the other.
+`flex-shrink` property จะรับค่าเป็นตัวเลข อีกค่ามัน ยิ่งทำให้ item นั้นหดเยอะกว่า item อื่น ๆ ใน container
+ยกตัวอย่างเช่น ถ้า item หนึ่งมี `flex-shrink` ที่มีค่าเป็น `1` และอีก item มี `flex-shrink` มีค่าป็น `3`, item ที่มีค่าเท่ากับ `3` จะหดเล็กลง 3 เท่าของอีกอันหนึ่ง
 
 # --instructions--
 
-Add the CSS property `flex-shrink` to both `#box-1` and `#box-2`. Give `#box-1` a value of `1` and `#box-2` a value of `2`.
+จงเพิ่ม CSS property `flex-shrink` ให้กับทั้ง `#box-1` และ `#box-2`
+จงกำหนดให้ `#box-1` มีค่า `1` และ `#box-2` มีค่าเป็น `2`
 
 # --hints--
 
-The `#box-1` element should have the `flex-shrink` property set to a value of `1`.
+`#box-1` element ควรมี `flex-shrink` property เท่ากับ `1`
 
 ```js
 assert($('#box-1').css('flex-shrink') == '1');

@@ -7,7 +7,7 @@ dashedName: part-6
 
 # --description--
 
-Below the heading, use the following text within a paragraph element to encourage users to register:
+ข้างล่าง heading, จงใช้ข้อความต่อไปนี้ภายใน paragraph element เพื่อชักชวนให้ผู้ใช้ทำการลงทะเบียน :
 
 ```md
 Please fill out this form with the required information
@@ -15,7 +15,7 @@ Please fill out this form with the required information
 
 # --hints--
 
-You should add a `p` element within the `body`.
+คุณควรเพื่อ `p` element 1 อันภายใน `body`.
 
 ```js
 assert.exists(document.querySelector('body > p'));

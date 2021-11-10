@@ -7,11 +7,11 @@ dashedName: part-11
 
 # --description--
 
-Change the `h1` font color to `#f1be32`, and set the font size to `min(5vw, 1.2em)`.
+จงเปลี่ยนสีของฟ้อนต์ `h1` ให้เป็น `#f1be32`และกำหนดขนาดของฟ้อนต์ให้เป็น `min(5vw, 1.2em)`.
 
 # --hints--
 
-You should use the `h1` element selector.
+คุณควรใช้ `h1` element selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('h1'));

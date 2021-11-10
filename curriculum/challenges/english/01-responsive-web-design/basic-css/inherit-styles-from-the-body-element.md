@@ -9,21 +9,21 @@ dashedName: inherit-styles-from-the-body-element
 
 # --description--
 
-Now we've proven that every HTML page has a `body` element, and that its `body` element can also be styled with CSS.
+ตอนนี้เราได้พิสูจน์แล้วว่า HTML page ทุกหน้ามี `body` element อันหนึ่งและ `body` element นั้นสามารถถูกตกแต่งด้วย CSS
 
-Remember, you can style your `body` element just like any other HTML element, and all your other elements will inherit your `body` element's styles.
+จงจำไว้ว่า คุณสามารถตกแต่ง `body` element ของคุณได้เหมือนกับ HTML element ตัวอื่น ๆ และ element ตัวอื่น ๆ ของคุณจะสืบถอด style ของ `body` element
 
 # --instructions--
 
-First, create a `h1` element with the text `Hello World`
+ขั้นแรก จงสร้าง `h1` element ที่มีข้อความเขียนว่ว `Hello World`
 
-Then, let's give all elements on your page the color of `green` by adding `color: green;` to your `body` element's style declaration.
+หลังจากนั้น เรามากำหนดให้ element ทั้งหมดที่อยู่ในหน้าเว็บของคุณมีสี `green` โดยการเพิ่ม `color: green;` ให้กับ style declaration ของ `body` element
 
-Finally, give your `body` element the font-family of `monospace` by adding `font-family: monospace;` to your `body` element's style declaration.
+สุดท้าย จงกำหนดให้ `body` element มี font-family เป็น `monospace` โดยการเพิ่ม `font-family: monospace;` ให้กับ style declaration ของ `body` element
 
 # --hints--
 
-You should create an `h1` element.
+คุณควรสร้าง `h1` element.
 
 ```js
 assert($('h1').length > 0);

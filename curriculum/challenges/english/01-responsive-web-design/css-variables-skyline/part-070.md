@@ -7,11 +7,12 @@ dashedName: part-70
 
 # --description--
 
-Give the `bb4-window` class a `width` of `18%`, a `height` of `90%`, and add your `--window-color4` variable as the `background-color`.
+จงกำหนดให้ `bb4-window` class มี `width` เท่ากับ `18%`, `height` เท่ากับ `90%`, 
+และจงเพิ่มตัวแปรr `--window-color4` variable ให้เป็นค่าของ`background-color`.
 
 # --hints--
 
-You should give `.bb4-window` a `width` of `18%`.
+คุณควรกำหนดให้ `.bb4-window` มีค่า `width` เท่ากับ `18%`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(".bb4-window")?.width, "18%");

@@ -7,11 +7,12 @@ dashedName: part-6
 
 # --description--
 
-Also add a `box-sizing` of `border-box` to everything. This will make it so the border you added doesn't add any size to your elements.
+นอกจากนี้ จงเพิ่ม `box-sizing` ที่เป็น `border-box` ให้กับทุกอย่าง
+นี่จะทำให้ขอบที่คุณเพิ่มไม่ส่งผลกับขนาดของ elements ของคุณ
 
 # --hints--
 
-You should use the `box-sizing` property.
+คุณควรใช้ `box-sizing` property.
 
 ```js
 assert(new __helpers.CSSHelp(document).isPropertyUsed('box-sizing'));

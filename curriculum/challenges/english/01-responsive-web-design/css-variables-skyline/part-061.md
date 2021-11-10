@@ -7,11 +7,12 @@ dashedName: part-61
 
 # --description--
 
-Remove the `background-color` property and value from `.bb3` since you are using the gradient as the background now.
+จงลบ `background-color` property และ value ออกจาก `.bb3` เนื่องจากคุณได้ใช้ gradient เป้นพื้นหลังอยู่แล้ว
 
 # --hints--
 
-You should remove the `background-color` from `.bb3`.
+
+คุณควรลบ `background-color` ออกจาก `.bb3`
 
 ```js
 assert.notMatch(code, /\.bb3\s*\{\s*[^}]*?background-color[^}]*?\}/);

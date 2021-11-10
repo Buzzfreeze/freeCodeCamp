@@ -7,11 +7,11 @@ dashedName: part-35
 
 # --description--
 
-Within the `div.question-block` elements, nest one `label` element, and give the `label` elements text content
+จงใส่ `label` element 1 อันภายใน `div.question-block` elements รวมถึงใส่เนื้อหาข้อความให้ `label` elements ด้วย
 
 # --hints--
 
-You should nest one `label` element within the first `div.question-block` element.
+คุณควรใส่ `label` element ภายในw `div.question-block` element อันแรก
 
 ```js
 assert.exists(document.querySelectorAll('.formrow > .question-block')?.[0]?.querySelector('label'));

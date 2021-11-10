@@ -7,11 +7,13 @@ dashedName: part-27
 
 # --description--
 
-Create another variable named `--building-color4` and give it a value of `#538cc6`. Make sure it's in the `:root` selector this time. Then use it to fill in the last building.
+จงสร้างตัวแปรอีกตัวที่ชื่อ `--building-color4` และกำหนดให้มันมีค่า`#538cc6`
+จงเช็คให้ดีว่ารอบนี้มันอยู่ใน`:root` selector 
+หลังจากนั้น จงใช้มันเพื่อลงสี building สุดท้าย
 
 # --hints--
 
-You should define a new property variable called `--building-color4`.
+คุณควรประกาศตัวแปรให้กับ property ใหม่โดยใช้ชื่อว่า `--building-color4`.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).isPropertyUsed('--building-color4'));

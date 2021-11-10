@@ -9,7 +9,8 @@ dashedName: use-the-css-transform-scale-property-to-change-the-size-of-an-elemen
 
 # --description--
 
-To change the scale of an element, CSS has the `transform` property, along with its `scale()` function. The following code example doubles the size of all the paragraph elements on the page:
+เพื่อที่จะเปลี่ยนสเกลของ element, CSS มี `transform` property, ร่วมกับ `scale()` function ของมัน
+โค้ดด้านล่างจะเป็นตัวใหญ่ในการเพิ่มขนาดให้กับ paragraph element ทุกอัน 2 เท่า :
 
 ```css
 p {
@@ -19,11 +20,11 @@ p {
 
 # --instructions--
 
-Increase the size of the element with the id of `ball2` to 1.5 times its original size.
+จงเพิ่มขนาดของ element ที่มี id เป็น `ball2` ให้มีขนาดใหญ่ขึ้น 1.5 เท่าของขนาดดั้งเดิมของมัน
 
 # --hints--
 
-The `transform` property for `#ball2` should be set to scale it to 1.5 times its size.
+`transform` property ของ`#ball2` ควรถูกกำหนดไว้ที่ 1.5 เท่าของขนาดดั้งเดิมของมัน
 
 ```js
 assert(

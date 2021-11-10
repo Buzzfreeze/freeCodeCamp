@@ -7,15 +7,18 @@ dashedName: part-10
 
 # --description--
 
-The `z-index` property is used to create "layers" for your HTML elements. If you are familiar with image editing tools, you may have worked with layers before. This is a similar concept.
+`z-index` property นั้นถูกใช้เพื่อสร้าง "layers" ให้กับ HTML element
+ถ้าคุณคุ้นเคยกับเครื่องมือสำหรับ image editing, คุณอาจจะได้ทำงานกับ layer มาอยู่แล้ว
+ซึ่งนี่มันก็มีแนวคิดที่คล้ายกัน
 
-Elements with a higher `z-index` value will appear to be layered on top of elements with a lower `z-index` value. This can be combined with the positioning in the previous lesson to create unique effects.
+Element ที่มี `z-index` สูงกว่าจะปรากฏ layer ที่อยู่บน element ที่มี `z-index`ต่ำกว่า
+สิ่งนี้สามารถใช้ร่วมกับการจัดตำแหน่งในบทเรียนที่เรียนเพื่อสร้าง effect ที่แตกต่างกัน
 
-Since the `back-wall` element will need to appear "behind" the other elements you will be creating, give the `back-wall` element a `z-index` of `-1`.
+เนื่องจาก `back-wall` element จำเป็นต้องปรากฏข้างหลัง "behind" element อื่น ๆ คุณจะต้องสร้างและกำหนดให้ `back-wall` element มีค่า `z-index` เท่ากับ `-1`
 
 # --hints--
 
-Your `#back-wall` selector should have the `z-index` property set to `-1`.
+`#back-wall` selector ควรมีค่า `z-index` property เท่ากับ `-1`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#back-wall')?.zIndex === '-1');

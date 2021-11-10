@@ -7,11 +7,13 @@ dashedName: part-16
 
 # --description--
 
-Time to style the keys themselves. Create a `class` selector for the `.key` elements. Set the `background-color` set to the value `#ffffff`, the `position` property to `relative`, the `width` property to `41px`, and the `height` property to `175px`.
+ถึงเวลาที่จะตกแต่งพวกคีย์เปียโนแล้ว
+จงสร้าง `class` selector สำหรับ `.key` element
+จงกำหนดให้ `background-color` มีค่าเป็น `#ffffff`, `position` property มีค่าเป็น `relative`, `width` property มีค่าเป็น `41px`, และ `height` property มีค่าเป็น `175px`
 
 # --hints--
 
-You should have a `.key` selector.
+คุณควรมี 1 `.key` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.key'));

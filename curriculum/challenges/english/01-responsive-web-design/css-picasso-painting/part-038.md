@@ -7,11 +7,12 @@ dashedName: part-38
 
 # --description--
 
-Use an `id` selector to create a rule for your `black-character` element. Set the `width` to `300px`, the `height` to `500px`, and the `background-color` to `rgb(45, 31, 19)`.
+จงใช้ `id` selector เพื่อสร้างกฎให้กับ `black-character` element
+จงกำหนดให้ `width` เท่ากับ `300px`, `height` เท่ากับ  `500px`, และ `background-color` เท่ากับ `rgb(45, 31, 19)`
 
 # --hints--
 
-You should use a `#black-character` selector.
+คุณควรใช้ `#black-character` selector
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#black-character'));

@@ -9,19 +9,20 @@ dashedName: add-a-negative-margin-to-an-element
 
 # --description--
 
-An element's `margin` controls the amount of space between an element's `border` and surrounding elements.
+`margin` ของ element จะควบคุมขนาดช่องว่างระหว่าง `border` ของ element กับ element ที่อยู่รอบๆ
 
-If you set an element's `margin` to a negative value, the element will grow larger.
+ถ้าคุณกำหนดให้  `margin` ของ element มีค่าเป็นลบ  
+element จะมีขนาดใหญ่ขึ้น
 
 # --instructions--
 
-Try to set the `margin` to a negative value like the one for the red box.
+ลงกำหนดค่าของ `margin` ให้เป็นค่าลบเหมือนกับอันที่ใช้กับกล่องแดง
 
-Change the `margin` of the blue box to `-15px`, so it fills the entire horizontal width of the yellow box around it.
+จงเปลี่ยน `margin` ของกล่องฟ้าให้เป็น `-15px`, เพื่อที่มันจะได้ด้านกว้างทั้งหมดของกล่องเหลืองรอบมัน
 
 # --hints--
 
-Your `blue-box` class should give elements `-15px` of `margin`.
+`blue-box` class ควรกำหนดให้ element มี `-15px` เป็นค่าของ `margin`
 
 ```js
 assert($('.blue-box').css('margin-top') === '-15px');

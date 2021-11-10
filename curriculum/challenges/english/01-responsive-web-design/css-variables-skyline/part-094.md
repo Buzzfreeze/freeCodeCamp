@@ -7,11 +7,11 @@ dashedName: part-94
 
 # --description--
 
-Add your `window-wrap` class to the `.fb3a` element to center and space the windows.
+จงเพิ่ม `window-wrap` class ให้กับ `.fb3a` element เพื่อที่จะมำหใ้หน้าต่างเหล่านั้นอยู่ตรงกลางและห่างพอ ๆ กัน
 
 # --hints--
 
-You should give `.fb3a` a class of `window-wrap`.
+คุณควรกำหนดให้ `.fb3a` มีคลาสชื่อ `window-wrap`
 
 ```js
 assert.exists(document.querySelector("div.fb3a.window-wrap"));

@@ -9,17 +9,17 @@ dashedName: use-rgb-to-mix-colors
 
 # --description--
 
-Just like with hex code, you can mix colors in RGB by using combinations of different values.
+เช่นเดียวกับ hex code, คุณสามารถผสมสีที่เป็น RGB ได้โดยใช้ combination ของค่าที่ต่างกัน
 
 # --instructions--
 
-Replace the hex codes in our `style` element with their correct RGB values.
+จงแทนที่ hex codes ใน `style` element ด้วยค่า RGB ที่ถูกต้อง
 
 <table class='table table-striped'><tbody><tr><th>Color</th><th>RGB</th></tr><tr><td>Blue</td><td><code>rgb(0, 0, 255)</code></td></tr><tr><td>Red</td><td><code>rgb(255, 0, 0)</code></td></tr><tr><td>Orchid</td><td><code>rgb(218, 112, 214)</code></td></tr><tr><td>Sienna</td><td><code>rgb(160, 82, 45)</code></td></tr></tbody></table>
 
 # --hints--
 
-Your `h1` element with the text `I am red!` should have the `color` red.
+`h1` element ที่มีข้อความว่า `I am red!` ควรมี `color` แดง
 
 ```js
 assert($('.red-text').css('color') === 'rgb(255, 0, 0)');

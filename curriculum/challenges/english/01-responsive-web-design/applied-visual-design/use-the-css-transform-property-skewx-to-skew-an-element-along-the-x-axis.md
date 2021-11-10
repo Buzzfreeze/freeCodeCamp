@@ -9,9 +9,9 @@ dashedName: use-the-css-transform-property-skewx-to-skew-an-element-along-the-x-
 
 # --description--
 
-The next function of the `transform` property is `skewX()`, which skews the selected element along its X (horizontal) axis by a given degree.
+function ถัดไปของ `transform` property คือ`skewX()`, ซึ่งมันจะทำให้ element ที่เลือกเอียงไปทางด้านใดด้านหนึ่งตามแกน  X (แนวนอน) axis โดยการกำหนดค่าองศาให้
 
-The following code skews the paragraph element by -32 degrees along the X-axis.
+โค้ดต่อไปนี้จะทำให้ paragraph element เอียงไปประมาณ -32 degrees ตามแกน X
 
 ```css
 p {
@@ -21,11 +21,11 @@ p {
 
 # --instructions--
 
-Skew the element with the id of `bottom` by 24 degrees along the X-axis by using the `transform` property.
+จงทำให้ element ที่มี id เป็น `bottom` เอียงไป 24 degrees ตามแกน X โดยใช้ `transform` property.
 
 # --hints--
 
-The element with id `bottom` should be skewed by 24 degrees along its X-axis.
+element ที่มี id `bottom` ควรถูกทำให้เอียงไป 24 degrees ตามแกน X
 
 ```js
 assert(code.match(/#bottom\s*?{\s*?.*?\s*?transform:\s*?skewX\(24deg\);/g));

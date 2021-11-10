@@ -9,11 +9,15 @@ dashedName: improve-accessibility-of-audio-content-with-the-audio-element
 
 # --description--
 
-HTML5's `audio` element gives semantic meaning when it wraps sound or audio stream content in your markup. Audio content also needs a text alternative to be accessible to people who are deaf or hard of hearing. This can be done with nearby text on the page or a link to a transcript.
+HTML5's `audio` element บอกความหมายในเชิงภาษาเมื่อมันครอบเนื้อหาที่เป็นเสียงหรือ audio stream ใน markup ของคุณ
+เนื้อหาที่เป้นเสียงก็จำเป็นจะต้องมี text alternative เพื่อที่ผู้พิการทางการไได้ยินได้จะเข้าถึงได้
+สิ่งนี้สามารถทำได้ด้วยข้อความข้าง ๆ ที่อยู่บนเพจหรือลิงค์ที่พาไปยัง transcript
 
-The `audio` tag supports the `controls` attribute. This shows the browser default play, pause, and other controls, and supports keyboard functionality. This is a boolean attribute, meaning it doesn't need a value, its presence on the tag turns the setting on.
+`audio` tag สนับสนุนการทำงานของ `controls` attribute
+สิ่งนี้จะแสดงให้ browser เห็น play, pause, และคำสั่งอื่น ๆ และยังช่วยในเรื่องของ keyboard functionality
+มันคือ boolean attribute ตัวหนึ่งซึ่งแปลว่ามันไม่จำเป้นต้องมีค่าข้างใน เพียงแค่ตั้งค่ามันใัน on เราก็จะเห็น
 
-Here's an example:
+นี่คือตัวอย่าง :
 
 ```html
 <audio id="meowClip" controls>
@@ -22,17 +26,19 @@ Here's an example:
 </audio>
 ```
 
-**Note:** Multimedia content usually has both visual and auditory components. It needs synchronized captions and a transcript so users with visual and/or auditory impairments can access it. Generally, a web developer is not responsible for creating the captions or transcript, but needs to know to include them.
+**Note:** เนื้อหาที่เป็น multimedia มันจะมีเนื้อหาที่เป็นภาพและเสียง มันต้องการ captions และ transcript ที่ทำงานพร้อมเพรียงกัน ซึ่งทำให้ผู้ใช้ที่มีปัญหาด้านการมองเห็นและการได้ยินสามารถเข้าถึงได้ โดยทั่วไป, web developer จะไม่ได้เป็นคนรับผิดชอบในเรื่องส่วนของการสร้าง captions และ transcript แต่จำเป็นรู้วิธีใส่มันเข้าไป
 
 # --instructions--
 
-Time to take a break from Camper Cat and meet fellow camper Zersiax (@zersiax), a champion of accessibility and a screen reader user. To hear a clip of his screen reader in action, add an `audio` element after the `p`. Include the `controls` attribute. Then place a `source` tag inside the `audio` tags with the `src` attribute set to `https://s3.amazonaws.com/freecodecamp/screen-reader.mp3` and `type` attribute set to `"audio/mpeg"`.
+ถึงเวลาที่เราจะหลุดพ้นจาก Camper Cat และรู้จักกับผู้เข้าค่าย Zersiax (@zersiax) , ผู้ที่สนับสนุนในการของการเข้าถึงและเป็นผู้ใช้ screen reader 
+เพื่อที่จะได้ยินคลิปจาก screen reader จงเพิ่ม `audio` element หลัง `p` และจงใส่ `controls` attribute
+หลังจากนั้นจงใส่ `source` tag เข้าไปใน `audio` tags พร้อมกับ `src` attribute โดยตั้งไปที่ `https://s3.amazonaws.com/freecodecamp/screen-reader.mp3` ส่วน`type` attribute ก็ตั้งค่าให้เป็น `"audio/mpeg"`.
 
-**Note:** The audio clip may sound fast and be difficult to understand, but that is a normal speed for screen reader users.
+**Note:** คลิปเสียงอาจจะพูดเร็วและยากที่จะเข้าใจ แต่มันคือความเร็วปกติของผู้ใช้ screen reader 
 
 # --hints--
 
-Your code should have one `audio` tag.
+โค้ดของคุณควรมี `audio` tag
 
 ```js
 assert($('audio').length === 1);

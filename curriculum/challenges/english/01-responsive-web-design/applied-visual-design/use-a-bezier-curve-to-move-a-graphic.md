@@ -9,23 +9,29 @@ dashedName: use-a-bezier-curve-to-move-a-graphic
 
 # --description--
 
-A previous challenge discussed the `ease-out` keyword that describes an animation change that speeds up first and then slows down at the end of the animation. On the right, the difference between the `ease-out` keyword (for the blue element) and `linear` keyword (for the red element) is demonstrated. Similar animation progressions to the `ease-out` keyword can be achieved by using a custom cubic Bezier curve function.
+ในแบบฝึดหัดที่แล้วได้อภิปรายเกี่ยวกับคีย์เวิร์ด `ease-out` ที่ได้บรรยายการเปลี่ยนแปลงความเร็วของ animation ไว้ว่าเร่งความเร็วในตอนแรกแล้วลดความเร็วลงในตอนหลัง 
+ทางด้านขวา ความแตกต่างระหว่าง `ease-out` (สำหรับ element สีน้ำเงิน) และ `linear`  (สำหรับ element สีแดง) ได้ถูกสาธิตไว้
+animation progression ที่คล้ายกับ to the `ease-out` สามารถทำได้ดดยการใช้ cubic Bezier curve function ที่ดัดแปลงเอง
 
-In general, changing the `p1` and `p2` anchor points drives the creation of different Bezier curves, which controls how the animation progresses through time. Here's an example of a Bezier curve using values to mimic the ease-out style:
+โดยทั่วไป การเปลี่ยน `p1` และ `p2` anchor points จะทำให้เกิดความต่างของ Bezier curves, ซึ่งจะควบคุมการ progress ของ animation. 
+นี่คือตัวอย่างของ Bezier curve ที่ใช้ค่าเพื่อเลียนแบบ ease-out style:
 
 ```css
 animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
 ```
 
-Remember that all `cubic-bezier` functions start with `p0` at (0, 0) and end with `p3` at (1, 1). In this example, the curve moves faster through the Y-axis (starts at 0, goes to `p1` y value of 0, then goes to `p2` y value of 1) than it moves through the X-axis (0 to start, then 0 for `p1`, up to 0.58 for `p2`). As a result, the change in the animated element progresses faster than the time of the animation for that segment. Towards the end of the curve, the relationship between the change in x and y values reverses - the y value moves from 1 to 1 (no change), and the x values move from 0.58 to 1, making the animation changes progress slower compared to the animation duration.
+จงไว้ว่า `cubic-bezier` function ทั้งหมดจะเริ่มด้วย `p0` ที่ (0, 0) และจบด้วย `p3` ที่ (1, 1)
+ในตัวอย่างนี้ curve จะเคลื่อที่เร็วขึ้นตลอดแกน Y และมันจะเคลื่อนผ่านแกน X-axisฃ
+ซึ่งผลลัพท์ที่ได้ก็คือ การเปลี่ยนแปลงของ animated element จะเกิดขึ้นเร็วกว่าตอนที่ animation สำหรับ segment นั้น
+ไล่ไปจนจบ curve, ความสัมพันธ์ระหว่างความเปลี่ยนแปลงของค่า x และ y จะสวนทางกัน - ค่า y จะเปลี่ยนจาก 1 ไป 1 (ไม่มีการเปลี่ยนแปลง), และค่า x จะเปลี่ยนค่า 0.58 ไป 1, ซึ่งทำให้ animation เปลี่ยน progress ช้ากว่าเมื่อเปลี่ยนเทียบกับข่วงระหว่าง animation
 
 # --instructions--
 
-To see the effect of this Bezier curve in action, change the `animation-timing-function` of the element with id of `red` to a `cubic-bezier` function with x1, y1, x2, y2 values set respectively to 0, 0, 0.58, 1. This will make both elements progress through the animation similarly.
-
+เพื่อจะได้เห็นผลของ Bezier curve นี้, จงเปลี่ยน `animation-timing-function` ของ element ที่มาพร้อมกับไอดี `red` ให้เป็น `cubic-bezier` function ที่มีค่า  x1, y1, x2, y2 เป็น 0, 0, 0.58, 1 ตามลำดับ
+สิ่งนี้จะทำให้ element ทั้งสอง animate ไปในลำดับที่คล้ายคลึงกัน
 # --hints--
 
-The value of the `animation-timing-function` property of the element with the id `red` should be a `cubic-bezier` function with x1, y1, x2, y2 values set respectively to 0, 0, 0.58, 1 .
+ค่าของ `animation-timing-function` property ของ element ที่มีพร้อมกับ id `red` ควรมี `cubic-bezier` function ซึ่งมีค่า x1, y1, x2, y2 เป็น 0, 0, 0.58, 1 ตามลำดับ
 
 ```js
 assert(

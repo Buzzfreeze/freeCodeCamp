@@ -7,11 +7,12 @@ dashedName: part-44
 
 # --description--
 
-Using an `id` selector, style the `gray-mask` element. Give it a `width` of `150px`, a `height` of `150px`, and a `background-color` of `rgb(167, 162, 117)`.
+จงตกแต่ง `gray-mask` element ด้วย `id` selector
+จงกำหนดให้มันมี `width` ขนาด `150px`, `height` ขนาด `150px`, และ`background-color` ที่เป้น `rgb(167, 162, 117)`
 
 # --hints--
 
-You should have a `#gray-mask` selector.
+Yคุรควรมี `#gray-mask` selector
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#gray-mask'));

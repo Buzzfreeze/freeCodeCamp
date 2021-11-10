@@ -7,11 +7,12 @@ dashedName: part-73
 
 # --description--
 
-Style the border of your `triangle` elements. Set the `border-style` to `solid` and the `border-width` to `42px 45px 45px 0`.
+จงตกแต่งขอบของ `triangle` elements
+จงกำหนดให้ `border-style` เป็นแบบ `solid` และ `border-width` มีค่าเท่ากับ `42px 45px 45px 0`.
 
 # --hints--
 
-Your `.triangle` selector should have a `border-style` property set to `solid`.
+`.triangle` selector ควรมี `border-style` property อันหนึ่งซึ่งมีค่าเป็นแบบ `solid`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.triangle')?.borderStyle === 'solid');

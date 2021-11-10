@@ -7,17 +7,20 @@ dashedName: part-37
 
 # --description--
 
-Time to use some FontAwesome icons.
+ถึงเวลาที่จะลองใช้ FontAwesome icon บางตัวแล้ว
 
-The `i` element is used for idiomatic text, or text that is separate from the "normal" text content. This could be for _italic_ text, such as scientific terms, or for icons like those provided by FontAwesome.
+`i` element ถูกใช้เพื่อเป็น idiomatic text, หรือข้อความที่แยกออกมาจากเนื้อหาที่เป็นตัวอักษรทั่วไป
+สิ่งนี้สามารถทำให้เป็น _italic_, เช่น ศัพท์วิทยาศาสตร์ หรือเป็น icons ที่มาจาก FontAwesome.
 
-Within your `white-paper` element, add four `i` elements. Give them all a `class` value of `fas fa-music`.
+ภายใน `white-paper` element, จงเพิ่ม 4 `i` elements
+จงกำหนดให้พวกมันทั้งหมดมี `class` ชื่อ `fas fa-music`
 
-This special class is how FontAwesome determines which icon to load. `fas` indicates the category of icons (FontAwesome Solid, here), while `fa-music` selects the specific icon.
+class พิเศษอันนี้คือวิธีที่ FontAwesome จะรู้ว่าให้โหลด icon ตัวไหน
+`fas` บ่งบอกถึงประเภทของ icons (FontAwesome Solid, here), ขณะที่ `fa-music` จะเลือก icon เฉพาะเป็นตัว ๆ ไป
 
 # --hints--
 
-You should have four new `i` elements within your `#white-paper` element.
+คุณควรมี 4 `i` elements ภายใน `#white-paper` element.
 
 ```js
 assert(document.querySelectorAll('#white-paper > i')?.length === 4);

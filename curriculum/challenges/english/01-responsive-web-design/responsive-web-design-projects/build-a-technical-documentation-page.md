@@ -8,11 +8,17 @@ dashedName: build-a-technical-documentation-page
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/NdrKKL>.
+**Objective:** จงสร้างแอปพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานคล้ายแอปพลิเคชั่นนี้: <https://codepen.io/freeCodeCamp/full/NdrKKL>.
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story) and get all of the tests to pass. Give it your own personal style.
+จงทำตามการหลัก [user stories](https://en.wikipedia.org/wiki/User_story) และทดสอบให้ผ่านทุกเทส
+จงทำตามสไตล์ของคุณเอง
 
-You can use HTML, JavaScript, and CSS to complete this project. Plain CSS is recommended because that is what the lessons have covered so far and you should get some practice with plain CSS. You can use Bootstrap or SASS if you choose. Additional technologies (just for example jQuery, React, Angular, or Vue) are not recommended for this project, and using them is at your own risk. Other projects will give you a chance to work with different technology stacks like React. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
+คุณสามารถใช้ HTML, JavaScript, และ CSS เพื่อทำโปรเจคนี้
+Plain CSS นั้นเป็นที่แนะนำเพราะมันคือสิ่งที่บทเรียนของเราได้กล่าวถึงมันไปหมดแล้วและคุณควรจะฝึกทักษะการใช้ plain CSS
+คุณสามารถใช้ Bootstrap หรือ SASS ได้ถ้าคุณอยากใช้
+เทคโนโลยีอื่น ๆ (อย่างเช่น jQuery, React, Angular, หรือ Vue) นั้นยังไม่แนะนำสำหรับโปรเจคนี้ โดยหากคุณจะใช้มันก็เป็นความเสี่ยงของคุณเอง
+โปรเจคอื่น ๆ หลังจากนี้จะเปิดโอกาสให้คุณได้ลองใช้เทคโนโลยีอื่น ๆ เช่น React อย่างแน่นอน
+เราพร้อมจะยอมรับและปรับปรุงปัญหาต่าง ๆ ที่เกิดขึ้นจากการใช้เทคโนโลยีที่ถูกแนะนำในโปรเจคนี้ Happy coding!
 
 **User Story #1:** I can see a `main` element with a corresponding `id="main-doc"`, which contains the page's main content (technical documentation).
 
@@ -22,32 +28,31 @@ You can use HTML, JavaScript, and CSS to complete this project. Plain CSS is rec
 
 **User Story #4:** Each `section` element with the class of `main-section` should also have an id that corresponds with the text of each `header` contained within it. Any spaces should be replaced with underscores (e.g. The `section` that contains the header "JavaScript and Java" should have a corresponding `id="JavaScript_and_Java"`).
 
-**User Story #5:** The `.main-section` elements should contain at least 10 `p` elements total (not each).
+**User Story #5:** `.main-section` elements ควรเก็บ `p` elements อย่างน้อย 10 อัน 
 
-**User Story #6:** The `.main-section` elements should contain at least 5 `code` elements total (not each).
+**User Story #6:** The `.main-section` elements ควรเก็บ `code` elements อย่างน้อย 5 อัน
 
-**User Story #7:** The `.main-section` elements should contain at least 5 `li` items total (not each).
+**User Story #7:** The `.main-section` elements ควรเก็บอย่างน้อย `li` items อย่างน้อย 5 อัน
 
-**User Story #8:** I can see a `nav` element with a corresponding `id="navbar"`.
+**User Story #8:** ฉันสามารถมองเห็น `nav` element ที่มี `id="navbar"`.
 
-**User Story #9:** The navbar element should contain one `header` element which contains text that describes the topic of the technical documentation.
+**User Story #9:** navbar element ควรเก็บ `header` element 1 อันที่มีข้อความอธิบายหัวข้อชื่อ technical documentation.
 
-**User Story #10:** Additionally, the navbar should contain link (`a`) elements with the class of `nav-link`. There should be one for every element with the class `main-section`.
+**User Story #10:** navbar ควรเก็บลิงค์ (`a`) elements ที่มีคลาสชื่อ `nav-link` นั่นควรเป็น element ตัวหนึ่งจาก element ที่มีคลาสชื่อ `main-section`
 
-**User Story #11:** The `header` element in the navbar must come before any link (`a`) elements in the navbar.
+**User Story #11:** `header` element ใน navbar ต้องมาก่อนลิงค์ (`a`) element ทุกอันใน navbar.
 
-**User Story #12:** Each element with the class of `nav-link` should contain text that corresponds to the `header` text within each `section` (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world").
+**User Story #12:** แต่ละ element ที่มีคลาสชื่ `nav-link` ควรเก็บข้อความที่สัมพันธ์กับข้อความ `header` ข้างในแต่ละ `section` (เช่นถ้าคุณมี "Hello world" section/header, navbar ของคุณควรจะมี element ตัวหนึ่งที่เก็บข้อความ "Hello world").
 
-**User Story #13:** When I click on a navbar element, the page should navigate to the corresponding section of the `main-doc` element (e.g. If I click on a `nav-link` element that contains the text "Hello world", the page navigates to a `section` element that has that id and contains the corresponding `header`.
+**User Story #13:** เมื่อฉันคลิกที่ navbar element, หน้านั้นควรจะพาไปที่ section ที่เกี่ยวข้องของ `main-doc` element (เช่น ถ้าฉันคลิกที่I`nav-link` element ที่เก็บข้อความว่า "Hello world", หน้านั้นควรผ่านไปที่ `section` element ที่มี id อันนั้นหรือเก็บ `header` ที่สัมพันธ์กัน
 
-**User Story #14:** On regular sized devices (laptops, desktops), the element with `id="navbar"` should be shown on the left side of the screen and should always be visible to the user.
+**User Story #14:** บนอุปกรณ์ที่มีชนาดทั่วไป (เช่น laptops, desktops), element ที่มี `id="navbar"` ควรถูกแสดงที่ด้านซ้ายของหน้าจอและควรสามารถถูกมองเห็นจากผู้ใช้ตลอดเวลา
 
-**User Story #15:** My Technical Documentation page should use at least one media query.
+**User Story #15:** หน้า Technical Documentation ของฉันควรใช้ media query อย่างน้อย 1 อัน
 
-You can build your project by <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> and clicking `Save` to create your own pen. Or you can use this CDN link to run the tests in any environment you like: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
+คุณสามารถสร้างโปรเจคของคุณได้โดย <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> และกดคลิก `Save` เพื่อสร้าง pen ของคุณเอง หรือว่าคุณจะใช้ CDN link อันนี้เพื่อ run test ใน environment ที่คุณชอบก็ได้เช่นกัน: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
 
-Once you're done, submit the URL to your working project with all its tests passing.
-
+เมื่อคุณทำทุกอย่างเสร็จแล้ว จงส่ง URL ที่พาไปยังโปรเจคของคุณพร้อมกับ test ที่ผ่านทั้งหมด 
 # --solutions--
 
 ```html

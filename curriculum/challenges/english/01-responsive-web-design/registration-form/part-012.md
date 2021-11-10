@@ -7,11 +7,12 @@ dashedName: part-12
 
 # --description--
 
-The first `fieldset` will hold name, email, and password fields. Start by adding four `label` elements to the first `fieldset`.
+`fieldset`อันแรกจะมีช่องสำหรับใส่ชื่อ, อีเมล และรหัสผ่าน
+จงเริ่มด้วยการใส่ `label` element 4 อันใน `fieldset`.
 
 # --hints--
 
-You should add four `label` elements.
+คุณควรเพิ่ม `label` elements 4 อัน
 
 ```js
 assert.equal(document.querySelectorAll('label')?.length, 4);

@@ -9,9 +9,9 @@ dashedName: create-movement-using-css-animation
 
 # --description--
 
-When elements have a specified `position`, such as `fixed` or `relative`, the CSS offset properties `right`, `left`, `top`, and `bottom` can be used in animation rules to create movement.
+เมื่อ element มี `position` ที่ถูกระบุไว้แล้วเช่น `fixed` และ `relative`, CSS offset properties `right`, `left`, `top`, และ `bottom` สามารถถูกใช้กับ animation rules เพื่อสร้างการเคลื่องไหว
 
-As shown in the example below, you can push the item downwards then upwards by setting the `top` property of the `50%` keyframe to 50px, but having it set to 0px for the first (`0%`) and the last (`100%`) keyframe.
+ตามที่ได้แสดงให้เห็นที่ตัวอย่างข้างล่าง คุุณสามารถผลัก item ลงไปข้างล่างและผลักกลับมาที่ด้านบนโดยการกำหนดให้ `top` property เป็น `50%` keyframe ที่ 50px, แต่กำหนดให้มันมี 0px สำหรับ keyframe แรก (`0%`) และสุดท้าย (`100%`) 
 
 ```css
 @keyframes rainbow {
@@ -32,11 +32,13 @@ As shown in the example below, you can push the item downwards then upwards by s
 
 # --instructions--
 
-Add a horizontal motion to the `div` animation. Using the `left` offset property, add to the `@keyframes` rule so rainbow starts at 0 pixels at `0%`, moves to 25 pixels at `50%`, and ends at -25 pixels at `100%`. Don't replace the `top` property in the editor - the animation should have both vertical and horizontal motion.
+จงเพิ่ม motion ในแนวนอนให้กับ `div` animation
+โดยใช้ `left` offset property, จงเพิ่มให้ `@keyframes` rule เพื่อที่สายรุ้ยจะได้เริ่มที่ 0 pixels ตรง `0%`, และขยับไปที่ 25 pixels ตรง `50%`, และจบที่ -25 pixels ตอง `100%`
+อย่าแทนที่ `top` property ใน editor - nimation ควรจะมีทั้ง motion ในแนวนอนและตั้ง
 
 # --hints--
 
-The `@keyframes` rule for `0%` should use the `left` offset of 0px.
+`@keyframes` rule ของ `0%` ควรใช้`left` offset เท่ากับ 0px.
 
 ```js
 assert(code.match(/[^50]0%\s*?{[\s\S]*?left:\s*?0px(;[\s\S]*?|\s*?)}/gi));

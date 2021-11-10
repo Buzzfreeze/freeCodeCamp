@@ -7,11 +7,12 @@ dashedName: part-11
 
 # --description--
 
-Now target your `#piano` element with an `id` selector. Set `background-color` property to `#00471b`, the `width` property to `992px` and the `height` property to `290px`.
+ในตอนนี้ จงหา `#piano` element ด้วย `id` selector
+จงกำหนดให้ `background-color` property มีค่าเป็น `#00471b`, `width` property มีค่าเป็น `992px` และ `height` property มีค่าเป็น `290px`
 
 # --hints--
 
-You should have a `#piano` selector.
+คุณควรมี 1 `#piano` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#piano'));

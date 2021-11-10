@@ -7,11 +7,11 @@ dashedName: part-19
 
 # --description--
 
-Give the `.key.black--key::after` a `position` property set to `absolute` and a `left` property set to `-18px`.
+จงกำหนดให้ `.key.black--key::after` มี `position` property เป็น `absolute` และ `left` property มีขนาด `-18px`
 
 # --hints--
 
-Your `.key.black--key::after` selector should have a `position` property set to `absolute`.
+`.key.black--key::after` selector ควรมี 1 `position` property ที่เป็น `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.key.black--key::after')?.position === 'absolute');

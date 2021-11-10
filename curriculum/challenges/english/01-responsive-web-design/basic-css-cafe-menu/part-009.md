@@ -7,11 +7,13 @@ dashedName: part-9
 
 # --description--
 
-There will be two sections on the menu, one for coffees and one for desserts. Add a `section` element within the `main` element so you have a place to put all the coffees available.
-
+มันจะมี 2 sections บนเมนู
+หนึ่งคือส่วนสำหรับกาแฟ และอีกหนึ่งสำหรับของความ
+จงเพิ่ม `section` element อันหนึ่งไว้ใน`main` element เพื่อที่คุณจะได้มีที่ในการใส่รายชื่อกาแฟที่ร้านนี้ขาย
+ 
 # --hints--
 
-You should have an opening `<section>` tag.
+คุณควรมีแท็กเปิด`<section>` อันหนึ่ง
 
 ```js
 assert(code.match(/<section\s*>/i));

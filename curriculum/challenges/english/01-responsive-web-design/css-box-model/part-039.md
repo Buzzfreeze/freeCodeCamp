@@ -7,11 +7,11 @@ dashedName: part-39
 
 # --description--
 
-Use the same `box-shadow` declaration for `.two`, but change the color from `#efb762` to `#8f0401`.
+จงใช้การประกาศ `box-shadow` แบบเดียวกันกับ `.two`, แต่เปลี่ยนให้ค่าสีจาก `#efb762` เป็น `#8f0401`
 
 # --hints--
 
-You should set the `box-shadow` property to `0 0 3px 3px #8f0401`.
+คุณควรกำหนดให้ `box-shadow` property มีค่าเป็น `0 0 3px 3px #8f0401`
 
 ```js
 const hasBoxShadow = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style['box-shadow'] === 'rgb(143, 4, 1) 0px 0px 3px 3px');

@@ -7,11 +7,11 @@ dashedName: part-90
 
 # --description--
 
-Remove the `background-color` property and value from `.fb3`, and add them to `.fb3a` and `.fb3b`.
+จงเอา `background-color` property และ value ออกจาก `.fb3` และใส่มันเข้าไปที่ `.fb3a` และ `.fb3b` แทน
 
 # --hints--
 
-You should remove the `background-color` from `.fb3`.
+คุณควรเอา `background-color` ออกจาก `.fb3`.
 
 ```js
 assert.isEmpty(new __helpers.CSSHelp(document).getStyle(".fb3")?.backgroundColor);

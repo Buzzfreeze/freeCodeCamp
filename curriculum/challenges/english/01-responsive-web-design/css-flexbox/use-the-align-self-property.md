@@ -9,17 +9,20 @@ dashedName: use-the-align-self-property
 
 # --description--
 
-The final property for flex items is `align-self`. This property allows you to adjust each item's alignment individually, instead of setting them all at once. This is useful since other common adjustment techniques using the CSS properties `float`, `clear`, and `vertical-align` do not work on flex items.
+property อันสุดท้ายสำหรับ flex items คือ `align-self`
+นี่เป็น property ที่ช่วยให้คุณสามารถปรับเปลี่ยนการเรียงตัวของแต่ละ item ได้เป็นตัว ๆ แทนที่จะตั้งให้มันเป็นแบบเดียวกันทีเดียว
+มันมีประโยชน์เพราะวิธีการปรับค่าอันอื่น ๆ ที่ใช้ CSS properties `float`, `clear`, และ `vertical-align` ไม่สามารถใช้ได้กับ flex items
 
-`align-self` accepts the same values as `align-items` and will override any value set by the `align-items` property.
+`align-self` จะรับค่าค่าเดียวกับaccepts `align-items` และจะเขียนค่าทับค่าอื่น ๆ ที่ได้มีการกำหนดไว้โดย `align-items` property.
 
 # --instructions--
 
-Add the CSS property `align-self` to both `#box-1` and `#box-2`. Give `#box-1` a value of `center` and give `#box-2` a value of `flex-end`.
+จงเพิ่ม CSS property `align-self` ให้กับทั้ง  `#box-1` และ `#box-2`
+จงกำหนดให้ `#box-1` มีค่าเป็น `center` และ `#box-2` มีค่าเป็น `flex-end`.
 
 # --hints--
 
-The `#box-1` element should have the `align-self` property set to a value of `center`.
+`#box-1` element ควรมี `align-self` property ที่ถูกกำหนดค่าให้เป็น `center`.
 
 ```js
 assert($('#box-1').css('align-self') == 'center');

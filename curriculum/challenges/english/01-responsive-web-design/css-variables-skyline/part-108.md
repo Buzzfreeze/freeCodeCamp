@@ -7,11 +7,12 @@ dashedName: part-108
 
 # --description--
 
-Add another repeating gradient to this building; make it the same as the one you just added, except don't add the `90deg` direction and use your window color instead of the two `transparent` colors.
+จงเพิ่ม repeating gradient อีกอันหนึ่งให้กับตึกหลังนี้
+จงทำเหมือนกับอันก่อนหน้านี้ที่พึ่งใส่เข้าไป ยกเว้นก็แต่ห้ามกำหนดทิศ `90deg` และใช้สีของหน้าต่างของคุณแทน `transparent` ทั้ง 2 อัน
 
 # --hints--
 
-You should give `.fb6` a second `repeating-linear-gradient` in the `background` property.
+คุรควรกำหนดให้ `.fb6` มี `repeating-linear-gradient` อันที่ 2 ใน `background` property.
 
 ```js
 assert.match(new __helpers.CSSHelp(document).getStyle(".fb6")?.getPropVal('background', true), /repeating-linear-gradient\(90deg,var\(--building-color3\)(0%)?,var\(--building-color3\)10%,transparent10%,transparent30%\),repeating-linear-gradient/);

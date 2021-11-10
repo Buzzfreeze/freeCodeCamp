@@ -7,13 +7,13 @@ dashedName: part-18
 
 # --description--
 
-When you add a lower rank heading element to the page, it's implied that you're starting a new subsection.
+เมื่อคุณเพิ่ม heading element ที่มีความสำคัญน้อยกว่าในหน้าเว็บไซต์ มันเป็นการบอกหลาย ๆ ว่าคุณกำลังจะเริ่มสร้าง subsection อันใหม่
 
-After the last `h2` element of the second `section` element, add an `h3` element with the text `Things cats love:`.
+ต่อจาก `h2` element อันสุดท้ายของ `section` element อันที่สอง จงเพิ่ม `h3` element ที่เขียนว่า `Things cats love:`
 
 # --hints--
 
-The second `section` element appears to be missing or does not have both an opening and closing tag.
+`section` element อันที่สองดูเหมือนจะขาดหรือไม่มีทั้งแท็กเปิดหรือแท็กปิด
 
 ```js
 assert(

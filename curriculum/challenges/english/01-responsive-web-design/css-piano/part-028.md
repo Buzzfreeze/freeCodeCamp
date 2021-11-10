@@ -7,11 +7,12 @@ dashedName: part-28
 
 # --description--
 
-Add a new `#piano` selector within your `@media` query, and set the `width` to `335px`.
+จงเพิ่ม `#piano` selector อันใหม่ภายใน  `@media` query
+และจงกำหนดให้มันมี `width` อยู่ที่ `335px`
 
 # --hints--
 
-Your `@media` rule should have a `#piano` selector.
+`@media` rule ควรมี 1 `#piano` selector
 
 ```js
 const rules = new __helpers.CSSHelp(document).getRuleListsWithinMedia('(max-width: 768px)');

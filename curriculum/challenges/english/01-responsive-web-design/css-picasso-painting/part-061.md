@@ -7,11 +7,12 @@ dashedName: part-61
 
 # --description--
 
-Use another FontAwesome icon for your `guitar`. Inside both the `guitar-left` and `guitar-right` elements, add an `i` element and give it a `class` of `fas fa-bars`.
+จงใช้ FontAwesome icon อีกอันกับ `guitar`
+ภาย `guitar-left` และ `guitar-right` element ทั้งสองอัน จงเพิ่ม `i` element และกำหนดให้มันมี `class` ชื่อ `fas fa-bars`
 
 # --hints--
 
-Within your `guitar-left` element, you should add an `i` element.
+ใน `guitar-left` element คุณควรเพิ่ม `i` element อันหนึ่ง
 
 ```js
 assert(document.querySelectorAll('#guitar-left > i')?.length === 1);

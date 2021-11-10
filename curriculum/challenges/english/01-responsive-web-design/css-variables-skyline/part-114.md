@@ -7,7 +7,7 @@ dashedName: part-114
 
 # --description--
 
-A media query can be used to change styles based on certain conditions, and they look like this:
+media query สามารถถูกใช้เพื่อเปลี่ยน style โดยจะขึ้นกับเงื่อนไขบางอย่างและมันก็มีลักษณะแบบนี้:
 
 ```css
 @media (condition) {
@@ -15,11 +15,12 @@ A media query can be used to change styles based on certain conditions, and they
 }  
 ```
 
-Add an empty media query at the bottom of your stylesheet with a condition of `max-width: 1000px`. Styles added in here will take effect when the document size is 1000px wide or less.
+จงเพิ่ม media query เปล่าที่ด้านล่างของ stylesheet โดยให้มีเงื่อนไขว่า `max-width: 1000px`
+Styles ที่ถูกเพิ่มตรงนี้จะเริ่มทำงานก็ต่อเมื่อขนาดของเอกสารกว้างเท่ากับ 1000 px หรือน้อยกว่านั้น
 
 # --hints--
 
-You should add an empty media query with `max-width: 1000px`.
+คุณควรเพิ่ม media query เปล่า ๆ ที่มีเงื่อนไขเป็น `max-width: 1000px`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getCSSRules("media")?.[0]?.media?.mediaText, '(max-width: 1000px)');

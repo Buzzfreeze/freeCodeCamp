@@ -7,11 +7,11 @@ dashedName: part-26
 
 # --description--
 
-Give the `.key.black--key::after` selector a `border-radius` of `0 0 3px 3px` to match the keys.
+จงกำหนดให้ `.key.black--key::after` selector มี `border-radius` ที่มีลักษณะ `0 0 3px 3px` เพื่อให้เหมือนับคีย์
 
 # --hints--
 
-Your `.key.black--key::after` selector should have a `border-radius` property set to `0 0 3px 3px`.
+`.key.black--key::after` selector ควรมี 1 `border-radius` property ที่มีลักษณะ `0 0 3px 3px`.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.key.black--key::after')?.borderRadius === '0px 0px 3px 3px');

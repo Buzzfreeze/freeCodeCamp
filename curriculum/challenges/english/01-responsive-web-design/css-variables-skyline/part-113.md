@@ -7,11 +7,15 @@ dashedName: part-113
 
 # --description--
 
-At the top of the sky gradient color list, where you would put a direction for the gradient; add `circle closest-corner at 15% 15%,`. This will move the start of the gradient to `15%` from the top and left. It will make it end at the `closest-corner` and it will maintain a `circle` shape. These are some keywords built into gradients to describe how it behaves.
+ที่ด้านบนของลิสต์สี sky gradient , ตรงที่จะใส่ทิศทางของ gradient
+จงเพิ่ม `circle closest-corner at 15% 15%,`
+นี่จะย้ายจุดเริ่มต้นของ gradient ไปที่ `15%` จากด้านบนและด้านซ้าย
+มันจะทำให้ gradient นี้สิ้นสุดที่ `closest-corner` และมันจะคงรูปร่าง `circle` ของมันไว้
+นี่คือ  keyword ที่ถูกใช้เพื่อสร้าง gradients เพื่ออธิบายลักษณธของมัน
 
 # --hints--
 
-You should give the `.sky` `radial-gradient` a direction of `circle closest-corner at 15% 15%`.
+คุณควรกำหนดให้ `.sky` `radial-gradient` มีทิศทางเป็น `circle closest-corner at 15% 15%`
 
 ```js
 assert.match(new __helpers.CSSHelp(document).getStyle(".sky")?.background, /radial-gradient\(circle closest-corner at 15% 15%, rgb\(255, 207, 51\)|( 0%), rgb\(255, 207, 51\) 20%, rgb\(255, 255, 102\) 21%, rgb\(187, 238, 255\) 100%\)/);

@@ -7,15 +7,15 @@ dashedName: part-3
 
 # --description--
 
-In the CSS box model, every HTML element is treated as a box with four areas.
+ภายใน CSS box model, HTML element ทุกตัวจะถูกนับเป็นกล่อง 1 กล่องที่มีพื้นที่ 4 พื้นที่
 
-Imagine you receive a box from your favorite online retailer -- the content is the item in the box, or in our case, a header, paragraph, or image element.
+ลองจินตนาการว่าคุณได้รับกล่องกล่องหนึ่งจากร้านค้าออนไลน์ที่คุณชอบที่สุด -- content คือสิ่งที่อยู่ในกล่องใบนั้นหรือในกรณีของเราก็คือ header, paragraph, หรือ image element.
 
-Change the `src` attribute in the `<img>` from `https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-1.png` to `https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-2.png`.
+จงเปลี่ยน `src` attribute ใน `<img>` จาก `https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-1.png` ให้เป็น `https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-2.png`.
 
 # --hints--
 
-The `img` element should have a `src` of `https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-2.png`
+`img` element ควรมี `src` ที่มีค่า `https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-2.png`
 
 ```js
 assert(document.querySelector('img').getAttribute('src') === 'https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-2.png');

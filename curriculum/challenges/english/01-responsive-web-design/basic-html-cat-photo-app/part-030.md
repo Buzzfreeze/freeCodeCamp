@@ -7,11 +7,11 @@ dashedName: part-30
 
 # --description--
 
-After the last `img` element, add a `figcaption` element with the text `Cats hate other cats.`
+จงเพิ่ม `figcaption` element ที่มีข้อความว่า `Cats hate other cats.` ต่อจาก `img` element อันสุดท้าย
 
 # --hints--
 
-Your `figcaption` element should have an opening tag. Opening tags have the following syntax: `<elementName>`.
+`figcaption` element ควรมีแท็กเปิดโดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(document.querySelectorAll('figcaption').length === 2);

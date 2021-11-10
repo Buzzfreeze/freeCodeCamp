@@ -9,11 +9,11 @@ dashedName: part-13
 
 # --description--
 
-Target unordered list elements within `nav` elements, and use _Flexbox_ to evenly space the children.
+จงหา unordered list elements ภายใน `nav` elements และใช้ _Flexbox_ เพื่อทำให้ children ห่างเท่า ๆ กัน
 
 # --hints--
 
-You should use the `nav > ul` selector.
+คุณควรใช้ `nav > ul` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('nav > ul'));

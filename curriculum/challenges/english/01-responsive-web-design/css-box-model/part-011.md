@@ -7,12 +7,13 @@ dashedName: part-11
 
 # --description--
 
-Every painting needs a frame.
+Eทุกภาพวาดต้องการกรอบรูป
 
-Wrap the `.canvas` element in another `div`. Give that `div` the `frame` class.
+จงคลุม `.canvas` element ไว้ใน `div` อีกอันหนึ่ง
+จงกำหนดให้ `div` เป็น `frame` class.
 # --hints--
 
-You should add a new `div` element.
+คุณควรเพิ่ม `div` element มาใหม่ 1 อัน
 
 ```js
 assert(document.querySelectorAll('div').length === 2)

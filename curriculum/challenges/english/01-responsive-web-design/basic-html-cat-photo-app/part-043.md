@@ -7,15 +7,16 @@ dashedName: part-43
 
 # --description--
 
-You can use radio buttons for questions where you want only one answer out of multiple options.
+คุณสามารถใช้ radio button กับคำถามที่คุณต้องการให้เลือกแค่คำตอบเดียวจากตัวเลือกหลาย ๆ อัน
 
-Here is an example of a radio button with the option of `cat`: `<input type="radio"> cat`. Remember that `input` elements are <dfn>self-closing</dfn>.
+นี่คือตัวอย่างของการใช้ radio button กับตัวเลือก `cat`: `<input type="radio"> cat`
+จงจำไว้ว่า `input` elements เป็น <dfn>self-closing</dfn>.
 
-Before the text input, add a radio button with the option `Indoor`.
+ข้างหน้า text input, จงเพิ่ม radio button ที่มีตัวเลือกเป็น `Indoor`
 
 # --hints--
 
-You should create an input element for your radio button. Check the syntax.
+คุณควรสร้าง input element สำหรับ radio button และเช็ค syntax ของมัน
 
 ```js
 assert($('form > input').length >= 2);

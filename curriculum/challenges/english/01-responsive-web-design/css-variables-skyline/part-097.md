@@ -7,11 +7,11 @@ dashedName: part-97
 
 # --description--
 
-Give `.fb4b` a `width` of `100%` and `height` of `89%`.
+จงกำหนดให้ `.fb4b` มี `width` เท่ากับ `100%` และ `height` เท่ากับ `89%`
 
 # --hints--
 
-You should give `.fb4b` a `width` of `100%`.
+คุณควรกำหนดให้ `.fb4b` มี `width` เท่ากับ `100%`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(".fb4b")?.width, "100%");

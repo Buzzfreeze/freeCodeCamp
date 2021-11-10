@@ -7,11 +7,13 @@ dashedName: part-55
 
 # --description--
 
-Next, remove the `width` and `height` from `.bb2a`, and change the `border-left` and `border-right` to use `5vw` instead of `1vw`. The element will now have zero size and the borders will come together in the middle.
+ต่อไป จงเอา `width` และ `height` ออกจาก `.bb2a`
+และจงเปลี่ยน `border-left` และ `border-right` ให้มีค่า `5vw` แทน  `1vw`
+ตอนนี้ element จะมีขนาดเป็น 0 แล้วขอบสองอันก็จะมาเจอกันที่ตรงกลาง
 
 # --hints--
 
-You should remove the `width` from `.bb2a`.
+คุรควรเอา `width` ออกจาก `.bb2a`.
 
 ```js
 assert.isEmpty(new __helpers.CSSHelp(document).getStyle(".bb2a")?.width);

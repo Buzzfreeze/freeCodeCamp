@@ -7,9 +7,9 @@ dashedName: part-36
 
 # --description--
 
-Create a rule that targets both `.one` and `.two` and increase their `blur` effect by 1 pixel.
+จงสร้างกฎอันใหม่เพื่อหาทั้ง `.one` และ `.two` แล้วจงเพิ่ม `blur` effect อีก 1 pixel
 
-Here's an example of a rule that increases the `blur` of two elements:
+นี่คือตัวอย่างของการเขียนกฎที่จะเพิ่ม `blur`  ให้กับ 2 element:
 
 ```css
 h1, p {
@@ -19,7 +19,7 @@ h1, p {
 
 # --hints--
 
-You should have a `.one, .two` selector.
+คุณควรมี 1 `.one, .two` selector.
 
 ```js
 const oneTwo = new __helpers.CSSHelp(document).getStyle('.one, .two');

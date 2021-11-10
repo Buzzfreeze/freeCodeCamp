@@ -9,21 +9,24 @@ dashedName: use-the-order-property-to-rearrange-items
 
 # --description--
 
-The `order` property is used to tell CSS the order of how flex items appear in the flex container. By default, items will appear in the same order they come in the source HTML. The property takes numbers as values, and negative numbers can be used.
+`order` property ถูกใช้เพื่อบอก CSS ว่าควรลำดับของ flex items ใน flex container
+โดยค่าเริ่มต้นแล้ว items จะปรากฏตามลำดับที่มันถูกเขียนไว้ใน HTML
+.property จะรับค่าเป็นตัวเลข และจำนวนติดลบก็สามารถถูกนำมาใช้ได้เช่นกัน
 
 # --instructions--
 
-Add the CSS property `order` to both `#box-1` and `#box-2`. Give `#box-1` a value of `2` and give `#box-2` a value of `1`.
+จงเพิ่ม CSS property `order` ให้กับทั้ง `#box-1` และ `#box-2`
+จงกำหนดให้`#box-1` มีค่าเป็น `2` และ `#box-2` มีค่าเป็น `1`
 
 # --hints--
 
-The `#box-1` element should have the `order` property set to a value of `2`.
+`#box-1` element ควรมีค่าของ `order` property เป็น `2`
 
 ```js
 assert($('#box-1').css('order') == '2');
 ```
 
-The `#box-2` element should have the `order` property set to a value of `1`.
+`#box-2` element ควรมีค่าของ `order` property เป็น `1`.
 
 ```js
 assert($('#box-2').css('order') == '1');

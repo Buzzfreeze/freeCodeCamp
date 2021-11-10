@@ -7,13 +7,14 @@ dashedName: part-34
 
 # --description--
 
-The `textarea` appears too small. To give it an initial size, you can add the `rows` and `cols` attributes.
+ดูเหมือนว่า `textarea`  จะดูเล็กเกินไป
+คุณสามารถเพิ่ม `rows` และ `cols` attributes เพื่อกำหนดขนาดเริ่มต้นให้กับมันได้
 
-Add an initial size of `3` rows and `30` columns.
+จงเพิ่มขนาดเริ่มต้นให้เป็น `3` rows และ `30` columns.
 
 # --hints--
 
-You should give the `textarea` a `rows` attribute with value `3`.
+คุณควรเพิ่ม `rows` attribute ที่มีค่าเท่ากับ `3`ที่ `textarea`
 
 ```js
 assert.equal(document.querySelector('fieldset:nth-child(3) > label:nth-child(4) > textarea')?.rows, 3);

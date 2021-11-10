@@ -7,11 +7,12 @@ dashedName: part-117
 
 # --description--
 
-Add a `:root` selector to the top of your media query. Then redefine all four of the `--building-color` variables to use the value `#000` there.
+จงเพิ่ม `:root` selector ที่ด้านบนของ media query
+หลังจากนั้นจงกำหนดค่าคำแปรทั้ง 4 อันของ`--building-color` ใหม่ทั้งหมดโดยใช้ค่า `#000` เป็นค่าใหม่ให้ทุกตัวแปร
 
 # --hints--
 
-You should add a `:root` selector to the media query.
+คุรควรเพิ่ม`:root` selector ที่ media query.
 
 ```js
 ```

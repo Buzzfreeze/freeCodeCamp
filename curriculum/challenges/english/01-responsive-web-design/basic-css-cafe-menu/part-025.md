@@ -7,11 +7,13 @@ dashedName: part-25
 
 # --description--
 
-Now it's easy to see that the text is centered inside the `div` element. Currently, the width of the `div` element is specified in pixels (`px`). Change the `width` property's value to be `80%`, to make it is 80% the width of its parent element (`body`).
+ตอนนี้ มันง่ายที่เห็นว่าข้อความได้ถูกจัดให้อยู่ตรงกลางภายใน `div` element แล้ว
+ณ ตอนนี้ ความกว้างของ `div` element ได้ถูกระบุเป็น (`px`)
+จงเปลี่ยนให้ค่าของ `width` property กลายเป็น `80%` เพื่อที่มันจะได้มีขนาด 80% ของความกล้างของ parent element (`body`) ของมัน
 
 # --hints--
 
-You should set the `width` property to `80%`.
+คุณควรกำหนดให้ `width` property เท่ากับ `80%`.
 
 ```js
 const hasWidth = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style.width === '80%');

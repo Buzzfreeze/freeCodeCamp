@@ -7,11 +7,11 @@ dashedName: part-7
 
 # --description--
 
-Use an id selector to give the `back-wall` element a `background-color` of `#8B4513`.
+จงใช้ id selector เพื่อกำหนดให้ `back-wall` element มี `background-color` เป็น `#8B4513`
 
 # --hints--
 
-You should use a `#back-wall` selector.
+คุณควรใช้ `#back-wall` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#back-wall'));

@@ -7,11 +7,12 @@ dashedName: part-56
 
 # --description--
 
-Below your `blue` elements, add another `div`. Give it the `id` value of `orange-character`.
+ต่อจาก `blue` elements, จงเพิ่มอีก `div`
+จงกำหนดให้มันมี `id` เท่ากับ `orange-character`.
 
 # --hints--
 
-You should have a new `div` element within your `characters` element.
+คุณควรมี `div` element อันใหม่อันหนึ่งใน `characters` element
 
 ```js
 assert(document.querySelectorAll('.characters > div')?.length === 5);

@@ -7,11 +7,11 @@ dashedName: part-85
 
 # --description--
 
-Give the `.fb2-window` elements a `width` of `22%`, `height` of `100%`, and a `background-color` of your `--window-color3` variable.
+จงกำหนดให้ `.fb2-window` elements มี `width` เท่ากับ `22%`, `height` เท่ากับ `100%`, และ `background-color` มีค่าเท่ากับตัวแปร `--window-color3`
 
 # --hints--
 
-You should give the `.fb2-window` elements a `width` of `22%`.
+คุณควรกำหนดให้ `.fb2-window` elements มี `width` เท่ากับ `22%`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(".fb2-window")?.width, "22%");

@@ -9,26 +9,35 @@ dashedName: align-elements-using-the-justify-content-property
 
 # --description--
 
-Sometimes the flex items within a flex container do not fill all the space in the container. It is common to want to tell CSS how to align and space out the flex items a certain way. Fortunately, the `justify-content` property has several options to do this. But first, there is some important terminology to understand before reviewing those options.
+บางครั้ง flex item ข้างใน flex container ไม่ได้อยู่เต็มพื้นที่ทั้งหมดของ container
+มันเป็นเรื่องทั่วไปที่จะอยากบอก CSS ถึงวิธีการจัดวางให้เป็นเส้นตรงและเว้นระยะของ flex item ตามวิธีที่เราคิดไว้
+โชคดีที่ `justify-content` property นั้นมีหลายทางเลือกเพื่อที่จะรับมือกับส่วนนี้
+แต่ก่อนอื่น ยังมีคำศัพท์เทคนิคสำคัญบางคำที่ควรจะเข้าใจก่อนจะไปดูทางเลือกพวกนั้น
 
-[Here is a useful image showing a row to illustrate the concepts below.](https://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg)
+[นี่เป็นรูปที่จะแสดงให้เห็นถึงการจัดแถวตามแนวคิดด้านล่าง](https://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg)
 
-Recall that setting a flex container as a row places the flex items side-by-side from left-to-right. A flex container set as a column places the flex items in a vertical stack from top-to-bottom. For each, the direction the flex items are arranged is called the **main axis**. For a row, this is a horizontal line that cuts through each item. And for a column, the main axis is a vertical line through the items.
+จงจำไว้ว้าการกำหนดให้ flex container เป็นแบบ row จะเป็นการจัดวาง flex item ให้เรียงต่อกันจากซ้ายไปขวา ส่วนถ้ากำหนดเป็นแบบ column จะเป็นการจัดวางแต่ชั้น ๆ จากบนไปล่าง
+ทิศทางที่ flex item ถูกจัดเรียงในแต่ละ container นั้นจะเรียกว่า **main axis** 
+สำหรับตอนนี้มันเป็นเพียงเส้นแนวนอนที่ตัดผ่านแต่ละ item สำหรับแบบ row และเป็นเส้นเส้นตั้งสำหรับแบบ column
 
-There are several options for how to space the flex items along the line that is the main axis. One of the most commonly used is `justify-content: center;`, which aligns all the flex items to the center inside the flex container. Other options include:
+มีหลายทางเลือกสำหรับวิธีการจัดระยะห่างของ flex items บนเส้น main axis
+หนึ่งในตัวที่มักถูกใช้บ่อย ๆ คือ `justify-content: center;` ซึ่งจะจัดให้ flex item เป็นเส้นตรงภายใน flex container
+ส่วนทางเลือกอื่น ๆ ก็จะเป็น:
 
 <ul><li><code>flex-start</code>: aligns items to the start of the flex container. For a row, this pushes the items to the left of the container. For a column, this pushes the items to the top of the container. This is the default alignment if no <code>justify-content</code> is specified.</li><li><code>flex-end</code>: aligns items to the end of the flex container. For a row, this pushes the items to the right of the container. For a column, this pushes the items to the bottom of the container.</li><li><code>space-between</code>: aligns items to the center of the main axis, with extra space placed between the items. The first and last items are pushed to the very edge of the flex container. For example, in a row the first item is against the left side of the container, the last item is against the right side of the container, then the remaining space is distributed evenly among the other items.</li><li><code>space-around</code>: similar to <code>space-between</code> but the first and last items are not locked to the edges of the container, the space is distributed around all the items with a half space on either end of the flex container.</li><li><code>space-evenly</code>: Distributes space evenly between the flex items with a full space at either end of the flex container</li></ul>
 
 # --instructions--
 
-An example helps show this property in action. Add the CSS property `justify-content` to the `#box-container` element, and give it a value of `center`.
+ตัวอย่างจะช่วยเป็นเห็นการทำงานของ property นี้ได้ดียิ่งขึ้น
+จงเพิ่ม CSS property `justify-content` ให้กับ `#box-container` element และจงกำหนดให้มีค่าเป็น `center`
 
 **Bonus**  
-Try the other options for the `justify-content` property in the code editor to see their differences. But note that a value of `center` is the only one that will pass this challenge.
+จงลองใช้วิธีอื่น ๆ ของ `justify-content` property ใน code editor เพื่อให้เห็นความแตกต่างของพวกมัน
+แต่จงจำไว้ว่าเราจะใช้แค่ `center` ใน challenge นี้เท่านั้น
 
 # --hints--
 
-The `#box-container` element should have a `justify-content` property set to a value of `center`.
+`#box-container` element ควรมี `justify-content` property อันหนึ่งที่ถูกกำหนดให้มีค่าเป็น `center`
 
 ```js
 assert($('#box-container').css('justify-content') == 'center');

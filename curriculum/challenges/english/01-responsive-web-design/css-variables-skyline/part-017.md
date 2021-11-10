@@ -7,11 +7,13 @@ dashedName: part-17
 
 # --description--
 
-I don't really like that color. Change the value of your variable from `#999` to `#aa80ff` and you can see how it gets applied everywhere you used the variable. This is the main advantage of using variables, being able to quickly change many values in your stylesheet by just changing the value of a variable.
+ฉันไม่ค่อยชอบสีนั้นซักเท่าไหร่
+จงเปลี่ยนค่าในตัวแปรของคุณจาก `#999` เป็น `#aa80ff` เมื่อทำแบบนี้ คุณจะเห็นได้ว่าสีที่พึ่งเปลี่ยนนั้นถูกใช้กับส่วนที่ที่มีการใช้ตัวแปรนี้
+สิ่งนี้คือประโยชน์หลัก ๆ ของการใช้ตัวแปร โดยเราสามารถจะเปลี่ยนค่าหลาย ๆ ค่าใน stylesheet โดยการเปลี่ยนเพียงค่า ๆ เดียวของตัวแปร
 
 # --hints--
 
-You should change the value of the `--building-color1` property variable from `#999` to `#aa80ff`.
+คุณสามารถเปลี่ยนค่าตัวแปรของ `--building-color1` property จาก `#999` เป็น `#aa80ff`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.bb1')?.getPropertyValue('--building-color1').trim(),'#aa80ff');

@@ -7,13 +7,15 @@ dashedName: part-33
 
 # --description--
 
-The `textarea` element acts like an `input` element of type `text`, but comes with the added benefit of being able to receive multi-line text, and an initial number of text rows and columns.
+`textarea` element ทำหน้าที่เหม็นเป็น `input` element ประเภท `text`
+แต่จะมาพร้อมกับความสามารถที่จะสามารถข้อความที่มีหลายบรรทัดได้
+รวมถึงเราสามารถกำหนดค่าเริ่มต้นของจำนวนแถวและหลักของข้อความได้
 
-To allow users to register with a bio, add a `label` with the text `Provide a bio:` followed by a `textarea` element.
+เพื่อที่ผุู้ใช้ได้สามารถสมัครเข้ามาพร้อมกับ bio ของเขา จงเพิ่ม `label` อันหนึ่งที่มีข้อความว่า `Provide a bio:` ที่ตามมาด้วย `textarea` element.
 
 # --hints--
 
-You should add a `label` element within the third `fieldset`, after the existing `label` elements.
+คุณควรเพิ่ม `label` element อันหนึ่งภายใน `fieldset` อันที่สามหลังจาก `label` elements ที่มีอยู่แล้ว
 
 ```js
 assert.exists(document.querySelector('fieldset:nth-child(3) > label:nth-child(4)'));

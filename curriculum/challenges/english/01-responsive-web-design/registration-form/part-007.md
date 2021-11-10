@@ -7,11 +7,12 @@ dashedName: part-7
 
 # --description--
 
-To spruce the project up, let us add some CSS. Begin by giving the `body` a `width` of `100%`, and a `height` of `100vh`.
+เพื่อที่โปรเจคนี้จะได้ดูเรียบร้อยขึ้น เราสามารถเพิ่ม CSS บางอันเข้าไปได้
+เริ่มจากการใส่ `width` ที่มีค่า `100%` และ `height` ที่มีค่า `100vh` ให้กับ `body`
 
 # --hints--
 
-You should use the `body` element selector.
+คุณควรใช้ `body` element selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('body'));

@@ -7,7 +7,7 @@ dashedName: part-12
 
 # --description--
 
-You can add style to an element by specifying it in the `style` element and setting a property for it like this:
+คุณสามารถเพิ่ม style ให้กับ elementโดยการระบุมันไว้ใน `style` element แและกำหนด property ให้มันแบบนี้:
 
 ```css
 element {
@@ -15,11 +15,11 @@ element {
 }
 ```
 
-Center your `h1` element by setting its `text-align` property to the value `center`.
+จงจัดให้`h1` element ของคุณอยู่ตรงกลางโดยการกำหนดให้ `text-align` property มีค่าเป็น `center`
 
 # --hints--
 
-You should have an `h1` selector in your `style` element.
+คุณควรมี `h1` selector อันหนึ่งใน `style` element.
 
 ```js
 const hasSelector = new __helpers.CSSHelp(document).getStyle('h1');

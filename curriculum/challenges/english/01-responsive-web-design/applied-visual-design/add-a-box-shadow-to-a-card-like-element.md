@@ -9,9 +9,9 @@ dashedName: add-a-box-shadow-to-a-card-like-element
 
 # --description--
 
-The `box-shadow` property applies one or more shadows to an element.
+`box-shadow` property จะเพิ่มเงาให้กับ element
 
-The `box-shadow` property takes values for
+`box-shadow` property จะรับค่าตาม
 
 <ul>
   <li><code>offset-x</code> (how far to push the shadow horizontally from the element),</li>
@@ -21,11 +21,11 @@ The `box-shadow` property takes values for
   <li><code>color</code>, in that order.</li>
 </ul>
 
-The `blur-radius` and `spread-radius` values are optional.
+ค่าของ `blur-radius` และ `spread-radius` นั้นจะใส่หรือไม่ก็ได้
 
-Multiple box-shadows can be created by using commas to separate properties of each `box-shadow` element.
+box-shadows หลายอันสามารถถูกสร้างได้โดยการใช้ comma เพื่อแยก property  ของแต่ละ `box-shadow` element
 
-Here's an example of the CSS to create multiple shadows with some blur, at mostly-transparent black colors:
+นี่คือตัวอย่างของ CSS ที่ใช้สร้างเงาหลายอันพร้อมกับ blur, ด้วยสีดำที่เกือบจะโปร่งแสง:
 
 ```css
 box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -33,11 +33,12 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
 # --instructions--
 
-The element now has an id of `thumbnail`. With this selector, use the example CSS values above to place a `box-shadow` on the card.
+ตอนนี้ element มี id ของ `thumbnail`
+จงใช้ค่า CSS ตามตัวอย่างข้างบนเพื่อวาง `box-shadow` ในการ์ดด้วยการใช้  selector อันนี้
 
 # --hints--
 
-Your code should add a `box-shadow` property for the `thumbnail` id.
+โค้ดของคุณควรเพิ่ม `box-shadow` property ให้กับ `thumbnail` id.
 
 ```js
 assert(code.match(/#thumbnail\s*?{\s*?box-shadow/g));

@@ -9,17 +9,18 @@ dashedName: add-rounded-corners-with-border-radius
 
 # --description--
 
-Your cat photo currently has sharp corners. We can round out those corners with a CSS property called `border-radius`.
+ภาพแมวของคุณมีมุมที่แหลม พวกเราสามารถทำให้มันมนขึ้นได้ด้วย CSS property ที่ชื่อ `border-radius`
 
 # --instructions--
 
-You can specify a `border-radius` with pixels. Give your cat photo a `border-radius` of `10px`.
+คุณสามารถระบุ `border-radius` ด้วย pixels
+จงกำหนดให้ภาพแมวของคุณมี `border-radius` เท่ากับ `10px`
 
-**Note:** This challenge allows for multiple possible solutions. For example, you may add `border-radius` to either the `.thick-green-border` class or the `.smaller-image` class.
+**Note:** challenge นี้เปิดโอกาสให้สามารถใช้ solution ที่หลากหลายได้. ยกตัวอย่างเช่น คุรอาจจะเพิ่ม `border-radius` ให้เป็น `.thick-green-border` class หรือ `.smaller-image` class.
 
 # --hints--
 
-Your image element should have the class `thick-green-border`.
+ภายของคุรควรมี class `thick-green-border`.
 
 ```js
 assert($('img').hasClass('thick-green-border'));

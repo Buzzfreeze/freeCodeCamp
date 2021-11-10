@@ -7,11 +7,13 @@ dashedName: part-8
 
 # --description--
 
-It's tough to see now, but there's a border at the edge of your preview, that's the `body`. Create a `div` element in the `body` with a class of `background-buildings`. This will be a container for a group of buildings.
+ตอนนี้มันยากที่จะเห็นแล้ว แต่มันยังมีขอบที่ริม preview ขอบคุณ นั่นคือ`body`
+จงสร้าง `div` element ใน `body` ที่มีคลาสเป็น `background-buildings`
+สิ่งนี้จะเป็น container สำหรับกลุ่มของ buildings
 
 # --hints--
 
-You should create a `div` element.
+คุณควรสร้าง 1 `div` element.
 
 ```js
 assert.exists(document.querySelector('div'));

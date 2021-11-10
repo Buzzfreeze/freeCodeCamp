@@ -7,11 +7,13 @@ dashedName: part-110
 
 # --description--
 
-Okay, the buildings are done. Go back to the `*` selector and remove the `border` you applied to everything at the beginning and the buildings will come together.
+โอเค ตอนนี้ตึกทั้งหมดก็สร้างเสร็จแล้ว
+กลับไปที่ `*` selector และเอา `border` ที่คุณใส่เข้าไปในทุกที่ในตอนแรกออกไป
+แล้วคุณจะเห็นว่าตึกติดกันแล้ว
 
 # --hints--
 
-You should remove the `border` from the `*` selector.
+คุณควรเอา `border` ออกจาก `*` selector.
 
 ```js
 assert.isEmpty(new __helpers.CSSHelp(document).getStyle("*")?.border);

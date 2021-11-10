@@ -7,11 +7,12 @@ dashedName: part-42
 
 # --description--
 
-Set the `border-radius` of `.two` to `8px 10px`. This will round its top-left and bottom-right corners by 8 pixels, and top-right and bottom-left corners by 10 pixels.
+จงกำหนดให้ `border-radius` ของ `.two` มีค่า `8px 10px`
+นี่จะช่วยทำให้มุมบนซ้าย และล่างขวาดูมนขึ้นอีก 8 pixel และมุมบนขวาและซ้ายล่างดูมนขึ้นอีก 10 pixel
 
 # --hints--
 
-You should set the `border-radius` property to `8px 10px`.
+คุณควรกำหนดให้ `border-radius` property มีค่าเป็น `8px 10px`
 
 ```js
 const hasBorderRadius = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style['border-radius'] === '8px 10px');

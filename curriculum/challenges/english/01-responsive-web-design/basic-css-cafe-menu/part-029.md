@@ -7,13 +7,14 @@ dashedName: part-29
 
 # --description--
 
-Since the cafe's main product for sale is coffee, you could use an image of coffee beans for the background of the page.
+เนื่องจากสินค้าหลังของคาเฟ่คือกาแฟ คุณควรใช้รูปของเมล็ดกาแฟเป็นภาพพื้นหลังของหน้านี้
 
-Delete the comment and its contents inside the `body` type selector. Now add a `background-image` property and set its value to `url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg)`.
+จงลบคอมเมนต์และ content ภายใน `body` type selector
+ตอนนี้ จงเพิ่ม `background-image` property และกำหนดให้มันมีค่าเป็น `url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg)`.
 
 # --hints--
 
-You should remove the commented out `background-color` property.
+คุณควรเอาคำสั่งคอมเมนต์ออกจาก `background-color` property.
 
 ```js
 assert(!code.match(/\/\*\s*background-color:\s*burlywood;?\s*\*\//i))

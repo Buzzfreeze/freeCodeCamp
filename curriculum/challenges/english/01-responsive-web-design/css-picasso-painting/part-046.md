@@ -7,11 +7,12 @@ dashedName: part-46
 
 # --description--
 
-Using an `id` selector, create a rule for the `white-paper` element. Set the `width` to `400px`, the `height` to `100px`, and the `background-color` to `GhostWhite`.
+จงสร้างกฎให้กับ `white-paper` element ด้วย `id` selector
+จงกำหนดให้ `width` เท่ากับ `400px`, `height` เท่ากับ `100px`, และ `background-color` เป็น `GhostWhite`
 
 # --hints--
 
-You should have a `#white-paper` selector.
+คุณควรมี 1 `#white-paper` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#white-paper'));

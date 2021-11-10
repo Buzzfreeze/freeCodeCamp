@@ -7,11 +7,13 @@ dashedName: part-4
 
 # --description--
 
-Add a `title` element to the `head`, and give your project a title of `freeCodeCamp Skyline Project`. Also, nest a self-closing `link` element in the `head` element. Give it a `rel` attribute value of `stylesheet`, a `type` attribute value of `text/css`, and an `href` attribute value of `styles.css`.
+จงเพิ่ม `title` element ให้กับ `head`, และจงกำหนดให้โปรเจคของคุณมีหัวข้อเป็น `freeCodeCamp Skyline Project`
+นอกจากนี้ จงเก็บ self-closing `link` element ไว้ใน `head` element
+จงกำหนดให้มันมี `rel` attribute เป็น `stylesheet`, `type` attribute เป็น `text/css`, และ `href` attribute เป็น `styles.css`.
 
 # --hints--
 
-Your code should have a `title` element.
+โค้ดของคุณควรมี `title` element 1 อัน
 
 ```js
 const title = document.querySelector('title');

@@ -7,11 +7,12 @@ dashedName: part-47
 
 # --description--
 
-Remove `orange` from the `.bb1d` gradient and change the `80%` to `50%`. This will make `--building-color1` solid for the top half, and then transition to `--window-color1` for the bottom half.
+จงลบ `orange` ออกจาก `.bb1d` gradient และเปลี่ยนค่า `80%` เป็น `50%`
+นี่จะทำให้ `--building-color1` มีอยู่สีเดียวในครึ่งบนและการเปลี่ยนสีไปเป็น `--window-color1` จะเกิดขึ้นที่ช่วงครึ่งล่างเท่านั้น
 
 # --hints--
 
-You should remove `orange` from the `linear-gradient`.
+คุณควรเอา `orange` ออกจาก`linear-gradient`
 
 ```js
 assert.notInclude(new __helpers.CSSHelp(document).getStyle('.bb1d')?.background, 'orange');

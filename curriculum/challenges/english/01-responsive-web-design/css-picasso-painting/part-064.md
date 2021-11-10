@@ -7,11 +7,12 @@ dashedName: part-64
 
 # --description--
 
-Style your `black-round-hat` element with an `id` selector. Set the `width` to `180px`, the `height` to `150px`, and the `background-color` to `rgb(45, 31, 19)`.
+จงตกแต่ง `black-round-hat` element ด้วย `id` selector
+จงกำหนดให้ `width` เท่ากับ `180px`,`height` เท่ากับ `150px`, และ `background-color` เท่ากับ `rgb(45, 31, 19)`
 
 # --hints--
 
-You should have a `#black-round-hat` selector.
+คุณควรมี `#black-round-hat` selector
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#black-round-hat'));

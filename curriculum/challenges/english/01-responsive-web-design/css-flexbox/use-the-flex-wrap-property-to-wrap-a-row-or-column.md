@@ -9,21 +9,27 @@ dashedName: use-the-flex-wrap-property-to-wrap-a-row-or-column
 
 # --description--
 
-CSS flexbox has a feature to split a flex item into multiple rows (or columns). By default, a flex container will fit all flex items together. For example, a row will all be on one line.
+CSS flexbox มีฟีเจอร์ที่ใช้แบ่ง flex item เป้นแถวหลาย ๆ แถว(หรือคอลั่มน์) 
+โดยค่าเริ่มต้นแล้ว flex container จะยัด flex item ทุกอันรวมกัน
+ยกตัวอย่างเช่น, หนึ่งแถวจะอยู่อยู่รวมเป็น 1 เส้น
 
-However, using the `flex-wrap` property tells CSS to wrap items. This means extra items move into a new row or column. The break point of where the wrapping happens depends on the size of the items and the size of the container.
+อย่างไรก็ตาม การใช้ `flex-wrap` property จะบอกให้ CSS รวม item พวกนั้นไว้ด้วยกัน
+นี่หมายความว่า item ที่เกินมาจะได้อยู่ที่แถวหรือคอมลั่มน์ใหม่
+break point ของตำแหน่งที่จะถูกรวมนะขึ้นกับขนาดของ item และขนาดของ container.
 
-CSS also has options for the direction of the wrap:
+CSS ก็มีตัวเลือกสำหรับทิศทางในการรวม item ตามนี้:
 
 <ul><li><code>nowrap</code>: this is the default setting, and does not wrap items.</li><li><code>wrap</code>: wraps items onto multiple lines from top-to-bottom if they are in rows and left-to-right if they are in columns.</li><li><code>wrap-reverse</code>: wraps items onto multiple lines from bottom-to-top if they are in rows and right-to-left if they are in columns.</li></ul>
 
 # --instructions--
 
-The current layout has too many boxes for one row. Add the CSS property `flex-wrap` to the `#box-container` element, and give it a value of `wrap`.
+layout ในตอนนี้มีกล่องหลายอันเกินไปใน 1 แถว
+จงเพิ่ม CSS property `flex-wrap` ให้กับ `#box-container` element
+และจงกำหนดให้มันมีค่าเป็น `wrap`
 
 # --hints--
 
-The `#box-container` element should have the `flex-wrap` property set to a value of `wrap`.
+`#box-container` element ควรมี `flex-wrap` property เป็น `wrap`
 
 ```js
 assert($('#box-container').css('flex-wrap') == 'wrap');

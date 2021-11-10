@@ -7,11 +7,11 @@ dashedName: part-26
 
 # --description--
 
-Set the `background-color` of the `.two` element to `#8f0401`.
+จงกำหนดให้ `background-color` ของ `.two` element มีค่า `#8f0401`
 
 # --hints--
 
-You should set the `background-color` property to `#8f0401`.
+คุณควรกำหนดให้ `background-color` property มีค่า `#8f0401`
 
 ```js
 const hasBackground = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style['background-color'] === 'rgb(143, 4, 1)');

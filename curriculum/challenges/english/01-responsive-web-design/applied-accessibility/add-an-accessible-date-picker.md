@@ -9,13 +9,15 @@ dashedName: add-an-accessible-date-picker
 
 # --description--
 
-Forms often include the `input` field, which can be used to create several different form controls. The `type` attribute on this element indicates what kind of `input` element will be created.
+ฟอร์มมันจะรวมช่อง`input` ที่สามารถถูกใช้เพื่อสร้าง form controls หลาย ๆ อันที่แตกต่างกันได้
+`type` attribute ใน element นี้จะบอกว่า `input` element ประเภทไหนจะถูกสร้างจึ้นมา
 
-You may have noticed the `text` and `submit` input types in prior challenges, and HTML5 introduced an option to specify a `date` field. Depending on browser support, a date picker shows up in the `input` field when it's in focus, which makes filling in a form easier for all users.
+คุณอาจจะสังเกตได้ว่า input ประเภท `text` และ `submit` ใน challenge ก่อนหน้านี้และ HTML5 ได้กล่าวถึงตัวเลือกหนึ่งที่ระบุช่อง `date` 
+date picker จะแสดงในช่อง `input` เป็นมันถูก focus ตาม browser support ที่ใช้ โดยมันทำให้การกรอกฟอร์มนั้นง่ายขึ้นสำหรับผู้ใช้ทุกคน
 
-For older browsers, the type will default to `text`, so it helps to show users the expected date format in the `label` or `placeholder` text just in case.
+สำหรับ browser เก่าๆ ประเภทของมันโดยค่าเริ่มต้นจะเป็น `text` ดังนั้นมันช่วยให้แสดงให้ผู้ใช้เห็น format ของ date input ที่ต้องการในข้อความ `label` หรือ `placeholder` 
 
-Here's an example:
+นี่คือตัวอย่าง:
 
 ```html
 <label for="input1">Enter a date:</label>
@@ -24,11 +26,12 @@ Here's an example:
 
 # --instructions--
 
-Camper Cat is setting up a Mortal Kombat tournament and wants to ask his competitors to see what date works best. Add an `input` tag with a `type` attribute of `date`, an `id` attribute of `pickdate`, and a `name` attribute of `date`.
+Camper Cat นั้นจัด Mortal Kombat tournament และต้องการถามผู้เข้าแข่งขันของพวกเขาว่าควรจัดงานวันไหน
+จงเพิ่ม `input` tag พร้อมกับ `type` attribute ของ `date`, `id` attribute ของ `pickdate`, และ `name` attribute ของ `date`.
 
 # --hints--
 
-Your code should add one `input` tag for the date selector field.
+โค้ดของคุณควรเพิ่ม `input` tag สำหรับช่อง date selector 
 
 ```js
 assert($('input').length == 2);

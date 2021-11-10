@@ -7,13 +7,13 @@ dashedName: part-49
 
 # --description--
 
-You want the `select` element to remain with a white background, but now it is not getting the same `min-height` as the `input` and `textarea` elements.
+คุรต้องการใช้ `select` element เพื่อให้คงสีพื้นหลังให้เป็นสีขาว และตอนนี้มันไม่ได้มี `min-height` เท่ากับ `input` และ `textarea` elements.
 
-Move the `min-height` property and value so that all three element types have the same `min-height` value, and the `select` element still has a white background.
+จงย้าย property และค่าของ`min-height` เพื่อที่ทั้ง element 3 ประเภทจะมี `min-height` ค่าเดียวกันและ `select` element ยังคงมีพื้นหลังเป็นสีขาว
 
 # --hints--
 
-You should move the `min-height` property and value to the `input, textarea, select` selector.
+จงย้าย property และค่าของ `min-height` ไปที่ `input, textarea, select` selector.
 
 ```js
 assert.isNotEmpty(new __helpers.CSSHelp(document).getStyle('input, textarea, select')?.minHeight);

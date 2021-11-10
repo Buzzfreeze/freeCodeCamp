@@ -9,21 +9,28 @@ dashedName: create-a-graphic-using-css
 
 # --description--
 
-By manipulating different selectors and properties, you can make interesting shapes. One of the easier ones to try is a crescent moon shape. For this challenge you need to work with the `box-shadow` property that sets the shadow of an element, along with the `border-radius` property that controls the roundness of the element's corners.
+โดยการใช้งาน selectors และ propertie ที่ต่างกัน คุณสามารถสร้างรูปทรงที่น่าสนใจขึ้นมาได้
+หนึ่งในรูปทรงที่ง่ายที่จะลองทำคือ รูปพระจันทร์เสี้ยว
+สำหรับแบบฝึกหัดนี้คุณจำเป็นต้องใช้ `box-shadow` property ที่จะกำหนดเงาของ element, ร่วมกับ `border-radius` property ที่จะควมคุมความมนของมุมของ element
 
-You will create a round, transparent object with a crisp shadow that is slightly offset to the side - the shadow is actually going to be the moon shape you see.
+คุณจะสร้างวัตตถุที่กลมและโปร่งแสงพร้อมกับเงาบาง ๆ ที่แผ่ออกมาเล็กน้อยไปด้านข้าง
+เงานั้นจะเป็นไปตามรูปร่างของพระจันทร์ที่คุณเห็น
 
-In order to create a round object, the `border-radius` property should be set to a value of 50%.
+เพื่อที่จะสร้างวัตถุที่มีรูปร่างกลม  `border-radius` property นั้นควรถูกกำหนดให้มีค่า 50%.
 
-You may recall from an earlier challenge that the `box-shadow` property takes values for `offset-x`, `offset-y`, `blur-radius`, `spread-radius` and a color value in that order. The `blur-radius` and `spread-radius` values are optional.
+คุณอาจจะยังจำได้จากแบบฝึกหัดที่แล้วว่า `box-shadow` property จะรับค่า `offset-x`, `offset-y`, `blur-radius`, `spread-radius` และค่าสีตามลำดับ
+`blur-radius` และ `spread-radius` เป็นค่าที่จะมีหรือไม่มีก็ได้
 
 # --instructions--
 
-Manipulate the square element in the editor to create the moon shape. First, change the `background-color` to `transparent`, then set the `border-radius` property to 50% to make the circular shape. Finally, change the `box-shadow` property to set the `offset-x` to 25px, the `offset-y` to 10px, `blur-radius` to 0, `spread-radius` to 0, and color to `blue`.
+จงใช้ element สี่เหลี่ยมใน editor เพื่อสร้างรูปพระจันทร์เสี้ยง
+ขั้นแรก จงเปลี่ยน  `background-color` ให้เป็น `transparent`, 
+หลังจากนั้น จงกำหนดให้ `border-radius` property มีค่าเป็น 50% เพื่อทำให้มันมีรูปร่างเป็นวงกลม
+สุดท้าย จงเปลี่ยน  `box-shadow` property เพื่อกำหนดให้ `offset-x` มีค่า 25px,  `offset-y` มีค่า 10px, `blur-radius` มีค่า 0, `spread-radius` มีค่า 0, และสีเป็น `blue`
 
 # --hints--
 
-The value of the `background-color` property should be set to `transparent`.
+ค่าของ `background-color` property ควรถูกกำหหนดให้เป็น `transparent`.
 
 ```js
 assert(code.match(/background-color:\s*?transparent;/gi));

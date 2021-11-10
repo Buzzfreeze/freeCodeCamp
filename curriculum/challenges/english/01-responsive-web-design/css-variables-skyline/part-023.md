@@ -7,11 +7,14 @@ dashedName: part-23
 
 # --description--
 
-Hmm, I'm not sure why that didn't work. You can add a fallback value to a variable by putting it as the second value of where you use the variable like this: `var(--variable-name, fallback-value)`. The property will use the fallback value when there's a problem with the variable. Add a fallback value of `green` to the `background-color` of `.bb2`.
+หืมมมม ฉันไม่แน่ใจว่าทำไมมันไม่เวิร์ก
+คุณสามารถเพิ่ม fallback value ให้กับตัวแปรได้โดยการใส่มันเป็นค่าที่สองตรงที่คุณใช้ตัวแปรแบบนี้: `var(--variable-name, fallback-value)`
+property จะใช้ค่าจาก fallback value เมื่อมันมีปัญหากับตัวแปร
+จงเพิ่ม fallback value ให้กับ `background-color` ของ `.bb2` เป็น `green`
 
 # --hints--
 
-You should add a fallback value of `green` to the `background-color` property.
+จงเพิ่ม fallback value ให้กับ `background-color` property เป็น `green`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.bb2')?.backgroundColor.trim(), 'var(--building-color2, green)');

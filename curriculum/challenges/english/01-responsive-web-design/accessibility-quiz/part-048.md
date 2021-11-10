@@ -7,13 +7,15 @@ dashedName: part-48
 
 # --description--
 
-When the screen width is small, the `h1` does not wrap its text content how it should. Center align the text for the `h1`.
+เมื่อความกล้าวของจอมีขนาดเล็ก 
+ข้อความที่อยู่ใน `h1` จะไม่อยู่ในตำแหน่งที่มันควรเป็น
+จงจัดให้ข้อความใน `h1` อยู่ตรงกลาง
 
-Then, give the `main` padding such that the `Student Info` section header can be fully seen.
+หลังจากนั้น จงเพิ่ม padding ให้กับ `main` เพื่อที่เราจะได้เห็น header ของ `Student Info` section เต็ม ๆ
 
 # --hints--
 
-You should give the `h1` a `text-align` of `center`.
+คุณควรใส่ `text-align` ที่มีค่า `center` ใน `h1` a `text-align`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('h1')?.textAlign, 'center');

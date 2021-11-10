@@ -7,11 +7,14 @@ dashedName: part-33
 
 # --description--
 
-I see some code that can be optimized. Move the `position` and `top` properties and values from `.foreground-buildings` to `.background-buildings`. Then select both `.background-buildings` and `.foreground-buildings` there, effectively applying those styles to both of the elements. You can use a comma (`,`) to separate selectors like this: `selector1, selector2`.
+ฉันเห็นโค้ดบางตัวที่สามารถทำให้ดูดีขึ้นได้
+จงย้าย `position` และ `top` properties และ values จาก `.foreground-buildings` ไปที่ `.background-buildings`
+หลังจากนั้น จงเลือกทั้ง `.background-buildings` และ `.foreground-buildings` และใส่ style ให้กับทั้ง 2 element
+คุรสามารถใช้ comma (`,`) เพื่อแยก selector ได้แบบนี้: `selector1, selector2`.
 
 # --hints--
 
-You should not remove the `.foreground-buildings` declaration.
+คุณไม่ควรลบการประกาศ `.foreground-buildings` 
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('.foreground-buildings'));

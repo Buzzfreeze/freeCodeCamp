@@ -8,23 +8,24 @@ dashedName: add-images-to-your-website
 
 # --description--
 
-You can add images to your website by using the `img` element, and point to a specific image's URL using the `src` attribute.
+คุณสามารถเพิ่มรูปภาพให้กับเว็บไซต์อขงคุณได้โดยการใช้ `img` element, และชี้มันไปที่ URL ของรูปภายที่กำหนดไว้โดยการใช้ `src` attribute.
 
-An example of this would be:
+นี่คือตัวอย่างที่มันควรจะเป็น:
 
 ```html
 <img src="https://www.freecatphotoapp.com/your-image.jpg">
 ```
 
-Note that `img` elements are self-closing.
+จำไว้ว่า `img` elements เป็นประเภท self-closing (ไม่จำเป็นต้องมีแท็กปิด)
 
-All `img` elements **must** have an `alt` attribute. The text inside an `alt` attribute is used for screen readers to improve accessibility and is displayed if the image fails to load.
+`img` element ทุกอันต้องมี `alt` attribute อันหนึ่ง
+ตัวอักษรที่อยู่ข้างใน `alt` attribute จะถูกใช้โดย screen reader เพื่อเพิ่มความสามารถในการเข้าถึงและถูกแสดงผลออกมาถ้าหน้าจอหากระบบไม่สามารถโหลดรูปภาพได้
 
-**Note:** If the image is purely decorative, using an empty `alt` attribute is a best practice.
+**Note:** ถ้ารูปภาพนั้นถูกใช้เพื่อการตกแต่งเพียงเ่านั้น การปล่อยให้ `alt` attribute ว่างไว้เป็นสิ่งที่ดีที่สุด
 
-Ideally the `alt` attribute should not contain special characters unless needed.
+Iหากเป็นไปได้ `alt` attribute ไม่ควรจะเก็บตัวอักษรพิเศษเอาไว้ ยกเว้นว่ามันจะจำเป็นจริง ๆ
 
-Let's add an `alt` attribute to our `img` example above:
+มาเพิ่ม `alt` attributeตัอย่าง `img` ข้างบนกันเถอะ:
 
 ```html
 <img src="https://www.freecatphotoapp.com/your-image.jpg" alt="A business cat wearing a necktie.">
@@ -32,17 +33,17 @@ Let's add an `alt` attribute to our `img` example above:
 
 # --instructions--
 
-Let's try to add an image to our website:
+มาลองเพิ่มรูปภาพให้กับเว็บไซต์ของเรากันเถอะ:
 
-Within the existing `main` element, insert an `img` element before the existing `p` elements.
+ภายใน `main` element ที่สร้างเตรียมไว้แล้ว จงแทรก `img` element ไปข้างหน้า `p` elements ที่มีอยู่ก่อน
 
-Now set the `src` attribute so that it points to the url `https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg`
+ในตอนนี้ จงกำหนดให้ `src` attribute ชี้ไปที่ url `https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg`
 
-Finally, don't forget to give your `img` element an `alt` attribute with applicable text.
+สุดท้าย อย่าลืมที่จะกำหนดให้ `img` element ของคุณมี `alt` attribute ที่มาพร้อมกับชุดตัวอักษรที่เหมาะสม
 
 # --hints--
 
-Your page should have an image element.
+หน้าเว็บไซต์ของคุณควรมี image element อันหนึ่ง
 
 ```js
 assert($('img').length);

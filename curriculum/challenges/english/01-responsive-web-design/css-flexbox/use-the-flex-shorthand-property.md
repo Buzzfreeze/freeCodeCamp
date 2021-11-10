@@ -9,21 +9,25 @@ dashedName: use-the-flex-shorthand-property
 
 # --description--
 
-There is a shortcut available to set several flex properties at once. The `flex-grow`, `flex-shrink`, and `flex-basis` properties can all be set together by using the `flex` property.
+มันมี shortcut สำหรับการกำหนด flex property หลาย ๆ อันในครั้งเดียว
+`flex-grow`, `flex-shrink`, และ `flex-basis` properties สามารถถูกกำหนดค่าพร้อมกันทั้งหมดได้ด้วย `flex` property
 
-For example, `flex: 1 0 10px;` will set the item to `flex-grow: 1;`, `flex-shrink: 0;`, and `flex-basis: 10px;`.
+ยกตัวอย่างเช่น, `flex: 1 0 10px;` จะกำหนดค่าให้ item มี `flex-grow: 1;`, `flex-shrink: 0;`, และ `flex-basis: 10px;`
 
-The default property settings are `flex: 0 1 auto;`.
+ค่าเริ่มต้นของ property คือ `flex: 0 1 auto;`
 
 # --instructions--
 
-Add the CSS property `flex` to both `#box-1` and `#box-2`. Give `#box-1` the values so its `flex-grow` is `2`, its `flex-shrink` is `2`, and its `flex-basis` is `150px`. Give `#box-2` the values so its `flex-grow` is `1`, its `flex-shrink` is `1`, and its `flex-basis` is `150px`.
+จงเพิ่ม CSS property `flex` ให้กับทั้ง `#box-1` และ `#box-2`
+จงกำหนดให้ `#box-1` มี `flex-grow` เท่ากับ `2`, `flex-shrink` เท่ากับ `2`,และ `flex-basis` เท่ากับ `150px`
+จงกำหนดให้ `#box-2` มี `flex-grow` เท่ากับ `1`, `flex-shrink` เท่ากับ `1`,และ `flex-basis` เท่ากับ `150px`
 
-These values will cause `#box-1` to grow to fill the extra space at twice the rate of `#box-2` when the container is greater than 300px and shrink at twice the rate of `#box-2` when the container is less than 300px. 300px is the combined size of the `flex-basis` values of the two boxes.
+ค่าเหล่านี้จะทำให้ `#box-1` ขยายจนมีขนาดเป็นสองเท่าของ `#box-2` เมื่อ container มีขนาดมากกว่า 300px และหดลงด้วยอัตราที่มากกว่า `#box-2` อยู่สองเท่าเมื่อ container มีขนาดเล็กกว่าา 300px
+300px เป็นขนาดรวมของค่า `flex-basis`ของทั้ง 2 กล่อง
 
 # --hints--
 
-The `#box-1` element should have the `flex` property set to a value of `2 2 150px`.
+`#box-1` element ควรมี `flex` property ทีถูกกำหนดค่าให้เท่ากับ `2 2 150px`
 
 ```js
 assert(

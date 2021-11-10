@@ -9,23 +9,32 @@ dashedName: use-tabindex-to-add-keyboard-focus-to-an-element
 
 # --description--
 
-The HTML `tabindex` attribute has three distinct functions relating to an element's keyboard focus. When it's on a tag, it indicates that the element can be focused on. The value (an integer that's positive, negative, or zero) determines the behavior.
+HTML `tabindex` attribute มี 3 ฟังค์ชั่นที่แตกต่างกันซึ่งเกี่ยวข้องกับ element ที่ keyboard สนใจ
+เมื่อมันอยู่ใน tag, มันจะบอกว่าอะไรที่ element สามารถโฟกัสได้
+ค่าของมันจะบอกพฤติกรรม (behavior) ของมัน ซึ่งจะเป็นจำนวนเต็มที่มีค่าเป็นจำนวนบวก จำนวนลบ หรือเลขศูนย์
 
-Certain elements, such as links and form controls, automatically receive keyboard focus when a user tabs through a page. It's in the same order as the elements come in the HTML source markup. This same functionality can be given to other elements, such as `div`, `span`, and `p`, by placing a `tabindex="0"` attribute on them. Here's an example:
+element ส่วนหนึ่งเช่นลิงค์และ form controls จะรับ  keyboard focus โดยอตโนมัติเมื่อผู้ใช้กดผ่านหน้านั้น ๆ
+มันจะอยู่ในลำดับเดียวกันกับ elements ที่โผล่มาใน HTML source markup
+ฟังค์ชั่นที่เหมือนกันนี้สามารถส่งไปให้กับ elements ตัวอื่นได้ ยกตัวอย่างเช่น `div`, `span`, และ `p` โดยการวาง `tabindex="0"` attribute ไว้ที่พวกมัน
+นี่คือตัวอย่าง:
 
 ```html
 <div tabindex="0">I need keyboard focus!</div>
 ```
 
-**Note:** A negative `tabindex` value (typically -1) indicates that an element is focusable, but is not reachable by the keyboard. This method is generally used to bring focus to content programmatically (like when a `div` used for a pop-up window is activated), and is beyond the scope of these challenges.
+**Note:** ค่าลบของ `tabindex` บ่งบอกว่า element ตัวนั้นสามารถถูกโฟกัสได้ แต่ไม่สามารถเข้าถึงได้ด้วย keyboard 
+วิธีนี้มักถูกใช้เพื่อนำความสนใจกลับไปที่เนื้อหา (เหมือนอย่างเช่น เมื่อ `div` ที่ถูกใช้เพื่อหน้าต่าง pop-up window ได้มีการเปิดใช้งาน), และมันไปไกลเกินกว่าสโคปของ challenge เหล่านี้
 
 # --instructions--
 
-Camper Cat created a new survey to collect information about his users. He knows input fields automatically get keyboard focus, but he wants to make sure his keyboard users pause at the instructions while tabbing through the items. Add a `tabindex` attribute to the `p` tag and set its value to `0`. Bonus - using `tabindex` also enables the CSS pseudo-class `:focus` to work on the `p` tag.
+Camper Cat ได้สร้างแบบสำรวจขึ้นมาใหม่ 1 อันเพื่อเก็บข้อมูลเกี่ยวผู้ใช้ของเขา
+เขารู้ว่าช่องใส่ input นั้นจะมี keyboard focus โดยอัตโนมัติแต่เขาต้องการทำให้มั่นใจว่าผู้ใช้ของเขาที่ใช้ keyboard จะหยุดที่คำชี้แจงขณะที่กดผ่าน item ต่าง ๆ
+จงเพิ่ม `tabindex` attribute เข้าไปใน `p` tag และตั้งค่าให้ค่าของมันเป้น `0`
+Bonus - การใช้ `tabindex` ยังช่วยให้ CSS pseudo-class `:focus` สามารถทำงานบน `p` tag ได้อีกด้วย
 
 # --hints--
 
-Your code should add a `tabindex` attribute to the `p` tag that holds the form instructions.
+โค้ดของคุณควรเพิ่ม `tabindex` attribute เข้าไปใน `p` tag ที่เก็บคำชี้แจงของฟอร์มเอาไว้
 
 ```js
 assert($('p').attr('tabindex'));

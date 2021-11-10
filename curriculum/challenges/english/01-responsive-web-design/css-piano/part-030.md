@@ -7,11 +7,11 @@ dashedName: part-30
 
 # --description--
 
-Now add a `.logo` selector to the `@media` query, and set the `width` property to `150px`.
+ตอนนี้ จงเพิ่ม `.logo` selector อันหนึ่งให้กับ `@media` query และจงกำหนดให้มันมี `width` property อยู่ที่ `150px`
 
 # --hints--
 
-Your `@media` rule should have a `.logo` selector.
+`@media` rule ควรมี 1 `.logo` selector.
 
 ```js
 const rules = new __helpers.CSSHelp(document).getRuleListsWithinMedia('(max-width: 768px)');

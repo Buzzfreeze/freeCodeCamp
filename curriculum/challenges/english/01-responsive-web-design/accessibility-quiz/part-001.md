@@ -7,13 +7,12 @@ dashedName: part-1
 
 # --description--
 
-Welcome to the first part in the Accessibility Quiz. As you are becoming a seasoned HTML and CSS developer, we have started you off with the basic boilerplate.
+ยินดีต้อนรับเข้าสู่ส่วนแรกของ the Accessibility Quiz หลังจากที่คุณได้กลายเป็น developer ที่คุ้นเคยกับการเขียน HTML และ  CSS เราก็ได้สอนคุณให้รู้จักกับ basic boilerplate หรือเทมเพลตสำหรับการเริ่มต้นทำเว็บไซต์หรือแอพลิเคชั่น.
 
-Start this accessibility journey, by providing a `lang` attribute to your `html` element. This will assist screen readers in identifying the language of the page.
-
+เริ่ม accessibility journey ด้วยการใส่ `lang` attribute ไปใน `html` element ของคุณ การทำอย่างนี้จะช่วยให้ screen readers สามารถระบุภาษาที่ใช้ใน page นั้น ๆ ได้
 # --hints--
 
-You should give the `html` element a `lang` attribute. _Hint: You can use the value `en` for English._
+คุณควรมี `lang` attribute 1 อันใน `html` element. _Hint: สามารถใช้ `en` สำหรับภาษาอังกฤษ
 
 ```js
 assert.match(code, /<html\s+lang=('|")[\w\-]+?\1\s*>/i);

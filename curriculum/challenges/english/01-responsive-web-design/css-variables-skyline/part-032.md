@@ -7,11 +7,12 @@ dashedName: part-32
 
 # --description--
 
-Add the same `display`, `align-items`, and `justify-content` properties and values to `foreground-buildings` that you used on `background-buildings`. Again, this will use Flexbox to evenly space the buildings across the bottom of their container.
+จงเพิ่ม `display`, `align-items`, และ `justify-content` properties และ values ที่เหมือนกันให้กับ `foreground-buildings` ที่คุณใช้กับ `background-buildings`
+นี่เป็นการใช้ Flexbox เพื่อแบ่งที่ว่างระหว่าง building ให้เท่า ๆ กันผ่านด้านล่างของ container ของพวกมัน
 
 # --hints--
 
-You should give `.foreground-buildings` a `display` property of `flex`.
+คุณควรกำหนดให้`.foreground-buildings` มี `display` property เป็น `flex`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.foreground-buildings')?.display, 'flex');

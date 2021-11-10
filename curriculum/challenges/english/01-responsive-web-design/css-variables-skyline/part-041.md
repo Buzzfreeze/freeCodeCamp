@@ -7,11 +7,12 @@ dashedName: part-41
 
 # --description--
 
-You want to add the same gradient to the next two sections. Instead of doing that, create a new class called `bb1-window`, and move the `height` and `background` properties and values from `.bb1a` to the new class.
+คุณต้องการเพิ่ม gradient สีเดิมให้กับ sections อีก 2 อันถัดไป
+แต่ที่จะทำแบบนั้น จงสร้างคลาสขึ้นมาใหม่ชื่อว่า `bb1-window` และจงย้าย `height` และ `background` properties และ values จาก `.bb1a` ไปที่คลาสใหม่นี้
 
 # --hints--
 
-You should create a new class declaration called `bb1-window`.
+คุณควรสร้างคลาสอันใหม่ที่ชื่อ `bb1-window`
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('.bb1-window'));

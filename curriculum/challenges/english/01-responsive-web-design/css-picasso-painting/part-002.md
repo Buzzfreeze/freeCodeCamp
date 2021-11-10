@@ -7,11 +7,12 @@ dashedName: part-2
 
 # --description--
 
-Within your `head` element, add a `meta` tag with the `charset` attribute set to `utf-8`. Also add a `title` element with the text `freeCodeCamp Picasso Painting`.
+ภายใน `head` element, จงเพิ่ม 1 `meta` tag ที่มี `charset` attribute ที่เป็น `utf-8`
+แล้วจงเพิ่ม`title` element ที่มีข้อความ `freeCodeCamp Picasso Painting`
 
 # --hints--
 
-You should add exactly one `meta` element.
+คุณควรเพิ่ม 1 `meta` element
 
 ```js
 assert(document.querySelectorAll('meta').length === 1);

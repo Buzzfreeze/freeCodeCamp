@@ -7,13 +7,15 @@ dashedName: part-60
 
 # --description--
 
-Within the `guitar` element, create three `div` elements. Give the first two a `class` value of `guitar`. Then give the first an `id` of `guitar-left`, and the second an `id` of `guitar-right`. Add an `id` to the third `div` with the value `guitar-neck`.
+ใน `guitar` element, จงสร้าง 3 `div` element
+จงกำหนดให้สองอันแรกมี `class` ชื่อ `guitar` แล้วกำหนดให้อันแรกมีอีก`id` ที่ชื่อ `guitar-left` และอันที่สองมีอีก `id` ที่ชื่อ `guitar-right`
+จงเพิ่ม `id` อันหึ่งให้กับ `div` อันที่สามโดยให้มันชื่อว่า  `guitar-neck`
 
-The third `div` should not have the `guitar` class.
+`div` อันที่สามไม่ควรมี `guitar` class.
 
 # --hints--
 
-You should have three new `div` elements within your `guitar` element.
+คุณควรมี 3 `div` element ใน `guitar` element.
 
 ```js
 assert(document.querySelectorAll('#guitar > div')?.length === 3);

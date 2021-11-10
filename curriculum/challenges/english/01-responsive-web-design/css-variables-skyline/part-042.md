@@ -7,11 +7,12 @@ dashedName: part-42
 
 # --description--
 
-Add the new `bb1-window` class to the `.bb1a`, `.bb1b`, and `.bb1c` elements. This will apply the gradient to them.
+จงเพิ่ม `bb1-window` class อันใหม่ให้กับ  `.bb1a`, `.bb1b`, และ `.bb1c` elements
+สิ่งนี้จะทำให้เราสามารถใส่ gradient ที่เตรียมไว้ให้พวกมัน
 
 # --hints--
 
-You should not remove the `bb1a` class.
+คุณไม่ควรลบ `bb1a` class.
 
 ```js
 assert.exists(document.querySelector('div.bb1a'));

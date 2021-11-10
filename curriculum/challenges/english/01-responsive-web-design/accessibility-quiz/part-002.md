@@ -7,15 +7,15 @@ dashedName: part-2
 
 # --description--
 
-You may be familiar with the `meta` tag already; it is used to specify information about the page, such as the title, description, keywords, and author.
+ตอนนี้คุณน่าจะคุ้นเคยกับ `meta` tag แล้ว มันถูกใช้เพื่อระบุข้อมูลที่เกี่ยวกับ page, เช่น ข้อหัว, คำอธิบาย, คีย์เวิร์ดและผู้เขียน
 
-Give your page a `meta` tag with an appropriate `charset` value.
+จงเขียน `meta` tag ซึ่งประกอบด้วย `charset` value ที่เหมาะสมลงไปใน page.
 
-The `charset` attribute specifies the character encoding of the page, and, nowadays, `UTF-8` is the only encoding supported by most browsers.
+โดย `charset` attribute จะระบุ character encoding ของ page และปัจจุบัน `UTF-8` เป็น encoding ตัวเดียวที่ใช้ได้กับ browsers ทั่ว ๆ ไป
 
 # --hints--
 
-You should create a `meta` element within the `head` element.
+คุณควรสร้าง`meta` element ภายใน `head` element.
 
 ```js
 // TODO: Once builder is fixed so head info is not in body

@@ -7,15 +7,16 @@ dashedName: part-42
 
 # --description--
 
-It would be nicer to have the `label` text appear above the form elements.
+มันน่าจะดีกว่าถ้ามีข้อความ `label` ปรากฏเหนือ form elements
 
-Select all `input`, `textarea`, and `select` elements, and make them take up the full width of their parent elements.
+จงเลือก `input`, `textarea`, และ `select` elements ทั้งหมดและทำให้มันกินพื้นที่ด้านกว้างทั้งหมดของ parent elements ของมัน
 
-Also, add `10px` of `margin` to the top of the selected elements. Set the other margins to `0`.
+นอกจากนั้น จงกำหนดค่า `10px` ให้กับ `margin` บนให้กับ element ที่เลือกไว้
+จงกำหนดค่าให้ margins เหลือมีค่าเป็น `0`
 
 # --hints--
 
-You should use a comma separated element selector to select the `input`, `textarea`, and `select` elements.
+คุณสามารถใช้ comma separated element selector เพื่อเลือก `input`, `textarea`, และ `select` elements.
 
 ```js
 assert.isTrue(['input, textarea, select', 'input, select, textarea', 'select, input, textarea', 'select, textarea, input', 'textarea, input, select', 'textarea, select, input'].some(selector => new __helpers.CSSHelp(document).getStyle(selector)));

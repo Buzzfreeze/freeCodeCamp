@@ -9,23 +9,26 @@ dashedName: adjust-the-background-color-property-of-text
 
 # --description--
 
-Instead of adjusting your overall background or the color of the text to make the foreground easily readable, you can add a `background-color` to the element holding the text you want to emphasize. This challenge uses `rgba()` instead of `hex` codes or normal `rgb()`.
+แทนที่จะเปลี่ยนสีพื้นหลังหรือสีของข้อความทั้งหมดเพื่อให้อ่านเนื้อหาได้ง่าย คุณสามารถเพื่อ `background-color` ให้กับ element ที่ล้อมรอบข้อความที่คุณต้องการที่จะเน้น
+challenge นี้จะใช้ `rgba()` แทน `hex` codes หรือ `rgb()`
 
 <blockquote>rgba stands for:<br>  r = red<br>  g = green<br>  b = blue<br>  a = alpha/level of opacity</blockquote>
 
-The RGB values can range from 0 to 255. The alpha value can range from 1, which is fully opaque or a solid color, to 0, which is fully transparent or clear. `rgba()` is great to use in this case, as it allows you to adjust the opacity. This means you don't have to completely block out the background.
+ค่า RGB สามารถเป็นได้ตั้งแต่ 0 ถึง 255 ค่า alpha สามารถเป็นได้ตั้งแต่ 1 (ทึบแสงที่สุด) ถึง 0 (โปร่งแสงที่สุด)
+`rgba()` นั้นเหมาะที่จะใช้ในกรณีนี้ที่สุด เนื่องจากมันยอมให้คุณปรับ opacity 
+ซึ่งแปลว่าคุณไม่จำเป้นต้องปิดพื้นหลังทั้งหมด
 
-You'll use `background-color: rgba(45, 45, 45, 0.1)` for this challenge. It produces a dark gray color that is nearly transparent given the low opacity value of 0.1.
+คุณจะใช้ `background-color: rgba(45, 45, 45, 0.1)` สำหรับ challenge นี้
+มันจะสร้างสีเทาเข้มที่มีค่า opacity เท่ากับ 0.1.
 
 # --instructions--
 
-To make the text stand out more, adjust the `background-color` of the `h4` element to the given `rgba()` value.
+เพื่อทำให้ข้อความดูเด่นขึ้น, จงปรับ`background-color` ของ`h4` element ให้มีค่าตามค่า `rgba()` ที่กำหนดให้
 
-Also for the `h4`, remove the `height` property and add `padding` of 10px.
-
+นอกจากนั้น จงลบ `height` property และเพิ่ม `padding` 10px ให้กับ `h4`
 # --hints--
 
-Your code should add a `background-color` property to the `h4` element set to `rgba(45, 45, 45, 0.1)`.
+โค้ดของคุณควรเพิ่ม  `background-color` property ให้กับ `h4` element และกำหนดค่าให้มันเท่ากับ `rgba(45, 45, 45, 0.1)`.
 
 ```js
 assert(

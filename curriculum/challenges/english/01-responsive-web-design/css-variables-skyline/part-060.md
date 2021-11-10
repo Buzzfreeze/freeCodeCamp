@@ -7,7 +7,8 @@ dashedName: part-60
 
 # --description--
 
-So far, all the gradients you created have gone from top to bottom, that's the default direction. You can specify another direction by adding it before your colors like this:
+จนถึงตอนนี้  gradient ทั้งหมดที่คุณสร้างได้ไล่จากลนลงล่าง ซึ่งมันเป็นทิศทางตามค่าเริ่มต้น
+คุรสามารถระบุทิศทางของมันได้โดยการเพิ่มทิศที่ต้องการก่อนสีของคุณแบบนี้:
 
 ```css
 gradient-type(
@@ -17,11 +18,14 @@ gradient-type(
 );
 ```
 
-Fill in `.bb3` with a `repeating-linear-gradient`. Use `90deg` for the direction, your `building-color3` for the first two colors, and `window-color3` at `15%` for the third. When you don't specify a distance for a color, it will use the values that makes sense. In this case, the first two colors will default to `0%` and `7.5%` because it starts at `0%`, and `7.5%` is half of the `15%`.
+จงลงสี `.bb3` ด้วย `repeating-linear-gradient`
+จงใช้ `90deg` เป้นทิศทางของสีแรกและสองของ `building-color3` และ  `window-color3` เป็น `15%` สำหรับสีที่สาม
+เมื่อคุณไม่ได้ระบุระยะทางของสี มันจะค่าที่เหมาะสม
+ในกรณีนี้ สองสีแรกจะถูกกำหนดค่าเริ่มต้นเป็น `0%` และ `7.5%` เพราะมันเริ่มที่  `0%` และ `7.5%` ก็เป็นครึ่งหนึ่งของ `15%`
 
 # --hints--
 
-You should give `.bb3` a `background` using `repeating-linear-gradient`.
+คุรควรกำหนดให้ `.bb3` มี `background` ที่ใช้ค่า `repeating-linear-gradient`
 
 ```js
 assert.include(new __helpers.CSSHelp(document).getStyle(".bb3")?.background, "repeating-linear-gradient");

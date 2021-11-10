@@ -7,17 +7,25 @@ dashedName: part-18
 
 # --description--
 
-Now it is time to use the pseudo-selectors you prepared for earlier. To create the black keys, add a new `.key.black--key::after` selector. This will target the elements with the class `key black--key`, and select the pseudo-element after these elements in the HTML.
+ตอนนี้ถึงเวลาที่จะใช้ pseudo-selector ที่คุณได้เตรียมไว้ก่อนหน้านี้แล้ว
+จงเพิ่ม `.key.black--key::after` selector อันใหม่เพื่อที่จะสร้างคีย์สีดำ
+นี่จะช่วยหา element ที่มีคลาส `key black--key`, และเลือก pseudo-element ที่ต่อจาก element อันนี้ใน HTML
 
-In the new selector, set the `background-color` to `#1d1e22`. Also set the `content` property to `""`. This will make the pseudo-elements empty.
+ใน selector อันใหม่ จงกำหนดให้ `background-color` มีค่าเป็น `#1d1e22`
+และจงกำหนดให้ `content` property มีค่าเป็น `""`
+สิ่งนี้จะทำให้ pseudo-elements ว่างเปล่า
 
-The `content` property is used to set or override the content of the element. By default, the psuedo-elements created by the `::before` and `::after` pseudo-selectors are empty, and the elements will not be rendered to the page. Setting the `content` property to an empty string `""` will ensure the element is rendered to the page while still being empty.
+`content` property ถูกใช้เพื่อกำหนดหรือเขียนทับ content ของelement
+โยค่าเริ่มต้นแล้ว  psuedo-elements ที่ถูกสร้างโดย `::before` และ `::after` pseudo-selector จะว่างเปล่า
+และ element เหล่านี้จะไม่ถูกแสดงผลที่หน้าเว็บไชต์
+การกำหนดให้ `content` property กลายเป็น string เปล่า `""` จะรับรองได้ว่า element จะถูกแสดงผลในหน้าเว็บไซต์ตอนที่ยังคงว่างเปล่าอยู่
 
-If you would like to experiment, try removing the `background-color` property and setting different values for the `content` property, such as `"♥"`. Remember to undo these changes when you are done so the tests pass.
+ถ้าคุรต้องการที่จะทดลองมัน จงลองเอา`background-color` property ออกแล้วกำหนดค่าที่แตกต่างกันให้ `content` property, ยกตัวอย่างเช่น `"♥"`
+จงอย่าลืมที่จะ undo การเปลี่ยนแปลงนี้เมื่อคุณ test อะไรของคุณเสร็จเรียบร้อยแล้ว
 
 # --hints--
 
-You should have a `.key.black--key::after` selector.
+คุณควรมี 1 `.key.black--key::after` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.key.black--key::after'));

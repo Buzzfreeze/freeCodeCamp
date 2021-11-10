@@ -7,11 +7,13 @@ dashedName: part-21
 
 # --description--
 
-Keeping in mind best-practices for form inputs, give each `input` an appropriate `type` and `name` attribute. Then, give the first `input` a `placeholder` attribute.
+จงจำ best-practices สำหรับ form inputs ให้ขึ้นใจ
+และจงกำหนด `type` and `name` attribute ที่เหมาะสมให้แต่ละ `input` 
+หลังจากนั้น จงใส่ `placeholder` attribute ให้ `input` ตัวแรก
 
 # --hints--
 
-You should give the first `input` a `type` of `text`.
+คุณควรใส่ `type` ของ `text` ใน `input` ตัวแรก
 
 ```js
 assert.equal(document.querySelectorAll('input')?.[0]?.type, 'text');

@@ -7,7 +7,7 @@ dashedName: part-78
 
 # --description--
 
-You can add multiple gradients to an element by separating them with a comma (`,`) like this:
+คุรสามารถเพิ่ม gradient หลาย ๆ อันให้กับ element ๅ อันได้โดยการแยกพวกมันด้วย comma (`,`) แบบนี้:
 
 ```css
 gradient1(
@@ -18,11 +18,13 @@ gradient2(
 );
 ```
 
-Add a `repeating-linear-gradient` to `.fb1c` below the one that's there; use your `--building-color4` from `0%` to `10%` and `--window-color4` from `10%` and `90%`. This will fill in behind the gradient you added last.
+จงเพิ่ม `repeating-linear-gradient` ให้กับ `.fb1c` ด้านล่างของอีกิันที่อยู่ตรงนั้น
+จงกำหนดให้ `--building-color4` มีค่าจาก `0%` เป็น `10%` และให้ `--window-color4` มีค่าเปลี่ยนจาก `10%` เป็น `90%`
+นี่จะเป็นการลงสีด้านหลัง gradient ที่คุณพึ่งเพิ่มเข้าไป
 
 # --hints--
 
-You should not alter the first `repeating-linear-gradient`.
+คุณไม่ควรเปลี่ยน `repeating-linear-gradient` อันแรก
 
 ```js
 assert.match(new __helpers.CSSHelp(document).getStyle(".fb1c")?.getPropVal('background', true), /repeating-linear-gradient\(90deg,var\(--building-color4\)(0%)?,var\(--building-color4\)10%,transparent10%,transparent15%\)/);

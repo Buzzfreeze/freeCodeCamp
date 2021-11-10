@@ -7,11 +7,13 @@ dashedName: part-39
 
 # --description--
 
-Center the `form` element, by giving it a `margin` of `0 auto`. Then, fix its size to a maximum `width` of `500px`, and a minimum width of `300px`. In between that range, allow it to have a `width` of `60vw`.
+จงทำให้ `form` element อยู่ตรงกลางโดยการกำหนด `margin` ที่มีค่า `0 auto`ให้มัน
+หลังจากนั้น จงปรับขนาด `width` สูงสุดไปที่ `500px` และ width ต่ำสุดไปที่ `300px`
+จงทำให้มันมีค่า `width` อยู่ที่ `60vw` ในระหว่างสองค่าด้านบน
 
 # --hints--
 
-You should use a `form` selector to style the `form` element.
+คุณควรใช้ `form` selector เพื่อตกแต่ง `form` element.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('form'));

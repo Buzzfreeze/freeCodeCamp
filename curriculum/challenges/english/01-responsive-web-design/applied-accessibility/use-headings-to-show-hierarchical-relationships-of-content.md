@@ -9,25 +9,32 @@ dashedName: use-headings-to-show-hierarchical-relationships-of-content
 
 # --description--
 
-Headings (`h1` through `h6` elements) are workhorse tags that help provide structure and labeling to your content. Screen readers can be set to read only the headings on a page so the user gets a summary. This means it is important for the heading tags in your markup to have semantic meaning and relate to each other, not be picked merely for their size values.
+Headings (`h1` ถึง `h6` elements) เป็น workhorse tags ที่ช่วยกำหนดโครงสร้างและ labelให้กับเนื้อหาของคุณ
+Screen readers สามารถถูกกำหนดให้อ่านเฉพาะ  headings ในหน้านั้น ๆ เพื่อผู้ใช้จะได้สรุปจากมัน
+นี่หมายความว่า มันสำคัญสำหรับ heading tags ใน markup ของคุณที่จะมีความหมายทางภาษา (Semantic meaning) และเชื่อมโยงซึ่งกับและกัน ไม่ใช้แค่เรื่องของขนาดตัวอักษร
 
-*Semantic meaning* means that the tag you use around content indicates the type of information it contains.
+*Semantic meaning* หมายถึงการที่ tag ที่คุณใช้กับเนื้อหาของคุณบ่งบอกถึงประเภทของข้อมูลที่มันเก็บไว้
 
-If you were writing a paper with an introduction, a body, and a conclusion, it wouldn't make much sense to put the conclusion as a subsection of the body in your outline. It should be its own section. Similarly, the heading tags in a webpage need to go in order and indicate the hierarchical relationships of your content.
+ถ้าคุณกำลังเขียน paper ทพร้อมกับส่วน introduction (บทนำ), body (ส่วนเนื้อหา), และ conclusion (บทสรุป), มันคงไม่ค่อย make sense เท่าไหร่ที่จะใส่บทสรุปในส่วนย่อย ๆ ของส่วนเนื้อหา มันควรจะมีส่วนของมันเอง
+เช่นเดียวกันนี้  heading tags ในเว็บเพจต้องเป็นไปตามลำดับของมันและบ่งบอกลำดับขั้นของความสัมพันธ์ของเนื้อหา 
 
-Headings with equal (or higher) rank start new implied sections, headings with lower rank start subsections of the previous one.
+Headings ที่มีลำดับเท่ากัน (หรือสูงกว่า) จะเริ่ม section ใหม่ของมัน ส่วน headings ที่มีลำดับต่ำกว่าจะสร้าง subsections ไว้ใน heading ก่อนหน้านี้
 
-As an example, a page with an `h2` element followed by several subsections labeled with `h4` tags would confuse a screen reader user. With six choices, it's tempting to use a tag because it looks better in a browser, but you can use CSS to edit the relative sizing.
+ตามตัวอย่าง หน้าหน้าหนึ่งที่มี  `h2` element ที่มี subsection หลาย ๆ อันที่เป็น `h4` tag ตามมา จะทำให้ผุู้ใช้ screen reader สับสน
+มันชวนให้ใช้ tag เดียวกับตัวเลือก 6 อัน เพราะมันดูดีกว่าบน browser แต่คุณสามารถใช้ CSS เพื่อแก้ไขขนาดข้องมันให้ต่างกันได้
 
-One final point, each page should always have one (and only one) `h1` element, which is the main subject of your content. This and the other headings are used in part by search engines to understand the topic of the page.
-
+อีกหนึ่งจุดสุดท้าย ในแต่ละหน้าควรมี `h1` element แค่ 1 อันเสมอ ซึ่งมันจะเป็นหัวเรื่องหลักของเนื้อหาของคุณ
+heading เหล่านี้ถูกใช้ใน search engines เพื่อที่มันจะได้เข้าใจหัวข้อของหน้านั้น ๆ 
 # --instructions--
 
-Camper Cat wants a page on his site dedicated to becoming a ninja. Help him fix the headings so his markup gives semantic meaning to the content, and shows the proper parent-child relationships of his sections. Change all the `h5` tags to the proper heading level to indicate they are subsections of the `h2` ones. Use `h3` tags for the purpose.
+Camper Cat ต้องกาให้หน้า ๆ หนึ่งบนเว็บไซต์ของเขาอุทิศให้กับวิธีการเป็นนินจา 
+จงช่วยเขาแก้ heading เพื่อที่ markup ของเขาจะได้ให้ความหมายทางภาษาแก่เนื้อหา 
+และจงแสดงความสัมพันธ์ระหว่าง parent child ใน sections ของเขาให้ถูกต้อง
+จงเปลี่ยน `h5` tags ทั้งหมดให้มี heading level ที่เหมาะสมเพื่อบ่งบอกว่ามันเป็น subsections ของ`h2` tag จงใช้ `h3` tags เพื่อการนั้น
 
 # --hints--
 
-Your code should have 6 `h3` tags.
+โค้ดของคุณควรมี `h3` tag 6 อัน
 
 ```js
 assert($('h3').length === 6);

@@ -7,13 +7,14 @@ dashedName: part-48
 
 # --description--
 
-Currently, if you type in the `input` or `textarea` elements, you will not be able to see the text. Also, their height is too small to be easy to use.
+ณ ขนะนี้ ถ้าคุณพิมพ์ใน `input` หรือ `textarea` elements, คุณจะไม่เห็นข้อความอะไรเลย
+นอกจากนี้ ความสูงความพวกมันก็ดูจะน้อยเกินไป ทำให้ไม่สะดวกที่จะใช้
 
-Fix this, by setting the `color` to `#ffffff`, and setting their `min-height` to `2em`.
+จงแก้ไขจุดนี้ โดยการกำหนดค่าให้ `color` เป็น `#ffffff` และ `min-height` มีค่า `2em`
 
 # --hints--
 
-You should set the `color` to `#ffffff`.
+คุณควรกำหนดให้ `color` มีค่า `#ffffff`
 
 ```js
 const selFunc = selector => new __helpers.CSSHelp(document).getStyle(selector);

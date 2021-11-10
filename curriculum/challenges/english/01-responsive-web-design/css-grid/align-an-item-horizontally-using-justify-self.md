@@ -9,7 +9,10 @@ dashedName: align-an-item-horizontally-using-justify-self
 
 # --description--
 
-In CSS Grid, the content of each item is located in a box which is referred to as a <dfn>cell</dfn>. You can align the content's position within its cell horizontally using the `justify-self` property on a grid item. By default, this property has a value of `stretch`, which will make the content fill the whole width of the cell. This CSS Grid property accepts other values as well:
+ใน CSS Grid, เนื้อหาสำหรับแต่ละจะอยู่ในกล่องที่ถูกเรียกว่า <dfn>cell</dfn>
+คุณสามารถจัดเรียงตำแหน่งของเนื้อหาภายใน cell ของมันในแนวนอนได้โดยการใช้ `justify-self` property กับ grid item
+โดยค่าเริ่มต้น property นี้มีค่าเป็น `stretch`, โดยจะทำให้เนื้อหากระจายเต็ความกว้างของ cell
+CSS Grid property อันนี้รับค่าอื่นด้วยเช่นกัน:
 
 `start`: aligns the content at the left of the cell,
 
@@ -19,11 +22,11 @@ In CSS Grid, the content of each item is located in a box which is referred to a
 
 # --instructions--
 
-Use the `justify-self` property to center the item with the class `item2`.
+จงใช้ `justify-self` property เพื่อจัดให้ item ที่มีคลาส `item2` อยู่ตรงกลาง
 
 # --hints--
 
-`item2` class should have a `justify-self` property that has the value of `center`.
+`item2` class ควรมี `justify-self` property อันหนึ่งที่มีค่าเป็น `center`
 
 ```js
 assert(

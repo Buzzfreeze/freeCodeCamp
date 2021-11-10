@@ -9,13 +9,15 @@ dashedName: wrap-radio-buttons-in-a-fieldset-element-for-better-accessibility
 
 # --description--
 
-The next form topic covers the accessibility of radio buttons. Each choice is given a `label` with a `for` attribute tying to the `id` of the corresponding item as covered in the last challenge. Since radio buttons often come in a group where the user must choose one, there's a way to semantically show the choices are part of a set.
+ขหัวข้อเกี่ยวกับ form อันถัดไปจะกล่าวถึงเรื่องการเข้าถึงของ radio buttons
+แต่ละตัวเลือกนั้นจะมี `label` 1 อันกับ `for` attribute 1 อันผูกไว้กับ `id` ของ item ที่สัมพันธ์กันอย่างที่ทำพร้อมกับ  challenge ก่อนหน้า
+เนื่องจาก radio buttons  มักมาเป็นกลุ่มที่อนุญาตให้ผู้ใช้เลือกได้แค่ตัวเดียว จึงมีวิธีหนึ่งที่จะช่วยทำให้เห็นว่าตัวเลือกเหล่านี้เป็นเซ็ตเดียวกัน
 
-The `fieldset` tag surrounds the entire grouping of radio buttons to achieve this. It often uses a `legend` tag to provide a description for the grouping, which screen readers read for each choice in the `fieldset` element.
+`fieldset` tag จะต้องครอบกลุ่มของ radio buttons ทั้งหมด
+สิ่งนี้มักใช้ `legend` tag 1 อันเพื่อให้คำอธิบายของกลุ่มตัวเลือกนั้น ซึ่ง screen readers จะอ่านแต่ละตัวเลือกที่อยู่ใน `fieldset` element.
 
-The `fieldset` wrapper and `legend` tag are not necessary when the choices are self-explanatory, like a gender selection. Using a `label` with the `for` attribute for each radio button is sufficient.
-
-Here's an example:
+`fieldset` wrapper และ `legend` tag นั้นไม่จำเป็นเมื่อแต่ละตัวเลือกมันอธิบายตัวมันเองอยู่แล้ว เช่นการเลือเพศ การใช้ `label` กับ`for` attribute ของแต่ละ radio button นั้นก็เพียงพอแล้ว
+นี่คือตัวอย่าง :
 
 ```html
 <form>
@@ -33,11 +35,14 @@ Here's an example:
 
 # --instructions--
 
-Camper Cat wants information about the ninja level of his users when they sign up for his email list. He's added a set of radio buttons and learned from our last lesson to use `label` tags with `for` attributes for each choice. Go Camper Cat! However, his code still needs some help. Change the `div` tag surrounding the radio buttons to a `fieldset` tag, and change the `p` tag inside it to a `legend`.
+Camper Cat ต้องการข้อมูลเกี่ยวกับระดับนินจาของผู้ใช้ของเขาเมื่อพวกเขาเหล่านั้นสมัครเข้าร่วมลิสต์อีเมล
+เขาได้เพิ่มเซ็ตของ radio buttons อันหนึ่งและเรียนรู้จากบทเรียนที่แล้วของเราในการใช้ `label` tags กับ `for` attributes กับแต่ละตัวเลือก 
+อย่างไรก็ตาม โค้ดของเขายังต้องการความช่วยเหลือบางอย่าง
+จงเปลี่ยน `div` tag ที่ล้อมรอบ radio buttons ให้เป็น `fieldset` tag และจงเปลี่ยน `p` tag ข้างในมันให้เป้น `legend`.
 
 # --hints--
 
-Your code should have a `fieldset` tag around the radio button set.
+โค้ดของคุณควรมี `fieldset` tag ล้อมรอบเซ็ตของ radio button 
 
 ```js
 assert($('fieldset').length == 1);

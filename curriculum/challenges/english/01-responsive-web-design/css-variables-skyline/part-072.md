@@ -7,11 +7,11 @@ dashedName: part-72
 
 # --description--
 
-Add the new `window-wrap` class to the `.bb4c` element.
+จงเพิ่ม `window-wrap` class อันใหม่ให้กับ `.bb4c` element
 
 # --hints--
 
-You should add a class of `window-wrap` to `.bb4c`.
+คุณควเพิ่มคลาสใหม่ที่ชื่อ `window-wrap` ให้กับ `.bb4c`.
 
 ```js
 assert.exists(document.querySelector("div.bb4c.window-wrap"));

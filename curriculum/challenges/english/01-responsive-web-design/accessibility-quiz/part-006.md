@@ -7,17 +7,18 @@ dashedName: part-6
 
 # --description--
 
-Navigation is a core part of accessibility, and screen readers rely on you to provide the structure of your page. This is accomplished with semantic HTML elements.
+Navigation เป็นหัวในสำคัฯของการเช้าถึง (accessibility) และ screen readers ก็ต้องการให้คุณกำหนดโครงสร้างใน  page ของคุณ
+โดยสิ่งนี้จะทำงานร่วมกับ semantic HTML elements.
 
-Add a `header` and a `main` element to your page.
+จงเพิ่ม `header` และ `main` element ลงใน page ของคุณ.
 
-The `header` element will be used to introduce the page, as well as provide a navigation menu.
+`header` element จะถูกใช้เพื่อแนะนำ page รวมถึงเป็นที่อยู่อยู่ของ navigation menu.
 
-The `main` element will contain the core content of your page.
+`main` element จะประกอบไปด้วยเนื้อหาหลักของ page ของคุณ
 
 # --hints--
 
-You should add a `header` element to the `body`.
+คุณควรเพิ่ม `header` element อันหนึ่งลงใน `body`.
 
 ```js
 assert.exists(document.querySelector('body > header'));

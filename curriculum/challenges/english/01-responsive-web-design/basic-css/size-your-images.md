@@ -8,9 +8,10 @@ dashedName: size-your-images
 
 # --description--
 
-CSS has a property called `width` that controls an element's width. Just like with fonts, we'll use `px` (pixels) to specify the image's width.
+CSS มี property หนึ่งที่ชื่อ `width` ที่จะควบคุมความกว้างของ element
+เช่นเดียวกับฟ้อนต์ เราใช้ `px` (pixels) เพื่อระบุค่าความกว้างของรูปภาพ
 
-For example, if we wanted to create a CSS class called `larger-image` that gave HTML elements a width of 500 pixels, we'd use:
+ยกตัวอย่างเช่น ถ้าเราต้องการสร้า CSS class ที่ชื่อ `larger-image` ที่จะกำหนดให้ HTML element มีความกว้างเท่ากับ 500 pixels, เราจะเขียนว่า:
 
 ```html
 <style>
@@ -22,11 +23,11 @@ For example, if we wanted to create a CSS class called `larger-image` that gave 
 
 # --instructions--
 
-Create a class called `smaller-image` and use it to resize the image so that it's only 100 pixels wide.
+จงสร้างคลาสที่ชื่อ `smaller-image` และใช้มันเพื่อปรับขนาดของรูปภาพเพื่อที่มันจะได้กว้างแค่ 100 pixel
 
 # --hints--
 
-Your `img` element should have the class `smaller-image`.
+`img` element ควรมี class `smaller-image`.
 
 ```js
 assert(

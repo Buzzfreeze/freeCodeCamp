@@ -7,11 +7,11 @@ dashedName: part-6
 
 # --description--
 
-To let visitors know the cafe was founded in 2020, add a `p` element below the `h1` element with the text `Est. 2020`.
+จงเพิ่ม `p` element ต่อจาก `h1` element พร้อมกับข้อความ `Est. 2020` เพื่อให้ผู้ที่มาเยี่ยมชมรู้ว่าคาเฟ่นี้ถูกสร้างในปี 2020
 
 # --hints--
 
-You should have an opening `<p>` tag.
+คุณควรมีแท็กเปิด `<p>` อันหนึ่ง
 
 ```js
 assert(code.match(/<p>/i));

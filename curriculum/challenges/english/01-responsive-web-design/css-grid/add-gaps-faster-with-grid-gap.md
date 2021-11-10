@@ -9,15 +9,16 @@ dashedName: add-gaps-faster-with-grid-gap
 
 # --description--
 
-`grid-gap` is a shorthand property for `grid-row-gap` and `grid-column-gap` from the previous two challenges that's more convenient to use. If `grid-gap` has one value, it will create a gap between all rows and columns. However, if there are two values, it will use the first one to set the gap between the rows and the second value for the columns.
+`grid-gap` เป็น shorthand property อันหนึ่งสำหรับ `grid-row-gap` และ `grid-column-gap` ที่เราได้ใช้ไปแล้วในสอง challenges ก่อนหน้า โดย `grid-gap` นั้นค่อนข้างที่จะใช้ง่ายกว่า
+ถ้า `grid-gap` มีค่าอยู่ค่าเดียว, มันจะสร้างช่องว่างระหว่างแถวและคอลัมน์ทั้งหมดออกมาขนาดหนึ่ง
+อย่างไรก็ตาม ถ้ามันมี 2 ค่า, มันจะใช้ค่าแรกเป็นระยะห่างระหว่างแถว และอีกค่าเป็นระยะห่างระหว่างคอลัมน์
 
 # --instructions--
 
-Use `grid-gap` to introduce a `10px` gap between the rows and `20px` gap between the columns.
-
+จงใช้ `grid-gap` เพื่อทำให้เกิดช่องว่างระหว่างแถวขนาด `10px` และช่องว่างระหว่างคอลัมน์ขนาด `20px` 
 # --hints--
 
-`container` class should have a `grid-gap` property that introduces a `10px` gap between the rows and a `20px` gap between the columns.
+`container` class ควรมี `grid-gap` property อันหนึ่งที่ทำให้เกิดช่องว่างระหว่างแถวขนาด `10px` และช่องว่างระหว่างคอลัมน์ขนาด `20px` 
 
 ```js
 assert(

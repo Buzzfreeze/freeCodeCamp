@@ -7,11 +7,11 @@ dashedName: part-39
 
 # --description--
 
-Move the `black-character` element into place by setting the `position` to `absolute`, the `top` to `30%`, and the `left` to `59%`.
+จงย้าย `black-character` element ไปยังตำแหน่งใหม่โดยกำหนดให้ `position` เป็น `absolute`, `top` เท่ากับ `30%`, และ `left` เท่ากับ `59%`
 
 # --hints--
 
-Your `#black-character` selector should have a `position` property set to `absolute`.
+`#black-character` selector ควรมี 1 `position` property ที่มีค่าเป็น `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#black-character')?.position === 'absolute');

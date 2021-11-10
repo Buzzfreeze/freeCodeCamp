@@ -7,11 +7,12 @@ dashedName: part-30
 
 # --description--
 
-Nest the `select` element within a `label` element with the text `How did you hear about us?`. The text should come before the `select` element.
+จงใส่ `select` element ไว้ใน `label` element ที่มีข้อความ `How did you hear about us?`
+ข้อความนี้ควรจะมาก่อน `select` element
 
 # --hints--
 
-You should nest only the `select` element within a `label` element.
+คุณควรใส่ `select` element ไว้ใน `label` element.
 
 ```js
 assert.exists(document.querySelector('fieldset:nth-child(3) > label:nth-child(3) > select'));

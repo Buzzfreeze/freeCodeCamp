@@ -9,25 +9,28 @@ dashedName: turn-an-image-into-a-link
 
 # --description--
 
-You can make elements into links by nesting them within an `a` element.
+คุรสามารถทำให้ element กลายเป็นลิงค์ได้โดยการเก็บมันไว้ใน `a` element
 
-Nest your image within an `a` element. Here's an example:
+จงเก็บรูปของคุณไว้ใน `a` element
+นี่คือตัวอย่าง:
 
 ```html
 <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="Three kittens running towards the camera."></a>
 ```
 
-Remember to use `#` as your `a` element's `href` property in order to turn it into a dead link.
+อย่างลืมที่จะใช้ `#` เป็น `href` property ของ `a` element เพื่อที่จะทำให้มันเป็น dead link
 
 # --instructions--
 
-Place the existing image element within an `a` (*anchor*) element.
+จงวาง image element ที่มีไว้ใน `a` (*anchor*) element.
 
-Once you've done this, hover over your image with your cursor. Your cursor's normal pointer should become the link clicking pointer. The photo is now a link.
+เมื่อคืนที่มาเสร็จแล้ว จง hover บนรูปของคุณด้วยลูกศร
+normal pointer ของลูกศรคุณจะกลายเป็น link clicking pointer
+และตอนนี้รูปก็เป็นลิงค์อันหนึ่งแล้ว
 
 # --hints--
 
-The existing `img` element should be nested within an `a` element.
+`img` element อันหนึ่งควรถูกใส่ไว้ใน `a` element.
 
 ```js
 assert($('a').children('img').length > 0);

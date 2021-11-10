@@ -7,11 +7,14 @@ dashedName: part-15
 
 # --description--
 
-To use a variable, put the variable name in parentheses with `var` in front of them like this: `var(--variable-name)`. Add your variable as the value of the `background-color` property of the `.bb1a` class. Whatever value you gave the variable will be applied to whatever property you use it on. In this case, your variable has the value of `#999`. So `#999` will be used as the value for the `background-color` property.
+เพื่อที่จะใช้ตัวแปรตัวหนึ่ง จงใส่ชื่อตัวแปรใน parentheses ที่มี `var`อยู่ข้างหน้าแบบนี้: `var(--variable-name)`
+จงเพิ่มค่าตัวแปรของคุณให้มีค่า `background-color` property เป็นของ `.bb1a` class
+ค่าอะไรก็ตามที่คุณใส่เข้าไปจะถูกนำไปใช้ใน property อะไรก็ตามที่คุณได้มีการใช้ตัวแปรนั้น
+ในกรณีนี้ ตัวแปรของคุณจะมีค่า `#999` ดังนั้น `#999` จะถูกใช้เป็นค่าของ `background-color` property ทุก ๆ อัน
 
 # --hints--
 
-The `background-color` of the `bb1a` element should be set.
+`background-color` ของ `bb1a` element ควรถูกกำหนดไว้
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('.bb1a')?.backgroundColor)

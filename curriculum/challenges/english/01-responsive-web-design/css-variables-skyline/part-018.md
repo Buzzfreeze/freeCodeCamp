@@ -7,11 +7,14 @@ dashedName: part-18
 
 # --description--
 
-Your first building looks pretty good now. Let's make some more! Nest three new `div` elements in the `background-buildings` container and give them the classes of `bb2`, `bb3`, and `bb4` in that order. These will be three more buildings for the background.
+building อันแรกของคุณดูใช้ได้เลยในตอนนี้
+เรามันทำให้มันดูมีอะไรกว่านี้กันเถอะ! 
+จงเก็บ `div` element ใหม่ 3 อันใน `background-buildings` container และจงกำหนดให้พวกมันมี classe `bb2`, `bb3`, และ `bb4` ตามลำดับ
+สามตัวนี้จะเป็น building อีก 3 อันของพื้นหลัง
 
 # --hints--
 
-You should create a `div` with a class of `bb2`.
+คุณควรสร้าง `div` ที่มีคลาส `bb2`.
 
 ```js
 assert.exists(document.querySelector('div.bb2'));

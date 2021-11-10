@@ -9,11 +9,13 @@ dashedName: make-elements-only-visible-to-a-screen-reader-by-using-custom-css
 
 # --description--
 
-Have you noticed that all of the applied accessibility challenges so far haven't used any CSS? This shows the importance of using a logical document outline and semantically meaningful tags around your content before introducing the visual design aspect.
+คุณได้สังเกตหรือเปล่าว่า challenges เกี่ยวกับการใช้งานการเข้าถึงทั้งหมดที่ผ่านมายังไม่มีการใช้ CSS เลย? 
+นี่แสดงให้เห็นว่าความสำคัญของการใช้ outline เอกสารที่ถูกต้องตามหลักโลจิกและแท็กที่มีความหมายกับเนื้อหาของคุณก่อนการกล่าวถึงในมุมมองของการออกแบบการมองเห็น
 
-However, CSS's magic can also improve accessibility on your page when you want to visually hide content meant only for screen readers. This happens when information is in a visual format (like a chart), but screen reader users need an alternative presentation (like a table) to access the data. CSS is used to position the screen reader-only elements off the visual area of the browser window.
-
-Here's an example of the CSS rules that accomplish this:
+อย่างไรก็ตาม เวทมนตร์ของ CSS สามารถช่วยเรื่องการเข้าถึงหน้าต่าง ๆ ของคุIได้ เมื่อคุณต้องการที่จะซ่อนเนื้อหาที่จำเป็นเฉพาะกับ screen reader จากการมองเห็น
+สิ่งนี้เกิดขึ้นเมื่อข้อมูลอยู่ในรูปแบบที่สามารถรับรู้ได้ด้วยสายตา (ยกตัวอย่างเช่น กราฟต่าง ๆ) แต่ผู้ใช้ screen reader ต้องการการแสดงผลแบบอื่น (ยกตัวอย่างเช่น ตาราง) เพื่อเข้าถึงข้อมูล
+CSS ถูกใช้เพื่อจัดวาง element ที่ถูกใช้โดย screen reader เพียงเท่านั้นให้อยู่นอกจากขอบเขตการมองเห็นบนหน้าต่างของ browser 
+นี่คือตัวอย่างของกฎของ CSS ที่ทำให้เกิดสิ่งนี้ :
 
 ```css
 .sr-only {
@@ -26,7 +28,7 @@ Here's an example of the CSS rules that accomplish this:
 }
 ```
 
-**Note:** The following CSS approaches will NOT do the same thing:
+**Note:** การใช้ CSS approaches แบบนี้จะให้ผลคนละแบบ :
 
 <ul>
 <li><code>display: none;</code> or <code>visibility: hidden;</code> hides content for everyone, including screen reader users</li>
@@ -35,11 +37,13 @@ Here's an example of the CSS rules that accomplish this:
 
 # --instructions--
 
-Camper Cat created a really cool stacked bar chart for his training page, and put the data into a table for his visually impaired users. The table already has an `sr-only` class, but the CSS rules aren't filled in yet. Give the `position` an `absolute` value, the `left` a `-10000px` value, and the `width` and `height` both `1px` values.
+Camper Cat ได้สร้างกราฟ stacked bar chart สุดเจ๋งออกมาเพื่อหน้า training ของเข้า, และได้ใส่ข้อมูลเข้าไปในตารางเพื่อให้ผู้ที่มีความผิดปกติทางการมองเห็น
+ตารางนั้นได้มี `sr-only` class อยู่ 1 อันแล้ว, แต่มันยังไม่ได้ทำตามกฎของ CSS อยู่ดี
+จงใส่ค่า `absolute` ให้กับ `position` และกำหนดให้ `left` มีค่า `-10000px` , และให้  `width` และ `height` มีค่า `1px` ทั้งคู่
 
 # --hints--
 
-Your code should set the `position` property of the `sr-only` class to a value of `absolute`.
+โค้ดของคุณควรกำหนดให้ `position` property ของ  `sr-only` class มีค่า `absolute`.
 
 ```js
 assert($('.sr-only').css('position') == 'absolute');

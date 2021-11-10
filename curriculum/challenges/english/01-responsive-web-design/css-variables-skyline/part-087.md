@@ -7,11 +7,13 @@ dashedName: part-87
 
 # --description--
 
-For `.fb2a`, add a `border-bottom` of `10vh solid var(--building-color3)`, and a `border-left` and `border-right` of `1vw solid transparent`. This time the border trick will create a trapezoid shape.
+ที่ `.fb2a`, จงเพิ่ม `border-bottom` ที่มีลักษณะ `10vh solid var(--building-color3)`
+และจงเพิ่ม `border-left` และ `border-right` ที่มีลักษณะ `1vw solid transparent` ให้กับ `.fb2a` เช่นเดียวกัน
+รอบนี้ความหนาของเส้นจะสร้างรูปสี่เหลี่ยมคางหมู
 
 # --hints--
 
-You should give `.fb2a` a `border-bottom` of `10vh solid var(--building-color3)`.
+คุณควรกำหนดให้ `.fb2a` มี `border-bottom` ที่มีลักษณะ `10vh solid var(--building-color3)`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(".fb2a")?.borderBottom.trim(), "10vh solid var(--building-color3)");

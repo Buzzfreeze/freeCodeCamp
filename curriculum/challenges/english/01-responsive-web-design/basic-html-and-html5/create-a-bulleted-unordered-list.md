@@ -9,11 +9,12 @@ dashedName: create-a-bulleted-unordered-list
 
 # --description--
 
-HTML has a special element for creating <dfn>unordered lists</dfn>, or bullet point style lists.
+HTML มี element พิเศษอันหนึ่งไว้สำหรับสร้าง <dfn>unordered lists</dfn>,หรือลิตส์ที่เป็นแบบ bullet point 
 
-Unordered lists start with an opening `<ul>` element, followed by any number of `<li>` elements. Finally, unordered lists close with a `</ul>`.
+Unordered list จะเริ่มด้วยแท็กเปิดที่เป็น `<ul>` element, และตามด้วย`<li>` element จำนวนกี่อันก็ได้
+และสุดท้ายก็จะปิดด้วยแท็กปิด `</ul>`
 
-For example:
+ยกตัวอยางเช่น:
 
 ```html
 <ul>
@@ -22,15 +23,15 @@ For example:
 </ul>
 ```
 
-would create a bullet point style list of `milk` and `cheese`.
+โค้ดข้างบนจะสร้างลิสต์แบบ bullet point ให้กับชุดข้อความ `milk` และ `cheese`
 
 # --instructions--
 
-Remove the last two `p` elements and create an unordered list of three things that cats love at the bottom of the page.
+จงเอา `p` element 2 อันสุดท้ายออกไปและจงสร้าง unordered list ของของสามาอย่างที่แมวชอบที่ด้านล่างของหน้าเว็บไซต์
 
 # --hints--
 
-Create a `ul` element.
+จงสร้าง `ul` element อันหนึ่ง
 
 ```js
 assert($('ul').length > 0);

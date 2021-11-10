@@ -7,11 +7,11 @@ dashedName: part-8
 
 # --description--
 
-Give the `back-wall` element a `width` of `100%` and a `height` of `60%`.
+จงกำหนดให้ `back-wall` element มี `width` ขนาด `100%` และ `height` ขนาด `60%`
 
 # --hints--
 
-You should set the `width` of the `#back-wall` selector to `100%`.
+คุณควรกำหนดให้`width` ของ `#back-wall` selector มีค่าเป็น `100%`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#back-wall')?.width === '100%');

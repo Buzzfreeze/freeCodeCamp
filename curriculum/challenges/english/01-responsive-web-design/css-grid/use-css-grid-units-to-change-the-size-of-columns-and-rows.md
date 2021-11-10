@@ -9,7 +9,8 @@ dashedName: use-css-grid-units-to-change-the-size-of-columns-and-rows
 
 # --description--
 
-You can use absolute and relative units like `px` and `em` in CSS Grid to define the size of rows and columns. You can use these as well:
+คุณสามารถใช้หน่วย absolute และ relative เช่น `px` and `em` ใน CSS Grid เพื่อกำหนดขนาดของแถวและคอลัมน์
+คุณสามารถใช้ได้แบบนี้:
 
 `fr`: sets the column or row to a fraction of the available space,
 
@@ -17,21 +18,25 @@ You can use absolute and relative units like `px` and `em` in CSS Grid to define
 
 `%`: adjusts the column or row to the percent width of its container.
 
-Here's the code that generates the output in the preview:
+นี่คือโค้ดที่สร้างผลลัพท์ในหน้า preview:
 
 ```css
 grid-template-columns: auto 50px 10% 2fr 1fr;
 ```
 
-This snippet creates five columns. The first column is as wide as its content, the second column is 50px, the third column is 10% of its container, and for the last two columns; the remaining space is divided into three sections, two are allocated for the fourth column, and one for the fifth.
+snippet อันนี้จะสร้างคอลัมน์ 5 อัน
+คอลัมน์แรกให้กว้างเท่ากับ content,
+คอลัมน์ที่สองกว้าง 50px, 
+คอลัมน์ที่สามกว้าง 10% ของ container ของมัน รวมถึงสองอันที่เหลือด้วย
+ส่วนคอลัมน์ที่สี่หรือห้าจะให้พื้นที่ที่เหลือ โดยมันถูกแบบ่งเป็นสามส่วน สองส่วนแรกให้คอลัมย์ที่สี่ และอีกส่วนให้คอลัมน์ที่ห้า
 
 # --instructions--
 
-Make a grid with three columns whose widths are as follows: 1fr, 100px, and 2fr.
+จงสร้างกริดที่มี 3 คอลัมน์โดยแต่ละอันมีความกว้างตามลำดับดังนี้: 1fr, 100px, and 2fr.
 
 # --hints--
 
-`container` class should have a `grid-template-columns` property that has three columns with the following widths: `1fr, 100px, and 2fr`.
+`container` class ควรมี `grid-template-columns` property อันหนึ่งที่มี 3 คอลัมน์โดยแต่ละอันมีความกว้างดังนี้: `1fr, 100px, and 2fr`.
 
 ```js
 assert(

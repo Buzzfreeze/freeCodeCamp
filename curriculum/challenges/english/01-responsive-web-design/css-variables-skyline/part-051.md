@@ -7,7 +7,7 @@ dashedName: part-51
 
 # --description--
 
-You can make an instant color change in a gradient by giving the transition zero space like this:
+คุณสามารถทำให้สีสีหนึ่งเป็นเปลี่ยน gradient แบบทันทีได้โดยการเพิ่ม transition zero space แบบนี้:
 
 ```css
 gradient-type(
@@ -18,11 +18,12 @@ gradient-type(
 );
 ```
 
-Here, the top half of the element will be `color1` and the bottom half will be `color2`. Add a `linear-gradient` to `.bb2b` that uses `--building-color2` from `0%` to `6%` and `--window-color2` from `6%` to `9%`.
+ตามที่เห็นด้านบน ครึ่งบนของ element จะเป็นสี `color1` และครึ่งล่างจะเป็นสี `color2`
+จงเพิ่ม `linear-gradient` ให้กับ `.bb2b` ที่ใช้  `--building-color2` ตั้งแต่ `0%` ถึง `6%` และ`--window-color2` ตั้งแต่ `6%` ถึง `9%`.
 
 # --hints--
 
-You should give `.bb2b` a `background` property.
+คุณควรกำหนดให้ `.bb2b` มี `background` property.
 
 ```js
 assert.isNotEmpty(new __helpers.CSSHelp(document).getStyle(`.bb2b`)?.background);

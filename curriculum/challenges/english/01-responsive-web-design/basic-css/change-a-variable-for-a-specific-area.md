@@ -9,17 +9,17 @@ dashedName: change-a-variable-for-a-specific-area
 
 # --description--
 
-When you create your variables in `:root` they will set the value of that variable for the whole page.
+เมื่อคุณสร้างตัวแปรของคุณเองใน `:root` พวกมันจะกำหนดค่าของตัวแปรตัวนั้นที่อยู่ในหน้านี้ทั้งหมด
 
-You can then over-write these variables by setting them again within a specific element.
+คุณสามารถเขียนตัวแปรพวกนี้ทับได้โดยการกำหนดค่าให้มันอีกครั้งที่ element ที่คุณกำหนด
 
 # --instructions--
 
-Change the value of `--penguin-belly` to `white` in the `penguin` class.
+จงเปลี่ยนค่าของ `--penguin-belly` ให้เป็น `white` ใน `penguin` class.
 
 # --hints--
 
-The `penguin` class should reassign the `--penguin-belly` variable to `white`.
+`penguin` class ควรจำกำหนดค่าใหม่ให้ตัวแปร `--penguin-belly` เป็น `white`
 
 ```js
 assert(

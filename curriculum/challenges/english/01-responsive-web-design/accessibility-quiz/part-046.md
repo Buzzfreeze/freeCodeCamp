@@ -7,13 +7,14 @@ dashedName: part-46
 
 # --description--
 
-To make the navigation buttons look more like typical buttons, remove the underline from the anchor tags.
+เพื่อที่ปุ่ม navigation จะได้ดูเหมือนกับปุ่มทั่ว ๆ ไป
+จงลบ underline ที่เกิดจาก anchor tags
 
-Then, create a new selector targetting the navigation list elements so that when the cursor hovers over them, the background color and text color are switched, and the cursor becomes a pointer.
+หลังจากนั้น จงสร้าง selector ที่ชี้ไปที่ navigation list elements ขึ้นมาใหม่ เพื่อที่สีพื้นหลังและสีข้อความจะได้สลับสีกันและ cursor กลายเป็น pointer เวลาโดน cursor มา hover 
 
 # --hints--
 
-You should use the existing `li > a` selector to set the `text-decoration` to `none`.
+คุณควรใช้`li > a` selector ที่มีเพื่อกำหนด `text-decoration` ให้เท่ากับ`none`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('li > a')?.textDecoration, 'none');

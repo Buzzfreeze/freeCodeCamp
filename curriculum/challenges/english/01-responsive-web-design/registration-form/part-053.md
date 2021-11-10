@@ -7,11 +7,11 @@ dashedName: part-53
 
 # --description--
 
-To make the submit button appear more distinct, give it a `background-color` of `#3b3b4f`, and a `border-color` of `white`.
+จงกำหนดให้ในส่วน `background-color` และ `border-color` ของปุ่ม summit มีค่า `#3b3b4f`และ `white` ตามลำดับเพื่อให้มันดูเด่นชัดขึ้น
 
 # --hints--
 
-You should give the submit button a `background-color` of `#3b3b4f`.
+คุณควรกำหนดให้ `background-color` ของปุ่ม summit มีค่า `#3b3b4f`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('input[type="submit"]')?.backgroundColor, 'rgb(59, 59, 79)');

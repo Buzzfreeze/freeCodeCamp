@@ -7,13 +7,15 @@ dashedName: part-64
 
 # --description--
 
-Notice that everything you've added to the page so far is inside the `body` element. All page content elements that should be rendered to the page go inside the `body` element. However, other important information goes inside the `head` element.
+จงสังเกตว่า ทุกอย่างที่คุณได้ใส่เข้าไปให้กับหน้าเว็บหน้านี้ อยู่ใน `body` element
+content element ทุกหมดในหน้านี้จะถูกแสดงผลในหน้าจอก็ต่อเมื่ออยู่ใน `body` element
+อย่างไรก็ตาม ข้อมูลที่สำคัญอื่น ๆ จะไปอยู่ใน `head` element.
 
-Add a `head` element just above the `body` element.
+จงเพิ่ม `head` element ที่ด้านบนของ `body` element.
 
 # --hints--
 
-You have either deleted the `body` element or it is missing an opening tag or closing tag.
+ถ้าหาไม่เจอ คุณอาจจะเผลอลบ `body` element ไปหรือมันขาดแท็กเปิดหรือปิด
 
 ```js
 assert(document.querySelector('body') && code.match(/<\/body>/));

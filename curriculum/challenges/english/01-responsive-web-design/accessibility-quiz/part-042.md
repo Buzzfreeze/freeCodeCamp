@@ -7,7 +7,7 @@ dashedName: part-42
 
 # --description--
 
-Within the `address` element, add the following:
+จงเพิ่มข้อความต่อไปนี้ใน `address` element:
 
 ```html
 freeCodeCamp<br />
@@ -16,11 +16,11 @@ California<br />
 USA
 ```
 
-You can visit, but you might not find anything...
+คุณควรเข้าไปดูแต่อาจจะไม่เห็นอะไรเลย
 
 # --hints--
 
-You should add the above text including the `<br />` tags to the `address` element.
+คุณควรเพิ่มข้อความข้างบนรวมถึง `<br />` tags ใน `address` element.
 
 ```js
 assert.equal(document.querySelector('address')?.innerText, 'freeCodeCamp\nSan Francisco\nCalifornia\nUSA');

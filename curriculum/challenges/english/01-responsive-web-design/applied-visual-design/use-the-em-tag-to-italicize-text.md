@@ -9,15 +9,16 @@ dashedName: use-the-em-tag-to-italicize-text
 
 # --description--
 
-To emphasize text, you can use the `em` tag. This displays text as italicized, as the browser applies the CSS of `font-style: italic;` to the element.
+เพื่อที่จะได้เน้นข้อความ คุณสามารถใช้ `em` tag
+คำสั่งนี้จะแสดงข้อความเป็นตัวเอียงเมื่อ browser ได้ใช้ CSS นี้ `font-style: italic;` กับ element
 
 # --instructions--
 
-Wrap an `em` tag around the contents of the paragraph tag to give it emphasis.
+จงใส่ `em` tag รอบ content ของ paragraph tag เพื่อเน้นมัน
 
 # --hints--
 
-Your code should add an `em` tag to the markup.
+คุณควรเพิ่ม `em` tag ให้กับ the markup.
 
 ```js
 assert($('em').length == 1);

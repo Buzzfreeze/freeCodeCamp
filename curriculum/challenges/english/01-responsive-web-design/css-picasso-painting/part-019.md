@@ -7,11 +7,12 @@ dashedName: part-19
 
 # --description--
 
-That does not look quite right. Set a `border-width` of `0 120px 140px 180px` to size the hat properly.
+นั่นดูไม่ค่อยดีเท่าไร่
+จงกำหนดให้ `border-width` มีค่าเป็น `0 120px 140px 180px` เพื่อทำให้ขนาดของหมวกดูเหมาะสม
 
 # --hints--
 
-Your `#white-hat` selector should have a `border-width` property set to `0 120px 140px 180px`.
+`#white-hat` selector ควรมี 1 `border-width` property ที่มีค่า `0 120px 140px 180px`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#white-hat')?.borderWidth === '0px 120px 140px 180px');

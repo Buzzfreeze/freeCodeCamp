@@ -7,11 +7,11 @@ dashedName: part-27
 
 # --description--
 
-Set the `z-index` to `1`.
+จงกำหนดให้ `z-index` เท่ากับ `1`
 
 # --hints--
 
-Your `#gray-instrument` selector should have a `z-index` property set to `1`.
+`#gray-instrument` selector ควรมี `z-index` property เท่ากับ `1`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#gray-instrument')?.zIndex === '1');

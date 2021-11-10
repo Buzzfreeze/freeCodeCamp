@@ -7,11 +7,13 @@ dashedName: part-58
 
 # --description--
 
-Finally, on the `border-bottom` property of `.bb2a`, change the `1vw` to `5vh` and change the `#000` color to your `--building-color2` variable. There you go, now it looks good! At any time throughout this project, you can comment out or remove the `border` property you added to everything at the beginning to see what the buildings will look like when that gets removed at the end.
+สุดท้ายนี้ จงเปลี่ยน `1vw` เป็น `5vh` และ `#000` เป้นตัวแปร`--building-color2` ของคุณที่ `border-bottom` property ของ `.bb2a`
+และแล้วมันก็ออกมาดูดี! 
+ระหว่างที่ทำโปรเจคนี้ คุณสามารถคอมเมนต์หรือลบ `border` property ที่คุณเพิ่มเข้าไปให้กับทุกอย่างในตอนแรกออกได้ เพื่อที่จะได้เห็นว่า building มันจะมีหน้าตาออกมาเป็นอย่างไรในตอนสุดท้าย
 
 # --hints--
 
-You should change `border-bottom` to use `5vh`.
+คุณควรเปลี่ยนให้ `border-bottom` มีค่า `5vh`
 
 ```js
 assert.include(new __helpers.CSSHelp(document).getStyle(".bb2a")?.borderBottom, "5vh");

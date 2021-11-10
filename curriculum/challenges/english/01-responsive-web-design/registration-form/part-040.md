@@ -7,13 +7,15 @@ dashedName: part-40
 
 # --description--
 
-During development, it is useful to see the `fieldset` default borders. However, they make the content appear too separated.
+ระหว่างการพัฒนา การมองเห็น `fieldset` default borders ได้ถือว่ามีประโยชน์
+อย่างไรก็ตาม มันทำให้เนื้อหาที่ปรากฏดูห่างกันเกินไป
 
-Remove the `border`, and add `2rem` of padding only to the top and bottom of each `fieldset`. Be sure to remove the `padding` from the left and right.
+จงลบ `border` และเพิ่ม padding ขนาด `2rem` เฉพาะที่ด้านบนและล่างของแต่ละ `fieldset`
+จงอย่าลืมที่จะลบ `padding` ออกจากด้านว้ายและขวา
 
 # --hints--
 
-You can use either a value of `none` or `0` to remove the `border`.
+คุณควรใช้ค่า `none` or `0` เพื่อลบ `border`
 
 ```js
 assert.match(new __helpers.CSSHelp(document).getStyle('fieldset')?.border, /(none)|(0px)/);

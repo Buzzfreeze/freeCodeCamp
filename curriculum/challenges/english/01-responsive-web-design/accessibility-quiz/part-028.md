@@ -7,13 +7,14 @@ dashedName: part-28
 
 # --description--
 
-Give each `fieldset` an adaquate `name` attribute. Then, give both unordered lists a `class` of `answers-list`.
-
-Finally, add use the `legend` to caption the content of the `fieldset`, by placing a true/false question as the text content.
+จงกำหนด `name` attribute ให้ `fieldset` แต่ละอัน
+หลังจากนั้น จงเพิ่ม `answers-list`class ให้ unordered lists ทั้ง 2 อัน
+สุดท้าย จงใช้  `legend` เพื่ออธิบายเนื้อหาของ `fieldset` โดยการใส่คำถาม true/false เป็นเนื้อหาที่เป็นข้อความ
 
 # --hints--
 
-You should give the first `fieldset` an adaquate `name` attribute. _Hint: I would use `html-question-one`_
+คุณควรเพิ่ม `name` attribute ที่`fieldset` อันแรก 
+_Hint: อาจลองใช้ `html-question-one`_
 
 ```js
 assert.notEmpty(document.querySelectorAll('fieldset')?.[0]?.name);

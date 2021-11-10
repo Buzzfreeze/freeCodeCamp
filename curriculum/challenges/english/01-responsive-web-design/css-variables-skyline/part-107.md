@@ -7,11 +7,14 @@ dashedName: part-107
 
 # --description--
 
-Finally! You made it to the last building! Add a repeating gradient to it with a `90deg` direction. Use the building color from `0%` to `10%` and `transparent` from `10%` to `30%`.
+สุดท้ายแล้ว! 
+คุณได้ทำมาจนถึงตึกสุดท้ายแล้ว! 
+จงเพิ่มAdd repeating gradient ให้กับมันโดยกำหนดให้มีทิศเป็น `90deg` 
+จงสร้าง gradient จากสีของตึกโดยไล่ตั้งแต่ `0%` จนถึง `10%` และให้ `transparent` ตั้งแต่ `10%` จนถึง `30%`
 
 # --hints--
 
-You should add a `repeating-linear-gradient` to `.fb6` in the `background` property.
+คุณควรเพิ่ม `repeating-linear-gradient` อันหนึ่งให้กับ `.fb6` ใน `background` property.
 
 ```js
 assert.include(new __helpers.CSSHelp(document).getStyle(".fb6")?.background, "repeating-linear-gradient");

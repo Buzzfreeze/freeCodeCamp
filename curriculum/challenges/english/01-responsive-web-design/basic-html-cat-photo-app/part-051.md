@@ -7,11 +7,11 @@ dashedName: part-51
 
 # --description--
 
-Next, you are going to add some new form `input` elements, so add another `fieldset` element directly below the current `fieldset` element.
+ถัดไป คุณกำลังจะเพิ่ม `input` elements แบบใหม่, ดังนั้นจงเพิ่ม `fieldset` element อีกอันต่อจาก `fieldset` element อันล่าสุด
 
 # --hints--
 
-Your new `fieldset` element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+`fieldset` element ควรมีแท็กเปิดโดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(document.querySelectorAll('fieldset').length >= 2);

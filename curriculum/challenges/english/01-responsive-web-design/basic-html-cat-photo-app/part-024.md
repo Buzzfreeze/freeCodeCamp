@@ -7,11 +7,11 @@ dashedName: part-24
 
 # --description--
 
-Emphasize the word `love` in the `figcaption` element by wrapping it in an emphasis (`em`) element.
+จงเน้นคำว่า `love` ใน `figcaption` element โดยการใส่มันไว้ใน emphasis (`em`) element.
 
 # --hints--
 
-Your emphasis (`em`) element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+emphasis (`em`) element ควรมีแท็กเปิดโดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(document.querySelector('em'));

@@ -7,11 +7,11 @@ dashedName: part-91
 
 # --description--
 
-Add your `building-wrap` class to the `.fb3` element to center the sections.
+จงเพิ่ม `building-wrap` class ให้กับ `.fb3` element เพื่อที่จะทำให้ section เหล่านี้อยู่ตรงกลาง
 
 # --hints--
 
-You should add the class `building-wrap` to `.fb3`.
+คุณควรเพิ่มคลาสที่ชื่อ `building-wrap` ให้กับ `.fb3`
 
 ```js
 assert.exists(document.querySelector("div.fb3.building-wrap"));

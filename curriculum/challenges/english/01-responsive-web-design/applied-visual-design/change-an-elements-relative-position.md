@@ -9,9 +9,14 @@ dashedName: change-an-elements-relative-position
 
 # --description--
 
-CSS treats each HTML element as its own box, which is usually referred to as the <dfn>CSS Box Model</dfn>. Block-level items automatically start on a new line (think headings, paragraphs, and divs) while inline items sit within surrounding content (like images or spans). The default layout of elements in this way is called the <dfn>normal flow</dfn> of a document, but CSS offers the position property to override it.
+CSS จะทำเหมือนกับ HTML element แต่ละตัวเป็นกล่อง ๆ หนึ่ง ซึ่งปกติแล้วเราจะเรียกมันว่า <dfn>CSS Box Model</dfn>
+Block-level items จะขึ้นบรรทัดใหม่โดยอัติโนมัติ (คิดถึง headings, paragraphs, และ divs) ในขณะที่ inline items จะอยู่ระหว่าง content ที่ล้อมรอบมัน (เช่น images หรือ spans)
+layout เริ่มต้นของ element ในรูปแบบนี้จะเรียกว่า <dfn>normal flow</dfn> ของ document, แต่ CSS ได้มีการใช้ position property เพื่อเขียนทับมัน
 
-When the position of an element is set to `relative`, it allows you to specify how CSS should move it *relative* to its current position in the normal flow of the page. It pairs with the CSS offset properties of `left` or `right`, and `top` or `bottom`. These say how many pixels, percentages, or ems to move the item *away* from where it is normally positioned. The following example moves the paragraph 10 pixels away from the bottom:
+เมื่อตำแหน่งของ element ถูกำหนดให้เป็น `relative`, มันจะทำให้คุณสามารถระบุวิธีที่ CSS ควรจะย้ายมันโดย *relative* กับตำแหน่งปัจจุบนของมันใน normal flow ของหน้าเว็บ
+มันทำงานคู่กับ CSS offset properties ขแง `left` หรือ `right`, และ `top` หรือ `bottom`
+พวกมันจะบอกจำนวน pixels, percentages, หรือ ems เพื่อที่จะย้าย item ออกจากตำแหน่งที่มันเคยถูกวางไว้
+ตัวอย่างต่อไปนี้เป็นการย้ายพารากราฟไปออกจาก 10 pixel จากด้านล่างของตำแหน่งเดิม:
 
 ```css
 p {
@@ -20,17 +25,21 @@ p {
 }
 ```
 
-Changing an element's position to relative does not remove it from the normal flow - other elements around it still behave as if that item were in its default position.
+การเปลี่ยนจำแหน่งของ element ไปเป็น relative ไม่ได้ย้ายมันออกจาก normal flow - element อื่นที่อยู่รอบ ๆ มันยังคงมีพฤติกรรมเหมือนกับตอนที่ item นั้นยังอยู่ที่ตำแหน่งเดิมของมัน
 
-**Note:** Positioning gives you a lot of flexibility and power over the visual layout of a page. It's good to remember that no matter the position of elements, the underlying HTML markup should be organized and make sense when read from top to bottom. This is how users with visual impairments (who rely on assistive devices like screen readers) access your content.
+**Note:** การจัดตำแหน่งทำให้คุณมีความยืดหยุ่นและอำนาจที่จะจัดการกับ visual layout ของหน้าเว็บ
+มันดีที่จะจำไว้ว่าไม่ว่า element จะอยู่ตรงไหน, HTML markup ที่ทำให้มันเป็นแบบนั้นควรจะเป็นระเบียบและ make sense เมื่ออ่านจากบนลงล่าง
+สิ่งนี้คือวิธีที่ผู้พิการทางการมองเห็นเข้าถึง content ของคุณ
 
 # --instructions--
 
-Change the `position` of the `h2` to `relative`, and use a CSS offset to move it 15 pixels away from the `top` of where it sits in the normal flow. Notice there is no impact on the positions of the surrounding h1 and p elements.
+จงเปลี่ยน `position` ของ `h2` ให้เป็น `relative`
+และจงใช้ CSS offset เพื่อย้ายมันไป 15 pixel จากด้านบนของตำแหน่งเดิมของมัน
+สังเกตว่ามันไม่กระทบกับตำแหน่งของ h1 และ p element ที่อยู่รอบ ๆ มัน
 
 # --hints--
 
-The `h2` element should have a `position` property set to `relative`.
+`h2` element ควรมี `position` property อันหนึ่งที่กำหนดค่าให้เป็น `relative`
 
 ```js
 assert($('h2').css('position') == 'relative');

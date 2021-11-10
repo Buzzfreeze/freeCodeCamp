@@ -7,7 +7,7 @@ dashedName: part-24
 
 # --description--
 
-Within each corresponding `label` element, and immediately after the `input` element, add a space and add the following text:
+ภายในแต่ละ `label` element ที่สัมพันธ์กัน ต่อจาก `input` element จงเพิ่ม space 1 ช่องและข้อความดังต่อไปนี้:
 
 ```md
 Personal Account
@@ -17,7 +17,7 @@ I accept the terms and conditions
 
 # --hints--
 
-You should give the first `label` the text `Personal Account`.
+คุรควรใส่ข้อความ `Personal Account` ใน`label` อันแรก
 
 ```js
 assert.include(document.querySelector('fieldset:nth-child(2) > label')?.innerText, 'Personal Account');

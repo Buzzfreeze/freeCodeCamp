@@ -7,11 +7,11 @@ dashedName: part-93
 
 # --description--
 
-Give the `.fb3-window` elements a `width` of `25%`, a `height` of `80%`, and use your `--window-color1` variable as the `background-color` value.
+จงกำหนดให้ `.fb3-window` elements มี `width` เท่ากับ `25%`, `height` เท่ากับ `80%`, และจงใช้ตัวแปร `--window-color1` เป็นค่าของ `background-color`
 
 # --hints--
 
-You should give `.fb3-window` a `width` of `25%`.
+คุณควรกำหนดให้ `.fb3-window` มี `width` เท่ากับ `25%`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(".fb3-window")?.width, "25%");

@@ -7,11 +7,12 @@ dashedName: part-13
 
 # --description--
 
-Create four `div` elements inside your `offwhite-character` element. Give those `div` elements the following `id` values, in order: `white-hat`, `black-mask`, `gray-instrument`, `tan-table`.
+จงสร้าง 4 `div` elements ภายใน `offwhite-character` element
+จงกำหนดให้ `div` elements มีค่า `id` ตามลำดับตังนี้: `white-hat`, `black-mask`, `gray-instrument`, `tan-table`.
 
 # --hints--
 
-You should add four `div` elements within your `.offwhite-character` element.
+คุณควรเพิ่ม 4 `div` elements ภายใน `.offwhite-character` element.
 
 ```js
 assert(document.querySelectorAll('#offwhite-character div').length === 4);

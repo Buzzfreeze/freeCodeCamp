@@ -7,11 +7,12 @@ dashedName: part-60
 
 # --description--
 
-Remove the default styling for the list items of `.answers-list`, and remove the unordered list padding.
+จงลบ styling ตั้งต้นสำหรับ list items ของ `.answers-list`
+และจงลบ padding ของ list ที่ไม่ได้ถูกจัดลำดับไว้
 
 # --hints--
 
-You should use the `.answers-list` selector.
+ึคุณควรใช้ `.answers-list` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('.answers-list'));

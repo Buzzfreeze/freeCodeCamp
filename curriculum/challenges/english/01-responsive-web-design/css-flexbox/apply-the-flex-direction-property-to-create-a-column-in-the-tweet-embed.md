@@ -9,15 +9,16 @@ dashedName: apply-the-flex-direction-property-to-create-a-column-in-the-tweet-em
 
 # --description--
 
-The tweet embed `header` and `footer` used the `flex-direction` property earlier with a row value. Similarly, the items inside the `.profile-name` element would work well stacked as a column.
+tweet embed `header` และ `footer` ได้ใช้ `flex-direction` property แบบ row. เช่นเดียวกันนี้ items ที่อยู่ด้านใน `.profile-name` element ก็เรียงเก็บชั้น ๆ อย่างดีเป็น column อันหนึ่ง
 
 # --instructions--
 
-Add the CSS property `flex-direction` to the header's `.profile-name` element and set the value to `column`.
+จงเพิ่ม CSS property `flex-direction` ให้กับ header's `.profile-name` element อะจงกำหนดให้มันมีค่าเป็น `column`
 
 # --hints--
 
-Your `.follow-btn` should be rendered on the page. Be sure to turn off any extensions such as ad blockers.
+`.follow-btn` ของคุณควรถูกแสดงผลออกมาใช้หน้าเว็บไซต์
+จงเช็คให้มั่นใจว่าคุณได้ปิด extension ต่าง ๆ อย่างเช่น ตัวปิดกั้นโฆษณาไปแล้ว
 
 ```js
 assert($('.follow-btn').length > 0 && $('.follow-btn').css('display') !== 'none');

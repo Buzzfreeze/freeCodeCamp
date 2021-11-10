@@ -7,13 +7,15 @@ dashedName: part-45
 
 # --description--
 
-The `id` attribute is used to identify specific HTML elements. Each `id` attribute's value must be unique all other `id` values for the entire page.
+`id` attribute ถูกใช้เพื่อระบุ HTML elements
+แต่ละค่าของ `id` attribut จะต้องแตกต่างจาก`id` value ที่เหลือในหน้านั้น 
 
-Add an `id` attribute with the value `indoor` to the radio button. When elements have multiple attributes, the order of the attributes doesn't matter.
+จงเพิ่ม `id` attribute ที่มีค่าเป็น `indoor` ให้กับ radio button
+เมื่อ element มีหลาย attributes, ลำดับของ attributes จะไม่มีผลอะไร
 
 # --hints--
 
-Your radio button should still be located between the opening and closing tags of the `label` element.
+radio button ควรจะอยู่หว่างแท็กเปิดและแท็กปิดของ `label` element.
 
 ```js
 const labelChildNodes = [...$('form > label')[0].childNodes];

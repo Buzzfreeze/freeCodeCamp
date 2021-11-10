@@ -7,13 +7,13 @@ dashedName: part-43
 
 # --description--
 
-For the second `fieldset`, you want the `input` and `label` text to appear on the same line.
+สำหรับ `fieldset` อันที่สอง, คุณต้องการให้ข้อความ `input` และ `label` ปรากฏอยู่ในบรรทัดเดียวกัน
 
-Start, by giving the `input` elements in the second `fieldset` a class of `inline`.
+จงเริ่มโดยการกำหนดให้ `input` elements ใน `fieldset` อันที่สองให้มี `inline` class อันหนึ่ง
 
 # --hints--
 
-You should give the first `input` a class of `inline`.
+คุณควรกำหนดให้ `input`อันแรกมี `inline` อันหนึ่ง
 
 ```js
 assert(document.querySelectorAll('fieldset:nth-child(2) input')?.[0]?.classList?.contains('inline'));

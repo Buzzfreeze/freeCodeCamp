@@ -7,13 +7,13 @@ dashedName: part-43
 
 # --description--
 
-The `border-radius` property accepts up to four values to round the round the top-left, top-right, bottom-right, and bottom-left corners.
+`border-radius` property จะรับค่า 4 ค่าเพื่อทำให้มุมบนซ้าย บนขวา ล่างซ้าย และล่างขวาดูมนขึ้น
 
-Round the top-left corner of `.three` by 30 pixels, the top-right by 25 pixels, the bottom-right by 60 pixels, and bottom-left by 12 pixels.
+จงทำให้มุมบนซ้ายของ `.three` ดูมันขึ้นอีก 30 pixel, มุมขวาบนดูมันขึ้นอีก 25 pixel, มุมล่างขวาดูมนขึ้น 60 pixel, และมุมล่างซ้ายดูมนขึ้น 12 pixel
 
 # --hints--
 
-You should set the `border-radius` property to `30px 25px 60px 12px`.
+คุรควรกำหนดให้ `border-radius` property มีค่าเป็น `30px 25px 60px 12px`
 
 ```js
 const hasBorderRadius = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style['border-radius'] === '30px 25px 60px 12px');

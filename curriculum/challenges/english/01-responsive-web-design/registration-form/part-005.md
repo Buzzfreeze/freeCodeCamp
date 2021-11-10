@@ -7,11 +7,11 @@ dashedName: part-5
 
 # --description--
 
-Within the `body`, provide a heading context for the content, by adding an `h1` with the text `Registration Form`.
+ภายใน `body`, จงเพิ่มเนื้อหาให้กับ heading โดยการใส่ `h1` ที่มีข้อความ `Registration Form`.
 
 # --hints--
 
-You should add the `h1` within the `body`.
+คุณควรเพิ่ม `h1` ภายใน `body`
 
 ```js
 assert.exists(document.querySelector('body > h1'));

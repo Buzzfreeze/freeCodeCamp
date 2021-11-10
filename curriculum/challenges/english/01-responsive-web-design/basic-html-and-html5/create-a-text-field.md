@@ -9,25 +9,25 @@ dashedName: create-a-text-field
 
 # --description--
 
-Now let's create a web form.
+ถึงตอนนี้ มาวร้างแบบฟอร์มให้กับเว็บเรากันเถอะ
 
-`input` elements are a convenient way to get input from your user.
+`input` element เป็นวิธีที่สะดวกมาก ๆ สำหรับรับข้อมูลมาจากผู้ใช้ของคุณ
 
-You can create a text input like this:
+คุณสามารถสร้าง text input แบบนี้:
 
 ```html
 <input type="text">
 ```
 
-Note that `input` elements are self-closing.
+จำไว้ว่า `input` elements เป็น self-closing.
 
 # --instructions--
 
-Create an `input` element of type `text` below your lists.
+จงสร้าง `input` element ประเภท `text` ต่อจากลิสต์ของคุณ
 
 # --hints--
 
-Your app should have an `input` element of type `text`.
+แอปของคุณควรมี `input` element ประเภท `text`
 
 ```js
 assert($('input[type=text]').length > 0);

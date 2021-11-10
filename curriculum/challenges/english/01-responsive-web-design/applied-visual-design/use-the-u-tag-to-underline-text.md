@@ -9,17 +9,20 @@ dashedName: use-the-u-tag-to-underline-text
 
 # --description--
 
-To underline text, you can use the `u` tag. This is often used to signify that a section of text is important, or something to remember. With the `u` tag, the browser applies the CSS of `text-decoration: underline;` to the element.
+เพื่อที่จะขีดเส้นใต้ข้อความ คุณสามารถใช้ `u` tag
+แท็กนี้มักใช้เพื่อแสดงให้เห็นว่าข้อความส่วนนั้นมีความสำคัญ
+เมื่อใช้ `u` tag browser จะใช้ CSS ที่เขียนว่า `text-decoration: underline;` กับ element.
 
 # --instructions--
 
-Wrap the `u` tag only around the text `Ph.D. students`.
+จงคลุม `u` tag ที่ข้อความ `Ph.D. students` เท่านั้น
 
-**Note:** Try to avoid using the `u` tag when it could be confused for a link. Anchor tags also have a default underlined formatting.
+**Note:** พยายามไม่ใช้ `u` tag หากมันสามารถทำให้เกิดความสับสนระหว่างมันกับลิงค์ได้
+Anchor tags ก็มีค่าเริ่มต้นเป็น underlined formatting
 
 # --hints--
 
-Your code should add a `u` tag to the markup.
+Yโค้ดของคุณควรเพิ่ม `u` tag ให้กับ markup
 
 ```js
 assert($('u').length === 1);

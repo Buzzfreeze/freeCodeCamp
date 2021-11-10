@@ -7,11 +7,12 @@ dashedName: part-31
 
 # --description--
 
-Use an id selector to style your `tan-table` element. Give it a `width` of `450px`, a `height` of `140px`, and a `background-color` of `#D2691E`.
+จงใช้  id selector อันหนึ่งเพื่อตกแต่ง`tan-table` element
+จงกำหนดให้มันมี `width` เท่ากับ `450px`, `height` เท่ากับ `140px`, และ`background-color` เป็น `#D2691E`
 
 # --hints--
 
-You should have a `#tan-table` selector.
+คุณควรมี `#tan-table` selector อันหนึ่ง
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#tan-table'));

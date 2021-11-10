@@ -7,11 +7,12 @@ dashedName: part-5
 
 # --description--
 
-Within your `.keys` element, add seven `div` elements. Give them all the class `key`.
+จงเพิ่ม7 `div` element ภายใน `.keys` element
+จงกำหนดให้พวกมันทั้งหมดมีคลาสที่ชื่อ `key`
 
 # --hints--
 
-You should create seven new `div` elements.
+คุณควรสร้าง `div` elements อันใหม่ 7 อัน
 
 ```js
 const divDivDiv = document.querySelectorAll('div');

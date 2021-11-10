@@ -7,11 +7,11 @@ dashedName: part-62
 
 # --description--
 
-Nest a `p` element with the text `No Copyright - freeCodeCamp.org` within the `footer` element.
+จงเก็บ `p` element ที่มีข้อความว่า `No Copyright - freeCodeCamp.org` ไว้ใน `footer` element.
 
 # --hints--
 
-You have either deleted the `footer` element or it is missing an opening tag or closing tag."
+ถ้าหาไม่เจอ คุณอาจจะเผลอลบ `footer` element ไปหรือมันขาดแท็กเปิดหรือปิด
 
 ```js
 assert(document.querySelector('footer') && code.match(/<\/footer>/));

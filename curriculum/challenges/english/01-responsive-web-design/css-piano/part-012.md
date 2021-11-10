@@ -7,11 +7,11 @@ dashedName: part-12
 
 # --description--
 
-Set the `margin` of the `#piano` to `80px auto`.
+จงกำหนดให้ `margin` ของ `#piano` มีค่าเป็น `80px auto`
 
 # --hints--
 
-Your `#piano` selector should have the `margin` property set to `80px auto`.
+`#piano` selector ควรมี `margin` property ที่มีค่าเป็น `80px auto`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#piano')?.margin === '80px auto');

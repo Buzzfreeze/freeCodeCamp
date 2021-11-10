@@ -7,11 +7,12 @@ dashedName: part-23
 
 # --description--
 
-Add another `div` with a `class` value of `two` just below your `one` element. This will be your second rectangle.
+จงเพิ่ม `div` อีกอันที่มี `class` เป็น `two` ที่ด้านล่างของ `one` element
+สิ่งนี้จะเป็นสี่เหลี่ยมอันที่สองของคุณ
 
 # --hints--
 
-You should not change the existing `.one` element.
+คุณไม่ควรเปลี่ยนอะไรของ `.one` element 
 
 ```js
 assert(document.querySelectorAll('.one').length === 1);

@@ -7,7 +7,8 @@ dashedName: part-31
 
 # --description--
 
-The dropdown options are currently empty. To give them content, add the following text to each subsequent `option` element:
+ตัวเลือก dropdown ยังคงว่างอยู่
+เพื่อที่ตะเพิ่มเนื้อหาให้กับมัน จงเพิ่มข้อความต่อไปนี้ในแต่ละ `option` element ย่อย ๆ:
 
 ```md
 (select one)
@@ -19,7 +20,7 @@ Other
 
 # --hints--
 
-You should give the first `option` element the text `(select one)`.
+คุณควรเพิ่มข้อความ `(select one)` ที่ `option` element 
 
 ```js
 assert.equal(document.querySelectorAll('fieldset:nth-child(3) > label:nth-child(3) option')?.[0]?.textContent, '(select one)');

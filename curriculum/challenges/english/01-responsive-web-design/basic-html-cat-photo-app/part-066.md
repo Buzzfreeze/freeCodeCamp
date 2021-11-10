@@ -7,13 +7,14 @@ dashedName: part-66
 
 # --description--
 
-Notice that the entire contents of the page are nested within an `html` element. All other elements must be descendants of this `html` element.
+จงสังเกตว่า  content ทั้งหมดของหน้าเว็บไซต์จะถูกเก็บไว้ใน `html` element
+element ที่เหลือจะต้องเป็นลูกหลานของ`html` element อันนี้
 
-Add the `lang` attribute with the value `en` to the opening `html` tag to specify that the language of the page is English.
+จงเพิ่ม `lang` attribute ที่มีค่าเป็น `en` ที่แท็กเปิดชอง  `html` เพื่อว่าว่าหน้าเว็บหน้านี้จะใช้ภาษาอังกฤษ
 
 # --hints--
 
-You have either deleted the `html` element or it is missing an opening tag or closing tag.
+ถ้าหาไม่เจอ คุณอาจจะเผลอลบ `html` element ไปหรือมันขาดแท็กเปิดหรือปิด
 
 ```js
 assert(code.match(/\<html.*?\>/) && code.match(/\<\/html\>/));

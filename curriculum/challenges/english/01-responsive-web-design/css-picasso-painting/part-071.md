@@ -7,11 +7,12 @@ dashedName: part-71
 
 # --description--
 
-Target your `triangles` element with an `id` selector. Set the `width` to `250px` and the `height` to `550px`.
+จงชี้ไปที่ `triangles` element ด้วย `id` selector อันหนึ่ง
+จงกำหนดให้ `width` มีค่า `250px` และ `height` มีค่า `550px`
 
 # --hints--
 
-You should add a `#triangles` selector.
+คุณควรเพิ่ม `#triangles` selector มาอันหนึ่ง
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#triangles'));

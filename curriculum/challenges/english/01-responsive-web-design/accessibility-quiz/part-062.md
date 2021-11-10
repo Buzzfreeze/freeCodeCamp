@@ -7,11 +7,12 @@ dashedName: part-62
 
 # --description--
 
-Set the `footer` background color to `#2a2a40`, and use _Flexbox_ to horizontally center the text.
+จงกำหนดให้สีพื้นหลังของ `footer` มีค่า `#2a2a40`
+และจงใช้  _Flexbox_ เพื่อทำให้ข้อความอยู่ที่ตรงกลางในแนวนอน
 
 # --hints--
 
-You should use the `footer` element selector.
+คุณควรใช้ `footer` element selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('footer'));

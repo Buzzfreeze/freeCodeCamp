@@ -9,29 +9,32 @@ dashedName: say-hello-to-html-elements
 
 # --description--
 
-Welcome to freeCodeCamp's HTML coding challenges. These will walk you through web development step-by-step.
+ยินดีต้องรับเข้าสู่ HTML coding challenge ของ freeCodeCamp
+นีจะพาคุณไปรู้จักกับการสร้างเว็บไซต์ทีละขั้น ๆ
 
-First, you'll start by building a simple web page using HTML. You can edit code in your code editor, which is embedded into this web page.
+เริ่มแรก คุณกำลังจะสร้างหน้าเว็บไซต์ง่าย ๆ ด้วย HTML
+คุณสามารถแก้ไขโค้ดของคุณที่ code editor ซึ่งได้ถูกฝังไว้ในหน้าเว็บนี้แล้ว
 
-Do you see the code in your code editor that says `<h1>Hello</h1>`? That's an HTML element.
+คุณเห็นโค้ดของคุณตรง code editor ที่เขียนว่า `<h1>Hello</h1>` หรือเปล่า? นั่นคือ HTML element อันหนึ่ง
 
-Most HTML elements have an opening tag and a closing tag.
+HTML element ส่วนมากจะมีแท็กเปิดและแท็กปิด
 
-Opening tags look like this:
+แท็กเปิดจะเป็นอย่างนี้:
 
 ```html
 <h1>
 ```
 
-Closing tags look like this:
+แท็กปิดจะเป็นอย่างนี้:
 
 ```html
 </h1>
 ```
 
-The only difference between opening and closing tags is the forward slash after the opening bracket of a closing tag.
+ความแตกต่างเดียวของแท็กเปิดและแท็กปิดคือ / ที่อยู่หลังจาก opening bracket ของแท็กปิด
 
-Each challenge has tests you can run at any time by clicking the "Run tests" button. When you pass all tests, you'll be prompted to submit your solution and go to the next coding challenge.
+แต่ละ challenge จะมีตัว test ที่คุณสามารถรันได้ตลอดเวลาโดยการคลิกที่ปุ่ม "Run tests" 
+เมื่อคุณทำ test ทุกอันผ่านแล้ว คุณก็พร้อมที่จะส่ง solution ของคุณและไปที่ coding challenge อันถัดไป
 
 # --instructions--
 

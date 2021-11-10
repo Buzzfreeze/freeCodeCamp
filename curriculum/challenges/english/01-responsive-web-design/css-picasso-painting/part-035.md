@@ -7,11 +7,11 @@ dashedName: part-35
 
 # --description--
 
-Within your new `black-character` element, add three `div` elements with the following `id` values, in order: `black-hat`, `gray-mask`, `white-paper`.
+ภายใน `black-character` element อันใหม่, จงเพิ่ม 3 `div` elements ทีมีค่า `id` ตามลำดับดังนี้: `black-hat`, `gray-mask`, `white-paper`
 
 # --hints--
 
-You should have three `div` elements within your `#black-character` element.
+คุณควรมี 3 `div` elements อยู่ใน `#black-character` element.
 
 ```js
 assert(document.querySelectorAll('#black-character > div')?.length === 3);

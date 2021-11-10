@@ -8,46 +8,50 @@ dashedName: build-a-product-landing-page
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/RKRbwL>.
+**Objective:** จงสร้างแอปพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานคล้ายแอปพลิเคชั่นนี้: <https://codepen.io/freeCodeCamp/full/RKRbwL>.
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story) and get all of the tests to pass. Give it your own personal style.
+จงทำตามการหลัก [user stories](https://en.wikipedia.org/wiki/User_story) และทดสอบให้ผ่านทุกเทส
+จงทำตามสไตล์ของคุณเอง
 
-You can use HTML, JavaScript, and CSS to complete this project. Plain CSS is recommended because that is what the lessons have covered so far and you should get some practice with plain CSS. You can use Bootstrap or SASS if you choose. Additional technologies (just for example jQuery, React, Angular, or Vue) are not recommended for this project, and using them is at your own risk. Other projects will give you a chance to work with different technology stacks like React. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
+คุณสามารถใช้ HTML, JavaScript, และ CSS เพื่อทำโปรเจคนี้
+Plain CSS นั้นเป็นที่แนะนำเพราะมันคือสิ่งที่บทเรียนของเราได้กล่าวถึงมันไปหมดแล้วและคุณควรจะฝึกทักษะการใช้ plain CSS
+คุณสามารถใช้ Bootstrap หรือ SASS ได้ถ้าคุณอยากใช้
+เทคโนโลยีอื่น ๆ (อย่างเช่น jQuery, React, Angular, หรือ Vue) นั้นยังไม่แนะนำสำหรับโปรเจคนี้ โดยหากคุณจะใช้มันก็เป็นความเสี่ยงของคุณเอง
+โปรเจคอื่น ๆ หลังจากนี้จะเปิดโอกาสให้คุณได้ลองใช้เทคโนโลยีอื่น ๆ เช่น React อย่างแน่นอน
+เราพร้อมจะยอมรับและปรับปรุงปัญหาต่าง ๆ ที่เกิดขึ้นจากการใช้เทคโนโลยีที่ถูกแนะนำในโปรเจคนี้ Happy coding!
 
-**User Story #1:** My product landing page should have a `header` element with a corresponding `id="header"`.
+**User Story #1:** landing page ของผลิตภัณฑ์ของฉันควรมี  `header` element 1 อันที่มี `id="header"`
 
-**User Story #2:** I can see an image within the `header` element with a corresponding `id="header-img"`. A company logo would make a good image here.
+**User Story #2:** ฮันสามารถมองเห็นรูปภาพที่อยู่ใน `header` element ที่มี `id="header-img"` โลโก้ของปริษัทเป็นตัวเลือกที่ดีสำหรับภาพนี้
 
-**User Story #3:** Within the `#header` element I can see a `nav` element with a corresponding `id="nav-bar"`.
+**User Story #3:** ภายใน  `#header` element, ฉันสามารถมองเห็น `nav` element 1 อันที่มี `id="nav-bar"`.
 
-**User Story #4:** I can see at least three clickable elements inside the `nav` element, each with the class `nav-link`.
+**User Story #4:** ฉันสามารถเห็น elements ที่ถูกคลิกได้อย่างน้อย 3 อันภายใน  `nav` element โดยแต่ละอันมีคลาสเป็น `nav-link`
 
-**User Story #5:** When I click a `.nav-link` button in the `nav` element, I am taken to the corresponding section of the landing page.
+**User Story #5:** เมื่อฉันคลิกที่ปุ่ม `.nav-link` ที่อยู่ใน `nav` element, ฉันจะถูกพาไปที่ section ที่สัมพันธ์กับมันฝนหน้า landing page
 
-**User Story #6:** I can watch an embedded product video with `id="video"`.
+**User Story #6:** ฉันสามารถดูวิดีโอของผลิตภัณฑ์ที่ถูกฝังที่มี `id="video"`
 
-**User Story #7:** My landing page has a `form` element with a corresponding `id="form"`.
+**User Story #7:** หน้า landing page ของฉันมี `form` element 1 อันที่มี  `id="form"`.
 
-**User Story #8:** Within the form, there is an `input` field with `id="email"` where I can enter an email address.
+**User Story #8:** ภายในฟอร์มนั้น, มีช่อง `input` 1 อันที่มี `id="email"` ซึ่งเป็นที่ที่ฉันสามารถใส่อีเมลของฉันได้
 
-**User Story #9:** The `#email` input field should have placeholder text to let the user know what the field is for.
+**User Story #9:** ช่องใส่ `#email` input ควรมี placeholder text เพื่อช่วยให้ผู้ใช้รู้ว่าช่องนี้มีไว้ทำอะไร
 
-**User Story #10:** The `#email` input field uses HTML5 validation to confirm that the entered text is an email address.
+**User Story #10:** ช่องใช่`#email` input ควรใช้ HTML5 validation เพื่อเช็คว่าตัวอักษรที่ใส่เข้ามาคืออีเมล
 
-**User Story #11:** Within the form, there is a submit `input` with a corresponding `id="submit"`.
+**User Story #11:** ภายในฟอร์มนั้น, มี submit `input` 1 อันที่มี `id="submit"`.
 
-**User Story #12:** When I click the `#submit` element, the email is submitted to a static page (use this mock URL: <https://www.freecodecamp.com/email-submit>).
+**User Story #12:** เมื่อฉันคลิก `#submit` element, อีเมลจะถูกส่งไป static page หน้าหนึ่ง (จงใช้ mock URL อันนี้ : <https://www.freecodecamp.com/email-submit>).
 
-**User Story #13:** The navbar should always be at the top of the viewport.
+**User Story #13:** navbar ควรจะอยู่ข้างบนของ viewport เสมอ
 
-**User Story #14:** My product landing page should have at least one media query.
+**User Story #14:** หน้า landing page ของผลิตภัณ์ฉันควรมี  media query อย่างน้อย 1 อัน
 
-**User Story #15:** My product landing page should utilize CSS flexbox at least once.
+**User Story #15:** หน้า landing page ของผลิตภัณ์ฉันควรใช้ CSS flexbox อย่างน้อย 1 ที่ 
+คุณสามารถสร้างโปรเจคของคุณได้โดย <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> และกดคลิก `Save` เพื่อสร้าง pen ของคุณเอง หรือว่าคุณจะใช้ CDN link อันนี้เพื่อ run test ใน environment ที่คุณชอบก็ได้เช่นกัน: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
 
-You can build your project by <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> and clicking `Save` to create your own pen. Or you can use this CDN link to run the tests in any environment you like: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
-
-Once you're done, submit the URL to your working project with all its tests passing.
-
+เมื่อคุณทำทุกอย่างเสร็จแล้ว จงส่ง URL ที่พาไปยังโปรเจคของคุณพร้อมกับ test ที่ผ่านทั้งหมด 
 # --solutions--
 
 ```html

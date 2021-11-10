@@ -8,9 +8,10 @@ dashedName: use-the-value-attribute-with-radio-buttons-and-checkboxes
 
 # --description--
 
-When a form gets submitted, the data is sent to the server and includes entries for the options selected. Inputs of type `radio` and `checkbox` report their values from the `value` attribute.
+เมื่อแบบฟอร์มถูกส่งไปแล้ว ข้อมูลจะถูกส่งไปที่ server และรวม entries ให้กับตัวเลือกที่ถูกเลือกไป
+Inputs ประเภท `radio` และ `checkbox` จะรายงานค่าของมันตาม `value` attribute.
 
-For example:
+ยกตัวอย่างเช่น:
 
 ```html
 <label for="indoor">
@@ -21,17 +22,22 @@ For example:
 </label>
 ```
 
-Here, you have two `radio` inputs. When the user submits the form with the `indoor` option selected, the form data will include the line: `indoor-outdoor=indoor`. This is from the `name` and `value` attributes of the "indoor" input.
+ตุณจะมี 2 `radio` inputs
+เมื่อผู้ใช้ส่งแบบฟอร์มที่ตัวเลือก `indoor` option ถูกเลือก, ข้อมูลจากแบบฟอร์มจะมีการเพิ่มบรรทัดที่เขียนว่า: `indoor-outdoor=indoor`
+โดยนี่มาจาก `name` และ `value` attributes ของ "indoor" input
 
-If you omit the `value` attribute, the submitted form data uses the default value, which is `on`. In this scenario, if the user clicked the "indoor" option and submitted the form, the resulting form data would be `indoor-outdoor=on`, which is not useful. So the `value` attribute needs to be set to something to identify the option.
+ถ้าคุณเอา `value` attribute ออกไป ข้อมูลของแบบฟอร์มที่ถูกส่งมาจะใช้ค่าเริ่มต้น ซึ่งเป็น `on`
+ในกรณีนี้ ถ้าผู้ใช้คลิกที่ตัวเลือก "indoor" และส่งแบบฟอร์มนั้น ผลของข้อมูลจากแบบฟอร์มจะเป็น `indoor-outdoor=on` ซึ่งมันไม่มีประโยชน์อะไร
+ดังนั้น `value` attribute จำเป็นจะต้องถูกตั้งเป็นค่าหนึ่งไว้เพื่อระบุว่าตัวเลือกนั้นคืออะไร
 
 # --instructions--
 
-Give each of the existing `radio` and `checkbox` inputs the `value` attribute. Do not create any new radio or checkbox elements. Use the input label text, in lowercase, as the value for the attribute.
+จงกำหนดให้แต่ละ `radio` และ `checkbox` inputs มี `value` attribute
+ห้ามสร้าง radio หรือ checkbox element ขึ้นมาใหม่ จงใช้ input label text ที่เป็นตัวพิมพ์เล็กเป็นค่าของ attribute
 
 # --hints--
 
-One of your radio buttons should have the `value` attribute of `indoor`.
+หนึ่งใน radio button ของคุณควรมี `value` attribute เป็น `indoor`.
 
 ```js
 assert(

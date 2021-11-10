@@ -9,15 +9,18 @@ dashedName: use-the-align-items-property-in-the-tweet-embed
 
 # --description--
 
-The last challenge introduced the `align-items` property and gave an example. This property can be applied to a few tweet embed elements to align the flex items inside them.
+challenge ที่แล้วได้มีการเกริ่นถึง `align-items` property และก็ได้แสดงตัวอย่างให้ดู
+property นี้สามารถใช้ได้กับ tweet embed element บางตัวเพื่อจัด flex items ให้เรียงเป็นเส้นตรงภายในพวกมัน
 
 # --instructions--
 
-Add the CSS property `align-items` to the header's `.follow-btn` element. Set the value to `center`.
+จงเพิ่ม CSS property `align-items` ให้กับ `.follow-btn` element ของ header
+จงกำหนดให้มันมีค่า `center`
 
 # --hints--
 
-Your `.follow-btn` should be rendered on the page. Be sure to turn off any extensions such as ad blockers.
+`.follow-btn` ควรถูกแสดงผลในหน้าเว้บไซต์ 
+จงเช็คให้มั่นใจว่าคุณได้ปิด extension ต่าง ๆ เช่น ตัวปิดกั้นโฆษณา ไปแล้ว
 
 ```js
 assert($('.follow-btn').length > 0 && $('.follow-btn').css('display') !== 'none');

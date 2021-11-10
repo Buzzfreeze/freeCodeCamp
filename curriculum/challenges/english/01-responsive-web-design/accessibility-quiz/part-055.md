@@ -7,11 +7,13 @@ dashedName: part-55
 
 # --description--
 
-Target all `label` elements within `.info` elements, and set their `width` to `10%`, and make it so they do not take up less than `55px`.
+จงหา `label` elements ทั้งหมดใน `.info` elements 
+และจงกำหนดให้ `width` ของพวกมันมีค่า `10%`
+และจงทำให้ค่า `width` ไม่มีทางต่ำกว่า `55px`
 
 # --hints--
 
-You should use either the `.info label` or `.info > label` selector.
+คุณควรใช้ `.info label` หรือ `.info > label` selector.
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);

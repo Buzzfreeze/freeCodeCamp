@@ -7,11 +7,11 @@ dashedName: part-19
 
 # --description--
 
-After the `h3` element with the `Things cats love:` text, add an unordered list (`ul`) element. Note that nothing will be displayed at this point.
-
+ต่อจาก `h3` element ที่มีข้อความเขียนว่า `Things cats love:`  จงเพิ่ม unordered list (`ul`) element อันหนึ่ง 
+จำไว้ว่ามันจะยังไ่มีอะไรแสดง ณ จุด ๆ นี้
 # --hints--
 
-Your `ul` element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+`ul` element ควรมีแท็กเปิดโดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(document.querySelector('ul'));

@@ -7,11 +7,11 @@ dashedName: part-33
 
 # --description--
 
-Center the `.three` element on the canvas by setting its `margin` to `auto`.
+จงทำให้ `.three` element อยู่ตรงกลางของผ้าใบโดยการกำหนดให้ `margin` ของมันมีค่า `auto`
 
 # --hints--
 
-You should set the `margin` property to `auto`.
+คุณควรกำหนดให้ `margin` property มีค่า `auto`
 
 ```js
 const marginFilter = new __helpers.CSSHelp(document).getCSSRules().filter(x => x.style.margin === 'auto');

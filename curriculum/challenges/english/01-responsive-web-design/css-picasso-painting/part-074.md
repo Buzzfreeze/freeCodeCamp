@@ -7,11 +7,13 @@ dashedName: part-74
 
 # --description--
 
-Give your `triangle` elements the correct color. Set the `border-top-color`, `border-bottom-color`, and `border-left-color` to `transparent`. Set the `border-right-color` to `Gold`.
+จงกำหนดให้ `triangle` elements มีสีที่เหมาะสม
+จงกำหนดให้ `border-top-color`, `border-bottom-color`, และ`border-left-color` เป็นแบบ `transparent`
+จงกำหนดให้ `border-right-color` เท่ากับ `Gold`
 
 # --hints--
 
-Your `.triangle` selector should have a `border-top-color` property set to `transparent`.
+`.triangle` selector ควรมี `border-top-color` property อันหนึ่งซึ่งมีค่าเป็ฯ `transparent`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.triangle')?.borderTopColor === 'transparent');

@@ -7,16 +7,18 @@ dashedName: part-16
 
 # --description--
 
-Specifying the `type` attribute of a form element is important for the browser to know what kind of data it should expect. If the `type` is not specified, the browser will default to `text`.
+การระบุ `type` attribute ให้กับ form element นั้นเป็นสิ่งสำคัญเพื่อที่ browser จะได้รู้ว่าข้อมูลประเภทไหนที่มันต้องการ
+ถ้า `type` ไม่ได้ถูกระบุไว้, browser จะตั้งค่าให้ค่าเริ่มต้นเป็น `text`
 
-Give the first two `input` elements a `type` attribute of `text`, the third a `type` attribute of `email`, and the fourth a `type` attribute of `password`.
+จงใส่ `type` attribute ที่มีค่าเป็น `text` ใน `input` elements 2 อันแรก
+ให้ `type` attribute อันที่ 3 เป็น `email` และ `type` attribute อันที่ 4 เป็น `password`
 
-The `email` type only allows emails with a `@` and a `.` in the domain.
-The `password` type obscures the input, and warns if the site does not use HTTPS.
+`email` type จะอนุญาตให้สามารถใส่ input ที่มี `@` และ `.` ได้เท่านั้น
+`password` type จะตรวจสอบ input และแจ้งเตือนขึ้นมาหากเว็บไซต์ไม่ได้ใช้ HTTPS
 
 # --hints--
 
-You should give the first `input` element a `type` attribute of `text`.
+คุณควรเพิ่ม `type` attribute ที่เป็น `text` อันหนึ่งให้กับ `input` element
 
 ```js
 assert.equal(document.querySelector('input')?.type, 'text');

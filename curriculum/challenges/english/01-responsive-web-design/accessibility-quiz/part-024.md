@@ -7,11 +7,11 @@ dashedName: part-24
 
 # --description--
 
-Within the `span` element, add the text `(Date of Birth)`.
+จงเพิ่มข้อความ `(Date of Birth)` ลงใน `span` element
 
 # --hints--
 
-You should give the `span` element the text `(Date of Birth)`.
+คุณควรใส่ข้อความ `(Date of Birth)` ลงใน`span` element 
 
 ```js
 assert.equal(document.querySelector('.info:nth-of-type(3) > label > span')?.textContent, '(Date of Birth)');

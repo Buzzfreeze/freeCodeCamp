@@ -9,11 +9,12 @@ dashedName: style-multiple-elements-with-a-css-class
 
 # --description--
 
-Classes allow you to use the same CSS styles on multiple HTML elements. You can see this by applying your `red-text` class to the first `p` element.
+Class ทำให้คุณสามารถใช้ CSS style อันเดียวกันกับ HTML element หลาย ๆ อันได้
+คุณสามารถเห็นมันได้โดยการใส่ `red-text` class ให้กับ `p` element อันแรก
 
 # --hints--
 
-Your `h2` element should be red.
+`h2` element ควรมีสีแดง
 
 ```js
 assert($('h2').css('color') === 'rgb(255, 0, 0)');

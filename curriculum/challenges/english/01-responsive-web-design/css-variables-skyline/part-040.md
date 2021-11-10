@@ -7,7 +7,8 @@ dashedName: part-40
 
 # --description--
 
-Gradients in CSS are a way to transition between colors across the distance of an element. They are applied to the `background` property and the syntax looks like this:
+Gradient ใน CSS เป็นทางหนึ่งที่จะเปลี่ยนสีโดยให้ระยะห่างของ element
+พวกมันจะถูกเพิ่มให้กับ `background` property และมี syntaxหน้าตาแบบนี้:
 
 ```css
 gradient-type(
@@ -16,11 +17,13 @@ gradient-type(
 );
 ```
 
-In the example, `color1` is solid at the top, `color2` is solid at the bottom, and in between it transitions evenly from one to the next. In `.bb1a`, add a gradient of type `linear-gradient` to the `background` property with `--building-color1` as the first color and `--window-color1` as the second.
+ในตัวอย่างนั้น `color1` จะเป็นสีที่ด้านบน ส่วน `color2` เป้นสีที่ด้านล่าง
+และมันจะค่อยๆ เปลี่ยนไปเป็นอีกสีหนึ่งระหว่างนั้น
+ใน `.bb1a`, จงเพิ่ม gradient ประเภท `linear-gradient` ให้กับ `background` property โดยกำหนดสีแรกเป็น `--building-color1` และ `--window-color1` เป็นสีที่สอง
 
 # --hints--
 
-You should apply a `background` to `.bb1a`.
+คุณควรเพิ่ม `background` ให้กับ `.bb1a`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.bb1a')?.background);

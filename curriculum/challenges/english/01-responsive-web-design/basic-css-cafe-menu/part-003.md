@@ -7,13 +7,14 @@ dashedName: part-3
 
 # --description--
 
-The `title` is one of several elements that provide extra information not visible on the web page, but could be useful for search engines or how the page gets displayed.
+`title` เป้นหนึ่งในหลาย ๆ element ที่จะให้ข้อมูลเพิ่มเติมที่ไม่สามารถมองเห็นได้ในหน้าเว็บ แต่มีประโยชน์ต่อ search engines หรือวิธีที่หน้าเว็บเพจนี้จะถูกแสดง
 
-Inside the `head` element, nest a `meta` element with an attribute named `charset` set to the value `utf-8` to tell the browser how to encode characters for the page. Note that `meta` elements are self-closing.
+ภายใน `head` element, จงเก็บ `meta` element ที่มาพร้อมกับ attribute ชื่อ `charset` ซึ่งถูกกำหนดค่าให้เป็น `utf-8` เพื่อบอกกับ browser ถึงวิธีที่ใช้ในการ encode ตัวอักษร 
+จงไว้ว่า `meta` elements เป็น self-closing
 
 # --hints--
 
-You should have a `meta` tag.
+คุณควรมี 1 `meta` tag.
 
 ```js
 assert(code.match(/<meta\s.*>/i));

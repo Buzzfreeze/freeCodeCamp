@@ -7,11 +7,11 @@ dashedName: part-4
 
 # --description--
 
-To prepare to create some actual content, add a `body` element below the `head` element.
+จงเพิ่ม `body` element ต่อจาก `head` element เพื่อที่จะเตรียมพร้อมสำหรับการสร้าง content จริง ๆ บางอย่าง 
 
 # --hints--
 
-You should have an opening `<body>` tag.
+คุณควรมีแท็กเปิด `<body>` 1 อัน
 
 ```js
 assert(code.match(/<body>/i));

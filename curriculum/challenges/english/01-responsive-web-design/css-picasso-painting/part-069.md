@@ -7,11 +7,11 @@ dashedName: part-69
 
 # --description--
 
-Now move the `eyes-div` into position with `position` set to `absolute`, `top` set to `-40px`, and `left` set to `20px`.
+ในตอนนี้ จงย้าย `eyes-div` ไปอยู่ในตำแหน่งที่เหมาะสมด้วยการกำหรดให้ `position` sเท่ากับ `absolute`, `top` เท่ากับ `-40px`, และ `left` เท่ากับ `20px`
 
 # --hints--
 
-Your `#eyes-div` selector should have a `position` property set to `absolute`.
+`#eyes-div` selector ควมี `position` property ที่มีค่าเป็น `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#eyes-div')?.position === 'absolute');

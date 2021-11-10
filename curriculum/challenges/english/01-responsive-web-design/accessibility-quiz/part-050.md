@@ -7,13 +7,14 @@ dashedName: part-50
 
 # --description--
 
-Set the width of the `section` elements to `80%` of their parent container. Then, use margins to center the `section` elements, adding `10px` to the bottom margin.
+จงกำหนดความกว้างของ `section` elements ให้อยู่ที่ `80%` ของ parent container ของมัน
+หลังจากนั้น จงใช้ margins เพื่อจัดให้ `section` elements อยู่ตรงกลางและจงเพิ่ม `10px` ให้กับ bottom margin.
 
-Also, ensure the `section` elements cannot be larger than `600px` in width.
+นอกจากนี้ จงตรวจสอบให้มั่นใจว่า `section` elements ไม่สามารถมีขนาดกว้างเกิน `600px` 
 
 # --hints--
 
-You should use a `section` selector.
+คุณควรใช้ `section` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('section'));

@@ -7,11 +7,14 @@ dashedName: part-40
 
 # --description--
 
-To prevent a user from submitting your form when required information is missing, you need to add the `required` attribute to an `input` element. There's no need to set a value to the `required` attribute. Instead, just add the word `required` to the `input` element, making sure there is space between it and other attributes.
+เพื่อป้องกันไม่ให้ผู้ใช้ส่งแบบฟอร์มที่ยังไม่ได้กรอกข้อมูลที่จำเป็นมา คุณต้องเพิ่ม `required` attribute ให้กับ `input` element นั้น
+มันไม่มีความจำเป็นที่จะกำหนดค่าหรือใส่ค่าใด ๆ ให้กับ  `required` attribute
+คุณเพียงต้องเพิ่มคำว่า `required` ให้กับ `input` element โดยเช็คให้มั่นใจว่ามันมีช่องว่างระหว่างมันกับ attributes อื่นแล้ว
 
 # --hints--
 
-You have either deleted your `input` element or it has invalid syntax. All attributes' values should be surrounded by quotation marks.
+ถ้าคุณหามันไม่เจอ คุณอาจะเผลอลบ `input` element หรือเขียนคำสั่งของมันได้ไม่ถูกต้อง
+ถ้าคุณทำการเพิ่ม attributes, จงเช็คให้มั่นใจว่าค่าที่ใส่เข้าไปมีการครอบด้วย quotation mark แล้ว
 
 ```js
 assert($('input').length);

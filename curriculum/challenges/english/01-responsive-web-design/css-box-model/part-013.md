@@ -7,13 +7,13 @@ dashedName: part-13
 
 # --description--
 
-The frame is much too wide.
+กรอบรูปกว้างเกินไป
 
-In `.frame`, set its `width` to 500 pixels.
+ใน `.frame`, จงกำหนดให้ `width` ของมันมีค่า 500 pixels
 
 # --hints--
 
-You should set the `width` property to `500px`.
+คุณควรกำหนดให้ `width` property มีค่าเป็น `500px`
 
 ```js
 const widthFilter = new __helpers.CSSHelp(document).getCSSRules().filter(x => x.style.width === '500px');

@@ -7,11 +7,11 @@ dashedName: part-88
 
 # --description--
 
-For the `class` with value `left`, create the selector and set the `position` to `absolute`, the `top` to `15px`, and the `left` to `30px`.
+สำหรับ `class` ที่มี `left` จงสร้าง selector และกำหนดให้ `position` เป็น `absolute`, `top` เป็น `15px`, และ `left` เป็น `30px`.
 
 # --hints--
 
-You should create a new `.left` selector.
+คุณควรสร้าง `.left` selector มาใหม่
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.left'));

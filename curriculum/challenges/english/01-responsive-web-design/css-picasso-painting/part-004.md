@@ -7,13 +7,14 @@ dashedName: part-4
 
 # --description--
 
-FontAwesome is a library of SVG-powered icons, many of which are freely available to use. You will be using some of these icons in this project, so you will need to link the external stylesheet to your HTML.
+FontAwesome เป็น library หนึ่งของ SVG-powered icons, มีหลายตัวที่สามารถใช้ได้ฟรี
+คุณกำลังจะได้ใช้บาง icon ในโปรเจคนี้ ดังนั้นคุณต้องทำงานลิงค์ external stylesheet เข้ากับ HTML ของคุณ
 
-Add a `link` element with a `rel` of `stylesheet` and an `href` of `https://use.fontawesome.com/releases/v5.8.2/css/all.css`.
+จงเพิ่ม `link` element ที่มี `rel` เป็น `stylesheet` และเพิ่ม `href` ที่มี `https://use.fontawesome.com/releases/v5.8.2/css/all.css`
 
 # --hints--
 
-You should add another `link` element.
+คุณควรเพิ่ม `link` element อีกอันหนึ่ง
 
 ```js
 // We set this to 1 because the CSS link is stripped from the code by our parser.

@@ -7,13 +7,14 @@ dashedName: part-65
 
 # --description--
 
-Clicking on the navigation links should jump the viewport to the relevant section. However, this jumping can be disorienting for some users.
+การคลิกที่ลิงค์ของ navigation links ควรจะพา viewpoint ไปอยู่ใน section ที่เกี่ยวข้อง
+อย่างไรก็ตาม การเปลี่ยน viewpoint อาจจะดูไม่เป็นระเบียบสำหหรับผู้ใช้บางคน 
 
-Select all elements, and set the `scroll-behavior` to `smooth`.
+จงเลือก elements ทั้งหมดและกำหนดให้ `scroll-behavior` มีค่า `smooth`.
 
 # --hints--
 
-You should use the `*` selector.
+คุณควรใช้ `*` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('*'));

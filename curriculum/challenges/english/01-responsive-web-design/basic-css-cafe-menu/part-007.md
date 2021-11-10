@@ -7,11 +7,11 @@ dashedName: part-7
 
 # --description--
 
-Since the `p` element added in the previous step provides supplemental information about the cafe, nest both the `h1` and `p` elements in a `header` element.
+เนื่องจาก `p` element ที่ถูกเพิ่มในขั้นตอนก่อนหน้าได้ให้ข้อมูลเพิ่มเติมเกี่ยวกับคาเฟ่ จงเก็บทั้ง `h1` และ `p` elements ไว้ใน `header` element
 
 # --hints--
 
-You should have an opening `<header>` tag.
+คุณควรมีแท็กเปิด `<header>` อันหนึ่ง
 
 ```js
 assert(code.match(/<header>/i));

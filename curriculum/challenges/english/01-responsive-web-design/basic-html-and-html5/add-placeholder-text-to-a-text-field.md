@@ -9,23 +9,23 @@ dashedName: add-placeholder-text-to-a-text-field
 
 # --description--
 
-Placeholder text is what is displayed in your `input` element before your user has inputted anything.
+Placeholder text คือสิ่งที่จะแสดงผลในis `input` element ก่อนที่ผู้ใช้ของคุณจะมีารเพิ่มข้อมูลอะไรเข้ามา
 
-You can create placeholder text like so:
+คุณควรสร้าง placeholder text เช่นนี้:
 
 ```html
 <input type="text" placeholder="this is placeholder text">
 ```
 
-**Note:** Remember that `input` elements are self-closing.
+**Note:** จำไว้ว่า`input` elements เป็นแบบ self-closing (ไม่จำเป็นต้องมีแท็กปิด)
 
 # --instructions--
 
-Set the `placeholder` value of your text `input` to "cat photo URL".
+จงกำหนดให้ค่าของ `placeholder` ของ `input` มีค่าเป็น "cat photo URL".
 
 # --hints--
 
-You should add a `placeholder` attribute to the existing text `input` element.
+คุณควรเพิ่ม `placeholder` attribute อันหนึ่งให้กับ `input` element ที่เป็นแบบรับตัวอักษร
 
 ```js
 assert($('input[placeholder]').length > 0);

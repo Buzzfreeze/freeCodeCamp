@@ -9,17 +9,20 @@ dashedName: use-the-flex-basis-property-to-set-the-initial-size-of-an-item
 
 # --description--
 
-The `flex-basis` property specifies the initial size of the item before CSS makes adjustments with `flex-shrink` or `flex-grow`.
+`flex-basis` property จะระบุขนาดเริ่มต้นของ item ก่อนที่ CSS จะปรับเปลี่ยนมันด้วย `flex-shrink` หรือ `flex-grow`
 
-The units used by the `flex-basis` property are the same as other size properties (`px`, `em`, `%`, etc.). The value `auto` sizes items based on the content.
+หน่วยที่ถูกใช้โดย `flex-basis` property จะเหมือนกับ size properties (`px`, `em`, `%`, etc.) ตัวอื่น ๆ
+ค่าขนาดของ item ที่เป็น `auto` จะขึ้นกับเนื้อหาของมัน
 
 # --instructions--
 
-Set the initial size of the boxes using `flex-basis`. Add the CSS property `flex-basis` to both `#box-1` and `#box-2`. Give `#box-1` a value of `10em` and `#box-2` a value of `20em`.
+จงกำหนดขนาดเริ่มต้นของกล่องที่ใช้ `flex-basis`
+จงเพิ่ม CSS property `flex-basis` ให้กับทั้ง `#box-1` และ `#box-2`
+จงกำหนดให้ `#box-1` มีค่าเป็น `10em` และให้ `#box-2` มีค่าเป็น `20em`
 
 # --hints--
 
-The `#box-1` element should have the `flex-basis` property.
+`#box-1` element ควรมี `flex-basis` property.
 
 ```js
 assert($('#box-1').css('flex-basis') != 'auto');

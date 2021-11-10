@@ -7,7 +7,8 @@ dashedName: part-14
 
 # --description--
 
-You now have three type selectors with the exact same styling. You can add the same group of styles to many elements by separating the selectors with commas like this:
+ตอนนี้คุณมี 3 type selector ที่มี styling ที่เหมือนกันเป๊ะๆ
+คุณสามารถเพิ่มกลุ่มของ style แบบเดียวกันให้กับหลาย ๆ  ได้โดยการแยก selector ด้วย comma แบบนี้:
 
 ```css
 selector1, selector2 {
@@ -15,11 +16,12 @@ selector1, selector2 {
 }
 ```
 
-Use a single type selector to center the `h1`, `h2` and `p` elements at the same time.
+จงใช้ single type selector เพื่อจัดให้  `h1`, `h2` และ `p` element อยู่ตรงกลางในเวลาเดียวกัน
 
 # --hints--
 
-You should use a single type selector for all three elements, `h1, h2, p`. Be sure to use that order.
+คุรควรใช้ single type selector สำหรับทั้ง 3f element, `h1, h2, p`
+จงเช็คให้มั่นใจว่าคุณได้ใช้ลำดับตามนั้น
 
 ```js
 const hasSelector = new __helpers.CSSHelp(document).getStyle('h1, h2, p');

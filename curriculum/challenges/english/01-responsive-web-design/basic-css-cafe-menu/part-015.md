@@ -7,15 +7,18 @@ dashedName: part-15
 
 # --description--
 
-You have styled three elements by writing CSS inside the `style` tags. This works, but since there will many more styles, it's best to put all the styles in a separate file and link to it.
+คุณได้ตกแต่ง 3 element โดยการเขียน CSS ข้างใน `style` tags
+มันทำงานได้ แต่เนื่องจากมันจะมีอีกหลาย style มันจะดีที่สุดถ้าเราเขียนมันไว้ในอีกไฟล์แล้วค่อยลิงค์มันมาที่ไฟล์นี้
 
-We have created a separate `styles.css` file for you and switched the editor view to that file. You can change between files with the tabs at the top of the editor.
+พวกเราได้สร้างไฟล์ `styles.css` แยกไว้ให้คุณและได้เปลี่ยน editor view ไปที่ไฟล์นั้น
+คุณสามารถเปลี่ยนไฟล์ได้ด้วยแท็บที่ด้านบนของ editor
 
-Start by rewriting the styles you have created into the `styles.css` file. Make sure to exclude the opening and closing `style` tags.
+จงเริ่มต้นด้วยการเขียน style ที่คุณได้เขียนไปแล้วใหม่อีกครั้งใน `styles.css` 
+จงเช็คให้มั่นใจว่าคุณได้เอาแท็กเปิดและปิดของ `style`ออกไปแล้ว
 
 # --hints--
 
-Your `styles.css` file should have the `h1, h2, p` type selector.
+`styles.css` ควรมี `h1, h2, p` type selector.
 
 ```js
 const css = code.split('<!DOCTYPE html>')[0];

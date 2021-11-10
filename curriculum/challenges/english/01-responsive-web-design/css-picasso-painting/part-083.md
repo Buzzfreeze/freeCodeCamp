@@ -7,11 +7,12 @@ dashedName: part-83
 
 # --description--
 
-Use an `id` selector to create a `guitar-neck` rule. Set the `width` to `200px`, the `height` to `30px`, and the `background-color` to `#D2691E`.
+จงใช้ `id` selector เพื่อสร้าง `guitar-neck` rule
+จงกำหนดให้ `width` เท่ากับ `200px`, `height` เท่ากับ `30px`,  `background-color` เท่ากับ `#D2691E`
 
 # --hints--
 
-You should create a `#guitar-neck` selector.
+Yคุณควรสร้าง `#guitar-neck` selector
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#guitar-neck'));

@@ -7,13 +7,14 @@ dashedName: part-77
 
 # --description--
 
-Don't worry about the space at the bottom, everything will get moved down later when you add some height to the element at the top of the building.
+ไม่ต้องกังวลเกี่ยวกับที่ว่างด้านล่าง ทุกอย่างจะถูกเลื่อนลงไปทีหลังเมื่อคุณเพิ่มความสูงให้กับ element ที่อยู่ด้านบนของตึก
 
-Add a `repeating-linear-gradient` to `.fb1c` with a `90deg` angle, your `--building-color4` from `0%` to `10%` and `transparent` from `10%` to `15%`.
+จงเพิ่ม `repeating-linear-gradient` ให้กับ `.fb1c` โดยกำหนดให้มีมุมเท่ากับ`90deg` 
+และจงกำหนดให้ `--building-color4` มีค่าจาก `0%` เป็น `10%` และ `transparent` มีค่าจาก `10%` เป็น `15%`
 
 # --hints--
 
-You should give `.fb1c` a `background` with a `repeating-linear-gradient`.
+คุณควรกำหนดให้ `.fb1c` มี `background` ที่มีค่าเป็น `repeating-linear-gradient`
 
 ```js
 assert.include(new __helpers.CSSHelp(document).getStyle(".fb1c")?.background, "repeating-linear-gradient");

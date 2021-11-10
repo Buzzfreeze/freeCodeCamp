@@ -7,15 +7,15 @@ dashedName: part-7
 
 # --description--
 
-Within the `header`, provide context about the page by nesting one `img`, `h1`, and `nav` element.
+ข้างใน `header` จะมี `img`, `h1`, and `nav` element ทีให้ข้อมูลเกี่ยวกับ page.
 
-The `img` should point to `https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg`, and have an `id` of `logo`.
+`img` ควรชี้ไปที่ `https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg`, และมี `id` ของ `logo` 1 อัน.
 
-The `h1` should contain the text `HTML/CSS Quiz`.
+`h1` ควรมีข้อความ `HTML/CSS Quiz`.
 
 # --hints--
 
-You should add an `img` element to the `header` element.
+คุณควรเพิ่ม `img` element เข้าไปใน `header` element.
 
 ```js
 assert.exists(document.querySelector('header > img'));

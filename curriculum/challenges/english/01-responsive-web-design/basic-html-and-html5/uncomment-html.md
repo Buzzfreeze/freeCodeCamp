@@ -9,19 +9,19 @@ dashedName: uncomment-html
 
 # --description--
 
-Commenting is a way that you can leave comments for other developers within your code without affecting the resulting output that is displayed to the end user.
+การคอมเมนต์เป็นทางหนึ่งที่คุณจะทิ้งคอมเมนต์ให้กับผู้พัฒนาคนอื่นภายในโค้ดของคุณ โดยไม่ส่งผลต่อสิ่งที่จะแสดงผลบนหน้าจอของผู้ใช้
 
-Commenting is also a convenient way to make code inactive without having to delete it entirely.
+การคอมเมนต์นั้นเป็นอีกวิธีที่จะปิดการทำงานของโค้ดบางส่วน โดยไม่ต้องลบมันทิ้งทั้งหมด
 
-Comments in HTML start with `<!--` and end with a `-->`
+การคอมเมนต์ใน HTML จะขึ้นต้นด้วย `<!--` และจบด้วย `-->`
 
 # --instructions--
 
-Uncomment your `h1`, `h2` and `p` elements.
+จงเลิกคอมเมนต์ `h1`, `h2` และ `p` elements.
 
 # --hints--
 
-Your `h1` element should be visible on the page by uncommenting it.
+`h1` element ควรสามารถมองเห็นได้ในหน้าเว็บไซต์ถ้ามันโดนยกเลิกการคอมเมนต์
 
 ```js
 assert($('h1').length > 0);

@@ -7,13 +7,15 @@ dashedName: part-9
 
 # --description--
 
-As described in the [freeCodeCamp Style Guide](https://design-style-guide.freecodecamp.org/), the logo should retain an aspect ratio of `35:4`, and have padding around the text.
+ตามที่ถูกเขียนไว้ใน [freeCodeCamp Style Guide](https://design-style-guide.freecodecamp.org/) โลโก้ควรจะคงอัตราส่วนไว้ที่ `35:4` และมี padding รอบ ๆ ข้อความ
 
-First, change the `background-color` to `#0a0a23` so you can see the logo. Then, use the `aspect-ratio` property to set the desired aspect ratio. Finally, add a `padding` of `0.4rem` all around.
+ขั้นแรก เปลี่ยน `background-color` ให้มีค่าเท่ากับ `#0a0a23` เพื่อที่คุณได้เห็นโลโก้อย่างชัดเจน 
+หลังจากนั้น ใช้ `aspect-ratio` property เพื่อตั้งค่าของอัตราส่วนตามต้องการ
+สุดท้าย เพิ่ม `padding` ขนาด `0.4rem` รอบ ๆ
 
 # --hints--
 
-You should give `#logo` a `background-color` of `#0a0a23`.
+คุณควรกำหนดค่า `background-color` ของ `#logo` เป็น `#0a0a23`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('#logo')?.backgroundColor, 'rgb(10, 10, 35)');

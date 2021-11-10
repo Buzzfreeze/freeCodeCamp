@@ -7,13 +7,14 @@ dashedName: part-15
 
 # --description--
 
-To increase the page accessibility, the `role` attribute can be used to indicate the purpose behind an element on the page to assistive technologies. The `role` attribute is a part of the _Web Accessibility Initiative_ (WAI), and accepts preset values.
-
+เพื่อที่จะเพิ่มการเข้าถึง (accessibility) ของ page 
+`role` attribute ต้องสามารถใช้เพื่อบอกจุดประสงค์ของแต่ละ element ที่อยู่บน page ในแง่ของ assistive technologies ได้
+`role` attribute เป็นส่วนหนึ่งของ _Web Accessibility Initiative_ (WAI) และรับค่า preset
 Give each of the `section` elements the `region` role.
 
 # --hints--
 
-You should give the first `section` element the `region` role.
+คุณควรกำหนด `region` role เป็น`section` element อันแรก
 
 ```js
 assert.equal(document.querySelectorAll('section')?.[0]?.getAttribute('role'), 'region');

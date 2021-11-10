@@ -7,7 +7,7 @@ dashedName: part-20
 
 # --description--
 
-Use list item (`li`) elements to create items in a list. Here is an example of list items in an unordered list:
+จงใช้  list item (`li`) elements เพื่อสร้างลิสต์ขึ้นมาอันหนึ่ง นี่คือตัวอย่าง list items ที่อยู่ใน unordered list:
 
 ```html
 <ul>
@@ -16,11 +16,11 @@ Use list item (`li`) elements to create items in a list. Here is an example of l
 </ul>
 ```
 
-Nest three list items within the `ul` element to display three things cats love: `cat nip`, `laser pointers` and `lasagna`.
+จงเก็บ 3 list items ไว้ใน `ul` element เพื่อแสดง 3 สิ่งที่แมวชอบ: `cat nip`, `laser pointers` และ `lasagna`.
 
 # --hints--
 
-You should have three `li` elements. Each `li` element should have its own opening and closing tag.
+คุณควรมี 3 `li` elements. โดยแต่ละ `li` element ควรมีแท็กเปิดและปิดของมันเอง
 
 ```js
 assert($('li').length === 3 && code.match(/<\/li\>/g).length === 3);

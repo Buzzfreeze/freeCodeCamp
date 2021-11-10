@@ -9,17 +9,17 @@ dashedName: add-different-margins-to-each-side-of-an-element
 
 # --description--
 
-Sometimes you will want to customize an element so that it has a different `margin` on each of its sides.
+บางครั้งคุณอาจจะต้องการที่จะปรับแต่ง element เพื่อที่มันจะได้มี `margin` ที่ต่างกันในแต่ละด้าน
 
-CSS allows you to control the `margin` of all four individual sides of an element with the `margin-top`, `margin-right`, `margin-bottom`, and `margin-left` properties.
+CSS ทำให้คุณสามารถควบคุม `margin` ของทั้งสี่ด้านแยกกันได้ด้วย `margin-top`, `margin-right`, `margin-bottom`, และ `margin-left` properties.
 
 # --instructions--
 
-Give the blue box a `margin` of `40px` on its top and left side, but only `20px` on its bottom and right side.
+จงกำหนดให้กล่องสีฟ้ามี `margin` เท่ากับ `40px` ที่ด้านบนและซ้าย แต่เท่ากับ `20px` ที่ด้านล่างและขวา
 
 # --hints--
 
-Your `blue-box` class should give the top of elements `40px` of `margin`.
+`blue-box` class ควรกำหนดให้ ด้านบนของ element มี `40px` เป็นค่า `margin`
 
 ```js
 assert($('.blue-box').css('margin-top') === '40px');

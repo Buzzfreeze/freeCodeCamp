@@ -7,11 +7,11 @@ dashedName: part-3
 
 # --description--
 
-Next, add opening and closing `head` and `body` tags within the `html` element.
+ตอนไป จงเพิ่มแท็กเปิดและปิดของ `head` และ `body` ภายใน `html` element.
 
 # --hints--
 
-You should have an opening `head` tag.
+คุณควรมีแท็กเปิดของ `head` 
 
 ```js
 assert(code.match(/<head\s*>/i));

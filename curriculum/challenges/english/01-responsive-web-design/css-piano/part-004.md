@@ -7,11 +7,12 @@ dashedName: part-4
 
 # --description--
 
-Nest a second `div` within your existing `div`, and set the `class` to be `keys`.
+จงเก็บ `div` อันที่สองไว้ใน `div` ที่คุณสร้างไปแล้ว
+และกำหนดให้ `class` ของมันเป็น `keys`
 
 # --hints--
 
-You should create a second `div` element.
+คุณควรสร้าง `div` element อันที่สอง
 
 ```js
 const divDiv = document.querySelectorAll('div');

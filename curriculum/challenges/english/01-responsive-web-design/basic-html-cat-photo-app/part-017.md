@@ -7,11 +7,11 @@ dashedName: part-17
 
 # --description--
 
-Within the second `section` element, add a new `h2` element with the text `Cat Lists`.
+ภายใน `section` element อันที่สอง จงเพิ่ม `h2` element อันใหม่ที่มีข้อความ `Cat Lists`
 
 # --hints--
 
-Your `section` element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+`section` element ควรมีแท็กเปิดโดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(

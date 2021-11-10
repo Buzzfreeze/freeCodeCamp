@@ -9,25 +9,26 @@ dashedName: adjust-the-padding-of-an-element
 
 # --description--
 
-Now let's put our Cat Photo App away for a little while and learn more about styling HTML.
+ตอนนี้ เรามาพักเรื่อ Cat Photo App ไปก่อนซักพัก แล้วหันมาเรียนเกี่ยวกับ styling HTML ดีกว่า
 
-You may have already noticed this, but all HTML elements are essentially little rectangles.
+คุณอาจจะเห็นมันแล้ว HTML element ทั้งหมดเป็นสี่เหลี่ยม
 
-Three important properties control the space that surrounds each HTML element: `padding`, `border`, and `margin`.
+3 property สำคัญที่ควบคุมช่องว่างที่ล้อมรอบแต่ละ HTML element: `padding`, `border`, และ `margin`.
 
-An element's `padding` controls the amount of space between the element's content and its `border`.
+`padding` ของ element ควบคุณขนาดของช่องว่างระหว่าง content ของ element และ `border` ของมัน
 
-Here, we can see that the blue box and the red box are nested within the yellow box. Note that the red box has more `padding` than the blue box.
+ตอนนีพวกเราสามารถเห็นได้ว่ากล่องสีฟ้าและกล่องสีแดงในอยู่ในกล่องสีเหลือง 
+จงจำไว้ว่ากล่องสีแดงนั้นมี `padding` มากกว่ากล่องสีฟ้า
 
-When you increase the blue box's `padding`, it will increase the distance (`padding`) between the text and the border around it.
+เมื่อคุณเพิ่ม `padding` ของกล่องสีฟ้า มันจะเพิ่มระยะห่าง (`padding`) ระหว่างข้อความและขอบที่ล้อมรอบมัน 
 
 # --instructions--
 
-Change the `padding` of your blue box to match that of your red box.
+จงเปลี่ยน `padding` ของกล่องสีฟ้าให้ตรงกับกล่องสีแดง
 
 # --hints--
 
-Your `blue-box` class should give elements `20px` of `padding`.
+`blue-box` class ควรกำหนดให้ element มี `20px` เป็น `padding`
 
 ```js
 assert($('.blue-box').css('padding-top') === '20px');

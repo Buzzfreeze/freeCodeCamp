@@ -7,11 +7,13 @@ dashedName: part-11
 
 # --description--
 
-Nest four `div` elements in the `.bb1` container. Give them the classes `bb1a`, `bb1b`, `bb1c`, and `bb1d` in that order. This building will have four sections.
+จงเก็บ 4 `div` elements ใน `.bb1` container
+จงกำหนดให้พวกมันมีคลาส`bb1a`, `bb1b`, `bb1c`, และ `bb1d` ตามลำดับ
+building นี้จะมี 4 sections
 
 # --hints--
 
-You should create four new `div` elements.
+คุณควรสร้าง 4 `div` elements ขึ้นมาใหม่
 
 ```js
 assert.equal(document.querySelectorAll('div')?.length, 6);

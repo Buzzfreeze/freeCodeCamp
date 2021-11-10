@@ -7,17 +7,17 @@ dashedName: part-12
 
 # --description--
 
-To enable navigation on the page, add an unordered list with the following three list items:
+เพื่อที่จะให้การนำทาง (navigation) สามารถทำงานบน page ได้จะต้องเพิ่ unordered list อันหนึ่งพร้อมกับ list items 3 อันที่อยู่ข้างล่าง:
 
 - `INFO`
 - `HTML`
 - `CSS`
 
-The list items text should be wrapped in anchor tags.
+ข้อความของ list items text ควรอยู่ใน anchor tags.
 
 # --hints--
 
-You should nest one `ul` element inside the `nav`.
+คุณควรใส่ `ul` element ใน `nav`
 
 ```js
 assert.equal(document.querySelectorAll('nav > ul')?.length, 1);

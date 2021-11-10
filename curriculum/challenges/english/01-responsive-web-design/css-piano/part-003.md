@@ -7,11 +7,12 @@ dashedName: part-3
 
 # --description--
 
-Time to start working on the piano. Create a `div` element within your `body` element with the `id` set to `piano`.
+ถึเวลาที่จะเริ่มสร้างเปียโนแล้ว
+จงสร้าง 1 `div` element ภายใน `body` element ที่มี `id` เป็น `piano`
 
 # --hints--
 
-You should create a new `div` element.
+คุณควรสร้าง `div` element อันหนึ่งใหม่
 
 ```js
 const div = document.querySelector('div');

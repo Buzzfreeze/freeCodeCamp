@@ -7,11 +7,11 @@ dashedName: part-29
 
 # --description--
 
-These dots are just a little too square. Give the `black-dot` class a `border-radius` of `50%` to fix it.
+จุดพวกนี้มันดูเหมือนสี่เหลี่ยมไปหน่อย จดกำหนดให้ `black-dot` class มี `border-radius` ขนาด `50%` เพื่อแก้ไขมัน
 
 # --hints--
 
-Your `.black-dot` selector should have a `border-radius` property set to `50%`.
+`.black-dot` selector ควรมี `border-radius` property อันหนึ่งที่มีค่า `50%`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.black-dot')?.borderRadius === '50%');

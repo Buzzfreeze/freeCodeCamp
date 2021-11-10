@@ -7,11 +7,14 @@ dashedName: part-26
 
 # --description--
 
-Now that you've worked the bugs out and the buildings are the right colors, you can remove the fallback values in the two places they were used. Go ahead and do that now.
+หลังจากที่คุณจัดการกับพวกบั๊คต่าง ๆ ได้แล้ว
+building จะมีสีตามที่มันควรเป็น
+คุณสามารถลบ fallback values ที่คุณใช้ไปใน 2 ที่ได้
+เริ่มทำต้อนนี้ได้เลย 
 
 # --hints--
 
-You should remove the fallback in the `background-color` from `.bb2`.
+คุณควรลบ fallback ใน `background-color` ของ`.bb2`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.bb2')?.backgroundColor, 'var(--building-color2)');

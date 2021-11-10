@@ -7,11 +7,13 @@ dashedName: part-13
 
 # --description--
 
-Give your `.bb1` element these style properties: `display: flex;`, `flex-direction: column;`, and `align-items: center;`. This will center the parts of the building using "flex" or "flexbox". You will learn about it in more detail on another project.
+จงกำหนดให้ `.bb1` element มี style properties ดังต่อไปนี้: `display: flex;`, `flex-direction: column;`, และ `align-items: center;`
+สิ่งนี้จะทำให้แต่ละส่วนของ building อยู่ตรงกลางด้วยการใช้ "flex" หรือ "flexbox"
+คุณจะได้เรียนรู้เกี่ยวกับมันแบบละเอียด ๆ ในโปรเจคถัดไป
 
 # --hints--
 
-You should not change the `.bb1` `width` or `height` properties.
+คุณไม่ควรเปลี่ยน `.bb1` `width` หรือ `height` properties.
 
 ```js
 const bb1Style = new __helpers.CSSHelp(document).getStyle('.bb1');

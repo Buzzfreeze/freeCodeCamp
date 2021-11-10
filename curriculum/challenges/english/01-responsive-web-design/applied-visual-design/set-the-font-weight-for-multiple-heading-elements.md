@@ -9,9 +9,9 @@ dashedName: set-the-font-weight-for-multiple-heading-elements
 
 # --description--
 
-You set the `font-size` of each heading tag in the last challenge, here you'll adjust the `font-weight`.
+คุณได้กำหนด `font-size` ของแต่ละ heading tag ในแบบฝึกหัดที่แล้ว ตอนนี้คุณจะได้ปรับค่าของ `font-weight`
 
-The `font-weight` property sets how thick or thin characters are in a section of text.
+`font-weight` property จะกำหนดความหนาบางของตัวอักษรที่อยู่ใน section ของข้อความ
 
 # --instructions--
 
@@ -19,7 +19,7 @@ The `font-weight` property sets how thick or thin characters are in a section of
 
 # --hints--
 
-Your code should set the `font-weight` property for the `h1` tag to 800.
+คุณควรกำหนด `font-weight` property ให้กับ `h1` tag มีค่า 800
 
 ```js
 assert($('h1').css('font-weight') == '800');

@@ -7,11 +7,11 @@ dashedName: part-8
 
 # --description--
 
-Time for CSS.
+ถึงเวลาของ CSS.
 
-Even though your `<div>` has no text, it's still treated as a box with content.
-Write a CSS rule that uses the `.canvas` class selector and set its `width` to 500 pixels.
-Here's a CSS rule that sets the width of the class `card` to 300 pixels:
+แม้ว่า `<div>` จะไม่มีข้อความใด ๆ มันยังถูกนับเป็นกล่องที่เก็บ content ไว้อยู่
+จงเขียน CSS rule ที่จะใช้  `.canvas` class selector และกำหนด `width` ของมันให้เท่ากับ 500 pixels
+นี่คือ CSS rule อันหนึ่งที่กำหนดให้ความกว้างของ class `card` มีค่าเป็น 300 pixels:
 
 ```css
 .card {
@@ -21,7 +21,7 @@ Here's a CSS rule that sets the width of the class `card` to 300 pixels:
 
 # --hints--
 
-Your code should have a `.canvas` selector.
+คุณควรมี 1 `.canvas` selector.
 
 ```js
 const hasCanvas = new __helpers.CSSHelp(document).getStyle('.canvas');

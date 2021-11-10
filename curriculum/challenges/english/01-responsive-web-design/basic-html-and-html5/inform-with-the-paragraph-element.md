@@ -9,9 +9,10 @@ dashedName: inform-with-the-paragraph-element
 
 # --description--
 
-`p` elements are the preferred element for paragraph text on websites. `p` is short for "paragraph".
+`p` element นั้นหมายถึง element สำหรับข้อความที่เป็นพารากราฟบนหน้าเว็บไซต์
+`p` นั้นย่อมาจากคำว่า "paragraph"
 
-You can create a paragraph element like this:
+คุณสามารถสร้าง paragraph element ได้ดังนี้:
 
 ```html
 <p>I'm a p tag!</p>
@@ -19,13 +20,13 @@ You can create a paragraph element like this:
 
 # --instructions--
 
-Create a `p` element below your `h2` element, and give it the text `Hello Paragraph`.
+จงสร้าง `p` element อันหนึ่งต่อจาก `h2` element, และจงกำหนดให้มันมีข้อความที่เขียนว่า `Hello Paragraph`
 
-**Note:** As a convention, all HTML tags are written in lowercase, for example `<p></p>` and not `<P></P>`.
+**Note:** ตามปกติ, HTML tag ทุกอัจเขียนด้วยตัวพิมพ์เล็ก ยกตัวอย่างเช่น `<p></p>` ไม่ใช่ `<P></P>`
 
 # --hints--
 
-Your code should have a valid `p` element.
+โค้ดของคุณควรมี `p` element
 
 ```js
 assert($('p').length > 0);

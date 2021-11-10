@@ -9,19 +9,22 @@ dashedName: headline-with-the-h2-element
 
 # --description--
 
-Over the next few lessons, we'll build an HTML5 cat photo web app piece-by-piece.
+ผ่านไปหลายบทเรียน เราจะได้สร้าง HTML5 cat photo web app ไปทีละส่วน ๆ
 
-The `h2` element you will be adding in this step will add a level two heading to the web page.
+`h2` element ที่คุณจะเพิ่มเข้ามาในขั้นนี้จะเพิ่ม heading ระดับ 2 ให้กับเว็บเพจ 
 
-This element tells the browser about the structure of your website. `h1` elements are often used for main headings, while `h2` elements are generally used for subheadings. There are also `h3`, `h4`, `h5` and `h6` elements to indicate different levels of subheadings.
+element จะบอก browser โครงสร้างของเว็บไซต์ของคุณ
+`h1` element มักถูกใช้เป็น heading หลัก
+`h2` element มันถูกใช้เป็น heading รอง
+และมันก็ยังมี `h3`, `h4`, `h5` และ `h6` element ที่จะบ่งบอกถึงระดับของ heading รอบที่แตกต่างกัน
 
 # --instructions--
 
-Add an `h2` tag that says "CatPhotoApp" to create a second HTML element below your "Hello World" `h1` element.
+จงเพิ่มแท็ก`h2` ที่เขียนว่า "CatPhotoApp" เพื่อสร้าง HTML element อันที่สองต่อจาก "Hello World" `h1` element
 
 # --hints--
 
-You should create an `h2` element.
+คุณควรสร้าง `h2` element มาอันหนึ่ง
 
 ```js
 assert($('h2').length > 0);

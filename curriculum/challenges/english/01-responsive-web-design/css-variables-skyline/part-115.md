@@ -7,13 +7,14 @@ dashedName: part-115
 
 # --description--
 
-Copy and paste your whole `sky` class along with all of its properties and values into the media query. You are going to make another color scheme for the skyline that changes it from day to night.
+จงคัดลอกและวาง `sky` class ทั้งหมดของคุณพร้อมกับ properties และ values ของมันภายใน media query
+คุณกำลังจะสร้าง color scheme อีกอันขึ้นมาสำหรับเส้นขอบฟ้า โดยจะเปลี่ยนมันจากกลางวันเป็นกลางคืน
 
-Note: You are going to need to scroll past the editable region to copy the class.
+Note: คุณกำลังจะต้องเลื่อนภาพส่วนที่แก้ไขได้เพื่อคัดลองมันทั้งคลาส
 
 # --hints--
 
-You should not delete the existing `.sky` declaration.
+คุณไม่ควรลย `.sky` declaration ที่มีอยู่แล้ว
 
 ```js
 assert.match(new __helpers.CSSHelp(document).getStyle(".sky")?.getPropVal('background', true), /radial-gradient\(circleclosest-cornerat15%15%,rgb\(255,207,51\)(0%)?,rgb\(255,207,51\)20%,rgb\(255,255,102\)21%,rgb\(187,238,255\)100%\)/);

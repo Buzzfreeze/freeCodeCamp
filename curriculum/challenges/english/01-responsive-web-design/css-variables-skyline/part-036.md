@@ -7,11 +7,12 @@ dashedName: part-36
 
 # --description--
 
-Squeeze the buildings together again by adding two empty `div` elements within both the top and bottom of the `.foreground-buildings` element, and one more in between `.fb2` and `.fb3`.
+จงบีบให้ buildingมาชิดกันอกีกครั้ง `div` element เปล่า 2 อันที่ด้านบนแล้วล่างของ `.foreground-buildings` element
+และเพิ่มอีก 1 อันระหว่าง`.fb2` และ `.fb3`.
 
 # --hints--
 
-You should add two `div` elements as the first children of `.foreground-buildings`.
+คุณควรเพิ่ม 2 `div` elements ให้เป็นเหมือน children อันแรก ของ `.foreground-buildings`.
 
 ```js
 const bBuildings = document.querySelector('.background-buildings')?.children;

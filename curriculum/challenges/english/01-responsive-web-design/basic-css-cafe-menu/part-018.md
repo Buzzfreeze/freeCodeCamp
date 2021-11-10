@@ -7,9 +7,9 @@ dashedName: part-18
 
 # --description--
 
-So the styling of the page looks similar on mobile as it does on a desktop or laptop, you need to add a `meta` element with a special `content` attribute.
+เพื่อที่ styling ของหน้านี้จะได้ดูหมือน ๆ กันในหน้าจอโทรศัพท์อย่างที่มันแสดงผลบน desktop หรือ labtop คุณจำเป็นจำต้องเพิ่ม `meta` element พร้อมกับ `content` attribute แบบพิเศษ
 
-Add the following within the `head` element:
+จงเพิ่มโค้ดดังต่อไปนี้ใน `head` element:
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@ Add the following within the `head` element:
 
 # --hints--
 
-Your code should have two `meta` elements.
+คุณควรมี 2 `meta` elements.
 
 ```js
 assert(code.match(/<meta.*\/?>/g).length === 2);

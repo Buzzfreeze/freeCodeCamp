@@ -7,13 +7,14 @@ dashedName: part-32
 
 # --description--
 
-Submitting the form with an option selected would not send a useful value to the server. As such, each `option` needs to be given a `value` attribute. Without which, the text content of the `option` will be submitted to the server.
+การส่งแบบฟอร์มพร้อมกับตัวเลือกที่เลือกไว้จะไม่ได้ส่งค่าที่มีประโยชน์ไปให้ server
+ตามที่กล่าวมานั้น แต่ละ `option` ต้องการ `value` attribute ที่ถูกกำหนดไว้แล้ว หากไม่มีสิ่งนั้นเนื้อหาที่เป็นตัวอักษรจะถูกส่งไปที่ server
 
 Give the first `option` a `value` of `""`, and the subsequent `option` elements `value` attributes from `1` to `4`.
 
 # --hints--
 
-You should give the first `option` a `value` of `""`.
+คุณควรใส่ `value` ที่มีค่า `""`ให้กับ `option`
 
 ```js
 assert.equal(document.querySelectorAll('fieldset:nth-child(3) > label:nth-child(3) option')?.[0]?.value, '');

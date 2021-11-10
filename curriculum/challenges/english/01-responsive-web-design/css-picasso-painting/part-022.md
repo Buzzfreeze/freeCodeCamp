@@ -7,11 +7,12 @@ dashedName: part-22
 
 # --description--
 
-Using an `id` selector, create a rule for your `black-mask` element. Give it a `width` of `100%`, a `height` of `50px`, and a `background-color` of `rgb(45, 31, 19)`.
+จงสร้างกฎสำหรับ `black-mask` element ด้วย `id` selector
+จงกำหนดให้มันมี `width` เท่ากับ `100%`,`height` เท่ากับ `50px`, และ `background-color` เท่ากับ `rgb(45, 31, 19)`.
 
 # --hints--
 
-You should have a `#black-mask` selector.
+คุณควรมี 1 `#black-mask` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#black-mask'));

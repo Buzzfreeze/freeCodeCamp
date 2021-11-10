@@ -9,13 +9,20 @@ dashedName: learn-how-the-css-keyframes-and-animation-properties-work
 
 # --description--
 
-To animate an element, you need to know about the animation properties and the `@keyframes` rule. The animation properties control how the animation should behave and the `@keyframes` rule controls what happens during that animation. There are eight animation properties in total. This challenge will keep it simple and cover the two most important ones first:
+เพื่อที่จะ animate element, คุณจำเป็นต้องรู้เกี่ยวกับ animation properties และ `@keyframes` rule
+animation properties จะควบคุมพฤติกรรมที่ animation ควรเป็น ส่วน `@keyframes` rule จะควบคุมว่าจะเกิดอะไรขึ้นระหว่าง animation
+ทั้งหมดแล้วมันมี animation property อยู่ 8 อัน
+ในแบบฝึกหัดนี้จะทำให้มันง่ายและพูดถึงแค่ 2 อันที่สำคัญที่สุดก่อน:
 
-`animation-name` sets the name of the animation, which is later used by `@keyframes` to tell CSS which rules go with which animations.
+`animation-name` กำหนดชื่อของ animation, ซึ่งในภายหลังจากถูกใช้โดย `@keyframes` เพื่อบอก CSS ว่า rule ไหนจะใช้กับ animation ไหน
 
-`animation-duration` sets the length of time for the animation.
+`animation-duration` กำหนดเวลาที่จะใช้ใน animation
 
-`@keyframes` is how to specify exactly what happens within the animation over the duration. This is done by giving CSS properties for specific "frames" during the animation, with percentages ranging from 0% to 100%. If you compare this to a movie, the CSS properties for 0% is how the element displays in the opening scene. The CSS properties for 100% is how the element appears at the end, right before the credits roll. Then CSS applies the magic to transition the element over the given duration to act out the scene. Here's an example to illustrate the usage of `@keyframes` and the animation properties:
+`@keyframes` คือวิธีที่จะระบุว่าจะเกิดอะไรขึ้นบ้างระหว่างช่วงที่ animate element อยู่
+มันสามารถทำได้โดยการกำหนด CSS properties สำหรับแต่ละ "frames" ระหว่าง animation, โดยเปอร์เซ็นที่ไล่ตั้งแต่ 0% ถึง 100%
+ถ้าคุณเปรียบเทียบมันกับหนัง CSS properties ที่เป็น 0% ก็คือการแสดงผลของ elementในฉากเปิด
+ส่วน CSS properties ที่เป็น 100% คือการแสดงผลของ  element ในตอนจบก่ออนที่จะมี credit ขึ้นมา
+นี่คือตัวอย่างในการใช้ `@keyframes` และ animation properties:
 
 ```css
 #anim {
@@ -33,15 +40,19 @@ To animate an element, you need to know about the animation properties and the `
 }
 ```
 
-For the element with the `anim` id, the code snippet above sets the `animation-name` to `colorful` and sets the `animation-duration` to 3 seconds. Then the `@keyframes` rule links to the animation properties with the name `colorful`. It sets the color to blue at the beginning of the animation (0%) which will transition to yellow by the end of the animation (100%). You aren't limited to only beginning-end transitions, you can set properties for the element for any percentage between 0% and 100%.
+สำหรับ element ที่มาพร้อมกับ `anim` id, code snippet ข้างบนจะกำหนดให้ `animation-name`เป็น `colorful` และกำหนดให้ `animation-duration` มีค่า 3 วินาที
+หลังจากนั้น `@keyframes` rule จะลิงค์เข้ากับ animation properties ที่มีชื่อว่า `colorful`
+มันจะกำหนดให้สีกลายเป็นสีน้ำเงินในตอนแรกของ animation (0%) ซึ่งจะเปลี่ยนไปเป็นสีเหลืองในตอนสุดท้าย(100%)
+คุณไม่ได้ถูกจำกัดไง้ที่การเปลี่ยนแปลงในตอนเริ่มและตอนจบเท่านั้น คุณสามารถกำหนด properties ให้กับ element ณ เปอร์เซ็นไหนระหว่าง 0% ถึง 100% ก็ได้
 
 # --instructions--
 
-Create an animation for the element with the id `rect`, by setting the `animation-name` to `rainbow` and the `animation-duration` to 4 seconds. Next, declare a `@keyframes` rule, and set the `background-color` at the beginning of the animation (`0%`) to blue, the middle of the animation (`50%`) to green, and the end of the animation (`100%`) to yellow.
+จงสร้าง animation ให้กับ element ที่มาพร้อมกับ id `rect`, โดยการกำหนดให้ `animation-name` มีค่าเป็น `rainbow` และ `animation-duration` เป็น 4 วินาที
+ถัดไป จงประกาศใช้ `@keyframes` rule, และกำหนดให้ `background-color` ณ ตอนเริ่ม animation (`0%`) เป้นสีฟ้า, และตรงกลางanimation (`50%`) เป็นสีเขียว และตอนจบของ animation (`100%`) เป็นสีเหลือง
 
 # --hints--
 
-The element with id of `rect` should have an `animation-name` property with a value of `rainbow`.
+element ที่มาพร้อมกับไอดี `rect` ควรมี `animation-name` propertyที่มีค่าเป็น `rainbow`.
 
 ```js
 assert($('#rect').css('animation-name') == 'rainbow');

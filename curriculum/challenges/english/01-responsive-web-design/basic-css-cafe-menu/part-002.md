@@ -7,11 +7,12 @@ dashedName: part-2
 
 # --description--
 
-Add a `head` element within the `html` element, so you can add a `title` element. The title element's text should be `Camper Cafe Menu`.
+จงเพิ่ม `head` element ภายใน `html` element เพื่อที่คุณจะสามารถเพิ่ม `title` element ได้
+ข้อความของ title element ควรเป็น `Camper Cafe Menu`
 
 # --hints--
 
-You should have an opening `<head>` tag.
+คุณควรมี `<head>` tag.
 
 ```js
 assert(code.match(/<head>/i));

@@ -9,13 +9,13 @@ dashedName: delete-html-elements
 
 # --description--
 
-Our phone doesn't have much vertical space.
+โทรศัพท์ของเรามีพื้นที่ในแนวตั้งไม่พอ
 
-Let's remove the unnecessary elements so we can start building our CatPhotoApp.
+จงเอา element ที่ไม่จำเป็นออกไป เพื่อเราจะได้เริ่มสร้าง CatPhotoApp ของเรา
 
 # --instructions--
 
-Delete your `h1` element so we can simplify our view.
+จงลบ `h1` element ออกไปเพื่อที่เราจะได้มี view ที่ดูง่ายมากขึ้น
 
 # --hints--
 

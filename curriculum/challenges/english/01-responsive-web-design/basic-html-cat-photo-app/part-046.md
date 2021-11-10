@@ -7,11 +7,13 @@ dashedName: part-46
 
 # --description--
 
-Nest a another radio button with the option `Outdoor` in a new `label` element. The new radio button should be placed after the first one. Also, set its `id` attribute value to `outdoor`.
+จงใส่ radio button อีกอันหนึ่งที่มาพร้อมกับตัวเลือก `Outdoor` ไว้ใน `label` element อันใหม่
+radio button อันใหม่นี้ควรจะถูกวางไว้หลังอันแรก และจงกำหนดให้ `id` attribute ของมันมีค่าเป็น `outdoor`
 
 # --hints--
 
-You will need to add a new `label` element in which to nest your new radio button. Make sure it has both an opening and closing tag.
+คุณจำเป็นจะต้องเพิ่ม `label` element เพื่อที่จะได้เก็บ radio button อันใหม่
+จงเช็คให้มั่นใจว่ามันมีทั้งแท็กเปิดแชะแท็กปิด
 
 ```js
 assert(

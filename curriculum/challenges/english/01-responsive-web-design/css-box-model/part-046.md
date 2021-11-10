@@ -7,13 +7,13 @@ dashedName: part-46
 
 # --description--
 
-Rotate `.three` counter clockwise by 0.2 degrees.
+จงหมุน `.three` ไป 0.2 องศาตามทิศทวนเข็ม
 
-With this final step, your Rothko painting is now complete.
+หลังจากขั้นตอนสุดท้ายนี้ ภาพ Rothko ของคุณก็เสร็จเรียบร้อยแล้ว
 
 # --hints--
 
-You should set the `transform` property to `rotate(-0.2deg)`.
+คุณควรกำหนดให้ `transform` property ให้มีค่า  `rotate(-0.2deg)`.
 
 ```js
 const hasTransform = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style.transform === 'rotate(-0.2deg)');

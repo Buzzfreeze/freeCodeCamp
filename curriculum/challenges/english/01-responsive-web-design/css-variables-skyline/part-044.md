@@ -7,7 +7,7 @@ dashedName: part-44
 
 # --description--
 
-Gradients can use as many colors as you want like this:
+Gradients สามารถใช้กี่สีก็ได้ตามที่คุณต้องการเช่นแบบนี้:
 
 ```css
 gradient-type(
@@ -17,11 +17,12 @@ gradient-type(
 );
 ```
 
-Add a `linear-gradient` to `.bb1d` with `orange` as the first color, `--building-color1` as the second, and `--window-color1` as the third. Remember to use the gradient on the `background` property.
+จงเพิ่ม `linear-gradient` ให้กับ `.bb1d` โดยมี `orange` เป็นสีแรก, `--building-color1` เป็นสีที่สองและ `--window-color1`เป้นสี่ที่สาม
+จงจำว่าเราจะใช้  gradient กับ `background` property.
 
 # --hints--
 
-You should use the `background` on `.bb1d`.
+คุณควรใช้ `background` กับ `.bb1d`.
 
 ```js
 assert.isNotEmpty(new __helpers.CSSHelp(document).getStyle('.bb1d')?.background);

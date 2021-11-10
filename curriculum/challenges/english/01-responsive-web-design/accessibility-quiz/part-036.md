@@ -7,13 +7,14 @@ dashedName: part-36
 
 # --description--
 
-Within the first `div.answer` element, nest one required `select` element with three `option` elements.
-
-Give the first `option` element a `value` of `""`, and the text `Select an option`. Give the second `option` element a `value` of `yes`, and the text `Yes`. Give the third `option` element a `value` of `no`, and the text `No`.
+จงใส่ `select` element ที่จำเป็นพร้อม `option` elements 3 อันภายใน `div.answer` element อันแรก
+จงใส่ `value` ของ `""` และข้อความ `Select an option` ใน `option` element อันแรก
+จงใส่ `value` ของ `yes`และข้อความ `Yes` ใน `option` element อันที่สอง
+จงใส่ `value` ของ `no` และข้อความ `No` ใน `option` element อันที่สาม
 
 # --hints--
 
-You should nest one `select` element within the first `div.answer` element.
+คุณควรใส่ `select` element ภายใน `div.answer` element อันแรก
 
 ```js
 assert.exists(document.querySelector('div.answer > select'));

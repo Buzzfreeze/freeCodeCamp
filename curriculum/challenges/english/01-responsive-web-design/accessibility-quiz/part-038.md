@@ -7,13 +7,13 @@ dashedName: part-38
 
 # --description--
 
-Nest one `textarea` element within the second `div.answer` element, and set the number of rows and columns it has.
+ใส่ `textarea` element ภายใน `div.answer` element อันที่สอง และกำหนดจำนวนแถวและหลัก
 
-Then, give the `textarea` placeholder text describing an example answer.
+หลังจากนั้น จงเพิ่มข้อความที่อธิบายตัวอย่างคำตอบใน`textarea` placeholder
 
 # --hints--
 
-You should nest one `textarea` element within the second `div.answer` element.
+คุณควรใส่ `textarea` element ภายใน `div.answer` element อันที่สอง
 
 ```js
 assert.exists(document.querySelectorAll('div.answer')?.[1]?.querySelector('textarea'));

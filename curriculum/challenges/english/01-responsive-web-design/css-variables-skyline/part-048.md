@@ -7,11 +7,13 @@ dashedName: part-48
 
 # --description--
 
-Nest two new `div` elements within `.bb2`, give them the classes of `bb2a` and `bb2b`, in that order. These will be two sections for this building.
+คุณเก็บ 2 `div` elements ไว้ใน`.bb2`
+จงกำหนดให้พวกมันมีคลาสที่ชื่อว่า `bb2a` and `bb2b` ตามลำดับ
+นี่จะเป็น section 2 อันให้กับ building อันนี้
 
 # --hints--
 
-You should add two `div` elements to `.bb2`.
+คุณควรเพิ่ม 2 `div` elements ให้กับ`.bb2`.
 
 ```js
 assert.equal(document.querySelector('div.bb2')?.children?.length, 2);

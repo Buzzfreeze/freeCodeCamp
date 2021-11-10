@@ -9,11 +9,12 @@ dashedName: specify-how-fonts-should-degrade
 
 # --description--
 
-There are several default fonts that are available in all browsers. These generic font families include `monospace`, `serif` and `sans-serif`.
+มีฟ้อนต์เริ่มต้นหลายตัวที่สามารถใช้งานได้ในทุก browser
+พวกนี้คือ font family ที่ใชได้ทั่วไปรวมถึง `monospace`, `serif` และ `sans-serif`
 
-When one font isn't available, you can tell the browser to "degrade" to another font.
+เมื่อฟ้อนต์หนึ่งใช้งานไม่ได้ คุณสามารถบอก browser ให้ "degrade" ไปเป็นฟ้อนต์อื่น
 
-For example, if you wanted an element to use the `Helvetica` font, but degrade to the `sans-serif` font when `Helvetica` isn't available, you will specify it as follows:
+ยกตัวอย่างเช่น ถ้าคุณต้องการให้ element ใช้ `Helvetica` font, แต่ degrade ไปเป็น `sans-serif` font เป็น `Helvetica` ใช้งานไม่ได้, คุณสามารถระบุมันได้แบบนี้:
 
 ```css
 p {
@@ -21,19 +22,22 @@ p {
 }
 ```
 
-Generic font family names are not case-sensitive. Also, they do not need quotes because they are CSS keywords.
+ชื่อของ Generic font family นั้นไม่ใช่ case-sensitive
+นอกจากนี้พวกมันยังไม่ต้องการ quotes เพราะมันเป็นคีย์เวิร์ดของ CSS 
 
 # --instructions--
 
-To begin, apply the `monospace` font to the `h2` element, so that it now has two fonts - `Lobster` and `monospace`.
+จงใช้ `monospace` font กับ `h2` element, เพื่อที่มันจะได้ฟ้อนต์สองอันตอนนี้ - `Lobster` และ `monospace`
 
-In the last challenge, you imported the `Lobster` font using the `link` tag. Now comment out that import of the `Lobster` font (using the HTML comments you learned before) from Google Fonts so that it isn't available anymore. Notice how your `h2` element degrades to the `monospace` font.
+ในแบบฝึกหัดที่แล้ว, คุณได้นำเข้า `Lobster` font โดยใช้ `link` tag. 
+ตอนนี้ จงคอมเมนต์คำสั่งนำเข้าของ `Lobster` font จาก Google Fonts เพื่อที่มันจะได้ไม่สามารถใช้งานได้อีกต่อไป
+สังเกตว่า `h2` element degrades ไปเป็น `monospace` font อย่างไร
 
-**Note:** If you have the `Lobster` font installed on your computer, you won't see the degradation because your browser is able to find the font.
+**Note:** ถ้าคุณมี `Lobster` font ติดตั้งไว้ใน computer, คุณจะไม่เห็นการ degrade เพราะ browser ของคุณสามารถหาฟ้อนต์นั้นได้
 
 # --hints--
 
-Your h2 element should use the font `Lobster`.
+h2 element ควรใช้ฟ้อนต์ `Lobster`.
 
 ```js
 assert(

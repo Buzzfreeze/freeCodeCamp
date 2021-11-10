@@ -9,17 +9,20 @@ dashedName: make-screen-reader-navigation-easier-with-the-nav-landmark
 
 # --description--
 
-The `nav` element is another HTML5 item with the embedded landmark feature for easy screen reader navigation. This tag is meant to wrap around the main navigation links in your page.
-
-If there are repeated site links at the bottom of the page, it isn't necessary to markup those with a `nav` tag as well. Using a `footer` (covered in the next challenge) is sufficient.
+`nav` element เป็นอีก HTML5 item ที่มี embedded landmark feature สำหรับการนำทาง screen reader อย่างง่าย ๆ
+ tag นี้ถูกใช้เพื่อล้อมรอบลิงค์ของ navigation อันหลักในหน้าของคุณ 
+ 
+ ถ้ามีลิงค์ที่ถูกใช้ซ้ำ ๆ อยู่ที่ด้านล่างของแต่ละหน้า มันไม่จำเป็นที่จะ markup พวกมันด้วย `nav` tag 
+ การใช้ `footer` (จะกล่าวถึงใน challenge ถัดไป) ในกรณีนี้ถือว่าเพียงพอแล้ว
 
 # --instructions--
 
-Camper Cat included navigation links at the top of his training page, but wrapped them in a `div`. Change the `div` to a `nav` tag to improve the accessibility on his page.
+Camper Cat ได้ใส่ลิงค์ของ navigation ที่ด้านบนของหน้า training ของเขาแต่ถ้าล้อมรอบพวกมันไว้ใน `div`
+จงเปลี่ยน `div` ให้เป้น `nav` tag เพื่อปรับปรุงการเข้าถึงหน้านั้นของเขา
 
 # --hints--
 
-Your code should have one `nav` tag.
+โค้ดของคุณควรมี `nav` tag 1 อัน
 
 ```js
 assert($('nav').length == 1);

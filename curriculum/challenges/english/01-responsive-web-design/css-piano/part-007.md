@@ -7,11 +7,11 @@ dashedName: part-7
 
 # --description--
 
-Now copy the set of seven `.key` elements, and paste two more sets into the `.keys` div.
+ตอนนี้ จงคัดลอกเช็ตของ `.key` elements ทั้ง 7 และเพิ่มอีก 2 เช็ตใน `.keys` div
 
 # --hints--
 
-You should have 21 `.key` elements.
+คุณควรมี 21 `.key` elements.
 
 ```js
 const keys = document.querySelectorAll('.key');

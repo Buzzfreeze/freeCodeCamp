@@ -9,9 +9,11 @@ dashedName: use-the-css-transform-scale-property-to-scale-an-element-on-hover
 
 # --description--
 
-The `transform` property has a variety of functions that let you scale, move, rotate, skew, etc., your elements. When used with pseudo-classes such as `:hover` that specify a certain state of an element, the `transform` property can easily add interactivity to your elements.
+`transform` property มี function ให้ใช้งานที่หลากหลายซึ่งทำให้คุณสามารถทำการปรับขนาด, ย้ายที่, หมุน, และทำให้เอียง ให้ element ของคุณ (ยังมี function อื่นอีก)
+เมื่อคุณใช้มันพร้อมกับ pseudo-classes เช่น `:hover` ที่เป็นตัวระบุสถานะหนึ่งของ element, 
+`transform` property จะสามารถเพวกการ interact ให้กับ element
 
-Here's an example to scale the paragraph elements to 2.1 times their original size when a user hovers over them:
+นี่คือตัวอย่างในการปรับขนาดให้ paragraph element มีขนาดใหญ่ขึ้น 2.1 เท่าของขนาดดั้งเดิมของมันเมื่อผู้ใช้ได้ทำการ hovers พวกมัน:
 
 ```css
 p:hover {
@@ -19,15 +21,15 @@ p:hover {
 }
 ```
 
-**Note:** Applying a transform to a `div` element will also affect any child elements contained in the div.
+**Note:** การใช้ transform กับ `div` element จะส่งผลกับ child element ที่ถูกเก้บไว้ใน  div.
 
 # --instructions--
 
-Add a CSS rule for the `hover` state of the `div` and use the `transform` property to scale the `div` element to 1.1 times its original size when a user hovers over it.
+จงเพิ่ม CSS rule ให้กับ `hover` state ของ `div` และจงใช้ `transform` property เพื่อปรับขนาดของ `div` element ให้ใหญ่ขึ้น 1.1 เท่าของขนาดดั้งเดิมของมันเมื่อผู้ใช้ได้ทำการ hovers พวกมัน
 
 # --hints--
 
-The size of the `div` element should scale 1.1 times when the user hovers over it.
+ขนาดของ `div` element ควรใหญ่ขึ้น 1.1 เท่าของขนาดดั้งเดิมของมันเมื่อผู้ใช้ได้ทำการ hovers พวกมัน
 
 ```js
 assert(code.match(/div:hover\s*?{\s*?transform:\s*?scale\(1\.1\);/gi));

@@ -9,17 +9,20 @@ dashedName: add-flex-superpowers-to-the-tweet-embed
 
 # --description--
 
-To the right is the tweet embed that will be used as a practical example. Some of the elements would look better with a different layout. The last challenge demonstrated `display: flex`. Here you'll add it to several components in the tweet embed to start adjusting their positioning.
+ทางด้านขวาคือ tweet embed ที่จะถูกใช้เป็นตัวอย่างการใช้งาน
+บาง element สามารถดูดีขึ้นได้ด้วย layout ที่แตกต่างกัน
+challenge ที่แล้วคุณได้แสดงตัวอย่างของการใช้ `display: flex`. 
+ตอนนี้คุณจะได้ใช้ component หลาย ๆ ตัวใน tweet embed เพื่อเริ่มการจัดตำแหน่งให้พวกมัน to start adjusting their positioning.
 
 # --instructions--
 
-Add the CSS property `display: flex` to all of the following items - note that the selectors are already set up in the CSS:
+จงเพิ่ม CSS property `display: flex` ให้กับ item ทุกตัวดังต่อไปนี้ - จงไว้ว่า selector ได้ถูกกำหนดไว้แล้วใน CSS:
 
 `header`, the header's `.profile-name`, the header's `.follow-btn`, the header's `h3` and `h4`, the `footer`, and the footer's `.stats`.
 
 # --hints--
 
-Your `.follow-btn` should be rendered on the page. Be sure to turn off any extensions such as ad blockers.
+`.follow-btn` ของคุณควรจะถูกแสดงผลในหน้าเว็บไซต์ จงมั่นใจว่าคุณได้ปิด extension ต่าง ๆ เช่น ตัวปิดกั้นโฆษณา ไปหมดแล้ว
 
 ```js
 assert($('.follow-btn').length > 0 && $('.follow-btn').css('display') !== 'none');

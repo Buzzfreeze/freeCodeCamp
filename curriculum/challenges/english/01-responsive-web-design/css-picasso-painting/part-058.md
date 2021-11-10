@@ -7,11 +7,13 @@ dashedName: part-58
 
 # --description--
 
-The `eyes-div` element should hold some eyes. Add two `div` elements inside. Give the first a `class` of `eyes left`, and give the second a `class` of `eyes right`.
+`eyes-div` element ควรเก็บตาเอาไว้
+จงเพิ่ม 2 `div` elements ไว้ข้างใน
+จงกำหนดให้อันแรกมี `class` ชื่อ `eyes left`และอันที่สองมี `class` ชื่อ `eyes right`.
 
 # --hints--
 
-You should have two `div` elements nested in your `eyes-div`.
+คุณควรมี 2 `div` elements อยู่ใน `eyes-div`
 
 ```js
 assert(document.querySelectorAll('#eyes-div > div')?.length === 2);

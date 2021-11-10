@@ -7,7 +7,7 @@ dashedName: part-58
 
 # --description--
 
-Make the paragraph elements appear as a higher priority, with the following CSS properties:
+จงทำให้ paragraph elements ดูมีความสำคัญมากยิ่งขึ้นด้วยการกำหนดค่าCSS properties ดังต่อไปนี้:
 
 ```css
 margin-top: 5px;
@@ -17,7 +17,7 @@ font-size: 20px;
 
 # --hints--
 
-You should use the `p` element selector.
+คุณควรใช้ `p` element selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('p'));

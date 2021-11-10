@@ -7,13 +7,15 @@ dashedName: part-58
 
 # --description--
 
-Add a final checkbox after the previous one with an `id` attribute value of `energetic`. The `name` and attribute should be the same as the last checkbox.
+จงเพิ่ม checkbox อันสุดท้ายต่อจากอันก่อนหน้านี้ โดยกำหนดให้มี `id` attribute เป็น `energetic`
+`name` and attribute ควรจะมีค่าเดียวกับ checkbox อันก่อนหน้า
 
-Also add a `label` element to the right of the new checkbox with text `Energetic`. Make sure to associate the `label` element with the new checkbox.
+นอกจากนี้ จงเพิ่ม `label` element ไปที่ด้านขวาของ checkbox  อันใหม่พร้อมกับข้อความ `Energetic`
+จงเซ็คให้มั่นใจว่าคุณได้เชื่อมโยง `label` element เข้ากับ checkbox อันใหม่
 
 # --hints--
 
-You need to add a new checkbox.
+คุณต้องเพิ่ม checkbox ขึ้นมาอีกอัน
 
 ```js
 assert($('input[type="checkbox"]').length === 3);

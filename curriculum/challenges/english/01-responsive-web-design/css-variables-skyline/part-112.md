@@ -7,11 +7,13 @@ dashedName: part-112
 
 # --description--
 
-Give the `sky` class a `radial-gradient`. Use `#ffcf33` from `0%` to `20%`, `#ffff66` at `21%`, and `#bbeeff` at `100%`. This will add circular gradient to the background that will be your sun.
+จงกำหนดให้ `sky` class มี `radial-gradient`
+จงใช้ `#ffcf33` ไล่ตั้งแต่ `0%` ถึง `20%`, `#ffff66` ที่ `21%`, และ `#bbeeff` ที่ `100%`
+นี่จะเป็นการเพิ่ม circular gradient ให้กับพื้นหลังที่กำลังจะเป็นพระอาทิตย์ของคุณ
 
 # --hints--
 
-You should give `.sky` a `radial-gradient` in the `background` property.
+คุณควรกำหนดให้ `.sky` มี `radial-gradient` ใน `background` property.
 
 ```js
 assert.include(new __helpers.CSSHelp(document).getStyle(".sky")?.background, "radial-gradient");

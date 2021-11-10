@@ -9,19 +9,23 @@ dashedName: override-all-other-styles-by-using-important
 
 # --description--
 
-Yay! We just proved that inline styles will override all the CSS declarations in your `style` element.
+เย้! เราพึ่งพิสูจน์ได้ว่า inline style จะเขียนทับ CSS declarations ทั้งหมดใน `style` element.
 
-But wait. There's one last way to override CSS. This is the most powerful method of all. But before we do it, let's talk about why you would ever want to override CSS.
+แต่รอก่อน มีอีกวิธีที่จะทำการเขียนทับCSS
+มันเป็นวิธีที่มีพลังมากที่คุณ
+แต่ก่อนที่เราจะทำมัน เรามาพูดเกี่ยวกับเหตุผลที่คุณต้องการที่จะเขียนทับ CSS ของคุณ
 
-In many situations, you will use CSS libraries. These may accidentally override your own CSS. So when you absolutely need to be sure that an element has specific CSS, you can use `!important`.
+ในหลาย ๆ สถานการณ์ คุณจะได้ใช้  CSS libraries
+พวกมันอาจจะบังเอิญเขียนทับ CSS ของคุณเอง ดังนั้นเมื่อคุณต้องการที่จะมั่นใจจริง ๆ ว่า element ของคุณมี CSS ของมันเองแล้ว, คุณสามารถใช้ `!important`
 
-Let's go all the way back to our `pink-text` class declaration. Remember that our `pink-text` class was overridden by subsequent class declarations, id declarations, and inline styles.
+กลับมาที่ `pink-text` class declaration
+จงไว้ว่า `pink-text` class นั้นถูกเขียนทับโดย subsequent class declarations, id declarations, และ inline styles.
 
 # --instructions--
 
-Let's add the keyword `!important` to your pink-text element's color declaration to make 100% sure that your `h1` element will be pink.
+เรามาเพิ่มคีย์เวิร์ด `!important` ให้กับ color declaration ของ pink-text element เพื่อทำให้มั่นใจ 100% ว่า `h1` element ของคุณจะเป็นสีชมพู
 
-An example of how to do this is:
+นี่คือตัวอย่างของวิธีการทำ:
 
 ```css
 color: red !important;
@@ -29,7 +33,7 @@ color: red !important;
 
 # --hints--
 
-Your `h1` element should have the class `pink-text`.
+ `h1` element ควรมีคลาส `pink-text`.
 
 ```js
 assert($('h1').hasClass('pink-text'));

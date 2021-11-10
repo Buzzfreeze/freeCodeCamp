@@ -9,11 +9,15 @@ dashedName: use-an-id-attribute-to-style-an-element
 
 # --description--
 
-One cool thing about `id` attributes is that, like classes, you can style them using CSS.
+สิ่งหนึ่งที่ทำให้ `id` attributes มันเจ๋งมากก็คือคุณสามารถตกแต่งมันด้วย CSS เหมือนกับ class
 
-However, an `id` is not reusable and should only be applied to one element. An `id` also has a higher specificity (importance) than a class so if both are applied to the same element and have conflicting styles, the styles of the `id` will be applied.
+อย่างไรก็ตาม,  `id` ไม่สามารถใช้ซ้ำได้และควรใช้แค่กับ element เดียวเท่านั้น
+`id` ยังมีความสำคัญมากกว่า class
+ดังนั้นถ้าทั้งคู่ถูกใช้พร้อมกันกับ element เดียวกับ 
+styles ของ `id` จะถูกใช้งาน
 
-Here's an example of how you can take your element with the `id` attribute of `cat-photo-element` and give it the background color of green. In your `style` element:
+นี่คือตัวอย่างของวิธีที่คุณเรียก element หนึ่งที่มี `id` attribute ของ  `cat-photo-element` และกำหนดให้มันมีสีพื้นหลังเป็นสีเขียน
+นี่คือ `style` element:
 
 ```css
 #cat-photo-element {
@@ -21,15 +25,15 @@ Here's an example of how you can take your element with the `id` attribute of `c
 }
 ```
 
-Note that inside your `style` element, you always reference classes by putting a `.` in front of their names. You always reference ids by putting a `#` in front of their names.
+จงไว้ว่าภายใน `style` element ของคุณ, คุณสามารถอ้างอิง class โดยใส่ `.` ไปที่ด้านหน้าของชื่อพวกมันและ
 
 # --instructions--
 
-Try giving your form, which now has the `id` attribute of `cat-photo-form`, a green background.
+จงลองกำหนดแบบฟอร์มของคุณ ที่ตอนนี้มี `id` attribute เป้น `cat-photo-form`, ให้มีพื้นหลังสีเขียว
 
 # --hints--
 
-Your `form` element should have the id of `cat-photo-form`.
+ `form` element ควรมี id เป็น `cat-photo-form`.
 
 ```js
 assert($('form').attr('id') === 'cat-photo-form');

@@ -7,12 +7,12 @@ dashedName: part-29
 
 # --description--
 
-Within the `@media` query, add a `.keys` selector and set the `width` to `318px`.
+ภายใน `@media` query, จงเพิ่ม 1 `.keys` selector และกำหนดให้มันมี `width` อยู่ที่ `318px`
 
 # --hints--
 
 
-Your `@media` rule should have a `.keys` selector.
+ `@media` rule ควรมี 1 `.keys` selector.
 
 ```js
 const rules = new __helpers.CSSHelp(document).getRuleListsWithinMedia('(max-width: 768px)');

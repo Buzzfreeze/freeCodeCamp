@@ -7,11 +7,12 @@ dashedName: part-13
 
 # --description--
 
-Add a `target` attribute with the value `_blank` to the anchor (`a`) element's opening tag, so that the link opens in a new tab.
+จงเพิ่ม `target` attribute ที่มีค่า `_blank` ให้กับแท็กเปิดของ anchor (`a`) element เพื่อที่จะได้มีการเปิดลิงค์ในหน้าใหม่
 
 # --hints--
 
-Your `p` element should have a nested anchor (`a`) element with the text `cat photos`. You may have deleted it or have a typo.
+ `p` element ควรมี anchor (`a`) element ที่เก็บข้อความ `cat photos` ไว้
+ คุณอาจจะลบมันไป
 
 ```js
 const anchor = $('p > a');

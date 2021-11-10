@@ -9,15 +9,16 @@ dashedName: use-the-css-transform-property-skewy-to-skew-an-element-along-the-y-
 
 # --description--
 
-Given that the `skewX()` function skews the selected element along the X-axis by a given degree, it is no surprise that the `skewY()` property skews an element along the Y (vertical) axis.
+กำหนดให้ `skewX()` function ทำให้ element ที่เลือกไว้เอียงไปด้วยแกน X ตามองศาที่กำหนดให้
+มันเดาได้ไม่ยากหากจะบอกว่า  `skewY()` property ทำให้ element ไว้เอียงไปด้วยแกน X ตามองศาที่กำหนดให้
 
 # --instructions--
 
-Skew the element with the id of `top` -10 degrees along the Y-axis by using the `transform` property.
+จงทำให้ element ที่มี id เป็น `top` เอียง -10 องศาไปตามแกน Y โดยการใช้ `transform` property.
 
 # --hints--
 
-The element with id `top` should be skewed by -10 degrees along its Y-axis.
+element ที่มี id เป็น `top` ควรถูกทำให้เอียง -10 องศาไปตามแกน Y
 
 ```js
 assert(code.match(/#top\s*?{\s*?.*?\s*?transform:\s*?skewY\(-10deg\);/g));

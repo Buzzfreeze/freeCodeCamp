@@ -9,27 +9,31 @@ dashedName: use-a-css-linear-gradient-to-create-a-striped-element
 
 # --description--
 
-The `repeating-linear-gradient()` function is very similar to `linear-gradient()` with the major difference that it repeats the specified gradient pattern. `repeating-linear-gradient()` accepts a variety of values, but for simplicity, you'll work with an angle value and color stop values in this challenge.
+`repeating-linear-gradient()` function นั้นคล้ายกับ `linear-gradient()` โดยมีความต่างหลัก ๆ คือมันจะทำการใช้ gradient pattern ที่ระบุไว้ซ้ำ ๆ
+`repeating-linear-gradient()` จะรับค่าหลาย ๆ ค่า แต่เพื่อความง่าย คุณสามารถใช้แค่ค่ามุมและค่า color stop ในแบบฝึกหัดนี้
 
-The angle value is the direction of the gradient. Color stops are like width values that mark where a transition takes place, and are given with a percentage or a number of pixels.
+ค่ามุมจะเป็นทิศทางของ gradient
+Color stop เป้นเหมือนกับความกว้างที่จะบอกตำแหน่งที่การเปลี่ยนผ่านจะเกิดขึ้นและจะถูกกำหนดเป็นเปอร์เซ็นหรือค่าของ pixel
 
-In the example demonstrated in the code editor, the gradient starts with the color `yellow` at 0 pixels which blends into the second color `blue` at 40 pixels away from the start. Since the next color stop is also at 40 pixels, the gradient immediately changes to the third color `green`, which itself blends into the fourth color value `red` as that is 80 pixels away from the beginning of the gradient.
+ในตัวอย่างนี้จะสาธิตในcode editor, gradient จะเริ่มต้นด้วยสี `yellow` ที่ 0 pixel โดยจะผสมกับสีที่สอง `blue` ที่ 40 pixel ห่างจากจุดเริ่มต้น
+เนื่องจากสีถัดไปก็อยู่แค่ที่ 40 pixels, gradient จะเปลี่ยนไปเป็นสีที่สาม `green` ทันทีโดยมันจะไปผสมกับสีที่สี่ `red` ตรง 80 pixel ที่ห่างจากจุดเริ่มต้นของ gradient
 
-For this example, it helps to think about the color stops as pairs where every two colors blend together.
+สำหรับตัวอย่างนี้, คุณควรจะคำนึงถึง color stops เป็นคู่ ๆ ในตำแหน่งที่ทั้งสองจะผสมกัน
 
 ```css
 0px [yellow -- blend -- blue] 40px [green -- blend -- red] 80px
 ```
 
-If every two color stop values are the same color, the blending isn't noticeable because it's between the same color, followed by a hard transition to the next color, so you end up with stripes.
+ถ้าทุก ๆ ค่าของ 2 color stop เป็นสีเดียวกัน, การผสมสีจะมองไม่เห็นเพราะมันเกิดขึ้นระหว่างสีเดียวกัน ซึ่งถ้าตามด้วย hard transition ไปที่สีถัดไปคุณจะได้แทบขึ้นมา
 
 # --instructions--
 
-Make stripes by changing the `repeating-linear-gradient()` to use a gradient angle of `45deg`, then set the first two color stops to `yellow`, and finally the second two color stops to `black`.
+จงสร้างแถบสีโดยการเปลี่ยนค่า `repeating-linear-gradient()` เพื่อใช้มุม gradient เท่ากับ  `45deg`
+และกำหนดให้ color stops ของสองสีแรกเป็น `yellow`, และ color stop ของอีกสองสีถัดมาเป็น `black`
 
 # --hints--
 
-The angle of the `repeating-linear-gradient()` should be 45deg.
+มุมของ`repeating-linear-gradient()` ควรเป็น 45deg.
 
 ```js
 assert(code.match(/background:\s*?repeating-linear-gradient\(\s*?45deg/gi));

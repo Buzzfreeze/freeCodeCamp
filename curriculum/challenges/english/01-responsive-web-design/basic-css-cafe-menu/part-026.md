@@ -7,11 +7,13 @@ dashedName: part-26
 
 # --description--
 
-Next, you want to center the `div` horizontally. You can do this by setting its `margin-left` and `margin-right` properties to `auto`. Think of the margin as invisible space around an element. Using these two margin properties, center the `div` element within the `body` element.
+ถัดไป คุรต้องการที่จะจัดให้ `div` อยู่ตรงกลางในแนวนอน
+คุณสามารถทำมันได้โดยการกำหนดให้ `margin-left` และ `margin-right` properties มีค่าเป็น `auto`
+การใช้ margin property 2 อันนี้จะทำให้ `div` element ข้างใน `body` element อยู่ตรงกลาง
 
 # --hints--
 
-You should set the `margin-left` property to `auto`.
+คุรควรกำหนดให้`margin-left` property เท่ากับ `auto`.
 
 ```js
 const hasMargin = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style['margin-left'] === 'auto');

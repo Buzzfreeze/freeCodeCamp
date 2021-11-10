@@ -9,21 +9,23 @@ dashedName: create-a-column-gap-using-grid-column-gap
 
 # --description--
 
-So far in the grids you have created, the columns have all been tight up against each other. Sometimes you want a gap in between the columns. To add a gap between the columns, use the `grid-column-gap` property like this:
+จถึงตอนนี้ในกริดที่คุณสร้างขึ้นมา, ทุกคอลัมน์ได้ทุกบีบให้ชิดกัน
+บางครั้ง คุณก็ต้องการช่องว่างระหว่างคอลัมน์
+จงใช้  `grid-column-gap` property เพื่อที่จะเพิ่มช่องว่างระหว่างคอลัมน์ ดังต่อไปนี้:
 
 ```css
 grid-column-gap: 10px;
 ```
 
-This creates 10px of empty space between all of our columns.
+โค้ดนี้จะสร้างช่องว่างระหว่างคอลัมน์ขนาด 10px ให้กับทุกคอลัมน์
 
 # --instructions--
 
-Give the columns in the grid a `20px` gap.
+จงกำหนดให้คอลัมน์ในกริดมีขนาดช่องว่างกว้าง `20px` 
 
 # --hints--
 
-`container` class should have a `grid-column-gap` property that has the value of `20px`.
+`container` class ควรมี `grid-column-gap` property อันหนึ่งที่มีค่า `20px`
 
 ```js
 assert(

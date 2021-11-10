@@ -7,13 +7,13 @@ dashedName: part-22
 
 # --description--
 
-The `figure` element represents self-contained content and will allow you to associate an image with a caption.
+`figure` element จะแสดง self-contained content และจะทำให้คุณสามารถเพิ่ม caption ให้กับรูปภาพได้
 
-Nest the image you just added within a `figure` element.
+จงใส่รูปที่คุณพึ่งเพิ่มมาไว้ใน`figure` element.
 
 # --hints--
 
-Your `figure` element should have an opening tag. Opening tags have the following syntax: `<elementName>`.
+`figure` element ควรมีแท็กเปิดโดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(document.querySelector('figure'));

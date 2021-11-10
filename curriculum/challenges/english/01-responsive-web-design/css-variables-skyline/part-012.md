@@ -7,11 +7,12 @@ dashedName: part-12
 
 # --description--
 
-Give the parts of your building `width` and `height` properties with these values: `70%` and `10%` to `.bb1a`, `80%` and `10%` to `.bb1b`, `90%` and `10%` to `.bb1c`, and `100%` and `70%` to `.bb1d`. Remember that these percentages are relative to the parent and note that the heights will add up to 100% - vertically filling the container.
+จงกำหนดให้แต่ละส่วนของ building มี`width` และ `height` properties ตามค่าเหล่านี้: `70%` และ`10%` ให้กับ `.bb1a`, `80%` และ `10%` ให้กับ `.bb1b`, `90%` และ`10%` ให้กับ `.bb1c`, `100%` และ `70%` ให้กับ `.bb1d`
+จงจำไว้ว่า percentage เหล่านี้จะสัมพัทธ์กับ parent และจำไว้ว่า heights จะมีค่าไปถึง 100% - ตามความสูงของ container.
 
 # --hints--
 
-You should use a class selector to style `.bb1a`.
+คุณควรใช้ class selector อันหนึ่งเพื่อปรับแต่ง `.bb1a`.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('.bb1a'));

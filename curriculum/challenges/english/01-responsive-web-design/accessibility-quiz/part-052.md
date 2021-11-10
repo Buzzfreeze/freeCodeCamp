@@ -7,11 +7,11 @@ dashedName: part-52
 
 # --description--
 
-Add padding to the top and left of the `.info` elements, and set the other values to `0`.
+จงเพิ่ม padding ที่ด้านบนและซ้ายของ `.info` elements และจงตั้งค่าอื่น ๆ ให้เท่ากับ `0`.
 
 # --hints--
 
-You should use the `.info` selector.
+คุณควรใช้ `.info` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('.info'));

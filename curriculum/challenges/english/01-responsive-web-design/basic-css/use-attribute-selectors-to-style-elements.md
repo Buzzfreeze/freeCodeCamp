@@ -9,11 +9,14 @@ dashedName: use-attribute-selectors-to-style-elements
 
 # --description--
 
-You have been adding `id` or `class` attributes to elements that you wish to specifically style. These are known as ID and class selectors. There are other CSS Selectors you can use to select custom groups of elements to style.
+คุณได้เพิ่ม `id` หรือ `class` attributes ให้กับ element ที่คุณต้องการจะตกแต่งมันโดยเฉพาะ
+พวกนี้ถูกเรียกว่า ID และ class selectors
+พวกนี้คือ  CSS Selectors อีกแบบที่คุรสามารถใช้เพื่อเลือกกลุ่มของ element เพื่อตกแต่งได้
+เราจะกลับมาใช้ CatPhotoApp อีกครั้งเพื่อฝึกการใช้ CSS Selectors
 
-Let's bring out CatPhotoApp again to practice using CSS Selectors.
-
-For this challenge, you will use the `[attr=value]` attribute selector to style the checkboxes in CatPhotoApp. This selector matches and styles elements with a specific attribute value. For example, the below code changes the margins of all elements with the attribute `type` and a corresponding value of `radio`:
+สำหรับแบบฝึกหัดนี้, คุณจะได้ใช้ `[attr=value]` attribute selector เพื่อตกแต่งcheckboxe ใน CatPhotoApp
+selectorนี้จะจับคู่และตกแต่ง element ด้วยค่า attribute ตามที่ระบุ
+ยกตัวอย่างเช่น โค้ดด้านล่างจะเปลี่ยน margins ของทุก element ที่มี attribute `type` และสัมพันธ์กับค่าของ `radio`:
 
 ```css
 [type='radio'] {
@@ -23,11 +26,11 @@ For this challenge, you will use the `[attr=value]` attribute selector to style 
 
 # --instructions--
 
-Using the `type` attribute selector, try to give the checkboxes in CatPhotoApp a top margin of 10px and a bottom margin of 15px.
+โดยใช้ `type` attribute selector, จงลองกำหนด checkboxes ใน CatPhotoApp ให้มี top margin เป็น 10px และมี bottom margin เป็น 15px
 
 # --hints--
 
-The `type` attribute selector should be used to select the checkboxes.
+`type` attribute selector ควรถูกใช้เพื่อเลือก checkboxes
 
 ```js
 assert(

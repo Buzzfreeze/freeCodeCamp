@@ -7,13 +7,13 @@ dashedName: part-34
 
 # --description--
 
-Now you will add a web form to collect information from users.
+ตอนนี้ คุณจะได้เพิ่มแบบฟอร์มของเว็บไซต์เพื่อเก็บข้อมูลของผู้ใช้
 
-After the `Cat Form` heading, add a `form` element.
+ต่อจาก  `Cat Form` heading, จงเพิ่ม `form` element.
 
 # --hints--
 
-Your `form` element should have an opening tag and closing tag. You may be missing one or both of the required tags, or have them in the wrong order.
+`form` element ควรมีทั้งแท็กเปิดและแท็กปิด ถ้าหาไม่เจอคุณอาจจะเผลอลบแท็กเปิดหรือแท็กปิดของมันไปโดยไม่รู้ตัว
 
 ```js
 assert(document.querySelector('form') && code.match(/<\/form>/g));

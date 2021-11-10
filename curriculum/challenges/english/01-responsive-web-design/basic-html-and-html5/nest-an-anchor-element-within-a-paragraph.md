@@ -8,7 +8,7 @@ dashedName: nest-an-anchor-element-within-a-paragraph
 
 # --description--
 
-You can nest links within other text elements.
+ึุณสามารถเก็บลิงค์ไว้ใน text elements อันอื่น ๆ
 
 ```html
 <p>
@@ -16,41 +16,45 @@ You can nest links within other text elements.
 </p>
 ```
 
-Let's break down the example. Normal text is wrapped in the `p` element:
+เรามันค่อย ๆ ดูตัวอย่างนี้กันดีกว่า Normal text จะถูกเก็บไว้ใน `p` element:
 
 ```html
 <p> Here's a ... for you to follow. </p>
 ```
 
-Next is the *anchor* element `<a>` (which requires a closing tag `</a>`):  
+ถัดมาคือ *anchor* element `<a>` (ซึ่งจำเป็นตัวมีแท็กปิด `</a>`):  
 
 ```html
 <a> ... </a>
 ```
 
-`target` is an anchor tag attribute that specifies where to open the link. The value `_blank` specifies to open the link in a new tab. The `href` is an anchor tag attribute that contains the URL address of the link:  
+`target` เป็น anchor tag attribute ที่จะระบุตำแหน่งที่จะเปิดลิงค์
+ค่า `_blank` เป็นการบอกให้เปิดลิงค์ในแท็บใหม่
+`href` เป็น anchor tag attribute ที่จะเก็บ URL address ของลิงค์นั้นไว้:  
 
 ```html
 <a href="https://www.freecodecamp.org" target="_blank"> ... </a>
 ```
 
-The text, `link to www.freecodecamp.org`, within the `a` element is called <dfn>anchor text</dfn>, and will display the link to click:
+ข้อความ `link to www.freecodecamp.org` ที่อยู่ใน `a` element นั้นถูกเรียกว่า <dfn>anchor text</dfn> และจะแสดงลิงค์ที่ให้คลิก:
 
 ```html
 <a href=" ... " target="...">link to freecodecamp.org</a>
 ```
 
-The final output of the example will look like this:  
+output สุดท้ายของตัวอย่างจะมีหน้าตาประมาณนี้:  
 
 Here's a <a href="https://www.freecodecamp.org" target="_blank">link to www.freecodecamp.org</a> for you to follow.
 
 # --instructions--
 
-Nest the existing `a` element within a new `p` element. Do not create a new anchor tag. The new paragraph should have text that says `View more cat photos`, where `cat photos` is a link, and the rest is plain text.
+จงเก็บ `a` element ไว้ใน `p` element อันใหม่
+ห้ามสร้าง anchor tag อันใหม่
+พารากราฟอันใหม่ควรจะมีข้อความที่เขียนว่า `View more cat photos`, โดย `cat photos` จะเป็นลิงค์และส่วนที่เหลือก็เป็นข้อความปกติ
 
 # --hints--
 
-You should only have one `a` element.
+คุณควรมีแค่ `a` element 1 อัน
 
 ```js
 assert(

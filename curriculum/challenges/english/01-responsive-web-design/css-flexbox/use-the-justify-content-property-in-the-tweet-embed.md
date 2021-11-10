@@ -9,15 +9,17 @@ dashedName: use-the-justify-content-property-in-the-tweet-embed
 
 # --description--
 
-The last challenge showed an example of the `justify-content` property. For the tweet embed, this property can be applied to align the items in the `.profile-name` element.
+challenge ที่แล้วได้แสดงให้เห็นตัวอย่างของการใช้ `justify-content` property
+สำหรับ tweet embed นั้น, property นี้สามารถถูกใช้เพื่อเรียง item ให้อยู่ตรงกันได้ภายใน `.profile-name` element.
 
 # --instructions--
 
-Add the CSS property `justify-content` to the header's `.profile-name` element and set the value to any of the options from the last challenge.
+จงเพิ่ม CSS property `justify-content` ให้กับ `.profile-name` element ของ header และจงกำหนดค่าให้กับตัวเลือกอื่น ๆ จาก challenge ที่แล้ว
 
 # --hints--
 
-Your `.follow-btn` should be rendered on the page. Be sure to turn off any extensions such as ad blockers.
+`.follow-btn` ควรถูกแสดงผลในหน้าเว็บไซต์
+จงเช็คให้มั่นใจว่าคุณได้ปิด extension อย่าง ตัวปิดหกั้นโฆษณาไปแล้ว
 
 ```js
 assert($('.follow-btn').length > 0 && $('.follow-btn').css('display') !== 'none');

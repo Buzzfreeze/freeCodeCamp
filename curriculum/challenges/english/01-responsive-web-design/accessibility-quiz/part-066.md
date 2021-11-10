@@ -7,18 +7,20 @@ dashedName: part-66
 
 # --description--
 
-Setting the `scroll-behaviour` to `smooth` is preferred by most users. However, some users find this to be too slow, and prefer to have the scrolling happen instantaneously.
+การตั้งค่าให้ `scroll-behaviour` มีค่า `smooth` เป็นที่ชื่นชอบของผู้ใช้ทั่วไป
+อย่างไรก็ตาม สำหรับผู้ใช้บางคนก็รู้สึกว่ามันเคลื่อนไหวได้ช้าเกินไปและชอบให้การ scoll เกิดขึ้นในทันที
 
-There exists a media rule to set CSS based on the user's browser settings. This media rule is called `prefers-reduced-motion`, and expects one of the following values:
+media rule อันหนึ่งที่จะกำหนด CSS ตามการตั้งค่าการค้นหาของผู้ใช้
+media rule เรียกว่า `prefers-reduced-motion` และควรให้ค่าใดค่าหนึ่งดังต่อไปนี้:
 
 - `reduce`
 - `no-preference`
 
-Wrap the appropriate rule within a `prefers-reduced-motion` media rule such that a `scroll-behavior` of `smooth` is only set if the user's browser setting is `no-preference`.
+จงคลุม rule ที่เหมาะสมภายใน `prefers-reduced-motion` media rule ซึ่งทำให้ `scroll-behavior` ถูกตั้งค่าให้เป็นแบบ`smooth` เมื่อการตั้งค่าการค้นหาของผู้ใช้ เป็น `no-preference`เท่านั้น
 
 # --hints--
 
-You should have a `@media (prefers-reduced-motion: no-preference)` rule.
+คุณควรมี `@media (prefers-reduced-motion: no-preference)` rule.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getRuleListsWithinMedia('(prefers-reduced-motion: no-preference)'));

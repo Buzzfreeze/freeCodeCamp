@@ -7,13 +7,13 @@ dashedName: part-3
 
 # --description--
 
-Continuing with the `meta` tags, a `viewport` definition tells the browser how to render the page. Including one betters visual accessibility on mobile, and improves _SEO_ (search engine optimisation).
+มาพูดถึง `meta` tags กันต่อ `viewport` definition ทำหน้าที่บอก browser ว่าจะ render page อย่างไรและช่วยให้เข้าถึงการมองเห็นในโทรศัพท์ได้ดียิ่งขึ้น นอกจากนี้ยังช่วยในเรื่องของ _SEO_ (search engine optimisation).
 
-Add a `viewport` definition with a `content` attribute detailing the `width` and `initial-scale` of the page.
+จงเพิ่ม `viewport` definition พร้อมกับ `content` attribute ที่มีการบอกค่า `width` and `initial-scale` ของ page.
 
 # --hints--
 
-You should create another `meta` element in the `head`.
+คุณควรสร้า `meta` element ขึ้นมาอีกอันหนึ่งใน `head`.
 
 ```js
 assert.equal(document.querySelectorAll('body > meta')?.length, 2);

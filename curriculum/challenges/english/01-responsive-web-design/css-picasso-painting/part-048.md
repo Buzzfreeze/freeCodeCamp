@@ -7,11 +7,11 @@ dashedName: part-48
 
 # --description--
 
-Set the `z-index` of the `white-paper` to `1`.
+จงกำหนดให้ `z-index` ของ `white-paper` ให้กับ `1`
 
 # --hints--
 
-Your `#white-paper` selector should have a `z-index` property set to `1`.
+`#white-paper` selector ควรมี  `z-index` property อันหนึ่งที่มีค่าเท่ากับ `1`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#white-paper')?.zIndex === '1');

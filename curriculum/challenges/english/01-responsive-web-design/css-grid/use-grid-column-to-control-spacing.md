@@ -9,31 +9,33 @@ dashedName: use-grid-column-to-control-spacing
 
 # --description--
 
-Up to this point, all the properties that have been discussed are for grid containers. The `grid-column` property is the first one for use on the grid items themselves.
+จนถึงตอนนี้, property ทั้งหมดที่ได้พูดได้นั้นมีไว้เพื่อ grid containers
+`grid-column` property เป็นอันแรกสำหรับใช้กับ grid item
 
-The hypothetical horizontal and vertical lines that create the grid are referred to as <dfn>lines</dfn>. These lines are numbered starting with 1 at the top left corner of the grid and move right for columns and down for rows, counting upward.
+เส้นแนวตั้งและแนวนอนสมมุติที่สร้างกริดจะถูกเรียกว่า <dfn>lines</dfn>
+line พวกนี้เริ่มนับ 1 จากมุมซ้ายบนไล่ลงไปข้างล่างสำหรับแถว และไล่ไปทางขวาสำหรับคอลัมน์
 
-This is what the lines look like for a 3x3 grid:
+นี่คือหน้าตาของ line ของกริด 3x3:
 
 <div style='position:relative;margin:auto;background:Gainsboro;display:block;margin-top:100px;margin-bottom:50px;width:200px;height:200px;'><p style='left:25%;top:-30%;font-size:130%;position:absolute;color:RoyalBlue;'>column lines</p><p style='left:0%;top:-15%;font-size:130%;position:absolute;color:RoyalBlue;'>1</p><p style='left:30%;top:-15%;font-size:130%;position:absolute;color:RoyalBlue;'>2</p><p style='left:63%;top:-15%;font-size:130%;position:absolute;color:RoyalBlue;'>3</p><p style='left:95%;top:-15%;font-size:130%;position:absolute;color:RoyalBlue;'>4</p><p style='left:-40%;top:45%;font-size:130%;transform:rotateZ(-90deg);position:absolute;'>row lines</p><p style='left:-10%;top:-10%;font-size:130%;position:absolute;'>1</p><p style='left:-10%;top:21%;font-size:130%;position:absolute;'>2</p><p style='left:-10%;top:53%;font-size:130%;position:absolute;'>3</p><p style='left:-10%;top:85%;font-size:130%;position:absolute;'>4</p><div style='left:0%;top:0%;width:5%;height:100%;background:RoyalBlue;position:absolute;'></div><div style='left:31%;top:0%;width:5%;height:100%;background:RoyalBlue;position:absolute;'></div><div style='left:63%;top:0%;width:5%;height:100%;background:RoyalBlue;position:absolute;'></div><div style='left:95%;top:0%;width:5%;height:100%;background:RoyalBlue;position:absolute;'></div><div style='left:0%;top:0%;width:100%;height:5%;background:black;position:absolute;'></div><div style='left:0%;top:31%;width:100%;height:5%;background:black;position:absolute;'></div><div style='left:0%;top:63%;width:100%;height:5%;background:black;position:absolute;'></div><div style='left:0%;top:95%;width:100%;height:5%;background:black;position:absolute;'></div></div>
 
-To control the number of columns an item will consume, you can use the `grid-column` property in conjunction with the line numbers you want the item to start and stop at.
+เพื่อที่จะได้ควบคุมจำนวนของคอลัมน์ที่ item จะอยู่, คุณสามารถใช้ `grid-column` property ในการระบุลำดับของเส้นที่เป็นจุดเริ่มต้นและสิ้นสุดของ item ได้
 
-Here's an example:
+นี่คือตัวอย่าง:
 
 ```css
 grid-column: 1 / 3;
 ```
 
-This will make the item start at the first vertical line of the grid on the left and span to the 3rd line of the grid, consuming two columns.
+สิ่งนี้จะทำให้ item เริ่มที่เส้นแนวตั้งอันแรกและลากไปจนทุกเส้นแนวตั้งอันที่สามจากซ้ายมือ ซึ่งแปลว่ามันจะกินพื้นที่ 2 คอลัมน์
 
 # --instructions--
 
-Make the item with the class `item5` consume the last two columns of the grid.
+จงทำให้ item ที่มีคลาส `item5` กินพื้นที่ 2 คอลัมน์สุดท้ายของกริด
 
 # --hints--
 
-`item5` class should have a `grid-column` property.
+`item5` class ควรมี `grid-column` property อันหนึ่ง
 
 ```js
 assert(

@@ -7,11 +7,13 @@ dashedName: part-13
 
 # --description--
 
-Time to style the keys. Below the `#piano` rule, target the `.keys` with a `class` selector. Give the new rule a `background-color` property of `#040404`, a `width` property of `949px` and a `height` property of `180px`.
+ถึงเวล่ที่จะตกแต่งคีย์เปียโนแล้ว
+ภายใต้ `#piano` rule, จงหา `.keys` ด้วย `class` selector
+จงกำหนดให้ rule อันใหม่มี `background-color` property เท่ากับ `#040404`, `width` property เท่ากับ `949px` และ `height` property เท่ากับ `180px`
 
 # --hints--
 
-You should have a `.keys` selector.
+คุณควรมี 1 `.keys` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.keys'));

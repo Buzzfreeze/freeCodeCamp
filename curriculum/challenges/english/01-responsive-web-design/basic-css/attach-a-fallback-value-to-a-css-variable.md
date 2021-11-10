@@ -9,25 +9,28 @@ dashedName: attach-a-fallback-value-to-a-css-variable
 
 # --description--
 
-When using your variable as a CSS property value, you can attach a fallback value that your browser will revert to if the given variable is invalid.
+เมื่อคุณใช้ตัวแปรเป็นค่าของ CSS property, คุรสามารถแนบค่า fallback ที่ browser ของคุณจะใช้ถ้า variable ที่ใส่ไปใช้ไม่ได้
 
-**Note:** This fallback is not used to increase browser compatibility, and it will not work on IE browsers. Rather, it is used so that the browser has a color to display if it cannot find your variable.
+**Note:** fallback อันนี้จะไม่ถูกใช้เพื่อเพิ่ม browser compatibility, และมันจะไม่ทำงานบ IE browsers
+จริง ๆ มันถูกใช้เพื่อที่ browser จะมีซักสีให้แสดงผลถ้ามันไม่สามารถหาตัวแปรของคุณเจอ 
 
-Here's how you do it:
+นี่คือวิธีที่จะทำมัน:
 
 ```css
 background: var(--penguin-skin, black);
 ```
 
-This will set background to `black` if your variable wasn't set. Note that this can be useful for debugging.
+โค้ดข้างบนจะกำหนดให้พื้นหลังเป็น `black` ถ้าตัวแปรของคุณไม่ได้ถูกตั้งไว้ 
+จงจำไว้ว่ามันอาจจะเป็นประโยชน์เวลา debug
 
 # --instructions--
 
-It looks like there is a problem with the variables supplied to the `.penguin-top` and `.penguin-bottom` classes. Rather than fix the typo, add a fallback value of `black` to the `background` property of the `.penguin-top` and `.penguin-bottom` classes.
+มันเหมือนกับมีปัญญาบางอย่างกับตัวแปรที่เป็นค่าของ `.penguin-top` และ `.penguin-bottom` classes
+แทนที่จะแก้ความผิดพลาดที่มาจากการพิมพ์ จงเพิ่มค่า fallback ให้เป็น `black` สำหรับ `background` property ของ `.penguin-top` และ `.penguin-bottom` classes.
 
 # --hints--
 
-The fallback value of `black` should be used in the `background` property of the `penguin-top` class.
+ค่า fallback ที่เป็น `black` ควรจะถูกใช้ใน `background` property ของ `penguin-top` class.
 
 ```js
 assert(

@@ -7,13 +7,14 @@ dashedName: part-8
 
 # --description--
 
-A useful property of an _SVG_ (scalable vector graphics) is that is contains a `path` attribute which allows the image to be scaled without affecting the resolution of the resultant image.
+คุณสมบัติสำคัญของ _SVG_ (scalable vector graphics) คือการที่มันเก็บ `path` attribute ไว้ซึ่งจะทำให้เราสามารถเพิ่ม-ลดขนาดของรูปภาพได้โดยไม่ต้องกังวลเรื่องของ resolution ของภาพ.
 
-Currently, the `img` is assuming it's default size, which is too large. Correctly, scale the image using it's `id` as a selector, and setting the `width` to `max(100px, 18vw)`.
+ตอนนี้ `img` นั้นใช้ขนาด default ของมันเป็นแต่พบว่าขนาดใหญ่เกินไป
+จงปรับขนาดของรูปให้เหมาะสมโดยใช้ `id` เป็น selector, และตั้งค่าให้ `width` เป็น `max(100px, 18vw)`
 
 # --hints--
 
-You should use the `#logo` selector to target the `img` element.
+คุณควรใช้ `#logo` selector เพื่อ target `img` element.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('#logo'));

@@ -9,21 +9,24 @@ dashedName: use-abbreviated-hex-code
 
 # --description--
 
-Many people feel overwhelmed by the possibilities of more than 16 million colors. And it's difficult to remember hex code. Fortunately, you can shorten it.
+หลายคนรู้สึกตกใจกับจำนวนสีที่มากกว่า 16 ล้านสี
+และนี่มันยากที่จะจำรหัสสี
+โชคดีที่เราสามารถย่อมันได้ 
 
-For example, red's hex code `#FF0000` can be shortened to `#F00`. This shortened form gives one digit for red, one digit for green, and one digit for blue.
+ยกตัวอย่างเช่น, hex code ของสีแดงคือ `#FF0000` เราสามารถย่อให้มันเป็น `#F00` ได้
+รูปย่อของกำหนดจะให้หลักหนึ่งแทนสีแดง หลักที่สองแทนสีเขียว และหลักที่สามแทนสีน้ำเงิน
 
-This reduces the total number of possible colors to around 4,000. But browsers will interpret `#FF0000` and `#F00` as exactly the same color.
+มันจะช่วยลดจำนวนของสีที่เป็นไปได้ทั้งหมดไปอยู่ที่ประมาณ 4000 สี แต่ browsers จะยังแปลงให้ `#FF0000` และ `#F00` เป็นสีเดียวกัน
 
 # --instructions--
 
-Go ahead, try using the abbreviated hex codes to color the correct elements.
+เชิญลองใช้ hex code แบบย่อเพื่อลงสี element ให้ถูกต้อง
 
 <table class='table table-striped'><tbody><tr><th>Color</th><th>Short Hex Code</th></tr><tr><td>Cyan</td><td><code>#0FF</code></td></tr><tr><td>Green</td><td><code>#0F0</code></td></tr><tr><td>Red</td><td><code>#F00</code></td></tr><tr><td>Fuchsia</td><td><code>#F0F</code></td></tr></tbody></table>
 
 # --hints--
 
-Your `h1` element with the text `I am red!` should be given the `color` red.
+`h1` element ที่มีข้อความว่า `I am red!` ควรมี `color` เป็นสีแดง
 
 ```js
 assert($('.red-text').css('color') === 'rgb(255, 0, 0)');

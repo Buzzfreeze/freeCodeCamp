@@ -9,7 +9,9 @@ dashedName: adjust-the-height-of-an-element-using-the-height-property
 
 # --description--
 
-You can specify the height of an element using the `height` property in CSS, similar to the `width` property. Here's an example that changes the height of an image to 20px:
+คุณสามารถระบุความสุงของ element โดยใช้ `height` property ใน CSS
+เช่นเดียวกันกับ `width` property
+นี่คือตัวอย่างในการเปลี่ยนความสูงของรูปให้อยู่ที่ 20px:
 
 ```css
 img {
@@ -19,13 +21,12 @@ img {
 
 # --instructions--
 
-Add a `height` property to the `h4` tag and set it to 25px.
+จงเพิ่ม`height` property ให้กับ `h4` tag และกำหนดให้มันมีค่า 25px.
 
-**Note:** You may need to be at 100% zoom to pass the test on this challenge.
-
+**Note:** คุณอาจจะตั้งให้มันซูมที่ 100% เพื่อให้ผ่าน test ของแบบฝึกหัดนี้
 # --hints--
 
-Your code should change the `h4` `height` property to a value of 25 pixels.
+โค้ดของคุณควรเปลี่ยน  `height` property ของ `h4` ให้มีค่าเป็น t25 pixels
 
 ```js
 assert(

@@ -7,11 +7,12 @@ dashedName: part-56
 
 # --description--
 
-Next, change the two `#999` of `.bb2a` to `transparent`. This will make the left and right borders invisible.
+ขั้นตอนถัดไป จงเปลี่ยนค่า `#999` ทั้ง 2 ตัวใน `.bb2a` ไปเป็น `transparent`
+นี่จะทำให้กรอบซ้ายและขวาล่องหน
 
 # --hints--
 
-You should change the `border-left` to use `transparent`.
+คุณควรเปลี่ยน `border-left` ไปเป็น `transparent`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(".bb2a")?.borderLeft, "5vw solid transparent");

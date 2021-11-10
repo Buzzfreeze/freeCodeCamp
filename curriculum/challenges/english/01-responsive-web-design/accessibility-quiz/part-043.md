@@ -7,13 +7,13 @@ dashedName: part-43
 
 # --description--
 
-The `address` element does not have to contain a physical geographical location. It can be used to provide a link to the subject.
+`address` element ไม่ต้องมีตำแหน่งของสถานที่ในโลกจริง ๆ แต่มันสามารถเป็น link ที่พาไปยังผู้เขียนหรือผู้สร้างได้
 
-Wrap a link around the text `freeCodeCamp`, and set its location to `https://freecodecamp.org`.
+จงใส่ลิงค์ครอบข้อความ `freeCodeCamp` และกำหนดให้ตำแหน่งของมันไปยัง `https://freecodecamp.org`.
 
 # --hints--
 
-You should add an `a` element.
+คุณควรเพิ่ม `a` element.
 
 ```js
 assert.exists(document.querySelector('address > a'));

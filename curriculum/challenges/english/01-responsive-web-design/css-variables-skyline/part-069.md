@@ -7,11 +7,13 @@ dashedName: part-69
 
 # --description--
 
-Nest four new `div` elements within `.bb4c`, give them all the class of `bb4-window`. These will be windows for this building.
+จงเก็บ `div` element อันใหม่ 4 อันภายใน `.bb4c`
+และจงกำหนดให้พวกมันมีคลาสชื่อ `bb4-window`
+นี่จะเป็นหน้าต่างของตึกหลังนี้
 
 # --hints--
 
-You should add four `div` elements to `.bb4c`.
+Yคุณควรเพิ่ม 4 `div` elements ให้กับ `.bb4c`.
 
 ```js
 assert.equal(document.querySelector(".bb4c")?.children?.length, 4);

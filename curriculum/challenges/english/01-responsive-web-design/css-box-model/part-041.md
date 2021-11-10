@@ -7,13 +7,13 @@ dashedName: part-41
 
 # --description--
 
-The corners of each rectangle are still too sharp.
+มุมของสี่เหลี่ยมแต่ละอันนั้นยังแหลมเกินไป
 
-Round each corner of `.one` by 9 pixels with `border-radius: 9px;`.
+จงทำให้มุมแต่ละของ `.one` อันดูมนขึ้นอีก 9 pixel ด้วยคำสั่ง `border-radius: 9px;`
 
 # --hints--
 
-You should set the `border-radius` property to `9px`.
+คุรควรกำหนดให้ `border-radius` property มีค่า `9px`
 
 ```js
 const hasBorderRadius = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style['border-radius'] === '9px');

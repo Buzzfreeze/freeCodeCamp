@@ -7,11 +7,13 @@ dashedName: part-16
 
 # --description--
 
-Now that you have the CSS in the `styles.css` file, go ahead and remove the `style` element and all its content. Once it is removed, the text that was centered will shift back to the left.
+ตอนนี้ คุณได้ใส่ CSS ในไฟล์ `styles.css`  
+จงลบ `style` element และ content ทั้งหมดของมันออกไป
+หลังจากที่คุณได้เอามันออกไปแล้ว ข้อความที่ถูกจัดให้อยู่ตรงกลางจะกลายไปชิดของซ้าย
 
 # --hints--
 
-You should not have any `style` tags in your code.
+คุณไม่มีอะไรใน `style` tags ของคุณ
 
 ```js
 assert(!code.match(/style/i));

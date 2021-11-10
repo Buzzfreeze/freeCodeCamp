@@ -9,23 +9,29 @@ dashedName: override-class-declarations-by-styling-id-attributes
 
 # --description--
 
-We just proved that browsers read CSS from top to bottom in order of their declaration. That means that, in the event of a conflict, the browser will use whichever CSS declaration came last. Notice that if we even had put `blue-text` before `pink-text` in our `h1` element's classes, it would still look at the declaration order and not the order of their use!
+พวกเราพึ่งพิสูจน์ไปว่า browser อ่าน CSS จากบนลงล่างตามลำดับของ declaration
+มันหมายความว่า ถ้าเกิดมีความขัดแย้งกัน  browser จะใช้ CSS declaration ที่มาที่หลัง
+สังเกตว่าถ้าพวกเราเพิ่ม `blue-text` ก่อน `pink-text` ไว้ใน `h1` element's classes, มันจะยังดูที่ลำดับของ declaration ไม่ใช่ลำดับของการใช้งาน 
 
-But we're not done yet. There are other ways that you can override CSS. Do you remember id attributes?
+แต่เราจะยังไม่จบกับมัน 
+มันมีวิธีอื่นที่เราสามารถเขียนทับ CSS ได้. 
+คุณยังจำ id attributes ได้ไหม?
 
-Let's override your `pink-text` and `blue-text` classes, and make your `h1` element orange, by giving the `h1` element an id and then styling that id.
+มาเขียนทับ `pink-text` และ `blue-text` class กันเถอะ
+นอกจากนั้นจงทำให้ `h1` element เป็นสีส้มโดยการกำหนดให้ `h1` element มี id หนึ่งและตกแต่ง id นั้น
 
 # --instructions--
 
-Give your `h1` element the `id` attribute of `orange-text`. Remember, id styles look like this:
+จงกำหนดให้ `h1` element มี `id` attribute ทีชื่อ `orange-text`. จำไว้ว่า id styles จะเป็นอย่างนี้:
 
 ```html
 <h1 id="orange-text">
 ```
 
-Leave the `blue-text` and `pink-text` classes on your `h1` element.
+พอกับ `blue-text` และ `pink-text` class ที่ `h1` element
 
-Create a CSS declaration for your `orange-text` id in your `style` element. Here's an example of what this looks like:
+จงสร้าง CSS declaration ให้กับ `orange-text` id ใน `style` element
+นี่เป็นตัวอย่างของหน้าตาของมัน:
 
 ```css
 #brown-text {
@@ -33,11 +39,11 @@ Create a CSS declaration for your `orange-text` id in your `style` element. Here
 }
 ```
 
-**Note:** It doesn't matter whether you declare this CSS above or below `pink-text` class, since the `id` attribute will always take precedence.
+**Note:** มันไม่เป็นปัญหาไม่ว่าคุณจะประกาศ CSS นี้ข้างบนหรือข้างล่าง `pink-text` class, เนื่องจาก `id` attribute จะมาก่อนเสมอ
 
 # --hints--
 
-Your `h1` element should have the class `pink-text`.
+ `h1` element ควรมีคลาส `pink-text`.
 
 ```js
 assert($('h1').hasClass('pink-text'));

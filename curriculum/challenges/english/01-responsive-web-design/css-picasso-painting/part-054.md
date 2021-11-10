@@ -7,11 +7,12 @@ dashedName: part-54
 
 # --description--
 
-Next, target your `blue-right` element with an `id` selector. Set the `width` to `400px` and the `height` to `300px`.
+ถัดไป จงชี้ไปที่ `blue-right` element ด้วย `id` selector
+จงกำหนดให้`width`o เป็น`400px` และ`height` เป็น `300px`.
 
 # --hints--
 
-You should have a `#blue-right` selector.
+Yคุณควรมี 1 `#blue-right` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#blue-right'));

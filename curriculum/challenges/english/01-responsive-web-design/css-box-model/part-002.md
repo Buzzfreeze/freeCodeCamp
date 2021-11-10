@@ -7,12 +7,12 @@ dashedName: part-2
 
 # --description--
 
-Within the `head` element, add a `meta` tag which sets the `charset` to `UTF-8`, and a `title` element with the value `Rothko`.
+ภายใน `head` element, จงเพิ่ม `meta` tag ที่กำหนดให้ `charset` เป็น `UTF-8` และ `title` element มีค่า `Rothko`
 
-Within the `body` element, add an `img` element with a `src` of `https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-1.png`.
+ภายใน `body` element, จงเพิ่ม `img` element ที่มี `src` เป็น `https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-1.png`
 # --hints--
 
-Your code should have a `meta` tag.
+คุณควรมี 1 `meta` tag.
 
 ```js
 assert(document.querySelectorAll('meta').length === 1);

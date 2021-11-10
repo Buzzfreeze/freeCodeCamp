@@ -9,9 +9,9 @@ dashedName: use-css-animation-to-change-the-hover-state-of-a-button
 
 # --description--
 
-You can use CSS `@keyframes` to change the color of a button in its hover state.
+คุรสามารถใช้ CSS `@keyframes` เพื่อเปลี่ยนสีของปุ่มเมื่อมันอยู่ใน hover state
 
-Here's an example of changing the width of an image on hover:
+นี่คือตัวอย่างของการเปลี่ยนความหว้างของภาพเมื่อมันถูก hover:
 
 ```html
 <style>
@@ -35,13 +35,14 @@ Here's an example of changing the width of an image on hover:
 
 # --instructions--
 
-Note that `ms` stands for milliseconds, where 1000ms is equal to 1s.
+จงจำไว้ว่า `ms` มาจากคำว่า  milliseconds
 
-Use CSS `@keyframes` to change the `background-color` of the `button` element so it becomes `#4791d0` when a user hovers over it. The `@keyframes` rule should only have an entry for `100%`.
+จงใช้ CSS `@keyframes` เพื่อเปลี่ยน `background-color` ของ `button` element ให้มันเป็น `#4791d0` เมื่อผู้ใช้ hovers มัน
+`@keyframes` rule ควรได้รับค่า `100%`.
 
 # --hints--
 
-The @keyframes rule should use the `animation-name` background-color.
+@keyframes rule ควรใช้สีพื้นหลังของ  `animation-name` 
 
 ```js
 assert(code.match(/@keyframes\s+?background-color\s*?{/g));

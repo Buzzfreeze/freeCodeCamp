@@ -7,11 +7,13 @@ dashedName: part-36
 
 # --description--
 
-The mask needs eyes. Within your `gray-mask` element, add two `div` elements. The first should have the `class` set to `eyes left`, and the second should have the `class` set to `eyes right`.
+หน้ากากต้องการดวงตา
+ภายใน `gray-mask` element, จงเพื่อ 2 `div` elements
+อันแรกควรมี `class` เป็น `eyes left`, และอันที่สองควรมี `class` เป็น `eyes right`
 
 # --hints--
 
-You should have two `div` elements within your `#gray-mask` element.
+คุณควรมี 2`div` elements ภายใน `#gray-mask` element
 
 ```js
 assert(document.querySelectorAll('#gray-mask > div')?.length === 2);

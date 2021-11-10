@@ -7,11 +7,12 @@ dashedName: part-1
 
 # --description--
 
-Welcome to the CSS Variables Skyline project! Start by adding the `!DOCTYPE html` declaration at the top of the document so the browser knows what type of document it's reading.
+ยินดีต้อนรับเข้าสู่โปรเจค CSS Variables Skyline! 
+จงเริ่มด้วยการเพิ่ม `!DOCTYPE html` declaration ที่ด้านบนของเอกสารเพื่อที่ browser จะได้รู้ว่ามันกำลังอ่านเอกสารประเภทไหนอยู่
 
 # --hints--
 
-Your code should contain the `DOCTYPE` reference.
+โค้ดของคุณควรมี `DOCTYPE` reference.
 
 ```js
 assert(code.match(/<!DOCTYPE/gi));

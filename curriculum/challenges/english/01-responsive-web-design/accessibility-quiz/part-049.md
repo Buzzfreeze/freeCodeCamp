@@ -7,9 +7,9 @@ dashedName: part-49
 
 # --description--
 
-On small screens, the unordered list in the navigation bar overflows the right side of the screen.
-
-Fix this by using _Flexbox_ to wrap the `ul` content. Then, set the following CSS properties to correctly align the text:
+บนจอขนาดเล็ก list ที่ไม่ได้ถูกเรียงลำดับไว้ใน navigation bar จะหลุดไปทางขวาของจอ
+จงยึด list เหล่านี้โดยการใช้ _Flexbox_ ครอบ `ul` content
+หลังจากนั้น จงตั้งค่า CSS properties ต่อไปนี้ให้ align ข้อความได้อย่างถูกต้อง :
 
 ```css
 align-items: center;
@@ -20,7 +20,7 @@ height: 100%;
 
 # --hints--
 
-You should give the `ul` a `flex-wrap` of `wrap`.
+คุณควรเพิ่ม `flex-wrap` ที่มีค่า `wrap` ใน `ul`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('nav > ul')?.flexWrap, 'wrap');

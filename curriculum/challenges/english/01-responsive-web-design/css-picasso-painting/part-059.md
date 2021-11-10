@@ -7,11 +7,12 @@ dashedName: part-59
 
 # --description--
 
-Within the `triangles` div, you will need to add the elements that will become your triangles. Create thirty `div` elements and give each of them the class `triangle`.
+ใน `triangles` div, คุณจำเป็นต้องเพิ่ม element ที่จะกลายเป็นรูปสามเหลี่ยม
+จงสร้าง 30 `div` elements และตั้งชื่อคลาสของทุกตัวให้เป็น `triangle`
 
 # --hints--
 
-You should have 30 `div` elements within your `triangles` element.
+คุณควรมี 30 `div` elements ภายใน `triangles` element.
 
 ```js
 assert(document.querySelectorAll('#triangles > div')?.length === 30);

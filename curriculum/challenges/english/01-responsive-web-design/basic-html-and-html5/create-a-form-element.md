@@ -8,9 +8,10 @@ dashedName: create-a-form-element
 
 # --description--
 
-You can build web forms that actually submit data to a server using nothing more than pure HTML. You can do this by specifying an `action` attribute on your `form` element.
+คุณสามารถสร้างแบบฟอร์มบนเว็บที่สามารถส่งข้อมูลไปที่ server ของคุณได้โดยใช้แค่ HTML เพียงอย่างเดียวเท่านั้น
+คุณสามารถทำเช่นนี้ได้โดยการระบุ `action` attribute ไว้ใน `form` element
 
-For example:
+นี่คือตัวอย่างe:
 
 ```html
 <form action="/url-where-you-want-to-submit-form-data">
@@ -20,11 +21,11 @@ For example:
 
 # --instructions--
 
-Nest the existing `input` element inside a `form` element and assign `"https://www.freecatphotoapp.com/submit-cat-photo"` to the `action` attribute of the `form` element.
+จงเก็บ `input` element ที่สร้างไว้แล้วไว้ใน `form` element และกำหนด `"https://www.freecatphotoapp.com/submit-cat-photo"` ให้กับ `action` attribute ของ `form` element.
 
 # --hints--
 
-The existing `input` element should be nested within a `form` element.
+`input` element เดิมควรถูกเก็บไว้ใน `form` element
 
 ```js
 const inputElem = document.querySelector('form input');

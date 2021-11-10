@@ -7,13 +7,15 @@ dashedName: part-10
 
 # --description--
 
-You can link to another page with the anchor (`a`) element. For example, `<a href='https://freecodecamp.org'></a>` would link to `freecodecamp.org`.
+คุรสามารถลิงค์เหน้าเว็บไซต์อีกหน้าไว้กับ anchor (`a`) element
+ตัวอย่างเช่น `<a href='https://freecodecamp.org'></a>` จะลิงค์ไปที่ `freecodecamp.org`.
 
-Add an anchor element after the paragraph that links to `https://freecatphotoapp.com`. At this point, the link won’t show up in the preview.
+จงเพิ่ม anchor element ต่อจากพารากราฟที่ลิงค์ไปยัง `https://freecatphotoapp.com`
+ณ จุด ๆ นี้ ลิงค์จะไม่ถูกแสดงในหน้า preview
 
 # --hints--
 
-Your anchor (`a`) element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+anchor (`a`) element ควรมีแท็กเปิด โดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(document.querySelector('a'));

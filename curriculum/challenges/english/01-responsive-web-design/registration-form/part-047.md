@@ -7,11 +7,12 @@ dashedName: part-47
 
 # --description--
 
-To make the `input` and `textarea` elements blend in with the background theme, set their `background-color` to `#0a0a23`. Then, give them a `1px`, `solid` border with a color of `#0a0a23`.
+เพื่อ `input` และ `textarea` elements จะได้กลืนไปกับสีพื้นหลัง จงกำหนดค่าให้ `background-color` เป้น `#0a0a23`
+หลังจากนั้น จงกำหนดให้มันมีขอบหนา `1px`,เป็นแบบ `solid`และมีสี`#0a0a23`
 
 # --hints--
 
-You should use a comma separated element selector to select the `input` and `textarea` elements.
+คุณควรใช้ comma separated element selector เพื่อเลือก `input` แบะ `textarea` element
 
 ```js
 const selFunc = selector => new __helpers.CSSHelp(document).getStyle(selector);

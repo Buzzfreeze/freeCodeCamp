@@ -9,17 +9,21 @@ dashedName: lock-an-element-to-the-browser-window-with-fixed-positioning
 
 # --description--
 
-The next layout scheme that CSS offers is the `fixed` position, which is a type of absolute positioning that locks an element relative to the browser window. Similar to absolute positioning, it's used with the CSS offset properties and also removes the element from the normal flow of the document. Other items no longer "realize" where it is positioned, which may require some layout adjustments elsewhere.
+layout scheme อันต่อมาที่ CSS มีให้ใช้คือ `fixed` position, ซึ่งเป็นการกำหนดตำแหน่งแบบ absolute ประเภทหนึ่งที่จะยึด element ไว้กับหน้าต่างของ browser 
+เช่นเดียวกับการกำหนดตำแหน่งแบบ absolute, มันจะถูกใช้พร้อมกับ CSS offset properties และจะเอา element นั้นออกจาก normal flow ของ document
+item อื่น ๆ จะไม่รู้แล้วว่ามันอยู่ที่ตรงไหน ซึ่งจำเป็นต้องใช้การปรับแต่ง layout ที่ส่วนอื่น
 
-One key difference between the `fixed` and `absolute` positions is that an element with a fixed position won't move when the user scrolls.
+ความต่างสำคัญระหว่าง `fixed` และ `absolute` positions คือการที่ element ที่มี fixed position จะไม่ขยับเมื่อมี scroll จากผู้ใช้
 
 # --instructions--
 
-The navigation bar in the code is labeled with an id of `navbar`. Change its `position` to `fixed`, and offset it 0 pixels from the `top` and 0 pixels from the `left`. After you have added the code, scroll the preview window to see how the navigation stays in place.
+navigation bar ใน code มันถูกติดป้ายไว้ด้วย id ที่ชื่อ `navbar`
+จงเปลี่ยน `position` ของมันให้เป็น `fixed`, และเลื่อนมันลงมาจาก `top` 0 px และ `left` 0 px
+หลังจากที่คุณได้เพิ่มโค้ดแล้ว จงลอง scroll หน้าต่าง preview เพื่อดูว่า navigation ยังอยู่ในตำแหน่งเดิม 
 
 # --hints--
 
-The `#navbar` element should have a `position` set to `fixed`.
+`#navbar` element ควรมี `position` เป็น `fixed`
 
 ```js
 assert($('#navbar').css('position') == 'fixed');

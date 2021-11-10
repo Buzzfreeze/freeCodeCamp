@@ -7,11 +7,13 @@ dashedName: part-4
 
 # --description--
 
-Add a `title` element to the `head`, and give your project a title of `freeCodeCamp Registration Form Project`. Also, nest a self-closing `link` element in the `head` element. Give it a `rel` attribute value of `stylesheet`, a `type` attribute value of `text/css`, and an `href` attribute value of `styles.css`.
+จงเพิ่ม `title` element ที่ `head` และจงใส่ชื่อเรื่องให้โปรเจคของคุณว่า  `freeCodeCamp Registration Form Project`
+นอกจากนี้ จงใส่ self-closing `link` element ใน `head` element
+จงให้ `rel` attribute มีค่า `stylesheet`, `type` attribute มีค่า `text/css`, และ `href` attribute มีค่า `styles.css`.
 
 # --hints--
 
-Your code should have a `title` element.
+โค้ดของคุณควรมี `title` element 1 อัน
 
 ```js
 const title = document.querySelector('title');

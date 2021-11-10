@@ -7,13 +7,13 @@ dashedName: part-61
 
 # --description--
 
-Now you will add a footer section to the page.
+ตอนนี้ คุณจะได้เพิ่ม footer section ให้กับหน้าเว็บไซต์
 
-After the `main` element, add a `footer` element.
+ต่อจาก `main` element, จงเพิ่ม `footer` element.
 
 # --hints--
 
-You have either deleted the `main` element or it is missing an opening tag or closing tag."
+ถ้าหาไม่เจอ คุณอาจจะเผลอลบ `main` element ไปหรือมันขาดแท็กเปิดหรือปิด
 
 ```js
 assert(document.querySelector('main') && code.match(/<\/main>/));

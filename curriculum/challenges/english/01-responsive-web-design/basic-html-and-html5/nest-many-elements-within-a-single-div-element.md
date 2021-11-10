@@ -9,21 +9,21 @@ dashedName: nest-many-elements-within-a-single-div-element
 
 # --description--
 
-The `div` element, also known as a division element, is a general purpose container for other elements.
+`div` element, หรือที่เรียกว่า division element, เป็น container ทั่วไปที่ใช้เก็บ element อื่น
 
-The `div` element is probably the most commonly used HTML element of all.
+`div` element อาจจะเป็น HTML element ที่ถูกใช้บ่อยที่สุด
 
-Just like any other non-self-closing element, you can open a `div` element with `<div>` and close it on another line with `</div>`.
+เช่นเดียวกับ non-self-closing element อันอื่น ๆ คุณสามารถเริ่ม `div` element ด้วย `<div>` และปิดมันด้วย `</div>` ที่อยู่ในอีกบรรทัด
 
 # --instructions--
 
-Nest your "Things cats love" and "Top 3 things cats hate" lists all within a single `div` element.
+จงเก็บลิงต์ "Things cats love" และ "Top 3 things cats hate" ไว้ใน `div` element อันหนึ่ง
 
-Hint: Try putting your opening `div` tag above your "Things cats love" `p` element and your closing `div` tag after your closing `ol` tag so that both of your lists are within one `div`.
+Hint: จงใว่แท็กเปิด `div` tag ด้านบน "Things cats love" `p` element และแท็กปิด `div` tag ต่อจาก `ol` tag เพื่อที่ลิสต์ทั้งสองอันจะอยู๋ภายใน `div` อันหนึ่ง
 
 # --hints--
 
-Your `p` elements should be nested inside your `div` element.
+`p` elements ควรถูกเก็บไว้ใน `div` element.
 
 ```js
 assert($('div').children('p').length > 1);

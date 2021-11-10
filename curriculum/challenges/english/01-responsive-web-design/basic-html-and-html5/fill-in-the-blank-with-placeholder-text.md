@@ -9,19 +9,20 @@ dashedName: fill-in-the-blank-with-placeholder-text
 
 # --description--
 
-Web developers traditionally use <dfn>lorem ipsum text</dfn> as placeholder text. The lorem ipsum text is randomly scraped from a famous passage by Cicero of Ancient Rome.
+นักพัฒนาเว็บไซต์มันจะใช้ <dfn>lorem ipsum text</dfn> เป็น placeholder text
+lorem ipsum text เป็นข้อความที่สุ่มมาจาก Cicero of Ancient Rome
 
-Lorem ipsum text has been used as placeholder text by typesetters since the 16th century, and this tradition continues on the web.
+Lorem ipsum text ถูกใช้เพื่อเป็น placeholder text โดย typesetter ตั้งแต่ศตวรรษที่ 16 และนี่ก็เป็นเหมือนธรรมเนียมที่ทำต่อ ๆ กันมาสำหรับคนทำเว็บ
 
-Well, 5 centuries is long enough. Since we're building a CatPhotoApp, let's use something called "kitty ipsum" text.
+อย่างไรก็ดี, 500 ปีมันก็ค่อนข้างจะยาวนานไปหน่อย ไหน ๆ เราก็กำลังทำ CatPhotoApp ฉะนั้นมาใช้อะไรที่เรียกว่า "kitty ipsum" text กันดีกว่า
 
 # --instructions--
 
-Replace the text inside your `p` element with the first few words of this kitty ipsum text: `Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.`
+จงแทนที่ข้อความใน `p` element ด้วยคำบางคำที่มาจาก kitty ipsum text: `Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.`
 
 # --hints--
 
-Your `p` element should contain the first few words of the provided "kitty ipsum" text.
+`p` element ควรมีคำชุดแรกของ "kitty ipsum" text
 
 ```js
 assert.isTrue(/Kitty(\s)+ipsum/gi.test($('p').text()));

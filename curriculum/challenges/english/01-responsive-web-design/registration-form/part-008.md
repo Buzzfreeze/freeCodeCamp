@@ -7,11 +7,11 @@ dashedName: part-8
 
 # --description--
 
-Now, get rid of the horizontal scroll-bar, by setting the `body` default `margin` added by some browsers to `0`.
+ในตอนนี้ จงเอา scroll-bar ในแนวนอนออกโดนการตั้งค่าให้ default `margin` ของ `body`ที่ถูกเพิ่มโดย browsers มีค่าเท่ากับ `0`
 
 # --hints--
 
-You should add `margin` within the `body` element selector.
+คุณควรเพิ่ม `margin` ภายใน`body` element selector.
 
 ```js
 assert.isNotEmpty(new __helpers.CSSHelp(document).getStyle('body')?.margin);

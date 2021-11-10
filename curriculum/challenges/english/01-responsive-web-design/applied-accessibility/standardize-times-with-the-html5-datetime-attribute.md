@@ -9,9 +9,13 @@ dashedName: standardize-times-with-the-html5-datetime-attribute
 
 # --description--
 
-Continuing with the date theme, HTML5 also introduced the `time` element along with a `datetime` attribute to standardize times. The `time` element is an inline element that can wrap a date or time on a page. A `datetime` attribute holds a valid format of that date. This is the value accessed by assistive devices. It helps avoid confusion by stating a standardized version of a time, even if it's informally or colloquially written in the text.
+มาต่อกันด้วย date theme, HTML5 ก็ได้มีการแนะนำ `time` element พร้อมกับ `datetime` attribute เพื่อจากได้กำหนดเวลาให้เป็นมาตรฐาน 
+`time` element เป็น inline element ที่สามารถเก็บ วัน หรือ เวลา ไว้ในหน้านั้น ๆ ได้
+`datetime` attribute จะเก็บ format ที่ถูกต้องของวันที่นั้นไว้
+สิ่งนี้จะเป็นค่าที่ถูกเข้าถึงด้วย assistive devices
+มันช่วยป้องกันความสับสนที่จะเกิดขึ้นโดยการตั้งมาตรฐานสำหรับการเขียนวันที่ ถึงแม้ว่าจะถูกเขียนเป็นข้อความอย่างไม่สุภาพหรือไม่ถูกต้อง
 
-Here's an example:
+นี่เป้นตัวอย่าง:
 
 ```html
 <p>Master Camper Cat officiated the cage match between Goro and Scorpion <time datetime="2013-02-13">last Wednesday</time>, which ended in a draw.</p>
@@ -19,11 +23,12 @@ Here's an example:
 
 # --instructions--
 
-Camper Cat's Mortal Kombat survey results are in! Wrap a `time` tag around the text `Thursday, September 15<sup>th</sup>` and add a `datetime` attribute to it set to `2016-09-15`.
+ผลจากแบบสำรวจ  Mortal Kombat ของ Camper Cat มาแล้ว!
+จงใช้ `time` tag ครอบข้อความ `Thursday, September 15<sup>th</sup>` และเพิ่ม `datetime` attribute ให้กับมันแล้วจึงตั้งค่าให้มันเท่ากับ `2016-09-15`.
 
 # --hints--
 
-Your code should have a `p` element which includes the text `Thank you to everyone for responding to Master Camper Cat's survey.` and include a `time` element.
+โค้ดของคุณควรมี `p` element ที่มีข้อความ `Thank you to everyone for responding to Master Camper Cat's survey.` และจงเพิ่ม `time` element เข้าไป
 
 ```js
 assert(timeElement.length);

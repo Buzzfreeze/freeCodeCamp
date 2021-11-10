@@ -7,11 +7,13 @@ dashedName: part-42
 
 # --description--
 
-Just like with your `white-hat`, you should style the border for the `black-hat` element. Give it a `border-top-color`, `border-right-color`, and `border-bottom-color` of `transparent`. Set the `border-left-color` to `rgb(45, 31, 19)`.
+เช่นเดียวกับ `white-hat`, คุณควรตกแต่งขอบให้กับ `black-hat` element
+จงกำหนดให้มันมี `border-top-color`, `border-right-color`, และ `border-bottom-color` แบบ `transparent`
+จงกำหนดให้ `border-left-color` มีค่าเป็น `rgb(45, 31, 19)`
 
 # --hints--
 
-Your `#black-hat` selector should have a `border-top-color` property set to `transparent`.
+`#black-hat` selector ควรมี `border-top-color` property อันหนึ่งที่มีค่า `transparent`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#black-hat')?.borderTopColor === 'transparent');

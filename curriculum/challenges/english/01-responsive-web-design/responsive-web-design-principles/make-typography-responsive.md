@@ -9,13 +9,15 @@ dashedName: make-typography-responsive
 
 # --description--
 
-Instead of using `em` or `px` to size text, you can use viewport units for responsive typography. Viewport units, like percentages, are relative units, but they are based off different items. Viewport units are relative to the viewport dimensions (width or height) of a device, and percentages are relative to the size of the parent container element.
+แทนที่จะใช้ `em` หรือ `px` เพื่อกำหนดขนาดของข้อความ คุณสามารถใช้ viewport units สำหรับ responsive typography
+Viewport units (อย่างเช่น percentages) เป็นหน่วยสัมพัทธ์แต่มันขึ้นกับ item ที่แต่ต่างกัน
+Viewport units จะสัมพัทธ์กับ viewport dimensions (ความกว้าง หรือ ความสูง) ของอุปกรณ์หนึ่ง ๆ และ percentages ขะสัมพันธ์กับขนาดของ parent container element
 
-The four different viewport units are:
+viewport units 4 อันที่แตกต่างกันคือ:
 
 <ul><li><code>vw</code> (viewport width): <code>10vw</code> would be 10% of the viewport's width.</li><li><code>vh</code> (viewport height): <code>3vh</code> would be 3% of the viewport's height.</li><li><code>vmin</code> (viewport minimum): <code>70vmin</code> would be 70% of the viewport's smaller dimension (height or width).</li><li><code>vmax</code> (viewport maximum): <code>100vmax</code> would be 100% of the viewport's bigger dimension (height or width).</li></ul>
 
-Here is an example that sets a `body` tag to 30% of the viewport's width.
+นี่คือตัวอย่างที่กำหนดให้ `body` tag มีค่า 30% ของความกว้าง viewport
 
 ```css
 body { width: 30vw; }
@@ -23,11 +25,10 @@ body { width: 30vw; }
 
 # --instructions--
 
-Set the `width` of the `h2` tag to 80% of the viewport's width and the `width` of the paragraph as 75% of the viewport's smaller dimension.
-
+จงกำหนดให้ `width` ของ `h2` tag มีค่า 80% ของความกว้าง viewport และ `width` ของพารากราฟมีค่า 75% ของ dimension ที่เล็กกว่าของ viewport
 # --hints--
 
-Your `h2` tag should have a `width` of 80vw.
+`h2` tag ของคุณควรมี `width` ที่มีค่า 80vw.
 
 ```js
 assert(

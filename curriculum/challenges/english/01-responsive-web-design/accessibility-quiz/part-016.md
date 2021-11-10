@@ -7,19 +7,20 @@ dashedName: part-16
 
 # --description--
 
-Every `region` role requires a visible label, which should be referenced by the `aria-labelledby` attribute.
+ทุก ๆ `region` role ต้องการ label ที่ชัดเจนและควรถูกอ้างอิงโดย `aria-labelledby` attribute.
 
-To the `section` elements, give the following `aria-labelledby` attributes:
+กำหนด `aria-labelledby` attributes ตามที่เขียนไว้ด้านล่างให้กับ `section` elements:
 
 - `student-info`
 - `html-questions`
 - `css-questions`
 
-Then, within each `section` element, nest one `h2` element with an `id` matching the corresponding `aria-labelledby` attribute. Give each `h2` suitable text content.
+หลังกจากนั้น ใส่ `h2` element กับ an `id` ที่ตรงกับ `aria-labelledby` attribute เข้าไปในแต่ละ `section` element
+จงเพิ่มข้อความที่เหมาะสมให้แต่ละ `h2`
 
 # --hints--
 
-You should give the first `section` element an `aria-labelledby` attribute of `student-info`.
+คุณควรใส่ `aria-labelledby` attribute ของ `student-info` ลงไปใน `section` element อันแรก
 
 ```js
 assert.equal(document.querySelectorAll('section')?.[0]?.getAttribute('aria-labelledby'), 'student-info');

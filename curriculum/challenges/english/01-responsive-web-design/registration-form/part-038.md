@@ -7,11 +7,12 @@ dashedName: part-38
 
 # --description--
 
-Center the `h1` and `p` elements by giving them a `margin` of `1em auto`. Then, center align the text as well.
+จงจัดให้ `h1` และ `p` element อยู่ตรงกลางโดยการกำหนดค่า `margin` เท่ากับ `1em auto` ให้มัน
+หลังจากนั้น จงจัดให้ข้อความต่าง ๆ อยู่ตรงกลางเช่นเดียวกัน
 
 # --hints--
 
-You should use a comma-separated element selector to style the `h1` and `p` elements.
+คุณควรใช้ comma-separated element selector เพื่อตกแต่ง `h1` และ `p` elements.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('h1, p'));

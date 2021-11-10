@@ -7,11 +7,12 @@ dashedName: part-88
 
 # --description--
 
-For the next building, nest four `div` elements within `.fb3` with classes of `fb3a`, `fb3b`, `fb3a` again, and `fb3b` again, in that order. This building will have four sections, and the top two will be almost the same as the bottom two.
-
+สำหรับตึกหลังถัดไป
+จงเพิ่ม `div` element 4 อันภายใน `.fb3` โดยกำหนดให้มีคลาสชื่อ `fb3a`, `fb3b`, `fb3a` , และ `fb3b` ตามลำดับ (ชื่อซ้ำกับสองคู่)
+ตึกนี้จะมีสี่ส่วน และส่วนบนสองอันจะเหมือนส่วนล่างสองอัน
 # --hints--
 
-You should add four `div` elements within `.fb3`.
+คุณควรเพิ่ม 4 `div` elements ภายใน `.fb3`
 
 ```js
 assert.equal(document.querySelectorAll("div.fb3 > div")?.length, 4);

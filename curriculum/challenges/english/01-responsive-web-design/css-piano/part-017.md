@@ -7,11 +7,11 @@ dashedName: part-17
 
 # --description--
 
-Give the `.key` a `margin` of `2px` and a `float` property set to `left`.
+จงกำหนดให้ `.key` มี `margin` ขนาด `2px` และ `float` property มีค่าเป็น `left`
 
 # --hints--
 
-Your `.key` selector should have a `margin` property set to `2px`.
+`.key` selector ควรมี 1 `margin` property ที่มีขนาด `2px`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.key')?.margin === '2px');

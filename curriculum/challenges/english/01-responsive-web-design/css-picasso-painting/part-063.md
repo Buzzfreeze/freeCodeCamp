@@ -7,11 +7,11 @@ dashedName: part-63
 
 # --description--
 
-Give the `orange-character` a `position` of `absolute`, a `top` of `25%`, and a `left` of `40%`.
+จงกำหนดให้ `orange-character` มี `position` เท่ากับ `absolute`,`top` เป็น `25%`, และ `left` เป็น `40%`
 
 # --hints--
 
-Your `#orange-character` selector should have a `position` property set to `absolute`.
+`#orange-character` selector ควรมี `position` property ที่มีค่าเป็น `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#orange-character')?.position === 'absolute');

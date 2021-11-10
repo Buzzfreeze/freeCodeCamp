@@ -7,11 +7,13 @@ dashedName: part-20
 
 # --description--
 
-The buildings are stacked on top of each other and running off the screen. Let's fix that. Add the properties `display: flex;`, `align-items: flex-end;`, and `justify-content: space-evenly;` to the `background-buildings` class. This will use flexbox again to evenly space the buildings across the bottom of the element.
+building นั้นซ้อนทับกันอยู่ที่ด้านบนข้องแต่ละอันและสูงเลยขอบหน้าจอ 
+มาแก้มันด้วยกันเถอะ! จงเพิ่ม property `display: flex;`, `align-items: flex-end;`, และ `justify-content: space-evenly;` ให้กับ `background-buildings` class
+สิ่งนี้จะใช้ flexbox อีกครั้งเพื่อทำให้ระยะห่างของ buildings มีขนาดเท่า ๆ กันจากด้านล่างของ element
 
 # --hints--
 
-You should add a `display` of `flex` to the `background-buildings` class.
+คุณควรเพิ่ม `display` ที่มีค่าเป็น `flex` ใน `background-buildings` class.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.background-buildings')?.display, 'flex');

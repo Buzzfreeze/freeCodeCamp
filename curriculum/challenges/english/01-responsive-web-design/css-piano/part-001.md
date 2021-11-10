@@ -7,11 +7,13 @@ dashedName: part-1
 
 # --description--
 
-Begin with the basic HTML structure. Add a `DOCTYPE` declaration and `html`, `head`, `body`, and `title` elements. Set the `title` to `Responsive Web Design Piano`.
+มาเริ่มด้วยโครงสร้าง HTML พื้นฐาน
+จงเพิ่ม `DOCTYPE` declaration แล้วก็ `html`, `head`, `body`, และ `title` elements
+จงกำหนด `title` ให้กับ `Responsive Web Design Piano`
 
 # --hints--
 
-Your code should contain the `DOCTYPE` reference.
+โค้ดของคุณควรมี`DOCTYPE` reference.
 
 ```js
 assert(code.match(/<!DOCTYPE/gi));

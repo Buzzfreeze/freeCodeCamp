@@ -7,11 +7,14 @@ dashedName: part-12
 
 # --description--
 
-Turn the words `cat photos` located inside `p` element into a link by replacing the words with the anchor element added previously. The `p` element should show the same text in the browser, but the words `cat photos` should now be a link. There should only be one link showing in the app.
+จงเปลี่ยนคำว่า `cat photos` ที่อยู่ใน `p` element ให้เป็นลิงค์โดยกว่าแทนที่คำนั้นด้วย anchor element ที่ทำให้ก่หน้านี้
+`p` element ควรจะแสดงข้อความเดียวกันในหน้า browser, แต่คำว่า `cat photos` ควรกลางเป็นลิงค์หนึ่งแล้วตอนนี้
+ในตอนนี้ควรมีแค่ลิงค์เดียวในหน้าแอป 
 
 # --hints--
 
-Your code should only contain one anchor (`a`) element. Remove any extra anchor elements.
+โค้ดของคุณควรมี anchor (`a`) element แค่อันเดียว
+จนลบ anchor elements อันอื่น
 
 ```js
 assert(document.querySelectorAll('a').length === 1);

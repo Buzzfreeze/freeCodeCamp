@@ -7,13 +7,15 @@ dashedName: part-9
 
 # --description--
 
-Browsers can apply default margin and padding values to specific elements. To make sure your piano looks correct, you need to reset the box model.
+Browser สามารถเพิ่มค่าเริ่มต้นของ margin และ padding ให้เฉพาะกับ element บางตัว
+เพื่อให้แน่ใจว่าเปียโนนี้จะแสดงผลได้ตามที่ตั้งใจ คุณจำเป็นต้อง reset box model.
 
-Add an `html` rule selector to your CSS file, and set the `box-sizing` property to `border-box`.
+จงเพิ่ม `html` rule selector ให้กับไฟล์ CSS, 
+และจงกำหนดให้ `box-sizing` property มีค่าเป็น `border-box`
 
 # --hints--
 
-You should have an `html` selector.
+คุณควรมี `html` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('html'));

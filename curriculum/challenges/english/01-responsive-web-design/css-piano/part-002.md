@@ -7,11 +7,11 @@ dashedName: part-2
 
 # --description--
 
-Add two `meta` tags, one to optimize your page for mobile devices, and one to specify an accepted `charset` for the page.
+จงเพิ่ม 2 `meta` tags, อันหนึ่งเพื่อช่วยทำให้หน้าเว็บไซต์ของคุณเหมาะกับอุปกรณ์ที่เป็นโทรศัพท์เคลื่อนที่ และอีกอันเพื่อระบุ `charset` ที่หน้านี้ยอมรับ 
 
 # --hints--
 
-You should add two `meta` elements to your page.
+คุณควรเพิ่ม 2 `meta` elements ให้กับหน้าเว็บไซต์
 
 ```js
 const meta = document.querySelector('meta');

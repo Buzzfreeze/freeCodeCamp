@@ -7,11 +7,11 @@ dashedName: part-37
 
 # --description--
 
-Increase the `blur` of `.three` by 2 pixels.
+จงเพิ่ม `blur` ของ `.three` อีก 2 pixel.
 
 # --hints--
 
-You should set the `filter` property to `blur(2px)`.
+คุรควรกำหนดให้`filter` property มีค่าเป็น `blur(2px)`
 
 ```js
 const filterFilter = new __helpers.CSSHelp(document).getCSSRules().filter(x => x.style.filter === 'blur(2px)');

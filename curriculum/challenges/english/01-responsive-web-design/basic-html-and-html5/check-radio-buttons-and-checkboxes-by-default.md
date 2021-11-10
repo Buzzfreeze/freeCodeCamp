@@ -9,9 +9,10 @@ dashedName: check-radio-buttons-and-checkboxes-by-default
 
 # --description--
 
-You can set a checkbox or radio button to be checked by default using the `checked` attribute.
+คุณสามารถกำหนดให้  checkbox or radio button ถูกเลือกไว้แล้วได้โดยค่าเริ่มต้นโดยการใช้ `checked` attribute
 
-To do this, just add the word `checked` to the inside of an input element. For example:
+เพื่อที่จะทำแบบนี้ จงเพิ่มแค่คำว่า `checked` ให้กับข้างในของ input element
+ยกตัวอย่างเช่น:
 
 ```html
 <input type="radio" name="test-name" checked>
@@ -19,17 +20,17 @@ To do this, just add the word `checked` to the inside of an input element. For e
 
 # --instructions--
 
-Set the first of your radio buttons and the first of your checkboxes to both be checked by default.
+จงกำหนดให้ radio button และ checkbox อันแรกของคุณถูกเลือกไว้ก่อยโดยค่าเริ่มต้น
 
 # --hints--
 
-Your first radio button on your form should be checked by default.
+radio button อันแรกในแบบฟอร์มของคุณควรถูกเลือกไว้แล้วโดยค่าเริ่มต้น
 
 ```js
 assert($('input[type="radio"]').prop('checked'));
 ```
 
-Your first checkbox on your form should be checked by default.
+checkbox อันแรกในแบบฟอร์มของคุณควรถูกเลือกไว้แล้วโดยค่าเริ่มต้น
 
 ```js
 assert($('input[type="checkbox"]').prop('checked'));

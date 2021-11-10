@@ -7,13 +7,15 @@ dashedName: part-19
 
 # --description--
 
-Certain `type` attribute values come with built-in form validation. For example, `type="email"` requires that the value be a valid email address.
+ค่า `type` attribute หนึ่งจะมาพร้อมกับ built-in form validation
+ยกตัวอย่างเช่น `type="email"` ต้องได้รับค่าที่ควรจะเป็นอีเมล
 
-Add custom validation to the password `input` element, by adding a `minlength` attribute with a value of `8`. Doing so prevents inputs of less than 8 characters being submitted.
+จงเพิ่ม custom validation ให้กับ `input` element ของรหัสผ่านโดยการเพิ่ม `minlength` attribute ที่มีค่า `8`
+การทำแบบนี้ป้องกันไม่ให้ input ที่มีน้องกว่า 8 ตัวอักษรถูกส่งเข้ามา
 
 # --hints--
 
-You should give the password `input` element a `minlength` attribute.
+คุณควรใส่ `minlength` attribute ให้กับ `input` element ของรหัสผ่าน
 
 ```js
 assert.notEqual(document.querySelector('input[type="password"]')?.minLength, -1);

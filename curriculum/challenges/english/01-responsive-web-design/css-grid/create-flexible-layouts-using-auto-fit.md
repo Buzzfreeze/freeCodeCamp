@@ -9,17 +9,20 @@ dashedName: create-flexible-layouts-using-auto-fit
 
 # --description--
 
-`auto-fit` works almost identically to `auto-fill`. The only difference is that when the container's size exceeds the size of all the items combined, `auto-fill` keeps inserting empty rows or columns and pushes your items to the side, while `auto-fit` collapses those empty rows or columns and stretches your items to fit the size of the container.
+`auto-fit` ทำงานเกือบจะเหมือนกับ `auto-fill`
+ความแตกต่างเดียวของมันคือเมื่อขนาดของ container เกินกว่าขนาดรวมของทุก items, `auto-fill` จะพยายามเพิ่มแถวหรือคอลัมน์ใหม่มาเรื่อย ๆ และพวกมันจะดันให้ item ของคุณไปด้านข้าง ในขณะที่ `auto-fit` จะลบพวกแถวและคอลัมน์เปล่าของคุณและยืด item ของคุณให้มีขนาดที่พอดีกับ container
 
-**Note:** If your container can't fit all your items on one row, it will move them down to a new one.
+**Note:** ถ้า container ของคุณไม่มีทางพอดีกับ items ได้ภายในแถวเดียว มันจะผลัก item ที่เกินลงมาอีกแถวหรือคอลัมน์หนึ่ง 
 
 # --instructions--
 
-In the second grid, use `auto-fit` with `repeat` to fill the grid with columns that have a minimum width of `60px` and maximum of `1fr`. Then resize the preview to see the difference.
+ในกริดอันที่สอง, จงใช้ `auto-fit` ที่มี `repeat` เพื่อทำให้กริดเต็มไปด้วยคอลัมน์ที่มีความกว้างอย่างต่ำที่ `60px` และความกว้างมากสุดที่ `1fr`
+หลัวจากนั้น จงปรับขนาดของหน้า preview เพื่อให้เห็นความแตกต่าง 
 
 # --hints--
 
-`container2` class should have a `grid-template-columns` property with `repeat` and `auto-fit` that will fill the grid with columns that have a minimum width of `60px` and a maximum of `1fr`.
+`container2` class ควรมี`grid-template-columns` property อันหนึ่งที่มี `repeat` และ `auto-fit`
+สิ่งนี้จะช่วยทำให้กริดของคุณเต็มไปด้วยคอลัมน์ที่มีความกว้างอย่างต่ำ `60px` และความกว้างมากสุดที่ `1fr`
 
 ```js
 assert(

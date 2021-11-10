@@ -7,11 +7,12 @@ dashedName: part-111
 
 # --description--
 
-Add `sky` as a second class to the `.background-buildings` element. You are going to make a background for the skyline.
+จงเพิ่ม `sky` เป็นคลาสที่สองของ `.background-buildings` element
+คุณกำลังจะทำพื้นหลังให้กับเหล่าตึกระฟ้า
 
 # --hints--
 
-You should add a class of `sky` to `.background-buildings`.
+คุณควรเพิ่มคลาสที่ชื่อ`sky` ให้กับ `.background-buildings`
 
 ```js
 assert.exists(document.querySelector("div.background-buildings.sky"));

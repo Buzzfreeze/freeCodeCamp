@@ -9,17 +9,20 @@ dashedName: use-media-queries-to-create-responsive-layouts
 
 # --description--
 
-CSS Grid can be an easy way to make your site more responsive by using media queries to rearrange grid areas, change dimensions of a grid, and rearrange the placement of items.
+CSS Grid CSS Grid สามารถเป็นวิธีง่าย ๆ ที่ทำให้เว็บไซต์ของคุณ responsive ได้ดีขึ้นโดยใช้ media query หรือการเรียงพื้นที่กริดใหม่ 
+รวมถึงเปลี่ยนขนาดของกริดและปรับเปลี่ยนการวางตัวของ item ใหม่
 
-In the preview, when the viewport width is 300px or more, the number of columns changes from 1 to 2. The advertisement area then occupies the left column completely.
+ในหน้า preview, เมื่อความกว้างของ viewport width มีค่าเกิน 300px, จำนวนของคอลั่มน์จะเพิ่มขึ้นจาก 1 เป็น 2
+พื้นที่โฆษณาก็จะย้ายไปอยู่ถ้าด้านซ้ายมือทั้งหมด
 
 # --instructions--
 
-When the viewport width is `400px` or more, make the header area occupy the top row completely and the footer area occupy the bottom row completely.
+เมื่อความกว้างของ viewport มีค่าเท่ากับ `400px` หรือมากกว่านั้นจะทำให้พื้นที่ header กินพื้นที่แถวบนสุดทั้งหมด ส่วนพื้นที่ footer ที่จะกินพื้นที่แถวล่างสุดทั้งหมดเช่นเดียวกัน
 
 # --hints--
 
-When the viewport is `400px` or more, `container` class should have a `grid-template-areas` property in which the header and footer areas occupy the top and bottom rows respectively and advert and content occupy the left and right columns of the middle row.
+เมื่อ viewport มีค่าเท่ากับ `400px` หรือมากกว่านั้น `container` class ควรมี `grid-template-areas` property อันหนึ่งที่ทำให้พื้นที่ header และ footer จะกินพื้นที่แถวบนสุดและล่างสุดตามลำดับ
+ส่วนส่วนที่ใช้โฆษณาและเนื้อหาก็จะอยู่ที่ด้านซ้ายขวาของแถวตรงกลาง
 
 ```js
 assert(

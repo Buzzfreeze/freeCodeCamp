@@ -9,9 +9,9 @@ dashedName: add-a-submit-button-to-a-form
 
 # --description--
 
-Let's add a `submit` button to your form. Clicking this button will send the data from your form to the URL you specified with your form's `action` attribute.
+,มาเพิ่มปุ่น `submit` ให้กับแบบฟอร์มของคุณกันเถอะ. การคลิกที่ปุ่มนี้เป็นการส่งข้อมูลในแบบฟอร์มไปที่URL ที่คุณได้กำหนดไว้ด้วย `action` attribute
 
-Here's an example submit button:
+นี่คือตัวอน่างของปุ่ม submit :
 
 ```html
 <button type="submit">this button submits the form</button>
@@ -19,11 +19,11 @@ Here's an example submit button:
 
 # --instructions--
 
-Add a button as the last element of your `form` element with a type of `submit`, and `Submit` as its text.
+จงเพิ่ม element สุดท้ายของ `form` element ให้เป็นปุ่ม summit โดยการกำหนด input ให้เป็นแบบ`submit`, และเพิ่มข้อความว่า `Submit` ให้กับมัน
 
 # --hints--
 
-Your `form` should have a `button` inside it.
+`form` ควรมี `button` อันหนึ่งข้างใน
 
 ```js
 assert($('form').children('button').length > 0);

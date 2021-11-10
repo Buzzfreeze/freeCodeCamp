@@ -7,11 +7,14 @@ dashedName: part-50
 
 # --description--
 
-Below your `black-character` element, add two new `div` elements. These will be the shawl. Give both of them a `class` of `blue`. Then give the first one an `id` of `blue-left`, and the second an `id` of `blue-right`.
+ต่อจาก `black-character` element, จงเพิ่ม 2 `div` elements
+พวกนี้จะเป็นผ้าคลุมไหล่
+จงกำหนดให้พวกมันทั้งคู่มี `class` ชื่อ `blue`
+หลังจากนั้น จงกำหนดให้อันแรกมี `id` ชื่อ `blue-left`, และอีกอันม `id` ชื่อ `blue-right`
 
 # --hints--
 
-You should have two new `div` elements within your `.characters` element.
+คุณควรมี 2`div` elements ภายใน `.characters` element
 
 ```js
 assert(document.querySelectorAll('.characters > div')?.length === 4);

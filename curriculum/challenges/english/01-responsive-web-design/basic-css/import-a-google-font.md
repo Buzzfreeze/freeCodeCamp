@@ -9,35 +9,41 @@ dashedName: import-a-google-font
 
 # --description--
 
-In addition to specifying common fonts that are found on most operating systems, we can also specify non-standard, custom web fonts for use on our website. There are many sources for web fonts on the Internet. For this example we will focus on the Google Fonts library.
+นอกเหนือจากการระบุฟ้อนต์ทั่วไปที่สามารถใช้ได้กับ operating systems ส่วนมาก, เรายังสามารถระบุฟ้อนต์ที่ไม่ใช่มาตรฐานเพื่อใช้ในเว็บไซต์ของเราได้
+มันมีแหล่ฟ้อนต์หลายแหล่งบนอินเตอร์เน็ต
+สำหรับตัวอย่างนี้ เราจะโฟกัสที่ Google Fonts library.
 
-[Google Fonts](https://fonts.google.com/) is a free library of web fonts that you can use in your CSS by referencing the font's URL.
+[Google Fonts](https://fonts.google.com/) เป็น free library สำหรับ web font ที่คุณสามารถใช้ใน CSS ได้โดยการอ้างอิงจาก URL ของฟ้อนต์
 
-So, let's go ahead and import and apply a Google font (note that if Google is blocked in your country, you will need to skip this challenge).
+ดังนั้น เรามาลองนำเข้าและใช้ Google font กัน
 
-To import a Google Font, you can copy the font's URL from the Google Fonts library and then paste it in your HTML. For this challenge, we'll import the `Lobster` font. To do this, copy the following code snippet and paste it into the top of your code editor (before the opening `style` element):
+เพื่อที่จะนำเช้า Google Font, คุรสามารถคัดลอก URL ของฟ้อนต์จาก Google Fonts library และวางมันไว้ใน HTML ของคุณ
+สำหรับแบบฝึกหัดนี้ เราจะนำเข้า `Lobster` font
+เพื่อที่จะทำเช่นนี้ จงคัดลอก code snippet ข้างล่างและวางมันไว้ที่ด้านบนของ code editor ของคุณ (การแท็กเปิดของ `style` element):
 
 ```html
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 ```
 
-Now you can use the `Lobster` font in your CSS by using `Lobster` as the FAMILY_NAME as in the following example:
+ตอนนี้คุณสามารถใช้ `Lobster` font ใน CSS โดยการใช้ `Lobster` เป็น FAMILY_NAME ตามตัวอย่างด้านล่าง:
 
 ```css
 font-family: FAMILY_NAME, GENERIC_NAME;
 ```
 
-The GENERIC_NAME is optional, and is a fallback font in case the other specified font is not available. This is covered in the next challenge.
+GENERIC_NAME นั้นจะมีหรือไม่มีก็ได้และเป็น fallback font ในกรณีที่ฟ้อนต์ระบุไม่สามารถใช้งานได้
+โดยนี่จะกล่าวถึงในแบบฝึกหัดถัดไป
 
-Family names are case-sensitive and need to be wrapped in quotes if there is a space in the name. For example, you need quotes to use the `"Open Sans"` font, but not to use the `Lobster` font.
+Family names เป็น case-sensitive และจะต้องถูกครอบด้วย quotes ถ้ามีช่องไฟอยู่ระหว่างชื่อ
+ยกตัวอย่างเช่น คุณของครอบ `"Open Sans"` font ด้วย quotes แต่ไม่ต้องทำเช่นนั้นกับ `Lobster` font.
 
 # --instructions--
 
-Import the `Lobster` font to your web page. Then, use an element selector to set `Lobster` as the `font-family` for your `h2` element.
+ขงนำเข้า `Lobster` font มาที่หน้าเว็บของคุณ หลังจากนั้นจงใช้ element selector เพือกำหนดให้ `Lobster` เป็น `font-family` สำหรับ `h2` element
 
 # --hints--
 
-You should import the `Lobster` font.
+Yคุณควรนำ `Lobster` font เข้ามา
 
 ```js
 assert($('link[href*="googleapis" i]').length);

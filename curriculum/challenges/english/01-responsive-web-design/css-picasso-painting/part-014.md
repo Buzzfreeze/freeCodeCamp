@@ -7,11 +7,13 @@ dashedName: part-14
 
 # --description--
 
-This character needs eyes. Create two `div` elements in the `black-mask` element. Give them the classes `eyes left` and `eyes right`, in that order.
+ตัวละคนตัวนี้ต้องมีตา
+จงสร้าง 2 `div` elements ใน `black-mask` element
+จงกำหนดให้พวกมันมีเป็นคลาส `eyes left` และ `eyes right` ตามลำดับ
 
 # --hints--
 
-You should create 2 `div` elements within your `#black-mask` element.
+คุณควรสร้าง 2 `div` elements ภายใน `#black-mask` element.
 
 ```js
 assert(document.querySelectorAll('#black-mask div').length === 2);

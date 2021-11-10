@@ -7,11 +7,13 @@ dashedName: part-24
 
 # --description--
 
-Create a new variable by the other ones named `--building-color3` and give it a value of `#cc6699`. Then use it as the `background-color` of the `.bb3` class and give it a fallback value of `pink`.
+จงสร้างตัวแปรขึ้นมาใหม่ที่เรียนว่า `--building-color3` และจงกำหนดให้มันมีค่า `#cc6699`
+หลังจากนั้น จงใช้มันเป็น `background-color` ของ `.bb3` class 
+และจงกำหนดให้มันมี fallback value เป็น `pink`
 
 # --hints--
 
-You should define a new property variable called `--building-color3`.
+คุณควรประกาศตัวแปรของ property อันใหม่ว่า`--building-color3`.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).isPropertyUsed('--building-color3'));

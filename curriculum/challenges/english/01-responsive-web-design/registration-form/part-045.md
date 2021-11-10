@@ -7,11 +7,12 @@ dashedName: part-45
 
 # --description--
 
-Add some space between the `.inline` elements and the `label` text, by giving a right `margin` of `0.5em`. Also, set all the other margin to `0`.
+จงเพิ่มช่องว่างประมาณนึงระหว่าง `.inline` elements และข้อความ `label` โดยการกำหนดให้ `margin` ขวามีขนาด `0.5em`
+นอกจากนี้ จงกำหนดให้ margin ที่เหลือมีค่า `0`
 
 # --hints--
 
-You should give the `.inline` elements a `margin-right` of `0.5em`.
+คุณควรกำหนดให้ `.inline` elements มีค่า `margin-right` เท่ากับ `0.5em`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.inline')?.marginRight, '0.5em');

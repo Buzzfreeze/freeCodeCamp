@@ -7,11 +7,11 @@ dashedName: part-45
 
 # --description--
 
-Position the `gray-mask` by setting `position` to `absolute`, the `top` to `-10px`, and the `left` to `70px`.
+จงจัดตำแหน่งให้ `gray-mask` โดยการกำหนด `position` เป็นแบบ `absolute`, `top` เท่ากับ `-10px`, และ `left` เท่ากับ `70px`
 
 # --hints--
 
-Your `#gray-mask` selector should have a `position` property set to `absolute`.
+`#gray-mask` selector ควรมี `position` property อันหนึ่งที่มีค่าเป็น `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#gray-mask')?.position === 'absolute');

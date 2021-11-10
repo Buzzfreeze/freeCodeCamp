@@ -7,13 +7,16 @@ dashedName: part-29
 
 # --description--
 
-Adding a dropdown to the form is easy with the `select` element. The `select` element is a container for a group of `option` elements, and the `option` element acts as a label for each dropdown option. Both elements require closing tags.
+การเพิ่ม dropdown ให้การแบบฟอร์มนั้นสามารถทำได้ง่าย ๆ ด้วยการใช้ `select` element
+`select` element คือ container สำหรับ `option` elements ชุดหนึ่ง และ `option` element จะทำหน้าที่เสมอห้ายกำกับของแต่ละตัวเลือกใน dropdown
+ element ทั้งสองอันต้องการแท็กปิด (closing tags)
 
-Start, by adding a `select` element below the two `input` elements. Then, nest 5 `option` elements within the `select` element.
+จงเริ่มโดยการเพิ่ม  `select` element อันหนึ่งข้างล่าง `input` element 2 ัอัน
+หลังจากนั้น จงเก็บ 5 `option` elements ไว้ใน `select` element.
 
 # --hints--
 
-You should add a `select` element to the third `fieldset`.
+คุณควรเพิ่ม `select` element ให้กับ `fieldset` อันที่สาม
 
 ```js
 assert.exists(document.querySelector('fieldset:nth-child(3) > select'));

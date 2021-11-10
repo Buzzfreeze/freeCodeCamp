@@ -9,21 +9,28 @@ dashedName: jump-straight-to-the-content-using-the-main-element
 
 # --description--
 
-HTML5 introduced several new elements that give developers more options while also incorporating accessibility features. These tags include `main`, `header`, `footer`, `nav`, `article`, and `section`, among others.
+HTML5 ได้กล่าวถึง elements อันใหม่หลาย ๆ อันที่ช่วย developers มีทางเลือกมากขึ้นเวลาต้องจัดการกับ feature ที่ช่วยในการเข้าถึงต่าง ๆ
+tags เหล่านั้นคือ `main`, `header`, `footer`, `nav`, `article`, และ `section`, รวมถึงตัวอื่น ๆ อีก
 
-By default, a browser renders these elements similar to the humble `div`. However, using them where appropriate gives additional meaning to your markup. The tag name alone can indicate the type of information it contains, which adds semantic meaning to that content. Assistive technologies can access this information to provide better page summary or navigation options to their users.
+โดยค่าเริ่มต้น, browser แสดงผลของ elements เหล่านี้คล้ายคลึงกับ `div` อย่างไรก็ตาม การใช้พวกมันให้เหมาะสมช่วยทำให้ markup ของคุณมีความหมายมากยิ่งขึ้น
+เพียงแค่ tag name ก็สามารถบอกประเภทของข้อมูลที่มันเก็บไว้ได้ โดยการเพิ่มความหมายในเชิงของภาษาให้กับเนื้อหาส่วนนั้น
+Assistive technologies สามารถเข้าถึงข้อมูลนี้เพื่อช่วยทำให้มี page summary หรือ navigation options ที่ดีขึ้นสำหรับผู้ใช้ของพวกเขา
 
-The `main` element is used to wrap (you guessed it) the main content, and there should be only one per page. It's meant to surround the information related to your page's central topic. It's not meant to include items that repeat across pages, like navigation links or banners.
+`main` element ถูกใช้เพื่อเก็บเนื้อหาหลัก, และมันก็ควรมีแค่ 1 อันใน 1 หน้า
+มันควรจะเก็บข้อมูลที่เกี่ยวข้องกับหัวข้อหลักในหน้านั้นของคุณ มันไม่ควรจะเก็บ items ที่ถูกใช้ซ้ำ ๆ กับหน้าอื่น ๆ ยกตัวอย่างเช่น navigation links หรือ banners
 
-The `main` tag also has an embedded landmark feature that assistive technology can use to navigate to the main content quickly. If you've ever seen a "Jump to Main Content" link at the top of a page, using the `main` tag automatically gives assistive devices that functionality.
+`main` tag ก็สามารถเก็บ embedded landmark feature ที่ assistive technology สามารถนำมาใใช้เป็นนำทางมันไปยังเนื้อหาหลังได้อย่างรวดเร็ว
+ถ้าคุณเคยเห็น "Jump to Main Content" link ที่ด้านบนขอหน้าหนึ่ง ๆ นั่นคือการใช้ `main` tag เพื่อให้ assistive devices ทำงานได้อย่างอัตโนมัติ 
 
 # --instructions--
 
-Camper Cat has some big ideas for his ninja weapons page. Help him set up his markup by adding opening and closing `main` tags between the `header` and `footer` (covered in other challenges). Keep the `main` tags empty for now.
+Camper Cat มีไอเดียสุดบรรเจิดสำหรับหน้าของ อาวุธนินจาของเขา
+จงช่วยเขาทำ markup โดยการเพิ่ม `main` tags เปิดและปิดระหว่าง `header` และ `footer` (รวมถึงใน challenge อื่น ๆ)
+จงปล่อย `main` tags ให้ว่างอย่างนี้ไปก่อน
 
 # --hints--
 
-Your code should have one `main` tag.
+โค้ดของคุณควรมี `main` tag 1 อัน
 
 ```js
 assert($('main').length == 1);

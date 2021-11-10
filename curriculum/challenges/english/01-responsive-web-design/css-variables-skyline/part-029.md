@@ -7,11 +7,14 @@ dashedName: part-29
 
 # --description--
 
-You want the foreground buildings container to sit directly on top of the background buildings element. Give it a `width` and `height` of `100%`, set the `position` to `absolute`, and the `top` to `0`. This will make it the same size as the body and move the start of it to the top left corner.
+คุณต้องการให้พื้นหน้าของ buildings container อยู่ตรงที่ด้านบนของพื้นหลังของ buildings element
+จงกำหนดให้มันมี `width` และ `height` มีค่า `100%`
+จงกำหนดค่าของ `position` ให้เป็น `absolute` และค่าของ `top` เป็น `0`
+สิ่งนี้จะทำให้มันมีขนาดเดียวกับ body และจงย้ายจุดเริ่มต้นของมันไปที่มุมซ้ายบน
 
 # --hints--
 
-You should use a `.foreground-buildings` selector.
+คุณควรใช้`.foreground-buildings` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('.foreground-buildings'));

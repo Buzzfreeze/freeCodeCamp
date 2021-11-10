@@ -7,11 +7,11 @@ dashedName: part-5
 
 # --description--
 
-To get your painting started, give your `body` element a `background-color` of `rgb(184, 132, 46)`.
+เพื่อที่จะได้เริ่มสร้างภาพวาดของคุณ จงกำหนดให้ `body` element มี `background-color` เป็น `rgb(184, 132, 46)`
 
 # --hints--
 
-You should use the `body` selector.
+คุณควรใช้ `body` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('body'));

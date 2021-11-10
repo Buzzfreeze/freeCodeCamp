@@ -7,13 +7,16 @@ dashedName: part-2
 
 # --description--
 
-The `h1` to `h6` heading elements are used to signify the importance of content below them. The lower the number, the higher the importance, so `h2` elements have less importance than `h1` elements. Only use one `h1` element per page and place lower importance headings below higher importance headings.
+`h1` ถึง `h6` heading elements ถูกใช้เพื่อบ่งบอกที่ความสพคัญของเนื้อหาที่อยู่ภายใต้มัน
+ยิ่งเลขน้อย แสดงว่ามีความสำคัญมากขึ้น
+ดังนั้น `h2` elementจะสำคัญน้อยกว่า `h1` elements
+จงใช้เเค่ `h1` element อันเดียวต่อหนึ่งหน้า และใส่ heading ที่สำคัญน้อยกว่าใต้ heading ที่สำคัญมากกว่า
 
-Add an `h2` element below the `h1` element that says `Cat Photos`.
+จงเพิ่ม `h2` element ต่อจาก `h1` element โดยใส่เพิ่มข้อความว่า `Cat Photos`.
 
 # --hints--
 
-Your `h1` element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+`h1` element ควรมีแท็กเปิด โดยแท็กเปิดจะมี syntax แบบนี้: `<elementName>`.
 
 ```js
 assert(document.querySelector('h1'));

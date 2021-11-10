@@ -7,11 +7,13 @@ dashedName: part-8
 
 # --description--
 
-It's time to add some menu content. Add a `main` element below the existing `header` element. It will eventually contain pricing information about coffee and desserts offered by the cafe.
+มันถึงเวลาที่จะเพิ่มเนื้อหาของเมนูบางอย่างแล้ว
+จงเพิ่ม `main` element ต่อจาก `header` element
+ในตอนท้าย มันจะเก็บข้อมูลราคาของกาแฟหรือของหวานที่คาเฟ่นี้ขาย
 
 # --hints--
 
-Your code should have an opening `<main>` tag.
+คุณควรมีแท็กเปิด `<main>` อันหนึ่ง
 
 ```js
 assert(code.match(/<main>/i));

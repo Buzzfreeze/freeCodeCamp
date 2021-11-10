@@ -7,13 +7,15 @@ dashedName: part-38
 
 # --description--
 
-In order for a form's data to be accessed by the locaton specified in the `action` attribute, you must give the text field a `name` attribute and assign it a value to represent the data being submitted. For example, you could use the following syntax for an email address text field: `<input type="text" name="email">`.
+เพื่อที่ข้อมูลจากแบบฟอร์มจะสามารถเข้าถึงได้ด้วยที่อยู่ที่ถูกระบุไว้ใน `action` attribute, คุณต้องกำหนดให้ช่องที่ให้ข้อความมี `name` attribute และกำหนดค่าให้มันเพื่อมันจะได้ถูกแสดงเมื่อมันถูกส่งไปแล้ว
+ตัวอย่างเช่น คุณสามารถใช้ syntax ดังต่อไปนี้เพื่อเป็นช่องใส่อีเมล: `<input type="text" name="email">`.
 
-Add the `name` attribute with the value `catphotourl` to your text field.
+จงเพิ่ม `name` attribute ที่มีค่าเป็น `catphotourl` ให้กับช่องให้ข้อความของคุณ
 
 # --hints--
 
-You have either deleted your `input` element or it has invalid syntax. All attributes' values should be surrounded by quotation marks.
+ถ้าคุณหามันไม่เจอ คุณอาจะเผลอลบ `input` element หรือเขียนคำสั่งของมันได้ไม่ถูกต้อง
+ถ้าคุณทำการเพิ่ม attributes, จงเช็คให้มั่นใจว่าค่าที่ใส่เข้าไปมีการครอบด้วย quotation mark แล้ว
 
 ```js
 assert($('input').length);

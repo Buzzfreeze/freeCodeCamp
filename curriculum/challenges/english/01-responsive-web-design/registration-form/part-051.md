@@ -7,13 +7,13 @@ dashedName: part-51
 
 # --description--
 
-With a `display` of `block` the submit button sits flush against the left edge of its parent.
+เพื่อที่ `display` ของ `block` ของปุ่ม submit จะอยู่ที่ขอบซ้ายของ parent ของมัน
 
-Use the same technique used to center the `form` to center the submit button.
+จงใช้เทคนิคเดียวกันกับที่ใช้เพื่อจัดให้ `form` อยู่ตรงกลางของปุ่ม submit 
 
 # --hints--
 
-You should give the submit button a `margin` of `0 auto`.
+คุณควรกำหนดให้ปุ่ม submit มี `margin` ขนาด `0 auto`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('input[type="submit"]')?.margin, '0px auto');

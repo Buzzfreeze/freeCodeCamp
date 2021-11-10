@@ -7,13 +7,15 @@ dashedName: part-37
 
 # --description--
 
-There are many kinds of inputs you can create using the `type` attribute. You can easily create a password field, reset button, or a control to let users select a file from their computer.
+มี input หลายแบบที่คุณสามารถสร้างได้ด้วย `type` attribute
+คุณสามารถสร้างช่องใส่รหัสผ่าน ปุ่มรีเซ้ต หรือหน้าต่างที่ทำให้ผู้ใช้สามารถเลือกไฟล์จากคอมพิวเตอร์ของพวกเขาเองได้
 
-Create a text field to get text input from a user by adding the `type` attribute with the value `text` to the `input` element.
+จงสร้างช่องใส่ข้อความเพื่อรับ input ที่เป็นตัวอักษรจากผู้ใช้ โดยการเพิ่ม `type` attribute ที่มีค่าเป็น `text` ให้กับ `input` element
 
 # --hints--
 
-You have either deleted your `input` element or it has invalid syntax. If you have added an attributes, make sure their values are surrounded by quotation marks.
+ถ้าคุณหามันไม่เจอ คุณอาจะเผลอลบ `input` element หรือเขียนคำสั่งของมันได้ไม่ถูกต้อง
+ถ้าคุณทำการเพิ่ม attributes, จงเช็คให้มั่นใจว่าค่าที่ใส่เข้าไปมีการครอบด้วย quotation mark แล้ว
 
 ```js
 assert($('input').length);

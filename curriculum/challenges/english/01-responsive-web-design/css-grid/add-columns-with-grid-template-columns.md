@@ -9,7 +9,9 @@ dashedName: add-columns-with-grid-template-columns
 
 # --description--
 
-Simply creating a grid element doesn't get you very far. You need to define the structure of the grid as well. To add some columns to the grid, use the `grid-template-columns` property on a grid container as demonstrated below:
+การสร้างกริดอย่างง่าย ๆ ไม่ทำให้คุณไปได้ไกลนัก
+คุณต้องกำหนดโครงสร้างของกริดด้วย
+เพื่อที่จะเพิ่มคอลัมน์อันหนึ่งให้กับกริด จงใช้ `grid-template-columns` property ที่ grid container ตามที่สาธิตไว้ข้างล่าง :
 
 ```css
 .container {
@@ -18,15 +20,15 @@ Simply creating a grid element doesn't get you very far. You need to define the 
 }
 ```
 
-This will give your grid two columns that are each 50px wide. The number of parameters given to the `grid-template-columns` property indicates the number of columns in the grid, and the value of each parameter indicates the width of each column.
-
+นี่จะช่วยให้กริดของคุณมีคอลัมน์สองอันที่แต่ละอันมีขนาด 50 px
+จำนวนของ parameter ที่ `grid-template-columns` property ใช้บ่งบอกถึงจำนวนของคอลัมน์ภายในกริดและค่าในแต่ละ parameter บ่งบอกถึงขนาดความกว้างของมัน
 # --instructions--
 
-Give the grid container three columns that are each `100px` wide.
+จงกำหนดให้ grid container มี 3 คอลัมน์ที่แต่ละอันมีความกว้าง `100px`
 
 # --hints--
 
-`container` class should have a `grid-template-columns` property with three units of `100px`.
+`container` class ควรมี `grid-template-columns` property อันหนึ่งที่มี `100px` อยู่สามตัว
 
 ```js
 assert(

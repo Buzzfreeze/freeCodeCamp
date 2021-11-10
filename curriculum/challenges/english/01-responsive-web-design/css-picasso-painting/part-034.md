@@ -7,11 +7,11 @@ dashedName: part-34
 
 # --description--
 
-After your `div#offwhite-character` element, add a `div` with the `id` of `black-character`.
+ต่อจาก `div#offwhite-character` element, จงเพิ่ม `div` อันหนึ่งที่มี `id` เป็น `black-character`
 
 # --hints--
 
-You should add a new `div` element within the `.characters` element.
+คุณควรเพิ่ม `div` element อันหนึ่งไว้ใน `.characters` element
 
 ```js
 assert(document.querySelectorAll('.characters > div')?.length === 2);

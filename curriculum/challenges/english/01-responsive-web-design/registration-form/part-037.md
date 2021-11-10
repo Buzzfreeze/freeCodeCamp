@@ -7,13 +7,14 @@ dashedName: part-37
 
 # --description--
 
-The HTML for the registration form is finished. Now, you can spruce it up a bit.
+HTML สำหรับแบบฟอร์มรับสมัครนั้นเสร็จแล้ว
+ตอนนี้ เราสามารถทำให้มันดูเรียบร้อยขึ้นได้อีกนิดนึง
 
-Start by changing the font to `Tahoma`, and the font size to `16px` in the `body`.
+จงเริ่มด้วยการเปลี่ยนฟ้อนต์ให้เป็น `Tahoma`, และกำหนดขนาดฟ้อนต์ไว้ที่ `16px` สำหรับ `body`.
 
 # --hints--
 
-You should use the `font-family` property to change the font.
+คุณควรใช้ `font-family` property เพื่อเปลี่ยนฟ้อนต์
 
 ```js
 assert.isNotEmpty(new __helpers.CSSHelp(document).getStyle('body')?.fontFamily);

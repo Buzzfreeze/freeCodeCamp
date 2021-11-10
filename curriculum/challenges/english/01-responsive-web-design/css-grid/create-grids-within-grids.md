@@ -8,17 +8,18 @@ dashedName: create-grids-within-grids
 
 # --description--
 
-Turning an element into a grid only affects the behavior of its direct descendants. So by turning a direct descendant into a grid, you have a grid within a grid.
+การเปลี่ยน element ตัวหนึ่งให้เป็น grid จะมีผลกับ behavior ของ direct descendants ของมันเท่านั้น
+ดังนั้นการเปลี่ยน direct descendant อันหนึ่งให้เป็นกริด คุณจะได้กริดที่อยู่ในกริด
 
-For example, by setting the `display` and `grid-template-columns` properties of the element with the `item3` class, you create a grid within your grid.
+ยกตัวอย่างเช่น การที่เรากำหนด `display` และ `grid-template-columns` properties ของ element ที่มี `item3` class ตัวหนึ่ง, คุณจะสร้างกริดอันหนึ่งไว้ในกริดของคุณ
 
 # --instructions--
 
-Turn the element with the `item3` class into a grid with two columns with a width of `auto` and `1fr` using `display` and `grid-template-columns`.
+จงเปลี่ยน element ที่มี `item3` class ให้เป็นกริดอันหนึ่งที่มี 2 คอลัมน์โดยแต่ละคอลัมน์จะมีความกว้างเป็น `auto` และ `1fr` โดยการใช้ `display` และ `grid-template-columns`
 
 # --hints--
 
-`item3` class should have a `grid-template-columns` property with `auto` and `1fr` as values.
+`item3` class ควรมี `grid-template-columns` property อันหนึ่งที่มีค่าเป็น `auto` และ `1fr` 
 
 ```js
 assert(

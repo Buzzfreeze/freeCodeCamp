@@ -6,14 +6,13 @@ dashedName: part-56
 ---
 
 # --description--
+จงเพิ่ม  `name` attribute ที่มีค่า `personality` ให้กับ `input` element.
 
-Add the `name` attribute with the value `personality` to the checkbox `input` element.
-
-While you won't notice this in the browser, doing this makes it easier for a server to process your web form, especially when there are multiple checkboxes.
+ขณะที่คุณไม่ได้สังเกตมันในหน้า browser, การทำแบบนี้ทำให้ server ประมวลผลแบบฟอร์มของคุณได้ง่ายมากขึ้น โดยเฉพาะเหมือนมันเป็นแบบหลาย checkboxe
 
 # --hints--
 
-You should make sure the checkbox is still present.
+คุณควรเช็คให้มั่นใจว่ามี checkbox แสดงอยู่
 
 ```js
 assert($('input[type="checkbox"]')[0]);

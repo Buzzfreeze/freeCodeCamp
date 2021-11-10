@@ -7,11 +7,11 @@ dashedName: part-14
 
 # --description--
 
-Give the `.keys` a `padding-left` of `2px`.
+จงกำหนดให้ `.keys` มี `padding-left` ขนาด `2px`
 
 # --hints--
 
-Your `.keys` selector should have a `padding-left` property set to `2px`.
+`.keys` selector ควรมี 1  `padding-left` property ที่มีขนาด `2px`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.keys')?.paddingLeft === '2px');

@@ -7,11 +7,12 @@ dashedName: part-89
 
 # --description--
 
-Give the `.fb3a` element a `width` of `80%` and `height` of `15%`. Then give the `.fb3b` element a `width` of `100%` and `height` of `35%`.
+จงกำหนดให้ `.fb3a` element มี `width` เท่ากับ `80%` และ `height` เท่ากับ `15%`
+ส่วน  `.fb3b` element จงกำหนดให้มี `width` เท่ากับ `100%` และ `height` เท่ากับ `35%`
 
 # --hints--
 
-You should give `.fb3a` a `width` of `80%`.
+คุณควรกำหนดให้ `.fb3a` มี `width` เท่ากับ `80%`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(".fb3a")?.width, "80%");

@@ -7,13 +7,16 @@ dashedName: part-8
 
 # --description--
 
-HTML <dfn>attributes</dfn> are special words used inside the opening tag of an element to control the element's behavior. The `src` attribute in an `img` element specifies the image's URL (where the image is located). An example of an `img` element using an `src` attribute: `<img src="https://www.your-image-source.com/your-image.jpg">`.
+HTML <dfn>attributes</dfn> นั้นเป็นคำที่มีความพิเศษโดยจะถูกใช้ในแท็กเปิดของ element เพื่อกำหนดพฤติกรรมของ element
+`src` attribute ใน `img` element จะระบุ URL ของรูปภาพ (ซึ่งเป็นตำแหน่งที่รูปภาพถูกเก็บไว้)
+นี่คือตัวอย่างการใช้`img` element ที่มี `src` attribute: `<img src="https://www.your-image-source.com/your-image.jpg">`.
 
-Add an `src` attribute to the existing `img` element that is set to the following URL: `https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg`.
+จงเพิ่ม `src` attribute ให้กับ `img` element ที่มีอยู่โดยกำหนดให้มันชี้ไปที่: `https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg`.
 
 # --hints--
 
-Your code should have an `img` element. You may have removed the `img` element or you have not surrounded the `src` attribute's value with quotes.
+Yโค้ดของคุณควรมี `img` element
+คุณอาจจะลองลบ `img` element หรือไม่ใส่ quote ให้กับค่าของ`src` attribute ก็ได้
 
 ```js
 assert(document.querySelector('img'));

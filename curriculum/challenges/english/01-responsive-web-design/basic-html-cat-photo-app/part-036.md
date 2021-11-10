@@ -7,13 +7,14 @@ dashedName: part-36
 
 # --description--
 
-The `input` element is allows you several ways to collect data from a web form. Like anchor (`a`) elements, `input` elements are <dfn>self-closing</dfn> and do not need closing tags.
+`input` element นั้นทำให้คุณสามารถเก็บข้อมูลได้หลากหลายแบบจากแบบฟอร์มที่อยู่บนเว็บไซต์
+เช่นเดียวกับ anchor (`a`) elements, `input` elements เป็น <dfn>self-closing</dfn> ซึ่งแปลว่ามันไม่ต้องการแท็กปิด
 
 Nest an `input` element in the `form` element.
 
 # --hints--
 
-Your `form` element should have an opening tag and closing tag in the correct order. You may be missing one or both of the required tags, or have them in the wrong order.
+`form` element ควรมีทั้งแท็กเปิดและแท็กปิด ถ้าหาไม่เจอคุณอาจจะเผลอลบแท็กเปิดหรือแท็กปิดของมันไปโดยไม่รู้ตัว
 
 ```js
 const noSpaces = code.replace(/\s/g, '');

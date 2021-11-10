@@ -7,13 +7,16 @@ dashedName: part-22
 
 # --description--
 
-Even though you added a `placeholder` to the first `input` element in the previous lesson, this is actually not a best-practice for accessibility; too often, users confuse the placeholder text with an actual input value - they think there is already a value in the input.
+ถึงแม้ว่าคุณจะเพิ่ม `placeholder` เข้าไปใน `input` element ตัวแรกแล้วก็ตามในบทเรียนที่แล้ว
+แต่นี่ก็ไม่ใช่ best-practice สำหรับการเข้าถึง (accessibility)
 
-Remove the placeholder text from the first `input` element, relying on the `label` being the best-practice.
+มีหลายครั้งที่ user สับสน placeholder text กับค่า input จริง ๆ โดยพวกเขามักคิดว่าช่อง input เหล่านั้นถูกเพิ่ม input ลงไปแล้ว
+
+จงลบ placeholder text ออกจาก `input` element อันแรก โดยการใช้เพียง `label` นั้นถือเป็น best-practice
 
 # --hints--
 
-You should remove the `placeholder` attribute from the first `input` element.
+คุณควรลบ `placeholder` attribute ออกจาก `input` element อันแรก.
 
 ```js
 assert.isEmpty(document.querySelectorAll('input')?.[0]?.placeholder);

@@ -9,21 +9,24 @@ dashedName: limit-item-size-using-the-minmax-function
 
 # --description--
 
-There's another built-in function to use with `grid-template-columns` and `grid-template-rows` called `minmax`. It's used to limit the size of items when the grid container changes size. To do this you need to specify the acceptable size range for your item. Here is an example:
+ยังมี built-in function อีกอันหนึ่งที่เอาไว้ใช้กับ`grid-template-columns` และ `grid-template-rows` ชื่อว่า `minmax`
+มันถูกใช้เพื่อจำกัดขนาดของ item เมื่อ container ของกริดมีการเปลี่ยนแปลงขนาด เพื่อทำเช่นนี้ คุณจำเป็นต้องระบุของเขตของขนาด item ที่คุณยอมรับได้ 
+นี่คือตัวอย่าง:
 
 ```css
 grid-template-columns: 100px minmax(50px, 200px);
 ```
 
-In the code above, `grid-template-columns` is set to create two columns; the first is 100px wide, and the second has the minimum width of 50px and the maximum width of 200px.
+ที่โค้ดด้านบน `grid-template-columns` ถูกกำหนดให้สร้าง 2 คอลัมน์ โดยอันแรกมีความกว้าง 100px และอันที่สองมีความกว้างน้อยสุดที่ 50px และสูงสุดที่ 200px
 
 # --instructions--
 
-Using the `minmax` function, replace the `1fr` in the `repeat` function with a column size that has the minimum width of `90px` and the maximum width of `1fr`, and resize the preview panel to see the effect.
+การใช้ `minmax` function จะแทนที่ `1fr` ใน `repeat` function ด้วยขนาดคอลัมน์ที่มีความกว้างน้อยสุดที่ `90px` และความกว้างมากสุดที่ `1fr`
+จงปรับขนาดของหน้า preview เพื่อให้เห็นความแตกต่าง
 
 # --hints--
 
-`container` class should have a `grid-template-columns` property that is set to repeat 3 columns with the minimum width of `90px` and maximum width of `1fr`.
+`container` class ควรมี `grid-template-columns` property อันหนึ่งที่ถูกกำหนดให้สร้างคอลั่มที่มีความกว้างต่ำสุดที่ `90px` และความกว้างสูงสุดที่ `1fr` ขึ้นมา 3 อัน
 
 ```js
 assert(

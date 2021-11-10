@@ -7,13 +7,16 @@ dashedName: part-9
 
 # --description--
 
-All `img` elements should have an `alt` attribute. The `alt` attribute's text is used for screen readers to improve accessibility and is displayed if the image fails to load. For example, `<img src="cat.jpg" alt="A cat">` has an `alt` attribute with the text `A cat`.
+`img` elements ทุกตัวควรมี `alt` attribute
+ข้อความของ `alt` attribute จะถูกใช้เพื่อ screen readers เพื่อทำให้การเข้าถึงดียิ่งขึ้นและขะแสดงขึ้นมาถ้ารูปภาพนั้นไม่สามารถแสดงผลได้ตามปกติ
+ตัวอย่างเข่น `<img src="cat.jpg" alt="A cat">` จะมี `alt` attribute ที่เขียนว่า `A cat`
 
-Add an `alt` attribute to the `img` element with the text `A cute orange cat lying on its back`.
+จงเพิ่ม`alt` attribute ให้กับe `img` element พร้อมกับใส่ข้อความว่า `A cute orange cat lying on its back`
 
 # --hints--
 
-Your code should have an `img` element. You removed the `img` element from an earlier step.
+โค้ดของคุณควรมี `img` element
+คุณควรลบ `img` element ที่มาจากขั้นตอนก่อนหน้า
 
 ```js
 assert(document.querySelector('img'));

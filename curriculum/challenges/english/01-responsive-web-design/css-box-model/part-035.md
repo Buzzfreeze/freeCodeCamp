@@ -7,13 +7,13 @@ dashedName: part-35
 
 # --description--
 
-The colors and shapes of your painting are too sharp to pass as a Rothko.
+สีและรูปทรงขอบภาพของคุณนั้นแข็งเกินกว่าที่จะเป็น Rothko
 
-Use the `filter` property with the value `blur(2px)` in the `.canvas`.
+จงใช้ `filter` property ที่มีค่า `blur(2px)` ใน `.canvas`
 
 # --hints--
 
-You should set the `filter` property to `blur(2px)`.
+คุณควรกำหนดให้ `filter` property มีค่าเป็น `blur(2px)`
 
 ```js
 const hasFilter = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style.filter === 'blur(2px)');

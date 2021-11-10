@@ -7,13 +7,14 @@ dashedName: part-55
 
 # --description--
 
-There's another way to associate an `input` element's text with the element itself. You can nest the text within a `label` element and add a `for` attribute with the same value as the `input` element's `id` attribute.
+มีอีกวิธีเพื่อจะเชื่อมโยงข้อความของ `input` element เข้ากับตัว element เอง
+คุณสามารถเก็บข้อความไว้ใน `label` element และเพิ่ม `for` attribute ที่มามีค่าเดียวกับ `id` attribute ของ `input` element
 
-Associate the text `Loving` with the checkbox by only nesting the text `Loving` in a `label` element and place it to the right side of the checkbox `input` element.
+จงเชื่อมโยงข้อความ `Loving` กับ checkbox โดยการใส่ข้อความ `Loving` ไว้ใน `label` element และวางมันไว้ที่ด้านขวาของ checkbox `input` element.
 
 # --hints--
 
-You should make sure the checkbox is still present.
+คุณควรเช็คให้มั่นใจว่ามี checkbox แสดงอยู่
 
 ```js
 assert($('input[type="checkbox"]')[0]);

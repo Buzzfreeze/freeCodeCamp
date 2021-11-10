@@ -7,9 +7,10 @@ dashedName: part-25
 
 # --description--
 
-The `.sr-only` text is still visible. There is a common pattern to visually hide text for only screen readers to read. 
+ตอนนี้เรายังคงเห็น`.sr-only` text อยู่
+มันมีแพทเทิร์นการซ่อนข้อความจากการมองเห็นสำหรับผู้อ่านจากหน้าจออยู่
 
-This pattern is to set the following CSS properties:
+แพทเทิร์นนี้ก็คือการตั้งค่าให้ CSS properties เป็นแบบด้านล่าง
 
 ```css
 position: absolute;
@@ -23,11 +24,11 @@ white-space: nowrap;
 border: 0;
 ```
 
-Use the above to define the `sr-only` class.
+จงใช้คำสั่งข้างบนเพื่อ define `sr-only` class.
 
 # --hints--
 
-You should use the `.sr-only` selector.
+คุณควรใช้ `.sr-only` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('.sr-only'));

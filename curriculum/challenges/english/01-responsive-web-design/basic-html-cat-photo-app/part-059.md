@@ -7,13 +7,15 @@ dashedName: part-59
 
 # --description--
 
-Like radio buttons, form data for selected checkboxes are `name` / `value` attribute pairs. While the `value` attribute is optional, it's best practice to include it with any checkboxes or radio buttons on the page.
+เช่นเดียวกับ radio buttons, ข้อมูลจากแบบฟอร์มที่ได้จาก checkbox ที่ถูกเลือกจะเป็นคู่  `name` / `value` attribute 
+ในขณะที่ `value` attribute สามารถเลือกที่จะใส่หรือไม่ก็ได้ มันดีกว่าที่จะใส่มันไว้กับ checkboxe หรือ  radio button ในหน้าเว็บไซต์
 
-Add a `value` attribute to each checkbox. For convenience, set each checkbox's `value` attribute to the same value as its `id` attribute.
+จงเพิ่ม `value` attribute ให้กับแต่ละ
+เพื่อความสะดวก จงกำหนดให้ `value` attribute ของแต่ละ checkbox มีค่าเดียวกับ `id` attribute ของมันเอง
 
 # --hints--
 
-All three checkboxes should have a `value` attribute. Check that there is a space after the opening tag's name and/or there are spaces before all attribute names.
+ทั้งสาม checkbox ควรมี `value` attribute อันหนึ่ง
 
 ```js
 const checkboxes = [...document.querySelectorAll('input[type="checkbox"]')];

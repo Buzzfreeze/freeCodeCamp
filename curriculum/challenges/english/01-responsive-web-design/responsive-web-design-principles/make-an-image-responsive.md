@@ -8,7 +8,8 @@ dashedName: make-an-image-responsive
 
 # --description--
 
-Making images responsive with CSS is actually very simple. You just need to add these properties to an image:
+การทำให้รูปภาพresponsive ด้วย CSS นั้นง่ายมาก ๆ
+คุณแค่ต้องเพิ่ม property เหล่านี้ให้กับรูป:
 
 ```css
 img {
@@ -17,15 +18,18 @@ img {
 }
 ```
 
-The `max-width` of `100%` will make sure the image is never wider than the container it is in, and the `height` of `auto` will make the image keep its original aspect ratio.
+`max-width` ที่มีค่า `100%` จะทำให้คุณมั่นใจได้ว่าขนาดของรูปจะไม่กว้างเกิน container ที่ใส่มันไว้
+และ `height` ที่มีค่า `auto` จะทำให้ขนาดของรูปมีอัตราส่วนตามของต้นฉบับ
 
 # --instructions--
 
-Add the style rules to the `responsive-img` class to make it responsive. It should never be wider than its container (in this case, it's the preview window) and it should keep its original aspect ratio. After you have added your code, resize the preview to see how your images behave.
+จงเพิ่ม style rule ให้กับ `responsive-img` class เพื่อทำให้มัน responsive
+มันควรไม่กว้างเกิน container ของมัน (ในกรณีนี้ก็คือ preview window) และมันควรจะคงอัตราส่วนภาพเท่ากับต้นฉบับ
+หลังจากคุณเพิ่มโค้ดและจงปรับขนาด preview ให้เห็นว่ารูปภาพของคุณเป็นอย่างไร
 
 # --hints--
 
-Your `responsive-img` class should have a `max-width` set to `100%`.
+`responsive-img` class ของคุณควรมี `max-width` ที่ถูกตั้งให้เท่ากับ `100%`.
 
 ```js
 assert(getComputedStyle($('.responsive-img')[0]).maxWidth === '100%');

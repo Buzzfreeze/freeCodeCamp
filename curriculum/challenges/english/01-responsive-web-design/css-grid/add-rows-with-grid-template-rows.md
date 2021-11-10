@@ -9,15 +9,16 @@ dashedName: add-rows-with-grid-template-rows
 
 # --description--
 
-The grid you created in the last challenge will set the number of rows automatically. To adjust the rows manually, use the `grid-template-rows` property in the same way you used `grid-template-columns` in the previous challenge.
+กริดที่คุณได้สร้างไปใน challenge ที่แล้วจะกำหนดจำนวนของแถวโดยอัตโนมัติ
+เพื่อที่จะปรับเปลี่ยนเป็นแถว ๆ ไป, จงใช้ `grid-template-rows` property ในแบบเดียวกับที่คุรใช้ `grid-template-columns` ใน challenge ที่แล้ว
 
 # --instructions--
 
-Add two rows to the grid that are `50px` tall each.
+จงเพิ่มแถว 2 แถวให้กับกริดโดยให้แต่ละอันสูง  `50px` 
 
 # --hints--
 
-`container` class should have a `grid-template-rows` property with two units of `50px`.
+`container` class ควรมี `grid-template-rows` property อันหนึ่งที่มี `50px` 2 อัน
 
 ```js
 assert(

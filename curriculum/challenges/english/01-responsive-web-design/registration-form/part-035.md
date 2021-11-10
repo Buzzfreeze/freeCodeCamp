@@ -7,13 +7,13 @@ dashedName: part-35
 
 # --description--
 
-To give Campers an idea of what to put in their bio, the `placeholder` attribute is used. The `placeholder` accepts a text value, which is displayed until the user starts typing.
+เราใช้ `placeholder` attribute เพื่อที่ชาวค่ายรู้ว่าควรใส่อะไรที่ bio `placeholder` จะรับค่าที่เป็นตัวอักษร โดยจะแสดงจนกว่าผู้ใช้จะเริ่มพิมพ์ข้อความในช่องนั้น
 
-Give the `textarea` a `placeholder` of `I like coding on the beach...`.
+คุณควรใส่ `placeholder` attribute ที่มีข้อความว่า `I like coding on the beach...` ที่ `textarea` 
 
 # --hints--
 
-You should give the `textarea` a `placeholder` attribute.
+คุณควรใส่ `placeholder` attribute ที่ `textarea` 
 
 ```js
 assert.isNotEmpty(document.querySelector('fieldset:nth-child(3) > label:nth-child(4) > textarea')?.placeholder);

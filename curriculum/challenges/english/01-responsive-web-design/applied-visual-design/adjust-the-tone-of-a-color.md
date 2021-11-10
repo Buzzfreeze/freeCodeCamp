@@ -9,15 +9,22 @@ dashedName: adjust-the-tone-of-a-color
 
 # --description--
 
-The `hsl()` option in CSS also makes it easy to adjust the tone of a color. Mixing white with a pure hue creates a tint of that color, and adding black will make a shade. Alternatively, a tone is produced by adding gray or by both tinting and shading. Recall that the 's' and 'l' of `hsl()` stand for saturation and lightness, respectively. The saturation percent changes the amount of gray and the lightness percent determines how much white or black is in the color. This is useful when you have a base hue you like, but need different variations of it.
+ตัเลือก `hsl()` ใน CSS ยังทำให้มันง่ายที่จะปรับโทนของสี
+การผสมสีขาวด้วย pure hue จะสร้าง tint ของ color และการเพิ่มสีดำจะทำให้เกิด shade
+ในอีกแง่หนึ่ง โทนนั้นเกิดจากการเติมสีเทาหรือโดยการเติมทั้ง tint และ shade
+จำไว้ว่า 's' และ 'l' ของ `hsl()` มาจาก saturation และ lightness
+เปอร์เซ็นความอิ่มตัวของสีจะเปลี่ยนปริมารของสีเทาและเปอร์เซ็นความสว่างจะเป็นตัวบอกว่ามีสีขาวหรือดำในสีอยู่เท่าไหร่
+ซึ่งมันมีประโยชนืมากเทื่อคุณมี base hue ที่คุณชอบ แต่ต้องการความหลากหลายจากมัน
 
 # --instructions--
 
-All elements have a default `background-color` of `transparent`. Our `nav` element currently appears to have a `cyan` background, because the element behind it has a `background-color` set to `cyan`. Add a `background-color` to the `nav` element so it uses the same `cyan` hue, but has `80%` saturation and `25%` lightness values to change its tone and shade.
+ทุก element ที่ค่าเริ่มต้นของ `background-color` เป้น `transparent`
+ในตอนนี้ `nav` element ของพวกเรามีพื้นหลังเป้น `cyan` เพราะว่า element ข้างหลังมันมี `background-color` ที่เป็น `cyan`
+จงเพิ่ม `background-color` ให้กับ `nav` element เพื่อที่มันจะได้มี`cyan` hue ที่เหมือนกัน แต่มีค่าความอิ่มตัวเท่ากับ `80%` และมีความสว่างเท่ากับ `25%` เพื่อเปล่า  tone และ shade ของมัน
 
 # --hints--
 
-The `nav` element should have a `background-color` of the adjusted cyan tone using the `hsl()` property.
+`nav` element ควรมี `background-color` อันหนึ่งที่เป็น cyan ที่ถูกปรับเปลี่ยน tone โดยใช้ `hsl()` property.
 
 ```js
 assert(

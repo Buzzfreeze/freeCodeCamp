@@ -7,11 +7,13 @@ dashedName: part-82
 
 # --description--
 
-Now you need to move the bar icons into place. Create a `class` selector for the `fa-bars` class. Set the `display` to `block`, the `margin-top` to `30%`, and the `margin-left` to `40%`.
+ในตอนนี้ คุณต้องการที่จะย้าย bar icon ไปอยู่ในตำแหน่งที่หมาะสม 
+จงสร้าง `class` selector ให้กับ`fa-bars` class
+จงกำหนดให้ `display` มีค่า `block`, `margin-top` เท่ากับ `30%`, และ `margin-left` เท่ากับ `40%`.
 
 # --hints--
 
-You should create a `.fa-bars` selector.
+Yคุณควรสร้าง `.fa-bars` selector มาใหม่อันหนึ่ง
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.fa-bars'));

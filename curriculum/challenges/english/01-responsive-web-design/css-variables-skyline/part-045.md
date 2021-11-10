@@ -7,11 +7,12 @@ dashedName: part-45
 
 # --description--
 
-It's a little hidden behind the foreground buildings, but you can see the three color gradient there. Since you are using that now, remove the `background-color` property from `.bb1d`.
+นี่เป็นสิ่งที่ถูกซ่อนไว้ข้างหลังพื้นหน้า buildings แต่คุณสามารถเห็น gradient 3 สีที่ตรงนั้น
+เนื่องจากคุณกำลังใช้งานมันอยู่ จงลบ  `background-color` property ออกจาก `.bb1d`.
 
 # --hints--
 
-You should remove the `background-color` property and value from `.bb1d`
+คุณควรลบ `background-color` property และ value ออกจาก `.bb1d`
 
 ```js
 assert.notMatch(code, /\.bb1d\s*\{\s*[^}]*?background-color[^}]*?\}/);

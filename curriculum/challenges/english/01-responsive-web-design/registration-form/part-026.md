@@ -7,7 +7,8 @@ dashedName: part-26
 
 # --description--
 
-To finish this `fieldset` off, link the text `terms and conditions` to the following location:
+เพื่อที่จะทำให้ `fieldset` สมบูรณ์
+จงลิงค์ข้อความ`terms and conditions` ไว้กับที่อยู่นี้:
 
 ```md
 https://www.freecodecamp.org/news/terms-of-service/
@@ -15,7 +16,7 @@ https://www.freecodecamp.org/news/terms-of-service/
 
 # --hints--
 
-You should use an `a` element to link to the terms and conditions.
+คุณควรใช้ `a` element อันหนึ่งเพื่อลิงค์ไปที่ "terms and conditions"
 
 ```js
 assert.exists(document.querySelector('fieldset:nth-child(2) > label:nth-child(3) > input + a'));

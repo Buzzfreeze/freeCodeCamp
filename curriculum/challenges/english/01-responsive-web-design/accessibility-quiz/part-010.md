@@ -7,11 +7,12 @@ dashedName: part-10
 
 # --description--
 
-Make the `header` take up the full width of its parent container, set it's `height` to `50px`, and set the `background-color` to `#1b1b32`. Then, set the `display` to use _Flexbox_.
+จงสร้าง `header` ที่ขนาดความกว้างเท่ากับขนาดกว้างของ parent container รวมถึงกำหนดให้ `height` เท่ากับ `50px` และ `background-color` เท่ากับ `#1b1b32`
+หลังจากนั้น กำหนดให้ `display` ใช้ _Flexbox_.
 
 # --hints--
 
-You should use the `header` element selector.
+คุณควรใช้ `header` element selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('header'));

@@ -7,11 +7,13 @@ dashedName: part-6
 
 # --description--
 
-Remember that a `class` attribute can have multiple values. To separate your white keys from your black keys, you'll add a second `class` value of `black--key`. Add this to your second, third, fifth, sixth, and seventh `.key` elements. 
+จงจำไว้ว่า `class` attribute สามารถมีหลายค่าได้
+เพื่อที่จะแยกระหว่างคีย์สีขาวและสีดำ คุณควรเพิ่มค่า `class` อันที่ 2 ให้เป็น `black--key`
+จงเพิ่มค่านี้ให้กับ `.key` elements ตัวที่ 2, 3, 5, 6, และ 7
 
 # --hints--
 
-Your second `.key` element should also have a `class` of `black--key`.
+`.key` element ตัวที่ 2 ควรมีอีกคลาสชื่อ `black--key`
 
 ```js
 const key = document.querySelectorAll('.key')?.[1];

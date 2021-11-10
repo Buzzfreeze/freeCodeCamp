@@ -7,11 +7,11 @@ dashedName: part-84
 
 # --description--
 
-Now move the `guitar-neck` with a `position` of `absolute`, a `top` value of `45px`, and a `left` value of `200px`.
+ในตอนนี้ จงย้าย `guitar-neck` ไปในตำแหน่งที่เหมาะสมด้วยการกำหนด `position` เท่ากับ `absolute`,`top` เท่ากับ `45px`, และ `left` เท่ากับ `200px`.
 
 # --hints--
 
-Your `#guitar-neck` selector should have a `position` property set to `absolute`.
+`#guitar-neck` selector ควรมี `position` property อันหนึ่งที่มีค่า `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#guitar-neck')?.position === 'absolute');

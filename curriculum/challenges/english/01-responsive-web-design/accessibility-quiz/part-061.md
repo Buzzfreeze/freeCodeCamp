@@ -7,7 +7,7 @@ dashedName: part-61
 
 # --description--
 
-Give the submit button a freeCodeCamp-style design, with the following CSS properties:
+จงทำให้ submit button มีลักษณะตรงกับ design ของ freeCodeCamp-style โดยการกำหนดให้ CSS properties มีค่าดังต่อไปนี้:
 
 ```css
 display: block;
@@ -21,7 +21,7 @@ border: 3px solid #3b3b4f;
 
 # --hints--
 
-You should use the `button` element selector.
+คุณควรใช้ `button` element selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('button'));

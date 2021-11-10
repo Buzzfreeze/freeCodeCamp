@@ -9,17 +9,19 @@ dashedName: make-a-css-heartbeat-using-an-infinite-animation-count
 
 # --description--
 
-Here's one more continuous animation example with the `animation-iteration-count` property that uses the heart you designed in a previous challenge.
+นี่คืออีกตัวอย่างของการทำให้ animation วนไม่หยุดด้วย `animation-iteration-count` property ที่จะใช้หัวใจที่คุณสร้างขึ้นมาก่อนหน้านี้
 
-The one-second long heartbeat animation consists of two animated pieces. The `heart` elements (including the `:before` and `:after` pieces) are animated to change size using the `transform` property, and the background `div` is animated to change its color using the `background` property.
+การเต้นของหัวใจที่มีระบะ 11 วินาทีนั้นจะประกอบไปด้วย animated piece 2 ชิ้น
+`heart` elements (รวมถึง `:before` และ `:after` pieces) จะถูก animate เพื่อเปลี่ยนขนาดโดยใช้ `transform` property, และพื้นหลัง  `div` จะถูก animate เพื่อเปลี่ยนสีของมันโดยใช้`background` property.
 
 # --instructions--
 
-Keep the heart beating by adding the `animation-iteration-count` property for both the `back` class and the `heart` class and setting the value to `infinite`. The `heart:before` and `heart:after` selectors do not need any animation properties.
+จงทำให้หัวใจเต้นโดยการเพิ่ม `animation-iteration-count` property ให้กับทั้ง `back` class และ `heart` class และกำหนดให้ค่าเป้น `infinite`
+`heart:before` และ `heart:after` selectors จะไม่ต้องการ animation properties ใด ๆ
 
 # --hints--
 
-The `animation-iteration-count` property for the `heart` class should have a value of `infinite`.
+`animation-iteration-count` property สำหรับ `heart` class ควรมีค่าเป็น `infinite`.
 
 ```js
 assert($('.heart').css('animation-iteration-count') == 'infinite');

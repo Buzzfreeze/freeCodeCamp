@@ -7,11 +7,11 @@ dashedName: part-57
 
 # --description--
 
-Remove the `margin` and `border-top` properties and values from `.bb2a` to turn it into a triangle for the top of the building.
+จงลบ`margin` และ `border-top` properties และ values ออกจาก `.bb2a` เพื่อเปลี่ยนให้มันกลายเป็นสามเหลี่ยมสำหรับเป็นหลังคาของ building
 
 # --hints--
 
-You should remove the `margin` from `.bb2a`.
+คุรควรลบ `margin` ออกจาก `.bb2a`.
 
 ```js
 assert.isEmpty(new __helpers.CSSHelp(document).getStyle(".bb2a")?.margin);

@@ -7,13 +7,14 @@ dashedName: part-7
 
 # --description--
 
-Before you can start styling the `div` you added, you need to link your CSS to your HTML.
+ก่อนที่คุณจะสามารถเริ่มการตกแต่ง `div` ที่คุณได้สร้างไว้, คุรต้องลิงค์ CSS เข้ากับ HTML ของคุณ
 
-Add a `link` element to link your `styles.css` file. Set the `href` to `./styles.css`, and remember to set the `rel` attribute to `stylesheet`.
+จงเพิ่ม `link` element เพิ่มลิงค์ไฟล์ `styles.css` 
+จงกำหนดให้ `href` เท่ากับ `./styles.css` และจงอย่าลืมที่จะกำหนดให้ `rel` attribute เป็น `stylesheet`
 
 # --hints--
 
-Your code should have a `link` element.
+คุณควรมี 1 `link` element.
 
 ```js
 assert(/<link/.test(code))

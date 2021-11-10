@@ -7,13 +7,13 @@ dashedName: part-14
 
 # --description--
 
-Use padding to adjust the spacing within an element.
+จงใช้ padding เพื่อปรับพื้นที่ว่างภายใน element
 
-In `.frame`, use the shorthand `padding: 50px;` to increase the space between the top, bottom, left, and right of the frame's border and the canvas within.
+ใน `.frame`, จงใช้คำสั่ง`padding: 50px;` เพื่อเพิ่มพื้นที่ระหว่างด้านบน ด้านล่าง ด้านซ้ายและด้านขวาของขอบของกรอบรูปและผ้าใบข้างใน
 
 # --hints--
 
-You should set the `padding` property to `50px`.
+คุณควรกำหนดให้ `padding` property มีค่าเป็น `50px`
 
 ```js
 const hasPadding = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style.padding === '50px');

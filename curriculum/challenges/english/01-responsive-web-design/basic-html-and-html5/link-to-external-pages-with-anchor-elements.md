@@ -9,23 +9,26 @@ dashedName: link-to-external-pages-with-anchor-elements
 
 # --description--
 
-You can use `a` (*anchor*) elements to link to content outside of your web page.
+คุณสามารถใช้  `a` (*anchor*) elements เพื่อลิงค์ไปที่ content ที่อยู่ข้างนอกหน้าเว็บไซต์ของคุณ
 
-`a` elements need a destination web address called an `href` attribute. They also need anchor text. Here's an example:
+`a` elements ต้องการ web address ปลายทางที่ชื่อว่า `href` attribute
+พวกมันก็ยังจำเป็นต้องมี anchor text
+นี่คือตัวอย่าง :
 
 ```html
 <a href="https://www.freecodecamp.org">this links to freecodecamp.org</a>
 ```
 
-Then your browser will display the text `this links to freecodecamp.org` as a link you can click. And that link will take you to the web address `https://www.freecodecamp.org`.
+หลังจากนั้น browser ของคุณจะแสดงข้อความที่เขียนว่า `this links to freecodecamp.org` ซึ่งเป็นลิงค์ที่คุณสามารถคลิกได้
+และลิงค์นั้นจะพาคุณไปยังที่อยู่เว็บ `https://www.freecodecamp.org`
 
 # --instructions--
 
-Create an `a` element that links to `https://www.freecatphotoapp.com` and has "cat photos" as its anchor text.
+จงสร้าง `a` element ที่ลิงค์ไปยัง `https://www.freecatphotoapp.com` และมี "cat photos" เป็น anchor text
 
 # --hints--
 
-Your `a` element should have the anchor text of `cat photos`.
+`a` element ควรมี anchor text ที่เขียนว่า `cat photos`
 
 ```js
 assert(/cat photos/gi.test($('a').text()));

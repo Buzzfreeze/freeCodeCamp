@@ -7,11 +7,12 @@ dashedName: part-11
 
 # --description--
 
-Below your `back-wall` element, create a `div` with a `class` of `characters`. This is where you will be creating your painting's characters.
+ต่อจาก `back-wall` element, จงสร้าง `div` อันหนึ่งที่มี `class` ชื่อ `characters`
+นี่จะเป็นที่ที่สร้างตัวละครของภาพของคุณ
 
 # --hints--
 
-You should only add one new `div` element.
+คุณควรเพิ่มเพียง 1 `div` element
 
 ```js
 assert(document.querySelectorAll('div').length === 2);

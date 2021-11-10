@@ -7,13 +7,15 @@ dashedName: part-23
 
 # --description--
 
-Arguably, `D.O.B.` is not descriptive enough. This is especially true for visually impaired users. One way to get around such an issue, without having to add visible text to the label, is to add text only a screen reader can read.
+เป็นที่ถกเถียงกันว่า `D.O.B.` นั้นไม่ค่อยทำให้เห็นภาพชัดซักเท่าไหร่
+ซึ่งมันก็ค่อนข้างจะจริงโดยเฉพาะกับ users ที่มีปัญหาด้านการมองเห็น
+ทางหนึ่งที่จะช่วยแก้ปัญหานี้คือ ใส่ข้อความแค่บนหน้าจอที่ผู้อ่านสามารถอ่านได้โดยไม่เพิ่ม visible text ใน label
 
-Append a `span` element with a class of `sr-only` to the current text content of the third `label` element.
+จงเพิ่ม `span` element ที่มีคลาส `sr-only` เข้าไปที่ text content ของ `label` element ที่สาม.
 
 # --hints--
 
-You should add a `span` element within the third `label` element.
+คุณควรเพิ่ม `span` element ข้างใน `label` element อันที่สาม.
 
 ```js
 assert.exists(document.querySelector('.info:nth-of-type(3) > label > span'));

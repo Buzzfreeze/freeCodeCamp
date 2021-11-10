@@ -9,11 +9,13 @@ dashedName: define-the-head-and-body-of-an-html-document
 
 # --description--
 
-You can add another level of organization in your HTML document within the `html` tags with the `head` and `body` elements. Any markup with information about your page would go into the `head` tag. Then any markup with the content of the page (what displays for a user) would go into the `body` tag.
+คุณสามารถเพิ่มลำดับการจัดวางของ HTML document ภายในแท็ก `html` ได้ด้วย `head` และ `body` elements
+markup ใดก็ตามที่มาพร้อมกับข้อมูลเกี่ยวกับหน้าเว็บไซต์ของคุณจะถูกเก็บในแท็ก `head`
+ต่อจากนั้น markup ใด ๆ ที่เป็นเนื้อหาของหน้านั้นซึ่งต้องถูกแสดงให้ผู้ใช้เห็น ก็จะอยู่ในแท็ก `body` 
 
-Metadata elements, such as `link`, `meta`, `title`, and `style`, typically go inside the `head` element.
+Metadata elements, เช่น `link`, `meta`, `title`, และ `style`, โดยปกติแล้วจะไปอยู่ใน `head` element
 
-Here's an example of a page's layout:
+นี่คือตัวอย่างของ page's layout:
 
 ```html
 <!DOCTYPE html>
@@ -30,11 +32,12 @@ Here's an example of a page's layout:
 
 # --instructions--
 
-Edit the markup so there's a `head` and a `body`. The `head` element should only include the `title`, and the `body` element should only include the `h1` and `p`.
+จงแก้ไขให้ markup มี `head` และ `body` อย่าละอัน
+`head` element ควณจะมีแค่ `title`, ส่วน `body` element ควรมีแค่ `h1` และ `p`
 
 # --hints--
 
-There should be only one `head` element on the page.
+มันคือมีแค่ `head` element 1 อันในหน้านี้
 
 ```js
 const headElems = code.replace(/\n/g, '').match(/\<head\s*>.*?\<\/head\s*>/g);

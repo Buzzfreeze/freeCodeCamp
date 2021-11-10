@@ -9,21 +9,22 @@ dashedName: prioritize-one-style-over-another
 
 # --description--
 
-Sometimes your HTML elements will receive multiple styles that conflict with one another.
+บางครั้ง HTML element ของคุณอาจจะได้รับ style หลาย ๆ แบบที่ขัดแย้งกับอีกอันหนึ่ง
 
-For example, your `h1` element can't be both green and pink at the same time.
+ยกตัวอย่างเช่น, `h1` element ไม่สามารถสีทั้งสีเขียนและชมพูได้ในเวลาเดียวกัน
 
-Let's see what happens when we create a class that makes text pink, then apply it to an element. Will our class *override* the `body` element's `color: green;` CSS property?
+เรามาดูสิ่งที่จะเกิดขึ้นเมื่อเราสร้าง class ที่ทำให้จัวอักษรเป็นสีชมพู และเพิ่มมันให้กับ element หนึ่ง
+class ของเราจะเขียนทับ `color: green;` CSS property ของ `body` element หรือเปล่า ?
 
 # --instructions--
 
-Create a CSS class called `pink-text` that gives an element the color pink.
+จงสร้าง CSS class ที่ชื่อ `pink-text` ที่จะกำหนดให้element มีสีชมพู
 
-Give your `h1` element the class of `pink-text`.
+จงกำหนดให้ `h1` element มีคลาสที่ชื่อ`pink-text`.
 
 # --hints--
 
-Your `h1` element should have the class `pink-text`.
+`h1` element ควรมี class `pink-text`
 
 ```js
 assert($('h1').hasClass('pink-text'));

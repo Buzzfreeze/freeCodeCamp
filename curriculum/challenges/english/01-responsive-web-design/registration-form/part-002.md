@@ -7,11 +7,11 @@ dashedName: part-2
 
 # --description--
 
-Add opening and closing `html` tags below the `DOCTYPE` so you have a place to start putting some code.
+จงเพิ่ม `html` tags ที่เอาไว้เปิดกับปิดข้างล่าง `DOCTYPE` เพื่อที่คุณได้จะมีที่ให้เขียนโค้ด
 
 # --hints--
 
-Your `html` element should be below the `DOCTYPE` declaration.
+`html` element ของคุณควรอยู่ข้างล่าง `DOCTYPE` declaration.
 
 ```js
 assert(code.match(/(?<!<html\s*>)<!DOCTYPE\s+html\s*>/gi));

@@ -7,11 +7,11 @@ dashedName: part-33
 
 # --description--
 
-Give the table a `z-index` of `1`.
+จงกำหนดให้โต๊ะมี `z-index` เท่ากับ `1`
 
 # --hints--
 
-Your `#tan-table` selector should have a `z-index` property set to `1`.
+`#tan-table` selector ควรมี `z-index` property เท่ากับ `1`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#tan-table')?.zIndex === '1');

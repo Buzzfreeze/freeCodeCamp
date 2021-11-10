@@ -7,11 +7,12 @@ dashedName: part-68
 
 # --description--
 
-Use an `id` selector to create a rule for your `eyes-div` element. Set the `width` to `180px` and the `height` to `50px`.
+จงใช้ `id` selector เพื่อที่จะสร้างกฏให้กับ`eyes-div` element
+จงกำหนดให้ `width` เท่ากับ `180px` และ `height` เท่ากับ `50px`.
 
 # --hints--
 
-You should create an `#eyes-div` selector.
+คุณควรสร้าง `#eyes-div` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#eyes-div'));

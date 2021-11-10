@@ -9,17 +9,17 @@ dashedName: create-visual-direction-by-fading-an-element-from-left-to-right
 
 # --description--
 
-For this challenge, you'll change the `opacity` of an animated element so it gradually fades as it reaches the right side of the screen.
+สำหรับแบบฝึกหัดนี้ คุณจะได้เปลี่ยน `opacity` ของ element ที่ถูก animate เพื่อที่มันจะได้ค่อย ๆ หายไปเมื่อมันถึงด้านขวาของจอ 
 
-In the displayed animation, the round element with the gradient background moves to the right by the 50% mark of the animation per the `@keyframes` rule.
+ที่ animation ที่ได้แสดงออกมา element กลม ๆ ที่มาพร้อมกับพื้นหลัง gradient จะย้ายไปที่ด้านขวาที่ 50% mark ของ animation ตาม `@keyframes` rule
 
 # --instructions--
 
-Target the element with the id of `ball` and add the `opacity` property set to 0.1 at `50%`, so the element fades as it moves to the right.
+จงชี้ไปที่ element ที่มีไอดีเป้น `ball` และเพิ่ม `opacity` property ที่ถูกกำหนดให้เป็น 0.1 ที่ `50%`, เพื่อที่ element จะได้ค่อย ๆ หายไปเมื่อมันเคลื่อนไปทางขวา 
 
 # --hints--
 
-The `keyframes` rule for fade should set the `opacity` property to 0.1 at 50%.
+`keyframes` rule สำหรับการจางควรจะกำหนดให้ `opacity` property อยู่ที่ 0.1 ตรง 50%
 
 ```js
 assert(

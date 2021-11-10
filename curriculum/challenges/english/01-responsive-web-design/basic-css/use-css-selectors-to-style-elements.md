@@ -9,20 +9,21 @@ dashedName: use-css-selectors-to-style-elements
 
 # --description--
 
-With CSS, there are hundreds of CSS properties that you can use to change the way an element looks on your page.
+ด้วย CSS, มันมี CSS properties หลายร้อยอันที่คุณสามารถใช้เพื่อเปลี่ยนรูปร่างหน้าตาของ element ที่อยู่บนหน้าเว็บของคุณ
 
-When you entered `<h2 style="color: red;">CatPhotoApp</h2>`, you were styling that individual `h2` element with inline CSS, which stands for Cascading Style Sheets.
+เพื่อคุณพิมพ์ `<h2 style="color: red;">CatPhotoApp</h2>`, คุณจะตกแต่ง `h2` element อันนั้นด้วย inline CSS, ซึ่งย่อมาจาก Cascading Style Sheets
 
-That's one way to specify the style of an element, but there's a better way to apply CSS.
+นี่เป็นพวกวิธีเพื่อระบุ style ของ element หนึ่ง, แต่มันยังมีวิธีที่ดีกว่าในการใช้ CSS
 
-At the top of your code, create a `style` block like this:
+ที่ด้านบนของโค้ด, จงสร้าง `style` block แบบนี้:
 
 ```html
 <style>
 </style>
 ```
 
-Inside that style block, you can create a <dfn>CSS selector</dfn> for all `h2` elements. For example, if you wanted all `h2` elements to be red, you would add a style rule that looks like this:
+ภายใน style block อันนั้น คุณสามารถสร้าง  <dfn>CSS selector</dfn> ให้กับ `h2` element ทั้งหมดได้
+ยกตัวอย่างเช่น ถ้าคุณต้องการให้ `h2` element ทั้งหมดเป็นสีแดง คุณสามารถเพิ่ม style rule อันหนึ่งเข้าไปแบบนี้ :
 
 ```html
 <style>
@@ -32,15 +33,18 @@ Inside that style block, you can create a <dfn>CSS selector</dfn> for all `h2` e
 </style>
 ```
 
-Note that it's important to have both opening and closing curly braces (`{` and `}`) around each element's style rule(s). You also need to make sure that your element's style definition is between the opening and closing style tags. Finally, be sure to add a semicolon to the end of each of your element's style rules.
+จงไว้ว่า มันสำคัญมากที่จะใส่ทั้ `{` และ `}` รอบ style rule ของแต่ละ element
+คุณยังจำเป็นต้องเช็คให้มั่นใจว่า style definition ของ element นั้นอยู่ระหว่างแท็กเปิดและปิดของ style tags
+สุดท้ายนี้ จงมั่นใจว่าได้เพิ่ม semicolon อันหนึ่งที่ด้านท้ายของแต่ละ style rules ของ element 
 
 # --instructions--
 
-Delete your `h2` element's style attribute, and instead create a CSS `style` block. Add the necessary CSS to turn all `h2` elements blue.
+จงลบ style attribute ของ `h2` element และแทนที่ด้วยการสร้าง CSS `style` block
+จงเพิ่ม CSS ที่จำเป็นต่อการเปลี่ยน `h2` elements ทั้งหมดให้เป็นสีฟ้า
 
 # --hints--
 
-The `style` attribute should be removed from your `h2` element.
+`style` attributeควรถูกเอาออกจาก `h2` element
 
 ```js
 assert(!$('h2').attr('style'));

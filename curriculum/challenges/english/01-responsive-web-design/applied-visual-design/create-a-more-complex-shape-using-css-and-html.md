@@ -9,7 +9,10 @@ dashedName: create-a-more-complex-shape-using-css-and-html
 
 # --description--
 
-One of the most popular shapes in the world is the heart shape, and in this challenge you'll create one using pure CSS. But first, you need to understand the `::before` and `::after` pseudo-elements. These pseudo-elements are used to add something before or after a selected element. In the following example, a `::before` pseudo-element is used to add a rectangle to an element with the class `heart`:
+หนึ่งในรูปร่างที่เป็นที่นิยมมากที่สุดในโลกคือรูปหัวใจ และในแบบฝึกให้นี้จะให้คุรสร้างมันขึ้นมาจาก CSS เพียว ๆ
+แต่ก่อนอื่น คุณต้องเข้าใจ `::before` และ `::after` pseudo-elements
+pseudo-element พวกนี้ถูกใช้เพื่อเพิ่มบางอย่างก่อนหรือหลัง element ที่เลือกได้
+ข้างล่างเป็นตัวอย่างของการใช้ `::before` pseudo-element เพื่อเพิ่มรูปสี่เหลี่ยมให้กับ elementที่มีคลาสชื่อว่า `heart`:
 
 ```css
 .heart::before {
@@ -24,19 +27,25 @@ One of the most popular shapes in the world is the heart shape, and in this chal
 }
 ```
 
-For the `::before` and `::after` pseudo-elements to function properly, they must have a defined `content` property. This property is usually used to add things like a photo or text to the selected element. When the `::before` and `::after` pseudo-elements are used to make shapes, the `content` property is still required, but it's set to an empty string. In the above example, the element with the class of `heart` has a `::before` pseudo-element that produces a yellow rectangle with height and width of `50px` and `70px`, respectively. This rectangle has round corners due to its 25% `border-radius` and is positioned absolutely at `5px` from the left and `50px` above the top of the element.
+เพื่อทำให้ `::before` และ `::after` pseudo-elements ทำงานได้อย่างปกติ
+พวกมันมักจะมี `content` property ที่ถูกกำหนดไว้แล้วโดย property นี้มักถูกใช้เพื่อเพิ่มสิ่งที่เหมือนเป้นรูปภาพหรือข้อความให้กับ element ที่เลือกไว้
+เมื่อ`::before` และ `::after` pseudo-elements ถูกใช้เพื่อสร้างรูปร่าง `content` property ก็ยังเป็นสิ่งที่จำเป็นอยู่ แต่เราจะกำหนดให้มันเป็น string เปล่า
+ที่ตัอย่างด้านบน, element ที่มีคลาสเป็น `heart` จะมี `::before` pseudo-element อันหนึ่งที่สร้างสี่เหลี่ยมสีเหลืองที่มีความสูงและความกว้างเท่ากับ `50px` และ `70px` ตามลำดับ,
+สี่เหลี่ยมนี้จะมีมุมมน ๆ จากการที่มันถึงกำหนดให้มี `border-radius` ที่ 25% และตำแหน่งของมันจะอยู่ที่ `5px` จากทางด้านซ้ายและ `50px` เหนือด้านบนของ element
 
 # --instructions--
 
-Transform the element on the screen to a heart. In the `heart::after` selector, change the `background-color` to `pink` and the `border-radius` to 50%.
+จงเปลี่ยน element บนจอให้เป็นหัวใจ
+ใน `heart::after` selector, จงเปลี่ยน `background-color` ให้เป็น `pink` และมี `border-radius` เป็น 50%
 
-Next, target the element with the class `heart` (just `heart`) and fill in the `transform` property. Use the `rotate()` function with -45 degrees.
+ถัดไป จงชี้ไปที่ element ที่มีคลาสชื่อ `heart` และเติม `transform` property
+จงใช้ `rotate()` function ที่มีค่าเป็น -45 degrees
 
-Finally, in the `heart::before` selector, set its `content` property to an empty string.
+สุดท้ายนี้, ภายใน `heart::before` selector, จงกำหนดให้ `content` property ของมันเป็น string เปล่า
 
 # --hints--
 
-The `background-color` property of the `heart::after` selector should be `pink`.
+`background-color` property ของ `heart::after` selector ควรเป็น `pink`
 
 ```js
 const heartAfter = code.match(/\.heart::after\s*{[\s\S]+?[^\}]}/g)[0];

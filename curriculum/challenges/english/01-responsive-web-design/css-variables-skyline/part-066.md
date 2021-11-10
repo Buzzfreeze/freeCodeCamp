@@ -7,11 +7,11 @@ dashedName: part-66
 
 # --description--
 
-Move the `display`, `flex-direction`, and `align-items` properties and values from `.bb1` to the new `building-wrap` class.
+จงย้าย `display`, `flex-direction`, และ `align-items` properties และ values จาก `.bb1` ไปที่ `building-wrap` class.
 
 # --hints--
 
-You should remove `display` from `.bb1`.
+คุณควรลบ `display` ออกจาก `.bb1`.
 
 ```js
 assert.isEmpty(new __helpers.CSSHelp(document).getStyle(".bb1")?.display);

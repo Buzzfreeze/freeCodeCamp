@@ -7,11 +7,11 @@ dashedName: part-16
 
 # --description--
 
-Use the same variable as the `background-color` of the `.bb1b`, `.bb1c`, and `.bb1d` classes to fill in the rest of the building.
+จงใช้ตัวแปรเดียวกันกับ `background-color` ของ `.bb1b`, `.bb1c`, และ `.bb1d` class เพื่อลงสีให้กับ building ที่เหลือ
 
 # --hints--
 
-The `background-color` of the `bb1b` element should be set.
+`background-color` ของ `bb1b` element ควรถูกกำหนดไว้
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('.bb1b')?.backgroundColor)

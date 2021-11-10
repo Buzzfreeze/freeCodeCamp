@@ -7,11 +7,12 @@ dashedName: part-81
 
 # --description--
 
-On to the next building! Nest two `div` elements within `.fb2` and give them classes of `fb2a` and `fb2b`, in that order.
+ไปกันต่อที่ตึกถัดไป! 
+จงเพิ่ม `div` element 2 อันภายใน `.fb2` และจงกำหนดให้พวกมันมีคลาสชื่อ  `fb2a` และ `fb2b` ตามลำดับ
 
 # --hints--
 
-You should add two `div` elements within `.fb2`.
+คุรควรเพิ่ม 2 `div` elements ภายใน `.fb2`.
 
 ```js
 assert.equal(document.querySelectorAll("div.fb2 > div")?.length, 2);

@@ -7,11 +7,12 @@ dashedName: part-72
 
 # --description--
 
-Create a `class` selector for your `triangle` elements. Set the `width` to `0` and the `height` to `0`.
+จงสร้าง `class` selector ให้กับ `triangle` elements
+จงกำหนดให้ `width` มีค่า `0` และ `height` มีค่า `0`
 
 # --hints--
 
-You should create a `.triangle` selector.
+Yคุณควรสร้าง `.triangle` selector มาอันหนึ่ง
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.triangle'));

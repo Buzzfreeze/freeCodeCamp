@@ -7,13 +7,14 @@ dashedName: part-5
 
 # --description--
 
-HTML5 has some elements that identify different content areas. These elements make your HTML easier to read and help with Search Engine Optimization (SEO) and accessibility.
+HTML5 มีบาง element ที่จะบอกพื้นที่ของ content ที่แตกต่างกัน
+element เหล่านี้ทำให้ HTML นั้นง่ายที่จะอ่านมายิ่งขึ้น และมันช่วยในเรื่องของ Search Engine Optimization (SEO) แล้วการเข้าถึง
 
-Identify the main section of this page by adding a `<main>` opening tag after the `h1` element, and a `</main>` closing tag after the `p` element.
+จงระบุ main section ของหน้านี้ด้วยการเพิ่มแท็กเปิดของ `<main>` หลังจาก `h1` element, และแป็กปิดของ `</main>`  หลังจาก `p` element
 
 # --hints--
 
-Your `main` element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+`main` element ควรมีแท็กเปิด โดยแท็กเปิดมี syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(document.querySelector('main'));

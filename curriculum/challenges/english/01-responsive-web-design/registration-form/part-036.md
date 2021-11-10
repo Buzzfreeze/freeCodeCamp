@@ -7,13 +7,16 @@ dashedName: part-36
 
 # --description--
 
-With form submissions, it is useful, and good practice, to provide each submittable element with a `name` attribute. This attribute is used to identify the element in the form submission.
+สำหรับการส่งแบบฟอร์ม มันค่อนข้างมีประโยชน์และเป็น good practice ที่จะกำหนด `name` attribute ให้กับแต่ละ element ที่สามารถส่งได้
+attribute นี้ถูกใช้เพื่อบอก element ที่อยู่ในการส่งแบบฟอร์ม
 
-Go ahead, and give each submittable element a unique `name` attribute of your choosing. _Except for the two `radio` inputs._
+มาต่อกันเลย
+จงเพิ่ม `name` attribut ที่แตกต่างกันให้แต่ละ element ที่สามารถส่งได้ _ยกเว้น `radio` input 2 อัน._
 
 # --hints--
 
-You should give the `input` expecting a first name a `name` attribtute. _P.S. I would have chosen `first-name`_
+คุณควรใส่ `name` attribtute ที่`input` สำหรับการใช้ชื่อจริง 
+_P.S. ถ้าเป็นฉัน ฉันจะใช้ `first-name`_
 
 ```js
 assert.isNotEmpty(document.querySelector('fieldset:nth-child(1) > label:nth-child(1) > input')?.name);

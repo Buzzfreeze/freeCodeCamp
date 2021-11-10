@@ -7,11 +7,11 @@ dashedName: part-32
 
 # --description--
 
-Move the table into place by giving it a `position` of `absolute`, a `top` value of `275px`, and a `left` value of `15px`.
+จงย้ายโต๊ะไปตำแหน่งที่ได้กำหนดให้มี `position` เป็น `absolute`,`top` มีค่า `275px`, และ `left` มีค่า `15px`
 
 # --hints--
 
-Your `#tan-table` selector should have a `position` property set to `absolute`.
+`#tan-table` selector ควรมี `position` property ที่มีค่าเป็น `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#tan-table')?.position === 'absolute');

@@ -7,11 +7,13 @@ dashedName: part-30
 
 # --description--
 
-It’s looking good. Time to start adding some menu items. Add an empty `article` element under the `Coffee` heading. It will contain a flavor and price of each coffee you currently offer.
+ตอนนี้มันดูดีเลย ถึงเวลาที่จะเริ่มเพิ่มรายการในเมนูแล้
+จงเพิ่ม `article` element เปล่าด้านล่าง `Coffee` heading
+สิ่งนี้จะเก็บรสชาติและราคาของกาแฟแต่ละประเภทของคุณ
 
 # --hints--
 
-You should have an opening `<article>` tag.
+Yคุณควรมีแท็กเปิด `<article>` อันหนึ่ง
 
 ```js
 assert(code.match(/<article>/i));

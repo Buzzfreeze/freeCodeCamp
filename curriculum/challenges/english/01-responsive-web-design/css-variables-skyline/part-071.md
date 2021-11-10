@@ -7,7 +7,9 @@ dashedName: part-71
 
 # --description--
 
-The windows are stacked on top of each other at the left of the section, behind the purple building. Add a new class below `.building-wrap` called `.window-wrap`, and add these properties to it:
+หน้าต่างซ้อนทับกันอยู่ด้านบนของกันและกันที่ทางด้านซ้ายของ section, โดยอยู่ด้านหลังตึกม่วง
+จงเพิ่มคลาสอันใหม่ที่ด้านล่าง `.building-wrap` ชื่อ `.window-wrap`
+และจงเพิ่ม property เหล่านี้เข้าไป:
 
 ```css
 display: flex;
@@ -15,11 +17,11 @@ align-items: center;
 justify-content: space-evenly;
 ```
 
-This will be used in a few places to center window elements vertically, and evenly space them in their parent.
+นี่จะถูกใช้ในบางที่เพื่อทำให้ element ของหน้าต่างอยู่ตรงกลางในแนวตั้ง และอยู่ห่างเท่า ๆ กันใน parent ของพวกมัน
 
 # --hints--
 
-You should create a `.window-wrap` selector.
+คุณควรสร้าง `.window-wrap` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle(".window-wrap"));

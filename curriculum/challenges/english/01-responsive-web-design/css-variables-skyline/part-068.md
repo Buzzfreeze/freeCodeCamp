@@ -7,7 +7,9 @@ dashedName: part-68
 
 # --description--
 
-Create a new variable called `--window-color4` in `:root` and give it a value of `#8cb3d9`. This will be the secondary color for the last background building.
+จงสร้างตัวแปรอันใหม่ขึ้นมา โดยให้ชื่อว่า  `--window-color4` ใน  `:root` 
+และจงกำหนดให้มันมีค่า  `#8cb3d9`
+นี่จะเป็นสีทุติยภูมิของสีตึกพื้นหลังอันสุดท้าย
 
 # --hints--
 

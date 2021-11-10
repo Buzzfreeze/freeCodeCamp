@@ -7,13 +7,14 @@ dashedName: part-56
 
 # --description--
 
-To align the `input` boxes with each other, set the `display` property to `inline-block` for all `input` and `label` elements within `.info` elements.
+เพื่อที่จะจัดให้ `input` boxes อยู่ตรงกันกับตัวอื่น ๆ
+จงกำหนดให้ `display` property มีค่า `inline-block` สำหรับทุก `input` และ `label` elements ภายใน `.info` elements.
 
-Also, align the text to the right.
+นอกจากนั้น จงจัดให้ข้อความทั้งหมดชิดขวา
 
 # --hints--
 
-You should use either a `.info > label, .info > input` or `.info label, .info input` selector.
+คุณควรใช้ `.info > label, .info > input` หรือ `.info label, .info input` selector.
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);

@@ -9,21 +9,22 @@ dashedName: create-a-custom-css-variable
 
 # --description--
 
-To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this:
+เพื่อที่จะสร้างตัวแปร CSS, คุณแค่ต้องกำหนดให้มันมีชื่อพร้อมกับ hyphen 2 อันตรงด้านหน้า และกำหนดค่าให้มันแบบนี้ :
 
 ```css
 --penguin-skin: gray;
 ```
 
-This will create a variable named `--penguin-skin` and assign it the value of `gray`. Now you can use that variable elsewhere in your CSS to change the value of other elements to gray.
+โค้ดด้านบนจะสร้างตัวแปรที่ชื่อ `--penguin-skin` และกำหนดค่าให้มันเป็น `gray`
+ตอนนี้คุณสามารถใช้ตัวแปรตัวนั้นที่ไหนซักที่ใน CSS ของคุณเพื่อเปลี่ยนค่าของ element อื่นให้เป็น gray
 
 # --instructions--
 
-In the `penguin` class, create a variable name `--penguin-skin` and give it a value of `gray`.
+ใน`penguin` class, จงสร้างตัวแปรที่ชื่อ `--penguin-skin` และกำหนดให้มันมีค่าเป็น `gray`
 
 # --hints--
 
-`penguin` class should declare the `--penguin-skin` variable and assign it to `gray`.
+`penguin` class ควรประกาศตัวแปร `--penguin-skin` และกำหนดค่า `gray` ให้มัน
 
 ```js
 assert(

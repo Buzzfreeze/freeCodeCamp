@@ -7,11 +7,14 @@ dashedName: part-20
 
 # --description--
 
-Now you have a large box. Give it a `border-top-color`, `border-right-color`, and `border-left-color` of `transparent`. Set the `border-bottom-color` to `GhostWhite`. This will make it look more like a hat.
+ตอนนี้คุณมีกล่องใหญ่ ๆ ใบหนึ่ง
+จงกำหนดให้มันมี`border-top-color`, `border-right-color`, และ `border-left-color` ที่เป็นแบบ `transparent`
+จงกำหนดให้ `border-bottom-color` มีค่าเป็น `GhostWhite`
+นี่จะทำให้มันดูเป็นเหมือนกับหมวกมากขึ้น
 
 # --hints--
 
-Your `#white-hat` selector should have a `border-top-color` property set to `transparent`.
+`#white-hat` selector ควรมี `border-top-color` property ที่เป็นแบบ `transparent`.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#white-hat')?.borderTopColor === 'transparent');

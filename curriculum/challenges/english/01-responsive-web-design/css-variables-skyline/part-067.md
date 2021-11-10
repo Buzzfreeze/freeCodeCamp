@@ -7,11 +7,12 @@ dashedName: part-67
 
 # --description--
 
-Add the new `building-wrap` class to the `.bb1` and `.bb4` elements. This will apply the centering properties to the buildings that need it.
+จงเพิ่ม `building-wrap` class  อันใหม่ให้กับ `.bb1` และ `.bb4` elements
+นี่จะเป็นการใส่ centering properties ให้กับตึกที่ต้องการมัน
 
 # --hints--
 
-You should add `building-wrap` to the `.bb1` element.
+คุรควรเพิ่ม  `building-wrap` ให้กับ `.bb1` element.
 
 ```js
 assert.exists(document.querySelector("div.bb1.building-wrap"));

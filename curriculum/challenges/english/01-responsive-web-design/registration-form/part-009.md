@@ -7,11 +7,13 @@ dashedName: part-9
 
 # --description--
 
-That is better. Now, make the background easy on the eyes, by changing the `body` `background-color` to `#1b1b32`. Then, to see the text, change the `color` to `#f5f6f7`.
+ตอนนี้มันดูดีกว่าเดิมแล้ว
+ในตอนนี้ จงทำให้พื้นหลังดูง่ายขึ้น โดยการเปลี่ยน `body` `background-color` ให้มีค่า `#1b1b32`
+หลังจากนั้น จงเปลี่ยน `color` ให้เป็น `#f5f6f7`เพื่อที่ข้อความจะได้ดูชัดเจนขึ้น
 
 # --hints--
 
-You should add the `background-color` within the `body` element selector.
+คุณควรเพิ่ม `background-color` ภายใน `body` element selector.
 
 ```js
 assert.isNotEmpty(new __helpers.CSSHelp(document).getStyle('body')?.backgroundColor);

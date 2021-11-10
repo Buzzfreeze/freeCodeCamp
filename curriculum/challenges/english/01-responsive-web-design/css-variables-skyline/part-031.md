@@ -7,11 +7,11 @@ dashedName: part-31
 
 # --description--
 
-Give the six new elements these `width` and `height` values: `10%` and `60%` to `.fb1`, `10%` and `40%` to `.fb2`, `10%` and `35%` to `.fb3`, `8%` and `45%` to `.fb4`, `10%` and `33%` to `.fb5`, and `9%` and `38%` to `.fb6`.
+จงกำหนดให้ element อันใหม่ทั้ง 6 อันมีค่า`width` และ `height` ตามลำดับดังนี้: `10%` และ `60%` ให้กับ `.fb1`, `10%` และ `40%` ให้กับ `.fb2`, `10%` และ `35%` ให้กับ `.fb3`, `8%` และ `45%` ให้กับ `.fb4`, `10%` และ `33%` ให้กับ`.fb5`, `9%` และ `38%` ให้กับ`.fb6`.
 
 # --hints--
 
-You should create a `.fb1` selector.
+คุณควรสร้าง `.fb1` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('.fb1'));

@@ -7,11 +7,14 @@ dashedName: part-20
 
 # --description--
 
-It is important to link each `input` to the corresponding `label` element. This provides assistive technology users with a visual reference to the input.
+การเชื่อมแต่ละ `input` กับ `label` element ที่สัมพันะ์กันเป็นสิ่งจำเป็น
+มันทำให้ assistive technology users มองเห็น reference ของ the input
 
-This is done, by giving the `label` a `for` attribute, which contains the `id` of the `input`.
+ซึ่งขั้นตอนนี้สามารถทำได้โดยการเพิ่ม `for` attribute ใน `label` โดย attribute จะเก็บ `id` ของ `input`เอาไว้
 
-This section will take a student's name, email address, and date of birth. Give the `label` elements appropriate `for` attributes, as well as text content. Then, link the `input` elements to the corresponding `label` elements.
+section นี้จะรับชื่อ, email address และวันเกิดของนักเรียน
+จงใส่ `for` attributes ที่เหมาะสมลงไปใน `label` elements เช่นเดียวกันกับเนื้อหาที่เป็นตัวอักษร
+หลังจากนั้น จงเชื่อม `input` elements เข้ากับ `label` elements ที่สัมพันธ์กัน
 
 # --hints--
 

@@ -7,11 +7,13 @@ dashedName: part-28
 
 # --description--
 
-The background buildings are starting to look pretty good. Create a new `div` below the `background-buildings` element and give it a class of `foreground-buildings`. This will be another container for more buildings.
+พื้นหลังของ building ดูเหมือนจะดูดีขึ้นแล้ว
+จงสร้าง  `div` อันใหม่ด้านล่าง `background-buildings` element และจงกำหนดให้มันมีคลาสชื่อว่า `foreground-buildings`
+สิ่งนี้จะกลายเป็น container อีกอันของ building
 
 # --hints--
 
-You should create a new `div` element.
+คุณควรสร้าง`div` element อันใหม่ขึ้นมา 1 อัน
 
 ```js
 assert.equal(document.querySelectorAll('div')?.length, 15);

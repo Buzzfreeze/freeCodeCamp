@@ -7,13 +7,13 @@ dashedName: part-34
 
 # --description--
 
-The final section of this quiz will contain a dropdown, and a text box.
+ส่วนสุดท้ายของ quiz จะประกอบด้วย dropdown และ text box
 
-Begin by nesting a `div` with a `class` of `formrow`, and nest four `div` elements inside of it, alternating their `class` attributes with `question-block` and `answer`.
+โดยเริ่มจาก จงใส่ `div` ที่มาพร้อมกับ `class` ของ `formrow` 1 อันกับ แล้วเพิ่ม `div` elements 4 อัน ข้างในนั้นอีกที โดยสลับ `class` attributes ของพวกมันระหว่าง `question-block` กับ `answer`.
 
 # --hints--
 
-You should add one `div` element within the final `section`.
+คุณควรเพิ่ม `div` element 1 อันใน `section` ส่วนสุดท้าย.
 
 ```js
 assert.exists(document.querySelector('section:nth-of-type(3) > div'));

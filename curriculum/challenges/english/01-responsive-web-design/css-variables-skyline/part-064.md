@@ -7,11 +7,12 @@ dashedName: part-64
 
 # --description--
 
-Remove the `background-color` property and value from `.bb4`, and add it to the three new sections `.bb4a`, `.bb4b`, and `.bb4c`, so only the sections are filled.
+จงลบ `background-color` property และ value ออกจาก `.bb4`
+และจงเพิ่มมันเข้าไปใน 3 section ใหม่ที่ชื่อ  `.bb4a`, `.bb4b`, และ `.bb4c`, เพื่อที่จะได้ลงสีให้กับ section เหล่านี้
 
 # --hints--
 
-You should remove the `background-color` from `.bb4`.
+คุณควรลบ `background-color` ออกจาก `.bb4`.
 
 ```js
 assert.isEmpty(new __helpers.CSSHelp(document).getStyle(".bb4")?.backgroundColor);

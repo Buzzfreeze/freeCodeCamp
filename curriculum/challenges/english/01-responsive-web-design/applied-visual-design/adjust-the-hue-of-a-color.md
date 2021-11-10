@@ -9,25 +9,32 @@ dashedName: adjust-the-hue-of-a-color
 
 # --description--
 
-Colors have several characteristics including hue, saturation, and lightness. CSS3 introduced the `hsl()` property as an alternative way to pick a color by directly stating these characteristics.
+สีมีคุณสมบัติหลากหลายรวมถึง hue, saturation, และ lightness
+CSS3 ได้มีการเพิ่ม `hsl()` property เข้ามาให้เป็นอีกหนึ่งวิธีที่ใช้เลือกสีโดยการใช้คุณสมบัติพวกนี้โดยตรง
 
-**Hue** is what people generally think of as 'color'. If you picture a spectrum of colors starting with red on the left, moving through green in the middle, and blue on right, the hue is where a color fits along this line. In `hsl()`, hue uses a color wheel concept instead of the spectrum, where the angle of the color on the circle is given as a value between 0 and 360.
+**Hue** เป็นสิ่งที่คนเราคิดว่าเป็น 'color' ถ้าคุณจินตนาการถึง spectrum ของ colors ที่เริ่มจากสีแดงที่อยู่ทางซ้าย เคลื่อนผ่านสีเขียวที่อยู่ตรงกลางไปที่สีฟ้าที่อยู่ด้านขวา 
+hue คือตำแหน่งที่ color จะตรงกับเส้นนั้น
+ใน `hsl()`, hue ได้ใช้แนวคิดของวล้อสีแทนที่จะเป็น spectrum ซึ่งมุมของสีบนวงกลมจะเป็นค่าตั้งแต่ 0 ถึง 360
 
-**Saturation** is the amount of gray in a color. A fully saturated color has no gray in it, and a minimally saturated color is almost completely gray. This is given as a percentage with 100% being fully saturated.
+**Saturation** เป็นปริมาณของสีเทาใน color
+สีที่อิ่มตัวเต็มที่จะไม่มีสีเทาในนั้น และสีที่ไม่อิ่มตัวก็เกือบจะเป็นสีเทาไปเลย
+ค่าของมันถูกกำหนดตามค่าเปอร์เซ็นโดย 100% เป็นค่าของสีที่อิ่มต่ำเต็มที่
 
-**Lightness** is the amount of white or black in a color. A percentage is given ranging from 0% (black) to 100% (white), where 50% is the normal color.
+**Lightness** เป็นปริมาณของสีขาวและสีดำใน color
+เปอร์เซ็นของมันจะเริ่มตั้งแต่ 0% (สีดำ) ไปถึง 100% (สีขาว), โดย  50% คือสีปกติ
 
-Here are a few examples of using `hsl()` with fully-saturated, normal lightness colors:
+นี่คือตัวอย่างเล็กน้อยของการใช้ `hsl()` ที่เป็นสีที่อิ่มตัวเต็มที่กับมีค่าความสว่างปกติ:
 
 <table class='table table-striped'><thead><tr><th>Color</th><th>HSL</th></tr></thead><tbody><tr><td>red</td><td>hsl(0, 100%, 50%)</td></tr><tr><td>yellow</td><td>hsl(60, 100%, 50%)</td></tr><tr><td>green</td><td>hsl(120, 100%, 50%)</td></tr><tr><td>cyan</td><td>hsl(180, 100%, 50%)</td></tr><tr><td>blue</td><td>hsl(240, 100%, 50%)</td></tr><tr><td>magenta</td><td>hsl(300, 100%, 50%)</td></tr></tbody></table>
 
 # --instructions--
 
-Change the `background-color` of each `div` element based on the class names (`green`, `cyan`, or `blue`) using `hsl()`. All three should have full saturation and normal lightness.
+จงเปลี่ยน `background-color` ของแต่ละ `div` element โดยอิงจากชื่อของ class (`green`, `cyan`, หรือ `blue`) โดยใช้ `hsl()`
+ทั้งสามสีควรจะเป็นสีที่อิ่มตัวและมีความสว่างปกติ
 
 # --hints--
 
-Your code should use the `hsl()` property to declare the color `green`.
+โค้ดของคุณควรใช้ `hsl()` property เพื่อประกาศค่า `green`.
 
 ```js
 assert(code.match(/\.green\s*?{\s*?background-color\s*:\s*?hsl/gi));

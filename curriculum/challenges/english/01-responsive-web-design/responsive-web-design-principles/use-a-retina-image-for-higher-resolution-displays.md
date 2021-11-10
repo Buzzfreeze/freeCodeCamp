@@ -9,9 +9,13 @@ dashedName: use-a-retina-image-for-higher-resolution-displays
 
 # --description--
 
-With the increase of internet connected devices, their sizes and specifications vary, and the displays they use could be different externally and internally. Pixel density is an aspect that could be different on one device from others and this density is known as Pixel Per Inch(PPI) or Dots Per Inch(DPI). The most famous such display is the one known as a "Retina Display" on the latest Apple MacBook Pro notebooks, and recently iMac computers. Due to the difference in pixel density between a "Retina" and "Non-Retina" displays, some images that have not been made with a High-Resolution Display in mind could look "pixelated" when rendered on a High-Resolution display.
+เนื่องจากอุปกรณ์ที่เชื่อมต่อกับอินเตอร์ได้มีมากขึ้น ขนาดและสเปคของอุปกรณ์จึงค่อนข้างหลากหลายและการแสดงผลที่พวกเขาใช้อาจจะมีความแตกต่างกันได้
+Pixel density เป็นส่วนที่อาจจะแตกต่างกันได้ในแต่ละอุปกรณ์และ density ที่ว่านี้เป็นที่รู้จักกันในชื่อ Pixel Per Inch(PPI) หรือ Dots Per Inch(DPI)
+หน้าจอที่เป็นที่รู้จักกันมากที่สุดอันหนึ่งคือ "Retina Display" ของApple MacBook Pro notebooks รุ่นล่าสุดและ iMac computers ทีพึ่งออกมา
+เนื่องจากความแตกต่างของ pixel density ระหว่างจอแบบ "Retina" และ "Non-Retina", รูปภาพบางรูปที่ไม่ได้ตั้งใจให้ใช้กับจอที่มีความละเอียดสูงอาจจะดู "pixelated" เมื่อแสดงผลบนจอที่มีความละเอียดสูง
 
-The simplest way to make your images properly appear on High-Resolution Displays, such as the MacBook Pros "retina display" is to define their `width` and `height` values as only half of what the original file is. Here is an example of an image that is only using half of the original height and width:
+วิธีที่ง่ายที่สุดที่จะทำให้รูปภาพของคุณแสดงบนจอที่มีความละเอียดสูงได้อย่างไม่มีปัญหา คือการกำหนดค่า `width` และ `height` ของพวกมันมีค่าแค่ครึ่งเดียวของ original file 
+นี่คือตัวอย่างของรูปภาพที่มีความสูงและความกว้างครึ่งเดียวจากขนาด original ของมัน:
 
 ```html
 <style>
@@ -22,11 +26,12 @@ The simplest way to make your images properly appear on High-Resolution Displays
 
 # --instructions--
 
-Set the `width` and `height` of the `img` tag to half of their original values. In this case, both the original `height` and the original `width` are `200px`.
+จงกำหนดให้ `width` และ `height` ของ `img` tag มีค่าแค่ครึ่งหนึ่งของค่ original ของมัน
+ในกรณีนี้ `height` และ `width` ของรูปต้นฉบับคือ `200px`
 
 # --hints--
 
-Your `img` tag should have a `width` of 100 pixels.
+`img` tag ของคุณควรมีค่า `width` เท่ากับ 100 pixels.
 
 ```js
 assert(document.querySelector('img').width === 100);

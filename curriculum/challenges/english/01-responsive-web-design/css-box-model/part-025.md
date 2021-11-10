@@ -6,12 +6,11 @@ dashedName: part-25
 ---
 
 # --description--
-
-Set the `height` of the `.two` to 200 pixels.
+จงกำหนดให้ `height` ของ `.two` มีค่า 200 pixels.
 
 # --hints--
 
-You should set the `height` property to `200px`.
+คุณควรกำหนดให้ `height` property มีค่า`200px`
 
 ```js
 const hasHeight = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style.height === '200px');

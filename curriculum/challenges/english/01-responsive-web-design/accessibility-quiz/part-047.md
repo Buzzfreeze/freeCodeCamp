@@ -7,13 +7,12 @@ dashedName: part-47
 
 # --description--
 
-Tidy up the `header`, by using _Flexbox_ to put space between the children, and vertically center them.
-
+จัดระเบียบ `header` โดยการใช้  _Flexbox_ เพื่อใส่ช่องว่างระหว่าง children และทำให้พวกมันลอยอยู่กึ่งกลางแนวตั้ง
 Then, fix the `header` to the top of the viewport.
 
 # --hints--
 
-You should give the `header` a `justify-content` of `space-between`.
+คุณควรใส่ `justify-content` ที่มีค่า `space-between` ใน `header`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('header')?.justifyContent, 'space-between');

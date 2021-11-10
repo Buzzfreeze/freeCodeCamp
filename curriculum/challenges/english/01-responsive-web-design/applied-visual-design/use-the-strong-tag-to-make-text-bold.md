@@ -9,15 +9,17 @@ dashedName: use-the-strong-tag-to-make-text-bold
 
 # --description--
 
-To make text bold, you can use the `strong` tag. This is often used to draw attention to text and symbolize that it is important. With the `strong` tag, the browser applies the CSS of `font-weight: bold;` to the element.
+เพื่อทำให้ข้อความมันหนาขึ้น คุณสามารถใช้ `strong` tag
+มันมักถูกใช้เพื่อดึงความสนใจมาที่ข้อความหรือสัญลักษณ์ที่มีความสำคัญ
+browser จะใช้ CSS ที่เป็น `font-weight: bold;` กับ element ด้วย `strong` tag
 
 # --instructions--
 
-Wrap a `strong` tag around the text `Stanford University` inside the `p` tag (do not include the period).
+จงใส่ `strong` tag รอบข้อความ `Stanford University` ที่อยู่ข้างใน `p` tag (ไม่ต้องรวมกับจุด).
 
 # --hints--
 
-Your code should add one `strong` tag to the markup.
+คุณควรเพิ่ม `strong` tag อันหนึ่งให้กับ markup.
 
 ```js
 assert($('strong').length == 1);

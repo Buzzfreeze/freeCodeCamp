@@ -7,11 +7,14 @@ dashedName: part-14
 
 # --description--
 
-Now you have something that is starting to resemble a building. Let's get into your first variable. Variable declarations begin with two dashes (`-`) and are given a name and a value like this: `--variable-name: value;`. In the `.bb1` class, create a variable named `--building-color1` and give it a value of `#999`.
+ตอนนี้ คุณได้สร้างบอกอย่างที่เหมือนจะเป็น building ได้แล้ว
+เรามาสร้างตัวแปรแรกกันเถอะ
+การประกาศตัวแปรจะเริ่มต้นด้วย two dashes (`-`) และจะถูกตั้งชื่อและกำหนดค่าแบบนี้: `--variable-name: value;`
+ใน `.bb1` class, จงสร้างตัวแปรตัวหนึ่งชื่อ `--building-color1` และจงกำหนดให้มันมีค่า `#999`
 
 # --hints--
 
-You should create a new variable named `--building-color1`.
+คุรควรสร้างตัวแปรขึ้นมาใหม่ชื่อ `--building-color1`
 
 ```js
 assert(new __helpers.CSSHelp(document).isPropertyUsed('--building-color1'));

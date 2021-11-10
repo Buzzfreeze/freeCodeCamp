@@ -7,11 +7,11 @@ dashedName: part-40
 
 # --description--
 
-Add a `box-shadow` to `.three` with the values `0 0 5px 5px #b20403`.
+จงเพิ่ม `box-shadow` ให้กับ `.three` โดยให้ค่าเป็น `0 0 5px 5px #b20403`
 
 # --hints--
 
-You should set the `box-shadow` property to `0 0 5px 5px #b20403`.
+คุรควรกำหนดให้ `box-shadow` property มีค่าเป็น `0 0 5px 5px #b20403`
 
 ```js
 const hasBoxShadow = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style['box-shadow'] === 'rgb(178, 4, 3) 0px 0px 5px 5px');

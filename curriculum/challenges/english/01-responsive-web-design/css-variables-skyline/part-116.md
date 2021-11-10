@@ -7,11 +7,15 @@ dashedName: part-116
 
 # --description--
 
-In the `sky` class of the media query, change the two `#ffcf33` color values to `#ccc`, the `#ffff66` to `#445`, and the `#bbeeff` to `#223`. Then you can resize your window to see the background change colors.
+ภายใน `sky` class ของ media query
+จงเปลี่ยนค่าสี `#ffcf33` ทั้งสองอันให้เป็น `#ccc`, 
+เปลี่ยน `#ffff66` ให้เป็น `#445`,
+และเปลี่ยน `#bbeeff` ให้เป็น `#223`
+หลังจากนั้นคุณสามารถปรับขนาดหน้าต่างของคุณเพื่อดูการเปลี่ยนแปลงของสีพื้นหลังได้
 
 # --hints--
 
-You should change the first color values from `#ffcf33` to `#ccc`.
+คุณควรเปลี่ยนค่าของสีแรกจาก `#ffcf33` เป็น `#ccc`
 
 ```js
 assert.match(new __helpers.CSSHelp(document).getRuleListsWithinMedia("(max-width: 1000px)")?.find(x => x.selectorText===".sky")?.style?.background, /radial-gradient\(\s*circle\s+closest-corner\s+at\s+15%\s+15%\s*,\s+rgb\(\s*204\s*,\s*204\s*,\s*204\s*\)\s*(0%)?\s*,\s*rgb\(\s*204\s*,\s*204\s*,\s*204\s*\)\s+20%/);

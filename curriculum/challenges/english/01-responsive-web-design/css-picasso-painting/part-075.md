@@ -7,11 +7,11 @@ dashedName: part-75
 
 # --description--
 
-Adjust the layout of the `triangle` elements with a `display` of `inline-block`.
+จงจัด layout ของ `triangle` elements ด้วย `display` เท่ากับ `inline-block`.
 
 # --hints--
 
-Your `.triangle` selector should have a `display` property set to `inline-block`.
+`.triangle` selector ควรมี `display` property อันหนึ่งที่มีค่าเป็น `inline-block`.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.triangle')?.display === 'inline-block');

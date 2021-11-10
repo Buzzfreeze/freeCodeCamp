@@ -7,13 +7,14 @@ dashedName: part-35
 
 # --description--
 
-The `action` attribute indicates where form data should be sent. For example, `<form action="/submit-url"></form>` tells the browser that the form data should be sent to the path `/submit-url`.
+`action` attribute บ่งบอกว่าข้อมูลจากฟอร์มควรถูกส่งไปที่ไหน
+ยกตัวอย่างเช่น `<form action="/submit-url"></form>` จะบอก browser ว่าขอมูลจากแบบฟอร์มจะถูกส่งไปที่  `/submit-url`
 
-Add an `action` attribute with the value `https://freecatphotoapp.com/submit-cat-photo` to the `form` element.
+จงเพิ่ม `action` attribute ที่มีค่าเป็น `https://freecatphotoapp.com/submit-cat-photo` ให้กับ `form` element.
 
 # --hints--
 
-Your `form` element should have an opening tag and closing tag in the correct order. You may be missing one or both of the required tags, or have them in the wrong order.
+`form` element ควรมีทั้งแท็กเปิดและแท็กปิด ถ้าหาไม่เจอคุณอาจจะเผลอลบแท็กเปิดหรือแท็กปิดของมันไปโดยไม่รู้ตัว
 
 ```js
 const noSpaces = code.replace(/\s/g, '');

@@ -9,21 +9,21 @@ dashedName: use-clockwise-notation-to-specify-the-padding-of-an-element
 
 # --description--
 
-Instead of specifying an element's `padding-top`, `padding-right`, `padding-bottom`, and `padding-left` properties individually, you can specify them all in one line, like this:
+แทนที่จะระบุ `padding-top`, `padding-right`, `padding-bottom`, และ `padding-left` properties ของ element ที่จะตัว
+คุณสามารถระบุค่าให้มันได้ในบรรทัดเดียว แบบนี้:
 
 ```css
 padding: 10px 20px 10px 20px;
 ```
 
-These four values work like a clock: top, right, bottom, left, and will produce the exact same result as using the side-specific padding instructions.
-
+ค่าทั้ง 4 ค่านี้จะเรียงตามเขียมนาฬิกา: บน, ขวา, ล่าง, ซ้าย, และจะให้ผลลัพธ์เหมือนกับการใช้คำสั่งที่เป็น side-specific padding 
 # --instructions--
 
-Use Clockwise Notation to give the `.blue-box` class a `padding` of `40px` on its top and left side, but only `20px` on its bottom and right side.
+จงใช้ Clockwise Notation เพื่อกำหนดให้ `.blue-box` class มี `padding` ขนาด `40px` ที่ด้านบนและซ้าย และ `20px` ที่ด้านล่างและขวา
 
 # --hints--
 
-Your `blue-box` class should give the top of elements `40px` of `padding`.
+`blue-box` class ควรกำหนดให้ด้านบนของ element มี `40px` เป็นค่าของ `padding`
 
 ```js
 assert($('.blue-box').css('padding-top') === '40px');

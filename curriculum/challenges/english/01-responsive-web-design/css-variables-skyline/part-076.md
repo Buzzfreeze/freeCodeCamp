@@ -7,11 +7,11 @@ dashedName: part-76
 
 # --description--
 
-Move the `background-color` property and value from `.fb1` to `.fb1b`.
+จงย้าย`background-color` property และ value จาก `.fb1` ไปที่ `.fb1b`
 
 # --hints--
 
-You should remove `background-color` from `.fb1`.
+คุณควรลบ `background-color` ออกจาก `.fb1`
 
 ```js
 assert.isEmpty(new __helpers.CSSHelp(document).getStyle(".fb1")?.backgroundColor);

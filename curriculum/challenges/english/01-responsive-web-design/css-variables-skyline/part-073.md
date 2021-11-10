@@ -7,11 +7,14 @@ dashedName: part-73
 
 # --description--
 
-Looks good! On to the foreground buildings! Turn the `.fb1` building into three sections by nesting three new `div` elements within it. Give them the classes of `fb1a`, `fb1b` and `fb1c`, in that order.
+ดูดีมาก! 
+ที่ตึกที่อยู่ด้านหน้า! 
+จงเปลี่ยนตึก `.fb1` building ให้เป้นสามส่วนโดยการใส่ `div` elements อันใหม่ 3 อันในนั้น 
+จงกำหนดให้พวกมันมีคลาสชื่อ  `fb1a`, `fb1b` และ `fb1c` ตามลำดับ
 
 # --hints--
 
-You should add three `div` elements within `.fb1`.
+คุณควรเพิ่ม 3 `div` elements ภายใน `.fb1`.
 
 ```js
 assert.equal(document.querySelector("div.fb1")?.children?.length, 3);

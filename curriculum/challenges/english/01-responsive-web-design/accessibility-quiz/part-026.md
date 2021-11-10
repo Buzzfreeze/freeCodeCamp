@@ -7,13 +7,12 @@ dashedName: part-26
 
 # --description--
 
-Within the second `section` element, add two `div` elements with a class of `question-block`.
-
-Then, within each `div.question-block` element, add one `p` element with text of incrementing numbers, starting at `1`, and one `fieldset` element with a class of `question`.
+จงเพิ่ม `div` elements 2 อันที่มี `question-block` class ภายใต้ `section` element อันที่สอง
+หลังจากนั้น จงเพิ่ม `p` element กับข้อความแสดงการเพิ่มของตัวเลข เริ่มจาก `1` รวมถึงเพิ่ม `fieldset` element 1 อัน ที่มี `question` class ภายในแต่ละ  `div.question-block` element
 
 # --hints--
 
-You should nest two `div` elements within the second `section` element.
+คุณควรเก็บ `div` elements  2 อันไว้ใน `section` element อันที่ 2.
 
 ```js
 assert.equal(document.querySelectorAll('section:nth-of-type(2) > div')?.length, 2);

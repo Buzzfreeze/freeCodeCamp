@@ -7,11 +7,11 @@ dashedName: part-18
 
 # --description--
 
-Now set the `height` for `.one` to 150 pixels.
+ในตอนนี้ จงกำหนดให้ `height` สำหรับ `.one`มีค่า 150 pixels
 
 # --hints--
 
-You should set the `height` property to `150px`.
+คุรควรกำหนดให้ `height` property มีค่า `150px`
 
 ```js
 const hasHeight = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style.height === '150px');

@@ -7,11 +7,14 @@ dashedName: part-38
 
 # --description--
 
-Your code is starting to get quite long. Add a comment above the `.fb1` class that says `FOREGROUND BUILDINGS - "fb" stands for "foreground building"` to help people understand your code. Above the `.bb1` class add another comment that says `BACKGROUND BUILDINGS - "bb" stands for "background building"`. If you don't remember, comments in CSS look like this: `/* Comment here */`.
+ตอนนี้โค้ดของคุณค่อนข้างยาวมากแล้ว
+จงเพิ่มคอมเมนต์ไว้ที่ด้านบนของ `.fb1` class โดยเขียนว่า `FOREGROUND BUILDINGS - "fb" stands for "foreground building"` เพื่อช่วยให้คนอื่นเข้าใจโค้ดของคุณ
+ที่ข้างบน `.bb1` class ก็จงเพิ่มคอมมนต์อีกอันนึ่งที่เขียนว่า `BACKGROUND BUILDINGS - "bb" stands for "background building"`
+ถ้าคุณจำไม่ได้ การคอมเมนต์ใน CSS ทำอย่างนี้: `/* Comment here */`.
 
 # --hints--
 
-You should add the comment `BACKGROUND BUILDINGS - "bb" stands for "background building"` above the `.bb1` selector.
+คุณควรเพิ่มคอมเมนต์ว่า `BACKGROUND BUILDINGS - "bb" stands for "background building"` เหนือ`.bb1` selector.
 
 ```js
 assert(/\/\*\s*BACKGROUND BUILDINGS - "bb" stands for "background building"\s*\*\//gi.test(code));

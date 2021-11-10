@@ -7,15 +7,15 @@ dashedName: part-34
 
 # --description--
 
-It's helpful to have your margins push in one direction.
+มันมีประโยชน์ที่จะมี margin ช่วยดันไปทางใดทางหนึ่ง
 
-In this case, the bottom margin of the `.one` element pushes `.two` down 20 pixels.
+ในกรณีนี้ bottom margin ของ `.one` element จะดัน `.two` ลงไป 20 pixels
 
-In `.two`, add `margin: 0 auto 20px;` to set its top margin to 0, center it horizontally, and set its bottom margin to 20 pixels.
+ที่ `.two`, จงเพิ่ม `margin: 0 auto 20px;` เพื่อกำหนดให้ top margin ของมันเป็น 0, จัดให้มันอยู่ตรงกลางแนวนอน และกำหนดให้ bottom margin ของมันเป็น 20 pixel
 
 # --hints--
 
-You should set the `margin` property to `0 auto 20px`.
+คุณควรกำหนดให้ `margin` property มีค่า `0 auto 20px`
 
 ```js
 const hasMargin = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style.margin === '0px auto 20px');

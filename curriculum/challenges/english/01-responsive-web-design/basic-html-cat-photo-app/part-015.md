@@ -7,13 +7,13 @@ dashedName: part-15
 
 # --description--
 
-Before adding any new content, you should make use of a `section` element to separate the cat photos content from the future content.
+ก่อนที่จะเพิ่ม content ใหม่ คุณควรลองใช้ `section` element เพื่อแยก cat photos content ออกจาก content ในอนาคต
 
-Take all the elements currently located within the `main` element and nest them in a `section` element.
+จงเอา element ทุกอันที่อยู่ใน `main` element ตอนนี้ไปใส่ใน `section` element.
 
 # --hints--
 
-Your `section` element should have an opening tag. Opening tags have the following syntax: `<elementName>`.
+ `section` element ควรมีแท็กเปิด โดยแท็กเปิดจะมี  syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(document.querySelector('section'));

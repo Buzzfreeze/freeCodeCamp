@@ -7,11 +7,12 @@ dashedName: part-86
 
 # --description--
 
-Time to style your `eyes` elements. Use a `class` selector to set the `width` to `35px`, the `height` to `20px`, the `background-color` to `#8B4513`, and the `border-radius` to `20px 50%`.
+ถึงเวลาที่จะตกแต่ง `eyes` element แล้ว
+จงใช้ `class` selector เพื่อกำหนดให้ `width` เท่ากับ `35px`, `height` เท่ากับ `20px`, `background-color` เท่ากับ `#8B4513`, และ `border-radius` เท่ากับ `20px 50%`
 
 # --hints--
 
-You should create a `.eyes` selector.
+คุณควรสร้าง `.eyes` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.eyes'));

@@ -7,13 +7,16 @@ dashedName: part-27
 
 # --description--
 
-Moving on to the final `fieldset`. What if you wanted to allow a user to upload a profile picture?
+ต่อกันที่ `fieldset` ส่วนสุดท้าย
+จะเป็นยังไงถ้าคุณต้องการให้ผู้ใช้อัพโหลดรูปโปรไฟล์ของเขา? 
 
-Well, the `input` type `file` allows just that. Add a `label` with the text `Upload a profile picture: `, and add an `input` accepting a file upload.
+ใช่แล้ว `input` ที่มีค่า `file` นั้นถูกเตรียมไว้เพื่อการนั้น
+จงเพิ่ม `label` อันหนึ่งที่มีข้อความว่า `Upload a profile picture: `
+และจงเพิ่ม `input` ที่จะมารับไฟล์ที่ถูกอัพโหลด
 
 # --hints--
 
-You should add a `label` with the text `Upload a profile picture: `.
+คุณควรเพิ่ม `label` 1 อันที่มีข้อความว่า `Upload a profile picture: `.
 
 ```js
 assert.match(document.querySelector('fieldset:nth-child(3) > label')?.innerText, /Upload a profile picture:/i);

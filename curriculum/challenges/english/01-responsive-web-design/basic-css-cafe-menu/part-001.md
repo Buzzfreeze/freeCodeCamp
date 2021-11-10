@@ -7,13 +7,13 @@ dashedName: part-1
 
 # --description--
 
-As you learned in the last few steps of the Cat Photo App, there is a basic structure needed to start building your web page.
+ตามที่คุณได้เรียนไปแล้วในขั้นตอนที่ผ่านมาของ Cat Photo App มันมีโครงสร้างพื้นฐานที่จำเป็นในการสร้างหน้าเว็บเพจ
 
-Add the `<!DOCTYPE html>` tag, and an `html` element.
+จงเพิ่ม `<!DOCTYPE html>` tag, และ `html` element อันหนึ่ง
 
 # --hints--
 
-You should have the `DOCTYPE` declaration.
+คุณควรมี `DOCTYPE` declaration.
 
 ```js
 assert(code.match(/<!DOCTYPE html>/i));

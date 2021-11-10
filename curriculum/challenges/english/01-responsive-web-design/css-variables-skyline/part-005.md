@@ -7,11 +7,14 @@ dashedName: part-5
 
 # --description--
 
-In CSS, you can target everything with an asterisk. Add a border to everything by using the `*` selector, and giving it a `border` of `1px solid black`. This is a trick I like to use to help visualize where elements are and their size. You will remove this later.
+ใน CSS, คุณสามารถระบุทุกอย่างได้ด้วย asterisk (*)
+จงเพิ่มขอบให้กับทุกอย่างโดยใช้ `*` selector และจงกำหนดให้มันมี `border` เป็น `1px solid black`
+สิ่งนี้คือทริคที่ฉันชอบใช้เพื่อ visualize ตำแหน่งและขนาดของ element
+คุณจะลบมันทีหลัง
 
 # --hints--
 
-You should use the `*` selector.
+คุณควรใช้ `*` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('*'));

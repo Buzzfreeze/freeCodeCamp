@@ -7,11 +7,11 @@ dashedName: part-34
 
 # --description--
 
-Now that you did that, you can delete the old `.foreground-buildings` declaration and all of its properties since they aren't needed anymore.
+หลังจากที่คุณทำแบบนั้นแล้ว คุฯสามารถลบการประกาศ `.foreground-buildings` อันเก่าและ property ทั้งหมดของมันได้เพราะมันไม่จำเป็นอีกต่อไปแล้ว
 
 # --hints--
 
-You should delete the whole `.foreground-buildings` style declaration.
+คุณควรลบการประกาศ `.foreground-buildings` style 
 
 ```js
 assert.notExists(new __helpers.CSSHelp(document).getStyle('.foreground-buildings'));

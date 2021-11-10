@@ -9,17 +9,21 @@ dashedName: use-the-flex-grow-property-to-expand-items
 
 # --description--
 
-The opposite of `flex-shrink` is the `flex-grow` property. Recall that `flex-shrink` controls the size of the items when the container shrinks. The `flex-grow` property controls the size of items when the parent container expands.
+สิ่งที่ตรงข้ามกับ `flex-shrink` คือ`flex-grow` property
+จงจำไว้ว่า `flex-shrink` จะควบคุมขนาดของ item เมื่อ container ถูกย่อให้เล็กลง
+`flex-grow` property จะควบคุมขนาดของ item เมื่อ parent container ถูกขยายให้ใหญ่ขึ้น
 
-Using a similar example from the last challenge, if one item has a `flex-grow` value of `1` and the other has a `flex-grow` value of `3`, the one with the value of `3` will grow three times as much as the other.
+ใช้ตัวอย่างที่คล้ายกันกับ challenge ที่แล้ว
+ุถ้า item หนึ่งมี `flex-grow` ที่มีค่าเป็น `1` และมี `flex-grow` อีกอันที่มีค่าเป็น `3`, ตัวที่มีค่าเป็น `3` จะมีขนาดใหญ่ขึ้นสามเท่าของอีกอัน
 
 # --instructions--
 
-Add the CSS property `flex-grow` to both `#box-1` and `#box-2`. Give `#box-1` a value of `1` and `#box-2` a value of `2`.
+จงเพิ่มCSS property `flex-grow` ให้กับทั้ง `#box-1` และ `#box-2`
+จงกำหนดให้ `#box-1` มีค่าเท่ากับ `1` แบะ `#box-2` มีค่าเท่ากับ `2`
 
 # --hints--
 
-The `#box-1` element should have the `flex-grow` property set to a value of `1`.
+`#box-1` element ควรมี `flex-grow` property ที่ถูกกำหนดค่าให้เป็น `1`
 
 ```js
 assert($('#box-1').css('flex-grow') == '1');

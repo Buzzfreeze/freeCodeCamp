@@ -7,13 +7,13 @@ dashedName: part-1
 
 # --description--
 
-HTML elements have opening tags like `<h1>` and closing tags like `</h1>`.
+HTML elements มีแท็กเปิดแบบนี้ `<h1>` และแท็กปิดแบบนี้ `</h1>`.
 
-Find the `h1` element and change the text between its opening and closing tags to say `CatPhotoApp`.
+จงหา `h1` element และเปลี่ยนข้อความที่อยู่ระหว่างแท็กเปิดและปิดให้เป็น `CatPhotoApp`
 
 # --hints--
 
-The text `CatPhotoApp` should be present in the code. You may want to check your spelling.
+`CatPhotoApp` ควรจะถูกแสดงในโค้ด คุณอาจจะต้องการเช็คการสะกดของคุณshould be present in the code. You may want to check your spelling.
 
 ```js
 assert(code.match(/catphotoapp/i));

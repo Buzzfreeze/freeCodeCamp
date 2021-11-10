@@ -7,13 +7,14 @@ dashedName: part-16
 
 # --description--
 
-Add a new `div` element inside of your `.canvas` element.
+จงเพิ่ม `div` element อันใหม่ขึ้นมา 1 อันข้างใน `.canvas` element.
 
-Give the new `div` the `class` attribute with a value of `one`. This will be your first rectangle.
+จงกำหนดให้ `div` อังใหม่มี `class` attribute ที่มีค่า `one`
+นี่จะชเป็นสี่เหลี่ยมอันแรกของคุณ
 
 # --hints--
 
-You should create a new `div` element.
+คุณควรสร้าง `div` element อันหม่ขึ้นมา 1 อัน
 
 ```js
 assert(document.querySelectorAll('div').length === 3);

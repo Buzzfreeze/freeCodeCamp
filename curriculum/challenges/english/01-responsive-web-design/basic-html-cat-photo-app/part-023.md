@@ -7,13 +7,14 @@ dashedName: part-23
 
 # --description--
 
-A figure caption (`figcaption`) element is used to add a caption to describe the image contained withing the `figure` element. For example, `<figcaption>A cute cat</figcaption>` adds the caption `A cute cat`.
+A figure caption (`figcaption`) element นั้นถูกใช้เพื่อเพิ่มแคปชั่นซึ่งจะอธิบายรูปภาพที่ถูกเก็บไว้ใน `figure` element
+ยกตัวอย่างเช่น `<figcaption>A cute cat</figcaption>` จะเพิ่มแคปชั่น `A cute cat`
 
-After the image nested in the `figure` element, add a `figcaption` element with the text `Cats love lasagna.`
+ต่อจากรูปที่ถูฏเก็บไว้ใน `figure` element, จงเพิ่ม  `figcaption` element ที่เขียนไว้ว่า `Cats love lasagna.`
 
 # --hints--
 
-The Lasagna `img` element should be nested in the `figure` element.
+`img` element ของอยู่ใน `figure` element.
 
 ```js
 assert(

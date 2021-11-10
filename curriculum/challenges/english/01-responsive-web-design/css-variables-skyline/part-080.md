@@ -7,11 +7,13 @@ dashedName: part-80
 
 # --description--
 
-When you make the left and right borders bigger, the border on the bottom will expand to be the width of the combined left and right border widths. Add `2vw solid transparent` as the value of the `border-left` and `border-right` properties of `.fb1a`. They will be invisible, but it will make the border on the bottom `4vw` wide.
+เมื่อคุณทำให้ขอบซ้ายและขวาใหญ่ขึ้น ขอบที่ตรงข้างล่างจะคลุมทั้งขอบขอบซ้ายและขวา
+จงเพิ่ม `2vw solid transparent` ให้เป็นค่าของ `border-left` และ `border-right` properties ของ `.fb1a`
+พวกมันจะล่องหน แต่มันจะทำให้ความกว้างของขอบล่างเป็น `4vw` 
 
 # --hints--
 
-You should give `.fb1a` a `border-left` of `2vw solid transparent`.
+คุณควรกำหนดให้ `.fb1a` มี `border-left` ที่มีลักษณะ `2vw solid transparent`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(".fb1a")?.borderLeft, "2vw solid transparent");

@@ -7,13 +7,15 @@ dashedName: part-45
 
 # --description--
 
-On the topic of visual accessibility, contrast between elements is a key factor. For example, the contrast between the text and the background of a heading should be at least 4.5:1.
+สำหรับหัวข้อที่เกี่ยวกับการเข้าถึงการมองเห็น (visual accessibility) 
+เรื่องของความตัดกันระหว่าง elements ถือเป็นปัจจัยสำคัญ
+ยกตัวอย่างเช่น ความตัดกันระหว่างสีของ text และ background ของหัวเรื่องควรมีค่าอย่างน้อย 4.5:1.
 
-Change the font color of all the anchor elements within list elements to something with a contrast ratio of at least 7:1.
+จงเปลี่ยนสีของ font ของ anchor elements ทุกตัวใน list elements ไปเป็นสีใดก็ได้ที่ทำให้ค่า contrast ratio มีค่าอย่างน้อย 7:1.
 
 # --hints--
 
-You should use the `li > a` selector.
+คุณควรใช้ `li > a` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('li > a'));

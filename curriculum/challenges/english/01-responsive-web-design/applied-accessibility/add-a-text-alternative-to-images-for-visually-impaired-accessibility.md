@@ -9,23 +9,33 @@ dashedName: add-a-text-alternative-to-images-for-visually-impaired-accessibility
 
 # --description--
 
-You've likely seen an `alt` attribute on an `img` tag in other challenges. `alt` text describes the image's content and provides a text-alternative for it. An `alt` attribute helps in cases where the image fails to load or can't be seen by a user. Search engines also use it to understand what an image contains to include it in search results. Here's an example:
+คุณมักจะเห็น `alt` attribute บน `img` tag ใน challenges อื่นๆ
+ข้อความ `alt`จะอธิบายเนื้อหาของรูปภาพและเพิ่มtext-alternative สำหรับมัน.  
+`alt` attribute ช่วยในกรณีที่เราไม่สามารถโหลดรูปภาพขึ้นมาได้ หรือไม่ถูกเห็นโดยผู้ใช้ 
+Search engines ก็ใช้มันเพื่อที่จะเข้าใจว่าในรูปภาพนั้นหมายถึงอะไร
+นี่คือตัวอย่าง :
 
 ```html
 <img src="importantLogo.jpeg" alt="Company logo">
 ```
 
-People with visual impairments rely on screen readers to convert web content to an audio interface. They won't get information if it's only presented visually. For images, screen readers can access the `alt` attribute and read its contents to deliver key information.
+คนที่มีปัญหาด้านการมองเห็นจะพึ่งพา screen readers เพื่อเปลี่ยนเนื้อหาบนเว็บไซต์ให้เป็นเสียง
+พวกเขาไม่สามารถรับข้อมูลได้ถ้ามันถูกแสดงในรูปแบบที่เป็นภาพอย่างเดียว
+สำหรับรูปภาพ, screen readers สามารถเข้าถึง `alt` attribute และอ่านเนื้อหาข้างในเพื่อสื่อสารใจความสำคัญออกไป
 
-Good `alt` text provides the reader a brief description of the image. You should always include an `alt` attribute on your image. Per HTML5 specification, this is now considered mandatory.
+ข้องความ `alt` ที่ดีต้องให้คำอธิบายสั้น ๆ ของรูปภาพแก่ผู้อ่าน
+คุณควรใส่ `alt` attribute เข้าไปในรูปภาพของรูปเสมอ
+สำหรับ HTML5 ข้อบังคับ, นี่คือพื้นฐานที่ต้องทำ
 
 # --instructions--
 
-Camper Cat happens to be both a coding ninja and an actual ninja, who is building a website to share his knowledge. The profile picture he wants to use shows his skills and should be appreciated by all site visitors. Add an `alt` attribute in the `img` tag, that explains Camper Cat is doing karate. (The image `src` doesn't link to an actual file, so you should see the `alt` text in the display.)
+Camper Cat เป้นทั้งนินชาโค้ดดิ้งและนินจาจริง ๆ เขาคือคนที่สร้างเว็บไซต์เป็นแบ่งปันความรู้ของเขา
+เขาต้องการให้รูปโปรไฟล์ของเขานั้นแสดงถึงความสามารถของเขา และผู้เข้าชมทุกคนควรจะเข้าถึงได้
+จงเพิ่ม `alt` attribute ใน `img` tag ซึ่งมันจะต้องอธิบายว่า Camper Cat กำลังฝึกคาราเต้ (`src` ของรูปไม่ต้องลิงค์ไปที่ไฟล์จริง ๆ ซึ่งทำให้คุณสามารถเห็นข้อความ `alt` ได้บนจอ)
 
 # --hints--
 
-Your `img` tag should have an `alt` attribute and it should not be empty.
+`img` tag ของคุณควรมี `alt` attribute และมันไม่ควรว่างเปล่า
 
 ```js
 assert($('img').attr('alt'));

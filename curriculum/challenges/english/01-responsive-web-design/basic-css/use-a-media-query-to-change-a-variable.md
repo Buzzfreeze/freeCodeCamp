@@ -9,17 +9,20 @@ dashedName: use-a-media-query-to-change-a-variable
 
 # --description--
 
-CSS Variables can simplify the way you use media queries.
+ตัวแปร CSS สามารถทำให้การใช้ media queries ของคุณง่ายขึ้น
 
-For instance, when your screen is smaller or larger than your media query break point, you can change the value of a variable, and it will apply its style wherever it is used.
+ยกตัวอย่างเช่น, เมื่อจอของคุณเล็กกว่าและใหญ่กว่า break point ใน media query bของคุณ
+คุณสามารถเปลี่ยนค่าองตัวแปรและมันจะใช้ style ของมันเมื่อมันถูกเรียก
 
 # --instructions--
 
-In the `:root` selector of the `media query`, change it so `--penguin-size` is redefined and given a value of `200px`. Also, redefine `--penguin-skin` and give it a value of `black`. Then resize the preview to see this change in action.
+ใน `:root` selector ของ `media query`, จงเปลี่ยนมันเพื่อที่ `--penguin-size` จะได้ถูกกำหนดค่าใหม่อีกครั้งและถูกกำหนดให้มีค่าเป็น `200px`
+นอกจากนี้ จงกำหนด `--penguin-skin` ใหม่และกำหนดให้มันมีค่าเป็น `black`
+หลังจากนั้น จงปรับขนาดของ preview เพื่อดูว่ามันเปลี่ยนไปอย่างไร
 
 # --hints--
 
-`:root` should reassign the `--penguin-size` variable to `200px`.
+`:root` ควรกำหนดค่าใหม่ให้ตัวแปร `--penguin-size` เป็น `200px`
 
 ```js
 assert(

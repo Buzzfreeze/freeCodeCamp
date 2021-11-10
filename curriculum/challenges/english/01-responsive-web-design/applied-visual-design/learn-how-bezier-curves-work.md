@@ -9,11 +9,18 @@ dashedName: learn-how-bezier-curves-work
 
 # --description--
 
-The last challenge introduced the `animation-timing-function` property and a few keywords that change the speed of an animation over its duration. CSS offers an option other than keywords that provides even finer control over how the animation plays out, through the use of Bezier curves.
+แบบฝึกหัดที่แล้วได้กล่าวถึง `animation-timing-function` property และคีย์เวิร์ดบางคำที่จะเปลี่ยนความเร็วของ animation ในช่วงเวลาของการเล่น
+CSS ได้มีตัวเลือกอีกอันให้ใช้นอกจากคีย์เวิร์ด ซึ่งมันทำให้เราควบคุมการเล่นของ animation ได้ละเอียดยิ่งขึ้นผ่านการใช้ Bezier curves
 
-In CSS animations, Bezier curves are used with the `cubic-bezier` function. The shape of the curve represents how the animation plays out. The curve lives on a 1 by 1 coordinate system. The X-axis of this coordinate system is the duration of the animation (think of it as a time scale), and the Y-axis is the change in the animation.
+สำหรับ CSS animations, Bezier curves นั้นถูกใช้กับ `cubic-bezier` function
+รูปร่างของ curve จะแสดงถึงวิธีที่ animation จะแสดงผล
+curve จะใช้ coordinate system แบบ 1 ต่อ 1
+X-axis ของ coordinate system นี้คือระยะเวลาของ animation และ Y-axis เป็นความเปลี่ยนแปลงของ animation
 
-The `cubic-bezier` function consists of four main points that sit on this 1 by 1 grid: `p0`, `p1`, `p2`, and `p3`. `p0` and `p3` are set for you - they are the beginning and end points which are always located respectively at the origin (0, 0) and (1, 1). You set the x and y values for the other two points, and where you place them in the grid dictates the shape of the curve for the animation to follow. This is done in CSS by declaring the x and y values of the `p1` and `p2` "anchor" points in the form: `(x1, y1, x2, y2)`. Pulling it all together, here's an example of a Bezier curve in CSS code:
+`cubic-bezier` function ประกอบด้วยจุดหลัก 4 จุดที่อยู่บนกริด 1 ต่อ 1: `p0`, `p1`, `p2`, และ `p3`. `p0` และ `p3` นั้นได้ถูกกำหนดให้คุณแล้ว พวกมันคือจุดเริ่มต้นและจุดสิ้นสุดวึ่งมันจะอยู่ที่ตำแหน่ง (0, 0) และ (1, 1)
+คุณกำหนดให้ค่า x และ y ให้กับอีกสองจุดที่เหลือ และตำแหน่งที่คุณวางมันไว้บนกริดจะบ่งบอกถึงรูปร่างขอ curve ที่ใช้ในการ animation 
+มันสามารถทำได้โดยการประกาศค่า x และ y ของ `p1` และ `p2` "anchor" points ในรูปแบบนี้: `(x1, y1, x2, y2)`
+นี่คือตัวอย่างของ Bezier curve ใน CSS code:
 
 ```css
 animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
@@ -23,11 +30,12 @@ In the example above, the x and y values are equivalent for each point (x1 = 0.2
 
 # --instructions--
 
-For the element with the id of `ball1`, change the value of the `animation-timing-function` property from `linear` to its equivalent `cubic-bezier` function value. Use the point values given in the example above.
+สำหรับ element ที่มี id เป็น `ball1`, จงเปลี่ยนค่าของ `animation-timing-function` property จาก  `linear` ให้เป็นค่าของ `cubic-bezier` function ที่ทียบเท่ากัน
+จงใช้ค่า point ที่กำหนดให้ในตัวอย่างด้านบน
 
 # --hints--
 
-The value of the `animation-timing-function` property for the element with the id `ball1` should be the linear-equivalent `cubic-bezier` function.
+ค่าของ `animation-timing-function` property สำหรับ element ที่มาพร้อมกับ id `ball1` ควรเป็น linear-equivalent `cubic-bezier` function.
 
 ```js
 assert(

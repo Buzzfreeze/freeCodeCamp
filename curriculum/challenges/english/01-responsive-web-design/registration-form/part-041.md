@@ -7,11 +7,11 @@ dashedName: part-41
 
 # --description--
 
-To give the `fieldset` elements a bit of separation, select all but the last `fieldset` element, and give them a `border-bottom` of `3px solid #3b3b4f`.
+เพื่อที่จะกำหนดให้ `fieldset` elements มีระยะห่างกันเล็กน้อย จงเลือก `fieldset` element ทั้งหมดยกเว้นอันสุดท้าย และกำหนดให้พวกมันมี `border-bottom` เป็น `3px solid #3b3b4f`.
 
 # --hints--
 
-You can use the `:not(:last-of-type)` pseudo-class to select all but the last element.
+คุรสามารถใช้ `:not(:last-of-type)` pseudo-class เพื่อเลือกท element ทั้งหมดยกเว้นอันสุดท้าย
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('fieldset:not(:last-of-type)'));

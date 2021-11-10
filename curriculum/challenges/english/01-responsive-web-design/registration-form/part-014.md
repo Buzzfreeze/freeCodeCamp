@@ -7,11 +7,12 @@ dashedName: part-14
 
 # --description--
 
-As `label` elements are `inline` by default, they appear on the same line as the text they are labelling. To make them appear on separate lines, add `display: block` to the `label` element, and add a `margin` of `0.5rem 0`, to separate them from each other.
+ตามที่ `label` elements ถูกตั้งให้มีค่า `inline` โดยเริ่มต้น, มันจะปรากฎในบรรทัดเดียวกันกับข้อความที่พวกเขาติดป้ายไว้
+เพื่อทำให้พวกมันปรากฏออกมาคนละบรรทัด จงเพิ่ม `display: block` ที่ `label` element และจงใส่ `margin` ที่มีค่า `0.5rem 0` เพื่อแยกมันออกจากกัน
 
 # --hints--
 
-You should use the `label` selector.
+คุณควรใช้ `label` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('label'));

@@ -7,11 +7,13 @@ dashedName: part-59
 
 # --description--
 
-On to the next building! Create a new variable called `--window-color3` in `:root` and give it a value of `#d98cb3`. This will be the secondary color for the pink buildings.
+สำหรับตึกอันถัดไป! 
+จงสร้างตัวแปรอันใหม่ที่ชื่อ `--window-color3` ใน `:root` และจงกำหนดให้มันมีค่า `#d98cb3`
+นี่จะเป็นสีทุติยภูมิสำหรับตึกสีชมพู
 
 # --hints--
 
-You should define a new property variable `--window-color3`.
+คุรควรประกาศตัวแปรให้กับ property อันใหม่ชื่อ `--window-color3`
 
 ```js
 assert(new __helpers.CSSHelp(document).isPropertyUsed("--window-color3"));

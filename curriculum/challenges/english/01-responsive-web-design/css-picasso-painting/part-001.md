@@ -7,11 +7,13 @@ dashedName: part-1
 
 # --description--
 
-Start by setting up your HTML structure. Add a `<!DOCTYPE>` declaration and an `html` element. Within the `html` element, add a `head` element and a `body` element.
+จงเริ่มด้วยการ setup โครงสร้าง HTML ของคุณ
+จงเพิ่มการประกาศ `<!DOCTYPE>` และ `html` element อันหนึ่ง
+ภายใน `html` element, จงเพิ่ม 1 `head` element และ 1 `body` element
 
 # --hints--
 
-Your code should contain the `DOCTYPE` reference.
+คุณควรมี `DOCTYPE` reference.
 
 ```js
 assert(code.match(/<!DOCTYPE/gi));

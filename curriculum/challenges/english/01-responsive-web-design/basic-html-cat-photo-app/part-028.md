@@ -7,11 +7,11 @@ dashedName: part-28
 
 # --description--
 
-Inside the `figure` element you just added, nest an `img` element with a `src` attribute set to `https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg`.
+ข้างใน `figure` element ที่คุณพึ่งเพิ่มเข้ามา จงเก็บ `img` element ที่ `src` attribute มีค่าเป็น `https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg`.
 
 # --hints--
 
-Your second `figure` element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+`figure` element ควรมีแท็กเปิดโดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(document.querySelectorAll('figure').length === 2);

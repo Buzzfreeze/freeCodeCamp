@@ -7,11 +7,11 @@ dashedName: part-26
 
 # --description--
 
-Now move it into place with a `position` of `absolute`, a `top` value of `50px`, and a `left` value of `125px`.
+ในตอนนี้ จงย้ายมันไปตำแหน่งที่ `position` เป็น `absolute`, `top` มีค่า`50px`, และ `left` มีค่า `125px`
 
 # --hints--
 
-Your `#gray-instrument` selector should have a `position` property set to `absolute`.
+`#gray-instrument` selector ควรมี  `position` property ที่กำหนดให้เป็น `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#gray-instrument')?.position === 'absolute');

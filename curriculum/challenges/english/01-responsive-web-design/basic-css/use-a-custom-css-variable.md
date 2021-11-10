@@ -9,21 +9,22 @@ dashedName: use-a-custom-css-variable
 
 # --description--
 
-After you create your variable, you can assign its value to other CSS properties by referencing the name you gave it.
+หลังจากที่คุณสร้างตัวแปรขึ้นมา คุณสามารถใส่ค่าของมันให้กับ CSS property อื่นได้โดยการอ้างอิงถึงชื่อที่คุณตั้งให้มัน
 
 ```css
 background: var(--penguin-skin);
 ```
 
-This will change the background of whatever element you are targeting to gray because that is the value of the `--penguin-skin` variable. Note that styles will not be applied unless the variable names are an exact match.
+โค้ดของบนจะเปลี่ยนพื้นหลังของ element ใดก็ตามที่คุณชี้มันไปที่สีเท่า เพราะมันคือค่าของตัวแปร `--penguin-skin` 
+จงจำไว้ว่า style จะไม่ถูกใช้ถ้าชื่อของตัวแปรไม่ตรงกับเป๊ะๆ
 
 # --instructions--
 
-Apply the `--penguin-skin` variable to the `background` property of the `penguin-top`, `penguin-bottom`, `right-hand` and `left-hand` classes.
+จงเใช้ `--penguin-skin` แทนค่าของ `background` property ของ `penguin-top`, `penguin-bottom`, `right-hand` และ `left-hand` classes.
 
 # --hints--
 
-The `--penguin-skin` variable should be applied to the `background` property of the `penguin-top` class.
+ตัวแปร `--penguin-skin` ควรให้กับ `background` property ของ `penguin-top` class.
 
 ```js
 assert(

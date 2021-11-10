@@ -7,11 +7,11 @@ dashedName: part-53
 
 # --description--
 
-Now set the `position` to `absolute`, the `top` to `20%`, and the `left` to `20%`.
+ในตอนนี้ จงกำหนดให้ `position` เป็น `absolute`, `top` เท่ากับ `20%`, และ `left` เท่ากับ `20%`
 
 # --hints--
 
-Your `#blue-left` selector should have a `position` property set to `absolute`.
+`#blue-left` selector ควรมี `position` property อันหนึ่งที่มีค่าเป็น `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#blue-left')?.position === 'absolute');

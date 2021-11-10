@@ -7,11 +7,11 @@ dashedName: part-17
 
 # --description--
 
-Move the `offwhite-character` into place by giving it a `position` of `absolute`, a `top` value of `20%`, and a `left` value of `17.5%`.
+จงย้าย `offwhite-character` ไปตำแหน่งที่กำหนดให้มันมี `position` เป็น `absolute`, `top` เท่ากับ `20%`, `left` เท่ากับ `17.5%`
 
 # --hints--
 
-Your `#offwhite-character` selector should have a `position` property set to `absolute`.
+`#offwhite-character` selector ควรมี 1 `position` property ที่เป็น `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#offwhite-character')?.position === 'absolute');

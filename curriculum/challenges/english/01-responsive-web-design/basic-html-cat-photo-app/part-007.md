@@ -7,13 +7,16 @@ dashedName: part-7
 
 # --description--
 
-You can add images to your website by using the `img` element. `img` elements have an opening tag without a closing tag. A tag for an element without a closing tag is known as a <dfn>self-closing tag</dfn>.
+คุณสามารถเพิ่มรูปภาพให้กับเว็บไซต์ได้โดยใช้ `img` element
+`img` element จะมีแท็กเปิดแต่ไม่มีแท็กปิด
+tag ของ element ที่ไม่มีแท็กปิดจะถูกเรียกว่า <dfn>self-closing tag</dfn>.
 
-Add an `img` element below the `p` element. At this point, no image will show up in the browser.
+จงเพิ่ม `img` element ต่อจาก `p` element
+ณ จุดนี้ จะยังไม่มีรูปขึ้นมาแสดงบนหน้าจอ browser
 
 # --hints--
 
-Your `img` element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+`img` element ควรมีแท็กเปิด โดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`
 
 ```js
 assert(document.querySelector('img'));

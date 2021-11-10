@@ -7,11 +7,11 @@ dashedName: part-6
 
 # --description--
 
-Within your body tag, add a `div` element. Give it an `id` of `back-wall`.
+ภายใน body tag, จงเพิ่ม 1 `div` element และจงกำหนดให้มันมีn `id` ที่ชื่อ `back-wall`
 
 # --hints--
 
-You should add exactly 1 `div` element.
+คุณควรเพิ่ม 1 `div` element.
 
 ```js
 assert(document.querySelectorAll('div').length === 1);

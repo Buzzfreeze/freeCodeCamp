@@ -7,13 +7,13 @@ dashedName: part-12
 
 # --description--
 
-Write a new rule using the `.frame` class selector.
+จงเขียนกฎใหม่โดยใช้ `.frame` class selector.
 
-Give the `.frame` a border with the shorthand `border: 50px solid black;` declaration.
+จงกำหนดให้`.frame` มีขอบที่ประกาศด้วยคำสั่ง `border: 50px solid black;` 
 
 # --hints--
 
-Your code should have a `.frame` selector.
+คุณควรมี 1 `.frame` selector.
 
 ```js
 const hasFrame = new __helpers.CSSHelp(document).getStyle('.frame');

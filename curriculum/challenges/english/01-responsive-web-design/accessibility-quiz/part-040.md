@@ -7,11 +7,11 @@ dashedName: part-40
 
 # --description--
 
-Do not forget to give your `form` a submit button.
+อย่าลืมเพิ่มปุ่ม summit ให้กับ`form` ของคุณ
 
 # --hints--
 
-You should add either a `button` or `input` element.
+คุณควรเพิ่ม `button` หรือ `input` element.
 
 ```js
 assert.exists(document.querySelector('button') || document.querySelector('main > input') || document.querySelector('form > input'));

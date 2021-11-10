@@ -7,11 +7,16 @@ dashedName: part-25
 
 # --description--
 
-That one used the fallback value as well? I see the problem now! The variables you declared in `.bb1` do not cascade to the `.bb2` and `.bb3` sibling elements. That's just how CSS works. Because of this, variables are often declared in the `:root` selector. This is the highest level selector in CSS; putting your variables there will make them usable everywhere. Add the `:root` selector to the top of your stylesheet, and move all your variable declarations there.
+สิ่งนั้นก็ใช้ fallback value เหมือนกันหรอ? ตอนนี้ฉันมองเห็นปัญหาของมันแล้ว! 
+ตัวแปรที่คุณประกาศไว้ใน `.bb1` ไม่ได้ถูกใช้กับ elements พี่น้องอย่าง `.bb2` และ `.bb3` 
+นั้นเป็นการทำงานของCSS เพราะเหตุนี้ ตัวแปรเลยมันถูกประกาศใน `:root` selector
+นี่เป็น selector ที่มีลำดับสูงที่สุดใน CSS 
+การใส่ตัวแปรของคุณไว้ในนั้น จะทำให้มันสามารถถูกเรียกใช้ได้จากทุกที่
+จงเพิ่ม Add the `:root` selector ไว้ที่ด้านบนของ stylesheet และจงย้ายการประกาศตัวแปรทุกอันไปไว้ในนั้น
 
 # --hints--
 
-You should declare a `:root` selector at the top of the stylesheet.
+คุณควรประกาศ `:root` selector ไว้ที่ด้านบนของ stylesheet
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle(':root'));

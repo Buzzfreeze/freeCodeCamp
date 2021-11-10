@@ -7,11 +7,11 @@ dashedName: part-45
 
 # --description--
 
-Rotate `.two` clockwise slightly by adding the `transform` property with the value `rotate(0.4deg)`.
+จงหมุน `.two` ไปเล็กน้อยไปทางทิศตามเข็มโดยการเพิ่ม `transform` property ที่มีค่า `rotate(0.4deg)`
 
 # --hints--
 
-You should set the `transform` property to `rotate(0.4deg)`.
+คุณควรกำหนดให้ `transform` property มีค่าเป็น `rotate(0.4deg)`
 
 ```js
 const hasTransform = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style.transform === 'rotate(0.4deg)');

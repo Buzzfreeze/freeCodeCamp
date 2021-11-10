@@ -7,11 +7,12 @@ dashedName: part-51
 
 # --description--
 
-Use a `class` selector to target your new `blue` elements. Set the `background-color` to `#1E90FF`.
+จงใช้ `class` selector เพื่อชี้ไปที่`blue` elements
+จงกำหนดให้ `background-color` เป็น `#1E90FF`
 
 # --hints--
 
-You should have a `.blue` selector.
+คุณควรมี `.blue` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.blue'));

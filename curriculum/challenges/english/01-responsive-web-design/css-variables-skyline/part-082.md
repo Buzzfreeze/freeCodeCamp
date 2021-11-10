@@ -7,11 +7,12 @@ dashedName: part-82
 
 # --description--
 
-Give `.fb2a` a `width` of `100%` and `.fb2b` a `width` of `100%` and `height` of `75%`.
+จงกำหนดให้ `.fb2a` มี `width` เท่ากับ `100%` 
+และ `.fb2b` มี `width` เท่ากับ `100%` และ `height` เท่ากับ `75%`.
 
 # --hints--
 
-You should give `.fb2a` a `width` of `100%`.
+คุณควรกำหนดให้ `.fb2a` มี `width` เท่ากับ `100%`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(".fb2a")?.width, "100%");

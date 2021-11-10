@@ -7,15 +7,15 @@ dashedName: part-6
 
 # --description--
 
-Add a `div` element in the `body`.
+จงเพิ่ม `div` element ให้กับ `body`
 
-Set the `class` attribute equal to `canvas`. For example, `<div class="my-div">`.
+จงกำหนดให้ `class` attribute มีค่าเท่ากับ `canvas`. ยกตัวอย่างเช่น, `<div class="my-div">`.
 
-This will act as the canvas for your painting.
+นี่จะเป็นเหมือนกับผ้าใบสำหรับการระบายสี
 
 # --hints--
 
-Your code should have a `div` element.
+คุณควรมี 1 `div` element.
 
 ```js
 assert(document.querySelectorAll('div').length === 1)

@@ -9,13 +9,19 @@ dashedName: improve-form-field-accessibility-with-the-label-element
 
 # --description--
 
-Improving accessibility with semantic HTML markup applies to using both appropriate tag names and attributes. The next several challenges cover some important scenarios using attributes in forms.
+การพัฒนาการเข้าถึงด้วย semantic HTML markup ถูกใช้เพื่อการใส่ชื่อและ attributes tag ที่เหมาะสม
+ในอีกหลาย ๆ challenges จะกล่าวถึงสถานการณ์สำคัญ ๆ ที่ใช้ attributes ในฟอร์ม
 
-The `label` tag wraps the text for a specific form control item, usually the name or label for a choice. This ties meaning to the item and makes the form more readable. The `for` attribute on a `label` tag explicitly associates that `label` with the form control and is used by screen readers.
+`label` tag ที่เก็บข้อความของ form control item ที่ถูกกำหนดไว้ โดยทั่วไปจะเป้นชื่อหรือ label สำหรับตัวเลือกหนึ่ง ๆ
+สิ่งนี้จะผูกความหมายเข้ากับ item และช่วยให้ฟอร์มของเราอ่านได้ง่ายขึ้น
+`for` attribute บน `label` tag เกี่ยวข้องกับ `label` ที่มากับ the form control และถูกใช้โดยscreen readers
 
-You learned about radio buttons and their labels in a lesson in the Basic HTML section. In that lesson, we wrapped the radio button input element inside a `label` element along with the label text in order to make the text clickable. Another way to achieve this is by using the `for` attribute, as explained in this lesson.
+คุณได้เรียนเกี่ยวกับ radio buttons และ labels ของพวกมันในบทหนึ่งของ Basic HTML section
+ในบทเรียนนั้น พวกเราเก้บ radio button input element ไว้ใน `label` element พร้อมกับ label textเพื่อที่ข้อความจะได้ถูกคลิกได้
+อีกทางหนึ่งที่จะทำ ก็คือการใช้ `for` attribute ตามที่ได้อธิบายไว้ในบทเรียนนี้
 
-The value of the `for` attribute must be the same as the value of the `id` attribute of the form control. Here's an example:
+ค่าของ `for` attribute จำเป้นต้องเหมือนกับค่าของ `id` attribute ของ form control
+นี่คือตัวอย่าง :
 
 ```html
 <form>
@@ -26,11 +32,12 @@ The value of the `for` attribute must be the same as the value of the `id` attri
 
 # --instructions--
 
-Camper Cat expects a lot of interest in his thoughtful blog posts and wants to include an email sign up form. Add a `for` attribute on the email `label` that matches the `id` on its `input` field.
+Camper Cat ความหวังว่าจะมีคนสนใจโพสต์ของเขาเยอะ ๆ และต้องการที่จะใส่ฟอร์มสำหรับกรอก email เพื่อสมัครเข้าไป
+จงเพิ่ม `for` attribute บน email `label` ที่ตรงกับ `id` บนช่อง `input` ของมัน
 
 # --hints--
 
-Your code should have a `for` attribute on the `label` tag that is not empty.
+โค้ดของคุณควรมี `for` attribute บน `label` tag ที่ไม่ได้ว่างเปล่า
 
 ```js
 assert($('label').attr('for'));

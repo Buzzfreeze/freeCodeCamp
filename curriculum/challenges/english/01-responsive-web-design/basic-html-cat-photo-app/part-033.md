@@ -7,11 +7,11 @@ dashedName: part-33
 
 # --description--
 
-Inside the third `section` element add an `h2` tag with the text `Cat Form`.
+จงเพิ่ม `h2` tag ที่มีข้อความว่า `Cat Form` ภายใน`section` element อันที่สาม
 
 # --hints--
 
-Unable to find the third `section` element. You may have accidentally deleted it or the opening tag or closing tag.
+หากคุณหา `section` element อันที่สามไม่เจอ คุณอาจจะเผลอลบมันไปโดยไม่รู้ตัว
 
 ```js
 assert(

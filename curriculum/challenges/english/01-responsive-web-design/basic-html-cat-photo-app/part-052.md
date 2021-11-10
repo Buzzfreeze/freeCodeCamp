@@ -7,11 +7,11 @@ dashedName: part-52
 
 # --description--
 
-Add a `legend` element with the text `What's your cat's personality?` inside the second `fieldset` element.
+จงเพิ่ม `legend` element พร้อมกับข้อความ `What's your cat's personality?` ภายใน `fieldset` element อันที่สอง
 
 # --hints--
 
-You have either deleted the second `fieldset` element or it is missing an opening tag or closing tag."
+ถ้าหาไม่เจอ คุณอาจจะเผลอลบ `fieldset` element อันที่สองไปหรือมันขาดแท็กเปิดหรือปิด
 
 ```js
 assert(

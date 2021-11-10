@@ -7,11 +7,11 @@ dashedName: part-32
 
 # --description--
 
-Add another `@media` rule to apply if the browser window is bigger than `769px` but smaller than `1199px`.
+จงเพิ่ม `@media` rule อีกอันเพื่อใช้ในกรณีที่หน้าต่าง browser ใหญ่กว่า `769px` แต่ไม่ถึง `1199px`
 
 # --hints--
 
-You should add a new `@media` query.
+คุณควรมี `@media` query อันใหม่
 
 ```js
 assert(new __helpers.CSSHelp(document).getCSSRules('media')?.length === 2);

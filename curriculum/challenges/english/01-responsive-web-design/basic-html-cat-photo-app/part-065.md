@@ -7,13 +7,14 @@ dashedName: part-65
 
 # --description--
 
-The `title` element determines what browsers show in the title bar or tab for the page.
+`title` element จะกำหนดสิ่งที่ browser แสดงที่ title bar หรือ tab ของหน้าเว็บไซต์
 
-Add a `title` element within the `head` element. Its text should be `CatPhotoApp`.
+จงเพิ่ม `title` element ภายใน `head` element
+ข้อความของมันควรเป็น `CatPhotoApp`
 
 # --hints--
 
-You have either deleted the `head` element or it is missing an opening tag or closing tag.
+ถ้าหาไม่เจอ คุณอาจจะเผลอลบ `head` element ไปหรือมันขาดแท็กเปิดหรือปิด
 
 ```js
 assert(code.match(/\<head\>/) && code.match(/\<\/head\>/));

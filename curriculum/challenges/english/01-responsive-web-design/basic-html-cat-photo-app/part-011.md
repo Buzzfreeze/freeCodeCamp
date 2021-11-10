@@ -7,13 +7,15 @@ dashedName: part-11
 
 # --description--
 
-A link's text must be placed between the opening and closing tags of an anchor (`a`) element. For example, `<a href="https://www.freecodecamp.org">click here to go to freeCodeCamp.org</a>` is a link with the text `click here to go to freeCodeCamp.org`.
+ข้อความที่ลิงค์จะต้องอยู่ระหว่างแท็กเปิดและปิดของ anchor (`a`) element
+ยกตัวอย่างเช่น `<a href="https://www.freecodecamp.org">click here to go to freeCodeCamp.org</a>` จะเชื่อมกับข้อความ `click here to go to freeCodeCamp.org`.
 
-Add the anchor text `cat photos` to the anchor element. This will become the link's text.
+จงเพิ่มข้อความ anchor `cat photos` ให้กับ the anchor element
+นี่จะกลายเป็นข้อความที่ถูฏลิงค์
 
 # --hints--
 
-Your anchor (`a`) element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+anchor (`a`) element ควรมีแท็กเปิด โดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(document.querySelector('a'));

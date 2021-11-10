@@ -9,25 +9,28 @@ dashedName: know-when-alt-text-should-be-left-blank
 
 # --description--
 
-In the last challenge, you learned that including an `alt` attribute when using `img` tags is mandatory. However, sometimes images are grouped with a caption already describing them, or are used for decoration only. In these cases, `alt` text may seem redundant or unnecessary.
+ใน challenge ที่แล้ว, คุณได้เรียนรู้ว่าการใช้ `alt` attribute เมื่อใช้ `img` tags มันเป็นหลักการพื้นฐาน 
+อย่างไรก็ตาม, บางทีรูปก็ถูกจับกลุ่มไว้พร้อมกับ caption ที่อะิบายพวกมันได้เรียบน้อย หรือบางคร้งก็ใช้เพื่อการตกแต่งเท่านั้น
+ในกรณีนี้ข้อความ `alt` อาจจะซ้ำซ้อนหรือไม่จำเป็น
 
-When an image is already explained with text content or does not add meaning to a page, the `img` still needs an `alt` attribute, but it can be set to an empty string. Here's an example:
+เมื่อภาพหนึ่งถูกอธิบายด้วยเนื้อหาที่เป็นข้อความไปแล้วหรือไม่มีความสำคัญอะไรกับหน้านั้น ๆ, `img` ยังจำเป็นต้องมี `alt` attribute, แต่เราสามารถตั้งค่าให้มันเป็น string เปล่าได้ นี่คือตัวอย่าง:
 
 ```html
 <img src="visualDecoration.jpeg" alt="">
 ```
 
-Background images usually fall under the 'decorative' label as well. However, they are typically applied with CSS rules, and therefore not part of the markup screen readers process.
+ภาพพื้นหลังมันจะเอาไว้ใช้เพื่อการตกแต่งเท่านั้นอยู่แล้ว
 
-**Note:** For images with a caption, you may still want to include `alt` text since it helps search engines catalog the image's content.
+**Note:** สำรหับรูปภาพที่มี caption, คุณอาจจะอยากใส่ข้อความ  `alt` เนื่องจากมันช่วยให้ search engines จัดกลุ่มเนื้อหาของรูปภาพ
 
 # --instructions--
 
-Camper Cat has coded a skeleton page for the blog part of his website. He's planning to add a visual break between his two articles with a decorative image of a samurai sword. Add an `alt` attribute to the `img` tag and set it to an empty string. (Note that the image `src` doesn't link to an actual file - don't worry that there are no swords showing in the display.)
+Camper Cat ได้โค้ดโครงของเพจสำหรับเป็นพาร์ทสำหรับบล็อกในเว็บไซต์ของเขา เขาจตั้งใจจะเพิ่ม visual break ระหว่าง 2 บทความด้วยรูปภาพเพื่อการตกแต่งที่เป็นรูปดาบซามูไร
+จงเพิ่ม `alt` attribute ให้กับ `img` tag และกำหนดค่าstring เปล่า ๆ ให้มัน (จำไว้ว่า `src` ของรูป ๆ นั้นไม่ได้เชื่อมไปที่ไฟล์จริง ๆ ไม่ต้องกังวลหากไม่มีดาวซามูไรขึ้นบนจอ)
 
 # --hints--
 
-Your `img` tag should have an `alt` attribute.
+`img` tag ของคุณควรมี `alt` attribute
 
 ```js
 assert(!($('img').attr('alt') == undefined));

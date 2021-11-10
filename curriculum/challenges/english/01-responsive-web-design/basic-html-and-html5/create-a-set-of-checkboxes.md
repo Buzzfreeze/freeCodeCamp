@@ -9,17 +9,18 @@ dashedName: create-a-set-of-checkboxes
 
 # --description--
 
-Forms commonly use <dfn>checkboxes</dfn> for questions that may have more than one answer.
+แบบฟอร์มมักจะใช้ <dfn>checkboxes</dfn> กับคำถามที่สามารถเลือกได้มากกว่า 1 คำตอบ
 
-Checkboxes are a type of `input`.
+Checkboxes เป็น `input` ประเภทหนึ่ง
 
-Each of your checkboxes can be nested within its own `label` element. By wrapping an `input` element inside of a `label` element it will automatically associate the checkbox input with the label element surrounding it.
+checkbox แต่ละอันของคุณจะถูกเก็บไว้ใน `label` element ของมันเอง
+การใส่ `input` element ไว้ใน `label` element จะเป็นการเชื่อมโยง checkbox input เข้ากับ label element ที่ครอบมันอยู่โดยอัตโนมัติ
 
-All related checkbox inputs should have the same `name` attribute.
+checkbox input ทั้งหมดที่เกี่ยวข้องกันควรจะมี `name` attribute อันเดียวกัน
 
-It is considered best practice to explicitly define the relationship between a checkbox `input` and its corresponding `label` by setting the `for` attribute on the `label` element to match the `id` attribute of the associated `input` element.
+มันเป็นวิธีการที่ดีที่สุดที่จะกำหนดความสัมพันธ์ระหว่าง checkbox `input` อันหนึ่งกับ `label` ที่เกี่ยวข้องกับมันโดยการกำหนดให้ `for` attribute ของ `label` element มีค่าเดียวกับ `id` attribute ของo `input` element ที่สัมพันธ์กัน
 
-Here's an example of a checkbox:
+นี่คือตัวอย่างของ checkbox อันหนึ่ง:
 
 ```html
 <label for="loving"><input id="loving" type="checkbox" name="personality"> Loving</label>
@@ -27,11 +28,13 @@ Here's an example of a checkbox:
 
 # --instructions--
 
-Add to your form a set of three checkboxes. Each checkbox should be nested within its own `label` element. All three should share the `name` attribute of `personality`.
+จงเพิ่มกลุ่มของ checkbox 3 อันให้กับแบบฟอร์มของคุณ
+แต่ละ checkbox ควรจะถูกเก็บไว้ใน `label` element ของมันเอง
+ทั้งสามอันควรจะใช้  `name` attribute ที่ชื่อว่า `personality`
 
 # --hints--
 
-Your page should have three checkbox elements.
+หน้าเว็บไซต์ของคุณควรมี 3 checkbox element
 
 ```js
 assert($('input[type="checkbox"]').length > 2);

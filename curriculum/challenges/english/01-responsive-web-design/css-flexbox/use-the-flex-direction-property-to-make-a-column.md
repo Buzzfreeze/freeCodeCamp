@@ -9,15 +9,17 @@ dashedName: use-the-flex-direction-property-to-make-a-column
 
 # --description--
 
-The last two challenges used the `flex-direction` property set to `row`. This property can also create a column by vertically stacking the children of a flex container.
+challenge 2 อันสุดท้ายจะใช้ `flex-direction` property ที่มีค่าเป็น `row`
+property อันนี้สามารถสร้าง column อันหนึ่งได้เช่นกันโดยการซ้อน children ของ flex container เป็นชั้น ๆ 
 
 # --instructions--
 
-Add the CSS property `flex-direction` to the `#box-container` element, and give it a value of `column`.
+จงเพิ่ม CSS property `flex-direction` ให้กับ `#box-container` element
+และจงกำหนดให้มันมีค่าเป็น `column`
 
 # --hints--
 
-The `#box-container` element should have a `flex-direction` property set to `column`.
+`#box-container` element ควรมี `flex-direction` property ที่มีค่าเป็น `column`
 
 ```js
 assert($('#box-container').css('flex-direction') == 'column');

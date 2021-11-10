@@ -7,11 +7,11 @@ dashedName: part-66
 
 # --description--
 
-Move the `black-round-hat` into place with a `position` of `absolute`, a `top` of `-100px`, and a `left` of `5px`.
+จงย้าย `black-round-hat` ไปอยู่ในตำแหน่งที่เหมาะสมด้วยการกำหรดให้ `position` เท่ากับ `absolute`, `top` เท่ากับ `-100px`, และ `left` เท่ากับ `5px`
 
 # --hints--
 
-Your `#black-round-hat` selector should have a `position` property set to `absolute`.
+`#black-round-hat` selector ควรมี `position` property ที่มีค่าเป็น `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#black-round-hat')?.position === 'absolute');

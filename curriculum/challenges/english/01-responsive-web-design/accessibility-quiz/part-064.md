@@ -7,11 +7,12 @@ dashedName: part-64
 
 # --description--
 
-Horizontally center all the text within the `address` element, and add some padding.
+จงจัดให้ข้อความทั้งหมดที่อยู่ใน `address` element อยู่ที่กึ่งกลางแนวนอน 
+และจงใส่ padding
 
 # --hints--
 
-You should use the `address` element selector.
+คุณควรใช้ `address` element selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('address'));

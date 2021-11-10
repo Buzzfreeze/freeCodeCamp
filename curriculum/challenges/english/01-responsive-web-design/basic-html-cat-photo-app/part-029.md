@@ -7,11 +7,11 @@ dashedName: part-29
 
 # --description--
 
-To improve accessibility of the image you just added, add an `alt` attribute with the text `Five cats looking around a field.`
+เพื่อทำให้การเข้าถึงรูของคุณดีขึ้น จงเพิ่ม `alt` attribute ที่มีข้อความว่า `Five cats looking around a field.`
 
 # --hints--
 
-Your `figure` element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+`figure` element ควรมีแท็กเปิดโดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(document.querySelectorAll('figure').length === 2);

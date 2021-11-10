@@ -7,11 +7,13 @@ dashedName: part-104
 
 # --description--
 
-On to the next building! It's the green one in the foreground. Give it a `repeating-linear-gradient` with your building color from `0%` to `5%`, and `transparent` from `5%` to `10%`.
+มาต่อกันที่ตึกถัดไป! 
+มันคือตึกสีเขียวที่อยู่ด้านหน้า
+จงกำหนดให้มันมี `repeating-linear-gradient` ที่สร้างจากสีของตึกคุณตั้งแต่ `0%` ถึง `5%`, และให้ `transparent` ตั้งแต่ `5%` ถึง `10%`
 
 # --hints--
 
-You should give `.fb5` a `background` property.
+คุณควรกำหนดให้ `.fb5` มี `background` property.
 
 ```js
 assert.isNotEmpty(new __helpers.CSSHelp(document).getStyle(".fb5")?.background);

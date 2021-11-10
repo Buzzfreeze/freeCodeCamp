@@ -9,15 +9,18 @@ dashedName: align-all-items-horizontally-using-justify-items
 
 # --description--
 
-Sometimes you want all the items in your CSS Grid to share the same alignment. You can use the previously learned properties and align them individually, or you can align them all at once horizontally by using `justify-items` on your grid container. This property can accept all the same values you learned about in the previous two challenges, the difference being that it will move **all** the items in our grid to the desired alignment.
+บางครั้ง คุณก็ต้องการให้ทุก item ใน CSS Grid เรียงตรงกัน
+คุณสามารถใช้ property ที่ได้เรียนไปก่อนหน้านี้จัดเรียงให้พวกมันตรงกันที่ละตัว หรือคุณสามารถจัดเรียงมันทั้งหมดให้ตรงกันตรงกันในแนวนอนได้ในครั้งเดียวโดยการใช้  `justify-items` กับ grid container ของคุณ
+property นี้สามารถรับค่าเดียวกันกับที่คุณเรียนไปใน 2  challenges ก่อนหน้าได้ทั้งหมด
+ความแตกต่างก็คือมันจะย้าย **all** items ในกริดของเราไปที่การเรียงตัวที่เราต้องการ
 
 # --instructions--
 
-Use this property to center all our items horizontally.
+จงใช้ property นี้เพื่อจัดให้ item ทั้งหมดอยู่ตรงกลางในแนวนอน
 
 # --hints--
 
-`container` class should have a `justify-items` property that has the value of `center`.
+`container` class ควรมี `justify-items` property อันหนึ่งที่มีค่าเป็น `center`
 
 ```js
 assert(

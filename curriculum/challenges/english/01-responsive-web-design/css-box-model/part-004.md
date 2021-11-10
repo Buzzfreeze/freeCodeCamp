@@ -7,15 +7,15 @@ dashedName: part-4
 
 # --description--
 
-The content is surrounded by a space called padding, similar to how bubble wrap separates an item from the box around it.
+content นั้นถูกล้อมไปด้วยพื้นที่ว่างที่เรียกว่า padding, เช่นเดียวกับการบับเบิ้ลได้ห่อสิ่งของและกั้นอยู่ระหว่างมันกับกล่อง
 
-Think of the border like the cardboard box your item was shipped in.
+จงคิดว่าขอบก็เหมือนกับลังกระดาษที่เก็บของของคุณ
 
-Change the `src` attribute to `https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-3.png`
+จงเปลี่ยน`src` attribute ให้เป็น `https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-3.png`
 
 # --hints--
 
-The `img` element should have a `src` of `https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-3.png`
+`img` element ควรมี `src` ทีมีค่าเป็น `https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-3.png`
 
 ```js
 assert(document.querySelector('img').getAttribute('src') === 'https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-3.png');

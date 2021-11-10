@@ -7,13 +7,15 @@ dashedName: part-41
 
 # --description--
 
-Two final semantic HTML elements for this project are the `footer` and `address` elements. The `footer` element is a container for a collection of content that is related to the page, and the `address` element is a container for contact information for the author of the page.
+semantic HTML elements 2 อันสุดท้ายสำหรับโปรเจคนี้คือ `footer` และ `address` elements
+`footer` element เป็น container สำหรับชุดเนื้อหาที่เกี่ยวข้องกับ page
+และ `address` element เป็น container สำหรับเก็บข้อมูลติดต่อผู้เขียน page นั้นๆ
 
-After the `main` element, add one `footer` element, and nest one `address` element within it.
+ต่อจาก `main` element จงเพิ่ม `footer` element 1 อัน และใส่ `address` element 1 อันในนั้น
 
 # --hints--
 
-You should add one `footer` element after the `main` element.
+คุณควรเพิ่มหนึ่ง `footer` element ต่อจาก `main` element.
 
 ```js
 assert.exists(document.querySelector('main + footer'));

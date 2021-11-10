@@ -7,11 +7,12 @@ dashedName: part-11
 
 # --description--
 
-Up until now, you have been limited regarding the presentation and appearance of the content you create. To start taking control, add a `style` element within the `head` element.
+จนถึงตอนนี้ คุณถูกจำกัดการนำเสนอและหน้าตาของ content ที่คุณสร้าง
+เพื่อที่จะทำการเปลี่ยนแปลงมัน จงเพิ่ม`style` element ภายใน `head` element.
 
 # --hints--
 
-Your code should have an opening `<style>` tag.
+คุณควรมีแท็กเปิด`<style>` อันหนึ่ง
 
 ```js
 assert(code.match(/<style\s*>/i));

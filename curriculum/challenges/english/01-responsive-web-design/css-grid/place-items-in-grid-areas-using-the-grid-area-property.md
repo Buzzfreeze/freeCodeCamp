@@ -9,7 +9,9 @@ dashedName: place-items-in-grid-areas-using-the-grid-area-property
 
 # --description--
 
-After creating an area template for your grid container, as shown in the previous challenge, you can place an item in your custom area by referencing the name you gave it. To do this, you use the `grid-area` property on an item like this:
+หลังจากที่คุณสร้าง area template ให้กับกริด container ของคุณตามที่ได้แสดงไว้ใน challenge ก่อนหน้านี้
+คุณสามารถใส่ item ได้ในพื้นที่ที่คุณจัดเตรียมไว้โดยอ้างอิงจากชื่อที่คุณตั้งให้มัน
+เพื่อทำเช่นนี้ คุณต้องใช้`grid-area` property กับ item ดังนนี้:
 
 ```css
 .item1 {
@@ -17,15 +19,16 @@ After creating an area template for your grid container, as shown in the previou
 }
 ```
 
-This lets the grid know that you want the `item1` class to go in the area named `header`. In this case, the item will use the entire top row because that whole row is named as the header area.
+นี่จะช่วยให้กริดรู้ว่าคุณต้องการให้ `item1` class อยู่ในพื้นที่ที่ชื่อ `header`
+ในกรณีนี้ item จะคลุมแถวบนสุดทั้งแถวเพราะทั้งแถวนั้นมีชื่อเป็นพื้นที่ header 
 
 # --instructions--
 
-Place an element with the `item5` class in the `footer` area using the `grid-area` property.
+จงใส่ element อันหนึ่งที่มี `item5` class ไว้ในะื้นที่ `footer` โดยใช้ `grid-area` property.
 
 # --hints--
 
-`item5` class should have a `grid-area` property that has the value of `footer`.
+`item5` class sควรมี `grid-area` property อันหนึ่งที่มีค่าเป็น`footer`
 
 ```js
 assert(

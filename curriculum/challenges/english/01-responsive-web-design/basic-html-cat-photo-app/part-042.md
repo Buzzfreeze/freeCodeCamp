@@ -7,13 +7,15 @@ dashedName: part-42
 
 # --description--
 
-Even through you added your button below the text input, they appear next to each other on the page. That's because both `input` and `button` elements are <dfn>inline elements</dfn>, which don't appear on new lines.
+แม้ว่าคุณจะเพิ่มปุ่มของคุณไปแล้วที่ด้านล่างของ text input, มันจะยังอยู๋ข้างกันเมื่อแสดงผลบนหน้าจอ
+นั่นก็เพราะว่าทั้ง `input` และ `button` elements เป็น <dfn>inline elements</dfn> ซึ่งแปลว่ามันจะไม่มีการขึ้นบรรทัดใหม่
 
-You learned previously that the button submits the form by default, but you can explicitly add the `type` attribute with the value `submit` to it to make it clearer. Go ahead and do this to specify this button should submit the form.
+คุณได้เรียนไปในบทก่อนหน้าว่า ปุ่มจะทำการส่งแบบฟอร์มตามค่าาเริ่มต้นของมัน แต่คุณยังสามารถเพิ่ม `type` attribute พร้อมกับค่า `submit` ให้กับมันเพื่อที่จะได้ทำให้มันดูชัดมากยิ่งขึ้น 
+จงทำเช่นนี้เพื่อระบุว่าปุ่มนี้มีไว้เพื่อกดส่งแบบฟอร์ม
 
 # --hints--
 
-Your `button` element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+`button` element ควรมีแท็กเปิดโดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(document.querySelector('button'));

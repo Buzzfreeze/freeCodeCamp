@@ -7,13 +7,15 @@ dashedName: part-14
 
 # --description--
 
-As this is a quiz, you will need a form for users to submit answers. You can semantically separate the content within the form using `section` elements.
+กำหนดให้มีการสอบ คุณต้องมีฟอร์มเพื่อให้ user สามารถส่งคำตอบได้
+คุณสามารถแบ่งเนื้อหาของฟอร์มตามความหมายของมันโดยใช้ `section` elements.
 
-Within the `main` element, create a form with three nested `section` elements. Then, make the form submit to `https://freecodecamp.org/practice-project/accessibility-quiz`, using the correct method.
+จงสร้างฟอร์มที่ประกอบด้วย 3  `section` elements ภายใต้ `main` element 
+หลังจากนั้น จงส่งฟอร์มเข้าไปที่ `https://freecodecamp.org/practice-project/accessibility-quiz` โดยทำตามขั้นตอนที่ถูกต้อง.
 
 # --hints--
 
-You should nest a `form` element within your `main` element.
+คุณควรใส่ `form` element ภายใต้ `main` element.
 
 ```js
 assert.exists(document.querySelector('main > form'));

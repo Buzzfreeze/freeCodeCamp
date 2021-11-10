@@ -9,27 +9,27 @@ dashedName: change-the-color-of-text
 
 # --description--
 
-Now let's change the color of some of our text.
+ตอนนี้ เรามาเปลี่ยนสีของตัวอักษรบางตัวของเรากัน
 
-We can do this by changing the `style` of your `h2` element.
+พวกเราสามารถทำเช่นนี้ได้โดยการเปลี่ยน`style` ของ `h2` element.
 
-The property that is responsible for the color of an element's text is the `color` style property.
+property ที่รับผิดชอบในส่วนของสีของข้อความของ element คือ `color` style property.
 
-Here's how you would set your `h2` element's text color to blue:
+นี่คือวืธีที่คุณจะกำหนดสีข้อความของ `h2` element ให้เป้นสีฟ้า:
 
 ```html
 <h2 style="color: blue;">CatPhotoApp</h2>
 ```
 
-Note that it is a good practice to end inline `style` declarations with a `;` .
+จงจำไว้ว่ามันเป็นวิธีที่ดีที่จะปิดท้าย inline `style` declarations ด้วย `;` 
 
 # --instructions--
 
-Change your `h2` element's style so that its text color is red.
+จงเปลี่ยน style ของ `h2` element ให้ข้อความของมันมีสีแดง
 
 # --hints--
 
-Your `h2` element should have a `style` declaration.
+`h2` element ควรมี `style` declaration.
 
 ```js
 assert($('h2').attr('style'));

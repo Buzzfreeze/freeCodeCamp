@@ -7,11 +7,11 @@ dashedName: part-9
 
 # --description--
 
-Add the `height` property with the value `600px` to your `.canvas` rule.
+จงเพิ่ม `height` property ที่มีค่า `600px` ให้กับ `.canvas` rule.
 
 # --hints--
 
-You should set the `height` property to `600px`.
+คุณควรกำหนดให้ `height` property มีค่า `600px`
 
 ```js
 const hasHeight = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style.height === '600px');

@@ -7,11 +7,15 @@ dashedName: part-7
 
 # --description--
 
-You can see the `body` (it's the inner-most box on your page); the box around it is the `html` element. Make your `body` fill the whole viewport by giving it a `height` of `100vh`. Remove the default `margin` from the `body` by setting the `margin` to `0`. Finally, set the `overflow` property to `hidden` to hide any scroll bars that appear when something extends past the viewport.
+คุณสามารถมองเห็น `body` (มันคือกล่องที่อยู่ด้านในสุดของเพจของคุณ)
+กล่องที่อยู่รอบ ๆ มันคือ `html` element
+จงทำให้ `body` มีขนาดใหญ่เท่ากับ viewport โดยการกำหนดให้มันมี `height` เท่ากับ `100vh`
+จงลบ `margin` ตั้งต้นออกจาก `body` โดยการกำหนดให้ `margin` มีค่าเป็น `0`
+สุดท้ายนี้ จงกำหนด `overflow` property มีค่าเป็น `hidden` เพื่อซ่อน scroll bar ต่าง ๆ ที่จะปรากฏขึ้นมาเมื่อมีอะไรเลยออกจาก viewport
 
 # --hints--
 
-You should use the `body` selector.
+คุณควรใช้ `body` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('body'));

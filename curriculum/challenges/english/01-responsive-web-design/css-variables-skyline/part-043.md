@@ -7,11 +7,11 @@ dashedName: part-43
 
 # --description--
 
-You don't need the `height` or `background-color` properties in `.bb1a`, `.bb1b` or `.bb1c` anymore, so go ahead and remove them.
+คุณไม่ต้องการ `height` หรือ `background-color` property ใน `.bb1a`, `.bb1b` หรือ `.bb1c` อีกต่อไปแล้ว ฉะนั้นเชิญลบมันได้ตามใจเลย
 
 # --hints--
 
-You should remove the `background-color` from `.bb1a`.
+คุณควรลบ `background-color` ออกจาก `.bb1a`.
 
 ```js
 assert.isEmpty(new __helpers.CSSHelp(document).getStyle('.bb1a')?.backgroundColor);

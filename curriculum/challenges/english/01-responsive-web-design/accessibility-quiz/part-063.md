@@ -7,11 +7,12 @@ dashedName: part-63
 
 # --description--
 
-Now, we cannot read the text. Target the `footer` and the anchor element within to set the font color to a color of adequate contrast ratio.
+ตอนนี้ พวกเราไม่สามารถอ่านข้อความต่าง ๆ ได้
+จงหา `footer` และ anchor element ภายในนั้น เพื่อที่จะได้กำหนดค่าสีของ font ให้มี contrast ratio ที่เหมาะสม
 
 # --hints--
 
-You should use the `footer, footer a` selector.
+คุณควรใช้ `footer, footer a` selector.
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);

@@ -7,11 +7,12 @@ dashedName: part-15
 
 # --description--
 
-Move the keys into position by adjusting the `#piano` selector. Set the `padding` property to `90px 20px 0 20px`.
+จงย้ายคีย์เปียโนไปที่ตำแหน่งที่ถูกปรับเปลี่ยนโดย `#piano` selector
+จงกำหนดให้ `padding` property มีค่าเป็น `90px 20px 0 20px`
 
 # --hints--
 
-Your `#piano` selector should have the `padding` property set to `90px 20px 0 20px`.
+`#piano` selector ควรมีค่า `padding` property  ทีมีค่าเป็น `90px 20px 0 20px`.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#piano')?.padding === '90px 20px 0px');

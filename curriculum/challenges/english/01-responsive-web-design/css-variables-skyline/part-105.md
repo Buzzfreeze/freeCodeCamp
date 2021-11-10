@@ -7,11 +7,14 @@ dashedName: part-105
 
 # --description--
 
-Add another `repeating-linear-gradient` below the one you just added. Give it a `90deg` direction, use your building color from `0%` to `12%` and window color `12%` to `44%`. This will make a bunch of rectangle windows.
+จงเพิ่ม `repeating-linear-gradient` อีกอันข้างล่าง gradient ที่คุณพึ่งสร้าง
+จงกำหนดให้มันมีทิศทางเป็น `90deg` 
+จงใช้สีของตึกของคุณทำ gradient โดยเริ่มจาก `0%` ถึง `12%` และใช้สีของหน้าต่างตั้งแต่ `12%` ถึง `44%`
+นี่จะทำให้เกิดหน้าต่างสี่เหลี่ยมจำนวนมาก
 
 # --hints--
 
-You should give `.fb5` a second `repeating-linear-gradient` in the `background` property.
+คุณควรกำหนดให้`.fb5` มี `repeating-linear-gradient` อันที่สองใน `background` property.
 
 ```js
 assert.match(new __helpers.CSSHelp(document).getStyle(".fb5")?.getPropVal('background', true), /repeating-linear-gradient\(var\(--building-color2\)(0%)?,var\(--building-color2\)5%,transparent5%,transparent10%\),repeating-linear-gradient/);

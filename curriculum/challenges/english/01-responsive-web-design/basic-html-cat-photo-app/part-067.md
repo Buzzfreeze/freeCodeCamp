@@ -7,13 +7,15 @@ dashedName: part-67
 
 # --description--
 
-All pages should begin with `<!DOCTYPE html>`. This special string is known as a <dfn>declaration</dfn> and ensures the browser tries to meet industry-wide specifications.
+ทุก ๆ หน้าควรขึ้นต้นด้วย `<!DOCTYPE html>`
+มันเป็น string พิเศษที่ถูกเรียกว่า <dfn>declaration</dfn> และทำให้ browser มีลักษณะตรงตามที่ใช้กับทั่วไป
 
-To complete this project, add this declaration as the first line of the code.
+เพื่อที่จะทำโปรเจคนี้ให้สำหรับ จงเพิ่ม declaration อันนี้ไว้ที่บรรทัดแรกของโค้ด 
 
 # --hints--
 
-Your code should begin with the declaration `<!DOCTYPE html>`. You may have omitted the declaration, have a typo, or it is not the first line of code.
+โค้ดของคุณควรเริ่มต้นด้วย  declaration `<!DOCTYPE html>`
+คุณอาจจะลองไม่ใส่ declaration อันนี้, เขียนมันผิด, หรือไม่ใส่มันไว้ที่บรรทัดแรก เพื่อดูสิ่งที่จะเกิดขึ้น
 
 ```js
 assert(code.match(/\<\s*!DOCTYPE\s+html\s*\>/));

@@ -9,15 +9,15 @@ dashedName: create-a-row-gap-using-grid-row-gap
 
 # --description--
 
-You can add a gap in between the rows of a grid using `grid-row-gap` in the same way that you added a gap in between columns in the previous challenge.
+คุณสามารถเพิ่มช่องว่างระหว่างแถวของกริดโดยการใช้ `grid-row-gap` ในแบบเดียวกันกับที่คุณเพิ่มช่องว่างระหว่างคอลัมน์ใน challenge ก่อนหน้า
 
 # --instructions--
 
-Create a gap for the rows that is `5px` tall.
+จงสร้างช่องว่างระหว่างแถวที่มีความสูง `5px` 
 
 # --hints--
 
-`container` class should have a `grid-row-gap` property that has the value of `5px`.
+`container` class ควรมี `grid-row-gap` property อันหนึ่งที่มีความสูง `5px`
 
 ```js
 assert(

@@ -9,19 +9,21 @@ dashedName: make-screen-reader-navigation-easier-with-the-header-landmark
 
 # --description--
 
-The next HTML5 element that adds semantic meaning and improves accessibility is the `header` tag. It's used to wrap introductory information or navigation links for its parent tag and works well around content that's repeated at the top on multiple pages.
+HTML5 element อันต่อมาที่จะเพิ่มความหมายในแง่ความภาษาและพัฒนาการเข้าถึงคือ `header` tag
+มันถูกใช้เพื่อเก็บข้อมูลสำหรับการแนะนำตัวเว็บไซต์หรือ navigation links สำหรับ parent tag ของมัน และมันยังทำงานได้ดีกับเนื้อหาที่ซ้ำ ๆ ในบริเวณส่วนบนของหลาย ๆ หน้า
 
-`header` shares the embedded landmark feature you saw with `main`, allowing assistive technologies to quickly navigate to that content.
+`header` ได้แบ่ง embedded landmark feature ที่คุณเห็นกับ  `main` โดยการทำให้ assistive technologies สามารถนำทางไปยังเนื้อหานั้นได้รวดเร็วมากยิ่งขึ้น
 
-**Note:** The `header` is meant for use in the `body` tag of your HTML document. It is different than the `head` element, which contains the page's title, meta information, etc.
+**Note:** `header` นั้นถูกใช้ใน  `body` tag ของHTML document ของคุณ มันแตกต่างจาก `head` element ที่เก็บทั้งชื่อของหน้านั้น, meta information, และอื่น ๆ
 
 # --instructions--
 
-Camper Cat is writing some great articles about ninja training, and wants to add a page for them to his site. Change the top `div` that currently contains the `h1` to a `header` tag instead.
+Camper Cat กำลังเขียนบทความสุดคูลเกี่ยวกับการฝึกนินจา และต้องการจะเพิ่มหน้าหน้าหนึ่งในเว็บไซต์ของเขา
+จงเปลี่ยน `div` อันบนที่ตอนนี้เก็บ `h1` เป็น  `header` tag 1 อันแทน
 
 # --hints--
 
-Your code should have one `header` tag.
+โค้ดของคุณควรมี  `header` tag 1 อัน
 
 ```js
 assert($('header').length == 1);

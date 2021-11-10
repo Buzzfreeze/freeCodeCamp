@@ -7,13 +7,13 @@ dashedName: part-22
 
 # --description--
 
-Adding 1 pixel of padding to the top, bottom, left, and right of the canvas changed its dimensions to 502 pixels x 602 pixels.
+การเพิ่ม padding 1 pixel ที่ด้านบน, ล่าง, ซ้ายและขวาของผ้าใบเปลี่ยนไปมีขนาด 502 pixel x 602 pixel แทน
 
-Replace `padding: 1px;` with `overflow: hidden;` to change the canvas back to its original dimensions.
+จงแทนที่ `padding: 1px;` ด้วย `overflow: hidden;` เพื่อปรับให้ผ้าใบกลับไปมีขนาดเท่าเดิม
 
 # --hints--
 
-You should remove the `padding` property from the `.one` selector.
+คุณควรเอา `padding` property ออกจาก `.one` selector.
 
 ```js
 const onePadding = new __helpers.CSSHelp(document).getStyle('.one').getPropertyValue('padding');

@@ -7,11 +7,11 @@ dashedName: part-109
 
 # --description--
 
-You can remove the `background-color` for this building now, since it isn't needed.
+คุรสามารถเอา`background-color` ออกจากตึกนี้ได้แล้ว เพราะเราไม่ต้องการมันอีก
 
 # --hints--
 
-You should remove the `background-color` of `.fb6`.
+คุณควรเอา `background-color` ออกจาก `.fb6`.
 
 ```js
 assert.notMatch(code, /\.fb6\s*\{\s*[^}]*?background-color[^}]*?\}/);

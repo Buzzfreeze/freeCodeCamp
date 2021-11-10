@@ -7,11 +7,11 @@ dashedName: part-25
 
 # --description--
 
-Using an `id` selector, give your `gray-instrument` element a `width` of `15%`, a `height` of `40%`, and a `background-color` of `rgb(167, 162, 117)`.
+จงกำหนดให้ `gray-instrument` element มี `width` เท่ากับ `15%`, `height` เท่ากับ `40%`, และ `background-color` เท่ากับ  `rgb(167, 162, 117)` ด้วย `id` selector
 
 # --hints--
 
-You should have a `#gray-instrument` selector.
+คุณควรมี 1 `#gray-instrument` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#gray-instrument'));

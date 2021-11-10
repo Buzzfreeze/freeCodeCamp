@@ -9,31 +9,33 @@ dashedName: create-a-media-query
 
 # --description--
 
-Media Queries are a new technique introduced in CSS3 that change the presentation of content based on different viewport sizes. The viewport is a user's visible area of a web page, and is different depending on the device used to access the site.
+Media Queries เป็นเทคนิคใหม่ของ CSS3 ที่จะเปลี่ยนการแสดงผลของเนื้อหาตามขนาดของ viewport 
+viewport คือพื้นที่ที่ผู้ใช้สามารถมองเห็นได้ด้วยตาบนเว็บเพจ และแตกต่างกันตามอุปกรณ์ที่ใช้เข้าถึงเว็บไซต์
 
-Media Queries consist of a media type, and if that media type matches the type of device the document is displayed on, the styles are applied. You can have as many selectors and styles inside your media query as you want.
+Media Queries ประกอบด้วยประเภทของมีเดีย และถ้าประเภทของมีเดียนั้นตรงกับประเภทของอุปกรณ์ เอกสารนั้นก็จะแสดงออกมาตามสไตล์ที่เรากำหนด
+คุณสามารถมี selector หลายอันและกำหนดสไตล์ของ media query ตามที่คุณต้องการ
 
-Here's an example of a media query that returns the content when the device's width is less than or equal to `100px`:
+นี่คือตัวอย่างของ media query ที่ส่งเนื้อหาออมาเมื่อความกว้างของอุปกรณ์น้อยกว่าและเท่ากับ `100px`:
 
 ```css
 @media (max-width: 100px) { /* CSS Rules */ }
 ```
 
-and the following media query returns the content when the device's height is more than or equal to `350px`:
+และ media query ข้างล่างจะส่งเนื้อหาออกมาเมื่อความสูงของอุปกรณ์มากกว่าหรือเท่ากับ `350px`:
 
 ```css
 @media (min-height: 350px) { /* CSS Rules */ }
 ```
 
-Remember, the CSS inside the media query is applied only if the media type matches that of the device being used.
+จงจำไว้ว่า CSS ข้างใน media query ถูกใช้เมื่อประเภทของ media ตรงกับอุปกรณ์เท่านั้น
 
 # --instructions--
 
-Add a media query, so that the `p` tag has a `font-size` of `10px` when the device's height is less than or equal to `800px`.
+จงเพิ่ม media query 1 อันเพื่อที่ `p` tag จะได้มีขนาด `font-size` เท่ากับ `10px` เมื่อความสูงของอุปกรณ์น้อยกว่าหรือเท่ากับ `800px`
 
 # --hints--
 
-You should declare a `@media` query for devices with a `height` less than or equal to `800px`.
+คุณควรประกาศ `@media` query สำหรับอุปกรณ์ที่มี `height` น้อยกว่าหรือเท่ากับ`800px`.
 
 ```js
 const media = new __helpers.CSSHelp(document).getCSSRules('media');

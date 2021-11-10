@@ -7,11 +7,12 @@ dashedName: part-55
 
 # --description--
 
-Give the `blue-right` the correct positioning with `position` set to `absolute`, `top` set to `50%`, and `left` set to `40%`.
+
+จงกำหนดให้ `blue-right` อยู่ในตำแหน่งที่ถูกต้องด้วยการที่ `position` มีค่าเป็น `absolute`, `top` เป็น `50%`, และ `left` เป็น `40%`
 
 # --hints--
 
-Your `#blue-right` selector should have a `position` property set to `absolute`.
+`#blue-right` selector ควรมี 1 `position` property ที่เป็น `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#blue-right')?.position === 'absolute');

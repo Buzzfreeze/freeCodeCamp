@@ -7,11 +7,12 @@ dashedName: part-52
 
 # --description--
 
-To make the submit button look more in line with the rest of the form, give it the same `height` as the other fields (`2em`). Also, increase the `font-size` to `1.1rem`.
+เพื่อที่ปุ่ม submit จะได้ดูตรงบรรมัดกับส่วนอื่น ๆ ในแบบฟอร์ม จงกำหนดให้มันมี `height` เท่ากับช่องอื่น ๆ (`2em`)
+นอกจากนี้ จงเพิ่ม `font-size` ให้เป็น `1.1rem`.
 
 # --hints--
 
-You should give the submit button a `height` of `2em`.
+คุณควรกำหนดให้ปุ่ม submit มี `height` อยู่ที่ `2em`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('input[type="submit"]')?.height, '2em');

@@ -7,11 +7,12 @@ dashedName: part-99
 
 # --description--
 
-Nest six `div` elements within `.fb4b` and give them all a class of `fb4-window`.
+จงเพิ่ม `div` element 6 อันภายใน  `.fb4b` 
+และจงกำหนดให้พวกมันทั้งหมดเป็นคลาสหนึ่งชื่อ `fb4-window`
 
 # --hints--
 
-You should add six `div` elements within `.fb4b`.
+คุณควรเพิ่ม 6 `div` elements ภายใน `.fb4b`
 
 ```js
 assert.equal(document.querySelectorAll("div.fb4b > div")?.length, 6);

@@ -7,7 +7,7 @@ dashedName: part-46
 
 # --description--
 
-You can specify where you want a gradient transition to complete by adding it to the color like this:
+คุรสามารถระบุได้ว่าตรงไหนที่คุณตรงการให้เกิด gradient transition โดยการระบุมันไว้เช่นนี้:
 
 ```css
 gradient-type(
@@ -17,11 +17,12 @@ gradient-type(
 );
 ```
 
-Here, it will transition from `color1` to `color2` between `0%` and `20%` of the element and then transition to `color3` for the rest. Add `80%` to the `--building-color1` color of the `.bb1d` gradient so you can see it in action.
-
+จากที่เห็นด้านบน Here, การเปลี่ยนสีจาก `color1` ไป `color2` จะเกิดขึ้นระหว่างช่วง`0%` และ`20%`ของ element 
+และการเปลี่ยนสีเป็น `color3` ได้เกิดขึ้นหลังจากนั้น
+จงเพิ่มค่า  `80%` ให้กับสี `--building-color1` ของ `.bb1d` gradient เพื่อที่คุณจะได้เห็นผลที่ตามมา
 # --hints--
 
-You should add a value of `80%` to the `--building-color1` color in the `linear-gradient` of `.bb1d`.
+คุณควรเพิ่มค่า `80%` ให้กับสี `--building-color1` ใน `linear-gradient` ของ `.bb1d`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.bb1d')?.getPropVal('background', true), 'linear-gradient(orange,var(--building-color1)80%,var(--window-color1))');

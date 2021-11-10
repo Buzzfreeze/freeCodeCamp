@@ -7,11 +7,12 @@ dashedName: part-44
 
 # --description--
 
-Select only the `.inline` elements, and give them `width` of `unset`. This will remove the earlier rule which set all the `input` elements to `width: 100%`.
+จงเลือกเพียง `.inline` elements, และกำหนดให้พวกมันมี `width` เป็น `unset`
+สิ่งนี้จะลบกฎก่อนหน้านี้ที่กำหนดให้ `input` element ทุกตัวมีค่า `width: 100%`.
 
 # --hints--
 
-You should use the `.inline` selector.
+คุณควรใช้ `.inline` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('.inline'));

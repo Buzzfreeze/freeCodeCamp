@@ -7,11 +7,12 @@ dashedName: part-19
 
 # --description--
 
-Give the new buildings `width` and `height` properties of: `10%` and `50%` for `.bb2`, `10%` and `55%` for `.bb3`, and `11%` and `58%` for `.bb4`. You will be using almost all percent based units and some flexbox for this project, so everything will be completely responsive.
+จงกำหนดให้ building อันใหม่มีค่า `width` และ `height` properties เป้น: `10%` และ `50%` สำหรับ `.bb2`, `10%` และ `55%` สำหรับ `.bb3`, `11%` และ `58%` สำหรับ `.bb4`
+คุณจะใช้ได้ใช้ percent based units ทุกแบบและ flexbox บางแบบในโปรเจคนี้ และทำหมดนี้จะเป็นการทำ responsive ที่สมบูรณ์แบบ
 
 # --hints--
 
-You should give `.bb2` a `width` of `10%`.
+คุณควรกำหนดให้`.bb2` มีค่า `width` เท่ากับ `10%`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.bb2')?.width, '10%');

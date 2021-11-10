@@ -7,11 +7,13 @@ dashedName: part-21
 
 # --description--
 
-I don't like how spaced out the buildings are. Squeeze them together by adding two empty `div` elements to the top of the `background-buildings` element, two more at the bottom of it, and one more in between `.bb3` and `.bb4`. These will be added as evenly-spaced elements across the container, effectively moving the buildings closer to the center.
+ฉันไม่ชอบที่ buildings มันอยู่ห่างกันแบบแปลกๆ จงทำให้มันเข้ามาชิดกันมายิ่งขึ้นด้วยการเพิ่ม `div` elements เปล่า 2 อันที่ด้านบนของ `background-buildings` element
+และอีก 2 หรือมากกว่านั้นที่ด้านล่างของมัน แล้วก็เพิ่มอีกอันระหว่าง `.bb3` และ `.bb4`
+พวกมันถูกเพิ่มเข้ามาเหมือนกัน evenly-spaced elements ระหว่าง container ซึ่งช่วยทำให้ building ขยับเข้ามาอยู่ตรงกลางมากขึ้น
 
 # --hints--
 
-You should add two new `div` elements before the `.bb1` element.
+คุณควรเพิ่ม 2 `div` element ก่อน `.bb1` element.
 
 ```js
 const bBuildings = document.querySelector('.background-buildings')?.children;

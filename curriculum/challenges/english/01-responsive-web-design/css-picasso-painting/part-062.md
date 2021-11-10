@@ -7,11 +7,12 @@ dashedName: part-62
 
 # --description--
 
-Select your `orange-character` element with an `id` selector. Give it a `width` of `250px`, a `height` of `550px`, and a `background-color` of `rgb(240, 78, 42)`.
+จงเลือก `orange-character` element ที่มี `id` selector
+จงกำหนดให้มันมี `width` เป็น `250px`, `height` เป็น `550px`, และ `background-color` เป็น `rgb(240, 78, 42)`
 
 # --hints--
 
-You should have an `#orange-character` selector.
+Yคุณควรมี `#orange-character` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#orange-character'));

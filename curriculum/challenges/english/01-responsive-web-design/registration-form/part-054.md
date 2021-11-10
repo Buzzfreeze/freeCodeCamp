@@ -7,13 +7,14 @@ dashedName: part-54
 
 # --description--
 
-Lastly, for the submit button, you want to separate it from the `fieldset` above, and adjust its width to never be below `300px`.
+สุดท้ายนี้ คุณต้องการที่จะแยกปุ่ม submit ออกจาก `fieldset` ที่อยู่ด้านบน และปรับให้ความกว้างของมันไม่ต่ำกว่า `300px`จ
 
-Change the `margin` property to include `1em` on the top and bottom, and set the width as described above.
+จงเปลี่ยน `margin` property ให้มีขนาด `1em` ที่ด้านบนและล่าง และกำหนดให้ความกว้างมีขนาดตามที่กล่าวไว้ด้านบน
 
 # --hints--
 
-You should not change the `width` property. Use the `min-width` property.
+คุณไม่ควรเปลี่ยน `width` property 
+จงใช้ `min-width` property แทน
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('input[type="submit"]')?.width, '60%');

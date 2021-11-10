@@ -9,15 +9,20 @@ dashedName: adjust-the-color-of-various-elements-to-complementary-colors
 
 # --description--
 
-The Complementary Colors challenge showed that opposite colors on the color wheel can make each other appear more vibrant when placed side-by-side. However, the strong visual contrast can be jarring if it's overused on a website, and can sometimes make text harder to read if it's placed on a complementary-colored background. In practice, one of the colors is usually dominant and the complement is used to bring visual attention to certain content on the page.
+แบบฝึกหัด Complementary Colors แสดงให้เห็นว่าสีตรงข้ามกันบนล้อสีสามารถเพิ่มความมีชีวิตชีวาให้กันและกันได้เมื่อวางมันข้าง ๆ กัน
+อย่างไรก็ตาม visual contrast ที่มากเกินไปสามารถทำให้มันขัดตาหากเราใช้มันบนเว็บไซต์มากเกินไป และบางทีก็ทำให้ตัวอักษรอ่านได้ยากขึ้นถ้ามันถูกวางไว้บนพื้นหลังที่เป็นแบบ complementary-colored
+ในแบบฝึดกัดนี้ หนึ่งในสีที่มักจะเป็นตัวหลัก และสีที่เสริมเข้ามาจะช่วยดึงดูดความสนใจให้กับ content อย่างอันในหน้าเว็บ.
 
 # --instructions--
 
-This page will use a shade of teal (`#09A7A1`) as the dominant color, and its orange (`#FF790E`) complement to visually highlight the sign-up buttons. Change the `background-color` of both the `header` and `footer` from black to the teal color. Then change the `h2` text `color` to teal as well. Finally, change the `background-color` of the `button` to the orange color.
+หน้านี้จะใช้เฉดของสีฟ้าน้ำทะเล (`#09A7A1`) เป็นสีหลัก และให้สีส้ม (`#FF790E`) ช่วยทำให้ sign-up buttons ดูเด่นขึ้น
+จงเปลี่ยน `background-color` ของทั้ง `header` และ `footer` จวกสีดำเป็นสีฟ้าน้ำทะเล 
+หลังจากนั้นจงเปลี่ยนสีของข้อความ `color` ใน `h2` ให้เป็นสีฟ้าน้ำทะเลด้วยเช่นกัน
+สุดท้ายนี้ จงเปลี่ยน `background-color` ของปุ่ม `button` ให้เป็นสีส้ม
 
 # --hints--
 
-The `header` element should have a `background-color` of #09A7A1.
+`header` element ควรมี `background-color` ค่าเท่ากับ #09A7A1 1 อัน
 
 ```js
 assert($('header').css('background-color') == 'rgb(9, 167, 161)');

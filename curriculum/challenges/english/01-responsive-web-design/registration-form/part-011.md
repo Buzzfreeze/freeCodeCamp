@@ -7,11 +7,11 @@ dashedName: part-11
 
 # --description--
 
-Seeing as we plan on having three distinct sections to the form, add three `fieldset` elements within the `form`.
+ตามที่เราได้ตั้งใจจะให้มี 3 sectionที่ต่างกันในแบบฟอร์มนี้, จงเพิ่ม 3 `fieldset` elements ภายใน `form`
 
 # --hints--
 
-You should add three `fieldset` elements.
+คุณควรเพิ่ม 3 `fieldset` elements.
 
 ```js
 assert.equal(document.querySelectorAll('fieldset')?.length, 3);

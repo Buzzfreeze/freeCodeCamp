@@ -7,7 +7,7 @@ dashedName: part-13
 
 # --description--
 
-Add the following text to the `label` elements:
+จงเพิ่มข้อความต่อไปนี้ใน `label` elements:
 
 - `Enter Your First Name:`
 - `Enter Your Last Name:`
@@ -16,7 +16,7 @@ Add the following text to the `label` elements:
 
 # --hints--
 
-The first `label` should have the text `Enter Your First Name:`.
+`label` อันแรกควรมีข้อความ`Enter Your First Name:`.
 
 ```js
 assert.match(document.querySelector('label')?.innerHTML, /Enter Your First Name:/i);

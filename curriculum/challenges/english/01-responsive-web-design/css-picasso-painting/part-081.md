@@ -7,11 +7,12 @@ dashedName: part-81
 
 # --description--
 
-Select the `id` with value `guitar-right`, and also set `position` to `absolute`. This time, set `left` to `100px`.
+จงเลือก `id` ที่มีค่า `guitar-right`, และจงกำหนดให้ `position` เท่ากับ `absolute`
+ครั้งนี้ จงกำหนดให้ `left` เท่ากับ `100px`
 
 # --hints--
 
-You should create a new `#guitar-right` selector.
+คุณควรสร้าง `#guitar-right` selector มาใหม่หนึ่งอัน
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#guitar-right'));

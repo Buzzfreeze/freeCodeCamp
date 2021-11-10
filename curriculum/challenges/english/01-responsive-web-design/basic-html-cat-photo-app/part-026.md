@@ -7,13 +7,13 @@ dashedName: part-26
 
 # --description--
 
-The code for an ordered list (`ol`) is similar to an unordered list, but list items in an ordered list are numbered when displayed.
+โค้ดสำหรับ ordered list (`ol`) จะคล้ายกับ unordered list, แแต่ list items ใน ordered list จะมีตัวเลขมากำกับเมื่อแสดงผล
 
-After the final second section' last `h3` element, add an ordered list with these three list items: `flea treatment`, `thunder` and `other cats`.
+ต่อจาก `h3` element อันสุดท้ายของ section อันที่สอง, จงเพิ่ม ordered list ที่มี 3 list item นี้อยู่: `flea treatment`, `thunder` และ `other cats`.
 
 # --hints--
 
-Your `ol` element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+`ol` element ควรมีแท็กเปิดโดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(document.querySelector('ol'));

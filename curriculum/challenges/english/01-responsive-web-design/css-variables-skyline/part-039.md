@@ -7,11 +7,12 @@ dashedName: part-39
 
 # --description--
 
-Create a new variable in `:root` called `--window-color1` and give it a value of `black`. This will be a secondary color for the purple buildings.
+จงสร้างตัวแปรอันใหม่ใน `:root` ชื่อ `--window-color1` และจงกำหนดให้มันมีค่าเป็น `black`
+นี่จะเป็นสีทุติยภูมิสำหรับ buildings สีม่วง
 
 # --hints--
 
-You should create a new variable in `:root` called `--window-color1`.
+คุณควรสร้างตัวแปรตัวใหม่ใน `:root` ชื่อ `--window-color1`
 
 ```js
 assert(new __helpers.CSSHelp(document).isPropertyUsed('--window-color1'));

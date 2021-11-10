@@ -9,17 +9,20 @@ dashedName: animate-multiple-elements-at-variable-rates
 
 # --description--
 
-In the previous challenge, you changed the animation rates for two similarly animated elements by altering their `@keyframes` rules. You can achieve the same goal by manipulating the `animation-duration` of multiple elements.
+ในแบบฝึกหัดที่แล้ว คุณได้เปลี่ยน animation rate ของสอง elements ที่ animate คล้ายกันโดยการเปลี่ยน `@keyframes` rule
+คุรสามารถทำเช่นนี้ได้ด้วยการใช้ `animation-duration` ของหลาย ๆ element เช่นกัน
 
-In the animation running in the code editor, there are three stars in the sky that twinkle at the same rate on a continuous loop. To make them twinkle at different rates, you can set the `animation-duration` property to different values for each element.
+ตรงที่ animation ทำงานใน code editor, มันมีดาวสามดวงบนฟ้าที่กำลังกระพริบอยู่โดยมีt rate เดียวกับวนเป็นลูปต่อเนื่อง
+เพื่อที่จะทำให้มันกระพริบด้วย rate ที่ต่างกัน
+คุณสามารถกำหนดให้ `animation-duration` property มีค่าที่ต่างกันในแต่ละ element
 
 # --instructions--
 
-Set the `animation-duration` of the elements with the classes `star-1`, `star-2`, and `star-3` to 1s, 0.9s, and 1.1s, respectively.
+จงกำหนดให้ `animation-duration` ของ element ที่เป็นคลาส `star-1`, `star-2`, และ `star-3` มีค่า 1s, 0.9s, และ 1.1s ตามลำดับ
 
 # --hints--
 
-The `animation-duration` property for the star with class `star-1` should remain at 1s.
+`animation-duration` property ของดาวที่มีคลาสชื่อ `star-1` ควรจะอยู่ที่ 1s.
 
 ```js
 assert($('.star-1').css('animation-duration') == '1s');

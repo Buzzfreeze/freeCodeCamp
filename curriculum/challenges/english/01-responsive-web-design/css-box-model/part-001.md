@@ -7,13 +7,13 @@ dashedName: part-1
 
 # --description--
 
-By now, you should be familiar with the basic elements an HTML page should have.
+สำหรับตอนนี้ คุณควรจำคุ้นเคยเก็บ element พื้นฐานที่ HTML page ควรจะมีแล้ว
 
-Set up your code with a `DOCTYPE` declaration, an `html` element, a `head` element, and a `body` element.
+จง Set up โค้ดของคุณด้วย `DOCTYPE` declaration, `html` element 1 อัน, `head` element 1 อัน, และ `body` element อีก 1 อัน
 
 # --hints--
 
-Your code should have a `<!DOCTYPE html>` declaration.
+คุณควรมี `<!DOCTYPE html>` declaration.
 
 ```js
 assert(code.match(/<!DOCTYPE html>/i));

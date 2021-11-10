@@ -7,11 +7,13 @@ dashedName: part-15
 
 # --description--
 
-Create some "dots" for the instrument. Add five `div` elements within your `gray-instrument` element. Set the `class` of each to `black-dot`.
+จงสร้าง "dots" ให้กับเครื่องมือ
+จงเพิ่ม 5 `div` elements ภายใน `gray-instrument` element
+จงกำหนดให้ `class` ของแต่ละเป็น `black-dot`
 
 # --hints--
 
-You should have five new `div` elements within your `#gray-instrument` element.
+คุณควรมี 5`div` elements ภายใน `#gray-instrument` element.
 
 ```js
 assert(document.querySelectorAll('#gray-instrument div').length === 5);

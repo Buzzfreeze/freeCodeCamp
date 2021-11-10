@@ -7,13 +7,13 @@ dashedName: part-33
 
 # --description--
 
-For the new `@media` rule, set the `width` of the `#piano` to `675px` and the `width` of the `.keys` to `633px`.
+สำหรับ `@media` rule อันใหม่ จงกำหนดให้ `width` ของ`#piano` มีค่าเป็น `675px` และ `width` ของ `.keys` มีค่าเป็น `633px`.
 
-With that, your piano is complete!
+หลังจากทำพวกนั้นแต่ ตอนนี้โปรเจคของคุณก็เสร็จสมบูรณ์แล้ว!
 
 # --hints--
 
-Your second `@media` rule should have a `#piano` selector.
+`@media` rule อันที่ 2 ควรมี `#piano` selector อันหนึ่ง
 
 ```js
 const rules = new __helpers.CSSHelp(document).getRuleListsWithinMedia('(max-width: 1199px) and (min-width: 769px)');

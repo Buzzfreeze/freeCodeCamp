@@ -7,11 +7,12 @@ dashedName: part-43
 
 # --description--
 
-Now position the `black-hat` element. Give it a `position` of `absolute`, with a `top` of `-150px` and a `left` of `0`.
+ตอนนี้ จงจัดตำแหน่งให้ `black-hat` element
+จงกำหนดให้มันมี `position` เป็น `absolute`, `top` เท่ากับ `-150px` และ `left` เท่ากับ `0`
 
 # --hints--
 
-Your `#black-hat` selector should have a `position` property set to `absolute`.
+`#black-hat` selector ควรมี `position` property ที่เป็น `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#black-hat')?.position === 'absolute');

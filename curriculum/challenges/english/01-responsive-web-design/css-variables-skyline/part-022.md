@@ -7,11 +7,12 @@ dashedName: part-22
 
 # --description--
 
-Create a new variable by the other one called `--building-color2` and give it a value of `#66cc99`. Then set it as the `background-color` of `.bb2`.
+จงสร้างตัวแปรขึ้นมาใหม่ 1 ตัวโดยที่อันหนึ่งชื่อว่า `--building-color2` และกำหนดให้มันมีค่า `#66cc99`
+หลังจากนั้น จงกำหนดให้มันเป็น `background-color` ของ `.bb2`.
 
 # --hints--
 
-You should define a new property variable called `--building-color2`.
+คุณควรประกาศตัวแปรอันใหม่ property ว่า `--building-color2`.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).isPropertyUsed('--building-color2'));

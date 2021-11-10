@@ -7,15 +7,19 @@ dashedName: part-28
 
 # --description--
 
-Add another `label` after the first, with the text `Input your age (years): `. Then, nest an `input` with the `type` of `number`.
+จงเพิ่ม `label` อีกอันหลังจากอันแรก พร้อมกับข้อความ `Input your age (years): `
+หลังจากนั้น จงเก็บใส่ `input` ที่มี `type` เท่ากับ `number`
 
-As we do not want users under the age of 13 to register, add a `min` attribute to the `input` with a value of `13`. Also, we can probably assume users over the age of 120 will not register; add a `max` attribute with a value of `120`.
+ตามที่เราไม่ต้องการใช้ผู้ใช้ที่มีอายุต่ำกว่า 13 ปีสมัครได้
+จงเพิ่ม `min` attribute ที่มีค่า`13` ใน `input` 
+นอกจากนี้เราสามารถคาดได้ว่าผู้ใช้ที่อายุมากกว่า 120 จะไม่มาใช้งาน จงเพิ่ม `max` attribute ที่มีค่า `120` เข้าไป
 
-Now, if someone tries to submit the form with values outside of the range, a warning will appear, and the form will not submit. Give it a try.
+ในตอนนี้ ถ้ามีใครพยายามที่จะสกรอกค่าที่เกินของเขตที่ตั้งไว้ในฟอร์ม คำแต้งเตือนจะปรากฏขึ้น และแบบฟอร์มจะกดส่งไม่ได้
+ไม่เชื่อก็ลองดู
 
 # --hints--
 
-You should add a `label` to the third `fieldset`, after the existing `label`.
+คุณควรเพิ่ม `label` อันหนึ่งที่ `fieldset` อันที่สาม ต่อจาก`label` ที่มีอยู่แล้ว
 
 ```js
 assert.exists(document.querySelector('fieldset:nth-child(3) > label + label'));

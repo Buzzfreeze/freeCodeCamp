@@ -7,23 +7,22 @@ dashedName: part-67
 
 # --description--
 
-Finally, the navigation accessibility can be improved with providing keyboard shortcuts.
+สุดท้ายนี้ navigation accessibility สามารถถูกปรับปรุงให้ดีขึ้นได้ด้วยการเพิ่ม  keyboard shortcuts
 
-The `accesskey` attribute accepts a space-separated list of access keys. For example:
+`accesskey` attribute จะเก็บลิสต์ของ access keys ไว้ ยกตัวอย่างเช่น:
 
 ```html
 <button type="submit" accesskey="s">Submit</button>
 ```
 
-Give each of the navigation links a single-letter access key.
+จงใส่ single-letter access key หรือ access key ที่เป็นแบบตัวอักษรตัวเดียวให้ navigation links แต่ละตัว
+_Note: มันไม่จำเป็นต้องมี access keys เสมอไปแต่ได้มีมันก็สามารถเป็นประโยชน์กับผู้ใช้ได้
 
-_Note: It is not always advised to use access keys, but they can be useful_
-
-Well done. You have completed the _Accessibility Quiz_ practice project.
+ยอดเยี่บม! ตอนนี้คุณทำ the _Accessibility Quiz_ practice project ครบถ้วนเรียบร้อยแล้ว
 
 # --hints--
 
-You should give the first `a` element a single-letter `accesskey`.
+คุณควรใส่ single-letter `accesskey` ที่ `a` element อันแรก
 
 ```js
 assert.equal(document.querySelectorAll('a')?.[0]?.getAttribute('accesskey')?.length, 1);

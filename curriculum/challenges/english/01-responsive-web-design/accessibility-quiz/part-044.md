@@ -7,7 +7,8 @@ dashedName: part-44
 
 # --description--
 
-Back to styling the page. Select the list elements within the navigation bar, and give them the following styles:
+กลับมาที่การตกแต่ง page
+จงเลือก list elements ภายใน navigation bar และกำหนดค่าตามที่เขียนด้านล่าง:
 
 ```css
 color: #dfdfe2;
@@ -18,7 +19,7 @@ display: block;
 
 # --hints--
 
-You should use either the `nav li` or `nav > ul > li` selector.
+คุณควรใช้ `nav li` หรือ `nav > ul > li` selector.
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);

@@ -7,11 +7,11 @@ dashedName: part-27
 
 # --description--
 
-Center the `.two` element by setting its `margin` to `auto`.
+จงกำให้ `.two` element อยู่ตรงกลางโดยกำหนดให้ `margin` ของมันมีค่าเป็น `auto`
 
 # --hints--
 
-You should set the `margin` property to `auto`.
+คุรควรกำหนดให้ `margin` property มีค่าเป็น `auto`
 
 ```js
 const hasMargin = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style.margin === 'auto');

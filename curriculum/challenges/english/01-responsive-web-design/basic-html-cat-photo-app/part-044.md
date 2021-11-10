@@ -7,13 +7,14 @@ dashedName: part-44
 
 # --description--
 
-`label` elements are used to help associate the text for an `input` element with the input element itself (especially for assistive technologies like screen readers). For example, `<label><input type="radio"> cat</label>` makes it so clicking the word `cat` also selects the corresponding radio button.
+`label` elements นั้นถูกใช้เพื่อช่วยให้ข้อความที่เกี่ยบกับ `input` element มาอยู่กับ input element 
+ยกตัวอย่างเช่น `<label><input type="radio"> cat</label>` จะทำให้เวลาเรากดท radio button ที่เชื่ออมกับคำว่า `cat` ส่งค่าของมันเอง
 
-Nest your `radio` button inside a `label` element.
+จงเก็บ `radio` button ไว้ใน `label` element.
 
 # --hints--
 
-You should make sure the radio button is still present.
+คุณควรเช็คให้มั่นใจว่า radio button ของคุณยังแสดงอยู่
 
 ```js
 assert($('input[type="radio"]')[0]);

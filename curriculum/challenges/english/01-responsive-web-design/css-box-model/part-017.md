@@ -7,11 +7,11 @@ dashedName: part-17
 
 # --description--
 
-Write a new rule that targets `.one` and set its `width` to 425 pixels.
+จงเขียนกฎขึ้นมาใหม่อันหนึ่งเพื่อหา `.one` และกำหนดให้ `width` ของมันมีค่า 425 pixels
 
 # --hints--
 
-You should have a `.one` selector.
+คุณควรมี 1 `.one` selector.
 
 ```js
 const hasOne = new __helpers.CSSHelp(document).getStyle('.one');

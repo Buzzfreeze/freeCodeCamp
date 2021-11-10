@@ -7,13 +7,13 @@ dashedName: part-38
 
 # --description--
 
-The rectangles are too small and their edges don't have the soft quality of a painting.
+สี่เหลี่ยมนั้นเล็กเกินไป และขอบของมันไม่ดูนุ่มซักเท่าไหร่
 
-Increase the area and soften the edges of `.one` by setting its `box-shadow` to `0 0 3px 3px #efb762`.
+จงเพิ่มพื้นที่และทำให้ขอบของ `.one` ดูนุ่มขึ้นโดยการกำหนดให้ `box-shadow` มีค่า `0 0 3px 3px #efb762`
 
 # --hints--
 
-You should set the `box-shadow` property to `0 0 3px 3px #efb762`.
+คุณควรกำหนดให้ `box-shadow` property มีค่า `0 0 3px 3px #efb762`
 
 ```js
 const hasBoxShadow = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style['box-shadow'] === 'rgb(239, 183, 98) 0px 0px 3px 3px');

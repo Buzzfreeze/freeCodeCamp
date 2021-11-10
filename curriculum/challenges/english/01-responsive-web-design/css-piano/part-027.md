@@ -7,11 +7,12 @@ dashedName: part-27
 
 # --description--
 
-Now you need to make it responsive. Add a `@media` query with a `max-width` of `768px`.
+ตอนนี้คุณต้องทำให้มัน  responsive
+จงเพิ่ม `@media` query ที่มี `max-width` ขนาด `768px`
 
 # --hints--
 
-You should add a new `@media` query.
+คุณควรเพิ่ม `@media` query 1 อัน
 
 ```js
 assert(new __helpers.CSSHelp(document).getCSSRules('media')?.length === 1);

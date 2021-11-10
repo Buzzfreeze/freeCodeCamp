@@ -7,11 +7,12 @@ dashedName: part-18
 
 # --description--
 
-Using an `id` selector, style your `white-hat` element. Give it a `width` and `height` of `0`, and a `border-style` of `solid`.
+จงตกแต่ง `white-hat` element ด้วย `id` selector
+จงกำหนดให้ `width` และ `height` เท่ากับ `0`, และ `border-style` เท่ากับ `solid`
 
 # --hints--
 
-You should use a `#white-hat` selector.
+คุณควรใช้ `#white-hat` selector
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#white-hat'));

@@ -7,13 +7,13 @@ dashedName: part-19
 
 # --description--
 
-Filling out the content of the quiz, below the `#student-info`, add three `div` elements with a `class` of `info`.
+จงเติมเนื้อหาของ quiz ด้านล่าง `#student-info` และเพิ่ม `div` elements ที่มี `class` ของ `info` เข้าไป 3 อัน
 
-Then, within each `div` nest one `label` element, and one `input` element.
+หลังจากนั้นจงใส่ `label` element และ `input` element อย่างละอันลงไปใน `div`
 
 # --hints--
 
-You should nest three `div` elements below the `h2#student-info` element.
+คุณควรใส่ `div` elements ทั้ง 3 อันลงที่ด้านล่างของ `h2#student-info` element.
 
 ```js
 assert.equal(document.querySelectorAll('h2#student-info ~ div')?.length, 3);

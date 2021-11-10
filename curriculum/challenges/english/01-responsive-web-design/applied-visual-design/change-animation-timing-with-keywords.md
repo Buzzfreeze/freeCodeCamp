@@ -9,17 +9,24 @@ dashedName: change-animation-timing-with-keywords
 
 # --description--
 
-In CSS animations, the `animation-timing-function` property controls how quickly an animated element changes over the duration of the animation. If the animation is a car moving from point A to point B in a given time (your `animation-duration`), the `animation-timing-function` says how the car accelerates and decelerates over the course of the drive.
+สำหรับ CSS animations, `animation-timing-function` property จะควบคุมความเร็วที่ element ที่ถูก animate จะเปลี่ยนไปในแต่ละช่วงของ animation
+ถ้า animation เป็นรถคันหนึ่งที่กำลังวิ่งจากจุด A ไปจุด B ในเวลาที่กำหนด (`animation-duration`), `animation-timing-function` จะบอกความเร่งและความหน่วงของการที่รถวิ่งตลอดเส้นทาง
 
-There are a number of predefined keywords available for popular options. For example, the default value is `ease`, which starts slow, speeds up in the middle, and then slows down again in the end. Other options include `ease-out`, which is quick in the beginning then slows down, `ease-in`, which is slow in the beginning, then speeds up at the end, or `linear`, which applies a constant animation speed throughout.
+มันมีหลายคีย์เวิร์ดที่สามารถใช้ได้
+ยกตัวอย่างเช่น ค่าเริ่มต้นเป้น `ease`, ซึ่งจะเป็นการเริ่มต้นช้า ๆ และค่อย ๆ เพิ่มความเร็วจนไปถึงตรงกลาง ก่อนที่จะลดความเร็วลงอีกครั้งก่อนที่ปลายทาง
+อีกตัวเลือกหนึ่งคือ `ease-out`,ซึ่งจะเป็นการเริ่มต้นอย่างเร็วแล้วค่อย ๆ ลดความเร็วลงเรื่อย ๆ 
+ส่วน `ease-in`, จะเป็นการเริ่มอย่างช้า ๆ ในตอนแรกแล้วค่อยเร่งความเร็วจนถึงปลายทาง
+และ `linear`, จะเป็นการใช้ความเร็วคงที่ตลอดการ animate
 
 # --instructions--
 
-For the elements with id of `ball1` and `ball2`, add an `animation-timing-function` property to each, and set `#ball1` to `linear`, and `#ball2` to `ease-out`. Notice the difference between how the elements move during the animation but end together, since they share the same `animation-duration` of 2 seconds.
+สำหรับ element ที่มี id เป็น `ball1` และ `ball2`
+จงเพิ่ม `animation-timing-function` property ให้พวกมันแต่ละอันและกำหนดค่าให้`#ball1` เป็น `linear`, และ `#ball2` เป็น `ease-out`
+สังเกตความแตกต่างระหว่างการเคลื่อนที่ของพวกมันตลอดการเคลื่อนที่ เนื่องจากพวกมันมี `animation-duration` เดียวกันที่ 2 วินาที
 
 # --hints--
 
-The value of the `animation-timing-function` property for the element with the id `ball1` should be `linear`.
+ค่าของ `animation-timing-function` property สำหรับ element ที่มี ID เป็น `ball1` ควรเป็น `linear`
 
 ```js
 const ball1Animation = __helpers.removeWhiteSpace(

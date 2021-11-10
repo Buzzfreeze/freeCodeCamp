@@ -7,13 +7,13 @@ dashedName: part-44
 
 # --description--
 
-Rotate each rectangle to give them more of an imperfect, hand-painted look.
+จงหมุนสีเหลี่ยมแต่ละอันเพื่อทำให้พวกมันดูไม่สมบูรณ์และเหมือนวาดด้วยมือมากขึ้น
 
-Use the following to rotate `.one` counter clockwise by 0.6 degrees: `transform: rotate(-0.6deg);`
+จงใช้โค้ดต่อไปนี้เพื่อหมุน `.one` ทิศทวนเข็มไป 0.6 องศา: `transform: rotate(-0.6deg);`
 
 # --hints--
 
-You should set the `transform` property to `rotate(-0.6deg)`.
+คุณควรกำหนดให้ `transform` property มีค่า `rotate(-0.6deg)`.
 
 ```js
 const hasTransform = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style.transform === 'rotate(-0.6deg)');

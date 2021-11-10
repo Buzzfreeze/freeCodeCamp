@@ -7,11 +7,13 @@ dashedName: part-31
 
 # --description--
 
-You might have noticed the keys collapse when the browser window is smaller than `768px`. Set `overflow` to `hidden` in the first `.keys` selector, to take care of this issue. This property will hide any element that is pushed outside the set `width` value of `.keys`.
+คุณอาจจะสังเกตได้แล้วว่าคีย์เปียโนมันเละเทะเมื่อหน้าต่าของ browser มีขนาดต่ำกว่า `768px`
+จงกำหนดให้ `overflow` เป็น `hidden` ใน `.keys` selector อันแรกเพื่อจัดการกับปัญหานี้
+property อันนี้จะช่วยซ่อน element อะไรก็ตามที่เกินออกจากค่า `width` ที่ถูกกำหนดไว้ของ `.keys`
 
 # --hints--
 
-Your original `.keys` selector should have the `overflow` property set to `hidden`.
+`.keys` selector อันเดิมของคุณควรมี `overflow` property เป็น `hidden`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.keys')?.overflow === 'hidden');

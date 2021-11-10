@@ -7,7 +7,8 @@ dashedName: part-57
 
 # --description--
 
-To neaten the `.question-block` elements, set the following CSS properties:
+เพื่อที่ `.question-block` elements จะได้ดูเป็นระเบียบมากยิ่งขึ้น
+จงกำหนดให้ CSS properties มีค่าดังต่อไปนี้:
 
 ```css
 text-align: left;
@@ -19,7 +20,7 @@ padding-top: 5px;
 
 # --hints--
 
-You should use the `.question-block` selector.
+คุณควรใช้ `.question-block` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('.question-block'));

@@ -7,11 +7,11 @@ dashedName: part-77
 
 # --description--
 
-In the same `#guitar` selector, set the `position` to `absolute`, the `top` to `120px`, and the `left` to `0px`.
+ใน `#guitar` selector อันเดียวกัน, จงกำหนดให้ `position` เป็นแบบ `absolute`, `top` เท่ากับ `120px`, และ `left` เท่ากับ `0px`
 
 # --hints--
 
-Your `#guitar` selector should have a `position` property set to `absolute`.
+`#guitar` selector ควรมี `position` property อันหนึ่งที่มีค่าเป็น `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#guitar')?.position === 'absolute');

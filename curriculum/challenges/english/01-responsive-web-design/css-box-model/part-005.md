@@ -7,17 +7,17 @@ dashedName: part-5
 
 # --description--
 
-Margin is the area outside of the box, and can be used to control the space between other boxes or elements.
+Margin เป็นพื้นที่ด้านนอกของกล่อง และสามารถใช้เพื่อกำหนดพื้นที่ว่างระหว่างกล่องใบอื่น หรือก็คือ elements นั่นเอง
 
-Here the bottom element has a larger top margin, pushing it further down the page.
+นี่เป็น element ด้านล่างที่มี top margin ที่กว้างกว่ามันและผลักมันลงไปที่ด้านล่างของหน้าเว็บไซต์
 
-Now that you understand the CSS box model, let's get started on the Rothko painting.
+ณ ตอนนี้ที่คุณเข้าใจโมเดลกล่องของ CSS, เรามาเริ่มทำ Rothko painting กันเถอะ
 
-Remove the `<img>` element.
+จงลบ `<img>` element ออก
 
 # --hints--
 
-You should not have an `img` element in your code.
+คุณไม่ควรมี `img` element ในโค้ดแล้ว
 
 ```js
 assert(document.querySelector('img') === null);

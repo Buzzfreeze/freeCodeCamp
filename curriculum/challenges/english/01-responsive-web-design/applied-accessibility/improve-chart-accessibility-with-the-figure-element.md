@@ -9,11 +9,14 @@ dashedName: improve-chart-accessibility-with-the-figure-element
 
 # --description--
 
-HTML5 introduced the `figure` element and the related `figcaption`. Used together, these items wrap a visual representation (like an image, diagram, or chart) along with its caption. Wrapping these elements together gives a two-fold accessibility boost by semantically grouping related content and providing a text alternative explaining the `figure`.
+HTML5 แนะนำเรื่อง `figure` element และ `figcaption` ที่เกี่ยวข้องกัน
+items พวกนี้จะคลอบพวก visual representation (เช่น รูปภาพ แผนภูมิ และกราฟ) ไว้ด้วยกันกับ caption ของมัน
+การจับ element พวกนี้มาอยู่ด้วยกันช่วยเพิ่มการเข้าถึงใน 2 แง่ คือ การจับกลุ่มเนื้อหาที่ความเกี่ยวข้องในแง่ของทางภาษา และการทำให้ text alternative ช่วยอธิบาย `figure`
 
-For data visualizations like charts, the caption can be used to briefly note the trends or conclusions for users with visual impairments. Another challenge covers how to move a table version of the chart's data off-screen (using CSS) for screen reader users.
+สำหรับ data visualizations อย่างเช่น พวกกราฟต่าง ๆ,  caption สามารถใช้เพื่อโน้ตสั้น ๆ เกี่ยวกับแนวโน้มหรือข้อสรุปให้กับผู้ใช้ที่มีปัยหาด้านการมองเห็น
+challenge อีกอันจะคลอบคลุมวิธีการย้ายกราฟที่อยู่ในรูปของตารางของ data off-screen (using CSS) เพื่อผุ้ใช้ screen reader
 
-Here's an example - note that the `figcaption` goes inside the `figure` tags and can be combined with other elements:
+นี่คือตัวอย่าง - จงจำไว้ว่า `figcaption` อยู่ข้างใน `figure` tags และสามารถใช้คู่กับ elements อื่นได้:
 
 ```html
 <figure>
@@ -27,11 +30,12 @@ Here's an example - note that the `figcaption` goes inside the `figure` tags and
 
 # --instructions--
 
-Camper Cat is hard at work creating a stacked bar chart showing the amount of time per week to spend training in stealth, combat, and weapons. Help him structure his page better by changing the `div` tag he used to a `figure` tag, and the `p` tag that surrounds the caption to a `figcaption` tag.
+Camper Cat กำลังมีปัญหากับสร้างกราฟ stacked bar เพื่อแสดงเวลาในแต่ละสัปดาห์ที่ถูกใช้ในการฝึก stealth, combat, and weapons
+จงช่วยเขาจัดโครงสร้างเพจของเขาให้ดีขึ้นโดยการเปลี่ยน `div` tag เป็น`figure` tag, และจงเปลี่ยน `p` tag ที่เก้บ caption ไปเป็น `figcaption` tag.
 
 # --hints--
 
-Your code should have one `figure` tag.
+โค้ดของคุณควรมี `figure` tag 1 อัน
 
 ```js
 assert($('figure').length == 1);

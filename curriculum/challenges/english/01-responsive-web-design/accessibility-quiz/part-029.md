@@ -7,13 +7,13 @@ dashedName: part-29
 
 # --description--
 
-To provide the functionality of the true/false questions, we need a set of inputs which do not allow both to be selected at the same time.
-
-Within each list element, nest one `label` element, and within each `label` element, nest one `input` element with the appropriate `type`.
+เพื่อที่คำถาม true/false ของเราจะพร้อมใช้งาน เราต้องการชุด inputs ที่ไม่อนุญาตให้ถูกเลือพร้อมกัน
+จงเพิ่ม `label` element 1 อันในแต่ละ list element
+และจงเพิ่ม `input` element ที่มี `type` ที่เหมาะสม 1 อัน ในแต่ละ `label` element
 
 # --hints--
 
-You should nest one `label` element within the first `li` element.
+คุณควรใส่ `label` element 1 อันใน `li` element อันแรก
 
 ```js
 assert.exists(document.querySelectorAll('ul.answers-list > li')?.[0]?.querySelector('label'));

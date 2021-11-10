@@ -7,11 +7,14 @@ dashedName: part-79
 
 # --description--
 
-You're going to use some more border tricks for the top section. Add a `border-bottom` with a value of `7vh solid var(--building-color4)` to `.fb1a`. This will put a `7vh` height border on the bottom. But since the element has zero size, it only shows up as a 2px wide line from the 1px border that is on all the elements.
+คุณกำลังจะได้ใช้ทริคเกี่ยวกับขอบสำหรับส่วนบน
+จงเพิ่ม `border-bottom` ที่มีค่า `7vh solid var(--building-color4)` ให้กับ `.fb1a`
+สิ่งนี้จะเป็นการเพิ่มขอบที่สูง `7vh` ที่ด้านล่าง
+แต่เพราะ element มีขนาดเป็น 0 มันจึงแสดงแค่เส้นที่กว้าง 2px จากขอบ 1px border มราอบู่บนทุก element
 
 # --hints--
 
-You should give `.fb1a` a `border-bottom`.
+คุณควรกำหนดให้ `.fb1a` มีค่าเป็น `border-bottom`
 
 ```js
 assert.isNotEmpty(new __helpers.CSSHelp(document).getStyle(".fb1a")?.borderBottom);

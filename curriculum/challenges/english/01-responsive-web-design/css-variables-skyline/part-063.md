@@ -7,11 +7,14 @@ dashedName: part-63
 
 # --description--
 
-Give the new `div` elements these `width` and `height` values: `3%` and `10%` to `.bb4a`, `80%` and `5%` to `.bb4b`, and `100%` and `85%` to `.bb4c`.
+จงกำหนดให้ `div` element อันใหม่มีค่า `width` และ `height` ดังต่อไปนี้: 
+`3%` และ `10%` ให้กับ `.bb4a`, 
+`80%` และ `5%` ให้กับ `.bb4b`, 
+`100%` และ `85%` ให้กับ `.bb4c`
 
 # --hints--
 
-You should give `.bb4a` a `width` of `3%`.
+คุณควรกำหนดให้ `.bb4a` มี `width` เท่ากับ `3%`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(".bb4a")?.width, "3%");

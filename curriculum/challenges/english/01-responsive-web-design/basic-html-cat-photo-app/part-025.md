@@ -7,11 +7,12 @@ dashedName: part-25
 
 # --description--
 
-After the `figure` element, add another `h3` element with the text `Top 3 things cats hate:`.
+ต่อจาก `figure` element, จงเพิ่ม `h3` element อีกอันที่มีข้อความว่า `Top 3 things cats hate:`
 
 # --hints--
 
-There should be an `h3` element right above the second `section` element's closing tag. Make it has an opening and closing tag.
+`h3` element ควรจะอยู่เหนือแท็กปิดของ `section` element
+จงใส่แท็กเปิดและปิดให้มัน
 
 ```js
 assert(

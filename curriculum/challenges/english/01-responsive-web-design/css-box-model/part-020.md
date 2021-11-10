@@ -7,13 +7,13 @@ dashedName: part-20
 
 # --description--
 
-Use margins to position the `.one` element on the canvas.
+จงใช้ margins เพื่อจัดตำแหน่ง `.one` element บนผ้าใบ
 
-Add the shorthand `margin: 20px auto;` to set the top and bottom margins to 20 pixels, and center it horizontally.
+จงเพิ่มคำสั่ง `margin: 20px auto;` เพื่อกำหรดให้ top และ bottom margins มีค่า 20 pixels และจงทำให้มันอยู่ตรงกลางในแนวนอน
 
 # --hints--
 
-You should set the `margin` property to `20px auto`.
+คุณควรกำหนดให้ `margin` property มีค่าเป็น `20px auto`
 
 ```js
 const marginFilter = new __helpers.CSSHelp(document).getCSSRules().filter(x => x.style.margin === '20px auto');

@@ -7,13 +7,14 @@ dashedName: part-59
 
 # --description--
 
-It is useful to see the default border around the `fieldset` elements, during development. However, it might not be the style you want.
+การที่เราเห็นขอบรอบ ๆ `fieldset` elements ระหว่างการสร้างเว็บนั้นมีประโยชน์
+อย่างไรก็ตาม มันจะไม่ใช้ style ที่เราต้องการ
 
-Remove the border and bottom padding on the `.question` elements.
+จงลบขอบและ padding ด้านล่างของ `.question` elements.
 
 # --hints--
 
-You should use the `.question` selector.
+คุณควรใช้ `.question` selector.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('.question'));

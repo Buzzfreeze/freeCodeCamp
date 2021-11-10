@@ -9,9 +9,9 @@ dashedName: give-a-background-color-to-a-div-element
 
 # --description--
 
-You can set an element's background color with the `background-color` property.
+คุรสามารถกำหนดสีพื้นหลังของ element ได้ด้วย `background-color` property.
 
-For example, if you wanted an element's background color to be `green`, you'd put this within your `style` element:
+ยกตัวอย่างเช่น, ถ้าคุณต้องการให้สีของพื้นหลัง element หนึ่งเป็นสีเขียน`green`, คุณสามารถใส่โค้ดนี้ลงใน `style` element:
 
 ```css
 .green-background {
@@ -21,11 +21,12 @@ For example, if you wanted an element's background color to be `green`, you'd pu
 
 # --instructions--
 
-Create a class called `silver-background` with the `background-color` of `silver`. Assign this class to your `div` element.
+จงสร้างคลาสที่ชื่อ `silver-background` ที่มี `background-color` เป้น `silver`
+จงเพิ่มคลาสนี้ให้ `div` element
 
 # --hints--
 
-Your`div` element should have the class `silver-background`.
+`div` element ควรมีคลาสชื่อ `silver-background`
 
 ```js
 assert($('div').hasClass('silver-background'));

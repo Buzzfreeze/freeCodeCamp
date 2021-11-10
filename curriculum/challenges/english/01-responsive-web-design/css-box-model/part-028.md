@@ -7,13 +7,13 @@ dashedName: part-28
 
 # --description--
 
-Use margins to adjust the spacing between `one` and `two`.
+จงใช้ margins เพื่อจัดพื้นที่ว่างระหว่าง `one` และ `two` ให้เป็นระเบียบ
 
-Change the `margin` of `.one` to `20px auto 20px` so the top margin is 20 pixels, it's centered horizontally, and the bottom margin is 20 pixels.
+จงเปลี่ยน `margin` ของ `.one` ให้มีค่า `20px auto 20px` เพื่อที่ top margin มีค่า 20 pixel, มันจะได้อยู่ตรงกลางในแนวนอน และ bottom margin มีค่า 20 pixel
 
 # --hints--
 
-You should set the `margin` property to `20px auto 20px`.
+คุณควรกำหนดให้ `margin` property มีค่า `20px auto 20px`
 
 ```js
 const hasMarginRegex = /20px\s*auto\s*20px/;

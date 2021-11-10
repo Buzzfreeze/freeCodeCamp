@@ -7,11 +7,13 @@ dashedName: part-5
 
 # --description--
 
-The name of the cafe is `CAMPER CAFE`. Add an `h1` element within your `body` element. Give it the name of the cafe in capitalized letters to make it stand out.
+ชื่อของคาเฟ่คือ`CAMPER CAFE`
+จงเพิ่ม `h1` element ภายใน `body` element
+จงกำหนดให้มันมีชื่อคาเฟ่ที่เขียนด้วยตัวพิมพ์ใหญ่เพื่อทำให้มันดูโดดเด่นขึ้น
 
 # --hints--
 
-You should have an opening `<h1>` tag.
+คุณควรมีแท็กเปิด`<h1>` อันหนึ่ง
 
 ```js
 assert(code.match(/<h1>/i));

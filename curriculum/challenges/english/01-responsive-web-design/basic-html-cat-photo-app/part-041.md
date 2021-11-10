@@ -7,13 +7,15 @@ dashedName: part-41
 
 # --description--
 
-Use the `button` element to create a clickable button. For example, `<button>Click Here</button>` creates a button with the text `Click Here`.
+จงใช้ `button` element เพื่อสร้างปุ่มที่คลิกได้ขึ้นมา
+ยกตัวอย่างเช่น `<button>Click Here</button>` จะสร้างปุ่มที่มาพร้อมกับข้อความ `Click Here`
 
-Add a `button` element with the text `Submit` below the `input` element. Note the default behavior of clicking a form button with any attributes submits the form to the location specified in the form's `action` attribute.
+จงเพิ่ม `button` element ที่มาพร้อมกับข้อความ `Submit` ต่อจาก `input` element
+จำไว้ว่า พฤติกรรมเริ่มต้นของการคลิกที่ปุ่มแบบฟอร์มที่มี attribute อะไรก็ตามจะส่งแบบฟอร์มนั้นไปที่ที่อยู่ที่ถูกระบุไว้ใน `action` attribute ของแบบฟอร์ม
 
 # --hints--
 
-Your `button` element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+`button` element ควรมีแท็กเปิดโดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(document.querySelector('button'));

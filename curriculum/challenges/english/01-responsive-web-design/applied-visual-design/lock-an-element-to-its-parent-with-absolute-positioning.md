@@ -9,17 +9,21 @@ dashedName: lock-an-element-to-its-parent-with-absolute-positioning
 
 # --description--
 
-The next option for the CSS `position` property is `absolute`, which locks the element in place relative to its parent container. Unlike the `relative` position, this removes the element from the normal flow of the document, so surrounding items ignore it. The CSS offset properties (top or bottom and left or right) are used to adjust the position.
+ตัวเลือกถัดไปสำหรับ`position` property คือ `absolute`, ซึ่งจะยึด element ในตำแหน่งที่อ้างอิงจาก parent container ของมัน
+ไม่เหมือนกับ `relative` position, `absolute` position จะทำให้ element ออกมาจาก normal flow ของ document เพื่อที่ item ที่อยู่รอบ ๆ จะไม่สนใจมัน
+CSS offset properties (บนหรือล่าง และ ซ้ายหรือขวา) จะถูกใช้เพื่อปรับเลี่ยนตำแหน่ง
 
-One nuance with absolute positioning is that it will be locked relative to its closest *positioned* ancestor. If you forget to add a position rule to the parent item, (this is typically done using `position: relative;`), the browser will keep looking up the chain and ultimately default to the `body` tag.
+ความแตกต่างหนึ่งที่สังเกตได้ยากของการกำหนดตำแหน่งแบบ absolute คือมันจะถูกยึดไว้กับ  *positioned* ancestor ที่อยู่ใกล้มันที่สุด
+ถ้าคุณลืมที่จะเพิ่ม position rule ให้กับ parent item, (โดยปกติทำได้โดยใช้ `position: relative;`), browser จะพยายามหาต้นกำหนดของมันและไล่ไปเรื่อย ๆ จนถึง `body` tag.
 
 # --instructions--
 
-Lock the `#searchbar` element to the top-right of its `section` parent by declaring its `position` as `absolute`. Give it `top` and `right` offsets of 50 pixels each.
+จงยึด `#searchbar` element ไว้กับ top-right ของ `section` parent ของมันโดยการประกาศใช้  `position` เป็น `absolute`
+จงกำหนดให้มันมี`top` และ `right` offsets เป็น 50 pixels each.
 
 # --hints--
 
-The `#searchbar` element should have a `position` set to `absolute`.
+`#searchbar` element ควรมี `position` เป็น `absolute`
 
 ```js
 assert($('#searchbar').css('position') == 'absolute');

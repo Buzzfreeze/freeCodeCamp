@@ -9,19 +9,24 @@ dashedName: use-the-flex-direction-property-to-make-a-row
 
 # --description--
 
-Adding `display: flex` to an element turns it into a flex container. This makes it possible to align any children of that element into rows or columns. You do this by adding the `flex-direction` property to the parent item and setting it to row or column. Creating a row will align the children horizontally, and creating a column will align the children vertically.
+การเพิ่ม `display: flex` ให้กับ element หนึ่งทำให้มันกลางเป็น flex container
+สิ่งนี้จะทำให้เราสามารถเรียง children ของ element นั้นให้เป็น row หรือ column ได้
+คุณทำแบบนี้ได้โดยการเพิ่ม `flex-direction` property ให้กับ parent item และกำหนดค่าให้มันเป็น row หรือ column
+การสร้าง row ขึ้นมาหนึ่งอันจะเป็นการเรียง children เป็นแถวในแนวนอน
+ส่วนการสร้าง column ก้จะเป้นการเรียง children ในแนวตั้ง
 
-Other options for `flex-direction` are `row-reverse` and `column-reverse`.
+วิธีการอื่นสำหรับ `flex-direction` คือ `row-reverse` และ `column-reverse`
 
-**Note:** The default value for the `flex-direction` property is `row`.
+**Note:** ค่าเริ่มต้นของ `flex-direction` property คือ `row`
 
 # --instructions--
 
-Add the CSS property `flex-direction` to the `#box-container` element, and give it a value of `row-reverse`.
+จงเพิ่ม CSS property `flex-direction` ให้กับ `#box-container` element
+และจงกำหนดให้มันมีค่าเป็น `row-reverse`
 
 # --hints--
 
-The `#box-container` element should have a `flex-direction` property set to `row-reverse`.
+`#box-container` element ควรมี `flex-direction` property อันหนึ่งที่มีค่าเป็น `row-reverse`
 
 ```js
 assert($('#box-container').css('flex-direction') == 'row-reverse');

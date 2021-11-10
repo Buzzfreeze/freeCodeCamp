@@ -7,11 +7,12 @@ dashedName: part-1
 
 # --description--
 
-Welcome to the Registration Form project! Start by adding the `!DOCTYPE html` declaration at the top of the document so the browser knows what type of document it's reading.
+ยินดีต้อนรับสู่โปรเจคสร้างแบบฟอร์มรับสมัคร! 
+จงเริ่มโดยการเพิ่ม `!DOCTYPE html` declaration ที่ด้านบนของa document เพื่อที่ browser จะได้รู้ว่ามันกำลังอ่าน document ประเภทไหนอยู่
 
 # --hints--
 
-Your code should contain the `DOCTYPE` reference.
+โค้ดของคุณควรใส่ `DOCTYPE` reference.
 
 ```js
 assert(code.match(/<!DOCTYPE/gi));

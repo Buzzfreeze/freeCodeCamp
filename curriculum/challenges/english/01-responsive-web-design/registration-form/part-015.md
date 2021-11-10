@@ -7,12 +7,14 @@ dashedName: part-15
 
 # --description--
 
-Nest an `input` element within each `label`. Be sure to add each `input` after the `label` text, and include a space after the colon.
+จงใส่`input` element ไว้ในแต่ละ `label`
+จงอย่างลืมเพิ่ม `input` แต่ละอันต่อจากข้อความ `label` 
+และจงใส่ space ต่อจาก colon
 
 # --hints--
 
-You should add four `input` elements to the `fieldset` element.
-
+คุณควรเพิ่ม `input` element 4 อันให้กับ `fieldset` element.
+ 
 ```js
 assert.equal(document.querySelectorAll('fieldset input')?.length, 4);
 ```

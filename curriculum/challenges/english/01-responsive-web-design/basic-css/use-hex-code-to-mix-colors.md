@@ -9,25 +9,27 @@ dashedName: use-hex-code-to-mix-colors
 
 # --description--
 
-To review, hex codes use 6 hexadecimal digits to represent colors, two each for red (R), green (G), and blue (B) components.
+เพื่อรีวิว hex codes จะใช้เลขฐาน 16 6 ตัวเพื่อเป็นตัวแทนของสี
+เลขทุก ๆ 2 ตัวจะแทนด้วยความประกอบของสีแดง (R), สีเขียว (G), และสีฟ้า (B) 
 
-From these three pure colors (red, green, and blue), we can vary the amounts of each to create over 16 million other colors!
+จากสีหลักสามสีนี้ (แดง เขียว และฟ้า), เราสามารถสร้างสีได้ถึง 16 ล้านสี!
 
-For example, orange is pure red, mixed with some green, and no blue. In hex code, this translates to being `#FFA500`.
+ยกตัวอย่างเช่น สีส้มคือสีแดงผมผสมกับสีเขียวนิดหน่วยและไม่มีสีฟ้า
+ใน hex code, มันจะถูกแปลงให้เป็น `#FFA500`
 
-The digit `0` is the lowest number in hex code, and represents a complete absence of color.
+ `0` เป็นค่าที่ต่ำที่สุดใน hex code, และหมายถึงการที่ไม่มีสีนั้นเลย
 
-The digit `F` is the highest number in hex code, and represents the maximum possible brightness.
+ `F` เป็นค่าที่สูงที่สุดใน hex code, และหมายถึงให้ความสว่างที่มากสุดที่เป็นไปได้จ
 
 # --instructions--
 
-Replace the color words in our `style` element with their correct hex codes.
+จงแทนที่คำที่ใช้เรียกสีที่อยู่ใน `style` element ด้วย hex code ที่ถูกต้องของพวกมัน
 
 <table class='table table-striped'><tbody><tr><th>Color</th><th>Hex Code</th></tr><tr><td>Dodger Blue</td><td><code>#1E90FF</code></td></tr><tr><td>Green</td><td><code>#00FF00</code></td></tr><tr><td>Orange</td><td><code>#FFA500</code></td></tr><tr><td>Red</td><td><code>#FF0000</code></td></tr></tbody></table>
 
 # --hints--
 
-Your `h1` element with the text `I am red!` should be given the `color` red.
+`h1` element ที่มีข้อความว่า `I am red!` ควรมี `color` แดง
 
 ```js
 assert($('.red-text').css('color') === 'rgb(255, 0, 0)');

@@ -7,41 +7,43 @@ dashedName: part-30
 
 # --description--
 
-Nest six `div` elements within `.foreground-buildings` and give them the classes of `fb1` through `fb6` in that order. "fb" stands for "foreground building". These will be six more buildings for the foreground.
+จงเก้บ 6 `div` elements ไว้ใน `.foreground-buildings` และจงกำหนดให้มันมีคลาสชื่อว่า `fb1` ถึง `fb6` ตามลำดับ
+"fb" ย่อมาจากคำว่า "foreground building"
+พวกมันจะเป็นอีก 6 building สำหรับพื้นหน้า
 
 # --hints--
 
-You should create a new `div` with a class of `fb1`.
+คุณควรสร้าง `div` ที่มีคลาสชื่อว่า `fb1` อันใหม่ขึ้นมา 1 อัน.
 
 ```js
 assert.exists(document.querySelector('div.fb1'));
 ```
 
-You should create a new `div` with a class of `fb2`.
+คุณควรสร้าง `div` ที่มีคลาสชื่อว่า `fb2` อันใหม่ขึ้นมา 1 อัน.
 
 ```js
 assert.exists(document.querySelector('div.fb2'));
 ```
 
-You should create a new `div` with a class of `fb3`.
+คุณควรสร้าง `div` ที่มีคลาสชื่อว่า `fb3` อันใหม่ขึ้นมา 1 อัน.
 
 ```js
 assert.exists(document.querySelector('div.fb3'));
 ```
 
-You should create a new `div` with a class of `fb4`.
+คุณควรสร้าง `div` ที่มีคลาสชื่อว่า `fb4` อันใหม่ขึ้นมา 1 อัน.
 
 ```js
 assert.exists(document.querySelector('div.fb4'));
 ```
 
-You should create a new `div` with a class of `fb5`.
+คุณควรสร้าง `div` ที่มีคลาสชื่อว่า `fb5` อันใหม่ขึ้นมา 1 อัน.
 
 ```js
 assert.exists(document.querySelector('div.fb5'));
 ```
 
-You should create a new `div` with a class of `fb6`.
+คุณควรสร้าง `div` ที่มีคลาสชื่อว่า `fb6` อันใหม่ขึ้นมา 1 อัน.
 
 ```js
 assert.exists(document.querySelector('div.fb6'));

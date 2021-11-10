@@ -7,13 +7,16 @@ dashedName: part-21
 
 # --description--
 
-The piano needs the freeCodeCamp logo to make it official.
+เปียโนต้องการ freeCodeCamp logo เพื่อให้มันดูเป็นทางการ
 
-Add an `img` element before your `.keys` element. Give the `img` a `class` of `logo`, and set the `src` to `https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg`. Give it an `alt` text of `freeCodeCamp Logo`.
+จงเพิ่ม `img` element ข้างหน้า `.keys` element
+จงกำหนดให้ `img` มี `class` เป็น `logo`
+และจงกำหนดให้ `src` เป็น `https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg`
+จงกำหนดให้มันมีข้องความ `alt` ที่เขียนว่า `freeCodeCamp Logo`
 
 # --hints--
 
-You should add a new `img` element.
+คุณควรเพิ่ม `img` element อันใหม่ 1 อัน
 
 ```js
 assert(document.querySelectorAll('img')?.length === 1);

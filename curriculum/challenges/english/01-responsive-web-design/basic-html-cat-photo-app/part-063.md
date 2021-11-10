@@ -7,11 +7,13 @@ dashedName: part-63
 
 # --description--
 
-Make the text `freeCodeCamp.org` into a link by enclosing it in an anchor (`a`) element. The `href` attribute should be set to `https://www.freecodecamp.org`.
+จงทำให้ข้อความ `freeCodeCamp.org` กลายเป็นลิงค์โดยการคลุมมันไว้ด้วย anchor (`a`) element
+`href` attribute ควรจะมีค่าเป็น `https://www.freecodecamp.org`.
 
 # --hints--
 
-Your anchor (`a`) element should be nested within the `footer` element. Make sure to added an opening tag and closing tag for the anchor (`a`) element.
+anchor (`a`) element sควรจะถูกเก็บไว้ใน `footer` element
+จงเช็คว่าได้เพิ่มแท็กเปิดและปิดให้กับ anchor (`a`) element แล้ว
 
 ```js
 assert($('footer > p > a').length);

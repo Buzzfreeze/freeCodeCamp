@@ -7,13 +7,14 @@ dashedName: part-21
 
 # --description--
 
-Now `.one` is centered horizontally, but its top margin is pushing past the canvas and onto the frame's border, shifting the entire canvas down 20 pixels.
+ตอนนี้ `.one` ถูกวางให้อยู่ตรงกลางแนวนอนแล้ว
+แต่ top margin ของมันได้ผลักขอบของกรอบรูปแทนที่จะเป็นผ้าใบ ทำให้ผ้าใบทั้งหมดเลื่อนลงมา 20 pixel
 
-Add `padding: 1px;` to `.canvas` to give the `.one` element something solid to push off of.
+จงเพิ่ม `padding: 1px;` ให้กับ `.canvas` เพื่อกำหนดให้ `.one` element มีอะไรบางอย่างที่จะกลับมันกลับไป
 
 # --hints--
 
-You should set the `padding` property to `1px`.
+คุณควรกำหรดให้ `padding` property มีค่า `1px`
 
 ```js
 const hasPadding = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style.padding === '1px');

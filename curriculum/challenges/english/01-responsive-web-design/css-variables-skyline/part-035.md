@@ -7,11 +7,13 @@ dashedName: part-35
 
 # --description--
 
-The skyline is coming together. Fill in the `background-color` property of the foreground buildings. Use your `--building-color1` variable to fill in `.fb3` and `.fb4`, `--building-color2` for `.fb5`, `--building-color3` for `.fb2` and `.fb6`, and `--building-color4` for `.fb1`.
+The skyline is coming together. 
+จงลงสี `background-color` property ของพื้นหน้าของbuildings
+จงใช้ตัวแปร `--building-color1` เพื่อลงสีให้กับ`.fb3` และ `.fb4`, `--building-color2` เพื่อลงสีให้กับ `.fb5`, `--building-color3` fเพื่อลงสีให้กับ`.fb2` และ `.fb6`,  `--building-color4` เพื่อลงสีให้กับ `.fb1`.
 
 # --hints--
 
-You should give `.fb1` a `background-color` using `--building-color4`.
+คุณควกำหนดให้ `.fb1` มี `background-color` เป็นค่าใน `--building-color4`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.fb1')?.backgroundColor.trim(), 'var(--building-color4)');

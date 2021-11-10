@@ -9,9 +9,9 @@ dashedName: use-a-css-class-to-style-an-element
 
 # --description--
 
-Classes are reusable styles that can be added to HTML elements.
+Class เป้น style ที่สามารถใช้ซ้ำได้และสามารถเพิ่มให้กับ HTML element
 
-Here's an example CSS class declaration:
+นี่คือตัวอย่างของ CSS class declaration:
 
 ```html
 <style>
@@ -21,17 +21,20 @@ Here's an example CSS class declaration:
 </style>
 ```
 
-You can see that we've created a CSS class called `blue-text` within the `<style>` tag. You can apply a class to an HTML element like this: `<h2 class="blue-text">CatPhotoApp</h2>`. Note that in your CSS `style` element, class names start with a period. In your HTML elements' class attribute, the class name does not include the period.
+คุณสามารถสังเกตได้ว่าพวกเราได้สร้าง CSS class ที่ชื่อ `blue-text` ภายใน `<style>` tag.
+คุณสามารถใช้ class กับ HTML element ได้แบบนี้: `<h2 class="blue-text">CatPhotoApp</h2>`
+จงจำไว้ว่า ใน CSS `style` element, ชื่อของ classจะเริ่มด้วย period
+ใน class attribute ของ HTML element, ชื่อของ class จะไม่มี period
 
 # --instructions--
 
-Inside your `style` element, change the `h2` selector to `.red-text` and update the color's value from `blue` to `red`.
+ใน `style` element, จงเปลี่ยน `h2` selector ให้เป็น `.red-text` และอัพเดฟค่าสีจาก `blue` เป็น `red`
 
-Give your `h2` element the `class` attribute with a value of `red-text`.
+จงกำหนดให้ `h2` element มี `class` attribute ที่มีค่าเป็น `red-text`
 
 # --hints--
 
-Your `h2` element should be red.
+`h2` element ควรมีสีแดง
 
 ```js
 assert($('h2').css('color') === 'rgb(255, 0, 0)');

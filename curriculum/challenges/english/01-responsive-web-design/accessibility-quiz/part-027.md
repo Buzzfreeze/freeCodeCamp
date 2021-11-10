@@ -7,13 +7,12 @@ dashedName: part-27
 
 # --description--
 
-Each `fieldset` will contain a true/false question.
-
-Within each `fieldset`, nest one `legend` element, and one `ul` element with two options.
+`fieldset` แต่ละอันจะมีคำถามประเภท true/false อยู่ 1 อัน
+จงเพิ่ม `legend` element 1 อันและ `ul` element ที่มีตัวเลือก 2 ข้อมา 1 อันในแต่ละ `fieldset`
 
 # --hints--
 
-You should nest one `legend` element within the first `fieldset` element.
+คุณควรเพิ่ม `legend` element 1 อันใน `fieldset` element อันแรก
 
 ```js
 assert.equal(document.querySelectorAll('.question-block:nth-of-type(1) > fieldset > legend')?.length, 1);

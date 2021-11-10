@@ -7,11 +7,12 @@ dashedName: part-98
 
 # --description--
 
-Add your `--building-color1` variable as value of the `background-color` property of `.fb4b`. Then, remove the `background-color` from `.fb4`.
+จงกำหนดให้ตัวแปร `--building-color1` เป็นค่าของ `background-color` property ของ `.fb4b`
+หลังจากนั้น จงเอา `background-color` ออกจาก `.fb4`
 
 # --hints--
 
-You should remove the `background-color` from `.fb4`.
+คุณควรเอา `background-color` ออกจาก `.fb4`
 
 ```js
 assert.isEmpty(new __helpers.CSSHelp(document).getStyle(".fb4")?.backgroundColor);

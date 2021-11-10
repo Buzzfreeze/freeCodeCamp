@@ -7,11 +7,14 @@ dashedName: part-37
 
 # --description--
 
-Move the position of `.fb4` relative to where it is now by adding a `position` of `relative` and `left` of `10%` to it. Do the same for `.fb5` but use `right` instead of `left`. This will cover up the remaining white space in between the buildings.
+จงย้ายตำแหน่งของ `.fb4` โดยนับจากตำแหน่งเดิมของมัน ซึ่งเริ่มจากการกำหนดให้ `position` เป็น `relative` 
+แล้วจรึงกำหนดค่าให้ `left` เท่ากับ `10%` ของมัน
+ทำแบบเดียวกันกับ `.fb5` แต่ใช้ `right` แทนที่จะเป็น `left`
+นี่เป็นจะช่วยปกปิดพื้นที่ว่างที่เหลืออยู่ระหว่าง buildings
 
 # --hints--
 
-You should give `.fb4` a `position` of `relative`.
+คุณควรกำหนดให้ `.fb4` มี `position` เป็นแบบ `relative`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.fb4')?.position, 'relative');

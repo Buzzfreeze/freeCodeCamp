@@ -7,13 +7,15 @@ dashedName: part-60
 
 # --description--
 
-In order to make a checkbox checked or radio button selected by default, you need to add the `checked` attribute to it. There's no need to set a value to the `checked` attribute. Instead, just add the word `checked` to the `input` element, making sure there is space between it and other attributes.
+เพื่อที่จะทำให้ checkbox ถูกติ๊กหรือ radio button ถูกเลือกโดยค่าเริ่มต้น คุณจำเป็นต้องเพิ่ม `checked` attribute ให้กับมัน
+มันไม่มีความจำเป็นที่จะกำหนดค่าใด ๆ ให้กับ `checked` attribute
+คุณแค่เพิ่มคำว่า `checked` ให้กับ `input` element ก็เพียงพอแล้ว
 
 Make the first radio button and the first checkbox selected by default.
 
 # --hints--
 
-Make sure there still are two radio buttons and three checkboxes nested in their respective `fieldset` elements.
+จงเช็คให้มั่นใจว่า มันมี 2 radio button และ 3 checkboxes อยู่ใน `fieldset` elements ตามลำดับ
 
 ```js
 assert(

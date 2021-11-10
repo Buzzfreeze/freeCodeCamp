@@ -9,7 +9,7 @@ dashedName: change-the-font-size-of-an-element
 
 # --description--
 
-Font size is controlled by the `font-size` CSS property, like this:
+ขนาดของฟ้อนต์ถูกควบคุมด้วย `font-size` CSS property, แบบนี้:
 
 ```css
 h1 {
@@ -19,11 +19,12 @@ h1 {
 
 # --instructions--
 
-Inside the same `<style>` tag that contains your `red-text` class, create an entry for `p` elements and set the `font-size` to 16 pixels (`16px`).
+ภายใน `<style>` tag อันเดียวกันที่เก็บ `red-text` class, จงสร้าง `p` element และกำหนดให้ `font-size` มีค่า 16 pixels (`16px`).
 
 # --hints--
 
-Between the `style` tags, give the `p` elements `font-size` of `16px`. Browser and Text zoom should be at 100%.
+ระหว่าง `style` tags, จงกำหนดให้ `p` elements มี `font-size` เท่ากับ `16px`
+Browser และ Text zoom ควรมีค่าเป็น 100%
 
 ```js
 assert(code.match(/p\s*{\s*font-size\s*:\s*16\s*px\s*;\s*}/i));

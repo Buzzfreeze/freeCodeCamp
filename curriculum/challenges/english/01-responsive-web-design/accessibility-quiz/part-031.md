@@ -7,13 +7,14 @@ dashedName: part-31
 
 # --description--
 
-Give the `label` elements text such that the `input` comes before the text. Then, give the `input` elements a `value` matching the text.
+จงใส่ข้อความ `label` elements ที่มี `input` ขึ้นมาก่อนข้อความ
+หลังจากนั้น จงใส่ `value` ที่ตรงกับข้อความนั้นใน `input` elements
 
-The text should either be `True` or `False`.
+ข้อความควรเป็น `True` ไม่ก็ `False`.
 
 # --hints--
 
-You should give the first `label` element text content.
+คุณควรใส่เนื้อหาลงใน `label` element อันแรก
 
 ```js
 assert.notEmpty(document.querySelectorAll('ul.answers-list > li > label')?.[0]?.textContent?.trim());

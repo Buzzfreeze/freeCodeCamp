@@ -7,11 +7,12 @@ dashedName: part-95
 
 # --description--
 
-I'm not thrilled about that black for the windows anymore. Change the `--window-color1` value to `#bb99ff`.
+ฉันไม่ค่อนตื่นเต้นกับหน้าต่างสีดำซักเท่าไหร่
+จงเปลี่ยนให้ค่าของ `--window-color1` เท่ากับ `#bb99ff`
 
 # --hints--
 
-You should change the value of `--window-color1` to `#bb99ff`.
+คุณควรเปลี่ยนค่าของ `--window-color1` เท่ากับ`#bb99ff`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(":root")?.getPropertyValue("--window-color1")?.trim(), "#bb99ff");

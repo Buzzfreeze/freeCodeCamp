@@ -7,13 +7,15 @@ dashedName: part-118
 
 # --description--
 
-Lastly, in the `:root` selector of the media query, redefine all four of the `--window-color` variables to use `#777`. When you're done, resize the window and watch it go from day to night.
+สุดท้ายนี้, ภายใน `:root` selector ของ media query, จงประกาศค่าตัวแปรทั้ง 4 ตัวของ `--window-color` ใหม่ทั้งหมดโดยใช้ค่า `#777`
+เมื่อคุณทำเสร็จแล้ว จงปรับขนาดหน้าต่างของคุณเพิ่มดูการเปลี่ยนแปลงจะกลางวันไปกลางคืนของมัน
 
-Variables are primarily used with colors, and that's how you used them here. But they can be given any value and used on any property. Your project looks great!
+ตัวแปรที่เราใช้ตอนนี้ ถูกใช้กับแค่ค่าสี แต่มันสามารถใช้เพื่อเก็บค่าของอะไรก็ได้
+โปรเจคของคุณดูดีมาก!
 
 # --hints--
 
-You should add `--window-color1` with a value of `#777`.
+คุณควรเพิ่ม `--window-color1` ที่มีค่าเท่ากับ `#777`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getRuleListsWithinMedia("(max-width: 1000px)")?.find(x=>x.selectorText === ":root")?.style?.getPropertyValue("--window-color1")?.trim(), "#777");

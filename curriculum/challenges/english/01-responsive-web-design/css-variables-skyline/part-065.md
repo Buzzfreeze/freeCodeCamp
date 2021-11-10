@@ -7,11 +7,13 @@ dashedName: part-65
 
 # --description--
 
-You want `.bb4` to share the properties of `.bb1` that center the sections. Instead of duplicating that code, create a new class above the background building comment called `building-wrap`. Leave it empty for now; this class will be used in a few places to save you some coding.
+คุณต้องการให้ `.bb4` ใช้ property ร่วมกับ `.bb1` ซึ่งส่วนที่ทำให้ sections อยู่ตรงกลาง
+แทนที่จะใช้โค้ดซ้ำกัน จงสร้าง class อันใหม่ข้างบนตอมเมนต์ของพื้นหลัง building ชื่อ `building-wrap`
+จงปล่อยให้มันว่างแบบนี้ไว้ก่อน เพราะคลาสนี้จะถูกใช้เพื่อลดปริมาณการโค้ดของคุณ
 
 # --hints--
 
-You should create a new class declaration called `building-wrap`.
+คุณควรประกาศสร้างคลาสอันใหม่ชื่อ`building-wrap`
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle(".building-wrap"));

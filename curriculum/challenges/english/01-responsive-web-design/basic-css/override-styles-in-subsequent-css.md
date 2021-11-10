@@ -9,29 +9,31 @@ dashedName: override-styles-in-subsequent-css
 
 # --description--
 
-Our `pink-text` class overrode our `body` element's CSS declaration!
+`pink-text` class ได้เขียนทับ CSS declaration ของ `body` element!
 
-We just proved that our classes will override the `body` element's CSS. So the next logical question is, what can we do to override our `pink-text` class?
+พวกเราพึ่งพิสูจน์ว่า class สามารถเขียนทับ  CSS ของ `body` element
+ดังนั้น คำถามช่วงคิดข้อต่อไปคือ มีอะไรที่เราสามารถทำเพื่อเขียนทับ `pink-text` class ของเราได้บ้าง?
 
 # --instructions--
 
-Create an additional CSS class called `blue-text` that gives an element the color blue. Make sure it's below your `pink-text` class declaration.
-
+จงสร้าง CSS class อันใหม่ที่ชื่อ  `blue-text` และจงกำหนดให้ element นี้มีสีฟ้า
+จงเช็คให้มั่นใจว่ามันอยู่ต่อจาก declaration ของ `pink-text` class 
 Apply the `blue-text` class to your `h1` element in addition to your `pink-text` class, and let's see which one wins.
 
-Applying multiple class attributes to a HTML element is done with a space between them like this:
+การใส่ class attribute หลายอัน ๆ ให้กับ HTML element นั้นทำได้ด้วยช่องไฟช่องหนึ่งระหว่างพวกมันแบบนี้:
 
 ```html
 class="class1 class2"
 ```
 
-**Note:** It doesn't matter which order the classes are listed in the HTML element.
+**Note:** มันไม่ใช่ปัญหาไม่ว่าลำดับของ class ที่ถูกลิสต์ไว้ใน HTML element จะเป็นยังไง.
 
-However, the order of the `class` declarations in the `<style>` section is what is important. The second declaration will always take precedence over the first. Because `.blue-text` is declared second, it overrides the attributes of `.pink-text`
+อย่างไรก็ตาม ลำดับของ `class` declarations ใน `<style>` section เป้นสิ่งสำคัญ
+declaration อันที่สองจะมีความสำคัญก่อนอันแรก เพราะ `.blue-text` นั้นถูกประาศที่หลัง มันคือเขียนทับ attributes ของ `.pink-text`
 
 # --hints--
 
-Your `h1` element should have the class `pink-text`.
+`h1` elementควรมี class `pink-text`.
 
 ```js
 assert($('h1').hasClass('pink-text'));

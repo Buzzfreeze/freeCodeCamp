@@ -9,23 +9,25 @@ dashedName: override-class-declarations-with-inline-styles
 
 # --description--
 
-So we've proven that id declarations override class declarations, regardless of where they are declared in your `style` element CSS.
+และแล้วเราก้พิสูจน์ว่า id declarations จะเขียนทับ class declarations, ไม่ว่ามันจถูกประาศที่ไหนใน `style` element CSS ก็ตาม
 
-There are other ways that you can override CSS. Do you remember inline styles?
+ยังมีวิฑีอื่นที่จะเขียนทับCSS
+คุณยังจำ inline styles ได้ไหม?
 
 # --instructions--
 
-Use an inline style to try to make our `h1` element white. Remember, inline styles look like this:
+จงใช้ inline style เพื่อลองทำให้ `h1` element เป็นสีขาว
+จงจำไว้ว่า inline styles มีหน้าตาเช่นนี้:
 
 ```html
 <h1 style="color: green;">
 ```
 
-Leave the `blue-text` and `pink-text` classes on your `h1` element.
+ไม่ต้องสนใจ `blue-text` และ `pink-text` class ใน `h1` element.
 
 # --hints--
 
-Your `h1` element should have the class `pink-text`.
+`h1` element ควรมีคลาส `pink-text`.
 
 ```js
 assert($('h1').hasClass('pink-text'));

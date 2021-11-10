@@ -7,11 +7,13 @@ dashedName: part-14
 
 # --description--
 
-Turn the image into a link by surrounding it with necessary element tags. Use `https://freecatphotoapp.com` as the anchor's `href` attribute value.
+จงเปลี่ยนรูปภาพให้เป็นลิงค์โดยการครอบมันด้วย element tag ที่จำเป็น
+จงใช้ `https://freecatphotoapp.com` เป็นค่าของ anchor ของ `href` attribute
 
 # --hints--
 
-You should have an `img` element with an `src` value of `https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg`. You may have accidentally deleted it.
+คุณควรมี `img` element ที่มี `src` เท่ากับ `https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg`
+
 
 ```js
 assert(

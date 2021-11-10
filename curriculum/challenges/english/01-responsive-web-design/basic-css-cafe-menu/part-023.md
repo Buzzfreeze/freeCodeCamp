@@ -8,17 +8,18 @@ dashedName: part-23
 
 # --description--
 
-Comments in CSS look like this:
+คอมเมนต์ใน CSS หน้าตาแบบนี้:
 
 ```css
 /* comment here */
 ```
 
-In your style sheet, comment out the the line containing the `background-color` property and value, so you can see the effect of only styling `div` element. This will make the background white again.
+ใน style sheet, จงคอมเมนต์บรรทัดที่มีproperty และ value ของ `background-color` เพื่อคุณจะได้เห็นผลจาก `div` element เท่านั้น
+นี่จะทำให้พื้นหลังกลับมามีสีขาวอีกครั้ง
 
 # --hints--
 
-You should comment out the `background-color: burlywood;` line in your CSS.
+คุณควรคอมเมนต์บรรทัด `background-color: burlywood;` ใน CSS.
 
 ```js
 assert(code.match(/\/\*\s*background-color:\s*burlywood;?\s*\*\//i));

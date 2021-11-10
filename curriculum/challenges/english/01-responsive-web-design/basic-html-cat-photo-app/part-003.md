@@ -7,13 +7,13 @@ dashedName: part-3
 
 # --description--
 
-Paragraph (`p`) elements are used to create paragraph text on websites.
+Paragraph (`p`) elements ถูกใช้เพื้นสร้างชุดตัวอักษรที่เป็นพารากราฟในเว็บไซต์
 
-Create a paragraph (`p`) element below your `h2` element, and give it the text `Click here to view more cat photos.`
+จงสร้าง paragraph (`p`) element อันหนึ่งต่อจาก `h2` elementและกำหนดให้มันมีตัวอักษรที่เขียนว่า `Click here to view more cat photos.`
 
 # --hints--
 
-Your `p` element should have an opening tag. Opening tags have the following syntax: `<elementName>`.
+`p` element should ควรมีแท็กเปิด โดยแท็กเปิดจะมี syntax ดังนี้ : `<elementName>`.
 
 ```js
 assert(document.querySelector('p'));

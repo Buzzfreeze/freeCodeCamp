@@ -7,13 +7,15 @@ dashedName: part-57
 
 # --description--
 
-Add another checkbox after the one you just added. The `id` attribute value should be `lazy` and the `name` attribute value should be the same as the last checkbox.
+จงเพิ่ม checkbox อีกอันต่อจากอันที่พึ่งพึ่งใส่เข้ามา 
+ค่าของ `id` attributeควรจะเป็น `lazy` และค่าของ `name` attribute ควรจะมีค่าเดียวกับ checkbox อันสุดท้าย
 
-Also add a `label` element to the right of the new checkbox with the text `Lazy`. Make sure to associate the `label` element with the new checkbox using the `for` attribute.
+และจงเพิ่ม `label` element ที่ด้านขวาของ checkbox อันใหม่พร้อมกับข้อความ `Lazy`
+จงเช็คให้มั่นใจว่าคุณได้เชจงเช็คให้มั่นใจว่าคุณได้เชื่อมโยง `label` element เข้ากับ checkbox อันใหม่โดยใช้ `for` attribute.
 
 # --hints--
 
-You need to add a new checkbox.
+คุณต้องเพิ่ม checkbox ขึ้นมาอีกอัน
 
 ```js
 assert($('input[type="checkbox"]').length === 2);

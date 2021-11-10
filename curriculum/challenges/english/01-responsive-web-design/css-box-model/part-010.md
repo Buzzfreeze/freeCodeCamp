@@ -7,11 +7,11 @@ dashedName: part-10
 
 # --description--
 
-Change the `background-color` of the canvas to `#4d0f00`.
+จงเปลี่ยน `background-color` ของภาพใบให้เป็น `#4d0f00`
 
 # --hints--
 
-You should set the `background-color` property to `#4d0f00`.
+คุณควรกำหนดให้ `background-color` property มีค่า `#4d0f00`
 
 ```js
 const hasBackground = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style['background-color'] === 'rgb(77, 15, 0)');

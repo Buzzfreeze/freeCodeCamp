@@ -7,11 +7,12 @@ dashedName: part-21
 
 # --description--
 
-The `div` element is used mainly for design layout purposes unlike the other content elements you have used so far. Add a `div` element inside the `body` element and then move all the other elements inside the new `div`.
+`div` element ถูกใช้หลัก ๆ เพื่อการออกแบบ layout ไม่เหมือนกับ content element อื่น ๆ ที่คุณได้ใช้มาจนถึงตอนนี้
+จงเพิ่ม `div` element อันหนึ่งข้างใน `body` element และจงย้าย element อื่น ๆ ทั้งหมดมาไว้ที่ข้างใน `div` อันใหม่นี้
 
 # --hints--
 
-You should have an opening `<div>` tag.
+คุณควรมีแท็กเปิด `<div>` อันหนึ่ง
 
 ```js
 assert(code.match(/<div>/i));

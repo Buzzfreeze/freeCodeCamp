@@ -7,11 +7,11 @@ dashedName: part-30
 
 # --description--
 
-Move the dots into place by setting the `display` to `block`, the `margin` to `auto`, and the `margin-top` to `65%`.
+จงย้ายจุดไปตำแหน่งที่มีการกำหนดให้ `display` เป็น `block`, `margin` เป็น `auto`, และ`margin-top` เท่นกับ `65%`
 
 # --hints--
 
-Your `.black-dot` selector should have a `display` property set to `block`.
+`.black-dot` selector ควรมี `display` property ที่มีค่าเป็น `block`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.black-dot')?.display === 'block');

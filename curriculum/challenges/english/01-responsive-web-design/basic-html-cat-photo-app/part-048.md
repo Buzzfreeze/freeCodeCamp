@@ -7,13 +7,15 @@ dashedName: part-48
 
 # --description--
 
-If you select the `Indoor` radio button and submit the form, the form data for the button is based on its `name` and `value` attributes. Since your radio buttons do not have a `value` attribute, the form data will include `indoor-outdoor=on`, which is not useful when you have multiple buttons.
+ถ้าคุณเลือก `Indoor` radio button และกดส่งแบบฟอร์ม ข้อมูลในแบบฟอร์มของปุ่มนั้นจะขึ้นกับ `name` และ `value` attribute ของมัน
+เนื่องจาก radio button ของคุณยังไม่มี `value` attribute, ข้อมูลของแบบฟอร์มจะนับว่า `indoor-outdoor=on`, ซึ่งไม่มีประโยชน์อะไรเมื่อคุณมีหลายมปุ่ม
 
-Add a `value` attribute to both radio buttons. For convenience, set the button's `value` attribute to the same value as its `id` attribute.
+จงเพิ่ม `value` attribute ให้กับ radio buttons ทั้งสองอัน
+เพื่อความสะดวก จงกำหนดให้ `value` attribute ของปุ่มมีค่าเดียวกับ `id` attribute ของมัน
 
 # --hints--
 
-Both radio buttons should still be located between opening and closing `label` element tags.
+radio button ทั้งสองอันควรอยู่ระหว่างแท็กเปิดและแท็กปิดของ `label` element
 
 ```js
 const labelChildNodes = [...document.querySelectorAll('form > label')].map(

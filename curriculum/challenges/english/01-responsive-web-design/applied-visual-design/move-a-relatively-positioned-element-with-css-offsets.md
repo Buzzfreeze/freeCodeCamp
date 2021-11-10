@@ -9,15 +9,19 @@ dashedName: move-a-relatively-positioned-element-with-css-offsets
 
 # --description--
 
-The CSS offsets of `top` or `bottom`, and `left` or `right` tell the browser how far to offset an item relative to where it would sit in the normal flow of the document. You're offsetting an element away from a given spot, which moves the element away from the referenced side (effectively, the opposite direction). As you saw in the last challenge, using the `top` offset moved the `h2` downwards. Likewise, using a `left` offset moves an item to the right.
+CSS offsets ของ `top` หรือ `bottom`,และ `left` หรือ `right` จะบอก browser ว่าควรเลื่อน item ออกมาไกลแค่ไหนโดยอ้างอิงจากตำแหน่งที่มันเคยอยู่มาก่อน ใน normal flow ของ document. 
+คุณสามารถวาง element ให้ห่างจากจุดที่กำหนดได้ โดยมันจะย้าย element ออกจากด้านอ้างอิงซึ่งมักเป็นด้านตรงข้าม
+ตามที่คุณได้เห็นในแบบฝึกหัดที่แล้ว การใช้ `top` offset เลื่อน `h2` มาข้างล่าง
+เช่นเดียวกัน การใช้ `left` offset จะเลื่อน item ที่ทางขวา
 
 # --instructions--
 
-Use CSS offsets to move the `h2` 15 pixels to the right and 10 pixels up.
+จงใช้ CSS offsets เพื่อเลื่อน `h2` มา 15 pixels ไปทางขวาและขึ้นไปอีก 10 pixel
 
 # --hints--
 
-Your code should use a CSS offset to relatively position the `h2` 10px upwards. In other words, move it 10px away from the `bottom` of where it normally sits.
+คุณควรใช้ CSS offset เป็นกำหนดตำแหน่งแบบ relativeให้ `h2` ขึ้นไปด้านบน 10px
+หรือก็คือจงเลื่อนมาออกจาก `bottom` ของตำแหน่งที่มันเคยอยู่มา 10 px
 
 ```js
 assert($('h2').css('bottom') == '10px');

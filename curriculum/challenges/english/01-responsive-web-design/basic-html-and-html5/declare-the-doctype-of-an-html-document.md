@@ -9,17 +9,24 @@ dashedName: declare-the-doctype-of-an-html-document
 
 # --description--
 
-The challenges so far have covered specific HTML elements and their uses. However, there are a few elements that give overall structure to your page, and should be included in every HTML document.
+challenge ที่ผ่านมานั้นได้พูดถึงเรื่อง HTML element ที่ทำหน้าที่เป็นอย่าง ๆ และวิธีการใช้งานของมัน
+อย่างไรก็ตาม มันก็ยังมี element อันตัวที่เป็นเหมือนโครงสร้างโดยรวมให้กับหน้าเว็บไซต์ของคุณ และควรจะถูกใส่ไว้ใน HTML document ทุก ๆ อัน
 
-At the top of your document, you need to tell the browser which version of HTML your page is using. HTML is an evolving language, and is updated regularly. Most major browsers support the latest specification, which is HTML5. However, older web pages may use previous versions of the language.
+ที่ด้านบนของ document, คุณจำเป็นต้องบอกให้ browser รู้ว่า HTML ของหน้าเว็บคุณเป็นเวอร์ชั่นไหน
+HTML เป็นภาษาๆ หนึ่งและมักมีการอัพเดตอยู่เป็นประจำอยู่แล้ว
+browser หลัก ๆ ส่วนมากจะ support HTML5 ซึ่งเป็นเวอร์ชั่นล่าสุดอยู่แล้ว
+อย่างไรก็ตามเว็บเก่า ๆ ก็อาจจะมีการใช้เวอร์ชั่นเก่าของภาษานี้
 
-You tell the browser this information by adding the `<!DOCTYPE ...>` tag on the first line, where the `...` part is the version of HTML. For HTML5, you use `<!DOCTYPE html>`.
+คุณจะบอก browser เกี่ยวกับข้อมูลนี้ได้โดยการเพิ่ม `<!DOCTYPE ...>` tag ที่บรรทัดแรก โดยมีส่วนที่เป็น `...` บอกเวอร์ชั่น HTML ที่ใช้อยู่
+สำหรับ HTML5 เราจะใช้ `<!DOCTYPE html>`
 
-The `!` and uppercase `DOCTYPE` is important, especially for older browsers. The `html` is not case sensitive.
+`!` และอักษรตัวพิพม์ใหญ่  `DOCTYPE` นั้นสำคัญมาก โดยเฉพาะ browser รุ่นเก่า ๆ ส่วน `html` นั้นไม่ใช่ case sensitive
 
-Next, the rest of your HTML code needs to be wrapped in `html` tags. The opening `<html>` goes directly below the `<!DOCTYPE html>` line, and the closing `</html>` goes at the end of the page.
+ถัดไป HTML code ทั้งหมดที่คุณเขียนจะต้องอยู่ภายใต้`html` tags
+แท็กเปิด `<html>` จะอยู่ต่อจากบรรทัด `<!DOCTYPE html>`  ทันที, และแท็กปิด `</html>` จะเป็นแท็กสุดท้ายของหน้านี้
 
-Here's an example of the page structure. Your HTML code would go in the space between the two `html` tags.
+นี่คือตัวอย่างของโครงสร้างหน้าเว็บไซต์ 
+HTML code ของคุณจะถูกวางไว้ในพื้นที่ว่างระหว่างแท็ก `html` ทั้ง 2 อัน
 
 ```html
 <!DOCTYPE html>
@@ -30,11 +37,13 @@ Here's an example of the page structure. Your HTML code would go in the space be
 
 # --instructions--
 
-Add a `DOCTYPE` tag for HTML5 to the top of the blank HTML document in the code editor. Under it, add opening and closing `html` tags, which wrap around an `h1` element. The heading can include any text.
+จงเพิ่มแท็ก `DOCTYPE` สำหรับ  HTML5 ที่ด้านบนสุดของ HTML document เปล่า
+ข้างล่างมันให้เพิ่มแท็กเปิดและปิดของ `html` ,ที่จะคลุม `h1` element
+heading นั้นสามารถใส่ข้อความอะไรก็ได้
 
 # --hints--
 
-Your code should include a `<!DOCTYPE html>` tag.
+โค้ดของคุณควรมีแท็ก `<!DOCTYPE html>` 
 
 ```js
 assert(code.match(/<!DOCTYPE\s+?html\s*?>/gi));

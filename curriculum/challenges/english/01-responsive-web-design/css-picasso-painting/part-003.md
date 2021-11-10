@@ -7,14 +7,14 @@ dashedName: part-3
 
 # --description--
 
-Go ahead and link your CSS file now, even though you have not written any CSS yet.
+จงลิงค์ไฟล์ CSS, แม้ว่าคุณจะยังไม่ได้เขียน CSS ก็ตาม
 
-Add a `link` element with a `rel` of `stylesheet`, a `type` of `text/css`, and an `href` of `styles.css`.
+จงเพิ่ม `link` element ที่มี `rel` เป็น `stylesheet`, `type` เป็น `text/css`, `href` เป็น `styles.css`
 
 # --hints--
 
 
-Your code should have a `link` element.
+คุณควรมี 1 `link` element.
 
 ```js
 assert.match(code, /<link/)

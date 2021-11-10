@@ -9,17 +9,20 @@ dashedName: animate-elements-at-variable-rates
 
 # --description--
 
-There are a variety of ways to alter the animation rates of similarly animated elements. So far, this has been achieved by applying an `animation-iteration-count` property and setting `@keyframes` rules.
+มันมีหลายวิธีเพื่อปรับเปลี่ยน animation rates ของ element ที่มีการ animate ที่คล้ายกัน
+ถึงตอนนี้ มันสามารถทำได้โดยการใช้ `animation-iteration-count` propertyและกำหนด `@keyframes` rules
 
-To illustrate, the animation on the right consists of two stars that each decrease in size and opacity at the 20% mark in the `@keyframes` rule, which creates the twinkle animation. You can change the `@keyframes` rule for one of the elements so the stars twinkle at different rates.
+เพื่อทำให้เห็นภาพมากขึ้น 
+animation ทางด้านขวาที่ประกอบด้วยดาว 2 ดวงที่แต่ละดวงจะลดขนาดและ opacity 20% ทุก ๆ ครั้งตาม `@keyframes` rule, ซึ่งมันจะสร้าง animation ที่ทำให้เกิดการกระพริบ
+คุณสามารถเปลี่ยน `@keyframes` rule สำหรับหนึ่ง element แยกออกมาจากที่เหลือเพื่อที่ดาวจะได้กระพริบด้วย rate ที่ต่างกัน
 
 # --instructions--
 
-Alter the animation rate for the element with the class name of `star-1` by changing its `@keyframes` rule to 50%.
+จงเปลี่ยน animation rate ของ element ที่มีคลาสชื่อ `star-1` โดยการเปลี่ยน `@keyframes` rule ของมันไปที่ 50%
 
 # --hints--
 
-The `@keyframes` rule for the `star-1` class should be 50%.
+`@keyframes` rule ของ `star-1` class ความมีคค่า 50%
 
 ```js
 assert(code.match(/twinkle-1\s*?{\s*?50%/g));

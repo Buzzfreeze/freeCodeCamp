@@ -7,11 +7,12 @@ dashedName: part-87
 
 # --description--
 
-Target the `class` with value `right` and set the `position` to `absolute`, `top` to `15px`, and `right` to `30px`.
+จงชี้ไปที่ `class` ที่มีค่าเป็น `right` 
+และจงกำหนดให้ `position` เท่ากับ `absolute`, `top` เท่ากับ `15px`, และ `right` เท่ากับ `30px`.
 
 # --hints--
 
-You should create a `.right` selector.
+คุณควรสร้าง `.right` selector อันหนึ่ง
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.right'));

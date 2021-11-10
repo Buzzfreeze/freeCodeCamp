@@ -7,11 +7,12 @@ dashedName: part-50
 
 # --description--
 
-Create a new variable in `:root` named `window-color2` with a value of `#8cd9b3`. This will be used as the secondary color for this building.
+จงสร้างตัวแปรอันใหม่ใน`:root` ตั้งชื่อให้มันว่า `window-color2` และกำหนดค่าให้เท่ากับ `#8cd9b3`
+สิ่งนี้จะถูกใช้เป็นสีทุติยภูมิของ building อันนี้
 
 # --hints--
 
-You should create a new property variable called `window-color2` within `:root`.
+คุณควรสร้างตัวแปรสำหรับ property อันใหม่ชื่อ `window-color2` ภายใน `:root`.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle(':root')?.getPropertyValue('--window-color2'));

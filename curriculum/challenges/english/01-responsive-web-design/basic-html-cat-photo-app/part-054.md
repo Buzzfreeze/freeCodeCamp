@@ -7,11 +7,12 @@ dashedName: part-54
 
 # --description--
 
-Add an `id` attribute with the value `loving` to the checkbox input.
+จงเพิ่ม `id` attribute ที่มีค่าเป็น `loving` ให้กับ checkbox input.
 
 # --hints--
 
-Your checkbox should have an `id` attribute. Check that there is a space after the opening tag's name and/or there are spaces before all attribute names.
+checkbox ควรมี `id` attribute
+จงเช็คให้มั่นใจว่ามีช่องว่างอันหนึ่งหลังจากชื่อของแท็กเปิด และ/หรือ มีช่องว่างหน้าชื่อของ attribute ทุกอัน
 
 ```js
 assert($('input[type="checkbox"]')[0].hasAttribute('id'));

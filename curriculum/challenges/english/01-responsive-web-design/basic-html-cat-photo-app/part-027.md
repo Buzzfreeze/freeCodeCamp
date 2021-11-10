@@ -7,11 +7,11 @@ dashedName: part-27
 
 # --description--
 
-After the ordered list, add another `figure` element.
+ต่อจาก ordered list, จงเพิ่ม `figure` element อีกอัน
 
 # --hints--
 
-Your `figure` element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+`figure` element ควรมีแท็กเปิดโดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`.
 
 ```js
 assert(document.querySelectorAll('figure').length === 2);

@@ -7,11 +7,12 @@ dashedName: part-57
 
 # --description--
 
-Within that `orange-character` element, add four `div` elements. Give them the `id` values of `black-round-hat`, `eyes-div`, `triangles`, and `guitar`, in order.
+ใน `orange-character` element, จงเพิ่ม 4 `div` elements
+จงกำหนดให้พวกมันมี `id` มีค่าเป็น `black-round-hat`, `eyes-div`, `triangles`, และ `guitar` ตามลำดับ
 
 # --hints--
 
-You should have four new `div` elements within your `orange-character` element.
+คุณควรมี 4 `div` elements ใน `orange-character` element.
 
 ```js
 assert(document.querySelectorAll('#orange-character > div')?.length === 4);

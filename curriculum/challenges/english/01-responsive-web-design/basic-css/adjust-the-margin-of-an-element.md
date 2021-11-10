@@ -9,19 +9,19 @@ dashedName: adjust-the-margin-of-an-element
 
 # --description--
 
-An element's `margin` controls the amount of space between an element's `border` and surrounding elements.
+`margin` ของ element จะควบคุมขนาดของช่องว่างระหว่า `border` ของ element และ element รอบ ๆ
 
-Here, we can see that the blue box and the red box are nested within the yellow box. Note that the red box has a bigger `margin` than the blue box, making it appear smaller.
+ตอนนี้ พวกเราสามารถเห็นได้ว่ากล่องสีฟ้าและกล่องสีแดในอยู่ในกล่องสีเหลือง
+จงจำไว้ว่ากล่องสีแดงนั้นมี `margin` ที่ใหญ่กว่าของกล่องสีฟ้า ซึ่งทำให้กล่องสีฟ้าดูเล็กกว่า 
 
-When you increase the blue box's `margin`, it will increase the distance between its border and surrounding elements.
+เมื่อคุณเพิ่ม `margin` ของกล่องสีฟ้า มันจะเพิ่มระยะระหว่างขอบมันกับ element ที่อยู่รอบ ๆ
 
 # --instructions--
 
-Change the `margin` of the blue box to match that of the red box.
-
+จงเปลี่ยน `margin` ของกล่องสีฟ้าเพื่อให้มันตรงกับ margin ของสีแดง
 # --hints--
 
-Your `blue-box` class should give elements `20px` of `margin`.
+`blue-box` class ควรกำหนดให้ element มี `20px` เป็นค่า `margin`
 
 ```js
 assert($('.blue-box').css('margin-top') === '20px');

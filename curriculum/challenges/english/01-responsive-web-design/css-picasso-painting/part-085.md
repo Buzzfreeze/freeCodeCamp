@@ -7,11 +7,11 @@ dashedName: part-85
 
 # --description--
 
-Give the `guitar-neck` a `z-index` of `3`.
+จงกำหนดให้ `guitar-neck` มี `z-index` เท่ากับ `3`.
 
 # --hints--
 
-Your `#guitar-neck` selector should have a `z-index` property set to `3`.
+`#guitar-neck` selector ควรมี `z-index` property อันหนึ่งที่มีค่าเท่ากับ `3`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#guitar-neck')?.zIndex === '3');

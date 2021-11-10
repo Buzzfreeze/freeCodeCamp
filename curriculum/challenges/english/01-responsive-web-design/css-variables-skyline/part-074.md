@@ -7,11 +7,12 @@ dashedName: part-74
 
 # --description--
 
-Give `.fb1b` a `width` of `60%` and `height` of `10%`, and `.fb1c` a `width` of `100%` and `height` of `80%`.
+จงกำหนดให้ `.fb1b` มีค่า `width` เท่ากับ `60%` และ `height` เท่ากับ `10%`
+จงกำหนดให้ `.fb1c` มีค่า `width` เท่ากับ `100%` และ `height` เท่ากับ `80%`.
 
 # --hints--
 
-You should give `.fb1b` a `width` of `60%`.
+คุณควรกำหนดให้ `.fb1b` มีค่า `width` เท่ากับ `60%`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(".fb1b")?.width, "60%");

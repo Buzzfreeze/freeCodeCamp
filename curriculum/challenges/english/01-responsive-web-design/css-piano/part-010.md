@@ -7,17 +7,23 @@ dashedName: part-10
 
 # --description--
 
-Now that you have reset the `html` box model, you need to pass that on to the elements within as well. To do this, you can set the `box-sizing` property to `inherit`, which will tell the targeted elements to use the same value as the parent element.
+หลังจากที่คุณได้ reset `html` box model, คุณต้องส่งมันไปที่ element ที่อยู่ในนั้นด้วย
+เพื่อทำเช่นนี้ คุณสามารถกำหนดให้ `box-sizing` property มีค่าเป็น `inherit`, ซึ่งจะบอกให้ element ที่เล็งไว้ใช้ค่าเดียวกันกับ parent element
 
-You will also need to target the pseudo-elements, which are special keywords that follow a selector. The two pseudo-elements you will be using are the `::before` and `::after` pseudo-elements.
+คุณยังต้องหา pseudo-elements, ซึ่งเป็น keyword พิเศษที่จะวติดตาม selector หนึ่ง
+pseudo-elements 2 อันที่จะกำลังจะใช้คือ  `::before` และ `::after` pseudo-elements
 
-The `::before` selector creates a pseudo-element which is the first child of the selected element, while the `::after` selector creates a pseudo-element which is the last child of the selected element. These pseudo-elements are often used to create cosmetic content, which you will see later in this project.
+`::before` selector จะสร้าง pseudo-element อันหนึ่งซึ่งจะเป็น child อันแรกของ element ที่ถูกเลือก
+ในขณะที่, `::after` selector จะสร้าง pseudo-element อีกอันซึ่งจะเป็น child อันสุดท้ายของ element ที่ถูกเลือก
+pseudo-element เหล่านี้มักถูกใช้เพื่อสร้าง content สร้างการตกแต่ง ซึ่งคุณจะได้เห็นในโปรเจคนี้ทหลัง
 
-For now, create a CSS selector to target all elements with `*`, and include the pseudo-elements with `::before` and `::after`. Set the `box-sizing` property to `inherit`.
+สำหรับตอนนี้, จงสร้าง CSS selector อันหนึ่งที่จะติดตาม element ทั้งหมดที่มี `*`
+และจงเพิ่ม pseudo-element ที่มี `::before` และ `::after`
+จงกำหนดให้ `box-sizing` property มีค่าเป็น `inherit`
 
 # --hints--
 
-You should have a `*, ::before, ::after` selector.
+คุรควรมี `*, ::before, ::after` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('*, ::before, ::after'));

@@ -9,21 +9,25 @@ dashedName: create-flexible-layouts-using-auto-fill
 
 # --description--
 
-The repeat function comes with an option called <dfn>auto-fill</dfn>. This allows you to automatically insert as many rows or columns of your desired size as possible depending on the size of the container. You can create flexible layouts when combining `auto-fill` with `minmax`, like this:
+repeat function มาพร้อมกับตัวเลือกที่ชื่อว่า <dfn>auto-fill</dfn>
+สิ่งนี้ทำให้คุณสามารถเพิ่มแถวหรือคอลัมน์ตามขนาดที่คุณต้องการได้อัตโนมัติดโดยขึ้นกับขนาดของ container
+คุรสามารถสร้าง layouts ที่ค่อนข้างยืดหยุ่นได้เมื่อใช้ `auto-fill` ร่วมกับ `minmax` แบบนี้:
 
 ```css
 repeat(auto-fill, minmax(60px, 1fr));
 ```
 
-When the container changes size, this setup keeps inserting 60px columns and stretching them until it can insert another one. **Note:** If your container can't fit all your items on one row, it will move them down to a new one.
+เมื่อ container เปลี่ยนขนาดของมัน, setup อันนี้จะค่อยเพิ่มคอลัมน์กว้าง 60px ไปเรื่อย ๆ 
+**Note:** ถ้า container ของคุณใส่ item ทั้งหมดไม่ได้ใน 1 แถว, มันจะถูกผลักมาขึ้นแถวใหม่
 
 # --instructions--
 
-In the first grid, use `auto-fill` with `repeat` to fill the grid with columns that have a minimum width of `60px` and maximum of `1fr`. Then resize the preview to see auto-fill in action.
+ในกริดอันแรก, จงใช้ `auto-fill` ที่มี `repeat` เพื่อทำให้กริดเต็มไปด้วยคอลัมน์ที่มีความกว้างต่ำสุดที่ `60px` และสูงสุดที่ `1fr`
+หลังจากนั้น จงปรับขนาดของหน้า  preview เพื่อให้เห็นสิ่งที่ auto-fill ทำ
 
 # --hints--
 
-`container` class should have a `grid-template-columns` property with `repeat` and `auto-fill` that will fill the grid with columns that have a minimum width of `60px` and maximum of `1fr`.
+`container` class ควรมี `grid-template-columns` property อันหนึ่งที่มี `repeat` และ `auto-fill` โดยมันจะทำให้กริดเต็มไปด้วยคอลัม์ที่มีความกว้างต่ำสุดที่ `60px` และสูงสุดที่ `1fr`
 
 ```js
 assert(

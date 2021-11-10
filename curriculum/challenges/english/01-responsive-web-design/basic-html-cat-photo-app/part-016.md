@@ -7,11 +7,12 @@ dashedName: part-16
 
 # --description--
 
-It is time to add a new section. Add a second `section` element below the existing `section` element.
+ตอนนี้ถึงเวลาที่จะเพิ่ม section ใหม่แล้ว
+จงเพิ่ม `section` element อันที่สองต่อจาก `section` element ที่มีอยู่แล้ว
 
 # --hints--
 
-Your `section` element should have an opening tag. Opening tags have this syntax: `<elementName>`.
+`section` element พควรมีแท็กเปิดโดยแท็กเปิดจะมี syntax ดังต่อไปนี้: `<elementName>`.
 
 ```js
 assert(document.querySelectorAll('section').length >= 2);

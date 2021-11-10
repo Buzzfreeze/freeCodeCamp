@@ -7,13 +7,14 @@ dashedName: part-50
 
 # --description--
 
-The `legend` element acts as a caption for the content in the `fieldset` element. It gives users context about what they should enter into that part of the form.
+`legend` element จะทำหน้านี้เหมือนกับแคปชั่นของ content ใน `fieldset` element
+มันจะให้บริบทของสิ่งที่พวกเขาควรกรอกเข้าไปในส่วนนี้กับผู้ใช้
 
-Add a `legend` element with the text `Is your cat an indoor or outdoor cat?` above both of the radio buttons.
+จงเพิ่ม `legend` element ที่มีข้อความ `Is your cat an indoor or outdoor cat?` เหนือ radio buttons ทั้งสองอัน
 
 # --hints--
 
-Your `legend` element should have an opening tag. Opening tags have the following syntax: `<elementName>`.
+`legend` element ควรมีแท็กเปิดโดยแท็กเปิดจะมี syntax ดังนี้: `<elementName>`
 
 ```js
 assert(document.querySelector('legend'));

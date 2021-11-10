@@ -7,11 +7,11 @@ dashedName: part-9
 
 # --description--
 
-Give your background buildings element a `width` and `height` of `100%` to make it the full width and height of its parent, the `body`.
+จงกำหนดให้พื้นหลัง buildings element ของคุณมีค่า `width` และ `height` เป็น `100%` เพื่อทำให้มันมีความกว้างและความสูงเท่ากับ parent ของมัน หรือก็คือ `body` นั่นเอง
 
 # --hints--
 
-You should use the `background-buildings` class to select the correct element.
+คุณควรใช้ `background-buildings` class เพื่อเลือก element ที่ถูกต้อง
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('.background-buildings'));

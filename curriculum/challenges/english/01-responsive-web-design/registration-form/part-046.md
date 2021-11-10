@@ -7,13 +7,13 @@ dashedName: part-46
 
 # --description--
 
-If you look close enough, you will notice the `.inline` elements are too high on the line.
+ถ้าคุณดูดี ๆ คุณจะสังเกตเห็นว่า `.inline` elements นั้นสูงเกินเส้นไป
 
-To combat this, set the `vertical-align` property to `middle`.
+เพื่อจัดการกับมัน จงกำหนดค่า `vertical-align` property ให้เป้น `middle`.
 
 # --hints--
 
-You should set the `vertical-align` property to `middle` for all `.inline` elements.
+คุณควรกำหนด `vertical-align` property ให้เป็น `middle` สำหรับ `.inline` elements ทุกอัน
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.inline')?.verticalAlign, 'middle');

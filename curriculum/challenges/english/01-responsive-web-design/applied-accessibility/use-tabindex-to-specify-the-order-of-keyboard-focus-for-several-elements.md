@@ -9,13 +9,17 @@ dashedName: use-tabindex-to-specify-the-order-of-keyboard-focus-for-several-elem
 
 # --description--
 
-The `tabindex` attribute also specifies the exact tab order of elements. This is achieved when the attribute's value is set to a positive number of 1 or higher.
+`tabindex` attribute ได้ระบุลำดับการ tab ของ elementไว้เช่นกัน
+สิ่งนี้ทำได้โดยการกำหนดค่าที่เป็นค่าบวกให้ attribute
 
-Setting a `tabindex="1"` will bring keyboard focus to that element first. Then it cycles through the sequence of specified `tabindex` values (2, 3, etc.), before moving to default and `tabindex="0"` items.
+การกำหนดค่า `tabindex="1"` จะนำ keyboard focus มาที่ elementนั้นเป็นลำดับแรก
+หลังจากนั้น มันจะวนตามลำดับที่ถูกกำหรดไว้ในค่าของ `tabindex` (2, 3 เป็นต้น), ก่อนที่จะย้ายไปยังส่วนที่  `tabindex="0"` 
 
-It's important to note that when the tab order is set this way, it overrides the default order (which uses the HTML source). This may confuse users who are expecting to start navigation from the top of the page. This technique may be necessary in some circumstances, but in terms of accessibility, take care before applying it.
+มันสำคัญที่ต้องจำไว้ว่าเมื่อลำดับการกดถูกตั้งไว้แบบนี้
+มันจะ override ลำดับที่เป็นค่าเริ่มต้น (ที่ใช้ HTML source) สิ่งนี้อาจจทำให้ผู้ใช้ที่ตั้งใจจะเริ่มดูจากด้านบนสับสนได้
+เทคนิคนี้อาจจะจำเป็นในบางกรณี แต่ในเชิงของการเข้าถึง ให้ระวังก่อนที่จะใช้มัน
 
-Here's an example:
+นี่คือตัวอย่าง:
 
 ```html
 <div tabindex="1">I get keyboard focus, and I get it first!</div>
@@ -27,13 +31,16 @@ Here's an example:
 
 # --instructions--
 
-Camper Cat has a search field on his Inspirational Quotes page that he plans to position in the upper right corner with CSS. He wants the search `input` and submit `input` form controls to be the first two items in the tab order. Add a `tabindex` attribute set to `1` to the `search` `input`, and a `tabindex` attribute set to `2` to the `submit` `input`.
+Camper Cat มีช่องค้นหาในหน้า Inspirational Quotes ของเขาที่เขาตั้งใจจะวางมันไว้ที่มุมขวาบนด้วย CSS
+เขาต้องการให้ `input` ของการค้นหา และ form controls สำหรับส่ง `input` เป็น item 2 ตัวแรกในลำดับการกด
+จงเพิ่ม `tabindex` attribute 1 อันและกำหนดค่า  `1` ให้ `search` `input`, และอีก 1`tabindex` attribute ก็กำหนดค่า `2` ให้ `submit` `input`.
 
-Another thing to note is that some browsers may place you in the middle of your tab order when an element is clicked. An element has been added to the page that ensures you will always start at the beginning of your tab order.
+อีกสิ่งที่ต้องจำไว้ก็คือ browser บางอันอาจจะพากลุ่มไปที่ตรงกลางของลำดับการกดเมื่อมี  element หนึ่งถูกคลิก
+element ได้ถูกเพิ่มเข้าไปที่หน้านั้นเพื่อให้คุณมั่นใจว่าจะเริ่มที่จุดเริ่มต้นของลำดับการกดของคุณ 
 
 # --hints--
 
-Your code should add a `tabindex` attribute to the `search` `input` tag.
+โค้ดของคุณควรเพิ่ม `tabindex` attribute 1 อันให้กับ `search` `input` tag.
 
 ```js
 assert($('#search').attr('tabindex'));

@@ -9,27 +9,29 @@ dashedName: use-grid-area-without-creating-an-areas-template
 
 # --description--
 
-The `grid-area` property you learned in the last challenge can be used in another way. If your grid doesn't have an areas template to reference, you can create an area on the fly for an item to be placed like this:
+`grid-area` property ที่คุณได้เรียนไปแล้วใน challenge ล่าสุดสามารถใช้เพื่อการอื่นได้
+ถ้ากริดของคุณไม่มี areas template เพื่อใช้ในการอ้างอิง, คุณสามารถสร้างพื้นที่สมมุติสำหรับวาง item ได้ดังนี้:
 
 ```css
 item1 { grid-area: 1/1/2/4; }
 ```
 
-This is using the line numbers you learned about earlier to define where the area for this item will be. The numbers in the example above represent these values:
+นี่คือการใช้ลำดับของเส้นที่คุณได้เรียนไปแล้วก่อนหน้านี้เพื่อกำหนดตำแหน่งที่ item อันนี้จะอยู่
+ลำดับในตัวอย่างข้างมันมีความหมายดังนี้:
 
 ```css
 grid-area: horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at;
 ```
 
-So the item in the example will consume the rows between lines 1 and 2, and the columns between lines 1 and 4.
+ดังนั้น item ในตัวอย่างจะกินพื้นที่ แถวที่อยู่ระหว่างเส้นที่ 1 และเส้นที่ 2 และคอลัมน์ที่อยู่ระหว่างเส้นที่ 1 ถึง 4
 
 # --instructions--
 
-Using the `grid-area` property, place the element with `item5` class between the third and fourth horizontal lines and between the first and fourth vertical lines.
+โดยใช้ `grid-area` property, จงวาง element ที่มี `item5` class ระหว่างเส้นแนวนอนที่ 3 และ 4 แล้วก็เส้นแนวตั้งที่ 1 - 4
 
 # --hints--
 
-The `item5` class should have a `grid-area` property to make it fill the whole area between the third and fourth horizontal lines, and first and fourth vertical lines.
+`item5` class ควรมี `grid-area` property อันหนึ่งเพื่อทำให้มันกินพื้นที่ทั้งหมดระหว่างเส้นแนวนอนที่ 3 และ 4 แล้วก็เส้นแนวตั้งที่ 1 - 4
 
 ```js
 assert(

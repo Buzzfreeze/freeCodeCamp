@@ -7,11 +7,12 @@ dashedName: part-20
 
 # --description--
 
-That brown background makes it hard to read the text. Change the `body` element's background color to be `burlywood` so it has some color but you are still be able to read the text.
+พื้นหลังสีน้ำตาลอันนั้น ทำให้มันยากที่จะข้อความ
+จงเปลี่ยนสีพื้นหลังของ `body` element ให้เป็น `burlywood` เพื่อที่มันจะได้มีสีแต่คุณยังสามารถอ่านมันได้
 
 # --hints--
 
-You should set the `background-color` property to `burlywood`.
+คุณควรกำหนดให้ `background-color` property มีค่าเป็น `burlywood`.
 
 ```js
 const hasBackground = new __helpers.CSSHelp(document).getCSSRules().some(x => x.style['background-color'] === 'burlywood');

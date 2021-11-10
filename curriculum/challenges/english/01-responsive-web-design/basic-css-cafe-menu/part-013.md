@@ -7,11 +7,12 @@ dashedName: part-13
 
 # --description--
 
-In the previous step, you used a <dfn>type selector</dfn> to style the `h1` element. Go ahead and center the `h2` and `p` elements with a new type selector for each one.
+ในขั้นตอนที่แล้ว คุณได้ใช้ <dfn>type selector</dfn> เพื่อที่จะตกแต่ง `h1` element
+จงจัดให้ `h2` และ `p` element อยู่ตรงกลางโดย type selector อันใหม่สำหรับมันแต่ละอัน
 
 # --hints--
 
-You should not change the existing `h1` selector.
+คุรไม่สร้างเปลี่ยนอะไรของ `h1` selector เดิม
 
 ```js
 const hasH1 = new __helpers.CSSHelp(document).getStyle('h1');

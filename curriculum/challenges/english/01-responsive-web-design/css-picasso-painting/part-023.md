@@ -7,11 +7,11 @@ dashedName: part-23
 
 # --description--
 
-Give the mask a `position` of `absolute`, and a `top` and `left` value of `0`.
+จงกำหนดให้หน้ากากมี `position` เป็น `absolute`, มี `top` และ `left` เท่ากับ `0`
 
 # --hints--
 
-Your `#black-mask` selector should have a `position` property set to `absolute`.
+`#black-mask` selector ควรมี 1 `position` property ที่มีค่า `absolute`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#black-mask')?.position === 'absolute');

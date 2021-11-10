@@ -7,11 +7,11 @@ dashedName: part-24
 
 # --description--
 
-Create a new CSS rule using the `.two` selector and set its `width` to 475 pixels.
+จงสร้าง CSS rule อันใหม่โดยใช้ `.two` selector และกำหนดให้ `width`ของมันมีค่า 475 pixels
 
 # --hints--
 
-You should have a `.two` selector.
+คุณควรมี 1 `.two` selector.
 
 ```js
 const hasTwo = new __helpers.CSSHelp(document).getStyle('.two');

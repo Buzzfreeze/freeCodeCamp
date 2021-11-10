@@ -7,11 +7,14 @@ dashedName: part-49
 
 # --description--
 
-FontAwesome icons come with their own styling to define the icon. However, you can still set the styling yourself as well, to change things like the color and size. For now, use a `class` selector to target your `fa-music` icons. Set the `display` to `inline-block`, the `margin-top` to `8%`, and the `margin-left` to `13%`.
+FontAwesome icon มาพร้อมกับ styling ของมันเองเพื่อที่จะได้กำหนดค่าให้กับ icon
+อย่างไรก็ตาม คุณยังสามารถกำหนด styling ได้ดวยตัวคุณเองเพื่อจะเปลี่ยนพวกค่าสีและขนาด
+สำหรับตอนนี้ จงใช้ `class` selector เพื่อชี้ไปที่ `fa-music` icon
+จงกำหนดให้ `display` เป็น `inline-block`,  `margin-top` เป็น `8%`, และ `margin-left` เป็น `13%`
 
 # --hints--
 
-You should have a `.fa-music` selector.
+คุณควรมี `.fa-music` selector.
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('.fa-music'));

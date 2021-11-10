@@ -9,21 +9,30 @@ dashedName: avoid-colorblindness-issues-by-using-sufficient-contrast
 
 # --description--
 
-Color is a large part of visual design, but its use introduces two accessibility issues. First, color alone should not be used as the only way to convey important information because screen reader users won't see it. Second, foreground and background colors need sufficient contrast so colorblind users can distinguish them.
+สีเป็นส่วนสำคัญสำหรับการออกแบบเพื่อการมองเห็น แต่การใช้มันทำให้เกิด 2 ปัญหา
+1 เราไม่ควรใช้แค่สีเพื่อการสื่อความข้อมูลที่มีความสำคัญเพราะ screen reader จะไม่เห็นมัน
+2 สีพื้นหน้าและพื้นหลังต้องการ contrast ที่เพียงพอเพื่อที่คนตาบอดสีจะสามารถแยกแยะมันได้
 
-Previous challenges covered having text alternatives to address the first issue. The last challenge introduced contrast checking tools to help with the second. The WCAG-recommended contrast ratio of 4.5:1 applies for color use as well as gray-scale combinations.
+challenges ก่อนหน้าได้กล่าวถึงการใช้ text alternatives เพื่อแก้ปัญหาแรก
+สำหรับ challenge สุดท้ายนี้จะกล่าวถึงการใช้เครื่องมือตรวจเช็ค contrast เพื่อจัดการกับปัญหหาที่สอง
+WCAG-recommended contrast ratio คือ 4.5:1 ซึ่งสามารถใช้ได้กับทั้งการจะคู่สีและการจับคู๋ grayscale
 
-Colorblind users have trouble distinguishing some colors from others - usually in hue but sometimes lightness as well. You may recall the contrast ratio is calculated using the relative luminance (or lightness) values of the foreground and background colors.
+คนตาบอดสีจะมีปัญหาในการแยกแยะบางสี โดยปกติจะเป็นในแง่ของเฉดสี (hue) แต่บางที่ก็เป้นที่ความสว่าง (lightness) ได้เช่นกัน
+คุณอาจจะจำได้ว่า contrast ratio นั้นถูกคำนวณมากจากค่าความสว่างสัมพัทธ์ของสีพื้นหน้าและพื้นหลัง
 
-In practice, the 4.5:1 contrast ratio can be reached by shading (adding black to) the darker color and tinting (adding white to) the lighter color. Darker shades on the color wheel are considered to be shades of blues, violets, magentas, and reds, whereas lighter tinted colors are oranges, yellows, greens, and blue-greens.
+ในแบบฝึกหัดI, 4.5:1 contrast ratio สามารถทำได้จากการเพิ่มสีดำให้กับสีเข้มและเพิ่มสีขาวให้กับสีที่อ่อนกว่า
+บนวงล้อสี สีน้ำเงิน ม่วง บานเย็น และแดงถูกมองว่าเป็นสีเข้ม และสีส้ม เหลือง เขียว และฟ้าเขียวเป็นสีอ่อน
 
 # --instructions--
 
-Camper Cat is experimenting with using color for his blog text and background, but his current combination of a greenish `background-color` with maroon text `color` has a 2.5:1 contrast ratio. You can easily adjust the lightness of the colors since he declared them using the CSS `hsl()` property (which stands for hue, saturation, lightness) by changing the third argument. Increase the `background-color` lightness value from 35% to 55%, and decrease the `color` lightness value from 20% to 15%. This improves the contrast to 5.9:1.
+Camper Cat กำลังทดลองใช้สีต่าง ๆ กับข้อความและพื้นหลังของบล็อกของเขา แต่คู่สีปัจจุบันของเขาค่อนข้างจะเป็นสีเขียว `background-color` กับข้อความสีแดงเลือดหมู `color` ซึ่งมี contrast ratio อยู่ที่ 2.5:1
+คุณสามารถปรับค่าความสว่างของมันได้เพราะเขากำหนดค่าสีโดยใช้ CSS `hsl()` property (ซึ่งมาจาก hue (เฉดสี), saturation (ความอิ่มตัว), lightness (ความสว่าง)) โดยการเปลี่ยน argument ตัวที่สาม
+จงเพิ่มความสว่างของ`background-color` จาก 35% ไปที่ 55%, และลดความสว่าง `color` จาก 20% ไปที่ 15%
+สิ่งนี้จะช่วยให้ contrast มีค่าอยู่ที่ 5.9:1.
 
 # --hints--
 
-Your code should only change the lightness value for the text `color` property to a value of 15%.
+โค้ดของคุณควรปรับค่าความสว่างสำหรับ `color` property ของข้อความไปที่ 15%
 
 ```js
 assert(code.match(/color:\s*?hsl\(0,\s*?55%,\s*?15%\)/gi));

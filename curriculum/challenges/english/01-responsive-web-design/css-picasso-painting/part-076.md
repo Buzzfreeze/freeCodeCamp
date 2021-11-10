@@ -7,11 +7,12 @@ dashedName: part-76
 
 # --description--
 
-Now use an `id` selector for `guitar`. Set the `width` to `100%`, and the `height` to `100px`.
+ในตอนนี้ จงใช้ `id` selector กับ `guitar`
+จงกำหนดให้ `width` เท่ากับ `100%`, และ  `height` เท่ากับ `100px`
 
 # --hints--
 
-You should create a `#guitar` selector.
+คุณควรสร้าง `#guitar` selector มาใหม่หนึ่งอัน
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#guitar'));

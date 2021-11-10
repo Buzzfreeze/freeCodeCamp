@@ -9,11 +9,11 @@ dashedName: create-an-ordered-list
 
 # --description--
 
-HTML has another special element for creating <dfn>ordered lists</dfn>, or numbered lists.
+HTML มี element พิเศษอีกอันหนึ่งที่เอาไว้สร้าง <dfn>ordered lists</dfn>, หรือลิตส์ที่เรียงเป็นลำดับตัวเลข
 
-Ordered lists start with an opening `<ol>` element, followed by any number of `<li>` elements. Finally, ordered lists are closed with the `</ol>` tag.
+Ordered list จะเริ่มต้นด้วยแท็กเปิด `<ol>` element ตามด้วย `<li>` element จำนวนกี่อันก็ได้ ก่อนจะปิดท้ายด้วยแท็กปิด `</ol>`
 
-For example:
+ยกตัวอย่างเช่น:
 
 ```html
 <ol>
@@ -22,15 +22,15 @@ For example:
 </ol>
 ```
 
-would create a numbered list of `Garfield` and `Sylvester`.
+จะสร้างลิสต์ที่เรียงเป็นลำดับตัวเลขที่มีสมาชิกในลิสต์เป็น `Garfield` และ `Sylvester`
 
 # --instructions--
 
-Create an ordered list of the top 3 things cats hate the most.
+จงสร้าง ordered list ที่แสดง top 3 ของสิ่งที่แมวเกลียดที่สุด
 
 # --hints--
 
-You should have an ordered list for `Top 3 things cats hate:`
+คุณควรมี ordered list สำหรับ `Top 3 things cats hate:`
 
 ```js
 assert(/Top 3 things cats hate:/i.test($('ol').prev().text()));

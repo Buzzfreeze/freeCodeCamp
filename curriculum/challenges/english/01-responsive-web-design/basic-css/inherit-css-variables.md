@@ -9,19 +9,23 @@ dashedName: inherit-css-variables
 
 # --description--
 
-When you create a variable, it is available for you to use inside the selector in which you create it. It also is available in any of that selector's descendants. This happens because CSS variables are inherited, just like ordinary properties.
+เมื่อคุณสร้างตัวแปร มันเป็นไปได้ที่คุณจะใช้ใน selector ที่คุณได้สร้างมันขึ้นมา
+มันยังเป็นไปได้ที่ตัวแปรนี้จะถูกใช้กับลูกหลานของ selector นั้น
+ที่เป็นเช่นนี้เพราะตัวแปร CSS จะได้ถูกถ่ายถอด เหมือนกับ property ทั่ว ๆ ไป
 
-To make use of inheritance, CSS variables are often defined in the <dfn>:root</dfn> element.
+เพื่อทำให้การถ่ายถอดแบบนี้เกิดประโยชน์ ตัวแปร CSS มันจะถูกประกาศใน <dfn>:root</dfn> element.
 
-`:root` is a <dfn>pseudo-class</dfn> selector that matches the root element of the document, usually the `html` element. By creating your variables in `:root`, they will be available globally and can be accessed from any other selector in the style sheet.
+`:root` เป็น <dfn>pseudo-class</dfn> selector ที่จะจับคู่กับ root element ของเอกสาร หรือปกติก็คือ `html` element
+การสร้างตัแปรไว้ที่ `:root`, จะทำให้พวกมันสามารถใช้งานได้ทุกที่และสามารถเข้าถึงได้โดย selector ตัวอื่นๆ ใน style sheet.
 
 # --instructions--
 
-Define a variable named `--penguin-belly` in the `:root` selector and give it the value of `pink`. You can then see that the variable is inherited and that all the child elements which use it get pink backgrounds.
+จงสร้างตัวแปรที่ชื่อ`--penguin-belly` ไว้ใน `:root` selector และกำหนดให้มันมีค่าเป็น `pink`
+คุณสามารถเห็นได้ว่าตัวแปรตัวนั้นถูกถ่ายถอดและ child element ทั้งหมดที่ใช้มันจะมีสีชมพู
 
 # --hints--
 
-The `--penguin-belly` variable should be declared in the `:root` and assigned the value `pink`.
+ตัวแปร `--penguin-belly` ควรถูกประกาศใน `:root` และถูกกำหนดค่าให้เป็น `pink`
 
 ```js
 assert(

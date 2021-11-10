@@ -7,11 +7,12 @@ dashedName: part-8
 
 # --description--
 
-Add a `link` element within your `head` element. For that `link` element, set the `rel` attribute to `stylesheet` and the `href` to `./styles.css`.
+จงเพิ่ม 1 `link` element ภายใน `head` element
+จงกำหนด `rel` attribute ให้มีค่าเป็น `stylesheet` และ `href` ให้มีค่าเป็น `./styles.css` สำหรับ `link` element
 
 # --hints--
 
-Your code should have a `link` element.
+โค้ดของคุณควรมี 1 `link` element.
 
 ```js
 assert.match(code, /<link/)

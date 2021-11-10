@@ -7,11 +7,12 @@ dashedName: part-19
 
 # --description--
 
-The text is centered again so the link to the CSS file is working. Add another style to the file that changes the `background-color` property to `brown` for the `body` element.
+พวกตัวอักษรได้ถูกจัดให้อยู่ตรงกลางอีกครั้ง ซึ่งแปลว่าตอนนี้ลิงค์ที่พาไปยัง CSS file นั้นใช้งานได้
+จงเพิ่ม style อีกอันให้กับไฟล์ที่จะเปลี่ยน `background-color` property ไปเป็น `brown` ให้กับ `body` element.
 
 # --hints--
 
-You should use a `body` selector.
+Yคุณควรใช้ `body` selector อันหนึ่ง
 
 ```js
 const hasBody = new __helpers.CSSHelp(document).getStyle('body');

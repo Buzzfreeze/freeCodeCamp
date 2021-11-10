@@ -7,11 +7,11 @@ dashedName: part-28
 
 # --description--
 
-To apply the class's styling to the `div` element, add a `class` attribute to the `div` element's opening tag and set its value to `menu`.
+เพื่อที่จะได้เรียกใช้  styling ของ class กับ `div` element, จงเพิ่ม `class` attribute ให้กับแท็กเปิดของ `div` element และกำหนดให้มันมีค่า `menu`
 
 # --hints--
 
-Your `div` should still render. Make sure you haven't malformed the `<div>` tag.
+`div` ควรจะแสดงผลอยู่ จงเช็คให้มันใจว่าคุณไม่ได้ใช้ `<div>` tag ผิด
 
 ```js
 assert($('div').length === 1);

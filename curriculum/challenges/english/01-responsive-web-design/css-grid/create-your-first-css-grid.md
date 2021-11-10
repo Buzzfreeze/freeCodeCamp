@@ -9,17 +9,18 @@ dashedName: create-your-first-css-grid
 
 # --description--
 
-Turn any HTML element into a grid container by setting its `display` property to `grid`. This gives you the ability to use all the other properties associated with CSS Grid.
+จงเปลี่ยน HTML element ให้กลายเป็น grid container โยการกำหนดค่า `display` property ของมันให้เป็น`grid`
+นี่จะทำให้คุณสามาถใช้ property อื่น ๆ ที่เกี่ยวของกับ CSS Grid ได้
 
-**Note:** In CSS Grid, the parent element is referred to as the <dfn>container</dfn> and its children are called <dfn>items</dfn>.
+**Note:** สำหรับ CSS Grid, parent element ถูกเรียกโดย <dfn>container</dfn> และ children ของพวกมันจะถูกเรียกเป็น <dfn>items</dfn>.
 
 # --instructions--
 
-Change the display of the div with the `container` class to `grid`.
+จงเปลี่ยน display ของ div ที่มี `container` class ให้เป็น `grid`
 
 # --hints--
 
-`container` class should have a `display` property with a value of `grid`.
+`container` class ควรมี`display` property ที่มีค่าเป็น `grid`
 
 ```js
 assert(code.match(/.container\s*?{[\s\S]*display\s*?:\s*?grid\s*?;[\s\S]*}/gi));

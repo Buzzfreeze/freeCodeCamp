@@ -9,13 +9,13 @@ dashedName: add-different-padding-to-each-side-of-an-element
 
 # --description--
 
-Sometimes you will want to customize an element so that it has different amounts of `padding` on each of its sides.
+บางครั้ง คุณอาจจะต้องการปรับแต่ง element เพื่อที่มันจะมี `padding` แตกต่างในแต่ละด้าน
 
-CSS allows you to control the `padding` of all four individual sides of an element with the `padding-top`, `padding-right`, `padding-bottom`, and `padding-left` properties.
+CSS ทำให้คุณสามารถควบคุม `padding` ของแต่ละด้านแยกกันได้โดยใช้`padding-top`, `padding-right`, `padding-bottom`, และ `padding-left` properties.
 
 # --instructions--
 
-Give the blue box a `padding` of `40px` on its top and left side, but only `20px` on its bottom and right side.
+จงกำหนกให้กล่องสีฟ้ามี `padding` เท่ากับ `40px` ที่ด้านบนและซ้าย แต่เท่ากับ `20px` ที่ด้านล่างและขวา
 
 # --hints--
 

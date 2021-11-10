@@ -7,11 +7,11 @@ dashedName: part-24
 
 # --description--
 
-To ensure you can see the mask, give it a `z-index` of `1`.
+เพื่อให้มั่นใจว่าคุณสามารถมองเห็นหน้ากากได้ จงำหนดมันให้มี `z-index` เท่ากับ `1`
 
 # --hints--
 
-Your `#black-mask` selector should have a `z-index` property set to `1`.
+`#black-mask` selector ควรมราค่า `z-index` property เท่ากับ `1`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('#black-mask')?.zIndex === '1');

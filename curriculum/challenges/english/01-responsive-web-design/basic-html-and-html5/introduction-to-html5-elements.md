@@ -9,11 +9,12 @@ dashedName: introduction-to-html5-elements
 
 # --description--
 
-HTML5 introduces more descriptive HTML tags. These include `main`, `header`, `footer`, `nav`, `video`, `article`, `section` and others.
+HTML5 ได้มีการใช้ HTML tag ที่มันมีความหมายมากขึ้น นั่นรวมถึง `main`, `header`, `footer`, `nav`, `video`, `article`, `section` และอื่น ๆ 
 
-These tags give a descriptive structure to your HTML, make your HTML easier to read, and help with Search Engine Optimization (SEO) and accessibility. The `main` HTML5 tag helps search engines and other developers find the main content of your page.
+tag พวกนี้ได้มีการให้โครงสร้างที่อธิบายได้ด้วยตัวมันเอง ซึ่งช่วยให้โค้ดของคุณอ่านได้เข้าใจง่ายมากขึ้น และมันยังช่วยให้ Search Engine Optimization (SEO) ทำงานได้ดีขึ้นด้วย รวมถึงยังช่วยในเรื่องของความสามารถในการเข้าถึง
+`main` HTML5 tag จะช่วยให้ search engines และนักพัฒนาคนอื่นเจอเนื้อหาหลักที่อยู่ในหน้าเว็บของคุณ
 
-Example usage, a `main` element with two child elements nested inside it:
+ตัวอย่างการใช้ `main` element ที่มี child element 2 อยู่ข้างใน:
 
 ```html
 <main> 
@@ -22,17 +23,17 @@ Example usage, a `main` element with two child elements nested inside it:
 </main>
 ```
 
-**Note:** Many of the new HTML5 tags and their benefits are covered in the Applied Accessibility section.
+**Note:** แท็กใหม่ ๆ ของHTML5 และประโยชนืของพวกมันนั้นจะถูกกล่าวถึงใน Applied Accessibility section
 
 # --instructions--
 
-Create a second `p` element with the following kitty ipsum text: `Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.`
+จงเพิ่ม `p` element อันที่สองที่ตามด้วย kitty ipsum text ดังต่อไปนี้: `Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.`
 
-Then, create a `main` element and nest only the two `p` elements inside the `main` element.
+หลังจากนั้น จงสร้าง `main` element และเก็บ `p` element เพิ่มสองอันไว้ใน `main` element
 
 # --hints--
 
-You should have 2 `p` elements with Kitty Ipsum text.
+คุณควรมี 2 `p` element ที่มาพร้อมกับข้อความของ Kitty Ipsum text.
 
 ```js
 assert($('p').length > 1);

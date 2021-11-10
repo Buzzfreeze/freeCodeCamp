@@ -7,11 +7,13 @@ dashedName: part-103
 
 # --description--
 
-This building is going to have another triangle on top. Give the top section a `border-top` of `5vh solid transparent`, and a `border-left` that is `8vw`, `solid`, and uses your building color variable as the color.
+ตึกหลังนี้กำลังจะมีหลังคาที่เป็นรูปสามเหลี่ยม 
+จงกำหนดให้ส่วนบนมี  `border-top` เท่ากับ `5vh solid transparent`, และ`border-left` เท่ากับ `8vw`, `solid`
+และจงใช้สีของตึกคุณ color
 
 # --hints--
 
-You should give `.fb4a` a `border-top` of `5vh solid transparent`.
+คุณควรกำหนดให้ `.fb4a` มี `border-top` ที่มีลักษณะ `5vh solid transparent`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle(".fb4a")?.borderTop.trim(), "5vh solid transparent")
