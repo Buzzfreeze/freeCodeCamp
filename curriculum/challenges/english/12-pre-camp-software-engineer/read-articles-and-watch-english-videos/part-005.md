@@ -1,6 +1,6 @@
 ---
 id: 618b6cccc8f5697d0ee940e9
-title: Part 5
+title: Soft Skills in Tech - Five Core Competencies of a Great Developer
 challengeType: 11
 videoId: notshow
 dashedName: part-5
@@ -8,37 +8,43 @@ dashedName: part-5
 
 # --description--
 
-กรุณาอ่านบทความ [ที่นี่](https://www.freecodecamp.org/news/front-end-developer-vs-back-end-developer-definition-and-meaning-in-practice/) และตอบคำถามด้านล่าง
+กรุณาอ่านบทความ [ที่นี่](https://www.hanrec.com/post/soft-skills-great-developer) และตอบคำถามด้านล่าง
 
 ปล. เนื้อหาเพิ่มเติมจาก ประสบการณ์ Oak
 
-1) ผมทำแค่ Backend มาก่อนราวๆ 5 ปี ไม่ทำ Front end เลย CSS ไม่รู้เรื่องเลย 
-1) ทำ Front End แค่ตอนหลังๆ ทำไปก็ทำได้ แต่ไม่ชอบ
-1) เท่าที่คุยกับคนอื่นๆ มา การเป็น Full Stack จริงๆ คือทำได้ทั้ง Front และ Back แต่ว่าก็จะมีฝั่งที่ชอบมากกว่าอยู่ดี ถ้าเริ่มใหม่ๆ แนะนำให้ focus แค่ด้านเดียวก่อน แต่อีกด้านให้เข้าใจ ให้ทำงานได้ แต่ไม่ต้องเน้นมากก็ได้ ใน 2-3 ปีแรก 
-1) แล้วจุดไหนควรจะเป็นจุดที่เริ่ม focus อีกด้านหล่ะ?? จากความเห็นส่วนตัวคือ เมื่อรู้เทคโนโลยีด้านนึงครบถ้วน และไม่ต้องเรียนไรเพิ่มแล้ว
+1) การคิดด้าน Big Picture เป็นสิ่งที่สำคัญ ควรฝึกทั้งหมด
+1) ลองค้นหาเพิ่มเติมเรื่อง Computational Thinking ซึ่งจะมีทั้งหมด 4 แกน ให้ลองทำความเข้าใจ และจำให้ติดไว้ในหัวทุกๆ ครั้งของการทำงาน
 
 # --question--
 
 ## --text--
 
-ข้อใด้เป็นเทคโนโลยีฝั่ง Backend
+ข้อใด้ไม่ใช่สิ่งที่เป็น Soft Skill ที่ Software Engineer ควรมี
 
 ## --answers--
 
-ReactJS
+Eagerness to learn
 
 ---
 
-Vue
+Problem Solving Skills
 
 ---
 
-MongoDB
+Big Picture Thinking
 
 ---
 
-SASS
+Positive Attitude
+
+---
+
+Communication Skills
+
+---
+
+Coding Skills
 
 ## --video-solution--
 
-3
+6

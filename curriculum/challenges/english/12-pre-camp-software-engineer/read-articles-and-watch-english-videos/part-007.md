@@ -1,44 +1,42 @@
 ---
 id: 618b6ccf1279907d78e2df5b
-title: Part 7
+title: System Design Interview Tutorial – The Beginner's Guide to System Design
 challengeType: 11
-videoId: notshow
+videoId: YEwKnGARDZI
 dashedName: part-7
 ---
 
 # --description--
 
-กรุณาอ่านบทความ [ที่นี่](https://www.freecodecamp.org/news/front-end-developer-vs-back-end-developer-definition-and-meaning-in-practice/) และตอบคำถามด้านล่าง
+กรุณาดู clip ด้านบน หรืออ่านบทความประกอบ [ที่นี่](https://www.freecodecamp.org/news/system-design-interview-practice-tutorial/) และตอบคำถามด้านล่าง
 
 ปล. เนื้อหาเพิ่มเติมจาก ประสบการณ์ Oak
 
-1) ผมทำแค่ Backend มาก่อนราวๆ 5 ปี ไม่ทำ Front end เลย CSS ไม่รู้เรื่องเลย 
-1) ทำ Front End แค่ตอนหลังๆ ทำไปก็ทำได้ แต่ไม่ชอบ
-1) เท่าที่คุยกับคนอื่นๆ มา การเป็น Full Stack จริงๆ คือทำได้ทั้ง Front และ Back แต่ว่าก็จะมีฝั่งที่ชอบมากกว่าอยู่ดี ถ้าเริ่มใหม่ๆ แนะนำให้ focus แค่ด้านเดียวก่อน แต่อีกด้านให้เข้าใจ ให้ทำงานได้ แต่ไม่ต้องเน้นมากก็ได้ ใน 2-3 ปีแรก 
-1) แล้วจุดไหนควรจะเป็นจุดที่เริ่ม focus อีกด้านหล่ะ?? จากความเห็นส่วนตัวคือ เมื่อรู้เทคโนโลยีด้านนึงครบถ้วน และไม่ต้องเรียนไรเพิ่มแล้ว
+1) System Design เป็นอีก 1 เรื่องที่สนุก และต้องอ่านเยอะๆ เพราะว่าต้องอ่านและเห็นมาหลายๆ case study
+2) แนะนำอ่านเพิ่มเติมสำหรับคนที่สนใจที่ [System Design Primer](https://github.com/donnemartin/system-design-primer)
 
 # --question--
 
 ## --text--
 
-ข้อใด้เป็นเทคโนโลยีฝั่ง Backend
+ข้อใด้ขั้นตอนการคิดวิเคราะห์ด้าน System Design ตามลำดับที่ถูกต้อง
 
 ## --answers--
 
-ReactJS
+Create Data Schema -> Clarify the problem -> Capacity Estimates -> High Level Design -> API Design ->  Detail Components Design
 
 ---
 
-Vue
+Clarify the problem -> Capacity Estimates ->  API Design -> Create Data Schema -> Detail Components Design
 
 ---
 
-MongoDB
+Capacity Estimates -> High Level Design -> API Design -> Clarify the problem -> Create Data Schema -> Detail Components Design
 
 ---
 
-SASS
+Clarify the problem -> Capacity Estimates -> High Level Design -> API Design -> Create Data Schema -> Detail Components Design
 
 ## --video-solution--
 
-3
+4

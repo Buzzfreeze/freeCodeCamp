@@ -1,6 +1,6 @@
 ---
 id: 618b6cd2d9d5d67e1cf911c7
-title: Part 9
+title: อัพเดท Tech Stack ที่ใช้ที่ Wongnai Q1 2020
 challengeType: 11
 videoId: notshow
 dashedName: part-9
@@ -8,37 +8,35 @@ dashedName: part-9
 
 # --description--
 
-กรุณาอ่านบทความ [ที่นี่](https://www.freecodecamp.org/news/front-end-developer-vs-back-end-developer-definition-and-meaning-in-practice/) และตอบคำถามด้านล่าง
+กรุณาอ่านบทความ [ที่นี่](https://life.wongnai.com/wongnai-tech-stack-q1-2020-74f20a097139) และตอบคำถามด้านล่าง
 
 ปล. เนื้อหาเพิ่มเติมจาก ประสบการณ์ Oak
 
-1) ผมทำแค่ Backend มาก่อนราวๆ 5 ปี ไม่ทำ Front end เลย CSS ไม่รู้เรื่องเลย 
-1) ทำ Front End แค่ตอนหลังๆ ทำไปก็ทำได้ แต่ไม่ชอบ
-1) เท่าที่คุยกับคนอื่นๆ มา การเป็น Full Stack จริงๆ คือทำได้ทั้ง Front และ Back แต่ว่าก็จะมีฝั่งที่ชอบมากกว่าอยู่ดี ถ้าเริ่มใหม่ๆ แนะนำให้ focus แค่ด้านเดียวก่อน แต่อีกด้านให้เข้าใจ ให้ทำงานได้ แต่ไม่ต้องเน้นมากก็ได้ ใน 2-3 ปีแรก 
-1) แล้วจุดไหนควรจะเป็นจุดที่เริ่ม focus อีกด้านหล่ะ?? จากความเห็นส่วนตัวคือ เมื่อรู้เทคโนโลยีด้านนึงครบถ้วน และไม่ต้องเรียนไรเพิ่มแล้ว
+1) พยายามจับประเด็นแนวๆ ว่า แต่ละ Technology มันเกิดมาเพื่ออะไร ทำไมเค้าถึงใช้มัน?
+1) ลองพูดคุยแลกเปลี่ยนกับเพื่อนๆ ที่ [ระบบ Chat](https://chat.careervio.com/channel/tech-stack)
 
 # --question--
 
 ## --text--
 
-ข้อใด้เป็นเทคโนโลยีฝั่ง Backend
+ทำไม Wongnai จึงควรใช้ Huawei Cloud
 
 ## --answers--
 
-ReactJS
+เร็ว 
 
 ---
 
-Vue
+เป็น Cloud Provider เจ้าเดียวในไทย
 
 ---
 
-MongoDB
+แรง
 
 ---
 
-SASS
+ถูก
 
 ## --video-solution--
 
-3
+2
