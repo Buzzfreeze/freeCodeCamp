@@ -9,7 +9,7 @@ dashedName: returning-boolean-values-from-functions
 
 # --description--
 
-# - จากที่ได้เรียนรู้มาแล้วใน [Comparison with the Equality Operator](/learn/javascript-algorithms-and-data-structures/basic-javascript/comparison-with-the-equality-operator) ทุกการเปรียบเทียบจะคืนค่า boolean `true` หรือ `false`
+จากที่ได้เรียนรู้มาแล้วใน [Comparison with the Equality Operator](/learn/javascript-algorithms-and-data-structures/basic-javascript/comparison-with-the-equality-operator) ทุกการเปรียบเทียบจะคืนค่า boolean `true` หรือ `false`
 
 บางครั้งเราใช้ `if/else` statement เพื่อใช้ในการเปรียบเทียบดังนี้ 
 
@@ -49,8 +49,6 @@ assert(isLess(10, 15) === true);
 ```js
 assert(isLess(15, 10) === false);
 ```
-
-You should not use any `if` or `else` statements
 
 คุณไม่ควรใช้ `if` หรือ `else` statements
 

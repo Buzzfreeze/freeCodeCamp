@@ -24,47 +24,36 @@ strict inequality operator (`!==`) เป็นตรรกะที่ตรง
 
 # --instructions--
 
-Add the strict inequality operator to the `if` statement so the function will return the string `Not Equal` when `val` is not strictly equal to `17`
-
-# - เพิ่มเครื่องหมาย (`!==`) ในคำสั่ง `if` เพื่อให้ function ส่งคืนค่า string `Not Equal` เมื่อ `val` ไม่เท่า `17` ทั้งข้อมูลและประเภท
+เพิ่มเครื่องหมาย (`!==`) ในคำสั่ง `if` เพื่อให้ function ส่งคืนค่า string `Not Equal` เมื่อ `val` ไม่เท่า `17` ทั้งข้อมูลและประเภท
 
 # --hints--
 
-`testStrictNotEqual(17)` should return the string `Equal`
-
-# - `testStrictNotEqual(17)`  ควรคืนค่า string `Equal`
+`testStrictNotEqual(17)`  ควรคืนค่า string `Equal`
 
 ```js
 assert(testStrictNotEqual(17) === 'Equal');
 ```
 
-`testStrictNotEqual("17")` should return the string `Not Equal`
 
-# - `testStrictNotEqual("17")` ควรคืนค่า string `Not Equal`
+`testStrictNotEqual("17")` ควรคืนค่า string `Not Equal`
 
 ```js
 assert(testStrictNotEqual('17') === 'Not Equal');
 ```
 
-`testStrictNotEqual(12)` should return the string `Not Equal`
-
-# - `testStrictNotEqual(12)` ควรคืนค่า string `Not Equal`
+`testStrictNotEqual(12)` ควรคืนค่า string `Not Equal`
 
 ```js
 assert(testStrictNotEqual(12) === 'Not Equal');
 ```
 
-`testStrictNotEqual("bob")` should return the string `Not Equal`
-
-# - `testStrictNotEqual("bob")` ควรคืนค่า string `Not Equal`
+`testStrictNotEqual("bob")` ควรคืนค่า string `Not Equal`
 
 ```js
 assert(testStrictNotEqual('bob') === 'Not Equal');
 ```
 
-You should use the `!==` operator
-
-# - คุณควรใช้เครื่องหมาย `!==`
+คุณควรใช้เครื่องหมาย `!==`
 
 ```js
 assert(code.match(/(val\s*!==\s*\d+)|(\d+\s*!==\s*val)/g).length > 0);

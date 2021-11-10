@@ -46,8 +46,6 @@ assert(typeof reusableFunction === 'function');
 assert(testConsole());
 ```
 
-You should call `reusableFunction` once it is defined.
-
 คุณควรเรียกใช้ `reusableFunction` หลังจากสร้างฟังก์ชันแล้ว
 
 ```js
