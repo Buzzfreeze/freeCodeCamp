@@ -12,19 +12,19 @@ dashedName: part-39
 
 # --hints--
 
-คุณควรใส่ `for` attribute 1 อันใน`label` element
+คุณควรใส่ `for` attribute 1 อันใน `label` element
 
 ```js
 assert.notEmpty(document.querySelectorAll('.formrow > .question-block')?.[1]?.querySelector('label')?.htmlFor);
 ```
 
-You should give the `textarea` element an `id` attribute matching the `for` attribute of the `label` element.
+คุณควรกำหนดให้ `textarea` element มี `id` attribute ที่ตรงกับ `for` attribute ของ `label` element.
 
 ```js
 assert.equal(document.querySelectorAll('.formrow > .question-block')?.[1]?.querySelector('label')?.htmlFor, document.querySelectorAll('.answer')?.[1]?.querySelector('textarea')?.id);
 ```
 
-You should give the `textarea` element a `name` attribute.
+คุณควรกำหนดให้ `textarea` element มี `name` attribute อันหนึ่ง
 
 ```js
 assert.notEmpty(document.querySelectorAll('.answer')?.[1]?.querySelector('textarea')?.name);

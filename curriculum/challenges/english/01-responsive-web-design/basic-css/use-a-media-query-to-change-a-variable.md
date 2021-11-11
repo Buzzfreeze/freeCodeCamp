@@ -11,13 +11,13 @@ dashedName: use-a-media-query-to-change-a-variable
 
 ตัวแปร CSS สามารถทำให้การใช้ media queries ของคุณง่ายขึ้น
 
-ยกตัวอย่างเช่น, เมื่อจอของคุณเล็กกว่าและใหญ่กว่า break point ใน media query bของคุณ
-คุณสามารถเปลี่ยนค่าองตัวแปรและมันจะใช้ style ของมันเมื่อมันถูกเรียก
+ยกตัวอย่างเช่น, เมื่อจอของคุณเล็กกว่าหรือใหญ่กว่า break point ใน media query ของคุณ
+คุณสามารถเปลี่ยนค่าของตัวแปรและมันจะใช้ style ของมันเมื่อมันถูกเรียก
 
 # --instructions--
 
-ใน `:root` selector ของ `media query`, จงเปลี่ยนมันเพื่อที่ `--penguin-size` จะได้ถูกกำหนดค่าใหม่อีกครั้งและถูกกำหนดให้มีค่าเป็น `200px`
-นอกจากนี้ จงกำหนด `--penguin-skin` ใหม่และกำหนดให้มันมีค่าเป็น `black`
+ใน `:root` selector ของ `media query`, จงเปลี่ยนมันเพื่อที่ `--penguin-size` จะได้ถูกกำหนดค่าใหม่อีกครั้ง โดยให้มันมีค่าเท่ากับ `200px`
+นอกจากนี้ จงประกาศ `--penguin-skin` ขึ้นมาใหม่และกำหนดให้มันมีค่าเป็น `black`
 หลังจากนั้น จงปรับขนาดของ preview เพื่อดูว่ามันเปลี่ยนไปอย่างไร
 
 # --hints--
@@ -32,7 +32,7 @@ assert(
 );
 ```
 
-`:root` should reassign the `--penguin-skin` variable to `black`.
+`:root` ควรกำหนดค่าใหม่ให้ตัวแปร`--penguin-skin` เป็น `black`
 
 ```js
 assert(

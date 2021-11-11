@@ -10,16 +10,16 @@ dashedName: use-hex-code-to-mix-colors
 # --description--
 
 เพื่อรีวิว hex codes จะใช้เลขฐาน 16 6 ตัวเพื่อเป็นตัวแทนของสี
-เลขทุก ๆ 2 ตัวจะแทนด้วยความประกอบของสีแดง (R), สีเขียว (G), และสีฟ้า (B) 
+เลขทุก ๆ 2 ตัวจะแทนด้วยความประกอบของสีแดง (R), สีเขียว (G), และสีน้ำเงิน (B) 
 
-จากสีหลักสามสีนี้ (แดง เขียว และฟ้า), เราสามารถสร้างสีได้ถึง 16 ล้านสี!
+จากสีหลักสามสีนี้ (แดง เขียว และน้ำเงิน), เราสามารถสร้างสีได้ถึง 16 ล้านสี!
 
-ยกตัวอย่างเช่น สีส้มคือสีแดงผมผสมกับสีเขียวนิดหน่วยและไม่มีสีฟ้า
+ยกตัวอย่างเช่น สีส้มคือสีแดงผมผสมกับสีเขียวนิดหน่อยและไม่ใส่สีน้ำเงินเลย
 ใน hex code, มันจะถูกแปลงให้เป็น `#FFA500`
 
- `0` เป็นค่าที่ต่ำที่สุดใน hex code, และหมายถึงการที่ไม่มีสีนั้นเลย
+`0` เป็นค่าที่ต่ำที่สุดใน hex code, และหมายถึงการที่ไม่มีสีนั้นเลย
 
- `F` เป็นค่าที่สูงที่สุดใน hex code, และหมายถึงให้ความสว่างที่มากสุดที่เป็นไปได้จ
+`F` เป็นค่าที่สูงที่สุดใน hex code, และหมายถึงให้ความสว่างที่มากสุดที่เป็นไปได้
 
 # --instructions--
 
@@ -35,43 +35,43 @@ dashedName: use-hex-code-to-mix-colors
 assert($('.red-text').css('color') === 'rgb(255, 0, 0)');
 ```
 
-The `hex code` for the color red should be used instead of the word `red`.
+`hex code` สำหรับสีแดงควรถูกใช้แทนคำว่า `red`.
 
 ```js
 assert(code.match(/\.red-text\s*?{\s*?color\s*:\s*?(#FF0000|#F00)\s*?;?\s*?}/gi));
 ```
 
-Your `h1` element with the text `I am green!` should be given the `color` green.
+`h1` element ที่มีข้อความว่า `I am green!` ควรมี `color` เขียว
 
 ```js
 assert($('.green-text').css('color') === 'rgb(0, 255, 0)');
 ```
 
-The `hex code` for the color green should be used instead of the word `green`.
+`hex code` สำหรับสีเขียวควรถูกใช้แทนคำว่า `green`.
 
 ```js
 assert(code.match(/\.green-text\s*?{\s*?color\s*:\s*?(#00FF00|#0F0)\s*?;?\s*?}/gi));
 ```
 
-Your `h1` element with the text `I am dodger blue!` should be given the `color` dodger blue.
+`h1` element ที่มีข้อความว่า `I am dodgerblue!` ควรมี `color` dodgerblue
 
 ```js
 assert($('.dodger-blue-text').css('color') === 'rgb(30, 144, 255)');
 ```
 
-The `hex code` for the color dodger blue should be used instead of the word `dodgerblue`.
+`hex code` สำหรับสี dodgerblue ควรถูกใช้แทนคำว่า `dodgerblue`.
 
 ```js
 assert(code.match(/\.dodger-blue-text\s*?{\s*?color\s*:\s*?#1E90FF\s*?;?\s*?}/gi));
 ```
 
-Your `h1` element with the text `I am orange!` should be given the `color` orange.
+`h1` element ที่มีข้อความว่า `I am orange!` ควรมี `color` ส้ม
 
 ```js
 assert($('.orange-text').css('color') === 'rgb(255, 165, 0)');
 ```
 
-The `hex code` for the color orange should be used instead of the word `orange`.
+`hex code` สำหรับสีส้มควรถูกใช้แทนคำว่า `orange`.
 
 ```js
 assert(code.match(/\.orange-text\s*?{\s*?color\s*:\s*?#FFA500\s*?;?\s*?}/gi));

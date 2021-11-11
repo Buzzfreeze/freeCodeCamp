@@ -21,19 +21,19 @@ dashedName: part-48
 assert.equal(new __helpers.CSSHelp(document).getStyle('h1')?.textAlign, 'center');
 ```
 
-You should add a `main` selector to target the `main` element.
+คุณควรเพิ่ม `main` selector เพื่อชี้ไปที่ `main` element.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('main'));
 ```
 
-You should give the `main` a `padding-top` of at least `25px`.
+คุณควรกำหนดให้ `main` มี `padding-top` ที่มีค่าอย่างน้อย `25px`
 
 ```js
 assert.isAtLeast(Number(new __helpers.CSSHelp(document).getStyle('main')?.paddingTop?.replace(/\D+/, '')), 25);
 ```
 
-You should only change the `padding-top` value.
+คุณควรเปลี่ยนแค่ค่า `padding-top` 
 
 ```js
 assert.isEmpty(new __helpers.CSSHelp(document).getStyle('main')?.paddingBottom);

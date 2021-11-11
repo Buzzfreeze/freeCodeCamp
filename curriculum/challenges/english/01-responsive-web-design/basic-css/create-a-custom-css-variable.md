@@ -20,7 +20,7 @@ dashedName: create-a-custom-css-variable
 
 # --instructions--
 
-ใน`penguin` class, จงสร้างตัวแปรที่ชื่อ `--penguin-skin` และกำหนดให้มันมีค่าเป็น `gray`
+ใน `penguin` class, จงสร้างตัวแปรที่ชื่อ `--penguin-skin` และกำหนดให้มันมีค่าเป็น `gray`
 
 # --hints--
 

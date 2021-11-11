@@ -15,29 +15,29 @@ CSS ทำให้คุณสามารถควบคุม `margin` ขอ
 
 # --instructions--
 
-จงกำหนดให้กล่องสีฟ้ามี `margin` เท่ากับ `40px` ที่ด้านบนและซ้าย แต่เท่ากับ `20px` ที่ด้านล่างและขวา
+จงกำหนดให้กล่องสีน้ำเงินมี `margin` เท่ากับ `40px` ที่ด้านบนและซ้าย แต่เท่ากับ `20px` ที่ด้านล่างและขวา
 
 # --hints--
 
-`blue-box` class ควรกำหนดให้ ด้านบนของ element มี `40px` เป็นค่า `margin`
+`blue-box` class ควรกำหนดให้ด้านบนของelement มีค่า `margin` เท่ากับ `40px`
 
 ```js
 assert($('.blue-box').css('margin-top') === '40px');
 ```
 
-Your `blue-box` class should give the right of elements `20px` of `margin`.
+`blue-box` class ควรกำหนดให้ด้านขวาของelement มีค่า `margin` เท่ากับ `20px`
 
 ```js
 assert($('.blue-box').css('margin-right') === '20px');
 ```
 
-Your `blue-box` class should give the bottom of elements `20px` of `margin`.
+`blue-box` class ควรกำหนดให้ด้านล่างของelement มีค่า `margin` เท่ากับ `20px`
 
 ```js
 assert($('.blue-box').css('margin-bottom') === '20px');
 ```
 
-Your `blue-box` class should give the left of elements `40px` of `margin`.
+`blue-box` class ควรกำหนดให้ด้านซ้ายของ element มีค่า `margin` เท่ากับ `40px`
 
 ```js
 assert($('.blue-box').css('margin-left') === '40px');

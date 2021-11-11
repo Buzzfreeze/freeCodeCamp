@@ -20,37 +20,37 @@ dashedName: part-50
 assert.exists(new __helpers.CSSHelp(document).getStyle('section'));
 ```
 
-You should give the `section` a `width` of `80%`.
+คุณควรกำหนดให้ `section` มี `width` เท่ากับ `80%`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('section')?.width, '80%');
 ```
 
-You should give the `section` a `margin-top` of `0`.
+คุณควรกำหนดให้ `section` มี `margin-top` เท่ากับ `0`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('section')?.marginTop, '0px');
 ```
 
-You should give the `section` a `margin-right` of `auto`.
+คุณควรกำหนดให้ `section` มี `margin-right` เป็นแบบ `auto`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('section')?.marginRight, 'auto');
 ```
 
-You should give the `section` a `margin-bottom` of `10px`.
+คุณควรกำหนดให้ `section` มี `margin-bottom` เท่ากับ `10px`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('section')?.marginBottom, '10px');
 ```
 
-You should give the `section` a `margin-left` of `auto`.
+คุณควรกำหนดให้ `section` มี `margin-left` เป็นแบบ `auto`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('section')?.marginLeft, 'auto');
 ```
 
-You should give the `section` a `max-width` of `600px`.
+คุณควรกำหนดให้ `section` มี `max-width` เท่ากับ `600px`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('section')?.maxWidth, '600px');

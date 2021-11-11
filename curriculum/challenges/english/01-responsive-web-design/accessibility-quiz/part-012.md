@@ -23,31 +23,31 @@ dashedName: part-12
 assert.equal(document.querySelectorAll('nav > ul')?.length, 1);
 ```
 
-You should nest three `li` elements inside the `ul` element.
+คุณควรเก็บ `li` element 3 อันไว้ใน `ul` element.
 
 ```js
 assert.equal(document.querySelectorAll('nav > ul > li')?.length, 3);
 ```
 
-You should nest one `a` element inside each `li` element.
+คุณควรเก็บ `a` element อันหนึ่งไว้ใน `li` element.
 
 ```js
 assert.equal(document.querySelectorAll('nav > ul > li > a')?.length, 3);
 ```
 
-You should give the first `a` element the text `INFO`.
+คุณควรกำหนดให้ `a` element อันแรกมีข้อความที่เขียนว่า `INFO`
 
 ```js
 assert.equal(document.querySelectorAll('nav > ul > li > a')?.[0]?.textContent, 'INFO');
 ```
 
-You should give the second `a` element the text `HTML`.
+คุณควรกำหนดให้ `a` element อันที่สองมีข้อความที่เขียนว่า `HTML`.
 
 ```js
 assert.equal(document.querySelectorAll('nav > ul > li > a')?.[1]?.textContent, 'HTML');
 ```
 
-You should give the third `a` element the text `CSS`.
+คุณควรกำหนดให้ `a` element อันที่สามมีข้อความที่เขียนว่า `CSS`.
 
 ```js
 assert.equal(document.querySelectorAll('nav > ul > li > a')?.[2]?.textContent, 'CSS');

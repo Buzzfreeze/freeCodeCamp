@@ -21,31 +21,31 @@ dashedName: part-9
 assert.equal(new __helpers.CSSHelp(document).getStyle('#logo')?.backgroundColor, 'rgb(10, 10, 35)');
 ```
 
-You should use the `aspect-ratio` property.
+Yคุณควรใช้ `aspect-ratio` property.
 
 ```js
 assert.notEmpty(new __helpers.CSSHelp(document).getStyle('#logo')?.aspectRatio);
 ```
 
-You should not use the `height` property.
+คุณไม่ควรใช้ `height` property.
 
 ```js
 assert.isEmpty(new __helpers.CSSHelp(document).getStyle('#logo')?.height);
 ```
 
-You should not change the `width` property.
+คุณไม่ควรเปลี่ยน `width` property.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('#logo')?.width, 'max(100px, 18vw)');
 ```
 
-You should give the `img` an `aspect-ratio` of `35 / 4`.
+คุณควรกำหนดให้ `img` มี `aspect-ratio` เท่ากับ `35 / 4`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('#logo')?.aspectRatio, '35 / 4');
 ```
 
-You should give the `img` a `padding` of `0.4rem`.
+คุณควรกำหนดให้ `img` มี `padding` เท่ากับ `0.4rem`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('#logo')?.padding, '0.4rem');

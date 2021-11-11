@@ -9,13 +9,13 @@ dashedName: define-the-head-and-body-of-an-html-document
 
 # --description--
 
-คุณสามารถเพิ่มลำดับการจัดวางของ HTML document ภายในแท็ก `html` ได้ด้วย `head` และ `body` elements
+คุณสามารถเพิ่มลำดับการจัดวางของ HTML document ภายในแท็ก `html` ได้ด้วย `head` และ `body` element
 markup ใดก็ตามที่มาพร้อมกับข้อมูลเกี่ยวกับหน้าเว็บไซต์ของคุณจะถูกเก็บในแท็ก `head`
 ต่อจากนั้น markup ใด ๆ ที่เป็นเนื้อหาของหน้านั้นซึ่งต้องถูกแสดงให้ผู้ใช้เห็น ก็จะอยู่ในแท็ก `body` 
 
-Metadata elements, เช่น `link`, `meta`, `title`, และ `style`, โดยปกติแล้วจะไปอยู่ใน `head` element
+โดยปกติแล้ว Metadata elements อย่างเช่น `link`, `meta`, `title`, และ `style`, จะอยู่ใน `head` element
 
-นี่คือตัวอย่างของ page's layout:
+นี่คือตัวอย่างของ layout ของหน้าเว็บไซต์หน้าหนึ่ง:
 
 ```html
 <!DOCTYPE html>
@@ -32,26 +32,26 @@ Metadata elements, เช่น `link`, `meta`, `title`, และ `style`, โ�
 
 # --instructions--
 
-จงแก้ไขให้ markup มี `head` และ `body` อย่าละอัน
-`head` element ควณจะมีแค่ `title`, ส่วน `body` element ควรมีแค่ `h1` และ `p`
+จงแก้ไขให้ markup มี `head` และ `body` อย่างละอัน
+`head` element ควรจะมีแค่ `title`, ส่วน `body` element ควรมีแค่ `h1` และ `p`
 
 # --hints--
 
-มันคือมีแค่ `head` element 1 อันในหน้านี้
+มันควรมีแค่ `head` element อันหนึ่งในหน้านี้
 
 ```js
 const headElems = code.replace(/\n/g, '').match(/\<head\s*>.*?\<\/head\s*>/g);
 assert(headElems && headElems.length === 1);
 ```
 
-There should be only one `body` element on the page.
+มันควรมีแค่ `body` element อันหนึ่งในหน้านี้
 
 ```js
 const bodyElems = code.replace(/\n/g, '').match(/<body\s*>.*?<\/body\s*>/g);
 assert(bodyElems && bodyElems.length === 1);
 ```
 
-The `head` element should be a child of the `html` element.
+`head` element ควรจะเป็น child หนึ่งของ `html` element
 
 ```js
 const htmlChildren = code
@@ -66,7 +66,7 @@ if (htmlChildren) {
 assert(foundHead);
 ```
 
-The `body` element should be a child of the `html` element.
+`body` element ควรจะเป็น child หนึ่งของ `html` element.
 
 ```js
 const htmlChildren = code
@@ -80,7 +80,7 @@ if (htmlChildren) {
 assert(foundBody);
 ```
 
-The `head` element should wrap around the `title` element.
+`head` element ควรจะเป็นที่อยู่ของ `title` element
 
 ```js
 const headChildren = code
@@ -94,7 +94,7 @@ if (headChildren) {
 assert(foundTitle);
 ```
 
-The `body` element should wrap around both the `h1` and `p` elements.
+`body` element ควรจะเป็นที่อยู่ของทั้ง `h1` และ `p` element
 
 ```js
 const bodyChildren = code

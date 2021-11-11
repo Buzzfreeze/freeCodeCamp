@@ -17,9 +17,9 @@ dashedName: import-a-google-font
 
 ดังนั้น เรามาลองนำเข้าและใช้ Google font กัน
 
-เพื่อที่จะนำเช้า Google Font, คุรสามารถคัดลอก URL ของฟ้อนต์จาก Google Fonts library และวางมันไว้ใน HTML ของคุณ
+เพื่อที่จะนำเข้า Google Font, คุณสามารถคัดลอก URL ของฟ้อนต์จาก Google Fonts library และวางมันไว้ใน HTML ของคุณ
 สำหรับแบบฝึกหัดนี้ เราจะนำเข้า `Lobster` font
-เพื่อที่จะทำเช่นนี้ จงคัดลอก code snippet ข้างล่างและวางมันไว้ที่ด้านบนของ code editor ของคุณ (การแท็กเปิดของ `style` element):
+เพื่อที่จะทำเช่นนี้ จงคัดลอก code snippet ข้างล่างและวางมันไว้ที่ด้านบนของ code editor ของคุณ (ก่อนแท็กเปิดของ `style` element):
 
 ```html
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
@@ -39,17 +39,17 @@ Family names เป็น case-sensitive และจะต้องถูกค
 
 # --instructions--
 
-ขงนำเข้า `Lobster` font มาที่หน้าเว็บของคุณ หลังจากนั้นจงใช้ element selector เพือกำหนดให้ `Lobster` เป็น `font-family` สำหรับ `h2` element
+จงนำเข้า `Lobster` font มาที่หน้าเว็บของคุณ หลังจากนั้นจงใช้ element selector เพื่อกำหนดให้ `Lobster` เป็น `font-family` สำหรับ `h2` element
 
 # --hints--
 
-Yคุณควรนำ `Lobster` font เข้ามา
+คุณควรนำ `Lobster` font เข้ามา
 
 ```js
 assert($('link[href*="googleapis" i]').length);
 ```
 
-Your `h2` element should use the font `Lobster`.
+`h2` element ควรใช้ฟ้อนต์ `Lobster`.
 
 ```js
 assert(
@@ -59,7 +59,7 @@ assert(
 );
 ```
 
-You should only use an `h2` element selector to change the font.
+คุณควรใช้แค่ `h2` element selector เพื่อเปลี่ยนฟ้อนต์
 
 ```js
 assert(
@@ -69,7 +69,7 @@ assert(
 );
 ```
 
-Your `p` element should still use the font `monospace`.
+`p` element ควรจะยังใช้ฟ้อนต์ `monospace` อยู่
 
 ```js
 assert(

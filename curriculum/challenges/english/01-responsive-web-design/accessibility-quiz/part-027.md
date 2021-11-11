@@ -18,31 +18,31 @@ dashedName: part-27
 assert.equal(document.querySelectorAll('.question-block:nth-of-type(1) > fieldset > legend')?.length, 1);
 ```
 
-You should nest one `ul` element within the first `fieldset` element.
+คุณควรใส่ `ul` element ไว้ใน `fieldset` element อันแรก
 
 ```js
 assert.equal(document.querySelectorAll('.question-block:nth-of-type(1) > fieldset > ul')?.length, 1);
 ```
 
-You should nest two `li` elements within the first `ul` element.
+คุณควรใส่ `li` element 5 อันไว้ใน `ul` element อันแรก
 
 ```js
 assert.equal(document.querySelectorAll('fieldset > ul')?.[0]?.querySelectorAll('li')?.length, 2);
 ```
 
-You should nest one `legend` element within the second `fieldset` element.
+คุณควรใส่ `legend` element อันหนึ่งไว้ใน `fieldset` element อันที่สอง
 
 ```js
 assert.equal(document.querySelectorAll('.question-block:nth-of-type(2) > fieldset > legend')?.length, 1);
 ```
 
-You should nest one `ul` element within the second `fieldset` element.
+คุณควรใส่ `ul` element อันหนึ่งไว้ใน `fieldset` element อันที่สอง
 
 ```js
 assert.equal(document.querySelectorAll('.question-block:nth-of-type(2) > fieldset > ul')?.length, 1);
 ```
 
-You should nest two `li` elements within the second `ul` element.
+คุณควรใส่ `li` elements สองอันไว้ใน `ul` element อันที่สอง
 
 ```js
 assert.equal(document.querySelectorAll('fieldset > ul')?.[1]?.querySelectorAll('li')?.length, 2);

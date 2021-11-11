@@ -34,55 +34,55 @@ border: 0;
 assert.exists(new __helpers.CSSHelp(document).getStyle('.sr-only'));
 ```
 
-You should give the `.sr-only` a `position` of `absolute`.
+คุณควรกำหนดให้ `.sr-only` มี `position` เป็นแบบ `absolute`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.sr-only')?.position, 'absolute');
 ```
 
-You should give the `.sr-only` a `width` of `1px`.
+คุณควรกำหนดให้ `.sr-only` มี `width` เท่ากับ `1px`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.sr-only')?.width, '1px');
 ```
 
-You should give the `.sr-only` a `height` of `1px`.
+คุณควรกำหนดให้ `.sr-only` มี `height` เท่ากับ `1px`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.sr-only')?.height, '1px');
 ```
 
-You should give the `.sr-only` a `padding` of `0`.
+คุณควรกำหนดให้ `.sr-only` มี `padding` เท่ากับ `0`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.sr-only')?.padding, '0px');
 ```
 
-You should give the `.sr-only` a `margin` of `-1px`.
+คุณควรกำหนดให้ `.sr-only` มี `margin` เท่ากับ `-1px`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.sr-only')?.margin, '-1px');
 ```
 
-You should give the `.sr-only` an `overflow` of `hidden`.
+คุณควรกำหนดให้ `.sr-only` มี `overflow` เท่ากับ `hidden`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.sr-only')?.overflow, 'hidden');
 ```
 
-You should give the `.sr-only` a `clip` of `rect(0, 0, 0, 0)`.
+คุณควรกำหนดให้ `.sr-only` มี `clip` เท่ากับ `rect(0, 0, 0, 0)`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.sr-only')?.clip, 'rect(0px, 0px, 0px, 0px)');
 ```
 
-You should give the `.sr-only` a `white-space` of `nowrap`.
+คุณควรกำหนดให้ `.sr-only` มี `white-space` เป็นแบบ `nowrap`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.sr-only')?.whiteSpace, 'nowrap');
 ```
 
-You should give the `.sr-only` a `border` of `0`.
+คุณควรกำหนดให้ `.sr-only` มี `border` เท่ากับ `0`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.sr-only')?.border, '0px');

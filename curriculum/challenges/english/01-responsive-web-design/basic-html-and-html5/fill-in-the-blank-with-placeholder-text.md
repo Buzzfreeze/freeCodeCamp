@@ -14,7 +14,7 @@ lorem ipsum text เป็นข้อความที่สุ่มมาจ
 
 Lorem ipsum text ถูกใช้เพื่อเป็น placeholder text โดย typesetter ตั้งแต่ศตวรรษที่ 16 และนี่ก็เป็นเหมือนธรรมเนียมที่ทำต่อ ๆ กันมาสำหรับคนทำเว็บ
 
-อย่างไรก็ดี, 500 ปีมันก็ค่อนข้างจะยาวนานไปหน่อย ไหน ๆ เราก็กำลังทำ CatPhotoApp ฉะนั้นมาใช้อะไรที่เรียกว่า "kitty ipsum" text กันดีกว่า
+อย่างไรก็ดี, 500 ปีมันก็ค่อนข้างจะยาวนานไปหน่อย ไหน ๆ เราก็กำลังทำ CatPhotoApp ฉะนั้นมาใช้อะไรที่เรียกว่าชุดตัวอักษร `kitty ipsum` กันดีกว่า
 
 # --instructions--
 
@@ -22,7 +22,7 @@ Lorem ipsum text ถูกใช้เพื่อเป็น placeholder text 
 
 # --hints--
 
-`p` element ควรมีคำชุดแรกของ "kitty ipsum" text
+`p` element ควรเก็บข้อความช่วงต้นบางส่วนจาก "kitty ipsum" (ดูข้อความนั้นได้ที่ instructions)
 
 ```js
 assert.isTrue(/Kitty(\s)+ipsum/gi.test($('p').text()));

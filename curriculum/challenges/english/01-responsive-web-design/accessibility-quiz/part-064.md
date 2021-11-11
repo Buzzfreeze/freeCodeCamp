@@ -18,31 +18,31 @@ dashedName: part-64
 assert.exists(new __helpers.CSSHelp(document).getStyle('address'));
 ```
 
-You should give `address` a `text-align` of `center`.
+คุณควรกำหนดให้ `address` มี `text-align` เป็น `center`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('address')?.textAlign, 'center');
 ```
 
-You should give `address` a `padding-top` of at least `1px`.
+คุณควรกำหนดให้ `address` มี `padding-top` อย่างน้อย `1px`.
 
 ```js
 assert.isAtLeast(Number(new __helpers.CSSHelp(document).getStyle('address')?.paddingTop?.replace(/\D+/, '')), 1);
 ```
 
-You should give `address` a `padding-right` of at least `1px`.
+คุณควรกำหนดให้ `address` มี `padding-right` อย่างน้อย `1px`.
 
 ```js
 assert.isAtLeast(Number(new __helpers.CSSHelp(document).getStyle('address')?.paddingRight?.replace(/\D+/, '')), 1);
 ```
 
-You should give `address` a `padding-bottom` of at least `1px`.
+คุณควรกำหนดให้ `address` มี `padding-bottom` อย่างน้อย `1px`.
 
 ```js
 assert.isAtLeast(Number(new __helpers.CSSHelp(document).getStyle('address')?.paddingBottom?.replace(/\D+/, '')), 1);
 ```
 
-You should give `address` a `padding-left` of at least `1px`.
+คุณควรกำหนดให้ `address` มี `padding-left` อย่างน้อย `1px`.
 
 ```js
 assert.isAtLeast(Number(new __helpers.CSSHelp(document).getStyle('address')?.paddingLeft?.replace(/\D+/, '')), 1);

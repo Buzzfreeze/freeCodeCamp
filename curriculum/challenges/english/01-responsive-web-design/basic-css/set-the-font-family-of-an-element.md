@@ -9,9 +9,9 @@ dashedName: set-the-font-family-of-an-element
 
 # --description--
 
-คุณสามารถกำหนดว่าจะใช้ฟ้อนต์กับ elementใด โดยการใช้ `font-family` property.
+คุณสามารถกำหนดว่าจะใช้ฟ้อนต์กับ element ใด โดยการใช้ `font-family` property.
 
-ยกตัวอย่างเช่น ถ้าคุณต้องการกำหนดให้ฟ้อนต์ของ `h2` element เป็น `sans-serif`, คุณสามารถใช้ CSS ได้ดังนี้:
+ยกตัวอย่างเช่น ถ้าคุณต้องการกำหนดให้ฟ้อนต์ของ `h2` element เป็น `sans-serif`, คุณสามารถเขียน CSS ได้ดังนี้:
 
 ```css
 h2 {

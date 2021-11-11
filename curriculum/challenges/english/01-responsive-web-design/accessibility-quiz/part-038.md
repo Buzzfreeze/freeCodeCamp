@@ -19,7 +19,7 @@ dashedName: part-38
 assert.exists(document.querySelectorAll('div.answer')?.[1]?.querySelector('textarea'));
 ```
 
-You should give the `textarea` a `rows` attribute with a number.
+คุณควรกำหนดให้ `textarea` มี `rows` attribute เป็นตัวเลขค่าหนึ่ง
 
 ```js
 const rows = document.querySelectorAll('div.answer')?.[1]?.querySelector('textarea')?.getAttribute('rows');
@@ -27,7 +27,7 @@ assert.notEmpty(rows);
 assert.isNotNaN(Number(rows));
 ```
 
-You should give the `textarea` a `cols` attribute with a number.
+คุณควรกำหนกให้ `textarea` มี `cols` attribute เป็นตัวเลขค่าหนึ่ง
 
 ```js
 const cols = document.querySelectorAll('div.answer')?.[1]?.querySelector('textarea')?.getAttribute('cols');
@@ -35,7 +35,7 @@ assert.notEmpty(cols);
 assert.isNotNaN(Number(cols));
 ```
 
-You should give the `textarea` placeholder text describing an example answer.
+คุณควรกำหนดให้ `textarea` มี placeholder text ที่สามารถอธิบายคำตอบตัวอย่าง
 
 ```js
 assert.notEmpty(document.querySelectorAll('div.answer')?.[1]?.querySelector('textarea')?.textContent);

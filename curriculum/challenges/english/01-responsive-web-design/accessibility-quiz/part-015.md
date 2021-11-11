@@ -20,13 +20,13 @@ Give each of the `section` elements the `region` role.
 assert.equal(document.querySelectorAll('section')?.[0]?.getAttribute('role'), 'region');
 ```
 
-You should give the second `section` element the `region` role.
+คุณควรกำหนดให้ `section` element อันที่สองมี `region` role.
 
 ```js
 assert.equal(document.querySelectorAll('section')?.[1]?.getAttribute('role'), 'region');
 ```
 
-You should give the third `section` element the `region` role.
+Yคุณควรกำหนดให้ `section` element อันที่สามมี `region` role.
 
 ```js
 assert.equal(document.querySelectorAll('section')?.[2]?.getAttribute('role'), 'region');

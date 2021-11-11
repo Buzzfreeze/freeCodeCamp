@@ -17,25 +17,25 @@ dashedName: part-40
 assert.exists(document.querySelector('button') || document.querySelector('main > input') || document.querySelector('form > input'));
 ```
 
-You should place the submit within the `form` element.
+คุณควรวาง submit ไว้ใน `form` element.
 
 ```js
 assert.exists(document.querySelector('form > button') || document.querySelector('form > input'));
 ```
 
-You should place the submit after the last `section` element.
+คุณควรวาง submit ไว้ต่อจาก `section` element อันสุดท้าย
 
 ```js
 assert.exists(document.querySelector('section:last-of-type + button') || document.querySelector('section:last-of-type + input'));
 ```
 
-You should give the submit a `type` of `submit`.
+คุณควรกำหนดให้ submit มี `type` เป็น `submit`
 
 ```js
 assert.exists(document.querySelector('button[type="submit"]') || document.querySelector('form > input[type="submit"]'));
 ```
 
-The submit should display the text `Submit`.
+submit ควรจะแสดงข้อความที่เขียนว่า `Submit`
 
 ```js
 assert.equal(document.querySelector('button[type="submit"]')?.textContent ?? document.querySelector('input[type="submit"]')?.value, 'Submit');

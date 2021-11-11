@@ -25,7 +25,7 @@ dashedName: use-rgb-to-mix-colors
 assert($('.red-text').css('color') === 'rgb(255, 0, 0)');
 ```
 
-You should use `rgb` for the color red.
+คุณควรใช้ `rgb` สำหรับสีแดง
 
 ```js
 assert(
@@ -35,13 +35,13 @@ assert(
 );
 ```
 
-Your `h1` element with the text `I am orchid!` should have the `color` orchid.
+`h1` element ที่มีข้อความว่า `I am orchid!` ควรมีสี `color` ดอกกล้วยไม้
 
 ```js
 assert($('.orchid-text').css('color') === 'rgb(218, 112, 214)');
 ```
 
-You should use `rgb` for the color orchid.
+คุณควรใช้ `rgb` สำหรับสีดอกกล้วยไม้
 
 ```js
 assert(
@@ -51,13 +51,13 @@ assert(
 );
 ```
 
-Your `h1` element with the text `I am blue!` should have the `color` blue.
+`h1` element ที่มีข้อความว่า `I am blue!` ควรมีสี `color` น้ำเงิน
 
 ```js
 assert($('.blue-text').css('color') === 'rgb(0, 0, 255)');
 ```
 
-You should use `rgb` for the color blue.
+คุณควรใช้`rgb` สำหรับสีน้ำเงิน
 
 ```js
 assert(
@@ -67,13 +67,13 @@ assert(
 );
 ```
 
-Your `h1` element with the text `I am sienna!` should have the `color` sienna.
+`h1` element ที่มีข้อความว่า `I am sienna!` ควรมีสี `color` sienna.
 
 ```js
 assert($('.sienna-text').css('color') === 'rgb(160, 82, 45)');
 ```
 
-You should use `rgb` for the color sienna.
+คุณควรใช้ `rgb` สำหรับค่าสี sienna
 
 ```js
 assert(

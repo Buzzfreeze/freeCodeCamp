@@ -18,19 +18,19 @@ Then, fix the `header` to the top of the viewport.
 assert.equal(new __helpers.CSSHelp(document).getStyle('header')?.justifyContent, 'space-between');
 ```
 
-You should give the `header` an `align-items` of `center`.
+คุณควรกำหนดให้ `header` มี `align-items` อยู่ที่ `center`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('header')?.alignItems, 'center');
 ```
 
-You should give the `header` a `position` of `fixed`.
+คุณควรกำหนดให้ `header` มี `position` เป็นแบบ `fixed`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('header')?.position, 'fixed');
 ```
 
-You should give the `header` a `top` of `0`.
+คุณควรกำหนดให้ `header` มี `top` เท่ากับ `0`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('header')?.top, '0px');

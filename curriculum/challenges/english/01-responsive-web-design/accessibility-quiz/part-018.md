@@ -17,13 +17,13 @@ dashedName: part-18
 assert.equal(document.querySelectorAll('a')?.[0]?.getAttribute('href'), '#student-info');
 ```
 
-You should give the second `a` element an `href` of `#html-questions`.
+คุณควรกำหนดให้ `a` element อันที่สองมี `href` เป็น `#html-questions`.
 
 ```js
 assert.equal(document.querySelectorAll('a')?.[1]?.getAttribute('href'), '#html-questions');
 ```
 
-You should give the third `a` element an `href` of `#css-questions`.
+คุณควรกำหนดให้ `a` element อันที่สามมี `href` เป็น `#css-questions`.
 
 ```js
 assert.equal(document.querySelectorAll('a')?.[2]?.getAttribute('href'), '#css-questions');

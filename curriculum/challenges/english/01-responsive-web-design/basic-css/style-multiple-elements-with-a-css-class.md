@@ -9,8 +9,8 @@ dashedName: style-multiple-elements-with-a-css-class
 
 # --description--
 
-Class ทำให้คุณสามารถใช้ CSS style อันเดียวกันกับ HTML element หลาย ๆ อันได้
-คุณสามารถเห็นมันได้โดยการใส่ `red-text` class ให้กับ `p` element อันแรก
+`class` ทำให้คุณสามารถใช้ CSS style อันเดียวกันกับ HTML element หลาย ๆ อันได้
+คุณพิสูจน์มันได้โดยการใส่ `red-text` class ให้กับ `p` element อันแรก
 
 # --hints--
 
@@ -20,19 +20,19 @@ Class ทำให้คุณสามารถใช้ CSS style อันเ
 assert($('h2').css('color') === 'rgb(255, 0, 0)');
 ```
 
-Your `h2` element should have the class `red-text`.
+`h2` element ควรมีคลาสที่ชื่อ `red-text`.
 
 ```js
 assert($('h2').hasClass('red-text'));
 ```
 
-Your first `p` element should be red.
+`p` element อันแรกควรมีสีแดง
 
 ```js
 assert($('p:eq(0)').css('color') === 'rgb(255, 0, 0)');
 ```
 
-Your second and third `p` elements should not be red.
+`p` element อันที่สองและสามไม่ควรมีสีแดง
 
 ```js
 assert(
@@ -41,7 +41,7 @@ assert(
 );
 ```
 
-Your first `p` element should have the class `red-text`.
+`p` element ควรมีคลาสชื่อ `red-text`.
 
 ```js
 assert($('p:eq(0)').hasClass('red-text'));

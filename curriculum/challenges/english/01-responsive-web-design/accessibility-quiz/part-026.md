@@ -18,61 +18,61 @@ dashedName: part-26
 assert.equal(document.querySelectorAll('section:nth-of-type(2) > div')?.length, 2);
 ```
 
-You should give the first new `div` element a class of `question-block`.
+คุณควรกำหนดให้  `div` element อันแรกที่สร้างใหม่มีคลาสชื่อ  `question-block`.
 
 ```js
 assert.equal(document.querySelectorAll('section:nth-of-type(2) > div')?.[0]?.className, 'question-block');
 ```
 
-You should give the second new `div` element a class of `question-block`.
+คุณควรกำหนดให้ `div` element อันที่สองที่สร้างใหม่มีคลาสที่ชื่อ `question-block`.
 
 ```js
 assert.equal(document.querySelectorAll('section:nth-of-type(2) > div')?.[1]?.className, 'question-block');
 ```
 
-You should nest one `p` element within each `div.question-block` element.
+คุณควรเก็บ  `p` element ไว้ในแต่ละ `div.question-block` element.
 
 ```js
 assert.equal(document.querySelectorAll('section:nth-of-type(2) > div.question-block > p')?.length, 2);
 ```
 
-You should give the first `p` element text of `1`.
+คุณควรกำหนดให้ `p` element อันแรกมีข้อความที่เขียนว่า `1`.
 
 ```js
 assert.equal(document.querySelectorAll('section:nth-of-type(2) > div.question-block > p')?.[0]?.textContent, '1');
 ```
 
-You should give the second `p` element text of `2`.
+คุณควรกำหนดให้ `p` element อันที่สองมีข้อความที่เขียนว่า `2`
 
 ```js
 assert.equal(document.querySelectorAll('section:nth-of-type(2) > div.question-block > p')?.[1]?.textContent, '2');
 ```
 
-You should nest one `fieldset` element within each `div.question-block` element.
+คุณควรใส่ `fieldset` element ไว้ในแต่ละ `div.question-block` element.
 
 ```js
 assert.equal(document.querySelectorAll('section:nth-of-type(2) > div.question-block > fieldset')?.length, 2);
 ```
 
-You should place the first `fieldset` element after the first `p` element.
+คุณควรวาง `fieldset` element อันแรกไว้หลังจาก `p` element อันแรก
 
 ```js
 assert.exists(document.querySelector('section:nth-of-type(2) > div.question-block > p + fieldset'));
 ```
 
-You should place the second `fieldset` element after the second `p` element.
+คุณควรวาง `fieldset` element อันที่สองไว้หลังจาก `p` element อันที่สอง
 
 ```js
 assert.exists(document.querySelector('section:nth-of-type(2) > div.question-block:nth-of-type(2) > p + fieldset'));
 ```
 
-You should give the first `fieldset` element a class of `question`.
+อคุณควรกำหนดให้ `fieldset` element อันแรกมีคลาสชื่อ `question`.
 
 ```js
 assert.equal(document.querySelectorAll('section:nth-of-type(2) > div.question-block > fieldset')?.[0]?.className, 'question');
 ```
 
-You should give the second `fieldset` element a class of `question`.
+คุณควรกำหนดให้ `fieldset` element อันที่สองมีคลาสชื่อ `question`.
 
 ```js
 assert.equal(document.querySelectorAll('section:nth-of-type(2) > div.question-block > fieldset')?.[1]?.className, 'question');

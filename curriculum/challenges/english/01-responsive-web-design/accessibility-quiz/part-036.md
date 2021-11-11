@@ -20,49 +20,49 @@ dashedName: part-36
 assert.exists(document.querySelector('div.answer > select'));
 ```
 
-You should nest three `option` elements within the `select` element.
+คุณควรเพิ่ม `option` element สามอันไว้ที่`select` element.
 
 ```js
 assert.equal(document.querySelectorAll('div.answer > select > option')?.length, 3);
 ```
 
-You should give the first `option` element a `value` of `""`.
+คุณควรกำหนดให้ `option` element อันแรกมี `value` เป็น `""`
 
 ```js
 assert.equal(document.querySelector('div.answer > select > option:nth-child(1)')?.value, '');
 ```
 
-You should give the first `option` element a text content of `Select an option`.
+คุณควรกำหนดให้ `option` element อันแรกมีข้อความที่เขียนว่า `Select an option`.
 
 ```js
 assert.equal(document.querySelector('div.answer > select > option:nth-child(1)')?.textContent, 'Select an option');
 ```
 
-You should give the second `option` element a `value` of `yes`.
+คุณควรกำหนดให้ `option` element อันที่สองมี `value` เป็น `yes`.
 
 ```js
 assert.equal(document.querySelector('div.answer > select > option:nth-child(2)')?.value, 'yes');
 ```
 
-You should give the second `option` element a text content of `Yes`.
+คุณควรกำหนดให้ `option` element อันที่สองมีข้อความที่เขียนว่า `Yes`
 
 ```js
 assert.equal(document.querySelector('div.answer > select > option:nth-child(2)')?.textContent, 'Yes');
 ```
 
-You should give the third `option` element a `value` of `no`.
+คุณควรกำหนดให้ `option` element อันที่สามมี `value` เป็น `no`
 
 ```js
 assert.equal(document.querySelector('div.answer > select > option:nth-child(3)')?.value, 'no');
 ```
 
-You should give the third `option` element a text content of `No`.
+คุณควรกำหนดให้ `option` element อันที่สามมีข้อความที่เขียนว่า `No`.
 
 ```js
 assert.equal(document.querySelector('div.answer > select > option:nth-child(3)')?.textContent, 'No');
 ```
 
-You should give the `select` an attribute of `required`.
+คุรควรกำหนดให้ `select` มี attribute อันหนึ่งเป็น  `required`
 
 ```js
 assert.isTrue(document.querySelector('div.answer > select')?.required);

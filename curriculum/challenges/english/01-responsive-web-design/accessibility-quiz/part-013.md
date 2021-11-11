@@ -19,13 +19,13 @@ dashedName: part-13
 assert.exists(new __helpers.CSSHelp(document).getStyle('nav > ul'));
 ```
 
-You should give the `nav > ul` elements a `display` of `flex`.
+คุณควรกำหนดให้ `nav > ul` elements มี `display` เป็น `flex`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('nav > ul')?.display, 'flex');
 ```
 
-You should give the `nav > ul` elements a `justify-content` of `space-evenly`.
+คุณควรกำหนดให้ `nav > ul` elements มี `justify-content` เป็น `space-evenly`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('nav > ul')?.justifyContent, 'space-evenly');

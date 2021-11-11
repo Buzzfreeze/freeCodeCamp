@@ -26,7 +26,7 @@ media rule เรียกว่า `prefers-reduced-motion` และควร�
 assert.exists(new __helpers.CSSHelp(document).getRuleListsWithinMedia('(prefers-reduced-motion: no-preference)'));
 ```
 
-You should wrap the existing `*` rule within the `@media` rule.
+คุณควรใส่ `*` rule ทั้งหมดที่มีไว้ใน  `@media` rule.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getRuleListsWithinMedia('(prefers-reduced-motion: no-preference)')?.find(x => x.selectorText === '*')?.style?.scrollBehavior, 'smooth');

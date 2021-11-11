@@ -17,13 +17,13 @@ dashedName: part-11
 assert.exists(new __helpers.CSSHelp(document).getStyle('h1'));
 ```
 
-You should give the `h1` a `color` of `#f1be32`.
+คุณควรกำหนดให้ `h1` มี `color` เท่ากับ `#f1be32`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('h1')?.color, 'rgb(241, 190, 50)');
 ```
 
-You should give the `h1` a `font-size` of `min(5vw, 1.2em)`.
+คุณควรกำหนดให้ `h1` มี `font-size` เท่ากับ `min(5vw, 1.2em)`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('h1')?.fontSize, 'min(5vw, 1.2em)');

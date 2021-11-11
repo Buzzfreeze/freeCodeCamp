@@ -28,13 +28,13 @@ _Note: มันไม่จำเป็นต้องมี access keys เส
 assert.equal(document.querySelectorAll('a')?.[0]?.getAttribute('accesskey')?.length, 1);
 ```
 
-You should give the second `a` element a single-letter `accesskey`.
+คุณควรกำหนดให้ `a` element อันที่สองมี single-letter `accesskey`
 
 ```js
 assert.equal(document.querySelectorAll('a')?.[1]?.getAttribute('accesskey')?.length, 1);
 ```
 
-You should give the third `a` element a single-letter `accesskey`.
+คุณควรกำหนดให้ `a` element อันที่สามมี single-letter `accesskey`.
 
 ```js
 assert.equal(document.querySelectorAll('a')?.[2]?.getAttribute('accesskey')?.length, 1);

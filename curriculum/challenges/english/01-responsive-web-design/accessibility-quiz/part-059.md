@@ -20,13 +20,13 @@ dashedName: part-59
 assert.exists(new __helpers.CSSHelp(document).getStyle('.question'));
 ```
 
-You should give the `.question` a `border` of `none`.
+คุณควรกำหนดให้ `.question` มี `border` เท่ากับ `none`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.question')?.border, 'none');
 ```
 
-You should give the `.question` a `padding-bottom` of `0`.
+คุณควรกำหนดให้ `.question` มี `padding-bottom` เท่ากับ `0`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.question')?.paddingBottom, '0px');

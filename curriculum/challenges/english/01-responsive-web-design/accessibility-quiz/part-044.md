@@ -26,7 +26,7 @@ const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);
 assert.exists(gs('nav li') || gs('nav > ul > li'));
 ```
 
-You should give the `li` elements a `color` of `#dfdfe2`.
+คุณควรกำหนดให้ `li` elements มี `color` เป็น `#dfdfe2`
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);
@@ -34,7 +34,7 @@ const color = gs('nav li')?.color ?? gs('nav > ul > li')?.color;
 assert.equal(color, 'rgb(223, 223, 226)');
 ```
 
-You should give the `li` elements a `margin` of `0 0.2rem`.
+คุณควรกำหนดให้ `li` elements มี `margin` เท่ากับ `0 0.2rem`.
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);
@@ -42,7 +42,7 @@ const margin = gs('nav li')?.margin ?? gs('nav > ul > li')?.margin;
 assert.equal(margin, '0px 0.2rem');
 ```
 
-You should give the `li` elements a `padding` of `0.2rem`.
+คุณควรกำหนดให้ `li` elements มี `padding` เท่ากับ `0.2rem`
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);
@@ -50,7 +50,8 @@ const padding = gs('nav li')?.padding ?? gs('nav > ul > li')?.padding;
 assert.equal(padding, '0.2rem');
 ```
 
-You should give the `li` elements a `display` of `block`.
+
+คุณควรกำหนดให้ `li` elements มี `display` เป็นแบบ `block`
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);

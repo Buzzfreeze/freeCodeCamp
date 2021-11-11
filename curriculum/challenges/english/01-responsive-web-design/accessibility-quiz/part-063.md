@@ -19,7 +19,7 @@ const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);
 assert.exists(gs('footer, footer a') || gs('footer a, footer'));
 ```
 
-You should set the `color` to a value with a contrast ratio of at least `7:1`. _Hint: I suggest `#dfdfe2`_
+คุณควรกำหนด `color` ให้มีค่าที่ทำให้ contrast ratio ไม่น้อยกว่า `7:1`. _Hint: ฉันแนะนำ `#dfdfe2`_
 
 ```js
 function luminance(r, g, b) {

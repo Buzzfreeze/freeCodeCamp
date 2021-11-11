@@ -9,9 +9,9 @@ dashedName: create-a-form-element
 # --description--
 
 คุณสามารถสร้างแบบฟอร์มบนเว็บที่สามารถส่งข้อมูลไปที่ server ของคุณได้โดยใช้แค่ HTML เพียงอย่างเดียวเท่านั้น
-คุณสามารถทำเช่นนี้ได้โดยการระบุ `action` attribute ไว้ใน `form` element
+คุณสามารถทำเช่นนี้ได้โดยการเพิ่ม `action` attribute เข้าไปใน `form` element
 
-นี่คือตัวอย่างe:
+นี่คือตัวอย่าง:
 
 ```html
 <form action="/url-where-you-want-to-submit-form-data">
@@ -21,7 +21,7 @@ dashedName: create-a-form-element
 
 # --instructions--
 
-จงเก็บ `input` element ที่สร้างไว้แล้วไว้ใน `form` element และกำหนด `"https://www.freecatphotoapp.com/submit-cat-photo"` ให้กับ `action` attribute ของ `form` element.
+จงเก็บ `input` element ที่สร้างแล้วไว้ใน `form` element และกำหนดให้ `action` attribute ของ `form` element มีค่าเป็น`"https://www.freecatphotoapp.com/submit-cat-photo"`
 
 # --hints--
 
@@ -35,14 +35,14 @@ assert(
 );
 ```
 
-Your `form` should have an `action` attribute which is set to `https://www.freecatphotoapp.com/submit-cat-photo`.
+`form` should ควรมี `action` attribute ที่มีค่าเท่ากับ `https://www.freecatphotoapp.com/submit-cat-photo`
 
 ```js
 const action = $('form').attr('action');
 assert(action.match(/^https:\/\/(www\.)?freecatphotoapp\.com\/submit-cat-photo$/i))
 ```
 
-Your `form` element should have well-formed open and close tags.
+`form` element ควรมีแท็กเปิดและแท็กปิดที่เรียงกันอย่างถูกต้อง
 
 ```js
 assert(

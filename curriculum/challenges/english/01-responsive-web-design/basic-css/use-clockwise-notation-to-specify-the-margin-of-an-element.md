@@ -11,45 +11,45 @@ dashedName: use-clockwise-notation-to-specify-the-margin-of-an-element
 
 เรามาลองกันอีกที แต่รอบนี้จะเป็นกับ `margin` 
 
-แทนที่จะระบุ element `margin-top`, `margin-right`, `margin-bottom`, และ `margin-left` properties เป็นตัว ๆ , คุรสามารถกำหนดค่าให้พวกมันทั้งได้ในบรรทัดเดียว แบบนี้:
+แทนที่จะระบุ element `margin-top`, `margin-right`, `margin-bottom`, และ `margin-left` properties เป็นตัว ๆ , คุณสามารถกำหนดค่าให้พวกมันทั้งหมดได้ในบรรทัดเดียว แบบนี้:
 
 ```css
 margin: 10px 20px 10px 20px;
 ```
 
-ค่าทั้ง 4 ตัวนี้จะเรียงกันตามเข็มนาฬิกา: บน, ขวา, ล่าง, ซ้าย, และจะให้ผลเช่นเดียวกับการใช้คำสั่งที่เป็น side-specific margin 
+ค่าทั้ง 4 ตัวนี้จะเรียงกันตามเข็มนาฬิกา: บน, ขวา, ล่าง, ซ้าย, และจะให้ผลเช่นเดียวกับการใช้พวกคำสั่ง side-specific margin 
 
 # --instructions--
 
-จงใช้ Clockwise Notation เพื่อกำหนดให้ element ที่เป็น `blue-box` class มี margin ขนาด `40px` ที่ด้านบนและซ้ายของมัน และ `20px` ที่ด้านล่างและขวา
+จงใช้การเขียนตามเข็มนาฬกา (Clockwise Notation เพื่อกำหนดให้ element ที่เป็น `blue-box` class มี margin ขนาด `40px` ที่ด้านบนและซ้ายของมัน และ `20px` ที่ด้านล่างและขวา
 
 # --hints--
 
-`blue-box` class ควรกำหนดให้ด้านบนของ element มี `40px` เป็นค่าของ `margin`
+`blue-box` class ควรกำหนดให้ด้านบนของ element มี `margin` มีค่า `40px` 
 
 ```js
 assert($('.blue-box').css('margin-top') === '40px');
 ```
 
-Your `blue-box` class should give the right of elements `20px` of `margin`.
+`blue-box` class ควรกำหนดให้ด้านขวาของ element มี `margin` เท่ากับ `20px`
 
 ```js
 assert($('.blue-box').css('margin-right') === '20px');
 ```
 
-Your `blue-box` class should give the bottom of elements `20px` of `margin`.
+`blue-box` class ควรกำหนดให้ด้านล่างของ element มี `margin` เท่ากับ `20px`
 
 ```js
 assert($('.blue-box').css('margin-bottom') === '20px');
 ```
 
-Your `blue-box` class should give the left of elements `40px` of `margin`.
+`blue-box` class ควรกำหนดให้ด้านซ้ายของ element มี `margin` เท่ากับ `40px`
 
 ```js
 assert($('.blue-box').css('margin-left') === '40px');
 ```
 
-You should use the clockwise notation to set the margin of `blue-box` class.
+คุณควรใช้การเขียนตามเข็มนาฬกาเพื่อกำหนดเซ็ต margin ของ `blue-box` class.
 
 ```js
 assert(

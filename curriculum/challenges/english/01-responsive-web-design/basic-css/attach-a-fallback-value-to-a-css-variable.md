@@ -11,8 +11,8 @@ dashedName: attach-a-fallback-value-to-a-css-variable
 
 เมื่อคุณใช้ตัวแปรเป็นค่าของ CSS property, คุรสามารถแนบค่า fallback ที่ browser ของคุณจะใช้ถ้า variable ที่ใส่ไปใช้ไม่ได้
 
-**Note:** fallback อันนี้จะไม่ถูกใช้เพื่อเพิ่ม browser compatibility, และมันจะไม่ทำงานบ IE browsers
-จริง ๆ มันถูกใช้เพื่อที่ browser จะมีซักสีให้แสดงผลถ้ามันไม่สามารถหาตัวแปรของคุณเจอ 
+**Note:** fallback อันนี้จะไม่ถูกใช้เพื่อเพิ่ม browser compatibility, และมันจะไม่ทำงานบน IE browsers
+จริง ๆ มันถูกใช้เพื่อที่ browser จะได้มีซักสีให้แสดงผลถ้ามันหาตัวแปรของคุณไม่เจอ 
 
 นี่คือวิธีที่จะทำมัน:
 
@@ -40,7 +40,7 @@ assert(
 );
 ```
 
-The fallback value of `black` should be used in `background` property of the `penguin-bottom` class.
+ค่า fallback ที่เป็น `black` ควรจะถูกใช้ใน `background` property ของ `penguin-bottom` class.
 
 ```js
 assert(

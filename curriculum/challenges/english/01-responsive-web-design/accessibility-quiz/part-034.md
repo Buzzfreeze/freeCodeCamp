@@ -19,43 +19,43 @@ dashedName: part-34
 assert.exists(document.querySelector('section:nth-of-type(3) > div'));
 ```
 
-You should give the first `div` a `class` of `formrow`.
+คุณควรกำหนดให้ `div` อันแรกมี `class` ที่ชื่อ `formrow`
 
 ```js
 assert.equal(document.querySelector('section:nth-of-type(3) > div')?.className, 'formrow');
 ```
 
-You should place `div.formrow` after the `h2` element.
+คุณควรวาง `div.formrow` ไว้หลัง `h2` element.
 
 ```js
 assert.exists(document.querySelector('section:nth-of-type(3) > h2 + div.formrow'));
 ```
 
-You should nest four `div` elements inside `div.formrow`.
+คุณควรใส่ `div` element สี่อันไว้ใน `div.formrow`
 
 ```js
 assert.equal(document.querySelectorAll('section:nth-of-type(3) > div.formrow > div')?.length, 4);
 ```
 
-You should give the first nested `div` a `class` of `question-block`.
+คุณควรกำหนดให้ `div` อันแรกที่ถูกเก็บไว้มี `class` ชื่อ `question-block`
 
 ```js
 assert.equal(document.querySelector('section:nth-of-type(3) > div.formrow > div:nth-of-type(1)')?.className, 'question-block');
 ```
 
-You should give the second nested `div` a `class` of `answer`.
+คุณควรกำหนดให้ `div` อันที่สองที่ถูกเก็บไว้มี `class` ชื่อ `answer`
 
 ```js
 assert.equal(document.querySelector('section:nth-of-type(3) > div.formrow > div:nth-of-type(2)')?.className, 'answer');
 ```
 
-You should give the third nested `div` a `class` of `question-block`.
+คุณควรกำหนดให้ `div` อันที่สามที่ถูกเก็บไว้มี `class` ชื่อ `question-block`.
 
 ```js
 assert.equal(document.querySelector('section:nth-of-type(3) > div.formrow > div:nth-of-type(3)')?.className, 'question-block');
 ```
 
-You should give the fourth nested `div` a `class` of `answer`.
+คุณควรกำหนดให้ `div` อันที่สี่ที่ถูกเก็บไว้มี `class` ชื่อ `answer`.
 
 ```js
 assert.equal(document.querySelector('section:nth-of-type(3) > div.formrow > div:nth-of-type(4)')?.className, 'answer');

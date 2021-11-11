@@ -26,25 +26,25 @@ height: 100%;
 assert.equal(new __helpers.CSSHelp(document).getStyle('nav > ul')?.flexWrap, 'wrap');
 ```
 
-You should give the `ul` an `align-items` of `center`.
+คุณควรกำหนดให้ `ul` มี `align-items` เป็นแบบ `center`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('nav > ul')?.alignItems, 'center');
 ```
 
-You should give the `ul` a `padding-inline-start` of `0`.
+คุณควรกำหนดให้ `ul` มี `padding-inline-start` เป็น `0`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('nav > ul')?.paddingInlineStart, '0px');
 ```
 
-You should give the `ul` a `margin-block` of `0`.
+คุณควรกำหนดให้ `ul` มี `margin-block` เป็น `0`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('nav > ul')?.marginBlock, '0px');
 ```
 
-You should give the `ul` a `height` of `100%`.
+คุณควรกำหนดให้ `ul` มี `height` เป็น `100%`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('nav > ul')?.height, '100%');

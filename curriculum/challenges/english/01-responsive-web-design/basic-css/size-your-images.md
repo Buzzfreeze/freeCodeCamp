@@ -11,7 +11,7 @@ dashedName: size-your-images
 CSS มี property หนึ่งที่ชื่อ `width` ที่จะควบคุมความกว้างของ element
 เช่นเดียวกับฟ้อนต์ เราใช้ `px` (pixels) เพื่อระบุค่าความกว้างของรูปภาพ
 
-ยกตัวอย่างเช่น ถ้าเราต้องการสร้า CSS class ที่ชื่อ `larger-image` ที่จะกำหนดให้ HTML element มีความกว้างเท่ากับ 500 pixels, เราจะเขียนว่า:
+ยกตัวอย่างเช่น ถ้าเราต้องการสร้าง CSS class ที่ชื่อ `larger-image` ที่จะกำหนดให้ HTML element มีความกว้างเท่ากับ 500 pixels, เราจะเขียนว่า:
 
 ```html
 <style>
@@ -27,7 +27,7 @@ CSS มี property หนึ่งที่ชื่อ `width` ที่จะ
 
 # --hints--
 
-`img` element ควรมี class `smaller-image`.
+`img` element ควรมีคลาสชื่อ `smaller-image`.
 
 ```js
 assert(
@@ -36,7 +36,7 @@ assert(
 );
 ```
 
-Your image should be 100 pixels wide.
+ภาพของคุณควรกว้าง 100 pixel
 
 ```js
 assert(

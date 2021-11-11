@@ -9,14 +9,14 @@ dashedName: use-an-id-attribute-to-style-an-element
 
 # --description--
 
-สิ่งหนึ่งที่ทำให้ `id` attributes มันเจ๋งมากก็คือคุณสามารถตกแต่งมันด้วย CSS เหมือนกับ class
+สิ่งหนึ่งที่ทำให้ `id` attributes มันเจ๋งมาก ๆ ก็คือคุณสามารถตกแต่งมันด้วย CSS ได้เหมือนกับ class
 
-อย่างไรก็ตาม,  `id` ไม่สามารถใช้ซ้ำได้และควรใช้แค่กับ element เดียวเท่านั้น
+อย่างไรก็ตาม, `id` ไม่สามารถใช้ซ้ำได้และควรใช้แค่กับ element เดียวเท่านั้น
 `id` ยังมีความสำคัญมากกว่า class
-ดังนั้นถ้าทั้งคู่ถูกใช้พร้อมกันกับ element เดียวกับ 
+ดังนั้นถ้าทั้งคู่ถูกใช้พร้อมกันที่ element เดียวกัน 
 styles ของ `id` จะถูกใช้งาน
 
-นี่คือตัวอย่างของวิธีที่คุณเรียก element หนึ่งที่มี `id` attribute ของ  `cat-photo-element` และกำหนดให้มันมีสีพื้นหลังเป็นสีเขียน
+นี่คือตัวอย่างของวิธีที่คุณเรียก element หนึ่งที่มี `id` attribute เป็น  `cat-photo-element` และกำหนดให้มันมีสีพื้นหลังเป็นสีเขียว
 นี่คือ `style` element:
 
 ```css
@@ -25,27 +25,27 @@ styles ของ `id` จะถูกใช้งาน
 }
 ```
 
-จงไว้ว่าภายใน `style` element ของคุณ, คุณสามารถอ้างอิง class โดยใส่ `.` ไปที่ด้านหน้าของชื่อพวกมันและ
+จงจำไว้ว่าภายใน `style` element ของคุณ, คุณสามารถอ้างอิง class โดยใส่ `.` ไปที่ด้านหน้าของชื่อพวกมัน
 
 # --instructions--
 
-จงลองกำหนดแบบฟอร์มของคุณ ที่ตอนนี้มี `id` attribute เป้น `cat-photo-form`, ให้มีพื้นหลังสีเขียว
+ลองกำหนดแบบฟอร์มที่ตอนนี้มี `id` attribute เป็น `cat-photo-form`, ให้มีพื้นหลังสีเขียว
 
 # --hints--
 
- `form` element ควรมี id เป็น `cat-photo-form`.
+`form` element ควรมี id เป็น `cat-photo-form`.
 
 ```js
 assert($('form').attr('id') === 'cat-photo-form');
 ```
 
-Your `form` element should have the `background-color` of green.
+`form` element ควรมี `background-color` เป็นสีเขียว
 
 ```js
 assert($('#cat-photo-form').css('background-color') === 'rgb(0, 128, 0)');
 ```
 
-Your `form` element should have an `id` attribute.
+`form` element ควรมี `id` attribute อันหนึ่ง
 
 ```js
 assert(
@@ -54,7 +54,7 @@ assert(
 );
 ```
 
-You should not give your `form` any `class` or `style` attributes.
+คุณไม่ควรกำหนดให้ `form` มี `class` หรือ `style` attributes อะไรก็ตาม
 
 ```js
 assert(!code.match(/<form.*style.*>/gi) && !code.match(/<form.*class.*>/gi));

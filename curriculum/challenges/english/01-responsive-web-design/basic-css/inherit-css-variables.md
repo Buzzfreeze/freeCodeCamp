@@ -21,11 +21,11 @@ dashedName: inherit-css-variables
 # --instructions--
 
 จงสร้างตัวแปรที่ชื่อ`--penguin-belly` ไว้ใน `:root` selector และกำหนดให้มันมีค่าเป็น `pink`
-คุณสามารถเห็นได้ว่าตัวแปรตัวนั้นถูกถ่ายถอดและ child element ทั้งหมดที่ใช้มันจะมีสีชมพู
+คุณจะเห็นได้ว่าตัวแปรตัวนั้นถูกถ่ายถอดและ child element ทั้งหมดที่ใช้มันจะมีสีชมพู
 
 # --hints--
 
-ตัวแปร `--penguin-belly` ควรถูกประกาศใน `:root` และถูกกำหนดค่าให้เป็น `pink`
+ตัวแปร `--penguin-belly` ควรถูกประกาศไว้ใน `:root` และถูกกำหนดค่าให้เป็น `pink`
 
 ```js
 assert(

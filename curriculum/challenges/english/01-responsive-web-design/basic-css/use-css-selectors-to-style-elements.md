@@ -9,11 +9,11 @@ dashedName: use-css-selectors-to-style-elements
 
 # --description--
 
-ด้วย CSS, มันมี CSS properties หลายร้อยอันที่คุณสามารถใช้เพื่อเปลี่ยนรูปร่างหน้าตาของ element ที่อยู่บนหน้าเว็บของคุณ
+มันมี CSS properties หลายร้อยอันที่คุณสามารถใช้เพื่อเปลี่ยนรูปร่างหน้าตาของ element ที่อยู่บนหน้าเว็บของคุณ
 
-เพื่อคุณพิมพ์ `<h2 style="color: red;">CatPhotoApp</h2>`, คุณจะตกแต่ง `h2` element อันนั้นด้วย inline CSS, ซึ่งย่อมาจาก Cascading Style Sheets
+เมื่อคุณพิมพ์ `<h2 style="color: red;">CatPhotoApp</h2>`, คุณจะตกแต่ง `h2` element อันนั้นด้วย inline CSS, ซึ่งย่อมาจาก Cascading Style Sheets
 
-นี่เป็นพวกวิธีเพื่อระบุ style ของ element หนึ่ง, แต่มันยังมีวิธีที่ดีกว่าในการใช้ CSS
+นี่เป็นวิธีเพื่อระบุ style ของ element อันหนึ่ง, แต่มันยังมีวิธีที่ดีกว่าในการใช้ CSS
 
 ที่ด้านบนของโค้ด, จงสร้าง `style` block แบบนี้:
 
@@ -33,9 +33,9 @@ dashedName: use-css-selectors-to-style-elements
 </style>
 ```
 
-จงไว้ว่า มันสำคัญมากที่จะใส่ทั้ `{` และ `}` รอบ style rule ของแต่ละ element
+จงไว้ว่า มันสำคัญมากที่จะใส่ทั้ง `{` และ `}` รอบ style rule ของแต่ละ element
 คุณยังจำเป็นต้องเช็คให้มั่นใจว่า style definition ของ element นั้นอยู่ระหว่างแท็กเปิดและปิดของ style tags
-สุดท้ายนี้ จงมั่นใจว่าได้เพิ่ม semicolon อันหนึ่งที่ด้านท้ายของแต่ละ style rules ของ element 
+สุดท้ายนี้ จงเช็คให้มั่นใจว่าได้เพิ่ม semicolon อันหนึ่งที่ด้านท้ายของแต่ละ style rules ของ element แล้ว
 
 # --instructions--
 
@@ -44,31 +44,31 @@ dashedName: use-css-selectors-to-style-elements
 
 # --hints--
 
-`style` attributeควรถูกเอาออกจาก `h2` element
+`style` attribute ควรถูกเอาออกจาก `h2` element
 
 ```js
 assert(!$('h2').attr('style'));
 ```
 
-You should create a `style` element.
+คุณควรสร้าง `style` element อันหนึ่ง
 
 ```js
 assert($('style') && $('style').length >= 1);
 ```
 
-Your `h2` element should be blue.
+`h2` element ควรมีสีฟ้า
 
 ```js
 assert($('h2').css('color') === 'rgb(0, 0, 255)');
 ```
 
-Your stylesheet `h2` declaration should be valid with a semicolon and closing brace.
+stylesheet `h2` declaration ควรจะมี semicolon และ closing brace
 
 ```js
 assert(code.match(/h2\s*\{\s*color\s*:.*;\s*\}/g));
 ```
 
-All your `style` elements should be valid and have closing tags.
+`style` elements ควรจะเขียนได้ถูกต้องและมีแท็กปิด
 
 ```js
 assert(

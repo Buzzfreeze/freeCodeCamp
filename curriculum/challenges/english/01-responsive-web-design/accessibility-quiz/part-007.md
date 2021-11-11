@@ -21,37 +21,37 @@ dashedName: part-7
 assert.exists(document.querySelector('header > img'));
 ```
 
-You should add an `h1` element to the `header` element.
+คุณควรเพิ่ม `h1` element อันหนึ่งให้กับ `header` element.
 
 ```js
 assert.exists(document.querySelector('header > h1'));
 ```
 
-You should add a `nav` element to the `header` element.
+Yคุรควรเพิ่ม `nav` element อันหนึ่งให้กับ `header` element.
 
 ```js
 assert.exists(document.querySelector('header > nav'));
 ```
 
-You should place the `img`, `h1`, and `nav` elements in that order.
+คุณควรใส่ `img`, `h1`, และ `nav` elements ตามลำดับนั้น
 
 ```js
 assert.exists(document.querySelector('img + h1 + nav'));
 ```
 
-You should give the `img` element a `src` attribute of `https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg`.
+คุณควรกำหนดให้ `img` element มี `src` attribute เป็น `https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg`.
 
 ```js
 assert.equal(document.querySelector('img')?.src, 'https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg');
 ```
 
-You should give the `img` element an `id` attribute of `logo`.
+คุณควรกำหนดให้ `img` element มี `id` attribute เป็น `logo`
 
 ```js
 assert.equal(document.querySelector('img')?.id, 'logo');
 ```
 
-You should give the `h1` element the text `HTML/CSS Quiz`.
+คุณควรกำหนดให้ `h1` element ที่ข้อความที่เขียนว่า `HTML/CSS Quiz`.
 
 ```js
 assert.include(document.querySelector('h1')?.innerText?.toLowerCase(), 'html/css quiz');

@@ -11,7 +11,7 @@ dashedName: delete-html-elements
 
 โทรศัพท์ของเรามีพื้นที่ในแนวตั้งไม่พอ
 
-จงเอา element ที่ไม่จำเป็นออกไป เพื่อเราจะได้เริ่มสร้าง CatPhotoApp ของเรา
+จงเอา element ที่ไม่จำเป็นออกไปเพื่อเราจะได้เริ่มสร้าง CatPhotoApp ของเรา
 
 # --instructions--
 
@@ -19,19 +19,19 @@ dashedName: delete-html-elements
 
 # --hints--
 
-Your `h1` element should be deleted.
+`h1` element ควรถูกลบ
 
 ```js
 assert(!code.match(/<h1>/gi) && !code.match(/<\/h1>/gi));
 ```
 
-Your `h2` element should be on the page.
+`h2` element ควรจะอยู่ในหน้านี้
 
 ```js
 assert(code.match(/<h2>[\w\W]*<\/h2>/gi));
 ```
 
-Your `p` element should be on the page.
+`p` element ควรจะอยู่ในหน้านี้
 
 ```js
 assert(code.match(/<p>[\w\W]*<\/p>/gi));

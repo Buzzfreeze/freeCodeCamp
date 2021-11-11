@@ -19,13 +19,13 @@ dashedName: part-43
 assert.exists(document.querySelector('address > a'));
 ```
 
-You should give the `a` element a `href` attribute of `https://freecodecamp.org`.
+คุณควรกำหนดให้ `a` element มี `href` attribute เป็น `https://freecodecamp.org`.
 
 ```js
 assert.equal(document.querySelector('address > a')?.getAttribute('href'), 'https://freecodecamp.org');
 ```
 
-You should wrap the `a` element around the existing text `freeCodeCamp`.
+คุณควรใช้ `a` element ครอบข้อความที่เขียนว่า `freeCodeCamp`
 
 ```js
 assert.equal(document.querySelector('address > a')?.innerHTML, 'freeCodeCamp');

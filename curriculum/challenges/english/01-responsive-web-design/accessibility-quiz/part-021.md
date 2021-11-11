@@ -19,37 +19,37 @@ dashedName: part-21
 assert.equal(document.querySelectorAll('input')?.[0]?.type, 'text');
 ```
 
-You should give the second `input` a `type` of `email`.
+คุณควรกำหนดให้ `input` อันที่สองมี `type` เป็น `email`.
 
 ```js
 assert.equal(document.querySelectorAll('input')?.[1]?.type, 'email');
 ```
 
-You should give the third `input` a `type` of `date`.
+คุณควรกำหนดให้ `input` อันที่สามมี `type` เป็น `date`.
 
 ```js
 assert.equal(document.querySelectorAll('input')?.[2]?.type, 'date');
 ```
 
-You should give the first `input` an appropriate `name` attribute.
+คุณควรกำหนดให้ `input` อันแรกมี `name` attribute ที่เหมาะสม
 
 ```js
 assert.isAtLeast(document.querySelectorAll('input')?.[0]?.name?.length, 1);
 ```
 
-You should give the second `input` an appropriate `name` attribute.
+คุณควรกำหนดให้ `input` อันที่สองมี `name` attribute ที่เหมาะสม
 
 ```js
 assert.isAtLeast(document.querySelectorAll('input')?.[1]?.name?.length, 1);
 ```
 
-You should give the third `input` an appropriate `name` attribute.
+คุณควรกำหนดให้ `input` อันที่สามมี`name` attribute ที่เหมาะสม
 
 ```js
 assert.isAtLeast(document.querySelectorAll('input')?.[2]?.name?.length, 1);
 ```
 
-You should give the first `input` a `placeholder` attribute.
+คุณควรกำหนดให้ `input` อันแรกมี `placeholder` attribute อันหนึ่ง
 
 ```js
 assert.notEmpty(document.querySelectorAll('input')?.[0]?.placeholder);

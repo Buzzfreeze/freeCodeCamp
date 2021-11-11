@@ -9,9 +9,9 @@ dashedName: add-a-submit-button-to-a-form
 
 # --description--
 
-,มาเพิ่มปุ่น `submit` ให้กับแบบฟอร์มของคุณกันเถอะ. การคลิกที่ปุ่มนี้เป็นการส่งข้อมูลในแบบฟอร์มไปที่URL ที่คุณได้กำหนดไว้ด้วย `action` attribute
+มาเพิ่มปุ่มส่งข้อมูล (submit button) ให้กับแบบฟอร์มของคุณกันเถอะ การคลิกที่ปุ่มนี้เป็นการส่งข้อมูลในแบบฟอร์มไปที่URL ที่คุณได้กำหนดไว้ด้วย `action` attribute
 
-นี่คือตัวอน่างของปุ่ม submit :
+นี่คือตัวอย่างของปุ่มส่งข้อมูล:
 
 ```html
 <button type="submit">this button submits the form</button>
@@ -19,7 +19,8 @@ dashedName: add-a-submit-button-to-a-form
 
 # --instructions--
 
-จงเพิ่ม element สุดท้ายของ `form` element ให้เป็นปุ่ม summit โดยการกำหนด input ให้เป็นแบบ`submit`, และเพิ่มข้อความว่า `Submit` ให้กับมัน
+จงเพิ่มปุ่มส่งข้อมูลซึ่งจะเป็น element สุดท้ายของ `form` element นี้ 
+โดยการกำหนด input ให้เป็นแบบ `submit`, และเพิ่มข้อความว่า `Submit` ให้กับมัน
 
 # --hints--
 
@@ -29,13 +30,13 @@ dashedName: add-a-submit-button-to-a-form
 assert($('form').children('button').length > 0);
 ```
 
-Your submit button should have the attribute `type` set to `submit`.
+ปุ่มส่งข้อมูลควรมี attribute `type` ที่มีค่าเป็น `submit`
 
 ```js
 assert($('button').attr('type') === 'submit');
 ```
 
-Your submit button should only have the text `Submit`.
+ปุ่มส่งข้อมูลควรจะมีแค่ข้อความ `Submit` เท่านั้นที่อยู่ข้างใน
 
 ```js
 assert(
@@ -45,7 +46,7 @@ assert(
 );
 ```
 
-Your `button` element should have a closing tag.
+`button` element ของคุณควรจะมีแท็กปิด
 
 ```js
 assert(

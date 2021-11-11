@@ -7,7 +7,7 @@ dashedName: part-51
 
 # --description--
 
-จงแทนที่ top margin ของ`h2` elements ด้วย top padding ที่มีค่า `60px`
+จงแทนที่ top margin ของ `h2` elements ด้วย top padding ที่มีค่า `60px`
 
 # --hints--
 
@@ -17,7 +17,7 @@ dashedName: part-51
 assert.equal(new __helpers.CSSHelp(document).getStyle('h2')?.marginTop, '0px');
 ```
 
-You should give the `h2` a `padding-top` of `60px`.
+คุณควรกำหนดให้ `h2` มี `padding-top` เท่ากับ `60px`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('h2')?.paddingTop, '60px');

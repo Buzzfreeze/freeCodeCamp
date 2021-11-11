@@ -26,67 +26,67 @@ dashedName: part-16
 assert.equal(document.querySelectorAll('section')?.[0]?.getAttribute('aria-labelledby'), 'student-info');
 ```
 
-You should give the second `section` element an `aria-labelledby` attribute of `html-questions`.
+คุณควรกำหนดให้ `section` element อันที่สองมี `aria-labelledby` attribute เป็น `html-questions`
 
 ```js
 assert.equal(document.querySelectorAll('section')?.[1]?.getAttribute('aria-labelledby'), 'html-questions');
 ```
 
-You should give the third `section` element an `aria-labelledby` attribute of `css-questions`.
+คุณควรกำหนดให้ `section` element อันที่สาม `aria-labelledby` attribute เป็น `css-questions`.
 
 ```js
 assert.equal(document.querySelectorAll('section')?.[2]?.getAttribute('aria-labelledby'), 'css-questions');
 ```
 
-You should nest one `h2` element within the first `section` element.
+คุณควรเก็บ `h2` element ไว้ใน `section` element อันแรก
 
 ```js
 assert.equal(document.querySelectorAll('section')?.[0]?.querySelectorAll('h2')?.length, 1);
 ```
 
-You should nest one `h2` element within the second `section` element.
+คุณควรก็บ `h2` element ไว้ใน `section` element อันที่สอง
 
 ```js
 assert.equal(document.querySelectorAll('section')?.[1]?.querySelectorAll('h2')?.length, 1);
 ```
 
-You should nest one `h2` element within the third `section` element.
+คุณควรเก็บ `h2` element ไว้ใน `section` element อันที่สาม
 
 ```js
 assert.equal(document.querySelectorAll('section')?.[2]?.querySelectorAll('h2')?.length, 1);
 ```
 
-You should give the first `h2` element an `id` attribute of `student-info`.
+คุณควรกำหนดให้ `h2` element อันแรกมี `id` attribute เป็น `student-info`.
 
 ```js
 assert.equal(document.querySelectorAll('h2')?.[0]?.id, 'student-info');
 ```
 
-You should give the second `h2` element an `id` attribute of `html-questions`.
+คุณควรกำหนดให้ `h2` element อันที่สองมี `id` attribute เป็น `html-questions`.
 
 ```js
 assert.equal(document.querySelectorAll('h2')?.[1]?.id, 'html-questions');
 ```
 
-You should give the third `h2` element an `id` attribute of `css-questions`.
+คุณควรกำหนดให้ `h2` element อันที่สาม `id` attribute เป็น `css-questions`.
 
 ```js
 assert.equal(document.querySelectorAll('h2')?.[2]?.id, 'css-questions');
 ```
 
-You should give the first `h2` element suitable text content. _Hint: I would have chosen `Student Info`_
+คุณควรกำหนดให้ `h2` element อันแรกมีข้อความที่เหมาะสม  _Hint: ฉันจะใช้ `Student Info`_
 
 ```js
 assert.isAtLeast(document.querySelectorAll('h2')?.[0]?.textContent?.length, 1);
 ```
 
-You should give the second `h2` element suitable text content. _Hint: I would have chosen `HTML`_
+คุณควรกำหนดให้ `h2` element อันที่สองมีข้อความที่เหมาะสม _Hint: ฉันจะใช้ `HTML`_
 
 ```js
 assert.isAtLeast(document.querySelectorAll('h2')?.[1]?.textContent?.length, 1);
 ```
 
-You should give the third `h2` element suitable text content. _Hint: I would have chosen `CSS`_
+คุณควรกำหนดให้ `h2` element อันที่สามมีข้อความที่เหมาะสม _Hint: ฉันจะใช้ `CSS`_
 
 ```js
 assert.isAtLeast(document.querySelectorAll('h2')?.[2]?.textContent?.length, 1);

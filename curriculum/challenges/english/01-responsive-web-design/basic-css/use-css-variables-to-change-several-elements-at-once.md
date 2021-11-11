@@ -9,9 +9,9 @@ dashedName: use-css-variables-to-change-several-elements-at-once
 
 # --description--
 
-<dfn>CSS Variables</dfn> เป็นวิธีที่มีอิทธิพลมากในการเปลี่ยนa CSS style properties หลาย ๆ อันในทีเดียวโดยการเปลี่ยนค่าแค่ค่าเดียว
+<dfn>CSS Variables</dfn> เป็นวิธีที่ที่สามารถเปลี่ยน CSS style properties หลาย ๆ อันได้ในทีเดียวโดยการเปลี่ยนค่าแค่ค่าเดียว
 
-จงทำตามคำสั่งขั้นล่าง และดูสิ่งที่จะเปลี่ยนแปลงจากการที่ค่าเพียงสามค่าถูกเปลี่ยน
+จงทำตามคำสั่งข้างล่าง และดูสิ่งที่จะเปลี่ยนแปลงจากการที่ค่าเพียงสามค่าถูกเปลี่ยน
 
 # --instructions--
 
@@ -27,7 +27,7 @@ assert(
 );
 ```
 
-`penguin` class should declare the `--penguin-belly` variable and assign it to `white`.
+`penguin` class ควรประกาศตัวแปร `--penguin-belly` แล้วกำหนดค่า `white` ให้มัน
 
 ```js
 assert(
@@ -35,7 +35,7 @@ assert(
 );
 ```
 
-`penguin` class should declare the `--penguin-beak` variable and assign it to `orange`.
+`penguin` class ควรประกาศตัวแปร `--penguin-beak` แล้วกำหนดค่า `orange` ให้มัน
 
 ```js
 assert(

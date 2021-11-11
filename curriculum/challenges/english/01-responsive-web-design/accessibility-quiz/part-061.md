@@ -27,43 +27,43 @@ border: 3px solid #3b3b4f;
 assert.exists(new __helpers.CSSHelp(document).getStyle('button'));
 ```
 
-You should give `button` a `display` of `block`.
+คุณควรกำหนดให้ `button` มี `display` เท่ากับ `block`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('button')?.display, 'block');
 ```
 
-You should give `button` a `margin` of `40px auto`.
+คุณควรกำหนดให้ `button` มี `margin` เท่ากับ `40px auto`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('button')?.margin, '40px auto');
 ```
 
-You should give `button` a `width` of `40%`.
+คุณควรกำหนดให้ `button` มี `width` เท่ากับ `40%`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('button')?.width, '40%');
 ```
 
-You should give `button` a `padding` of `15px`.
+คุณควรกำหนดให้ `button` มี `padding` เท่ากับ `15px`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('button')?.padding, '15px');
 ```
 
-You should give `button` a `font-size` of `23px`.
+คุณควรกำหนดให้ `button` มี `font-size` เท่ากับ `23px`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('button')?.fontSize, '23px');
 ```
 
-You should give `button` a `background` of `#d0d0d5`.
+คุณควรกำหนดให้ `button` มี `background` เท่ากับ `#d0d0d5`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('button')?.background, 'rgb(208, 208, 213)');
 ```
 
-You should give `button` a `border` of `3px solid #3b3b4f`.
+คุณควรกำหนดให้ `button` มี `border` เท่ากับ `3px solid #3b3b4f`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('button')?.border, '3px solid rgb(59, 59, 79)');

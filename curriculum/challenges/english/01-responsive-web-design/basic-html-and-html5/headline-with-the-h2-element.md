@@ -9,18 +9,19 @@ dashedName: headline-with-the-h2-element
 
 # --description--
 
-ผ่านไปหลายบทเรียน เราจะได้สร้าง HTML5 cat photo web app ไปทีละส่วน ๆ
+หลังจากที่เราได้เรียนรู้เกี่ยวกับ HTML ไประดับหนึ่งแล้ว 
+ตอนนี้เราจะมาสร้าง HTML5 cat photo web app ด้วยกันไปทีละส่วน ๆ
 
 `h2` element ที่คุณจะเพิ่มเข้ามาในขั้นนี้จะเพิ่ม heading ระดับ 2 ให้กับเว็บเพจ 
 
-element จะบอก browser โครงสร้างของเว็บไซต์ของคุณ
+element ต่าง ๆ จะบอก browser โครงสร้างของเว็บไซต์ของคุณ
 `h1` element มักถูกใช้เป็น heading หลัก
 `h2` element มันถูกใช้เป็น heading รอง
-และมันก็ยังมี `h3`, `h4`, `h5` และ `h6` element ที่จะบ่งบอกถึงระดับของ heading รอบที่แตกต่างกัน
+และมันก็ยังมี `h3`, `h4`, `h5` และ `h6` element ที่จะบ่งบอกถึงระดับของ heading รองที่แตกต่างกัน
 
 # --instructions--
 
-จงเพิ่มแท็ก`h2` ที่เขียนว่า "CatPhotoApp" เพื่อสร้าง HTML element อันที่สองต่อจาก "Hello World" `h1` element
+จงเพิ่มแท็ก `h2` ที่เขียนว่า "CatPhotoApp" เพื่อสร้าง HTML element อันที่สองต่อจาก "Hello World" `h1` element
 
 # --hints--
 
@@ -30,7 +31,7 @@ element จะบอก browser โครงสร้างของเว็บ
 assert($('h2').length > 0);
 ```
 
-Your `h2` element should have a closing tag.
+`h2` element ควรมีแท็กปิด
 
 ```js
 assert(
@@ -39,19 +40,19 @@ assert(
 );
 ```
 
-Your `h2` element should have the text `CatPhotoApp`.
+`h2` element ควรมีข้อความที่เขียนว่า `CatPhotoApp`.
 
 ```js
 assert.isTrue(/cat(\s)?photo(\s)?app/gi.test($('h2').text()));
 ```
 
-Your `h1` element should have the text `Hello World`.
+`h1` element ควรมีข้อความที่เขียนว่า `Hello World`.
 
 ```js
 assert.isTrue(/hello(\s)+world/gi.test($('h1').text()));
 ```
 
-Your `h1` element should be before your `h2` element.
+`h1` element ควรอยู่หน้า `h2` element ของคุณ
 
 ```js
 assert(code.match(/<h1>\s*?.*?\s*?<\/h1>\s*<h2>\s*?.*?\s*?<\/h2>/gi));

@@ -20,7 +20,7 @@ dashedName: link-to-external-pages-with-anchor-elements
 ```
 
 หลังจากนั้น browser ของคุณจะแสดงข้อความที่เขียนว่า `this links to freecodecamp.org` ซึ่งเป็นลิงค์ที่คุณสามารถคลิกได้
-และลิงค์นั้นจะพาคุณไปยังที่อยู่เว็บ `https://www.freecodecamp.org`
+และลิงค์นั้นจะพาคุณไปยังที่อยู่เว็บไซต์ `https://www.freecodecamp.org`
 
 # --instructions--
 
@@ -34,13 +34,13 @@ dashedName: link-to-external-pages-with-anchor-elements
 assert(/cat photos/gi.test($('a').text()));
 ```
 
-You need an `a` element that links to `https://www.freecatphotoapp.com`
+คุณต้องการ `a` element ที่ลิงค์ไปยัง `https://www.freecatphotoapp.com`
 
 ```js
 assert(/^https?:\/\/(www\.)?freecatphotoapp\.com\/?$/i.test($('a').attr('href')));
 ```
 
-Your `a` element should have a closing tag.
+`a` element ควรมีแท็กปิด
 
 ```js
 assert(

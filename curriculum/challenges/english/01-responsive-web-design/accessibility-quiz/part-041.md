@@ -21,7 +21,7 @@ semantic HTML elements 2 อันสุดท้ายสำหรับโป�
 assert.exists(document.querySelector('main + footer'));
 ```
 
-You should nest one `address` element within the `footer` element.
+คุณควรเพิ่ม `address` element อันหนึ่งไว้ใน `footer` element.
 
 ```js
 assert.exists(document.querySelector('footer > address'));

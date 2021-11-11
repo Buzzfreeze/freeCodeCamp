@@ -18,25 +18,25 @@ dashedName: part-10
 assert.exists(new __helpers.CSSHelp(document).getStyle('header'));
 ```
 
-You should give the `header` a `width` of `100%`.
+คุณควรกำหนดให้ `header` มี `width` เท่ากับ `100%`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('header')?.width, '100%');
 ```
 
-You should give the `header` a `height` of `50px`.
+คุณควรกำหนดให้ `header` มี `height` เท่ากับ `50px`
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('header')?.height, '50px');
 ```
 
-You should give the `header` a `background-color` of `#1b1b32`.
+คุณควรกำหนดให้ `header` มี `background-color` เท่ากับ `#1b1b32`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('header')?.backgroundColor, 'rgb(27, 27, 50)');
 ```
 
-You should give the `header` a `display` of `flex`.
+คุณควรกำหนดให้ `header` ที `display` เท่ากับ `flex`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('header')?.display, 'flex');

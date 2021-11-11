@@ -16,17 +16,17 @@ dashedName: add-rounded-corners-with-border-radius
 คุณสามารถระบุ `border-radius` ด้วย pixels
 จงกำหนดให้ภาพแมวของคุณมี `border-radius` เท่ากับ `10px`
 
-**Note:** challenge นี้เปิดโอกาสให้สามารถใช้ solution ที่หลากหลายได้. ยกตัวอย่างเช่น คุรอาจจะเพิ่ม `border-radius` ให้เป็น `.thick-green-border` class หรือ `.smaller-image` class.
+**Note:** challenge นี้เปิดโอกาสให้สามารถใช้ solution ที่หลากหลายได้. ยกตัวอย่างเช่น คุณอาจจะเพิ่ม `border-radius` ให้เป็น `.thick-green-border` class หรือ `.smaller-image` class.
 
 # --hints--
 
-ภายของคุรควรมี class `thick-green-border`.
+ภาพของคุณควรมี class `thick-green-border`.
 
 ```js
 assert($('img').hasClass('thick-green-border'));
 ```
 
-Your image should have a border radius of `10px`.
+ภาพของคุณควรมี border radius เท่ากับ `10px`.
 
 ```js
 assert(

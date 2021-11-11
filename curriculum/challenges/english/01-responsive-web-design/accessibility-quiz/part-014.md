@@ -21,31 +21,31 @@ dashedName: part-14
 assert.exists(document.querySelector('main > form'));
 ```
 
-You should nest three `section` elements within your `form` element.
+คุณควรเก็บ `section` element 3 อันไว้ใน `form` element.
 
 ```js
 assert.equal(document.querySelectorAll('main > form > section')?.length, 3);
 ```
 
-You should give the `form` element an `action` attribute.
+คุณควรกำหนดให้ `form` element มี `action` attribute อันหนึ่ง
 
 ```js
 assert.notEmpty(document.querySelector('main > form')?.action);
 ```
 
-You should give the `action` attribute a value of `https://freecodecamp.org/practice-project/accessibility-quiz`.
+คุณควรกำหนดให้ `action` attribute มีค่าเป็น `https://freecodecamp.org/practice-project/accessibility-quiz`.
 
 ```js
 assert.equal(document.querySelector('main > form')?.action, 'https://freecodecamp.org/practice-project/accessibility-quiz');
 ```
 
-You should give the `form` element a `method` attribute.
+คุณควรกำหนดให้ `form` element มี `method` attribute อันหนึ่ง
 
 ```js
 assert.notEmpty(document.querySelector('main > form')?.method);
 ```
 
-You should give the `form` element a `method` attribute with a value of `post`.
+คุณควรกำหนดให้ `form` element มี `method` attribute ที่มีค่าเป็น `post`.
 
 ```js
 assert.equal(document.querySelector('main > form')?.method?.toLowerCase(), 'post');

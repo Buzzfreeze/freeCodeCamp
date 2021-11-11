@@ -21,13 +21,14 @@ dashedName: part-45
 assert.exists(new __helpers.CSSHelp(document).getStyle('li > a'));
 ```
 
-You should give the `a` element a `color` property.
+
+คุณควรกำหนดให้ `a` element มี `color` property อันหนึ่ง
 
 ```js
 assert.notEmpty(new __helpers.CSSHelp(document).getStyle('li > a')?.color);
 ```
 
-You should give the `color` property a contrast with the background of at least 7:1. _Hint: I would use `#dfdfe2`_
+คุณควรกำหนดให้ `color` property มี contrast กับสีพื้นหลังไม่ต่ำกว่า 7:1. _Hint:ฉันจะใช้ `#dfdfe2`_
 
 ```js
 function luminance(r, g, b) {

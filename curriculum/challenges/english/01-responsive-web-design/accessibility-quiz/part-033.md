@@ -17,7 +17,7 @@ dashedName: part-33
 assert.exists(new __helpers.CSSHelp(document).getStyle('p::before'));
 ```
 
-You should give the `p::before` pseudo-element a `content` property of `Question #`.
+คุณควรกำหนดให้ `p::before` pseudo-element มี `content` property เป็น `Question #`.
 
 ```js
 assert.include(new __helpers.CSSHelp(document).getStyle('p::before')?.content, 'Question #');

@@ -20,7 +20,7 @@ const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);
 assert.exists(gs('.info input') || gs('.info > input'));
 ```
 
-You should give the `input` elements a `width` of `50%`.
+คุณควรกำหนดให้ `input` elements มี `width` เท่ากับ `50%`.
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s)?.width;
@@ -28,7 +28,7 @@ const width = gs('.info input') ?? gs('.info > input');
 assert.equal(width, '50%');
 ```
 
-You should give the `input` elements a `text-align` of `left`.
+คุณควรกำหนดให้ `input` elements มี `text-align` เป็น `left`.
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s)?.textAlign;

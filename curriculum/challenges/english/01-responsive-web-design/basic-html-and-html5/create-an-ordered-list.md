@@ -9,9 +9,9 @@ dashedName: create-an-ordered-list
 
 # --description--
 
-HTML มี element พิเศษอีกอันหนึ่งที่เอาไว้สร้าง <dfn>ordered lists</dfn>, หรือลิตส์ที่เรียงเป็นลำดับตัวเลข
+HTML มี element พิเศษอีกอันหนึ่งที่เอาไว้สร้าง <dfn>ordered lists</dfn> หรือลิตส์ที่เรียงเป็นลำดับตัวเลข
 
-Ordered list จะเริ่มต้นด้วยแท็กเปิด `<ol>` element ตามด้วย `<li>` element จำนวนกี่อันก็ได้ ก่อนจะปิดท้ายด้วยแท็กปิด `</ol>`
+Ordered list (ลิงต์ที่สนใจลำดับ) จะเริ่มต้นด้วยแท็กเปิด `<ol>` element ตามด้วย `<li>` element จำนวนกี่อันก็ได้ ก่อนจะปิดท้ายด้วยแท็กปิด `</ol>`
 
 ยกตัวอย่างเช่น:
 
@@ -22,7 +22,7 @@ Ordered list จะเริ่มต้นด้วยแท็กเปิด 
 </ol>
 ```
 
-จะสร้างลิสต์ที่เรียงเป็นลำดับตัวเลขที่มีสมาชิกในลิสต์เป็น `Garfield` และ `Sylvester`
+จะสร้าง ordered list ที่มีสมาชิกในลิสต์เป็น `Garfield` และ `Sylvester`
 
 # --instructions--
 
@@ -36,37 +36,37 @@ Ordered list จะเริ่มต้นด้วยแท็กเปิด 
 assert(/Top 3 things cats hate:/i.test($('ol').prev().text()));
 ```
 
-You should have an unordered list for `Things cats love:`
+คุณควรมี unordered list สำหรับ `Things cats love:`
 
 ```js
 assert(/Things cats love:/i.test($('ul').prev().text()));
 ```
 
-You should have only one `ul` element.
+คุณควรมี `ul` element เพียงอันเดียวเท่านั้น
 
 ```js
 assert.equal($('ul').length, 1);
 ```
 
-You should have only one `ol` element.
+คุณควรมี `ol` element เพียงอันเดียวเท่านั้น
 
 ```js
 assert.equal($('ol').length, 1);
 ```
 
-You should have three `li` elements within your `ul` element.
+คุณควรมี `li` elements สามอันภายใน `ul` element ของคุณ
 
 ```js
 assert.equal($('ul li').length, 3);
 ```
 
-You should have three `li` elements within your `ol` element.
+คุณควรมี `li` elements สามอันภายใน `ol` element ของคุณ
 
 ```js
 assert.equal($('ol li').length, 3);
 ```
 
-Your `ul` element should have a closing tag.
+`ul` element ควรมีแท็กปิด
 
 ```js
 assert(
@@ -75,7 +75,7 @@ assert(
 );
 ```
 
-Your `ol` element should have a closing tag.
+`ol` element ควรมีแท็กปิด
 
 ```js
 assert(
@@ -84,7 +84,7 @@ assert(
 );
 ```
 
-Your `li` element should have a closing tag.
+`li` element ควรมีแท็กปิด
 
 ```js
 assert(
@@ -94,7 +94,7 @@ assert(
 );
 ```
 
-The `li` elements in your unordered list should not be empty.
+`li` elements ใน unordered list ของคุณไม่ควรจะว่าง
 
 ```js
 $('ul li').each((i, val) =>
@@ -102,7 +102,7 @@ $('ul li').each((i, val) =>
 );
 ```
 
-The `li` elements in your ordered list should not be empty.
+`li` elements ใน ordered list ของคุณไม่ควรจะว่าง
 
 ```js
 $('ol li').each((i, val) =>

@@ -20,7 +20,7 @@ dashedName: part-8
 assert.exists(new __helpers.CSSHelp(document).getStyle('#logo'));
 ```
 
-You should give the `img` a `width` of `max(100px, 18vw)`.
+คุรควรกำหนดให้ `img` มี `width` เท่ากับ `max(100px, 18vw)`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('#logo')?.width, 'max(100px, 18vw)');

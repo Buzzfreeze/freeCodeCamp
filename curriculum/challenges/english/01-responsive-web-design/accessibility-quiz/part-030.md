@@ -22,7 +22,7 @@ assert.notEmpty(htmlFor);
 assert.equal(htmlFor, document.querySelectorAll('ul.answers-list > li > label > input')?.[0]?.id);
 ```
 
-You should give the second `label` a `for` attribute matching the `id` of its `input` element.
+คุณควรกำหนดให้ `label` อันที่สองมี `for` attribute ตรงกับ `id` ของ `input` element ของมัน
 
 ```js
 const htmlFor = document.querySelectorAll('ul.answers-list > li > label')?.[1]?.htmlFor;
@@ -30,7 +30,7 @@ assert.notEmpty(htmlFor);
 assert.equal(htmlFor, document.querySelectorAll('ul.answers-list > li > label > input')?.[1]?.id);
 ```
 
-You should give the third `label` a `for` attribute matching the `id` of its `input` element.
+คุณควรกำหนดให้ `label` อันที่สามมี `for` attribute ตรงกับ `id` ของ `input` element ของมัน
 
 ```js
 const htmlFor = document.querySelectorAll('ul.answers-list > li > label')?.[2]?.htmlFor;
@@ -38,7 +38,7 @@ assert.notEmpty(htmlFor);
 assert.equal(htmlFor, document.querySelectorAll('ul.answers-list > li > label > input')?.[2]?.id);
 ```
 
-You should give the fourth `label` a `for` attribute matching the `id` of its `input` element.
+คุณควรกำหนดให้ `label` อันที่สี่มี `for` attribute ตรงกับ `id` ของ `input` element ของมัน
 
 ```js
 const htmlFor = document.querySelectorAll('ul.answers-list > li > label')?.[3]?.htmlFor;

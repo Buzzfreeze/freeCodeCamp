@@ -9,45 +9,45 @@ dashedName: use-clockwise-notation-to-specify-the-padding-of-an-element
 
 # --description--
 
-แทนที่จะระบุ `padding-top`, `padding-right`, `padding-bottom`, และ `padding-left` properties ของ element ที่จะตัว
-คุณสามารถระบุค่าให้มันได้ในบรรทัดเดียว แบบนี้:
+แทนที่จะระบุ `padding-top`, `padding-right`, `padding-bottom`, และ `padding-left` properties ของ element ทีละตัว
+คุณสามารถระบุค่าให้พวกมันทั้งหมดได้ในบรรทัดเดียว แบบนี้:
 
 ```css
 padding: 10px 20px 10px 20px;
 ```
 
-ค่าทั้ง 4 ค่านี้จะเรียงตามเขียมนาฬิกา: บน, ขวา, ล่าง, ซ้าย, และจะให้ผลลัพธ์เหมือนกับการใช้คำสั่งที่เป็น side-specific padding 
+ค่าทั้ง 4 ค่านี้จะเรียงตามเข็มนาฬิกา: บน, ขวา, ล่าง, ซ้าย, และจะให้ผลลัพธ์เหมือนกับการใช้คำสั่งที่เป็น side-specific padding 
 # --instructions--
 
-จงใช้ Clockwise Notation เพื่อกำหนดให้ `.blue-box` class มี `padding` ขนาด `40px` ที่ด้านบนและซ้าย และ `20px` ที่ด้านล่างและขวา
+จงใช้การเขียนตามเข็มนาฬกา (Clockwise Notation) เพื่อกำหนดให้ `.blue-box` class มี `padding` ขนาด `40px` ที่ด้านบนและซ้าย และ `20px` ที่ด้านล่างและขวา
 
 # --hints--
 
-`blue-box` class ควรกำหนดให้ด้านบนของ element มี `40px` เป็นค่าของ `padding`
+`blue-box` class ควรกำหนดให้ด้านบนของ element มี `padding` เท่ากับ `40px` 
 
 ```js
 assert($('.blue-box').css('padding-top') === '40px');
 ```
 
-Your `blue-box` class should give the right of elements `20px` of `padding`.
+`blue-box` class ควรกำหนดให้ด้านขวาของ element มี `padding` เท่ากับ `20px` 
 
 ```js
 assert($('.blue-box').css('padding-right') === '20px');
 ```
 
-Your `blue-box` class should give the bottom of elements `20px` of `padding`.
+`blue-box` class ควรกำหนดให้ด้านล่างของ element มี `padding` เท่ากับ `20px` 
 
 ```js
 assert($('.blue-box').css('padding-bottom') === '20px');
 ```
 
-Your `blue-box` class should give the left of elements `40px` of `padding`.
+`blue-box` class ควรกำหนดให้ด้านซ้ายของ element มี `padding` เท่ากับ `40px` 
 
 ```js
 assert($('.blue-box').css('padding-left') === '40px');
 ```
 
-You should use the clockwise notation to set the padding of `blue-box` class.
+คุณควรใช้การเขียนตามเข็มนาฬิกาเพื่อกำหนด padding ของ `blue-box` class
 
 ```js
 assert(

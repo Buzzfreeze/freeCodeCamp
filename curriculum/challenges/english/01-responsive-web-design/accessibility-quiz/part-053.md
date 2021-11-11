@@ -14,13 +14,13 @@ dashedName: part-53
 
 # --hints--
 
-คุณควรใช้ `.formrow` selector เพิ่มหา `.formrow` elements.
+คุณควรใช้ `.formrow` selector เพิ่มหา `.formrow` elements
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('.formrow'));
 ```
 
-You should give the `.formrow` a `margin-top` of at least `1px`.
+คุณควรกำหนดให้ `.formrow` มี `margin-top` อย่างน้อย `1px`
 
 ```js
 const val = new __helpers.CSSHelp(document).getStyle('.formrow')?.marginTop;
@@ -41,13 +41,13 @@ function remToPx(rem) {
 assert.isAtLeast(valInPx, 1);
 ```
 
-You should give the `.formrow` a `padding-top` of `0`.
+คุณควรกำหนดให้ `.formrow` มี `padding-top` เท่ากับ `0`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.formrow')?.paddingTop, '0px');
 ```
 
-You should give the `.formrow` a `padding-right` of at least `1px`.
+คุณควรกำหนดให้ `.formrow` มี `padding-right` อย่างน้อย `1px`.
 
 ```js
 const val = new __helpers.CSSHelp(document).getStyle('.formrow')?.paddingRight;
@@ -66,15 +66,16 @@ function remToPx(rem) {
   return rem * parseFloat(getComputedStyle(document.documentElement)?.fontSize);
 }
 assert.isAtLeast(valInPx, 1);
+
 ```
 
-You should give the `.formrow` a `padding-bottom` of `0`.
+คุณควรกำหนดให้ `.formrow` มี `padding-bottom` เท่ากับ `0`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.formrow')?.paddingBottom, '0px');
 ```
 
-You should give the `.formrow` a `padding-left` of at least `1px`.
+คุณควรกำหนดให้ `.formrow` มี `padding-left` อย่างน้อย `1px`
 
 ```js
 const val = new __helpers.CSSHelp(document).getStyle('.formrow')?.paddingLeft;
@@ -95,13 +96,13 @@ function remToPx(rem) {
 assert.isAtLeast(valInPx, 1);
 ```
 
-You should use an `input` selector to target the `input` elements.
+คุณควรใช้ `input` selector เพื่อชี้ไปที่ `input` elements.
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('input'));
 ```
 
-You should give the `input` a `font-size` greater than `13px`.
+คุณควรกำหนดให้ `input` มี `font-size` มากกว่า `13px`.
 
 ```js
 const val = new __helpers.CSSHelp(document).getStyle('input')?.fontSize;

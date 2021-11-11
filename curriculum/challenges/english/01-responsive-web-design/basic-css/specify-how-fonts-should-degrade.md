@@ -10,11 +10,11 @@ dashedName: specify-how-fonts-should-degrade
 # --description--
 
 มีฟ้อนต์เริ่มต้นหลายตัวที่สามารถใช้งานได้ในทุก browser
-พวกนี้คือ font family ที่ใชได้ทั่วไปรวมถึง `monospace`, `serif` และ `sans-serif`
+ฟ้อนต์พวกนี้เรียกว่า generic font family ซึ่ง `monospace`, `serif` และ `sans-serif` ก็เป็นหนึ่งในนั้น
 
 เมื่อฟ้อนต์หนึ่งใช้งานไม่ได้ คุณสามารถบอก browser ให้ "degrade" ไปเป็นฟ้อนต์อื่น
 
-ยกตัวอย่างเช่น ถ้าคุณต้องการให้ element ใช้ `Helvetica` font, แต่ degrade ไปเป็น `sans-serif` font เป็น `Helvetica` ใช้งานไม่ได้, คุณสามารถระบุมันได้แบบนี้:
+ยกตัวอย่างเช่น ถ้าคุณต้องการให้ element ใช้ `Helvetica` font, แต่ degrade ไปเป็น `sans-serif` font เมื่อ `Helvetica` ใช้งานไม่ได้, คุณสามารถระบุมันได้แบบนี้:
 
 ```css
 p {
@@ -22,16 +22,16 @@ p {
 }
 ```
 
-ชื่อของ Generic font family นั้นไม่ใช่ case-sensitive
+ชื่อของ generic font family นั้นไม่ใช่ case-sensitive
 นอกจากนี้พวกมันยังไม่ต้องการ quotes เพราะมันเป็นคีย์เวิร์ดของ CSS 
 
 # --instructions--
 
-จงใช้ `monospace` font กับ `h2` element, เพื่อที่มันจะได้ฟ้อนต์สองอันตอนนี้ - `Lobster` และ `monospace`
+จงใช้ `monospace` font กับ `h2` element, เพื่อที่มันจะได้ฟ้อนต์สองอันแบบนี้ - `Lobster` และ `monospace`
 
 ในแบบฝึกหัดที่แล้ว, คุณได้นำเข้า `Lobster` font โดยใช้ `link` tag. 
-ตอนนี้ จงคอมเมนต์คำสั่งนำเข้าของ `Lobster` font จาก Google Fonts เพื่อที่มันจะได้ไม่สามารถใช้งานได้อีกต่อไป
-สังเกตว่า `h2` element degrades ไปเป็น `monospace` font อย่างไร
+ตอนนี้ จงคอมเมนต์คำสั่งนำเข้าของ `Lobster` font จาก Google Fonts เพื่อที่มันจะไม่ถูกใช้งานอีกต่อไป
+จงสังเกตการที่ `h2` element degrades ไปเป็น `monospace` font 
 
 **Note:** ถ้าคุณมี `Lobster` font ติดตั้งไว้ใน computer, คุณจะไม่เห็นการ degrade เพราะ browser ของคุณสามารถหาฟ้อนต์นั้นได้
 
@@ -47,7 +47,7 @@ assert(
 );
 ```
 
-Your h2 element should degrade to the font `monospace` when `Lobster` is not available.
+h2 element ควร degrade ไปเป็นฟ้อนต์ `monospace` เมื่อ `Lobster` ไม่สามารถใช้งานได้
 
 ```js
 assert(
@@ -57,13 +57,13 @@ assert(
 );
 ```
 
-You should comment out your call to Google for the `Lobster` font by putting `<!--` in front of it.
+คุณควรคอมเมนต์คำสั่งเรียกใช้ `Lobster` font จาก Google โดยการใช้  `<!--` ไว้ที่ข้างหน้า
 
 ```js
 assert(new RegExp('<!--[^fc]', 'gi').test(code));
 ```
 
-You should close your comment by adding `-->`.
+คุณควรลงท้ายคอมเมนต์ของคุณด้วย `-->`.
 
 ```js
 assert(new RegExp('[^fc]-->', 'gi').test(code));

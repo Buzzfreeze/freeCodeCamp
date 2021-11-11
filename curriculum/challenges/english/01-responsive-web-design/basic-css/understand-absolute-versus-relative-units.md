@@ -11,23 +11,23 @@ dashedName: understand-absolute-versus-relative-units
 
 หลาย ๆ แบบฝึกหัดที่ผ่านมาได้กำหนด margin หรือ padding ของ element หนึ่งด้วย pixels (`px`)
 Pixel เป็นหน่วยความยาวประเภทหนึ่ง โดยมันจะบอก browser ถึงขนาดและช่องว่างของมัน
-ยนอกเหนือจาก `px`, CSS ยังมีหน่วยความยาวอีกหลายหน่วยที่คุณสามารถใช้ได้
+นอกจาก `px`, CSS ยังมีหน่วยความยาวอีกหลายหน่วยที่คุณสามารถใช้ได้
 
-หน่วยความยาว 2 ประเภทหลัก คือ absolute และ relative
-หน่วย absolute จะขึ้นกับขนาดจริง ๆ ยกตัวอย่างเช่น `in` และ `mm` ที่หมายถึงนิ้วและมิลลิเมตร 
-หน่วย absolute length จะประมาณค่าจริงบนหน้าจอ แต่มันมีความต่างเล้กน้อยขึ้นกับความละเอียดของ screen
+หน่วยความยาวถูกแบ่เป็น 2 ประเภทหลัก คือ absolute และ relative
+หน่วย absolute จะขึ้นกับขนาดจริง ๆ ของวัตถุ ยกตัวอย่างเช่น `in` และ `mm` ที่หมายถึงหน่วยนิ้วและมิลลิเมตร 
+หน่วยความยาวแบบ absolute จะประมาณค่าจริงบนหน้าจอ แต่มันมีความต่างเล็กน้อยขึ้นกับความละเอียดของจอภาพ
 
-หน่วย relative เช่น `em` หรือ `rem`  จะขึ้นกับค่าความยาวอื่น ๆ ยกตัวอย่างเช่น `em` จะขึ้นกับขนาดของฟ้อนต์ของ element'
-ถ้าคุณใช้มันเพื่อกำหนด `font-size` property, มันจะสัมพัทธ์กับ `font-size` ของ parent ของมัน
+หน่วย relative เช่น `em` หรือ `rem` จะขึ้นกับค่าความยาวของวัตถุอื่น ยกตัวอย่างเช่น `em` จะขึ้นกับขนาดฟ้อนต์ของ element
+ถ้าคุณใช้มันเพื่อกำหนด `font-size` property, มันจะอิงกับ `font-size` ของ parent ของมัน
 
-**Note:** มีหลาย relative unit ที่จะขึ้นกับขนาดของ viewport. พวกมันจะถูกกล่าวถึงใน Responsive Web Design Principles section.
+**Note:** มีหลายหน่วย relative ที่จะขึ้นกับขนาดของ viewport. พวกมันจะถูกกล่าวถึงใน Responsive Web Design Principles section.
 
 # --instructions--
 จงเพิ่ม `padding` property ให้กับ element ที่มีคลาส `red-box` และกำหนดให้มันเท่ากับ `1.5em`.
 
 # --hints--
 
- `red-box` class ควรมี`padding` property.
+`red-box` class ควรมี `padding` property
 
 ```js
 assert(
@@ -38,7 +38,7 @@ assert(
 );
 ```
 
-Your `red-box` class should give elements 1.5em of `padding`.
+`red-box` class ควรกำหนดให้ element มี `padding` ขนาด 1.5em 
 
 ```js
 assert(code.match(/\.red-box\s*?{[\s\S]*padding\s*:\s*?1\.5em/gi));

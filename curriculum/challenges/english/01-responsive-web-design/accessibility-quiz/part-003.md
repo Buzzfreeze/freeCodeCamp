@@ -19,13 +19,13 @@ dashedName: part-3
 assert.equal(document.querySelectorAll('body > meta')?.length, 2);
 ```
 
-You should give the `meta` a `name` attribute of `viewport`.
+คุณควรกำหนดให้ `meta` มี `name` attribute เป็น `viewport`
 
 ```js
 assert.equal(document.querySelectorAll('body > meta[name="viewport"]')?.length, 1);
 ```
 
-You should give the `meta` a `content` attribute of `width=device-width, initial-scale=1`.
+คุณควรกำหนดให้ `meta` มี `content` attribute เป็น `width=device-width, initial-scale=1`.
 
 ```js
 // TODO: Double-check this is the only correct answer

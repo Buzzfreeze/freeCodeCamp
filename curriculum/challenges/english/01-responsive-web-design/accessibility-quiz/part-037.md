@@ -17,19 +17,19 @@ dashedName: part-37
 assert.notEmpty(document.querySelector('.question-block > label')?.htmlFor);
 ```
 
-You should give the `select` element an `id` attribute.
+คุณควรกำหนดให้ `select` element มี `id` attribute อันหนึ่ง
 
 ```js
 assert.notEmpty(document.querySelector('.answer > select')?.id);
 ```
 
-You should give the `select` element an `id` matching the `for` attribute of the `label` element.
+คุณควรกำหนดให้ `select` element มี `id` ที่ตรงกับ `for` attribute ของ `label` element.
 
 ```js
 assert.equal(document.querySelector('.answer > select')?.id, document.querySelector('.question-block > label')?.htmlFor);
 ```
 
-You should give the `select` element a `name` attribute.
+คุณควรกำหนดให้ `select` element มี `name` attribute อันหนึ่ง
 
 ```js
 assert.notEmpty(document.querySelector('.answer > select')?.name);

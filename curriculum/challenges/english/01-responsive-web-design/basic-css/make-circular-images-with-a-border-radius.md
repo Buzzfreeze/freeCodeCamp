@@ -9,7 +9,7 @@ dashedName: make-circular-images-with-a-border-radius
 
 # --description--
 
-นอกเหนือจาก pixels, คุณสามารถระบุค่า `border-radius` โดยใช้ percentage
+นอกเหนือจาก pixels, คุณสามารถระบุค่า `border-radius` โดยใช้เปอร์เซ็นได้
 
 # --instructions--
 
@@ -17,13 +17,13 @@ dashedName: make-circular-images-with-a-border-radius
 
 # --hints--
 
-ภาพของคุณควรมี border radius ขนาด `50%`, ซึ่งทำให้มันเป็นวงทั้งหมด
+ภาพของคุณควรมี border radius ขนาด `50%`, ซึ่งทำให้มันเป็นวง
 
 ```js
 assert(parseInt($('img').css('border-top-left-radius')) > 48);
 ```
 
-The `border-radius` value should use a percentage value of `50%`.
+ค่าของ `border-radius` ควรระบุเป็นแบบเปอร์เซ็นโดยให้มีค่า `50%`
 
 ```js
 assert(code.match(/50%/g));

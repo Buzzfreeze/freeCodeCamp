@@ -19,19 +19,19 @@ dashedName: part-4
 assert.equal(document.querySelectorAll('meta').length, 3);
 ```
 
-You should give the `meta` a `name` attribute of `description`.
+คุณควรกำหนดให้ `meta` มี `name` attribute เป็น `description`.
 
 ```js
 assert.exists(document.querySelector('meta[name="description"]'));
 ```
 
-You should give the `meta` a `content` attribute.
+คุณควรกำหนดให้ `meta` มี `content` attribute อันหนึ่ง
 
 ```js
 assert.notEmpty(document.querySelector('meta[name="description"]')?.content);
 ```
 
-The `content` attribute value should not be more than 165 characters. _This is Google's maximum description length._
+ค่าของ `content` attribute ไม่ควรจะมีมากกว่า 165 ตัวอักษร. _นี่คือความยาวสุงสุดของคำอธิบาย Google รับได้_
 
 ```js
 assert.isAtMost(document.querySelector('meta[name="description"]')?.content?.length, 165);

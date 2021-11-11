@@ -18,19 +18,19 @@ dashedName: part-62
 assert.exists(new __helpers.CSSHelp(document).getStyle('footer'));
 ```
 
-You should give `footer` a `background-color` of `#2a2a40`.
+คุณควรกำหนดให้ `footer` มี `background-color` of `#2a2a40`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('footer')?.backgroundColor, 'rgb(42, 42, 64)');
 ```
 
-You should give `footer` a `display` of `flex`.
+คุณควรกำหนดให้ `footer` มี `display` เท่ากับ `flex`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('footer')?.display, 'flex');
 ```
 
-You should give `footer` a `justify-content` of `center`.
+คุณควรกำหนดให้ `footer` มี `justify-content` เท่ากับ `center`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('footer')?.justifyContent, 'center');

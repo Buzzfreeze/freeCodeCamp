@@ -9,7 +9,7 @@ dashedName: turn-an-image-into-a-link
 
 # --description--
 
-คุรสามารถทำให้ element กลายเป็นลิงค์ได้โดยการเก็บมันไว้ใน `a` element
+คุณสามารถทำให้ element กลายเป็นลิงค์ได้โดยการเก็บมันไว้ใน `a` element
 
 จงเก็บรูปของคุณไว้ใน `a` element
 นี่คือตัวอย่าง:
@@ -18,13 +18,14 @@ dashedName: turn-an-image-into-a-link
 <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="Three kittens running towards the camera."></a>
 ```
 
-อย่างลืมที่จะใช้ `#` เป็น `href` property ของ `a` element เพื่อที่จะทำให้มันเป็น dead link
+อย่าลืมที่จะใช้ `#` เป็น `href` property ของ `a` element เพื่อที่จะทำให้มันเป็น dead link
 
 # --instructions--
 
 จงวาง image element ที่มีไว้ใน `a` (*anchor*) element.
 
-เมื่อคืนที่มาเสร็จแล้ว จง hover บนรูปของคุณด้วยลูกศร
+เมื่อคุณทำเสร็จแล้ว
+จงลอง hover บนรูปของคุณด้วย cursor
 normal pointer ของลูกศรคุณจะกลายเป็น link clicking pointer
 และตอนนี้รูปก็เป็นลิงค์อันหนึ่งแล้ว
 
@@ -36,13 +37,13 @@ normal pointer ของลูกศรคุณจะกลายเป็น l
 assert($('a').children('img').length > 0);
 ```
 
-Your `a` element should be a dead link with a `href` attribute set to `#`.
+`a` element ควรจะเป็น dead link ที่มี `href` attribute ที่มีค่าเป็น `#`.
 
 ```js
 assert(new RegExp('#').test($('a').children('img').parent().attr('href')));
 ```
 
-Each of your `a` elements should have a closing tag.
+`a` element แต่ละอันของคุณนั้นควรมีแท็กปิด
 
 ```js
 assert(

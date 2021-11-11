@@ -20,107 +20,108 @@ dashedName: part-31
 assert.notEmpty(document.querySelectorAll('ul.answers-list > li > label')?.[0]?.textContent?.trim());
 ```
 
-You should give the second `label` element text content.
+คุณควรใส่เนื้อหาลงใน `label` element อันที่สอง
 
 ```js
 assert.notEmpty(document.querySelectorAll('ul.answers-list > li > label')?.[1]?.textContent?.trim());
 ```
 
-You should give the third `label` element text content.
+คุณควรใส่เนื้อหาลงใน `label` element อันที่สาม
 
 ```js
 assert.notEmpty(document.querySelectorAll('ul.answers-list > li > label')?.[2]?.textContent?.trim());
 ```
 
-You should give the fourth `label` element text content.
+คุณควรใส่เนื้อหาลงใน `label` element อันที่สี่
 
 ```js
 assert.notEmpty(document.querySelectorAll('ul.answers-list > li > label')?.[3]?.textContent?.trim());
 ```
 
-You should place the first `label` text content after the `input` element.
+คุณควรวางข้อความของ `label` อันแรกไว้หลังจาก `input` element
 
 ```js
 assert.match(document.querySelectorAll('ul.answers-list > li > label')?.[0]?.innerHTML, />[\s\S]+[a-zA-Z]/);
 ```
 
-You should place the second `label` text content after the `input` element.
+คุณควรวางข้อความของ `label` อันที่สองไว้หลังจาก `input` element
 
 ```js
 assert.match(document.querySelectorAll('ul.answers-list > li > label')?.[1]?.innerHTML, />[\s\S]+[a-zA-Z]/);
 ```
 
-You should place the third `label` text content after the `input` element.
+คุณควรวางข้อความของ `label` อันที่สามไว้หลังจาก `input` element
 
 ```js
 assert.match(document.querySelectorAll('ul.answers-list > li > label')?.[2]?.innerHTML, />[\s\S]+[a-zA-Z]/);
 ```
 
-You should place the fourth `label` text content after the `input` element.
+คุณควรวางข้อความของ `label` อันที่สี่ไว้หลังจาก `input` element
 
 ```js
 assert.match(document.querySelectorAll('ul.answers-list > li > label')?.[3]?.innerHTML, />[\s\S]+[a-zA-Z]/);
 ```
 
-You should give the first `label` the text `True` or `False`.
+คุณควรกำหนดให้ `label` อันแรกมีข้อความเป็น `True` หรือ `False`.
 
 ```js
 assert.include(['True', 'False'], document.querySelectorAll('ul.answers-list > li > label')?.[0]?.textContent?.trim());
 ```
 
-You should give the second `label` the text `True`.
+คุณควรกำหนดให้ `label` อันที่สองมีข้อความเป็น `True` 
 
 ```js
 const l = (n) => document.querySelectorAll('ul.answers-list > li > label')?.[n]?.textContent?.trim();
 assert(l(0) === 'False' ? l(1) === 'True' : true);
 ```
 
-You should give the second `label` the text `False`.
+คุณควรกำหนดให้ `label` อันที่สองมีข้อความเป็น `False`.
 
 ```js
 const l = (n) => document.querySelectorAll('ul.answers-list > li > label')?.[n]?.textContent?.trim();
 assert(l(0) === 'True' ? l(1) === 'False' : true);
 ```
 
-You should give the third `label` the text `True` or `False`.
+คุณควรกำหนดให้ `label` อันที่สามมีข้อความเป็น `True` หรือ `False`.
 
 ```js
 assert.include(['True', 'False'], document.querySelectorAll('ul.answers-list > li > label')?.[2]?.textContent?.trim());
 ```
 
-You should give the fourth `label` the text `True`.
+คุณควรกำหนดให้ `label` อันที่สี่มีข้อความเป็น `True`
 
 ```js
 const l = (n) => document.querySelectorAll('ul.answers-list > li > label')?.[n]?.textContent?.trim();
 assert(l(2) === 'False' ? l(3) === 'True' : true);
 ```
 
-You should give the fourth `label` the text `False`.
+คุณควรกำหนดให้ `label` อันที่สี่มีข้อความเป็น `False`
+
 
 ```js
 const l = (n) => document.querySelectorAll('ul.answers-list > li > label')?.[n]?.textContent?.trim();
 assert(l(2) === 'True' ? l(3) === 'False' : true);
 ```
 
-You should give the first `input` a `value` matching the `label` text content.
+คุณควรกำหนดให้ `input` อันแรกมี `value` ตรงกับข้อความใน `label`
 
 ```js
 assert.equal(document.querySelectorAll('ul.answers-list > li > label')?.[0]?.textContent?.trim()?.toLowerCase(), document.querySelectorAll('ul.answers-list > li > label > input')?.[0]?.value?.toLowerCase());
 ```
 
-You should give the second `input` a `value` matching the `label` text content.
+คุณควรกำหนดให้ `input` อันที่สองมี `value` ตรงกับข้อความใน `label`
 
 ```js
 assert.equal(document.querySelectorAll('ul.answers-list > li > label')?.[1]?.textContent?.trim()?.toLowerCase(), document.querySelectorAll('ul.answers-list > li > label > input')?.[1]?.value?.toLowerCase());
 ```
 
-You should give the third `input` a `value` matching the `label` text content.
+คุณควรกำหนดให้ `input` อันที่สามมี `value` ตรงกับข้อความใน `label`
 
 ```js
 assert.equal(document.querySelectorAll('ul.answers-list > li > label')?.[2]?.textContent?.trim()?.toLowerCase(), document.querySelectorAll('ul.answers-list > li > label > input')?.[2]?.value?.toLowerCase());
 ```
 
-You should give the fourth `input` a `value` matching the `label` text content.
+คุณควรกำหนดให้ `input` อันที่สี่มี `value` ตรงกับข้อความใน `label`
 
 ```js
 assert.equal(document.querySelectorAll('ul.answers-list > li > label')?.[3]?.textContent?.trim()?.toLowerCase(), document.querySelectorAll('ul.answers-list > li > label > input')?.[3]?.value?.toLowerCase());

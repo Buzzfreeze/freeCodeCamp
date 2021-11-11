@@ -8,7 +8,7 @@ dashedName: nest-an-anchor-element-within-a-paragraph
 
 # --description--
 
-ึุณสามารถเก็บลิงค์ไว้ใน text elements อันอื่น ๆ
+ึุคุณสามารถเก็บลิงค์ไว้ใน text elements อันอื่น ๆ ได้
 
 ```html
 <p>
@@ -16,7 +16,8 @@ dashedName: nest-an-anchor-element-within-a-paragraph
 </p>
 ```
 
-เรามันค่อย ๆ ดูตัวอย่างนี้กันดีกว่า Normal text จะถูกเก็บไว้ใน `p` element:
+เรามาค่อย ๆ ดูตัวอย่างนี้กันดีกว่า 
+Normal text จะถูกเก็บไว้ใน `p` element:
 
 ```html
 <p> Here's a ... for you to follow. </p>
@@ -62,7 +63,7 @@ assert(
 );
 ```
 
-The `a` element should link to "`https://www.freecatphotoapp.com`".
+`a` element ควรลิงค์ไปที่ "`https://www.freecatphotoapp.com`"
 
 ```js
 assert(
@@ -70,7 +71,7 @@ assert(
 );
 ```
 
-Your `a` element should have the anchor text of `cat photos`
+ `a` element ควรมี anchor text เป็น `cat photos`
 
 ```js
 assert(
@@ -80,13 +81,13 @@ assert(
 );
 ```
 
-You should create a new `p` element. There should be at least 3 total `p` tags in your HTML code.
+คุรควรสร้าง `p` element ใหม่มา 1 อัน โดยตอนนี้ ควรมี `p` tag อย่างน้อยสามอันใน HTML code ของคุณ
 
 ```js
 assert($('p') && $('p').length > 2);
 ```
 
-Your `a` element should be nested within your new `p` element.
+`a` element ควรถูกใส่ไว้ใน `p` element อันใหม่
 
 ```js
 assert(
@@ -94,7 +95,7 @@ assert(
 );
 ```
 
-Your `p` element should have the text `View more ` (with a space after it).
+`p` element ควรมีข้อความที่เขียนว่า `View more ` (พร้อมกับช่องไฟข้างหลังมัน).
 
 ```js
 assert(
@@ -105,7 +106,7 @@ assert(
 );
 ```
 
-Your `a` element should <em>not</em> have the text `View more`.
+`a` element <em>ไม่ควร</em> มีข้อความที่เขียนว่า `View more`.
 
 ```js
 assert(
@@ -115,7 +116,7 @@ assert(
 );
 ```
 
-Each of your `p` elements should have a closing tag.
+ `p` element แต่ละอันของคุณควรจะมีแท็กปิด
 
 ```js
 assert(
@@ -125,7 +126,7 @@ assert(
 );
 ```
 
-Each of your `a` elements should have a closing tag.
+`a` element แต่ละอันของคุณควรมีแท็กปิด
 
 ```js
 assert(

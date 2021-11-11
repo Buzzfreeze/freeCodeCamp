@@ -19,57 +19,57 @@ dashedName: part-19
 assert.equal(document.querySelectorAll('h2#student-info ~ div')?.length, 3);
 ```
 
-You should give the first `div` a `class` of `info`.
+คุณควรกำหนดให้ `div` อันแรกมี `class` ชื่อ `info`.
 
 ```js
 assert.equal(document.querySelectorAll('h2#student-info ~ div')?.[0]?.className, 'info');
 ```
 
-You should give the second `div` a `class` of `info`.
+คุณควรกำหนดให้ `div` อันที่สองมี `class` ชื่อ `info`.
 
 ```js
 assert.equal(document.querySelectorAll('h2#student-info ~ div')?.[1]?.className, 'info');
 ```
 
-You should give the third `div` a `class` of `info`.
+คุณควรกำหนดให้ `div` อันที่สามมี `class` ชื่อ `info`.
 
 ```js
 assert.equal(document.querySelectorAll('h2#student-info ~ div')?.[2]?.className, 'info');
 ```
 
-You should nest one `label` element within the first `div`.
+คุณควรเก้บ `label` element อันหนึ่งไว้ใน `div` อันแรก
 
 ```js
 assert.equal(document.querySelectorAll('h2#student-info ~ div')?.[0]?.querySelectorAll('label')?.length, 1);
 ```
 
-You should nest one `input` element within the first `div`, after the `label`.
+คุณควรเก็บ `input` element อันหนึ่งไว้ใน `div` อันแรกต่อจาก `label`
 
 ```js
 assert.equal(document.querySelectorAll('h2#student-info ~ div')?.[0]?.querySelectorAll('input')?.length, 1);
 assert.exists(document.querySelectorAll('h2#student-info ~ div')?.[0]?.querySelector('label + input'));
 ```
 
-You should nest one `label` element within the second `div`.
+คุณควรเก็บ `label` element อันหนึ่งไว้ใน `div` อันที่สอง
 
 ```js
 assert.equal(document.querySelectorAll('h2#student-info ~ div')?.[1]?.querySelectorAll('label')?.length, 1);
 ```
 
-You should nest one `input` element within the second `div`, after the `label`.
+คุณควรเก็บ `input` element อันหนึ่งไว้ใน `div`อันที่สองต่อจาก `label`
 
 ```js
 assert.equal(document.querySelectorAll('h2#student-info ~ div')?.[1]?.querySelectorAll('input')?.length, 1);
 assert.exists(document.querySelectorAll('h2#student-info ~ div')?.[1]?.querySelector('label + input'));
 ```
 
-You should nest one `label` element within the third `div`.
+คุณควรเก็บ `label` element อันหนึ่งไว้ใน `div` อันที่สาม
 
 ```js
 assert.equal(document.querySelectorAll('h2#student-info ~ div')?.[2]?.querySelectorAll('label')?.length, 1);
 ```
 
-You should nest one `input` element within the third `div`, after the `label`.
+คุณควรเก็บ `input` element อันหนึ่งไว้ใน `div` อันที่สามต่อจาก `label`.
 
 ```js
 assert.equal(document.querySelectorAll('h2#student-info ~ div')?.[2]?.querySelectorAll('input')?.length, 1);

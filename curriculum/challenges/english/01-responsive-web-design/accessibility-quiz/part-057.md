@@ -26,31 +26,31 @@ padding-top: 5px;
 assert.exists(new __helpers.CSSHelp(document).getStyle('.question-block'));
 ```
 
-You should give the `.question-block` element a `display` of `block`.
+คุณควรกำหนดให้ `.question-block` element มี `display` เป็น `block`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.question-block')?.display, 'block');
 ```
 
-You should give the `.question-block` element a `width` of `100%`.
+คุณควรกำหนดให้ `.question-block` element มี `width` เท่ากับ `100%`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.question-block')?.width, '100%');
 ```
 
-You should give the `.question-block` element a `margin-top` of `20px`.
+คุณควรกำหนดให้ `.question-block` element มี `margin-top` เท่ากับ `20px`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.question-block')?.marginTop, '20px');
 ```
 
-You should give the `.question-block` element a `padding-top` of `5px`.
+คุณควรกำหนดให้ `.question-block` element มี `padding-top` เท่ากับ `5px`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.question-block')?.paddingTop, '5px');
 ```
 
-You should give the `.question-block` element a `text-align` of `left`.
+คุณควรกำหนดให้ `.question-block` element มี `text-align` เท่ากับ `left`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.question-block')?.textAlign, 'left');

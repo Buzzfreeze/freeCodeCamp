@@ -22,7 +22,7 @@ dashedName: inform-with-the-paragraph-element
 
 จงสร้าง `p` element อันหนึ่งต่อจาก `h2` element, และจงกำหนดให้มันมีข้อความที่เขียนว่า `Hello Paragraph`
 
-**Note:** ตามปกติ, HTML tag ทุกอัจเขียนด้วยตัวพิมพ์เล็ก ยกตัวอย่างเช่น `<p></p>` ไม่ใช่ `<P></P>`
+**Note:** ตามปกติ, HTML tag ทุกอันเขียนด้วยตัวพิมพ์เล็ก ยกตัวอย่างเช่น แท็กสำหรับพารากราฟควรเป็น `<p></p>` ไม่ใช่ `<P></P>`
 
 # --hints--
 
@@ -32,13 +32,13 @@ dashedName: inform-with-the-paragraph-element
 assert($('p').length > 0);
 ```
 
-Your `p` element should have the text `Hello Paragraph`.
+`p` element ควรมีข้อความที่เขียนว่า `Hello Paragraph`.
 
 ```js
 assert.isTrue(/hello(\s)+paragraph/gi.test($('p').text()));
 ```
 
-Your `p` element should have a closing tag.
+`p` element ควรมีแท็กปิด
 
 ```js
 assert(

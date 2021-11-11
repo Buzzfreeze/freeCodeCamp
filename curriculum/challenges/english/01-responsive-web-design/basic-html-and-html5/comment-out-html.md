@@ -9,13 +9,13 @@ dashedName: comment-out-html
 
 # --description--
 
-จงจำไว้ว่าเพื่อที่จะเขียนคอมเมนต์ คุณต้องมี `<!--` และปิดท้าย `-->`
+จงจำไว้ว่าเพื่อที่จะเขียนคอมเมนต์ คุณต้องมี `<!--` และปิดท้ายด้วย `-->`
 
 คุณจะต้องปิดท้ายคอมเมนต์ก่อนที่จะเริ่ม `h2` element 
 
 # --instructions--
 
-จงทำให้ `h1` element และ `p` element กลางเป็นแค่คอมเมนต์ แต่ไม่รวม `h2` element.
+จงทำให้ `h1` element และ `p` element กลายเป็นแค่คอมเมนต์ แต่ไม่รวม `h2` element
 
 # --hints--
 
@@ -25,25 +25,25 @@ dashedName: comment-out-html
 assert($('h1').length === 0);
 ```
 
-Your `h2` element should not be commented out so that it is visible on the page.
+`h2` element ไม่ควรกลายเป็นคอมเมนต์เพื่อที่มันจะได้ถูกแสดงผลในหน้าเว็บไซต์
 
 ```js
 assert($('h2').length > 0);
 ```
 
-Your `p` element should be commented out so that it is not visible on the page.
+`p` ควรกลายเป็นคอมเมนต์เพื่อที่มันจะได้ไม่ถูกแสดงผลในหน้าเว็บไซต์
 
 ```js
 assert($('p').length === 0);
 ```
 
-Each of your comments should be closed with `-->`.
+คอมเมนต์แต่ละอันของคุณควรจะปิดท้ายด้วย  `-->`
 
 ```js
 assert(code.match(/[^fc]-->/g).length > 1);
 ```
 
-You should not change the order of the `h1` `h2` or `p` in the code.
+คุณไม่ควรเปลี่ยนลำดับของ `h1` `h2` หรือ `p` ในโค้ดของคุณ
 
 ```js
 assert(

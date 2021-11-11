@@ -9,9 +9,9 @@ dashedName: link-to-internal-sections-of-a-page-with-anchor-elements
 
 # --description--
 
-`a` (*anchor*) elements สามารถใช้เพื่อสร้างลิงค์ภายในที่พาไปยังแต่ละ section ข้างในหน้าเว็บไซต์นั้นได้ด้วย
+`a` (*anchor*) elements สามารถใช้เพื่อสร้าง internal link ที่พาไปยังแต่ละ section ข้างในหน้าเว็บไซต์นั้นได้ด้วย
 
-เพื่อสร้างิงค์ภายในหน้านั้น คุณต้องเพิ่ม `href` attribute ของลิงค์ให้กับเครื่องหมาย `#` และเพิ่มค่าของ `id` attribute ของ element ที่คุณต้องการจะนำทางไปโดยทั่วไป ก็คือตำแหน่งที่อยู่ลึกลงไปในหน้านั้น
+เพื่อสร้างลิงค์ภายในหน้านั้น คุณต้องเพิ่ม `href` attribute ของลิงค์ให้กับเครื่องหมาย `#` และเพิ่มค่าของ `id` attribute ของ element ที่คุณต้องการจะนำทางไปโดยทั่วไป ก็คือตำแหน่งที่อยู่ลึกลงไปในหน้านั้น
 นอกจากนี้ คุณยังต้องเพิ่ม `id` attribute อันเดียวกับนี้ให้กับ element ที่คุณได้มีการลิงค์ไว้
 `id` เป็น attribute ที่จะกล่าวถึง element ที่แตกต่างกัน
 
@@ -23,11 +23,11 @@ dashedName: link-to-internal-sections-of-a-page-with-anchor-elements
 <h2 id="contacts-header">Contacts</h2>
 ```
 
-เมื่อผู้ใช้คลิกที่ `Contacts` link, ผู้เขาจะถูกพาไปที่ section ของเว็บเพจที่มี **Contacts** header element.
+เมื่อผู้ใช้คลิกที่ `Contacts` link, เขาจะถูกพาไปที่ section ของเว็บเพจที่มี **Contacts** header element.
 
 # --instructions--
 
-ขงเปลี่ยน external link ให้เป็น internal link โดยการเปลี่ยน `href` attribute ให้เป้น `"#footer"` และข้อความจาก `cat photos` เป็น `Jump to Bottom`
+จงเปลี่ยน external link ให้เป็น internal link โดยการเปลี่ยน `href` attribute ให้เป็น `"#footer"` และข้อความจาก `cat photos` เป็น `Jump to Bottom`
 
 จงเอา `target="_blank"` attribute ออกจาก anchor tag เนื่องจากมันจะทำให้ linked document ถูกเปิดขึ้นมาในอีกหน้าหนึ่ง
 
@@ -41,19 +41,19 @@ dashedName: link-to-internal-sections-of-a-page-with-anchor-elements
 assert($('a').length == 1);
 ```
 
-There should be only one `footer` tag on your page.
+มันควรมี `footer` tag ในหน้านี้
 
 ```js
 assert($('footer').length == 1);
 ```
 
-The `a` tag should have an `href` attribute set to "#footer".
+`a` tag ควรมี `href` attribute อันหนึ่งที่ถูกกำหนดให้เป็น "#footer"
 
 ```js
 assert($('a').eq(0).attr('href') == '#footer');
 ```
 
-The `a` tag should not have a `target` attribute.
+`a` tag ไม่ควรมี `target` attribute.
 
 ```js
 assert(
@@ -62,7 +62,7 @@ assert(
 );
 ```
 
-The `a` text should be "Jump to Bottom".
+ข้อความของ `a` text ควรจะเป็น "Jump to Bottom"
 
 ```js
 assert(
@@ -73,7 +73,7 @@ assert(
 );
 ```
 
-The `footer` tag should have an `id` attribute set to "footer".
+`footer` tag ควรจะมี `id` attribute เป็น "footer"
 
 ```js
 assert($('footer').eq(0).attr('id') == 'footer');

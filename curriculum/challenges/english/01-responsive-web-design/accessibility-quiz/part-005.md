@@ -21,13 +21,13 @@ dashedName: part-5
 assert.exists(document.querySelector('body > title'));
 ```
 
-You should not make the `title` longer than 60 characters.
+คุณไม่ควรทำให้ `title` ยาวกว่า 60 ตัวอักษร.
 
 ```js
 assert.isAtMost(document.querySelector('body > title')?.textContent?.length, 60);
 ```
 
-Try being more descriptive with your `title` element. _Hint: At least 20 characters_
+ลองทำให้ `title` element นั้นอธิบายตัวของมันให้ดีขึ้น. _Hint: อย่างน้อง 20 ตัวอักษร_
 
 ```js
 assert.isAtLeast(document.querySelector('body > title')?.textContent?.length, 20);

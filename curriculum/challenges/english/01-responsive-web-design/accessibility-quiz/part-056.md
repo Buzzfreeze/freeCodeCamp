@@ -21,7 +21,7 @@ const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);
 assert.exists(gs('.info > label, .info > input') || gs('.info label, .info input') || gs('.info > input, .info > label') || gs('.info input, .info label'));
 ```
 
-You should give the `input` and `label` elements a `display` of `inline-block`.
+คุณควรกำหนดให้ `input` และ `label` elements มี `display` เป็นแบบ `inline-block`.
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s)?.display;
@@ -29,7 +29,7 @@ const display = gs('.info > label, .info > input') ?? gs('.info label, .info inp
 assert.equal(display, 'inline-block');
 ```
 
-You should give the `input` and `label` elements a `text-align` of `right`.
+คุณควรกำหนดให้ `input` และ `label` elements มี `text-align` เป็น `right`.
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s)?.textAlign;
@@ -37,7 +37,7 @@ const textAlign = gs('.info > label, .info > input') ?? gs('.info label, .info i
 assert.equal(textAlign, 'right');
 ```
 
-You should set the `text-align: right` property before the `.info input` rule.
+คุณควรกำหนด `text-align: right` property ไว้ก่อน `.info input` rule.
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyleRule(s);

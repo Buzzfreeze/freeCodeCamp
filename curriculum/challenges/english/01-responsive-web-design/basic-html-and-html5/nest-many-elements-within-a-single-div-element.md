@@ -9,7 +9,7 @@ dashedName: nest-many-elements-within-a-single-div-element
 
 # --description--
 
-`div` element, หรือที่เรียกว่า division element, เป็น container ทั่วไปที่ใช้เก็บ element อื่น
+`div` element หรือที่เรียกว่า division element, เป็น container ทั่วไปที่ใช้เก็บ element อื่น
 
 `div` element อาจจะเป็น HTML element ที่ถูกใช้บ่อยที่สุด
 
@@ -19,7 +19,7 @@ dashedName: nest-many-elements-within-a-single-div-element
 
 จงเก็บลิงต์ "Things cats love" และ "Top 3 things cats hate" ไว้ใน `div` element อันหนึ่ง
 
-Hint: จงใว่แท็กเปิด `div` tag ด้านบน "Things cats love" `p` element และแท็กปิด `div` tag ต่อจาก `ol` tag เพื่อที่ลิสต์ทั้งสองอันจะอยู๋ภายใน `div` อันหนึ่ง
+Hint: จงใส่แท็กเปิด `div` tag ด้านบน "Things cats love" `p` element และแท็กปิด `div` tag ต่อจาก `ol` tag เพื่อที่ลิสต์ทั้งสองอันจะอยู่ภายใน `div` อันหนึ่ง
 
 # --hints--
 
@@ -29,19 +29,19 @@ Hint: จงใว่แท็กเปิด `div` tag ด้านบน "Thin
 assert($('div').children('p').length > 1);
 ```
 
-Your `ul` element should be nested inside your `div` element.
+`ul` element ควรถูกใส่ไว้ใน `div` element.
 
 ```js
 assert($('div').children('ul').length > 0);
 ```
 
-Your `ol` element should be nested inside your `div` element.
+`ol` element ควรถูกใส่ไว้ใน `div` element.
 
 ```js
 assert($('div').children('ol').length > 0);
 ```
 
-Your `div` element should have a closing tag.
+`div` element ควรมีแท็กปิด
 
 ```js
 assert(

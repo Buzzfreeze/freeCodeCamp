@@ -21,13 +21,13 @@ dashedName: part-23
 assert.exists(document.querySelector('.info:nth-of-type(3) > label > span'));
 ```
 
-You should give the `span` element a class of `sr-only`.
+คุณควรกำหนดให้ `span` element มีคลาสชื่อ `sr-only`.
 
 ```js
 assert.equal(document.querySelector('.info:nth-of-type(3) > label > span')?.className, 'sr-only');
 ```
 
-You should place the `span` after the text content `D.O.B.`.
+คุณควรวาง `span` ไว้หลังข้อความที่เขียนว่า `D.O.B.`.
 
 ```js
 assert.match(document.querySelector('.info:nth-of-type(3) > label')?.innerHTML, /D\.O\.B\.<span/);

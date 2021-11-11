@@ -11,25 +11,25 @@ dashedName: part-35
 
 # --hints--
 
-คุณควรใส่ `label` element ภายในw `div.question-block` element อันแรก
+คุณควรใส่ `label` element อันหนึ่งไว้ใน `div.question-block` element อันแรก
 
 ```js
 assert.exists(document.querySelectorAll('.formrow > .question-block')?.[0]?.querySelector('label'));
 ```
 
-You should nest one `label` element within the second `div.question-block` element.
+คุณควรใส่ `label` element อันหนึ่งไว้ใน `div.question-block` element อันที่สอง
 
 ```js
 assert.exists(document.querySelectorAll('.formrow > .question-block')?.[1]?.querySelector('label'));
 ```
 
-You should give the first `label` element text content.
+คุณควรเพิ่มข้อความให้ `label` element อันแรก
 
 ```js
 assert.isAtLeast(document.querySelectorAll('.formrow > .question-block')?.[0]?.querySelector('label')?.textContent?.length, 1);
 ```
 
-You should give the second `label` element text content.
+คุณควรเพิ่มข้อความให้ `label` element อันที่สอง
 
 ```js
 assert.isAtLeast(document.querySelectorAll('.formrow > .question-block')?.[1]?.querySelector('label')?.textContent?.length, 1);

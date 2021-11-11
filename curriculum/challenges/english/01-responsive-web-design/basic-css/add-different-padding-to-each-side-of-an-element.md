@@ -15,29 +15,29 @@ CSS ทำให้คุณสามารถควบคุม `padding` ข�
 
 # --instructions--
 
-จงกำหนกให้กล่องสีฟ้ามี `padding` เท่ากับ `40px` ที่ด้านบนและซ้าย แต่เท่ากับ `20px` ที่ด้านล่างและขวา
+จงกำหนกให้กล่องสีน้ำเงินมี `padding` เท่ากับ `40px` ที่ด้านบนและซ้าย แต่เท่ากับ `20px` ที่ด้านล่างและขวา
 
 # --hints--
 
-Your `blue-box` class should give the top of the elements `40px` of `padding`.
+`blue-box` class ควรกำหนดให้ด้านบนของ element มี `padding` เท่ากับ `40px` 
 
 ```js
 assert($('.blue-box').css('padding-top') === '40px');
 ```
 
-Your `blue-box` class should give the right of the elements `20px` of `padding`.
+`blue-box` class ควรกำหนดให้ด้านขวาของ element มี `padding` เท่ากับ `20px` 
 
 ```js
 assert($('.blue-box').css('padding-right') === '20px');
 ```
 
-Your `blue-box` class should give the bottom of the elements `20px` of `padding`.
+`blue-box` class ควรกำหนดให้ด้านล่างของ element มี `padding` เท่ากับ `20px` 
 
 ```js
 assert($('.blue-box').css('padding-bottom') === '20px');
 ```
 
-Your `blue-box` class should give the left of the elements `40px` of `padding`.
+`blue-box` class ควรกำหนดให้ด้านซ้ายของ element มี `padding` เท่ากับ `40px` 
 
 ```js
 assert($('.blue-box').css('padding-left') === '40px');

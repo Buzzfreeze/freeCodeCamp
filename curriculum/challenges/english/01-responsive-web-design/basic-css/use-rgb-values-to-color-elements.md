@@ -48,7 +48,7 @@ body {
 assert($('body').css('background-color') === 'rgb(0, 0, 0)');
 ```
 
-You should use `rgb` to give your `body` element a background of black.
+คุรควรใช้ `rgb` เพื่อทำให้ `body` element มีสีพื้นหลังเป็นสีดำ
 
 ```js
 assert(code.match(/rgb\s*\(\s*0\s*,\s*0\s*,\s*0\s*\)/gi));

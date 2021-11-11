@@ -21,7 +21,7 @@ const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);
 assert.exists(gs('h1, h2') || gs('h2, h1'));
 ```
 
-You should set the first value of the `font-family` property to `Verdana`.
+คุณควรกำหนดให้ค่าแรกของ `font-family` property เป็น `Verdana`
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);
@@ -29,7 +29,7 @@ const style = gs('h1, h2') || gs('h2, h1');
 assert.include(style?.fontFamily, 'Verdana');
 ```
 
-You should set the second value of the `font-family` property to another sans-serif, web safe font. _Hint: I would choose Tahoma_.
+คุณควรกำหนดให้ค่าที่สองของ `font-family` property เป็น sans-serif อีกอันหนึ่งซึ่งเป็นฟ้อนต์ที่ใช้ได้กับทุกเว็บ _Hint: ฉันจะใช้ Tahoma_.
 
 ```js
 // Acceptable fonts: Arial, sans-serif, Helvetica, Tahoma, Trebuchet MS.
@@ -38,13 +38,13 @@ const style = gs('h1, h2') || gs('h2, h1');
 assert.match(style?.fontFamily, /(Tahoma)|(Arial)|(sans-serif)|(Helvetica)|(Trebuchet MS)/);
 ```
 
-You should use an `h2` element selector to target the `h2` elements.
+คุณควรใช้ `h2` element selector เพื่อชี้ไปที่ `h2` element
 
 ```js
 assert.exists(new __helpers.CSSHelp(document).getStyle('h2'));
 ```
 
-You should give `h2` a `border-bottom` property of `4px solid #dfdfe2`.
+คุณควรกำหนดให้ `h2` มี `border-bottom` property เป็น `4px solid #dfdfe2`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('h2')?.borderBottom, '4px solid rgb(223, 223, 226)');

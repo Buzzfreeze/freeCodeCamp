@@ -20,7 +20,7 @@ dashedName: part-65
 assert.exists(new __helpers.CSSHelp(document).getStyle('*'));
 ```
 
-You should give `*` a `scroll-behavior` of `smooth`.
+คุณควรกำหนดให้  `*` มี `scroll-behavior` เท่ากับ `smooth`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('*')?.scrollBehavior, 'smooth');

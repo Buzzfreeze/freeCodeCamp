@@ -20,7 +20,7 @@ const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);
 assert.exists(gs('.info label') || gs('.info > label'));
 ```
 
-You should give the `label` elements a `width` of `10%`.
+คุณควรกำหนดให้ `label` elements มี `width` เท่ากับ `10%`.
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s)?.width;
@@ -28,7 +28,7 @@ const width = gs('.info label') || gs('.info > label');
 assert.equal(width, '10%');
 ```
 
-You should give the `label` elements a `min-width` of `55px`.
+คุณควรกำหนดให้ `label` elements มี `min-width` เท่ากับ `55px`.
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s)?.minWidth;

@@ -18,61 +18,61 @@ section นี้จะรับชื่อ, email address และวัน�
 
 # --hints--
 
-You should give the first `label` element an appropriate `for` attribute.
+คุณควรกำหนดให้ `label` element อันแรกมี `for` attribute ที่เหมาะสม
 
 ```js
 assert.isAtLeast(document.querySelectorAll('label')?.[0]?.htmlFor?.length, 1);
 ```
 
-You should give the second `label` element an appropriate `for` attribute.
+Yคุณควรกำหนดให้ `label` element อันที่สองมี `for` attribute ที่เหมาะสม
 
 ```js
 assert.isAtLeast(document.querySelectorAll('label')?.[1]?.htmlFor?.length, 1);
 ```
 
-You should give the third `label` element an appropriate `for` attribute.
+คุณควรกำหนดให้ `label` element อันที่สามมี `for` attribute ที่เหมาะสม
 
 ```js
 assert.isAtLeast(document.querySelectorAll('label')?.[2]?.htmlFor?.length, 1);
 ```
 
-You should give the first `label` element an appropriate text content.
+คุณควรกำหนดให้ `label` element อันแรกมีข้อความที่เหมาะสม
 
 ```js
 assert.isAtLeast(document.querySelectorAll('label')?.[0]?.textContent?.length, 1);
 ```
 
-You should give the second `label` element an appropriate text content.
+Yคุณควรกำหนดให้ `label` element อันที่สองมีข้อความที่เหมาะสม
 
 ```js
 assert.isAtLeast(document.querySelectorAll('label')?.[1]?.textContent?.length, 1);
 ```
 
-You should give the third `label` element an appropriate text content.
+คุณควรกำหนดให้ `label` element อันที่สามมีข้อความที่เหมาะสม
 
 ```js
 assert.isAtLeast(document.querySelectorAll('label')?.[2]?.textContent?.length, 1);
 ```
 
-You should give the first `input` element an `id` attribute matching the `for` attribute of the first `label`.
+คุณควรกำหนดให้ `input` element อันแรกมี `id` attribute ที่ตรงกับ `for` attribute ของ `label` อันแรก
 
 ```js
 assert.equal(document.querySelectorAll('input')?.[0]?.id, document.querySelectorAll('label')?.[0]?.htmlFor);
 ```
 
-You should give the second `input` element an `id` attribute matching the `for` attribute of the second `label`.
+คุณควรกำหนดให้ `input` element อันที่สองมี `id` attribute ที่ตรงกับ `for` attribute ของ `label` อันที่สอง
 
 ```js
 assert.equal(document.querySelectorAll('input')?.[1]?.id, document.querySelectorAll('label')?.[1]?.htmlFor);
 ```
 
-You should give the third `input` element an `id` attribute matching the `for` attribute of the third `label`.
+คุณควรกำหนดให้ `input` element อันที่สามมี `id` attribute ที่ตรงกับ `for` attribute ของ `label` อันที่สาม
 
 ```js
 assert.equal(document.querySelectorAll('input')?.[2]?.id, document.querySelectorAll('label')?.[2]?.htmlFor);
 ```
 
-You should not use the same `id` attribute for more than one `input` element.
+คุณไม่ควรใช้ `id` attribute อันเดียวกันกับ  `input` element มากกว่า 1 อัน
 
 ```js
 const id = (n) => document.querySelectorAll('input')?.[n]?.id;
@@ -81,7 +81,7 @@ assert.notEqual(id(0), id(2));
 assert.notEqual(id(1), id(2));
 ```
 
-You should not use the same `for` attribute for more than one `label` element.
+คุณไม่ควรใช้`for` attribute อันเดียวกันกับ `label` element มากกว่า 1 อัน
 
 ```js
 const htmlFor = (n) => document.querySelectorAll('label')?.[n]?.htmlFor;

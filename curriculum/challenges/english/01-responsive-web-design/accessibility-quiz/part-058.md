@@ -23,19 +23,19 @@ font-size: 20px;
 assert.exists(new __helpers.CSSHelp(document).getStyle('p'));
 ```
 
-You should give the `p` element a `margin-top` of `5px`.
+คุณควรกำหนดให้ `p` element มี `margin-top` เท่ากับ `5px`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('p')?.marginTop, '5px');
 ```
 
-You should give the `p` element a `padding-left` of `15px`.
+คุณควรกำหนดให้ `p` element มี `padding-left` เท่ากับ `15px`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('p')?.paddingLeft, '15px');
 ```
 
-You should give the `p` element a `font-size` of `20px`.
+คุณควรกำหนดให้ `p` element มี `font-size` เท่ากับ `20px`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('p')?.fontSize, '20px');

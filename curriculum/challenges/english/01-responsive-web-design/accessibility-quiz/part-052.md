@@ -17,25 +17,25 @@ dashedName: part-52
 assert.exists(new __helpers.CSSHelp(document).getStyle('.info'));
 ```
 
-You should give `.info` a `padding-top` of at least `1px`.
+คุณควรกำหนดให้ `.info` มี `padding-top` อย่างน้อย `1px`.
 
 ```js
 assert.isAtLeast(Number(new __helpers.CSSHelp(document).getStyle('.info')?.paddingTop?.replace(/\D+/, '')), 1);
 ```
 
-You should give `.info` a `padding-right` of `0`.
+คุณควรกำหนดให้ `.info` มี `padding-right` อย่างน้อย `0`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.info')?.paddingRight, '0px');
 ```
 
-You should give `.info` a `padding-bottom` of `0`.
+คุณควรกำหนดให้ `.info` มี `padding-bottom` อย่างน้อง `0`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.info')?.paddingBottom, '0px');
 ```
 
-You should give `.info` a `padding-left` of at least `1px`.
+คุณควรกำหนดให้ `.info` มี `padding-left` อย่างน้อย `1px`.
 
 ```js
 assert.isAtLeast(Number(new __helpers.CSSHelp(document).getStyle('.info')?.paddingLeft?.replace(/\D+/, '')), 1);

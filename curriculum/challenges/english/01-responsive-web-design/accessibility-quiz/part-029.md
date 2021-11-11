@@ -19,67 +19,67 @@ dashedName: part-29
 assert.exists(document.querySelectorAll('ul.answers-list > li')?.[0]?.querySelector('label'));
 ```
 
-You should nest one `label` element within the second `li` element.
+คุณควรใส่ `label` element อันหนึ่งไว้ใน `li` element อันที่สอง
 
 ```js
 assert.exists(document.querySelectorAll('ul.answers-list > li')?.[1]?.querySelector('label'));
 ```
 
-You should nest one `label` element within the third `li` element.
+คุณควรใส่ `label` element อันหนึ่งไว้ที่ `li` element อันที่สาม
 
 ```js
 assert.exists(document.querySelectorAll('ul.answers-list > li')?.[2]?.querySelector('label'));
 ```
 
-You should nest one `label` element within the fourth `li` element.
+คุณควรใส่ `label` element อันหนึ่งไว้ที่ `li` element อันที่สี่
 
 ```js
 assert.exists(document.querySelectorAll('ul.answers-list > li')?.[3]?.querySelector('label'));
 ```
 
-You should nest one `input` element within the first `label` element.
+คุณควรใส่ `input` element อันหนึ่งไว้ใน `label` element อันแรก
 
 ```js
 assert.exists(document.querySelectorAll('ul.answers-list > li')?.[0]?.querySelector('label')?.querySelector('input'));
 ```
 
-You should nest one `input` element within the second `label` element.
+คุณควรใส่ `input` element อันหนึ่งไว้ใน `label` element อันที่สอง
 
 ```js
 assert.exists(document.querySelectorAll('ul.answers-list > li')?.[1]?.querySelector('label')?.querySelector('input'));
 ```
 
-You should nest one `input` element within the third `label` element.
+คุณควรใส่ `input` element อันหนึ่งไว้ที่ `label` element อันที่สาม
 
 ```js
 assert.exists(document.querySelectorAll('ul.answers-list > li')?.[2]?.querySelector('label')?.querySelector('input'));
 ```
 
-You should nest one `input` element within the fourth `label` element.
+คุณควรใส่ `input` element อันหนึ่งไว้ที่ `label` element อันที่สี่
 
 ```js
 assert.exists(document.querySelectorAll('ul.answers-list > li')?.[3]?.querySelector('label')?.querySelector('input'));
 ```
 
-You should give the first `input` a `type` of `radio`.
+คุณควรกำหนดให้ `input`อันแรกมี  `type` เป็นแบบ `radio`.
 
 ```js
 assert.equal(document.querySelectorAll('ul.answers-list > li > label > input')?.[0]?.type, 'radio');
 ```
 
-You should give the second `input` a `type` of `radio`.
+คุณควรกำหนดให้ `input` อันที่สองมี `type` เป็นแบบ `radio`.
 
 ```js
 assert.equal(document.querySelectorAll('ul.answers-list > li > label > input')?.[1]?.type, 'radio');
 ```
 
-You should give the third `input` a `type` of `radio`.
+คุณควรกำหนดให้ `input` อันที่สามมี `type` เป็นแบบ `radio`.
 
 ```js
 assert.equal(document.querySelectorAll('ul.answers-list > li > label > input')?.[2]?.type, 'radio');
 ```
 
-You should give the fourth `input` a `type` of `radio`.
+คุณควรกำหนดให้ `input` อันที่สี่ `type` เป็นแบบ `radio`.
 
 ```js
 assert.equal(document.querySelectorAll('ul.answers-list > li > label > input')?.[3]?.type, 'radio');

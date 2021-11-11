@@ -9,7 +9,7 @@ dashedName: check-radio-buttons-and-checkboxes-by-default
 
 # --description--
 
-คุณสามารถกำหนดให้  checkbox or radio button ถูกเลือกไว้แล้วได้โดยค่าเริ่มต้นโดยการใช้ `checked` attribute
+คุณสามารถกำหนดให้ checkbox หรือ radio button เหมือนกับถูกเลือกไว้แล้วตั้งแต่แรก โดยการใช้ `checked` attribute
 
 เพื่อที่จะทำแบบนี้ จงเพิ่มแค่คำว่า `checked` ให้กับข้างในของ input element
 ยกตัวอย่างเช่น:
@@ -20,29 +20,29 @@ dashedName: check-radio-buttons-and-checkboxes-by-default
 
 # --instructions--
 
-จงกำหนดให้ radio button และ checkbox อันแรกของคุณถูกเลือกไว้ก่อยโดยค่าเริ่มต้น
+จงกำหนดให้ radio button และ checkbox อันแรกของคุณเหมือนถูกเลือกไว้แล้วตั้งแต่แรก
 
 # --hints--
 
-radio button อันแรกในแบบฟอร์มของคุณควรถูกเลือกไว้แล้วโดยค่าเริ่มต้น
+radio button อันแรกในแบบฟอร์มของคุณควรจะเหมือนถูกเลือกไว้แล้วตั้งแต่แรก
 
 ```js
 assert($('input[type="radio"]').prop('checked'));
 ```
 
-checkbox อันแรกในแบบฟอร์มของคุณควรถูกเลือกไว้แล้วโดยค่าเริ่มต้น
+checkbox อันแรกในแบบฟอร์มของคุณควรจะเหมือนถูกเลือกไว้แล้วตั้งแต่แรก
 
 ```js
 assert($('input[type="checkbox"]').prop('checked'));
 ```
 
-You should not change the inner text of the `Indoor` label.
+คุณไม่ควรเปลี่ยนข้อความด้านในของ `Indoor` label.
 
 ```js
 assert.equal(document.querySelector('label[for="indoor"]')?.innerText?.trim(), 'Indoor');
 ```
 
-You should not change the inner text of the `Loving` label.
+คุณไม่ควรเปลี่ยนข้อความด้านในของ `Loving` label.
 
 ```js
 assert.equal(document.querySelector('label[for="loving"]')?.innerText?.trim(), 'Loving');

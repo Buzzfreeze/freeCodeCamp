@@ -18,13 +18,13 @@ dashedName: part-60
 assert.exists(new __helpers.CSSHelp(document).getStyle('.answers-list'));
 ```
 
-You should give `.answers-list` a `list-style` of `none`.
+คุณควรกำหนดให้ `.answers-list` มี `list-style` เท่ากับ `none`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.answers-list')?.listStyle, 'none');
 ```
 
-You should give `.answers-list` a `padding` of `0`.
+คุณควรกำหนดให้ `.answers-list` มี `padding` เท่ากับ `0`.
 
 ```js
 assert.equal(new __helpers.CSSHelp(document).getStyle('.answers-list')?.padding, '0px');

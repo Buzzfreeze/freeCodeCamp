@@ -9,22 +9,22 @@ dashedName: use-a-custom-css-variable
 
 # --description--
 
-หลังจากที่คุณสร้างตัวแปรขึ้นมา คุณสามารถใส่ค่าของมันให้กับ CSS property อื่นได้โดยการอ้างอิงถึงชื่อที่คุณตั้งให้มัน
+หลังจากที่คุณสร้างตัวแปรขึ้นมา คุณสามารถกำหนดให้มันเป็นค่าของ CSS property อื่นได้โดยการอ้างอิงถึงชื่อที่คุณตั้งให้มัน
 
 ```css
 background: var(--penguin-skin);
 ```
 
-โค้ดของบนจะเปลี่ยนพื้นหลังของ element ใดก็ตามที่คุณชี้มันไปที่สีเท่า เพราะมันคือค่าของตัวแปร `--penguin-skin` 
-จงจำไว้ว่า style จะไม่ถูกใช้ถ้าชื่อของตัวแปรไม่ตรงกับเป๊ะๆ
+โค้ดข้างบนจะเปลี่ยนพื้นหลังของ element ใดก็ตามที่คุณชี้ ไปเป็นสีเทาเพราะ ค่าในตัวแปร `--penguin-skin` คือสีเทา
+จงจำไว้ว่า style จะไม่ถูกใช้ถ้าชื่อของตัวแปรไม่ตรงกับที่ตั้งไว้เป๊ะๆ
 
 # --instructions--
 
-จงเใช้ `--penguin-skin` แทนค่าของ `background` property ของ `penguin-top`, `penguin-bottom`, `right-hand` และ `left-hand` classes.
+จงใช้ `--penguin-skin` แทนค่าของ `background` property ของ `penguin-top`, `penguin-bottom`, `right-hand` และ `left-hand` classes.
 
 # --hints--
 
-ตัวแปร `--penguin-skin` ควรให้กับ `background` property ของ `penguin-top` class.
+ตัวแปร `--penguin-skin` ควรใช้กับ `background` property ของ `penguin-top` class.
 
 ```js
 assert(
@@ -34,7 +34,7 @@ assert(
 );
 ```
 
-The `--penguin-skin` variable should be applied to the `background` property of the `penguin-bottom` class.
+ตัแปร `--penguin-skin` variable ควรใช้ถูกใช้โดย `background` property ของ `penguin-bottom` class.
 
 ```js
 assert(
@@ -44,7 +44,7 @@ assert(
 );
 ```
 
-The `--penguin-skin` variable should be applied to the `background` property of the `right-hand` class.
+ตัวแปร `--penguin-skin` variable ควรถูกใช้โดย `background` property ของ `right-hand` class.
 
 ```js
 assert(
@@ -54,7 +54,7 @@ assert(
 );
 ```
 
-The `--penguin-skin` variable should be applied to the `background` property of the `left-hand` class.
+ตัวแปร `--penguin-skin` variable ควรถูกใช้โดย `background` property ของ `left-hand` class.
 
 ```js
 assert(

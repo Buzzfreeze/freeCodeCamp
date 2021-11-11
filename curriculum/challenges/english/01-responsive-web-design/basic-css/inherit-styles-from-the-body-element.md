@@ -29,7 +29,7 @@ dashedName: inherit-styles-from-the-body-element
 assert($('h1').length > 0);
 ```
 
-Your `h1` element should have the text `Hello World`.
+`h1` element ควรมีข้อความ `Hello World`
 
 ```js
 assert(
@@ -40,7 +40,7 @@ assert(
 );
 ```
 
-Your `h1` element should have a closing tag.
+`h1` element ควรมีแท็กปิด
 
 ```js
 assert(
@@ -50,13 +50,13 @@ assert(
 );
 ```
 
-Your `body` element should have the `color` property of `green`.
+`body` element ควรมี `color` property ที่เป็น `green`
 
 ```js
 assert($('body').css('color') === 'rgb(0, 128, 0)');
 ```
 
-Your `body` element should have the `font-family` property of `monospace`.
+`body` element ควรมี `font-family` property เป็น `monospace`.
 
 ```js
 assert(
@@ -66,7 +66,7 @@ assert(
 );
 ```
 
-Your `h1` element should inherit the font `monospace` from your `body` element.
+`h1` element ควรจะ inherit (สืบถอด) ฟ้อนต์ `monospace` มาจาก `body` element
 
 ```js
 assert(
@@ -77,7 +77,7 @@ assert(
 );
 ```
 
-Your `h1` element should inherit the color green from your `body` element.
+`h1` element ควรจะ inherit (สืบถอด) สีเขียวมากจาก `body` element
 
 ```js
 assert($('h1').length > 0 && $('h1').css('color') === 'rgb(0, 128, 0)');

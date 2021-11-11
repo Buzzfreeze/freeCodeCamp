@@ -26,7 +26,7 @@ CSS border มีคุณสมบัติเหมือนกับ `style`,
 # --instructions--
 
 จงสร้าง class ที่ชื่อ `thick-green-border`
-คลาสนี้จะเพิ่มขอบสีเขียนขนาด 10px รอบ HTML element
+คลาสนี้จะเพิ่มขอบสีเขียวขนาด 10px รอบ HTML element
 จงใส่ class ให้กับรูปแมวของคุณ
 
 จงจำไว้ว่าคุณสามารถใส่ class หลาย ๆ อันให้กับ element โดยใช้ `class` attribute, โดยการแยกชื่อของแต่ละคลาสด้วยช่องว่าง 
@@ -38,19 +38,19 @@ CSS border มีคุณสมบัติเหมือนกับ `style`,
 
 # --hints--
 
-`img` element ควรมี class `smaller-image`.
+`img` element ควรมีคลาสที่ชื่อ `smaller-image`.
 
 ```js
 assert($('img').hasClass('smaller-image'));
 ```
 
-Your `img` element should have the class `thick-green-border`.
+`img` element ควรมีคลาสที่ชื่อ `thick-green-border`.
 
 ```js
 assert($('img').hasClass('thick-green-border'));
 ```
 
-Your image should have a border width of `10px`.
+ภายของคุณควรมีขอบที่กว้างขนาด `10px`.
 
 ```js
 assert(
@@ -60,13 +60,13 @@ assert(
 );
 ```
 
-Your image should have a border style of `solid`.
+ภาพของคุณควรมีสไตล์ของขอบเป็น `solid`.
 
 ```js
 assert($('img').css('border-right-style') === 'solid');
 ```
 
-The border around your `img` element should be green.
+ขอบที่อยู่รอบ `img` element ควรมีสีเขียว
 
 ```js
 assert($('img').css('border-left-color') === 'rgb(0, 128, 0)');

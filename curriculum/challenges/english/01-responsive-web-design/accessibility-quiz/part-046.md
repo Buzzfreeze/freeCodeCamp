@@ -20,14 +20,14 @@ dashedName: part-46
 assert.equal(new __helpers.CSSHelp(document).getStyle('li > a')?.textDecoration, 'none');
 ```
 
-You should use either the `nav > ul > li:hover` or `nav li:hover` selector to style the elements on hover.
+คุณควรจะใช้ `nav > ul > li:hover` หรือ `nav li:hover` selector เพื่อตกแต่ง element ที่ถูก hover
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);
 assert.exists(gs('nav > ul > li:hover') || gs('nav li:hover'));
 ```
 
-You should give hovered `li` elements a `background-color` of `#dfdfe2`.
+คุณควรกำหนดให้ `li` element ที่ถูก hover มี `background-color` เป็น `#dfdfe2`.
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);
@@ -35,7 +35,7 @@ const bgColor = gs('nav > ul > li:hover')?.backgroundColor ?? gs('nav li:hover')
 assert.equal(bgColor, 'rgb(223, 223, 226)');
 ```
 
-You should give hovered `li` elements a `color` of `#1b1b32`.
+คุณควรกำหนดให้ `li` element ที่ถูก hover มี `color` เป็น `#1b1b32`.
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);
@@ -43,7 +43,7 @@ const color = gs('nav > ul > li:hover')?.color ?? gs('nav li:hover')?.color;
 assert.equal(color, 'rgb(27, 27, 50)');
 ```
 
-You should give hovered `li` elements a `cursor` of `pointer`.
+คุณควรกำหนดให้ `li` element ที่ถูก hover มี `cursor` เป็นแบบ `pointer`
 
 ```js
 const gs = (s) => new __helpers.CSSHelp(document).getStyle(s);
