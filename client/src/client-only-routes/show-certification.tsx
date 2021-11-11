@@ -362,7 +362,7 @@ const ShowCertification = (props: IShowCertificationProps): JSX.Element => {
               src={'https://topwork.asia' + '/oak-id-sign-new.jpg'}
             />
             <p>
-              <strong>Quincy Larson</strong>
+              <strong>Krissada Chalermsook</strong>
             </p>
             <p>{t('certification.executive')}</p>
           </div>
