@@ -8,7 +8,7 @@ dashedName: left-factorials
 
 # --description--
 
-**Left factorials**, $ !n $, may refer to either *subfactorials* or to *factorial sums*. The same notation can be confusingly seen used for the two different definitions. Sometimes, *subfactorials* (also known as *derangements*) may use any of the notations:
+**Left factorials**, $ !n $, อาจหมายถึง *subfactorials* หรือ *factorial sums*. อาจใช้อย่างสับสนสำหรับคำจำกัดความที่แตกต่างกันสองแบบ บางครั้ง, *subfactorials* (ในนามของ *derangements*) อาจใช้ notations:
 
 <ul>
   <li>$!n`$</li>
@@ -16,7 +16,7 @@ dashedName: left-factorials
   <li>$n¡$</li>
 </ul>
 
-(It may not be visually obvious, but the last example uses an upside-down exclamation mark.) This task will be using this formula for **left factorial**:
+(อาจไม่ชัดเจน แต่ตัวอย่างสุดท้ายใช้เครื่องหมายอัศเจรีย์กลับหัว) งานนี้จะใช้สูตรนี้เพื่อ **left factorial**:
 
 $ !n = \\sum\_{k=0}^{n-1} k! $
 
@@ -24,59 +24,59 @@ where $!0 = 0$
 
 # --instructions--
 
-Write a function to calculate the left factorial of a given number.
+เขียนฟังก์ชันเพื่อคำนวณfactorialทางซ้ายของจำนวนที่กำหนด
 
 # --hints--
 
-`leftFactorial` should be a function.
+`leftFactorial` ควรเป็น function.
 
 ```js
 assert(typeof leftFactorial == 'function');
 ```
 
-`leftFactorial(0)` should return a number.
+`leftFactorial(0)` ควร return number.
 
 ```js
 assert(typeof leftFactorial(0) == 'number');
 ```
 
-`leftFactorial(0)` should return `0`.
+`leftFactorial(0)` ควร return `0`.
 
 ```js
 assert.equal(leftFactorial(0), 0);
 ```
 
-`leftFactorial(1)` should return `1`.
+`leftFactorial(1)` ควร return `1`.
 
 ```js
 assert.equal(leftFactorial(1), 1);
 ```
 
-`leftFactorial(2)` should return `2`.
+`leftFactorial(2)` ควร return `2`.
 
 ```js
 assert.equal(leftFactorial(2), 2);
 ```
 
-`leftFactorial(3)` should return `4`.
+`leftFactorial(3)` ควร return `4`.
 
 ```js
 assert.equal(leftFactorial(3), 4);
 ```
 
-`leftFactorial(10)` should return `409114`.
+`leftFactorial(10)` ควร return `409114`.
 
 ```js
 assert.equal(leftFactorial(10), 409114);
 ```
 
-`leftFactorial(17)` should return `22324392524314`.
+`leftFactorial(17)` ควร return `22324392524314`.
 
 ```js
 assert.equal(leftFactorial(17), 22324392524314);
 ```
 
-`leftFactorial(19)` should return `6780385526348314`.
+`leftFactorial(19)` ควร return `6780385526348314`.
 
 ```js
 assert.equal(leftFactorial(19), 6780385526348314);

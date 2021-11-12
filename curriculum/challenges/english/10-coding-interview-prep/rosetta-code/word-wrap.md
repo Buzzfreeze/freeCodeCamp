@@ -8,11 +8,11 @@ dashedName: word-wrap
 
 # --description--
 
-Even today, with proportional fonts and complex layouts, there are still cases where you need to wrap text at a specified column. The basic task is to wrap a paragraph of text in a simple way.
+แม้กระทั่งทุกวันนี้ ด้วยfontตามสัดส่วนและlayoutที่ซับซ้อน ยังมีบางกรณีที่คุณต้องตัดข้อความในคอลัมน์ที่ระบุ งานพื้นฐานคือการตัดย่อหน้าของข้อความด้วยวิธีง่ายๆ
 
 # --instructions--
 
-Write a function that can wrap this text to any number of characters. As an example, the text wrapped to 80 characters should look like the following:
+เขียนฟังก์ชันที่สามารถตัดข้อความนี้ให้เป็นอักขระจำนวนเท่าใดก็ได้ ตัวอย่างเช่น ข้อความที่มีอักขระ 80 ตัวควรมีลักษณะดังนี้:
 
 <pre>
 Wrap text using a more sophisticated algorithm such as the Knuth and Plass TeX
@@ -23,37 +23,37 @@ than a simple minimum length algorithm.
 
 # --hints--
 
-wrap should be a function.
+wrap ควรเป็น function.
 
 ```js
 assert.equal(typeof wrap, 'function');
 ```
 
-wrap should return a string.
+wrap ควร return a string.
 
 ```js
 assert.equal(typeof wrap('abc', 10), 'string');
 ```
 
-wrap(80) should return 4 lines.
+wrap(80) ควร return 4 lines.
 
 ```js
 assert(wrapped80.split('\n').length === 4);
 ```
 
-Your `wrap` function should return our expected text.
+`wrap` function ควร return ตาม text.
 
 ```js
 assert.equal(wrapped80.split('\n')[0], firstRow80);
 ```
 
-wrap(42) should return 7 lines.
+wrap(42) ควร return 7 lines.
 
 ```js
 assert(wrapped42.split('\n').length === 7);
 ```
 
-Your `wrap` function should return our expected text.
+`wrap` function ควร return ตาม text.
 
 ```js
 assert.equal(wrapped42.split('\n')[0], firstRow42);

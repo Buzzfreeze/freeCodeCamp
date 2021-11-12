@@ -8,11 +8,11 @@ dashedName: deal-cards-for-freecell
 
 # --description--
 
-*FreeCell* is the solitaire card game that Paul Alfille introduced to the PLATO system in 1978. Jim Horne, at Microsoft, changed the name to FreeCell and reimplemented the game for [DOS](https://rosettacode.org/wiki/DOS "DOS"), then [Windows](https://rosettacode.org/wiki/Windows "Windows"). This version introduced 32000 numbered deals.
+*FreeCell* เป็นเกมไพ่โซลิแทร์ที่ Paul Alfille แนะนำให้รู้จักกับระบบ PLATO ในปี 1978 Jim Horne ที่ Microsoft เปลี่ยนชื่อเป็น FreeCell และนำเกมกลับมาใช้ใหม่ [DOS](https://rosettacode.org/wiki/DOS "DOS") จาก [Windows](https://rosettacode.org/wiki/Windows "Windows")รุ่นนี้แนะนำข้อตกลงที่มีหมายเลข 32000
 
-As the game became popular, Jim Horne disclosed the algorithm, and other implementations of FreeCell began to reproduce the Microsoft deals. These deals are numbered from 1 to 32000. Newer versions from Microsoft have 1 million deals, numbered from 1 to 1000000; some implementations allow numbers outside that range.
+เมื่อเกมได้รับความนิยม Jim Horne ได้เปิดเผยalgorithm และการใช้งาน FreeCell อื่นๆ ก็เริ่มทำซ้ำข้อตกลงของ Microsoft ข้อตกลงเหล่านี้มีหมายเลขตั้งแต่ 1 ถึง 32000 เวอร์ชันที่ใหม่กว่าจาก Microsoft มี 1 ล้านดีล โดยมีหมายเลขตั้งแต่ 1 ถึง 1000000 การใช้งานบางอย่างอนุญาตให้มีตัวเลขที่อยู่นอกช่วงนั้น
 
-The algorithm uses this [linear congruential generator](<https://rosettacode.org/wiki/linear congruential generator> "linear congruential generator") from Microsoft C:
+algorithm ใช้ [linear congruential generator](<https://rosettacode.org/wiki/linear congruential generator> "linear congruential generator") จาก Microsoft C:
 
 <ul>
   <li>$state_{n + 1} \equiv 214013 \times state_n + 2531011 \pmod{2^{31}}$</li>
@@ -20,7 +20,7 @@ The algorithm uses this [linear congruential generator](<https://rosettacode.org
   <li>$rand_n$ is in range 0 to 32767.</li>
 </ul>
 
-The algorithm follows:
+algorithm:
 
 <ol>
   <li>Seed the RNG with the number of the deal.
@@ -77,37 +77,37 @@ The algorithm follows:
 
 # --instructions--
 
-Write a function to take a deal number and deal cards in the same order as this algorithm. The function must return a two dimensional array representing the FreeCell board.
+เขียนฟังก์ชันเพื่อใช้หมายเลขdealsและไพ่แจกในลำดับเดียวกับalgorithmนี้ ฟังก์ชันต้องส่งคืนarrayสองมิติที่แสดงถึงบอร์ด FreeCell
 
-Deals can also be checked against [FreeCell solutions to 1000000 games](https://freecellgamesolutions.com/). (Summon a video solution, and it displays the initial deal.)
+Deals นี้ยังสามารถตรวจสอบกับ [FreeCell solutions to 1000000 games](https://freecellgamesolutions.com/). (Summon a video solution, and it displays the initial deal.)
 
 # --hints--
 
-`dealFreeCell` should be a function.
+`dealFreeCell` ควรเป็น function.
 
 ```js
 assert(typeof dealFreeCell === 'function');
 ```
 
-`dealFreeCell(seed)` should return an object.
+`dealFreeCell(seed)` ควร return object.
 
 ```js
 assert(typeof dealFreeCell(1) === 'object');
 ```
 
-`dealFreeCell(seed)` should return an array of length 7.
+`dealFreeCell(seed)` ควร return array ที่ความยาวเป็น 7.
 
 ```js
 assert(dealFreeCell(1).length === 7);
 ```
 
-`dealFreeCell(1)` should return an array identical to example "Game #1"
+`dealFreeCell(1)` ควร return array ที่ระบุ "Game #1"
 
 ```js
 assert.deepEqual(dealFreeCell(1), game1);
 ```
 
-`dealFreeCell(617)` should return an array identical to example "Game #617"
+`dealFreeCell(617)` ควร return array ที่ระบุ "Game #617"
 
 ```js
 assert.deepEqual(dealFreeCell(617), game617);

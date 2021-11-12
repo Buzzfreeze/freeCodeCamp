@@ -8,7 +8,7 @@ dashedName: zhang-suen-thinning-algorithm
 
 # --description--
 
-This is an algorithm used to thin a black and white i.e. one bit per pixel images. For example, with an input image of:
+นี่คือalgorithmที่ใช้ในการทำให้ภาพขาวดำบางลง เช่น หนึ่งบิตต่อภาพพิกเซล ตัวอย่างเช่น ด้วยภาพinputของ:
 
 ```js
 const testImage1 = [
@@ -25,7 +25,7 @@ const testImage1 = [
 ];
 ```
 
-It produces the thinned output:
+จะได้
 
 ```js
 [ '                               ',
@@ -42,7 +42,7 @@ It produces the thinned output:
 
 ## Algorithm
 
-Assume black pixels are one and white pixels zero, and that the input image is a rectangular N by M array of ones and zeroes. The algorithm operates on all black pixels P1 that can have eight neighbours. The neighbours are, in order, arranged as:
+สมมติว่าพิกเซลสีดำเป็นหนึ่งและพิกเซลสีขาวเป็นศูนย์ และภาพที่ป้อนเป็นarray N คูณ M สี่เหลี่ยมของหนึ่งและศูนย์ algorithmทำงานบนพิกเซลสีดำทั้งหมด P1 ที่สามารถมีneighboursได้แปดคน neighboursเรียงตามลำดับดังนี้
 
 $$\begin{array}{|c|c|c|}
   \\hline
@@ -51,70 +51,69 @@ $$\begin{array}{|c|c|c|}
   P7 & P6              & P5\\\\ \\hline
 \end{array}$$
 
-Obviously the boundary pixels of the image cannot have the full eight neighbours.
+เห็นได้ชัดว่าพิกเซลขอบเขตของภาพไม่สามารถมีneighboursครบแปดคนได้
 
-- Define $A(P1)$ = the number of transitions from white to black, ($0 \to 1$) in the sequence P2, P3, P4, P5, P6, P7, P8, P9, P2. (Note the extra P2 at the end - it is circular).
-- Define $B(P1)$ = the number of black pixel neighbours of P1. ($= \\sum(P2 \ldots P9)$)
+- กำหนด $A(P1)$ = จำนวนการเปลี่ยนจากสีขาวเป็นสีดำ ($0 \to 1$) ในลำดับ P2, P3, P4, P5, P6, P7, P8, P9, P2 (หมายเหตุ P2 พิเศษที่ส่วนท้าย - เป็นวงกลม)
+- กำหนด $B(P1)$ = จำนวนneighboursพิกเซลสีดำของ P1 ($= \\sum(P2 \ldots P9)$)
 
 **Step 1:**
 
-All pixels are tested and pixels satisfying all the following conditions (simultaneously) are just noted at this stage.
+พิกเซลทั้งหมดได้รับการทดสอบและพิกเซลที่ตรงตามเงื่อนไขต่อไปนี้ทั้งหมด (พร้อมกัน) จะถูกบันทึกไว้ในขั้นตอนนี้
 
-1. The pixel is black and has eight neighbours
+1. พิกเซลเป็นสีดำและมีneighboursแปดคน
 2. $2 \le B(P1) \le 6$
 3. $A(P1) = 1$
-4. At least one of $P2$, $P4$ and $P6$ is white
-5. At least one of $P4$, $P6$ and $P8$ is white
+4. อย่างน้อยหนึ่ง $P2$, $P4$ และ $P6$ เป็นสีขาว
+5. อย่างน้อยหนึ่ง $P4$, $P6$ และ $P8$ เป็นสีขาว
 
-After iterating over the image and collecting all the pixels satisfying all step 1 conditions, all these condition satisfying pixels are set to white.
+หลังจากวนซ้ำบนรูปภาพและรวบรวมพิกเซลทั้งหมดที่ตรงตามเงื่อนไขขั้นตอนที่ 1 ทั้งหมด พิกเซลที่ตรงตามเงื่อนไขทั้งหมดเหล่านี้จะถูกตั้งค่าเป็นสีขาว
 
 **Step 2:**
 
-All pixels are again tested and pixels satisfying all the following conditions are just noted at this stage.
+พิกเซลทั้งหมดได้รับการทดสอบอีกครั้ง และพิกเซลที่ตรงตามเงื่อนไขต่อไปนี้ทั้งหมดจะถูกบันทึกไว้ในขั้นตอนนี้
 
-1. The pixel is black and has eight neighbours
+1. พิกเซลเป็นสีดำและมีneighboursแปดคน
 2. $2 \le B(P1) \le 6$
 3. $A(P1) = 1$
-4. At least one of $P2$, $P4$ and $P8$ is white
-5. At least one of $P2$, $P6$ and $P8$ is white
+4. อย่างน้อยหนึ่ง $P2$, $P4$ และ $P8$ เป็นสีขาว
+5. อย่างน้อยหนึ่ง $P2$, $P6$ และ $P8$ เป็นสีขาว
 
-After iterating over the image and collecting all the pixels satisfying all step 2 conditions, all these condition satisfying pixels are again set to white.
+หลังจากวนซ้ำบนรูปภาพและรวบรวมพิกเซลทั้งหมดที่ตรงตามเงื่อนไขขั้นตอนที่ 2 ทั้งหมด พิกเซลที่ตรงตามเงื่อนไขทั้งหมดเหล่านี้จะถูกตั้งค่าเป็นสีขาวอีกครั้ง
 
 **Iteration:**
 
-If any pixels were set in this round of either step 1 or step 2 then all steps are repeated until no image pixels are so changed.
+หากมีการตั้งค่าพิกเซลใดๆ ในรอบนี้ของขั้นตอนที่ 1 หรือขั้นตอนที่ 2 ขั้นตอนทั้งหมดจะถูกทำซ้ำจนกว่าจะไม่มีการเปลี่ยนแปลงพิกเซลของภาพ
 
 # --instructions--
-
-Write a routine to perform Zhang-Suen thinning on the provided `image`, an array of strings, where each string represents single line of the image. In the string, `#` represents black pixel, and whitespace represents white pixel. Function should return thinned image, using the same representation.
+เขียนกิจวัตรเพื่อทำให้Zhang-Suenบางลงใน "รูปภาพ" ที่ให้มา ซึ่งเป็นarrayของstring โดยที่แต่ละstringแสดงถึงบรรทัดเดียวของรูปภาพ ในstring "#" หมายถึงพิกเซลสีดำ และช่องว่างหมายถึงพิกเซลสีขาว ฟังก์ชันควรreturnรูปภาพที่บางลง โดยใช้การแสดงแบบเดียวกัน
 
 # --hints--
 
-`thinImage` should be a function.
+`thinImage` ควรเป็น function.
 
 ```js
 assert.equal(typeof thinImage, 'function');
 ```
 
-`thinImage` should return an array.
+`thinImage` ควร return array.
 
 ```js
 assert(Array.isArray(thinImage(_testImage1)));
 ```
 
-`thinImage` should return an array of strings.
+`thinImage` ควร return array ของ strings.
 
 ```js
 assert.equal(typeof thinImage(_testImage1)[0], 'string');
 ```
 
-`thinImage(testImage1)` should return a thinned image as in the example.
+`thinImage(testImage1)` ควร return thinned image เหมือนตัวอย่าง.
 
 ```js
 assert.deepEqual(thinImage(_testImage1), expected1);
 ```
 
-`thinImage(testImage2)` should return a thinned image.
+`thinImage(testImage2)` ควร return thinned image.
 
 ```js
 assert.deepEqual(thinImage(_testImage2), expected2);

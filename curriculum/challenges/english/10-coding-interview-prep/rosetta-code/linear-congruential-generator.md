@@ -8,7 +8,8 @@ dashedName: linear-congruential-generator
 
 # --description--
 
-The [linear congruential generator](<https://en.wikipedia.org/wiki/linear congruential generator>) is a very simple example of a [random number generator](<http://rosettacode.org/wiki/random number generator>). All linear congruential generators use this formula:
+[linear congruential generator](<https://en.wikipedia.org/wiki/linear congruential generator>) 
+เป็นตัวอย่างง่ายๆ ของ [random number generator](<http://rosettacode.org/wiki/random number generator>). linear congruential generators ใช้สูตร:
 
 $$r_{n + 1} = (a \times r_n + c) \bmod m$$
 
@@ -20,53 +21,56 @@ Where:
 <li>$a$, $c$, $m$ are constants.</li>
 </ul>
 
-If one chooses the values of $a$, $c$ and $m$ with care, then the generator produces a uniform distribution of integers from $0$ to $m - 1$.
+หากเลือกค่าของ $a$, $c$ และ $m$ 
+generators จะสร้างการกระจายตัวของจำนวนเต็มจาก $0$ to $m - 1$.
 
-LCG numbers have poor quality. $r_n$ and $r\_{n + 1}$ are not independent, as true random numbers would be. Anyone who knows $r_n$ can predict $r\_{n + 1}$, therefore LCG is not cryptographically secure. The LCG is still good enough for simple tasks like [Miller-Rabin primality test](<http://rosettacode.org/wiki/Miller-Rabin primality test>), or [FreeCell deals](<http://rosettacode.org/wiki/deal cards for FreeCell>). Among the benefits of the LCG, one can easily reproduce a sequence of numbers, from the same $r_0$. One can also reproduce such sequence with a different programming language, because the formula is so simple.
+LCG numbers มีประสิทธิภาพต่ำ. $r_n$ and $r\_{n + 1}$ 
+ไม่เป็นอิสระ เหมือนกับตัวเลขสุ่มที่แท้จริง ใครๆ ก็รู้จัก $r_n$ สามารถทำนาย $r\_{n + 1}$, 
+ดังนั้น LCG จึงไม่ปลอดภัยในการเข้ารหัส LCG ยังดีพอสำหรับงานง่ายๆ เช่น [Miller-Rabin primality test](<http://rosettacode.org/wiki/Miller-Rabin primality test>) หรือ [FreeCell deals](<http://rosettacode.org/wiki/deal cards for FreeCell>). ในบรรดาประโยชน์ของ LCG นั้น เราสามารถทำซ้ำลำดับของตัวเลขได้ง่ายๆ จาก $r_0$ เดียวกัน เราสามารถทำซ้ำลำดับดังกล่าวด้วยภาษาการเขียนโปรแกรมอื่นได้ เนื่องจากสูตรนั้นง่ายมาก
 
 # --instructions--
 
-Write a function that takes $r_0,a,c,m,n$ as parameters and returns $r_n$.
+เขียนฟังก์ชันที่รับ $r_0,a,c,m,n$ เป็นพารามิเตอร์และreturn $r_n$
 
 # --hints--
 
-`linearCongGenerator` should be a function.
+`linearCongGenerator` ควรเป็น function.
 
 ```js
 assert(typeof linearCongGenerator == 'function');
 ```
 
-`linearCongGenerator(324, 1145, 177, 2148, 3)` should return a number.
+`linearCongGenerator(324, 1145, 177, 2148, 3)` ควร return number.
 
 ```js
 assert(typeof linearCongGenerator(324, 1145, 177, 2148, 3) == 'number');
 ```
 
-`linearCongGenerator(324, 1145, 177, 2148, 3)` should return `855`.
+`linearCongGenerator(324, 1145, 177, 2148, 3)` ควร return `855`.
 
 ```js
 assert.equal(linearCongGenerator(324, 1145, 177, 2148, 3), 855);
 ```
 
-`linearCongGenerator(234, 11245, 145, 83648, 4)` should return `1110`.
+`linearCongGenerator(234, 11245, 145, 83648, 4)` ควร return `1110`.
 
 ```js
 assert.equal(linearCongGenerator(234, 11245, 145, 83648, 4), 1110);
 ```
 
-`linearCongGenerator(85, 11, 1234, 214748, 5)` should return `62217`.
+`linearCongGenerator(85, 11, 1234, 214748, 5)` ควร return `62217`.
 
 ```js
 assert.equal(linearCongGenerator(85, 11, 1234, 214748, 5), 62217);
 ```
 
-`linearCongGenerator(0, 1103515245, 12345, 2147483648, 1)` should return `12345`.
+`linearCongGenerator(0, 1103515245, 12345, 2147483648, 1)` ควร return `12345`.
 
 ```js
 assert.equal(linearCongGenerator(0, 1103515245, 12345, 2147483648, 1), 12345);
 ```
 
-`linearCongGenerator(0, 1103515245, 12345, 2147483648, 2)` should return `1406932606`.
+`linearCongGenerator(0, 1103515245, 12345, 2147483648, 2)` ควร return `1406932606`.
 
 ```js
 assert.equal(

@@ -8,7 +8,7 @@ dashedName: abc-problem
 
 # --description--
 
-You are given a collection of ABC blocks (e.g., childhood alphabet blocks). There are 20 blocks with two letters on each block. A complete alphabet is guaranteed amongst all sides of the blocks. The sample collection of blocks:
+คุณจะได้รับชุดบล็อก ABC (เช่น บล็อกตัวอักษรในวัยเด็ก) มี 20 บล็อกที่มีตัวอักษรสองตัวในแต่ละบล็อก รับประกันตัวอักษรที่สมบูรณ์ในทุกด้านของบล็อก collectionตัวอย่างของบล็อก:
 
 <pre>(B O)
 (X K)
@@ -34,9 +34,9 @@ You are given a collection of ABC blocks (e.g., childhood alphabet blocks). Ther
 
 # --instructions--
 
-Implement a function that takes a string (word) and determines whether the word can be spelled with the given collection of blocks.
+ใช้ฟังก์ชันที่รับstring (คำ) และกำหนดว่าคำนั้นสามารถสะกดด้วยชุดบล็อกที่กำหนดได้หรือไม่
 
-Some rules to keep in mind:
+กฎบางประการที่ควรทราบ:
 
 <ul>
   <li>Once a letter on a block is used, that block cannot be used again.</li>
@@ -45,49 +45,49 @@ Some rules to keep in mind:
 
 # --hints--
 
-`canMakeWord` should be a function.
+`canMakeWord` ควรเป็น function.
 
 ```js
 assert(typeof canMakeWord === 'function');
 ```
 
-`canMakeWord` should return a boolean.
+`canMakeWord` ควร return boolean.
 
 ```js
 assert(typeof canMakeWord('hi') === 'boolean');
 ```
 
-`canMakeWord("bark")` should return true.
+`canMakeWord("bark")` ควร return true.
 
 ```js
 assert(canMakeWord(words[0]));
 ```
 
-`canMakeWord("BooK")` should return false.
+`canMakeWord("BooK")` ควร return false.
 
 ```js
 assert(!canMakeWord(words[1]));
 ```
 
-`canMakeWord("TReAT")` should return true.
+`canMakeWord("TReAT")` ควร return true.
 
 ```js
 assert(canMakeWord(words[2]));
 ```
 
-`canMakeWord("COMMON")` should return false.
+`canMakeWord("COMMON")` ควร return false.
 
 ```js
 assert(!canMakeWord(words[3]));
 ```
 
-`canMakeWord("squAD")` should return true.
+`canMakeWord("squAD")` ควร return true.
 
 ```js
 assert(canMakeWord(words[4]));
 ```
 
-`canMakeWord("conFUSE")` should return true.
+`canMakeWord("conFUSE")` ควร return true.
 
 ```js
 assert(canMakeWord(words[5]));

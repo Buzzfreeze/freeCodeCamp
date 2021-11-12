@@ -14,9 +14,9 @@ dashedName: lychrel-numbers
   <li>Stop when <code>n</code> becomes palindromic - i.e. the digits of <code>n</code> in reverse order == <code>n</code>.</li>
 </ol>
 
-The above recurrence relation when applied to most starting numbers `n` = 1, 2, ... terminates in a palindrome quite quickly.
+ความสัมพันธ์ที่เกิดซ้ำข้างต้นเมื่อนำไปใช้กับตัวเลขเริ่มต้นส่วนใหญ่ `n` = 1, 2, ... สิ้นสุดลงใน palindrome ค่อนข้างเร็ว
 
-For example if `n₀` = 12 we get:
+เช่น `n₀` = 12 จะได้:
 
 ```bash
 12
@@ -31,17 +31,17 @@ And if `n₀` = 55 we get:
 110 + 011 = 121,  a palindrome!
 ```
 
-Notice that the check for a palindrome happens *after* an addition.
+ขอให้สังเกตว่าการตรวจสอบพาลินโดรมเกิดขึ้น *after* เพิ่มเติม
 
-Some starting numbers seem to go on forever; the recurrence relation for 196 has been calculated for millions of repetitions forming numbers with millions of digits, without forming a palindrome. These numbers that do not end in a palindrome are called **Lychrel numbers**.
+ตัวเลขเริ่มต้นบางตัวดูเหมือนจะดำเนินต่อไปตลอดกาล ความสัมพันธ์ที่เกิดซ้ำสำหรับ 196 คำนวณจากการทำซ้ำหลายล้านครั้งโดยสร้างตัวเลขที่มีหลักล้าน โดยไม่สร้างพาลินโดรม ตัวเลขเหล่านี้ที่ไม่ได้ลงท้ายด้วยพาลินโดรมเรียกว่า **Lychrel numbers**
 
-For the purposes of this task a Lychrel number is any starting number that does not form a palindrome within 500 (or more) iterations.
+สำหรับวัตถุประสงค์ของงานนี้ หมายเลข Lychrel คือหมายเลขเริ่มต้นใดๆ ที่ไม่อยู่ใน palindrome ภายใน 500 (หรือมากกว่า) การวนซ้ำ
 
 **Seed and related Lychrel numbers:**
 
-Any integer produced in the sequence of a Lychrel number is also a Lychrel number.
+จำนวนเต็มใดๆ ที่ผลิตในลำดับของหมายเลข Lychrel จะเป็นเลข Lychrel ด้วย
 
-In general, any sequence from one Lychrel number *might* converge to join the sequence from a prior Lychrel number candidate; for example the sequences for the numbers 196 and then 689 begin:
+โดยทั่วไป ลำดับใดๆ จากหมายเลข Lychrel หนึ่งหมายเลข *might* มาบรรจบกันเพื่อรวมลำดับจากตัวเลือกหมายเลข Lychrel ก่อนหน้า ตัวอย่างเช่น ลำดับของตัวเลข 196 และ 689 เริ่มต้น:
 
 ```bash
     196
@@ -58,59 +58,58 @@ In general, any sequence from one Lychrel number *might* converge to join the se
     ...
 ```
 
-So we see that the sequence starting with 689 converges to, and continues with the same numbers as that for 196.
+ดังนั้นเราจะเห็นว่าลำดับที่ขึ้นต้นด้วย 689 มาบรรจบกัน และดำเนินต่อไปด้วยตัวเลขเดียวกันกับลำดับที่สำหรับ 196
 
-Because of this we can further split the Lychrel numbers into true **Seed** Lychrel number candidates, and **Related** numbers that produce no palindromes but have integers in their sequence seen as part of the sequence generated from a lower Lychrel number.
-
+ด้วยเหตุนี้ เราจึงสามารถแบ่งหมายเลข Lychrel ให้เป็นจริงได้ **Seed** ผู้สมัครหมายเลข Lychrel และ **Related** ตัวเลขที่ไม่สร้าง palindromes แต่มีจำนวนเต็มในลำดับที่มองว่าเป็นส่วนหนึ่งของลำดับที่สร้างจากหมายเลข Lychrel ที่ต่ำกว่า .
 # --instructions--
 
-Write a function that takes a number as a parameter. Return true if the number is a Lynchrel number. Otherwise, return false. Remember that the iteration limit is 500.
+เขียนฟังก์ชันที่ใช้ตัวเลขเป็นพารามิเตอร์ คืนค่า จริง หากตัวเลขนั้นเป็นหมายเลข Lynchrel มิฉะนั้นให้return false จำไว้ว่าขีดจำกัดการวนซ้ำคือ 500
 
 # --hints--
 
-`isLychrel` should be a function.
+`isLychrel` ควรเป็น function.
 
 ```js
 assert(typeof isLychrel === 'function');
 ```
 
-`isLychrel(12)` should return a boolean.
+`isLychrel(12)` ควร return boolean.
 
 ```js
 assert(typeof isLychrel(12) === 'boolean');
 ```
 
-`isLychrel(12)` should return `false`.
+`isLychrel(12)` ควร return `false`.
 
 ```js
 assert.equal(isLychrel(12), false);
 ```
 
-`isLychrel(55)` should return `false`.
+`isLychrel(55)` ควร return `false`.
 
 ```js
 assert.equal(isLychrel(55), false);
 ```
 
-`isLychrel(196)` should return `true`.
+`isLychrel(196)` ควร return `true`.
 
 ```js
 assert.equal(isLychrel(196), true);
 ```
 
-`isLychrel(879)` should return `true`.
+`isLychrel(879)` ควร return `true`.
 
 ```js
 assert.equal(isLychrel(879), true);
 ```
 
-`isLychrel(44987)` should return `false`.
+`isLychrel(44987)` ควร return `false`.
 
 ```js
 assert.equal(isLychrel(44987), false);
 ```
 
-`isLychrel(7059)` should return `true`.
+`isLychrel(7059)` ควร return `true`.
 
 ```js
 assert.equal(isLychrel(7059), true);

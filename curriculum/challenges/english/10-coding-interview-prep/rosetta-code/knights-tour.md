@@ -8,51 +8,51 @@ dashedName: knights-tour
 
 # --description--
 
-[Knight's Tour](https://en.wikipedia.org/wiki/Knight%27s_tour) Problem: You have an empty `w` \* `h` chessboard, but for a single knight on some square. The knight must perform a sequence of legal moves that result in the knight visiting every square on the chessboard exactly once. Note that it is *not* a requirement that the tour be "closed"; that is, the knight need not end within a single move of its start position.
+[Knight's Tour](https://en.wikipedia.org/wiki/Knight%27s_tour) ปัญหา: คุณมีกระดานหมากรุก `w` \* `h` ว่างเปล่า แต่สำหรับอัศวินคนเดียวในตาราง อัศวินต้องทำตามลำดับการเคลื่อนไหวทางกฎหมายที่ส่งผลให้อัศวินไปทุกตารางบนกระดานหมากรุกเพียงครั้งเดียว โปรดทราบว่า *not* เป็นข้อกำหนดให้ `closed` ทัวร์ นั่นคืออัศวินไม่จำเป็นต้องจบภายในตำแหน่งเริ่มต้นเพียงครั้งเดียว
 
 # --instructions--
 
-Write a function that takes `w` and `h` as parameters and returns the number of initial positions from where it is possible to achieve the task stated above.
+เขียนฟังก์ชันที่ใช้ `w` และ `h` เป็นพารามิเตอร์และส่งกลับจำนวนตำแหน่งเริ่มต้นจากตำแหน่งที่เป็นไปได้ที่จะบรรลุภารกิจตามที่ระบุไว้ข้างต้น
 
 # --hints--
 
-`knightTour` should be a function.
+`knightTour` ควรเป็น function.
 
 ```js
 assert(typeof knightTour == 'function');
 ```
 
-`knightTour(6, 6)` should return a number.
+`knightTour(6, 6)` ควร return number.
 
 ```js
 assert(typeof knightTour(6, 6) == 'number');
 ```
 
-`knightTour(6, 6)` should return `36`.
+`knightTour(6, 6)` ควร return `36`.
 
 ```js
 assert.equal(knightTour(6, 6), 36);
 ```
 
-`knightTour(5, 6)` should return `30`.
+`knightTour(5, 6)` ควร return `30`.
 
 ```js
 assert.equal(knightTour(5, 6), 30);
 ```
 
-`knightTour(4, 6)` should return `12`.
+`knightTour(4, 6)` ควร return `12`.
 
 ```js
 assert.equal(knightTour(4, 6), 12);
 ```
 
-`knightTour(7, 3)` should return `10`.
+`knightTour(7, 3)` ควร return `10`.
 
 ```js
 assert.equal(knightTour(7, 3), 10);
 ```
 
-`knightTour(8, 6)` should return `48`.
+`knightTour(8, 6)` ควร return `48`.
 
 ```js
 assert.equal(knightTour(8, 6), 48);

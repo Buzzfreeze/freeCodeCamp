@@ -8,21 +8,21 @@ dashedName: euler-method
 
 # --description--
 
-Euler's method numerically approximates solutions of first-order ordinary differential equations (ODEs) with a given initial value. It is an explicit method for solving initial value problems (IVPs), as described in [this article](<https://www.freecodecamp.org/news/eulers-method-explained-with-examples/> "news: Euler's Method Explained with Examples").
+Euler's method ตัวเลขประมาณคำตอบของสมการเชิงอนุพันธ์อันดับ 1 สามัญ (ODE) ด้วยค่าเริ่มต้นที่กำหนด เป็นวิธีการที่ชัดเจนในการแก้ปัญหาค่าเริ่มต้น (IVP) ตามที่อธิบายไว้ใน [this article](<https://www.freecodecamp.org/news/eulers-method-explained-with-examples/> "news: Euler's Method Explained with Examples").
 
-The ODE has to be provided in the following form:
+ต้องระบุ ODE ในรูปแบบต่อไปนี้:
 
 <ul style='list-style: none;'>
   <li><big>$\frac{dy(t)}{dt} = f(t,y(t))$</big></li>
 </ul>
 
-with an initial value
+ด้วยค่าเริ่มต้น
 
 <ul style='list-style: none;'>
   <li><big>$y(t_0) = y_0$</big></li>
 </ul>
 
-To get a numeric solution, we replace the derivative on the LHS with a finite difference approximation:
+ในการหาคำตอบที่เป็นตัวเลข เราแทนที่อนุพันธ์บน LHS ด้วยการประมาณผลต่างที่แน่นอน:
 
 <ul style='list-style: none;'>
   <li><big>$\frac{dy(t)}{dt}  \approx \frac{y(t+h)-y(t)}{h}$</big></li>
@@ -46,25 +46,25 @@ The iterative solution rule is then:
   <li><big>$y_{n+1} = y_n + h \, f(t_n, y_n)$</big></li>
 </ul>
 
-where $h$ is the step size, the most relevant parameter for accuracy of the solution. A smaller step size increases accuracy but also the computation cost, so it has always has to be hand-picked according to the problem at hand.
+โดยที่ $h$ คือขนาดขั้นตอน ซึ่งเป็นพารามิเตอร์ที่เกี่ยวข้องมากที่สุดสำหรับความแม่นยำของคำตอบขนาดขั้นที่เล็กลงจะเพิ่มความแม่นยำ แต่ยังรวมถึงค่าใช้จ่ายในการคำนวณด้วย ดังนั้นจึงต้องเลือกเองตามปัญหาที่มีอยู่เสมอ
 
 **Example: Newton's Cooling Law**
 
-Newton's cooling law describes how an object of initial temperature $T(t_0) = T_0$ cools down in an environment of temperature $T_R$:
+Newton's cooling law อธิบายว่าวัตถุที่มีอุณหภูมิเริ่มต้น $T(t_0) = T_0$ เย็นลงในสภาพแวดล้อมที่มีอุณหภูมิ $T_R$ อย่างไร:
 
 <ul style='list-style: none;'>
   <li><big>$\frac{dT(t)}{dt} = -k \, \Delta T$</big></li>
 </ul>
 
-or
+หรือ
 
 <ul style='list-style: none;'>
   <li><big>$\frac{dT(t)}{dt} = -k \, (T(t) - T_R)$</big></li>
 </ul>
 
-It says that the cooling rate $\\frac{dT(t)}{dt}$ of the object is proportional to the current temperature difference $\\Delta T = (T(t) - T_R)$ to the surrounding environment.
+มันบอกว่าอัตราการทำความเย็น $\\frac{dT(t)}{dt}$ ของวัตถุเป็นสัดส่วนกับความแตกต่างของอุณหภูมิปัจจุบัน $\\Delta T = (T(t) - T_R)$ กับสภาพแวดล้อมโดยรอบ
 
-The analytical solution, which we will compare to the numerical approximation, is
+วิธีแก้ปัญหาเชิงวิเคราะห์ ซึ่งเราจะเปรียบเทียบกับการประมาณเชิงตัวเลขคือ
 
 <ul style='list-style: none;'>
   <li><big>$T(t) = T_R + (T_0 - T_R) \; e^{-k t}$</big></li>
@@ -72,7 +72,7 @@ The analytical solution, which we will compare to the numerical approximation, i
 
 # --instructions--
 
-Implement a routine of Euler's method and then use it to solve the given example of Newton's cooling law for three different step sizes of:
+ตามวิธีของออยเลอร์ จากนั้นใช้เพื่อแก้ปัญหาตัวอย่างกฎการระบายความร้อนของนิวตันที่กำหนดสำหรับขนาดขั้นตอนต่างๆ สามขนาด ได้แก่:
 
 <ul>
   <li><code>2 s</code></li>
@@ -80,7 +80,7 @@ Implement a routine of Euler's method and then use it to solve the given example
   <li><code>10 s</code></li>
 </ul>
 
-and compare with the analytical solution.
+และเปรียบเทียบกับวิธีวิเคราะห์
 
 **Initial values:**
 
@@ -91,35 +91,35 @@ and compare with the analytical solution.
   <li>time interval to calculate shall be from <code>0 s</code> to <code>100 s</code></li>
 </ul>  
 
-First parameter to the function is initial time, second parameter is initial temperature, third parameter is elapsed time and fourth parameter is step size.
+พารามิเตอร์ตัวแรกของฟังก์ชันคือเวลาเริ่มต้น พารามิเตอร์ที่สองคืออุณหภูมิเริ่มต้น พารามิเตอร์ที่สามคือเวลาที่ผ่านไป และพารามิเตอร์ที่สี่คือขนาดขั้นตอน
 
 # --hints--
 
-`eulersMethod` should be a function.
+`eulersMethod` ควรเป็น function.
 
 ```js
 assert(typeof eulersMethod === 'function');
 ```
 
-`eulersMethod(0, 100, 100, 2)` should return a number.
+`eulersMethod(0, 100, 100, 2)` ควร return number.
 
 ```js
 assert(typeof eulersMethod(0, 100, 100, 2) === 'number');
 ```
 
-`eulersMethod(0, 100, 100, 2)` should return 20.0424631833732.
+`eulersMethod(0, 100, 100, 2)` ควร return 20.0424631833732.
 
 ```js
 assert.equal(eulersMethod(0, 100, 100, 2), 20.0424631833732);
 ```
 
-`eulersMethod(0, 100, 100, 5)` should return 20.01449963666907.
+`eulersMethod(0, 100, 100, 5)` ควร return 20.01449963666907.
 
 ```js
 assert.equal(eulersMethod(0, 100, 100, 5), 20.01449963666907);
 ```
 
-`eulersMethod(0, 100, 100, 10)` should return 20.000472392.
+`eulersMethod(0, 100, 100, 10)` ควร return 20.000472392.
 
 ```js
 assert.equal(eulersMethod(0, 100, 100, 10), 20.000472392);

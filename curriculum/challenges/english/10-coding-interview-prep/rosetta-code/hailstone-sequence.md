@@ -8,48 +8,49 @@ dashedName: hailstone-sequence
 
 # --description--
 
-The Hailstone sequence of numbers can be generated from a starting positive integer, `n` by:
+Hailstone sequence ของตัวเลขสามารถสร้างได้จากจำนวนเต็มบวกเริ่มต้น, `n` โดย:
 
-- If `n` is `1` then the sequence ends
-- If `n` is `even` then the next `n` of the sequence `= n/2`
-- If `n` is `odd` then the next `n` of the sequence `= (3 * n) + 1`
+- ถ้า `n` คือ `1` ลำดับจะสิ้นสุดลง
+- ถ้า `n` เป็น `even` ดังนั้น `n` ถัดไปของลำดับ `= n/2`
+- ถ้า `n` เป็น `คี่` ดังนั้น `n` ถัดไปของลำดับ `= (3 * n) + 1`
 
-The (unproven) Collatz conjecture is that the hailstone sequence for any starting number always terminates.
+การคาดคะเน (ไม่ได้รับการพิสูจน์) ของ Collatz คือhailstone sequenceสำหรับหมายเลขเริ่มต้นใด ๆ จะสิ้นสุดลงเสมอ
 
-The hailstone sequence is also known as hailstone numbers (because the values are usually subject to multiple descents and ascents like hailstones in a cloud), or as the Collatz sequence.
+hailstone sequenceเรียกอีกอย่างว่าหมายhailstone(เนื่องจากค่ามักจะขึ้นอยู่กับการลงมาและการขึ้นหลายครั้งเช่นhailstoneในก้อนเมฆ) หรือเป็นลำดับ Collatz
+
 
 # --instructions--
 
-1. Create a routine to generate the hailstone sequence for a number
-2. Your function should return an array with the number less than `limit` which has the longest hailstone sequence and that sequence's length. (But don't show the actual sequence!)
+1. สร้างกิจวัตรเพื่อสร้างลำดับhailstoneสำหรับตัวเลข
+2. ฟังก์ชันของคุณควรreturn arrayที่มีตัวเลขน้อยกว่า "จำกัด" ซึ่งมีลำดับhailstoneที่ยาวที่สุดและความยาวของลำดับนั้น (แต่อย่าแสดงลำดับจริง!)
 
 # --hints--
 
-`hailstoneSequence` should be a function.
+`hailstoneSequence` ควรเป็น function.
 
 ```js
 assert(typeof hailstoneSequence === 'function');
 ```
 
-`hailstoneSequence(30)` should return an array.
+`hailstoneSequence(30)` ควร return array.
 
 ```js
 assert(Array.isArray(hailstoneSequence(30)));
 ```
 
-`hailstoneSequence(30)` should return `[27, 112]`.
+`hailstoneSequence(30)` ควร return `[27, 112]`.
 
 ```js
 assert.deepEqual(hailstoneSequence(30), [27, 112]);
 ```
 
-`hailstoneSequence(50000)` should return `[35655, 324]`.
+`hailstoneSequence(50000)` ควร return `[35655, 324]`.
 
 ```js
 assert.deepEqual(hailstoneSequence(50000), [35655, 324]);
 ```
 
-`hailstoneSequence(100000)` should return `[77031, 351]`.
+`hailstoneSequence(100000)` ควร return `[77031, 351]`.
 
 ```js
 assert.deepEqual(hailstoneSequence(100000), [77031, 351]);

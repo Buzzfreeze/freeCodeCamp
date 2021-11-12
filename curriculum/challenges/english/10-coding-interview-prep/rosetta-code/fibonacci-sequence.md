@@ -8,43 +8,43 @@ dashedName: fibonacci-sequence
 
 # --description--
 
-Write a function to generate the <code>n<sup>th</sup></code> Fibonacci number.
+เขียน function เพื่อหา <code>n<sup>th</sup></code> Fibonacci number.
 
-The <code>n<sup>th</sup></code> Fibonacci number is given by:
+The <code>n<sup>th</sup></code> Fibonacci number กำหนดโดย:
 
 <code>F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub></code>
 
-The first two terms of the series are 0 and 1.
+สองเทอมแรกของซีรีส์คือ 0 และ 1.
 
-Hence, the series is: 0, 1, 1, 2, 3, 5, 8, 13...
+ดังนั้น series คือ: 0, 1, 1, 2, 3, 5, 8, 13...
 
 # --hints--
 
-`fibonacci` should be a function.
+`fibonacci` ควรเป็น function.
 
 ```js
 assert(typeof fibonacci === 'function');
 ```
 
-`fibonacci(2)` should return a number.
+`fibonacci(2)` ควร return number.
 
 ```js
 assert(typeof fibonacci(2) == 'number');
 ```
 
-`fibonacci(3)` should return 2.
+`fibonacci(3)` ควร return 2.
 
 ```js
 assert.equal(fibonacci(3), 2);
 ```
 
-`fibonacci(5)` should return 5.
+`fibonacci(5)` ควร return 5.
 
 ```js
 assert.equal(fibonacci(5), 5);
 ```
 
-`fibonacci(10)` should return 55.
+`fibonacci(10)` ควร return 55.
 
 ```js
 assert.equal(fibonacci(10), 55);

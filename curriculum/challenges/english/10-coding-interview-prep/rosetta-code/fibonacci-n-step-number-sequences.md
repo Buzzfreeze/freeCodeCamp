@@ -8,7 +8,7 @@ dashedName: fibonacci-n-step-number-sequences
 
 # --description--
 
-These number series are an expansion of the ordinary [Fibonacci sequence](<https://rosettacode.org/wiki/Fibonacci sequence> "Fibonacci sequence") where:
+อนุกรมตัวเลขเหล่านี้เป็นการขยายความธรรมดา [Fibonacci sequence](<https://rosettacode.org/wiki/Fibonacci sequence> "Fibonacci sequence") ดังเช่น:
 
 <ol>
   <li>For $n = 2$ we have the Fibonacci sequence; with initial values $[1, 1]$ and $F_k^2 = F_{k-1}^2 + F_{k-2}^2$</li>
@@ -17,7 +17,8 @@ These number series are an expansion of the ordinary [Fibonacci sequence](<https
   <li>For general $n>2$ we have the Fibonacci $n$-step sequence - $F_k^n$; with initial values of the first $n$ values of the $(n-1)$'th Fibonacci $n$-step sequence $F_k^{n-1}$; and $k$'th value of this $n$'th sequence being $F_k^n = \sum_{i=1}^{(n)} {F_{k-i}^{(n)}}$</li>
 </ol>
 
-For small values of $n$, [Greek numeric prefixes](<https://en.wikipedia.org/wiki/Number prefix#Greek_series> "wp: Number prefix#Greek_series") are sometimes used to individually name each series.
+ค่าที่น้อยของ $n$, [Greek numeric prefixes](<https://en.wikipedia.org/wiki/Number prefix#Greek_series> "wp: Number prefix#Greek_series") 
+บางครั้งใช้เรียกชื่อแต่ละชุดแยกกัน
 
 Fibonacci $n$-step sequences:
 
@@ -36,54 +37,53 @@ Fibonacci $n$-step sequences:
 Allied sequences can be generated where the initial values are changed: The [Lucas series](<https://en.wikipedia.org/wiki/Lucas number> "wp: Lucas number") sums the two preceding values like the fibonacci series for $n=2$ but uses $\[2, 1]$ as its initial values.
 
 # --instructions--
-
-Write a function to generate Fibonacci $n$-step number sequences and Lucas sequences. The first parameter will be $n$. The second parameter will be the number of elements to be returned. The third parameter will specify whether to output the Fibonacci sequence or the Lucas sequence. If the parameter is `"f"` then return the Fibonacci sequence and if it is `"l"`, then return the Lucas sequence. The sequences must be returned as an array.
+เขียนฟังก์ชันเพื่อสร้างลำดับเลขFibonacci $n$-ขั้นตอนและลำดับLucas พารามิเตอร์แรกจะเป็น $n$ พารามิเตอร์ที่สองจะเป็นจำนวนขององค์ประกอบที่จะreturn พารามิเตอร์ที่สามจะระบุว่าจะส่งออกลำดับFibonacciหรือลำดับLucas หากพารามิเตอร์คือ `"f"` ให้returnลำดับFibonacci และหากเป็น `"l"` ให้returnลำดับLucas ลำดับจะต้องreturnเป็นarray
 
 # --hints--
 
-`fib_luc` should be a function.
+`fib_luc` ควรเป็น function.
 
 ```js
 assert(typeof fib_luc === 'function');
 ```
 
-`fib_luc(2,10,"f")` should return `[1,1,2,3,5,8,13,21,34,55]`.
+`fib_luc(2,10,"f")` ควร return `[1,1,2,3,5,8,13,21,34,55]`.
 
 ```js
 assert.deepEqual(fib_luc(2, 10, 'f'), ans[0]);
 ```
 
-`fib_luc(3,15,"f")` should return `[1,1,2,4,7,13,24,44,81,149,274,504,927,1705,3136]`.
+`fib_luc(3,15,"f")` ควร return `[1,1,2,4,7,13,24,44,81,149,274,504,927,1705,3136]`.
 
 ```js
 assert.deepEqual(fib_luc(3, 15, 'f'), ans[1]);
 ```
 
-`fib_luc(4,15,"f")` should return `[1,1,2,4,8,15,29,56,108,208,401,773,1490,2872,5536]`.
+`fib_luc(4,15,"f")` ควร return `[1,1,2,4,8,15,29,56,108,208,401,773,1490,2872,5536]`.
 
 ```js
 assert.deepEqual(fib_luc(4, 15, 'f'), ans[2]);
 ```
 
-`fib_luc(2,10,"l")` should return `[ 2, 1, 3, 4, 7, 11, 18, 29, 47, 76]`.
+`fib_luc(2,10,"l")` ควร return `[ 2, 1, 3, 4, 7, 11, 18, 29, 47, 76]`.
 
 ```js
 assert.deepEqual(fib_luc(2, 10, 'l'), ans[3]);
 ```
 
-`fib_luc(3,15,"l")` should return `[ 2, 1, 3, 6, 10, 19, 35, 64, 118, 217, 399, 734, 1350, 2483, 4567 ]`.
+`fib_luc(3,15,"l")` ควร return `[ 2, 1, 3, 6, 10, 19, 35, 64, 118, 217, 399, 734, 1350, 2483, 4567 ]`.
 
 ```js
 assert.deepEqual(fib_luc(3, 15, 'l'), ans[4]);
 ```
 
-`fib_luc(4,15,"l")` should return `[ 2, 1, 3, 6, 12, 22, 43, 83, 160, 308, 594, 1145, 2207, 4254, 8200 ]`.
+`fib_luc(4,15,"l")` ควร return `[ 2, 1, 3, 6, 12, 22, 43, 83, 160, 308, 594, 1145, 2207, 4254, 8200 ]`.
 
 ```js
 assert.deepEqual(fib_luc(4, 15, 'l'), ans[5]);
 ```
 
-`fib_luc(5,15,"l")` should return `[ 2, 1, 3, 6, 12, 24, 46, 91, 179, 352, 692, 1360, 2674, 5257, 10335 ]`.
+`fib_luc(5,15,"l")` ควร return `[ 2, 1, 3, 6, 12, 24, 46, 91, 179, 352, 692, 1360, 2674, 5257, 10335 ]`.
 
 ```js
 assert.deepEqual(fib_luc(5, 15, 'l'), ans[6]);

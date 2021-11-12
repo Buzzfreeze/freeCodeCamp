@@ -8,11 +8,11 @@ dashedName: emirp-primes
 
 # --description--
 
-An emirp (**prime** spelled backwards) are primes that when reversed (in their decimal representation) are a different prime.
+emirp (**prime** สะกดกลับหลัง) เป็นจำนวนเฉพาะที่เมื่อกลับด้าน (ในรูปของทศนิยม) เป็นจำนวนเฉพาะที่แตกต่างกัน
 
 # --instructions--
 
-Write a function that:
+เขียน function:
 
 <ul>
   <li>Shows the first <code>n</code> emirp numbers.</li>
@@ -21,17 +21,17 @@ Write a function that:
   <li>Shows the <code>n<sup>th</sup></code> emirp number.</li>
 </ul>
 
-The function should accept two parameters. The first will receive `n` or the range as an array. The second will receive a boolean, that specifies if the function returns the emirps as an array or a single number (the number of primes in the range or the <code>n<sup>th</sup></code> prime). According to the parameters the function should return an array or a number.
+ฟังก์ชันควรยอมรับพารามิเตอร์สองตัว ตัวแรกจะได้รับ `n` หรือ range เป็นarray ตัวที่สองจะได้รับบูลีนที่ระบุว่าฟังก์ชันส่งกลับค่า emirps เป็นarrayหรือตัวเลขเดียว (จำนวนเฉพาะในช่วงหรือไพรม์ <code>n<sup>th</sup></code>) . ตามพารามิเตอร์ ฟังก์ชันควรส่งคืนarrayหรือตัวเลข
 
 # --hints--
 
-`emirps` should be a function.
+`emirps` ควรเป็น function.
 
 ```js
 assert(typeof emirps === 'function');
 ```
 
-`emirps(20,true)` should return `[13,17,31,37,71,73,79,97,107,113,149,157,167,179,199,311,337,347,359,389]`
+`emirps(20,true)` ควร return `[13,17,31,37,71,73,79,97,107,113,149,157,167,179,199,311,337,347,359,389]`
 
 ```js
 assert.deepEqual(emirps(20, true), [
@@ -58,13 +58,13 @@ assert.deepEqual(emirps(20, true), [
 ]);
 ```
 
-`emirps(1000)` should return `70529`
+`emirps(1000)` ควร return `70529`
 
 ```js
 assert.deepEqual(emirps(1000), 70529);
 ```
 
-`emirps([7700,8000],true)` should return `[7717,7757,7817,7841,7867,7879,7901,7927,7949,7951,7963]`
+`emirps([7700,8000],true)` ควร return `[7717,7757,7817,7841,7867,7879,7901,7927,7949,7951,7963]`
 
 ```js
 assert.deepEqual(emirps([7700, 8000], true), [
@@ -82,7 +82,7 @@ assert.deepEqual(emirps([7700, 8000], true), [
 ]);
 ```
 
-`emirps([7700,8000],false)` should return `11`
+`emirps([7700,8000],false)` ควร return `11`
 
 ```js
 assert.deepEqual(emirps([7700, 8000], false), 11);

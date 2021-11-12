@@ -8,18 +8,18 @@ dashedName: topological-sort
 
 # --description--
 
-Given a mapping between items, and items they depend on, a topological sort orders items so that no item precedes an item it depends upon. There are two popular algorithms for topological sorting: Kahn's (1962) topological sort and depth-first search.
+ให้ mapping ระหว่าง item และ items อ้างถึง topological sort orders items เพื่อไม่ให้มีรายการใดนำหน้ารายการขึ้นอยู่กับ มีสอง algorithms สำหรับ topological sorting: Kahn's (1962) topological sort และ depth-first search.
 
 # --instructions--
 
-Write a function that will return a list with valid compile order of libraries from their dependencies.
+เขียนฟังก์ชันที่จะส่งคืนรายการที่มีลำดับการรวบรวมที่ถูกต้องของห้องสมุดจากการขึ้นต่อกัน
 
-- Assume library names are single words.
-- Items mentioned as only dependents have no dependents of their own, but their order of compiling must be given.
-- Any self dependencies should be ignored.
-- Any un-orderable dependencies should be ignored.
+- สมมติว่าชื่อห้องสมุดเป็นคำเดียว
+- รายการที่ระบุว่าเป็นผู้อยู่ในความอุปการะเท่านั้นไม่มีผู้อยู่ในความอุปการะของตนเอง แต่ต้องให้ลำดับการรวบรวม
+- การพึ่งพาตนเองใด ๆ ควรละเว้น
+- ควรละเว้นการพึ่งพาที่ไม่สามารถเรียงลำดับได้
 
-Use the following data as an example:
+ใช้ข้อมูลต่อไปนี้เป็นตัวอย่าง:
 
 <pre>
 LIBRARY          LIBRARY DEPENDENCIES
@@ -39,11 +39,11 @@ std_cell_lib     ieee std_cell_lib
 synopsys
 </pre>
 
-The compiling of a library in the VHDL language has the constraint that a library must be compiled after any library it depends on. The above data would be un-orderable if, for example, `dw04` is added to the list of dependencies of `dw01`.
+การcompile libraryในภาษา VHDL มีข้อจำกัดที่libraryจะต้องถูกคอมไพล์หลังจากlibraryใดๆ ขึ้นอยู่กับlibraryนั้น ข้อมูลข้างต้นจะไม่สามารถจัดลำดับได้ ตัวอย่างเช่น `dw04` ถูกเพิ่มลงในรายการการอ้างอิงของ `dw01'
 
-The input of the function will be a multiline string, each line will consist of the name of the library, followed by its dependencies (if exist).
+inputของฟังก์ชันจะเป็นสตริงแบบหลายบรรทัด แต่ละบรรทัดจะประกอบด้วยชื่อของlibrary ตามด้วยการอ้างอิง (ถ้ามี)
 
-For example:
+เช่น:
 
 ```js
 const libsSimple =
@@ -53,37 +53,37 @@ const libsSimple =
 
 # --hints--
 
-`topologicalSort` should be a function.
+`topologicalSort` ควรเป็น function.
 
 ```js
 assert(typeof topologicalSort === 'function');
 ```
 
-`topologicalSort(libsSimple)` should return an array.
+`topologicalSort(libsSimple)` ควร return array.
 
 ```js
 assert(Array.isArray(topologicalSort(libsSimple)));
 ```
 
-`topologicalSort(libsSimple)` should return `['bbb', 'aaa']`.
+`topologicalSort(libsSimple)` ควร return `['bbb', 'aaa']`.
 
 ```js
 assert.deepEqual(topologicalSort(libsSimple), ['bbb', 'aaa']);
 ```
 
-`topologicalSort(libsVHDL)` should return `['ieee', 'std_cell_lib', 'gtech', 'dware', 'dw07', 'dw06', 'dw05', 'dw02', 'dw01', 'dw04', 'std', 'ramlib', 'synopsys', 'dw03', 'des_system_lib']`.
+`topologicalSort(libsVHDL)` ควร return `['ieee', 'std_cell_lib', 'gtech', 'dware', 'dw07', 'dw06', 'dw05', 'dw02', 'dw01', 'dw04', 'std', 'ramlib', 'synopsys', 'dw03', 'des_system_lib']`.
 
 ```js
 assert.deepEqual(topologicalSort(libsVHDL), ['ieee', 'std_cell_lib', 'gtech', 'dware', 'dw07', 'dw06', 'dw05', 'dw02', 'dw01', 'dw04', 'std', 'ramlib', 'synopsys', 'dw03', 'des_system_lib']);
 ```
 
-`topologicalSort(libsCustom)` should return `['base', 'c', 'd', 'b', 'a']`.
+`topologicalSort(libsCustom)` ควร return `['base', 'c', 'd', 'b', 'a']`.
 
 ```js
 assert.deepEqual(topologicalSort(libsCustom), ['base', 'c', 'd', 'b', 'a']);
 ```
 
-`topologicalSort` should ignore unorderable dependencies.
+`topologicalSort` ควร ignore unorderable dependencies.
 
 ```js
 assert.deepEqual(topologicalSort(libsUnorderable), ['Base']);

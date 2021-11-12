@@ -8,51 +8,51 @@ dashedName: search-a-list-of-records
 
 # --description--
 
-A record consists of attributes that describe an entity. Each attribute has a name and a value. For example, a person can have an attribute `age` with a value of 25. An important operation on a list of records is to find a record with a particular attribute value.
+record ประกอบด้วยattributeที่อธิบายentity แต่ละattributeมีชื่อและค่า ตัวอย่างเช่น บุคคลสามารถมีattribute `age` โดยมีค่าเท่ากับ 25 การดำเนินการที่สำคัญในรายการrecodeคือการค้นหาrecodeที่มีค่าattributeเฉพาะ
 
 # --instructions--
 
-Write a function that takes a string as a parameter. The function should return the index of the item in `list` for which the value of the `name` attribute matches the given string.
+เขียนฟังก์ชันที่รับstringเป็นพารามิเตอร์ ฟังก์ชันควรส่งคืนindexของรายการใน `list` ซึ่งค่าของattribute `name` ตรงกับstringที่ระบุ
 
 # --hints--
 
-`searchCity` should be a function.
+`searchCity` ควรเป็น function.
 
 ```js
 assert(typeof searchCity === 'function');
 ```
 
-`searchCity("Dar Es Salaam")` should return a number.
+`searchCity("Dar Es Salaam")` ควร return number.
 
 ```js
 assert(typeof searchCity('Dar Es Salaam') === 'number');
 ```
 
-`searchCity("Dar Es Salaam")` should return `6`.
+`searchCity("Dar Es Salaam")` ควร return `6`.
 
 ```js
 assert.equal(searchCity('Dar Es Salaam'), 6);
 ```
 
-`searchCity("Casablanca")` should return `9`.
+`searchCity("Casablanca")` ควร return `9`.
 
 ```js
 assert.equal(searchCity('Casablanca'), 9);
 ```
 
-`searchCity("Cairo")` should return `1`.
+`searchCity("Cairo")` ควร return `1`.
 
 ```js
 assert.equal(searchCity('Cairo'), 1);
 ```
 
-`searchCity("Mogadishu")` should return `4`.
+`searchCity("Mogadishu")` ควร return `4`.
 
 ```js
 assert.equal(searchCity('Mogadishu'), 4);
 ```
 
-`searchCity("Lagos")` should return `0`.
+`searchCity("Lagos")` ควร return `0`.
 
 ```js
 assert.equal(searchCity('Lagos'), 0);

@@ -8,51 +8,51 @@ dashedName: vector-dot-product
 
 # --description--
 
-A vector can have one or more values represented by an ordered collection. Examples could be (x), (x, y), or (x, y, z).
+เวกเตอร์สามารถมีค่าอย่างน้อยหนึ่งค่าที่แสดงโดยcollectionที่เรียงลำดับ ตัวอย่างอาจเป็น(x), (x, y), หรือ (x, y, z).
 
 # --instructions--
 
-Write a function that takes two vectors (represented as one-dimensional arrays) as input and computes their dot product. Your function should return `null` on invalid inputs such as vectors of different lengths or passing anything other than two vectors.
+เขียนฟังก์ชันที่ใช้เวกเตอร์สองตัว (แสดงเป็นอาร์เรย์หนึ่งมิติ) เป็นอินพุตและคำนวณผลคูณของจุด ฟังก์ชันของคุณควรส่งคืน `null` สำหรับอินพุตที่ไม่ถูกต้อง เช่น เวกเตอร์ที่มีความยาวต่างกัน หรือส่งผ่านอย่างอื่นที่ไม่ใช่เวกเตอร์สองตัว
 
 # --hints--
 
-`dotProduct` should be a function.
+`dotProduct` ควรเป็น function.
 
 ```js
 assert.equal(typeof dotProduct, 'function');
 ```
 
-`dotProduct()` should return `null`.
+`dotProduct()` ควร return `null`.
 
 ```js
 assert.equal(dotProduct(), null);
 ```
 
-`dotProduct([1], [1])` should return `1`.
+`dotProduct([1], [1])` ควร return `1`.
 
 ```js
 assert.equal(dotProduct([1], [1]), 1);
 ```
 
-`dotProduct([1], [1, 2])` should return `null`.
+`dotProduct([1], [1, 2])` ควร return `null`.
 
 ```js
 assert.equal(dotProduct([1], [1, 2]), null);
 ```
 
-`dotProduct([1, 3, -5], [4, -2, -1])` should return `3`.
+`dotProduct([1, 3, -5], [4, -2, -1])` ควร return `3`.
 
 ```js
 assert.equal(dotProduct([1, 3, -5], [4, -2, -1]), 3);
 ```
 
-`dotProduct([3, 2, 1], [2, 4, 2], [5, 3, 1])` should return `null`.
+`dotProduct([3, 2, 1], [2, 4, 2], [5, 3, 1])` ควร return `null`.
 
 ```js
 assert.equal(dotProduct([3, 2, 1], [2, 4, 2], [5, 3, 1]), null);
 ```
 
-`dotProduct([ 0, 3, 6, 9, 12 ], [ 0, 4, 8, 12, 16 ])` should return `360`.
+`dotProduct([ 0, 3, 6, 9, 12 ], [ 0, 4, 8, 12, 16 ])` ควร return `360`.
 
 ```js
 assert.equal(dotProduct([ 0, 3, 6, 9, 12 ], [ 0, 4, 8, 12, 16 ]), 360);

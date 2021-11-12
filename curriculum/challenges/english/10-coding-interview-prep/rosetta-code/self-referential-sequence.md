@@ -8,41 +8,41 @@ dashedName: self-referential-sequence
 
 # --description--
 
-There are several ways to generate a self-referential sequence. One very common one (the [Look-and-say sequence](<https://rosettacode.org/wiki/Look-and-say sequence>)) is to start with a positive integer, then generate the next term by concatenating enumerated groups of adjacent alike digits:
+มีหลายวิธีในการสร้างลำดับการอ้างอิงตนเอง ปกติอย่างเช่น ([ลำดับการดูและพูด](<https://rosettacode.org/wiki/Look-and-say sequence>)) คือการเริ่มต้นด้วยจำนวนเต็มบวก แล้วสร้างtermถัดไปโดยการต่อกัน แจกแจงกลุ่มของตัวเลขที่เหมือนกันที่อยู่ติดกัน:
 
 <pre>0, 10, 1110, 3110, 132110, 1113122110, 311311222110 ...</pre>
 
-The terms generated grow in length geometrically and never converge.
+เงื่อนไขที่สร้างขึ้นจะมีความยาวเพิ่มขึ้นในเชิงเรขาคณิตและไม่เคยมาบรรจบกัน
 
-Another way to generate a self-referential sequence is to summarize the previous term.
+อีกวิธีหนึ่งในการสร้างลำดับการอ้างอิงตนเองคือการสรุปtermก่อนหน้า
 
-Count how many of each alike digit there is, then concatenate the sum and digit for each of the sorted enumerated digits. Note that the first five terms are the same as for the previous sequence.
+นับจำนวนหลักที่เหมือนกันแต่ละหลัก จากนั้นจึงรวมผลรวมและหลักสำหรับตัวเลขที่แจกแจงแต่ละหลัก โปรดทราบว่าห้าtermแรกจะเหมือนกับลำดับก่อนหน้า
 
 <pre>0, 10, 1110, 3110, 132110, 13123110, 23124110 ...</pre>
 
-Sort the digits largest to smallest. Do not include counts of digits that do not appear in the previous term.
+เรียงตัวเลขจากมากไปหาน้อย ไม่รวมการนับตัวเลขที่ไม่ปรากฏในtermก่อนหน้า
 
-Depending on the seed value, series generated this way always either converge to a stable value or to a short cyclical pattern. (For our purposes, converge means that an element matches a previously seen element.) The sequence shown, with a seed value of 0, converges to a stable value of 1433223110 after 11 iterations. The seed value that converges most quickly is 22. It goes stable after the first element. (The next element is 22, which has been seen before.)
+ขึ้นอยู่กับค่าเริ่มต้นอนุกรมที่สร้างด้วยวิธีนี้มักจะมาบรรจบกันเป็นค่าคงที่หรือเป็นรูปแบบวัฏจักรสั้น ๆ (สำหรับจุดประสงค์ของเรา การบรรจบกันหมายความว่าองค์ประกอบตรงกับองค์ประกอบที่เห็นก่อนหน้านี้) ลำดับที่แสดง โดยมีค่าเริ่มต้นเป็น 0 มาบรรจบกันเป็นค่าคงที่ที่ 1433223110 หลังจากการวนซ้ำ 11 ครั้ง ค่าเมล็ดที่บรรจบกันเร็วที่สุดคือ 22 ค่าคงที่หลังจากองค์ประกอบแรก (ส่วนต่อไปคือ 22 ซึ่งเคยเห็นมาแล้ว)
 
 # --instructions--
 
-Write a function that takes the seed value as parameter, generates a self referential sequence until it converges, and returns it as an array.
+เขียนฟังก์ชันที่ใช้ค่าเริ่มต้นเป็นพารามิเตอร์ สร้างลำดับการอ้างอิงตัวเองจนกว่าจะมาบรรจบกัน และส่งกลับเป็นarray
 
 # --hints--
 
-`selfReferential` should be a function.
+`selfReferential` ควรเป็น function.
 
 ```js
 assert(typeof selfReferential === 'function');
 ```
 
-`selfReferential(40)` should return a array.
+`selfReferential(40)` ควร return array.
 
 ```js
 assert(Array.isArray(selfReferential(40)));
 ```
 
-`selfReferential(40)` should return `["40", "1410", "142110", "14123110", "1413124110", "2413125110", "151413224110", "152413225110", "251413324110", "152423224110", "152413423110"]`.
+`selfReferential(40)` ควร return `["40", "1410", "142110", "14123110", "1413124110", "2413125110", "151413224110", "152413225110", "251413324110", "152423224110", "152413423110"]`.
 
 ```js
 assert.deepEqual(selfReferential(40), [
@@ -60,7 +60,7 @@ assert.deepEqual(selfReferential(40), [
 ]);
 ```
 
-`selfReferential(132110)` should return `["132110", "13123110", "23124110", "1413223110", "1423224110", "2413323110", "1433223110"]`.
+`selfReferential(132110)` ควร return `["132110", "13123110", "23124110", "1413223110", "1423224110", "2413323110", "1433223110"]`.
 
 ```js
 assert.deepEqual(selfReferential(132110), [
@@ -74,7 +74,7 @@ assert.deepEqual(selfReferential(132110), [
 ]);
 ```
 
-`selfReferential(132211)` should return `["132211", "132231", "232221", "134211", "14131231", "14231241", "24132231", "14233221"]`.
+`selfReferential(132211)` ควร return `["132211", "132231", "232221", "134211", "14131231", "14231241", "24132231", "14233221"]`.
 
 ```js
 assert.deepEqual(selfReferential(132211), [
@@ -89,7 +89,7 @@ assert.deepEqual(selfReferential(132211), [
 ]);
 ```
 
-`selfReferential(1413223110)` should return `["1413223110", "1423224110", "2413323110", "1433223110"]`.
+`selfReferential(1413223110)` ควร return `["1413223110", "1423224110", "2413323110", "1433223110"]`.
 
 ```js
 assert.deepEqual(selfReferential(1413223110), [
@@ -100,7 +100,7 @@ assert.deepEqual(selfReferential(1413223110), [
 ]);
 ```
 
-`selfReferential(251413126110)` should return `["251413126110", "16151413225110", "16251413226110", "26151413325110", "16251423225110", "16251413424110", "16153413225110"]`.
+`selfReferential(251413126110)` ควร return `["251413126110", "16151413225110", "16251413226110", "26151413325110", "16251423225110", "16251413424110", "16153413225110"]`.
 
 ```js
 assert.deepEqual(selfReferential(251413126110), [

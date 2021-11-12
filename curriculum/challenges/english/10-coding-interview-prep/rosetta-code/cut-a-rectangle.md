@@ -8,7 +8,7 @@ dashedName: cut-a-rectangle
 
 # --description--
 
-A given rectangle is made from *m* × *n* squares. If *m* and *n* are not both odd, then it is possible to cut a path through the rectangle along the square edges such that the rectangle splits into two connected pieces with the same shape (after rotating one of the pieces by 180°). All such paths for 2 × 2 and 4 × 3 rectangles are shown below.
+สี่เหลี่ยมที่กำหนดให้สร้างจาก *m* × *n* สี่เหลี่ยม ถ้า *m* และ *n* ไม่เป็นเลขคี่ทั้งคู่ ก็เป็นไปได้ที่จะตัดเส้นทางผ่านสี่เหลี่ยมผืนผ้าตามขอบสี่เหลี่ยมเพื่อให้สี่เหลี่ยมนั้นแยกออกเป็นสองส่วนเชื่อมต่อกันที่มีรูปร่างเหมือนกัน (หลังจากหมุนชิ้นใดชิ้นหนึ่งไป 180 °) เส้นทางดังกล่าวทั้งหมดสำหรับสี่เหลี่ยม 2 × 2 และ 4 × 3 แสดงอยู่ด้านล่าง
 
 <div style="width: 100%; text-align: center;">
   <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="520" height="170" aria-hidden="true" alt="Diagram showing the possible paths for 2 by 2 and 4 by 3 rectangles">
@@ -92,47 +92,47 @@ A given rectangle is made from *m* × *n* squares. If *m* and *n* are not both o
 
 # --instructions--
 
-Write a function that calculates the number of different ways to cut an *m* × *n* rectangle.
+เขียนฟังก์ชันที่คำนวณจำนวนวิธีต่างๆ ในการตัดสี่เหลี่ยม *m* × *n*
 
 # --hints--
 
-`cutRectangle` should be a function.
+`cutRectangle` ควรเป็น function.
 
 ```js
 assert(typeof cutRectangle == 'function');
 ```
 
-`cutRectangle(2, 2)` should return a number.
+`cutRectangle(2, 2)` ควร return number.
 
 ```js
 assert(typeof cutRectangle(2, 2) == 'number');
 ```
 
-`cutRectangle(2, 2)` should return `2`.
+`cutRectangle(2, 2)` ควร return `2`.
 
 ```js
 assert.equal(cutRectangle(2, 2), 2);
 ```
 
-`cutRectangle(4, 3)` should return `9`.
+`cutRectangle(4, 3)` ควร return `9`.
 
 ```js
 assert.equal(cutRectangle(4, 3), 9);
 ```
 
-`cutRectangle(4, 4)` should return `22`.
+`cutRectangle(4, 4)` ควร return `22`.
 
 ```js
 assert.equal(cutRectangle(4, 4), 22);
 ```
 
-`cutRectangle(8, 3)` should return `53`.
+`cutRectangle(8, 3)` ควร return `53`.
 
 ```js
 assert.equal(cutRectangle(8, 3), 53);
 ```
 
-`cutRectangle(7, 4)` should return `151`.
+`cutRectangle(7, 4)` ควร return `151`.
 
 ```js
 assert.equal(cutRectangle(7, 4), 151);

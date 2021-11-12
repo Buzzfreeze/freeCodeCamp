@@ -7,8 +7,7 @@ dashedName: sorting-algorithmscocktail-sort
 ---
 
 # --description--
-
-The cocktail shaker sort is an improvement on the [Bubble Sort](<https://rosettacode.org/wiki/Bubble Sort>). The improvement is basically that values "bubble" both directions through the array, because on each iteration the cocktail shaker sort bubble sorts once forwards and once backwards. Pseudocode for the algorithm (from [wikipedia](<https://en.wikipedia.org/wiki/Cocktail sort>)):
+การจัดเรียงเครื่องค็อกเทลเป็นการปรับปรุง [Bubble Sort](<https://rosettacode.org/wiki/Bubble Sort>) การปรับปรุงนั้นโดยพื้นฐานแล้วจะให้ความสำคัญกับค่า "bubble" ทั้งสองทิศทางผ่านอาร์เรย์ เพราะในการวนซ้ำแต่ละครั้ง cocktail shaker sort bubble sorts จะเรียงลำดับไปข้างหน้าหนึ่งครั้งและถอยหลังหนึ่งครั้ง Pseudocode สำหรับ algorithm (จาก [wikipedia](<https://en.wikipedia.org/wiki/Cocktail sort>)):
 
 <pre><b>function</b> <i>cocktailSort</i>( A : list of sortable items )
   <b>do</b>
@@ -34,41 +33,41 @@ The cocktail shaker sort is an improvement on the [Bubble Sort](<https://rosetta
 
 # --instructions--
 
-Write a function that sorts a given array using cocktail sort.
+เขียนฟังก์ชันที่เรียงลำดับที่กำหนด array โดยใช้ cocktail sort.
 
 # --hints--
 
-`cocktailSort` should be a function.
+`cocktailSort` ควรเป็น function.
 
 ```js
 assert(typeof cocktailSort == 'function');
 ```
 
-`cocktailSort([25, 32, 12, 7, 20])` should return an array.
+`cocktailSort([25, 32, 12, 7, 20])` ควร return array.
 
 ```js
 assert(Array.isArray(cocktailSort([25, 32, 12, 7, 20])));
 ```
 
-`cocktailSort([25, 32, 12, 7, 20])` should return `[7, 12, 20, 25, 32]`.
+`cocktailSort([25, 32, 12, 7, 20])` ควร return `[7, 12, 20, 25, 32]`.
 
 ```js
 assert.deepEqual(cocktailSort([25, 32, 12, 7, 20]), [7, 12, 20, 25, 32]);
 ```
 
-`cocktailSort([38, 45, 35, 8, 13])` should return `[8, 13, 35, 38, 45]`.
+`cocktailSort([38, 45, 35, 8, 13])` ควร return `[8, 13, 35, 38, 45]`.
 
 ```js
 assert.deepEqual(cocktailSort([38, 45, 35, 8, 13]), [8, 13, 35, 38, 45]);
 ```
 
-`cocktailSort([43, 36, 20, 34, 24])` should return `[20, 24, 34, 36, 43]`.
+`cocktailSort([43, 36, 20, 34, 24])` ควร return `[20, 24, 34, 36, 43]`.
 
 ```js
 assert.deepEqual(cocktailSort([43, 36, 20, 34, 24]), [20, 24, 34, 36, 43]);
 ```
 
-`cocktailSort([12, 33, 26, 18, 1, 16, 38])` should return `[1, 12, 16, 18, 26, 33, 38]`.
+`cocktailSort([12, 33, 26, 18, 1, 16, 38])` ควร return `[1, 12, 16, 18, 26, 33, 38]`.
 
 ```js
 assert.deepEqual(cocktailSort([12, 33, 26, 18, 1, 16, 38]), [
@@ -82,7 +81,7 @@ assert.deepEqual(cocktailSort([12, 33, 26, 18, 1, 16, 38]), [
 ]);
 ```
 
-`cocktailSort([3, 39, 48, 16, 1, 4, 29])` should return `[1, 3, 4, 16, 29, 39, 48]`.
+`cocktailSort([3, 39, 48, 16, 1, 4, 29])` ควร return `[1, 3, 4, 16, 29, 39, 48]`.
 
 ```js
 assert.deepEqual(cocktailSort([3, 39, 48, 16, 1, 4, 29]), [

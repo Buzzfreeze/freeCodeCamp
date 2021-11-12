@@ -8,7 +8,7 @@ dashedName: soundex
 
 # --description--
 
-Soundex is an algorithm for creating indices for words based on their pronunciation. The goal is for homophones to be encoded to the same representation so that they can be matched despite minor differences in spelling (from [the WP article](https://en.wikipedia.org/wiki/soundex)). There is a major issue in many of the implementations concerning the separation of two consonants that have the same soundex code! According to the [official Rules](https://www.archives.gov/research/census/soundex.html). So check for instance if **Ashcraft** is coded to **A-261**.
+Soundex เป็นalgorithmธึมสำหรับสร้างindexสำหรับคำตามการออกเสียง เป้าหมายคือการเข้ารหัสคำพ้องเสียงกับการแสดงเดียวกันเพื่อให้สามารถจับคู่ได้แม้ว่าจะมีการสะกดต่างกันเล็กน้อย (จาก [บทความ WP](https://en.wikipedia.org/wiki/soundex)) มีปัญหาสำคัญในการใช้งานหลายอย่างที่เกี่ยวข้องกับการแยกพยัญชนะสองตัวที่มีรหัส soundex เดียวกัน! ตาม [กฎอย่างเป็นทางการ](https://www.archives.gov/research/census/soundex.html) ดังนั้นตรวจสอบเช่น ถ้า **Ashcraft** ถูก code เป็น **A-261**.
 
 <ul>
   <li>If a vowel (A, E, I, O, U) separates two consonants that have the same soundex code, the consonant to the right of the vowel is coded. Tymczak is coded as T-522 (T, 5 for the M, 2 for the C, Z ignored (see "Side-by-Side" rule above), 2 for the K). Since the vowel "A" separates the Z and K, the K is coded.</li>
@@ -17,77 +17,77 @@ Soundex is an algorithm for creating indices for words based on their pronunciat
 
 # --instructions--
 
-Write a function that takes a string as a parameter and returns the encoded string.
+เขียนฟังก์ชันที่รับstringเป็นพารามิเตอร์และส่งกลับstringที่เข้ารหัส
 
 # --hints--
 
-`soundex` should be a function.
+`soundex` ควรเป็น function.
 
 ```js
 assert(typeof soundex == 'function');
 ```
 
-`soundex("Soundex")` should return a string.
+`soundex("Soundex")` ควร return string.
 
 ```js
 assert(typeof soundex('Soundex') == 'string');
 ```
 
-`soundex("Soundex")` should return `"S532"`.
+`soundex("Soundex")` ควร return `"S532"`.
 
 ```js
 assert.equal(soundex('Soundex'), 'S532');
 ```
 
-`soundex("Example")` should return `"E251"`.
+`soundex("Example")` ควร return `"E251"`.
 
 ```js
 assert.equal(soundex('Example'), 'E251');
 ```
 
-`soundex("Sownteks")` should return `"S532"`.
+`soundex("Sownteks")` ควร return `"S532"`.
 
 ```js
 assert.equal(soundex('Sownteks'), 'S532');
 ```
 
-`soundex("Ekzampul")` should return `"E251"`.
+`soundex("Ekzampul")` ควร return `"E251"`.
 
 ```js
 assert.equal(soundex('Ekzampul'), 'E251');
 ```
 
-`soundex("Euler")` should return `"E460"`.
+`soundex("Euler")` ควร return `"E460"`.
 
 ```js
 assert.equal(soundex('Euler'), 'E460');
 ```
 
-`soundex("Gauss")` should return `"G200"`.
+`soundex("Gauss")` ควร return `"G200"`.
 
 ```js
 assert.equal(soundex('Gauss'), 'G200');
 ```
 
-`soundex("Hilbert")` should return `"H416"`.
+`soundex("Hilbert")` ควร return `"H416"`.
 
 ```js
 assert.equal(soundex('Hilbert'), 'H416');
 ```
 
-`soundex("Knuth")` should return `"K530"`.
+`soundex("Knuth")` ควร return `"K530"`.
 
 ```js
 assert.equal(soundex('Knuth'), 'K530');
 ```
 
-`soundex("Lloyd")` should return `"L300"`.
+`soundex("Lloyd")` ควร return `"L300"`.
 
 ```js
 assert.equal(soundex('Lloyd'), 'L300');
 ```
 
-`soundex("Lukasiewicz")` should return `"L222"`.
+`soundex("Lukasiewicz")` ควร return `"L222"`.
 
 ```js
 assert.equal(soundex('Lukasiewicz'), 'L222');

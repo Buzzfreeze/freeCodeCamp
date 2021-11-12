@@ -8,11 +8,11 @@ dashedName: amicable-pairs
 
 # --description--
 
-Two integers $N$ and $M$ are said to be [amicable pairs](<https://en.wikipedia.org/wiki/Amicable numbers> "wp: Amicable numbers") if $N \\neq M$ and the sum of the [proper divisors](<https://rosettacode.org/wiki/Proper divisors> "Proper divisors") of $N$ ($\\mathrm{sum}(\\mathrm{propDivs}(N))$) $= M$ as well as $\\mathrm{sum}(\\mathrm{propDivs}(M)) = N$.
+integers $N$ และ $M$ บอกว่า [amicable pairs](<https://en.wikipedia.org/wiki/Amicable numbers> "wp: Amicable numbers") ถ้า $N \\neq M$ และผลรวม [proper divisors](<https://rosettacode.org/wiki/Proper divisors> "Proper divisors") ของ $N$ ($\\mathrm{sum}(\\mathrm{propDivs}(N))$) $= M$ as well as $\\mathrm{sum}(\\mathrm{propDivs}(M)) = N$.
 
 **Example:**
 
-**1184** and **1210** are an amicable pair, with proper divisors:
+**1184** และ **1210** เป็น amicable pair มีตัวหารที่เหมาะสม:
 
 <ul>
   <li>1, 2, 4, 8, 16, 32, 37, 74, 148, 296, 592  and</li>
@@ -21,29 +21,29 @@ Two integers $N$ and $M$ are said to be [amicable pairs](<https://en.wikipedia.o
 
 # --instructions--
 
-Calculate and show here the Amicable pairs below 20,000 (there are eight).
+คำนวณและแสดงคู่ Amicable ที่ต่ำกว่า 20,000 (มีแปดตัว).
 
 # --hints--
 
-`amicablePairsUpTo` should be a function.
+`amicablePairsUpTo` ควรเป็น function.
 
 ```js
 assert(typeof amicablePairsUpTo === 'function');
 ```
 
-`amicablePairsUpTo(300)` should return `[[220,284]]`.
+`amicablePairsUpTo(300)` ควร return `[[220,284]]`.
 
 ```js
 assert.deepEqual(amicablePairsUpTo(300), answer300);
 ```
 
-`amicablePairsUpTo(3000)` should return `[[220,284],[1184,1210],[2620,2924]]`.
+`amicablePairsUpTo(3000)` ควร return `[[220,284],[1184,1210],[2620,2924]]`.
 
 ```js
 assert.deepEqual(amicablePairsUpTo(3000), answer3000);
 ```
 
-`amicablePairsUpTo(20000)` should return `[[220,284],[1184,1210],[2620,2924],[5020,5564],[6232,6368],[10744,10856],[12285,14595],[17296,18416]]`.
+`amicablePairsUpTo(20000)` ควร return `[[220,284],[1184,1210],[2620,2924],[5020,5564],[6232,6368],[10744,10856],[12285,14595],[17296,18416]]`.
 
 ```js
 assert.deepEqual(amicablePairsUpTo(20000), answer20000);

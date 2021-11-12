@@ -8,11 +8,11 @@ dashedName: comma-quibbling
 
 # --description--
 
-Comma quibbling is a task originally set by Eric Lippert in his [blog](https://blogs.msdn.com/b/ericlippert/archive/2009/04/15/comma-quibbling.aspx).
+Comma quibbling เป็นงานที่ Eric Lippert กำหนดไว้ใน [blog](https://blogs.msdn.com/b/ericlippert/archive/2009/04/15/comma-quibbling.aspx).
 
 # --instructions--
 
-Write a function to generate a string output which is the concatenation of input words from a list/sequence where:
+เขียนฟังก์ชันเพื่อสร้างoutput string ซึ่งเป็นการรวมคำ input จาก list/sequence โดยที่:
 
 <ol>
   <li>An input of no words produces the output string of just the two brace characters (<code>"{}"</code>)</li>
@@ -21,7 +21,7 @@ Write a function to generate a string output which is the concatenation of input
   <li>An input of three or more words, e.g. <code>["ABC", "DEF", "G", "H"]</code>, produces the output string of all but the last word separated by <code>", "</code> with the last word separated by <code>" and "</code> and all within braces; e.g. <code>"{ABC, DEF, G and H}"</code></li>
 </ol>
 
-Test your function with the following series of inputs showing your output here on this page:
+Test function ด้วยชุดข้อมูลต่อไปนี้ที่แสดงผลลัพธ์ของคุณที่นี่ในหน้านี้:
 
 <ul>
   <li>[] # (No input words).</li>
@@ -30,41 +30,41 @@ Test your function with the following series of inputs showing your output here 
   <li>["ABC", "DEF", "G", "H"]</li>
 </ul>
 
-**Note:** Assume words are non-empty strings of uppercase characters for this task.
+**Note:** สมมติว่าคำเป็น non-empty strings ตัวพิมพ์ใหญ่
 
 # --hints--
 
-`quibble` should be a function.
+`quibble` ควรเป็น function.
 
 ```js
 assert(typeof quibble === 'function');
 ```
 
-`quibble(["ABC"])` should return a string.
+`quibble(["ABC"])` ควร return string.
 
 ```js
 assert(typeof quibble(['ABC']) === 'string');
 ```
 
-`quibble([])` should return "{}".
+`quibble([])` ควร return "{}".
 
 ```js
 assert.equal(quibble(testCases[0]), results[0]);
 ```
 
-`quibble(["ABC"])` should return "{ABC}".
+`quibble(["ABC"])` ควร return "{ABC}".
 
 ```js
 assert.equal(quibble(testCases[1]), results[1]);
 ```
 
-`quibble(["ABC", "DEF"])` should return "{ABC and DEF}".
+`quibble(["ABC", "DEF"])` ควร return "{ABC and DEF}".
 
 ```js
 assert.equal(quibble(testCases[2]), results[2]);
 ```
 
-`quibble(["ABC", "DEF", "G", "H"])` should return "{ABC,DEF,G and H}".
+`quibble(["ABC", "DEF", "G", "H"])` ควร return "{ABC,DEF,G and H}".
 
 ```js
 assert.equal(quibble(testCases[3]), results[3]);

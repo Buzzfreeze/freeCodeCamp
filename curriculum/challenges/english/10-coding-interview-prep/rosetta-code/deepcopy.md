@@ -8,9 +8,9 @@ dashedName: deepcopy
 
 # --description--
 
-Write a function that returns a deep copy of a given object. The copy must not be the same object that was given.
+เขียนฟังก์ชันที่ returns deep copy ของ object ที่กำหนด deep copy ต้องไม่ใช่ object เดียวกันกับที่ได้รับ
 
-This task will not test for:
+งานนี้จะไม่ทดสอบเพื่อ:
 
 <ul>
   <li>Objects with properties that are functions</li>
@@ -21,31 +21,31 @@ This task will not test for:
 
 # --hints--
 
-`deepcopy` should be a function.
+`deepcopy` ควรเป็น function.
 
 ```js
 assert(typeof deepcopy === 'function');
 ```
 
-`deepcopy({test: "test"})` should return an object.
+`deepcopy({test: "test"})` ควร return object.
 
 ```js
 assert(typeof deepcopy(obj1) === 'object');
 ```
 
-`deepcopy` should not return the same object that was provided.
+`deepcopy` ไม่ควร return object เดียวกันกับที่ให้ไว้
 
 ```js
 assert(deepcopy(obj2) != obj2);
 ```
 
-When passed an object containing an array, `deepcopy` should return a deep copy of the object.
+เมื่อส่งผ่าน object ที่มี array `deepcopy` ควร return deep copy ของ object.
 
 ```js
 assert.deepEqual(deepcopy(obj2), obj2);
 ```
 
-When passed an object containing another object, `deepcopy`  should return a deep copy of the object.
+เมื่อส่งผ่าน object ที่มี object อื่นๆ `deepcopy`  ควร return deep copy ของ object.
 
 ```js
 assert.deepEqual(deepcopy(obj3), obj3);

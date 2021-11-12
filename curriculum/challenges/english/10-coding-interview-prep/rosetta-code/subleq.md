@@ -8,19 +8,18 @@ dashedName: subleq
 
 # --description--
 
-[Subleq](https://rosettacode.org/wiki/eso:Subleq) is an example of a [One-Instruction Set Computer (OISC)](https://en.wikipedia.org/wiki/One_instruction_set_computer).
+[Subleq](https://rosettacode.org/wiki/eso:Subleq) เป็นตัวอย่างของ [One-Instruction Set Computer (OISC)](https://en.wikipedia.org/wiki/One_instruction_set_computer).
 
-It is named after its only instruction, which is **SU**btract and **B**ranch if **L**ess than or **EQ**ual
+ได้รับการตั้งชื่อตามคำสั่งเดียว ซึ่งก็คือ **SU**btract และ **B** ranch if **L**ess than หรือ **EQ**ual
+ไปเป็นศูนย์
 
-to zero.
+งานของคุณคือสร้างล่ามที่เลียนแบบเครื่องดังกล่าว
 
-Your task is to create an interpreter which emulates such a machine.
+หน่วยความจำของเครื่องประกอบด้วยarrayของจำนวนเต็มที่ลงนาม ขนาดคำที่เหมาะสมใด ๆ ก็ใช้ได้ แต่หน่วยความจำต้อง
 
-The machine's memory consists of an array of signed integers. Any reasonable word size is fine, but the memory must be
+สามารถถือจำนวนลบเป็นบวกได้
 
-able to hold negative as well as positive numbers.
-
-Execution begins with the instruction pointer aimed at the first word, which is address 0. It proceeds as follows:
+การดำเนินการเริ่มต้นด้วยตัวชี้คำสั่งที่มุ่งไปที่คำแรกซึ่งเป็นที่อยู่ 0 ดำเนินการดังนี้:
 
 <ol>
   <li>Let A, B, and C be the value stored in the three consecutive words in memory starting at the instruction pointer.</li>
@@ -35,23 +34,19 @@ Execution begins with the instruction pointer aimed at the first word, which is 
   <li>If the instruction pointer becomes negative, execution halts.</li>
 </ol>
 
-Other negative addresses besides -1 may be treated as equivalent to -1, or generate an error, as you see fit.
+ที่อยู่เชิงลบอื่นๆ นอกเหนือจาก -1 อาจถือว่าเทียบเท่ากับ -1 หรือสร้างข้อผิดพลาดตามที่เห็นสมควร
 
-Your solution should accept a program to execute on the machine, separately from the input fed to the program itself.
+โซลูชันของคุณควรยอมรับโปรแกรมที่จะรันบนเครื่อง แยกจากinputที่ป้อนไปยังโปรแกรมเอง
 
-This program should be in raw subleq "machine code" - whitespace-separated decimal numbers, with no symbolic names or
+โปรแกรมนี้ควรอยู่ใน "รหัสเครื่อง" ดิบย่อย - ตัวเลขทศนิยมที่คั่นด้วยช่องว่าง โดยไม่มีชื่อสัญลักษณ์หรือ
 
-other assembly-level extensions, to be loaded into memory starting at address 0. Show the output of your solution when
+ส่วนขยายระดับassemblyอื่น ๆ ที่จะโหลดลงในหน่วยความจำโดยเริ่มต้นที่ที่อยู่ 0 แสดงผลลัพธ์ของโซลูชันของคุณเมื่อ
 
-fed this "Hello, world!" program. (Note that the example assumes ASCII or a superset of it, such as any of the Latin-N
-
-character sets or Unicode. You may translate it into another character set if your implementation is on a
-
-non-ASCiI-compatible environment.)
+เลี้ยง "สวัสดีชาวโลก!" โปรแกรม. (โปรดทราบว่าตัวอย่างถือว่า ASCII หรือ superset ของมัน เช่น Latin-N . ใดๆ
 
 <pre>15 17 -1 17 -1 -1 16 1 -1 16 3 -1 15 15 0 0 -1 72 101 108 108 111 44 32 119 111 114 108 100 33 10 0</pre>
 
-Which corresponds to something like this in a hypothetical assembler language:
+ซึ่งสอดคล้องกับสิ่งนี้ใน hypothetical assembler language:
 
 <pre>start:
     zero, message, -1
@@ -66,19 +61,19 @@ message: "Hello, world!\n\0"
 
 # --instructions--
 
-Write a function that takes an array of integers as a parameter. This represents the memory elements. The function
+เขียนฟังก์ชันที่ใช้arrayของจำนวนเต็มเป็นพารามิเตอร์ นี่แสดงถึงองค์ประกอบหน่วยความจำ ฟังก์ชั่น
 
-should interpret the sequence and return the output string. For this task, assume that there is no standard input.
+ควรตีความลำดับและส่งคืนสตริงเอาต์พุต สำหรับงานนี้ สมมติว่าไม่มีอินพุตมาตรฐาน
 
 # --hints--
 
-`Subleq` should be a function.
+`Subleq` ควรเป็น function.
 
 ```js
 assert(typeof Subleq == 'function');
 ```
 
-`Subleq([15, 17, -1, 17, -1, -1, 16, 1, -1, 16, 3, -1, 15, 15, 0, 0, -1, 72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33, 0])` should return a string.
+`Subleq([15, 17, -1, 17, -1, -1, 16, 1, -1, 16, 3, -1, 15, 15, 0, 0, -1, 72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33, 0])` ควร return string.
 
 ```js
 assert(
@@ -118,7 +113,7 @@ assert(
 );
 ```
 
-`Subleq([15, 17, -1, 17, -1, -1, 16, 1, -1, 16, 3, -1, 15, 15, 0, 0, -1, 72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33, 0])` should return `"Hello, world!"`.
+`Subleq([15, 17, -1, 17, -1, -1, 16, 1, -1, 16, 3, -1, 15, 15, 0, 0, -1, 72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33, 0])` ควร return `"Hello, world!"`.
 
 ```js
 assert.equal(

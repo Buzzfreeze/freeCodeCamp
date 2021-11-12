@@ -10,13 +10,13 @@ dashedName: sorting-algorithmscomb-sort
 
 Implement a *comb sort*.
 
-The **Comb Sort** is a variant of the [Bubble Sort](<https://rosettacode.org/wiki/Bubble Sort>).
+**Comb Sort** เป็นตัวแปรของ [Bubble Sort](<https://rosettacode.org/wiki/Bubble Sort>).
 
-Like the [Shell sort](<https://rosettacode.org/wiki/Shell sort>), the Comb Sort increases the gap used in comparisons and exchanges.
+เช่นเดียวกับ [Shell sort](<https://rosettacode.org/wiki/Shell sort>) การจัดเรียงแบบหวีจะเพิ่มช่องว่างที่ใช้ในการเปรียบเทียบและการแลกเปลี่ยน
 
-Dividing the gap by $(1-e^{-\\varphi})^{-1} \\approx 1.247330950103979$ works best, but 1.3 may be more practical.
+การหารช่องว่างด้วย $(1-e^{-\\varphi})^{-1} \\ประมาณ 1.247330950103979$ ได้ผลดีที่สุด แต่ 1.3 อาจใช้งานได้จริงมากกว่า
 
-Some implementations use the insertion sort once the gap is less than a certain amount.
+การใช้งานบางอย่างใช้การเรียงลำดับการแทรกเมื่อช่องว่างน้อยกว่าจำนวนหนึ่ง
 
 **Also see**
 
@@ -58,42 +58,41 @@ Pseudocode:
 </pre>
 
 # --instructions--
-
-Write a function that sorts a given array using Comb sort.
+เขียนฟังก์ชันที่เรียงลำดับarrayที่กำหนดโดยใช้การเรียงลำดับแบบComb sort
 
 # --hints--
 
-`combSort` should be a function.
+`combSort` ควรเป็น function.
 
 ```js
 assert(typeof combSort == 'function');
 ```
 
-`combSort([25, 32, 12, 7, 20])` should return an array.
+`combSort([25, 32, 12, 7, 20])` ควร return array.
 
 ```js
 assert(Array.isArray(combSort([25, 32, 12, 7, 20])));
 ```
 
-`combSort([25, 32, 12, 7, 20])` should return `[7, 12, 20, 25, 32]`.
+`combSort([25, 32, 12, 7, 20])` ควร return `[7, 12, 20, 25, 32]`.
 
 ```js
 assert.deepEqual(combSort([25, 32, 12, 7, 20]), [7, 12, 20, 25, 32]);
 ```
 
-`combSort([38, 45, 35, 8, 13])` should return `[8, 13, 35, 38, 45]`.
+`combSort([38, 45, 35, 8, 13])` ควร return `[8, 13, 35, 38, 45]`.
 
 ```js
 assert.deepEqual(combSort([38, 45, 35, 8, 13]), [8, 13, 35, 38, 45]);
 ```
 
-`combSort([43, 36, 20, 34, 24])` should return `[20, 24, 34, 36, 43]`.
+`combSort([43, 36, 20, 34, 24])` ควร return `[20, 24, 34, 36, 43]`.
 
 ```js
 assert.deepEqual(combSort([43, 36, 20, 34, 24]), [20, 24, 34, 36, 43]);
 ```
 
-`combSort([12, 33, 26, 18, 1, 16, 38])` should return `[1, 12, 16, 18, 26, 33, 38]`.
+`combSort([12, 33, 26, 18, 1, 16, 38])` ควร return `[1, 12, 16, 18, 26, 33, 38]`.
 
 ```js
 assert.deepEqual(combSort([12, 33, 26, 18, 1, 16, 38]), [
@@ -107,7 +106,7 @@ assert.deepEqual(combSort([12, 33, 26, 18, 1, 16, 38]), [
 ]);
 ```
 
-`combSort([3, 39, 48, 16, 1, 4, 29])` should return `[1, 3, 4, 16, 29, 39, 48]`.
+`combSort([3, 39, 48, 16, 1, 4, 29])` ควร return `[1, 3, 4, 16, 29, 39, 48]`.
 
 ```js
 assert.deepEqual(combSort([3, 39, 48, 16, 1, 4, 29]), [

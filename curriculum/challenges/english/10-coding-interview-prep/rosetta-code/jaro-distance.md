@@ -8,28 +8,28 @@ dashedName: jaro-distance
 
 # --description--
 
-The Jaro distance is a measure of similarity between two strings. The higher the Jaro distance for two strings is, the more similar the strings are. The score is normalized such that `0` equates to no similarity and `1` is an exact match.
+Jaro distance เป็นการวัดความคล้ายคลึงกันระหว่างสองสตริง ยิ่งระยะ Jaro สูงสำหรับสองสาย แสดงว่าสายอักขระมีความคล้ายคลึงกันมากขึ้น คะแนนจะถูกทำให้เป็นมาตรฐานโดยที่ "0" เท่ากับไม่มีความคล้ายคลึงกันและ "1" คือการจับคู่แบบตรงทั้งหมด
 
 **Definition**
 
-The Jaro distance \\( d_j \\) of two given strings \\(s_1\\) and \\(s_2\\) is
+Jaro distance \\( d_j \\) ของสอง strings \\(s_1\\) แบะ \\(s_2\\) คือ
 
 \\begin{align}d_j = \\begin{cases}0& & \\text{if }m=0 \\\\\\\\{\\frac {1}{3}}\\left({\\frac {m}{|s\_{1}|}}+{\\frac {m}{|s\_{2}|}}+{\\frac {m-t}{m}}\\right)& & \\text{otherwise}\\end{cases}\\end{align}
 
-Where:
+โดยที่:
 
 <ul>
   <li>\(m\) is the number of <i>matching characters</i>;</li>
   <li> \(t\) is half the number of <i>transpositions</i>.</li>
 </ul>
 
-Two characters from \\(s_1\\) and \\(s_2\\) respectively, are considered *matching* only if they are the same and not farther than \\(\\left\\lfloor\\frac{\\max(|s_1|,|s_2|)}{2}\\right\\rfloor-1\\).
+อักขระสองตัวจาก \\(s_1\\) และ \\(s_2\\) ตามลำดับ จะถือว่าเป็น *matching* เฉพาะในกรณีที่เหมือนกันและไม่เกิน \\(\\left\\lfloor\\frac{\\ สูงสุด(|s_1|,|s_2|)}{2}\\right\\rfloor-1\\)
 
-Each character of \\(s_1\\) is compared with all its matching characters in \\(s_2\\) . The number of matching (but different sequence order) characters divided by 2 defines the number of *transpositions*.
+อักขระแต่ละตัวของ \\(s_1\\) จะถูกเปรียบเทียบกับอักขระที่ตรงกันทั้งหมดใน \\(s_2\\) จำนวนอักขระที่ตรงกัน (แต่เรียงลำดับต่างกัน) หารด้วย 2 กำหนดจำนวน*transpositions*.
 
 **Example**
 
-Given the strings \\(s_1\\) *DWAYNE* and \\(s_2\\) *DUANE* we find:
+กำหนด strings \\(s_1\\) *DWAYNE* และ \\(s_2\\) *DUANE* ให้หา:
 
 <ul>
   <li>\(m = 4\)</li>
@@ -38,51 +38,51 @@ Given the strings \\(s_1\\) *DWAYNE* and \\(s_2\\) *DUANE* we find:
   <li>\(t = 0\)</li>
 </ul>
 
-We find a Jaro score of: \\(d_j = \\frac{1}{3}\\left(\\frac{4}{6} + \\frac{4}{5} + \\frac{4-0}{4}\\right) = 0.822\\).
+หา Jaro score ของ: \\(d_j = \\frac{1}{3}\\left(\\frac{4}{6} + \\frac{4}{5} + \\frac{4-0}{4}\\right) = 0.822\\).
 
 # --instructions--
 
-Write a function a that takes two strings as parameters and returns the associated Jaro distance.
+เขียนฟังก์ชัน a ที่รับสองสตริงเป็นพารามิเตอร์และส่งกลับระยะทาง Jaro ที่เกี่ยวข้อง
 
 # --hints--
 
-`jaro` should be a function.
+`jaro` ควรเป็น function.
 
 ```js
 assert(typeof jaro == 'function');
 ```
 
-`jaro("MARTHA", "MARHTA")` should return a number.
+`jaro("MARTHA", "MARHTA")` ควร return number.
 
 ```js
 assert(typeof jaro('MARTHA', 'MARHTA') == 'number');
 ```
 
-`jaro("MARTHA", "MARHTA")` should return `0.9444444444444445`.
+`jaro("MARTHA", "MARHTA")` ควร return `0.9444444444444445`.
 
 ```js
 assert.equal(jaro('MARTHA', 'MARHTA'), 0.9444444444444445);
 ```
 
-`jaro("DIXON", "DICKSONX")` should return `0.7666666666666666`.
+`jaro("DIXON", "DICKSONX")` ควร return `0.7666666666666666`.
 
 ```js
 assert.equal(jaro('DIXON', 'DICKSONX'), 0.7666666666666666);
 ```
 
-`jaro("JELLYFISH", "SMELLYFISH")` should return `0.8962962962962964`.
+`jaro("JELLYFISH", "SMELLYFISH")` ควร return `0.8962962962962964`.
 
 ```js
 assert.equal(jaro('JELLYFISH', 'SMELLYFISH'), 0.8962962962962964);
 ```
 
-`jaro("HELLOS", "CHELLO")` should return `0.888888888888889`.
+`jaro("HELLOS", "CHELLO")` ควร return `0.888888888888889`.
 
 ```js
 assert.equal(jaro('HELLOS', 'CHELLO'), 0.888888888888889);
 ```
 
-`jaro("ABCD", "BCDA")` should return `0.8333333333333334`.
+`jaro("ABCD", "BCDA")` ควร return `0.8333333333333334`.
 
 ```js
 assert.equal(jaro('ABCD', 'BCDA'), 0.8333333333333334);

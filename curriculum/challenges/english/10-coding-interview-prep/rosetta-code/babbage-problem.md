@@ -8,30 +8,31 @@ dashedName: babbage-problem
 
 # --description--
 
-[Charles Babbage](https://en.wikipedia.org/wiki/Charles_Babbage "wp: Charles_Babbage"), looking ahead to the sorts of problems his Analytical Engine would be able to solve, gave this example:
+[Charles Babbage](https://en.wikipedia.org/wiki/Charles_Babbage "wp: Charles_Babbage"), 
+มองไปข้างหน้าถึงปัญหาต่างๆ ที่เครื่องมือวิเคราะห์ของเขาจะสามารถแก้ไขได้ โดยยกตัวอย่างดังนี้:
 
 <blockquote>
   What is the smallest positive integer whose square ends in the digits 269,696?
   <footer style='margin-left: 2em;'>Babbage, letter to Lord Bowden, 1837; see Hollingdale and Tootill, <i>Electronic Computers</i>, second edition, 1970, p. 125.</footer>
 </blockquote>
 
-He thought the answer might be 99,736, whose square is 9,947,269,696; but he couldn't be certain.
+เขาคิดว่าคำตอบอาจเป็น 99,736 ซึ่งกำลังสองคือ 9,947,269,696 แต่เขาไม่แน่ใจ
 
-The task is to find out if Babbage had the right answer.
+ภารกิจคือค้นหาว่า Babbage มีคำตอบที่ถูกต้องหรือไม่
 
 # --instructions--
 
-Implement a function to return the lowest integer that satisfies the Babbage problem. If Babbage was right, return Babbage's number.
+ใช้ฟังก์ชันเพื่อคืนค่าจำนวนเต็มที่ต่ำที่สุดที่ตรงกับปัญหาแบบ Babbage ถ้าแบบเบจพูดถูก คำตอบต้อง return ในรูปของ Babbage 
 
 # --hints--
 
-`babbage` should be a function.
+`babbage` ควรเป็น function.
 
 ```js
 assert(typeof babbage === 'function');
 ```
 
-`babbage(99736, 269696)` should not return 99736 (there is a smaller answer).
+`babbage(99736, 269696)` ไม่ควร return 99736 (มีคำตอบที่น้อยกว่า)
 
 ```js
 assert.equal(babbage(babbageAns, endDigits), answer);

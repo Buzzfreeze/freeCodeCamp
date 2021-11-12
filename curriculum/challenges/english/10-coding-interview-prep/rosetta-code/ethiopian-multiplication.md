@@ -8,7 +8,8 @@ dashedName: ethiopian-multiplication
 
 # --description--
 
-Ethiopian multiplication is a method of multiplying integers using only addition, doubling, and halving.
+Ethiopian multiplication 
+เป็นวิธีการคูณจำนวนเต็มโดยใช้การบวก การทวีคูณ และการลดครึ่งหนึ่งเท่านั้น
 
 **Method:**
 
@@ -25,7 +26,7 @@ Ethiopian multiplication is a method of multiplying integers using only addition
 <pre>17   34
 </pre>
 
-Halving the first column:
+มี column แรก:
 
 <pre>17   34
 8
@@ -34,7 +35,7 @@ Halving the first column:
 1
 </pre>
 
-Doubling the second column:
+column ที่สอง:
 
 <pre>17   34
 8    68
@@ -43,7 +44,7 @@ Doubling the second column:
 1   544
 </pre>
 
-Strike-out rows whose first cell is even:
+Strike-out rows ของ cell แรก:
 
 <pre>17   34
 8    <strike>68</strike>
@@ -52,7 +53,7 @@ Strike-out rows whose first cell is even:
 1   544
 </pre>
 
-Sum the remaining numbers in the right-hand column:
+รวมตัวเลขที่เหลือในคอลัมน์ขวามือ:
 
 <!-- markdownlint-disable MD003 -->
 
@@ -67,11 +68,11 @@ Sum the remaining numbers in the right-hand column:
 
 <!-- markdownlint-enable MD003 -->
 
-So `17` multiplied by `34`, by the Ethiopian method is `578`.
+ดังนั้น `17` คูณโดย `34` โดย Ethiopian method จะเป็น `578`.
 
 # --instructions--
 
-The task is to define three named functions/methods/procedures/subroutines:
+กำหนดสามชื่อ functions/methods/procedures/subroutines:
 
 <ol>
   <li>one to halve an integer,</li>
@@ -79,43 +80,43 @@ The task is to define three named functions/methods/procedures/subroutines:
   <li>one to state if an integer is even</li>
 </ol>
 
-Use these functions to create a function that does Ethiopian multiplication.
+ใช้ฟังก์ชันเหล่านี้เพื่อสร้างฟังก์ชันที่ทำการคูณแบบ Ethiopian multiplication.
 
 <!-- markdownlint-disable MD046-->
 
 # --hints--
 
-`eth_mult` should be a function.
+`eth_mult` ควรเป็น function.
 
 ```js
 assert(typeof eth_mult === 'function');
 ```
 
-`eth_mult(17,34)` should return `578`.
+`eth_mult(17,34)` ควร return `578`.
 
 ```js
 assert.equal(eth_mult(17, 34), 578);
 ```
 
-`eth_mult(23,46)` should return `1058`.
+`eth_mult(23,46)` ควร return `1058`.
 
 ```js
 assert.equal(eth_mult(23, 46), 1058);
 ```
 
-`eth_mult(12,27)` should return `324`.
+`eth_mult(12,27)` ควร return `324`.
 
 ```js
 assert.equal(eth_mult(12, 27), 324);
 ```
 
-`eth_mult(56,98)` should return `5488`.
+`eth_mult(56,98)` ควร return `5488`.
 
 ```js
 assert.equal(eth_mult(56, 98), 5488);
 ```
 
-`eth_mult(63,74)` should return `4662`.
+`eth_mult(63,74)` ควร return `4662`.
 
 ```js
 assert.equal(eth_mult(63, 74), 4662);

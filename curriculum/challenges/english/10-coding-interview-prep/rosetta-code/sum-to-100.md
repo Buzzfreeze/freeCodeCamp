@@ -8,33 +8,33 @@ dashedName: sum-to-100
 
 # --description--
 
-Find solutions to the *sum to one hundred* puzzle.
+หาคำตอบของ *sum to one hundred* puzzle.
 
-Add (insert) the mathematical operators **+** or **─** (plus or minus) before any of the digits in the decimal numeric string **123456789** such that the resulting mathematical expression adds up to a particular sum (in this iconic case, **100**).
+เพิ่ม (แทรก) ตัวดำเนินการทางคณิตศาสตร์ **+** หรือ **─** (บวกหรือลบ) ก่อนตัวเลขใดๆ ในสตริงตัวเลขทศนิยม **123456789** เพื่อให้นิพจน์ทางคณิตศาสตร์ที่เป็นผลลัพธ์รวมกันเป็นจำนวนเฉพาะ (ในกรณีนี้คือ **100**)
 
-Example:
+เช่น
 
 <pre><b>123 + 4 - 5 + 67 - 89   =   100</b></pre>
 
 # --instructions--
 
-Write a function that takes a number as parameter. The function should return an array containing all solutions for the given number. The solutions should be strings representing the expressions. For example: "1+23-456+78-9". Sort the array before returning it.
+เขียนฟังก์ชันที่ใช้ตัวเลขเป็นพารามิเตอร์ ฟังก์ชันควรส่งคืนarrayที่มีคำตอบทั้งหมดสำหรับหมายเลขที่ระบุ การแก้ปัญหาควรเป็นสตริงที่แสดงนิพจน์ ตัวอย่างเช่น: "1+23-456+78-9" จัดเรียงarrayก่อนส่งคืน
 
 # --hints--
 
-`sumTo100` should be a function.
+`sumTo100` ควรเป็น function.
 
 ```js
 assert(typeof sumTo100 == 'function');
 ```
 
-`sumTo100(199)` should return an array.
+`sumTo100(199)` ควร return array.
 
 ```js
 assert(Array.isArray(sumTo100(199)));
 ```
 
-`sumTo100(199)` should return `["-1+2-3+45+67+89", "123-4+5+6+78-9", "123-4+56+7+8+9"]`.
+`sumTo100(199)` ควร return `["-1+2-3+45+67+89", "123-4+5+6+78-9", "123-4+56+7+8+9"]`.
 
 ```js
 assert.deepEqual(sumTo100(199), [
@@ -44,13 +44,13 @@ assert.deepEqual(sumTo100(199), [
 ]);
 ```
 
-`sumTo100(209)` should return `["1+234+56+7-89"]`.
+`sumTo100(209)` ควร return `["1+234+56+7-89"]`.
 
 ```js
 assert.deepEqual(sumTo100(209), ['1+234+56+7-89']);
 ```
 
-`sumTo100(243)` should return `["-1-234+567-89", "-12+345+6-7-89", "123+45+6+78-9"]`.
+`sumTo100(243)` ควร return `["-1-234+567-89", "-12+345+6-7-89", "123+45+6+78-9"]`.
 
 ```js
 assert.deepEqual(sumTo100(243), [
@@ -60,7 +60,7 @@ assert.deepEqual(sumTo100(243), [
 ]);
 ```
 
-`sumTo100(197)` should return `["1-2-3+45+67+89", "12+34-5+67+89", "123+4-5+6+78-9"]`.
+`sumTo100(197)` ควร return `["1-2-3+45+67+89", "12+34-5+67+89", "123+4-5+6+78-9"]`.
 
 ```js
 assert.deepEqual(sumTo100(197), [

@@ -8,11 +8,11 @@ dashedName: self-describing-numbers
 
 # --description--
 
-There are several so-called "self describing" or ["self-descriptive"](https://en.wikipedia.org/wiki/Self-descriptive_number) integers.
+ "self describing" หรือ ["self-descriptive"](https://en.wikipedia.org/wiki/Self-descriptive_number) integers
 
-An integer is said to be "self-describing" if it has the property that, when digit positions are labeled 0 to N-1, the digit in each position is equal to the number of times that digit appears in the number.
+จำนวนเต็มเรียกว่า "self describing" หากมีคุณสมบัติที่เมื่อตำแหน่งหลักเป็น 0 ถึง N-1 ตัวเลขในแต่ละตำแหน่งจะเท่ากับจำนวนครั้งที่ตัวเลขนั้นปรากฏในตัวเลข
 
-For example, **2020** is a four-digit self describing number:
+เช่น **2020** มี 4-digit self describing number:
 
 <ul>
     <li> position 0 has value 2 and there are two 0s in the number; </li>
@@ -21,39 +21,39 @@ For example, **2020** is a four-digit self describing number:
     <li> position 3 has value 0 and there are zero 3s; </li>
 </ul>
 
-Self-describing numbers &lt; 100,000,000 are: 1210, 2020, 21200, 3211000, 42101000.
+Self-describing numbers &lt; 100,000,000 มี: 1210, 2020, 21200, 3211000, 42101000.
 
 # --instructions--
 
-Write a function that takes a positive integer as a parameter. If it is self-describing return true. Otherwise, return false.
+เขียนฟังก์ชันที่ใช้จำนวนเต็มบวกเป็นพารามิเตอร์ หากเป็น"self describing" ให้ return true ถ้าไม่ใช่ให้ return false
 
 # --hints--
 
-`isSelfDescribing` should be a function.
+`isSelfDescribing` ควรเป็น function.
 
 ```js
 assert(typeof isSelfDescribing == 'function');
 ```
 
-`isSelfDescribing()` should return a boolean.
+`isSelfDescribing()` ควร return boolean.
 
 ```js
 assert(typeof isSelfDescribing(2020) == 'boolean');
 ```
 
-`isSelfDescribing(2020)` should return `true`.
+`isSelfDescribing(2020)` ควร return `true`.
 
 ```js
 assert.equal(isSelfDescribing(2020), true);
 ```
 
-`isSelfDescribing(3021)` should return `false`.
+`isSelfDescribing(3021)` ควร return `false`.
 
 ```js
 assert.equal(isSelfDescribing(3021), false);
 ```
 
-`isSelfDescribing(3211000)` should return `true`.
+`isSelfDescribing(3211000)` ควร return `true`.
 
 ```js
 assert.equal(isSelfDescribing(3211000), true);

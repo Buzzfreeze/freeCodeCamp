@@ -8,15 +8,15 @@ dashedName: accumulator-factory
 
 # --description--
 
-A problem posed by [Paul Graham](https://en.wikipedia.org/wiki/Paul_Graham_(programmer)) is that of creating a function that takes a single (numeric) argument and which returns another function that is an accumulator. The returned accumulator function in turn also takes a single numeric argument, and returns the sum of all the numeric values passed in so far to that accumulator (including the initial value passed when the accumulator was created).
+ปัญหาจาก [Paul Graham](https://en.wikipedia.org/wiki/Paul_Graham_(programmer)) คือการสร้างฟังก์ชันที่รับargument (ตัวเลข) เดียวและส่งคืนฟังก์ชันอื่นที่เป็นตัวสะสม ในทางกลับกัน ฟังก์ชันตัวสะสมที่ส่งคืนก็รับargumentตัวเลขเพียงตัวเดียว และส่งกลับผลรวมของค่าตัวเลขทั้งหมดที่ส่งผ่านไปยังตัวสะสมนั้นจนถึงตอนนี้ (รวมถึงค่าเริ่มต้นที่ส่งผ่านเมื่อสร้างตัวสะสม)
 
 # --instructions--
 
-Create a function that takes a number $n$ and generates accumulator functions that return the sum of every number ever passed to them.
+สร้างฟังก์ชันที่ใช้ตัวเลข $n$ และสร้างฟังก์ชันตัวสะสมที่ส่งคืนผลรวมของทุกหมายเลขที่เคยส่งไปให้
 
 **Rules:**
 
-Do not use global variables.
+อย่าใช้ global variables.
 
 **Hint:**
 
@@ -24,25 +24,25 @@ Closures save outer state.
 
 # --hints--
 
-`accumulator` should be a function.
+`accumulator` ควรเป็น function.
 
 ```js
 assert(typeof accumulator === 'function');
 ```
 
-`accumulator(0)` should return a function.
+`accumulator(0)` ควร return function.
 
 ```js
 assert(typeof accumulator(0) === 'function');
 ```
 
-`accumulator(0)(2)` should return a number.
+`accumulator(0)(2)` ควร return number.
 
 ```js
 assert(typeof accumulator(0)(2) === 'number');
 ```
 
-Passing in the values 3, -4, 1.5, and 5 should return 5.5.
+Passing in the values 3, -4, 1.5, and 5 ควร return 5.5.
 
 ```js
 assert(testFn(5) === 5.5);

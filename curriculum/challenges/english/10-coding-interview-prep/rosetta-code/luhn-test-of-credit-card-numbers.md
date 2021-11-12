@@ -8,9 +8,9 @@ dashedName: luhn-test-of-credit-card-numbers
 
 # --description--
 
-The [Luhn test](<https://en.wikipedia.org/wiki/Luhn algorithm>) is used by some credit card companies to distinguish valid credit card numbers from what could be a random selection of digits.
+[Luhn test](<https://en.wikipedia.org/wiki/Luhn algorithm>) บริษัทบัตรเครดิตบางแห่งใช้เพื่อแยกหมายเลขบัตรเครดิตที่ถูกต้องออกจากตัวเลขที่สุ่มเลือกได้
 
-Those companies using credit card numbers that can be validated by the Luhn test have numbers that pass the following test:
+บริษัทเหล่านั้นที่ใช้หมายเลขบัตรเครดิตที่ผ่านการทดสอบของ Luhn ได้จะมีหมายเลขที่ผ่านการทดสอบดังต่อไปนี้:
 
 <ol>
   <li> Reverse the order of the digits in the number.</li>
@@ -23,7 +23,7 @@ Those companies using credit card numbers that can be validated by the Luhn test
   <li>If s1 + s2 ends in zero then the original number is in the form of a valid credit card number as verified by the Luhn test.</li>
 </ol>
 
-For example, if the trial number is 49927398716:
+ตัวอย่างเช่น ถ้าหมายเลขทดลองคือ 49927398716:
 
 ```bash
 Reverse the digits:
@@ -44,53 +44,53 @@ s1 + s2 = 70 which ends in zero which means that 49927398716 passes the Luhn tes
 
 # --instructions--
 
-Write a function that will validate a number with the Luhn test. Return true if it's a valid number. Otherwise, return false.
+เขียนฟังก์ชันที่จะตรวจสอบตัวเลขด้วยการทดสอบ Luhn return true หากเป็นตัวเลขที่ถูกต้อง มิฉะนั้นให้return false
 
 # --hints--
 
-`luhnTest` should be a function.
+`luhnTest` ควรเป็น function.
 
 ```js
 assert(typeof luhnTest === 'function');
 ```
 
-`luhnTest("4111111111111111")` should return a boolean.
+`luhnTest("4111111111111111")` ควร return boolean.
 
 ```js
 assert(typeof luhnTest('4111111111111111') === 'boolean');
 ```
 
-`luhnTest("4111111111111111")` should return `true`.
+`luhnTest("4111111111111111")` ควร return `true`.
 
 ```js
 assert.equal(luhnTest('4111111111111111'), true);
 ```
 
-`luhnTest("4111111111111112")` should return `false`.
+`luhnTest("4111111111111112")` ควร return `false`.
 
 ```js
 assert.equal(luhnTest('4111111111111112'), false);
 ```
 
-`luhnTest("49927398716")` should return `true`.
+`luhnTest("49927398716")` ควร return `true`.
 
 ```js
 assert.equal(luhnTest('49927398716'), true);
 ```
 
-`luhnTest("49927398717")` should return `false`.
+`luhnTest("49927398717")` ควร return `false`.
 
 ```js
 assert.equal(luhnTest('49927398717'), false);
 ```
 
-`luhnTest("1234567812345678")` should return `false`.
+`luhnTest("1234567812345678")` ควร return `false`.
 
 ```js
 assert.equal(luhnTest('1234567812345678'), false);
 ```
 
-`luhnTest("1234567812345670")` should return `true`.
+`luhnTest("1234567812345670")` ควร return `true`.
 
 ```js
 assert.equal(luhnTest('1234567812345670'), true);

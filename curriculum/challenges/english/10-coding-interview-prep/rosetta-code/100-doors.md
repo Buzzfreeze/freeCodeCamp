@@ -8,27 +8,27 @@ dashedName: 100-doors
 
 # --description--
 
-There are 100 doors in a row that are all initially closed. You make 100 passes by the doors. The first time through, visit every door and 'toggle' the door (if the door is closed, open it; if it is open, close it). The second time, only visit every 2nd door (i.e., door #2, #4, #6, ...) and toggle it. The third time, visit every 3rd door (i.e., door #3, #6, #9, ...), etc., until you only visit the 100th door.
+มีประตูติดกัน 100 บานที่ปิดทั้งหมดตั้งแต่แรก คุณผ่าน 100 ประตู ในครั้งแรกที่ผ่าน ให้ไปที่ประตูทุกบานแล้ว 'สลับ' ประตู (หากประตูปิดอยู่ ให้เปิด ถ้าเปิดอยู่ ให้ปิด) ครั้งที่สอง เยี่ยมชมทุกประตูที่ 2 (เช่น ประตู #2, #4, #6, ...) และสลับ ครั้งที่สาม เยี่ยมชมประตูที่ 3 ทุก ๆ ประตู (เช่น ประตู #3, #6, #9, ...) ฯลฯ จนกว่าคุณจะเยี่ยมชมประตูที่ 100 เท่านั้น
 
 # --instructions--
 
-Implement a function to determine the state of the doors after the last pass. Return the final result in an array, with only the door number included in the array if it is open.
+ใช้งานฟังก์ชันเพื่อกำหนดสถานะของประตูหลังจากผ่านครั้งสุดท้าย ส่งกลับผลลัพธ์สุดท้ายในarray โดยจะมีเฉพาะหมายเลขประตูที่รวมอยู่ในarrayหากเปิดอยู่
 
 # --hints--
 
-`getFinalOpenedDoors` should be a function.
+`getFinalOpenedDoors` ควรเป็น function.
 
 ```js
 assert(typeof getFinalOpenedDoors === 'function');
 ```
 
-`getFinalOpenedDoors` should return an array.
+`getFinalOpenedDoors` ควร return array.
 
 ```js
 assert(Array.isArray(getFinalOpenedDoors(100)));
 ```
 
-`getFinalOpenedDoors` should produce the correct result.
+`getFinalOpenedDoors` ควรให้ผลลัพธ์ที่ถูกต้อง
 
 ```js
 assert.deepEqual(getFinalOpenedDoors(100), solution);

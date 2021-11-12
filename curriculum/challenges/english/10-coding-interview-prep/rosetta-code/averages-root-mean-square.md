@@ -8,23 +8,22 @@ dashedName: averagesroot-mean-square
 
 # --description--
 
-Compute the [Root mean square](<https://en.wikipedia.org/wiki/Root mean square> "wp: Root mean square") of the numbers 1 through 10 inclusive.
+หาค่า [Root mean square](<https://en.wikipedia.org/wiki/Root mean square> "wp: Root mean square") ของตัวเลข 1 ถึง 10
 
-The *root mean square* is also known by its initials RMS (or rms), and as the **quadratic mean**.
-
-The RMS is calculated as the mean of the squares of the numbers, square-rooted:
+The *root mean square* เป็นที่รู้จักกันโดยชื่อย่อ RMS (หรือ rms) และในชื่อ **quadratic mean**.
+RMS คำนวณจากค่าเฉลี่ยของกำลังสองของตัวเลข รากที่สอง:
 
 $$x\_{\\mathrm{rms}} = \\sqrt {{{x_1}^2 + {x_2}^2 + \\cdots + {x_n}^2} \\over n}. $$
 
 # --hints--
 
-`rms` should be a function.
+`rms` ควรเป็น function.
 
 ```js
 assert(typeof rms === 'function');
 ```
 
-`rms([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])` should equal `6.2048368229954285`.
+`rms([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])` ควร equal `6.2048368229954285`.
 
 ```js
 assert.equal(rms(arr1), answer1);

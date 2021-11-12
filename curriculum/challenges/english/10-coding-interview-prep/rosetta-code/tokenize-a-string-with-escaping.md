@@ -8,9 +8,9 @@ dashedName: tokenize-a-string-with-escaping
 
 # --description--
 
-Write a function or program that can split a string at each non-escaped occurrence of a separator character.
+เขียนฟังก์ชันหรือโปรแกรมที่สามารถแยกสตริงที่อักขระตัวคั่นแต่ละตัวที่ไม่มีการ Escape เกิดขึ้น
 
-It should accept three input parameters:
+ควรยอมรับพารามิเตอร์inputสามตัว:
 
 <ul>
   <li>The <strong>string</strong></li>
@@ -18,55 +18,55 @@ It should accept three input parameters:
   <li>The <strong>escape character</strong></li>
 </ul>
 
-It should output a list of strings.
+ควรแสดงรายการstring
 
-Rules for splitting:
+กฎสำหรับการแยก:
 
 <ul>
   <li>The fields that were separated by the separators, become the elements of the output list.</li>
-  <li>Empty fields should be preserved, even at the start and end.</li>
+  <li>Empty fields ควร be preserved, even at the start and end.</li>
 </ul>
 
-Rules for escaping:
+กฎสำหรับการแยก:
 
 <ul>
   <li>"Escaped" means preceded by an occurrence of the escape character that is not already escaped itself.</li>
   <li>When the escape character precedes a character that has no special meaning, it still counts as an escape (but does not do anything special).</li>
-  <li>Each occurrences of the escape character that was used to escape something, should not become part of the output.</li>
+  <li>Each occurrences of the escape character that was used to escape something, ควร not become part of the output.</li>
 </ul>
 
-Demonstrate that your function satisfies the following test-case:
+แสดงให้เห็นว่าฟังก์ชันของคุณตรงตามกรณีทดสอบต่อไปนี้:
 
-Given the string
+รับสตริง
 
 <pre>one^|uno||three^^^^|four^^^|^cuatro|</pre>
 
-and using `|` as a separator and `^` as escape character, your function should output the following array:
+and using `|` as a separator and `^` as escape character, your function ควร output the following array:
 
 <pre>  ['one|uno', '', 'three^^', 'four^|cuatro', '']
 </pre>
 
 # --hints--
 
-`tokenize` should be a function.
+`tokenize` ควรเป็น function.
 
 ```js
 assert(typeof tokenize === 'function');
 ```
 
-`tokenize` should return an array.
+`tokenize` ควร return array.
 
 ```js
 assert(typeof tokenize('a', 'b', 'c') === 'object');
 ```
 
-`tokenize('one^|uno||three^^^^|four^^^|^cuatro|', '|', '^')` should return `['one|uno', '', 'three^^', 'four^|cuatro', '']`
+`tokenize('one^|uno||three^^^^|four^^^|^cuatro|', '|', '^')` ควร return `['one|uno', '', 'three^^', 'four^|cuatro', '']`
 
 ```js
 assert.deepEqual(tokenize(testStr1, '|', '^'), res1);
 ```
 
-`tokenize('a@&bcd&ef&&@@hi', '&', '@')` should return `['a&bcd', 'ef', '', '@hi']`
+`tokenize('a@&bcd&ef&&@@hi', '&', '@')` ควร return `['a&bcd', 'ef', '', '@hi']`
 
 ```js
 assert.deepEqual(tokenize(testStr2, '&', '@'), res2);

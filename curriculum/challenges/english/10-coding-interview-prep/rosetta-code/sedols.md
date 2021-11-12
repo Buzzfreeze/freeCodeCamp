@@ -8,7 +8,7 @@ dashedName: sedols
 
 # --description--
 
-For each number list of 6-digit [SEDOL](https://en.wikipedia.org/wiki/SEDOL "wp: SEDOL")s, calculate and append the checksum digit. That is, given the input string on the left, your function should return the corresponding string on the right:
+สำหรับรายการตัวเลข 6 หลัก [SEDOL](https://en.wikipedia.org/wiki/SEDOL "wp: SEDOL")s 6 หลัก ให้คำนวณและต่อท้ายsum check นั่นคือ กำหนดstring inputทางด้านซ้าย ฟังก์ชันของคุณควรส่งคืนstring ที่เกี่ยวข้องทางด้านขวา:
 
 <pre>
 710889 => 7108899
@@ -24,35 +24,36 @@ B0YBKT => B0YBKT7
 B00030 => B000300
 </pre>
 
-Check that each input is correctly formed, especially with respect to valid characters allowed in a SEDOL string. Your function should return `null` on an invalid input.
+Check แต่ละ input อยู่ใน form ที่ถูกต้อง 
+โดยเฉพาะในส่วนที่เกี่ยวกับอักขระที่ถูกต้องที่อนุญาตใน string SEDOL ฟังก์ชันของคุณควรส่งคืน `null` ใน input ที่ไม่ถูกต้อง
 
 # --hints--
 
-`sedol` should be a function.
+`sedol` ควรเป็น function.
 
 ```js
 assert(typeof sedol === 'function');
 ```
 
-`sedol('a')` should return null.
+`sedol('a')` ควร return null.
 
 ```js
 assert(sedol('a') === null);
 ```
 
-`sedol('710889')` should return '7108899'.
+`sedol('710889')` ควร return '7108899'.
 
 ```js
 assert(sedol('710889') === '7108899');
 ```
 
-`sedol('BOATER')` should return null.
+`sedol('BOATER')` ควร return null.
 
 ```js
 assert(sedol('BOATER') === null);
 ```
 
-`sedol('228276')` should return '2282765'.
+`sedol('228276')` ควร return '2282765'.
 
 ```js
 assert(sedol('228276') === '2282765');

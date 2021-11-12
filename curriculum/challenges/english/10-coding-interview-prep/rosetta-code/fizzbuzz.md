@@ -8,7 +8,7 @@ dashedName: fizzbuzz
 
 # --description--
 
-Write a program that generates an array of integers from 1 to 100 (inclusive). But:
+เขียนโปรแกรมที่สร้างอาร์เรย์ของจำนวนเต็มตั้งแต่ 1 ถึง 100 (รวม) แต่:
 
 <ul>
     <li>for multiples of 3, add <code>"Fizz"</code> to the array instead of the number</li>
@@ -18,41 +18,41 @@ Write a program that generates an array of integers from 1 to 100 (inclusive). B
 
 # --instructions--
 
-Your program should return an array containing the results based on the rules above.
+โปรแกรมของคุณควรส่งคืนอาร์เรย์ที่มีผลลัพธ์ตามกฎข้างต้น
 
 # --hints--
 
-`fizzBuzz` should be a function.
+`fizzBuzz` ควรเป็น function.
 
 ```js
 assert(typeof fizzBuzz == 'function');
 ```
 
-`fizzBuzz()` should return an Array.
+`fizzBuzz()` ควร return  Array.
 
 ```js
 assert(Array.isArray(fizzBuzz()) == true);
 ```
 
-Numbers divisible by only 3 should return `"Fizz"`.
+ตัวเลขหารด้วย 3 ควร return `"Fizz"`.
 
 ```js
 assert.equal(fizzBuzz()[2], 'Fizz');
 ```
 
-Numbers divisible by only 5 should return `"Buzz"`.
+ตัวเลขหารด้วย 5 ควร return `"Buzz"`.
 
 ```js
 assert.equal(fizzBuzz()[99], 'Buzz');
 ```
 
-Numbers divisible by both 3 and 5 should return `"FizzBuzz"`.
+ตัวเลขหารด้วย 3 และ 5 ควร return `"FizzBuzz"`.
 
 ```js
 assert.equal(fizzBuzz()[89], 'FizzBuzz');
 ```
 
-Numbers not divisible by either 3 or 5 should return the number itself.
+ตัวเลขที่หารด้วย 3 หรือ 5 ไม่ลงตัว จะ return จำนวนนั้นเอง
 
 ```js
 assert.equal(fizzBuzz()[12], 13);

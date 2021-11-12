@@ -8,41 +8,40 @@ dashedName: towers-of-hanoi
 
 # --description--
 
-Solve the [Towers of Hanoi](https://en.wikipedia.org/wiki/Towers_of_Hanoi "wp: Towers_of_Hanoi") problem.
+แก้ปัญหา [Towers of Hanoi](https://en.wikipedia.org/wiki/Towers_of_Hanoi "wp: Towers_of_Hanoi").
 
-Your solution should accept the number of discs as the first parameters, and three string used to identify each of the three stacks of discs, for example `towerOfHanoi(4, 'A', 'B', 'C')`. The function should return an array of arrays containing the list of moves, source -> destination.
+คำตอบของคุณควรยอมรับจำนวนดิสก์เป็นพารามิเตอร์แรก และสตริงสามสตริงที่ใช้ระบุstacks of discsสามชุด `towerOfHanoi(4, 'A', 'B', 'C')`. ฟังก์ชันควรส่งคืนอาร์เรย์ของอาร์เรย์ที่มีรายการย้าย แหล่งที่มา -> ปลายทาง
 
-For example, the array `[['A', 'C'], ['B', 'A']]` indicates that the 1st move was to move a disc from stack A to C, and the 2nd move was to move a disc from stack B to A.
-
+เช่น array `[['A', 'C'], ['B', 'A']]` ระบุว่าการย้ายครั้งแรกคือการย้ายแผ่นดิสก์จากกอง A ไปยัง C และการย้ายครั้งที่ 2 คือการย้ายแผ่นดิสก์จากกอง B ไปยัง A
 <p></p>
 
 # --hints--
 
-`towerOfHanoi` should be a function.
+`towerOfHanoi` ควรเป็น function.
 
 ```js
 assert(typeof towerOfHanoi === 'function');
 ```
 
-`towerOfHanoi(3, ...)` should return 7 moves.
+`towerOfHanoi(3, ...)` ควร return ว่าย้าย 7 ครั้ง.
 
 ```js
 assert(res3.length === 7);
 ```
 
-`towerOfHanoi(3, 'A', 'B', 'C')` should return `[['A','B'], ['A','C'], ['B','C'], ['A','B'], ['C','A'], ['C','B'], ['A','B']]`.
+`towerOfHanoi(3, 'A', 'B', 'C')` ควร return `[['A','B'], ['A','C'], ['B','C'], ['A','B'], ['C','A'], ['C','B'], ['A','B']]`.
 
 ```js
 assert.deepEqual(towerOfHanoi(3, 'A', 'B', 'C'), res3Moves);
 ```
 
-`towerOfHanoi(5, "X", "Y", "Z")` 10th move should be Y -> X.
+`towerOfHanoi(5, "X", "Y", "Z")` ย้ายครั้งที่สิบควรเป็น Y -> X.
 
 ```js
 assert.deepEqual(res5[9], ['Y', 'X']);
 ```
 
-`towerOfHanoi(7, 'A', 'B', 'C')` first ten moves should be `[['A','B'], ['A','C'], ['B','C'], ['A','B'], ['C','A'], ['C','B'], ['A','B'], ['A','C'], ['B','C'], ['B','A']]`
+`towerOfHanoi(7, 'A', 'B', 'C')` ย้ายสิบครั้งแรกควรเป็น `[['A','B'], ['A','C'], ['B','C'], ['A','B'], ['C','A'], ['C','B'], ['A','B'], ['A','C'], ['B','C'], ['B','A']]`
 
 ```js
 assert.deepEqual(towerOfHanoi(7, 'A', 'B', 'C').slice(0, 10), res7First10Moves);

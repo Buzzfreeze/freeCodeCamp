@@ -8,27 +8,27 @@ dashedName: averagesmode
 
 # --description--
 
-Write a program to find the [mode](<https://en.wikipedia.org/wiki/Mode (statistics)> "wp: Mode (statistics)") value of a collection.
+เขียนโปรแกรมหา [mode](<https://en.wikipedia.org/wiki/Mode (statistics)> "wp: Mode (statistics)") ค่าของ collection.
 
-The case where the collection is empty may be ignored. Care must be taken to handle the case where the mode is non-unique.
+กรณีที่collectionว่างเปล่าอาจถูกละเว้น ต้องใช้ความระมัดระวังในการจัดการกรณีที่โหมดไม่ซ้ำกัน
 
-If it is not appropriate or possible to support a general collection, use a vector (array), if possible. If it is not appropriate or possible to support an unspecified value type, use integers.
+หากไม่เหมาะสมหรือเป็นไปไม่ได้ที่จะสนับสนุนcollectionทั่วไป ให้ใช้เวกเตอร์ (array) ถ้าเป็นไปได้ หากไม่เหมาะสมหรือเป็นไปไม่ได้ที่จะสนับสนุนประเภทค่าที่ไม่ระบุ ให้ใช้จำนวนเต็ม
 
 # --hints--
 
-`mode` should be a function.
+`mode` ควรเป็น function.
 
 ```js
 assert(typeof mode === 'function');
 ```
 
-`mode([1, 3, 6, 6, 6, 6, 7, 7, 12, 12, 17])` should equal `[6]`
+`mode([1, 3, 6, 6, 6, 6, 7, 7, 12, 12, 17])` ควรเท่ากับ `[6]`
 
 ```js
 assert.deepEqual(mode(arr1), [6]);
 ```
 
-`mode([1, 2, 4, 4, 1])` should equal `[1, 4]`.
+`mode([1, 2, 4, 4, 1])` ควรเท่ากับ `[1, 4]`.
 
 ```js
 assert.deepEqual(mode(arr2).sort(), [1, 4]);

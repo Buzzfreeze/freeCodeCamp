@@ -8,15 +8,15 @@ dashedName: taxicab-numbers
 
 # --description--
 
-A [taxicab number](<https://en.wikipedia.org/wiki/Hardy–Ramanujan number> "wp: Hardy–Ramanujan number") (the definition that is being used here) is a positive integer that can be expressed as the sum of two positive cubes in more than one way.
+[taxicab number](<https://en.wikipedia.org/wiki/Hardy–Ramanujan number> "wp: Hardy–Ramanujan number") (the definition that is being used here) เป็นจำนวนเต็มบวกที่สามารถแสดงเป็นผลรวมของลูกบาศก์บวกสองก้อนได้มากกว่าหนึ่งวิธี
 
-The first taxicab number is `1729`, which is:
+วิธีแรห taxicab number คือ `1729` ดังเช่น:
 
 1<sup>3</sup> + 12<sup>3</sup> and
 
 9<sup>3</sup> + 10<sup>3</sup>.
 
-Taxicab numbers are also known as:
+Taxicab numbers จะอยู่ในรูปแบบ:
 
 <ul>
   <li>taxi numbers</li>
@@ -27,7 +27,7 @@ Taxicab numbers are also known as:
 
 # --instructions--
 
-Write a function that returns the lowest `n` taxicab numbers. For each of the taxicab numbers, show the number as well as its constituent cubes.
+เขียนฟังก์ชันที่ส่งคืนหมายเลขรถแท็กซี่ `n` ต่ำสุด สำหรับหมายเลขรถแท็กซี่แต่ละหมายเลข ให้แสดงหมายเลขและลูกบาศก์ที่เป็นส่วนประกอบ
 
 **See also:**
 
@@ -38,37 +38,37 @@ Write a function that returns the lowest `n` taxicab numbers. For each of the ta
 
 # --hints--
 
-`taxicabNumbers` should be a function.
+`taxicabNumbers` ควรเป็น function.
 
 ```js
 assert(typeof taxicabNumbers === 'function');
 ```
 
-`taxicabNumbers` should return an array.
+`taxicabNumbers` ควร return array.
 
 ```js
 assert(typeof taxicabNumbers(2) === 'object');
 ```
 
-`taxicabNumbers` should return an array of numbers.
+`taxicabNumbers` ควร return array ของ numbers.
 
 ```js
 assert(typeof taxicabNumbers(100)[0] === 'number');
 ```
 
-`taxicabNumbers(4)` should return [1729, 4104, 13832, 20683].
+`taxicabNumbers(4)` ควร return [1729, 4104, 13832, 20683].
 
 ```js
 assert.deepEqual(taxicabNumbers(4), res4);
 ```
 
-`taxicabNumbers(25)` should return [1729, 4104, 13832, 20683, 32832, 39312, 40033, 46683, 64232, 65728, 110656, 110808, 134379, 149389, 165464, 171288, 195841, 216027, 216125, 262656, 314496, 320264, 327763, 373464, 402597]
+`taxicabNumbers(25)` ควร return [1729, 4104, 13832, 20683, 32832, 39312, 40033, 46683, 64232, 65728, 110656, 110808, 134379, 149389, 165464, 171288, 195841, 216027, 216125, 262656, 314496, 320264, 327763, 373464, 402597]
 
 ```js
 assert.deepEqual(taxicabNumbers(25), res25);
 ```
 
-`taxicabNumbers(39)` resulting numbers from 20 - 29 should be [314496,320264,327763,373464,402597,439101,443889,513000,513856].
+`taxicabNumbers(39)` resulting numbers from 20 - 29 ควร be [314496,320264,327763,373464,402597,439101,443889,513000,513856].
 
 ```js
 assert.deepEqual(taxicabNumbers(39).slice(20, 29), res39From20To29);

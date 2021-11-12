@@ -8,21 +8,21 @@ dashedName: symmetric-difference
 
 # --description--
 
-Given two [set](https://rosettacode.org/wiki/set)s *A* and *B*, compute $(A \\setminus B) \\cup (B \\setminus A).$ That is, enumerate the items that are in *A* or *B* but not both. This set is called the [symmetric difference](<https://en.wikipedia.org/wiki/Symmetric difference>) of *A* and *B*. In other words: $(A \\cup B) \\setminus (A \\cap B)$ (the set of items that are in at least one of *A* or *B* minus the set of items that are in both *A* and *B*).
+กำหนดสอง [set](https://rosettacode.org/wiki/set)s *A* และ *B*, เพื่อคำนวน $(A \\setminus B) \\cup (B \\setminus A).$ กล่าวคือ ระบุรายการที่อยู่ใน *A* หรือ *B*  เรียกว่า [symmetric difference](<https://en.wikipedia.org/wiki/Symmetric difference>) ของ *A* และ *B*. พูดอีกอย่างคือ: $(A \\cup B) \\setminus (A \\cap B)$ (ชุดของรายการที่อยู่ในอย่างน้อยหนึ่ง *A* or *B* ลบชุดของรายการที่อยู่ในทั้งสอง *A* และ *B*).
 
 # --instructions--
 
-Write a function that takes two arrays as parameters and returns the symmetric difference. Sort the resultant array before returning it.
+เขียนฟังก์ชันที่ใช้สองarrayเป็นพารามิเตอร์และส่งกลับค่าความแตกต่างสมมาตร จัดเรียงarrayผลลัพธ์ก่อนส่งคืน
 
 # --hints--
 
-`symmetricDifference` should be a function.
+`symmetricDifference` ควรเป็น function.
 
 ```js
 assert(typeof symmetricDifference == 'function');
 ```
 
-`symmetricDifference(["John", "Bob", "Mary", "Serena"], ["Jim", "Mary", "John", "Bob"])` should return an array.
+`symmetricDifference(["John", "Bob", "Mary", "Serena"], ["Jim", "Mary", "John", "Bob"])` ควร return array.
 
 ```js
 assert(
@@ -35,7 +35,7 @@ assert(
 );
 ```
 
-`symmetricDifference(["John", "Bob", "Mary", "Serena"], ["Jim", "Mary", "John", "Bob"])` should return `["Jim", "Serena"]`.
+`symmetricDifference(["John", "Bob", "Mary", "Serena"], ["Jim", "Mary", "John", "Bob"])` ควร return `["Jim", "Serena"]`.
 
 ```js
 assert.deepEqual(
@@ -47,13 +47,13 @@ assert.deepEqual(
 );
 ```
 
-`symmetricDifference([1, 2, 3], [3, 4])` should return `[1, 2, 4]`.
+`symmetricDifference([1, 2, 3], [3, 4])` ควร return `[1, 2, 4]`.
 
 ```js
 assert.deepEqual(symmetricDifference([1, 2, 3], [3, 4]), [1, 2, 4]);
 ```
 
-`symmetricDifference([1, 2, 3, 4, 5], [3, 4, 8, 7])` should return `[1, 2, 5, 7, 8]`.
+`symmetricDifference([1, 2, 3, 4, 5], [3, 4, 8, 7])` ควร return `[1, 2, 5, 7, 8]`.
 
 ```js
 assert.deepEqual(symmetricDifference([1, 2, 3, 4, 5], [3, 4, 8, 7]), [
@@ -65,7 +65,7 @@ assert.deepEqual(symmetricDifference([1, 2, 3, 4, 5], [3, 4, 8, 7]), [
 ]);
 ```
 
-`symmetricDifference([1, 2, 3, 4, 5, 6, 7, 8], [1, 3, 5, 6, 7, 8, 9])` should return `[2, 4, 9]`.
+`symmetricDifference([1, 2, 3, 4, 5, 6, 7, 8], [1, 3, 5, 6, 7, 8, 9])` ควร return `[2, 4, 9]`.
 
 ```js
 assert.deepEqual(
@@ -74,7 +74,7 @@ assert.deepEqual(
 );
 ```
 
-`symmetricDifference([1, 2, 4, 7, 9], [2, 3, 7, 8, 9])` should return `[1, 3, 4, 8]`.
+`symmetricDifference([1, 2, 4, 7, 9], [2, 3, 7, 8, 9])` ควร return `[1, 3, 4, 8]`.
 
 ```js
 assert.deepEqual(symmetricDifference([1, 2, 4, 7, 9], [2, 3, 7, 8, 9]), [

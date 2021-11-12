@@ -8,47 +8,47 @@ dashedName: sum-multiples-of-3-and-5
 
 # --description--
 
-The objective is to write a function that finds the sum of all positive multiples of 3 or 5 below *n*.
+วัตถุประสงค์คือเพื่อเขียนฟังก์ชันที่หาผลรวมของผลคูณ บวกกันทั้งหมดของ 3 หรือ 5 ด้านล่าง *n*.
 
 # --hints--
 
-`sumMults` should be a function.
+`sumMults` ควรเป็น function.
 
 ```js
 assert(typeof sumMults == 'function');
 ```
 
-`sumMults(10)` should return a number.
+`sumMults(10)` ควร return number.
 
 ```js
 assert(typeof sumMults(10) == 'number');
 ```
 
-`sumMults(10)` should return `23`.
+`sumMults(10)` ควร return `23`.
 
 ```js
 assert.equal(sumMults(10), 23);
 ```
 
-`sumMults(100)` should return `2318`.
+`sumMults(100)` ควร return `2318`.
 
 ```js
 assert.equal(sumMults(100), 2318);
 ```
 
-`sumMults(1000)` should return `233168`.
+`sumMults(1000)` ควร return `233168`.
 
 ```js
 assert.equal(sumMults(1000), 233168);
 ```
 
-`sumMults(10000)` should return `23331668`.
+`sumMults(10000)` ควร return `23331668`.
 
 ```js
 assert.equal(sumMults(10000), 23331668);
 ```
 
-`sumMults(100000)` should return `2333316668`.
+`sumMults(100000)` ควร return `2333316668`.
 
 ```js
 assert.equal(sumMults(100000), 2333316668);

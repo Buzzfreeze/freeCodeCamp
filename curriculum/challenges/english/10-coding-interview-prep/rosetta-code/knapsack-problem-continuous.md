@@ -8,17 +8,17 @@ dashedName: knapsack-problemcontinuous
 
 # --description--
 
-A thief burgles a butcher's shop, where he can select from some items.
+ขโมยร้านขายเนื้อซึ่งเขาสามารถเลือกจากบางรายการได้
 
-The thief knows the weights and prices of each items. Because he has a knapsack with a limit on the maximum weight that it can carry, he wants to select the items such that he would have his profit maximized. He may cut the items; the item has a reduced price after cutting that is proportional to the original price by the ratio of masses. That means: half of an item has half the price of the original.
+โจรรู้น้ำหนักและราคาของแต่ละรายการ เนื่องจากเขามีเป้ที่จำกัดน้ำหนักสูงสุดที่สามารถบรรทุกได้ เขาต้องการเลือกสิ่งของต่างๆ เพื่อให้เขาได้รับผลกำไรสูงสุด เขาอาจตัดสิ่งของ สินค้ามีราคาที่ลดลงหลังการตัดซึ่งเป็นสัดส่วนกับราคาเดิมตามอัตราส่วนของมวล นั่นหมายความว่า: ครึ่งหนึ่งของสินค้ามีราคาครึ่งหนึ่งของราคาเดิม
 
 # --instructions--
 
-Write a function that takes an array of objects representing the items available in the shop. Each object has 3 attributes: name, weight, and value. The function also takes the maximum weight as a parameter. The function should return the maximum value possible, and the total weight of the selected items should not exceed the maximum weight.
+เขียนฟังก์ชันที่ใช้อาร์เรย์ของobjectที่แสดงถึงรายการที่มีในร้านค้า แต่ละobjectมี 3 คุณลักษณะ: ชื่อ น้ำหนัก และค่า ฟังก์ชันนี้ยังรับน้ำหนักสูงสุดเป็นพารามิเตอร์อีกด้วย ฟังก์ชันควรคืนค่าสูงสุดที่เป็นไปได้ และน้ำหนักรวมของรายการที่เลือกไม่ควรเกินน้ำหนักสูงสุด
 
 # --hints--
 
-`knapContinuous([{ "weight":3.8, "value":36, name:"beef" }, { "weight":5.4, "value":43, name:"pork" }, { "weight":3.6, "value":90, name:"ham" }, { "weight":2.4, "value":45, name:"greaves" }, { "weight":4.0, "value":30, name:"flitch" }, { "weight":2.5, "value":56, name:"brawn" }, { "weight":3.7, "value":67, name:"welt" }, { "weight":3.0, "value":95, name:"salami" }, { "weight":5.9, "value":98, name:"sausage" }], 10)` should return `257.875`.
+`knapContinuous([{ "weight":3.8, "value":36, name:"beef" }, { "weight":5.4, "value":43, name:"pork" }, { "weight":3.6, "value":90, name:"ham" }, { "weight":2.4, "value":45, name:"greaves" }, { "weight":4.0, "value":30, name:"flitch" }, { "weight":2.5, "value":56, name:"brawn" }, { "weight":3.7, "value":67, name:"welt" }, { "weight":3.0, "value":95, name:"salami" }, { "weight":5.9, "value":98, name:"sausage" }], 10)` ควร return `257.875`.
 
 ```js
 assert.equal(
@@ -40,7 +40,7 @@ assert.equal(
 );
 ```
 
-`knapContinuous([{ "weight":3.8, "value":36, name:"beef" }, { "weight":5.4, "value":43, name:"pork" }, { "weight":3.6, "value":90, name:"ham" }, { "weight":2.4, "value":45, name:"greaves" }, { "weight":4.0, "value":30, name:"flitch" }, { "weight":2.5, "value":56, name:"brawn" }, { "weight":3.7, "value":67, name:"welt" }, { "weight":3.0, "value":95, name:"salami" }, { "weight":5.9, "value":98, name:"sausage" }], 12)` should return `295.05405405405406`.
+`knapContinuous([{ "weight":3.8, "value":36, name:"beef" }, { "weight":5.4, "value":43, name:"pork" }, { "weight":3.6, "value":90, name:"ham" }, { "weight":2.4, "value":45, name:"greaves" }, { "weight":4.0, "value":30, name:"flitch" }, { "weight":2.5, "value":56, name:"brawn" }, { "weight":3.7, "value":67, name:"welt" }, { "weight":3.0, "value":95, name:"salami" }, { "weight":5.9, "value":98, name:"sausage" }], 12)` ควร return `295.05405405405406`.
 
 ```js
 assert.equal(
@@ -62,7 +62,7 @@ assert.equal(
 );
 ```
 
-`knapContinuous([{ "weight":3.8, "value":36, name:"beef" }, { "weight":5.4, "value":43, name:"pork" }, { "weight":3.6, "value":90, name:"ham" }, { "weight":2.4, "value":45, name:"greaves" }, { "weight":4.0, "value":30, name:"flitch" }, { "weight":2.5, "value":56, name:"brawn" }, { "weight":3.7, "value":67, name:"welt" }, { "weight":3.0, "value":95, name:"salami" }, { "weight":5.9, "value":98, name:"sausage" }], 15)` should return `349.3783783783784`.
+`knapContinuous([{ "weight":3.8, "value":36, name:"beef" }, { "weight":5.4, "value":43, name:"pork" }, { "weight":3.6, "value":90, name:"ham" }, { "weight":2.4, "value":45, name:"greaves" }, { "weight":4.0, "value":30, name:"flitch" }, { "weight":2.5, "value":56, name:"brawn" }, { "weight":3.7, "value":67, name:"welt" }, { "weight":3.0, "value":95, name:"salami" }, { "weight":5.9, "value":98, name:"sausage" }], 15)` ควร return `349.3783783783784`.
 
 ```js
 assert.equal(
@@ -84,7 +84,7 @@ assert.equal(
 );
 ```
 
-`knapContinuous([{ "weight":3.8, "value":36, name:"beef" }, { "weight":5.4, "value":43, name:"pork" }, { "weight":3.6, "value":90, name:"ham" }, { "weight":2.4, "value":45, name:"greaves" }, { "weight":4.0, "value":30, name:"flitch" }, { "weight":2.5, "value":56, name:"brawn" }, { "weight":3.7, "value":67, name:"welt" }, { "weight":3.0, "value":95, name:"salami" }, { "weight":5.9, "value":98, name:"sausage" }], 22)` should return `459.5263157894737`.
+`knapContinuous([{ "weight":3.8, "value":36, name:"beef" }, { "weight":5.4, "value":43, name:"pork" }, { "weight":3.6, "value":90, name:"ham" }, { "weight":2.4, "value":45, name:"greaves" }, { "weight":4.0, "value":30, name:"flitch" }, { "weight":2.5, "value":56, name:"brawn" }, { "weight":3.7, "value":67, name:"welt" }, { "weight":3.0, "value":95, name:"salami" }, { "weight":5.9, "value":98, name:"sausage" }], 22)` ควร return `459.5263157894737`.
 
 ```js
 assert.equal(
@@ -106,7 +106,7 @@ assert.equal(
 );
 ```
 
-`knapContinuous([{ "weight":3.8, "value":36, name:"beef" }, { "weight":5.4, "value":43, name:"pork" }, { "weight":3.6, "value":90, name:"ham" }, { "weight":2.4, "value":45, name:"greaves" }, { "weight":4.0, "value":30, name:"flitch" }, { "weight":2.5, "value":56, name:"brawn" }, { "weight":3.7, "value":67, name:"welt" }, { "weight":3.0, "value":95, name:"salami" }, { "weight":5.9, "value":98, name:"sausage" }], 24)` should return `478.4736842105263`.
+`knapContinuous([{ "weight":3.8, "value":36, name:"beef" }, { "weight":5.4, "value":43, name:"pork" }, { "weight":3.6, "value":90, name:"ham" }, { "weight":2.4, "value":45, name:"greaves" }, { "weight":4.0, "value":30, name:"flitch" }, { "weight":2.5, "value":56, name:"brawn" }, { "weight":3.7, "value":67, name:"welt" }, { "weight":3.0, "value":95, name:"salami" }, { "weight":5.9, "value":98, name:"sausage" }], 24)` ควร return `478.4736842105263`.
 
 ```js
 assert.equal(

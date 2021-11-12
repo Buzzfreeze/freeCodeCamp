@@ -8,9 +8,9 @@ dashedName: i-before-e-except-after-c
 
 # --description--
 
-The phrase ["I before E, except after C"](<https://en.wikipedia.org/wiki/I before E except after C>) is a widely known mnemonic which is supposed to help when spelling English words.
+phrase ["I before E, except after C"](<https://en.wikipedia.org/wiki/I before E except after C>) เป็นตัวช่วยจำที่รู้จักกันดีซึ่งควรจะช่วยในการสะกดคำภาษาอังกฤษ
 
-Using the words provided, check if the two sub-clauses of the phrase are plausible individually:
+ใช้คำที่ให้มา ตรวจสอบว่าสองข้อย่อยของวลีนั้นเป็นไปได้หรือไม่:
 
 <ol>
   <li>
@@ -21,57 +21,57 @@ Using the words provided, check if the two sub-clauses of the phrase are plausib
   </li>
 </ol>
 
-If both sub-phrases are plausible then the original phrase can be said to be plausible.
+หากวลีย่อยทั้งสองน่าเชื่อถือ วลีดั้งเดิมสามารถกล่าวได้ว่าน่าเชื่อถือ
 
 # --instructions--
 
-Write a function that accepts a word and check if the word follows this rule. The function should return true if the word follows the rule and false if it does not.
+เขียนฟังก์ชันที่ยอมรับคำและตรวจสอบว่าคำนั้นเป็นไปตามกฎนี้หรือไม่ ฟังก์ชันควรคืนค่า จริง หากคำนั้นเป็นไปตามกฎ และเป็นเท็จ หากไม่เป็นเช่นนั้น
 
 # --hints--
 
-`IBeforeExceptC` should be a function.
+`IBeforeExceptC` ควรเป็น function.
 
 ```js
 assert(typeof IBeforeExceptC == 'function');
 ```
 
-`IBeforeExceptC("receive")` should return a boolean.
+`IBeforeExceptC("receive")` ควร return boolean.
 
 ```js
 assert(typeof IBeforeExceptC('receive') == 'boolean');
 ```
 
-`IBeforeExceptC("receive")` should return `true`.
+`IBeforeExceptC("receive")` ควร return `true`.
 
 ```js
 assert.equal(IBeforeExceptC('receive'), true);
 ```
 
-`IBeforeExceptC("science")` should return `false`.
+`IBeforeExceptC("science")` ควร return `false`.
 
 ```js
 assert.equal(IBeforeExceptC('science'), false);
 ```
 
-`IBeforeExceptC("imperceivable")` should return `true`.
+`IBeforeExceptC("imperceivable")` ควร return `true`.
 
 ```js
 assert.equal(IBeforeExceptC('imperceivable'), true);
 ```
 
-`IBeforeExceptC("inconceivable")` should return `true`.
+`IBeforeExceptC("inconceivable")` ควร return `true`.
 
 ```js
 assert.equal(IBeforeExceptC('inconceivable'), true);
 ```
 
-`IBeforeExceptC("insufficient")` should return `false`.
+`IBeforeExceptC("insufficient")` ควร return `false`.
 
 ```js
 assert.equal(IBeforeExceptC('insufficient'), false);
 ```
 
-`IBeforeExceptC("omniscient")` should return `false`.
+`IBeforeExceptC("omniscient")` ควร return `false`.
 
 ```js
 assert.equal(IBeforeExceptC('omniscient'), false);

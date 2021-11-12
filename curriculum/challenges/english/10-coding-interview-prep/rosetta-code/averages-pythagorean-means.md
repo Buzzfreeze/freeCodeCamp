@@ -8,9 +8,9 @@ dashedName: averagespythagorean-means
 
 # --description--
 
-Compute all three of the [Pythagorean means](<https://en.wikipedia.org/wiki/Pythagorean means> "wp: Pythagorean means") of the set of integers $1$ through $10$ (inclusive).
+คำนวณ [Pythagorean means](<https://en.wikipedia.org/wiki/Pythagorean means> "wp: Pythagorean means") ของ set integers $1$ ผ่าน $10$ (inclusive).
 
-Show that $A(x_1,\\ldots,x_n) \\geq G(x_1,\\ldots,x_n) \\geq H(x_1,\\ldots,x_n)$ for this set of positive integers.
+แสดง $A(x_1,\\ldots,x_n) \\geq G(x_1,\\ldots,x_n) \\geq H(x_1,\\ldots,x_n)$ ของ set ของ positive integers.
 
 <ul>
   <li>The most common of the three means, the <a class='rosetta__link--rosetta' href='https://rosettacode.org/wiki/Averages/Arithmetic mean' title='Averages/Arithmetic mean' target='_blank'>arithmetic mean</a>, is the sum of the list divided by its length:<br>
@@ -23,9 +23,9 @@ Show that $A(x_1,\\ldots,x_n) \\geq G(x_1,\\ldots,x_n) \\geq H(x_1,\\ldots,x_n)$
 
 # --instructions--
 
-When writing your function, assume the input is an ordered array of all inclusive numbers.
+เมื่อเขียนฟังก์ชันของคุณ ให้ถือว่าinputเป็นarrayของจำนวนรวมทั้งหมด
 
-For the answer, please output an object in the following format:
+สำหรับคำตอบใน object รูปแบบต่อไปนี้:
 
 ```js
 {
@@ -40,13 +40,13 @@ For the answer, please output an object in the following format:
 
 # --hints--
 
-`pythagoreanMeans` should be a function.
+`pythagoreanMeans` ควรเป็น function.
 
 ```js
 assert(typeof pythagoreanMeans === 'function');
 ```
 
-`pythagoreanMeans([1, 2, ..., 10])` should equal the same output above.
+`pythagoreanMeans([1, 2, ..., 10])` ควรเท่ากับเอาต์พุตเดียวกันด้านบน
 
 ```js
 assert.deepEqual(pythagoreanMeans(range1), answer1);

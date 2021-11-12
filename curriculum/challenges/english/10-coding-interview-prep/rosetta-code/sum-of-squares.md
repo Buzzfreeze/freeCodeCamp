@@ -8,47 +8,47 @@ dashedName: sum-of-squares
 
 # --description--
 
-Write a function to find the sum of squares of an array of integers.
+เขียนฟังก์ชันเพื่อหาผลรวมของกำลังสองของarrayของจำนวนเต็ม
 
 # --hints--
 
-`sumsq` should be a function.
+`sumsq` ควรเป็น function.
 
 ```js
 assert(typeof sumsq == 'function');
 ```
 
-`sumsq([1, 2, 3, 4, 5])` should return a number.
+`sumsq([1, 2, 3, 4, 5])` ควร return number.
 
 ```js
 assert(typeof sumsq([1, 2, 3, 4, 5]) == 'number');
 ```
 
-`sumsq([1, 2, 3, 4, 5])` should return `55`.
+`sumsq([1, 2, 3, 4, 5])` ควร return `55`.
 
 ```js
 assert.equal(sumsq([1, 2, 3, 4, 5]), 55);
 ```
 
-`sumsq([25, 32, 12, 7, 20])` should return `2242`.
+`sumsq([25, 32, 12, 7, 20])` ควร return `2242`.
 
 ```js
 assert.equal(sumsq([25, 32, 12, 7, 20]), 2242);
 ```
 
-`sumsq([38, 45, 35, 8, 13])` should return `4927`.
+`sumsq([38, 45, 35, 8, 13])` ควร return `4927`.
 
 ```js
 assert.equal(sumsq([38, 45, 35, 8, 13]), 4927);
 ```
 
-`sumsq([43, 36, 20, 34, 24])` should return `5277`.
+`sumsq([43, 36, 20, 34, 24])` ควร return `5277`.
 
 ```js
 assert.equal(sumsq([43, 36, 20, 34, 24]), 5277);
 ```
 
-`sumsq([12, 33, 26, 18, 1, 16, 3])` should return `2499`.
+`sumsq([12, 33, 26, 18, 1, 16, 3])` ควร return `2499`.
 
 ```js
 assert.equal(sumsq([12, 33, 26, 18, 1, 16, 3]), 2499);

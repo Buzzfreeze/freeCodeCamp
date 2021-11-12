@@ -8,53 +8,53 @@ dashedName: entropy
 
 # --description--
 
-Calculate the Shannon entropy H of a given input string.
+คำนวน Shannon entropy H ของ input string.
 
-Given the discreet random variable $X$ that is a string of $N$ "symbols" (total characters) consisting of $n$ different characters (n=2 for binary), the Shannon entropy of X in bits/symbol is:
+จากตัวแปรสุ่ม $X$ ที่เป็นสตริงของ $N$ "สัญลักษณ์" (อักขระทั้งหมด) ซึ่งประกอบด้วยอักขระที่แตกต่างกัน $n$ (n=2 สำหรับไบนารี) Shannon entropy ของ X ในหน่วยบิต/สัญลักษณ์คือ
 
 $H_2(X) = -\\sum\_{i=1}^n \\frac{count_i}{N} \\log_2 \\left(\\frac{count_i}{N}\\right)$
 
-where $count_i$ is the count of character $n_i$.
+เมื่อ $count_i$ คือการนับตัวอักษร $n_i$.
 
 # --hints--
 
-`entropy` should be a function.
+`entropy` ควรเป็น function.
 
 ```js
 assert(typeof entropy === 'function');
 ```
 
-`entropy("0")` should return `0`
+`entropy("0")` ควร return `0`
 
 ```js
 assert.equal(entropy('0'), 0);
 ```
 
-`entropy("01")` should return `1`
+`entropy("01")` ควร return `1`
 
 ```js
 assert.equal(entropy('01'), 1);
 ```
 
-`entropy("0123")` should return `2`
+`entropy("0123")` ควร return `2`
 
 ```js
 assert.equal(entropy('0123'), 2);
 ```
 
-`entropy("01234567")` should return `3`
+`entropy("01234567")` ควร return `3`
 
 ```js
 assert.equal(entropy('01234567'), 3);
 ```
 
-`entropy("0123456789abcdef")` should return `4`
+`entropy("0123456789abcdef")` ควร return `4`
 
 ```js
 assert.equal(entropy('0123456789abcdef'), 4);
 ```
 
-`entropy("1223334444")` should return `1.8464393446710154`
+`entropy("1223334444")` ควร return `1.8464393446710154`
 
 ```js
 assert.equal(entropy('1223334444'), 1.8464393446710154);

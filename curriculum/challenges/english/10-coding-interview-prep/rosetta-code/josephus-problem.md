@@ -8,65 +8,64 @@ dashedName: josephus-problem
 
 # --description--
 
-[Josephus problem](<https://en.wikipedia.org/wiki/Josephus problem>) is a math puzzle with a grim description: $n$ prisoners are standing on a circle, sequentially numbered from $0$ to $n-1$.
+[Josephus problem](<https://en.wikipedia.org/wiki/Josephus problem>) เป็นปริศนาทางคณิตศาสตร์ที่มีคำอธิบาย: $n$ นักโทษกำลังยืนอยู่บนวงกลม เรียงลำดับจาก $0$ ถึง $n-1$
 
-An executioner walks along the circle, starting from prisoner $0$, removing every $k$-th prisoner and killing him.
+เพชฌฆาตเดินไปตามวงกลมโดยเริ่มจากนักโทษ $0$ นำนักโทษทุกคนที่ $k$-th ออกและฆ่าเขา
 
-As the process goes on, the circle becomes smaller and smaller, until only one prisoner remains, who is then freed.
+เมื่อกระบวนการดำเนินไป วงกลมจะเล็กลงเรื่อยๆ จนกระทั่งเหลือนักโทษเพียงคนเดียว ซึ่งจากนั้นจึงเป็นอิสระ
 
-For example, if there are $n=5$ prisoners and $k=2$, the order the prisoners are killed in (let's call it the "killing sequence") will be 1, 3, 0, and 4, and the survivor will be #2.
+ตัวอย่างเช่น หากมี $n=5$ นักโทษและ $k=2$ ลำดับการฆ่านักโทษ (เรียกว่า "ลำดับการฆ่า") จะเป็น 1, 3, 0 และ 4 และผู้รอดชีวิต จะเป็น #2
 
-Given any $n, k > 0$, find out which prisoner will be the final survivor.
+ให้ $n, k > 0$, ค้นหาว่านักโทษคนใดจะเป็นผู้รอดชีวิตคนสุดท้าย
 
-In one such incident, there were 41 prisoners and every 3<sup>rd</sup> prisoner was being killed ($k=3$).
+ในเหตุการณ์ดังกล่าวครั้งหนึ่ง มีนักโทษ 41 คน และนักโทษทุก<sup>rd</sup> 3 คนถูกฆ่า ($k=3$)
 
-Among them was a clever chap name Josephus who worked out the problem, stood at the surviving position, and lived on to tell the tale.
+ในหมู่พวกเขามีเด็กคนหนึ่งชื่อโจเซฟัสที่แก้ปัญหา ยืนอยู่ที่ตำแหน่งที่รอดตาย และใช้ชีวิตต่อไปเพื่อเล่าเรื่อง
 
-Which number was he?
-
+เขาเป็นหมายเลขอะไร
 # --instructions--
 
 Write a function that takes the initial number of prisoners and 'k' as parameter and returns the number of the prisoner that survives.
 
 # --hints--
 
-`josephus` should be a function.
+`josephus` ควรเป็น function.
 
 ```js
 assert(typeof josephus == 'function');
 ```
 
-`josephus(30,3)` should return a number.
+`josephus(30,3)` ควร return number.
 
 ```js
 assert(typeof josephus(30, 3) == 'number');
 ```
 
-`josephus(30,3)` should return `28`.
+`josephus(30,3)` ควร return `28`.
 
 ```js
 assert.equal(josephus(30, 3), 28);
 ```
 
-`josephus(30,5)` should return `2`.
+`josephus(30,5)` ควร return `2`.
 
 ```js
 assert.equal(josephus(30, 5), 2);
 ```
 
-`josephus(20,2)` should return `8`.
+`josephus(20,2)` ควร return `8`.
 
 ```js
 assert.equal(josephus(20, 2), 8);
 ```
 
-`josephus(17,6)` should return `1`.
+`josephus(17,6)` ควร return `1`.
 
 ```js
 assert.equal(josephus(17, 6), 1);
 ```
 
-`josephus(29,4)` should return `1`.
+`josephus(29,4)` ควร return `1`.
 
 ```js
 assert.equal(josephus(29, 4), 1);

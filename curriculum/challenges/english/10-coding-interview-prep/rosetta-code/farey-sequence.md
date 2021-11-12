@@ -8,18 +8,18 @@ dashedName: farey-sequence
 
 # --description--
 
-The [Farey sequence](<https://en.wikipedia.org/wiki/Farey sequence> "wp: Farey sequence") <code>F<sub>n</sub></code> of order `n` is the sequence of completely reduced fractions between `0` and `1` which, when in lowest terms, have denominators less than or equal to `n`, arranged in order of increasing size.
+[Farey sequence](<https://en.wikipedia.org/wiki/Farey sequence> "wp: Farey sequence") <code>F<sub>n</sub></code> ของลำดับ `n` คือลำดับของเศษส่วนที่ลดลงอย่างสมบูรณ์ระหว่าง `0` และ `1` ซึ่งเมื่ออยู่ในพจน์ที่ต่ำที่สุด จะมีตัวส่วนน้อยกว่าหรือเท่ากับ `n` จัดเรียงตามขนาดที่เพิ่มขึ้น
 
-The *Farey sequence* is sometimes incorrectly called a *Farey series*.
+*Farey sequence* บางครั้งเรียกว่า *Farey series* อย่างไม่ถูกต้อง
 
-Each Farey sequence:
+ลำดับ Farey แต่ละลำดับ:
 
 <ul>
   <li>starts with the value  0,  denoted by the fraction  $ \frac{0}{1} $</li>
   <li>ends with the value  1,  denoted by the fraction  $ \frac{1}{1}$.</li>
 </ul>
 
-The Farey sequences of orders `1` to `5` are:
+Farey sequences ของลำดับ `1` ถึง `5` เป็น:
 
 <ul>
   <li style='list-style: none;'>${\bf\it{F}}_1 = \frac{0}{1}, \frac{1}{1}$</li>
@@ -31,35 +31,35 @@ The Farey sequences of orders `1` to `5` are:
 
 # --instructions--
 
-Write a function that returns the Farey sequence of order `n`. The function should have one parameter that is `n`. It should return the sequence as an array.
+เขียนฟังก์ชันที่ส่งคืนลำดับแฟรี่ของคำสั่ง `n` ฟังก์ชันควรมีหนึ่งพารามิเตอร์ที่เป็น `n`ควรส่งคืนลำดับเป็นarray
 
 # --hints--
 
-`farey` should be a function.
+`farey` ควรเป็น function.
 
 ```js
 assert(typeof farey === 'function');
 ```
 
-`farey(3)` should return an array
+`farey(3)` ควร return array
 
 ```js
 assert(Array.isArray(farey(3)));
 ```
 
-`farey(3)` should return `["1/3","1/2","2/3"]`
+`farey(3)` ควร return `["1/3","1/2","2/3"]`
 
 ```js
 assert.deepEqual(farey(3), ['1/3', '1/2', '2/3']);
 ```
 
-`farey(4)` should return `["1/4","1/3","1/2","2/4","2/3","3/4"]`
+`farey(4)` ควร return `["1/4","1/3","1/2","2/4","2/3","3/4"]`
 
 ```js
 assert.deepEqual(farey(4), ['1/4', '1/3', '1/2', '2/4', '2/3', '3/4']);
 ```
 
-`farey(5)` should return `["1/5","1/4","1/3","2/5","1/2","2/4","3/5","2/3","3/4","4/5"]`
+`farey(5)` ควร return `["1/5","1/4","1/3","2/5","1/2","2/4","3/5","2/3","3/4","4/5"]`
 
 ```js
 assert.deepEqual(farey(5), [

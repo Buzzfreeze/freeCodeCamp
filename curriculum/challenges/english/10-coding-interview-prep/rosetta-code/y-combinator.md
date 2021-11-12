@@ -8,11 +8,11 @@ dashedName: y-combinator
 
 # --description--
 
-In strict [functional programming](<https://www.freecodecamp.org/news/the-principles-of-functional-programming/> "news: the principles of functional programming") and the [lambda calculus](<https://en.wikipedia.org/wiki/lambda calculus> "wp: lambda calculus"), functions (lambda expressions) don't have state and are only allowed to refer to arguments of enclosing functions. This rules out the usual definition of a recursive function wherein a function is associated with the state of a variable and this variable's state is used in the body of the function. The [Y combinator](https://mvanier.livejournal.com/2897.html) is itself a stateless function that, when applied to another stateless function, returns a recursive version of the function. The Y combinator is the simplest of the class of such functions, called [fixed-point combinators](<https://en.wikipedia.org/wiki/Fixed-point combinator> "wp: fixed-point combinator").
+[functional programming](<https://www.freecodecamp.org/news/the-principles-of-functional-programming/> "news: the principles of functional programming") และ [lambda calculus](<https://en.wikipedia.org/wiki/lambda calculus> "wp: lambda calculus"), functions (lambda expressions) ไม่มีสถานะและได้รับอนุญาตให้อ้างถึงอาร์กิวเมนต์ของฟังก์ชันที่ล้อมรอบเท่านั้น สิ่งนี้จะตัดคำจำกัดความปกติของฟังก์ชันแบบเรียกซ้ำซึ่งฟังก์ชันนั้นสัมพันธ์กับสถานะของตัวแปรและสถานะของตัวแปรนี้ถูกใช้ในเนื้อหาของฟังก์ชัน The [Y combinator](https://mvanier.livejournal.com/2897.html) เป็นstateless functionซึ่งเมื่อนำไปใช้กับstateless functionอื่น จะคืนค่าฟังก์ชันแบบเรียกซ้ำ Y combinator เป็นclassที่ง่ายที่สุดของฟังก์ชันดังกล่าว เรียกว่า [fixed-point combinators](<https://en.wikipedia.org/wiki/Fixed-point combinator> "wp: fixed-point combinator").
 
 # --instructions--
 
-Define the stateless Y combinator function and use it to compute [factorial](https://en.wikipedia.org/wiki/Factorial "wp: factorial"). The `factorial(N)` function is already given to you. **See also:**
+กำหนดฟังก์ชัน Y combinator แบบstateless functionและใช้เพื่อคำนวณ [factorial](https://en.wikipedia.org/wiki/Factorial "wp: factorial"). `factorial(N)` function กำหนดให้แล้ว. **See also:**
 
 <ul>
   <li><a href="https://vimeo.com/45140590" target="_blank">Jim Weirich: Adventures in Functional Programming</a>.</li>
@@ -20,37 +20,37 @@ Define the stateless Y combinator function and use it to compute [factorial](htt
 
 # --hints--
 
-Y should return a function.
+Y ควร return function.
 
 ```js
 assert.equal(typeof Y((f) => (n) => n), 'function');
 ```
 
-factorial(1) should return 1.
+factorial(1) ควร return 1.
 
 ```js
 assert.equal(factorial(1), 1);
 ```
 
-factorial(2) should return 2.
+factorial(2) ควร return 2.
 
 ```js
 assert.equal(factorial(2), 2);
 ```
 
-factorial(3) should return 6.
+factorial(3) ควร return 6.
 
 ```js
 assert.equal(factorial(3), 6);
 ```
 
-factorial(4) should return 24.
+factorial(4) ควร return 24.
 
 ```js
 assert.equal(factorial(4), 24);
 ```
 
-factorial(10) should return 3628800.
+factorial(10) ควร return 3628800.
 
 ```js
 assert.equal(factorial(10), 3628800);

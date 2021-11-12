@@ -8,18 +8,18 @@ dashedName: 24-game
 
 # --description--
 
-The [24 Game](https://en.wikipedia.org/wiki/24_Game) tests a person's mental arithmetic.
+[24 Game](https://en.wikipedia.org/wiki/24_Game) ทดสอบ person's mental arithmetic
 
-The aim of the game is to arrange four numbers in a way that when evaluated, the result is 24
+จุดมุ่งหมายของเกมคือการจัดเรียงตัวเลขสี่ตัวในลักษณะที่เมื่อประเมินผลคือ 24
 
 # --instructions--
 
-Implement a function that takes a string of four digits as its argument, with each digit from 1 to 9 (inclusive) with repetitions allowed, and returns an arithmetic expression that evaluates to the number 24. If no such solution exists, return "no solution exists".
+ใช้ฟังก์ชันที่รับstringของตัวเลขสี่หลักเป็นargument โดยแต่ละหลักตั้งแต่ 1 ถึง 9 (รวม) โดยอนุญาตให้ทำซ้ำได้ และส่งกลับนิพจน์ทางคณิตศาสตร์ที่ประเมินเป็นตัวเลข 24 หากไม่มีคำตอบดังกล่าว ให้ส่งคืน "no solution" มีอยู่
 
 **Rules:**
 <ul>
   <li> Only the following operators/functions are allowed: multiplication, division, addition, subtraction. </li>
-  <li> Division should use floating point or rational arithmetic, etc, to preserve remainders. </li>
+  <li> Division ควร use floating point or rational arithmetic, etc, to preserve remainders. </li>
   <li> Forming multiple digit numbers from the supplied digits is disallowed. (So an answer of 12+12 when given 1, 2, 2, and 1 is wrong). </li>
   <li> The order of the digits when given does not have to be preserved. </li>
 </ul>
@@ -33,31 +33,31 @@ Implement a function that takes a string of four digits as its argument, with ea
 
 # --hints--
 
-`solve24` should be a function.
+`solve24` ควรเป็น function.
 
 ```js
 assert(typeof solve24 === 'function');
 ```
 
-`solve24("4878")` should return `(7-8/8)*4` or `4*(7-8/8)`
+`solve24("4878")` ควร return `(7-8/8)*4` or `4*(7-8/8)`
 
 ```js
 assert(include(answers[0], removeParentheses(solve24(testCases[0]))));
 ```
 
-`solve24("1234")` should return any arrangement of `1*2*3*4`
+`solve24("1234")` ควร return arrangement `1*2*3*4`
 
 ```js
 assert(include(answers[1], removeParentheses(solve24(testCases[1]))));
 ```
 
-`solve24("6789")` should return `(6*8)/(9-7)` or `(8*6)/(9-7)`
+`solve24("6789")` ควร return `(6*8)/(9-7)` or `(8*6)/(9-7)`
 
 ```js
 assert(include(answers[2], removeParentheses(solve24(testCases[2]))));
 ```
 
-`solve24("1127")` should return a permutation of `(1+7)*(1+2)`
+`solve24("1127")` ควร return permutation of `(1+7)*(1+2)`
 
 ```js
 assert(include(answers[3], removeParentheses(solve24(testCases[3]))));

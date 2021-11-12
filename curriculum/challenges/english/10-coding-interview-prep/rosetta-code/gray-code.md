@@ -8,23 +8,23 @@ dashedName: gray-code
 
 # --description--
 
-[Gray code](<https://en.wikipedia.org/wiki/Gray code>) is a form of binary encoding where transitions between consecutive numbers differ by only one bit.
+[Gray code](<https://en.wikipedia.org/wiki/Gray code>) iเป็นรูปแบบหนึ่งของการเข้ารหัสแบบbinaryที่การเปลี่ยนระหว่างตัวเลขที่ต่อเนื่องกันต่างกันเพียงบิตเดียว
 
-This is a useful encoding for reducing hardware data hazards with values that change rapidly and/or connect to slower hardware as inputs.
+นี่เป็นการเข้ารหัสที่มีประโยชน์สำหรับการลดอันตรายของข้อมูลฮาร์ดแวร์ด้วยค่าที่เปลี่ยนแปลงอย่างรวดเร็วและ/หรือเชื่อมต่อกับฮาร์ดแวร์ที่ช้ากว่าเป็นinput
 
-It is also useful for generating inputs for [Karnaugh maps](<https://en.wikipedia.org/wiki/Karnaugh map>) in order from left to right or top to bottom.
+นอกจากนี้ยังมีประโยชน์ในการสร้างinputสำหรับ [แผนที่ Karnaugh](<https://en.wikipedia.org/wiki/Karnaugh map>) โดยเรียงลำดับจากซ้ายไปขวาหรือบนลงล่าง
 
 # --instructions--
 
-Create a function to encode a number to and decode a number from Gray code. The function should will have 2 parameters.
+สร้างฟังก์ชันเพื่อเข้ารหัสตัวเลขและถอดรหัสตัวเลขจากโค้ดสีเทา ฟังก์ชั่นควรมี 2 พารามิเตอร์
 
-The first would be a boolean. The function should encode for true and decode for false. The second parameter would be the number to be encoded/decoded.
+อันแรกจะเป็นboolean ฟังก์ชันควรเข้ารหัสสำหรับ true และถอดรหัสสำหรับ false พารามิเตอร์ที่สองจะเป็นตัวเลขที่จะเข้ารหัส/ถอดรหัส
 
-Display the normal binary representations, Gray code representations, and decoded Gray code values for all 5-bit binary numbers (0-31 inclusive, leading 0's not necessary).
+แสดงการแทนค่าbinaryปกติ การแทนค่าสีเทา และค่ารหัสสีเทาที่ถอดรหัสแล้วสำหรับเลขฐานสอง 5 บิตทั้งหมด (รวม 0-31 โดยไม่จำเป็นต้องมี 0 นำหน้า)
 
-There are many possible Gray codes. The following encodes what is called "binary reflected Gray code."
+มีรหัสสีเทาที่เป็นไปได้มากมาย ต่อไปนี้เข้ารหัสสิ่งที่เรียกว่า "รหัสสีเทาสะท้อนbinary"
 
-Encoding (MSB is bit 0, b is binary, g is Gray code):
+การเข้ารหัส (MSB คือบิต 0, b เป็นเลขฐานสอง, g คือรหัสสีเทา):
 
 <pre>if b[i-1] = 1
   g[i] = not b[i]
@@ -46,49 +46,49 @@ b[i] = g[i] xor b[i-1]
 
 # --hints--
 
-`gray` should be a function.
+`gray` ควรเป็น function.
 
 ```js
 assert(typeof gray == 'function');
 ```
 
-`gray(true,177)` should return a number.
+`gray(true,177)` ควร return number.
 
 ```js
 assert(typeof gray(true, 177) == 'number');
 ```
 
-`gray(true,177)` should return `233`.
+`gray(true,177)` ควร return `233`.
 
 ```js
 assert.equal(gray(true, 177), 233);
 ```
 
-`gray(true,425)` should return `381`.
+`gray(true,425)` ควร return `381`.
 
 ```js
 assert.equal(gray(true, 425), 381);
 ```
 
-`gray(true,870)` should return `725`.
+`gray(true,870)` ควร return `725`.
 
 ```js
 assert.equal(gray(true, 870), 725);
 ```
 
-`gray(false,233)` should return `177`.
+`gray(false,233)` ควร return `177`.
 
 ```js
 assert.equal(gray(false, 233), 177);
 ```
 
-`gray(false,381)` should return `425`.
+`gray(false,381)` ควร return `425`.
 
 ```js
 assert.equal(gray(false, 381), 425);
 ```
 
-`gray(false,725)` should return `870`.
+`gray(false,725)` ควร return `870`.
 
 ```js
 assert.equal(gray(false, 725), 870);

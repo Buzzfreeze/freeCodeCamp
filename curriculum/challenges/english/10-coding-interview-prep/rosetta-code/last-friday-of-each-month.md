@@ -8,65 +8,65 @@ dashedName: last-friday-of-each-month
 
 # --description--
 
-Write a function that returns the date of the last Friday of a given month for a given year.
+เขียนฟังก์ชันที่ส่งกลับวันที่ของวันศุกร์สุดท้ายของเดือนและสำหรับปีที่กำหนด
 
 # --hints--
 
-`lastFriday` should be a function.
+`lastFriday` ควรเป็น function.
 
 ```js
 assert(typeof lastFriday == 'function');
 ```
 
-`lastFriday(2018, 1)` should return a number.
+`lastFriday(2018, 1)` ควร return number.
 
 ```js
 assert(typeof lastFriday(2018, 1) == 'number');
 ```
 
-`lastFriday(2018, 1)` should return `26`.
+`lastFriday(2018, 1)` ควร return `26`.
 
 ```js
 assert.equal(lastFriday(2018, 1), 26);
 ```
 
-`lastFriday(2017, 2)` should return `24`.
+`lastFriday(2017, 2)` ควร return `24`.
 
 ```js
 assert.equal(lastFriday(2017, 2), 24);
 ```
 
-`lastFriday(2012, 3)` should return `30`.
+`lastFriday(2012, 3)` ควร return `30`.
 
 ```js
 assert.equal(lastFriday(2012, 3), 30);
 ```
 
-`lastFriday(1900, 4)` should return `27`.
+`lastFriday(1900, 4)` ควร return `27`.
 
 ```js
 assert.equal(lastFriday(1900, 4), 27);
 ```
 
-`lastFriday(2000, 5)` should return `26`.
+`lastFriday(2000, 5)` ควร return `26`.
 
 ```js
 assert.equal(lastFriday(2000, 5), 26);
 ```
 
-`lastFriday(2006, 6)` should return `30`.
+`lastFriday(2006, 6)` ควร return `30`.
 
 ```js
 assert.equal(lastFriday(2006, 6), 30);
 ```
 
-`lastFriday(2010, 7)` should return `30`.
+`lastFriday(2010, 7)` ควร return `30`.
 
 ```js
 assert.equal(lastFriday(2010, 7), 30);
 ```
 
-`lastFriday(2005, 8)` should return `26`.
+`lastFriday(2005, 8)` ควร return `26`.
 
 ```js
 assert.equal(lastFriday(2005, 8), 26);

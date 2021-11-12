@@ -8,47 +8,47 @@ dashedName: generate-lower-case-ascii-alphabet
 
 # --description--
 
-Write a function to generate an array of lower case ASCII characters for a given range. For example, given the range `['a', 'd']`, the function should return `['a', 'b', 'c', 'd']`.
+เขียนฟังก์ชันเพื่อสร้างarrayของอักขระ ASCII ตัวพิมพ์เล็กสำหรับช่วงที่กำหนด ตัวอย่างเช่น เมื่อกำหนดช่วง `['a', 'd']` ฟังก์ชันควร return `['a', 'b', 'c', 'd']`.
 
 # --hints--
 
-`lascii` should be a function.
+`lascii` ควรเป็น function.
 
 ```js
 assert(typeof lascii == 'function');
 ```
 
-`lascii("a","d")` should return an array.
+`lascii("a","d")` ควร return array.
 
 ```js
 assert(Array.isArray(lascii('a', 'd')));
 ```
 
-`lascii('a','d')` should return `[ 'a', 'b', 'c', 'd' ]`.
+`lascii('a','d')` ควร return `[ 'a', 'b', 'c', 'd' ]`.
 
 ```js
 assert.deepEqual(lascii('a', 'd'), results[0]);
 ```
 
-`lascii('c','i')` should return `[ 'c', 'd', 'e', 'f', 'g', 'h', 'i' ]`.
+`lascii('c','i')` ควร return `[ 'c', 'd', 'e', 'f', 'g', 'h', 'i' ]`.
 
 ```js
 assert.deepEqual(lascii('c', 'i'), results[1]);
 ```
 
-`lascii('m','q')` should return `[ 'm', 'n', 'o', 'p', 'q' ]`.
+`lascii('m','q')` ควร return `[ 'm', 'n', 'o', 'p', 'q' ]`.
 
 ```js
 assert.deepEqual(lascii('m', 'q'), results[2]);
 ```
 
-`lascii('k','n')` should return `[ 'k', 'l', 'm', 'n' ]`.
+`lascii('k','n')` ควร return `[ 'k', 'l', 'm', 'n' ]`.
 
 ```js
 assert.deepEqual(lascii('k', 'n'), results[3]);
 ```
 
-`lascii('t','z')` should return `[ 't', 'u', 'v', 'w', 'x', 'y', 'z' ]`.
+`lascii('t','z')` ควร return `[ 't', 'u', 'v', 'w', 'x', 'y', 'z' ]`.
 
 ```js
 assert.deepEqual(lascii('t', 'z'), results[4]);

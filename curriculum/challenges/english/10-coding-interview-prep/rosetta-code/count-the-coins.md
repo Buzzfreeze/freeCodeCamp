@@ -8,7 +8,7 @@ dashedName: count-the-coins
 
 # --description--
 
-There are four types of common coins in [US](https://en.wikipedia.org/wiki/United_States) currency:
+เหรียญทั่วไปมีสี่ประเภทใน [US](https://en.wikipedia.org/wiki/United_States) currency:
 
 <ul>
   <li>quarters (25 cents)</li>
@@ -30,29 +30,29 @@ There are four types of common coins in [US](https://en.wikipedia.org/wiki/Unite
 
 # --instructions--
 
-Implement a function to determine how many ways there are to make change for a given input, `cents`, that represents an amount of US pennies using these common coins.
+ใช้ฟังก์ชันเพื่อกำหนดจำนวนวิธีที่จะทำการเปลี่ยนแปลงสำหรับข้อมูลป้อนเข้า `cents` ซึ่งหมายถึงจำนวนเงินเพนนีของสหรัฐฯ โดยใช้เหรียญทั่วไปเหล่านี้
 
 # --hints--
 
-`countCoins` should be a function.
+`countCoins` ควรเป็น function.
 
 ```js
 assert(typeof countCoins === 'function');
 ```
 
-`countCoins(15)` should return `6`.
+`countCoins(15)` ควร return `6`.
 
 ```js
 assert.equal(countCoins(15), 6);
 ```
 
-`countCoins(85)` shouls return `163`.
+`countCoins(85)` ควร return `163`.
 
 ```js
 assert.equal(countCoins(85), 163);
 ```
 
-`countCoins(100)` should return `242`.
+`countCoins(100)` ควร return `242`.
 
 ```js
 assert.equal(countCoins(100), 242);

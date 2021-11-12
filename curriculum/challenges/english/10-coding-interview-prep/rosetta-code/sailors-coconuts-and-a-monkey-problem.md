@@ -8,11 +8,10 @@ dashedName: sailors-coconuts-and-a-monkey-problem
 
 # --description--
 
-Five sailors are shipwrecked on an island and collect a large pile of coconuts during the day. That night the first sailor wakes up and decides to take his first share early so tries to divide the pile of coconuts equally into five piles but finds that there is one coconut left over, so he tosses it to a monkey and then hides "his" one of the five equally sized piles of coconuts and pushes the other four piles together to form a single visible pile of coconuts again and goes to bed. To cut a long story short, each of the sailors in turn gets up once during the night and performs the same actions of dividing the coconut pile into five, finding that one coconut is left over and giving that single remainder coconut to the monkey. In the morning (after the surreptitious and separate action of each of the five sailors during the night), the remaining coconuts are divided into five equal piles for each of the sailors, whereupon it is found that the pile of coconuts divides equally amongst the sailors with no remainder. (Nothing for the monkey in the morning.)
+ลูกเรือห้าคนถูกเรืออับปางบนเกาะแห่งหนึ่งและเก็บมะพร้าวกองใหญ่ในระหว่างวัน คืนนั้นกะลาสีเรือคนแรกตื่นขึ้นและตัดสินใจจะแบ่งต้นมะพร้าวก่อนจึงพยายามแบ่งกองมะพร้าวออกเป็นห้ากองเท่าๆ กัน แต่พบว่ามีมะพร้าวเหลืออยู่หนึ่งลูก จึงโยนให้ลิงแล้วซ่อน "ของเขา" ไว้ หนึ่งในห้ากองมะพร้าวที่มีขนาดเท่ากันและผลักอีกสี่กองเข้าด้วยกันเพื่อสร้างกองมะพร้าวที่มองเห็นได้อีกครั้งและเข้านอน ในการสรุปเรื่องยาว กะลาสีแต่ละคนจะลุกขึ้นในตอนกลางคืนหนึ่งครั้งและทำแบบเดียวกันในการแบ่งกองมะพร้าวออกเป็นห้า โดยพบว่ามีมะพร้าวเหลืออยู่หนึ่งลูกและให้มะพร้าวที่เหลือเพียงลูกเดียวแก่ลิง ในตอนเช้า (หลังจากแยกจากกันของกะลาสีเรือทั้ง 5 คนในตอนกลางคืน) กะลาสีที่เหลือจะถูกแบ่งออกเป็น 5 กองเท่าๆ กันสำหรับกะลาสีเรือแต่ละคน จากนั้นจึงพบว่ากองมะพร้าวแบ่งกะลาสีเท่าๆ กัน โดยไม่มีเศษเหลือ (ไม่มีอะไรสำหรับลิงในตอนเช้า)
 
 # --instructions--
-
-Create a function that returns the minimum possible size of the initial pile of coconuts collected during the day for `N` sailors. **Note:** Of course the tale is told in a world where the collection of any amount of coconuts in a day and multiple divisions of the pile, etc. can occur in time fitting the story line, so as not to affect the mathematics. **C.f:**
+สร้างฟังก์ชันที่คืนค่าขนาดต่ำสุดที่เป็นไปได้ของกองมะพร้าวเริ่มต้นที่เก็บในระหว่างวันสำหรับลูกเรือ "N" **Note:** แน่นอนว่ามีเรื่องเล่าในโลกที่การรวบรวมมะพร้าวจำนวนเท่าใดก็ได้ในหนึ่งวันและกองหลายกอง ฯลฯ สามารถเกิดขึ้นได้ในเวลาที่เหมาะสมกับเนื้อเรื่อง เพื่อไม่ให้กระทบต่อ คณิตศาสตร์. **C.f:**
 
 <ul>
   <li><a href="https://www.youtube.com/watch?v=U9qU20VmvaU" target="_blank"> Monkeys and Coconuts - Numberphile</a> (Video) Analytical solution.</li>
@@ -21,25 +20,25 @@ Create a function that returns the minimum possible size of the initial pile of 
 
 # --hints--
 
-`splitCoconuts` should be a function.
+`splitCoconuts` ควรเป็น function.
 
 ```js
 assert(typeof splitCoconuts === 'function');
 ```
 
-`splitCoconuts(5)` should return 3121.
+`splitCoconuts(5)` ควร return 3121.
 
 ```js
 assert(splitCoconuts(5) === 3121);
 ```
 
-`splitCoconuts(6)` should return 233275.
+`splitCoconuts(6)` ควร return 233275.
 
 ```js
 assert(splitCoconuts(6) === 233275);
 ```
 
-`splitCoconuts(7)` should return 823537.
+`splitCoconuts(7)` ควร return 823537.
 
 ```js
 assert(splitCoconuts(7) === 823537);

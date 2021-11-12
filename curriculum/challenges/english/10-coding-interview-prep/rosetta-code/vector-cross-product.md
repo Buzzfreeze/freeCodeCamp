@@ -8,27 +8,27 @@ dashedName: vector-cross-product
 
 # --description--
 
-A vector is defined as having three dimensions as being represented by an ordered collection of three numbers: (X, Y, Z).
+เวกเตอร์ถูกกำหนดให้มีสามมิติตามที่แสดงโดยcollectionของตัวเลขสามตัว: (X, Y, Z).
 
 # --instructions--
 
-Write a function that takes two vectors (arrays) as input and computes their cross product. Your function should return `null` on invalid inputs such as vectors of different lengths.
+เขียนฟังก์ชันที่ใช้เวกเตอร์ (อาร์เรย์) สองตัวเป็นinputและคำนวณผลคูณของพวกมัน ฟังก์ชันของคุณควรส่งคืน "null" สำหรับinputที่ไม่ถูกต้อง เช่น เวกเตอร์ที่มีความยาวต่างกัน
 
 # --hints--
 
-`crossProduct` should be a function.
+`crossProduct` ควรเป็น function.
 
 ```js
 assert.equal(typeof crossProduct, 'function');
 ```
 
-`crossProduct()` should return null.
+`crossProduct()` ควร return null.
 
 ```js
 assert.equal(crossProduct(), null);
 ```
 
-`crossProduct([1, 2, 3], [4, 5, 6])` should return `[-3, 6, -3]`.
+`crossProduct([1, 2, 3], [4, 5, 6])` ควร return `[-3, 6, -3]`.
 
 ```js
 assert.deepEqual(res12, exp12);

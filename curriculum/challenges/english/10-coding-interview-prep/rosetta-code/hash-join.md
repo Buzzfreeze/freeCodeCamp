@@ -8,9 +8,9 @@ dashedName: hash-join
 
 # --description--
 
-An [inner join](https://www.freecodecamp.org/news/sql-join-types-inner-join-vs-outer-join-example/#how-to-use-an-inner-join-in-sql "news: SQL Join Types – Inner Join VS Outer Join Example#How to Use an INNER JOIN in SQL") is an operation that combines two data tables into one table, based on matching column values. The simplest way of implementing this operation is the [nested loop join](<https://en.wikipedia.org/wiki/Nested loop join> "wp: Nested loop join") algorithm, but a more scalable alternative is the [hash join](<https://en.wikipedia.org/wiki/hash join> "wp: hash join") algorithm.
+An [inner join](https://www.freecodecamp.org/news/sql-join-types-inner-join-vs-outer-join-example/#how-to-use-an-inner-join-in-sql "news: SQL Join Types – Inner Join VS Outer Join Example#How to Use an INNER JOIN in SQL") เป็นการดำเนินการที่รวมตารางข้อมูลสองตารางเป็นตารางเดียว โดยยึดตามค่าคอลัมน์ที่ตรงกัน วิธีที่ง่ายที่สุดในการดำเนินการนี้คือ algorithm [nested loop join](<https://en.wikipedia.org/wiki/Nested loop join> "wp: Nested loop join") แต่ทางเลือกที่ปรับขนาดได้มากกว่าคือ algorithm  [hash join](<https://en.wikipedia.org/wiki/hash join> "wp: hash join") algorithm.
 
-The "hash join" algorithm consists of two steps:
+"hash join" algorithm ,ulv' steps:
 
 <ol>
   <li><strong>Hash phase:</strong> Create a <a href='https://en.wikipedia.org/wiki/Multimap' title='wp: Multimap' target='_blank'>multimap</a> from one of the two tables, mapping from each join column value to all the rows that contain it.</li>
@@ -21,7 +21,7 @@ The "hash join" algorithm consists of two steps:
   <li><strong>Join phase:</strong> Scan the other table, and find matching rows by looking in the multimap created before.</li>
 </ol>
 
-In pseudo-code, the algorithm could be expressed as follows:
+pseudo-code, algorithm สามารถอธิบายได้เป็น:
 
 <pre><strong>let</strong> <i>A</i> = the first input table (or ideally, the larger one)
 <strong>let</strong> <i>B</i> = the second input table (or ideally, the smaller one)
@@ -39,7 +39,7 @@ In pseudo-code, the algorithm could be expressed as follows:
 
 # --instructions--
 
-Implement the "hash join" algorithm as a function and demonstrate that it passes the test-case listed below. The function should accept two arrays of objects and return an array of combined objects.
+ใช้อัลกอริธึม "hash join" เป็นฟังก์ชันและแสดงให้เห็นว่าผ่านการทดสอบกรณีด้านล่าง ฟังก์ชันควรยอมรับสองarrayของobjectและreturn arrayของobjectที่รวมกัน
 
 **Input**
 
@@ -139,11 +139,11 @@ Implement the "hash join" algorithm as a function and demonstrate that it passes
 | 28    | Alan   | Alan        | Ghosts    |
 | 28    | Alan   | Alan        | Zombies   |
 
-The order of the rows in the output table is not significant.
+ลำดับของแถวในตารางผลลัพธ์ไม่สำคัญ
 
 # --hints--
 
-`hashJoin` should be a function.
+`hashJoin` ควรเป็น function.
 
 ```js
 assert(typeof hashJoin === 'function');

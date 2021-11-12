@@ -8,17 +8,17 @@ dashedName: straddling-checkerboard
 
 # --description--
 
-Implement functions to encrypt and decrypt a message using the [straddling checkerboard](https://en.wikipedia.org/wiki/Straddling_checkerboard) method. The functions will take a string and an array as parameters. The array has 3 strings representing the 3 rows of the checkerboard. The output will be a series of decimal digits. Numbers should be encrypted by inserting the escape character before each digit, then including the digit unencrypted. This should be reversed for decryption.
+ช้ฟังก์ชันเพื่อเข้ารหัสและถอดรหัสข้อความโดยใช้เมธอด [straddling checkerboard](https://en.wikipedia.org/wiki/Straddling_checkerboard) ฟังก์ชันจะรับstringและarrayเป็นพารามิเตอร์ arrayมี 3 stringที่แสดงถึง 3 แถวของกระดานหมากรุก ผลลัพธ์จะเป็นชุดของตัวเลขทศนิยม ตัวเลขควรเข้ารหัสโดยการใส่อักขระหลีกก่อนแต่ละหลัก จากนั้นจึงรวมตัวเลขที่ไม่ได้เข้ารหัสด้วย นี้ควรจะกลับรายการสำหรับการถอดรหัส
 
 # --hints--
 
-`straddle` should be a function.
+`straddle` ควรเป็น function.
 
 ```js
 assert(typeof straddle == 'function');
 ```
 
-`straddle("One night-it was on the twentieth of March, 1888-I was returning.",["ESTONIA  R", "BCDFGHJKLM", "PQUVWXYZ./"])` should return a string.
+`straddle("One night-it was on the twentieth of March, 1888-I was returning.",["ESTONIA  R", "BCDFGHJKLM", "PQUVWXYZ./"])` ควร return string.
 
 ```js
 assert(
@@ -29,7 +29,7 @@ assert(
 );
 ```
 
-`straddle("One night-it was on the twentieth of March, 1888-I was returning.",["ESTONIA  R", "BCDFGHJKLM", "PQUVWXYZ./"])` should return `"34045747525284613427502840425027537379697175891898898898584619028294547488"`.
+`straddle("One night-it was on the twentieth of March, 1888-I was returning.",["ESTONIA  R", "BCDFGHJKLM", "PQUVWXYZ./"])` ควร return `"34045747525284613427502840425027537379697175891898898898584619028294547488"`.
 
 ```js
 assert.equal(
@@ -41,7 +41,7 @@ assert.equal(
 );
 ```
 
-`straddle("One night-it was on the twentieth of March, 1888-I was returning",["HOL MES RT", "ABCDFGIJKN", "PQUVWXYZ./"])` should return `"139539363509369743061399059745399365901344308320791798798798367430685972839363935"`.
+`straddle("One night-it was on the twentieth of March, 1888-I was returning",["HOL MES RT", "ABCDFGIJKN", "PQUVWXYZ./"])` ควร return `"139539363509369743061399059745399365901344308320791798798798367430685972839363935"`.
 
 ```js
 assert.equal(
@@ -54,7 +54,7 @@ assert.equal(
 );
 ```
 
-`straddle("Thecheckerboardcakerecipespecifies3largeeggsand2.25cupsofflour.",["ET AON RIS", "BCDFGHJKLM", "PQ/UVWXYZ."])` should return `"125021250212707204372221327070218600960021823809623283724002424935226226962262521636094232328463769"`.
+`straddle("Thecheckerboardcakerecipespecifies3largeeggsand2.25cupsofflour.",["ET AON RIS", "BCDFGHJKLM", "PQ/UVWXYZ."])` ควร return `"125021250212707204372221327070218600960021823809623283724002424935226226962262521636094232328463769"`.
 
 ```js
 assert.equal(
@@ -67,13 +67,13 @@ assert.equal(
 );
 ```
 
-`unstraddle` should be a function.
+`unstraddle` ควรเป็น function.
 
 ```js
 assert(typeof unstraddle == 'function');
 ```
 
-`unstraddle("34045747525284613427502840425027537379697175891898898898584619028294547488",["ESTONIA  R", "BCDFGHJKLM", "PQUVWXYZ./"])` should return a string.
+`unstraddle("34045747525284613427502840425027537379697175891898898898584619028294547488",["ESTONIA  R", "BCDFGHJKLM", "PQUVWXYZ./"])` ควร return a string.
 
 ```js
 assert(
@@ -84,7 +84,7 @@ assert(
 );
 ```
 
-`unstraddle("34045747525284613427502840425027537379697175891898898898584619028294547488",["ESTONIA  R", "BCDFGHJKLM", "PQUVWXYZ./"])` should return `"ONENIGHTITWASONTHETWENTIETHOFMARCH1888IWASRETURNING."`.
+`unstraddle("34045747525284613427502840425027537379697175891898898898584619028294547488",["ESTONIA  R", "BCDFGHJKLM", "PQUVWXYZ./"])` ควร return `"ONENIGHTITWASONTHETWENTIETHOFMARCH1888IWASRETURNING."`.
 
 ```js
 assert.equal(
@@ -96,7 +96,7 @@ assert.equal(
 );
 ```
 
-`unstraddle("139539363509369743061399059745399365901344308320791798798798367430685972839363935",["HOL MES RT", "ABCDFGIJKN", "PQUVWXYZ./"])` should return `"ONENIGHTITWASONTHETWENTIETHOFMARCH1888IWASRETURNING"`.
+`unstraddle("139539363509369743061399059745399365901344308320791798798798367430685972839363935",["HOL MES RT", "ABCDFGIJKN", "PQUVWXYZ./"])` ควร return `"ONENIGHTITWASONTHETWENTIETHOFMARCH1888IWASRETURNING"`.
 
 ```js
 assert.equal(
@@ -108,7 +108,7 @@ assert.equal(
 );
 ```
 
-`unstraddle("125021250212707204372221327070218600960021823809623283724002424935226226962262521636094232328463769",["ET AON RIS", "BCDFGHJKLM", "PQ/UVWXYZ."])` should return `"THECHECKERBOARDCAKERECIPESPECIFIES3LARGEEGGSAND2.25CUPSOFFLOUR."`.
+`unstraddle("125021250212707204372221327070218600960021823809623283724002424935226226962262521636094232328463769",["ET AON RIS", "BCDFGHJKLM", "PQ/UVWXYZ."])` ควร return `"THECHECKERBOARDCAKERECIPESPECIFIES3LARGEEGGSAND2.25CUPSOFFLOUR."`.
 
 ```js
 assert.equal(

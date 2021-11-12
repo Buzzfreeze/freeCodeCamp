@@ -8,15 +8,15 @@ dashedName: date-format
 
 # --description--
 
-Return an array with two date strings of the current date with the following specifications:
+Return array with strings ของวันที่ปัจจุบันสองตัว ตามด้านล่าง:
 
-- The first string's date order should be the year number, month number, and day number separated by dashes (`-`).
-- The first string's year should be four digits in length.
-- The first string's month and day should not contain any leading zeros.
-- The second string's weekday and month names should not be abbreviated.
-- The second string's day should not contain any leading zeros.
+- ลำดับวันที่ของstringแรกควรเป็นหมายเลขปี หมายเลขเดือน และหมายเลขวันที่คั่นด้วยเครื่องหมายขีดกลาง (`-`)
+- ปีของstringแรกควรมีความยาวสี่หลัก
+- เดือนและวันของstringแรกไม่ควรมีเลขศูนย์นำหน้า
+- ชื่อวันและเดือนของstringที่สองไม่ควรเป็นตัวย่อ
+- วันที่ของstringที่สองไม่ควรมีเลขศูนย์นำหน้า
 
-Example outputs:
+ตัวอย่าง outputs:
 
 ```js
 ['2007-11-23', 'Friday, November 23, 2007']
@@ -25,25 +25,25 @@ Example outputs:
 
 # --hints--
 
-`getDateFormats` should be a function.
+`getDateFormats` ควรเป็น function.
 
 ```js
 assert(typeof getDateFormats === 'function');
 ```
 
-`getDateFormats` should return an object.
+`getDateFormats` ควร return object.
 
 ```js
 assert(typeof getDateFormats() === 'object');
 ```
 
-`getDateFormats` should return an array with 2 elements.
+`getDateFormats` ควร return array มี 2 elements.
 
 ```js
 assert(getDateFormats().length === 2);
 ```
 
-`getDateFormats` should return the correct date in the right format
+`getDateFormats` ควร return วันที่ถูกต้องในรูปแบบที่ถูกต้อง
 
 ```js
 assert.deepEqual(getDateFormats(), dates, equalsMessage);
@@ -64,7 +64,7 @@ const getDateSolution = () => {
 };
 
 const dates = getDateSolution();
-const equalsMessage = `message: <code>getDataFormats()</code> should return <code>["${dates[0]}", "${dates[1]}"]</code>.`;
+const equalsMessage = `message: <code>getDataFormats()</code> ควร return <code>["${dates[0]}", "${dates[1]}"]</code>.`;
 ```
 
 ## --seed-contents--

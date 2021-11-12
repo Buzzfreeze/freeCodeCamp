@@ -8,51 +8,52 @@ dashedName: least-common-multiple
 
 # --description--
 
-The least common multiple of 12 and 18 is 36, because 12 is a factor (12 × 3 = 36), and 18 is a factor (18 × 2 = 36), and there is no positive integer less than 36 that has both factors. As a special case, if either *m* or *n* is zero, then the least common multiple is zero. One way to calculate the least common multiple is to iterate all the multiples of *m*, until you find one that is also a multiple of *n*. If you already have *gcd* for [greatest common divisor](<https://rosettacode.org/wiki/greatest common divisor>), then this formula calculates *lcm*. ( \\operatorname{lcm}(m, n) = \\frac{|m \\times n|}{\\operatorname{gcd}(m, n)} )
+ตัวคูณร่วมน้อยของ 12 และ 18 คือ 36 เนื่องจาก 12 เป็นตัวประกอบ (12 × 3 = 36) และ 18 เป็นตัวประกอบ (18 × 2 = 36) และไม่มีจำนวนเต็มบวกที่น้อยกว่า 36 ที่มีตัวประกอบทั้งสอง . เป็นกรณีพิเศษถ้าอย่างใดอย่างหนึ่ง *m* หรือ *n* 
+เป็นศูนย์ จากนั้นตัวคูณร่วมน้อยจะเป็นศูนย์ วิธีหนึ่งในการคำนวณตัวคูณร่วมน้อยคือการวนซ้ำตัวคูณทั้งหมดของ *m*, จนกว่าคุณจะพบอันที่เป็นพหุคูณของ *n*. หากมี *gcd* สำหรับ [greatest common divisor](<https://rosettacode.org/wiki/greatest common divisor>), สูตรคำนวณ *lcm*. ( \\operatorname{lcm}(m, n) = \\frac{|m \\times n|}{\\operatorname{gcd}(m, n)} )
 
 # --instructions--
 
-Compute the least common multiple of an array of integers. Given *m* and *n*, the least common multiple is the smallest positive integer that has both *m* and *n* as factors.
+คำนวณผลคูณร่วมน้อยของอาร์เรย์ของจำนวนเต็ม ให้ *m* และ *n* ตัวคูณร่วมน้อยคือจำนวนเต็มบวกที่เล็กที่สุดที่มีทั้ง *m* และ *n* เป็นfactor
 
 # --hints--
 
-`LCM` should be a function.
+`LCM` ควรเป็น function.
 
 ```js
 assert(typeof LCM == 'function');
 ```
 
-`LCM([2, 4, 8])` should return a number.
+`LCM([2, 4, 8])` ควร return number.
 
 ```js
 assert(typeof LCM([2, 4, 8]) == 'number');
 ```
 
-`LCM([2, 4, 8])` should return `8`.
+`LCM([2, 4, 8])` ควร return `8`.
 
 ```js
 assert.equal(LCM([2, 4, 8]), 8);
 ```
 
-`LCM([4, 8, 12])` should return `24`.
+`LCM([4, 8, 12])` ควร return `24`.
 
 ```js
 assert.equal(LCM([4, 8, 12]), 24);
 ```
 
-`LCM([3, 4, 5, 12, 40])` should return `120`.
+`LCM([3, 4, 5, 12, 40])` ควร return `120`.
 
 ```js
 assert.equal(LCM([3, 4, 5, 12, 40]), 120);
 ```
 
-`LCM([11, 33, 90])` should return `990`.
+`LCM([11, 33, 90])` ควร return `990`.
 
 ```js
 assert.equal(LCM([11, 33, 90]), 990);
 ```
 
-`LCM([-50, 25, -45, -18, 90, 447])` should return `67050`.
+`LCM([-50, 25, -45, -18, 90, 447])` ควร return `67050`.
 
 ```js
 assert.equal(LCM([-50, 25, -45, -18, 90, 447]), 67050);

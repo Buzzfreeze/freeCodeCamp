@@ -8,15 +8,15 @@ dashedName: loop-over-multiple-arrays-simultaneously
 
 # --description--
 
-Loop over multiple arrays and create a new array whose $i^{th}$ element is the concatenation of $i^{th}$ element of each of the given.
+Loop หลาย arrays และสร้าง array ใหม่ที่มีองค์ประกอบ $i^{th}$ เป็นการต่อกันขององค์ประกอบ $i^{th}$ ของแต่ละองค์ประกอบที่กำหนด
 
-For this example, if you are given this array of arrays:
+สำหรับตัวอย่างนี้ หากคุณได้รับarrayของarrayนี้:
 
 ```js
 [ ["a", "b", "c"], ["A", "B", "C"], [1, 2, 3] ]
 ```
 
-the output should be:
+output ควรเป็น:
 
 ```js
 ["aA1","bB2","cC3"]
@@ -24,17 +24,17 @@ the output should be:
 
 # --instructions--
 
-Write a function that takes an array of arrays as a parameter and returns an array of strings satisfying the given description.
+เขียนฟังก์ชันที่ใช้arrayของarrayเป็นพารามิเตอร์และส่งกลับarrayของสตริงที่ตรงตามคำอธิบายที่กำหนด
 
 # --hints--
 
-`loopSimult` should be a function.
+`loopSimult` ควรเป็น function.
 
 ```js
 assert(typeof loopSimult == 'function');
 ```
 
-`loopSimult([["a", "b", "c"], ["A", "B", "C"], [1, 2, 3]])` should return a array.
+`loopSimult([["a", "b", "c"], ["A", "B", "C"], [1, 2, 3]])` ควร return array.
 
 ```js
 assert(
@@ -48,7 +48,7 @@ assert(
 );
 ```
 
-`loopSimult([["a", "b", "c"], ["A", "B", "C"], [1, 2, 3]])` should return `["aA1", "bB2", "cC3"]`.
+`loopSimult([["a", "b", "c"], ["A", "B", "C"], [1, 2, 3]])` ควร return `["aA1", "bB2", "cC3"]`.
 
 ```js
 assert.deepEqual(
@@ -61,7 +61,7 @@ assert.deepEqual(
 );
 ```
 
-`loopSimult([["c", "b", "c"], ["4", "5", "C"], [7, 7, 3]])` should return `["c47", "b57", "cC3"]`.
+`loopSimult([["c", "b", "c"], ["4", "5", "C"], [7, 7, 3]])` ควร return `["c47", "b57", "cC3"]`.
 
 ```js
 assert.deepEqual(
@@ -74,7 +74,7 @@ assert.deepEqual(
 );
 ```
 
-`loopSimult([["a", "b", "c", "d"], ["A", "B", "C", "d"], [1, 2, 3, 4]])` should return `["aA1", "bB2", "cC3", "dd4"]`.
+`loopSimult([["a", "b", "c", "d"], ["A", "B", "C", "d"], [1, 2, 3, 4]])` ควร return `["aA1", "bB2", "cC3", "dd4"]`.
 
 ```js
 assert.deepEqual(
@@ -87,7 +87,7 @@ assert.deepEqual(
 );
 ```
 
-`loopSimult([["a", "b"], ["A", "B"], [1, 2]])` should return `["aA1", "bB2"]`.
+`loopSimult([["a", "b"], ["A", "B"], [1, 2]])` ควร return `["aA1", "bB2"]`.
 
 ```js
 assert.deepEqual(
@@ -100,7 +100,7 @@ assert.deepEqual(
 );
 ```
 
-`loopSimult([["b", "c"], ["B", "C"], [2, 3]])` should return `["bB2", "cC3"]`.
+`loopSimult([["b", "c"], ["B", "C"], [2, 3]])` ควร return `["bB2", "cC3"]`.
 
 ```js
 assert.deepEqual(

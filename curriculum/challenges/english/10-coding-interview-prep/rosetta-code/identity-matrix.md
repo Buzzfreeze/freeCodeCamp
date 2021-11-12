@@ -8,7 +8,7 @@ dashedName: identity-matrix
 
 # --description--
 
-An *identity matrix* is a square matrix of size \\( n \\times n \\), where the diagonal elements are all `1`s (ones), and all the other elements are all `0`s (zeroes).
+*identity matrix* เป็น square matrix มี size \\( n \\times n \\), โดยที่องค์ประกอบในแนวทแยงล้วนเป็น `1` (ones), และองค์ประกอบอื่น ๆ ทั้งหมดนั้นทั้งหมดเป็น `0` (zeroes).
 
 <ul>
   <li style='list-style: none;'>\(\displaystyle I_{n}=\begin{bmatrix} 1 &#x26; 0 &#x26; 0 \cr 0 &#x26; 1 &#x26; 0 \cr 0 &#x26; 0 &#x26; 1 \cr \end{bmatrix}\)</li>
@@ -16,41 +16,41 @@ An *identity matrix* is a square matrix of size \\( n \\times n \\), where the d
 
 # --instructions--
 
-Write a function that takes a number `n` as a parameter and returns the identity matrix of order \\( n \\times n \\).
+เขียนฟังก์ชันที่ใช้ตัวเลข `n` เป็นพารามิเตอร์และreturnเมทริกซ์เอกลักษณ์ของคำสั่ง \\( n \\times n \\)
 
 # --hints--
 
-`idMatrix` should be a function.
+`idMatrix` ควรเป็น function.
 
 ```js
 assert(typeof idMatrix == 'function');
 ```
 
-`idMatrix(1)` should return an array.
+`idMatrix(1)` ควร return array.
 
 ```js
 assert(Array.isArray(idMatrix(1)));
 ```
 
-`idMatrix(1)` should return `[ [ 1 ] ]`.
+`idMatrix(1)` ควร return `[ [ 1 ] ]`.
 
 ```js
 assert.deepEqual(idMatrix(1), results[0]);
 ```
 
-`idMatrix(2)` should return `[ [ 1, 0 ], [ 0, 1 ] ]`.
+`idMatrix(2)` ควร return `[ [ 1, 0 ], [ 0, 1 ] ]`.
 
 ```js
 assert.deepEqual(idMatrix(2), results[1]);
 ```
 
-`idMatrix(3)` should return `[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ]`.
+`idMatrix(3)` ควร return `[ [ 1, 0, 0 ], [ 0, 1, 0 ], [ 0, 0, 1 ] ]`.
 
 ```js
 assert.deepEqual(idMatrix(3), results[2]);
 ```
 
-`idMatrix(4)` should return `[ [ 1, 0, 0, 0 ], [ 0, 1, 0, 0 ], [ 0, 0, 1, 0 ], [ 0, 0, 0, 1 ] ]`.
+`idMatrix(4)` ควร return `[ [ 1, 0, 0, 0 ], [ 0, 1, 0, 0 ], [ 0, 0, 1, 0 ], [ 0, 0, 0, 1 ] ]`.
 
 ```js
 assert.deepEqual(idMatrix(4), results[3]);

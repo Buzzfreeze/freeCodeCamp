@@ -8,25 +8,25 @@ dashedName: factors-of-a-mersenne-number
 
 # --description--
 
-A Mersenne number is a number in the form of <code>2<sup>P</sup>-1</code>.
+Mersenne number เป็นจำนวนในรูปของ <code>2<sup>P</sup>-1</code>.
 
-If `P` is prime, the Mersenne number may be a Mersenne prime. (If `P` is not prime, the Mersenne number is also not prime.)
+ถ้า `P` เป็นจำนวนเฉพาะ ตัวเลข Mersenne อาจเป็น Mersenne Prime (หาก `P` ไม่ใช่จำนวนเฉพาะ แสดงว่าจำนวน Mersenne ก็ไม่ใช่จำนวนเฉพาะด้วย)
 
-In the search for Mersenne prime numbers it is advantageous to eliminate exponents by finding a small factor before starting a, potentially lengthy, [Lucas-Lehmer test](<https://rosettacode.org/wiki/Lucas-Lehmer test> "Lucas-Lehmer test").
+ในการค้นหาจำนวนเฉพาะของ Mersenne จะเป็นข้อได้เปรียบที่จะกำจัดเลขชี้กำลังโดยการค้นหาปัจจัยเล็กๆ ก่อนที่จะเริ่ม  [การทำสอบ Lucas-Lehmer test](<https://rosettacode.org/wiki/Lucas-Lehmer test> "Lucas-Lehmer test") ซึ่งอาจมีความยาวมาก 
 
-There are very efficient algorithms for determining if a number divides <code>2<sup>P</sup>-1</code> (or equivalently, if <code>2<sup>P</sup> mod (the number) = 1</code>).
+มีอัลกอริธึมที่มีประสิทธิภาพมากในการพิจารณาว่าตัวเลขหาร <code>2<sup>P</sup>-1</code> หรือไม่ (หรือเทียบเท่าถ้า <code>2<sup>P</sup> mod (ตัวเลข) ) = 1</code>)
 
-Some languages already have built-in implementations of this exponent-and-mod operation (called modPow or similar).
+บางภาษามีการนำไปใช้ในตัวของการดำเนินการเลขชี้กำลังและmodนี้อยู่แล้ว (เรียกว่า modPow หรือคล้ายกัน)
 
-The following is how to implement this modPow yourself:
+ต่อไปนี้เป็นวิธีการใช้ modPow นี้ด้วยตัวคุณเอง:
 
-For example, let's compute <code>2<sup>23</sup> mod 47</code>.
+เช่น คำนวน <code>2<sup>23</sup> mod 47</code>.
 
-Convert the exponent 23 to binary, you get 10111. Starting with <code><tt>square</tt> = 1</code>, repeatedly square it.
+แปลงเลขชี้กำลัง 23 เป็นเลขฐานสอง คุณจะได้ 10111 เริ่มต้นด้วย <code><tt>square</tt> = 1</code> ยกกำลังสองซ้ำๆ
 
-Remove the top bit of the exponent, and if it's 1 multiply `square` by the base of the exponentiation (2), then compute <code><tt>square</tt> modulo 47</code>.
+ลบบิตบนของเลขชี้กำลังออก และหากเป็น 1 ให้คูณ "กำลังสอง" ด้วยฐานของการยกกำลัง (2) ให้คำนวณ <code><tt>square</tt> modulo 47</code>
 
-Use the result of the modulo from the last step as the initial value of `square` in the next step:
+ใช้ผลลัพธ์ของmoduloจากขั้นตอนสุดท้ายเป็นค่าเริ่มต้นของ "กำลังสอง" ในขั้นตอนถัดไป:
 
 <pre>Remove   Optional
 square        top bit  multiply by 2  mod 47
@@ -38,51 +38,52 @@ square        top bit  multiply by 2  mod 47
 27*27 = 729   1        729*2 = 1458      1
 </pre>
 
-Since <code>2<sup>23</sup> mod 47 = 1</code>, 47 is a factor of <code>2<sup>P</sup>-1</code>.
+เนื่องจาก <code>2<sup>23</sup> mod 47 = 1</code>, 47 เป็น factor ของ <code>2<sup>P</sup>-1</code>.
 
-(To see this, subtract 1 from both sides: <code>2<sup>23</sup>-1 = 0 mod 47</code>.)
+(ลบ 1 จากทั้งสองข้าง: <code>2<sup>23</sup>-1 = 0 mod 47</code>.)
 
-Since we've shown that 47 is a factor, <code>2<sup>23</sup>-1</code> is not prime.
+เนื่องจาก 47 เป็น factor <code>2<sup>23</sup>-1</code> ไม่ใช่ prime.
 
-Further properties of Mersenne numbers allow us to refine the process even more.
+คุณสมบัติเพิ่มเติมของตัวเลข Mersenne ช่วยให้เราปรับแต่งกระบวนการได้มากขึ้น
 
-Any factor `q` of <code>2<sup>P</sup>-1</code> must be of the form `2kP+1`, `k` being a positive integer or zero. Furthermore, `q` must be `1` or `7 mod 8`.
+ทุก factor `q` of <code>2<sup>P</sup>-1</code> ต้องอยู่ในรูป `2kP+1`, `k` 
+เป็นจำนวนเต็มบวกหรือศูนย์ มากกว่านั้น `q` ต้องเป็น `1` หรืแ `7 mod 8`.
 
-Finally any potential factor `q` must be [prime](<https://rosettacode.org/wiki/Primality by Trial Division> "Primality by Trial Division").
+ทุก potential factor `q` ต้องเป็น [prime](<https://rosettacode.org/wiki/Primality by Trial Division> "Primality by Trial Division").
 
-As in other trial division algorithms, the algorithm stops when `2kP+1 > sqrt(N)`.These primarily tests only work on Mersenne numbers where `P` is prime. For example, <code>M<sub>4</sub>=15</code> yields no factors using these techniques, but factors into 3 and 5, neither of which fit `2kP+1`.
+เช่นเดียวกับอัลกอริธึมการแบ่งการทดลองอื่นๆ อัลกอริธึมจะหยุดเมื่อ `2kP+1 > sqrt(N)` การทดสอบหลักเหล่านี้ใช้งานได้เฉพาะกับตัวเลข Mersenne ที่ `P` เป็นจำนวนเฉพาะ ตัวอย่างเช่น <code>M<sub>4</sub>=15</code> ไม่มีปัจจัยใดที่ใช้เทคนิคเหล่านี้ แต่แยกปัจจัยออกเป็น 3 และ 5 ซึ่งไม่ตรงกับ `2kP+1`
 
 # --instructions--
 
-Using the above method find a factor of <code>2<sup>p</sup>-1</code>.
+ใช้วิธีข้างต้นเพื่อหา factor ของ <code>2<sup>p</sup>-1</code>.
 
 # --hints--
 
-`check_mersenne` should be a function.
+`check_mersenne` ควรเป็น function.
 
 ```js
 assert(typeof check_mersenne === 'function');
 ```
 
-`check_mersenne(3)` should return a string.
+`check_mersenne(3)` ควร return string.
 
 ```js
 assert(typeof check_mersenne(3) == 'string');
 ```
 
-`check_mersenne(3)` should return the string `M3 = 2^3-1 is prime`.
+`check_mersenne(3)` ควร return string `M3 = 2^3-1 is prime`.
 
 ```js
 assert.equal(check_mersenne(3), 'M3 = 2^3-1 is prime');
 ```
 
-`check_mersenne(23)` should return the string `M23 = 2^23-1 is composite with factor 47`.
+`check_mersenne(23)` ควร return string `M23 = 2^23-1 is composite with factor 47`.
 
 ```js
 assert.equal(check_mersenne(23), 'M23 = 2^23-1 is composite with factor 47');
 ```
 
-`check_mersenne(929)` should return the string `M929 = 2^929-1 is composite with factor 13007`.
+`check_mersenne(929)` ควร return string `M929 = 2^929-1 is composite with factor 13007`.
 
 ```js
 assert.equal(
@@ -133,7 +134,7 @@ function check_mersenne(p){
       while ((2*k*p - 1) < limit){
         q = 2*k*p + 1;
         if (isPrime(q) && (q % 8 == 1 || q % 8 == 7) && trial_factor(2,p,q)){
-          return q; // q is a factor of 2**p-1
+          return q; // q เป็น factor of 2**p-1
         }
         k++;
       }

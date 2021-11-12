@@ -8,47 +8,46 @@ dashedName: s-expressions
 
 # --description--
 
-[S-Expressions](https://en.wikipedia.org/wiki/S-Expression "wp: S-Expression") are one convenient way to parse and store data.
+[S-Expressions](https://en.wikipedia.org/wiki/S-Expression "wp: S-Expression") เป็นวิธีที่สะดวกในการแยกวิเคราะห์และจัดเก็บข้อมูล
 
 # --instructions--
+เขียนโปรแกรมอ่าน/แยกวิเคราะห์อย่างง่ายสำหรับ S-Expressions ที่จัดการstringที่ยกมาและไม่มีเครื่องหมายคำพูด จำนวนเต็ม และทศนิยม
 
-Write a simple reader/parser for S-Expressions that handles quoted and unquoted strings, integers and floats.
+ฟังก์ชันควรอ่าน S-Expression เดียวแต่ซ้อนกันจากstringและส่งคืนเป็นarray (ซ้อนกัน)
 
-The function should read a single but nested S-Expression from a string and return it as a (nested) array.
+การขึ้นบรรทัดใหม่และการเว้นวรรคอื่นๆ อาจถูกละเว้น เว้นแต่จะอยู่ภายในstringที่ยกมา
 
-Newlines and other whitespace may be ignored unless contained within a quoted string.
+"`()`" ภายในstringที่ยกมาจะไม่ตีความ แต่ถือว่าเป็นส่วนหนึ่งของstring
 
-"`()`" inside quoted strings are not interpreted, but treated as part of the string.
+การจัดการอัญประกาศที่ใช้ Escape ภายในstringเป็นทางเลือก ดังนั้น "`(foo"bar)`" อาจถือเป็นstring "`foo"bar`" หรือเป็นข้อผิดพลาด
 
-Handling escaped quotes inside a string is optional; thus "`(foo"bar)`" may be treated as a string "`foo"bar`", or as an error.
+สำหรับสิ่งนี้ ผู้อ่านไม่จำเป็นต้องรู้จัก `\` สำหรับescaping แต่ควรรู้จักตัวเลขด้วย นอกจากนี้ ควรจดจำตัวเลขหากภาษานั้นมีประเภทข้อมูลที่เหมาะสม
 
-For this, the reader need not recognize `\` for escaping, but should, in addition, recognize numbers if the language has appropriate data types.
+โปรดทราบว่า ยกเว้น `()"` (`\` หากรองรับescaping) และช่องว่าง จะไม่มีอักขระพิเศษ อนุญาตให้ใช้อย่างอื่นโดยไม่มีเครื่องหมายคำพูด
 
-Note that with the exception of `()"` (`\` if escaping is supported) and whitespace, there are no special characters. Anything else is allowed without quotes.
-
-The reader should be able to read the following input
+ผู้อ่านควรอ่านข้อมูลต่อไปนี้ได้
 
 <pre>((data "quoted data" 123 4.5)
 (data (!@# (4.5) "(more" "data)")))
 </pre>
 
-and turn it into a native data structure. (See the [Pike](https://rosettacode.org/wiki/S-Expressions#Pike "\#Pike"), [Python](https://rosettacode.org/wiki/S-Expressions#Python "\#Python") and [Ruby](https://rosettacode.org/wiki/S-Expressions#Ruby "\#Ruby") implementations for examples of native data structures.)
+ย้อนกลับไปดู data structure. (See the [Pike](https://rosettacode.org/wiki/S-Expressions#Pike "\#Pike"), [Python](https://rosettacode.org/wiki/S-Expressions#Python "\#Python") และ [Ruby](https://rosettacode.org/wiki/S-Expressions#Ruby "\#Ruby") เช่น native data structures.)
 
 # --hints--
 
-`parseSexpr` should be a function.
+`parseSexpr` ควรเป็น function.
 
 ```js
 assert(typeof parseSexpr === 'function');
 ```
 
-`parseSexpr('(data1 data2 data3)')` should return `['data1', 'data2', 'data3']`
+`parseSexpr('(data1 data2 data3)')` ควร return `['data1', 'data2', 'data3']`
 
 ```js
 assert.deepEqual(parseSexpr(simpleSExpr), simpleSolution);
 ```
 
-`parseSexpr('((data "quoted data" 123 4.5) (data (!@# (4.5) "(more" "data)")))')` should return `[['data', '"quoted data"', 123, 4.5], ['data', ['!@#', [4.5], '"(more"', '"data)"']]]`.
+`parseSexpr('((data "quoted data" 123 4.5) (data (!@# (4.5) "(more" "data)")))')` ควร return `[['data', '"quoted data"', 123, 4.5], ['data', ['!@#', [4.5], '"(more"', '"data)"']]]`.
 
 ```js
 assert.deepEqual(parseSexpr(basicSExpr), basicSolution);

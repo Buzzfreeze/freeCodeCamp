@@ -8,9 +8,9 @@ dashedName: sort-stability
 
 # --description--
 
-When sorting records in a table by a particular column or field, a [stable sort](https://en.wikipedia.org/wiki/Stable_sort#Stability) will always retain the relative order of records that have the same key.
+เมื่อจัดเรียงrecordsในตารางตามคอลัมน์หรือเขตข้อมูลเฉพาะ [stable sort](https://en.wikipedia.org/wiki/Stable_sort#Stability) จะเก็บลำดับของrecordsที่มีkeyเดียวกันเสมอ
 
-For example, in this table of countries and cities, a stable sort on the **second** column, the cities, would keep the US Birmingham above the UK Birmingham. (Although an unstable sort *might*, in this case, place the US Birmingham above the UK Birmingham, a stable sort routine would *guarantee* it).
+ตัวอย่างเช่น ในตารางประเทศและเมืองนี้ การจัดเรียงแบบคงที่ในคอลัมน์ **second** เมือง จะทำให้เบอร์มิงแฮมสหรัฐอเมริกาอยู่เหนือเบอร์มิงแฮมของสหราชอาณาจักร (แม้ว่าการเรียงลำดับที่ไม่เสถียร *might* ในกรณีนี้ ให้วางเบอร์มิงแฮมสหรัฐเหนือเบอร์มิงแฮมของสหราชอาณาจักร การจัดเรียงroutine อาจจะstable *guarantee*)
 
 <pre>UK  London
 US  New York
@@ -18,21 +18,21 @@ US  Birmingham
 UK  Birmingham
 </pre>
 
-Similarly, stable sorting on just the first column would generate "UK London" as the first item and "US Birmingham" as the last item (since the order of the elements having the same first word – "UK" or "US" – would be maintained).
+ในทำนองเดียวกัน การเรียงลำดับที่เสถียรในคอลัมน์แรกจะสร้าง "UK London" เป็นรายการแรกและ "US Birmingham" เป็นรายการสุดท้าย (เนื่องจากลำดับขององค์ประกอบที่มีคำแรกเหมือนกัน - "UK" หรือ "US" - จะ ให้คงอยู่)
 
 # --instructions--
 
-Write a function that takes a 2D array as a parameter. Each element has 2 elements similar to the above example. The function should sort the array as mentioned previously and return the sorted array.
+เขียนฟังก์ชันที่ใช้array 2 มิติเป็นพารามิเตอร์ แต่ละองค์ประกอบมี 2 องค์ประกอบคล้ายกับตัวอย่างข้างต้น ฟังก์ชันควรจัดเรียงarrayตามที่กล่าวไว้ก่อนหน้านี้และส่งคืนarrayที่จัดเรียง
 
 # --hints--
 
-`stableSort` should be a function.
+`stableSort` ควรเป็น function.
 
 ```js
 assert(typeof stableSort == 'function');
 ```
 
-`stableSort([["UK", "London"], ["US", "New York"], ["US", "Birmingham"], ["UK", "Birmingham"]])` should return an array.
+`stableSort([["UK", "London"], ["US", "New York"], ["US", "Birmingham"], ["UK", "Birmingham"]])` ควร return array.
 
 ```js
 assert(
@@ -47,7 +47,7 @@ assert(
 );
 ```
 
-`stableSort([["UK", "London"], ["US", "New York"], ["US", "Birmingham"], ["UK", "Birmingham"]])` should return `[["US", "Birmingham"], ["UK", "Birmingham"], ["UK", "London"], ["US", "New York"]]`.
+`stableSort([["UK", "London"], ["US", "New York"], ["US", "Birmingham"], ["UK", "Birmingham"]])` ควร return `[["US", "Birmingham"], ["UK", "Birmingham"], ["UK", "London"], ["US", "New York"]]`.
 
 ```js
 assert.deepEqual(
@@ -66,7 +66,7 @@ assert.deepEqual(
 );
 ```
 
-`stableSort([[2, 2], [1, 2], [1, 4], [1, 5]])` should return `[[2, 2], [1, 2], [1, 4], [1, 5]]`.
+`stableSort([[2, 2], [1, 2], [1, 4], [1, 5]])` ควร return `[[2, 2], [1, 2], [1, 4], [1, 5]]`.
 
 ```js
 assert.deepEqual(
@@ -85,7 +85,7 @@ assert.deepEqual(
 );
 ```
 
-`stableSort([[11, 55], [12, 45], [11, 45], [32, 45]])` should return `[[12, 45], [11, 45], [32, 45], [11, 55]]`.
+`stableSort([[11, 55], [12, 45], [11, 45], [32, 45]])` ควร return `[[12, 45], [11, 45], [32, 45], [11, 55]]`.
 
 ```js
 assert.deepEqual(
@@ -104,7 +104,7 @@ assert.deepEqual(
 );
 ```
 
-`stableSort([[10, 22], [1, 2], [1, 4], [1, 5], [10, 9]])` should return `[[1, 2], [1, 4], [1, 5], [10, 9], [10, 22]]`.
+`stableSort([[10, 22], [1, 2], [1, 4], [1, 5], [10, 9]])` ควร return `[[1, 2], [1, 4], [1, 5], [10, 9], [10, 22]]`.
 
 ```js
 assert.deepEqual(
@@ -125,7 +125,7 @@ assert.deepEqual(
 );
 ```
 
-`stableSort([[55, 54], [12, 22], [31, 43], [31, 54], [10, 49]])` should return `[[12, 22], [31, 43], [10, 49], [55, 54], [31, 54]]`.
+`stableSort([[55, 54], [12, 22], [31, 43], [31, 54], [10, 49]])` ควร return `[[12, 22], [31, 43], [10, 49], [55, 54], [31, 54]]`.
 
 ```js
 assert.deepEqual(

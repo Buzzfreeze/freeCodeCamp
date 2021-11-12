@@ -8,16 +8,16 @@ dashedName: kaprekar-numbers
 
 # --description--
 
-A positive integer is a [Kaprekar number](<https://en.wikipedia.org/wiki/Kaprekar number>) if:
+positive integer เป็น [Kaprekar number](<https://en.wikipedia.org/wiki/Kaprekar number>) if:
 
 <ul>
   <li>It is 1, or,</li>
   <li>The decimal representation of its square may be split once into two parts consisting of positive integers which sum to the original number. </li>
 </ul>
 
-Note that a split resulting in a part consisting purely of 0s is not valid, as 0 is not considered positive.
+โปรดทราบว่าการแยกส่วนซึ่งส่งผลให้ส่วนที่ประกอบด้วย 0 ล้วนไม่ถูกต้อง เนื่องจาก 0 ไม่ถือเป็นค่าบวก
 
-Example Kaprekar numbers:
+ตัวอย่างตัวเลข Kaprekar:
 
 <ul>
   <li><code>2223</code> is a Kaprekar number, as <code>2223 * 2223 = 4941729</code>, <code>4941729</code> may be split to <code>494</code> and <code>1729</code>, and <code>494 + 1729 = 2223</code></li>
@@ -26,59 +26,59 @@ Example Kaprekar numbers:
 
 # --instructions--
 
-Write a function that takes a number $n$, a base $bs$, and returns true if the number is a Kaprekar number for the given base. Otherwise, the function returns false.
+เขียนฟังก์ชันที่ใช้ตัวเลข $n$ ฐาน $bs$ และคืนค่า จริง หากตัวเลขนั้นเป็นตัวเลข Kaprekar สำหรับฐานที่กำหนด มิฉะนั้น ฟังก์ชันจะส่งกลับค่าเท็จ
 
 # --hints--
 
-`isKaprekar` should be a function.
+`isKaprekar` ควรเป็น function.
 
 ```js
 assert(typeof isKaprekar == 'function');
 ```
 
-`isKaprekar(1, 10)` should return a boolean.
+`isKaprekar(1, 10)` ควร return boolean.
 
 ```js
 assert(typeof isKaprekar(1, 10) == 'boolean');
 ```
 
-`isKaprekar(1, 10)` should return `true`.
+`isKaprekar(1, 10)` ควร return `true`.
 
 ```js
 assert.equal(isKaprekar(1, 10), true);
 ```
 
-`isKaprekar(9, 10)` should return `true`.
+`isKaprekar(9, 10)` ควร return `true`.
 
 ```js
 assert.equal(isKaprekar(9, 10), true);
 ```
 
-`isKaprekar(2223, 10)` should return `true`.
+`isKaprekar(2223, 10)` ควร return `true`.
 
 ```js
 assert.equal(isKaprekar(2223, 10), true);
 ```
 
-`isKaprekar(22823, 10)` should return `false`.
+`isKaprekar(22823, 10)` ควร return `false`.
 
 ```js
 assert.equal(isKaprekar(22823, 10), false);
 ```
 
-`isKaprekar(9, 17)` should return `false`.
+`isKaprekar(9, 17)` ควร return `false`.
 
 ```js
 assert.equal(isKaprekar(9, 17), false);
 ```
 
-`isKaprekar(225, 17)` should return `true`.
+`isKaprekar(225, 17)` ควร return `true`.
 
 ```js
 assert.equal(isKaprekar(225, 17), true);
 ```
 
-`isKaprekar(999, 17)` should return `false`.
+`isKaprekar(999, 17)` ควร return `false`.
 
 ```js
 assert.equal(isKaprekar(999, 17), false);

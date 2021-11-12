@@ -8,13 +8,12 @@ dashedName: execute-brain
 
 # --description--
 
-Write a function to implement a Brain\*\*\*\* interpreter. The function will take a string as a parameter and should return a string as the output. More details are given below:
+เขียนฟังก์ชันเพื่อใช้ interpreters Brain\*\*\*\* ฟังก์ชันจะใช้stringเป็นparameterและควร retrun stringเป็นoutputรายละเอียดเพิ่มเติมได้รับด้านล่าง:
 
-RCBF is a set of [Brainf\*\*\*](https://rosettacode.org/wiki/Brainf*** "Brainf\*\*\*") compilers and interpreters written for Rosetta Code in a variety of languages.
+RCBF เป็น set ของ [Brainf\*\*\*](https://rosettacode.org/wiki/Brainf*** "Brainf\*\*\*") compilers และ interpretersเขียนสำหรับ Rosetta Code ในหลายๆภาษา
 
-Below are links to each of the versions of RCBF.
-
-An implementation need only properly implement the following instructions:
+ด้านล่างนี้เป็นลิงค์ไปยังแต่ละเวอร์ชั่นของ RCBF
+การใช้งานจำเป็นต้องปฏิบัติตามคำแนะนำต่อไปนี้อย่างถูกต้องเท่านั้น:
 
 | Command           | Description                                                                        |
 | ----------------- | ---------------------------------------------------------------------------------- |
@@ -27,35 +26,35 @@ An implementation need only properly implement the following instructions:
 | <code>\[</code>   | Jump past the matching <code>]</code> if the cell under the pointer is 0           |
 | <code>]</code>    | Jump back to the matching <code>\[</code> if the cell under the pointer is nonzero |
 
-Any cell size is allowed, EOF (*E*nd-*O*-*F*ile) support is optional, as is whether you have bounded or unbounded memory.
+อนุญาตให้ใช้ขนาดเซลล์ใดก็ได้ รองรับ EOF (*E*nd-*O*-*F*ile) หรือไม่ก็ได้ เช่นเดียวกับที่คุณมีหน่วยความจำที่มีขอบเขตหรือไม่มีขอบเขต
 
 # --hints--
 
-`brain(bye)` should return a string
+`brain(bye)` ควร return string
 
 ```js
 assert(typeof brain(bye) === 'string');
 ```
 
-`brain("++++++[>++++++++++<-]>+++++.")` should return "A"
+`brain("++++++[>++++++++++<-]>+++++.")` ควร return "A"
 
 ```js
 assert.equal(brain('++++++[>++++++++++<-]>+++++.'), 'A');
 ```
 
-`brain(bye)` should return `Goodbye, World!\r\n`
+`brain(bye)` ควร return `Goodbye, World!\r\n`
 
 ```js
 assert.equal(brain(bye), 'Goodbye, World!\r\n');
 ```
 
-`brain(hello)` should return `Hello World!\n`
+`brain(hello)` ควร return `Hello World!\n`
 
 ```js
 assert.equal(brain(hello), 'Hello World!\n');
 ```
 
-`brain(fib)` should return `1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89`
+`brain(fib)` ควร return `1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89`
 
 ```js
 assert.equal(brain(fib), '1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89');

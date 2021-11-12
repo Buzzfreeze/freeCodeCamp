@@ -8,25 +8,25 @@ dashedName: hofstadter-figure-figure-sequences
 
 # --description--
 
-These two sequences of positive integers are defined as:
+จำนวนเต็มบวกสองลำดับนี้ถูกกำหนดเป็น:
 
 $R(1)=1\\ ;\\ S(1)=2 \\\\R(n)=R(n-1)+S(n-1), \\quad n>1.$
 
-The sequence $S(n)$ is further defined as the sequence of positive integers not present in $R(n)$.
+ลำดับ $S(n)$ ถูกกำหนดเพิ่มเติมเป็นลำดับของจำนวนเต็มบวกที่ไม่มีอยู่ใน $R(n)$
 
-Sequence $R$ starts:
+ลำดับ $R$ เริ่มต้น:
 
 <pre>1, 3, 7, 12, 18, ...</pre>
 
-Sequence $S$ starts:
+ลำดับ $S$ เริ่มต้น:
 
 <pre>2, 4, 5, 6, 8, ...</pre>
 
 # --instructions--
 
-Create two functions named `ffr` and `ffs` that when given `n` return `R(n)` or `S(n)` respectively. (Note that R(1) = 1 and S(1) = 2 to avoid off-by-one errors).
+สร้างสองฟังก์ชันชื่อ `ffr` และ `ffs` ซึ่งเมื่อได้รับ `n` return `R(n)` หรือ `S(n)` ตามลำดับ (โปรดทราบว่า R(1) = 1 และ S(1) = 2 เพื่อหลีกเลี่ยงข้อผิดพลาดแบบแยกส่วน)
 
-No maximum value for `n` should be assumed.
+ไม่มีค่าสูงสุดสำหรับ `n`
 
 **References**
 
@@ -41,73 +41,73 @@ No maximum value for `n` should be assumed.
 
 # --hints--
 
-`ffr` should be a function.
+`ffr` ควรเป็น function.
 
 ```js
 assert(typeof ffr === 'function');
 ```
 
-`ffs` should be a function.
+`ffs` ควรเป็น function.
 
 ```js
 assert(typeof ffs === 'function');
 ```
 
-`ffr` should return integer.
+`ffr` ควร return integer.
 
 ```js
 assert(Number.isInteger(ffr(1)));
 ```
 
-`ffs` should return integer.
+`ffs` ควร return integer.
 
 ```js
 assert(Number.isInteger(ffs(1)));
 ```
 
-`ffr(10)` should return `69`
+`ffr(10)` ควร return `69`
 
 ```js
 assert.equal(ffr(ffrParamRes[0][0]), ffrParamRes[0][1]);
 ```
 
-`ffr(50)` should return `1509`
+`ffr(50)` ควร return `1509`
 
 ```js
 assert.equal(ffr(ffrParamRes[1][0]), ffrParamRes[1][1]);
 ```
 
-`ffr(100)` should return `5764`
+`ffr(100)` ควร return `5764`
 
 ```js
 assert.equal(ffr(ffrParamRes[2][0]), ffrParamRes[2][1]);
 ```
 
-`ffr(1000)` should return `526334`
+`ffr(1000)` ควร return `526334`
 
 ```js
 assert.equal(ffr(ffrParamRes[3][0]), ffrParamRes[3][1]);
 ```
 
-`ffs(10)` should return `14`
+`ffs(10)` ควร return `14`
 
 ```js
 assert.equal(ffs(ffsParamRes[0][0]), ffsParamRes[0][1]);
 ```
 
-`ffs(50)` should return `59`
+`ffs(50)` ควร return `59`
 
 ```js
 assert.equal(ffs(ffsParamRes[1][0]), ffsParamRes[1][1]);
 ```
 
-`ffs(100)` should return `112`
+`ffs(100)` ควร return `112`
 
 ```js
 assert.equal(ffs(ffsParamRes[2][0]), ffsParamRes[2][1]);
 ```
 
-`ffs(1000)` should return `1041`
+`ffs(1000)` ควร return `1041`
 
 ```js
 assert.equal(ffs(ffsParamRes[3][0]), ffsParamRes[3][1]);

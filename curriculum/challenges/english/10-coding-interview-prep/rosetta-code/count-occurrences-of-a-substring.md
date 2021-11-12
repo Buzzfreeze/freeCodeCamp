@@ -8,42 +8,42 @@ dashedName: count-occurrences-of-a-substring
 
 # --description--
 
-Create a function, or show a built-in function, to count the number of non-overlapping occurrences of a substring inside a string.
+สร้างฟังก์ชันหรือแสดงฟังก์ชัน เพื่อนับจำนวนการเกิดขึ้นที่ไม่ทับซ้อนกันของstringย่อยภายในstring
 
-The function should take two arguments:
+ฟังก์ชันควรมีสองargument:
 
 <ul>
   <li>the first argument being the string to search, and</li>
   <li>the second a substring to be searched for.</li>
 </ul>
 
-It should return an integer count.
+ควร return จำนวนเต็ม
 
-The matching should yield the highest number of non-overlapping matches.
+การจับคู่ควรให้จำนวนการจับคู่ที่ไม่ทับซ้อนกันมากที่สุด
 
-In general, this essentially means matching from left-to-right or right-to-left.
+โดยทั่วไป นี่หมายถึงการจับคู่จาก left-to-right หรือ right-to-left.
 
 # --hints--
 
-`countSubstring` should be a function.
+`countSubstring` ควรเป็น function.
 
 ```js
 assert(typeof countSubstring === 'function');
 ```
 
-`countSubstring("the three truths", "th")` should return `3`.
+`countSubstring("the three truths", "th")` ควร return `3`.
 
 ```js
 assert.equal(countSubstring(testCases[0], searchString[0]), results[0]);
 ```
 
-`countSubstring("ababababab", "abab")` should return `2`.
+`countSubstring("ababababab", "abab")` ควร return `2`.
 
 ```js
 assert.equal(countSubstring(testCases[1], searchString[1]), results[1]);
 ```
 
-`countSubstring("abaabba*bbaba*bbab", "a*b")` should return `2`.
+`countSubstring("abaabba*bbaba*bbab", "a*b")` ควร return `2`.
 
 ```js
 assert.equal(countSubstring(testCases[2], searchString[2]), results[2]);

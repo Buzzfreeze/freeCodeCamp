@@ -8,9 +8,9 @@ dashedName: extensible-prime-generator
 
 # --description--
 
-Write a generator of prime numbers, in order, that will automatically adjust to accommodate the generation of any reasonably high prime.
+เขียนตัวกำเนิดของจำนวนเฉพาะตามลำดับที่จะปรับโดยอัตโนมัติเพื่อรองรับการสร้างจำนวนเฉพาะที่มีค่ามากพอสมควร
 
-The generator should be able to:
+เครื่องกำเนิดไฟฟ้าควรจะสามารถ:
 
 <ul>
   <li>Show the first <code>n</code> prime numbers</li>
@@ -19,17 +19,18 @@ The generator should be able to:
   <li>Show the <code>n<sup>th</sup></code> prime number</li>
 </ul>
 
-The function should have two parameters. The first will receive `n` or the range as an array. The second will receive a boolean, that specifies if the function returns the prime numbers as an array or a single number(the number of primes in the range or the <code>n<sup>th</sup></code> prime). According to the parameters the function should return an array.
+
+ฟังก์ชันควรมีสองparameter ตัวแรกจะได้รับ `n` หรือ range เป็นarray ตัวที่สองจะได้รับbooleanที่ระบุว่าฟังก์ชันreturnจำนวนเฉพาะเป็นarrayหรือตัวเลขเดี่ยว (จำนวนเฉพาะในช่วง หรือ <code>n<sup>th</sup></code> prime). ตามparameter ฟังก์ชันควรreturnarray
 
 # --hints--
 
-`primeGenerator` should be a function.
+`primeGenerator` ควร ป็นfunction.
 
 ```js
 assert(typeof primeGenerator === 'function');
 ```
 
-`primeGenerator(20, true)` should return `[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]`.
+`primeGenerator(20, true)` ควร return `[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]`.
 
 ```js
 assert.deepEqual(primeGenerator(20, true), [
@@ -56,7 +57,7 @@ assert.deepEqual(primeGenerator(20, true), [
 ]);
 ```
 
-`primeGenerator([100, 150], true)` should return `[101, 103, 107, 109, 113, 127, 131, 137, 139, 149]`.
+`primeGenerator([100, 150], true)` ควร return `[101, 103, 107, 109, 113, 127, 131, 137, 139, 149]`.
 
 ```js
 assert.deepEqual(primeGenerator([100, 150], true), [
@@ -73,13 +74,13 @@ assert.deepEqual(primeGenerator([100, 150], true), [
 ]);
 ```
 
-`primeGenerator([7700, 8000], false)` should return `30`.
+`primeGenerator([7700, 8000], false)` ควร return `30`.
 
 ```js
 assert.equal(primeGenerator([7700, 8000], false), 30);
 ```
 
-`primeGenerator(10000, false)` should return `104729`.
+`primeGenerator(10000, false)` ควร return `104729`.
 
 ```js
 assert.equal(primeGenerator(10000, false), 104729);

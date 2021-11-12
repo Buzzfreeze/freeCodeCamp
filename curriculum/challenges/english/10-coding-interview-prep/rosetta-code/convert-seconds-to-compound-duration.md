@@ -8,14 +8,14 @@ dashedName: convert-seconds-to-compound-duration
 
 # --description--
 
-Implement a function which:
+ใช้ function:
 
 <ul>
   <li>takes a positive integer representing a duration in seconds as input (e.g., <code>100</code>), and</li>
   <li>returns a string which shows the same duration decomposed into weeks, days, hours, minutes, and seconds as detailed below (e.g., <code>1 min, 40 sec</code>).</li>
 </ul>
 
-Demonstrate that it passes the following three test-cases:
+แสดงให้เห็นว่าผ่านการทดสอบสามกรณีต่อไปนี้:
 
 <div style='font-size:115%; font-weight: bold;'>Test Cases</div>
 
@@ -28,7 +28,7 @@ Demonstrate that it passes the following three test-cases:
 <div style="font-size:115%; font-weight: bold;">Details</div>
 <ul>
   <li>
-    The following five units should be used:
+    The following five units ควร be used:
 
 | Unit   | Suffix used in Output | Conversion            |
 | ------ | --------------------- | --------------------- |
@@ -52,25 +52,25 @@ Demonstrate that it passes the following three test-cases:
 
 # --hints--
 
-`convertSeconds` should be a function.
+`convertSeconds` ควรเป็น function.
 
 ```js
 assert(typeof convertSeconds === 'function');
 ```
 
-`convertSeconds(7259)` should return `2 hr, 59 sec`.
+`convertSeconds(7259)` ควร return `2 hr, 59 sec`.
 
 ```js
 assert.equal(convertSeconds(testCases[0]), results[0]);
 ```
 
-`convertSeconds(86400)` should return `1 d`.
+`convertSeconds(86400)` ควร return `1 d`.
 
 ```js
 assert.equal(convertSeconds(testCases[1]), results[1]);
 ```
 
-`convertSeconds(6000000)` should return `9 wk, 6 d, 10 hr, 40 min`.
+`convertSeconds(6000000)` ควร return `9 wk, 6 d, 10 hr, 40 min`.
 
 ```js
 assert.equal(convertSeconds(testCases[2]), results[2]);

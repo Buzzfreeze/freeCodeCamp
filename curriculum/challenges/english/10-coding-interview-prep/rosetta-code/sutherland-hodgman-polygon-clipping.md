@@ -8,27 +8,27 @@ dashedName: sutherland-hodgman-polygon-clipping
 
 # --description--
 
-The [Sutherland-Hodgman clipping algorithm](<https://en.wikipedia.org/wiki/Sutherland-Hodgman clipping algorithm>) finds the polygon that is the intersection between an arbitrary polygon (the "subject polygon") and a convex polygon (the "clip polygon"). It is used in computer graphics (especially 2D graphics) to reduce the complexity of a scene being displayed by eliminating parts of a polygon that do not need to be displayed. Take the closed polygon defined by the points:
+[Sutherland-Hodgman clipping algorithm](<https://en.wikipedia.org/wiki/Sutherland-Hodgman clipping algorithm>) ค้นหารูปหลายเหลี่ยมที่เป็นจุดตัดระหว่างรูปหลายเหลี่ยมที่กำหนดเอง ("รูปหลายเหลี่ยมหัวเรื่อง") และรูปหลายเหลี่ยมนูน ("รูปหลายเหลี่ยมคลิป") ใช้ในกราฟิกคอมพิวเตอร์ (โดยเฉพาะกราฟิก 2D) เพื่อลดความซับซ้อนของฉากที่แสดงโดยการกำจัดส่วนต่างๆ ของรูปหลายเหลี่ยมที่ไม่จำเป็นต้องแสดง ใช้รูปหลายเหลี่ยมปิดที่กำหนดโดยจุด:
 
 <pre>[(50, 150), (200, 50), (350, 150), (350, 300), (250, 300), (200, 250), (150, 350), (100, 250), (100, 200)]</pre>
 
-and clip it by the rectangle defined by the points:
+และมีด้วยสี่เหลี่ยมที่กำหนดโดยจุด:
 
 <pre>[(100, 100), (300, 100), (300, 300), (100, 300)]</pre>
 
 # --instructions--
 
-Write a function that takes 2 arrays as parameters. The first array contains the points of the subject polygon and the second array contains the points of the clipping polygon. The function should return an array containing the points of the clipped polygon. Each number should be rounded to 3 decimal places.
+เขียนฟังก์ชันที่รับ 2 arrayเป็นพารามิเตอร์ arrayแรกประกอบด้วยจุดของรูปหลายเหลี่ยมหัวเรื่อง และarrayที่สองประกอบด้วยจุดของรูปหลายเหลี่ยมที่ตัดแล้ว ฟังก์ชันควรส่งคืนarrayที่มีจุดของรูปหลายเหลี่ยมที่ถูกตัดออก ควรปัดเศษตัวเลขแต่ละตัวเป็นทศนิยม 3 ตำแหน่ง
 
 # --hints--
 
-`clip` should be a function.
+`clip` ควรเป็น function.
 
 ```js
 assert(typeof clip == 'function');
 ```
 
-`clip([[50, 150], [200, 50], [350, 150], [350, 300], [250, 300], [200, 250], [150, 350], [100, 250], [100, 200]], [[100, 100], [300, 100], [300, 300], [100, 300]])` should return an array.
+`clip([[50, 150], [200, 50], [350, 150], [350, 300], [250, 300], [200, 250], [150, 350], [100, 250], [100, 200]], [[100, 100], [300, 100], [300, 300], [100, 300]])` ควร return array.
 
 ```js
 assert(
@@ -56,7 +56,7 @@ assert(
 );
 ```
 
-`clip([[50, 150], [200, 50], [350, 150], [350, 300], [250, 300], [200, 250], [150, 350], [100, 250], [100, 200]], [[100, 100], [300, 100], [300, 300], [100, 300]])` should return `[[100, 116.667], [125, 100], [275, 100], [300, 116.667], [300, 300], [250, 300], [200, 250], [175, 300], [125, 300], [100, 250]]`.
+`clip([[50, 150], [200, 50], [350, 150], [350, 300], [250, 300], [200, 250], [150, 350], [100, 250], [100, 200]], [[100, 100], [300, 100], [300, 300], [100, 300]])` ควร return `[[100, 116.667], [125, 100], [275, 100], [300, 116.667], [300, 300], [250, 300], [200, 250], [175, 300], [125, 300], [100, 250]]`.
 
 ```js
 assert.deepEqual(
@@ -94,7 +94,7 @@ assert.deepEqual(
 );
 ```
 
-`clip([[150, 200], [400, 450], [30, 50]], [[10, 10], [300, 200], [400, 600], [100, 300]])` should return `[[150, 200], [350, 400], [348.611, 394.444], [30, 50]]`.
+`clip([[150, 200], [400, 450], [30, 50]], [[10, 10], [300, 200], [400, 600], [100, 300]])` ควร return `[[150, 200], [350, 400], [348.611, 394.444], [30, 50]]`.
 
 ```js
 assert.deepEqual(
@@ -120,7 +120,7 @@ assert.deepEqual(
 );
 ```
 
-`clip([[250, 200], [100, 450], [130, 250]], [[50, 60], [100, 230], [400, 600], [100, 300]])` should return `[[129.167, 329.167], [119.565, 319.565], [121.854, 304.305]]`.
+`clip([[250, 200], [100, 450], [130, 250]], [[50, 60], [100, 230], [400, 600], [100, 300]])` ควร return `[[129.167, 329.167], [119.565, 319.565], [121.854, 304.305]]`.
 
 ```js
 assert.deepEqual(

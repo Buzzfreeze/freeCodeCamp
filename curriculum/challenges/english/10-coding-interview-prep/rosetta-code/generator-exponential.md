@@ -7,60 +7,59 @@ dashedName: generatorexponential
 ---
 
 # --description--
+generatorคือentityที่สั่งการได้ (เช่น function หรือ procedure) ที่มีโค้ดที่ให้ผลลัพธ์เป็นลำดับของค่า ทีละค่า ดังนั้นทุกครั้งที่คุณเรียกใช้ตัวสร้าง ค่าถัดไปในลำดับจะถูกจัดเตรียมไว้
 
-A generator is an executable entity (like a function or procedure) that contains code that yields a sequence of values, one at a time, so that each time you call the generator, the next value in the sequence is provided.
+เครื่องกำเนิดมักจะสร้างขึ้นบน coroutines หรือวัตถุเพื่อให้สถานะภายในของวัตถุได้รับการจัดการ "ตามธรรมชาติ"
 
-Generators are often built on top of coroutines or objects so that the internal state of the object is handled "naturally".
-
-Generators are often used in situations where a sequence is potentially infinite, and where it is possible to construct the next value of the sequence with only minimal state.
+เครื่องกำเนิดไฟฟ้ามักใช้ในสถานการณ์ที่ลำดับอาจไม่มีที่สิ้นสุด และในกรณีที่เป็นไปได้ที่จะสร้างค่าถัดไปของลำดับที่มีสถานะน้อยที่สุดเท่านั้น
 
 # --instructions--
 
-Write a function that uses generators to generate squares and cubes. Create a new generator that filters all cubes from the generator of squares.
+เขียนฟังก์ชันที่ใช้ตัวสร้างเพื่อสร้างสี่เหลี่ยมและลูกบาศก์ สร้างตัวสร้างใหม่ที่กรองลูกบาศก์ทั้งหมดจากตัวสร้างสี่เหลี่ยม
 
-The function should return the \\( n^{th} \\) value of the filtered generator.
+ฟังก์ชันควรreturnค่า \\( n^{th} \\) ของตัวสร้างตัวกรอง
 
-For example for \\(n=7\\), the function should return 81 as the sequence would be 4, 9, 16, 25, 36, 49, 81. Here 64 is filtered out, as it is a cube.
+ตัวอย่างเช่น สำหรับ \\(n=7\\) ฟังก์ชันควรreturn 81 เนื่องจากลำดับจะเป็น 4, 9, 16, 25, 36, 49, 81 ที่นี่ 64 จะถูกกรองออก เนื่องจากเป็นลูกบาศก์ 
 
 # --hints--
 
-`exponentialGenerator` should be a function.
+`exponentialGenerator` ควนเป็น function.
 
 ```js
 assert(typeof exponentialGenerator == 'function');
 ```
 
-`exponentialGenerator()` should return a number.
+`exponentialGenerator()` ควร return number.
 
 ```js
 assert(typeof exponentialGenerator(10) == 'number');
 ```
 
-`exponentialGenerator(10)` should return `144`.
+`exponentialGenerator(10)` ควร return `144`.
 
 ```js
 assert.equal(exponentialGenerator(10), 144);
 ```
 
-`exponentialGenerator(12)` should return `196`.
+`exponentialGenerator(12)` ควร return `196`.
 
 ```js
 assert.equal(exponentialGenerator(12), 196);
 ```
 
-`exponentialGenerator(14)` should return `256`.
+`exponentialGenerator(14)` ควร return `256`.
 
 ```js
 assert.equal(exponentialGenerator(14), 256);
 ```
 
-`exponentialGenerator(20)` should return `484`.
+`exponentialGenerator(20)` ควร return `484`.
 
 ```js
 assert.equal(exponentialGenerator(20), 484);
 ```
 
-`exponentialGenerator(25)` should return `784`.
+`exponentialGenerator(25)` ควร return `784`.
 
 ```js
 assert.equal(exponentialGenerator(25), 784);

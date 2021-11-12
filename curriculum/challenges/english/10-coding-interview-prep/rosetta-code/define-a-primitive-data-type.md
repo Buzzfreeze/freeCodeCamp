@@ -8,96 +8,96 @@ dashedName: define-a-primitive-data-type
 
 # --description--
 
-Define a type that behaves like an integer but has a lowest valid value of 1 and a highest valid value of 10.
+กำหนดประเภทที่ทำงานเหมือนจำนวนเต็มแต่มีค่าที่ถูกต้องต่ำสุดที่ 1 และค่าที่ถูกต้องสูงสุดคือ 10
 
 Error handling:
 
 <ul>
-  <li>If you try to instantiate a <code>Num</code> with a value outside of 1 - 10, it should throw a <code>TypeError</code> with an error message of <code>'Out of range'</code>.</li>
-  <li>If you try to instantiate a <code>Num</code> with a value that is not a number, it should throw a <code>TypeError</code> with an error message of <code>'Not a Number'</code>.</li>
+  <li>If you try to instantiate a <code>Num</code> with a value outside of 1 - 10, it ควร throw a <code>TypeError</code> with an error message of <code>'Out of range'</code>.</li>
+  <li>If you try to instantiate a <code>Num</code> with a value that is not a number, it ควร throw a <code>TypeError</code> with an error message of <code>'Not a Number'</code>.</li>
 </ul>
 
 # --hints--
 
-`Num` should be a function.
+`Num` ควรเป็น function.
 
 ```js
 assert(typeof Num === 'function');
 ```
 
-`new Num(4)` should return an object.
+`new Num(4)` ควร return object.
 
 ```js
 assert(typeof new Num(4) === 'object');
 ```
 
-`new Num('test')` should throw a TypeError with message 'Not a Number'.
+`new Num('test')` ควร throw TypeError พร้อมข้อมความ 'Not a Number'.
 
 ```js
 assert.throws(() => new Num('test'), TypeError);
 ```
 
-`new Num(0)` should throw a TypeError with message 'Out of range'.
+`new Num(0)` ควร throw a TypeError พร้อมข้อมความ 'Out of range'.
 
 ```js
 assert.throws(() => new Num(0), TypeError);
 ```
 
-`new Num(-5)` should throw a TypeError with message 'Out of range'.
+`new Num(-5)` ควร throw TypeError พร้อมข้อมความ 'Out of range'.
 
 ```js
 assert.throws(() => new Num(-5), TypeError);
 ```
 
-`new Num(10)` should throw a TypeError with message 'Out of range'.
+`new Num(10)` ควร throw TypeError พร้อมข้อมความ 'Out of range'.
 
 ```js
 assert.throws(() => new Num(11), TypeError);
 ```
 
-`new Num(20)` should throw a TypeError with message 'Out of range'.
+`new Num(20)` ควร throw TypeError พร้อมข้อมความ 'Out of range'.
 
 ```js
 assert.throws(() => new Num(20), TypeError);
 ```
 
-`new Num(3) + new Num(4)` should equal 7.
+`new Num(3) + new Num(4)` ควรเท่ากับ 7.
 
 ```js
 assert.equal(new Num(3) + new Num(4), 7);
 ```
 
-`new Num(3) - new Num(4)` should equal -1.
+`new Num(3) - new Num(4)` ควรเท่ากับ -1.
 
 ```js
 assert.equal(new Num(3) - new Num(4), -1);
 ```
 
-`new Num(3) * new Num(4)` should equal 12.
+`new Num(3) * new Num(4)` ควรเท่ากับ 12.
 
 ```js
 assert.equal(new Num(3) * new Num(4), 12);
 ```
 
-`new Num(3) / new Num(4)` should equal 0.75.
+`new Num(3) / new Num(4)` ควรเท่ากับ 0.75.
 
 ```js
 assert.equal(new Num(3) / new Num(4), 0.75);
 ```
 
-`new Num(3) < new Num(4)` should be true.
+`new Num(3) < new Num(4)` ควร return true.
 
 ```js
 assert(new Num(3) < new Num(4));
 ```
 
-`new Num(3) > new Num(4)` should be false.
+`new Num(3) > new Num(4)` ควร retrun false.
 
 ```js
 assert(!(new Num(3) > new Num(4)));
 ```
 
-`(new Num(5)).toString()` should return '5'
+`(new Num(5)).toString()` ควร return '5'
 
 ```js
 assert.equal(new Num(5).toString(), '5');

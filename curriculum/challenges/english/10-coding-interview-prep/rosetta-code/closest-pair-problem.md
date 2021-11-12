@@ -8,9 +8,9 @@ dashedName: closest-pair-problem
 
 # --description--
 
-Provide a function to find the closest two points among a set of given points in two dimensions.
+หาจุดสองจุดที่ใกล้เคียงที่สุดระหว่างชุดของจุดที่กำหนดในสองมิติ
 
-The straightforward solution is a $O(n^2)$ algorithm (which we can call *brute-force algorithm*); the pseudo-code (using indexes) could be simply:
+วิธีแก้ปัญหาที่ตรงไปตรงมาคือalgorithm $O(n^2)$ (ซึ่งเราสามารถเรียกว่า *อัลกอริทึมเดรัจฉาน*); รหัสหลอก (โดยใช้index) อาจเป็นเพียง:
 
 <pre><strong>bruteForceClosestPair</strong> of P(1), P(2), ... P(N)
 <strong>if</strong> N &#x3C; 2 <strong>then</strong>
@@ -30,7 +30,7 @@ The straightforward solution is a $O(n^2)$ algorithm (which we can call *brute-f
 <strong>endif</strong>
 </pre>
 
-A better algorithm is based on the recursive divide and conquer approach, which is $O(n\log n)$ a pseudo-code could be:
+algorithm ที่ดีจะใช้ recursive divide และ conquer approach เป็นแบบ $O(n\log n)$ pseudo-code เป็น:
 
 <pre><strong>closestPair</strong> of (xP, yP)
   where xP is P(1) .. P(N) sorted by x coordinate, and
@@ -65,9 +65,9 @@ A better algorithm is based on the recursive divide and conquer approach, which 
 <strong>endif</strong>
 </pre>
 
-For the input, expect the argument to be an array of `Point` objects with `x` and `y` members set to numbers. Return an object containing the key:value pairs for `distance` and `pair` (the pair of two closest points).
+สำหรับinput คาดว่าอาร์กิวเมนต์จะเป็นarrayของobjects `Point` โดยกำหนดให้สมาชิก `x` และ `y` เป็นตัวเลข ส่งกลับวัตถุที่มีคู่คีย์:ค่าสำหรับ`distance` และ `pair`(คู่ของจุดที่ใกล้เคียงที่สุดสองจุด)
 
-For example `getClosestPair` with input array `points`:
+เช่น `getClosestPair` และ input array `points`:
 
 ```js
 const points = [
@@ -77,7 +77,7 @@ const points = [
 ];
 ```
 
-Would return:
+จะ return:
 
 ```js
 {
@@ -95,24 +95,24 @@ Would return:
 }
 ```
 
-**Note:** Sort the `pair` array by their `x` values in incrementing order.
+**Note:** Sort `pair` array จาก `x` แบบ incrementing order
 
 
 # --hints--
 
-`getClosestPair` should be a function.
+`getClosestPair` ควรเป็น function.
 
 ```js
 assert(typeof getClosestPair === 'function');
 ```
 
-`getClosestPair(points1).distance` should be `0.0894096443343775`.
+`getClosestPair(points1).distance` ควรเป็น `0.0894096443343775`.
 
 ```js
 assert.equal(getClosestPair(points1).distance, answer1.distance);
 ```
 
-`getClosestPair(points1).pair` should be `[ { x: 7.46489, y: 4.6268 }, { x: 7.46911, y: 4.71611 } ]`.
+`getClosestPair(points1).pair` ควรเป็น `[ { x: 7.46489, y: 4.6268 }, { x: 7.46911, y: 4.71611 } ]`.
 
 ```js
 assert.deepEqual(
@@ -121,13 +121,13 @@ assert.deepEqual(
 );
 ```
 
-`getClosestPair(points2).distance` should be `65.06919393998976`.
+`getClosestPair(points2).distance` ควรเป็น `65.06919393998976`.
 
 ```js
 assert.equal(getClosestPair(points2).distance, answer2.distance);
 ```
 
-`getClosestPair(points2).pair` should be `[ { x: 37134, y: 1963 }, { x: 37181, y: 2008 } ]`.
+`getClosestPair(points2).pair` ควรเป็น `[ { x: 37134, y: 1963 }, { x: 37181, y: 2008 } ]`.
 
 ```js
 assert.deepEqual(
@@ -136,13 +136,13 @@ assert.deepEqual(
 );
 ```
 
-`getClosestPair(points3).distance` should be `6754.625082119658`.
+`getClosestPair(points3).distance` ควรเป็น `6754.625082119658`.
 
 ```js
 assert.equal(getClosestPair(points3).distance, answer3.distance);
 ```
 
-`getClosestPair(points3).pair` should be `[ { x: 46817, y: 64975 }, { x: 48953, y: 58567 } ]`.
+`getClosestPair(points3).pair` ควรเป็น `[ { x: 46817, y: 64975 }, { x: 48953, y: 58567 } ]`.
 
 ```js
 assert.deepEqual(

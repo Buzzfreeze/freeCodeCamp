@@ -8,7 +8,7 @@ dashedName: compare-a-list-of-strings
 
 # --description--
 
-Given a [list](https://en.wikipedia.org/wiki/List_(abstract_data_type) "wp: List\_(abstract_data_type)") of arbitrarily many strings, implement a function for each of the following conditions:
+กำหนดให้ [list](https://en.wikipedia.org/wiki/List_(abstract_data_type) "wp: List\_(abstract_data_type)") ของ strings ใช้ฟังก์ชันสำหรับแต่ละเงื่อนไขต่อไปนี้:
 
 <ul>
   <li>test if they are all lexically equal</li>
@@ -17,73 +17,73 @@ Given a [list](https://en.wikipedia.org/wiki/List_(abstract_data_type) "wp: List
 
 # --hints--
 
-`allEqual` should be a function.
+`allEqual` ควรเป็น function.
 
 ```js
 assert(typeof allEqual === 'function');
 ```
 
-`azSorted` should be a function.
+`azSorted` ควรเป็น function.
 
 ```js
 assert(typeof azSorted === 'function');
 ```
 
-`allEqual(["AA", "AA", "AA", "AA"])` should return true.
+`allEqual(["AA", "AA", "AA", "AA"])` ควร return true.
 
 ```js
 assert(allEqual(testCases[0]));
 ```
 
-`azSorted(["AA", "AA", "AA", "AA"])` should return false.
+`azSorted(["AA", "AA", "AA", "AA"])` ควร return false.
 
 ```js
 assert(!azSorted(testCases[0]));
 ```
 
-`allEqual(["AA", "ACB", "BB", "CC"])` should return false.
+`allEqual(["AA", "ACB", "BB", "CC"])` ควร return false.
 
 ```js
 assert(!allEqual(testCases[1]));
 ```
 
-`azSorted(["AA", "ACB", "BB", "CC"])` should return true.
+`azSorted(["AA", "ACB", "BB", "CC"])` ควร return true.
 
 ```js
 assert(azSorted(testCases[1]));
 ```
 
-`allEqual([])` should return true.
+`allEqual([])` ควร return true.
 
 ```js
 assert(allEqual(testCases[2]));
 ```
 
-`azSorted([])` should return true.
+`azSorted([])` ควร return true.
 
 ```js
 assert(azSorted(testCases[2]));
 ```
 
-`allEqual(["AA"])` should return true.
+`allEqual(["AA"])` ควร return true.
 
 ```js
 assert(allEqual(testCases[3]));
 ```
 
-`azSorted(["AA"])` should return true.
+`azSorted(["AA"])` ควร return true.
 
 ```js
 assert(azSorted(testCases[3]));
 ```
 
-`allEqual(["BB", "AA"])` should return false.
+`allEqual(["BB", "AA"])` ควร return false.
 
 ```js
 assert(!allEqual(testCases[4]));
 ```
 
-`azSorted(["BB", "AA"])` should return false.
+`azSorted(["BB", "AA"])` ควร return false.
 
 ```js
 assert(!azSorted(testCases[4]));

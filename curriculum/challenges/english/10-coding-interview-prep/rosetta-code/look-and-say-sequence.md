@@ -8,15 +8,15 @@ dashedName: look-and-say-sequence
 
 # --description--
 
-The [Look and say sequence](<https://en.wikipedia.org/wiki/Look and say sequence>) is a recursively defined sequence of numbers.
+[Look and say sequence](<https://en.wikipedia.org/wiki/Look and say sequence>) เป็นลำดับของตัวเลขที่กำหนดแบบเรียกซ้ำ (recursive)
 
-Sequence Definition
+คำจำกัดความของลำดับ
 
 <ul><li>Take a decimal number</li>
 <li><span>Look</span> at the number, visually grouping consecutive runs of the same digit.</li>
 <li><span>Say</span> the number, from left to right, group by group; as how many of that digit there are - followed by the digit grouped.</li></ul><span> This becomes the next number of the sequence.</span>
 
-An example:
+เช่น
 
 <ul><li>Starting with the number 1, you have <span>one</span> 1 which produces 11</li>
 <li>Starting with 11, you have <span>two</span> 1's. I.E.: 21</li>
@@ -25,47 +25,47 @@ An example:
 
 # --instructions--
 
-Write a function that accepts a string as a parameter, processes it, and returns the resultant string.
+เขียนฟังก์ชันที่ยอมรับstringเป็นพารามิเตอร์ ประมวลผล และส่งกลับstringผลลัพธ์
 
 # --hints--
 
-`lookAndSay` should be a function.
+`lookAndSay` ควรเป็น function.
 
 ```js
 assert(typeof lookAndSay == 'function');
 ```
 
-`lookAndSay("1")` should return a string.
+`lookAndSay("1")` ควร return string.
 
 ```js
 assert(typeof lookAndSay('1') == 'string');
 ```
 
-`lookAndSay("1")` should return `"11"`.
+`lookAndSay("1")` ควร return `"11"`.
 
 ```js
 assert.equal(lookAndSay('1'), '11');
 ```
 
-`lookAndSay("11")` should return `"21"`.
+`lookAndSay("11")` ควร return `"21"`.
 
 ```js
 assert.equal(lookAndSay('11'), '21');
 ```
 
-`lookAndSay("21")` should return `"1211"`.
+`lookAndSay("21")` ควร return `"1211"`.
 
 ```js
 assert.equal(lookAndSay('21'), '1211');
 ```
 
-`lookAndSay("1211")` should return `"111221"`.
+`lookAndSay("1211")` ควร return `"111221"`.
 
 ```js
 assert.equal(lookAndSay('1211'), '111221');
 ```
 
-`lookAndSay("3542")` should return `"13151412"`.
+`lookAndSay("3542")` ควร return `"13151412"`.
 
 ```js
 assert.equal(lookAndSay('3542'), '13151412');

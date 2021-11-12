@@ -8,57 +8,57 @@ dashedName: lucas-lehmer-test
 
 # --description--
 
-Lucas-Lehmer Test: for $p$ an odd prime, the Mersenne number $2^p-1$ is prime if and only if $2^p-1$ divides $S(p-1)$ where $S(n+1)=(S(n))^2-2$, and $S(1)=4$.
+Lucas-Lehmer Test: สำหรับ $p$ odd prime Mersenne number $2^p-1$ เป็นไพรม์ก็ต่อเมื่อ $2^p-1$ หารด้วย $S(p-1)$ เมื่อ $S(n+1)=(S(n))^2-2$, และ $S(1)=4$.
 
 # --instructions--
 
-Write a function that returns whether the given Mersenne number is prime or not.
+เขียนฟังก์ชันที่ส่งคืนว่าตัวเลข Mersenne ที่ระบุนั้นเป็นจำนวนเฉพาะหรือไม่
 
 # --hints--
 
-`lucasLehmer` should be a function.
+`lucasLehmer` ควรเป็น function.
 
 ```js
 assert(typeof lucasLehmer == 'function');
 ```
 
-`lucasLehmer(11)` should return a boolean.
+`lucasLehmer(11)` ควร return boolean.
 
 ```js
 assert(typeof lucasLehmer(11) == 'boolean');
 ```
 
-`lucasLehmer(11)` should return `false`.
+`lucasLehmer(11)` ควร return `false`.
 
 ```js
 assert.equal(lucasLehmer(11), false);
 ```
 
-`lucasLehmer(15)` should return `false`.
+`lucasLehmer(15)` ควร return `false`.
 
 ```js
 assert.equal(lucasLehmer(15), false);
 ```
 
-`lucasLehmer(13)` should return `true`.
+`lucasLehmer(13)` ควร return `true`.
 
 ```js
 assert.equal(lucasLehmer(13), true);
 ```
 
-`lucasLehmer(17)` should return `true`.
+`lucasLehmer(17)` ควร return `true`.
 
 ```js
 assert.equal(lucasLehmer(17), true);
 ```
 
-`lucasLehmer(19)` should return `true`.
+`lucasLehmer(19)` ควร return `true`.
 
 ```js
 assert.equal(lucasLehmer(19), true);
 ```
 
-`lucasLehmer(21)` should return `false`.
+`lucasLehmer(21)` ควร return `false`.
 
 ```js
 assert.equal(lucasLehmer(21), false);

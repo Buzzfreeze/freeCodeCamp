@@ -8,9 +8,9 @@ dashedName: sorting-algorithmsgnome-sort
 
 # --description--
 
-Gnome sort is a sorting algorithm which is similar to [Insertion sort](<https://rosettacode.org/wiki/Insertion sort>), except that moving an element to its proper place is accomplished by a series of swaps, as in [Bubble Sort](<https://rosettacode.org/wiki/Bubble Sort>).
+การเรียงลำดับ Gnome เป็นalgorithmการจัดเรียงที่คล้ายกับ [การเรียงลำดับการแทรก](<https://rosettacode.org/wiki/Insertion sort>) ยกเว้นว่าการย้ายองค์ประกอบไปยังตำแหน่งที่เหมาะสมนั้นทำได้โดยชุดการแลกเปลี่ยน ดังเช่นใน [Bubble Sort](<https://rosettacode.org/wiki/Bubble Sort>)
 
-The pseudocode for the algorithm is:
+pseudocode สำหรับ algorithm คือ:
 
 <pre><b>function</b> <i>gnomeSort</i>(a[0..size-1])
   i := 1
@@ -33,41 +33,41 @@ The pseudocode for the algorithm is:
 
 # --instructions--
 
-Write a function to implement the above pseudo code. The function should return the sorted array.
+เขียนฟังก์ชันเพื่อใช้pseudo codeด้านบน ฟังก์ชันควร return array ที่เรียงลำดับ
 
 # --hints--
 
-`gnomeSort` should be a function.
+`gnomeSort` ควรเป็น function.
 
 ```js
 assert(typeof gnomeSort == 'function');
 ```
 
-`gnomeSort([25, 32, 12, 7, 20])` should return an array.
+`gnomeSort([25, 32, 12, 7, 20])` ควร return array.
 
 ```js
 assert(Array.isArray(gnomeSort([25, 32, 12, 7, 20])));
 ```
 
-`gnomeSort([25, 32, 12, 7, 20])` should return `[7, 12, 20, 25, 32]`.
+`gnomeSort([25, 32, 12, 7, 20])` ควร return `[7, 12, 20, 25, 32]`.
 
 ```js
 assert.deepEqual(gnomeSort([25, 32, 12, 7, 20]), [7, 12, 20, 25, 32]);
 ```
 
-`gnomeSort([38, 45, 35, 8, 13])` should return `[8, 13, 35, 38, 45]`.
+`gnomeSort([38, 45, 35, 8, 13])` ควร return `[8, 13, 35, 38, 45]`.
 
 ```js
 assert.deepEqual(gnomeSort([38, 45, 35, 8, 13]), [8, 13, 35, 38, 45]);
 ```
 
-`gnomeSort([43, 36, 20, 34, 24])` should return `[20, 24, 34, 36, 43]`.
+`gnomeSort([43, 36, 20, 34, 24])` ควร return `[20, 24, 34, 36, 43]`.
 
 ```js
 assert.deepEqual(gnomeSort([43, 36, 20, 34, 24]), [20, 24, 34, 36, 43]);
 ```
 
-`gnomeSort([12, 33, 26, 18, 1, 16, 38])` should return `[1, 12, 16, 18, 26, 33, 38]`.
+`gnomeSort([12, 33, 26, 18, 1, 16, 38])` ควร return `[1, 12, 16, 18, 26, 33, 38]`.
 
 ```js
 assert.deepEqual(gnomeSort([12, 33, 26, 18, 1, 16, 38]), [
@@ -81,7 +81,7 @@ assert.deepEqual(gnomeSort([12, 33, 26, 18, 1, 16, 38]), [
 ]);
 ```
 
-`gnomeSort([3, 39, 48, 16, 1, 4, 29])` should return `[1, 3, 4, 16, 29, 39, 48]`.
+`gnomeSort([3, 39, 48, 16, 1, 4, 29])` ควร return `[1, 3, 4, 16, 29, 39, 48]`.
 
 ```js
 assert.deepEqual(gnomeSort([3, 39, 48, 16, 1, 4, 29]), [

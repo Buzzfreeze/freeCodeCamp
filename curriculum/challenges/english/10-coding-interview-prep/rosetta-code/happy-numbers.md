@@ -8,89 +8,89 @@ dashedName: happy-numbers
 
 # --description--
 
-A [happy number](https://en.wikipedia.org/wiki/Happy_number) is defined by the following process:
+[happy number](https://en.wikipedia.org/wiki/Happy_number) ถูกกำหนดโดยกระบวนการต่อไปนี้:
 
-Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals `1` (where it will stay), or it loops endlessly in a cycle which does not include `1`. Those numbers for which this process ends in `1` are happy numbers, while those that do not end in `1` are unhappy numbers.
+เริ่มต้นด้วยจำนวนเต็มบวกใดๆ แทนที่ตัวเลขด้วยผลรวมของกำลังสองของหลัก จากนั้นทำซ้ำขั้นตอนจนกว่าตัวเลขจะเท่ากับ `1` (ตำแหน่งที่จะอยู่) หรือวนซ้ำไม่รู้จบในวงจรที่ไม่มี `1`. ตัวเลขที่กระบวนการนี้ลงท้ายด้วย `1` เป็นตัวเลขhappy-numbers ในขณะที่ตัวเลขที่ไม่ลงท้ายด้วย `1` จะเป็นตัวเลขที่ไม่ใช่ happy number
 
 # --instructions--
 
-Implement a function that returns true if the number is happy, or false if not.
+เขียน function returns true ถ้าเป็น happy number หรือ false ถ้าไม่ใช่.
 
 # --hints--
 
-`happy` should be a function.
+`happy` ควรเป็น function.
 
 ```js
 assert(typeof happy === 'function');
 ```
 
-`happy(1)` should return a boolean.
+`happy(1)` ควร return boolean.
 
 ```js
 assert(typeof happy(1) === 'boolean');
 ```
 
-`happy(1)` should return `true`.
+`happy(1)` ควร return `true`.
 
 ```js
 assert(happy(1));
 ```
 
-`happy(2)` should return `false`.
+`happy(2)` ควร return `false`.
 
 ```js
 assert(!happy(2));
 ```
 
-`happy(7)` should return `true`.
+`happy(7)` ควร return `true`.
 
 ```js
 assert(happy(7));
 ```
 
-`happy(10)` should return `true`.
+`happy(10)` ควร return `true`.
 
 ```js
 assert(happy(10));
 ```
 
-`happy(13)` should return `true`.
+`happy(13)` ควร return `true`.
 
 ```js
 assert(happy(13));
 ```
 
-`happy(19)` should return `true`.
+`happy(19)` ควร return `true`.
 
 ```js
 assert(happy(19));
 ```
 
-`happy(23)` should return `true`.
+`happy(23)` ควร return `true`.
 
 ```js
 assert(happy(23));
 ```
 
-`happy(28)` should return `true`.
+`happy(28)` ควร return `true`.
 
 ```js
 assert(happy(28));
 ```
 
-`happy(31)` should return `true`.
+`happy(31)` ควร return `true`.
 
 ```js
 assert(happy(31));
 ```
 
-`happy(32)` should return `true`.
+`happy(32)` ควร return `true`.
 
 ```js
 assert(happy(32));
 ```
 
-`happy(33)` should return `false`.
+`happy(33)` ควร return `false`.
 
 ```js
 assert(!happy(33));

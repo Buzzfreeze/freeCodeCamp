@@ -8,7 +8,7 @@ dashedName: department-numbers
 
 # --description--
 
-There is a highly organized city that has decided to assign a number to each of their departments:
+มีเมืองที่มีการจัดระเบียบสูงซึ่งได้ตัดสินใจกำหนดหมายเลขให้กับแต่ละแผนกของตน:
 
 <ul>
   <li>Police department</li>
@@ -16,15 +16,15 @@ There is a highly organized city that has decided to assign a number to each of 
   <li>Fire department</li>
 </ul>
 
-Each department can have a number between 1 and 7 (inclusive).
+แต่ละแผนกสามารถมีตัวเลขได้ตั้งแต่ 1 ถึง 7 (รวม)
 
-The three department numbers are to be unique (different from each other) and must add up to the number 12.
+หมายเลขแผนกทั้งสามจะต้องไม่ซ้ำกัน (ต่างกัน) และต้องรวมกันเป็นเลข 12
 
-The Chief of the Police doesn't like odd numbers and wants to have an even number for his department.
+ผบ.ตร.ไม่ชอบเลขคี่และอยากได้เลขคู่ประจำแผนก
 
 # --instructions--
 
-Write a program which outputs all valid combinations as an array.
+เขียนโปรแกรมที่ return valid combinations เป็น array
 
 ```js
 [2, 3, 7] [2, 4, 6] [2, 6, 4]
@@ -36,25 +36,25 @@ Write a program which outputs all valid combinations as an array.
 
 # --hints--
 
-`combinations` should be a function.
+`combinations` ควรเป็น function.
 
 ```js
 assert(typeof combinations === 'function');
 ```
 
-`combinations([1, 2, 3], 6)` should return an Array.
+`combinations([1, 2, 3], 6)` ควร return Array.
 
 ```js
 assert(Array.isArray(combinations([1, 2, 3], 6)));
 ```
 
-`combinations([1, 2, 3, 4, 5, 6, 7], 12)` should return an array of length 14.
+`combinations([1, 2, 3, 4, 5, 6, 7], 12)` ควร return array มีความยาว 14.
 
 ```js
 assert(combinations(nums, total).length === len);
 ```
 
-`combinations([1, 2, 3, 4, 5, 6, 7], 12)` should return all valid combinations.
+`combinations([1, 2, 3, 4, 5, 6, 7], 12)` ควร return ทุก valid combinations.
 
 ```js
 assert.deepEqual(combinations(nums, total), result);

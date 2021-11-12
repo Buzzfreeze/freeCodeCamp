@@ -8,7 +8,7 @@ dashedName: set-of-real-numbers
 
 # --description--
 
-All real numbers form the uncountable set ℝ. Among its subsets, relatively simple are the convex sets, each expressed as a range between two real numbers *a* and *b* where *a* ≤ *b*. There are actually four cases for the meaning of "between", depending on open or closed boundary:
+จำนวนจริงทั้งหมดอยู่ในsetที่นับไม่ได้ ℝ ในบรรดาsetย่อยที่เป็นconvex sets แต่ละsetแสดงเป็นช่วงระหว่างจำนวนจริงสองจำนวน *a* และ *b* โดยที่ *a* ≤ *b* มีสี่กรณีสำหรับความหมายของ "ระหว่าง" ขึ้นอยู่กับขอบเขตที่เปิดหรือปิด:
 
 <ul>
   <li>[<i>a</i>, <i>b</i>]: {<i>x</i> | <i>a</i> ≤ <i>x</i> and <i>x</i> ≤ <i>b</i> }</li>
@@ -17,7 +17,7 @@ All real numbers form the uncountable set ℝ. Among its subsets, relatively sim
   <li>(<i>a</i>, <i>b</i>]: {<i>x</i> | <i>a</i> < <i>x</i> and <i>x</i> ≤ <i>b</i> }</li>
 </ul>
 
-Note that if *a* = *b*, of the four only \[*a*, *a*] would be non-empty.
+Note ถ้า *a* = *b* ของทั้ง4กรณีเป็น \[*a*, *a*] จะเป็นรูปแบบ non-empty.
 
 **Task**
 
@@ -46,23 +46,23 @@ Note that if *a* = *b*, of the four only \[*a*, *a*] would be non-empty.
 
 # --instructions--
 
-Write a function that takes 2 objects, a string and an array as parameters. The objects represents the set and have attributes: `low`, `high` and `rangeType`.
+เขียนฟังก์ชันที่รับ 2 object โดยที่stringและarrayเป็นพารามิเตอร์ object แสดงถึงsetและมีattribute: `low`, `high` และ `rangeType` 
 
-The `rangeType` can have values 0, 1, 2 and 3 for `CLOSED`, `BOTH_OPEN`, `LEFT_OPEN` and `RIGHT_OPEN`, respectively. The function should implement a set using this information.
+`rangeType`  สามารถมีค่าได้ 0, 1, 2 และ 3 สำหรับ `CLOSED`, `BOTH_OPEN`, `LEFT_OPEN` และ `RIGHT_OPEN` ตามลำดับ ฟังก์ชันควรใช้setโดยใช้ข้อมูลนี้
 
-The string represents the operation to be performed on the sets. It can be: `"union"`, `"intersect"` and `"subtract"` (difference).
+stringแสดงถึงการดำเนินการที่จะดำเนินการในset อาจเป็น: `"union"`, `"intersect"` และ `"subtract"` (ความแตกต่าง)
 
-After performing the operation, the function should check if the values in the array are present in the resultant set and store a corresponding boolean value to an array. The function should return this array.
+หลังจากดำเนินการ ฟังก์ชันควรตรวจสอบว่าค่าในarrayมีอยู่ในsetผลลัพธ์หรือไม่ และเก็บค่าbooleanที่สอดคล้องกันไปยังarray ฟังก์ชันควรส่งคืนarrayนี้
 
 # --hints--
 
-`realSet` should be a function.
+`realSet` ควรเป็น function.
 
 ```js
 assert(typeof realSet == 'function');
 ```
 
-`realSet({"low":0, "high":1, "rangeType":2}, {"low":0, "high":2, "rangeType":3}, "union", [1, 2, 3])` should return a array.
+`realSet({"low":0, "high":1, `rangeType` :2}, {"low":0, "high":2, `rangeType` :3}, "union", [1, 2, 3])` ควร return array.
 
 ```js
 assert(
@@ -77,7 +77,7 @@ assert(
 );
 ```
 
-`realSet({"low":0, "high":1, "rangeType":2}, {"low":0, "high":2, "rangeType":3}, "union", [1, 2, 3])` should return `[true, false, false]`.
+`realSet({"low":0, "high":1, `rangeType` :2}, {"low":0, "high":2, `rangeType` :3}, "union", [1, 2, 3])` ควร return `[true, false, false]`.
 
 ```js
 assert.deepEqual(
@@ -91,7 +91,7 @@ assert.deepEqual(
 );
 ```
 
-`realSet({"low":0, "high":2, "rangeType":3}, {"low":1, "high":2, "rangeType":2}, "intersect", [0, 1, 2])` should return `[false, false, false]`.
+`realSet({"low":0, "high":2, `rangeType` :3}, {"low":1, "high":2, `rangeType` :2}, "intersect", [0, 1, 2])` ควร return `[false, false, false]`.
 
 ```js
 assert.deepEqual(
@@ -105,7 +105,7 @@ assert.deepEqual(
 );
 ```
 
-`realSet({"low":0, "high":3, "rangeType":3}, {"low":0, "high":1, "rangeType":1}, "subtract", [0, 1, 2])` should return `[true, true, true]`.
+`realSet({"low":0, "high":3, `rangeType` :3}, {"low":0, "high":1, `rangeType` :1}, "subtract", [0, 1, 2])` ควร return `[true, true, true]`.
 
 ```js
 assert.deepEqual(
@@ -119,7 +119,7 @@ assert.deepEqual(
 );
 ```
 
-`realSet({"low":0, "high":3, "rangeType":3}, {"low":0, "high":1, "rangeType":0}, "subtract", [0, 1, 2])` should return `[false, false, true]`.
+`realSet({"low":0, "high":3, `rangeType` :3}, {"low":0, "high":1, `rangeType` :0}, "subtract", [0, 1, 2])` ควร return `[false, false, true]`.
 
 ```js
 assert.deepEqual(
@@ -133,7 +133,7 @@ assert.deepEqual(
 );
 ```
 
-`realSet({"low":0, "high":33, "rangeType":1}, {"low":30, "high":31, "rangeType":0}, "intersect", [30, 31, 32])` should return `[true, true, false]`.
+`realSet({"low":0, "high":33, `rangeType` :1}, {"low":30, "high":31, `rangeType` :0}, "intersect", [30, 31, 32])` ควร return `[true, true, false]`.
 
 ```js
 assert.deepEqual(

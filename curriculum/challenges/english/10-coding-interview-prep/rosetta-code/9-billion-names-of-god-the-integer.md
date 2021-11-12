@@ -8,11 +8,11 @@ dashedName: 9-billion-names-of-god-the-integer
 
 # --description--
 
-This task is a variation of the [short story by Arthur C. Clarke](<https://en.wikipedia.org/wiki/The Nine Billion Names of God#Plot_summary> "wp: The Nine Billion Names of God#Plot_summary").
+งานนี้เป็นรูปแบบของ [short story โดย Arthur C. Clarke](<https://en.wikipedia.org/wiki/The Nine Billion Names of God#Plot_summary> "wp: The Nine Billion Names of God#Plot_summary").
 
-(Solvers should be aware of the consequences of completing this task.)
+(แก้ปัญหาควรตระหนักถึงผลที่ตามมาของการทำงานนี้ให้สำเร็จ)
 
-In detail, to specify what is meant by a "name":
+โดยละเอียดเพื่อระบุว่า "name" หมายถึง:
 
 <ul>
   <li>The integer 1 has 1 name "1".</li>
@@ -22,9 +22,10 @@ In detail, to specify what is meant by a "name":
   <li>The integer 5 has 7 names "1+1+1+1+1", "2+1+1+1", "2+2+1", "3+1+1", "3+2", "4+1", "5".</li>
 </ul>
 
-This can be visualized in the following form:
+สามารถเห็นภาพได้ในรูปแบบต่อไปนี้:
 
-<pre>          1
+<pre>          
+          1
         1   1
       1   1   1
     1   2   1   1
@@ -32,53 +33,53 @@ This can be visualized in the following form:
 1   3   3   2   1   1
 </pre>
 
-Where row $n$ corresponds to integer $n$, and each column $C$ in row $m$ from left to right corresponds to the number of names beginning with $C$.
+โดยที่แถว $n$ ตรงกับจำนวนเต็ม $n$ และแต่ละคอลัมน์ $C$ ในแถว $m$ จากซ้ายไปขวาจะสอดคล้องกับจำนวนชื่อที่ขึ้นต้นด้วย $C$
 
-Optionally note that the sum of the $n$-th row $P(n)$ is the integer partition function.
+นอกจากนี้ โปรดทราบว่าผลรวมของแถวที่ $n$-th $P(n)$ เป็น partition function.
 
 # --instructions--
 
-Implement a function that returns the sum of the $n$-th row.
+ใช้ฟังก์ชันที่ return ค่าผลรวมของแถวที่ $n$-th
 
 # --hints--
 
-`numberOfNames` should be function.
+`numberOfNames` ควรเป็น function.
 
 ```js
 assert(typeof numberOfNames === 'function');
 ```
 
-`numberOfNames(5)` should equal 7.
+`numberOfNames(5)` ควรเท่ากับ 7.
 
 ```js
 assert.equal(numberOfNames(5), 7);
 ```
 
-`numberOfNames(12)` should equal 77.
+`numberOfNames(12)` ควรเท่ากับ 77.
 
 ```js
 assert.equal(numberOfNames(12), 77);
 ```
 
-`numberOfNames(18)` should equal 385.
+`numberOfNames(18)` ควรเท่ากับ 385.
 
 ```js
 assert.equal(numberOfNames(18), 385);
 ```
 
-`numberOfNames(23)` should equal 1255.
+`numberOfNames(23)` ควรเท่ากับ 1255.
 
 ```js
 assert.equal(numberOfNames(23), 1255);
 ```
 
-`numberOfNames(42)` should equal 53174.
+`numberOfNames(42)` ควรเท่ากับ 53174.
 
 ```js
 assert.equal(numberOfNames(42), 53174);
 ```
 
-`numberOfNames(123)` should equal 2552338241.
+`numberOfNames(123)` ควรเท่ากับ 2552338241.
 
 ```js
 assert.equal(numberOfNames(123), 2552338241);

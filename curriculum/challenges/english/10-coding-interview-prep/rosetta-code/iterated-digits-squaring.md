@@ -8,7 +8,7 @@ dashedName: iterated-digits-squaring
 
 # --description--
 
-If you add the square of the digits of a Natural number (an integer bigger than zero), you always end with either 1 or 89:
+หากคุณบวกกำลังสองของNatural number (จำนวนเต็มที่มากกว่าศูนย์) คุณจะลงท้ายด้วย 1 หรือ 89 เสมอ:
 
 <pre>15 -> 26 -> 40 -> 16 -> 37 -> 58 -> 89
 7 -> 49 -> 97 -> 130 -> 10 -> 1
@@ -16,53 +16,53 @@ If you add the square of the digits of a Natural number (an integer bigger than 
 
 # --instructions--
 
-Write a function that takes a number as a parameter and returns 1 or 89 after performing the mentioned process.
+เขียนฟังก์ชันที่ใช้ตัวเลขเป็นพารามิเตอร์และส่งกลับ 1 หรือ 89 หลังจากดำเนินการตามกระบวนการดังกล่าว
 
 # --hints--
 
-`iteratedSquare` should be a function.
+`iteratedSquare` ควรเป็น function.
 
 ```js
 assert(typeof iteratedSquare == 'function');
 ```
 
-`iteratedSquare(4)` should return a number.
+`iteratedSquare(4)` ควร return number.
 
 ```js
 assert(typeof iteratedSquare(4) == 'number');
 ```
 
-`iteratedSquare(4)` should return `89`.
+`iteratedSquare(4)` ควร return `89`.
 
 ```js
 assert.equal(iteratedSquare(4), 89);
 ```
 
-`iteratedSquare(7)` should return `1`.
+`iteratedSquare(7)` ควร return `1`.
 
 ```js
 assert.equal(iteratedSquare(7), 1);
 ```
 
-`iteratedSquare(15)` should return `89`.
+`iteratedSquare(15)` ควร return `89`.
 
 ```js
 assert.equal(iteratedSquare(15), 89);
 ```
 
-`iteratedSquare(20)` should return `89`.
+`iteratedSquare(20)` ควร return `89`.
 
 ```js
 assert.equal(iteratedSquare(20), 89);
 ```
 
-`iteratedSquare(70)` should return `1`.
+`iteratedSquare(70)` ควร return `1`.
 
 ```js
 assert.equal(iteratedSquare(70), 1);
 ```
 
-`iteratedSquare(100)` should return `1`.
+`iteratedSquare(100)` ควร return `1`.
 
 ```js
 assert.equal(iteratedSquare(100), 1);

@@ -1,62 +1,62 @@
 ---
 id: 594810f028c0303b75339acd
-title: 'Abundant, deficient and perfect number classifications'
+title: 'Abundant, deficient and perfect number classถ้าications'
 challengeType: 5
 forumTopicId: 302221
-dashedName: abundant-deficient-and-perfect-number-classifications
+dashedName: abundant-deficient-and-perfect-number-classถ้าications
 ---
 
 # --description--
 
-These define three classifications of positive integers based on their proper divisors.
+สิ่งเหล่านี้กำหนดการแบ่งประเภทจำนวนเต็มบวกสามประเภทตามตัวหารที่เหมาะสม
 
-Let $P(n)$ be the sum of the proper divisors of `n` where proper divisors are all positive integers `n` other than `n` itself.
+ให้ $P(n)$ เป็นผลรวมของตัวหารที่เหมาะสมของ `n' โดยที่ตัวหารที่เหมาะสมเป็นจำนวนเต็มบวก `n` ทั้งหมดที่ไม่ใช่ `n` เอง
 
-If `P(n) < n` then `n` is classed as `deficient`
+ถ้า `P(n) < n` ดังนั้น `n` เป็น class ของ `deficient`
 
-If `P(n) === n` then `n` is classed as `perfect`
+ถ้า `P(n) === n` ดังนั้น `n` เป็น class ของ `perfect`
 
-If `P(n) > n` then `n` is classed as `abundant`
+ถ้า `P(n) > n` ดังนั้น `n` เป็น class ของ `abundant`
 
-**Example**: `6` has proper divisors of `1`, `2`, and `3`. `1 + 2 + 3 = 6`, so `6` is classed as a perfect number.
+**Example**: `6` มีตัวหารที่เหมาะสมของ `1`, `2`, และ `3`. `1 + 2 + 3 = 6`, ดังนั้น `6` เป็น class ของ perfect number
 
 # --instructions--
 
-Implement a function that calculates how many of the integers from `1` to `num` (inclusive) are in each of the three classes. Output the result as an array in the following format `[deficient, perfect, abundant]`.
+ใช้ฟังก์ชันที่คำนวณจำนวนเต็มจำนวนตั้งแต่ `1` ถึง `num` (รวม) ในแต่ละคลาสทั้งสาม ส่งออกผลลัพธ์เป็นอาร์เรย์ในรูปแบบต่อไปนี้ `[deficient, perfect, abundant]`.
 
 # --hints--
 
-`getDPA` should be a function.
+`getDPA` ควรเป็น function.
 
 ```js
 assert(typeof getDPA === 'function');
 ```
 
-`getDPA(5000)` should return an array.
+`getDPA(5000)` ควร return array.
 
 ```js
 assert(Array.isArray(getDPA(5000)));
 ```
 
-`getDPA(5000)` return array should have a length of `3`.
+`getDPA(5000)` return array ควรมีความยาว `3`.
 
 ```js
 assert(getDPA(5000).length === 3);
 ```
 
-`getDPA(5000)` should return `[3758, 3, 1239]`.
+`getDPA(5000)` ควร return `[3758, 3, 1239]`.
 
 ```js
 assert.deepEqual(getDPA(5000), [3758, 3, 1239]);
 ```
 
-`getDPA(10000)` should return `[7508, 4, 2488]`.
+`getDPA(10000)` ควร return `[7508, 4, 2488]`.
 
 ```js
 assert.deepEqual(getDPA(10000), [7508, 4, 2488]);
 ```
 
-`getDPA(20000)` should return `[15043, 4, 4953]`.
+`getDPA(20000)` ควร return `[15043, 4, 4953]`.
 
 ```js
 assert.deepEqual(getDPA(20000), [15043, 4, 4953]);
@@ -81,11 +81,11 @@ function getDPA(num) {
     let ds = 1;
     const e = Math.sqrt(n);
     for (let d = 2; d < e; d += 1) {
-      if (n % d === 0) {
+      ถ้า (n % d === 0) {
         ds += d + (n / d);
       }
     }
-    if (n % e === 0) {
+    ถ้า (n % e === 0) {
       ds += e;
     }
     dpa[ds < n ? 0 : ds === n ? 1 : 2] += 1;

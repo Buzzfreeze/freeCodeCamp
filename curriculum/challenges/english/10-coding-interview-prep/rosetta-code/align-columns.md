@@ -8,11 +8,11 @@ dashedName: align-columns
 
 # --description--
 
-Given an array of many lines, where fields within a line are delineated by a single `$` character, write a program that aligns each column of fields by ensuring that words in each column are separated by at least one space. Further, allow for each word in a column to be either left justified, right justified, or center justified within its column.
+กำหนดarrayของหลายบรรทัด โดยที่ฟิลด์ภายในบรรทัดมีอักขระ `$` ตัวเดียว ให้เขียนโปรแกรมที่จัดตำแหน่งแต่ละคอลัมน์ของฟิลด์โดยตรวจสอบให้แน่ใจว่าคำในแต่ละคอลัมน์ถูกคั่นด้วยช่องว่างอย่างน้อยหนึ่งช่อง นอกจากนี้ อนุญาตให้แต่ละคำในคอลัมน์จัดชิดซ้าย ชิดขวา หรือจัดกึ่งกลางภายในคอลัมน์
 
 # --instructions--
 
-Use the following text to test your programs:
+ใช้ข้อความต่อไปนี้เพื่อทดสอบโปรแกรมของคุณ:
 
 ```js
 const testText = [
@@ -31,14 +31,14 @@ const testText = [
 
 **Note that:**
 
-- The example input texts lines may, or may not, have trailing dollar characters.
-- All columns should share the same alignment.
-- Consecutive space characters produced adjacent to the end of lines are insignificant for the purposes of the task.
-- Output text will be viewed in a mono-spaced font on a plain text editor or basic terminal. Lines in it should be joined using new line character (`\n`).
-- The minimum space between columns should be computed from the text and not hard-coded.
-- It is not a requirement to add separating characters between or around columns.
+- ตัวอย่างบรรทัดข้อความที่ป้อนอาจมีหรือไม่มีอักขระดอลลาร์ต่อท้าย
+- ทุกคอลัมน์ควรมีการจัดตำแหน่งเดียวกัน
+- อักขระช่องว่างต่อเนื่องที่สร้างไว้ติดกับส่วนท้ายของบรรทัดนั้นไม่มีนัยสำคัญสำหรับวัตถุประสงค์ของงาน
+-ข้อความที่ส่งออกจะถูกดูในแบบอักษรเว้นวรรคแบบโมโนในโปรแกรมแก้ไขข้อความธรรมดาหรือเทอร์มินัลพื้นฐาน บรรทัดในนั้นควรต่อกันโดยใช้อักขระขึ้นบรรทัดใหม่ (`\n`)
+- ช่องว่างขั้นต่ำระหว่างคอลัมน์ควรคำนวณจากข้อความและไม่ฮาร์ดโค้ด
+- ไม่จำเป็นต้องเพิ่มอักขระแยกระหว่างหรือรอบคอลัมน์
 
-For example, one of the lines from the `testText`, after jusitifing to the right, left and center respectivelly:
+ตัวอย่างเช่น หนึ่งในบรรทัดจาก `testText' หลังจากตั้งค่าให้ชิดขวา ซ้าย และตรงกลางตามลำดับ:
 
 ```js
 '    column        are separated     by     at    least       one space.\n'
@@ -48,25 +48,25 @@ For example, one of the lines from the `testText`, after jusitifing to the right
 
 # --hints--
 
-`formatText` should be a function.
+`formatText` ควรเป็น function.
 
 ```js
 assert(typeof formatText === 'function');
 ```
 
-`formatText(testText, 'right')` should produce text with columns justified to the right.
+`formatText(testText, 'right')` ควรสร้างข้อความที่มีคอลัมน์ชิดขวา
 
 ```js
 assert.strictEqual(formatText(_testText, 'right'), rightAligned);
 ```
 
-`formatText(testText, 'left')` should produce text with columns justified to the left.
+`formatText(testText, 'left')` ควรสร้างข้อความที่มีคอลัมน์ชิดซ้าย
 
 ```js
 assert.strictEqual(formatText(_testText, 'left'), leftAligned);
 ```
 
-`formatText(testText, 'center')` should produce text with columns justified to the center.
+`formatText(testText, 'center')` ควรสร้างข้อความที่มีคอลัมน์ตรง
 
 ```js
 assert.strictEqual(formatText(_testText, 'center'), centerAligned);

@@ -8,11 +8,14 @@ dashedName: levenshtein-distance
 
 # --description--
 
-In information theory and computer science, the **Levenshtein distance** is a [metric](<https://en.wikipedia.org/wiki/string metric>) for measuring the amount of difference between two sequences (i.e. an [edit distance](<https://en.wikipedia.org/wiki/edit distance>)). The Levenshtein distance between two strings is defined as the minimum number of edits needed to transform one string into the other, with the allowable edit operations being insertion, deletion, or substitution of a single character.
 
-Example:
+ในทฤษฎีสารสนเทศและวิทยาการคอมพิวเตอร์ **Levenshtein distance** เป็น [metric](<https://en.wikipedia.org/wiki/string metric>) 
+สำหรับวัดปริมาณความแตกต่างระหว่างสองลำดับ (i.e. an [edit distance](<https://en.wikipedia.org/wiki/edit distance>)). ระยะห่าง Levenshtein ระหว่างสองstringถูกกำหนดให้เป็นจำนวนการแก้ไขขั้นต่ำที่จำเป็นในการแปลงstringหนึ่งเป็นstringอื่น โดยการดำเนินการแก้ไขที่อนุญาตคือการแทรก การลบ หรือการแทนที่อักขระตัวเดียว
 
-The Levenshtein distance between "**kitten**" and "**sitting**" is 3, since the following three edits change one into the other, and there isn't a way to do it with fewer than three edits:
+เช่น:
+
+ระยะทาง Levenshtein ระหว่าง "**kitten**"และ "**sitting**" คือ 3
+เนื่องจากการแก้ไขสามรายการต่อไปนี้เปลี่ยนเป็นการแก้ไขอื่น และไม่มีวิธีการแก้ไขน้อยกว่าสามรายการ:
 
 <ul>
   <li><strong>k</strong>itten   <strong>s</strong>itten    (substitution of 'k' with 's')</li>
@@ -26,53 +29,53 @@ The Levenshtein distance between "**kitten**" and "**sitting**" is 3, since the 
 
 # --instructions--
 
-Write a function that returns the Levenshtein distance between two strings given as parameters.
+เขียนฟังก์ชันที่ส่งคืนระยะห่าง Levenshtein ระหว่างสองstringที่กำหนดเป็นพารามิเตอร์
 
 # --hints--
 
-`levenshtein` should be a function.
+`levenshtein` ควรเป็น function.
 
 ```js
 assert(typeof levenshtein == 'function');
 ```
 
-`levenshtein("mist", "dist")` should return a number.
+`levenshtein("mist", "dist")` ควร return number.
 
 ```js
 assert(typeof levenshtein('mist', 'dist') == 'number');
 ```
 
-`levenshtein("mist", "dist")` should return `1`.
+`levenshtein("mist", "dist")` ควร return `1`.
 
 ```js
 assert.equal(levenshtein('mist', 'dist'), 1);
 ```
 
-`levenshtein("tier", "tor")` should return `2`.
+`levenshtein("tier", "tor")` ควร return `2`.
 
 ```js
 assert.equal(levenshtein('tier', 'tor'), 2);
 ```
 
-`levenshtein("kitten", "sitting")` should return `3`.
+`levenshtein("kitten", "sitting")` ควร return `3`.
 
 ```js
 assert.equal(levenshtein('kitten', 'sitting'), 3);
 ```
 
-`levenshtein("stop", "tops")` should return `2`.
+`levenshtein("stop", "tops")` ควร return `2`.
 
 ```js
 assert.equal(levenshtein('stop', 'tops'), 2);
 ```
 
-`levenshtein("rosettacode", "raisethysword")` should return `8`.
+`levenshtein("rosettacode", "raisethysword")` ควร return `8`.
 
 ```js
 assert.equal(levenshtein('rosettacode', 'raisethysword'), 8);
 ```
 
-`levenshtein("mississippi", "swiss miss")` should return `8`.
+`levenshtein("mississippi", "swiss miss")` ควร return `8`.
 
 ```js
 assert.equal(levenshtein('mississippi', 'swiss miss'), 8);

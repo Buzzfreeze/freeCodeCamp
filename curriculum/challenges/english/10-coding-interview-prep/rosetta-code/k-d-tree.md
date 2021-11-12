@@ -8,21 +8,22 @@ dashedName: k-d-tree
 
 # --description--
 
-A k-d tree (short for *k*-dimensional tree) is a space-partitioning data structure for organizing points in a k-dimensional space. k-d trees are a useful data structure for several applications, such as searches involving a multidimensional search key (e.g. range searches and nearest neighbor searches). k-d trees are a special case of binary space partitioning trees. k-d trees are not suitable, however, for efficiently finding the nearest neighbor in high dimensional spaces. As a general rule, if the dimensionality is *k*, the number of points in the data, *N*, should be *N* ≫ 2<sup><i>k</i></sup>. Otherwise, when k-d trees are used with high-dimensional data, most of the points in the tree will be evaluated and the efficiency is no better than exhaustive search, and other methods such as approximate nearest-neighbor are used instead.
+k-d tree (ค่าที่สั้น สำหรับ *k*-dimensional tree) เป็นโครงสร้างข้อมูลแบ่งพื้นที่สำหรับจัดจุดในพื้นที่ k มิติ ต้นไม้ k-d เป็นโครงสร้างข้อมูลที่มีประโยชน์สำหรับแอปพลิเคชันต่างๆ เช่น การค้นหาที่เกี่ยวข้องกับคีย์การค้นหาแบบหลายมิติ (เช่น การค้นหาช่วงและการค้นหาเพื่อนบ้านที่ใกล้ที่สุด) ต้นไม้ k-d เป็นกรณีพิเศษของต้นไม้แบ่งพื้นที่ไบนารี ต้นไม้ k-d ไม่เหมาะสำหรับการหาเพื่อนบ้านที่ใกล้ที่สุดในพื้นที่มิติสูงอย่างมีประสิทธิภาพ ตามกฎทั่วไป ถ้ามิติคือ *k*, จำนวนจุดในข้อมูล
+, *N*, ควรเป็น *N* ≫ 2<sup><i>k</i></sup>. มิฉะนั้น เมื่อใช้ k-d tree กับข้อมูลมิติสูง จุดส่วนใหญ่ในทรีจะถูกประเมินและประสิทธิภาพไม่ได้ดีไปกว่าการค้นหาอย่างละเอียดถี่ถ้วน และใช้วิธีการอื่นๆ เช่น การประมาณเพื่อนบ้านที่ใกล้ที่สุดแทน
 
 # --instructions--
 
-Write a function to perform a nearest neighbour search using k-d tree. The function takes two parameters: an array of k-dimensional points, and a single k-dimensional point whose nearest neighbour should be returned by the function. A k-dimensional point will be given as an array of k elements.
+เขียนฟังก์ชันเพื่อค้นหาเพื่อนบ้านที่ใกล้ที่สุดโดยใช้ k-d tree ฟังก์ชันใช้พารามิเตอร์สองตัว: อาร์เรย์ของจุด k-dimensional และจุด k- มิติเดียวซึ่งฟังก์ชันควรส่งคืนเพื่อนบ้านที่ใกล้ที่สุด จุด k มิติจะได้รับเป็นอาร์เรย์ขององค์ประกอบ k
 
 # --hints--
 
-`kdNN` should be a function.
+`kdNN` ควรเป็น function.
 
 ```js
 assert(typeof kdNN == 'function');
 ```
 
-`kdNN([[[2, 3], [5, 4], [9, 6], [4, 7], [8, 1], [7, 2]], [9, 2])` should return an array.
+`kdNN([[[2, 3], [5, 4], [9, 6], [4, 7], [8, 1], [7, 2]], [9, 2])` ควร return array.
 
 ```js
 assert(
@@ -42,7 +43,7 @@ assert(
 );
 ```
 
-`kdNN([[[2, 3], [5, 4], [9, 6], [4, 7], [8, 1], [7, 2]], [9, 2])` should return `[ 8, 1 ]`.
+`kdNN([[[2, 3], [5, 4], [9, 6], [4, 7], [8, 1], [7, 2]], [9, 2])` ควร return `[ 8, 1 ]`.
 
 ```js
 assert.deepEqual(
@@ -61,7 +62,7 @@ assert.deepEqual(
 );
 ```
 
-`kdNN([[[2, 3], [5, 4], [9, 6], [4, 7], [8, 1], [7, 2]], [7, 1])` should return `[ 8, 1 ]`.
+`kdNN([[[2, 3], [5, 4], [9, 6], [4, 7], [8, 1], [7, 2]], [7, 1])` ควร return `[ 8, 1 ]`.
 
 ```js
 assert.deepEqual(
@@ -80,7 +81,7 @@ assert.deepEqual(
 );
 ```
 
-`kdNN([[[2, 3], [5, 4], [9, 6], [4, 7], [8, 1], [7, 2]], [3, 2])` should return `[ 2, 3 ]`.
+`kdNN([[[2, 3], [5, 4], [9, 6], [4, 7], [8, 1], [7, 2]], [3, 2])` ควร return `[ 2, 3 ]`.
 
 ```js
 assert.deepEqual(
@@ -99,7 +100,7 @@ assert.deepEqual(
 );
 ```
 
-`kdNN([[2, 3, 1], [9, 4, 5], [4, 6, 7], [1, 2, 5], [7, 8, 9], [3, 6, 1]], [1, 2, 3])` should return `[ 1, 2, 5 ]`.
+`kdNN([[2, 3, 1], [9, 4, 5], [4, 6, 7], [1, 2, 5], [7, 8, 9], [3, 6, 1]], [1, 2, 3])` ควร return `[ 1, 2, 5 ]`.
 
 ```js
 assert.deepEqual(
@@ -118,7 +119,7 @@ assert.deepEqual(
 );
 ```
 
-`kdNN([[2, 3, 1], [9, 4, 5], [4, 6, 7], [1, 2, 5], [7, 8, 9], [3, 6, 1]], [4, 5, 6])` should return `[ 4, 6, 7 ]`.
+`kdNN([[2, 3, 1], [9, 4, 5], [4, 6, 7], [1, 2, 5], [7, 8, 9], [3, 6, 1]], [4, 5, 6])` ควร return `[ 4, 6, 7 ]`.
 
 ```js
 assert.deepEqual(
@@ -137,7 +138,7 @@ assert.deepEqual(
 );
 ```
 
-`kdNN([[2, 3, 1], [9, 4, 5], [4, 6, 7], [1, 2, 5], [7, 8, 9], [3, 6, 1]], [8, 8, 8])` should return `[ 7, 8, 9 ]`.
+`kdNN([[2, 3, 1], [9, 4, 5], [4, 6, 7], [1, 2, 5], [7, 8, 9], [3, 6, 1]], [8, 8, 8])` ควร return `[ 7, 8, 9 ]`.
 
 ```js
 assert.deepEqual(

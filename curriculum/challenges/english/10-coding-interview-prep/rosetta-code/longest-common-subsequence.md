@@ -8,65 +8,65 @@ dashedName: longest-common-subsequence
 
 # --description--
 
-The **longest common subsequence** (or [**LCS**](http://en.wikipedia.org/wiki/Longest_common_subsequence_problem)) of groups A and B is the longest group of elements from A and B that are common between the two groups and in the same order in each group. For example, the sequences "1234" and "1224533324" have an LCS of "1234":
+**longest common subsequence** (หรือ [**LCS**](http://en.wikipedia.org/wiki/Longest_common_subsequence_problem)) ของกลุ่ม A และ B คือกลุ่มขององค์ประกอบที่ยาวที่สุดจาก A และ B ที่เหมือนกันระหว่างสองกลุ่มและอยู่ในลำดับเดียวกันในแต่ละกลุ่ม ตัวอย่างเช่น ลำดับ "1234" และ "1224533324" มี LCS เป็น "1234":
 
 ***1234***
 
 ***12***245***3***332***4***
 
-For a string example, consider the sequences "thisisatest" and "testing123testing". An LCS would be "tsitest":
+สำหรับตัวอย่างstring ให้พิจารณาลำดับ "thisisatest" และ "testing123testing" LCS จะเป็น "tsitest":
 
 ***t***hi***si***sa***test***
 
 ***t***e***s***t***i***ng123***test***ing.
 
-Your code only needs to deal with strings.
+รหัสของคุณต้องจัดการกับstringเท่านั้น
 
-For more information on this problem please see [Wikipedia](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem).
+สำหรับข้อมูลเพิ่มเติมเกี่ยวกับปัญหานี้ โปรดดูที่ [Wikipedia](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem).
 
 # --instructions--
 
-Write a case-sensitive function that returns the LCS of two strings. You don't need to show multiple LCS's.
+เขียนฟังก์ชันที่คำนึงถึงขนาดตัวพิมพ์ที่ส่งคืน LCS ของสองstring คุณไม่จำเป็นต้องแสดง LCS หลายรายการ
 
 # --hints--
 
-`lcs` should be a function.
+`lcs` ควรเป็น function.
 
 ```js
 assert(typeof lcs == 'function');
 ```
 
-`lcs("thisisatest", "testing123testing")` should return a string.
+`lcs("thisisatest", "testing123testing")` ควร return string.
 
 ```js
 assert(typeof lcs('thisisatest', 'testing123testing') == 'string');
 ```
 
-`lcs("thisisatest", "testing123testing")` should return `"tsitest"`.
+`lcs("thisisatest", "testing123testing")` ควร return `"tsitest"`.
 
 ```js
 assert.equal(lcs('thisisatest', 'testing123testing'), 'tsitest');
 ```
 
-`lcs("ABCDGH", "AEDFHR")` should return `"ADH"`.
+`lcs("ABCDGH", "AEDFHR")` ควร return `"ADH"`.
 
 ```js
 assert.equal(lcs('ABCDGH', 'AEDFHR'), 'ADH');
 ```
 
-`lcs("AGGTAB", "GXTXAYB")` should return `"GTAB"`.
+`lcs("AGGTAB", "GXTXAYB")` ควร return `"GTAB"`.
 
 ```js
 assert.equal(lcs('AGGTAB', 'GXTXAYB'), 'GTAB');
 ```
 
-`lcs("BDACDB", "BDCB")` should return `"BDCB"`.
+`lcs("BDACDB", "BDCB")` ควร return `"BDCB"`.
 
 ```js
 assert.equal(lcs('BDACDB', 'BDCB'), 'BDCB');
 ```
 
-`lcs("ABAZDC", "BACBAD")` should return `"ABAD"`.
+`lcs("ABAZDC", "BACBAD")` ควร return `"ABAD"`.
 
 ```js
 assert.equal(lcs('ABAZDC', 'BACBAD'), 'ABAD');
