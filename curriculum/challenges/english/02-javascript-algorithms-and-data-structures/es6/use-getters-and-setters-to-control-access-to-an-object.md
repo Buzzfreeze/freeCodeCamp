@@ -85,8 +85,6 @@ assert(
 );
 ```
 
-When instantiated with a Fahrenheit value, `Thermostat` should set the correct `temperature`.
-
 เมื่อสร้าง instance ด้วย Fahrenheit value แล้ว `Thermostat` ควร set `temperature` ที่ถูกต้อง
 
 ```js
