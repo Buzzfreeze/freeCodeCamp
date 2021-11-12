@@ -8,47 +8,47 @@ dashedName: use-destructuring-assignment-to-assign-variables-from-arrays
 
 # --description--
 
-ES6 makes destructuring arrays as easy as destructuring objects.
+ES6 ทำให้การ destructuring arrays ง่ายเหมือน destructuring objects
 
-One key difference between the spread operator and array destructuring is that the spread operator unpacks all contents of an array into a comma-separated list. Consequently, you cannot pick or choose which elements you want to assign to variables.
+ข้อแตกต่างที่สำคัญอย่างหนึ่งระหว่าง spread operator และ array destructuring คือ spread operator จะแยกข้อมูลทั้งหมดของ array ลงในรายการที่คั่นด้วยเครื่องหมาย comma ดังนั้น คุณไม่สามารถเลือก elements ที่คุณต้องการกำหนดให้กับตัวแปรได้
 
-Destructuring an array lets us do exactly that:
+ลองมาทำ destructuring array 
 
 ```js
 const [a, b] = [1, 2, 3, 4, 5, 6];
 console.log(a, b);
 ```
 
-The console will display the values of `a` and `b` as `1, 2`.
+console จะแสดงค่า `a` และ `b` เป็น `1, 2`
 
-The variable `a` is assigned the first value of the array, and `b` is assigned the second value of the array. We can also access the value at any index in an array with destructuring by using commas to reach the desired index:
+ตัวแปร `a` ถูกกำหนดเป็นค่าแรกของ array และ  `b` ถูกกำหนดเป็นค่าที่สองของ array นอกจากนี้เรายังสามารถเข้าถึงค่าที่ index ใดก็ได้ใน array ที่มีการแยกค่าโดยใช้เครื่องหมาย comma เพื่อเข้าถึง index ที่ต้องการ:
 
 ```js
 const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
 console.log(a, b, c);
 ```
 
-The console will display the values of `a`, `b`, and `c` as `1, 2, 5`.
+console จะแสดงค่า `a`, `b`, และ `c` เป็น `1, 2, 5`
 
 # --instructions--
 
-Use destructuring assignment to swap the values of `a` and `b` so that `a` receives the value stored in `b`, and `b` receives the value stored in `a`.
+จงใช้ destructuring assignment ในการสลับค่าของ `a` และ `b` เพื่อ `a` จะรับค่าที่เก็บใน `b` และ `b` รับค่าที่เก็บใน `a`
 
 # --hints--
 
-The value of `a` should be `6`, after swapping.
+ค่าของ `a` ควรเป็น `6` หลังจากสลับ
 
 ```js
 assert(a === 6);
 ```
 
-The value of `b` should be `8`, after swapping.
+ค่าของ `b` ควรเป็น `8` หลังจากสลับ
 
 ```js
 assert(b === 8);
 ```
 
-You should use array destructuring to swap `a` and `b`.
+คุณควรใช้ array destructuring ในการสลับ `a` และ `b`
 
 ```js
 assert(/\[\s*(\w)\s*,\s*(\w)\s*\]\s*=\s*\[\s*\2\s*,\s*\1\s*\]/g.test(code));

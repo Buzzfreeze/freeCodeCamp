@@ -8,9 +8,9 @@ dashedName: use-arrow-functions-to-write-concise-anonymous-functions
 
 # --description--
 
-In JavaScript, we often don't need to name our functions, especially when passing a function as an argument to another function. Instead, we create inline functions. We don't need to name these functions because we do not reuse them anywhere else.
+ใน JavaScript เราไม่จำเป็นต้องตั้งชื่อฟังก์ชันของเรา โดยเฉพาะอย่างยิ่งเมื่อส่งฟังก์ชันเป็น argument ไปยังฟังก์ชันอื่น แต่เราสร้าง inline functions แทน เราไม่จำเป็นต้องตั้งชื่อฟังก์ชันเหล่านี้เพราะเราไม่ได้นำกลับมาใช้ใหม่จากที่อื่น
 
-To achieve this, we often use the following syntax:
+เพื่อทำสิ่งเรานี้ เราจะต้องใช้ syntax ดังนี้
 
 ```js
 const myFunc = function() {
@@ -19,7 +19,8 @@ const myFunc = function() {
 }
 ```
 
-ES6 provides us with the syntactic sugar to not have to write anonymous functions this way. Instead, you can use **arrow function syntax**:
+ES6 เสนอรูปแบบ anonymous function ที่ง่ายกว่าเดิมโดยการใช้ **arrow function syntax**
+
 
 ```js
 const myFunc = () => {
@@ -28,45 +29,46 @@ const myFunc = () => {
 }
 ```
 
-When there is no function body, and only a return value, arrow function syntax allows you to omit the keyword `return` as well as the brackets surrounding the code. This helps simplify smaller functions into one-line statements:
+เมื่อไม่มี function body และมีเพียงการคืนค่า ดังนั้น arrow function อนุญาตให้คุณไม่ต้องมี keyword `return` เช่นเดียวกับวงเล็บที่ล้อมรอบโค้ด ซึ่งช่วยลดความซับซ้อนของฟังก์ชันขนาดเล็ก เพราะสามารถเขียนด้วยคำสั่งบรรทัดเดียว:
 
 ```js
 const myFunc = () => "value";
 ```
 
-This code will still return the string `value` by default.
+โค้ดนี้จะคืนค่า string `value` by default
 
 # --instructions--
 
-Rewrite the function assigned to the variable `magic` which returns a `new Date()` to use arrow function syntax. Also, make sure nothing is defined using the keyword `var`.
+จงปรับแก้ฟังก์ชันที่กำหนดค่าให้กับตัวแปร `magic` ซึ่งคืนค่าเป็น `new Date()` โดยใช้ arrow function นอกจากนี้ให้ตรวจสอบว่าไม่มีการกำหนด keyword `var` ในฟังก์ชัน
+
 
 # --hints--
 
-You should replace the `var` keyword.
+คุณควรแทนที่ keyword `var`
 
 ```js
 (getUserInput) => assert(!getUserInput('index').match(/var/g));
 ```
 
-`magic` should be a constant variable (by using `const`).
+`magic` ควรเป็นตัวแปรคงที่ (โดยใช้ `const` )
 
 ```js
 (getUserInput) => assert(getUserInput('index').match(/const\s+magic/g));
 ```
 
-`magic` should be a `function`.
+`magic` ควรเป็น `function`
 
 ```js
 assert(typeof magic === 'function');
 ```
 
-`magic()` should return the correct date.
+`magic()` ควรคืนค่าวันที่ที่ถูกต้อง
 
 ```js
 assert(magic().setHours(0, 0, 0, 0) === new Date().setHours(0, 0, 0, 0));
 ```
 
-The `function` keyword should not be used.
+keyword `function` ไม่ควรถูกใช้
 
 ```js
 (getUserInput) => assert(!getUserInput('index').match(/function/g));

@@ -8,9 +8,10 @@ dashedName: use-destructuring-assignment-to-extract-values-from-objects
 
 # --description--
 
-<dfn>Destructuring assignment</dfn> is special syntax introduced in ES6, for neatly assigning values taken directly from an object.
+<dfn>Destructuring assignment</dfn> เป็น syntax พิเศษที่แนะนำใน ES6 เพื่อกำหนดค่า object โดยตรง
 
-Consider the following ES5 code:
+
+วิเคราะห์โค้ด ES5 ต่อไปนี้
 
 ```js
 const user = { name: 'John Doe', age: 34 };
@@ -19,27 +20,29 @@ const name = user.name;
 const age = user.age;
 ```
 
-`name` would have a value of the string `John Doe`, and `age` would have the number `34`.
+`name` ควรมีค่า string `John Doe` และ `age` ควรเป็น number `34`
 
-Here's an equivalent assignment statement using the ES6 destructuring syntax:
+โค้ดด้านบนนี้เทียบเท่ากับการใช้ ES6 ดังนี้
+
 
 ```js
 const { name, age } = user;
 ```
 
-Again, `name` would have a value of the string `John Doe`, and `age` would have the number `34`.
+`name` ควรมีค่า string `John Doe` และ `age` ควรเป็น number `34`
 
-Here, the `name` and `age` variables will be created and assigned the values of their respective values from the `user` object. You can see how much cleaner this is.
+ตัวแปร `name` และ `age` จะถูกสร้างและกำหนดค่าที่เกี่ยวข้องจาก object `user` คุณจะเห็นว่า แบบ ES6 เขียนได้สั้นและสบายตามากกว่า
 
-You can extract as many or few values from the object as you want.
+คุณสามารถแยกค่าหลายค่า หรือบางค่าจาก object ตามที่คุณต้องการ
 
 # --instructions--
 
-Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables `today` and `tomorrow` the values of `today` and `tomorrow` from the `HIGH_TEMPERATURES` object.
+จงแทนที่การกำหนดค่าด้วย destructuring assignment โดยยังคงนำตัวแปร `today` และ `tomorrow` มากำหนดด้วยค่าของ `today` และ `tomorrow` จาก object `HIGH_TEMPERATURES`
+
 
 # --hints--
 
-You should remove the ES5 assignment syntax.
+คุณควรเอา ES5 assignment syntax ออก
 
 ```js
 assert(
@@ -47,7 +50,7 @@ assert(
 );
 ```
 
-You should use destructuring to create the `today` variable.
+คุณควรใช้ destructuring ในการสร้างตัวแปร `today` 
 
 ```js
 assert(
@@ -55,7 +58,7 @@ assert(
 );
 ```
 
-You should use destructuring to create the `tomorrow` variable.
+คุณควรใช้ destructuring ในการสร้างตัวแปร `tomorrow`
 
 ```js
 assert(
@@ -63,7 +66,8 @@ assert(
 );
 ```
 
-`today` should be equal to `77` and `tomorrow` should be equal to `80`.
+`today` ควรเท่ากับ `77` และ `tomorrow` ควรเท่ากับ `80`
+
 
 ```js
 assert(today === 77 && tomorrow === 80);

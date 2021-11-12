@@ -8,9 +8,9 @@ dashedName: use-destructuring-assignment-to-assign-variables-from-nested-objects
 
 # --description--
 
-You can use the same principles from the previous two lessons to destructure values from nested objects.
+คุณสามารถใช้หลักการเดียวกันจากสองบทเรียนก่อนหน้านี้เพื่อ destructure ค่าจาก object ที่ซ้อนกัน
 
-Using an object similar to previous examples:
+ใช้ object ที่คล้ายกับตัวอย่างก่อนหน้า
 
 ```js
 const user = {
@@ -21,13 +21,13 @@ const user = {
 };
 ```
 
-Here's how to extract the values of object properties and assign them to variables with the same name:
+นี่เป็นวิธีการแยก (extract) value ออกจาก object properties และกำหนดค่าให้กับตัวแปรที่มีชื่อเดียวกัน: 
 
 ```js
 const { johnDoe: { age, email }} = user;
 ```
 
-And here's how you can assign an object properties' values to variables with different names:
+และนี่เป็นวิธีที่คุณสามารถกำหนด values ของ object properties ให้กับตัวแปรที่มีชื่อต่างกัน
 
 ```js
 const { johnDoe: { age: userAge, email: userEmail }} = user;
@@ -35,11 +35,12 @@ const { johnDoe: { age: userAge, email: userEmail }} = user;
 
 # --instructions--
 
-Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables `lowToday` and `highToday` the values of `today.low` and `today.high` from the `LOCAL_FORECAST` object.
+จงแทนที่การกำหนดค่าด้วย destructuring assignment โดยยังคงกำหนดให้ตัวแปร `lowToday` และ `highToday` มีค่าเท่ากับ `today.low` และ `today.high` จาก object `LOCAL_FORECAST` 
+
 
 # --hints--
 
-You should remove the ES5 assignment syntax.
+คุณควรลบการกำหนดค่าแบบ ES5
 
 ```js
 assert(
@@ -48,7 +49,8 @@ assert(
 );
 ```
 
-You should use destructuring to create the `lowToday` variable.
+คุณควรใช้ destructuring เพื่อสร้างตัวแปร `lowToday` 
+
 
 ```js
 assert(
@@ -58,7 +60,7 @@ assert(
 );
 ```
 
-You should use destructuring to create the `highToday` variable.
+คุณควรใช้ destructuring เพื่อสร้างตัวแปร `highToday` 
 
 ```js
 assert(
@@ -68,7 +70,7 @@ assert(
 );
 ```
 
-`lowToday` should be equal to `64` and `highToday` should be equal to `77`.
+`lowToday` ควรเท่ากับ `64` and `highToday` ควรเท่ากับ `77`
 
 ```js
 assert(lowToday === 64 && highToday === 77);

@@ -8,13 +8,13 @@ dashedName: use--to-import-everything-from-a-file
 
 # --description--
 
-Suppose you have a file and you wish to import all of its contents into the current file. This can be done with the `import * as` syntax. Here's an example where the contents of a file named `math_functions.js` are imported into a file in the same directory:
+สมมติว่าคุณมีไฟล์และต้องการนำเข้าเนื้อหาทั้งหมดไปยังไฟล์ปัจจุบัน สามารถทำได้ด้วย syntax `import * as` ต่อไปนี้คือตัวอย่างที่นำเข้าเนื้อหาของไฟล์ชื่อ `math_functions.js` ไปยังไฟล์ในไดเร็กทอรีเดียวกัน:
 
 ```js
 import * as myMathModule from "./math_functions.js";
 ```
 
-The above `import` statement will create an object called `myMathModule`. This is just a variable name, you can name it anything. The object will contain all of the exports from `math_functions.js` in it, so you can access the functions like you would any other object property. Here's how you can use the `add` and `subtract` functions that were imported:
+คำสั่ง `import` ข้างต้น จะสร้าง object ชื่อว่า `myMathModule` นี่เป็นเพียงชื่อตัวแปร คุณสามารถตั้งชื่ออะไรก็ได้ object จะมีการส่งออกทุกอย่างในนั้นจาก `math_functions.js` ดังนั้นคุณจะสามารถเข้าถึงฟังก์ชันต่างๆ ได้เหมือนกับที่คุณทำกับ object property อื่นๆ นี่เป็นวิธีที่คุณสามารถใช้ฟังก์ชัน `add` และ `subtract` ที่ import ได้ด้วยวิธีต่อไปนี้
 
 ```js
 myMathModule.add(2,3);
@@ -23,11 +23,11 @@ myMathModule.subtract(5,3);
 
 # --instructions--
 
-The code in this file requires the contents of the file: `string_functions.js`, that is in the same directory as the current file. Use the `import * as` syntax to import everything from the file into an object called `stringFunctions`.
+โค้ดในไฟล์นี้ต้องการเนื้อหาของไฟล์: `string_functions.js` ซึ่งอยู่ในไดเรกทอรีเดียวกันกับไฟล์ปัจจุบัน จงใช้ syntax `import * as` เพื่อ import ทุกอย่างจากไฟล์ไปยัง object ชื่อ `stringFunctions`
 
 # --hints--
 
-Your code should properly use `import * as` syntax.
+โค้ดของคุณควรใช้ syntax `import * as` อย่างเหมาะสม
 
 ```js
 assert(

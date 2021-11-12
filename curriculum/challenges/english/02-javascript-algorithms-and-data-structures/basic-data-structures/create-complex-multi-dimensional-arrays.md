@@ -8,9 +8,9 @@ dashedName: create-complex-multi-dimensional-arrays
 
 # --description--
 
-Awesome! You have just learned a ton about arrays! This has been a fairly high level overview, and there is plenty more to learn about working with arrays, much of which you will see in later sections. But before moving on to looking at <dfn>Objects</dfn>, lets take one more look, and see how arrays can become a bit more complex than what we have seen in previous challenges.
+สุดยอด! คุณเพิ่งได้เรียนรู้เกี่ยวกับ array มากมายเลย! นี่เป็นภาพรวมในมุมกว้าง และยังมีเรื่องอีกมากมายให้เรียนรู้เกี่ยวกับการทำงานกับ array  ซึ่งคุณจะเห็นในส่วนต่อๆ ไป แต่ก่อนที่จะไปดูที่ <dfn>Objects</dfn> เรามาดูเพิ่มเติมว่า array จะซับซ้อนกว่าที่เราเคยเห็นในบทเรียนครั้งก่อนได้อย่างไร
 
-One of the most powerful features when thinking of arrays as data structures, is that arrays can contain, or even be completely made up of other arrays. We have seen arrays that contain arrays in previous challenges, but fairly simple ones. However, arrays can contain an infinite depth of arrays that can contain other arrays, each with their own arbitrary levels of depth, and so on. In this way, an array can very quickly become very complex data structure, known as a <dfn>multi-dimensional</dfn>, or nested array. Consider the following example:
+ฟีเจอร์หนึ่งที่ทรงพลังที่สุด ในฐานะที่ array เป็นโครงสร้างข้อมูลหนึ่งคือ array สามารถมีหรือสร้างจาก array อื่นๆ ได้ เราได้เห็น array ซ้อน array ในแบบทดสอบก่อนหน้านี้ แต่ก็ยังค่อนข้างง่าย อย่างไรก็ตาม array สามารถซ้อน array ได้ลึกไม่จำกัด และแต่ละ sub-array ก็ยังซ้อน array ได้ลึกไม่จำกัดอีก ดังนี้แล้ว array จึงสามารถกลายเป็นโครงสร้างข้อมูลที่ซับซ้อนได้ เรียกว่า <dfn>multi-dimensional</dfn> หรือ nested array พิจารณาตัวอย่างต่อไปนี้
 
 ```js
 let nestedArray = [
@@ -31,15 +31,15 @@ let nestedArray = [
 ];
 ```
 
-The `deep` array is nested 2 levels deep. The `deeper` arrays are 3 levels deep. The `deepest` arrays are 4 levels, and the `deepest-est?` is 5.
+array `deep` ถูกซ้อน 2 ชั้น arrays  `deeper` ซ้อน 3 ชั้น และ `deepest` 4 ชั้น และ `deepest-est?` 5 ชั้น
 
-While this example may seem convoluted, this level of complexity is not unheard of, or even unusual, when dealing with large amounts of data. However, we can still very easily access the deepest levels of an array this complex with bracket notation:
+แม้ว่าตัวอย่างนี้อาจดูซับซ้อน แต่ความซับซ้อนระดับนี้ก็ไม่มีใครเคยใช้มาก่อน เรียกได้ว่าไม่ใช่เคสปกติ เมื่อจัดการกับข้อมูลขนาดใหญ่ อย่างไรก็ตาม เราสามารถเข้าถึงระดับที่ลึกที่สุดของ array ที่ซับซ้อนนี้ได้อย่างง่ายดายด้วย bracket notation
 
 ```js
 console.log(nestedArray[2][1][0][0][0]);
 ```
 
-This logs the string `deepest-est?`. And now that we know where that piece of data is, we can reset it if we need to:
+ตัวอย่างด้านบน จะแสดง log เป็น string `deepest-est?` และตอนนี้เรารู้แล้วว่าข้อมูลส่วนนั้นอยู่ที่ไหน เราก็สามารถรีเซ็ตได้หากต้องการ
 
 ```js
 nestedArray[2][1][0][0][0] = 'deeper still';
@@ -47,15 +47,15 @@ nestedArray[2][1][0][0][0] = 'deeper still';
 console.log(nestedArray[2][1][0][0][0]);
 ```
 
-Now it logs `deeper still`.
+ตอนนี้แสดง log เป็น `deeper still`
 
 # --instructions--
 
-We have defined a variable, `myNestedArray`, set equal to an array. Modify `myNestedArray`, using any combination of <dfn>strings</dfn>, <dfn>numbers</dfn>, and <dfn>booleans</dfn> for data elements, so that it has exactly five levels of depth (remember, the outer-most array is level 1). Somewhere on the third level, include the string `deep`, on the fourth level, include the string `deeper`, and on the fifth level, include the string `deepest`.
+เราได้ประกาศตัวแปร `myNestedArray` ซึ่งกำหนดค่าให้เท่ากับ array จงปรับแก้ `myNestedArray` โดยใช้ทั้ง <dfn>strings</dfn>, <dfn>numbers</dfn> และ <dfn>booleans</dfn> เป็น data elements และกำหนดให้มีความลึกห้าระดับ ( จำไว้ว่า array ด้านนอกสุดคือระดับ 1) โดยในระดับที่สาม กำหนดให้มี string `deep` ส่วนในระดับที่สี่ กำหนดให้มี string `deeper`และในระดับที่ห้า กำหนดให้มี string `deepest`
 
 # --hints--
 
-`myNestedArray` should contain only numbers, booleans, and strings as data elements
+`myNestedArray` ควรมี numbers, booleans, และ strings เท่านั้น เป็น data elements
 
 ```js
 assert.strictEqual(
@@ -79,7 +79,7 @@ assert.strictEqual(
 );
 ```
 
-`myNestedArray` should have exactly 5 levels of depth
+`myNestedArray` ควรมีความลึก 5 ระดับ
 
 ```js
 assert.strictEqual(
@@ -102,7 +102,7 @@ assert.strictEqual(
 );
 ```
 
-`myNestedArray` should contain exactly one occurrence of the string `deep` on an array nested 3 levels deep
+`myNestedArray` ควรมีอย่างน้อยหนึ่ง string `deep` ใน  nested array ที่ความลึกชั้นที่ 3 
 
 ```js
 assert(
@@ -131,7 +131,8 @@ assert(
 );
 ```
 
-`myNestedArray` should contain exactly one occurrence of the string `deeper` on an array nested 4 levels deep
+`myNestedArray` ควรมีอย่างน้อยหนึ่ง string `deeper` ใน  nested array ที่ความลึกชั้นที่ 4
+
 
 ```js
 assert(
@@ -160,7 +161,7 @@ assert(
 );
 ```
 
-`myNestedArray` should contain exactly one occurrence of the string `deepest` on an array nested 5 levels deep
+`myNestedArray` ควรมีอย่างน้อยหนึ่ง string `deepest` ใน  nested array ที่ความลึกชั้นที่ 5
 
 ```js
 assert(

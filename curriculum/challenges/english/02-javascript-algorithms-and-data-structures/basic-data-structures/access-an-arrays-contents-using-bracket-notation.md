@@ -8,55 +8,55 @@ dashedName: access-an-arrays-contents-using-bracket-notation
 
 # --description--
 
-The fundamental feature of any data structure is, of course, the ability to not only store data, but to be able to retrieve that data on command. So, now that we've learned how to create an array, let's begin to think about how we can access that array's information.
+แน่นอนว่าฟีเจอร์พื้นฐานของโครงสร้างข้อมูลใดๆ ก็ตาม ไม่ได้มีแค่การเก็บข้อมูลเท่านั้น แต่ต้องสามารถดึงข้อมูลนั้นตามที่สั่งได้อีกด้วย  ตอนนี้เราได้เรียนรู้วิธีสร้าง array แล้ว เรามาเริ่มคิดกันว่าเราสามารถเข้าถึงข้อมูลของ array นั้นได้อย่างไร
 
-When we define a simple array as seen below, there are 3 items in it:
+เราประกาศ array อย่างง่ายตามที่แสดงด้านล่าง มีสามรายการในนั้น : 
 
 ```js
 let ourArray = ["a", "b", "c"];
 ```
 
-In an array, each array item has an <dfn>index</dfn>. This index doubles as the position of that item in the array, and how you reference it. However, it is important to note, that JavaScript arrays are <dfn>zero-indexed</dfn>, meaning that the first element of an array is actually at the ***zeroth*** position, not the first. In order to retrieve an element from an array we can enclose an index in brackets and append it to the end of an array, or more commonly, to a variable which references an array object. This is known as <dfn>bracket notation</dfn>. For example, if we want to retrieve the `a` from `ourArray` and assign it to a variable, we can do so with the following code:
+แต่ละ item ของ array จะมี <dfn>index</dfn> ซึ่ง index มีหน้าที่สองอย่างคือเป็นตำแหน่งของรายการนั้นใน array และเป็นวิธีที่คุณใช้อ้างอิงถึง อย่างไรก็ตาม สิ่งสำคัญที่ควรทราบคือ array ใน JavaScript เป็น <dfn>zero-indexed</dfn> หมายความว่า element แรกของ array จริงๆ แล้วอยู่ที่ตำแหน่ง ***ศูนย์*** ไม่ใช่ตำแหน่งแรก ในการดึง element จาก array เราสามารถใส่ index ในวงเล็บและวางต่อที่ส่วนท้ายของ array หรือโดยทั่วๆ ไป ก็จะนำ มาต่อกับตัวแปรที่อ้างอิง object array สิ่งนี้เรียกว่า <dfn>bracket notation</dfn> ตัวอย่างเช่น หากเราต้องการดึงข้อมูล `a` จาก `ourArray` แล้วกำหนดค่าให้กับตัวแปร เราสามารถทำได้โดยใช้โค้ดต่อไปนี้:
 
 ```js
 let ourVariable = ourArray[0];
 ```
 
-Now `ourVariable` has the value of `a`.
+ตอนนี้ `ourVariable` มีค่า `a`
 
-In addition to accessing the value associated with an index, you can also *set* an index to a value using the same notation:
+นอกจากการเข้าถึงค่าที่เกี่ยวข้องกับ index แล้ว คุณยังสามารถ *set* index ให้เป็นค่าที่ต้องการ โดยใช้สัญลักษณ์เดียวกันได้:
 
 ```js
 ourArray[1] = "not b anymore";
 ```
 
-Using bracket notation, we have now reset the item at index 1 from the string `b`, to `not b anymore`. Now `ourArray` is `["a", "not b anymore", "c"]`.
+ตอนนี้เราทำการ reset ค่าที่ index 1 จาก string `b` เป็น `not b anymore` โดยการใช้ bracket notation ตอนนี้ `ourArray` มีค่า `["a", "not b anymore", "c"]`
 
 # --instructions--
 
-In order to complete this challenge, set the 2nd position (index `1`) of `myArray` to anything you want, besides the letter `b`.
+จงทำแบบฝึกหัดนี้ให้สำเร็จ โดยกำหนดค่าตำแหน่งที่ 2 (index `1`) ของ `myArray` เป็นอะไรก็ได้ตามที่คุณต้องการ ยกเว้นตัวอักษร `b`
 
 # --hints--
 
-`myArray[0]` should be equal to the letter `a`
+`myArray[0]` ควรเท่ากับตัวอักษร `a`
 
 ```js
 assert.strictEqual(myArray[0], 'a');
 ```
 
-`myArray[1]` should not be equal to the letter `b`
+`myArray[1]` ควรไม่เท่ากับตัวอักษร `b`
 
 ```js
 assert.notStrictEqual(myArray[1], 'b');
 ```
 
-`myArray[2]` should be equal to the letter `c`
+`myArray[2]` ควรเท่ากับตัวอักษร `c`
 
 ```js
 assert.strictEqual(myArray[2], 'c');
 ```
 
-`myArray[3]` should be equal to the letter `d`
+`myArray[3]` ควรเท่ากับตัวอักษร `d`
 
 ```js
 assert.strictEqual(myArray[3], 'd');

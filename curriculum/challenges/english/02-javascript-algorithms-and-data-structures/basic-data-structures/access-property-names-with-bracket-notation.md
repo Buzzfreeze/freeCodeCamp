@@ -8,28 +8,28 @@ dashedName: access-property-names-with-bracket-notation
 
 # --description--
 
-In the first object challenge we mentioned the use of bracket notation as a way to access property values using the evaluation of a variable. For instance, imagine that our `foods` object is being used in a program for a supermarket cash register. We have some function that sets the `selectedFood` and we want to check our `foods` object for the presence of that food. This might look like:
+ในแบบทดสอบเรื่อง object บทแรก เรากล่าวถึงการใช้ bracket notation ซึ่งเป็นวิธีการเข้าถึงค่า property โดยดูจากตัวแปร ตัวอย่างเช่น ลองนึกภาพว่า object `foods` ของเรา กำลังถูกใช้ในโปรแกรมสำหรับเครื่องคิดเงินในซูเปอร์มาร์เก็ต เรามีบางฟังก์ชันที่ set `selectedFood` และเราต้องการตรวจสอบ object `foods` ว่ามีอาหารนั้นอยู่หรือไม่ ซึ่งอาจมีหน้าตาดังนี้
 
 ```js
 let selectedFood = getCurrentFood(scannedItem);
 let inventory = foods[selectedFood];
 ```
 
-This code will evaluate the value stored in the `selectedFood` variable and return the value of that key in the `foods` object, or `undefined` if it is not present. Bracket notation is very useful because sometimes object properties are not known before runtime or we need to access them in a more dynamic way.
+โค้ดนี้จะตรวจสอบค่าที่เก็บไว้ในตัวแปร `selectedFood` และคืนค่า value ของ key นั้นใน object `foods` หรือคืนค่า `undefined` หากพบ ซึ่ง Bracket notation มีประโยชน์มาก เพราะบางครั้งอาจไม่รู้ object property ก่อน runtime หรือเราต้องการเข้าถึงในลักษณะไดนามิกมากขึ้น
 
 # --instructions--
 
-We've defined a function, `checkInventory`, which receives a scanned item as an argument. Return the current value of the `scannedItem` key in the `foods` object. You can assume that only valid keys will be provided as an argument to `checkInventory`.
+เราได้กำหนดฟังก์ชันชื่อ `checkInventory` ซึ่งรับ scanned item เป็น argument จงคืนค่า current value ของ `scannedItem` key ที่อยู่ใน `foods` object คุณสามารถสันนิษฐานได้ว่า มีเพียง valid keys เท่านั้นที่จะเป็น argument ให้กับ `checkInventory` ได้
 
 # --hints--
 
-`checkInventory` should be a function.
+`checkInventory` ควรเป็น function
 
 ```js
 assert.strictEqual(typeof checkInventory, 'function');
 ```
 
-The `foods` object should have only the following key-value pairs: `apples: 25`, `oranges: 32`, `plums: 28`, `bananas: 13`, `grapes: 35`, `strawberries: 27`.
+`foods` object ควรมี key-value pairs ดังนี้เท่านั้น: `apples: 25`, `oranges: 32`, `plums: 28`, `bananas: 13`, `grapes: 35`, `strawberries: 27`.
 
 ```js
 assert.deepEqual(foods, {
@@ -42,19 +42,19 @@ assert.deepEqual(foods, {
 });
 ```
 
-`checkInventory("apples")` should return `25`.
+`checkInventory("apples")` ควรคืนค่า `25`
 
 ```js
 assert.strictEqual(checkInventory('apples'), 25);
 ```
 
-`checkInventory("bananas")` should return `13`.
+`checkInventory("bananas")` ควรคืนค่า `13`
 
 ```js
 assert.strictEqual(checkInventory('bananas'), 13);
 ```
 
-`checkInventory("strawberries")` should return `27`.
+`checkInventory("strawberries")` ควรคืนค่า `27`
 
 ```js
 assert.strictEqual(checkInventory('strawberries'), 27);

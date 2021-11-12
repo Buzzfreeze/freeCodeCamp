@@ -8,27 +8,30 @@ dashedName: use-the-spread-operator-to-evaluate-arrays-in-place
 
 # --description--
 
-ES6 introduces the <dfn>spread operator</dfn>, which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected.
+ES6 แนะนำ <dfn>spread operator</dfn> ซึ่งช่วยให้เราขยาย arrays และ expression อื่นๆ ในตำแหน่งที่ต้องการพารามิเตอร์หรือองค์ประกอบหลายรายการ
 
-The ES5 code below uses `apply()` to compute the maximum value in an array:
+โค้ด ES5 ด้านล่างใช้ `apply()` ในการค้นหาค่าที่มากที่สุดใน array
+
 
 ```js
 var arr = [6, 89, 3, 45];
 var maximus = Math.max.apply(null, arr);
 ```
 
-`maximus` would have a value of `89`.
+`maximus` ควรมีค่า `89`
 
-We had to use `Math.max.apply(null, arr)` because `Math.max(arr)` returns `NaN`. `Math.max()` expects comma-separated arguments, but not an array. The spread operator makes this syntax much better to read and maintain.
+
+เราต้องใช้ `Math.max.apply(null, arr)` เพราะ `Math.max(arr)` คืนค่า `NaN` แต่ `Math.max()` ต้องการ argument ที่คั่นด้วยเครื่องหมาย comma ที่ไม่ใช่ array ดังนั้น การใช้ spread operator ทำให้โค้ดนี้อ่านและปรับแก้ได้ง่าย
 
 ```js
 const arr = [6, 89, 3, 45];
 const maximus = Math.max(...arr);
 ```
 
-`maximus` would have a value of `89`.
+`maximus` ควรมีค่า `89`
 
-`...arr` returns an unpacked array. In other words, it *spreads* the array. However, the spread operator only works in-place, like in an argument to a function or in an array literal. The following code will not work:
+`...arr` คืนค่า array ที่แกะออกมา (unpacked) กล่าวอีกนัยหนึ่งคือ มันกระจาย *spreads* ข้อมูลใน array ออกมา อย่างไรก็ตาม spread operator สามารถใช้ได้กับโค้ดบางตำแหน่งเท่านั้น เช่น ใช้กับ argument ที่ส่งไปยังฟังก์ชัน หรือใน array ตัวอย่างด้านล่างต่อไปนี้ spread operator จะไม่ทำงาน 
+
 
 ```js
 const spreaded = ...arr;
@@ -36,23 +39,26 @@ const spreaded = ...arr;
 
 # --instructions--
 
-Copy all contents of `arr1` into another array `arr2` using the spread operator.
+จง copy ข้อมูลของ `arr1` ให้กับ array `arr2` โดยใช้ spread operator
+
+
+
 
 # --hints--
 
-`arr2` should be correct copy of `arr1`.
+`arr2` ควรมีค่าที่ copy จาก `arr1`
 
 ```js
 assert(arr2.every((v, i) => v === arr1[i]) && arr2.length);
 ```
 
-`...` spread operator should be used to duplicate `arr1`.
+`...` spread operator ควรถูกใช้เพื่อทำคัดลอก `arr1`
 
 ```js
 assert(code.match(/Array\(\s*\.\.\.arr1\s*\)|\[\s*\.\.\.arr1\s*\]/));
 ```
 
-`arr2` should remain unchanged when `arr1` is changed.
+`arr2` ไม่ควรเปลี่ยน ถ้า `arr1` ถุกเปลี่ยน
 
 ```js
 assert((arr1, arr2) => {

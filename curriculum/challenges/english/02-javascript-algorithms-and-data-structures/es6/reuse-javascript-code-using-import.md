@@ -8,15 +8,15 @@ dashedName: reuse-javascript-code-using-import
 
 # --description--
 
-`import` allows you to choose which parts of a file or module to load. In the previous lesson, the examples exported `add` from the `math_functions.js` file. Here's how you can import it to use in another file:
+`import` ให้คุณเลือกว่าจะโหลดส่วนใดของไฟล์ หรือโมดูล ในบทเรียนที่แล้ว แสดงตัวอย่างที่ export `add` จากไฟล์ `math_functions.js` ต่อไปนี้คือวิธี นำเข้า (import) เพื่อใช้ในไฟล์อื่น:
 
 ```js
 import { add } from './math_functions.js';
 ```
 
-Here, `import` will find `add` in `math_functions.js`, import just that function for you to use, and ignore the rest. The `./` tells the import to look for the `math_functions.js` file in the same folder as the current file. The relative file path (`./`) and file extension (`.js`) are required when using import in this way.
+คำสั่ง `import` จะค้นหา `add` ใน `math_functions.js` และนำเข้าเฉพาะฟังก์ชันที่คุณต้องใช้ และไม่สนใจส่วนที่เหลือ โดย `./` บอกคำสั่ง import ให้ค้นหาไฟล์ `math_functions.js` ในโฟลเดอร์เดียวกันกับไฟล์ปัจจุบัน อย่างไรก็ตาม relative file path (`./`) และนามสกุลไฟล์ (`.js`) จำเป็นต้องกำหนด เมื่อใช้ import ในลักษณะนี้
 
-You can import more than one item from the file by adding them in the `import` statement like this:
+คุณสามารถ import มากกว่าหนึ่งรายการจากไฟล์ โดยเพิ่มลงในคำสั่ง `import` ดังนี้:
 
 ```js
 import { add, subtract } from './math_functions.js';
@@ -24,11 +24,11 @@ import { add, subtract } from './math_functions.js';
 
 # --instructions--
 
-Add the appropriate `import` statement that will allow the current file to use the `uppercaseString` and `lowercaseString` functions you exported in the previous lesson. These functions are in a file called `string_functions.js`, which is in the same directory as the current file.
+จงเพิ่มคำสั่ง `import` ที่เหมาะสม ซึ่งจะทำให้ไฟล์ปัจจุบันใช้ฟังก์ชัน `uppercaseString` และ `lowercaseString` ที่คุณ export ออกมาในบทเรียนก่อนหน้านี้ได้ ฟังก์ชันเหล่านี้อยู่ในไฟล์ชื่อ `string_functions.js` ซึ่งอยู่ในไดเร็กทอรีเดียวกันกับไฟล์ปัจจุบัน
 
 # --hints--
 
-You should properly import `uppercaseString`.
+คุณควร import `uppercaseString` 
 
 ```js
 assert(
@@ -38,7 +38,7 @@ assert(
 );
 ```
 
-You should properly import `lowercaseString`.
+คุณควร import `lowercaseString` 
 
 ```js
 assert(

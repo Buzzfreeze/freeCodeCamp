@@ -8,13 +8,13 @@ dashedName: use-getters-and-setters-to-control-access-to-an-object
 
 # --description--
 
-You can obtain values from an object and set the value of a property within an object.
+คุณสามารถรับค่าจาก object และกำหนด value ของ property ภายใน object
 
-These are classically called <dfn>getters</dfn> and <dfn>setters</dfn>.
+สิ่งเหล่านี้เรียกว่า <dfn>getters</dfn> และ <dfn>setters</dfn>.
 
-Getter functions are meant to simply return (get) the value of an object's private variable to the user without the user directly accessing the private variable.
+function Getter มีไว้เพื่อส่งคืน (get) ค่าของตัวแปร private ให้ผู้ใช้ โดยที่ผู้ใช้ไม่ต้องเข้าถึงตัวแปร private โดยตรง
 
-Setter functions are meant to modify (set) the value of an object's private variable based on the value passed into the setter function. This change could involve calculations, or even overwriting the previous value completely.  
+function Setter มีไว้เพื่อแก้ไข (set) ค่าของตัวแปร private ของ object ตามค่าที่ส่งผ่านไปยังฟังก์ชัน setter การเปลี่ยนแปลงนี้อาจเกี่ยวข้องกับการคำนวณ หรือแม้แต่เขียนทับค่าก่อนหน้าทั้งหมด
 
 ```js
 class Book {
@@ -36,29 +36,28 @@ novel.writer = 'newAuthor';
 console.log(novel.writer);
 ```
 
-The console would display the strings `anonymous` and `newAuthor`.
+console จะแสดง string `anonymous` และ `newAuthor`
 
-Notice the syntax used to invoke the getter and setter. They do not even look like functions. Getters and setters are important because they hide internal implementation details.
+สังเกตว่า syntax ที่เรียกใช้ getter และ setter ไม่ได้ดูเหมือน function อย่างไรก็ตาม Getters และ setters 
+มีความสำคัญเนื่องจากมีการซ่อนรายละเอียดการใช้งานภายใน
 
-**Note:** It is convention to precede the name of a private variable with an underscore (`_`). However, the practice itself does not make a variable private.
+**หมายเหตุ:** เป็นธรรมเนียมปฏิบัติที่เขียนขีดล่าง (`_`) นำหน้าตัวแปร private อย่างไรก็ตาม การใช้ขีดล่างไม่ได้ทำให้ตัวแปรเป็นแบบ private
 
 # --instructions--
 
-Use the `class` keyword to create a `Thermostat` class. The `constructor` accepts a Fahrenheit temperature.
+จงใช้ keyword `class` เพื่อสร้าง class `Thermostat` โดย `constructor` จะรับอุณหภูมิฟาเรนไฮต์
 
-In the class, create a `getter` to obtain the temperature in Celsius and a `setter` to set the temperature in Celsius.
+ใน class ให้สร้าง `getter` เพื่ออ่านค่าอุณหภูมิเป็นเซลเซียส และ `setter` เพื่อตั้งอุณหภูมิเป็นเซลเซียส
 
-Remember that `C = 5/9 * (F - 32)` and `F = C * 9.0 / 5 + 32`, where `F` is the value of temperature in Fahrenheit, and `C` is the value of the same temperature in Celsius.
+โปรดจำไว้ว่า `C = 5/9 * (F - 32)` และ `F = C * 9.0 / 5 + 32` เมื่อ `F` เป็นค่าของอุณหภูมิฟาเรนไฮต์ และ `C` เป็นค่าของอุณหภูมิเป็นเซลเซียส
 
-**Note:** When you implement this, you will track the temperature inside the class in one scale, either Fahrenheit or Celsius.
+**หมายเหตุ:** เมื่อคุณทำแบบฝึกหัดนี้ คุณจะติดตามอุณหภูมิภายใน class ได้จากที่เดียว ไม่ว่าจะเป็นฟาเรนไฮต์หรือเซลเซียส
 
-This is the power of a getter and a setter. You are creating an API for another user, who can get the correct result regardless of which one you track.
-
-In other words, you are abstracting implementation details from the user.
+นี่คือพลังของ getter และ setter หากคุณสร้าง API ให้กับผู้ใช้รายอื่น เขาจะได้รับผลลัพธ์ที่ถูกต้อง โดยไม่สนใจว่าจะได้ค่ามาได้อย่างไร
 
 # --hints--
 
-`Thermostat` should be a `class` with a defined `constructor` method.
+`Thermostat` ควรเป็น `class` ที่ประกาศ `constructor` method
 
 ```js
 assert(
@@ -67,13 +66,15 @@ assert(
 );
 ```
 
-`class` keyword should be used.
+ควรใช้ keyword `class` 
 
 ```js
 assert(code.match(/class/g));
 ```
 
-`Thermostat` should be able to be instantiated.
+`Thermostat`  ควรสามารถเป็นอินสแตนซ์
+
+
 
 ```js
 assert(
@@ -86,6 +87,8 @@ assert(
 
 When instantiated with a Fahrenheit value, `Thermostat` should set the correct `temperature`.
 
+เมื่อสร้าง instance ด้วย Fahrenheit value แล้ว `Thermostat` ควร set `temperature` ที่ถูกต้อง
+
 ```js
 assert(
   (() => {
@@ -95,7 +98,8 @@ assert(
 );
 ```
 
-A `getter` should be defined.
+ควรประกาศ `getter`
+
 
 ```js
 assert(
@@ -109,7 +113,7 @@ assert(
 );
 ```
 
-A `setter` should  be defined.
+ควรประกาศ `setter` 
 
 ```js
 assert(
@@ -123,7 +127,7 @@ assert(
 );
 ```
 
-Calling the `setter` with a Celsius value should set the `temperature`.
+การเรียกใช้ `setter` ด้วยค่าองศาเซลเซียส ควร set `temperature`
 
 ```js
 assert(

@@ -8,7 +8,7 @@ dashedName: handle-a-fulfilled-promise-with-then
 
 # --description--
 
-Promises are most useful when you have a process that takes an unknown amount of time in your code (i.e. something asynchronous), often a server request. When you make a server request it takes some amount of time, and after it completes you usually want to do something with the response from the server. This can be achieved by using the `then` method. The `then` method is executed immediately after your promise is fulfilled with `resolve`. Here’s an example:
+Promise มีประโยชน์มาก เมื่อคุณมีกระบวนการที่ไม่ทราบว่าต้องใช้เวลานานเท่าใดในโค้ดของคุณ (เช่น บางอย่างที่เป็น asynchronous) ซึ่งมักจะเป็น server request (คำขอเซิร์ฟเวอร์) เมื่อคุณส่ง server request อาจใช้เวลาพอสมควร และหลังจากเสร็จสิ้น คุณมักต้องการให้ทำอะไรบางอย่างหลังจากได้รับการตอบสนองจากเซิร์ฟเวอร์ ซึ่งสิ่งเหล่านี้สามารถทำได้โดยใช้ method `then` โดย method `then` จะรันทันทีหลังจากที่ promise ของคุณมีการ `resolve` แล้ว นี่คือตัวอย่าง:
 
 ```js
 myPromise.then(result => {
@@ -16,15 +16,15 @@ myPromise.then(result => {
 });
 ```
 
-`result` comes from the argument given to the `resolve` method.
+`result` มาจาก argument ที่กำหนดให้กับ method `resolve`
 
 # --instructions--
 
-Add the `then` method to your promise. Use `result` as the parameter of its callback function and log `result` to the console.
+จงเพิ่ม `then` method ให้กับ promise ของคุณ และใช้ `result` เป็น parameter ของ callback function แล้ว log `result` ที่หน้า console
 
 # --hints--
 
-You should call the `then` method on the promise.
+คุณควรเรียกใช้ method `then` กับ promise
 
 ```js
 assert(
@@ -32,13 +32,13 @@ assert(
 );
 ```
 
-Your `then` method should have a callback function with `result` as its parameter.
+method `then` ควรมี callback function โดยมี `result` เป็นพารามิเตอร์
 
 ```js
 assert(resultIsParameter);
 ```
 
-You should log `result` to the console.
+คุณควร log `result` ไปยังหน้า console
 
 ```js
 assert(

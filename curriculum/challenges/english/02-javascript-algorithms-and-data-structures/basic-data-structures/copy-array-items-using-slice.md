@@ -8,7 +8,7 @@ dashedName: copy-array-items-using-slice
 
 # --description--
 
-The next method we will cover is `slice()`. Rather than modifying an array, `slice()` copies or *extracts* a given number of elements to a new array, leaving the array it is called upon untouched. `slice()` takes only 2 parameters — the first is the index at which to begin extraction, and the second is the index at which to stop extraction (extraction will occur up to, but not including the element at this index). Consider this:
+method ต่อไปที่เราจะพูดถึงคือ `slice()`ซึ่งแทนที่จะแก้ไข array `slice()` จะคัดลอกหรือ *extracts* elements ตามจำนวนที่กำหนดไปยัง array ใหม่ โดยไม่แก้ไข array ที่ถูกเรียกใช้ โดย `slice()` รับเพียง 2 พารามิเตอร์ — พารามิเตอร์แรกคือ index ที่เริ่มต้นการแยก และตัวที่สองคือ index ที่จะหยุดการแยก (แต่ไม่รวม element ที่ index นี้) ให้พิจารณาโค้ดต่อไปนี้
 
 ```js
 let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];
@@ -16,17 +16,18 @@ let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];
 let todaysWeather = weatherConditions.slice(1, 3);
 ```
 
-`todaysWeather` would have the value `['snow', 'sleet']`, while `weatherConditions` would still have `['rain', 'snow', 'sleet', 'hail', 'clear']`.
+`todaysWeather` ควรมีค่า `['snow', 'sleet']` ในขณะที่ `weatherConditions` ควรมีค่า `['rain', 'snow', 'sleet', 'hail', 'clear']`
 
-In effect, we have created a new array by extracting elements from an existing array.
+ผลที่ได้คือ array ใหม่ที่ประกอบด้วย element ที่ดึงออกจาก array เดิม 
 
 # --instructions--
 
-We have defined a function, `forecast`, that takes an array as an argument. Modify the function using `slice()` to extract information from the argument array and return a new array that contains the string elements `warm` and `sunny`.
+เราได้ประกาศฟังก์ชัน `forecast` ที่รับ array เป็น argument จงแก้ไขฟังก์ชันโดยใช้ `slice()` เพื่อดึงข้อมูลจาก array argument และคืนค่าเป็น array ใหม่ที่มี string elements `warm` และ `sunny`
+
 
 # --hints--
 
-`forecast` should return `["warm", "sunny"]`
+`forecast` ควรคืนค่า `["warm", "sunny"]`
 
 ```js
 assert.deepEqual(
@@ -35,7 +36,7 @@ assert.deepEqual(
 );
 ```
 
-The `forecast` function should utilize the `slice()` method
+function `forecast` ควรใช้ `slice()` method
 
 ```js
 assert(/\.slice\(/.test(code));

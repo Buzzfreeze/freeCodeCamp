@@ -8,21 +8,21 @@ dashedName: import-a-default-export
 
 # --description--
 
-In the last challenge, you learned about `export default` and its uses. To import a default export, you need to use a different `import` syntax. In the following example, `add` is the default export of the `math_functions.js` file. Here is how to import it:
+ในบทเรียนที่แล้ว คุณได้เรียนรู้เกี่ยวกับ `export default` และการใช้งาน อย่างไรก็ตาม ในการนำเข้า default export คุณต้องใช้ syntax `import` ที่ต่างออกไป ในตัวอย่างต่อไปนี้ `add` คือ default export ของไฟล์ `math_functions.js` นี่คือวิธีการนำเข้า:
 
 ```js
 import add from "./math_functions.js";
 ```
 
-The syntax differs in one key place. The imported value, `add`, is not surrounded by curly braces (`{}`). `add` here is simply a variable name for whatever the default export of the `math_functions.js` file is. You can use any name here when importing a default.
+syntax มีความต่างกันที่เดียว กล่าวคือ ค่า import `add` ไม่ได้ล้อมรอบด้วยวงเล็บปีกกา (`{}`) แต่ `add` เป็นเพียงชื่อตัวแปรสำหรับ default export ของไฟล์ `math_functions.js` คุณสามารถใช้ชื่อใดก็ได้ที่นี่เมื่อนำเข้า default
 
 # --instructions--
 
-In the following code, import the default export from the `math_functions.js` file, found in the same directory as this file. Give the import the name `subtract`.
+ในโค้ดต่อไปนี้ จง import default export จากไฟล์ `math_functions.js` ซึ่งอยู่ในไดเรกทอรีเดียวกันกับไฟล์นี้ โดยให้ตั้งชื่อการนำเข้าเป็น `subtract`
 
 # --hints--
 
-You should properly import `subtract` from `math_functions.js`.
+คุณควร import `subtract` จาก `math_functions.js` อย่างเหมาะสม
 
 ```js
 assert(code.match(/import\s+subtract\s+from\s+('|")\.\/math_functions\.js\1/g));

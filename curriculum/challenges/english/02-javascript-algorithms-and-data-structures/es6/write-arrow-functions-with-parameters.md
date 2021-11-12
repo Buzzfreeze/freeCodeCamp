@@ -8,49 +8,49 @@ dashedName: write-arrow-functions-with-parameters
 
 # --description--
 
-Just like a regular function, you can pass arguments into an arrow function.
+เช่นเดียวกับฟังก์ชันปกติ คุณสามารถส่งผ่าน arguments ไปยัง arrow function ได้
 
 ```js
 const doubler = (item) => item * 2;
 doubler(4);
 ```
 
-`doubler(4)` would return the value `8`.
+`doubler(4)` จะคืนค่า `8`
 
-If an arrow function has a single parameter, the parentheses enclosing the parameter may be omitted.
+ถ้า arrow function มี parameter เดียว วงเล็บรอบ parameter อาจไม่ต้องมีก็ได้
 
 ```js
 const doubler = item => item * 2;
 ```
 
-It is possible to pass more than one argument into an arrow function.
+เป็นไปได้ที่จะส่งผ่าน argument มากกว่าหนึ่งค่าเข้าไปยัง arrow function
 
 ```js
 const multiplier = (item, multi) => item * multi;
 multiplier(4, 2);
 ```
 
-`multiplier(4, 2)` would return the value `8`.
+`multiplier(4, 2)` จะคืนค่า `8`
 
 # --instructions--
 
-Rewrite the `myConcat` function which appends contents of `arr2` to `arr1` so that the function uses arrow function syntax.
+จงปรับแก้ฟังก์ชัน `myConcat` ซึ่งนำ `arr2` มาต่อท้าย `arr1` โดยใช้ arrow function
 
 # --hints--
 
-You should replace the `var` keyword.
+คุณควรแทนที่ keyword `var`
 
 ```js
 (getUserInput) => assert(!getUserInput('index').match(/var/g));
 ```
 
-`myConcat` should be a constant variable (by using `const`).
+`myConcat` ควรเป็นตัวแปรคงที่ (โดยใช้ `const` )
 
 ```js
 (getUserInput) => assert(getUserInput('index').match(/const\s+myConcat/g));
 ```
 
-`myConcat` should be an arrow function with two parameters
+`myConcat` ควรเป็น arrow function ที่มีสอง parameter
 
 ```js
 assert(
@@ -59,13 +59,13 @@ assert(
 );
 ```
 
-`myConcat()` should return `[1, 2, 3, 4, 5]`.
+`myConcat()` ควรได้ผลลัพธ์ `[1, 2, 3, 4, 5]`
 
 ```js
 assert.deepEqual(myConcat([1, 2], [3, 4, 5]), [1, 2, 3, 4, 5]);
 ```
 
-The `function` keyword should not be used.
+ไม่ควรใช้ keyword `function` 
 
 ```js
 (getUserInput) => assert(!getUserInput('index').match(/function/g));

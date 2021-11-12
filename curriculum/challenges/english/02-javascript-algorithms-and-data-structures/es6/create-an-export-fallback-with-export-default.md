@@ -8,11 +8,12 @@ dashedName: create-an-export-fallback-with-export-default
 
 # --description--
 
-In the `export` lesson, you learned about the syntax referred to as a <dfn>named export</dfn>. This allowed you to make multiple functions and variables available for use in other files.
+ในบทเรียน `export` คุณได้เรียนรู้เกี่ยวกับ syntax ที่เรียกว่า <dfn>named export</dfn> ซึ่งทำให้คุณสามารถoeฟังก์ชันและตัวแปรต่างๆ มาใช้กับไฟล์อื่นๆ ได้
 
-There is another `export` syntax you need to know, known as <dfn>export default</dfn>. Usually you will use this syntax if only one value is being exported from a file. It is also used to create a fallback value for a file or module.
+ยังมี `export` syntax อีกแบบที่คุณควรทราบ ซึ่งรู้จักกันในชื่อ <dfn>export default</dfn>
+โดยปกติ คุณจะใช้ syntax นี้หากมีการส่งออกเพียงค่าเดียวจากไฟล์ นอกจากนี้ยังใช้เพื่อสร้างค่า fallback สำหรับไฟล์หรือโมดูล
 
-Below are examples using `export default`:
+ตัวอย่างด้านล่างใช้ `export default`
 
 ```js
 export default function add(x, y) {
@@ -24,17 +25,17 @@ export default function(x, y) {
 }
 ```
 
-The first is a named function, and the second is an anonymous function.
+ฟังก์ชันแรกคือ named function และฟังก์ชันที่สองคือ anonymous function
 
-Since `export default` is used to declare a fallback value for a module or file, you can only have one value be a default export in each module or file. Additionally, you cannot use `export default` with `var`, `let`, or `const`
+เนื่องจาก `export default` ใช้เพื่อประกาศค่า fallback สำหรับโมดูลหรือไฟล์ คุณจึงมี default export ได้เพียงอันเดียวในแต่ละโมดูลหรือไฟล์ นอกจากนี้ คุณไม่สามารถใช้ `export default` กับ `var`, `let` หรือ `const`
 
 # --instructions--
 
-The following function should be the fallback value for the module. Please add the necessary code to do so.
+function ต่อไปนี้ควรมีค่า fallback ในโมดูล จงเพิ่มโค้ดที่จำเป็นต้องใช้
 
 # --hints--
 
-Your code should use an `export` fallback.
+โค้ดของคุณควรใช้ `export` fallback
 
 ```js
 assert(

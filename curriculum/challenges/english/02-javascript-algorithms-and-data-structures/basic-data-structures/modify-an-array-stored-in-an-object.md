@@ -8,21 +8,21 @@ dashedName: modify-an-array-stored-in-an-object
 
 # --description--
 
-Now you've seen all the basic operations for JavaScript objects. You can add, modify, and remove key-value pairs, check if keys exist, and iterate over all the keys in an object. As you continue learning JavaScript you will see even more versatile applications of objects. Additionally, the Data Structures lessons located in the Coding Interview Prep section of the curriculum also cover the ES6 <dfn>Map</dfn> and <dfn>Set</dfn> objects, both of which are similar to ordinary objects but provide some additional features. Now that you've learned the basics of arrays and objects, you're fully prepared to begin tackling more complex problems using JavaScript!
+ตอนนี้คุณได้เห็นการทำงานพื้นฐานทั้งหมดของ JavaScript object แล้ว คุณสามารถเพิ่ม แก้ไข และลบคู่ key-value ตรวจสอบว่ามี key อยู่หรือไม่ และวนอ่าน key ทั้งหมดในออบเจ็กต์ ในขณะที่คุณเรียนรู้ JavaScript ต่อ คุณจะเห็นการใช้งาน object ที่หลากหลายยิ่งขึ้น นอกจากนี้ ยังมีบทเรียนเกี่ยวกับโครงสร้างข้อมูลที่อยู่ในส่วน Coding Interview Prep ด้วย หลักสูตรนั้นยังครอบคลุมถึง <dfn>Map</dfn> และ <dfn>Set</dfn> object ของ ES6 ซึ่งทั้งสองอย่างนี้คล้ายกับ object ทั่วไป แต่มีฟีเจอร์เพิ่มเติมบางส่วน เมื่อคุณได้เรียนรู้พื้นฐานของ array และ object แล้ว คุณก็พร้อมที่จะเริ่มจัดการกับปัญหาที่ซับซ้อนมากขึ้นโดยใช้ JavaScript!
 
 # --instructions--
 
-Take a look at the object we've provided in the code editor. The `user` object contains three keys. The `data` key contains five keys, one of which contains an array of `friends`. From this, you can see how flexible objects are as data structures. We've started writing a function `addFriend`. Finish writing it so that it takes a `user` object and adds the name of the `friend` argument to the array stored in `user.data.friends` and returns that array.
+เมื่อดู object ที่เราให้ไว้ใน code editor ซึ่งก็คือ object `user` ที่มี 3 key ได้แก่ `data` key ซึ่งมี 5 key โดยหนึ่งในนั้นมี array ของ `friends` จากจุดนี้ คุณจะเห็นได้ว่า object มีความยืดหยุ่นเพียงใดในฐานะที่เป็นโครงสร้างข้อมูล ในโจทย์นี้ เราได้เขียนฟังก์ชัน `addFriend` บางส่วนให้แล้ว จงเขียนฟังก์ชันให้เสร็จ เพื่อรับค่า object `user` และเพิ่ม name ของ `friend` argument มาเก็บใน array โดยเก็บใน `user.data.friends` แล้วคืนค่า array นั้น
 
 # --hints--
 
-The `user` object should have `name`, `age`, and `data` keys.
+`user` object ควรมี key `name`, `age` และ `data`
 
 ```js
 assert('name' in user && 'age' in user && 'data' in user);
 ```
 
-The `addFriend` function should accept a `user` object and a `friend` string as arguments and add the friend to the array of `friends` in the `user` object.
+`addFriend` function ควรรับ `user` object และ string `friend` เป็น arguments และเพิ่ม friend ไปยัง array `friends` ใน object `user` 
 
 ```js
 assert(
@@ -35,7 +35,7 @@ assert(
 );
 ```
 
-`addFriend(user, "Pete")` should return `["Sam", "Kira", "Tomo", "Pete"]`.
+`addFriend(user, "Pete")` ควรคืนค่า `["Sam", "Kira", "Tomo", "Pete"]`
 
 ```js
 assert.deepEqual(

@@ -8,7 +8,7 @@ dashedName: write-concise-declarative-functions-with-es6
 
 # --description--
 
-When defining functions within objects in ES5, we have to use the keyword `function` as follows:
+กำหนดฟังก์ชันภายใน object ใน ES5 เราต้องใช้ keyword `function` ดังนี้:
 
 ```js
 const person = {
@@ -19,7 +19,8 @@ const person = {
 };
 ```
 
-With ES6, you can remove the `function` keyword and colon altogether when defining functions in objects. Here's an example of this syntax:
+ใน ES6 คุณสามารถลบ keyword `function` และเครื่องหมาย colon ได้ เมื่อกำหนด funcion ใน object ดังตัวอย่างนี้
+
 
 ```js
 const person = {
@@ -32,17 +33,18 @@ const person = {
 
 # --instructions--
 
-Refactor the function `setGear` inside the object `bicycle` to use the shorthand syntax described above.
+จงปรับแก้ function `setGear` ภายใน object `bicycle` เพื่อใช้ syntax อย่างย่อตามที่ได้อธิบายไว้ข้างต้น
+
 
 # --hints--
 
-Traditional function expression should not be used.
+ไม่ควรใช้ function expression แบบเดิม
 
 ```js
 (getUserInput) => assert(!code.match(/function/));
 ```
 
-`setGear` should be a declarative function.
+`setGear` ควรประกาศเป็น function
 
 ```js
 assert(
@@ -50,7 +52,7 @@ assert(
 );
 ```
 
-`bicycle.setGear(48)` should change the `gear` value to 48.
+`bicycle.setGear(48)` ควรแก้ไขค่า `gear` เป็น 48
 
 ```js
 assert(new bicycle.setGear(48).gear === 48);

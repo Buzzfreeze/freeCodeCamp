@@ -8,22 +8,22 @@ dashedName: check-if-an-object-has-a-property
 
 # --description--
 
-Now we can add, modify, and remove keys from objects. But what if we just wanted to know if an object has a specific property? JavaScript provides us with two different ways to do this. One uses the `hasOwnProperty()` method and the other uses the `in` keyword. If we have an object `users` with a property of `Alan`, we could check for its presence in either of the following ways:
+ตอนนี้เราสามารถเพิ่ม แก้ไข และลบ key ออกจาก object ได้ แต่ถ้าเราแค่อยากรู้ว่า object นั้น มี property ที่ต้องการหรือไม่ JavaScript มีทางเลือก 2 วิธี คือ หนึ่งใช้ method `hasOwnProperty()` และอีกวิธีคือ ใช้ keyword `in` โดยหากเรามี object `users` ที่มี property เป็น `Alan` เราสามารถตรวจสอบการมีอยู่ของ property ด้วยวิธีใดวิธีหนึ่งต่อไปนี้:
 
 ```js
 users.hasOwnProperty('Alan');
 'Alan' in users;
 ```
 
-Both of these would return `true`.
+ทั้งสองแบบจะคืนค่า `true`
 
 # --instructions--
 
-Finish writing the function so that it returns true if the object passed to it contains all four names, `Alan`, `Jeff`, `Sarah` and `Ryan` and returns false otherwise.
+จงเขียน function ให้เสร็จ เพื่อคืนค่า true ถ้า object ที่ส่งเข้าไปใน function มีทั้ง 4 names คือ  `Alan`, `Jeff`, `Sarah` และ `Ryan` และคืนค่า false หากเงื่อนไขดังกล่าวเป็นเท็จ
 
 # --hints--
 
-The `users` object should not be accessed directly
+object `users` ไม่ควรเข้าถึงโดยตรง
 
 ```js 
 
@@ -31,7 +31,7 @@ assert(code.match(/users/gm).length <= 2)
 
 ```
 
-The `users` object should only contain the keys `Alan`, `Jeff`, `Sarah`, and `Ryan`
+object `users` ควรมีแค่ key `Alan`, `Jeff`, `Sarah` และ `Ryan`
 
 ```js
 assert(
@@ -43,13 +43,13 @@ assert(
 );
 ```
 
-The function `isEveryoneHere` should return `true` if `Alan`, `Jeff`, `Sarah`, and `Ryan` are properties on the object passed to it. 
+function `isEveryoneHere` ควรคืนค่า `true` ถ้า `Alan`, `Jeff`, `Sarah` และ `Ryan` เป็น property ของ object ที่ส่งผ่านเข้าไป
 
 ```js
 assert(isEveryoneHere(users) === true);
 ```
 
-The function `isEveryoneHere` should return `false` if `Alan` is not a property on the object passed to it.
+function `isEveryoneHere` ควรคืนค่า `false` ถ้า  `Alan` ไม่ใช่ property ของ object ที่ส่งผ่านเข้าไป
 
 ```js
 assert(
@@ -60,7 +60,7 @@ assert(
 );
 ```
 
-The function `isEveryoneHere` should return `false` if `Jeff` is not a property on the object passed to it.
+function `isEveryoneHere` ควรคืนค่า `false` ถ้า  `Jeff` ไม่ใช่ property ของ object ที่ส่งผ่านเข้าไป
 
 ```js
 assert(
@@ -71,7 +71,7 @@ assert(
 );
 ```
 
-The function `isEveryoneHere` should return `false` if `Sarah` is not a property on the object passed to it.
+function `isEveryoneHere` ควรคืนค่า `false` ถ้า  `Sarah` ไม่ใช่ property ของ object ที่ส่งผ่านเข้าไป
 
 ```js
 assert(
@@ -82,7 +82,7 @@ assert(
 );
 ```
 
-The function `isEveryoneHere` should return `false` if `Ryan` is not a property on the object passed to it.
+function `isEveryoneHere` ควรคืนค่า `false` ถ้า  `Ryan` ไม่ใช่ property ของ object ที่ส่งผ่านเข้าไป
 
 ```js
 assert(

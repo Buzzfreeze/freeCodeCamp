@@ -8,11 +8,12 @@ dashedName: compare-scopes-of-the-var-and-let-keywords
 
 # --description--
 
-When you declare a variable with the `var` keyword, it is declared globally, or locally if declared inside a function.
+ถ้าคุณประกาศตัวแปรด้วย keyword `var` จะเป็นการประกาศระดับ global หรือถ้าประกาศภายใน function ก็จะเป็นระดับ local 
 
-The `let` keyword behaves similarly, but with some extra features. When you declare a variable with the `let` keyword inside a block, statement, or expression, its scope is limited to that block, statement, or expression.
+keyword `let` ทำงานคล้ายคลึงกัน แต่มีฟีเจอร์พิเศษบางอย่าง คือเมื่อประกาศตัวแปรด้วย keyword `let` ภายใน block statement หรือ expression แล้ว scope จะถูกจำกัดด้วย block statement หรือ expression 
 
-For example:
+
+ตัวอย่าง: 
 
 ```js
 var numArray = [];
@@ -23,9 +24,10 @@ console.log(numArray);
 console.log(i);
 ```
 
-Here the console will display the values `[0, 1, 2]` and `3`.
+console จะแสดงค่า `[0, 1, 2]` และ `3`
 
-With the `var` keyword, `i` is declared globally. So when `i++` is executed, it updates the global variable. This code is similar to the following:
+
+ด้วย keyword `var` ทำให้ตัวแปร `i` ถูกประกาศระกับ global ดังนั้น เมื่อ `i++` รัน มันจะอัปเดตตัวแปร global โค้ดด้านบนจะมีความคล้ายกับการเขียนโค้ดด้านล่างนี้
 
 ```js
 var numArray = [];
@@ -37,9 +39,9 @@ console.log(numArray);
 console.log(i);
 ```
 
-Here the console will display the values `[0, 1, 2]` and `3`.
+console จะแสดงค่า `[0, 1, 2]` และ `3`
 
-This behavior will cause problems if you were to create a function and store it for later use inside a `for` loop that uses the `i` variable. This is because the stored function will always refer to the value of the updated global `i` variable.
+ลักษณะการทำงานเช่นนี้จะทำให้เกิดปัญหา หากคุณต้องสร้างฟังก์ชัน และเก็บไว้เพื่อใช้ในภายหลังใน `for` loop ที่ใช้ตัวแปร  `i` เนื่องจากฟังก์ชันที่เก็บไว้จะอ้างอิงถึงค่าของตัวแปร global `i` ที่มีการอัปเดตเสมอ
 
 ```js
 var printNumTwo;
@@ -53,9 +55,11 @@ for (var i = 0; i < 3; i++) {
 console.log(printNumTwo());
 ```
 
-Here the console will display the value `3`.
+console จะแสดงค่า  `3`
 
-As you can see, `printNumTwo()` prints 3 and not 2. This is because the value assigned to `i` was updated and the `printNumTwo()` returns the global `i` and not the value `i` had when the function was created in the for loop. The `let` keyword does not follow this behavior:
+อย่างที่คุณเห็น `printNumTwo()` พิมพ์ 3 ไม่ใช่ 2 เนื่องจากค่าที่กำหนดให้กับ `i` ได้รับการอัปเดตและ `printNumTwo()` จะคืน global `i` และไม่ใช่ค่า `i` ที่เกิดขึ้นภายในฟังก์ชั่น anonymous อย่างไรก็ตาม `let` ไม่ทำให้เกิดผลเช่นนี้:
+
+
 
 ```js
 let printNumTwo;
@@ -70,31 +74,33 @@ console.log(printNumTwo());
 console.log(i);
 ```
 
-Here the console will display the value `2`, and an error that `i is not defined`.
+console จะแสดงค่า `2` และ error ว่า  `i is not defined`
+ 
+`i` ไม่ได้ประกาศใน global scope แต่ประกาศภายในคำสั่ง `for` loop ดังนั้น `printNumTwo()` จึงคืนค่าที่ถูกต้อง เนื่องจากตัวแปร `i` ที่มีค่าต่างกัน (0, 1 และ 2) ถูกสร้างขึ้นโดย keyword `let` ภายใน loop statement
 
-`i` is not defined because it was not declared in the global scope. It is only declared within the `for` loop statement. `printNumTwo()` returned the correct value because three different `i` variables with unique values (0, 1, and 2) were created by the `let` keyword within the loop statement.
 
 # --instructions--
 
-Fix the code so that `i` declared in the `if` statement is a separate variable than `i` declared in the first line of the function. Be certain not to use the `var` keyword anywhere in your code.
+จงแก้ไขโค้ดเพื่อให้ `i` ที่ประกาศใน `if` statement เป็นตัวแปรที่แตกต่างจาก `i` ที่ประกาศไว้ในบรรทัดแรกของฟังก์ชัน อย่าใช้ keyword `var` ในโค้ดของคุณ
 
-This exercise is designed to illustrate the difference between how `var` and `let` keywords assign scope to the declared variable. When programming a function similar to the one used in this exercise, it is often better to use different variable names to avoid confusion.
+แบบฝึกหัดนี้ออกแบบมาเพื่อแสดงให้เห็นความแตกต่างระหว่าง keyword `var` และ `let` ที่กำหนด scope ให้กับตัวแปรที่ประกาศ เมื่อเขียนโปรแกรมฟังก์ชันที่คล้ายกับที่ใช้ในแบบฝึกหัดนี้ ควรใช้ชื่อตัวแปรต่างกันเพื่อหลีกเลี่ยงความสับสน
+
 
 # --hints--
 
-`var` should not exist in code.
+ไม่ควรมี `var` ในโค้ด
 
 ```js
 assert(!code.match(/var/g));
 ```
 
-The variable `i` declared in the `if` statement should equal the string `block scope`.
+ตัวแปร `i` ประกาศใน `if` statement ควรมีค่าเท่ากับ string `block scope`
 
 ```js
 assert(code.match(/(i\s*=\s*).*\s*.*\s*.*\1('|")block\s*scope\2/g));
 ```
 
-`checkScope()` should return the string `function scope`
+`checkScope()` ควรคืนค่า string `function scope`
 
 ```js
 assert(checkScope() === 'function scope');

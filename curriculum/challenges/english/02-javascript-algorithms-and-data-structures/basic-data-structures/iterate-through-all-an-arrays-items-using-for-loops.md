@@ -8,9 +8,9 @@ dashedName: iterate-through-all-an-arrays-items-using-for-loops
 
 # --description--
 
-Sometimes when working with arrays, it is very handy to be able to iterate through each item to find one or more elements that we might need, or to manipulate an array based on which data items meet a certain set of criteria. JavaScript offers several built in methods that each iterate over arrays in slightly different ways to achieve different results (such as `every()`, `forEach()`, `map()`, etc.), however the technique which is most flexible and offers us the greatest amount of control is a simple `for` loop.
+บางครั้งเมื่อทำงานกับ array มันจะมีประโยชน์มากในการวนซ้ำแต่ละรายการ เพื่อค้นหา element อย่างน้อยหนึ่ง element ที่เราต้องการ หรือเพื่อจัดการ array โดยพิจารณาว่ารายการข้อมูลใดตรงตามเงื่อนไข ซึ่ง JavaScript มี build in method หลาย method ที่วนซ้ำบน array ด้วยวิธีที่แตกต่างกันเล็กน้อย เพื่อให้ได้ผลลัพธ์ที่แตกต่างกัน (เช่น `every()`, `forEach()`, `map()` เป็นต้น) อย่างไรก็ตาม เทคนิคที่ยืดหยุ่น และทำให้เราสามารถควบคุมได้ดีที่สุด ก็คือ `for` loop ธรรมดาๆ
 
-Consider the following:
+ลองพิจารณาดังนี้
 
 ```js
 function greaterThanTen(arr) {
@@ -26,15 +26,14 @@ function greaterThanTen(arr) {
 greaterThanTen([2, 12, 8, 14, 80, 0, 1]);
 ```
 
-Using a `for` loop, this function iterates through and accesses each element of the array, and subjects it to a simple test that we have created. In this way, we have easily and programmatically determined which data items are greater than `10`, and returned a new array, `[12, 14, 80]`, containing those items.
+จากตัวอย่างด้านบนเป็นการใช้ `for` loop ภายใน function โดยวนอ่านและเข้าถึงแต่ละ element ของ array เพื่อตรวจสอบว่า item ใดที่มากกว่า `10` จากนั้นคืนค่าเป็น array ใหม่ `[12, 14, 80]` ที่มี item เหล่านั้น
 
 # --instructions--
 
-We have defined a function, `filteredArray`, which takes `arr`, a nested array, and `elem` as arguments, and returns a new array. `elem` represents an element that may or may not be present on one or more of the arrays nested within `arr`. Modify the function, using a `for` loop, to return a filtered version of the passed array such that any array nested within `arr` containing `elem` has been removed.
-
+เราได้ประกาศฟังก์ชัน `filteredArray` ซึ่งรับ arguments 2 ตัว คือ `arr` ที่เป็น nested array และ `elem` แล้วคืนค่าเป็น array ใหม่ โดย `elem` แสดงถึง element ที่อาจมีหรือไม่มีอยู่ใน array ย่อยภายใน `arr` จงแก้ไขฟังก์ชันโดยใช้ `for` loop เพื่อคืนค่าเป็น array เวอร์ชันที่กรองให้เหลือเพียง array ย่อยที่ไม่มี `elem` อยู่ภายใน
 # --hints--
 
-`filteredArray([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18)` should return `[[10, 8, 3], [14, 6, 23]]`
+`filteredArray([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18)` ควรคืนค่า `[[10, 8, 3], [14, 6, 23]]`
 
 ```js
 assert.deepEqual(
@@ -53,7 +52,7 @@ assert.deepEqual(
 );
 ```
 
-`filteredArray([["trumpets", 2], ["flutes", 4], ["saxophones", 2]], 2)` should return `[["flutes", 4]]`
+`filteredArray([["trumpets", 2], ["flutes", 4], ["saxophones", 2]], 2)` ควรคืนค่า `[["flutes", 4]]`
 
 ```js
 assert.deepEqual(
@@ -69,7 +68,7 @@ assert.deepEqual(
 );
 ```
 
-`filteredArray([["amy", "beth", "sam"], ["dave", "sean", "peter"]], "peter")` should return `[["amy", "beth", "sam"]]`
+`filteredArray([["amy", "beth", "sam"], ["dave", "sean", "peter"]], "peter")` ควรคืนค่า `[["amy", "beth", "sam"]]`
 
 ```js
 assert.deepEqual(
@@ -84,7 +83,7 @@ assert.deepEqual(
 );
 ```
 
-`filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3)` should return `[]`
+`filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3)` ควรคืนค่า `[]`
 
 ```js
 assert.deepEqual(
@@ -101,7 +100,7 @@ assert.deepEqual(
 );
 ```
 
-The `filteredArray` function should utilize a `for` loop
+function `filteredArray` ควรใช้ `for` loop
 
 ```js
 assert.notStrictEqual(filteredArray.toString().search(/for/), -1);

@@ -8,7 +8,7 @@ dashedName: use-export-to-share-a-code-block
 
 # --description--
 
-Imagine a file called `math_functions.js` that contains several functions related to mathematical operations. One of them is stored in a variable, `add`, that takes in two numbers and returns their sum. You want to use this function in several different JavaScript files. In order to share it with these other files, you first need to `export` it.
+สมมติว่า มีไฟล์ชื่อ `math_functions.js` ที่ประกอบด้วยฟังก์ชันหลายตัวที่คำนวณทางคณิตศาสตร์ ฟังก์ชันหนึ่งเก็บไว้ในตัวแปร `add` ซึ่งรับค่าเป็นตัวเลขสองตัวและคืนค่าเป็นผลบวกของเลขทั้งสอง อย่างไรก็ตาม คุณต้องการใช้ฟังก์ชันนี้ในไฟล์ JavaScript อื่น ดังนั้นการแชร์ให้ไฟล์อื่น คุณต้อง `export` ก่อน
 
 ```js
 export const add = (x, y) => {
@@ -16,7 +16,7 @@ export const add = (x, y) => {
 }
 ```
 
-The above is a common way to export a single function, but you can achieve the same thing like this:
+โค้ดข้างต้นเป็นวิธีในการส่งออกฟังก์ชันที่ใช้กันทั่วไป แต่คุณสามารถทำสิ่งเดียวกันได้ด้วยโค้ดด้านล่างนี้
 
 ```js
 const add = (x, y) => {
@@ -26,19 +26,21 @@ const add = (x, y) => {
 export { add };
 ```
 
-When you export a variable or function, you can import it in another file and use it without having to rewrite the code. You can export multiple things by repeating the first example for each thing you want to export, or by placing them all in the export statement of the second example, like this:
+เมื่อคุณส่งออก (export) ตัวแปรหรือฟังก์ชัน คุณสามารถนำเข้า (import) ตัวแปร หรือฟังก์ชันนั้นไปใช้ในไฟล์อื่น และใช้งานได้โดยไม่ต้องเขียนโค้ดใหม่ คุณสามารถส่งออกได้ทีละหลายอย่าง โดยการทำซ้ำแบบตัวอย่างแรก สำหรับแต่ละรายการที่คุณต้องการส่งออก หรือโดยการวางทั้งหมดไว้ในคำสั่งการส่งออก ดังตัวอย่างที่สอง ดังนี้:
 
 ```js
+
 export { add, subtract };
 ```
 
 # --instructions--
 
-There are two string-related functions in the editor. Export both of them using the method of your choice.
+
+มีสองฟังก์ชันที่เกี่ยวข้องกับ string ใน editor จง export ทั้งคู่โดยใช้วิธีตามที่คุณต้องการ
 
 # --hints--
 
-You should properly export `uppercaseString`.
+คุณควรส่งออก `uppercaseString` อย่างเหมาะสม
 
 ```js
 assert(
@@ -48,7 +50,7 @@ assert(
 );
 ```
 
-You should properly export `lowercaseString`.
+คุณควรส่งออก `lowercaseString` อย่างเหมาะสม
 
 ```js
 assert(

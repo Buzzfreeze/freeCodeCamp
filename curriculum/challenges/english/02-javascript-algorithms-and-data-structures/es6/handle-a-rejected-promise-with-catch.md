@@ -8,7 +8,8 @@ dashedName: handle-a-rejected-promise-with-catch
 
 # --description--
 
-`catch` is the method used when your promise has been rejected. It is executed immediately after a promise's `reject` method is called. Here’s the syntax:
+method `catch` ใช้เมื่อ promise ของคุณถูก reject ซึ่งจะทำงานทันทีหลังจาก method `reject` ของ promise ถูกเรียกใช้ 
+นี่คือ syntax:
 
 ```js
 myPromise.catch(error => {
@@ -16,15 +17,15 @@ myPromise.catch(error => {
 });
 ```
 
-`error` is the argument passed in to the `reject` method.
+`error` เป็น argument ที่ถูกส่งไปยัง method `reject`
 
 # --instructions--
 
-Add the `catch` method to your promise. Use `error` as the parameter of its callback function and log `error` to the console.
+จงเพิ่ม method `catch` ให้กับ promise ของคุณ โดยใช้ `error` เป็นพารามิเตอร์ของ callback function แล้ว log `error` ไปยังหน้า console
 
 # --hints--
 
-You should call the `catch` method on the promise.
+คุณควรเรียกใช้ method `catch` กับ promise
 
 ```js
 assert(
@@ -32,13 +33,13 @@ assert(
 );
 ```
 
-Your `catch` method should have a callback function with `error` as its parameter.
+method `catch` ของคุณมี callback function ที่มี `error` เป็นพารามิเตอร์
 
 ```js
 assert(errorIsParameter);
 ```
 
-You should log `error` to the console.
+คุณควร log `error` ไปยังหน้า console
 
 ```js
 assert(

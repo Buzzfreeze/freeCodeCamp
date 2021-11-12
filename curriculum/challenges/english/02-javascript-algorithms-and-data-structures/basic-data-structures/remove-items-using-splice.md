@@ -8,9 +8,9 @@ dashedName: remove-items-using-splice
 
 # --description--
 
-Ok, so we've learned how to remove elements from the beginning and end of arrays using `shift()` and `pop()`, but what if we want to remove an element from somewhere in the middle? Or remove more than one element at once? Well, that's where `splice()` comes in. `splice()` allows us to do just that: **remove any number of consecutive elements** from anywhere in an array.
+ตอนนี้เราได้เรียนรู้วิธีลบ element จากจุดเริ่มต้น และจุดสิ้นสุดของ array โดยใช้ `shift()` และ `pop()` แต่ถ้าเราต้องการนำ element ออกจากที่ใดที่หนึ่งที่อยู่ตรงกลางล่ะ หรือลบมากกว่าหนึ่ง element ในครั้งเดียว? นั่นคือที่มาของ `splice()` โดย `splice()` ช่วยให้เรา **ลบ elements ที่ติดกันกี่ตัวก็ได้** ที่ตำแหน่งใดก็ได้ใน array
 
-`splice()` can take up to 3 parameters, but for now, we'll focus on just the first 2. The first two parameters of `splice()` are integers which represent indexes, or positions, of the array that `splice()` is being called upon. And remember, arrays are *zero-indexed*, so to indicate the first element of an array, we would use `0`. `splice()`'s first parameter represents the index on the array from which to begin removing elements, while the second parameter indicates the number of elements to delete. For example:
+`splice()` สามารถรับพารามิเตอร์ได้สูงสุด 3 ตัว แต่สำหรับตอนนี้ เราจะเน้นเฉพาะ 2 ตัวแรก พารามิเตอร์สองตัวแรกของ `splice()` คือจำนวนเต็มที่แทน index หรือตำแหน่งของ array ที่ ` splice()` กำลังเรียก และจำไว้ว่า array นั้นเป็น *zero-indexed* ดังนั้นเพื่อระบุ element แรกของ array เราจะใช้ `0` อย่างไรก็ตาม พารามิเตอร์ตัวแรกของ `splice()` หมายถึง index เริ่มต้นของ array ที่ต้องการลบ ในขณะที่พารามิเตอร์ที่สอง หมายถึง จำนวน element ที่ต้องการลบ ตัวอย่างเช่น
 
 ```js
 let array = ['today', 'was', 'not', 'so', 'great'];
@@ -18,9 +18,9 @@ let array = ['today', 'was', 'not', 'so', 'great'];
 array.splice(2, 2);
 ```
 
-Here we remove 2 elements, beginning with the third element (at index 2). `array` would have the value `['today', 'was', 'great']`.
+ที่นี่้เราลบ 2 elements เริ่มต้นด้วย element ที่สาม (ที่ index 2) สุดท้ายแล้ว `array` จะมีค่า `['today', 'was', 'great']`
 
-`splice()` not only modifies the array it's being called on, but it also returns a new array containing the value of the removed elements:
+`splice()` ไม่เพียงแต่ปรับเปลี่ยน array ที่ถูกเรียกใช้เท่านั้น แต่ยังคืนค่า array ใหม่ที่มีค่าของ element ที่ถูกลบออกด้วย:
 
 ```js
 let array = ['I', 'am', 'feeling', 'really', 'happy'];
@@ -28,15 +28,15 @@ let array = ['I', 'am', 'feeling', 'really', 'happy'];
 let newArray = array.splice(3, 2);
 ```
 
-`newArray` has the value `['really', 'happy']`.
+`newArray` มีค่า `['really', 'happy']`.
 
 # --instructions--
 
-We've initialized an array `arr`. Use `splice()` to remove elements from `arr`, so that it only contains elements that sum to the value of `10`.
+เราได้กำหนดค่าเริ่มต้น array `arr` แล้ว จงใช้ `splice()` เพื่อนำ element ออกจาก `arr` เพื่อ `arr` เหลือเพียง element ที่บวกันได้ `10` เท่านั้น
 
 # --hints--
 
-You should not change the original line of `const arr = [2, 4, 5, 1, 7, 5, 2, 1];`.
+คุณไม่ควรแก้ไขบรรทัดตั้งต้น `const arr = [2, 4, 5, 1, 7, 5, 2, 1];`
 
 ```js
 assert(
@@ -44,7 +44,7 @@ assert(
 );
 ```
 
-`arr` should only contain elements that sum to `10`.
+`arr` ควรมีแค่ element ที่บวกกันแล้วได้ `10` เท่านั้น
 
 ```js
 assert.strictEqual(
@@ -53,13 +53,13 @@ assert.strictEqual(
 );
 ```
 
-Your code should utilize the `splice()` method on `arr`.
+โค้ดของคุณควรใช้ method `splice()` กับ `arr`
 
 ```js
 assert(__helpers.removeWhiteSpace(code).match(/arr\.splice\(/));
 ```
 
-The splice should only remove elements from `arr` and not add any additional elements to `arr`.
+splice ควรนำ element ออกจาก `arr` และไม่เพิ่ม element อื่นๆ ให้กับ `arr`
 
 ```js
 assert(

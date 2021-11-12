@@ -8,11 +8,11 @@ dashedName: mutate-an-array-declared-with-const
 
 # --description--
 
-The `const` declaration has many use cases in modern JavaScript.
+การประกาศตัวแปรด้วย `const` ใชักันมากสำหรับ JavaScript สมัยใหม่
 
-Some developers prefer to assign all their variables using `const` by default, unless they know they will need to reassign the value. Only in that case, they use `let`.
+โปรแกรมเมอร์บางคนมักกำหนดตัวแปรโดยใช้ `const` เป็นค่าเริ่มต้น เว้นแต่พวกเขาจะรู้ว่าต้องกำหนดค่าใหม่ เฉพาะในกรณีนี้เท่านั้น ที่จะใช้ `let`
 
-However, it is important to understand that objects (including arrays and functions) assigned to a variable using `const` are still mutable. Using the `const` declaration only prevents reassignment of the variable identifier.
+อย่างไรก็ตาม สิ่งสำคัญคือต้องเข้าใจว่า object (รวมถึง array และ function) ที่กำหนดให้กับตัวแปรที่ใช้ `const` ยังคงเปลี่ยนแปลงได้ การใช้การประกาศ `const` จะป้องกันการกำหนดค่าใหม่ของให้กับตัวแปรเท่านั้น
 
 ```js
 const s = [5, 6, 7];
@@ -21,29 +21,30 @@ s[2] = 45;
 console.log(s);
 ```
 
-`s = [1, 2, 3]` will result in an error. The `console.log` will display the value `[5, 6, 45]`.
+`s = [1, 2, 3]` จะขึ้น error ส่วน `console.log` จะแสดงค่า `[5, 6, 45]`
 
-As you can see, you can mutate the object `[5, 6, 7]` itself and the variable `s` will still point to the altered array `[5, 6, 45]`. Like all arrays, the array elements in `s` are mutable, but because `const` was used, you cannot use the variable identifier `s` to point to a different array using the assignment operator.
+อย่างที่คุณเห็น คุณสามารถเปลี่ยนแปลงค่าออบเจกต์ `[5, 6, 7]` ได้ และตัวแปร `s` จะยังคงชี้ไปที่ array ที่เปลี่ยนแปลง `[5, 6, 45]` อย่างไรก็ตาม เช่นเดียวกับ array ทั้งหมด elements ของ array `s` จะเปลี่ยนแปลงได้ แต่เนื่องจากมีการใช้ `const` คุณจึงไม่สามารถนำตัวแปร `s` ชี้ไปยัง array อื่นได้
+
 
 # --instructions--
 
-An array is declared as `const s = [5, 7, 2]`. Change the array to `[2, 5, 7]` using various element assignments.
+array ถูกประกาศเป็น `const s = [5, 7, 2]` จงแก้ array ให้เป็น `[2, 5, 7]` โดยใช้ element assignments ต่างๆ
 
 # --hints--
 
-You should not replace `const` keyword.
+คุณไม่ควรแทนที่ keyword `const`
 
 ```js
 (getUserInput) => assert(getUserInput('index').match(/const/g));
 ```
 
-`s` should be a constant variable (by using `const`).
+`s` ควรเป็นตัวแปรคงที่ (โดยใช้ `const` )
 
 ```js
 (getUserInput) => assert(getUserInput('index').match(/const\s+s/g));
 ```
 
-You should not change the original array declaration.
+คุณไม่ควรแก้ไขการประกาศ array เดิม
 
 ```js
 (getUserInput) =>
@@ -54,7 +55,7 @@ You should not change the original array declaration.
   );
 ```
 
-`s` should be equal to `[2, 5, 7]`.
+`s` ควรมีค่าเป็น `[2, 5, 7]`.
 
 ```js
 assert.deepEqual(s, [2, 5, 7]);

@@ -8,9 +8,9 @@ dashedName: check-for-the-presence-of-an-element-with-indexof
 
 # --description--
 
-Since arrays can be changed, or *mutated*, at any time, there's no guarantee about where a particular piece of data will be on a given array, or if that element even still exists. Luckily, JavaScript provides us with another built-in method, `indexOf()`, that allows us to quickly and easily check for the presence of an element on an array. `indexOf()` takes an element as a parameter, and when called, it returns the position, or index, of that element, or `-1` if the element does not exist on the array.
+เนื่องจาก array สามารถเปลี่ยนแปลงหรือ *mutated* ได้ตลอดเวลา จึงไม่รับประกันว่า ข้อมูลหนึ่งๆ จะยังอยู่หรือย้ายตำแหน่งใน array หรือไม่ โชคดีที่   JavaScript มีอีก built-in method คือ `indexOf()` ซึ่งช่วยให้เราตรวจสอบการมีอยู่ของ element ใน array ได้อย่างรวดเร็วและง่ายดาย โดย `indexOf()` รับ element เป็นพารามิเตอร์ และเมื่อเรียก method นี้ มันจะคืนค่าตำแหน่งหรือ index ของ element นั้น หรือ `-1` หาก element นั้นไม่มีอยู่ใน array 
 
-For example:
+ตัวอย่างเช่น: 
 
 ```js
 let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
@@ -20,21 +20,21 @@ fruits.indexOf('oranges');
 fruits.indexOf('pears');
 ```
 
-`indexOf('dates')` returns `-1`, `indexOf('oranges')` returns `2`, and `indexOf('pears')` returns `1` (the first index at which each element exists).
+`indexOf('dates')` คืนค่า `-1`, `indexOf('oranges')` คืนค่า `2`, และ `indexOf('pears')` คืนค่า `1` (index แรกที่เจอ element)
 
 # --instructions--
 
-`indexOf()` can be incredibly useful for quickly checking for the presence of an element on an array. We have defined a function, `quickCheck`, that takes an array and an element as arguments. Modify the function using `indexOf()` so that it returns `true` if the passed element exists on the array, and `false` if it does not.
+`indexOf()` มีประโยชน์อย่างมาก สำหรับการตรวจสอบการมีอยู่ของ element ใน array ได้อย่างรวดเร็ว เราได้กำหนดฟังก์ชัน `quickCheck` ที่รับ array และ element เป็น argument จงแก้ไขฟังก์ชันโดยใช้ `indexOf()` เพื่อให้คืนค่า `true` หาก element นั้นมีอยู่ใน array  และ `false` หากไม่มีใน array
 
 # --hints--
 
-The `quickCheck` function should return a boolean (`true` or `false`), not a string (`"true"` or `"false"`)
+function `quickCheck` ควรคืนค่า boolean (`true` หรือ `false`)
 
 ```js
 assert.isBoolean(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 ```
 
-`quickCheck(["squash", "onions", "shallots"], "mushrooms")` should return `false`
+`quickCheck(["squash", "onions", "shallots"], "mushrooms")` ควรคืนค่า `false`
 
 ```js
 assert.strictEqual(
@@ -43,7 +43,7 @@ assert.strictEqual(
 );
 ```
 
-`quickCheck(["onions", "squash", "shallots"], "onions")` should return `true`
+`quickCheck(["onions", "squash", "shallots"], "onions")` ควรคืนค่า `true`
 
 ```js
 assert.strictEqual(
@@ -52,19 +52,19 @@ assert.strictEqual(
 );
 ```
 
-`quickCheck([3, 5, 9, 125, 45, 2], 125)` should return `true`
+`quickCheck([3, 5, 9, 125, 45, 2], 125)` ควรคืนค่า `true`
 
 ```js
 assert.strictEqual(quickCheck([3, 5, 9, 125, 45, 2], 125), true);
 ```
 
-`quickCheck([true, false, false], undefined)` should return `false`
+`quickCheck([true, false, false], undefined)` ควรคืนค่า `false`
 
 ```js
 assert.strictEqual(quickCheck([true, false, false], undefined), false);
 ```
 
-The `quickCheck` function should utilize the `indexOf()` method
+function `quickCheck`  ควรใช้ `indexOf()` method
 
 ```js
 assert.notStrictEqual(quickCheck.toString().search(/\.indexOf\(/), -1);

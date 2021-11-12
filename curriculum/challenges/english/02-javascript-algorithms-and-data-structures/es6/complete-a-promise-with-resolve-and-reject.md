@@ -8,7 +8,7 @@ dashedName: complete-a-promise-with-resolve-and-reject
 
 # --description--
 
-A promise has three states: `pending`, `fulfilled`, and `rejected`. The promise you created in the last challenge is forever stuck in the `pending` state because you did not add a way to complete the promise. The `resolve` and `reject` parameters given to the promise argument are used to do this. `resolve` is used when you want your promise to succeed, and `reject` is used when you want it to fail. These are methods that take an argument, as seen below.
+promise มีสามสถานะ `pending`, `fulfilled` และ `rejected` promise ที่คุณสร้างไปในบทที่แล้วจะติดอยู่ในสถานะ `pending` เพราะคุณยังไม่ได้ทำให้ promise สมบูรณ์ พารามิเตอร์ `resolve` และ `reject` ที่ให้เป็น argument ของ promise จะถูกใช้ดังนี้ `resolve` จะถุกใช้เมื่อคุณต้องการให้ promise ของคุณสำเร็จ และ `reject` จะถูกใช้เมื่อคุณต้องการให้มัน fail โดย method เหล่านี้รับค่า argument ดังที่แสดงด้านล่าง
 
 ```js
 const myPromise = new Promise((resolve, reject) => {
@@ -20,15 +20,16 @@ const myPromise = new Promise((resolve, reject) => {
 });
 ```
 
-The example above uses strings for the argument of these functions, but it can really be anything. Often, it might be an object, that you would use data from, to put on your website or elsewhere.
+ตัวอย่างข้างต้นใช้ strings เป็น argument ให้กับฟังก์ชันเหล่านี้ แต่จริงๆ แล้วมันสามารถเป็นอะไรก็ได้ บ่อยครั้ง อาจเป็น object ที่คุณดึงข้อมูล มาวางบนเว็บไซต์ของคุณหรือที่อื่นๆ
 
 # --instructions--
 
-Make the promise handle success and failure. If `responseFromServer` is `true`, call the `resolve` method to successfully complete the promise. Pass `resolve` a string with the value `We got the data`. If `responseFromServer` is `false`, use the `reject` method instead and pass it the string: `Data not received`.
+
+จงสร้าง promise เพื่อจัดการ success และ failure ถ้า `responseFromServer` เป็น `true` ให้เรียก method `resolve` เพื่อทำตาม promise ให้สำเร็จ แล้วนำ string ที่มีค่า `We got the data` ส่งเข้าไปใน `resolve` แต่หาก `responseFromServer` เป็น `false` ให้ใช้ method `reject` แทนและส่ง string : `Data not received` เข้าไป
 
 # --hints--
 
-`resolve` should be called with the expected string when the `if` condition is `true`.
+`resolve` ควรถูกเรียกด้วย string ที่กำหนดไว้ เมื่อเงื่อนไข `if` เป็น `true`
 
 ```js
 assert(
@@ -36,7 +37,7 @@ assert(
 );
 ```
 
-`reject` should be called with the expected string when the `if` condition is `false`.
+`reject` ควรถูกเรียกด้วย string ที่กำหนดไว้ เมื่อเงื่อนไข `if` เป็น `false`
 
 ```js
 assert(

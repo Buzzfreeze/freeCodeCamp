@@ -8,9 +8,10 @@ dashedName: prevent-object-mutation
 
 # --description--
 
-As seen in the previous challenge, `const` declaration alone doesn't really protect your data from mutation. To ensure your data doesn't change, JavaScript provides a function `Object.freeze` to prevent data mutation.
+ตามที่เห็นในบทเรียนก่อนหน้า การประกาศ `const` เพียงอย่างเดียวไม่ได้ปกป้องข้อมูลของคุณจากการเปลี่ยนแปลงได้ เพื่อให้แน่ใจว่าข้อมูลของคุณจะไม่เปลี่ยนแปลง JavaScript จึงมีฟังก์ชัน `Object.freeze` เพื่อป้องกันการเปลี่ยนแปลงข้อมูล
 
-Any attempt at changing the object will be rejected, with an error thrown if the script is running in strict mode.
+การเปลี่ยนแปลง object จะถูกปฏิเสธทั้งหมด โดยขึ้น error เมื่อ script ถูกรันใน strict mode
+
 
 ```js
 let obj = {
@@ -23,28 +24,28 @@ obj.newProp = "Test";
 console.log(obj); 
 ```
 
-The `obj.review` and `obj.newProp` assignments will result in errors, because our editor runs in strict mode by default, and the console will display the value `{ name: "FreeCodeCamp", review: "Awesome" }`.
+การกำหนดค่าให้กับ `obj.review` และ `obj.newProp` จะเกิด error เพราะ editor ของเรารันด้วย strict mode เป็นค่าเริ่มต้น (by default) และ console จะแสดงค่า `{ name: "FreeCodeCamp", review: "Awesome" }` 
 
 # --instructions--
 
-In this challenge you are going to use `Object.freeze` to prevent mathematical constants from changing. You need to freeze the `MATH_CONSTANTS` object so that no one is able to alter the value of `PI`, add, or delete properties.
+ในบทเรียนนี้คุณจะได้ใช้ `Object.freeze` เพื่อป้องกันการเปลี่ยนแปลงตัวเลขคงที่ คุณต้องคงค่า `MATH_CONSTANTS` object ไว้ เพื่อไม่ให้ใครเปลี่ยนแปลงค่าของ `PI`, เพิ่ม หรือลบ property
 
 # --hints--
 
-You should not replace the `const` keyword.
+คุณไม่ควรแทนที่ keyword `const`
 
 ```js
 (getUserInput) => assert(getUserInput('index').match(/const/g));
 ```
 
-`MATH_CONSTANTS` should be a constant variable (by using `const`).
+`MATH_CONSTANTS` ควรเป็นตัวแปรคงที่ (โดยใช้ `const`)
 
 ```js
 (getUserInput) =>
   assert(getUserInput('index').match(/const\s+MATH_CONSTANTS/g));
 ```
 
-You should not change the original declaration of `MATH_CONSTANTS`.
+คุณไม่ควรแก้ไขการประกาศ `MATH_CONSTANTS` เดิม
 
 ```js
 (getUserInput) =>
@@ -55,7 +56,7 @@ You should not change the original declaration of `MATH_CONSTANTS`.
   );
 ```
 
-`PI` should equal `3.14`.
+`PI` ควรมีค่าเป็น `3.14`
 
 ```js
 assert(PI === 3.14);

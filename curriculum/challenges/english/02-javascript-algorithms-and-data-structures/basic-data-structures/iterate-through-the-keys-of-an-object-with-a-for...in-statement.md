@@ -8,7 +8,7 @@ dashedName: iterate-through-the-keys-of-an-object-with-a-for---in-statement
 
 # --description--
 
-Sometimes you may need to iterate through all the keys within an object. This requires a specific syntax in JavaScript called a <dfn>for...in</dfn> statement. For our `users` object, this could look like:
+บางครั้ง คุณอาจต้องการวนอ่านทุกคีย์ภายใน object ซึ่งต้องใช้ syntax เฉพาะใน JavaScript ที่เรียกว่าคำสั่ง <dfn>for...in</dfn> อย่างไรก็ตาม สำหรับ object `users` ของเรา อาจมีลักษณะดังนี้:
 
 ```js
 for (let user in users) {
@@ -16,15 +16,15 @@ for (let user in users) {
 }
 ```
 
-This would log `Alan`, `Jeff`, `Sarah`, and `Ryan` - each value on its own line.
+โค้ดด้านบนควรแสดง log เป็น `Alan`, `Jeff`, `Sarah`, และ `Ryan` - ค่าในแต่ละบรรทัด
 
-In this statement, we defined a variable `user`, and as you can see, this variable was reset during each iteration to each of the object's keys as the statement looped through the object, resulting in each user's name being printed to the console.
+ในคำสั่งนี้ เราประกาศตัวแปร `user` และอย่างที่คุณเห็น ตัวแปรนี้ถูกรีเซ็ตในแต่ละรอบเพื่อรับค่า key ของ object เมื่อมีการวนอ่าน object ทีละรอบ ส่งผลให้ชื่อผู้ใช้แต่ละรายถูกพิมพ์ไปยังหน้า console
 
-**NOTE:** Objects do not maintain an ordering to stored keys like arrays do; thus a key's position on an object, or the relative order in which it appears, is irrelevant when referencing or accessing that key.
+**หมายเหตุ:** object ไม่รักษาลำดับของ key ที่เก็บไว้เหมือนกับที่ array ทำ ดังนั้นตำแหน่งของ key บน object หรือลำดับที่แสดง จึงไม่เกี่ยวข้องเมื่ออ้างอิงหรือเข้าถึง key นั้น
 
 # --instructions--
 
-We've defined a function `countOnline` which accepts one argument (a users object). Use a <dfn>for...in</dfn> statement within this function to loop through the users object passed into the function and return the number of users whose `online` property is set to `true`. An example of a users object which could be passed to `countOnline` is shown below. Each user will have an `online` property with either a `true` or `false` value.
+เราได้ประกาศฟังก์ชัน `countOnline` ซึ่งรับหนึ่ง argument (object users) จงใช้คำสั่ง <dfn>for...in</dfn> ภายในฟังก์ชันนี้เพื่อวนอ่าน object users ที่ส่งผ่านเข้าไปยังฟังก์ชัน และคืนค่าเป็นจำนวนผู้ใช้ที่มี property `online` เป็น `true` ตัวอย่างของ object users ที่สามารถส่งผ่านไปยัง `countOnline` ได้แสดงดังโค้ดด้านล่าง โดยผู้ใช้แต่ละคนจะมี property `online` ที่มีค่า `true` หรือ `false`
 
 ```js
 {
@@ -42,7 +42,7 @@ We've defined a function `countOnline` which accepts one argument (a users objec
 
 # --hints--
 
-The function `countOnline` should use a `for in` statement to iterate through the object keys of the object passed to it.
+function `countOnline` ควรใช้คำสั่ง `for in` เพื่อวนเข้าไปยัง object key ของ object ที่ส่งผ่านเข้าไป 
 
 ```js
 assert(
@@ -52,19 +52,20 @@ assert(
 );
 ```
 
-The function `countOnline` should return `1` when the object `{ Alan: { online: false }, Jeff: { online: true }, Sarah: { online: false } }` is passed to it
+function `countOnline` ควรคืนค่า `1` เมื่อ object `{ Alan: { online: false }, Jeff: { online: true }, Sarah: { online: false } }`  ถูกส่งผ่านเข้าไป
 
 ```js
 assert(countOnline(usersObj1) === 1);
 ```
 
-The function `countOnline` should return `2` when the object `{ Alan: { online: true }, Jeff: { online: false }, Sarah: { online: true } }` is passed to it
+function `countOnline` ควรคืนค่า `2` เมื่อ object `{ Alan: { online: true }, Jeff: { online: false }, Sarah: { online: true } }`  ถูกส่งผ่านเข้าไป
 
 ```js
 assert(countOnline(usersObj2) === 2);
 ```
 
-The function `countOnline` should return `0` when the object `{ Alan: { online: false }, Jeff: { online: false }, Sarah: { online: false } }` is passed to it
+function `countOnline` ควรคืนค่า `0` เมื่อ object `{ Alan: { online: false }, Jeff: { online: false }, Sarah: { online: false } }` ถูกส่งผ่านเข้าไป
+
 
 ```js
 assert(countOnline(usersObj3) === 0);

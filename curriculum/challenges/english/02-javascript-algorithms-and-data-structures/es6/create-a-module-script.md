@@ -8,27 +8,28 @@ dashedName: create-a-module-script
 
 # --description--
 
-JavaScript started with a small role to play on an otherwise mostly HTML web. Today, it’s huge, and some websites are built almost entirely with JavaScript. In order to make JavaScript more modular, clean, and maintainable; ES6 introduced a way to easily share code among JavaScript files. This involves exporting parts of a file for use in one or more other files, and importing the parts you need, where you need them. In order to take advantage of this functionality, you need to create a script in your HTML document with a `type` of `module`. Here’s an example:
+JavaScript เริ่มต้นด้วยบทบาทเล็กๆ บนเว็บ HTML แต่ทุกวันนี้มีขนาดใหญ่ขึ้นมาก และบางเว็บไซต์ก็สร้างด้วย JavaScript เกือบทั้งหมด อย่างไรก็ตาม เพื่อทำให้ JavaScript เป็นแบบโมดูลาร์, ดูเรียบร้อย และบำรุงรักษาได้ง่ายขึ้น ES6 จึงนำเสนอวิธีการแชร์โค้ดระหว่างไฟล์ JavaScript สิ่งนี้ทำให้สามารถส่งส่วนต่างๆ ของไฟล์ออกไปใช้ในไฟล์อื่นๆ ได้ และนำเข้าส่วนที่คุณต้องการมายังจุดที่ต้องการได้ ทั้งนี้เพื่อการใช้ประโยชน์จากฟังก์ชันนี้ คุณต้องสร้าง script ในเอกสาร HTML ของคุณด้วย `type` ของ `module` ดังตัวอย่าง:
 
 ```html
 <script type="module" src="filename.js"></script>
 ```
 
-A script that uses this `module` type can now use the `import` and `export` features you will learn about in the upcoming challenges.
+script ที่ใช้ `module` type นี้สามารถใช้ฟีเจอร์ `import` และ `export` ที่คุณจะได้เรียนรู้ในแบบทดสอบอันใกล้นี้
 
 # --instructions--
 
-Add a script to the HTML document of type `module` and give it the source file of `index.js`
+จงเพิ่ม script ให้กับเอกสาร HTML เป็น `module` type และกำหนดชื่อ source file เป็น `index.js`
+
 
 # --hints--
 
-You should create a `script` tag.
+คุณควรสร้าง `script` tag
 
 ```js
 assert(code.match(/<\s*script[^>]*>\s*<\/\s*script\s*>/g));
 ```
 
-Your `script` tag should have the `type` attribute with a value of `module`.
+`script` tag ของคุณควรมี attribute `type` ที่มีค่า `module`
 
 ```js
 assert(
@@ -38,7 +39,7 @@ assert(
 );
 ```
 
-Your `script` tag should have a `src` of `index.js`.
+`script` tag ของคุณควรมี `src` เป็น `index.js`
 
 ```js
 assert(

@@ -8,9 +8,10 @@ dashedName: use-destructuring-assignment-to-pass-an-object-as-a-functions-parame
 
 # --description--
 
-In some cases, you can destructure the object in a function argument itself.
+ในบางกรณี คุณสามารถdestructur object ใน argument ของฟังก์ชันได้
 
-Consider the code below:
+
+พิจารณาโค้ดดังนี้
 
 ```js
 const profileUpdate = (profileData) => {
@@ -19,7 +20,7 @@ const profileUpdate = (profileData) => {
 }
 ```
 
-This effectively destructures the object sent into the function. This can also be done in-place:
+นี่คือการ destructure object ที่ส่งเข้าไปยังฟังก์ชัน นอกจากนี้ยังสามารถทำได้ดังนี้:
 
 ```js
 const profileUpdate = ({ name, age, nationality, location }) => {
@@ -27,33 +28,33 @@ const profileUpdate = ({ name, age, nationality, location }) => {
 }
 ```
 
-When `profileData` is passed to the above function, the values are destructured from the function parameter for use within the function.
+เมื่อ `profileData` ผ่านเข้าไปยัง function ด้านบน ค่าจะถูก destructured (แยก) ออกจาก function parameter ที่ใช้ภายใน function
 
 # --instructions--
 
-Use destructuring assignment within the argument to the function `half` to send only `max` and `min` inside the function.
+จงใช้ destructuring assignment ภายใน argument ของ function `half` เพื่อส่งค่า `max` และ `min` เท่านั้น เข้าไปข้างใน function 
 
 # --hints--
 
-`stats` should be an `object`.
+`stats` ควรเป็น `object`.
 
 ```js
 assert(typeof stats === 'object');
 ```
 
-`half(stats)` should be `28.015`
+`half(stats)` ควรมีค่า `28.015`
 
 ```js
 assert(half(stats) === 28.015);
 ```
 
-Destructuring should be used.
+ควรใช้ Destructuring 
 
 ```js
 assert(__helpers.removeWhiteSpace(code).match(/half=\({\w+,\w+}\)/));
 ```
 
-Destructured parameter should be used.
+ควรใช้ Destructured parameter 
 
 ```js
 assert(!code.match(/stats\.max|stats\.min/));

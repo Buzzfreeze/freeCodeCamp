@@ -8,15 +8,15 @@ dashedName: generate-an-array-of-all-object-keys-with-object-keys
 
 # --description--
 
-We can also generate an array which contains all the keys stored in an object using the `Object.keys()` method and passing in an object as the argument. This will return an array with strings representing each property in the object. Again, there will be no specific order to the entries in the array.
+นอกจากนี้เรายังสามารถสร้าง array จาก object ด้วย `Object.keys()` โดยส่ง object เข้าไปเป็น argument อย่างไรก็ตาม array ทีได้จาก `Object.keys()` จะประกอบด้วย string ของแต่ละ property ใน object โดย property เหล่านี้จะไม่มีลำดับใน array
 
 # --instructions--
 
-Finish writing the `getArrayOfUsers` function so that it returns an array containing all the properties in the object it receives as an argument.
+จงเขียนฟังก์ชัน `getArrayOfUsers` ให้สำเร็จ เพื่อให้คืนค่าเป็น array ที่ประกอบด้วย property ทั้งหมดใน object โดย object นั้นเป็น argument 
 
 # --hints--
 
-The `users` object should only contain the keys `Alan`, `Jeff`, `Sarah`, and `Ryan`
+object `users` ควรประกอบด้วย key  `Alan`, `Jeff`, `Sarah`, และ `Ryan` เท่านั้น
 
 ```js
 assert(
@@ -28,7 +28,7 @@ assert(
 );
 ```
 
-The `getArrayOfUsers` function should return an array which contains all the keys in the `users` object
+function `getArrayOfUsers` ควรคืนค่า array ซึ่งประกอบด้วย key ทั้งหมดใน object `users`
 
 ```js
 assert(

@@ -8,7 +8,7 @@ dashedName: combine-arrays-with-the-spread-operator
 
 # --description--
 
-Another huge advantage of the <dfn>spread</dfn> operator is the ability to combine arrays, or to insert all the elements of one array into another, at any index. With more traditional syntaxes, we can concatenate arrays, but this only allows us to combine arrays at the end of one, and at the start of another. Spread syntax makes the following operation extremely simple:
+ข้อดีอีกประการหนึ่งของ <dfn>spread</dfn> operator คือความสามารถในการรวม array หรือแทรก elements ทั้งหมดของ array หนึ่งไปยังอีก array นึงที่ index ใดก็ได้ ซึ่งหากเราใช้ syntax ดั้งเดิม เราสามารถเชื่อม array เข้าด้วยกันได้ก็จริง แต่เป็นการนำ array นึงมาต่อกับอีก array นึงเท่านั้น (concatenate) นอกจากนี้ Spread syntax ยังทำให้ operation ต่อไปนี้ทำได้ง่ายมาก
 
 ```js
 let thisArray = ['sage', 'rosemary', 'parsley', 'thyme'];
@@ -16,23 +16,23 @@ let thisArray = ['sage', 'rosemary', 'parsley', 'thyme'];
 let thatArray = ['basil', 'cilantro', ...thisArray, 'coriander'];
 ```
 
-`thatArray` would have the value `['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander']`.
+`thatArray` ควรมีค่า `['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander']`.
 
-Using spread syntax, we have just achieved an operation that would have been more complex and more verbose had we used traditional methods.
+จะเห็นได้ว่า การใช้ syntax spread ทำให้เราทำ operation ที่ซับซ้อนได้ง่ายกว่าการใช้วิธีการแบบเดิม
 
 # --instructions--
 
-We have defined a function `spreadOut` that returns the variable `sentence`. Modify the function using the <dfn>spread</dfn> operator so that it returns the array `['learning', 'to', 'code', 'is', 'fun']`.
+เราได้ประกาศฟังก์ชัน `spreadOut` ที่คืนค่าเป็นตัวแปร `sentence` จงแก้ไขฟังก์ชันโดยใช้<dfn>spread</dfn> operator เพื่อคืนค่าเป็น array `['learning', 'to', 'code', 'is', 'fun']`
 
 # --hints--
 
-`spreadOut` should return `["learning", "to", "code", "is", "fun"]`
+`spreadOut` ควรคืนค่า `["learning", "to", "code", "is", "fun"]`
 
 ```js
 assert.deepEqual(spreadOut(), ['learning', 'to', 'code', 'is', 'fun']);
 ```
 
-The `spreadOut` function should utilize spread syntax
+`spreadOut` ควรใช้ spread syntax
 
 ```js
 assert.notStrictEqual(spreadOut.toString().search(/[...]/), -1);

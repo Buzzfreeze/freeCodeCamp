@@ -8,9 +8,9 @@ dashedName: add-items-to-an-array-with-push-and-unshift
 
 # --description--
 
-An array's length, like the data types it can contain, is not fixed. Arrays can be defined with a length of any number of elements, and elements can be added or removed over time; in other words, arrays are <dfn>mutable</dfn>. In this challenge, we will look at two methods with which we can programmatically modify an array: `Array.push()` and `Array.unshift()`.
+ความยาว (length) ของ array เหมือนกับ data type ที่เก็บค่าได้ และไม่ fix ค่า โดย Arrays มีความยาวเท่าไหร่ก็ได้ขึ้นกับจำนวน elements  และเพิ่มหรือลบ element ภายหลังได้ หรือกล่าวอีกนัยหนึ่งว่า Arrays เป็น <dfn>mutable</dfn> ในบทเรียนนี้ เราจะเรียนรู้ 2 methods ที่สามารถปรับเปลี่ยน Arrays นั่นคือ `Array.push()` และ `Array.unshift()`
 
-Both methods take one or more elements as parameters and add those elements to the array the method is being called on; the `push()` method adds elements to the end of an array, and `unshift()` adds elements to the beginning. Consider the following:
+ทั้งสอง methods รับค่า element 1 ตัวหรือมากกว่า มาเป็น parameter แล้วเพิ่ม elements ให้กับ array ซึ่ง method `push()` เพิ่ม element ที่ส่วนท้ายของ array  และ `unshift()` เพิ่ม element ที่จุดเริ่มต้นของ array ให้พิจารณาโค้ดต่อไปนี้
 
 ```js
 let twentyThree = 'XXIII';
@@ -19,21 +19,23 @@ let romanNumerals = ['XXI', 'XXII'];
 romanNumerals.unshift('XIX', 'XX');
 ```
 
-`romanNumerals` would have the value `['XIX', 'XX', 'XXI', 'XXII']`.
+`romanNumerals` ควรมีค่า `['XIX', 'XX', 'XXI', 'XXII']`
 
 ```js
 romanNumerals.push(twentyThree);
 ```
 
-`romanNumerals` would have the value `['XIX', 'XX', 'XXI', 'XXII', 'XXIII']`. Notice that we can also pass variables, which allows us even greater flexibility in dynamically modifying our array's data.
+`romanNumerals` ควรมีค่า `['XIX', 'XX', 'XXI', 'XXII', 'XXIII']` 
+
+โปรดสังเกตว่า เรายังสามารถส่งค่าผ่านตัวแปรได้ ซึ่งช่วยให้เรามีความยืดหยุ่นมากขึ้นในการปรับเปลี่ยนข้อมูลของ array แบบไดนามิก
 
 # --instructions--
 
-We have defined a function, `mixedNumbers`, which we are passing an array as an argument. Modify the function by using `push()` and `unshift()` to add `'I', 2, 'three'` to the beginning of the array and `7, 'VIII', 9` to the end so that the returned array contains representations of the numbers 1-9 in order.
+เราได้ประกาศฟังก์ชัน `mixedNumbers` ซึ่งเราส่ง array เข้าไปเป็น argument จงแก้ไขฟังก์ชันโดยใช้ `push()` และ `unshift()` เพื่อเพิ่ม `'I', 2, 'three'` ที่จุดเริ่มต้นของ array และ `7, 'VIII', 9` ต่อท้าย array เพื่อให้คืนค่าเป็น array ที่ประกอบด้วยคำแทนเลข 1-9 ตามลำดับ
 
 # --hints--
 
-`mixedNumbers(["IV", 5, "six"])` should now return `["I", 2, "three", "IV", 5, "six", 7, "VIII", 9]`
+`mixedNumbers(["IV", 5, "six"])` ควรคืนค่า `["I", 2, "three", "IV", 5, "six", 7, "VIII", 9]`
 
 ```js
 assert.deepEqual(mixedNumbers(['IV', 5, 'six']), [
@@ -49,13 +51,13 @@ assert.deepEqual(mixedNumbers(['IV', 5, 'six']), [
 ]);
 ```
 
-The `mixedNumbers` function should utilize the `push()` method
+ `mixedNumbers` function ควรใช้ `push()` method
 
 ```js
 assert(mixedNumbers.toString().match(/\.push/));
 ```
 
-The `mixedNumbers` function should utilize the `unshift()` method
+`mixedNumbers` function ควรใช้ `unshift()` method
 
 ```js
 assert(mixedNumbers.toString().match(/\.unshift/));

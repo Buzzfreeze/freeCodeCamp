@@ -8,16 +8,18 @@ dashedName: use-an-array-to-store-a-collection-of-data
 
 # --description--
 
-The below is an example of the simplest implementation of an array data structure. This is known as a <dfn>one-dimensional array</dfn>, meaning it only has one level, or that it does not have any other arrays nested within it. Notice it contains <dfn>booleans</dfn>, <dfn>strings</dfn>, and <dfn>numbers</dfn>, among other valid JavaScript data types:
+ด้านล่างนี้คือตัวอย่างการใช้งานโครงสร้างข้อมูลอาร์เรย์ที่ง่ายที่สุด สิ่งนี้เรียกว่า <dfn>อาร์เรย์หนึ่งมิติ</dfn> ซึ่งหมายความว่ามีเพียงหนึ่งระดับหรือว่าไม่มีอาร์เรย์อื่นซ้อนอยู่ภายใน สังเกตว่ามี <dfn>booleans</dfn>, <dfn>strings</dfn> และ <dfn>numbers</dfn>:
 
 ```js
 let simpleArray = ['one', 2, 'three', true, false, undefined, null];
 console.log(simpleArray.length);
 ```
 
-The `console.log` call displays `7`.
+ `console.log` จะแสดง `7`
 
-All arrays have a length property, which as shown above, can be very easily accessed with the syntax `Array.length`. A more complex implementation of an array can be seen below. This is known as a <dfn>multi-dimensional array</dfn>, or an array that contains other arrays. Notice that this array also contains JavaScript <dfn>objects</dfn>, which we will examine very closely in our next section, but for now, all you need to know is that arrays are also capable of storing complex objects.
+ทุก array มีความยาว (length) เป็น property ซึ่งแสดงดังโค้ดด้านบน โดย property นี้สามารถเข้าถึงง่ายด้วย syntax `Array.length` การทำงานกับ array แบบซับซ้อนสามารถดูได้ที่ด้านล่าง ซึ่งจะเรียกว่า <dfn>multi-dimensional array</dfn> หรือ array ที่เก็บ array อื่นๆ สังเกตว่า array นี้มี JavaScript <dfn>objects</dfn> ซึ่งเราจะลงรายละเอียดในหัวข้อต่อไป แต่ตอนนี้ สิ่งที่คุณต้องทราบคือ array มีความสามารถในการเก็บ object ที่ซับซ้อนได้
+
+
 
 ```js
 let complexArray = [
@@ -46,35 +48,36 @@ let complexArray = [
 
 # --instructions--
 
-We have defined a variable called `yourArray`. Complete the statement by assigning an array of at least 5 elements in length to the `yourArray` variable. Your array should contain at least one <dfn>string</dfn>, one <dfn>number</dfn>, and one <dfn>boolean</dfn>.
+เราได้ประกาศตัวแปรชื่อ `yourArray` จงสร้าง statement โดยให้นำ array ที่มีอย่างน้อย 5 elements ไปกำหนดค่าให้กับตัวแปร `yourArray` ซึ่ง array ของคุณควรมี <dfn>string</dfn>, <dfn>number</dfn>, และ <dfn>boolean</dfn> อย่างน้อยอย่างละหนึ่ง
+
 
 # --hints--
 
-`yourArray` should be an array.
+`yourArray` ควรเป็น array 
 
 ```js
 assert.strictEqual(Array.isArray(yourArray), true);
 ```
 
-`yourArray` should be at least 5 elements long.
+`yourArray` ควรมีอย่างน้อย 5 elements
 
 ```js
 assert.isAtLeast(yourArray.length, 5);
 ```
 
-`yourArray` should contain at least one `boolean`.
+`yourArray` ควรมี `boolean` อย่างน้อย 1 ตัว
 
 ```js
 assert(yourArray.filter((el) => typeof el === 'boolean').length >= 1);
 ```
 
-`yourArray` should contain at least one `number`.
+`yourArray` ควรมี `number` อย่างน้อย 1 ตัว
 
 ```js
 assert(yourArray.filter((el) => typeof el === 'number').length >= 1);
 ```
 
-`yourArray` should contain at least one `string`.
+`yourArray` ควรมี`string` อย่างน้อย 1 ตัว
 
 ```js
 assert(yourArray.filter((el) => typeof el === 'string').length >= 1);

@@ -8,9 +8,9 @@ dashedName: write-concise-object-literal-declarations-using-object-property-shor
 
 # --description--
 
-ES6 adds some nice support for easily defining object literals.
+ES6 รองรับการประกาศ object literal ที่มีรูปแบบง่ายขึ้น 
 
-Consider the following code:
+พิจารณาโค้ดดังนี้
 
 ```js
 const getMousePosition = (x, y) => ({
@@ -19,7 +19,7 @@ const getMousePosition = (x, y) => ({
 });
 ```
 
-`getMousePosition` is a simple function that returns an object containing two properties. ES6 provides the syntactic sugar to eliminate the redundancy of having to write `x: x`. You can simply write `x` once, and it will be converted to`x: x` (or something equivalent) under the hood. Here is the same function from above rewritten to use this new syntax:
+`getMousePosition` เป็นฟังก์ชันง่ายๆ ที่คืนค่าเป็น object ที่มีสอง property ซึ่ง ES6 ขจัดความซ้ำซ้อนของการเขียน `x: x` โดยคุณสามารถเขียน `x` เพียงครั้งเดียว แล้วมันจะแปลงเป็น `x: x` (หรือสิ่งที่เทียบเท่า) ให้อัตโนมัติ นี่คือฟังก์ชันเหมือนกันกับด้านบน โดยเขียนใหม่ได้ดังนี้:
 
 ```js
 const getMousePosition = (x, y) => ({ x, y });
@@ -27,11 +27,12 @@ const getMousePosition = (x, y) => ({ x, y });
 
 # --instructions--
 
-Use object property shorthand with object literals to create and return an object with `name`, `age` and `gender` properties.
+จงใช้ object property shorthand กับ object literal เพื่อสร้างและคืนค่า object ด้วย property `name`, `age` และ `gender`
+
 
 # --hints--
 
-`createPerson("Zodiac Hasbro", 56, "male")` should return `{name: "Zodiac Hasbro", age: 56, gender: "male"}`.
+`createPerson("Zodiac Hasbro", 56, "male")` ควรคืนค่า `{name: "Zodiac Hasbro", age: 56, gender: "male"}`
 
 ```js
 assert.deepEqual(
@@ -40,7 +41,7 @@ assert.deepEqual(
 );
 ```
 
-Your code should not use `key:value`.
+โค้ดของคุณไม่ควรใช้ `key:value`
 
 ```js
 (getUserInput) => assert(!getUserInput('index').match(/:/g));

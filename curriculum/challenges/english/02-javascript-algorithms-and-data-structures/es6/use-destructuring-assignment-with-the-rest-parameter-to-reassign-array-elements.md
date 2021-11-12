@@ -11,9 +11,9 @@ dashedName: >-
 
 # --description--
 
-In some situations involving array destructuring, we might want to collect the rest of the elements into a separate array.
+ในบางสถานการณ์ที่เกี่ยวข้องกับ array destructuring เราอาจต้องการนำ elements ที่เหลือมาเป็น array อีกตัวแยกต่างหาก
 
-The result is similar to `Array.prototype.slice()`, as shown below:
+ผลลัพธ์จะคล้ายกับ `Array.prototype.slice()` ดังนี้
 
 ```js
 const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
@@ -21,35 +21,39 @@ console.log(a, b);
 console.log(arr);
 ```
 
-The console would display the values `1, 2` and `[3, 4, 5, 7]`.
+console จะแสดงค่า `1, 2` และ `[3, 4, 5, 7]`
 
-Variables `a` and `b` take the first and second values from the array. After that, because of the rest parameter's presence, `arr` gets the rest of the values in the form of an array. The rest element only works correctly as the last variable in the list. As in, you cannot use the rest parameter to catch a subarray that leaves out the last element of the original array.
+ตัวแปร `a` และ `b` รับค่าแรกและค่าที่สองจาก array แต่เนื่องจากมี rest parameter อยู่ ดังนั้น `arr` จึงรับค่าที่เหลือในรูปแบบของ array โดย rest element ทำงานได้ถูกต้องก็ต่อเมื่อเป็นตัวแปรสุดท้ายในลิสต์ อย่างไรก็ตาม คุณไม่สามารถใช้ rest parameter เพื่อรับค่า subarray ย่อยที่อยู่เป็น element สุดท้ายของ array เดิม
 
 # --instructions--
 
 Use destructuring assignment with the rest parameter to perform an effective `Array.prototype.slice()` so that `arr` is a sub-array of the original array `source` with the first two elements omitted.
 
+
+
+จงใช้ destructuring assignment กับ rest parameter ในการทำ `Array.prototype.slice()` เพื่อให้ `arr` เป็น sub-array ของ array `source` ที่ไม่มี elements 2 ตัวแรก 
+
 # --hints--
 
-`arr` should be `[3,4,5,6,7,8,9,10]`
+`arr` ควรเป็น `[3,4,5,6,7,8,9,10]`
 
 ```js
 assert(arr.every((v, i) => v === i + 3) && arr.length === 8);
 ```
 
-`source` should be `[1,2,3,4,5,6,7,8,9,10]`
+`source` ควรเป็น `[1,2,3,4,5,6,7,8,9,10]`
 
 ```js
 assert(source.every((v, i) => v === i + 1) && source.length === 10);
 ```
 
-`Array.slice()` should not be used.
+ไม่ควรใช้ `Array.slice()` 
 
 ```js
 (getUserInput) => assert(!getUserInput('index').match(/slice/g));
 ```
 
-Destructuring on `list` should be used.
+ควรใช้ Destructuring กับ `list` 
 
 ```js
 assert(

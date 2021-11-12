@@ -8,11 +8,12 @@ dashedName: use-class-syntax-to-define-a-constructor-function
 
 # --description--
 
-ES6 provides a new syntax to create objects, using the <dfn>class</dfn> keyword.
+ES6 มี syntax ใหม่ สำหรับสร้าง object โดยใช้ keyword <dfn>class</dfn>
 
-It should be noted that the `class` syntax is just syntax, and not a full-fledged class-based implementation of an object-oriented paradigm, unlike in languages such as Java, Python, Ruby, etc.
+แจ้งไว้ก่อนว่า syntax `class` เป็นเพียง syntax และไม่ใช่ object oriented ที่สมบูรณ์ ซึ่งแตกต่างจากภาษาอื่น เช่น Java, Python, Ruby เป็นต้น
 
-In ES5, we usually define a `constructor` function and use the `new` keyword to instantiate an object.
+ใน ES5 เรามักจะกำหนดฟังก์ชัน `constructor` และใช้ keyword `new` เพื่อสร้าง instance ของ object
+
 
 ```js
 var SpaceShuttle = function(targetPlanet){
@@ -21,7 +22,8 @@ var SpaceShuttle = function(targetPlanet){
 var zeus = new SpaceShuttle('Jupiter');
 ```
 
-The `class` syntax simply replaces the `constructor` function creation:
+`class` syntax สามารถใช้แทนการสร้าง `constructor` ได้อย่างง่ายๆ
+
 
 ```js
 class SpaceShuttle {
@@ -32,21 +34,25 @@ class SpaceShuttle {
 const zeus = new SpaceShuttle('Jupiter');
 ```
 
-It should be noted that the `class` keyword declares a new function, to which a constructor is added. This constructor is invoked when `new` is called to create a new object.
+สังเกตว่า keyword `class` ใช้ประกาศฟังก์ชันใหม่ที่มี constructor อยู่ในนั้น โดย constructor ถูกเรียกใช้เมื่อมีการใช้คำสั่ง `new` เพื่อสร้าง object ใหม่
+
 
 **Note:** UpperCamelCase should be used by convention for ES6 class names, as in `SpaceShuttle` used above.
 
-The `constructor` method is a special method for creating and initializing an object created with a class. You will learn more about it in the Object Oriented Programming section of the JavaScript Algorithms And Data Structures Certification.
+ **หมายเหตุ:** ควรใช้ UpperCamelCase ในการตั้งชื่อคลาสตามกฎของ ES6 ดังที่เห็นใน `SpaceShuttle` ด้านบน
+
+`Constructor` method เป็น method พิเศษสำหรับการสร้างและเริ่มต้นค่า object ที่สร้างด้วยคลาส คุณจะได้เรียนรู้เพิ่มเติมเกี่ยวกับเรื่องนี้ในบทเรียน Object Oriented Programming ของ JavaScript Algorithms และ Data Structures Certification
+
 
 # --instructions--
 
-Use the `class` keyword and write a `constructor` to create the `Vegetable` class.
+จงใช้ keyword `class` และเขียน `constructor` เพื่อสร้าง class `Vegetable`
 
-The `Vegetable` class allows you to create a vegetable object with a property `name` that gets passed to the `constructor`.
+class `Vegetable` ทำให้คุณสามารถสร้าง object vegetable ด้วย property `name` ที่ส่งผ่านไปยัง `constructor`
 
 # --hints--
 
-`Vegetable` should be a `class` with a defined `constructor` method.
+`Vegetable` ควรเป็น `class` ที่ประกาศ `constructor` method
 
 ```js
 assert(
@@ -54,13 +60,13 @@ assert(
 );
 ```
 
-The `class` keyword should be used.
+ควรใช้ `class` keyword 
 
 ```js
 assert(code.match(/class/g));
 ```
 
-`Vegetable` should be able to be instantiated.
+`Vegetable` ควรสามารถเป็นอินสแตนซ์
 
 ```js
 assert(() => {

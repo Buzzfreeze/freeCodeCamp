@@ -8,11 +8,11 @@ dashedName: use-the-delete-keyword-to-remove-object-properties
 
 # --description--
 
-Now you know what objects are and their basic features and advantages. In short, they are key-value stores which provide a flexible, intuitive way to structure data, ***and***, they provide very fast lookup time. Throughout the rest of these challenges, we will describe several common operations you can perform on objects so you can become comfortable applying these useful data structures in your programs.
+ตอนนี้คุณรู้แล้วว่า object คืออะไร รวมถึงฟีเจอร์พื้นฐาน และข้อดีของ object กล่าวโดยสรุป คือ object คือที่เก็บ key-value ซึ่งยืดหยุ่น และใช้งานง่ายในการจัดโครงสร้างข้อมูล ***และ*** ใช้เวลาในการค้นหาที่รวดเร็วมาก บทเรียนที่เหลือ เราจะอธิบายการทำงานทั่วไปหลายอย่าง ที่คุณสามารถทำกับ object ได้ เพื่อให้คุณรู้สึกสบายใจที่จะใช้โครงสร้างข้อมูลที่มีประโยชน์เหล่านี้ในโปรแกรมของคุณ
 
-In earlier challenges, we have both added to and modified an object's key-value pairs. Here we will see how we can *remove* a key-value pair from an object.
+ในบทก่อนหน้านี้ เราได้เพิ่มและแก้ไขคู่ key-value ของ object ที่นี่เราจะดูว่าเราสามารถ *ลบ* คู่ key-value ออกจาก object ได้อย่างไร
 
-Let's revisit our `foods` object example one last time. If we wanted to remove the `apples` key, we can remove it by using the `delete` keyword like this:
+มาทบทวนตัวอย่าง object `foods` ของเราอีกครั้งเป็นครั้งสุดท้าย หากเราต้องการลบ key `apples` เราสามารถลบออกได้โดยใช้ keyword `delete` ดังนี้:
 
 ```js
 delete foods.apples;
@@ -20,11 +20,11 @@ delete foods.apples;
 
 # --instructions--
 
-Use the delete keyword to remove the `oranges`, `plums`, and `strawberries` keys from the `foods` object.
+จงใช้ keyword delete เพื่อลบ  `oranges`, `plums` และ key `strawberries` จาก object `foods`
 
 # --hints--
 
-The `foods` object should only have three keys: `apples`, `grapes`, and `bananas`.
+object `foods` ควรมีแค่ 3 key: `apples`, `grapes`, และ `bananas`
 
 ```js
 assert(
@@ -35,7 +35,7 @@ assert(
 );
 ```
 
-The `oranges`, `plums`, and `strawberries` keys should be removed using `delete`.
+key `oranges`, `plums` และ `strawberries` ควรถูกลบโดยใช้ `delete`
 
 ```js
 assert(

@@ -8,7 +8,7 @@ dashedName: add-key-value-pairs-to-javascript-objects
 
 # --description--
 
-At their most basic, objects are just collections of <dfn>key-value</dfn> pairs. In other words, they are pieces of data (<dfn>values</dfn>) mapped to unique identifiers called <dfn>properties</dfn> (<dfn>keys</dfn>). Take a look at an example:
+โดยพื้นฐานที่สุดแล้ว object เป็นเพียงชุดของคู่ <dfn>key-value</dfn> กล่าวอีกนัยหนึ่งว่า object คือชิ้นส่วนของข้อมูล (<dfn>values</dfn>) ที่จับคู่กับ identifiers ที่ไม่ซ้ำกันซึ่งเรียกว่า <dfn>properties</dfn> (<dfn>keys</dfn>) ลองดูตัวอย่าง:
 
 ```js
 const tekkenCharacter = {
@@ -18,19 +18,20 @@ const tekkenCharacter = {
 };
 ```
 
-The above code defines a Tekken video game character object called `tekkenCharacter`. It has three properties, each of which map to a specific value. If you want to add an additional property, such as "origin", it can be done by assigning `origin` to the object:
+โค้ดด้านบนกำหนด object ตัวละครวิดีโอเกม Tekken ชื่อ `tekkenCharacter` มี 3 properties โดยแต่ละ property จะจับคู่กับค่าที่กำหนด หากคุณต้องการเพิ่ม property เช่น "origin" สามารถทำได้โดยกำหนด `origin` ให้กับ object
 
 ```js
 tekkenCharacter.origin = 'South Korea';
 ```
 
-This uses dot notation. If you were to observe the `tekkenCharacter` object, it will now include the `origin` property. Hwoarang also had distinct orange hair. You can add this property with bracket notation by doing:
+จากโค้ดด้านบนใช้ dot notation (สัญลักษณ์จุด) หากคุณสังเกต object `tekkenCharacter` ตอนนี้จะมี `origin` property โดย Hwoarang ก็มีผมสีส้มที่โดดเด่น คุณสามารถเพิ่ม property นี้ด้วยเครื่องหมายวงเล็บดังนี้
 
 ```js
 tekkenCharacter['hair color'] = 'dyed orange';
 ```
 
-Bracket notation is required if your property has a space in it or if you want to use a variable to name the property. In the above case, the property is enclosed in quotes to denote it as a string and will be added exactly as shown. Without quotes, it will be evaluated as a variable and the name of the property will be whatever value the variable is. Here's an example with a variable:
+ถ้าหาก property ของคุณมี space หรือหากคุณต้องการใช้ตัวแปรเพื่อตั้งชื่อ property คุณจำเป็นต้องใช้เครื่องหมายวงเล็บ Bracket notation 
+ในกรณีข้างต้น property จะอยู่ในเครื่องหมายคำพูดเพื่อแสดงว่าเป็น string และสามารถเพิ่มได้ตามโค้ดด้านบน แต่หากไม่มีเครื่องหมายคำพูด จะถูกประเมินเป็นตัวแปรและชื่อของ property จะเป็นค่าใดก็ตามของตัวแปรนั้น นี่คือตัวอย่าง
 
 ```js
 const eyes = 'eye color';
@@ -38,7 +39,7 @@ const eyes = 'eye color';
 tekkenCharacter[eyes] = 'brown';
 ```
 
-After adding all the examples, the object will look like this:
+หลังจากเพิ่มตามตัวอย่างทั้งหมดแล้ว object จะมีลักษณะดังนี้
 
 ```js
 {
@@ -53,35 +54,36 @@ After adding all the examples, the object will look like this:
 
 # --instructions--
 
-A `foods` object has been created with three entries. Using the syntax of your choice, add three more entries to it: `bananas` with a value of `13`, `grapes` with a value of `35`, and `strawberries` with a value of `27`.
+จงสร้าง object `foods` ที่มีสามรายการ ให้ใช้ syntax แบบใดก็ได้ แล้วเพิ่มสามรายการเข้าไป ได้แก่ `bananas` มีค่า `13`, `grapes` มีค่า `35` และ `strawberries` มีค่า `27`
+
 
 # --hints--
 
-`foods` should be an object.
+`foods` ควรเป็น object
 
 ```js
 assert(typeof foods === 'object');
 ```
 
-The `foods` object should have a key `bananas` with a value of `13`.
+object `foods` ควรมี key `bananas` ที่มีค่า `13`
 
 ```js
 assert(foods.bananas === 13);
 ```
 
-The `foods` object should have a key `grapes` with a value of `35`.
+object `foods` ควรมี key `grapes` ที่มีค่า `35`
 
 ```js
 assert(foods.grapes === 35);
 ```
 
-The `foods` object should have a key `strawberries` with a value of `27`.
+object `foods` ควรมี key `strawberries` ที่มีค่า `27`
 
 ```js
 assert(foods.strawberries === 27);
 ```
 
-The key-value pairs should be set using dot or bracket notation.
+คู่ key-value pairs ควร set โดยใช้จุด หรือเครื่องหมายวงเล็บ
 
 ```js
 assert(
