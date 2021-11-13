@@ -9,7 +9,7 @@ import { createSelector } from 'reselect';
 import envData from '../../../config/env.json';
 import { langCodes } from '../../../config/i18n/all-langs';
 import FreeCodeCampLogo from '../assets/icons/FreeCodeCamp-logo';
-import DonateForm from '../components/Donation/DonateForm';
+// import DonateForm from '../components/Donation/DonateForm';
 
 import { createFlashMessage } from '../components/Flash/redux';
 import { Loader, Spacer } from '../components/helpers';
@@ -265,7 +265,7 @@ const ShowCertification = (props: IShowCertificationProps): JSX.Element => {
           </Col>
         </Row>
       )}
-      <Row>
+      {/* <Row>
         <Col lg={8} lgOffset={2} sm={10} smOffset={1} xs={12}>
           <DonateForm
             defaultTheme='default'
@@ -273,7 +273,7 @@ const ShowCertification = (props: IShowCertificationProps): JSX.Element => {
             isMinimalForm={true}
           />
         </Col>
-      </Row>
+      </Row> */}
       <Row>
         <Col sm={4} smOffset={4} xs={6} xsOffset={3}>
           {isDonationSubmitted && donationCloseBtn}
