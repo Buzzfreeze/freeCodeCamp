@@ -9,8 +9,8 @@ dashedName: animate-multiple-elements-at-variable-rates
 
 # --description--
 
-ในแบบฝึกหัดที่แล้ว คุณได้เปลี่ยน animation rate ของสอง elements ที่ animate คล้ายกันโดยการเปลี่ยน `@keyframes` rule
-คุรสามารถทำเช่นนี้ได้ด้วยการใช้ `animation-duration` ของหลาย ๆ element เช่นกัน
+ในแบบฝึกหัดที่แล้ว คุณได้เปลี่ยน animation rate ของสอง element ที่ animate คล้ายกันโดยการเปลี่ยน `@keyframes` rule
+คุณสามารถทำเช่นนี้ได้ด้วยการใช้ `animation-duration` ของหลาย ๆ element เช่นกัน
 
 ตรงที่ animation ทำงานใน code editor, มันมีดาวสามดวงบนฟ้าที่กำลังกระพริบอยู่โดยมีt rate เดียวกับวนเป็นลูปต่อเนื่อง
 เพื่อที่จะทำให้มันกระพริบด้วย rate ที่ต่างกัน
@@ -18,7 +18,7 @@ dashedName: animate-multiple-elements-at-variable-rates
 
 # --instructions--
 
-จงกำหนดให้ `animation-duration` ของ element ที่เป็นคลาส `star-1`, `star-2`, และ `star-3` มีค่า 1s, 0.9s, และ 1.1s ตามลำดับ
+จงกำหนดให้ `animation-duration` ของ element ที่เป็นคลาส `star-1`, `star-2`, และ `star-3` มีค่าเท่ากับ 1s, 0.9s, และ 1.1s ตามลำดับ
 
 # --hints--
 
@@ -28,13 +28,13 @@ dashedName: animate-multiple-elements-at-variable-rates
 assert($('.star-1').css('animation-duration') == '1s');
 ```
 
-The `animation-duration` property for the star with class `star-2` should be 0.9s.
+`animation-duration` property ของดาวที่มีคลาสชื่อ `star-2` ควรจะอยู่ที่ 0.9s.
 
 ```js
 assert($('.star-2').css('animation-duration') == '0.9s');
 ```
 
-The `animation-duration` property for the star with class `star-3` should be 1.1s.
+`animation-duration` property ของดาวที่มีคลาสชื่อ `star-3` ควรจะอยู่ที่ 1.1s.
 
 ```js
 assert($('.star-3').css('animation-duration') == '1.1s');

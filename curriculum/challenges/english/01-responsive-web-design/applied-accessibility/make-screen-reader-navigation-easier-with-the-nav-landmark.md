@@ -10,15 +10,15 @@ dashedName: make-screen-reader-navigation-easier-with-the-nav-landmark
 # --description--
 
 `nav` element เป็นอีก HTML5 item ที่มี embedded landmark feature สำหรับการนำทาง screen reader อย่างง่าย ๆ
- tag นี้ถูกใช้เพื่อล้อมรอบลิงค์ของ navigation อันหลักในหน้าของคุณ 
+tag นี้ถูกใช้เพื่อเก็บลิงค์ของ navigation อันหลักในหน้าของคุณ 
  
- ถ้ามีลิงค์ที่ถูกใช้ซ้ำ ๆ อยู่ที่ด้านล่างของแต่ละหน้า มันไม่จำเป็นที่จะ markup พวกมันด้วย `nav` tag 
- การใช้ `footer` (จะกล่าวถึงใน challenge ถัดไป) ในกรณีนี้ถือว่าเพียงพอแล้ว
+ถ้ามีลิงค์ที่ถูกใช้ซ้ำ ๆ อยู่ที่ด้านล่างของแต่ละหน้า มันไม่จำเป็นที่จะ markup พวกมันด้วย `nav` tag 
+การใช้ `footer` (จะกล่าวถึงในแบบฝึกหัดถัดไป) ในกรณีนี้ถือว่าเพียงพอแล้ว
 
 # --instructions--
 
-Camper Cat ได้ใส่ลิงค์ของ navigation ที่ด้านบนของหน้า training ของเขาแต่ถ้าล้อมรอบพวกมันไว้ใน `div`
-จงเปลี่ยน `div` ให้เป้น `nav` tag เพื่อปรับปรุงการเข้าถึงหน้านั้นของเขา
+Camper Cat ได้ใส่ลิงค์ของ navigation ที่ด้านบนของหน้า training ของเขาแต่เก็บพวกมันไว้ใน `div`
+จงเปลี่ยน `div` ให้เป็น `nav` tag เพื่อปรับปรุงการเข้าถึงหน้านั้นของเขา
 
 # --hints--
 
@@ -28,19 +28,19 @@ Camper Cat ได้ใส่ลิงค์ของ navigation ที่ด้
 assert($('nav').length == 1);
 ```
 
-Your `nav` tags should wrap around the `ul` and its list items.
+`nav` tags ควรเก็บ `ul` และ list item ของมันไว้
 
 ```js
 assert($('nav').children('ul').length == 1);
 ```
 
-Your code should not have any `div` tags.
+โค้ดของคุณไม่ควรมี `div` tag ใด ๆ อีกต่อไป
 
 ```js
 assert($('div').length == 0);
 ```
 
-Your `nav` element should have a closing tag.
+`nav` element ควรมีแท็กปิด
 
 ```js
 assert(

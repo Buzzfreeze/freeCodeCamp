@@ -24,7 +24,7 @@ dashedName: use-the-em-tag-to-italicize-text
 assert($('em').length == 1);
 ```
 
-The `em` tag should wrap around the contents of the `p` tag but not the `p` tag itself.
+`em` tag ควรจะเก็บแค่ contents ของ `p` tag ไว้แต่ไม่ใช่ตัว `p` tag ทั้งอัน
 
 ```js
 assert($('p').children().length == 1 && $('em').children().length == 2);

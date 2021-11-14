@@ -9,23 +9,24 @@ dashedName: use-the-s-tag-to-strikethrough-text
 
 # --description--
 
-เพื่อที่จะขีดฆ่าข้อความหรือก็คือการทำให้มีเส้นนอนตัดผ่านตัวอักษร คุณสามารถใช้`s` tag
+เพื่อที่จะขีดฆ่าข้อความหรือก็คือการทำให้มีเส้นนอนตัดผ่านตัวอักษร คุณสามารถใช้ `s` tag
 มันจะแสดงให้เห็นว่าข้อความส่วนนั้นใช้ไม่ได้แล้ว
 เมื่อใช้ `s` tag browser จะใช้ CSS ที่เป็น `text-decoration: line-through;` กับ element
 
 # --instructions--
 
-จงใส่ `s` tag รอบ `Google` ที่อยู่ใน `h4` tag และจงเพิ่มคำว่าa `Alphabet` ข้าง ๆ มันโดยไม่ต้องขีดฆ่า
+จงใส่ `s` tag รอบ `Google` ที่อยู่ใน `h4` tag และจงเพิ่มคำว่า `Alphabet` ข้าง ๆ มันโดยไม่ต้องขีดฆ่า
 
 # --hints--
 
-คุณควรเพิ่ม`s` tag ให้กับ markup.
+คุณควรเพิ่ม `s` tag ให้กับ markup.
 
 ```js
 assert($('s').length == 1);
 ```
 
-A `s` tag should wrap around the `Google` text in the `h4` tag. It should not contain the word `Alphabet`.
+`s` tag ควรจะเก็บข้อความว่า `Google` ใน `h4` tag
+มันไม่ควรเก็บคำว่า `Alphabet`
 
 ```js
 assert(
@@ -38,7 +39,7 @@ assert(
 );
 ```
 
-You should include the word `Alphabet` in the `h4` tag, without strikethrough formatting.
+คุณควรเพิ่มคำว่า `Alphabet` เข้าไปใน `h4` tag, โดยไม่ต้องขีดฆ่ามัน
 
 ```js
 assert(

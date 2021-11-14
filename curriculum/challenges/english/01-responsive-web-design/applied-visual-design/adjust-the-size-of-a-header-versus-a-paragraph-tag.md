@@ -9,13 +9,13 @@ dashedName: adjust-the-size-of-a-header-versus-a-paragraph-tag
 
 # --description--
 
-ขนาดฟ้อนต์ของ header tags (`h1` ถึง `h6`) ควรจะใหญ่กว่าขนาดฟ้อนต์ของ paragraph tags
-มันทำให้ผู้ใช้เข้าใจ layout และ ระดับความสำคัญจากสิ่งที่เห้นได้ง่ายขึ้น
-คุณควรใช้ `font-size` property เพื่อปรับขนาดของข้อความที่อยู่ในelement 
+ขนาดฟ้อนต์ของ header tags (`h1` ถึง `h6`) ควรจะใหญ่กว่าขนาดฟ้อนต์ของ paragraph tag
+มันทำให้ผู้ใช้เข้าใจ layout และ ระดับความสำคัญจากสิ่งที่เห็นได้ง่ายขึ้น
+คุณควรใช้ `font-size` property เพื่อปรับขนาดของข้อความที่อยู่ใน element 
 
 # --instructions--
 
-เพื่อที่ heading จะได้ดุใหญ่กว่า paragraph อย่างเห็นได้ชัด จงเปลี่ยน `font-size` ของ `h4` tag ให้มีค่า 27 pixel
+เพื่อที่ heading จะได้ดูใหญ่กว่า paragraph อย่างเห็นได้ชัด จงเปลี่ยน `font-size` ของ `h4` tag ให้มีค่า 27 pixel
 
 # --hints--
 

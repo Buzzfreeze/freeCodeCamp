@@ -9,23 +9,23 @@ dashedName: give-links-meaning-by-using-descriptive-link-text
 
 # --description--
 
-ผู้ใช้ Screen reader มีตัวเลือกหลายแบบสำหรับประเภทข้อความที่จะให้มันอ่าน
+ผู้ใช้ screen reader มีตัวช่วยที่หลากหลายสำหรับประเภทข้อความที่จะให้มันอ่าน
 ตัวเลือกเหล่านี้รวมถึงการข้าม landmark elements, กระโดดไปที่ main content, หรืออ่านสรุปของเพจนั้นจาก heading
 อีกตัวเลือกหนึ่งคือฟังแค่ลิงค์ที่ใช้ง่ายได้บนเพจ
 
-Screen readers ทำแบบนี้โดยการอ่านข้อความที่ลิงค์ หรือสิ่งที่อยู่ระหว่างanchor (`a`) tags
-การที่มีลิงค์ของลิสต์จาก  "click here"  หรือ "read more" links ไม่ค่อยช่วยอะไร
+Screen readers ทำแบบนี้โดยการอ่านข้อความที่ลิงค์ หรือสิ่งที่อยู่ระหว่าง anchor (`a`) tags
+การที่มีลิงค์ของลิสต์จาก "click here"  หรือ "read more" links ไม่ค่อยช่วยอะไร
 ดังนั้น จงใช้ข้อความที่สั้นกระชับและอธิบายได้ดีภายใน `a` tags เพื่อผู้ใช้จะได้ข้อมูลที่เป็นประโยชน์มากขึ้น
 
 
 # --instructions--
 
 ข้อความที่ถูกลิงค์ที่ Camper Cat ใช้อยู่นั้นไม่อธิบายอะไรเลยหากปราศจากบริบทรอบข้าง
-จงย้าย anchor (`a`) tags เพื่อที่พวกมันจะได้คลุมบริเวณรอบ ๆ ข้อความ `information about batteries` แทนที่จะเป็น `Click here`.
+จงทำให้ anchor (`a`) tag มันเก็บข้อความ `information about batteries` แทนที่จะเป็น `Click here`.
 
 # --hints--
 
-โค้ดของคุณควรย้าย anchor `a` tags จากบริเวณรอบ ๆ คำว่า `Click here` เพื่อคลุมรอบ ๆ คำว่า `information about batteries`.
+คุณควรย้าย anchor `a` tags จากบริเวณรอบ ๆ คำว่า `Click here` เพื่อคลุมรอบ ๆ คำว่า `information about batteries`.
 
 ```js
 assert(
@@ -35,13 +35,13 @@ assert(
 );
 ```
 
-The `a` element should have an `href` attribute with a value of an empty string `""`.
+`a` element ควรมี `href` attribute อันหนึ่งที่เก็บ string `""`
 
 ```js
 assert($('a').attr('href') === '');
 ```
 
-The `a` element should have a closing tag.
+`a` element ควรมีแท็กปิด
 
 ```js
 assert(

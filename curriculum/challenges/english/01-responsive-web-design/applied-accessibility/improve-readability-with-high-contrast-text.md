@@ -10,11 +10,11 @@ dashedName: improve-readability-with-high-contrast-text
 # --description--
 
 contrast ที่น้อยระหว่างสีของพื้นหน้าและพิ้นหลังสามารถทำให้ข้อความนั้นยากที่จะอ่าน
-contrast ที่เพียงพอช่วยให้เนื้อหาของคูณอ่านง่ายขึ้น แต่ว่า "เพียง" ที่ว่าคืออะไรกันแน่? 
+contrast ที่เพียงพอช่วยให้เนื้อหาของคุณอ่านง่ายขึ้น แต่ว่า "เพียง" ที่ว่าคืออะไรกันแน่? 
 
 Web Content Accessibility Guidelines (WCAG) แนะนำว่า contrast ratio ของข้อความทั่วไปควรมีค่าอย่างน้อย 4.5 to 1 
 อัตราส่วนนี้ถูกคำนวณโดยเปรียบเทียบ relative luminance values ของ 2 สี 
-โดยมีค่าตั้งแต่ 1:1 สำหรับสีที่เหมือนกัน หรือ no cont
+โดยมีค่าตั้งแต่ 1:1 สำหรับสีที่เหมือนกัน
 
 # --instructions--
 
@@ -23,13 +23,13 @@ Web Content Accessibility Guidelines (WCAG) แนะนำว่า contrast ra
 
 # --hints--
 
-โค้ดของคุรควรเปลี่ยน `color` ของข้อความสำหรับ `body`ไปเป็นเทาที่เข้มกว่า 
+โค้ดของคุณควรเปลี่ยน `color` ของข้อความสำหรับ `body` ไปเป็นเทาที่เข้มกว่า 
 
 ```js
 assert($('body').css('color') == 'rgb(99, 99, 99)');
 ```
 
-Your code should not change the `background-color` for the `body`.
+คุณไม่ควรเปลี่ยน `background-color` ของ `body`.
 
 ```js
 assert($('body').css('background-color') == 'rgb(255, 255, 255)');

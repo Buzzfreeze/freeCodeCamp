@@ -10,7 +10,7 @@ dashedName: use-the-css-transform-property-skewy-to-skew-an-element-along-the-y-
 # --description--
 
 กำหนดให้ `skewX()` function ทำให้ element ที่เลือกไว้เอียงไปด้วยแกน X ตามองศาที่กำหนดให้
-มันเดาได้ไม่ยากหากจะบอกว่า  `skewY()` property ทำให้ element ไว้เอียงไปด้วยแกน X ตามองศาที่กำหนดให้
+มันคงเดาได้ไม่ยากหากจะบอกว่า `skewY()` property ทำให้ element ไว้เอียงไปด้วยแกน Y ตามองศาที่กำหนดให้
 
 # --instructions--
 

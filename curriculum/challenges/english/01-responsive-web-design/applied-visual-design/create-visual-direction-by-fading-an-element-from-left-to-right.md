@@ -15,11 +15,11 @@ dashedName: create-visual-direction-by-fading-an-element-from-left-to-right
 
 # --instructions--
 
-จงชี้ไปที่ element ที่มีไอดีเป้น `ball` และเพิ่ม `opacity` property ที่ถูกกำหนดให้เป็น 0.1 ที่ `50%`, เพื่อที่ element จะได้ค่อย ๆ หายไปเมื่อมันเคลื่อนไปทางขวา 
+จงชี้ไปที่ element ที่มี id เป็น `ball` และเพิ่ม `opacity` property ที่ถูกกำหนดให้เป็น 0.1 ที่ `50%`, เพื่อที่ element จะได้ค่อย ๆ หายไปเมื่อมันเคลื่อนไปทางขวา 
 
 # --hints--
 
-`keyframes` rule สำหรับการจางควรจะกำหนดให้ `opacity` property อยู่ที่ 0.1 ตรง 50%
+`keyframes` rule เพื่อที่จะทำให้ลูกบอลค่อย ๆ หายไปควรจะมี `opacity` property อยู่ที่ 0.1 ตรง 50%
 
 ```js
 assert(

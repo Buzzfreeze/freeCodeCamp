@@ -9,8 +9,9 @@ dashedName: make-screen-reader-navigation-easier-with-the-footer-landmark
 
 # --description--
 
-คล้ายคลึงกับ `header` และ `nav`,`footer` element มี built-in landmark feature ตัวหนึ่งที่ทำให้ assistive devices สามารถนำทางมาที่มันได้เร็วขึ้น
-มันถูกใช้เป็นเก็บข้อมูล copyright หรือลิงค์ที่เกี่ยวข้องกับเอกสารที่มักถูกวางไว้ที่ด้านล่างของหน้าหนึ่ง ๆ ในช่วงแรก
+คล้ายกับ `header` และ `nav`
+`footer` element มี built-in landmark feature ตัวหนึ่งที่ทำให้ assistive devices สามารถนำทางมาที่มันได้เร็วขึ้น
+มันถูกใช้เพื่อเก็บข้อมูล copyright หรือลิงค์ที่เกี่ยวข้องกับเอกสารที่มักถูกวางไว้ที่ด้านล่างของหน้าหนึ่ง ๆ 
 
 # --instructions--
 
@@ -25,13 +26,13 @@ dashedName: make-screen-reader-navigation-easier-with-the-footer-landmark
 assert($('footer').length == 1);
 ```
 
-Your code should not have any `div` tags.
+โค้ดของคุณไม่ควรมี `div` tag ใด ๆ แล้ว
 
 ```js
 assert($('div').length == 0);
 ```
 
-Your code should have an opening and closing `footer` tag.
+โค้ดของคุณควรมีแท็กเปิดและแท็กปิดของ `footer` tag
 
 ```js
 assert(code.match(/<footer>\s*&copy; 2018 Camper Cat\s*<\/footer>/g));

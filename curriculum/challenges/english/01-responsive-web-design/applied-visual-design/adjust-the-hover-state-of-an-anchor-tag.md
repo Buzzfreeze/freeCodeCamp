@@ -9,10 +9,10 @@ dashedName: adjust-the-hover-state-of-an-anchor-tag
 
 # --description--
 
-แบบฝึกหัดนี้จะแตะเรื่องการใช้ pseudo-classes
-pseudo-class เป็นคีย์เวิร์ดที่สามารถถูกเพิ่มให้กับ selectors เพื่อที่จะเลือกสถานะเฉพาะของ element
+แบบฝึกหัดนี้จะพูดถึงการใช้ pseudo-classes คร่าว ๆ
+pseudo-class เป็นคีย์เวิร์ดที่สามารถถูกเพิ่มให้กับ selector เพื่อที่จะเลือกสถานะเฉพาะของ element ได้
 
-ยกตัวอย่างเช่น styling ของ an anchor tag สามารถถูกเปลี่ยนเมื่อมันอยู่ใน  hover state โดยการใช้ `:hover` pseudo-class selector
+ยกตัวอย่างเช่น styling ของ anchor tag สามารถถูกเปลี่ยนเมื่อมันอยู่ใน  hover state โดยการใช้ `:hover` pseudo-class selector
 นี่เป็น CSS ที่ใช้เปลี่ยนสีของ anchor tag ให้เป็นสีแดงมันอยู่ใน hover state:
 
 ```css
@@ -34,7 +34,7 @@ anchor tag `color` ควรจะเป็นสีดำ และจงเพ
 assert($('a').css('color') == 'rgb(0, 0, 0)');
 ```
 
-The anchor tag should have a `color` of blue on hover.
+The anchor tag ควรมี `color` เป็นสีฟ้าตอน hover
 
 ```js
 assert(

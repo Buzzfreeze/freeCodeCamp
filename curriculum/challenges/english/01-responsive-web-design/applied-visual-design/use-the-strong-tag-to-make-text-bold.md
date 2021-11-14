@@ -25,13 +25,13 @@ browser จะใช้ CSS ที่เป็น `font-weight: bold;` กับ
 assert($('strong').length == 1);
 ```
 
-The `strong` tag should be inside the `p` tag.
+`strong` tag ควรอยู่ใน `p` tag.
 
 ```js
 assert($('p').children('strong').length == 1);
 ```
 
-The `strong` tag should wrap around the words `Stanford University`.
+`strong` tag ควรเก็บข้อความ `Stanford University` ไว้
 
 ```js
 assert(

@@ -9,18 +9,18 @@ dashedName: improve-form-field-accessibility-with-the-label-element
 
 # --description--
 
-การพัฒนาการเข้าถึงด้วย semantic HTML markup ถูกใช้เพื่อการใส่ชื่อและ attributes tag ที่เหมาะสม
-ในอีกหลาย ๆ challenges จะกล่าวถึงสถานการณ์สำคัญ ๆ ที่ใช้ attributes ในฟอร์ม
+การทำให้ความสามารถในการเข้าถึงดีขึ้นด้วย semantic HTML markup ถูกใช้เพื่อการใส่ชื่อและ attributes tag ที่เหมาะสม
+ในอีกหลาย ๆ แบบฝึกหัดต่อจากนี้จะกล่าวถึงสถานการณ์สำคัญ ๆ ที่ใช้ attributes ในฟอร์ม
 
-`label` tag ที่เก็บข้อความของ form control item ที่ถูกกำหนดไว้ โดยทั่วไปจะเป้นชื่อหรือ label สำหรับตัวเลือกหนึ่ง ๆ
+`label` tag ที่เก็บข้อความของ form control item ที่ถูกกำหนดไว้ โดยทั่วไปจะเป็นชื่อหรือ label สำหรับตัวเลือกหนึ่ง ๆ
 สิ่งนี้จะผูกความหมายเข้ากับ item และช่วยให้ฟอร์มของเราอ่านได้ง่ายขึ้น
 `for` attribute บน `label` tag เกี่ยวข้องกับ `label` ที่มากับ the form control และถูกใช้โดยscreen readers
 
-คุณได้เรียนเกี่ยวกับ radio buttons และ labels ของพวกมันในบทหนึ่งของ Basic HTML section
-ในบทเรียนนั้น พวกเราเก้บ radio button input element ไว้ใน `label` element พร้อมกับ label textเพื่อที่ข้อความจะได้ถูกคลิกได้
+คุณได้เรียนเกี่ยวกับ radio buttons และ labels ของพวกมันในบทหนึ่งของบทเรียน Basic HTML
+ในบทนั้น พวกเราเก็บ radio button input element ไว้ใน `label` element พร้อมกับ label text เพื่อที่ข้อความจะได้ถูกคลิกได้
 อีกทางหนึ่งที่จะทำ ก็คือการใช้ `for` attribute ตามที่ได้อธิบายไว้ในบทเรียนนี้
 
-ค่าของ `for` attribute จำเป้นต้องเหมือนกับค่าของ `id` attribute ของ form control
+ค่าของ `for` attribute จำเป็นต้องเหมือนกับค่าของ `id` attribute ของ form control
 นี่คือตัวอย่าง :
 
 ```html
@@ -43,7 +43,7 @@ Camper Cat ความหวังว่าจะมีคนสนใจโพ
 assert($('label').attr('for'));
 ```
 
-Your `for` attribute value should match the `id` value on the email `input`.
+ค่าของ `for` attribute ควรจะตรงกับค่าของ `id` ของ email `input`
 
 ```js
 assert($('label').attr('for') == 'email');

@@ -9,13 +9,14 @@ dashedName: standardize-times-with-the-html5-datetime-attribute
 
 # --description--
 
-มาต่อกันด้วย date theme, HTML5 ก็ได้มีการแนะนำ `time` element พร้อมกับ `datetime` attribute เพื่อจากได้กำหนดเวลาให้เป็นมาตรฐาน 
+มาต่อกันด้วย date theme
+HTML5 ได้มีการเพิ่ม `time` element ที่มาพร้อมกับ `datetime` attribute เพื่อใช้กำหนดเวลาให้เป็นมาตรฐาน 
 `time` element เป็น inline element ที่สามารถเก็บ วัน หรือ เวลา ไว้ในหน้านั้น ๆ ได้
 `datetime` attribute จะเก็บ format ที่ถูกต้องของวันที่นั้นไว้
 สิ่งนี้จะเป็นค่าที่ถูกเข้าถึงด้วย assistive devices
 มันช่วยป้องกันความสับสนที่จะเกิดขึ้นโดยการตั้งมาตรฐานสำหรับการเขียนวันที่ ถึงแม้ว่าจะถูกเขียนเป็นข้อความอย่างไม่สุภาพหรือไม่ถูกต้อง
 
-นี่เป้นตัวอย่าง:
+นี่เป็นตัวอย่าง:
 
 ```html
 <p>Master Camper Cat officiated the cage match between Goro and Scorpion <time datetime="2013-02-13">last Wednesday</time>, which ended in a draw.</p>
@@ -24,7 +25,7 @@ dashedName: standardize-times-with-the-html5-datetime-attribute
 # --instructions--
 
 ผลจากแบบสำรวจ  Mortal Kombat ของ Camper Cat มาแล้ว!
-จงใช้ `time` tag ครอบข้อความ `Thursday, September 15<sup>th</sup>` และเพิ่ม `datetime` attribute ให้กับมันแล้วจึงตั้งค่าให้มันเท่ากับ `2016-09-15`.
+จงใช้ `time` tag เก็บข้อความที่เขียนว่า `Thursday, September 15<sup>th</sup>` และเพิ่ม `datetime` attribute ให้กับมันแล้วจึงตั้งค่าให้มันเท่ากับ `2016-09-15`.
 
 # --hints--
 
@@ -34,7 +35,7 @@ dashedName: standardize-times-with-the-html5-datetime-attribute
 assert(timeElement.length);
 ```
 
-Your added `time` tags should wrap around the text `Thursday, September 15<sup>th</sup>`.
+`time` tag ที่คุณเพิ่มเข้ามาควรจะเก็บข้อความที่เขียนว่า `Thursday, September 15<sup>th</sup>`.
 
 ```js
 assert(
@@ -43,13 +44,13 @@ assert(
 );
 ```
 
-Your added `time` tag should have a `datetime` attribute that is not empty.
+`time` tag  ที่คุณเพิ่มเข้ามาควรมี `datetime` attribute อันหนึ่งที่ไม่ได้ว่างเปล่า
 
 ```js
 assert(datetimeAttr && datetimeAttr.length);
 ```
 
-Your added `datetime` attribute should be set to a value of `2016-09-15`.
+`datetime` attribute ที่คุณเพิ่มเข้ามาควรถูกกำหนดให้มีค่าเป็น `2016-09-15`
 
 ```js
 assert(datetimeAttr === '2016-09-15');

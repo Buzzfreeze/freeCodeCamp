@@ -9,7 +9,7 @@ dashedName: set-the-font-size-for-multiple-heading-elements
 
 # --description--
 
-`font-size` property นั้นถูกใช้เพื่อระบุความใหญ่ของตัวอักษรขให้กับ element ที่มีมัน
+`font-size` property นั้นถูกใช้เพื่อระบุขนาดของตัวอักษรให้กับ element ที่ใช้ property นี้
 rule นี้สามารถถูกใช้กับ element หลาย ๆ อันเพื่อสร้าง visual consistency ของตัวอักษรในหน้าเว็บได้
 ในแบบฝึกหัดนี้ คุณจะได้กำหนดค่าของ  `h1` ถึง `h6` tags เพื่อให้บาลานซ์กับขนาดของ heading 
 
@@ -35,35 +35,35 @@ rule นี้สามารถถูกใช้กับ element หลาย
  assert(fontSizeOfh1 === '68px');
 ```
 
-Your code should set the `font-size` property for the `h2` tag to 52 pixels.
+คุณควรกำหนดให้ `font-size` property ของ `h2` tag มีค่า 52 pixels.
 
 ```js
  const fontSizeOfh2 = new __helpers.CSSHelp(document).getStyle('h2')?.getPropertyValue('font-size');
  assert(fontSizeOfh2 === '52px');
 ```
 
-Your code should set the `font-size` property for the `h3` tag to 40 pixels.
+คุณควรกำหนดให้  `font-size` property ของ `h3` tag มี 40 pixels.
 
 ```js
  const fontSizeOfh3 = new __helpers.CSSHelp(document).getStyle('h3')?.getPropertyValue('font-size');
  assert(fontSizeOfh3 === '40px');
 ```
 
-Your code should set the `font-size` property for the `h4` tag to 32 pixels.
+คุณควรกำหนดให้  `font-size` property ของ `h4` tag มีค่า 32 pixels.
 
 ```js
  const fontSizeOfh4 = new __helpers.CSSHelp(document).getStyle('h4')?.getPropertyValue('font-size');
  assert(fontSizeOfh4 === '32px');
 ```
 
-Your code should set the `font-size` property for the `h5` tag to 21 pixels.
+คุณควรกำหนดให้  `font-size` property ของ `h5` tag มีค่า 21 pixels.
 
 ```js
  const fontSizeOfh5 = new __helpers.CSSHelp(document).getStyle('h5')?.getPropertyValue('font-size');
  assert(fontSizeOfh5 === '21px');
 ```
 
-Your code should set the `font-size` property for the `h6` tag to 14 pixels.
+คุณควรกำหนดให้ `font-size` property ของ `h6` tag มีค่า 14 pixels.
 
 ```js
  const fontSizeOfh6 = new __helpers.CSSHelp(document).getStyle('h6')?.getPropertyValue('font-size');

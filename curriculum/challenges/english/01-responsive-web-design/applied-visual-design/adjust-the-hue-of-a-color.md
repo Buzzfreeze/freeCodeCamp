@@ -9,12 +9,12 @@ dashedName: adjust-the-hue-of-a-color
 
 # --description--
 
-สีมีคุณสมบัติหลากหลายรวมถึง hue, saturation, และ lightness
+สีมีคุณสมบัติหลากหลายรวมถึง hue, saturation (ความอิ่มตัว), และ lightness (ความสว่าง)
 CSS3 ได้มีการเพิ่ม `hsl()` property เข้ามาให้เป็นอีกหนึ่งวิธีที่ใช้เลือกสีโดยการใช้คุณสมบัติพวกนี้โดยตรง
 
 **Hue** เป็นสิ่งที่คนเราคิดว่าเป็น 'color' ถ้าคุณจินตนาการถึง spectrum ของ colors ที่เริ่มจากสีแดงที่อยู่ทางซ้าย เคลื่อนผ่านสีเขียวที่อยู่ตรงกลางไปที่สีฟ้าที่อยู่ด้านขวา 
 hue คือตำแหน่งที่ color จะตรงกับเส้นนั้น
-ใน `hsl()`, hue ได้ใช้แนวคิดของวล้อสีแทนที่จะเป็น spectrum ซึ่งมุมของสีบนวงกลมจะเป็นค่าตั้งแต่ 0 ถึง 360
+ใน `hsl()`, hue ได้ใช้แนวคิดของวงล้อสีแทนที่จะเป็น spectrum ซึ่งมุมของสีบนวงกลมจะเป็นค่าตั้งแต่ 0 ถึง 360
 
 **Saturation** เป็นปริมาณของสีเทาใน color
 สีที่อิ่มตัวเต็มที่จะไม่มีสีเทาในนั้น และสีที่ไม่อิ่มตัวก็เกือบจะเป็นสีเทาไปเลย
@@ -34,37 +34,37 @@ hue คือตำแหน่งที่ color จะตรงกับเส
 
 # --hints--
 
-โค้ดของคุณควรใช้ `hsl()` property เพื่อประกาศค่า `green`.
+โค้ดของคุณควรใช้ `hsl()` property เพื่อประกาศค่าของสีเป็น `green`.
 
 ```js
 assert(code.match(/\.green\s*?{\s*?background-color\s*:\s*?hsl/gi));
 ```
 
-Your code should use the `hsl()` property to declare the color `cyan`.
+โค้ดของคุณควรใช้ `hsl()` property เพื่อประกาศค่าของสีเป็น `cyan`.
 
 ```js
 assert(code.match(/\.cyan\s*?{\s*?background-color\s*:\s*?hsl/gi));
 ```
 
-Your code should use the `hsl()` property to declare the color `blue`.
+โค้ดของคุณควรใช้ `hsl()` property เพื่อประกาศค่าของสีเป็น `blue`.
 
 ```js
 assert(code.match(/\.blue\s*?{\s*?background-color\s*:\s*?hsl/gi));
 ```
 
-The `div` element with class `green` should have a `background-color` of green.
+`div` element ที่มีคลาสชื่อว่า `green` ควรมี `background-color` เป็นสีเขียว
 
 ```js
 assert($('.green').css('background-color') == 'rgb(0, 255, 0)');
 ```
 
-The `div` element with class `cyan` should have a `background-color` of cyan.
+`div` element ที่มีคลาสชื่อว่า `cyan` ควรมี `background-color` เป็นสี cyan
 
 ```js
 assert($('.cyan').css('background-color') == 'rgb(0, 255, 255)');
 ```
 
-The `div` element with class `blue` should have a `background-color` of blue.
+`div` element ที่มีคลาสชื่อว่า `blue` ควรมี `background-color` เป็นสีน้ำเงิน
 
 ```js
 assert($('.blue').css('background-color') == 'rgb(0, 0, 255)');

@@ -19,37 +19,37 @@ dashedName: set-the-font-weight-for-multiple-heading-elements
 
 # --hints--
 
-คุณควรกำหนด `font-weight` property ให้กับ `h1` tag มีค่า 800
+คุณควรกำหนด `font-weight` property ให้ `h1` tag มีค่า 800
 
 ```js
 assert($('h1').css('font-weight') == '800');
 ```
 
-Your code should set the `font-weight` property for the `h2` tag to 600.
+คุณควรกำหนด `font-weight` property ให้ `h2` tag มีค่า 600.
 
 ```js
 assert($('h2').css('font-weight') == '600');
 ```
 
-Your code should set the `font-weight` property for the `h3` tag to 500.
+คุณควรกำหนด `font-weight` property ให้ `h3` tag มีค่า 500.
 
 ```js
 assert($('h3').css('font-weight') == '500');
 ```
 
-Your code should set the `font-weight` property for the `h4` tag to 400.
+คุณควรกำหนด `font-weight` property ให้ `h4` tag มีค่า 400.
 
 ```js
 assert($('h4').css('font-weight') == '400');
 ```
 
-Your code should set the `font-weight` property for the `h5` tag to 300.
+คุณควรกำหนด `font-weight` property ให้ `h5` tag มีค่า 300.
 
 ```js
 assert($('h5').css('font-weight') == '300');
 ```
 
-Your code should set the `font-weight` property for the `h6` tag to 200.
+คุณควรกำหนด `font-weight` property ให้ `h6` tag มีค่า 200.
 
 ```js
 assert($('h6').css('font-weight') == '200');

@@ -23,9 +23,9 @@ dashedName: add-a-box-shadow-to-a-card-like-element
 
 ค่าของ `blur-radius` และ `spread-radius` นั้นจะใส่หรือไม่ก็ได้
 
-box-shadows หลายอันสามารถถูกสร้างได้โดยการใช้ comma เพื่อแยก property  ของแต่ละ `box-shadow` element
+เราสามารถสร้าง box-shadows ได้โดยการใช้ comma เพื่อแยก property ของแต่ละ `box-shadow` element
 
-นี่คือตัวอย่างของ CSS ที่ใช้สร้างเงาหลายอันพร้อมกับ blur, ด้วยสีดำที่เกือบจะโปร่งแสง:
+นี่คือตัวอย่างของ CSS ที่ใช้สร้างเงาหลายอันพร้อมกับ blur ที่มีสีดำแบบเกือบจะโปร่งแสง:
 
 ```css
 box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -33,8 +33,8 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
 # --instructions--
 
-ตอนนี้ element มี id ของ `thumbnail`
-จงใช้ค่า CSS ตามตัวอย่างข้างบนเพื่อวาง `box-shadow` ในการ์ดด้วยการใช้  selector อันนี้
+ตอนนี้ element มี id เป็น `thumbnail`
+จงใช้ค่า CSS ตามตัวอย่างข้างบนเพื่อวาง `box-shadow` ในการ์ดด้วยการใช้ selector อันนี้
 
 # --hints--
 
@@ -44,7 +44,7 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 assert(code.match(/#thumbnail\s*?{\s*?box-shadow/g));
 ```
 
-You should use the given CSS for the `box-shadow` value.
+คุณควรใช้ CSS ที่กำหนดให้เพื่อเป็นค่าของ `box-shadow`
 
 ```js
 assert(

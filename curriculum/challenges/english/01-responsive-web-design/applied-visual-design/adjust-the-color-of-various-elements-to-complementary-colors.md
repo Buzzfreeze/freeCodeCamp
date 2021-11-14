@@ -10,8 +10,8 @@ dashedName: adjust-the-color-of-various-elements-to-complementary-colors
 # --description--
 
 แบบฝึกหัด Complementary Colors แสดงให้เห็นว่าสีตรงข้ามกันบนล้อสีสามารถเพิ่มความมีชีวิตชีวาให้กันและกันได้เมื่อวางมันข้าง ๆ กัน
-อย่างไรก็ตาม visual contrast ที่มากเกินไปสามารถทำให้มันขัดตาหากเราใช้มันบนเว็บไซต์มากเกินไป และบางทีก็ทำให้ตัวอักษรอ่านได้ยากขึ้นถ้ามันถูกวางไว้บนพื้นหลังที่เป็นแบบ complementary-colored
-ในแบบฝึดกัดนี้ หนึ่งในสีที่มักจะเป็นตัวหลัก และสีที่เสริมเข้ามาจะช่วยดึงดูดความสนใจให้กับ content อย่างอันในหน้าเว็บ.
+อย่างไรก็ตาม visual contrast ที่สูงมาก ๆ สามารถทำให้รู้สึกขัดตาได้ หากเราใช้มันบนเว็บไซต์มากเกินไป และบางทีก็ทำให้ตัวอักษรอ่านได้ยากขึ้นถ้ามันถูกวางไว้บนพื้นหลังที่เป็นแบบ complementary-colored
+ในแบบฝึดหัดนี้ หนึ่งในสีที่มักจะเป็นตัวหลัก และสีที่เสริมเข้ามาจะช่วยดึงดูดความสนใจให้กับ content อย่างอันในหน้าเว็บ
 
 # --instructions--
 
@@ -22,25 +22,25 @@ dashedName: adjust-the-color-of-various-elements-to-complementary-colors
 
 # --hints--
 
-`header` element ควรมี `background-color` ค่าเท่ากับ #09A7A1 1 อัน
+`header` element ควรมี `background-color` ค่าเท่ากับ #09A7A1 อันหนึ่ง
 
 ```js
 assert($('header').css('background-color') == 'rgb(9, 167, 161)');
 ```
 
-The `footer` element should have a `background-color` of #09A7A1.
+`footer` element ควรมี `background-color` ค่าเท่ากับ #09A7A1 อันหนึ่ง
 
 ```js
 assert($('footer').css('background-color') == 'rgb(9, 167, 161)');
 ```
 
-The `h2` element should have a `color` of #09A7A1.
+`h2` element ควรมี `color` เท่ากับ #09A7A1 อันหนึ่ง
 
 ```js
 assert($('h2').css('color') == 'rgb(9, 167, 161)');
 ```
 
-The `button` element should have a `background-color` of #FF790E.
+`button` element ควรมี `background-color` เท่ากับ #FF790E อันหนึ่ง
 
 ```js
 assert($('button').css('background-color') == 'rgb(255, 121, 14)');

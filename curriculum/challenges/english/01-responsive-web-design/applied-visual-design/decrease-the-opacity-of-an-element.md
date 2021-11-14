@@ -9,11 +9,11 @@ dashedName: decrease-the-opacity-of-an-element
 
 # --description--
 
-`opacity` property ใน CSS ถูกใช้เพื่อปรับ opacity, หรือในทางตรงข้ามก็ทำให้ item โปร่งแสง
+`opacity` property ใน CSS ถูกใช้เพื่อปรับ opacity, หรือในทางตรงข้ามก็คือทำให้ item โปร่งแสงนั่นเอง
 
 <blockquote>A value of 1 is opaque, which isn't transparent at all.<br>A value of 0.5 is half see-through.<br>A value of 0 is completely transparent.</blockquote>
 
-ค่าที่ถูกกำหนกให้จะใช้กับ element ทั้งอันไม่ว่ามันจะเป็นรูปที่โปร่งแสงอยู่แล้วหรือสีพื้นหน้าและพื้นหลังของกล่องข้อความ
+ค่าที่ถูกกำหนดให้ จะกถูใช้กับ element ทั้งอันไม่ว่ามันจะเป็นรูปที่โปร่งแสงอยู่แล้วหรือสีพื้นหน้าและพื้นหลังของกล่องข้อความ
 
 # --instructions--
 

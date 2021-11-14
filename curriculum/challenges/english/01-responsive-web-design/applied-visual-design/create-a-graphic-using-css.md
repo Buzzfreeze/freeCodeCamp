@@ -9,11 +9,11 @@ dashedName: create-a-graphic-using-css
 
 # --description--
 
-โดยการใช้งาน selectors และ propertie ที่ต่างกัน คุณสามารถสร้างรูปทรงที่น่าสนใจขึ้นมาได้
-หนึ่งในรูปทรงที่ง่ายที่จะลองทำคือ รูปพระจันทร์เสี้ยว
-สำหรับแบบฝึกหัดนี้คุณจำเป็นต้องใช้ `box-shadow` property ที่จะกำหนดเงาของ element, ร่วมกับ `border-radius` property ที่จะควมคุมความมนของมุมของ element
+คุณสามารถสร้างรูปทรงที่น่าสนใจขึ้นมาได้โดยการใช้งาน selectors และ propertie ที่ต่างกัน 
+หนึ่งในรูปง่าย ๆ ที่จะลองทำคือ รูปพระจันทร์เสี้ยว
+สำหรับแบบฝึกหัดนี้คุณจำเป็นต้องใช้ `box-shadow` property เพื่อกำหนดเงาของ element ร่วมกับ `border-radius` property ที่จะควมคุมความมนของมุมของ element
 
-คุณจะสร้างวัตตถุที่กลมและโปร่งแสงพร้อมกับเงาบาง ๆ ที่แผ่ออกมาเล็กน้อยไปด้านข้าง
+คุณจะสร้างวัตถุที่กลมและโปร่งแสงพร้อมกับเงาบาง ๆ ซึ่งจะแผ่ออกมาเล็กน้อยไปด้านข้าง
 เงานั้นจะเป็นไปตามรูปร่างของพระจันทร์ที่คุณเห็น
 
 เพื่อที่จะสร้างวัตถุที่มีรูปร่างกลม  `border-radius` property นั้นควรถูกกำหนดให้มีค่า 50%.
@@ -23,10 +23,10 @@ dashedName: create-a-graphic-using-css
 
 # --instructions--
 
-จงใช้ element สี่เหลี่ยมใน editor เพื่อสร้างรูปพระจันทร์เสี้ยง
-ขั้นแรก จงเปลี่ยน  `background-color` ให้เป็น `transparent`, 
+จงใช้ element สี่เหลี่ยมใน editor เพื่อสร้างรูปพระจันทร์เสี้ยว
+ขั้นแรก จงเปลี่ยน `background-color` ให้เป็น `transparent`
 หลังจากนั้น จงกำหนดให้ `border-radius` property มีค่าเป็น 50% เพื่อทำให้มันมีรูปร่างเป็นวงกลม
-สุดท้าย จงเปลี่ยน  `box-shadow` property เพื่อกำหนดให้ `offset-x` มีค่า 25px,  `offset-y` มีค่า 10px, `blur-radius` มีค่า 0, `spread-radius` มีค่า 0, และสีเป็น `blue`
+สุดท้าย จงเปลี่ยน `box-shadow` property เพื่อกำหนดให้ `offset-x` มีค่า 25px,  `offset-y` มีค่า 10px, `blur-radius` มีค่า 0, `spread-radius` มีค่า 0, และสีเป็น `blue`
 
 # --hints--
 
@@ -36,13 +36,13 @@ dashedName: create-a-graphic-using-css
 assert(code.match(/background-color:\s*?transparent;/gi));
 ```
 
-The value of the `border-radius` property should be set to `50%`.
+ค่าของ`border-radius` property ควรถูกกำหนดให้เท่ากับ `50%`.
 
 ```js
 assert(code.match(/border-radius:\s*?50%;/gi));
 ```
 
-The value of the `box-shadow` property should be set to 25px for `offset-x`, 10px for `offset-y`, 0 for `blur-radius`, 0 for `spread-radius`, and finally `blue` for the color.
+ค่าของ `box-shadow` property ควรถูกกำหนดให้เท่ากับ 25px สำหรับ `offset-x`, 10px สำหรับ `offset-y`, 0 สำหรับ `blur-radius`, 0 สำหรับ `spread-radius`, และ `blue` สำหรับสี
 
 ```js
 assert(

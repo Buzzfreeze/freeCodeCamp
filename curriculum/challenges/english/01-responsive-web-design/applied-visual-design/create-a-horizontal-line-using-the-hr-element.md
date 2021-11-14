@@ -9,14 +9,14 @@ dashedName: create-a-horizontal-line-using-the-hr-element
 
 # --description--
 
-คุณสามารถใช้ `hr` tag เพื่อเพิ่มเส้นทางนอนที่มีความยาวเท่ากับความกว้างของ containing element ของมัน
-เส้นนี้ถูกใช้เพื่อบ่งบอกว่าหัวข้อมีการเปลี่ยนไปแล้ว หรือเพื่อแสดงให้เห็นถึงกลุ่ม content ที่แยกจากกัน
+คุณสามารถใช้ `hr` tag เพื่อเพิ่มเส้นทางนอนที่มีความยาวเท่ากับความกว้างของ element ที่เก็บแท็กนี้ไว้
+เส้นนี้ถูกใช้เพื่อบ่งบอกว่าหัวข้อมีการเปลี่ยนไปแล้วหรือเพื่อแสดงให้เห็นถึงกลุ่ม content ที่แยกจากกัน
 
 # --instructions--
 
-จงเพิ่ม`hr` tag ใต้ `h4`ซึ่งได้เก็บหัวข้อของการ์ดไว้
+จงเพิ่ม`hr` tag ใต้ `h4` ซึ่งได้เก็บหัวข้อของการ์ดไว้
 
-**Note:** ใน HTML `hr` เป็นself-closing tag ซึ่งทำให้มันไม่ต้องการแท็กปิด
+**Note:** ใน HTML `hr` เป็น self-closing tag ซึ่งทำให้มันไม่ต้องการแท็กปิด
 
 # --hints--
 
@@ -26,7 +26,7 @@ dashedName: create-a-horizontal-line-using-the-hr-element
 assert($('hr').length == 1);
 ```
 
-The `hr` tag should come between the title and the paragraph.
+`hr` tag ควรจะอยู่ระหว่างหัวข้อ (title) และพารากราฟ
 
 ```js
 assert(code.match(/<\/h4>\s*?<hr(>|\s*?\/>)\s*?<p>/gi));

@@ -10,9 +10,9 @@ dashedName: create-a-gradual-css-linear-gradient
 # --description--
 
 การใช้สีกับ HTML elements นั้นไม่ได้ถูกจำกัดที่ flat hue สีเดียว
-CSS ได้มีการเพิ่มความสามารถในการไล่สี, หรือที่เราเรียกว่า gradients, กับelement ได้
-เราสามารถเข้าถึงมันได้ผ่าน  `linear-gradient()` function ของ `background` property
-นี่คืตัวอย่าง:
+CSS ได้มีการเพิ่มความสามารถในการไล่สีให้กับ element โดยเราจะเรียกมันว่า gradient
+เราสามารถเข้าถึงมันได้ผ่าน `linear-gradient()` function ของ `background` property
+นี่คือตัวอย่างของการใช้ gradient:
 
 ```css
 background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);

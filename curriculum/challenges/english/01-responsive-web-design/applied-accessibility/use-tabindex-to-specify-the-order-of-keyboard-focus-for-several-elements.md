@@ -16,8 +16,8 @@ dashedName: use-tabindex-to-specify-the-order-of-keyboard-focus-for-several-elem
 หลังจากนั้น มันจะวนตามลำดับที่ถูกกำหรดไว้ในค่าของ `tabindex` (2, 3 เป็นต้น), ก่อนที่จะย้ายไปยังส่วนที่  `tabindex="0"` 
 
 มันสำคัญที่ต้องจำไว้ว่าเมื่อลำดับการกดถูกตั้งไว้แบบนี้
-มันจะ override ลำดับที่เป็นค่าเริ่มต้น (ที่ใช้ HTML source) สิ่งนี้อาจจทำให้ผู้ใช้ที่ตั้งใจจะเริ่มดูจากด้านบนสับสนได้
-เทคนิคนี้อาจจะจำเป็นในบางกรณี แต่ในเชิงของการเข้าถึง ให้ระวังก่อนที่จะใช้มัน
+มันจะเขียนทับ (override) ลำดับที่เป็นค่าเริ่มต้น (ที่ใช้ HTML source) สิ่งนี้อาจทำให้ผู้ใช้ที่ตั้งใจจะเริ่มดูจากด้านบนสับสนได้
+เทคนิคนี้อาจจะจำเป็นในบางกรณี แต่ในเชิงของความสามารถในการเข้าถึง ให้ระวังก่อนที่จะใช้มัน
 
 นี่คือตัวอย่าง:
 
@@ -46,19 +46,19 @@ element ได้ถูกเพิ่มเข้าไปที่หน้า
 assert($('#search').attr('tabindex'));
 ```
 
-Your code should add a `tabindex` attribute to the `submit` `input` tag.
+คุณควรเพิ่ม `tabindex` attribute อันหนึ่งให้กับ `submit` `input` tag.
 
 ```js
 assert($('#submit').attr('tabindex'));
 ```
 
-Your code should set the `tabindex` attribute on the `search` `input` tag to a value of 1.
+คุณควรกำหนดให้ `tabindex` attribute ของ `search` `input` tag มีค่าเป็น 1
 
 ```js
 assert($('#search').attr('tabindex') == '1');
 ```
 
-Your code should set the `tabindex` attribute on the `submit` `input` tag to a value of 2.
+คุณควรกำหนดให้ `tabindex` attribute ของ `submit` `input` tag มีค่าเป็น 2
 
 ```js
 assert($('#submit').attr('tabindex') == '2');

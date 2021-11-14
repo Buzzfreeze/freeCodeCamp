@@ -12,7 +12,7 @@ dashedName: change-the-position-of-overlapping-elements-with-the-z-index-propert
 เมื่อ elements ถูกวางทับกันแล้ว (เช่นการใช้ `position: absolute | relative | fixed | sticky`)
 element ที่มาที่หลังใน HTML markup จะอยู่ที่ด้านหน้าของ element ตัวอื่น ๆ โดยค่าเริ่มต้น
 อย่างไรก็ตาม `z-index` property สามารถระบุลำดับหน้าหลังของ element ที่ซ้อนทับกันอยู่ได้
-มันควรจะเป็นจำนวนเป็น และค่า `z-index` property ที่สูงกว่าจะทำให้ element นั้นมาอยู่ที่ด้านหน้ามากกว่าตัวที่มีค่าน้อยกว่า 
+เราจะใช้จำนวนเต็มเพื่อกำหนดค่าของมัน โดยค่า `z-index` property ที่สูงกว่าจะทำให้ element นั้นมาอยู่ที่ด้านหน้ามากกว่าตัวที่มีค่าน้อยกว่า 
 
 # --instructions--
 

@@ -9,12 +9,12 @@ dashedName: make-screen-reader-navigation-easier-with-the-header-landmark
 
 # --description--
 
-HTML5 element อันต่อมาที่จะเพิ่มความหมายในแง่ความภาษาและพัฒนาการเข้าถึงคือ `header` tag
+HTML5 element อันต่อมาที่จะเพิ่มความหมายในแง่ความภาษาและทำให้ความสามารถในการเข้าถึงดีขึ้นคือ `header` tag
 มันถูกใช้เพื่อเก็บข้อมูลสำหรับการแนะนำตัวเว็บไซต์หรือ navigation links สำหรับ parent tag ของมัน และมันยังทำงานได้ดีกับเนื้อหาที่ซ้ำ ๆ ในบริเวณส่วนบนของหลาย ๆ หน้า
 
 `header` ได้แบ่ง embedded landmark feature ที่คุณเห็นกับ  `main` โดยการทำให้ assistive technologies สามารถนำทางไปยังเนื้อหานั้นได้รวดเร็วมากยิ่งขึ้น
 
-**Note:** `header` นั้นถูกใช้ใน  `body` tag ของHTML document ของคุณ มันแตกต่างจาก `head` element ที่เก็บทั้งชื่อของหน้านั้น, meta information, และอื่น ๆ
+**Note:** `header` นั้นถูกใช้ใน  `body` tag ของ HTML document ของคุณ มันแตกต่างจาก `head` element ที่เก็บทั้งชื่อของหน้านั้น, meta information, และอื่น ๆ
 
 # --instructions--
 
@@ -29,19 +29,19 @@ Camper Cat กำลังเขียนบทความสุดคูลเ
 assert($('header').length == 1);
 ```
 
-Your `header` tags should wrap around the `h1`.
+`header` tags ควรจะเก็บ `h1`
 
 ```js
 assert($('header').children('h1').length == 1);
 ```
 
-Your code should not have any `div` tags.
+โค้ดของคุณไม่ควรจะมี `div` tag ใด ๆ แล้ว
 
 ```js
 assert($('div').length == 0);
 ```
 
-Your `header` element should have a closing tag.
+`header` element ควรมีแท็กปิด
 
 ```js
 assert(

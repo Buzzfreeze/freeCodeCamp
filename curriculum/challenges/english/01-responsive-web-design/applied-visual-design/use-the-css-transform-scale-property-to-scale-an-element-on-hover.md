@@ -9,9 +9,9 @@ dashedName: use-the-css-transform-scale-property-to-scale-an-element-on-hover
 
 # --description--
 
-`transform` property มี function ให้ใช้งานที่หลากหลายซึ่งทำให้คุณสามารถทำการปรับขนาด, ย้ายที่, หมุน, และทำให้เอียง ให้ element ของคุณ (ยังมี function อื่นอีก)
+`transform` property มี function ให้ใช้งานที่หลากหลายซึ่งทำให้คุณสามารถทำการปรับขนาด, ย้ายที่, หมุน, และปรับองศาให้ element ของคุณ (ยังมี function อื่นอีก)
 เมื่อคุณใช้มันพร้อมกับ pseudo-classes เช่น `:hover` ที่เป็นตัวระบุสถานะหนึ่งของ element, 
-`transform` property จะสามารถเพวกการ interact ให้กับ element
+`transform` property จะสามารถเพิ่ม interaction ให้กับ element
 
 นี่คือตัวอย่างในการปรับขนาดให้ paragraph element มีขนาดใหญ่ขึ้น 2.1 เท่าของขนาดดั้งเดิมของมันเมื่อผู้ใช้ได้ทำการ hovers พวกมัน:
 
@@ -21,7 +21,7 @@ p:hover {
 }
 ```
 
-**Note:** การใช้ transform กับ `div` element จะส่งผลกับ child element ที่ถูกเก้บไว้ใน  div.
+**Note:** การใช้ transform กับ `div` element จะส่งผลกับ child element ที่ถูกเก็บไว้ใน div
 
 # --instructions--
 

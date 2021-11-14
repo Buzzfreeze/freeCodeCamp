@@ -10,20 +10,20 @@ dashedName: use-a-bezier-curve-to-move-a-graphic
 # --description--
 
 ในแบบฝึดหัดที่แล้วได้อภิปรายเกี่ยวกับคีย์เวิร์ด `ease-out` ที่ได้บรรยายการเปลี่ยนแปลงความเร็วของ animation ไว้ว่าเร่งความเร็วในตอนแรกแล้วลดความเร็วลงในตอนหลัง 
-ทางด้านขวา ความแตกต่างระหว่าง `ease-out` (สำหรับ element สีน้ำเงิน) และ `linear`  (สำหรับ element สีแดง) ได้ถูกสาธิตไว้
-animation progression ที่คล้ายกับ to the `ease-out` สามารถทำได้ดดยการใช้ cubic Bezier curve function ที่ดัดแปลงเอง
+ทางด้านขวา ความแตกต่างระหว่าง `ease-out` (สำหรับ element สีน้ำเงิน) และ `linear` (สำหรับ element สีแดง) ได้ถูกสาธิตไว้
+animation progression ที่คล้ายกับ `ease-out` สามารถทำได้โดยการใช้ cubic Bezier curve function ที่ทำขึ้นมาเอง
 
-โดยทั่วไป การเปลี่ยน `p1` และ `p2` anchor points จะทำให้เกิดความต่างของ Bezier curves, ซึ่งจะควบคุมการ progress ของ animation. 
-นี่คือตัวอย่างของ Bezier curve ที่ใช้ค่าเพื่อเลียนแบบ ease-out style:
+โดยทั่วไป การเปลี่ยน `p1` และ `p2` anchor points จะทำให้เกิดความต่างของ Bezier curves ซึ่งจะควบคุมการ progress ของ animation. 
+นี่คือตัวอย่างค่าของ Bezier curve ที่เลียนแบบ ease-out style:
 
 ```css
 animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
 ```
 
-จงไว้ว่า `cubic-bezier` function ทั้งหมดจะเริ่มด้วย `p0` ที่ (0, 0) และจบด้วย `p3` ที่ (1, 1)
-ในตัวอย่างนี้ curve จะเคลื่อที่เร็วขึ้นตลอดแกน Y และมันจะเคลื่อนผ่านแกน X-axisฃ
+จงจำไว้ว่า `cubic-bezier` function ทั้งหมดจะเริ่มด้วย `p0` ที่ (0, 0) และจบด้วย `p3` ที่ (1, 1)
+ในตัวอย่างนี้ curve จะเคลื่อนที่เร็วขึ้นตลอด Y-axis และมันจะเคลื่อนผ่าน X-axis
 ซึ่งผลลัพท์ที่ได้ก็คือ การเปลี่ยนแปลงของ animated element จะเกิดขึ้นเร็วกว่าตอนที่ animation สำหรับ segment นั้น
-ไล่ไปจนจบ curve, ความสัมพันธ์ระหว่างความเปลี่ยนแปลงของค่า x และ y จะสวนทางกัน - ค่า y จะเปลี่ยนจาก 1 ไป 1 (ไม่มีการเปลี่ยนแปลง), และค่า x จะเปลี่ยนค่า 0.58 ไป 1, ซึ่งทำให้ animation เปลี่ยน progress ช้ากว่าเมื่อเปลี่ยนเทียบกับข่วงระหว่าง animation
+ไล่ไปจนจบ curve, ความสัมพันธ์ระหว่างความเปลี่ยนแปลงของค่า x และ y จะสวนทางกัน เพราะค่า y จะเปลี่ยนจาก 1 ไป 1 (ไม่มีการเปลี่ยนแปลง)และค่า x จะเปลี่ยนค่า 0.58 ไป 1, ซึ่งทำให้ animation เปลี่ยน progress ช้ากว่าเมื่อเปลี่ยนเทียบกับข่วงระหว่าง animation
 
 # --instructions--
 
@@ -39,13 +39,13 @@ assert(
 );
 ```
 
-The element with the id `red` should no longer have the `animation-timing-function` property of `linear`.
+element ที่มีไอดีเป็น `red` ไม่ควรมี `animation-timing-function` property ที่เป็น `linear` อีกต่อไปแล้ว
 
 ```js
 assert($('#red').css('animation-timing-function') !== 'linear');
 ```
 
-The value of the `animation-timing-function` property for the element with the id `blue` should not change.
+ค่าของ `animation-timing-function` property ของ element ที่มีไอดีเป็น `blue` ไม่ควรเปลี่ยน
 
 ```js
 const blueBallAnimation = __helpers.removeWhiteSpace(

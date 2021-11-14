@@ -9,9 +9,10 @@ dashedName: create-movement-using-css-animation
 
 # --description--
 
-เมื่อ element มี `position` ที่ถูกระบุไว้แล้วเช่น `fixed` และ `relative`, CSS offset properties `right`, `left`, `top`, และ `bottom` สามารถถูกใช้กับ animation rules เพื่อสร้างการเคลื่องไหว
+เมื่อ element มี `position` ที่ถูกระบุไว้แล้วเช่น `fixed` และ `relative`
+เราสามารถใช้ CSS offset properties `right`, `left`, `top`, และ `bottom` กับ animation rules เพื่อสร้างการเคลื่อนไหวได้
 
-ตามที่ได้แสดงให้เห็นที่ตัวอย่างข้างล่าง คุุณสามารถผลัก item ลงไปข้างล่างและผลักกลับมาที่ด้านบนโดยการกำหนดให้ `top` property เป็น `50%` keyframe ที่ 50px, แต่กำหนดให้มันมี 0px สำหรับ keyframe แรก (`0%`) และสุดท้าย (`100%`) 
+ตามที่ได้แสดงให้เห็นที่ตัวอย่างข้างล่าง คุุณสามารถผลัก item ลงไปข้างล่างและผลักกลับมาที่ด้านบนโดยการกำหนดให้ `top` property เท่ากับ 50px ณ `50%` keyframe  , แต่กำหนดให้มันมี 0px สำหรับ keyframe แรก (`0%`) และสุดท้าย (`100%`) 
 
 ```css
 @keyframes rainbow {
@@ -33,24 +34,24 @@ dashedName: create-movement-using-css-animation
 # --instructions--
 
 จงเพิ่ม motion ในแนวนอนให้กับ `div` animation
-โดยใช้ `left` offset property, จงเพิ่มให้ `@keyframes` rule เพื่อที่สายรุ้ยจะได้เริ่มที่ 0 pixels ตรง `0%`, และขยับไปที่ 25 pixels ตรง `50%`, และจบที่ -25 pixels ตอง `100%`
-อย่าแทนที่ `top` property ใน editor - nimation ควรจะมีทั้ง motion ในแนวนอนและตั้ง
+โดยใช้ `left` offset property, จงเพิ่มให้ `@keyframes` rule เพื่อที่สายรุ้งจะได้เริ่มที่ 0 pixels ตรง `0%`, และขยับไปที่ 25 pixels ตรง `50%`, และจบที่ -25 pixels ตรง `100%`
+อย่าแทนที่ `top` property ใน editor เพราะ animation ควรจะมีทั้ง motion ในแนวนอนและตั้ง
 
 # --hints--
 
-`@keyframes` rule ของ `0%` ควรใช้`left` offset เท่ากับ 0px.
+`@keyframes` rule ของ `0%` ควรตั้งให้ `left` offset เท่ากับ 0px.
 
 ```js
 assert(code.match(/[^50]0%\s*?{[\s\S]*?left:\s*?0px(;[\s\S]*?|\s*?)}/gi));
 ```
 
-The `@keyframes` rule for `50%` should use the `left` offset of 25px.
+`@keyframes` rule ของ `50%` ควรตั้งให้ `left` offset เท่ากับ 25px.
 
 ```js
 assert(code.match(/50%\s*?{[\s\S]*?left:\s*?25px(;[\s\S]*?|\s*?)}/gi));
 ```
 
-The `@keyframes` rule for `100%` should use the `left` offset of -25px.
+`@keyframes` rule ของ `100%` ควรตั้งให้ `left` offset เท่ากับ -25px.
 
 ```js
 assert(code.match(/100%\s*?{[\s\S]*?left:\s*?-25px(;[\s\S]*?|\s*?)}/gi));

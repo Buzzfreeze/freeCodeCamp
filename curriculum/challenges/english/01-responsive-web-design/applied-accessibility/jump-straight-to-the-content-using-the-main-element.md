@@ -9,10 +9,11 @@ dashedName: jump-straight-to-the-content-using-the-main-element
 
 # --description--
 
-HTML5 ได้กล่าวถึง elements อันใหม่หลาย ๆ อันที่ช่วย developers มีทางเลือกมากขึ้นเวลาต้องจัดการกับ feature ที่ช่วยในการเข้าถึงต่าง ๆ
-tags เหล่านั้นคือ `main`, `header`, `footer`, `nav`, `article`, และ `section`, รวมถึงตัวอื่น ๆ อีก
+HTML5 ได้เพิ่ม elements หลาย ๆ แบบขึ้นมาใหม่ เพื่อช่วยให้นักพัฒนามีตัวเลือกมากขึ้นเวลาต้องจัดการกับ feature ต่าง ๆ ที่จะช่วยในเรื่องของความสามารถในการเข้าถึง
+tag เหล่านั้นคือ `main`, `header`, `footer`, `nav`, `article`, และ `section`, รวมถึงตัวอื่น ๆ อีก
 
-โดยค่าเริ่มต้น, browser แสดงผลของ elements เหล่านี้คล้ายคลึงกับ `div` อย่างไรก็ตาม การใช้พวกมันให้เหมาะสมช่วยทำให้ markup ของคุณมีความหมายมากยิ่งขึ้น
+โดยค่าเริ่มต้น browser แสดงผลของ elements เหล่านี้คล้ายคลึงกับ `div` อย่างไรก็ตาม 
+การใช้พวกมันอย่างเหมาะสมช่วยทำให้ markup ของคุณมีความหมายมากยิ่งขึ้น
 เพียงแค่ tag name ก็สามารถบอกประเภทของข้อมูลที่มันเก็บไว้ได้ โดยการเพิ่มความหมายในเชิงของภาษาให้กับเนื้อหาส่วนนั้น
 Assistive technologies สามารถเข้าถึงข้อมูลนี้เพื่อช่วยทำให้มี page summary หรือ navigation options ที่ดีขึ้นสำหรับผู้ใช้ของพวกเขา
 
@@ -24,8 +25,8 @@ Assistive technologies สามารถเข้าถึงข้อมูล
 
 # --instructions--
 
-Camper Cat มีไอเดียสุดบรรเจิดสำหรับหน้าของ อาวุธนินจาของเขา
-จงช่วยเขาทำ markup โดยการเพิ่ม `main` tags เปิดและปิดระหว่าง `header` และ `footer` (รวมถึงใน challenge อื่น ๆ)
+Camper Cat มีไอเดียสุดบรรเจิดสำหรับหน้า "อาวุธนินจา" ของเขา
+จงช่วยเขาทำ markup โดยการเพิ่ม `main` tags เปิดและปิดระหว่าง `header` และ `footer` (รวมถึงในแบบฝึกหัดอื่น ๆ)
 จงปล่อย `main` tags ให้ว่างอย่างนี้ไปก่อน
 
 # --hints--
@@ -36,7 +37,7 @@ Camper Cat มีไอเดียสุดบรรเจิดสำหรั
 assert($('main').length == 1);
 ```
 
-The `main` tags should be between the closing `header` tag and the opening `footer` tag.
+`main` tags ควรจะอยู่ระหว่างแท็กปิดของ `header` และแท็กเปิดของ `footer` 
 
 ```js
 assert(code.match(/<\/header>\s*?<main>\s*?<\/main>/gi));

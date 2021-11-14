@@ -9,14 +9,14 @@ dashedName: wrap-radio-buttons-in-a-fieldset-element-for-better-accessibility
 
 # --description--
 
-ขหัวข้อเกี่ยวกับ form อันถัดไปจะกล่าวถึงเรื่องการเข้าถึงของ radio buttons
+หัวข้อเกี่ยวกับ form อันถัดไปจะกล่าวถึงเรื่องการเข้าถึงของ radio buttons
 แต่ละตัวเลือกนั้นจะมี `label` 1 อันกับ `for` attribute 1 อันผูกไว้กับ `id` ของ item ที่สัมพันธ์กันอย่างที่ทำพร้อมกับ  challenge ก่อนหน้า
 เนื่องจาก radio buttons  มักมาเป็นกลุ่มที่อนุญาตให้ผู้ใช้เลือกได้แค่ตัวเดียว จึงมีวิธีหนึ่งที่จะช่วยทำให้เห็นว่าตัวเลือกเหล่านี้เป็นเซ็ตเดียวกัน
 
-`fieldset` tag จะต้องครอบกลุ่มของ radio buttons ทั้งหมด
+`fieldset` tag จะต้องเก็บกลุ่มของ radio buttons ทั้งหมด
 สิ่งนี้มักใช้ `legend` tag 1 อันเพื่อให้คำอธิบายของกลุ่มตัวเลือกนั้น ซึ่ง screen readers จะอ่านแต่ละตัวเลือกที่อยู่ใน `fieldset` element.
 
-`fieldset` wrapper และ `legend` tag นั้นไม่จำเป็นเมื่อแต่ละตัวเลือกมันอธิบายตัวมันเองอยู่แล้ว เช่นการเลือเพศ การใช้ `label` กับ`for` attribute ของแต่ละ radio button นั้นก็เพียงพอแล้ว
+`fieldset` wrapper และ `legend` tag นั้นไม่จำเป็นเมื่อแต่ละตัวเลือกมันอธิบายตัวมันเองอยู่แล้ว เช่นการเลือเพศ การใช้ `label` กับ `for` attribute ของแต่ละ radio button นั้นก็เพียงพอแล้ว
 นี่คือตัวอย่าง :
 
 ```html
@@ -38,7 +38,7 @@ dashedName: wrap-radio-buttons-in-a-fieldset-element-for-better-accessibility
 Camper Cat ต้องการข้อมูลเกี่ยวกับระดับนินจาของผู้ใช้ของเขาเมื่อพวกเขาเหล่านั้นสมัครเข้าร่วมลิสต์อีเมล
 เขาได้เพิ่มเซ็ตของ radio buttons อันหนึ่งและเรียนรู้จากบทเรียนที่แล้วของเราในการใช้ `label` tags กับ `for` attributes กับแต่ละตัวเลือก 
 อย่างไรก็ตาม โค้ดของเขายังต้องการความช่วยเหลือบางอย่าง
-จงเปลี่ยน `div` tag ที่ล้อมรอบ radio buttons ให้เป็น `fieldset` tag และจงเปลี่ยน `p` tag ข้างในมันให้เป้น `legend`.
+จงเปลี่ยน `div` tag ที่เก็บ radio buttons ให้เป็น `fieldset` tag และจงเปลี่ยน `p` tag ข้างในมันให้เป็น `legend`.
 
 # --hints--
 
@@ -48,7 +48,7 @@ Camper Cat ต้องการข้อมูลเกี่ยวกับร
 assert($('fieldset').length == 1);
 ```
 
-The `fieldset` element should have a closing tag.
+`fieldset` element ควรมีแท็กปิด
 
 ```js
 assert(
@@ -57,19 +57,19 @@ assert(
 );
 ```
 
-Your code should have a `legend` tag around the text asking what level ninja a user is.
+คุณควรมี `legend` tag เพื่อเก็บข้อความที่ถามระดับนินจาของผู้ใช้
 
 ```js
 assert($('legend').length == 1);
 ```
 
-Your code should not have any `div` tags.
+โค้ดของคุณไม่ควรมี `div` tag ใด ๆ แล้ว
 
 ```js
 assert($('div').length == 0);
 ```
 
-Your code should no longer have a `p` tag around the text asking what level ninja a user is.
+โค้ดของคุณไม่ควรมี `p` tag ที่เก็บข้อความที่ถามระดับนินจากของผู้ใช้อีกต่อไปแล้ว
 
 ```js
 assert($('p').length == 4);

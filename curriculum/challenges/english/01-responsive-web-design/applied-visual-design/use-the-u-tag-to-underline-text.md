@@ -22,13 +22,13 @@ Anchor tags ก็มีค่าเริ่มต้นเป็น underlined
 
 # --hints--
 
-Yโค้ดของคุณควรเพิ่ม `u` tag ให้กับ markup
+โค้ดของคุณควรเพิ่ม `u` tag ให้กับ markup
 
 ```js
 assert($('u').length === 1);
 ```
 
-The `u` tag should wrap around the text `Ph.D. students`.
+`u` tag ควรจะมีข้อความ `Ph.D. students` อยู่ข้างใน
 
 ```js
 assert($('u').text() === 'Ph.D. students');

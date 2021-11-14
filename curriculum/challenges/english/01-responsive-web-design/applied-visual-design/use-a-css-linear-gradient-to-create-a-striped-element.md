@@ -13,10 +13,11 @@ dashedName: use-a-css-linear-gradient-to-create-a-striped-element
 `repeating-linear-gradient()` จะรับค่าหลาย ๆ ค่า แต่เพื่อความง่าย คุณสามารถใช้แค่ค่ามุมและค่า color stop ในแบบฝึกหัดนี้
 
 ค่ามุมจะเป็นทิศทางของ gradient
-Color stop เป้นเหมือนกับความกว้างที่จะบอกตำแหน่งที่การเปลี่ยนผ่านจะเกิดขึ้นและจะถูกกำหนดเป็นเปอร์เซ็นหรือค่าของ pixel
+Color stop เป็นเหมือนกับความกว้างที่จะบอกตำแหน่งที่การเปลี่ยนผ่านจะเกิดขึ้นและจะถูกกำหนดเป็นเปอร์เซ็นหรือค่าของ pixel
 
-ในตัวอย่างนี้จะสาธิตในcode editor, gradient จะเริ่มต้นด้วยสี `yellow` ที่ 0 pixel โดยจะผสมกับสีที่สอง `blue` ที่ 40 pixel ห่างจากจุดเริ่มต้น
-เนื่องจากสีถัดไปก็อยู่แค่ที่ 40 pixels, gradient จะเปลี่ยนไปเป็นสีที่สาม `green` ทันทีโดยมันจะไปผสมกับสีที่สี่ `red` ตรง 80 pixel ที่ห่างจากจุดเริ่มต้นของ gradient
+ในตัวอย่างนี้จะสาธิตใน code editor
+gradient จะเริ่มต้นด้วยสี `yellow` ที่ 0 pixel โดยจะผสมกับสีที่สอง `blue` ที่ 40 pixel ห่างจากจุดเริ่มต้น
+เนื่องจากสีถัดไปก็อยู่แค่ที่ 40 pixels gradient จะเปลี่ยนไปเป็นสีที่สาม `green` ทันทีโดยมันจะไปผสมกับสีที่สี่ `red` ตรง 80 pixel ที่ห่างจากจุดเริ่มต้นของ gradient
 
 สำหรับตัวอย่างนี้, คุณควรจะคำนึงถึง color stops เป็นคู่ ๆ ในตำแหน่งที่ทั้งสองจะผสมกัน
 
@@ -24,7 +25,7 @@ Color stop เป้นเหมือนกับความกว้างท
 0px [yellow -- blend -- blue] 40px [green -- blend -- red] 80px
 ```
 
-ถ้าทุก ๆ ค่าของ 2 color stop เป็นสีเดียวกัน, การผสมสีจะมองไม่เห็นเพราะมันเกิดขึ้นระหว่างสีเดียวกัน ซึ่งถ้าตามด้วย hard transition ไปที่สีถัดไปคุณจะได้แทบขึ้นมา
+ถ้าทุก ๆ ค่าของ 2 color stop เป็นสีเดียวกัน, การผสมสีจะมองไม่เห็นเพราะมันเกิดขึ้นระหว่างสีเดียวกัน ซึ่งถ้าตามด้วย hard transition ไปที่สีถัดไปคุณจะได้แถบขึ้นมา
 
 # --instructions--
 
@@ -39,31 +40,31 @@ Color stop เป้นเหมือนกับความกว้างท
 assert(code.match(/background:\s*?repeating-linear-gradient\(\s*?45deg/gi));
 ```
 
-The angle of the `repeating-linear-gradient()` should no longer be 90deg
+มุมของ `repeating-linear-gradient()` ไม่ควรจะเป็น 90deg แล้ว
 
 ```js
 assert(!code.match(/90deg/gi));
 ```
 
-The color stop at 0 pixels should be `yellow`.
+color stop ที่ 0 pixel ควรเป็น `yellow`
 
 ```js
 assert(code.match(/yellow\s+?0(px)?/gi));
 ```
 
-One color stop at 40 pixels should be `yellow`.
+color stop ที่ 40 pixels ควรเป็น `yellow`
 
 ```js
 assert(code.match(/yellow\s+?40px/gi));
 ```
 
-The second color stop at 40 pixels should be `black`.
+color stop อันที่สองที่  40 pixel ควรเป็น `black`
 
 ```js
 assert(code.match(/yellow\s+?40px,\s*?black\s+?40px/gi));
 ```
 
-The last color stop at 80 pixels should be `black`.
+color stop อันสุดท้ายที่ 80 pixels ควรเป็น `black`
 
 ```js
 assert(code.match(/black\s+?80px/gi));

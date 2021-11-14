@@ -10,13 +10,14 @@ dashedName: change-an-elements-relative-position
 # --description--
 
 CSS จะทำเหมือนกับ HTML element แต่ละตัวเป็นกล่อง ๆ หนึ่ง ซึ่งปกติแล้วเราจะเรียกมันว่า <dfn>CSS Box Model</dfn>
-Block-level items จะขึ้นบรรทัดใหม่โดยอัติโนมัติ (คิดถึง headings, paragraphs, และ divs) ในขณะที่ inline items จะอยู่ระหว่าง content ที่ล้อมรอบมัน (เช่น images หรือ spans)
-layout เริ่มต้นของ element ในรูปแบบนี้จะเรียกว่า <dfn>normal flow</dfn> ของ document, แต่ CSS ได้มีการใช้ position property เพื่อเขียนทับมัน
+Block-level items จะขึ้นบรรทัดใหม่โดยอัตโนมัติ (คิดถึง headings, paragraphs, และ divs) ในขณะที่ inline items จะอยู่ระหว่าง content ที่ล้อมรอบมัน (เช่น images หรือ spans)
+layout เริ่มต้นของ element ในรูปแบบนี้จะเรียกว่า <dfn>normal flow</dfn> ของ document 
+แต่ CSS ได้มีการใช้ position property เพื่อเขียนทับ (overwrite) normal flow ในหลาย ๆ ครั้ง
 
-เมื่อตำแหน่งของ element ถูกำหนดให้เป็น `relative`, มันจะทำให้คุณสามารถระบุวิธีที่ CSS ควรจะย้ายมันโดย *relative* กับตำแหน่งปัจจุบนของมันใน normal flow ของหน้าเว็บ
-มันทำงานคู่กับ CSS offset properties ขแง `left` หรือ `right`, และ `top` หรือ `bottom`
-พวกมันจะบอกจำนวน pixels, percentages, หรือ ems เพื่อที่จะย้าย item ออกจากตำแหน่งที่มันเคยถูกวางไว้
-ตัวอย่างต่อไปนี้เป็นการย้ายพารากราฟไปออกจาก 10 pixel จากด้านล่างของตำแหน่งเดิม:
+เมื่อตำแหน่งของ element ถูกกำหนดให้เป็น `relative` มันจะทำให้คุณสามารถระบุวิธีที่ CSS ควรจะย้ายมันโดย *อิง* กับตำแหน่งปัจจุบันของมันใน normal flow ของหน้าเว็บ
+มันทำงานคู่กับ CSS offset properties อย่าง `left` หรือ `right`, และ `top` หรือ `bottom`
+พวกมันจะบอกจำนวน pixels, percentages, หรือ ems เพื่อที่จะย้าย item จากตำแหน่งที่มันเคยถูกวางไว้
+ตัวอย่างต่อไปนี้เป็นการย้ายพารากราฟให้ห่างจากด้านล่างของตำแหน่งเดิมของมัน 10 pixel :
 
 ```css
 p {
@@ -25,16 +26,16 @@ p {
 }
 ```
 
-การเปลี่ยนจำแหน่งของ element ไปเป็น relative ไม่ได้ย้ายมันออกจาก normal flow - element อื่นที่อยู่รอบ ๆ มันยังคงมีพฤติกรรมเหมือนกับตอนที่ item นั้นยังอยู่ที่ตำแหน่งเดิมของมัน
+การเปลี่ยนตำแหน่งของ element ไปเป็น relative ไม่ได้ย้ายมันออกจาก normal flow เพราะ element อื่นที่อยู่รอบ ๆ มันยังคงมีพฤติกรรมเหมือนกับตอนที่ item นั้นยังอยู่ที่ตำแหน่งเดิมของมัน
 
 **Note:** การจัดตำแหน่งทำให้คุณมีความยืดหยุ่นและอำนาจที่จะจัดการกับ visual layout ของหน้าเว็บ
-มันดีที่จะจำไว้ว่าไม่ว่า element จะอยู่ตรงไหน, HTML markup ที่ทำให้มันเป็นแบบนั้นควรจะเป็นระเบียบและ make sense เมื่ออ่านจากบนลงล่าง
-สิ่งนี้คือวิธีที่ผู้พิการทางการมองเห็นเข้าถึง content ของคุณ
+คุณควรจำไว้ว่า ไม่ว่า element จะอยู่ตรงไหน, HTML markup ที่ทำให้มันเป็นแบบนั้นควรจะเป็นระเบียบและ make sense เมื่ออ่านจากบนลงล่าง
+สิ่งนี้คือวิธีที่ผู้พิการทางการมองเห็นใช้เพื่อเข้าถึง content ของคุณ
 
 # --instructions--
 
 จงเปลี่ยน `position` ของ `h2` ให้เป็น `relative`
-และจงใช้ CSS offset เพื่อย้ายมันไป 15 pixel จากด้านบนของตำแหน่งเดิมของมัน
+และจงใช้ CSS offset เพื่อย้ายมันให้ห่างจากด้านบนของตำแหน่งเดิมของมัน 15 pixel
 สังเกตว่ามันไม่กระทบกับตำแหน่งของ h1 และ p element ที่อยู่รอบ ๆ มัน
 
 # --hints--
@@ -45,7 +46,7 @@ p {
 assert($('h2').css('position') == 'relative');
 ```
 
-Your code should use a CSS offset to relatively position the `h2` 15px away from the `top` of where it normally sits.
+คุณควรใช้ CSS offset เพื่อกำหนดตำแหน่งใหม่ให้ `h2` โดยอิงจากตำแหน่งเดิมซึ่งมันควรจะห่างจาก `top` ของตำแหน่งเดิมของมัน 15 pixel
 
 ```js
 assert($('h2').css('top') == '15px');

@@ -10,25 +10,25 @@ dashedName: use-the-text-transform-property-to-make-text-uppercase
 # --description--
 
 `text-transform` property ใน CSS มักถูกใช้เพื่อเปลี่ยนลักษณะของตัวอักษร
-มันเป็นวิธีที่สะดวกเพื่อเช็คให้มั่นใจว่าตัวอักษรที่ปรากฏบนหน้าเว็บนั้นถูกต้องโดยไม่ต้องเปลี่ยนเนื้อหาส่วนที่เป็นข้อความของ HTML element 
+มันเป็นวิธีที่สะดวกเพื่อทำให้มั่นใจว่าตัวอักษรที่ปรากฏบนหน้าเว็บนั้นถูกต้องโดยไม่ต้องเปลี่ยนเนื้อหาส่วนที่เป็นข้อความของ HTML element 
 
-ตารางข้างล่างนี้แสดงให้เห็นถึงความแตกต่างระหว่างค่า `text-transform` เมื่อใช้กัตัวอย่างข้อความ "Transform me"
+ตารางข้างล่างนี้แสดงให้เห็นถึงความแตกต่างระหว่างค่า `text-transform` เมื่อใช้กับตัวอย่างข้อความ "Transform me"
 
 <table class='table table-striped'><thead><tr><th>Value</th><th>Result</th></tr></thead><tbody><tr><td><code>lowercase</code></td><td>"transform me"</td></tr><tr><td><code>uppercase</code></td><td>"TRANSFORM ME"</td></tr><tr><td><code>capitalize</code></td><td>"Transform Me"</td></tr><tr><td><code>initial</code></td><td>Use the default value</td></tr><tr><td><code>inherit</code></td><td>Use the <code>text-transform</code> value from the parent element</td></tr><tr><td><code>none</code></td><td><strong>Default:</strong> Use the original text</td></tr></tbody></table>
 
 # --instructions--
 
-จงเปลี่ยนตัวอักษรของ `h4`ให้เป็นตัวพิมพ์ใหญ่โดยการใช้ `text-transform` property.
+จงเปลี่ยนตัวอักษรของ `h4` ให้เป็นตัวพิมพ์ใหญ่โดยการใช้ `text-transform` property.
 
 # --hints--
 
-`h4` text ควรเป็น `uppercase`.
+ข้อความใน `h4`  ควรเป็น `uppercase`.
 
 ```js
 assert($('h4').css('text-transform') === 'uppercase');
 ```
 
-The original text of the h4 should not be changed.
+ข้อความดั้งเดิมของ h4 ไม่ควรจะถูกเปลี่ยน
 
 ```js
 assert($('h4').text() !== $('h4').text().toUpperCase());

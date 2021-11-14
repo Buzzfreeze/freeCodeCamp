@@ -9,7 +9,7 @@ dashedName: adjust-the-height-of-an-element-using-the-height-property
 
 # --description--
 
-คุณสามารถระบุความสุงของ element โดยใช้ `height` property ใน CSS
+คุณสามารถระบุความสูงของ element ได้โดยใช้ `height` property ใน CSS
 เช่นเดียวกันกับ `width` property
 นี่คือตัวอย่างในการเปลี่ยนความสูงของรูปให้อยู่ที่ 20px:
 
@@ -26,7 +26,7 @@ img {
 **Note:** คุณอาจจะตั้งให้มันซูมที่ 100% เพื่อให้ผ่าน test ของแบบฝึกหัดนี้
 # --hints--
 
-โค้ดของคุณควรเปลี่ยน  `height` property ของ `h4` ให้มีค่าเป็น t25 pixels
+โค้ดของคุณควรเปลี่ยน `height` property ของ `h4` ให้มีค่าเป็น 25 pixels
 
 ```js
 assert(

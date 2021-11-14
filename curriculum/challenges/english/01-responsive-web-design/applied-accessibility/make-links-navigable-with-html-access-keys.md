@@ -9,10 +9,10 @@ dashedName: make-links-navigable-with-html-access-keys
 
 # --description--
 
-HTML ได้เสนอ `accesskey` attribute ที่จะไว้กำหนด shortcut key เพื่อใช้ในการ activate หรือดึงความสนใจมาที่element
-จงเพิ่ม `accesskey` attribute สามารถช่วยให้การนำทางมีประสิทธิภาพมากขึ้นสำหรับผู้ใช้ที่ใช้เพียงแค่ keyboard เท่านั้น
+HTML ได้เพิ่ม `accesskey` attribute เข้ามา โดยมันเอาไว้กำหนด shortcut key เพื่อใช้ในการ activate หรือดึงความสนใจมาที่ element
+การเพิ่ม `accesskey` attribute สามารถช่วยให้การนำทางมีประสิทธิภาพมากขึ้นสำหรับผู้ใช้ที่ใช้ โดยเพียงแค่ keyboard เท่านั้น
 
-HTML5 อนุญาตให้ attribute นี้สามารถถูกใช้ได้กับทุก element, แต่มันอาจจะไม่ค่อยมีประโยชน์ดท่าไหร่นักกับ element ที่ interactive กับผู้ใช้
+HTML5 ทำให้ attribute นี้สามารถใช้ได้กับทุก element แต่มันอาจจะไม่ค่อยมีประโยชน์เท่าไหร่นักกับ element ที่ interact กับผู้ใช้
 นี่รวมถึงลิงค์, ปุ่ม, และ form controls
 
 นี่คือตัวอย่าง :
@@ -34,19 +34,21 @@ Camper Cat ต้องการที่จะเชื่อม 2 หัวข
 assert($('#first').attr('accesskey'));
 ```
 
-Your code should add an `accesskey` attribute to the `a` tag with the `id` of `second`.
+คุณควรเพิ่ม `accesskey` attribute ให้กับ `a` tag ที่มี `id` เป๋น `second`.
 
 ```js
 assert($('#second').attr('accesskey'));
 ```
 
-Your code should set the `accesskey` attribute on the `a` tag with the `id` of `first` to `g`. Note that case matters.
+คุณควรกำหนดให้ `accesskey` attribute ใน `a` tag ที่มี `id` เป็น `first` มีค่า `g`
+จำไว้ว่า case ของข้อความมีความสำคัญ
 
 ```js
 assert($('#first').attr('accesskey') == 'g');
 ```
 
-Your code should set the `accesskey` attribute on the `a` tag with the `id` of `second` to `c`. Note that case matters.
+คุณควรกำหนดให้ `accesskey` attribute ใน `a` tag ที่มี `id` เป็น `second` มีค่า `c`
+จำไว้ว่า case ของข้อความมีความสำคัญ
 
 ```js
 assert($('#second').attr('accesskey') == 'c');

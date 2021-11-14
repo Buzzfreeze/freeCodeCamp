@@ -9,12 +9,13 @@ dashedName: modify-fill-mode-of-an-animation
 
 # --description--
 
-นั่นดีมาก!, แต่มันไม่ค่อยเวิร์คเท่าไหร่
-สังเกตว่า animation จะรีเซ็ตหลังจากผ่านไป `500ms` , ทำให้ปุ่มนั้นกลับไปมีสีเดิม
+นั่นดีมาก! 
+แต่มันก็ยังดูไม่ค่อยถูกต้องซักเท่าไหร่
+สังเกตว่า animation จะถูกรีเซ็ตหลังจากผ่านไป `500ms` ซึ่งทำให้ปุ่มนั้นกลับไปมีสีเดิม
 คุณต้องการให้ปุ่มยังคงสีที่ถูกไฮไลต์เอาไว้
 
-สิ่งนี้สามารถทำได้โดยการกำหนด`animation-fill-mode` property ให้มีค่า `forwards`
-`animation-fill-mode` จะระบุสไตล์ที่จะใช้ให้กับ element เมื่อ animation นั้นจบแล้ว
+สิ่งนี้สามารถทำได้โดยการกำหนด `animation-fill-mode` property ให้มีค่า `forwards`
+`animation-fill-mode` จะระบุสไตล์ที่จะใช้กับ element เมื่อ animation นั้นจบแล้ว
 คุณสามารถกำหนดให้มันเป็นแบบนี้:
 
 ```css
@@ -27,7 +28,7 @@ animation-fill-mode: forwards;
 
 # --hints--
 
-`button:hover` ควรมี`animation-fill-mode` property ที่มีค่าเป็น `forwards`
+`button:hover` ควรมี `animation-fill-mode` property ที่มีค่าเป็น `forwards`
 
 ```js
 assert(

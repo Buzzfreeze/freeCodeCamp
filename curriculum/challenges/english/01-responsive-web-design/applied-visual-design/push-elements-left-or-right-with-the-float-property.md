@@ -9,8 +9,8 @@ dashedName: push-elements-left-or-right-with-the-float-property
 
 # --description--
 
-เครื่องมือในการกำหนดตำแหน่งอันถัดไปไม่ค่อยยุ่งกับ `position`, แต่จะกำหนด `float` property ของ element
-Floating element ถูกเอาออกจาก normal flow ของ document และจะถูกผลักให้ไปอยู่ `left` หรือ `right` ของ parent element ที่เก็บมันไว้
+เครื่องมือในการกำหนดตำแหน่งอันถัดไป จะไม่ยุ่งกับ `position`แต่จะเป็นการกำหนด `float` property ของ element
+Floating element จะถูกเอาออกจาก normal flow ของ document และจะถูกผลักให้ไปอยู่ `left` หรือ `right` ของ parent element ที่เก็บมันไว้
 มันมักจะถูกใช้กับ `width` property เพื่อระบุช่องว่างในแนวนอนที่ floated element ต้องการ
 
 # --instructions--
@@ -26,7 +26,7 @@ element ที่มี id `left` ควรมี `float` เป็น `left`
 assert($('#left').css('float') == 'left');
 ```
 
-The element with id `right` should have a `float` value of `right`.
+element ที่มี id `right` ควรมี`float` เป็น `right`
 
 ```js
 assert($('#right').css('float') == 'right');

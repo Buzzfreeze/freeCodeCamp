@@ -9,16 +9,16 @@ dashedName: adjust-the-background-color-property-of-text
 
 # --description--
 
-แทนที่จะเปลี่ยนสีพื้นหลังหรือสีของข้อความทั้งหมดเพื่อให้อ่านเนื้อหาได้ง่าย คุณสามารถเพื่อ `background-color` ให้กับ element ที่ล้อมรอบข้อความที่คุณต้องการที่จะเน้น
-challenge นี้จะใช้ `rgba()` แทน `hex` codes หรือ `rgb()`
+แทนที่จะเปลี่ยนสีพื้นหลังหรือสีของข้อความทั้งหมดเพื่อให้อ่านเนื้อหาได้ง่าย คุณสามารถเพิ่ม `background-color` ให้กับ element ที่ล้อมรอบข้อความที่คุณต้องการที่จะเน้น
+แบบฝึกหัดนี้จะใช้ `rgba()` แทน `hex` codes หรือ `rgb()`
 
 <blockquote>rgba stands for:<br>  r = red<br>  g = green<br>  b = blue<br>  a = alpha/level of opacity</blockquote>
 
 ค่า RGB สามารถเป็นได้ตั้งแต่ 0 ถึง 255 ค่า alpha สามารถเป็นได้ตั้งแต่ 1 (ทึบแสงที่สุด) ถึง 0 (โปร่งแสงที่สุด)
-`rgba()` นั้นเหมาะที่จะใช้ในกรณีนี้ที่สุด เนื่องจากมันยอมให้คุณปรับ opacity 
-ซึ่งแปลว่าคุณไม่จำเป้นต้องปิดพื้นหลังทั้งหมด
+`rgba()` นั้นเหมาะที่จะใช้ในกรณีนี้ที่สุด เนื่องจากคุณสามารถใช้ปรับค่า opacity ได้
+ซึ่งแปลว่าคุณไม่จำเป็นต้องปิดพื้นหลังทั้งหมด
 
-คุณจะใช้ `background-color: rgba(45, 45, 45, 0.1)` สำหรับ challenge นี้
+คุณจะใช้ `background-color: rgba(45, 45, 45, 0.1)` สำหรับแบบฝึกหัดนี้
 มันจะสร้างสีเทาเข้มที่มีค่า opacity เท่ากับ 0.1.
 
 # --instructions--
@@ -38,7 +38,7 @@ assert(
 );
 ```
 
-Your code should add a `padding` property to the `h4` element and set it to 10 pixels.
+คุณควรเพิ่ม `padding` property อันหนึ่งให้กับ `h4` elementและกำหนดให้มันมีค่า 10 pixel
 
 ```js
 assert(
@@ -49,7 +49,7 @@ assert(
 );
 ```
 
-The `height` property on the `h4` element should be removed.
+`height` property ของ `h4` element ควรจะถูกเอาออกไป
 
 ```js
 assert(!($('h4').css('height') == '25px'));

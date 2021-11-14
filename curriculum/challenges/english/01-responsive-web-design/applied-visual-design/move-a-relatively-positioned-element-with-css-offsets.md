@@ -9,25 +9,26 @@ dashedName: move-a-relatively-positioned-element-with-css-offsets
 
 # --description--
 
-CSS offsets ของ `top` หรือ `bottom`,และ `left` หรือ `right` จะบอก browser ว่าควรเลื่อน item ออกมาไกลแค่ไหนโดยอ้างอิงจากตำแหน่งที่มันเคยอยู่มาก่อน ใน normal flow ของ document. 
-คุณสามารถวาง element ให้ห่างจากจุดที่กำหนดได้ โดยมันจะย้าย element ออกจากด้านอ้างอิงซึ่งมักเป็นด้านตรงข้าม
-ตามที่คุณได้เห็นในแบบฝึกหัดที่แล้ว การใช้ `top` offset เลื่อน `h2` มาข้างล่าง
+CSS offsets ของ `top` หรือ `bottom`,และ `left` หรือ `right` จะบอก browser ว่าควรเลื่อน item ออกมาไกลแค่ไหนโดยอิงจากตำแหน่งที่มันเคยอยู่มาก่อน ใน normal flow ของ documen
+คุณสามารถวาง element ให้ห่างจากจุดที่กำหนดได้ โดยมันจะย้าย element ออกจากด้านอ้างอิงซึ่งเป็นด้านตรงข้าม
+ตามที่คุณได้เห็นในแบบฝึกหัดที่แล้ว การใช้ `top` offset จะเลื่อน `h2` มาข้างล่าง
 เช่นเดียวกัน การใช้ `left` offset จะเลื่อน item ที่ทางขวา
 
 # --instructions--
 
-จงใช้ CSS offsets เพื่อเลื่อน `h2` มา 15 pixels ไปทางขวาและขึ้นไปอีก 10 pixel
+จงใช้ CSS offsets เพื่อเลื่อน `h2` ไปทางขวา 15 pixels และขึ้นไปอีก 10 pixel
 
 # --hints--
 
-คุณควรใช้ CSS offset เป็นกำหนดตำแหน่งแบบ relativeให้ `h2` ขึ้นไปด้านบน 10px
+คุณควรใช้ CSS offset เพื่อกำหนดตำแหน่งโดยการอิงจากตำแหน่งเดิมของ `h2` ซึ่งกำหนดให้ขึ้นไปด้านบน 10px
 หรือก็คือจงเลื่อนมาออกจาก `bottom` ของตำแหน่งที่มันเคยอยู่มา 10 px
 
 ```js
 assert($('h2').css('bottom') == '10px');
 ```
 
-Your code should use a CSS offset to relatively position the `h2` 15px towards the right. In other words, move it 15px away from the `left` of where it normally sits.
+คุณควรใช้ CSS offset เพื่อกำหนดตำแหน่งโดยการอิงจากตำแหน่งเดิมของ `h2` ซึ่งกำหนดให้ไปทางขวา 15px
+หรือก็คือเลื่อนจาก `left` ของตำแหน่งที่มันเคยอยู่มา 15 px
 
 ```js
 assert($('h2').css('left') == '15px');

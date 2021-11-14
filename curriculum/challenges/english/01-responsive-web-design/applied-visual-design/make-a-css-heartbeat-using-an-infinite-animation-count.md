@@ -9,14 +9,14 @@ dashedName: make-a-css-heartbeat-using-an-infinite-animation-count
 
 # --description--
 
-นี่คืออีกตัวอย่างของการทำให้ animation วนไม่หยุดด้วย `animation-iteration-count` property ที่จะใช้หัวใจที่คุณสร้างขึ้นมาก่อนหน้านี้
+นี่คืออีกตัวอย่างของการทำให้ animation วนไม่หยุดด้วย `animation-iteration-count` property โดยจะใช้รูปหัวใจที่คุณสร้างขึ้นมาก่อนหน้านี้
 
-การเต้นของหัวใจที่มีระบะ 11 วินาทีนั้นจะประกอบไปด้วย animated piece 2 ชิ้น
+การเต้นของหัวใจที่มีความยาว 11 วินาทีนั้นจะประกอบไปด้วย animated piece 2 ชิ้น
 `heart` elements (รวมถึง `:before` และ `:after` pieces) จะถูก animate เพื่อเปลี่ยนขนาดโดยใช้ `transform` property, และพื้นหลัง  `div` จะถูก animate เพื่อเปลี่ยนสีของมันโดยใช้`background` property.
 
 # --instructions--
 
-จงทำให้หัวใจเต้นโดยการเพิ่ม `animation-iteration-count` property ให้กับทั้ง `back` class และ `heart` class และกำหนดให้ค่าเป้น `infinite`
+จงทำให้หัวใจเต้นโดยการเพิ่ม `animation-iteration-count` property ให้กับทั้ง `back` class และ `heart` class และกำหนดให้ค่าเป็น `infinite`
 `heart:before` และ `heart:after` selectors จะไม่ต้องการ animation properties ใด ๆ
 
 # --hints--
@@ -27,7 +27,7 @@ dashedName: make-a-css-heartbeat-using-an-infinite-animation-count
 assert($('.heart').css('animation-iteration-count') == 'infinite');
 ```
 
-The `animation-iteration-count` property for the `back` class should have a value of `infinite`.
+`animation-iteration-count` property สำหรับ `back` class ควรมีค่าเป็น `infinite`
 
 ```js
 assert($('.back').css('animation-iteration-count') == 'infinite');

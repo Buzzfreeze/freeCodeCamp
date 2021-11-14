@@ -17,7 +17,7 @@ dashedName: set-the-font-size-of-paragraph-text
 
 # --hints--
 
-`p` tag ควรมี`font-size` ขนาด 16 pixels
+`p` tag ควรมี `font-size` ขนาด 16 pixels
 
 ```js
 assert($('p').css('font-size') == '16px');

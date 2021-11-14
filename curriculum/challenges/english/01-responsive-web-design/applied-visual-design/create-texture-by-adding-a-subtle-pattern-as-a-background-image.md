@@ -9,14 +9,14 @@ dashedName: create-texture-by-adding-a-subtle-pattern-as-a-background-image
 
 # --description--
 
-วิธีหนึ่งที่จะเพิ่ม textureและความน่าสนใจให้กับพื้นหลังและทำให้มันดูโดดเด่นขึ้นก็คือการเพิ่มแพทเทิร์นง่าย ๆ เข้ามา
-หัวใจหลังของมันคือความบาลานซ์ เพราะคุณไม่ได้ต้องการให้พื้นหลังมันเด่นเกินไป
-`background` property จะรองรับ  `url()` function เพื่อที่จะลิงค์มันไปยังรูปภาพของ texture หรือ pattern ที่เลือกไว้
-ที่อยู่ของลิงค์จะถูกเก็บไว้ใน quotes ข้างในวงเล็บ
+วิธีหนึ่งที่จะเพิ่ม texture และความน่าสนใจให้กับพื้นหลัง และทำให้มันดูโดดเด่นขึ้นก็คือการเพิ่มแพทเทิร์นง่าย ๆ เข้ามา
+หัวใจหลักของมันคือความบาลานซ์ เพราะคุณไม่ได้ต้องการให้พื้นหลังมันเด่นเกินไป
+`background` property นั้นรองรับ `url()` function เพื่อลิงค์มันไปยังรูปภาพของ texture หรือ pattern ที่เลือกไว้
+ที่อยู่ของลิงค์จะถูกเก็บระหว่าง quote 2 อันข้างในวงเล็บ
 
 # --instructions--
 
-โดยใช้ url ของ `https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png`, จงกำหนดให้ `background` ของทั้งหน้าด้วย `body` selector.
+จงกำหนดให้ `background` ของทั้งหน้าด้วย `body` selector โดยใช้ url ของ `https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png`
 
 # --hints--
 
