@@ -49,7 +49,7 @@ const propTypes = {
   isInfosecQaCert: PropTypes.bool,
   isJsAlgoDataStructCert: PropTypes.bool,
   isMachineLearningPyCertV7: PropTypes.bool,
-  isPreCampSoftwareEngineer: PropTypes.bool,
+  isPreCampSoftwareEngineerCert: PropTypes.bool,
   isQaCertV7: PropTypes.bool,
   isRespWebDesignCert: PropTypes.bool,
   isSciCompPyCertV7: PropTypes.bool,
@@ -76,7 +76,7 @@ const isCertSelector = ({
   isSciCompPyCertV7,
   isDataAnalysisPyCertV7,
   isMachineLearningPyCertV7,
-  isPreCampSoftwareEngineer
+  isPreCampSoftwareEngineerCert
 }) => ({
   is2018DataVisCert,
   isApisMicroservicesCert,
@@ -93,7 +93,7 @@ const isCertSelector = ({
   isSciCompPyCertV7,
   isDataAnalysisPyCertV7,
   isMachineLearningPyCertV7,
-  isPreCampSoftwareEngineer
+  isPreCampSoftwareEngineerCert
 });
 
 const isCertMapSelector = createSelector(
@@ -113,7 +113,7 @@ const isCertMapSelector = createSelector(
     isSciCompPyCertV7,
     isDataAnalysisPyCertV7,
     isMachineLearningPyCertV7,
-    isPreCampSoftwareEngineer
+    isPreCampSoftwareEngineerCert
   }) => ({
     'Responsive Web Design': isRespWebDesignCert,
     'JavaScript Algorithms and Data Structures': isJsAlgoDataStructCert,
@@ -125,7 +125,7 @@ const isCertMapSelector = createSelector(
     'Scientific Computing with Python': isSciCompPyCertV7,
     'Data Analysis with Python': isDataAnalysisPyCertV7,
     'Machine Learning with Python': isMachineLearningPyCertV7,
-    'Pre Camp Software Engineer': isPreCampSoftwareEngineer,
+    'Pre Camp Software Engineer': isPreCampSoftwareEngineerCert,
     'Legacy Front End': isFrontEndCert,
     'Legacy Data Visualization': isDataVisCert,
     'Legacy Back End': isBackEndCert,
@@ -335,6 +335,7 @@ export class CertificationSettings extends Component {
       isInfosecQaCert,
       isJsAlgoDataStructCert,
       isRespWebDesignCert,
+      isPreCampSoftwareEngineerCert,
       t
     } = this.props;
 
@@ -344,7 +345,8 @@ export class CertificationSettings extends Component {
       isFrontEndLibsCert &&
       isInfosecQaCert &&
       isJsAlgoDataStructCert &&
-      isRespWebDesignCert;
+      isRespWebDesignCert &&
+      isPreCampSoftwareEngineerCert;
 
     // Keep the settings page certSlug as full-stack rather than
     // legacy-full-stack so we don't break existing links

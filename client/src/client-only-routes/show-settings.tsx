@@ -93,7 +93,7 @@ export function ShowSettings(props: IShowSettingsProps): JSX.Element {
       isSciCompPyCertV7,
       isDataAnalysisPyCertV7,
       isMachineLearningPyCertV7,
-      isPreCampSoftwareEngineer,
+      isPreCampSoftwareEngineerCert,
       isEmailVerified,
       isHonest,
       sendQuincyEmail,
@@ -187,7 +187,7 @@ export function ShowSettings(props: IShowSettingsProps): JSX.Element {
             isInfosecQaCert={isInfosecQaCert}
             isJsAlgoDataStructCert={isJsAlgoDataStructCert}
             isMachineLearningPyCertV7={isMachineLearningPyCertV7}
-            isPreCampSoftwareEngineer={isPreCampSoftwareEngineer}
+            isPreCampSoftwareEngineerCert={isPreCampSoftwareEngineerCert}
             isQaCertV7={isQaCertV7}
             isRespWebDesignCert={isRespWebDesignCert}
             isSciCompPyCertV7={isSciCompPyCertV7}

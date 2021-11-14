@@ -484,7 +484,7 @@
     "publicly-visible-url": "อย่าลืมส่ง URL ของแอปที่เปิดเผยต่อสาธารณะ"
   },
   "certification": {
-    "executive": "กรรมการบริหาร CareerVio.com",
+    "executive": "CEO CareerVio.com",
     "verify": "ยืนยันการรับรองนี้ที่ {{certURL}}",
     "issued": "Issued",
     "fulltext": "<0>สิ่งนี้รับรองว่า</0> <1>{{ผู้ใช้}}</1> <2>ท่านได้ผ่านหลักสูตร CareerVio.com</2> <3>{{title}}< /3> <4> Developer Certificate ซึ่งคิดเป็นเวลาเรียนประมาณ {{time}} ชั่วโมง</4>",

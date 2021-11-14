@@ -118,7 +118,8 @@ const mapDispatchToProps = (dispatch: Dispatch) =>
 
 const ShowCertification = (props: IShowCertificationProps): JSX.Element => {
   const { t } = useTranslation();
-  const [isDonationSubmitted, setIsDonationSubmitted] = useState(false);
+  // const [isDonationSubmitted, setIsDonationSubmitted] = useState(false);
+  const [isDonationSubmitted] = useState(false);
   const [isDonationDisplayed, setIsDonationDisplayed] = useState(false);
   const [isDonationClosed, setIsDonationClosed] = useState(false);
 
@@ -179,22 +180,22 @@ const ShowCertification = (props: IShowCertificationProps): JSX.Element => {
     setIsDonationClosed(true);
   };
 
-  const handleProcessing = (
-    duration: string,
-    amount: number,
-    action: string
-  ) => {
-    props.executeGA({
-      type: 'event',
-      data: {
-        category: 'Donation',
-        action: `certificate ${action}`,
-        label: duration,
-        value: amount
-      }
-    });
-    setIsDonationSubmitted(true);
-  };
+  // const handleProcessing = (
+  //   duration: string,
+  //   amount: number,
+  //   action: string
+  // ) => {
+  //   props.executeGA({
+  //     type: 'event',
+  //     data: {
+  //       category: 'Donation',
+  //       action: `certificate ${action}`,
+  //       label: duration,
+  //       value: amount
+  //     }
+  //   });
+  //   setIsDonationSubmitted(true);
+  // };
 
   const {
     cert,
@@ -368,7 +369,9 @@ const ShowCertification = (props: IShowCertificationProps): JSX.Element => {
           </div>
           <Row>
             <p className='verify'>
-              {t('certification.verify', { certURL: certURL })}
+              <a href={certURL} style={{ textDecoration: 'none' }}>
+                {t('certification.verify', { certURL: certURL })}
+              </a>
             </p>
           </Row>
         </footer>

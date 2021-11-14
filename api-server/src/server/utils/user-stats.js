@@ -132,7 +132,7 @@ function getCompletedCertCount(user) {
     'isSciCompPyCertV7',
     'isDataAnalysisPyCertV7',
     'isMachineLearningPyCertV7',
-    'isPreCampSoftwareEngineer'
+    'isPreCampSoftwareEngineerCert'
   ].reduce((sum, key) => (user[key] ? sum + 1 : sum), 0);
 }
 

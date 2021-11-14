@@ -1,9 +1,10 @@
 import { isEqual } from 'lodash-es';
 import React, { Component } from 'react';
-import { HotKeys, ObserveKeys } from 'react-hotkeys';
+// import { HotKeys, ObserveKeys } from 'react-hotkeys';
+import { HotKeys } from 'react-hotkeys';
 import { withTranslation } from 'react-i18next';
 import { Hit } from 'react-instantsearch-core';
-import { SearchBox } from 'react-instantsearch-dom';
+// import { SearchBox } from 'react-instantsearch-dom';
 import { connect } from 'react-redux';
 import { AnyAction, bindActionCreators, Dispatch } from 'redux';
 import { createSelector } from 'reselect';
@@ -187,7 +188,7 @@ export class SearchBar extends Component<searchBarPropType, classState> {
   render(): JSX.Element {
     const { isDropdownEnabled, isSearchFocused, innerRef, t } = this.props;
     const { index } = this.state;
-    const placeholder = t ? t('search.placeholder') : '';
+    // const placeholder = t ? t('search.placeholder') : '';
 
     return (
       <WithInstantSearch>

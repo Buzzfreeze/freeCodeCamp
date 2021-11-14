@@ -192,6 +192,11 @@
       "description": "Camper is data analysis with Python certified",
       "default": false
     },
+    "isPreCampSoftwareEngineerCert": {
+      "type": "boolean",
+      "description": "Camper finish pre camp and certified",
+      "default": false
+    },
     "isMachineLearningPyCertV7": {
       "type": "boolean",
       "description": "Camper is machine learning with Python certified",

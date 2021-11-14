@@ -179,7 +179,7 @@ function postResetProgress(req, res, next) {
       isSciCompPyCertV7: false,
       isDataAnalysisPyCertV7: false,
       isMachineLearningPyCertV7: false,
-      isPreCampSoftwareEngineer: false,
+      isPreCampSoftwareEngineerCert: false,
       completedChallenges: []
     },
     function (err) {

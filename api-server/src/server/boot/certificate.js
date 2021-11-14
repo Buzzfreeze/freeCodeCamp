@@ -122,6 +122,11 @@ function createCertTypeIds(allChallenges) {
 }
 
 function canClaim(ids, completedChallenges = []) {
+  console.log('canClaim ids');
+  console.log(ids);
+  console.log('completedChallenges');
+  console.log(completedChallenges);
+
   return _.every(ids, ({ id }) =>
     _.find(completedChallenges, ({ id: completedId }) => completedId === id)
   );
@@ -153,7 +158,7 @@ function sendCertifiedEmail(
     isSciCompPyCertV7,
     isDataAnalysisPyCertV7,
     isMachineLearningPyCertV7,
-    isPreCampSoftwareEngineer
+    isPreCampSoftwareEngineerCert
   },
   send$
 ) {
@@ -169,7 +174,7 @@ function sendCertifiedEmail(
     !isSciCompPyCertV7 ||
     !isDataAnalysisPyCertV7 ||
     !isMachineLearningPyCertV7 ||
-    !isPreCampSoftwareEngineer
+    !isPreCampSoftwareEngineerCert
   ) {
     return Observable.just(false);
   }
@@ -206,7 +211,7 @@ function getUserIsCertMap(user) {
     isSciCompPyCertV7 = false,
     isDataAnalysisPyCertV7 = false,
     isMachineLearningPyCertV7 = false,
-    isPreCampSoftwareEngineer = false
+    isPreCampSoftwareEngineerCert = false
   } = user;
 
   return {
@@ -225,7 +230,7 @@ function getUserIsCertMap(user) {
     isSciCompPyCertV7,
     isDataAnalysisPyCertV7,
     isMachineLearningPyCertV7,
-    isPreCampSoftwareEngineer
+    isPreCampSoftwareEngineerCert
   };
 }
 
@@ -368,7 +373,7 @@ function createShowCert(app) {
       isSciCompPyCertV7: true,
       isDataAnalysisPyCertV7: true,
       isMachineLearningPyCertV7: true,
-      isPreCampSoftwareEngineer: true,
+      isPreCampSoftwareEngineerCert: true,
       isHonest: true,
       username: true,
       name: true,
@@ -537,7 +542,7 @@ function createVerifyCanClaim(certTypeIds, app) {
       isSciCompPyCertV7: true,
       isDataAnalysisPyCertV7: true,
       isMachineLearningPyCertV7: true,
-      isPreCampSoftwareEngineer: true,
+      isPreCampSoftwareEngineerCert: true,
       username: true,
       name: true,
       isHonest: true,
