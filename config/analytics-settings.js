@@ -1,2 +1,2 @@
-exports.prodAnalyticsId = 'G-M0ZZXQKMVR';
-exports.devAnalyticsId = 'G-M0ZZXQKMVR';
+exports.prodAnalyticsId = 'UA-212145602-1';
+exports.devAnalyticsId = 'UA-212145602-1';
