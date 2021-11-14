@@ -1,0 +1,6 @@
+nginx certficaite config 
+
+ location /certification {
+     
+     try_files $uri $uri/ /index.html?$args;
+}
