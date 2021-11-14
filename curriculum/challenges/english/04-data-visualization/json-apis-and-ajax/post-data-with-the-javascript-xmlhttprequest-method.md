@@ -32,7 +32,7 @@ xhr.send(body);
 # --instructions--
 
 สร้าง `POST` request ให้กับ API endpoint จากนั้นพิมพ์ชื่อของงคุณใน input และคลิก `Send Message`
-AJAX function ควนจะถูกแทนที่ด้วย `Reply from Server will be here.` พร้อมกับ data จาก server
+AJAX function ควรจะถูกแทนที่ด้วย `Reply from Server will be here.` พร้อมกับ data จาก server
 Format จะแสดงข้อความเป็นชื่อของคุฯพร้อมกับ text ` loves cats`.
 
 # --hints--

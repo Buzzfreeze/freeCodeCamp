@@ -23,7 +23,7 @@ generatorคือentityที่สั่งการได้ (เช่น fu
 
 # --hints--
 
-`exponentialGenerator` ควนเป็น function.
+`exponentialGenerator` ควรเป็น function.
 
 ```js
 assert(typeof exponentialGenerator == 'function');

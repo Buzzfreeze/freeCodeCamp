@@ -46,7 +46,7 @@ text ใน `h2` ควรเป็น `8`
 assert(output == 8 && $('h2').text() == '8');
 ```
 
-ควนใช้ `max()` method
+ควรใช้ `max()` method
 
 ```js
 assert(
