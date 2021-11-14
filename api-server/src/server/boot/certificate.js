@@ -235,6 +235,7 @@ function getUserIsCertMap(user) {
 }
 
 function createVerifyCert(certTypeIds, app) {
+  console.log('createVerifyCert');
   const { Email } = app.models;
   return function verifyCert(req, res, next) {
     const {

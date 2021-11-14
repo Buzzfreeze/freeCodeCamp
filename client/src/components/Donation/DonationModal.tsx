@@ -121,8 +121,6 @@ function DonateModal({
         {!closeLabel && (
           <Col sm={10} smOffset={1} xs={12}>
             <b>{t('donate.nicely-done', { block: recentlyClaimedBlock })}</b>
-            <br />
-            {getDonationText()}
           </Col>
         )}
       </Row>
