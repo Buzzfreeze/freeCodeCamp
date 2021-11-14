@@ -26,7 +26,7 @@ dashedName: change-animation-timing-with-keywords
 
 # --hints--
 
-
+ค่าของ `animation-timing-function` property สำหรับ element ที่มี id เป็น `ball1` ควรเป็น `linear` .
 
 ```js
 const ball1Animation = __helpers.removeWhiteSpace(
@@ -35,7 +35,7 @@ const ball1Animation = __helpers.removeWhiteSpace(
 assert(ball1Animation == 'linear' || ball1Animation == 'cubic-bezier(0,0,1,1)');
 ```
 
-ค่าของ `animation-timing-function` property สำหรับ element ที่มี id เป็น `ball2` ควรเป็น `linear` `ease-out`.
+ค่าของ `animation-timing-function` property สำหรับ element ที่มี id เป็น `ball2` ควรเป็น `ease-out`.
 
 ```js
 const ball2Animation = __helpers.removeWhiteSpace(
