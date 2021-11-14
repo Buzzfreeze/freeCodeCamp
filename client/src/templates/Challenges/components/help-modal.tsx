@@ -29,7 +29,7 @@ const mapDispatchToProps = (dispatch: Dispatch) =>
     dispatch
   );
 
-const RSA = forumLocation + '/t/19514';
+const RSA = forumLocation + '/t/400';
 
 export function HelpModal({
   closeHelpModal,
