@@ -64,7 +64,7 @@ function renderLandingMap(nodes: ChallengeNodeType[]) {
 
 function renderLearnMap(nodes: ChallengeNodeType[], currentSuperBlock = '') {
   nodes = nodes.filter(node => node.superBlock !== currentSuperBlock);
-  console.log(nodes);
+  // console.log(nodes);
   return curriculumLocale === 'english' ? (
     <ul data-test-label='learn-curriculum-map'>
       {nodes.map((node, i) => (

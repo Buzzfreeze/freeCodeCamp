@@ -114,14 +114,14 @@ const CertChallenge = ({
   }, [fetchState]);
 
   useEffect(() => {
-    console.log('steps');
-    console.log(steps);
-    console.log('certSlugTypeMap');
-    console.log(certSlugTypeMap);
-    console.log('superBlockCertTypeMap');
-    console.log(superBlockCertTypeMap);
+    // console.log('steps');
+    // console.log(steps);
+    // console.log('certSlugTypeMap');
+    // console.log(certSlugTypeMap);
+    // console.log('superBlockCertTypeMap');
+    // console.log(superBlockCertTypeMap);
 
-    console.log('steps End');
+    // console.log('steps End');
 
     setIsCertified(
       steps?.currentCerts?.find(
@@ -157,10 +157,10 @@ const CertChallenge = ({
   const createClickHandler = certSlug => e => {
     e.preventDefault();
     if (isCertified) {
-      console.log('createClickHandler 1');
+      // console.log('createClickHandler 1');
       return navigate(certLocation);
     }
-    console.log('createClickHandler 2');
+    // console.log('createClickHandler 2');
     return isHonest
       ? verifyCert(certSlug)
       : createFlashMessage(honestyInfoMessage);

@@ -75,7 +75,7 @@ export class Block extends Component {
   }
 
   renderBlockIntros(arr) {
-    console.log('Render Block Intro ');
+    // console.log('Render Block Intro ');
     return (
       <div className='block-description'>
         {arr.map((str, i) => (
@@ -127,11 +127,11 @@ export class Block extends Component {
     const blockIntroObj = t(`intro:${superBlock}.blocks.${blockDashedName}`);
     const blockTitle = blockIntroObj ? blockIntroObj.title : null;
     const blockIntroArr = blockIntroObj ? blockIntroObj.intro : [];
-    console.log('blockDashedName');
-    console.log(blockDashedName);
-    console.log('blockIntroArr');
-    console.log(blockIntroArr);
-    console.log(challenges);
+    // console.log('blockDashedName');
+    // console.log(blockDashedName);
+    // console.log('blockIntroArr');
+    // console.log(blockIntroArr);
+    // console.log(challenges);
     const {
       expand: expandText,
       collapse: collapseText,
