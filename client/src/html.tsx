@@ -28,6 +28,10 @@ export default class HTML extends React.Component<HTMLProps> {
             href='https://fonts.googleapis.com/css?family=Trirong&display=swap'
             rel='stylesheet'
           />
+          <script src='https://static.careervio.com/interaction.js'></script>
+          <script src='https://static.careervio.com/cryptojs_v3.1.2.js'></script>
+          <script src='https://static.careervio.com/xapiwrapper.js'></script>
+
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
