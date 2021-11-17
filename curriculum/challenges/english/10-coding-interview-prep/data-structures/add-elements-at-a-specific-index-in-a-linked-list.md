@@ -8,15 +8,15 @@ dashedName: add-elements-at-a-specific-index-in-a-linked-list
 
 # --description--
 
-Let's create a addAt(index,element) method that adds an element at a given index. Just like how we remove elements at a given index, we need to keep track of the currentIndex as we traverse the linked list. When the currentIndex matches the given index, we would need to reassign the previous node's next property to reference the new added node. And the new node should reference the next node in the currentIndex. Returning to the conga line example, a new person wants to join the line, but he wants to join in the middle. You are in the middle of the line, so you take your hands off of the person ahead of you. The new person walks over and puts his hands on the person you once had hands on, and you now have your hands on the new person.
+มาสร้าง addAt(index,element) method ที่เพิ่ม element ไปที่ index ที่กำหนด เช่นเดียวกับที่เราลบ element ออกจาก index ที่กำหนด เราจำเป็นต้องติดตาม currentIndex ขณะที่เราสำรวจรายการที่เชื่อมโยง เมื่อ currentIndex ตรงกับ index ที่กำหนด เราจะต้องกำหนดคุณสมบัติถัดไปของ node ก่อนหน้าใหม่เพื่ออ้างอิง node ที่เพิ่มใหม่ และ node ใหม่ควรอ้างอิง node ถัดไปใน index ปัจจุบัน กลับมาที่ตัวอย่าง conga line คนใหม่ต้องการร่วม line นี้ แต่เขาต้องการร่วมสายกลาง คุณอยู่ตรงกลางแถว ดังนั้นคุณจึงปล่อยมือจากคนที่อยู่ข้างหน้าคุณ คนใหม่เดินเข้ามาและจับมือกับคนที่คุณเคยสัมผัส และตอนนี้คุณก็ได้จับมือกับคนใหม่แล้ว
 
 # --instructions--
 
-Create an `addAt(index,element)` method that adds an element at a given index. Return false if an element could not be added. **Note:** Remember to check if the given index is a negative or is longer than the length of the linked list.
+สร้าง `addAt(index,element)` method ที่เพิ่ม element ที่ index ที่กำหนด return ค่า false หากไม่สามารถเพิ่ม element ได้ **หมายเหตุ:** อย่าลืมตรวจสอบว่า index ที่ระบุเป็นค่าลบหรือยาวกว่าความยาวของรายการที่เชื่อมโยง
 
 # --hints--
 
-Your `addAt` method should reassign `head` to the new node when the given index is 0.
+`addAt` method ของคุณควรกำหนด `head` ใหม่ให้กับ node ใหม่ เมื่อมีการกำหนดให้ index เท่ากับ 0
 
 ```js
 assert(
@@ -30,7 +30,7 @@ assert(
 );
 ```
 
-Your `addAt` method should increase the length of the linked list by one for each new node added to the linked list.
+`addAt` method ของคุณควรเพิ่มความยาวของลิสต์ที่เชื่อมโยงที่ละหนึ่งต่อ node ใหม่แต่ละ node ที่ถูกเพิ่มเข้าไปยังลิสต์นั้น
 
 ```js
 assert(
@@ -44,7 +44,7 @@ assert(
 );
 ```
 
-Your `addAt` method should return `false` if a node was unable to be added.
+`addAt` method ของคุณควร return `false` เมื่อไม่สามารถเพิ่ม node เข้าไปได้
 
 ```js
 assert(

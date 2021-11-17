@@ -8,11 +8,13 @@ dashedName: adjacency-list
 
 # --description--
 
+กราฟสามารถถูกแสดงได้หลายวิธี ในที่นี้เราจะอธิบายวิธีหนึ่งซึ่งเรียกว่า <dfn>adjacency list</dfn> หรือ รายการที่อยู่ติดกันเป็นรายการหัวข้อย่อย (bulleted list ) โดยพื้นฐานแล้ว โดยด้านซ้ายคือ node และด้านขวาแสดงรายการ node อื่นๆ ทั้งหมดที่เชื่อมต่ออยู่ ด้านล่างนี้คือการแสดงรายการที่อยู่ติดกัน
+
 Graphs can be represented in different ways. Here we describe one way, which is called an <dfn>adjacency list</dfn>. An adjacency list is essentially a bulleted list where the left side is the node and the right side lists all the other nodes it's connected to. Below is a representation of an adjacency list.
 
 <blockquote>Node1: Node2, Node3<br>Node2: Node1<br>Node3: Node1</blockquote>
 
-Above is an undirected graph because `Node1` is connected to `Node2` and `Node3`, and that information is consistent with the connections `Node2` and `Node3` show. An adjacency list for a directed graph would mean each row of the list shows direction. If the above was directed, then `Node2: Node1` would mean there the directed edge is pointing from `Node2` towards `Node1`. We can represent the undirected graph above as an adjacency list by putting it within a JavaScript object.
+ด้านบนเป็นกราฟที่ไม่มีทิศทางเนื่องจาก `Node1` เชื่อมต่อกับ `Node2` และ `Node3` และข้อมูลนั้นสอดคล้องกับการเชื่อมต่อ `Node2` และ `Node3` รายการที่อยู่ติดกันสำหรับกราฟที่มีทิศทางจะหมายถึงแต่ละแถวของรายการแสดงทิศทาง หากกำหนดทิศทางข้างต้นแล้ว `Node2: Node1` จะหมายความว่าขอบที่ชี้ทิศทางนั้นชี้จาก `Node2` ไปที่ `Node1` เราสามารถแสดงกราฟที่ไม่มีทิศทางด้านบนเป็นรายการที่อยู่ติดกันโดยใส่ไว้ใน JavaScript object
 
 ```js
 var undirectedG = {
@@ -22,7 +24,7 @@ var undirectedG = {
 };
 ```
 
-This can also be more simply represented as an array where the nodes just have numbers rather than string labels.
+นอกจากนี้มันยังถูกแสดงได้ง่ายกว่าโดยการแสดงเป็น array ที่ node ต่างๆ นั้นมี number แทนที่จะเป็น string
 
 ```js
 var undirectedGArr = [
@@ -34,17 +36,17 @@ var undirectedGArr = [
 
 # --instructions--
 
-Create a social network as an undirected graph with 4 nodes/people named `James`, `Jill`, `Jenny`, and `Jeff`. There are edges/relationships between James and Jeff, Jill and Jenny, and Jeff and Jenny.
+สร้างโซเชียลเน็ตเวิร์กเป็นกราฟแบบไม่มีทิศทางโดยมี 4 โหนด/คนชื่อ `James`, `Jill`, `Jenny` และ `Jeff` มีขอบ/ความสัมพันธ์ระหว่าง James กับ Jeff, Jill และ Jenny และ Jeff และ Jenny
 
 # --hints--
 
-`undirectedAdjList` should only contain four nodes.
+`undirectedAdjList` ควรประกอบไปด้วย 4 node
 
 ```js
 assert(Object.keys(undirectedAdjList).length === 4);
 ```
 
-There should be an edge between `Jeff` and `James`.
+ควรจะมีขอบ (edge) ระหว่าง `Jeff` และ `James`
 
 ```js
 assert(
@@ -53,7 +55,7 @@ assert(
 );
 ```
 
-There should be an edge between `Jill` and `Jenny`.
+ควรจะมีขอบ (edge) ระหว่าง `Jill` และ `Jenny`
 
 ```js
 assert(
@@ -62,7 +64,7 @@ assert(
 );
 ```
 
-There should be an edge between `Jeff` and `Jenny`.
+ควรจะมีขอบ (edge) ระหว่าง `Jeff` และ `Jenny`
 
 ```js
 assert(

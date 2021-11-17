@@ -8,11 +8,11 @@ dashedName: find-the-minimum-and-maximum-value-in-a-binary-search-tree
 
 # --description--
 
-In this challenge you will define two methods, `findMin` and `findMax`. These methods should return the minimum and maximum value held in the binary search tree (don't worry about adding values to the tree for now, we have added some in the background). If you get stuck, reflect on the invariant that must be true for binary search trees: each left subtree is less than or equal to its parent and each right subtree is greater than or equal to its parent. Let's also say that our tree can only store integer values. If the tree is empty, either method should return `null`.
+ในแบบทดสอบนี้ คุณจะต้องสร้างสอง method คือ `findMin` และ `findMax` โดยที่ method เหล่านี้ควร return ค่าต่ำสุดและสูงสุดที่เก็บไว้ใน binary search tree (ไม่ต้องกังวลกับการเพิ่มค่าให้กับ tree ในตอนนี้ เราได้เพิ่มบางส่วนในหลังบ้านของเราแล้ว) หากคุณติดขัดให้พิจารณาค่าคงที่ที่ต้องเป็นจริงสำหรับ binary search trees: แต่ละ	 tree ย่อยทางซ้ายมีค่าน้อยกว่าหรือเท่ากับ parent  และ tree ย่อยทางขวาแต่ละ tree มากกว่าหรือเท่ากับ parent สมมุติว่าต้นไม้ของเราสามารถเก็บได้เฉพาะค่าจำนวนเต็มเท่านั้น หาก tree ว่างเปล่า method ทั้งสองควร return ค่าเป็น `null`
 
 # --hints--
 
-The `BinarySearchTree` data structure should exist.
+ควรมีโครงสร้างข้อมูล `BinarySearchTree`
 
 ```js
 assert(
@@ -26,7 +26,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `findMin`.
+binary search tree ควรมี method ที่เรียกว่า `findMin`	
 
 ```js
 assert(
@@ -42,7 +42,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `findMax`.
+binary search tree ควรมี method ที่เรียกว่า `findMax`	
 
 ```js
 assert(
@@ -58,7 +58,7 @@ assert(
 );
 ```
 
-The `findMin` method should return the minimum value in the binary search tree.
+`findMin` method ควร return ค่าน้อยสุดใน binary search tree
 
 ```js
 assert(
@@ -85,7 +85,7 @@ assert(
 );
 ```
 
-The `findMax` method should return the maximum value in the binary search tree.
+`findMax` method ควร return ค่ามากสุดใน binary search tree
 
 ```js
 assert(
@@ -112,7 +112,7 @@ assert(
 );
 ```
 
-The `findMin` and `findMax` methods should return `null` for an empty tree.
+`findMin` และ `findMax` methods ควร return `null` สำหรับ tree ที่ว่างเปล่า
 
 ```js
 assert(

@@ -8,21 +8,21 @@ dashedName: create-an-es6-javascript-map
 
 # --description--
 
-The new version of JavaScript provides us with a built-in Map object which provides much of the functionality we wrote by hand in the last challenge. This Map object, although similar to regular JavaScript objects, provides some useful functionality that normal objects lack. For example, an ES6 Map tracks the insertion order of items that are added to it. Here is a more complete overview of its methods: `.has(key)` returns true or false based on the presence of a key `.get(key)` returns the value associated with a key `.set(key, value)` sets a new key, value pair `.delete(key)` removes a key, value pair `.clear()` removes all key, value pairs `.entries()` returns an array of all the keys in insertion order `.values()` returns an array of all the values in insertion order
+JavaScript เวอร์ชันใหม่มี Map object ในตัวซึ่งมีฟังก์ชันการทำงานส่วนใหญ่ที่เราได้เขียนมาแล้วในแบบทดสอบที่ผ่านมา Map object นี้แม้ว่าจะคล้ายกับ JavaScript object ปกติ แต่ก็มีฟังก์ชันที่มีประโยชน์บางอย่างที่ object ปกติขาดไป ตัวอย่างเช่น ES6 Map ที่ติดตามลำดับการแทรกของรายการที่เพิ่มเข้าไป ลองมาดูภาพรวมที่เข้าใจได้ยิ่งขึ้นของ method: `.has(key)` return ค่า true หรือ false ตามการมีอยู่ของคีย์, `.get(key)` return ค่าที่เกี่ยวข้องกับคีย์, `.set(key, value)` ตั้งค่า key value pair ใหม่, `.delete(key)` ลบ key value pair, `.clear()` ลบ key value pair ทั้งหมด, `.entries()` return ค่า array ของคีย์ทั้งหมดตามลำดับการแทรก, `.values()` return array ของค่าทั้งหมดในลำดับการแทรก
 
 # --instructions--
 
-Define a JavaScript Map object and assign to it a variable called myMap. Add the key, value pair `freeCodeCamp`, `Awesome!` to it.
+กำหนด JavaScript Map object และกำหนดตัวแปรชื่อ myMap ให้กับ object นั้น เพิ่มคีย์และ value pair `freeCodeCamp` `Awesome!` ลงไป
 
 # --hints--
 
-The myMap object should exist.
+ควรมี myMap object
 
 ```js
 assert(typeof myMap === 'object');
 ```
 
-myMap should contain the key value pair `freeCodeCamp`, `Awesome!`.
+myMap ควรมี key value pair `freeCodeCamp` และ `Awesome!` ข้างใน
 
 ```js
 assert(myMap.get('freeCodeCamp') === 'Awesome!');

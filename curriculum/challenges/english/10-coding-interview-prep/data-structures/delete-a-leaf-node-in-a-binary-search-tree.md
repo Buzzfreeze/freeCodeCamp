@@ -8,15 +8,15 @@ dashedName: delete-a-leaf-node-in-a-binary-search-tree
 
 # --description--
 
-This is the first of three challenges where we will implement a more difficult operation in binary search trees: deletion. Deletion is difficult because removing nodes breaks links in the tree. These links must be carefully reestablished to ensure the binary tree structure is maintained. For some deletions, this means the tree must be rearranged. In general, you will encounter one of three cases when trying to delete a node: Leaf Node: The target to delete has zero children. One Child: The target to delete only has one child. Two Children: The target to delete has two child nodes. Removing a leaf node is easy, we simply remove it. Deleting a node with one child is also relatively easy, we simply remove it and link its parent to child of the node we deleted. Removing a node with two children is more difficult, however, because this creates two child nodes that need to be reconnected to the parent tree. We'll see how to deal with this case in the third challenge. Additionally, you need to be mindful of some edge cases when handling deletion. What if the tree is empty? What if the node to delete is the root node? What if there are only two elements in the tree? For now, let's handle the first case where we delete a leaf node.
+นี่เป็นแบบทดสอบแรกจากสามข้อที่เราจะลอง operation ที่ยากขึ้นใน binary search tree: การลบทำได้ยากเนื่องจากการลบ node จะทำลายลิงก์ใน tree ลิงก์เหล่านี้ต้องได้รับการสร้างขึ้นใหม่อย่างระมัดระวังเพื่อให้แน่ใจว่า binary search tree ยังคงอยู่ สำหรับการลบบางครั้งนั้นอาจจะจำเป็นต้องจัดเรียง tree ใหม่ โดยทั่วไปคุณจะพบหนึ่งในสามกรณีต่อไปนี้เมื่อพยายามลบ node : Leaf Node: เป้าหมายที่จะลบมี child เป็นศูนย์, One Child: เป้าหมายที่จะลบมีเพียง child เดียว, Two Children: เป้าหมายที่จะลบมีสอง child node  การลบ  leaf node เป็นเรื่องง่ายเราเพียงแค่ลบออกธรรมดาๆ การลบ node ที่มี child เดียวนั้นค่อนข้างง่ายเช่นกัน เราเพียงแค่ลบ node ออกและเชื่อมโยง parent node กับ child node ของ node ที่เราลบ และการลบ node ที่มีสอง child นั้นยากกว่า เนื่องจากสิ่งนี้จะสร้าง child node สอง node ที่จำเป็นต้องเชื่อมต่อกับ parent tree อีกครั้ง เราจะดูวิธีจัดการกับกรณีนี้ในแบบทดสอบที่สาม นอกจากนี้คุณต้องคำนึงถึง edge บางกรณีเมื่อจัดการกับการลบ เกิดอะไรขึ้นถ้า tree ว่างเปล่า? เกิดอะไรขึ้นถ้า node ที่จะลบเป็น root node? เกิดอะไรขึ้นถ้ามีเพียงสอง element ใน tree? แต่ตอนนี้เรามาจัดการกับกรณีแรกที่เราลบ leaf node กัน
 
 # --instructions--
 
-Create a method on our binary tree called `remove`. We'll build the logic for our deletion operation in here. First, you'll want to create a function within remove that finds the node we are trying to delete in the current tree. If the node is not present in the tree, `remove` should return `null`. Now, if the target node is a leaf node with no children, then the parent reference to it should be set to `null`. This effectively deletes the node from the tree. To do this, you will have to keep track of the parent of the node we are trying to delete as well. It will also be useful to create a way to track the number of children the target node has, as this will determine which case our deletion falls under. We will handle the second and third cases in the next challenges. Good luck!
+สร้าง method บน binary tree ของเราที่เรียกว่า `remove` เราจะสร้าง logic สำหรับการดำเนินการลบของเราที่นี่ ขั้นแรก คุณจะต้องสร้างฟังก์ชันภายใน remove ซึ่งใช้ค้นหา node ที่เราพยายามจะลบใน tree ปัจจุบัน หากไม่มี node ใน tree นั้น `remove` ควร return ค่า `null` ตอนนี้ หาก node เป้าหมายเป็น leaf node ที่ไม่มี child แล้ว parent node ของมั้นควรถูกตั้งค่าเป็น `null` สิ่งนี้จะลบ node ออกจาก tree อย่างมีประสิทธิภาพ ในการทำเช่นนี้คุณจะต้องติดตาม parent ของ node ที่เราพยายามจะลบด้วย นอกจากนี้ยังเป็นประโยชน์ในการสร้างวิธีการติดตามจำนวน child ที่ node เป้าหมายมี เนื่องจากจะเป็นตัวกำหนดว่าการลบของเราอยู่ภายใต้กรณีใด เราจะจัดการกับกรณีที่สองและสามในแบบทดสอบครั้งต่อไป ขอให้โชคดี!
 
 # --hints--
 
-The `BinarySearchTree` data structure should exist.
+ควรมีโครงสร้างข้อมูล `BinarySearchTree`
 
 ```js
 assert(
@@ -30,7 +30,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `remove`.
+binary search tree ควรมี method ที่เรียกว่า `remove`
 
 ```js
 assert(
@@ -46,7 +46,7 @@ assert(
 );
 ```
 
-Trying to remove an element that does not exist should return `null`.
+การพยายามที่จะลบ element ที่ไม่มีอยู่นั้นควร return `null`
 
 ```js
 assert(
@@ -65,7 +65,7 @@ assert(
 );
 ```
 
-If the root node has no children, deleting it should set the root to `null`.
+ถ้า root node ไม่มี child การลบมันควรจะตั้งค่า root เป็น `null`
 
 ```js
 assert(
@@ -86,7 +86,7 @@ assert(
 );
 ```
 
-The `remove` method should remove leaf nodes from the tree.
+`remove` method ควรลบ leaf node จาก tree
 
 ```js
 assert(

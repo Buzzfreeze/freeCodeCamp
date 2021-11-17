@@ -8,11 +8,11 @@ dashedName: invert-a-binary-tree
 
 # --description--
 
-Here will we create a function to invert a binary tree. Given a binary tree, we want to produce a new tree that is equivalently the mirror image of this tree. Running an inorder traversal on an inverted tree will explore the nodes in reverse order when compared to the inorder traversal of the original tree. Write a method to do this called `invert` on our binary tree. Calling this method should invert the current tree structure. Ideally, we would like to do this in-place in linear time. That is, we only visit each node once and we modify the existing tree structure as we go, without using any additional memory. Good luck!
+ที่นี่เราจะสร้างฟังก์ชันเพื่อสลับ binary tree จาก binary tree เราต้องการสร้าง tree ใหม่ที่มีคุรสมบัติเทียบเท่ากับ tree นี้ การเรียกใช้การสำรวจผ่านแบบไม่เรียงลำดับบน tree ที่กลับหัวจะสำรวจ node ในลำดับที่กลับกันเมื่อเปรียบเทียบกับการสำรวจผ่านแบบไม่เรียงลำดับของ tree ดั้งเดิม เขียน method ที่เรียกว่า `invert` บน binary treeของเรา การเรียก method นี้ควรกลับโครงสร้าง tree ปัจจุบัน ตามหลักการแล้วเราต้องการทำสิ่งนี้ในตำแหน่งในเวลาเชิงเส้น นั่นคือเราเข้าหาแต่ละ node เพียงครั้งเดียวและเราปรับเปลี่ยนโครงสร้างต้นไม้ที่มีอยู่ในขณะที่เราเข้าหาโดยไม่ต้องใช้หน่วยความจำเพิ่มเติม ขอให้โชคดี!
 
 # --hints--
 
-The `BinarySearchTree` data structure should exist.
+ควรมีโครงสร้างข้อมูล `BinarySearchTree`
 
 ```js
 assert(
@@ -26,7 +26,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `invert`.
+binary search tree ควรมี method ที่เรียกว่า `invert`
 
 ```js
 assert(
@@ -42,7 +42,7 @@ assert(
 );
 ```
 
-The `invert` method should correctly invert the tree structure.
+`invert` method ควรกลับโครงสร้างของ tree อย่างถูกต้อง
 
 ```js
 assert(
@@ -70,7 +70,7 @@ assert(
 );
 ```
 
-Inverting an empty tree should return `null`.
+การกลับ tree ที่ว่างเปล่าควร return `null`
 
 ```js
 assert(

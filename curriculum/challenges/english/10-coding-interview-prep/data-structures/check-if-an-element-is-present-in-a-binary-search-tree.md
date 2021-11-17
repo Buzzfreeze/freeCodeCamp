@@ -8,15 +8,17 @@ dashedName: check-if-an-element-is-present-in-a-binary-search-tree
 
 # --description--
 
-Now that we have a general sense of what a binary search tree is let's talk about it in a little more detail. Binary search trees provide logarithmic time for the common operations of lookup, insertion, and deletion in the average case, and linear time in the worst case. Why is this? Each of those basic operations requires us to find an item in the tree (or in the case of insertion to find where it should go) and because of the tree structure at each parent node we are branching left or right and effectively excluding half the size of the remaining tree. This makes the search proportional to the logarithm of the number of nodes in the tree, which creates logarithmic time for these operations in the average case. Ok, but what about the worst case? Well, consider constructing a tree from the following values, adding them left to right: `10`, `12`, `17`, `25`. Following our rules for a binary search tree, we will add `12` to the right of `10`, `17` to the right of this, and `25` to the right of this. Now our tree resembles a linked list and traversing it to find `25` would require us to traverse all the items in linear fashion. Hence, linear time in the worst case. The problem here is that the tree is unbalanced. We'll look a little more into what this means in the following challenges.
+ตอนนี้เรามีความรู้ทั่วไปแล้วว่าแผนผังการค้นหาแบบไบนารีคืออะไร เรามาพูดถึงรายละเอียดเพิ่มเติมกันเล็กน้อย แผนผังการค้นหาแบบไบนารีจะให้เวลาลอการิทึมสำหรับการดำเนินการทั่วไปของการค้นหา การแทรก และการลบในกรณีเฉลี่ย และเวลาเชิงเส้นในกรณีที่เลวร้ายที่สุด ทำไมถึงเป็นเช่นนี้? การดำเนินการพื้นฐานแต่ละรายการต้องการให้เราค้นหารายการใน tree  (หรือในกรณีที่มีการแทรกเพื่อค้นหาตำแหน่งที่ควรแทรกเข้าไป) และเนื่องจากโครงสร้าง tree ที่  parent node แต่ละ node  จะแยกกิ่งไปทางซ้ายหรือขวาอย่างมีประสิทธิภาพ โดยไม่รวมขนาดครึ่งหนึ่ง ของ tree ที่เหลือ ทำให้การค้นหาเป็นสัดส่วนกับลอการิทึมของจำนวน node ใน tree  ซึ่งจะสร้างเวลาลอการิทึมสำหรับการดำเนินการเหล่านี้ในกรณีเฉลี่ย แล้วกรณีที่เลวร้ายที่สุดล่ะ? ลองพิจารณาสร้าง tree จากค่าต่อไปนี้ โดยเพิ่มจากซ้ายไปขวา: `10`, `12`, `17`, `25` ตามกฎของเราสำหรับแผนผังการค้นหาแบบไบนารี เราจะเพิ่ม `12` ทางด้านขวาของ `10`, `17` ทางด้านขวาของรายการนี้ และ `25` ทางด้านขวาต่อท้ายของรายการนี้ ตอนนี้ tree ของเราคล้ายกับรายการที่เชื่อมโยงกัน และการสำรวจเพื่อหา `25` จะทำให้เราต้องสำรวจรายการทั้งหมดในลักษณะเชิงเส้น ดังนั้นนี่ก็คือเวลาเชิงเส้นในกรณีที่เลวร้ายที่สุด เราจะมาดูในกรณีที่ tree ไม่สมดุลให้มากขึ้นในแบบทดสอบที่จะตามมานี้
 
 # --instructions--
+
+ในแบบทดสอบนี้ เราจะสร้าง utility สำหรับ tree ของเรา เขียน `isPresent` method ซึ่งรับค่าจำนวนเต็มเป็นอินพุตและ return ค่าบูลีนสำหรับการมีอยู่หรือไม่มีของค่านั้นในแผนผังการค้นหาแบบไบนารี
 
 In this challenge, we will create a utility for our tree. Write a method `isPresent` which takes an integer value as input and returns a boolean value for the presence or absence of that value in the binary search tree.
 
 # --hints--
 
-The `BinarySearchTree` data structure should exist.
+ควรมีโครงสร้างข้อมูล `BinarySearchTree`
 
 ```js
 assert(
@@ -30,7 +32,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `isPresent`.
+แผนผังการค้นหาแบบไบนารีควรมี method ชื่อ 
 
 ```js
 assert(
@@ -46,7 +48,7 @@ assert(
 );
 ```
 
-The `isPresent` method should correctly check for the presence or absence of elements added to the tree.
+`isPresent` method ควรตรวจสอบการมีหรือไม่มีของ element ที่เพิ่มไปยัง tree อย่างถูกต้อง
 
 ```js
 assert(
@@ -74,7 +76,7 @@ assert(
 );
 ```
 
-`isPresent` should handle cases where the tree is empty.
+`isPresent` ควรสามารถจัดการกรณีที่ tree นั้นว่างได้
 
 ```js
 assert(

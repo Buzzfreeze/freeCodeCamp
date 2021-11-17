@@ -8,15 +8,15 @@ dashedName: delete-a-node-with-two-children-in-a-binary-search-tree
 
 # --description--
 
-Removing nodes that have two children is the hardest case to implement. Removing a node like this produces two subtrees that are no longer connected to the original tree structure. How can we reconnect them? One method is to find the smallest value in the right subtree of the target node and replace the target node with this value. Selecting the replacement in this way ensures that it is greater than every node in the left subtree it becomes the new parent of but also less than every node in the right subtree it becomes the new parent of. Once this replacement is made the replacement node must be removed from the right subtree. Even this operation is tricky because the replacement may be a leaf or it may itself be the parent of a right subtree. If it is a leaf we must remove its parent's reference to it. Otherwise, it must be the right child of the target. In this case, we must replace the target value with the replacement value and make the target reference the replacement's right child.
+การลบ node ที่มีสอง child เป็นกรณีที่ยากที่สุดในเขียนโค้ด การลบ node ในลักษณะนี้จะสร้าง tree ย่อยสอง tree ที่ไม่ได้เชื่อมต่อกับโครงสร้าง tree เดิมอีกต่อไป เราจะเชื่อมต่อมันใหม่ได้อย่างไร วิธีหนึ่งคือการหาค่าที่น้อยที่สุดใน tree ย่อยด้านขวาของ node เป้าหมายและแทนที่ node เป้าหมายด้วยค่านี้ การเลือกการแทนที่ในลักษณะนี้ช่วยให้แน่ใจว่า node มากกว่าทุก node ใน tree ย่อยด้านซ้าย จะกลายเป็น parent ใหม่ แต่ยังน้อยกว่าทุก node ใน tree ย่อยด้านขวา ซึ่งมันจะกลายเป็น parent ใหม่ของพวกมัน เมื่อทำการแทนที่นี้แล้ว  node ทดแทนจะต้องถูกลบออกจาก tree ย่อยด้านขวา แม้การดำเนินการนี้จะยุ่งยากเนื่องจากการแทนที่อาจเป็น leaf หรืออาจเป็น parent ของ tree ย่อยด้านขวา หากเป็น leaf เราต้องลบการอ้างอิงของ parent ออกไปด้วย มิฉะนั้นจะกลายเป็น child ด้านขวาของเป้าหมาย ในกรณีนี้เราต้องแทนที่ค่าเป้าหมายด้วยมูลค่าการแทนที่ และทำให้เป้าหมายอ้างอิงถึงส่วน child ด้านขวาของ node ที่แทนที่
 
 # --instructions--
 
-Let's finish our `remove` method by handling the third case. We've provided some code again for the first two cases. Add some code now to handle target nodes with two children. Any edge cases to be aware of? What if the tree has only three nodes? Once you are finished this will complete our deletion operation for binary search trees. Nice job, this is a pretty hard problem!
+มาทำให้ `remove` method ของเราสำเร็จโดยรับมือกับการจัดการกับกรณีที่สามกัน เราได้ให้โค้ดเริ่มต้นแล้วอีกครั้งจากสองกรณีแรก คราวนี้เรามาเพิ่มโค้ดเพื่อจัดการ node เป้าหมายที่มีสอง child  แล้วจะมีกรณี edge ใด ๆ ที่ควรระวัง? เกิดอะไรขึ้นถ้า tree มีเพียงสาม node ? เมื่อคุณทำเสร็จแล้ว การดำเนินการลบของเราสำหรับ binary search trees จะเสร็จสมบูรณ์ เยี่ยมเลย นี่เป็นโจทย์ที่ค่อนข้างยาก!
 
 # --hints--
 
-The `BinarySearchTree` data structure should exist.
+ควรมีโครงสร้างข้อมูล `BinarySearchTree`
 
 ```js
 assert(
@@ -30,7 +30,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `remove`.
+binary search tree ควรมี method ที่เรียกว่า `remove`
 
 ```js
 assert(
@@ -46,7 +46,7 @@ assert(
 );
 ```
 
-Trying to remove an element that does not exist should return `null`.
+การพยายามที่จะลบ element ที่ไม่มีอยู่ควร return `null`
 
 ```js
 assert(
@@ -62,7 +62,7 @@ assert(
 );
 ```
 
-If the root node has no children, deleting it should set the root to `null`.
+ถ้า root node ไม่มี child การลบมันควรตั้งค่า root เป็น `null`
 
 ```js
 assert(
@@ -80,7 +80,7 @@ assert(
 );
 ```
 
-The `remove` method should remove leaf nodes from the tree.
+`remove` method ควรลบ leaf node ออกจาก tree
 
 ```js
 assert(
@@ -107,7 +107,7 @@ assert(
 );
 ```
 
-The `remove` method should remove nodes with one child.
+`remove` method ควรลบ node ที่ไม่มี child
 
 ```js
 assert(
@@ -133,7 +133,7 @@ assert(
 );
 ```
 
-Removing the root in a tree with two nodes should set the second to be the root.
+การลบ root ใน tree ที่มีสอง node ควรตั้งค่า node ที่สองเป็น root
 
 ```js
 assert(
@@ -155,7 +155,7 @@ assert(
 );
 ```
 
-The `remove` method should remove nodes with two children while maintaining the binary search tree structure.
+`remove` method ควรลบ node ที่มีสอง child และยังคงโครงสร้างเดิมของ binary search tree
 
 ```js
 assert(
@@ -212,7 +212,7 @@ assert(
 );
 ```
 
-The root should be removable on a tree of three nodes.
+Root ควรถูกลบได้บน tree ที่มีสาม node
 
 ```js
 assert(

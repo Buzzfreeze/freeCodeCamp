@@ -8,25 +8,25 @@ dashedName: work-with-nodes-in-a-linked-list
 
 # --description--
 
-Another common data structure you'll run into in computer science is the <dfn>linked list</dfn>. A linked list is a linear collection of data elements, called 'nodes', each of which points to the next. Each <dfn>node</dfn> in a linked list contains two key pieces of information: the `element` itself, and a reference to the next `node`.
+โครงสร้างข้อมูลทั่วไปอีกโครงสร้างหนึ่งที่คุณจะพบในวิทยาการคอมพิวเตอร์คือ <dfn>linked list</dfn> ซึ่ง linked list คือการรวบรวมข้อมูล element เชิงเส้นที่เรียกว่า 'nodes' ซึ่งแต่ละส่วนจะชี้ไปที่รายการถัดไป แต่ละ <dfn>node</dfn> ใน linked list มีข้อมูลสำคัญสองส่วน: `element` ของมันเองและการอ้างอิงถึง `node` ถัดไป
 
-Imagine that you are in a conga line. You have your hands on the next person in the line, and the person behind you has their hands on you. You can see the person straight ahead of you, but they are blocking the view of the other people ahead in line. A node is just like a person in a conga line: they know who they are and they can only see the next person in line, but they are not aware of the other people ahead or behind them.
+ลองนึกภาพว่าคุณอยู่ในแนว conga line คุณจับมือของคุณกับคนต่อไปในแถวและคนข้างหลังคุณใช้มือมาจับคุณ คุณสามารถมองเห็นคนตรงหน้าคุณได้ แต่พวกเขากำลังปิดกั้นมุมมองของคนอื่นต่อไปข้างหน้าในแถว  node ก็เหมือนกับคนใน conga line พวกมันรู้ว่าตัวเองเป็นใครและมองเห็นได้เฉพาะคนถัดไปในแถว แต่ไม่รู้ไม่เห็นถึงคนอื่นที่อยู่ข้างหน้าหรือข้างหลัง
 
 # --instructions--
 
-In our code editor, we've created two nodes, `Kitten` and `Puppy`, and we've manually connected the `Kitten` node to the `Puppy` node.
+ใน code editor ของเรา เราได้สร้างสอง node ขึ้นมา คือ `Kitten` และ `Puppy` และเราก็ได้เชื่อม node `Kiiten` และ node `Puppy` ด้วยตัวเอง
 
-Create a `Cat` and `Dog` node and manually add them to the line.
+ให้สร้าง node `Cat` และ `Dog` และเพิ่มพวกมันด้วยตัวเองไปยังแถวข้อมูล
 
 # --hints--
 
-Your `Puppy` node should have a reference to a `Cat` node.
+`Puppy` node ของคุณควรมีการอ้างอิงไปยัง `Cat` node
 
 ```js
 assert(Puppy.next.element === 'Cat');
 ```
 
-Your `Cat` node should have a reference to a `Dog` node.
+`Cat` node ของคุณควรมีการอ้างอิงไปยัง `Dog` node
 
 ```js
 assert(Cat.next.element === 'Dog');

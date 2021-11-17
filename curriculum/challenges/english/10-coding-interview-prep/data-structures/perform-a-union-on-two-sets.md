@@ -8,13 +8,13 @@ dashedName: perform-a-union-on-two-sets
 
 # --description--
 
-In this exercise we are going to perform a union on two sets of data. We will create a method on our `Set` data structure called `union`. This method should take another `Set` as an argument and return the `union` of the two sets, excluding any duplicate values.
+ในแบบฝึกหัดนี้ เราจะทำการ union ข้อมูลสอง set เข้าด้วยกัน เราจะสร้าง method ในโครงสร้างข้อมูล `Set` ที่เรียกว่า `union` โดยที่ method นี้ควรใช้ `Set` อื่นเป็น argument และ return `union` ของทั้งสอง set  ยกเว้นค่าที่ซ้ำกัน
 
-For example, if `setA = ['a','b','c']` and `setB = ['a','b','d','e']`, then the union of setA and setB is: `setA.union(setB) = ['a', 'b', 'c', 'd', 'e']`.
+ยกตัวอย่างเช่น ถ้าหากมี `setA = ['a','b','c']` และ `setB = ['a','b','d','e']` แล้ว union ของ setA และ setB คือ `setA.union(setB) = ['a', 'b', 'c', 'd', 'e']`
 
 # --hints--
 
-Your `Set` class should have a `union` method.
+`Set` คลาสของคุณควรมี `union` method
 
 ```js
 assert(
@@ -25,7 +25,7 @@ assert(
 );
 ```
 
-The union of a Set containing values ["a", "b", "c"] and a Set containing values ["c", "d"] should return a new Set containing values ["a", "b", "c", "d"].
+Union ของ Set ควรประกอบด้วยค่า ["a", "b", "c"] และ Set ที่ประกอบด้วย ["c", "d"] ซึ่งควรจะได้ผลลัพธ์ของ return Set ใหม่ที่มีค่าเป็น ["a", "b", "c", "d"]
 
 ```js
 assert(

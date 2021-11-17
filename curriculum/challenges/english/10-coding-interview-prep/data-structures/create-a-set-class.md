@@ -8,7 +8,7 @@ dashedName: create-a-set-class
 
 # --description--
 
-In this exercise we are going to create a class named `Set` to emulate an abstract data structure called "set". A set is like an array, but it cannot contain duplicate values. The typical use for a set is to simply check for the presence of an item. We can see how the ES6 `Set` object works in the example below:
+ในแบบฝึกหัดนี้ เราจะสร้างคลาสที่ชื่อว่า `Set` เพื่อจำลอง abstract data structure ที่เรียกว่า "set" Set เป็นเหมือน array แต่ไม่สามารถมีค่าที่ซ้ำกันได้ การใช้งานทั่วไปสำหรับชุดคือการตรวจสอบว่ามีรายการนั้นอยู่หรือไม่ เราสามารถดูว่า `Set` object ของ ES6 ทำงานอย่างไรในตัวอย่างด้านล่าง:
 
 ```js
 const set1 = new Set([1, 2, 3, 5, 5, 2, 0]);
@@ -20,17 +20,17 @@ console.log(set1.has(6));
 // output: false
 ```
 
-First, we will create an add method that adds a value to our set collection as long as the value does not already exist in the set. Then we will create a remove method that removes a value from the set collection if it already exists. And finally, we will create a size method that returns the number of elements inside the set collection.
+ขั้นแรก เราจะสร้าง add method ที่เพิ่มค่าให้กับคอลเลกชัน set ของเรา ตราบใดที่ยังไม่มีค่านั้นอยู่ใน set นี้อยู่แล้ว จากนั้นเราจะสร้าง remove method ที่ลบค่าออกจากคอลเลกชัน set หากมีอยู่แล้ว และสุดท้าย เราจะสร้าง size method ที่ return จำนวน element ภายในคอลเลกชัน set
 
 # --instructions--
 
-Create an `add` method that adds a unique value to the set collection and returns `true` if the value was successfully added and `false` otherwise.
+สร้าง `add` method ที่เพิ่มค่าที่ไม่ซ้ำกันให้กับคอลเล็กชัน set และ return `true` หากเพิ่มค่าสำเร็จและ `false` หากไม่เป็นเช่นนั้น
 
-Create a `remove` method that accepts a value and checks if it exists in the set. If it does, then this method should remove it from the set collection, and return `true`. Otherwise, it should return `false`. Create a `size` method that returns the size of the set collection.
+สร้าง `remove` method ที่ยอมรับค่าและตรวจสอบว่ามีอยู่ใน set หรือไม่ หากเป็นเช่นนั้น method นี้ควรลบออกจากคอลเล็กชัน set และ return เป็น `true` มิฉะนั้นควร return ค่าเป็น `false` สร้าง `size` method ที่ส่งคืนขนาดของคอลเล็กชัน set
 
 # --hints--
 
-Your `Set` class should have an `add` method.
+`Set` class ของคุณควรมี `add` method
 
 ```js
 assert(
@@ -41,7 +41,7 @@ assert(
 );
 ```
 
-Your `add` method should not add duplicate values.
+`add` method ของคุณไม่ควรเพิ่มค่าที่มีอยู่แล้วเข้าไป
 
 ```js
 assert(
@@ -56,7 +56,7 @@ assert(
 );
 ```
 
-Your `add` method should return `true` when a value has been successfully added.
+`add` method ของคุณควร return `true` เมื่อค่าถูกเพิ่มเข้าไปได้สำเร็จ
 
 ```js
 assert(
@@ -68,7 +68,7 @@ assert(
 );
 ```
 
-Your `add` method should return `false` when a duplicate value is added.
+`add` method ควร return `false` เมื่อมีการเพิ่มค่าที่ซ้ำกัน
 
 ```js
 assert(
@@ -81,7 +81,7 @@ assert(
 );
 ```
 
-Your `Set` class should have a `remove` method.
+`Set` class ของคุณควรมี `remove` method
 
 ```js
 assert(
@@ -92,7 +92,7 @@ assert(
 );
 ```
 
-Your `remove` method should only remove items that are present in the set.
+`remove` method ของคุณควรจะลบแค่ค่าที่มีอยู่ set อยู่แล้วเท่านั้น
 
 ```js
 assert.deepEqual(
@@ -107,7 +107,7 @@ assert.deepEqual(
 );
 ```
 
-Your `remove` method should remove the given item from the set.
+`remove` method ของคุณควรลบรายการที่กำหนดออกจาก set
 
 ```js
 assert(
@@ -122,7 +122,7 @@ assert(
 );
 ```
 
-Your `Set` class should have a `size` method.
+`Set` class ของคุณควรมี `size` method
 
 ```js
 assert(
@@ -133,7 +133,7 @@ assert(
 );
 ```
 
-The `size` method should return the number of elements in the collection.
+`size` method ควร return จำนวนของ element ในคอลเลกชันนั้น
 
 ```js
 assert(

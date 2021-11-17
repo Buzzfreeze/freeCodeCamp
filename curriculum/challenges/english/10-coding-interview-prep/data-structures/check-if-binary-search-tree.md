@@ -8,17 +8,17 @@ dashedName: check-if-tree-is-binary-search-tree
 
 # --description--
 
-Since you already know what a binary search tree is, this challenge will establish how it is you can tell that a tree is a binary search tree or not.
+เนื่องจากคุณรู้อยู่แล้วว่าแผนผังการค้นหาแบบไบนารีคืออะไร แบบทดสอบนี้จะสร้างวิธีการที่คุณสามารถบอกได้ว่า tree เป็น tree การค้นหาแบบไบนารีหรือไม่
 
-The main distinction of a binary search tree is that the nodes are ordered in an organized fashion. Nodes have at most 2 child nodes (placed to the right and/or left) based on if the child node's value is greater than or equal to (right) or less than (left) the parent node.
+ความแตกต่างที่สำคัญของแผนผังการค้นหาแบบไบนารีคือ node ต่างๆ ได้รับการจัดลำดับอย่างเป็นระเบียบ node มี child node ไม่เกิน 2 node (วางไว้ทางด้านขวาและ/หรือซ้าย) ขึ้นอยู่กับว่าค่าของ node ย่อยมากกว่าหรือเท่ากับ (ขวา) หรือน้อยกว่า (ซ้าย) parent node หรือไม่
 
 # --instructions--
 
-In this challenge, you will create a utility for your tree. Write a JavaScript method `isBinarySearchTree` which takes a tree as an input and returns a boolean value for whether the tree is a binary search tree or not. Use recursion whenever possible.
+ในแบบทดสอบนี้ คุณจะต้องสร้าง utility สำหรับ tree ของคุณ เขียน JavaScript method `isBinarySearchTree` ซึ่งรับ tree เป็นอินพุตและ return ค่าบูลีนไม่ว่าทรีจะเป็น tree การค้นหาแบบไบนารีหรือไม่ ใช้การเรียกซ้ำทุกครั้งที่ทำได้
 
 # --hints--
 
-Your Binary Search Tree should return true when checked with `isBinarySearchTree()`.
+Binary Search Tree ควร return ค่าเป็น true เมื่อได้รับการตรวจสอบจาก `isBinarySearchTree()`
 
 ```js
 assert(

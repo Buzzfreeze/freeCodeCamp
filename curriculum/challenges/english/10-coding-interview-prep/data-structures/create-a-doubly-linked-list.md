@@ -8,19 +8,19 @@ dashedName: create-a-doubly-linked-list
 
 # --description--
 
-All of the linked lists we've created so far are singly linked lists. Here, we'll create a <dfn>doubly linked list</dfn>. As the name implies, nodes in a doubly linked list have references to the next and previous node in the list.
+รายการที่เชื่อมโยงทั้งหมดที่เราได้สร้างไว้เป็นรายการที่เชื่อมโยงเดี่ยว ทีนี้เราจะสร้าง <dfn>doubly linked list</dfn> (รายการเชื่อโยงคู่) ตามความหมายของชื่อ node ในรายการที่เชื่อมโยงคู่มีการอ้างอิงไปยัง node ถัดไปและ node ก่อนหน้าในรายการ
 
-This allows us to traverse the list in both directions but it also requires more memory to be used because every node must contain an additional reference to the previous node in the list.
+ซึ่งช่วยให้เราสามารถสำรวจรายการในทั้งสองทิศทาง แต่ยังต้องใช้หน่วยความจำมากขึ้น เนื่องจากทุก node ต้องมีการอ้างอิงเพิ่มเติมไปยัง node ก่อนหน้าในรายการ
 
 # --instructions--
 
-We've provided a `Node` object and started our `DoublyLinkedList`. Let's add two methods to our doubly linked list called `add` and `remove`. The `add` method should add the given element to the list while the `remove` method should remove all occurrences of a given element in the list.
+เราได้จัดเตรียม `Node` object และเริ่ม `DublyLinkedList` ของเรา มาเพิ่มสอง method ในรายการที่เชื่อมโยงคู่ของเราที่เรียกว่า `add` และ `remove` โดยที่  `add` method ควรเพิ่ม element ที่กำหนดในรายการ ขณะที่ `remove` method ควรลบ element ที่เกิดขึ้นทั้งหมดที่ระบุในรายการ
 
-Be careful to handle any possible edge cases when writing these methods, such as deletions for the first or last element. Also, removing any item on an empty list should return `null`.
+โปรดใช้ความระมัดระวังในการจัดการกรณีขอบใดๆ ที่อาจเกิดขึ้นเมื่อเขียน method เหล่านี้ เช่น การลบ element แรกหรือ element สุดท้าย นอกจากนี้ การลบรายการใดๆ ในรายการว่างควร return `null`
 
 # --hints--
 
-The DoublyLinkedList data structure should exist.
+ควรมีโครงสร้างข้อมูล DoublyLinkedList
 
 ```js
 assert(
@@ -34,7 +34,7 @@ assert(
 );
 ```
 
-The DoublyLinkedList should have a method called add.
+DoublyLinkedList ควรมี method ชื่อว่า add
 
 ```js
 assert(
@@ -51,7 +51,7 @@ assert(
 );
 ```
 
-The DoublyLinkedList should have a method called remove.
+DoublyLinkedList ควรมี method ชื่อว่า remove
 
 ```js
 assert(
@@ -68,7 +68,7 @@ assert(
 );
 ```
 
-Removing an item from an empty list should return null.
+การลบรายการใดๆ ออกจากลิสต์ที่ว่างควร return null
 
 ```js
 assert(
@@ -82,7 +82,7 @@ assert(
 );
 ```
 
-The add method should add items to the list.
+Add method ควรเพิ่มรายการเข้าไปยังลิสต์
 
 ```js
 assert(
@@ -99,7 +99,7 @@ assert(
 );
 ```
 
-Each node should keep track of the previous node.
+แต่ละ node ควรติดตาม node ก่อนหน้า
 
 ```js
 assert(
@@ -116,7 +116,7 @@ assert(
 );
 ```
 
-The first item should be removable from the list.
+รายการแรกควรสามารถถูกลบออกจากลิสต์ได้
 
 ```js
 assert(
@@ -134,7 +134,7 @@ assert(
 );
 ```
 
-The last item should be removable from the list.
+รายการสุดท้ายควรสามารถถูกลบออกจากลิสต์ได้
 
 ```js
 assert(

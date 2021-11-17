@@ -8,31 +8,31 @@ dashedName: depth-first-search
 
 # --description--
 
-Similar to <dfn>breadth-first search</dfn>, here we will learn about another graph traversal algorithm called <dfn>depth-first search</dfn>.
+ทีนี้เราจะมาเรียนเกี่ยวกับ graph traversal algorithm อีกอย่างที่เรียกว่า <dfn>depth-first search</dfn> ซึ่งคล้ายกันกับ <dfn>breadth-first search</dfn>
 
-Whereas the breadth-first search searches incremental edge lengths away from the source node, <dfn>depth-first search</dfn> first goes down a path of edges as far as it can.
+ในขณะที่ breadth-first search จะค้นหาความยาวของ edge ที่เพิ่มขึ้นจาก node ต้นทาง แต่ <dfn>depth-first search</dfn> จะลงไปตามเส้นทางของ edge ให้ไกลที่สุดเท่าที่จะทำได้
 
-Once it reaches one end of a path, the search will backtrack to the last node with an un-visited edge path and continue searching.
+เมื่อถึงจุดสิ้นสุดของเส้นทาง การค้นหาจะย้อนรอยไปยัง node สุดท้ายที่มีเส้นทาง edge ที่ยังไม่ได้ไปค้นหาและทำการค้นหาต่อไป
 
-The animation below shows how the algorithm works. The algorithm starts with the top node and visits the nodes in the numbered order.
+ภาพเคลื่อนไหวด้านล่างแสดงวิธีการทำงานของอัลกอริทึม อัลกอริทึมเริ่มต้นด้วย node บนสุดและไปที่ node อื่นๆ 
 
 <img class='img-responsive' src='https://camo.githubusercontent.com/aaad9e39961daf34d967c616edeb50abf3bf1235/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f372f37662f44657074682d46697273742d5365617263682e676966'>
 
-Notice how, unlike breadth-first search, every time a node is visited, it doesn't visit all of its neighbors. Instead, it first visits one of its neighbors and continues down that path until there are no more nodes to be visited on that path.
+สังเกตว่าทุกครั้งที่มีการค้นหาไปยัง node   มันจะไม่ไปค้นหา node ใกล้เคียงทั้งหมด ซึ่งแตกต่างจาก breadth-first search แต่จะไปค้นหาไปยัง node ใกล้เคียงที่สุดหนึ่ง node ก่อน และค้นหาต่อไปตามเส้นทางนั้นจนกว่าจะไม่มี node อื่นให้ค้นหาบนเส้นทางนั้น
 
-To implement this algorithm, you'll want to use a stack. A stack is an array where the last element added is the first to be removed. This is also known as a <dfn>Last-In-First-Out</dfn> data structure. A stack is helpful in depth-first search algorithms because, as we add neighbors to the stack, we want to visit the most recently added neighbors first and remove them from the stack.
+ในการใช้อัลกอริทึมนี้คุณจะต้องใช้ stack ซึ่งคือ array ที่ element สุดท้ายที่เพิ่มเข้ามาเป็น element แรกที่จะถูกลบออก ซึ่งเรียกอีกอย่างว่าโครงสร้างข้อมูล <dfn>Last-In-First-Out</dfn> stack มีประโยชน์ในอัลกอริธึม depth-first search เนื่องจากเมื่อเราเพิ่ม node ใหม่ stack เราต้องการค้นหา node ที่ถูกเพิ่มเข้ามาล่าสุดก่อนหน้านี้และลบออกจาก stack
 
-A simple output of this algorithm is a list of nodes which are reachable from a given node. Therefore, you'll also want to keep track of the nodes you visit.
+เอาต์พุตอย่างง่ายของอัลกอริธึมนี้คือลิสต์ของ node ที่สามารถเข้าถึงได้จาก node ที่กำหนด ดังนั้นคุณจะต้องติดตาม node ที่คุณค้นหาด้วย
 
 # --instructions--
 
-Write a function `dfs()` that takes an undirected, adjacency matrix `graph` and a node label `root` as parameters. The node label will just be the numeric value of the node between `0` and `n - 1`, where `n` is the total number of nodes in the graph.
+เขียนฟังก์ชัน `dfs()` ที่รับ undirected, adjacency matrix `graph` และ label node  `root` เป็นพารามิเตอร์ ซึ่ง node label นี้จะเป็นค่าตัวเลขของ node ระหว่าง `0` และ `n – 1` โดยที่ `n` คือจำนวน node ทั้งหมดในกราฟ
 
-Your function should output an array of all nodes reachable from `root`.
+ฟังก์ชันของคุณควรส่ง output เป็น array ของ node ทั้งหมดที่เข้าถึงได้จาก "รูท"
 
 # --hints--
 
-The input graph `[[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0]]` with a start node of `1` should return an array with `0`, `1`, `2`, and `3`.
+ให้ใส่ input graph `[[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0]]` ที่มี node เริ่มต้นด้วย `1` ควร return array ที่มีค่า `0`, `1`, `2`, และ `3`
 
 ```js
 assert.sameMembers(
@@ -49,7 +49,7 @@ assert.sameMembers(
 );
 ```
 
-The input graph `[[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0]]` with a start node of `1` should return an array with four elements.
+ให้ใส่ input graph `[[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0]]` ที่มี node เริ่มต้นด้วย `1` ควร return array ที่มี 4 element
 
 ```js
 assert(
@@ -65,7 +65,7 @@ assert(
 );
 ```
 
-The input graph `[[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 0, 0]]` with a start node of `3` should return an array with `3`.
+ให้ใส่ input graph `[[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 0, 0]]` ที่มี node เริ่มต้นด้วย `3` ควร return array ที่มี ค่า `3`
 
 ```js
 assert.sameMembers(
@@ -82,7 +82,7 @@ assert.sameMembers(
 );
 ```
 
-The input graph `[[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 0, 0]]` with a start node of `3` should return an array with one element.
+ให้ใส่ input graph `[[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 0, 0]]` ที่มี node เริ่มต้นด้วย `3` ควร return array ที่มี  1 element
 
 ```js
 assert(
@@ -98,7 +98,7 @@ assert(
 );
 ```
 
-The input graph `[[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]]` with a start node of `3` should return an array with `2` and `3`.
+ให้ใส่ input graph `[[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]]` ที่มี node เริ่มต้นด้วย `3` ควร return array ที่มี  ค่า `2` และ `3`
 
 ```js
 assert.sameMembers(
@@ -115,7 +115,7 @@ assert.sameMembers(
 );
 ```
 
-The input graph `[[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]]` with a start node of `3` should return an array with two elements.
+ให้ใส่ input graph `[[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]]` ที่มี node เริ่มต้นด้วย `3` ควร return array ที่มี   2 element
 
 ```js
 assert(
@@ -131,7 +131,7 @@ assert(
 );
 ```
 
-The input graph `[[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]]` with a start node of `0` should return an array with `0` and `1`.
+ให้ใส่ input graph `[[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]]` ที่มี node เริ่มต้นด้วย `0` ควร return array ที่มี   ค่า `0` และ `1`
 
 ```js
 assert.sameMembers(
@@ -148,7 +148,7 @@ assert.sameMembers(
 );
 ```
 
-The input graph `[[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]]` with a start node of `0` should return an array with two elements.
+ให้ใส่ input graph `[[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]]` ที่มี node เริ่มต้นด้วย `0` ควร return array ที่มี   2 element
 
 ```js
 assert(

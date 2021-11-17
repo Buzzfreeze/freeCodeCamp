@@ -8,15 +8,15 @@ dashedName: delete-a-node-with-one-child-in-a-binary-search-tree
 
 # --description--
 
-Now that we can delete leaf nodes let's move on to the second case: deleting a node with one child. For this case, say we have a tree with the following nodes 1 — 2 — 3 where 1 is the root. To delete 2, we simply need to make the right reference in 1 point to 3. More generally to delete a node with only one child, we make that node's parent reference the next node in the tree.
+ตอนนี้เราสามารถลบ leaf node ได้แล้ว ไปต่อที่กรณีที่สองกันเลย: การลบ node ที่มีหนึ่ง child สำหรับกรณีนี้สมมติว่าเรามี tree ที่มี node ต่อไปนี้ 1 — 2 — 3 โดยที่ 1 คือ root ในการลบ 2 เราเพียงแค่ต้องทำการอ้างอิงที่ถูกต้องใน 1 จุดถึง 3 โดยทั่วไปแล้วในการลบ node ที่มีเพียง child เดียว เราทำให้ node หลักนั้นอ้างอิง node ถัดไปใน tree 
 
 # --instructions--
 
-We've provided some code in our `remove` method that accomplishes the tasks from the last challenge. We find the target to delete and its parent and define the number of children the target node has. Let's add the next case here for target nodes with only one child. Here, we'll have to determine if the single child is a left or right branch in the tree and then set the correct reference in the parent to point to this node. In addition, let's account for the case where the target is the root node (this means the parent node will be `null`). Feel free to replace all the starter code with your own as long as it passes the tests.
+เราได้จัดเตรียมโค้ดบางส่วนไว้ใน `remove` method ของเราซึ่งทำงานได้ดีจากแบบทดสอบครั้งที่แล้ว เราค้นหาเป้าหมายที่จะลบและ parent ของมัน และกำหนดจำนวน child ที่ node เป้าหมายมี มาเพิ่มกรณีต่อไปที่นี่สำหรับ node เป้าหมายที่มีเพียง child เดียว ที่นี่เราจะต้องพิจารณาว่า child เดียวเป็นกิ่งซ้ายหรือขวาใน tree จากนั้นตั้งค่าการอ้างอิงที่ถูกต้องใน  parent ให้ชี้ไปที่ node นี้ นอกจากนี้เรามาพิจารณากรณีที่เป้าหมายเป็น root node (ซึ่งหมายความว่า parent node จะเป็น `null`) อย่าลังเลที่จะเขียนโค้ดทับโค้ดเริ่มต้นทั้งหมดด้วยโค้ดของคุณเองตราบเท่าที่มันผ่านการทดสอบ
 
 # --hints--
 
-The `BinarySearchTree` data structure should exist.
+ควรมีโคงสร้างข้อมูล `BinarySearchTree`
 
 ```js
 assert(
@@ -30,7 +30,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `remove`.
+binary search tree ควรมี method ที่เรียกว่า `remove`
 
 ```js
 assert(
@@ -46,7 +46,7 @@ assert(
 );
 ```
 
-Trying to remove an element that does not exist should return `null`.
+การพยายามลบ element ที่ไม่มีอยู่ควร return `null`
 
 ```js
 assert(
@@ -65,7 +65,7 @@ assert(
 );
 ```
 
-If the root node has no children, deleting it should set the root to `null`.
+ถ้าหาก root node ไม่มี child การลบมันควรตั้งค่า root เป็น `null`
 
 ```js
 assert(
@@ -86,7 +86,7 @@ assert(
 );
 ```
 
-The `remove` method should remove leaf nodes from the tree.
+`remove` method ควรลบ leaf node ออกจาก tree
 
 ```js
 assert(
@@ -114,7 +114,7 @@ assert(
 );
 ```
 
-The `remove` method should remove nodes with one child.
+`remove` method ควรลบ node ที่มี child เดียว
 
 ```js
 assert(
@@ -140,7 +140,7 @@ assert(
 );
 ```
 
-Removing the root in a tree with two nodes should set the second to be the root.
+การลบ root ใน tree ที่มีสอง node ควรตั้งค่า node ที่สองเป็น root
 
 ```js
 assert(

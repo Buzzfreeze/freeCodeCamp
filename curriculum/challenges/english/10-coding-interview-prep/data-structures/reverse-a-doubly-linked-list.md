@@ -8,11 +8,11 @@ dashedName: reverse-a-doubly-linked-list
 
 # --description--
 
-Let's create one more method for our doubly linked list called reverse which reverses the list in place. Once the method is executed the head should point to the previous tail and the tail should point to the previous head. Now, if we traverse the list from head to tail we should meet the nodes in a reverse order compared to the original list. Trying to reverse an empty list should return null.
+มาสร้าง method เพิ่มอีกหนึ่ง method สำหรับ doubly linked list ของเราที่เรียกว่า reverse ซึ่งจะกลับลิสต์เข้าที่ เมื่อดำเนินการตาม method แล้ว head ควรชี้ไปที่ tail ก่อนหน้า และ tail ควรชี้ไปที่ส่วน head ก่อนหน้า ตอนนี้หากเราสำรวจลิสต์จากหัวถึงท้าย เราควรพบกับ node ในลำดับที่กลับกันเมื่อเทียบกับลิสต์เดิม การพยายามย้อนกลับลิสต์ว่างควร return ค่าเป็น null
 
 # --hints--
 
-The DoublyLinkedList data structure should exist.
+ควรมีโครงสร้างข้อมูล DoublyLinkedList
 
 ```js
 assert(
@@ -26,7 +26,7 @@ assert(
 );
 ```
 
-The DoublyLinkedList should have a method called reverse.
+DoublyLinkedList ควรมี method ที่เรียกว่า reverse
 
 ```js
 assert(
@@ -43,7 +43,7 @@ assert(
 );
 ```
 
-Reversing an empty list should return null.
+การย้อนกลับลิสต์ที่ว่างเปล่าควร return null
 
 ```js
 assert(
@@ -57,7 +57,7 @@ assert(
 );
 ```
 
-The reverse method should reverse the list.
+Reverse method ควรจัดเรียงลิสต์ใหม่แบบย้อนกลับ
 
 ```js
 assert(
@@ -77,7 +77,7 @@ assert(
 );
 ```
 
-The next and previous references should be correctly maintained when a list is reversed.
+การอ้างอิงต่อไปและก่อนหน้าควรเป็นดังเดิมเมื่อลิสต์ถูกย้อนกลับ
 
 ```js
 assert(

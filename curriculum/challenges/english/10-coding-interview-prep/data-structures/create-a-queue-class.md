@@ -8,19 +8,19 @@ dashedName: create-a-queue-class
 
 # --description--
 
-Like stacks, queues are a collection of elements. But unlike stacks, queues follow the FIFO (First-In First-Out) principle. Elements added to a queue are pushed to the tail, or the end, of the queue, and only the element at the front of the queue is allowed to be removed.
+เช่นเดียวกับ stacks  ในส่วนของ queue นั้นก็คือชุดของ element แต่ต่างจาก stacks ตรงที่  queue เป็นไปตามหลักการ FIFO (First-In First-Out) element ที่เพิ่มไปยัง queue จะถูกผลักไปที่ส่วนหางหรือส่วนท้ายของ queue และอนุญาตให้ลบเฉพาะ element ที่อยู่ด้านหน้าของ queue เท่านั้น
 
-We could use an array to represent a queue, but just like stacks, we want to limit the amount of control we have over our queues.
+เราสามารถใช้ array เพื่อเป็น queue ได้ แต่เช่นเดียวกับ stacks เราต้องการจำกัดจำนวนการควบคุมที่เรามีเหนือ queueของเรา
 
-The two main methods of a queue class is the enqueue and the dequeue method. The enqueue method pushes an element to the tail of the queue, and the dequeue method removes and returns the element at the front of the queue. Other useful methods are the front, size, and isEmpty methods.
+Method หลักสอง method ของคลาส queue คือ enqueue และ dequeue method โดย enqueue method จะ push element ไปที่ส่วนท้ายของ queue และ dequeue method จะลบและ return element ที่ด้านหน้าของ queue ยังมี method อื่นๆ ที่มีประโยชน์ ได้แก่  front, size และ isEmpty methods
 
 # --instructions--
 
-Write an `enqueue` method that pushes an element to the tail of the queue, a `dequeue` method that removes and returns the front element, a `front` method that lets us see the front element, a `size` method that shows the length, and an `isEmpty` method to check if the queue is empty.
+เขียน `enqueue` method ที่ผลัก element ไปที่ส่วนท้ายของ queue `dequeue` method ที่จะลบและ return element ด้านหน้า `front` method ที่ช่วยให้เราเห็น element ด้านหน้า `size` method ที่แสดงความยาวและ `isEmpty` method เพื่อตรวจสอบว่า queue ว่างหรือไม่
 
 # --hints--
 
-Your `Queue` class should have a `enqueue` method.
+`Queue` class ของคุณควรมี `enqueue` method
 
 ```js
 assert(
@@ -31,7 +31,7 @@ assert(
 );
 ```
 
-Your `Queue` class should have a `dequeue` method.
+`Queue` class ของคุณควรมี `dequeue` method
 
 ```js
 assert(
@@ -42,7 +42,7 @@ assert(
 );
 ```
 
-Your `Queue` class should have a `front` method.
+`Queue` class ของคุณควรมี `front` method
 
 ```js
 assert(
@@ -53,7 +53,7 @@ assert(
 );
 ```
 
-Your `Queue` class should have a `size` method.
+`Queue` class ของคุณควรมี `size` method
 
 ```js
 assert(
@@ -64,7 +64,7 @@ assert(
 );
 ```
 
-Your `Queue` class should have an `isEmpty` method.
+`Queue` class ของคุณควรมี `isEmpty` method
 
 ```js
 assert(
@@ -75,7 +75,7 @@ assert(
 );
 ```
 
-The `dequeue` method should remove and return the front element of the queue
+`dequeue` method ควรลบและ return element แรกของ queue
 
 ```js
 assert(
@@ -88,7 +88,7 @@ assert(
 );
 ```
 
-The `front` method should return value of the front element of the queue
+`front` method ควร return ค่าของ element แรกของ queue
 
 ```js
 assert(
@@ -101,7 +101,7 @@ assert(
 );
 ```
 
-The `size` method should return the length of the queue
+`size` method ควร return ความยาวของ queue
 
 ```js
 assert(
@@ -113,7 +113,7 @@ assert(
 );
 ```
 
-The `isEmpty` method should return `false` if there are elements in the queue
+`isEmpty` method ควร return `false` ถ้าหากมี element อยู่ใน queue
 
 ```js
 assert(

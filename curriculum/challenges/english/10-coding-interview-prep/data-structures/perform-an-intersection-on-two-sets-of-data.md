@@ -8,13 +8,13 @@ dashedName: perform-an-intersection-on-two-sets-of-data
 
 # --description--
 
-In this exercise we are going to perform an intersection on 2 sets of data. We will create a method on our `Set` data structure called `intersection`. An intersection of sets represents all values that are common to two or more sets. This method should take another `Set` as an argument and return the `intersection` of the two sets.
+ในแบบฝึกหัดนี้ เราจะทำการ intersect ข้อมูล 2  set  เราจะสร้าง method ในโครงสร้างข้อมูล `Set` ที่เรียกว่า `Intersection` โดยที่ intersection ของ set แสดงถึงค่าทั้งหมดที่เหมือนกันกับ set ตั้งแต่สอง set ขึ้นไป method นี้ควรใช้ `Set` อีก set หนึ่งเป็น argument และ return `intersection` ของทั้งสอง set นั้น
 
-For example, if `setA = ['a','b','c']` and `setB = ['a','b','d','e']`, then the intersection of setA and setB is: `setA.intersection(setB) = ['a', 'b']`.
+ยกตัวอย่างเช่น หากมี `setA = ['a','b','c']` และ `setB = ['a','b','d','e']` แล้วนั้น intersection ของ setA และ setB คือ `setA.intersection(setB) = ['a', 'b']`
 
 # --hints--
 
-Your `Set` class should have a `intersection` method.
+คลาส `Set` ของคุณควรมี `intersection` method
 
 ```js
 assert(
@@ -25,7 +25,7 @@ assert(
 );
 ```
 
-The proper collection should be returned.
+ควร return collection ที่ถูกต้อง
 
 ```js
 assert(

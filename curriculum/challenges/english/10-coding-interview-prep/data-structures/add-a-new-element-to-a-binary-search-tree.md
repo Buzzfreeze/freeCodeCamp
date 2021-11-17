@@ -8,27 +8,27 @@ dashedName: add-a-new-element-to-a-binary-search-tree
 
 # --description--
 
-This series of challenges will introduce the tree data structure. Trees are an important and versatile data structure in computer science. Of course, their name comes from the fact that when visualized they look much like the trees we are familiar with in the natural world. A tree data structure begins with one node, typically referred to as the root, and from here branches out to additional nodes, each of which may have more child nodes, and so on and so forth. The data structure is usually visualized with the root node at the top; you can think of it as a natural tree flipped upside down.
+ชุดของแบบทดสอบต่อไปนี้จะแนะนำโครงสร้างข้อมูลแบบ tree  ซึ่งเป็นโครงสร้างข้อมูลที่สำคัญและยืดหยุ่นในวิทยาการคอมพิวเตอร์ แน่นอนชื่อของมันมาจากข้อเท็จจริงที่ว่าเมื่อนำโครงสร้างนี้มาวาดภาพมันจะดูเหมือน tree ที่เราคุ้นเคยในโลกธรรมชาติ โครงสร้างข้อมูลแบบ tree เริ่มต้นด้วย node เดียว ซึ่งโดยทั่วไปจะเรียกว่า root และจากนี้ไปแยกออกเป็น node เพิ่มเติม ซึ่งแต่ละ node อาจมี node ย่อยแยกต่อๆ กันไปอีก เรามักจะมองเห็นภาพโครงสร้างข้อมูลนี้ที่เริ่มจาก root node ที่ด้านบน ซึ่งอาจจะมองได้อีกอย่างว่าเหมือน tree กลับหัว
 
-First, let's describe some common terminology we will encounter with trees. The root node is the top of the tree. Data points in the tree are called nodes. Nodes with branches leading to other nodes are referred to as the parent of the node the branch leads to (the child). Other more complicated familial terms apply as you might expect. A subtree refers to all the descendants of a particular node, branches may be referred to as edges, and leaf nodes are nodes at the end of the tree that have no children. Finally, note that trees are inherently recursive data structures. That is, any children of a node are parents of their own subtree, and so on. The recursive nature of trees is important to understand when designing algorithms for common tree operations.
+ขั้นแรก เรามาทำความเข้าใจคำศัพท์ทั่วไปที่เราจะพบกับ tree   root node คือส่วนบนของ tree  จุดข้อมูลในแผนผังเรียกว่า node   node ที่มีสาขาที่นำไปสู่ node อื่น ๆ จะเรียกว่า parent ของ node ที่สาขานำไปสู่ child node เรามาดูศัพท์ที่เกี่ยวข้องกับ tree อื่นๆ กันต่อ subtree หมายถึงทายาททั้งหมดของ node ใด node หนึ่ง branch อาจเรียกว่า edge และ leaf node เป็น node ที่ส่วนท้ายของ tree ที่ไม่มี child สุดท้ายโปรดทราบว่า tree เป็นโครงสร้างข้อมูลแบบเรียกซ้ำโดยเนื้อแท้ นั่นคือ child ใดๆ ของ node จะเป็น parent ของ subtree ของตัวเองเป็นต้น ลักษณะแบบเรียกซ้ำของ tree เป็นสิ่งสำคัญที่ต้องเข้าใจเมื่อออกแบบอัลกอริธึมสำหรับการทำงานของ tree ทั่วไป
 
-To begin, we will discuss a particular type of a tree, the binary tree. In fact, we will actually discuss a particular binary tree, a binary search tree. Let's describe what this means. While the tree data structure can have any number of branches at a single node, a binary tree can only have two branches for every node. Furthermore, a binary search tree is ordered with respect to the child subtrees, such that the value of each node in the left subtree is less than or equal to the value of the parent node, and the value of each node in the right subtree is greater than or equal to the value of the parent node. It's very helpful to visualize this relationship in order to understand it better:
+ก่อนอื่น เราจะพูดถึงชนิดโดยเฉพาะของ tree อันที่จริงเราจะพูดถึง binary tree หรือ binary search tree โดยเฉพาะ มาอธิบายว่าสิ่งนี้หมายความว่าอย่างไร แม้ว่าโครงสร้างข้อมูลแบบ tree จะมี branch จำนวนเท่าใดก็ได้ใน node เดียว แต่  binary tree สามารถมีได้เพียงสอง branch เท่านั้นสำหรับทุก node  นอกจากนี้  binary search tree ยังถูกจัดลำดับตาม child subtree ดังนั้นค่าของแต่ละ node ใน subtree ทางซ้ายจะน้อยกว่าหรือเท่ากับค่าของ parent node และค่าของแต่ละ node ใน subtree ทางขวาคือ มากกว่าหรือเท่ากับค่าของ parent node ลองดูภาพความสัมพันธ์ล่างนี้เพื่อช่วยให้เข้าใจได้ดีขึ้น:
 
 <div style='width: 100%; display: flex; justify-content: center; align-items: center;'><img style='width: 100%; max-width: 350px; background-color: var(--gray-05);' src='https://user-images.githubusercontent.com/18563015/32136009-1e665d98-bbd6-11e7-9133-63184f9f9182.png'></div>
 
-Now this ordered relationship is very easy to see. Note that every value to the left of 8, the root node, is less than 8, and every value to the right is greater than 8. Also notice that this relationship applies to each of the subtrees as well. For example, the first left child is a subtree. 3 is the parent node, and it has exactly two child nodes — by the rules governing binary search trees, we know without even looking that the left child of this node (and any of its children) will be less than 3, and the right child (and any of its children) will be greater than 3 (but also less than the structure's root value), and so on.
+ตอนนี้ความสัมพันธ์ที่เป็นระเบียบนี้มองเห็นได้ง่ายมาก โปรดทราบว่าทุกค่าทางด้านซ้ายของ 8 (root node) มีค่าน้อยกว่า 8 และทุกค่าทางด้านขวาจะมากกว่า 8 นอกจากนี้ ให้สังเกตว่าความสัมพันธ์นี้ใช้กับ subtree แต่ละต้นด้วย ตัวอย่างเช่น child แรกทางซ้ายคือ subtree และ 3 เป็น parent node และมี child node สอง node  - ตามกฎที่ควบคุม binary search tree เรารู้โดยไม่ต้องมองเลยก็ได้ว่า child ด้านซ้ายของ node นี้ (และ child node ใดๆ ของมัน) จะน้อยกว่า 3 และด้านขวา child (และ child node ใดๆ ของมัน) จะมากกว่า 3 (แต่น้อยกว่าค่า root ของโครงสร้างด้วย) เป็นต้น
 
-Binary search trees are very common and useful data structures because they provide logarithmic time in the average case for several common operations such as lookup, insertion, and deletion.
+Binary search tree เป็นโครงสร้างข้อมูลทั่วไปและมีประโยชน์อย่างมาก เนื่องจากให้เวลาลอการิทึมโดยเฉลี่ยสำหรับการดำเนินการทั่วไปหลายอย่าง เช่น lookup, insertion, และ deletion
 
 # --instructions--
 
-We'll start simple. We've defined the skeleton of a binary search tree structure here in addition to a function to create nodes for our tree. Observe that each node may have a left and right value. These will be assigned child subtrees if they exist. In our binary search tree, you will create a method to add new values to our binary search tree. The method should be called `add` and it should accept an integer value to add to the tree. Take care to maintain the invariant of a binary search tree: the value in each left child should be less than or equal to the parent value, and the value in each right child should be greater than or equal to the parent value. Here, let's make it so our tree cannot hold duplicate values. If we try to add a value that already exists, the method should return `null`. Otherwise, if the addition is successful, `undefined` should be returned.
+เราจะเริ่มต้นกันง่ายๆ เราได้กำหนดโครงร่างของ binary search tree ที่นี่ นอกเหนือจากฟังก์ชันเพื่อสร้าง node สำหรับ tree ของเรา สังเกตว่าแต่ละ node จะมีค่าซ้ายและขวา สิ่งเหล่านี้จะเป็น child subtree หากมีอยู่ ใน binary search tree ของเรา คุณจะสร้าง method เพิ่มค่าใหม่ให้กับ binary search tree ของเรา ควรเรียก method นั้นว่า `add` และควรยอมรับค่า integer เพื่อเพิ่มลงใน tree เพื่อรักษาค่าคงที่ของ binary search tree: ค่าใน child ด้านซ้ายแต่ละ child ควรน้อยกว่าหรือเท่ากับค่า parent และค่าใน child ด้านขวาแต่ละ child ควรมากกว่าหรือเท่ากับค่า parent ทีนี้มาทำให้ tree ของเราไม่สามารถเก็บค่าที่ซ้ำกันได้ หากเราพยายามเพิ่มค่าที่มีอยู่แล้ว method ควร return เป็น `null` แต่หากการเพิ่มสำเร็จ ควร return `undefined`
 
-**Hint:** trees are naturally recursive data structures!
+**Hint:** tree เป็นโครงสร้างข้อมูลแบบเรียกซ้ำตามธรรมชาติ!
 
 # --hints--
 
-The `BinarySearchTree` data structure should exist.
+ควรมีโครงสร้างข้อมูล `BinarySearchTree`
 
 ```js
 assert(
@@ -42,7 +42,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `add`.
+binary search tree ควรมี method ชื่อ `add`
 
 ```js
 assert(
@@ -58,7 +58,7 @@ assert(
 );
 ```
 
-The add method should add elements according to the binary search tree rules.
+add method ควรเพิ่ม element ต่างๆ ตามกฎของ binary search tree rules
 
 ```js
 assert(
@@ -87,7 +87,7 @@ assert(
 );
 ```
 
-Adding an element that already exists should return `null`.
+การเพิ่ม element ซ้ำที่มีอยู่แล้วควรจะ return `null`
 
 ```js
 assert(

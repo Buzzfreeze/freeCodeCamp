@@ -8,15 +8,15 @@ dashedName: create-a-stack-class
 
 # --description--
 
-In the last section, we talked about what a stack is and how we can use an array to represent a stack. In this section, we will be creating our own stack class. Although you can use arrays to create stacks, sometimes it is best to limit the amount of control we have with our stacks. Apart from the `push` and `pop` method, stacks have other useful methods. Let's add a `peek`, `isEmpty`, and `clear` method to our stack class.
+ในส่วนที่แล้ว เราได้พูดถึงว่า stack คืออะไร และเราจะใช้ array เพื่อเป็นตัวแทนของ stack ได้อย่างไร ในส่วนนี้ เราจะสร้างคลาส stack ของเราเอง แม้ว่าคุณสามารถใช้ array เพื่อสร้าง stack ได้ แต่บางครั้งก็เป็นการดีที่สุดที่จะจำกัดจำนวนการควบคุมที่เรามีกับ stack ของเรา นอกเหนือจาก `push` และ `pop` method แล้ว stack ยังมีวิธีการอื่นๆ ที่เป็นประโยชน์อีกด้วย มาเพิ่ม `peek`, `isEmpty` และ `clear` method ให้กับคลาส stack ของเรากัน
 
 # --instructions--
 
-Write a `push` method that pushes an element to the top of the stack, a `pop` method that removes and returns the element on the top of the stack, a `peek` method that looks at the top element in the stack, an `isEmpty` method that checks if the stack is empty, and a `clear` method that removes all elements from the stack. Normally stacks don't have this, but we've added a `print` helper method that console logs the collection.
+เขียน `push` method ที่ push element ไปที่ด้านบนของ stack  `pop` method ที่ลบและ return element ที่ด้านบนของ stack  `peek` method  ที่มอง element บนสุดใน stack  `isEmpty` method ที่ตรวจสอบว่า stack ว่างเปล่าหรือไม่ และ `clear` method ที่จะลบ element ทั้งหมดออกจาก stack  โดยปกติ stack จะไม่มีสิ่งนี้ แต่เราได้เพิ่ม `print` helper method ที่คอนโซลบันทึกคอลเล็กชัน
 
 # --hints--
 
-Your `Stack` class should have a `push` method.
+`Stack` class ของคุณควรมี `` method
 
 ```js
 assert(
@@ -27,7 +27,7 @@ assert(
 );
 ```
 
-Your `Stack` class should have a `pop` method.
+`Stack` class ของคุณควรมี `pop` method
 
 ```js
 assert(
@@ -38,7 +38,7 @@ assert(
 );
 ```
 
-Your `Stack` class should have a `peek` method.
+`Stack` class ของคุณควรมี `peek` method
 
 ```js
 assert(
@@ -49,7 +49,7 @@ assert(
 );
 ```
 
-Your `Stack` class should have a `isEmpty` method.
+`Stack` class ของคุณควรมี `isEmpty` method
 
 ```js
 assert(
@@ -60,7 +60,7 @@ assert(
 );
 ```
 
-Your `Stack` class should have a `clear` method.
+`Stack` class ของคุณควรมี `clear` method
 
 ```js
 assert(
@@ -71,7 +71,7 @@ assert(
 );
 ```
 
-The `peek` method should return the top element of the stack
+`peek` method ควร return element บนสุด ของ stack
 
 ```js
 assert(
@@ -84,7 +84,7 @@ assert(
 );
 ```
 
-The `pop` method should remove and return the top element of the stack
+`pop` method ควรลบและ return element บนสุดของ stack
 
 ```js
 assert(
@@ -97,7 +97,7 @@ assert(
 );
 ```
 
-The `isEmpty` method should return true if a stack does not contain any elements
+`isEmpty` method ควร return true ถ้าหาก stack ไม่มี element ใดๆ ข้างใน
 
 ```js
 assert(
@@ -108,7 +108,7 @@ assert(
 );
 ```
 
-The `clear` method should remove all element from the stack
+`clear` method ควรลบ element ทั้งหมดจาก stack
 
 ```js
 assert(

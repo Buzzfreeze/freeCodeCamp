@@ -8,27 +8,27 @@ dashedName: create-a-priority-queue-class
 
 # --description--
 
-In this challenge you will be creating a Priority Queue. A Priority Queue is a special type of Queue in which items may have additional information which specifies their priority. This could be simply represented with an integer. Item priority will override placement order in determining the sequence items are dequeued. If an item with a higher priority is enqueued after items with lower priority, the higher priority item will be dequeued before all the others.
+ในแบบทดสอบนี้ คุณจะต้องสร้าง Priority Queue ซึ่งเป็น queue ชนิดพิเศษที่รายการอาจมีข้อมูลเพิ่มเติมซึ่งระบุลำดับความสำคัญของพวกมันเอง นี่อาจใช้แทนจำนวนเต็มได้ ลำดับความสำคัญของรายการจะแทนที่ลำดับการจัดวางในการพิจารณาว่ารายการลำดับจะถูก dequeue หากรายการที่มีลำดับความสำคัญสูงกว่าถูกจัด queue ไว้หลังรายการที่มีลำดับความสำคัญต่ำกว่า รายการที่มีลำดับความสำคัญสูงกว่าจะถูก dequeue ก่อนรายการอื่นๆ ทั้งหมด
 
-For instance, let’s imagine we have a priority queue with three items:
+ตัวอย่างเช่น สมมติว่าเรามี priority queue ที่มีสามรายการ:
 
 ```js
 [['kitten', 2], ['dog', 2], ['rabbit', 2]]
 ```
 
-Here the second value (an integer) represents item priority. If we enqueue `['human', 1]` with a priority of `1` (assuming lower priorities are given precedence) it would then be the first item to be dequeued. The collection would look like this:
+ในที่นี้ค่าที่สอง (จำนวนเต็ม) แสดงถึงลำดับความสำคัญของรายการ หากเราจัด queue  `['human', 1]` ด้วยลำดับความสำคัญ `1` (สมมติว่าลำดับความสำคัญต่ำกว่าจะได้รับลำดับความสำคัญมากกว่า) มันจะเป็นรายการแรกที่จะถูก dequeue คอลเลกชันจะมีลักษณะดังนี้:
 
 ```js
 [['human', 1], ['kitten', 2], ['dog', 2], ['rabbit', 2]]
 ```
 
-We’ve started writing a `PriorityQueue` in the code editor. You will need to add an `enqueue` method for adding items with a priority, a `dequeue` method for removing and returning items, a `size` method to return the number of items in the queue, a `front` method to return the element at the front of the queue, and finally an `isEmpty` method that will return `true` if the queue is empty or `false` if it is not.
+เราได้เริ่มเขียน `PriorityQueue` ใน code editor แล้ว คุณจะต้องเพิ่ม `enqueue` method สำหรับการเพิ่มรายการที่มีลำดับความสำคัญ `dequeue` method สำหรับการลบและ return รายการ `size` method เพื่อ return จำนวนรายการใน queue  `front` method เพื่อ return element ที่ด้านหน้าของ queue  และสุดท้ายคือ `isEmpty` method ที่จะ return `true` หาก queue ว่างหรือ `false` หากไม่ใช่
 
-The `enqueue` should accept items with the format shown above (`['human', 1]`) where `1` represents the priority. `dequeue` and `front` should return only the item's name, not its priority.
+`enqueue` ควรยอมรับรายการที่มีรูปแบบที่แสดงด้านบน (`['human', 1]`) โดยที่ `1` แสดงถึงลำดับความสำคัญ `dequeue` และ `front` ควร return เฉพาะชื่อของรายการ ไม่ใช่ลำดับความสำคัญ
 
 # --hints--
 
-Your `PriorityQueue` class should have a `enqueue` method.
+`PriorityQueue` class ควรมี `enqueue` method
 
 ```js
 assert(
@@ -39,7 +39,7 @@ assert(
 );
 ```
 
-Your `PriorityQueue` class should have a `dequeue` method.
+`PriorityQueue` class ควรมี `dequeue` method
 
 ```js
 assert(
@@ -50,7 +50,7 @@ assert(
 );
 ```
 
-Your `PriorityQueue` class should have a `size` method.
+`PriorityQueue` class ควรมี `size` method
 
 ```js
 assert(
@@ -61,7 +61,7 @@ assert(
 );
 ```
 
-Your `PriorityQueue` class should have a `front` method.
+`PriorityQueue` class ควรมี `front` method
 
 ```js
 assert(
@@ -72,7 +72,7 @@ assert(
 );
 ```
 
-Your `PriorityQueue` class should have an `isEmpty` method.
+`PriorityQueue` class ควรมี `isEmpty` method
 
 ```js
 assert(
@@ -83,7 +83,7 @@ assert(
 );
 ```
 
-Your `PriorityQueue` class should correctly keep track of the current number of items using the `size` method as items are enqueued and dequeued.
+`PriorityQueue` class ควรติดตามจำนวนปัจจุบันของรายการโดยการใช้ `size` method อย่างถูกต้อง เมื่อรายการนั้นๆ ถูก enqueue หรือ dequeue
 
 ```js
 assert(
@@ -102,7 +102,8 @@ assert(
 );
 ```
 
-The `front` method should return the correct item at the front of the queue as items are enqueued and dequeued.
+`front` method ควร return รายการที่อยู่ด้านหน้าของ queue เมื่อเมื่อรายการนั้นๆ ถูก enqueue หรือ dequeue
+อย่างถูกต้อง
 
 ```js
 assert(
@@ -129,7 +130,7 @@ assert(
 );
 ```
 
-The `isEmpty` method should return `true` when the queue is empty.
+`isEmpty` method ควร return `true` เมื่อ `queue นั้นว่างเปล่า
 
 ```js
 assert(
@@ -145,7 +146,7 @@ assert(
 );
 ```
 
-The priority queue should return items with a higher priority before items with a lower priority and return items in first-in-first-out order otherwise.
+priority queue ควร return รายการที่มีลำดับความสำคัญมากกว่าก่อนรายการที่มีน้อยกว่า หรือ return รายการในลำดับ in first-in-first-out  
 
 ```js
 assert(

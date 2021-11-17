@@ -8,23 +8,24 @@ dashedName: remove-elements-from-a-linked-list-by-index
 
 # --description--
 
-Before we move on to another data structure, let's get a couple of last bits of practice with linked lists.
+ก่อนที่เราจะไปต่อที่โครงสร้างข้อมูลอื่น เรามาฝึกปฏิบัติกับ linked list ให้คล้องกันก่อน
 
-Let's write a `removeAt` method that removes the `element` at a given `index`. The method should be called `removeAt(index)`. To remove an `element` at a certain `index`, we'll need to keep a running count of each node as we move along the linked list.
+มาเขียน method `removeAt` ที่จะลบ `element` ที่ `index` ที่กำหนด `element` นี้ควรเรียกว่า `removeAt(index)` ในการลบ `element` ที่ `index` ดังกล่าวนั้นเราจำเป็นต้องนับแต่ละ node ในขณะที่เราย้ายไปตาม linked list (รายการที่เชื่อมโยง)
 
+เทคนิคทั่วไปที่ใช้ในการวนซ้ำองค์ประกอบของรายการที่เชื่อมโยงนั้นเกี่ยวข้องกับ <dfn>'runner'</dfn> หรือผู้พิทักษ์ที่ 'ชี้' ไปที่ node ที่โค้ดของคุณกำลังเปรียบเทียบ ในกรณีของเรา เริ่มต้นที่ "ส่วนหัว" ของรายการ เราจะเริ่มต้นด้วยตัวแปร "currentIndex" ที่เริ่มต้นที่ "0" `currentIndex` ควรเพิ่มขึ้นทีละหนึ่งสำหรับแต่ละ node ที่เราส่งผ่าน
 A common technique used to iterate through the elements of a linked list involves a <dfn>'runner'</dfn>, or sentinel, that 'points' at the nodes that your code is comparing. In our case, starting at the `head` of our list, we start with a `currentIndex` variable that starts at `0`. The `currentIndex` should increment by one for each node we pass.
 
-Just like our `remove(element)` method, which [we covered in a previous lesson](/learn/coding-interview-prep/data-structures/remove-elements-from-a-linked-list), we need to be careful not to orphan the rest of our list when we remove the node in our `removeAt(index)` method. We keep our nodes contiguous by making sure that the node that has reference to the removed node has a reference to the next node.
+เช่นเดียวกับวิธีการ `remove(element)` ซึ่ง [เราได้กล่าวถึงในบทเรียนก่อนหน้านี้](/learn/coding-interview-prep/data-structures/remove-elements-from-a-linked-list) เราจำเป็นต้องระวังอย่าให้ลิสต์ที่เหลือของเราไร้การอ้างอิงเมื่อเราลบ node ในวิธี `removeAt(index)` ของเรา เราทำให้ node ของเราอยู่ติดกันโดยตรวจสอบให้แน่ใจว่า node ที่มีการอ้างอิงไปยัง node ที่ถูกลบมีการอ้างอิงไปยัง node ถัดไป
 
 # --instructions--
 
-Write a `removeAt(index)` method that removes and returns a node at a given `index`. The method should return `null` if the given `index` is either negative, or greater than or equal to the `length` of the linked list.
+เขียนวิธี `removeAt(index)` ที่จะลบและ return node ที่ `index` ที่กำหนด โดยที่ method ควร return `null` หาก `index` ที่ระบุเป็นค่าลบ หรือมากกว่าหรือเท่ากับ `length` ของ linked list
 
-**Note:** Remember to keep count of the `currentIndex`.
+**หมายเหตุ:** อย่าลืมว่ายังคงต้องดำเนอนการนับจากการนับ `currentIndex`.
 
 # --hints--
 
-Your `LinkedList` class should have a `removeAt` method.
+คลาส `LinkedList` ของคุณ ควรมี `removeAt` method
 
 ```js
 assert(
@@ -35,7 +36,7 @@ assert(
 );
 ```
 
-Your `removeAt` method should reduce the `length` of the linked list by one.
+`removeAt` method ของคุณควรลด `length` ของ linked list ที่ละหนึ่ง
 
 ```js
 assert(
@@ -50,7 +51,7 @@ assert(
 );
 ```
 
-Your `removeAt` method should remove the element at the specified index from the linked list.
+`removeAt` method ของคุณควรลบ element ที่ index ที่กำหนดออกจาก linked list
 
 ```js
 assert(
@@ -69,7 +70,7 @@ assert(
 );
 ```
 
-When only one element is present in the linked list, your `removeAt` method should remove and return the element at specified index, and reduce the length of the linked list.
+เมื่อมี element เพียง element เดียวภายใน linked list `removeAt` method ของคุณควรลบและ return element นั้นที่ index ที่กำหนด และลดค่า length ของ linked list ด้วย
 
 ```js
 assert(
@@ -82,7 +83,7 @@ assert(
 );
 ```
 
-Your `removeAt` method should return the element of the removed node.
+`removeAt` method ของคุณควร return element ของ node ที่ถูกลบออก
 
 ```js
 assert(
@@ -96,7 +97,7 @@ assert(
 );
 ```
 
-Your `removeAt` method should return `null` and the linked list should not change if the given index is less than `0`.
+`removeAt` method ของคุณควร return `null` และ linked list ไม่ควรเปลี่ยน หาก index ที่กำหนดมานั้นมีค่าน้อยกว่า `0`
 
 ```js
 assert(
@@ -115,7 +116,7 @@ assert(
 );
 ```
 
-Your `removeAt` method should return `null` and the linked list should not change if the given index is greater than or equal to the `length` of the list.
+`removeAt` method ของคุณควร return `null` และ linked list ไม่ควรเปลี่ยน หาก index ที่กำหนดมานั้นมีค่ามากกว่าหรือเท่ากับ `length` ของลิสต์นั้น
 
 ```js
 assert(

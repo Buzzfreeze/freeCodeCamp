@@ -8,13 +8,13 @@ dashedName: perform-a-subset-check-on-two-sets-of-data
 
 # --description--
 
-In this exercise, we are going to perform a subset test on 2 sets of data. We will create a method on our `Set` data structure called `isSubsetOf`. This will compare the first set against the second, and if the first set is fully contained within the second, it will return `true`.
+ในแบบฝึกหัดนี้ เราจะทำการทดสอบ subset กับข้อมูล 2 set เราจะสร้าง method ในโครงสร้างข้อมูล `Set` ที่เรียกว่า `isSubsetOf` วิธีนี้จะเปรียบเทียบ set แรกกับ set ที่สอง และหาก set แรกมีองค์ประกอบทุกอย่างเหมือนใน set ที่สอง จะreturn `true`
 
-For example, if `setA = ['a','b']` and `setB = ['a','b','c','d']`, then `setA` is a subset of `setB`, so `setA.isSubsetOf(setB)` should return `true`.
+ยกตัวอย่างเช่น หากกำหนดให้มี `setA = ['a','b']` และ `setB = ['a','b','c','d']` ดังนั้นแล้ว `setA` ก็คือ subset ของ `setB` ดังนั้น `setA.isSubsetOf(setB)` ควร return `true`
 
 # --hints--
 
-Your `Set` class should have a `isSubsetOf` method.
+คลาส `Set` ของคุณควรมี `isSubsetOf` method
 
 ```js
 assert(
@@ -25,7 +25,7 @@ assert(
 );
 ```
 
-The first Set() should be contained in the second Set
+Set() แรกควรมีอยู่ใน Set ที่สอง
 
 ```js
 assert(
@@ -43,7 +43,7 @@ assert(
 );
 ```
 
-`['a', 'b'].isSubsetOf(['a', 'b', 'c', 'd'])` should return `true`
+`['a', 'b'].isSubsetOf(['a', 'b', 'c', 'd'])` ควร return `true`
 
 ```js
 assert(
@@ -62,7 +62,7 @@ assert(
 );
 ```
 
-`['a', 'b', 'c'].isSubsetOf(['a', 'b'])` should return `false`
+`['a', 'b', 'c'].isSubsetOf(['a', 'b'])` ควร return `false`
 
 ```js
 assert(
@@ -80,7 +80,7 @@ assert(
 );
 ```
 
-`[].isSubsetOf([])` should return `true`
+`[].isSubsetOf([])` ควร return `true`
 
 ```js
 assert(
@@ -93,7 +93,7 @@ assert(
 );
 ```
 
-`['a', 'b'].isSubsetOf(['c', 'd'])` should return `false`
+`['a', 'b'].isSubsetOf(['c', 'd'])` ควร return `false`
 
 ```js
 assert(

@@ -8,13 +8,13 @@ dashedName: perform-a-difference-on-two-sets-of-data
 
 # --description--
 
-In this exercise we are going to perform a difference on 2 sets of data. We will create a method on our `Set` data structure called `difference`. A difference of sets should compare two sets and return the items present in the first set that are absent in the second. This method should take another `Set` as an argument and return the `difference` of the two sets.
+ในแบบฝึกหัดนี้ เราจะทำการเปลี่ยนแปลงกับข้อมูล 2 set เราจะสร้าง method ในโครงสร้างข้อมูล `Set` ที่เรียกว่า `difference` ความแตกต่างของ set ควรเปรียบเทียบสอง set นั้นและ return รายการที่มีอยู่ใน set แรกที่ไม่อยู่ใน set ที่สอง วิธีนี้ควรใช้ `set` อีก set หนึ่งเป็น argument และ return ความแตกต่าง `difference` ของทั้งสองชุด
 
-For example, if `setA = ['a','b','c']` and `setB = ['a','b','d','e']`, then the difference of setA and setB is: `setA.difference(setB) = ['c']`.
+ตัวอย่างเช่น ถ้าหากกำหนดให้มี `setA = ['a','b','c']` และ `setB = ['a','b','d','e']` แล้ว คามแตกต่างของ setA และ setB คือ `setA.difference(setB) = ['c']`
 
 # --hints--
 
-Your `Set` class should have a `difference` method.
+คลาส `Set` ของคุณควรมี `difference` method
 
 ```js
 assert(
@@ -25,7 +25,7 @@ assert(
 );
 ```
 
-Your `difference` method should return the proper collection.
+`difference` method ของคุณควร return collection ที่ถูกต้อง
 
 ```js
 assert(

@@ -8,17 +8,17 @@ dashedName: use-breadth-first-search-in-a-binary-search-tree
 
 # --description--
 
-Here we will introduce another tree traversal method: breadth-first search. In contrast to the depth-first search methods from the last challenge, breadth-first search explores all the nodes in a given level within a tree before continuing on to the next level. Typically, queues are utilized as helper data structures in the design of breadth-first search algorithms.
+เราจะแนะนำวิธีการ tree traversal method หรือ การค้นหาแบบกว้างก่อน ตรงกันข้ามกับวิธีการค้นหาที่เน้นความลึกจากแบบทดสอบครั้งก่อน การค้นหาแบบกว้างก่อนจะสำรวจโหนดทั้งหมดในระดับที่กำหนดภายใน tree ก่อนที่จะดำเนินการต่อไปในระดับถัดไป โดยปกติ queue จะถูกใช้เป็นโครงสร้างข้อมูลตัวช่วยในการออกแบบอัลกอริธึมการค้นหาแบบกว้างก่อน
 
-In this method, we start by adding the root node to a queue. Then we begin a loop where we dequeue the first item in the queue, add it to a new array, and then inspect both its child subtrees. If its children are not null, they are each enqueued. This process continues until the queue is empty.
+ในวิธีนี้ เราเริ่มต้นด้วยการเพิ่ม root node ไปยัง queue จากนั้นเราเริ่มการวนซ้ำตรงที่เรา dequeue รายการแรกใน queue เพิ่มลงใน array ใหม่ จากนั้นตรวจสอบ child subtrees ทั้งสองรายการ ถ้า child ของมันไม่เป็น null พวกเขาจะถูก enqueued กระบวนการนี้จะดำเนินต่อไปจนกว่า queue จะว่าง
 
 # --instructions--
 
-Let's create a breadth-first search method in our tree called `levelOrder`. This method should return an array containing the values of all the tree nodes, explored in a breadth-first manner. Be sure to return the values in the array, not the nodes themselves. A level should be traversed from left to right. Next, let's write a similar method called `reverseLevelOrder` which performs the same search but in the reverse direction (right to left) at each level.
+มาสร้างวิธีการค้นหาแบบกว้างก่อน (breadth-first search method) ใน tree ของเราที่ชื่อว่า `levelOrder` เมธอดนี้ควร return array ที่มีค่าของ tree node ทั้งหมด โดยสำรวจในลักษณะกว้างก่อน ให้แน่ใจว่ามันจะ return ค่าใน array ไม่ใช่ตัว node เอง ควรข้ามระดับจากซ้ายไปขวา ต่อไปเรามาเขียน method ที่คล้ายกันที่เรียกว่า `reverseLevelOrder` ซึ่งทำการค้นหาแบบเดียวกัน แต่ในทิศทางย้อนกลับ (จากขวาไปซ้าย) ในแต่ละระดับ
 
 # --hints--
 
-The `BinarySearchTree` data structure should exist.
+ควรมี `BinarySearchTree` data structure
 
 ```js
 assert(
@@ -32,7 +32,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `levelOrder`.
+Binary search tree ควรมี method ที่เรียกว่า `levelOrder`
 
 ```js
 assert(
@@ -48,7 +48,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `reverseLevelOrder`.
+Binary search tree ควรมี method ที่เรียกว่า `reverseLevelOrder`.
 
 ```js
 assert(
@@ -64,7 +64,7 @@ assert(
 );
 ```
 
-The `levelOrder` method should return an array of the tree node values explored in level order.
+`levelOrder` method ควร return array ของค่าต่างๆ  tree node ที่ได้ถูกสำรวจในลำดับตามระดับ
 
 ```js
 assert(
@@ -94,7 +94,7 @@ assert(
 );
 ```
 
-The `reverseLevelOrder` method should return an array of the tree node values explored in reverse level order.
+`reverseLevelOrder` method ควร return array ของค่าต่างๆ  tree node ที่ได้ถูกสำรวจในลำดับที่กลับกันของระดับ
 
 ```js
 assert(
@@ -124,7 +124,7 @@ assert(
 );
 ```
 
-The `levelOrder` method should return `null` for an empty tree.
+`levelOrder` method ควร return `null` สำหรับ tree ที่ว่างเปล่า
 
 ```js
 assert(
@@ -143,7 +143,7 @@ assert(
 );
 ```
 
-The `reverseLevelOrder` method should return `null` for an empty tree.
+`reverseLevelOrder` method ควร return `null` สำหรับ tree ที่ว่างเปล่า
 
 ```js
 assert(

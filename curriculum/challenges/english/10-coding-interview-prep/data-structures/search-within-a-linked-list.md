@@ -8,19 +8,19 @@ dashedName: search-within-a-linked-list
 
 # --description--
 
-Let's add a few more useful methods to our linked list class. Wouldn't it be useful if we could tell if our list was empty or not, as with our `Stack` and `Queue` classes?
+มาเพิ่ม method ที่เป็นประโยชน์อีกสองสาม method ในคลาส linked list ของเรา จะเป็นประโยชน์เพียงใดถ้าเราสามารถบอกได้ว่าลิสต์ของเราว่างเปล่าหรือไม่ เช่นเดียวกับคลาส `Stack` และ `Queue`
 
-We should also be able to find specific elements in our linked list. Traversing through data structures is something you'll want to get a lot of practice with! Let's create an `indexOf` method that takes an `element` as an argument, and returns that element's `index` in the linked list. If the element is not found in the linked list, return `-1`.
+เราควรจะสามารถค้นหา element เฉพาะใน linked list ของเราได้ การสำรวจโครงสร้างข้อมูลเป็นสิ่งที่คุณจะต้องการฝึกฝนอย่างมาก! มาสร้าง `indexOf` method ที่รับ `element` เป็น argument และ return `index` ของ element นั้นใน linked list หากไม่พบ element ใน linked list ให้ return `-1`
 
-Let's also implement a method that does the opposite: an `elementAt` method that takes an `index` as an argument and returns the `element` at the given `index`. If no `element` is found, return `undefined`.
+เรามาลองใช้ method ที่ทำตรงกันข้ามกัน: `elementAt` method ที่ใช้ `index` เป็น argument และ return `element` ที่ `index` ที่กำหนด หากไม่พบ `element` ให้ return `undefined`
 
 # --instructions--
 
-Write an `isEmpty` method that checks if the linked list is empty, an `indexOf` method that returns the `index` of a given element, and an `elementAt` that returns an `element` at a given `index.`
+เขียน `isEmpty` method ที่ตรวจสอบว่า linked list ว่างเปล่าหรือไม่ และ `indexOf` method ที่ return `index` ของ element ที่กำหนด และ `elementAt` ที่ return `element` ที่ `index` ที่กำหนด
 
 # --hints--
 
-Your `LinkedList` class should have an `isEmpty` method.
+คลาส `LinkedList` ของคุณควรมี `isEmpty` method
 
 ```js
 assert(
@@ -31,7 +31,7 @@ assert(
 );
 ```
 
-Your `isEmpty` method should return `false` when there is at least one element in linked list.
+`isEmpty` method ควร return `false` เมื่อ linked list นั้นมี element อย่างน้อยหนึ่ง element
 
 ```js
 assert(
@@ -45,7 +45,7 @@ assert(
 );
 ```
 
-Your `isEmpty` method should return `true` when there are no elements in linked list.
+`isEmpty` method ของคุณควร return `true` เมื่อ linked list นั้นไม่มี element ใดๆ อยู่
 
 ```js
 assert(
@@ -56,7 +56,7 @@ assert(
 );
 ```
 
-Your `LinkedList` class should have an `indexOf` method.
+คลาส `LinkedList` ของคุณควรมี `indexOf` method
 
 ```js
 assert(
@@ -67,7 +67,7 @@ assert(
 );
 ```
 
-Your `indexOf` method should return the index of a given element found in linked list.
+`indexOf` method ของคุณควร return index ของ element ที่กำหนดที่ถูกพบใน linked list
 
 ```js
 assert(
@@ -81,7 +81,7 @@ assert(
 );
 ```
 
-Your `indexOf` method should return `-1` if the given element is not found in linked list
+`indexOf` method ของคุณควร return `-1` ถ้าหาก element ที่กำหนดไม่ได้ถูกพบใน linked list
 
 ```js
 assert(
@@ -95,7 +95,7 @@ assert(
 );
 ```
 
-Your `LinkedList` class should have an `elementAt` method.
+คลาส `LinkedList` ของคุณควรมี `elementAt` method
 
 ```js
 assert(
@@ -106,7 +106,7 @@ assert(
 );
 ```
 
-Your `elementAt` method should return the element found at a given index in linked list.
+`elementAt` method ควร return element ที่ถูกพบตรง index ที่กำหนดใน linked list
 
 ```js
 assert(
@@ -120,7 +120,7 @@ assert(
 );
 ```
 
-Your `elementAt` method should return `undefined` if the given element is not found at a given index in linked list.
+`elementAt` method ของคุณควร return `undefined` ถ้าหาก element ที่กำหนดไม่ได้ถูกค้นพบตรง index ที่กำหนดใน linked list
 
 ```js
 assert(

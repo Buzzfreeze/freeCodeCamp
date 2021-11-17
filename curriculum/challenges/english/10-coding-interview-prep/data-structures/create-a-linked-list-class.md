@@ -8,25 +8,26 @@ dashedName: create-a-linked-list-class
 
 # --description--
 
-Let's create a `linked list` class. Every linked list should start out with a few basic properties: a `head` (the first item in your list) and a `length` (number of items in your list). Sometimes you'll see implementations of linked lists that incorporate a `tail` for the last element of the list, but for now we'll just stick with these two. Whenever we add an element to the linked list, our `length` property should be incremented by one.
+มาสร้างคลาส `linked list` กันเถอะ ทุก linked list (ลิสต์ที่เชื่อมโยง) ควรเริ่มต้นด้วย property พื้นฐานสองสามอย่าง: `head` (รายการแรกในลิสต์ของคุณ) และ `length` (จำนวนรายการในลิสต์ของคุณ) บางครั้ง คุณจะเห็นการใช้งาน linked list ที่รวม `tail` สำหรับ element สุดท้ายของลิสต์ แต่สำหรับตอนนี้เราจะใช้แค่สองตัวแรกเท่านั้น เมื่อใดก็ตามที่เราเพิ่ม element ลงใน linked list  แล้ว `length` property  ของเราควรเพิ่มขึ้นทีละหนึ่ง
 
-We'll want to have a way to add items to our linked list, so the first method we'll want to create is the `add` method.
+เราต้องการวิธีเพิ่มรายการลงใน linked list  ดังนั้น method แรกที่เราจะต้องสร้างคือ `add` method
 
-If our list is empty, adding an element to our linked list is straightforward enough: we just wrap that element in a `Node` class, and we assign that node to the `head` of our linked list.
+หากลิสต์ของเราว่างเปล่า การเพิ่ม element ลงใน linked list ของเรานั้นทำอย่างง่ายๆ: เราเพียงแค่รวม element นั้นไว้ในคลาส `Node` และเรากำหนด node นั้นให้กับ `head` ของ linked list ของเรา
 
-But what if our list already has one or more members? How do we add an element to the list? Recall that each node in a linked list has a `next` property. To add a node to the list, find the last node in the list, and point that last node's `next` property at our new node. (Hint: you know you've reached the end of a linked list when a node's `next` property is `null`.)
+แต่ถ้าลิสต์ของเรามีรายการอยู่แล้วหนึ่งอย่างขึ้นไปล่ะ เราจะเพิ่ม element ในลิสต์ได้อย่างไร โปรดจำไว้ว่าแต่ละ node ใน linked list มี `next` property แล้วในการเพิ่ม node ในลิสต์นั้นให้เราให้ค้นหา node สุดท้ายในลิสต์ และชี้ไปที่`next` property ของ node สุดท้ายที่ node ใหม่ของเรา (คำแนะนำ: คุณรู้ว่าคุณมาถึงจุดสิ้นสุดของ linked list แล้วเมื่อ `next` property ของ node เป็น `null`)
 
 # --instructions--
 
-Write an add method that assigns the first node you push to the linked list to the `head`; after that, whenever adding a node, every node should be referenced by the previous node's `next` property.
+เขียน add method ที่กำหนด node แรกที่คุณ push ไปยัง linked list ไปยัง `head` หลังจากนั้นเมื่อใดก็ตามที่เพิ่ม node  ทุก node ควรได้รับการอ้างอิงโดย `next` property ของ node ก่อนหน้า
 
-Note
+หมายเหตุ
 
+`length` ของลิสต์ควรเพิ่มขึ้นหนึ่ง ทุกครั้งที่มีการเพิ่ม element ลงใน linked list 
 Your list's `length` should increase by one every time an element is added to the linked list.
 
 # --hints--
 
-Your `LinkedList` class should have a `add` method.
+`LinkedList` class ของคุณควรมี `add` method
 
 ```js
 assert(
@@ -37,7 +38,7 @@ assert(
 );
 ```
 
-Your `LinkedList` class should assign `head` to the first node added.
+`LinkedList` class ควรกำหนดให้ node แรกที่ถูกเพิ่มเข้ามาเป็น `head`
 
 ```js
 assert(
@@ -49,7 +50,7 @@ assert(
 );
 ```
 
-The previous `node` in your `LinkedList` class should have reference to the newest node created.
+`node` ก่อนหน้านี้ใน `LinkedList` class ควรมีการอ้างอิงถึง node ใหม่ที่ถูกสร้างขึ้น
 
 ```js
 assert(
@@ -62,7 +63,7 @@ assert(
 );
 ```
 
-The  `size` of your `LinkedList` class should equal the amount of nodes in the linked list.
+ขนาด `size` ของ `LinkedList` class ควรเท่ากับจำนวนของ node ใน linked list
 
 ```js
 assert(

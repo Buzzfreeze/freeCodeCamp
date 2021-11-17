@@ -8,15 +8,15 @@ dashedName: remove-items-from-a-set-in-es6
 
 # --description--
 
-Let's practice removing items from an ES6 Set using the `delete` method.
+มาลองฝึกการลบรายการต่างๆ ออกจาก ES6 Set โดยใช้ `delete` method กัน
 
-First, create an ES6 Set:
+ก่อนอื่นให้สร้าง ES6 Set:
 
 ```js
 var set = new Set([1,2,3]);
 ```
 
-Now remove an item from your Set with the `delete` method.
+ทีนี้ลบรายการออกจาก Set ของคุณด้วย `delete` method
 
 ```js
 set.delete(1);
@@ -25,13 +25,13 @@ console.log([...set]) // should return [ 2, 3 ]
 
 # --instructions--
 
-Now, create a set with the integers 1, 2, 3, 4, & 5.
+ตอนนี้เรามาสร้าง set ด้วยจำนวนเต็ม 1, 2, 3, 4, & 5.
 
-Remove the values 2 and 5, and then return the set.
+ลบค่า 2 และ 5 แล้วจึง return set นั้น
 
 # --hints--
 
-Your Set should contain the values 1, 3, & 4
+Set ของคุณควรมีค่า 1, 3, และ 4 อยู่
 
 ```js
 assert(

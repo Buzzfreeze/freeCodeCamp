@@ -8,15 +8,15 @@ dashedName: use-depth-first-search-in-a-binary-search-tree
 
 # --description--
 
-We know how to search a binary search tree for a specific value. But what if we just want to explore the entire tree? Or what if we don't have an ordered tree and we need to just search for a value? Here we will introduce some tree traversal methods which can be used to explore tree data structures. First up is depth-first search. In depth-first search, a given subtree is explored as deeply as possible before the search continues on to another subtree. There are three ways this can be done: In-order: Begin the search at the left-most node and end at the right-most node. Pre-order: Explore all the roots before the leaves. Post-order: Explore all the leaves before the roots. As you may guess, you may choose different search methods depending on what type of data your tree is storing and what you are looking for. For a binary search tree, an inorder traversal returns the nodes in sorted order.
+เรารู้วิธีค้นหาภายใน binary search tree สำหรับค่าเฉพาะ แต่ถ้าเราแค่ต้องการสำรวจ tree ทั้งหมดล่ะ หรือถ้าเราไม่มี ordered tree และเราต้องการค้นหาค่าเพียงอย่างเดียวล่ะ? ในที่นี้เราจะแนะนำ method ในการค้นหา tree บาง method ซึ่งสามารถใช้เพื่อสำรวจโครงสร้างข้อมูล tree ได้ อันดับแรกคือการค้นหาเชิงลึกก่อน (depth-first search) ใน depth-first search จะมีการสำรวจ subtree ที่กำหนดให้ลึกที่สุดก่อนที่การค้นหาจะดำเนินต่อไปใน subtree อื่น สามารถทำได้สามวิธี: In-order คือ: เริ่มการค้นหาที่ node ซ้ายสุดและสิ้นสุดที่ node ขวาสุด Pre-order คือ: สำรวจ root ทั้งหมดก่อน leaf Post-order คือ: สำรวจ leaf ทั้งหมดก่อนถึง root อย่างที่คุณอาจเดาได้คุณอาจเลือก method ค้นหาที่แตกต่างกันขึ้นอยู่กับประเภทของข้อมูลที่ tree ของคุณจัดเก็บและสิ่งที่คุณกำลังมองหา สำหรับ binary search tree การสำรวจแบบไม่เรียงลำดับจะ return node โดยจัดเรียงตามลำดับ
 
 # --instructions--
 
-Here we will create these three search methods on our binary search tree. Depth-first search is an inherently recursive operation which continues to explore further subtrees so long as child nodes are present. Once you understand this basic concept, you can simply rearrange the order in which you explore the nodes and subtrees to produce any of the three searches above. For example, in post-order search we would want to recurse all the way to a leaf node before we begin to return any of the nodes themselves, whereas in pre-order search we would want to return the nodes first, and then continue recursing down the tree. Define `inorder`, `preorder`, and `postorder` methods on our tree. Each of these methods should return an array of items which represent the tree traversal. Be sure to return the integer values at each node in the array, not the nodes themselves. Finally, return `null` if the tree is empty.
+ที่นี่เราจะสร้าง method การค้นหาทั้งสามนี้บน binary search tree ของเรา การค้นหา Depth-first search เป็นการดำเนินการแบบเรียกซ้ำโดยเนื้อแท้ซึ่งยังคงสำรวจ subtree  เพิ่มเติมต่อไปตราบใดที่มี subnode เมื่อคุณเข้าใจแนวคิดพื้นฐานนี้แล้ว คุณสามารถจัดเรียงใหม่ตามลำดับที่คุณสำรวจ node และ subtree เพื่อสร้างการค้นหาสามวิธีด้านบน ตัวอย่างเช่น ในการค้นหา post-order เราต้องการเรียกซ้ำไปจนถึง leaf node ก่อนที่เราจะเริ่มต้น return node ใดๆ ด้วยตนเอง ในขณะที่ในการค้นหา pre-order เราต้องการ return node ก่อน แล้วจึงดำเนินการเรียกซ้ำลงไปตาม tree กำหนด`inorder`, `preorder`, และ `postorder` method บน tree ของเรา แต่ละ method เหล่านี้ควร return array ของรายการที่แสดงถึงสำรวจของ tree อย่าลืม return ค่าจำนวนเต็มที่ในแต่ละ node ใน array  ไม่ใช่ตัว node เอง สุดท้ายให้ return ค่า `null` หาก tree ว่างเปล่า
 
 # --hints--
 
-The `BinarySearchTree` data structure should exist.
+ควรมีโครงสร้างข้อมูล `BinarySearchTree`
 
 ```js
 assert(
@@ -30,7 +30,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `inorder`.
+binary search tree ควรมี method ที่เรียกว่า `inorder`
 
 ```js
 assert(
@@ -46,7 +46,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `preorder`.
+binary search tree ควรมี method ที่เรียกว่า `preorder`
 
 ```js
 assert(
@@ -62,7 +62,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `postorder`.
+binary search tree ควรมี method ที่เรียกว่า `postorder`
 
 ```js
 assert(
@@ -78,7 +78,7 @@ assert(
 );
 ```
 
-The `inorder` method should return an array of the node values that result from an inorder traversal.
+`inorder` method ควร return array ของค่าของ node ที่เป้นผลลัพธ์จากการสำรวจแบบ inorder
 
 ```js
 assert(
@@ -108,7 +108,7 @@ assert(
 );
 ```
 
-The `preorder` method should return an array of the node values that result from a preorder traversal.
+`preorder` method ควร return array ของค่าของ node ที่เป้นผลลัพธ์จากการสำรวจแบบ preorder
 
 ```js
 assert(
@@ -138,7 +138,7 @@ assert(
 );
 ```
 
-The `postorder` method should return an array of the node values that result from a postorder traversal.
+`postorder` method ควร return array ของค่าของ node ที่เป้นผลลัพธ์จากการสำรวจแบบ postorder
 
 ```js
 assert(
@@ -168,7 +168,7 @@ assert(
 );
 ```
 
-The `inorder` method should return `null` for an empty tree.
+`inorder` method ควร return `null` สำหรับ tree ที่ว่างเปล่า
 
 ```js
 assert(
@@ -187,7 +187,7 @@ assert(
 );
 ```
 
-The `preorder` method should return `null` for an empty tree.
+`preorder` method ควร return `null` สำหรับ tree ที่ว่างเปล่า
 
 ```js
 assert(
@@ -206,7 +206,7 @@ assert(
 );
 ```
 
-The `postorder` method should return `null` for an empty tree.
+`postorder` method ควร return `null` สำหรับ tree ที่ว่างเปล่า
 
 ```js
 assert(

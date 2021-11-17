@@ -8,9 +8,9 @@ dashedName: adjacency-matrix
 
 # --description--
 
-Another way to represent a graph is to put it in an <dfn>adjacency matrix</dfn>. An <dfn>adjacency matrix</dfn> is a two-dimensional (2D) array where each nested array has the same number of elements as the outer array. In other words, it is a matrix or grid of numbers, where the numbers represent the edges.
+อีกวิธีในการแสดงกราฟคือการใส่ลงใน <dfn>adjacency matrix</dfn> ซึ่ง <dfn>เมทริกซ์ที่อยู่ติดกัน</dfn> คือ array สองมิติ (2D) โดยที่แต่ละ array ที่ซ้อนกันมีจำนวนองค์ประกอบเท่ากันกับ array ภายนอก กล่าวอีกนัยหนึ่ง มันคือเมทริกซ์หรือตารางของตัวเลข โดยที่ตัวเลขเป็นตัวแทนของขอบ
 
-**Note**: The numbers to the top and left of the matrix are just labels for the nodes. Inside the matrix, ones mean there exists an edge between the vertices (nodes) representing the row and column. Finally, zeros mean there is no edge or relationship.
+**หมายเหตุ**: ตัวเลขด้านบนและด้านซ้ายของเมทริกซ์เป็นเพียงป้ายกำกับสำหรับ node ภายในเมทริกซ์ ones หมายถึงมีขอบระหว่างจุดยอด (node) แทนแถวและคอลัมน์ สุดท้าย zeros หมายความว่าไม่มีขอบหรือความสัมพันธ์
 
 <pre>
     1 2 3
@@ -20,7 +20,7 @@ Another way to represent a graph is to put it in an <dfn>adjacency matrix</dfn>.
 3 | 1 0 0
 </pre>
 
-Above is a very simple, undirected graph where you have three nodes, where the first node is connected to the second and third node. Below is a JavaScript implementation of the same thing.
+ด้านบนเป็นกราฟธรรมดาๆ ที่ไม่มีทิศทาง ซึ่งมีสาม node โดยที่ node แรกเชื่อมต่อกับ node ที่สองและสาม ด้านล่างนี้เป็นการนำ JavaScript ไปใช้ในสิ่งเดียวกัน
 
 ```js
 var adjMat = [
@@ -30,7 +30,7 @@ var adjMat = [
 ];
 ```
 
-Unlike an adjacency list, each "row" of the matrix has to have the same number of elements as nodes in the graph. Here we have a three by three matrix, which means we have three nodes in our graph. A directed graph would look similar. Below is a graph where the first node has an edge pointing toward the second node, and then the second node has an edge pointing to the third node.
+ซึ่งไม่เหมือนกับ adjacency list  "แถว" แต่ละแถวของเมทริกซ์ต้องมี element จำนวนเท่ากันกับ node ในกราฟ ที่นี่เรามีเมทริกซ์ขนาด 3 คูณ 3 ซึ่งหมายความว่าเรามีสาม node ในกราฟของเรา กราฟที่มีทิศทางจะมีลักษณะคล้ายกัน ด้านล่างเป็นกราฟทื่ node แรกมีขอบที่ชี้ไปยัง node ที่สอง จากนั้น node ที่สองมีขอบที่ชี้ไปที่ node ที่สาม
 
 ```js
 var adjMatDirected = [
@@ -40,15 +40,15 @@ var adjMatDirected = [
 ];
 ```
 
-Graphs can also have <dfn>weights</dfn> on their edges. So far, we have <dfn>unweighted</dfn> edges where just the presence and lack of edge is binary (`0` or `1`). You can have different weights depending on your application.
+กราฟสามารถมี <dfn>weights</dfn>ที่ขอบได้ ตอนนี้เรามีขอบ <dfn>unweighted</dfn> โดยมีเพียงการมีอยู่และไม่มีขอบเป็นเลขฐานสอง (`0` หรือ `1`) คุณสามารถมี weight ที่แตกต่างกันขึ้นอยู่กับการใช้งานของคุณ
 
 # --instructions--
 
-Create an adjacency matrix of an undirected graph with five nodes. This matrix should be in a multi-dimensional array. These five nodes have relationships between the first and fourth node, the first and third node, the third and fifth node, and the fourth and fifth node. All edge weights are one.
+สร้าง adjacency matrix ของกราฟแบบไม่มีทิศทางที่มีห้า node เมทริกซ์นี้ควรอยู่ใน array หลายมิติ node ทั้งห้านี้มีความสัมพันธ์ระหว่าง node ที่หนึ่งและสี่ node ที่หนึ่งและสาม node ที่สามและห้า และ node ที่สี่และห้า weight ของขอบทั้งหมดเป็นหนึ่งเดียว
 
 # --hints--
 
-`undirectedAdjList` should only contain five nodes.
+`undirectedAdjList` ควรประกอบด้วย node เพียง 5 node
 
 ```js
 assert(
@@ -63,25 +63,25 @@ assert(
 );
 ```
 
-There should be an edge between the first and fourth node.
+ควรจะมีขอบระหว่าง node แรกและสี่
 
 ```js
 assert(adjMatUndirected[0][3] === 1 && adjMatUndirected[3][0] === 1);
 ```
 
-There should be an edge between the first and third node.
+ควรจะมีขอบระหว่าง node แรกและสาม
 
 ```js
 assert(adjMatUndirected[0][2] === 1 && adjMatUndirected[2][0] === 1);
 ```
 
-There should be an edge between the third and fifth node.
+ควรจะมีขอบระหว่าง node สามและห้า
 
 ```js
 assert(adjMatUndirected[2][4] === 1 && adjMatUndirected[4][2] === 1);
 ```
 
-There should be an edge between the fourth and fifth node.
+ควรจะมีขอบระหว่าง node สี่และห้า
 
 ```js
 assert(adjMatUndirected[3][4] === 1 && adjMatUndirected[4][3] === 1);

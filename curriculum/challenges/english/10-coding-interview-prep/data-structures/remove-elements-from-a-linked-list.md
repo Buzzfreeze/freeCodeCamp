@@ -8,23 +8,23 @@ dashedName: remove-elements-from-a-linked-list
 
 # --description--
 
-The next important method that any implementation of a linked list will need is a `remove` method. This method should take the element we want to remove as an argument, and then search the list to find and remove the node that contains that element.
+Method ที่สำคัญต่อไปนี้ที่การนำ linked list ไปใช้งานนั้นจะต้องมี `remove` method โดยที่ method นี้ควรใช้ element ที่เราต้องการลบเป็น argument จากนั้นค้นหาภายในลิสต์เพื่อค้นหาและลบ node ที่มี element นั้น
 
-Whenever we remove a node from a linked list, it's important that we don't accidentally orphan the rest of the list in doing so. Recall that every node's `next` property points to the node that follows it in the list. If we're removing the middle element, say, we'll want to make sure that we have a connection from that element's previous node's `next` property to the middle element's `next` property (which is the next node in the list!)
+เมื่อใดก็ตามที่เราลบ node ออกจาก linked list สิ่งสำคัญคือเราต้องไม่ละเลยลิสต์ที่เหลือโดยไม่ได้ตั้งใจในการลบนั้น โปรดจำไว้ว่า `next` property ของ node ทุก node ชี้ไปที่ node ที่ตามหลังในลิสต์ หากเรานำ element ตรงกลางออก สมมติว่าเราต้องการให้แน่ใจว่าเรามีการเชื่อมต่อจาก `next` property ของ node ก่อนหน้าของ element นั้นไปยัง`next` property ของ element ตรงกลาง (ซึ่งเป็น node ถัดไปในลิสต์!)
 
-This might sound really confusing, so let's return to the conga line example so we have a good conceptual model. Picture yourself in a conga line, and the person directly in front of you leaves the line. The person who just left the line no longer has her hands on anyone in line--and you no longer have your hands on the person that left. You step forward and put your hands on next person you see.
+นี่อาจฟังดูสับสนมาก ดังนั้นกลับไปที่ตัวอย่าง conga line เพื่อให้เรามีรูปแบบแนวความคิดที่ดี ลองนึกภาพตัวเองใน conga line และคนตรงหน้าคุณออกจากแถว คนที่เพิ่งออกจากแถวไม่ได้จับมือของเธอกับใครในแถวอีกต่อไป - และคุณไม่ได้จับมือของคุณกับคนที่จากไป คุณก้าวไปข้างหน้าและจับมือกับคนต่อไปที่คุณเห็น
 
-If the element we wish to remove is the `head` element, we reassign the `head` to the second node of the linked list.
+หาก element ที่เราต้องการลบคือ `head` element เราจะกำหนด `head` ใหม่ให้กับ node ที่สองของ linked list
 
 # --instructions--
 
-Write a `remove` method that takes an element and removes it from the linked list.
+เขียน `remove` method ที่นำ element และลบมันออกจาก linked list 
 
-**Note:** The `length` of the list should decrease by one every time an element is removed from the linked list.
+**หมายเหตุ:** `length` ของลิสต์ควรลดลงที่ละหนึ่งทุกครั้งที่ element ถูกลบออกจาก linked list 
 
 # --hints--
 
-Your `LinkedList` class should have a `remove` method.
+คลาส `LinkedList` ของคุณควรมี `remove` method
 
 ```js
 assert(
@@ -35,7 +35,7 @@ assert(
 );
 ```
 
-Your `remove` method should reassign `head` to the second node when the first node is removed.
+`remove` method ของคุณควรกำหนด `head` ใหม่ให้กับ node ที่สองเมื่อ node แรกถูกลบไป
 
 ```js
 assert(
@@ -49,7 +49,7 @@ assert(
 );
 ```
 
-Your `remove` method should decrease the `length` of the linked list by one for every node removed.
+`remove` method ของคุณควรลด `length` ของ linked list ที่ละหนึ่งในทุกๆ node ที่ถูกลบออกไป
 
 ```js
 assert(
@@ -65,7 +65,7 @@ assert(
 );
 ```
 
-Your `remove` method should reassign the reference of the previous node of the removed node to the removed node's `next` reference.
+`remove` method ของคุณควรตั้งค่าใหม่ให้กับการอ้างอิงของ node ที่ถูกลบไปให้กับการอ้างกิงของ node ที่อยู่ถัดไปของ node ที่ถูกลบ
 
 ```js
 assert(
@@ -81,7 +81,7 @@ assert(
 );
 ```
 
-Your `remove` method should not change the linked list if the element does not exist in the linked list.
+`remove` method ของคุณไม่ควรเปลี่ยน linked list ถ้าหากไม่มี element ใดๆ ใน linked list นั้น
 
 ```js
 assert(

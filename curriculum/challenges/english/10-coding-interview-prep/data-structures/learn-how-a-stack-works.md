@@ -8,43 +8,43 @@ dashedName: learn-how-a-stack-works
 
 # --description--
 
-You are probably familiar with stack of books on your table. You have likely used the undo feature of a text editor. You are also probably used to hitting the back button on your phone to go back to the previous view in your app.
+คุณอาจคุ้นเคยกับกองหนังสือบนโต๊ะของคุณที่เป็นชั้นๆ คุณอาจเคยใช้คุณลักษณะ undo ของโปรแกรมแก้ไขข้อความ คุณอาจเคยชินกับการกดปุ่มย้อนกลับบนโทรศัพท์เพื่อกลับไปยังมุมมองก่อนหน้าในแอปของคุณ
 
-You know what they all have in common? They all store the data in a way so that you can traverse backwards.
+คุณรู้ไหมว่าพวกเขามีอะไรที่เหมือนกัน? พวกเขาทั้งหมดเก็บข้อมูลในลักษณะที่คุณสามารถย้อนกลับได้
 
-The topmost book in the stack was the one that was put there last. If you remove that book from your stack's top, you would expose the book that was put there before the last book and so on.
+หนังสือที่อยู่บนสุดในกองคือเล่มที่ถูกนำมาวางไว้สุดท้าย ถ้าคุณเอาหนังสือเล่มนั้นออกจากกองหนังสือของคุณ คุณจะเห็นหนังสือที่วางอยู่ที่นั่นก่อนหนังสือเล่มบนสุด
 
-If you think about it, in all the above examples, you are getting <dfn>Last-In-First-Out</dfn> type of service. We will try to mimic this with our code.
+หากคุณลองคิดดู จากตัวอย่างข้างต้น คุณจะได้ service ประเภท <dfn>Last-In-First-Out</dfn> เราจะพยายามเขียนโค้ดของเราด้วยการเลียนแบบหลักการนี้
 
-This data storage scheme is called a <dfn>Stack</dfn>. In particular, we would have to implement the `push()` method that pushes JavaScript objects at the top of the stack; and `pop()` method, that removes the JavaScript object that's at the top of the stack at the current moment.
+รูปแบบการจัดเก็บข้อมูลนี้เรียกว่า <dfn>Stack</dfn> โดยเฉพาะอย่างยิ่ง เราจะต้องใช้ `push()` method ที่ผลัก JavaScript object ที่ด้านบนสุดของ stack  และ `pop()` method ที่ลบ JavaScript object ที่อยู่บนสุดของ stack ในขณะนั้น
 
 # --instructions--
 
-Here we have a stack of homework assignments represented as an array: `"BIO12"` is at the base, and `"PSY44"` is at the top of the stack.
+ที่นี่เรามี stack ของการบ้านที่แสดงเป็น array : `"BIO12"` อยู่ที่ฐาน และ `"PSY44"` อยู่ที่ด้านบนสุดของ stack 
 
-Modify the given array and treat it like a `stack` using the JavaScript methods mentioned above. Remove the top element `"PSY44"` from the stack. Then add `"CS50"` to be the new top element of the stack.
+แก้ไข array ที่กำหนดและปฏิบัติเหมือนเป็น `stack` โดยใช้ JavaScript method ที่กล่าวถึงข้างต้น ลบ element ด้านบน `"PSY44"` ออกจาก stack  จากนั้นเพิ่ม `"CS50"` ให้เป็น element ใหม่บนสุดของ stack 
 
 # --hints--
 
-`homeworkStack` should only contain 4 elements.
+`homeworkStack` ควรมีแค่ 4 element
 
 ```js
 assert(homeworkStack.length === 4);
 ```
 
-The last element in `homeworkStack` should be `"CS50"`.
+Element สุดท้ายใน `homeworkStack` ควรเป็น `”CS50”`
 
 ```js
 assert(homeworkStack[3] === 'CS50');
 ```
 
-`homeworkStack` should not contain `"PSY44"`.
+`homeworkStack` ไม่ควรจะมี `"PSY44"` อยู่
 
 ```js
 assert(homeworkStack.indexOf('PSY44') === -1);
 ```
 
-The initial declaration of the `homeworkStack` should not be changed.
+การประกาศเริ่มต้นของ `homeworkStack` ไม่ควรถูกเปลี่ยนแปลง 
 
 ```js
 assert(

@@ -8,47 +8,50 @@ dashedName: insert-an-element-into-a-max-heap
 
 # --description--
 
-Now we will move on to another tree data structure, the binary heap. A binary heap is a partially ordered binary tree which satisfies the heap property. The heap property specifies a relationship between parent and child nodes. You may have a max heap, in which all parent nodes are greater than or equal to their child nodes, or a min heap, in which the reverse is true. Binary heaps are also complete binary trees. This means that all levels of the tree are fully filled and if the last level is partially filled it is filled from left to right.
+ตอนนี้เราจะไปต่อที่โครงสร้างข้อมูล tree อื่น ซึ่งก็คือ binary heap ที่ เป็น binary tree ที่เรียงลำดับบางส่วนซึ่งตรงตามคุณสมบัติของ heap  คุณสมบัติ heap ระบุความสัมพันธ์ระหว่าง parent node และ child node คุณอาจมี heap สูงสุด ซึ่ง parent node ทั้งหมดมีค่ามากกว่าหรือเท่ากับ child node หรือ heap ขั้นต่ำ ซึ่งเป็นกรณีกลับกัน  binary heap ยังเป็น binary tree ที่สมบูรณ์อีกด้วย ซึ่งหมายความว่าทุกระดับของ tree เต็มแล้ว และหากระดับสุดท้ายเต็มบางส่วน  tree จะถูกเติมจากซ้ายไปขวา
 
-While binary heaps may be implemented as tree structures with nodes that contain left and right references, the partial ordering according to the heap property allows us to represent the heap with an array. The parent-children relationship is what we're interested in and with simple arithmetic we can compute the children of any parent and the parent of any child node.
+แม้ว่า binary heap อาจถูกนำไปใช้เป็นโครงสร้างแบบ tree ที่มี node ที่มีการอ้างอิงด้านซ้ายและขวา การเรียงลำดับบางส่วนตามคุณสมบัติของ heap ช่วยให้เราสามารถแสดง heap ด้วย array ได้ ความสัมพันธ์ระหว่าง parent และ child คือสิ่งที่เราสนใจ และด้วยการคำนวณทางคณิตศาสตร์อย่างง่าย เราสามารถคำนวณ child ของ parent และ parent ของ  childe node ใดๆ
 
-For instance, consider this array representation of a binary min heap:
+ตัวอย่าง ลองดู array นี้ที่แสดงถึง binary min heap:
 
 ```js
 [ 6, 22, 30, 37, 63, 48, 42, 76 ]
 ```
 
+ Root node `6` เป็น element แรก child ของมันคือ `22` และ `30` หากเราดูที่ความสัมพันธ์ระหว่างดัชนี array ของค่าเหล่านี้ สำหรับ index `i` child คือ `2 * i + 1` และ `2 * i + 2` ในทำนองเดียวกัน element ที่ index `0` เป็น parent ของสอง child นี้ที่ index `1` และ `2` โดยทั่วไปแล้วเราสามารถค้นหา parent ของ node ที่ index ใดก็ได้ดังต่อไปนี้: `Math.floor((i - 1) / 2)` รูปแบบเหล่านี้จะเป็นจริงเมื่อ binary tree สามารถมีได้ขึ้นทุกขนาด สุดท้ายเราสามารถปรับเปลี่ยนเล็กน้อยเพื่อให้การคำนวณนี้ง่ายยิ่งขึ้นโดยข้าม element แรกใน array  การทำเช่นนี้จะสร้างความสัมพันธ์ต่อไปนี้สำหรับ element ใดๆ ที่ index `i` ที่ระบุ:
+
 The root node is the first element, `6`. Its children are `22` and `30`. If we look at the relationship between the array indices of these values, for index `i` the children are `2 * i + 1` and `2 * i + 2`. Similarly, the element at index `0` is the parent of these two children at indices `1` and `2`. More generally, we can find the parent of a node at any index with the following: `Math.floor((i - 1) / 2)`. These patterns will hold true as the binary tree grows to any size. Finally, we can make a slight adjustment to make this arithmetic even easier by skipping the first element in the array. Doing this creates the following relationship for any element at a given index `i`:
 
+ตัวอย่าง array:
 Example array representation:
 
 ```js
 [ null, 6, 22, 30, 37, 63, 48, 42, 76 ]
 ```
 
-An element's left child: `i * 2`
+Element ของ child ทางซ้าย คือ  `i * 2`
 
-An element's right child: `i * 2 + 1`
+Element ของ child ทางขวา คือ `i * 2 + 1`
 
-An element's parent: `Math.floor(i / 2)`
+Element ของ parent คือ `Math.floor(i / 2)`
 
-Once you wrap your head around the math, using an array representation is very useful because node locations can be quickly determined with this arithmetic and memory usage is diminished because you don't need to maintain references to child nodes.
+เมื่อคุณเรียนรู้เกี่ยวกับสมการคณิตศาสตร์แล้ว โดยการใช้การแสดง array จะมีประโยชน์มาก เนื่องจากตำแหน่งของ node สามารถระบุได้อย่างรวดเร็วด้วยสมการนี้ และการใช้หน่วยความจำจะลดลงเนื่องจากคุณไม่จำเป็นต้องรักษาการอ้างอิงไปยัง child node
 
 # --instructions--
 
-Instructions: Here we will create a max heap. Start by just creating an `insert` method which adds elements to our heap. During insertion, it is important to always maintain the heap property. For a max heap this means the root element should always have the greatest value in the tree and all parent nodes should be greater than their children. For an array implementation of a heap, this is typically accomplished in three steps:
+คำแนะนำ: เราลองจะสร้าง heap สูงสุด เริ่มต้นด้วยการสร้าง `insert` method  ซึ่งเพิ่ม element ลงใน heap ของเรา ในระหว่างการเพิ่มจำเป็นต้องรักษาคุณสมบัติของ heap อยู่เสมอ สำหรับ heap สูงสุด หมายความว่า root element ควรมีค่ามากที่สุดใน tree เสมอ และ parent node ทั้งหมดควรมากกว่า child สำหรับการนำ heap ไปใช้งาน array  โดยทั่วไปสามารถทำได้ในสามขั้นตอน:
 
 <ol>
-  <li>Add the new element to the end of the array.</li>
-  <li>If the element is larger than its parent, switch them.</li>
-  <li>Continue switching until the new element is either smaller than its parent or you reach the root of the tree.</li>
+  <li>เพิ่ม element ใหม่ไปยังท้ายสุดของ array</li>
+  <li>ถ้า element นั้นใหญ่กว่า parent ของมัน ให้สลับค่ามัน</li>
+  <li>สลับไปเรื่อยๆ จนกว่า element ใหม่นั้นจะน้อยกว่า parent ของมันหรือคุณสลับไปจนถึง root ของ tree แล้ว</li>
 </ol>
 
-Finally, add a `print` method which returns an array of all the items that have been added to the heap.
+สุดท้าย เพิ่ม `print` method ซึ่ง return array ของรายการทั้งหมดที่เพิ่มลงใน heap 
 
 # --hints--
 
-The MaxHeap data structure should exist.
+ควรมีโครงสร้างข้อมูล MaxHeap
 
 ```js
 assert(
@@ -62,7 +65,7 @@ assert(
 );
 ```
 
-MaxHeap should have a method called insert.
+MaxHeap ควรมี method ที่เรียกว่า insert
 
 ```js
 assert(
@@ -78,7 +81,7 @@ assert(
 );
 ```
 
-MaxHeap should have a method called print.
+MaxHeap ควรมี method ที่เรียกว่า print
 
 ```js
 assert(
@@ -94,7 +97,7 @@ assert(
 );
 ```
 
-The insert method should add elements according to the max heap property.
+Insert method ควรเพิ่ม element ตามคุรสมบัติของ max heap
 
 ```js
 assert(

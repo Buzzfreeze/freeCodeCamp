@@ -8,11 +8,11 @@ dashedName: create-a-map-data-structure
 
 # --description--
 
-The next few challenges will cover maps and hash tables. Maps are data structures that store key-value pairs. In JavaScript, these are available to us as objects. Maps provide rapid lookup of stored items based on key values and are very common and useful data structures.
+แบบทดสอบต่อไปจะพูดครอบคลุมถึง map และ hash table (ตารางแฮช)  Map คือโครงสร้างข้อมูลที่จัดเก็บ key-value pairs  ใน JavaScript สิ่งเหล่านี้ก็คือ object อย่างนึง Map ให้การค้นหารายการที่เก็บไว้อย่างรวดเร็วตามค่าคีย์และเป็นโครงสร้างข้อมูลทั่วไปที่เป็นประโยชน์
 
 # --instructions--
 
-Let's get some practice creating our own map. Because JavaScript objects provide a much more efficient map structure than anything we could write here, this is intended primarily as a learning exercise. However, JavaScript objects only provide us with certain operations. What if we wanted to define custom operations? Use the `Map` object provided here as a wrapper around a JavaScript `object`. Create the following methods and operations on the Map object:
+มาฝึกสร้าง map ของตัวเองกันเถอะ เนื่องจาก JavaScript object มีโครงสร้าง map ที่มีประสิทธิภาพมากกว่าสิ่งที่เราจะสามารถเขียนได้ที่นี่จึงนำมาเป็นตัวอย่างเพื่อเป็นแบบฝึกหัดการเรียนรู้ อย่างไรก็ตามเราสามารถสร้าง operation  บางอย่างบน JavaScript object อย่างจำกัด จะเป็นอย่างไรถ้าเราต้องการสร้าง operation ที่กำหนดเอง ใช้ `Map` object ที่ให้ไว้ที่นี่เป็น wrapper รอบ `object` ของ JavaScript สร้าง method และ operation ต่อไปนี้บน Map object:
 
 <ul>
 <li><code>add</code> accepts a <code>key, value</code> pair to add to the map.</li>
@@ -26,7 +26,7 @@ Let's get some practice creating our own map. Because JavaScript objects provide
 
 # --hints--
 
-The Map data structure should exist.
+ควรมีโครงสร้างข้อมูล Map
 
 ```js
 assert(
@@ -40,7 +40,7 @@ assert(
 );
 ```
 
-The Map object should have the following methods: add, remove, get, has, values, clear, and size.
+Map object ควรมี method ดังต่อไปนี้: add, remove, get, has, values, clear และ size
 
 ```js
 assert(
@@ -62,7 +62,7 @@ assert(
 );
 ```
 
-The add method should add items to the map.
+Add method ควรเพิ่มรายการไปยัง map
 
 ```js
 assert(
@@ -79,7 +79,7 @@ assert(
 );
 ```
 
-The has method should return true for added items and false for absent items.
+Has method ควร return true เมื่อเพิ่มรายการและ false เมื่อไม่มีรายการนั้นๆ
 
 ```js
 assert(
@@ -94,7 +94,7 @@ assert(
 );
 ```
 
-The get method should accept keys as input and should return the associated values.
+Get method ควรรับ key เป็น input และ return ค่าที่เกี่ยวข้องนั้นๆ
 
 ```js
 assert(
@@ -109,7 +109,7 @@ assert(
 );
 ```
 
-The values method should return all the values stored in the map as strings in an array.
+Values method ควร return ค่าทั้งหมดที่ถูกเก็บอยู่ใน map ในรูปแบบ string ใน array
 
 ```js
 assert(
@@ -131,7 +131,7 @@ assert(
 );
 ```
 
-The clear method should empty the map and the size method should return the number of items present in the map.
+Clear method ควรลบข้อมูลทั้งหมดให้ map ว่างเปล่าและ size method ควร return จำนวนของรายการที่มีใน map
 
 ```js
 assert(

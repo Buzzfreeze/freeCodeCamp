@@ -8,19 +8,19 @@ dashedName: find-the-minimum-and-maximum-height-of-a-binary-search-tree
 
 # --description--
 
-In the last challenge we described a scenario in which a tree could become unbalanced. To understand the concept of balance, let's take a look at another tree property: height. Height in a tree represents the distance from the root node to any given leaf node. Different paths in a highly branched tree structure may have different heights, but for a given tree there will be a minimum and maximum height. If the tree is balanced, these values will differ at most by one. This means that in a balanced tree, all the leaf nodes exist within the same level, or if they are not within the same level they are at most one level apart.
+ในแบบทดสอบผ่านมา เราได้อธิบายสถานการณ์สมมติที่ tree อาจไม่สมดุล เพื่อให้เข้าใจแนวคิดเรื่องความสมดุลลองมาดู property ของ tree อื่นๆ: Height ความสูงใน tree แสดงถึงระยะทางจาก  root node ไปยัง leaf node ที่ระบุ เส้นทางที่แตกต่างกันในโครงสร้าง tree ที่มีกิ่งก้านมากๆ อาจมีความสูงต่างกัน แต่โดยทั่วไปสำหรับ tree หนึ่งๆ จะมีความสูงน้อยสุดและความสูงมากสุด หาก tree มีความสมดุล ค่าเหล่านี้จะแตกต่างกันอย่างมากหนึ่งค่า ซึ่งหมายความว่าใน tree ที่สมดุล leaf node ทั้งหมดจะอยู่ในระดับเดียวกัน หรือหาก node เหล่านี้ไม่อยู่ในระดับเดียวกัน leaf node ทั้งหมดจะห่างกันไม่เกินหนึ่งระดับ
 
-The property of balance is important for trees because it is what determines the efficiency of tree operations. As we explained in the last challenge, we face worst case time complexity for heavily unbalanced trees. Self-balancing trees are commonly used to account for this issue in trees with dynamic data sets. Common examples of these include AVL trees, red-black trees, and B-trees. These trees all contain additional internal logic which re-balance the tree when insertions or deletions create a state of imbalance.
+คุณสมบัติของความสมดุลมีความสำคัญสำหรับ tree เพราะเป็นสิ่งที่กำหนดประสิทธิภาพของการทำงานของ tree  ตามที่เราอธิบายในแบบทดสอบที่ผ่านมา เราเผชิญกับความซับซ้อนของเวลาในกรณีที่เลวร้ายที่สุดสำหรับ tree ที่ไม่สมดุลอย่างมาก โดยทั่วไปแล้ว tree ที่ปรับสมดุลในตัวเองมักใช้เพื่ออธิบายปัญหานี้ใน tree ที่มีชุดข้อมูลแบบไดนามิก ตัวอย่างทั่วไปของสิ่งเหล่านี้ ได้แก่  AVL  tree, red-black tree และ B-tree เหล่านี้ทั้งหมดมีตรรกะภายในเพิ่มเติมซึ่งปรับสมดุล tree ใหม่เมื่อการแทรกหรือการลบที่สร้างสถานะความไม่สมดุลขึ้นมา 
 
-**Note:** A similar property to height is depth, which refers to how far a given node is from the root node.
+**หมายเหตุ:** คุณสมบัติคล้ายกับความสูงคือความลึก (depth)  ซึ่งหมายถึงว่า node ที่กำหนดอยู่ห่างจาก root nodeมากเพียงใด
 
 # --instructions--
 
-Write two methods for our binary tree: `findMinHeight` and `findMaxHeight`. These methods should return an integer value for the minimum and maximum height within a given binary tree, respectively. If the node is empty let's assign it a height of `-1` (that's the base case). Finally, add a third method `isBalanced` which returns `true` or `false` depending on whether the tree is balanced or not. You can use the first two methods you just wrote to determine this.
+เขียน 2 method สำหรับ binary tree ของเรา: `findMinHeight` และ `findMaxHeight` โดยที่ method เหล่านี้ควร return ค่าจำนวนเต็มสำหรับความสูงต่ำสุดและสูงสุดภายใน binary tree ที่กำหนดตามลำดับ หาก node ว่างเปล่า ให้กำหนดความสูงของ node  เป็น `-1` (นั่นคือเคสพื้นฐาน) สุดท้ายเพิ่ม method ที่สาม `isBalanced` ซึ่ง return ค่า `true` หรือ `false` ขึ้นอยู่กับว่า tree มีความสมดุลหรือไม่ คุณสามารถใช้สองวิธีแรกที่คุณเพิ่งเขียนเพื่อตรวจสอบสิ่งนี้
 
 # --hints--
 
-The `BinarySearchTree` data structure should exist.
+ควรมีโครงสร้างข้อมูล `BinarySearchTree`
 
 ```js
 assert(
@@ -34,7 +34,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `findMinHeight`.
+binary search tree ควรมี method ที่เรียกว่า `findMinHeight`
 
 ```js
 assert(
@@ -50,7 +50,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `findMaxHeight`.
+binary search tree ควรมี method ที่เรียกว่า `findMaxHeight`
 
 ```js
 assert(
@@ -66,7 +66,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `isBalanced`.
+binary search tree ควรมี method ที่เรียกว่า `isBalanced`
 
 ```js
 assert(
@@ -82,7 +82,7 @@ assert(
 );
 ```
 
-The `findMinHeight` method should return the minimum height of the tree.
+`findMinHeight` method ควร return ความสูงต่ำสุดของ tree
 
 ```js
 assert(
@@ -109,7 +109,7 @@ assert(
 );
 ```
 
-The `findMaxHeight` method should return the maximum height of the tree.
+`findMaxHeight` method ควร return ความสูงมากที่สุดของ tree
 
 ```js
 assert(
@@ -136,7 +136,7 @@ assert(
 );
 ```
 
-An empty tree should return a height of `-1`.
+Tree ที่ว่างเปล่าควร return ค่าความสูงที่ `-1`
 
 ```js
 assert(
@@ -155,7 +155,7 @@ assert(
 );
 ```
 
-The `isBalanced` method should return `false` if the tree is an unbalanced binary search tree.
+`isBalanced` method ควร return `false` หาก tree นั้น เป็น binary search tree ที่ไม่สมดุล
 
 ```js
 assert(
@@ -182,7 +182,7 @@ assert(
 );
 ```
 
-The `isBalanced` method should return `true` if the tree is a balanced binary search tree.
+`isBalanced` method ควร return `true` หาก tree นั้น เป็น binary search tree ที่สมดุล
 
 ```js
 assert(

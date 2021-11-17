@@ -8,31 +8,31 @@ dashedName: breadth-first-search
 
 # --description--
 
-So far, we've learned different ways of creating representations of graphs. What now? One natural question to have is what are the distances between any two nodes in the graph? Enter <dfn>graph traversal algorithms</dfn>.
+จนถึงตอนนี้ เราได้เรียนรู้วิธีต่างๆ ในการสร้างการแสดงกราฟ แล้วยังไงต่อล่ะ? คำถามธรรมดาข้อหนึ่งที่ต้องมีคือระยะห่างระหว่าง node สอง node ในกราฟเป็นเท่าใด เรามารู้จักกับ <dfn>graph traversal algorithms</dfn> กัน
 
-<dfn>Traversal algorithms</dfn> are algorithms to traverse or visit nodes in a graph. One type of traversal algorithm is the breadth-first search algorithm.
+<dfn>Traversal algorithms</dfn> เป็นอัลกอริธึมในการสำรวจหรือหา node ในกราฟ อัลกอริธึมการข้ามผ่านประเภทหนึ่งคืออัลกอริธึมการค้นหาแบบกว้างก่อน (breadth-first search algorithm)
 
-This algorithm starts at one node and visits all its neighbors that are one edge away. It then goes on to visit each of their neighbors and so on until all nodes have been reached.
+อัลกอริธึมนี้เริ่มต้นที่ node เดียวและค้นหาไปยัง node ข้างๆ ทั้งหมดที่อยู่ห่างออกไปหนึ่งขอบ จากนั้นจะไปหา node ข้างๆ ของแต่ละรายไปเรื่อยๆ จนกว่าจะถึง node ทั้งหมด
 
-An important data structure that will help implement the breadth-first search algorithm is the queue. This is an array where you can add elements to one end and remove elements from the other end. This is also known as a <dfn>FIFO</dfn> or <dfn>First-In-First-Out</dfn> data structure.
+โครงสร้างข้อมูลที่สำคัญที่จะช่วยนำอัลกอริธึมการค้นหาแบบกว้างมาใช้คือ queue นี่คือ array ที่คุณสามารถเพิ่ม element ที่ปลายด้านหนึ่งและลบ element ออกจากปลายอีกด้านหนึ่งได้ สิ่งนี้เรียกอีกอย่างว่าโครงสร้างข้อมูล <dfn>FIFO</dfn> หรือ <dfn>First-In-First-Out</dfn>
 
-Visually, this is what the algorithm is doing. ![Breadth first search algorithm moving through a tree](https://camo.githubusercontent.com/2f57e6239884a1a03402912f13c49555dec76d06/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f342f34362f416e696d617465645f4246532e676966)
+ลองมาดูให้เห็นภาพกันว่าอัลกอริธึมนี้ทำงานอย่างไร ![การเคลื่อนที่ไปบน tree ของ Breadth first search algorithm](https://camo.githubusercontent.com/2f57e6239884a1a03402912f13c49555dec76d06/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f342f34362f416e696d617465645f4246532e676966)
 
-The grey shading represents a node getting added into the queue and the black shading represents a node getting removed from the queue. See how every time a node gets removed from the queue (node turns black), all their neighbors get added into the queue (node turns grey).
+ส่วนที่แรเงาสีเทาหมายถึง node ที่ถูกเพิ่มเข้าไปใน queue และส่วนที่แรเงาสีดำหมายถึง node ที่ถูกลบออกจาก queue ดูว่าทุกครั้งที่ node ถูกลบออกจาก queue (node เปลี่ยนเป็นสีดำ) แล้ว node ที่อยู่ติดกันทั้งหมดของพวกมันจะถูกเพิ่มเข้าไปใน queue อย่างไร ( node เปลี่ยนเป็นสีเทา)
 
-To implement this algorithm, you'll need to input a graph structure and a node you want to start at.
+ในการใช้อัลกอริทึมนี้ คุณจะต้องป้อนโครงสร้างกราฟและ node ที่คุณต้องการเริ่มใช้
 
-First, you'll want to be aware of the distances from, or number of edges away from, the start node. You'll want to start all your distances with some large number, like `Infinity`. This prevents counting issues for when a node may not be reachable from your start node. Next, you'll want to go from the start node to its neighbors. These neighbors are one edge away and at this point you should add one unit of distance to the distances you're keeping track of.
+อันดับแรก คุณจะต้องทราบระยะทางจากหรือจำนวนขอบที่ห่างจาก node เริ่มต้น คุณจะต้องเริ่มระยะทางทั้งหมดด้วยตัวเลขจำนวนมาก เช่น `Infinity` ซึ่งป้องกันปัญหาการนับเมื่อ node อาจไม่สามารถเข้าถึงได้จาก node เริ่มต้นของคุณ ต่อไปคุณจะต้องเริ่มหาไปจาก node เริ่มต้นไปยัง node ที่ติดกัน node ที่ติดกันเหล่านี้อยู่ห่างออกไปหนึ่งขอบ และเมื่อถึงจุดนี้ คุณควรเพิ่มระยะทางหนึ่งหน่วยให้กับระยะทางที่คุณติดตาม
 
 # --instructions--
 
-Write a function `bfs()` that takes an adjacency matrix graph (a two-dimensional array) and a node label root as parameters. The node label will just be the integer value of the node between `0` and `n - 1`, where `n` is the total number of nodes in the graph.
+เขียนฟังก์ชัน `bfs()` ที่ใช้ adjacency matrix graph (array สองมิติ) และ node ที่เป็น root เป็นพารามิเตอร์ ป้ายกำกับnode จะเป็นค่าจำนวนเต็มของ node ระหว่าง `0` และ `n – 1` โดยที่ `n` คือจำนวน node ทั้งหมดในกราฟ
 
-Your function will output a JavaScript object key-value pairs with the node and its distance from the root. If the node could not be reached, it should have a distance of `Infinity`.
+ฟังก์ชันของคุณจะส่งออก JavaScript object key-value pairs กับ node และระยะห่างจาก root หากไม่สามารถเข้าถึงnode ได้ ควรมีระยะห่าง `Infinity`
 
 # --hints--
 
-The input graph `[[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0]]` with a start node of `1` should return `{0: 1, 1: 0, 2: 1, 3: 2}`
+กราฟ input `[[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0]]` ที่มี node เริ่มต้นคือ `1` ควร return `{0: 1, 1: 0, 2: 1, 3: 2}`
 
 ```js
 assert(
@@ -49,7 +49,7 @@ assert(
 );
 ```
 
-The input graph `[[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 0, 0]]` with a start node of `1` should return `{0: 1, 1: 0, 2: 1, 3: Infinity}`
+กราฟ input `[[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 0, 0]]` ที่มี node เริ่มต้นคือ `1` ควร return `{0: 1, 1: 0, 2: 1, 3: Infinity}`
 
 ```js
 assert(
@@ -66,7 +66,7 @@ assert(
 );
 ```
 
-The input graph `[[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0]]` with a start node of `0` should return `{0: 0, 1: 1, 2: 2, 3: 3}`
+กราฟ input `[[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0]]` ที่มี node เริ่มต้นคือ `0` ควร return `{0: 0, 1: 1, 2: 2, 3: 3}`
 
 ```js
 assert(
@@ -83,7 +83,7 @@ assert(
 );
 ```
 
-The input graph `[[0, 1], [1, 0]]` with a start node of `0` should return `{0: 0, 1: 1}`
+กราฟ input `[[0, 1], [1, 0]]` ที่มี node เริ่มต้นคือ `0` ควร return `{0: 0, 1: 1}`
 
 ```js
 assert(
