@@ -8,7 +8,7 @@ dashedName: explore-differences-between-the-var-and-let-keywords
 
 # --description--
 
-One of the biggest problems with declaring variables with the `var` keyword is that you can overwrite variable declarations without an error.
+ปัญหาสำคัญเมื่อประกาศตัวแปรด้วยคีย์เวิร์ด `var` ก็คือ คุณสามารถประกาศตัวแปรซ้ำได้โดยไม่เกิด error
 
 ```js
 var camper = 'James';
@@ -16,44 +16,43 @@ var camper = 'David';
 console.log(camper);
 ```
 
-Here the console will display the string `David`.
+ในที่นี้หน้า console จะแสดง string `David`
 
-As you can see in the code above, the `camper` variable is originally declared as `James` and then overridden to be `David`. In a small application, you might not run into this type of problem, but when your code becomes larger, you might accidentally overwrite a variable that you did not intend to overwrite. Because this behavior does not throw an error, searching and fixing bugs becomes more difficult.  
-A new keyword called `let` was introduced in ES6 to solve this potential issue with the `var` keyword. If you were to replace `var` with `let` in the variable declarations of the code above, the result would be an error.
+จากโค้ดด้านบน คุณเห็นได้ว่า ตัวแปร `camper` มีการกำหนดค่าเป็น `James` จากนั้นก็ถูกแทนที่ค่าด้วย `David` ซึ่งถ้าเป็นแอปเล็กๆ คุณอาจไม่เจอปัญหานี้ แต่หากเป็นแอปที่ใหญ่ขึ้นมา คุณอาจเผลอไปแทนที่ค่าตัวแปรโดยไม่ตั้งใจ เนื่องจากการใช้ `var` ไม่ได้ทำให้เกิด error ใดๆ ดังนั้นการค้นหาและแก้ไข bugs ก็ทำได้ยากมากขึ้น อย่างไรก็ตาม `let` ซึ่งเป็นคีย์เวิร์ดใหม่ใน ES6 ช่วยแก้ปัญหานี้ได้ หากคุณแทนที่ `var` ด้วย `let` ในการประกาศตัวแปรในโค้ดข้างต้น ก็จะเกิด error ขึ้นมา 
 
 ```js
 let camper = 'James';
 let camper = 'David';
 ```
 
-This error can be seen in the console of your browser. So unlike `var`, when using `let`, a variable with the same name can only be declared once. Note the `"use strict"`. This enables Strict Mode, which catches common coding mistakes and "unsafe" actions. For instance:
+เราสามารถเห็น error นี้ใน console ของ browser ดังนั้น ตัวแปรที่ชื่อเหมือนกันสามารถประกาศได้เพียงครั้งเดียวหากใช้ `let` ซึ่งไม่เหมือนกับ `var` นอกจากนี้ยังมี `"use strict"` ที่เปิด Strict Mode เพื่อตรวจสอบความผิดพลาดของโค้ดและคำสั่งที่ไม่ปลอดภัย (unsafe actions) ได้ ยกตัวอย่างเช่น
 
 ```js
 "use strict";
 x = 3.14;
 ```
 
-This will display an error that `x is not defined`.
+ในที่นี้แสดง error `x is not defined`
 
 # --instructions--
 
-Update the code so it only uses the `let` keyword.
+จงปรับแก้โค้ให้ใช้เพียงคีย์เวิร์ด `let`
 
 # --hints--
 
-`var` should not exist in the code.
+`var` ไม่ควรมีอยู่ในโค้ด
 
 ```js
 (getUserInput) => assert(!getUserInput('index').match(/var/g));
 ```
 
-`catName` should be the string `Oliver`.
+`catName` ควรเป็น string `Oliver`
 
 ```js
 assert(catName === 'Oliver');
 ```
 
-`quote` should be the string `Oliver says Meow!`
+`quote` ควรเป็น string `Oliver says Meow!`
 
 ```js
 assert(quote === 'Oliver says Meow!');

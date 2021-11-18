@@ -8,46 +8,47 @@ dashedName: declare-a-read-only-variable-with-the-const-keyword
 
 # --description--
 
-The keyword `let` is not the only new way to declare variables. In ES6, you can also declare variables using the `const` keyword.
+นอกจากคีย์เวิร์ด `let` แล้ว ก็ยังมีคีย์เวิร์ด `const` ที่เป็นคีย์เวิร์ดใหม่ใน ES6 
 
-`const` has all the awesome features that `let` has, with the added bonus that variables declared using `const` are read-only. They are a constant value, which means that once a variable is assigned with `const`, it cannot be reassigned.
+`const` มีฟีเจอร์เหมือนกับ `let` แต่ตัวแปรที่ประกาศด้วย `const` เป็น read-only หรือพูดอีกนัยหนึ่งว่า เป็นค่าคงที่และไม่สามารถกำหนดค่าใหม่ได้อีก
 
 ```js
 const FAV_PET = "Cats";
 FAV_PET = "Dogs";
 ```
 
-The console will display an error due to reassigning the value of `FAV_PET`.
+หน้า console จะแสดง error เนื่องจากมีการกำหนดค่าใหม่ให้กับตัวแปร `FAV_PET`
 
-As you can see, trying to reassign a variable declared with `const` will throw an error. You should always name variables you don't want to reassign using the `const` keyword. This helps when you accidentally attempt to reassign a variable that is meant to stay constant. A common practice when naming constants is to use all uppercase letters, with words separated by an underscore.
+จากข้างต้น คุณจะเห็นว่า การกำหนดค่าให้กับตัวแปรที่ประกาศด้วย `const` ทำให้เกิด error ดังนั้น คุณควรประกาศตัวแปรที่คุณไม่ต้องการกำหนดค่าใหม่ด้วยคีย์เวิร์ด `const` เสมอ เพื่อว่าเวลาที่คุณเผลอกำหนดค่าใหม่ให้กับตัวแปรจะได้ทำไม่ได้ นอกจากนี้ ชื่อตัวแปรที่เป็นค่าคงที่นี้นิยมกำหนดเป็นตัวพิมพ์ใหญ่ทั้งหมด หากมีหลายคำให้คั่นด้วย underscore (_)
 
-**Note:** It is common for developers to use uppercase variable identifiers for immutable values and lowercase or camelCase for mutable values (objects and arrays). In a later challenge you will see an example of a lowercase variable identifier being used for an array.
+**หมายเหตุ:** เป็นเรื่องปกติที่นักพัฒนาจะใช้ตัวพิมพ์ใหญ่ทั้งหมดในการตั้งชื่อตัวแปรที่เปลี่ยนแปลงค่าไม่ได้ และใช้ตัวพิมพ์เล็กหรือ camelCase ในการตั้งชื่อตัวแปรที่เปลี่ยนแปลงค่าได้ (objects และ arrays) สำหรับแบบทดสอบต่อจากนี้ คุณจะได้เห็นตัวอย่างของการใช้ตัวพิมพ์เล็กในการตั้งชื่อตัวแปร array 
+
 
 # --instructions--
 
-Change the code so that all variables are declared using `let` or `const`. Use `let` when you want the variable to change, and `const` when you want the variable to remain constant. Also, rename variables declared with `const` to conform to common practices, meaning constants should be in all caps.
+จงปรับแก้โค้ด เพื่อให้ทุกตัวแปรประกาศด้วย `let` หรือ `const` โดยใช้ `let` เมื่อคุณต้องการเปลี่ยนค่าตัวแปร และใช้ `const` เมื่อคุณต้องการให้ค่าตัวแปรคงที่ไม่เปลี่ยนแปลง นอกจากนี้ ให้เปลี่ยนชื่อตัวแปรที่ประกาศด้วย `const` ให้เป็นไปตามแนวปฎิบัติโดยทั่วไป นั่นคือ ทำให้ตัวแปรค่าคงที่เป็นตัวพิมพ์ใหญ่ทั้งหมด
 
 # --hints--
 
-`var` should not exist in your code.
+`var` ไม่ควรมีอยู่ในโค้ด
 
 ```js
 (getUserInput) => assert(!getUserInput('index').match(/var/g));
 ```
 
-`SENTENCE` should be a constant variable declared with `const`.
+`SENTENCE` ควรเป็นตัวแปรค่าคงที่ที่ประกาศด้วย `const`
 
 ```js
 (getUserInput) => assert(getUserInput('index').match(/(const SENTENCE)/g));
 ```
 
-`i` should be declared with `let`.
+`i` ควรประกาศด้วย `let`
 
 ```js
 (getUserInput) => assert(getUserInput('index').match(/(let i)/g));
 ```
 
-`console.log` should be changed to print the `SENTENCE` variable.
+`console.log` ควรปรับเปลี่ยนเพื่อพิมพ์ตัวแปร `SENTENCE`
 
 ```js
 (getUserInput) =>
