@@ -44,7 +44,7 @@ dashedName: create-a-complex-jsx-element
 
 **Note:** เมื่อเรนดเดอร์หลายๆ element อย่างนี้ คุณสามารถรวบทุกอย่างไว้ในวงเล็บได้ แต่จะทำหรือไม่ก็ได้ไม่เคร่ง  นอกจากนี้โปรดสังเกตว่าแบบทดสอบนี้ใช้ `div` tag เพื่อรวบ child element ทุกอันไว้ภายใน parent element เดียว ถ้าคุณลบ `div` ออก JSX ก็จะไม่สามารถ transpile ได้อีกต่อไป จำในส่วนนี้ไว้ให้ดีๆ เพราะต้องนำไปใช้เมื่อคุณจะ return JSX element ใน React component
 
-# --hints—
+# --hints--
 
 constant `JSX` ควรจะต้อง return `div` element
 

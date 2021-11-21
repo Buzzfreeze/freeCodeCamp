@@ -20,7 +20,7 @@ dashedName: use--for-a-more-concise-conditional
 
 มาลองแก้ไขตัวอย่างก่อนหน้านี้อีกครั้ง จะให้ `h1` จะเรนเดอร์ก็ต่อเมื่อ `display` เป็น `true` แต่ใช้ตัวดำเนินการตรรกะ `&&` แทนคำสั่ง `if/else`
 
-# --hints—
+# --hints--
 
 `MyComponent` ควรมีอยู่และเรนเดอร์
 

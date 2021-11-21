@@ -14,7 +14,7 @@ dashedName: register-a-store-listener
 
 ลองเขียน callback function ที่เพิ่มตัวแปร global `count` ทุกครั้งที่ store ได้รับ action และส่งฟังก์ชันนี้ไปยังเมธอด `store.subscribe()` คุณจะเห็นว่า `store.dispatch()` ถูกเรียกใช้สามครั้งติดต่อกัน แต่ละครั้งจะส่งผ่าน action object โดยตรง ดู console output ระหว่าง action ที่ส่งไปเพื่อดูการอัปเดตที่เกิดขึ้น
 
-# --hints—
+# --hints--
 
 การส่ง `ADD` action บน store ควรเพิ่ม state ทีละ `1`
 
