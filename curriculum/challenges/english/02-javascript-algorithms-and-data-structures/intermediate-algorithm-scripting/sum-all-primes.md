@@ -21,13 +21,13 @@ dashedName: sum-all-primes
 assert.deepEqual(typeof sumPrimes(10), 'number');
 ```
 
-`sumPrimes(10)` ควรคืนค่าเป็น 7
+`sumPrimes(10)` ควรคืนค่าเป็น 17
 
 ```js
 assert.deepEqual(sumPrimes(10), 17);
 ```
 
-`sumPrimes(977)` ควรคืนค่าเป็น 3156
+`sumPrimes(977)` ควรคืนค่าเป็น 73156
 
 ```js
 assert.deepEqual(sumPrimes(977), 73156);

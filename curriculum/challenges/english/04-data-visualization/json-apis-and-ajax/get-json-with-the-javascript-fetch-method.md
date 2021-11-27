@@ -29,7 +29,7 @@ fetch('/json/cats.json')
 
 `then` method สามารถ returns Promise ให้กับค่าที่อยู่ถัดจาก `then` method argument ลำดับที่สองของ `then` เป็นมีค่าเป็น JSON object 
 
-ให้เลือก element ที่จะใช้รับค่า data โดบใช้ `document.getElementById()` จากนั้นแปลง HTML code ของ element โดย insert string mujlihk'0kd JSON object ที่ได้จากการ return request
+ให้เลือก element ที่จะใช้รับค่า data โดยใช้ `document.getElementById()` จากนั้นแปลง HTML code ของ element โดย insert string ที่สร้างมาจาก JSON object ที่ได้จากการ return request
 
 # --instructions--
 

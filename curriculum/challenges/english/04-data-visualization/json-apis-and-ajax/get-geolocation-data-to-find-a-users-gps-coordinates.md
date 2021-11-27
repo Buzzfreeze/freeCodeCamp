@@ -15,7 +15,7 @@ navigator จะ get ค่า longitude และ latitude ของ user
 เราสามารถ allow หรือ block จาก knowing your current location ได้
 ถ้าเลือก allow เราจะเห็น text บนหน้าจอโทรศัทท์เพื่อเปลี่ยนค่า latitude และ longitude
 
-Here's code that does this:
+นี่คือตัวอย่าง Code ที่ใช้ทำงานนี้:
 
 ```js
 if (navigator.geolocation){
@@ -25,7 +25,9 @@ if (navigator.geolocation){
 }
 ```
 
-First, it checks if the `navigator.geolocation` object exists. If it does, the `getCurrentPosition` method on that object is called, which initiates an asynchronous request for the user's position. If the request is successful, the callback function in the method runs. This function accesses the `position` object's values for latitude and longitude using dot notation and updates the HTML.
+แรกสุด Code ทำการตรวจสอบว่า Object `navigator.geolocation` มีอยู่หรือไม่ โดยถ้า Object นี้มี Code จะทำการเรียก `getCurrentPosition` method ที่จะทำการส่ง Request ค่าที่อยู่ของ user แบบ Asynchronous 
+ถ้า Request นี้ทำงานเสร็จสมบูรณ์ ตัว funtion callback จะถูกเรียก โดยจะมีค่าของ `position` object ส่งมา และเราสามารถนำค่า latitude และ longitude มาใช้ได้ โดยการใช้ dot notation 
+จากนั้นเราจึงไป update ค่า HTML
 
 # --instructions--
 
