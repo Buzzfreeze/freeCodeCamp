@@ -8,9 +8,9 @@ dashedName: write-concise-object-literal-declarations-using-object-property-shor
 
 # --description--
 
-ES6 รองรับการประกาศ object literal ที่มีรูปแบบง่ายขึ้น 
+ES6 ช่วยทำให้การประกาศ object literal ง่ายขึ้นด้วย Object Property Shorthand
 
-พิจารณาโค้ดดังนี้
+ลองดูโค้ดด้านล่างนี้
 
 ```js
 const getMousePosition = (x, y) => ({
@@ -19,7 +19,9 @@ const getMousePosition = (x, y) => ({
 });
 ```
 
-`getMousePosition` เป็นฟังก์ชันง่ายๆ ที่คืนค่าเป็น object ที่มีสอง property ซึ่ง ES6 ขจัดความซ้ำซ้อนของการเขียน `x: x` โดยคุณสามารถเขียน `x` เพียงครั้งเดียว แล้วมันจะแปลงเป็น `x: x` (หรือสิ่งที่เทียบเท่า) ให้อัตโนมัติ นี่คือฟังก์ชันเหมือนกันกับด้านบน โดยเขียนใหม่ได้ดังนี้:
+`getMousePosition` เป็นฟังก์ชันง่ายๆ ที่คืนค่าออกมาเป็น object ที่มี property สองตัว (`x` กับ `y`) ซึ่ง ES6 ลดจะความซ้ำซ้อนตรงนี้ลง
+โดยแทนที่เราจะเขียน `x: x` เราก็เขียนแค่ `x` ก็ได้ แล้ว `x` จะถูกแปลงเป็น `x: x` ให้โดยอัตโนมัติ 
+ฟังก์ชันด้านบน จะเอามาเขียนใหม่ได้แบบนี้:
 
 ```js
 const getMousePosition = (x, y) => ({ x, y });
@@ -27,12 +29,12 @@ const getMousePosition = (x, y) => ({ x, y });
 
 # --instructions--
 
-จงใช้ object property shorthand กับ object literal เพื่อสร้างและคืนค่า object ด้วย property `name`, `age` และ `gender`
+จงใช้ object property shorthand กับ object literal เพื่อสร้าง object ที่มี property `name`, `age` และ `gender` และคืนค่า object ออกมา
 
 
 # --hints--
 
-`createPerson("Zodiac Hasbro", 56, "male")` ควรคืนค่า `{name: "Zodiac Hasbro", age: 56, gender: "male"}`
+`createPerson("Zodiac Hasbro", 56, "male")` ต้องคืนค่าเป็น `{name: "Zodiac Hasbro", age: 56, gender: "male"}`
 
 ```js
 assert.deepEqual(
@@ -41,7 +43,7 @@ assert.deepEqual(
 );
 ```
 
-โค้ดของคุณไม่ควรใช้ `key:value`
+ต้องไม่ใช้การสร้าง property ใน object แบบ `key:value`
 
 ```js
 (getUserInput) => assert(!getUserInput('index').match(/:/g));
@@ -53,13 +55,13 @@ assert.deepEqual(
 
 ```js
 const createPerson = (name, age, gender) => {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   return {
     name: name,
     age: age,
     gender: gender
   };
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 };
 ```
 

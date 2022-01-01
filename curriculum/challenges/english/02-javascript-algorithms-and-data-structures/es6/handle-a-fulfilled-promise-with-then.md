@@ -8,7 +8,7 @@ dashedName: handle-a-fulfilled-promise-with-then
 
 # --description--
 
-Promise มีประโยชน์มาก เมื่อคุณมีกระบวนการที่ไม่ทราบว่าต้องใช้เวลานานเท่าใดในโค้ดของคุณ (เช่น บางอย่างที่เป็น asynchronous) ซึ่งมักจะเป็น server request (คำขอเซิร์ฟเวอร์) เมื่อคุณส่ง server request อาจใช้เวลาพอสมควร และหลังจากเสร็จสิ้น คุณมักต้องการให้ทำอะไรบางอย่างหลังจากได้รับการตอบสนองจากเซิร์ฟเวอร์ ซึ่งสิ่งเหล่านี้สามารถทำได้โดยใช้ method `then` โดย method `then` จะรันทันทีหลังจากที่ promise ของคุณมีการ `resolve` แล้ว นี่คือตัวอย่าง:
+promise จะมีประโยชน์มากๆ ถ้าโค้ดของคุณมีส่วนที่ทำงานโดยไม่รู้ว่าจะใช้เวลาเท่าไหร่ (เช่น การทำงานที่เป็น asynchronous) ซึ่งมักจะเป็นการส่ง request ไปยังเซิร์ฟเวอร์ การส่ง request ไปยังเซิร์ฟเวอร์นั้นจะใช้เวลาพอสมควร ปกติแล้วหลังการส่ง request เสร็จสิ้น เรามักจะต้องทำอะไรบางอย่างกับค่าที่เซิร์ฟเวอร์ส่งกลับมา ซึ่งเราสามารถทำได้โดยใช้ method `then` โดย method `then` จะทำงานทันทีหลังจากที่ promise ของคุณมีการ `resolve` แล้ว ตามตัวอย่างด้านล่าง:
 
 ```js
 myPromise.then(result => {
@@ -16,15 +16,15 @@ myPromise.then(result => {
 });
 ```
 
-`result` มาจาก argument ที่กำหนดให้กับ method `resolve`
+`result` มาจาก argument ที่คุณใส่ตอนเรียกใช้ method `resolve`
 
 # --instructions--
 
-จงเพิ่ม `then` method ให้กับ promise ของคุณ และใช้ `result` เป็น parameter ของ callback function แล้ว log `result` ที่หน้า console
+ให้ใช้ method `then` ให้กับ promise ของคุณ และใช้ `result` เป็น parameter ของ callback function แล้ว log `result` ที่หน้า console
 
 # --hints--
 
-คุณควรเรียกใช้ method `then` กับ promise
+ต้องใช้ `then` กับ promise
 
 ```js
 assert(
@@ -32,13 +32,13 @@ assert(
 );
 ```
 
-method `then` ควรมี callback function โดยมี `result` เป็นพารามิเตอร์
+method `then` ต้องมี callback function ที่มีพารามิเตอร์เป็น `result`
 
 ```js
 assert(resultIsParameter);
 ```
 
-คุณควร log `result` ไปยังหน้า console
+ต้อง log `result` บน console ด้วย
 
 ```js
 assert(
@@ -61,7 +61,7 @@ const resultIsParameter = /\.then\((function\(result\){|result|\(result\)=>)/.te
 
 ```js
 const makeServerRequest = new Promise((resolve, reject) => {
-  // responseFromServer is set to true to represent a successful response from a server
+  // responseFromServer ถูกตั้งให้เป็น true เพื่อสื่อว่าเซิร์ฟเวอร์ได้คืนค่ามาให้เราอย่างถูกต้อง
   let responseFromServer = true;
     
   if(responseFromServer) {
@@ -76,7 +76,7 @@ const makeServerRequest = new Promise((resolve, reject) => {
 
 ```js
 const makeServerRequest = new Promise((resolve, reject) => {
-  // responseFromServer is set to true to represent a successful response from a server
+  // responseFromServer ถูกตั้งให้เป็น true เพื่อสื่อว่าเซิร์ฟเวอร์ได้คืนค่ามาให้เราอย่างถูกต้อง
   let responseFromServer = true;
     
   if(responseFromServer) {

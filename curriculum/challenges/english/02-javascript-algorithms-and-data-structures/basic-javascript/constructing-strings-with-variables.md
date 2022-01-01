@@ -9,7 +9,8 @@ dashedName: constructing-strings-with-variables
 
 # --description--
 
-บางครั้ง คุณต้องการสร้าง string ที่มีรูปแบบ [Mad Libs](https://en.wikipedia.org/wiki/Mad_Libs) หากใช้ concatenation operator (`+`)คุณจะสามารถแทรกตัวแปรตั้งแต่หนึ่งตัวขึ้นไปลงไปใน string ที่คุณกำลังสร้างได้
+คุณอาจจะอยากสร้าง string แบบ [Mad Libs](https://en.wikipedia.org/wiki/Mad_Libs) 
+ถ้าใช้เครื่องหมาย (`+`)คุณจะแทรกตัวแปรลงไปใน string ที่กำลังสร้างได้
 
 ตัวอย่าง:
 
@@ -18,22 +19,22 @@ var ourName = "freeCodeCamp";
 var ourStr = "Hello, our name is " + ourName + ", how are you?";
 ```
 
-`ourStr` ควรมีค่า string เป็น `Hello, our name is freeCodeCamp, how are you?`
+ตัวแปร `ourStr` จะมีค่าเป็น `Hello, our name is freeCodeCamp, how are you?`
 
 # --instructions--
 
-จงสร้างตัวแปร `myName` เป็น string ที่มีค่าเป็นชื่อของคุณ และสร้างตัวแปร `myStr` โดยนำ `myName` มาวางอยู่ระหว่าง string `My name is ` และ ` and I am well!`
+จงสร้างตัวแปร `myName` เป็น string ที่มีค่าเป็นชื่อของคุณ และสร้างตัวแปร `myStr` โดยนำตัวแปร `myName` มาวางอยู่ระหว่าง string `My name is ` และ ` and I am well!`
 
 
 # --hints--
 
-`myName`ควรกำหนดเป็น string ที่มีความยาวอย่างน้อย 3 ตัวอักษร
+ตัวแปร `myName` ต้องเป็น string ที่มีความยาวอย่างน้อย 3 ตัวอักษร
 
 ```js
 assert(typeof myName !== 'undefined' && myName.length > 2);
 ```
 
-คุณควรใช้ `+` operators 2 ตัว ในการสร้าง `myStr` ที่มี `myName` อยู่ภายใน
+คุณควรใช้เครื่องหมาย `+` 2 ตัว ในการสร้างตัวแปร `myStr` ที่มีค่าของ `myName` อยู่ข้างใน
 
 ```js
 assert(code.match(/["']\s*\+\s*myName\s*\+\s*["']/g).length > 0);
@@ -63,7 +64,7 @@ assert(code.match(/["']\s*\+\s*myName\s*\+\s*["']/g).length > 0);
 ## --seed-contents--
 
 ```js
-// Only change code below this line
+// แก้โค้ดใต้บรรทัดนี้เท่านั้น
 var myName;
 var myStr;
 ```

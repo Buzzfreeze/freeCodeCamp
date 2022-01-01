@@ -8,10 +8,10 @@ dashedName: use-destructuring-assignment-to-pass-an-object-as-a-functions-parame
 
 # --description--
 
-ในบางกรณี คุณสามารถdestructur object ใน argument ของฟังก์ชันได้
+ในบางกรณี เราจะ destructure object ที่เป็น argument ของฟังก์ชันได้
 
 
-พิจารณาโค้ดดังนี้
+ลองดูโค้ดด้านล่างนี้
 
 ```js
 const profileUpdate = (profileData) => {
@@ -20,7 +20,8 @@ const profileUpdate = (profileData) => {
 }
 ```
 
-นี่คือการ destructure object ที่ส่งเข้าไปยังฟังก์ชัน นอกจากนี้ยังสามารถทำได้ดังนี้:
+ตัวอย่างด้านบนเป็นการ destructure object ที่ส่งเข้าไปยังฟังก์ชัน 
+หรือว่าเราจะทำ destructured parameter แบบโค้ดด้านล่างนี้ก็ได้:
 
 ```js
 const profileUpdate = ({ name, age, nationality, location }) => {
@@ -28,33 +29,33 @@ const profileUpdate = ({ name, age, nationality, location }) => {
 }
 ```
 
-เมื่อ `profileData` ผ่านเข้าไปยัง function ด้านบน ค่าจะถูก destructured (แยก) ออกจาก function parameter ที่ใช้ภายใน function
+เมื่อส่ง `profileData` เข้าไปยังฟังก์ชันตัวอย่าง ค่าจะถูก destructure ออกจาก parameter ของฟังก์ชันเพื่อเอาไว้ใช้ในฟังก์ชัน
 
 # --instructions--
 
-จงใช้ destructuring assignment ภายใน argument ของ function `half` เพื่อส่งค่า `max` และ `min` เท่านั้น เข้าไปข้างใน function 
+จงใช้ destructuring assignment กับ argument ของฟังก์ชัน `half` เพื่อส่งแค่ค่า `max` กับ `min` เข้าไปในฟังก์ชัน 
 
 # --hints--
 
-`stats` ควรเป็น `object`.
+`stats` ต้องเป็นข้อมูลประเภท `object`
 
 ```js
 assert(typeof stats === 'object');
 ```
 
-`half(stats)` ควรมีค่า `28.015`
+การเรียกใช้ฟังก์ชัน `half(stats)` ต้องคืนค่าออกมาเป็น `28.015`
 
 ```js
 assert(half(stats) === 28.015);
 ```
 
-ควรใช้ Destructuring 
+ต้องใช้การ Destructuring 
 
 ```js
 assert(__helpers.removeWhiteSpace(code).match(/half=\({\w+,\w+}\)/));
 ```
 
-ควรใช้ Destructured parameter 
+ต้องใช้ destructured parameter 
 
 ```js
 assert(!code.match(/stats\.max|stats\.min/));
@@ -74,9 +75,9 @@ const stats = {
   average: 35.85
 };
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 const half = (stats) => (stats.max + stats.min) / 2.0; 
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

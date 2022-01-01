@@ -9,13 +9,13 @@ dashedName: logical-order-in-if-else-statements
 
 # --description--
 
-ลำดับมีความสำคัญอย่างมาก สำหรับ `if`, `else if` statements
+ลำดับในการใช้คำสั่ง `if` หรือ `else if` นั้นมีความสำคัญมาก
 
-function จะทำงานจากด้านบนไปด้านล่าง ดังนั้นคุณจะต้องระมัดระวังว่าคำสั่งไหนทำก่อน
+ฟังก์ชั่นจะเริ่มทำงานจากบนลงล่าง ดังนั้นต้องดูให้ดีว่าจะเอาคำสั่งไหนขึ้นก่อน
 
-ลองดูตัวอย่างของทั้งสอง function
+ลองดูฟังก์ชั่นตัวอย่างด้านล่าง
 
-ตัวอย่างแรก
+ตัวอย่างแรก:
 
 ```js
 function foo(x) {
@@ -29,7 +29,7 @@ function foo(x) {
 }
 ```
 
-ตัวอย่างที่สองเพียงแค่สลับลำดับคำสั่ง
+และตัวอย่างที่สอง ที่เราสลับลำดับของคำสั่ง
 
 ```js
 function bar(x) {
@@ -43,35 +43,35 @@ function bar(x) {
 }
 ```
 
-ขณะที่ทั้งสอง function ดูเกือบจะเหมือนกัน แต่หากเราส่ง number ให้กับทั้งสอง function เราจะได้ผลลัพธ์ที่ต่างกัน
-
+ทั้งสองฟังก์ชันอาจจะดูคล้ายกัน แต่ว่าถ้าเราส่งตัวเลขเข้าไปในฟังก์ชันทั้งสองตัวนี้ เราจะได้ผลลัพธ์ไม่เหมือนกัน
 
 ```js
 foo(0)
 bar(0)
 ```
 
-`foo(0)` จะคืนค่า string `Less than one` ส่วน `bar(0)` จะคืนค่า string `Less than two`
+ฟังก์ชัน `foo(0)` จะคืนค่าออกมาเป็น string `Less than one` 
+ส่วนฟังก์ชัน `bar(0)` จะคืนค่าออกมาเป็น string `Less than two`
 
 # --instructions--
 
-จงแก้ไขลำดับของ logic ใน function เพื่อให้ส่งค่ากลับมาได้อย่างถูกต้องในทุกเคส
+จงแก้ไขลำดับของ logic ในฟังก์ชันเพื่อให้ส่งค่ากลับมาได้อย่างถูกต้องในทุกเคส
 
 # --hints--
 
-`orderMyLogic(4)` ควรคืนค่า string `Less than 5`
+การเรียกใช้ฟังก์ชัน `orderMyLogic(4)` ต้องคืนค่าออกมาเป็น string `Less than 5`
 
 ```js
 assert(orderMyLogic(4) === 'Less than 5');
 ```
 
-`orderMyLogic(6)` ควรคืนค่า string `Less than 10`
+การเรียกใช้ฟังก์ชัน `orderMyLogic(6)` ต้องคืนค่าออกมาเป็น string `Less than 10`
 
 ```js
 assert(orderMyLogic(6) === 'Less than 10');
 ```
 
-`orderMyLogic(11)` ควรคืนค่า string `Greater than or equal to 10`
+การเรียกใช้ฟังก์ชัน `orderMyLogic(11)` ต้องคืนค่าออกมาเป็น string `Greater than or equal to 10`
 
 ```js
 assert(orderMyLogic(11) === 'Greater than or equal to 10');
@@ -84,11 +84,11 @@ assert(orderMyLogic(11) === 'Greater than or equal to 10');
 ```js
 function orderMyLogic(val) {
   if (val < 10) {
-    return "Less than 10";
+    return "Less than 10"; // น้อยกว่า 10
   } else if (val < 5) {
-    return "Less than 5";
+    return "Less than 5"; // น้อยกว่า 5
   } else {
-    return "Greater than or equal to 10";
+    return "Greater than or equal to 10"; // มากกว่าหรือเท่ากับ 10
   }
 }
 

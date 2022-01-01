@@ -8,82 +8,85 @@ dashedName: ignore-case-while-matching
 
 # --description--
 
-จนถึงตอนนี้ คุณได้เรียนรู้ regex ที่ match กับ string ตามตัวอักษร (literal match) แต่บางครั้ง คุณอาจต้องการให้ match กับ case (ตัวเล็กตัวใหญ่) ที่แตกต่างกัน
+เราได้เรียนเรื่อง regex ที่ match ตามตัวอักษรเป๊ะๆ (literal match) ไปแล้ว แต่บางครั้ง เราอาจอยากให้ match ทั้งข้อความเป็นตัวพิมพ์เล็กและตัวพิมพ์ใหญ่
 
-Case (หรือบางครั้งเรียกว่า letter case) คือ ความแตกต่างระหว่างตัวอักษรพิมพ์ใหญ่ (uppercase) และพิมพ์เล็ก (lowercase) ตัวอย่างของตัวพิมพ์ใหญ่ คือ `A`, `B` และ `C` ตัวอย่างของตัวพิมพ์เล็ก คือ `a`, `b` และ `c`
+Case (หรือบางครั้งเรียกว่า letter case) คือ ความต่างของตัวอักษรพิมพ์ใหญ่ (uppercase) กับพิมพ์เล็ก (lowercase) ตัวอย่างของตัวพิมพ์ใหญ่ คือ `A`, `B` และ `C` ตัวอย่างของตัวพิมพ์เล็ก คือ `a`, `b` และ `c`
 
-คุณสามารถ match ทั้ง 2 cases โดยการใช้สิ่งที่เรียกว่า flag จริงๆ แล้วมี flag หลายตัว แต่ตัวที่คุณจะได้เรียนรู้นั้นมันไม่สนใจ case นั่นคือ `i` flag คุณสามารถใช้ flag โดยการต่อเข้าไปที่ regex ดังตัวอย่างนี้ `/ignorecase/i` ซึ่ง regex นี้สามารถ match กับ string `ignorecase`, `igNoreCase`, และ `IgnoreCase` ได้
+เราสามารถทำให้ regex นั้น match ทั้ง 2 case ได้ ถ้าเราใช้ flag 
+จริงๆ แล้วเรามี flag ให้ใช้หลายแบบ แต่ตอนนี้เราจะมาเรียนตัวที่ใช้เพื่อให้ regex ไม่สนใจ case ของตัวอักษรกันก่อน ซึ่ง flag นั้นคือ `i` 
+วิธีการใช้ flag คือการเอาไปต่อท้าย regex แบบนี้ `/ignorecase/i` ซึ่งตัวอย่าง regex นี้จะ match กับ `ignorecase`, `igNoreCase`, และ `IgnoreCase` ได้แล้ว
 
 # --instructions--
 
-จงเขียน regex `fccRegex` เพื่อ match `freeCodeCamp` โดยไม่คำนึงถึง case ว่าเป็นอย่างไร ซึ่ง regex ของคุณไม่ควร match กับตัวย่อหรือ space ที่มีความแตกต่าง
+จงเขียน regex `fccRegex` เพื่อ match `freeCodeCamp` โดยไม่สนใจ case ของ string 
+และ regex ของคุณต้องไม่ match กับตัวย่อหรือข้อความที่มีการเว้นวรรค
 
 # --hints--
 
-regex ของคุณควร match กับ string `freeCodeCamp`
+regex ที่เขียนต้อง match กับ string `freeCodeCamp`
 
 ```js
 fccRegex.lastIndex = 0; 
 assert(fccRegex.test('freeCodeCamp'));
 ```
 
-regex ของคุณควร match กับ string `FreeCodeCamp`
+regex ที่เขียนต้อง match กับ string `FreeCodeCamp`
 
 ```js
 fccRegex.lastIndex = 0;
 assert(fccRegex.test('FreeCodeCamp'));
 ```
 
-regex ของคุณควร match กับ string `FreecodeCamp`
+regex ที่เขียนต้อง match กับ string `FreecodeCamp`
 
 ```js
 fccRegex.lastIndex = 0;
 assert(fccRegex.test('FreecodeCamp'));
 ```
 
-regex ของคุณควร match กับ string `FreeCodecamp`
+regex ที่เขียนต้อง match กับ string `FreeCodecamp`
 
 ```js
 fccRegex.lastIndex = 0;
 assert(fccRegex.test('FreeCodecamp'));
 ```
 
-regex ของคุณไม่ควร match กับ string `Free Code Camp`
+regex ที่เขียนต้อง*ไม่* match กับ string `Free Code Camp`
 
 ```js
 fccRegex.lastIndex = 0;
 assert(!fccRegex.test('Free Code Camp'));
 ```
 
-regex ของคุณควร match กับ string `FreeCOdeCamp`
+regex ที่เขียนต้อง match กับ string `FreeCOdeCamp`
 
 ```js
 fccRegex.lastIndex = 0;
 assert(fccRegex.test('FreeCOdeCamp'));
 ```
 
-regex ของคุณไม่ควร match กับ string `FCC`
+regex ที่เขียนต้อง*ไม่* match กับ string `FCC`
 
 ```js
 fccRegex.lastIndex = 0;
 assert(!fccRegex.test('FCC'));
 ```
 
-regex ของคุณควร match กับ string `FrEeCoDeCamp`
+regex ที่เขียนต้อง match กับ string `FrEeCoDeCamp`
 
 ```js
 fccRegex.lastIndex = 0;
 assert(fccRegex.test('FrEeCoDeCamp'));
 ```
 
-regex ของคุณควร match กับ string `FrEeCodECamp`
+regex ที่เขียนต้อง match กับ string `FrEeCodECamp`
 
 ```js
 fccRegex.lastIndex = 0;
 assert(fccRegex.test('FrEeCodECamp'));
 ```
 
-regex ของคุณควร match กับ string `FReeCodeCAmp`
+regex ที่เขียนต้อง match กับ string `FReeCodeCAmp`
 
 ```js
 fccRegex.lastIndex = 0;
@@ -96,7 +99,7 @@ assert(fccRegex.test('FReeCodeCAmp'));
 
 ```js
 let myString = "freeCodeCamp";
-let fccRegex = /change/; // Change this line
+let fccRegex = /change/; // แก้บรรทัดนี้
 let result = fccRegex.test(myString);
 ```
 
@@ -104,6 +107,6 @@ let result = fccRegex.test(myString);
 
 ```js
 let myString = "freeCodeCamp";
-let fccRegex = /freecodecamp/i; // Change this line
+let fccRegex = /freecodecamp/i; // แก้บรรทัดนี้
 let result = fccRegex.test(myString);
 ```

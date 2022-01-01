@@ -8,10 +8,10 @@ dashedName: use-destructuring-assignment-to-extract-values-from-objects
 
 # --description--
 
-<dfn>Destructuring assignment</dfn> เป็น syntax พิเศษที่แนะนำใน ES6 เพื่อกำหนดค่า object โดยตรง
+<dfn>Destructuring assignment</dfn> เป็น syntax พิเศษที่เพิ่มมาใน ES6 ที่ใช้เพื่อกำหนดค่าตัวแปรโดยการดึงค่าจาก object โดยตรง
 
 
-วิเคราะห์โค้ด ES5 ต่อไปนี้
+ลองดูโค้ดของ ES5 กันก่อน:
 
 ```js
 const user = { name: 'John Doe', age: 34 };
@@ -20,29 +20,29 @@ const name = user.name;
 const age = user.age;
 ```
 
-`name` ควรมีค่า string `John Doe` และ `age` ควรเป็น number `34`
+ในตัวอย่างนี้ `name` จะมีค่าเป็น string `John Doe` และ `age` จะมีค่าเป็น number `34`
 
-โค้ดด้านบนนี้เทียบเท่ากับการใช้ ES6 ดังนี้
-
+เราสามารถแปลงโค้ดด้านบนให้สั้นลงโดยใช้ ES6 ได้ตามนี้:
 
 ```js
 const { name, age } = user;
 ```
 
-`name` ควรมีค่า string `John Doe` และ `age` ควรเป็น number `34`
+ในตัวอย่างนี้ `name` ก็จะมีค่าเป็น string `John Doe` และ `age` ก็จะมีค่าเป็น number `34`
 
-ตัวแปร `name` และ `age` จะถูกสร้างและกำหนดค่าที่เกี่ยวข้องจาก object `user` คุณจะเห็นว่า แบบ ES6 เขียนได้สั้นและสบายตามากกว่า
+ตัวแปร `name` และ `age` จะถูกสร้างขึ้น และดึงค่าจาก parameter ที่มีชื่อเดียวกันใน object `user` 
+จะเห็นได้ว่าการเขียนแบบ ES6 นั้นสั้นและสบายตากว่ามาก
 
-คุณสามารถแยกค่าหลายค่า หรือบางค่าจาก object ตามที่คุณต้องการ
+เราจะแยกค่าจากออกมาจาก object กี่ค่าก็ได้ตามที่เราต้องการ
 
 # --instructions--
 
-จงแทนที่การกำหนดค่าด้วย destructuring assignment โดยยังคงนำตัวแปร `today` และ `tomorrow` มากำหนดด้วยค่าของ `today` และ `tomorrow` จาก object `HIGH_TEMPERATURES`
+การกำหนดค่าเป็นแบบ destructuring assignment โดยกำหนดค่าให้ `today` และ `tomorrow` ด้วยค่าของ parameter `today` และ `tomorrow` จาก object ที่ชื่อ `HIGH_TEMPERATURES`
 
 
 # --hints--
 
-คุณควรเอา ES5 assignment syntax ออก
+ต้องลบ assignment syntax ของ ES5 ออก
 
 ```js
 assert(
@@ -50,7 +50,7 @@ assert(
 );
 ```
 
-คุณควรใช้ destructuring ในการสร้างตัวแปร `today` 
+ต้องใช้การ destructuring ในการสร้างตัวแปร `today` 
 
 ```js
 assert(
@@ -58,7 +58,7 @@ assert(
 );
 ```
 
-คุณควรใช้ destructuring ในการสร้างตัวแปร `tomorrow`
+ต้องใช้การ destructuring ในการสร้างตัวแปร `tomorrow`
 
 ```js
 assert(
@@ -66,7 +66,7 @@ assert(
 );
 ```
 
-`today` ควรเท่ากับ `77` และ `tomorrow` ควรเท่ากับ `80`
+`today` ต้องมีค่าเป็น `77` และ `tomorrow` ต้องมีค่าเป็น `80`
 
 
 ```js
@@ -84,12 +84,12 @@ const HIGH_TEMPERATURES = {
   tomorrow: 80
 };
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 const today = HIGH_TEMPERATURES.today;
 const tomorrow = HIGH_TEMPERATURES.tomorrow;
 
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

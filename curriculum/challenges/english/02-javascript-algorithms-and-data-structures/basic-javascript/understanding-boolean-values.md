@@ -9,24 +9,25 @@ dashedName: understanding-boolean-values
 
 # --description--
 
-ข้อมูลอีกประเภทนึง คือ <dfn>Boolean</dfn> Booleans มีค่าเป็นหนึ่งในสองค่านี้เท่านั้น: `true` หรือ `false` ซึ่งเป็นเหมือนสวิตช์เปิดปิดอย่างง่าย โดย `true` คือ เปิด และ `false` คือ ปิด ทั้งสองสถานะนี้แยกจากกัน
+ข้อมูลอีกประเภทนึง คือ <dfn>Boolean</dfn> 
+Boolean มีค่าแค่สองแบบคือ `true` หรือ `false` ซึ่งก็เป็นเหมือนสวิตช์นั่นแหละ โดย `true` คือ เปิด และ `false` คือ ปิด ทั้งสองสถานะนี้แยกจากกัน
 
-**หมายเหตุ:** ค่า boolean ไม่เขียนด้วยเครื่องหมายคำพูด (quotes) อย่างไรก็ตาม strings `"true"` และ `"false"` ไม่ใช่ boolean และไม่มีความหมายพิเศษใน JavaScript
+**หมายเหตุ:** เวลาเขียนค่า boolean จะไม่เขียนไว้ใน quote และสตริง string ในรูปแบบ `"true"` กับ `"false"` จะไม่ใช่ boolean และก็ไม่มีได้ความหมายพิเศษใดๆ ใน JavaScript
 
 # --instructions--
 
-จงแก้ไข function `welcomeToBooleans` เพื่อให้คืนค่า  `true` แทนที่จะเป็น `false` เมื่อมีการกดปุ่ม
+จงแก้ไขฟังก์ชัน `welcomeToBooleans` เพื่อให้คืนค่า `true` แทนที่จะเป็น `false` เมื่อมีกดปุ่ม
 
 # --hints--
 
-function `welcomeToBooleans()` ควรคืนค่า Boolean (`true` หรือ `false`) 
+ฟังก์ชัน `welcomeToBooleans()` ต้องคืนค่าออกมาเป็น Boolean (`true` หรือ `false`) 
 
 
 ```js
 assert(typeof welcomeToBooleans() === 'boolean');
 ```
 
-`welcomeToBooleans()` ควรคืนค่า `true`
+`welcomeToBooleans()` ต้องคืนค่าออกมาเป็น `true`
 
 ```js
 assert(welcomeToBooleans() === true);
@@ -45,11 +46,11 @@ welcomeToBooleans();
 ```js
 function welcomeToBooleans() {
 
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-  return false; // Change this line
+  return false; // แก้ไขบรรทัดนี้
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 ```
 
@@ -57,6 +58,6 @@ function welcomeToBooleans() {
 
 ```js
 function welcomeToBooleans() {
-  return true; // Change this line
+  return true; // แก้ไขโค้ดบรรทัดนี้
 }
 ```

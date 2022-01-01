@@ -9,41 +9,42 @@ dashedName: stand-in-line
 
 # --description--
 
-ในวิทยาการคอมพิวเตอร์ <dfn>queue</dfn> เป็น <dfn>โครงสร้างข้อมูล</dfn> ที่เป็นนามธรรม ซึ่งรายการต่างๆ จะถูกจัดวางตามลำดับ โดยรายการใหม่จะเพิ่มที่ด้านหลังของ queue และรายการเก่าจะถูกลบออกจากด้านหน้าของ queue
+ในเชิงคอมพิวเตอร์ <dfn>queue</dfn> เป็นรูปแบบของ <dfn>โครงสร้างข้อมูล</dfn> ที่ข้อมูลภายในจะถูกเรียงตามลำดับ โดยข้อมูลใหม่จะถูกนำไปต่อท้าย queue และข้อมูลเก่าจะถูกดึงออกทางด้านหน้าของ queue
 
-เขียน function `nextInLine` ซึ่งรับค่า array (`arr`) และตัวเลข (`item`) เป็น argument
+ให้เขียนฟังก์ชัน `nextInLine` ซึ่งรับค่า array (`arr`) และตัวเลข (`item`) เป็น argument
 
-เพิ่มตัวเลขไปยังด้านท้ายของ array และลบรายการแรกของ array ออก
+ให้ฟังก์ชันนี้ทำงานโดยนำตัวเลขต่อท้าย array และลบข้อมูลด้านหน้าสุด array ออก
 
-function `nextInLine` ควรส่งคืนค่าที่ถูกลบออกไป
+และฟังก์ชัน `nextInLine` ต้องคืนค่าที่ถูกลบออกไปด้วย
 
 # --hints--
 
-`nextInLine([], 5)` ควรคืนค่าตัวเลข
+การเรียกใช้ฟังก์ชัน `nextInLine([], 5)` ต้องคืนค่าออกมาเป็นตัวเลข
 
 ```js
 assert.isNumber(nextInLine([], 5));
 ```
 
-`nextInLine([], 1)` ควรส่งคืนค่า `1`
+การเรียกใช้ฟังก์ชัน `nextInLine([], 1)` ต้องคืนค่า `1` ออกมา
 
 ```js
 assert(nextInLine([], 1) === 1);
 ```
 
-`nextInLine([2], 1)` ควรส่งคืนค่า `2`
+การเรียกใช้ฟังก์ชัน `nextInLine([2], 1)` ต้องคืนค่า `2` ออกมา
 
 ```js
 assert(nextInLine([2], 1) === 2);
 ```
 
-`nextInLine([5,6,7,8,9], 1)` ควรส่งคืนค่า `5`
+การเรียกใช้ฟังก์ชัน `nextInLine([5,6,7,8,9], 1)` ต้องคืนค่า `5` ออกมา
 
 ```js
 assert(nextInLine([5, 6, 7, 8, 9], 1) === 5);
 ```
 
-จากนั้น `nextInLine(testArr, 10)`, `testArr[4]` ควรส่งคืนค่า  `10`
+เมื่อเรียกใช้ฟังก์ชัน `nextInLine(testArr, 10)` แล้ว
+`testArr[4]` ต้องมีค่าเป็น  `10`
 
 ```js
 nextInLine(testArr, 10);
@@ -89,18 +90,18 @@ testArr = [1,2,3,4,5];
 
 ```js
 function nextInLine(arr, item) {
-  // Only change code below this line
+  // แก้โค้ดใต้บรรทัดนี้เท่านั้น
   
   return item;
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
   
 
 }
 
-// Setup
+// เตรียมข้อมูล
 var testArr = [1,2,3,4,5];
 
-// Display code
+// แสดงผล
 console.log("Before: " + JSON.stringify(testArr));
 console.log(nextInLine(testArr, 6));
 console.log("After: " + JSON.stringify(testArr));

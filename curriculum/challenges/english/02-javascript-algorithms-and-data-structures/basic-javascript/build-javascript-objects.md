@@ -9,13 +9,13 @@ dashedName: build-javascript-objects
 
 # --description--
 
-คุณอาจจะเคยได้ยินคำว่า `object` มาก่อน
+คุณอาจเคยได้ยินคำว่า `object` มาก่อน
 
-Objects คล้ายกับ `arrays` เว้นแต่แทนที่จะใช้ indexes ในการเข้าถึง และแก้ไขข้อมูล คุณจะเข้าถึงข้อมูลใน object ผ่านสิ่งที่เรียกว่า `properties`
+`object` นั้นจะคล้ายกับ `arrays` แต่ว่าแทนที่เราจะเข้าถึงข้อมูลตาม index เราจะเข้าถึงข้อมูลใน `object` ผ่านสิ่งที่เรียกว่า `property`
 
-Object มีประโยชน์สำหรับการจัดเก็บข้อมูลในลักษณะที่มีโครงสร้าง และสามารถเป็นสิ่งแทนวัตถุในโลกแห่งความเป็นจริงได้ เช่น แมว
+`object` นั้นมีประโยชน์สำหรับการจัดเก็บข้อมูลในลักษณะที่มีโครงสร้าง และเป็นตัวแทนวัตถุในโลกจริงได้ เช่น แมว
 
-ต่อไปนี้เป็นตัวอย่างของ cat object:
+ลองดูตัวอย่างของ object ที่ชื่อว่า cat:
 
 ```js
 var cat = {
@@ -26,7 +26,8 @@ var cat = {
 };
 ```
 
-ในตัวอย่างนี้ properties (คุณสมบัติ) ทั้งหมดจะถูกเก็บไว้ใน string เช่น `name`, `legs` และ `tails` อย่างไรก็ตาม คุณสามารถใช้ตัวเลขเป็นค่า properties ได้ คุณยังสามารถละเครื่องหมายคำพูด กรณีที่ค่า properties เป็น string คำเดียวได้ดังนี้:
+ในตัวอย่างนี้ property ทั้งหมดจะเป็น string เช่น `name`, `legs` และ `tails` แต่คุณก็สามารถใช้ตัวเลขเป็น property ได้ 
+และถ้า property เป็น string ที่เป็นคำคำเดียว คุณจะไม่เขียนเครื่องหมาย quote ลงไปก็ได้ เช่นตัวอย่างด้านล่างนี้:
 
 
 ```js
@@ -37,18 +38,18 @@ var anotherObject = {
 };
 ```
 
-อย่างไรก็ตาม หาก object ของคุณมี properties ที่ไม่ใช่ string JavaScript จะปรับเป็น string โดยอัตโนมัติ
+ถ้า object ของคุณมี property ที่ไม่ใช่ string JavaScript จะเปลี่ยน property นั้นเป็น string ให้โดยอัตโนมัติ
 
 # --instructions--
 
-จงสร้าง object แทนสุนัข เรียกว่า `myDog` ซึ่งมี properties `name` (string) `legs`, `tails` และ `friends`
+จงสร้าง object เพื่อเป็นตัวแทนสุนัข โดยให้มีชื่อว่า `myDog` ซึ่งมี property ตามนี้ `name`, `legs`, `tails` และ `friends`
 
-คุณสามารถกำหนด properties ของ object เหล่านี้ เป็นค่าใดก็ได้ที่คุณต้องการ ตราบใดที่ `name` เป็น string `tails` เป้น numbers  และ `friends` เป็น array
+คุณสามารถกำหนดค่าของ property ของ object นี้เป็นอะไรก็ได้ แต่ `name` ต้องเป็นข้อมูลประเภท string `tails` ต้องเป็นข้อมูลประเภท number และ `friends` ต้องเป็นข้อมูลประเภท array
 
 
 # --hints--
 
-`myDog` ควรมี property `name` และควรเป็น `string`
+`myDog` ต้องมี property ชื่อ `name` และเป็นข้อมูลประเภท `string`
 
 
 ```js
@@ -67,7 +68,7 @@ assert(
 );
 ```
 
-`myDog` ควรมี property  `legs` และควรเป็น`number`.
+`myDog` ต้องมี property ชื่อ `legs` และเป็นข้อมูลประเภท `number`
 
 
 
@@ -87,7 +88,7 @@ assert(
 );
 ```
 
-`myDog` ควรมี property  `tails` และควรเป็น`number`.
+`myDog` ต้องมี property ชื่อ  `tails` และเป็นข้อมูลประเภท `number`
 
 ```js
 assert(
@@ -105,7 +106,7 @@ assert(
 );
 ```
 
-`myDog` ควรมี property  `friends` และควรเป็น `array`.
+`myDog` ต้องมี property ชื่อ  `friends` และเป็นข้อมูลประเภท `array`.
 
 ```js
 assert(
@@ -123,7 +124,7 @@ assert(
 );
 ```
 
-`myDog` ควรมีแค่ properties ที่กำหนดให้
+`myDog` ต้องมีแค่ property ที่กำหนดให้เท่านั้น
 
 ```js
 assert(
@@ -145,10 +146,10 @@ assert(
 
 ```js
 var myDog = {
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 };
 ```
 

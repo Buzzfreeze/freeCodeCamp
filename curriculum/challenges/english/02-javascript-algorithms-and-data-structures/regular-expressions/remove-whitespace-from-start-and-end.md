@@ -8,36 +8,37 @@ dashedName: remove-whitespace-from-start-and-end
 
 # --description--
 
-บางครั้ง whitespace ที่อยู่รอบๆ string ก็เป็นสิ่งที่เราไม่ต้องการ ตามปกติแล้ว ก่อนที่เราจะทำอะไรกับ string ก็ต้องนำ whitespace ที่อยู่หน้าและหลัง string ออกไปก่อน
+หลายๆครั้งเราจะไม่อยากได้ whitespace ที่อยู่หน้าและหลัง string 
+ปกติแล้วก่อนที่เราจะทำอะไรกับ string ก็ต้องนำ whitespace ที่อยู่หน้าและหลัง string ออกไปก่อน
 
 
 # --instructions--
 
-จงเขียน regex และใช้ string methods ที่เหมาะสมในการนำ whitespace ที่อยู่หน้าและท้าย string ออก
+จงเขียน regex โดยใช้ string method ที่เหมาะสมในการนำ whitespace ที่อยู่หน้าและหลัง string ออก
 
-**Note:** แม้ว่า `String.prototype.trim()` method สามารถลบ whitespace ตามที่เราต้องการได้ แต่คุณต้องทำแบบทดสอบนี้โดยการใช้ regular expressions
+**Note:** ถึงแม้ว่าเราจะมี method `String.prototype.trim()` ที่ใช้ในการลบ whitespace ที่อยู่หน้าและหลังออก แต่คุณต้องทำแบบทดสอบนี้โดยการใช้ regular expression นะ
 
 # --hints--
 
-`result` ควรเท่ากับ string `Hello, World!`
+`result` ต้องมีค่าเป็น string `Hello, World!`
 
 ```js
 assert(result === 'Hello, World!');
 ```
 
-คุณไม่ควรใช้ `String.prototype.trim()` method
+ห้ามใช้ `String.prototype.trim()` method
 
 ```js
 assert(!code.match(/\.?[\s\S]*?trim/));
 ```
 
-ตัวแปร `result` ไม่ควรกำหนดค่า string โดยตรง
+ห้ามกำหนดค่า string ให้กับตัวแปร `result` โดยตรง
 
 ```js
 assert(!code.match(/result\s*=\s*["'`].*?["'`]/));
 ```
 
-ค่าของตัวแปร `hello` ไม่ควรเปลี่ยน
+ค่าของตัวแปร `hello` ต้องไม่เปลี่ยน
 
 ```js
 assert(hello === '   Hello, World!  ');
@@ -49,8 +50,8 @@ assert(hello === '   Hello, World!  ');
 
 ```js
 let hello = "   Hello, World!  ";
-let wsRegex = /change/; // Change this line
-let result = hello; // Change this line
+let wsRegex = /change/; // แก้บรรทัดนี้
+let result = hello; // แก้บรรทัดนี้
 ```
 
 # --solutions--

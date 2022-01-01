@@ -8,9 +8,9 @@ dashedName: set-default-parameters-for-your-functions
 
 # --description--
  
-เพื่อช่วยให้เราสร้างฟังก์ชันที่ยืดหยุ่นมากขึ้น ES6 ได้เสนอ <dfn>default parameters</dfn> สำหรับฟังก์ชัน
+ES6 ได้เพิ่ม <dfn>default parameter</dfn> (ค่าเริ่มต้น) ให้กับฟังก์ชัน เพื่อให้เราเขียนฟังก์ชันได้ยืดหยุ่นมากขึ้น
 
-ลองดูโค้ดนี้
+ลองดูโค้ดนี้:
 
 ```js
 const greeting = (name = "Anonymous") => "Hello " + name;
@@ -21,11 +21,11 @@ console.log(greeting());
 
 หน้า console จะแสดง string `Hello John` และ `Hello Anonymous`
 
-default parameter จะถูกส่งเข้าไปเมื่อไม่ได้ระบุ argument ดังที่คุณเห็นในตัวอย่างข้างต้น parameter `name` จะได้รับค่าเริ่มต้น `Anonymous` เมื่อคุณไม่ได้ระบุค่า parameter นั้น คุณสามารถเพิ่มค่าเริ่มต้นให้กับ parameter ได้มากเท่าที่คุณต้องการ
+ถ้าเราไม่ได้ใส่ argument ฟังก์ชันจะใช้ค่าของ default parameter แทน จากตัวอย่างข้างบน parameter `name` จะมีค่าเริ่มต้นเป็น `Anonymous` ไม่ได้ระบุ parameter มา คุณสามารถเพิ่มค่าเริ่มต้นให้กับ parameter ตัวไหนก็ได้ที่ต้องการ
 
 # --instructions--
 
-จงแก้ไข function `increment` โดยการเพิ่ม default parameter เพื่อให้บวก 1 ให้กับ `number` ถ้าไม่ได้ระบุค่า `value`
+จงแก้ไขฟังก์ชัน `increment` โดยการเพิ่ม default parameter เพื่อให้บวก 1 ให้กับ `number` ถ้าไม่ได้ระบุค่า `value`
 
 # --hints--
 
@@ -41,7 +41,7 @@ assert(increment(5, 2) === 7);
 assert(increment(5) === 6);
 ```
 
-default parameter ที่มีค่าเป็น `1` ควรใช้สำหรับ `value`
+`value` ควรมีค่าของ default parameter เป็น `1`  
 
 ```js
 assert(code.match(/value\s*=\s*1/g));
@@ -52,9 +52,9 @@ assert(code.match(/value\s*=\s*1/g));
 ## --seed-contents--
 
 ```js
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 const increment = (number, value) => number + value;
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

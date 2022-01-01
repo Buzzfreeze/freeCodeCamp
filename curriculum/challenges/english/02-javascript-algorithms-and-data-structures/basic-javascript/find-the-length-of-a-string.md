@@ -9,24 +9,24 @@ dashedName: find-the-length-of-a-string
 
 # --description--
 
-คุณสามารถหาความยาวของค่า `String` ได้โดยการเขียน `.length` หลังตัวแปร string หรือ string literal
+คุณหาความยาวของ `string` ได้โดยการพิมพ์ `.length` หลังตัวแปรที่เป็น string หรือเป็น string literal
 
 ```js
 console.log("Alan Peter".length);
 ```
 
-ค่า `10` ควรแสดงใน console
+console จะแสดงผลเป็น `10`
 
-ยกตัวอย่างเช่น ถ้าเราสร้างตัวแปร `var firstName = "Ada"` เราสามารถหาความยาวของ string `Ada` โดยใช้ `firstName.length` 
+เช่น ถ้าเราสร้างตัวแปร `var firstName = "Ada"` เราสามารถหาความยาวของ string `Ada` ได้โดยใช้ `firstName.length` 
 
 
 # --instructions--
 
-จงใช้ `.length` property ในการนับจำนวนตัวอักษรของตัวแปร `lastName` และกำหนดค่าให้กับ `lastNameLength`
+จงใช้ property `.length` ในการนับจำนวนตัวอักษรของตัวแปร `lastName` และนำไปกำหนดค่าให้กับตัวแปร `lastNameLength`
 
 # --hints--
 
-คุณไม่ควรแก้ไขการประกาศตัวแปรในส่วน `// Setup`
+คุณไม่ควรแก้ไขการประกาศตัวแปรในส่วน `// เตรียมข้อมูล`
 
 ```js
 assert(
@@ -35,13 +35,13 @@ assert(
 );
 ```
 
-`lastNameLength` ควรเท่ากับ 8
+ตัวแปร `lastNameLength` ควรมีค่าเท่ากับ 8
 
 ```js
 assert(typeof lastNameLength !== 'undefined' && lastNameLength === 8);
 ```
 
-คุณควรได้ความยาว `lastName` โดยใช้ `.length` เช่น `lastName.length`
+คุณต้องหาความยาวของตัวแปร `lastName` โดยใช้ `.length` เช่น `lastName.length`
 
 ```js
 assert(code.match(/=\s*lastName\.length/g) && !code.match(/lastName\s*=\s*8/));
@@ -52,11 +52,11 @@ assert(code.match(/=\s*lastName\.length/g) && !code.match(/lastName\s*=\s*8/));
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var lastNameLength = 0;
 var lastName = "Lovelace";
 
-// Only change code below this line
+// แก้โค้ดใต้บรรทัดนี้เท่านั้น
 
 lastNameLength = lastName;
 ```

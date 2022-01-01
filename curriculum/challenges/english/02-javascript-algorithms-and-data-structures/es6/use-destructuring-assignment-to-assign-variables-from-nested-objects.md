@@ -8,9 +8,10 @@ dashedName: use-destructuring-assignment-to-assign-variables-from-nested-objects
 
 # --description--
 
-คุณสามารถใช้หลักการเดียวกันจากสองบทเรียนก่อนหน้านี้เพื่อ destructure ค่าจาก object ที่ซ้อนกัน
+ในการดึงค่าออกมาจาก object ที่ซ้อนกันอยู่ จะใช้หลักการเดียวกับการ destructure
+ที่เราเพิ่งเรียนมาจากสองบทเรียนที่แล้ว
 
-ใช้ object ที่คล้ายกับตัวอย่างก่อนหน้า
+รอบนี้เราจะใช้ object ที่คล้ายๆ กับตัวอย่างที่แล้ว
 
 ```js
 const user = {
@@ -21,13 +22,14 @@ const user = {
 };
 ```
 
-นี่เป็นวิธีการแยก (extract) value ออกจาก object properties และกำหนดค่าให้กับตัวแปรที่มีชื่อเดียวกัน: 
+โค้ดด้านล่างเป็นตัวอย่างการดึงค่าออกจาก property ของ object และเอามากำหนดค่าให้กับตัวแปรที่มีชื่อเดียวกับ property: 
 
 ```js
 const { johnDoe: { age, email }} = user;
 ```
 
-และนี่เป็นวิธีที่คุณสามารถกำหนด values ของ object properties ให้กับตัวแปรที่มีชื่อต่างกัน
+ตัวอย่างด้านบนจะทำให้เราได้ตัวแปรคงที่สองตัวคือ `age` ที่มีค่าเป็น `34` และ `email` ที่มีค่าเป็น `johnDoe@freeCodeCamp.com`
+ส่วนโค้ดด้านล่างนี้เป็นการดึงค่าออกมา แล้วนำไปกำหนดให้ตัวแปรที่มีชื่อไม่เหมือนกับ property:
 
 ```js
 const { johnDoe: { age: userAge, email: userEmail }} = user;
@@ -35,12 +37,12 @@ const { johnDoe: { age: userAge, email: userEmail }} = user;
 
 # --instructions--
 
-จงแทนที่การกำหนดค่าด้วย destructuring assignment โดยยังคงกำหนดให้ตัวแปร `lowToday` และ `highToday` มีค่าเท่ากับ `today.low` และ `today.high` จาก object `LOCAL_FORECAST` 
+จงเปลี่ยนโค้ดเดิมให้เป็นการกำหนดค่าโดยใช้ destructuring assignment และให้ตัวแปร `lowToday` และ `highToday` ดึงค่ามาจาก `today.low` และ `today.high` จาก object ที่ชื่อ `LOCAL_FORECAST` 
 
 
 # --hints--
 
-คุณควรลบการกำหนดค่าแบบ ES5
+ต้องลบ assignment syntax ของ ES5 ออก
 
 ```js
 assert(
@@ -49,7 +51,7 @@ assert(
 );
 ```
 
-คุณควรใช้ destructuring เพื่อสร้างตัวแปร `lowToday` 
+ต้องใช้การ destructuring เพื่อสร้างตัวแปร `lowToday` 
 
 
 ```js
@@ -60,7 +62,7 @@ assert(
 );
 ```
 
-คุณควรใช้ destructuring เพื่อสร้างตัวแปร `highToday` 
+ต้องใช้การ destructuring เพื่อสร้างตัวแปร `highToday` 
 
 ```js
 assert(
@@ -70,7 +72,7 @@ assert(
 );
 ```
 
-`lowToday` ควรเท่ากับ `64` and `highToday` ควรเท่ากับ `77`
+`lowToday` ต้องมีค่าเป็น `64` and `highToday` ต้องมีค่าเป็น `77`
 
 ```js
 assert(lowToday === 64 && highToday === 77);
@@ -87,12 +89,12 @@ const LOCAL_FORECAST = {
   tomorrow: { low: 68, high: 80 }
 };
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   
 const lowToday = LOCAL_FORECAST.today.low;
 const highToday = LOCAL_FORECAST.today.high;
 
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

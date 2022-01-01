@@ -8,7 +8,7 @@ dashedName: use-destructuring-assignment-to-assign-variables-from-objects
 
 # --description--
 
-Destructuring ทำให้คุณสามารถกำหนดค่าให้กับตัวแปรใหม่ เมื่อ extract (แยก) ค่าออกมา คุณสามารถทำได้โดยใส่ชื่อตัวแปรใหม่หลัง colon (:) เมื่อต้องการกำหนดค่าให้กับตัวแปรใหม่
+ในการใช้ destructuring เมื่อดึงข้อมูลออกมาจาก object เราสามารถเปลี่ยนชื่อตัวแปรที่เราจะดึงข้อมูลออกมาได้ วิธีการคือต้องใส่ชื่อตัวแปรใหม่หลัง colon (`:`) เมื่อต้องการตั้งชื่ออื่นให้กับตัวแปรใหม่
 
 ด้านล่างคือ object เดิมจากตัวอย่างก่อนหน้า
 
@@ -17,21 +17,21 @@ const user = { name: 'John Doe', age: 34 };
 ```
 
 
-นี่เป็นวิธีที่คุณสามารถกำหนดค่าให้กับตัวแปรใหม่
+ส่วนด้านล่างนี้เป็นวิธีตั้งชื่ออื่นให้กับตัวแปร
 
 ```js
 const { name: userName, age: userAge } = user;
 ```
 
-คุณอาจอ่านว่า "นำค่า `user.name` ไปกำหนดค่าให้กับตัวแปรใหม่ชื่อ `userName`" ดังนั้น ค่าของ `userName` จะเป็น string `John Doe` และค่าของ `userAge` เป็นตัวเลข
+ถ้าลองอ่านโค้ดนี้เป็นคำพูดจะอ่านว่า "นำค่าของ `user.name` ไปกำหนดให้กับตัวแปรใหม่ชื่อ `userName`" จากโค้ดด้านบนนี้ค่าของ `userName` จะเป็น string `John Doe` และค่าของ `userAge` จะเป็นเลข `34`
 
 # --instructions--
 
-จงแทนที่การกำหนดค่าเดิม โดยใช้ destructuring assignment ซึ่งตัวแปร `highToday` และ `highTomorrow` ควรยังมีค่า `today` และ `tomorrow` จาก Object `HIGH_TEMPERATURES`
+เปลี่ยนการกำหนดค่าแบบเก่าเป็นการใช้ destructuring assignment ซึ่งตัวแปร `highToday` และ `highTomorrow` จะต้องได้ค่ามาจาก parameter `today` และ `tomorrow` ของ Object ที่ชื่อ `HIGH_TEMPERATURES`
 
 # --hints--
 
-คุณควรลบการกำหนดค่าแบบ ES5
+ต้องลบ assignment syntax ของ ES5 ออก
 
 ```js
 assert(
@@ -40,7 +40,7 @@ assert(
 );
 ```
 
-คุณควรใช้ destructuring เพื่อสร้างตัวแปร `highToday`
+ต้องใช้การ destructuring เพื่อสร้างตัวแปร `highToday`
 
 ```js
 assert(
@@ -50,7 +50,7 @@ assert(
 );
 ```
 
-คุณควรใช้ destructuring เพื่อสร้างตัวแปร `highTomorrow`
+ต้องใช้การ destructuring เพื่อสร้างตัวแปร `highTomorrow`
 
 ```js
 assert(
@@ -60,7 +60,7 @@ assert(
 );
 ```
 
-`highToday` ควรเท่ากับ `77` และ `highTomorrow` ควรเท่ากับ `80`
+`highToday` ต้องมีค่าเป็น `77` และ `highTomorrow` ต้องมีค่าเป็น `80`
 
 ```js
 assert(highToday === 77 && highTomorrow === 80);
@@ -77,12 +77,12 @@ const HIGH_TEMPERATURES = {
   tomorrow: 80
 };
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   
 const highToday = HIGH_TEMPERATURES.today;
 const highTomorrow = HIGH_TEMPERATURES.tomorrow; 
 
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

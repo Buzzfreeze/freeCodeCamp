@@ -9,7 +9,7 @@ dashedName: quoting-strings-with-single-quotes
 
 # --description--
 
-ค่า <dfn>String</dfn> ใน JavaScript อาจเขียนด้วย single หรือ double quotes แต่คุณต้องเริ่มต้นและลงท้ายด้วย quote ประเภทเดียวกัน โดย single และ double quotes จะทำงานเหมือนกันในภาษา JavaScript ซึ่งแตกต่างจากภาษาอื่นๆ
+การกำหนดค่า <dfn>string</dfn> ใน JavaScript จะเขียนด้วยเครื่องหมาย single หรือ double quote ก็ได้ แต่คุณต้องเริ่มต้นและลงท้ายด้วยเครื่องหมายประเภทเดียวกัน โดยเครื่องหมาย single และ double quote จะทำงานเหมือนกันในภาษา JavaScript ซึ่งแตกต่างจากภาษาอื่นๆ
 
 
 ```js
@@ -17,34 +17,35 @@ doubleQuoteStr = "This is a string";
 singleQuoteStr = 'This is also a string';
 ```
 
-เหตุผลที่คุณอาจต้องการใช้ quote (เครื่องหมายคำพูด) ประเภทนึงมากกว่าอีกประเภท คือ หากคุณต้องการใช้ทั้งคู่ใน string กรณีนี้อาจเกิดขึ้นได้ หากคุณต้องการแสดงการสนทนาเป็น string และมีบทสนทนาอยู่ใน quote การใช้งานอีกอย่างหนึ่งก็คือการใช้แท็ก `<a>` ที่มี attribute ต่างๆ ใน quote ทั้งหมดนี้อยู่ภายใน string
+คุณอาจเลือกใช้เครื่องหมาย quote แบบใดแบบหนึ่งถ้าคุณต้องการใช้เครื่องหมายอีกแบบใน string กรณีนี้อาจเกิดขึ้นได้ หากคุณต้องการเก็บบทสนทนาเป็น string และมีบทสนทนาอยู่ในเครื่องหมาย quote อีกกรณีหนึ่งก็คือการใช้แท็ก `<a>` ที่มี attribute ที่อยู่ในเครื่องหมาย quote ใน string
 
 ```js
 conversation = 'Finn exclaims to Jake, "Algebraic!"';
 ```
 
-อย่างไรก็ตาม สิ่งนี้จะกลายเป็นปัญหา หากคุณจำเป็นต้องใช้ quote ที่อยู่นอกสุด มาแสดงภายใน string โปรดจำไว้ว่า string ต้องใช้ quote แบบเดียวกันที่จุดเริ่มต้นและจุดสิ้นสุด แต่ถ้าคุณมี quote เดียวกันนั้นอยู่ตรงกลาง string นั้นจะหยุดก่อนกำหนดและเกิดข้อผิดพลาดได้
+แต่หากคุณจำเป็นต้องใช้เครื่องหมาย quote ที่อยู่ชั้นนอกสุด มาแสดงภายใน string จะเกิดปัญหาขึ้นทันที 
+string จะต้องเปิดและปิดด้วย quote แบบเดียวกัน แต่ถ้าคุณมี quote เดียวกันนั้นอยู่ตรงกลาง string นั้นจะเกิดข้อผิดพลาดได้
 
 ```js
 goodStr = 'Jake asks Finn, "Hey, let\'s go on an adventure?"'; 
 badStr = 'Finn responds, "Let's go!"';
 ```
 
-ในที่นี้ `badStr` จะแสดง error ออกมา
+ในตัวอย่าง ตัวแปร `badStr` จะแสดง error ออกมา
 
-ใน <dfn>goodStr</dfn> ด้านบน คุณสามารถใช้ quote ทั้ง 2 แบบ โดยใช้ backslash `\` เป็น escape character
+ใน <dfn>goodStr</dfn> ด้านบน คุณสามารถใช้ quote ทั้ง 2 แบบ โดยใช้ backslash `\` เป็น escape character ได้
 
-# - **หมายเหตุ:** ไม่ควรสับสนระหว่าง backslash  `\` กับ forward slash `/` ทั้งคู่ไม่เหมือนกัน
+**หมายเหตุ:** ไม่ควรสับสนระหว่าง backslash  `\` กับ forward slash `/` ทั้งสองเครื่องหมายนี้เป็นคนละตัวกันและทำงานไม่เหมือนกัน
 
 # --instructions--
 
-จงเปลี่ยน string ที่กำหนดให้เป็น string ที่มี single quotes ที่จุดเริ่มต้นและจุดสิ้นสุดจนจบ โดยไม่มี escape characters
+จงเปลี่ยน string ที่กำหนดให้เป็น string ที่เปิดและปิดด้วย single quotes โดยไม่มี escape character
 
-ในตอนนี้ tag `<a>` ใน string ใช้เครื่องหมาย double quotes ทั้งหมด คุณจะต้องแก้ quotes ด้านนอกให้เป็น single quotes เพื่อจะได้ลบ escape characters ออกได้
+ในตอนนี้แท็ก `<a>` ใน string ใช้เครื่องหมาย double quotes ทั้งหมด คุณจะต้องแก้เครื่องหมาย quote ด้านนอกให้เป็น single quote เพื่อจะได้ลบ escape character ออกได้
 
 # --hints--
 
-คุณควรลบ backslashes (`\`) ออกทั้งหมด
+คุณควรลบ backslash (`\`) ออกทั้งหมด
 
 ```js
 assert(
@@ -55,7 +56,7 @@ assert(
 );
 ```
 
-คุณควรมี single quotes  2 ชุด `'` และ double quotes 4 ชุด (`"`) 
+คุณควรมี single quotes 2 ตัว (`'`) และ double quotes 4 ตัว (`"`) 
 
 ```js
 assert(code.match(/"/g).length === 4 && code.match(/'/g).length === 2);

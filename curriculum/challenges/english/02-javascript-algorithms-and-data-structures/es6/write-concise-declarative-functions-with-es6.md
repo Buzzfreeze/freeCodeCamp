@@ -8,7 +8,7 @@ dashedName: write-concise-declarative-functions-with-es6
 
 # --description--
 
-กำหนดฟังก์ชันภายใน object ใน ES5 เราต้องใช้ keyword `function` ดังนี้:
+ใน ES5 ถ้าเราจะกำหนดฟังก์ชันภายใน object เราต้องใช้ keyword `function` แบบตัวอย่างนี้:
 
 ```js
 const person = {
@@ -19,7 +19,7 @@ const person = {
 };
 ```
 
-ใน ES6 คุณสามารถลบ keyword `function` และเครื่องหมาย colon ได้ เมื่อกำหนด funcion ใน object ดังตัวอย่างนี้
+แต่ใน ES6 เราไม่ต้องใช้ keyword `function` และเครื่องหมาย colon แล้ว เราจะกำหนดฟังก์ชันใน object ได้แบบตัวอย่างนี้เลย:
 
 
 ```js
@@ -33,7 +33,7 @@ const person = {
 
 # --instructions--
 
-จงปรับแก้ function `setGear` ภายใน object `bicycle` เพื่อใช้ syntax อย่างย่อตามที่ได้อธิบายไว้ข้างต้น
+เปลี่ยนการกำหนดฟังก์ชัน `setGear` ภายใน object `bicycle` เพื่อให้ใช้ syntax เหมือนตัวอย่างด้านบน
 
 
 # --hints--
@@ -44,7 +44,7 @@ const person = {
 (getUserInput) => assert(!code.match(/function/));
 ```
 
-`setGear` ควรประกาศเป็น function
+`setGear` ต้องเป็น function
 
 ```js
 assert(
@@ -52,7 +52,7 @@ assert(
 );
 ```
 
-`bicycle.setGear(48)` ควรแก้ไขค่า `gear` เป็น 48
+การเรียกใช้ฟังก์ชัน `bicycle.setGear(48)` ต้องเปลี่ยนค่า `gear` เป็น 48
 
 ```js
 assert(new bicycle.setGear(48).gear === 48);
@@ -63,14 +63,14 @@ assert(new bicycle.setGear(48).gear === 48);
 ## --seed-contents--
 
 ```js
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 const bicycle = {
   gear: 2,
   setGear: function(newGear) {
     this.gear = newGear;
   }
 };
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 bicycle.setGear(3);
 console.log(bicycle.gear);
 ```

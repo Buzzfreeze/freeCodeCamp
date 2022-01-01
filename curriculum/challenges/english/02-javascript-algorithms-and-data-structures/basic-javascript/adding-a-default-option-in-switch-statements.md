@@ -9,10 +9,12 @@ dashedName: adding-a-default-option-in-switch-statements
 
 # --description--
 
-ใน`switch` statement คุณอาจไม่สามารถระบุค่าที่เป็นไปได้ทั้งหมดด้วย `case` statements อย่างไรก็ตาม คุณสามารถใช้ `default` statement แทนเพื่อรันกรณีที่ไม่ตรงกับเงื่อนไข `case` ใดเลย โดยให้คิดว่าเหมือนกับ `else` statement ของคำสั่ง `if/else` 
+ใน `switch` คุณอาจไม่สามารถระบุค่าที่เป็นไปได้ทั้งหมดด้วย `case` อย่างไรก็ตาม คุณสามารถใช้ `default` แทนเพื่อรันกรณีที่ไม่ตรงกับเงื่อนไข `case` ใดเลย โดยให้คิดว่าเหมือนกับ `else` ของคำสั่ง `if/else` 
 
+ถ้าคุณใช้ `switch` คุณอาจพบว่าคุณใส่ทุกๆ เงื่อนไขลงใน `case` ไม่ได้ เราขอแนะนำอีกหนึ่งคำสั่งคือคำสั่ง `default`
+โดยคำสั่ง `default` นั้นจะทำงานถ้าข้อมูลที่ระบุไปนั้นไม่ตรงกับ `case` ใดเลย ให้มองง่ายๆ ก็คือเหมือนกับการใช้ `else` ในคำสั่ง `if/else` นั่นเอง
 
-`default` statement ควรเป็น case ท้ายสุด
+คำสั่ง `default` ต้องวางไว้เป็น case สุดท้าย
 
 ```js
 switch (num) {
@@ -31,7 +33,7 @@ switch (num) {
 
 # --instructions--
 
-จงเขียนคำสั่ง switch เพื่อกำหนดค่าให้กับ `answer` ด้วยเงื่อนไขต่อไปนี้
+จงเขียนคำสั่ง switch เพื่อกำหนดค่าให้กับตัวแปร `answer` ด้วยเงื่อนไขต่อไปนี้
 `a` - `apple`  
 `b` - `bird`  
 `c` - `cat`  
@@ -39,49 +41,49 @@ switch (num) {
 
 # --hints--
 
-`switchOfStuff("a")` ควรคืนค่า string `apple`
+การเรียกใช้ฟังก์ชัน `switchOfStuff("a")` ต้องคืนค่าออกมาเป็น string `apple`
 
 ```js
 assert(switchOfStuff('a') === 'apple');
 ```
 
-`switchOfStuff("b")` ควรคืนค่า string `bird`
+การเรียกใช้ฟังก์ชัน `switchOfStuff("b")` ต้องคืนค่าออกมาเป็น string `bird`
 
 ```js
 assert(switchOfStuff('b') === 'bird');
 ```
 
-`switchOfStuff("c")` ควรคืนค่า string `cat`
+การเรียกใช้ฟังก์ชัน `switchOfStuff("c")` ต้องคืนค่าออกมาเป็น string `cat`
 
 ```js
 assert(switchOfStuff('c') === 'cat');
 ```
 
-`switchOfStuff("d")` ควรคืนค่า string `stuff`
+การเรียกใช้ฟังก์ชัน `switchOfStuff("d")` ต้องคืนค่าออกมาเป็น string `stuff`
 
 ```js
 assert(switchOfStuff('d') === 'stuff');
 ```
 
-`switchOfStuff(4)` ควรคืนค่า string `stuff`
+การเรียกใช้ฟังก์ชัน `switchOfStuff(4)` ต้องคืนค่าออกมาเป็น string `stuff`
 
 ```js
 assert(switchOfStuff(4) === 'stuff');
 ```
 
-คุณไม่ควรใช้คำสั่ง `if` หรือ `else`
+ห้ามใช้คำสั่ง `if` และ `else`
 
 ```js
 assert(!/else/g.test(code) || !/if/g.test(code));
 ```
 
-คุณควรใช้คำสั่ง `default` อย่างน้อยสามคำสั่ง
+ต้องใช้คำสั่ง `default` ในโค้ดด้วย
 
 ```js
 assert(switchOfStuff('string-to-trigger-default-case') === 'stuff');
 ```
 
-คุณควรมีคำสั่ง `break` อย่างน้อยสามคำสั่ง
+ต้องใช้คำสั่ง `break` อย่างน้อยสามครั้งในโค้ด
 
 ```js
 assert(code.match(/break/g).length > 2);
@@ -94,11 +96,11 @@ assert(code.match(/break/g).length > 2);
 ```js
 function switchOfStuff(val) {
   var answer = "";
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
   return answer;
 }
 

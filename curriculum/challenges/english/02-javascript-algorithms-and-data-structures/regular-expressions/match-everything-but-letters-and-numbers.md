@@ -8,9 +8,11 @@ dashedName: match-everything-but-letters-and-numbers
 
 # --description--
 
-คุณได้เรียนรู้แล้วว่า คุณสามารถใช้ shortcut เพื่อ match อักขระที่เป็นตัวเลขและตัวอักษร `[A-Za-z0-9_]` โดยการใช้ `\w` อย่างไรก็ตาม บางครั้งคุณอาจต้องการค้นหาอักขระอื่นที่นอกเหนือจากตัวเลขและตัวอักษร
+เรารู้แล้วว่าเราใช้ shortcut เพื่อ match ตัวเลขและตัวอักษรภาษาอังกฤษแบบนี้ได้ `[A-Za-z0-9_]` ถ้าใช้ `\w` 
+แต่บางทีเราอาจอยากหาว่ามีตัวอักษรหรือสัญลักษณ์อื่นนอกเหนือจาก `[A-Za-z0-9_]` ใน string หรือไม่
 
-คุณสามารถค้นหาสิ่งตรงข้ามกับ `\w` ด้วย `\W` ซึ่ง pattern ที่ตรงข้ามจะใช้ตัวอักษรพิมพ์ใหญ่ โดย shortcut นี้เทียบเท่ากับ [^A-Za-z0-9_]`
+เราจะมี `\W` ที่ทำงานตรงข้ามกับ `\w` เลย 
+ให้ลองดูดีๆ pattern นี้จะใช้ตัวพิมพ์ใหญ่ และ shortcut นี้จะทำงานเหมือนกับ [^A-Za-z0-9_]`
 
 ```js
 let shortHand = /\W/;
@@ -20,21 +22,21 @@ numbers.match(shortHand);
 sentence.match(shortHand);
 ```
 
-การเรียก `match` ครั้งแรกควรคืนค่า `["%"]` และครั้งที่สองควรควรค่า `["!"]`
+จากตัวอย่างด้านบน การใช้ `match` ครั้งแรกจะได้ค่าเป็น `["%"]` และครั้งที่สองจะได้ค่าเป็น `["!"]`
 
 # --instructions--
 
-จงใช้ shorthand character class `\W` เพื่อนับตัวอักษรและตัวเลขใน strings
+จงใช้ shorthand character class `\W` เพื่อนับเครื่องหมายอื่นที่ไม่ใช่ตัวอักษรในภาษาอังกฤษและตัวเลขใน string
 
 # --hints--
 
-regex ของคุณควรใช้ global flag
+ต้องเขียน regex โดยใช้ flag global
 
 ```js
 assert(nonAlphabetRegex.global);
 ```
 
-regex ของคุณควรพบอักขระอื่นที่นอกเหนือจากตัวเลขและตัวอักษรจำนวน 6 ตัวใน string `The five boxing wizards jump quickly.`.
+regex ที่เขียนต้องเจอเครื่องหมายที่ไม่ใช่ตัวอักษรในภาษาอังกฤษและตัวเลขทั้งหมด 6 ตัวใน string `The five boxing wizards jump quickly.`.
 
 ```js
 assert(
@@ -42,13 +44,13 @@ assert(
 );
 ```
 
-regex ของคุณควรใช้ shorthand character เพื่อ match อักขระอื่นที่นอกเหนือจากตัวเลขและตัวอักษร (non-alphanumeric)
+ต้องเขียน regex โดยใช้ shorthand character เพื่อ match เครื่องหมายที่ไม่ใช่ตัวอักษรในภาษาอังกฤษและตัวเลข (non-alphanumeric)
 
 ```js
 assert(/\\W/.test(nonAlphabetRegex.source));
 ```
 
-regex ของคุณควรพบอักขระอื่นที่นอกเหนือจากตัวเลขและตัวอักษรจำนวน 8 ตัวใน string `Pack my box with five dozen liquor jugs.`
+regex ที่เขียนต้องเจอเครื่องหมายที่ไม่ใช่ตัวอักษรในภาษาอังกฤษและตัวเลขทั้งหมด 8 ตัวใน string `Pack my box with five dozen liquor jugs.`
 
 ```js
 assert(
@@ -56,7 +58,7 @@ assert(
 );
 ```
 
-regex ของคุณควรพบอักขระอื่นที่นอกเหนือจากตัวเลขและตัวอักษรจำนวน 6 ตัวใน string `How vexingly quick daft zebras jump!`
+regex ที่เขียนต้องเจอเครื่องหมายที่ไม่ใช่ตัวอักษรในภาษาอังกฤษและตัวเลขทั้งหมด 6 ตัวใน string `How vexingly quick daft zebras jump!`
 
 ```js
 assert(
@@ -64,7 +66,7 @@ assert(
 );
 ```
 
-regex ของคุณควรพบอักขระอื่นที่นอกเหนือจากตัวเลขและตัวอักษรจำนวน 12 ตัวใน string `123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.`
+regex ที่เขียนต้องเจอเครื่องหมายที่ไม่ใช่ตัวอักษรในภาษาอังกฤษและตัวเลขทั้งหมด 12 ตัวใน string `123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.`
 
 ```js
 assert(
@@ -79,7 +81,7 @@ assert(
 
 ```js
 let quoteSample = "The five boxing wizards jump quickly.";
-let nonAlphabetRegex = /change/; // Change this line
+let nonAlphabetRegex = /change/; // แก้บรรทัดนี้
 let result = quoteSample.match(nonAlphabetRegex).length;
 ```
 
@@ -87,6 +89,6 @@ let result = quoteSample.match(nonAlphabetRegex).length;
 
 ```js
 let quoteSample = "The five boxing wizards_jump quickly.";
-let nonAlphabetRegex = /\W/g; // Change this line
+let nonAlphabetRegex = /\W/g; // แก้บรรทัดนี้
 let result = quoteSample.match(nonAlphabetRegex).length;
 ```

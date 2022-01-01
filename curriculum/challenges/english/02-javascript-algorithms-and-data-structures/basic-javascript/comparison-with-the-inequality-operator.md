@@ -9,10 +9,11 @@ dashedName: comparison-with-the-inequality-operator
 
 # --description--
 
-inequality operator (`!=`) จะทำงานตรงข้ามกับ equality operator (`==`) ซึ่ง (`!=`) หมายถึง ถ้าค่าข้อมูลเท่า จะส่งคืนค่า `false` ในขณะที่ (`==`) จะคืนค่า `true` อย่างไรก็ตาม เช่นเดียวกับ equality operator (`==`) เมื่อมีการเปรียบเทียบ inequality operator (`!=`) จะทำการแปลงประเภทข้อมุลให้
+inequality operator (`!=`) จะทำงานตรงข้ามกับ equality operator (`==`) เช่น ถ้าค่าของข้อมูลเท่ากัน inequality operator (`!=`) จะคืนค่า `false` ออกมา ในขณะที่ถ้าเป็น equality operator (`==`) จะคืนค่า `true` 
+และ inequality operator (`!=`) ก็เหมือนกับ equality operator (`==`) ตรงที่จะทำการแปลงประเภทข้อมุลให้เมื่อมีการเปรียบเทียบ
 
 
-**Examples**
+**ตัวอย่าง**
 
 ```js
 1 !=  2
@@ -22,47 +23,47 @@ inequality operator (`!=`) จะทำงานตรงข้ามกับ e
 0 != false
 ```
 
-ผลลัพธ์แต่ละบรรทัดจะเป็น `true`, `false`, `false`, `false`, และ `false` ตามลำดับ
+ผลลัพธ์ของแต่ละบรรทัดจะเป็น `true`, `false`, `false`, `false`, และ `false` ตามลำดับ
 
 
 # --instructions--
 
-จงเพิ่ม inequality operator `!=` ใน `if` statement เพื่อให้ function คืนค่า string `Not Equal` เมื่อ `val` ไม่เท่ากับ `99`
+จงเพิ่ม inequality operator `!=` ในคำสั่ง `if` เพื่อให้ฟังก์ชันคืนค่าออกมาเป็น string ที่มีค่าเท่ากับ `Not Equal` เมื่อ `val` มีค่าไม่เท่ากับ `99`
 
 
 # --hints--
 
-`testNotEqual(99)` ควรคืนค่า string `Equal`
+การเรียกใช้ฟังก์ชัน `testNotEqual(99)` ต้องคืนค่าออกมาเป็น string `Equal`
 
 ```js
 assert(testNotEqual(99) === 'Equal');
 ```
 
-`testNotEqual("99")` ควรคืนค่า string `Equal`
+การเรียกใช้ฟังก์ชัน `testNotEqual("99")` ต้องคืนค่าออกมาเป็น string `Equal`
 
 ```js
 assert(testNotEqual('99') === 'Equal');
 ```
 
-`testNotEqual(12)` ควรคืนค่า string `Not Equal`
+การเรียกใช้ฟังก์ชัน `testNotEqual(12)` ต้องคืนค่าออกมาเป็น string `Not Equal`
 
 ```js
 assert(testNotEqual(12) === 'Not Equal');
 ```
 
-`testNotEqual("12")` ควรคืนค่า string `Not Equal`
+การเรียกใช้ฟังก์ชัน `testNotEqual("12")` ต้องคืนค่าออกมาเป็น string `Not Equal`
 
 ```js
 assert(testNotEqual('12') === 'Not Equal');
 ```
 
-`testNotEqual("bob")` ควรคืนค่า string `Not Equal`
+การเรียกใช้ฟังก์ชัน `testNotEqual("bob")` ต้องคืนค่าออกมาเป็น string `Not Equal`
 
 ```js
 assert(testNotEqual('bob') === 'Not Equal');
 ```
 
-คุณควรใช้เครื่องหมาย `!=` operator
+คุณต้องใช้เครื่องหมาย `!=`
 
 ```js
 assert(code.match(/(?!!==)!=/));
@@ -73,9 +74,9 @@ assert(code.match(/(?!!==)!=/));
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 function testNotEqual(val) {
-  if (val) { // Change this line
+  if (val) { // แก้ไขบรรทัดนี้
     return "Not Equal";
   }
   return "Equal";

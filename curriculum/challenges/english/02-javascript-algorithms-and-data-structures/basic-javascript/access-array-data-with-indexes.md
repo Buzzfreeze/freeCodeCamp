@@ -9,13 +9,13 @@ dashedName: access-array-data-with-indexes
 
 # --description--
 
-เราสามารถเข้าถึงข้อมูลภายใน array โดยใช้ <dfn>indexes</dfn>
+เราสามารถเข้าถึงข้อมูลภายใน array ได้โดยใช้ <dfn>index</dfn>
 
-Array indexes ใช้ bracket notation เช่นเดียวกับ string เว้นแต่แทนที่จะระบุอักขระ ก็ระบุรายการใน array แทน อย่างไรก็ตาม array ใช้ <dfn>zero-based</dfn> indexing เช่นเดียวกับ string ดังนั้น element แรกของ array จะมี index เป็น `0`
+การเข้าถึงข้อมูลของ array โดยใช้ index ก็ใช้ bracket notation (`[]`) เหมือนกับ string แต่แทนที่จะเป็นการดึงตัวอักษรตามตำแหน่ง จะเป็นการดึงข้อมูลที่อยู่ภายใน array แทน และการดึงข้อมูลของ array ก็ใช้ <dfn>zero-based</dfn> index เหมือนกับ string เลย ดังนั้นข้อมูลแรกของ array ก็จะมี index เป็น `0` เช่นเดียวกัน
 
 <br>
 
-**Example**
+**ตัวอย่าง**
 
 ```js
 var array = [50,60,70];
@@ -23,9 +23,9 @@ array[0];
 var data = array[1];
 ```
 
-`array[0]` ตอนนี้มีค่าเป็น `50` และ `data` มีค่าเป็น `60`
+`array[0]` จะมีค่าเป็น `50` และตัวแปร `data` จะมีค่าเป็น `60`
 
-**หมายเหตุ:** ไม่ควรมีช่องว่างระหว่างชื่อ array และ square brackets เช่น `array [0]` แม้ว่า JavaScript สามารถประมวลผลได้อย่างถูกต้อง แต่อาจทำให้โปรแกรมเมอร์คนอื่นอ่านโค้ดของคุณแล้วสับสน
+**หมายเหตุ:** ไม่ควรมีช่องว่างหลังชื่อ array หรือหน้า square brackets เช่น `array [0]` ถึง JavaScript จะเข้าใจว่าคุณต้องการจะทำอะไร แต่ก็อาจทำให้โปรแกรมเมอร์คนอื่นที่มาอ่านโค้ดของคุณสับสนได้
 
 # --instructions--
 
@@ -33,7 +33,7 @@ var data = array[1];
 
 # --hints--
 
-ตัวแปร `myData` ควรมีค่าเท่ากับค่าแรกของ `myArray`
+ตัวแปร `myData` ต้องมีค่าเท่ากับค่าแรกของ `myArray`
 
 ```js
 assert(
@@ -51,7 +51,7 @@ assert(
 );
 ```
 
-ข้อมูลในตัวแปร `myArray` ควรเข้าถึงได้ ด้วยการใช้ bracket notation
+ต้องดึงข้อมูลจากตัวแปร `myArray` โดยใช้ bracket notation
 
 ```js
 assert(

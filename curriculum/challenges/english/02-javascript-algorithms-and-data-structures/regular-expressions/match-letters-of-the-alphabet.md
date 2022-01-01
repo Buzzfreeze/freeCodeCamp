@@ -8,11 +8,12 @@ dashedName: match-letters-of-the-alphabet
 
 # --description--
 
-คุณได้เรียนรู้การใช้ <dfn>character sets</dfn> เพื่อกำหนดกลุ่มของตัวอักษรที่จะ match แต่ยังต้องพิมพ์เป็นจำนวนมาก หากคุณต้องการ match ช่วงตัวอักษรกว้างๆ (เช่น ทุกตัวอักษรในภาษาอังกฤษ) แต่ยังโชคดีที่มีฟีเจอร์ที่ทำให้เขียนสั้นและง่าย
+เราได้เรียนการใช้ <dfn>character class</dfn> เพื่อกำหนดกลุ่มของตัวอักษรที่จะ match แล้ว 
+แต่เราจะเห็นว่าถ้าเราต้องการที่จะ match ตัวอักษรหลายๆตัว เราจะต้องพิมพ์เยอะมากๆ แต่ไม่ต้องห่วง regex มีฟีเจอร์ที่ทำให้คุณไม่ต้องพิมพ์เยอะขนาดนั้นด้วย
 
-ภายใน character set คุณสามารถกำหนดช่วงตัวอักษรที่จะ match โดยใช้ hyphen character: `-`
+ภายใน character set คุณสามารถกำหนดช่วงของตัวอักษรที่จะ match โดยใช้ hyphen character: `-`
 
-ตัวอย่างเช่น ต้องการ match ตัวพิมพ์เล็กตั้งแต่ `a` ถึง `e` คุณกำหนดได้ดังนี้ `[a-e]`
+เช่น ต้องการ match ตัวพิมพ์เล็กตั้งแต่ `a` ถึง `e` จะเขียนได้แบบนี้ `[a-e]` (ถ้าใช้ภาษาไทยจะใช้เป็น `[ก-จ]` ก็ได้)
 
 ```js
 let catStr = "cat";
@@ -24,29 +25,29 @@ batStr.match(bgRegex);
 matStr.match(bgRegex);
 ```
 
-การเรียก `match` ทั้ง 3 ครั้งจะคืนค่า `["cat"]`, `["bat"]` และ `null`
+การเรียก `match` ทั้ง 3 ครั้งจะได้ค่าเป็น `["cat"]`, `["bat"]` และ `null` ตามลำดับ
 
 # --instructions--
 
-จง Match ทุกตัวอักษรใน string `quoteSample`
+ให้ Match ทุกตัวอักษรใน string `quoteSample`
 
-**Note**: ตรวจเช็คให้มั่นใจว่า match ทั้งตัวพิมพ์ใหญ่และตัวพิมพ์เล็ก
+**Note**: ให้ match ทั้งตัวพิมพ์ใหญ่และตัวพิมพ์เล็ก
 
 # --hints--
 
-regex `alphabetRegex` ควร match 35 items
+regex `alphabetRegex` ต้องเจอทั้งหมด 35 ตัวอักษร
 
 ```js
 assert(result.length == 35);
 ```
 
-regex `alphabetRegex` ควรใช้ global flag
+regex `alphabetRegex` ต้องใช้ flag global (`g`)
 
 ```js
 assert(alphabetRegex.flags.match(/g/).length == 1);
 ```
 
-regex `alphabetRegex` ควรใช้ case insensitive flag
+regex `alphabetRegex` ต้องใช้ flag case insensitive (`i`)
 
 ```js
 assert(alphabetRegex.flags.match(/i/).length == 1);
@@ -58,14 +59,14 @@ assert(alphabetRegex.flags.match(/i/).length == 1);
 
 ```js
 let quoteSample = "The quick brown fox jumps over the lazy dog.";
-let alphabetRegex = /change/; // Change this line
-let result = alphabetRegex; // Change this line
+let alphabetRegex = /change/; // แก้บรรทัดนี้
+let result = alphabetRegex; // แก้บรรทัดนี้
 ```
 
 # --solutions--
 
 ```js
 let quoteSample = "The quick brown fox jumps over the lazy dog.";
-let alphabetRegex = /[a-z]/gi; // Change this line
-let result = quoteSample.match(alphabetRegex); // Change this line
+let alphabetRegex = /[a-z]/gi; // แก้บรรทัดนี้
+let result = quoteSample.match(alphabetRegex); // แก้บรรทัดนี้
 ```

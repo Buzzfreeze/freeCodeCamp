@@ -9,7 +9,7 @@ dashedName: comparison-with-the-strict-inequality-operator
 
 # --description--
 
-strict inequality operator (`!==`) เป็นตรรกะที่ตรงกันข้ามกับ strict equality operator (`===`) ซึ่ง (`!==`) หมายถึง ถ้าค่าข้อมูลและประเภทข้อมูลเท่า จะคืนค่า `false` ในขณะที่ (`===`) จะคืนค่า `true` โดย strict inequality operator (`!==`) จะไม่แปลงประเภทข้อมูล
+strict inequality operator (`!==`) นั้นตรงข้ามกับ strict equality operator (`===`) เลย เช่น ถ้าใช้ `!==` แล้วได้ผลลัพธ์เป็น `false` แล้วเอาข้อมูลเดียวกันมาใช้กับ `===` จะได้ค่า `true` แทน แล้วก็ strict inequality operator (`!==`) จะเหมือนกับ `===` ตรงที่จะไม่แปลงประเภทข้อมูลให้
 
 
 **Examples**
@@ -20,40 +20,40 @@ strict inequality operator (`!==`) เป็นตรรกะที่ตรง
 4 !==  3
 ```
 
-ตามลำดับแต่ละบรรทัดจะได้ค่า  `false`, `true`, และ `true`.
+จากตัวอย่างด้านบนจะได้ค่าเป็น  `false`, `true`, และ `true` ตามลำดับ
 
 # --instructions--
 
-เพิ่มเครื่องหมาย (`!==`) ในคำสั่ง `if` เพื่อให้ function ส่งคืนค่า string `Not Equal` เมื่อ `val` ไม่เท่า `17` ทั้งข้อมูลและประเภท
+จงเพิ่มเครื่องหมาย `!==` ในคำสั่ง `if` เพื่อให้ function คืนค่าออกมาเป็น string ซึ่งมีค่าเป็น `Not Equal` เมื่อข้อมูล `val` ไม่เท่ากับ `17`
 
 # --hints--
 
-`testStrictNotEqual(17)`  ควรคืนค่า string `Equal`
+การเรียกใช้ฟังก์ชัน `testStrictNotEqual(17)` ต้องคืนค่าออกมาเป็น string `Equal`
 
 ```js
 assert(testStrictNotEqual(17) === 'Equal');
 ```
 
 
-`testStrictNotEqual("17")` ควรคืนค่า string `Not Equal`
+การเรียกใช้ฟังก์ชัน `testStrictNotEqual("17")` ต้องคืนค่าออกมาเป็น string `Not Equal`
 
 ```js
 assert(testStrictNotEqual('17') === 'Not Equal');
 ```
 
-`testStrictNotEqual(12)` ควรคืนค่า string `Not Equal`
+การเรียกใช้ฟังก์ชัน `testStrictNotEqual(12)` ต้องคืนค่าออกมาเป็น string `Not Equal`
 
 ```js
 assert(testStrictNotEqual(12) === 'Not Equal');
 ```
 
-`testStrictNotEqual("bob")` ควรคืนค่า string `Not Equal`
+การเรียกใช้ฟังก์ชัน `testStrictNotEqual("bob")` ต้องคืนค่าออกมาเป็น string `Not Equal`
 
 ```js
 assert(testStrictNotEqual('bob') === 'Not Equal');
 ```
 
-คุณควรใช้เครื่องหมาย `!==`
+ต้องใช้เครื่องหมาย `!==`
 
 ```js
 assert(code.match(/(val\s*!==\s*\d+)|(\d+\s*!==\s*val)/g).length > 0);
@@ -64,9 +64,9 @@ assert(code.match(/(val\s*!==\s*\d+)|(\d+\s*!==\s*val)/g).length > 0);
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 function testStrictNotEqual(val) {
-  if (val) { // Change this line
+  if (val) { // แก้บรรทัดนี้เท่านั้น
     return "Not Equal";
   }
   return "Equal";

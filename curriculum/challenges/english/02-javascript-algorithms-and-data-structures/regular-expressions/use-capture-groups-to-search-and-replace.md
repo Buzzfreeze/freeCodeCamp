@@ -8,9 +8,9 @@ dashedName: use-capture-groups-to-search-and-replace
 
 # --description--
 
-การค้นหานั้นมีประโยชน์ แต่ถ้าคุณสามารถค้นหาและเปลี่ยน (หรือแทนที่) ข้อความที่ match ได้ก็ย่อมดีกว่า
+แค่การค้นหาได้ก็มีประโยชน์มากแล้ว แต่ถ้าเราสามารถค้นหาแล้วก็เปลี่ยน (หรือแทนที่) ข้อความที่ match ได้ก็จะยิ่งดีขึ้นไปอีก
 
-คุณสามารถค้นหาและแทนที่ข้อความใน string โดยใช้ `.replace()` ซึ่ง parameter ตัวแรกของ `.replace()` คือ regex pattern ที่คุณต้องการค้นหา ส่วน parameter ตัวที่สองก็คือ string ที่ต้องการแทนที่คำที่ match หรืออาจเป็นฟังก์ชันที่ให้ทำอะไรต่อ
+เราจะใช้ method `.replace()` เพื่อค้นหาและแทนที่ข้อความใน string ซึ่ง `.replace()` จะรับ parameter ตัวแรกเป็น regex pattern ที่เราต้องการค้นหา ส่วน parameter ตัวที่สองจะเป็น string ที่จะเอาไปแทนที่คำที่ match หรือจะใช้เป็นฟังก์ชันก็ได้
 
 ```js
 let wrongText = "The sky is silver.";
@@ -18,47 +18,53 @@ let silverRegex = /silver/;
 wrongText.replace(silverRegex, "blue");
 ```
 
-การเรียก `replace` จะคืนค่าเป็น string `The sky is blue.`
+การเรียกใช้ method `replace` จะคืนค่าเป็น string `The sky is blue.`
 
-คุณสามารถนำ capture groups มาใช้ในส่วนของ string ที่ต้องการแทนที่ โดยใช้ dollar signs (`$`)
+เราใช้ capture group เป็น string ที่นำไปแทนที่ได้ด้วย โดยเราจะใช้เป็น dollar sign (`$`) ตามตัวอย่างด้านล่าง:
 
 ```js
 "Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1');
 ```
 
-การเรียก `replace` จะคืนค่าเป็น string `Camp Code`
+ในตัวอย่างนี้การเรียกใช้ method `replace` จะคืนค่าเป็น string `Camp Code`
 
 # --instructions--
 
-จงเขียน regex `fixRegex` โดยใช้ capture groups 3 ชุด ซึ่งจะค้นหาแต่ละคำใน string `one two three` จากนั้นอัปเดตตัวแปร `replaceText` เพื่อแทนที่ `one two three` ด้วย string `three two one` แล้วกำหนด (assign) ผลลัพธ์ให้กับตัวแปร `result` อย่าลืมว่าให้นำ capture groups มาใช้ในส่วนของ string ที่ต้องการแทนที่ โดยใช้ dollar sign (`$`) syntax
+จงเขียน regex `fixRegex` ตามเงื่อนไขนี้
+
+1. สร้าง capture group 3 ชุด ซึ่งแต่ละชุดจะใช้เพื่อหาคำใน string `one two three` 
+2. เปลี่ยนค่าของตัวแปร `replaceText` เพื่อที่จะเอาไปใช้ในการเปลี่ยน string `one two three` ให้กลายเป็น `three two one` 
+3. นำผลลัพธ์มากำหนดค่าให้กับตัวแปร `result` 
+
+อย่าลืมว่าต้องใช้ capture group มาแทนที่ string โดยใช้ syntax dollar sign (`$`)
 
 # --hints--
 
-คุณควรใช้ `.replace()` เพื่อค้นหาและแทนที่
+ต้องใช้ method `.replace()` เพื่อค้นหาและแทนที่
 
 ```js
 assert(code.match(/\.replace\(.*\)/));
 ```
 
-regex ของคุณควรเปลี่ยน string `one two three` ให้เป็น string `three two one`
+regex ที่เขียนต้องเปลี่ยน string `one two three` ให้กลายเป็น string `three two one`
 
 ```js
 assert(result === 'three two one');
 ```
 
-คุณไม่ควรเปลี่ยนบรรทัดสุดท้าย
+ห้ามแก้ไขโค้ดบรรทัดสุดท้าย
 
 ```js
 assert(code.match(/result\s*=\s*str\.replace\(.*?\)/));
 ```
 
-`fixRegex` ควรใช้อย่างน้อย 3 capture groups.
+ต้องมีอย่างน้อย 3 capture group ในตัวแปร `fixRegex`  
 
 ```js
 assert(new RegExp(fixRegex.source + '|').exec('').length - 1 >= 3);
 ```
 
-`replaceText` ควรนำแต่ละ submatch string(s) มาใส่วงเล็บ (เช่น submatch string ที่อยู่ในวงเล็บตัวที่ n, $n, จะตรงกันกับ capture group ลำดับที่ n)
+ตัวแปร `replaceText` จะต้องเป็นการเอา string ที่ match จาก capture group มาใช้ (เช่น string ที่ match จาก capture group ตัวแรกจะใช้เป็น `$1`)
 
 ```js
 {
@@ -73,8 +79,8 @@ assert(new RegExp(fixRegex.source + '|').exec('').length - 1 >= 3);
 
 ```js
 let str = "one two three";
-let fixRegex = /change/; // Change this line
-let replaceText = ""; // Change this line
+let fixRegex = /change/; // แก้บรรทัดนี้
+let replaceText = ""; // แก้บรรทัดนี้
 let result = str.replace(fixRegex, replaceText);
 ```
 
@@ -82,7 +88,7 @@ let result = str.replace(fixRegex, replaceText);
 
 ```js
 let str = "one two three";
-let fixRegex = /(\w+) (\w+) (\w+)/g; // Change this line
-let replaceText = "$3 $2 $1"; // Change this line
+let fixRegex = /(\w+) (\w+) (\w+)/g; // แก้บรรทัดนี้
+let replaceText = "$3 $2 $1"; // แก้บรรทัดนี้
 let result = str.replace(fixRegex, replaceText);
 ```

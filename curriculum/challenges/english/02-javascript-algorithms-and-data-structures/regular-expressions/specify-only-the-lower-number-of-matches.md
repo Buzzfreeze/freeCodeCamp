@@ -8,11 +8,12 @@ dashedName: specify-only-the-lower-number-of-matches
 
 # --description--
 
-คุณสามารถกำหนดจำนวนขั้นต่ำและจำนวนสูงสุดของ pattern ด้วย quantity specifiers ที่อยู่ใน curly brackets (วงเล็บปีกกา) บางครั้งคุณเพียงต้องการระบุจำนวนขั้นต่ำของ pattern โดยไม่ระบุจำนวนสูงสุด
+เราสามารถกำหนดจำนวนขั้นต่ำและจำนวนสูงสุดที่จะเจอ pattern ด้วย quantity specifier ที่อยู่ใน curly bracket (วงเล็บปีกกา) ได้
+แต่บางครั้งเราก็อาจอยากระบุแค่จำนวนขั้นต่ำ แล้วไม่กำหนดจำนวนสูงสุดที่จะเจอ pattern
 
-การระบุเฉพาะจำนวนขั้นต่ำของ pattern ทำได้โดยใส่เฉพาะเลขตัวแรก แล้วตามด้วย comma
+การระบุเฉพาะจำนวนขั้นต่ำของ pattern จะต้องใส่แค่เลขตัวแรกแล้วตามด้วย comma และปีกกาปิด
 
-ตัวอย่างเช่น การ match ก็ต่อเมื่อมีตัวอักษร `a` อย่างน้อย 3 ตัว ใน string `hah` คุณสามารถเขียน regex ได้ดังนี้ `/ha{3,}h/`
+เช่น ถ้าอยากให้ match ถ้ามีตัวอักษร `a` อย่างน้อย 3 ตัว ใน string `hah` เราจะเขียน regex เป็น `/ha{3,}h/`
 
 ```js
 let A4 = "haaaah";
@@ -24,53 +25,53 @@ multipleA.test(A2);
 multipleA.test(A100);
 ```
 
-การเรียก `test` จะคืนค่า `true`, `false` และ `true` ตามลำดับ
+การเรียกใช้ method `test` จะได้ค่าเป็น `true`, `false` และ `true` ตามลำดับ
 
 # --instructions--
 
-จงปรับแก้ regex `haRegex` ที่ match ก็ต่อเมื่อมีตัวอักษร `z` จำนวน 4 ตัวหรือมากกว่าใน `Hazzah`
+ให้เปลี่ยน regex `haRegex` ให้ match ถ้ามีตัวอักษร `z` อย่างน้อย 4 ตัวใน `Hazzah`
 
 # --hints--
 
-regex ของคุณควรใช้ curly brackets (วงเล็บปีกกา)
+regex ที่เขียนต้องใช้ curly brackets (วงเล็บปีกกา)
 
 ```js
 assert(haRegex.source.match(/{.*?}/).length > 0);
 ```
 
-regex ของคุณไม่ควร match กับ string `Hazzah`
+regex ที่เขียนต้องไม่ match กับ string `Hazzah`
 
 ```js
 haRegex.lastIndex = 0;
 assert(!haRegex.test('Hazzah'));
 ```
 
-regex ของคุณไม่ควร match กับ string `Hazzzah`
+regex ที่เขียนต้องไม่ match กับ string `Hazzzah`
 
 ```js
 haRegex.lastIndex = 0;
 assert(!haRegex.test('Hazzzah'));
 ```
 
-regex ของคุณควร match กับ string `Hazzzzah`
+regex ที่เขียนต้อง match กับ string `Hazzzzah`
 
 ```js
 assert('Hazzzzah'.match(haRegex)[0].length === 8);
 ```
 
-regex ของคุณควร match กับ string `Hazzzzzah`
+regex ที่เขียนต้อง match กับ string `Hazzzzzah`
 
 ```js
 assert('Hazzzzzah'.match(haRegex)[0].length === 9);
 ```
 
-regex ของคุณควร match กับ string `Hazzzzzzah`
+regex ที่เขียนต้อง match กับ string `Hazzzzzzah`
 
 ```js
 assert('Hazzzzzzah'.match(haRegex)[0].length === 10);
 ```
 
-regex ของคุณควร match กับ string `Hazzah` with 30 `z`'s in it.
+regex ที่เขียนต้อง match กับ string `Hazzah` with 30 `z`'s in it.
 
 ```js
 assert('Hazzzzzzzzzzzzzzzzzzzzzzzzzzzzzzah'.match(haRegex)[0].length === 34);
@@ -82,7 +83,7 @@ assert('Hazzzzzzzzzzzzzzzzzzzzzzzzzzzzzzah'.match(haRegex)[0].length === 34);
 
 ```js
 let haStr = "Hazzzzah";
-let haRegex = /change/; // Change this line
+let haRegex = /change/; // แก้บรรทัดนี้
 let result = haRegex.test(haStr);
 ```
 
@@ -90,6 +91,6 @@ let result = haRegex.test(haStr);
 
 ```js
 let haStr = "Hazzzzah";
-let haRegex = /Haz{4,}ah/; // Change this line
+let haRegex = /Haz{4,}ah/; // แก้บรรทัดนี้
 let result = haRegex.test(haStr);
 ```

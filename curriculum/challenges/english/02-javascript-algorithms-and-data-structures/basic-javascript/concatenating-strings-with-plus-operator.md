@@ -9,7 +9,8 @@ dashedName: concatenating-strings-with-plus-operator
 
 # --description--
 
-ใน JavaScript เมื่อเครื่องหมาย `+` ถูกใช้กับค่า `String` จะมีการเรียก <dfn>concatenation</dfn> operator คุณสามารถสร้าง string ใหม่จาก string อื่นๆ โดยการ <dfn>concatenating</dfn> string เข้าด้วยกัน
+ใน JavaScript เมื่อเครื่องหมาย `+` ถูกใช้ข้อมูลในรูปแบบ `string` จะเรียกว่าการ <dfn>concatenation</dfn> (เชื่อม)
+คุณสามารถ <dfn>เชื่อม</dfn> string เข้าด้วยกันเพื่อสร้างเป็น string ใหม่ได้
 
 **Example**
 
@@ -17,7 +18,7 @@ dashedName: concatenating-strings-with-plus-operator
 'My name is Alan,' + ' I concatenate.'
 ```
 
-**หมายเหตุ:** โปรดระวัง spaces (การเว้นวรรค) เนื่องจาก Concatenation จะไม่เพิ่มเว้นวรรคระหว่าง string ที่ต่อกัน ดังนั้น คุณจะต้องเพิ่มเอง
+**หมายเหตุ:** การเชื่อม string จะไม่เว้นวรรคระหว่าง string ที่ต่อกันให้ คุณจะต้องเพิ่มการเว้นวรรคระหว่าง string เอง
 
 ตัวอย่าง:
 
@@ -25,33 +26,33 @@ dashedName: concatenating-strings-with-plus-operator
 var ourStr = "I come first. " + "I come second.";
 ```
 
-string `I come first. I come second.` จะแสดงในหน้า console
+console จะแสดง string `I come first. I come second.`
 
 # --instructions--
 
-จงสร้าง `myStr` จาก string `This is the start.` และ `This is the end.` โดยใช้ `+` operator อย่าลืมเพิ่ม space ระหว่าง string ทั้งสองด้วย
+จงสร้างตัวแปร `myStr` จาก string `This is the start.` และ `This is the end.` โดยใช้เครื่องหมาย `+` อย่าลืมเว้นวรรคระหว่าง string ทั้งสองตัวด้วย
 
 # --hints--
 
-`myStr` ควรมีค่า string `This is the start. This is the end.`
+ตัวแปร `myStr` ต้องมีค่าเป็น string `This is the start. This is the end.`
 
 ```js
 assert(myStr === 'This is the start. This is the end.');
 ```
 
-คุณควรใช้ `+` operator ในการสร้าง `myStr`
+คุณควรใช้เครื่องหมาย `+` ในการสร้างตัวแปร `myStr`
 
 ```js
 assert(code.match(/(["']).*\1\s*\+\s*(["']).*\2/g));
 ```
 
-`myStr` ควรสร้างโดยใช้คีย์เวิร์ด `var` 
+ต้องสร้างตัวแปร `myStr` โดยใช้คีย์เวิร์ด `var` 
 
 ```js
 assert(/var\s+myStr/.test(code));
 ```
 
-คุณควรกำหนดผลลัพธ์ให้กับตัวแปร `myStr` 
+ต้องกำหนดค่าให้กับตัวแปร `myStr` 
 
 ```js
 assert(/myStr\s*=/.test(code));
@@ -74,7 +75,7 @@ assert(/myStr\s*=/.test(code));
 ## --seed-contents--
 
 ```js
-var myStr; // Change this line
+var myStr; // แก้โค้ดบรรทัดนี้
 ```
 
 # --solutions--

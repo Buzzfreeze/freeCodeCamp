@@ -9,9 +9,9 @@ dashedName: local-scope-and-functions
 
 # --description--
 
-ตัวแปรที่ถูกประกาศภายในฟังก์ชัน เช่นเดียวกับ function parameters มีขอบเขต <dfn>local</dfn> นั่นหมายความว่าจะมองเห็นได้เฉพาะในฟังก์ชันนั้นเท่านั้น
+ตัวแปรที่ถูกประกาศภายในฟังก์ชัน (รวมถึง function parameters ) จะมีขอบเขตในระดับ <dfn>local</dfn> หมายความว่าจะมองเห็นตัวแปรนั้นๆ ได้เฉพาะในฟังก์ชันนั้นเท่านั้น
 
-นี่คือฟังก์ชัน `myTest` ที่มีตัวแปร local ชื่อ `loc`
+ตัวอย่างฟังก์ชันชื่อ `myTest` ที่มีตัวแปรในระดับ local ชื่อ `loc`
 
 ```js
 function myTest() {
@@ -22,17 +22,18 @@ myTest();
 console.log(loc);
 ```
 
-การเรียกฟังก์ชัน `myTest()` ทำให้ string `foo` แสดงออกมาที่ในหน้า console แต่บรรทัด `console.log(loc)` จะแสดง error เนื่องจาก `loc` ไม่ได้ถูกประกาศข้างนอกฟังก์ชัน
+การเรียกใช้ฟังก์ชัน `myTest()` จะแสดง string คำว่า `foo` ออกมาที่บนหน้า console แต่บรรทัด `console.log(loc)` จะเกิด error ขึ้น เนื่องจากตัวแปร `loc` ไม่ได้ถูกประกาศข้างไว้นอกฟังก์ชัน
 
 # --instructions--
 
-editor มี `console.log` สองหน้าจอ เพื่อช่วยให้คุณเห็นว่าเกิดอะไรขึ้น จงเช็คที่หน้า console ขณะที่คุณเขียนโค้ด เพื่อดูว่ามีการเปลี่ยนแปลงอย่างไร ให้ประกาศ local variable `myVar` ภายใน `myLocalScope` และรันเพื่อทดสอบ
+ลองดูในส่วนของ editor ด้านขวามือ จะมีการเรียกใช้ `console.log` สองที่ เพื่อทำให้เห็นว่าเกิดอะไรขึ้น 
+ขณะที่แก้โค้ดให้ดูที่ console ไปด้วย จะได้เห็นว่ามีการเปลี่ยนแปลงไปอย่างไร และให้ประกาศตัวแปร `myVar` ในระดับ local ในฟังก์ชัน `myLocalScope` และกด Run เพื่อดูผลลัพธ์
 
-**หมายเหตุ:** หน้า console จะยังคงแสดง `ReferenceError: myVar is not defined` แต่นี่ไม่ได้ทำให้การทดสอบล้มเหลว
+**หมายเหตุ:** หน้า console จะยังคงแสดง `ReferenceError: myVar is not defined` แต่คุณก็จะไปต่อยังบทเรียนถัดไปได้
 
 # --hints--
 
-โค้ดไม่ควรมี global variable `myVar`
+โค้ดของคุณต้องไม่มีตัวแปร `myVar` ในระดับ global
 
 ```js
 function declared() {
@@ -41,7 +42,7 @@ function declared() {
 assert.throws(declared, ReferenceError);
 ```
 
-คุณควรเพิ่ม local variable `myVar`
+ต้องเพิ่มตัวแปร `myVar` ในระดับ local
 
 ```js
 assert(
@@ -58,14 +59,14 @@ assert(
 ```js
 function myLocalScope() {
 
-  // Only change code below this line
+  // แก้โค้ดใต้บรรทัดนี้เท่านั้น
 
   console.log('inside myLocalScope', myVar);
 }
 myLocalScope();
 
-// Run and check the console
-// myVar is not defined outside of myLocalScope
+// กด Run และดูที่ console
+// ไม่ประกาศตัวแปร myVar นอกฟังก์ชัน myLocalScope
 console.log('outside myLocalScope', myVar);
 ```
 
@@ -74,7 +75,7 @@ console.log('outside myLocalScope', myVar);
 ```js
 function myLocalScope() {
 
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   var myVar;
   console.log('inside myLocalScope', myVar);
 }

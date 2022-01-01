@@ -9,16 +9,16 @@ dashedName: escaping-literal-quotes-in-strings
 
 # --description--
 
-เมื่อคุณสร้าง string คุณต้องเริ่มและจบด้วย single หรือ double quote จะเกิดอะไรขึ้นเมื่อคุณจำเป็นต้องมี quote: `"` หรือ `'` ภายใน string ของคุณ
+เมื่อคุณสร้าง string คุณจำเป็นต้องเริ่มและจบด้วย single (`'`) หรือ double quote (`"`)จะเกิดอะไรขึ้นเมื่อคุณจำเป็นต้องมี `"` หรือ `'` ใน string ของคุณ
 
-ใน JavaScript คุณสามารถ <dfn>escape</dfn> quote เพื่อไม่ให้ JavaScript มองว่าเป็นจุดสิ้นสุดของ string โดยการวาง <dfn>backslash</dfn> (`\`) ไว้หน้า quote
+คุณสามารถทำให้ JavaScript มองว่าเครื่องหมายที่คุณระบุเป็นส่วนหนึ่งของ string ได้ โดยวิธีการนี้เรียกว่าการ <dfn>escape</dfn> ซึ่งทำได้โดยวางเครื่องหมาย <dfn>backslash</dfn> (`\`) ไว้หน้าเครื่องหมาย single หรือ double quote
 
 
 ```js
 var sampleStr = "Alan said, \"Peter is learning JavaScript\".";
 ```
 
-สิ่งนี้ส่งสัญญาณไปยัง JavaScript ว่าเครื่องหมายคำพูดต่อไปนี้ไม่ใช่จุดสิ้นสุดของ string แต่ควรปรากฏอยู่ภายในสตริงแทน ดังนั้น หากคุณพิมพ์สิ่งนี้ไปยัง consode คุณเห็นข้อความดังนี้:
+การเขียนในรูปแบบนี้จะเป็นการบอก JavaScript ว่าเครื่องหมายคำพูดต่อไปนี้ไม่ได้ใส่มาเพื่อปิด string นะ แต่เป็นส่วนหนึ่งของสตริงต่างหาก ดังนั้น หากคุณแสดงผล string นี้บน console คุณเห็นข้อความดังนี้:
 
 
 ```js
@@ -27,7 +27,7 @@ Alan said, "Peter is learning JavaScript".
 
 # --instructions--
 
-จงใช้ <dfn>backslashes</dfn> ในการกำหนด string ให้กับตัวแปร `myStr` ซึ่งถ้าคุณพิมพ์ออกมายัง console คุณจะเห็นผลลัพธ์ดังนี้
+จงใช้เครื่องหมาย <dfn>backslash</dfn> ในการกำหนด string ให้กับตัวแปร `myStr` ซึ่งถ้าพิมพ์ออกมาบน console จะเห็นผลลัพธ์ดังนี้
 
 ```js
 I am a "double quoted" string inside "double quotes".
@@ -35,13 +35,13 @@ I am a "double quoted" string inside "double quotes".
 
 # --hints--
 
-คุณควรใช้ double quotes 2 ชุด (`"`) และ escaped double quotes 4 ชุด (`\"`)
+คุณควรใช้ double quotes 2 ตัว (`"`) และ escaped double quotes 4 ตัว (`\"`)
 
 ```js
 assert(code.match(/\\"/g).length === 4 && code.match(/[^\\]"/g).length === 2);
 ```
 
-ตัวแปร myStr ควรเก็บ string: `I am a "double quoted" string inside "double quotes".`
+ตัวแปร myStr ควรเก็บค่า string: `I am a "double quoted" string inside "double quotes".`
 
 ```js
 assert(/I am a "double quoted" string inside "double quotes(\."|"\.)$/.test(myStr));
@@ -64,7 +64,7 @@ assert(/I am a "double quoted" string inside "double quotes(\."|"\.)$/.test(mySt
 ## --seed-contents--
 
 ```js
-var myStr = ""; // Change this line
+var myStr = ""; // แก้ไขบรรทัดนี้
 ```
 
 # --solutions--

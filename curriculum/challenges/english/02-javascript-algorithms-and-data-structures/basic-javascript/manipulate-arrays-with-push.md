@@ -9,9 +9,9 @@ dashedName: manipulate-arrays-with-push
 
 # --description--
 
-การนำข้อมูลมาต่อท้าย array ทำได้ง่ายๆ โดยการใช้ ฟังก์ชัน `push()`
+การนำข้อมูลมาต่อท้าย array ทำได้ง่ายๆ โดยการใช้ฟังก์ชัน `push()`
 
-`.push()` รับ <dfn>parameter</dfn> ตั้งแต่หนึ่งตัวขึ้นไป แล้ว "pushes (ดัน)" ไปไว้ที่ส่วนท้ายของ array
+ในการใช้ `.push()` ต้องระบุ <dfn>parameter</dfn> อย่างน้อยหนึ่งตัวแล้ว <dfn>parameter</dfn> นั้นจะถูกนำไปต่อท้ายใน array
 
 
 ตัวอย่าง:
@@ -24,15 +24,15 @@ var arr2 = ["Stimpson", "J", "cat"];
 arr2.push(["happy", "joy"]);
 ```
 
-`arr1` ควรมีค่า `[1, 2, 3, 4]` และ `arr2` ควรมีค่า `["Stimpson", "J", "cat", ["happy", "joy"]]`
+ตัวแปร `arr1` จะมีค่าเป็น `[1, 2, 3, 4]` และตัวแปร `arr2` จะมีค่าเป็น `["Stimpson", "J", "cat", ["happy", "joy"]]`
 
 # --instructions--
 
-จง Push `["dog", 3]` ไปที่ด้านท้ายของตัวแปร `myArray`
+จงนำ array `["dog", 3]` ไปที่ต่อท้ายในตัวแปร `myArray`
 
 # --hints--
 
-`myArray` ควรมีค่าเท่ากับ `[["John", 23], ["cat", 2], ["dog", 3]]`
+ตัวแปร `myArray` ต้องมีค่าเป็น `[["John", 23], ["cat", 2], ["dog", 3]]`
 
 ```js
 assert(
@@ -64,10 +64,10 @@ assert(
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var myArray = [["John", 23], ["cat", 2]];
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

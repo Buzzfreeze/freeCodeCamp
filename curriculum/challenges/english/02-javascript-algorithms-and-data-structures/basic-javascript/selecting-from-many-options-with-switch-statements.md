@@ -9,9 +9,11 @@ dashedName: selecting-from-many-options-with-switch-statements
 
 # --description--
 
-ถ้าคุณมีหลายตัวเลือก แนะนำให้ใช้ <dfn>switch</dfn> statement โดย `switch` statement ทดสอบค่าและสามารถมีได้หลาย <dfn>case</dfn> statements ซึ่งกำหนดค่าที่เป็นไปได้ได้หลายแบบ Statements จะทำงานจาก `case` แรกที่ match (ตรงกัน) จนถึงคำสั่ง `break` ก็จะหยุด
 
-นี่เป็นตัวอย่าง`switch` statement
+ถ้าโค้ดของคุณมีการใช้คำสั่งที่แยกออกเป็นหลายทาง เราขอแนะนำให้รู้จักคำสั่ง <dfn>switch</dfn> 
+โดยคำสั่ง `switch` นั้นจะสามารถอ่านค่าและแบ่งการทำงานออกเป็น <dfn>case</dfn> ได้ `switch` นั้นจะเริ่มทำงานจาก `case` แรกที่มีค่าตรงกับค่าที่เราใส่เข้าไป และจะทำงานไปจนเจอคำสั่ง `break` ก็จะหยุด
+
+ถ้ายังไม่เข้าใจ ลองดูตัวอย่างคำสั่ง `switch` ด้านล่าง
 
 ```js
 switch(lowercaseLetter) {
@@ -24,8 +26,11 @@ switch(lowercaseLetter) {
 }
 ```
 
-ค่า `case` จะถูกทดสอบด้วยเครื่องหมาย (`===`) คำสั่ง `break` ใน Javascript จะหยุดการรัน statements แต่ถ้าไม่ระบุคำสั่ง `break` statements ต่อไปจะทำงาน
+`switch` จะตรวจสอบค่าใน `case` ด้วยเครื่องหมาย (`===`) และคำสั่ง `break` ใน JavaScript จะหยุดการทำงานของคำสั่ง แต่ถ้าไม่เราไม่ระบุคำสั่ง `break` คำสั่ง `case` ต่อไปจะทำงาน
 
+ในตัวอย่างด้านบน คำสั่งจะรับ `lowercaseLetter` เขามาถ้าตรวจสอบ แล้วถ้าเจอว่า `lowercaseLetter === "a"` เป็น `true` ก็จะทำการ `console.log("A")` ต่อมาเมื่อเจอคำสั่ง `break` คำสั่ง `switch` ก็จะจบการทำงาน
+
+แต่ถ้าตรวจสอบแล้วพบว่า `lowercaseLetter === "a"` เป็น `false` ก็จะทำการตรวจสอบ `case` ต่อไป ซึ่งก็คือ `lowercaseLetter === "b"`
 
 # --instructions--
 
@@ -38,37 +43,37 @@ switch(lowercaseLetter) {
 
 # --hints--
 
-`caseInSwitch(1)` ควรคืนค่า string `alpha`
+การเรียกใช้ฟังก์ชัน `caseInSwitch(1)` ต้องคืนค่าออกมาเป็น string `alpha`
 
 ```js
 assert(caseInSwitch(1) === 'alpha');
 ```
 
-`caseInSwitch(2)` ควรคืนค่า string `beta`
+การเรียกใช้ฟังก์ชัน `caseInSwitch(2)` ต้องคืนค่าออกมาเป็น string `beta`
 
 ```js
 assert(caseInSwitch(2) === 'beta');
 ```
 
-`caseInSwitch(3)` ควรคืนค่า string `gamma`
+การเรียกใช้ฟังก์ชัน `caseInSwitch(3)` ต้องคืนค่าออกมาเป็น string `gamma`
 
 ```js
 assert(caseInSwitch(3) === 'gamma');
 ```
 
-`caseInSwitch(4)` ควรคืนค่า string `delta`
+การเรียกใช้ฟังก์ชัน `caseInSwitch(4)` ต้องคืนค่าออกมาเป็น string `delta`
 
 ```js
 assert(caseInSwitch(4) === 'delta');
 ```
 
-คุณไม่ควรใช้คำสั่ง `if` หรือ `else`
+ห้ามใช้คำสั่ง `if` และ `else`
 
 ```js
 assert(!/else/g.test(code) || !/if/g.test(code));
 ```
 
-คุณควรมีคำสั่ง `break` อย่างน้อยสามคำสั่ง
+ต้องใช้คำสั่ง `break` อย่างน้อยสามครั้งในโค้ด
 
 
 ```js
@@ -82,11 +87,11 @@ assert(code.match(/break/g).length > 2);
 ```js
 function caseInSwitch(val) {
   var answer = "";
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
   return answer;
 }
 

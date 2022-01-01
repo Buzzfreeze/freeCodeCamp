@@ -9,22 +9,23 @@ dashedName: nest-one-array-within-another-array
 
 # --description--
 
-คุณสามารถซ้อน array ไว้ใน array อื่นๆ ได้อีก เช่น ตัวอย่างด้านล่าง:  
+คุณสามารถซ้อน array ไว้ใน array ด้วย 
+เช่น:  
 
 
 ```js
 [["Bulls", 23], ["White Sox", 45]]
 ```
 
-นี่คือสิ่งที่เรียกว่า <dfn>multi-dimensional array</dfn>.
+รูปแบบนี้เรียกว่า <dfn>multi-dimensional array</dfn> (อาเรย์หลายมิติ)
 
 # --instructions--
 
-จงสร้าง array ซ้อน array ชื่อ `myArray`
+จงสร้างตัวแปร array ซ้อน array ที่มีชื่อว่า `myArray`
 
 # --hints--
 
-`myArray`  ควรมีอย่างน้อยหนึ่ง array ซ้อนอยู่ใน array อีกตัว 
+ตัวแปร `myArray` ต้องเป็น array ที่มี array ซ้อนอยู่ข้างใน 
 
 
 ```js
@@ -42,7 +43,7 @@ if(typeof myArray !== "undefined"){(function(){return myArray;})();}
 ## --seed-contents--
 
 ```js
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 var myArray = [];
 ```
 

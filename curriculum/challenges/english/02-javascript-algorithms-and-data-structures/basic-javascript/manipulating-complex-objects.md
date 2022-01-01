@@ -9,7 +9,7 @@ dashedName: manipulating-complex-objects
 
 # --description--
 
-บางครั้งคุณอาจต้องการจัดเก็บข้อมูลใน <dfn>โครงสร้างข้อมูล</dfn> ที่ยืดหยุ่น ซึ่ง JavaScript object เป็นวิธีหนึ่งในการจัดการข้อมูลที่ยืดหยุ่น โดยอนุญาตให้รวม <dfn>strings</dfn>, <dfn>numbers</dfn>, <dfn>booleans</dfn>, <dfn>arrays</dfn>, <dfn>functions</dfn> และ <dfn>objects</dfn> ได้ตามต้องการ
+ถ้าคุณต้องการจัดเก็บข้อมูลที่ <dfn>โครงสร้างข้อมูล</dfn> เปลี่ยนไปเปลี่ยนมาได้ตลอด object ใน JavaScript จะรองรับโครงสร้างข้อมูลแบบนี้ เพราะ object ใน JavaScript จะยอมให้คุณใส่ข้อมูลประเภท <dfn>string</dfn>, <dfn>number</dfn>, <dfn>boolean</dfn>, <dfn>array</dfn>, <dfn>function</dfn> และ <dfn>object</dfn> ผสมกันใน object ได้ตามที่ต้องการ
 
 นี่เป็นตัวอย่างโครงสร้างข้อมูลแบบซับซ้อน
 
@@ -29,7 +29,12 @@ var ourMusic = [
 ];
 ```
 
-นี่เป็น array ที่มี object หนึ่งอยู่ภายใน โดย object มีหลาย<dfn>metadata</dfn> ที่เกี่ยวกับอัลบั้ม นอกจากนี้ยังมี `formats` array ที่ซ้อนกัน หากคุณต้องการเพิ่มข้อมูลอัลบั้ม คุณสามารถทำได้ โดยเพิ่มข้อมูลใน array ระดับบนสุด นอกจากนี้ Objects เก็บข้อมูลใน property ซึ่งมีรูปแบบ key-value ในตัวอย่างข้างต้น `"artist": "Daft Punk"` เป็น property ที่มี key เป็น `artist` และมีค่าเป็น `Daft Punk` [JavaScript Object Notation](http://www.json.org/) หรือ `JSON` เป็นรูปแบบการแลกเปลี่ยนข้อมูลที่เกี่ยวข้องซึ่งใช้ในการจัดเก็บข้อมูล
+`ourMusic` เป็น array ที่มีหนึ่ง object โดย object นี้เก็บข้อมูล <dfn>metadata</dfn> ของอัลบั้มเพลงอยู่ นอกจากนี้ยังมี property ชื่อ `formats` ที่เป็น array ซ้อนอยู่ข้างใน
+ถ้าคุณต้องการเพิ่มข้อมูลอัลบั้มอื่นเข้าไป จะทำได้โดยการเพิ่มข้อมูลใน array ชั้นนอกสุด นอกจากนี้ object ก็ยังเก็บข้อมูลใน property แบบ key-value อีกด้วย
+ในตัวอย่างข้างบน `"artist": "Daft Punk"` เป็น property ที่มี key เป็น `artist` และมี value เป็น `Daft Punk` 
+
+[JavaScript Object Notation](http://www.json.org/) หรือ `JSON` เป็นรูปแบบของการเก็บข้อมูลสำหรับการส่งข้อมูล
+ตัวอย่างของ `JSON` แสดงอยู่ข้างล่างนี้:
 
 ```json
 {
@@ -45,40 +50,43 @@ var ourMusic = [
 }
 ```
 
-**หมายเหตุ:** คุณจะต้องใส่ comma (,) ต่อจากทุก object ใน array เว้นแต่จะเป็น object สุดท้ายใน array
+**หมายเหตุ:** คุณจะต้องใส่ comma (,) เพื่อคั่นทุก object ที่อยู่ใน array
 
 
 # --instructions--
 
-จงเพิ่มอัลบั้มใหม่ไปยัง `myMusic` array โดยเพิ่ม `artist` และ `title` strings, `release_year` number, และ string `formats` array
+จงเพิ่มอัลบั้มใหม่ไปยัง array ชื่อ `myMusic` โดยให้ object ที่เพิ่มมี property ตามนี้ 
+property `artist` และ `title` เป็นประเภท strings
+property `release_year` เป็นประเภท number
+และ property `formats` เป็นประเภท array ที่มี string อยู่ภายใน
 
 # --hints--
 
-`myMusic` ควรเป็น an array
+ตัวแปร `myMusic` ต้องเป็นข้อมูลประเภท array
 
 ```js
 assert(Array.isArray(myMusic));
 ```
 
-`myMusic` ควรมีอย่างน้อยสององค์ประกอบ
+ตัวแปร `myMusic` ต้องมีอย่างน้อย 2 element อยู่ภายใน
 
 ```js
 assert(myMusic.length > 1);
 ```
 
-องค์ประกอบใน `myMusic` array ควรเป็น objects
+element ใน `myMusic` ต้องเป็น objects
 
 ```js
 myMusic.forEach(object => {assert.typeOf(object, 'object')})
 ```
 
-object ของคุณใน `myMusic` ควรมีอย่างน้อย 4 properties
+แต่ละ object ใน `myMusic` ต้องมี property อย่างน้อย 4 ตัว
 
 ```js
 myMusic.forEach(object => {assert(Object.keys(object).length > 3); });
 ```
 
-object ของคุณใน `myMusic` ควรมี property `artist` ซึ่งเป็น string
+object ใน `myMusic` ต้องมี property `artist` ซึ่งเป็นข้อมูลประเภท string
 
 ```js
 myMusic.forEach(object => {
@@ -87,7 +95,7 @@ myMusic.forEach(object => {
 })
 ```
 
-object ของคุณใน `myMusic` ควรมี property `title` ซึ่งเป็น string
+object ใน `myMusic` ต้องมี property `title` ซึ่งเป็นข้อมูลประเภท string
 
 ```js
 myMusic.forEach(object => {
@@ -96,7 +104,7 @@ myMusic.forEach(object => {
 })
 ```
 
-object ของคุณใน `myMusic` ควรมี property `release_year` ซึ่งเป็น number
+object ใน `myMusic` ต้องมี property `release_year` ซึ่งเป็นข้อมูลประเภท number
 
 ```js
 myMusic.forEach(object => {
@@ -105,7 +113,7 @@ myMusic.forEach(object => {
 })
 ```
 
-object ของคุณใน `myMusic` ควรมี property `formats` ซึ่งเป็น array
+object ใน `myMusic` ต้องมี property `formats` ซึ่งเป็นข้อมูลประเภท array
 
 ```js
 myMusic.forEach(object => {
@@ -114,7 +122,7 @@ myMusic.forEach(object => {
 })
 ```
 
-`formats` ควรเป็น string array ที่มีอย่างน้อยสอง elements
+property ชื่อ `formats` ต้องเป็น array ที่มีข้อมูลภายในเป็น string โดยมีอย่างน้อยสอง element
 
 ```js
 myMusic.forEach(object => {

@@ -9,37 +9,38 @@ dashedName: escape-sequences-in-strings
 
 # --description--
 
-Quotes (เครื่องหมายคำพูด) ไม่ใช่อักขระตัวเดียวที่สามารถ <dfn>escaped</dfn> ได้ใน string มีเหตุผลสองประการในการใช้ escaping characters:
+นอกจากเครื่องหมาย quote แล้ว ก็ยังมีเครื่องหมายอื่น ๆ อีกที่สามารถ <dfn>escape</dfn> ได้ใน string 
+การ <dfn>escape</dfn> จะจำเป็นในสองกรณีก็คือ:
 
-1.  เพื่อให้คุณสามารถใช้อักขระที่คุณอาจไม่สามารถพิมพ์ได้ เช่น carriage return (การขึ้นบรรทัดใหม่)
+1.  เพื่อใช้ตัวอักษรที่ปกติจะพิมพ์ลงไปใน string ไม่ได้ เช่น carriage return (กลับไปที่ต้นบรรทัด)
 
-2.  เพื่อให้คุณสามารถแสดง quotes หลายตัวใน string โดยที่ JavaScript ไม่ได้ตีความหมายในสิ่งที่คุณต้องการผิด
+2.  เพื่อแสดงเครื่องหมาย quote หลายตัวใน string โดยไม่ทำให้ JavaScript เข้าใจผิด
 
-เราเรียนสิ่งนี้จากหัวข้อที่แล้ว
+เราเรียนเรื่องนี้ไปในหัวข้อที่แล้ว
 
-<table class='table table-striped'><thead><tr><th>Code</th><th>Output</th></tr></thead><tbody><tr><td><code>\'</code></td><td>single quote</td></tr><tr><td><code>\"</code></td><td>double quote</td></tr><tr><td><code>\\</code></td><td>backslash</td></tr><tr><td><code>\n</code></td><td>newline</td></tr><tr><td><code>\r</code></td><td>carriage return</td></tr><tr><td><code>\t</code></td><td>tab</td></tr><tr><td><code>\b</code></td><td>word boundary</td></tr><tr><td><code>\f</code></td><td>form feed</td></tr></tbody></table>
+<table class='table table-striped'><thead><tr><th>โค้ด</th><th>ผลลัพธ์</th></tr></thead><tbody><tr><td><code>\'</code></td><td>single quote</td></tr><tr><td><code>\"</code></td><td>double quote</td></tr><tr><td><code>\\</code></td><td>backslash</td></tr><tr><td><code>\n</code></td><td>newline (ขึ้นบรรทัดใหม่)</td></tr><tr><td><code>\r</code></td><td>carriage return (กลับไปที่ต้นบรรทัด)</td></tr><tr><td><code>\t</code></td><td>tab</td></tr><tr><td><code>\b</code></td><td>word boundary</td></tr><tr><td><code>\f</code></td><td>form feed (ขึ้นบรรทัดใหม่โดยเริ่มต้นที่ตำแหน่งเดิม)</td></tr></tbody></table>
 
-*โปรดทราบว่าตัว backslash เองจะต้องถูก escaped เพื่อให้แสดงเป็น backslash ได้*
+*โปรดทราบว่าตัว backslash เองก็จะต้องถูก escape เพื่อให้แสดงเป็น backslash ได้*
 
 # --instructions--
 
-จงนำข้อความสามบรรทัดนี้เก็บในตัวแปรเดียวกันคือ `myStr` โดยใช้ escape Sequence
+จงนำข้อความสามบรรทัดนี้เก็บในตัวแปรเดียวกันคือ `myStr` โดยใช้ escape sequence
 
 <blockquote>FirstLine<br>    \SecondLine<br>ThirdLine</blockquote>
 
-คุณจะต้องใช้ Escape Sequence เพื่อแทรกอักขระพิเศษให้ถูกต้อง คุณจะต้องเว้นวรรคดังที่แสดงด้านบน โดยไม่มีช่องว่างระหว่าง escape sequences หรือคำต่างๆ
+คุณจะต้องใช้ escape sequence เพื่อแทรกตัวอักษรพิเศษให้ถูกต้อง คุณจะต้องเว้นวรรคตามตัวอย่างที่แสดงด้านบน โดยไม่มีช่องว่างระหว่าง escape sequence หรือคำต่างๆ
 
-**หมายเหตุ:** การเยื้องสำหรับ `SecondLine` ทำได้โดยใช้ tab escape character ไม่ใช่การเว้นวรรค
+**หมายเหตุ:** ย่อหน้าที่อยู่หน้าคำว่า `SecondLine` ทำได้โดยใช้ tab escape character ไม่ได้ใช้การเว้นวรรค
 
 # --hints--
 
-`myStr` ไม่ควรมี space (เว้นวรรค)
+ต้องไม่มี space หรือการเว้นวรรคในตัวแปร `myStr` 
 
 ```js
 assert(!/ /.test(myStr));
 ```
 
-`myStr` ควรประกอบด้วย string  `FirstLine`, `SecondLine` และ `ThirdLine` (เป็น case sensitivity)
+ตัวแปร `myStr` ต้องมี string สามตัวดังนี้  `FirstLine`, `SecondLine` และ `ThirdLine` (ตัวพิมพ์เล็กพิมพ์ใหญ่ต้องตรงกัน)
 
 ```js
 assert(
@@ -47,31 +48,31 @@ assert(
 );
 ```
 
-`FirstLine` ควรตามด้วย newline character `\n`
+`FirstLine` ต้องต่อด้วยเครื่องหมายสำหรับขึ้นบรรทัดใหม่ `\n`
 
 ```js
 assert(/FirstLine\n/.test(myStr));
 ```
 
-`myStr` ควรประกอบด้วย tab character `\t` ซึ่งตามด้วย newline character
+ในตัวแปร `myStr` ต้องมีเครื่องหมายย่อหน้า `\t` แล้วตามด้วยเครื่องหมายสำหรับขึ้นบรรทัดใหม่ `\n`
 
 ```js
 assert(/\n\t/.test(myStr));
 ```
 
-`SecondLine` ควรนำหน้าด้วย backslash character `\`
+ต้องมีเครื่องหมาย backslash `\` หน้าคำว่า `SecondLine` 
 
 ```js
 assert(/\\SecondLine/.test(myStr));
 ```
 
-ควรมี newline character ระหว่าง `SecondLine` และ `ThirdLine`
+ต้องมีเครื่องหมายสำหรับขึ้นบรรทัดใหม่ระหว่าง `SecondLine` และ `ThirdLine`
 
 ```js
 assert(/SecondLine\nThirdLine/.test(myStr));
 ```
 
-`myStr` ควรมีเฉพาะอักขระที่แสดงใน instructions เท่านั้น
+ตัวแปร `myStr` ต้องมีเฉพาะคำที่ระบุให้เท่านั้น
 
 ```js
 assert(myStr === 'FirstLine\n\t\\SecondLine\nThirdLine');
@@ -90,7 +91,7 @@ console.log('myStr:\n' + myStr);}})();
 ## --seed-contents--
 
 ```js
-var myStr; // Change this line
+var myStr; // แก้ไขโค้ดบรรทัดนี้
 ```
 
 # --solutions--

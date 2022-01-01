@@ -11,9 +11,9 @@ dashedName: >-
 
 # --description--
 
-ในบางสถานการณ์ที่เกี่ยวข้องกับ array destructuring เราอาจต้องการนำ elements ที่เหลือมาเป็น array อีกตัวแยกต่างหาก
+ในบางครั้งถ้าเราใช้ array destructuring เราอาจอยากเก็บ element ที่เหลือใน array ตัวอื่น
 
-ผลลัพธ์จะคล้ายกับ `Array.prototype.slice()` ดังนี้
+ในตัวอย่างด้านล่าง เราจะได้ผลลัพธ์คล้ายๆ กับ `Array.prototype.slice()`:
 
 ```js
 const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
@@ -23,37 +23,33 @@ console.log(arr);
 
 console จะแสดงค่า `1, 2` และ `[3, 4, 5, 7]`
 
-ตัวแปร `a` และ `b` รับค่าแรกและค่าที่สองจาก array แต่เนื่องจากมี rest parameter อยู่ ดังนั้น `arr` จึงรับค่าที่เหลือในรูปแบบของ array โดย rest element ทำงานได้ถูกต้องก็ต่อเมื่อเป็นตัวแปรสุดท้ายในลิสต์ อย่างไรก็ตาม คุณไม่สามารถใช้ rest parameter เพื่อรับค่า subarray ย่อยที่อยู่เป็น element สุดท้ายของ array เดิม
+ตัวแปร `a` และ `b` ดึงค่าแรกและค่าที่สองจาก array และเพราะว่ามี rest parameter อยู่ ดังนั้น `arr` เก็บค่าที่เหลือในรูปแบบของ array โดย rest element จะทำงานได้ถูกต้องถ้าเป็นตัวแปรสุดท้ายในลิสต์เท่านั้น แต่เราจะไม่สามารถใช้ rest parameter เพื่อรับค่า element ที่เหลืออยู่โดยไม่รับ element สุดท้ายของ array ได้
 
 # --instructions--
 
-Use destructuring assignment with the rest parameter to perform an effective `Array.prototype.slice()` so that `arr` is a sub-array of the original array `source` with the first two elements omitted.
-
-
-
-จงใช้ destructuring assignment กับ rest parameter ในการทำ `Array.prototype.slice()` เพื่อให้ `arr` เป็น sub-array ของ array `source` ที่ไม่มี elements 2 ตัวแรก 
+จงใช้ destructuring assignment กับ rest parameter เพื่อทำงานเหมือน `Array.prototype.slice()` โดยให้ `arr` เป็น array ย่อยที่รับค่ามาจาก array หลักที่ชื่อ `source` โดยไม่รับ element 2 ตัวแรก 
 
 # --hints--
 
-`arr` ควรเป็น `[3,4,5,6,7,8,9,10]`
+`arr` ต้องมีค่าเป็น `[3,4,5,6,7,8,9,10]`
 
 ```js
 assert(arr.every((v, i) => v === i + 3) && arr.length === 8);
 ```
 
-`source` ควรเป็น `[1,2,3,4,5,6,7,8,9,10]`
+`source` ต้องมีค่าเป็น `[1,2,3,4,5,6,7,8,9,10]`
 
 ```js
 assert(source.every((v, i) => v === i + 1) && source.length === 10);
 ```
 
-ไม่ควรใช้ `Array.slice()` 
+ห้ามใช้ `Array.slice()` โดยตรง
 
 ```js
 (getUserInput) => assert(!getUserInput('index').match(/slice/g));
 ```
 
-ควรใช้ Destructuring กับ `list` 
+ให้ทำการ destructure จาก array `list` 
 
 ```js
 assert(
@@ -70,9 +66,9 @@ assert(
 ```js
 const source = [1,2,3,4,5,6,7,8,9,10];
 function removeFirstTwo(list) {
-  // Only change code below this line
-  const arr = list; // Change this line
-  // Only change code above this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
+  const arr = list; // แก้ไขบรรทัดนี้
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
   return arr;
 }
 const arr = removeFirstTwo(source);

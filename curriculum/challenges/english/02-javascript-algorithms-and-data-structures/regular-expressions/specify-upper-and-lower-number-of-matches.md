@@ -8,11 +8,11 @@ dashedName: specify-upper-and-lower-number-of-matches
 
 # --description--
 
-จากบทที่ผ่านมา คุณใช้ plus sign `+` ค้นหาตัวอักษร 1 ตัวหรือมากกว่า และ asterisk `*` เพื่อค้นหาตัวอักษร 0 ตัวหรือมากกว่า ทั้งสองตัวนี้ต่างก็ใช้งานสะดวก แต่บางครั้งคุณอาจต้องการ match pattern เป็นช่วง 
+ถ้ายังจำได้เราจะใช้เครื่องหมายบวก `+` เพื่อหา pattern ที่เจออย่างน้อย 1 ครั้ง และใช้ดอกจัน `*` เพื่อค้นหา pattern ที่อาจจะไม่เจอหรือเจอหลายครั้ง เครื่องหมายสองตัวนี้ทำให้เราทำงานได้ง่ายขึ้น แต่บางครั้งเราก็อาจจะอยากระบุได้ว่าต้องเจอ pattern นั้นกี่ครั้งถึงจะนับว่า match
 
-คุณสามารถระบุจำนวนขั้นต่ำ (lower) และจำนวนสูงสุด (upper) ของ pattern ด้วย <dfn>quantity specifiers</dfn> ซึ่ง Quantity specifiers ใช้กับวงเล็บปีกกา (`{` และ `}`) คุณใส่ตัวเลขทั้งสองที่เป็นจำนวนขั้นต่ำและจำนวนสูงสุดของ pattern ภายในวงเล็บปีกกา
+เราจะระบุจำนวน pattern ที่ match ได้ด้วยการใช้ <dfn>quantity specifiers</dfn> ซึ่ง Quantity specifiers นั้นจะใช้วงเล็บปีกกา (`{` และ `}`) เป็นตัวกำหนด โดยเราต้องใส่ตัวเลขสองตัวลงในวงเล็บปีกกา ตัวเลขแรกเป็นตัวเลขที่บอกว่าต้องเจอ pattern อย่างน้อยกี่ครั้งถึงจะนับว่า match และตัวเลขที่สองเป็นตัวเลขที่บอกว่าต้องเจอ pattern ไม่เกินกี่ครั้งถึงจะนับว่า match
 
-ตัวอย่างเช่น การ match ก็ต่อเมื่อมีตัวอักษร `a` จำนวน `3` ถึง `5` ตัวอยู่ใน string `ah` คุณสามารถเขียน regex ได้เป็น `/a{3,5}h/`
+เช่น ถ้าเราต้องการเขียน regex ให้ match ถ้ามีตัวอักษร `a` อย่างน้อย `3` ตัวและไม่เกิน `5` ตัวอยู่ใน string `ah` เราจะเขียน regex ได้เป็น `/a{3,5}h/`
 
 ```js
 let A4 = "aaaah";
@@ -22,52 +22,52 @@ multipleA.test(A4);
 multipleA.test(A2);
 ```
 
-การเรียก `test` ครั้งแรกคืนค่า `true` ในขณะที่ครั้งที่สองจะคืนค่า `false`
+การเรียกใช้ method `test` ครั้งแรกได้ค่าเป็น `true` ในขณะที่ครั้งที่สองจะได้ค่าเป็น `false`
 
 # --instructions--
 
-จงปรับแก้ regex `ohRegex` เพื่อ match ก็ต่อเมื่อมีตัวอักษร `h` จำนวน `3` ถึง `6` ตัว อยู่ในวลี `Oh no` 
+จงปรับแก้ regex `ohRegex` ให้ match กับคำว่า `Oh no` ถ้ามีตัวอักษร `h` จำนวนตั้งแต่ `3` ถึง `6` ตัว 
 
 # --hints--
 
-regex ของคุณควรใช้ curly brackets
+regex ต้องเขียนโดยใช้ curly bracket (`{` และ `}`)
 
 ```js
 assert(ohRegex.source.match(/{.*?}/).length > 0);
 ```
 
-regex ของคุณไม่ควร match กับ string `Ohh no`
+regex ที่เขียนต้องไม่ match กับ string `Ohh no`
 
 ```js
 ohRegex.lastIndex = 0;
 assert(!ohRegex.test('Ohh no'));
 ```
 
-regex ของคุณควร match กับ string `Ohhh no`
+regex ที่เขียนต้อง match กับ string `Ohhh no`
 
 ```js
 assert('Ohhh no'.match(ohRegex)[0].length === 7);
 ```
 
-regex ของคุณควร match กับ string `Ohhhh no`
+regex ที่เขียนต้อง match กับ string `Ohhhh no`
 
 ```js
 assert('Ohhhh no'.match(ohRegex)[0].length === 8);
 ```
 
-regex ของคุณควร match กับ string `Ohhhhh no`
+regex ที่เขียนต้อง match กับ string `Ohhhhh no`
 
 ```js
 assert('Ohhhhh no'.match(ohRegex)[0].length === 9);
 ```
 
-regex ของคุณควร match กับ string `Ohhhhhh no`
+regex ที่เขียนต้อง match กับ string `Ohhhhhh no`
 
 ```js
 assert('Ohhhhhh no'.match(ohRegex)[0].length === 10);
 ```
 
-regex ของคุณไม่ควร match กับ string `Ohhhhhhh no`
+regex ที่เขียนต้องไม่ match กับ string `Ohhhhhhh no`
 
 ```js
 ohRegex.lastIndex = 0;
@@ -80,7 +80,7 @@ assert(!ohRegex.test('Ohhhhhhh no'));
 
 ```js
 let ohStr = "Ohhh no";
-let ohRegex = /change/; // Change this line
+let ohRegex = /change/; // แก้ไขบรรทัดนี้
 let result = ohRegex.test(ohStr);
 ```
 
@@ -88,6 +88,6 @@ let result = ohRegex.test(ohStr);
 
 ```js
 let ohStr = "Ohhh no";
-let ohRegex = /Oh{3,6} no/; // Change this line
+let ohRegex = /Oh{3,6} no/; // แก้ไขบรรทัดนี้
 let result = ohRegex.test(ohStr);
 ```

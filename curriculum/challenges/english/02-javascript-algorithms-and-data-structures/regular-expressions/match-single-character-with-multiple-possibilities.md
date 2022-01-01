@@ -8,11 +8,11 @@ dashedName: match-single-character-with-multiple-possibilities
 
 # --description--
 
-คุณได้เรียนรู้วิธี match ตามตัวอักษร (`/literal/`) และ match ด้วย wildcard character (`/./`) ซึ่งเป็นวิธีสุดโต่งทั้งคู่ เพราะวิธีแรกหาข้อความตรงตามตัวอักษรทุกประการ ส่วนวิธีที่สองสามารถ match กับตัวอักษรอะไรก็ได้ทั้งหมด อย่างไรก็ตาม มีอีกวิธีนึงที่สมดุลระหว่างสองสุดขั้วนั้น
+เราได้เรียนการ match ตามตัวอักษรเป๊ะๆ (`/literal/`) และการ match ด้วย wildcard character (`/./`) ซึ่งเป็นวิธีที่สุดโต่งทั้งคู่ เพราะวิธีแรกข้อความจะต้องตรงกันเป๊ะๆ และวิธีที่สองก็จะ match กับทุกตัวอักษรเลย แต่เราก็ยังมีอีกวิธีนึงที่อยู่ตรงกลางระหว่างสองวิธีนั้น
 
-คุณสามารถค้นหา pattern ที่ตรงตามตัวอักษร แต่มีความยืดหยุ่น โดยใช้ <dfn>character classes</dfn> ซึ่ง Character classes ช่วยให้คุณสามารถกำหนดกลุ่มของตัวอักษรที่คุณต้องการ match โดยนำกลุ่มตัวอักษรเหล่านั้นไปไว้ใน square brackets (`[` และ `]`)
+เราจะหา pattern ที่ตรงตามตัวอักษรแต่ก็ยังยืดหยุ่นได้บ้าง ด้วยการใช้ <dfn>character class</dfn> ซึ่ง Character class จะทำให้เราเลือกตัวอักษรที่จะ match ได้ โดยใส่ตัวอักษรที่เราอยากจะ match ใน square bracket (`[` และ `]`)
 
-ตัวอย่างเช่น คุณต้องการ match `bag`, `big` และ `bug` แต่ไม่ใช่ `bog` คุณสามารถสร้าง regex `/b[aiu]g/` โดย `[aiu]` คือ character class ที่ match กับตัวอักษร `a`, `i` หรือ `u`
+เช่น ถ้าเราอยาก match `bag`, `big` และ `bug` แต่จะไม่เอา `bog` เราจะใช้ regex `/b[aiu]g/` โดย `[aiu]` คือ character class ที่ match กับตัวอักษร `a`, `i` หรือ `u` ลองดูตัวอย่าง:
 
 ```js
 let bigStr = "big";
@@ -26,41 +26,41 @@ bugStr.match(bgRegex);
 bogStr.match(bgRegex);
 ```
 
-การเรียก `match` ทั้ง 4 ครั้งจะคืนค่า `["big"]`, `["bag"]`, `["bug"]` และ `null` ตามลำดับ
+การใช้ `match` ทั้ง 4 ครั้งเราจะได้ค่าเป็น `["big"]`, `["bag"]`, `["bug"]` และ `null` ตามลำดับ จะเห็นว่า `/b[aiu]g/` จะไม่ match กับ `bog`
 
 # --instructions--
 
-จงใช้ character class กำหนดให้มีสระ (`a`, `e`, `i`, `o`, `u`) ใน regex `vowelRegex` เพื่อค้นหาสระทั้งหมดใน string `quoteSample`
+ให้ใช้ character class เพื่อหาสระในภาษาอังกฤษ (`a`, `e`, `i`, `o`, `u`) ด้วย regex `vowelRegex` จาก string `quoteSample`
 
-**Note:** ตรวจเช็คให้มั่นใจว่า match สระที่เป็นทั้งตัวพิมพ์ใหญ่และตัวพิมพ์เล็ก
+**Note:** ให้ match สระทั้งตัวพิมพ์ใหญ่และตัวพิมพ์เล็ก
 
 # --hints--
 
-คุณควรพบสระทั้งหมด 25 ตัว
+ต้องเจอสระทั้งหมด 25 ตัว
 
 ```js
 assert(result.length == 25);
 ```
 
-regex `vowelRegex` ควรใช้ character class
+regex `vowelRegex` ต้องใช้ character class
 
 ```js
 assert(/\[.*\]/.test(vowelRegex.source));
 ```
 
-regex `vowelRegex` ควรใช้ global flag
+regex `vowelRegex` ต้องใช้ flag *global*
 
 ```js
 assert(vowelRegex.flags.match(/g/).length == 1);
 ```
 
-regex `vowelRegex` ควรใช้ case insensitive flag
+regex `vowelRegex` ต้องใช้ flag *case insensitive*
 
 ```js
 assert(vowelRegex.flags.match(/i/).length == 1);
 ```
 
-regex ไม่ควร match กับพยัญชนะใดๆ
+regex ที่เขียนต้อง match กับพยัญชนะในภาษาอังกฤษ
 
 ```js
 assert(!/[b-df-hj-np-tv-z]/gi.test(result.join()));
@@ -72,14 +72,14 @@ assert(!/[b-df-hj-np-tv-z]/gi.test(result.join()));
 
 ```js
 let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
-let vowelRegex = /change/; // Change this line
-let result = vowelRegex; // Change this line
+let vowelRegex = /change/; // แก้บรรทัดนี้
+let result = vowelRegex; // แก้บรรทัดนี้
 ```
 
 # --solutions--
 
 ```js
 let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
-let vowelRegex = /[aeiou]/gi; // Change this line
-let result = quoteSample.match(vowelRegex); // Change this line
+let vowelRegex = /[aeiou]/gi; // แก้บรรทัดนี้
+let result = quoteSample.match(vowelRegex); // แก้บรรทัดนี้
 ```

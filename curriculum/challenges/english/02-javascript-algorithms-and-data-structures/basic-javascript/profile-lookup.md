@@ -9,27 +9,27 @@ dashedName: profile-lookup
 
 # --description--
 
-เรามี array ที่เก็บ object แทนบุคคลต่างๆ ใน contact list ของเรา
+เรามี array ที่เก็บ object ที่เป็นคนที่อยู่ใน contact list ของเรา
 
-function `lookUpProfile` รับค่า `name` และ property (`prop`) เป็น argument ได้เขียนรอไว้ให้คุณแล้ว
+เราได้เขียนฟังก์ชัน `lookUpProfile` ที่รับค่า `name` และ property (`prop`) เป็น argument ไว้ให้แล้ว
 
-function ควรเช็ค ว่า `name` เป็น `firstName` ที่อยู่ใน contact list หรือไม่ และเช็ค property (`prop`) ว่าเป็น property ของ contact หรือไม่
+ฟังก์ชันนี้จะต้องเช็คว่าใน contact list ของเรามีรายชื่อที่ `firstName` ตรงกับ `name` ที่ใส่เข้ามาหรือไม่ และต้องเช็คด้วยว่าใน contact นี้มี property ที่ชื่อตรงกับ `prop` หรือไม่
 
-ถ้าทั้งคู่เป็นจริง ให้คืนค่า "value" ของ property นั้น
+ถ้าเจอว่าเป็น `true` ทั้งคู่ให้อ่านค่าของ property นั้นและคืนค่าออกไป
 
-ถ้า `name` ไม่มีใน contacts ให้คืนค่า string `No such contact`
+ถ้าใน `contacts` ไม่มีคนที่ `firstName` ตรงกับ `name` ให้คืนค่าออกไปเป็น string `No such contact`
 
-ถ้า `prop` ไม่มี property ของ contact ที่ match กับ `name` ให้คืนค่า string `No such property`
+ถ้าเจอว่าใน contact นี้ไม่มี property ที่ชื่อตรงกับ `prop` ให้คืนค่า string `No such property`
 
 # --hints--
 
-`lookUpProfile("Kristian", "lastName")` ควรคืนค่า string `Vos`
+การเรียกใช้ฟังก์ชัน `lookUpProfile("Kristian", "lastName")` ต้องคืนค่าออกมาเป็น string `Vos`
 
 ```js
 assert(lookUpProfile('Kristian', 'lastName') === 'Vos');
 ```
 
-`lookUpProfile("Sherlock", "likes")` ควรคืนค่า `["Intriguing Cases", "Violin"]`
+การเรียกใช้ฟังก์ชัน `lookUpProfile("Sherlock", "likes")` ต้องคืนค่าออกมาเป็น `["Intriguing Cases", "Violin"]`
 
 ```js
 assert.deepEqual(lookUpProfile('Sherlock', 'likes'), [
@@ -38,25 +38,25 @@ assert.deepEqual(lookUpProfile('Sherlock', 'likes'), [
 ]);
 ```
 
-`lookUpProfile("Harry", "likes")` ควรคืนค่า array
+การเรียกใช้ฟังก์ชัน `lookUpProfile("Harry", "likes")` ต้องคืนค่าออกมาเป็น array
 
 ```js
 assert(typeof lookUpProfile('Harry', 'likes') === 'object');
 ```
 
-`lookUpProfile("Bob", "number")` ควรคืนค่า string `No such contact`
+การเรียกใช้ฟังก์ชัน `lookUpProfile("Bob", "number")` ต้องคืนค่าออกมาเป็น string `No such contact`
 
 ```js
 assert(lookUpProfile('Bob', 'number') === 'No such contact');
 ```
 
-`lookUpProfile("Bob", "potato")` ควรคืนค่า string `No such contact`
+การเรียกใช้ฟังก์ชัน `lookUpProfile("Bob", "potato")` ต้องคืนค่าออกมาเป็น string `No such contact`
 
 ```js
 assert(lookUpProfile('Bob', 'potato') === 'No such contact');
 ```
 
-`lookUpProfile("Akira", "address")` ควรคืนค่า string `No such property`
+การเรียกใช้ฟังก์ชัน `lookUpProfile("Akira", "address")` ต้องคืนค่าออกมาเป็น string `No such property`
 
 ```js
 assert(lookUpProfile('Akira', 'address') === 'No such property');
@@ -67,7 +67,7 @@ assert(lookUpProfile('Akira', 'address') === 'No such property');
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var contacts = [
     {
         "firstName": "Akira",
@@ -97,9 +97,9 @@ var contacts = [
 
 
 function lookUpProfile(name, prop) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 
 lookUpProfile("Akira", "likes");
@@ -136,7 +136,7 @@ var contacts = [
 ];
 
 
-//Write your function in between these comments
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 function lookUpProfile(name, prop){
     for(var i in contacts){
       if(contacts[i].firstName === name) {
@@ -145,7 +145,7 @@ function lookUpProfile(name, prop){
     }
    return "No such contact";
 }
-//Write your function in between these comments
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 
 lookUpProfile("Akira", "likes");
 ```

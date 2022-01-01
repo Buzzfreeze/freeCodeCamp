@@ -8,60 +8,61 @@ dashedName: match-all-non-numbers
 
 # --description--
 
-แบบทดสอบที่แล้วแสดงวิธีค้นหาตัวเลข โดยใช้ shortcut `\d` ซึ่งเป็นตัวพิมพ์เล็ก `d` อย่างไรก็ตาม คุณสามารถค้นหาอักขระที่ไม่ใช่ตัวเลข (non-digits) โดยใช้ shortcut ที่คล้ายกัน นั่นคือการใช้ตัวพิมพ์ใหญ่ `D`
+บทเรียนที่แล้วเราได้ลองหาตัวเลขด้วยการใช้ shortcut `\d` (ใช้ `d` พิมพ์เล็ก) 
+คราวนี้เรามาลองหาตัวอักษรที่ไม่ใช่ตัวเลข โดยใช้ shortcut ที่ใช้ตัว `D` พิมพ์ใหญ่กัน
 
 
-shortcut ที่ค้นหาอักขระที่ไม่ใช่ตัวเลข ก็คือ `\D` ซึ่งเทียบเท่ากับ character class `[^0-9]` โดยค้นหาอักขระหนึ่งตัวที่ไม่ใช่ตัวเลขระหว่าง 0 ถึง 9
+shortcut ที่ใช้หาตัวอักษรที่ไม่ใช่ตัวเลขคือ `\D` จะทำงานเหมือนกับ `[^0-9]` ซึ่งจะหาตัวอักษรหรือสัญลักษณ์หนึ่งตัวที่ไม่ได้มีค่าอยู่ระหว่าง `0` ถึง `9`
 
 # --instructions--
 
-จงใช้ shorthand character class สำหรับอักขระที่ไม่ใช่ตัวเลข (non-digits) `\D` เพื่อนับจำนวนอักขระที่ไม่ใช่ตัวเลขในชื่อภาพยนตร์
+จงใช้ shorthand character class สำหรับหาตัวอักษรที่ไม่ใช่ตัวเลข (`\D`) เพื่อนับจำนวนตัวอักษรที่ไม่ใช่ตัวเลขในชื่อภาพยนตร์
 
 # --hints--
 
-regex ของคุณควรใช้ shortcut character เพื่อ match อักขระที่ไม่ใช่ตัวเลข (non-digit characters)
+regex ที่เขียนต้องใช้ shortcut character `\D`
 
 ```js
 assert(/\\D/.test(noNumRegex.source));
 ```
 
-regex ของคุณควรใช้ global flag
+regex ที่เขียนต้องใช้ flag global
 
 ```js
 assert(noNumRegex.global);
 ```
 
-regex ของคุณไม่ควรพบอักขระที่ไม่ใช่ตัวเลข (non-digit characters) ใน string `9`
+regex ที่เขียนต้องไม่ match กับ string `9`
 
 ```js
 assert('9'.match(noNumRegex) == null);
 ```
 
-regex ของคุณควรพบอักขระที่ไม่ใช่ตัวเลข 6 ตัวใน string `Catch 22`
+regex ที่เขียนต้องเจออักษรที่ไม่ใช่ตัวเลขทั้งหมด 6 ตัวใน string `Catch 22`
 
 ```js
 assert('Catch 22'.match(noNumRegex).length == 6);
 ```
 
-regex ของคุณควรพบอักขระที่ไม่ใช่ตัวเลข 11 ตัวใน string `101 Dalmatians`
+regex ที่เขียนต้องเจออักษรที่ไม่ใช่ตัวเลขทั้งหมด 11 ตัวใน string `101 Dalmatians`
 
 ```js
 assert('101 Dalmatians'.match(noNumRegex).length == 11);
 ```
 
-regex ของคุณควรพบอักขระที่ไม่ใช่ตัวเลข 15 ตัวใน string `One, Two, Three`
+regex ที่เขียนต้องเจออักษรที่ไม่ใช่ตัวเลขทั้งหมด 15 ตัวใน string `One, Two, Three`
 
 ```js
 assert('One, Two, Three'.match(noNumRegex).length == 15);
 ```
 
-regex ของคุณควรพบอักขระที่ไม่ใช่ตัวเลข 12 ตัวใน string `21 Jump Street`
+regex ที่เขียนต้องเจออักษรที่ไม่ใช่ตัวเลขทั้งหมด 12 ตัวใน string `21 Jump Street`
 
 ```js
 assert('21 Jump Street'.match(noNumRegex).length == 12);
 ```
 
-regex ของคุณควรพบอักขระที่ไม่ใช่ตัวเลข 17 ตัวใน string `2001: A Space Odyssey`
+regex ที่เขียนต้องเจออักษรที่ไม่ใช่ตัวเลขทั้งหมด 17 ตัวใน string `2001: A Space Odyssey`
 
 ```js
 assert('2001: A Space Odyssey'.match(noNumRegex).length == 17);
@@ -73,7 +74,7 @@ assert('2001: A Space Odyssey'.match(noNumRegex).length == 17);
 
 ```js
 let movieName = "2001: A Space Odyssey";
-let noNumRegex = /change/; // Change this line
+let noNumRegex = /change/; // แก้บรรทัดนี้
 let result = movieName.match(noNumRegex).length;
 ```
 
@@ -81,6 +82,6 @@ let result = movieName.match(noNumRegex).length;
 
 ```js
 let movieName = "2001: A Space Odyssey";
-let noNumRegex = /\D/g; // Change this line
+let noNumRegex = /\D/g; // แก้บรรทัดนี้
 let result = movieName.match(noNumRegex).length;
 ```

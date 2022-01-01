@@ -9,78 +9,79 @@ dashedName: golf-code
 
 # --description--
 
-ในเกม [golf](https://en.wikipedia.org/wiki/Golf) แต่ละหลุมมี `par` หมายถึงจำนวนเฉลี่ยของ `strokes` ที่นักกอล์ฟทำให้บอลลงหลุมได้ ก็ถือว่าเกมจบ ทั้งนี้ขึ้นอยู่กับว่า `strokes` ของคุณมากหรือน้อยกว่า `par` ก็จะใช้ชื่อเล่นที่ต่างกัน
+ในการเล่น [กอล์ฟ](https://en.wikipedia.org/wiki/Golf) แต่ละหลุมจะมีค่า พาร์ (`par`) ซึ่งเป็นค่าเฉลี่ยของจำนวนครั้งที่ตี (`strokes`) ที่นักกอล์ฟทำให้ลูกลงหลุมได้ เมื่อลูกลงหลุมก็ถือว่าเกมจบ 
+นักกอล์ฟจะมีชื่อเล่นที่ใช้เรียกค่าผลต่างของ `strokes` กับ `par` ด้วย ซึ่งแต่ละค่าก็จะมีชื่อต่างกัน
 
-function ของคุณจะรับ argument `par` และ `strokes` แล้วคืนค่า string ที่ถูกต้อง ตามตารางที่ลิสต์ stroke ตามลำดับความสำคัญ top (สูงสุด) ถึง bottom (ต่ำสุด):
+ฟังก์ชันที่คุณกำลังจะเขียนนั้นจะรับ argument `par` และ `strokes` แล้วคืนค่า string ที่ถูกต้อง ตามตารางด้านล่าง:
 
 
-<table class='table table-striped'><thead><tr><th>Strokes</th><th>Return</th></tr></thead><tbody><tr><td>1</td><td>"Hole-in-one!"</td></tr><tr><td>&#x3C;= par - 2</td><td>"Eagle"</td></tr><tr><td>par - 1</td><td>"Birdie"</td></tr><tr><td>par</td><td>"Par"</td></tr><tr><td>par + 1</td><td>"Bogey"</td></tr><tr><td>par + 2</td><td>"Double Bogey"</td></tr><tr><td>>= par + 3</td><td>"Go Home!"</td></tr></tbody></table>
+<table class='table table-striped'><thead><tr><th>จำนวนครั้งที่ตี</th><th>ค่าที่คืนออกมา</th></tr></thead><tbody><tr><td>1</td><td>"Hole-in-one!"</td></tr><tr><td>&#x3C;= par - 2</td><td>"Eagle"</td></tr><tr><td>par - 1</td><td>"Birdie"</td></tr><tr><td>par</td><td>"Par"</td></tr><tr><td>par + 1</td><td>"Bogey"</td></tr><tr><td>par + 2</td><td>"Double Bogey"</td></tr><tr><td>>= par + 3</td><td>"Go Home!"</td></tr></tbody></table>
 
-`par` และ `strokes` จะเป็นตัวเลขที่เป็นบวกเสมอ เราได้เพิ่ม array ของชื่อทั้งหมดเพื่อความสะดวกของคุณ
+ค่าของ `par` และ `strokes` จะเป็นตัวเลขและเป็นค่าบวกเสมอ เราเขียน array ของชื่อทั้งหมดไว้ให้คุณแล้ว
 
 # --hints--
 
-`golfScore(4, 1)` ควรคืนค่า string `Hole-in-one!`
+การเรียกใช้ฟังก์ชัน `golfScore(4, 1)` ต้องคืนค่าออกมาเป็น string `Hole-in-one!`
 
 ```js
 assert(golfScore(4, 1) === 'Hole-in-one!');
 ```
 
-`golfScore(4, 2)` ควรคืนค่า string `Eagle`
+การเรียกใช้ฟังก์ชัน `golfScore(4, 2)` ต้องคืนค่าออกมาเป็น string `Eagle`
 
 ```js
 assert(golfScore(4, 2) === 'Eagle');
 ```
 
-`golfScore(5, 2)` ควรคืนค่า string `Eagle`
+การเรียกใช้ฟังก์ชัน `golfScore(5, 2)` ต้องคืนค่าออกมาเป็น string `Eagle`
 
 ```js
 assert(golfScore(5, 2) === 'Eagle');
 ```
 
-`golfScore(4, 3)` ควรคืนค่า string `Birdie`
+การเรียกใช้ฟังก์ชัน `golfScore(4, 3)` ต้องคืนค่าออกมาเป็น string `Birdie`
 
 ```js
 assert(golfScore(4, 3) === 'Birdie');
 ```
 
-`golfScore(4, 4)` ควรคืนค่า string `Par`
+การเรียกใช้ฟังก์ชัน `golfScore(4, 4)` ต้องคืนค่าออกมาเป็น string `Par`
 
 ```js
 assert(golfScore(4, 4) === 'Par');
 ```
 
-`golfScore(1, 1)` ควรคืนค่า string `Hole-in-one!`
+การเรียกใช้ฟังก์ชัน `golfScore(1, 1)` ต้องคืนค่าออกมาเป็น string `Hole-in-one!`
 
 ```js
 assert(golfScore(1, 1) === 'Hole-in-one!');
 ```
 
-`golfScore(5, 5)` ควรคืนค่า string `Par`
+การเรียกใช้ฟังก์ชัน `golfScore(5, 5)` ต้องคืนค่าออกมาเป็น string `Par`
 
 ```js
 assert(golfScore(5, 5) === 'Par');
 ```
 
-`golfScore(4, 5)` ควรคืนค่า string `Bogey`
+การเรียกใช้ฟังก์ชัน `golfScore(4, 5)` ต้องคืนค่าออกมาเป็น string `Bogey`
 
 ```js
 assert(golfScore(4, 5) === 'Bogey');
 ```
 
-`golfScore(4, 6)` ควรคืนค่า string `Double Bogey`
+การเรียกใช้ฟังก์ชัน `golfScore(4, 6)` ต้องคืนค่าออกมาเป็น string `Double Bogey`
 
 ```js
 assert(golfScore(4, 6) === 'Double Bogey');
 ```
 
-`golfScore(4, 7)` ควรคืนค่า string `Go Home!`
+การเรียกใช้ฟังก์ชัน `golfScore(4, 7)` ต้องคืนค่าออกมาเป็น string `Go Home!`
 
 ```js
 assert(golfScore(4, 7) === 'Go Home!');
 ```
 
-`golfScore(5, 9)` ควรคืนค่า string `Go Home!`
+การเรียกใช้ฟังก์ชัน `golfScore(5, 9)` ต้องคืนค่าออกมาเป็น string `Go Home!`
 
 ```js
 assert(golfScore(5, 9) === 'Go Home!');
@@ -93,11 +94,11 @@ assert(golfScore(5, 9) === 'Go Home!');
 ```js
 var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
 function golfScore(par, strokes) {
-  // Only change code below this line
+  // แก้โค้ดใต้บรรทัดนี้เท่านั้น
 
 
   return "Change Me";
-  // Only change code above this line
+  // แก้โค้ดเหนือบรรทัดนี้เท่านั้น
 }
 
 golfScore(5, 4);

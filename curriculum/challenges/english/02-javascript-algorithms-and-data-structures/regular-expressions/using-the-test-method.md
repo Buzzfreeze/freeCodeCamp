@@ -8,11 +8,11 @@ dashedName: using-the-test-method
 
 # --description--
 
-Regular expressions ใช้ในภาษา programming เพื่อค้นหาข้อความใน string โดยสร้าง pattern ที่ใช้หาข้อความที่ตรง (match) กับ pattern นั้น
+เราใช้ regular expression (regex) ในการเขียนโปรแกรมเพื่อหาข้อความใน string โดยสร้าง pattern ที่ใช้หาข้อความที่ตรงกับ pattern นั้น
 
-ถ้าคุณต้องการค้นหาคำว่า `the` ใน string `The dog chased the cat` คุณสามารถใช้ regular expression `/the/` สังเกตว่า ไม่ต้องใช้ quote mark (เครื่องหมายคำพูด) ใน regular expression
+เช่น ถ้าเราอยากหาคำว่า `the` ใน string `The dog chased the cat` เราจะใช้ regex `/the/` เพื่อหาได้ จะเห็นว่าใน regex เราไม่ต้องใช้ quote (`""` หรือ `''`) ก็ได้
 
-JavaScript สามารถใช้งาน regexes ได้หลายวิธี วิธีนึงคือการทดสอบ regex โดยใช้ `.test()` method ซึ่ง `.test()` method นำ regex มาตรวจสอบกับ string (ซึ่งอยู่ภายในวงเล็บ) แล้วคืนค่า `true` หรือ `false` ขึ้นกับว่า pattern ของคุณพบใน string หรือไม่
+เราใช้ regex ใน JavaScript ได้หลายวิธี วิธีนึงคือการเช็ค regex โดยใช้ method `.test()` ซึ่ง method `.test()` จะนำ regex มาเช็คกับ string (ที่อยู่ในวงเล็บ) แล้วคืนค่า `true` ถ้าเจอว่ามี pattern ของเราใน string (การที่ regex เจอ pattern ของเราใน string จะเรียกว่าการ `match`) และคืนค่าเป็น `false` ถ้าไม่เจอ
 
 ```js
 let testStr = "freeCodeCamp";
@@ -20,21 +20,21 @@ let testRegex = /Code/;
 testRegex.test(testStr);
 ```
 
-`test` method ในที่นี้คืนค่า `true`
+ในตัวอย่างด้านบน method `test` จะคืนค่าเป็น `true`
 
 # --instructions--
 
-จงใช้ regex `myRegex` กับ string `myString` โดยใช้ `.test()` method
+จงใช้ regex `myRegex` กับ string `myString` โดยใช้ method `.test()`
 
 # --hints--
 
-คุณควรใช้ `.test()` เพื่อทดสอบ regex
+เราควรใช้ `.test()` เพื่อเช็ค regex
 
 ```js
 assert(code.match(/myRegex.test\(\s*myString\s*\)/));
 ```
 
-ผลลัพธ์ควรเป็น `true`
+ต้องได้ผลลัพธ์เป็น `true`
 
 ```js
 assert(result === true);
@@ -47,7 +47,7 @@ assert(result === true);
 ```js
 let myString = "Hello, World!";
 let myRegex = /Hello/;
-let result = myRegex; // Change this line
+let result = myRegex; // แก้บรรทัดนี้
 ```
 
 # --solutions--
@@ -55,5 +55,5 @@ let result = myRegex; // Change this line
 ```js
 let myString = "Hello, World!";
 let myRegex = /Hello/;
-let result = myRegex.test(myString); // Change this line
+let result = myRegex.test(myString); // แก้บรรทัดนี้
 ```

@@ -9,16 +9,16 @@ dashedName: divide-one-decimal-by-another-with-javascript
 
 # --description--
 
-ตอนนี้ลองหารเลขทศนิยมนึงด้วยเลขทศนิยมอีกตัวนึง
+คราวนี้มาลองหารเลขทศนิยมด้วยเลขทศนิยมกัน
 
 # --instructions--
 
-จงเปลี่ยน `0.0` เพื่อให้ `quotient` ได้ผลลัพธ์เท่ากับ `2.2`
+จงเปลี่ยน `0.0` เพื่อให้ตัวแปร `quotient` มีผลลัพธ์เท่ากับ `2.2`
 
 
 # --hints--
 
-ตัวแปร `quotient` ควรเท่ากับ `2.2`
+ตัวแปร `quotient` ควรมีค่าเท่ากับ `2.2`
 
 ```js
 assert(quotient === 2.2);
@@ -30,7 +30,7 @@ assert(quotient === 2.2);
 assert(/4\.40*\s*\/\s*2\.*0*/.test(code));
 ```
 
-ตัวแปร quotient ควรกำหนดค่าเพียงครั้งเดียว
+ตัวแปร `quotient` ควรถูกกำหนดค่าเพียงครั้งเดียวเท่านั้น
 
 ```js
 assert(code.match(/quotient/g).length === 1);
@@ -47,7 +47,7 @@ assert(code.match(/quotient/g).length === 1);
 ## --seed-contents--
 
 ```js
-var quotient = 0.0 / 2.0; // Change this line
+var quotient = 0.0 / 2.0; // แก้โค้ดบรรทัดนี้
 ```
 
 # --solutions--

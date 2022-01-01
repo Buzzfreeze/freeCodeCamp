@@ -9,9 +9,10 @@ dashedName: iterate-with-javascript-while-loops
 
 # --description--
 
-คุณสามารถรันโค้ดเดียวกันหลายครั้งโดยใช้ loop
+คุณสามารถทำให้โค้ดตัวเดิมทำงานหลายๆ ครั้งได้โดยใช้ loop
 
-loop ประเภทแรกที่เราจะเรียนรู้เรียกว่า `while` loop เพราะรันก็ต่อเมื่อเงื่อนไขเป็นจริง และหยุดเมื่อเงื่อนไขนั้นไม่เป็นจริงแล้ว
+loop แบบแรกที่เราจะเรียน เรียกว่า `while` loop ที่จะทำงานก็ต่อเมื่อเงื่อนไขที่เราให้เป็น `true` และจะหยุดทำงานเมื่อเงื่อนไขเป็น `false`
+ดูโค้ดตัวอย่าง:
 
 ```js
 var ourArray = [];
@@ -22,25 +23,24 @@ while(i < 5) {
 }
 ```
 
-ในโค้ดตัวอย่างด้านบน `while` loop จะทำงาน 5 ครั้ง และจะต่อเลข 0 ถึง 4 เข้าไปใน `ourArray`
+ในโค้ดตัวอย่างด้านบน `while` loop จะทำงาน 5 ครั้ง และจะใส่เลข 0 ถึง 4 เข้าไปใน `ourArray`
 
-มาลองทำให้ while loop ทำงาน โดยการ push ค่าเข้าไปยัง array
+มาลองใช้ `while` ในการเพิ่มค่าเข้าไปใน array กัน
 
 
 # --instructions--
 
-
-จงเพิ่มตัวเลข 5 ถึง 0 (รวม 5 และ 0) ตามลำดับจากมากไปน้อยใน `myArray` โดยใช้ลูป `while`
+จงเพิ่มตัวเลข 5, 4, 3, 2, 1, และ 0 เข้าไปใน `myArray` ตามลำดับ โดยใช้ `while` loop
 
 # --hints--
 
-ในที่นี้คุณควรใช้ `while` loop 
+ต้องใช้คำสั่ง `while` loop ในการทำงาน
 
 ```js
 assert(code.match(/while/g));
 ```
 
-`myArray` ควรเท่ากับ `[5,4,3,2,1,0]`
+`myArray` ต้องมีค่าเป็น `[5,4,3,2,1,0]`
 
 ```js
 assert.deepEqual(myArray, [5, 4, 3, 2, 1, 0]);
@@ -57,10 +57,10 @@ if(typeof myArray !== "undefined"){(function(){return myArray;})();}
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var myArray = [];
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

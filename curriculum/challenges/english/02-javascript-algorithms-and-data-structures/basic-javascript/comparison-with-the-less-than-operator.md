@@ -9,7 +9,9 @@ dashedName: comparison-with-the-less-than-operator
 
 # --description--
 
-เครื่องหมายน้อยกว่า (`<`) เปรียบเทียบค่าของตัวเลขสองตัว หากตัวเลขทางซ้ายน้อยกว่าตัวเลขทางขวา จะแสดงผลเป็น `true` มิฉะนั้น จะส่งกลับ `false` เช่นเดียวกับเครื่องหมาย (`==`) เครื่องหมายน้อยกว่า (`<`) จะแปลงประเภทข้อมูลขณะที่ทำการเปรียบเทียบ
+เครื่องหมายน้อยกว่า (`<`) เปรียบเทียบค่าของตัวเลขสองตัว ถ้าตัวเลขทางซ้ายน้อยกว่าตัวเลขทางขวา จะคืนค่ามาเป็น `true` แต่ถ้าไม่น้อยกว่าจะเป็น `false` 
+
+เครื่องหมายน้อยกว่าก็จะแปลงประเภทของข้อมูลให้เลย เหมือนกับเวลาใช้เครื่องหมาย (`==`) 
 
 **Examples**
 
@@ -21,52 +23,52 @@ dashedName: comparison-with-the-less-than-operator
 '8' < 4
 ```
 
-ผลลัพธ์แต่ละบรรทัดจะเป็น `true`, `true`, `false`, `false` และ `false` ตามลำดับ
+แต่ละบรรทัดจะได้ค่าเป็น `true`, `true`, `false`, `false` และ `false` ตามลำดับ
 
 # --instructions--
 
-จงเพิ่มเครื่องหมายน้อยกว่าในบรรทัดที่กำหนดเพื่อให้การคืนค่าดูสมเหตุสมผล
+จงเพิ่มเครื่องหมายน้อยกว่าในบรรทัดที่กำหนดเพื่อให้การคืนค่าถูกต้อง
 
 
 # --hints--
 
-`testLessThan(0)` ควรคืนค่า string `Under 25`
+การเรียกใช้ฟังก์ชัน `testLessThan(0)` ต้องคืนค่าออกมาเป็น string `Under 25`
 
 ```js
 assert(testLessThan(0) === 'Under 25');
 ```
 
-`testLessThan(24)` ควรคืนค่า string `Under 25`
+การเรียกใช้ฟังก์ชัน `testLessThan(24)` ต้องคืนค่าออกมาเป็น string `Under 25`
 
 ```js
 assert(testLessThan(24) === 'Under 25');
 ```
 
-`testLessThan(25)` ควรคืนค่า string `Under 55`
+การเรียกใช้ฟังก์ชัน `testLessThan(25)` ต้องคืนค่าออกมาเป็น string `Under 55`
 
 ```js
 assert(testLessThan(25) === 'Under 55');
 ```
 
-`testLessThan(54)` ควรคืนค่า string `Under 55`
+การเรียกใช้ฟังก์ชัน `testLessThan(54)` ต้องคืนค่าออกมาเป็น string `Under 55`
 
 ```js
 assert(testLessThan(54) === 'Under 55');
 ```
 
-`testLessThan(55)` ควรคืนค่า string `55 or Over`
+การเรียกใช้ฟังก์ชัน `testLessThan(55)` ต้องคืนค่าออกมาเป็น string `55 or Over`
 
 ```js
 assert(testLessThan(55) === '55 or Over');
 ```
 
-`testLessThan(99)` ควรคืนค่า string `55 or Over`
+การเรียกใช้ฟังก์ชัน `testLessThan(99)` ต้องคืนค่าออกมาเป็น string `55 or Over`
 
 ```js
 assert(testLessThan(99) === '55 or Over');
 ```
 
-คุณควรใช้เครื่องหมาย `<` อย่างน้อยสองครั้ง
+ต้องใช้เครื่องหมาย `<` อย่างน้อยสองที่ในโค้ด
 
 ```js
 assert(code.match(/val\s*<\s*('|")*\d+('|")*/g).length > 1);
@@ -78,15 +80,15 @@ assert(code.match(/val\s*<\s*('|")*\d+('|")*/g).length > 1);
 
 ```js
 function testLessThan(val) {
-  if (val) {  // Change this line
-    return "Under 25";
+  if (val) {  // แก้ไขบรรทัดนี้
+    return "Under 25"; // น้อยกว่า 25
   }
 
-  if (val) {  // Change this line
-    return "Under 55";
+  if (val) {  // แก้ไขบรรทัดนี้
+    return "Under 55"; // น้อยกว่า 55
   }
 
-  return "55 or Over";
+  return "55 or Over"; // มากกว่าหรือเท่ากับ 55
 }
 
 testLessThan(10);
@@ -96,11 +98,11 @@ testLessThan(10);
 
 ```js
 function testLessThan(val) {
-  if (val < 25) {  // Change this line
+  if (val < 25) {  // แก้ไขบรรทัดนี้
     return "Under 25";
   }
 
-  if (val < 55) {  // Change this line
+  if (val < 55) {  // แก้ไขบรรทัดนี้
     return "Under 55";
   }
 

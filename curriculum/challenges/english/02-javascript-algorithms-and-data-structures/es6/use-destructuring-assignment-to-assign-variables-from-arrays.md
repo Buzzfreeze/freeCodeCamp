@@ -8,11 +8,11 @@ dashedName: use-destructuring-assignment-to-assign-variables-from-arrays
 
 # --description--
 
-ES6 ทำให้การ destructuring arrays ง่ายเหมือน destructuring objects
+ES6 ทำให้การ destructuring array ง่ายเหมือน destructuring object
 
-ข้อแตกต่างที่สำคัญอย่างหนึ่งระหว่าง spread operator และ array destructuring คือ spread operator จะแยกข้อมูลทั้งหมดของ array ลงในรายการที่คั่นด้วยเครื่องหมาย comma ดังนั้น คุณไม่สามารถเลือก elements ที่คุณต้องการกำหนดให้กับตัวแปรได้
+ข้อแตกต่างที่สำคัญอย่างหนึ่งระหว่าง spread operator (`...`) และ array destructuring คือ spread operator จะแยกข้อมูลทั้งหมดของ array ออกเป็นข้อมูลที่คั่นด้วย comma คุณจึงไม่สามารถเลือก element ที่คุณต้องการกำหนดให้กับตัวแปรได้
 
-ลองมาทำ destructuring array 
+การ destructure array 0tจะให้คุณเลือก element ได้:
 
 ```js
 const [a, b] = [1, 2, 3, 4, 5, 6];
@@ -21,7 +21,7 @@ console.log(a, b);
 
 console จะแสดงค่า `a` และ `b` เป็น `1, 2`
 
-ตัวแปร `a` ถูกกำหนดเป็นค่าแรกของ array และ  `b` ถูกกำหนดเป็นค่าที่สองของ array นอกจากนี้เรายังสามารถเข้าถึงค่าที่ index ใดก็ได้ใน array ที่มีการแยกค่าโดยใช้เครื่องหมาย comma เพื่อเข้าถึง index ที่ต้องการ:
+ตัวแปร `a` เป็นค่าแรกใน array และ  `b` เป็นค่าที่สองใน array แล้วเราก็ยังดึงค่าจาก index ไหนก็ได้ใน array โดยการเพิ่ม comma เข้าไปเพื่อเข้าถึง index ที่ต้องการ:
 
 ```js
 const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
@@ -32,7 +32,8 @@ console จะแสดงค่า `a`, `b`, และ `c` เป็น `1, 2, 
 
 # --instructions--
 
-จงใช้ destructuring assignment ในการสลับค่าของ `a` และ `b` เพื่อ `a` จะรับค่าที่เก็บใน `b` และ `b` รับค่าที่เก็บใน `a`
+จงใช้ destructuring assignment ในการสลับค่าของ `a` และ `b` 
+เพื่อให้ `a` เก็บค่าของ `b` และ `b` เก็บค่าของ `a` แทน
 
 # --hints--
 
@@ -48,7 +49,7 @@ assert(a === 6);
 assert(b === 8);
 ```
 
-คุณควรใช้ array destructuring ในการสลับ `a` และ `b`
+ต้องใช้ array destructuring ในการสลับค่าของ `a` และ `b`
 
 ```js
 assert(/\[\s*(\w)\s*,\s*(\w)\s*\]\s*=\s*\[\s*\2\s*,\s*\1\s*\]/g.test(code));
@@ -60,7 +61,7 @@ assert(/\[\s*(\w)\s*,\s*(\w)\s*\]\s*=\s*\[\s*\2\s*,\s*\1\s*\]/g.test(code));
 
 ```js
 let a = 8, b = 6;
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

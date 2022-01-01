@@ -8,7 +8,8 @@ dashedName: match-literal-strings
 
 # --description--
 
-ในแบบทดสอบที่แล้ว คุณค้นหาคำว่า `Hello` โดยใช้ regular expression `/Hello/` ซึ่ง regex นั้นค้นหาข้อความที่ match กับ string `Hello` ต่อไปนี้เป็นตัวอย่างการค้นหาข้อความที่ match กับ string `Kevin`:
+ในแบบทดสอบที่แล้ว เราได้ลองหาคำว่า `Hello` โดยใช้ regex `/Hello/` ซึ่ง regex นี้จะหาข้อความที่ตรงกับ string `Hello` 
+ด้านล่างนี้เป็นตัวอย่างการหาข้อความที่ตรงกับ string `Kevin` เป๊ะๆ:
 
 ```js
 let testStr = "Hello, my name is Kevin.";
@@ -16,40 +17,40 @@ let testRegex = /Kevin/;
 testRegex.test(testStr);
 ```
 
-`test` ในที่นี้คืนค่า `true`
+จากตัวอย่างด้านบน `test` จะคืนค่าเป็น `true`
 
-รูปแบบอื่นของ `Kevin` จะไม่ match ตัวอย่างเช่น regex `/Kevin/` จะไม่ match กับ `kevin` หรือ `KEVIN`
+ถ้าเราเขียน `Kevin` เป็นแบบอื่นก็จะทำให้หาไม่เจอ เช่น regex `/Kevin/` จะหาข้อความที่เป็น `kevin` หรือ `KEVIN` ไม่เจอ
 
 ```js
 let wrongRegex = /kevin/;
 wrongRegex.test(testStr);
 ```
 
-`test` ในที่นี้คืนค่า `false`
+จากตัวอย่างด้านบน `test` จะคืนค่าเป็น `false`
 
-แบบทดสอบหลังจากนี้จะแสดงวิธีการ match กับรูปแบบอื่นๆ ให้ด้วย
+บทเรียนที่เราจะได้เรียนหลังจากนี้ จะสอนวิธีการหาข้อความที่มีตัวพิมพ์ใหญ่พิมพ์เล็กไม่ตรงกันแบบตัวอย่างนี้ได้ด้วย
 
 # --instructions--
 
-จงทำให้ regex `waldoRegex` สมบูรณ์ เพื่อค้นหา `"Waldo"` ใน string `waldoIsHiding`
+ให้แก้ regex `waldoRegex` เพื่อให้หาคำว่า `"Waldo"` เจอใน string `waldoIsHiding`
 
 # --hints--
 
-regex `waldoRegex` ควรค้นหา string `Waldo`
+regex `waldoRegex` ต้องหา string `Waldo` เจอ
 
 ```js
 waldoRegex.lastIndex = 0;
 assert(waldoRegex.test(waldoIsHiding));
 ```
 
-regex `waldoRegex` ไม่ควรค้นหาข้อความอื่นอีก
+regex `waldoRegex` ต้องไม่เจอข้อความอื่นใน string
 
 ```js
 waldoRegex.lastIndex = 0;
 assert(!waldoRegex.test('Somewhere is hiding in this text.'));
 ```
 
-คุณควรค้นหา string ตามตัวอักษรที่ match กับ regex ของคุณ
+ต้องหา string ตามตัวอักษรที่ตรงกับ regex ของคุณ
 
 ```js
 assert(!/\/.*\/i/.test(code));
@@ -61,7 +62,7 @@ assert(!/\/.*\/i/.test(code));
 
 ```js
 let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
-let waldoRegex = /search/; // Change this line
+let waldoRegex = /search/; // แก้บรรทัดนี้
 let result = waldoRegex.test(waldoIsHiding);
 ```
 
@@ -69,6 +70,6 @@ let result = waldoRegex.test(waldoIsHiding);
 
 ```js
 let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
-let waldoRegex = /Waldo/; // Change this line
+let waldoRegex = /Waldo/; // แก้บรรทัดนี้
 let result = waldoRegex.test(waldoIsHiding);
 ```

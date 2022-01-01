@@ -8,9 +8,9 @@ dashedName: match-whitespace
 
 # --description--
 
-แบบทดสอบที่ผ่านมากล่าวถึงการ match อักขระที่เป็นตัวอักษรและตัวเลข อย่างไรก็ตาม คุณสามารถ match whitespace หรือ spaces ระหว่างตัวอักษรได้ด้วย
+ที่ผ่านมาเราได้เรียนเรื่องการ match ตัวอักษรและตัวเลขไปแล้ว ในบทเรียนนี้เรามาเรียนเรื่องการ match whitespace หรือการเว้นวรรคระหว่างตัวอักษรกัน
 
-คุณสามารถค้นหา whitespace โดยการใช้ `\s`, ซึ่งเป็น `s` ตัวพิมพ์เล็ก โดย pattern นี้ไม่เพียงแต่ match whitespace แต่ยัง match carriage return, tab, form feed และ new line characters ด้วย ซึ่งเทียบเท่ากับ character class `[ \r\t\f\n\v]`
+ในการหา whitespace เราจะใช้ `\s` (ใช้ `s` พิมพ์เล็ก) โดย pattern จะไม่ได้ match แค่เว้นวรรคเท่านั้นแต่จะ match ทั้ง carriage return (`\r`), tab (`\t`), form feed (`\f`) และ new line character (`\n`) ด้วย ซึ่งการใช้ `\s` นี้จะเหมือนกับการใช้ character class `[ \r\t\f\n\v]`
 
 ```js
 let whiteSpace = "Whitespace. Whitespace everywhere!"
@@ -21,23 +21,23 @@ whiteSpace.match(spaceRegex);
 การเรียก `match` นี้จะคืนค่า `[" ", " "]`
 # --instructions--
 
-จงปรับแก้ regex `countWhiteSpace` ให้ค้นหา whitespace characters ทั้งหมดใน string
+จงปรับแก้ regex `countWhiteSpace` ให้ค้นหา whitespace character ทั้งหมดใน string
 
 # --hints--
 
-regex ของคุณควรใช้ global flag.
+regex ที่เขียนต้องใช้ flag global 
 
 ```js
 assert(countWhiteSpace.global);
 ```
 
-regex ของคุณควรใช้ shorthand character `\s` เพื่อ match whitespace characters ทั้งหมด
+regex ที่เขียนต้องใช้ shorthand character `\s` เพื่อ match whitespace character ทั้งหมด
 
 ```js
 assert(/\\s/.test(countWhiteSpace.source));
 ```
 
-regex ของคุณควรพบ 8 spaces ใน string `Men are from Mars and women are from Venus.`
+regex ที่เขียนต้องเจอ space ทั้งหมด 8 ตัว ใน string `Men are from Mars and women are from Venus.`
 
 ```js
 assert(
@@ -46,13 +46,13 @@ assert(
 );
 ```
 
-regex ของคุณควรพบ 3 spaces ใน string `Space: the final frontier.`
+regex ที่เขียนต้องเจอ space ทั้งหมด 3 ตัว ใน string `Space: the final frontier.`
 
 ```js
 assert('Space: the final frontier.'.match(countWhiteSpace).length == 3);
 ```
 
-regex ของคุณไม่ควรพบ spaces ใน string `MindYourPersonalSpace`
+regex ที่เขียนต้องไม่เจอ space ใน string `MindYourPersonalSpace`
 
 ```js
 assert('MindYourPersonalSpace'.match(countWhiteSpace) == null);
@@ -64,7 +64,7 @@ assert('MindYourPersonalSpace'.match(countWhiteSpace) == null);
 
 ```js
 let sample = "Whitespace is important in separating words";
-let countWhiteSpace = /change/; // Change this line
+let countWhiteSpace = /change/; // แก้บรรทัดนี้
 let result = sample.match(countWhiteSpace);
 ```
 

@@ -8,9 +8,10 @@ dashedName: prevent-object-mutation
 
 # --description--
 
-ตามที่เห็นในบทเรียนก่อนหน้า การประกาศ `const` เพียงอย่างเดียวไม่ได้ปกป้องข้อมูลของคุณจากการเปลี่ยนแปลงได้ เพื่อให้แน่ใจว่าข้อมูลของคุณจะไม่เปลี่ยนแปลง JavaScript จึงมีฟังก์ชัน `Object.freeze` เพื่อป้องกันการเปลี่ยนแปลงข้อมูล
+จากบทเรียนที่แล้ว เราได้รู้แล้วว่าการประกาศ `const` ไม่ได้ป้องกันการเปลี่ยนค่าของตัวแปรของเรา
+JavaScript จึงมีฟังก์ชัน `Object.freeze` เพื่อป้องกันการเปลี่ยนแปลงข้อมูล
 
-การเปลี่ยนแปลง object จะถูกปฏิเสธทั้งหมด โดยขึ้น error เมื่อ script ถูกรันใน strict mode
+การใช้ `Object.freeze` จะทำให้เราไม่สามารถเปลี่ยนแปลง object ได้ และถ้า JavaScript ของเราทำงานโดยเปิด strict mode จะเกิด error ขึ้นด้วย
 
 
 ```js
@@ -24,28 +25,28 @@ obj.newProp = "Test";
 console.log(obj); 
 ```
 
-การกำหนดค่าให้กับ `obj.review` และ `obj.newProp` จะเกิด error เพราะ editor ของเรารันด้วย strict mode เป็นค่าเริ่มต้น (by default) และ console จะแสดงค่า `{ name: "FreeCodeCamp", review: "Awesome" }` 
+editor ของเราเปิด strict mode อยู่ ทำให้การกำหนดค่าให้กับ `obj.review` และ `obj.newProp` จะเกิด error ขึ้น และหน้า console จะแสดงค่า `{ name: "FreeCodeCamp", review: "Awesome" }` ทำให้เห็นได้ว่าค่าของ `obj` ไม่ได้ถูกเปลี่ยนแปลงไป
 
 # --instructions--
 
-ในบทเรียนนี้คุณจะได้ใช้ `Object.freeze` เพื่อป้องกันการเปลี่ยนแปลงตัวเลขคงที่ คุณต้องคงค่า `MATH_CONSTANTS` object ไว้ เพื่อไม่ให้ใครเปลี่ยนแปลงค่าของ `PI`, เพิ่ม หรือลบ property
+ในบทเรียนนี้คุณจะได้ใช้ `Object.freeze` เพื่อป้องกันไม่ให้ข้อมูลใน `MATH_CONSTANTS` เปลี่ยนแปลง คุณต้อง `freeze` object `MATH_CONSTANTS` ไว้ เพื่อไม่ให้ใครมาเปลี่ยนค่าของ `PI` หรือเพิ่มและลบ property ได้
 
 # --hints--
 
-คุณไม่ควรแทนที่ keyword `const`
+ต้องประกาศตัวแปรด้วย `const`
 
 ```js
 (getUserInput) => assert(getUserInput('index').match(/const/g));
 ```
 
-`MATH_CONSTANTS` ควรเป็นตัวแปรคงที่ (โดยใช้ `const`)
+ต้องให้ `MATH_CONSTANTS` เป็นค่าคงที่ (ประกาศโดยใช้ `const`)
 
 ```js
 (getUserInput) =>
   assert(getUserInput('index').match(/const\s+MATH_CONSTANTS/g));
 ```
 
-คุณไม่ควรแก้ไขการประกาศ `MATH_CONSTANTS` เดิม
+คุณไม่ควรแก้ไขการประกาศตัวแปร `MATH_CONSTANTS`
 
 ```js
 (getUserInput) =>
@@ -71,10 +72,10 @@ function freezeObj() {
   const MATH_CONSTANTS = {
     PI: 3.14
   };
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
   try {
     MATH_CONSTANTS.PI = 99;
   } catch(ex) {

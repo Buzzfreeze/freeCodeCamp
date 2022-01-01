@@ -9,11 +9,14 @@ dashedName: accessing-object-properties-with-dot-notation
 
 # --description--
 
-มีสองวิธีในการเข้าถึง properties ของ object คือ เครื่องหมายจุด (`.`) และเครื่องหมายวงเล็บ (`[]`) ซึ่งคล้ายกับ array
+เราจะเข้าถึง property ของ object ได้ 2 วิธี คือ:
 
-เครื่องหมายจุด (`.`) ใช้ในการเข้าถึงค่าใน object เมื่อทราบชื่อของ property 
+1. จุด (`.`) และ
+2. วงเล็บใหญ่ (`[]`) ซึ่งคล้ายกับการเข้าถึงข้อมูลใน array
 
-นี่เป็นตัวอย่างการใช้เครื่องหมายจุด (`.`) เพื่ออ่าน properties ของ object:
+การใช้จุด (`.`) หรือที่เรียกว่า Dot Notation นั้นใช้ในการเข้าถึงค่าใน object ถ้าเรารู้ชื่อของ property 
+
+โค้ดด้านล่างเป็นตัวอย่างการใช้จุดเพื่ออ่าน property ของ object:
 
 ```js
 var myObj = {
@@ -24,40 +27,40 @@ var prop1val = myObj.prop1;
 var prop2val = myObj.prop2;
 ```
 
-`prop1val` ควรมีค่าของ string `val1` และ `prop2val` ควรมีค่า string `val2`
+ตัวแปร `prop1val` จะมีค่าเป็น string `val1` และ `prop2val` จะมีค่าเป็น string `val2`
 
 # --instructions--
 
-จงอ่าน property values ของ `testObj` โดยใช้เครื่องหมายจุด และจงกำหนดตัวแปร `hatValue` ให้มีค่าเท่ากับ property ของ object `hat` และกำหนดค่าตัวแปร `shirtValue` ให้มีค่าเท่ากับ property ของ object `shirt`
+จงอ่านค่าของ property ของ `testObj` โดยใช้จุด หลังจากนั้นให้นำค่าของ property `hat` มากำหนดให้กับตัวแปร `hatValue` และนำค่าของ property `shirt` มากำหนดให้กับตัวแปร `shirtValue` 
 
 # --hints--
 
-`hatValue` ควรเป็น string
+ตัวแปร `hatValue` ต้องเป็นข้อมูลประเภท string
 
 ```js
 assert(typeof hatValue === 'string');
 ```
 
-ค่าของ `hatValue` ควรเป็น string `ballcap`
+ตัวแปร `hatValue` ต้องเป็น string ซึ่งมีค่าเป็น `ballcap`
 
 ```js
 assert(hatValue === 'ballcap');
 ```
 
-`shirtValue` ควรเป็น string
+ตัวแปร `shirtValue` ต้องเป็นข้อมูลประเภท string
 
 ```js
 assert(typeof shirtValue === 'string');
 ```
 
-ค่าของ `shirtValue` ควรเป็น string `jersey`
+ตัวแปร `shirtValue` ต้องเป็น string ซึ่งมีค่าเป็น `jersey`
 
 ```js
 assert(shirtValue === 'jersey');
 ```
 
 
-คุณไม่ควรใช้เครื่องหมายจุดสองครั้ง
+เวลาใช้เครื่องหมายจุด ให้จุดทีละครั้ง
 
 ```js
 assert(code.match(/testObj\.\w+/g).length > 1);
@@ -74,17 +77,17 @@ assert(code.match(/testObj\.\w+/g).length > 1);
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var testObj = {
   "hat": "ballcap",
   "shirt": "jersey",
   "shoes": "cleats"
 };
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-var hatValue = testObj;      // Change this line
-var shirtValue = testObj;    // Change this line
+var hatValue = testObj;      // แก้ไขโค้ดบรรทัดนี้
+var shirtValue = testObj;    // แก้ไขโค้ดบรรทัดนี้
 ```
 
 # --solutions--

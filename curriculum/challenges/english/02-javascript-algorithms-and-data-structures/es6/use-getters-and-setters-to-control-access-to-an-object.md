@@ -8,13 +8,13 @@ dashedName: use-getters-and-setters-to-control-access-to-an-object
 
 # --description--
 
-คุณสามารถรับค่าจาก object และกำหนด value ของ property ภายใน object
+เราสามารถอ่านและกำหนดค่าของ property ของ object ได้
 
-สิ่งเหล่านี้เรียกว่า <dfn>getters</dfn> และ <dfn>setters</dfn>.
+เราเรียกสองส่วนนี้ว่า <dfn>getter</dfn> (ตัวอ่านค่า) และ <dfn>setter</dfn> (ตัวกำหนดค่า)
 
-function Getter มีไว้เพื่อส่งคืน (get) ค่าของตัวแปร private ให้ผู้ใช้ โดยที่ผู้ใช้ไม่ต้องเข้าถึงตัวแปร private โดยตรง
+ฟังก์ชัน getter มีไว้เพื่ออ่าน (get) ค่าของตัวแปรที่เป็น private โดยที่ผู้ใช้ไม่ต้องเข้าถึงตัวแปร private โดยตรง
 
-function Setter มีไว้เพื่อแก้ไข (set) ค่าของตัวแปร private ของ object ตามค่าที่ส่งผ่านไปยังฟังก์ชัน setter การเปลี่ยนแปลงนี้อาจเกี่ยวข้องกับการคำนวณ หรือแม้แต่เขียนทับค่าก่อนหน้าทั้งหมด
+ฟังก์ชัน setter มีไว้เพื่อกำหนด (set) ค่าของตัวแปรที่เป็น private ของ object ตามค่าที่ส่งเข้าไปในฟังก์ชัน setter การใช้ setter นี้อาจทำการเปลี่ยนแปลงค่าที่ใส่เข้ามาก่อนเอาไปกำหนดให้ตัวแปร หรืออาจเอาไปกำหนดให้ตัวแปรตรงๆ เลยก็ได้
 
 ```js
 class Book {
@@ -38,26 +38,29 @@ console.log(novel.writer);
 
 console จะแสดง string `anonymous` และ `newAuthor`
 
-สังเกตว่า syntax ที่เรียกใช้ getter และ setter ไม่ได้ดูเหมือน function อย่างไรก็ตาม Getters และ setters 
-มีความสำคัญเนื่องจากมีการซ่อนรายละเอียดการใช้งานภายใน
+จะเห็นว่า syntax ที่เรียกใช้ getter และ setter จะดูเหมือนไม่ใช่ฟังก์ชัน แต่ getter และ setter 
+นั้นสำคัญเพราะว่าจะซ่อนรายละเอียดการใช้งานไว้ข้างใน
 
-**หมายเหตุ:** เป็นธรรมเนียมปฏิบัติที่เขียนขีดล่าง (`_`) นำหน้าตัวแปร private อย่างไรก็ตาม การใช้ขีดล่างไม่ได้ทำให้ตัวแปรเป็นแบบ private
+**หมายเหตุ:** ปกติแล้วจะใช้ underscore (`_`) นำหน้าตัวแปรที่เป็น private แต่การตั้งชื่อตัวแปรโดยใช้ underscore นำหน้าจะไม่ได้เป็นการทำให้ตัวแปรเป็น private
 
 # --instructions--
 
-จงใช้ keyword `class` เพื่อสร้าง class `Thermostat` โดย `constructor` จะรับอุณหภูมิฟาเรนไฮต์
+จงใช้ keyword `class` เพื่อสร้าง class `Thermostat` โดย `constructor` จะรับอุณหภูมิเป็นฟาเรนไฮต์
 
-ใน class ให้สร้าง `getter` เพื่ออ่านค่าอุณหภูมิเป็นเซลเซียส และ `setter` เพื่อตั้งอุณหภูมิเป็นเซลเซียส
+ใน class ให้สร้าง `getter` เพื่ออ่านค่าอุณหภูมิเป็นเซลเซียส และ `setter` เพื่อเก็บค่าอุณหภูมิเป็นเซลเซียส
 
-โปรดจำไว้ว่า `C = 5/9 * (F - 32)` และ `F = C * 9.0 / 5 + 32` เมื่อ `F` เป็นค่าของอุณหภูมิฟาเรนไฮต์ และ `C` เป็นค่าของอุณหภูมิเป็นเซลเซียส
+สมการในการแปลงอุณหภูมิคือ `C = 5/9 * (F - 32)` และ `F = C * 9.0 / 5 + 32` 
+โดยที่ `F` เป็นอุณหภูมิในหน่วยฟาเรนไฮต์ และ `C` เป็นอุณหภูมิในหน่วยเซลเซียส
 
-**หมายเหตุ:** เมื่อคุณทำแบบฝึกหัดนี้ คุณจะติดตามอุณหภูมิภายใน class ได้จากที่เดียว ไม่ว่าจะเป็นฟาเรนไฮต์หรือเซลเซียส
+**หมายเหตุ:** เมื่อคุณทำแบบฝึกหัดนี้ คุณจะอ่านค่าอุณหภูมิภายใน class ได้ทั้งฟาเรนไฮต์และเซลเซียสโดยใช้ข้อมูลตัวเดียว
 
-นี่คือพลังของ getter และ setter หากคุณสร้าง API ให้กับผู้ใช้รายอื่น เขาจะได้รับผลลัพธ์ที่ถูกต้อง โดยไม่สนใจว่าจะได้ค่ามาได้อย่างไร
+คุณจะเห็นศักยภาพของการใช้ getter และ setter แบบฝึกหัดนี้จะเหมือนกับการสร้าง API ให้คนอื่น คนที่มาอ่านค่าจะได้ค่าที่ถูกต้อง โดยไม่ต้องรู้ว่าได้ค่ามาได้อย่างไร
+
+การทำแบบนี้ก็จะเหมือนกับว่าคุณได้ซ่อนวิธีการทำงานของระบบคุณโดยไม่ให้คนที่มาใช้เห็นแล้ว 
 
 # --hints--
 
-`Thermostat` ควรเป็น `class` ที่ประกาศ `constructor` method
+`Thermostat` ต้องเป็น `class` ที่มีการประกาศ `constructor` method
 
 ```js
 assert(
@@ -66,14 +69,13 @@ assert(
 );
 ```
 
-ควรใช้ keyword `class` 
+ต้องใช้ keyword `class` 
 
 ```js
 assert(code.match(/class/g));
 ```
 
-`Thermostat`  ควรสามารถเป็นอินสแตนซ์
-
+ต้องใช้คำสั่ง `new` กับ `Thermostat` ได้
 
 
 ```js
@@ -85,7 +87,7 @@ assert(
 );
 ```
 
-เมื่อสร้าง instance ด้วย Fahrenheit value แล้ว `Thermostat` ควร set `temperature` ที่ถูกต้อง
+เมื่อสร้าง instance ด้วย Fahrenheit แล้ว `Thermostat` เก็บค่า `temperature` ที่ถูกต้อง
 
 ```js
 assert(
@@ -96,7 +98,7 @@ assert(
 );
 ```
 
-ควรประกาศ `getter`
+ต้องประกาศ `getter`
 
 
 ```js
@@ -111,7 +113,7 @@ assert(
 );
 ```
 
-ควรประกาศ `setter` 
+ต้องประกาศ `setter` 
 
 ```js
 assert(
@@ -125,7 +127,7 @@ assert(
 );
 ```
 
-การเรียกใช้ `setter` ด้วยค่าองศาเซลเซียส ควร set `temperature`
+การเรียกใช้ `setter` ด้วยค่าองศาเซลเซียส ควรเปลี่ยนค่า `temperature` เป็นค่าที่ระบุ
 
 ```js
 assert(
@@ -144,14 +146,14 @@ assert(
 ## --seed-contents--
 
 ```js
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 
-const thermos = new Thermostat(76); // Setting in Fahrenheit scale
-let temp = thermos.temperature; // 24.44 in Celsius
+const thermos = new Thermostat(76); // รับค่าอุณหภูมิในหน่วยองศาฟาเรนไฮต์
+let temp = thermos.temperature; // ต้องได้ค่าเป็น 24.44 องศาเซลเซียส
 thermos.temperature = 26;
-temp = thermos.temperature; // 26 in Celsius
+temp = thermos.temperature; // ต้องได้ค่าเป็น 26 องศาเซลเซียส
 ```
 
 # --solutions--
@@ -169,8 +171,8 @@ class Thermostat {
   }
 }
 
-const thermos = new Thermostat(76); // Setting in Fahrenheit scale
-let temp = thermos.temperature; // 24.44 in Celsius
+const thermos = new Thermostat(76); // รับค่าอุณหภูมิในหน่วยองศาฟาเรนไฮต์
+let temp = thermos.temperature; // ต้องได้ค่าเป็น 24.44 องศาเซลเซียส
 thermos.temperature = 26;
-temp = thermos.temperature; // 26 in Celsius
+temp = thermos.temperature; // ต้องได้ค่าเป็น 26 องศาเซลเซียส
 ```

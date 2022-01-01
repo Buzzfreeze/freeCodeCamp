@@ -8,7 +8,11 @@ dashedName: complete-a-promise-with-resolve-and-reject
 
 # --description--
 
-promise มีสามสถานะ `pending`, `fulfilled` และ `rejected` promise ที่คุณสร้างไปในบทที่แล้วจะติดอยู่ในสถานะ `pending` เพราะคุณยังไม่ได้ทำให้ promise สมบูรณ์ พารามิเตอร์ `resolve` และ `reject` ที่ให้เป็น argument ของ promise จะถูกใช้ดังนี้ `resolve` จะถุกใช้เมื่อคุณต้องการให้ promise ของคุณสำเร็จ และ `reject` จะถูกใช้เมื่อคุณต้องการให้มัน fail โดย method เหล่านี้รับค่า argument ดังที่แสดงด้านล่าง
+promise นั้นมีสามสถานะ `pending`, `fulfilled` และ `rejected` 
+promise ที่คุณสร้างไปในบทที่แล้วจะอยู่ในสถานะ `pending` เพราะคุณยังไม่ได้ทำให้ promise เสร็จสิ้น
+พารามิเตอร์ `resolve` และ `reject` ที่ให้เป็น argument ของ promise จะถูกใช้ตามนี้ 
+เราจะใช้ `resolve` ถ้าต้องการให้ promise สำเร็จ และใช้ `reject` ถ้าต้องการให้ promise นั้นล้มเหลว 
+โดย method สองตัวนี้จะรับค่า argument ตามตัวอย่างด้านล่าง:
 
 ```js
 const myPromise = new Promise((resolve, reject) => {
@@ -20,16 +24,18 @@ const myPromise = new Promise((resolve, reject) => {
 });
 ```
 
-ตัวอย่างข้างต้นใช้ strings เป็น argument ให้กับฟังก์ชันเหล่านี้ แต่จริงๆ แล้วมันสามารถเป็นอะไรก็ได้ บ่อยครั้ง อาจเป็น object ที่คุณดึงข้อมูล มาวางบนเว็บไซต์ของคุณหรือที่อื่นๆ
+ตัวอย่างด้านบนใช้ string เป็น argument ให้กับฟังก์ชันสองตัวนี้ แต่จริงๆแล้วจะเป็นอะไรก็ได้ หลายๆครั้งจะใช้ object ที่คุณดึงข้อมูลมาใช้บนเว็บไซต์ของคุณหรือดึงมาใช้ที่อื่น
 
 # --instructions--
 
 
-จงสร้าง promise เพื่อจัดการ success และ failure ถ้า `responseFromServer` เป็น `true` ให้เรียก method `resolve` เพื่อทำตาม promise ให้สำเร็จ แล้วนำ string ที่มีค่า `We got the data` ส่งเข้าไปใน `resolve` แต่หาก `responseFromServer` เป็น `false` ให้ใช้ method `reject` แทนและส่ง string : `Data not received` เข้าไป
+ให้ promise จัดการว่า promise จะสำเร็จหรือล้มเหลว 
+ถ้า `responseFromServer` เป็น `true` ให้เรียกใช้ method `resolve` เพื่อทำ promise ให้สำเร็จ โดยส่งค่า string `We got the data` เข้าไปใน `resolve` 
+แต่หาก `responseFromServer` เป็น `false` ให้ใช้ method `reject` แทนและส่ง string `Data not received` เข้าไปใน `reject`
 
 # --hints--
 
-`resolve` ควรถูกเรียกด้วย string ที่กำหนดไว้ เมื่อเงื่อนไข `if` เป็น `true`
+ต้องเรียกใช้ `resolve` ด้วย string ที่กำหนดให้ เมื่อเงื่อนไข `if` เป็น `true`
 
 ```js
 assert(
@@ -37,7 +43,7 @@ assert(
 );
 ```
 
-`reject` ควรถูกเรียกด้วย string ที่กำหนดไว้ เมื่อเงื่อนไข `if` เป็น `false`
+ต้องเรียกใช้ `reject` ด้วย string ที่กำหนดให้ เมื่อเงื่อนไข `if` เป็น `false`
 
 ```js
 assert(
@@ -51,13 +57,13 @@ assert(
 
 ```js
 const makeServerRequest = new Promise((resolve, reject) => {
-  // responseFromServer represents a response from a server
+  // ตัวแปร responseFromServer นั้นเป็นค่าที่ server ส่งกลับมาให้
   let responseFromServer;
     
   if(responseFromServer) {
-    // Change this line
+    // แก้ไขบรรทัดนี้
   } else {  
-    // Change this line
+    // แก้ไขบรรทัดนี้
   }
 });
 ```
@@ -66,7 +72,7 @@ const makeServerRequest = new Promise((resolve, reject) => {
 
 ```js
 const makeServerRequest = new Promise((resolve, reject) => {
-  // responseFromServer represents a response from a server
+  // ตัวแปร responseFromServer นั้นเป็นค่าที่ server ส่งกลับมาให้
   let responseFromServer;
 
   if(responseFromServer) {

@@ -11,9 +11,9 @@ dashedName: manipulate-arrays-with-pop
 
 อีกวิธีในการเปลี่ยนแปลงข้อมูลใน array ก็คือการใช้ฟังก์ชัน `.pop()`
 
-`.pop()` ใช้เพื่อดึงข้อมูลที่ส่วนท้ายของ array ออก เราสามารถเก็บค่าที่ดึงออกมานี้ให้กับตัวแปร กล่าวอีกนัยหนึ่งคือ `.pop()` จะลบ element สุดท้ายออกจาก array และคืนค่าเป็น element นั้น
+`.pop()` จะดึงข้อมูลตัวสุดท้ายของ array ออก แล้วเราก็สามารถเอาข้อมูลที่ดึงออกมานี้ไปให้กับตัวแปรอื่นได้ หรือจะมองว่า `.pop()` เป็นการลบ element สุดท้ายออกจาก array และคืนค่าเป็น element นั้นก็ได้
 
-รายการทุกประเภทสามารถดึงออกจาก array ได้ ไม่ว่าจะเป็น number, string, หรือแม้แต่ array ที่ซ้อนกัน
+ข้อมูลทุกประเภทสามารถดึงออกจาก array ได้ทั้งหมด ไม่ว่าจะเป็น number, string, หรือแม้แต่ array ที่ซ้อนอยู่ข้างในก็ตาม
 
 ```js
 var threeArr = [1, 4, 6];
@@ -22,15 +22,15 @@ console.log(oneDown);
 console.log(threeArr);
 ```
 
-`console.log` ครั้งแรกจะแสดงค่า `6` และครั้งแรกสองจะแสดงค่า `[1, 4]`
+การ `console.log` ครั้งแรกจะแสดงค่า `6` ออกมา และครั้งที่สองจะแสดงค่า `[1, 4]` ออกมา
 
 # --instructions--
 
-จงใช้ฟังก์ชัน `.pop()` เพื่อลบรายการสุดท้ายออกจาก `myArray` โดยนำ element ที่ดึงออกมากำหนดค่าให้กับ `removedFromMyArray`
+จงใช้ฟังก์ชัน `.pop()` เพื่อลบข้อมูลสุดท้ายออกจากตัวแปร `myArray` แล้วนำ element ที่ดึงออกมา มากำหนดค่าให้กับตัวแปร `removedFromMyArray`
 
 # --hints--
 
-`myArray` ควรมี `[["John", 23]]` เท่านั้น
+ตัวแปร `myArray` ควรมีค่าเป็น `[["John", 23]]` เท่านั้น
 
 ```js
 assert(
@@ -44,13 +44,13 @@ assert(
 );
 ```
 
-คุณควรใช้ `pop()` กับ `myArray`
+คุณต้องใช้ `pop()` กับตัวแปร `myArray`
 
 ```js
 assert(/removedFromMyArray\s*=\s*myArray\s*.\s*pop\s*(\s*)/.test(code));
 ```
 
-`removedFromMyArray` ควรมี `["cat", 2]` เท่านั้น
+ตัวแปร `removedFromMyArray` ต้องมีข้อมูลข้างในเป็น `["cat", 2]` เท่านั้น
 
 ```js
 assert(
@@ -75,10 +75,10 @@ assert(
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var myArray = [["John", 23], ["cat", 2]];
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 var removedFromMyArray;
 ```
 

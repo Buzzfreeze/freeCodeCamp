@@ -9,7 +9,7 @@ dashedName: delete-properties-from-a-javascript-object
 
 # --description--
 
-เรายังสามารถลบ property ออกจาก object ได้ดังนี้
+เรายังสามารถลบ property ออกจาก object ได้โดยใช้วิธีนี้:
 
 ```js
 delete ourDog.bark;
@@ -29,7 +29,7 @@ var ourDog = {
 delete ourDog.bark;
 ```
 
-หลังจากบรรทัดสุดท้ายด้านบน `ourDog` จะมีหน้าตาดังนี้
+หลังจากบรรทัดสุดท้ายด้านบน `ourDog` จะมีข้อมูลตามนี้
 
 ```js
 {
@@ -42,7 +42,7 @@ delete ourDog.bark;
 
 # --instructions--
 
-จงลบ property `tails` ออกจาก `myDog` คุณอาจใช้เครื่องหมายจุด หรือวงเล็บ
+จงลบ property `tails` ออกจาก `myDog` โดยคุณจะใช้ Dot Notation หรือ Bracket Notation ก็ได้
 
 # --hints--
 
@@ -52,7 +52,7 @@ delete ourDog.bark;
 assert(typeof myDog === 'object' && myDog.tails === undefined);
 ```
 
-คุณไม่ควรแก้ไข `myDog` 
+คุณไม่ควรแก้ไข `myDog`  ในส่วนการเตรียมข้อมูล
 
 ```js
 assert(code.match(/"tails": 1/g).length > 0);
@@ -69,7 +69,7 @@ assert(code.match(/"tails": 1/g).length > 0);
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var myDog = {
   "name": "Happy Coder",
   "legs": 4,
@@ -78,7 +78,7 @@ var myDog = {
   "bark": "woof"
 };
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

@@ -9,7 +9,7 @@ dashedName: replacing-if-else-chains-with-switch
 
 # --description--
 
-หากคุณมีหลายตัวเลือกให้เลือก `switch` statement จะสามารถเขียนได้ง่ายกว่า `if`/`else if` statements หลายชุด ดังตัวอย่างต่อไปนี้:
+ในบางกรณี การเขียนคำสั่ง `switch` จะสามารถเขียนได้ง่ายกว่าการเขียน `if`/`else if` เชื่อมกันหลายๆ ชุด เช่นตัวอย่างด้านล่างนี้:
 
 ```js
 if (val === 1) {
@@ -21,7 +21,7 @@ if (val === 1) {
 }
 ```
 
-สามารถเขียนแทนด้วย
+จะสามารถเขียนด้วย `switch` ได้เป็น:
 
 ```js
 switch(val) {
@@ -38,65 +38,65 @@ switch(val) {
 
 # --instructions--
 
-จงแก้ชุดคำสั่ง `if`/`else if` ให้เป็นคำสั่ง `switch` 
+จงเปลี่ยนคำสั่ง `if`/`else if` ให้เป็นคำสั่ง `switch` 
 
 # --hints--
 
-คุณไม่ควรใช้คำสั่ง `else` เลยใน editor
+ห้ามใช้คำสั่ง `else`
 
 ```js
 assert(!/else/g.test(code));
 ```
 
-คุณไม่ควรใช้คำสั่ง `if`  เลยใน editor
+ห้ามใช้คำสั่ง `if`
 
 ```js
 assert(!/if/g.test(code));
 ```
 
-คุณควรมีคำสั่ง `break` อย่างน้อยสี่คำสั่ง
+ต้องใช้คำสั่ง `break` อย่างน้อยสี่ครั้งในโค้ด
 
 ```js
 assert(code.match(/break/g).length >= 4);
 ```
 
-`chainToSwitch("bob")` ควรคืนค่า string `Marley`
+การเรียกใช้ฟังก์ชัน `chainToSwitch("bob")` ต้องคืนค่าออกมาเป็น string `Marley`
 
 ```js
 assert(chainToSwitch('bob') === 'Marley');
 ```
 
-`chainToSwitch(42)` ควรคืนค่า string `The Answer`
+การเรียกใช้ฟังก์ชัน `chainToSwitch(42)` ต้องคืนค่าออกมาเป็น string `The Answer`
 
 ```js
 assert(chainToSwitch(42) === 'The Answer');
 ```
 
-`chainToSwitch(1)` ควรคืนค่า string `There is no #1`
+การเรียกใช้ฟังก์ชัน `chainToSwitch(1)` ต้องคืนค่าออกมาเป็น string `There is no #1`
 
 ```js
 assert(chainToSwitch(1) === 'There is no #1');
 ```
 
-`chainToSwitch(99)` ควรคืนค่า string `Missed me by this much!`
+การเรียกใช้ฟังก์ชัน `chainToSwitch(99)` ต้องคืนค่าออกมาเป็น string `Missed me by this much!`
 
 ```js
 assert(chainToSwitch(99) === 'Missed me by this much!');
 ```
 
-`chainToSwitch(7)` ควรคืนค่า string `Ate Nine`
+การเรียกใช้ฟังก์ชัน `chainToSwitch(7)` ต้องคืนค่าออกมาเป็น string `Ate Nine`
 
 ```js
 assert(chainToSwitch(7) === 'Ate Nine');
 ```
 
-`chainToSwitch("John")` ควรเป็น `""` (string เปล่า)
+การเรียกใช้ฟังก์ชัน `chainToSwitch("John")` ต้องคืนค่าออกมาเป็น `""` (string เปล่า)
 
 ```js
 assert(chainToSwitch('John') === '');
 ```
 
-`chainToSwitch(156)` ควรเป็น `""` (string เปล่า)
+การเรียกใช้ฟังก์ชัน `chainToSwitch(156)` ต้องคืนค่าออกมาเป็น `""` (string เปล่า)
 
 ```js
 assert(chainToSwitch(156) === '');
@@ -109,7 +109,7 @@ assert(chainToSwitch(156) === '');
 ```js
 function chainToSwitch(val) {
   var answer = "";
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
   if (val === "bob") {
     answer = "Marley";
@@ -123,7 +123,7 @@ function chainToSwitch(val) {
     answer = "Ate Nine";
   }
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
   return answer;
 }
 

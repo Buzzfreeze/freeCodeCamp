@@ -8,12 +8,12 @@ dashedName: create-an-export-fallback-with-export-default
 
 # --description--
 
-ในบทเรียน `export` คุณได้เรียนรู้เกี่ยวกับ syntax ที่เรียกว่า <dfn>named export</dfn> ซึ่งทำให้คุณสามารถoeฟังก์ชันและตัวแปรต่างๆ มาใช้กับไฟล์อื่นๆ ได้
+ในบทเรียนเรื่อง `export` ที่ผ่านมา เราได้เรียน syntax ที่เรียกว่า <dfn>named export</dfn> ซึ่งทำให้เราใช้ฟังก์ชันและตัวแปรต่างๆ ในไฟล์อื่นได้
 
-ยังมี `export` syntax อีกแบบที่คุณควรทราบ ซึ่งรู้จักกันในชื่อ <dfn>export default</dfn>
-โดยปกติ คุณจะใช้ syntax นี้หากมีการส่งออกเพียงค่าเดียวจากไฟล์ นอกจากนี้ยังใช้เพื่อสร้างค่า fallback สำหรับไฟล์หรือโมดูล
+แต่ยังมี `export` syntax อีกแบบที่ควรรู้ ซึ่งเรียกว่า <dfn>export default</dfn>
+โดยปกติเราจะใช้ syntax นี้ถ้ามีการ export ค่าแค่ค่าเดียว นอกจากนี้ยังใช้เพื่อเป็น fallback สำหรับไฟล์หรือโมดูล
 
-ตัวอย่างด้านล่างใช้ `export default`
+ตัวอย่างการใช้ `export default`:
 
 ```js
 export default function add(x, y) {
@@ -25,17 +25,17 @@ export default function(x, y) {
 }
 ```
 
-ฟังก์ชันแรกคือ named function และฟังก์ชันที่สองคือ anonymous function
+อันแรกเป็น named function และอันที่สองเป็น anonymous function
 
-เนื่องจาก `export default` ใช้เพื่อประกาศค่า fallback สำหรับโมดูลหรือไฟล์ คุณจึงมี default export ได้เพียงอันเดียวในแต่ละโมดูลหรือไฟล์ นอกจากนี้ คุณไม่สามารถใช้ `export default` กับ `var`, `let` หรือ `const`
+เนื่องจาก `export default` ใช้เพื่อเป็น fallback เราจึงมี default export ได้เพียงอันเดียวในแต่ละโมดูลหรือไฟล์ แล้วเราก็ไม่สามารถใช้ `export default` กับ `var`, `let` หรือ `const` ได้
 
 # --instructions--
 
-function ต่อไปนี้ควรมีค่า fallback ในโมดูล จงเพิ่มโค้ดที่จำเป็นต้องใช้
+ฟังก์ชันต่อไปนี้ต้องเป็น fallback ของโมดูล จงเพิ่มโค้ดที่จำเพื่อทำให้ฟังก์ชันนี้เป็น fallback
 
 # --hints--
 
-โค้ดของคุณควรใช้ `export` fallback
+โค้ดของคุณควรใช้ `export` สำหรับการ fallback
 
 ```js
 assert(

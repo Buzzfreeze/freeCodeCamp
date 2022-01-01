@@ -8,9 +8,9 @@ dashedName: use-arrow-functions-to-write-concise-anonymous-functions
 
 # --description--
 
-ใน JavaScript เราไม่จำเป็นต้องตั้งชื่อฟังก์ชันของเรา โดยเฉพาะอย่างยิ่งเมื่อส่งฟังก์ชันเป็น argument ไปยังฟังก์ชันอื่น แต่เราสร้าง inline functions แทน เราไม่จำเป็นต้องตั้งชื่อฟังก์ชันเหล่านี้เพราะเราไม่ได้นำกลับมาใช้ใหม่จากที่อื่น
+ใน JavaScript เราไม่จำเป็นต้องตั้งชื่อฟังก์ชันของเราเสมอไป โดยถ้าเราจะส่งฟังก์ชันนี้เป็น argument ไปยังฟังก์ชันอื่น ในกรณีนี้เราจะสร้างเป็น inline function แทน เราไม่จำเป็นต้องตั้งชื่อฟังก์ชันนี้เพราะเราจะไม่ได้เอาฟังก์ชันนี้ไปใช้ที่อื่นอีกแล้ว
 
-เพื่อทำสิ่งเรานี้ เราจะต้องใช้ syntax ดังนี้
+ในการสร้างฟังก์ชันแบบนี้ เราจะใช้ syntax ตามนี้:
 
 ```js
 const myFunc = function() {
@@ -19,7 +19,7 @@ const myFunc = function() {
 }
 ```
 
-ES6 เสนอรูปแบบ anonymous function ที่ง่ายกว่าเดิมโดยการใช้ **arrow function syntax**
+ใน ES6 จะใช้ anonymous function ได้ง่ายกว่าเดิมโดยการใช้ **arrow function syntax**
 
 
 ```js
@@ -29,46 +29,46 @@ const myFunc = () => {
 }
 ```
 
-เมื่อไม่มี function body และมีเพียงการคืนค่า ดังนั้น arrow function อนุญาตให้คุณไม่ต้องมี keyword `return` เช่นเดียวกับวงเล็บที่ล้อมรอบโค้ด ซึ่งช่วยลดความซับซ้อนของฟังก์ชันขนาดเล็ก เพราะสามารถเขียนด้วยคำสั่งบรรทัดเดียว:
+ถ้าฟังก์ชันของเราทำแค่การคืนค่าอย่างเดียว arrow function จะยอมไม่ต้องใส่คำว่า `return` และปีกกา (`{}`) ได้ ซึ่งจะลดความซับซ้อนของฟังก์ชันเล็กๆ ได้ แล้วเราจะเขียนฟังก์ชันให้อยู่ในบรรทัดเดียวได้ตามนี้:
 
 ```js
 const myFunc = () => "value";
 ```
 
-โค้ดนี้จะคืนค่า string `value` by default
+โค้ดนี้จะคืนค่าเป็น string `value`
 
 # --instructions--
 
-จงปรับแก้ฟังก์ชันที่กำหนดค่าให้กับตัวแปร `magic` ซึ่งคืนค่าเป็น `new Date()` โดยใช้ arrow function นอกจากนี้ให้ตรวจสอบว่าไม่มีการกำหนด keyword `var` ในฟังก์ชัน
+จงเปลี่ยนฟังก์ชันของตัวแปร `magic` ที่คืนค่าเป็น `new Date()` โดยให้เปลี่ยนไปใช้ arrow function แล้วก็ห้ามใช้ `var` ในโค้ดด้วย
 
 
 # --hints--
 
-คุณควรแทนที่ keyword `var`
+ต้องเปลี่ยน `var` เป็น keyword อื่น
 
 ```js
 (getUserInput) => assert(!getUserInput('index').match(/var/g));
 ```
 
-`magic` ควรเป็นตัวแปรคงที่ (โดยใช้ `const` )
+`magic` ต้องเป็นตัวแปรคงที่ (ประกาศโดยใช้ `const` )
 
 ```js
 (getUserInput) => assert(getUserInput('index').match(/const\s+magic/g));
 ```
 
-`magic` ควรเป็น `function`
+`magic` ต้องเป็น `function`
 
 ```js
 assert(typeof magic === 'function');
 ```
 
-`magic()` ควรคืนค่าวันที่ที่ถูกต้อง
+`magic()` ต้องคืนค่าเป็นวันที่ที่ถูกต้อง
 
 ```js
 assert(magic().setHours(0, 0, 0, 0) === new Date().setHours(0, 0, 0, 0));
 ```
 
-keyword `function` ไม่ควรถูกใช้
+ต้องไม่ใช้ keyword `function` 
 
 ```js
 (getUserInput) => assert(!getUserInput('index').match(/function/g));

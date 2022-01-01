@@ -8,21 +8,22 @@ dashedName: import-a-default-export
 
 # --description--
 
-ในบทเรียนที่แล้ว คุณได้เรียนรู้เกี่ยวกับ `export default` และการใช้งาน อย่างไรก็ตาม ในการนำเข้า default export คุณต้องใช้ syntax `import` ที่ต่างออกไป ในตัวอย่างต่อไปนี้ `add` คือ default export ของไฟล์ `math_functions.js` นี่คือวิธีการนำเข้า:
+ในบทเรียนที่แล้ว เราได้เรียนเรื่อง `export default` และการใช้งานไป แต่ในการ import ตัว default export เราต้องเปลี่ยน syntax `import` 
+ในตัวอย่างด้านล่าง เรามี `add` เป็น default export ของไฟล์ `math_functions.js` แล้วเราจะ import ฟังก์ชันนี้ได้ตามนี้:
 
 ```js
 import add from "./math_functions.js";
 ```
 
-syntax มีความต่างกันที่เดียว กล่าวคือ ค่า import `add` ไม่ได้ล้อมรอบด้วยวงเล็บปีกกา (`{}`) แต่ `add` เป็นเพียงชื่อตัวแปรสำหรับ default export ของไฟล์ `math_functions.js` คุณสามารถใช้ชื่อใดก็ได้ที่นี่เมื่อนำเข้า default
+syntax ของการ import แบบนี้จะไม่ได้ครอบ `add` ปีกกา (`{}`) และ `add` เป็นแค่ชื่อตัวแปรสำหรับ default export ของไฟล์ `math_functions.js` ซึ่งการ default import นั้นเราสามารถตั้งชื่อตัวแปรเป็นชื่ออะไรก็ได้
 
 # --instructions--
 
-ในโค้ดต่อไปนี้ จง import default export จากไฟล์ `math_functions.js` ซึ่งอยู่ในไดเรกทอรีเดียวกันกับไฟล์นี้ โดยให้ตั้งชื่อการนำเข้าเป็น `subtract`
+ในโค้ดต่อไปนี้ จง import ตัว default export จากไฟล์ `math_functions.js` ซึ่งอยู่ในโฟลเดอร์เดียวกันกับไฟล์นี้ โดยให้ตั้งชื่อตัวแปรที่ import เข้ามาเป็น `subtract`
 
 # --hints--
 
-คุณควร import `subtract` จาก `math_functions.js` อย่างเหมาะสม
+ต้อง import `subtract` จาก `math_functions.js` เข้ามาให้ถูกต้อง
 
 ```js
 assert(code.match(/import\s+subtract\s+from\s+('|")\.\/math_functions\.js\1/g));
@@ -34,7 +35,7 @@ assert(code.match(/import\s+subtract\s+from\s+('|")\.\/math_functions\.js\1/g));
 
 ```js
   
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 
 subtract(7,4);
 ```

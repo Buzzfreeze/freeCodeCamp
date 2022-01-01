@@ -8,11 +8,11 @@ dashedName: match-numbers-and-letters-of-the-alphabet
 
 # --description--
 
-การใช้ hyphen (`-`) เพื่อ match ช่วงตัวอักษร ไม่จำกัดการใช้เฉพาะตัวอักษรเท่านั้น แต่ยังใช้กับช่วงตัวเลขได้ด้วย
+การใช้ hyphen (`-`) เพื่อ match ช่วงของตัวอักษร จะใช้กับช่วงตัวเลขได้ด้วย
 
-ตัวอย่างเช่น `/[0-5]/` match กับตัวเลขที่อยู่ระหว่าง `0` และ `5` รวมถึง `0` และ `5` ด้วย
+เช่น ถ้าเราใช้ `/[0-5]/` จะ match กับตัวเลขที่อยู่ตั้งแต่ `0` ถึง `5` ซึ่งจะ match กับ `0` และ `5` ด้วย
 
-นอกจากนี้ เรายังสามารถรวมช่วงตัวอักษรและช่วงตัวเลขให้อยู่ใน character set เดียวกันได้ด้วย
+นอกจากนี้ เรายังสามารถรวมช่วงของตัวอักษรและช่วงของตัวเลขให้อยู่ใน character set เดียวกันได้ด้วย
 
 ```js
 let jennyStr = "Jenny8675309";
@@ -22,23 +22,23 @@ jennyStr.match(myRegex);
 
 # --instructions--
 
-จงสร้าง regex ที่ match กับช่วงตัวอักษรระหว่าง `h` และ `s` และช่วงตัวเลขระหว่าง `2` และ `6` โดยสามารถเพิ่ม flag ที่เหมาะสมใน regex ได้
+จงสร้าง regex ที่ match กับช่วงตัวอักษรตั้งแต่ `h` ถึง `s` และช่วงตัวเลขตั้งแต่ `2` ถึง `6` อย่าลืมใส่ flag ใน regex ด้วย
 
 # --hints--
 
-regex `myRegex` ควร match 17 items
+regex `myRegex` ต้องเจอทั้งหมด 35 ตัวอักษร
 
 ```js
 assert(result.length == 17);
 ```
 
-regex `myRegex` ควรใช้ global flag
+regex `myRegex` ต้องใช้ flag global (`g`)
 
 ```js
 assert(myRegex.flags.match(/g/).length == 1);
 ```
 
-regex `myRegex` ควรใช้ case insensitive flag
+regex `myRegex` ต้องใช้ flag case insensitive (`i`)
 
 ```js
 assert(myRegex.flags.match(/i/).length == 1);
@@ -50,14 +50,14 @@ assert(myRegex.flags.match(/i/).length == 1);
 
 ```js
 let quoteSample = "Blueberry 3.141592653s are delicious.";
-let myRegex = /change/; // Change this line
-let result = myRegex; // Change this line
+let myRegex = /change/; // แก้บรรทัดนี้
+let result = myRegex; // แก้บรรทัดนี้
 ```
 
 # --solutions--
 
 ```js
 let quoteSample = "Blueberry 3.141592653s are delicious.";
-let myRegex = /[h-s2-6]/gi; // Change this line
-let result = quoteSample.match(myRegex); // Change this line
+let myRegex = /[h-s2-6]/gi; // แก้บรรทัดนี้
+let result = quoteSample.match(myRegex); // แก้บรรทัดนี้
 ```

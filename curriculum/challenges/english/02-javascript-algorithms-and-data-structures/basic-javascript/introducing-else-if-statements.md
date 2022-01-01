@@ -9,8 +9,9 @@ dashedName: introducing-else-if-statements
 
 # --description--
 
-ถ้าคุณมีเงื่อนไขหลายๆ เงื่อนไขที่ต้องเช็ค คุณสามารถใช้คำสั่ง `if` ต่อเนื่องกัน ด้วยคำสั่ง `else if`
+ถ้าเราต้องตรวจสอบเงื่อนไขหลายๆ อัน เราสามารถเชื่อมคำสั่ง `if` ให้ต่อเนื่องกันได้ด้วยคำสั่ง `else if`
 
+ลองดูและทำความเข้าใจตัวอย่างด้านล่าง:
 
 ```js
 if (num > 15) {
@@ -25,25 +26,25 @@ if (num > 15) {
 # --instructions--
 
 
-จงเปลี่ยน logic ไปใช้คำสั่ง `else if`
+จงเปลี่ยนโค้ดไปใช้คำสั่ง `else if`
 
 # --hints--
 
 
 
-คุณควรมีคำสั่ง `else` อย่างน้อยสองคำสั่ง
+ต้องใช้คำสั่ง `else` อย่างน้อยสองครั้งในโค้ด
 
 ```js
 assert(code.match(/else/g).length > 1);
 ```
 
-คุณควรมีคำสั่ง `if` อย่างน้อยสองคำสั่ง
+ต้องใช้คำสั่ง `if` อย่างน้อยสองครั้งในโค้ด
 
 ```js
 assert(code.match(/if/g).length > 1);
 ```
 
-คุณควรมีวงเล็บปีกกาเปิดและปิดสำหรับแต่ละคำสั่ง `if else` 
+ต้องมีวงเล็บปีกกา (`{}`) ทั้งเปิดและปิดสำหรับคำสั่ง `if else` แต่ละตัว
 
 ```js
 assert(
@@ -53,31 +54,31 @@ assert(
 );
 ```
 
-`testElseIf(0)` ควรคืนค่า string  `Smaller than 5`
+การเรียกใช้ฟังก์ชัน `testElseIf(0)` ต้องคืนค่าออกมาเป็น string  `Smaller than 5`
 
 ```js
 assert(testElseIf(0) === 'Smaller than 5');
 ```
 
-`testElseIf(5)` ควรคืนค่า string  `Between 5 and 10`
+การเรียกใช้ฟังก์ชัน `testElseIf(5)` ต้องคืนค่าออกมาเป็น string  `Between 5 and 10`
 
 ```js
 assert(testElseIf(5) === 'Between 5 and 10');
 ```
 
-`testElseIf(7)` ควรคืนค่า string  `Between 5 and 10`
+การเรียกใช้ฟังก์ชัน `testElseIf(7)` ต้องคืนค่าออกมาเป็น string  `Between 5 and 10`
 
 ```js
 assert(testElseIf(7) === 'Between 5 and 10');
 ```
 
-`testElseIf(10)` ควรคืนค่า string  `Between 5 and 10`
+การเรียกใช้ฟังก์ชัน `testElseIf(10)` ต้องคืนค่าออกมาเป็น string  `Between 5 and 10`
 
 ```js
 assert(testElseIf(10) === 'Between 5 and 10');
 ```
 
-`testElseIf(12)` ควรคืนค่า string  `Greater than 10`
+การเรียกใช้ฟังก์ชัน `testElseIf(12)` ต้องคืนค่าออกมาเป็น string  `Greater than 10`
 
 ```js
 assert(testElseIf(12) === 'Greater than 10');
@@ -90,14 +91,14 @@ assert(testElseIf(12) === 'Greater than 10');
 ```js
 function testElseIf(val) {
   if (val > 10) {
-    return "Greater than 10";
+    return "Greater than 10"; // มากกว่า 10
   }
 
   if (val < 5) {
-    return "Smaller than 5";
+    return "Smaller than 5"; // น้อยกว่า 10
   }
 
-  return "Between 5 and 10";
+  return "Between 5 and 10"; // อยู่ระหว่าง 5 และ 10
 }
 
 testElseIf(7);

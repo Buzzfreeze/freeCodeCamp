@@ -9,10 +9,10 @@ dashedName: understanding-undefined-value-returned-from-a-function
 
 # --description--
 
-ฟังก์ชันสามารถมี `return` statement ได้ แต่ก็ไม่จำเป้นต้องมี ในกรณีที่ฟังก์ชันไม่มี `return` statement เมื่อเราเรียกฟังก์ชันนี้ จะมีประมวลผลโค้ดภายใน และคืนค่า `undefined` ออกมา
+ฟังก์ชันสามารถมีหรือไม่มี `return` statement ก็ได้ แต่ในกรณีที่ฟังก์ชันไม่มี `return` statement เมื่อเราเรียกใช้ฟังก์ชันนี้ ฟังก์ชันจะทำประมวลผลภายใน และคืนค่าออกมาเป็น `undefined`
 
 
-**Example**
+**ตัวอย่าง**
 
 ```js
 var sum = 0;
@@ -22,34 +22,34 @@ function addSum(num) {
 addSum(3);
 ```
 
-`addSum` เป็นฟังก์ชันที่ไม่่มี `return` statement ฟังก์ชันนี้จะเปลี่ยนค่าตัวแปร global `sum` แต่คืนค่าเป็น `undefined`
+ฟังก์ชัน `addSum` เป็นฟังก์ชันที่ไม่่มี `return` statement ฟังก์ชันนี้จะเปลี่ยนค่าตัวแปร `sum` ในระดับ global แต่คืนค่าออกมาเป็น `undefined`
 
 # --instructions--
 
-จงสร้างฟังก์ชัน `addFive` ที่ไม่มี argument โดยฟังก์ชันนี้จะนำ 5 ไปบวกให้กับตัวแปร `sum` แต่คืนค่าเป็น `undefined`
+จงสร้างฟังก์ชันชื่อ `addFive` ที่ไม่มี argument โดยฟังก์ชันนี้จะนำ 5 ไปบวกให้กับตัวแปร `sum` แต่จะคืนค่าออกมาเป็น `undefined`
 
 # --hints--
 
-`addFive` ควรเป็นฟังก์ชัน
+`addFive` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof addFive === 'function');
 ```
 
-เมื่อทั้งสองฟังก์ชันรัน `sum` ควรเท่ากับ `8`
+เมื่อทั้งสองฟังก์ชันทำงาน ตัวแปร `sum` ควรมีค่าเท่ากับ `8`
 
 ```js
 assert(sum === 8);
 ```
 
-ค่าที่คืนจาก `addFive` ควรเป็น `undefined`
+ค่าที่คืนออกมาจากฟังก์ชัน `addFive` ควรเป็น `undefined`
 
 
 ```js
 assert(addFive() === undefined);
 ```
 
-ภายในฟังก์ชัน `addFive` คุณควรบวก `5` กับตัวแปร `sum`
+ภายในฟังก์ชัน `addFive` คุณต้องนำตัวแปร `sum` มาบวก `5`
 
 ```js
 assert(
@@ -62,17 +62,17 @@ assert(
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var sum = 0;
 
 function addThree() {
   sum = sum + 3;
 }
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 
 addThree();
 addFive();

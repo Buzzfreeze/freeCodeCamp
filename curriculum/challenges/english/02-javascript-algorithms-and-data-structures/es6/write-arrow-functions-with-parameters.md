@@ -8,49 +8,49 @@ dashedName: write-arrow-functions-with-parameters
 
 # --description--
 
-เช่นเดียวกับฟังก์ชันปกติ คุณสามารถส่งผ่าน arguments ไปยัง arrow function ได้
+คุณสามารถทำให้ arrow function รับ argument เหมือนฟังก์ชันปกติได้
 
 ```js
 const doubler = (item) => item * 2;
 doubler(4);
 ```
 
-`doubler(4)` จะคืนค่า `8`
+จากตัวอย่าง `doubler(4)` จะคืนค่ามาเป็น `8`
 
-ถ้า arrow function มี parameter เดียว วงเล็บรอบ parameter อาจไม่ต้องมีก็ได้
+ถ้า arrow function มี parameter เดียว จะไม่ใส่วงเล็บรอบ parameter ก็ได้
 
 ```js
 const doubler = item => item * 2;
 ```
 
-เป็นไปได้ที่จะส่งผ่าน argument มากกว่าหนึ่งค่าเข้าไปยัง arrow function
+เราจะส่ง argument มากกว่าหนึ่งตัวเข้าไปยัง arrow function ก็ได้
 
 ```js
 const multiplier = (item, multi) => item * multi;
 multiplier(4, 2);
 ```
 
-`multiplier(4, 2)` จะคืนค่า `8`
+จากตัวอย่าง `multiplier(4, 2)` จะคืนค่ามาเป็น `8`
 
 # --instructions--
 
-จงปรับแก้ฟังก์ชัน `myConcat` ซึ่งนำ `arr2` มาต่อท้าย `arr1` โดยใช้ arrow function
+จงเปลี่ยนให้ฟังก์ชัน `myConcat` ซึ่งจะนำ `arr2` มาต่อท้าย `arr1` ให้กลายเป็น arrow function
 
 # --hints--
 
-คุณควรแทนที่ keyword `var`
+ต้องไม่ใช้ keyword `var`
 
 ```js
 (getUserInput) => assert(!getUserInput('index').match(/var/g));
 ```
 
-`myConcat` ควรเป็นตัวแปรคงที่ (โดยใช้ `const` )
+`myConcat` ต้องเป็นตัวแปรคงที่ (ประกาศโดยใช้ `const` )
 
 ```js
 (getUserInput) => assert(getUserInput('index').match(/const\s+myConcat/g));
 ```
 
-`myConcat` ควรเป็น arrow function ที่มีสอง parameter
+`myConcat` ต้องเป็น arrow function ที่รับ parameter สองตัว
 
 ```js
 assert(
@@ -59,13 +59,13 @@ assert(
 );
 ```
 
-`myConcat()` ควรได้ผลลัพธ์ `[1, 2, 3, 4, 5]`
+การเรียกใช้ฟังก์ชัน `myConcat()` ต้องคืนค่าออกมาเป็น `[1, 2, 3, 4, 5]`
 
 ```js
 assert.deepEqual(myConcat([1, 2], [3, 4, 5]), [1, 2, 3, 4, 5]);
 ```
 
-ไม่ควรใช้ keyword `function` 
+ต้องไม่ใช้ keyword `function` 
 
 ```js
 (getUserInput) => assert(!getUserInput('index').match(/function/g));

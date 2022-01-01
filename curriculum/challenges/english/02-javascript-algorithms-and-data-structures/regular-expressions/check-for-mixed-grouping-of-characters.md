@@ -8,11 +8,11 @@ dashedName: check-for-mixed-grouping-of-characters
 
 # --description--
 
-บางกรณีเราต้องการเช็คกลุ่มของตัวอักษรด้วย Regular Expression ซึ่งสามารถทำได้ โดยการใช้วงเล็บ `()`
+ถ้าเราอยากใช้ Regular Expression เพื่อเช็คกลุ่มอักษรที่วางเรียงกันอยู่ เราจะใช้วงเล็บ `()` ในการเช็ค
 
-ถ้าคุณต้องการค้นหาคำว่า `Penguin` หรือ `Pumpkin` ใน string คุณสามารถใช้ Regular Expression: `/P(engu|umpk)in/g`
+เช่น ถ้าเราอยากหาคำว่า `Penguin` หรือ `Pumpkin` ใน string เราจะใช้ regex `/P(engu|umpk)in/g` ได้
 
-จากนั้น ตรวจสอบว่ากลุ่ม string ที่ต้องการหาอยู่ใน string ทดสอบหรือไม่ โดยการใช้ `test()` method
+แล้วเราก็จะดูได้ว่า match หรือไม่โดยใช้ method `test()` เหมือนเดิม
 
 ```js
 let testStr = "Pumpkin";
@@ -20,51 +20,51 @@ let testRegex = /P(engu|umpk)in/;
 testRegex.test(testStr);
 ```
 
-`test` method ในที่นี้ควรคืนค่า `true`
+จากตัวอย่างด้านบน method `test` จะคืนค่ามาเป็น `true`
 
 # --instructions--
 
-จงปรับแก้ regex เพื่อให้ match กับชื่อ `Franklin Roosevelt` หรือ `Eleanor Roosevelt` แบบ case sensitive โดยให้มีชื่อกลางได้ (middle name)
+ให้เปลี่ยน regex ให้ match ทั้งชื่อ `Franklin Roosevelt` และ `Eleanor Roosevelt` แบบ case sensitive โดยจะอนุญาตให้มีชื่อกลางได้
 
-จากนั้นให้ปรับแก้โค้ด เพื่อให้ regex ที่คุณสร้าง เช็ค `myString` แล้วคืนค่า `true` หรือ `false` ทั้งนี้ขึ้นกับ regex ว่า match หรือไม่
+แล้วให้แก้โค้ด เพื่อให้ regex ที่คุณสร้าง เช็ค `myString` แล้วคืนค่า `true` หรือ `false` ตามผลลัพธ์ในการ match regex
 
 # --hints--
 
-regex ของคุณ `myRegex` ควรคืนค่า `true` สำหรับ string `Franklin D. Roosevelt`
+เมื่อ `test` regex `myRegex` กับ string `Franklin D. Roosevelt` ต้องได้ค่าเป็น `true`
 
 ```js
 myRegex.lastIndex = 0;
 assert(myRegex.test('Franklin D. Roosevelt'));
 ```
 
-regex ของคุณ `myRegex` ควรคืนค่า `true` สำหรับ string `Eleanor Roosevelt`
+เมื่อ `test` regex `myRegex` กับ string `Eleanor Roosevelt` ต้องได้ค่าเป็น `true`
 
 ```js
 myRegex.lastIndex = 0;
 assert(myRegex.test('Eleanor Roosevelt'));
 ```
 
-regex ของคุณ `myRegex` ควรคืนค่า `false` สำหรับ string `Franklin Rosevelt`
+เมื่อ `test` regex `myRegex` กับ string `Franklin Rosevelt`  ต้องได้ค่าเป็น`false`
 
 ```js
 myRegex.lastIndex = 0;
 assert(!myRegex.test('Franklin Rosevelt'));
 ```
 
-regex ของคุณ `myRegex` ควรคืนค่า `false` สำหรับ string `Frank Roosevelt`
+เมื่อ `test` regex `myRegex` กับ string `Frank Roosevelt`  ต้องได้ค่าเป็น`false`
 
 ```js
 myRegex.lastIndex = 0;
 assert(!myRegex.test('Frank Roosevelt'));
 ```
 
-คุณควรใช้ `.test()` เพื่อทดสอบ regex
+ต้องใช้ method `.test()` เพื่อตรวจสอบ regex
 
 ```js
 assert(code.match(/myRegex.test\(\s*myString\s*\)/));
 ```
 
-ผลลัพธ์ของคุณควรเป็น `true`
+`result` ต้องมีค่าเป็น `true`
 
 ```js
 assert(result === true);
@@ -76,9 +76,9 @@ assert(result === true);
 
 ```js
 let myString = "Eleanor Roosevelt";
-let myRegex = /False/; // Change this line
-let result = false; // Change this line
-// After passing the challenge experiment with myString and see how the grouping works
+let myRegex = /False/; // แก้บรรทัดนี้
+let result = false; // แก้บรรทัดนี้
+// ถ้าผ่านบทเรียนนี้แล้วให้ลองเล่นกับโค้ดชุดนี้ดู เพื่อให้เข้าใจมากขึ้นว่าการใช้กลุ่มตัวอักษรทำงานอย่างไร
 ```
 
 # --solutions--

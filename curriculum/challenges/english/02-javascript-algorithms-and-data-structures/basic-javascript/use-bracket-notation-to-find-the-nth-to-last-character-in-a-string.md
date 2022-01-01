@@ -9,35 +9,35 @@ dashedName: use-bracket-notation-to-find-the-nth-to-last-character-in-a-string
 
 # --description--
 
-คุณสามารถนำหลักการดึงอักขระตัวสุดท้ายของ string มาใช้กับการดึงอักขระตัวที่ Nth-to-last (ตัวที่ Nth จากสุดท้าย) ได้
+สามารถนำหลักการในการดึงตัวอักษรสุดท้ายของ string มาใช้กับการดึงตัวอักษรตัวที่ n นับจากตัวสุดท้ายได้ (Nth-to-last)
 
-ตัวอย่างเช่น คุณสามารถดึงตัวอักษรที่สามจากตัวสุดท้าย (third-to-last) ของ string `var firstName = "Augusta"` โดยใช้  `firstName[firstName.length - 3]`
+เช่น คุณสามารถดึงตัวอักษรตัวที่สามนับจากตัวสุดท้าย (third-to-last) ของ string `var firstName = "Augusta"` ได้ โดยใช้โค้ด `firstName[firstName.length - 3]`
 
 
-Example:
+ตัวอย่าง:
 
 ```js
 var firstName = "Augusta";
 var thirdToLastLetter = firstName[firstName.length - 3];
 ```
 
-`thirdToLastLetter` ควรมีค่า string `s`
+ตัวแปร `thirdToLastLetter` จะเป็น string ซึ่งมีค่าเป็น `s`
 
 # --instructions--
 
-จงใช้ <dfn>bracket notation</dfn> ในการหาตัวอักษรที่สองจากตัวสุดท้ายใน string `lastName`
+จงใช้ <dfn>bracket notation</dfn> ในการหาตัวอักษรตัวที่สองนับจากตัวสุดท้ายในตัวแปร string ชื่อ `lastName`
 
-**Hint:** ลองดูตัวอย่างด้านบน ถ้าคุณติดปัญหา
+**Hint:** ถ้าติดปัญหาหรือไม่เข้าใจให้ลองดูที่ตัวอย่างด้านบน
 
 # --hints--
 
-`secondToLastLetterOfLastName` ควรมีตัวอักษร `c`
+ตัวแปร `secondToLastLetterOfLastName` ต้องมีค่าเป็นตัวอักษร `c`
 
 ```js
 assert(secondToLastLetterOfLastName === 'c');
 ```
 
-คุณควรใช้ `.length` เพื่อให้ได้ค่าตัวอักษรที่สองจากท้ายสุด
+คุณควรใช้ `.length` เพื่อหาตัวอักษรตัวที่สองนับจากตัวสุดท้าย
 
 ```js
 assert(code.match(/\.length/g).length > 0);
@@ -54,11 +54,11 @@ assert(code.match(/\.length/g).length > 0);
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var lastName = "Lovelace";
 
-// Only change code below this line
-var secondToLastLetterOfLastName = lastName; // Change this line
+// แก้ไขโค้ดใต้บรรทัดนี้
+var secondToLastLetterOfLastName = lastName; // แก้ไขบรรทัดนี้
 ```
 
 # --solutions--

@@ -8,33 +8,33 @@ dashedName: match-characters-that-occur-one-or-more-times
 
 # --description--
 
-บางครั้งคุณต้องการ match ตัวอักษร (หรือกลุ่มตัวอักษร) ที่พบตั้งแต่ 1 ครั้งขึ้นไปในคราวเดียว นั่นหมายความว่า ตัวอักษรหรือกลุ่มตัวอักษรนั้นมีมากกว่า 1
+บางครั้งเราอาจอยาก match ตัวอักษร (หรือกลุ่มตัวอักษร) ที่ต่อกันอยู่
 
-คุณสามารถใช้ `+` เพื่อตรวจสอบกรณีนี้ หากยังจำได้ ตัวอักษรหรือ pattern จะต้องแสดงอย่างต่อเนื่อง นั่นคือ ตัวอักษรมีการเรียงในลักษณะตัวนึงวางต่อกับอีกตัวนึง ต่อๆ กันไป
+ในกรณีนี้เราจะใช้ `+` ถ้ายังจำได้ ตัวอักษรหรือ pattern จะต้องอยู่ติดกัน แปลว่าตัวอักษรที่เราหานั้นจะต้องวางต่อๆกันอยู่
 
-ตัวอย่างเช่น `/a+/g` จะเจอ match 1 ครั้งใน `abc` และคืนค่า `["a"]` และการใช้ `+` จะเจอ match 1 ครั้งใน `aabc` และคืนค่า `["aa"]`
+เช่น `/a+/g` จะ match 1 ครั้งใน `abc` และคืนค่าเป็น `["a"]` และจะ match 1 ครั้งใน `aabc` และคืนค่า `["aa"]`
 
-แต่ถ้าเช็ค `abab` จะเจอ match 2 ครั้ง และคืนค่า `["a", "a"]` เพราะตัวอักษร `a` ไม่ได้อยู่ติดกัน แต่มี `b` คั่นอยู่ และตัวอย่างสุดท้าย เนื่องจากไม่มี `a` ใน string `bcd` จึงไม่ match แต่อย่างใด 
+แต่ถ้าเอาไปใช้กับ `abab` จะ match 2 ครั้ง และคืนค่าเป็น `["a", "a"]` เพราะตัวอักษร `a` ไม่ได้อยู่ติดกัน แต่มี `b` คั่นอยู่ และตัวอย่างสุดท้าย ถ้าใช้กับ string `bcd` จะไม่ match เพราะไม่มี `a` เลยซักตัว
 
 # --instructions--
 
-คุณต้องการค้นหาด้วยการ match ตัวอักษร `s` ที่พบตั้งแต่ 1 ครั้งขึ้นไปใน `Mississippi` จงเขียน regex โดยใช้ `+`
+ใหเขียน regex ที่ match ตัวอักษร `s` ที่วางต่อกัน ใน `Mississippi` โดยใช้ `+`
 
 # --hints--
 
-regex `myRegex` ควรใช้ `+` เพื่อ match ตัวอักษร `s` ที่พบ ตั้งแต่ 1 ครั้งเป็นต้นไป
+regex `myRegex` ต้องใช้ `+` เพื่อ match ตัวอักษร `s` ที่วางต่อกัน
 
 ```js
 assert(/\+/.test(myRegex.source));
 ```
 
-regex `myRegex` ควร match 2 items
+regex `myRegex` ต้องเจอทั้งหมด 2 ตัวอักษร
 
 ```js
 assert(result.length == 2);
 ```
 
-ตัวแปร `result` ควรเป็น array ที่มี `ss` 2 items
+ตัวแปร `result` ต้องมีค่าเป็น array ที่มี `ss` 2 ตัวอยู่ข้างใน
 
 ```js
 assert(result[0] == 'ss' && result[1] == 'ss');
@@ -46,7 +46,7 @@ assert(result[0] == 'ss' && result[1] == 'ss');
 
 ```js
 let difficultSpelling = "Mississippi";
-let myRegex = /change/; // Change this line
+let myRegex = /change/; // แก้บรรทัดนี้
 let result = difficultSpelling.match(myRegex);
 ```
 
@@ -54,6 +54,6 @@ let result = difficultSpelling.match(myRegex);
 
 ```js
 let difficultSpelling = "Mississippi";
-let myRegex = /s+/g; // Change this line
+let myRegex = /s+/g; // แก้บรรทัดนี้
 let result = difficultSpelling.match(myRegex);
 ```

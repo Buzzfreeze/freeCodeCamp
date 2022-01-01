@@ -8,28 +8,28 @@ dashedName: record-collection
 
 # --description--
 
-คุณมี object ซึ่งเป็นส่วนหนึ่งของคอลเล็กชันอัลบั้มเพลง (musical album collection) ของคุณ แต่ละอัลบั้มมี key เป็น id number ที่ไม่ซ้ำกัน และมี property อื่นๆ อีกหลายตัว อย่างไรก็ตาม ไม่ใช่ทุกอัลบั้มที่มีข้อมูลครบถ้วน
+ตอนนี้คุณจะมี object รายการอัลบั้มเพลงของคุณ แต่ละอัลบั้มจะมี key เป็นตัวเลขที่ไม่ซ้ำกัน และมี value เป็น object ที่มี property อื่นๆ อีกหลายตัว แต่จะมีบางอัลบั้มที่มีข้อมูลไม่ครบ
 
-คุณเริ่มต้นจากฟังก์ชัน `updateRecords` ที่รับค่า object `records` (ประกอบด้วยคอลเล็กชันอัลบั้มเพลง), `id`, `prop` (เช่น `artist` หรือ `tracks`) และ `value` จงทำ function ให้สมบูรณ์ โดยใช้กฎด้านล่างเพื่อแก้ไข object ที่ส่งผ่านไปยัง function
-
-
-- function ของคุณต้องคืนค่า record collection object ทั้งรายการเสมอ
-
-- ถ้า `prop` ไม่ใช่ `tracks` และ `value` ไม่ใช่ empty string ให้อัปเดต หรือกำหนด `prop` ของอัลบั้ม ให้มีค่าเป็น `value`
-
-- ถ้า `prop` เป็น `tracks` แต่อัลบั้มไม่มี property `tracks` ให้สร้าง empty array และเพิ่ม `value` เข้าไป
-
-- ถ้า  `prop` เป็น `tracks` และ `value` ไม่ใช่ empty string ให้เพิ่ม `value` ไปยังท้ายอัลบั้มที่มี array `tracks` อยู่
-
-- ถ้า `value` เป็น empty string ให้ลบ property `prop` ออกจากอัลบั้ม 
+ให้สร้างฟังก์ชัน `updateRecords` ที่รับค่า object `records` (รายการอัลบั้มเพลงของคุณ), `id`, `prop` (เช่น `artist` หรือ `tracks`) และ `value` โดยให้ทำตามเงื่อนไขด้านล่างเพื่อแก้ไข object ที่ส่งเข้ามาในฟังก์ชัน
 
 
-**หมายเหตุ:** สำเนาของ object `recordCollection` ใช้สำหรับการทดสอบ
+- ฟังก์ชันของคุณต้องคืนค่ารายการอัลบั้มเพลงของคุณออกมาทั้งก้อนเสมอ
+
+- ถ้า `prop` ไม่ได้มีค่าเป็น `tracks` และ `value` ไม่ได้เป็น empty string (ค่าว่าง) ให้เปลี่ยน `prop` ของอัลบั้ม ให้มีค่าเป็น `value` ที่ระบุเข้ามา
+
+- ถ้า `prop` มีค่าเป็น `tracks` แต่อัลบั้มไม่มี property ที่ชื่อ `tracks` ให้สร้าง empty array และเพิ่ม `value` เข้าไปใน array นั้น
+
+- ถ้า  `prop` มีค่าเป็น `tracks` และ `value` ที่เข้ามาไม่ได้เป็น empty string ให้นำ `value` ไปต่อท้าย array ของ `tracks`
+
+- ถ้า `value` เป็น empty string ให้ลบ property ตามที่ระบุเข้ามาใน `prop` 
+
+
+**หมายเหตุ:** เราจะใช้ object ที่มีข้อมูลเหมือนกับ `recordCollection` ในการทดสอบโค้ด
 
 
 # --hints--
 
-หลังจากรัน `updateRecords(recordCollection, 5439, "artist", "ABBA")`, `artist` ควรเป็น string `ABBA`
+หลังจากรัน `updateRecords(recordCollection, 5439, "artist", "ABBA")` แล้ว property `artist` ควรเป็น string ที่มีค่าเป็น `ABBA`
 
 ```js
 assert(
@@ -38,7 +38,7 @@ assert(
 );
 ```
 
-หลังจากรัน `updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me")`, `tracks` ควรมี string `Take a Chance on Me` เป็น element สุดท้าย
+หลังจากรัน `updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me")` แล้ว property `tracks` ควรมี string `Take a Chance on Me` เป็น element สุดท้าย
 
 ```js
 assert(
@@ -48,14 +48,14 @@ assert(
 );
 ```
 
-หลังจากรัน `updateRecords(recordCollection, 2548, "artist", "")`, `artist` ไม่ควรถูก set
+หลังจากรัน `updateRecords(recordCollection, 2548, "artist", "")` แล้ว property `artist` ควรถูกลบ
 
 ```js
 updateRecords(_recordCollection, 2548, 'artist', '');
 assert(!_recordCollection[2548].hasOwnProperty('artist'));
 ```
 
-หลังจากรัน `updateRecords(recordCollection, 1245, "tracks", "Addicted to Love")`, `tracks` ควรมี string `Addicted to Love` ที่ element ท้ายสุด
+หลังจากรัน `updateRecords(recordCollection, 1245, "tracks", "Addicted to Love")` แล้ว property `tracks` ควรมี string `Addicted to Love` เป็น element สุดท้าย
 
 ```js
 assert(
@@ -65,7 +65,7 @@ assert(
 );
 ```
 
-หลังจากรัน `updateRecords(recordCollection, 2468, "tracks", "Free")`, `tracks` ควรมี string `1999` ที่ element แรก
+หลังจากรัน `updateRecords(recordCollection, 2468, "tracks", "Free")` แล้ว property `tracks` ควรมี string `1999` เป็น element แรก
 
 ```js
 assert(
@@ -75,14 +75,14 @@ assert(
 );
 ```
 
-หลังจากรัน `updateRecords(recordCollection, 2548, "tracks", "")`, `tracks` ไม่ควรถูก set
+หลังจากรัน `updateRecords(recordCollection, 2548, "tracks", "")` แล้ว property `tracks` ควรถูกลบ
 
 ```js
 updateRecords(_recordCollection, 2548, 'tracks', '');
 assert(!_recordCollection[2548].hasOwnProperty('tracks'));
 ```
 
-หลังจากรัน `updateRecords(recordCollection, 1245, "albumTitle", "Riptide")`, `albumTitle` ควรเป็น string `Riptide`
+หลังจากรัน `updateRecords(recordCollection, 1245, "albumTitle", "Riptide")` แล้ว property `albumTitle` ควรเป็น string ที่มีค่าเป็น `Riptide`
 
 ```js
 assert(
@@ -121,7 +121,7 @@ const _recordCollection = {
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var recordCollection = {
   2548: {
     albumTitle: 'Slippery When Wet',
@@ -142,7 +142,7 @@ var recordCollection = {
   }
 };
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 function updateRecords(records, id, prop, value) {
   return records;
 }
@@ -173,7 +173,7 @@ var recordCollection = {
   }
 };
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 function updateRecords(records, id, prop, value) {
   if (value === '') delete records[id][prop];
   else if (prop === 'tracks') {

@@ -9,33 +9,34 @@ dashedName: understanding-uninitialized-variables
 
 # --description--
 
-เมื่อมีการประกาศตัวแปร JavaScript จะมีค่าเริ่มต้นเป็น `undefined` ถ้าคุณคำนวณทางคณิตศาตร์กับตัวแปร `undefined` ผลที่ได้จะเป็น `NaN` ซึ่งหมายถึง <dfn>"Not a Number"</dfn> (ไม่ใช่ตัวเลข) แต่ถ้าคุณต่อ string กับตัวแปร `undefined` คุณจะได้ <dfn>string</dfn> ที่เป็นคำว่า `undefined`
+ใน JavaScript เมื่อมีการประกาศตัวแปร ตัวแปรนั้นจะมีค่าเริ่มต้นเป็น `undefined` ถ้าคุณทำการคำนวณทางคณิตศาสตร์กับตัวแปร `undefined` ผลที่ได้จะเป็น `NaN` ซึ่งหมายถึง <dfn>"Not a Number"</dfn> (ไม่ใช่ตัวเลข) 
+แต่ถ้าคุณนำ string มาต่อกับตัวแปร `undefined` คุณจะได้ <dfn>string</dfn> ที่เป็นคำว่า `undefined` แทน
 
 # --instructions--
 
-จงกำหนดค่าเริ่มต้นให้กับตัวแปร `a`, `b` และ `c` ด้วย `5`, `10` และ `"I am a"` ตามลำดับ เพื่อให้ไม่ตัวแปรเหล่านั้นมีค่า `undefined`
+จงกำหนดค่าเริ่มต้นของตัวแปร `a`, `b` และ `c` ให้มีค่าเท่ากับ `5`, `10` และ `"I am a"` ตามลำดับ เพื่อให้ไม่ตัวแปรเหล่านั้นมีค่า `undefined`
 
 # --hints--
 
-`a` ควรกำหนดให้มีค่าเท่ากับ `6`
+หลังจากการคำนวน `a` ควรมีค่าเท่ากับ `6`
 
 ```js
 assert(typeof a === 'number' && a === 6);
 ```
 
-`b` ควรกำหนดให้มีค่าเท่ากับ `15`
+หลังจากการคำนวน `b` ควรมีค่าเท่ากับ `15`
 
 ```js
 assert(typeof b === 'number' && b === 15);
 ```
 
-`c` ไม่ควรมีค่าเป็น `undefined` และควรมีค่าเป็น string `I am a String!`
+`c` ไม่ควรมีคำว่า `undefined` และควรมีค่าเป็น string `I am a String!`
 
 ```js
 assert(!/undefined/.test(c) && c === 'I am a String!');
 ```
 
-คุณไม่ควรแก้ไขโค้ดที่อยู่ด้านล่างของ comment ที่กำหนด
+คุณไม่ควรแก้ไขโค้ดที่อยู่ใต้ comment ที่ระบุ
 
 ```js
 assert(
@@ -56,11 +57,11 @@ assert(
 ## --seed-contents--
 
 ```js
-// Only change code below this line
+// แก้ไขโค้ดที่อยู่ใต้บรรทัดนี้เท่านั้น
 var a;
 var b;
 var c;
-// Only change code above this line
+// แก้ไขโค้ดที่อยู่เหนือบรรทัดนี้เท่านั้น
 
 a = a + 1;
 b = b + 5;

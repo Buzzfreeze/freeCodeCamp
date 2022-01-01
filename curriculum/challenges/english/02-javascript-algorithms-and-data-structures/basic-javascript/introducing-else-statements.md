@@ -9,7 +9,9 @@ dashedName: introducing-else-statements
 
 # --description--
 
-เมื่อเงื่อนไขของคำสั่ง `if` เป็นจริง บล็อกของโค้ดที่ตามมาจะทำงาน แล้วถ้าเงื่อนไขนั้นเป็นเท็จล่ะ? โดยทั่วไปจะไม่มีอะไรเกิดขึ้น แต่ถ้าใช้คำสั่ง `else` บล็อกของโค้ดของ `else` จะทำงานได้
+ถ้าเงื่อนไขในคำสั่ง `if` เป็นจริง โค้ดในวงเล็บปีกกาใต้ `if` จะทำงาน แต่ถ้าเงื่อนไขที่เราใส่ไปเป็นเท็จล่ะ? ปกติแล้วก็จะไม่มีอะไรเกิดขึ้น แต่ถ้าเราใช้คำสั่ง `else` โค้ดในวงเล็บปีกกาใต้ `else` ก็จะทำงานแทน
+
+ลองดูและทำความเข้าใจตัวอย่างด้านล่าง:
 
 ```js
 if (num > 10) {
@@ -21,47 +23,47 @@ if (num > 10) {
 
 # --instructions--
 
-จงรวมคำสั่ง `if` ให้เป็นคำสั่ง `if/else`
+จงรวมคำสั่ง `if` ที่มีให้กลายเป็นคำสั่ง `if/else`
 
 # --hints--
 
-คุณควรมีคำสั่ง `if` แค่คำสั่งเดียวใน editor
+ต้องมีการใช้คำสั่ง `if` แค่ครั้งเดียวในโค้ด
 
 ```js
 assert(code.match(/if/g).length === 1);
 ```
 
-คุณควรใช้คำสั่ง `else` 
+ต้องใช้คำสั่ง `else` 
 
 ```js
 assert(/else/g.test(code));
 ```
 
-`testElse(4)` ควรคืนค่า string  `5 or Smaller`
+การเรียกใช้ฟังก์ชัน `testElse(4)` ต้องคืนค่าออกมาเป็น string  `5 or Smaller`
 
 ```js
 assert(testElse(4) === '5 or Smaller');
 ```
 
-`testElse(5)` ควรคืนค่า string  `5 or Smaller`
+การเรียกใช้ฟังก์ชัน `testElse(5)` ต้องคืนค่าออกมาเป็น string  `5 or Smaller`
 
 ```js
 assert(testElse(5) === '5 or Smaller');
 ```
 
-`testElse(6)` ควรคืนค่า string  `Bigger than 5`
+การเรียกใช้ฟังก์ชัน `testElse(6)` ต้องคืนค่าออกมาเป็น string  `Bigger than 5`
 
 ```js
 assert(testElse(6) === 'Bigger than 5');
 ```
 
-`testElse(10)` ควรคืนค่า string  `Bigger than 5`
+การเรียกใช้ฟังก์ชัน `testElse(10)` ต้องคืนค่าออกมาเป็น string  `Bigger than 5`
 
 ```js
 assert(testElse(10) === 'Bigger than 5');
 ```
 
-คุณไม่ควรเปลี่ยนโค้ดด้านบนหรือด้านล่างของ comment ที่กำหนด
+ห้ามแก้ไขโค้ดนอกเหนือจากส่วนที่กำหนด
 
 ```js
 assert(/var result = "";/.test(code) && /return result;/.test(code));
@@ -74,7 +76,7 @@ assert(/var result = "";/.test(code) && /return result;/.test(code));
 ```js
 function testElse(val) {
   var result = "";
-  // Only change code below this line
+  // แก้โค้ดใต้บรรทัดนี้เท่านั้น
 
   if (val > 5) {
     result = "Bigger than 5";
@@ -84,7 +86,7 @@ function testElse(val) {
     result = "5 or Smaller";
   }
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
   return result;
 }
 

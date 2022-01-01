@@ -9,9 +9,9 @@ dashedName: comparison-with-the-equality-operator
 
 # --description--
 
-ใน Javascript มี <dfn>comparison operators</dfn> (operator ที่ใช้ในการเปรียบเทียบ) มากมาย operator เหล่านี้ส่งคืนค่า boolean `true` หรือ `false`
+ใน Javascript มี <dfn>comparison operators</dfn> (เครื่องหมายที่ใช้ในการเปรียบเทียบ) หลายตัว operator เหล่านี้จะคืนค่าออกมาเป็น boolean ซึ่งจะมีค่าเป็น `true` หรือ `false`
 
-operator ที่เป็นพื้นฐานที่สุดคือ equality operator `==` ซึ่งจะเปรียบเทียบค่า 2 ค่า และส่งคืนค่า `true` ถ้าค่าทั้งสองเท่ากัน และ `false` ถ้าค่าทั้งสองไม่เท่ากัน โปรดทราบว่า equality operator แตกต่างจากการกำหนดค่า (`=`) ซึ่งเป็นการกำหนดค่าทางด้านขวาไปยังตัวแปรทางด้านซ้าย 
+operator ที่เป็นพื้นฐานที่สุดคือ equality operator `==` ซึ่งจะเปรียบเทียบค่า 2 ค่า และส่งคืนค่า `true` ถ้าค่าทั้งสองเท่ากัน และ `false` ถ้าค่าทั้งสองไม่เท่ากัน อย่าสับสนระหว่าง equality operator (`==`) กับ เครื่องหมายในการกำหนดค่า (`=`)
 
 
 ```js
@@ -23,7 +23,8 @@ function equalityTest(myVal) {
 }
 ```
 
-หาก `myVal` เท่ากับ `10` equality operator จะคืนค่า `true` ดังนั้นโค้ดในวงเล็บปีกกาจะทำงาน และฟังก์ชันจะคืนค่า `Equal` แต่ในทางกลับกัน หาก หาก `myVal` ไม่เท่ากับ `10` equality operator จะคืนค่า `false` ฟังก์ชันจะคืนค่า `Not Equal` อย่างไรก็ตาม เพื่อให้ JavaScript สามารถเปรียบเทียบ <dfn>ประเภทข้อมูล</dfn> ที่แตกต่างกันสองแบบ (เช่น `numbers` และ `strings`) จะต้องแปลงประเภทหนึ่งเป็นอีกประเภทหนึ่ง ซึ่งเรียกว่า Type Coercion เมื่อเป็นเช่นนั้นแล้ว ก็สามารถเปรียบเทียบเงื่อนไขต่างๆ ได้ดังนี้:
+ถ้า `myVal` มีค่าเท่ากับ `10` equality operator จะคืนค่า `true` ออกมา ซึ่งจะทำให้โค้ดในวงเล็บปีกกาทำงาน แล้วฟังก์ชันจะคืนค่า `Equal` ออกมา แต่ถ้า `myVal` มีค่าไม่เท่ากับ `10` equality operator จะคืนค่า `false` ออกมา แล้วก็จะทำให้ฟังก์ชันจะคืนค่า `Not Equal` ออกมาแทน
+เพื่อให้ JavaScript สามารถเปรียบเทียบ <dfn>ประเภทข้อมูล</dfn> ที่ต่างกันได้ (เช่น `numbers` และ `strings`) JavaScript จำเป็นต้องแปลงประเภทข้อมูล ซึ่งกระบวนการนี้เรียกว่า Type Coercion ถ้ามีการแปลงประเภทข้อมูลแล้ว JavaScript ก็จะสามารถเปรียบเทียบเงื่อนไขต่างๆ ได้ ให้ลองดูตามตัวอย่างนี้:
 
 ```js
 1   ==  1
@@ -32,7 +33,7 @@ function equalityTest(myVal) {
 "3" ==  3
 ```
 
-expression เหล่านี้จะถูกประเมินเป็น `true`, `false`, `true`, และ `true` ตามลำดับ 
+expression เหล่านี้จะได้ผลลัพธ์เป็น `true`, `false`, `true`, และ `true` ตามลำดับ 
 
 
 # --instructions--
@@ -42,25 +43,25 @@ expression เหล่านี้จะถูกประเมินเป็
 
 # --hints--
 
-`testEqual(10)` ควรคืนค่า string `Not Equal`
+การเรียกใช้ฟังก์ชัน `testEqual(10)` ต้องคืนค่าออกมาเป็น string `Not Equal`
 
 ```js
 assert(testEqual(10) === 'Not Equal');
 ```
 
-`testEqual(12)` ควรคืนค่า string `Equal`
+การเรียกใช้ฟังก์ชัน `testEqual(12)` ต้องคืนค่าออกมาเป็น string `Equal`
 
 ```js
 assert(testEqual(12) === 'Equal');
 ```
 
-`testEqual("12")` ควรคืนค่า string `Equal`
+การเรียกใช้ฟังก์ชัน `testEqual("12")` ต้องคืนค่าออกมาเป็น string `Equal`
 
 ```js
 assert(testEqual('12') === 'Equal');
 ```
 
-คุณควรใช้ operator `==` 
+คุณต้องใช้ equality operator (`==`)
 
 ```js
 assert(code.match(/==/g) && !code.match(/===/g));
@@ -71,9 +72,9 @@ assert(code.match(/==/g) && !code.match(/===/g));
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 function testEqual(val) {
-  if (val) { // Change this line
+  if (val) { // แก้บรรทัดนี้เท่านั้น
     return "Equal";
   }
   return "Not Equal";

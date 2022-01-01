@@ -8,9 +8,11 @@ dashedName: match-all-letters-and-numbers
 
 # --description--
 
-การใช้ character class ทำให้คุณสามารถค้นหาตัวอักษรภาษาอังกฤษด้วย regex `[a-z] ได้ ซึ่ง character class นี้มีการใช้งานกันแพร่หลาย จึงได้มีการกำหนด shortcut ขึ้นมา แม้ว่า shortcut นี้จะมีตัวอักษรพิเศษเพิ่มเข้ามาก็ตาม
+การใช้ character class ทำให้เราหาตัวอักษรภาษาอังกฤษทั้งหมดด้วย regex `[a-z]` ได้ ซึ่งการใช้ character class แบบนี้เป็นที่นิยมมากๆ จึงได้มีการสร้างทางลัดเพื่อให้เขียน regex แบบนี้ได้สั้นลง แต่ก็จะเพิ่มตัวอักษรที่ match ได้ไปด้วย
 
-character class ที่ใกล้เคียงที่สุด ในภาษา JavaScript สำหรับ match กับตัวอักษร ก็คือ `\w` ซึ่งเป็น shortcut ที่เท่ากับ `[A-Za-z0-9_]` โดย character class นี้ match ทั้งตัวพิมพ์ใหญ่ ตัวพิมพ์เล็ก และตัวเลข นอกจากนี้ character class ยังรวม underscore character (`_`) ด้วย
+สำหรับ JavaScript นั้น character class ที่ใกล้เคียงกับการ match ทุกตัวอักษรที่สุดคือ `\w` ซึ่งทำหน้าที่เหมือน `[A-Za-z0-9_]`
+โดย character class นี้จะ match ทั้งตัวพิมพ์ใหญ่ ตัวพิมพ์เล็ก ตัวเลข และจะรวม underscore (`_`) เข้าไปด้วย 
+(เราเรียกการรวมตัวอักษรและตัวเลขนี้ว่า alphanumeric ซึ่งมาจากการรวมคำว่า alphabet:ตัวอักษร และ numeric:ตัวเลข)
 
 ```js
 let longHand = /[A-Za-z0-9_]+/;
@@ -23,30 +25,30 @@ longHand.test(varNames);
 shortHand.test(varNames);
 ```
 
-การเรียก `test` ทั้ง 4 ครั้งนี้ คืนค่า `true`
+การเรียก `test` ทั้ง 4 ครั้งนี้จะได้ค่าเป็น `true` ทั้งหมด
 
-shortcut character classes เหล่านี้ เรียกกันว่า <dfn>shorthand character classes</dfn>
+เราเรียก character class ที่เป็นทางลัดพวกนี้ว่า <dfn>shorthand character class</dfn>
 
 
 # --instructions--
 
-จงใช้ shorthand character class `\w` เพื่อนับจำนวนตัวอักษรและตัวเลขใน strings
+จงใช้ shorthand character class `\w` เพื่อนับจำนวนตัวอักษรและตัวเลขใน string
 
 # --hints--
 
-regex ของคุณควรใช้ global flag
+regex นี้ต้องเขียนโดยใช้ flag global `g`
 
 ```js
 assert(alphabetRegexV2.global);
 ```
 
-regex ของคุณควรใช้ shorthand character `\w` เพื่อ match ทุกอักขระที่เป็นตัวอักษรและตัวเลข
+regex นี้ต้องเขียนโดยใช้ shorthand character `\w` เพื่อ match ทุกตัวอักษรและตัวเลข
 
 ```js
 assert(/\\w/.test(alphabetRegexV2.source));
 ```
 
-regex ของคุณควรค้นพบ 31 อักขระที่เป็นตัวอักษรและตัวเลขจาก string `The five boxing wizards jump quickly.`
+regex ที่เขียนต้องเจอทั้งตัวอักษรและตัวเลขรวม 31 ตัวจาก string `The five boxing wizards jump quickly.`
 
 ```js
 assert(
@@ -54,7 +56,7 @@ assert(
 );
 ```
 
-regex ของคุณควรค้นพบ 32 อักขระที่เป็นตัวอักษรและตัวเลขจาก string `Pack my box with five dozen liquor jugs.`
+regex ที่เขียนต้องเจอทั้งตัวอักษรและตัวเลขรวม 32 ตัวจาก string `Pack my box with five dozen liquor jugs.`
 
 ```js
 assert(
@@ -63,7 +65,7 @@ assert(
 );
 ```
 
-regex ของคุณควรค้นพบ 30 อักขระที่เป็นตัวอักษรและตัวเลขจาก string `How vexingly quick daft zebras jump!`
+regex ที่เขียนต้องเจอทั้งตัวอักษรและตัวเลขรวม 30 ตัวจาก string `How vexingly quick daft zebras jump!`
 
 ```js
 assert(
@@ -71,7 +73,7 @@ assert(
 );
 ```
 
-regex ของคุณควรค้นพบ 36 อักขระที่เป็นตัวอักษรและตัวเลขจาก string `123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.`
+regex ที่เขียนต้องเจอทั้งตัวอักษรและตัวเลขรวม 36 ตัวจาก string `123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.`
 
 ```js
 assert(
@@ -86,7 +88,7 @@ assert(
 
 ```js
 let quoteSample = "The five boxing wizards jump quickly.";
-let alphabetRegexV2 = /change/; // Change this line
+let alphabetRegexV2 = /change/; // แก้บรรทัดนี้
 let result = quoteSample.match(alphabetRegexV2).length;
 ```
 
@@ -94,6 +96,6 @@ let result = quoteSample.match(alphabetRegexV2).length;
 
 ```js
 let quoteSample = "The five boxing wizards jump quickly.";
-let alphabetRegexV2 = /\w/g; // Change this line
+let alphabetRegexV2 = /\w/g; // แก้บรรทัดนี้
 let result = quoteSample.match(alphabetRegexV2).length;
 ```

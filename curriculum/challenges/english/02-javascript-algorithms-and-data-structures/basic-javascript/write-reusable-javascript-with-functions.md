@@ -9,9 +9,9 @@ dashedName: write-reusable-javascript-with-functions
 
 # --description--
 
-ใน JavaScript เราสามารถแบ่งโค้ดของเราออกเป็นส่วนๆ เพื่อใช้ซ้ำได้ เรียกว่า <dfn>functions</dfn>
+ใน JavaScript เราสามารถแบ่งโค้ดของเราออกเป็นส่วนๆ เพื่อใช้ซ้ำได้ โค้ดที่เรียกใช้ซ้ำได้นั้นเรียกว่า <dfn>function</dfn>
 
-นี่เป็นตัวอย่างของ function
+ดูตัวอย่างของ function ได้ตามด้านล่างนี้
 
 ```js
 function functionName() {
@@ -19,13 +19,14 @@ function functionName() {
 }
 ```
 
-คุณสามารถเรียก หรือ <dfn>invoke</dfn> function นี้ได้ โดยการระบุชื่อตามด้วยวงเล็บ เช่น `functionName();` ทุกครั้งที่เรียกใช้ function ก็จะมีการพิมพ์ข้อความ `Hello World` บนหน้า console ซึ่งโค้ดทั้งหมดที่อยู่ในวงเล็บปีกกาจะรันทุกครั้งที่มีการเรียกใช้ฟังก์ชัน
+คุณสามารถเรียกใช้หรือ <dfn>invoke</dfn> function นี้ได้ โดยการระบุชื่อของฟังก์ชันตามด้วยวงเล็บ เช่น `functionName();`
+ทุกครั้งที่เรียกใช้ function นี้ก็จะมีการพิมพ์ข้อความ `Hello World` ออกมาบนหน้า console ซึ่งโค้ดทั้งหมดที่อยู่ในวงเล็บปีกกาจะทำงานทุกครั้งที่มีการเรียกใช้ฟังก์ชัน
 
 # --instructions--
 
 <ol>
   <li>
-    จงสร้างฟังก์ชันชื่อ <code>reusableFunction</code> ซึ่งพิมพ์ string <code>Hi World</code> ออกมาที่หน้า console
+    จงสร้างฟังก์ชันชื่อ <code>reusableFunction</code> ที่จะพิมพ์ string คำว่า <code>Hi World</code> ออกมาที่หน้า console
   </li>
   <li>
     เรียกใช้ฟังก์ชัน
@@ -34,19 +35,19 @@ function functionName() {
 
 # --hints--
 
-`reusableFunction` ควรเป็นฟังก์ชัน
+`reusableFunction` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof reusableFunction === 'function');
 ```
 
-ถ้าเรียกใช้ `reusableFunction` ควรได้ผลลัพธ์เป็น string `Hi World` แสดงที่หน้า console
+ถ้าเรียกใช้ `reusableFunction` ต้องแสดง string เป็นคำว่า `Hi World` บนหน้า console
 
 ```js
 assert(testConsole());
 ```
 
-คุณควรเรียกใช้ `reusableFunction` หลังจากสร้างฟังก์ชันแล้ว
+คุณต้องเรียกใช้ `reusableFunction` หลังจากสร้างฟังก์ชันแล้ว
 
 ```js
 const functionStr = reusableFunction && __helpers.removeWhiteSpace(reusableFunction.toString());

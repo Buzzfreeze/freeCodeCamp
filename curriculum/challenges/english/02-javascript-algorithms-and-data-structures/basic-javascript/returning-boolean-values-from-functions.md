@@ -9,10 +9,9 @@ dashedName: returning-boolean-values-from-functions
 
 # --description--
 
-จากที่ได้เรียนรู้มาแล้วใน [Comparison with the Equality Operator](/learn/javascript-algorithms-and-data-structures/basic-javascript/comparison-with-the-equality-operator) ทุกการเปรียบเทียบจะคืนค่า boolean `true` หรือ `false`
+จากที่เราได้เรียนมาแล้วใน [Comparison with the Equality Operator](/learn/javascript-algorithms-and-data-structures/basic-javascript/comparison-with-the-equality-operator) ในการเปรียบเทียบ (เช่น `==`, `!=`, `>` ฯลฯ) จะคืนค่าเป็น boolean ที่มีค่าเป็น `true` หรือ `false`
 
-บางครั้งเราใช้ `if/else` statement เพื่อใช้ในการเปรียบเทียบดังนี้ 
-
+หลายๆ คนจะใช้ `if/else` เพื่อใช้ในการเปรียบเทียบแบบนี้:
 
 ```js
 function isEqual(a,b) {
@@ -24,7 +23,8 @@ function isEqual(a,b) {
 }
 ```
 
-แต่ยังมีวิธีที่ดีกว่าที่ได้ผลแบบเดียวกัน กล่าวคือ เนื่องจาก `===` คืนค่า `true` หรือ `false` เราจึงสามารถคืนค่าเป็นผลจากการเปรียบเทียบได้ดังนี้
+เราสามารถเอาโค้ดด้านบนมาเขียนใหม่ให้ดีขึ้นได้ 
+การใช้ `===` จะคืนค่าออกมาเป็น `true` หรือ `false` เราจึงสามารถคืนค่าอีกแบบได้ตามนี้:
 
 ```js
 function isEqual(a,b) {
@@ -34,23 +34,23 @@ function isEqual(a,b) {
 
 # --instructions--
 
-จงแก้ไข function `isLess` เพื่อนำ `if/else` statement ออก
+จงแก้ไขฟังก์ชัน `isLess` ให้ไม่ใช้คำสั่ง `if/else`
 
 # --hints--
 
-`isLess(10,15)` ควรคืนค่า `true`
+การเรียกใช้ฟังก์ชัน `isLess(10,15)` ต้องคืนค่าออกมาเป็น `true`
 
 ```js
 assert(isLess(10, 15) === true);
 ```
 
-`isLess(15,10)` ควรคืนค่า `false`
+การเรียกใช้ฟังก์ชัน `isLess(15,10)` ต้องคืนค่าออกมาเป็น `false`
 
 ```js
 assert(isLess(15, 10) === false);
 ```
 
-คุณไม่ควรใช้ `if` หรือ `else` statements
+ห้ามใช้คำสั่ง `if` และ `else`
 
 ```js
 assert(!/if|else/g.test(code));
@@ -62,13 +62,13 @@ assert(!/if|else/g.test(code));
 
 ```js
 function isLess(a, b) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   if (a < b) {
     return true;
   } else {
     return false;
   }
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 
 isLess(10, 15);

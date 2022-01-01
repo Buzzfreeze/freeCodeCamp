@@ -8,9 +8,9 @@ dashedName: use-the-spread-operator-to-evaluate-arrays-in-place
 
 # --description--
 
-ES6 แนะนำ <dfn>spread operator</dfn> ซึ่งช่วยให้เราขยาย arrays และ expression อื่นๆ ในตำแหน่งที่ต้องการพารามิเตอร์หรือองค์ประกอบหลายรายการ
+ES6 ได้เพิ่ม <dfn>spread operator</dfn> มาให้ด้วย ซึ่งช่วยให้เราแตก arrays หรือ expression อื่นๆ ออกมาได้ ในโค้ดส่วนที่เราต้องใช้ค่าหลายๆ ตัว
 
-โค้ด ES5 ด้านล่างใช้ `apply()` ในการค้นหาค่าที่มากที่สุดใน array
+โค้ดด้านล่างเป็นตัวอย่างของ ES5 ซึ่งจะใช้ `apply()` เพื่อหาค่าที่มากที่สุดใน array
 
 
 ```js
@@ -18,19 +18,19 @@ var arr = [6, 89, 3, 45];
 var maximus = Math.max.apply(null, arr);
 ```
 
-`maximus` ควรมีค่า `89`
+ตัวแปร `maximus` จะมีค่าเป็น `89`
 
 
-เราต้องใช้ `Math.max.apply(null, arr)` เพราะ `Math.max(arr)` คืนค่า `NaN` แต่ `Math.max()` ต้องการ argument ที่คั่นด้วยเครื่องหมาย comma ที่ไม่ใช่ array ดังนั้น การใช้ spread operator ทำให้โค้ดนี้อ่านและปรับแก้ได้ง่าย
+ที่เราต้องใช้ `Math.max.apply(null, arr)` ก็เพราะถ้าเราใช้ `Math.max(arr)` เราจะได้ค่าเป็น `NaN` แต่ `Math.max()` ต้องการ argument ที่คั่นด้วยเครื่องหมาย comma ที่ไม่ใช่ array (เช่น `Math.max(1,2,3,4)`) ดังนั้น การใช้ spread operator เราอ่านโค้ดนี้ได้ง่ายขึ้น
 
 ```js
 const arr = [6, 89, 3, 45];
 const maximus = Math.max(...arr);
 ```
 
-`maximus` ควรมีค่า `89`
+ตัวแปร `maximus` จะมีค่าเป็น `89`
 
-`...arr` คืนค่า array ที่แกะออกมา (unpacked) กล่าวอีกนัยหนึ่งคือ มันกระจาย *spreads* ข้อมูลใน array ออกมา อย่างไรก็ตาม spread operator สามารถใช้ได้กับโค้ดบางตำแหน่งเท่านั้น เช่น ใช้กับ argument ที่ส่งไปยังฟังก์ชัน หรือใน array ตัวอย่างด้านล่างต่อไปนี้ spread operator จะไม่ทำงาน 
+การใช้ `...arr` จะเป็นการแตกค่าใน array ออกมา แต่ spread operator จะใช้ได้กับโค้ดบางประเภทเท่านั้น เช่น ใช้กับ argument ที่ส่งไปยังฟังก์ชัน หรือใช้ใน array แต่ถ้าเป็นตัวอย่างด้านล่างนี้ spread operator จะไม่ทำงาน:
 
 
 ```js
@@ -43,7 +43,6 @@ const spreaded = ...arr;
 
 
 
-
 # --hints--
 
 `arr2` ควรมีค่าที่ copy จาก `arr1`
@@ -52,13 +51,13 @@ const spreaded = ...arr;
 assert(arr2.every((v, i) => v === arr1[i]) && arr2.length);
 ```
 
-`...` spread operator ควรถูกใช้เพื่อทำคัดลอก `arr1`
+ ต้องใช้ spread operator (`...`) เพื่อ copy ข้อมูลจาก `arr1`
 
 ```js
 assert(code.match(/Array\(\s*\.\.\.arr1\s*\)|\[\s*\.\.\.arr1\s*\]/));
 ```
 
-`arr2` ไม่ควรเปลี่ยน ถ้า `arr1` ถุกเปลี่ยน
+ค่าของ `arr2` จะต้องไม่เปลี่ยนไป ถ้า `arr1` ถุกเปลี่ยนหลังจากทำการ copy แล้ว
 
 ```js
 assert((arr1, arr2) => {
@@ -75,7 +74,7 @@ assert((arr1, arr2) => {
 const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
 let arr2;
 
-arr2 = [];  // Change this line
+arr2 = [];  // แก้ไขบรรทัดนี้
 
 console.log(arr2);
 ```

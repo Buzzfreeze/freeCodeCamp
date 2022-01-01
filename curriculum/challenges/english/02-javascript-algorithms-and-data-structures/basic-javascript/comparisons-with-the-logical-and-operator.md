@@ -9,9 +9,9 @@ dashedName: comparisons-with-the-logical-and-operator
 
 # --description--
 
-บางครั้งคุณจะต้องการทดสอบมากกว่าหนึ่งสิ่งในครั้งเดียว <dfn>logical and</dfn> (`&&`) จะคืนค่า `true` หาก <dfn>operands</dfn> (ค่าที่ทดสอบ)ทางซ้ายและขวาเป็นจริงเท่านั้น
+เครื่องหมายอีกหนึ่งตัวที่เราจะเรียนคือ <dfn>logical and</dfn> operator (`&&`) โดยตัว `&&` นี้จะคืนค่าออกมาเป็น `true` เมื่อข้อมูลทางซ้ายและขวาเป็นจริงทั้งสองตัวเท่านั้น
 
-การซ้อนคำสั่ง if (คือมีคำสั่ง if ภายในคำสั่ง if) สามารถทำให้ได้ผลลัพธ์ที่เหมือนกัน
+เราสามารถซ้อนคำสั่ง if เพื่อให้ทำงานเหมือนเครื่องหมาย `&&` ก็ได้
 
 
 ```js
@@ -23,7 +23,8 @@ if (num > 5) {
 return "No";
 ```
 
-จะคืนค่า `Yes` ก็ต่อเมื่อ `num` มากกว่า `5` และน้อยกว่า `10` ซึ่ง logic เดียวกันนี้ สามารถเขียนได้ดังนี้:
+โค้ดด้านบนจะคืนค่า `Yes` ถ้า `num` นั้นมากกว่า `5` และน้อยกว่า `10` ด้วย
+ซึ่ง logic ข้างบนนี้ก็สามารถเขียนอีกแบบได้ตามด้านล่าง:
 
 
 ```js
@@ -35,66 +36,67 @@ return "No";
 
 # --instructions--
 
-จงแทนที่คำสั่ง if ทั้งสองด้วย if คำสั่งเดียว โดยใช้เครื่องหมาย `&&` กำหนดให้คืนค่า string `Yes` ถ้า `val` น้อยกว่าหรือเท่ากับ `50` และมากกว่าหรือเท่ากับ `25` แต่ถ้าเงื่อนไขเป็นเท็จ จะคืนค่า string `No`
+จงเปลี่ยนการใช้คำสั่ง if สองตัวให้กลายเป็นการใช้คำสั่ง if ตัวเดียว โดยใช้เครื่องหมาย `&&` 
+ให้ฟังก์ชันคืนค่า string `Yes` ถ้า `val` มีค่าน้อยกว่าหรือเท่ากับ `50` และมากกว่าหรือเท่ากับ `25` แต่ถ้าไม่ตรงตามนี้ให้คืนค่าเป็น string `No`
 
 # --hints--
 
-คุณควรใช้เครื่องหมาย `&&` หนึ่งครั้ง
+ต้องใช้เครื่องหมาย `&&` หนึ่งครั้งในโค้ด
 
 
 ```js
 assert(code.match(/&&/g).length === 1);
 ```
 
-คุณควรมีแค่คำสั่ง `if` อันเดียว
+ต้องมีแค่คำสั่ง `if` ในโค้ดแค่อันเดียว
 
 ```js
 assert(code.match(/if/g).length === 1);
 ```
 
-`testLogicalAnd(0)` ควรคืนค่า string `No`
+การเรียกใช้ฟังก์ชัน `testLogicalAnd(0)` ต้องคืนค่าออกมาเป็น string `No`
 
 ```js
 assert(testLogicalAnd(0) === 'No');
 ```
 
-`testLogicalAnd(24)` ควรคืนค่า string `No`
+การเรียกใช้ฟังก์ชัน `testLogicalAnd(24)` ต้องคืนค่าออกมาเป็น string `No`
 
 ```js
 assert(testLogicalAnd(24) === 'No');
 ```
 
-`testLogicalAnd(25)` ควรคืนค่า string `Yes`
+การเรียกใช้ฟังก์ชัน `testLogicalAnd(25)` ต้องคืนค่าออกมาเป็น string `Yes`
 
 ```js
 assert(testLogicalAnd(25) === 'Yes');
 ```
 
-`testLogicalAnd(30)` ควรคืนค่า string `Yes`
+การเรียกใช้ฟังก์ชัน `testLogicalAnd(30)` ต้องคืนค่าออกมาเป็น string `Yes`
 
 ```js
 assert(testLogicalAnd(30) === 'Yes');
 ```
 
-`testLogicalAnd(50)` ควรคืนค่า string `Yes`
+การเรียกใช้ฟังก์ชัน `testLogicalAnd(50)` ต้องคืนค่าออกมาเป็น string `Yes`
 
 ```js
 assert(testLogicalAnd(50) === 'Yes');
 ```
 
-`testLogicalAnd(51)` ควรคืนค่า string `No`
+การเรียกใช้ฟังก์ชัน `testLogicalAnd(51)` ต้องคืนค่าออกมาเป็น string `No`
 
 ```js
 assert(testLogicalAnd(51) === 'No');
 ```
 
-`testLogicalAnd(75)` ควรคืนค่า string `No`
+การเรียกใช้ฟังก์ชัน `testLogicalAnd(75)` ต้องคืนค่าออกมาเป็น string `No`
 
 ```js
 assert(testLogicalAnd(75) === 'No');
 ```
 
-`testLogicalAnd(80)` ควรคืนค่า string `No`
+การเรียกใช้ฟังก์ชัน `testLogicalAnd(80)` ต้องคืนค่าออกมาเป็น string `No`
 
 ```js
 assert(testLogicalAnd(80) === 'No');
@@ -106,7 +108,7 @@ assert(testLogicalAnd(80) === 'No');
 
 ```js
 function testLogicalAnd(val) {
-  // Only change code below this line
+  // แก้โค้ดใต้บรรทัดนี้เท่านั้น
 
   if (val) {
     if (val) {
@@ -114,7 +116,7 @@ function testLogicalAnd(val) {
     }
   }
 
-  // Only change code above this line
+  // แก้โค้ดเหนือบรรทัดนี้เท่านั้น
   return "No";
 }
 

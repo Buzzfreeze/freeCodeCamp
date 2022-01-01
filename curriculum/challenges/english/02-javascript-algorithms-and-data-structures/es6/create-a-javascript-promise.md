@@ -8,7 +8,9 @@ dashedName: create-a-javascript-promise
 
 # --description--
 
-promise ใน JavaScript เป็นสิ่งที่คุณใช้ในการทำบางสิ่งบางอย่างที่มักเกิดขึ้นไม่พร้อมกัน เมื่องานเสร็จสิ้น คุณอาจจะทำตามสัญญาหรือไม่ก็ได้ `Promise` เป็นฟังก์ชัน constructor ดังนั้นคุณต้องใช้ keyword `new` เพื่อสร้าง โดยจะใช้ฟังก์ชันเป็น argument โดยมีพารามิเตอร์สองตัวคือ `resolve` และ `reject`ซึ่ง method เหล่านี้ใช้ในการกำหนดผลลัพธ์ของ promise โดย syntax มีลักษณะดังนี้:
+promise ใน JavaScript นั้นมีความหมายตรงตามตัวเลย คือใช้เพื่อสัญญา (promise) ว่าจะทำอะไรบางอย่าง ซึ่งปกติสิ่งที่สัญญามักเป็นการทำงานแบบ asynchronous และเมื่องานเสร็จสิ้น คุณจะทำหรือไม่ทำตามสัญญาก็ได้ 
+`promise` นั้นเป็นฟังก์ชัน constructor ดังนั้นคุณต้องใช้ keyword `new` เพื่อสร้าง โดย `promise` จะรับฟังก์ชันที่มีพารามิเตอร์สองตัวคือ `resolve` และ `reject` ซึ่งเป็น method ที่ใช้กำหนดผลลัพธ์ของ promise 
+`promise` จะมี syntax ตามนี้:
 
 
 ```js
@@ -19,19 +21,19 @@ const myPromise = new Promise((resolve, reject) => {
 
 # --instructions--
 
-จงสร้าง promise ใหม่ชื่อ `makeServerRequest` แล้วส่งผ่านฟังก์ชันด้วยพารามิเตอร์ `resolve` และ `reject` ไปยัง Constructor
+จงสร้าง promise ใหม่ชื่อ `makeServerRequest` แล้วส่งฟังก์ชันที่มีพารามิเตอร์สองตัวชื่อ `resolve` และ `reject` เข้าไปใน Constructor
 
 
 
 # --hints--
 
-คุณควรกำหนดค่า promise ให้กับตัวแปรที่ประกาศด้วยชื่อ `makeServerRequest`
+คุณควรกำหนดค่า promise ให้กับตัวแปรที่ชื่อ `makeServerRequest`
 
 ```js
 assert(makeServerRequest instanceof Promise);
 ```
 
-promise ของคุณควรรับ function ที่มี `resolve` และ `reject` เป็นพารามิเตอร์   
+promise ของคุณควรรับฟังก์ชันที่มีพารามิเตอร์เป็น `resolve` และ `reject`    
 
 ```js
 assert(

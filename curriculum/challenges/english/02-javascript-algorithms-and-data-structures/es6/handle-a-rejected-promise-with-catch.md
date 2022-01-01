@@ -8,8 +8,8 @@ dashedName: handle-a-rejected-promise-with-catch
 
 # --description--
 
-method `catch` ใช้เมื่อ promise ของคุณถูก reject ซึ่งจะทำงานทันทีหลังจาก method `reject` ของ promise ถูกเรียกใช้ 
-นี่คือ syntax:
+เราจะใช้ method `catch` ใช้เมื่อ promise ของคุณถูก reject ซึ่งจะทำงานทันทีหลังจาก method `reject` ของ promise ถูกเรียกใช้ 
+ตัวอย่างนี้จะแสดง syntax ของ method `catch`:
 
 ```js
 myPromise.catch(error => {
@@ -17,7 +17,7 @@ myPromise.catch(error => {
 });
 ```
 
-`error` เป็น argument ที่ถูกส่งไปยัง method `reject`
+`error` มาจาก argument ที่คุณใส่ตอนเรียกใช้ method `reject`
 
 # --instructions--
 
@@ -25,7 +25,7 @@ myPromise.catch(error => {
 
 # --hints--
 
-คุณควรเรียกใช้ method `catch` กับ promise
+ต้องใช้ `catch` กับ promise
 
 ```js
 assert(
@@ -33,13 +33,13 @@ assert(
 );
 ```
 
-method `catch` ของคุณมี callback function ที่มี `error` เป็นพารามิเตอร์
+method `catch` ต้องมี callback function ที่มีพารามิเตอร์เป็น `error`
 
 ```js
 assert(errorIsParameter);
 ```
 
-คุณควร log `error` ไปยังหน้า console
+ต้อง log `error` บน console ด้วย
 
 ```js
 assert(
@@ -62,7 +62,7 @@ const errorIsParameter = /\.catch\((function\(error\){|error|\(error\)=>)/.test(
 
 ```js
 const makeServerRequest = new Promise((resolve, reject) => {
-  // responseFromServer is set to false to represent an unsuccessful response from a server
+  // responseFromServer ถูกตั้งให้เป็น false เพื่อสื่อว่าเซิร์ฟเวอร์ไม่สามารถคืนค่ามาให้เราได้อย่างถูกต้อง
   let responseFromServer = false;
     
   if(responseFromServer) {
@@ -81,7 +81,7 @@ makeServerRequest.then(result => {
 
 ```js
 const makeServerRequest = new Promise((resolve, reject) => {
-  // responseFromServer is set to false to represent an unsuccessful response from a server
+  // responseFromServer ถูกตั้งให้เป็น false เพื่อสื่อว่าเซิร์ฟเวอร์ไม่สามารถคืนค่ามาให้เราได้อย่างถูกต้อง
   let responseFromServer = false;
     
   if(responseFromServer) {

@@ -9,7 +9,7 @@ dashedName: nesting-for-loops
 
 # --description--
 
-ถ้าคุณมี array หลายมิติ (multi-dimensional array) คุณสามารถใช้ logic เดียวกันกับก่อนหน้านี้ เพื่อ loop เข้าไปใน array และ sub-array ต่อไปนี้เป็นตัวอย่าง:
+ถ้าเรามี array หลายมิติ (multi-dimensional array) เราสามารถใช้ logic ที่เรียนในบทเรียนที่แล้ว เพื่อ loop เข้าไปใน array และ array ที่อยู่ข้างในได้ด้วย ลองดูตัวอย่างด้านล่าง:
 
 ```js
 var arr = [
@@ -23,23 +23,23 @@ for (var i=0; i < arr.length; i++) {
 ```
 
 
-โค้ดด้านบนแสดงแต่ละ element ใน array ย่อยของ `arr` ซึ่งภายใน inner loop เรามีการเช็ค `.length` ของ `arr[i]` เนื่องจาก `arr[i]` ก็เป็น array
+โค้ดด้านบนจะแสดงผลเป็น element ทุกตัวใน array ย่อยของ `arr` ซึ่งภายใน loop ชั้นในเรามีการเช็ค `.length` ของ `arr[i]` เพราะว่า `arr[i]` ก็มีค่าเป็น array เหมือนกัน
 
 
 # --instructions--
 
 
-จงแก้ไข function `multiplyAll` เพื่อให้คืนค่าเป็นผลคูณของตัวเลขภายใน array ย่อยของ `arr`
+จงแก้ไขฟังก์ชัน `multiplyAll` เพื่อให้คืนค่าเป็นผลคูณของตัวเลขภายใน array ย่อยของตัวแปร `arr`
 
 # --hints--
 
-`multiplyAll([[1],[2],[3]])` ควรคืนค่า `6`
+การเรียกใช้ฟังก์ชัน `multiplyAll([[1],[2],[3]])` ต้องคืนค่าออกมาเป็น `6`
 
 ```js
 assert(multiplyAll([[1], [2], [3]]) === 6);
 ```
 
-`multiplyAll([[1,2],[3,4],[5,6,7]])` ควรคืนค่า `5040`
+การเรียกใช้ฟังก์ชัน `multiplyAll([[1,2],[3,4],[5,6,7]])` ต้องคืนค่าออกมาเป็น `5040`
 
 ```js
 assert(
@@ -51,7 +51,7 @@ assert(
 );
 ```
 
-`multiplyAll([[5,1],[0.2, 4, 0.5],[3, 9]])` ควรคืนค่า `54`
+การเรียกใช้ฟังก์ชัน `multiplyAll([[5,1],[0.2, 4, 0.5],[3, 9]])` ต้องคืนค่าออกมาเป็น `54`
 
 ```js
 assert(
@@ -70,9 +70,9 @@ assert(
 ```js
 function multiplyAll(arr) {
   var product = 1;
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
   return product;
 }
 

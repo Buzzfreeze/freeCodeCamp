@@ -9,9 +9,9 @@ dashedName: manipulate-arrays-with-shift
 
 # --description--
 
-`pop()` นำ element สุดท้ายของ array ออกเสมอ แต่หากคุณต้องการนำ element แรกออกล่ะ?
+การ `pop()` จะดึงแค่ element สุดท้ายของ array เสมอ แล้วถ้าคุณต้องการดึง element แรกออกล่ะ?
 
-นั่นคือสิ่งที่ `.shift()` ทำได้ โดย `.shift()` ทำงานคล้ายกับ `.pop()` แต่ `.shift()` จะนำ element แรกออกแทนที่จะเป็น element สุดท้าย
+เราขอเสนอฟังก์ชัน `.shift()` โดย `.shift()` นั้นจะทำงานคล้ายๆ กับ `.pop()` แต่ว่า `.shift()` จะดึง element แรกออก แทนที่จะเป็น element สุดท้าย
 
 ตัวอย่าง:
 
@@ -20,16 +20,16 @@ var ourArray = ["Stimpson", "J", ["cat"]];
 var removedFromOurArray = ourArray.shift();
 ```
 
-`removedFromOurArray` ควรมีค่า string  `Stimpson` และ `ourArray` ควรมี `["J", ["cat"]]`
+ตัวแปร `removedFromOurArray` จะเป็น string ที่มีค่าเป็น `Stimpson` และตัวแปร `ourArray` จะมีค่าเป็น `["J", ["cat"]]`
 
 
 # --instructions--
 
-จงใช้ฟังก์ชัน `.shift()` เพื่อนำ element แรกออกจาก `myArray` โดยนำ element ที่ดึงออกมากำหนดค่าให้กับ `removedFromMyArray`
+จงใช้ฟังก์ชัน `.shift()` เพื่อดึง element แรกออกจากตัวแปร `myArray` แล้วนำ element ที่ดึงออกมานั้น มากำหนดค่าให้กับตัวแปร `removedFromMyArray`
 
 # --hints--
 
-`myArray` ควรเท่ากับ `[["dog", 3]]`
+ตัวแปร `myArray` ต้องมีค่าเป็น `[["dog", 3]]`
 
 ```js
 assert(
@@ -43,7 +43,7 @@ assert(
 );
 ```
 
-`removedFromMyArray` ควรมีค่าเป็น `["John", 23]`
+ตัวแปร `removedFromMyArray` ต้องมีค่าเป็น `["John", 23]`
 
 ```js
 assert(
@@ -72,10 +72,10 @@ assert(
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var myArray = [["John", 23], ["dog", 3]];
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 var removedFromMyArray;
 ```
 
@@ -84,6 +84,6 @@ var removedFromMyArray;
 ```js
 var myArray = [["John", 23], ["dog", 3]];
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 var removedFromMyArray = myArray.shift();
 ```

@@ -9,7 +9,7 @@ dashedName: understand-string-immutability
 
 # --description--
 
-ใน JavaScript ค่า `String` <dfn>immutable</dfn> ซึ่งหมายความว่าเมื่อสร้างแล้วจะไม่สามารถแก้ไขได้
+ใน JavaScript ข้อมูลในรูปแบบ `string` นั้น <dfn>immutable</dfn> ซึ่งหมายความว่าเมื่อสร้างแล้วจะไม่สามารถแก้ไขได้
 
 ยกตัวอย่างตามโค้ดด้านล่าง:
 
@@ -18,7 +18,7 @@ var myStr = "Bob";
 myStr[0] = "J";
 ```
 
-ไม่สามารถเปลี่ยนค่าของ `myStr` เป็น `Job` เพราะเนื้อหาของ `myStr` ไม่สามารถเปลี่ยนแปลงได้ อย่างไรก็ตาม *ไม่* ได้ หมายความว่า `myStr` ไม่สามารถเปลี่ยนแปลงได้ เพียงแต่ไม่สามารถเปลี่ยนแปลงอักขระแต่ละตัวของ <dfn>string literal</dfn> ได้ วิธีเดียวที่จะเปลี่ยน `myStr` ได้ คือการกำหนดค่าด้วยสตริงใหม่ ดังนี้:
+โค้ดด้านบนจะไม่สามารถแก้ค่าของตัวแปร `myStr` ให้เป็น `Job` ได้ เพราะข้อมูล string ในตัวแปร `myStr` นั้นไม่สามารถแก้ไขได้ แต่เราก็จะสามารถทำให้ค่าของตัวแปร `myStr` เปลี่ยนไปได้โดยการกำหนดค่าใหม่ ตามตัวอย่างนี้:
 
 ```js
 var myStr = "Bob";
@@ -27,11 +27,11 @@ myStr = "Job";
 
 # --instructions--
 
-จงแก้ไขการกำหนดค่าให้กับ `myStr` เพื่อให้มีค่า string เป็น  `Hello World` โดยใช้วิธีการตามตัวอย่างด้านบน
+จงแก้ไขวิธีการกำหนดค่าให้กับตัวแปร `myStr` เพื่อให้เป็นข้อมูลประเภท string ซึ่งมีค่าเป็น `Hello World` โดยใช้วิธีการตามตัวอย่างด้านบน
 
 # --hints--
 
-`myStr` ควรมีค่า string `Hello World`
+ตัวแปร `myStr` ต้องเป็น string ซึ่งมีค่าเป็น `Hello World`
 
 ```js
 assert(myStr === 'Hello World');
@@ -54,12 +54,12 @@ assert(/myStr = "Jello World"/.test(code));
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var myStr = "Jello World";
 
-// Only change code below this line
-myStr[0] = "H"; // Change this line
-// Only change code above this line
+// แก้โค้ดใต้บรรทัดนี้เท่านั้น
+myStr[0] = "H"; // แก้ไขบรรทัดนี้
+// แก้โค้ดเหนือบรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

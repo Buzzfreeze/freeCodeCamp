@@ -11,7 +11,7 @@ dashedName: use-bracket-notation-to-find-the-nth-character-in-a-string
 
 # - คุณยังสามารถใช้ <dfn>bracket notation</dfn> เพื่ออ้างอิงหรือรับค่าตัวอักษรที่ตำแหน่งอื่นภายใน string ได้
 
-จำไว้ว่าคอมพิวเตอร์เริ่มนับจาก `0` ดังนั้นอักขระตัวแรกจึงเป็นอักขระตัวที่ศูนย์
+จำได้ใช่ไหมว่าคอมพิวเตอร์จะเริ่มนับตำแหน่งจาก `0` ดังนั้นตัวอักษรตัวแรกจึงนับเป็นตัวอัษรที่ตำแหน่งศูนย์
 
 ตัวอย่าง:
 
@@ -20,23 +20,23 @@ var firstName = "Ada";
 var secondLetterOfFirstName = firstName[1];
 ```
 
-`secondLetterOfFirstName` ควรมีค่า string `d`
+ตัวแปร `secondLetterOfFirstName` จะเป็น string ซึ่งมีค่าเป็น `d`
 
 # --instructions--
 
-มาลองกำหนด `thirdLetterOfLastName` ให้มีค่าเท่ากับอักขระตัวที่สามของตัวแปร `lastName` โดยใช้ bracket notation
+มาลองกำหนดค่าของตัวแปร `thirdLetterOfLastName` ให้มีค่าเท่ากับตัวอักษรตัวที่สามของตัวแปร `lastName` โดยใช้ bracket notation
 
-**Hint:** ลองดูตัวอย่างด้านบน ถ้าคุณติดปัญหา
+**Hint:** ถ้าติดปัญหาหรือไม่เข้าใจให้ลองดูที่ตัวอย่างด้านบน
 
 # --hints--
 
-ตัวแปร `thirdLetterOfLastName` ควรมีค่า `v`
+ตัวแปร `thirdLetterOfLastName` ต้องมีค่าเป็น `v`
 
 ```js
 assert(thirdLetterOfLastName === 'v');
 ```
 
-คุณควรใช้ bracket notation
+ต้องใช้ bracket notation
 
 ```js
 assert(code.match(/thirdLetterOfLastName\s*?=\s*?lastName\[.*?\]/));
@@ -53,11 +53,11 @@ assert(code.match(/thirdLetterOfLastName\s*?=\s*?lastName\[.*?\]/));
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var lastName = "Lovelace";
 
-// Only change code below this line
-var thirdLetterOfLastName = lastName; // Change this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
+var thirdLetterOfLastName = lastName; // แก้ไขบรรทัดนี้
 ```
 
 # --solutions--

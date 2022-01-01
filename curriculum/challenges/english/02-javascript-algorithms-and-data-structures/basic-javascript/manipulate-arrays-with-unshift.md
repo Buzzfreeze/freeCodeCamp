@@ -9,9 +9,9 @@ dashedName: manipulate-arrays-with-unshift
 
 # --description--
 
-นอกจากที่คุณสามารถ `shift` element ออกจากตำแหน่งแรกของ array แล้ว คุณยังสามารถ `unshift` element ที่ตำแหน่งแรกของ array ได้ด้วย เช่น เพิ่ม element ที่ด้านหน้า array
+เมื่อคุณสามารถ `shift` element แรกออกจาก array ได้แล้ว คุณก็ยังสามารถ `unshift` element ซึ่งก็คือการแทรก element เข้าไปข้างหน้า array ได้ด้วย
 
-`.unshift()` ทำงานเหมือนกับ `.push()` แต่แทนที่จะเพิ่ม element ที่ส่วนท้ายของ array `unshift()` จะเพิ่ม element ที่จุดเริ่มต้นของ array
+`.unshift()` ทำงานเหมือนกับการ `.push()` แต่แทนที่จะนำ element ไปต่อท้ายใน array `unshift()` จะเป็นการแทรก element ไปข้างหน้า array แทน
 
 ตัวอย่าง:
 
@@ -21,15 +21,16 @@ ourArray.shift();
 ourArray.unshift("Happy");
 ```
 
-หลังจาก `shift` แล้ว `ourArray` ควรมีค่า `["J", "cat"]` และหลังจาก `unshift` แล้ว `ourArray` ควรมีค่า `["Happy", "J", "cat"]`.
+หลังจาก `shift` แล้ว `ourArray` จะมีค่าเป็น `["J", "cat"]` 
+และหลังจาก `unshift` แล้ว `ourArray` จะมีค่าเป็น `["Happy", "J", "cat"]`.
 
 # --instructions--
 
-จงเพิ่ม `["Paul",35]` ที่ตำแหน่งแรกของตัวแปร `myArray` โดยใช้ `unshift()`
+จงแทรก `["Paul",35]` เข้าไปข้างหน้าตัวแปร `myArray` โดยใช้ `unshift()`
 
 # --hints--
 
-`myArray` ตอนนี้ควรมีค่า `[["Paul", 35], ["dog", 3]]`
+ตัวแปร `myArray` ต้องมีค่าเป็น `[["Paul", 35], ["dog", 3]]`
 
 ```js
 assert(
@@ -62,11 +63,11 @@ assert(
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var myArray = [["John", 23], ["dog", 3]];
 myArray.shift();
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

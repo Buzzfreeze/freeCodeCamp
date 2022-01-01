@@ -8,31 +8,32 @@ dashedName: match-single-characters-not-specified
 
 # --description--
 
-ที่ผ่านมา คุณสร้างชุดตัวอักษรที่คุณต้องการ match แต่อย่างไรก็ตาม คุณสามารถสร้างชุดตัวอักษรที่คุณไม่ต้องการ match ได้ ซึ่งประเภทชุดตัวอักษรที่ว่านี้ เรียกว่า <dfn>negated character sets</dfn>
+เราได้เรียนเรื่องการสร้างชุดตัวอักษรที่เราต้องการ match ไปแล้ว
+คราวนี้เรามาสร้างชุดตัวอักษรที่เราไม่ต้องการ match กัน ชุดตัวอักษรนี้ เรียกว่า <dfn>negated character set</dfn>
 
-การสร้าง negated character set ทำได้โดยการนำ caret character (`^`) วางหลังวงเล็บเปิด (opening bracket) และอยู่ก่อนตัวอักษรที่คุณไม่ต้องการ match
+การสร้าง negated character set ทำได้โดยการนำ caret character (`^`) (`^` จะอยู่บริเวณเลข `6` หรือ `ถ` บนคีย์บอร์ด) วางไว้หลังวงเล็บเปิด (`[`) และต้องวางไว้หน้าตัวอักษรที่คุณไม่ต้องการ match
 
-ตัวอย่างเช่น `/[^aeiou]/gi` matche ทุกตัวอักษรที่ไม่ใช่สระ โดยตัวอักษร เช่น `.`, `!`, `[`, `@`, `/` และ white space จะถูก match เพราะ negated vowel character set จะไม่รวมตัวอักษรที่เป็นสระเท่านั้น
+เช่น `/[^aeiou]/gi` จะ match ทุกตัวอักษรที่ไม่ใช่สระในภาษาอังกฤษ (`a` `e` `i` `o` และ `u`) โดยตัวอักษรที่เป็นสัญลักษณ์ เช่น `.`, `!`, `[`, `@`, `/` และ white space (เช่นการเว้นวรรค หรือการเว้นบรรทัด) จะถูก match ด้วย เพราะว่า negated character set จะไม่ match แค่ตัวอักษรที่เป็นสระในภาษาอังกฤษเท่านั้น
 
 # --instructions--
 
-จงสร้าง regex ค่าหนึ่งที่ match กับทุกตัวอักษรที่ไม่ใช่ตัวเลขหรือสระ โดยสามารถเพิ่ม flag ที่เหมาะสมใน regex ได้
+จงสร้าง regex ที่จะ match กับทุกตัวอักษรที่ไม่ใช่ตัวเลขหรือสระในภาษาอังกฤษ อย่าลืมใส่ flag ใน regex ด้วย
 
 # --hints--
 
-regex `myRegex` ควร match 9 items
+regex `myRegex` ต้องเจอทั้งหมด 9 ตัวอักษร
 
 ```js
 assert(result.length == 9);
 ```
 
-regex `myRegex` ควรใช้ global flag
+regex `myRegex` ต้องใช้ flag global (`g`)
 
 ```js
 assert(myRegex.flags.match(/g/).length == 1);
 ```
 
-regex `myRegex` ควรใช้ case insensitive flag
+regex `myRegex` ต้องใช้ flag case insensitive (`i`)
 
 ```js
 assert(myRegex.flags.match(/i/).length == 1);
@@ -44,14 +45,14 @@ assert(myRegex.flags.match(/i/).length == 1);
 
 ```js
 let quoteSample = "3 blind mice.";
-let myRegex = /change/; // Change this line
-let result = myRegex; // Change this line
+let myRegex = /change/; // แก้บรรทัดนี้
+let result = myRegex; // แก้บรรทัดนี้
 ```
 
 # --solutions--
 
 ```js
 let quoteSample = "3 blind mice.";
-let myRegex = /[^0-9aeiou]/gi; // Change this line
-let result = quoteSample.match(myRegex); // Change this line
+let myRegex = /[^0-9aeiou]/gi; // แก้บรรทัดนี้
+let result = quoteSample.match(myRegex); // แก้บรรทัดนี้
 ```

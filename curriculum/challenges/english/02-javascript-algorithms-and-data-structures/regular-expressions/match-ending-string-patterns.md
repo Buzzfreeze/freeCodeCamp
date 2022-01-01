@@ -8,9 +8,10 @@ dashedName: match-ending-string-patterns
 
 # --description--
 
-ในแบบทดสอบที่แล้ว คุณทราบการใช้ caret character เพื่อค้นหา pattern ที่ตำแหน่งแรกของ string อย่งไรก็ตาม มีวิธีค้นหา pattern ที่ตำแหน่งสุดท้ายของ string ด้วย
+ในบทเรียนที่แล้ว เราได้เรื่ยนเรื่องการใช้ caret character เพื่อค้นหา pattern จากต้น string ไปแล้ว
+คราวนี้เรามาเรียนเรื่องการหา pattern ที่ตำแหน่งสุดท้ายของ string กัน
 
-คุณสามารถค้นหาที่ตำแหน่งสุดท้ายของ string โดยนำ dollar sign character `$` วางไว้ท้ายสุดของ regex
+เราจะหา pattern ที่ตำแหน่งสุดท้ายของ string ได้ด้วยการนำ dollar sign (`$`) ไปต่อท้าย regex
 
 ```js
 let theEnding = "This is a never ending story";
@@ -20,27 +21,27 @@ let noEnding = "Sometimes a story will have to end";
 storyRegex.test(noEnding);
 ```
 
-การเรียก `test` ครั้งแรกคืนค่า `true` ส่วนการเรียกครั้งที่สองจะคืนค่า `false`
+การเรียกใช้ `test` ครั้งแรกจะได้ค่าเป็น `true` ส่วนการเรียกใช้ครั้งที่สองจะได้ค่าเป็น `false`
 
 # --instructions--
 
-จงใช้ anchor character (`$`) เพื่อ match กับ string `caboose` ที่ตำแหน่งสุดท้ายของ string `caboose`
+ให้ใช้ anchor character (`$`) เพื่อหาว่า string `"caboose"` อยู่ที่ตำแหน่งสุดท้ายของตัวแปร `caboose` หรือไม่
 
 # --hints--
 
-คุณควรค้นหา `caboose` ด้วย dollar sign `$` ใน regex ของคุณ
+ต้องเขียน regex เพื่อหา `caboose` โดยใช้ dollar sign `$`
 
 ```js
 assert(lastRegex.source == 'caboose$');
 ```
 
-regex ของคุณไม่ควรใช้ flag ใดๆ
+ต้องไม่ใช้ flag ใน regex
 
 ```js
 assert(lastRegex.flags == '');
 ```
 
-คุณควร match `caboose` ที่ตำแหน่งสุดท้ายของ string `The last car on a train is the caboose`
+regex ที่เขียนต้องเจอว่า `caboose` อยู่ท้าย string `The last car on a train is the caboose`
 
 ```js
 lastRegex.lastIndex = 0;
@@ -53,7 +54,7 @@ assert(lastRegex.test('The last car on a train is the caboose'));
 
 ```js
 let caboose = "The last car on a train is the caboose";
-let lastRegex = /change/; // Change this line
+let lastRegex = /change/; // แก้บรรทัดนี้
 let result = lastRegex.test(caboose);
 ```
 
@@ -61,6 +62,6 @@ let result = lastRegex.test(caboose);
 
 ```js
 let caboose = "The last car on a train is the caboose";
-let lastRegex = /caboose$/; // Change this line
+let lastRegex = /caboose$/; // แก้บรรทัดนี้
 let result = lastRegex.test(caboose);
 ```

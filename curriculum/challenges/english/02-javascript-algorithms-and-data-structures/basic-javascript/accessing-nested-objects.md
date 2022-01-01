@@ -9,9 +9,9 @@ dashedName: accessing-nested-objects
 
 # --description--
 
-property ย่อยของ object สามารถเข้าถึงได้ โดยใช้เครื่องหมายจุด หรือวงเล็บ (brackets)
+เราสามารถเข้าถึง property ที่อยู่ลึกลงไปใน object ได้โดยใช้ Dot Notation หรือ Bracket Notation
 
-ต่อไปนี้เป็น nested object:
+ตัวอย่างข้างล่างเป็นตัวอย่างของ object ที่ซ้อนกันอยู่:
 
 ```js
 var ourStorage = {
@@ -30,21 +30,23 @@ ourStorage.cabinet["top drawer"].folder2;
 ourStorage.desk.drawer;
 ```
 
-`ourStorage.cabinet["top drawer"].folder2` ควรเป็น string `secrets` และ `ourStorage.desk.drawer` ควรเป็น string `stapler`
+โค้ดในส่วน `ourStorage.cabinet["top drawer"].folder2` จะมีค่าเป็น string `secrets`
+และโค้ดในส่วน `ourStorage.desk.drawer` จะมีค่าเป็น string `stapler`
 
+หากไม่เข้าใจให้ลองค่อยๆ ไล่ลำดับจาก object ตัวนอกสุดเข้าไปยังตัวในสุดและดูชื่อของ property ประกอบ
 # --instructions--
 
-จงเข้าถึง object `myStorage` และกำหนดค่า property ของ `glove box` ให้กับตัวแปร `gloveBoxContents` โดยใช้เครื่องหมายจุด (dot notation) สำหรับทุก property เท่าที่เป็นไปได้ ถ้าไม่ได้ ให้ใช้เครื่องหมายวงเล็บ (bracket notation)
+จงเข้าถึง object `myStorage` และนำค่าของ property ที่ชื่อ `glove box` ไปกำหนดให้กับตัวแปร `gloveBoxContents` โดยใช้เครื่องหมายจุด (dot notation) สำหรับทุก property เท่าที่ใช้ได้ ถ้าตัวไหนใช้ไม่ได้ ให้ใช้เครื่องหมายวงเล็บ (bracket notation) แทน
 
 # --hints--
 
-`gloveBoxContents` ควรเป็น string `maps`.
+`gloveBoxContents` ตัองเป็นข้อมูลประเภท string ซึ่งมีค่าเป็น `maps`
 
 ```js
 assert(gloveBoxContents === 'maps');
 ```
 
-โค้ดของคุณควรใช้เครื่องหมายจุดและวงเล็บในการเข้าถึง `myStorage`
+โค้ดของคุณควรใช้ Dot Notation และ Bracket Notation ในการเข้าถึง `myStorage`
 
 ```js
 assert(/=\s*myStorage\.car\.inside\[\s*("|')glove box\1\s*\]/g.test(code));

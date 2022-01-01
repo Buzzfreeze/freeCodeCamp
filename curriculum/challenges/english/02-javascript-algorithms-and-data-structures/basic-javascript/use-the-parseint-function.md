@@ -9,45 +9,45 @@ dashedName: use-the-parseint-function
 
 # --description--
 
-`parseInt()` function แปลง string เป็น Integer และคืนค่า integer ดังตัวอย่าง
+ฟังก์ชัน `parseInt()` จะแปลง string เป็น integer (จำนวนเต็ม) และคืนค่ามาเป็น integer ดังตัวอย่าง
 
 ```js
 var a = parseInt("007");
 ```
 
-function ด้านบนจะแปลง string `007` เป็น integer `7` ถ้าตัวอักษรแรกใน string ไม่สามารถแปลงเป็น number ได้ จะคืนค่า `NaN`
+ฟังก์ชันด้านบนจะแปลง string `007` เป็นเลข `7` ถ้าตัวอักษรแรกใน string ไม่สามารถแปลงเป็นตัวเลขได้ จะคืนค่า `NaN` (`Not a Number`)
 
 # --instructions--
 
-จงใช้ `parseInt()` ใน funcion `convertToInteger` เพื่อแปลง string `str` ที่ป้อนเข้าไป เป็น integer และคืนค่า
+จงใช้ `parseInt()` ในฟังก์ชัน `convertToInteger` เพื่อแปลง string `str` ที่ป้อนเข้าไป เป็น integer และคืนค่าออกมา
 
 # --hints--
 
-`convertToInteger` ควรใช้ `parseInt()` function
+ต้องใช้ `parseInt()` ในฟังก์ชัน `convertToInteger`
 
 ```js
 assert(/parseInt/g.test(code));
 ```
 
-`convertToInteger("56")` ควรส่งคืนค่า a number
+การเรียกใช้ฟังก์ชัน `convertToInteger("56")` ต้องคืนค่าออกมาเป็นตัวเลข
 
 ```js
 assert(typeof convertToInteger('56') === 'number');
 ```
 
-`convertToInteger("56")` ควรส่งคืนค่า 56
+การเรียกใช้ฟังก์ชัน `convertToInteger("56")` ต้องคืนค่าออกมาเป็น 56
 
 ```js
 assert(convertToInteger('56') === 56);
 ```
 
-`convertToInteger("77")` ควรส่งคืนค่า 77
+การเรียกใช้ฟังก์ชัน `convertToInteger("77")` ต้องคืนค่าออกมาเป็น 77
 
 ```js
 assert(convertToInteger('77') === 77);
 ```
 
-`convertToInteger("JamesBond")` ควรส่งคืนค่า `NaN`
+การเรียกใช้ฟังก์ชัน `convertToInteger("JamesBond")` ต้องคืนค่าออกมาเป็น `NaN`
 
 ```js
 assert.isNaN(convertToInteger('JamesBond'));

@@ -8,7 +8,7 @@ dashedName: find-more-than-the-first-match
 
 # --description--
 
-ที่ผ่านมา คุณแยก  (extract) หรือค้นหา  (search) pattern ได้เพียงครั้งเดียว
+ที่เราได้เรียนมา ในการใช้ regex เราจะหาข้อความ (`.test`) หรือดึงข้อความออกมา (`.match`) ได้ครั้งเดียวต่อการเรียกใช้หนึ่งครั้ง
 
 ```js
 let testStr = "Repeat, Repeat, Repeat";
@@ -16,39 +16,39 @@ let ourRegex = /Repeat/;
 testStr.match(ourRegex);
 ```
 
-ในที่นี้ `match` จะคืนค่า `["Repeat"]`
+จากตัวอย่างข้างบนนี้ `match` จะคืนค่าเป็น `["Repeat"]`
 
-การค้นหาหรือแยกตาม pattern มากกว่า 1 ครั้ง คุณสามารถใช้ `g` flag
+ถ้าเราอยากค้นหาหรือดึงข้อความออกมามากกว่า 1 ครั้งเราจะต้องใช้ flag `g`
 
 ```js
 let repeatRegex = /Repeat/g;
 testStr.match(repeatRegex);
 ```
 
-ในที่นี้ `match` คืนค่า `["Repeat", "Repeat", "Repeat"]`
+ในที่นี้ `match` จะคืนค่าเป็น `["Repeat", "Repeat", "Repeat"]`
 
 # --instructions--
 
-ให้ใช้ regex `starRegex` เพื่อค้นหาและแยกคำว่า `Twinkle` ทุกคำจาก string `twinkleStar`
+ให้ใช้ regex `starRegex` เพื่อค้นหาและดึงคำว่า `Twinkle` ทุกคำออกมาจาก string `twinkleStar`
 
 **Note**  
-คุณสามารถใช้ flag ได้หลายตัวกับ regex เช่น `/search/gi`
+ถ้าจะใช้ flag หลายตัวกับ regex ให้เขียนแบบนี้ `/search/gi`
 
 # --hints--
 
-regex `starRegex` ควรใช้ global flag `g`
+regex `starRegex` ต้องใช้ flag global (`g`)
 
 ```js
 assert(starRegex.flags.match(/g/).length == 1);
 ```
 
-regex `starRegex` ควรใช้ case insensitive flag `i`
+regex `starRegex` ควรใช้ flag case insensitive (`i`)
 
 ```js
 assert(starRegex.flags.match(/i/).length == 1);
 ```
 
-ควร match คำว่า `Twinkle` ทั้ง 2 คำ
+ต้อง match คำว่า `Twinkle` ทั้ง 2 คำ
 
 ```js
 assert(
@@ -60,7 +60,7 @@ assert(
 );
 ```
 
-ผลของการ match `result` ควรมี 2 elements
+เมื่อทำงานแล้ว ตัวแปร `result` ต้องมี 2 element
 
 ```js
 assert(result.length == 2);
@@ -72,8 +72,8 @@ assert(result.length == 2);
 
 ```js
 let twinkleStar = "Twinkle, twinkle, little star";
-let starRegex = /change/; // Change this line
-let result = twinkleStar; // Change this line
+let starRegex = /change/; // แก้บรรทัดนี้
+let result = twinkleStar; // แก้บรรทัดนี้
 ```
 
 # --solutions--

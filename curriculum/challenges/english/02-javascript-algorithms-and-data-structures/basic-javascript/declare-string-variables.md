@@ -9,13 +9,13 @@ dashedName: declare-string-variables
 
 # --description--
 
-ก่อนหน้านี้ เราได้เขียนโค้ด
+ก่อนหน้านี้ เราได้ประกาศตัวแปรโดยใช้โค้ดด้านล่างนี้
 
 ```js
 var myName = "your name";
 ```
 
-`"your name"` เรียกว่า <dfn>string</dfn> <dfn>literal</dfn> สาเหตุที่เรียกว่า string เพราะเป็นชุดตัวอักษรตั้งแต่ 0 ตัวขึ้นไป อยู่ในเครื่องหมายคำพูดที่เป็น single quotes หรือ double quotes
+`"your name"` เรียกว่า <dfn>string</dfn> <dfn>literal</dfn> โดย string literal (หรือเรียกสั้นๆ ว่า string) เป็นชุดตัวอักษรที่อยู่ในเครื่องหมายคำพูดที่เป็น single quotes (`''`) หรือ double quotes (`""`) ซึ่งชุดตัวอักษรจะมีความยาวได้ตั้งแต่ 0 ตัวอักษรขึ้นไป
 
 # --instructions--
 

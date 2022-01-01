@@ -9,9 +9,9 @@ dashedName: store-multiple-values-in-one-variable-using-javascript-arrays
 
 # --description--
 
-ตัวแปร `array` ในภาษา JavaScript ทำให้เราสามารถเก็บข้อมูลหลายตัวไว้ในที่เดียวกันได้
+ภาษา JavaScript มีตัวแปรแบบ `array` ที่ทำให้เราสามารถเก็บข้อมูลหลายตัวไว้ในที่เดียวกันได้
 
-คุณเริ่มจากการประกาศ array ด้วย opening square bracket (วงเล็บเปิด) และปิดด้วย closing square bracket (วงเล็บเปิด) และใส่ comma ระหว่างแต่ละรายการ ดังนี้:
+การประกาศ array ทำได้โดยการเปิดด้วย open square bracket (`[`) และปิดด้วย close square bracket (`]`) และใส่ comma (`,`) ระหว่างแต่ละรายการ แบบนี้:
 
 ```js
 var sandwich = ["peanut butter", "jelly", "bread"]
@@ -19,23 +19,23 @@ var sandwich = ["peanut butter", "jelly", "bread"]
 
 # --instructions--
 
-จงแก้ไข array ใหม่ `myArray` เพื่อให้มีทั้ง string และ number (ตามลำดับ)
+จงแก้ไขตัวแปร array ที่มีชื่อว่า `myArray` ให้มีทั้งข้อมูลแบบ string และ number (ตามลำดับ)
 
 # --hints--
 
-`myArray` ควรเป็น array
+ตัวแปร `myArray` ต้องเป็นข้อมูลประเภท array
 
 ```js
 assert(typeof myArray == 'object');
 ```
 
-item แรกใน `myArray` ควรเป็น string
+ข้อมูลแรกในตัวแปร `myArray` ต้องเป็นข้อมูลประเภท string
 
 ```js
 assert(typeof myArray[0] !== 'undefined' && typeof myArray[0] == 'string');
 ```
 
-item ที่สองใน `myArray` ควรเป็น number
+ข้อมูลที่สองในตัวแปร `myArray` ต้องเป็นข้อมูลประเภท number
 
 
 ```js
@@ -53,7 +53,7 @@ assert(typeof myArray[1] !== 'undefined' && typeof myArray[1] == 'number');
 ## --seed-contents--
 
 ```js
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 var myArray = [];
 ```
 

@@ -9,9 +9,9 @@ dashedName: accessing-object-properties-with-variables
 
 # --description--
 
-การใช้ bracket notation อีกแบบนึงกับ object คือการเข้าถึง property ซึ่งเก็บอยู่ในรูปของตัวแปร การทำเช่นนี้เป็นประโยชน์มากสำหรับการวนอ่าน property ของ object หรือเมื่อเข้าถึง lookup table
+การใช้ bracket notation อีกแบบนึง คือการเข้าถึง property ของ object ที่ชื่อของ property นั้นเก็บอยู่ในตัวแปร การทำแบบนี้จะช่วยให้วนอ่าน property ของ object หรือ lookup table ได้
 
-ต่อไปนี้เป็นตัวอย่างการใช้งานตัวแปรในการเข้าถึง property
+ด้านล่างนี้เป็นตัวอย่างการใช้ตัวแปรเพื่อเข้าถึง property
 
 
 ```js
@@ -23,9 +23,10 @@ var myBreed = dogs[myDog];
 console.log(myBreed);
 ```
 
-string `Doberman` ควรแสดงในหน้า console
+หน้า console จะแสดง string เป็นคำว่า `Doberman`
 
-อีกเหตุผลนึงที่คุณสามารถใช้แนวคิดนี้ คือเมื่อชื่อ property เป็นชื่อแบบ dynamic ระหว่างการทำงานของโปรแกรม ดังตัวอย่างนี้:
+คุณสามารถใช้วิธีนี้เพื่อเข้าถึง property ที่ชื่อเปลี่ยนไปในระหว่างที่โปรแกรมทำงานได้ด้วย
+ดูตัวอย่างด้านล่าง:
 
 ```js
 var someObj = {
@@ -39,36 +40,36 @@ var someProp = propPrefix("Name");
 console.log(someObj[someProp]);
 ```
 
-`someProp` มีค่าของ string `propName` และ string `John` ควรแสดงในหน้า console
+ตัวแปร `someProp` จะมีค่าเป็น string `propName` และหน้า console จะแสดง string เป็นคำว่า `John` 
 
 
 หมายเหตุ เรา *ไม่ได้* ใช้เครื่องหมายคำพูดครอบชื่อตัวแปรเมื่อเข้าถึง property เพราะเราใช้ *ค่า* ของตัวแปร ไม่ใช่ *ชื่อ* ตัวแปร
 
 # --instructions--
 
-กำหนดตัวแปร `playerNumber` เป็น `16` จากนั้นใช้ตัวแปรค้นหาชื่อผู้เล่น แล้วกำหนดค่าให้กับ `player`
+กำหนดค่าตัวแปร `playerNumber` เป็น `16` จากนั้นใช้ตัวแปรค้นหาชื่อผู้เล่น แล้วนำชื่อผู้เล่นมากำหนดค่าให้กับ `player`
 
 # --hints--
 
-`playerNumber` ควรเป็น number
+ตัวแปร `playerNumber` ต้องเป็นข้อมูลประเภท number
 
 ```js
 assert(typeof playerNumber === 'number');
 ```
 
-ค่าของ `player` ควรเป็น string
+ตัวแปร `player` ต้องเป็นข้อมูลประเภท string
 
 ```js
 assert(typeof player === 'string');
 ```
 
-ค่าของ `player` ควรเป็น string `Montana`
+ตัวแปร `player` ต้องเป็น string ซึ่งมีค่าเป็น `Montana`
 
 ```js
 assert(player === 'Montana');
 ```
 
-คุณควรใช้วงเล็บในการเข้าถึง `testObj`
+คุณควรใช้ Bracket Notation ในการเข้าถึง `testObj`
 
 ```js
 assert(/testObj\s*?\[.*?\]/.test(code));
@@ -80,7 +81,7 @@ assert(/testObj\s*?\[.*?\]/.test(code));
 assert(!code.match(/player\s*=\s*"|\'\s*Montana\s*"|\'\s*;/gi));
 ```
 
-คุณไม่ควรใช้ตัวแปร `playerNumber` ในวงเล็บ
+คุณควรใช้ตัวแปร `playerNumber` ใน Bracket Notation
 
 ```js
 assert(/testObj\s*?\[\s*playerNumber\s*\]/.test(code));
@@ -97,17 +98,17 @@ if(typeof player !== "undefined"){(function(v){return v;})(player);}
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var testObj = {
   12: "Namath",
   16: "Montana",
   19: "Unitas"
 };
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-var playerNumber;       // Change this line
-var player = testObj;   // Change this line
+var playerNumber;       // แก้ไขโค้ดบรรทัดนี้
+var player = testObj;   // แก้ไขโค้ดบรรทัดนี้
 ```
 
 # --solutions--

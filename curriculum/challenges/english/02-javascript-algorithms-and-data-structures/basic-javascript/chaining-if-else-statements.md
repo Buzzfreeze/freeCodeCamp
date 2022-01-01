@@ -9,7 +9,8 @@ dashedName: chaining-if-else-statements
 
 # --description--
 
-คำสั่ง `if/else` สามารถเชื่อมต่อกันเพื่อสร้าง logic ที่ซับซ้อน ด้านล่างเป็น <dfn>pseudocode</dfn> ของการเชื่อมต่อคำสั่ง `if` / `else if` หลายคำสั่ง
+เราสามารถเชื่อมคำสั่ง `if/else` เข้าด้วยกันเพื่อสร้าง logic ที่ซับซ้อนมากขึ้นได้ 
+<dfn>pseudocode</dfn> ด้านล่างนี้เป็นตัวอย่างของการเชื่อมคำสั่ง `if` / `else if` เข้าด้วยกัน
 
 
 ```js
@@ -27,89 +28,89 @@ if (condition1) {
 
 # --instructions--
 
-จงเขียนเชื่อมคำสั่ง `if`/`else if` เพื่อให้เป็นไปตามเงื่อนไขด้านล่าง
+จงเชื่อมคำสั่ง `if`/`else if` เพื่อให้เป็นไปตามเงื่อนไขด้านล่าง
 
-`num < 5` - ส่งคืนค่า `Tiny`  
-`num < 10` - ส่งคืนค่า `Small`  
-`num < 15` - ส่งคืนค่า `Medium`  
-`num < 20` - ส่งคืนค่า `Large`  
-`num >= 20` - ส่งคืนค่า `Huge`
+ถ้า `num < 5` จะคืนค่า `Tiny`  
+ถ้า `num < 10` จะคืนค่า `Small`  
+ถ้า `num < 15` จะคืนค่า `Medium`  
+ถ้า `num < 20` จะคืนค่า `Large`  
+ถ้า `num >= 20` จะคืนค่า `Huge`
 
 # --hints--
 
-คุณควรมีคำสั่ง `else` อย่างน้อยสี่คำสั่ง
+ต้องใช้คำสั่ง `else` อย่างน้อยสี่ครั้งในโค้ด
 
 ```js
 assert(code.match(/else/g).length > 3);
 ```
 
-คุณควรมีคำสั่ง `if` อย่างน้อยสี่คำสั่ง
+ต้องใช้คำสั่ง `if` อย่างน้อยสี่ครั้งในโค้ด
 
 ```js
 assert(code.match(/if/g).length > 3);
 ```
 
-คุณควรมีคำสั่ง `return` อย่างน้อยหนึ่งคำสั่ง
+ต้องใช้คำสั่ง `return` อย่างน้อยหนึ่งครั้งในโค้ด
 
 ```js
 assert(code.match(/return/g).length >= 1);
 ```
 
-`testSize(0)` ควรคืนค่า string `Tiny`
+การเรียกใช้ฟังก์ชัน `testSize(0)` ต้องคืนค่าออกมาเป็น string `Tiny`
 
 ```js
 assert(testSize(0) === 'Tiny');
 ```
 
-`testSize(4)` ควรคืนค่า string `Tiny`
+การเรียกใช้ฟังก์ชัน `testSize(4)` ต้องคืนค่าออกมาเป็น string `Tiny`
 
 ```js
 assert(testSize(4) === 'Tiny');
 ```
 
-`testSize(5)` ควรคืนค่า string `Small`
+การเรียกใช้ฟังก์ชัน `testSize(5)` ต้องคืนค่าออกมาเป็น string `Small`
 
 ```js
 assert(testSize(5) === 'Small');
 ```
 
-`testSize(8)` ควรคืนค่า string `Small`
+การเรียกใช้ฟังก์ชัน `testSize(8)` ต้องคืนค่าออกมาเป็น string `Small`
 
 ```js
 assert(testSize(8) === 'Small');
 ```
 
-`testSize(10)` ควรคืนค่า string `Medium`
+การเรียกใช้ฟังก์ชัน `testSize(10)` ต้องคืนค่าออกมาเป็น string `Medium`
 
 ```js
 assert(testSize(10) === 'Medium');
 ```
 
-`testSize(14)` ควรคืนค่า string `Medium`
+การเรียกใช้ฟังก์ชัน `testSize(14)` ต้องคืนค่าออกมาเป็น string `Medium`
 
 ```js
 assert(testSize(14) === 'Medium');
 ```
 
-`testSize(15)` ควรคืนค่า string `Large`
+การเรียกใช้ฟังก์ชัน `testSize(15)` ต้องคืนค่าออกมาเป็น string `Large`
 
 ```js
 assert(testSize(15) === 'Large');
 ```
 
-`testSize(17)` ควรคืนค่า string `Large`
+การเรียกใช้ฟังก์ชัน `testSize(17)` ต้องคืนค่าออกมาเป็น string `Large`
 
 ```js
 assert(testSize(17) === 'Large');
 ```
 
-`testSize(20)` ควรคืนค่า string `Huge`
+การเรียกใช้ฟังก์ชัน `testSize(20)` ต้องคืนค่าออกมาเป็น string `Huge`
 
 ```js
 assert(testSize(20) === 'Huge');
 ```
 
-`testSize(25)` ควรคืนค่า string `Huge`
+การเรียกใช้ฟังก์ชัน `testSize(25)` ต้องคืนค่าออกมาเป็น string `Huge`
 
 ```js
 assert(testSize(25) === 'Huge');
@@ -121,11 +122,11 @@ assert(testSize(25) === 'Huge');
 
 ```js
 function testSize(num) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 
   return "Change Me";
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 
 testSize(7);

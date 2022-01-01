@@ -9,9 +9,10 @@ dashedName: comparison-with-the-greater-than-or-equal-to-operator
 
 # --description--
 
-เครื่องหมายมากกว่าหรือเท่ากับ (`>=`) เปรียบเทียบค่าของตัวเลขสองตัว หากตัวเลขทางซ้ายมากกว่าหรือเท่ากับตัวเลขทางขวา จะแสดงผลเป็น `true` มิฉะนั้น จะส่งกลับ `false`
+เครื่องหมายมากกว่าหรือเท่ากับ (`>=`) จะเปรียบเทียบค่าของตัวเลขสองตัว ถ้าตัวเลขทางซ้ายมากกว่าหรือเท่ากับตัวเลขทางขวา จะคืนค่ามาเป็น `true` และถ้าน้อยกว่าจะเป็น `false`
 
-คล้ายกับเครื่องหมาย (`==`) เครื่องหมายมากกว่าหรือเท่ากับ (`>=`) จะแปลงประเภทข้อมูลขณะที่ทำการเปรียบเทียบ 
+เครื่องหมายมากกว่าหรือเท่ากับก็จะแปลงประเภทของข้อมูลให้เลย เหมือนกับเวลาใช้เครื่องหมาย (`==`) 
+
 
 **Examples**
 
@@ -22,57 +23,57 @@ dashedName: comparison-with-the-greater-than-or-equal-to-operator
 '7' >=  9
 ```
 
-ผลลัพธ์แต่ละบรรทัดจะเป็น `true`, `true`, `false`, และ `false` ตามลำดับ
+แต่ละบรรทัดจะได้ค่าเป็น `true`, `true`, `false`, และ `false` ตามลำดับ
 
 # --instructions--
 
-จงเพิ่มเครื่องหมายมากกว่าหรือเท่ากับในบรรทัดที่กำหนดเพื่อให้การคืนค่าดูสมเหตุสมผล
+จงเพิ่มเครื่องหมายมากกว่าหรือเท่ากับในบรรทัดที่กำหนดเพื่อให้การคืนค่าถูกต้อง
 
 # --hints--
 
-`testGreaterOrEqual(0)` ควรคืนค่า string `Less than 10`
+การเรียกใช้ฟังก์ชัน `testGreaterOrEqual(0)` ต้องคืนค่าออกมาเป็น string `Less than 10`
 
 ```js
 assert(testGreaterOrEqual(0) === 'Less than 10');
 ```
 
-`testGreaterOrEqual(9)` ควรคืนค่า string `Less than 10`
+การเรียกใช้ฟังก์ชัน `testGreaterOrEqual(9)` ต้องคืนค่าออกมาเป็น string `Less than 10`
 
 ```js
 assert(testGreaterOrEqual(9) === 'Less than 10');
 ```
 
-`testGreaterOrEqual(10)` ควรคืนค่า string `10 or Over`
+การเรียกใช้ฟังก์ชัน `testGreaterOrEqual(10)` ต้องคืนค่าออกมาเป็น string `10 or Over`
 
 ```js
 assert(testGreaterOrEqual(10) === '10 or Over');
 ```
 
-`testGreaterOrEqual(11)` ควรคืนค่า string `10 or Over`
+การเรียกใช้ฟังก์ชัน `testGreaterOrEqual(11)` ต้องคืนค่าออกมาเป็น string `10 or Over`
 
 ```js
 assert(testGreaterOrEqual(11) === '10 or Over');
 ```
 
-`testGreaterOrEqual(19)` ควรคืนค่า string `10 or Over`
+การเรียกใช้ฟังก์ชัน `testGreaterOrEqual(19)` ต้องคืนค่าออกมาเป็น string `10 or Over`
 
 ```js
 assert(testGreaterOrEqual(19) === '10 or Over');
 ```
 
-`testGreaterOrEqual(100)` ควรคืนค่า string `20 or Over`
+การเรียกใช้ฟังก์ชัน `testGreaterOrEqual(100)` ต้องคืนค่าออกมาเป็น string `20 or Over`
 
 ```js
 assert(testGreaterOrEqual(100) === '20 or Over');
 ```
 
-`testGreaterOrEqual(21)` ควรคืนค่า string `20 or Over`
+การเรียกใช้ฟังก์ชัน `testGreaterOrEqual(21)` ต้องคืนค่าออกมาเป็น string `20 or Over`
 
 ```js
 assert(testGreaterOrEqual(21) === '20 or Over');
 ```
 
-คุณควรใช้เครื่องหมาย `>=` อย่างน้อยสองครั้ง
+ต้องใช้เครื่องหมาย `>=` อย่างน้อยสองครั้งในโค้ด
 
 ```js
 assert(code.match(/val\s*>=\s*('|")*\d+('|")*/g).length > 1);
@@ -84,15 +85,15 @@ assert(code.match(/val\s*>=\s*('|")*\d+('|")*/g).length > 1);
 
 ```js
 function testGreaterOrEqual(val) {
-  if (val) {  // Change this line
-    return "20 or Over";
+  if (val) {  // แก้ไขบรรทัดนี้
+    return "20 or Over"; // มากกว่าหรือเท่ากับ 20
   }
 
-  if (val) {  // Change this line
-    return "10 or Over";
+  if (val) {  // แก้ไขบรรทัดนี้
+    return "10 or Over"; // มากกว่าหรือเท่ากับ 10
   }
 
-  return "Less than 10";
+  return "Less than 10"; // น้อยกว่า 10
 }
 
 testGreaterOrEqual(10);
@@ -102,11 +103,11 @@ testGreaterOrEqual(10);
 
 ```js
 function testGreaterOrEqual(val) {
-  if (val >= 20) {  // Change this line
+  if (val >= 20) {  // แก้ไขบรรทัดนี้
     return "20 or Over";
   }
 
-  if (val >= 10) {  // Change this line
+  if (val >= 10) {  // แก้ไขบรรทัดนี้
     return "10 or Over";
   }
 

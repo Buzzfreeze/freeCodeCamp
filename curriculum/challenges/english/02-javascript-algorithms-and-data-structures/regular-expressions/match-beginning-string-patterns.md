@@ -8,9 +8,10 @@ dashedName: match-beginning-string-patterns
 
 # --description--
 
-แบบทดสอบที่แล้วแสดงให้เห็นว่า regular expressions สามารถค้นหาการ match ได้หลายครั้ง นอกจากนี้ยังค้นหา pattern ในตำแหน่งที่กำหนดใน string ได้ด้วย
+ในบทเรียนที่แล้วเราจะเห็นแล้วว่าเราใช้ regular expression เพื่อทำการ match ได้หลายครั้ง แล้วเรายังใช้หา pattern ในตำแหน่งที่กำหนดใน string ได้ด้วย
 
-ในแบบทดสอบที่แล้ว คุณใช้ caret character (`^`) ภายใน character set เพื่อสร้าง negated character set ในรูปแบบ `[^thingsThatWillNotBeMatched]` อย่างไรก็ตาม หากคุณนำ caret character วางไว้นอก character set จะใช้สำหรับค้นหา patterns ที่ตำแหน่งแรกของ string
+ในบทเรียนที่ผ่านมา เราใช้ caret character (`^`) ใน character set เพื่อสร้าง negated character set ในรูปแบบ `[^thingsThatWillNotBeMatched]` แต่ถ้าเราวาง caret character ไว้นอก character set จะเป็นการดู pattern ที่ต้น string
+ลองดูตัวอย่าง:
 
 ```js
 let firstString = "Ricky is first and can be found.";
@@ -20,34 +21,34 @@ let notFirst = "You can't find Ricky now.";
 firstRegex.test(notFirst);
 ```
 
-การเรียก `test` ครั้งแรกคืนค่า `true` ขณะที่การเรียกครั้งท่ี่สองคืนค่า `false`
+การเรียกใช้ `test` ครั้งแรกจะได้ค่าเป็น `true`แต่การเรียกใช้ครั้งที่สองจะได้ค่าเป็น `false`
 
 # --instructions--
 
-จงใช้ caret character ใน regex เพื่อค้นหา `Cal` ที่อยู่ตำแหน่งเริ่มต้น string `rickyAndCal`
+ให้ใช้ caret character (`^`) ใน regex เพื่อตรวจสอบว่ามี `Cal` อยู่ที่ต้น string `rickyAndCal` หรือไม่
 
 # --hints--
 
-regex ของคุณควรค้นหา string `Cal` ที่มีตัวพิมพ์ใหญ่
+regex ต้องหา string `Cal` ที่เป็นตัว `C` พิมพ์ใหญ่
 
 ```js
 assert(calRegex.source == '^Cal');
 ```
 
-regex ของคุณไม่ควรใช้ flag ใดๆ
+ต้องไม่ใช้ flag ใน regex
 
 ```js
 assert(calRegex.flags == '');
 ```
 
-regex ของคุณควร match กับ string `Cal` ที่ตำแหน่งเริ่มต้นของ string
+regex ที่เขียนต้อง match กับ string `Cal` ที่ต้น string
 
 ```js
 calRegex.lastIndex = 0;
 assert(calRegex.test('Cal and Ricky both like racing.'));
 ```
 
-regex ของคุณไม่ควร match กับ string `Cal` ที่อยู่กลาง string
+regex ที่เขียนต้องไม่ match กับ string `Cal` ที่อยู่กลาง string
 
 ```js
 calRegex.lastIndex = 0;
@@ -60,7 +61,7 @@ assert(!calRegex.test('Ricky and Cal both like racing.'));
 
 ```js
 let rickyAndCal = "Cal and Ricky both like racing.";
-let calRegex = /change/; // Change this line
+let calRegex = /change/; // แก้บรรทัดนี้
 let result = calRegex.test(rickyAndCal);
 ```
 
@@ -68,6 +69,6 @@ let result = calRegex.test(rickyAndCal);
 
 ```js
 let rickyAndCal = "Cal and Ricky both like racing.";
-let calRegex = /^Cal/; // Change this line
+let calRegex = /^Cal/; // แก้บรรทัดนี้
 let result = calRegex.test(rickyAndCal);
 ```

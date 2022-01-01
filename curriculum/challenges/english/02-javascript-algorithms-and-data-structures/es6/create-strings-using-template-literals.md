@@ -8,11 +8,11 @@ dashedName: create-strings-using-template-literals
 
 # --description--
 
-ฟีเจอร์ใหม่ของ ES6 คือ <dfn>template literal</dfn> นี่เป็น string ประเภทพิเศษที่ทำให้การสร้าง string ที่ซับซ้อนทำให้ง่ายขึ้น
+ฟีเจอร์ใหม่อีกตัวของ ES6 คือ <dfn>template literal</dfn> ซึ่งเป็น string แบบพิเศษที่ทำให้การสร้าง string ที่ซับซ้อนง่ายขึ้น
 
-<dfn>template literal</dfn>ช่วยให้คุณสร้าง string แบบหลายบรรทัด และฟีเจอร์ string interpolation เพื่อสร้าง string 
+<dfn>template literal</dfn> จะทำให้เราเขียน string ที่มีหลายบรรทัดได้ และเราก็จะใช้ฟีเจอร์ string interpolation เพื่อสร้าง string ได้ด้วย
 
-ลองดูโค้ดดังนี้
+ลองดูโค้ดตัวอย่าง:
 
 ```js
 const person = {
@@ -28,14 +28,19 @@ console.log(greeting);
 
 console จะแสดง string `Hello, my name is Zodiac Hasbro!` และ `I am 56 years old.`
 
-จากโค้ดด้านบนมีหลายสิ่งเกิดขึ้น ประการแรก มีการใช้ backticks (`` ` ``) ไม่ใช่เครื่องหมายคำพูด (`'` หรือ `"`) เพื่อคลุม string ประการที่สอง สังเกตว่า string เป็นแบบหลายบรรทัด ทั้งในโค้ดและเอาต์พุต วิธีนี้ช่วยประหยัดการแทรก `\n` ภายใน string ซึ่งการเขียน `${variable}` ที่ใช้ด้านบนทำให้คุณ โดยไม่ต้องใช้การต่อด้วยเครื่องหมาย `+` อีกต่อไป แต่แค่วางตัวแปรลงใน string template แล้วคลุมด้วย `${` และ `}` ในทำนองเดียวกัน คุณสามารถรวม expression อื่นๆ ลงใน string literal ของคุณได้ เช่น `${a + b}` วิธีใหม่นี้ช่วยให้ คุณมีความยืดหยุ่นมากขึ้นในการสร้าง string
+โค้ดด้านบนจะมีรายละเอียดค่อนข้างเยอะ เราจะมาดูทีละรายละเอียดกัน 
+อย่างแรก เราจะมีการใช้ backtick (`` ` ``) ในการครอบ string แทนเครื่องหมาย quote (`'` กับ `"`)
+อย่างที่สอง เราจะเห็นว่า string นี้มีสองบรรทัดทั้งในโค้ดและเอาต์พุต การใช้วิธีนี้จะทำให้เราไม่ต้องใช้ `\n` ใน string 
+อย่างที่สาม การเขียน `${variable}` จะทำให้เราไม่ต้องต่อ string ด้วยเครื่องหมาย `+` อีกต่อไป เราแค่วางตัวแปรลงใน string template แล้วครอบด้วย `${` และ `}` ก็จะเป็นการแสดงค่าของตัวแปรนั้นใน string แล้ว แล้วเราก็ยังสามารถใส่ expression อื่นๆ ลงใน string literal ของได้ เช่น `${a + b}` 
+วิธีใหม่นี้จะทำให้เราสร้าง string ได้ยืดหยุ่นมากขึ้น
 
 
 # --instructions--
 
-จงใช้ template literal syntax และใช้ backticks เพื่อสร้าง array ของ list element (`li`) strings โดยข้อความของแต่ละ list element ควรเป็น array element จาก property `failure` ที่อยู่ใน `result` object และมี `class` attribute ที่มีค่า `text-warning` อย่างไรก็ตาม ฟังก์ชัน `makeList`  ควรคืนค่าเป็น array ของ list item strings
+จงใช้ template literal syntax และใช้ backtick เพื่อสร้าง array ของ string ที่เป็น list element (`li`) โดยข้อความใน list element ต้องมาจาก array ของ property ที่ชื่อ `failure` ที่อยู่ใน object ที่ชื่อ `result`  และมี `class` เป็น `text-warning` 
+ฟังก์ชัน `makeList` ควรคืนค่าเป็น array ของ list element ที่เป็น string
 
-จงใช้ loop (loop ประเภทไหนก็ได้) เพื่อให้ได้ผลลัพธ์ที่ต้องการ (ตามด้านล่าง)
+จงใช้ loop (loop ประเภทไหนก็ได้) เพื่อให้ได้ผลลัพธ์ตามข้อมูลด้านล่าง
 
 ```js
 [
@@ -47,7 +52,7 @@ console จะแสดง string `Hello, my name is Zodiac Hasbro!` และ `
 
 # --hints--
 
-`failuresList` ควรเป็น array ที่มีข้อความ `result failure` 
+`failuresList` ต้องเป็น array ที่มี string จาก `result.failure` 
 
 ```js
 assert(
@@ -55,7 +60,7 @@ assert(
 );
 ```
 
-`failuresList` ควรเท่ากับผลลัพย์ที่กำหนด
+`failuresList` ต้องมีค่าเท่ากับผลลัพธ์ที่กำหนดให้
 
 ```js
 assert(
@@ -67,13 +72,13 @@ assert(
 );
 ```
 
-ควรใช้ Template string และ expression interpolation
+ควรใช้ Template string (การใช้ backtick) และ expression interpolation (การใช้ `${}`)
 
 ```js
 (getUserInput) => assert(getUserInput('index').match(/(`.*\${.*}.*`)/));
 ```
 
-ควรใช้การวนซ้ำ
+ต้องใช้ loop
 
 ```js
 (getUserInput) =>
@@ -91,9 +96,9 @@ const result = {
   skipped: ["no-extra-semi", "no-dup-keys"]
 };
 function makeList(arr) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   const failureItems = [];
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 
   return failureItems;
 }

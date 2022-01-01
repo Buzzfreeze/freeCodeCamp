@@ -8,28 +8,29 @@ dashedName: create-a-module-script
 
 # --description--
 
-JavaScript เริ่มต้นด้วยบทบาทเล็กๆ บนเว็บ HTML แต่ทุกวันนี้มีขนาดใหญ่ขึ้นมาก และบางเว็บไซต์ก็สร้างด้วย JavaScript เกือบทั้งหมด อย่างไรก็ตาม เพื่อทำให้ JavaScript เป็นแบบโมดูลาร์, ดูเรียบร้อย และบำรุงรักษาได้ง่ายขึ้น ES6 จึงนำเสนอวิธีการแชร์โค้ดระหว่างไฟล์ JavaScript สิ่งนี้ทำให้สามารถส่งส่วนต่างๆ ของไฟล์ออกไปใช้ในไฟล์อื่นๆ ได้ และนำเข้าส่วนที่คุณต้องการมายังจุดที่ต้องการได้ ทั้งนี้เพื่อการใช้ประโยชน์จากฟังก์ชันนี้ คุณต้องสร้าง script ในเอกสาร HTML ของคุณด้วย `type` ของ `module` ดังตัวอย่าง:
+ในตอนแรก JavaScript ถูกใช้แค่เล็กๆ น้อยๆ ในโลกที่เว็บนั้นใช้ HTML เป็นหลัก แต่ทุกวันนี้ JavaScript นั้นยิ่งใหญ่ขึ้นมาก และก็มีเว็บไซต์ที่ถูกสร้างด้วย JavaScript เกือบทั้งหมดด้วย 
+ES6 ได้ช่วยทำให้ JavaScript นั้นมีความเป็นกลุ่มก้อน ดูเรียบร้อย และบำรุงรักษาได้ง่ายขึ้น  โดยการเพิ่มวิธีการแชร์โค้ดระหว่างไฟล์ JavaScript ซึ่งทำให้สามารถส่งแค่ส่วนหนึ่งของไฟล์ออกไปใช้ในไฟล์อื่นๆ ได้ และดึงแค่โค้ดส่วนที่ต้องการมาใช้ในจุดที่ต้องการได้ ถ้าจะใช้ฟีเจอร์นี้ เราต้องสร้าง script ในไฟล์ HTML ที่มี `type` เป็น `module` ตามตัวอย่าง:
 
 ```html
 <script type="module" src="filename.js"></script>
 ```
 
-script ที่ใช้ `module` type นี้สามารถใช้ฟีเจอร์ `import` และ `export` ที่คุณจะได้เรียนรู้ในแบบทดสอบอันใกล้นี้
+script ที่ใช้ type เป็น `module` จะสามารถใช้ฟีเจอร์ `import` และ `export` ได้ ซึ่งคุณจะได้เรียนเรื่องนี้ในบทเรียนถัดไป
 
 # --instructions--
 
-จงเพิ่ม script ให้กับเอกสาร HTML เป็น `module` type และกำหนดชื่อ source file เป็น `index.js`
+จงเพิ่ม script ให้กับ HTML โดยมี type เป็น `module` และให้มี source file ชื่อ `index.js`
 
 
 # --hints--
 
-คุณควรสร้าง `script` tag
+ต้องสร้าง tag `script` 
 
 ```js
 assert(code.match(/<\s*script[^>]*>\s*<\/\s*script\s*>/g));
 ```
 
-`script` tag ของคุณควรมี attribute `type` ที่มีค่า `module`
+tag `script` ของคุณต้องมี `type` เป็น `module`
 
 ```js
 assert(
@@ -39,7 +40,7 @@ assert(
 );
 ```
 
-`script` tag ของคุณควรมี `src` เป็น `index.js`
+tag `script` ต้องมี `src` เป็น `index.js`
 
 ```js
 assert(
@@ -56,9 +57,9 @@ assert(
 ```html
 <html>
   <body>
-    <!-- Only change code below this line -->
+    <!-- แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น -->
 
-    <!-- Only change code above this line -->
+    <!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
   </body>
 </html>
 ```

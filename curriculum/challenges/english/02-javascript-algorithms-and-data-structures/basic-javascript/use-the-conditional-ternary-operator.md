@@ -8,11 +8,11 @@ dashedName: use-the-conditional-ternary-operator
 
 # --description--
 
-<dfn>conditional operator</dfn> เรียกได้อีกอย่างว่า <dfn>ternary operator</dfn> สามารถใช้เป็น if-else expression บรรทัดเดียว
+<dfn>conditional operator</dfn> หรือเรียกว่า <dfn>ternary operator</dfn> สามารถย่อคำสั่ง `if-else` ให้เหลือแค่บรรทัดเดียวได้
 
-syntax คือ `a ? b : c`, ซึ่ง `a` คือเงื่อนไข, `b` คือโค้ดที่รันเมื่อเงื่อนไขคืนค่า `true` และ `c` คือโค้ดที่รันเมื่อเงื่อนไขคืนค่า `false`.
+คำสั่งนี้จะมี syntax ในรูปแบบนี้ `a ? b : c`, ซึ่ง `a` คือเงื่อนไข, `b` คือโค้ดที่รันเมื่อเงื่อนไขเป็น `true` และ `c` คือโค้ดที่รันเมื่อเงื่อนไขเป็น `false`
 
-function ต่อไปนี้ใช้ `if/else` statement เพื่อเช็คเงื่อนไข
+ฟังก์ชันด้านล่างใช้คำสั่ง `if/else` เพื่อเช็คเงื่อนไข:
 
 ```js
 function findGreater(a, b) {
@@ -25,7 +25,7 @@ function findGreater(a, b) {
 }
 ```
 
-โค้ดข้างต้นสามารถเขียนใหม่ โดยใช้ conditional operator ดังนี้
+ตัวอย่างข้างบนจะเขียนโดยใช้ conditional operator ได้แบบนี้:
 
 ```js
 function findGreater(a, b) {
@@ -35,29 +35,29 @@ function findGreater(a, b) {
 
 # --instructions--
 
-จงใช้ conditional operator ภายในฟังก์ชัน `checkEqual` เพื่อตรวจสอบว่า ตัวเลข 2 ตัวมีค่าเท่ากันหรือไม่ โดยฟังก์ชันจะคืนค่าเป็น string `Equal` หรือ string `Not Equal`
+จงใช้ conditional operator ในฟังก์ชัน `checkEqual` เพื่อตรวจสอบว่า ตัวเลข 2 ตัวมีค่าเท่ากันหรือไม่ โดยฟังก์ชันนี้จะต้องคืนค่าเป็น string `Equal` หรือ string `Not Equal`
 
 # --hints--
 
-`checkEqual` ควรใช้ conditional operator
+ฟังก์ชัน `checkEqual` ต้องใช้ conditional operator
 
 ```js
 assert(/.+?\s*?\?\s*?.+?\s*?:\s*?.+?/.test(code));
 ```
 
-`checkEqual(1, 2)` ควรคืนค่าเป็น string `Not Equal`
+การเรียกใช้ฟังก์ชัน `checkEqual(1, 2)` ต้องคืนค่าออกมาเป็น string `Not Equal`
 
 ```js
 assert(checkEqual(1, 2) === 'Not Equal');
 ```
 
-`checkEqual(1, 1)` ควรคืนค่าเป็น string `Equal`
+การเรียกใช้ฟังก์ชัน `checkEqual(1, 1)` ต้องคืนค่าออกมาเป็น string `Equal`
 
 ```js
 assert(checkEqual(1, 1) === 'Equal');
 ```
 
-`checkEqual(1, -1)` ควรคืนค่าเป็น string `Not Equal`
+การเรียกใช้ฟังก์ชัน `checkEqual(1, -1)` ต้องคืนค่าออกมาเป็น string `Not Equal`
 
 ```js
 assert(checkEqual(1, -1) === 'Not Equal');

@@ -9,9 +9,9 @@ dashedName: global-vs--local-scope-in-functions
 
 # --description--
 
-มีความเป็นไปได้ที่จะมีทั้งตัวแปร <dfn>local</dfn> และ <dfn>global</dfn> ที่ชื่อเหมือนกัน เมื่อเป็นเช่นนี้แล้ว local variable จะมีอภิสิทธิ์เหนือ global variable
+เราสามารถประกาศตัวแปร <dfn>local</dfn> และ <dfn>global</dfn> ที่ชื่อเหมือนกันได้ แต่ถ้าเราทำแบบนี้ฟังก์ชันจะเลือกใช้ตัวแปรในระดับ local แทนตัวแปรในระดับ global
 
-ดังตัวอย่างนี้
+ตามตัวอย่างนี้
 
 ```js
 var someVar = "Hat";
@@ -21,21 +21,21 @@ function myFun() {
 }
 ```
 
-ฟังก์ชัน `myFun` จะคืนค่า string  `Head` เพราะมีตัวแปรที่มีเวอร์ชัน local ใน function ด้วย
+ฟังก์ชัน `myFun` จะคืนค่า string ที่เป็นคำว่า `Head` ออกมา เพราะว่าใน function นี้มีตัวแปร `someVar` ในระดับ local ด้วย
 
 # --instructions--
 
-จงเพิ่ม local variable ให้กับฟังก์ชัน `myOutfit` เพื่อแทนที่ (override) ค่าของ `outerWear` ด้วย string `sweater`
+จงเพิ่มตัวแปรในระดับ local ให้กับฟังก์ชัน `myOutfit` เพื่อให้ค่าของตัวแปร `outerWear` ในระดับ local เป็น string ที่มีค่าเป็น `sweater`
 
 # --hints--
 
-คุณไม่ควรแก้ไขค่าของ global `outerWear`
+คุณไม่ควรแก้ไขค่าของตัวแปร `outerWear` ที่อยู่ในระดับ global
 
 ```js
 assert(outerWear === 'T-Shirt');
 ```
 
-`myOutfit` ควรคืนค่า string `sweater`
+ฟังก์ชัน `myOutfit` ควรคืนค่า string ที่มีค่าเป็น `sweater` ออกมา
 
 ```js
 assert(myOutfit() === 'sweater');
@@ -52,15 +52,15 @@ assert(/return outerWear/.test(code));
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var outerWear = "T-Shirt";
 
 function myOutfit() {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
   return outerWear;
 }
 

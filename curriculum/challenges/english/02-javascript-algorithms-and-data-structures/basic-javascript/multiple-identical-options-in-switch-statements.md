@@ -9,7 +9,7 @@ dashedName: multiple-identical-options-in-switch-statements
 
 # --description--
 
-ถ้าไม่ระบุ `break` statement ในแต่ละ `case` ของคำสั่ง `switch` ก็จะทำให้ `case` ถัดไปทำงานจนกว่าจะเจอคำสั่ง `break` ถ้าคุณมีหลาย input ที่มี output เหมือนกัน คุณสามารถใช้คำสั่ง `switch` ดังนี้
+ถ้าเราไม่เขียนคำสั่ง `break` ไว้ในแต่ละ `case` ของคำสั่ง `switch` ก็จะทำให้ `case` ถัดไปทำงานไปเรื่อยๆ จนกว่าจะเจอคำสั่ง `break` ถ้าคุณมีหลาย input ที่อยากให้มี output เหมือนกัน คุณจะสามารถใช้คำสั่ง `switch` แบบนี้ได้:
 
 
 ```js
@@ -25,81 +25,81 @@ switch(val) {
 }
 ```
 
-case สำหรับค่า 1, 2, และ 3 จะให้ผลลัพธ์เดียวกัน
+`case` 1, 2, และ 3 จะทำให้เกิดผลลัพธ์เดียวกัน
 
 # --instructions--
 
-จงเขียนคำสั่ง switch เพื่อกำหนดค่า `answer` ตามช่วงต่อไปนี้: 
+จงเขียนคำสั่ง switch เพื่อกำหนดค่าตัวแปร `answer` ตามช่วงต่อไปนี้: 
 
 `1-3` - `Low`  
 `4-6` - `Mid`  
 `7-9` - `High`
 
-**หมายเหตุ:** คุณจะต้องมีคำสั่ง `case` สำหรับแต่ละช่วงตัวเลข
+**หมายเหตุ:** คุณจะต้องมีคำสั่ง `case` สำหรับตัวเลขทุกตัวในช่วงที่กำหนด
 
 # --hints--
 
-`sequentialSizes(1)` ควรคืนค่า string `Low`
+การเรียกใช้ฟังก์ชัน `sequentialSizes(1)` ต้องคืนค่าออกมาเป็น string `Low`
 
 ```js
 assert(sequentialSizes(1) === 'Low');
 ```
 
-`sequentialSizes(2)` ควรคืนค่า string `Low`
+การเรียกใช้ฟังก์ชัน `sequentialSizes(2)` ต้องคืนค่าออกมาเป็น string `Low`
 
 ```js
 assert(sequentialSizes(2) === 'Low');
 ```
 
-`sequentialSizes(3)` ควรคืนค่า string `Low`
+การเรียกใช้ฟังก์ชัน `sequentialSizes(3)` ต้องคืนค่าออกมาเป็น string `Low`
 
 ```js
 assert(sequentialSizes(3) === 'Low');
 ```
 
-`sequentialSizes(4)` ควรคืนค่า string `Mid`
+การเรียกใช้ฟังก์ชัน `sequentialSizes(4)` ต้องคืนค่าออกมาเป็น string `Mid`
 
 ```js
 assert(sequentialSizes(4) === 'Mid');
 ```
 
-`sequentialSizes(5)` ควรคืนค่า string `Mid`
+การเรียกใช้ฟังก์ชัน `sequentialSizes(5)` ต้องคืนค่าออกมาเป็น string `Mid`
 
 ```js
 assert(sequentialSizes(5) === 'Mid');
 ```
 
-`sequentialSizes(6)` ควรคืนค่า string `Mid`
+การเรียกใช้ฟังก์ชัน `sequentialSizes(6)` ต้องคืนค่าออกมาเป็น string `Mid`
 
 ```js
 assert(sequentialSizes(6) === 'Mid');
 ```
 
-`sequentialSizes(7)` ควรคืนค่า string `High`
+การเรียกใช้ฟังก์ชัน `sequentialSizes(7)` ต้องคืนค่าออกมาเป็น string `High`
 
 ```js
 assert(sequentialSizes(7) === 'High');
 ```
 
-`sequentialSizes(8)` ควรคืนค่า string `High`
+การเรียกใช้ฟังก์ชัน `sequentialSizes(8)` ต้องคืนค่าออกมาเป็น string `High`
 
 ```js
 assert(sequentialSizes(8) === 'High');
 ```
 
-`sequentialSizes(9)` ควรคืนค่า string `High`
+การเรียกใช้ฟังก์ชัน `sequentialSizes(9)` ต้องคืนค่าออกมาเป็น string `High`
 
 ```js
 assert(sequentialSizes(9) === 'High');
 ```
 
-คุณไม่ควรใช้คำสั่ง `if` หรือ `else`
+ห้ามใช้คำสั่ง `if` และ `else`
 
 ```js
 assert(!/else/g.test(code) || !/if/g.test(code));
 ```
 
-คุณควรมีคำสั่ง `case` อย่างน้อยเก้าคำสั่ง
+ต้องใช้คำสั่ง `case` เก้าครั้งในโค้ด
 
 ```js
 assert(code.match(/case/g).length === 9);
@@ -112,11 +112,11 @@ assert(code.match(/case/g).length === 9);
 ```js
 function sequentialSizes(val) {
   var answer = "";
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
   return answer;
 }
 

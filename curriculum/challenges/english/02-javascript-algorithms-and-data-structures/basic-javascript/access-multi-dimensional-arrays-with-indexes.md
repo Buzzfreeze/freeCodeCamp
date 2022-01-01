@@ -9,9 +9,9 @@ dashedName: access-multi-dimensional-arrays-with-indexes
 
 # --description--
 
-คุณอาจนึกถึง <dfn>multi-dimensional</dfn> array ว่าเป็น *อาร์เรย์ซ้อนอาร์เรย์* ก็ได้ เมื่อคุณใช้ brackets (วงเล็บ) เพื่อเข้าถึง array ของคุณ ิbrackets ชุดแรกจะอ้างอิงถึงรายการใน array ที่อยู่นอกสุด (ระดับแรก) และ brackets คู่ถัดมาจะอ้างอิงถึงรายการ array ในระดับถัดไป
+ให้มองว่า <dfn>multi-dimensional</dfn> array นั้นเป็น *array ซ้อน array* เมื่อคุณใช้ bracket (`[]`) เพื่อเข้าถึง array ของคุณ ิbracket คู่แรกจะดึงข้อมูลของ array ชั้นนอกสุด (ชั้นแรก) และ bracket คู่ถัดมาจะดึง array ในชั้นถัดไป 
 
-**Example**
+**ตัวอย่าง**
 
 ```js
 var arr = [
@@ -25,23 +25,26 @@ arr[3][0];
 arr[3][0][1];
 ```
 
-`arr[3]` คือ `[[10, 11, 12], 13, 14]`, `arr[3][0]` คือ `[10, 11, 12]` และ `arr[3][0][1]` คือ `11`.
+`arr[3]` มีค่าเป็น `[[10, 11, 12], 13, 14]`
+`arr[3][0]` มีค่าเป็น `[10, 11, 12]` 
+และ
+`arr[3][0][1]` มีค่าเป็น `11`
 
-**หมายเหตุ:** ไม่ควรมีช่องว่างระหว่างชื่อ array และ square brackets เช่น `array [0][0]` และแม้แต่ `array [0] [0]` แบบนี้ก็ไม่อนุญาต แม้ว่า JavaScript สามารถประมวลผลได้อย่างถูกต้อง แต่อาจทำให้โปรแกรมเมอร์คนอื่นอ่านโค้ดของคุณแล้วสับสน
+**หมายเหตุ:** ไม่ควรมีช่องว่างระหว่างชื่อ array และ square bracket เช่น `array [0][0]` หรือ `array [0] [0]` แบบนี้ก็ไม่ให้ทำ ถึง JavaScript จะเข้าใจว่าคุณต้องการจะทำอะไร แต่ก็อาจทำให้โปรแกรมเมอร์คนอื่นที่มาอ่านโค้ดของคุณสับสนได้
 
 # --instructions--
 
-จงใช้ bracket notation ในการเลือก element จาก `myArray` เพื่อให้ `myData` มีค่าเท่ากับ `8`
+จงใช้ bracket notation ในการเลือก element จากตัวแปร `myArray` เพื่อให้ตัวแปร `myData` มีค่าเท่ากับ `8`
 
 # --hints--
 
-`myData` ควรเท่ากับ `8`
+ตัวแปร `myData` ต้องเท่ากับ `8`
 
 ```js
 assert(myData === 8);
 ```
 
-คุณควรใช้ bracket notation ในการอ่านค่าที่ถูกต้องจาก `myArray`
+คุณต้องใช้ bracket notation เพื่อดึงค่าจาก `myArray` และต้องดึงค่าให้ถูกตำแหน่งด้วย
 
 ```js
 assert(/myData=myArray\[2\]\[1\]/.test(__helpers.removeWhiteSpace(code)));

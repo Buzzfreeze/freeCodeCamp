@@ -9,9 +9,10 @@ dashedName: accessing-nested-arrays
 
 # --description--
 
-ดังที่เราได้เห็นในตัวอย่างก่อนหน้านี้ object สามารถมีได้ทั้ง object ที่ซ้อนกันและ array ที่ซ้อนกัน เช่นเดียวกับการเข้าถึง object ที่ซ้อนกัน สัญลักษณ์วงเล็บ (brackets) สามารถเข้าถึง array ที่ซ้อนกันได้
+จากที่เราได้เห็นในตัวอย่างที่แล้ว ข้อมูลภายใน object นั้นสามารถมีได้ทั้ง object ที่ซ้อนกันและ array ที่ซ้อนกัน 
+เราสามารถสามารถเข้าถึง array ที่ซ้อนกันได้ด้วยวิธีเดียวกับการเข้าถึง object ที่ซ้อนกัน ซึ่งก็คือการใช้ Bracket Notation 
 
-นี่คือตัวอย่างของวิธีการเข้าถึง array ที่ซ้อนกัน
+โค้ดด้านล่างเป็นตัวอย่างในการเข้าถึง array ที่ซ้อนกันอยู่:
 
 ```js
 var ourPets = [
@@ -36,11 +37,14 @@ ourPets[0].names[1];
 ourPets[1].names[0];
 ```
 
-`ourPets[0].names[1]` ควรเป็น string `Fluffy`, และ `ourPets[1].names[0]` ควรเป็น string `Spot`
+`ourPets[0].names[1]` จะมีค่าเป็น string `Fluffy`
+และ `ourPets[1].names[0]` จะมีค่าเป็น string `Spot`
 
 # --instructions--
 
-จงใช้เครื่องหมายจุด (dot) และวงเล็บ (bracket) เพื่อกำหนดค่าตัวแปร  `secondTree` ให้กับ item ที่ 2 ใน `trees` list จาก object `myPlants`
+จงใช้เครื่องหมายจุด (Dot Notation) และวงเล็บ (Bracket Notation) ให้ดึงค่าจาก element ที่ 2 ใน property `list` ของ object ที่มี `type` เป็น `"trees"` ใน array ชื่อ `myPlants` มากำหนดให้กับตัวแปร `secondTree` 
+
+*อย่าลืมว่า* array นั้นใช้ระบบ zero-based index คือการเริ่มนับจาก 0
 
 # --hints--
 
@@ -51,7 +55,7 @@ assert(secondTree === 'pine');
 ```
 
 
-โค้ดของคุณควรใช้เครื่องหมายจุดและวงเล็บในการเข้าถึง `myPlants`
+โค้ดของคุณควรใช้ Dot Notation และ Bracket Notation ในการเข้าถึง `myPlants`
 
 ```js
 assert(/=\s*myPlants\[1\].list\[1\]/.test(code));

@@ -9,40 +9,38 @@ dashedName: global-scope-and-functions
 
 # --description--
 
-ใน JavaScript <dfn>scope</dfn> หมายถึงขอบเขตการมองเห็นตัวแปร ตัวแปรที่กำหนดนอกบล็อกฟังก์ชันจะมีขอบเขต <dfn>Global</dfn> ซึ่งหมายความว่าสามารถพบเห็นได้ทุกที่ในโค้ด JavaScript ของคุณ
+<dfn>scope</dfn> หมายถึงขอบเขตการมองเห็นตัวแปร โดยตัวแปรที่ถูกประกาศนอกฟังก์ชันจะมีขอบเขตในระดับ <dfn>Global</dfn> ซึ่งหมายความว่าสามารถเข้าถึงตัวแปรนี้ได้จากทุกที่ในโค้ด JavaScript ของคุณ
 
-ตัวแปรที่ประกาศโดยไม่ใช้คีย์เวิร์ด `var` จะถูกสร้างขึ้นโดยอัตโนมัติในขอบเขต `global` ซึ่งทำให้เกิดผลลัพธ์ที่ไม่ได้ตั้งใจในส่วนอื่นๆ ในโค้ดของคุณ หรือเมื่อเรียกใช้ฟังก์ชันอีกครั้ง ดังนั้น คุณควรประกาศตัวแปรของคุณด้วย `var` เสมอ
+ถ้าประกาศตัวแปรโดยไม่ใช้คีย์เวิร์ด `var` ตัวแปรนั้นจะถูกสร้างขึ้นในขอบเขตระดับ `global` โดยอัตโนมัติ ซึ่งอาจส่งผลกระทบให้เกิดปัญหาในส่วนอื่นของโค้ดของคุณ หรือเกิดปัญหาเมื่อเรียกใช้ฟังก์ชันอีกครั้ง ดังนั้น คุณควรประกาศตัวแปรของคุณด้วย `var` เสมอ
 
 # --instructions--
 
-Using `var`, declare a global variable named `myGlobal` outside of any function. Initialize it with a value of `10`.
+จงใช้ `var` ประกาศตัวแปรชื่อ `myGlobal` ในระดับ global โดยประกาศไว้นอกฟังก์ชัน และให้ตัวแปรนี้มีค่าเริ่มต้นเป็น `10`
 
-จงใช้ `var` ประกาศตัวแปร global ชื่อ `myGlobal` วางไว้ข้างนอกฟังก์ชัน และให้มีค่าเริ่มต้นเป็น `10`
-
-ภายใน function `fun1` จงกำหนดค่า `5` ให้กับ `oopsGlobal` ***โดยไม่ใช้*** คีย์เวิร์ด `var`
+ภายใน function `fun1` จงกำหนดค่าให้ตัวแปร `oopsGlobal` มีค่าเป็น `5` ***โดยไม่ใช้*** คีย์เวิร์ด `var`
 
 
 # --hints--
 
-`myGlobal` ควรถูกสร้าง
+ต้องสร้างตัวแปร `myGlobal`
 
 ```js
 assert(typeof myGlobal != 'undefined');
 ```
 
-`myGlobal` ควรมีค่า `10`
+ตัวแปร `myGlobal` ต้องมีค่าเป็น `10`
 
 ```js
 assert(myGlobal === 10);
 ```
 
-`myGlobal` ควรประกาศโดยใช้คีย์เวิร์ด `var`
+ต้องประกาศตัวแปร `myGlobal` โดยใช้คีย์เวิร์ด `var`
 
 ```js
 assert(/var\s+myGlobal/.test(code));
 ```
 
-`oopsGlobal` ควรเป็นตัวแปร global และมีค่า `5`
+ตัวแปร `oopsGlobal` อยู่ในระดับ global และมีค่าเป็น `5`
 
 ```js
 assert(typeof oopsGlobal != 'undefined' && oopsGlobal === 5);
@@ -87,15 +85,15 @@ uncapture();
 ## --seed-contents--
 
 ```js
-// Declare the myGlobal variable below this line
+// ประกาศตัวแปร myGlobal ใต้บรรทัดนี้
 
 
 function fun1() {
-  // Assign 5 to oopsGlobal Here
+  // กำหนดค่าตัวแปร oopsGlobal ให้เป็น 5 ที่นี่
 
 }
 
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 
 function fun2() {
   var output = "";

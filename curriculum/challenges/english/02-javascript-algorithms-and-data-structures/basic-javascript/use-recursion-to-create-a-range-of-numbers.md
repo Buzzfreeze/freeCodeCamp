@@ -8,21 +8,28 @@ dashedName: use-recursion-to-create-a-range-of-numbers
 
 # --description--
 
-ต่อจากบทเรียนที่แล้ว เราให้โอกาสคุณอีกครั้งในการสร้างฟังก์ชันแบบ recursive เพื่อแก้ปัญหา
+เรามาฝึกใช้ recursion กันอีกทีดีกว่า 
 
 # --instructions--
 
-เราได้ประกาศฟังก์ชันชื่อ `rangeOfNumbers` ด้วยพารามิเตอร์สองตัว ฟังก์ชันควรคืนค่า array ของ integer ซึ่งเริ่มต้นด้วยตัวเลขจากพารามิเตอร์ `startNum` และลงท้ายด้วยตัวเลขจากพารามิเตอร์ `endNum` ตัวเลขเริ่มต้นจะน้อยกว่าหรือเท่ากับเลขสุดท้ายเสมอ ฟังก์ชันของคุณต้องใช้ recursion โดยการเรียกตัวเองและไม่ใช้ loop ใดๆ นอกจากนี้ยังควรทำงานได้ทั้งในกรณีที่ `startNum` และ `endNum` มีค่าเท่ากัน
+คราวนี้เราได้ประกาศฟังก์ชันชื่อ `rangeOfNumbers` ที่รับพารามิเตอร์สองตัวไว้ให้แล้ว 
+ให้เขียนฟังก์ชันตามเงื่อนไขดังนี้
+
+1. ฟังก์ชันนี้ต้องคืนค่าเป็น array ที่มีข้อมูลข้างในเป็น integer 
+2. array ที่คืนออกมานี้จะต้องมีค่าเป็นตัวเลขที่ไล่จาก `startNum` ไปจนถึง `endNum` 
+3. `startNum` จะต้องมีค่าน้อยกว่าหรือเท่ากับ `endNum` เสมอ 
+4. ฟังก์ชันของคุณต้องใช้ recursion โดยการเรียกตัวเองและห้ามใช้ loop ในโค้ด 
+5. ฟังก์ชันยังต้องทำงานได้ถ้า `startNum` และ `endNum` มีค่าเท่ากัน
 
 # --hints--
 
-function ของคุณควรคืนค่า array
+ฟังก์ชันของคุณต้องคืนค่าออกมาเป็น array
 
 ```js
 assert(Array.isArray(rangeOfNumbers(5, 10)));
 ```
 
-โค้ดของคุณไม่ควรใช้ loop ทุกประเภท (`for`, `while` หรือ higher order functions เช่น  `forEach`, `map`, `filter` และ `reduce`)
+ห้ามใช้ loop ในโค้ด (ไม่ว่าจะเป็น `for`, `while` หรือ higher order functions เช่น  `forEach`, `map`, `filter` และ `reduce`)
 
 ```js
 assert(
@@ -30,7 +37,7 @@ assert(
 );
 ```
 
-`rangeOfNumbers` ควรใช้ recursive ในการแก้ปัญหา
+ต้องใช้ recursion ในฟังก์ชัน `rangeOfNumbers` 
 
 ```js
 assert(
@@ -38,19 +45,19 @@ assert(
 );
 ```
 
-`rangeOfNumbers(1, 5)` ควรคืนค่า `[1, 2, 3, 4, 5]`
+การเรียกใช้ฟังก์ชัน `rangeOfNumbers(1, 5)` ต้องคืนค่าออกมาเป็น `[1, 2, 3, 4, 5]`
 
 ```js
 assert.deepStrictEqual(rangeOfNumbers(1, 5), [1, 2, 3, 4, 5]);
 ```
 
-`rangeOfNumbers(6, 9)` ควรคืนค่า `[6, 7, 8, 9]`
+การเรียกใช้ฟังก์ชัน `rangeOfNumbers(6, 9)` ต้องคืนค่าออกมาเป็น `[6, 7, 8, 9]`
 
 ```js
 assert.deepStrictEqual(rangeOfNumbers(6, 9), [6, 7, 8, 9]);
 ```
 
-`rangeOfNumbers(4, 4)` ควรคืนค่า `[4]`
+การเรียกใช้ฟังก์ชัน `rangeOfNumbers(4, 4)` ต้องคืนค่าออกมาเป็น `[4]`
 
 ```js
 assert.deepStrictEqual(rangeOfNumbers(4, 4), [4]);

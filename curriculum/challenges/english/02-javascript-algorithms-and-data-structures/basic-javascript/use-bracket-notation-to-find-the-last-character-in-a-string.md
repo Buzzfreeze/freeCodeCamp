@@ -9,9 +9,9 @@ dashedName: use-bracket-notation-to-find-the-last-character-in-a-string
 
 # --description--
 
-เพื่อให้ได้ตัวอักษรตัวสุดท้ายของ string คุณสามารถนำความยาวของ string มาลบด้วยหนึ่ง
+ถ้าอยากได้ตัวอักษรตัวสุดท้ายของ string ให้เอาความยาวของ string มาลบหนึ่ง
 
-ยกตัวอย่างเช่น ถ้า `var firstName = "Ada"` คุณสามารถหาตัวอักษรสุดท้ายของ string โดยใช้ `firstName[firstName.length - 1]`
+เช่นถ้ามี `var firstName = "Ada"` จะหาตัวอักษรตัวสุดท้ายของ string ได้โดยใช้ `firstName[firstName.length - 1]`
 
 ตัวอย่าง:
 
@@ -20,23 +20,23 @@ var firstName = "Ada";
 var lastLetter = firstName[firstName.length - 1];
 ```
 
-`lastLetter` ควรมีค่า string `a`
+ตัวแปร `lastLetter` จะเป็น string ซึ่งมีค่าเป็น `a`
 
 # --instructions--
 
-จงใช้ <dfn>bracket notation</dfn> เพื่อหาอักขระสุดท้ายในตัวแปร `lastName`
+จงใช้ <dfn>bracket notation</dfn> เพื่อหาตัวอักษรตัวสุดท้ายในตัวแปร `lastName`
 
-**Hint:** ลองดูตัวอย่างด้านบน ถ้าคุณติดปัญหา
+**Hint:** ถ้าติดปัญหาหรือไม่เข้าใจให้ลองดูที่ตัวอย่างด้านบน
 
 # --hints--
 
-`lastLetterOfLastName` ควรเป็นตัวอักษร `e`
+ตัวแปร `lastLetterOfLastName` ต้องมีค่าเป็นตัวอักษร `e`
 
 ```js
 assert(lastLetterOfLastName === 'e');
 ```
 
-คุณควรใช้ `.length` เพื่อให้ได้ตัวอักษรสุดท้าย
+คุณควรใช้ `.length` เพื่อนำไปหาตัวอักษรสุดท้าย
 
 ```js
 assert(code.match(/\.length/g).length > 0);
@@ -53,11 +53,11 @@ assert(code.match(/\.length/g).length > 0);
 ## --seed-contents--
 
 ```js
-// Setup
+// เตรียมข้อมูล
 var lastName = "Lovelace";
 
-// Only change code below this line
-var lastLetterOfLastName = lastName; // Change this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
+var lastLetterOfLastName = lastName; // แก้ไขโค้ดบรรทัดนี้
 ```
 
 # --solutions--

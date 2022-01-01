@@ -9,26 +9,24 @@ dashedName: create-decimal-numbers-with-javascript
 
 # --description--
 
-เราสามารถเก็บตัวเลขทศนิยมไว้ในตัวแปรได้เช่นกัน ตัวเลขทศนิยมบางครั้งเรียกว่าตัวเลข <dfn>floating point</dfn> หรือ <dfn>floats</dfn>.
+เราสามารถเก็บตัวเลขทศนิยมไว้ในตัวแปรได้เช่นกัน โดยตัวเลขทศนิยมอาจถูกเรียกว่าเป็นตัวเลข <dfn>floating point</dfn> หรือ <dfn>floats</dfn> ก็ได้
 
-**หมายเหตุ:** ไม่ใช่จำนวนจริงทั้งหมดที่สามารถแสดง <dfn>floating point</dfn> ได้อย่างถูกต้อง ด้วยเหตุนี้อาจทำให้เกิดข้อผิดพลาดในการปัดเศษ [อ่านรายละเอียดที่นี่](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Accuracy_problems)
+**หมายเหตุ:** จำนวนจริงบางจำนวนจะไม่สามารถแสดงเป็น <dfn>floating point</dfn> ได้อย่างถูกต้อง ซึ่งอาจทำให้เกิดข้อผิดพลาดในการปัดเศษได้ [อ่านรายละเอียดได้ที่นี่](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Accuracy_problems)
 
 # --instructions--
 
-Create a variable `myDecimal` and give it a decimal value with a fractional part (e.g. `5.7`).
-
-จงสร้างตัวแปร `myDecimal` และกำหนดเป็นเลขที่มีเศษทศนิยม (เช่น `5.7`)
+จงสร้างตัวแปร `myDecimal` และกำหนดค่าเป็นเลขที่มีเศษทศนิยม (เช่น `5.7`)
 
 # --hints--
 
-`myDecimal` ควรเป็นตัวเลข 
+ตัวแปร `myDecimal` ควรเป็นตัวเลข 
 
 
 ```js
 assert(typeof myDecimal === 'number');
 ```
 
-`myDecimal` ควรมีทศนิยม
+ตัวแปร `myDecimal` ควรมีเศษทศนิยม
 
 ```js
 assert(myDecimal % 1 != 0);
@@ -47,7 +45,7 @@ assert(myDecimal % 1 != 0);
 ```js
 var ourDecimal = 5.7;
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านัั้น
 ```
 
 # --solutions--

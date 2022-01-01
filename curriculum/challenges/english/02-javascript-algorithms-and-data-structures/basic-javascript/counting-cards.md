@@ -9,27 +9,29 @@ dashedName: counting-cards
 
 # --description--
 
-ในเกมคาสิโน Blackjack ผู้เล่นสามารถได้เปรียบเหนือเจ้ามือ โดยการติดตามจำนวนไพ่เลขสูงและต่ำที่เหลืออยู่ในสำรับ เรียกว่า [การนับไพ่](https://en.wikipedia.org/wiki/Card_counting)
+ในเกม Blackjack ผู้เล่นจะได้เปรียเจ้ามือ ถ้าผู้เล่นนับจำนวนไพ่สูงและไพ่ต่ำที่เหลืออยู่ในสำรับ เราเรียกวิธีนี้ว่า [การนับไพ่](https://en.wikipedia.org/wiki/Card_counting)
 
-# - การมีไพ่สูงเหลืออยู่ในสำรับจะเป็นประโยชน์ต่อผู้เล่น ไพ่แต่ละใบมีค่ากำหนดตามตารางด้านล่าง เมื่อนับเป็นบวก ผู้เล่นควรเดิมพันสูง เมื่อการนับเป็นศูนย์หรือติดลบ ผู้เล่นควรเดิมพันต่ำ
+# - ผู้เล่นจะได้เปรียบถ้ามีไพ่สูงเหลืออยู่ในสำรับ ไพ่แต่ละใบมีค่าตามตารางด้านล่าง เมื่อนับแล้วได้ผลเป็นบวก ผู้เล่นควรพนันสูง เมื่อนับแล้วได้ผลเป็นศูนย์หรือติดลบ ผู้เล่นควรพนันต่ำ
 
-<table class='table table-striped'><thead><tr><th>Count Change</th><th>Cards</th></tr></thead><tbody><tr><td>+1</td><td>2, 3, 4, 5, 6</td></tr><tr><td>0</td><td>7, 8, 9</td></tr><tr><td>-1</td><td>10, 'J', 'Q', 'K', 'A'</td></tr></tbody></table>
+<table class='table table-striped'><thead><tr><th>การนับ</th><th>ไพ่</th></tr></thead><tbody><tr><td>+1</td><td>2, 3, 4, 5, 6</td></tr><tr><td>0</td><td>7, 8, 9</td></tr><tr><td>-1</td><td>10, 'J', 'Q', 'K', 'A'</td></tr></tbody></table>
 
 You will write a card counting function. It will receive a `card` parameter, which can be a number or a string, and increment or decrement the global `count` variable according to the card's value (see table). The function will then return a string with the current count and the string `Bet` if the count is positive, or `Hold` if the count is zero or negative. The current count and the player's decision (`Bet` or `Hold`) should be separated by a single space.
 
-# - คุณจะเขียนฟังก์ชันการนับไพ่ ที่รับพารามิเตอร์ `card` ซึ่งสามารถเป็น number หรือ string และเพิ่มหรือลดค่าตัวแปร global `count` ตามมูลค่าของไพ่ (ดูตาราง) จากนั้นฟังก์ชันจะคืนค่า string ที่เป็นจำนวนนับปัจจุบัน (current count) และ string `Bet` หากการนับเป็นบวก หรือ string `Hold` หากการนับเป็นศูนย์หรือติดลบ การนับปัจจุบันและการตัดสินใจของผู้เล่น (`Bet` หรือ `Hold`) ควรคั่นด้วยเว้นวรรค
+# - ให้เขียนฟังก์ชันการนับไพ่ ที่รับพารามิเตอร์ `card` ซึ่งเป็น number หรือ string ก็ได้ และเพิ่มหรือลดค่าตัวแปร global ที่ชื่อ `count` ตามค่าของไพ่ในตาราง จากนั้นให้ฟังก์ชันคืนค่า string ที่เป็นผลรวมของการนับ และตามด้วย string `Bet` หากนับแล้วได้ผลเป็นบวก หรือ string `Hold` ถ้านับแล้วได้ผลเป็นศูนย์หรือติดลบ ให้เว้นวรรคระหว่างผลของการนับกับ string `Bet` หรือ `Hold` ด้วย
 
-**Example Outputs:** `-3 Hold` หรือ `5 Bet`
+
+
+**ตัวอย่างค่าที่คืนออกมา:** `-3 Hold` หรือ `5 Bet`
 
 **Hint**  
 
-# - ห้ามรีเซ็ต `count` เป็น 0 เมื่อมีค่าเท่ากับ 7, 8, หรือ 9
-ห้ามส่งคืนค่าเป็น array
-ห้ามใส่ quote (single หรือ double) ในผลลัพธ์
+ห้ามกำหนดค่า `count` เป็น 0 เมื่อไพ่เป็น 7, 8, หรือ 9
+ห้ามคืนค่าออกมาเป็น array
+ห้ามใส่ single หรือ double quote ในค่าที่คืนออกมา
 
 # --hints--
 
-ลำดับไพ่ 2, 3, 4, 5, 6 ควรได้ผลลัพธ์ `5 Bet`
+ถ้าไพ่เป็น 2, 3, 4, 5, 6 ควรคืนค่า string `5 Bet` ออกมา
 
 ```js
 assert(
@@ -48,7 +50,7 @@ assert(
 );
 ```
 
-ลำดับไพ่ 7, 8, 9 ควรคืนค่าเป็น string `0 Hold`
+ถ้าไพ่เป็น 7, 8, 9 ควรคืนค่า string `0 Hold` ออกมา
 
 ```js
 assert(
@@ -65,7 +67,7 @@ assert(
 );
 ```
 
-ลำดับไพ่ 10, J, Q, K, A ควรคืนค่าเป็น string `-5 Hold`
+ถ้าไพ่เป็น 10, J, Q, K, A ควรคืนค่า string `-5 Hold` ออกมา
 
 ```js
 assert(
@@ -84,7 +86,7 @@ assert(
 );
 ```
 
-ลำดับไพ่ 3, 7, Q, 8, A ควรคืนค่าเป็น string `-1 Hold`
+ถ้าไพ่เป็น 3, 7, Q, 8, A ควรคืนค่า string `-1 Hold` ออกมา
 
 ```js
 assert(
@@ -103,7 +105,7 @@ assert(
 );
 ```
 
-ลำดับไพ่ 2, J, 9, 2, 7 ควรคืนค่าเป็น string `1 Bet`
+ถ้าไพ่เป็น 2, J, 9, 2, 7 ควรคืนค่า string `1 Bet` ออกมา
 
 ```js
 assert(
@@ -122,7 +124,7 @@ assert(
 );
 ```
 
-ลำดับไพ่  2, 2, 10  ควรคืนค่าเป็น string `1 Bet`
+ถ้าไพ่เป็น  2, 2, 10  ควรคืนค่า string `1 Bet` ออกมา
 
 ```js
 assert(
@@ -139,7 +141,7 @@ assert(
 );
 ```
 
-ลำดับไพ่ 3, 2, A, 10, K ควรคืนค่าเป็น string `-1 Hold`
+ถ้าไพ่เป็น 3, 2, A, 10, K ควรคืนค่า string `-1 Hold` ออกมา
 
 ```js
 assert(
@@ -166,11 +168,11 @@ assert(
 var count = 0;
 
 function cc(card) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 
   return "Change Me";
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 
 cc(2); cc(3); cc(7); cc('K'); cc('A');

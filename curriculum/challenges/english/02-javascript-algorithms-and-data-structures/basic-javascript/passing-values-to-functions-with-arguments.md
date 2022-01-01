@@ -9,10 +9,10 @@ dashedName: passing-values-to-functions-with-arguments
 
 # --description--
 
-<dfn>Parameters</dfn> คือตัวแปรที่ทำหน้าที่เหมือน placeholders (ข้อความในตัวยึด) ที่รับค่าที่เราจะป้อนเข้าไปให้กับฟังก์ชันเมื่อมีการเรียก เมื่อมีการสร้างฟังก์ชัน โดยทั่วไปจะกำหนด parameter ตั้งแต่หนึ่งตัวขึ้นไป ส่วนค่าจริงๆ ที่ป้อน (หรือ <dfn>"ส่ง"</dfn>) เข้าไปในฟังก์ชันเมื่อมีการเรียก เรียกว่า <dfn>arguments</dfn>
+<dfn>Parameter</dfn> คือตัวแปรที่ทำหน้าที่รับค่าที่เราส่งไปให้ฟังก์ชันเมื่อมีการเรียกใช้ฟังก์ชัน โดยทั่วไปแล้วในการสร้างฟังก์ชันจะกำหนด parameter ตั้งแต่หนึ่งตัวขึ้นไป ส่วนค่าจริงๆ ที่ป้อนหรือส่งเขาไปในฟังก์ชันเมื่อมีการเรียกใช้ฟังก์ชัน จะเรียกว่า <dfn>argument</dfn>
 
 
-นี่คือ function ที่มี 2 parameter คือ `param1` และ `param2`
+ตัวอย่างนี้คือ function ที่มี 2 parameter คือ `param1` และ `param2`
 
 ```js
 function testFun(param1, param2) {
@@ -20,23 +20,27 @@ function testFun(param1, param2) {
 }
 ```
 
-จากนั้นเราสามารถเรียก `testFun` ได้ดังนี้: `testFun("Hello", "World");` เราได้ส่ง string arguments 2 ตัว เข้าไป คือ `Hello` กับ `World` โดยภายในฟังก์ชัน ค่าของ `param1` จะเท่ากับ string `Hello` และค่าของ `param2` จะเท่ากับ string `World` 
-หมายเหตุ คุณสามารถเรียก `testFun` ได้อีกครั้งด้วย argument ที่ต่างออกไป และ parameter ก็จะรับค่าจาก argument ใหม่นั้นเข้าไป
+จากนั้นเราสามารถเรียกใช้ `testFun` ได้ตามนี้: `testFun("Hello", "World");` เราได้ส่ง string arguments เข้าไป 2 ตัว คือ `Hello` กับ `World` โดยภายในฟังก์ชันค่าของ `param1` จะเป็น string ที่มีค่าเท่ากับ `Hello` และค่าของ `param2` จะเท่ากับ จะเป็น string ที่มีค่าเท่ากับ `World`
+
+**หมายเหตุ** คุณสามารถเรียกใช้ `testFun` ด้วย argument อื่นก็ได้ และ parameter ก็จะรับค่าจาก argument ใหม่นั้นเข้าไปใช้งาน
 
 # --instructions--
 
-# - <ol><li>จงสร้างฟังก์ชันชื่อ <code>functionWithArgs</code> ที่รับ argument 2 ตัว และแสดงผลรวมของ argument ทั้งสองตัวนั้นที่หน้า console</li><li>จงเรียกใช้ฟังก์ชัน โดยส่งเลข 2 ตัวเข้าไปเป็น argument </li ></ol>
+<ol>
+  <li>จงสร้างฟังก์ชันชื่อ <code>functionWithArgs</code> ที่รับ argument 2 ตัว และแสดงผลรวมของ argument ทั้งสองตัวนี้ที่หน้า console</li>
+  <li>จงเรียกใช้ฟังก์ชัน โดยส่งเลข 2 ตัวเข้าไปเป็น argument </li >
+</ol>
 
 # --hints--
 
-`functionWithArgs` ควรเป็น function 
+`functionWithArgs` ต้องเป็น function 
 
 
 ```js
 assert(typeof functionWithArgs === 'function');
 ```
 
-`functionWithArgs(1,2)` ควรได้ผลลัพธ์ `3`
+การเรียกใช้ `functionWithArgs(1,2)` ควรได้ผลลัพธ์เท่ากับ `3`
 
 ```js
 if (typeof functionWithArgs === 'function') {
@@ -47,7 +51,7 @@ if (typeof functionWithArgs === 'function') {
 assert(logOutput == 3);
 ```
 
-`functionWithArgs(7,9)` ควรได้ผลลัพธ์ `16`
+การเรียกใช้ `functionWithArgs(7,9)` ควรได้ผลลัพธ์เท่ากับ `16`
 
 
 ```js
@@ -59,7 +63,7 @@ if (typeof functionWithArgs === 'function') {
 assert(logOutput == 16);
 ```
 
-คุณควรเรียกใช้ `functionWithArgs` พร้อมกับส่งเลขสองตัวเข้าไปในฟังก์ชันหลังจากที่คุณสร้างฟังก์ชันแล้ว
+คุณต้องเรียกใช้ `functionWithArgs` พร้อมกับส่งตัวเลขสองตัวเข้าไปในฟังก์ชันด้วย หลังจากที่คุณสร้างฟังก์ชันแล้ว
 
 
 ```js

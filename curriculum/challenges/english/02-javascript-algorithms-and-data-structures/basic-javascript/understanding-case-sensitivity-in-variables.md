@@ -9,16 +9,16 @@ dashedName: understanding-case-sensitivity-in-variables
 
 # --description--
 
-ในภาษา JavaScript ชื่อตัวแปรและชื่อฟังก์ชันเป็น case sensitive หมายความว่า ตัวอักษรตัวเล็กกับตัวใหญ่ไม่เหมือนกัน
+ในภาษา JavaScript ชื่อตัวแปรและชื่อฟังก์ชันเป็น case sensitive หมายความว่าชื่อตัวแปรที่เป็นตัวพิมพ์เล็กหรือตัวพิมพ์ใหญ่ก็สำคัญ
 
-`MYVAR` ไม่เหมือนกับ `MyVar` และไม่เหมือนกับ `myvar` ดังนั้นจึงเป็นไปได้ที่จะมีตัวแปรคนละตัว ชื่อเหมือนกันแต่ระบุตัวเล็กตัวใหญ่ต่างกัน 
-แนะนำว่า เพื่อความชัดเจน จง *อย่า* ใช้ฟีเจอร์ของภาษาอันนี้
+`MYVAR` เป็นคนละตัวแปรกับ `MyVar` และก็เป็นคนละตัวแปรกับ `myvar` ดังนั้นจึงเป็นไปได้ที่จะมีตัวแปรคนละตัว ชื่อเหมือนกันแต่ระบุตัวเล็กตัวใหญ่ต่างกัน 
+แนะนำว่า เพื่อความชัดเจน จง *อย่า* ตั้งชื่อตัวแปรในรูปแบบนี้
 
 **Best Practice**
 
-เขียนชื่อตัวแปรในภาษา JavaScript ในรูปแบบ <dfn>camelCase</dfn> โดย <dfn>camelCase</dfn> เป็นชื่อตัวแปรที่มีหลายคำและมีคำแรกเป็นพิมพ์เล็ก ส่วนตัวอักษรแรกของคำถัดๆ ไปเป็นตัวพิมพ์ใหญ่
+เขียนชื่อตัวแปรในภาษา JavaScript ในรูปแบบ <dfn>camelCase</dfn> โดย <dfn>camelCase</dfn> เป็นการระบุชื่อตัวแปรที่มีหลายคำ โดยจะให้คำแรกเป็นตัวพิมพ์เล็ก และตัวอักษรแรกของคำถัดๆ ไปเป็นตัวพิมพ์ใหญ่
 
-**Examples:**
+**ตัวอย่าง:**
 
 ```js
 var someVariable;
@@ -30,17 +30,17 @@ var thisVariableNameIsSoLong;
 
 จงปรับแก้การประกาศและกำหนดค่าตัวแปร เพื่อให้ชื่อตัวแปรเป็น <dfn>camelCase</dfn>
 
-ห้ามสร้างตัวแปรตัวใหม่
+โดยห้ามสร้างตัวแปรตัวใหม่
 
 # --hints--
 
-`studlyCapVar` ควรประกาศและมีค่าเป็น `10`
+ประกาศตัวแปร `studlyCapVar` และกำหนดค่าเป็น `10`
 
 ```js
 assert(typeof studlyCapVar !== 'undefined' && studlyCapVar === 10);
 ```
 
-`properCamelCase` ควรประกาศและมีค่าเป็น string `A String`
+ประกาศตัวแปร `properCamelCase` และกำหนดค่าเป็น `A String` ซึ่งเป็นข้อมูลประเภท string
 
 ```js
 assert(
@@ -48,25 +48,25 @@ assert(
 );
 ```
 
-`titleCaseOver` ควรประกาศและมีค่าเป็น `9000`
+ประกาศตัวแปร `titleCaseOver` ควรประกาศและกำหนดค่าเป็น `9000`
 
 ```js
 assert(typeof titleCaseOver !== 'undefined' && titleCaseOver === 9000);
 ```
 
-`studlyCapVar` ควรใช้ camelCase ทั้งในส่วนประกาศตัวแปรและกำหนดค่า
+`studlyCapVar` ควรใช้ camelCase ทั้งในส่วนของการประกาศตัวแปรและการกำหนดค่า
 
 ```js
 assert(code.match(/studlyCapVar/g).length === 2);
 ```
 
-`properCamelCase` ควรใช้ camelCase ทั้งในส่วนประกาศตัวแปรและกำหนดค่า
+`properCamelCase` ควรใช้ camelCase ทั้งในส่วนของการประกาศตัวแปรและการกำหนดค่า
 
 ```js
 assert(code.match(/properCamelCase/g).length === 2);
 ```
 
-`titleCaseOver` ควรใช้ camelCase ทั้งในส่วนประกาศตัวแปรและกำหนดค่า
+`titleCaseOver` ควรใช้ camelCase ทั้งในส่วนของการประกาศตัวแปรและการกำหนดค่า
 
 ```js
 assert(code.match(/titleCaseOver/g).length === 2);
@@ -77,12 +77,12 @@ assert(code.match(/titleCaseOver/g).length === 2);
 ## --seed-contents--
 
 ```js
-// Variable declarations
+// ประกาศตัวแปร
 var StUdLyCapVaR;
 var properCamelCase;
 var TitleCaseOver;
 
-// Variable assignments
+// กำหนดค่าตัวแปร
 STUDLYCAPVAR = 10;
 PRoperCAmelCAse = "A String";
 tITLEcASEoVER = 9000;

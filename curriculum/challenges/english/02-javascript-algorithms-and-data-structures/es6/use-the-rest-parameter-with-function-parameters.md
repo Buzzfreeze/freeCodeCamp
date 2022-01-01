@@ -8,12 +8,9 @@ dashedName: use-the-rest-parameter-with-function-parameters
 
 # --description--
 
-In order to help us create more flexible functions, ES6 introduces the <dfn>rest parameter</dfn> for function parameters. With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.
+ES6 ได้สร้าง <dfn>rest parameter</dfn> มาเพื่อให้เราเขียนโค้ดได้ยืดหยุ่นมากขึ้นอีก ถ้าเราใช้ rest parameter เราสามารถรับ argument หลายตัวได้โดยที่ไม่ต้องระบุจำนวนของ argument ที่จะรับ ซึ่ง argument ที่เข้ามาในฟังก์ชันนี้จะเข้ามาในรูปแบบของ array
 
-
-เพื่อช่วยให้เราสร้างฟังก์ชันที่ยืดหยุ่นมากขึ้น ES6 ได้เสนอ <dfn>rest parameter</dfn> เพื่อเป็นพารามิเตอร์ของฟังก์ชัน ถ้าคุณใช้ rest parameter คุณจะสามารถสร้างฟังก์ชันที่รับค่า arguments ที่มีจำนวนหลายหลาย (variable number of arguments) ได้ โดย argument เหล่านี้ถูกเก็บไว้ใน array ที่สามารถเข้าถึงได้ในภายหลังจากภายในฟังก์ชัน
-
-ลองดูโค้ดนี้
+ลองดูโค้ดนี้:
 
 ```js
 function howMany(...args) {
@@ -25,39 +22,39 @@ console.log(howMany("string", null, [1, 2, 3], { }));
 
 console จะแสดง string `You have passed 3 arguments.` และ `You have passed 4 arguments`
 
-rest parameter ช่วยลดขั้นตอนการตรวจสอบ array `args` และทำให้เราสามารถใช้ `map()`, `filter()` และ `reduce()` กับอาร์เรย์พารามิเตอร์ได้
+rest parameter ช่วยลดขั้นตอนการตรวจสอบ array `args` และทำให้เราสามารถใช้ `map()`, `filter()` และ `reduce()` กับ array ของ parameter ได้
 
 # --instructions--
 
-จงแก้ไขฟังก์ชัน `sum` โดยใช้ rest parameter เพื่อให้ฟังก์ชัน `sum` สามารถรับ argument จำนวนเท่าใดก็ได้และคืนค่าเป็นผลบวกของ parameter เหล่านั้น
+จงแก้ไขฟังก์ชัน `sum` โดยใช้ rest parameter เพื่อให้ฟังก์ชัน `sum` สามารถรับ argument กี่ตัวก็ได้และให้ฟังก์ชันคืนค่าเป็นผลรวมของ parameter เหล่านั้น
 
 # --hints--
 
-ผลลัพธ์ของ `sum(0,1,2)` ควรเป็น 3
+การเรียกใช้ฟังก์ชัน `sum(0,1,2)` ควรได้ค่าเป็น 3
 
 ```js
 assert(sum(0, 1, 2) === 3);
 ```
 
-ผลลัพธ์ของ `sum(1,2,3,4)` ควรเป็น 10
+การเรียกใช้ฟังก์ชัน `sum(1,2,3,4)` ควรได้ค่าเป็น 10
 
 ```js
 assert(sum(1, 2, 3, 4) === 10);
 ```
 
-ผลลัพธ์ของ `sum(5)` ควรเป็น 5
+การเรียกใช้ฟังก์ชัน `sum(5)` ควรได้ค่าเป็น 5
 
 ```js
 assert(sum(5) === 5);
 ```
 
-ผลลัพธ์ของ `sum()` ควรเป็น 0
+การเรียกใช้ฟังก์ชัน `sum()` ควรได้ค่าเป็น 0
 
 ```js
 assert(sum() === 0);
 ```
 
-`sum` ควรเป็น  arrow function ซึ่งใช้ rest parameter ทีมี syntax (`...`) ที่ `args` parameter 
+`sum` ต้องเป็น arrow function ที่ใช้ rest parameter (`...`) ที่ parameter `args`
 
 
 ```js

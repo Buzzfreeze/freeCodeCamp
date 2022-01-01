@@ -8,11 +8,11 @@ dashedName: extract-matches
 
 # --description--
 
-ที่ผ่านมา คุณเพียงตรวจสอบว่า pattern พบใน string หรือไม่พบ อย่างไรก็ตาม คุณสามารถแยก (extract) ข้อความที่เจอด้วย `.match()` method
+ที่ผ่านมาเราได้เรียนแค่การดูว่าเจอ pattern ใน string หรือไม่ แต่ว่าเราก็สามารถดึงข้อความที่เจอออกมาได้ด้วย ถ้าใช้ method `.match()`
 
-วิธีใช้ `.match()` method คือ ให้นำ method มาใช้กับ string โดยส่ง regex เข้าไปภายในวงเล็บ
+เราจะใช้ method `.match()` โดยการเรียก method จาก string และใส่ regex เข้าไปในวงเล็บ
 
-ดังตัวอย่างต่อไปนี้
+ตามตัวอย่างนี้:
 
 ```js
 "Hello, World!".match(/Hello/);
@@ -21,9 +21,9 @@ let ourRegex = /expressions/;
 ourStr.match(ourRegex);
 ```
 
-ในที่นี้ `match` แรกควรคืนค่า `["Hello"]` และอันที่สองควรคืนค่า `["expressions"]`
+จากตัวอย่างนี้การใช้ `match` ครั้งแรกจะคืนค่าเป็น `["Hello"]` และครั้งที่สองจะคืนค่าเป็น `["expressions"]`
 
-หมายเหตุ `.match` syntax ใช้งานตรงกันข้ามกับ `.test` method ที่คุณได้เรียนรู้มาก่อนหน้านี้แล้ว:
+syntax ของ `.match` ตรงข้ามกับ method `.test` ที่เราได้เรียนกันมาก่อนหน้านี้:
 
 ```js
 'string'.match(/regex/);
@@ -32,23 +32,23 @@ ourStr.match(ourRegex);
 
 # --instructions--
 
-จงใช้ `.match()` method เพื่อแยก string `coding` ออกมา
+จงใช้ method `.match()` เพื่อดึง string `coding` ออกมา
 
 # --hints--
 
-`result` ควรมี string `coding`
+ตัวแปร `result` ต้องมีค่าเป็น string `coding`
 
 ```js
 assert(result.join() === 'coding');
 ```
 
-regex `codingRegex` ควรค้นหา string `coding`
+regex `codingRegex` ต้องหา string `coding`
 
 ```js
 assert(codingRegex.source === 'coding');
 ```
 
-คุณควรใช้ `.match()` method
+ต้องใช้ method `.match()`
 
 ```js
 assert(code.match(/\.match\(.*\)/));
@@ -60,14 +60,14 @@ assert(code.match(/\.match\(.*\)/));
 
 ```js
 let extractStr = "Extract the word 'coding' from this string.";
-let codingRegex = /change/; // Change this line
-let result = extractStr; // Change this line
+let codingRegex = /change/; // แก้บรรทัดนี้
+let result = extractStr; // แก้บรรทัดนี้
 ```
 
 # --solutions--
 
 ```js
 let extractStr = "Extract the word 'coding' from this string.";
-let codingRegex = /coding/; // Change this line
-let result = extractStr.match(codingRegex); // Change this line
+let codingRegex = /coding/; // แก้บรรทัดนี้
+let result = extractStr.match(codingRegex); // แก้บรรทัดนี้
 ```

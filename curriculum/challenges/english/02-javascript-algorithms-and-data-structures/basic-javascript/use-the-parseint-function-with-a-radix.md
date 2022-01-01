@@ -9,53 +9,54 @@ dashedName: use-the-parseint-function-with-a-radix
 
 # --description--
 
-function `parseInt()`แปลง string เป็น Integer และส่งคืน integer โดย function `parseInt()` มี argument ตัวที่สองเป็น redix   ซึ่งระบุเลขฐานของตัวเลขใน string โดย radix สามารถเป็น integer ระหว่าง 2 และ 36
+ฟังก์ชัน `parseInt()` 0tแปลง string เป็นจำนวนเต็ม และคืนค่าเลขจำนวนเต็มนั้นออกมา โดยฟังก์ชัน `parseInt()` มี argument ตัวที่สองเป็น redix  ซึ่งจะใช้สำหรับการระบุเลขฐานของตัวเลขใน string โดย radix จะเป็นจำนวนเต็มที่มีค่าระหว่าง 2 ถึง 36
 
-function call ควรมีหน้าตาดังนี้
+การเรียกใช้ฟังก์ชันจะเป็นแบบนี้:
 
 ```js
 parseInt(string, radix);
 ```
 
-และนี่เป็นตัวอย่าง
+ตัวอย่างการใช้งาน:
 
 ```js
 var a = parseInt("11", 2);
 ```
 
-ตัวแปร radix บอกว่า `11` อยู่ในระบบ binary หรือเลขฐาน 2 นี่เป็นตัวอย่างในการแปลง string `11` ให้เป็น integer `3`
+ตัวแปร radix จะบอกว่า `11` นั้นเป็นข้อมูลแบบ binary หรือเลขฐาน 2 
+ตัวอย่างด้านบนนี้จะทำให้ string `11` กลายเป็น integer ซึ่งมีค่าเท่ากับ `3`
 
 # --instructions--
 
-จงใช้ `parseInt()` ใน function `convertToInteger` เพื่อแปลงเลข binary ให้เป็นเลขจำนวนเต็ม แล้วคืนค่าออกไป
+จงใช้ `parseInt()` ในฟังก์ชัน `convertToInteger` เพื่อแปลงเลขฐานสองให้เป็นเลขจำนวนเต็ม แล้วคืนค่าออกไป
 
 # --hints--
 
-`convertToInteger` ควรใช้  `parseInt()` function
+ต้องใช้ `parseInt()` ในฟังก์ชัน `convertToInteger`
 
 ```js
 assert(/parseInt/g.test(code));
 ```
 
-`convertToInteger("10011")` ควรคืนค่า number
+การเรียกใช้ฟังก์ชัน `convertToInteger("10011")` ต้องคืนค่าออกมาเป็น number
 
 ```js
 assert(typeof convertToInteger('10011') === 'number');
 ```
 
-`convertToInteger("10011")` ควรคืนค่า 19
+การเรียกใช้ฟังก์ชัน `convertToInteger("10011")` ต้องคืนค่าออกมาเป็น 19
 
 ```js
 assert(convertToInteger('10011') === 19);
 ```
 
-`convertToInteger("111001")` ควรคืนค่า 57
+การเรียกใช้ฟังก์ชัน `convertToInteger("111001")` ต้องคืนค่าออกมาเป็น 57
 
 ```js
 assert(convertToInteger('111001') === 57);
 ```
 
-`convertToInteger("JamesBond")` ควรคืนค่า `NaN`
+การเรียกใช้ฟังก์ชัน `convertToInteger("JamesBond")` ต้องคืนค่าออกมาเป็น `NaN`
 
 ```js
 assert.isNaN(convertToInteger('JamesBond'));
