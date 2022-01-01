@@ -10,13 +10,13 @@ dashedName: use-attribute-selectors-to-style-elements
 # --description--
 
 คุณได้เพิ่ม `id` หรือ `class` attributes ให้กับ element ที่คุณต้องการจะตกแต่งมันโดยเฉพาะ
-พวกนี้ถูกเรียกว่า id และ class selectors
+ในส่วนของ id และ class selectors
 พวกนี้คือ CSS Selector อีกแบบที่คุณสามารถใช้เพื่อเลือกกลุ่มของ element เพื่อตกแต่งได้
 เราจะกลับมาใช้ CatPhotoApp อีกครั้งเพื่อฝึกการใช้ CSS Selectors
 
 สำหรับแบบฝึกหัดนี้, คุณจะได้ใช้ `[attr=value]` attribute selector เพื่อตกแต่ง checkbox ใน CatPhotoApp
 selector นี้จะจับคู่และตกแต่ง element ด้วยค่า attribute ตามที่ระบุ
-ยกตัวอย่างเช่น โค้ดด้านล่างจะเปลี่ยน margins ของทุก element ที่มี attribute `type` และสัมพันธ์กับค่าของ `radio`:
+ยกตัวอย่างเช่น โค้ดด้านล่างจะเปลี่ยน margins ของทุก element ที่มี attribute `type` ที่เป็น `radio`: ตาม margin ดังตัวอย่างด้านล่าง
 
 ```css
 [type='radio'] {
@@ -33,11 +33,7 @@ selector นี้จะจับคู่และตกแต่ง element �
 `type` attribute selector ควรถูกใช้เพื่อเลือก checkboxes
 
 ```js
-assert(
-  code.match(
-    /<style>[\s\S]*?\[\s*?type\s*?=\s*?("|')checkbox\1\s*?\]\s*?{[\s\S]*?}[\s\S]*?<\/style>/gi
-  )
-);
+assert(code.match(/<style>[\s\S]*?\[\s*?type\s*?=\s*?("|')checkbox\1\s*?\]\s*?{[\s\S]*?}[\s\S]*?<\/style>/gi));
 ```
 
 top margins ของ checkbox ควรมีค่าเป็น 10px
@@ -52,7 +48,7 @@ assert(
       }
     });
     return count === 3;
-  })()
+  })(),
 );
 ```
 
@@ -68,7 +64,7 @@ assert(
       }
     });
     return count === 3;
-  })()
+  })(),
 );
 ```
 
@@ -77,7 +73,7 @@ assert(
 ## --seed-contents--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
 <style>
   .red-text {
     color: red;
@@ -112,7 +108,12 @@ assert(
 <main>
   <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img class="smaller-image thick-green-border" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      class="smaller-image thick-green-border"
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <div class="silver-background">
     <p>Things cats love:</p>
@@ -130,12 +131,12 @@ assert(
   </div>
 
   <form action="https://freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label><input type="checkbox" name="personality" checked /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>
@@ -144,7 +145,7 @@ assert(
 # --solutions--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
 <style>
   .red-text {
     color: red;
@@ -182,9 +183,14 @@ assert(
 <h2 class="red-text">CatPhotoApp</h2>
 <main>
   <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
-  
-  <a href="#"><img class="smaller-image thick-green-border" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
-  
+
+  <a href="#"
+    ><img
+      class="smaller-image thick-green-border"
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
+
   <div class="silver-background">
     <p>Things cats love:</p>
     <ul>
@@ -199,14 +205,14 @@ assert(
       <li>other cats</li>
     </ol>
   </div>
-  
+
   <form action="https://freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label><input type="checkbox" name="personality" checked /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>

@@ -17,7 +17,7 @@ dashedName: nest-many-elements-within-a-single-div-element
 
 # --instructions--
 
-จงเก็บลิงต์ "Things cats love" และ "Top 3 things cats hate" ไว้ใน `div` element อันหนึ่ง
+จงเก็บลิงค์ "Things cats love" และ "Top 3 things cats hate" ไว้ใน `div` element อันหนึ่ง
 
 Hint: จงใส่แท็กเปิด `div` tag ด้านบน "Things cats love" `p` element และแท็กปิด `div` tag ต่อจาก `ol` tag เพื่อที่ลิสต์ทั้งสองอันจะอยู่ภายใน `div` อันหนึ่ง
 
@@ -44,10 +44,7 @@ assert($('div').children('ol').length > 0);
 `div` element ควรมีแท็กปิด
 
 ```js
-assert(
-  code.match(/<\/div>/g) &&
-    code.match(/<\/div>/g).length === code.match(/<div>/g).length
-);
+assert(code.match(/<\/div>/g) && code.match(/<\/div>/g).length === code.match(/<div>/g).length);
 ```
 
 # --seed--
@@ -59,7 +56,11 @@ assert(
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -75,12 +76,14 @@ assert(
   </ol>
 
   <form action="https://www.freecatphotoapp.com/submit-cat-photo">
-    <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
-    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
-    <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving" checked> Loving</label>
-    <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy"> Lazy</label>
-    <label for="energetic"><input id="energetic" type="checkbox" name="personality" value="energetic"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked /> Indoor</label>
+    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor" /> Outdoor</label><br />
+    <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving" checked /> Loving</label>
+    <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy" /> Lazy</label>
+    <label for="energetic"
+      ><input id="energetic" type="checkbox" name="personality" value="energetic" /> Energetic</label
+    ><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>
@@ -92,8 +95,12 @@ assert(
 <h2>CatPhotoApp</h2>
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
-  
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
   <div>
     <p>Things cats love:</p>
     <ul>
@@ -109,12 +116,14 @@ assert(
     </ol>
   </div>
   <form action="https://www.freecatphotoapp.com/submit-cat-photo">
-    <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
-    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
-    <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving" checked> Loving</label>
-    <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy"> Lazy</label>
-    <label for="energetic"><input id="energetic" type="checkbox" name="personality" value="energetic"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked /> Indoor</label>
+    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor" /> Outdoor</label><br />
+    <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving" checked /> Loving</label>
+    <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy" /> Lazy</label>
+    <label for="energetic"
+      ><input id="energetic" type="checkbox" name="personality" value="energetic" /> Energetic</label
+    ><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>

@@ -9,9 +9,9 @@ dashedName: modify-fill-mode-of-an-animation
 
 # --description--
 
-นั่นดีมาก! 
+นั่นดีมาก!
 แต่มันก็ยังดูไม่ค่อยถูกต้องซักเท่าไหร่
-สังเกตว่า animation จะถูกรีเซ็ตหลังจากผ่านไป `500ms` ซึ่งทำให้ปุ่มนั้นกลับไปมีสีเดิม
+สังเกตว่า animation จะถูกรีเซ็ตหลังจากที่เวลาผ่านไป `500ms` ซึ่งทำให้ปุ่มนั้นกลับไปมีสีเดิม
 คุณต้องการให้ปุ่มยังคงสีที่ถูกไฮไลต์เอาไว้
 
 สิ่งนี้สามารถทำได้โดยการกำหนด `animation-fill-mode` property ให้มีค่า `forwards`
@@ -32,15 +32,9 @@ animation-fill-mode: forwards;
 
 ```js
 assert(
-  code.match(
-    /button\s*?:\s*?hover\s*?{[\s\S]*animation-fill-mode\s*?:\s*?forwards\s*?;[\s\S]*}/gi
-  ) &&
-    code.match(
-      /button\s*?:\s*?hover\s*?{[\s\S]*animation-name\s*?:\s*?background-color\s*?;[\s\S]*}/gi
-    ) &&
-    code.match(
-      /button\s*?:\s*?hover\s*?{[\s\S]*animation-duration\s*?:\s*?500ms\s*?;[\s\S]*}/gi
-    )
+  code.match(/button\s*?:\s*?hover\s*?{[\s\S]*animation-fill-mode\s*?:\s*?forwards\s*?;[\s\S]*}/gi) &&
+    code.match(/button\s*?:\s*?hover\s*?{[\s\S]*animation-name\s*?:\s*?background-color\s*?;[\s\S]*}/gi) &&
+    code.match(/button\s*?:\s*?hover\s*?{[\s\S]*animation-duration\s*?:\s*?500ms\s*?;[\s\S]*}/gi),
 );
 ```
 
@@ -53,7 +47,7 @@ assert(
   button {
     border-radius: 5px;
     color: white;
-    background-color: #0F5897;
+    background-color: #0f5897;
     padding: 5px 10px 8px 10px;
   }
   button:hover {
@@ -79,7 +73,7 @@ assert(
   button {
     border-radius: 5px;
     color: white;
-    background-color: #0F5897;
+    background-color: #0f5897;
     padding: 5px 10px 8px 10px;
   }
   button:hover {

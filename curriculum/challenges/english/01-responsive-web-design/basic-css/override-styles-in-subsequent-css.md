@@ -17,7 +17,7 @@ dashedName: override-styles-in-subsequent-css
 # --instructions--
 
 จงสร้าง CSS class อันใหม่ที่ชื่อ `blue-text` และจงกำหนดให้ element นี้มีสีน้ำเงิน
-จงเช็คให้มั่นใจว่ามันอยู่ต่อจาก declaration ของ `pink-text` class 
+จงเช็คให้มั่นใจว่ามันอยู่ต่อจาก declaration ของ `pink-text` class
 จงใช้ `blue-text` class กับ `h1` element ด้วยกันกับ `pink-text` class, และเรามาดูกันว่าใครจะชนะ
 
 การใส่ class attribute หลายอัน ๆ ให้กับ HTML element นั้นทำได้ด้วยช่องไฟช่องหนึ่งระหว่างพวกมันแบบนี้:
@@ -90,7 +90,7 @@ assert($('h1').css('color') === 'rgb(0, 0, 255)');
 
   .blue-text {
     color: blue;
-  }  
+  }
 </style>
 <h1 class="pink-text blue-text">Hello World!</h1>
 ```

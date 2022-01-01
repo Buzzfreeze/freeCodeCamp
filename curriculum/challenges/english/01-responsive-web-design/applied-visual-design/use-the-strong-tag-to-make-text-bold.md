@@ -37,7 +37,7 @@ assert($('p').children('strong').length == 1);
 assert(
   $('strong')
     .text()
-    .match(/^Stanford University\.?$/gi)
+    .match(/^Stanford University\.?$/gi),
 );
 ```
 
@@ -79,7 +79,7 @@ assert(
       <p>Google was founded by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University.</p>
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
+      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br /><br />
       <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
     </div>
   </div>
@@ -119,10 +119,13 @@ assert(
   <div class="cardContent">
     <div class="cardText">
       <h4>Google</h4>
-      <p>Google was founded by Larry Page and Sergey Brin while they were Ph.D. students at <strong>Stanford University</strong>.</p>
+      <p>
+        Google was founded by Larry Page and Sergey Brin while they were Ph.D. students at
+        <strong>Stanford University</strong>.
+      </p>
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
+      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br /><br />
       <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
     </div>
   </div>

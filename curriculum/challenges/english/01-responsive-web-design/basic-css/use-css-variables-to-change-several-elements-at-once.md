@@ -9,7 +9,7 @@ dashedName: use-css-variables-to-change-several-elements-at-once
 
 # --description--
 
-<dfn>CSS Variables</dfn> เป็นวิธีที่ที่สามารถเปลี่ยน CSS style properties หลาย ๆ อันได้ในทีเดียวโดยการเปลี่ยนค่าแค่ค่าเดียว
+<dfn>CSS Variables</dfn> เป็นวิธีที่ที่สามารถเปลี่ยน CSS style properties หลาย ๆ อันได้ในทีเดียวโดยการเปลี่ยนค่าแค่ค่าเดียว (CSS ในรูปแบบตัวแปร)
 
 จงทำตามคำสั่งข้างล่าง และดูสิ่งที่จะเปลี่ยนแปลงจากการที่ค่าเพียงสามค่าถูกเปลี่ยน
 
@@ -22,25 +22,19 @@ dashedName: use-css-variables-to-change-several-elements-at-once
 `penguin` class ควรประกาศตัวแปร `--penguin-skin` แล้วกำหนดค่า `gray` ให้มัน
 
 ```js
-assert(
-  code.match(/.penguin\s*?{[\s\S]*--penguin-skin\s*?:\s*?gray\s*?;[\s\S]*}/gi)
-);
+assert(code.match(/.penguin\s*?{[\s\S]*--penguin-skin\s*?:\s*?gray\s*?;[\s\S]*}/gi));
 ```
 
 `penguin` class ควรประกาศตัวแปร `--penguin-belly` แล้วกำหนดค่า `white` ให้มัน
 
 ```js
-assert(
-  code.match(/.penguin\s*?{[\s\S]*--penguin-belly\s*?:\s*?white\s*?;[\s\S]*}/gi)
-);
+assert(code.match(/.penguin\s*?{[\s\S]*--penguin-belly\s*?:\s*?white\s*?;[\s\S]*}/gi));
 ```
 
 `penguin` class ควรประกาศตัวแปร `--penguin-beak` แล้วกำหนดค่า `orange` ให้มัน
 
 ```js
-assert(
-  code.match(/.penguin\s*?{[\s\S]*--penguin-beak\s*?:\s*?orange\s*?;[\s\S]*}/gi)
-);
+assert(code.match(/.penguin\s*?{[\s\S]*--penguin-beak\s*?:\s*?orange\s*?;[\s\S]*}/gi));
 ```
 
 # --seed--
@@ -50,7 +44,6 @@ assert(
 ```html
 <style>
   .penguin {
-
     /* Only change code below this line */
     --penguin-skin: black;
     --penguin-belly: gray;
@@ -218,7 +211,7 @@ assert(
   }
 
   body {
-    background:#c6faf1;
+    background: #c6faf1;
   }
 
   .penguin * {
@@ -253,5 +246,11 @@ assert(
 # --solutions--
 
 ```html
-<style>.penguin {--penguin-skin: gray; --penguin-belly: white; --penguin-beak: orange;}</style>
+<style>
+  .penguin {
+    --penguin-skin: gray;
+    --penguin-belly: white;
+    --penguin-beak: orange;
+  }
+</style>
 ```

@@ -9,15 +9,15 @@ dashedName: make-screen-reader-navigation-easier-with-the-nav-landmark
 
 # --description--
 
-`nav` element เป็นอีก HTML5 item ที่มี embedded landmark feature สำหรับการนำทาง screen reader อย่างง่าย ๆ
-tag นี้ถูกใช้เพื่อเก็บลิงค์ของ navigation อันหลักในหน้าของคุณ 
- 
-ถ้ามีลิงค์ที่ถูกใช้ซ้ำ ๆ อยู่ที่ด้านล่างของแต่ละหน้า มันไม่จำเป็นที่จะ markup พวกมันด้วย `nav` tag 
+`nav` element เป็นอีก HTML5 item ที่มี embedded landmark feature สำหรับการนำทาง (ลิงค์ไปที่อื่น) screen reader อย่างง่าย ๆ
+tag นี้ถูกใช้เพื่อเก็บลิงค์ของ navigation หลักในหน้าของคุณ
+
+ถ้ามีลิงค์ที่ถูกใช้ซ้ำ ๆ อยู่ที่ด้านล่างของแต่ละหน้า มันไม่จำเป็นที่จะ markup พวกมันด้วย `nav` tag
 การใช้ `footer` (จะกล่าวถึงในแบบฝึกหัดถัดไป) ในกรณีนี้ถือว่าเพียงพอแล้ว
 
 # --instructions--
 
-Camper Cat ได้ใส่ลิงค์ของ navigation ที่ด้านบนของหน้า training ของเขาแต่เก็บพวกมันไว้ใน `div`
+ตัวอย่างเช่น Camper Cat ได้ใส่ลิงค์ของ navigation ที่ด้านบนของหน้า training ของเขาแต่เก็บพวกมันไว้ใน `div`
 จงเปลี่ยน `div` ให้เป็น `nav` tag เพื่อปรับปรุงการเข้าถึงหน้านั้นของเขา
 
 # --hints--
@@ -43,10 +43,7 @@ assert($('div').length == 0);
 `nav` element ควรมีแท็กปิด
 
 ```js
-assert(
-  code.match(/<\/nav>/g) &&
-    code.match(/<\/nav>/g).length === code.match(/<nav>/g).length
-);
+assert(code.match(/<\/nav>/g) && code.match(/<\/nav>/g).length === code.match(/<nav>/g).length);
 ```
 
 # --seed--
@@ -65,7 +62,6 @@ assert(
         <li><a href="#weapons">Weapons</a></li>
       </ul>
     </div>
-
   </header>
   <main>
     <section id="stealth">
@@ -101,7 +97,6 @@ assert(
         <li><a href="#weapons">Weapons</a></li>
       </ul>
     </nav>
-
   </header>
   <main>
     <section id="stealth">

@@ -16,8 +16,8 @@ dashedName: align-elements-using-the-justify-content-property
 
 [นี่เป็นรูปที่จะแสดงให้เห็นถึงการจัดแถวตามแนวคิดด้านล่าง](https://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg)
 
-จงจำไว้ว้าการกำหนดให้ flex container เป็นแบบ row จะเป็นการจัดวาง flex item ให้เรียงต่อกันจากซ้ายไปขวา ส่วนถ้ากำหนดเป็นแบบ column จะเป็นการจัดวางแต่ชั้น ๆ จากบนไปล่าง
-ทิศทางที่ flex item ถูกจัดเรียงในแต่ละ container นั้นจะเรียกว่า **main axis** 
+จงจำไว้ว้าการกำหนดให้ flex container เป็นแบบ row จะเป็นการจัดวาง flex item ให้เรียงต่อกันจากซ้ายไปขวา ส่วนถ้ากำหนดเป็นแบบ column จะเป็นการจัดวางแต่ชั้น ๆ จากบนลงล่าง
+ทิศทางที่ flex item ถูกจัดเรียงในแต่ละ container นั้นจะเรียกว่า **main axis**
 สำหรับตอนนี้มันเป็นเพียงเส้นแนวนอนที่ตัดผ่านแต่ละ item สำหรับแบบ row และเป็นเส้นเส้นตั้งสำหรับแบบ column
 
 มีหลายทางเลือกสำหรับวิธีการจัดระยะห่างของ flex items บนเส้น main axis
@@ -53,7 +53,6 @@ assert($('#box-container').css('justify-content') == 'center');
     background: gray;
     display: flex;
     height: 500px;
-
   }
   #box-1 {
     background-color: dodgerblue;

@@ -24,9 +24,9 @@ dashedName: use-css-grid-units-to-change-the-size-of-columns-and-rows
 grid-template-columns: auto 50px 10% 2fr 1fr;
 ```
 
-snippet อันนี้จะสร้างคอลัมน์ 5 อัน
+เช่นตัวอย่างด้านบนนี้จะสร้างคอลัมน์ 5 อัน
 คอลัมน์แรกให้กว้างเท่ากับ content,
-คอลัมน์ที่สองกว้าง 50px, 
+คอลัมน์ที่สองกว้าง 50px,
 คอลัมน์ที่สามกว้าง 10% ของ container ของมัน รวมถึงสองอันที่เหลือด้วย
 ส่วนคอลัมน์ที่สี่หรือห้าจะให้พื้นที่ที่เหลือ โดยมันถูกแบบ่งเป็นสามส่วน สองส่วนแรกให้คอลัมย์ที่สี่ และอีกส่วนให้คอลัมน์ที่ห้า
 
@@ -36,14 +36,10 @@ snippet อันนี้จะสร้างคอลัมน์ 5 อัน
 
 # --hints--
 
-`container` class ควรมี `grid-template-columns` property อันหนึ่งที่มี 3 คอลัมน์โดยแต่ละอันมีความกว้างดังนี้: `1fr, 100px, and 2fr`.
+`container` class ควรมี `grid-template-columns` property อันหนึ่งที่มี 3 คอลัมน์โดยแต่ละอันมีความกว้างดังนี้: `1fr 100px 2fr`.
 
 ```js
-assert(
-  code.match(
-    /.container\s*?{[\s\S]*grid-template-columns\s*?:\s*?1fr\s*?100px\s*?2fr\s*?;[\s\S]*}/gi
-  )
-);
+assert(code.match(/.container\s*?{[\s\S]*grid-template-columns\s*?:\s*?1fr\s*?100px\s*?2fr\s*?;[\s\S]*}/gi));
 ```
 
 # --seed--
@@ -52,11 +48,21 @@ assert(
 
 ```html
 <style>
-  .d1{background:LightSkyBlue;}
-  .d2{background:LightSalmon;}
-  .d3{background:PaleTurquoise;}
-  .d4{background:LightPink;}
-  .d5{background:PaleGreen;}
+  .d1 {
+    background: LightSkyBlue;
+  }
+  .d2 {
+    background: LightSalmon;
+  }
+  .d3 {
+    background: PaleTurquoise;
+  }
+  .d4 {
+    background: LightPink;
+  }
+  .d5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -84,5 +90,9 @@ assert(
 # --solutions--
 
 ```html
-<style>.container {grid-template-columns: 1fr 100px 2fr;}</style>
+<style>
+  .container {
+    grid-template-columns: 1fr 100px 2fr;
+  }
+</style>
 ```

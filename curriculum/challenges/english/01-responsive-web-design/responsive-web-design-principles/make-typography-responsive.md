@@ -11,7 +11,7 @@ dashedName: make-typography-responsive
 
 แทนที่จะใช้ `em` หรือ `px` เพื่อกำหนดขนาดของข้อความ คุณสามารถใช้ viewport units สำหรับ responsive typography
 Viewport units (อย่างเช่น percentages) เป็นหน่วยสัมพัทธ์แต่มันขึ้นกับ item ที่แต่ต่างกัน
-Viewport units จะสัมพัทธ์กับ viewport dimensions (ความกว้าง หรือ ความสูง) ของอุปกรณ์หนึ่ง ๆ และ percentages ขะสัมพันธ์กับขนาดของ parent container element
+Viewport units จะสัมพัทธ์กับ viewport dimensions (ความกว้าง หรือ ความสูง) ของอุปกรณ์หนึ่ง ๆ และ percentages จะสัมพันธ์กับขนาดของ parent container element
 
 viewport units 4 อันที่แตกต่างกันคือ:
 
@@ -20,32 +20,27 @@ viewport units 4 อันที่แตกต่างกันคือ:
 นี่คือตัวอย่างที่กำหนดให้ `body` tag มีค่า 30% ของความกว้าง viewport
 
 ```css
-body { width: 30vw; }
+body {
+  width: 30vw;
+}
 ```
 
 # --instructions--
 
 จงกำหนดให้ `width` ของ `h2` tag มีค่า 80% ของความกว้าง viewport และ `width` ของพารากราฟมีค่า 75% ของ dimension ที่เล็กกว่าของ viewport
+
 # --hints--
 
 `h2` tag ของคุณควรมี `width` ที่มีค่า 80vw.
 
 ```js
-assert(
-  __helpers
-    .removeCssComments(code)
-    .match(/h2\s*?{\s*?width:\s*?80vw;\s*?}/g)
-);
+assert(__helpers.removeCssComments(code).match(/h2\s*?{\s*?width:\s*?80vw;\s*?}/g));
 ```
 
-Your `p` tag should have a `width` of 75vmin.
+tag `p` ควรมี `width` เป็น 75vmin.
 
 ```js
-assert(
-  __helpers
-    .removeCssComments(code)
-    .match(/p\s*?{\s*?width:\s*?75vmin;\s*?}/g)
-);
+assert(__helpers.removeCssComments(code).match(/p\s*?{\s*?width:\s*?75vmin;\s*?}/g));
 ```
 
 # --seed--
@@ -53,12 +48,15 @@ assert(
 ## --seed-contents--
 
 ```html
-<style>
-
-</style>
+<style></style>
 
 <h2>Importantus Ipsum</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel
+  vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac
+  habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse
+  pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.
+</p>
 ```
 
 # --solutions--
@@ -66,13 +64,18 @@ assert(
 ```html
 <style>
   h2 {
-      width: 80vw;
+    width: 80vw;
   }
   p {
-      width: 75vmin;
+    width: 75vmin;
   }
 </style>
 
 <h2>Importantus Ipsum</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel
+  vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac
+  habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse
+  pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.
+</p>
 ```

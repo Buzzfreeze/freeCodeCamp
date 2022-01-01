@@ -9,11 +9,11 @@ dashedName: use-tabindex-to-specify-the-order-of-keyboard-focus-for-several-elem
 
 # --description--
 
-`tabindex` attribute ได้ระบุลำดับการ tab ของ elementไว้เช่นกัน
+`tabindex` attribute ได้ระบุลำดับ element เมื่อมีการกดปุ่ม tab ที่ keyboard จะ Focus ตามลำดับค่า value ของ elementไว้เช่นกัน
 สิ่งนี้ทำได้โดยการกำหนดค่าที่เป็นค่าบวกให้ attribute
 
 การกำหนดค่า `tabindex="1"` จะนำ keyboard focus มาที่ elementนั้นเป็นลำดับแรก
-หลังจากนั้น มันจะวนตามลำดับที่ถูกกำหรดไว้ในค่าของ `tabindex` (2, 3 เป็นต้น), ก่อนที่จะย้ายไปยังส่วนที่  `tabindex="0"` 
+หลังจากนั้น มันจะวนตามลำดับที่ถูกกำหรดไว้ในค่าของ `tabindex` (2, 3 เป็นต้น), ก่อนที่จะย้ายไปยังส่วนที่ `tabindex="0"`
 
 มันสำคัญที่ต้องจำไว้ว่าเมื่อลำดับการกดถูกตั้งไว้แบบนี้
 มันจะเขียนทับ (override) ลำดับที่เป็นค่าเริ่มต้น (ที่ใช้ HTML source) สิ่งนี้อาจทำให้ผู้ใช้ที่ตั้งใจจะเริ่มดูจากด้านบนสับสนได้
@@ -31,12 +31,12 @@ dashedName: use-tabindex-to-specify-the-order-of-keyboard-focus-for-several-elem
 
 # --instructions--
 
-Camper Cat มีช่องค้นหาในหน้า Inspirational Quotes ของเขาที่เขาตั้งใจจะวางมันไว้ที่มุมขวาบนด้วย CSS
+ตัวอย่าง Camper Cat มีช่องค้นหาในหน้า Inspirational Quotes ของเขาที่เขาตั้งใจจะวางมันไว้ที่มุมขวาบนด้วย CSS
 เขาต้องการให้ `input` ของการค้นหา และ form controls สำหรับส่ง `input` เป็น item 2 ตัวแรกในลำดับการกด
-จงเพิ่ม `tabindex` attribute 1 อันและกำหนดค่า  `1` ให้ `search` `input`, และอีก 1`tabindex` attribute ก็กำหนดค่า `2` ให้ `submit` `input`.
+จงเพิ่ม `tabindex` attribute 1 อันและกำหนดค่า `1` ให้ `search` `input`, และอีก 1`tabindex` attribute ก็กำหนดค่า `2` ให้ `submit` `input`.
 
-อีกสิ่งที่ต้องจำไว้ก็คือ browser บางอันอาจจะพากลุ่มไปที่ตรงกลางของลำดับการกดเมื่อมี  element หนึ่งถูกคลิก
-element ได้ถูกเพิ่มเข้าไปที่หน้านั้นเพื่อให้คุณมั่นใจว่าจะเริ่มที่จุดเริ่มต้นของลำดับการกดของคุณ 
+อีกสิ่งที่ต้องจำไว้ก็คือ browser บางอันอาจจะพากลุ่มไปที่ตรงกลางของลำดับการกดเมื่อมี element หนึ่งถูกคลิก
+element ได้ถูกเพิ่มเข้าไปที่หน้านั้นเพื่อให้คุณมั่นใจว่าจะเริ่มที่จุดเริ่มต้นของลำดับการกดของคุณ
 
 # --hints--
 
@@ -84,20 +84,21 @@ assert($('#submit').attr('tabindex') == '2');
   <form>
     <label for="search">Search:</label>
 
-
-    <input type="search" name="search" id="search">
-    <input type="submit" name="submit" value="Submit" id="submit">
-
-
+    <input type="search" name="search" id="search" />
+    <input type="submit" name="submit" value="Submit" id="submit" />
   </form>
   <h2>Inspirational Quotes</h2>
   <blockquote>
-    <p>&ldquo;There's no Theory of Evolution, just a list of creatures I've allowed to live.&rdquo;<br>
-    - Chuck Norris</p>
+    <p>
+      &ldquo;There's no Theory of Evolution, just a list of creatures I've allowed to live.&rdquo;<br />
+      - Chuck Norris
+    </p>
   </blockquote>
   <blockquote>
-    <p>&ldquo;Wise men say forgiveness is divine, but never pay full price for late pizza.&rdquo;<br>
-    - TMNT</p>
+    <p>
+      &ldquo;Wise men say forgiveness is divine, but never pay full price for late pizza.&rdquo;<br />
+      - TMNT
+    </p>
   </blockquote>
   <footer>&copy; 2018 Camper Cat</footer>
 </body>
@@ -134,20 +135,21 @@ assert($('#submit').attr('tabindex') == '2');
   <form>
     <label for="search">Search:</label>
 
-
-    <input tabindex="1" type="search" name="search" id="search">
-    <input tabindex="2" type="submit" name="submit" value="Submit" id="submit">
-
-
+    <input tabindex="1" type="search" name="search" id="search" />
+    <input tabindex="2" type="submit" name="submit" value="Submit" id="submit" />
   </form>
   <h2>Inspirational Quotes</h2>
   <blockquote>
-    <p>&ldquo;There's no Theory of Evolution, just a list of creatures I've allowed to live.&rdquo;<br>
-    - Chuck Norris</p>
+    <p>
+      &ldquo;There's no Theory of Evolution, just a list of creatures I've allowed to live.&rdquo;<br />
+      - Chuck Norris
+    </p>
   </blockquote>
   <blockquote>
-    <p>&ldquo;Wise men say forgiveness is divine, but never pay full price for late pizza.&rdquo;<br>
-    - TMNT</p>
+    <p>
+      &ldquo;Wise men say forgiveness is divine, but never pay full price for late pizza.&rdquo;<br />
+      - TMNT
+    </p>
   </blockquote>
   <footer>&copy; 2018 Camper Cat</footer>
 </body>

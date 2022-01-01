@@ -29,7 +29,7 @@ gradient จะเริ่มต้นด้วยสี `yellow` ที่ 0 p
 
 # --instructions--
 
-จงสร้างแถบสีโดยการเปลี่ยนค่า `repeating-linear-gradient()` เพื่อใช้มุม gradient เท่ากับ  `45deg`
+จงสร้างแถบสีโดยการเปลี่ยนค่า `repeating-linear-gradient()` เพื่อใช้มุม gradient เท่ากับ `45deg`
 และกำหนดให้ color stops ของสองสีแรกเป็น `yellow`, และ color stop ของอีกสองสีถัดมาเป็น `black`
 
 # --hints--
@@ -58,7 +58,7 @@ color stop ที่ 40 pixels ควรเป็น `yellow`
 assert(code.match(/yellow\s+?40px/gi));
 ```
 
-color stop อันที่สองที่  40 pixel ควรเป็น `black`
+color stop อันที่สองที่ 40 pixel ควรเป็น `black`
 
 ```js
 assert(code.match(/yellow\s+?40px,\s*?black\s+?40px/gi));
@@ -76,21 +76,13 @@ assert(code.match(/black\s+?80px/gi));
 
 ```html
 <style>
-
-  div{
+  div {
     border-radius: 20px;
     width: 70%;
     height: 400px;
-    margin:  50 auto;
-    background: repeating-linear-gradient(
-      90deg,
-      yellow 0px,
-      blue 40px,
-      green 40px,
-      red 80px
-    );
+    margin: 50 auto;
+    background: repeating-linear-gradient(90deg, yellow 0px, blue 40px, green 40px, red 80px);
   }
-
 </style>
 
 <div></div>
@@ -100,18 +92,12 @@ assert(code.match(/black\s+?80px/gi));
 
 ```html
 <style>
-  div{
+  div {
     border-radius: 20px;
     width: 70%;
     height: 400px;
-    margin:  50 auto;
-    background: repeating-linear-gradient(
-      45deg,
-      yellow 0px,
-      yellow 40px,
-      black 40px,
-      black 80px
-    );
+    margin: 50 auto;
+    background: repeating-linear-gradient(45deg, yellow 0px, yellow 40px, black 40px, black 80px);
   }
 </style>
 <div></div>

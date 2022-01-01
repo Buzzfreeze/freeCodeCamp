@@ -10,7 +10,7 @@ dashedName: override-class-declarations-by-styling-id-attributes
 # --description--
 
 พวกเราพึ่งพิสูจน์ไปว่า browser อ่าน CSS จากบนลงล่างตามลำดับของ declaration
-มันหมายความว่า ถ้าเกิดมีความขัดแย้งกัน 
+มันหมายความว่า ถ้าเกิดมีความแตกต่างกัน
 browser จะใช้ CSS declaration ที่มาที่หลัง
 สังเกตว่าถึงพวกเราจะใส่ `blue-text` ก่อน `pink-text` ที่คลาสของ `h1` element, browser ก็จะยังดูที่ลำดับของ declaration ไม่ใช่ลำดับของการเรียกใช้งานอยู่ดี
 
@@ -27,7 +27,7 @@ browser จะใช้ CSS declaration ที่มาที่หลัง
 จำไว้ว่า id styles จะเป็นอย่างนี้:
 
 ```html
-<h1 id="orange-text">
+<h1 id="orange-text"></h1>
 ```
 
 พักเรื่อง `blue-text` และ `pink-text` class ที่ `h1` element ไว้ก่อน
@@ -45,7 +45,7 @@ browser จะใช้ CSS declaration ที่มาที่หลัง
 
 # --hints--
 
- `h1` element ควรมีคลาส `pink-text`.
+`h1` element ควรมีคลาส `pink-text`.
 
 ```js
 assert($('h1').hasClass('pink-text'));
@@ -75,7 +75,7 @@ assert($('h1').length === 1);
 assert(code.match(/#orange-text\s*{/gi));
 ```
 
- `h1` should ไม่ควรมี `style` attributes ใด ๆ 
+`h1` should ไม่ควรมี `style` attributes ใด ๆ
 
 ```js
 assert(!code.match(/<h1.*style.*>/gi));
@@ -125,7 +125,7 @@ assert($('h1').css('color') === 'rgb(255, 165, 0)');
   }
   #orange-text {
     color: orange;
-  }  
+  }
 </style>
-<h1 id="orange-text"  class="pink-text blue-text">Hello World!</h1>
+<h1 id="orange-text" class="pink-text blue-text">Hello World!</h1>
 ```

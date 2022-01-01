@@ -42,13 +42,13 @@ dashedName: use-css-animation-to-change-the-hover-state-of-a-button
 
 # --hints--
 
-@keyframes rule ควรใช้สีพื้นหลังของ  `animation-name` 
+@keyframes rule ควรใช้สีพื้นหลังของ `animation-name`
 
 ```js
 assert(code.match(/@keyframes\s+?background-color\s*?{/g));
 ```
 
-มันควรมี rule หนึ่งอยู่ภายใต้ `@keyframes` ที่จะเปลี่ยน `background-color` เป็น `#4791d0` ที่ 100%
+มันควรมี rule เพิ่มมาอีกหนึ่ง rule อยู่ภายใต้ `@keyframes` ที่จะเปลี่ยน `background-color` เป็น `#4791d0` ที่ 100%
 
 ```js
 assert(code.match(/100%\s*?{\s*?background-color:\s*?#4791d0;\s*?}/gi));
@@ -63,7 +63,7 @@ assert(code.match(/100%\s*?{\s*?background-color:\s*?#4791d0;\s*?}/gi));
   button {
     border-radius: 5px;
     color: white;
-    background-color: #0F5897;
+    background-color: #0f5897;
     padding: 5px 10px 8px 10px;
   }
 
@@ -71,8 +71,6 @@ assert(code.match(/100%\s*?{\s*?background-color:\s*?#4791d0;\s*?}/gi));
     animation-name: background-color;
     animation-duration: 500ms;
   }
-
-
 </style>
 
 <button>Register</button>
@@ -85,7 +83,7 @@ assert(code.match(/100%\s*?{\s*?background-color:\s*?#4791d0;\s*?}/gi));
   button {
     border-radius: 5px;
     color: white;
-    background-color: #0F5897;
+    background-color: #0f5897;
     padding: 5px 10px 8px 10px;
   }
 

@@ -9,25 +9,29 @@ dashedName: turn-an-image-into-a-link
 
 # --description--
 
-คุณสามารถทำให้ element กลายเป็นลิงค์ได้โดยการเก็บมันไว้ใน `a` element
+คุณสามารถทำให้ element กลายเป็นลิงค์ได้โดยการเก็บ element ไว้ใน `a` element
 
 จงเก็บรูปของคุณไว้ใน `a` element
 นี่คือตัวอย่าง:
 
 ```html
-<a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="Three kittens running towards the camera."></a>
+<a href="#"
+  ><img
+    src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+    alt="Three kittens running towards the camera."
+/></a>
 ```
 
 อย่าลืมที่จะใช้ `#` เป็น `href` property ของ `a` element เพื่อที่จะทำให้มันเป็น dead link
 
 # --instructions--
 
-จงวาง image element ที่มีไว้ใน `a` (*anchor*) element.
+จงวาง image element ที่มีไว้ใน `a` (_anchor_) element.
 
 เมื่อคุณทำเสร็จแล้ว
 จงลอง hover บนรูปของคุณด้วย cursor
 normal pointer ของลูกศรคุณจะกลายเป็น link clicking pointer
-และตอนนี้รูปก็เป็นลิงค์อันหนึ่งแล้ว
+และตอนนี้รูปกลายเป็นลิงค์แล้ว
 
 # --hints--
 
@@ -46,11 +50,7 @@ assert(new RegExp('#').test($('a').children('img').parent().attr('href')));
 `a` element แต่ละอันของคุณนั้นควรมีแท็กปิด
 
 ```js
-assert(
-  code.match(/<\/a>/g) &&
-    code.match(/<a/g) &&
-    code.match(/<\/a>/g).length === code.match(/<a/g).length
-);
+assert(code.match(/<\/a>/g) && code.match(/<a/g) && code.match(/<\/a>/g).length === code.match(/<a/g).length);
 ```
 
 # --seed--
@@ -62,10 +62,19 @@ assert(
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
+  <img
+    src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+    alt="A cute orange cat lying on its back."
+  />
 
-  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
-  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+  <p>
+    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot,
+    hairball run catnip eat the grass sniff.
+  </p>
+  <p>
+    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur
+    catnip scratched.
+  </p>
 </main>
 ```
 
@@ -75,10 +84,20 @@ assert(
 <h2>CatPhotoApp</h2>
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
-  
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
-  
-  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
-  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
+
+  <p>
+    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot,
+    hairball run catnip eat the grass sniff.
+  </p>
+  <p>
+    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur
+    catnip scratched.
+  </p>
 </main>
 ```

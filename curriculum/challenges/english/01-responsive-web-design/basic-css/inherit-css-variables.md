@@ -28,9 +28,7 @@ dashedName: inherit-css-variables
 ตัวแปร `--penguin-belly` ควรถูกประกาศไว้ใน `:root` และถูกกำหนดค่าให้เป็น `pink`
 
 ```js
-assert(
-  code.match(/:root\s*?{[\s\S]*--penguin-belly\s*?:\s*?pink\s*?;[\s\S]*}/gi)
-);
+assert(code.match(/:root\s*?{[\s\S]*--penguin-belly\s*?:\s*?pink\s*?;[\s\S]*}/gi));
 ```
 
 # --seed--
@@ -244,5 +242,9 @@ assert(
 # --solutions--
 
 ```html
-<style>:root {--penguin-belly: pink;}</style>
+<style>
+  :root {
+    --penguin-belly: pink;
+  }
+</style>
 ```

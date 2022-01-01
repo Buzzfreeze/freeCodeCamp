@@ -8,19 +8,20 @@ dashedName: divide-the-grid-into-an-area-template
 
 # --description--
 
-คุณสามารถจับกลุ่มช่องต่าง ๆ ในกริดของคุณให้เป็นY <dfn>area</dfn> 
+คุณสามารถจับกลุ่มช่องต่าง ๆ ในกริดของคุณให้เป็น <dfn>area</dfn>
 จงกำหนดชื่อให้กับพื้นที่นั้น
 จงทำมันโดยใช้ `grid-template-areas` ที่ container แบบนี้:
 
 ```css
 grid-template-areas:
-  "header header header"
-  "advert content content"
-  "advert footer footer";
+  'header header header'
+  'advert content content'
+  'advert footer footer';
 ```
 
 โค้ดด้านบนจะจับกลุ่มช่องเล็ก ๆ ของกริดให้เป็น 4 ส่วน; `header`, `advert`, `content`, และ `footer`
-ทุก ๆ คำทขะแสดงเป็นช่อง ๆ หนึ่ง และทุก ๆ เครื่องหมายคำพูดคู่หนึ่งจะเป็น 1 แถว
+ทุก ๆ จะแสดงเป็นช่อง ๆ หนึ่ง และทุก ๆ เครื่องหมายคำพูดคู่หนึ่งจะเป็น 1 แถว
+สรุป grid-template-areas ได้ การกำหนดชื่อเราสามารถทำได้โดยใส่ชื่อที่เราต้องการลงไปใน grid-area ได้เลย
 
 # --instructions--
 
@@ -37,8 +38,8 @@ assert(
   __helpers
     .removeCssComments(code)
     .match(
-      /.container\s*?{[\s\S]*grid-template-areas\s*?:\s*?"\s*?header\s*?header\s*?header\s*?"\s*?"\s*?advert\s*?content\s*?content\s*?"\s*?"\s*?footer\s*?footer\s*?footer\s*?"\s*?;[\s\S]*}/gi
-    )
+      /.container\s*?{[\s\S]*grid-template-areas\s*?:\s*?"\s*?header\s*?header\s*?header\s*?"\s*?"\s*?advert\s*?content\s*?content\s*?"\s*?"\s*?footer\s*?footer\s*?footer\s*?"\s*?;[\s\S]*}/gi,
+    ),
 );
 ```
 
@@ -48,11 +49,21 @@ assert(
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
-  .item5{background:PaleGreen;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
+  .item5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -65,9 +76,9 @@ assert(
     grid-gap: 10px;
     grid-template-areas:
     /* Only change code below this line */
-      "header header header"
-      "advert content content"
-      "advert footer footer";
+      'header header header'
+      'advert content content'
+      'advert footer footer';
     /* Only change code above this line */
   }
 </style>
@@ -85,11 +96,21 @@ assert(
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
-  .item5{background:PaleGreen;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
+  .item5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -102,9 +123,9 @@ assert(
     grid-gap: 10px;
 
     grid-template-areas:
-      "header header header"
-      "advert content content"
-      "footer footer footer";
+      'header header header'
+      'advert content content'
+      'footer footer footer';
   }
 </style>
 

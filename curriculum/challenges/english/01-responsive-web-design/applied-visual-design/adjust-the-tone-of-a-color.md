@@ -10,7 +10,7 @@ dashedName: adjust-the-tone-of-a-color
 # --description--
 
 ตัวเลือก `hsl()` ใน CSS ยังทำให้มันง่ายที่จะปรับโทนของสี
-การผสมสีขาวด้วย pure hue จะสร้าง tint ของ color และการเพิ่มสีดำจะทำให้เกิด shade
+การผสมสีขาวด้วย pure hue จะสร้าง tint (การย้อมสี) ของ color และการเพิ่มสีดำจะทำให้เกิด shade
 ในอีกแง่หนึ่ง โทนนั้นเกิดจากการเติมสีเทาหรือโดยการเติมทั้ง tint และ shade
 จำไว้ว่า 's' และ 'l' ของ `hsl()` มาจาก saturation และ lightness
 เปอร์เซ็นความอิ่มตัวของสีจะเปลี่ยนปริมาณของสีเทาและเปอร์เซ็นความสว่างจะเป็นตัวบอกว่ามีสีขาวหรือดำในสีอยู่เท่าไหร่
@@ -27,9 +27,7 @@ dashedName: adjust-the-tone-of-a-color
 `nav` element ควรมี `background-color` อันหนึ่งที่เป็น cyan ที่ถูกปรับเปลี่ยน tone โดยใช้ `hsl()` property.
 
 ```js
-assert(
-  code.match(/nav\s*?{\s*?background-color:\s*?hsl\(180,\s*?80%,\s*?25%\)/gi)
-);
+assert(code.match(/nav\s*?{\s*?background-color:\s*?hsl\(180,\s*?80%,\s*?25%\)/gi));
 ```
 
 # --seed--
@@ -40,11 +38,10 @@ assert(
 <style>
   header {
     background-color: hsl(180, 90%, 35%);
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   nav {
-
   }
 
   h1 {
@@ -86,7 +83,7 @@ assert(
 <style>
   header {
     background-color: hsl(180, 90%, 35%);
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   nav {

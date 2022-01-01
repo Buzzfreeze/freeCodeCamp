@@ -12,7 +12,7 @@ dashedName: adjust-the-hover-state-of-an-anchor-tag
 แบบฝึกหัดนี้จะพูดถึงการใช้ pseudo-classes คร่าว ๆ
 pseudo-class เป็นคีย์เวิร์ดที่สามารถถูกเพิ่มให้กับ selector เพื่อที่จะเลือกสถานะเฉพาะของ element ได้
 
-ยกตัวอย่างเช่น styling ของ anchor tag สามารถถูกเปลี่ยนเมื่อมันอยู่ใน  hover state โดยการใช้ `:hover` pseudo-class selector
+ยกตัวอย่างเช่น styling ของ anchor tag สามารถถูกเปลี่ยนเมื่อมันอยู่ใน hover state (เอาไปไปชี้) โดยการใช้ `:hover` pseudo-class selector
 นี่เป็น CSS ที่ใช้เปลี่ยนสีของ anchor tag ให้เป็นสีแดงมันอยู่ใน hover state:
 
 ```css
@@ -39,8 +39,8 @@ The anchor tag ควรมี `color` เป็นสีฟ้าตอน hove
 ```js
 assert(
   code.match(
-    /a:hover\s*?{\s*?color:\s*?(blue|rgba\(\s*?0\s*?,\s*?0\s*?,\s*?255\s*?,\s*?1\s*?\)|#00F|rgb\(\s*?0\s*?,\s*?0\s*?,\s*?255\s*?\))\s*?;\s*?}/gi
-  )
+    /a:hover\s*?{\s*?color:\s*?(blue|rgba\(\s*?0\s*?,\s*?0\s*?,\s*?255\s*?,\s*?1\s*?\)|#00F|rgb\(\s*?0\s*?,\s*?0\s*?,\s*?255\s*?\))\s*?;\s*?}/gi,
+  ),
 );
 ```
 
@@ -53,9 +53,6 @@ assert(
   a {
     color: #000;
   }
-
-
-
 </style>
 <a href="https://freecatphotoapp.com/" target="_blank">CatPhotoApp</a>
 ```
@@ -68,7 +65,7 @@ assert(
     color: #000;
   }
   a:hover {
-    color: rgba(0,0,255,1);
+    color: rgba(0, 0, 255, 1);
   }
 </style>
 <a href="https://freecatphotoapp.com/" target="_blank">CatPhotoApp</a>

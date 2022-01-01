@@ -15,7 +15,7 @@ dashedName: create-a-form-element
 
 ```html
 <form action="/url-where-you-want-to-submit-form-data">
-  <input>
+  <input />
 </form>
 ```
 
@@ -29,17 +29,14 @@ dashedName: create-a-form-element
 
 ```js
 const inputElem = document.querySelector('form input');
-assert(
-  inputElem.getAttribute('type') === 'text' &&
-    inputElem.getAttribute('placeholder') === 'cat photo URL'
-);
+assert(inputElem.getAttribute('type') === 'text' && inputElem.getAttribute('placeholder') === 'cat photo URL');
 ```
 
 `form` should ควรมี `action` attribute ที่มีค่าเท่ากับ `https://www.freecatphotoapp.com/submit-cat-photo`
 
 ```js
 const action = $('form').attr('action');
-assert(action.match(/^https:\/\/(www\.)?freecatphotoapp\.com\/submit-cat-photo$/i))
+assert(action.match(/^https:\/\/(www\.)?freecatphotoapp\.com\/submit-cat-photo$/i));
 ```
 
 `form` element ควรมีแท็กเปิดและแท็กปิดที่เรียงกันอย่างถูกต้อง
@@ -48,7 +45,7 @@ assert(action.match(/^https:\/\/(www\.)?freecatphotoapp\.com\/submit-cat-photo$/
 assert(
   code.match(/<\/form>/g) &&
     code.match(/<form [^<]*>/g) &&
-    code.match(/<\/form>/g).length === code.match(/<form [^<]*>/g).length
+    code.match(/<\/form>/g).length === code.match(/<form [^<]*>/g).length,
 );
 ```
 
@@ -61,7 +58,11 @@ assert(
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -75,7 +76,7 @@ assert(
     <li>thunder</li>
     <li>other cats</li>
   </ol>
-  <input type="text" placeholder="cat photo URL">
+  <input type="text" placeholder="cat photo URL" />
 </main>
 ```
 
@@ -86,7 +87,11 @@ assert(
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -101,7 +106,7 @@ assert(
     <li>other cats</li>
   </ol>
   <form action="https://www.freecatphotoapp.com/submit-cat-photo">
-    <input type="text" placeholder="cat photo URL">
+    <input type="text" placeholder="cat photo URL" />
   </form>
 </main>
 ```

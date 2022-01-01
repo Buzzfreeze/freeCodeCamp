@@ -11,7 +11,7 @@ dashedName: add-columns-with-grid-template-columns
 
 การสร้างกริดอย่างง่าย ๆ ไม่ทำให้คุณไปได้ไกลนัก
 คุณต้องกำหนดโครงสร้างของกริดด้วย
-เพื่อที่จะเพิ่มคอลัมน์อันหนึ่งให้กับกริด จงใช้ `grid-template-columns` property ที่ grid container ตามที่สาธิตไว้ข้างล่าง :
+เพื่อที่จะเพิ่มคอลัมน์อันหนึ่งให้กับกริด จงใช้ `grid-template-columns` property ที่ grid container ตามตัวอย่างด้านล่าง :
 
 ```css
 .container {
@@ -22,20 +22,17 @@ dashedName: add-columns-with-grid-template-columns
 
 นี่จะช่วยให้กริดของคุณมีคอลัมน์สองอันที่แต่ละอันมีขนาด 50 px
 จำนวนของ parameter ที่ `grid-template-columns` property ใช้บ่งบอกถึงจำนวนของคอลัมน์ภายในกริดและค่าในแต่ละ parameter บ่งบอกถึงขนาดความกว้างของมัน
+
 # --instructions--
 
 จงกำหนดให้ grid container มี 3 คอลัมน์ที่แต่ละอันมีความกว้าง `100px`
 
 # --hints--
 
-`container` class ควรมี `grid-template-columns` property อันหนึ่งที่มี `100px` อยู่สามตัว
+`container` class ควรมี `grid-template-columns` property ที่มีค่า `100px` อยู่ 3 ตัว
 
 ```js
-assert(
-  code.match(
-    /.container\s*?{[\s\S]*grid-template-columns\s*?:\s*?100px\s*?100px\s*?100px\s*?;[\s\S]*}/gi
-  )
-);
+assert(code.match(/.container\s*?{[\s\S]*grid-template-columns\s*?:\s*?100px\s*?100px\s*?100px\s*?;[\s\S]*}/gi));
 ```
 
 # --seed--
@@ -44,11 +41,21 @@ assert(
 
 ```html
 <style>
-  .d1{background:LightSkyBlue;}
-  .d2{background:LightSalmon;}
-  .d3{background:PaleTurquoise;}
-  .d4{background:LightPink;}
-  .d5{background:PaleGreen;}
+  .d1 {
+    background: LightSkyBlue;
+  }
+  .d2 {
+    background: LightSalmon;
+  }
+  .d3 {
+    background: PaleTurquoise;
+  }
+  .d4 {
+    background: LightPink;
+  }
+  .d5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -57,7 +64,6 @@ assert(
     display: grid;
     /* Only change code below this line */
 
-    
     /* Only change code above this line */
   }
 </style>
@@ -74,5 +80,9 @@ assert(
 # --solutions--
 
 ```html
-<style>.container {grid-template-columns: 100px 100px 100px;}</style>
+<style>
+  .container {
+    grid-template-columns: 100px 100px 100px;
+  }
+</style>
 ```

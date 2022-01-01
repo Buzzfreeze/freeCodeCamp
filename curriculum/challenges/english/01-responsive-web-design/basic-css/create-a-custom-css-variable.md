@@ -9,7 +9,7 @@ dashedName: create-a-custom-css-variable
 
 # --description--
 
-เพื่อที่จะสร้างตัวแปร CSS, คุณแค่ต้องกำหนดให้มันมีชื่อพร้อมกับ hyphen 2 อันตรงด้านหน้า และกำหนดค่าให้มันแบบนี้ :
+เพื่อที่จะสร้างตัวแปร CSS, คุณแค่ต้องกำหนดให้มันมีชื่อพร้อมกับ hyphen (--) 2 อันตรงด้านหน้า และกำหนดค่าให้มันแบบนี้ :
 
 ```css
 --penguin-skin: gray;
@@ -27,9 +27,7 @@ dashedName: create-a-custom-css-variable
 `penguin` class ควรประกาศตัวแปร `--penguin-skin` และกำหนดค่า `gray` ให้มัน
 
 ```js
-assert(
-  code.match(/\.penguin\s*\{[^{}]*?--penguin-skin\s*:\s*gr[ae]y\s*;[^{}]*?\}/gi)
-);
+assert(code.match(/\.penguin\s*\{[^{}]*?--penguin-skin\s*:\s*gr[ae]y\s*;[^{}]*?\}/gi));
 ```
 
 # --seed--
@@ -203,7 +201,7 @@ assert(
   }
 
   body {
-    background:#c6faf1;
+    background: #c6faf1;
   }
 
   .penguin * {
@@ -238,5 +236,9 @@ assert(
 # --solutions--
 
 ```html
-<style>.penguin {--penguin-skin: gray;}</style>
+<style>
+  .penguin {
+    --penguin-skin: gray;
+  }
+</style>
 ```

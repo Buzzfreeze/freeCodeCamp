@@ -9,7 +9,7 @@ dashedName: create-grids-within-grids
 # --description--
 
 การเปลี่ยน element ตัวหนึ่งให้เป็น grid จะมีผลกับ behavior ของ direct descendants ของมันเท่านั้น
-ดังนั้นการเปลี่ยน direct descendant อันหนึ่งให้เป็นกริด คุณจะได้กริดที่อยู่ในกริด
+ดังนั้นการเปลี่ยน direct descendant อันหนึ่งให้เป็นกริด คุณจะได้กริดที่มีกริดอยู่ภายใน
 
 ยกตัวอย่างเช่น การที่เรากำหนด `display` และ `grid-template-columns` properties ของ element ที่มี `item3` class ตัวหนึ่ง, คุณจะสร้างกริดอันหนึ่งไว้ในกริดของคุณ
 
@@ -19,17 +19,13 @@ dashedName: create-grids-within-grids
 
 # --hints--
 
-`item3` class ควรมี `grid-template-columns` property อันหนึ่งที่มีค่าเป็น `auto` และ `1fr` 
+`item3` class ควรมี `grid-template-columns` property อันหนึ่งที่มีค่าเป็น `auto` และ `1fr`
 
 ```js
-assert(
-  code.match(
-    /.item3\s*?{[\s\S]*grid-template-columns\s*?:\s*?auto\s*?1fr\s*?;[\s\S]*}/gi
-  )
-);
+assert(code.match(/.item3\s*?{[\s\S]*grid-template-columns\s*?:\s*?auto\s*?1fr\s*?;[\s\S]*}/gi));
 ```
 
-`item3` class should have a `display` property with the value of `grid`.
+class `item3` ควรมี `display` property มี value เป็น `grid`.
 
 ```js
 assert(code.match(/.item3\s*?{[\s\S]*display\s*?:\s*?grid\s*?;[\s\S]*}/gi));
@@ -51,9 +47,9 @@ assert(code.match(/.item3\s*?{[\s\S]*display\s*?:\s*?grid\s*?;[\s\S]*}/gi));
     grid-template-rows: auto 1fr auto;
     grid-gap: 10px;
     grid-template-areas:
-      "advert header"
-      "advert content"
-      "advert footer";
+      'advert header'
+      'advert content'
+      'advert footer';
   }
   .item1 {
     background: LightSkyBlue;
@@ -70,7 +66,6 @@ assert(code.match(/.item3\s*?{[\s\S]*display\s*?:\s*?grid\s*?;[\s\S]*}/gi));
     grid-area: content;
     /* Only change code below this line */
 
-
     /* Only change code above this line */
   }
 
@@ -86,7 +81,6 @@ assert(code.match(/.item3\s*?{[\s\S]*display\s*?:\s*?grid\s*?;[\s\S]*}/gi));
   .itemTwo {
     background: BlanchedAlmond;
   }
-
 </style>
 
 <div class="container">
@@ -103,5 +97,10 @@ assert(code.match(/.item3\s*?{[\s\S]*display\s*?:\s*?grid\s*?;[\s\S]*}/gi));
 # --solutions--
 
 ```html
-<style>.item3 {grid-template-columns: auto 1fr; display: grid;}</style>
+<style>
+  .item3 {
+    grid-template-columns: auto 1fr;
+    display: grid;
+  }
+</style>
 ```

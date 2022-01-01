@@ -36,18 +36,14 @@ assert(
   $('h1').length > 0 &&
     $('h1')
       .text()
-      .match(/hello world/i)
+      .match(/hello world/i),
 );
 ```
 
 `h1` element ควรมีแท็กปิด
 
 ```js
-assert(
-  code.match(/<\/h1>/g) &&
-    code.match(/<h1/g) &&
-    code.match(/<\/h1>/g).length === code.match(/<h1/g).length
-);
+assert(code.match(/<\/h1>/g) && code.match(/<h1/g) && code.match(/<\/h1>/g).length === code.match(/<h1/g).length);
 ```
 
 `body` element ควรมี `color` property ที่เป็น `green`
@@ -62,7 +58,7 @@ assert($('body').css('color') === 'rgb(0, 128, 0)');
 assert(
   $('body')
     .css('font-family')
-    .match(/monospace/i)
+    .match(/monospace/i),
 );
 ```
 
@@ -73,7 +69,7 @@ assert(
   $('h1').length > 0 &&
     $('h1')
       .css('font-family')
-      .match(/monospace/i)
+      .match(/monospace/i),
 );
 ```
 
@@ -92,7 +88,6 @@ assert($('h1').length > 0 && $('h1').css('color') === 'rgb(0, 128, 0)');
   body {
     background-color: black;
   }
-
 </style>
 ```
 
@@ -105,7 +100,6 @@ assert($('h1').length > 0 && $('h1').css('color') === 'rgb(0, 128, 0)');
     font-family: monospace;
     color: green;
   }
-
 </style>
 <h1>Hello World!</h1>
 ```

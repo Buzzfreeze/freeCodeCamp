@@ -9,9 +9,7 @@ dashedName: delete-html-elements
 
 # --description--
 
-โทรศัพท์ของเรามีพื้นที่ในแนวตั้งไม่พอ
-
-จงเอา element ที่ไม่จำเป็นออกไปเพื่อเราจะได้เริ่มสร้าง CatPhotoApp ของเรา
+พื้นที่ในแนวตั้งไม่พอจงเอา element ที่ไม่จำเป็นออกไปเพื่อจะได้เริ่มสร้างบทความ CatPhotoApp ของเรา
 
 # --instructions--
 
@@ -46,11 +44,18 @@ assert(code.match(/<p>[\w\W]*<\/p>/gi));
 
 <h2>CatPhotoApp</h2>
 
-<p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+<p>
+  Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball
+  run catnip eat the grass sniff.
+</p>
 ```
 
 # --solutions--
 
 ```html
-<h2>CatPhotoApp</h2><p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+<h2>CatPhotoApp</h2>
+<p>
+  Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball
+  run catnip eat the grass sniff.
+</p>
 ```

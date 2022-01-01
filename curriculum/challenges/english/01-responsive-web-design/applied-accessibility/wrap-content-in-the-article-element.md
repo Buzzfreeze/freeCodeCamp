@@ -14,7 +14,7 @@ dashedName: wrap-content-in-the-article-element
 tag อันนี้เหมาะที่จะใช้กับพวก blog entries, forum posts, และ news articles.
 
 การกำหนดว่าเนื้อหาควรจะอยู่เดี่ยว ๆ ได้ไหม มักจะขึ้นกับดุลยพินิจของแต่ละคนแต่คุณสามารถใช้การทดสอบพื้นฐาน 2-3 อย่างเพื่อเช็คได้
-จงถามตัวเองว่า ถ้าคุณลบบริบทที่อยู่รอบ ๆ ออกทุกอัน เนื้อหาอันนั้นจะยังเข้าใจได้อยู่หรือไม่ ? 
+จงถามตัวเองว่า ถ้าคุณลบบริบทที่อยู่รอบ ๆ ออกทุกอัน เนื้อหานั้นๆจะยังเข้าใจได้อยู่หรือไม่ ?
 เช่นเดียวกัน สำหรับข้อความจะยังคงเนื้อหาเดิมได้หรือเปล่าถ้ามันอยู่ใน RSS feed?
 
 จงจำไว้ว่ามีความเชื่อที่ว่าการใช้ assistive technologies พึ่งพา markup ที่เป็นระเบียนและมีความหมายทางภาษาพึ่งที่จะเข้าใจงานของคุณให้ดียิ่งขึ้น
@@ -30,7 +30,7 @@ tag อันนี้เหมาะที่จะใช้กับพวก 
 
 # --instructions--
 
-Camper Cat ใช้ `article` tags เป็นล้อมรอบโพสต์ใน blog page ของเขา แต่เขาลืมที่จะใช้มันกับส่วนที่อยู่ด้านบน
+ตัวอย่างเช่น Camper Cat ใช้ `article` tags เป็นล้อมรอบโพสต์ใน blog page ของเขา แต่เขาลืมที่จะใช้มันกับส่วนที่อยู่ด้านบน
 จงเปลี่ยน `div` tag ให้เป็น`article` tag แทน
 
 # --hints--
@@ -56,21 +56,32 @@ assert($('div').length == 0);
 <main>
   <div>
     <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
-    <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>
+    <p>
+      The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses.
+      But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that
+      is lasagna...
+    </p>
   </div>
 
-  <img src="samuraiSwords.jpeg" alt="">
+  <img src="samuraiSwords.jpeg" alt="" />
 
   <article>
     <h2>Defeating your Foe: the Red Dot is Ours!</h2>
-    <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...</p>
+    <p>
+      Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning
+      stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...
+    </p>
   </article>
 
-  <img src="samuraiSwords.jpeg" alt="">
+  <img src="samuraiSwords.jpeg" alt="" />
 
   <article>
     <h2>Is Chuck Norris a Cat Person?</h2>
-    <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>
+    <p>
+      Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence
+      anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat
+      person?...
+    </p>
   </article>
 </main>
 ```
@@ -82,21 +93,32 @@ assert($('div').length == 0);
 <main>
   <article>
     <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
-    <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>
+    <p>
+      The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses.
+      But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that
+      is lasagna...
+    </p>
   </article>
 
-  <img src="samuraiSwords.jpeg" alt="">
+  <img src="samuraiSwords.jpeg" alt="" />
 
   <article>
     <h2>Defeating your Foe: the Red Dot is Ours!</h2>
-    <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...</p>
+    <p>
+      Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning
+      stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...
+    </p>
   </article>
 
-  <img src="samuraiSwords.jpeg" alt="">
+  <img src="samuraiSwords.jpeg" alt="" />
 
   <article>
     <h2>Is Chuck Norris a Cat Person?</h2>
-    <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>
+    <p>
+      Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence
+      anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat
+      person?...
+    </p>
   </article>
 </main>
 ```

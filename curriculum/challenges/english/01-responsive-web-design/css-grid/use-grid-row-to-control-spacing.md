@@ -9,7 +9,7 @@ dashedName: use-grid-row-to-control-spacing
 
 # --description--
 
-แน่นอน คุณสามารถทำให้ item กินพื้นที่หลาย ๆ แถวได้เช่นเดียวกับที่คุณทำกับคอลั่มน์
+แน่นอน คุณสามารถทำให้ item กินพื้นที่หลาย ๆ แถวได้เช่นเดียวกับที่คุณทำกับคอลัมน์
 คุณจะกำหนดเส้นแนวนอนที่คุณต้องการ item เริ่มและสิ้นสุดโดยการใช้ `grid-row` property กับ grid item อันหนึ่ง
 
 # --instructions--
@@ -18,15 +18,13 @@ dashedName: use-grid-row-to-control-spacing
 
 # --hints--
 
-`item5` class ความมี 1 `grid-row` property.
+`item5` class ควรมี 1 `grid-row` property.
 
 ```js
-assert(
-  __helpers.removeWhiteSpace($('style').text()).match(/\.item5{.*grid-row:.*}/g)
-);
+assert(__helpers.removeWhiteSpace($('style').text()).match(/\.item5{.*grid-row:.*}/g));
 ```
 
-`item5` class should have a `grid-row` property which results in it consuming the last two rows of the grid.
+Class `item5` ควรมี `grid-row` property กินพื้นที่ 2 แถวล่าง ของ grid.
 
 ```js
 const rowStart = getComputedStyle($('.item5')[0]).gridRowStart;
@@ -41,7 +39,7 @@ const correctResults = [
   '-12',
   'span 2span 2',
   'span 2auto',
-  'autospan 2'
+  'autospan 2',
 ];
 assert(correctResults.includes(result));
 ```
@@ -52,10 +50,18 @@ assert(correctResults.includes(result));
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
 
   .item5 {
     background: PaleGreen;
@@ -90,10 +96,18 @@ assert(correctResults.includes(result));
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
 
   .item5 {
     background: PaleGreen;

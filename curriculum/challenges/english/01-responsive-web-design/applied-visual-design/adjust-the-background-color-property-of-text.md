@@ -15,7 +15,7 @@ dashedName: adjust-the-background-color-property-of-text
 <blockquote>rgba stands for:<br>  r = red<br>  g = green<br>  b = blue<br>  a = alpha/level of opacity</blockquote>
 
 ค่า RGB สามารถเป็นได้ตั้งแต่ 0 ถึง 255 ค่า alpha สามารถเป็นได้ตั้งแต่ 1 (ทึบแสงที่สุด) ถึง 0 (โปร่งแสงที่สุด)
-`rgba()` นั้นเหมาะที่จะใช้ในกรณีนี้ที่สุด เนื่องจากคุณสามารถใช้ปรับค่า opacity ได้
+`rgba()` นั้นเหมาะที่จะใช้ในกรณีนี้ที่สุด เนื่องจากคุณสามารถใช้ปรับค่า opacity (ค่าความสว่าง) ได้
 ซึ่งแปลว่าคุณไม่จำเป็นต้องปิดพื้นหลังทั้งหมด
 
 คุณจะใช้ `background-color: rgba(45, 45, 45, 0.1)` สำหรับแบบฝึกหัดนี้
@@ -26,16 +26,13 @@ dashedName: adjust-the-background-color-property-of-text
 เพื่อทำให้ข้อความดูเด่นขึ้น, จงปรับ`background-color` ของ`h4` element ให้มีค่าตามค่า `rgba()` ที่กำหนดให้
 
 นอกจากนั้น จงลบ `height` property และเพิ่ม `padding` 10px ให้กับ `h4`
+
 # --hints--
 
-โค้ดของคุณควรเพิ่ม  `background-color` property ให้กับ `h4` element และกำหนดค่าให้มันเท่ากับ `rgba(45, 45, 45, 0.1)`.
+โค้ดของคุณควรเพิ่ม `background-color` property ให้กับ `h4` element และกำหนดค่าให้มันเท่ากับ `rgba(45, 45, 45, 0.1)`.
 
 ```js
-assert(
-  /(background-color|background):rgba\(45,45,45,0?\.1\)(;?}|;)/gi.test(
-    code.replace(/\s/g, '')
-  )
-);
+assert(/(background-color|background):rgba\(45,45,45,0?\.1\)(;?}|;)/gi.test(code.replace(/\s/g, '')));
 ```
 
 คุณควรเพิ่ม `padding` property อันหนึ่งให้กับ `h4` elementและกำหนดให้มันมีค่า 10 pixel
@@ -45,7 +42,7 @@ assert(
   $('h4').css('padding-top') == '10px' &&
     $('h4').css('padding-right') == '10px' &&
     $('h4').css('padding-bottom') == '10px' &&
-    $('h4').css('padding-left') == '10px'
+    $('h4').css('padding-left') == '10px',
 );
 ```
 
@@ -64,8 +61,6 @@ assert(!($('h4').css('height') == '25px'));
   h4 {
     text-align: center;
     height: 25px;
-
-
   }
   p {
     text-align: justify;
@@ -92,11 +87,16 @@ assert(!($('h4').css('height') == '25px'));
   <div class="cardContent">
     <div class="cardText">
       <h4>Alphabet</h4>
-      <hr>
-      <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+      <hr />
+      <p>
+        <em
+          >Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at
+          <strong>Stanford University</strong>.</em
+        >
+      </p>
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
+      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br /><br />
       <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
     </div>
   </div>
@@ -137,11 +137,16 @@ assert(!($('h4').css('height') == '25px'));
   <div class="cardContent">
     <div class="cardText">
       <h4>Alphabet</h4>
-      <hr>
-      <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+      <hr />
+      <p>
+        <em
+          >Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at
+          <strong>Stanford University</strong>.</em
+        >
+      </p>
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
+      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br /><br />
       <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
     </div>
   </div>

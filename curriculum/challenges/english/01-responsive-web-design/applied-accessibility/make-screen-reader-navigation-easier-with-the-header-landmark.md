@@ -12,18 +12,18 @@ dashedName: make-screen-reader-navigation-easier-with-the-header-landmark
 HTML5 element อันต่อมาที่จะเพิ่มความหมายในแง่ความภาษาและทำให้ความสามารถในการเข้าถึงดีขึ้นคือ `header` tag
 มันถูกใช้เพื่อเก็บข้อมูลสำหรับการแนะนำตัวเว็บไซต์หรือ navigation links สำหรับ parent tag ของมัน และมันยังทำงานได้ดีกับเนื้อหาที่ซ้ำ ๆ ในบริเวณส่วนบนของหลาย ๆ หน้า
 
-`header` ได้แบ่ง embedded landmark feature ที่คุณเห็นกับ  `main` โดยการทำให้ assistive technologies สามารถนำทางไปยังเนื้อหานั้นได้รวดเร็วมากยิ่งขึ้น
+`header` ได้แบ่ง embedded landmark feature ที่คุณเห็นกับ `main` โดยการทำให้ assistive technologies สามารถนำทางไปยังเนื้อหานั้นได้รวดเร็วมากยิ่งขึ้น
 
-**Note:** `header` นั้นถูกใช้ใน  `body` tag ของ HTML document ของคุณ มันแตกต่างจาก `head` element ที่เก็บทั้งชื่อของหน้านั้น, meta information, และอื่น ๆ
+**Note:** `header` นั้นถูกใช้ใน `body` tag ของ HTML document ของคุณ มันแตกต่างจาก `head` element ที่เก็บทั้งชื่อของหน้านั้น, meta information, และอื่น ๆ
 
 # --instructions--
 
-Camper Cat กำลังเขียนบทความสุดคูลเกี่ยวกับการฝึกนินจา และต้องการจะเพิ่มหน้าหน้าหนึ่งในเว็บไซต์ของเขา
-จงเปลี่ยน `div` อันบนที่ตอนนี้เก็บ `h1` เป็น  `header` tag 1 อันแทน
+ตัวอย่างเช่น Camper Cat กำลังเขียนบทความสุดคูลเกี่ยวกับการฝึกนินจา และต้องการจะเพิ่มหน้าหน้าหนึ่งในเว็บไซต์ของเขา
+จงเปลี่ยน `div` อันบนที่ตอนนี้เก็บ `h1` เป็น `header` tag แทน
 
 # --hints--
 
-โค้ดของคุณควรมี  `header` tag 1 อัน
+โค้ดของคุณควรมี `header` tag 1 อัน
 
 ```js
 assert($('header').length == 1);
@@ -44,10 +44,7 @@ assert($('div').length == 0);
 `header` element ควรมีแท็กปิด
 
 ```js
-assert(
-  code.match(/<\/header>/g) &&
-    code.match(/<\/header>/g).length === code.match(/<header>/g).length
-);
+assert(code.match(/<\/header>/g) && code.match(/<\/header>/g).length === code.match(/<header>/g).length);
 ```
 
 # --seed--
@@ -56,11 +53,9 @@ assert(
 
 ```html
 <body>
-
   <div>
     <h1>Training with Camper Cat</h1>
   </div>
-
 
   <main>
     <section id="stealth">
@@ -86,11 +81,9 @@ assert(
 
 ```html
 <body>
-
   <header>
     <h1>Training with Camper Cat</h1>
   </header>
-
 
   <main>
     <section id="stealth">

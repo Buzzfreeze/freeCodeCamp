@@ -33,7 +33,7 @@ color: red !important;
 
 # --hints--
 
- `h1` element ควรมีคลาส `pink-text`.
+`h1` element ควรมีคลาส `pink-text`.
 
 ```js
 assert($('h1').hasClass('pink-text'));
@@ -57,12 +57,10 @@ assert($('h1').attr('id') === 'orange-text');
 assert(code.match(/<h1.*style/gi) && code.match(/<h1.*style.*color\s*?:/gi));
 ```
 
-`pink-text` class declaration ควรมีคีย์เวิร์ด `!important` เพื่อเขียนทับ declaration ตัวอื่น ๆ 
+`pink-text` class declaration ควรมีคีย์เวิร์ด `!important` เพื่อเขียนทับ declaration ตัวอื่น ๆ
 
 ```js
-assert(
-  code.match(/\.pink-text\s*?\{[\s\S]*?color:.*pink.*!important\s*;?[^\.]*\}/g)
-);
+assert(code.match(/\.pink-text\s*?\{[\s\S]*?color:.*pink.*!important\s*;?[^\.]*\}/g));
 ```
 
 `h1` element ควรมีสีขมพู

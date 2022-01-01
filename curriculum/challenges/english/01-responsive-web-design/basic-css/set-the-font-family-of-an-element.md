@@ -9,9 +9,9 @@ dashedName: set-the-font-family-of-an-element
 
 # --description--
 
-คุณสามารถกำหนดว่าจะใช้ฟ้อนต์กับ element ใด โดยการใช้ `font-family` property.
+คุณสามารถกำหนดว่าจะใช้รูปแบบฟ้อนต์กับ element ใด โดยการใช้ `font-family` property.
 
-ยกตัวอย่างเช่น ถ้าคุณต้องการกำหนดให้ฟ้อนต์ของ `h2` element เป็น `sans-serif`, คุณสามารถเขียน CSS ได้ดังนี้:
+ยกตัวอย่างเช่น ถ้าคุณต้องการกำหนดให้รูปแบบฟ้อนต์ของ `h2` element เป็น `sans-serif`, คุณสามารถเขียน CSS ได้ดังนี้:
 
 ```css
 h2 {
@@ -25,14 +25,14 @@ h2 {
 
 # --hints--
 
- `p` elements ควรใช้ฟ้อนต์ `monospace`.
+`p` elements ควรใช้ฟ้อนต์ `monospace`.
 
 ```js
 assert(
   $('p')
     .not('.red-text')
     .css('font-family')
-    .match(/monospace/i)
+    .match(/monospace/i),
 );
 ```
 
@@ -55,7 +55,11 @@ assert(
 <main>
   <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <div>
     <p>Things cats love:</p>
@@ -73,12 +77,12 @@ assert(
   </div>
 
   <form action="https://freecatphotoapp.com/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label><input type="checkbox" name="personality" checked /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>
@@ -101,9 +105,13 @@ assert(
 <h2 class="red-text">CatPhotoApp</h2>
 <main>
   <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
-  
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
-  
+
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
+
   <div>
     <p>Things cats love:</p>
     <ul>
@@ -118,14 +126,14 @@ assert(
       <li>other cats</li>
     </ol>
   </div>
-  
+
   <form action="https://freecatphotoapp.com/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label><input type="checkbox" name="personality" checked /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>

@@ -22,7 +22,7 @@ dashedName: import-a-google-font
 เพื่อที่จะทำเช่นนี้ จงคัดลอก code snippet ข้างล่างและวางมันไว้ที่ด้านบนของ code editor ของคุณ (ก่อนแท็กเปิดของ `style` element):
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
 ```
 
 ตอนนี้คุณสามารถใช้ `Lobster` font ใน CSS โดยการใช้ `Lobster` เป็น FAMILY_NAME ตามตัวอย่างด้านล่าง:
@@ -55,18 +55,14 @@ assert($('link[href*="googleapis" i]').length);
 assert(
   $('h2')
     .css('font-family')
-    .match(/lobster/i)
+    .match(/lobster/i),
 );
 ```
 
 คุณควรใช้แค่ `h2` element selector เพื่อเปลี่ยนฟ้อนต์
 
 ```js
-assert(
-  /\s*[^\.]h2\s*\{\s*font-family\s*:\s*('|"|)Lobster\1\s*(,\s*('|"|)[a-z -]+\3\s*)?(;\s*\}|\})/gi.test(
-    code
-  )
-);
+assert(/\s*[^\.]h2\s*\{\s*font-family\s*:\s*('|"|)Lobster\1\s*(,\s*('|"|)[a-z -]+\3\s*)?(;\s*\}|\})/gi.test(code));
 ```
 
 `p` element ควรจะยังใช้ฟ้อนต์ `monospace` อยู่
@@ -75,7 +71,7 @@ assert(
 assert(
   $('p')
     .css('font-family')
-    .match(/monospace/i)
+    .match(/monospace/i),
 );
 ```
 
@@ -99,7 +95,11 @@ assert(
 <main>
   <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <div>
     <p>Things cats love:</p>
@@ -117,12 +117,12 @@ assert(
   </div>
 
   <form action="https://freecatphotoapp.com/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label><input type="checkbox" name="personality" checked /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>
@@ -131,7 +131,7 @@ assert(
 # --solutions--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
 <style>
   .red-text {
     color: red;
@@ -151,7 +151,11 @@ assert(
 <main>
   <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <div>
     <p>Things cats love:</p>
@@ -169,12 +173,12 @@ assert(
   </div>
 
   <form action="https://freecatphotoapp.com/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label><input type="checkbox" name="personality" checked /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>

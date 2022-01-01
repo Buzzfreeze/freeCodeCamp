@@ -25,7 +25,7 @@ WCAG-recommended contrast ratio คือ 4.5:1 ซึ่งสามารถ�
 
 # --instructions--
 
-Camper Cat กำลังทดลองใช้สีต่าง ๆ กับข้อความและพื้นหลังของบล็อคของเขา แต่คู่สีปัจจุบันของเขา ทำให้ `background-color` เป็นสีเขียว  และ `color` ของข้อความมีสีแดงเลือดหมู ซึ่งสีคู่นี้มี contrast ratio อยู่ที่ 2.5:1
+ตัวอย่าง Camper Cat กำลังทดลองใช้สีต่าง ๆ กับข้อความและพื้นหลังของบล็อคของเขา แต่คู่สีปัจจุบันของเขา ทำให้ `background-color` เป็นสีเขียว และ `color` ของข้อความมีสีแดงเลือดหมู ซึ่งสีคู่นี้มี contrast ratio อยู่ที่ 2.5:1
 คุณสามารถปรับค่าความสว่างของมันได้เพราะเขากำหนดค่าสีโดยใช้ CSS `hsl()` property (ซึ่งมาจาก hue, saturation (ความอิ่มตัว), lightness (ความสว่าง)) โดยการเปลี่ยน argument ตัวที่สาม
 จงเพิ่มความสว่างของ `background-color` จาก 35% ไปที่ 55%, และลดความสว่าง `color` จาก 20% ไปที่ 15%
 สิ่งนี้จะช่วยให้ contrast มีค่าอยู่ที่ 5.9:1.
@@ -51,10 +51,10 @@ assert(code.match(/background-color:\s*?hsl\(120,\s*?25%,\s*?55%\)/gi));
 ```html
 <head>
   <style>
-  body {
-    color: hsl(0, 55%, 20%);
-    background-color: hsl(120, 25%, 35%);
-  }
+    body {
+      color: hsl(0, 55%, 20%);
+      background-color: hsl(120, 25%, 35%);
+    }
   </style>
 </head>
 <body>
@@ -63,8 +63,16 @@ assert(code.match(/background-color:\s*?hsl\(120,\s*?25%,\s*?55%\)/gi));
   </header>
   <article>
     <h2>A Word on the Recent Catnip Doping Scandal</h2>
-    <p>The influence that catnip has on feline behavior is well-documented, and its use as an herbal supplement in competitive ninja circles remains controversial. Once again, the debate to ban the substance is brought to the public's attention after the high-profile win of Kittytron, a long-time proponent and user of the green stuff, at the Claw of Fury tournament.</p>
-    <p>As I've stated in the past, I firmly believe a true ninja's skills must come from within, with no external influences. My own catnip use shall continue as purely recreational.</p>
+    <p>
+      The influence that catnip has on feline behavior is well-documented, and its use as an herbal supplement in
+      competitive ninja circles remains controversial. Once again, the debate to ban the substance is brought to the
+      public's attention after the high-profile win of Kittytron, a long-time proponent and user of the green stuff, at
+      the Claw of Fury tournament.
+    </p>
+    <p>
+      As I've stated in the past, I firmly believe a true ninja's skills must come from within, with no external
+      influences. My own catnip use shall continue as purely recreational.
+    </p>
   </article>
 </body>
 ```
@@ -74,10 +82,10 @@ assert(code.match(/background-color:\s*?hsl\(120,\s*?25%,\s*?55%\)/gi));
 ```html
 <head>
   <style>
-  body {
-    color: hsl(0, 55%, 15%);
-    background-color: hsl(120, 25%, 55%);
-  }
+    body {
+      color: hsl(0, 55%, 15%);
+      background-color: hsl(120, 25%, 55%);
+    }
   </style>
 </head>
 <body>
@@ -86,8 +94,16 @@ assert(code.match(/background-color:\s*?hsl\(120,\s*?25%,\s*?55%\)/gi));
   </header>
   <article>
     <h2>A Word on the Recent Catnip Doping Scandal</h2>
-    <p>The influence that catnip has on feline behavior is well-documented, and its use as an herbal supplement in competitive ninja circles remains controversial. Once again, the debate to ban the substance is brought to the public's attention after the high-profile win of Kittytron, a long-time proponent and user of the green stuff, at the Claw of Fury tournament.</p>
-    <p>As I've stated in the past, I firmly believe a true ninja's skills must come from within, with no external influences. My own catnip use shall continue as purely recreational.</p>
+    <p>
+      The influence that catnip has on feline behavior is well-documented, and its use as an herbal supplement in
+      competitive ninja circles remains controversial. Once again, the debate to ban the substance is brought to the
+      public's attention after the high-profile win of Kittytron, a long-time proponent and user of the green stuff, at
+      the Claw of Fury tournament.
+    </p>
+    <p>
+      As I've stated in the past, I firmly believe a true ninja's skills must come from within, with no external
+      influences. My own catnip use shall continue as purely recreational.
+    </p>
   </article>
 </body>
 ```

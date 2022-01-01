@@ -15,11 +15,11 @@ property อันนี้จะรับค่าเดียวกับ `jus
 
 # --instructions--
 
-จงจัดเรียให้ itemที่มีคลาส `item3` อยู่กลางในแนวตั้งที่ `end`
+จงจัดเรียงให้ item ที่มี Class `item3` อยู่กลางในแนวตั้งที่ `end`
 
 # --hints--
 
-`item3` class ควรมี `align-self` property อันหึง่ที่มีค่าเป็น `end`
+`item3` class ควรมี `align-self` property อันหนึ่งที่มีค่าเป็น `end`
 
 ```js
 assert(code.match(/.item3\s*?{[\s\S]*align-self\s*?:\s*?end\s*?;[\s\S]*}/gi));
@@ -31,19 +31,26 @@ assert(code.match(/.item3\s*?{[\s\S]*align-self\s*?:\s*?end\s*?;[\s\S]*}/gi));
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
 
   .item3 {
     background: PaleTurquoise;
     /* Only change code below this line */
 
-    
     /* Only change code above this line */
   }
 
-  .item4{background:LightPink;}
-  .item5{background:PaleGreen;}
+  .item4 {
+    background: LightPink;
+  }
+  .item5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -69,5 +76,9 @@ assert(code.match(/.item3\s*?{[\s\S]*align-self\s*?:\s*?end\s*?;[\s\S]*}/gi));
 # --solutions--
 
 ```html
-<style>.item3 {align-self: end;}</style>
+<style>
+  .item3 {
+    align-self: end;
+  }
+</style>
 ```

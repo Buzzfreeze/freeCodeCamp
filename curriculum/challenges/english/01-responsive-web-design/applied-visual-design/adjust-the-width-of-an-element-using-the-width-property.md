@@ -10,7 +10,7 @@ dashedName: adjust-the-width-of-an-element-using-the-width-property
 # --description--
 
 คุณสามารถระบุความกว้างของ element โดยใช้ `width` property ใน CSS
-ค่าของมันสามารถระบุได้ทั้งโดยหน่วย relative length  (เช่น `em`), หน่วย absolute length (เช่น `px`), หรือเป็นเปอร์เซ็นของ parent element ของมัน
+ค่าของมันสามารถระบุได้ทั้งโดยหน่วย relative length (เช่น `em`), หน่วย absolute length (เช่น `px`), หรือเป็นเปอร์เซ็นของ parent element ของมัน
 นี่คือตัวอย่างในการเปลี่ยนความกว้างของภาพให้เป็น 220px:
 
 ```css
@@ -30,11 +30,7 @@ img {
 
 ```js
 const fullCard = code.match(/\.fullCard\s*{[\s\S]+?[^}]}/g);
-assert(
-  fullCard &&
-    /width\s*:\s*245px\s*(;|})/gi.test(fullCard[0]) &&
-    $('.fullCard').css('maxWidth') === 'none'
-);
+assert(fullCard && /width\s*:\s*245px\s*(;|})/gi.test(fullCard[0]) && $('.fullCard').css('maxWidth') === 'none');
 ```
 
 # --seed--
@@ -54,7 +50,6 @@ assert(
     text-align: left;
   }
   .fullCard {
-
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 10px 5px;

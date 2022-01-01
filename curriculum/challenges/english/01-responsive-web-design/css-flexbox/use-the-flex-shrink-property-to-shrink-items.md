@@ -9,12 +9,13 @@ dashedName: use-the-flex-shrink-property-to-shrink-items
 
 # --description--
 
-จนถึงตอนนี้  property ทั้งหมดใน challenge ได้ถูกใช้กับ (parent ของ flex items)
+จนถึงตอนนี้ property ทั้งหมดใน challenge ได้ถูกใช้กับ (parent ของ flex items)
 อย่างไรก็ตาม ยังมีอีกหลาย property ที่มีประโยชน์สำหรับ flex items
 
 อันแรกก็คือ `flex-shrink` property
 เมื่อมันถูกเรียกใช้ มันจะช่วยให้ item มีขนาดเล็กลงถ้า flex container มีขนาดเล็กเกินไป
 Item จะย่อเล็กลงเมื่อความกว้างของ parent container นั้นเล็กกว่าความกว้างรวมของ flex item ที่อยู่ข้างในมันทั้งหมด
+สรุป `flex-shrink` (ใช้กำหนดขนาดของแต่ละ item ว่าให้ย่อขนาดหรือหดตัวเท่าไหร่ใน container เมื่อเทียบกับ items อื่นๆ โดยค่าของขนาดเป็นตัวเลข(number) มีค่าเริ่มต้นเป็น 1)
 
 `flex-shrink` property จะรับค่าเป็นตัวเลข อีกค่ามัน ยิ่งทำให้ item นั้นหดเยอะกว่า item อื่น ๆ ใน container
 ยกตัวอย่างเช่น ถ้า item หนึ่งมี `flex-shrink` ที่มีค่าเป็น `1` และอีก item มี `flex-shrink` มีค่าป็น `3`, item ที่มีค่าเท่ากับ `3` จะหดเล็กลง 3 เท่าของอีกอันหนึ่ง
@@ -52,14 +53,12 @@ assert($('#box-2').css('flex-shrink') == '2');
     background-color: dodgerblue;
     width: 100%;
     height: 200px;
-
   }
 
   #box-2 {
     background-color: orangered;
     width: 100%;
     height: 200px;
-
   }
 </style>
 

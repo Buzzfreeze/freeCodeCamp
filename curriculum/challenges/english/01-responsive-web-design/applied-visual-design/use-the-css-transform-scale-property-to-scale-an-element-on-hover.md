@@ -10,8 +10,8 @@ dashedName: use-the-css-transform-scale-property-to-scale-an-element-on-hover
 # --description--
 
 `transform` property มี function ให้ใช้งานที่หลากหลายซึ่งทำให้คุณสามารถทำการปรับขนาด, ย้ายที่, หมุน, และปรับองศาให้ element ของคุณ (ยังมี function อื่นอีก)
-เมื่อคุณใช้มันพร้อมกับ pseudo-classes เช่น `:hover` ที่เป็นตัวระบุสถานะหนึ่งของ element, 
-`transform` property จะสามารถเพิ่ม interaction ให้กับ element
+เมื่อคุณใช้มันพร้อมกับ pseudo-classes เช่น `:hover` ที่เป็นตัวระบุสถานะหนึ่งของ element,
+`transform` property จะสามารถเพิ่ม interaction (การตอบสนอง) ให้กับ element
 
 นี่คือตัวอย่างในการปรับขนาดให้ paragraph element มีขนาดใหญ่ขึ้น 2.1 เท่าของขนาดดั้งเดิมของมันเมื่อผู้ใช้ได้ทำการ hovers พวกมัน:
 
@@ -44,16 +44,9 @@ assert(code.match(/div:hover\s*?{\s*?transform:\s*?scale\(1\.1\);/gi));
   div {
     width: 70%;
     height: 100px;
-    margin:  50px auto;
-    background: linear-gradient(
-      53deg,
-      #ccfffc,
-      #ffcccf
-    );
+    margin: 50px auto;
+    background: linear-gradient(53deg, #ccfffc, #ffcccf);
   }
-
-
-
 </style>
 
 <div></div>
@@ -66,12 +59,8 @@ assert(code.match(/div:hover\s*?{\s*?transform:\s*?scale\(1\.1\);/gi));
   div {
     width: 70%;
     height: 100px;
-    margin:  50px auto;
-    background: linear-gradient(
-      53deg,
-      #ccfffc,
-      #ffcccf
-    );
+    margin: 50px auto;
+    background: linear-gradient(53deg, #ccfffc, #ffcccf);
   }
   div:hover {
     transform: scale(1.1);

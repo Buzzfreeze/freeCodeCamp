@@ -9,14 +9,14 @@ dashedName: create-a-graphic-using-css
 
 # --description--
 
-คุณสามารถสร้างรูปทรงที่น่าสนใจขึ้นมาได้โดยการใช้งาน selectors และ propertie ที่ต่างกัน 
+คุณสามารถสร้างรูปทรงที่น่าสนใจขึ้นมาได้โดยการใช้งาน selectors และ propertie ที่ต่างกัน
 หนึ่งในรูปง่าย ๆ ที่จะลองทำคือ รูปพระจันทร์เสี้ยว
 สำหรับแบบฝึกหัดนี้คุณจำเป็นต้องใช้ `box-shadow` property เพื่อกำหนดเงาของ element ร่วมกับ `border-radius` property ที่จะควมคุมความมนของมุมของ element
 
 คุณจะสร้างวัตถุที่กลมและโปร่งแสงพร้อมกับเงาบาง ๆ ซึ่งจะแผ่ออกมาเล็กน้อยไปด้านข้าง
 เงานั้นจะเป็นไปตามรูปร่างของพระจันทร์ที่คุณเห็น
 
-เพื่อที่จะสร้างวัตถุที่มีรูปร่างกลม  `border-radius` property นั้นควรถูกกำหนดให้มีค่า 50%.
+เพื่อที่จะสร้างวัตถุที่มีรูปร่างกลม `border-radius` property นั้นควรถูกกำหนดให้มีค่า 50%.
 
 คุณอาจจะยังจำได้จากแบบฝึกหัดที่แล้วว่า `box-shadow` property จะรับค่า `offset-x`, `offset-y`, `blur-radius`, `spread-radius` และค่าสีตามลำดับ
 `blur-radius` และ `spread-radius` เป็นค่าที่จะมีหรือไม่มีก็ได้
@@ -26,7 +26,8 @@ dashedName: create-a-graphic-using-css
 จงใช้ element สี่เหลี่ยมใน editor เพื่อสร้างรูปพระจันทร์เสี้ยว
 ขั้นแรก จงเปลี่ยน `background-color` ให้เป็น `transparent`
 หลังจากนั้น จงกำหนดให้ `border-radius` property มีค่าเป็น 50% เพื่อทำให้มันมีรูปร่างเป็นวงกลม
-สุดท้าย จงเปลี่ยน `box-shadow` property เพื่อกำหนดให้ `offset-x` มีค่า 25px,  `offset-y` มีค่า 10px, `blur-radius` มีค่า 0, `spread-radius` มีค่า 0, และสีเป็น `blue`
+สุดท้าย จงเปลี่ยน `box-shadow` property เพื่อกำหนดให้ `offset-x` มีค่า 25px, `offset-y` มีค่า 10px, `blur-radius` มีค่า 0, `spread-radius` มีค่า 0, และสีเป็น `blue`
+Syntax : text-shadow: offset-x offset-y [blur-radius] [spread-radius] [color];
 
 # --hints--
 
@@ -45,9 +46,7 @@ assert(code.match(/border-radius:\s*?50%;/gi));
 ค่าของ `box-shadow` property ควรถูกกำหนดให้เท่ากับ 25px สำหรับ `offset-x`, 10px สำหรับ `offset-y`, 0 สำหรับ `blur-radius`, 0 สำหรับ `spread-radius`, และ `blue` สำหรับสี
 
 ```js
-assert(
-  code.match(/box-shadow:\s*?25px\s+?10px\s+?0(px)?\s+?0(px)?\s+?blue\s*?;/gi)
-);
+assert(code.match(/box-shadow:\s*?25px\s+?10px\s+?0(px)?\s+?0(px)?\s+?blue\s*?;/gi));
 ```
 
 # --seed--
@@ -69,7 +68,6 @@ assert(
     border-radius: 0px;
     box-shadow: 25px 10px 10px 10px green;
   }
-
 </style>
 <div class="center"></div>
 ```

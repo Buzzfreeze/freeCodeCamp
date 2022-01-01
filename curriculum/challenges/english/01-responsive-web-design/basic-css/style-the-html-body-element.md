@@ -36,17 +36,13 @@ assert($('body').css('background-color') === 'rgb(0, 0, 0)');
 CSS rule ควรจะถูกจะมีทั้ง curly brackets เปิดและปิด
 
 ```js
-assert(
-  code.match(/<style>\s*body\s*\{\s*background.*\s*:\s*.*;\s*\}\s*<\/style>/i)
-);
+assert(code.match(/<style>\s*body\s*\{\s*background.*\s*:\s*.*;\s*\}\s*<\/style>/i));
 ```
 
 CSS rule ด้วยลงท้ายด้วย semi-colon
 
 ```js
-assert(
-  code.match(/<style>\s*body\s*\{\s*background.*\s*:\s*.*;\s*\}\s*<\/style>/i)
-);
+assert(code.match(/<style>\s*body\s*\{\s*background.*\s*:\s*.*;\s*\}\s*<\/style>/i));
 ```
 
 # --seed--
@@ -54,17 +50,15 @@ assert(
 ## --seed-contents--
 
 ```html
-<style>
-
-</style>
+<style></style>
 ```
 
 # --solutions--
 
 ```html
 <style>
-body {
-  background-color: black;
-}
+  body {
+    background-color: black;
+  }
 </style>
 ```

@@ -9,15 +9,14 @@ dashedName: use-the-align-self-property
 
 # --description--
 
-property อันสุดท้ายสำหรับ flex items คือ `align-self`
-นี่เป็น property ที่ช่วยให้คุณสามารถปรับเปลี่ยนการเรียงตัวของแต่ละ item ได้เป็นตัว ๆ แทนที่จะตั้งให้มันเป็นแบบเดียวกันทีเดียว
+`align-self` นี่เป็น property ที่ช่วยให้คุณสามารถปรับเปลี่ยนการเรียงตัวของแต่ละ item แต่ละอันได้ แทนที่จะตั้งให้มันเป็นแบบเดียวกันทีเดียว
 มันมีประโยชน์เพราะวิธีการปรับค่าอันอื่น ๆ ที่ใช้ CSS properties `float`, `clear`, และ `vertical-align` ไม่สามารถใช้ได้กับ flex items
 
-`align-self` จะรับค่าค่าเดียวกับaccepts `align-items` และจะเขียนค่าทับค่าอื่น ๆ ที่ได้มีการกำหนดไว้โดย `align-items` property.
+`align-self` จะรับค่าค่าเดียวกับ accepts `align-items` และจะเขียนค่าทับค่าอื่น ๆ ที่ได้มีการกำหนดไว้โดย `align-items` property.
 
 # --instructions--
 
-จงเพิ่ม CSS property `align-self` ให้กับทั้ง  `#box-1` และ `#box-2`
+จงเพิ่ม CSS property `align-self` ให้กับทั้ง `#box-1` และ `#box-2`
 จงกำหนดให้ `#box-1` มีค่าเป็น `center` และ `#box-2` มีค่าเป็น `flex-end`.
 
 # --hints--

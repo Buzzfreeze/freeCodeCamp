@@ -11,7 +11,7 @@ dashedName: learn-about-tertiary-colors
 จอคอมพิวเตอร์และจอของอุปกรณ์อื่น ๆ สร้างสีที่ต่างกันโดยการรวมแสงสีแดง เขียว และน้ำเงินเข้าด้วยกัน
 สิ่งนี้เรียกว่า RGB additive color model ในทฤษฎีสีสมัยใหม่
 แดง(R), เขียว (G), และน้ำเงิน (B) นั้นถูกเรียกว่าสีปฐมภูมิ การผสมสีปฐมภูมิสองสีเข้าด้วยกันจะสร้างสีทุติยภูมิโดยมีสี cyan (G + B), magenta (R + B) และเหลือง (R + G)
-คุณสามารถเห็นสีพวกนี้ในแบบฝึกหัด Complementary Colors 
+คุณสามารถเห็นสีพวกนี้ในแบบฝึกหัด Complementary Colors
 สีทุติยภูมิพวกนี้เป็นคู่ตรงข้ามของสีปฐมภูมิที่ไม่ได้ถูกนำมาผสมให้เกิดมัน และอยู่ตรงข้ามกับสีปฐมภูมินั้นบนวงล้อสี
 ยกตัวอย่างเช่น, magenta เกิดขึ้นจากสีแดงและน้ำเงิน และเป็นสีคู่ตรงข้ามของสีเขียว
 
@@ -66,7 +66,7 @@ assert(!/background-color:\s(orange|cyan|raspberry)/.test(code));
 ```html
 <style>
   body {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 
   .orange {
@@ -98,19 +98,19 @@ assert(!/background-color:\s(orange|cyan|raspberry)/.test(code));
 ```html
 <style>
   body {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 
   .orange {
-    background-color: #FF7F00;
+    background-color: #ff7f00;
   }
 
   .cyan {
-    background-color: #00FFFF;
+    background-color: #00ffff;
   }
 
   .raspberry {
-    background-color: #FF007F;
+    background-color: #ff007f;
   }
 
   div {

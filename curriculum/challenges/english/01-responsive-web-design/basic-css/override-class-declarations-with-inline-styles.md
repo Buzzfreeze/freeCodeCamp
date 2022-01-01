@@ -20,7 +20,7 @@ dashedName: override-class-declarations-with-inline-styles
 จงจำไว้ว่า inline styles มีหน้าตาเช่นนี้:
 
 ```html
-<h1 style="color: green;">
+<h1 style="color: green;"></h1>
 ```
 
 ไม่ต้องสนใจ `blue-text` และ `pink-text` class ใน `h1` element.

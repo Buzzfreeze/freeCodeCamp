@@ -12,7 +12,7 @@ dashedName: specify-how-fonts-should-degrade
 มีฟ้อนต์เริ่มต้นหลายตัวที่สามารถใช้งานได้ในทุก browser
 ฟ้อนต์พวกนี้เรียกว่า generic font family ซึ่ง `monospace`, `serif` และ `sans-serif` ก็เป็นหนึ่งในนั้น
 
-เมื่อฟ้อนต์หนึ่งใช้งานไม่ได้ คุณสามารถบอก browser ให้ "degrade" ไปเป็นฟ้อนต์อื่น
+เมื่อฟ้อนต์หนึ่งใช้งานไม่ได้ คุณสามารถบอก browser ให้ "degrade" ไปเป็นฟ้อนต์อื่น, ฟ้อนต์สำรอง
 
 ยกตัวอย่างเช่น ถ้าคุณต้องการให้ element ใช้ `Helvetica` font, แต่ degrade ไปเป็น `sans-serif` font เมื่อ `Helvetica` ใช้งานไม่ได้, คุณสามารถระบุมันได้แบบนี้:
 
@@ -23,15 +23,15 @@ p {
 ```
 
 ชื่อของ generic font family นั้นไม่ใช่ case-sensitive
-นอกจากนี้พวกมันยังไม่ต้องการ quotes เพราะมันเป็นคีย์เวิร์ดของ CSS 
+นอกจากนี้พวกมันยังไม่ต้องการ quotes เพราะมันเป็นคีย์เวิร์ดของ CSS
 
 # --instructions--
 
 จงใช้ `monospace` font กับ `h2` element, เพื่อที่มันจะได้ฟ้อนต์สองอันแบบนี้ - `Lobster` และ `monospace`
 
-ในแบบฝึกหัดที่แล้ว, คุณได้นำเข้า `Lobster` font โดยใช้ `link` tag. 
+ในแบบฝึกหัดที่แล้ว, คุณได้นำเข้า `Lobster` font โดยใช้ `link` tag.
 ตอนนี้ จงคอมเมนต์คำสั่งนำเข้าของ `Lobster` font จาก Google Fonts เพื่อที่มันจะไม่ถูกใช้งานอีกต่อไป
-จงสังเกตการที่ `h2` element degrades ไปเป็น `monospace` font 
+จงสังเกตการที่ `h2` element degrades ไปเป็น `monospace` font
 
 **Note:** ถ้าคุณมี `Lobster` font ติดตั้งไว้ใน computer, คุณจะไม่เห็นการ degrade เพราะ browser ของคุณสามารถหาฟ้อนต์นั้นได้
 
@@ -43,21 +43,17 @@ h2 element ควรใช้ฟ้อนต์ `Lobster`.
 assert(
   $('h2')
     .css('font-family')
-    .match(/^"?lobster/i)
+    .match(/^"?lobster/i),
 );
 ```
 
 h2 element ควร degrade ไปเป็นฟ้อนต์ `monospace` เมื่อ `Lobster` ไม่สามารถใช้งานได้
 
 ```js
-assert(
-  /\s*h2\s*\{\s*font-family\s*\:\s*(\'|"|)Lobster\1\s*,\s*monospace\s*;?\s*\}/gi.test(
-    code
-  )
-);
+assert(/\s*h2\s*\{\s*font-family\s*\:\s*(\'|"|)Lobster\1\s*,\s*monospace\s*;?\s*\}/gi.test(code));
 ```
 
-คุณควรคอมเมนต์คำสั่งเรียกใช้ `Lobster` font จาก Google โดยการใช้  `<!--` ไว้ที่ข้างหน้า
+คุณควรคอมเมนต์คำสั่งเรียกใช้ `Lobster` font จาก Google โดยการใช้ `<!--` ไว้ที่ข้างหน้า
 
 ```js
 assert(new RegExp('<!--[^fc]', 'gi').test(code));
@@ -74,7 +70,7 @@ assert(new RegExp('[^fc]-->', 'gi').test(code));
 ## --seed-contents--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
 <style>
   .red-text {
     color: red;
@@ -94,7 +90,11 @@ assert(new RegExp('[^fc]-->', 'gi').test(code));
 <main>
   <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <div>
     <p>Things cats love:</p>
@@ -112,12 +112,12 @@ assert(new RegExp('[^fc]-->', 'gi').test(code));
   </div>
 
   <form action="https://freecatphotoapp.com/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label><input type="checkbox" name="personality" checked /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>
@@ -145,9 +145,13 @@ assert(new RegExp('[^fc]-->', 'gi').test(code));
 <h2 class="red-text">CatPhotoApp</h2>
 <main>
   <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
-  
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
-  
+
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
+
   <div>
     <p>Things cats love:</p>
     <ul>
@@ -162,14 +166,14 @@ assert(new RegExp('[^fc]-->', 'gi').test(code));
       <li>other cats</li>
     </ol>
   </div>
-  
+
   <form action="https://freecatphotoapp.com/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label><input type="checkbox" name="personality" checked /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>

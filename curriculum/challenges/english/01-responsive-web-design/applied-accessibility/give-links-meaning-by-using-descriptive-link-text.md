@@ -9,14 +9,13 @@ dashedName: give-links-meaning-by-using-descriptive-link-text
 
 # --description--
 
-ผู้ใช้ screen reader มีตัวช่วยที่หลากหลายสำหรับประเภทข้อความที่จะให้มันอ่าน
+ผู้ใช้ screen reader (โปรแกรมอ่านหน้าจอ) มีตัวช่วยที่หลากหลายสำหรับประเภทข้อความที่จะให้มันอ่าน
 ตัวเลือกเหล่านี้รวมถึงการข้าม landmark elements, กระโดดไปที่ main content, หรืออ่านสรุปของเพจนั้นจาก heading
 อีกตัวเลือกหนึ่งคือฟังแค่ลิงค์ที่ใช้ง่ายได้บนเพจ
 
 Screen readers ทำแบบนี้โดยการอ่านข้อความที่ลิงค์ หรือสิ่งที่อยู่ระหว่าง anchor (`a`) tags
-การที่มีลิงค์ของลิสต์จาก "click here"  หรือ "read more" links ไม่ค่อยช่วยอะไร
+การที่มีลิงค์ของลิสต์จาก "click here" หรือ "read more" links ไม่ค่อยช่วยอะไร
 ดังนั้น จงใช้ข้อความที่สั้นกระชับและอธิบายได้ดีภายใน `a` tags เพื่อผู้ใช้จะได้ข้อมูลที่เป็นประโยชน์มากขึ้น
-
 
 # --instructions--
 
@@ -25,13 +24,13 @@ Screen readers ทำแบบนี้โดยการอ่านข้อ�
 
 # --hints--
 
-คุณควรย้าย anchor `a` tags จากบริเวณรอบ ๆ คำว่า `Click here` เพื่อคลุมรอบ ๆ คำว่า `information about batteries`.
+คุณควรย้าย anchor `a` tags จากบริเวณรอบ ๆ คำว่า `Click here for ` เพื่อคลุมรอบ ๆ คำว่า `information about batteries`.
 
 ```js
 assert(
   $('a')
     .text()
-    .match(/^(information about batteries)$/g)
+    .match(/^(information about batteries)$/g),
 );
 ```
 
@@ -44,10 +43,7 @@ assert($('a').attr('href') === '');
 `a` element ควรมีแท็กปิด
 
 ```js
-assert(
-  code.match(/<\/a>/g) &&
-    code.match(/<\/a>/g).length === code.match(/<a href=(''|"")>/g).length
-);
+assert(code.match(/<\/a>/g) && code.match(/<\/a>/g).length === code.match(/<a href=(''|"")>/g).length);
 ```
 
 # --seed--
@@ -61,7 +57,11 @@ assert(
   </header>
   <article>
     <h2>Defeating your Foe: the Red Dot is Ours!</h2>
-    <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near. <a href="">Click here</a> for information about batteries</p>
+    <p>
+      Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning
+      stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near.
+      <a href="">Click here</a> for information about batteries
+    </p>
   </article>
 </body>
 ```
@@ -75,7 +75,11 @@ assert(
   </header>
   <article>
     <h2>Defeating your Foe: the Red Dot is Ours!</h2>
-    <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near. Click here for <a href="">information about batteries</a></p>
+    <p>
+      Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning
+      stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near. Click here for
+      <a href="">information about batteries</a>
+    </p>
   </article>
 </body>
 ```

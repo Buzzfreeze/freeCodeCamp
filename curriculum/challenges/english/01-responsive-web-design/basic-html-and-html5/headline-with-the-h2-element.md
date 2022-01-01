@@ -9,15 +9,14 @@ dashedName: headline-with-the-h2-element
 
 # --description--
 
-หลังจากที่เราได้เรียนรู้เกี่ยวกับ HTML ไประดับหนึ่งแล้ว 
+หลังจากที่เราได้เรียนรู้เกี่ยวกับ HTML ไประดับหนึ่งแล้ว
 ตอนนี้เราจะมาสร้าง HTML5 cat photo web app ด้วยกันไปทีละส่วน ๆ
 
-`h2` element ที่คุณจะเพิ่มเข้ามาในขั้นนี้จะเพิ่ม heading ระดับ 2 ให้กับเว็บเพจ 
+`h2` เป็น element ที่คุณจะเพิ่มเข้ามาในขั้นนี้จะเพิ่ม heading ระดับ h2 ให้กับเว็บเพจ
 
-element ต่าง ๆ จะบอก browser โครงสร้างของเว็บไซต์ของคุณ
 `h1` element มักถูกใช้เป็น heading หลัก
 `h2` element มันถูกใช้เป็น heading รอง
-และมันก็ยังมี `h3`, `h4`, `h5` และ `h6` element ที่จะบ่งบอกถึงระดับของ heading รองที่แตกต่างกัน
+และมันก็ยังมี heading `h3`, `h4`, `h5` และ `h6` element ที่จะบ่งบอกถึงระดับของ heading ที่แตกต่างกันตามต้องการ
 
 # --instructions--
 
@@ -34,10 +33,7 @@ assert($('h2').length > 0);
 `h2` element ควรมีแท็กปิด
 
 ```js
-assert(
-  code.match(/<\/h2>/g) &&
-    code.match(/<\/h2>/g).length === code.match(/<h2>/g).length
-);
+assert(code.match(/<\/h2>/g) && code.match(/<\/h2>/g).length === code.match(/<h2>/g).length);
 ```
 
 `h2` element ควรมีข้อความที่เขียนว่า `CatPhotoApp`.

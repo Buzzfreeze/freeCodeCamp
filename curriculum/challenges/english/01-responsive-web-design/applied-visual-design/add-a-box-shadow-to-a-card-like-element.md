@@ -23,12 +23,12 @@ dashedName: add-a-box-shadow-to-a-card-like-element
 
 ค่าของ `blur-radius` และ `spread-radius` นั้นจะใส่หรือไม่ก็ได้
 
-เราสามารถสร้าง box-shadows ได้โดยการใช้ comma เพื่อแยก property ของแต่ละ `box-shadow` element
+เราสามารถสร้าง box-shadows ได้โดยการใช้ comma (,) เพื่อแยก property ของแต่ละ `box-shadow` element
 
 นี่คือตัวอย่างของ CSS ที่ใช้สร้างเงาหลายอันพร้อมกับ blur ที่มีสีดำแบบเกือบจะโปร่งแสง:
 
 ```css
-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 ```
 
 # --instructions--
@@ -44,13 +44,13 @@ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 assert(code.match(/#thumbnail\s*?{\s*?box-shadow/g));
 ```
 
-คุณควรใช้ CSS ที่กำหนดให้เพื่อเป็นค่าของ `box-shadow`
+คุณควรใช้ CSS ด้านบนที่กำหนดให้เพื่อเป็นค่าของ `box-shadow`
 
 ```js
 assert(
   code.match(
-    /box-shadow:\s*?0\s+?10px\s+?20px\s+?rgba\(\s*?0\s*?,\s*?0\s*?,\s*?0\s*?,\s*?0?\.19\)\s*?,\s*?0\s+?6px\s+?6px\s+?rgba\(\s*?0\s*?,\s*?0\s*?,\s*?0\s*?,\s*?0?\.23\)/gi
-  )
+    /box-shadow:\s*?0\s+?10px\s+?20px\s+?rgba\(\s*?0\s*?,\s*?0\s*?,\s*?0\s*?,\s*?0?\.19\)\s*?,\s*?0\s+?6px\s+?6px\s+?rgba\(\s*?0\s*?,\s*?0\s*?,\s*?0\s*?,\s*?0?\.23\)/gi,
+  ),
 );
 ```
 
@@ -74,8 +74,6 @@ assert(
     color: black;
   }
 
-
-
   .fullCard {
     width: 245px;
     border: 1px solid #ccc;
@@ -94,11 +92,16 @@ assert(
   <div class="cardContent">
     <div class="cardText">
       <h4>Alphabet</h4>
-      <hr>
-      <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+      <hr />
+      <p>
+        <em
+          >Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at
+          <strong>Stanford University</strong>.</em
+        >
+      </p>
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
+      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br /><br />
       <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
     </div>
   </div>
@@ -123,7 +126,7 @@ assert(
     color: black;
   }
   #thumbnail {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   }
   .fullCard {
     width: 245px;
@@ -143,11 +146,16 @@ assert(
   <div class="cardContent">
     <div class="cardText">
       <h4>Alphabet</h4>
-      <hr>
-      <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+      <hr />
+      <p>
+        <em
+          >Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at
+          <strong>Stanford University</strong>.</em
+        >
+      </p>
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
+      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br /><br />
       <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
     </div>
   </div>

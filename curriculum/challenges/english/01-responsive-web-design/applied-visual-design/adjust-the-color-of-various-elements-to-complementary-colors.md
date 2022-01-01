@@ -11,12 +11,12 @@ dashedName: adjust-the-color-of-various-elements-to-complementary-colors
 
 แบบฝึกหัด Complementary Colors แสดงให้เห็นว่าสีตรงข้ามกันบนล้อสีสามารถเพิ่มความมีชีวิตชีวาให้กันและกันได้เมื่อวางมันข้าง ๆ กัน
 อย่างไรก็ตาม visual contrast ที่สูงมาก ๆ สามารถทำให้รู้สึกขัดตาได้ หากเราใช้มันบนเว็บไซต์มากเกินไป และบางทีก็ทำให้ตัวอักษรอ่านได้ยากขึ้นถ้ามันถูกวางไว้บนพื้นหลังที่เป็นแบบ complementary-colored
-ในแบบฝึดหัดนี้ หนึ่งในสีที่มักจะเป็นตัวหลัก และสีที่เสริมเข้ามาจะช่วยดึงดูดความสนใจให้กับ content อย่างอันในหน้าเว็บ
+ในแบบฝึกหัดนี้ หนึ่งในสีที่มักจะเป็นตัวหลัก และสีที่เสริมเข้ามาจะช่วยดึงดูดความสนใจให้กับ content ในหน้าเว็บ
 
 # --instructions--
 
 หน้านี้จะใช้เฉดของสีฟ้าน้ำทะเล (`#09A7A1`) เป็นสีหลัก และให้สีส้ม (`#FF790E`) ช่วยทำให้ sign-up buttons ดูเด่นขึ้น
-จงเปลี่ยน `background-color` ของทั้ง `header` และ `footer` จวกสีดำเป็นสีฟ้าน้ำทะเล 
+จงเปลี่ยน `background-color` ของทั้ง `header` และ `footer` จวกสีดำเป็นสีฟ้าน้ำทะเล
 หลังจากนั้นจงเปลี่ยนสีของข้อความ `color` ใน `h2` ให้เป็นสีฟ้าน้ำทะเลด้วยเช่นกัน
 สุดท้ายนี้ จงเปลี่ยน `background-color` ของปุ่ม `button` ให้เป็นสีส้ม
 
@@ -78,16 +78,24 @@ assert($('button').css('background-color') == 'rgb(255, 121, 14)');
 <main>
   <article>
     <h2>Machine Learning in the Kitchen</h2>
-    <p>Join this two day workshop that walks through how to implement cutting-edge snack-getting algorithms with a command line interface. Coding usually involves writing exact instructions, but sometimes you need your computer to execute flexible commands, like <code>fetch Pringles</code>.</p>
+    <p>
+      Join this two day workshop that walks through how to implement cutting-edge snack-getting algorithms with a
+      command line interface. Coding usually involves writing exact instructions, but sometimes you need your computer
+      to execute flexible commands, like <code>fetch Pringles</code>.
+    </p>
     <button>Sign Up</button>
   </article>
   <article>
     <h2>Bisection Vegetable Chopping</h2>
-    <p>This week-long retreat will level-up your coding ninja skills to actual ninja skills. No longer is the humble bisection search limited to sorted arrays or coding interview questions, applying its concepts in the kitchen will have you chopping carrots in O(log n) time before you know it.</p>
+    <p>
+      This week-long retreat will level-up your coding ninja skills to actual ninja skills. No longer is the humble
+      bisection search limited to sorted arrays or coding interview questions, applying its concepts in the kitchen will
+      have you chopping carrots in O(log n) time before you know it.
+    </p>
     <button>Sign Up</button>
   </article>
 </main>
-<br>
+<br />
 <footer>&copy; 2018 FCC Kitchen</footer>
 ```
 
@@ -99,18 +107,18 @@ assert($('button').css('background-color') == 'rgb(255, 121, 14)');
     background-color: white;
   }
   header {
-    background-color: #09A7A1;
+    background-color: #09a7a1;
     color: white;
     padding: 0.25em;
   }
   h2 {
-    color: #09A7A1;
+    color: #09a7a1;
   }
   button {
-    background-color: #FF790E;
+    background-color: #ff790e;
   }
   footer {
-    background-color: #09A7A1;
+    background-color: #09a7a1;
     color: white;
     padding: 0.5em;
   }
@@ -121,15 +129,23 @@ assert($('button').css('background-color') == 'rgb(255, 121, 14)');
 <main>
   <article>
     <h2>Machine Learning in the Kitchen</h2>
-    <p>Join this two day workshop that walks through how to implement cutting-edge snack-getting algorithms with a command line interface. Coding usually involves writing exact instructions, but sometimes you need your computer to execute flexible commands, like <code>fetch Pringles</code>.</p>
+    <p>
+      Join this two day workshop that walks through how to implement cutting-edge snack-getting algorithms with a
+      command line interface. Coding usually involves writing exact instructions, but sometimes you need your computer
+      to execute flexible commands, like <code>fetch Pringles</code>.
+    </p>
     <button>Sign Up</button>
   </article>
   <article>
     <h2>Bisection Vegetable Chopping</h2>
-    <p>This week-long retreat will level-up your coding ninja skills to actual ninja skills. No longer is the humble bisection search limited to sorted arrays or coding interview questions, applying its concepts in the kitchen will have you chopping carrots in O(log n) time before you know it.</p>
+    <p>
+      This week-long retreat will level-up your coding ninja skills to actual ninja skills. No longer is the humble
+      bisection search limited to sorted arrays or coding interview questions, applying its concepts in the kitchen will
+      have you chopping carrots in O(log n) time before you know it.
+    </p>
     <button>Sign Up</button>
   </article>
 </main>
-<br>
+<br />
 <footer>&copy; 2018 FCC Kitchen</footer>
 ```

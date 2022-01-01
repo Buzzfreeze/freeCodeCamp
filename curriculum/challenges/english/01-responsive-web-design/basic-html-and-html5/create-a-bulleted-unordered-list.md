@@ -9,7 +9,7 @@ dashedName: create-a-bulleted-unordered-list
 
 # --description--
 
-HTML มี element พิเศษอันหนึ่งไว้สำหรับสร้าง <dfn>unordered lists</dfn> หรือลิตส์ที่เป็นแบบ bullet point 
+HTML มี element พิเศษอันหนึ่งไว้สำหรับสร้าง <dfn>unordered lists</dfn> หรือลิตส์ที่เป็นแบบ bullet point
 
 Unordered list (ลิสต์ที่ไม่สนใจลำดับ) จะเริ่มด้วยแท็กเปิดที่เป็น `<ul>` element และตามด้วย`<li>` element จำนวนกี่อันก็ได้
 และสุดท้ายก็จะปิดด้วยแท็กปิด `</ul>`
@@ -27,11 +27,11 @@ Unordered list (ลิสต์ที่ไม่สนใจลำดับ) �
 
 # --instructions--
 
-จงเอา `p` element 2 อันสุดท้ายออกไปและจงสร้าง unordered list ของของสามอย่างที่แมวชอบที่ด้านล่างของหน้าเว็บไซต์
+จงเอา `p` element 2 อันสุดท้ายออกไปและจงสร้าง unordered list ของสามอย่างที่แมวชอบที่ด้านล่างของหน้าเว็บไซต์
 
 # --hints--
 
-จงสร้าง `ul` element อันหนึ่ง
+จงสร้าง `ul` element หนึ่งอัน
 
 ```js
 assert($('ul').length > 0);
@@ -46,11 +46,7 @@ assert($('ul li').length > 2);
 `ul` element ควรจะมีแท็กปิด
 
 ```js
-assert(
-  code.match(/<\/ul>/gi) &&
-    code.match(/<ul/gi) &&
-    code.match(/<\/ul>/gi).length === code.match(/<ul/gi).length
-);
+assert(code.match(/<\/ul>/gi) && code.match(/<ul/gi) && code.match(/<\/ul>/gi).length === code.match(/<ul/gi).length);
 ```
 
 `li` element ควรจะมีแท็กปิด
@@ -59,7 +55,7 @@ assert(
 assert(
   code.match(/<\/li>/gi) &&
     code.match(/<li[\s>]/gi) &&
-    code.match(/<\/li>/gi).length === code.match(/<li[\s>]/gi).length
+    code.match(/<\/li>/gi).length === code.match(/<li[\s>]/gi).length,
 );
 ```
 
@@ -78,10 +74,20 @@ assert($('ul li').filter((_, item) => !$(item).text().trim()).length === 0);
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
-  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
-  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+  <p>
+    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot,
+    hairball run catnip eat the grass sniff.
+  </p>
+  <p>
+    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur
+    catnip scratched.
+  </p>
 </main>
 ```
 
@@ -92,7 +98,11 @@ assert($('ul li').filter((_, item) => !$(item).text().trim()).length === 0);
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <ul>
     <li>milk</li>

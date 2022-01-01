@@ -21,17 +21,15 @@ caption จะถูกใช้เพื่อโน้ตสั้น ๆ เ�
 
 ```html
 <figure>
-  <img src="roundhouseDestruction.jpeg" alt="Photo of Camper Cat executing a roundhouse kick">
-  <br>
-  <figcaption>
-    Master Camper Cat demonstrates proper form of a roundhouse kick.
-  </figcaption>
+  <img src="roundhouseDestruction.jpeg" alt="Photo of Camper Cat executing a roundhouse kick" />
+  <br />
+  <figcaption>Master Camper Cat demonstrates proper form of a roundhouse kick.</figcaption>
 </figure>
 ```
 
 # --instructions--
 
-Camper Cat กำลังมีปัญหากับสร้างกราฟ stacked bar เพื่อแสดงเวลาในแต่ละสัปดาห์ที่ถูกใช้ในการฝึก stealth, combat, and weapons
+ตัวอย่าง Camper Cat กำลังมีปัญหากับสร้างกราฟ stacked bar เพื่อแสดงเวลาในแต่ละสัปดาห์ที่ถูกใช้ในการฝึก stealth, combat, and weapons
 จงช่วยเขาจัดโครงสร้างเพจของเขาให้ดีขึ้นโดยการเปลี่ยน `div` tag เป็น`figure` tag, และจงเปลี่ยน `p` tag ที่เก็บ caption ไปเป็น `figcaption` tag.
 
 # --hints--
@@ -69,10 +67,7 @@ assert($('figure').children('figcaption').length == 1);
 `figure` element ควรมีแท็กปิด
 
 ```js
-assert(
-  code.match(/<\/figure>/g) &&
-    code.match(/<\/figure>/g).length === code.match(/<figure>/g).length
-);
+assert(code.match(/<\/figure>/g) && code.match(/<\/figure>/g).length === code.match(/<figure>/g).length);
 ```
 
 # --seed--
@@ -93,15 +88,13 @@ assert(
   </header>
   <main>
     <section>
-
       <!-- Only change code below this line -->
       <div>
         <!-- Stacked bar chart will go here -->
-        <br>
+        <br />
         <p>Breakdown per week of time to spend training in stealth, combat, and weapons.</p>
       </div>
       <!-- Only change code above this line -->
-
     </section>
     <section id="stealth">
       <h2>Stealth &amp; Agility Training</h2>
@@ -141,7 +134,7 @@ assert(
     <section>
       <figure>
         <!-- Stacked bar chart will go here -->
-        <br>
+        <br />
         <figcaption>Breakdown per week of time to spend training in stealth, combat, and weapons.</figcaption>
       </figure>
     </section>

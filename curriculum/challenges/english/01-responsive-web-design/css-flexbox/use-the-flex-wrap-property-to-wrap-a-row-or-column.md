@@ -9,8 +9,8 @@ dashedName: use-the-flex-wrap-property-to-wrap-a-row-or-column
 
 # --description--
 
-CSS flexbox มีฟีเจอร์ที่ใช้แบ่ง flex item เป้นแถวหลาย ๆ แถว(หรือคอลั่มน์) 
-โดยค่าเริ่มต้นแล้ว flex container จะยัด flex item ทุกอันรวมกัน
+CSS flexbox มีฟีเจอร์ที่ใช้แบ่ง flex item เป็นแถวหลาย ๆ แถว แนวตั้ง(หรือคอลัมน์)
+โดยค่าเริ่มต้นแล้ว flex container จะยัด flex item ทุกอันรวมกัน ทำให้เมือ่มีการเปลี่ยนแปลงขนาดหน้าจอจะบีบ item ให้ขึ้นบรรทัดใหม่
 ยกตัวอย่างเช่น, หนึ่งแถวจะอยู่อยู่รวมเป็น 1 เส้น
 
 อย่างไรก็ตาม การใช้ `flex-wrap` property จะบอกให้ CSS รวม item พวกนั้นไว้ด้วยกัน
@@ -45,7 +45,6 @@ assert($('#box-container').css('flex-wrap') == 'wrap');
     background: gray;
     display: flex;
     height: 100%;
-
   }
   #box-1 {
     background-color: dodgerblue;

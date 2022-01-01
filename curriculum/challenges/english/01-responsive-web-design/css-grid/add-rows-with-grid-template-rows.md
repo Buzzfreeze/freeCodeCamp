@@ -10,22 +10,18 @@ dashedName: add-rows-with-grid-template-rows
 # --description--
 
 กริดที่คุณได้สร้างไปใน challenge ที่แล้วจะกำหนดจำนวนของแถวโดยอัตโนมัติ
-เพื่อที่จะปรับเปลี่ยนเป็นแถว ๆ ไป, จงใช้ `grid-template-rows` property ในแบบเดียวกับที่คุรใช้ `grid-template-columns` ใน challenge ที่แล้ว
+เพื่อที่จะปรับเปลี่ยนเป็นแถว ๆ (row) ไป, จงใช้ `grid-template-rows` property ในแบบเดียวกับที่ใช้ `grid-template-columns` ใน challenge ที่แล้ว
 
 # --instructions--
 
-จงเพิ่มแถว 2 แถวให้กับกริดโดยให้แต่ละอันสูง  `50px` 
+จงเพิ่มแถว 2 แถวให้กับกริดโดยให้แต่ละอันสูง `50px`
 
 # --hints--
 
-`container` class ควรมี `grid-template-rows` property อันหนึ่งที่มี `50px` 2 อัน
+`container` class ควรมี `grid-template-rows` property อันหนึ่งที่มี `50px` 2 แถว
 
 ```js
-assert(
-  code.match(
-    /.container\s*?{[\s\S]*grid-template-rows\s*?:\s*?50px\s*?50px\s*?;[\s\S]*}/gi
-  )
-);
+assert(code.match(/.container\s*?{[\s\S]*grid-template-rows\s*?:\s*?50px\s*?50px\s*?;[\s\S]*}/gi));
 ```
 
 # --seed--
@@ -34,11 +30,21 @@ assert(
 
 ```html
 <style>
-  .d1{background:LightSkyBlue;}
-  .d2{background:LightSalmon;}
-  .d3{background:PaleTurquoise;}
-  .d4{background:LightPink;}
-  .d5{background:PaleGreen;}
+  .d1 {
+    background: LightSkyBlue;
+  }
+  .d2 {
+    background: LightSalmon;
+  }
+  .d3 {
+    background: PaleTurquoise;
+  }
+  .d4 {
+    background: LightPink;
+  }
+  .d5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -48,7 +54,6 @@ assert(
     grid-template-columns: 100px 100px 100px;
     /* Only change code below this line */
 
-    
     /* Only change code above this line */
   }
 </style>
@@ -65,5 +70,9 @@ assert(
 # --solutions--
 
 ```html
-<style>.container {grid-template-rows: 50px 50px;}</style>
+<style>
+  .container {
+    grid-template-rows: 50px 50px;
+  }
+</style>
 ```

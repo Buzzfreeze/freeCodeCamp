@@ -9,10 +9,10 @@ dashedName: attach-a-fallback-value-to-a-css-variable
 
 # --description--
 
-เมื่อคุณใช้ตัวแปรเป็นค่าของ CSS property, คุรสามารถแนบค่า fallback ที่ browser ของคุณจะใช้ถ้า variable ที่ใส่ไปใช้ไม่ได้
+เมื่อคุณใช้ตัวแปรเป็นค่าของ CSS property, คุณสามารถแนบค่า fallback (ต่อท้าย) ที่ browser ของคุณจะใช้ถ้า variable ที่ใส่ไปใช้ไม่ได้
 
 **Note:** fallback อันนี้จะไม่ถูกใช้เพื่อเพิ่ม browser compatibility, และมันจะไม่ทำงานบน IE browsers
-จริง ๆ มันถูกใช้เพื่อที่ browser จะได้มีซักสีให้แสดงผลถ้ามันหาตัวแปรของคุณไม่เจอ 
+จริง ๆ มันถูกใช้เพื่อที่ browser จะได้มีซักสีให้แสดงผลถ้ามันหาตัวแปรของคุณไม่เจอ
 
 นี่คือวิธีที่จะทำมัน:
 
@@ -20,7 +20,7 @@ dashedName: attach-a-fallback-value-to-a-css-variable
 background: var(--penguin-skin, black);
 ```
 
-โค้ดข้างบนจะกำหนดให้พื้นหลังเป็น `black` ถ้าตัวแปรของคุณไม่ได้ถูกตั้งไว้ 
+โค้ดข้างบนจะกำหนดให้พื้นหลังเป็น `black` ถ้าตัวแปรของคุณไม่ได้ถูกตั้งไว้
 จงจำไว้ว่ามันอาจจะเป็นประโยชน์เวลา debug
 
 # --instructions--
@@ -35,8 +35,8 @@ background: var(--penguin-skin, black);
 ```js
 assert(
   code.match(
-    /.penguin-top\s*?{[\s\S]*background\s*?:\s*?var\(\s*?--pengiun-skin\s*?,\s*?black\s*?\)\s*?;[\s\S]*}[\s\S]*.penguin-bottom\s{/gi
-  )
+    /.penguin-top\s*?{[\s\S]*background\s*?:\s*?var\(\s*?--pengiun-skin\s*?,\s*?black\s*?\)\s*?;[\s\S]*}[\s\S]*.penguin-bottom\s{/gi,
+  ),
 );
 ```
 
@@ -45,8 +45,8 @@ assert(
 ```js
 assert(
   code.match(
-    /.penguin-bottom\s*?{[\s\S]*background\s*?:\s*?var\(\s*?--pengiun-skin\s*?,\s*?black\s*?\)\s*?;[\s\S]*}/gi
-  )
+    /.penguin-bottom\s*?{[\s\S]*background\s*?:\s*?var\(\s*?--pengiun-skin\s*?,\s*?black\s*?\)\s*?;[\s\S]*}/gi,
+  ),
 );
 ```
 

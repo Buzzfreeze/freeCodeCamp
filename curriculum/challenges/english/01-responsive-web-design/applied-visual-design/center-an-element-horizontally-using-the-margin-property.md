@@ -9,7 +9,7 @@ dashedName: center-an-element-horizontally-using-the-margin-property
 
 # --description--
 
-วิธีการจัดตำแหน่งอีกอย่างก็คือการทำให้ block element อยู่ตรงกลางในแนวนอน 
+วิธีการจัดตำแหน่งอีกอย่างก็คือการทำให้ block element อยู่ตรงกลางในแนวนอน
 วิธีหนึ่งที่ใช้ในการจัดตำแหน่งแบบนี้คือ การกำหนดให้ `margin` ของมันมีค่า auto
 
 วิธีนี้เหมาะที่จะใช้กับรูปภาพเช่นกัน รูปภาพนั้นเป็น inline element โดยค่าเริ่มต้น
@@ -21,7 +21,7 @@ dashedName: center-an-element-horizontally-using-the-margin-property
 
 # --hints--
 
-`div` should ควรมี `margin` ที่มีค่าเป็น `auto`
+`div` ควรมี `margin` ที่มีค่าเป็น `auto`
 
 ```js
 assert(new __helpers.CSSHelp(document).getStyle('div')?.margin === 'auto');
@@ -37,7 +37,6 @@ assert(new __helpers.CSSHelp(document).getStyle('div')?.margin === 'auto');
     background-color: blue;
     height: 100px;
     width: 100px;
-
   }
 </style>
 <div></div>

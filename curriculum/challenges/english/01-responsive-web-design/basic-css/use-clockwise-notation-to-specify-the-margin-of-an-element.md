@@ -9,15 +9,15 @@ dashedName: use-clockwise-notation-to-specify-the-margin-of-an-element
 
 # --description--
 
-เรามาลองกันอีกที แต่รอบนี้จะเป็นกับ `margin` 
+เรามาลองกันอีกที แต่รอบนี้จะเป็นกับ `margin`
 
-แทนที่จะระบุ element `margin-top`, `margin-right`, `margin-bottom`, และ `margin-left` properties เป็นตัว ๆ , คุณสามารถกำหนดค่าให้พวกมันทั้งหมดได้ในบรรทัดเดียว แบบนี้:
+แทนที่จะระบุ element `margin-top`, `margin-right`, `margin-bottom`, และ `margin-left` properties เป็นส่วนๆ , คุณสามารถกำหนดค่าให้ทั้งหมดนี้ได้ในบรรทัดเดียว แบบนี้:
 
 ```css
 margin: 10px 20px 10px 20px;
 ```
 
-ค่าทั้ง 4 ตัวนี้จะเรียงกันตามเข็มนาฬิกา: บน, ขวา, ล่าง, ซ้าย, และจะให้ผลเช่นเดียวกับการใช้พวกคำสั่ง side-specific margin 
+ค่าทั้ง 4 ตัวนี้จะเรียงกันตามเข็มนาฬิกา: บน, ขวา, ล่าง, ซ้าย, และจะให้ผลเช่นเดียวกับการใช้พวกคำสั่ง side-specific margin
 
 # --instructions--
 
@@ -25,7 +25,7 @@ margin: 10px 20px 10px 20px;
 
 # --hints--
 
-`blue-box` class ควรกำหนดให้ด้านบนของ element มี `margin` มีค่า `40px` 
+`blue-box` class ควรกำหนดให้ด้านบนของ element มี `margin` มีค่า `40px`
 
 ```js
 assert($('.blue-box').css('margin-top') === '40px');
@@ -54,8 +54,8 @@ assert($('.blue-box').css('margin-left') === '40px');
 ```js
 assert(
   /\.blue-box\s*{[\s\S]*margin[\s]*:\s*\d+px\s+\d+px\s+\d+px\s+\d+px(;\s*[^}]+\s*}|;?\s*})/.test(
-    __helpers.removeCssComments($('style').text())
-  )
+    __helpers.removeCssComments($('style').text()),
+  ),
 );
 ```
 

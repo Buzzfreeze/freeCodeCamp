@@ -12,9 +12,9 @@ dashedName: fill-in-the-blank-with-placeholder-text
 นักพัฒนาเว็บไซต์มันจะใช้ <dfn>lorem ipsum text</dfn> เป็น placeholder text
 lorem ipsum text เป็นข้อความที่สุ่มมาจาก Cicero of Ancient Rome
 
-Lorem ipsum text ถูกใช้เพื่อเป็น placeholder text โดย typesetter ตั้งแต่ศตวรรษที่ 16 และนี่ก็เป็นเหมือนธรรมเนียมที่ทำต่อ ๆ กันมาสำหรับคนทำเว็บ
+Lorem ipsum text ถูกใช้เพื่อเป็น placeholder text โดย typesetter ทำเป็นเหมือนธรรมเนียมที่ทำต่อ ๆ กันมาสำหรับนักพัฒนาเว็บ
 
-อย่างไรก็ดี, 500 ปีมันก็ค่อนข้างจะยาวนานไปหน่อย ไหน ๆ เราก็กำลังทำ CatPhotoApp ฉะนั้นมาใช้อะไรที่เรียกว่าชุดตัวอักษร `kitty ipsum` กันดีกว่า
+อย่างไรก็ดี,ตอนนี้เราก็กำลังทำ CatPhotoApp ฉะนั้นมาใช้ชุดตัวอักษร `kitty ipsum` กันดีกว่า
 
 # --instructions--
 
@@ -47,5 +47,8 @@ assert.isTrue(/Kitty(\s)+ipsum/gi.test($('p').text()));
 
 <h2>CatPhotoApp</h2>
 
-<p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff</p>
+<p>
+  Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball
+  run catnip eat the grass sniff
+</p>
 ```

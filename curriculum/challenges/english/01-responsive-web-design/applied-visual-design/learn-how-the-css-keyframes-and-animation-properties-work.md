@@ -103,13 +103,7 @@ assert(code.match(/100%\s*?{\s*?background-color:\s*?yellow;\s*?}/gi));
   }
 
   #rect {
-
-
   }
-
-
-
-
 </style>
 <div id="rect"></div>
 ```

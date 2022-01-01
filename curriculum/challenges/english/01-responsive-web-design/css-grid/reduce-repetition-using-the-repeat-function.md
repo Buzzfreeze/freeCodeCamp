@@ -11,10 +11,10 @@ dashedName: reduce-repetition-using-the-repeat-function
 
 เมื่อคุณใช้ `grid-template-columns` และ `grid-template-rows` เพื่อกำหนดโครงสร้างของกริด คุณได้ใส่ค่าของแต่ละแถวหรือคอลั่มน์ที่คุณสร้างขึ้น
 
-สมมุติว่าคุณต้องการกริดอันหนึ่งที่มี 100 แถวที่มีความสุงเท่า ๆ กัน มันไม่ค่อยจะสมเหตุสมผลเท่าไหร่ที่จะใส่ค่า 100 ค่าเองทีละอัน ๆ
-โชคดีที่มันมีวิธีที่ดีกว่านั้น วิธีนั้นก็คือการใช้ `repeat` function เพื่อระบุจำนวนครั้งที่คุณต้องการให้แถวหรือคอลั่มน์ถูกสร้างซ้ำ และก็ตามด้วย comma และค่าที่คุณอยากทำซ้ำ 
+สมมุติว่าคุณต้องการกริดอันหนึ่งที่มี 100 แถวที่มีความสูงเท่า ๆ กัน มันไม่ค่อยจะสมเหตุสมผลเท่าไหร่ที่จะใส่ค่า 100 ทีละอัน
+โชคดีที่มันมีวิธีที่ดีกว่านั้น วิธีนั้นก็คือการใช้ `repeat` function เพื่อระบุจำนวนครั้งที่คุณต้องการให้แถวหรือคอลั่มน์ถูกสร้างซ้ำ และก็ตามด้วย comma (,) และค่าที่คุณอยากทำซ้ำ
 
-นี่คือตัวอย่างที่จะเป็นการสร้างกริดที่มี 100 แถวโดยแต่ละแถวมีความสูง 50px 
+นี่คือตัวอย่างที่จะเป็นการสร้างกริดที่มี 100 แถวโดยแต่ละแถวมีความสูง 50px
 
 ```css
 grid-template-rows: repeat(100, 50px);
@@ -45,9 +45,7 @@ grid-template-columns: 1fr 50px 1fr 50px 20px;
 
 ```js
 assert(
-  code.match(
-    /.container\s*?{[\s\S]*grid-template-columns\s*?:\s*?repeat\s*?\(\s*?3\s*?,\s*?1fr\s*?\)\s*?;[\s\S]*}/gi
-  )
+  code.match(/.container\s*?{[\s\S]*grid-template-columns\s*?:\s*?repeat\s*?\(\s*?3\s*?,\s*?1fr\s*?\)\s*?;[\s\S]*}/gi),
 );
 ```
 
@@ -57,11 +55,21 @@ assert(
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
-  .item5{background:PaleGreen;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
+  .item5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -91,5 +99,9 @@ assert(
 # --solutions--
 
 ```html
-<style>.container {grid-template-columns: repeat(3, 1fr);}</style>
+<style>
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+</style>
 ```

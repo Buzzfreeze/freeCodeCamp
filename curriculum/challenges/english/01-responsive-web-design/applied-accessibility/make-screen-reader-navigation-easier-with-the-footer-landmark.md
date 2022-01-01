@@ -11,11 +11,11 @@ dashedName: make-screen-reader-navigation-easier-with-the-footer-landmark
 
 คล้ายกับ `header` และ `nav`
 `footer` element มี built-in landmark feature ตัวหนึ่งที่ทำให้ assistive devices สามารถนำทางมาที่มันได้เร็วขึ้น
-มันถูกใช้เพื่อเก็บข้อมูล copyright หรือลิงค์ที่เกี่ยวข้องกับเอกสารที่มักถูกวางไว้ที่ด้านล่างของหน้าหนึ่ง ๆ 
+มันถูกใช้เพื่อเก็บข้อมูล copyright หรือลิงค์ที่เกี่ยวข้องกับเอกสารที่มักถูกวางไว้ที่ด้านล่างของหน้าหนึ่ง ๆ
 
 # --instructions--
 
-หน้า training ของ Camper Cat กำลังไปได้สวย
+ตัวอย่างหน้า training ของ Camper Cat กำลังไปได้สวย
 จงเปลี่ยน `div` ที่เขาใช้ให้เก็บข้อมูล copyright ของเขาที่ด้านล่างของหน้านี้ไว้ใน `footer` element.
 
 # --hints--
@@ -72,10 +72,7 @@ assert(code.match(/<footer>\s*&copy; 2018 Camper Cat\s*<\/footer>/g));
     </section>
   </main>
 
-
   <div>&copy; 2018 Camper Cat</div>
-
-
 </body>
 ```
 
@@ -111,9 +108,6 @@ assert(code.match(/<footer>\s*&copy; 2018 Camper Cat\s*<\/footer>/g));
     </section>
   </main>
 
-
   <footer>&copy; 2018 Camper Cat</footer>
-
-
 </body>
 ```

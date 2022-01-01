@@ -9,20 +9,18 @@ dashedName: align-all-items-vertically-using-align-items
 
 # --description--
 
-การใช้ `align-items` property กับ grid container จะกำหนดให้ item ในกริดของเราตรงกันในแนวตั้ง
+การใช้ `align-items` property กับ grid container จะกำหนดให้ item ในกริดของเราตรงกันในแนวตั้ง (column)
 
 # --instructions--
 
-จงใช้มันตอนนี้เพื่อย้าย item ทั้งหมดไปที่ท้ายสุดของแต่ละช่อง
+จงใช้ `align-items` เพื่อย้าย item ทั้งหมดไปที่ท้ายสุดของแต่ละ cell
 
 # --hints--
 
-`container` class ควรมี  `align-items` property อันหนึ่งที่มีค่าเป็น `end`
+`container` class ควรมี `align-items` property อันหนึ่งที่มีค่าเป็น `end`
 
 ```js
-assert(
-  code.match(/.container\s*?{[\s\S]*align-items\s*?:\s*?end\s*?;[\s\S]*}/gi)
-);
+assert(code.match(/.container\s*?{[\s\S]*align-items\s*?:\s*?end\s*?;[\s\S]*}/gi));
 ```
 
 # --seed--
@@ -31,11 +29,21 @@ assert(
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
-  .item5{background:PaleGreen;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
+  .item5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -48,7 +56,6 @@ assert(
     grid-gap: 10px;
     /* Only change code below this line */
 
-    
     /* Only change code above this line */
   }
 </style>
@@ -65,5 +72,9 @@ assert(
 # --solutions--
 
 ```html
-<style>.container {align-items: end;}</style>
+<style>
+  .container {
+    align-items: end;
+  }
+</style>
 ```

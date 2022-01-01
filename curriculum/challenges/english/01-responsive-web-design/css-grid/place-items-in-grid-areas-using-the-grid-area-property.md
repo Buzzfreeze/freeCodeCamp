@@ -11,7 +11,7 @@ dashedName: place-items-in-grid-areas-using-the-grid-area-property
 
 หลังจากที่คุณสร้าง area template ให้กับกริด container ของคุณตามที่ได้แสดงไว้ใน challenge ก่อนหน้านี้
 คุณสามารถใส่ item ได้ในพื้นที่ที่คุณจัดเตรียมไว้โดยอ้างอิงจากชื่อที่คุณตั้งให้มัน
-เพื่อทำเช่นนี้ คุณต้องใช้`grid-area` property กับ item ดังนนี้:
+เพื่อทำเช่นนี้ คุณต้องใช้`grid-area` property กับ item ดังนี้:
 
 ```css
 .item1 {
@@ -20,7 +20,7 @@ dashedName: place-items-in-grid-areas-using-the-grid-area-property
 ```
 
 นี่จะช่วยให้กริดรู้ว่าคุณต้องการให้ `item1` class อยู่ในพื้นที่ที่ชื่อ `header`
-ในกรณีนี้ item จะคลุมแถวบนสุดทั้งแถวเพราะทั้งแถวนั้นมีชื่อเป็นพื้นที่ header 
+ในกรณีนี้ item จะคลุมแถวบนสุดทั้งแถวเพราะทั้งแถวนั้นมีชื่อเป็นพื้นที่ header
 
 # --instructions--
 
@@ -28,14 +28,10 @@ dashedName: place-items-in-grid-areas-using-the-grid-area-property
 
 # --hints--
 
-`item5` class sควรมี `grid-area` property อันหนึ่งที่มีค่าเป็น`footer`
+class `item5` ควรมี `grid-area` property อันหนึ่งที่มีค่าเป็น`footer`
 
 ```js
-assert(
-  __helpers
-    .removeCssComments(code)
-    .match(/.item5\s*?{[\s\S]*grid-area\s*?:\s*?footer\s*?;[\s\S]*}/gi)
-);
+assert(__helpers.removeCssComments(code).match(/.item5\s*?{[\s\S]*grid-area\s*?:\s*?footer\s*?;[\s\S]*}/gi));
 ```
 
 # --seed--
@@ -44,16 +40,23 @@ assert(
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
 
   .item5 {
     background: PaleGreen;
     /* Only change code below this line */
 
-    
     /* Only change code above this line */
   }
 
@@ -67,9 +70,9 @@ assert(
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 10px;
     grid-template-areas:
-      "header header header"
-      "advert content content"
-      "footer footer footer";
+      'header header header'
+      'advert content content'
+      'footer footer footer';
   }
 </style>
 
@@ -85,5 +88,9 @@ assert(
 # --solutions--
 
 ```html
-<style>.item5 {grid-area: footer;}</style>
+<style>
+  .item5 {
+    grid-area: footer;
+  }
+</style>
 ```

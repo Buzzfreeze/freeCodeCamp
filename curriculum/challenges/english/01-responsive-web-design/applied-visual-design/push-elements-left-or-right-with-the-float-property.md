@@ -10,7 +10,7 @@ dashedName: push-elements-left-or-right-with-the-float-property
 # --description--
 
 เครื่องมือในการกำหนดตำแหน่งอันถัดไป จะไม่ยุ่งกับ `position`แต่จะเป็นการกำหนด `float` property ของ element
-Floating element จะถูกเอาออกจาก normal flow ของ document และจะถูกผลักให้ไปอยู่ `left` หรือ `right` ของ parent element ที่เก็บมันไว้
+Floating element จะถูกเอาออกจาก normal flow ของ document (การไหลในหน้าเว็บเพจ) และจะถูกผลักให้ไปอยู่ `left` หรือ `right` ของ parent element ที่เก็บมันไว้
 มันมักจะถูกใช้กับ `width` property เพื่อระบุช่องว่างในแนวนอนที่ floated element ต้องการ
 
 # --instructions--
@@ -40,14 +40,13 @@ assert($('#right').css('float') == 'right');
 <head>
   <style>
     #left {
-
       width: 50%;
     }
     #right {
-
       width: 40%;
     }
-    aside, section {
+    aside,
+    section {
       padding: 2px;
       background-color: #ccc;
     }
@@ -81,7 +80,8 @@ assert($('#right').css('float') == 'right');
       float: right;
       width: 40%;
     }
-    aside, section {
+    aside,
+    section {
       padding: 2px;
       background-color: #ccc;
     }

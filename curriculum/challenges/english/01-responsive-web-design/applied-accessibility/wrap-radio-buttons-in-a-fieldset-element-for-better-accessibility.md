@@ -10,8 +10,8 @@ dashedName: wrap-radio-buttons-in-a-fieldset-element-for-better-accessibility
 # --description--
 
 หัวข้อเกี่ยวกับ form อันถัดไปจะกล่าวถึงเรื่องการเข้าถึงของ radio buttons
-แต่ละตัวเลือกนั้นจะมี `label` 1 อันกับ `for` attribute 1 อันผูกไว้กับ `id` ของ item ที่สัมพันธ์กันอย่างที่ทำพร้อมกับ  challenge ก่อนหน้า
-เนื่องจาก radio buttons  มักมาเป็นกลุ่มที่อนุญาตให้ผู้ใช้เลือกได้แค่ตัวเดียว จึงมีวิธีหนึ่งที่จะช่วยทำให้เห็นว่าตัวเลือกเหล่านี้เป็นเซ็ตเดียวกัน
+แต่ละตัวเลือกนั้นจะมี `label` 1 อันกับ `for` attribute 1 อันผูกไว้กับ `id` ของ item ที่สัมพันธ์กันอย่างที่ทำพร้อมกับ challenge ก่อนหน้า
+เนื่องจาก radio buttons มักมาเป็นกลุ่มที่อนุญาตให้ผู้ใช้เลือกได้แค่ตัวเดียว จึงมีวิธีหนึ่งที่จะช่วยทำให้เห็นว่าตัวเลือกเหล่านี้เป็นเซ็ตเดียวกัน
 
 `fieldset` tag จะต้องเก็บกลุ่มของ radio buttons ทั้งหมด
 สิ่งนี้มักใช้ `legend` tag 1 อันเพื่อให้คำอธิบายของกลุ่มตัวเลือกนั้น ซึ่ง screen readers จะอ่านแต่ละตัวเลือกที่อยู่ใน `fieldset` element.
@@ -23,11 +23,11 @@ dashedName: wrap-radio-buttons-in-a-fieldset-element-for-better-accessibility
 <form>
   <fieldset>
     <legend>Choose one of these three items:</legend>
-    <input id="one" type="radio" name="items" value="one">
-    <label for="one">Choice One</label><br>
-    <input id="two" type="radio" name="items" value="two">
-    <label for="two">Choice Two</label><br>
-    <input id="three" type="radio" name="items" value="three">
+    <input id="one" type="radio" name="items" value="one" />
+    <label for="one">Choice One</label><br />
+    <input id="two" type="radio" name="items" value="two" />
+    <label for="two">Choice Two</label><br />
+    <input id="three" type="radio" name="items" value="three" />
     <label for="three">Choice Three</label>
   </fieldset>
 </form>
@@ -35,14 +35,14 @@ dashedName: wrap-radio-buttons-in-a-fieldset-element-for-better-accessibility
 
 # --instructions--
 
-Camper Cat ต้องการข้อมูลเกี่ยวกับระดับนินจาของผู้ใช้ของเขาเมื่อพวกเขาเหล่านั้นสมัครเข้าร่วมลิสต์อีเมล
-เขาได้เพิ่มเซ็ตของ radio buttons อันหนึ่งและเรียนรู้จากบทเรียนที่แล้วของเราในการใช้ `label` tags กับ `for` attributes กับแต่ละตัวเลือก 
+ตัวอย่าง Camper Cat ต้องการข้อมูลเกี่ยวกับระดับนินจาของผู้ใช้ของเขาเมื่อพวกเขาเหล่านั้นสมัครเข้าร่วมลิสต์อีเมล
+เขาได้เพิ่มเซ็ตของ radio buttons อันหนึ่งและเรียนรู้จากบทเรียนที่แล้วของเราในการใช้ `label` tags กับ `for` attributes กับแต่ละตัวเลือก
 อย่างไรก็ตาม โค้ดของเขายังต้องการความช่วยเหลือบางอย่าง
 จงเปลี่ยน `div` tag ที่เก็บ radio buttons ให้เป็น `fieldset` tag และจงเปลี่ยน `p` tag ข้างในมันให้เป็น `legend`.
 
 # --hints--
 
-โค้ดของคุณควรมี `fieldset` tag ล้อมรอบเซ็ตของ radio button 
+โค้ดของคุณควรมี `fieldset` tag ล้อมรอบเซ็ตของ radio button
 
 ```js
 assert($('fieldset').length == 1);
@@ -51,10 +51,7 @@ assert($('fieldset').length == 1);
 `fieldset` element ควรมีแท็กปิด
 
 ```js
-assert(
-  code.match(/<\/fieldset>/g) &&
-    code.match(/<\/fieldset>/g).length === code.match(/<fieldset>/g).length
-);
+assert(code.match(/<\/fieldset>/g) && code.match(/<\/fieldset>/g).length === code.match(/<fieldset>/g).length);
 ```
 
 คุณควรมี `legend` tag เพื่อเก็บข้อความที่ถามระดับนินจาของผู้ใช้
@@ -88,38 +85,47 @@ assert($('p').length == 4);
     <form>
       <p>Sign up to receive Camper Cat's blog posts by email here!</p>
       <label for="email">Email:</label>
-      <input type="text" id="email" name="email">
-
+      <input type="text" id="email" name="email" />
 
       <!-- Only change code below this line -->
       <div>
         <p>What level ninja are you?</p>
-        <input id="newbie" type="radio" name="levels" value="newbie">
-        <label for="newbie">Newbie Kitten</label><br>
-        <input id="intermediate" type="radio" name="levels" value="intermediate">
-        <label for="intermediate">Developing Student</label><br>
-        <input id="master" type="radio" name="levels" value="master">
+        <input id="newbie" type="radio" name="levels" value="newbie" />
+        <label for="newbie">Newbie Kitten</label><br />
+        <input id="intermediate" type="radio" name="levels" value="intermediate" />
+        <label for="intermediate">Developing Student</label><br />
+        <input id="master" type="radio" name="levels" value="master" />
         <label for="master">Master</label>
       </div>
       <!-- Only change code above this line -->
 
-
-      <input type="submit" name="submit" value="Submit">
+      <input type="submit" name="submit" value="Submit" />
     </form>
   </section>
   <article>
     <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
-    <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>
+    <p>
+      The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses.
+      But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that
+      is lasagna...
+    </p>
   </article>
-  <img src="samuraiSwords.jpeg" alt="">
+  <img src="samuraiSwords.jpeg" alt="" />
   <article>
     <h2>Defeating your Foe: the Red Dot is Ours!</h2>
-    <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...</p>
+    <p>
+      Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning
+      stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...
+    </p>
   </article>
-  <img src="samuraiSwords.jpeg" alt="">
+  <img src="samuraiSwords.jpeg" alt="" />
   <article>
     <h2>Is Chuck Norris a Cat Person?</h2>
-    <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>
+    <p>
+      Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence
+      anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat
+      person?...
+    </p>
   </article>
   <footer>&copy; 2018 Camper Cat</footer>
 </body>
@@ -136,34 +142,45 @@ assert($('p').length == 4);
     <form>
       <p>Sign up to receive Camper Cat's blog posts by email here!</p>
       <label for="email">Email:</label>
-      <input type="text" id="email" name="email">
+      <input type="text" id="email" name="email" />
 
       <fieldset>
         <legend>What level ninja are you?</legend>
-        <input id="newbie" type="radio" name="levels" value="newbie">
-        <label for="newbie">Newbie Kitten</label><br>
-        <input id="intermediate" type="radio" name="levels" value="intermediate">
-        <label for="intermediate">Developing Student</label><br>
-        <input id="master" type="radio" name="levels" value="master">
+        <input id="newbie" type="radio" name="levels" value="newbie" />
+        <label for="newbie">Newbie Kitten</label><br />
+        <input id="intermediate" type="radio" name="levels" value="intermediate" />
+        <label for="intermediate">Developing Student</label><br />
+        <input id="master" type="radio" name="levels" value="master" />
         <label for="master">Master</label>
       </fieldset>
 
-      <input type="submit" name="submit" value="Submit">
+      <input type="submit" name="submit" value="Submit" />
     </form>
   </section>
   <article>
     <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
-    <p>The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses. But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is lasagna...</p>
+    <p>
+      The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses.
+      But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that
+      is lasagna...
+    </p>
   </article>
-  <img src="samuraiSwords.jpeg" alt="">
+  <img src="samuraiSwords.jpeg" alt="" />
   <article>
     <h2>Defeating your Foe: the Red Dot is Ours!</h2>
-    <p>Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...</p>
+    <p>
+      Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning
+      stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...
+    </p>
   </article>
-  <img src="samuraiSwords.jpeg" alt="">
+  <img src="samuraiSwords.jpeg" alt="" />
   <article>
     <h2>Is Chuck Norris a Cat Person?</h2>
-    <p>Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat person?...</p>
+    <p>
+      Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence
+      anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat
+      person?...
+    </p>
   </article>
   <footer>&copy; 2018 Camper Cat</footer>
 </body>

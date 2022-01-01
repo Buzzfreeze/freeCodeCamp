@@ -40,9 +40,7 @@ background: linear-gradient(90deg, red, yellow, rgb(204, 204, 255));
 assert(
   $('div')
     .css('background-image')
-    .match(
-      /linear-gradient\(35deg, rgb\(204, 255, 255\), rgb\(255, 204, 204\)\)/gi
-    )
+    .match(/linear-gradient\(35deg, rgb\(204, 255, 255\), rgb\(255, 204, 204\)\)/gi),
 );
 ```
 
@@ -57,9 +55,7 @@ assert(
     width: 70%;
     height: 400px;
     margin: 50px auto;
-
   }
-
 </style>
 
 <div></div>
@@ -74,7 +70,7 @@ assert(
     width: 70%;
     height: 400px;
     margin: 50px auto;
-    background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
   }
 </style>
 <div></div>

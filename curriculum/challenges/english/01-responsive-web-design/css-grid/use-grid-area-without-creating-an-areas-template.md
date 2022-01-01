@@ -10,10 +10,12 @@ dashedName: use-grid-area-without-creating-an-areas-template
 # --description--
 
 `grid-area` property ที่คุณได้เรียนไปแล้วใน challenge ล่าสุดสามารถใช้เพื่อการอื่นได้
-ถ้ากริดของคุณไม่มี areas template เพื่อใช้ในการอ้างอิง, คุณสามารถสร้างพื้นที่สมมุติสำหรับวาง item ได้ดังนี้:
+ถ้ากริดของคุณไม่มี areas template เพื่อใช้ในการอ้างอิง, คุณสามารถสร้างพื้นที่สมมุติสำหรับวาง item ได้ดังนี้ตัวอย่างด้านล่างนี้:
 
 ```css
-item1 { grid-area: 1/1/2/4; }
+item1 {
+  grid-area: 1/1/2/4;
+}
 ```
 
 นี่คือการใช้ลำดับของเส้นที่คุณได้เรียนไปแล้วก่อนหน้านี้เพื่อกำหนดตำแหน่งที่ item อันนี้จะอยู่
@@ -34,11 +36,7 @@ grid-area: horizontal line to start at / vertical line to start at / horizontal 
 `item5` class ควรมี `grid-area` property อันหนึ่งเพื่อทำให้มันกินพื้นที่ทั้งหมดระหว่างเส้นแนวนอนที่ 3 และ 4 แล้วก็เส้นแนวตั้งที่ 1 - 4
 
 ```js
-assert(
-  code.match(
-    /.item5\s*?{[\s\S]*grid-area\s*?:\s*?3\s*?\/\s*?1\s*?\/\s*?4\s*?\/\s*?4\s*?;[\s\S]*}/gi
-  )
-);
+assert(code.match(/.item5\s*?{[\s\S]*grid-area\s*?:\s*?3\s*?\/\s*?1\s*?\/\s*?4\s*?\/\s*?4\s*?;[\s\S]*}/gi));
 ```
 
 # --seed--
@@ -47,15 +45,22 @@ assert(
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
 
   .item5 {
     background: PaleGreen;
     /* Only change code below this line */
-
 
     /* Only change code above this line */
   }
@@ -84,5 +89,9 @@ assert(
 # --solutions--
 
 ```html
-<style>.item5 {grid-area: 3/1/4/4;}</style>
+<style>
+  .item5 {
+    grid-area: 3/1/4/4;
+  }
+</style>
 ```

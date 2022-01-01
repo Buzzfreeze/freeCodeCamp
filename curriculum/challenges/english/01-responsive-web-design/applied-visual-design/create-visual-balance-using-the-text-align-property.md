@@ -48,14 +48,11 @@ assert($('p').css('text-align') == 'justify');
 ```html
 <style>
   h4 {
-
   }
   p {
-
   }
   .links {
     margin-right: 20px;
-
   }
   .fullCard {
     border: 1px solid #ccc;
@@ -93,7 +90,6 @@ assert($('p').css('text-align') == 'justify');
   }
   .links {
     margin-right: 20px;
-
   }
   .fullCard {
     border: 1px solid #ccc;

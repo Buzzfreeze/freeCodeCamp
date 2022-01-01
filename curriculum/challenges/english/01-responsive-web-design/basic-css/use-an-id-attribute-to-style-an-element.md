@@ -13,10 +13,10 @@ dashedName: use-an-id-attribute-to-style-an-element
 
 อย่างไรก็ตาม, `id` ไม่สามารถใช้ซ้ำได้และควรใช้แค่กับ element เดียวเท่านั้น
 `id` ยังมีความสำคัญมากกว่า class
-ดังนั้นถ้าทั้งคู่ถูกใช้พร้อมกันที่ element เดียวกัน 
+ดังนั้นถ้าทั้งคู่ถูกใช้พร้อมกันที่ element เดียวกัน
 styles ของ `id` จะถูกใช้งาน
 
-นี่คือตัวอย่างของวิธีที่คุณเรียก element หนึ่งที่มี `id` attribute เป็น  `cat-photo-element` และกำหนดให้มันมีสีพื้นหลังเป็นสีเขียว
+นี่คือตัวอย่างของวิธีที่คุณเรียก element หนึ่งที่มี `id` attribute เป็น `cat-photo-element` และกำหนดให้มันมีสีพื้นหลังเป็นสีเขียว
 นี่คือ `style` element:
 
 ```css
@@ -48,10 +48,7 @@ assert($('#cat-photo-form').css('background-color') === 'rgb(0, 128, 0)');
 `form` element ควรมี `id` attribute อันหนึ่ง
 
 ```js
-assert(
-  code.match(/<form.*cat-photo-form.*>/gi) &&
-    code.match(/<form.*cat-photo-form.*>/gi).length > 0
-);
+assert(code.match(/<form.*cat-photo-form.*>/gi) && code.match(/<form.*cat-photo-form.*>/gi).length > 0);
 ```
 
 คุณไม่ควรกำหนดให้ `form` มี `class` หรือ `style` attributes อะไรก็ตาม
@@ -65,7 +62,7 @@ assert(!code.match(/<form.*style.*>/gi) && !code.match(/<form.*class.*>/gi));
 ## --seed-contents--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
 <style>
   .red-text {
     color: red;
@@ -100,7 +97,12 @@ assert(!code.match(/<form.*style.*>/gi) && !code.match(/<form.*class.*>/gi));
 <main>
   <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img class="smaller-image thick-green-border" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      class="smaller-image thick-green-border"
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <div class="silver-background">
     <p>Things cats love:</p>
@@ -118,12 +120,12 @@ assert(!code.match(/<form.*style.*>/gi) && !code.match(/<form.*class.*>/gi));
   </div>
 
   <form action="https://freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label><input type="checkbox" name="personality" checked /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>
@@ -132,7 +134,7 @@ assert(!code.match(/<form.*style.*>/gi) && !code.match(/<form.*class.*>/gi));
 # --solutions--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
 <style>
   .red-text {
     color: red;
@@ -170,9 +172,14 @@ assert(!code.match(/<form.*style.*>/gi) && !code.match(/<form.*class.*>/gi));
 <h2 class="red-text">CatPhotoApp</h2>
 <main>
   <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
-  
-  <a href="#"><img class="smaller-image thick-green-border" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
-  
+
+  <a href="#"
+    ><img
+      class="smaller-image thick-green-border"
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
+
   <div class="silver-background">
     <p>Things cats love:</p>
     <ul>
@@ -187,14 +194,14 @@ assert(!code.match(/<form.*style.*>/gi) && !code.match(/<form.*class.*>/gi));
       <li>other cats</li>
     </ol>
   </div>
-  
+
   <form action="https://freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label><input type="checkbox" name="personality" checked /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>

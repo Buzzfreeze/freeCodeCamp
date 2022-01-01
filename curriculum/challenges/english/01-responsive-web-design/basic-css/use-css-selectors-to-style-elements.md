@@ -9,20 +9,19 @@ dashedName: use-css-selectors-to-style-elements
 
 # --description--
 
-มันมี CSS properties หลายร้อยอันที่คุณสามารถใช้เพื่อเปลี่ยนรูปร่างหน้าตาของ element ที่อยู่บนหน้าเว็บของคุณ
+มี CSS properties หลายรูปแบบที่คุณสามารถใช้เพื่อเปลี่ยนรูปร่างหน้าตาของ element ที่อยู่บนหน้าเว็บของคุณ
 
-เมื่อคุณพิมพ์ `<h2 style="color: red;">CatPhotoApp</h2>`, คุณจะตกแต่ง `h2` element อันนั้นด้วย inline CSS, ซึ่งย่อมาจาก Cascading Style Sheets
+เมื่อคุณพิมพ์ `<h2 style="color: red;">CatPhotoApp</h2>`, คุณจะตกแต่ง `h2` element ด้วย inline CSS, ซึ่งย่อมาจาก Cascading Style Sheets
 
-นี่เป็นวิธีเพื่อระบุ style ของ element อันหนึ่ง, แต่มันยังมีวิธีที่ดีกว่าในการใช้ CSS
+นี่เป็นวิธีเพื่อระบุ style ของ element รูปแบบหนึ่ง, แต่มันยังมีวิธีที่ดีกว่าในการใช้ CSS
 
 ที่ด้านบนของโค้ด, จงสร้าง `style` block แบบนี้:
 
 ```html
-<style>
-</style>
+<style></style>
 ```
 
-ภายใน style block อันนั้น คุณสามารถสร้าง  <dfn>CSS selector</dfn> ให้กับ `h2` element ทั้งหมดได้
+ภายใน style block อันนั้น คุณสามารถสร้าง <dfn>CSS selector</dfn> ให้กับ `h2` element ทั้งหมดได้
 ยกตัวอย่างเช่น ถ้าคุณต้องการให้ `h2` element ทั้งหมดเป็นสีแดง คุณสามารถเพิ่ม style rule อันหนึ่งเข้าไปแบบนี้ :
 
 ```html
@@ -33,7 +32,7 @@ dashedName: use-css-selectors-to-style-elements
 </style>
 ```
 
-จงไว้ว่า มันสำคัญมากที่จะใส่ทั้ง `{` และ `}` รอบ style rule ของแต่ละ element
+ควรรู้ไว้ว่า มันสำคัญมากที่จะใส่ทั้ง `{` และ `}` รอบ style rule ของแต่ละ element
 คุณยังจำเป็นต้องเช็คให้มั่นใจว่า style definition ของ element นั้นอยู่ระหว่างแท็กเปิดและปิดของ style tags
 สุดท้ายนี้ จงเช็คให้มั่นใจว่าได้เพิ่ม semicolon อันหนึ่งที่ด้านท้ายของแต่ละ style rules ของ element แล้ว
 
@@ -74,11 +73,7 @@ assert(code.match(/h2\s*\{\s*color\s*:.*;\s*\}/g));
 assert(
   code.match(/<\/style>/g) &&
     code.match(/<\/style>/g).length ===
-      (
-        code.match(
-          /<style((\s)*((type|media|scoped|title|disabled)="[^"]*")?(\s)*)*>/g
-        ) || []
-      ).length
+      (code.match(/<style((\s)*((type|media|scoped|title|disabled)="[^"]*")?(\s)*)*>/g) || []).length,
 );
 ```
 
@@ -91,7 +86,11 @@ assert(
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <div>
     <p>Things cats love:</p>
@@ -109,12 +108,12 @@ assert(
   </div>
 
   <form action="https://freecatphotoapp.com/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label><input type="checkbox" name="personality" checked /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>
@@ -132,7 +131,11 @@ assert(
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <div>
     <p>Things cats love:</p>
@@ -150,12 +153,12 @@ assert(
   </div>
 
   <form action="https://freecatphotoapp.com/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label><input type="checkbox" name="personality" checked /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>

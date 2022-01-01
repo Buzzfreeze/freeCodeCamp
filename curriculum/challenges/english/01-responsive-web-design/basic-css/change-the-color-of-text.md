@@ -11,21 +11,21 @@ dashedName: change-the-color-of-text
 
 ตอนนี้ เรามาเปลี่ยนสีของตัวอักษรบางตัวของเรากัน
 
-พวกเราสามารถทำเช่นนี้ได้โดยการเปลี่ยน`style` ของ `h2` element.
+พวกเราสามารถทำได้โดยการเปลี่ยน`style` ของ `h2` element.
 
-property ที่รับผิดชอบในส่วนของสีของข้อความของ element คือ `color` style property.
+property ที่ทำหน้าที่ในส่วนของสีของข้อความของ element คือ `color` style property.
 
-นี่คือวืธีที่คุณจะกำหนดสีข้อความของ `h2` element ให้เป้นสีน้ำเงิน:
+นี่คือวืธีที่คุณจะกำหนดสีข้อความของ `h2` element ให้เป็นสีน้ำเงิน:
 
 ```html
 <h2 style="color: blue;">CatPhotoApp</h2>
 ```
 
-จงจำไว้ว่ามันเป็นวิธีที่ดีที่จะปิดท้าย inline `style` declarations ด้วย `;` 
+จะต้องปิดท้าย inline `style` declarations ด้วย `;`
 
 # --instructions--
 
-จงเปลี่ยน style ของ `h2` element ให้ข้อความของมันมีสีแดง
+จงเปลี่ยน style ของ `h2` element ให้ข้อความนี้เป็นสีแดง
 
 # --hints--
 
@@ -41,7 +41,7 @@ assert($('h2').attr('style'));
 assert($('h2')[0].style.color === 'red');
 ```
 
-`style` declaration ควรลงท้ายด้วย `;` 
+`style` declaration ควรลงท้ายด้วย `;`
 
 ```js
 assert($('h2').attr('style') && $('h2').attr('style').endsWith(';'));
@@ -56,7 +56,11 @@ assert($('h2').attr('style') && $('h2').attr('style').endsWith(';'));
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <div>
     <p>Things cats love:</p>
@@ -74,12 +78,12 @@ assert($('h2').attr('style') && $('h2').attr('style').endsWith(';'));
   </div>
 
   <form action="https://freecatphotoapp.com/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label><input type="checkbox" name="personality" checked /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>
@@ -92,7 +96,11 @@ assert($('h2').attr('style') && $('h2').attr('style').endsWith(';'));
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <div>
     <p>Things cats love:</p>
@@ -110,12 +118,12 @@ assert($('h2').attr('style') && $('h2').attr('style').endsWith(';'));
   </div>
 
   <form action="https://freecatphotoapp.com/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label><input type="checkbox" name="personality" checked /> Loving</label>
+    <label><input type="checkbox" name="personality" /> Lazy</label>
+    <label><input type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>

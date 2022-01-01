@@ -9,15 +9,15 @@ dashedName: create-flexible-layouts-using-auto-fit
 
 # --description--
 
-`auto-fit` ทำงานเกือบจะเหมือนกับ `auto-fill`
+`auto-fit` (ปรับให้พอดีกับ Container) ทำงานเกือบจะเหมือนกับ `auto-fill`
 ความแตกต่างเดียวของมันคือเมื่อขนาดของ container เกินกว่าขนาดรวมของทุก items, `auto-fill` จะพยายามเพิ่มแถวหรือคอลัมน์ใหม่มาเรื่อย ๆ และพวกมันจะดันให้ item ของคุณไปด้านข้าง ในขณะที่ `auto-fit` จะลบพวกแถวและคอลัมน์เปล่าของคุณและยืด item ของคุณให้มีขนาดที่พอดีกับ container
 
-**Note:** ถ้า container ของคุณไม่มีทางพอดีกับ items ได้ภายในแถวเดียว มันจะผลัก item ที่เกินลงมาอีกแถวหรือคอลัมน์หนึ่ง 
+**Note:** ถ้า container ของคุณไม่มีทางพอดีกับ items ได้ภายในแถวเดียว มันจะผลัก item ที่เกินลงมาอีกแถวหรือคอลัมน์หนึ่ง
 
 # --instructions--
 
 ในกริดอันที่สอง, จงใช้ `auto-fit` ที่มี `repeat` เพื่อทำให้กริดเต็มไปด้วยคอลัมน์ที่มีความกว้างอย่างต่ำที่ `60px` และความกว้างมากสุดที่ `1fr`
-หลัวจากนั้น จงปรับขนาดของหน้า preview เพื่อให้เห็นความแตกต่าง 
+หลัวจากนั้น จงปรับขนาดของหน้า preview เพื่อให้เห็นความแตกต่าง
 
 # --hints--
 
@@ -27,8 +27,8 @@ dashedName: create-flexible-layouts-using-auto-fit
 ```js
 assert(
   code.match(
-    /.container2\s*?{[\s\S]*grid-template-columns\s*?:\s*?repeat\s*?\(\s*?auto-fit\s*?,\s*?minmax\s*?\(\s*?60px\s*?,\s*?1fr\s*?\)\s*?\)\s*?;[\s\S]*}/gi
-  )
+    /.container2\s*?{[\s\S]*grid-template-columns\s*?:\s*?repeat\s*?\(\s*?auto-fit\s*?,\s*?minmax\s*?\(\s*?60px\s*?,\s*?1fr\s*?\)\s*?\)\s*?;[\s\S]*}/gi,
+  ),
 );
 ```
 
@@ -38,11 +38,21 @@ assert(
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
-  .item5{background:PaleGreen;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
+  .item5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -90,5 +100,12 @@ assert(
 # --solutions--
 
 ```html
-<style>.container {grid-template-columns: repeat( auto-fill, minmax(60px, 1fr));} .container2 {grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));}</style>
+<style>
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  }
+  .container2 {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  }
+</style>
 ```

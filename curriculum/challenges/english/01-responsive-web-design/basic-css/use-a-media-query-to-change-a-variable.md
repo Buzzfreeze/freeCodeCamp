@@ -12,7 +12,7 @@ dashedName: use-a-media-query-to-change-a-variable
 ตัวแปร CSS สามารถทำให้การใช้ media queries ของคุณง่ายขึ้น
 
 ยกตัวอย่างเช่น, เมื่อจอของคุณเล็กกว่าหรือใหญ่กว่า break point ใน media query ของคุณ
-คุณสามารถเปลี่ยนค่าของตัวแปรและมันจะใช้ style ของมันเมื่อมันถูกเรียก
+คุณสามารถเปลี่ยนค่าของตัวแปรได้ โดยจะแสดงค่าเมื่อถึง break point ขนาดหน้าจอที่กำหนด
 
 # --instructions--
 
@@ -27,8 +27,8 @@ dashedName: use-a-media-query-to-change-a-variable
 ```js
 assert(
   code.match(
-    /media\s*?\(\s*?max-width\s*?:\s*?350px\s*?\)\s*?{[\s\S]*:root\s*?{[\s\S]*--penguin-size\s*?:\s*?200px\s*?;[\s\S]*}[\s\S]*}/gi
-  )
+    /media\s*?\(\s*?max-width\s*?:\s*?350px\s*?\)\s*?{[\s\S]*:root\s*?{[\s\S]*--penguin-size\s*?:\s*?200px\s*?;[\s\S]*}[\s\S]*}/gi,
+  ),
 );
 ```
 
@@ -37,8 +37,8 @@ assert(
 ```js
 assert(
   code.match(
-    /media\s*?\(\s*?max-width\s*?:\s*?350px\s*?\)\s*?{[\s\S]*:root\s*?{[\s\S]*--penguin-skin\s*?:\s*?black\s*?;[\s\S]*}[\s\S]*}/gi
-  )
+    /media\s*?\(\s*?max-width\s*?:\s*?350px\s*?\)\s*?{[\s\S]*:root\s*?{[\s\S]*--penguin-skin\s*?:\s*?black\s*?;[\s\S]*}[\s\S]*}/gi,
+  ),
 );
 ```
 
@@ -129,24 +129,24 @@ assert(
     animation-duration: 3s;
     animation-name: wave;
     animation-iteration-count: infinite;
-    transform-origin:0% 0%;
+    transform-origin: 0% 0%;
     animation-timing-function: linear;
   }
 
   @keyframes wave {
-      10% {
-        transform: rotate(110deg);
-      }
-      20% {
-        transform: rotate(130deg);
-      }
-      30% {
-        transform: rotate(110deg);
-      }
-      40% {
-        transform: rotate(130deg);
-      }
+    10% {
+      transform: rotate(110deg);
     }
+    20% {
+      transform: rotate(130deg);
+    }
+    30% {
+      transform: rotate(110deg);
+    }
+    40% {
+      transform: rotate(130deg);
+    }
+  }
 
   .left-hand {
     top: 0%;
@@ -201,7 +201,7 @@ assert(
 
   .sparkle {
     top: 25%;
-    left:-23%;
+    left: -23%;
     background: white;
     width: 150%;
     height: 100%;
@@ -245,7 +245,7 @@ assert(
   }
 
   body {
-    background:#c6faf1;
+    background: #c6faf1;
   }
 
   .penguin * {
@@ -280,5 +280,12 @@ assert(
 # --solutions--
 
 ```html
-<style>@media (max-width: 350px) {:root {--penguin-size: 200px; --penguin-skin: black;}}</style>
+<style>
+  @media (max-width: 350px) {
+    :root {
+      --penguin-size: 200px;
+      --penguin-skin: black;
+    }
+  }
+</style>
 ```

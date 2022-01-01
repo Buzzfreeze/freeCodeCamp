@@ -9,7 +9,7 @@ dashedName: use-the-flex-basis-property-to-set-the-initial-size-of-an-item
 
 # --description--
 
-`flex-basis` property จะระบุขนาดเริ่มต้นของ item ก่อนที่ CSS จะปรับเปลี่ยนมันด้วย `flex-shrink` หรือ `flex-grow`
+`flex-basis` property (ปรับขนาด width) จะระบุขนาดเริ่มต้นของ item ก่อนที่ CSS จะปรับเปลี่ยนมันด้วย `flex-shrink` หรือ `flex-grow`
 
 หน่วยที่ถูกใช้โดย `flex-basis` property จะเหมือนกับ size properties (`px`, `em`, `%`, etc.) ตัวอื่น ๆ
 ค่าขนาดของ item ที่เป็น `auto` จะขึ้นกับเนื้อหาของมัน
@@ -60,13 +60,11 @@ assert(code.match(/#box-2\s*?{\s*?.*?\s*?.*?\s*?flex-basis:\s*?20em;/g));
   #box-1 {
     background-color: dodgerblue;
     height: 200px;
-
   }
 
   #box-2 {
     background-color: orangered;
     height: 200px;
-
   }
 </style>
 

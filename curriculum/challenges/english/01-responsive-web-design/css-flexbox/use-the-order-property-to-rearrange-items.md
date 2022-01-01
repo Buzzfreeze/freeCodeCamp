@@ -9,9 +9,9 @@ dashedName: use-the-order-property-to-rearrange-items
 
 # --description--
 
-`order` property ถูกใช้เพื่อบอก CSS ว่าควรลำดับของ flex items ใน flex container
-โดยค่าเริ่มต้นแล้ว items จะปรากฏตามลำดับที่มันถูกเขียนไว้ใน HTML
-.property จะรับค่าเป็นตัวเลข และจำนวนติดลบก็สามารถถูกนำมาใช้ได้เช่นกัน
+`order` property ถูกใช้เพื่อบอก CSS เรียงลำดับลำดับของ items ใน container
+โดยค่าเริ่มต้นแล้ว items จะปรากฏตามลำดับ
+property จะรับค่าเป็นตัวเลข และจำนวนติดลบก็สามารถถูกนำมาใช้ได้เช่นกัน
 
 # --instructions--
 

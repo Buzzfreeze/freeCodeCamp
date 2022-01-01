@@ -9,15 +9,14 @@ dashedName: introduction-to-html5-elements
 
 # --description--
 
-HTML5 ได้มีการใช้ HTML tag ที่มันมีความหมายมากขึ้น นั่นรวมถึง `main`, `header`, `footer`, `nav`, `video`, `article`, `section` และอื่น ๆ 
-
-tag พวกนี้ได้ให้โครงสร้างที่อธิบายได้ด้วยตัวมันเอง ซึ่งช่วยให้โค้ดของคุณอ่านได้เข้าใจง่ายมากขึ้น และมันยังช่วยให้ Search Engine Optimization (SEO) ทำงานได้ดีขึ้นด้วย รวมถึงยังช่วยในเรื่องของความสามารถในการเข้าถึง (accessability)
+HTML5 ได้มีการใช้ HTML tag ที่มันมีความหมายมากขึ้น นั่นรวมถึง `main`, `header`, `footer`, `nav`, `video`, `article`, `section` และอื่น ๆ
+tag พวกนี้ทำให้โครงสร้างที่อธิบายได้ด้วยตัวมันเอง ซึ่งช่วยให้โค้ดของคุณอ่านได้เข้าใจง่ายมากขึ้น และมันยังช่วยให้ Search Engine Optimization (SEO) ทำงานได้ดีขึ้นด้วย รวมถึงยังช่วยในเรื่องของความสามารถในการเข้าถึง (accessability)
 `main` HTML5 tag จะช่วยให้ search engines และนักพัฒนาคนอื่นเจอเนื้อหาหลักที่อยู่ในหน้าเว็บของคุณ
 
 ตัวอย่างการใช้ `main` element ที่มี child element 2 อันอยู่ข้างใน:
 
 ```html
-<main> 
+<main>
   <h1>Hello World</h1>
   <p>Hello Paragraph</p>
 </main>
@@ -42,10 +41,7 @@ assert($('p').length > 1);
 `p` element แต่ละอันควรจะมีแท็กปิด
 
 ```js
-assert(
-  code.match(/<\/p>/g) &&
-    code.match(/<\/p>/g).length === code.match(/<p/g).length
-);
+assert(code.match(/<\/p>/g) && code.match(/<\/p>/g).length === code.match(/<p/g).length);
 ```
 
 `p` element ควรเก็บข้อความช่วงแรกของ `kitty ipsum` ซึ่งเขียนไว้แล้วที่ด้านบน
@@ -85,7 +81,10 @@ assert(code.match(/<\/p>\s*?<\/main>/g));
 ```html
 <h2>CatPhotoApp</h2>
 
-<p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+<p>
+  Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball
+  run catnip eat the grass sniff.
+</p>
 ```
 
 # --solutions--
@@ -93,7 +92,13 @@ assert(code.match(/<\/p>\s*?<\/main>/g));
 ```html
 <h2>CatPhotoApp</h2>
 <main>
-  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
-  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+  <p>
+    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot,
+    hairball run catnip eat the grass sniff.
+  </p>
+  <p>
+    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur
+    catnip scratched.
+  </p>
 </main>
 ```

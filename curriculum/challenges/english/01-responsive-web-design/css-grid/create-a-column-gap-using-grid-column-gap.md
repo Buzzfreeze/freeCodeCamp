@@ -9,9 +9,9 @@ dashedName: create-a-column-gap-using-grid-column-gap
 
 # --description--
 
-จถึงตอนนี้ในกริดที่คุณสร้างขึ้นมา, ทุกคอลัมน์ได้ทุกบีบให้ชิดกัน
+ถึงตอนนี้ในกริดที่คุณสร้างขึ้นมา, ทุกคอลัมน์ได้ทุกบีบให้ชิดกัน
 บางครั้ง คุณก็ต้องการช่องว่างระหว่างคอลัมน์
-จงใช้  `grid-column-gap` property เพื่อที่จะเพิ่มช่องว่างระหว่างคอลัมน์ ดังต่อไปนี้:
+จงใช้ `grid-column-gap` property เพื่อที่จะเพิ่มช่องว่างระหว่างคอลัมน์ ดังต่อไปนี้:
 
 ```css
 grid-column-gap: 10px;
@@ -21,18 +21,14 @@ grid-column-gap: 10px;
 
 # --instructions--
 
-จงกำหนดให้คอลัมน์ในกริดมีขนาดช่องว่างกว้าง `20px` 
+จงกำหนดให้คอลัมน์ในกริดมีขนาดช่องว่างกว้าง `20px`
 
 # --hints--
 
 `container` class ควรมี `grid-column-gap` property อันหนึ่งที่มีค่า `20px`
 
 ```js
-assert(
-  code.match(
-    /.container\s*?{[\s\S]*grid-column-gap\s*?:\s*?20px\s*?;[\s\S]*}/gi
-  )
-);
+assert(code.match(/.container\s*?{[\s\S]*grid-column-gap\s*?:\s*?20px\s*?;[\s\S]*}/gi));
 ```
 
 # --seed--
@@ -41,11 +37,21 @@ assert(
 
 ```html
 <style>
-  .d1{background:LightSkyBlue;}
-  .d2{background:LightSalmon;}
-  .d3{background:PaleTurquoise;}
-  .d4{background:LightPink;}
-  .d5{background:PaleGreen;}
+  .d1 {
+    background: LightSkyBlue;
+  }
+  .d2 {
+    background: LightSalmon;
+  }
+  .d3 {
+    background: PaleTurquoise;
+  }
+  .d4 {
+    background: LightPink;
+  }
+  .d5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -57,7 +63,6 @@ assert(
     grid-template-rows: 1fr 1fr 1fr;
     /* Only change code below this line */
 
-   
     /* Only change code above this line */
   }
 </style>
@@ -74,5 +79,9 @@ assert(
 # --solutions--
 
 ```html
-<style>.container {grid-column-gap: 20px;}</style>
+<style>
+  .container {
+    grid-column-gap: 20px;
+  }
+</style>
 ```

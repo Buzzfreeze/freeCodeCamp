@@ -20,7 +20,7 @@ dashedName: inform-with-the-paragraph-element
 
 # --instructions--
 
-จงสร้าง `p` element อันหนึ่งต่อจาก `h2` element, และจงกำหนดให้มันมีข้อความที่เขียนว่า `Hello Paragraph`
+จงสร้าง `p` element หนึ่ง element ต่อจาก `h2` element, และจงกำหนดให้มันมีข้อความที่เขียนว่า `Hello Paragraph`
 
 **Note:** ตามปกติ, HTML tag ทุกอันเขียนด้วยตัวพิมพ์เล็ก ยกตัวอย่างเช่น แท็กสำหรับพารากราฟควรเป็น `<p></p>` ไม่ใช่ `<P></P>`
 
@@ -41,10 +41,7 @@ assert.isTrue(/hello(\s)+paragraph/gi.test($('p').text()));
 `p` element ควรมีแท็กปิด
 
 ```js
-assert(
-  code.match(/<\/p>/g) &&
-    code.match(/<\/p>/g).length === code.match(/<p/g).length
-);
+assert(code.match(/<\/p>/g) && code.match(/<\/p>/g).length === code.match(/<p/g).length);
 ```
 
 # --seed--

@@ -9,17 +9,17 @@ dashedName: lock-an-element-to-its-parent-with-absolute-positioning
 
 # --description--
 
-ตัวเลือกถัดไปสำหรับ `position` property คือ `absolute`, ซึ่งจะยึด element ในตำแหน่งที่อิงจาก parent container ของมัน
-ไม่เหมือนกับ `relative` position, `absolute` position จะทำให้ element ออกมาจาก normal flow ของ document เพื่อที่ item ที่อยู่รอบ ๆ จะไม่สนใจมัน
+ตัวเลือกถัดไปสำหรับ `position` property คือ `absolute`, ซึ่งจะยึด element ในตำแหน่งที่อิงจาก parent container ของมัน หรือ element ที่คลุมตัวมันเอง
+ไม่เหมือนกับ `relative` position, `absolute` position จะทำให้ element ออกมาจาก normal flow ของ document (หน้าเว็บเพจ) เพื่อที่ item ที่อยู่รอบ ๆ จะไม่สนใจมัน
 CSS offset properties (บนหรือล่าง และ ซ้ายหรือขวา) จะถูกใช้เพื่อปรับเปลี่ยนตำแหน่ง
 
-ความแตกต่างหนึ่งที่สังเกตได้ยากของการกำหนดตำแหน่งแบบ absolute คือมันจะถูกยึดไว้กับ *positioned* ancestor ที่อยู่ใกล้มันที่สุด
-ถ้าคุณลืมที่จะเพิ่ม position rule ให้กับ parent item (โดยปกติทำได้โดยใช้ `position: relative;`) browser จะพยายามหาต้นกำเนิดของมันและไล่ไปเรื่อย ๆ จนถึง `body` tag.
+ความแตกต่างหนึ่งที่สังเกตได้ยากของการกำหนดตำแหน่งแบบ absolute คือมันจะถูกยึดไว้กับ _positioned_ ancestor ที่อยู่ใกล้มันที่สุด
+ถ้าคุณลืมที่จะเพิ่ม position rule ให้กับ parent item (กรณี parent container ไม่ได้มี position ) (จะไปยึดใช้ `position: relative;`) ของ browser จะพยายามหาต้นกำเนิดของมันและไล่ไปเรื่อย ๆ จนถึง `body` tag.
 
 # --instructions--
 
 จงยึด `#searchbar` element ไว้กับ top-right ของ `section` parent ของมันโดยการประกาศใช้ `position` เป็น `absolute`
-จงกำหนดให้มันมี `top` และ `right` offsets เป็น 50 pixels each.
+จงกำหนดให้มันมี `top` และ `right` offsets แต่ละด้านเป็น 50 pixels
 
 # --hints--
 
@@ -48,9 +48,6 @@ assert($('#searchbar').css('right') == '50px');
 ```html
 <style>
   #searchbar {
-
-
-
   }
   section {
     position: relative;
@@ -61,8 +58,8 @@ assert($('#searchbar').css('right') == '50px');
   <section>
     <form id="searchbar">
       <label for="search">Search:</label>
-      <input type="search" id="search" name="search">
-      <input type="submit" name="submit" value="Go!">
+      <input type="search" id="search" name="search" />
+      <input type="submit" name="submit" value="Go!" />
     </form>
   </section>
 </body>
@@ -86,8 +83,8 @@ assert($('#searchbar').css('right') == '50px');
   <section>
     <form id="searchbar">
       <label for="search">Search:</label>
-      <input type="search" id="search" name="search">
-      <input type="submit" name="submit" value="Go!">
+      <input type="search" id="search" name="search" />
+      <input type="submit" name="submit" value="Go!" />
     </form>
   </section>
 </body>

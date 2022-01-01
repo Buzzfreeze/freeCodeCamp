@@ -22,19 +22,14 @@ dashedName: change-a-variable-for-a-specific-area
 `penguin` class ควรจำกำหนดค่าใหม่ให้ตัวแปร `--penguin-belly` เป็น `white`
 
 ```js
-assert(
-  code.match(/\.penguin\s*?{[\s\S]*--penguin-belly\s*?:\s*?white\s*?;[\s\S]*}/gi)
-);
+assert(code.match(/\.penguin\s*?{[\s\S]*--penguin-belly\s*?:\s*?white\s*?;[\s\S]*}/gi));
 ```
 
 `penguin` class ไม่ควรจะมี `background-color` property แล้ว
 
 ```js
-assert(
-  code.match(/^((?!background-color\s*?:\s*?)[\s\S])*$/g)
-);
-``` 
-
+assert(code.match(/^((?!background-color\s*?:\s*?)[\s\S])*$/g));
+```
 
 # --seed--
 
@@ -249,6 +244,8 @@ assert(
 
 ```html
 <style>
-.penguin {--penguin-belly: white;}
+  .penguin {
+    --penguin-belly: white;
+  }
 </style>
 ```

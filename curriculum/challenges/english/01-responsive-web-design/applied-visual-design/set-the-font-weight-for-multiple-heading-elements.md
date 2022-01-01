@@ -11,7 +11,7 @@ dashedName: set-the-font-weight-for-multiple-heading-elements
 
 คุณได้กำหนด `font-size` ของแต่ละ heading tag ในแบบฝึกหัดที่แล้ว ตอนนี้คุณจะได้ปรับค่าของ `font-weight`
 
-`font-weight` property จะกำหนดความหนาบางของตัวอักษรที่อยู่ใน section ของข้อความ
+`font-weight` เป็น property จะกำหนดความหนา/บางของตัวอักษรที่อยู่ใน section ของข้อความ
 
 # --instructions--
 
@@ -63,27 +63,21 @@ assert($('h6').css('font-weight') == '200');
 <style>
   h1 {
     font-size: 68px;
-
   }
   h2 {
     font-size: 52px;
-
   }
   h3 {
     font-size: 40px;
-
   }
   h4 {
     font-size: 32px;
-
   }
   h5 {
     font-size: 21px;
-
   }
   h6 {
     font-size: 14px;
-
   }
 </style>
 <h1>This is h1 text</h1>

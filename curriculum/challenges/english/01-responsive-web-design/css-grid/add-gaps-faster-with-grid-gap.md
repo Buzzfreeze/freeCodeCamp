@@ -9,23 +9,20 @@ dashedName: add-gaps-faster-with-grid-gap
 
 # --description--
 
-`grid-gap` เป็น shorthand property อันหนึ่งสำหรับ `grid-row-gap` และ `grid-column-gap` ที่เราได้ใช้ไปแล้วในสอง challenges ก่อนหน้า โดย `grid-gap` นั้นค่อนข้างที่จะใช้ง่ายกว่า
+`grid-gap` เป็น shorthand property ทั้ง `grid-row-gap` และ `grid-column-gap` ที่เเคยทำไปแล้วใน 2 challenges ก่อนหน้า โดย `grid-gap` นั้นค่อนข้างที่จะใช้ง่ายกว่า
 ถ้า `grid-gap` มีค่าอยู่ค่าเดียว, มันจะสร้างช่องว่างระหว่างแถวและคอลัมน์ทั้งหมดออกมาขนาดหนึ่ง
 อย่างไรก็ตาม ถ้ามันมี 2 ค่า, มันจะใช้ค่าแรกเป็นระยะห่างระหว่างแถว และอีกค่าเป็นระยะห่างระหว่างคอลัมน์
 
 # --instructions--
 
-จงใช้ `grid-gap` เพื่อทำให้เกิดช่องว่างระหว่างแถวขนาด `10px` และช่องว่างระหว่างคอลัมน์ขนาด `20px` 
+จงใช้ `grid-gap` เพื่อทำให้เกิดช่องว่างระหว่างแถว (row) แนวนอน ขนาด `10px` และช่องว่างระหว่างคอลัมน์ (column) แนวตั้ง ขนาด `20px`
+
 # --hints--
 
-`container` class ควรมี `grid-gap` property อันหนึ่งที่ทำให้เกิดช่องว่างระหว่างแถวขนาด `10px` และช่องว่างระหว่างคอลัมน์ขนาด `20px` 
+`container` class ควรมี `grid-gap` property อันหนึ่งที่ทำให้เกิดช่องว่างระหว่างแถวขนาด `10px` และช่องว่างระหว่างคอลัมน์ขนาด `20px`
 
 ```js
-assert(
-  code.match(
-    /.container\s*?{[\s\S]*grid-gap\s*?:\s*?10px\s+?20px\s*?;[\s\S]*}/gi
-  )
-);
+assert(code.match(/.container\s*?{[\s\S]*grid-gap\s*?:\s*?10px\s+?20px\s*?;[\s\S]*}/gi));
 ```
 
 # --seed--
@@ -34,11 +31,21 @@ assert(
 
 ```html
 <style>
-  .d1{background:LightSkyBlue;}
-  .d2{background:LightSalmon;}
-  .d3{background:PaleTurquoise;}
-  .d4{background:LightPink;}
-  .d5{background:PaleGreen;}
+  .d1 {
+    background: LightSkyBlue;
+  }
+  .d2 {
+    background: LightSalmon;
+  }
+  .d3 {
+    background: PaleTurquoise;
+  }
+  .d4 {
+    background: LightPink;
+  }
+  .d5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -50,7 +57,6 @@ assert(
     grid-template-rows: 1fr 1fr 1fr;
     /* Only change code below this line */
 
-    
     /* Only change code above this line */
   }
 </style>
@@ -66,5 +72,9 @@ assert(
 # --solutions--
 
 ```html
-<style>.container {grid-gap: 10px 20px;}</style>
+<style>
+  .container {
+    grid-gap: 10px 20px;
+  }
+</style>
 ```

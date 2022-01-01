@@ -11,14 +11,14 @@ dashedName: add-a-negative-margin-to-an-element
 
 `margin` ของ element จะควบคุมขนาดช่องว่างระหว่าง `border` ของ element กับ element ที่อยู่รอบๆ
 
-ถ้าคุณกำหนดให้  `margin` ของ element มีค่าเป็นลบ  
-element จะมีขนาดใหญ่ขึ้น
+ถ้าคุณกำหนดให้ `margin` ของ element มีค่าเป็นลบ  
+element จะมีขนาดใหญ่ขึ้น โดยขยายออกทั้ง 4 ทิศ Top Right Bottom left ตามค่า Negative
 
 # --instructions--
 
 จงกำหนดค่าของ `margin` ให้เป็นค่าลบเหมือนกับอันที่ใช้กับกล่องแดง
 
-จงเปลี่ยน `margin` ของกล่องฟ้าให้เป็น `-15px`, เพื่อที่มันจะได้ด้านกว้างทั้งหมดของกล่องเหลืองรอบมัน
+จงเปลี่ยน `margin` ของกล่องฟ้าให้เป็น `-15px`, เพื่อขยายออกทั้ง 4 ทิศ Top Right Bottom left ตามค่า Negative
 
 # --hints--
 

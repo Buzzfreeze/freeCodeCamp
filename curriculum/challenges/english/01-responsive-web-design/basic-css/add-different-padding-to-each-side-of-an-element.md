@@ -9,35 +9,35 @@ dashedName: add-different-padding-to-each-side-of-an-element
 
 # --description--
 
-บางครั้ง คุณอาจจะต้องการปรับแต่ง element เพื่อที่มันจะมี `padding` แตกต่างในแต่ละด้าน
+บางครั้ง คุณอาจจะต้องการปรับแต่ง element เพื่อที่จะมี `padding` แตกต่างในแต่ละด้าน
 
 CSS ทำให้คุณสามารถควบคุม `padding` ของแต่ละด้านแยกกันได้โดยใช้`padding-top`, `padding-right`, `padding-bottom`, และ `padding-left` properties.
 
 # --instructions--
 
-จงกำหนกให้กล่องสีน้ำเงินมี `padding` เท่ากับ `40px` ที่ด้านบนและซ้าย แต่เท่ากับ `20px` ที่ด้านล่างและขวา
+จงกำหนดให้กล่องสีน้ำเงินมี `padding` เท่ากับ `40px` ที่ด้านบนและซ้าย แต่เท่ากับ `20px` ที่ด้านล่างและขวา
 
 # --hints--
 
-`blue-box` class ควรกำหนดให้ด้านบนของ element มี `padding` เท่ากับ `40px` 
+`blue-box` class ควรกำหนดให้ด้านบนของ element มี `padding` เท่ากับ `40px`
 
 ```js
 assert($('.blue-box').css('padding-top') === '40px');
 ```
 
-`blue-box` class ควรกำหนดให้ด้านขวาของ element มี `padding` เท่ากับ `20px` 
+`blue-box` class ควรกำหนดให้ด้านขวาของ element มี `padding` เท่ากับ `20px`
 
 ```js
 assert($('.blue-box').css('padding-right') === '20px');
 ```
 
-`blue-box` class ควรกำหนดให้ด้านล่างของ element มี `padding` เท่ากับ `20px` 
+`blue-box` class ควรกำหนดให้ด้านล่างของ element มี `padding` เท่ากับ `20px`
 
 ```js
 assert($('.blue-box').css('padding-bottom') === '20px');
 ```
 
-`blue-box` class ควรกำหนดให้ด้านซ้ายของ element มี `padding` เท่ากับ `40px` 
+`blue-box` class ควรกำหนดให้ด้านซ้ายของ element มี `padding` เท่ากับ `40px`
 
 ```js
 assert($('.blue-box').css('padding-left') === '40px');

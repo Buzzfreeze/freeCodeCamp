@@ -9,17 +9,13 @@ dashedName: use-the-value-attribute-with-radio-buttons-and-checkboxes
 # --description--
 
 เมื่อแบบฟอร์มถูกส่งไปแล้ว ข้อมูลจะถูกส่งไปที่ server และรวม entries ให้กับตัวเลือกที่ถูกเลือกไป
-Inputs ประเภท `radio` และ `checkbox` จะรายงานค่าของมันตาม `value` attribute.
+Inputs ประเภท `radio` และ `checkbox` จะส่งค่าของมันตาม `value` attribute.
 
 ยกตัวอย่างเช่น:
 
 ```html
-<label for="indoor">
-  <input id="indoor" value="indoor" type="radio" name="indoor-outdoor">Indoor
-</label>
-<label for="outdoor">
-  <input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor">Outdoor
-</label>
+<label for="indoor"> <input id="indoor" value="indoor" type="radio" name="indoor-outdoor" />Indoor </label>
+<label for="outdoor"> <input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor" />Outdoor </label>
 ```
 
 ตอนนี้ คุณจะมี 2 `radio` input
@@ -40,49 +36,31 @@ Inputs ประเภท `radio` และ `checkbox` จะรายงาน�
 หนึ่งใน radio button ของคุณควรมี `value` attribute เป็น `indoor`
 
 ```js
-assert(
-  $('label:contains("Indoor") > input[type="radio"]').filter("[value='indoor']")
-    .length > 0
-);
+assert($('label:contains("Indoor") > input[type="radio"]').filter("[value='indoor']").length > 0);
 ```
 
 หนึ่งใน radio button ของคุณควรมี `value` attribute เป็น `outdoor`
 
 ```js
-assert(
-  $('label:contains("Outdoor") > input[type="radio"]').filter(
-    "[value='outdoor']"
-  ).length > 0
-);
+assert($('label:contains("Outdoor") > input[type="radio"]').filter("[value='outdoor']").length > 0);
 ```
 
 หนึ่งใน checkbox ของคุณควรมี `value` attribute เป็น `loving`
 
 ```js
-assert(
-  $('label:contains("Loving") > input[type="checkbox"]').filter(
-    "[value='loving']"
-  ).length > 0
-);
+assert($('label:contains("Loving") > input[type="checkbox"]').filter("[value='loving']").length > 0);
 ```
 
 หนึ่งใน checkbox ของคุณควรมี `value` attribute เป็น `lazy`
 
 ```js
-assert(
-  $('label:contains("Lazy") > input[type="checkbox"]').filter("[value='lazy']")
-    .length > 0
-);
+assert($('label:contains("Lazy") > input[type="checkbox"]').filter("[value='lazy']").length > 0);
 ```
 
 หนึ่งใน checkbox ของคุณควรมี `value` attribute เป็น `energetic`
 
 ```js
-assert(
-  $('label:contains("Energetic") > input[type="checkbox"]').filter(
-    "[value='energetic']"
-  ).length > 0
-);
+assert($('label:contains("Energetic") > input[type="checkbox"]').filter("[value='energetic']").length > 0);
 ```
 
 # --seed--
@@ -94,7 +72,11 @@ assert(
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -109,12 +91,12 @@ assert(
     <li>other cats</li>
   </ol>
   <form action="https://www.freecatphotoapp.com/submit-cat-photo">
-    <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor"> Indoor</label>
-    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label for="loving"><input id="loving" type="checkbox" name="personality"> Loving</label>
-    <label for="lazy"><input id="lazy" type="checkbox" name="personality"> Lazy</label>
-    <label for="energetic"><input id="energetic" type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" /> Indoor</label>
+    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" /> Outdoor</label><br />
+    <label for="loving"><input id="loving" type="checkbox" name="personality" /> Loving</label>
+    <label for="lazy"><input id="lazy" type="checkbox" name="personality" /> Lazy</label>
+    <label for="energetic"><input id="energetic" type="checkbox" name="personality" /> Energetic</label><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>
@@ -127,7 +109,11 @@ assert(
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -142,12 +128,14 @@ assert(
     <li>other cats</li>
   </ol>
   <form action="https://www.freecatphotoapp.com/submit-cat-photo">
-    <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
-    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
-    <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving"> Loving</label>
-    <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy"> Lazy</label>
-    <label for="energetic"><input id="energetic" type="checkbox" name="personality" value="energetic"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" /> Indoor</label>
+    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor" /> Outdoor</label><br />
+    <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving" /> Loving</label>
+    <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy" /> Lazy</label>
+    <label for="energetic"
+      ><input id="energetic" type="checkbox" name="personality" value="energetic" /> Energetic</label
+    ><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>

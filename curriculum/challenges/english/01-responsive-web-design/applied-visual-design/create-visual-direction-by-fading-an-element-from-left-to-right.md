@@ -9,13 +9,13 @@ dashedName: create-visual-direction-by-fading-an-element-from-left-to-right
 
 # --description--
 
-สำหรับแบบฝึกหัดนี้ คุณจะได้เปลี่ยน `opacity` ของ element ที่ถูก animate เพื่อที่มันจะได้ค่อย ๆ หายไปเมื่อมันถึงด้านขวาของจอ 
+สำหรับแบบฝึกหัดนี้ คุณจะได้เปลี่ยน `opacity` ของ element ที่ถูก animate เพื่อที่มันจะได้ค่อย ๆ หายไปเมื่อมันถึงด้านขวาของจอ
 
 ที่ animation ที่ได้แสดงออกมา element กลม ๆ ที่มาพร้อมกับพื้นหลัง gradient จะย้ายไปที่ด้านขวาที่ 50% mark ของ animation ตาม `@keyframes` rule
 
 # --instructions--
 
-จงชี้ไปที่ element ที่มี id เป็น `ball` และเพิ่ม `opacity` property ที่ถูกกำหนดให้เป็น 0.1 ที่ `50%`, เพื่อที่ element จะได้ค่อย ๆ หายไปเมื่อมันเคลื่อนไปทางขวา 
+จงชี้ไปที่ element ที่มี id เป็น `ball` และเพิ่ม `opacity` property ที่ถูกกำหนดให้เป็น 0.1 ที่ `50%`, เพื่อที่ element จะได้ค่อย ๆ หายไปเมื่อมันเคลื่อนไปทางขวา
 
 # --hints--
 
@@ -24,8 +24,8 @@ dashedName: create-visual-direction-by-fading-an-element-from-left-to-right
 ```js
 assert(
   code.match(
-    /@keyframes fade\s*?{\s*?50%\s*?{\s*?(?:left:\s*?60%;\s*?opacity:\s*?0?\.1;|opacity:\s*?0?\.1;\s*?left:\s*?60%;)/gi
-  )
+    /@keyframes fade\s*?{\s*?50%\s*?{\s*?(?:left:\s*?60%;\s*?opacity:\s*?0?\.1;|opacity:\s*?0?\.1;\s*?left:\s*?60%;)/gi,
+  ),
 );
 ```
 
@@ -35,7 +35,6 @@ assert(
 
 ```html
 <style>
-
   #ball {
     width: 70px;
     height: 70px;
@@ -43,11 +42,7 @@ assert(
     position: fixed;
     left: 20%;
     border-radius: 50%;
-    background: linear-gradient(
-      35deg,
-      #ccffff,
-      #ffcccc
-    );
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
     animation-name: fade;
     animation-duration: 3s;
   }
@@ -55,10 +50,8 @@ assert(
   @keyframes fade {
     50% {
       left: 60%;
-
     }
   }
-
 </style>
 
 <div id="ball"></div>
@@ -75,11 +68,7 @@ assert(
     position: fixed;
     left: 20%;
     border-radius: 50%;
-    background: linear-gradient(
-      35deg,
-      #ccffff,
-      #ffcccc
-    );
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
     animation-name: fade;
     animation-duration: 3s;
   }

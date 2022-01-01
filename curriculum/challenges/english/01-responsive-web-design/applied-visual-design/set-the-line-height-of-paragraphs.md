@@ -9,8 +9,8 @@ dashedName: set-the-line-height-of-paragraphs
 
 # --description--
 
-CSS มี `line-height` property เพื่อที่จะเปลี่ยนความสูงของแต่ละเส้นใน block ของข้อความ 
-ตามชื่อของมัน มันจะเปลี่ยนปริมาณของช่องว่างในแนวตั้งที่แต่ละบรรทัดของข้อความความจะได้รับ
+CSS มี `line-height` property เพื่อที่จะเปลี่ยนความสูงของแต่ละเส้นใน block ของข้อความ
+ตามชื่อของมัน มันจะเปลี่ยนปริมาณของช่องว่างในแนวตั้งที่แต่ละบรรทัดของข้อความความ
 
 # --instructions--
 
@@ -32,11 +32,12 @@ assert($('p').css('line-height') == '25px');
 <style>
   p {
     font-size: 16px;
-
   }
 </style>
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 ```
 
@@ -50,6 +51,8 @@ assert($('p').css('line-height') == '25px');
   }
 </style>
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 ```

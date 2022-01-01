@@ -9,8 +9,8 @@ dashedName: use-the-flex-shorthand-property
 
 # --description--
 
-มันมี shortcut สำหรับการกำหนด flex property หลาย ๆ อันในครั้งเดียว
-`flex-grow`, `flex-shrink`, และ `flex-basis` properties สามารถถูกกำหนดค่าพร้อมกันทั้งหมดได้ด้วย `flex` property
+มันมี shortcut (กำหนด flex property แบบสั้นๆ) สำหรับการกำหนด flex property หลาย ๆ อันในครั้งเดียวทั้ง
+`flex-grow`, `flex-shrink`, และ `flex-basis` properties สามารถถูกกำหนดค่าพร้อมกันทั้งหมดได้ด้วย `flex` property ดังตัวอย่างด้านล่าง
 
 ยกตัวอย่างเช่น, `flex: 1 0 10px;` จะกำหนดค่าให้ item มี `flex-grow: 1;`, `flex-shrink: 0;`, และ `flex-basis: 10px;`
 
@@ -33,7 +33,7 @@ dashedName: use-the-flex-shorthand-property
 assert(
   $('#box-1').css('flex-grow') == '2' &&
     $('#box-1').css('flex-shrink') == '2' &&
-    $('#box-1').css('flex-basis') == '150px'
+    $('#box-1').css('flex-basis') == '150px',
 );
 ```
 
@@ -43,7 +43,7 @@ The `#box-2` element should have the `flex` property set to a value of `1 1 150p
 assert(
   $('#box-2').css('flex-grow') == '1' &&
     $('#box-2').css('flex-shrink') == '1' &&
-    $('#box-2').css('flex-basis') == '150px'
+    $('#box-2').css('flex-basis') == '150px',
 );
 ```
 

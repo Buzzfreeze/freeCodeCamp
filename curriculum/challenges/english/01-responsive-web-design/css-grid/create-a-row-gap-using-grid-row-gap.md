@@ -9,20 +9,18 @@ dashedName: create-a-row-gap-using-grid-row-gap
 
 # --description--
 
-คุณสามารถเพิ่มช่องว่างระหว่างแถวของกริดโดยการใช้ `grid-row-gap` ในแบบเดียวกันกับที่คุณเพิ่มช่องว่างระหว่างคอลัมน์ใน challenge ก่อนหน้า
+คุณสามารถเพิ่มช่องว่างระหว่างแถว (row) ของกริดโดยการใช้ `grid-row-gap` ในแบบเดียวกันกับที่คุณเพิ่มช่องว่างระหว่างคอลัมน์ใน challenge ก่อนหน้า
 
 # --instructions--
 
-จงสร้างช่องว่างระหว่างแถวที่มีความสูง `5px` 
+จงสร้างช่องว่างระหว่างแถว (row) ที่มีความสูง `5px`
 
 # --hints--
 
 `container` class ควรมี `grid-row-gap` property อันหนึ่งที่มีความสูง `5px`
 
 ```js
-assert(
-  code.match(/.container\s*?{[\s\S]*grid-row-gap\s*?:\s*?5px\s*?;[\s\S]*}/gi)
-);
+assert(code.match(/.container\s*?{[\s\S]*grid-row-gap\s*?:\s*?5px\s*?;[\s\S]*}/gi));
 ```
 
 # --seed--
@@ -31,11 +29,21 @@ assert(
 
 ```html
 <style>
-  .d1{background:LightSkyBlue;}
-  .d2{background:LightSalmon;}
-  .d3{background:PaleTurquoise;}
-  .d4{background:LightPink;}
-  .d5{background:PaleGreen;}
+  .d1 {
+    background: LightSkyBlue;
+  }
+  .d2 {
+    background: LightSalmon;
+  }
+  .d3 {
+    background: PaleTurquoise;
+  }
+  .d4 {
+    background: LightPink;
+  }
+  .d5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -47,7 +55,6 @@ assert(
     grid-template-rows: 1fr 1fr 1fr;
     /* Only change code below this line */
 
-    
     /* Only change code above this line */
   }
 </style>
@@ -64,5 +71,9 @@ assert(
 # --solutions--
 
 ```html
-<style>.container {grid-row-gap: 5px;}</style>
+<style>
+  .container {
+    grid-row-gap: 5px;
+  }
+</style>
 ```

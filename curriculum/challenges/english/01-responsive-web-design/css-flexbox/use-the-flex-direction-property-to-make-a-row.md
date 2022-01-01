@@ -9,7 +9,7 @@ dashedName: use-the-flex-direction-property-to-make-a-row
 
 # --description--
 
-การเพิ่ม `display: flex` ให้กับ element หนึ่งทำให้มันกลางเป็น flex container
+การเพิ่ม `display: flex` ให้กับ element หนึ่งทำให้มันกลายเป็น flex container
 สิ่งนี้จะทำให้เราสามารถเรียง children ของ element นั้นให้เป็น row หรือ column ได้
 คุณทำแบบนี้ได้โดยการเพิ่ม `flex-direction` property ให้กับ parent item และกำหนดค่าให้มันเป็น row หรือ column
 การสร้าง row ขึ้นมาหนึ่งอันจะเป็นการเรียง children เป็นแถวในแนวนอน
@@ -41,7 +41,6 @@ assert($('#box-container').css('flex-direction') == 'row-reverse');
   #box-container {
     display: flex;
     height: 500px;
-
   }
   #box-1 {
     background-color: dodgerblue;

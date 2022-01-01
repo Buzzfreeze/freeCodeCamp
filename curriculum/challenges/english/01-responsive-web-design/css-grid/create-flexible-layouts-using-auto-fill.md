@@ -11,19 +11,20 @@ dashedName: create-flexible-layouts-using-auto-fill
 
 repeat function มาพร้อมกับตัวเลือกที่ชื่อว่า <dfn>auto-fill</dfn>
 สิ่งนี้ทำให้คุณสามารถเพิ่มแถวหรือคอลัมน์ตามขนาดที่คุณต้องการได้อัตโนมัติดโดยขึ้นกับขนาดของ container
-คุรสามารถสร้าง layouts ที่ค่อนข้างยืดหยุ่นได้เมื่อใช้ `auto-fill` ร่วมกับ `minmax` แบบนี้:
+คุณสามารถสร้าง layouts ที่ค่อนข้างยืดหยุ่นได้เมื่อใช้ `auto-fill` (ปรับให้เต็มแบบ auto) ร่วมกับ `minmax` แบบนี้ตามตัวอย่างด้านล่าง:
 
 ```css
 repeat(auto-fill, minmax(60px, 1fr));
 ```
 
-เมื่อ container เปลี่ยนขนาดของมัน, setup อันนี้จะค่อยเพิ่มคอลัมน์กว้าง 60px ไปเรื่อย ๆ 
+เมื่อ container เปลี่ยนขนาดของมัน, setup อันนี้จะค่อยเพิ่มคอลัมน์กว้าง 60px ไปเรื่อย ๆ
 **Note:** ถ้า container ของคุณใส่ item ทั้งหมดไม่ได้ใน 1 แถว, มันจะถูกผลักมาขึ้นแถวใหม่
 
 # --instructions--
 
+อธิยายตัวอย่างด้านบน
 ในกริดอันแรก, จงใช้ `auto-fill` ที่มี `repeat` เพื่อทำให้กริดเต็มไปด้วยคอลัมน์ที่มีความกว้างต่ำสุดที่ `60px` และสูงสุดที่ `1fr`
-หลังจากนั้น จงปรับขนาดของหน้า  preview เพื่อให้เห็นสิ่งที่ auto-fill ทำ
+หลังจากนั้น จงปรับขนาดของหน้า preview เพื่อให้เห็นสิ่งที่ auto-fill ทำ
 
 # --hints--
 
@@ -32,8 +33,8 @@ repeat(auto-fill, minmax(60px, 1fr));
 ```js
 assert(
   code.match(
-    /.container\s*?{[\s\S]*grid-template-columns\s*?:\s*?repeat\s*?\(\s*?auto-fill\s*?,\s*?minmax\s*?\(\s*?60px\s*?,\s*?1fr\s*?\)\s*?\)\s*?;[\s\S]*}/gi
-  )
+    /.container\s*?{[\s\S]*grid-template-columns\s*?:\s*?repeat\s*?\(\s*?auto-fill\s*?,\s*?minmax\s*?\(\s*?60px\s*?,\s*?1fr\s*?\)\s*?\)\s*?;[\s\S]*}/gi,
+  ),
 );
 ```
 
@@ -43,11 +44,21 @@ assert(
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
-  .item5{background:PaleGreen;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
+  .item5 {
+    background: PaleGreen;
+  }
 
   .container {
     font-size: 40px;
@@ -95,12 +106,22 @@ assert(
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
-  .item5{background:PaleGreen;}
-  
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
+  .item5 {
+    background: PaleGreen;
+  }
+
   .container {
     font-size: 40px;
     min-height: 100px;
@@ -108,14 +129,14 @@ assert(
     background: LightGray;
     display: grid;
     /* Only change code below this line */
-    
+
     grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-    
+
     /* Only change code above this line */
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 10px;
   }
-  
+
   .container2 {
     font-size: 40px;
     min-height: 100px;

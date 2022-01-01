@@ -9,9 +9,8 @@ dashedName: use-grid-column-to-control-spacing
 
 # --description--
 
-จนถึงตอนนี้, property ทั้งหมดที่ได้พูดได้นั้นมีไว้เพื่อ grid containers
+จนถึงตอนนี้ property ทั้งหมดที่ได้พูดได้นั้นมีไว้เพื่อ grid containers
 `grid-column` property เป็นอันแรกสำหรับใช้กับ grid item
-
 เส้นแนวตั้งและแนวนอนสมมุติที่สร้างกริดจะถูกเรียกว่า <dfn>lines</dfn>
 line พวกนี้เริ่มนับ 1 จากมุมซ้ายบนไล่ลงไปข้างล่างสำหรับแถว และไล่ไปทางขวาสำหรับคอลัมน์
 
@@ -38,14 +37,10 @@ grid-column: 1 / 3;
 `item5` class ควรมี `grid-column` property อันหนึ่ง
 
 ```js
-assert(
-  __helpers
-    .removeWhiteSpace($('style').text())
-    .match(/\.item5{.*grid-column:.*}/g)
-);
+assert(__helpers.removeWhiteSpace($('style').text()).match(/\.item5{.*grid-column:.*}/g));
 ```
 
-`item5` class should have a `grid-column` property which results in it consuming the last two columns of the grid.
+Class `item5` ควรมี `grid-column` property ได้ขยายพื้นที่ไปอีก 2 columns สุดท้ายของ grid ที่เหลือ.
 
 ```js
 const colStart = getComputedStyle($('.item5')[0]).gridColumnStart;
@@ -60,7 +55,7 @@ const correctResults = [
   '-12',
   'span 2span 2',
   'span 2auto',
-  'autospan 2'
+  'autospan 2',
 ];
 assert(correctResults.includes(result));
 ```
@@ -71,15 +66,22 @@ assert(correctResults.includes(result));
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
 
   .item5 {
     background: PaleGreen;
     /* Only change code below this line */
-
 
     /* Only change code above this line */
   }
@@ -109,10 +111,18 @@ assert(correctResults.includes(result));
 
 ```html
 <style>
-  .item1{background:LightSkyBlue;}
-  .item2{background:LightSalmon;}
-  .item3{background:PaleTurquoise;}
-  .item4{background:LightPink;}
+  .item1 {
+    background: LightSkyBlue;
+  }
+  .item2 {
+    background: LightSalmon;
+  }
+  .item3 {
+    background: PaleTurquoise;
+  }
+  .item4 {
+    background: LightPink;
+  }
 
   .item5 {
     background: PaleGreen;

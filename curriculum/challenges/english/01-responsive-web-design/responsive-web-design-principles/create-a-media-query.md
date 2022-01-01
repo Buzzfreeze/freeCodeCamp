@@ -9,22 +9,26 @@ dashedName: create-a-media-query
 
 # --description--
 
-Media Queries เป็นเทคนิคใหม่ของ CSS3 ที่จะเปลี่ยนการแสดงผลของเนื้อหาตามขนาดของ viewport 
-viewport คือพื้นที่ที่ผู้ใช้สามารถมองเห็นได้ด้วยตาบนเว็บเพจ และแตกต่างกันตามอุปกรณ์ที่ใช้เข้าถึงเว็บไซต์
+Media Queries เป็นเทคนิคใหม่ของ CSS3 ที่จะเปลี่ยนการแสดงผลของเนื้อหาตามขนาดของ viewport
+ซึ่ง viewport คือพื้นที่ที่ผู้ใช้สามารถมองเห็นได้ด้วยตาบนเว็บเพจ และความแตกต่างของหน้าจอแสดงผลตามอุปกรณ์ที่ใช้เข้าถึงเว็บไซต์ เช่น notebook หรือ mobile
 
-Media Queries ประกอบด้วยประเภทของมีเดีย และถ้าประเภทของมีเดียนั้นตรงกับประเภทของอุปกรณ์ เอกสารนั้นก็จะแสดงออกมาตามสไตล์ที่เรากำหนด
+Media Queries ประกอบด้วยประเภทของมีเดีย และถ้าประเภทของมีเดียนั้นตรงกับประเภทของอุปกรณ์ เว็บเพจก็จะแสดงออกมาตามสไตล์ที่เรากำหนด
 คุณสามารถมี selector หลายอันและกำหนดสไตล์ของ media query ตามที่คุณต้องการ
 
-นี่คือตัวอย่างของ media query ที่ส่งเนื้อหาออมาเมื่อความกว้างของอุปกรณ์น้อยกว่าและเท่ากับ `100px`:
+นี่คือตัวอย่างของ media query ที่จะแสดงผลของเนื้อหาออมาเมื่อความกว้างของอุปกรณ์ (น้อยกว่าและเท่ากับ `100px`):
 
 ```css
-@media (max-width: 100px) { /* CSS Rules */ }
+@media (max-width: 100px) {
+  /* CSS Rules */
+}
 ```
 
-และ media query ข้างล่างจะส่งเนื้อหาออกมาเมื่อความสูงของอุปกรณ์มากกว่าหรือเท่ากับ `350px`:
+และ media query ข้างล่างจะแสดงผลของเนื้อหาออกมาเมื่อความสูงของอุปกรณ์ (มากกว่าหรือเท่ากับ `350px`):
 
 ```css
-@media (min-height: 350px) { /* CSS Rules */ }
+@media (min-height: 350px) {
+  /* CSS Rules */
+}
 ```
 
 จงจำไว้ว่า CSS ข้างใน media query ถูกใช้เมื่อประเภทของ media ตรงกับอุปกรณ์เท่านั้น
@@ -39,20 +43,20 @@ Media Queries ประกอบด้วยประเภทของมีเ
 
 ```js
 const media = new __helpers.CSSHelp(document).getCSSRules('media');
-assert(media.some(x => x.media?.mediaText?.includes('(max-height: 800px)')));
+assert(media.some((x) => x.media?.mediaText?.includes('(max-height: 800px)')));
 ```
 
-Your `p` element should have a `font-size` of `10px` when the device `height` is less than or equal to `800px`.
+tag `p` element ควรมี `font-size` เป็น `10px` เมื่ออุปกรณ์ `height` น้อยกว่าหรือเท่ากับ `800px`.
 
 ```js
 const rules = new __helpers.CSSHelp(document).getRuleListsWithinMedia('(max-height: 800px)');
-assert(rules?.find(x => x.selectorText === 'p')?.style?.fontSize === "10px");
+assert(rules?.find((x) => x.selectorText === 'p')?.style?.fontSize === '10px');
 ```
 
-Your `p` element should have an initial `font-size` of `20px` when the device `height` is more than `800px`.
+tag `p` element ควรมีขนาดเริ่มต้น `font-size` เป็น `20px` เมื่ออุปกรณ์ `height` มากกว่า `800px`.
 
 ```js
-const ifPFirst = new __helpers.CSSHelp(document).getCSSRules()?.find(x => x?.selectorText === 'p' || x?.media);
+const ifPFirst = new __helpers.CSSHelp(document).getCSSRules()?.find((x) => x?.selectorText === 'p' || x?.media);
 assert(ifPFirst?.style?.fontSize === '20px');
 ```
 
@@ -71,7 +75,12 @@ assert(ifPFirst?.style?.fontSize === '20px');
   /* Only change code above this line */
 </style>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel
+  vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac
+  habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse
+  pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.
+</p>
 ```
 
 # --solutions--
@@ -89,5 +98,10 @@ assert(ifPFirst?.style?.fontSize === '20px');
   }
 </style>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel
+  vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac
+  habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse
+  pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.
+</p>
 ```
