@@ -8,33 +8,33 @@ dashedName: make-images-mobile-responsive
 
 # --description--
 
-ก่อนอื่นให้เพิ่มรูปใหม่ไว้ข้างล่างรูปเก่า โดยกำหนด `src` attribute เป็น `https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg`.
+ก่อนอื่นให้เพิ่มรูปใหม่ไว้ข้างล่างรูปเก่า โดยกำหนด `src` เป็น `https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg`
 
-หากต้องการให้รูปที่เราเพิ่งเพิ่มมานี้มีความกว้างที่พอดีกับหน้าจอมือถือของเราล่ะ?
+ถ้าเราอยากให้รูปนี้กว้างพอดีกับหน้าจอมือถือของเราล่ะ?
 
-วิธีที่ง่ายวิธีการนึงคือการใช้ Bootstrap เพียงแค่การเพิ่ม class `img-responsive` ให้ tag image เท่านี้รูปของเราก็จะพอดีกับความกว้างของเพจแล้ว
+ถ้าเราใช้ Bootstrap เราแค่เพิ่ม class `img-responsive` ให้กับ tag image แค่นี้รูปของเราก็จะพอดีกับความกว้างของหน้านี้แล้ว
 
 # --hints--
 
-จะต้องมีรูปภาพในทั้งหมด 2 ภาพในเพจ
+จะต้องมีรูปภาพทั้งหมด 2 ภาพในเพจ
 
 ```js
 assert($('img').length === 2);
 ```
 
-รูปภาพใหม่ที่เพิ่มเข้ามาจะต้องอยู่ใต้รูปภาพเก่า และมี class `img-responsive`.
+รูปภาพใหม่ที่เพิ่มเข้ามาจะต้องอยู่ใต้รูปภาพเก่า และมี class เป็น `img-responsive`
 
 ```js
 assert($('img:eq(1)').hasClass('img-responsive'));
 ```
 
-ไม่ต้องเพิ่ม class `smaller-image` ให้รูปภาพใหม่ที่เพิ่มมา
+รูปภาพใหม่ที่เพิ่มมาต้องไม่มี class `smaller-image`
 
 ```js
 assert(!$('img:eq(1)').hasClass('smaller-image'));
 ```
 
-ให้ใช้ `src` เป็น `https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg` สำหรับรูปภาพใหม่
+รูปภาพทีเพิ่มใหม่ต้องมี `src` เป็น `https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg`
 
 ```js
 assert($('img:eq(1)').attr('src') === 'https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg');

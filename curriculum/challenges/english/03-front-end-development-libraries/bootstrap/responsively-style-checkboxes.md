@@ -12,27 +12,27 @@ dashedName: responsively-style-checkboxes
 
 # --description--
 
-เราสามารถใช้คุณสมบัติของ class `col-xs-*` ของ Bootstrap กับทุกๆ `form` element ได้ ดังนั้นถ้าเราเอาไปใช้กับฟอร์ม checkbox ก็จะทำให้ตัว checkbox ต่างๆ จัดเรียงเท่าๆ กันไปตามความกว้างเพจ ไม่ว่าจะไปเปิดที่หน้าจอขนาดเท่าใดก็ตาม
+เราใช้ class `col-xs-*` ของ Bootstrap กับ `form` element ได้ทุกตัว ดังนั้นถ้าเราเอาไปใช้กับปุ่ม checkbox ก็จะทำให้ตัว checkbox ที่มี กระจายตัวไปโดยห่างเท่าๆกันตามความกว้างหน้า ไม่ว่าจะไปเปิดที่หน้าจอขนาดเท่าใดก็ตาม
 
 # --instructions--
 
-นำ checkbox ทั้งหมดไปไว้ใน `<div class="row">` element แล้วให้นำ checkbox แต่ละอันแยกไปไว้ในแต่ละ `<div class="col-xs-4">` element
+นำ checkbox ทั้งหมดไปไว้ใน `<div class="row">` แล้วให้นำ checkbox แต่ละอันแยกไปไว้ใน `<div class="col-xs-4">` ของตัวเอง
 
 # --hints--
 
-checkbox ทั้งหมดจะต้องอยู่ภายใน `div` หนึ่ง `div` ที่มี class `row`
+checkbox ทั้งหมดจะต้องอยู่ภายใน `div` หนึ่ง `div` ที่มี class เป็น `row`
 
 ```js
 assert($('div.row:has(input[type="checkbox"])').length > 0);
 ```
 
-ให้ฝัง checkbox แต่ละอันไปใน `div` ที่มี class `col-xs-4` แยกแต่ละ `div` เลย
+checkbox แต่ละอันจะต้องอยู่ใน `div` ของตัวเองที่มี class เป็น `col-xs-4` 
 
 ```js
 assert($('div.col-xs-4:has(input[type="checkbox"])').length > 2);
 ```
 
-อย่าลืม tag ปิด สำหรับทุกๆ `div` elements
+อย่าลืม tag ปิดของ `div` ทุกตัว
 
 ```js
 assert(

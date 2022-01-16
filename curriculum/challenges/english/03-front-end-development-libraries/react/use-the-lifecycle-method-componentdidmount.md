@@ -8,17 +8,23 @@ dashedName: use-the-lifecycle-method-componentdidmount
 
 # --description--
 
-ในบางครั้งนักพัฒนาเว็บส่วนใหญ่จำเป็นต้องเรียกจุดปลาย API เพื่อดึงข้อมูล หากคุณกำลังทำงานกับ React สิ่งสำคัญคือต้องรู้ว่าต้องทำการนี้ที่ไหน
+คนเขียนเว็บส่วนใหญ่จะต้องเรียกใช้ API เพื่อดึงข้อมูล ถ้าคุณใช้ React คุณต้องรู้ว่าจะต้องเรียก API จากที่ไหน
 
-แนวปฏิบัติที่ดีที่สุดเกี่ยวกับ React คือการเรียกใช้งาน API หรือการเรียกใช้งานใดๆ ไปยังเซิร์ฟเวอร์ของคุณใน lifecycle method `componentDidMount()` ซึ่ง method นี้ถูกเรียกใช้งานหลังจากติดตั้ง component กับ DOM การเรียกใช้งานใดๆ ของ `setState()` ในที่นี่จะสั่งในเรนเดอร์ component ของคุณอีกครั้ง เมื่อคุณเรียกใช้ API ใน method นี้ และตั้งค่า state ของคุณด้วยข้อมูลที่ API return มา มันจะสั่งอัปเดตโดยอัตโนมัติเมื่อคุณได้รับข้อมูลมา
+ถ้าใช้ React วิธีที่ดีที่สุดในการเรียก API (หรือเรียกข้อมูลจากเซิร์ฟเวอร์ด้วยวิธีอื่น) คือต้องเรียกจาก lifecycle method ชื่อ `componentDidMount()` 
+method นี้จะถูกเรียกใช้หลังจากที่ component เชื่อมต่อกับ DOM แล้ว
+การใช้ `setState()` ใน method นี้จะทำให้ component ของคุณเรนเดอร์ใหม่อีกครั้ง 
+ถ้าเรียกใช้ API ใน method นี้ และเก็บค่าที่ API ส่งมาให้ลงใน state จะทำให้ UI อัปเดททันทีเมื่อ API ส่งค่ากลับมา
 
 # --instructions--
 
-มีการเรียกใช้ API จำลองใน `componentDidMount()` มันตั้งค่า state หลังจาก 2.5 วินาทีเพื่อจำลองการเรียกใช้เซิร์ฟเวอร์เพื่อดึงข้อมูล ตัวอย่างนี้ขอ users ที่ใช้งานอยู่ทั้งหมดในปัจจุบันบนเว็บไซต์ ใน render method ให้เรนเดอร์ค่าของ `activeUsers` ใน `h1` หลังข้อความ `Active Users:` ลองดูว่าเกิดอะไรขึ้นในพรีวิว และอย่าลังเลที่จะเปลี่ยนระยะเวลา timeout เพื่อดูเอฟเฟกต์ต่างๆ
+ใน `componentDidMount()` เราได้เขียนการเรียกใช้ API แบบปลอมๆเอาไว้ให้แล้ว 
+ซึ่งจะทำการเก็บค่าลง state เมื่อเวลาผ่านไป 2.5 วินาที เพื่อจำลองการดึงข้อมูลจากเซิร์ฟเวอร์ 
+ตัวอย่างนี้ดึงข้อมูลจำนวน user ที่ใช้งานอยู่ทั้งหมดบนเว็บไซต์ 
+ใน method `render` ให้แสดงค่าของ `activeUsers` ใน `h1` หลังข้อความ `Active Users:` และลองดูว่าเกิดอะไรขึ้นในหน้าเว็บ และให้ลองเปลี่ยนค่าของ timeout ดู จะใด้เห็นว่าเกิดอะไรขึ้น
 
 # --hints--
 
-`MyComponent` ควรเรนเดอร `div` element ที่ครอบ `h1` tag
+`MyComponent` ต้องเรนเดอร์ `div` ที่ครอบแท็ก `h1` อยู่
 
 ```js
 assert(
@@ -32,7 +38,7 @@ assert(
 );
 ```
 
-Component state ควรถูกอัปเดตด้วยระยะเวลา timeout function ใน `componentDidMount`
+ต้องอัปเดต state ของ component โดยใช้ฟังก์ชัน setTimeout ใน `componentDidMount`
 
 ```js
 assert(
@@ -45,7 +51,7 @@ assert(
 );
 ```
 
-`h1` tag ควรเรนเดอร์ค่า `activeUsers` จาก state ของ `MyComponent`
+ในแท็ก `h1` ต้องแสดงค่าของ `activeUsers` โดยดึงค่ามาจาก state ของ `MyComponent`
 
 ```js
 (() => {
@@ -90,9 +96,9 @@ class MyComponent extends React.Component {
   render() {
     return (
       <div>
-        {/* Change code below this line */}
+        {/* แก้ไขโค้ดใต้บรรทัดนี้ */}
         <h1>Active Users: </h1>
-        {/* Change code above this line */}
+        {/* แก้ไขโค้ดเหนือบรรทัดนี้ */}
       </div>
     );
   }

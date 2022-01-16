@@ -8,7 +8,9 @@ dashedName: use-each-to-map-over-items-in-a-list
 
 # --description--
 
-แบบทดสอบที่ผ่านมานั้นได้แสดงให้เห็นว่าคำสั่ง `@for`ใช้ค่าเริ่มต้นและค่าสิ้นสุดเพื่อวนลูปซ้ำจำนวนหนึ่งอย่างไร Sass ยังมีคำสั่ง `@each` ที่ทำการลูปซ้ำตามจำนวนรายหรือ map ในการวนซ้ำแต่ละครั้ง ตัวแปรถูกกำหนดให้เป็นค่าปัจจุบันจากรายการหรือ map
+จากแบบทดสอบที่ผ่านมา เราได้เห็นแล้วว่าคำสั่ง `@for` ใช้ค่าเริ่มต้นและค่าสิ้นสุดเพื่อบอกว่าลูปจะทำงานกี่รอบ
+แต่ไม่ใช่แค่นั้น Sass ก็มีคำสั่ง `@each` ด้วย ซึ่งจะทำการลูปซ้ำตามจำนวน list หรือ map 
+ในการวนซ้ำแต่ละครั้ง ตัวแปรถูกกำหนดให้เป็นค่าปัจจุบันจาก list หรือ map
 
 ```scss
 @each $color in blue, red, green {
@@ -16,7 +18,7 @@ dashedName: use-each-to-map-over-items-in-a-list
 }
 ```
 
-สำหรับ map นั้นมี syntax ที่แตกต่างไปเล็กหน่อย ดังนี้:
+ตัวอย่างด้านบนเป็นการใช้ list แต่ถ้าจะใช้ map จะมี syntax ที่ต่างไปเล็กหน่อย:
 
 ```scss
 $colors: (color1: blue, color2: red, color3: green);
@@ -26,7 +28,8 @@ $colors: (color1: blue, color2: red, color3: green);
 }
 ```
 
-โปรดจำไว้ว่าตัวแปร `$key` ต้องได้อ้างอิงถึง key ใน map ไม่อย่างนั้น CSS ที่ประมวลผลแล้วจะมี `color1`, `color2`... ข้างใน โค้ดทั้งสองข้างบนถูกเปลี่ยนไปเป็น CSS ดังข้างล่าง:
+ในการใช้ map ตัวแปร `$key` จะจำเป็นต้องมีเพื่ออ้างอิง key ใน map ไม่อย่างนั้น CSS ที่ประมวลผลแล้วจะมีค่าของ `color` เป็น `color1`, `color2` ฯลฯ แทน 
+ตัวอย่างทั้งสองตัวจะกลายเป็น CSS แบบเดียวกันตามด้านล่าง:
 
 ```scss
 .blue-text {
@@ -44,29 +47,30 @@ $colors: (color1: blue, color2: red, color3: green);
 
 # --instructions--
 
-ให้เขียนคำสั่ง `@each` ที่วนไปในลิสต์ `blue, black, red` และกำหนดตัวแปรแต่ละตัวไปใน คลาส `.color-bg` ที่ในส่วน `color` เปลี่ยนไปในแต่ละรายการ คลาสแต่ละคลาสจะต้องตั้งค่า `background-color` ไปตามสีข้างต้น
+ให้เขียนคำสั่ง `@each` ที่วนอ่าน list `blue, black, red` และให้ใช้ค่าที่อ่านได้มาสร้างเป็น class `.color-bg` (`color` ในที่นี้จะเปลี่ยนไปตามค่าของตัวแปรที่อ่านได้) 
+และ class ที่สร้างมาจะต้องกำหนดค่าของ `background-color` ให้เป็นค่าที่อ่านได้
 
 # --hints--
 
-โค้ดของคุณควรใช้คำสั่ง `@each`
+ต้องใช้คำสั่ง `@each` ในโค้ด
 
 ```js
 assert(code.match(/@each /g));
 ```
 
-คลาส `.blue-bg` ของคุณควรมี `background-color` เป็นสี blue
+class `.blue-bg` ต้องมี `background-color` เป็น `blue`
 
 ```js
 assert($('.blue-bg').css('background-color') == 'rgb(0, 0, 255)');
 ```
 
-คลาส `.black-bg` ของคุณควรมี `background-color` เป็นสี black
+class `.black-bg` ต้องมี `background-color` เป็น `black`
 
 ```js
 assert($('.black-bg').css('background-color') == 'rgb(0, 0, 0)');
 ```
 
-คลาส `.red-bg` ของคุณควรมี `background-color` เป็นสี red
+class `.red-bg` ต้องมี `background-color` เป็น `red`
 
 ```js
 assert($('.red-bg').css('background-color') == 'rgb(255, 0, 0)');

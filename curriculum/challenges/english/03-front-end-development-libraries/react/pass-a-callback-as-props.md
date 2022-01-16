@@ -8,17 +8,27 @@ dashedName: pass-a-callback-as-props
 
 # --description--
 
-คุณสามารถส่ง `state` เป็น props ไปยัง child component ได้ แต่ไม่จำกัดเพียงแค่การส่งข้อมูลเท่านั้น คุณยังสามารถส่งผ่านฟังก์ชันตัวจัดการหรือ method ใดๆ ที่กำหนดไว้บน React component ไปยัง child component ได้ นี่คือวิธีที่คุณอนุญาตให้ child component โต้ตอบกับ parent component ได้ คุณส่งต่อ method ให้กับ child เหมือนกับ prop ทั่วไป มีการกำหนดชื่อและคุณสามารถเข้าถึงชื่อ method นั้นภายใต้ `this.props` ใน child component
+เราส่ง `state` เป็น props ไปยัง child component ได้ แต่การส่งแบบนี้ไม่จำกัดเฉพาะข้อมูลที่เป็น object string int ฯลฯ เท่านั้น 
+คุณยังสามารถส่งผ่านฟังก์ชันหรือ method ที่เขียนไว้ใน React component ไปยัง child component ได้ด้วย 
+วิธีนี้จะทำให้คุณใช้ child ในการแก้ไขหรือเปลี่ยนแปลง parent ได้ โดยเราจะส่ง method ให้กับ child ได้ด้วยวิธีเดียวกับการส่ง prop ทั่วๆไป 
+คุณแค่ต้องตั้งชื่อ method นั้น แล้ว method นั้นก็จะเข้าถึงได้ผ่าน `this.props` ใน child component
 
 # --instructions--
 
-มีสามองค์ประกอบที่ระบุไว้ใน code editor ให้ `MyApp` component เป็น parent ที่จะเรนเดอร์ `GetInput` และ `RenderInput` child component เพิ่ม `GetInput` component ให้กับ render method ใน `MyApp` จากนั้นส่ง prop ที่เรียกว่า `input` ให้มันที่กำหนดให้กับ `inputValue` จาก `state` ของ `MyApp` แล้วสร้าง prop ที่เรียกว่า `handleChange` และส่ง input handler 'handleChange' ไปให้
+เราได้สร้าง component สามตัวไว้ใน code editor ให้แล้ว 
+โดย component `MyApp` เป็น parent ที่จะมี child component เป็น `GetInput` และ `RenderInput` 
+ให้คุณเพิ่ม `GetInput` ใน method render ใน `MyApp` และให้ส่ง `inputValue` ใน `state` ของ `MyApp` ไปให้ `GetInput` ผ่านทาง prop ที่ชื่อ `input` 
+แล้วให้ส่ง input handler ที่ชื่อ `handleChange` ลงไป ผ่าน prop ที่ชื่อว่า `handleChange`
 
-ถัดไป เพิ่ม 'RenderInput' ให้กับ render method ใน `MyApp` จากนั้นสร้าง prop ที่เรียกว่า `input` และส่ง `inputValue` จาก `state` ไปให้มัน เมื่อคุณทำเสร็จแล้ว คุณจะสามารถพิมพ์ใน `input` field ใน `GetInput` component ซึ่งจะเรียก handler method ใน parent ของมันผ่าน props สิ่งนี้จะอัปเดต input ใน `state` ของ parent ซึ่งส่งผ่านเป็น props ให้กับ child ทั้งสอง สังเกตว่าข้อมูลไหลระหว่าง component อย่างไร และแหล่งที่มาของความจริงเพียงแหล่งเดียวยังคงเป็น "สถานะ" ขององค์ประกอบหลัก ตัวอย่างนี้ค่อนข้างยุ่งยาก แต่ควรทำให้สำเร็จเพื่อแสดงให้เห็นว่าข้อมูลและ callback สามารถส่งผ่านระหว่าง React component ได้อย่างไร
+ต่อไปให้เพิ่ม `RenderInput` ใน method `render` ของ `MyApp` จากนั้นให้ส่ง `inputValue` ของ `state` ผ่าน prop ที่ชื่อ `input` ลงไปให้ `RenderInput` 
+
+ถ้าทำตามขั้นตอนเสร็จและถูกต้องแล้ว เวลาที่คุณพิมพ์ข้อความลงในกล่องข้อความ `GetInput` จะไปเรียก handler method ของ parent (method `handleChange`) ผ่าน props ซึ่งจะไปเปลี่ยนค่า `input` ใน `state` ของ parent
+ให้ลองสังเกตการไหลของข้อมูลใน component และังเกตการที่ข้อมูลที่ใช้จะเก็บอยู่ที่เดียวคือที่ `state` ของ parent component 
+เรายอมรับว่าตัวอย่างนี้ซับซ้อนและยากมาก แต่เราอยากให้ทำความเข้าใจให้ได้ จะได้เห็นว่าข้อมูลและ callback ส่งไป-มาระหว่าง React component ได้อย่างไร
 
 # --hints--
 
-`MyApp` component ควรจะเรนเดอร์
+ต้องเรนเดอร์ `MyApp` ได้
 
 ```js
 assert(
@@ -29,7 +39,7 @@ assert(
 );
 ```
 
-`GetInput` component ควรจะเรนเดอร์
+ต้องเรนเดอร์ `GetInput` ได้
 
 
 ```js
@@ -41,7 +51,7 @@ assert(
 );
 ```
 
-`RenderInput` component ควรจะเรนเดอร์
+ต้องเรนเดอร์ `RenderInput` ได้
 
 ```js
 assert(
@@ -52,7 +62,7 @@ assert(
 );
 ```
 
-`GetInput` component ควรได้รับ `MyApp` state property `inputValue` เป็น props และ มี `input` element ที่จะปรับแต่ง `MyApp` state
+จะต้องส่ง property `inputValue` ของ `state` ใน `MyApp` ไปให้ `GetInput` ผ่าน props และ `GetInput` ต้องมี `input` element ที่จะไปเปลี่ยนค่า `state` ของ `MyApp` ด้วย
 
 ```js
 async () => {
@@ -75,7 +85,7 @@ async () => {
 };
 ```
 
-`RenderInput` component ควรจะได้รับ `MyApp` state property `inputValue` เป็น props
+จะต้องส่ง property `inputValue` ของ `state` ใน `MyApp` ไปให้ `RenderInput` ผ่าน props
 
 ```js
 async () => {
@@ -118,9 +128,9 @@ class MyApp extends React.Component {
   render() {
     return (
        <div>
-        { /* Change code below this line */ }
+        { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
 
-        { /* Change code above this line */ }
+        { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
        </div>
     );
   }

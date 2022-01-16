@@ -8,19 +8,27 @@ dashedName: never-mutate-state
 
 # --description--
 
-แบบทดสอบสุดท้ายเหล่านี้อธิบาย methods ต่างๆ ในการบังคับใช้หลักการสำคัญของ state immutability ใน Redux Immutable state หมายความว่าคุณไม่สามารถแก้ไข state โดยตรง แต่คุณสามารถ return สำเนาใหม่ของ state
+เรามาถึงแบบทดสอบส่วนสุดท้ายแล้ว ซึ่งแบบทดสอบ 4 ตัวสุดท้ายนี้จะอธิบาย method ต่างๆ ในการบังคับใช้หลักของ state immutability ใน Redux 
+Immutable state (state ที่ไม่เปลี่ยนรูป) แปลว่าคุณจะไม่แก้ไข state โดยตรง แต่คุณจะคืนค่าเป็น state ตัวใหม่เสมอ
 
-หากคุณถ่ายภาพ state ของแอป Redux เมื่อเวลาผ่านไป คุณจะเห็นบางอย่างเช่น `state 1`, `state 2`, `state 3`,`state 4`, `...` และอื่นๆ ที่แต่ละรายการ state อาจคล้ายกับ state ก่อนหน้า แต่แต่ละรายการเป็นชิ้นส่วนข้อมูลที่แตกต่างกัน อันที่จริงความไม่เปลี่ยนรูปนี้คือสิ่งที่ให้คุณสมบัติเช่น time-travel debugging ที่คุณอาจเคยได้รู้จักมาแล้ว
+เก็บข้อมูลของ state ของแอป Redux ทุกครั้งที่มีการเปลี่ยนแปลง คุณจะเห็นการเปลี่ยนแปลงของ state แบบนี้ `state 1`, `state 2`, `state 3`,`state 4`, `...` ฯลฯ 
+โดยที่ state แต่ละตัวอาจจะมีข้อมูลคล้ายกับ state ก่อนหน้า แต่จริงๆแล้ว state แต่ละตัวจะเป็นข้อมูลคนละก้อนกัน 
+การที่ state มีความเป็น immutable ทำให้ฟีเจอร์เช่น time-travel debugging เกิดขึ้นได้
 
-Redux ไม่ได้บังคับใช้ state immutability อย่างจริงจังใน store หรือ reducer ความรับผิดชอบนั้นตกอยู่ที่โปรแกรมเมอร์ โชคดีที่ JavaScript (โดยเฉพาะ ES6) มีเครื่องมือที่มีประโยชน์หลายอย่างที่คุณสามารถใช้เพื่อบังคับให้ state ไม่เปลี่ยนรูปได้ ไม่ว่าจะเป็น `string`, `number`, `array` หรือ `object` โปรดทราบว่า string และ number เป็นค่าดั้งเดิมและไม่เปลี่ยนแปลงโดยธรรมชาติ กล่าวอีกนัยหนึ่ง 3 คือ 3 เสมอ คุณไม่สามารถเปลี่ยนค่าของตัวเลข 3 อย่างไรก็ตาม `array` หรือ `object` เปลี่ยนแปลงได้ ในทางปฏิบัติ state ของคุณอาจประกอบด้วย `array` หรือ `object` เนื่องจากเป็นโครงสร้างข้อมูลที่มีประโยชน์สำหรับการแสดงข้อมูลหลายประเภท
+Redux ไม่ได้บังคับใช้ state immutability อย่างจริงจังใน store หรือ reducer แต่โปรแกรมเมอร์จะต้องจัดการในส่วนนี้เอง เราโชคดีที่ JavaScript (โดยเฉพาะ ES6) มีเครื่องมือที่คุณใช้เพื่อบังคับให้ state ไม่เปลี่ยนรูปได้ ไม่ว่าจะเป็น `string`, `number`, `array` หรือ `object` 
+ถ้ายังจำเรื่อง data type ได้ string และ number เป็นข้อมูลประเภทที่ immutable อยู่แล้ว แต่ `array` หรือ `object` นั้นเป็นประเภทของข้อมูลที่ mutable 
+ในความเป็นจริง state ของคุณอาจจะเป็น `array` หรือ `object` เพราะว่าเป็นโครงสร้างข้อมูลที่ใช้เก็บข้อมูลได้หลากหลายรูปแบบ
 
 # --instructions--
 
-มี `store` และ `reducer`  ใน code editor สำหรับจัดการ to-do items ให้เขียน`ADD_TO_DO` case ให้สำเร็จ ใน reducer เพื่อผนวก to-do ใหม่เข้ากับ state มีสองสามวิธีในการทำสิ่งนี้ให้สำเร็จด้วย JavaScript มาตรฐานหรือ ES6 ลองดูว่าคุณสามารถหาวิธี return array ใหม่ที่มีรายการจาก `action.todo` ต่อท้ายได้หรือไม่
+เราได้เขียน `store` และ `reducer` ที่ใช้จัดการ to-do item ใน code editor ให้แล้ว
+ให้เขียน case `ADD_TO_DO` ใน reducer ให้เสร็จ เพื่อเติม to-do ใหม่เข้าไปใน state 
+มีหลายวิธีที่จะทำแบบทดสอบนี้ได้ ทั้งการใช้ JavaScript แบบดั้งเดิมหรือใช้ ES6 
+ให้ลองดูว่าคุณจะหาวิธีคืนค่าเป็น array ใหม่ ที่นำข้อมูลจาก `action.todo` มาต่อท้ายได้หรือไม่
 
 # --hints--
 
-ควรมี Redux store และเริ่มต้นด้วย state เป็น `todos` array ใน code editor
+ต้องมีมี Redux store ที่มีค่าของ state เริ่มต้นเป็น array `todos` ใน code editor
 
 ```js
 assert(
@@ -39,13 +47,13 @@ assert(
 );
 ```
 
-ทั้ง `addToDo` และ `immutableReducer` ควรเป็นฟังกืชัน
+ทั้ง `addToDo` และ `immutableReducer` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof addToDo === 'function' && typeof immutableReducer === 'function');
 ```
 
-การส่ง action ของ type `ADD_TO_DO` บน Redux store ควรเพิ่มรายการ `todo` และห้ามเปลี่ยนแปลง state
+การส่ง action ที่มี type เป็น `ADD_TO_DO` ไปยัง Redux store ต้องเพิ่มรายการ `todo` และห้ามเปลี่ยนแปลง state
 
 ```js
 assert(
@@ -73,7 +81,7 @@ assert(
 ```js
 const ADD_TO_DO = 'ADD_TO_DO';
 
-// A list of strings representing tasks to do:
+// array ของ string ที่เป็น to-do:
 const todos = [
   'Go to the store',
   'Clean the house',
@@ -84,7 +92,7 @@ const todos = [
 const immutableReducer = (state = todos, action) => {
   switch(action.type) {
     case ADD_TO_DO:
-      // Don't mutate state here or the tests will fail
+      // ให้คืนค่าโดยห้ามเปลี่ยนแปลง state เดิม
       return
     default:
       return state;

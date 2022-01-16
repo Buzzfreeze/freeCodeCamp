@@ -8,7 +8,7 @@ dashedName: add-key-value-pairs-to-javascript-objects
 
 # --description--
 
-โดยพื้นฐานที่สุดแล้ว object เป็นเพียงชุดของคู่ <dfn>key-value</dfn> กล่าวอีกนัยหนึ่งว่า object คือชิ้นส่วนของข้อมูล (<dfn>values</dfn>) ที่จับคู่กับ identifiers ที่ไม่ซ้ำกันซึ่งเรียกว่า <dfn>properties</dfn> (<dfn>keys</dfn>) ลองดูตัวอย่าง:
+จริงๆแล้ว object เป็นแค่ <dfn>key-value pair</dfn> เท่านั้น ถ้าจะให้อธิบายคือ object คือข้อมูล (<dfn>value</dfn>) ที่มีชื่อที่ไม่ซ้ำกันซึ่งเราเรียกว่า <dfn>property</dfn> (<dfn>key</dfn>) ลองดูตัวอย่าง:
 
 ```js
 const tekkenCharacter = {
@@ -18,20 +18,20 @@ const tekkenCharacter = {
 };
 ```
 
-โค้ดด้านบนกำหนด object ตัวละครวิดีโอเกม Tekken ชื่อ `tekkenCharacter` มี 3 properties โดยแต่ละ property จะจับคู่กับค่าที่กำหนด หากคุณต้องการเพิ่ม property เช่น "origin" สามารถทำได้โดยกำหนด `origin` ให้กับ object
+โค้ดด้านเป็น object ของตัวละครในเกม Tekken ชื่อ `tekkenCharacter` ซึ่งมีมี 3 property โดยแต่ละ property จะคู่กับค่าที่กำหนดให้ ถ้าเราต้องการเพิ่ม property เช่น `origin` จะทำได้โดยกำหนด `origin` ให้กับ object:
 
 ```js
 tekkenCharacter.origin = 'South Korea';
 ```
 
-จากโค้ดด้านบนใช้ dot notation (สัญลักษณ์จุด) หากคุณสังเกต object `tekkenCharacter` ตอนนี้จะมี `origin` property โดย Hwoarang ก็มีผมสีส้มที่โดดเด่น คุณสามารถเพิ่ม property นี้ด้วยเครื่องหมายวงเล็บดังนี้
+โค้ดด้านบนจะใช้ dot notation ตอนนี้ถ้าเราไปดูข้อมูลของ object `tekkenCharacter` จะมี property `origin` ชื่อ origin แล้ว คราวนี้เรารู้ว่า Hwoarang นั้นก็มีผมสีส้มด้วย เราสามารถเพิ่ม property นี้ด้วย Bracket notation (`[]`) ได้แบบนี้:
 
 ```js
 tekkenCharacter['hair color'] = 'dyed orange';
 ```
 
-ถ้าหาก property ของคุณมี space หรือหากคุณต้องการใช้ตัวแปรเพื่อตั้งชื่อ property คุณจำเป็นต้องใช้เครื่องหมายวงเล็บ Bracket notation 
-ในกรณีข้างต้น property จะอยู่ในเครื่องหมายคำพูดเพื่อแสดงว่าเป็น string และสามารถเพิ่มได้ตามโค้ดด้านบน แต่หากไม่มีเครื่องหมายคำพูด จะถูกประเมินเป็นตัวแปรและชื่อของ property จะเป็นค่าใดก็ตามของตัวแปรนั้น นี่คือตัวอย่าง
+ถ้าชื่อ property ของเรามีเว้นวรรค หรือถ้าเราต้องการใช้ตัวแปรเพื่อตั้งชื่อ property เราจำเป็นต้องใช้ Bracket notation 
+ในตัวอย่างด้านบน property จะอยู่ในเครื่องหมายคำพูดเพื่อแสดงว่าเป็น string และจะเพิ่ม property ตามที่เห็นเลบ แต่ถ้าไม่มีเครื่องหมายคำพูด ชื่อของ property จะถูกตั้งตามค่าของตัวแปรนั้น ตามตัวอย่างนี้:
 
 ```js
 const eyes = 'eye color';
@@ -39,7 +39,7 @@ const eyes = 'eye color';
 tekkenCharacter[eyes] = 'brown';
 ```
 
-หลังจากเพิ่มตามตัวอย่างทั้งหมดแล้ว object จะมีลักษณะดังนี้
+ถ้าเราทำตามตัวอย่างทั้งหมดแล้ว object จะมีหน้าตาแบบนี้:
 
 ```js
 {
@@ -54,36 +54,37 @@ tekkenCharacter[eyes] = 'brown';
 
 # --instructions--
 
-จงสร้าง object `foods` ที่มีสามรายการ ให้ใช้ syntax แบบใดก็ได้ แล้วเพิ่มสามรายการเข้าไป ได้แก่ `bananas` มีค่า `13`, `grapes` มีค่า `35` และ `strawberries` มีค่า `27`
+เราสร้าง object ชื่อ `foods` ที่มี property สามตัวให้แล้ว 
+ให้เพิ่ม property เข้าไปอีกสามตัว คือ `bananas` ซึ่งมีค่าเป็น `13`, `grapes` ซึ่งมีค่าเป็น `35` และ `strawberries` ซึ่งมีค่าเป็น `27` โดยใช้ syntax แบบใดก็ได้
 
 
 # --hints--
 
-`foods` ควรเป็น object
+`foods` ต้องเป็นข้อมูลประเภท object
 
 ```js
 assert(typeof foods === 'object');
 ```
 
-object `foods` ควรมี key `bananas` ที่มีค่า `13`
+object `foods` ต้องมี key `bananas` ที่มีค่าเป็น `13`
 
 ```js
 assert(foods.bananas === 13);
 ```
 
-object `foods` ควรมี key `grapes` ที่มีค่า `35`
+object `foods` ต้องมี key `grapes` ที่มีค่าเป็น `35`
 
 ```js
 assert(foods.grapes === 35);
 ```
 
-object `foods` ควรมี key `strawberries` ที่มีค่า `27`
+object `foods` ต้องมี key `strawberries` ที่มีค่าเป็น `27`
 
 ```js
 assert(foods.strawberries === 27);
 ```
 
-คู่ key-value pairs ควร set โดยใช้จุด หรือเครื่องหมายวงเล็บ
+ต้องตั้งค่า key-value pair โดยใช้จุดหรือ bracket Notation
 
 ```js
 assert(
@@ -104,9 +105,9 @@ let foods = {
   plums: 28
 };
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 
 console.log(foods);
 ```

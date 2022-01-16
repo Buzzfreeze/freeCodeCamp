@@ -8,31 +8,32 @@ dashedName: learn-about-functional-programming
 
 # --description--
 
-Functional programming เป็นรูปแบบนึงของการเขียนโปรแกรมที่มีความเรียบง่าย, มีความโดดเดียว (isolated functions) กล่าวคือ ไม่ก่อให้เกิดผลกระทบต่อข้อมูลที่อยู่ภายนอกขอบเขตของฟังก์ชัน (function scope) นั่นคือ ทำเพียง `INPUT -> PROCESS -> OUTPUT`
+Functional programming เป็นรูปแบบนึงของการเขียนโปรแกรมที่มีจะเขียนฟังก์ชันให้เรียบง่าย และกระทบข้อมูลที่อยู่ภายนอกขอบเขตของฟังก์ชัน 
+โดยฟังก์ชันจะทำงานแค่ `INPUT -> PROCESS -> OUTPUT`
 
-Functional programming เป็นเรื่องเกี่ยวกับ
+การเขียนฟังก์ชันใน Functional programming จะใช้หลักการนี้:
 
-1) Isolated functions - ไม่ขึ้นอยู่กับ state ของ program รวมถึงไม่มีการแก้ไขตัวแปร global ที่อยู่ภายนอกฟังก์ชัน
+1) Isolated function - ไม่ขึ้นอยู่กับ state ของโปรแกรม และต้องไม่แก้ไขตัวแปร global ที่อยู่นอกฟังก์ชัน
 
-2) Pure functions - ค่าที่ส่งออกมาจากฟังก์ชัน (return value) ต้องเป็นค่าเดิมเสมอ ถ้าส่งค่า Input เดิมเข้าไป
+2) Pure function - ถ้าเราใส่ Input เป็นค่าเดิม เราจะได้ Output เป็นค่าเดิมเสมอ
 
-3) Functions with limited side effects - การเปลี่ยนแปลง state ของ program ที่อยู่ภายนอกฟังก์ชันจะต้องมีการควบคุมอย่างระมัดระวัง
+3) Function with limited side effect - การเปลี่ยนแปลง state ของ program ที่อยู่ภายนอกฟังก์ชันจะต้องทำโดยให้เกิดผลกระทบต่อฟังก์ชันอื่นน้อยที่สุด
 
 # --instructions--
 
-สมาชิกของ freeCodeCamp ชอบรับประทานชา
+พวกเราชอบกินชากันใช่มั้ย?
 
-ใน code editor มีการกำหนดฟังก์ชัน `prepareTea` และ `getTea` ไว้ให้คุณแล้ว ให้คุณเรียกฟังก์ชัน `getTea` เพื่อทำชา 40 ถ้วย แล้วนำไปเก็บไว้ที่ตัวแปร `tea4TeamFCC`
+เราได้สร้างฟังก์ชัน `prepareTea` และ `getTea` ใน code editor ไว้ให้คุณแล้ว ให้คุณเรียกฟังก์ชัน `getTea` เพื่อชงชา 40 แก้ว แล้วนำไปเก็บไว้ที่ตัวแปร `tea4TeamFCC`
 
 # --hints--
 
-ตัวแปร `tea4TeamFCC` ควรเก็บชา 40 ถ้วยให้กับทีม
+ตัวแปร `tea4TeamFCC` ต้องเก็บค่าของชาทั้งหมด 40 แก้ว
 
 ```js
 assert(tea4TeamFCC.length === 40);
 ```
 
-ตัวแปร `tea4TeamFCC` ควรเก็บค่าที่เป็น 'greenTea'
+ตัวแปร `tea4TeamFCC` ต้องเก็บค่าเป็น array ของ string `greenTea`
 
 ```js
 assert(tea4TeamFCC[0] === 'greenTea');
@@ -43,13 +44,12 @@ assert(tea4TeamFCC[0] === 'greenTea');
 ## --seed-contents--
 
 ```js
-// Function that returns a string representing a cup of green tea
+// ฟังก์ชันนี้จะคืนค่าเป็น string ที่เราถือว่าเป็นชาเขียว 1 แก้ว
 const prepareTea = () => 'greenTea';
 
 /*
-Given a function (representing the tea type) and number of cups needed, the
-following function returns an array of strings (each representing a cup of
-a specific type of tea).
+ถ้าเราส่งค่าประเภทของชาที่อยากได้ และจำนวนชาที่อยากได้เข้าไปในฟังก์ชันนี้ 
+ฟังก์ชันนี้จะคืนค่าเป็น array ของ string (โดย string แต่ละตัวจะถือว่าเป็นชาหนึ่งแก้ว)
 */
 const getTea = (numOfCups) => {
   const teaCups = [];
@@ -61,9 +61,9 @@ const getTea = (numOfCups) => {
   return teaCups;
 };
 
-// Only change code below this line
+// แก้โค้ดใต้บรรทัดนี้เท่านั้น
 const tea4TeamFCC = null;
-// Only change code above this line
+// แก้โค้ดเหนือบรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

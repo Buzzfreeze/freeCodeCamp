@@ -8,13 +8,18 @@ dashedName: set-a-domain-and-a-range-on-a-scale
 
 # --description--
 
-scales ใช้เพื่อระบุ relationship หมายความว่า input value ควรจะมีค่าที่สอดคล้องกับ output value อย่างไรก็ตาม scales สามารถ flexible และเพิ่มขึ้นได้
+scale ถูกใช้เพื่อระบุความสัมพันธ์ของแกนข้อมูล แปลว่า ค่าที่รับเข้ามาจะถูกเปลี่ยนให้เป็นค่าที่แสดงผล 
+แต่ scale ก็มีความสามารถที่มากกว่านี้ และสามารถทำอะไรอย่างอื่นได้ด้วย
 
-dataset มีค่าอยู่ในช่วง 50 ถึง 480 จะมี input information สำหรับ scale ที่เรียกว่า <dfn>domain</dfn>.
+สมมติว่าเรามาชุดข้อมูลที่มีข้อมูลอยู่ในช่วง 50 ถึง 480 จะมี 
+เราเรียกสิ่งนี้ว่า input information ของ scale หรือที่เรียกว่า <dfn>domain</dfn>
 
-หากต้องการใช้ points ของแกน `x` axis บน SVG canvas ที่อยู่ระหว่าง 10 units และ 500 units จะมี output information สำหรับ scale ที่เรียกว่า <dfn>range</dfn>.
+แล้วสมมติว่าเขาต้องการแสดงค่าของชุดข้อมูลนี้บนแกน `x` ใน SVG canvas ในช่วง 10 หน่วยถึง 500 หน่วย ของ canvas
+เราเรียกสิ่งนี้ว่า output information ของ scale หรือที่เรียกว่า <dfn>range</dfn>
 
-`domain()` และ `range()` methods จะกำหนด values เพื่อทำการ scale ทั้งสอง methods จะใช้ array ของ elements เพื่อเป็น argument ดังตัวอย่างเช่น
+method `domain()` และ `range()` จะใช้เพื่อกำหนดค่าทั้งสองตัวนี้สำหรับ scale 
+โดย method ทั้งสองตัวนี้จะรับ array เป็น argument 
+ลองดูตัวอย่าง:
 
 ```js
 scale.domain([50, 480]);
@@ -26,43 +31,44 @@ scale(750)
 d3.scaleLinear()
 ```
 
-ค่าควรจะแสดง console ดังนี้: `10`, `500`, `323.37`, และ `807.67`
+ใน console จะต้องแสดงค่า `10`, `500`, `323.37`, และ `807.67` ตามลำดับ
 
-สามารถสังเกตุได้ว่า scale จะใช้ linear relationship ระหว่าง domain และค่า range เพื่อหา output สำหรับค่าที่ได้กำหนดไว้ เช่นค่า minimum value ใน domain (50) ควรจะมีค่า minimum เป็น (10) ใน range
+จากตัวอย่างข้างบนจะเห็นว่า scale จะใช้ความสัมพันธ์แบบเส้นตรงโดยใช้ค่าของ domain และค่า range เพื่อหาว่าค่าที่รับเข้ามาควรจะแสดงผลเป็นเท่าไหร่
+เช่น ขอบล่างของ domain ที่มีค่าเป็น 50 เมื่อแปลงเป็น range จะต้องมีค่าเป็น 10
 
 # --instructions--
 
-สร้าง scale และ set ค่า domain เป็น `[250, 500]` ที่มี rangeg เท่ากับ `[10, 150]`
+ให้สร้าง scale และตั้งค่า domain เป็น `[250, 500]` โดยให้ range เป็น `[10, 150]`
 
-**Note:** สามารถใช้ `domain()` และ `range()` methods ใน `scale` variable
+**Note:** สามารถใช้ method `domain()` และ `range()` ต่อจาก `scaleLinear()` ที่การประกาศค่าตัวแปร `scale` ได้เลย
 
 # --hints--
 
-ควรใช้ `domain()` method.
+ต้องใช้ method `domain()`
 
 ```js
 assert(code.match(/\.domain/g));
 ```
 
-`domain()` ของ `scale` ควรกำหนดค่าเป็น `[250, 500]`.
+`domain()` ของ `scale` ต้องกำหนดค่าเป็น `[250, 500]`
 
 ```js
 assert(JSON.stringify(scale.domain()) == JSON.stringify([250, 500]));
 ```
 
-ควรใช้ `range()` method.
+ต้องใช้ method `range()`
 
 ```js
 assert(code.match(/\.range/g));
 ```
 
-`range()` ของ `scale` ควรกำหนดค่าเป็น `[10, 150]`.
+`range()` ของ `scale` ต้องกำหนดค่าเป็น `[10, 150]`
 
 ```js
 assert(JSON.stringify(scale.range()) == JSON.stringify([10, 150]));
 ```
 
-text ใน `h2` ควรเป็น `-102`.
+ข้อความใน `h2` ต้องเป็น `-102`
 
 ```js
 assert($('h2').text() == '-102');
@@ -75,12 +81,12 @@ assert($('h2').text() == '-102');
 ```html
 <body>
   <script>
-    // Add your code below this line
+    // เขียนโค้ดใต้บรรทัดนี้
     const scale = d3.scaleLinear();
 
 
 
-    // Add your code above this line
+    // เขียนโค้ดเหนือบรรทัดนี้
     const output = scale(50);
     d3.select("body")
       .append("h2")

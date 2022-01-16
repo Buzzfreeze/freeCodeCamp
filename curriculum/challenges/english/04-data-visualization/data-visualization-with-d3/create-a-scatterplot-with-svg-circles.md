@@ -8,19 +8,19 @@ dashedName: create-a-scatterplot-with-svg-circles
 
 # --description--
 
-scatter plot เป็นอีกประเภทของ visualization มันใช้เพื่อจับคู่ค่าในแต่ละ data points ที่มีค่าสองจำนวน ค่าเหล่านี้เป็นไปตามแกน `x` และ `y` ค่าเหล่านี้ใช้สำหรับระบุตำแหน่งของวงกลมใน visualization.
+scatter plot (กราฟจุดแบบกระจาย) เป็นกราฟอีกรูปแบบที่ใช้แสดงข้อมูลที่แต่ละข้อมูลมีค่าสองค่า โดยจะให้ค่าทั้งสองนี้แสดงในแกน `x` และแกน `y` และค่าสองตัวนี้จะใช้เพื่อระบุตำแหน่งของจุดในกราฟ
 
-SVG มี `circle` tag เพื่อสร้าง circle shape มันทำงานแบบ `rect` elements ที่ใช้สำหรับเพื่อสร้าง bar chart
+SVG มีแท็ก `circle` เพื่อสร้างรูปทรงวงกลม ซึ่งวิธีใช้จะเหมือน `rect` element ที่เราเรียนมาแล้วในการวาดกราฟแท่ง
 
 # --instructions--
 
-ใช้ `data()`, `enter()`, และ `append()` methods เพื่อซ่อนค่าของ `dataset` ให้กับ `circle` elements ที่ค่าเพิ่มให้กับ SVG canvas
+ให้ใช้ method `data()`, `enter()`, และ `append()` เพื่อผูกข้อมูลใน `dataset` เข้ากับ `circle` element
 
-**Note:** ตอนนี้จะไม่เห็นวงกลมเพราะว่าเรายังไม่สามารถ set ค่าให้กับ attributes 
+**Note:** ตอนนี้จะไม่เห็นวงกลมเพราะว่าเรายังไม่ได้ตั้งค่า attribute ของ `circle`
 
 # --hints--
 
-ควรมี 10 `circle` elements.
+ต้องมี `circle` ทั้งหมด 10 ตัว
 
 ```js
 assert($('circle').length == 10);
@@ -56,11 +56,11 @@ assert($('circle').length == 10);
                   .attr("height", h);
 
     svg.selectAll("circle")
-       // Add your code below this line
+       // เขียนโค้ดใต้บรรทัดนี้
 
 
 
-       // Add your code above this line
+       // เขียนโค้ดเหนือบรรทัดนี้
 
   </script>
 </body>

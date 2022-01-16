@@ -10,31 +10,31 @@ dashedName: use-appendto-to-move-elements-with-jquery
 
 คราวนี้มาลองย้าย element จาก `div` นึง ไป `div` อื่นกัน
 
-jQuery มีฟังก์ชันที่เรียกว่า `appendTo()` ที่ทำให้คุณสามารถเลือก HTML element และ ผนวกเข้ากับ element อื่นๆ
+jQuery มีฟังก์ชันที่เรียกว่า `appendTo()` ที่ทำให้คุณสามารถเลือก HTML element ไปใส่ใน element อื่นได้
 
-มาดูตัวอย่างข้างล่าง ถ้าคุณต้องการย้าย `target4` จาก right well ไปยัง left well เราจะใช้:
+ลองดูตัวอย่างข้างล่าง ถ้าคุณต้องการย้าย `target4` จาก `right well` ไปยัง `left well` เราจะใช้:
 
 ```js
 $("#target4").appendTo("#left-well");
 ```
 
-ย้าย `target2` element จาก `left-well` ไปยัง `right-well`
+ให้ย้าย `target2` จาก `left-well` ไปยัง `right-well`
 
 # --hints--
 
-`target2` element จะต้องไม่อยู่ใน `left-well`
+`target2` จะต้องไม่อยู่ใน `left-well` แล้ว
 
 ```js
 assert($('#left-well').children('#target2').length === 0);
 ```
 
-`target2` element จะต้องย้ายไปอยู่ใน `right-well`.
+`target2` จะต้องย้ายไปอยู่ใน `right-well`
 
 ```js
 assert($('#right-well').children('#target2').length > 0);
 ```
 
-คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
+คุณจะต้องใช้แค่ jQuery เท่านั้นในการเพิ่ม class ให้กับ element
 
 ```js
 assert(!code.match(/class.*animated/g));
@@ -54,7 +54,7 @@ assert(!code.match(/class.*animated/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
@@ -91,7 +91,7 @@ assert(!code.match(/class.*animated/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>

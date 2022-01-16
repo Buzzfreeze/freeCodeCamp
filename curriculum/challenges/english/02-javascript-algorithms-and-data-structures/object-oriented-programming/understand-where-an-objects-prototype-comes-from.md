@@ -8,7 +8,8 @@ dashedName: understand-where-an-objects-prototype-comes-from
 
 # --description--
 
-object สืบทอด `prototype` มาจากฟังก์ชัน constructor ที่สร้าง object นั้นมา เช่นเดียวกันกับคนที่สืบทอดยีนส์จากบิดามารดา ดังตัวอย่างนี้ `Bird` constructor สร้าง `duck` object
+object จะสืบทอด `prototype` มาจากฟังก์ชัน constructor ที่สร้าง object นั้นมา เหมือนกับคนที่สืบทอดยีนส์มาจากพ่อแม่ 
+ลองดูตัวอย่างเวลาใช้ `Bird` constructor สร้าง object `duck`:
 
 
 ```js
@@ -19,21 +20,21 @@ function Bird(name) {
 let duck = new Bird("Donald");
 ```
 
-`duck` สืบทอด `prototype` มาจากฟังก์ชัน `Bird` constructor ซึ่งคุณสามารถตรวจสอบความสัมพันธ์โดยใช้ `isPrototypeOf` method
+`duck` จะสืบทอด `prototype` มาจากฟังก์ชัน constructor ที่ชื่อ `Bird` ซึ่งคุณสามารถตรวจสอบความสัมพันธ์โดยใช้ method `isPrototypeOf`
 
 ```js
 Bird.prototype.isPrototypeOf(duck);
 ```
 
-ควรคืนค่า `true`
+โค้ดด้านบนจะได้ค่าเป็น `true`
 
 # --instructions--
 
-จงใช้ `isPrototypeOf` เพื่อตรวจสอบ `prototype` ของ `beagle`
+ให้ใช้ `isPrototypeOf` เพื่อตรวจสอบ `prototype` ของ `beagle`
 
 # --hints--
 
-คุณควรแสดงว่า `Dog.prototype` เป็น `prototype` ของ `beagle`
+คุณต้องตรวจสอบว่า `Dog.prototype` เป็น `prototype` ของ `beagle`
 
 ```js
 assert(/Dog\.prototype\.isPrototypeOf\(beagle\)/.test(code));
@@ -50,7 +51,7 @@ function Dog(name) {
 
 let beagle = new Dog("Snoopy");
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

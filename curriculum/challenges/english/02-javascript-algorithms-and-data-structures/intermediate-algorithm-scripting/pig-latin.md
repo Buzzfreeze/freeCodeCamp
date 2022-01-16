@@ -8,55 +8,55 @@ dashedName: pig-latin
 
 # --description--
 
-Pig Latin คือวิธีแปลงคำภาษาอังกฤษ กฎการแปลงคำมีดังนี้
+Pig Latin คือวิธีแปลงคำภาษาอังกฤษ กฎการแปลงคำมีดังนี้:
 
-\- ถ้าคำขึ้นต้นด้วยพยัญชนะ (consonant), ให้นำพยัญชนะตัวแรก หรือกลุ่มของพยัญชนะ (consonant cluster) โยกมาไว้ท้ายคำ แล้วนำคำว่า `ay` ไปต่อท้าย
+\- ถ้าคำขึ้นต้นด้วยพยัญชนะ ให้นำพยัญชนะตัวแรก หรือพยัญชนะชุดแรกที่อยู่ติดกัน โยกมาไว้ท้ายคำ แล้วนำคำว่า `ay` ไปต่อท้าย
 
-\- ถ้าคำขึ้นต้นด้วยสระ (vowel), ให้นำคำว่า `way` ไปต่อท้าย
+\- ถ้าคำขึ้นต้นด้วยสระ ให้นำคำว่า `way` ไปต่อท้าย
 
 # --instructions--
 
-ให้แปลง string เป็น Pig Latin โดย strings ที่ให้มานั้นเป็นภาษาอังกฤษที่เป็นตัวอักษรพิมพ์เล็กทั้งหมด
+ให้แปลง string เป็น Pig Latin โดย string ที่ให้มานั้นเป็นภาษาอังกฤษที่เป็นตัวอักษรพิมพ์เล็กทั้งหมด
 
 # --hints--
 
-`translatePigLatin("california")` ควรคืนค่าเป็น string `aliforniacay`
+`translatePigLatin("california")` ต้องคืนค่าเป็น string `aliforniacay`
 
 ```js
 assert.deepEqual(translatePigLatin('california'), 'aliforniacay');
 ```
 
-`translatePigLatin("paragraphs")` ควรคืนค่าเป็น string `aragraphspay`
+`translatePigLatin("paragraphs")` ต้องคืนค่าเป็น string `aragraphspay`
 
 ```js
 assert.deepEqual(translatePigLatin('paragraphs'), 'aragraphspay');
 ```
 
-`translatePigLatin("glove")` ควรคืนค่าเป็น string `oveglay`
+`translatePigLatin("glove")` ต้องคืนค่าเป็น string `oveglay`
 
 ```js
 assert.deepEqual(translatePigLatin('glove'), 'oveglay');
 ```
 
-`translatePigLatin("algorithm")` ควรคืนค่าเป็น string `algorithmway`
+`translatePigLatin("algorithm")` ต้องคืนค่าเป็น string `algorithmway`
 
 ```js
 assert.deepEqual(translatePigLatin('algorithm'), 'algorithmway');
 ```
 
-`translatePigLatin("eight")` ควรคืนค่าเป็น string `eightway`
+`translatePigLatin("eight")` ต้องคืนค่าเป็น string `eightway`
 
 ```js
 assert.deepEqual(translatePigLatin('eight'), 'eightway');
 ```
 
-ควรจัดการกับคำที่มีสระอยู่กลางคำได้  `translatePigLatin("schwartz")` ควรคืนค่าเป็น string `artzschway`
+ต้องจัดการกับคำที่มีสระอยู่กลางคำได้ โดย `translatePigLatin("schwartz")` ต้องคืนค่าเป็น string `artzschway`
 
 ```js
 assert.deepEqual(translatePigLatin('schwartz'), 'artzschway');
 ```
 
-ควรจัดการกับคำที่ไม่มีสระ (vowel) ได้ `translatePigLatin("rhythm")` ควรคืนค่าเป็น string `rhythmay`
+ต้องจัดการกับคำที่ไม่มีสระได้ โดย `translatePigLatin("rhythm")` ต้องคืนค่าเป็น string `rhythmay`
 
 ```js
 assert.deepEqual(translatePigLatin('rhythm'), 'rhythmay');

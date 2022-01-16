@@ -8,53 +8,53 @@ dashedName: repeat-a-string-repeat-a-string
 
 # --description--
 
-แบบทดสอบนี้ให้ทำซ้ำ string `str` (argument แรก) ตามจำนวนครั้งที่กำหนดใน `num` (argument ที่สอง) และคืนค่า empty string หาก `num` ไม่ใช่เลขจำนวนเต็มบวก และห้ามใช้ method `.repeat()`
+แบบทดสอบนี้ให้คัดลอก string `str` (argument แรก) เป็นจำนวน `num` ครั้ง (argument ที่สอง) และคืนค่า string ที่ได้ออกมา ถ้า `num` ไม่ใช่เลขจำนวนเต็มบวก ให้คืนค่าเป็น empty string (`""`) แทน และห้ามใช้ method `.repeat()`
 
 # --hints--
 
-`repeatStringNumTimes("*", 3)` ควรคืนค่าเป็น string `***`.
+การเรียกใช้ฟังก์ชัน `repeatStringNumTimes("*", 3)` ต้องได้ค่าเป็น string `***`
 
 ```js
 assert(repeatStringNumTimes('*', 3) === '***');
 ```
 
-`repeatStringNumTimes("abc", 3)` ควรคืนค่าเป็น string `abcabcabc`.
+การเรียกใช้ฟังก์ชัน `repeatStringNumTimes("abc", 3)` ต้องได้ค่าเป็น string `abcabcabc`
 
 ```js
 assert(repeatStringNumTimes('abc', 3) === 'abcabcabc');
 ```
 
-`repeatStringNumTimes("abc", 4)` ควรคืนค่าเป็น string `abcabcabcabc`.
+การเรียกใช้ฟังก์ชัน `repeatStringNumTimes("abc", 4)` ต้องได้ค่าเป็น string `abcabcabcabc`
 
 ```js
 assert(repeatStringNumTimes('abc', 4) === 'abcabcabcabc');
 ```
 
-`repeatStringNumTimes("abc", 1)` ควรคืนค่าเป็น string `abc`.
+การเรียกใช้ฟังก์ชัน `repeatStringNumTimes("abc", 1)` ต้องได้ค่าเป็น string `abc`
 
 ```js
 assert(repeatStringNumTimes('abc', 1) === 'abc');
 ```
 
-`repeatStringNumTimes("*", 8)` ควรคืนค่าเป็น string `********`.
+การเรียกใช้ฟังก์ชัน `repeatStringNumTimes("*", 8)` ต้องได้ค่าเป็น string `********`
 
 ```js
 assert(repeatStringNumTimes('*', 8) === '********');
 ```
 
-`repeatStringNumTimes("abc", -2)` ควรคืนค่า empty string (`""`)
+การเรียกใช้ฟังก์ชัน `repeatStringNumTimes("abc", -2)` ต้องได้ค่าเป็น empty string (`""`)
 
 ```js
 assert(repeatStringNumTimes('abc', -2) === '');
 ```
 
-ไม่ควรใช้ method `repeat()`
+ห้ามใช้ method `repeat()`
 
 ```js
 assert(!/\.repeat/g.test(code));
 ```
 
-`repeatStringNumTimes("abc", 0)` ควรคืนค่าเป็น `""`.
+การเรียกใช้ฟังก์ชัน `repeatStringNumTimes("abc", 0)` ต้องได้ค่าเป็น `""`
 
 ```js
 assert(repeatStringNumTimes('abc', 0) === '');

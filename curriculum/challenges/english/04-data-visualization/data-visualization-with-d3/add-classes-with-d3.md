@@ -8,29 +8,32 @@ dashedName: add-classes-with-d3
 
 # --description--
 
-การใช้ inline styles ใน HTML elements ทำให้จัดการได้ยาก ถึงแม้จะเป็น apps ที่มีขนาดเล็กก็ตาม วิธีที่ง่ายกว่าคือการเพิ่ม class ให้กับ elements และ style ซึ่ง class จะถูกเรียกใช้แค่ครั้งเดียวตามกฎของ CSS ส่วน D3 จะใช้ `attr()` method เพิ่มทุก HTML attribute ให้กับ elementรวมถึงชื่อของ class 
+ถ้าเราใช้ inline styles หลายๆตัวจะเริ่มทำให้จัดการยากแล้ว ถึงแม้ว่าแอปเราจะไม่ใหญ่ก็ตาม 
+วิธีที่ง่ายกว่าคือการเพิ่ม class ให้กับ element และตกแต่ง element นั้นตาม style ของ class ที่เขียนไว้แล้ว 
+เราจะใช้ method `attr()` ของ D3 ในการจัดการ HTML attribute ทุกตัวของ element ซึ่งรวมถึง class ด้วย
 
- `attr()` method ทำงานเหมือนกับ `style()` พวกมันใช้สามารถใช้ comma-separated values และ callback function ได้ ตัวอย่างของการเพิ่ม class `container` ให้กับ selection:
+method `attr()` จะทำงานเหมือนกับ `style()` โดยจะรับ property และค่าของ property นั้นที่คั่นด้วยคอมม่า หรือเป็น callback function ได้ 
+ลองดูตัวอย่่างการเพิ่ม class `container` ให้กับ element ที่เลือก:
 
 ```js
 selection.attr("class", "container");
 ```
 
-Note: `class` parameter จะมีจำนวนเท่าเดิม เฉพาะ `container` parameter ที่จะเปลี่ยน
+Note: จะต้องใช้ parameter `class` เป็นตัวเดิมไม่ว่าเราจะเพิ่ม class กี่ตัวก็ตาม
 
 # --instructions--
 
-เพิ่ม `attr()` method ใน editor แลพเพิ่ม class ของ `bar` ใน `div` elements.
+ให้เพิ่ม method `attr()` ใน editor โดยใช้เพื่อให้ `div` มี class เป็น `bar`
 
 # --hints--
 
- `div` elements ควรจะมี class `bar`
+ `div` ต้องมี class เป็น `bar`
 
 ```js
 assert($('div').attr('class').trim().split(/\s+/g).includes('bar'));
 ```
 
-ควรจะใช้ `attr()` method.
+ต้องใช้ method `attr()`
 
 ```js
 assert(code.match(/\.attr/g));
@@ -57,11 +60,11 @@ assert(code.match(/\.attr/g));
       .data(dataset)
       .enter()
       .append("div")
-      // Add your code below this line
+      // เขียนโค้ดใต้บรรทัดนี้
 
 
 
-      // Add your code above this line
+      // เขียนโค้ดเหนือบรรทัดนี้
   </script>
 </body>
 ```
@@ -85,9 +88,9 @@ assert(code.match(/\.attr/g));
       .data(dataset)
       .enter()
       .append("div")
-      // Add your code below this line
+      // เขียนโค้ดใต้บรรทัดนี้
       .attr("class","bar");
-      // Add your code above this line
+      // เขียนโค้ดเหนือบรรทัดนี้
   </script>
 </body>
 ```

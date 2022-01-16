@@ -11,17 +11,17 @@ dashedName: add-font-awesome-icons-to-all-of-our-buttons
 
 # --description--
 
-Font Awesome คือ library ไอคอนที่ใช้งานง่าย ซึ่งเป็นได้ทั้ง เว็บฟอนต์ หรือรูปเวกเตอร์ โดยที่จะมีคุณสมบัติเหมือนฟอนต์ คือ สามารถกำหนดขนาดเป็นหน่วย pixel ได้ หรือถ้าหากไม่ได้กำหนด ก็จะมีขนาดเท่ากันกับขนาดฟอนต์ใน parent element ของ HTML นั้น
+Font Awesome เป็น library ไอคอนที่ใช้งานง่าย ซึ่งเป็นได้ทั้ง เว็บฟอนต์ หรือรูปเวกเตอร์ โดยที่จะมีคุณสมบัติเหมือนฟอนต์ ที่จะกำหนดขนาดเป็นหน่วย pixel ได้ หรือถ้าไม่ได้กำหนด ก็จะมีขนาดเท่ากับขนาดฟอนต์ใน parent element นั้น
 
 # --instructions--
 
 ให้ลองใช้ไอคอนจาก Font Awesome โดยเพิ่ม ไอคอน `info-circle` ในปุ่ม info และ ไอคอน `trash` ในปุ่ม delete
 
-**Note:** สามารถใช้ element `span` แทน `i` สำหรับคำแนะนำข้างล่างได้
+**Note:** สามารถใช้ element `span` แทน `i` ได้
 
 # --hints--
 
-เพิ่ม `<i class="fas fa-info-circle"></i>` ใน element ปุ่ม `info`
+เพิ่ม `<i class="fas fa-info-circle"></i>` ในปุ่ม `info`
 
 ```js
 assert(
@@ -30,7 +30,7 @@ assert(
 );
 ```
 
-และเพิ่ม `<i class="fas fa-trash"></i>` ใน element ปุ่ม `delete`
+และเพิ่ม `<i class="fas fa-trash"></i>` ในปุ่ม `delete`
 
 
 ```js
@@ -40,7 +40,7 @@ assert(
 );
 ```
 
-อย่าลืมปิด tag `</i>` ทุกอัน ลองดูการใช้ `<i class="fas fa-thumbs-up"></i>` ใน element ปุ่ม `like` ในโจทย์ข้างล่าง
+อย่าลืมปิด tag `</i>` ทุกอัน และต้องมี `<i class="fas fa-thumbs-up"></i>` ในปุ่ม `like` เหมือนเดิม
 
 
 ```js

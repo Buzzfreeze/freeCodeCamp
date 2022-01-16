@@ -8,11 +8,14 @@ dashedName: finders-keepers
 
 # --description--
 
-แบบทดสอบนี้ให้สร้างฟังก์ชันที่อ่านค่าจาก array `arr` และคืนค่าเป็น element แรกใน array ที่ผ่าน 'truth test' ซึ่งหมายความว่า หากส่ง element `x` ใน array เข้า `func(x)` แล้วมี element ที่ได้ค่า `true` ออกมา ก็แสดงว่าผ่าน 'truth test' แต่หากไม่มี element ใดเลยที่ผ่าน ก็จะได้ค่า `undefined` ออกมา
+แบบทดสอบนี้ให้สร้างฟังก์ชัน `findElement` ที่รับค่าเป็น array `arr` และฟังก์ชัน `func` 
+โดยให้ฟังก์ชัน `findElement` คืนค่าเป็น element แรกของ array `arr` ที่นำไปทดสอบโดยเอาไปเข้าฟังก์ชัน `func` แล้วได้ค่าเป็น `true` 
+
+เช่น ถ้าให้ array มี element `x` `y` `z` จากนั้นให้ทดสอบโดยเรียกใช้ `func(x)` ถ้าได้ค่าเป็น `true` เราก็จะต้องคืนค่า element `x` ออกมาโดยไม่ต้องเรียกใช้ `func(y)` แต่ถ้าเรียกใช้ `func(x)` แล้วได้ `false` ก็ให้ทดสอบ element อื่นต่อ แต่ถ้าทดสอบครบแล้วไม่มี element ไหนเลยที่เป็น `true` ก็ให้คืนค่าเป็น `undefined` แทน
 
 # --hints--
 
-`findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; })` ควรได้ผลลัพธ์คือ `8`.
+การเรียกใช้ฟังก์ชัน `findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; })` ต้องได้ค่าเป็น `8`
 
 ```js
 assert.strictEqual(
@@ -23,7 +26,7 @@ assert.strictEqual(
 );
 ```
 
-`findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; })` ควรได้ผลลัพธ์คือ `undefined`.
+การเรียกใช้ฟังก์ชัน `findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; })` ต้องได้ค่าเป็น `undefined`
 
 ```js
 assert.strictEqual(

@@ -8,43 +8,43 @@ dashedName: label-bootstrap-buttons
 
 # --description--
 
-เรามาระบุให้ชัดเจนว่าปุ่มไหนมีไอดีอะไร ให้เขาใจได้ง่ายขึ้นดีกว่า
+เรามาระบุแสดงให้เห็นว่าปุ่มไหนมี id เป็นอะไรกันดีกว่า
 
-โดยการใส่ข้อความบนปุ่มแต่ละปุ่มให้สอดคล้องกับ id selector ของมัน
+ให้ใส่ข้อความในปุ่มแต่ละปุ่มให้เป็น id selector ของปุ่มนั้นๆ
 
 # --hints--
 
-ใส่ข้อความว่า `#target1` ให้กับ `button` element ที่มีไอดี `target1`
+ใส่ข้อความว่า `#target1` ให้กับ `button` ที่มี id เป็น `target1`
 
 ```js
 assert(new RegExp('#target1', 'gi').test($('#target1').text()));
 ```
 
-ใส่ข้อความว่า `#target2` ให้กับ `button` element ที่มีไอดี `target2`
+ใส่ข้อความว่า `#target2` ให้กับ `button` ที่มี id เป็น `target2`
 
 ```js
 assert(new RegExp('#target2', 'gi').test($('#target2').text()));
 ```
 
-ใส่ข้อความว่า `#target3` ให้กับ `button` element ที่มีไอดี `target3`
+ใส่ข้อความว่า `#target3` ให้กับ `button` ที่มี id เป็น `target3`
 
 ```js
 assert(new RegExp('#target3', 'gi').test($('#target3').text()));
 ```
 
-ใส่ข้อความว่า `#target4` ให้กับ `button` element ที่มีไอดี `target4`
+ใส่ข้อความว่า `#target4` ให้กับ `button` ที่มี id เป็น `target4`
 
 ```js
 assert(new RegExp('#target4', 'gi').test($('#target4').text()));
 ```
 
-ใส่ข้อความว่า `#target5` ให้กับ `button` element ที่มีไอดี `target5`
+ใส่ข้อความว่า `#target5` ให้กับ `button` ที่มี id เป็น `target5`
 
 ```js
 assert(new RegExp('#target5', 'gi').test($('#target5').text()));
 ```
 
-ใส่ข้อความว่า `#target6` ให้กับ `button` element ที่มีไอดี `target6`
+ใส่ข้อความว่า `#target6` ให้กับ `button` ที่มี id เป็น `target6`
 
 ```js
 assert(new RegExp('#target6', 'gi').test($('#target6').text()));

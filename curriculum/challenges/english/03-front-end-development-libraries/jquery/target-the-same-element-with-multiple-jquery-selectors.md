@@ -10,20 +10,24 @@ dashedName: target-the-same-element-with-multiple-jquery-selectors
 
 # --description--
 
-ตอนนี้คุณได้รู้แล้วว่าการกำหนด element เป้าหมายมี 3 วิธี คือ โดย type: `$("button")`, โดย class: `$(".btn")`, และโดย id `$("#target1")`
+ตอนนี้เรารู้แล้วว่าการเลือก element มี 3 วิธีคือ: 
+
+1. ใช้ type: `$("button")` 
+2. ใช้ class: `$(".btn")` และ
+3. ใช้ id: `$("#target1")`
 
 
-แม้เราจะสามารถเพิ่มหลายๆ class ในการใช้ `.addClass()` ในครั้งเดียว แต่เรามาลองเพิ่ม class ต่างๆ ให้กับ element เดียวกัน โดย *สามวิธีแยกกัน*
+ถึงเราจะเรียกใช้ `.addClass()` ครั้งเดียวเพื่อเพิ่มหลายๆ class เข้าไปใน element ที่เลือกได้ 
+แต่เรามาลองเพิ่ม class ให้กับ element เดียวกันโดยใช้ทั้งสามวิธีดู:
 
-3 วิธีที่แยกกันในการใช้ `.addClass()` เพื่อเพิ่ม 1 class ที่ละ class ไปยัง element เดียวกัน 
+เพิ่ม class `animated` ให้กับ element ทุกตัวที่มี type เป็น `button`
 
-เพิ่ม `animated` class ให้กับ element ทุกตัวที่มี type `button`
+เพิ่ม class `shake` ให้กับปุ่มทุกปุ่มที่มี class เป็น `.btn`
 
-เพิ่ม `shake` class ให้กับปุ่มทุกปุ่มที่มี class `.btn`
+เพิ่ม class `btn-primary` ให้กับปุ่มที่มี id เป็น `#target1`
 
-เพิ่ม `btn-primary` class ให้กับปุ่มที่มี id `#target1`
-
-**Note:** คุณควรตั้งเป้ากับ element เดียวและเพิ่ม class เดียวในแต่ละครั้ง การใช้ selector ทั้งสามพร้อมกันนี้จะทำให้ class `shake`, `animated`, และ `btn-primary` ทั้ง 3 ถูกเพิ่มไปยัง `#target1`
+**Note:** ต้องเลือกทีละ element แล้วก็เพิ่ม class ทีละ class 
+พอรวมกันแล้ว selector ทั้งสามอันนี้จะทำให้ `#target1` ของเรามี class เป็น `shake`, `animated`, และ `btn-primary`
 
 # --hints--
 
@@ -39,13 +43,13 @@ assert(code.match(/\$\s*?\(\s*?(?:'|")\s*?button\s*?(?:'|")/gi));
 assert(code.match(/\$\s*?\(\s*?(?:'|")\s*?\.btn\s*?(?:'|")/gi));
 ```
 
-โค้ดของคุณจะต้องใช้ `$("#target1")` selector.
+โค้ดของคุณจะต้องใช้ `$("#target1")` selector
 
 ```js
 assert(code.match(/\$\s*?\(\s*?(?:'|")\s*?#target1\s*?(?:'|")/gi));
 ```
 
-คุณจะต้องเพิ่มเพียง class เดียวต่อ selector แต่ละตัว
+selector แต่ละตัวจะเพิ่ม class แค่ class เดียว
 
 ```js
 assert(
@@ -54,7 +58,7 @@ assert(
 );
 ```
 
-`#target1` element จะต้องมี class `animated`‚ `shake` และ `btn-primary`
+เมื่อเพิ่มแล้ว `#target1` จะต้องมี class เป็น `animated`‚ `shake` และ `btn-primary`
 
 ```js
 assert(
@@ -64,7 +68,7 @@ assert(
 );
 ```
 
-คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
+คุณจะต้องใช้แค่ jQuery เท่านั้นในการเพิ่ม class ให้กับ element
 
 
 ```js
@@ -82,7 +86,7 @@ assert(!code.match(/class.*animated/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
@@ -118,7 +122,7 @@ assert(!code.match(/class.*animated/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>

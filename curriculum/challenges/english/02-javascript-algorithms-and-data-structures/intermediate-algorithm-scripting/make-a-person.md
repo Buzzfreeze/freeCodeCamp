@@ -8,7 +8,7 @@ dashedName: make-a-person
 
 # --description--
 
-จงเพิ่มโค้ดใน object constructor ด้วย method ต่อไปนี้
+ให้เพิ่ม method ต่อไปนี้ใน object constructor:
 
 ```js
 getFirstName()
@@ -19,13 +19,11 @@ setLastName(last)
 setFullName(firstAndLast)
 ```
 
-ลองรันเพื่อดูผลลัพธ์ของแต่ละ method โดย method ที่รับ argument 1 ตัว ต้องรับ argument เพียงตัวเดียวและเป็น string เท่านั้น นอกจากนี้ การโต้ตอบ (interact) ใดๆ ต่อ object ต้องทำผ่าน method เหล่านี้เท่านั้น
-
-เมธอดเหล่านี้ต้องเป็นวิธีการโต้ตอบกับอ็อบเจ็กต์เท่านั้น
+ลองรันเพื่อดูผลลัพธ์ของแต่ละ method โดย method ที่รับ argument 0tต้องรับ argument แค่ตัวเดียวและต้องเป็น string เท่านั้น นอกจากนี้ การแก้ไขค่าใน object ต้องทำผ่าน method เหล่านี้เท่านั้น
 
 # --hints--
 
-ห้ามเพิ่ม properties อื่นๆ เข้าไป และ `Object.keys(bob).length` ควรคืนค่าเป็น 6 เสมอ
+ห้ามเพิ่ม property อื่นๆเข้าไป และ `Object.keys(bob).length` ต้องมีค่าเป็น 6 เสมอ
 
 ```js
 assert.strictEqual(
@@ -40,43 +38,43 @@ assert.strictEqual(
  );
 ```
 
-`bob instanceof Person` ควรคืนค่าเป็น `true`
+`bob instanceof Person` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.deepEqual(bob instanceof Person, true);
 ```
 
-`bob.firstName` ควรคืนค่าเป็น `undefined`
+`bob.firstName` ต้องคืนค่าเป็น `undefined`
 
 ```js
 assert.deepEqual(bob.firstName, undefined);
 ```
 
-`bob.lastName` ควรคืนค่าเป็น `undefined`
+`bob.lastName` ต้องคืนค่าเป็น `undefined`
 
 ```js
 assert.deepEqual(bob.lastName, undefined);
 ```
 
-`bob.getFirstName()` ควรคืนค่าเป็น string `Bob`
+`bob.getFirstName()` ต้องคืนค่าเป็น string `Bob`
 
 ```js
 assert.deepEqual(bob.getFirstName(), 'Bob');
 ```
 
-`bob.getLastName()` ควรคืนค่าเป็น string `Ross`
+`bob.getLastName()` ต้องคืนค่าเป็น string `Ross`
 
 ```js
 assert.deepEqual(bob.getLastName(), 'Ross');
 ```
 
-`bob.getFullName()` ควรคืนค่าเป็น string `Bob Ross`
+`bob.getFullName()` ต้องคืนค่าเป็น string `Bob Ross`
 
 ```js
 assert.deepEqual(bob.getFullName(), 'Bob Ross');
 ```
 
-`bob.getFullName()` ควรคืนค่าเป็น string `Haskell Ross` หลังจาก `bob.setFirstName("Haskell")`
+`bob.getFullName()` ต้องคืนค่าเป็น string `Haskell Ross` หลังจากเรียกใช้ `bob.setFirstName("Haskell")`
 
 ```js
 assert.strictEqual(
@@ -88,7 +86,7 @@ assert.strictEqual(
 );
 ```
 
-`bob.getFullName()` ควรคืนค่าเป็น the string `Haskell Curry` หลังจาก `bob.setLastName("Curry")`
+`bob.getFullName()` ต้องคืนค่าเป็น the string `Haskell Curry` หลังจากเรียกใช้ `bob.setLastName("Curry")`
 
 ```js
 assert.strictEqual(
@@ -101,7 +99,7 @@ assert.strictEqual(
 );
 ```
 
-`bob.getFullName()` ควรคืนค่าเป็น the string `Haskell Curry` หลังจาก `bob.setFullName("Haskell Curry")`
+`bob.getFullName()` ต้องคืนค่าเป็น the string `Haskell Curry` หลังจากเรียกใช้ `bob.setFullName("Haskell Curry")`
 
 ```js
 assert.strictEqual(
@@ -113,7 +111,7 @@ assert.strictEqual(
 );
 ```
 
-`bob.getFirstName()` ควรคืนค่าเป็น the string `Haskell` หลังจาก `bob.setFullName("Haskell Curry")`
+`bob.getFirstName()` ต้องคืนค่าเป็น the string `Haskell` หลังจากเรียกใช้ `bob.setFullName("Haskell Curry")`
 
 ```js
 assert.strictEqual(
@@ -125,7 +123,7 @@ assert.strictEqual(
 );
 ```
 
-`bob.getLastName()` ควรคืนค่าเป็น the string `Curry` หลังจาก `bob.setFullName("Haskell Curry")`
+`bob.getLastName()` ต้องคืนค่าเป็น the string `Curry` หลังจากเรียกใช้ `bob.setFullName("Haskell Curry")`
 
 ```js
 assert.strictEqual(
@@ -151,8 +149,8 @@ if(bob){
 
 ```js
 var Person = function(firstAndLast) {
-  // Only change code below this line
-  // Complete the method below and implement the others similarly
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
+  // เขียน method ด้านล่างนี้ให้เสร็จ แล้วค่อยเขียน method อื่นที่มีให้ในโจทย์ตาม method ที่มีให้นี้
   this.getFullName = function() {
     return "";
   };

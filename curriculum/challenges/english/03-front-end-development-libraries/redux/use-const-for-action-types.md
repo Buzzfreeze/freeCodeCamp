@@ -8,35 +8,36 @@ dashedName: use-const-for-action-types
 
 # --description--
 
-ทั่วไปแล้วเมื่อทำงานกับ Redux คือการกำหนดประเภท action เป็น constants แบบอ่านอย่างเดียว (read-only) จากนั้นอ้างอิง constants เหล่านี้ไม่ว่าจะใช้งานอยู่ที่ใด คุณสามารถจัดโครงสร้างโค้ดใหม่ที่คุณกำลังทำงานด้วยเพื่อเขียนประเภท action เป็นการประกาศ "const"
+ปกติแล้วเวลาเราใช้ Redux เราจะเก็บประเภทของ action ไว้ในตัวแปรที่เป็นค่าคงที่ (ใช้ `const`) แล้วเราค่อยใช้ตัวแปรที่เป็นค่าคงที่นี้ ถ้าต้องการสื่อถึง action ตัวนั้นๆ
 
 # --instructions--
 
-ประกาศ `LOGIN` และ `LOGOUT` เป็นค่า `const` และกำหนดค่าให้กับสตริง `'LOGIN'` และ `'LOGOUT''` ตามลำดับ จากนั้นให้แก้ไข `authReducer()` และ action creators ให้อ้างอิงค่าคงที่เหล่านี้แทนค่าสตริง
+ให้ประกาศ `LOGIN` และ `LOGOUT` โดยใช้ `const` และกำหนดให้มีค่าเป็น string `'LOGIN'` และ `'LOGOUT''` ตามลำดับ 
+จากนั้นให้แก้ไข `authReducer()` และ action creator โดยใช้ตัวแปรค่าคงที่สองตัวนี้แทน string
 
-**Note:** โดยทั่วไปการเขียนค่าคงที่ด้วยตัวพิมพ์ใหญ่ทั้งหมดนั้นเป็นเรื่องปกติ และนี่เป็นแนวทางปฏิบัติมาตรฐานใน Redux เช่นกัน
+**Note:** ปกติแล้วการเขียนชื่อตัวแปรที่เป็นค่าคงที่จะใช้ตัวพิมพ์ใหญ่ ซึ่งใน Redux ก็จะใช้วิธีนี้เหมือนกัน
 
 # --hints--
 
-การเรียกใช้ฟังก์ชัน `loginUser` ควร return object ด้วย `type` property ที่มีค่า string `LOGIN`
+การเรียกใช้ฟังก์ชัน `loginUser` ต้องคืนค่าเป็น object ที่ property `type` มีค่าเป็น string `LOGIN`
 
 ```js
 assert(loginUser().type === 'LOGIN');
 ```
 
-การเรียกใช้ฟังก์ชัน `logoutUser` ควร return object ด้วย `type` property ที่มีค่า string `LOGOUT`
+การเรียกใช้ฟังก์ชัน `logoutUser` ต้องคืนค่าเป็น object ที่ property `type` มีค่าเป็น string `LOGOUT`
 
 ```js
 assert(logoutUser().type === 'LOGOUT');
 ```
 
-Store ควรเริ่มต้นด้วย object ที่มี property `login` เป็น `false`
+ค่าเริ่มต้นของ store ต้องเป็น object ที่มี property ชื่อ `login` ที่มีค่าเป็น `false`
 
 ```js
 assert(store.getState().authenticated === false);
 ```
 
-การส่ง `loginUser` ควรอัปเดต `login` property ใน store state เป็น `true`
+การส่ง `loginUser` ให้กับ store ต้องไปอัปเดต property `login` ใน store state ให้เป็น `true`
 
 ```js
 assert(
@@ -51,7 +52,7 @@ assert(
 );
 ```
 
-การส่ง `logoutUser` ควรอัปเดต `login` property ใน store state เป็น `false`
+การส่ง `logoutUser` ให้กับ store ต้องไปอัปเดต property `login` ใน store state ให้เป็น `false`
 
 ```js
 assert(
@@ -67,7 +68,7 @@ assert(
 );
 ```
 
-ฟังก์ชัน `authReducer` ควรจัดการหลาย action types ด้วย switch statement
+ฟังก์ชัน `authReducer` ต้องใช้คำสั่ง `switch` เพื่อแยกวิธีการทำงานของ action ที่ต่างกัน
 
 ```js
 (getUserInput) =>
@@ -83,7 +84,7 @@ assert(
   );
 ```
 
-ควรประกาศ `LOGIN` และ `LOGOUT` เป็นค่า `const` และกำหนดค่า string เป็น `LOGIN`และ `LOGOUT`
+ต้องประกาศ `LOGIN` และ `LOGOUT` โดยใช้ `const` และกำหนดค่าให้เป็น string `"LOGIN"` และ `"LOGOUT"` ตามลำดับ
 
 ```js
 const noWhiteSpace = __helpers.removeWhiteSpace(code);
@@ -94,7 +95,7 @@ assert(
 );
 ```
 
-action creators และ the reducer ควรอ้างอิงไปที่ `LOGIN` และ `LOGOUT` constants
+action creator และ reducer ต้องใช้ค่าของตัวแปร `LOGIN` และ `LOGOUT` แทน string
 
 ```js
 (getUserInput) =>

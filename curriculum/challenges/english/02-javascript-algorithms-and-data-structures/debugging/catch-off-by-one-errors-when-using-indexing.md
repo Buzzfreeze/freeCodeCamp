@@ -8,9 +8,11 @@ dashedName: catch-off-by-one-errors-when-using-indexing
 
 # --description--
 
-<dfn>Off by one errors</dfn> (บางครั้งเรียกว่า OBOE) เกิดขึ้นเมื่อคุณพยายามอ้างถึง index ของ string หรือ array (เพื่อตัดหรือเข้าถึง item) หรือวนอ่าน index ที่ไม่มีอยู่ โดย JavaScript index เริ่มที่ 0 ไม่ใช่ 1 ซึ่งหมายความว่า index สุดท้ายต้องเป็นความยาวลบด้วย 1 ดังนั้น ถ้าคุณเข้าถึง index ที่มีค่าเท่ากับความยาว โปรแกรมจะขึ้น reference error "index out of range" หรือแสดงคำว่า `undefined`
+<dfn>Off by one error</dfn> (บางครั้งเรียกว่า OBOE) จะเกิดขึ้นเมื่อคุณพยายามเข้าถึง index ของ string หรือ array ที่ไม่มีอยู่ โดย index ของ JavaScript จะเริ่มที่ 0 ไม่ใช่ 1 แปลว่า index สุดท้ายจะเป็นความยาวของ string หรือ array ลบด้วย 1 (`.length - 1`)
+ถ้าคุณพยายามเข้าถึง index ที่มีค่าเท่ากับความยาวของ string หรือ array โปรแกรมจะขึ้น reference error "index out of range" หรือคุณอาจได้ค่าเป็น `undefined`
 
-เมื่อคุณเรียก string หรือ array methods ที่รับ argument เป็นค่าช่วง index (index range) มันจะอ่านและค้นหาว่า index นั้นมีอยู่หรือไม่ (item ที่อยู่ในตำแหน่งของ index เป็นสิ่งที่ถูกคืนค่า) ต่อไปนี้เป็นตัวอย่างของ off by one errors
+เวลาที่คุณเรียกใช้ method ที่จัดการ string หรือ array ที่รับ argument เป็นช่วงของ index เราแนะนำให้อ่านวิธีการใช้งาน method นั้นว่ารับค่าเป็น inclusive หรือไม่ (inclusive หมายถึง method จะใช้ค่าจาก index ที่ระบุลงไปเลย)
+โค้ดด้านล่างเป็นตัวอย่างของ off by one error:
 
 ```js
 let alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -26,33 +28,33 @@ for (let k = 0; k < len; k++) {
 }
 ```
 
-ตัวอย่างแรกมีการวนลูปเกินไป 1 รอบ, ตัวอย่างที่สองวนลูปน้อยไป 1 รอบ (รอบแรก (index 0) หายไป) ส่วนตัวอย่างที่สามทำงานถูกต้อง
+ตัวอย่างแรกมีการวนลูปเกินไป 1 รอบ, ตัวอย่างที่สองวนลูปน้อยไป 1 รอบ (ข้าม index 0 ไป) ส่วนตัวอย่างที่สามทำงานได้ถูกต้อง
 
 # --instructions--
 
-จงปรับแก้ indexing error ในฟังก์ชัน เพื่อให้ตัวเลข 1 ถึง 5 พิมพ์ออกที่หน้า console
+ให้แก้ข้อผิดพลาดจากการใช้ index ในฟังก์ชัน เพื่อ console แสดงตัวเลข 1 ถึง 5 
 
 # --hints--
 
-โค้ดของคุณควรกำหนดเงื่อนไขเริ่มต้นของ loop ให้เริ่มจาก index แรก
+ต้องแก้ไข loop ให้เริ่มจาก index แรก
 
 ```js
 assert(code.match(/i\s*?=\s*?0\s*?;/g).length == 1);
 ```
 
-คุณควรปรับแก้เงื่อนไขเริ่มต้นของ loop เพื่อให้ index เริ่มต้นจาก 0
+ต้องแก้ไข loop เพื่อให้ index เริ่มต้นจาก 0
 
 ```js
 assert(!code.match(/i\s?=\s*?1\s*?;/g));
 ```
 
-คุณควรกำหนดให้เงื่อนไขสุดท้ายของ loop หยุดที่ index สุดท้าย
+ต้องแก้ไข loop ให้หยุดที่ index สุดท้าย
 
 ```js
 assert(code.match(/i\s*?<\s*?len\s*?;/g).length == 1);
 ```
 
-คุณควรปรับแก้เงื่อนไขสุดท้ายของ loop ให้หยุดก่อน 1 รอบก่อนถึงความยาว (length)
+ต้องแก้ไข loop ให้หยุดที่ `.length-1`
 
 ```js
 assert(!code.match(/i\s*?<=\s*?len;/g));
@@ -66,9 +68,9 @@ assert(!code.match(/i\s*?<=\s*?len;/g));
 function countToFive() {
   let firstFive = "12345";
   let len = firstFive.length;
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   for (let i = 1; i <= len; i++) {
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
     console.log(firstFive[i]);
   }
 }
@@ -82,9 +84,9 @@ countToFive();
 function countToFive() {
  let firstFive = "12345";
  let len = firstFive.length;
- // Only change code below this line
+ // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
  for (let i = 0; i < len; i++) {
- // Only change code above this line
+ // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
    console.log(firstFive[i]);
  }
 }

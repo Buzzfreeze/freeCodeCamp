@@ -8,19 +8,19 @@ dashedName: house-our-page-within-a-bootstrap-container-fluid-div
 
 # --description--
 
-มาลองทำให้คอนเทนท์ในเพจที่เราสร้างนั้นเป็น mobile-responsive กัน
+มาลองทำให้เนื้อหาในหน้าที่เราสร้างนั้นเป็น mobile-responsive กัน
 
-โดยย้าย `h3` element ให้ไปอยู่ใน `div` element ที่มี class `container-fluid`
+ให้ย้าย `h3` ไปไว้ใน `div` ที่มี class เป็น `container-fluid`
 
 # --hints--
 
-สร้าง `div` element และกำหนดให้มี class ชื่อว่า `container-fluid`
+สร้าง `div` และกำหนดให้มี class เป็น `container-fluid`
 
 ```js
 assert($('div').hasClass('container-fluid'));
 ```
 
-อย่าลืม tag ปิด สำหรับ `div` element
+อย่าลืม tag ปิดของ `div` ด้วย
 
 ```js
 assert(
@@ -30,7 +30,7 @@ assert(
 );
 ```
 
-นำ `h3` element ไปใส่ไว้ใน `div` element ที่สร้างขึ้นมา
+นำ `h3` ไปใส่ไว้ใน `div` ที่สร้างขึ้นมา
 
 ```js
 assert($('div').children('h3').length > 0);

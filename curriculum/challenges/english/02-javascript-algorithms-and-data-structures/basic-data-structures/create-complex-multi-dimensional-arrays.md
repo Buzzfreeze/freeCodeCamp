@@ -8,9 +8,11 @@ dashedName: create-complex-multi-dimensional-arrays
 
 # --description--
 
-สุดยอด! คุณเพิ่งได้เรียนรู้เกี่ยวกับ array มากมายเลย! นี่เป็นภาพรวมในมุมกว้าง และยังมีเรื่องอีกมากมายให้เรียนรู้เกี่ยวกับการทำงานกับ array  ซึ่งคุณจะเห็นในส่วนต่อๆ ไป แต่ก่อนที่จะไปดูที่ <dfn>Objects</dfn> เรามาดูเพิ่มเติมว่า array จะซับซ้อนกว่าที่เราเคยเห็นในบทเรียนครั้งก่อนได้อย่างไร
+คุณได้เรียนเรื่อง array ไปเยอะมากเลย! เยี่ยมไปเลยใช่มั้ย! 
+ที่เรียนไปนี้เป็นแค่ภาพรวมกว้างๆ แต่ก็ยังมีเรื่องที่เกี่ยวกับ array ที่ต้องเรียนรู้อีกมาก ซึ่งคุณจะเรียนในส่วนต่อๆ ไป แต่ก่อนที่จะไปเรียนเรื่อง <dfn>Object</dfn> เรามาดูกันต่อว่า array ที่ซับซ้อนกว่าที่เราเคยเรียนมาจะมีหน้าตาแบบไหน
 
-ฟีเจอร์หนึ่งที่ทรงพลังที่สุด ในฐานะที่ array เป็นโครงสร้างข้อมูลหนึ่งคือ array สามารถมีหรือสร้างจาก array อื่นๆ ได้ เราได้เห็น array ซ้อน array ในแบบทดสอบก่อนหน้านี้ แต่ก็ยังค่อนข้างง่าย อย่างไรก็ตาม array สามารถซ้อน array ได้ลึกไม่จำกัด และแต่ละ sub-array ก็ยังซ้อน array ได้ลึกไม่จำกัดอีก ดังนี้แล้ว array จึงสามารถกลายเป็นโครงสร้างข้อมูลที่ซับซ้อนได้ เรียกว่า <dfn>multi-dimensional</dfn> หรือ nested array พิจารณาตัวอย่างต่อไปนี้
+สิ่งที่ทำให้ array เป็นโครงสร้างข้อมูลที่มีพลังมากๆอีกอย่างหนึ่งคือการที่ array สามารถมี array ซ้อนกันได้ เราได้เห็น array ซ้อน array ในตัวอย่างที่เราเรียนมาแล้ว แต่เท่าที่ผ่านมาเราเห็นแค่การซ้อนแบบง่ายๆเท่านั้น แต่จริงๆแล้ว array จะมี array ซ้อนอยู่ข้างในลึกลงไปกี่ชั้นก็ได้ แลh;แต่ละ array ย่อยก็ยังซ้อน array ได้ลึกไม่จำกัดอีกด้วย ดังนั้น array จะกลายเป็นโครงสร้างข้อมูลที่ซับซ้อนได้ ที่เราเรียกว่า array <dfn>หลายมิติ</dfn> หรือ nested array
+ลองดูตัวอย่าง
 
 ```js
 let nestedArray = [
@@ -31,15 +33,16 @@ let nestedArray = [
 ];
 ```
 
-array `deep` ถูกซ้อน 2 ชั้น arrays  `deeper` ซ้อน 3 ชั้น และ `deepest` 4 ชั้น และ `deepest-est?` 5 ชั้น
+array `deep` อยู่ลึกลงไป 2 ชั้น ส่วน  `deeper` อยู่ลึกลงไป 3 ชั้น และ `deepest` อยู่ลึกลงไป 4 ชั้น สุดท้าย `deepest-est?` อยู่ลึกลงไป 5 ชั้น
 
-แม้ว่าตัวอย่างนี้อาจดูซับซ้อน แต่ความซับซ้อนระดับนี้ก็ไม่มีใครเคยใช้มาก่อน เรียกได้ว่าไม่ใช่เคสปกติ เมื่อจัดการกับข้อมูลขนาดใหญ่ อย่างไรก็ตาม เราสามารถเข้าถึงระดับที่ลึกที่สุดของ array ที่ซับซ้อนนี้ได้อย่างง่ายดายด้วย bracket notation
+ถึงตัวอย่างนี้อาจดูซับซ้อน แต่ความซับซ้อนระดับนี้ก็ไม่ได้ถือว่าผิดปกติ ถ้าเราต้องจัดการกับข้อมูลขนาดใหญ่ 
+เราสามารถเข้าถึงชั้นที่ลึกที่สุดของ array ที่ซับซ้อนนี้ได้ง่ายๆด้วย bracket notation
 
 ```js
 console.log(nestedArray[2][1][0][0][0]);
 ```
 
-ตัวอย่างด้านบน จะแสดง log เป็น string `deepest-est?` และตอนนี้เรารู้แล้วว่าข้อมูลส่วนนั้นอยู่ที่ไหน เราก็สามารถรีเซ็ตได้หากต้องการ
+ตัวอย่างด้านบน จะแสดง string `deepest-est?` บน consolle พอตอนนี้เรารู้แล้วว่าข้อมูลส่วนนั้นอยู่ที่ไหน เราก็สามารถเปลี่ยนค่าได้ถ้าต้องการ
 
 ```js
 nestedArray[2][1][0][0][0] = 'deeper still';
@@ -47,15 +50,22 @@ nestedArray[2][1][0][0][0] = 'deeper still';
 console.log(nestedArray[2][1][0][0][0]);
 ```
 
-ตอนนี้แสดง log เป็น `deeper still`
+ตอนนี้บน consolle จะแสดง `deeper still` แทน
 
 # --instructions--
 
-เราได้ประกาศตัวแปร `myNestedArray` ซึ่งกำหนดค่าให้เท่ากับ array จงปรับแก้ `myNestedArray` โดยใช้ทั้ง <dfn>strings</dfn>, <dfn>numbers</dfn> และ <dfn>booleans</dfn> เป็น data elements และกำหนดให้มีความลึกห้าระดับ ( จำไว้ว่า array ด้านนอกสุดคือระดับ 1) โดยในระดับที่สาม กำหนดให้มี string `deep` ส่วนในระดับที่สี่ กำหนดให้มี string `deeper`และในระดับที่ห้า กำหนดให้มี string `deepest`
+เราได้ประกาศตัวแปร `myNestedArray` ซึ่งเป็น array 
+ให้แก้ `myNestedArray` ตามเงื่อนไขนี้
+
+1. ใน array ต้องใช้แค่ข้อมูลประเภท <dfn>string</dfn>, <dfn>number</dfn> และ <dfn>boolean</dfn>  เท่านั้น
+2. ทำให้ array นี้ลึก 5 ชั้น (array ด้านนอกสุดคือชั้น 1) 
+3. ในชั้นที่สามต้องมี string `deep` 
+4. ในชั้นที่สี่ต้องมี string `deeper` 
+5. ในชั้นที่ห้าต้องมี string `deepest`
 
 # --hints--
 
-`myNestedArray` ควรมี numbers, booleans, และ strings เท่านั้น เป็น data elements
+`myNestedArray` ต้องใช้แค่ข้อมูลประเภท number, boolean, และ string เท่านั้น
 
 ```js
 assert.strictEqual(
@@ -79,7 +89,7 @@ assert.strictEqual(
 );
 ```
 
-`myNestedArray` ควรมีความลึก 5 ระดับ
+`myNestedArray` ต้องมีความลึก 5 ชั้น
 
 ```js
 assert.strictEqual(
@@ -102,7 +112,7 @@ assert.strictEqual(
 );
 ```
 
-`myNestedArray` ควรมีอย่างน้อยหนึ่ง string `deep` ใน  nested array ที่ความลึกชั้นที่ 3 
+ใน `myNestedArray` ชั้นที่ 3 ต้องมี string `deep` อย่างน้อย 1 คำ
 
 ```js
 assert(
@@ -131,7 +141,7 @@ assert(
 );
 ```
 
-`myNestedArray` ควรมีอย่างน้อยหนึ่ง string `deeper` ใน  nested array ที่ความลึกชั้นที่ 4
+ใน `myNestedArray` ชั้นที่ 4 ต้องมี string `deeper` อย่างน้อย 1 คำ
 
 
 ```js
@@ -161,7 +171,7 @@ assert(
 );
 ```
 
-`myNestedArray` ควรมีอย่างน้อยหนึ่ง string `deepest` ใน  nested array ที่ความลึกชั้นที่ 5
+ใน `myNestedArray` ชั้นที่ 5 ต้องมี string `deepest` อย่างน้อย 1 คำ
 
 ```js
 assert(
@@ -196,13 +206,13 @@ assert(
 
 ```js
 let myNestedArray = [
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   ['unshift', false, 1, 2, 3, 'complex', 'nested'],
   ['loop', 'shift', 6, 7, 1000, 'method'],
   ['concat', false, true, 'spread', 'array'],
   ['mutate', 1327.98, 'splice', 'slice', 'push'],
   ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth']
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 ];
 ```
 

@@ -8,13 +8,16 @@ dashedName: use-the-javascript-console-to-check-the-value-of-a-variable
 
 # --description--
 
-Chrome และ Firefox ต่างก็มี JavaScript consoles หรือเรียกกันว่า DevTools ที่ยอดเยี่ยม สำหรับการ debug JavaScript
+ทั้ง Chrome และ Firefox มี JavaScript console หรือที่เรียกกันว่า DevTool ที่ใช้ debug JavaScript ได้ดีมาก
 
-คุณสามารถใช้งาน Developer tools ได้ที่เมนูของ Chrome หรือ Web Console ที่เมนูของ Firefox ถ้าคุณใช้เบราว์เซอร์อื่นหรือโทรศัพท์มือถือ เราแนะนำให้คุณเปลี่ยนมาใช้ Firefox หรือ Chrome ที่เป็นเวอร์ชัน desktop
+คุณจะใช้งาน console ได้จากเมนู Developer tool ใน Chrome หรือจากเมนู Web Console ใน Firefox 
+ถ้าคุณใช้เบราว์เซอร์อื่นหรือใช้โทรศัพท์มือถือ เราขอแนะนำให้เปลี่ยนมาใช้ Firefox หรือ Chrome บน desktop แทน
 
-`console.log()` method ซึ่งแสดงผลลัพธ์ที่อยู่ในวงเล็บออกมาที่หน้า console เป็น debugging tool ที่ช่วยเราได้มาก การวางคำสั่งนี้ไว้ที่จุดที่หนึ่งๆ ในโค้ด ทำให้คุณสามารถเห็นค่าของตัวแปรได้ทันที การมีผลลัพธ์ในใจว่าควรเป็นอะไร ก่อนเข้าไปตรวจดูว่าตอนนี้มีค่าเป็นอะไรเป็นวิธีการปฏิบัติที่ดี นอกจากนี้การมี check point เพื่อตรวจสอบการทำงานตลอดทั้งโปรแกรมของคุณจะช่วยให้เจาะไปยังจุดที่เกิดปัญหาได้ดียิ่งขึ้น
+method `console.log()` จะแสดงผลลัพธ์ที่อยู่ในวงเล็บออกมาที่หน้า console 
+method นี้เป็นเครื่องมือในการ debugg ที่มีประโยชน์ที่สุด ถ้าเราวางโค้ดนี้ไว้ในจุดที่เหมาะสมจะช่วยให้เราเห็นค่าของตัวแปรในขณะที่โค้ดทำงานได้ เราควรที่จะมีค่าของตัวแปรนั้นในใจก่อนที่เราจะดูว่าค่าที่ log ออกมาเป็นอะไร 
+การที่เรามีจุดที่เอาไว้ตรวจสอบค่าทั่วทั้งโค้ดจะช่วยให้เราหาจุดที่เกิดปัญหาง่ายขึ้น
 
-ตัวอย่างของการพิมพ์ string `Hello world!` ออกมายังหน้า console
+ตัวอย่างของการแสดง string `Hello world!` บนหน้า console
 
 ```js
 console.log('Hello world!');
@@ -22,11 +25,11 @@ console.log('Hello world!');
 
 # --instructions--
 
-จงใช้ `console.log()` method เพื่อพิมพ์ค่าตัวแปร `a` ที่อยู่ในโค้ด
+จงใช้ method `console.log()` เพื่อพิมพ์ค่าของตัวแปร `a` ที่อยู่ในโค้ด
 
 # --hints--
 
-โค้ดของคุณควรใช้ `console.log()` เพื่อตรวจสอบค่าของตัวแปร `a`
+ต้องใช้ `console.log()` ในโค้ดเพื่อแสดงค่าของตัวแปร `a` ออกมา
 
 ```js
 assert(code.match(/console\.log\(a\)/g));
@@ -40,7 +43,7 @@ assert(code.match(/console\.log\(a\)/g));
 let a = 5;
 let b = 1;
 a++;
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 
 let sumAB = a + b;

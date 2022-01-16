@@ -8,23 +8,23 @@ dashedName: create-a-custom-heading
 
 # --description--
 
-เราจะสร้าง heading ง่ายๆ สำหรับแอป Cat Photo โดยใส่ชื่อ title รูปแมวน่ารักๆ ในแถว (row) เดียวกัน
+เราจะสร้าง heading ง่ายๆ สำหรับแอป Cat Photo โดยใส่ชื่อ title กับรูปน้องแมวน่ารักๆ ใน row เดียวกัน
 
-จำไว้เลยว่า Bootstrap ใช้ระบบ responsive grid ที่ทำให้ง่ายต่อการใส่ element ต่างๆ ไปใน row เดียวกัน แล้วทำให้แต่ element ใน row นั้นๆ มีความกว้างที่สัมพันธ์กัน ซึ่ง class ส่วนใหญ่ของ Bootstrap สามารถนำไปใช้ได้กับ `div` element
+จำได้ใช่มั้ยว่า Bootstrap ใช้ระบบ responsive grid ที่ทำให้การใส่ element หลายๆตัวไว้ใน row เดียวกัน และการตั้งค่าความกว้างของ element ใน row นั้นๆง่ายขึ้น แล้วก็ class ส่วนใหญ่ของ Bootstrap สามารถนำไปใช้ได้กับ `div` element
 
-มาลองใส่ภาพแรกและ `h2` element ไว้ใน `<div class="row">` element โดยการใส่ `h2` element ไว้ใน `<div class="col-xs-8">` และ รูปภาพ ไว้ใน `<div class="col-xs-4">` ซึ่งจะทำให้ ทั้ง 2 element นี้อยู่ในบรรทัดหรือแถวเดียวกัน
+มาลองใส่ภาพแรกและ `h2` element เข้าไปใน `<div class="row">` element โดยการใส่ `h2` element ไว้ใน `<div class="col-xs-8">` และใส่รูปภาพไว้ใน `<div class="col-xs-4">` ซึ่งจะทำให้ทั้ง 2 element นี้อยู่ใน row เดียวกัน
 
-ให้สังเกตว่าตอนนี้ภาพที่เราเพิ่มเข้ามามีขนาดที่เหมาะสมกับข้อความ `h2` หรือไม่
+จะเห็นว่าตอนนี้ภาพที่เราเพิ่มเข้ามามีขนาดที่พอดีกับข้อความใน `h2` แล้ว
 
 # --hints--
 
-`h2` element และ `img` element บนสุดจะต้องอยู่ด้วยกัน ใน tag `div` element ที่มี class ว่า `row`
+`h2` และ `img` ตัวบนสุดจะต้องอยู่ด้วยกัน ใน  `div` ที่มี class เป็น `row`
 
 ```js
 assert($('div.row:has(h2)').length > 0 && $('div.row:has(img)').length > 0);
 ```
 
-`img` element บนสุดจะต้องอยู่ภายใน `div` ที่มี class ว่า `col-xs-4` อีกที
+`img` ตัวบนสุดจะต้องอยู่ภายใน `div` ที่มี class เป็น `col-xs-4` อีกที
 
 ```js
 assert(
@@ -33,7 +33,7 @@ assert(
 );
 ```
 
-`h2` element ก็จะต้องอยู่ใน `div` ที่มี class ว่า `col-xs-8`
+`h2` ก็จะต้องอยู่ใน `div` ที่มี class เป็น `col-xs-8`
 
 ```js
 assert(
@@ -42,7 +42,7 @@ assert(
 );
 ```
 
-อย่าลืม tag ปิด สำหรับทุกๆ `div` element
+อย่าลืม tag ปิด สำหรับ `div` ทุกตัว
 
 ```js
 assert(

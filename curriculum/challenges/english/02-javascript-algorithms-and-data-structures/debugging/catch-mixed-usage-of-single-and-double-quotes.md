@@ -8,11 +8,11 @@ dashedName: catch-mixed-usage-of-single-and-double-quotes
 
 # --description--
 
-การประกาศ string ใน JavaScript เราสามารถใช้ได้ทั้ง single quote (`'`) และ double quote (`"`) การติดสินใจว่าจะใช้แบบไหนนั้นขึ้นกับความชอบส่วนบุคคลและข้อจำกัดบางอย่าง
+การประกาศ string ใน JavaScript เราสามารถใช้ได้ทั้ง single quote (`'`) และ double quote (`"`) การจะใช้ตัวไหนนั้นขึ้นอยู่กับความชอบเลย แต่ก็จะมีข้อจำกัดบางอย่างที่จะทำให้บางครั้งเราต้องเลือกใช้ตัวใดตัวหนึ่ง
 
-การมีทางเลือก 2 ทางมีประโยชน์มากเมื่อ string มีการย่อคำ (เช่นการใช้ It's แทน It is) หรืออยู่ใน quotes แต่ให้ระวังว่า คุณต้องไม่ใส่ quote ปิด string ผิดที่ ซึ่งทำให้เกิด syntax error ได้
+การที่เราสามารถเลือกใช้สองตัวนี้ได้ 2 จะมีประโยชน์มากถ้า string มีการใช้เครื่องหมายตัวใดตัวหนึ่งในนั้น แต่ต้องระวังเรื่องการปิด string ผิดที่ ซึ่งทำให้เกิด syntax error ได้
 
-ตัวอย่างต่อไปนี้เป็นการใช้ quote ปนกัน
+ลองดูตัวอย่างการใช้เครื่องหมาย quote ใน string:
 
 ```js
 const grouchoContraction = "I've had a perfectly wonderful evening, but this wasn't it.";
@@ -20,9 +20,11 @@ const quoteInString = "Groucho Marx once said 'Quote me as saying I was mis-quot
 const uhOhGroucho = 'I've had a perfectly wonderful evening, but this wasn't it.';
 ```
 
-2 บรรทัดแรกถูกต้อง แต่บรรทัดที่ 3 ไม่ถูกต้อง
+2 บรรทัดแรกถูกต้อง แต่บรรทัดที่ 3 ผิด
 
-แน่นอนว่า การใช้เพียง quote แบบเดียวก็ย่อมทำได้ คุณสามารถมี quote ภายใน string ได้โดยการเพิ่ม backslash (`\`) เข้าไปหน้า quote
+ถ้าคุณอยากใช้ quote แบบเดียวก็ทำได้ เราจะใส่ quote ใน string ที่เปิด-ปิดด้วย quote แบบเดียวกันได้โดยการใส่ backslash (`\`) เข้าไปหน้า quote
+
+จากตัวอย่างที่ผิดด้านบน เราสามารถแก้ให้ถูกได้ด้วยวิธีนี้:
 
 ```js
 const allSameQuotes = 'I\'ve had a perfectly wonderful evening, but this wasn\'t it.';
@@ -30,17 +32,17 @@ const allSameQuotes = 'I\'ve had a perfectly wonderful evening, but this wasn\'t
 
 # --instructions--
 
-จงปรับแก้ string ของค่า `href` โดยทำเป็น quote 2 แบบ หรือเพิ่ม backslash (`\`) เข้าไปหน้า quote ก็ได้ และให้ใส่ double quote ครอบ string ทั้งข้อความ
+ให้แก้ string ของ `href` โดยจะใช้ quote 2 แบบ หรือจะเพิ่ม backslash (`\`) เข้าไปหน้าเครื่องหมาย quote ก็ได้ และให้ใช้ double quote ครอบ string เหมือนเดิม
 
 # --hints--
 
-คุณควรแก้ไข quote ที่อยู่ `href` ตรงค่า `#Home` โดยทำเป็น quote 2 แบบ หรือเพิ่ม backslash (`\`) เข้าไปหน้า quote ก็ได้
+คุณควรแก้ไข quote ที่อยู่ `href` ตรงค่า `#Home` โดยจะใช้ quote 2 แบบ หรือจะเพิ่ม backslash (`\`) เข้าไปหน้าเครื่องหมาย quote ก็ได้
 
 ```js
 assert(code.match(/<a href=\s*?('|\\")#Home\1\s*?>/g));
 ```
 
-โค้ดของคุณยังคงมี double quote ครอบ string ทั้งข้อความ
+ต้องใช้ double quote ครอบ string เหมือนเดิม
 
 ```js
 assert(code.match(/"<p>.*?<\/p>";/g));

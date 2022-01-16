@@ -8,7 +8,7 @@ dashedName: inherit-behaviors-from-a-supertype
 
 # --description--
 
-คุณได้ทำการสร้าง `supertype` ที่มีชื่อว่า `Animal`ซึ่งกำหนดพฤติกรรม (behaviors) ร่วมกันของสัตว์ทุกชนิด ในแบบทดสอบก่อนหน้าแล้ว
+ในแบบทดสอบที่แล้ว เราได้สร้าง `supertype` ที่มีชื่อว่า `Animal` ซึ่งกำหนดพฤติกรรมที่สัตว์ทุกตัวจะมีเหมือนกันแล้ว
 
 ```js
 function Animal() { }
@@ -17,46 +17,47 @@ Animal.prototype.eat = function() {
 };
 ```
 
-แบบทดสอบนี้และแบบทดสอบถัดไปจะกล่าวถึงวิธีเรียกใช้ method ของ `Animal` ภายใน `Bird` และ `Dog` โดยที่เราไม่ต้องกำหนด method เหล่านั้นอีกครั้งใน `Bird` และ `Dog` วิธีการนี้ใช้เทคนิคที่เรียกว่า inheritance สำหรับแบบทดสอบนี้จะกล่าวถึงขั้นตอนแรก ก็คือ การสร้าง instance ของ `supertype` (หรือ parent) จริงๆ แล้ว คุณก็ทราบวิธีสร้าง instance ของ `Animal` ไปแล้ววิธีนึง นั่นคือการใช้ `new` operator
+แบบทดสอบนี้และแบบทดสอบถัดไปจะสอนวิธีเรียกใช้ method ของ `Animal` ภายใน `Bird` และ `Dog` โดยที่เราไม่ต้องกำหนด method เหล่านั้นอีกครั้งใน `Bird` และ `Dog` วิธีการนี้ใช้เทคนิคที่เรียกว่า inheritance (การสืบทอด) แบบทดสอบนี้จะสอนขั้นตอนแรก ก็คือ การสร้าง instance ของ `supertype` (หรือ parent) จริงๆ แล้ว คุณก็รู้วิธีสร้าง instance ของ `Animal` ไปแล้ววิธีนึง นั่นคือการใช้ `new` operator
 
 ```js
 let animal = new Animal();
 ```
 
-การใช้ syntax ด้านบนนี้ในการทำ inheritance มีข้อเสียคือ ทำให้การทำแบบทดสอบนี้ค่อนข้างยากและซับซ้อน ดังนั้น จึงแนะนำให้ใช้อีกวิธีนึงดังนี้
+การใช้ syntax ด้านบนนี้ในการทำ inheritance ก็จะมีข้อเสียอยู่ แต่ว่ามันจะลึกเกินไปที่จะให้คุณเรียนตอนนี้ แต่เราก็อยากให้คุณเปลี่ยนมาใช้วิธีนี้แทน:
 
 ```js
 let animal = Object.create(Animal.prototype);
 ```
 
-`Object.create(obj)` สร้าง object ใหม่ และกำหนด `obj` เป็น object ใหม่ของ `prototype` อย่างที่กล่าวไปแล้วว่า `prototype` เปรียบดัง "สูตรสำเร็จ" (recipe) ในการสร้าง object โดยการกำหนดให้ `prototype` ของ `animal` เป็น `prototype` ของ `Animal` ก็จะเป็นการทำให้ `animal` instance มีสูตรสำเร็จเช่นเดียวกับ instance อื่นๆ ของ `Animal`
+`Object.create(obj)` จะสร้าง object ใหม่ และใช้ `obj` เป็น `prototype` ของ object ใหม่ที่เราสร้าง 
+ถ้ายังจำได้ เราเคยบอกว่า `prototype` เป็นเหมือนแม่พิมพ์ที่ใช้สร้าง object การกำหนดให้ `prototype` ของ `animal` เป็น `prototype` ของ `Animal` ก็จะเป็นการทำให้ instance `animal` ถูกสร้างด้วยพิมพ์เดียวกับ instance คัวอื่นๆ ของ `Animal`
 
 ```js
 animal.eat();
 animal instanceof Animal;
 ```
 
-`instanceof` method ควรคืนค่า `true`.
+method `instanceof` จะได้ค่าเป็น `true`
 
 # --instructions--
 
-จงใช้ `Object.create` เพื่อสร้าง instance 2 ตัวของ `Animal` โดยตั้งชื่อว่า `duck` และ `beagle`.
+จงใช้ `Object.create` เพื่อสร้าง instance 2 ตัวโดยใช้ `Animal` และให้ตั้งชื่อว่า `duck` และ `beagle`
 
 # --hints--
 
-ตัวแปร `duck` ควรถูกกำหนดขึ้นมา (ไม่เป็น undefined)
+ต้องกำหนดค่าให้ตัวแปร `duck` (ไม่เป็น undefined)
 
 ```js
 assert(typeof duck !== 'undefined');
 ```
 
-ตัวแปร `beagle` ควรถูกกำหนดขึ้นมา (ไม่เป็น undefined)
+ต้องกำหนดค่าให้ตัวแปร `beagle` (ไม่เป็น undefined)
 
 ```js
 assert(typeof beagle !== 'undefined');
 ```
 
-ตัวแปร `duck` ควรสร้างด้วย `Object.create`
+ต้องสร้างตัวแปร `duck` ด้วย `Object.create`
 
 ```js
 assert(
@@ -66,7 +67,7 @@ assert(
 );
 ```
 
-ตัวแปร `beagle` ควรสร้างด้วย `Object.create`
+ต้องสร้างตัวแปร `beagle` ด้วย `Object.create`
 
 ```js
 assert(
@@ -76,13 +77,13 @@ assert(
 );
 ```
 
-`duck` ควรมี `prototype` ของ `Animal`
+ใน `duck` ต้องมี `prototype` ของ `Animal`
 
 ```js
 assert(duck instanceof Animal);
 ```
 
-`beagle` ควรมี `prototype` ของ `Animal`
+ใน `beagle` ต้องมี `prototype` ของ `Animal`
 
 ```js
 assert(beagle instanceof Animal);
@@ -102,10 +103,10 @@ Animal.prototype = {
   }
 };
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-let duck; // Change this line
-let beagle; // Change this line
+let duck; // แก้บรรทัดนี้
+let beagle; // แก้บรรทัดนี้
 ```
 
 # --solutions--

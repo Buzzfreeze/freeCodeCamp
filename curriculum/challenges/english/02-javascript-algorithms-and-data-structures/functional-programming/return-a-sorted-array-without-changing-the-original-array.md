@@ -7,27 +7,28 @@ dashedName: return-a-sorted-array-without-changing-the-original-array
 ---
 
 # --description--
-side effect ของ `sort` method คือ มันเรียงลำดับ elements ใน array ตั้งต้น กล่าวได้อีกแบบว่า `sort` method ได้เปลี่ยนแปลง array ตั้งต้นนั่นเอง วิธีนึงที่ป้องกันปัญหานี้ได้ก็คือ ให้นำ array เปล่า (empty array) มา concat กับ array ที่จะทำการ sort (ให้นึกถึง `slice` และ `concat` ที่คืนค่าเป็น array ตัวใหม่) จากนั้นค่อยรัน `sort` method
+side effect ของ method `sort` คือ method ฟังก์ชันนี้เรียงลำดับ element ใน array เดิมเลย แปลว่า method `sort` นี้ได้เปลี่ยนแปลง array ที่เรียกใช้นั่นเอง 
+วิธีที่ป้องกันปัญหานี้ได้ก็คือ ให้นำ array ว่าง (empty array, `[]`) มา concat กับ array ที่จะทำการ sort (ให้นึกถึง `slice` และ `concat` ที่คืนค่าเป็น array ตัวใหม่) จากนั้นค่อยเรียกใช้ method `sort`
 
 # --instructions--
 
-จงใช้ `sort` method ในฟังก์ชัน `nonMutatingSort` เพื่อเรียงลำดับ elements ของ array จากน้อยไปมาก (ascending order) โดยฟังก์ชันควรคืนค่าเป็น array ตัวใหม่ และไม่เปลี่ยนแปลงค่าตัวแปร `globalArray`
+จงใช้ method `sort` ในฟังก์ชัน `nonMutatingSort` เพื่อเรียงลำดับ element ของ array จากน้อยไปมาก โดยฟังก์ชันนี้ต้องคืนค่าเป็น array ตัวใหม่ และไม่เปลี่ยนแปลงค่าตัวแปร `globalArray`
 
 # --hints--
 
-โค้ดของคุณควรใช้ `sort` method
+ต้องใช้ method `sort` 
 
 ```js
 assert(nonMutatingSort.toString().match(/\.sort/g));
 ```
 
-ตัวแปร `globalArray` ไม่ควรมีการเปลี่ยนแปลง
+ตัวแปร `globalArray` ต้องมีค่าเหมือนก่อนเรียกใช้ฟังก์ชัน
 
 ```js
 assert(JSON.stringify(globalArray) === JSON.stringify([5, 6, 3, 2, 9]));
 ```
 
-`nonMutatingSort(globalArray)` ควรคืนค่าเป็น `[2, 3, 5, 6, 9]`.
+การเรียกใช้ฟังก์ชัน `nonMutatingSort(globalArray)` ต้องได้ค่าเป็น `[2, 3, 5, 6, 9]`.
 
 ```js
 assert(
@@ -36,26 +37,26 @@ assert(
 );
 ```
 
-`nonMutatingSort(globalArray)` ไม่ควรใช้วิธี hard code
+ห้าม hard code ผลลัพธ์ในฟังก์ชัน `nonMutatingSort(globalArray)`
 
 ```js
 assert(!nonMutatingSort.toString().match(/\[.*?[23569].*?\]/gs));
 ```
 
-ฟังก์ชันควรคืนค่าเป็น array ตัวใหม่ ไม่ใช่ array ที่ส่งผ่านเข้าไป
+ฟังก์ชันนี้ต้องคืนค่าเป็น array ตัวใหม่ ไม่ใช่ array ที่ส่งผ่านเข้าไป
 
 ```js
 assert(nonMutatingSort(globalArray) !== globalArray);
 ```
 
-`nonMutatingSort([1, 30, 4, 21, 100000])` ควรคืนค่าเป็น `[1, 4, 21, 30, 100000]`.
+การเรียกใช้ฟังก์ชัน `nonMutatingSort([1, 30, 4, 21, 100000])` ต้องได้ค่าเป็น `[1, 4, 21, 30, 100000]`.
 
 ```js
 assert(JSON.stringify(nonMutatingSort([1, 30, 4, 21, 100000])) ===
     JSON.stringify([1, 4, 21, 30, 100000]))
 ```
 
-`nonMutatingSort([140000, 104, 99])` ควรคืนค่าเป็น `[99, 104, 140000]`.
+การเรียกใช้ฟังก์ชัน `nonMutatingSort([140000, 104, 99])` ต้องได้ค่าเป็น `[99, 104, 140000]`.
 
 ```js
 assert(JSON.stringify(nonMutatingSort([140000, 104, 99])) ===
@@ -69,10 +70,10 @@ assert(JSON.stringify(nonMutatingSort([140000, 104, 99])) ===
 ```js
 var globalArray = [5, 6, 3, 2, 9];
 function nonMutatingSort(arr) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 nonMutatingSort(globalArray);
 ```
@@ -82,9 +83,9 @@ nonMutatingSort(globalArray);
 ```js
 var globalArray = [5, 6, 3, 2, 9];
 function nonMutatingSort(arr) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   return [].concat(arr).sort((a,b) => a-b);
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 nonMutatingSort(globalArray);
 ```

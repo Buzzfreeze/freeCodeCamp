@@ -24,7 +24,7 @@ dashedName: show-the-local-weather
 
  เราจึงแนะนำให้ใช้ HTML5 Geolocation เพื่อรับตำแหน่งของผู้ใช้ จากนั้นใช้ freeCodeCamp Weather API <https://weather-proxy.freecodecamp.rocks/> ซึ่งใช้การเชื่อมต่อแบบ HTTP Secure สำหรับสภาพอากาศ และ อย่าลืมเชื่อมต่อกับ [CodePen.io](https://codepen.io) ผ่าน `https://`
 
-เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "I've completed this challenge"
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "ฉันทำภารกิจที่ท้าทายนี้เสร็จแล้ว"
 
 สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 

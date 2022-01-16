@@ -8,15 +8,16 @@ dashedName: generate-an-array-of-all-object-keys-with-object-keys
 
 # --description--
 
-นอกจากนี้เรายังสามารถสร้าง array จาก object ด้วย `Object.keys()` โดยส่ง object เข้าไปเป็น argument อย่างไรก็ตาม array ทีได้จาก `Object.keys()` จะประกอบด้วย string ของแต่ละ property ใน object โดย property เหล่านี้จะไม่มีลำดับใน array
+เราสามารถสร้าง array ของ key ใน object ได้ด้วย `Object.keys()` โดยส่ง object เข้าไปเป็น argument
+`Object.keys()` จะคืนค่าเป็น array ของชื่อ property ใน object โดยจะไม่มีการเรียงลำดับชื่อของ property ที่ส่งออกมา
 
 # --instructions--
 
-จงเขียนฟังก์ชัน `getArrayOfUsers` ให้สำเร็จ เพื่อให้คืนค่าเป็น array ที่ประกอบด้วย property ทั้งหมดใน object โดย object นั้นเป็น argument 
+ให้เขียนฟังก์ชัน `getArrayOfUsers` เพื่อให้ฟังก์ชันนี้คืนค่าเป็น array ของชื่อของ property ทั้งหมดใน object ที่เป็น argument
 
 # --hints--
 
-object `users` ควรประกอบด้วย key  `Alan`, `Jeff`, `Sarah`, และ `Ryan` เท่านั้น
+object `users` ต้องมี key เป็น `Alan`, `Jeff`, `Sarah`, และ `Ryan` เท่านั้น
 
 ```js
 assert(
@@ -28,7 +29,7 @@ assert(
 );
 ```
 
-function `getArrayOfUsers` ควรคืนค่า array ซึ่งประกอบด้วย key ทั้งหมดใน object `users`
+ฟังก์ชัน `getArrayOfUsers` ต้องคืนค่าเป็น array ที่มี key ทั้งหมดใน object `users`
 
 ```js
 assert(
@@ -73,9 +74,9 @@ let users = {
 };
 
 function getArrayOfUsers(obj) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 
 console.log(getArrayOfUsers(users));

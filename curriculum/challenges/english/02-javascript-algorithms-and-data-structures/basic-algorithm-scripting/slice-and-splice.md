@@ -8,24 +8,24 @@ dashedName: slice-and-splice
 
 # --description--
 
-โจทย์มี array 2 ชุด และเลข index มาให้ ให้คุณทำการ copy array แรกมาใส่ใน array ที่สอง โดยให้แทรกที่ index `n` ของ array ที่สอง
-และต้องการให้ฟังก์ชันคืนค่าเป็น array โดยที่ input array มีค่าคงเดิม ไม่มีการเปลี่ยนแปลงหลังจากรันฟังก์ชัน
+ให้เขียนฟังก์ชันที่รับ array 2 ตัว (`arr1`, `arr2`) และเลข 1 ตัว (`n`) 
+ให้ฟังก์ชันทำงานโดยทำการคัดลอก array `arr1` มาแทรกใน array `arr2` ที่ตำแหน่ง index `n` ของ array `arr2` (ให้แทรกที่ index `n` ไม่ใช่แทนที่ element ที่ index `n`) และให้คืนค่าเป็น array ใหม่โดยที่ array ที่เป็น argument ต้องไม่ถูกเปลี่ยนแปลงหลังจากฟังก์ชันทำงานเสร็จ
 
 # --hints--
 
-`frankenSplice([1, 2, 3], [4, 5], 1)` ควรคืนค่าเป็น `[4, 1, 2, 3, 5]`.
+การเรียกใช้ฟังก์ชัน `frankenSplice([1, 2, 3], [4, 5], 1)` ต้องได้ค่าเป็น `[4, 1, 2, 3, 5]`.
 
 ```js
 assert.deepEqual(frankenSplice([1, 2, 3], [4, 5], 1), [4, 1, 2, 3, 5]);
 ```
 
-`frankenSplice([1, 2], ["a", "b"], 1)` ควรคืนค่าเป็น `["a", 1, 2, "b"]`.
+การเรียกใช้ฟังก์ชัน `frankenSplice([1, 2], ["a", "b"], 1)` ต้องได้ค่าเป็น `["a", 1, 2, "b"]`.
 
 ```js
 assert.deepEqual(frankenSplice(testArr1, testArr2, 1), ['a', 1, 2, 'b']);
 ```
 
-`frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2)` ควรคืนค่าเป็น `["head", "shoulders", "claw", "tentacle", "knees", "toes"]`.
+การเรียกใช้ฟังก์ชัน `frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2)` ต้องได้ค่าเป็น `["head", "shoulders", "claw", "tentacle", "knees", "toes"]`.
 
 ```js
 assert.deepEqual(
@@ -38,20 +38,21 @@ assert.deepEqual(
 );
 ```
 
-ตัวอย่างต่อไปนี้ ทุก elements จาก array แรก ถูก copy ไปใส่ใน array ที่สองตามลำดับเดิม `frankenSplice([1, 2, 3, 4], [], 0)` ควรคืนค่าเป็น `[1, 2, 3, 4]`.
+element ที่คัดลอกจาก array แรกไปใส่ใน array ที่สองต้องเรียงในตำแหน่งเดิม 
+การเรียกใช้ฟังก์ชัน `frankenSplice([1, 2, 3, 4], [], 0)` ต้องได้ค่าเป็น `[1, 2, 3, 4]`.
 
 ```js
 assert.deepEqual(frankenSplice([1, 2, 3, 4], [], 0), [1, 2, 3, 4]);
 ```
 
-array แรกควรมีค่าคงเดิมหลังจากรันฟังก์ชัน
+array แรกต้องมีค่าเท่าเดิมหลังฟังก์ชันทำงานเสร็จ
 
 ```js
 frankenSplice(testArr1, testArr2, 1);
 assert.deepEqual(testArr1, [1, 2]);
 ```
 
-array ที่สองควรมีค่าคงเดิมหลังจากรันฟังก์ชัน
+array ที่สองต้องมีค่าเท่าเดิมหลังฟังก์ชันทำงานเสร็จ
 
 ```js
 frankenSplice(testArr1, testArr2, 1);

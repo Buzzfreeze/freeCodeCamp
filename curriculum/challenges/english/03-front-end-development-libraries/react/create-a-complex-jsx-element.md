@@ -8,17 +8,17 @@ dashedName: create-a-complex-jsx-element
 
 # --description--
 
-แบบทดสอบก่อนหน้านี้เป็นตัวอย่างของ JSX แบบง่ายๆ แต่ JSX ยังสามารถแทน HTML ที่ซับซ้อนกว่าได้ด้วย
+แบบทดสอบที่แล้วเป็นการใช้ JSX แบบง่ายๆ แต่เราก็ใช้ JSX สร้าง HTML ที่ซับซ้อนกว่านั้นได้ด้วย
 
-สิ่งสำคัญอย่างหนึ่งที่ต้องรู้เกี่ยวกับ JSX ที่ซ้อนกันคือต้อง return component เดียว
+สิ่งสำคัญอย่างหนึ่งที่ต้องรู้ในการเขียน JSX ซ้อนกันก็คือ ในการคืนค่าทุกครั้งจะต้องคืนค่าเป็น component เดียวเท่านั้น
 
-ใน parent element 1 อันนี้จะรวม element ที่ซ้อนกันระดับอื่นๆ ทั้งหมด
+ซึ่ง parent element ตัวที่คืนค่าออกมานี้ จะต้องครอบ element ที่ซ้อนอยู่ข้างในทั้งหมด
 
-ตัวอย่างเช่น JSX element หลายตัวที่ถูกเขียนเพื่อให้เป็น child โดยที่ไม่มี parent element ครอบนั้นจะไม่ transpile
+เช่น ถ้าเราเขียน JSX element หลายๆตัวไว้โดยที่ไม่มี parent element ครอบ โค้ดที่เราเขียนไปจะไม่ถูก transpile
 
-ดูตัวอย่างด้านล่าง:
+ลองดูตัวอย่างด้านล่าง:
 
-**Valid JSX:**
+**JSX ในรูปแบบที่ถูกต้อง:**
 
 ```jsx
 <div>
@@ -28,7 +28,7 @@ dashedName: create-a-complex-jsx-element
 </div>
 ```
 
-**Invalid JSX:**
+**JSX ในรูปแบบที่ผิด:**
 
 ```jsx
 <p>Paragraph One</p>
@@ -38,39 +38,41 @@ dashedName: create-a-complex-jsx-element
 
 # --instructions--
 
-กำหนด constant `JSX` ใหม่ ที่เรนเดอร์ `div` ที่ประกอบไปด้วย element ต่างๆ ตามลำดับดังนี้:
+ให้ใช้ `const` สร้างตัวแปร `JSX` ซึ่งจะเก็บ `div` ที่เป็น parent element และใน parent element นี้จะต้องมี child element ตามลำดับดังนี้:
 
-`h1`, `p`, และ unordered list ที่มี 3 `li` คุณสามารถเพิ่มข้อความอะไรก็ได้ภายใน element แต่ละอัน
+`h1`, `p`, และ unordered list (`ul`) ที่มี `li` 3 ตัว 
+คุณจะใส่ข้อความอะไรก็ได้ใน element แต่ละอันที่เพิ่มมา
 
-**Note:** เมื่อเรนดเดอร์หลายๆ element อย่างนี้ คุณสามารถรวบทุกอย่างไว้ในวงเล็บได้ แต่จะทำหรือไม่ก็ได้ไม่เคร่ง  นอกจากนี้โปรดสังเกตว่าแบบทดสอบนี้ใช้ `div` tag เพื่อรวบ child element ทุกอันไว้ภายใน parent element เดียว ถ้าคุณลบ `div` ออก JSX ก็จะไม่สามารถ transpile ได้อีกต่อไป จำในส่วนนี้ไว้ให้ดีๆ เพราะต้องนำไปใช้เมื่อคุณจะ return JSX element ใน React component
+**Note:** เวลาเราสร้าง element หลายๆตัวแบบนี้ เราจะใช้วงเล็บครอบ element ทั้งหมดได้ (แต่จะทำหรือไม่ก็ได้) 
+แล้วก็จะเห็นว่าแบบทดสอบนี้ใช้ `div` ครอบ child element ทุกอันไว้ใน parent element เดียว ถ้าคุณลบ `div` ออก JSX ก็จะไม่สามารถ transpile ได้ ให้จำเรื่องนี้ไว้ให้ดีๆ เพราะต้องนำไปใช้เวลาที่จะต้องคืนค่าเป็น JSX element ใน React component
 
 # --hints--
 
-constant `JSX` ควรจะต้อง return `div` element
+`JSX` จะต้องเก็บ `div` element
 
 ```js
 assert(JSX.type === 'div');
 ```
 
-`div` นี้ควรจะต้องมี `h1` tag เป็น element แรก
+`div` นี้ต้องมี `h1` เป็น element แรก
 
 ```js
 assert(JSX.props.children[0].type === 'h1');
 ```
 
-`div` นี้ควรจะต้องมี `p` tag เป็น element ที่สอง
+`div` นี้ต้องมี `p` เป็น element ที่สอง
 
 ```js
 assert(JSX.props.children[1].type === 'p');
 ```
 
-`div` นี้ควรจะต้องมี `ul` tag เป็น element ที่สาม
+`div` นี้ต้องมี `ul` เป็น element ที่สาม
 
 ```js
 assert(JSX.props.children[2].type === 'ul');
 ```
 
-`ul` ควรจะต้องมี 3 `li` element
+`ul` ต้องมี `li` 3 อันอยู่ข้างใน
 
 ```js
 assert(

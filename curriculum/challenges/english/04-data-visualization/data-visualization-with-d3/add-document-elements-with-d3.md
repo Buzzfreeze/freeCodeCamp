@@ -8,23 +8,25 @@ dashedName: add-document-elements-with-d3
 
 # --description--
 
-D3 มีหลายวิธีสำหรับเพิ่มและเปลี่ยน elements ใน document
+มี method ของ D3 ตัวที่ใช้เพิ่มและเปลี่ยน element ใน document ได้
 
- `select()` method เป็นการเลือก element จาก document โดยระบุ argument ท่ีเป็นชื่อของ element ที่ต้องการ เพื่อส่งค่ากลับ HTML node สำหรับ element ของ document ที่ตรงกับชื่อ ดังตัวอย่าง:
+method `select()` ใช้เพื่อเลือก element จาก document โดยระบุชื่อของ element ที่อยากได้เป็น argument 
+แล้ว method นี้จะดึง element แรกที่ชื่อตรงกันใน document มาให้ ลองดูตัวอย่าง:
 
 ```js
 const anchor = d3.select("a");
 ```
 
-จากตัวอย่างด้านบน จะทำการหา anchor tag ใน page ก่อนและ saves HTML node เพื่อสำหรับ variable `anchor` โดยสามารถใช้ selection กับ methods อืื่นๆได้อีกด้วย สำหรับ `d3` ในตัวอย่างจะอ้างอิงถึง D3 object โ
+จากตัวอย่างด้านบน จะทำการหาแท็ก `a` ตัวแรกในหน้า และเก็บ HTML node ของ element นี้ลงในตัวแปร `anchor` 
+method selection สามารถใช้กับ method อื่นๆได้ด้วย สำหรับ `d3` ในตัวอย่างจะเป็น D3 object ที่จะใช้เพื่อเข้าถึง method ของ D3 
 
-วิธีที่มีประสิทธิภาพคือ `append()` และ `text()`
+method อีกสองตัวที่มีประโยชน์คือ `append()` และ `text()`
 
-`append()` method ใช้สำหรับเพิ่ม element ที่ต้องการให้กับ document การเพิ่ม HTML node เพื่อเลือก items และส่งค่ากลับไปยัง node เดิม
+method `append()` ใช้สำหรับเพิ่ม element ที่ต้องการให้กับ document 
 
-`text()` method เป็นการตั้งค่าข้อความของ node ที่เลือกหรือรับข้อความปัจจุบัน สามารถ set ค่าได้โดยการ pass string ไปเป็น argument ข้างในวงเล็บ 
+method `text()` ใช้สำหรับอ่านหรือเปลี่ยนข้อความใน note ถ้าต้องการอ่านข้อความให้เรียกใช้ method โดยไม่ต้องส่ง argument ถ้าต้องการเปลี่ยนข้อความให้ส่ง string ไปเป็น argument
 
-ตัวอย่างการเลือกใช้ unordered list, เพิ่ม list item, และ text:
+ตัวอย่างนี้จะทำการ เลือก unordered list (`ul`), เพิ่ม list item (`li`), และเปลี่ยน text:
 
 ```js
 d3.select("ul")
@@ -32,45 +34,45 @@ d3.select("ul")
   .text("Very important item");
 ```
 
-D3 อนุญาตให้ใช้หลาย methods ร่วมกันได้ เพื่อให้เกิด action หลายๆอย่างต่อเนื่องกัน
+ในการใช้ D3 เราจะเชื่อมหลายๆ method เข้าด้วยกันแบบตัวอย่างด้านบนนี้ได้
 
 # --instructions--
 
-ใช้ `select` method เพื่อเลือก `body` tag ใน document จากนั้นใช้ `append` `h1` tag และเพิ่ม text `Learning D3` ให้กับ `h1` element.
+ให้ใช้ method `select` เพื่อเลือกแท็ก `body` ใน document จากนั้นใช้ `append` เพื่อเพิ่ม `h1` เข้าไป และตั้งค่าข้อความใน `h1` ให้เป็น `Learning D3`
 
 # --hints--
 
-`body` ควรมี `h1` element
+ต้องมี `h1` ใน `body`
 
 ```js
 assert($('body').children('h1').length == 1);
 ```
 
-`h1` element ควรมี text `Learning D3` in 
+`h1` ต้องมีข้อความเป็น `Learning D3`
 
 ```js
 assert($('h1').text() == 'Learning D3');
 ```
 
-ควรเข้าถึง `d3` object
+ต้องเรียกใช้ `d3` object
 
 ```js
 assert(code.match(/d3/g));
 ```
 
-ควรใช้ `select` method
+ต้องใช้ method `select`
 
 ```js
 assert(code.match(/\.select/g));
 ```
 
-ควรใช้ `append` method
+ต้องใช้ method `append`
 
 ```js
 assert(code.match(/\.append/g));
 ```
 
-ควรใช้ `text` method
+ต้องใช้ method `text`
 
 ```js
 assert(code.match(/\.text/g));
@@ -83,11 +85,11 @@ assert(code.match(/\.text/g));
 ```html
 <body>
   <script>
-    // Add your code below this line
+    // เขียนโค้ดใต้บรรทัดนี้
 
 
 
-    // Add your code above this line
+    // เขียนโค้ดเหนือบรรทัดนี้
   </script>
 </body>
 ```

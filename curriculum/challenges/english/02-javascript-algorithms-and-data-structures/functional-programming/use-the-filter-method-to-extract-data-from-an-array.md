@@ -8,14 +8,18 @@ dashedName: use-the-filter-method-to-extract-data-from-an-array
 
 # --description--
 
-array function อีกตัวที่มีประโยชน์มาก ก็คือ `Array.prototype.filter()` หรือเขียนย่อๆ ว่า `filter()`
+ฟังก์ชันที่เกี่ยวข้องกับ array อีกตัวที่มีประโยชน์มาก ก็คือ `Array.prototype.filter()` หรือเขียนย่อๆ ว่า `filter()`
 
-`filter` วนอ่านค่าแต่ละ element ของ array และคืนค่าเป็น array ตัวใหม่ที่มี element ที่ทำให้ callback function คืนค่าเป็น `true` หรือกล่าวได้อีกนัยหนึ่งว่า `filter` ทำการ filter array ตามเงื่อนไขของฟังก์ชันที่ส่งผ่านเข้าไป เช่นเดียวกับ `map` ที่ไม่เปลี่ยนแปลงค่าของ array ตั้งต้น
+`filter` จะวนอ่านค่าแต่ละ element และนำ element แต่ละตัวไปเข้า callback function ถ้า callback ได้ค่าเป็น `true` จะใส่ element นั้นลงมาใน array ที่เป็นผลลัพธ์ด้วย หรือจะอธิบายอีกแบบได้ว่า `filter` ทำการกรอง array ตามเงื่อนไขของฟังก์ชันที่ส่งเข้าไป โดยจะไม่เปลี่ยนค่าของ array เดิมเหมือน `map`
 
-callback สามารถรับ argument ได้ 3 ค่า โดย argument แรก คือ element ปัจจุบันที่กำลังถูกอ่านค่า ส่วน argument ที่สองคือ index ของ element นั้นๆ และ argument ที่สาม คือ array ที่เรียก `filter` method
+เมื่อ `filter` เรียกใช้ callback จะส่ง argument เข้าไปสามตัว 
 
-จากตัวอย่างด้านล่าง มีการใช้ `filter` method กับ `users` array เพื่อคืนค่าเป็น array ตัวใหม่ที่มี element เป็น users ที่มีอายุน้อยกว่า 30 ปี 
-เพื่อให้เห็นภาพได้ง่าย ในตัวอย่าง callback จะใช้เพียง argument แรกเท่านั้น
+- argument แรกคือ element ที่อ่านค่าอยู่ 
+- argument ที่สองคือ index ของ element นั้นๆ
+- argument ที่สามคือ array ที่เรียก method `filter`
+
+ในตัวอย่างด้านล่าง จะใช้ method `filter` กับ array `users` เพื่อคืนค่าเป็น array ตัวใหม่ที่มี element เป็น user ที่มีอายุน้อยกว่า 30 ปี 
+ใน callback ของตัวอย่างนี้ เราจะใช้แค่ argument แรกก่อน เพื่อให้เข้าใจง่าย:
 
 ```js
 const users = [
@@ -28,16 +32,21 @@ const usersUnder30 = users.filter(user => user.age < 30);
 console.log(usersUnder30); 
 ```
 
-หน้า console ควรแสดงค่า `[ { name: 'Amy', age: 20 }, { name: 'camperCat', age: 10 } ]`.
+บน console จะแสดง `[ { name: 'Amy', age: 20 }, { name: 'camperCat', age: 10 } ]`.
 
 # --instructions--
 
-`watchList` array ประกอบด้วย objects ที่มีข้อมูลเกี่ยวกับภาพยนตร์ จงใช้ `filter` และ `map` กับ `watchList` เพื่อกำหนดค่า object ให้กับ array ตัวใหม่ โดย array ตัวใหม่นี้เก็บเพียง key `title` และ key `rating` เท่านั้น นอกจากนี้ array ตัวใหม่ควรมีเพียง object ที่มี `imdbRating` มากกว่าหรือเท่ากับ 8.0 เท่านั้น
-หมายเหตุ `rating` เก็บเป็น string ภายใน object ดังนั้น คุณต้องแปลงให้เป็น number ก่อน ถึงค่อยทำการคำนวณทางคณิตศาสตร์
+ตอนนี้ array `watchList` เก็บ object ที่เก็บข้อมูลของภาพยนตร์อยู่
+จงใช้ `filter` และ `map` กับ `watchList` เพื่อเก็บค่า array ตัวใหม่ลงในตัวแปร `filteredList`
+โดยมีเงื่อนไขคือ
+
+1. แต่ละ element ใน array ตัวใหม่จะต้องมี key แค่ 2 ตัวคือ `title` และ `rating`
+2. array ตัวใหม่จะต้องเก็บค่าของ object ที่มี `imdbRating` มากกว่าหรือเท่ากับ 8.0 เท่านั้น
+หมายเหตุ ตอนนี้ค่าของ `rating` เก็บเป็น string อยู่ เพราะฉะนั้นต้องแปลงให้เป็น number ก่อน ถึงจะเอามาตรวจสอบค่าได้
 
 # --hints--
 
-ตัวแปร `watchList` ไม่ควรมีการเปลี่ยนแปลง
+ค่าของตัวแปร `watchList` ต้องคงที่
 
 ```js
 assert(
@@ -45,19 +54,19 @@ assert(
 );
 ```
 
-โค้ดของคุณควรใช้ `filter` method
+ต้องใช้ method `filter`
 
 ```js
 assert(code.match(/\s*\.\s*filter/g));
 ```
 
-โค้ดของคุณไม่ควรใช้ `for` loop
+ห้ามใช้ `for` loop
 
 ```js
 assert(!code.match(/for\s*?\([\s\S]*?\)/g));
 ```
 
-`filteredList` ควรมีค่าเป็น `[{"title": "Inception","rating": "8.8"},{"title": "Interstellar","rating": "8.6"},{"title": "The Dark Knight","rating": "9.0"},{"title": "Batman Begins","rating": "8.3"}]`.
+`filteredList` ต้องมีค่าเป็น `[{"title": "Inception","rating": "8.8"},{"title": "Interstellar","rating": "8.6"},{"title": "The Dark Knight","rating": "9.0"},{"title": "Batman Begins","rating": "8.3"}]`.
 
 ```js
 assert.deepEqual(filteredList, [
@@ -73,7 +82,7 @@ assert.deepEqual(filteredList, [
 ## --seed-contents--
 
 ```js
-// The global variable
+// ตัวแปร global
 var watchList = [
   {
     "Title": "Inception",
@@ -187,11 +196,11 @@ var watchList = [
   }
 ];
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 var filteredList;
 
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 
 console.log(filteredList);
 ```

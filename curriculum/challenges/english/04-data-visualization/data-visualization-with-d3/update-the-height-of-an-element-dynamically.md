@@ -8,13 +8,13 @@ dashedName: update-the-height-เป็น-an-element-dynamically
 
 # --description--
 
-จากโจทย์ที่ผ่านมาเราสามารถแสดง data ในแบบของรูปภาพได้จาก array และเพิ่ม CSS classes ในบทเรียนนี้เราสามารถรวมความรู้ทั้งสองแบบเข้าด้วยกันเพื่อสร้าง bar chart อย่างง่ายๆ ตามขั้นตอนด้านล่าง
+ในแบบทดสอบที่ผ่านๆมาเราได้สอนเรื่องการแสดงผลข้อมูลจาก array และการเพิ่ม CSS class ไปแล้ว คราวนี้เราจะใช้สิ่งที่เรียนมาในการสร้างกราฟแท่ง (bar chart) อย่างง่ายๆ ตามขั้นตอนด้านล่าง
 
-1) สร้าง `div` fสำหรับแต่ละ data point ใน array
+1) สร้าง `div` สำหรับข้อมูลแต่ละตัวใน array
 
-2) กำหนดให้ `div` เป็น dynamic height โดยใช้ callback function ใน `style()` method ที่กำหนดค่า height เท่ากับ data value
+2) กำหนดให้ความสูงของ `div` เปลี่ยนแปลงตามข้อมูล โดยใช้ callback function ใน method `style()` โดยให้ height มีค่าเท่ากับข้อมูลตัวนั้นๆ
 
-format เพื่อกำหนด style โดยใช้ callback function:
+ถ้ายังจำได้ syntax ในการกำหนด style โดยใช้ callback function จะมีหน้าตาแบบนี้:
 
 ```js
 selection.style("cssProperty", (d) => d)
@@ -22,59 +22,60 @@ selection.style("cssProperty", (d) => d)
 
 # --instructions--
 
-เพิ่ม `style()` method เพื่อกำหนดค่า `height` property ของแต่ละ element โดยใช้ callback function เพื่อ return ค่าของแต่ละ data point กลับมาและเพิ่ม string `px` ให้กับกับมัน
+ให้เพิ่ม method `style()` เพื่อกำหนดค่าของ property `height` ของแต่ละ element โดยใช้ callback function 
+callback function ต้องคืนค่ามาเป็นค่าของข้อมูลตัวนั้น ต้อท้ายด้วย string `px` เพื่อใช้กำหนดความสูงในหน่วยพิกเซล
 
 # --hints--
 
-อันดับที่ 1) `div` ควรมีค่า `height` เป็น `12` pixels.
+`div` ตัวที่ 1 ต้องมี `height` เป็น `12` พิกเซล
 
 ```js
 assert($('div').eq(0)[0].style.height === '12px');
 ```
 
-อันดับที่ 2) `div` ควรมีค่า `height` เป็น `31` pixels.
+`div` ตัวที่ 2 ต้องมี `height` เป็น `31` พิกเซล
 
 ```js
 assert($('div').eq(1)[0].style.height === '31px');
 ```
 
-อันดับที่ 3) `div` ควรมีค่า `height` เป็น `22` pixels.
+`div` ตัวที่ 3 ต้องมี `height` เป็น `22` พิกเซล
 
 ```js
 assert($('div').eq(2)[0].style.height === '22px');
 ```
 
-อันดับที่ 4) `div` ควรมีค่า `height` เป็น `17` pixels.
+`div` ตัวที่ 4 ต้องมี `height` เป็น `17` พิกเซล
 
 ```js
 assert($('div').eq(3)[0].style.height === '17px');
 ```
 
-อันดับที่ 5) `div` ควรมีค่า `height` เป็น `25` pixels.
+`div` ตัวที่ 5 ต้องมี `height` เป็น `25` พิกเซล
 
 ```js
 assert($('div').eq(4)[0].style.height === '25px');
 ```
 
-อันดับที่ 6) `div` ควรมีค่า `height` เป็น `18` pixels.
+`div` ตัวที่ 6 ต้องมี `height` เป็น `18` พิกเซล
 
 ```js
 assert($('div').eq(5)[0].style.height === '18px');
 ```
 
-อันดับที่ 7) `div` ควรมีค่า `height` เป็น `29` pixels.
+`div` ตัวที่ 7 ต้องมี `height` เป็น `29` พิกเซล
 
 ```js
 assert($('div').eq(6)[0].style.height === '29px');
 ```
 
-อันดับที่ 8) `div` ควรมีค่า `height` เป็น `14` pixels.
+`div` ตัวที่ 8 ต้องมี `height` เป็น `14` พิกเซล
 
 ```js
 assert($('div').eq(7)[0].style.height === '14px');
 ```
 
-อันดับที่ 9) `div` ควรมีค่า `height` เป็น `9` pixels.
+`div` ตัวที่ 9 ต้องมี `height` เป็น `9` พิกเซล
 
 ```js
 assert($('div').eq(8)[0].style.height === '9px');
@@ -102,11 +103,11 @@ assert($('div').eq(8)[0].style.height === '9px');
       .enter()
       .append("div")
       .attr("class", "bar")
-      // Add your code below this line
+      // เขียนโค้ดใต้บรรทัดนี้
 
 
 
-      // Add your code above this line
+      // เขียนโค้ดเหนือบรรทัดนี้
   </script>
 </body>
 ```

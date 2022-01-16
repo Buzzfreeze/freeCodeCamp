@@ -8,7 +8,8 @@ dashedName: iterate-over-all-properties
 
 # --description--
 
-ตอนนี้คุณได้เห็น properties ทั้ง 2 ประเภท คือ <dfn>own properties</dfn> และ `prototype` properties โดย own properties กำหนดโดยตรงภายใน object instance ส่วน prototype properties กำหนดด้วย `prototype` operator
+ตอนนี้คุณเรียนเรื่อง property ไปแล้ว 2 ประเภท คือ <dfn>own property</dfn> และ `prototype` property 
+โดย own property คือ property ที่ถูกกำหนดโดยตรงภายใน instance ของ object ส่วน `prototype` property นั้นจะถูกกำหนดจาก `prototype`
 
 ```js
 function Bird(name) {
@@ -20,7 +21,7 @@ Bird.prototype.numLegs = 2; // prototype property
 let duck = new Bird("Donald");
 ```
 
-ตัวอย่างด้านล่างนี้เป็นการนำ own properties ของ `duck` ไปเก็บใน array `ownProps` และ `prototype` properties ของ `duck` ไปเก็บใน array `prototypeProps`:
+ตัวอย่างด้านล่างนี้เป็นการนำ own property ของ `duck` ไปเก็บใน array `ownProps` และ `prototype` property ของ `duck` ไปเก็บใน array `prototypeProps`:
 
 ```js
 let ownProps = [];
@@ -38,27 +39,27 @@ console.log(ownProps);
 console.log(prototypeProps);
 ```
 
-`console.log(ownProps)` ควรแสดง `["name"]` ในหน้า console และ `console.log(prototypeProps)` ควรแสดง `["numLegs"]`
+`console.log(ownProps)` จะแสดง `["name"]` ในหน้า console และ `console.log(prototypeProps)` จะแสดง `["numLegs"]`
 
 # --instructions--
 
-จงนำ own properties ของ `beagle` ไปเก็บใน array `ownProps` และนำ `prototype` properties ของ `Dog` ไปเก็บใน array `prototypeProps`
+ให้เก็บ own property ของ `beagle` ใน array `ownProps` และเก็บ `prototype` property ของ `Dog` ใน array `prototypeProps`
 
 # --hints--
 
-`ownProps` array ควรเก็บเพียง `name`
+array `ownProps` ต้องมีค่าเป็น `name` เพียงตัวเดียว
 
 ```js
 assert.deepEqual(ownProps, ['name']);
 ```
 
-`prototypeProps` array ควรเก็บเพียง `numLegs`
+array `prototypeProps` ต้องมีค่าเป็น `numLegs` เพียงตัวเดียว
 
 ```js
 assert.deepEqual(prototypeProps, ['numLegs']);
 ```
 
-แบบทดสอบนี้ห้ามใช้ method `Object.keys()`.
+ห้ามใช้ method `Object.keys()` ในแบบทดสอบนี้
 
 ```js
 assert(!/\Object.keys/.test(code));
@@ -80,7 +81,7 @@ let beagle = new Dog("Snoopy");
 let ownProps = [];
 let prototypeProps = [];
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

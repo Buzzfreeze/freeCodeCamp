@@ -8,25 +8,25 @@ dashedName: understanding-the-differences-between-the-freecodecamp-and-browser-c
 
 # --description--
 
-คุณอาจสังเกตว่า แบบทดสอบของ freeCodeCamp มี console ของตัวเองด้วย ซึ่ง console นี้มีลักษณะต่างกับ browser console เล็กน้อย
+คุณอาจเห็นแล้วว่าเว็บของเรามี console ของตัวเองด้วย ซึ่ง console นี้จะต่างจาก console ของ browser เล็กน้อย
 
-มี methods จำนวนมากที่ใช้กับ `console` เพื่อแสดงผล เช่น `log`, `warn` และ `clear` แต่สำหรับ freeCodeCamp console จะแสดงข้อความ `log` เท่านั้น ในขณะที่ browser console จะแสดงได้ทุกข้อความ เมื่อคุณเปลี่ยนแปลงโค้ด console จะรันให้โดยอัตโนมัติและแสดง log ขึ้นมา และ freeCodeCamp console จะถูกเคลียร์ทุกครั้งที่รันโค้ด
+JavaScript มี method หลายตัวที่ใช้แสดงผลบน `console` ได้ เช่น `log`, `warn` และ `clear` แต่ console ของเราจะแสดงข้อความจากการ `log` เท่านั้น แต่ console ของ browser จะแสดงข้อความออกมาได้ทุกประเภท เมื่อคุณแก้ไขโค้ด console ของเราจะรันใหม่โดยอัตโนมัติและแสดง log ขึ้นมา และ console ของเราจะถูกเคลียร์ทุกครั้งที่โค้ดถูกรันใหม่
 
 # --instructions--
 
-ขั้นตอนแรก ให้เปิด browser console เพื่อคุณจะได้เห็นหน้าแสดง log วิธีการคือ คลิกขวาที่ freeCodeCamp navigation bar ตรงด้านบนของหน้าจอ แล้วคลิก `inspect` จากนั้นคลิกที่ `console` tab ในหน้าจอ
+ขั้นแรก ให้เปิด console browser เพื่อที่คุณจะได้เห็น log โดยจะเปิด console ได้จากการคลิกขวาที่แถบเมนู ตรงด้านบนของหน้าจอ แล้วคลิก `inspect` จากนั้นคลิกที่ tab `console` ในหน้าจอ (หรือกด `F12` ก็ได้)
 
-แล้วใช้คำสั่ง `console.log` เพื่อแสดง log ของตัวแปร `output` จากนั้นให้ดู log ที่หน้า console ทั้งสอง แล้วใช้คำสั่ง `console.clear` เพื่อทำการเคลียร์ browser console จากนั้นให้ดูความแตกต่างในหน้า console ทั้งสอง
+แล้วใช้คำสั่ง `console.log(output)` ใน console ของเราเพื่อแสดง log ของตัวแปร `output` จากนั้นให้ดู log ที่หน้า console ทั้งสอง แล้วใช้คำสั่ง `console.clear()` เพื่อทำการล้าง console ของ browser จากนั้นให้ดูความแตกต่างของ console ทั้งสองหน้า
 
 # --hints--
 
-คุณควรใช้ `console.log()` เพื่อพิมพ์ `output` variable
+คุณควรใช้ `console.log()` เพื่อแสดงผลตัวแปร `output`
 
 ```js
 assert(__helpers.removeWhiteSpace(code).match(/console\.log\(output\)/));
 ```
 
-คุณควรใช้ `console.clear()` เพื่อเคลียร์ browser console
+คุณควรใช้ `console.clear()` เพื่อเคลียร์ console ของ browser
 
 ```js
 assert(

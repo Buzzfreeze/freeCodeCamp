@@ -8,9 +8,12 @@ dashedName: dispatch-an-action-event
 
 # --description--
 
-`dispatch` method คือสิ่งที่คุณใช้เพื่อส่ง actions ไปยัง Redux store การเรียกใช้ `store.dispatch()` และส่งค่าที่ return จาก action creator จะส่ง action กลับไปยัง store
+method `dispatch` คือ method ที่ใช้เพื่อส่ง action ไปยัง Redux store 
+การเรียกใช้ `store.dispatch()` โดยส่งค่าที่ได้จาก action creator เข้าไป จะเป็นการส่ง action กลับไปยัง store
 
-จำได้ไหมว่า action creators นั้น return object ที่มี type property ที่ระบุ action ที่เกิดขึ้น จากนั้น method จะส่ง action object ไปยัง Redux store จากตัวอย่างแบบทดสอบครั้งก่อน โค้ดต่อไปนี้ทำงานเหมือนกัน และทั้งสองส่ง action ของ type `LOGIN`:
+จำได้ไหมว่า action creator นั้นจะคืนค่าออกมาเป็น object ที่มี property `type` ที่ใช้ระบุ action ที่เกิดขึ้น 
+จากนั้น method `dispatch` จะส่ง action object กลับไปยัง Redux store 
+โค้ดด้านล่างนี้ทำงานเหมือนกัน โดยจะส่ง action ที่มี type เป็น `LOGIN` ไปยัง store:
 
 ```js
 store.dispatch(actionCreator());
@@ -19,23 +22,25 @@ store.dispatch({ type: 'LOGIN' });
 
 # --instructions--
 
-Redux store ใน code editor มี state เริ่มต้นซึ่งเป็น object ที่มี `login` property ซึ่งปัจจุบันตั้งค่าเป็น `false` นอกจากนี้ยังมี action creator ชื่อ `loginAction()` ซึ่ง return action ของ type `LOGIN` ให้ส่ง `LOGIN` action ไปยัง Redux store โดยเรียกใช้ `dispatch` method และส่งผ่าน action ที่สร้างโดย `loginAction()`
+Redux store ใน code editor มี state เริ่มต้นซึ่งเป็น object ที่มี property ชื่อ `login` ซึ่งมีค่าเป็น `false` 
+แล้วก็ยังมี action creator ชื่อ `loginAction()` ซึ่งจะคืนค่าออกมาเป็น action ที่มี type เป็น `LOGIN` 
+ให้ส่ง `LOGIN` action ไปยัง Redux store โดยเรียกใช้ method `dispatch` และส่ง action ที่สร้างโดย `loginAction()` เข้าไปใน method `dispatch` ด้วย
 
 # --hints--
 
-การเรียกใช้ฟังก์ชัน `loginAction` ควร return object ด้วย `type` property ที่ตั้งค่าเป็นสตริง `LOGIN`
+การเรียกใช้ฟังก์ชัน `loginAction` ควรต้องคืนค่าออกมาเป็น object ที่มี property ชื่อ`type` ที่มีค่าเป็น string `LOGIN`
 
 ```js
 assert(loginAction().type === 'LOGIN');
 ```
 
-Store ควรเริ่มต้นด้วย object ที่มี property `login` มีค่าเป็น `false`
+store ต้องมีค่าเริ่มต้นเป็น object ที่มี property ชื่อ `login` ซึ่งมีค่าเป็น `false`
 
 ```js
 assert(store.getState().login === false);
 ```
 
-`store.dispatch()` method ควรถูกใช้เพื่อส่ง action ของ type `LOGIN`
+ต้องใช้ method `store.dispatch()` เพื่อส่ง action ที่มี type เป็น `LOGIN` ไปให้ store
 
 
 ```js
@@ -66,7 +71,7 @@ const loginAction = () => {
   }
 };
 
-// Dispatch the action here:
+// ให้ลองเขียนการใช้ dispatch ด้านล่าง:
 ```
 
 # --solutions--

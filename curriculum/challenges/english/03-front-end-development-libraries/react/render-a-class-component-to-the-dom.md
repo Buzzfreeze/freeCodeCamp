@@ -8,19 +8,28 @@ dashedName: render-a-class-component-to-the-dom
 
 # --description--
 
-คุณอาจจำได้ว่าใช้ ReactDOM API ในแบบทดสอบก่อนหน้านี้เพื่อแสดง JSX elements ไปยัง DOM ขั้นตอนการเรนเดอร์ React components จะดูคล้ายกันมาก แบบทดสอบที่ผ่านมาสองสามข้อมุ่งเน้นไปที่ components และ composition ดังนั้นการเรนเดอร์ในแบบทดสอบนี้จึงทำให้ในเบื้องหลัง อย่างไรก็ตามไม่มีโค้ดใด React ที่คุณเขียนจะเรนเดอร์ไปยัง DOM โดยไม่ต้องเรียกใช้ ReactDOM API
+คุณคงจำการใช้ ReactDOM API ในแบบทดสอบก่อนหน้านี้เพื่อเรนเดอร์ JSX elements ไปยัง DOM ได้
+ซึ่งการเรนเดอร์ React component จะคล้ายๆกันเลย 
+ในแบบทดสอบที่ผ่านมาเราได้เน้นเรื่อง component และการรวม component ไปแล้ว ในแบบทดสอบนี้เราเลยเขียนโค้ดส่วนนี้ให้แล้ว แต่เราจะซ่อนโค้ดส่วนนี้ไว้
+ตอนนี้คุณจะเห็นว่าโค้ด React ที่คุณเขียนจะยังไม่เรนเดอร์ไปยัง DOM ถ้าไม่เรียกใช้ ReactDOM API
 
-นี่คือการทบทวน syntax: `ReactDOM.render(componentToRender, targetNode)` argument แรกคือ React component ที่คุณต้องการเรนเดอร์ argument ที่สองคือ DOM node ที่คุณต้องการเรนเดอร์ component นั้นภายใน
+ลองทบทวน syntax ของ
+`ReactDOM.render(componentToRender, targetNode)` กันอีกรอบ:
+argument แรกจะรับ React component ที่คุณต้องการเรนเดอร์ 
+argument ที่สองจะรับ DOM node ที่คุณต้องการเรนเดอร์ component นั้น
 
-React components จะถูกส่งต่อไปยัง `ReactDOM.render()` ซึ่งแตกต่างจากองค์ประกอบ JSX เล็กน้อยจาก JSX elements คุณต้องส่งชื่อของ element ที่คุณต้องการเรนเดอร์ อย่างไรก็ตามสำหรับ React components คุณต้องใช้ syntax เดียวกันราวกับว่าคุณกำลังเรนเดอร์ component ที่ซ้อนกัน เช่น `ReactDOM.render(<ComponentToRender />, targetNode)` คุณใช้ syntax นี้สำหรับทั้ง ES6 class components และ functional components
+วิธีส่ง React component ไปให้ `ReactDOM.render()` จะต่างจากการส่ง JSX เล็กน้อย
+ตอนใช้ JSX element คุณต้องส่งชื่อของ element ที่คุณต้องการเรนเดอร์ไป แต่พอใช้ React component จะต้องเปลี่ยนไปใช้ syntax เหมือนกับที่ตอนเรนเดอร์ component ซ้อนกันแทน เช่น `ReactDOM.render(<ComponentToRender />, targetNode)` 
+ไม่ว่าจะใช้ class component หรือ functional component ก็จะต้องใช้ syntax นี้
 
 # --instructions--
 
-ทั้ง`Fruits` and `Vegetables` components ถูกกำหนดไว้สำหรับคุณไว้ก่อนแล้วเบื้องหลัง เรนเดอร์ components ทั้งสองเป็น children ของ 'TypesOfFood' component จากนั้นเรนเดอร์ 'TypesOfFood' ไปยัง DOM มี `div` ที่มี `id='challenge-node'` ให้คุณใช้งาน
+เราได้เขียน component `Fruits` และ `Vegetables` ไว้ให้แล้วแต่ไม่แสดงโค้ดให้คุณเห็น 
+ให้ใส่ component ทั้งสองตัวเป็น children ของ `TypesOfFood` จากนั้นให้เรนเดอร์ `TypesOfFood` ไปยัง DOM ที่เป็น `div` ที่มี `id='challenge-node'` (เราเพิ่ม `div` ตัวนี้ไว้ให้แล้วเหมือนกัน)
 
 # --hints--
 
-`TypesOfFood` component ควร return `div` element เดียว
+component `TypesOfFood` ต้องคืนค่าเป็น `div` ตัวเดียว
 
 ```js
 assert(
@@ -31,7 +40,7 @@ assert(
 );
 ```
 
-`TypesOfFood` component ควรเรนเดอร์ `Fruits` component ต่อหลังจาก `h1` element
+component `TypesOfFood` ต้องมี `Fruits` ใต้ `h1`
 
 ```js
 assert(
@@ -42,7 +51,7 @@ assert(
 );
 ```
 
-`TypesOfFood` component ควรเรนเดอร์ `Vegetables` component ต่อหลังจาก `Fruits`
+component `TypesOfFood` ต้องมี `Vegetables` ใต้ `Fruits`
 
 ```js
 assert(
@@ -53,7 +62,7 @@ assert(
 );
 ```
 
-`TypesOfFood` component ควรเรนเดอร์ไปยัง DOM ภายใน `div` ที่มี id `challenge-node`
+component `TypesOfFood` ต้องเรนเดอร์ไปยัง DOM ใน `div` ที่มี id เป็น `challenge-node`
 
 ```js
 assert(
@@ -123,15 +132,15 @@ class TypesOfFood extends React.Component {
     return (
       <div>
         <h1>Types of Food:</h1>
-        {/* Change code below this line */}
+        {/* แก้ไขโค้ดใต้บรรทัดนี้ */}
 
-        {/* Change code above this line */}
+        {/* แก้ไขโค้ดเหนือบรรทัดนี้ */}
       </div>
     );
   }
 };
 
-// Change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้
 ```
 
 # --solutions--
@@ -145,15 +154,15 @@ class TypesOfFood extends React.Component {
     return (
       <div>
         <h1>Types of Food:</h1>
-        {/* Change code below this line */}
+        {/* แก้ไขโค้ดใต้บรรทัดนี้ */}
           <Fruits />
            <Vegetables />
-         {/* Change code above this line */}
+         {/* แก้ไขโค้ดเหนือบรรทัดนี้ */}
       </div>
     );
   }
 };
 
-// Change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้
 ReactDOM.render(<TypesOfFood />, document.getElementById('challenge-node'));
 ```

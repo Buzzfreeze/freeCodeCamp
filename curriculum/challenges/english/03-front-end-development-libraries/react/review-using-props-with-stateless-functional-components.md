@@ -8,19 +8,31 @@ dashedName: review-using-props-with-stateless-functional-components
 
 # --description--
 
-ยกเว้นแบบทดสอบที่ผ่านมา คุณได้ส่ง props ไปยัง stateless functional components components เหล่านี้ทำหน้าที่เหมือนฟังก์ชันธรรมดา พวกมันยอมรับ props เป็น input และ return มุมมองเดิมทุกครั้งที่ถูกส่ง props เดียวกัน คุณอาจสงสัยว่า state คืออะไรในแบบทดสอบต่อไปจะกล่าวถึงมันในรายละเอียดเพิ่มเติม ก่อนอื่นนี่คือการทบทวนคำศัพท์ต่างๆ สำหรับ components
+คุณส่ง props ไปยัง stateless functional component เป็นแล้วใช่มั้ย?
+component พวกนี้จะทำงานเหมือนฟังก์ชันปกติเลย คือจะรับ props เป็น input แล้วก็คืนค่า UI ออกมาเหมือนเดิมถ้าเราส่ง props ตัวเดิมเข้าไป 
+ตอนนี้คุณอาจสงสัยแล้วว่า เอ๊ะ แล้ว state คืออะไร 
+เราจะคุยกันเรื่อง state แบบละเอียดกันในแบบทดสอบหน้า 
+แต่ตอนนี้เรามารื้อฟื้นคำศัพท์ในเรื่อง component ที่เรียนไปแล้วกันก่อน
 
-*stateless functional component* คือฟังก์ชันใดๆ ที่คุณเขียนซึ่งยอมรับ props และ return JSX ในทางกลับกัน *stateless component* เป็นคลาสที่ขยาย `React.Component` แต่ไม่ได้ใช้ state ภายใน (จะอธิบายในแบบทดสอบถัดไป) สุดท้าย *stateful component* เป็น class component ที่รักษา state ภายในของตัวเอง คุณอาจเห็น stateful components ที่เรียกสั้นๆ ว่า components หรือ React components
+*stateless functional component* คือฟังก์ชันที่รับค่าเป็น props และคืนค่าเป็น JSX
+โดย *stateless component* จะ extend มาจาก `React.Component` แต่ไม่ได้ใช้ state ในตัว (จะอธิบายในแบบทดสอบถัดไป) 
+และสุดท้าย *stateful component* เป็น class component ที่ใช้ state ของตัวเอง ปกติเราจะเรียก stateful component สั้นๆว่า component หรือ React component
 
-โดยทั่วไปแล้วเราจะพยายามลด statefulness ให้เหลือน้อยที่สุดและสร้าง stateless functional components ในทุกที่ที่ทำได้ ซึ่งจะช่วยให้มีการจัดการ state ในพื้นที่เฉพาะของแอปพลิเคชันของคุณ สิ่งนี้ช่วยปรับปรุงการพัฒนาและบำรุงรักษาแอปของคุณโดยทำให้ง่ายต่อการติดตามว่าการเปลี่ยนแปลง state ส่งผลต่อพฤติกรรมของแอปอย่างไร
+โดยทั่วไปแล้วเราจะพยายามลดความเป็น stateful ให้ได้มากที่สุด และจะสร้าง stateless functional component ในทุกที่ที่ทำได้
+การทำแบบนี้จะช่วยให้การพัฒนาและปรับปรุงแอพง่ายขึ้น เพราะว่าการใช้ state น้อยลงจะทำให้จุดที่เราต้องดูผลกระทบจากการเปลี่ยนแปลงของ state น้อยลงตามไปด้วย
 
 # --instructions--
 
-code editor มี `CampSite` component ที่เรนเดอร์ `Camper` component เป็น child กำหนดให้ `Camper` component และกำหนด props เริ่มต้นของ `{ name: 'CamperBot' }` ให้เรนเดอร์โค้ดใดๆ ที่คุณต้องการภายใน`Camper` component แต่ต้องให้มี `p` element หนึ่งรายการที่มีเฉพาะ`name` value ที่ส่งผ่านเป็น `prop` สุดท้ายกำหนด `propTypes` บน`Camper` component เพื่อเรียกให้ระบุ `name` เป็น prop และตรวจสอบว่าเป็นประเภท `string`
+ใน code editor มี component ที่ชื่อ `CampSite` อยู่ซึ่งจะที่เรนเดอร์ `Camper` เป็น child 
+ให้สร้าง component ชื่อ `Camper` ตามเงื่อนไขนี้
+
+1. กำหนดให้มี default props เป็น `{ name: 'CamperBot' }` 
+2. ใน `Camper` จะเขียนให้เรนเดอร์อะไรก็ได้ แต่ต้องให้มี `p` element หนึ่งตัวที่แสดงค่าของ `prop` ที่ชื่อ `name` 
+3. ให้ตั้งค่า `propTypes` ใน `Camper` โดยตั้งค่าให้ต้องระบุ prop `name` และต้องเป็นประเภท `string`
 
 # --hints--
 
-`CampSite` component ควรเรนเดอร์
+component `CampSite` ต้องเรนเดอร์ได้
 
 ```js
 assert(
@@ -31,7 +43,7 @@ assert(
 );
 ```
 
-`Camper` component ควรเรนเดอร์
+component `Camper` ต้องเรนเดอร์ได้
 
 ```js
 assert(
@@ -42,7 +54,7 @@ assert(
 );
 ```
 
-`Camper` component ควรมี props เริ่มต้นที่มีการระบุ string `CamperBot` ไปยัง key `name`
+`Camper` ต้องตั้งค่า default props โดยมี key ที่ชื่อ `name` ซึ่งมีค่าเป็น string `CamperBot`
 
 ```js
 assert(
@@ -52,7 +64,7 @@ assert(
 );
 ```
 
-`Camper` component ควรมี prop types ที่กำหนดให้ `name` prop เป็น `string`
+ต้องตั้งค่า propTypes ใน `Camper` โดยกำหนดให้ prop `name` เป็น `string`
 
 ```js
 assert(
@@ -62,7 +74,7 @@ assert(
 );
 ```
 
-`Camper` component ควรมี `p` element ที่มีเพียงข้อความจาก `name` prop
+`Camper` ต้องมี `p` element ที่แสดงแค่ข้อความจาก prop `name`
 
 ```js
 assert(
@@ -107,7 +119,7 @@ class CampSite extends React.Component {
     );
   }
 };
-// Change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้
 ```
 
 # --solutions--
@@ -125,7 +137,7 @@ class CampSite extends React.Component {
     );
   }
 };
-// Change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้
 
 const Camper = (props) => {
    return (

@@ -8,21 +8,23 @@ dashedName: select-a-group-of-elements-with-d3
 
 # --description--
 
-D3 มี `selectAll()` method ที่ใช้เลือกกลุ่มของ elementsเช่นกัน มันจะส่งค่าของ array ใน HTML nodes สำหรับทุก items ใน document ที่มีค่า input match กับค่า string ตัวอย่างเช่น anchor tags ใน document ด้านล่าง:
+D3 มี method `selectAll()` ที่ใช้เลือกกลุ่มของ element ด้วย 
+method นี้จะหาทุก element ที่ตรงกับ argument และจะคืนค่าเป็น array ของ HTML node ที่ตรงทั้งหมด 
+เช่น การเลือกแท็ก anchor ทุกตัวใน document ตามตัวอย่างด้านล่าง:
 
 ```js
 const anchors = d3.selectAll("a");
 ```
 
-เหมือนเช่นกับ `select()` method, `selectAll()` supports method chaining และยังสามารถใช้ได้กับ methods อื่นๆด้วย
+method นี้ก็เหมือนกับ `select()`, `selectAll()` ที่จะเอา method มาเรียกใช้ต่อๆกันได้
 
 # --instructions--
 
-เลือกทุก `li` tags ใน document และเปลี่ยน text ไปเป็น string `list item` โดยใช้ `.text()` method.
+ให้เลือกแท็ก `li` ทุกตัวใน document และเปลี่ยนข้อความข้างในเป็น `list item` โดยใช้ method `.text()` 
 
 # --hints--
 
-ควรจะมี 3 `li` elements ใน page และแต่ละ text ควรจะระบุ `list item` Capitalization และ spacing ควรจะ match กันด้วย
+ต้องมี `li` 3 ตัวในหน้า และแต่ละตัวต้องมีข้อความว่า `list item` โดยต้องเป็นตัวพิมพ์เล็กเหมือนกัน และเว้นวรรคเหมือนกันด้วย
 
 ```js
 assert(
@@ -32,13 +34,13 @@ assert(
 );
 ```
 
-ควรสามารถเข้าถึง `d3` object 
+ต้องใช้ `d3` object 
 
 ```js
 assert(code.match(/d3/g));
 ```
 
-ควรใช้ `selectAll` method
+ต้องใช้ method `selectAll` 
 
 ```js
 assert(code.match(/\.selectAll/g));
@@ -56,11 +58,11 @@ assert(code.match(/\.selectAll/g));
     <li>Example</li>
   </ul>
   <script>
-    // Add your code below this line
+    // เขียนโค้ดใต้บรรทัดนี้
 
 
 
-    // Add your code above this line
+    // เขียนโค้ดเหนือบรรทัดนี้
   </script>
 </body>
 ```

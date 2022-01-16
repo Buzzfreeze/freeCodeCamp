@@ -8,17 +8,22 @@ dashedName: use-advanced-javascript-in-react-render-method
 
 # --description--
 
-ในแบบทดสอบครั้งก่อน คุณได้เรียนรู้วิธีใส่โค้ด JavaScript ลงในโค้ด JSX โดยใช้วงเล็บปีกกา `{ }` สำหรับงานต่างๆ เช่น การเข้าถึง props การส่ง props การเข้าถึง state การแทรก comment ในโค้ดของคุณ และล่าสุดการจัดตกแต่งสไตล์ components ของคุณ นี่เป็นกรณีการใช้งานทั่วไปทั้งหมดในการใส่ JavaScript ใน JSX แต่ไม่ใช่วิธีเดียวที่คุณสามารถใช้โค้ด JavaScript ใน React components ของคุณได้
+ในแบบทดสอบที่ผ่านๆมา คุณได้เรียนวิธีใส่โค้ด JavaScript ลงใน JSX โดยใช้วงเล็บปีกกา `{ }` เช่น การเข้าถึง props, การส่ง props, การเข้าถึง state, การแทรก comment ในโค้ดของคุณ, และล่าสุดการใช้ style ใน component ของคุณ 
+นี่เป็นวิธีปกติในการใช้ JavaScript ใน JSX แต่ก็ยังมีวิธีอื่นในการใช้ JavaScript ใน React components ของคุณได้
 
-คุณยังสามารถเขียน JavaScript ได้โดยตรงใน`render` methods ก่อนคำสั่ง `return` ***โดยไม่ต้อง*** เขียนเข้าไปในวงเล็บปีกกา เนื่องจากมันยังไม่อยู่ในโค้ด JSX เมื่อคุณต้องการใช้ตัวแปรภายหลังในโค้ด JSX *ภายใน* คำสั่ง `return` คุณถึงจะเขียนชื่อตัวแปรไว้ในวงเล็บปีกกา
+คุณเขียน JavaScript ได้โดยตรงใน method `render` ก่อนคำสั่ง `return` ***โดยไม่ต้อง*** เขียนไว้ในวงเล็บปีกกา เพราะว่าโค้ดส่วนนี้ยังไม่ใช่ JSX 
+เมื่อคุณต้องการใช้ตัวแปรในโค้ด JSX *ภายใน* คำสั่ง `return` คุณถึงจะต้องเขียนชื่อตัวแปรไว้ในวงเล็บปีกกา
 
 # --instructions--
 
-ในโค้ดที่ให้มา `render` method มี array ที่ประกอบด้วย 20 วลีเพื่อเป็นคำตอบที่พบในของเล่นคลาสสิก Magic Eight Ball ช่วงทศวรรษ 1980 ให้ click event ของปุ่มถูกผูกไว้ `ask` method ดังนั้นทุกครั้งที่มีการคลิกปุ่ม จะมีการสร้างตัวเลขสุ่มและจัดเก็บเป็น `randomIndex` ใน state ในบรรทัดที่ 52 ให้ลบสตริง `change me!` และกำหนด const `answer` ใหม่เพื่อให้โค้ดของคุณสุ่มเข้าถึงดัชนีต่างๆ ของ `possibleAnswers` array ในทุกครั้งที่ component เดต สุดท้ายใส่ค่า const `answer` ลงในแท็ก `p`
+ในโค้ดที่ให้มา method `render` มี array ที่ประกอบด้วย string 20 ตัว ที่ใช้ในของเล่นโบราณชื่อ Magic Eight Ball ช่วงทศวรรษ 1980 (ลอง google ดู คุณน่าจะเคยเห็นของเล่นนี้ในหนัง) 
+ตอนนี้ click event ของปุ่มถูกผูกไว้กับ method `ask` ดังนั้นทุกครั้งที่มีการคลิกปุ่ม จะมีการสุ่มตัวเลขและจัดเก็บเป็น `randomIndex` ใน state 
+ในบรรทัดที่ 52 ให้คุณลบ string `change me!` ออก และกำหนดค่าของ const `answer` ใหม่ เพื่อให้ทุกครั้งที่ component อัปเดท โค้ดของคุณจะไปดึง string จาก array `possibleAnswers` ตาม index ที่สุ่มได้ 
+และสุดท้ายให้แสดงค่าของ const `answer` ในแท็ก `p`
 
 # --hints--
 
-`MagicEightBall` component ควรมีและเรนเดอร์ยังเพจ
+ต้องมี component `MagicEightBall` และต้องเรนเดอร์ได้
 
 ```js
 assert.strictEqual(
@@ -28,7 +33,7 @@ assert.strictEqual(
 );
 ```
 
-Child แรกของ `MagicEightBall` ควรเป็น `input` element
+child ตัวแรกของ `MagicEightBall` ต้องเป็น `input`
 
 ```js
 assert.strictEqual(
@@ -40,7 +45,7 @@ assert.strictEqual(
 );
 ```
 
-Child ที่สามของ `MagicEightBall` ควรเป็น `button` element
+child ตัวที่สามของ `MagicEightBall` ต้องเป็น `button`
 
 ```js
 assert.strictEqual(
@@ -52,7 +57,7 @@ assert.strictEqual(
 );
 ```
 
-State ของ `MagicEightBall` ควรเริ่มด้วย property ของ `userInput` และ property ของ `randomIndex` ที่ตั้ง value ไว้เป็น string ว่าง
+state เริ่มต้นของ `MagicEightBall` ต้องมี property `userInput` และ  `randomIndex` ที่มีค่าเป็น string ว่าง
 
 
 ```js
@@ -63,7 +68,7 @@ assert(
 );
 ```
 
-When `MagicEightBall` is first mounted to the DOM, it should return an empty `p` element.
+ในตอนแรกที่ `MagicEightBall` ถูกเรนเดอร์ไปยัง DOM ในแท็ก `p` ต้องไม่มีอะไรอยู่เลย
 
 ```js
 assert(
@@ -72,7 +77,7 @@ assert(
 );
 ```
 
-เมื่อข้อความถูกพิมพ์ลงไปใน `input` element และ มีการคลิกปุ่ม `MagicEightBall` component ควรจะต้อง return `p` element ที่มี element ที่สุ่มมาจาก `possibleAnswers` array
+เมื่อพิมพ์ข้อความลงไปใน `input` แล้วก็คลิกปุ่ม จะต้องทำให้ component `MagicEightBall` เรนเดอร์แท็ก `p` ที่แสดง string ที่สุ่มมาจาก array `possibleAnswers`
 
 ```js
 (() => {
@@ -236,7 +241,7 @@ class MagicEightBall extends React.Component {
       'Outlook not so good',
       'Very doubtful'
     ];
-    const answer = 'change me!'; // Change this line
+    const answer = 'change me!'; // แก้ไขโค้ดบรรทัดนี้
     return (
       <div>
         <input
@@ -250,9 +255,9 @@ class MagicEightBall extends React.Component {
         <br />
         <h3>Answer:</h3>
         <p>
-          {/* Change code below this line */}
+          {/* แก้ไขโค้ดใต้บรรทัดนี้ */}
 
-          {/* Change code above this line */}
+          {/* แก้ไขโค้ดเหนือบรรทัดนี้ */}
         </p>
       </div>
     );

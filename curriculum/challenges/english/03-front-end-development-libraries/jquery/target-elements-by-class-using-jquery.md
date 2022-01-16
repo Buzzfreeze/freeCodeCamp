@@ -10,17 +10,17 @@ dashedName: target-elements-by-class-using-jquery
 
 # --description--
 
-คุณได้รู้วิธีการทำให้ `button` element ทั้งหมดของคุณมีเอฟเฟคเด้งมาแล้ว โดยการเลือกเป้าหมายด้วย `$("button")` แล้วจึงเพิ่ม CSS class ให้ ด้วย `.addClass("animated bounce");`
+คุณได้รู้วิธีการทำให้ `button` ทุกปุ่มเด้งได้แล้ว เราใช้วิธีการเลือก element ด้วย `$("button")` แล้วจึงเพิ่ม CSS class ให้โดยใช้ `.addClass("animated bounce");`
 
 `.addClass()` เป็นฟังก์ชันที่ทำให้คุณสามารถเพิ่ม class ให้กับ element ได้
 
-อย่างแรก ลองเล็งเป้าหมาย `div` elements ที่มี class `well` โดยการใช้ `$(".well")` selector
+คราวนี้มาลองเลือก `div` ที่มี class เป็น `well` กัน รอบนี้เราจะใช้ selector เป็น `$(".well")` เพื่อเลือก element
 
-โปรดทราบว่าคุณจะต้องพิมพ์ `.` หน้าชื่อ class เช่นเดียวกับการประกาศคำสั่ง CSS
+ในการเลือก element ตาม class เราจะใช้ `.` นำหน้าชื่อ class นั้น เหมือนกับตอนเขียน CSS เลย
 
 จากนั้นให้ใช้ฟังก์ชัน `.addClass()` ของ jQuery เพื่อเพิ่ม class `animated` และ `shake`
 
-อย่างเช่น จะทำให้ element ทั้งหมดที่มี class `text-primary` มีเอฟเฟคสั่นโดยการเพิ่มโค้ดข้างล่างไปใน `document ready function`:
+เช่น ถ้าเราอยากให้ element ทุกตัวที่มี class เป็น `text-primary` สั่นได้ เราจะใช้โค้ดข้างล่างนี้ในฟังก์ชัน `document ready`:
 
 ```js
 $(".text-primary").addClass("animated shake");
@@ -28,13 +28,13 @@ $(".text-primary").addClass("animated shake");
 
 # --hints--
 
-คุณจะต้องใช้ฟังก์ชัน jQuery `addClass()` เพื่อเพิ่ม class animated` และ `shake`ให้แก่ element ทุกอันที่มี class `well`
+ต้องใช้ฟังก์ชัน `addClass()` ของ jQuery เพื่อเพิ่ม class `animated` และ `shake` ให้กับ element ทุกตัวที่มี class เป็น `well`
 
 ```js
 assert($('.well').hasClass('animated') && $('.well').hasClass('shake'));
 ```
 
-คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
+คุณจะต้องใช้แค่ jQuery เท่านั้นในการเพิ่ม class ให้กับ element
 
 ```js
 assert(!code.match(/class\.\*animated/g));
@@ -51,7 +51,7 @@ assert(!code.match(/class\.\*animated/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
@@ -86,7 +86,7 @@ assert(!code.match(/class\.\*animated/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>

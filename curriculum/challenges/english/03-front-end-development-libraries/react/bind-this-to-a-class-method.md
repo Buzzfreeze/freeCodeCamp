@@ -8,23 +8,32 @@ dashedName: bind-this-to-a-class-method
 
 # --description--
 
-นอกจากการตั้งค่าและอัปเดต `state` แล้ว คุณยังสามารถระบุ methods สำหรับ component class ของคุณได้ โดยทั่วไปแล้ว class method จำเป็นต้องใช้คีย์เวิร์ด `this`จึงจะสามารถเข้าถึง property ต่างๆ บน class ภายในขอบเขตของ method ได้ (อย่างเช่น `state` และ `props`) ซึ่งมีสองสามวิธีที่จะทำให้ class method ของคุณสามารถเข้าถึง `this`
+นอกจากการตั้งค่าและอัปเดต `state` แล้ว เรายังสร้าง method ใน component class ได้ด้วย 
+ปกติแล้ว class method จำเป็นต้องใช้คีย์เวิร์ด `this` เพื่อเข้าถึง property ใน class ที่อยู่ในขอบเขตของ method (อย่างเช่น `state` และ `props`) 
+ซึ่งมีสองสามวิธีที่จะทำให้ class method ของเราสามารถเข้าถึง `this` ได้
 
-วิธีทั่วไปวิธีหนึ่งคือการผูก `this` ใน constructor จึงทำให้ `this` ถูกผูกไว้กับ class method เมื่อ component เริ่มทำงาน จากบททดสอบที่ผ่านมาคุณจะเห็นได้ว่ามีการใช้ `this.handleClick = this.handleClick.bind(this)` สำหรับ `handleClick` method ของมันภายใน constructor จากนั้นเมื่อคุณเรียกใช้ฟังก์ชันอย่าง `this.setState()` ภายใน class method `this` ในที่นี้จะหมายถึง class และจะไม่ได้เป็น `undefined` 
+วิธีปกติคือการผูก `this` ใน constructor วิธีนี้จะทำให้ `this` ถูกผูกไว้กับ class method ตั้งแต่ตอนที่ component เริ่มทำงานเลย
+คุณอาจสังเกตเห็นว่าในบททดสอบที่แล้วมีการใช้ `this.handleClick = this.handleClick.bind(this)` ใน constructor
+ทำให้เมื่อเรียกใช้ฟังก์ชันอย่าง `this.setState()` ภายใน class method `this` ในที่นี้จะอ้างอิงตัว class เลย และจะไม่ได้เป็น `undefined` 
 
-**Note:** คีย์เวิร์ด `this` เป็นสิ่งหนึ่งที่ชวนสับสนที่สุดของ JavaScript แต่มันมีบทบาทสำคัญใน React เนื่องจากบทเรียนนนี้ไม่ใช่บทเรียนที่เกี่ยวกับกับ `this` ในเชิงลึก เราค่อยไปเจาะรายละเอียดและทำความเข้าใจเกี่ยวกับ `this` ในบทเรียนอื่นๆ ต่อไป
+**Note:** คีย์เวิร์ด `this` เป็นหนึ่งในส่วนที่คนงงที่สุดใน JavaScript แต่ก็มีบทบาทสำคัญใน React 
+แต่เพราะว่าบทเรียนนี้ไม่ใช่บทเรียนเรื่อง `this` เราค่อยไปเจาะรายละเอียดและทำความเข้าใจเกี่ยวกับ `this` ในบทเรียนอื่นๆ ต่อไป
 
 # --instructions--
 
-ภายในส่วนของโค้ดมี component พร้อมกับ `state` ที่ติดตามการเปลี่ยนแปลงของข้อความ มันยังมี method ที่ให้คุณสามารถตั้งค่าข้อความไปเป็น `You clicked!` อีกด้วย แต่ method นี้ยังไม่สามารถทำงานได้ เนื่องจาก method นี้ใช้คีย์เวิร์ด `this` ที่เป็น undefined แก้ไขได้โดยการผูก `this` กับ `handleClick()` method ให้ชัดเจนใน constructor ของ component
+ใน code editor มี component ที่ใช้ค่าของ text จาก `state` 
+และยังมี method ที่จะเปลี่ยน text เป็น `You clicked!` อีกด้วย 
+แต่ method นี้ยังทำงานไม่ได้ เพราะว่าในตอนนี้คีย์เวิร์ด `this` ใน method นี้ยังมีค่าเป็น undefined อยู่
+ซึ่งเราจะแก้ไขได้โดยการผูก `this` กับ method `handleClick()` ใน constructor ของ component
 
-ต่อไปให้เพิ่มตัวจัดการการคลิกไปที่ `button` element ใน render method มันควรจะทำให้ `handleClick()` method ทำงานเมื่อปุ่มนั้นได้รับ click event โปรดทราบว่า method ที่คุณได้ส่งต่อไปยัง ตัวจัดการ `onClick` ต้องมีวงเล็บปีกกาเพราะมันควรที่จะได้รับการแปลโดยตรงในฐานะ JavaScript
+ต่อไปใน method `render` ให้เพิ่ม click handler ใน `button` element ซึ่งจะทำให้ method `handleClick()` ทำงานเมื่อปุ่มนั้นถูกคลิก
+อย่าลืมว่า method ที่ใช้ใน `onClick` handler ต้องมีวงเล็บปีกกาครอบเพราะโค้ดส่วนนี้จะทำงานเป็น JavaScript
 
-เมื่อคุณทำตามขั้นตอนข้างบนจนครบถ้วนแล้ว คุณควรจะสามารถที่จะคลิกที่ปุ่มและเห็นข้อความว่า `You clicked!`
+เมื่อคุณทำตามขั้นตอนข้างบนจนครบถ้วนแล้ว เมื่อคุณคลิกที่ปุ่มคุณจะเห็นข้อความ `You clicked!`
 
 # --hints--
 
-`MyComponent` จะต้อง return `div` element ที่ครอบ 2 element คือ button และ `h1` element ตามลำดับ
+`MyComponent` จะต้องคืนค่าออกมาเป็น `div` ที่ครอบ element 2 ตัวคือ `button` และ `h1` ตามลำดับ
 
 ```js
 assert(
@@ -40,7 +49,7 @@ assert(
 );
 ```
 
-สถานะของ `MyComponent` ควรเริ่มต้นด้วยคู่ key value `{ text: "Hello" }`
+state ของ `MyComponent` ต้องมีค่าเป็น `{ text: "Hello" }` ในตอนแรก
 
 ```js
 assert(
@@ -48,7 +57,7 @@ assert(
 );
 ```
 
-การคลิกที่ `button` element ควรทำให้ `handleClick` method ทำงานและตั้งสถานะ `text` ไปเป็น `You clicked!`
+การคลิกที่ `button` ต้องทำให้ method `handleClick` ทำงานและเปลี่ยน `text` ใน `state` เป็น `You clicked!`
 
 ```js
 async () => {
@@ -86,9 +95,9 @@ class MyComponent extends React.Component {
     this.state = {
       text: "Hello"
     };
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
 
-    // Change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้
   }
   handleClick() {
     this.setState({
@@ -98,9 +107,9 @@ class MyComponent extends React.Component {
   render() {
     return (
       <div>
-        { /* Change code below this line */ }
+        { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
         <button>Click Me</button>
-        { /* Change code above this line */ }
+        { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
         <h1>{this.state.text}</h1>
       </div>
     );

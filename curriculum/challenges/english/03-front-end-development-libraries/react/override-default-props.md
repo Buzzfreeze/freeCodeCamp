@@ -8,17 +8,20 @@ dashedName: override-default-props
 
 # --description--
 
-ความสามารถในการตั้งค่า props เริ่มต้นเป็นคุณสมบัติที่มีประโยชน์ใน React วิธีการตั้งค่า props เริ่มต้นคือการตั้งค่า prop สำหรับ component
+การที่เราตั้งค่า default props นั้นมีประโยชน์มากๆใน React 
+และวิธีการทำให้ React ใช้ค่าอื่นแทน default props ก็คือการส่งค่าตาม prop ตัวนั้นเข้าไปให้กับ component
 
 # --instructions--
 
-ตอนนี้คอมโพเนนต์ "ShoppingCart" เรนเดอร์ในส่วนของ child component ชื่อว่า `Items` ซึ่ง `Items` component นี้มี prop เริ่มต้นชื่อว่า `quantity` ที่ตั้งค่าเป็นจำนวนเต็ม `0` คุณสามารถแทนที่ prop เริ่มต้นโดยส่งค่า `10` ให้  `quantity`
+ตอนนี้ component `ShoppingCart` จะมี child component เป็น `Items` ซึ่ง component `Items` นี้มีการตั้งค่าของ default prop ที่ชื่อว่า `quantity` เป็น `0` 
+เราจะเปลี่ยนค่าของ prop `quantity` ได้โดยการส่งค่า `10` ไปให้ `quantity`
 
-**Note:** โปรดจำไว้ว่า syntax ในการเพิ่ม prop ให้กัย component จะคล้ายกับวิธีที่คุณเพิ่ม HTML attribute อย่างไรก็ตามเนื่องจากค่าของ `quantity` เป็นจำนวนเต็ม ค่านั้นจะไม่อยู่ในเครื่องหมายคำพูด แต่ควรอยู่ในวงเล็บปีกกา ตัวอย่างเช่น `{100}` Syntax นี้บอกให้ JSX ตีความค่าภายในเครื่องหมายปีกกาโดยตรงเป็น JavaScript
+**Note:** ถ้ายังจำได้ syntax ในการเพิ่ม prop ให้กับ component เหมือนกับ syntax ของ HTML attribute แต่ในบททดสอบนี้ `quantity` เป็นตัวเลขจำนวนเต็ม เราจึงต้องไม่ครอบค่านั้นด้วยเครื่องหมายคำพูด แต่ต้องครอบด้วยปีกกา เช่น `{100}` 
+syntax นี้จะบอกให้ JSX อ่านค่าในปีกกานี้เป็น JavaScript ซึ่งถ้าเราใส่เป็นเครื่องหมายคำพูด JSX จะนึกว่าค่าที่เราให้ไปนี้เป็น string
 
 # --hints--
 
-component `ShoppingCart` จะต้องเรนเดอร์
+component `ShoppingCart` จะต้องเรนเดอร์ได้
 
 ```js
 assert(
@@ -29,7 +32,7 @@ assert(
 );
 ```
 
-component `Items` จะต้องเรนเดอร์
+component `Items` จะต้องเรนเดอร์ได้
 
 ```js
 assert(
@@ -40,7 +43,7 @@ assert(
 );
 ```
 
-`Items` component ควรมี prop เป็น `{ quantity: 10 }` ที่ถูกส่งต่อมาจาก `ShoppingCart` component
+`Items` ต้องมีค่าของ prop เป็น `{ quantity: 10 }` ตามค่าที่ส่งมาจาก `ShoppingCart`
 
 ```js
 (getUserInput) =>
@@ -81,9 +84,9 @@ class ShoppingCart extends React.Component {
     super(props);
   }
   render() {
-    { /* Change code below this line */ }
+    { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
     return <Items />
-    { /* Change code above this line */ }
+    { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
   }
 };
 ```
@@ -104,9 +107,9 @@ class ShoppingCart extends React.Component {
     super(props);
   }
   render() {
-    { /* Change code below this line */ }
+    { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
     return <Items quantity = {10} />
-    { /* Change code above this line */ }
+    { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
   }
 };
 ```

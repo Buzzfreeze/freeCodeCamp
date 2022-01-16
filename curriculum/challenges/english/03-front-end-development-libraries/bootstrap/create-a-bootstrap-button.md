@@ -8,7 +8,7 @@ dashedName: create-a-bootstrap-button
 
 # --description--
 
-Bootstrap มีสไตล์ต่างๆ สำหรับ `button` element ที่ดูดีกว่า HTML ธรรมดามาก
+Bootstrap จะตกแต่ง `button` element ได้ดูดีกว่า HTML ธรรมดามากๆ
 
 มาลองสร้าง `button` element ข้างใต้รูปน้องแมว ให้มี class `btn` และ `btn-default` มีข้อความว่า `Like` กัน
 

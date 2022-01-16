@@ -8,30 +8,29 @@ dashedName: title-case-a-sentence
 
 # --description--
 
-แบบทดสอบนี้ต้องการให้แปลงตัวอักษรแรกของแต่ละคำใน string เป็นตัวพิมพ์ใหญ่ ส่วนตัวอักษรอื่นที่ไม่ใช่ตัวแรกของคำ ให้เป็นตัวพิมพ์เล็ก
-สำหรับแบบทดสอบนี้ คุณต้องทำให้ตัวอักษรแรกของคำเชื่อมต่างๆ เช่น `the` และ `of` เป็นตัวพิมพ์ใหญ่ด้วยเช่นกัน
+ให้เขียนฟังก์ชันเพื่อแปลงตัวอักษรแรกของแต่ละคำใน string เป็นตัวพิมพ์ใหญ่ ส่วนตัวอักษรที่ไม่ใช่ตัวแรกของคำให้เป็นตัวพิมพ์เล็ก
 
 # --hints--
 
-`titleCase("I'm a little tea pot")` ควรคืนค่าเป็น string.
+การเรียกใช้ฟังก์ชัน `titleCase("I'm a little tea pot")` ต้องได้ค่าเป็น string
 
 ```js
 assert(typeof titleCase("I'm a little tea pot") === 'string');
 ```
 
-`titleCase("I'm a little tea pot")` ควรได้ผลลัพธ์เป็น `I'm A Little Tea Pot`.
+การเรียกใช้ฟังก์ชัน `titleCase("I'm a little tea pot")` ต้องได้ค่าเป็น `I'm A Little Tea Pot`.
 
 ```js
 assert(titleCase("I'm a little tea pot") === "I'm A Little Tea Pot");
 ```
 
-`titleCase("sHoRt AnD sToUt")` ควรได้ผลลัพธ์เป็น `Short And Stout`.
+การเรียกใช้ฟังก์ชัน `titleCase("sHoRt AnD sToUt")` ต้องได้ค่าเป็น `Short And Stout`.
 
 ```js
 assert(titleCase('sHoRt AnD sToUt') === 'Short And Stout');
 ```
 
-`titleCase("HERE IS MY HANDLE HERE IS MY SPOUT")` ควรได้ผลลัพธ์เป็น `Here Is My Handle Here Is My Spout`.
+การเรียกใช้ฟังก์ชัน `titleCase("HERE IS MY HANDLE HERE IS MY SPOUT")` ต้องได้ค่าเป็น `Here Is My Handle Here Is My Spout`.
 
 ```js
 assert(

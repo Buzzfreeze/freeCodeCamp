@@ -8,25 +8,25 @@ dashedName: create-bootstrap-wells
 
 # --description--
 
-Bootstrap มี class ที่เรียกว่า `well` ซึ่งจะทำให้เกิดกรอบที่ดูเหมือนคอลัมน์นั้นๆ มีความลึกขึ้นมา
+Bootstrap มี class ที่ชื่อว่า `well` ซึ่งจะทำให้เกิดกรอบที่ดูเหมือนคอลัมน์นั้นๆมีความลึกขึ้นมา
 
-มาลองเพิ่ม `div` element ที่มี class `well` ภายในทุกๆ `div` element ที่มี class `col-xs-6` ดู
+มาลองเพิ่ม `div` ที่มี class เป็น `well` ใน `div` ทุกตัวที่มี class เป็น `col-xs-6` ดู
 
 # --hints--
 
-ต้องเพิ่ม `div` element ที่มี class `well` ไปใน ทุก `div` ที่มี class `col-xs-6`
+ต้องเพิ่ม `div` ที่มี class เป็น `well` ใน `div` ทุกตัวที่มี class เป็น `col-xs-6`
 
 ```js
 assert($('div.col-xs-6').not(':has(>div.well)').length < 1);
 ```
 
-และ `div` element ที่มี class `col-xs-6` ทั้งสองอันนั้น ควรจะต้องอยู่ภายใน `div` ที่มี class ว่า `row`
+และ `div` ที่มี class เป็น `col-xs-6` ทั้งสองตัวนั้น จะต้องอยู่ภายใน `div` ที่มี class เป็น `row`
 
 ```js
 assert($('div.row > div.col-xs-6').length > 1);
 ```
 
-อย่าลืม tag ปิด ของทุก `div` element
+อย่าลืม tag ปิดของ `div` ทุกตัวด้วย
 
 ```js
 assert(

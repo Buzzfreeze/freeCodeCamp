@@ -8,18 +8,26 @@ dashedName: add-event-listeners
 
 # --description--
 
-`componentDidMount()` method เป็น method ที่ดีที่สุดที่จะสามารถแนบ event listener ที่คุณต้องการเพิ่มเพื่อฟังก์ชันเฉพาะ 
-React นั้นมีระบบ event สังเคราะห์ที่ล้อมรอบระบบ event ดั้งเดิมที่แสดงผลในเบราว์เซอร์ สิ่งนี้หมายถึงระบบ event สังเคราะห์มีการทำงานที่เหมือนกันทุกประการโดยที่ไม่ต้องคำนึงถึงเบราว์เซอร์ของ user แม้ว่า ระบบ event ดั้งเดิมจะทำงานแตกต่างกันไปในแต่ละเบราว์เซอร์ก็ตาม
+ที่ๆดีที่สุดในการกระกาศ event listener คือใน method `componentDidMount()`
+React มีระบบ event ของตัวเอง (synthetic event) ที่จะครอบ event แบบเดิมของเบราว์เซอร์อยู่
+การที่ React ใช้ระบบ event ของตัวเองจะทำให้ไม่ว่า user จะใช้เบราว์เซอร์ตัวไหน event ก็จะทำงานเหมือนกัน 
 
-คุณได้ลองใช้ตัวจัดการ event สังเคราะห์มาบ้างแล้ว เช่น `onClick()` ระบบ event สังเคราะห์ของ React ใช้งานได้ยอดเยี่ยมสำหรับการโต้ตอบส่วนมากบน DOM element ที่คุณจะต้องจัดการ อย่างไรก็ตาม หากคุณต้องการที่จะแนบตัวจัดการ event ไปกับ document หรือ window objects คุณต้องทำสิ่งเหล่านี้โดยตรง
+คุณได้ลองใช้ event handler ของ React มาบ้างแล้ว เช่นตัว `onClick()`
+ระบบ event ของ React เหมาะสำหรับการใช้จัดการ DOM element ส่วนใหญ่ 
+แต่ถ้าคุณต้องการที่จะใช้ event handler กับ object อย่าง document หรือ window คุณต้องทำโดยตรง
 
 # --instructions--
 
-แนบ event listener ใน `componentDidMount()` method สำหรับ `keydown` event และทำให้ event นี้ไปทำให้ callback `handleKeyPress()` ทำงาน คุณสามารถใช้ `document.addEventListener()` ซึ่งรับ event (ในเครื่องหมายคำพูด) เป็น argument แรก และ callback เป็น argument ที่สอง แนวทางปฏิบัติที่ดีสำหรับการใช้ lifecycle method เพื่อล้างข้อมูล React component ก่อนที่จะถูกถอนและทำลาย การนำ event listener ออกเป็นตัวอย่างนึงของการดำเนินการล้างข้อมูลดังกล่าว
+ใน method `componentDidMount()` ให้ใช้ event listener กับ event ชื่อ `keydown` โดยให้ไปเรียกใช้ `handleKeyPress()` 
+คุณต้องใช้ `document.addEventListener()` ซึ่งจะรับ argument แรกเป็นชื่อของ event (เขียนชื่อ event ใน `""` หรือ `''`) และรับ argument ที่สองเป็น callback function 
+
+แล้วใน `componentWillUnmount()` ให้ลบ event listener ตัวที่เราเพิ่มไปออก โดยส่ง argument แบบเดิมให้ `document.removeEventListener()`
+คุณควรใช้ lifecycle method ตัวนี้เพื่อล้างข้อมูลของ React component ก่อนที่เราจะลบ component ออก 
+การลบ event listener ออก ก็เป็นส่วนหนึ่งของการล้างข้อมูลของ React component
 
 # --hints--
 
-`MyComponent` ควรต้องแสดงผลเป็น `div` element ที่ครอบ `h1` tag
+`MyComponent` ต้องเรนเดอร์ `div` ที่ครอบแท็ก `h1` อยู่
 
 ```js
 assert(
@@ -30,7 +38,7 @@ assert(
 );
 ```
 
-`keydown` listener ควรจะต้องถูกแนบไปกับ document ใน `componentDidMount`
+ต้องใช้ event listener `keydown` กับ document ใน `componentDidMount`
 
 ```js
 assert(
@@ -46,7 +54,7 @@ assert(
 );
 ```
 
-`keydown` listener จะต้องถูกลบจาก document ใน `componentWillUnmount`
+event listener `keydown` ต้องถูกลบออกจาก document ใน `componentWillUnmount`
 
 
 ```js
@@ -63,7 +71,7 @@ assert(
 );
 ```
 
-เมื่อติดตั้ง component แล้ว การกด `enter` จะต้องเป็นการอัปเดตสถานะของมัน และ `h1` tag ที่แสดงผล
+เมื่อนำ component ไปใช้ใน DOM แล้ว การกด `enter` จะต้องเป็นการอัปเดต state และจะต้องแสดงข้อมูลออกมาในแท็ก `h1` 
 
 ```js
 async () => {
@@ -109,14 +117,14 @@ class MyComponent extends React.Component {
     this.handleEnter = this.handleEnter.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }
-  // Change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้
   componentDidMount() {
 
   }
   componentWillUnmount() {
 
   }
-  // Change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้
   handleEnter() {
     this.setState((state) => ({
       message: state.message + 'You pressed the enter key! '
@@ -149,14 +157,14 @@ class MyComponent extends React.Component {
     this.handleKeyPress = this.handleKeyPress.bind(this);
     this.handleEnter = this.handleEnter.bind(this);  }
   componentDidMount() {
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
     document.addEventListener('keydown', this.handleKeyPress);
-    // Change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้
   }
   componentWillUnmount() {
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
     document.removeEventListener('keydown', this.handleKeyPress);
-    // Change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้
   }
   handleEnter() {
     this.setState((state) => ({

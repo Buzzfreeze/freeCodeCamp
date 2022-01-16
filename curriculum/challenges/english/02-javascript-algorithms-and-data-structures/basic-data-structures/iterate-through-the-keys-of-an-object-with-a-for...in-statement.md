@@ -8,7 +8,8 @@ dashedName: iterate-through-the-keys-of-an-object-with-a-for---in-statement
 
 # --description--
 
-บางครั้ง คุณอาจต้องการวนอ่านทุกคีย์ภายใน object ซึ่งต้องใช้ syntax เฉพาะใน JavaScript ที่เรียกว่าคำสั่ง <dfn>for...in</dfn> อย่างไรก็ตาม สำหรับ object `users` ของเรา อาจมีลักษณะดังนี้:
+บางครั้ง คุณอาจต้องการวนอ่านทุกคีย์ภายใน object ซึ่งต้องใช้ syntax เฉพาะใน JavaScript ที่เรียกว่าคำสั่ง <dfn>for...in</dfn> ] 
+ลองดูตัวอย่างการใช้กับ object `users` ของเรา:
 
 ```js
 for (let user in users) {
@@ -16,15 +17,17 @@ for (let user in users) {
 }
 ```
 
-โค้ดด้านบนควรแสดง log เป็น `Alan`, `Jeff`, `Sarah`, และ `Ryan` - ค่าในแต่ละบรรทัด
+โค้ดด้านบนจะ log ข้อมูลออกมาเป็น `Alan`, `Jeff`, `Sarah`, และ `Ryan` อย่างละบรรทัด
 
-ในคำสั่งนี้ เราประกาศตัวแปร `user` และอย่างที่คุณเห็น ตัวแปรนี้ถูกรีเซ็ตในแต่ละรอบเพื่อรับค่า key ของ object เมื่อมีการวนอ่าน object ทีละรอบ ส่งผลให้ชื่อผู้ใช้แต่ละรายถูกพิมพ์ไปยังหน้า console
+ในคำสั่งนี้ เราประกาศตัวแปร `user` และตัวแปรนี้จะถูกรีเซ็ตในการวนแต่ละรอบเพื่อรับค่า key ของ object ทำให้ได้รับชื่อของคนแต่ละคนและไปแสดงบน console
 
-**หมายเหตุ:** object ไม่รักษาลำดับของ key ที่เก็บไว้เหมือนกับที่ array ทำ ดังนั้นตำแหน่งของ key บน object หรือลำดับที่แสดง จึงไม่เกี่ยวข้องเมื่ออ้างอิงหรือเข้าถึง key นั้น
+**หมายเหตุ:** object จะไม่เรียงลำดับ key เหมือน array ดังนั้นตำแหน่งหรือลำดับของ key บน object จึงเปลี่ยนแปลงได้
 
 # --instructions--
 
-เราได้ประกาศฟังก์ชัน `countOnline` ซึ่งรับหนึ่ง argument (object users) จงใช้คำสั่ง <dfn>for...in</dfn> ภายในฟังก์ชันนี้เพื่อวนอ่าน object users ที่ส่งผ่านเข้าไปยังฟังก์ชัน และคืนค่าเป็นจำนวนผู้ใช้ที่มี property `online` เป็น `true` ตัวอย่างของ object users ที่สามารถส่งผ่านไปยัง `countOnline` ได้แสดงดังโค้ดด้านล่าง โดยผู้ใช้แต่ละคนจะมี property `online` ที่มีค่า `true` หรือ `false`
+เราได้ประกาศฟังก์ชัน `countOnline` ซึ่งรับ argument 1 ตัว (object `users`) ให้แล้ว
+ให้ใช้คำสั่ง <dfn>for...in</dfn> ภายในฟังก์ชันนี้เพื่อวนอ่าน object `users` ที่ส่งผ่านเข้าไปยังฟังก์ชัน และคืนค่าเป็นจำนวนผู้ใช้ที่มี property `online` เป็น `true` 
+โค้ดด้านล่างเป็นตัวอย่างของ object `users` ที่จะถูกส่งเข้าไปในฟังก์ชัน `countOnline` โดยผู้ใช้แต่ละคนจะมี property `online` ที่มีค่า `true` หรือ `false`
 
 ```js
 {
@@ -42,7 +45,7 @@ for (let user in users) {
 
 # --hints--
 
-function `countOnline` ควรใช้คำสั่ง `for in` เพื่อวนเข้าไปยัง object key ของ object ที่ส่งผ่านเข้าไป 
+ต้องใช้คำสั่ง `for in` ในฟังก์ชัน `countOnline` เพื่อวนเข้าไปอ่าน key ของ object ที่ส่งเข้าไป 
 
 ```js
 assert(
@@ -52,19 +55,19 @@ assert(
 );
 ```
 
-function `countOnline` ควรคืนค่า `1` เมื่อ object `{ Alan: { online: false }, Jeff: { online: true }, Sarah: { online: false } }`  ถูกส่งผ่านเข้าไป
+ฟังก์ชัน `countOnline` ต้องคืนค่าเป็น `1` เมื่อเราส่ง object `{ Alan: { online: false }, Jeff: { online: true }, Sarah: { online: false } }` เข้าไป
 
 ```js
 assert(countOnline(usersObj1) === 1);
 ```
 
-function `countOnline` ควรคืนค่า `2` เมื่อ object `{ Alan: { online: true }, Jeff: { online: false }, Sarah: { online: true } }`  ถูกส่งผ่านเข้าไป
+ฟังก์ชัน `countOnline` ต้องคืนค่าเป็น `2` เมื่อเราส่ง object `{ Alan: { online: true }, Jeff: { online: false }, Sarah: { online: true } }` เข้าไป
 
 ```js
 assert(countOnline(usersObj2) === 2);
 ```
 
-function `countOnline` ควรคืนค่า `0` เมื่อ object `{ Alan: { online: false }, Jeff: { online: false }, Sarah: { online: false } }` ถูกส่งผ่านเข้าไป
+ฟังก์ชัน `countOnline` ต้องคืนค่าเป็น `0` เมื่อเราส่ง object `{ Alan: { online: false }, Jeff: { online: false }, Sarah: { online: false } }`เข้าไป
 
 
 ```js
@@ -118,9 +121,9 @@ const usersObj3 = {
 
 ```js
 function countOnline(usersObj) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 ```
 

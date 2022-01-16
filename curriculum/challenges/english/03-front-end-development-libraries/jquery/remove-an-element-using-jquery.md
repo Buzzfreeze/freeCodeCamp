@@ -8,15 +8,15 @@ dashedName: remove-an-element-using-jquery
 
 # --description--
 
-ทีนี้ลองลบ HTML element จากเพจของคุณโดยใช้ jQuery กัน
+ทีนี้ลองลบ HTML element จากหน้านี้โดยใช้ jQuery กัน
 
 jQuery มีฟังก์ชันที่เรียกว่า `.remove()` ที่จะลบ HTML element ไปเลย
 
-เรามาลองลบ `#target4` element ไปจากเพจโดยการใช้ฟังก์ชัน `.remove()`
+ลองลบ `#target4` ออกจากหน้าโดยการใช้ฟังก์ชัน `.remove()`
 
 # --hints--
 
-คุณจะต้องใช้ jQuery ในการลบ `target4` element ออกจากเพจ
+คุณจะต้องใช้ jQuery ในการลบ `target4` ออกจากเพจ
 
 ```js
 assert(
@@ -24,7 +24,7 @@ assert(
 );
 ```
 
-คุณจะต้องใช้เพียงแค่ jQuery เท่านั้นในการลบ element นี้
+คุณจะต้องใช้แค่ jQuery เท่านั้นในการลบ element นี้
 
 ```js
 assert(
@@ -47,7 +47,7 @@ assert(
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
@@ -83,7 +83,7 @@ assert(
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>

@@ -8,9 +8,10 @@ dashedName: create-a-bar-for-each-data-point-in-the-set
 
 # --description--
 
-การเพิ่ม rectangle ให้กับ `svg` element เพื่อแสดง bar สามารถทำได้โดยการรวม `data()`, `enter()`, และ SVG shapes เพื่อสร้างและเพิ่ม rectangle ให้กับแต่ละ data point ใน `dataset`
+ในแบบทดสอบที่แล้วเราได้เพิ่มสี่เหลี่ยมผืนผ้าให้กับ ให้กับ `svg` เพื่อแสดงแท่งของกราฟแท่งไปแล้ว 
+คราวนี้เราจะเอาความรู้เรื่อง `data()`, `enter()`, และรุปทรงของ SVG มาสร้างกราฟแทงตามข้อมูลใน `dataset` กัน
 
-ืก่อนหน้าเราได้ทำการเพิ่ม `div` ให้กับแต่ละ item ใน `dataset`:
+ืก่อนหน้าเราได้ทำการเพิ่ม `div` ตามข้อมูลใน `dataset` ไปแล้ว:
 
 ```js
 d3.select("body").selectAll("div")
@@ -19,33 +20,35 @@ d3.select("body").selectAll("div")
   .append("div")
 ```
 
-การทำงานระหว่าง `rect` elements แทนการใช้ `div` elements จะมีความแตกต่างกันเล็กน้อย โดยที่ `rect` elements ต้องถูกเพิ่มให้กับ `svg` element ไม่ได้ถูกเรียกใช้งานโดยตรงใน `body` ดังนั้นจึงจำเป็นที่จะเรียกใช้ D3 เมื่อจะใช้งาน `rect` ภายในพื้นที่ของ `svg`  
+การใช้ `rect` แทนการใช้ `div` จะต่างกันเล็กน้อย 
+ตรงที่เราจะเพิ่ม `rect` ลงใน `svg` เราจะไม่เพิ่มลงใน `body` โดยตรง
+แล้วเราจำเป็นต้องบอกให้ D3 รู้ว่าเราจะเพิ่ม `rect` ไปในส่วนไหนของ `svg`  
 
 # --instructions--
 
-ใช้ `data()`, `enter()`และ`append()` methods เพื่อสร้างและเพิ่ม `rect` สำหรับแต่ละ item ใน `dataset` โดยที่ bars ควรจะแสดงในส่วนของ top 
+ให้ใช้ method `data()`, `enter()` และ `append()` เพื่อสร้างและเพิ่ม `rect` ตามข้อมูลใน `dataset` โดยที่กราฟแต่ละแท่งจะวางต่อๆกันอยู่แบบไม่ถูกต้อง เดี๋ยวเราจะมาแก้เรื่องการวางตัวของกราฟแต่ละแท่งในแบบทดสอบถัดไป 
 
 # --hints--
 
-document ควรมี 9 `rect` elements.
+ใน document ต้องมี `rect` ทั้งหมด 9 ตัว
 
 ```js
 assert($('rect').length == 9);
 ```
 
-ควรใช้ `data()` method.
+ต้องใช้ method `data()`
 
 ```js
 assert(code.match(/\.data/g));
 ```
 
-ควรใช้ `enter()` method.
+ต้องใช้ method `enter()`
 
 ```js
 assert(code.match(/\.enter/g));
 ```
 
-ควรใช้ `append()` method.
+ต้องใช้ method `append()`
 
 ```js
 assert(code.match(/\.append/g));
@@ -69,11 +72,11 @@ assert(code.match(/\.append/g));
                   .attr("height", h);
 
     svg.selectAll("rect")
-       // Add your code below this line
+       // เขียนโค้ดใต้บรรทัดนี้
 
 
 
-       // Add your code above this line
+       // เขียนโค้ดเหนือบรรทัดนี้
        .attr("x", 0)
        .attr("y", 0)
        .attr("width", 25)

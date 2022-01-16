@@ -10,15 +10,15 @@ dashedName: target-elements-by-id-using-jquery
 
 # --description--
 
-คุณสามารถเลือกกำหนดเป้า element โดยใช้ id attribute ได้
+คุณสามารถเลือก element โดยใช้ id ได้ด้วย
 
-โดยเริ่มจาก เลือกเป้าหมายเป็น `button` element ที่มี id `target3` โดยใช้ `$("#target3")` selector
+คราวนี้เราจะเลือก `button` ที่มี id เป็น `target3` โดยใช้ selector นี้ `$("#target3")`
 
-โปรดทราบว่าคุณจะต้องพิมพ์ `#` หน้าชื่อ id เช่นเดียวกับการประกาศคำสั่ง CSS
+ในการเลือก element ตาม id เราจะใช้ `#` นำหน้าชื่อ id นั้น เหมือนกับตอนเขียน CSS เลย
 
 หลังจากนั้นให้ใช้ฟังก์ชัน `.addClass()` ของ jQuery เพื่อเพิ่ม class `animated` และ `fadeOut`
 
-นี่คือวิธีการที่คุณจะทำให้ `button` element ที่มี id `target6` มีเอฟเฟค fade out
+โค้ดข่างล่างเป็นตัวอย่างการทำให้ `button` ที่มี id เป็น `target6` ค่อยๆจางหายไป
 
 ```js
 $("#target6").addClass("animated fadeOut");
@@ -26,13 +26,13 @@ $("#target6").addClass("animated fadeOut");
 
 # --hints--
 
-คุณจะต้องเลือก `button` element ที่มี `id` ว่า `target3` และใช้ฟังก์ชัน jQuery `addClass()` เพื่อที่จะเพิ่ม class `animated` เข้าไป
+คุณจะต้องเลือก `button` ที่มี `id` เป็น `target3` และใช้ฟังก์ชัน jQuery `addClass()` เพื่อที่จะเพิ่ม class `animated` เข้าไป
 
 ```js
 assert($('#target3').hasClass('animated'));
 ```
 
-ควรเลือกเป้าหมาย element ที่มี id `target3` และใช้ฟังก์ชัน jQuery `addClass()` เพื่อที่จะเพิ่ม class `fadeOut` เข้าไป
+ต้องเลือก element ที่มี id เป็น `target3` และใช้ฟังก์ชัน jQuery `addClass()` เพื่อที่จะเพิ่ม class `fadeOut` เข้าไป
 
 ```js
 assert(
@@ -41,7 +41,7 @@ assert(
 );
 ```
 
-คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
+คุณจะต้องใช้แค่ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
 
 ```js
 assert(!code.match(/class.*animated/g));
@@ -60,7 +60,7 @@ assert(!code.match(/class.*animated/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
@@ -96,7 +96,7 @@ assert(!code.match(/class.*animated/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>

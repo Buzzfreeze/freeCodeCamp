@@ -8,13 +8,13 @@ dashedName: add-elements-within-your-bootstrap-wells
 
 # --description--
 
-ลองดูโค้ดข้างล่างจะเห็น `div` ซ้อน `div` หลายๆ ชั้น ภายในแต่ละ column ของ row
+ตอนนี้เราจะมี `div` ที่ซ้อนกันหลายๆชั้นแล้ว เราทำลึกแค่นี้ก็พอแล้วล่ะ ต่อไปเรามาเพิ่ม `button` กันต่อ
 
-ให้เพิ่ม 3 `button` element ภายใน `div` ที่อยู่ข้างในสุด ที่มี class ชื่อว่า `well` 
+ให้เพิ่ม `button` สามตัวใน `div` ที่อยู่ข้างในสุด (ตัวที่มี class เป็น `well`)
 
 # --hints--
 
-`button` element ทั้ง 3 จะต้องอยู่ภายใน `div` ที่มี class ชื่อว่า `well`
+`button` ทั้ง 3 ตัวจะต้องอยู่ใน `div` ที่มี class เป็น `well`
 
 ```js
 assert(
@@ -23,13 +23,13 @@ assert(
 );
 ```
 
-ดังนั้นจะต้องเพิ่มทั้งหมด 6 `button` element
+คุณต้องมี `button` ทั้งหมด 6 ปุ่ม
 
 ```js
 assert($('button') && $('button').length > 5);
 ```
 
-อย่าลืมปิด tag `button` ทั้ง 6 ด้วย
+อย่าลืมปิด tag `button` ทั้ง 6 ปุ่มด้วย
 
 ```js
 assert(

@@ -8,9 +8,11 @@ dashedName: iterate-through-all-an-arrays-items-using-for-loops
 
 # --description--
 
-บางครั้งเมื่อทำงานกับ array มันจะมีประโยชน์มากในการวนซ้ำแต่ละรายการ เพื่อค้นหา element อย่างน้อยหนึ่ง element ที่เราต้องการ หรือเพื่อจัดการ array โดยพิจารณาว่ารายการข้อมูลใดตรงตามเงื่อนไข ซึ่ง JavaScript มี build in method หลาย method ที่วนซ้ำบน array ด้วยวิธีที่แตกต่างกันเล็กน้อย เพื่อให้ได้ผลลัพธ์ที่แตกต่างกัน (เช่น `every()`, `forEach()`, `map()` เป็นต้น) อย่างไรก็ตาม เทคนิคที่ยืดหยุ่น และทำให้เราสามารถควบคุมได้ดีที่สุด ก็คือ `for` loop ธรรมดาๆ
+ในการใช้ array เราสามารถใช้การลูป เพื่อค้นหา element ที่เราต้องการใน array หรือเพื่อแก้ไข element ใน array ตามเงื่อนไขได้ 
+ซึ่ง JavaScript มี build-in method ตัวที่จะทำการลูป array ด้วยวิธีต่างๆ เพื่อให้ได้ผลลัพธ์ที่แตกต่างกัน (เช่น `every()`, `forEach()`, `map()` ฯลฯ) 
+แต่วิธีที่ทำให้เราได้อิสระในการควบคุมมากที่สุดคือการใช้ `for` loop ธรรมดาๆนี่แหละ
 
-ลองพิจารณาดังนี้
+ลองดูตัวอย่าง:
 
 ```js
 function greaterThanTen(arr) {
@@ -26,14 +28,15 @@ function greaterThanTen(arr) {
 greaterThanTen([2, 12, 8, 14, 80, 0, 1]);
 ```
 
-จากตัวอย่างด้านบนเป็นการใช้ `for` loop ภายใน function โดยวนอ่านและเข้าถึงแต่ละ element ของ array เพื่อตรวจสอบว่า item ใดที่มากกว่า `10` จากนั้นคืนค่าเป็น array ใหม่ `[12, 14, 80]` ที่มี item เหล่านั้น
+จากตัวอย่างด้านบนเป็นการใช้ `for` loop ภายในฟังก์ชันโดยวนอ่านและเข้าถึงแต่ละ element ของ array เพื่อตรวจสอบว่า element ไหนมีค่ามากว่า `10` จากนั้นก็คืนค่าเป็น array ใหม่ที่มี element เหล่านั้น `[12, 14, 80]`
 
 # --instructions--
 
-เราได้ประกาศฟังก์ชัน `filteredArray` ซึ่งรับ arguments 2 ตัว คือ `arr` ที่เป็น nested array และ `elem` แล้วคืนค่าเป็น array ใหม่ โดย `elem` แสดงถึง element ที่อาจมีหรือไม่มีอยู่ใน array ย่อยภายใน `arr` จงแก้ไขฟังก์ชันโดยใช้ `for` loop เพื่อคืนค่าเป็น array เวอร์ชันที่กรองให้เหลือเพียง array ย่อยที่ไม่มี `elem` อยู่ภายใน
+เราได้ประกาศฟังก์ชัน `filteredArray` ให้แล้ว ซึ่งรับ argument 2 ตัว คือ `arr` ที่เป็น nested array และ `elem` แล้วคืนค่าเป็น array ใหม่ 
+โดย `elem` เป็น element ที่อาจมีหรือไม่มีอยู่ใน array ที่ซ้อนอยู่ใน `arr` จงแก้ไขฟังก์ชันโดยใช้ `for` loop เพื่อคืนค่าเป็น array เวอร์ชันที่กรองให้เหลือ array ชั้นในอยู่ที่ไม่มี `elem` อยู่ภายใน
 # --hints--
 
-`filteredArray([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18)` ควรคืนค่า `[[10, 8, 3], [14, 6, 23]]`
+การเรียกใช้ฟังก์ชัน `filteredArray([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18)` ต้องได้ค่าเป็น `[[10, 8, 3], [14, 6, 23]]`
 
 ```js
 assert.deepEqual(
@@ -52,7 +55,7 @@ assert.deepEqual(
 );
 ```
 
-`filteredArray([["trumpets", 2], ["flutes", 4], ["saxophones", 2]], 2)` ควรคืนค่า `[["flutes", 4]]`
+การเรียกใช้ฟังก์ชัน `filteredArray([["trumpets", 2], ["flutes", 4], ["saxophones", 2]], 2)` ต้องได้ค่าเป็น `[["flutes", 4]]`
 
 ```js
 assert.deepEqual(
@@ -68,7 +71,7 @@ assert.deepEqual(
 );
 ```
 
-`filteredArray([["amy", "beth", "sam"], ["dave", "sean", "peter"]], "peter")` ควรคืนค่า `[["amy", "beth", "sam"]]`
+การเรียกใช้ฟังก์ชัน `filteredArray([["amy", "beth", "sam"], ["dave", "sean", "peter"]], "peter")` ต้องได้ค่าเป็น `[["amy", "beth", "sam"]]`
 
 ```js
 assert.deepEqual(
@@ -83,7 +86,7 @@ assert.deepEqual(
 );
 ```
 
-`filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3)` ควรคืนค่า `[]`
+การเรียกใช้ฟังก์ชัน `filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3)` ต้องได้ค่าเป็น `[]`
 
 ```js
 assert.deepEqual(
@@ -100,7 +103,7 @@ assert.deepEqual(
 );
 ```
 
-function `filteredArray` ควรใช้ `for` loop
+ต้องใช `for` loop ในฟังก์ชัน `filteredArray` 
 
 ```js
 assert.notStrictEqual(filteredArray.toString().search(/for/), -1);
@@ -113,9 +116,9 @@ assert.notStrictEqual(filteredArray.toString().search(/for/), -1);
 ```js
 function filteredArray(arr, elem) {
   let newArr = [];
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
   return newArr;
 }
 

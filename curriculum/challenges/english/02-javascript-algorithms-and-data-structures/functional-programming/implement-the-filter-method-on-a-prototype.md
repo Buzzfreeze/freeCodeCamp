@@ -8,21 +8,22 @@ dashedName: implement-the-filter-method-on-a-prototype
 
 # --description--
 
-คุณจะมีเชี่ยวชาญขึ้นมากเกี่ยวกับ `filter` method หากคุณได้สร้าง `filter` method ที่เป็นเวอร์ชันของคุณเอง แนะนำให้คุณใช้ `for` loop หรือ `Array.prototype.forEach()`
+คุณจะเข้าใจ method `filter` มากถึง ถ้าลองได้สร้าง method `filter` เอง เราแนะนำให้คุณใช้ `for` loop หรือ `Array.prototype.forEach()`
 
 # --instructions--
 
-จงเขียน `Array.prototype.myFilter()` ของคุณเอง โดยให้ทำงานเหมือนกับ `Array.prototype.filter()` อย่างไรก็ตาม คุณไม่ควรใช้ built-in `filter` method นอกจากนี้ `Array` instance สามารถเข้าถึงได้ใน `myFilter` method โดยการใช้ `this`
+ให้เขียน `Array.prototype.myFilter()` ของคุณเอง โดยให้ทำงานเหมือนกับ `Array.prototype.filter()` และห้ามใช้ method `filter` ที่มีอยู่แล้ว 
+เราสามารถเข้าถึง instance ของ `Array` ใน method `myFilter` ได้โดยการใช้ `this`
 
 # --hints--
 
-`new_s` ควรมีค่าเป็น `[23, 65, 5]`.
+`new_s` ต้องมีค่าเป็น `[23, 65, 5]`.
 
 ```js
 assert(JSON.stringify(new_s) === JSON.stringify([23, 65, 5]));
 ```
 
-โค้ดของคุณไม่ควรใช้ `filter` method
+ห้ามใช้ method `filter`
 
 ```js
 assert(!code.match(/\.?[\s\S]*?filter/g));
@@ -33,13 +34,13 @@ assert(!code.match(/\.?[\s\S]*?filter/g));
 ## --seed-contents--
 
 ```js
-// The global variable
+// ตัวแปร globavariable
 var s = [23, 65, 98, 5];
 
 Array.prototype.myFilter = function(callback) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   var newArray = [];
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
   return newArray;
 };
 

@@ -8,72 +8,71 @@ dashedName: add-a-tooltip-to-a-d3-element
 
 # --description--
 
-Tooltip ใช้แสดงข้อมูลเกี่ยวกับ item บนแต่ละหน้า เมื่อ user นำ mouse ไปชี้ มีหลายวิธีที่สามารถเพิ่ม tooltip ใน visualization อย่างเช่นใช้ SVG `title` element
+Tooltip คือสิ่งที่เอาไว้แสดงข้อมูลเมื่อเอาเมาส์ไปชี้ เราเพิ่ม tooltip ในการแสดงผลได้หลายวิธี แต่ในตัวอย่างนี้เราจะใช้ `title` element ของ SVG
 
-`title` จับคู่กับ `text()` method เพื่อเพิ่มข้อมูลในแต่ละ bar 
+จะต้องใช้ method `text()` กับ `title` เพื่อแสดงข้อมูลของกราฟแต่ละแท่ง 
 
 # --instructions--
 
-เพิ่ม `title` element ภายใต้แต่ละ `rect` node จากนั้นเรียก `text()` method กับ callback function 
-จะเห็นมี text แสดง data value
+ให้เพิ่ม `title` element ใน `rect` แต่ละตัว แล้วให้เรียกใช้ method `text()` โดยใช้ callback function เพื่อให้ข้อความใน `title` แสดงค่าของข้อมูล
 
 # --hints--
 
-ควรจะมี 9 `title` elements.
+ต้องมี `title` ทั้งหมด 9 ตัว.
 
 ```js
 assert($('title').length == 9);
 ```
 
-อันดับที่ 1 `title` element ควรมี tooltip text `12`
+`title` ตัวที่ 1 ต้องมีข้อความใน tooltip เป็น `12`
 
 ```js
 assert($('title').eq(0).text() == '12');
 ```
 
-อันดับที่ 2 `title` element ควรมี tooltip text `31`
+`title` ตัวที่ 2 ต้องมีข้อความใน tooltip เป็น `31`
 
 ```js
 assert($('title').eq(1).text() == '31');
 ```
 
-อันดับที่ 3 `title` element ควรมี tooltip text  `22`
+`title` ตัวที่ 3 ต้องมีข้อความใน tooltip เป็น  `22`
 
 ```js
 assert($('title').eq(2).text() == '22');
 ```
 
-อันดับที่ 4 `title` element ควรมี tooltip text  `17`.
+`title` ตัวที่ 4 ต้องมีข้อความใน tooltip เป็น  `17`.
 
 ```js
 assert($('title').eq(3).text() == '17');
 ```
 
-อันดับที่ 5 `title` element ควรมี tooltip text  `25`.
+`title` ตัวที่ 5 ต้องมีข้อความใน tooltip เป็น  `25`.
 
 ```js
 assert($('title').eq(4).text() == '25');
 ```
 
-อันดับที่ 6 `title` element ควรมี tooltip text  `18`.
+`title` ตัวที่ 6 ต้องมีข้อความใน tooltip เป็น  `18`.
 
 ```js
 assert($('title').eq(5).text() == '18');
 ```
 
-อันดับที่ 7 `title` element ควรมี tooltip text  `29`.
+`title` ตัวที่ 7 ต้องมีข้อความใน tooltip เป็น  `29`.
 
 ```js
 assert($('title').eq(6).text() == '29');
 ```
 
-อันดับที่ 8 `title` element ควรมี tooltip text  `14`.
+`title` ตัวที่ 8 ต้องมีข้อความใน tooltip เป็น  `14`.
 
 ```js
 assert($('title').eq(7).text() == '14');
 ```
 
-อันดับที่ 9 `title` element ควรมี tooltip text  `9`.
+`title` ตัวที่ 9 ต้องมีข้อความใน tooltip เป็น  `9`.
 
 ```js
 assert($('title').eq(8).text() == '9');
@@ -111,11 +110,11 @@ assert($('title').eq(8).text() == '9');
        .attr("height", (d, i) => d * 3)
        .attr("fill", "navy")
        .attr("class", "bar")
-       // Add your code below this line
+       // เขียนโค้ดใต้บรรทัดนี้
 
 
 
-       // Add your code above this line
+       // เขียนโค้ดเหนือบรรทัดนี้
 
     svg.selectAll("text")
        .data(dataset)

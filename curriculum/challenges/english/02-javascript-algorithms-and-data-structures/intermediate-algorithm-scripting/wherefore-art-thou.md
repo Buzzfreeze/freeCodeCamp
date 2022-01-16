@@ -8,9 +8,9 @@ dashedName: wherefore-art-thou
 
 # --description--
 
-ให้เขียนฟังก์ชันที่อ่าน array ของ objects (argument แรก) แล้วคืนค่าเป็น array ของ object ทั้งหมดที่มีค่า name และ value ตรงกับ argument ที่ 2 
+ให้เขียนฟังก์ชันที่อ่าน array ของ object (argument แรก) แล้วคืนค่าเป็น array ของ object ทั้งหมดที่มีค่า key และ value ตรงกับ argument ที่สอง
 
-ตัวอย่างเช่น ถ้า argument แรกเป็น `[{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }]` และ argument ที่สองเป็น `{ last: "Capulet" }` คุณต้องคืนค่าเป็น object ตัวที่ 3 ของ array (argument แรก) เพราะ object ตัวที่ 3 มีค่า name/value ที่ตรงกับ argument ตัวที่สอง
+เช่น ถ้า argument แรกเป็น `[{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }]` และ argument ที่สองเป็น `{ last: "Capulet" }` คุณต้องคืนค่าเป็น array ที่มี object ตัวที่ 3 ของ argument แรกเพราะ object ตัวที่ 3 มีค่า key/value ที่ตรงกับ argument ตัวที่สอง
 
 # --hints--
 
@@ -104,10 +104,10 @@ assert.deepEqual(
 ```js
 function whatIsInAName(collection, source) {
   var arr = [];
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
   return arr;
 }
 

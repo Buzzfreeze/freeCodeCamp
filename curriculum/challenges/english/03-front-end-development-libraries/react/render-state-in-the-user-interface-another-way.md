@@ -8,26 +8,31 @@ dashedName: render-state-in-the-user-interface-another-way
 
 # --description--
 
-มีอีกวิธีหนึ่งในการเข้าถึง `state` ใน component ใน `render()` method ก่อนคำสั่ง `return` คุณสามารถเขียน JavaScript ได้โดยตรง ตัวอย่างเช่น คุณสามารถประกาศฟังก์ชัน เข้าถึงข้อมูลจาก `state` หรือ `props` แล้วคำนวณข้อมูลนี้ และอื่นๆ จากนั้นคุณสามารถกำหนดข้อมูลใดๆ ให้กับตัวแปร ซึ่งคุณสามารถเข้าถึงได้ในคำสั่ง `return`
+มีอีกวิธีในการเข้าถึง `state` ใน method `render()` ของ component 
+โดยก่อนที่จะถึงคำสั่ง `return` คุณจะเขียน JavaScript ลงไปได้
+เราจะประกาศฟังก์ชัน, อ่านค่าของ `state` หรือ `props`, ประมวลผลข้อมูล หรือทำอย่างอื่นก็ได้ 
+แล้วเราค่อยเก็บข้อมูลลงตัวแปร หลังจากนั้นค่อยเอาตัวแปรนี้ไปใช้ใน `return`
 
 # --instructions--
 
-ใน`MyComponent` render method ให้กำหนด `const` ที่เรียกว่า `name` และตั้งค่าให้เท่ากับค่า  name ใน `state` ของ component เนื่องจากคุณสามารถเขียน JavaScript ได้โดยตรงในส่วนนี้ของโค้ด คุณไม่จำเป็นต้องเขียนโค้ดนี้ในวงเล็บปีกกา
+ใน method `render` ของ `MyComponent` ให้สร้าง `const` ชื่อ `name` และกำหนดค่าให้มีค่าเป็น name ของ `state`
+เนื่องจากคุณสามารถเขียน JavaScript ได้โดยตรงในส่วนนี้ของโค้ด คุณไม่จำเป็นต้องเขียนโค้ดนี้ในวงเล็บปีกกา
 
-ถัดไปในคำสั่ง return ให้เรนเดอร์ค่านี้ในแท็ก `h1` โดยใช้ตัวแปร `name` จำไว้ว่าคุณต้องใช้ JSX syntax (วงเล็บปีกกาสำหรับเขียน JavaScript) ในคำสั่ง return
+ถัดไปในคำสั่ง return ให้เรนเดอร์ค่าของตัวแปร `name` นี้ในแท็ก `h1`
+ถ้ายังจำได้ คุณต้องใช้ JSX syntax (ใช้วงเล็บปีกกาสำหรับเขียน JavaScript) ในคำสั่ง return
 
 # --hints--
 
-`MyComponent` ควรมี key `name` ที่มีค่า `freeCodeCamp` อยู่ใน state ของมัน
+state ของ `MyComponent` ต้องมี key `name` ที่มีค่าเป็น `CareerVio`
 
 ```js
 assert(
   Enzyme.mount(React.createElement(MyComponent)).state('name') ===
-    'freeCodeCamp'
+    'CareerVio'
 );
 ```
 
-`MyComponent` ควรเรนเดอร์ `h1` header อยู่ภายใน `div` เดียว
+`MyComponent` ต้องเรนเดอร์ `h1` อยู่ใน `div`
 
 ```js
 assert(
@@ -37,14 +42,14 @@ assert(
 );
 ```
 
-`h1` tag ที่ถูกเรนเดอร์ควรอ้างอิงถึง `{name}`
+แท็ก `h1` ที่เรนเดอร์ใช้ค่าของ `{name}`
 
 ```js
 (getUserInput) =>
   assert(/<h1>\n*\s*\{\s*name\s*\}\s*\n*<\/h1>/.test(getUserInput('index')));
 ```
 
-`h1` header ที่ถูกเรนเดอร์ควรมีข้อความที่ถูกเรนเดอร์จาก component's state
+`h1` ที่เรนเดอร์ต้องใช้ค่าจาก state ของ component
 
 ```js
 async () => {
@@ -75,18 +80,18 @@ class MyComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'freeCodeCamp'
+      name: 'CareerVio'
     }
   }
   render() {
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
 
-    // Change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้
     return (
       <div>
-        { /* Change code below this line */ }
+        { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
 
-        { /* Change code above this line */ }
+        { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
       </div>
     );
   }
@@ -100,18 +105,18 @@ class MyComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'freeCodeCamp'
+      name: 'CareerVio'
     }
   }
   render() {
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
     const name = this.state.name;
-    // Change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้
     return (
       <div>
-        { /* Change code below this line */ }
+        { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
         <h1>{name}</h1>
-        { /* Change code above this line */ }
+        { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
       </div>
     );
   }

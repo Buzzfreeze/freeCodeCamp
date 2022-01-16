@@ -8,35 +8,39 @@ dashedName: introducing-inline-styles
 
 # --description--
 
-มีแนวคิดที่ซับซ้อนอื่นๆ ที่เพิ่มความสามารถอันทรงพลังให้กับโค้ด React ของคุณ แต่คุณอาจสงสัยเกี่ยวกับปัญหาที่ง่ายกว่าในตกแต่ง JSX element ที่คุณสร้างใน React คุณน่าจะรู้ว่าการทำงานกับ HTML นั้นไม่เหมือนกับการทำงานกับ JSX เนื่องจาก [วิธีที่คุณใช้คลาสกับ JSX element] ](/learn/front-end-development-libraries/react/define-an-html-class-in-jsx)
+มีอีกหลายอย่างที่จะเพิ่มศักภาพของแอป React ของคุณได้ แต่คุณอาจสงสัยในเรื่องที่ง่ายๆอีกเรื่อง เช่นการใช้ style กับ JSX element 
+คุณคงรู้แล้วว่าการใช้ style ใน JSX จะไม่เหมือนกับใน HTML เพราะ [วิธีประกาศ class ใน JSX element](/learn/front-end-development-libraries/react/define-an-html-class-in-jsx)
 
-หากคุณนำเข้า style จาก stylesheet ลักษณะนั้นไม่แตกต่างกันมากนัก คุณใช้คลาสกับ JSX element โดยใช้ `className` attribute และใช้ style กับคลาสใน stylesheet ของคุณ อีกทางเลือกหนึ่งคือการใช้ inline style ซึ่งเป็นเรื่องที่ใช้กันทั่วไปในการพัฒนา ReactJS
+ถ้าคุณใช้ style จาก stylesheet การนำ style มาใช้กับ JSX ก็จะไม่ต่างจาก HTML มาก 
+คุณแค่ต้องระบุ class ให้กับ JSX element โดยใช้ attribute ชื่อ `className` แล้วก็เลือกใช้ class ตาม stylesheet ของคุณ 
+อีกทางหนึ่งคือการใช้ inline style ซึ่งเป็นเรื่องปกติในการเขียน ReactJS
 
-คุณใช้ inline style กับ JSX element คล้ายกับที่คุณทำใน HTML แต่มีความแตกต่างกับ JSX เล็กน้อย ต่อไปนี้คือตัวอย่าง inline style ใน HTML:
+การใช้ inline style กับ JSX element จะคล้ายกับ HTML แต่ก็จะต่างกับ JSX อยู่เล็กน้อย 
+ลองดูตัวอย่างการใช้ inline style ใน HTML ก่อน:
 
 ```jsx
 <div style="color: yellow; font-size: 16px">Mellow Yellow</div>
 ```
 
-JSX element ใช้ `style` attribute แต่เนื่องจากวิธีที่ JSX ถูก transpile คุณจึงตั้งค่าเป็น `string` ไม่ได้ แต่คุณตั้งค่าให้เท่ากับ `object` ของ JavaScript แทน นี่คือตัวอย่าง:
+JSX element ก็จะใช้ attribute `style` เหมือนกัน แต่เพราะว่า JSX จะต้องถูก transpile คุณจึงใช้เป็น `string` ไม่ได้ แต่ต้องใช้เป็น `object` ของ JavaScript แทน ลองดูตัวอย่าง:
 
-JSX elements use the `style` attribute, but because of the way JSX is transpiled, you can't set the value to a `string`. Instead, you set it equal to a JavaScript `object`. Here's an example:
 
 ```jsx
 <div style={{color: "yellow", fontSize: 16}}>Mellow Yellow</div>
 ```
 
-สังเกตว่าเราใช้ camelCase กับ `fontSize` property อย่างไร นี่เป็นเพราะ React จะไม่ยอมรับคีย์ kebab-case ใน style object React จะใช้ชื่อ property ที่ถูกต้องสำหรับเราใน HTML
+จะเห็นว่าเราใช้ camelCase กับ property `fontSize` นี่เป็นเพราะ React จะไม่ยอมรับคีย์ที่เป็น kebab-case ใน object นี้ 
+แต่ React จะ transpile ไปเป็น HTML ที่ถูกต้องให้เราเอง
 
 # --instructions--
 
-เพิ่ม`style` attribute ให้กับ `div` ใน code editor เพื่อให้ข้อความมีสีแดงและขนาดฟอนต์ที่ `72px`
+เพิ่ม attribute `style` ให้กับ `div` ใน code editor เพื่อให้ข้อความมีสีแดงและขนาดฟอนต์เป็น `72px`
 
-โปรดทราบว่าคุณสามารถเลือกกำหนดขนาดฟอนต์ให้เป็นตัวเลขอย่าเดียวไม่ต้องใส่หน่วย `px` หรือเขียนเป็น `72px` อย่างใดอย่างหนึ่งก็ได้
+คุณจะระบุขนาดฟอนต์เป็นตัวเลขเฉยๆ เช่น `72` หรือจะเป็น string ที่มี `px` ตามหลัง เช่น `72px` ก็ได้
 
 # --hints--
 
-Component ควรเรนเดอร์ `div` element
+component ต้องเรนเดอร์ `div` ไว้ข้างใน
 
 ```js
 assert(
@@ -47,7 +51,7 @@ assert(
 );
 ```
 
-`div` element ควรมีสี `red`
+`div` ต้องมี attribute `color` เป็น `red`
 
 ```js
 assert(
@@ -58,7 +62,7 @@ assert(
 );
 ```
 
-`div` element ควรมีขนาดฟอนต์ที่ `72px`
+`div` ต้องมีขนาดฟอนต์เป็น `72px`
 
 ```js
 assert(

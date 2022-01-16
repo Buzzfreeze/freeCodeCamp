@@ -8,9 +8,15 @@ dashedName: use-provider-to-connect-redux-to-react
 
 # --description--
 
-ในแบบทดสอบที่ผ่านมา คุณได้สร้าง Redux store เพื่อจัดการ array ข้อความและสร้าง action สำหรับการเพิ่มข้อความใหม่ ขั้นตอนต่อไปคือการให้การเข้าถึง React กับ Redux store และ action ที่จำเป็นในการส่งการอัปเดต ซึ่ง React Redux มีแพ็คเกจ `react-redux` เพื่อช่วยให้งานเหล่านี้สำเร็จ
+ในแบบทดสอบที่ผ่านมา คุณได้สร้าง Redux store เพื่อจัดการ array ของข้อความและสร้าง action สำหรับการเพิ่มข้อความใหม่ 
+ขั้นตอนต่อไปคือการทำให้ React การเข้าถึง Redux store และ action ที่ต้องใช้เพื่อ dispatch ได้ 
+ซึ่ง React Redux มีแพ็คเกจ `react-redux` ที่ใช้ทำแบบนี้ได้
 
-React Redux มี API ขนาดเล็กพร้อมคุณสมบัติหลักสองประการ คือ: `Provider` และ `connect` ในแบบทดสอบอื่นๆ จะอธิบายครอบคลุมเนื้อหาของ `connect` ในส่วนของ `Provider` นั้นเป็น wrapper component จาก React Redux ที่รวมแอพ React ของคุณ ส่วน Wrapper นี้ช่วยให้คุณเข้าถึงฟังก์ชัน Redux `store` และ `dispatch` ทั่วทั้งโครงสร้าง component ของคุณ ตัว `Provider` นั้นรับ prop สองรายการ ได้แก่ Redux store และ child components แอปของคุณ การกำหนด `Provider` สำหรับ component แอปเขียนโค้ดได้ดังนี้:
+React Redux มี API ตัวเล็กๆที่เด่นๆสองตัว คือ `Provider` และ `connect` เราจะเรียนเรื่อง `connect` กันในแบบทดสอบหน้า 
+ส่วน `Provider` นั้นเป็น wrapper component ของ React Redux ครอบแอป React ของคุณ 
+ตัว `Provider` นี้ช่วยให้คุณเข้าถึงฟังก์ชัน Redux `store` และ `dispatch` ได้จากทุกส่วนใน component ของคุณ 
+`Provider` นั้นรับ prop สองตัว คือ Redux store และ child component ของแอปของคุณ 
+การใช้ `Provider` สำหรับ component `App` จะเขียนโค้ดได้แบบนี้:
 
 ```jsx
 <Provider store={store}>
@@ -20,13 +26,16 @@ React Redux มี API ขนาดเล็กพร้อมคุณสมบ
 
 # --instructions--
 
-ตอนนี้ code editor จะแสดงโค้ด Redux และ React ทั้งหมดของคุณจากแบบบทดสอบต่างๆ ที่ผ่านมา มันประกอบด้วย Redux store, actions และ `DisplayMessages` component สิ่งใหม่ที่เพิ่มมาสิ่งเดียวคือ `AppWrapper` component ที่ด้านล่าง ใช้ component ระดับบนสุดนี้เพื่อเรนเดอร์ `Provider` จาก `ReactRedux` และส่งผ่าน Redux store เป็น prop จากนั้นเรนเดอร์`DisplayMessages` component เป็น child ของมัน เมื่อคุณทำเสร็จแล้ว คุณควรเห็น React component ของคุณเรนเดอร์ไปยังหน้าเพจ
+ตอนนี้ code editor จะแสดงโค้ด Redux และ React ที่เขียนในแบบบทดสอบที่ผ่านมา โดยจะมี Redux store, action และ component `DisplayMessages` และก็จะมี component `AppWrapper` เพิ่มมาที่ด้านล่างด้วย
+ให้ใช้ `AppWrapper` นี้เรนเดอร์ `Provider` จาก `ReactRedux` และส่ง Redux store ไปเป็น prop แล้วให้เรนเดอร์ `DisplayMessages` เป็น child ของของ `Provider` นี้ 
+ถ้าทำเสร็จแล้ว คุณควรเห็น React component ของคุณเรนเดอร์ไปยังหน้าเพจ
 
-**Note:** ในที่นี้ React Redux พร้อมใช้งานในฐานะ ตัวแปร global ดังนั้นคุณจึงสามารถเข้าถึง Provider ด้วยเครื่องหมายจุด โค้ดใน editor ใช้ประโยชน์จากสิ่งนี้และตั้งค่าให้เป็น constant `Provider` เพื่อให้คุณใช้ใน`AppWrapper` render method 
+**Note:** ในที่นี้ React Redux จะเป็นตัวแปร global คุณจึงสามารถเข้าถึง Provider ได้โดยใช้ dot notation 
+โค้ดใน editor ได้ใช้วิธีนี้เพื่อเก็บ Provider ลงใน const `Provider` เพื่อให้คุณนำใช้ใน method render ของ `AppWrapper`
 
 # --hints--
 
-ควรเรนเดอร์ `AppWrapper`
+ต้องเรนเดอร์ `AppWrapper`
 
 ```js
 assert(
@@ -37,7 +46,7 @@ assert(
 );
 ```
 
-`Provider` wrapper component ควรมี prop จาก `store` ที่ถูกส่งมาที่มันซึ่งก็คือ Redux store
+component `Provider` ต้องส่ง Redux store เข้าไปใน prop ชื่อ `store`
 
 ```js
 (getUserInput) =>
@@ -51,7 +60,7 @@ assert(
   );
 ```
 
-`DisplayMessages` ควรเรนเดอร์เป็น child ของ `AppWrapper`
+`DisplayMessages` ต้องเป็น child ของ `AppWrapper`
 
 ```js
 assert(
@@ -64,7 +73,7 @@ assert(
 );
 ```
 
-`DisplayMessages` component ควรเรนเดอร์ `h2`, `input`, `button` และ `ul` element
+`DisplayMessages` ต้องเรนเดอร์ `h2`, `input`, `button` และ `ul` ไว้ข้างใน
 
 ```js
 assert(
@@ -167,9 +176,9 @@ class DisplayMessages extends React.Component {
 const Provider = ReactRedux.Provider;
 
 class AppWrapper extends React.Component {
-  // Render the Provider below this line
+  // ใช้ method render และใช้ Provider ใต้บรรทัดนี้
 
-  // Change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้
 };
 ```
 
@@ -250,7 +259,7 @@ class DisplayMessages extends React.Component {
 const Provider = ReactRedux.Provider;
 
 class AppWrapper extends React.Component {
-  // Change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้
   render() {
     return (
       <Provider store = {store}>
@@ -258,6 +267,6 @@ class AppWrapper extends React.Component {
       </Provider>
     );
   }
-  // Change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้
 };
 ```

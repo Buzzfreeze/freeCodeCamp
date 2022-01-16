@@ -8,35 +8,38 @@ dashedName: add-comments-in-jsx
 
 # --description--
 
-JSX คือ syntax ที่ถูก compile เป็น JavaScript ที่ถูกต้อง ในบางครั้งเพื่อให้ทำความเข้าใจโค้ดได้ง่ายมากขึ้น คุณอาจะต้องการเพิ่ม comment ไปในโค้ดด้วย เช่นเดียวกับการเขียนโปรแกรมทั่วไป JSX มีวิธีการของมันในการเขียน comment
+JSX เป็น syntax ที่จะถูก compile เป็น JavaScript 
+ซึ่งในบางครั้งเพื่อให้โค้ดอ่านง่าย คุณอาจต้องเพิ่ม comment ไปในโค้ดด้วย 
+โดย JSX ก็จะมีวิธีในการเขียน comment เป็นของตัวเอง
 
-เพื่อที่จะใส่ comment ใน JSX คุณจะต้องใช้ syntax `{/* */}` ครอบข้อความ comment นั้น
+ในการเขียน comment ใน JSX คุณจะต้องใช้ syntax `{/* */}` ครอบ comment นั้น
 
 # --instructions--
 
-ในส่วนที่เขียนโค้ดมี JSX element คล้ายกับสิ่งที่คุณได้สร้างในแบบทดสอบที่ผ่านมา ให้คุณเพิ่ม comment ในที่ใดก็ได้ภายใน `div` element ที่ให้มา โดยที่ไม่ต้องแก้ไข `h1` หรือ `p` element ที่มีอยู่
+ใน code editor ด้านขวาจะมี JSX element ที่คล้ายๆกับโค้ดที่คุณเขียนในแบบทดสอบที่แล้ว 
+ให้คุณเพิ่ม comment ตรงไหนก็ได้ใน `div` element ที่ให้มา โดยที่ไม่ต้องแก้ไข `h1` หรือ `p` element ที่มีอยู่
 
 # --hints--
 
-ค่าคงที่ `JSX` ควรจะ return `div` element
+`JSX` ต้องเก็บค่าของ `div` element
 
 ```js
 assert(JSX.type === 'div');
 ```
 
-`div` นั้นควรจะต้องมี `h1` tag ที่เป็น element แรกข้างใน
+`div` นี้ต้องมี `h1` เป็น element แรกข้างใน
 
 ```js
 assert(JSX.props.children[0].type === 'h1');
 ```
 
-`div` นั้นควรจะต้องมี `p` tag ที่เป็น element ที่สองข้างใน
+`div` นี้ต้องมี `p` เป็น element ที่สองข้างใน
 
 ```js
 assert(JSX.props.children[1].type === 'p');
 ```
 
-ไม่ควรที่จะแก้ไขอะไร กับ `h1` และ `p` element ที่มีอยู่
+ห้ามเปลี่ยนแปลง `h1` และ `p` ที่มีให้
 
 ```js
 assert(
@@ -45,7 +48,7 @@ assert(
 );
 ```
 
-`JSX` ควรใช้ comment syntax ที่ถูกต้อง
+ต้องเขียน comment syntax ใน `JSX` ให้ถูกต้อง
 
 ```js
 assert(/<div>[\s\S]*{\s*\/\*[\s\S]*\*\/\s*}[\s\S]*<\/div>/.test(code));

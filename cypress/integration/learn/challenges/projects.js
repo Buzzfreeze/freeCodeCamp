@@ -45,7 +45,7 @@ describe('project submission', () => {
         .get('#solution')
         .type('https://replit.com/@camperbot/python-project#main.py');
 
-      cy.contains("I've completed this challenge").click();
+      cy.contains('ฉันทำภารกิจที่ท้าทายนี้เสร็จแล้ว').click();
       cy.contains('Go to next challenge');
       // clicking on 'Go to next challenge' seems to have caused flakiness, so
       // it's commented out until we figure out why.

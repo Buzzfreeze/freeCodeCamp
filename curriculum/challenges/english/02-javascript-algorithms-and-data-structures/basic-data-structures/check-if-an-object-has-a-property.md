@@ -8,22 +8,27 @@ dashedName: check-if-an-object-has-a-property
 
 # --description--
 
-ตอนนี้เราสามารถเพิ่ม แก้ไข และลบ key ออกจาก object ได้ แต่ถ้าเราแค่อยากรู้ว่า object นั้น มี property ที่ต้องการหรือไม่ JavaScript มีทางเลือก 2 วิธี คือ หนึ่งใช้ method `hasOwnProperty()` และอีกวิธีคือ ใช้ keyword `in` โดยหากเรามี object `users` ที่มี property เป็น `Alan` เราสามารถตรวจสอบการมีอยู่ของ property ด้วยวิธีใดวิธีหนึ่งต่อไปนี้:
+ตอนนี้เราสามารถเพิ่ม แก้ไข และลบ key ออกจาก object ได้ แต่ถ้าเราแค่อยากรู้ว่า object นั้น มี property ที่ต้องการหรือไม่ JavaScript ก็มีทางเลือกให้เรา 2 วิธี คือ 
+
+1. ใช้ method `hasOwnProperty()` และ
+2. ใช้ keyword `in` 
+
+ถ้าเรามี object `users` ที่มี property เป็น `Alan` เราสามารถตรวจสอบการมีอยู่ของ property ได้ตามตัวอย่างนี้:
 
 ```js
 users.hasOwnProperty('Alan');
 'Alan' in users;
 ```
 
-ทั้งสองแบบจะคืนค่า `true`
+ทั้งสองแบบจะคืนค่าเป็น `true`
 
 # --instructions--
 
-จงเขียน function ให้เสร็จ เพื่อคืนค่า true ถ้า object ที่ส่งเข้าไปใน function มีทั้ง 4 names คือ  `Alan`, `Jeff`, `Sarah` และ `Ryan` และคืนค่า false หากเงื่อนไขดังกล่าวเป็นเท็จ
+จงเขียนฟังก์ชัน `isEveryoneHere` เพื่อคืนค่า `true` ถ้า object ที่ส่งเข้าไปในฟังก์ชันมี key ครบทั้ง 4 ตัวคือ  `Alan`, `Jeff`, `Sarah` และ `Ryan` และคืนค่า false หากมั key ไม่ครบทั้ง 4 ตัว
 
 # --hints--
 
-object `users` ไม่ควรเข้าถึงโดยตรง
+ห้ามเข้าถึง object `users` โดยตรง
 
 ```js 
 
@@ -31,7 +36,7 @@ assert(code.match(/users/gm).length <= 2)
 
 ```
 
-object `users` ควรมีแค่ key `Alan`, `Jeff`, `Sarah` และ `Ryan`
+object `users` ต้องมี key เป็น `Alan`, `Jeff`, `Sarah` และ `Ryan` เท่านั้น
 
 ```js
 assert(
@@ -43,13 +48,13 @@ assert(
 );
 ```
 
-function `isEveryoneHere` ควรคืนค่า `true` ถ้า `Alan`, `Jeff`, `Sarah` และ `Ryan` เป็น property ของ object ที่ส่งผ่านเข้าไป
+ฟังก์ชัน `isEveryoneHere` ต้องเป็น `true` ถ้า object ที่ส่งผ่านเข้าไปมี property ชื่อ `Alan`, `Jeff`, `Sarah` และ `Ryan` ครบทั้ง 4 ตัว
 
 ```js
 assert(isEveryoneHere(users) === true);
 ```
 
-function `isEveryoneHere` ควรคืนค่า `false` ถ้า  `Alan` ไม่ใช่ property ของ object ที่ส่งผ่านเข้าไป
+ฟังก์ชัน `isEveryoneHere` ต้องเป็น `false` ถ้า object ที่ส่งผ่านเข้าไปไม่มี property ชื่อ `Alan`
 
 ```js
 assert(
@@ -60,7 +65,7 @@ assert(
 );
 ```
 
-function `isEveryoneHere` ควรคืนค่า `false` ถ้า  `Jeff` ไม่ใช่ property ของ object ที่ส่งผ่านเข้าไป
+ฟังก์ชัน `isEveryoneHere` ต้องเป็น `false` ถ้า object ที่ส่งผ่านเข้าไปไม่มี property ชื่อ `Jeff`
 
 ```js
 assert(
@@ -71,7 +76,7 @@ assert(
 );
 ```
 
-function `isEveryoneHere` ควรคืนค่า `false` ถ้า  `Sarah` ไม่ใช่ property ของ object ที่ส่งผ่านเข้าไป
+ฟังก์ชัน `isEveryoneHere` ต้องเป็น `false` ถ้า object ที่ส่งผ่านเข้าไปไม่มี property ชื่อ `Sarah`
 
 ```js
 assert(
@@ -82,7 +87,7 @@ assert(
 );
 ```
 
-function `isEveryoneHere` ควรคืนค่า `false` ถ้า  `Ryan` ไม่ใช่ property ของ object ที่ส่งผ่านเข้าไป
+ฟังก์ชัน `isEveryoneHere` ต้องเป็น `false` ถ้า object ที่ส่งผ่านเข้าไปไม่มี property ชื่อ `Ryan`
 
 ```js
 assert(
@@ -118,9 +123,9 @@ let users = {
 };
 
 function isEveryoneHere(userObj) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 
 console.log(isEveryoneHere(users));

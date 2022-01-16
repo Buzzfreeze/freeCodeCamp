@@ -8,7 +8,12 @@ dashedName: set-state-with-this-setstate
 
 # --description--
 
-แบบทดสอบก่อนหน้านี้ได้พูดถึงถึง component `state` และวิธีเริ่มต้น state ใน `constructor` นอกจากนี้ยังมีวิธีการเปลี่ยน `state` ของ component อีกด้วย React ได้จัดเตรียม method อัปเดต component `state` ที่เรียกว่า `setState` คุณเรียกใช้ `setState` method ภายในคลาส component ของคุณดังนี้: `this.setState()` จะส่งผ่าน object ที่มีคู่ key-value ซึ่ง key คือ state properties ของคุณและ value คือข้อมูล state ที่อัปเดตแล้ว ตัวอย่างเช่น หากเราจัดเก็บ `username` ไว้ใน state และต้องการอัปเดตมัน ซึ่งจะมีลักษณะดังนี้:
+แบบทดสอบที่ผ่านมาเราได้สอนเรื่อง `state` ของ component และวิธีสร้าง state ใน `constructor` ไปแล้ว
+คราวนี้เรามาเรียนเรื่องวิธีการเปลี่ยน `state` ของ component กันดีกว่า 
+React มี method ที่ใช้อัปเดต `state` ของ component คือ `setState` 
+เราจะใช้ method `setState` ภายใน class component ได้แบบนี้ `this.setState()` โดยส่ง object ที่มี key กับ value เข้าไป 
+ซึ่ง key คือ property ของ state และ value คือข้อมูลใหม่ที่อยากให้เป็น 
+เช่น ถ้าเราเก็บ `username` ไว้ใน state และต้องการอัปเดตค่านี้ เราจะใช้โค้ดนี้:
 
 ```jsx
 this.setState({
@@ -16,17 +21,25 @@ this.setState({
 });
 ```
 
-React จะไม่ให้คุณแก้ไข `state` โดยตรง แต่ควรจะใช้ `this.setState()` ทุกครั้งเมื่อมีการเปลี่ยนแปลง state นอกจากนี้คุณควรทราบด้วยว่า React อาจแบทช์การอัพเดตหลาย state เพื่อปรับปรุงประสิทธิภาพ หมายความว่า state อัพเดตผ่าน `setState` method สามารถเป็น asynchronous ได้ มันยังมี syntax แบบอื่นสำหรับ `setState` method ซึ่งมีวิถีทางแก้ไขปัญหานี้ สิ่งนี้ไม่จำเป็นมากนักแต่ควรจำไว้! โปรดดู[React documentation](https://reactjs.org/docs/state-and-lifecycle.html#state-updates-may-be-asynchronous) สำหรับรายละเอียดเพิ่มเติม
+React จะไม่ให้คุณแก้ไข `state` โดยตรง แต่จะต้องใช้ `this.setState()` ทุกครั้งเมื่อมีถ้าจะเปลี่ยนแปลง `state` 
+ที่ต้องรู้อีกอย่างคือ React อาจรวมการอัปเดท state หลายๆครั้งเข้าด้วยกันให้ได้ประสิทธิภาพที่ดีกว่า 
+แปลว่าการอัปเดท state โดยใช้ method `setState` อาจเป็น asynchronous ได้ 
+ซึ่งก็มี syntax อื่นสำหรับการเรียกใช้ method `setState` เพื่อให้เป็นแบบ synchronous น้อยครั้งมากๆที่เราจะต้องเรียกใช้แบบนี้ แต่ถ้ารู้ไว้ก็ดี 
+ลองอ่าน [React documentation](https://reactjs.org/docs/state-and-lifecycle.html#state-updates-may-be-asynchronous) เพื่อให้เข้าใจเรื่องนี้มากขึ้น
 
 # --instructions--
 
-มี `button` element ใน code editor ซึ่งมี `onClick()` handler ตัวจัดการนี้จะถูกทำให้ทำงานเมื่อ `button` ได้รับ click event ในเบราว์เซอร์ และเรียกใช้ `handleClick` method ที่กำหนดไว้ใน `MyComponent` ภายใน `handleClick` method ให้อัปเดต component `state` โดยใช้ `this.setState()` ตั้งค่า `name` property ใน `state` ให้เท่ากับ string 'React Rocks!'
+ใน code editor มี `button` element ที่ใช้ `onClick()` handler อยู่
+`onClick` นี้จะทำงานเมื่อ `button` ถูกคลิกในเบราว์เซอร์ และเรียกใช้ method `handleClick` ที่เขียนไว้ใน `MyComponent` 
+ภายใน method `handleClick` ให้อัปเดต `state` โดยใช้ `this.setState()` แล้วตั้งค่า property `name` ของ `state` เป็น string 'React Rocks!'
 
-คลิกปุ่มและดูการอัปเดต state ที่เรนเดอร์ อย่ากังวลหากคุณไม่เข้าใจวิธีการทำงานของโค้ด click handler อย่างถ่องแท้ในตอนนี้ มันจะถูกอธิบายในแบบทดสอบข้างหน้า
+ลองคลิกปุ่มและดูการเปลี่ยนแปลงของ UI เมื่อ state เปลี่ยนแปลง
+ไม่ต้องกังวลถ้ายังไม่เข้าใจหลักการทำงานของ click handler ในตอนนี้ 
+เราจะอธิบายเรื่องนี้ในภายหลัง
 
 # --hints--
 
-State ของ `MyComponent` ควรเริ่มต้นด้วยคู่ key value `{ name: Initial State }`
+state ของ `MyComponent` ต้องมีค่าเริ่มต้นเป็น `{ name: Initial State }`
 
 ```js
 assert(
@@ -35,13 +48,13 @@ assert(
 );
 ```
 
-`MyComponent` ควรเรนเดอร์ `h1` header
+`MyComponent` ต้องเรนเดอร์ `h1`
 
 ```js
 assert(Enzyme.mount(React.createElement(MyComponent)).find('h1').length === 1);
 ```
 
-`h1` header ที่ถูกเรนเดอร์แล้วควรมีข้อความที่ถูกเรนเดอร์จาก state ของ component
+`h1` ที่เรนเดอร์ออกมา ต้องแสดงข้อความที่ดึงมาจาก state ของ component
 
 ```js
 async () => {
@@ -57,7 +70,7 @@ async () => {
 };
 ```
 
-การเรียกใช้ `handleClick` method บน `MyComponent` ควรตั้งค่าให้ name property ใน state เท่ากับ `React Rocks!`
+การเรียกใช้ method `handleClick` ใน `MyComponent` ต้องเปลี่ยนค่าของ property `name` ใน state เป็น `React Rocks!`
 
 ```js
 async () => {
@@ -98,9 +111,9 @@ class MyComponent extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
 
-    // Change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้
   }
   render() {
     return (
@@ -125,11 +138,11 @@ class MyComponent extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-     // Change code below this line
+     // แก้ไขโค้ดใต้บรรทัดนี้
     this.setState({
       name: 'React Rocks!'
     });
-    // Change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้
   }
   render() {
     return (

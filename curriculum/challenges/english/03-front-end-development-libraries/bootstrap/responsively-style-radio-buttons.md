@@ -12,9 +12,9 @@ dashedName: responsively-style-radio-buttons
 
 # --description--
 
-เราสามารถใช้คุณสมบัติของ class `col-xs-*` ของ Bootstrap กับทุกๆ `form` element ได้ ดังนั้นถ้าเราเอาไปใช้กับปุ่ม radio button ก็จะทำให้ตัว radio button ต่างๆ จัดเรียงเท่าๆ กันไปตามความกว้างเพจ ไม่ว่าจะไปเปิดที่หน้าจอขนาดเท่าใดก็ตาม
+เราใช้ class `col-xs-*` ของ Bootstrap กับ `form` element ได้ทุกตัว ดังนั้นถ้าเราเอาไปใช้กับปุ่ม radio button ก็จะทำให้ตัว radio button ที่มี กระจายตัวไปโดยห่างเท่าๆกันตามความกว้างหน้า ไม่ว่าจะไปเปิดที่หน้าจอขนาดเท่าใดก็ตาม
 
-นำ radio button ทั้งสองไปไว้ใน `<div class="row">` element แล้วให้นำ radio button แต่ละอันแยกไปไว้ในแต่ละ `<div class="col-xs-6">` element
+นำ radio button ทั้งสองตัวไปไว้ใน `<div class="row">` แล้วให้นำ radio button แต่ละอันแยกไปไว้ในแต่ละ `<div class="col-xs-6">` ของตัวเอง
 
 **Note:** ปุ่ม radio button คือ `input` element ที่มี type เป็น `radio`
 

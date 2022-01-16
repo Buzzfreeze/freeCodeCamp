@@ -8,27 +8,30 @@ dashedName: define-an-action-creator
 
 # --description--
 
-หลังจากสร้าง action ขั้นตอนต่อไปคือการส่ง action ไปยัง Redux store เพื่อให้สามารถอัปเดต state ได้ ใน Redux คุณกำหนด action creators เพื่อทำสิ่งนี้ให้สำเร็จ action creators เป็นเพียงฟังก์ชัน JavaScript ที่ return action กล่าวอีกนัยหนึ่ง action creators สร้าง object ที่แสดงถึง action events
+หลังจากสร้าง action ได้แล้ว ขั้นตอนต่อไปคือการส่ง action ไปยัง Redux store เพื่ออัปเดต state 
+ในการส่ง action เข้าไปใน Redux store คุณต้องใช้ action creator 
+โดย action creator ก็เป็นแค่ฟังก์ชัน JavaScript ที่คืนค่าออกมาเป็น action 
+ถ้าจะให้อธิบายก็คือ action creator จะเป็นฟังก์ชันที่ใช้สร้าง object โดย object นี้จะใช้สื่อถึง action ที่เกิดขึ้น
 
 # --instructions--
 
-กำหนดฟังก์ชันชื่อ `actionCreator()` ซึ่งจะ return `action` object เมื่อมีการเรียกใช้งาน
+ให้กำหนดฟังก์ชันชื่อ `actionCreator()` ซึ่งจะคืนค่า `action` object ออกมาเมื่อเรียกใช้งาน
 
 # --hints--
 
-ควรมีฟังก์ชัน `actionCreator`
+ต้องเขียนฟังก์ชัน `actionCreator`
 
 ```js
 assert(typeof actionCreator === 'function');
 ```
 
-การใช้งานฟังก์ชัน `actionCreator` ควร return `action` object
+การเรียกใช้ฟังก์ชัน `actionCreator` ต้องคืนค่า `action` object ออกมา
 
 ```js
 assert(typeof action === 'object');
 ```
 
-`action` ที่ถูก return มาควรมี key property `type` ที่มีค่าเป็น `LOGIN`
+`action` ที่ถูกคืนค่าออกมาต้องมี property ชื่อ `type` ที่มีค่าเป็น `LOGIN`
 
 ```js
 assert(action.type === 'LOGIN');
@@ -42,7 +45,7 @@ assert(action.type === 'LOGIN');
 const action = {
   type: 'LOGIN'
 }
-// Define an action creator here:
+// ประกาศฟังก์ชัน actionCreator ใต้บรรทัดนี้:
 ```
 
 # --solutions--

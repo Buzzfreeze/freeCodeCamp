@@ -10,21 +10,27 @@ dashedName: target-even-elements-using-jquery
 
 # --description--
 
-คุณสามารถเลือก element เป้าหมายอาศัยการระบุตำแหน่งคู่หรือคี่ โดยใช้ `:odd` or `:even` selector
+คุณสามารถเลือก element ตามตำแหน่งได้ถ้าใช้ selector `:odd` หรือ `:even`
 
-โปรดทราบว่า jQuery คือ zero-indexed ซึ่งหมายความว่า element ตัวแรกสุดในลำดับการเลือกนั้นจะมีตำแหน่งที่ 0 นี่อาจจะทำให้สับสนได้ เพราะขัดแย้งกับหลักคิดพื้นฐานของเรา จะเห็นได้ว่า `:odd` จะเลือก element ตัวที่ 2 (ตำแหน่งที่ 1), element ตัวที่ 4 (ตำแหน่งที่ 3) ต่อไปเรื่อยๆ
+โดย `:even` (แปลว่าเลขคู่) จะเลือก element ตัวที่ 1 3 5 ฯลฯ
+และ `:odd` (แปลว่าเลขคี่) จะเลือก element ตัวที่ 2 4 6 ฯลฯ
 
-นี่คือวิธีการที่คุณจะสามารถเลือกเป้าหมาย elementที่มี class `target` ที่มีตำแหน่งคี่ทั้งหมด แล้วเพิ่ม class ต่างๆ ให้กับมัน
+ถ้าอ่านคำอธิบายข้างบนอาจจะงงนิดนึง เพราะจะเห็นว่า odd ที่แปลว่าเลขคี่นั้นเลือก element ที่ 2 4 6 ซึ่งเป็นเลขคู่
+นั่นก็เพราะ jQuery นั้นก็ใช้ระบบ zero-based-index แปลว่า element ตัวแรกสุดจะมีตำแหน่ง (index) เป็น 0 
+เช่นถ้าเราใช้ `:odd` เราจะเลือก element ตัวที่ 2 (ตำแหน่งที่ 1) ตัวต่อมาก็จะเป็น element ตัวที่ 4 (ตำแหน่งที่ 3) และต่อไปเรื่อยๆ
+
+ตัวอย่างด้านล่างจะเป็นการเพิ่ม class ให้กับ element ที่มี class เป็น `target` และก็มีตำแหน่งเป็นเลขคี่
 
 ```js
 $(".target:odd").addClass("animated shake");
 ```
 
-มาลองเลือก `target` element ที่มีตำแหน่งคู่ทั้งหมด และเพิ่ม class `animated` และ `shake` ให้ โปรดจำไว้ว่า **even** หมายถึงตำแหน่งของ element ที่เป็นระบบ zero-based
+ให้เลือก `target` ในตำแหน่งคู่ (`even`) ทั้งหมด และเพิ่ม class `animated` และ `shake` ให้กับ element ที่เลือก 
+อย่าลืมว่า **even** จะใช้ตำแหน่งในระบบ zero-based
 
 # --hints--
 
-`target` element ทั้งหมดที่ jQuery เลือกให้เป็นตำแหน่งคู่จะต้องมีเอฟเฟคสั่น
+`target` ทั้งหมดที่ jQuery เลือกให้เป็นตำแหน่งคู่จะต้องสั่นได้
 
 ```js
 assert(
@@ -32,13 +38,13 @@ assert(
 );
 ```
 
-คุณจะต้องใช้ `:even` selector ในการปรับแต่ง element นี้
+คุณจะต้องใช้ `:even` selector เพื่อเลือก element
 
 ```js
 assert(code.match(/\:even/g));
 ```
 
-คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
+คุณจะต้องใช้แค่ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
 
 ```js
 assert(
@@ -69,7 +75,7 @@ assert(
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
@@ -112,7 +118,7 @@ assert(
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>

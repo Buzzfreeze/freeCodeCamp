@@ -8,23 +8,29 @@ dashedName: extract-state-logic-to-redux
 
 # --description--
 
-เมื่อคุณสร้าง React component เสร็จแล้ว คุณต้องย้ายตรรกะที่ทำงานอยู่ใน `state` ไปไว้ใน Redux นี่เป็นขั้นตอนแรกในการเชื่อมต่อแอป React อย่างง่ายกับ Redux ฟังก์ชันเดียวที่แอปของคุณมีคือการเพิ่มข้อความใหม่จากผู้ใช้ไปยัง unordered list ตัวอย่างง่าย ๆ นี้แสดงให้เห็นว่า React และ Redux ทำงานร่วมกันอย่างไร
+เมื่อคุณสร้าง React component เสร็จแล้ว คุณต้องย้าย logic ที่ใช้งาน `state` ไปไว้ใน Redux นี่เป็นขั้นตอนแรกในการเชื่อม React กับ Redux 
+ตอนนี้แอปของคุณทำแค่การนำข้อความที่กรอกลงมาไปใส่ใน `ul` 
+ตัวอย่างนี้จะทำให้เห็นว่า React จะทำงานกับ Redux ได้อย่างไร
 
 # --instructions--
 
-ขั้นแรก กำหนดประเภทการดำเนินการ `ADD` และตั้ง const `ADD` ถัดไปกำหนด action creator `addMessage()` ซึ่งสร้างการดำเนินการเพื่อเพิ่มข้อความ คุณจะต้องส่ง `message` ไปยัง action creator นี้ และรวมข้อความไว้ใน `action` ที่ return
+ขั้นแรก ให้สร้าง const `ADD` เพื่อเก็บ action ที่ชื่อว่า `"ADD"`
+ต่อไปให้สร้าง action creator ชื่อ `addMessage()` ซึ่งจะสร้าง action ที่ใช้เพิ่มข้อความ 
+ถัดไป action creator ต้องรับค่า `message` ซึ่งเป็นข้อความที่เข้ามา และใน `action` ที่คืนค่าออกมา จะต้องมี property ชื่อ message ที่เก็บค่าของข้อความที่รับเข้ามาด้วย
 
-จากนั้นสร้าง reducer ชื่อ `messageReducer()` ที่จัดการ state ของข้อความต่างๆ state เริ่มต้นควรเป็น array ว่าง reducer นี้ควรเพิ่มข้อความไปยัง array ของข้อความที่อยู่ใน state หรือ return state ปัจจุบัน สุดท้ายสร้างร้าน Redux และส่งผ่าน reducer
+จากนั้นสร้าง reducer ชื่อ `messageReducer()` ที่จัดการ state ของข้อความ
+state นี้ต้องมีค่าเริ่มต้นเป็น array ว่าง และ reducer นี้จะต้องเพิ่มข้อความที่รับเข้ามาไปใน array `messages` ของ state หรือคืนค่าเป็น state ปัจจุบัน 
+และสุดท้ายให้สร้าง Redux store และส่ง reducer เข้าไปในฟังก์ชัน `createStore`
 
 # --hints--
 
-ควรมี const `ADD` และมีค่า เท่ากับ string `ADD`
+const `ADD` ต้องมีค่าเป็น string `ADD`
 
 ```js
 assert(ADD === 'ADD');
 ```
 
-action creator `addMessage` ควร return object ด้วย `type` เท่ากับ `ADD` และ `message` เท่ากับข้อความที่ถูกส่งต่อมา
+action creator `addMessage` ต้องคืนค่าเป็น object ที่มี property `type` ที่มีค่าเป็น `ADD` และ property `message` ที่เป็นค่าของข้อความที่รับเข้ามาในฟังก์ชัน
 
 ```js
 assert(
@@ -35,13 +41,13 @@ assert(
 );
 ```
 
-`messageReducer` ควรเป็นฟังก์ชัน
+`messageReducer` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof messageReducer === 'function');
 ```
 
-จะต้องมี store และมี state ค่าเริ่มต้นตั้งให้เป็น array ว่าง
+ต้องมี store ที่มีค่าเริ่มต้นของ state เป็น array ว่าง
 
 ```js
 assert(
@@ -52,7 +58,7 @@ assert(
 );
 ```
 
-การส่ง `addMessage` ต่อ store ควรเพิ่มข้อความใหม่ไปยัง array ของข้อความที่อยู่ใน state โดยไม่เปลี่ยนรูป
+การ dispatch `addMessage` ไปยัง store ต้องเพิ่มข้อความใหม่ลงใน state ที่เป็น array โดยไม่เปลี่ยนแปลง state เดิม
 
 ```js
 assert(
@@ -84,7 +90,7 @@ assert(
 ## --seed-contents--
 
 ```jsx
-// Define ADD, addMessage(), messageReducer(), and store here:
+// สร้าง ADD, addMessage(), messageReducer(), และ store ที่นี่:
 ```
 
 # --solutions--

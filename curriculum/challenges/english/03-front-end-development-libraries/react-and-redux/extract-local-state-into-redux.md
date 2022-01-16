@@ -8,17 +8,24 @@ dashedName: extract-local-state-into-redux
 
 # --description--
 
-เกือบสำเร็จแล้ว! จากที่คุณได้เขียนโค้ด Redux ทั้งหมดเพื่อให้ Redux สามารถควบคุมการจัดการ state ของ React messages app ในเมื่อตอนนี้ Redux ได้เชื่อมต่อแล้ว คุณต้องแยกการจัดการ state ออกจาก `Presentational` component และเข้าสู่ Redux ในขณะที่เชื่อมต่อ Redux แล้วนั้น คุณก็กำลังจัดการ state เฉพาะส่วนภายใน `Presentational` component
+อีกนิดเดียว! จากที่คุณได้เขียนโค้ด Redux ทั้งหมดเพื่อให้ Redux สามารถควบคุมการจัดการ state ของแอป React ได้
+เมื่อ Redux ได้เชื่อมต่อแล้ว คุณต้องแยกการจัดการ state ออกจาก component `Presentational` และเอาไปเก็บใน Redux แทน
+ถึงตอนนี้คุณจะเชื่อมต่อ Redux แล้ว แต่การจัดการ state ก็ยังเป็นแค่การจัดการในขอบเขตของ `Presentational` เท่านั้น
 
 # --instructions--
 
-ใน`Presentational` component ขั้นแรกให้นำ `messages` property ใน local `state` ออก ข้อความเหล่านี้จะได้รับการจัดการโดย Redux ถัดไปให้แก้ไข `submitMessage()` method เพื่อให้ส่ง `submitNewMessage()` จาก `this.props` และส่งผ่านข้อความปัจจุบันจาก local `state` เป็น argument เนื่องจากคุณลบ `messages` ออกจาก local `state` ให้ลบ `messages` property ออกจากการเรียกใช้  `this.setState()` ด้วย และสุดท้ายแก้ไข `render()` method เพื่อให้ map กับข้อความที่ได้รับจาก `props` แทนที่จะเป็น `state`
+ให้แก้ไขโค้ดใน component `Presentational` 
+โดยขั้นแรกให้นำ property `messages` ใน local `state` ออก เราจะใช้ Redux จัดการ `messages` พวกนี้แทน
+ต่อไปให้แก้ไข method `submitMessage()` เพื่อให้ dispatch `submitNewMessage()` จาก `this.props` โดยให้ argument เป็น `input` ของ local `state`
+ให้ลบ property `messages` ออกจากการเรียกใช้ `this.setState()` ด้วย เพราะว่าคุณได้ลบ `messages` ออกจาก local `state` ไปแล้ว
+และสุดท้ายให้แก้ method `render()` เพื่อให้ map `messages` จาก `props` แทนที่จะเป็น `state`
 
-เมื่อทำการเปลี่ยนแปลงเหล่านี้แล้ว แอปจะยังคงทำงานเหมือนเดิม ยกเว้น Redux จะจัดการ state ตัวอย่างนี้ยังแสดงให้เห็นว่า component อาจมี local `state` อย่างไร: component ของคุณยังคงติดตามการป้อนข้อมูลของ user ภายในเครื่องใน `state` ของตัวเอง คุณสามารถดูวิธีที่ Redux จัดเตรียมกรอบงานการจัดการ state ที่มีประโยชน์ไว้บน React ได้อย่างไร คุณจะได้รับผลลัพธ์เดียวกันโดยใช้ React's local state เท่านั้นในตอนแรก และมักจะทำได้กับแอปี่เรียบง่ายๆ อย่างไรก็ตามหากแอปของคุณมีขนาดใหญ่ขึ้นและซับซ้อนมากขึ้น การจัดการ state ของคุณก็มีขนาดใหญ่ขึ้นและซับซ้อนมากขึ้นเช่นกัน และนี่คือปัญหาที่ใช้ Redux แก้ไขได้
+ถ้าแก้โค้ดตามเงื่อนไขข้างบนเสร็จแล้ว แอปจะยังคงทำงานเหมือนเดิม แต่ Redux จะเป็นตัวที่จัดการ state แทน 
+ตัวอย่างนี้ยังแสดงให้เห็นว่า component อาจมี local `state` อย่างไร: component ของคุณยังคงติดตามการป้อนข้อมูลของ user ภายในเครื่องใน `state` ของตัวเอง คุณสามารถดูวิธีที่ Redux จัดเตรียมกรอบงานการจัดการ state ที่มีประโยชน์ไว้บน React ได้อย่างไร คุณจะได้รับผลลัพธ์เดียวกันโดยใช้ React's local state เท่านั้นในตอนแรก และมักจะทำได้กับแอปี่เรียบง่ายๆ อย่างไรก็ตามหากแอปของคุณมีขนาดใหญ่ขึ้นและซับซ้อนมากขึ้น การจัดการ state ของคุณก็มีขนาดใหญ่ขึ้นและซับซ้อนมากขึ้นเช่นกัน และนี่คือปัญหาที่ใช้ Redux แก้ไขได้
 
 # --hints--
 
-`AppWrapper` ควรเรนเดอร์ไปยังหน้าเพจ
+ต้องเรนเดอร์ `AppWrapper` ไปยังหน้าเพจ
 
 ```js
 assert(
@@ -29,7 +36,7 @@ assert(
 );
 ```
 
-`Presentational` component ควรเรนเดอร์ไปยังหน้าเพจ
+ต้องเรนเดอร์ `Presentational` ไปยังหน้าเพจ
 
 ```js
 assert(
@@ -40,7 +47,7 @@ assert(
 );
 ```
 
-`Presentational` component ควรเรนเดอร์ `h2`, `input`, `button`, และ `ul` elemetn
+`Presentational` ต้องมี `h2`, `input`, `button`, และ `ul` อยู่ภายใน
 
 ```js
 assert(
@@ -57,7 +64,7 @@ assert(
 );
 ```
 
-`Presentational` component ควรรับ `messages` จาก Redux store เป็น prop
+`Presentational` ต้องรับ `messages` เป็น prop จาก Redux store 
 
 ```js
 assert(
@@ -70,7 +77,7 @@ assert(
 );
 ```
 
-`Presentational` component ควรรับ `submitMessage` action creator เป็น prop
+`Presentational` ต้องรับ `submitMessage` action creator เป็น prop
 
 ```js
 assert(
@@ -83,7 +90,7 @@ assert(
 );
 ```
 
-State ของ `Presentational` component ควรมี property `input` หนึ่งอย่าง ที่ค่าเริ่มต้นเป็น string ว่าง
+state ของ `Presentational` ต้องมี property แค่ตัวเดียวคือ `input` โดยมีค่าเริ่มต้นเป็น string ว่าง
 
 ```js
 assert(
@@ -100,7 +107,7 @@ assert(
 );
 ```
 
-การพิมพ์ลงไปใน `input` element ควรอัปเดต state ของ `Presentational` component
+การพิมพ์ลงไปใน `input` element ต้องไปอัปเดต state ของ `Presentational`
 
 ```js
 async () => {
@@ -124,7 +131,7 @@ async () => {
 };
 ```
 
-การส่ง `submitMessage` บน `Presentational` component ควรอัปเดต Redux store และล้างอินพุตใน local state
+การ dispatch `submitMessage` ใน `Presentational` ต้องไปอัปเดต Redux store และล้าง `input` ของ local state
 
 ```js
 async () => {
@@ -156,7 +163,7 @@ async () => {
 };
 ```
 
-`Presentational` component ควรเรนเดอร์ `messages` จาก Redux store
+`Presentational` ต้องใช้ `messages` จาก Redux store ไม่ใช่ local state
 
 ```js
 async () => {
@@ -228,7 +235,7 @@ const store = Redux.createStore(messageReducer);
 const Provider = ReactRedux.Provider;
 const connect = ReactRedux.connect;
 
-// Change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้
 class Presentational extends React.Component {
   constructor(props) {
     super(props);
@@ -270,7 +277,7 @@ class Presentational extends React.Component {
     );
   }
 };
-// Change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้
 
 const mapStateToProps = (state) => {
   return {messages: state}
@@ -328,7 +335,7 @@ const store = Redux.createStore(messageReducer);
 const Provider = ReactRedux.Provider;
 const connect = ReactRedux.connect;
 
-// Change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้
 class Presentational extends React.Component {
   constructor(props) {
     super(props);
@@ -369,7 +376,7 @@ class Presentational extends React.Component {
     );
   }
 };
-// Change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้
 
 const mapStateToProps = (state) => {
   return {messages: state}

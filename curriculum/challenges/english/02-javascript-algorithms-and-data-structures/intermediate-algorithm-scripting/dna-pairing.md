@@ -8,19 +8,19 @@ dashedName: dna-pairing
 
 # --description--
 
-สาย DNA เส้นหนึ่งประกอบด้วย element ที่ยังไม่มีคู่มาจับ จงนำ element (ตัวอักษร) แต่ละตัว  มาจับคู่ แล้วคืนค่าเป็น array 2 มิติ
+สาย DNA เส้นหนึ่งประกอบด้วย element ที่ยังไม่มีคู่มาจับ ให้จับคู่ตัวอักษร แล้วคืนค่าเป็น array 2 มิติ
 
-[Base pairs](http://en.wikipedia.org/wiki/Base_pair) คือคู่ element ของ DNA ได้แก่ AT และ CG ให้เราทำการจับคู่ element (ตัวอักษร) ที่หายไปกับ element (ตัวอักษร) ที่มีบนสาย DNA
+[Base pairs](http://en.wikipedia.org/wiki/Base_pair) คือคู่ของ DNA ได้แก่ AT และ CG ให้เราทำการจับคู่ตัวอักษรที่หายไป กับตัวอักษรที่อยู่บนสาย DNA
 
-แล้วคืนค่าเป็น array โดยให้ element แรกเป็นตัวอักษรที่อยู่บนสาย DNA
+แล้วคืนค่าเป็น array โดยให้ element แรกเป็นตัวอักษรที่อยู่บนสาย DNA ส่วน element ที่สองเป็นคู่ที่เราจับให้
 
-ยกตัวอย่างเช่น ตัวอักษรที่มีอยู่บนสาย DNA คือ `GCG` ก็จะคืนค่าเป็น `[["G", "C"], ["C","G"], ["G", "C"]]`
+เช่น ตัวอักษรที่อยู่บนสาย DNA คือ `GCG` ก็จะคืนค่าเป็น `[["G", "C"], ["C","G"], ["G", "C"]]`
 
-element บนสาย DNA และคู่ของมันจะกับคู่กันเป็น array ตัวนึง และทุกๆ คู่ array จะครอบด้วย array อีกตัวนึง
+ตัวอักษรบนสาย DNA และคู่ของของตัวอักษรนั้นจะเป็น array ตัวนึง ซึ่ง array ทุกคู่ก็จะถูกเก็บอยู่ใน array อีกทอดนึง
 
 # --hints--
 
-`pairElement("ATCGA")` ควรคืนค่าเป็น `[["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]]`.
+`pairElement("ATCGA")` ต้องคืนค่าเป็น `[["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]]`.
 
 ```js
 assert.deepEqual(pairElement('ATCGA'), [
@@ -32,7 +32,7 @@ assert.deepEqual(pairElement('ATCGA'), [
 ]);
 ```
 
-`pairElement("TTGAG")` ควรคืนค่าเป็น `[["T","A"],["T","A"],["G","C"],["A","T"],["G","C"]]`.
+`pairElement("TTGAG")` ต้องคืนค่าเป็น `[["T","A"],["T","A"],["G","C"],["A","T"],["G","C"]]`.
 
 ```js
 assert.deepEqual(pairElement('TTGAG'), [
@@ -44,7 +44,7 @@ assert.deepEqual(pairElement('TTGAG'), [
 ]);
 ```
 
-`pairElement("CTCTA")` ควรคืนค่าเป็น `[["C","G"],["T","A"],["C","G"],["T","A"],["A","T"]]`.
+`pairElement("CTCTA")` ต้องคืนค่าเป็น `[["C","G"],["T","A"],["C","G"],["T","A"],["A","T"]]`.
 
 ```js
 assert.deepEqual(pairElement('CTCTA'), [

@@ -8,17 +8,21 @@ dashedName: compose-react-components
 
 # --description--
 
-เนื่องจากแบบทดสอบจะใช้องค์ประกอบที่ซับซ้อนมากขึ้นกับ React components และ JSX จึงมีประเด็นที่ควรทราบ การเรนเดอร์ ES6 style class components ภายใน component อื่นๆ ไม่ได้แตกต่างจากการเรนเดอร์ component ธรรมดาที่คุณได้เคยใช้มาแล้วในแบบทดสอบก่อนหน้านี้ คุณสามารถเรนเดอร์ JSX element, stateless functional components, แลพ ES6 class components ภายใน component อื่นๆได้
+พอเราได้ใช้ React component และ JSX ที่ซับซ้อนขึ้นมาขนาดนี้แล้ว
+ก็มีอีกอย่างนึงที่เราควรรู้ไว้คือ คุณจะเรนเดอร์ class component แบบ ES6 ไว้ใน component ตัวอื่นได้เหมือนกับการเรนเดอร์ component แบบปกติที่เราทำมาเลย 
+เราจะเรนเดอร์ JSX element, stateless functional component, และ ES6 class component ไว้ใน component ไหนก็ได้
 
 # --instructions--
 
-ใน code editor นั้น `TypesOfFood` component ได้เรนเดอร์ component ที่เรียกว่า `Vegetables` เรียบร้อยแล้ว และยังมี `Fruits` component จากแบบทดสอบที่ผ่านมาอีกด้วย
+ลองดูใน code editor ตอนนี้มี component `TypesOfFood` ที่เรนเดอร์ component `Vegetables` อยู่แล้ว และก็ยังมี component `Fruits` จากแบบทดสอบที่แล้วด้วย
 
-ให้นำ 2 component นี้ไปอยู่ใน `Fruits` อย่างแรกคือ `NonCitrus` และจากนั้น `Citrus` component ทั้งสองนี้ได้ถูกเตรียมไว้ให้คุณในเบื้องหลังแล้ว ต่อไปให้นำ `Fruits` class component ไปไว้ใน `TypesOfFood` component ใต้ header `h1` และเหนือ `Vegetables` ผลลัพธ์ที่ได้ควรเป็นชุดของ component ที่ซ้อนกัน ซึ่งใช้ประเภทของ component 2 อย่างที่ต่างกัน
+ให้เพิ่ม component `NonCitrus` และ `Citrus` ไว้ใน component `Fruits` (เราได้เขียน component สองตัวนี้ไว้ให้แล้ว แต่ไม่ได้แสดงโค้ดให้คุณเห็น) 
+ต่อไปให้นำ component `Fruits` ไปไว้ใน component `TypesOfFood` ใต้ header `h1` และเหนือ `Vegetables` 
+ซึ่งจะทำให้ได้ component ที่ซ้อนกันอยู่เป็น component คนละประเภทกัน
 
 # --hints--
 
-`TypesOfFood` component ควรจะต้อง return `div` element 1 element
+component `TypesOfFood` ต้องคืนค่าเป็น `div` ตัวเดียว
 
 ```js
 assert(
@@ -29,7 +33,7 @@ assert(
 );
 ```
 
-`TypesOfFood` component ควรจะต้อง return `Fruits` component
+component `TypesOfFood` ต้องมี component `Fruits` อยู่ภายใน
 
 ```js
 assert(
@@ -40,7 +44,7 @@ assert(
 );
 ```
 
-`Fruits` component ควรจะต้อง return `NonCitrus` component และ `Citrus` component
+component `Fruits` ต้องมี component `NonCitrus` และ `Citrus` อยู่ภายใน
 
 ```js
 assert(
@@ -55,7 +59,7 @@ assert(
 );
 ```
 
-`TypesOfFood` component ควรจะต้อง return `Vegetables` component ใต้ `Fruits` component
+component `TypesOfFood` ต้องมี component `Vegetables` อยู่ใต้ `Fruits` 
 
 ```js
 assert(
@@ -134,9 +138,9 @@ class Fruits extends React.Component {
     return (
       <div>
         <h2>Fruits:</h2>
-        { /* Change code below this line */ }
+        { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
 
-        { /* Change code above this line */ }
+        { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
       </div>
     );
   }
@@ -150,9 +154,9 @@ class TypesOfFood extends React.Component {
     return (
       <div>
         <h1>Types of Food:</h1>
-        { /* Change code below this line */ }
+        { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
 
-        { /* Change code above this line */ }
+        { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
         <Vegetables />
       </div>
     );
@@ -171,10 +175,10 @@ class Fruits extends React.Component {
     return (
       <div>
         <h2>Fruits:</h2>
-        { /* Change code below this line */ }
+        { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
         <NonCitrus />
         <Citrus />
-        { /* Change code above this line */ }
+        { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
       </div>
     )
   }
@@ -188,9 +192,9 @@ class TypesOfFood extends React.Component {
       return (
         <div>
         <h1>Types of Food:</h1>
-          { /* Change code below this line */ }
+          { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
           <Fruits />
-          { /* Change code above this line */ }
+          { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
           <Vegetables />
         </div>
       );

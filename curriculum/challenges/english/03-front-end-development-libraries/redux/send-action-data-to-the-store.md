@@ -8,21 +8,28 @@ dashedName: send-action-data-to-the-store
 
 # --description--
 
-ถึงตอนนี้ คุณได้เรียนรู้วิธีส่ง actions ไปยัง Redux store แล้ว แต่จนถึงตอนนี้ actions เหล่านี้ยังไม่มีข้อมูลอื่นใดนอกจาก `type` คุณยังสามารถส่งข้อมูลเฉพาะพร้อมกับ actions ของคุณ อันที่จริง นี่เป็นเรื่องปกติมากเพราะ actions มักเกิดจากการโต้ตอบของผู้ใช้และมีแนวโน้มที่จะนำข้อมูลบางอย่างติดตัวไปด้วย และ Redux store มักต้องการทราบเกี่ยวกับข้อมูลนี้
+คุณรู้วิธีส่ง action ไปยัง Redux store แล้ว แต่จนถึงตอนนี้ action พวกนี้ยังไม่มีข้อมูลอื่นนอกจาก `type` เลย 
+คุณจะส่งข้อมูลไปพร้อมกับ action ได้ และการส่งข้อมูลแบบนี้เป็นเรื่องปกติ เพราะ action มักเกิดจากการที่ผู้ใช้ทำอะไรบางอย่าง และมีโอกาสที่ต้องส่งข้อมูลไปด้วย โดยส่วนใหญ่ Redux store มักต้องใช้ข้อมูลนี้
 
 # --instructions--
 
-มี action creator `notesReducer()` และ `addNoteText()` พื้นฐานที่ถูกกำหนดไว้แล้วใน code editor ให้เติม body ของฟังก์ชัน `addNoteText()` ให้สำเร็จเพื่อให้ return `action` object และ object นั้น ควรมี `type` property ที่มีค่า `ADD_NOTE` และ`text` property ที่ตั้งค่าเป็นข้อมูล `note` ที่ส่งผ่านไปยัง action creator เมื่อคุณเรียกใช้ action creator คุณจะต้องส่งผ่านข้อมูล note เฉพาะที่คุณสามารถเข้าถึงสำหรับ object
+เราได้เขียน action creator ชื่อ `notesReducer()` และ `addNoteText()` ไว้ให้คร่าวๆใน code editor แล้ว 
+ให้เขียนฟังก์ชัน `addNoteText()` ให้เสร็จ โดยฟังก์ชันนี้ต้องคืนค่าเป็น `action` object ที่มี property สองตัวคือ 
 
-ถัดไป ให้เขียนคำสั่ง `switch' ใน `notesReducer()` ให้เสร็จสิ้น คุณต้องเพิ่มเคสที่จัดการการดำเนินการ `addNoteText()` กรณีนี้ควรทริกเกอร์ทุกครั้งที่มีการดำเนินการประเภท "ADD_NOTE" และควรส่งคืนคุณสมบัติ "ข้อความ" ใน "การดำเนินการ" ขาเข้าเป็น "สถานะ" ใหม่
+1. `type` ที่มีค่าเป็น `ADD_NOTE` และ
+2. `text` ที่เป็นข้อมูลของ `note` ถูกส่งเข้ามาใน action creator 
 
-Next, finish writing the `switch` statement in the `notesReducer()`. You need to add a case that handles the `addNoteText()` actions. This case should be triggered whenever there is an action of type `ADD_NOTE` and it should return the `text` property on the incoming `action` as the new `state`.
+เมื่อเรียกใช้ action creator ค่าของ note จะถูกส่งเข้าไปด้วย
 
-action จะถูกส่งไปที่ด้านล่างของโค้ด เมื่อคุณทำเสร็จแล้วให้รันโค้ดและดูคอนโซล นั่นคือทั้งหมดที่ใช้ในการส่งข้อมูล action เฉพาะ ไปยัง store และใช้งานเมื่อคุณอัปเดต `state` ของ store
+ต่อไป ให้เขียนคำสั่ง `switch` ใน `notesReducer()` ให้เสร็จ โดยจะต้องเพิ่ม case ที่รองรับ action ที่เป็น `ADD_NOTE` (ซึ่งจะเกิดจากการเรียกใช้ `addNoteText()`)และต้องคืนค่า `text` ของ `action` ออกมาเป็น `state` ตัวใหม่ 
+
+
+เราได้เขียนฟังก์ชัน `dispatch` ไว้ให้แล้วที่ส่วนล่างๆของโค้ด ถ้าทำแบบฝึกหัดเสร็จแล้ว ให้ลองรันโค้ดและดูที่คอนโซล 
+โค้ดที่คุณได้เขียนไปคือวิธีการส่งข้อมูลของ action ไปยัง store และเอาไปใช้งานเมื่อคุณอัปเดต `state` ของ store
 
 # --hints--
 
-action creator `addNoteText` ควรจะ return object ที่มี keys `type` และ `text`
+action creator `addNoteText` ต้องคืนค่าเป็น object ที่มี property เป็น `type` และ `text`
 
 ```js
 assert(
@@ -33,7 +40,7 @@ assert(
 );
 ```
 
-การส่ง action ของ type `ADD_NOTE` กับ `addNoteText` action creator ควรอัปเดต `state` ไปยัง string ที่ถูกส่งไปยัง action creator
+การ dispatch action ที่มีค่าของ type เป็น `ADD_NOTE` โดยใช้ action creator ชื่อ `addNoteText` ต้องไปอัปเดต `state` ให้เป็นค่าของ string ที่ถูกส่งไปยัง action creator
 
 ```js
 assert(
@@ -55,18 +62,18 @@ const ADD_NOTE = 'ADD_NOTE';
 
 const notesReducer = (state = 'Initial State', action) => {
   switch(action.type) {
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
 
-    // Change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้
     default:
       return state;
   }
 };
 
 const addNoteText = (note) => {
-  // Change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้
 
-  // Change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้
 };
 
 const store = Redux.createStore(notesReducer);
@@ -83,22 +90,22 @@ const ADD_NOTE = 'ADD_NOTE';
 
 const notesReducer = (state = 'Initial State', action) => {
   switch(action.type) {
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
     case ADD_NOTE:
       return action.text;
-    // Change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้
     default:
       return state;
   }
 };
 
 const addNoteText = (note) => {
-  // Change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้
   return {
     type: ADD_NOTE,
     text: note
   }
-  // Change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้
 };
 
 const store = Redux.createStore(notesReducer);

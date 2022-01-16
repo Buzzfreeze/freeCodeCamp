@@ -8,21 +8,23 @@ dashedName: get-state-from-the-redux-store
 
 # --description--
 
-Redux store object มี method หลายอย่างที่อนุญาตให้คุณโต้ตอบกับมัน ตัวอย่างเช่น คุณสามารถดึงข้อมูล `state` ปัจจุบันที่เก็บไว้ใน Redux store object ด้วยเมธอด `getState()`
+Redux store object มี method หลายตัวที่ใช้ได้ 
+เช่น คุณสามารถดึงข้อมูล `state` ปัจจุบันที่เก็บไว้ใน Redux store object ด้วยได้โดยใช้ method `getState()`
 
 # --instructions--
 
-โค้ดจากแบบทดสอบครั้งก่อนถูกเขียนใหม่ให้กระชับยิ่งขึ้นใน code editor ให้ใช้ `store.getState()` เพื่อดึง `state` จาก `store` และกำหนดสิ่งนี้ให้กับตัวแปร `currentState` ใหม่
+เราได้ย่อโค้ดจากแบบทดสอบที่แลัวให้ใน code editor 
+คราวนี้ให้ใช้ `store.getState()` เพื่อดึง `state` จาก `store` และเอาค่านี้ไปเก็บในตัวแปรชื่อ `currentState`
 
 # --hints--
 
-Redux store ควรมีค่าเป็น 5 สำหรับ state เริ่มต้น
+Redux store ต้องมีค่าเริ่มต้นของ state เป็น 5
 
 ```js
 assert(store.getState() === 5);
 ```
 
-ควรมีตัวแปร `currentState` และควรถูกกำหนดให้เป็น state ของ Redux store
+ต้องมีตัวแปร `currentState` ที่เก็บค่าของ state จาก Redux store
 
 ```js
 (getUserInput) =>
@@ -40,7 +42,7 @@ const store = Redux.createStore(
   (state = 5) => state
 );
 
-// Change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้
 ```
 
 # --solutions--
@@ -50,6 +52,6 @@ const store = Redux.createStore(
   (state = 5) => state
 );
 
-// Change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้
 const currentState = store.getState();
 ```

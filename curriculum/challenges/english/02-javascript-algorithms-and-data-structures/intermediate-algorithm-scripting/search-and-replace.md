@@ -10,17 +10,17 @@ dashedName: search-and-replace
 
 ให้ทำการค้นหาและแทนที่ค่าในประโยค โดยใช้ argument ที่กำหนด แล้วคืนค่าเป็นประโยคใหม่
 
-argument แรก คือ ประโยคตั้งต้นที่ต้องการค้นหาและแทนที่ค่า
+argument แรกคือ ประโยคตั้งต้นที่ต้องการค้นหาและแทนที่ค่า
 
-argument ที่สอง คือ คำที่คุณต้องการค้นหา (before)
+argument ที่สองคือ คำที่คุณต้องการค้นหา
 
-argument ที่สาม คือ คำที่คุณจะนำไปแทนที่ค่าเดิม (after)
+argument ที่สามคือ คำที่คุณจะนำไปแทนที่
 
-**หมายเหตุ:** เมื่อมีการแทนที่คำ ให้ยังคงตัวพิมพ์ใหญ่หรือตัวพิมพ์เล็กของคำเดิมไว้ ยกตัวอย่างเช่น ถ้าคุณต้องการแทนค่า `Book` ด้วยคำว่า `dog` ผลลัพธ์ควรได้เป็น `Dog`
+**หมายเหตุ:** เมื่อมีการแทนที่คำ ให้ยังคงตัวพิมพ์ใหญ่หรือตัวพิมพ์เล็กของคำเดิมไว้ เช่น ถ้าการแทนคำว่า `Book` ด้วยคำว่า `dog` ผลลัพธ์ต้องได้เป็น `Dog`
 
 # --hints--
 
-`myReplace("Let us go to the store", "store", "mall")` ควรคืนค่าเป็น string `Let us go to the mall`.
+`myReplace("Let us go to the store", "store", "mall")` ต้องคืนค่าเป็น string `Let us go to the mall`.
 
 ```js
 assert.deepEqual(
@@ -29,7 +29,7 @@ assert.deepEqual(
 );
 ```
 
-`myReplace("He is Sleeping on the couch", "Sleeping", "sitting")` ควรคืนค่าเป็น string `He is Sitting on the couch`.
+`myReplace("He is Sleeping on the couch", "Sleeping", "sitting")` ต้องคืนค่าเป็น string `He is Sitting on the couch`.
 
 ```js
 assert.deepEqual(
@@ -38,7 +38,7 @@ assert.deepEqual(
 );
 ```
 
-`myReplace("I think we should look up there", "up", "Down")` ควรคืนค่าเป็น string `I think we should look down there`.
+`myReplace("I think we should look up there", "up", "Down")` ต้องคืนค่าเป็น string `I think we should look down there`.
 
 ```js
 assert.deepEqual(
@@ -47,7 +47,7 @@ assert.deepEqual(
 );
 ```
 
-`myReplace("This has a spellngi error", "spellngi", "spelling")` ควรคืนค่าเป็น string `This has a spelling error`.
+`myReplace("This has a spellngi error", "spellngi", "spelling")` ต้องคืนค่าเป็น string `This has a spelling error`.
 
 ```js
 assert.deepEqual(
@@ -56,7 +56,7 @@ assert.deepEqual(
 );
 ```
 
-`myReplace("His name is Tom", "Tom", "john")` ควรคืนค่าเป็น string `His name is John`.
+`myReplace("His name is Tom", "Tom", "john")` ต้องคืนค่าเป็น string `His name is John`.
 
 ```js
 assert.deepEqual(
@@ -65,7 +65,7 @@ assert.deepEqual(
 );
 ```
 
-`myReplace("Let us get back to more Coding", "Coding", "algorithms")` ควรคืนค่าเป็น string `Let us get back to more Algorithms`.
+`myReplace("Let us get back to more Coding", "Coding", "algorithms")` ต้องคืนค่าเป็น string `Let us get back to more Algorithms`.
 
 ```js
 assert.deepEqual(

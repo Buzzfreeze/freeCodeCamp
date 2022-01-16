@@ -8,28 +8,27 @@ dashedName: define-an-html-class-in-jsx
 
 # --description--
 
-เมื่อคุณเริ่มคุ้นเคยกับการเขียน JSX แล้ว คุณอาจสงสัยว่ามันแตกต่างจาก HTML อย่างไร
+ตอนนี้พอคุณได้เขียน JSX มาหน่อยนึงแล้ว คุณอาจนึกว่า เอ๊ะ ก็ไม่เห็นต่างจาก HTML เลยหนิ
 
-จนถึงตอนนี้ ดูเหมือนว่า HTML และ JSX จะเหมือนกันทุกประการ
+ในตอนนี้คุณอาจเห็นว่า HTML กับ JSX เหมือนกันเป๊ะ
 
-ความแตกต่างที่สำคัญอย่างหนึ่งใน JSX คือคุณไม่สามารถใช้คำว่า `class` เพื่อกำหนดคลาส HTML ได้อีกต่อไป ทั้งนี้เป็นเพราะ `class` เป็นคำสงวนใน JavaScript ดังนั้น JSX จึงใช้ `className` แทน
+แต่ความแตกต่างที่สำคัญอย่างหนึ่งใน JSX คือคุณไม่สามารถใช้คำว่า `class` เพื่อกำหนดคลาสแบบ HTML ได้อีกต่อไป ที่เป็นแบบนี้เพราะว่า `class` นั้นเป็นคำสงวนใน JavaScript ดังนั้น JSX จึงใช้เป็นคำว่า `className` แทน
 
-อันที่จริงหลักการตั้งชื่อสำหรับ HTML attribute และการอ้างอิง event ทั้งหมดใน JSX จะเป็น camelCase ตัวอย่างเช่น click event ใน JSX คือ `onClick` แทนที่จะเป็น `onclick` ในทำนองเดียวกัน `onchange` จะกลายเป็น `onChange` แม้ว่าสิ่งนี้จะมีความแตกต่างเพียงเล็กน้อย แต่ก็เป็นสิ่งสำคัญที่ต้องคำนึงถึงการเรียนรู้ต่อๆ ไป
+อันที่จริงหลักการตั้งชื่อสำหรับ HTML attribute และการอ้างอิง event ทั้งหมดใน JSX จะเป็น camelCase ตัวอย่างเช่น click event ใน JSX คือ `onClick` แทนที่จะเป็น `onclick` ในทำนองเดียวกัน `onchange` ก็จะกลายเป็น `onChange` ถึงแม้จะมีความแตกต่างแค่เล็กน้อย แต่ก็เป็นสิ่งสำคัญที่ต้องจำให้ได้ในการที่จะเรียนรู้ต่อไป
 
 # --instructions--
 
-ใช้คลาสของ `myDiv` กับ `div` ที่ให้ไว้ในโค้ด JSX
-Apply a class of `myDiv` to the `div` provided in the JSX code.
+ให้เพิ่มคลาส `myDiv` ใน `div` ที่ให้ไว้ในโค้ด JSX
 
 # --hints--
 
-constant `JSX` ควรจะ return `div` element
+`JSX` ต้องเก็บข้อมูลของ `div` element
 
 ```js
 assert.strictEqual(JSX.type, 'div');
 ```
 
-`div` ดังกล่าวควรมี class ว่า `myDiv`
+`div` นี้ต้องมีคลาสเป็น `myDiv`
 
 ```js
 assert.strictEqual(JSX.props.className, 'myDiv');

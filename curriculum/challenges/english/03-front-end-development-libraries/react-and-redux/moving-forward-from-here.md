@@ -8,19 +8,23 @@ dashedName: moving-forward-from-here
 
 # --description--
 
-ยินดีด้วย! คุณจบบทเรียนเกี่ยวกับ React และ Redux มีสิ่งสุดท้ายที่ควรค่าแก่การชี้ให้เห็นก่อนที่คุณจะไปต่อ โดยปกติแล้วคุณจะไม่เขียนแอป React ใน code editor แบบนี้ แบบทดสอบนี้จะทำให้คุณเห็นว่ารูปแบบ syntax เป็นอย่างไรหากคุณทำงานกับ npm และระบบไฟล์ในเครื่องของคุณเอง โค้ดควรมีลักษณะคล้ายกัน ยกเว้นการใช้คำสั่ง `import` (คือการดึง dependencies ทั้งหมดที่มีให้สำหรับคุณในแบบทดสอบต่างๆ) ในส่วน "การจัดการแพ็คเกจด้วย npm" จะอธิบายถึงรายละเอียดเพิ่มเติมเกี่ยวกับ npm
+คุณเรียนเรื่อง React และ Redux จบแล้ว เย้!
+แต่มีอีกอย่างหนึ่งที่คุณต้องรู้ก่อนที่จะไปเรียนเรื่องอื่นต่อ 
+ปกติคุณจะไม่ได้เขียน React ใน code editor แบบนี้ แบบทดสอบนี้จะทำให้คุณเห็นภาพว่า syntax จริงๆจะเป็ฯอย่างไรถ้าใช้ npm และเขียน React ในเครื่องของคุณเอง 
+โค้ดจะคล้ายๆกัน แต่จะต่างเรื่องการใช้คำสั่ง `import` (ในแบบทดสอบที่ผ่านมาๆเราทำการ import พวกนี้ให้คุณ โดยที่คุณไม่รู้ตัว) 
+คุณจะได้เรียนเรื่อง npm ในบทเรียน "การจัดการแพ็คเกจด้วย npm"
 
-สุดท้าย การเขียนโค้ด React และ Redux จำเป็นต้องมีการกำหนดค่าบางอย่าง มันอาจจะยุ่งยากสักหน่อย หากคุณสนใจที่จะทดลองกับเครื่องของคุณเอง ลองใช้ลิงก์ <a href="https://github.com/facebookincubator/create-react-app" target="_blank" rel="nofollow">Create React App</a> ที่มี config ต่างๆ ที่พร้อมให้ใช้งาน
+สุดท้าย การเขียนโค้ด React และ Redux จำเป็นต้องมีการกำหนดค่าบางอย่างเอง ซึ่งมันอาจจะยากหน่อย แต่ถ้าอยากลองเล่นในเครื่องตัวเอง ให้ลองใช้ <a href="https://github.com/facebookincubator/create-react-app" target="_blank" rel="nofollow">Create React App</a> ที่จะทำการกำหนดค่าให้แล้ว แค่ลงแล้วก็โค้ดเล่นได้เลย
 
-หรือคุณสามารถเปิดใช้งาน Babel เป็น JavaScript Preprocessor ใน CodePen เพิ่ม React และ ReactDOM เป็นทรัพยากร JavaScript ภายนอก แล้วทำงานบนนั่นได้เช่นกัน
+หรือถ้าจะใช้ CodePen ก็ให้เปิดใช้งาน Babel เป็น JavaScript Preprocessor และเพิ่ม React และ ReactDOM เป็น external JavaScript resources แล้วไปโค้ดบนไหนก็ได้เหมือนกัน
 
 # --instructions--
 
-บันทึก log ข้อความ `'Now I know React and Redux!'` ไปยัง console
+ให้ log ข้อความ `'Now I know React and Redux!'` ไปบน console
 
 # --hints--
 
-ข้อความ `Now I know React and Redux!` ควรถูก log ไปยัง console
+ข้อความ `Now I know React and Redux!` ต้องถูก log ไปบน console
 
 ```js
 (getUserInput) =>
@@ -59,7 +63,7 @@ ReactDOM.render(
 );
 */
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

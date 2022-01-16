@@ -8,35 +8,42 @@ dashedName: use-a-switch-statement-to-handle-multiple-actions
 
 # --description--
 
-คุณสามารถบอก Redux store ถึงวิธีจัดการกับ action หลายประเภท สมมติว่าคุณกำลังจัดการการตรวจสอบสิทธิ์ผู้ใช้ใน Redux store ของคุณ คุณต้องการให้แสดง state เมื่อผู้ใช้เข้าสู่ระบบและออกจากระบบ คุณแสดงสิ่งนี้ด้วย state object เดียวที่มี property `authenticated` คุณยังต้องการ action creators ที่สร้าง actions ที่ตอบสนองต่อการเข้าสู่ระบบของผู้ใช้และออกจากระบบของผู้ใช้ พร้อมกับต้องใช้ action objects เองด้วย
+คุณสามารถเขียนให้ Redux store จัดการกับ action หลายๆประเภทได้
+สมมติว่าคุณกำลังจัดการการตรวจสอบสิทธิ์ผู้ใช้ (Authentication) ใน Redux store อยู่ แล้วคุณต้องการใช้ state เพื่อแสดงว่าผู้ใช้ยังอยู่ในระบบหรือไม่ โดยใช้ property `authenticated` ของ state object 
+และคุณยังต้องการ action creator ที่สร้าง action ตามการอยู่ในระบบของผู้ใช้ พร้อมกับต้องใช้ action object เองด้วย
 
 # --instructions--
 
-code editor มี store, actionsม และ action creators ที่เซ็ทไว้แล้วสำหรับคุณ ให้เติมฟังก์ชัน `reducer` เพื่อ actions ตรวจสอบสิทธิ์หลายรายการ ให้ใช้คำสั่ง JavaScript `switch` ใน `reducer` เพื่อตอบสนองต่อ action events ต่างๆ นี่เป็นรูปแบบมาตรฐานในการเขียนร Redux reducers คำสั่ง switch ควรสลับไปที่ `action.type` และ return state การตรวจสอบสิทธิ์ที่เหมาะสม
+ใน code editor เราได้เขียน store, action และ action creators ไว้ให้แล้ว 
+ให้คุณเขียนฟังก์ชัน `reducer` เพื่อจัดการการตรวจสอบสิทธิ์ผู้ใช้ โดยให้ใช้คำสั่ง `switch` ของ JavaScript ใน `reducer` ในการจัดการ action event ที่ต่างกัน การเขียนโดยใช้ `switch` แบบนี้ถือเป็นมาตรฐานในการเขียน Redux reducer 
+ต้องใช้คำสั่ง switch กับค่าของ `action.type` และคืนค่าเป็น state โดยถ้าผู้ใช้อยู่ในระบบต้องให้ `authenticated` เป็น `true` และถ้าไม่ได้อยู่ในระบบแล้ว `authenticated` ต้องเป็น `false`
 
-**Note:** ณ จุดนี้ ไม่ต้องกังวลเกี่ยวกับ state immutability เนื่องจากแบบฝึกหัดนี้มีขนาดเล็กและเรียบง่าย สำหรับแต่ละ action คุณสามารถ return object ใหม่ได้ ตัวอย่างเช่น `{authenticated: true}` นอกจากนี้อย่าลืมเขียน `default` case ในคำสั่ง switch ของคุณที่ return `state` ปัจจุบัน นี่เป็นสิ่งสำคัญเพราะเมื่อแอปของคุณมี reducers หลายตัว พวกมันจะทำงานทุกครั้งที่มีการส่ง action แม้ว่า action จะไม่เกี่ยวข้องกับ reducer นั้นก็ตาม ในกรณีเช่นนี้คุณต้องแน่ใจว่าคุณจะต้อง return `state` ปัจจุบัน
+**Note:** ตอนนี้ยังไม่ต้องกังวลเรื่อง state immutability เพราะว่าแบบฝึกหัดนี้ยังไม่ซับซ้อน 
+ในการคืนค่าของ `authReducer` คุณจะคืนค่าเป็น object ตัวใหม่ได้เลย เช่น `{authenticated: true}` 
+นอกจากนี้อย่าลืมเขียน `default` case ในคำสั่ง switch โดยที่จะต้องคืนค่าเป็น `state` ปัจจุบัน 
+การเขียน `default` case ให้คืนค่าเป็น `state` ตัวปัจจุบันเป็นเรื่องสำคัญ เพราะเมื่อแอปของคุณมี reducer หลายตัว reducer พวกนี้จะทำงานทุกครั้งที่มีการส่ง action แม้ว่า action จะไม่เกี่ยวข้องกับ reducer นั้นก็ตาม
 
 # --hints--
 
-การเรียกใช้ฟังก์ชัน `loginUser` ควร return object ด้วย type property ที่มีค่าเป้น string `LOGIN`
+การเรียกใช้ฟังก์ชัน `loginUser` ต้องคืนค่าเป็น object ที่ property `type` มีค่าเป้น string `LOGIN`
 
 ```js
 assert(loginUser().type === 'LOGIN');
 ```
 
-การเรียกใช้ฟังก์ชัน `logoutUser` ควร return object ด้วย type property ที่มีค่าเป้น string `LOGOUT`
+การเรียกใช้ฟังก์ชัน `logoutUser` ต้องคืนค่าเป็น object ที่ property `type` มีค่าเป้น string `LOGOUT`
 
 ```js
 assert(logoutUser().type === 'LOGOUT');
 ```
 
-Store ควรเริ่มต้นด้วย object ที่มี `authenticated` property เป็น `false`
+ค่าเริ่มต้นของ store ต้องเป็น object ที่มี property ชื่อ `authenticated` ที่มีค่าเป็น `false`
 
 ```js
 assert(store.getState().authenticated === false);
 ```
 
-การส่ง `loginUser` ควรอัปเดต `authenticated` property ใน store state ให้เป็น `true`
+การส่ง `loginUser` ให้กับ store ต้องไปอัปเดต property `authenticated` ใน store state ให้เป็น `true`
 
 ```js
 assert(
@@ -51,7 +58,7 @@ assert(
 );
 ```
 
-การส่ง `loginUser` ควรอัปเดต `authenticated` property ใน store state ให้เป็น `false`
+การส่ง `logoutUser` ให้กับ store ต้องไปอัปเดต property `authenticated` ใน store state ให้เป็น `false`
 
 ```js
 assert(
@@ -67,7 +74,7 @@ assert(
 );
 ```
 
-`authReducer` function ควรจัดการหลาย action types ด้วย `switch` statement
+ฟังก์ชัน `authReducer` ต้องใช้คำสั่ง `switch` เพื่อแยกวิธีการทำงานของ action ที่ต่างกัน
 
 ```js
 (getUserInput) =>
@@ -88,9 +95,9 @@ const defaultState = {
 };
 
 const authReducer = (state = defaultState, action) => {
-  // Change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้
 
-  // Change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้
 };
 
 const store = Redux.createStore(authReducer);

@@ -8,13 +8,13 @@ dashedName: change-the-prototype-to-a-new-object
 
 # --description--
 
-ถึงขั้นตอนนี้ คุณได้ทำการเพิ่ม properties ให้กับ `prototype` แบบทีละค่าแล้ว
+ตอนนี้คุณเพิ่ม property ทีละตัวใน `prototype` เป็นแล้ว
 
 ```js
 Bird.prototype.numLegs = 2;
 ```
 
-ซึ่งวิธีการนี้ค่อนข้างน่าเบื่อ หากต้องเพิ่มค่า property ให้กับ prototype ทีละตัวๆ
+ถ้าใช้วิธีนี้เราจะลำบากหน่อย เวลาเราต้องเพิ่ม property หลายๆตัว 
 
 ```js
 Bird.prototype.eat = function() {
@@ -26,7 +26,9 @@ Bird.prototype.describe = function() {
 }
 ```
 
-วิธีการที่มีประสิทธิภาพมากขึ้น คือการกำหนด `prototype` เป็น object ใหม่ที่ประกอบด้วย properties ซึ่งมีการเพิ่ม properties ทั้งหมดเข้าไปทีเดียว
+เรามีอีกวิธีที่ง่ายกว่า คือการกำหนด `prototype` ให้เป็น object ใหม่ที่มี property ที่เราต้องการเพิ่มอยู่แล้ว
+การใช้วิธีนี้จะเป็นการเพิ่ม property ทั้งหมดเข้าไปรวดเดียวเลย
+ลองดูตัวอย่าง:
 
 ```js
 Bird.prototype = {
@@ -42,29 +44,29 @@ Bird.prototype = {
 
 # --instructions--
 
-จงเพิ่ม property `numLegs` และ methods `eat()` และ `describe()` ให้กับ `prototype` ของ `Dog` โดยกำหนดให้ `prototype` มีค่าเป็น object ใหม่
+ให้เพิ่ม property `numLegs` และ method `eat()` และ `describe()` ลงใน `prototype` ของ `Dog` โดยการกำหนดให้ `prototype` เป็น object ใหม่
 
 # --hints--
 
-`Dog.prototype` ควรกำหนดเป็น object ใหม่
+`Dog.prototype` ต้องเป็น object ใหม่
 
 ```js
 assert(/Dog\.prototype\s*?=\s*?{/.test(code));
 ```
 
-`Dog.prototype` ควรมี property `numLegs`
+`Dog.prototype` ต้องมี property `numLegs`
 
 ```js
 assert(Dog.prototype.numLegs !== undefined);
 ```
 
-`Dog.prototype` ควรมี method `eat()`
+`Dog.prototype` ต้องมี method `eat()`
 
 ```js
 assert(typeof Dog.prototype.eat === 'function');
 ```
 
-`Dog.prototype` ควรมี method `describe()`
+`Dog.prototype` ต้องมี method `describe()`
 
 ```js
 assert(typeof Dog.prototype.describe === 'function');
@@ -80,7 +82,7 @@ function Dog(name) {
 }
 
 Dog.prototype = {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 };
 ```

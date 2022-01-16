@@ -8,7 +8,7 @@ dashedName: add-items-using-splice
 
 # --description--
 
-จำได้ไหมว่า ในบทที่แล้วเราพูดถึง `splice()` ที่สามารถรับพารามิเตอร์ได้สูงสุด 3 ตัว? คุณสามารถใช้พารามิเตอร์ตัวที่สาม ที่ประกอบด้วย element หนึ่งหรือหลายตัว เพื่อเพิ่มให้กับ array นี่เป็นความสามารถที่มีประโยชน์สำหรับการปรับแก้ element หรือชุดของ element ได้อย่างรวดเร็ว
+ถ้ายังจำได้ในบทที่แล้วเราบอกว่า `splice()` รับพารามิเตอร์ได้ถึง 3 ตัว พารามิเตอร์ตัวที่สาม จะใช้เป็น element ที่จะเพิ่มลงใน array การทำแบบนี้จะแก้ element ไม่ว่าจะตัวเดียวหรือหลายตัวได้อย่างรวดเร็ว
 
 
 ```js
@@ -20,18 +20,25 @@ numbers.splice(startIndex, amountToDelete, 13, 14);
 console.log(numbers);
 ```
 
-`12` ที่แสดงซ้ำเป็นครั้งที่ 2 จะถูกลบออก แล้วเพิ่ม `13` และ `14` ที่ index เดียวกัน ดังนั้น array `numbers` จะเป็น `[ 10, 11, 12, 13, 14, 15 ]`
+จากตัวอย่างด้านบน เลข `12` ที่ซ้ำกันจะถูกลบออก 1 ตัว แล้วเพิ่ม `13` และ `14` ที่ index เดียวกัน ดังนั้น array `numbers` จะกลายเป็น `[ 10, 11, 12, 13, 14, 15 ]`
 
-ในที่นี้เราเริ่มต้นด้วย array ของตัวเลข จากนั้น เราส่งต่อสิ่งต่อไปนี้ไปยัง `splice()`: index ที่จะเริ่มลบ element (3), จำนวน element ที่จะลบ (1) และ arguments ที่เหลือ (13, 14) คือ element ที่เราจะนำไปแทรก โดยแทรกที่ index เดียวกันนั้น อย่างไรก็ตาม เราสามารถนำ element เข้าไปแทรก จำนวนเท่าใดก็ได้ (คั่นด้วยเครื่องหมาย comma) ตามหลัง `amountToDelete`
+ในตัวอย่างนี้ `splice()` รับค่าตามนี้ 
+
+1. index ที่จะเริ่มลบ element (`3`)
+2. จำนวน element ที่จะลบ (`1`) และ 
+3. argument สองตัวท้ายเป็น element (`13`, `14`) ที่เราจะแทรกเข้าไป 
+
+การแทรก element จะแทรกที่ index เดียวกับที่เราระบุ ในการแทรก element แบบนี้เราจะแทรกเข้าไปกี่ตัวก็ได้โดยให้ระบุ element แล้วคั่นด้วยเครื่องหมาย comma ตามหลัง `amountToDelete`
 
 # --instructions--
 
-เราประกาศ function `htmlColorNames` ซึ่งจะนำ array ของ HTML colors มาเป็น argument จงแก้ไข function โดยใช้  `splice()` เพื่อลบสอง element แรกของ array และเพิ่ม `'DarkSalmon'` และ `'BlanchedAlmond'` ในที่ตำแหน่งเดียวกันนั้น
+เราประกาศฟังก์ชัน `htmlColorNames` ซึ่งจะรับ array ของสีที่ใช้ได้บน HTML มาเป็น argument 
+ให้แก้ฟังก์ชันโดยใช้  `splice()` เพื่อลบ element 2 ตัวแรกของ array ออก และเพิ่ม `'DarkSalmon'` และ `'BlanchedAlmond'` เข้าไปแทนในตำแหน่งเดิม
 
 
 # --hints--
 
-`htmlColorNames` ควรคืนค่า `["DarkSalmon", "BlanchedAlmond", "LavenderBlush", "PaleTurquoise", "FireBrick"]`
+การเรียกใช้ `htmlColorNames` ต้องคืนค่าเป็น `["DarkSalmon", "BlanchedAlmond", "LavenderBlush", "PaleTurquoise", "FireBrick"]`
 
 ```js
 assert.deepEqual(
@@ -52,19 +59,19 @@ assert.deepEqual(
 );
 ```
 
-`htmlColorNames` function ควรใช้ `splice()` method
+ต้องใช้ method `splice()` ในฟังก์ชัน `htmlColorNames`
 
 ```js
 assert(/.splice/.test(code));
 ```
 
-คุณไม่ควรใช้ `shift()` หรือ `unshift()`
+ห้ามใช้ `shift()` หรือ `unshift()`
 
 ```js
 assert(!/shift|unshift/.test(code));
 ```
 
-คุรไม่ควรใช้ brackets ของ array 
+ห้ามใช้ bracket notation (`[]`)
 
 ```js
 assert(!/\[\d\]\s*=/.test(code));
@@ -76,9 +83,9 @@ assert(!/\[\d\]\s*=/.test(code));
 
 ```js
 function htmlColorNames(arr) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
   return arr;
 }
 

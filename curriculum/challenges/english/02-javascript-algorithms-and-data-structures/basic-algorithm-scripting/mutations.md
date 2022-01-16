@@ -8,83 +8,83 @@ dashedName: mutations
 
 # --description--
 
-ให้เขียนฟังก์ชันที่ได้ผลลัพธ์เป็น `true` หาก string ใน element แรกของ array มีตัวอักษรของ string ใน element ที่สองของ array ครบทุกตัว
+ให้เขียนฟังก์ชันที่รับค่าเป็น array และตรวจสอบว่าใน element แรกของ array มีตัวอักษรของ element ที่สองของ array ครบทุกตัวหรือไม่ ถ้ามีครบให้คืนค่าเป็น `true`  ถ้ามีไม่ครบให้คืนค่าเป็น `false`
 
-ตัวอย่างเช่น `["hello", "Hello"]` ควรได้ผลลัพธ์ `true` เนื่องจากตัวอักษรใน string ที่สองมีอยู่ใน string แรก (ไม่สนใจตัวเล็กตัวใหญ่)
+เช่น ถ้าเรียกใช้ฟังก์ชันโดยใช้ array เป็น `["hello", "Hello"]` ต้องได้ค่าเป็น `true` เนื่องจากตัวอักษรใน string ที่สองมีอยู่ใน string แรกตรบทุกตัว (ไม่สนใจตัวเล็กตัวใหญ่)
 
-`["hello", "hey"]` ควรได้ผลลัพธ์ `false` เพราะ `hello` ไม่มีตัวอักษร `y`
+`["hello", "hey"]` ต้องได้ค่าเป็น `false` เพราะ `hello` ไม่มีตัวอักษร `y`
 
-`["Alien", "line"]` ควรได้ผลลัพธ์ `true` เพราะตัวอักษรทุกตัวใน `line` มีใน `Alien`
+`["Alien", "line"]` ต้องได้ค่าเป็น `true` เพราะตัวอักษรทุกตัวใน `line` มีใน `Alien`
 
 # --hints--
 
-`mutation(["hello", "hey"])` ควรได้ผลลัพธ์คือ `false`.
+การเรียกใช้ฟังก์ชัน `mutation(["hello", "hey"])` ต้องได้ค่าเป็น `false`
 
 ```js
 assert(mutation(['hello', 'hey']) === false);
 ```
 
-`mutation(["hello", "Hello"])` ควรได้ผลลัพธ์คือ `true`.
+การเรียกใช้ฟังก์ชัน `mutation(["hello", "Hello"])` ต้องได้ค่าเป็น `true`
 
 ```js
 assert(mutation(['hello', 'Hello']) === true);
 ```
 
-`mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"])` ควรได้ผลลัพธ์คือ `true`.
+การเรียกใช้ฟังก์ชัน `mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"])` ต้องได้ค่าเป็น `true`
 
 ```js
 assert(mutation(['zyxwvutsrqponmlkjihgfedcba', 'qrstu']) === true);
 ```
 
-`mutation(["Mary", "Army"])` ควรได้ผลลัพธ์คือ `true`.
+การเรียกใช้ฟังก์ชัน `mutation(["Mary", "Army"])` ต้องได้ค่าเป็น `true`
 
 ```js
 assert(mutation(['Mary', 'Army']) === true);
 ```
 
-`mutation(["Mary", "Aarmy"])` ควรได้ผลลัพธ์คือ `true`.
+การเรียกใช้ฟังก์ชัน `mutation(["Mary", "Aarmy"])` ต้องได้ค่าเป็น `true`
 
 ```js
 assert(mutation(['Mary', 'Aarmy']) === true);
 ```
 
-`mutation(["Alien", "line"])` ควรได้ผลลัพธ์คือ `true`.
+การเรียกใช้ฟังก์ชัน `mutation(["Alien", "line"])` ต้องได้ค่าเป็น `true`
 
 ```js
 assert(mutation(['Alien', 'line']) === true);
 ```
 
-`mutation(["floor", "for"])` ควรได้ผลลัพธ์คือ `true`.
+การเรียกใช้ฟังก์ชัน `mutation(["floor", "for"])` ต้องได้ค่าเป็น `true`
 
 ```js
 assert(mutation(['floor', 'for']) === true);
 ```
 
-`mutation(["hello", "neo"])` ควรได้ผลลัพธ์คือ `false`.
+การเรียกใช้ฟังก์ชัน `mutation(["hello", "neo"])` ต้องได้ค่าเป็น `false`
 
 ```js
 assert(mutation(['hello', 'neo']) === false);
 ```
 
-`mutation(["voodoo", "no"])` ควรได้ผลลัพธ์คือ `false`.
+การเรียกใช้ฟังก์ชัน `mutation(["voodoo", "no"])` ต้องได้ค่าเป็น `false`
 
 ```js
 assert(mutation(['voodoo', 'no']) === false);
 ```
 
-`mutation(["ate", "date"])` ควรได้ผลลัพธ์คือ `false`.
+การเรียกใช้ฟังก์ชัน `mutation(["ate", "date"])` ต้องได้ค่าเป็น `false`
 
 ```js
 assert(mutation(['ate', 'date']) === false);
 ```
 
-`mutation(["Tiger", "Zebra"])` ควรได้ผลลัพธ์คือ `false`.
+การเรียกใช้ฟังก์ชัน `mutation(["Tiger", "Zebra"])` ต้องได้ค่าเป็น `false`
 
 ```js
 assert(mutation(['Tiger', 'Zebra']) === false);
 ```
 
-`mutation(["Noel", "Ole"])` ควรได้ผลลัพธ์คือ `true`.
+การเรียกใช้ฟังก์ชัน `mutation(["Noel", "Ole"])` ต้องได้ค่าเป็น `true`
 
 ```js
 assert(mutation(['Noel', 'Ole']) === true);

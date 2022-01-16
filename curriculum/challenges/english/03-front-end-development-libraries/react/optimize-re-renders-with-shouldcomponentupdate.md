@@ -8,17 +8,23 @@ dashedName: optimize-re-renders-with-shouldcomponentupdate
 
 # --description--
 
-จนถึงตอนนี้หาก component ใดได้รับ `state` ใหม่หรือ `props` ใหม่ component นั้นจะเรนเดอร์ตัวเองและ child ทั้งหมดอีกครั้ง นี่เป็นเรื่องปกติ แต่ React มี lifecycle method ที่คุณสามารถเรียกใช้งานได้เมื่อ child component ได้รับ `state` ใหม่หรือ `props` ใหม่และประกาศเฉพาะว่า component ควรอัปเดตหรือไม่ method นั้นคือ `shouldComponentUpdate()` และใช้ `nextProps` และ `nextState` เป็นพารามิเตอร์
+จนถึงตอนนี้ ถ้ามี component ไหนที่ได้ `state` ตัวใหม่หรือ `props` ตัวใหม่ component นั้นจะเรนเดอร์ทั้งตัวเองและ child ทั้งหมดอีกครั้ง 
+การเรนเดอร์ใหม่แบบนี้เป็นเรื่องปกติ แต่ React ก็มี lifecycle method ที่คุณสามารถเรียกใช้งานได้เมื่อ child component ได้รับ `state` ตัวใหม่หรือ `props` ตัวใหม่ และกำหนดว่า component นั้นจะต้องอัปเดตหรือไม่
+method นั้นคือ `shouldComponentUpdate()` ซึ่งรับค่าของ `nextProps` และ `nextState` เป็นพารามิเตอร์
 
-วิธีนี้เป็นวิธีที่มีประโยชน์ในการเพิ่มประสิทธิภาพ ตัวอย่างเช่นลักษณะการทำงานเริ่มต้นคือ component ของคุณเรนเดอร์ใหม่เมื่อได้รับ `props` ใหม่ แม้ว่า `props` จะไม่มีการเปลี่ยนแปลงก็ตาม คุณสามารถใช้ `shouldComponentUpdate()` เพื่อป้องกันเหตุการณ์นี้โดยการเปรียบเทียบ `props` method นี้ต้อง return ค่า `Boolean` ที่บอก React ว่าจะอัพเดต component หรือไม่ คุณสามารถเปรียบเทียบ props ปัจจุบัน (`this.props`) กับ props ถัดไป (`nextProps`) เพื่อตรวจสอบว่าคุณจำเป็นต้องอัปเดตหรือไม่ และ return เป็น `true` หรือ `false` ตามตามเงื่อนไขนั้นๆ
+เราใช้ method ตัวนี้เพื่อเพิ่มประสิทธิภาพของแอพเราได้ 
+เช่น ถ้าปกติแล้ว component ของคุณจะเรนเดอร์ใหม่ทุกครั้งที่ได้รับ `props` ตัวใหม่ ถึงแม้ว่า `props` จะมีค่าเหมือนเดิมก็ตาม 
+ในกรณีนี้คุณจะใช้ `shouldComponentUpdate()` ได้ โดยการเปรียบเทียบ `props` ที่เข้ามา 
+โดย method นี้ต้อง return ค่า `Boolean` ที่บอก React ว่าจะอัพเดต component หรือไม่ คุณสามารถเปรียบเทียบ props ตัวปัจจุบัน (`this.props`) กับ props ตัวใหม่ (`nextProps`) เพื่อดูว่าคุณจำเป็นต้องอัปเดตหรือไม่ และคืนค่าออกมาเป็น `true` หรือ `false`
 
 # --instructions--
 
-เพิ่ม`shouldComponentUpdate()` method ใน component ที่เรียกว่า `OnlyEvens` ในขณะนี้ method นี้ return `true` ดังนั้น `OnlyEvens` จะเรนเดอร์ใหม่ทุกครั้งที่ได้รับ `props` ใหม่ แก้ไข method เพื่อให้ `OnlyEvens` อัปเดตก็ต่อเมื่อ `value` ของ props ใหม่นั้นเท่ากัน คลิกปุ่ม `add` และดูลำดับของ event ในคอนโซลของเบราว์เซอร์ของคุณเมื่อมีการทำให้ lifecycle hook ทำงาน
+เรามี method `shouldComponentUpdate()` ใน component ชื่อ `OnlyEvens` ตอนนี้ method นี้จะคืนค่าเป็น `true` ดังนั้น `OnlyEvens` จะเรนเดอร์ใหม่ทุกครั้งที่ได้รับ `props` ตัวใหม่ 
+ให้แก้ไข method เพื่อให้ `OnlyEvens` อัปเดตก็ต่อเมื่อ `value` ของ props ใหม่เป็นเลขคู่ ลองคลิกปุ่ม `add` และดูลำดับของ event ใน console เมื่อ lifecycle hook ทำงาน
 
 # --hints--
 
-`Controller` component ควรเรนเดอร์ `OnlyEvens` component เป็น child
+`Controller` ต้องเรนเดอร์ `OnlyEvens` เป็น child
 
 ```js
 assert(
@@ -32,7 +38,7 @@ assert(
 );
 ```
 
-`shouldComponentUpdate` method ควรถูกกำหนดบน `OnlyEvens` component
+ต้องใช้ method `shouldComponentUpdate` ใน `OnlyEvens`
 
 ```js
 assert(
@@ -45,7 +51,7 @@ assert(
 );
 ```
 
-`OnlyEvens` component ควร return `h1` tag ที่เรนเดอร์ค่าของ `this.props.value`
+`OnlyEvens` ต้องเรนเดอร์แท็ก `h1` ที่แสดงค่าของ `this.props.value`
 
 ```js
 (() => {
@@ -64,7 +70,7 @@ assert(
 })();
 ```
 
-`OnlyEvens` ควรเรนเดอร์ใหม่เมื่อ `nextProps.value` เป็นจำนวนคู่
+`OnlyEvens` ต้องเรนเดอร์ใหม่เมื่อ `nextProps.value` เป็นเลขคู่เท่านั้น
 
 ```js
 (() => {
@@ -105,9 +111,9 @@ class OnlyEvens extends React.Component {
   }
   shouldComponentUpdate(nextProps, nextState) {
     console.log('Should I update?');
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
     return true;
-    // Change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้
   }
   componentDidUpdate() {
     console.log('Component re-rendered.');
@@ -150,9 +156,9 @@ class OnlyEvens extends React.Component {
   }
   shouldComponentUpdate(nextProps, nextState) {
     console.log('Should I update?');
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
     return nextProps.value % 2 === 0;
-    // Change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้
   }
   componentDidUpdate() {
     console.log('Component re-rendered.');

@@ -8,9 +8,11 @@ dashedName: split-a-string-into-an-array-using-the-split-method
 
 # --description--
 
-`split` method ทำการแตก string ให้เป็น array ของ string โดย method นี้มี argument ที่เป็น delimiter ซึ่งเป็นตัวอักษรที่ใช้ในการแตก string หรือ regular expression ตัวอย่างเช่น หาก delimiter เป็น space คุณจะได้ array ของคำ (word) และหาก delimiter เป็น empty string (string เปล่า) คุณจะได้ array ของตัวอักษรที่อยู่ใน string
+method `split` จะทำการแตก string ให้เป็น array ของ string 
+method นี้มี argument ที่เป็น delimiter ซึ่งเป็นตัวอักษรที่ใช้ในการแตก string หรือ regular expression 
+เช่น ถ้า delimiter เป็นเว้นวรรค แล้ว string ของคุณเป็นประโยคในภาษาอังกฤษ คุณจะได้ผลลัพธ์เป็น array ของคำ และถ้า delimiter เป็น empty string คุณจะได้ผลลัพธ์เป็น array ของตัวอักษรที่อยู่ใน string
 
-ด้านล่างนี้แสดง 2 ตัวอย่าง โดยตัวอย่างแรกทำการแตก string ด้วย space ส่วนตัวอย่างที่สอง แตก string ตามตัวอักษร ด้วย regular expression
+ด้านล่างนี้แสดง 2 ตัวอย่าง โดยตัวอย่างแรกจะทำการแตก string ด้วยเว้นวรรค ส่วนตัวอย่างที่สองจะแตก string ตามตัวอักษรด้วย regular expression
 
 ```js
 var str = "Hello World";
@@ -20,24 +22,24 @@ var otherString = "How9are7you2today";
 var byDigits = otherString.split(/\d/);
 ```
 
-`bySpace` ควรมีค่าเป็น `["Hello", "World"]` และ `byDigits` ควรมีค่าเป็น `["How", "are", "you", "today"]`.
+`bySpace` จะมีค่าเป็น `["Hello", "World"]` และ `byDigits` จะมีค่าเป็น `["How", "are", "you", "today"]`.
 
-เนื่องจาก string ไม่สามารถเปลี่ยนแปลงได้ (immutable) ดังนั้นจึงทำให้การทำงานกับ `split` method ทำได้ง่ายขึ้น
+เนื่องจากค่าของ string ไม่สามารถเปลี่ยนแปลงได้ (immutable) จึงทำให้การใช้ method `split` ทำได้ง่ายขึ้น
 
 # --instructions--
 
-จงใช้ `split` method ในฟังก์ชัน `splitify` เพื่อแตก `str` ให้เป็น array ของคำ โดยฟังก์ชันควรคืนค่าเป็น array 
-หมายเหตุ คำแต่ละคำไม่จำเป็นต้องแตกด้วย space และ array ไม่ควรมีเครื่องหมายวรรคตอน (punctuation)
+จงใช้ method `split` ในฟังก์ชัน `splitify` เพื่อแตก `str` ให้เป็น array ของคำ โดยฟังก์ชันต้องคืนค่าเป็น array 
+หมายเหตุ ในบททดสอบนี้จะแบ่งคำด้วยการเว้นวรรคและเครื่องหมายแบ่งคำอื่นด้วย และใน array ที่เป็นผลลัพธ์ต้องไม่มีจุด full-stop ที่ใช้ลงท้ายประโยค
 
 # --hints--
 
-โค้ดของคุณควรใช้ `split` method
+ต้องใช้ method `split` ในโค้ด
 
 ```js
 assert(code.match(/\.split/g));
 ```
 
-`splitify("Hello World,I-am code")` ควรคืนค่าเป็น `["Hello", "World", "I", "am", "code"]`.
+การเรียกใช้ฟังก์ชัน `splitify("Hello World,I-am code")` ต้องได้ค่าเป็น `["Hello", "World", "I", "am", "code"]`.
 
 ```js
 assert(
@@ -46,7 +48,7 @@ assert(
 );
 ```
 
-`splitify("Earth-is-our home")` ควรคืนค่าเป็น `["Earth", "is", "our", "home"]`.
+การเรียกใช้ฟังก์ชัน `splitify("Earth-is-our home")` ต้องได้ค่าเป็น `["Earth", "is", "our", "home"]`.
 
 ```js
 assert(
@@ -55,7 +57,7 @@ assert(
 );
 ```
 
-`splitify("This.is.a-sentence")` ควรคืนค่าเป็น `["This", "is", "a", "sentence"]`.
+การเรียกใช้ฟังก์ชัน `splitify("This.is.a-sentence")` ต้องได้ค่าเป็น `["This", "is", "a", "sentence"]`.
 
 ```js
 assert(
@@ -70,10 +72,10 @@ assert(
 
 ```js
 function splitify(str) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 splitify("Hello World,I-am code");
 ```
@@ -82,8 +84,8 @@ splitify("Hello World,I-am code");
 
 ```js
 function splitify(str) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   return str.split(/\W/);
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 ```

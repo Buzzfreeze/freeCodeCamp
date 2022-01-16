@@ -10,9 +10,9 @@ dashedName: change-the-css-of-an-element-using-jquery
 
 # --description--
 
-เราสามารถเปลี่ยนสไตล์ CSS ของ HTML element โดยตรงด้วย jQuery
+เราสามารถเปลี่ยนสไตล์ CSS ของ HTML element ได้โดยตรงด้วย jQuery
 
-jQuery มีฟังก์ชันที่เรียกว่า `.css()` ที่ทำให้คุณสามารถเปลี่ยน CSS ของ element ใดๆ ได้
+jQuery มีฟังก์ชันที่เรียกว่า `.css()` ที่ทำให้คุณสามารถเปลี่ยน CSS ของ element ได้
 
 มาลองเปลี่ยนสี element เป็นสีน้ำเงินกัน:
 
@@ -20,22 +20,22 @@ jQuery มีฟังก์ชันที่เรียกว่า `.css()` 
 $("#target1").css("color", "blue");
 ```
 
-การใช้งานฟังก์ชันนี้จะแตกต่างจากการประกาศฟังก์ชัน CSS ทั่วไปเล็กน้อย ซึง CSS property และ value จะต้องครอบดด้วยเครื่องหมายคำพูด และกั้นด้วย comma แทนที่จะเป็น colon แบบเดิม
+การใช้งานฟังก์ชันนี้จะแตกต่างจากการใช้ CSS แบบปกติเล็กน้อย ซี่ง CSS property และ value จะต้องครอบดด้วยเครื่องหมายคำพูด และคั่นด้วย comma แทนที่จะเป็น colon แบบเดิม
 
 
-ให้ลบ jQuery selectors ทั้งหมดออก แล้วปล่อยให้ `document ready function` นั้นว่าง
+ขั้นแรกให้ลบ selector ของ jQuery ออกจากฟังก์ชัน `document ready` ก่อน
 
-ให้เลือก `target1` และเปลี่ยนสีของมันให้เป็นสีแดง
+แล้วให้เลือก `target1` แล้วเปลี่ยน CSS `color` เป็น `red`
 
 # --hints--
 
-`target1` element จะต้องมีข้อความที่เป็นสีแดง
+`target1` จะต้องมีข้อความที่เป็นสีแดง
 
 ```js
 assert($('#target1').css('color') === 'rgb(255, 0, 0)');
 ```
 
-ต้องใช้ jQuery เท่านั้นในการเพิ่ม class ต่างๆ ไปยัง element
+ต้องใช้แค่ jQuery เท่านั้นในการเพิ่ม class ให้กับ element
 
 
 ```js
@@ -57,7 +57,7 @@ assert(!code.match(/class.*animated/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
@@ -95,7 +95,7 @@ assert(!code.match(/class.*animated/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
   <div class="row">

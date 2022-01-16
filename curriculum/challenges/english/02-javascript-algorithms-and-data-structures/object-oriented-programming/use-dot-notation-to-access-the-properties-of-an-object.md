@@ -8,7 +8,7 @@ dashedName: use-dot-notation-to-access-the-properties-of-an-object
 
 # --description--
 
-จากแบบทดสอบที่แล้ว คุณได้สร้าง object ที่มี property หลายค่า สำหรับแบบทดสอบนี้ คุณจะได้เรียนรู้วิธีการเข้าถึง value ของ property เหล่านี้ ดังตัวอย่างต่อไปนี้
+ในบททดสอบที่แล้ว เราได้สร้าง object ที่มี property ไปแล้ว ในบททดสอบนี้ เราจะได้เรียนวิธีการเข้าถึง value ของ property เหล่านี้ ลองดูตัวอย่างด้านล่าง:
 
 ```js
 let duck = {
@@ -18,21 +18,21 @@ let duck = {
 console.log(duck.name);
 ```
 
-การเข้าถึงค่า `Aflac` ซึ่งเป็นค่าของ property `name` ได้นั้น สามารถทำได้โดยการนำ object `duck` มาพิมพ์จุด (.) ต่อ แล้วตามด้วยชื่อของ property `name` 
+การเข้าถึงค่า `Aflac` ซึ่งเป็นค่าของ property `name` นั้นสามารถทำได้โดยการนำ object `duck` มาพิมพ์จุด (.) แล้วตามด้วยชื่อของ property `name` 
 
 # --instructions--
 
-แบบทดสอบนี้ต้องการให้พิมพ์ property ทั้งสองค่าของ object `dog` มาแสดงบน console
+ให้แสดงค่าของ property ทั้งสองใน object `dog` บน console
 
 # --hints--
 
-คุณควรใช้คำสั่ง `console.log` เพื่อพิมพ์ค่าของ property `name` ของ object `dog` 
+ต้องใช้คำสั่ง `console.log` เพื่อแสดงค่าของ property `name` ของ object `dog` บน console
 
 ```js
 assert(/console.log\(.*dog\.name.*\)/g.test(code));
 ```
 
-คุณควรใช้คำสั่ง `console.log` เพื่อพิมพ์ค่าของ property `numLegs` ของ object `dog` 
+ต้องใช้คำสั่ง `console.log` เพื่อแสดงค่าของ property `numLegs` ของ object `dog` บน console
 
 ```js
 assert(/console.log\(.*dog\.numLegs.*\)/g.test(code));
@@ -47,7 +47,7 @@ let dog = {
   name: "Spot",
   numLegs: 4
 };
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

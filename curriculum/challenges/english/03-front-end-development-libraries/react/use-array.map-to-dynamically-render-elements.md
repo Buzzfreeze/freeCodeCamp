@@ -8,21 +8,33 @@ dashedName: use-array-map-to-dynamically-render-elements
 
 # --description--
 
-การเรนเดอร์แบบมีเงื่อนไขมีประโยชน์ แต่คุณอาจต้องการให้ components ของคุณเรนเดอร์ elements ที่ไม่ทราบจำนวนจนมากเกินไป บ่อยครั้งในการเขียนโปรแกรมเชิงโต้ตอบ โปรแกรมเมอร์ไม่มีทางรู้ได้เลยว่าแอพพลิเคชั่นนั้นอยู่ในสถานะใดจนถึงรันไทม์ เพราะโดยมากอยู่กับการโต้ตอบของผู้ใช้กับโปรแกรมนั้น โปรแกรมเมอร์จำเป็นต้องเขียนโค้ดเพื่อจัดการกับสถานะที่ไม่รู้จักนั้นอย่างถูกต้องล่วงหน้า การใช้ `Array.map()` ใน React แสดงให้เห็นภาพถึงแนวคิดนี้
+การเรนเดอร์แบบมีเงื่อนไขนั้นมีประโยชน์ แต่บางทีคุณอาจอยากเรนเดอร์ component ที่คุณไม่รู้มาก่อนว่าจะต้องเรนเดอร์กี่ตัว
+หลายๆครั้งในการเขียนโปรแกรมให้ผู้ใช้ใช้งาน โปรแกรมเมอร์ไม่มีทางรู้ได้เลยว่าแอปนั้นจะได้รับข้อมูลอะไรมา เพราะส่วนมากข้อมูลจะขึ้นอยู่กับสิ่งที่ผู้ใช้กรอกหรือระบุเข้ามา
+โปรแกรมเมอร์จำเป็นต้องเขียนโค้ดให้รับมือข้อมูลที่ไม่รู้ล่วงหน้านั้นได้อย่างถูกต้อง 
+การใช้ `Array.map()` ใน React ก็เป็นตัวอย่างหนึ่งของการทำงานแบบนี้
 
-ตัวอย่างเช่น เมื่อคุณสร้างแอป "To Do List" แบบง่ายๆ ในฐานะโปรแกรมเมอร์คุณไม่มีทางรู้ได้เลยว่าผู้ใช้อาจมีไอเท็มกี่รายการในลิสต์ของพวกเขา คุณต้องตั้งค่า component ของคุณเพื่อเรนเดอร์จำนวน list elements ที่ถูกต้องแบบไดนามิกมาก่อนที่ผู้ใช้โปรแกรมจะตัดสินใจว่าวันนี้เป็นวันซักผ้า
+เช่น ถ้าคุณสร้างแอป "To Do List" (รายการของสิ่งที่ต้องทำ) ในฐานะโปรแกรมเมอร์ คุณไม่มีทางรู้ได้เลยว่าผู้ใช้จะเพิ่มสิ่งที่ต้องทำเข้ามากี่รายการในลิสต์ คุณจึงจำเป็นต้องเขียน component ของคุณให้เรนเดอร์จำนวน list element แบบไดนามิกให้ได้
 
 # --instructions--
 
-code editor มีการเซ็ท `MyToDoList` component เกือบทั้งหมดไว้แล้ว โค้ดบางส่วนนี้อาจดูคุ้นเคยหากคุณทำโจทย์ controlled form เสร็จแล้ว คุณจะสังเกตเห็น `textarea` และ `button` พร้อมด้วย method สองสาม method ที่ใช้ติดตาม states ของพวกมัน แต่ยังไม่มีการเรนเดอร์ไปยังหน้าเพจ
+เราได้เขียน component `MyToDoList` ใน code editor ไว้ให้จนเกือบเสร็จแล้ว
+คุณอาจคุ้นๆกับโค้ดในนี้ถ้าได้เรียนเรื่อง controlled form ไปแล้ว 
+คุณจะเห็นว่ามี `textarea` และ `button` กับ method สองสามตัว ที่ใช้จัดการ states ของ input พวกนี้ แต่จะยังไม่มีการนำข้อมูลไปแสดงผล
 
-ภายใน `constructor` ให้สร้าง `this.state` object และกำหนดสอง state คือ: `userInput` ให้เริ่มต้นเป็น string ว่าง และ `toDoList`" ให้เริ่มต้นเป็น array ว่าง แล้วให้ลบ comment ใน `render()` method ข้างตัวแปร `items` ให้ map `toDoList` array ที่จัดเก็บไว้ใน state ภายในของ component และเรนเดอร์ `li` สำหรับแต่ละรายการแบบไดนามิก ลองป้อน string `eat, code, sleep, repeat` ลงใน `textarea` จากนั้นคลิกปุ่มและดูว่าเกิดอะไรขึ้น
+ให้สร้าง object `this.state` ใน `constructor` และกำหนด property ใน state ไว้สองตัวคือ: 
 
-**Note:** คุณอาจรู้ว่า child elements ที่อยู่ใน parent เดียวกันทั้งหมดที่สร้างขึ้นโดยการ mapping เช่นนี้ จำเป็นต้องมีการกำหนด `key` attribute ที่ไม่ซ้ำกัน แต่ไม่ต้องกังวลนี่เป็นหัวข้อของแบบทดสอบต่อไป
+1. `userInput` ให้มีค่าเริ่มต้นเป็น string ว่าง และ
+2. `toDoList` ให้มีค่าเริ่มต้นเป็น array ว่าง 
+
+แล้วใน method `render()` ให้ลบ comment  หลังตัวแปร `items` ออก
+หลังจากนั้นให้ map array `toDoList` ที่อยู่ใน state ของ component เพื่อให้ `items` เก็บค่าเป็น array ของ `li` แทน 
+แล้วให้ลองป้อน string `eat, code, sleep, repeat` ลงใน `textarea` จากนั้นคลิกปุ่มและดูว่าเกิดอะไรขึ้น
+
+**Note:** คุณอาจรู้มาก่อนแล้วว่า child element ที่อยู่ใน parent เดียวกันที่สร้างขึ้นจากการ mapping แบบนี้ จำเป็นต้องมี attribute `key` ที่ไม่ซ้ำกัน แต่ไม่ต้องห่วง นี่เป็นหัวข้อของแบบทดสอบต่อไป
 
 # --hints--
 
-MyToDoList component ควรมีและเรนเดอร์บนหน้าเพจ
+ต้องมี `MyToDoList` และต้องเรนเดอร์ได้ด้วย
 
 ```js
 assert(
@@ -33,7 +45,7 @@ assert(
 );
 ```
 
-Child แรกของ `MyToDoList` ควรเป็น `textarea` element
+child ตัวแรกของ `MyToDoList` ต้องเป็น `textarea`
 
 ```js
 assert(
@@ -47,7 +59,7 @@ assert(
 );
 ```
 
-Child ที่สองของ `MyToDoList` ควรเป็น `br` element
+child ตัวที่สองของ `MyToDoList` ต้องเป็น `br`
 
 ```js
 assert(
@@ -60,7 +72,7 @@ assert(
 );
 ```
 
-Child ที่สามของ `MyToDoList` ควรเป็น `button` element
+child ตัวสามของ `MyToDoList` ต้องเป็น `button`
 
 ```js
 assert(
@@ -74,7 +86,7 @@ assert(
 );
 ```
 
-State ของ `MyToDoList` ควรเริ่มต้นด้วย `toDoList` ที่เป็น array ว่าง
+state เริ่มต้นของ `MyToDoList` ต้องมี property `toDoList` ที่เป็น array ว่าง
 
 ```js
 assert(
@@ -89,7 +101,7 @@ assert(
 );
 ```
 
-State ของ `MyToDoList` ควรเริ่มต้นด้วย `userInput` ที่เป็น string ว่าง
+state เริ่มต้นของ `MyToDoList` ต้องมี property `userInput` ที่เป็น string ว่าง
 
 ```js
 assert(
@@ -104,7 +116,7 @@ assert(
 );
 ```
 
-เมื่อปุ่ม `Create List` ถูกคลิก `MyToDoList` ควร return ul แบบไดนามิก ที่มีรายการของ item element ของทุกลิสต์รายการที่แยกด้วย comma ที่ถูกพิมพ์ลงไปใน `textarea` element
+เมื่อคลิกปุ่ม `Create List` แล้ว `MyToDoList` ควรต้องคืนค่าออกมาเป็นแท็ก ul แบบไดนามิก ที่มี li อยู่ข้างในหลายๆตัว โดย li แต่ละตัวนี้จะต้องได้ค่ามาจากข้อมูลที่พิมพ์เข้ามาใน `textarea` แล้วก็เอาไปแบ่งออกเป็นแต่ละ li โดยใช้ comma
 
 ```js
 (() => {
@@ -176,9 +188,9 @@ const textAreaStyles = {
 class MyToDoList extends React.Component {
   constructor(props) {
     super(props);
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
 
-    // Change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
@@ -194,7 +206,7 @@ class MyToDoList extends React.Component {
     });
   }
   render() {
-    const items = null; // Change this line
+    const items = null; // แก้บรรทัดนี้
     return (
       <div>
         <textarea

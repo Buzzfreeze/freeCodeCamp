@@ -8,15 +8,19 @@ dashedName: register-a-store-listener
 
 # --description--
 
-อีก method หนึ่งที่คุณสามารถเข้าถึงได้บน Redux `store` object คือ `store.subscribe()` สิ่งนี้ทำให้คุณสามารถเพิ่ม listener function ไปยัง store ซึ่งจะถูกเรียกใช้เมื่อใดก็ตามที่มีการส่ง action กับ store วิธีหนึ่งที่ใช้ง่าย ๆ สำหรับ method นี้คือเพิ่มฟังก์ชันกับ store ของคุณ โดยจะบันทึกข้อความทุกครั้งที่ได้รับ action และ store ได้รับการอัปเดต
+method อีกตัวหนึ่งที่เข้าถึงได้จาก Redux `store` object คือ `store.subscribe()` 
+method นี้ทำให้คุณเพิ่ม listener function ให้กับ store ได้ โดยจะถูกเรียกใช้ทุกครั้งที่มีการส่ง action ให้กับ store 
+การใช้ method นี้แบบง่ายๆวิธีหนึ่งคือ การให้ฟังก์ชัน log ข้อมูลลงบน console ทุกครั้งที่ได้รับ action และ store ถูกอัปเดต
 
 # --instructions--
 
-ลองเขียน callback function ที่เพิ่มตัวแปร global `count` ทุกครั้งที่ store ได้รับ action และส่งฟังก์ชันนี้ไปยังเมธอด `store.subscribe()` คุณจะเห็นว่า `store.dispatch()` ถูกเรียกใช้สามครั้งติดต่อกัน แต่ละครั้งจะส่งผ่าน action object โดยตรง ดู console output ระหว่าง action ที่ส่งไปเพื่อดูการอัปเดตที่เกิดขึ้น
+ให้เขียน callback function ที่เพิ่มค่าของตัวแปร global ชื่อ `count` ทุกครั้งที่ store ได้รับ action และส่งฟังก์ชันนี้ไปยัง `store.subscribe()` 
+คุณจะเห็นว่า `store.dispatch()` ถูกเรียกใช้สามครั้งติดต่อกัน แต่ละครั้งจะส่ง action object เข้าไปโดยตรง 
+ให้ดู log ใน console ในระหว่างที่เกิดการอัปเดตขึ้น
 
 # --hints--
 
-การส่ง `ADD` action บน store ควรเพิ่ม state ทีละ `1`
+การส่ง action `ADD` ไปยัง store ต้องเพิ่ม state ทีละ `1`
 
 ```js
 assert(
@@ -29,7 +33,7 @@ assert(
 );
 ```
 
-มันควรมี listener function เพิ่มลงไปที่ store โดยการใช้ `store.subscribe`
+ต้องผูก listener function กับ store โดยใช้ `store.subscribe`
 
 ```js
 (getUserInput) => assert(getUserInput('index').match(/store\s*\.\s*subscribe\(/gm));
@@ -42,7 +46,7 @@ assert(
 (getUserInput) => assert(getUserInput('index').match(/(\s*function\s*)|(\s*\(\s*\)\s*=>)/gm)) 
 ```
 
-การ callback ไปยัง `store.subscribe` ควรที่จะเพิ่มตัวแปร global `count` ตอนที่ store มีการอัปเดต
+ฟังก์ชันที่ส่งไปใน `store.subscribe` ต้องเพิ่มค่าของตัวแปร global ที่ชื่อ `count` ทุกครั้งที่ store มีการอัปเดต
 
 ```js
 assert(store.getState() === count);
@@ -72,12 +76,12 @@ const reducer = (state = 0, action) => {
 
 const store = Redux.createStore(reducer);
 
-// Global count variable:
+// ตัวแปร Global:
 let count = 0;
 
-// Change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้
 
-// Change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้
 
 store.dispatch({type: ADD});
 console.log(count);

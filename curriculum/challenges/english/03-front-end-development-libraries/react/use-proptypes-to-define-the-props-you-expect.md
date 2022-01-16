@@ -8,25 +8,34 @@ dashedName: use-proptypes-to-define-the-props-you-expect
 
 # --description--
 
-React ให้คุณสมบัติการตรวจสอบ type ที่มีประโยชน์เพื่อตรวจสอบว่า components ได้รับ props type ที่ถูกต้องหรือไม่ ตัวอย่างเช่น แอปพลิเคชันของคุณทำการเรียก API เพื่อดึงข้อมูลที่คุณคาดว่าจะอยู่ใน array จากนั้นจึงส่งผ่านไปยัง component ในฐานะ prop คุณสามารถตั้งค่า `propTypes` บน component ของคุณเพื่อให้ข้อมูลเป็น type  `array` ซึ่งจะส่งคำเตือนที่เป็นประโยชน์เมื่อข้อมูลเป็น type อื่น
+React มีฟีเจอร์ที่ช่วยเราดูว่าประเภทของข้อมูลใน props ที่ส่งเข้ามาใน component ถูกต้องหรือไม่ 
+เช่น แอปพลิเคชันของคุณทำการเรียก API เพื่อดึงข้อมูลที่คุณอยากได้เป็น array แล้วก็ส่งค่านั้นเข้ามาใน component โดยใช้ prop 
+คุณสามารถตั้งค่า `propTypes` ใน component ของคุณเพื่อตรวจสอบว่าข้อมูลที่เข้ามาเป็น `array` หรือไม่ ซึ่งจะส่งคำเตือนออกมาเมื่อข้อมูลเป็นประเภทอื่น
 
-ถือเป็นแนวทางปฏิบัติที่ดีที่สุดในการตั้งค่า `propTypes` เมื่อคุณทราบ type ของ prop ก่อนแล้ว คุณสามารถกำหนดคุณสมบัติ `propTypes` สำหรับ component ในลักษณะเดียวกับที่คุณกำหนด `defaultProps` การทำเช่นนี้จะตรวจสอบว่า props ของคีย์ที่กำหนดมีอยู่ใน type ที่กำหนด ข้างล่างนี้คือตัวอย่าง หากต้องการ type  `function` สำหรับ prop ที่เรียกว่า `handleClick`:
+การตั้งค่า `propTypes` ถ้ารู้ประเภทข้อมูลของ prop ล่วงหน้าถือว่าเป็นสิ่งที่ควรทำ 
+คุณสามารถกำหนด property ของ `propTypes` ของ component ได้โดยใช้วิธีเดียวกับ `defaultProps` 
+การตั้งค่า `propTypes` จะตรวจสอบว่า props ของคีย์ที่นั้นเป็นประเภทของข้อมูลที่ระบุหรือไม่
+ตัวอย่างด้านล่างนี้จะเป็นกรณีที่เราต้องการให้ prop `handleClick` รับข้อมูลเป็น `function`:
 
 ```js
 MyComponent.propTypes = { handleClick: PropTypes.func.isRequired }
 ```
 
-ในตัวอย่างข้างต้น ส่วนของ `PropTypes.func` จะตรวจสอบว่า `handleClick` เป็นฟังก์ชัน การเพิ่ม `isRequired` เป็นการบอก React ว่า `handleClick` เป็น property ที่จำเป็นสำหรับ component นั้น คุณจะเห็นคำเตือนหากไม่มี prop นั้น สังเกตด้วยว่า `func` แทน `function` ในบรรดา type ดั้งเดิมทั้ง 7  type ของ JavaScript นั้น `function` และ `boolean` (เขียนเป็น `bool`) เป็นเพียงสอง type ที่ใช้การสะกดคำที่ไม่เหมือนปกติ นอกจาก type ดั้งเดิมแล้วยังมี type อื่นๆ อีกด้วย คุณสามารถตรวจสอบว่า prop เป็น React element ได้ที่[เอกสารประกอบ](https://reactjs.org/docs/typechecking-with-proptypes.html#proptypes)สำหรับตัวเลือกทั้งหมด
+ในตัวอย่างด้านบน `PropTypes.func` จะตรวจสอบว่า `handleClick` เป็นฟังก์ชันหรือไม่ ส่วนการเพิ่ม `isRequired` เป็นการบอก React ว่า `handleClick` เป็น property ที่จำเป็นสำหรับ component นั้น
+คุณจะเห็นคำเตือนถ้าไม่ได้ระบุ prop นั้น 
+แล้วคุุณอาจจะเห็นว่าเราใช้คำว่า `func` แทนคำว่า `function` ซึ่งในบรรดาประเภทข้อมูลพื้นฐานทั้ง 7 ประเภทของ JavaScript นั้น มีแค่ `function` และ `boolean` (เขียนเป็น `bool`) ที่เขียนโดยไม่ใช้ชื่อเต็ม
+นอกจากประเภทข้อมูลพื้นฐานแล้ว ยังรองรับการตรวจสอบข้อมูลประเภทอื่นๆ อีกด้วย เช่น การตรวจสอบว่า prop เป็น React element หรือไม่
+ลองอ่าน [เอกสารประกอบ](https://reactjs.org/docs/typechecking-with-proptypes.html#proptypes) เพื่อดูว่ามีประเภทอะไรที่ใช้ได้บ้าง
 
-**Note:** ตั้งแต่ React v15.5.0 `PropTypes` จะถูกนำเข้าโดยอิสระจาก React ดังเช่น: `import PropTypes จาก 'prop-types';`
+**Note:** ตั้งแต่ React v15.5.0 เราต้อง import ตัว `PropTypes` แยกจากการ import React เช่น: `import PropTypes จาก 'prop-types';`
 
 # --instructions--
 
-ให้กำหนด `propTypes` สำหรับ `Items` component ที่ต้องการ `quantity` เป็น prop และตรวจสอบว่าเป็น type `number`
+ให้กำหนด `propTypes` สำหรับ component `Items` เพื่อให้จำเป็นต้องระบุ prop `quantity` และตรวจสอบว่าเป็นข้อมูลที่ส่งมาเป็น `number`
 
 # --hints--
 
-`ShoppingCart` component ควรเรนเดอร์
+component `ShoppingCart` ต้องเรนเดอร์ได้
 
 ```js
 assert(
@@ -37,7 +46,7 @@ assert(
 );
 ```
 
-`Items` component ควรเรนเดอร์
+component `Items` ต้องเรนเดอร์ได้
 
 ```js
 assert(
@@ -48,7 +57,7 @@ assert(
 );
 ```
 
-`Items` component ควรมี `propTypes` ในการตรวจสอบเพื่อให้แน่ใจว่าต้องให้ค่าของ `quantity` เป็น number
+`Items` ต้องใช้ `propTypes` เพื่อตรวจสอบว่าค่าของ `quantity` เป็น number จริงๆ
 
 ```js
 (getUserInput) =>
@@ -86,9 +95,9 @@ const Items = (props) => {
   return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
 };
 
-// Change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้
 
-// Change code above this line
+// แก้ไขโค้เหนือบรรทัดนี้
 
 Items.defaultProps = {
   quantity: 0
@@ -111,11 +120,11 @@ const Items = (props) => {
   return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
 };
 
-// Change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้
 Items.propTypes = {
   quantity: PropTypes.number.isRequired
 };
-// Change code above this line
+// แก้ไขโค้เหนือบรรทัดนี้
 
 Items.defaultProps = {
   quantity: 0

@@ -12,27 +12,28 @@ dashedName: target-html-elements-with-selectors-using-jquery
 
 ตอนนี้เรามีฟังก์ชัน `document ready` แล้ว
 
-คราวนี้มาลองเขียนคำสั่ง jQuery แรกกันเลย โดยฟังก์ชันต่างๆ ของ jQuery จะเริ่มต้นด้วย `$` โดยปกติแล้วจะเครื่องหมายนี้จะสื่อถึง เครื่องหมายดอลลาร์ หรือ คำว่า bling
+คราวนี้มาลองเขียนคำสั่ง jQuery กันเลย โดยฟังก์ชันของ jQuery ทุกฟังก์ชันจะขึ้นต้นด้วย `$` โดยปกติแล้วเราจะเรียกเครื่องหมายนี้ว่า เครื่องหมายดอลลาร์ หรือ bling
 
-jQuery นั้นจะเลือก HTML element เป้าหมายด้วย <dfn>selector</dfn> ก่อนที่จะเพิ่มฟังก์ชันให้ element นั้น
+jQuery นั้นจะเลือก HTML element เป้าหมายด้วย <dfn>selector</dfn> ก่อนที่จะทำอะไรบางอย่างกับ element นั้น
 
-มาลองทำ `button` element ให้มีเอฟเฟคเด้ง เพียงแค่เพิ่มโค้ดดังตัวอย่างข้างล่างไปใน document ready function
+มาลองทำ `button` ของเราให้เด้งได้กัน เพียงแค่เพิ่มโค้ดดังตัวอย่างข้างล่างไปในฟังก์ชัน document ready
 
 ```js
 $("button").addClass("animated bounce");
 ```
 
-หมายเหตุ เราได้ติดตั้งทั้ง jQuery library และ Animate.css library ไว้เรียบร้อยแล้ว คุณสามารถใช้มันใน editor ได้เลย ในการใช้ jQuery ในการเพิ่ม class Animate.css `bounce` ให้กับ `button` element
+หมายเหตุ เราได้ลง library ทั้ง jQuery และ Animate.css ไว้เรียบร้อยแล้ว คุณสามารถใช้ทั้งสองตัวนี้ใน editor ได้เลย 
+โค้ดด้านบนจะเป็นการใช้ jQuery เพื่อเพิ่ม class ของ Animate.css ที่ชื่อ `bounce` ให้กับ `button`
 
 # --hints--
 
-คุณจะต้องใช้ฟังก์ชัน jQuery `addClass()` เพื่อเพิ่ม classes `animated` และ `bounce` ให้กับ `button` element
+คุณจะต้องใช้ฟังก์ชัน jQuery `addClass()` เพื่อเพิ่ม class `animated` และ `bounce` ให้กับ `button` element
 
 ```js
 assert($('button').hasClass('animated') && $('button').hasClass('bounce'));
 ```
 
-คุณจะต้องใช้แค่ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
+คุณจะต้องใช้แค่ jQuery เท่านั้นในการเพิ่ม class ให้กับ element
 
 ```js
 assert(!code.match(/class.*animated/g));
@@ -57,7 +58,7 @@ assert(
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>

@@ -8,35 +8,35 @@ dashedName: steamroller
 
 # --description--
 
-จงทำให้ array ที่ซ้อนกัน กลายเป็น array มิติเดียว โดยต้องรองรับระดับการซ้อนที่แตกต่างกัน
+จงทำให้ array หลายมิติกลายเป็น array มิติเดียว โดยต้องรองรับระดับการซ้อนหลายๆระดับ
 
 # --hints--
 
-`steamrollArray([[["a"]], [["b"]]])` ควรคืนค่าเป็น `["a", "b"]`.
+`steamrollArray([[["a"]], [["b"]]])` ต้องคืนค่าเป็น `["a", "b"]`.
 
 ```js
 assert.deepEqual(steamrollArray([[['a']], [['b']]]), ['a', 'b']);
 ```
 
-`steamrollArray([1, [2], [3, [[4]]]])` ควรคืนค่าเป็น `[1, 2, 3, 4]`.
+`steamrollArray([1, [2], [3, [[4]]]])` ต้องคืนค่าเป็น `[1, 2, 3, 4]`.
 
 ```js
 assert.deepEqual(steamrollArray([1, [2], [3, [[4]]]]), [1, 2, 3, 4]);
 ```
 
-`steamrollArray([1, [], [3, [[4]]]])` ควรคืนค่าเป็น `[1, 3, 4]`.
+`steamrollArray([1, [], [3, [[4]]]])` ต้องคืนค่าเป็น `[1, 3, 4]`.
 
 ```js
 assert.deepEqual(steamrollArray([1, [], [3, [[4]]]]), [1, 3, 4]);
 ```
 
-`steamrollArray([1, {}, [3, [[4]]]])` ควรคืนค่าเป็น `[1, {}, 3, 4]`.
+`steamrollArray([1, {}, [3, [[4]]]])` ต้องคืนค่าเป็น `[1, {}, 3, 4]`.
 
 ```js
 assert.deepEqual(steamrollArray([1, {}, [3, [[4]]]]), [1, {}, 3, 4]);
 ```
 
-ห้ามใช้ `Array.prototype.flat()` หรือ `Array.prototype.flatMap()` methods
+ห้ามใช้ method `Array.prototype.flat()` หรือ `Array.prototype.flatMap()`
 
 ```js
 assert(!code.match(/\.\s*flat\s*\(/) && !code.match(/\.\s*flatMap\s*\(/));

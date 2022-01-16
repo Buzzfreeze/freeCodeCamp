@@ -8,7 +8,11 @@ dashedName: pass-props-to-a-stateless-functional-component
 
 # --description--
 
-แบบทดสอบก่อนหน้านี้ครอบคลุมเกี่ยวกับการสร้างและเขียน JSX elements, functional components, และ ES6 style class components โดยส่วนใหญ่ใน React ด้วยพื้นฐานนี้ถึงเวลาที่จะดูคุณลักษณะอื่นที่พบบ่อยมากใน React: **props** ใน React คุณสามารถส่ง props หรือ properties ไปยัง child components ได้ สมมติว่าคุณมี `App` component ซึ่งเรนเดอร์ child component ชื่อ `Welcome` ซึ่งเป็น stateless functional component คุณสามารถส่ง `Welcome` กับ `user` property โดยการเขียนโค้ดว่า:
+ที่ผ่านมาเราได้เรียนเรื่องการสร้างและเขียน JSX element, functional component, และ ES6 class component ใน React ไปแล้ว
+พอเรามีพื้นฐานเรื่องพวกนี้แล้ว ก็ได้เวลาเรียนเรื่องต่อไปที่สำคัญใน React ซึ่งก็คือ **props** 
+ใน React เราสามารถส่ง props (หรือ properties) ไปยัง child component ได้ด้วย
+สมมติว่าเรามี component `App` ซึ่งเรนเดอร์ child component ชื่อ `Welcome` ที่เป็น stateless functional component 
+เราจะส่ง property ชื่อ `user` ไปให้ `Welcome` ได้ตามโค้ดนี้:
 
 ```jsx
 <App>
@@ -16,23 +20,27 @@ dashedName: pass-props-to-a-stateless-functional-component
 </App>
 ```
 
-คุณใช้ **HTML attributes ที่กำหนดเอง** ที่คุณสร้างขึ้นและรองรับโดย React เพื่อส่งผ่านไปยัง component ในกรณีนี้ property `user` ที่สร้างขึ้นจะถูกส่งไปยัง component `Welcome` เนื่องจาก `Welcome` เป็น stateless functional component จึงสามารถเข้าถึงค่านี้ได้ดังนี้:
+เราจะใช้ **HTML attribute ที่เราตั้งเอง** เพื่อส่งค่าผ่านไปยัง child component 
+ในกรณีนี้ property ชื่อ `user` ที่เราสร้างขึ้นจะถูกส่งไปยัง `Welcome` แล้ว และเพราะว่า `Welcome` เป็น stateless functional component จึงสามารถเข้าถึงค่านี้ได้ตามวิธีนี้:
 
-You use **custom HTML attributes** created by you and supported by React to be passed to the component. In this case, the created property `user` is passed to the component `Welcome`. Since `Welcome` is a stateless functional component, it has access to this value like so:
 
 ```jsx
 const Welcome = (props) => <h1>Hello, {props.user}!</h1>
 ```
 
-เป็นเรื่องปกติที่จะเรียกค่านี้ว่า `props` และเมื่อต้องจัดการกับ stateless functional components โดยทั่วไปถือว่ามันเป็น argument ของฟังก์ชันที่ return JSX คุณสามารถเข้าถึงค่าของ argument ในตัวของฟังก์ชันได้ และด้วย class components คุณจะเห็นว่าสิ่งนี้แตกต่างออกไปเล็กน้อย
+ตามปกติแล้วทุกคนจะเรียกค่านี้ว่า `props` และเวลาที่เอาไปใช้กับ stateless functional component จะถือว่า `props` นี้เป็น argument ของฟังก์ชันที่คืนค่าออกมาเป็น JSX 
+คุณสามารถเข้าถึงค่าของ argument ในฟังก์ชันได้ แต่ถ้าใช้ class component การใช้ค่านี้จะต่างออกไปเล็กน้อย
 
 # --instructions--
 
-มี `Calendar` and `CurrentDate` components ใน code editor เมื่อทำการเรนเดอร์ `CurrentDate` จาก `Calendar` component ให้ส่งผ่าน property ของ `date` ที่กำหนดให้กับวันที่ปัจจุบันจาก object `Date` ของ JavaScript จากนั้นเข้าถึง `prop` นี้ใน `CurrentDate` component โดยแสดงค่าภายในแท็ก `p` โปรดทราบว่าสำหรับค่า `prop` ที่จะประมวลผลเป็น JavaScript จะต้องอยู่ในวงเล็บปีกกา เช่น `date={Date()}`
+เราได้เขียน component ชื่อ `Calendar` และ `CurrentDate` ใน code editor ให้แล้ว
+เมื่อเรนเดอร์ `CurrentDate` ใน `Calendar` ให้ส่ง property ชื่อ `date` (ให้มีค่าเป็น `new Date()`) ไปยัง `CurrentDate` ด้วย
+จากนั้นให้ `CurrentDate` อ่านค่าตัวนี้จาก `props` และเอาค่าไปใส่ในแท็ก `p` 
+การส่ง JavaScript เข้าไปใน `props` จะต้องอยู่ในวงเล็บปีกกา เช่น `date={Date()}`
 
 # --hints--
 
-`Calendar` component ควร return `div` element อันเดียว
+component `Calendar` ต้องคืนค่าออกมาเป็น `div` อันเดียว
 
 ```js
 assert(
@@ -43,7 +51,7 @@ assert(
 );
 ```
 
-child ลำดับที่ 2 ของ `Calendar` component ควรจะเป็น `CurrentDate` component 
+child ตัวที่สองของ `Calendar` ต้องเป็น `CurrentDate`
 
 ```js
 assert(
@@ -54,7 +62,7 @@ assert(
 );
 ```
 
-`CurrentDate` component ควรมี prop ชื่อ `date`
+`CurrentDate` ต้องรับ property ชื่อ `date`
 
 ```js
 assert(
@@ -65,7 +73,7 @@ assert(
 );
 ```
 
-`date` prop ของ `CurrentDate` ควรมี string ที่เป็นข้อความอยู่
+property `date` ใน `CurrentDate` ต้องมีค่าเป็น string
 
 ```js
 assert(
@@ -77,13 +85,13 @@ assert(
 );
 ```
 
-`date` prop ควรถูกสร้างโดยการเรียกใช้งาน `Date()`
+ต้องส่งค่าเข้าไปใน property `date` โดยใช้ `Date()`
 
 ```js
 assert(/<CurrentDatedate={Date\(\)}\/>/.test(__helpers.removeWhiteSpace(code)));
 ```
 
-`CurrentDate` component ควรเรนเดอร์ค่าจาก `date` prop ลงใน `p` tag
+`CurrentDate` ต้องอ่านค่าจาก property `date` แล้วนำไปเขียนลงในแท็ก `p`
 
 ```js
 let date = 'dummy date';
@@ -111,9 +119,9 @@ ReactDOM.render(<Calendar />, document.getElementById('root'))
 const CurrentDate = (props) => {
   return (
     <div>
-      { /* Change code below this line */ }
+      { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
       <p>The current date is: </p>
-      { /* Change code above this line */ }
+      { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
     </div>
   );
 };
@@ -126,9 +134,9 @@ class Calendar extends React.Component {
     return (
       <div>
         <h3>What date is it?</h3>
-        { /* Change code below this line */ }
+        { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
         <CurrentDate />
-        { /* Change code above this line */ }
+        { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
       </div>
     );
   }
@@ -141,9 +149,9 @@ class Calendar extends React.Component {
 const CurrentDate = (props) => {
   return (
     <div>
-      { /* Change code below this line */ }
+      { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
       <p>The current date is: {props.date}</p>
-      { /* Change code above this line */ }
+      { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
     </div>
   );
 };
@@ -156,9 +164,9 @@ class Calendar extends React.Component {
     return (
       <div>
         <h3>What date is it?</h3>
-        { /* Change code below this line */ }
+        { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
         <CurrentDate date={Date()} />
-        { /* Change code above this line */ }
+        { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
       </div>
     );
   }

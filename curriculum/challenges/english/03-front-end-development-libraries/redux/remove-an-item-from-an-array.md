@@ -8,15 +8,16 @@ dashedName: remove-an-item-from-an-array
 
 # --description--
 
-ถึงเวลาฝึกการลบรายการออกจาก array ซึ่งสามารถใช้ spread operator ในที่นี่ได้เช่นกัน JavaScript methods ที่มีประโยชน์อื่นๆ ได้แก่ `slice()` และ `concat()`
+ถึงเวลาฝึกการลบข้อมูลออกจาก array แล้ว เราก็จะใช้ spread operator ลบข้อมูลได้เช่นกัน แต่ก็ยังมี method ของ JavaScript ที่ใช้ได้คือ `slice()` และ `concat()`
 
 # --instructions--
 
-reducer และ action creator ได้รับการแก้ไขเพื่อลบรายการออกจาก array ตามดัชนีของรายการ ลองเขียน reducer เพื่อให้ state array ใหม่ถูก return พร้อมกับรายการที่ดัชนีเฉพาะถูกลบออกให้สำเร็จ
+เราได้เขียน reducer และ action creator ใหม่ให้แล้ว เพื่อให้ทำการลบข้อมูลใน array ออกตาม index ที่ให้ไป 
+ลองเขียน reducer เพื่อให้คืนค่าเป็น state ใหม่ที่ลบข้อมูลใน index ที่ระบุออกไปแล้ว
 
 # --hints--
 
-ควรมี Redux store และเริ่มต้นด้วย state ที่เท่ากับ `[0,1,2,3,4,5]`
+ต้องมี Redux store ที่มีค่าเริ่มต้นของ state เป็น `[0,1,2,3,4,5]`
 
 ```js
 assert(
@@ -30,7 +31,7 @@ assert(
 );
 ```
 
-ทั้ง `removeItem` และ `immutableReducer` ควรเป็นฟังก์ชัน
+ทั้ง `removeItem` และ `immutableReducer` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(
@@ -38,7 +39,7 @@ assert(
 );
 ```
 
-การส่ง `removeItem` action creator ควรที่จะลบรายการจาก state และไม่ควรเปลี่ยนแปลง state
+การส่ง `removeItem` action creator ต้องลบข้อมูลออกจาก state โดยที่ไม่เปลี่ยนแปลง state
 
 ```js
 assert(
@@ -71,7 +72,7 @@ assert(
 const immutableReducer = (state = [0,1,2,3,4,5], action) => {
   switch(action.type) {
     case 'REMOVE_ITEM':
-      // Don't mutate state here or the tests will fail
+      // ให้คืนค่าโดยห้ามเปลี่ยนแปลง state เดิม
       return
     default:
       return state;

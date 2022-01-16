@@ -8,32 +8,32 @@ dashedName: use-responsive-design-with-bootstrap-fluid-containers
 
 # --description--
 
-ในบทเรียน HTML5 และ CSS ที่เราได้สร้างแอป Cat Photo ตอนนี้เราจะกลับไปเพิ่ม style ให้เพจนี้โดยการใช้ responsive CSS framework ที่ได้รับความนิยมอย่าง Bootstrap
+ในบทเรียนเรื่อง HTML5 และ CSS ที่เราได้สร้างแอป Cat Photo ไปแล้ว ตอนนี้เราจะกลับไปเพิ่ม style ให้หน้านี้โดยการใช้ CSS framework ที่ได้รับความนิยมอย่าง Bootstrap
 
-Bootstrap จะหาว่าหน้าจอที่แสดงผลโค้ดนี้กว้างเท่าไหร่ แล้วจึงปรับขนาด element ต่างๆ ของ HTML ให้เหมาะสมกับขนาดหน้าจอนั้น โดยสิ่งนี้เรียกว่า  <dfn>responsive design</dfn>.
+Bootstrap จะหาว่าหน้าจอเปิดอยู่นี้กว้างเท่าไหร่ แล้วจึงปรับขนาด element ต่างๆ ของ HTML ให้เหมาะสมกับขนาดหน้าจอนั้น การปรับการแสดงผลตามขนาดหน้าจอนี้เรียกว่า <dfn>Responsive Design</dfn>
 
-Responsive Design จะทำให้เราไม่ต้องเขียนโค้ดแยกในการแสดงผลของเว็บสำหรับ mobile version มันจะช่วยปรับให้สวยงามได้เองบนหน้าจอขนาดใดก็ตาม
+Responsive Design จะทำให้เราไม่ต้องเขียนเว็บที่ใช้ในโทรศัพท์และบนคอมพิวเตอร์แยกกัน Bootstrap จะช่วยทำให้เว็บสวยได้บนหน้าจอทุกขนาด
 
-คุณสามารถเพิ่ม Bootstrap ให้กับแอปใดๆ ก็ได้ของคุณ โดยการเพิ่มโค้ดข้างล่างนี้ในส่วน head ของ HTML:
+คุณสามารถใช้ Bootstrap กับเว็บของคุณเว็บไหนก็ได้ เพียงแค่เพิ่มโค้ดข้างล่างนี้ในส่วน head ของ HTML:
 
 ```html
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 ```
 
 สำหรับแบบฝึกหัดนี้เราได้เพิ่ม Bootstrap ไว้ให้แล้ว ไม่จำเป็นต้องเพิ่มโค้ดข้างบนอีก
-หมายเหตุ เราสามารถใช้ทั้ง `>` หรือ `/>` เพื่อปิด tag `link` นี้
+หมายเหตุ จะเห็นว่าเราใช้ได้ทั้ง `>` และ `/>` ในการปิด tag `link` นี้
 
-เรามาเริ่มลองใช้ Bootstrap โดยการย้ายโค้ด HTML ทั้งหมด (ยกเว้น tag `link` และ `style` element) ไปไว้ใน `div` element ที่มี class `container-fluid`
+เรามาเริ่มลองใช้ Bootstrap โดยการย้ายโค้ด HTML ทั้งหมด (ยกเว้น tag `link` และ element `style`) ไปไว้ใน element `div` ที่มี class เป็น `container-fluid`
 
 # --hints--
 
-สร้าง `div` element ที่มี class `container-fluid`
+ให้สร้าง element `div` ที่มี class เป็น `container-fluid`
 
 ```js
 assert($('div').hasClass('container-fluid'));
 ```
 
-อย่าลืม tag ปิด สำหรับ `div` element
+อย่าลืม tag ปิด สำหรับ element `div` 
 
 ```js
 assert(
@@ -43,7 +43,7 @@ assert(
 );
 ```
 
-ย้าย element ต่างๆ ของ HTML ที่อยู่หลังจาก tag ปิดของ `style` tag ไปอยู่ใน `div` class `.container-fluid`
+ย้าย HTML element ทั้งหมดที่อยู่หลัง tag ปิดของ `style` ไปอยู่ใน `div` ที่มี class เป็น `container-fluid`
 
 ```js
 assert($('.container-fluid').children().length >= 8 && !$('.container-fluid').has("style").length && !$('.container-fluid').has("link").length);

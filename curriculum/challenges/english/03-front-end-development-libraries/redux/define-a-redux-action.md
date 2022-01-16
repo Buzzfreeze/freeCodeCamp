@@ -8,17 +8,23 @@ dashedName: define-a-redux-action
 
 # --description--
 
-เนื่องจาก Redux เป็นเฟรมเวิร์กการจัดการ state การอัปเดต state จึงเป็นงานหลักอย่างหนึ่ง ใน Redux การอัปเดต state ทั้งหมดจะถูกเรียกให้ทำงานโดยการส่ง actions ซึ่ง actions เป็นเพียง JavaScript object ที่มีข้อมูลเกี่ยวกับ action event ที่เกิดขึ้น แล้ว Redux store จะได้รับaction object เหล่านี้ จากนั้นอัปเดต state ตามนั้น บางครั้ง Redux action ก็นำข้อมูลบางส่วนไปด้วย ตัวอย่างเช่น action จะนำ username หลังจากที่ผู้ใช้เข้าสู่ระบบ แม้ว่าข้อมูลจะเป็นทางเลือก แต่ actions จะต้องมี `type` property ที่ระบุ 'type' ของ action ที่เกิดขึ้น
+Redux เป็นเฟรมเวิร์กที่ใช้จัดการ state เพราะฉะนั้นหนึ่งในหน้าที่หลักของ Redux คือการอัปเดต state
+การอัปเดต state ทั้งหมดจะถูกเรียกให้ทำงานโดยการส่ง action ซึ่ง action เป็นแค่ JavaScript object ที่มีข้อมูลของ action event ที่เกิดขึ้น 
+เมื่อ Redux store ได้รับ action object พวกนี้ ก็จะไปอัปเดต state ตามนั้น 
+บางครั้ง Redux action ก็จะใช้ส่งข้อมูลไปด้วย 
+เช่น action จะเก็บค่าของ username หลังจากที่ผู้ใช้เข้าสู่ระบบ 
+action จะมีข้อมูลแบบด้านบนหรือไม่มีก็ได้ แต่ที่จำเป็นต้องมีคือ property `type` ที่จะใช้ระบุประเภทของ action ที่เกิดขึ้น
 
 ให้คิดว่า Redux actions เป็นผู้ส่งสารที่ส่งข้อมูลเกี่ยวกับเหตุการณ์ที่เกิดขึ้นในแอปของคุณไปยัง Redux store ซึ่ง store จะดำเนินการปรับปรุง state ตาม action ที่เกิดขึ้น
 
 # --instructions--
 
-การเขียน Redux action นั้นง่ายพอๆ กับการประกาศ object ที่มี type property ให้ลองประกาศ object `action` และกำหนด property `type`เป็นสตริง `'LOGIN'`
+การเขียน Redux action ก็เหมือนกับการประกาศ object ที่มี property `type`
+ให้ลองประกาศ object ชื่อ `action` และกำหนดให้ property `type` มีค่าเป็น string `'LOGIN'`
 
 # --hints--
 
-ควรมี `action` object
+ต้องมี object `action` ในโค้ด
 
 ```js
 assert(
@@ -28,7 +34,7 @@ assert(
 );
 ```
 
-`action` object ควรมี key property `type` ที่มีค่าเป็น `LOGIN`
+object `action` ต้องมี property ชื่อ `type` ที่มีค่าเป็น `LOGIN`
 
 ```js
 assert(
@@ -43,7 +49,7 @@ assert(
 ## --seed-contents--
 
 ```js
-// Define an action here:
+// ประกาศตัวแปร action ข้างล่างนี้:
 ```
 
 # --solutions--

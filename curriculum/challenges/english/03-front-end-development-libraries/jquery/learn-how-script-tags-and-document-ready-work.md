@@ -8,23 +8,23 @@ dashedName: learn-how-script-tags-and-document-ready-work
 
 # --description--
 
-พร้อมที่เรียนรู้เกี่ยวกับ jQuery ที่เป็นเครื่องมือ JavaScript ยอดนิยมตลอดกาลหรือยัง?
+พร้อมที่เรียนเรื่อง jQuery ที่เป็นเครื่องมือ JavaScript ที่เป็นที่นิยมที่สุดหรือยัง?
 
 ก่อนที่จะเริ่มใช้งาน jQuery นั้น เราจำเป็นจะต้องเติมบางอย่างให้กับ HTML ของเรา
 
 เริ่มจาก เพิ่ม `script` element ในส่วนบนของ HTML แล้วอย่าลืม tag ปิดด้วย
 
-เบราว์เซอร์ของคุณจะเรียกใช้ JavaScript ใดๆ ใน `script` element รวมถึง jQuery
+เบราว์เซอร์ของคุณจะเรียกใช้ JavaScript ทุกตัวใน `script` ซึ่งรวมถึง jQuery ด้วย
 
-เพิ่มโค้ดต่อไปนี้: `$(document).ready(function() {` ภายใน `script` element แล้วปิดด้วย `});` (ยังคงอยู่ภายใน `script` element)
+เพิ่มโค้ดนี้ `$(document).ready(function() {` ใน `script` แล้วปิดด้วย `});` (แท็กปิดก็ต้องอยู่ใน `script` นะ)
 
-เราจะเรียนรู้เกี่ยว `functions` ต่างๆ ภายหลัง สิ่งสำคัญที่ควรรู้ก็คือโค้ดต่างๆ ที่คุณเขียนใน `function` นี้จะทำงานทันทีที่เบราว์เซอร์โหลดหน้าเว็บของคุณ 
+เราจะเรียนเรื่อง `function` ทีหลัง ตอนนี้สิ่งสำคัญที่ควรรู้ก็คือโค้ดที่คุณเขียนใน `function` นี้จะทำงานทันทีที่เบราว์เซอร์โหลดหน้าเว็บของคุณ
 
-สิ่งสำคัญก็คือ หากไม่มี `document ready function` แล้ว โค้ดของคุณอาจจะทำงานก่อนการแสดงผลของ HTML ซึ่งอาจจะก่อให้เกิด bug ได้
+เราจำเป็นต้องใช้ฟังก์ชัน `document ready` เพราะถ้าไม่ใส่ โค้ดของคุณอาจจะทำงานก่อน HTML โหลดเสร็จ ซึ่งอาจจะเกิด bug ได้
 
 # --hints--
 
-คุณจะต้องสร้าง `script` element ที่ถูกต้องและมี tag ปิดด้วย
+คุณจะต้องสร้าง `script` element ให้ถูกต้องและมี tag ปิดด้วย
 
 ```js
 assert(
@@ -60,7 +60,7 @@ assert(code.match(/\n*?\s*?\}\s*?\);/g));
 ## --seed-contents--
 
 ```html
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>

@@ -8,15 +8,19 @@ dashedName: use-default-props
 
 # --description--
 
-React ยังมีตัวเลือกในการตั้งค่า props เริ่มต้นอีกด้วย คุณสามารถกำหนด props เริ่มต้นให้กับ component เป็น property บน component เองได้ และ React จะกำหนด prop เริ่มต้นหากจำเป็น วิธีนี้ช่วยให้คุณระบุได้ว่าค่า prop ควรเป็นเท่าใดหากไม่มีการระบุค่าไว้อย่างชัดเจน ตัวอย่างเช่น หากคุณประกาศ `MyComponent.defaultProps = { location: 'San Francisco' }` แสดงว่าคุณได้กำหนดตำแหน่ง prop ที่ตั้งค่าเป็น string `San Francisco` เว้นแต่คุณจะระบุเป็นอย่างอื่น React จะกำหนด props เริ่มต้นหาก props ไม่ได้ถูกกำหนดไว้ แต่ถ้าคุณส่งค่า `null` เป็นค่าสำหรับ prop ค่านั้นจะยังคงเป็น `null`
+React ให้เราตั้งค่า default props ได้ด้วย 
+โดย default props คือค่าที่จะเอามาใช้ถ้าเราไม่ได้ระบุ prop นั้นให้ตอนนำ component มาใช้
+เช่น ถ้าคุณประกาศ `MyComponent.defaultProps = { location: 'San Francisco' }` โค้ดด้านบนแปลว่า ถ้าคุณไม่ได้ส่งค่า prop ที่ชื่อ `location` ไปให้กับ component ตัว `MyComponent` ก็จะมีค่าของ prop ที่ชื่อ `location` เป็น `San Francisco` 
+React จะใช้ default props ถ้าเราไม่ได้ส่งค่า prop เข้าไป แต่ถ้าเราส่ง `null` เข้าไป ค่าของ props นั้นจะเป็น `null` แทน
 
 # --instructions--
 
-code editor ได้แสดง `ShoppingCart` component ให้กำหนด props เริ่มต้นใน component นี้ซึ่งระบุ prop `items` ด้วยค่า `0`
+code editor จะมี component ชื่อ `ShoppingCart` อยู่ 
+ให้คุณกำหนดค่าของ default props ให้กับ component นี้ โดยให้ property ชื่อ `items` มีค่าเป็น `0`
 
 # --hints--
 
-`ShoppingCart` component ควรเรนเดอร์
+ต้องเรนเดอร์ `ShoppingCart` ได้
 
 ```js
 assert(
@@ -27,7 +31,7 @@ assert(
 );
 ```
 
-`ShoppingCart` component ควรมี prop เริ่มต้นเป็น `{ items: 0 }`
+`ShoppingCart` ต้องมี default props เป็น `{ items: 0 }`
 
 ```js
 assert(
@@ -57,7 +61,7 @@ const ShoppingCart = (props) => {
     </div>
   )
 };
-// Change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้
 ```
 
 # --solutions--
@@ -71,7 +75,7 @@ const ShoppingCart = (props) => {
   )
 };
 
-// Change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้
 ShoppingCart.defaultProps = {
   items: 0
 }

@@ -8,7 +8,7 @@ dashedName: understand-own-properties
 
 # --description--
 
-จากตัวอย่างต่อไปนี้ `Bird` constructor มีการกำหนด properties 2 ค่า คือ `name` และ `numLegs`:
+ในตัวอย่างด้านล่าง constructor `Bird` มีการกำหนด property 2 ค่า คือ `name` และ `numLegs`:
 
 ```js
 function Bird(name) {
@@ -20,7 +20,10 @@ let duck = new Bird("Donald");
 let canary = new Bird("Tweety");
 ```
 
-`name` และ `numLegs` เรียกว่า <dfn>own properties</dfn> เนื่องจากมีการกำหนดโดยตรงใน instance object นั่นหมายความว่า `duck` and `canary` ต่างก็มีสำเนาของ property เหล่านี้ในตัวเช่นกัน แต่จริงๆ แล้ว ทุก instance ของ `Bird` ก็จะมีสำเนาของ property เหล่านี้ โค้ดต่อไปนี้เป็นการเพิ่ม properties ของ `duck` เข้าไปใน array `ownProps`:
+เราจะเรียก `name` และ `numLegs` ว่าเป็น <dfn>own property</dfn> เพราะว่า property สองตัวนี้ถูกกำหนดให้กับ instance โดยตรง 
+แปลว่าทั้ง `duck` และ `canary` จะมี property สองตัวนี้เป็นของตัวเอง (เราจะเรียนเรื่อง property ที่ไม่ใช่ own property ในภายหลัง)
+ทุกๆ instance ของ `Bird` ที่เราเรียนมากจนถึงตอนนี้ ต่างก็มี property นี้เป็นของตัวเองเหมือนกัน 
+ตัวอย่างด้านล่างเป็นการอ่านชื่อ property ทั้งหมดของ `duck` และเก็บค่าลงใน array `ownProps`:
 
 ```js
 let ownProps = [];
@@ -34,15 +37,15 @@ for (let property in duck) {
 console.log(ownProps);
 ```
 
-console ควรแสดงค่าเป็น `["name", "numLegs"]`.
+จากตัวอย่างด้านบนจะแสดงค่า `["name", "numLegs"]` บน console
 
 # --instructions--
 
-จงเพิ่ม own properties ของ `canary` เข้าไปใน array `ownProps`.
+ให้อ่านชื่อของ own property จาก `canary` และเก็บลงใน array `ownProps`
 
 # --hints--
 
-ผลลัพธ์ของ `ownProps` ควรมีค่า `numLegs` และ `name`.
+array `ownProps` ต้องมีค่าเป็น `"numLegs"` และ `"name"`
 
 ```js
 assert(ownProps.indexOf('name') !== -1 && ownProps.indexOf('numLegs') !== -1);
@@ -54,7 +57,7 @@ assert(ownProps.indexOf('name') !== -1 && ownProps.indexOf('numLegs') !== -1);
 assert(!/Object(\.keys|\[(['"`])keys\2\])/.test(code));
 ```
 
-ห้ามกำหนดค่า `ownProps` array ด้วยวิธี hardcode
+ห้ามกำหนดค่าของ array `ownProps` ด้วยวิธี hardcode
 
 ```js
 assert(
@@ -76,7 +79,7 @@ function Bird(name) {
 
 let canary = new Bird("Tweety");
 let ownProps = [];
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 ```
 
 # --solutions--

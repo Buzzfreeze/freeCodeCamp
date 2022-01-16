@@ -8,7 +8,7 @@ dashedName: dynamically-change-the-height-เป็น-each-bar
 
 # --description--
 
-height ของแต่ละ bar สามารถกำหนดค่าของแต่ละ data point ใน array เหมือนกับการ set ค่า `x` โดยอัตโนมัติ
+เราสามารถตั้งค่าความสูงของกราฟแต่ละแท่งได้ ตามค่าของข้อมูลใน array ได้ด้วยวิธีเดียวกับการที่เราตั้งค่า `x`
 
 ```js
 selection.attr("property", (d, i) => {
@@ -16,65 +16,65 @@ selection.attr("property", (d, i) => {
 })
 ```
 
-`d` เป็นค่า data point และ `i` เป็นค่า index ของ data point ใน array
+โดย `d` เป็นค่าของข้อมูลและ `i` เป็นค่า index ของข้อมูลนั้นๆใน array
 
 # --instructions--
 
-เปลี่ยน callback function สำหรับ `height` attribute เพื่อ return ค่า data เป็นสามเท่า
+ให้เปลี่ยน callback function ของ attribute `height` เพื่อให้คืนค่ามาเป็นข้อมูลคูณสาม
 
-**Note:** อย่าลืมคูณทุก data points โดยค่าคงที่ของ data scales (เหมือนกับการ zoom) จะช่วยให้เห็นความแตกต่างของ bar values
+**Note:** ถ้ายังจำได้การคูณข้อมูลด้วยค่าคงที่จะเป็นการเปลี่ยนสเกลของข้อมูลเฉยๆ แต่ไม่ได้ทำให้ความหมายของข้อมูลเปลี่ยนไป (เหมือนกับการ zoom) ซึ่งการใช้วิธีนี้จะทำให้เห็นความต่างของกราฟแต่ละแท่งชัดขึ้น
 
 # --hints--
 
-อันดับที่ 1 `rect` ควรมีค่า `height` เป็น `36`.
+`rect` ตัวที่ 1 ต้องมี `height` เป็น `36`
 
 ```js
 assert($('rect').eq(0).attr('height') == '36');
 ```
 
-อันดับที่ 2 `rect` ควรมีค่า `height` เป็น `93`.
+`rect` ตัวที่ 2 ต้องมี `height` เป็น `93`
 
 ```js
 assert($('rect').eq(1).attr('height') == '93');
 ```
 
-อันดับที่ 3 `rect` ควรมีค่า `height` เป็น `66`.
+`rect` ตัวที่ 3 ต้องมี `height` เป็น `66`
 
 ```js
 assert($('rect').eq(2).attr('height') == '66');
 ```
 
-อันดับที่ 4 `rect` ควรมีค่า `height` เป็น `51`.
+`rect` ตัวที่ 4 ต้องมี `height` เป็น `51`
 
 ```js
 assert($('rect').eq(3).attr('height') == '51');
 ```
 
-อันดับที่ 5 `rect` ควรมีค่า `height` เป็น `75`.
+`rect` ตัวที่ 5 ต้องมี `height` เป็น `75`
 
 ```js
 assert($('rect').eq(4).attr('height') == '75');
 ```
 
-อันดับที่ 6 `rect` ควรมีค่า `height` เป็น `54`.
+`rect` ตัวที่ 6 ต้องมี `height` เป็น `54`
 
 ```js
 assert($('rect').eq(5).attr('height') == '54');
 ```
 
-อันดับที่ 7 `rect` ควรมีค่า `height` เป็น `87`.
+`rect` ตัวที่ 7 ต้องมี `height` เป็น `87`
 
 ```js
 assert($('rect').eq(6).attr('height') == '87');
 ```
 
-อันดับที่ 8 `rect` ควรมีค่า `height` เป็น `42`.
+`rect` ตัวที่ 8 ต้องมี `height` เป็น `42`
 
 ```js
 assert($('rect').eq(7).attr('height') == '42');
 ```
 
-อันดับที่ 9 `rect` ควรมีค่า `height` เป็น `27`.
+`rect` ตัวที่ 9 ต้องมี `height` เป็น `27`
 
 ```js
 assert($('rect').eq(8).attr('height') == '27');
@@ -105,11 +105,11 @@ assert($('rect').eq(8).attr('height') == '27');
        .attr("y", 0)
        .attr("width", 25)
        .attr("height", (d, i) => {
-         // Add your code below this line
+         // เขียนโค้ดใต้บรรทัดนี้
 
 
 
-         // Add your code above this line
+         // เขียนโค้ดเหนือบรรทัดนี้
        });
   </script>
 </body>

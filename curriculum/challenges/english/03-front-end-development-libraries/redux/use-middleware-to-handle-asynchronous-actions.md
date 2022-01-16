@@ -8,39 +8,49 @@ dashedName: use-middleware-to-handle-asynchronous-actions
 
 # --description--
 
-แบบทดสอบที่ผ่านมาหลีกเลี่ยงที่จะพูดถึง asynchronous actions แต่นี่เป็นส่วนที่หลีกเลี่ยงไม่ได้ในการพัฒนาเว็บ เมื่อถึงจุดหนึ่งคุณจะต้องเรียกใช้ asynchronous endpoints ในแอป Redux ของคุณ คุณจะจัดการกับคำขอประเภทนี้อย่างไร Redux มี middleware ที่ออกแบบมาเพื่อจุดประสงค์นี้โดยเฉพาะ เรียกว่า Redux Thunk middleware ต่อไปนี้เป็นคำอธิบายสั้น ๆ เกี่ยวกับวิธีใช้ Redux Thunk middleware นี้กับ Redux
+แบบทดสอบที่ผ่านมาเราหลีกเลี่ยงที่จะพูดถึง asynchronous action แต่ส่วนนี้เป็นส่วนที่หลีกเลี่ยงไม่ได้ในการพัฒนาเว็บ 
+เมื่อถึงจุดหนึ่งคุณจะต้องเรียกใช้ asynchronous endpoint ในแอป Redux ของคุณ คุณจะจัดการกับ request แบบนี้ได้นี้อย่างไร?
+Redux มี middleware ที่ออกแบบมาเพื่อจุดประสงค์นี้โดยเฉพาะ โดยเรียกว่า Redux Thunk middleware
 
-หากต้องเพิ่ม Redux Thunk middleware คุณต้องส่งผ่านมันเป็น argument ไปยัง `Redux.applyMiddleware()` คำสั่งนี้จะถูกจัดเตรียมเป็นพารามิเตอร์ทางเลือกที่สองสำหรับฟังก์ชัน `createStore()` ดูโค้ดที่ด้านล่างของ editor เพื่อดูสิ่งนี้ จากนั้น ในการสร้าง asynchronous action คุณจะต้อง return ฟังก์ชันใน action creator ที่ใช้ `dispatch` เป็น argument ภายในฟังก์ชันนี้ คุณสามารถส่ง actions และดำเนินการ asynchronous requests ได้
+วิธีเพิ่ม Redux Thunk middleware คือ คุณต้องส่ง middleware เป็น argument ไปให้ `Redux.applyMiddleware()` 
+แล้วคุณก็จะต้องนำ `Redux.applyMiddleware()` ไปใช้เป็น argument ตัวที่สองในฟังก์ชัน `createStore()` (ลองดูตัวอย่างโค้ดได้ใน editor) 
+ส่วนในการสร้าง asynchronous action คุณจะต้องให้ action creator ตัวที่ใช้ `dispatch` เป็น argument คืนค่าออกมาเป็นฟังก์ชัน ในฟังก์ชันที่คืนออกมานี้ คุณจะ `dispatch` action และทำการส่ง request แบบ asynchronous ได้
 
-ในตัวอย่างนี้ asynchronous request จะถูกจำลองด้วยการเรียใช้ `setTimeout()` เป็นเรื่องปกติที่จะส่ง action ก่อนที่จะเริ่มการทำงานแบบ asynchronous เพื่อให้ state แอปพลิเคชันของคุณรู้ว่ามีการร้องขอข้อมูลบางอย่าง (เช่น state นี้อาจแสดงไอคอนการโหลด เป็นต้น) จากนั้น เมื่อคุณได้รับข้อมูล คุณจะส่ง action อื่นที่มีข้อมูลเป็นเพย์โหลดพร้อมกับข้อมูลที่ว่า action นั้นเสร็จสิ้น
+ในตัวอย่างนี้เราจะจำลอง request แบบ asynchronous ด้วยการใช้ `setTimeout()` 
+ปกติแล้วเราจะ `dispatch` action ก่อนที่จะเริ่มการทำงานแบบ asynchronous เพื่อให้ state ของแอปรู้ว่ามีการ request ข้อมูลอยู่ (เช่น state นี้อาจแสดงไอคอนการโหลด เป็นต้น) จากนั้น เมื่อคุณได้รับข้อมูลมาแล้ว คุณจะ `dispatch` action อีกตัวหนึ่งที่มีข้อมูลที่ได้คืนมาจาก request ที่ส่งไป พร้อมกับข้อมูลที่แสดงว่า action นั้นเสร็จสิ้น
 
-จำไว้ว่าคุณกำลังส่ง `dispatch` เป็นพารามิเตอร์ไปยัง action creator พิเศษนี้ นี่คือสิ่งที่คุณจะใช้เพื่อส่ง actions ของคุณ คุณเพียงแค่ส่ง action นั้นโดยตรงเพื่อส่ง จากนั้น middleware จะดูแลส่วนที่เหลือเอง
+จำไว้ว่าคุณกำลังส่ง `dispatch` เป็นพารามิเตอร์ไปยัง action creator ตัวพิเศษนี้ 
+และคุณจะต้องใช้พารามิเตอร์นี้เพื่อ `dispatch` action ของคุณ 
+คุณแค่ต้องส่ง action นั้นให้กับ `dispatch` โดยตรง จากนั้น middleware จะจัดการส่วนที่เหลือเอง
 
 # --instructions--
 
-ให้เขียนการส่งทั้งสองใน `handleAsync()` action creator ส่ง `requestingData()` ก่อน `setTimeout()` (การเรียกใช้ API จำลอง) แล้วหลังจากที่คุณได้รับข้อมูล (จำลอง) ให้ส่ง `receivedData()` action โดยส่งข้อมูลนี้ ตอนนี้คุณรู้วิธีจัดการกับ asynchronous actions ใน Redux แล้ว สิ่งอื่นนอกจากนี้ก็จะยังคงทำตามแบบปฏิบัติเดิม
+ให้เขียน `dispatch` สองตัวใน `handleAsync()` action creator 
+ให้ `dispatch` action `requestingData()` ก่อน แล้วค่อยเรียกใช้ `setTimeout()` (จำลองการเรียก API) 
+หลังจากที่คุณได้รับข้อมูล (จำลอง) ให้ `dispatch` action `receivedData()` โดยส่งข้อมูล (จำลอง) นี้ไปให้ `dispatch`  
+เท่านี้คุณก็รู้วิธีจัดการกับ asynchronous action ใน Redux แล้ว ส่วนอื่นของโค้ดก็ยังจะทำงานได้เหมือนเดิม
 
 # --hints--
 
-`requestingData` action creator ควร return object ของ type ที่มีค่าเท่ากับ `REQUESTING_DATA`
+`requestingData` ต้องคืนค่าเป็น object ที่มีค่าของ type เป็น `REQUESTING_DATA`
 
 ```js
 assert(requestingData().type === REQUESTING_DATA);
 ```
 
-`receivedData` action creator ควร return object ของ type ที่มีค่าเท่ากับ `RECEIVED_DATA`
+`receivedData` ต้องคืนค่าเป็น object ที่มีค่าของ type เป็น `RECEIVED_DATA`
 
 ```js
 assert(receivedData('data').type === RECEIVED_DATA);
 ```
 
-`asyncDataReducer` ควรเป็นฟังก์ชัน
+`asyncDataReducer` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof asyncDataReducer === 'function');
 ```
 
-การส่ง `requestingData` action creator ควรอัปเดต store `state` ที่มี property ที่รับมาเป็น `true`
+การ dispatch `requestingData` ต้องอัปเดต property fetch ของ store `state` เป็น `true`
 
 ```js
 assert(
@@ -53,7 +63,7 @@ assert(
 );
 ```
 
-การส่ง `handleAsync` ควรส่งข้อมูลที่เรียกร้อง action และจากนั้นส่ง action ข้อมูลที่ได้รับหลังจากการ delay
+การ dispatch `handleAsync` จะต้องไปทำการ `dispatch` action `requestingData` และ `dispatch` action `receivedData` หลังจากการหน่วงเวลาต่อ
 
 ```js
 assert(
@@ -80,13 +90,13 @@ const receivedData = (data) => { return {type: RECEIVED_DATA, users: data.users}
 
 const handleAsync = () => {
   return function(dispatch) {
-    // Dispatch request action here
+    // dispatch requestingData ตรงนี้
 
     setTimeout(function() {
       let data = {
         users: ['Jeff', 'William', 'Alice']
       }
-      // Dispatch received data action here
+      // dispatch receivedData ตรงนี้
 
     }, 2500);
   }

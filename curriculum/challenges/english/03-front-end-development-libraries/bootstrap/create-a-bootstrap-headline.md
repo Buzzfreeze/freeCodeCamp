@@ -18,13 +18,13 @@ dashedName: create-a-bootstrap-headline
 
 # --hints--
 
-เพิ่ม `h3` element บนเพจ
+เพิ่ม `h3` element ในหน้านี้
 
 ```js
 assert($('h3') && $('h3').length > 0);
 ```
 
-อย่าลืม tag ปิด ของ `h3` element
+อย่าลืม tag ปิดของ `h3` element
 
 ```js
 assert(
@@ -34,13 +34,13 @@ assert(
 );
 ```
 
-เพิ่มสีของ `h3` element โดยการใส่ class ชื่อ `text-primary`
+เพิ่มสีของ `h3` element โดยการใส่ class `text-primary`
 
 ```js
 assert($('h3').hasClass('text-primary'));
 ```
 
-ทำให้ `h3` element อยู่ตรงกลางเพจ โดยการใส่ class ชื่อ `text-center`
+ทำให้ `h3` element อยู่ตรงกลางหน้า โดยการใส่ class `text-center`
 
 ```js
 assert($('h3').hasClass('text-center'));

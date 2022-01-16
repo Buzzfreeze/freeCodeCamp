@@ -8,7 +8,7 @@ dashedName: remember-to-set-the-constructor-property-when-changing-the-prototype
 
 # --description--
 
-การกำหนด prototype ให้มีค่าเป็น object ใหม่แบบ manual ทำให้เกิดผลกระทบที่สำคัญคือ มีการลบ `constructor` property ไปด้วย ซึ่ง `constructor` property สามารถใช้ตรวจสอบว่า instance สร้างจากฟังก์ชัน constructor ใด แต่เนื่องจาก property นี้ถูกเขียนทับ (overwritten) ดังนั้น หากมีการเรียกใช้ property นี้ ก็จะทำให้เกิดผลลัพธ์ที่ผิดได้
+การกำหนด prototype ให้มีค่าเป็น object ใหม่แบบที่เราได้เรียนมา จะทำให้เกิดผลกระทบใหญ่ๆ อย่างหนึ่งก็คือ `constructor` property จะถูกเขียนทับไปด้วย ซึ่ง `constructor` property สามารถใช้ตรวจสอบว่า instance สร้างจากฟังก์ชัน constructor ตัวไหน ซึ่งการที่ property นี้ถูกเขียนทับ จะทำให้การเรียกใช้ property นี้ ก็เกิดผลลัพธ์ที่ผิด
 
 ```js
 duck.constructor === Bird;
@@ -16,9 +16,10 @@ duck.constructor === Object;
 duck instanceof Bird;
 ```
 
-จากคำสั่งด้านบน ได้ผลลัพธ์เป็น `false`, `true` และ `true` ตามลำดับ
+ตัวอย่างด้านบน จะได้ค่าเป็น `false`, `true` และ `true` ตามลำดับ
 
-อย่างไรก็ตาม ปัญหานี้สามารถแก้ไขได้ โดยเมื่อมีการกำหนด prototype ให้มีค่าเป็น object ใหม่แบบ manual ให้เรากำหนด `constructor` property เข้าไปด้วย
+แต่เราก็แก้ปัญหานี้ได้ ถ้าเวลาที่กำหนดค่า prototype ด้วย object ตัวใหม่ แล้วเรากำหนด `constructor` property เข้าไปด้วย
+เหมือนในตัวอย่างนี้:
 
 ```js
 Bird.prototype = {
@@ -35,11 +36,11 @@ Bird.prototype = {
 
 # --instructions--
 
-กำหนด `constructor` property ให้กับ `Dog` `prototype`
+ให้กำหนด `constructor` property ให้กับ `Dog` `prototype`
 
 # --hints--
 
-`Dog.prototype` ควรกำหนด `constructor` property
+ต้องกำหนด `constructor` property ให้กับ `Dog.prototype`
 
 ```js
 assert(Dog.prototype.constructor === Dog);
@@ -54,7 +55,7 @@ function Dog(name) {
   this.name = name;
 }
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 Dog.prototype = {
 
   numLegs: 4,

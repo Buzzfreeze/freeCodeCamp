@@ -8,7 +8,9 @@ dashedName: combine-arrays-with-the-spread-operator
 
 # --description--
 
-ข้อดีอีกประการหนึ่งของ <dfn>spread</dfn> operator คือความสามารถในการรวม array หรือแทรก elements ทั้งหมดของ array หนึ่งไปยังอีก array นึงที่ index ใดก็ได้ ซึ่งหากเราใช้ syntax ดั้งเดิม เราสามารถเชื่อม array เข้าด้วยกันได้ก็จริง แต่เป็นการนำ array นึงมาต่อกับอีก array นึงเท่านั้น (concatenate) นอกจากนี้ Spread syntax ยังทำให้ operation ต่อไปนี้ทำได้ง่ายมาก
+ประโยชน์อีกอย่างของ <dfn>spread</dfn> operator คือเราจะใช้ในการรวม array หรือแทรก element ทั้งหมดของ array หนึ่งไปใน array อีกตัวที่ index ไหนก็ได้ 
+ซึ่งถ้าเราใช้ syntax แบบเก่า ถึงเราจะเชื่อม array เข้าด้วยกันได้ก็จริง แต่เราจะทำได้แค่การต่อ array เท่านั้น (concatenate) 
+Spread syntax จะทำให้การทำงานแบบตัวอย่างนี้ทำได้ง่ายมาก:
 
 ```js
 let thisArray = ['sage', 'rosemary', 'parsley', 'thyme'];
@@ -16,23 +18,24 @@ let thisArray = ['sage', 'rosemary', 'parsley', 'thyme'];
 let thatArray = ['basil', 'cilantro', ...thisArray, 'coriander'];
 ```
 
-`thatArray` ควรมีค่า `['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander']`.
+`thatArray` จะมีค่าเป็น `['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander']`.
 
-จะเห็นได้ว่า การใช้ syntax spread ทำให้เราทำ operation ที่ซับซ้อนได้ง่ายกว่าการใช้วิธีการแบบเดิม
+จะเห็นว่าการใช้ spread syntax ทำให้เราทำงานที่ซับซ้อนได้ง่ายกว่าการใช้วิธีเก่า
 
 # --instructions--
 
-เราได้ประกาศฟังก์ชัน `spreadOut` ที่คืนค่าเป็นตัวแปร `sentence` จงแก้ไขฟังก์ชันโดยใช้<dfn>spread</dfn> operator เพื่อคืนค่าเป็น array `['learning', 'to', 'code', 'is', 'fun']`
+เราได้ประกาศฟังก์ชัน `spreadOut` ที่คืนค่าเป็นตัวแปร `sentence` ให้แล้ว 
+ให้แก้ไขฟังก์ชันโดยใช้ <dfn>spread</dfn> operator เพื่อให้คืนค่าเป็น array `['learning', 'to', 'code', 'is', 'fun']`
 
 # --hints--
 
-`spreadOut` ควรคืนค่า `["learning", "to", "code", "is", "fun"]`
+`spreadOut` ต้องคืนค่าเป็น `["learning", "to", "code", "is", "fun"]`
 
 ```js
 assert.deepEqual(spreadOut(), ['learning', 'to', 'code', 'is', 'fun']);
 ```
 
-`spreadOut` ควรใช้ spread syntax
+ต้องใช้ spread syntax ใน `spreadOut`
 
 ```js
 assert.notStrictEqual(spreadOut.toString().search(/[...]/), -1);
@@ -45,7 +48,7 @@ assert.notStrictEqual(spreadOut.toString().search(/[...]/), -1);
 ```js
 function spreadOut() {
   let fragment = ['to', 'code'];
-  let sentence; // Change this line
+  let sentence; // แก้บรรทัดนี้
   return sentence;
 }
 

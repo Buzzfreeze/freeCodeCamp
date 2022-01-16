@@ -28,7 +28,7 @@ describe('Donate page', () => {
           force: true
         });
 
-      cy.contains("I've completed this challenge").click();
+      cy.contains('ฉันทำภารกิจที่ท้าทายนี้เสร็จแล้ว').click();
       cy.contains('Submit and go to next challenge').click();
     };
 

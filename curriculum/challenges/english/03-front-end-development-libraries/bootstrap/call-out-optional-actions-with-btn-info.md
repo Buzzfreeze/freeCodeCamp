@@ -8,15 +8,16 @@ dashedName: call-out-optional-actions-with-btn-info
 
 # --description--
 
-Bootstrap มาพร้อมกับสีพื้นฐานที่กำหนดมาก่อนแล้วสำหรับปุ่มต่างๆ อย่างเช่น `btn-info` class ซึ่งเป็นสีของปุ่มที่ดึงดูดความสนใจของผู้ใช้สำหรับตัวเลือกปุ่มอื่นๆ
+Bootstrap นั้นกำหนดสีของปุ่มประเภทต่างๆมาให้แล้ว อย่างเช่น class `btn-info` ซึ่งเป็นสีที่สื่อว่า user จะกดปุ่มนี้เพื่อทำอย่างอื่นได้
 
-มาลองสร้างปุ่มแบบ block-level จาก Bootstrap ใส่ข้อความว่า `Info` และกำหนด class `btn-info` และ `btn-block` จาก Bootstrap ด้วย โดยให้อยู่ด้านล่างของปุ่ม `Like`
+มาลองสร้างปุ่มแบบ block โดยใช้ Bootstrap กัน
+ให้สร้างปุ่มที่มีข้อความว่า `Info` และมี class เป็น `btn-info` และ `btn-block` โดยให้อยู่ใต้ปุ่ม `Like`
 
-หมายเหตุ ทั้งปุ่ม `Like` และ `Info` นี้ยังต้องกำหนด class `btn` และ `btn-block` ด้วยเช่นกัน
+หมายเหตุ ทั้งปุ่ม `Like` และ `Info` นี้ยังต้องมี class `btn` และ `btn-block` ด้วยเหมือนกัน
 
 # --hints--
 
-สร้าง `button` element ใหม่ ที่มีข้อความ `Info`
+สร้าง `button` element ใหม่ที่มีคำว่า `Info`
 
 ```js
 assert(new RegExp('info', 'gi').test($('button').text()));
@@ -28,7 +29,7 @@ assert(new RegExp('info', 'gi').test($('button').text()));
 assert($('button.btn-block.btn').length > 1);
 ```
 
-ในปุ่ม `Info` นั้น ต้องกำหนด class `btn-info` ด้วย
+ในปุ่ม `Info` นั้นต้องกำหนด class `btn-info` ด้วย
 
 ```js
 assert($('button').hasClass('btn-info'));

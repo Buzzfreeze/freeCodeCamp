@@ -8,7 +8,8 @@ dashedName: use-state-to-toggle-an-element
 
 # --description--
 
-บางครั้งคุณอาจจำเป็นต้องทราบ state ก่อนหน้าเมื่อมีการอัปเดต state อย่างไรก็ตาม การอัปเดต state อาจเป็นแบบ asynchronous ซึ่งหมายความว่า React อาจรวมการเรียกใช้งานของ `setState()` หลายชุดไว้ในการอัปเดตครั้งเดียว ซึ่งหมายความว่าคุณไม่สามารถพึ่งพาค่าก่อนหน้าของ `this.state` หรือ `this.props` เมื่อกำลังคำนวณค่าถัดไป ดังนั้น คุณไม่ควรใช้โค้ดเช่นนี้:
+บางครั้งเราอาจต้องอ่านค่าของ state ก่อนที่จะไปอัปเดต state แต่การการอัปเดต state อาจเป็น asynchronous ก็ได้
+แปลว่า React อาจรวมการอัปเดท state หลายๆครั้งเข้าด้วยกัน ทำให้เราไม่ควรเชื่อค่าของ `this.state` หรือ `this.props` ในการคำนวณค่าถัดไป จึงไม่ควรใช้โค้ดแบบนี้:
 
 ```jsx
 this.setState({
@@ -16,7 +17,8 @@ this.setState({
 });
 ```
 
-คุณควรส่งฟังก์ชัน `setState` ที่อนุญาตให้คุณเข้าถึง state และ props แทน การใช้ฟังก์ชันที่มี `setState` จะรับประกันว่าคุณกำลังทำงานกับค่า state และ props ที่เป็นปัจจุบันที่สุด ซึ่งคุณควรเขียนโค้ดข้างต้นใหม่เป็น:
+เราควรส่งฟังก์ชันที่เข้าถึง state และ props ได้เข้าไปใน `setState` แทน การส่งฟังก์ชันเข้าไปใน `setState` จะรับประกันว่าเราจะใช้ state และ props ที่เป็นตัวล่าสุด 
+โค้ดข้างบนก็จะเขียนได้ใหม่เป็น:
 
 ```jsx
 this.setState((state, props) => ({
@@ -24,7 +26,7 @@ this.setState((state, props) => ({
 }));
 ```
 
-คุณยังสามารถใช้แบบฟอร์มที่ไม่มี `props` หากคุณต้องการเพียง `state`:
+ถ้าไม่ใช้ `props` จะใช้แค่ `state` ก็ได้:
 
 ```jsx
 this.setState(state => ({
@@ -32,21 +34,25 @@ this.setState(state => ({
 }));
 ```
 
-โปรดทราบว่าคุณต้อง object ในวงเล็บ มิฉะนั้น JavaScript จะคิดว่าเป็นบล็อกของโค้ด
+อย่าลืมว่าถ้าจะให้ arrow function รับ argumnet 2 ตัว จะต้องครอบ argumnet ทั้งสองตัวนั้นไว้ในวงเล็บ 
 
 # --instructions--
 
-`MyComponent` มี `visibility` property ซึ่งค่าเริ่มต้นเป็น `false` ซึ่ง render method จะreturn มุมมองหนึ่งหากค่าของ `visibility` เป็นจริง และมุมมองอื่นหากเป็นเท็จ
+`MyComponent` มี property ชื่อ `visibility` ซึ่งมีค่าเริ่มต้นเป็น `false` ซึ่ง method `render` จะแสดงผลเป็นแบบหนึ่งถ้าค่าของ `visibility` เป็น `true` และแสดงผลเป็นอีกแบบหนึ่งถ้าเป็น `false`
 
-ตอนนี้ยังไม่มีวิธีอัปเดต `visibility` property ใน `state` ของ component ค่าของมันควรสลับไปมาระหว่างจริงและเท็จ มันมี click handler บนปุ่มซึ่งเรียกใช้งาน class method ที่เรียกว่า `toggleVisibility()` ส่งฟังก์ชันไปที่ `setState` เพื่อกำหนด method นี้ เพื่อให้ `state` ของ ` visibility` สลับเป็นค่าที่ตรงกันข้ามเมื่อมีการเรียกใช้งาน method ส่งผลให้หาก `visibility` เป็น `false` method จะตั้งค่าเป็น `true` และในทางกลับกันก็จะตั้งค่าเป็น `false`
+ตอนนี้ยังไม่มีโค้ดที่อัปเดทค่าของ property `visibility` ใน `state` ของ component 
+ค่าของ property นี้ควรสลับไปมาระหว่าง `true` กับ `false` 
+ตอนนี้ปุ่มของเรามี click handler ที่เรียกใช้งาน method `toggleVisibility()` แล้ว
+ให้เขียน method นี้ แล้วให้ method นี้ทำงานโดยจะส่งฟังก์ชันไปใน `setState` เพื่อให้ `visibility` ใน `state` เปลี่ยนไปเปลี่ยนมาได้
+ถ้าเราเรียกใช้ method นี้ตอนที่ `visibility` เป็น `false`  ค่าต้องถูกเปลี่ยนเป็น `true` แต่ถ้า `visibility` เป็น `true` อยู่ ก็ต้องเปลี่ยนเป็น `false`
 
-สุดท้าย ให้คลิกปุ่มเพื่อดูการเรนเดอร์ตามเงื่อนไขของ component ตาม `state` ของมัน
+สุดท้าย ให้ลองคลิกปุ่มเพื่อดูการเรนเดอร์ของ component ตามเงื่อนไขของ `state` ที่เปลี่ยนไป
 
 **Hint:** อย่าลืมผูกคีย์เวิร์ด `this` กับ method ใน `constructor`!
 
 # --hints--
 
-`MyComponent` ควร return `div` element ที่มี `button` ข้างใน
+`MyComponent` ต้องคืนค่าเป็น `div` ที่มี `button` ข้างใน
 
 ```js
 assert.strictEqual(
@@ -56,7 +62,7 @@ assert.strictEqual(
 );
 ```
 
-State ของ `MyComponent` ควรมีค่าเริ่มต้นด้วย `visibility` property ตั้งค่าเป็น `false`
+ค่าเริ่มต้นของ state ใน `MyComponent` ต้องมี property `visibility` ที่มีค่าเป็น `false`
 
 ```js
 assert.strictEqual(
@@ -65,7 +71,7 @@ assert.strictEqual(
 );
 ```
 
-การคลิก element ปุ่มควรจะเป็นการสลับค่า `visibility` property ใน state เป็นค่าระหว่าง `true` และ `false`
+การคลิกปุ่มต้องเป็นเป็นการสลับค่า property `visibility` ใน state เป็น `true` หรือ `false`
 
 ```js
 (() => {
@@ -89,7 +95,7 @@ assert.strictEqual(
 })();
 ```
 
-ฟังก์ชันที่ไม่ระบุชื่อควรถูกส่งไปยัง `setState`
+ต้องส่ง anonymous function เข้าไปใน `setState`
 
 ```js
 const paramRegex = '[a-zA-Z$_]\\w*(,[a-zA-Z$_]\\w*)?';
@@ -104,7 +110,7 @@ assert(
 );
 ```
 
-`this` ไม่ควรถูกใช้ภายใน `setState`
+ต้องไม่ใช้ `this` ใน `setState`
 
 ```js
 assert(!/this\.setState\([^}]*this/.test(code));
@@ -127,13 +133,13 @@ class MyComponent extends React.Component {
     this.state = {
       visibility: false
     };
-    // Change code below this line
+    // แก้โค้ดใต้บรรทัดนี้
 
-    // Change code above this line
+    // แก้โค้ดเหนือบรรทัดนี้
   }
-  // Change code below this line
+  // แก้โค้ดใต้บรรทัดนี้
 
-  // Change code above this line
+  // แก้โค้ดเหนือบรรทัดนี้
   render() {
     if (this.state.visibility) {
       return (

@@ -8,7 +8,8 @@ dashedName: pass-an-array-as-props
 
 # --description--
 
-แบบทดสอบที่ผ่านมาแสดงให้เห็นวิธีการส่งผ่านข้อมูลจาก parent component ไปยัง child component เป็น `props` หรือ properties ในแบบทดสอบนี้จะเราจะดูว่า array สามารถส่งผ่านเป็น `props` ได้อย่างไร ในการส่งผ่าน array ไปยัง JSX element จะต้องถือเป็น JavaScript และใส่วงเล็บปีกกา
+แบบทดสอบที่ผ่านมาแสดงให้เห็นวิธีการส่งผ่านข้อมูลจาก parent component ไปยัง child component โดยใช้ `props` หรือ properties ในแบบทดสอบนี้จะเราจะดูว่าเราจะส่ง array ไปยัง `props` ได้อย่างไร 
+ในการส่ง array ไปยัง JSX element เราจะต้องมองว่า array นั้นเป็น JavaScript และใส่วงเล็บปีกกาครอบ ลองดูตัวอย่าง:
 
 ```jsx
 <ParentComponent>
@@ -16,16 +17,27 @@ dashedName: pass-an-array-as-props
 </ParentComponent>
 ```
 
-child component จะสามารถเข้าถึง array property `colors` คุณสามารถใช้ Array methods เช่น `join()`เพื่อเข้าถึง property 
-`const ChildComponent = (props) => <p>{props.colors.join(', ')}</p>` ซึ่งจะรวมรายการ`colors` array ทั้งหมดลงใน string ที่คั่นด้วย comma และสร้าง: `<p>green, blue, red</p>` ต่อมาเราจะเรียนรู้เกี่ยวกับ method ทั่วไปอื่น ๆ ในการเรนเดอร์ array ของข้อมูลใน React
+ตอนนี้ child component จะเข้าถึง property `colors` ที่เป็น array ได้แล้ว
+แล้วเราจะใช้ method ของ array เช่น `join()` ในตอนที่อ่านค่าของ property ได้ด้วย เช่น
+`const ChildComponent = (props) => <p>{props.colors.join(', ')}</p>` 
+โค้ดด้านบนจะรวม array `colors` ให้กลายเป็น string ตัวเดียวที่ชื่อสีแต่ละชื่อจะคั่นด้วย comma และจะคืนค่าเป็น: `<p>green, blue, red</p>`
+เราจะเรียนเรื่อง method ทั่วไปอื่นๆในการแสดง array ของข้อมูลใน React ในภายหลัง
 
 # --instructions--
 
-มี `List` และ `ToDo` component ใน code editor เมื่อเรนเดอร์ `List` แต่ละรายการจาก`ToDo` component ให้ส่งผ่าน `tasks` property ที่กำหนดให้กับ array ของ to-do tasks เช่น `["walk dog", "workout"]` จากนั้นข้าถึง `tasks` array นี้ใน `List` component โดยแสดงค่าภายใน `p` element ใช้ `join(", ")` เพื่อแสดง `props.tasks`array ใน `p` element เป็นรายการที่คั่นด้วย comma ส่วนของ list วันนี้ควรมีอย่างน้อย 2 tasks และของพรุ่งนี้ควรมีอย่างน้อย 3 tasks
+เราได้สร้าง component `List` และ `ToDo` ใน code editor ให้แล้ว
+เมื่อเรนเดอร์ `List` แต่ละตัวใน `ToDo` ให้ส่ง property `tasks` เข้าไปด้วย 
+โดย property `tasks` นี้จะเป็น array ของ string เช่น `["walk dog", "workout"]`
+จากนั้นให้อ่านค่าของ array `tasks` นี้ใน `List` แล้วเอาค่าไปใส่ใน `p` element โดยใช้ `join(", ")`
+
+โดยมีเงื่อนไขของ array `tasks` ที่ส่งเข้าไปตามนี้
+
+1. array ที่ส่งเข้าไปใน `List` ที่อยู่ใต้ `<h2>Today</h2>` ต้องมี string อย่างน้อยสองค่า
+2. array ที่ส่งเข้าไปใน `List` ที่อยู่ใต้ `<h2>Tomorrow</h2>` ต้องมี string อย่างน้อยสามค่า
 
 # --hints--
 
-`ToDo` component ควร return `div` ชั้นนอกสุด 1 อัน
+component `ToDo` ต้องคืนค่าเป็น `div` ตัวเดียวที่ครอบข้อมูลที่อยู่ข้างใน
 
 ```js
 assert(
@@ -36,7 +48,7 @@ assert(
 );
 ```
 
-Child ลำดับที่ 3 ของ `ToDo` component ควรเป็นรายการของ `List` component
+child ตัวที่สามของ `ToDo` ต้องเป็น `List`
 
 ```js
 assert(
@@ -47,7 +59,7 @@ assert(
 );
 ```
 
-Child ลำดับที่ 5 ของ `ToDo` component ควรเป็นรายการของ `List` component
+child ตัวที่สามของ `ToDo` ต้องเป็น `List`
 
 ```js
 assert(
@@ -58,7 +70,7 @@ assert(
 );
 ```
 
-รายการทั้ง 2 ของ `List` component ควรมี property ชื่อว่า `tasks` และ `tasks` ควรเป็น array
+`List` ทั้งสองตัวใน `ToDo` ต้องรับ property `tasks` และ `tasks` ต้องเป็น array ของ string
 
 ```js
 assert(
@@ -72,7 +84,7 @@ assert(
 );
 ```
 
-`List` component แรกแสดงถึง tasks สำหรับวันนี้ที่ควรมีอย่างน้อย 2 รายการ
+`List` แรกต้องมีข้อมูลใน `tasks` อย่างน้อย 2 ตัว
 
 ```js
 assert(
@@ -83,7 +95,7 @@ assert(
 );
 ```
 
-`List` component ที่สองแสดงถึง tasks สำหรับวันพรุ่งนี้ที่ควรมีอย่างน้อย 3 รายการ
+`List` ที่สองต้องมีข้อมูลใน `tasks` อย่างน้อย 3 ตัว
 
 ```js
 assert(
@@ -94,7 +106,7 @@ assert(
 );
 ```
 
-`List` component ควรเรนเดอร์ค่าจาก `tasks` prop ใน `p` tag
+`List` ต้องอ่านค่าจาก property `tasks` แล้วนำไปใส่ในแท็ก `p` โดยใช้ `.join(", ")`
 
 ```js
 assert(
@@ -136,9 +148,9 @@ ReactDOM.render(<ToDo />, document.getElementById('root'))
 
 ```jsx
 const List = (props) => {
-  { /* Change code below this line */ }
+  { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
   return <p>{}</p>
-  { /* Change code above this line */ }
+  { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
 };
 
 class ToDo extends React.Component {
@@ -150,11 +162,11 @@ class ToDo extends React.Component {
       <div>
         <h1>To Do Lists</h1>
         <h2>Today</h2>
-        { /* Change code below this line */ }
+        { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
         <List/>
         <h2>Tomorrow</h2>
         <List/>
-        { /* Change code above this line */ }
+        { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
       </div>
     );
   }

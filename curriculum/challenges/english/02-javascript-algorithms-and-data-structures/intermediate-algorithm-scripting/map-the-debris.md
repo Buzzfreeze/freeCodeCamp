@@ -8,19 +8,22 @@ dashedName: map-the-debris
 
 # --description--
 
-ให้คืนค่าเป็น array ตัวใหม่ ที่แปลงความสูงเฉลี่ยของ elements เป็นระยะเวลาการโคจร (วินาที)
+ให้เขียนฟังก์ชันที่แปลงความสูงเฉลี่ยของดาวเทียมเป็นระยะเวลาการโคจรในหน่วยวินาที (Orbital Period)
 
-array ประกอบด้วย objects ที่อยู่ในรูปแบบ `{name: 'name', avgAlt: avgAlt}`
+ฟังก์ชันนี้จะรับค่าเป็น array ของ object ที่อยู่ในรูปแบบนี้ `{name: 'name', avgAlt: avgAlt}` และให้คืนค่าเป็น array ตัวใหม่โดยที่ array เดิมต้องไม่เปลี่ยนแปลง โดย object ใน array ที่คืนค่าออกมาจะต้องอยู่ในรูป `{name: 'name', orbitalPeriod: orbitalPeriod}`
 
-คุณสามารถอ่านเกี่ยวกับระยะเวลาโคจรได้ที่ [on Wikipedia](http://en.wikipedia.org/wiki/Orbital_period).
+อ่านเรื่องระยะเวลาโคจรของดาวเทียมได้ที่ [on Wikipedia](http://en.wikipedia.org/wiki/Orbital_period)
 
-ควรปัดเศษผลลัพธ์ให้เป็นจำนวนเต็มที่ใกล้ที่สุด การโคจรนั้นเป็นการโคจรรอบโลก
+เงื่อนไขในการคำนวนคือ
 
-เส้นผ่านศูนย์กลางของโลกคือ 6367.4447 km และค่า GM ของโลกคือ 398600.4418 km<sup>3</sup>s<sup>-2</sup>.
+- ต้องปัดเศษของผลลัพธ์ให้เป็นจำนวนเต็มที่ใกล้ที่สุด 
+- การโคจรของดาวเทียมนั้นเป็นการโคจรรอบโลก
+- เส้นผ่านศูนย์กลางของโลกคือ 6367.4447 km และค่า GM ของโลกคือ 398600.4418 km<sup>3</sup>s<sup>-2</sup>
+- สูตรในการคำนวนสามารถดูได้จากเว็บไซต์ด้านบน ในหัวข้อ `Small body orbiting a central body` โดยค่าของ `orbitalPeriod` ที่เราต้องหาคือตัวแปร `T` ในสมการแรก
 
 # --hints--
 
-`orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}])` ควรคืนค่าเป็น `[{name: "sputnik", orbitalPeriod: 86400}]`
+`orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}])` ต้องคืนค่าเป็น `[{name: "sputnik", orbitalPeriod: 86400}]`
 
 ```js
 assert.deepEqual(orbitalPeriod([{ name: 'sputnik', avgAlt: 35873.5553 }]), [
@@ -28,7 +31,7 @@ assert.deepEqual(orbitalPeriod([{ name: 'sputnik', avgAlt: 35873.5553 }]), [
 ]);
 ```
 
-`orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}])` ควรคืนค่าเป็น `[{name : "iss", orbitalPeriod: 5557}, {name: "hubble", orbitalPeriod: 5734}, {name: "moon", orbitalPeriod: 2377399}]`
+`orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}])` ต้องคืนค่าเป็น `[{name : "iss", orbitalPeriod: 5557}, {name: "hubble", orbitalPeriod: 5734}, {name: "moon", orbitalPeriod: 2377399}]`
 
 ```js
 assert.deepEqual(

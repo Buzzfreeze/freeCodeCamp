@@ -8,20 +8,20 @@ dashedName: use-higher-order-functions-map-filter-or-reduce-to-solve-a-complex-p
 
 # --description--
 
-ตอนนี้คุณได้ทำแบบทดสอบที่เกี่ยวข้องกับ higher-order functions เช่น `map()`, `filter()` และ `reduce()` แล้ว ถึงเวลาแล้วที่คุณจะได้ใช้ความรู้เหล่านั้นในการทำแบบทดสอบที่ยากมากขึ้น
+ตอนนี้คุณได้ทำแบบทดสอบที่เกี่ยวกับ higher-order function เช่น `map()`, `filter()` และ `reduce()` แล้ว ถึงเวลาที่คุณจะได้ใช้ความรู้นี้มาทำแบบทดสอบที่ยากขึ้นแล้ว
 
 # --instructions--
 
-จงเขียนโค้ดฟังก์ชัน `squareList` โดยสามารถใช้ `map()`, `filter()` และ `reduce()` ผสมกันได้ และฟังก์ชันนี้ควรคืนค่าเป็น array ตัวใหม่ที่ประกอบด้วยเลขยกกำลังสองของจำนวนเต็มบวก (เลขทศนิยมไม่ใช่เลขจำนวนเต็ม) โดยฟังก์ชันนี้รับ argument เป็น array ของเลขจำนวนจริง 
+ให้เขียน `squareList` โดยใช้ `map()`, `filter()` และ `reduce()` ผสมกันได้
+ฟังก์ชันนี้จะต้องคืนค่าเป็น array ที่มีค่า element แต่ละตัวเป็นเลขยกกำลังสองที่เป็นจำนวนเต็มบวกของ array ที่เป็น argument (เลขทศนิยมไม่ใช่เลขจำนวนเต็ม)
+โดยฟังก์ชันนี้รับ argument เป็น array ของเลขจำนวนจริง 
 ตัวอย่าง array ของเลขจำนวนจริง คือ `[-3, 4.8, 5, 3, -3.2]`
 
-Complete the code for the `squareList` function using any combination of `map()`, `filter()`, and `reduce()`. The function should return a new array containing the squares of *only* the positive integers (decimal numbers are not integers) when an array of real numbers is passed to it. An example of an array of real numbers is `[-3, 4.8, 5, 3, -3.2]`.
-
-**หมายเหตุ:** ฟังก์ชันของคุณไม่ควรใช้ `for` หรือ `while` loops หรือ `forEach()` function
+**หมายเหตุ:** ห้ามใช้ `for` หรือ `while` loop หรือฟังก์ชัน `forEach()` ในโค้ด
 
 # --hints--
 
-`squareList` ควรเป็น `function`.
+`squareList` ต้องเป็น `function`
 
 ```js
 assert.typeOf(squareList, 'function'),
@@ -34,7 +34,7 @@ assert.typeOf(squareList, 'function'),
 assert(!code.match(/for|while|forEach/g));
 ```
 
-ควรใช้ `map`, `filter` หรือ `reduce`
+ต้องใช้ `map`, `filter` หรือ `reduce`
 
 ```js
 assert(
@@ -44,13 +44,13 @@ assert(
 );
 ```
 
-ฟังก์ชันนี้ควรคืนค่าเป็น `array`.
+ฟังก์ชันนี้ต้องคืนค่าเป็น `array`
 
 ```js
 assert(Array.isArray(squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2])));
 ```
 
-`squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2])` ควรคืนค่าเป็น `[16, 1764, 36]`.
+การเรียกใช้ฟังก์ชัน `squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2])` ต้องได้ค่าเป็น `[16, 1764, 36]`
 
 ```js
 assert.deepStrictEqual(squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]), [
@@ -60,7 +60,7 @@ assert.deepStrictEqual(squareList([4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2]), [
 ]);
 ```
 
-`squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3])` ควรคืนค่าเป็น `[9, 100, 49]`.
+การเรียกใช้ฟังก์ชัน `squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3])` ต้องได้ค่าเป็น `[9, 100, 49]`
 
 ```js
 assert.deepStrictEqual(squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3]), [
@@ -76,9 +76,9 @@ assert.deepStrictEqual(squareList([-3.7, -5, 3, 10, 12.5, 7, -4.5, -17, 0.3]), [
 
 ```js
 const squareList = arr => {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   return arr;
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 };
 
 const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);

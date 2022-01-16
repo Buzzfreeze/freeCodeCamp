@@ -22,7 +22,7 @@ dashedName: build-a-pong-game
 
 **User Story:** มีคะแนนของทั้งคอมพิวเตอร์และผู้เล่นบอก ระหว่างเล่น
 
-เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "I've completed this challenge"
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "ฉันทำภารกิจที่ท้าทายนี้เสร็จแล้ว"
 
 สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 

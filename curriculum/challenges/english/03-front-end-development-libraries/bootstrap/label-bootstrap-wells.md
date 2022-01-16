@@ -8,11 +8,11 @@ dashedName: label-bootstrap-wells
 
 # --description--
 
-เรามาใส่ไอดีให้แต่ละ well เพื่อให้รู้ชัดว่า well ไหนเป็น well ไหนดีกว่า
+เรามาแสดง id ของ well ทั้งสองตัวเพื่อให้รู้ว่า well ไหนเป็น well ไหนดีกว่า
 
-โดยให้เพิ่ม `h4` element ข้างบน left-well ใส่ข้อความว่า `#left-well` ไว้ใน `div` element ที่มี class `col-xs-6` ที่ครอบ `div` ที่มีไอดี `left-well` อยู่
+โดยให้เพิ่ม `h4` element ไว้เหนือ left-well โดยเอาไว้ใน `div` ที่มี class เป็น `col-xs-6` และใส่ข้อความว่า `#left-well`
 
-และเพิ่ม `h4` element ข้างบน right-well ใส่ข้อความว่า `#right-well` ไว้ใน `div` element ที่มี class `col-xs-6` ที่ครอบ `div` ที่มีไอดี `right-well` อยู่
+และเพิ่ม `h4` element ไว้เหนือ right-well โดยเอาไว้ใน `div` ที่มี class เป็น `col-xs-6` และใส่ข้อความว่า `#right-well`
 
 # --hints--
 
@@ -24,19 +24,19 @@ assert(
 );
 ```
 
-ใส่ข้อความ `#left-well` ให้กับหนึ่งใน `h4` element ที่เพิ่มมา
+ใส่ข้อความ `#left-well` ให้ `h4` อันซ้าย
 
 ```js
 assert(new RegExp('#left-well', 'gi').test($('h4').text()));
 ```
 
-และข้อความ `#right-well` ให้กับ `h4` element ที่เหลือ
+ใส่ข้อความ `#right-well` ให้กับ `h4` อันขวา
 
 ```js
 assert(new RegExp('#right-well', 'gi').test($('h4').text()));
 ```
 
-อย่าลืม tag ปิด สำหรับแต่ละ `h4` element
+อย่าลืม tag ปิดของ `h4` ทั้งสองตัว
 
 ```js
 assert(

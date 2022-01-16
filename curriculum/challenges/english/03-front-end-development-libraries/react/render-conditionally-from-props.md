@@ -8,21 +8,32 @@ dashedName: render-conditionally-from-props
 
 # --description--
 
-จนถึงตอนนี้ คุณได้เห็นวิธีการใช้ `if/else`, `&&` และ ternary operator (`condition ? expressionIfTrue : expressionIfFalse`) เพื่อการตัดสินใจแบบมีเงื่อนไขว่าจะเรนเดอร์อะไรและเมื่อใด อย่างไรก็ตามยังมีหัวข้อสำคัญที่จะเราพูดคุยกันซึ่งจะช่วยให้คุณรวมแนวคิดบางอย่างหรือทั้งหมดเหล่านี้เข้ากับฟีเจอร์ของ React อันทรงพลังอย่าง props การใช้ props เพื่อเรนเดอร์โค้ดแบบมีเงื่อนไขนั้นเป็นเรื่องธรรมดามากสำหรับนักพัฒนา React นั่นคือพวกเขาใช้ค่าของ prop ที่กำหนดเพื่อตัดสินใจโดยอัตโนมัติเกี่ยวกับสิ่งที่จะเรนเดอร์
+คุณได้เห็นวิธีการใช้ `if/else`, `&&` และ ternary operator (`condition ? expressionIfTrue : expressionIfFalse`) เพื่อใช้เป็นเงื่อนไขว่าจะเรนเดอร์อะไรแล้ว
+แต่ก็ยังมีเรื่องสำคัญอีกเรื่องนึงที่เรายังไม่ได้พูดถึง ที่จะทำให้เราใช้ฟีเจอร์พวกนี้กับ props ได้ 
+การใช้ props เพื่อเรนเดอร์โค้ดโดยใช้เงื่อนไขนั้น เป็นเรื่องปกติสำหรับคนที่เขียน React โดยเราจะใช้ค่าของ prop เพื่อเลือกว่าจะเรนเดอร์อะไรโดยอัตโนมัติ
 
-ในแบบทดสอบนี้คุณจะต้องตั้งค่า child component เพื่อทำการตัดสินใจในการเรนเดอร์ตาม props คุณอาจจะใช้ ternary operator แต่คุณสามารถดูว่าแนวคิดอื่นๆ ที่ได้ลองทำนแบบทดสอบสองสามครั้งล่าสุดมีประโยชน์ในการนำมาใช้เพียงใดในบริบทนี้
+ในแบบทดสอบนี้คุณจะต้องเขียน child component ให้เรนเดอร์ตาม props 
+คุณจะใช้ ternary operator แต่ก็จะได้เห็นว่าการใช้เงื่อนไขแบบอื่น ก็มีประโยชน์เหมือนกัน
 
 # --instructions--
 
-code editor มี components สองส่วนที่กำหนดไว้แล้วสำหรับคุณบางส่วน: parent ชื่อ `GameOfChance` และ child ที่เรียกว่า `Results` ใช้สำหรับสร้างเกมง่ายๆ ที่ user กดปุ่มเพื่อดูว่าชนะหรือแพ้
+เราได้เขียน component สองตัวใน code editor ไว้คร่าวๆให้แล้ว คือ:
+parent ชื่อ `GameOfChance` และ child ชื่อ `Results` เราจะใช้ component สองตัวนี้สร้างเกมง่ายๆ ที่ user กดปุ่มเพื่อดูว่าชนะหรือแพ้
 
-ขั้นแรก คุณจะต้องใช้ expression ทั่วไปที่สุ่ม return ค่าที่แตกต่างกันทุกครั้งที่เรียกใช้ คุณสามารถใช้ `Math.random()` method นี้ return ค่าระหว่าง "0" (รวม 0 ไปด้วย) และ "1" (ไม่รวม 1) ทุกครั้งที่มีการเรียกใช้ ดังนั้นสำหรับอัตราต่อรอง 50/50 ให้ใช้ `Math.random() >= .5` ใน expression ของคุณ ตามสถิติ expression นี้จะ return `true` 50% ของการเรียกใช้งาน และ `false` อีก 50% ในวิธีการเรนเดอร์ให้แทนที่ `null` ด้วย expression ด้านบนเพื่อสิ้นสุดการประกาศตัวแปร
+ขั้นแรก คุณจะต้องใช้ expression ที่จะคืนค่าออกมาแบบสุ่มทุกครั้งที่เรียกใช้ 
+ซึ่งคุณจะใช้ method `Math.random()` ก็ได้ โดย method นี้จะคืนค่าเป็นตัวเลขตั้งแต่ `0` ถึง `1` (ไม่รวม 1) ทุกครั้งที่มีการเรียกใช้ 
+ถ้าจะให้มีโอกาส ชนะ/แพ้ เป็น 50/50 ให้ใช้ `Math.random() >= .5` ใน expression นี้ 
+ตามสถิติ expression นี้จะมีโอกาสคืนค่าเป็น `true` 50% และเป็น `false` อีก 50% 
+ใน method render ให้เปลี่ยน `null` เป็น expression ตัวด้านบน
 
-ตอนนี้คุณมี expression ที่คุณสามารถใช้ตัดสินใจแบบสุ่มใน expression ได้ ถัดไปคุณต้องเรียกใช้ expression นี้ เรนเดอร์`Results` component เป็น child ของ `GameOfChance` และส่ง `expression` เป็น prop ที่เรียกว่า `fiftyFifty` ใน `Results` component ให้เขียน ternary expression ที่จะเรนเดอร์ `h1` element ที่มีข้อความ `You Win!` หรือ `You Lose!` `fiftyFifty` prop ที่ถูกส่งผ่านมาจาก `GameOfChance` สุดท้ายตรวจสอบให้แน่ใจว่า`handleClick()` method นับแต่ละเทิร์นอย่างถูกต้อง เพื่อให้ user รู้ว่าพวกเขาเล่นไปกี่ครั้งแล้ว นอกจากนี้ยังทำหน้าที่แจ้งให้ user ทราบว่า component ได้รับการอัปเดตจริงในกรณีที่พวกเขาชนะหรือแพ้สองครั้งติดต่อกัน
+ตอนนี้คุณมี expression ที่สุ่มค่าได้แล้ว 
+ต่อไป ให้เรนเดอร์ `Results` เป็น child ของ `GameOfChance` และส่ง `expression` เป็น prop ชื่อ `fiftyFifty` เข้าไปใน `Results` 
+แล้วให้เขียน ternary expression ที่จะเรนเดอร์ `h1` ที่มีข้อความว่า `You Win!` หรือ `You Lose!` ตามค่าของ prop `fiftyFifty` ที่ถูกส่งมาจาก `GameOfChance` 
+สุดท้ายให้เขียน method `handleClick()` ให้นับจำนวนตาที่เล่นให้ถูกต้อง เพื่อให้ user รู้ว่าเล่นไปกี่ตาแล้ว 
 
 # --hints--
 
-`GameOfChance` component ควรมีอยู่และเรนเดอรืไปยังเพจ
+ต้องมี component `GameOfChance` และต้องเรนเดอร์ได้
 
 ```js
 assert.strictEqual(
@@ -31,7 +42,7 @@ assert.strictEqual(
 );
 ```
 
-`GameOfChance` ควร return 1 `button` element
+`GameOfChance` ควรต้องมี `button` หนึ่งตัวอยู่ข้างใน
 
 ```js
 assert.strictEqual(
@@ -40,7 +51,7 @@ assert.strictEqual(
 );
 ```
 
-`GameOfChance` ควร return 1 ผลของ `Results` component ที่มี prop ชื่อว่า `fiftyFifty`
+`GameOfChance` ต้องมี `Results` หนึ่งตัวอยู่ข้างใน และต้องส่ง prop ชื่อว่า `fiftyFifty` เข้าไปด้วย
 
 ```js
 assert(
@@ -53,7 +64,7 @@ assert(
 );
 ```
 
-`GameOfChance` state ควรจะเริ่มต้นด้วย property ของ `counter` ที่มีค่าเป็น `1`
+state ของ `GameOfChance` ต้องมี property ชื่อ `counter` และมีค่าเริ่มต้นเป็น `1`
 
 ```js
 assert.strictEqual(
@@ -62,7 +73,7 @@ assert.strictEqual(
 );
 ```
 
-เมื่อ `GameOfChance` component ถูกเรนเดอร์ไปยัง DOM ครั้งแรก `p` element ควรถูก return ด้วยข้อความข้างในว่า `Turn: 1`
+เมื่อ `GameOfChance` ถูกเรนเดอร์ไปยัง DOM ในตอนแรก แท็ก `p` ต้องมีข้อความข้างในเป็น `Turn: 1`
 
 ```js
 assert.strictEqual(
@@ -71,7 +82,7 @@ assert.strictEqual(
 );
 ```
 
-ทุกครั้งที่ปุ่มถูกคลิก counter state จะต้องถูกเพิ่งค่าที่ละ 1 และ `p` element จะถูกเรนเดอร์ไปยัง DOM ที่มีข้อความ `Turn: N` โดยที่ `N` คือค่าของ counter state
+ทุกครั้งที่คลิกปุ่ม counter ใน state เพิ่มขึ้นทีละ 1 และ `p` จะต้องแสดงข้อความ `Turn: N` โดยที่ `N` คือค่าของ counter ใน state
 
 ```js
 (() => {
@@ -123,7 +134,7 @@ assert.strictEqual(
 })();
 ```
 
-เมื่อ `GameOfChance` component ถูกติดตั้งไปยัง DOM เป็นครั้งแรก และในทุกครั้งที่ปุ่มถูกคลิก หลังจากนั้นจะต้อง return `h1` element เดียวที่แสดงผลแบบสุ่มว่า `You Win!` หรือ `You Lose!`
+`h1` ของ `GameOfChance` ต้องแสดงผลเป็น `You Win!` หรือ `You Lose!` ทั้งตอนที่ `GameOfChance` ถูกเรนเดอร์ไปยัง DOM เป็นครั้งแรก และในทุกครั้งที่คลิกปุ่ม
 
 ```js
 (() => {
@@ -225,9 +236,9 @@ class Results extends React.Component {
     super(props);
   }
   render() {
-    {/* Change code below this line */}
+    {/* แก้ไขโค้ดใต้บรรทัดนี้ */}
     return <h1></h1>;
-    {/* Change code above this line */}
+    {/* แก้ไขโค้ดเหนือบรรทัดนี้ */}
   }
 }
 
@@ -241,20 +252,20 @@ class GameOfChance extends React.Component {
   }
   handleClick() {
     this.setState(prevState => {
-      // Complete the return statement:
+      // เขียนคำสั่ง return ตามเงื่อนไขที่ให้มาให้เสร็จ:
       return {
         counter: prevState
       }
     });
   }
   render() {
-    const expression = null; // Change this line
+    const expression = null; // แก้โค้ดบรรทัดนี้
     return (
       <div>
         <button onClick={this.handleClick}>Play Again</button>
-        {/* Change code below this line */}
+        {/* แก้ไขโค้ดใต้บรรทัดนี้ */}
 
-        {/* Change code above this line */}
+        {/* แก้ไขโค้ดเหนือบรรทัดนี้ */}
         <p>{'Turn: ' + this.state.counter}</p>
       </div>
     );

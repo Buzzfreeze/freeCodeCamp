@@ -8,17 +8,17 @@ dashedName: change-the-color-of-an-svg-element
 
 # --description--
 
- bars ควรจะอยู่มนตำแหน่งที่ถูกต้อง แต่บางครั้งสีของมันเป็นสีดำ SVG จะช่วยให้สามารถเปลี่ยนสีของ bars ได้
+ตอนนี้กราฟแท่งของเราไม่กลับหัวแล้ว แต่ว่ากราฟของเรายังเป็นสีดำอยู่เลย เราสามารถเปลี่ยนสีของกราฟที่เป็น SVG ได้ด้วย
 
-ใน SVG  `rect` shape สามารถกำหนดให้มันได้ด้วย `fill` attribute ซึ่ง support hex codes, color names, และ rgb values รวมไปถึง option ที่ซับซ้อนเช่น gradients และ transparency
+เรากำหนดสีของ `rect` ใน SVG ได้โดยการใช้ attribute `fill` ซึ่งรองรับสีในรูปแบบ hex code (เช่น `#CC0000`), color name (เช่น `red`), และ rgb value (เช่น `rgb(204, 0, 0)`) รวมไปถึงรูปแบบสีที่ซับซ้อนเช่น gradient (การไล่สี) และ transparency (การปรับความโปร่งของสี)
 
 # --instructions--
 
-ใช้ `attr()` method ใช้สำหรับกำหนด `fill` ของทุก bars ให้เป็นสี navy
+ใช้ method `attr()` เพื่อกำหนดให้ `fill` ของกราฟทุกแท่งเป็นสี `navy`
 
 # --hints--
 
-bars ควรมีทุก `fill` color เป็นสี navy
+กราฟทุกแท่งต้องมี `fill` เป็น `navy`
 
 ```js
 assert($('rect').css('fill') == 'rgb(0, 0, 128)');
@@ -49,11 +49,11 @@ assert($('rect').css('fill') == 'rgb(0, 0, 128)');
        .attr("y", (d, i) => h - 3 * d)
        .attr("width", 25)
        .attr("height", (d, i) => 3 * d)
-       // Add your code below this line
+       // เขียนโค้ดใต้บรรทัดนี้
 
 
 
-       // Add your code above this line
+       // เขียนโค้ดเหนือบรรทัดนี้
   </script>
 </body>
 ```

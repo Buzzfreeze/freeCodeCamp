@@ -8,29 +8,29 @@ dashedName: clone-an-element-using-jquery
 
 # --description--
 
-นอกจากการเคลื่อนที่ element ต่างๆ คุณยังสามารถก๊อปปี้ element ใดๆ จากที่นึงไปยังที่นึงได้
+นอกจากการย้าย element แล้วเรายังคัดลอก element จากที่นึงไปไว้อีกที่นึงได้อีกด้วย
 
-jQuery มีฟังก์ชันที่เรียกว่า `clone()` ที่ทำสำเนาของ element ได้
+jQuery มีฟังก์ชันที่เรียกว่า `clone()` ที่ใช้คัดลอก element ได้
 
-ยกตัวอย่างเช่น หากเราอยากจะก็อปปี้ `target2` จากใน `left-well` ไปยัง `right-well` แล้ว เราจะต้องพิมพ์โค้ดว่า: 
+เช่น หากเราอยากจะคัดลอก `target2` จากใน `left-well` ไปไว้ใน `right-well` แล้ว เราจะใช้โค้ด: 
 
 ```js
 $("#target2").clone().appendTo("#right-well");
 ```
 
-สังเกตเห็นไหมว่าโค้ดข้างบนเป็นการใช้ฟังก์ชันของ jQuery สองฟังก์ชันในคราวเดียวกัน ซึ่งเราจะเรียกมันว่า <dfn>function chaining</dfn> ซึ่งเป็นวิธีการที่สะดวกเลยทีเดียวในการใช้ jQuery
+สังเกตเห็นไหมว่าโค้ดข้างบนเป็นการใช้ฟังก์ชันของ jQuery สองฟังก์ชันทีเดียวเลย เราเรียกการทำแบบนี้ว่า <dfn>function chaining</dfn> ซึ่งวิธีนี้จะทำให้เราใช้ jQuery ได้สะดวกขึ้นมากๆ
 
-มาลองโคลน `target5` element และเพิ่มไปยัง `left-well` กัน
+มาลองคัดลอก `target5` และเอาไปใส่ใน `left-well` กัน
 
 # --hints--
 
-`target5` element จะต้องอยู่ใน `right-well`
+ยังต้องมี `target5` อยู่ใน `right-well` ด้วย
 
 ```js
 assert($('#right-well').children('#target5').length > 0);
 ```
 
-ตัวโคลนของ `target5` element จะต้องไปอยู่ใน `left-well`
+`target5` ที่คัดลอกมาจะต้องไปอยู่ใน `left-well`
 
 ```js
 assert($('#left-well').children('#target5').length > 0);
@@ -57,7 +57,7 @@ assert(!code.match(/class.*animated/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
@@ -95,7 +95,7 @@ assert(!code.match(/class.*animated/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>

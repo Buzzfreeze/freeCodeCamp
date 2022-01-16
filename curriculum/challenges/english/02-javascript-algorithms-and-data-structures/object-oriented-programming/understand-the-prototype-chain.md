@@ -8,7 +8,7 @@ dashedName: understand-the-prototype-chain
 
 # --description--
 
-ทุก JavaScript object (มีเพียงบาง object ที่ยกเว้น) มี `prototype` นอกจากนี้ `prototype` ของ object เอง ก็ยังเป็น object
+object เกือบทุก object ใน JavaScript จะมี `prototype` แล้วตัว `prototype` เอง ก็ยังเป็น object อีกด้วย
 
 ```js
 function Bird(name) {
@@ -18,20 +18,25 @@ function Bird(name) {
 typeof Bird.prototype;
 ```
 
-เนื่องจาก `prototype` เป็น object ดังนั้น `prototype` จึงมี `prototype` ของตัวเองได้ ในกรณีนี้ `prototype` ของ `Bird.prototype` เป็น `Object.prototype`:
+จากการที่ตัว `prototype` เองก็เป็น object เพราะฉะนั้นตัว `prototype` ก็จะมี `prototype` ของตัวเองได้ 
+ในตัวอย่างด้านล่าง `prototype` ของ `Bird.prototype` คือ `Object.prototype`:
 
 ```js
 Object.prototype.isPrototypeOf(Bird.prototype);
 ```
 
-คำสั่งนี้มีประโยชน์ไหม? คุณอาจจำ `hasOwnProperty` method ได้ จากแบบทดสอบที่แล้ว
+เอาล่ะ คุณอาจจะสงสัยว่าแล้วมันจะมีประโยชน์ยังไง 
+ถ้ายังจำ method `hasOwnProperty` จากแบบทดสอบที่แล้วได้
 
 ```js
 let duck = new Bird("Donald");
 duck.hasOwnProperty("name");
 ```
 
-`hasOwnProperty` method มีการกำหนดใน `Object.prototype` ซึ่งสามารถเข้าถึงได้โดย `Bird.prototype` และสามารถเข้าถึงได้โดย `duck` ซึ่งตัวอย่างนี้เรียกว่า `prototype` chain โดยใน `prototype` chain นั้น `Bird` คือ `supertype` ของ `duck` ในขณะที่ `duck` คือ `subtype` ส่วน `Object` คือ `supertype` ของทั้ง `Bird` และ `duck` อีกทั้ง `Object` ก็เป็น `supertype` ของทุก object ใน JavaScript ด้วย ดังนั้น ทุก object จึงสามารถเรียกใช้ `hasOwnProperty` method ได้
+method `hasOwnProperty` อยู่ใน `Object.prototype` ซึ่งจะเข้าถึงได้ผ่าน `Bird.prototype` แล้วก็จะเข้าถึงได้ผ่าน `duck` อีกต่อหนึ่ง
+เราเรียกการเข้าถึง `prototype` เป็นชั้นๆนี้ว่า `prototype` chain 
+ในตัวอย่าง `prototype` chain นี้ เราจะเรียกว่า `Bird` เป็น `supertype` ของ `duck` และเรียก `duck` ว่าเป็น `subtype` ของ `Bird` 
+ส่วน `Object` คือ `supertype` ของทั้ง `Bird` และ `duck` และ `Object` ก็เป็น `supertype` ของทุก object ใน JavaScript ด้วย ดังนั้น ทุก object จึงสามารถเรียกใช้ method `hasOwnProperty` ได้
 
 # --instructions--
 
@@ -39,7 +44,7 @@ duck.hasOwnProperty("name");
 
 # --hints--
 
-โค้ดของคุณควรแสดงว่า `Object.prototype` คือ prototype ของ `Dog.prototype`
+โค้ดของคุณต้องตรวจสอบว่า `Object.prototype` เป็น prototype ของ `Dog.prototype`
 
 ```js
 assert(/Object\.prototype\.isPrototypeOf/.test(code));
@@ -56,9 +61,9 @@ function Dog(name) {
 
 let beagle = new Dog("Snoopy");
 
-Dog.prototype.isPrototypeOf(beagle);  // yields true
+Dog.prototype.isPrototypeOf(beagle);  // บรรทัดนี้เป็น true
 
-// Fix the code below so that it evaluates to true
+// ให้แก้โค้ดด้านล่างเพื่อให้ได้ค่าเป็น true
 ???.isPrototypeOf(Dog.prototype);
 ```
 

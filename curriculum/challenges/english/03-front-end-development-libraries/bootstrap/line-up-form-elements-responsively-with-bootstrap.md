@@ -12,15 +12,15 @@ dashedName: line-up-form-elements-responsively-with-bootstrap
 
 # --description--
 
-คราวนี้มาทำให้ส่วนฟอร์ม `input` และปุ่ม submit `button` ให้มาอยู่ในบรรทัดเดียวกัน ให้ทำเหมือนก่อนหน้านี้ โดยการใช้ `div` element ที่มี class `row` และใส่ `div` element ที่มี class `col-xs-*` ข้างใน
+คราวนี้มาทำให้ส่วนฟอร์ม `input` และปุ่ม submit `button` ให้มาอยู่ในบรรทัดเดียวกัน ให้ทำวิธีเดียวกับที่เราทำมา โดยใช้ `div` ที่มี class เป็น `row` และใส่ `div` ที่มี class เป็น `col-xs-*` ไว้ข้างใน
 
-นำทั้งข้อความ `input` ของฟอร์มและปุ่ม submit `button` ของฟอร์มไปไว้ใน `div` ที่มี class `row` โดยให้ฟอร์ม `input` อยู่ใน `div` ที่มี class `col-xs-7` และ submit `button` ไปไว้ใน `div` ที่มี class `col-xs-5` อีกที
+นำทั้ง `input` ของฟอร์มและปุ่ม submit `button` ของฟอร์มไปไว้ใน `div` ที่มี class เป็น `row` โดยให้ `input` อยู่ใน `div` ที่มี class เป็น `col-xs-7` และ submit `button` ไปไว้ใน `div` ที่มี class เป็น `col-xs-5` อีกที
 
-นี่จะเป็นแบบทดสอบสุดท้ายแล้วในการทำแอป Cat Photo หวังว่าคุณจะสนุกในการใช้ Font Awesome, Bootstrap และ responsive design
+แบบทดสอบนี้จะเป็นแบบทดสอบสุดท้ายแล้วที่เราจะทำแอป Cat Photo กัน หวังว่าคุณจะสนุกกับการใช้ Font Awesome, Bootstrap และ responsive design นะ
 
 # --hints--
 
-ปุ่ม submit ของฟอร์มและข้อความ input ของฟอร์มจะต้องอยู่ใน div ที่มี class `row`
+ปุ่ม submit ของฟอร์มและข้อความ `input` ของฟอร์มจะต้องอยู่ใน `div` ที่มี class เป็น `row`
 
 ```js
 assert(
@@ -29,19 +29,19 @@ assert(
 );
 ```
 
-นำ input ข้อความของฟอร์มไปไว้ใน div ที่มี class `col-xs-7`
+นำ `input` ของฟอร์มไปไว้ใน `div` ที่มี class เป็น `col-xs-7`
 
 ```js
 assert($('div.col-xs-7:has(input[type="text"])').length > 0);
 ```
 
-และนำปุ่ม Submit ของฟอร์มไปไว้ใน div ที่มี  class `col-xs-5`
+นำปุ่ม Submit ของฟอร์มไปไว้ใน `div` ที่มี class เป็น `col-xs-5`
 
 ```js
 assert($('div.col-xs-5:has(button[type="submit"])').length > 0);
 ```
 
-อย่าลืม tag ปิดสำหรับทุกๆ `div` element
+อย่าลืม tag ปิดของ `div` ทุกตัวด้วย
 
 ```js
 assert(

@@ -8,23 +8,22 @@ dashedName: change-the-presentation-เป็น-a-bar-chart
 
 # --description--
 
-โจทย์สุดท้ายสำหรับสร้าง bar chart 
+แบบทดสอบสุดท้ายในเรื่องกราฟแท่ง ให้ปรับการแสดงผลเพื่อให้กราฟดูดีขึ้น
 
-1) เพิ่มพื้นที่ระหว่างแต่ละ bar เพื่อแยะพวกมันออกจากกัน สามารถทำได้โดยการเพิ่ม margin ใน CSS สำหรับ `bar` class
-2) เพิ่ม height ของแต่ละ bars เพื่อให้เห็นความแตกต่างอย่างชัดเจน สามารถทำได้โดย
-การคูณค่าให้กับ scale ของ height
+1) ให้เพิ่มช่องว่างระหว่างกราฟแต่ละแท่ง โดยใช้ CSS `margin` ใน class `bar`
+2) ทำให้ความสูงของแต่ละแท่งต่างกันชัดเจนมากขึ้น โดยเอาตัวคูณไปคุณกับความสูงของแท่ง
 
 # --instructions--
 
-เพิ่ม `margin` `2px` ให้กับ `bar` class ใน `style` tag จากนั้นเปลี่ยน callback function ใน `style()` method 
-ซึ่งจะreturnค่ากลับเป็น `10` เท่าของ original data (plus the `px`)
+เริ่มจาก ใน `style` ให้เพิ่ม `margin` `2px` ให้กับ class `bar` จากนั้นเปลี่ยน callback function ใน method `style()` 
+โดยให้คืนค่ามาเป็นข้อมูลเดิมคูณ `10` (อย่าลืมเติม `px` ต่อท้าย)
 
-**Note:** คูณแต่ละ data point โดยค่าคงที่ (*same* constant) เฉพาะการเปลี่ยนscale 
-มันเหมือนกับการซูมเข้า แต่ไม่ได้เปลี่ยนความหมายของข้อมูล
+**Note:** การคูณข้อมูลด้วยค่าคงที่จะไม่ได้เปลี่ยนแปลงความหมายของข้อมูล 
+แต่จะเป็นเหมือนกับการซูมเข้า-ซูมออกเฉยๆ
 
 # --hints--
 
-อันดับที่ 1) `div` ควรมีค่า `height` เป็น `120` pixels และมีค่า `margin` เป็น `2` pixels.
+`div` ตัวที่ 1 ต้องมี `height` เป็น `120` พิกเซลและมีค่า `margin` เป็น `2` พิกเซล
 
 ```js
 assert(
@@ -33,7 +32,7 @@ assert(
 );
 ```
 
-อันดับที่ 2) `div` ควรมีค่า `height` เป็น `310` pixels และมีค่า `margin` เป็น `2` pixels.
+`div` ตัวที่ 2 ต้องมี `height` เป็น `310` พิกเซลและมีค่า `margin` เป็น `2` พิกเซล
 
 ```js
 assert(
@@ -42,7 +41,7 @@ assert(
 );
 ```
 
-อันดับที่ 3) `div` ควรมีค่า `height` เป็น `220` pixels และมีค่า `margin` เป็น `2` pixels.
+`div` ตัวที่ 3 ต้องมี `height` เป็น `220` พิกเซลและมีค่า `margin` เป็น `2` พิกเซล
 
 ```js
 assert(
@@ -51,7 +50,7 @@ assert(
 );
 ```
 
-อันดับที่ 4) `div` ควรมีค่า `height` เป็น `170` pixels และมีค่า `margin` เป็น `2` pixels.
+`div` ตัวที่ 4 ต้องมี `height` เป็น `170` พิกเซลและมีค่า `margin` เป็น `2` พิกเซล
 
 ```js
 assert(
@@ -60,7 +59,7 @@ assert(
 );
 ```
 
-อันดับที่ 5) `div` ควรมีค่า `height` เป็น `250` pixels และมีค่า `margin` เป็น `2` pixels.
+`div` ตัวที่ 5 ต้องมี `height` เป็น `250` พิกเซลและมีค่า `margin` เป็น `2` พิกเซล
 
 ```js
 assert(
@@ -69,7 +68,7 @@ assert(
 );
 ```
 
-อันดับที่ 6) `div` ควรมีค่า `height` เป็น `180` pixels และมีค่า `margin` เป็น `2` pixels.
+`div` ตัวที่ 6 ต้องมี `height` เป็น `180` พิกเซลและมีค่า `margin` เป็น `2` พิกเซล
 
 ```js
 assert(
@@ -78,7 +77,7 @@ assert(
 );
 ```
 
-อันดับที่ 7) `div` ควรมีค่า `height` เป็น `290` pixels และมีค่า `margin` เป็น `2` pixels.
+`div` ตัวที่ 7 ต้องมี `height` เป็น `290` พิกเซลและมีค่า `margin` เป็น `2` พิกเซล
 
 ```js
 assert(
@@ -87,7 +86,7 @@ assert(
 );
 ```
 
-อันดับที่ 8) `div` ควรมีค่า `height` เป็น `140` pixels และมีค่า `margin` เป็น `2` pixels.
+`div` ตัวที่ 8 ต้องมี `height` เป็น `140` พิกเซลและมีค่า `margin` เป็น `2` พิกเซล
 
 ```js
 assert(
@@ -96,7 +95,7 @@ assert(
 );
 ```
 
-อันดับที่ 9) `div` ควรมีค่า `height` เป็น `90` pixels และมีค่า `margin` เป็น `2` pixels.
+`div` ตัวที่ 9 ต้องมี `height` เป็น `90` พิกเซลและมีค่า `margin` เป็น `2` พิกเซล
 
 ```js
 assert(
@@ -114,10 +113,10 @@ assert(
   .bar {
     width: 25px;
     height: 100px;
-    /* Add your code below this line */
+    /* เขียนโค้ดใต้บรรทัดนี้ */
 
     
-    /* Add your code above this line */
+    /* เขียนโค้ดเหนือบรรทัดนี้ */
     display: inline-block;
     background-color: blue;
   }
@@ -131,7 +130,7 @@ assert(
       .enter()
       .append("div")
       .attr("class", "bar")
-      .style("height", (d) => (d + "px")) // Change this line
+      .style("height", (d) => (d + "px")) // แก้บรรทัดนี้
   </script>
 </body>
 ```

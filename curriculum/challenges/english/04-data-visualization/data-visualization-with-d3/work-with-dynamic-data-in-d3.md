@@ -8,76 +8,76 @@ dashedName: work-with-dynamic-data-in-d3
 
 # --description--
 
-`data()` และ `enter()` methods ควรจะใช้ data set พร้อมกับ `append()` method ได้ 
-เพื่อสร้าง DOM element ใหม่สำหรับ data set
+ในแบบทดสอบที่แล้วเราได้เรียนเรื่องการใช้ `data()` และ `enter()` เพื่อแสดงผลข้อมูลไปแล้ว 
+เราใช้ method ทั้งสองตัวนี้กับ `append()` เพื่อสร้าง DOM element ตัวใหม่ สำหรับข้อมูลแต่ละตัวในชุดข้อมูลได้
 
-จากโจทย์ก่อนหน้า เราได้สร้าง `h2` element ขึ้นมาใหม่fสำหรับ item แต่ละตัวใน `dataset` array แต่พวกมันมีข้อความที่เหมือนกันคือ `New Title` เนื่องจากเราไม่ได้ใช้ data ที่ผูกไว้กับ `h2` elements แต่ละตัว
+ในแบบทดสอบที่แล้ว เราได้สร้าง `h2` ใหม่ขึ้นมาตามจำนวนข้อมูลใน array `dataset` แต่ element ที่เราเพิ่มมานี้ยังมีข้อความเหมือนกันคือ `New Title` ที่เป็นแบบนี้เพราะเราไม่ได้เอาข้อมูลไปผูกไว้กับ `h2`
 
-D3 `text()` method สามารถใช้ string หรือ callback function เป็น argument ได้:
+method `text()` ของ D3 สามารถใช้ string หรือ callback function เป็น argument ก็ได้:
 
 ```js
 selection.text((d) => d)
 ```
 
-จะเห็นว่า parameter `d` อ้างถึง single entry ใน dataset 
+โดย `d` จะเป็นค่าของข้อมูลแต่ละตัวใน dataset 
 
-ใช้ `h2` element ตัวแรกผูกกับ 12, `h2` element ลำดับที่สอง ผูกกับ 31 และ`h2` element ลำดับที่สามผูกกับ 22 ตามลำดับ
+ถ้าดูตามโค้ดใน code editor แล้ว `h2` ตัวแรกจะได้ข้อมูลเป็น 12, `h2` ตัวที่สองจะได้ข้อมูลเป็น 31 และ `h2` ตัวที่สาม 22 ตามลำดับ
 
 # --instructions--
 
-เปลี่ยน `text()` method ของแต่ละ `h2` element เพื่อแสดงค่าที่สอดคล้องกับ array ของ `dataset` กับ single space และ string `USD`. ตัวอย่างเช่น heading ควรจะแสดงผลเป็น `12 USD`
+ให้แก้ method `text()` ของ `h2` แต่ละตัว ให้แสดงค่าตามข้อมูลใน array `dataset` โดยให้เอาข้อมูลมาต่อด้วยเว้นวรรคหนึ่งตัว และ string `USD` เช่น heading ตัวแรกจะต้องแสดงผลเป็น `12 USD`
 
 # --hints--
 
-อันดับที่ 1) `h2` ควรแสดง text เป็น `12 USD`.
+ `h2` ตัวที่ 1 ต้องแสดงข้อความ `12 USD`
 
 ```js
 assert($('h2').eq(0).text() == '12 USD');
 ```
 
-อันดับที่ 2) `h2` ควรแสดง text เป็น `31 USD`.
+ `h2` ตัวที่ 2 ต้องแสดงข้อความ `31 USD`
 
 ```js
 assert($('h2').eq(1).text() == '31 USD');
 ```
 
-อันดับที่ 3) `h2` ควรแสดง text เป็น `22 USD`.
+ `h2` ตัวที่ 3 ต้องแสดงข้อความ `22 USD`
 
 ```js
 assert($('h2').eq(2).text() == '22 USD');
 ```
 
-อันดับที่ 4) `h2` ควรแสดง text เป็น `17 USD`.
+ `h2` ตัวที่ 4 ต้องแสดงข้อความ `17 USD`
 
 ```js
 assert($('h2').eq(3).text() == '17 USD');
 ```
 
-อันดับที่ 5) `h2` ควรแสดง text เป็น `25 USD`.
+ `h2` ตัวที่ 5 ต้องแสดงข้อความ `25 USD`
 
 ```js
 assert($('h2').eq(4).text() == '25 USD');
 ```
 
-อันดับที่ 6) `h2` ควรแสดง text เป็น `18 USD`.
+ `h2` ตัวที่ 6 ต้องแสดงข้อความ `18 USD`
 
 ```js
 assert($('h2').eq(5).text() == '18 USD');
 ```
 
-อันดับที่ 7) `h2` ควรแสดง text เป็น `29 USD`.
+ `h2` ตัวที่ 7 ต้องแสดงข้อความ `29 USD`
 
 ```js
 assert($('h2').eq(6).text() == '29 USD');
 ```
 
-อันดับที่ 8)`h2` ควรแสดง text เป็น `14 USD`.
+`h2` ตัวที่ 8 ต้องแสดงข้อความ `14 USD`
 
 ```js
 assert($('h2').eq(7).text() == '14 USD');
 ```
 
-อันดับที่ 9) `h2` ควรแสดง text เป็น `9 USD`.
+ `h2` ตัวที่ 9 ต้องแสดงข้อความ `9 USD`
 
 ```js
 assert($('h2').eq(8).text() == '9 USD');
@@ -96,11 +96,11 @@ assert($('h2').eq(8).text() == '9 USD');
       .data(dataset)
       .enter()
       .append("h2")
-      // Add your code below this line
+      // เขียนโค้ดใต้บรรทัดนี้
 
       .text("New Title");
 
-      // Add your code above this line
+      // เขียนโค้ดเหนือบรรทัดนี้
   </script>
 </body>
 ```

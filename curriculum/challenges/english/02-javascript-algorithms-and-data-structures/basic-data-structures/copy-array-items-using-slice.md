@@ -8,7 +8,8 @@ dashedName: copy-array-items-using-slice
 
 # --description--
 
-method ต่อไปที่เราจะพูดถึงคือ `slice()`ซึ่งแทนที่จะแก้ไข array `slice()` จะคัดลอกหรือ *extracts* elements ตามจำนวนที่กำหนดไปยัง array ใหม่ โดยไม่แก้ไข array ที่ถูกเรียกใช้ โดย `slice()` รับเพียง 2 พารามิเตอร์ — พารามิเตอร์แรกคือ index ที่เริ่มต้นการแยก และตัวที่สองคือ index ที่จะหยุดการแยก (แต่ไม่รวม element ที่ index นี้) ให้พิจารณาโค้ดต่อไปนี้
+method ต่อไปที่เราจะพูดถึงคือ `slice()` ซึ่ง `slice()` จะคัดลอก element ตามจำนวนที่กำหนดไปยัง array ใหม่โดยไม่แก้ไข array เดิม โดย `slice()` รับพารามิเตอร์แค่สองตัว — พารามิเตอร์แรกคือ index ที่จะเริ่มคัดลอก และตัวที่สองคือ index ที่จะหยุดคัดลอก (แต่ไม่รวม element ที่ index นี้) 
+ลองดูโค้ดตัวอย่าง:
 
 ```js
 let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];
@@ -16,18 +17,19 @@ let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];
 let todaysWeather = weatherConditions.slice(1, 3);
 ```
 
-`todaysWeather` ควรมีค่า `['snow', 'sleet']` ในขณะที่ `weatherConditions` ควรมีค่า `['rain', 'snow', 'sleet', 'hail', 'clear']`
+`todaysWeather` จะมีค่าเป็น `['snow', 'sleet']` ในขณะที่ `weatherConditions` จะมีค่าเป็น `['rain', 'snow', 'sleet', 'hail', 'clear']`
 
-ผลที่ได้คือ array ใหม่ที่ประกอบด้วย element ที่ดึงออกจาก array เดิม 
+เราจะได้ array ใหม่ที่ประกอบด้วย element ที่คัดลอกมาจาก array เดิม 
 
 # --instructions--
 
-เราได้ประกาศฟังก์ชัน `forecast` ที่รับ array เป็น argument จงแก้ไขฟังก์ชันโดยใช้ `slice()` เพื่อดึงข้อมูลจาก array argument และคืนค่าเป็น array ใหม่ที่มี string elements `warm` และ `sunny`
+เราได้ประกาศฟังก์ชัน `forecast` ที่รับ array เป็น argument ให้แล้ว 
+ให้แก้ไขฟังก์ชันโดยใช้ `slice()` เพื่อดึงข้อมูลจาก argument และคืนค่าเป็น array ใหม่ที่มี element เป็น string คำว่า `warm` และ `sunny`
 
 
 # --hints--
 
-`forecast` ควรคืนค่า `["warm", "sunny"]`
+การเรียกใช้ `forecast` ต้องได้ค่าเป็น `["warm", "sunny"]`
 
 ```js
 assert.deepEqual(
@@ -36,7 +38,7 @@ assert.deepEqual(
 );
 ```
 
-function `forecast` ควรใช้ `slice()` method
+ต้องใช้ method `slice()` ในฟังก์ชัน `forecast`
 
 ```js
 assert(/\.slice\(/.test(code));
@@ -48,12 +50,12 @@ assert(/\.slice\(/.test(code));
 
 ```js
 function forecast(arr) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
   return arr;
 }
 
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
 ```
 

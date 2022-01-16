@@ -10,37 +10,37 @@ dashedName: delete-your-jquery-functions
 
 # --description--
 
-อนิเมชันที่เราด้ำมาแล้วนั้นเจ๋งดีอยู่ แต่คราวนี้มันเริ่มจะน่าเบื่อไปนิดนึง
+อนิเมชันที่เราได้ทำมาก็เท่ดีนะ แต่ตอนนี้มันเริ่มรกแล้ว
 
-มาลองลบฟังก์ชันทั้ง 3 ของ jQuery เหล่านี้ออกไปจาก `document ready function` กัน ยังคงตัว `document ready function` ไว้เหมือนเดิม
+คราวนี้ให้ลบฟังก์ชันของ jQuery ทั้งสามตัว เหล่านี้ออกไปจากฟังก์ชัน `document ready` กัน แต่ยังต้องมีฟังก์ชัน `document ready` อยู่เหมือนเดิมนะ
 
 # --hints--
 
-ฟังก์ชันทั้ง 3 ของ jQuery ต้องถูกลบออกจาก `document ready function`
+ต้องลบฟังก์ชันทั้ง 3 ตัวของ jQuery ออกจากฟังก์ชัน `document ready`
 
 ```js
 assert(code.match(/\{\s*\}\);/g));
 ```
 
-ให้ `script` element ยังอยู่เหมือนเดิม
+`<script>` ต้องยังอยู่เหมือนเดิม
 
 ```js
 assert(code.match(/<script>/g));
 ```
 
-ปล่อยให้ `$(document).ready(function() {` ในส่วนหน้าของ `script` element ยังอยู่เช่นเดิม
+ต้องยังมี `$(document).ready(function() {` ใน `script` อยู่เหมือนเดิม
 
 ```js
 assert(code.match(/\$\(document\)\.ready\(function\(\)\s?\{/g));
 ```
 
-ปล่อยให้ `})` ปีกกาปิดของ `document.ready` ยังอยู่เหมือนเดิม
+ต้องยังมี `})` ที่ใช้ปิด `document.ready` อยู่เหมือนเดิม
 
 ```js
 assert(code.match(/.*\s*\}\);/g));
 ```
 
-และให้ tag ปิดของ `script` element อยู่เหมือนเดิม
+และต้องยังมี tag ปิดของ `script` อยู่เหมือนเดิม
 
 
 ```js
@@ -65,7 +65,7 @@ assert(
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
@@ -99,7 +99,7 @@ assert(
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>

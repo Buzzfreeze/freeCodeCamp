@@ -8,7 +8,9 @@ dashedName: use-inheritance-so-you-dont-repeat-yourself
 
 # --description--
 
-มีหลักการเขียนโปรแกรมข้อหนึ่ง เรียกว่า <dfn>Don't Repeat Yourself (DRY)</dfn> (อย่าเขียนโค้ดที่ซ้ำซ้อน) เนื่องจากโค้ดที่ซ้ำซ้อนจะทำให้เกิดปัญหาได้ เพราะหากมีการเปลี่ยนแปลงอะไรบางอย่าง เราก็ต้องแก้ไขโค้ดหลายที่ ซึ่งนอกจากจะทำให้งานของโปรแกรมเมอร์มากแล้วและยังทำให้โอกาสเกิด error มีมากขึ้นอีกด้วย
+มีหลักในการเขียนโปรแกรมข้อหนึ่งที่เรียกว่า <dfn>Don't Repeat Yourself (DRY)</dfn> (อย่าเขียนโค้ดซ้ำ) เพราะว่าถ้าเราเขียนโค้ดที่ทำงานเหมือนกันซ้ำๆกันไว้หลายที่จะทำให้เกิดปัญหาได้ เช่น ถ้าเราอยากเปลี่ยนหรือแก้อะไรบางอย่าง เราก็ต้องบางตามหาว่ามีโค้ดที่ทำงานแบบนี้ตรงไหนบ้าง แล้วต้องไล่แก้ตามทั้งหมด ซึ่งจะทำให้งานของเราหนักขึ้น แล้วก็ยังเพิ่มโอกาสที่จะเกิดบัคในโค้ดด้วย
+
+ลองดูตัวอย่างด้านล่าง ทั้ง `Bird` และ `Dog` มี method `describe` ที่ทำงานเหมือนกัน:
 
 ```js
 Bird.prototype = {
@@ -26,7 +28,7 @@ Dog.prototype = {
 };
 ```
 
-`describe` method มีการเขียนซ้ำซ้อนกัน 2 จุด ซึ่งสามารถปรับแก้ตามหลัก DRY ได้ โดยสร้าง `supertype` (หรือ parent) ที่มีชื่อว่า `Animal`
+method `describe` นี้ถูกเขียนซ้ำกันไว้ 2 ที่ ซึ่งเราจะแก้ให้เป็นตามหลัก DRY ได้ โดยการสร้าง `supertype` (หรือ parent) ที่มีชื่อว่า `Animal`
 
 ```js
 function Animal() { };
@@ -39,7 +41,7 @@ Animal.prototype = {
 };
 ```
 
-เนื่องจาก `Animal` มีการกำหนด `describe` method ไว้แล้ว คุณจึงสามารถนำ `describe` method ออกจาก `Bird` และ `Dog` ได้
+เพราะว่ามีการกำหนด method `describe` ใน `Animal` ไว้แล้ว เราก็เอา method `describe` ออกจาก `Bird` และ `Dog` ได้
 
 ```js
 Bird.prototype = {
@@ -53,23 +55,23 @@ Dog.prototype = {
 
 # --instructions--
 
-`eat` method มีการเขียนซ้ำซ้อนอยู่ในทั้ง `Cat` และ `Bear` จงปรับโค้ดตามหลักของ DRY โดยให้นำ `eat` method ไปไว้ใน `Animal` `supertype`
+method `eat` ถูกเขียนไว้ใน `Cat` และ `Bear` ให้แก้โค้ดตามหลักของ DRY โดยให้นำ method `eat` ไปไว้ใน `supertype` ที่ชื่อ `Animal` 
 
 # --hints--
 
-`Animal.prototype` ควรมี `eat` property
+`Animal.prototype` ต้องมี property `eat` 
 
 ```js
 assert(Animal.prototype.hasOwnProperty('eat'));
 ```
 
-`Bear.prototype` ไม่ควรมี `eat` property
+ใน `Bear.prototype` ต้องไม่มี property `eat`
 
 ```js
 assert(!Bear.prototype.hasOwnProperty('eat'));
 ```
 
-`Cat.prototype` ไม่ควรมี `eat` property
+ใน `Cat.prototype` ต้องไม่มี property `eat`
 
 ```js
 assert(!Cat.prototype.hasOwnProperty('eat'));

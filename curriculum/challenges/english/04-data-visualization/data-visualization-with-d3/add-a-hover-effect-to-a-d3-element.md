@@ -8,17 +8,18 @@ dashedName: add-a-hover-effect-to-a-d3-element
 
 # --description--
 
-เราสามารถเพิ่ม effects เช่น highlight bar ได้ เมื่อuserใช้ mouse ไปชี้(hovers) บนbar การสร้าง hover effect สามารถสร้างได้จาก built-in D3, SVG methods และ CSS 
+เราสามารถเพิ่มเอฟเฟกต์เช่น ให้แท่งกราฟเปลี่ยนสีเมื่อผู้ใช้เอาเมาส์ไปชี้ (hovers) ได้
+เท่าที่เราได้ทำกันมา การใส่ style ลงใน `rect` เราได้ใช้แค่ method ของ D3 กับ SVG แต่จริงๆแล้วเราก็ใช้ CSS ได้ด้วย
 
-ตั้งค่า CSS class ใน SVG elements และ `attr()` method จากนั้นใช้ `:hover` pseudo-class สำหรับสร้าง class ใหม่ 
+ให้ระบุ class ของ CSS ให้กับ SVG element โดยใช้ method `attr()` เราได้เขียน pseudo-class ที่เป็น `:hover` ให้แล้ว ซึ่ง pseudo-class นี้จะเป็นตัวที่ควบคุมลักษณะของ element ของคุณเมื่อเอาเมาส์ไปชี้
 
 # --instructions--
 
-ใช้ `attr()` method เพื่อเพิ่ม class ของทุก `bar` สำหรับ `rect` elements ซึ่งจะเปลี่ยนสี `fill` color ของ bar ไปเป็นสีน้ำตาลเมื่อนำ mouse ไปชี้ที่ bar
+ให้ใช้ method `attr()` เพื่อให้ `rect` ทุกตัวมี class เป็น `bar` ซึ่งจะเปลี่ยนสี `fill` ของแท่งกราฟไปเป็น `brown` เมื่อนำเมาส์ไปชี้ที่แท่งกราฟ
 
 # --hints--
 
- `rect` elements ควรจะมี class `bar`.
+ `rect` ต้องมี class เป็น `bar`
 
 ```js
 assert($('rect').attr('class').trim().split(/\s+/g).includes('bar'));
@@ -55,11 +56,11 @@ assert($('rect').attr('class').trim().split(/\s+/g).includes('bar'));
        .attr("width", 25)
        .attr("height", (d, i) => 3 * d)
        .attr("fill", "navy")
-       // Add your code below this line
+       // เขียนโค้ดใต้บรรทัดนี้
 
 
 
-       // Add your code above this line
+       // เขียนโค้ดเหนือบรรทัดนี้
 
     svg.selectAll("text")
        .data(dataset)
@@ -102,9 +103,9 @@ assert($('rect').attr('class').trim().split(/\s+/g).includes('bar'));
        .attr("width", 25)
        .attr("height", (d, i) => 3 * d)
        .attr("fill", "navy")
-       // Add your code below this line
+       // เขียนโค้ดใต้บรรทัดนี้
        .attr('class', 'bar')
-       // Add your code above this line
+       // เขียนโค้ดเหนือบรรทัดนี้
 
     svg.selectAll("text")
        .data(dataset)

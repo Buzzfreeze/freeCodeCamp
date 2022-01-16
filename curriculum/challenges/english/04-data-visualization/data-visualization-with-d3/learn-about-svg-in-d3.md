@@ -8,35 +8,39 @@ dashedName: learn-about-svg-in-d3
 
 # --description--
 
-<dfn>SVG</dfn> stands fหรือ <dfn>Scalable Vectหรือ Graphics</dfn>.
+<dfn>SVG</dfn> ย่อมาจาก <dfn>Scalable Vector Graphics</dfn>
 
-"scalable" หมายความว่าถ้า zoom in หรือ zoom out บน object จะไม่แสดง pixelated เนื่องจากเป็นระบบการปรับขนาดด้วยจอแสดงผล ไม่ว่าจะเป็นบนหน้าจอมือถือขนาดเล็กหรือจอทีวีขนาดใหญ่
+"scalable" หมายความว่าถ้าเราซูมเข้าหรือซูมออก รูปของเราจะไม่แตกเป็นพิกเซล ไม่ว่าเราจะแสดงผลบนจอโทรศัพท์หรือจอทีวีขนาดใหญ่
 
-SVG ถูกใช้สำหรับ geometric shapes ทั่วไปและ D3 จะแสดง data เป็นภาพ ดังนั้นจึงใช้ SVG เพื่อสร้าง shapes สำหรับการแสดงภาพ SVG shapes สำหรับ web page ต้องใช้ภายใน aHTML `svg` tag
+ปกติจะใช้ SVG สร้างรูปทรงเลขาคณิตทั่วไป ทั่วไป
+แล้วเพราะว่า D3 จะแสดงข้อมูลเป็นภาพ ดังนั้นจึงใช้ SVG เพื่อสร้างรูปทรงที่จะเอามาแสดง ในการแสดง SVG shapes ในหน้าเว็บ จะต้องใช้แท็ก `svg`
 
-CSS สามารถปรับขนาดเมื่อรูปแบบถูกใช้สำหรับ relative units (เช่น `vh`, `vw`, หรือ percentages) แต่การใช้ SVG ต้องมีความ flexible มากกว่าเพื่อสร้าง data visualizations
+CSS จะปรับขนาดได้ถ้าใช้หน่วยแบบ relative (เช่น `vh`, `vw`, หรือ `%`) แต่การใช้ SVG จะยืดหยุ่นกว่าในการแสดงผลข้อมูล
 
 # --instructions--
 
-เพิ่ม `svg` node ใน `body` โดยใช้ `append()` กำหนดให้ `width` attribute กำหนดค่าคงที่ของ `w` และ `height` attribute กำหนดค่าคงที่ของ `h` โดยใช้ `attr()` หรือ `style()` methods  จะสามารถเห็น output ได้เนื่องจากมี `background-colหรือ` การกำหนดสี pink ใน `style` tag
+ให้เพิ่ม `svg` ใน `body` โดยใช้ `append()` โดยกำหนดให้ attribute `width` มีค่าเป็นค่าคงที่ `w` ที่มีให้ และ attribute `height` มีค่าเป็นค่าคงที่ `h` ที่มีให้
+ให้ใช้ method `attr()` หรือ `style()` สำหรับการตั้งค่า attribute นี้
+คุณจะเห็นการเปลี่ยนแปลงได้เลยเพราะเราได้ตั้งค่า `background-color` ไว้เป็น `pink` ในแท็ก `style` แล้ว
 
-**Note:** เมื่่อใช้ `attr()` width และ height attributes ไม่จำเป็นต้องมี units Tเนื่องจากมีการสร้าง block ของ scaling ของแต่ละ element ไว้อยู่แล้วที่ 5:1 อัตราส่วนของความกว้าง : ความสูง
+**Note:** เมื่อใช้ `attr()` กับ attribute width และ height ไม่จำเป็นต้องใส่หน่วย 
+การที่ทำแบบนี้จะเป็นพื้นฐานของการ scale เลย เพราะว่าแต่ละ element จะถูกล็อคอัตราส่วนความกว้างต่อความสูงไว้เป็น 5:1
 
 # --hints--
 
-document ควรมี 1 `svg` element
+ใน document ต้องมี `svg` หนึ่งตัว
 
 ```js
 assert($('svg').length == 1);
 ```
 
-`svg` element ควรมีค่า  `width` attribute เป็น `500` หรือ styled มีค่าของ width ที่ `500px`.
+element `svg` ต้องมี attribute `width` เป็น `500` หรือ `500px`
 
 ```js
 assert($('svg').attr('width') == '500' || $('svg').css('width') == '500px');
 ```
 
-`svg` element ควรมีค่า  `height` attribute เป็น `100` หรือ styled มีค่าของ height ที่ `100px`.
+element `svg` ต้องมี attribute `height` เป็น `100` หรือ `100px`
 
 ```js
 assert($('svg').attr('height') == '100' || $('svg').css('height') == '100px');
@@ -60,11 +64,11 @@ assert($('svg').attr('height') == '100' || $('svg').css('height') == '100px');
     const h = 100;
 
     const svg = d3.select("body")
-                  // Add your code below this line
+      // เขียนโค้ดใต้บรรทัดนี้
 
 
 
-                  // Add your code above this line
+      // เขียนโค้ดเหนือบรรทัดนี้
   </script>
 </body>
 ```

@@ -8,9 +8,15 @@ dashedName: map-dispatch-to-props
 
 # --description--
 
-ฟังก์ชัน `mapDispatchToProps()` ใช้เพื่อจัดเตรียม action creator เฉพาะให้กับ React component ของคุณ เพื่อให้สามารถปล่อย action ต่างๆ กับ Redux store ได้ มันมีโครงสร้างคล้ายกับฟังก์ชัน `mapStateToProps()` ที่คุณเขียนในแบบทดสอบที่แล้ว มัน return object ที่ map ส่ง action ไปยังชื่อต่างๆ ซึ่งกลายเป็น component `props` อย่างไรก็ตามแทนที่จะส่งคืนชิ้นส่วนของ `state` แต่ละ property จะ return ฟังก์ชันที่เรียกใช้ `dispatch` กับ action creator และข้อมูล action ที่เกี่ยวข้อง คุณมีสิทธิ์เข้าถึง `dispatch` นี้ เพราะมันส่งผ่านไปยัง `mapDispatchToProps()` เป็นพารามิเตอร์เมื่อคุณกำหนดฟังก์ชัน เช่นเดียวกับที่คุณส่ง `state` ไปยัง `mapStateToProps()` ในเบื้องหลังนั้น React Redux ใช้ `store.dispatch()` ของ Redux เพื่อดำเนินการจัดส่งเหล่านี้ด้วย `mapDispatchToProps()` ซึ่งคล้ายกับการใช้ `store.subscribe()` สำหรับ component ที่จับคู่กับ `state`
+ฟังก์ชัน `mapDispatchToProps()` จะใช้เพื่อให้ React component ของคุณเรียกใช้ action creator บางตัวได้ เพื่อให้ส่ง action ไปยัง Redux store ได้ 
+ฟังก์ชันนี้จะมีครงสร้างคล้ายกับฟังก์ชัน `mapStateToProps()` ที่คุณเขียนในแบบทดสอบที่แล้ว โดยจะคืนค่าเป็น object ที่เก็บ action ใน property ที่กำหนด ซึ่งจะกลายเป็น `props` ของ component 
+property ของ object นี้จะไม่ได้เก็บค่าส่วนหนึ่งของ `state` แล้ว แต่จะเก็บฟังก์ชันที่เรียกใช้ `dispatch` กับ action creator และข้อมูล action ที่เกี่ยวข้องแทน
+คุณจะเข้าถึง `dispatch` นี้ได้ เพราะว่า `dispatch` ตัวนี้จะถูกส่งเป็นพารามิเตอร์ไปยัง `mapDispatchToProps()` 
+เหมือนกับตอนที่ส่ง `state` ไปยัง `mapStateToProps()` 
+React Redux จะใช้ method `store.dispatch()` ของ Redux ไปเรียกใช้ `mapDispatchToProps()` ที่เรากำลังจะเขียน
+ซึ่งจะเหมือนกับการที่ React Redux ไปเรียกใช้ `store.subscribe()` ไป map `state` ให้ component
 
-ตัวอย่างเช่น คุณมี `loginUser()` action creator ที่ใช้ `username` เป็น action payload โดยที่ object ที่ return จาก `mapDispatchToProps()` สำหรับ action creator นี้จะมีลักษณะดังนี้:
+เช่น ถ้าคุณมี action creator `loginUser()` ที่รับค่า `username` เป็นข้อมูลของ action แล้ว object ที่ `mapDispatchToProps()` คืนค่าออกมาสำหรับ `loginUser()` จะมีหน้าตาแบบนี้:
 
 ```jsx
 {
@@ -22,11 +28,15 @@ dashedName: map-dispatch-to-props
 
 # --instructions—
 
-code editor มี action creator ที่เรียกว่า `addMessage()` ให้เขียนฟังก์ชัน `mapDispatchToProps()` ที่ใช้ `dispatch` เป็น argument จากนั้น return object และ objectนั้นควรมี property `submitNewMessage` ที่ตั้งค่าเป็นฟังก์ชัน dispatch ซึ่งจะนำพารามิเตอร์สำหรับข้อความใหม่มาเพิ่มเมื่อ dispatch `addMessage()`
+code editor มี action creator ชื่อ `addMessage()` 
+ให้เขียนฟังก์ชัน `mapDispatchToProps()` ที่รับ `dispatch` เป็น argument จากนั้นให้คืนค่าเป็น object ออกมา โดยที่ object นั้นต้องมี property ชื่อ `submitNewMessage` ที่เป็นฟังก์ชัน dispatch 
+ซึ่งจะนำพารามิเตอร์ที่รับเข้ามาไปใช้ในการ dispatch `addMessage()`
+
+ถ้าลองทำแล้วไม่เข้าใจ ให้พยายามสร้างฟังก์ชัน `mapDispatchToProps()` โดยให้ object ที่คืนค่าออกมามีหน้าตาคล้ายกับในตัวอย่าง แต่เปลี่ยน action creator ที่เรียกใช้
 
 # --hints--
 
-`addMessage` ควร return object ด้วย key `type` และ `message`
+`addMessage` คืนค่าเป็น object ที่มี key เป็น `type` และ `message`
 
 ```js
 assert(
@@ -40,19 +50,19 @@ assert(
 );
 ```
 
-`mapDispatchToProps` ควรเป็นฟังก์ชัน
+`mapDispatchToProps` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof mapDispatchToProps === 'function');
 ```
 
-`mapDispatchToProps` ควร return object 
+`mapDispatchToProps` ต้องคืนค่าออกมาเป็น object 
 
 ```js
 assert(typeof mapDispatchToProps() === 'object');
 ```
 
-การส่ง `addMessage` กับ `submitNewMessage` จาก `mapDispatchToProps` ควร return ข้อความไปยัง dispatch function
+การ dispatch `addMessage` โดยใช้ `submitNewMessage` ใน `mapDispatchToProps` ต้องส่งข้อความที่รับเข้ามาไปยังฟังก์ชัน dispatch
 
 ```js
 assert(

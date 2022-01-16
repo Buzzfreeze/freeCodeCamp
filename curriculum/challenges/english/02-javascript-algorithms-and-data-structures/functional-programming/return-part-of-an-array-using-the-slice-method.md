@@ -8,7 +8,13 @@ dashedName: return-part-of-an-array-using-the-slice-method
 
 # --description--
 
-`slice` method คืนค่าเป็นสำเนา (copy) ของ elements ใน array โดย `slice` method รับค่า arguments ได้ 2 ค่า argument แรกคือ index ที่ต้องการเริ่ม slice (ตัด) ส่วน argument ที่สองคือ index ที่ต้องการจบการ slice (ไม่รวม index ตัวท้าย) แต่หากเราไม่ระบุ argument ใดๆ มัันจะทำการตัด array ตั้งแต่ element แรกจนถึง element สุดท้าย วิธีนี้เป็นวิธีง่ายๆ ในการสร้างสำเนาทั้งชุดของ array นอกจากนี้ `slice` method ก็ไม่เปลี่ยนแปลง array ตั้งต้นด้วย แต่จะคืนค่าเป็น array ตัวใหม่
+ค่าที่ method `slice` คืนออกมาจะเป็นค่าที่คัดลอกจาก element ใน array 
+method `slice` รับ arguments 2 ตัวคือ 
+
+1. index ที่ต้องการเริ่ม slice (ตัด) 
+2. index ที่ต้องการจบการ slice (ค่าที่ได้จะไม่รวม element ที่ตำแหน่งนี้) 
+
+แต่ถ้าเราไม่ส่ง argument เข้าไปเลย ฟังก์ชันจะทำการตัด array ตั้งแต่ element แรกจนถึง element สุดท้าย วิธีนี้เป็นวิธีง่ายๆ ในการสร้างสำเนาทั้งชุดของ array นอกจากนี้ `slice` method ก็ไม่เปลี่ยนแปลง array เดิมด้วย แต่จะคืนค่าเป็น array ตัวใหม่เลย
 
 ตัวอย่างของการใช้งาน method นี้
 
@@ -17,21 +23,21 @@ var arr = ["Cat", "Dog", "Tiger", "Zebra"];
 var newArray = arr.slice(1, 3);
 ```
 
-`newArray` ควรมีค่าเป็น `["Dog", "Tiger"]`.
+`newArray` จะมีค่าเป็น `["Dog", "Tiger"]`.
 
 # --instructions--
 
-จงใช้ `slice` method ในฟังก์ชัน `sliceArray` เพื่อคืนค่าเป็น array ที่ตัดมาจาก `anim` array โดยกำหนดให้ index เป็น `beginSlice` และ `endSlice`
+จงใช้ method `slice` ในฟังก์ชัน `sliceArray` เพื่อคืนค่าเป็น array ที่ตัดมาจาก array `anim` โดยกำหนดให้ index เป็น `beginSlice` และ `endSlice`
 
 # --hints--
 
-โค้ดของคุณควรใช้ `slice` method
+ต้องใช้ method `slice` ในโค้ด
 
 ```js
 assert(code.match(/\.slice/g));
 ```
 
-ตัวแปร `inputAnim` ไม่ควรมีการเปลี่ยนแปลง
+ตัวแปร `inputAnim` ต้องมีค่าคงเดิม
 
 ```js
 assert(
@@ -40,7 +46,7 @@ assert(
 );
 ```
 
-`sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 1, 3)` ควรคืนค่าเป็น `["Dog", "Tiger"]`.
+การเรียกใช้ฟังก์ชัน `sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 1, 3)` ต้องได้ค่าเป็น `["Dog", "Tiger"]`.
 
 ```js
 assert(
@@ -49,7 +55,7 @@ assert(
 );
 ```
 
-`sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 0, 1)` ควรคืนค่าเป็น `["Cat"]`.
+การเรียกใช้ฟังก์ชัน `sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 0, 1)` ต้องได้ค่าเป็น `["Cat"]`.
 
 ```js
 assert(
@@ -58,7 +64,7 @@ assert(
 );
 ```
 
-`sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 1, 4)` ควรคืนค่าเป็น `["Dog", "Tiger", "Zebra"]`.
+การเรียกใช้ฟังก์ชัน `sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 1, 4)` ต้องได้ค่าเป็น `["Dog", "Tiger", "Zebra"]`.
 
 ```js
 assert(
@@ -73,10 +79,10 @@ assert(
 
 ```js
 function sliceArray(anim, beginSlice, endSlice) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
 sliceArray(inputAnim, 1, 3);
@@ -86,9 +92,9 @@ sliceArray(inputAnim, 1, 3);
 
 ```js
 function sliceArray(anim, beginSlice, endSlice) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   return anim.slice(beginSlice, endSlice)
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
 sliceArray(inputAnim, 1, 3);

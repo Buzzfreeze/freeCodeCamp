@@ -8,11 +8,12 @@ dashedName: target-the-children-of-an-element-using-jquery
 
 # --description--
 
-เมื่อ HTML element ใดๆ ซ้อนอยู่ใน element อีกที เราจะเรียก element นั้นว่า <dfn>children</dfn> ของ elementที่มันซ้อนอยู่ ตัวอย่างเช่น button element ที่มีข้อความ `#target1`, `#target2`, และ `#target3` ทั้งหมดในแบบทดสอบนี้ เป็น children ของ `<div class="well" id="left-well">` element
+ถ้าเรามี HTML element ที่ซ้อนกันอยู่ เราจะเรียก element ตัวข้างในว่าเป็น <dfn>children</dfn> (ลูก) ของ element ตัวนอก 
+เช่น `button` ทั้งสามปุ่มที่มีข้อความว่า `#target1` `#target2` และ `#target3` จะเป็น children ของ `<div class="well" id="left-well">` ทั้งหมดเลย
 
-jQuery มีฟังก์ชันที่เรียกว่า `children()` ที่จะให้ให้คุณเข้าถึง children ของ element ใดๆที่คุณได้เลือกมา
+jQuery มีฟังก์ชันที่เรียกว่า `children()` ที่จะทำให้คุณเข้าถึง children ของ element ที่เลือกได้
 
-ข้างล่างคือตัวอย่างของการใช้ฟังก์ชัน `children()` เพื่อเปลี่ยน children ของ `left-well` element เป็นสี `blue`:
+ข้างล่างคือตัวอย่างของการใช้ฟังก์ชัน `children()` เพื่อทำให้ children ของ `left-well` มี CSS `color` เป็น `blue`:
 
 ```js
 $("#left-well").children().css("color", "blue")
@@ -20,23 +21,23 @@ $("#left-well").children().css("color", "blue")
 
 # --instructions--
 
-ทำให้ children ของ `right-well` element เป็นสีส้ม
+จงทำให้ children ทั้งหมดของ `right-well` มี CSS `color` เป็น `orange`
 
 # --hints--
 
-Children ของ `#right-well` ทั้งหมด จะต้องมีข้อความที่เป็นสีส้ม
+children ทุกตัวใน `#right-well` จะต้องมีข้อความที่เป็นสีส้ม
 
 ```js
 assert($('#right-well').children().css('color') === 'rgb(255, 165, 0)');
 ```
 
-คุณจะต้องใช้ฟังก์ชัน `children()` ในการปรับแต่ง element
+คุณจะต้องใช้ฟังก์ชัน `children()` ในการเลือก element ลูก
 
 ```js
 assert(code.match(/\.children\(\)\.css/g));
 ```
 
-คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
+คุณจะต้องใช้แค่ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
 
 
 ```js
@@ -60,7 +61,7 @@ assert(code.match(/<div class="well" id="right-well">/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
@@ -100,7 +101,7 @@ assert(code.match(/<div class="well" id="right-well">/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>

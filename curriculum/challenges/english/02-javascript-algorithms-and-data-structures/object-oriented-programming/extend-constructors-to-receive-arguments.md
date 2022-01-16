@@ -9,7 +9,8 @@ dashedName: extend-constructors-to-receive-arguments
 # --description--
 
 
-แม้ว่า `Bird` และ `Dog` constructors ที่ได้จากแบบทดสอบที่แล้วจะทำงานได้ดี แต่สังเกตว่า ทุก `Birds` ที่สร้างจาก `Bird` constructor จะมี  name เป็น Albert มี color สีฟ้าและมี 2 ขาเสมอ ถ้าหากคุณต้องการให้นกแต่ละตัวมี name และ color ต่างกัน ก็มีวิธีที่เปลี่ยน property ของนกทีละตัวอยู่ แต่ค่อนข้างใช้เวลา
+ถึง constructor `Bird` และ `Dog` ที่ได้จากแบบทดสอบที่แล้วจะใช้งานดี แต่เราจะเห็นว่า ทุก `instance` ของนกที่สร้างจาก constructor `Bird` จะมี name เป็น Albert มี color เป็น blue และมี numLegs เป็น 2 เสมอ 
+ถ้าคุณต้องการให้นกแต่ละตัวมี name และ color ต่างกัน ก็มีวิธีที่เปลี่ยน property ของนกทีละตัวอยู่ แต่จะลำบากหน่อย ลองดูตัวอย่างด้านล่างนี้:
 
 ```js
 let swan = new Bird();
@@ -17,7 +18,8 @@ swan.name = "Carlos";
 swan.color = "white";
 ```
 
-สมมติว่าคุณกำลังเขียนโปรแกรมเพื่อเก็บข้อมูลของนกหลายร้อยหลายพันตัวที่อยู่ในกรง ซึ่งใช้เวลามากในการสร้างนกทั้งหมดและเปลี่ยน property ของแต่ละตัวให้เป็นค่าที่แตกต่างกัน ดังนั้น หากคุณต้องการสร้าง `Bird` objects ที่มีค่าแตกต่างกันให้ง่ายขึ้น คุณต้องออกแบบให้ Bird constructor สามารถรับ parameter ได้
+สมมติว่าคุณกำลังเขียนโปรแกรมเพื่อเก็บข้อมูลของนกหลายร้อยหลายพันตัวที่อยู่ในกรง เราจะเสียเวลาในการสร้างและเปลี่ยน property ของแต่ละตัวมากๆ 
+ถ้าคุณอยากทำให้การสร้าง object `Bird` แต่ละตัวทำได้ง่ายๆ คุณต้องออกแบบให้ constructor `Bird` สามารถรับ parameter ได้
 
 ```js
 function Bird(name, color) {
@@ -27,7 +29,9 @@ function Bird(name, color) {
 }
 ```
 
-จากนั้นก็ส่งค่าที่แตกต่างกันนั้นเป็น arguments เพื่อเข้าไปกำหนดคุณสมบัติของนกภายใน `Bird` constructor: `let cardinal = new Bird("Bruce", "red");` คำสั่งนี้เป็นการสร้าง instance ใหม่ของ `Bird` โดยกำหนดให้ `name` และ `color` properties มีค่าเป็น `Bruce` และ `red` ตามลำดับ ส่วน `numLegs` property ก็ยังคงมีค่าเป็น 2 ซึ่ง `cardinal` มี property ดังนี้
+วิธีใช้ก็คือให้ส่ง argument เข้าไปเพื่อกำหนด property ใน constructor `Bird` 
+เช่น `let cardinal = new Bird("Bruce", "red");` 
+คำสั่งนี้เป็นการสร้าง instance ใหม่ของ `Bird` โดยกำหนดให้ property `name` และ `color` มีค่าเป็น `Bruce` และ `red` ตามลำดับ ส่วน property `numLegs` ก็ยังคงมีค่าเป็น 2 ซึ่ง `cardinal` จะมี property ตามนี้:
 
 ```js
 cardinal.name
@@ -35,33 +39,33 @@ cardinal.color
 cardinal.numLegs
 ```
 
-การกำหนด constructor แบบนี้มีความยืดหยุ่นมากกว่า เพราะสามารถกำหนด properties ของ `Bird` แต่ละตัวได้ในจังหวะการสร้างเลย ซึ่งวิธีนี้ทำให้ JavaScript constructor มีประโยชน์อย่างมาก เนื่องจากมีการจัดกลุ่ม object เข้าด้วยกันตามคุณสมบัติและพฤติกรรมที่เหมือนกัน และสามารถกำหนดพิมพ์เขียวที่ใช้ในการสร้าง instance ได้
+การกำหนด constructor แบบนี้มีความอิสระมากกว่า เพราะเราจะกำหนด property ของ `Bird` แต่ละตัวได้ในตอนสร้างเลย การสร้าง instance ด้วยวิธีนี้ทำให้ constructor ของ JavaScript มีประโยชน์อย่างมาก เพราะว่าเป็นการสร้างกลุ่มของ object ที่มีคุณสมบัติและพฤติกรรมที่เหมือนกัน และเหมือนเป็นการใช้แม่พิมพ์การสร้าง object ด้วย
 
 # --instructions--
 
-จงสร้าง `Dog` constructor อีกชุดนึง แต่ครั้งนี้ให้มีการรับค่า parameters `name` และ `color` และกำหนดให้ property `numLegs` มีค่าเป็น 4 จากนั้นให้สร้าง `Dog` instance ใหม่ โดยเก็บในตัวแปร `terrier` แล้วส่ง string 2 ค่าเข้าไปเป็น argument สำหรับ properties `name` และ `color`
+จงสร้าง constructor `Dog` อีกตัวหนึ่ง แต่ครั้งนี้ให้มีการรับค่า parameter `name` และ `color` และกำหนดให้ property `numLegs` มีค่าเป็น 4 จากนั้นให้สร้าง instance ของ `Dog` ใหม่ โดยเก็บในตัวแปร `terrier` แล้วส่ง string 2 ค่าเข้าไปเป็น argument สำหรับ property `name` และ `color`
 
 # --hints--
 
-`Dog` ควรรับ argument ที่เป็น `name` เข้ามา
+`Dog` ต้องรับ argument ชื่อ `name` เข้ามา
 
 ```js
 assert(new Dog('Clifford').name === 'Clifford');
 ```
 
-`Dog` ควรรับ argument ที่เป็น `color` เข้ามา
+`Dog` ต้องรับ argument ชื่อ `color` เข้ามา
 
 ```js
 assert(new Dog('Clifford', 'yellow').color === 'yellow');
 ```
 
-`Dog` ควรกำหนดให้ property `numLegs` มีค่าเป็น 4
+`Dog` ต้องกำหนดให้ property `numLegs` มีค่าเป็น 4
 
 ```js
 assert(new Dog('Clifford').numLegs === 4);
 ```
 
-`terrier` ควรสร้างจาก `Dog` constructor
+ต้องสร้าง instance ของ `terrier` โดยใช้ constructor `Dog`
 
 ```js
 assert(terrier instanceof Dog);

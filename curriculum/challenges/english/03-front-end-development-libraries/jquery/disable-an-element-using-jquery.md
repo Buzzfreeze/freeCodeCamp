@@ -8,23 +8,23 @@ dashedName: disable-an-element-using-jquery
 
 # --description--
 
-คุณสามารถเปลี่ยนคุณสมบัติของ HTML ส่วนที่ไม่ได้เกี่ยวข้องกับ CSS ด้วย jQuery อย่างเช่น คุณสามารถยกเลิกการใช้งานของปุ่มได้
+เราเปลี่ยน property ของ HTML ในส่วนที่ไม่ใช่ CSS ด้วย jQuery ได้ด้วย อย่างเช่น เราจะปิดปุ่มไม่ให้ใช้งานได้ก็ได้
 
-เมื่อคุณยกเลิกการใช้งานปุ่มใดๆ ปุ่มนั้นจะเปลี่ยนเป็นสีเทาและคลิกไม่ได้อีก
+ถ้าเราปิดปุ่ม ปุ่มนั้นจะเปลี่ยนเป็นสีเทา แล้วก็จะทำให้คลิกปุ่มนั้นไม่ได้
 
-jQuery มีฟังก์ชันที่เรียกว่า `.prop()` ที่จะทำให้คุณปรับแต่งคุณสมบัติของ element ต่างๆ ได้
+jQuery มีฟังก์ชันที่เรียกว่า `.prop()` ที่ใช้เปลี่ยน property ของ element ได้
 
-มาดูวิธีการยกเลิกการใช้งานของปุ่มกัน:
+มาดูวิธีปิดปุ่มกัน:
 
 ```js
 $("button").prop("disabled", true);
 ```
 
-ให้ลองยกเลิกการใช้งานของปุ่ม `target1`
+ให้ลองปิดปุ่ม `target1`
 
 # --hints--
 
-ปุ่ม `target1` ของคุณไม่ควรจะใช้งานได้
+ปุ่ม `target1` ของคุณต้องใช้งานไม่ได้
 
 ```js
 assert(
@@ -34,13 +34,13 @@ assert(
 );
 ```
 
-ปุ่มอื่นควรใช้งานได้ตามปกติ
+ปุ่มอื่นต้องใช้งานได้ตามปกติ
 
 ```js
 assert($('#target2') && !$('#target2').prop('disabled'));
 ```
 
-คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ดังกล่าวให้แก่ element ที่ต้องการ
+ต้องใช้แค่ jQuery เท่านั้นในการปิดปุ่ม
 
 ```js
 assert(!code.match(/disabled[^<]*>/g));
@@ -58,7 +58,7 @@ assert(!code.match(/disabled[^<]*>/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
@@ -94,7 +94,7 @@ assert(!code.match(/disabled[^<]*>/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>

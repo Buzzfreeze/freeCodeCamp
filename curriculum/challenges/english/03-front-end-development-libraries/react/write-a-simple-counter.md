@@ -8,17 +8,21 @@ dashedName: write-a-simple-counter
 
 # --description--
 
-คุณสามารถออกแบบ stateful component ที่ซับซ้อนมากขึ้นได้โดยการรวมแนวคิดที่ได้เรียนรู้จนถึงตอนนี้ ซึ่งรวมถึงการเริ่มต้น `state` การเขียน method ที่กำหนด `state` และการกำหนดclick handler เพื่อเรียกใช้งาน method เหล่านี้
+ถ้าเราใช้ความรู้ทั้งหมดที่ได้เรียนมา ตอนนี้เราจะสร้าง stateful component ที่ซับซ้อนมากขึ้นได้แล้ว 
+รวมถึงการตั้งค่าเริ่มต้นให้ `state` หรือการเขียน method ที่เปลี่ยนค่าของ `state` และทำให้ click handler มาเรียกใช้ method ที่เราเขียน
 
 # --instructions--
 
-`Counter` component จะติดตามค่า `count` ใน `state` มันมีสองปุ่มที่เรียกใช้ methods `increment()` และ `decrement()` ให้เขียน methods เหล่านี้เพื่อให้ค่า counter เพิ่มขึ้นหรือลดลงทีละ 1 เมื่อคลิกปุ่มที่เหมาะสม นอกจากนี้ให้สร้าง method `reset()` เพื่อเวลาที่คลิกปุ่มรีเซ็ต count จะถูกตั้งเป็น 0
+component `Counter` จะอ่านค่าของ `count` ใน `state` 
+โดยจะมีปุ่มสองปุ่มที่แต่ละปุ่มจะเรียกใช้ method `increment()` (เพิ่มค่า) และ `decrement()` (ลดค่า)
+ให้เขียน method สองตัวนี้เพื่อให้ count เพิ่มขึ้น 1 เมื่อคลิกปุ่ม `Increment!` หรือลดลง 1 เมื่อคลิกปุ่ม `Decrement!` 
+และให้สร้าง method `reset()` ที่จะทำงานเมื่อคลิกปุ่ม `Reset` แล้วจะทำให้ค่าของ count เป็น 0
 
-**Note:** ตรวจสอบให้แน่ใจว่าคุณไม่ได้แก้ไข `className` ของปุ่มต่างๆ นอกจากนี้อย่าลืมเพิ่มการเชื่อมที่จำเป็นสำหรับ methods ที่สร้างขึ้นใหม่ใน constructor
+**Note:** ห้ามแก้ไข `className` ของปุ่มต่างๆ แล้วก็อย่าลืมการผูก method ที่สร้างขึ้นใหม่กับ this ใน constructor ด้วย
 
 # --hints--
 
-`Counter` ควร return `div element ที่มีปุ่ม 3 ปุ่ม ที่มีข้อความว่า `Increment!`, `Decrement!`, `Reset` ตามลำดับ
+`Counter` ต้องคืนค่าเป็น `div` ที่มีปุ่ม 3 ปุ่มอยู่ข้างใน โดยปุ่มจะมีข้อความว่า `Increment!`, `Decrement!`, `Reset` ตามลำดับ
 
 ```js
 assert(
@@ -33,14 +37,14 @@ assert(
 );
 ```
 
-State ของ `Counter` ควรเริ่มต้นด้วย `count` property ที่มีค่าเป็น `0`
+state ใน `Counter` ต้องมีค่าเริ่มต้นของ property `count` เป็น `0`
 
 ```js
 const mockedComponent = Enzyme.mount(React.createElement(Counter));
 assert(mockedComponent.find('h1').text() === 'Current Count: 0');
 ```
 
-การคลิกที่ปุ่มเพิ่มควรเป็นการเพิ่มค่า count ที่ละ `1`
+การคลิกที่ปุ่ม `Increment!` ต้องเป็นการเพิ่มค่า count ที่ละ `1`
 
 ```js
 const mockedComponent = Enzyme.mount(React.createElement(Counter));
@@ -48,7 +52,7 @@ mockedComponent.find('.inc').simulate('click');
 assert(mockedComponent.find('h1').text() === 'Current Count: 1');
 ```
 
-การคลิกที่ปุ่มลดควรเป็นการลดค่า count ที่ละ `1`
+การคลิกที่ปุ่ม `Decrement!` ต้องเป็นการลดค่า count ที่ละ `1`
 
 ```js
 const mockedComponent = Enzyme.mount(React.createElement(Counter));
@@ -56,7 +60,7 @@ mockedComponent.find('.dec').simulate('click');
 assert(mockedComponent.find('h1').text() === 'Current Count: -1');
 ```
 
-การคลิกปุ่มรีเซ็ตควรเป็นการรีเช็ตค่า count เป็น `0`
+การคลิกปุ่ม `Reset` ต้องเป็นการรีเช็ตค่า count เป็น `0`
 
 ```js
 const mockedComponent = Enzyme.mount(React.createElement(Counter));
@@ -84,13 +88,13 @@ class Counter extends React.Component {
     this.state = {
       count: 0
     };
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
 
-    // Change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้
   }
-  // Change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้
 
-  // Change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้
   render() {
     return (
       <div>

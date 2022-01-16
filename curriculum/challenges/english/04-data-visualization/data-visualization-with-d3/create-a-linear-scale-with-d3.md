@@ -8,41 +8,48 @@ dashedName: create-a-linear-scale-with-d3
 
 # --description--
 
-bar and scatter plot charts จะทำการ plot data โดยตรงลงไปที่ SVG canvas อย่างไรก็ตามถ้าความสูงของ bar หรือ data points จดใดจุดนึง มีค่ามากกว่าความกว้างหรือความยาวของ SVG ค่าเหล่าน้นขะไปอยู่ที่ด้านนอกของพื้นที่ของ SVG
+กราฟแท่งและ scatter plot เขียนข้อมูลงไปใน SVG canvas โดยตรง 
+แต่ถ้าความสูงของกราฟแท่ง หรือตำแหน่งของจุดข้อมูล มีค่ามากกว่าความกว้างหรือความยาวของพื้นที่ SVG ค่าเหล่านั้นจะไปแสดงผลอยู่นอกพื้นที่ SVG
 
-ใน D3 มี scales ที่ใช่ในการช่วย plot data `scales` เป็น functions ที่บอก program ว่าจะ set raw data points ไปเป็น pixels ใน the SVG canvas อย่างไร
+ใน D3 มีฟังก์ชัน `scale` ที่ช่วยแก้ปัญหานี้ได้  
+โดย `scales` เป็นฟังก์ชันที่จะบอกโปรแกรมว่า จะวาดข้อมูลดิบของเราไปบนตำแหน่งพิกเซลไหนใน SVG canvas
 
-ตัวอย่างเช่น หากเรามี 100x500-sized SVG canvas และต้องการ plot Gross Domestic Product (GDP) สำหรับจำนวนของประเทศ set ของจำนวนอาจจะมีช่วงความกว้างเป็นพันล้าน แต่เราสามารถใช้ D3 เพื่อ scale ค่าของ GDP ไปสู่พื่นที่ขนาด 100x500-sized ได้
+เช่น ถ้าเรามี SVG canvas ที่มีขนาด 100x500 และต้องการวาดกราฟ Gross Domestic Product (GDP) ของหลายๆประเทศลงไป
+ตัวเลขที่ใช้ในข้อมูลอาจมีหน่วยเป็นพันล้านหรือล้านล้านก็ได้ 
+แต่เราสามารถใช้ D3 เพื่อ scale ให้ค่าของ GDP นั้นแสดงผลในพื้นที่ขนาด 100x500 ได้
 
-ซึ่งจะไม่เหมือนกับการ plot raw data ที่ก่อน plot เราสามารถ scale data set ทั้งหทดได้ ทำให้ค่า `x` และ `y` พอดีกับความกว่้างและความยาวของ canvas
+ซึ่งจากข้อมูลนี้ เราแทบจะไม่มีทางวาดข้อมูลดิบหลักล้านลงในพื้นที่นี้ได้เลย 
+ก่อนที่เราจะวาดกราฟเราต้องกำหนด scale ที่ทำให้ ทำให้ค่า `x` และ `y` ไม่เกินขนาดของ canvas ของเราก่อน
 
-D3 มีหลาย scale types สำหรับ linear scale (ใช้งานบ่อยใน quantitative data)จะมี D3 method `scaleLinear()`:
+D3 มี scale หลายแบบ แต่สำหรับ linear scale (ใช้งานบ่อยในในข้อมูลเชิงปริมาณ) จะมี method `scaleLinear()` ของ D3:
+(method นี้จะคืนค่าเป็นฟังก์ชัน)
 
 ```js
 const scale = d3.scaleLinear()
 ```
 
-scale ใช้ระบุความสัมพันธ์ ค่าของ input จะเท่ากับค่าของ output ในบทเรียนอื่นจะพูดถึงอีกครั้งสำหรับการเปลี่ยนค่าเหล่านี้
+โดยค่าเริ่มต้น scale จะมองว่าค่าที่รับเข้ามาจะเท่ากับค่าที่แสดงผล เราจะพูดถึงวิธีการเปลี่ยนรูปแบบนี้ในบทเรียนอื่น
 
 # --instructions--
 
-เปลี่ยน `scale` variable เพื่อสร้าง linear scale. จากนั้นกำหนด `output` variable สำหรัยเรียกใช้ scale ด้วย argument ที่เท่ากับ `50`.
+ให้เปลี่ยนตัวแปร `scale` เพื่อสร้าง linear scale
+แล้วในตัวแปร `output` ให้เรียกใช้ฟังก์ชัน `scale` โดยส่ง argument เป็น `50`
 
 # --hints--
 
-text ใน `h2` ควรเป็น `50`.
+text ใน `h2` ควรเป็น `50`
 
 ```js
 assert($('h2').text() == '50');
 ```
 
-ควรใช้ `scaleLinear()` method.
+ต้องใช้ method `scaleLinear()`
 
 ```js
 assert(code.match(/\.scaleLinear/g));
 ```
 
-`output` variable ควรถูกเรียกใช้ `scale` ที่มี argument เป็น `50`.
+ตัวแปร `output` ต้องเรียกใช้ `scale` โดยส่ง argument เป็น `50`
 
 ```js
 assert(output == 50 && code.match(/scale\(\s*?50\s*?\)/g));
@@ -55,12 +62,12 @@ assert(output == 50 && code.match(/scale\(\s*?50\s*?\)/g));
 ```html
 <body>
   <script>
-    // Add your code below this line
+    // เขียนโค้ดใต้บรรทัดนี้
 
-    const scale = undefined; // Create the scale here
-    const output = scale(); // Call scale with an argument here
+    const scale = undefined; // สร้าง scale ตรงนี้
+    const output = scale(); // เรียกใช้ scale โดยใช้ argument ตรงนี้
 
-    // Add your code above this line
+    // เขียนโค้ดเหนือบรรทัดนี้
 
     d3.select("body")
       .append("h2")

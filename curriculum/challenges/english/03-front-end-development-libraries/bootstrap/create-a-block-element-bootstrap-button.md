@@ -14,21 +14,21 @@ dashedName: create-a-block-element-bootstrap-button
 <button class="btn btn-default">Submit</button>
 ```
 
-ปุ่มนี้มีความกว้างตามขนาดของคำว่า `Submit` เท่านั้น
+ปุ่มนี้มีความกว้างเท่าคำว่า `Submit` เท่านั้น
 
 <button class='btn btn-default'>Submit</button>
-การเพิ่ม class `btn-block` จะทำให้ปุ่มนั้นๆ กลายเป็น block element ก็คือ ความกว้างของปุ่มจะขนาดตามวามกว้างตามแนวนอนของหน้าเพจนั้น และ element ที่อยู่ถัดไปก็จะไปอยู่ใน "บรรทัดใหม่" ข้างล่างปุ่ม block element นั้น
+การเพิ่ม class `btn-block` จะทำให้ปุ่มนั้นๆ กลายเป็น block element แล้วความกว้างของปุ่มจะยาวตามความกว้างของหน้านั้น และ element ที่อยู่ถัดไปก็จะไปขึ้น "บรรทัดใหม่" ใต้ปุ่มที่เป็น block element ปุ่มนั้น
 
 
 ```html
 <button class="btn btn-default btn-block">Submit</button>
 ```
 
-ปุ่มนี้มีความกว้างเต็ม 100% ของความกว้างของเพจ
+ปุ่มนี้มีความกว้างเต็ม 100% ของความกว้างของหน้า
 
 <button class='btn btn-default btn-block'>Submit</button>
 
-หมายเหตุ การสร้างปุ่ม block element ยังต้องกำหนด class `btn` ด้วย
+หมายเหตุ การสร้างปุ่มที่เป็น block element ยังต้องมี class `btn` อยู่เหมือนเดิม
 
 มาลองสร้างปุ่ม ที่มี class `btn-block` ของ Bootstrap กัน
 

@@ -8,17 +8,24 @@ dashedName: use-the-reduce-method-to-analyze-data
 
 # --description--
 
-`Array.prototype.reduce()` หรือเขียนย่อๆ ว่า `reduce()` เป็น method ที่นำมาใช้ได้มากที่สุดใน JavaScript คุณสามารถขจัดปัญหาที่เกิดขึ้นกับ array ได้เกือบทั้งหมดด้วย `reduce` method
+`Array.prototype.reduce()` หรือเขียนย่อๆ ว่า `reduce()` เป็น method ในการจัดการ array ที่ครอบคลุมที่สุดใน JavaScript เราจะแก้ปัญหาในการจัดการ array ได้เกือบทั้งหมดด้วย method `reduce` นี้
 
-`reduce` method เป็นรูปแบบที่ใช้กับการทำงานของ array โดยทั่วไป และเป็นไปได้ว่า ทั้ง `filter` และ `map` เป็นรูปแบบพิเศษที่ถ่ายทอดมาจาก `reduce` โดย `reduce` method อ่าน item ทีละตัวใน array แล้วคืนค่าเป็นค่าเดียว (a single value) เช่น string, number, object, array ซึ่งการทำงานนี้ต้องอาศัย callback function ที่รันเมื่อมีการอ่านแต่ละ item
+`reduce` เป็น method ที่ใช้จัดการ array ได้หลายรูปแบบ แล้วเราก็สามารถเขียน ทั้ง `filter` และ `map` โดยใช้ `reduce` ได้
+`reduce` จะอ่าน element ทีละตัวใน array แล้วคืนค่าออกมาตัวเดียว (คืนค่าออกมาได้ทั้ง string, number, object, array ฯลฯ) ซึ่งจะใช้ callback function เพื่ออ่านและประมวลผลแต่ละ element
 
-callback function รับค่าได้ 4 arguments โดย argument แรก เรียกว่า accumulator (ตัวสะสม) ซึ่งเก็บค่าที่เป็นผลจาก callback function ที่รันในรอบที่แล้ว, argument ที่สองคือ element ปัจจุบันที่กำลังถูกอ่านค่า, argument ที่สามคือ index ของ element นั้นๆ และ argument ที่สี่ คือ array ที่เรียก `reduce` method
+`reduce` จะส่ง arugument 4 ตัว ไปให้ callback function
 
-นอกเหนือจาก callback function แล้ว `reduce` ยังมี parameter อีกตัวนึงที่ใช้กำหนดค่าเริ่มต้นของ accumulator โดย parameter ที่สองจะไม่ถูกใช้งาน หากข้ามการวนรอบแรก แล้วการวนรอบที่สองก็ได้มีการรับค่าจาก element แรกของ array เข้ามาเก็บใน accumulator แล้ว
+- argument แรกจะเรียกว่า accumulator ซึ่งเก็บค่าที่เป็นผลจาก callback function ที่รันในรอบที่แล้ว
+- argument ที่สองคือ element ปัจจุบันที่กำลังถูกอ่านค่า
+- argument ที่สามคือ index ของ element นั้นๆ 
+- argument ที่สี่คือ array ที่เรียกใช้ method `reduce` 
+
+นอกจาก callback function แล้ว `reduce` ยังมี parameter อีกตัวนึงที่ใช้กำหนดค่าเริ่มต้นของ accumulator 
+ถ้าเราไม่ได้ระบุ parameter ที่สอง ลูปรอบแรกจะถูกข้าม แล้ว element แรกของ array ก็จะกลายเป็น accumulator ในลูปรอบที่สองแทน
 
 
-ด้านล่างเป็นตัวอย่างที่ใช้ `reduce` กับ `users` array เพื่อคืนค่าเป็นผลรวมของอายุ users   
-เพื่อให้เห็นภาพได้ง่าย ในตัวอย่างจะใช้เพียง argument แรกและ argument ที่สองเท่านั้น
+ตัวอย่างด้านล่างจะใช้ `reduce` กับ array `users` แล้วคืนค่าเป็นผลรวมของอายุของ user
+ใน callback ของตัวอย่างนี้ เราจะใช้แค่ argument แรกและ argument ที่สองเท่านั้น เพื่อให้เข้าใจง่าย:
 
 ```js
 const users = [
@@ -31,7 +38,7 @@ const sumOfAges = users.reduce((sum, user) => sum + user.age, 0);
 console.log(sumOfAges);
 ```
 
-หน้า console ควรแสดงค่า `64`.
+บน console จะแสดงค่า `64`
 
 อีกตัวอย่างนึง จะเห็นวิธีที่คืนค่า object ที่มีค่า key เป็นชื่อของ user และ value เป็นอายุ
 
@@ -49,16 +56,18 @@ const usersObj = users.reduce((obj, user) => {
 console.log(usersObj);
 ```
 
-หน้า console ควรแสดงค่า `{ John: 34, Amy: 20, camperCat: 10 }`.
+บน console จะแสดงค่า `{ John: 34, Amy: 20, camperCat: 10 }`.
 
 # --instructions--
 
-`watchList` array ประกอบด้วย objects ที่มีข้อมูลเกี่ยวกับภาพยนตร์ จงใช้ `reduce` คำนวณค่าเฉลี่ย IMDB rating ของภาพยนต์ที่กำกับโดย `Christopher Nolan` จากแบบทดสอบก่อนหน้านี้ คุณได้เรียนรู้การใช้ `filter` และ `map` ในการดึงข้อมูลที่คุณต้องการออกมา คุณอาจจำเป็นต้องสร้างตัวแปรอื่นๆ และคืนค่า rating เฉลี่ยจากฟังก์ชัน `getRating`
-หมายเหตุ rating เก็บเป็น string ภายใน object ดังนั้น คุณต้องแปลงให้เป็น number ก่อน ถึงค่อยทำการคำนวณทางคณิตศาสตร์
+ตอนนี้ array `watchList` เก็บ object ที่เก็บข้อมูลของภาพยนตร์อยู่
+ให้ใช้ `reduce` เพื่อหาค่าเฉลี่ยของ IMDB rating ของภาพยนต์ที่กำกับโดย `Christopher Nolan` 
+ในแบบทดสอบที่แล้ว เรารู้แล้วว่าในบางครั้งการดึงข้อมูลโดยใช้ `filter` และ `map` เราอาจสร้างตัวแปรใหม่ แล้วค่อยคืนค่า rating เฉลี่ยจากฟังก์ชัน `getRating`
+หมายเหตุ ตอนนี้ค่าของ `rating` เก็บเป็น string อยู่ เพราะฉะนั้นต้องแปลงให้เป็น number ก่อน ถึงจะเอามาคำนวณได้
 
 # --hints--
 
-ตัวแปร `watchList` ไม่ควรมีการเปลี่ยนแปลง
+ตัวแปร `watchList` ต้องมีค่าเหมือนเดิมหลังจากฟังก์ชันทำงานแล้ว
 
 ```js
 assert(
@@ -66,25 +75,25 @@ assert(
 );
 ```
 
-โค้ดของคุณควรใช้ `reduce` method
+ต้องใช้ method `reduce` ในโค้ด
 
 ```js
 assert(code.match(/\.reduce/g));
 ```
 
-`getRating(watchList)` ควรมีค่าเป็น 8.675
+การเรียกใช้ฟังก์ชัน `getRating(watchList)` ต้องได้ค่าเป็น 8.675
 
 ```js
 assert(getRating(watchList) === 8.675);
 ```
 
-คุณไม่ควรใช้ `for` loop
+ห้ามใช้ `for` loop
 
 ```js
 assert(!code.match(/for\s*?\([\s\S]*?\)/g));
 ```
 
-โค้ดของคุณควรแสดงผลลัพธ์ที่ถูกต้อง หลังจากแก้ไข `watchList` object
+ถ้า object `watchList` เปลี่ยนไป ฟังก์ชันนี้ก็ต้องคืนค่าได้ถูกต้องด้วย
 
 ```js
 assert(getRating(watchList.filter((_, i) => i < 1 || i > 2)) === 8.55);
@@ -95,7 +104,7 @@ assert(getRating(watchList.filter((_, i) => i < 1 || i > 2)) === 8.55);
 ## --seed-contents--
 
 ```js
-// The global variable
+// ตัวแปร global
 var watchList = [
   {
     "Title": "Inception",
@@ -210,11 +219,11 @@ var watchList = [
 ];
 
 function getRating(watchList){
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   var averageRating;
 
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
   return averageRating;
 }
 console.log(getRating(watchList));
@@ -223,7 +232,7 @@ console.log(getRating(watchList));
 # --solutions--
 
 ```js
-// The global variable
+// ตัวแปร global
 var watchList = [
   {
     "Title": "Inception",

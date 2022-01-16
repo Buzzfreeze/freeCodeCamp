@@ -59,7 +59,7 @@ describe('Responsive Web Design Superblock', () => {
         cy.get('#dynamic-front-end-form')
           .get('#solution')
           .type(solution, { force: true, delay: 0 });
-        cy.contains("I've completed this challenge")
+        cy.contains('ฉันทำภารกิจที่ท้าทายนี้เสร็จแล้ว')
           .should('not.be.disabled')
           .click();
         cy.intercept('http://localhost:3000/project-completed').as(

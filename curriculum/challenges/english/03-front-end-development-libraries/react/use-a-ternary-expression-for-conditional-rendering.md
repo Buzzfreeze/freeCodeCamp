@@ -8,7 +8,13 @@ dashedName: use-a-ternary-expression-for-conditional-rendering
 
 # --description--
 
-ก่อนที่จะไปยังเทคนิคการเรนเดอร์แบบไดนามิก มันมีวิธีสุดท้ายในการใช้เงื่อนไข JavaScript ในตัวเพื่อเรนเดอร์สิ่งที่คุณต้องการ: <dfn>ternary operator</dfn> ternary operator มักจะถูกใช้เป็นทางลัดสำหรับคำสั่ง `if/else` ใน JavaScript พวกมันไม่ค่อยแข็งแกร่งเท่าคำสั่ง `if/else` แบบดั้งเดิม แต่เป็นที่นิยมอย่างมากในหมู่นักพัฒนา React สาเหตุหนึ่งเป็นเพราะวิธีการคอมไพล์ JSX คำสั่ง `if/else` ไม่สามารถแทรกลงในโค้ด JSX ได้โดยตรง คุณอาจสังเกตเห็นได้ในแบบทดสอบสองสามครั้งที่ผ่านมา — เมื่อจำเป็นต้องมีคำสั่ง `if/else` มันมักจะ *อยู่นอก* คำสั่ง `return` เสมอ Ternary expressions อาจเป็นทางเลือกที่ดีหากคุณต้องการใช้ตรรกะแบบมีเงื่อนไขภายใน JSX ของคุณ จำได้ว่า ternary operator มีสามส่วน แต่คุณสามารถรวม ternary expressions หลายตัวเข้าด้วยกันได้ และนี่คือ syntax พื้นฐาน:
+ก่อนที่เราจะไปเรียนเทคนิคการเรนเดอร์แบบไดนามิก จะมีอีกวิธีหนึ่งในการใช้ JavaScript เพื่อเรนเดอร์สิ่งที่คุณต้องการ เราเรียกวิธีนี้ว่า <dfn>ternary operator</dfn> 
+ternary operator มักจะถูกใช้เป็นการเขียน `if/else` แบบสั้นๆ ใน JavaScript ถึงแม้จะมีข้อจำกัดมากกว่า `if/else` แบบปกติ แต่กลับเป็นที่นิยมอย่างมากในคนที่เขียน React 
+สาเหตุหนึ่งเป็นเพราะวิธีการคอมไพล์ JSX ทำให้แทรก `if/else` ลงในโค้ด JSX ได้โดยตรง 
+ในแบบทดสอบที่ผ่านมาคุณน่าจะเห็นแล้วว่า เวลาเราใช้ `if/else` คำสั่งนี้จะ *อยู่นอก* คำสั่ง `return` เสมอ 
+Ternary expression เป็นทางเลือกที่ดีถ้าอยากเขียนเงื่อนไขใน JSX
+ถ้ายังจำได้ ternary operator จะมีสามส่วน แต่คุณก็รวม ternary expression หลายๆตัวเข้าด้วยกันได้ 
+ลองดู syntax พื้นฐานกันก่อน:
 
 ```jsx
 condition ? expressionIfTrue : expressionIfFalse;
@@ -16,13 +22,21 @@ condition ? expressionIfTrue : expressionIfFalse;
 
 # --instructions--
 
-code editor มีค่าคงที่ 3 ค่าที่กำหนดไว้ภายใน `render()` method ของ `CheckUserAge` component เรียกว่า `buttonOne`, `buttonTwo` และ `buttonThree` แต่ละรายการเหล่านี้ถูกกำหนดนิพจน์ JSX อย่างง่ายซึ่งแสดง button element ขั้นแรกให้เริ่มต้น state ของ `CheckUserAge` โดย `input` และ `userAge` ทั้งสองตั้งค่าเป็นค่าของ string ว่าง
+code editor มีค่าคงที่ 3 ค่าที่กำหนดไว้ใน method `render()` ของ component `CheckUserAge` คือ `buttonOne`, `buttonTwo` และ `buttonThree` 
+ซึ่งได้เขียน JSX ที่แสดง button ไว้ให้แล้ว 
+ขั้นแรกให้ตั้งค่าเริ่มต้นของ state ของ `CheckUserAge` ให้มี property `input` และ `userAge` โดยมีค่าเป็น string ว่าง
 
-เมื่อ component เรนเดอร์ข้อมูลไปยังเพจแล้ว users ควรมีวิธีการโต้ตอบกับมัน ภายในคำสั่ง `return` ของ component ให้ตั้งค่า ternary expression ที่ใช้ตรรกะต่อไปนี้: เมื่อโหลดหน้าเว็บครั้งแรกให้เรนเดอร์ปุ่ม submit หรือ `buttonOne` ไปยังเพจ จากนั้นเมื่อ user กรอกอายุและคลิกปุ่มนั้น ให้เรนเดอร์ปุ่มที่แตกต่างกันตามอายุ หาก user ป้อนตัวเลขที่น้อยกว่า `18` ให้เรนเดอร์ `buttonThree` หากผู้ใช้ป้อนตัวเลขที่มากกว่าหรือเท่ากับ `18` ให้เรนเดอร์ `buttonTwo`
+เมื่อ component เรนเดอร์ข้อมูลแล้ว user ใช้ปุ่มเหล่านี้ได้ 
+ในคำสั่ง `return` ของ component ให้เขียน ternary expression โดยมีเงื่อนไขตามนี้: 
+
+1. เมื่อโหลดหน้าเว็บครั้งแรกให้แสดงปุ่ม submit หรือ `buttonOne` 
+2. เมื่อ user กรอกอายุและคลิกปุ่ม ให้แสดงปุ่มใหม่ตามอายุ 
+3. ถ้า user ใส่อายุน้อยกว่า `18` ให้แสดง `buttonThree` 
+4. ถ้า user ใส่อายุตั้งแต่ `18` ขึ้นไป ให้แสดง `buttonTwo`
 
 # --hints--
 
-`CheckUserAge` component ควรเรนเดอร์ด้วย `input` element และ `button` element อย่างละหนึ่ง
+`CheckUserAge` ต้องแสดง `input` และ `button` อย่างละหนึ่งตัว
 
 ```js
 assert(
@@ -33,7 +47,7 @@ assert(
 );
 ```
 
-State ของ `CheckUserAge` component ควรเริ่มต้นด้วย property ของ `userAge` และ property ของ `input` ให้ทั้งคู่มี value เท่ากับ string ว่าง
+state เริ่มต้นของ `CheckUserAge` ต้องมี property `userAge` และ `input` โดยทั้งสองตัวนี้จะต้องมีค่าเป็น string ว่าง
 
 ```js
 assert(
@@ -42,7 +56,7 @@ assert(
 );
 ```
 
-เมื่อ `CheckUserAge` component เรนเดอร์ครั้งแรกไปยัง DOM ข้อความข้างในของ `button` ควรเป็น Submit
+เมื่อ `CheckUserAge` ถูกเรนเดอร์ไปยัง DOM ในตอนแรกข้อความใน `button` ต้องเป็น Submit
 
 ```js
 assert(
@@ -51,7 +65,7 @@ assert(
 );
 ```
 
-เมื่อได้รับการใส่ตัวเลขที่น้อยกว่า 18 เข้ามาที่ `input` element และ `button` ได้โดนถูกคลิก ข้อความข้างใน `button` จะถูกเปลี่ยนเป็นคำว่า `You Shall Not Pass`
+เมื่อ user ระบุตัวเลขน้อยกว่า 18 เข้ามาที่ `input` และ `button` ถูกคลิก ข้อความข้างใน `button` จะถูกเปลี่ยนเป็นคำว่า `You Shall Not Pass`
 
 ```js
 (() => {
@@ -83,7 +97,7 @@ assert(
 })();
 ```
 
-เมื่อได้รับการใส่ตัวเลขที่มากกว่าหรือเท่ากับ 18 เข้ามาที่ `input` element และ `button` ได้โดนถูกคลิก ข้อความข้างใน `button` จะถูกเปลี่ยนเป็นคำว่า `You May Enter`
+เมื่อ user ระบุตัวเลขตั้งแต่ 18 ขึ้นไป เข้ามาที่ `input` และ `button` ถูกคลิก ข้อความข้างใน `button` จะถูกเปลี่ยนเป็นคำว่า `You May Enter`
 
 ```js
 (() => {
@@ -115,7 +129,7 @@ assert(
 })();
 ```
 
-เมื่อตัวเลขได้ส่งมากแล้ว ค่าของ `input` ได้เปลี่ยนไปอีกครั้ง ข้อความใน `button` ควรจะกลับไปเป็น `Submit`
+ถ้า user ส่งข้อมูลโดยคลิก `Submit` แล้ว และหลังจากนั้นค่าของ `input` เปลี่ยนไป ข้อความใน `button` จะต้องกลับไปเป็น `Submit`
 
 ```js
 (() => {
@@ -156,7 +170,7 @@ assert(
 })();
 ```
 
-โค้ดของคุณไม่ควรมีคำสั่ง `if/else` เลย
+ห้ามใช้ `if/else` ในโค้ด
 
 ```js
 assert(
@@ -185,9 +199,9 @@ const inputStyle = {
 class CheckUserAge extends React.Component {
   constructor(props) {
     super(props);
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
 
-    // Change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้
     this.submit = this.submit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
@@ -216,9 +230,9 @@ class CheckUserAge extends React.Component {
           onChange={this.handleChange}
         />
         <br />
-        {/* Change code below this line */}
+        {/* แก้ไขโค้ดใต้บรรทัดนี้ */}
 
-        {/* Change code above this line */}
+        {/* แก้ไขโค้ดเหนือบรรทัดนี้ */}
       </div>
     );
   }

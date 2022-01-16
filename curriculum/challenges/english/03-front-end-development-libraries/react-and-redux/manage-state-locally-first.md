@@ -8,19 +8,24 @@ dashedName: manage-state-locally-first
 
 # --description--
 
-คุณจะสร้าง `DisplayMessages` component ให้สำเร็จในแบบทดสอบนี้
+ในแบบทดสอบนี้คุณต้องเขียน component `DisplayMessages` ให้เสร็จ
 
 # --instructions--
 
-ขั้นแรกใน `render()` method ให้ component เรนเดอร์ `input` element, `button` element, และ `ul` element เมื่อ`input` element เปลี่ยนไป มันทำให้ `handleChange()` method ทำงาน นอกจากนี้ `input` element ควรเรนเดอร์ค่าของ `input` ที่อยู่ใน state ของ component `button` element ควรทำให้ `submitMessage()` method ทำงาน เมื่อตัวมันถูกคลิก
+ขั้นแรกใน method `render()` ให้เรนเดอร์ `input`, `button`, และ `ul` 
+ใน `input` ให้ event `onChange` เรียกใช้ method `handleChange()` และ `input` ต้องแสดงค่าของ `input` ที่อยู่ใน state ของ component 
+การคลิก `button` ต้องเรียกใช้ method `submitMessage()`
 
-ขั้นต่อมาให้เขียนสอง methods นี้ คือ `handleChange()` method ที่จะต้องอัปเดต `input` ด้วยข้อความที่ user กำลังพิมพ์ และ `submitMessage()` method ควรเชื่อมข้อความปัจจุบัน (เก็บไว้ใน `input`) กับ `messages' array ใน local state และล้างค่าของ `input`
+ขั้นต่อมาให้เขียน method 2 ตัว คือ 
 
-สุดท้าย ใช้ `ul` เพื่อ map array ของ `messages` และเรนเดอร์ไปยังบนหน้าจอเป็นลิสต์ของ `li` elements 
+1. method `handleChange()` ที่จะต้องอัปเดต `input` ใน state เป็นข้อความที่ user กำลังพิมพ์
+2. method `submitMessage()` ต้องนำข้อความจาก `input` ที่อยู่ใน state ไปเพิ่มลงใน array `messages` ใน state และล้างค่าของ `input`
+
+สุดท้าย ให้ใช้ `ul` เพื่อ map array ของ `messages` และเรนเดอร์เป็น `li` หนึ่งตัว ต่อข้อความหนึ่งข้อความใน `messages`
 
 # --hints--
 
-`DisplayMessages` component ควรมีค่าเริ่มต้นด้วย state เท่ากับ `{ input: "", messages: [] }`
+component `DisplayMessages` ต้องมี state เริ่มต้นเป็น `{ input: "", messages: [] }`
 
 ```js
 assert(
@@ -36,7 +41,7 @@ assert(
 );
 ```
 
-`DisplayMessages` component ควรเรนเดอร์ `div` ที่มี `h2` element, `button` element, `ul` element และ `li` `element เป็น child ของมัน
+component `DisplayMessages` ต้องมี `div` ที่มี `h2`, `button` และ `ul` เป็น child โดยใน `ul` ต้องมี `li` อยู๋ด้านในด้วย
 
 ```js
 async () => {
@@ -58,13 +63,13 @@ async () => {
 };
 ```
 
-`.map` ควรถูกใช้บน `messages` array
+ต้องใช้ `.map` กับ array `messages`
 
 ```js
 assert(code.match(/this\.state\.messages\.map/g));
 ```
 
-`input` element ควรเรนเดอร์ค่าของ `input` ใน local state
+element `input` ต้องแสดงค่าของ `input` จาก local state
 
 ```js
 async () => {
@@ -83,7 +88,7 @@ async () => {
 };
 ```
 
-การเรียกใช้ method `handleChange` ควรอัปเดตค่า `input` ใน state เป็น input ปัจจุบัน
+การเรียกใช้ method `handleChange` ควรอัปเดตค่า `input` ใน state เป็นค่าปัจจุบันของ element input 
 
 ```js
 async () => {
@@ -106,7 +111,7 @@ async () => {
 };
 ```
 
-การคลิก `Add message` button ควรเรียกใช้ method `submitMessage` ที่จะเพิ่ม `input` ปัจจุบันไปใน `messages` array ใน state
+การคลิกปุ่ม `Add message` ต้องไปเรียกใช้ method `submitMessage` ที่จะเพิ่ม `input` ปัจจุบันไปใน array `messages` ใน state
 
 ```js
 async () => {
@@ -149,7 +154,7 @@ async () => {
 };
 ```
 
-`submitMessage` method ควรเคลีย input ปัจจุบัน
+method `submitMessage` ต้องเคลียข้อความใน input ด้วย
 
 ```js
 async () => {
@@ -195,15 +200,15 @@ class DisplayMessages extends React.Component {
       messages: []
     }
   }
-  // Add handleChange() and submitMessage() methods here
+  // เขียน handleChange() and submitMessage() ได้บรรทัดนี้
 
   render() {
     return (
       <div>
         <h2>Type in a new Message:</h2>
-        { /* Render an input, button, and ul below this line */ }
+        { /* เขียน input, button, และ ul ใต้บรรทัดนี้ */ }
 
-        { /* Change code above this line */ }
+        { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
       </div>
     );
   }

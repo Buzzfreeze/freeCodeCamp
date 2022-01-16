@@ -8,19 +8,20 @@ dashedName: use-a-span-to-target-inline-elements
 
 # --description--
 
-คุณสามารถใช้ span ในการทำ inline element ในทางกลับกัน ยังจำตอนที่เราใช้ class `btn-block` เพื่อทำให้ปุ่มนั้นขยายเต็มบรรทัดนั้นได้หรือเปล่า?
+คุณสามารถใช้ span ในการทำ inline element ได้นะ
+ยังจำตอนที่เราใช้ class `btn-block` เพื่อทำให้ปุ่มนั้นกว้างเต็มบรรทัดได้มั้ย?
 
 <button class='btn' style='background-color: rgb(0, 100, 0);  color: rgb(255, 255, 255);'>normal button</button>
 
 <button class='btn btn-block' style='background-color: rgb(0, 100, 0);  color: rgb(255, 255, 255);'>btn-block button</button>
 
-โค้ดข้างบนนั้นแสดงให้เห็นความแตกต่างระหว่าง element แบบ "inline" และ "block"
+ปุ่มข้างบนเป็นตัวอย่างของ element แบบ "inline" (ปุ่มบน) และ "block" (ปุ่มล่าง)
 
-เมื่อใช้ `span` element คุณสามารถรวม element หลายๆ element ให้อยู่ในบรรทัดเดียวกันได้ หรือแม้กระทั้งการตกแต่ง style ให้แตกต่างกันของ element ต่างๆ ที่อยู่ในบรรทัดเดียวกันได้
+เมื่อใช้ `span` element เราจะรวม element หลายๆ element ให้อยู่ในบรรทัดเดียวกันได้ แล้วเราก็ยังแต่ง style ของ element ที่อยู่ในบรรทัดเดียวกันให้ต่างกันได้ด้วย
 
-มาลองใช้ `span` element โดยการ ใช้ span ครอบคำว่า `love` ที่อยู่ในส่วนหนึ่งของประโยค `Things cats love` ภายใน `p` element แล้วกำหนด class ให้ `span` เป็น `text-danger` เพื่อทำให้ข้อความเป็นสีแดง
+มาลองใช้ `span` element โดยการใช้ span ครอบคำว่า `love` ที่อยู่ประโยค `Things cats love` ใน `p` element แล้วกำหนด class ให้ `span` เป็น `text-danger` เพื่อทำให้ข้อความเป็นสีแดง
 
-คุณสามารถใช้วิธีการนี้ในการตกแต่งคำว่า hate จากประโยค `Top 3 things cats hate` ใน `p` element ได้ด้วยเช่นกัน:
+เราจะเปลี่ยนสีคำว่า hate ในประโยค `Top 3 things cats hate` ใน `p` element ได้ด้วยวิธีเดียวกัน:
 
 ```html
 <p>Top 3 things cats <span class="text-danger">hate:</span></p>
@@ -52,7 +53,7 @@ assert(
 assert($('span').hasClass('text-danger'));
 ```
 
-อย่าลืม tag ปิด สำหรับ `span` element
+อย่าลืม tag ปิดสำหรับ `span` element
 
 ```js
 assert(

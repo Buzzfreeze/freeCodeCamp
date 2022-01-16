@@ -8,23 +8,23 @@ dashedName: target-the-parent-of-an-element-using-jquery
 
 # --description--
 
-HTML element ทุก element มี `parent` element ที่พวกมัน `inherits` คุณสมบัติต่างๆ มา
+element ของ HTML ทุกตัวมีจะมี `parent` element ที่ `inherit` (สืบทอด) property มา
 
-ตัวอย่างเช่น `h3` element ในแอป `jQuery Playground` มี `<div class="container-fluid">` เป็น parent element และ container นี้ก็มี `body` เป็น parent อีกที
+เช่น `h3` element ในแอป `jQuery Playground` จะมี `<div class="container-fluid">` เป็น parent element และ container นี้ก็จะมี `body` เป็น parent อีกที
 
 jQuery มีฟังก์ชันที่เรียกว่า `parent()` ที่จะทำให้คุณเข้าถึง parent ของ element ที่คุณเลือกได้
 
-ข้างล่างนี้คือตัวอย่างการใช้ฟังก์ชัน `parent()` ในการเปลี่ยนพื้นหลัง parent element ของ `left-well` element เป็นสีน้ำเงิน:
+ตัวอย่างข้างล่างนี้จะใช้ฟังก์ชัน `parent()` ในการเปลี่ยนสีพื้นหลังของ parent ของ `left-well` เป็นสีน้ำเงิน:
 
 ```js
 $("#left-well").parent().css("background-color", "blue")
 ```
 
-จงเปลี่ยนสีพื้นหลัง parent ของ `#target1` element เป็นสีแดง
+ให้เปลี่ยนสีพื้นหลังของ parent ของ `#target1` ให้เป็นสีแดง
 
 # --hints--
 
-`left-well` element จะต้องมีพื้นหลังเป็นสีแดง
+`left-well` จะต้องมีพื้นหลังเป็นสีแดง
 
 ```js
 assert(
@@ -35,14 +35,13 @@ assert(
 );
 ```
 
-คุณจะต้องใช้ฟังก์ชัน `.parent()` ในการแก้ไข element
-You should use the `.parent()` function to modify this element.
+คุณจะต้องใช้ฟังก์ชัน `.parent()` เพื่อเข้าถึง parent 
 
 ```js
 assert(code.match(/\.parent\s*\(\s*\)\s*\.css/g));
 ```
 
-`.parent()` method จะต้องถูกเรียกใช้บน `#target1` element
+method `.parent()` จะต้องถูกเรียกใช้ที่ `$('#target1')`
 
 ```js
 assert(
@@ -50,7 +49,7 @@ assert(
 );
 ```
 
-คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
+คุณจะต้องใช้แค่ jQuery เท่านั้นในการเพิ่ม class ให้กับ element
 
 ```js
 assert(code.match(/<div class="well" id="left-well">/g));
@@ -72,7 +71,7 @@ assert(code.match(/<div class="well" id="left-well">/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <body>
   <div class="container-fluid">
@@ -113,7 +112,7 @@ assert(code.match(/<div class="well" id="left-well">/g));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <body>
   <div class="container-fluid">

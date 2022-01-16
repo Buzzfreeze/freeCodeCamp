@@ -10,25 +10,17 @@ dashedName: use-jquery-to-modify-the-entire-page
 
 # --description--
 
-เราพอใจกับการเล่นแอป jQuery playground แล้ว ตอนนี้เรามาแยกส่วนมันดีกว่า
+เราเล่นแอป jQuery playground กันมามากพอแล้ว ตอนนี้เรามาทำให้แอปนี้หายไปดีกว่า
 
-jQuery สามารถกำหนดเป้าหมายกับ `body` element ได้เหมือนกัน
+เราจะใช้ jQuery เลือก element ที่เป็น `body` ก็ได้
 
-เราสามารถทำให้ทั้ง body ของแอปเรา fade out ไปได้ด้วยโค้ด: `$("body").addClass("animated fadeOut");`
+เราสามารถทำให้ทั้ง body ของแอปเราค่อยๆจางหายไป (Fade Out) ได้ด้วยโค้ด: `$("body").addClass("animated fadeOut");`
 
-แต่มาลองอะไรที่น่าตื่นเต้นมากกว่านี้ดีกว่า ให้เพิ่ม class `animated` และ `hinge` ให้แก่ `body` element กัน
-
-We're done playing with our jQuery playground. Let's tear it down!
-
-jQuery can target the `body` element as well.
-
-Here's how we would make the entire body fade out: `$("body").addClass("animated fadeOut");`
-
-But let's do something more dramatic. Add the classes `animated` and `hinge` to your `body` element.
+แต่แค่นั้นยังไม่พอ เราต้องทำให้ตื่นเต้นมากขึ้นด้วยการเพิ่ม class `animated` และ `hinge` ให้กับ `body` ด้วย
 
 # --hints--
 
-คุณจะต้องเพิ่ม class `animated` และ `hinge` ให้แก่ `body` element
+คุณจะต้องเพิ่ม class `animated` และ `hinge` ให้กับ `body`
 
 ```js
 assert($('body').hasClass('animated') && $('body').hasClass('hinge'));
@@ -55,7 +47,7 @@ assert($('body').hasClass('animated') && $('body').hasClass('hinge'));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
@@ -99,7 +91,7 @@ assert($('body').hasClass('animated') && $('body').hasClass('hinge'));
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>

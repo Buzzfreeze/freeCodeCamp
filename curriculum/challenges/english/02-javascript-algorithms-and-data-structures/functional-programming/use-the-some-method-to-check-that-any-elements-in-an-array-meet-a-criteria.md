@@ -8,9 +8,10 @@ dashedName: use-the-some-method-to-check-that-any-elements-in-an-array-meet-a-cr
 
 # --description--
 
-`some` method ทำงานร่วมกับ array เพื่อตรวจสอบว่า มี element ใน array ผ่านเงื่อนไขหนึ่งๆ หรือไม่ หากมี element ผ่านเงื่อนไข ก็จะคืนค่า Boolean เป็น `true` แต่หากไม่มี element ผ่านเงื่อนไขเลย ก็จะคืนค่า `false`
+เราจะใช้ method `some` กับ array เพื่อดูว่ามี element ไหนใน array ผ่านเงื่อนไขที่เราระบุหรือไม่
+ถ้ามี element ผ่านเงื่อนไข (ถึงจะแค่ element เดียวก็ตาม) ก็จะคืนค่า Boolean เป็น `true` แต่ถ้าไม่มี element ผ่านเงื่อนไขเลย ก็จะคืนค่าเป็น `false` แทน
 
-ตัวอย่างต่อไปนี้เป็นโค้ดที่ตรวจสอบว่า มี element ใน `numbers` array ที่มีค่าน้อยกว่า 10 หรือไม่
+ตัวอย่างด้านล่างเป็นโค้ดที่ดูว่า มี element ไหนใน array `numbers` ที่มีค่าน้อยกว่า 10 หรือไม่
 
 ```js
 var numbers = [10, 50, 8, 220, 110, 11];
@@ -19,11 +20,11 @@ numbers.some(function(currentValue) {
 });
 ```
 
-`some` ควรคืนค่าเป็น `true`.
+method `some` จะคืนค่าเป็น `true`
 
 # --instructions--
 
-จงใช้ `some` method ภายในฟังก์ชัน `checkPositive` เพื่อตรวจสอบว่า มี element ใน `arr` ที่มีค่าเป็นบวกหรือไม่ โดยฟังก์ชันนี้ควรคืนค่าเป็น Boolean
+จงใช้ method `some` ในฟังก์ชัน `checkPositive` เพื่อดูว่า มี element ไหนใน `arr` ที่มีค่าเป็นบวกหรือไม่ โดยฟังก์ชันนี้ควรคืนค่าเป็น Boolean
 
 # --hints--
 
@@ -33,19 +34,19 @@ numbers.some(function(currentValue) {
 assert(code.match(/\.some/g));
 ```
 
-`checkPositive([1, 2, 3, -4, 5])` ควรคืนค่าเป็น `true`.
+การเรียกใช้ฟังก์ชัน `checkPositive([1, 2, 3, -4, 5])` ต้องได้ค่าเป็น `true`
 
 ```js
 assert(checkPositive([1, 2, 3, -4, 5]));
 ```
 
-`checkPositive([1, 2, 3, 4, 5])` ควรคืนค่าเป็น `true`.
+การเรียกใช้ฟังก์ชัน `checkPositive([1, 2, 3, 4, 5])` ต้องได้ค่าเป็น `true`
 
 ```js
 assert(checkPositive([1, 2, 3, 4, 5]));
 ```
 
-`checkPositive([-1, -2, -3, -4, -5])` ควรคืนค่าเป็น `false`.
+การเรียกใช้ฟังก์ชัน `checkPositive([-1, -2, -3, -4, -5])` ต้องได้ค่าเป็น `false`
 
 ```js
 assert(!checkPositive([-1, -2, -3, -4, -5]));
@@ -57,10 +58,10 @@ assert(!checkPositive([-1, -2, -3, -4, -5]));
 
 ```js
 function checkPositive(arr) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 checkPositive([1, 2, 3, -4, 5]);
 ```
@@ -69,9 +70,9 @@ checkPositive([1, 2, 3, -4, 5]);
 
 ```js
 function checkPositive(arr) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   return arr.some(elem => elem > 0);
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 checkPositive([1, 2, 3, -4, 5]);
 ```

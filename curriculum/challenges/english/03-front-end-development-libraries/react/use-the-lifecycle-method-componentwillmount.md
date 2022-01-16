@@ -8,17 +8,24 @@ dashedName: use-the-lifecycle-method-componentwillmount
 
 # --description--
 
-React components มี method พิเศษหลายอย่างที่ให้โอกาสในการดำเนินการ ณ จุดเฉพาะใน lifecycle ของ component สิ่งเหล่านี้เรียกว่า lifecycle methods หรือ lifecycle hooks ที่จะช่วยให้คุณสามารถจับ components ได้ในบางช่วงเวลา ซึ่งอาจจะเกิดขึ้นก่อนเรนเดอร์ ก่อนอัปเดต ก่อนรับ props ก่อนเลิกต่อเชื่อม และอื่นๆ ต่อไปนี้คือลิสต์รายการของ lifecycle methods: `componentWillMount()` `componentDidMount()` `shouldComponentUpdate()` `componentDidUpdate()` `componentWillUnmount()` บทเรียนต่อไปจะอธิบายครอบคลุมถึงกรณีการใช้งานพื้นฐานบางส่วนของ lifecycle methods เหล่านี้
+React component มี method พิเศษหลายตัวที่จะทำงานตาม lifecycle ของ component 
+method พวกนี้เรียกว่า lifecycle method หรือ lifecycle hook 
+method พวกนี้จะทำให้เราจัดการ component ได้ตามช่วงของ lifecycle เช่น ก่อนการเรนเดอร์ ก่อนการอัปเดต ก่อนการรับ props ก่อนการเลิกต่อเชื่อม ฯลฯ 
+นี่คือตัวอย่างของ lifecycle method: `componentWillMount()` `componentDidMount()` `shouldComponentUpdate()` `componentDidUpdate()` `componentWillUnmount()` 
+บทเรียนต่อไปจะอธิบายครอบคลุมถึงกรณีการใช้งานพื้นฐานบางส่วนของ lifecycle methods เหล่านี้
 
-**Note:** `componentWillMount` lifecycle methods จะเลิกใช้งานในเวอร์ชันอนาคตของ 16.X และถูกถอดออกในเวอร์ชัน 17  [(ที่มา)](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
+**Note:** lifecycle method ชื่อ `componentWillMount` จะถือว่าเป็น method ที่เลิกใช้งานแล้วใน React เวอร์ชัน 16.X และจะถูกถอดออกใน React เวอร์ชัน 17  [(ที่มา)](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html) 
+(React เวอร์ชันล่าสุด ณ 1 มกราคม 2565 คือ 17.0.2)
 
 # --instructions--
 
-`componentWillMount()` method ถูกเรียกใช้ก่อน `render()` method เมื่อ component ถูกเชื่อมเข้ากับ DOM บันทึกบางอย่างลงในคอนโซลภายใน `componentWillMount()` - คุณอาจต้องเปิดคอนโซลเบราว์เซอร์ของคุณเพื่อดูผลลัพธ์
+method `componentWillMount()` จะถูกเรียกใช้ก่อน method `render()` เมื่อ component ถูกเชื่อมเข้ากับ DOM 
+ใน `componentWillMount()` ให้เขียนโค้ดเพื่อ log ข้อมูลอะไรก็ได้ใน console
+คุณต้องเปิดคอนโซลในเบราว์เซอร์เพื่อให้เห็น log
 
 # --hints--
 
-`MyComponent` ควรเรนเดอร์ `div` element
+`MyComponent` ต้องเรนเดอร์ `div`
 
 ```js
 assert(
@@ -29,7 +36,7 @@ assert(
 );
 ```
 
-`console.log` ควรถูกเรียกใช้ใน `componentWillMount`
+ต้องเรียกใช้ `console.log` ใน `componentWillMount`
 
 ```js
 assert(
@@ -58,9 +65,9 @@ class MyComponent extends React.Component {
     super(props);
   }
   componentWillMount() {
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
 
-    // Change code above this line
+    // แก้ไขโค้เหนือบรรทัดนี้
   }
   render() {
     return <div />
@@ -76,9 +83,9 @@ class MyComponent extends React.Component {
     super(props);
   }
   componentWillMount() {
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
     console.log('Component is mounting...');
-    // Change code above this line
+    // แก้ไขโค้เหนือบรรทัดนี้
   }
   render() {
     return <div />

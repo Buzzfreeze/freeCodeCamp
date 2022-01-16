@@ -8,46 +8,49 @@ dashedName: apply-functional-programming-to-convert-strings-to-url-slugs
 
 # --description--
 
-แบบทดสอบที่ผ่านมาได้กล่าวถึง array method และ string method หลายตัวที่ใช้หลักการ functional programming และเรายังได้เรียนรู้การใช้งาน `reduce` ซึ่งเป็น method ที่มีความสำคัญอย่างมากในการทำให้ปัญหาต่างๆ อยู่ในรูปแบบที่ง่ายขึ้น ไม่ว่าจะเป็นการคำนวณค่าเฉลี่ยหรือการเรียงลำดับหรือ array operation อื่นๆ ก็สามารถนำ `reduce` มาใช้งานได้ ให้เรานึกถึง `map` และ `filter` ซึ่งเป็นรูปแบบพิเศษของ `reduce`
+ทีผ่านมาเราได้เรียนเรื่อง method หลายๆตัวที่ใช้ในการจัดการ array และ string โดยใช้หลักการของ functional programming ไปแล้ว และเรายังได้เรียนรู้การใช้งาน `reduce` ซึ่งเป็น method ที่ช่วยให้เราทำงานกับ array ได้ง่ายขึ้น 
+ซึ่งเราจะเอา `reduce` มาใช้งานได้ทั้งการคำนวณค่าเฉลี่ย การเรียงข้อมูล หรือ การจัดการ array อื่นๆ ถ้ายังจำได้ `map` และ `filter` ก็เป็นเหมือน `reduce` ตัวนึงเหมือนกัน
 
-ใช้ความรู้ที่เราได้เรียนมาแก้ปัญหาในชีวิตจริงกัน
+มาลองใช้ความรู้ที่เราได้เรียนไปมาแก้ปัญหาจริงๆกัน
 
 
-content management sites (CMS) ต่างๆ มักนำหัวข้อ (title) ของโพสต์มาเป็นส่วนหนึ่งของ URL ด้วย เพื่อให้เป็นเหมือน bookmark ยกตัวอย่างเช่น ถ้าคุณเขียนโพสต์ที่มีหัวข้อ `Stop Using Reduce` ก็มักมีชื่อหัวข้อเป็นอีกรูปแบบนึงอยู่ใน URL ด้วย (`.../stop-using-reduce`) เช่นเดียวกับเว็บ freeCodeCamp คุณอาจสังเกตว่ามีลักษณะแบบนี้ด้วย
+เว็บไซต์ประเภท Content Management Site (CMS) มักนำชื่อเรื่อง (title) ของโพสต์มาเป็นส่วนหนึ่งของ URL ด้วย เพื่อให้ลิงก์ไปหน้านั้นได้ง่ายๆ
+เช่น ถ้าคุณเขียนโพสต์ในเว็บ Medium แล้วตั้งชื่อเรื่องว่า `Stop Using Reduce` แล้ว URL ของโพส์นั้นก็มันจะมีหน้าตาแบบนี้ `.../stop-using-reduce` ถ้าคุณลองดู URL ของเว็บเราคุณก็จะเห็นว่าเราก็ใช้วิธีนี้ด้วย
 
 # --instructions--
 
-จงเติมโค้ดในฟังก์ชัน `urlSlug` เพื่อแปลงค่า string `title` และให้คืนค่าเป็น URL ที่มี "-" คั่นระหว่างคำ คุณสามารถใช้ method ใดก็ได้ที่ได้เรียนรู้ไปแล้วในหัวข้อนี้ แต่ห้ามใช้ `replace` แบบทดสอบนี้มีเงื่อนไขดังนี้
+จงเขียนโค้ดในฟังก์ชัน `urlSlug` เพื่อแปลงค่า string `title` เป็น URL ที่มี `-` (hyphen) คั่นระหว่างคำ คุณสามารถใช้ method ใดก็ได้ที่ได้เรียนรู้ไปแล้วในหัวข้อนี้ แต่ห้ามใช้ `replace` 
+แบบฝึกหัดนี้มีเงื่อนไขดังนี้:
 
-input คือ string ที่มีการเว้นวรรคระหว่างคำ และตัวอักษรแรกของแต่ละคำเป็นตัวพิมพ์ใหญ่
+input คือ string ที่เป็นตัวอักษรภาษาอังกฤษ ซึ่งมีการเว้นวรรคระหว่างคำ และตัวอักษรแรกของแต่ละคำเป็นตัวพิมพ์ใหญ่
 
-output คือ string ที่มีแต่ละคำคั่นด้วย "-" (hyphen)
+output จะต้องเป็น string ที่ใช้ `-` คั่นระหว่างคำ
 
-output ควรเป็นตัวอักษรพิมพ์เล็กทั้งหมด
+output ต้องเป็นตัวอักษรพิมพ์เล็กทั้งหมด
 
-output ไม่ควรมี space ใดๆ
+ต้องไม่มีการเว้นวรรคใน output
 
 # --hints--
 
-โค้ดของคุณไม่ควรใช้ `replace` method
+ห้ามใช้ method `replace` ในโค้ด
 
 ```js
 assert(!code.match(/\.?[\s\S]*?replace/g));
 ```
 
-`urlSlug("Winter Is Coming")` ควรคืนค่าเป็น string `winter-is-coming`
+การเรียกใช้ฟังก์ชัน `urlSlug("Winter Is Coming")` ต้องได้ค่าเป็น string `winter-is-coming`
 
 ```js
 assert(urlSlug('Winter Is Coming') === 'winter-is-coming');
 ```
 
-`urlSlug(" Winter Is  Coming")` ควรคืนค่าเป็น string `winter-is-coming`
+การเรียกใช้ฟังก์ชัน `urlSlug(" Winter Is  Coming")` ต้องได้ค่าเป็น string `winter-is-coming`
 
 ```js
 assert(urlSlug(' Winter Is  Coming') === 'winter-is-coming');
 ```
 
-`urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone")` ควรคืนค่าเป็น string `a-mind-needs-books-like-a-sword-needs-a-whetstone`
+การเรียกใช้ฟังก์ชัน `urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone")` ต้องได้ค่าเป็น string `a-mind-needs-books-like-a-sword-needs-a-whetstone`
 
 ```js
 assert(
@@ -56,7 +59,7 @@ assert(
 );
 ```
 
-`urlSlug("Hold The Door")` ควรคืนค่าเป็น string `hold-the-door`
+การเรียกใช้ฟังก์ชัน `urlSlug("Hold The Door")` ต้องได้ค่าเป็น string `hold-the-door`
 
 ```js
 assert(urlSlug('Hold The Door') === 'hold-the-door');
@@ -67,18 +70,18 @@ assert(urlSlug('Hold The Door') === 'hold-the-door');
 ## --seed-contents--
 
 ```js
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 function urlSlug(title) {
 
 
 }
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 ```
 
 # --solutions--
 
 ```js
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 function urlSlug(title) {
   return title.trim().split(/\s+/).join("-").toLowerCase();
 }

@@ -8,21 +8,27 @@ dashedName: create-a-controlled-form
 
 # --description--
 
-แบบทดสอบที่ผ่านมาแสดงให้เห็นว่า React สามารถควบคุมสถานะภายในสำหรับ element บางอย่าง เช่น `input` และ `textarea` ซึ่งทำให้พวกมันกลายเป็น component ควบคุม สิ่งนี้ใช้กับ form element อื่นๆ เช่นกัน รวมถึง HTML `form` element ปกติด้วย
+แบบทดสอบที่แล้วเราจะเห็นแล้วว่า React สามารถควบคุม state ใน element บางตัว เช่น `input` และ `textarea` ได้
+เราจะเรียก element ที่ถูก React ควบคุม state ว่า Controlled Component
+ซึ่งการควบคุม state แบบนี้จะใช้ได้กับ form element อื่นๆ รวมถึง HTML `form` element แบบปกติด้วย
 
 # --instructions--
 
-"MyForm" component ถูกตั้งค่าด้วย `form` ที่ว่างเปล่าพร้อม submit handler ซึ่งจะถูกเรียกใช้งานเมื่อฟอร์มได้ถูก submit
+เราได้สร้าง component ชื่อ `MyForm` ไว้ให้แล้ว โดยข้างใน component นี้จะมี `form` ที่ยังไม่มีข้อมูลอยู่ด้วย และ `form` นี้ก็ได้มีการตั้งค่า submit handler ไว้แล้ว ซึ่งจะถูกเรียกใช้งานเมื่อฟอร์มถูก submit
 
-เราได้เพิ่มปุ่มสำหรับ submit แบบฟอร์ม คุณจะเห็นว่ามีการตั้งค่า `type` เป็น submit ซึ่งระบุว่าเป็นปุ่มที่ควบคุมแบบฟอร์ม เพิ่ม `input` element ใน `form` และตั้งค่า `value` และ `onChange()` attribute เหมือนกับแบบทดสอบก่อนหน้านี้ จากนั้นคุณควรสร้าง `handleSubmit` method ให้สำเร็จ เพื่อให้ตั้งค่าคุณสมบัติสถานะ component `submit` เป็นค่า input ปัจจุบันใน local `state`
+เราได้เพิ่มปุ่มที่ใช้ submit `form` ให้แล้ว คุณจะเห็นว่ามีการตั้งค่า `type` ของ `button` เป็น submit ซึ่งเป็ฯการระบุว่าปุ่มนี้จะใช้ควบคุม `form` 
+ให้คุณเพิ่ม `input` element ใน `form` และตั้งค่า attribute `value` และ `onChange()`  ให้เหมือนกับแบบทดสอบที่แล้ว 
+จากนั้นให้เขียน method `handleSubmit` โดย method นี้จะทำงานโดยการ เปลี่ยนค่าของ `submit` ใน `state` เป็นค่าปัจจุบันของ input ใน `state`
 
-**Note:** คุณต้องเรียก `event.preventDefault()` ใน submit handler เพื่อป้องกันลักษณะการ submit ฟอร์มเริ่มต้นซึ่งจะรีเฟรชหน้าเว็บ เพื่อความสะดวกผู้เรียน ลักษณะเริ่มต้นนี้ถูกปิดใช้งานที่นี่เพื่อป้องกันการรีเฟรชจากการรีเซ็ตโค้ดของแบบทดสอบนี้
+**Note:** คุณต้องเรียกใช้ `event.preventDefault()` ใน submit handler เพื่อไม่ให้การ submit ไปรีเฟรชหน้าเว็บ 
+(จริงๆแล้ว ตอนนี้เราได้ปิดการรีเฟรชหน้าเว็บไว้ให้แล้ว แต่คุณควรเรียกใช้ method ด้วยนี้เพื่อให้เข้าใจการทำงาน)้
 
-สุดท้าย ให้สร้าง `h1` tag หลัง `form` ซึ่งเรนเดอร์ค่า `submit` จาก `state` ของ component จากนั้นคุณสามารถพิมพ์กรอกแบบฟอร์มและคลิกปุ่ม (หรือกด Enter) และคุณควรเห็นข้อมูลที่คุณป้อนเข้าไปถูกแสดงบนหน้าเพจ
+สุดท้าย ให้สร้างแท็ก `h1` ไว้ใต้ `form` ซึ่งจะดึงค่าของ `submit` จาก `state` ของ component มากแสดง
+ถ้าทำเสร็จแล้วและถูกต้อง ให้ลองพิมพ์ข้อความในช่อง input และคลิกปุ่ม `Submit!` (หรือกด Enter) จากนั้นคุณจะเห็นข้อความที่พิมพ์ลงไปแสดงบนหน้าเว็บ
 
 # --hints--
  
-`MyForm` ควรจะต้อง return 1 `div` element ที่มี `form` และ an `h1` tag ข้างใน ฟอร์มนี้ควรจะต้องมี `input` และ `button` ด้วย
+`MyForm` ควรจะต้องคืนค่าเป็น `div` ที่มี `form` และ `h1` อยู่ข้างใน โดยใน `form` นี้จะต้องมี `input` และ `button` ด้วย
 
 ```js
 assert(
@@ -38,7 +44,7 @@ assert(
 );
 ```
 
-สถานะของ `MyForm` ควรเริ่มต้นด้วย `input` และ `submit` properties ที่ถูกตั้งค่าให้เป็น string เปล่า
+ค่าเริ่มต้นของ state ของ `MyForm` ต้องมี property `input` และ `submit` ที่มีค่าเป็น string ว่าง
 
 ```js
 assert(
@@ -47,7 +53,7 @@ assert(
 );
 ```
 
-การพิมพ์กรอกข้อมูลใน `input` ควรจะต้องมีการอัปเดต `input` property ของสถานะของ component
+การพิมพ์ข้อความลงใน `input` จะต้องไปอัปเดท property `input` ใน state ของ component
 
 ```js
 (() => {
@@ -75,7 +81,7 @@ assert(
 })();
 ```
 
-การ submit ฟอร์มควรจะต้องทำให้ `handleSubmit` ทำงาน ซึ่งจะเป็นการตั้งค่า `submit` property ในสถานะที่เท่ากับ input ปัจจุบัน
+การ submit จะต้องไปเรียกใช้ `handleSubmit` ซึ่งจะต้องไปเปลี่ยนค่าของ property `submit` ใน `state` ไปเป็นค่าปัจจุบันของ property `input` ใน `state`
 
 ```js
 (() => {
@@ -98,7 +104,7 @@ assert(
 })();
 ```
 
-`handleSubmit` ควรจะต้องเรียกใช้งาน `event.preventDefault`
+`handleSubmit` ต้องไปเรียกใช้งาน method `event.preventDefault`
 
 ```js
 assert(
@@ -109,7 +115,7 @@ assert(
 );
 ```
 
-`h1` header ควรจะต้องเรนเดอร์ ค่าของ `submit` field จากสถานะของ component
+`h1` ต้องแสดงค่าของ property `submit` ที่ดึงมากจาก state ของ component
 
 ```js
 (() => {
@@ -159,22 +165,22 @@ class MyForm extends React.Component {
     });
   }
   handleSubmit(event) {
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
 
-    // Change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้
   }
   render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          {/* Change code below this line */}
+          {/* แก้ไขโค้ดใต้บรรทัดนี้ */}
 
-          {/* Change code above this line */}
+          {/* แก้ไขโค้ดเหนือบรรทัดนี้ */}
           <button type='submit'>Submit!</button>
         </form>
-        {/* Change code below this line */}
+        {/* แก้ไขโค้ดใต้บรรทัดนี้ */}
 
-        {/* Change code above this line */}
+        {/* แก้ไขโค้ดเหนือบรรทัดนี้ */}
       </div>
     );
   }

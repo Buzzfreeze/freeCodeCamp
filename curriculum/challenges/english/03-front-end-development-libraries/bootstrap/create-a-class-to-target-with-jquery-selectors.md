@@ -8,13 +8,14 @@ dashedName: create-a-class-to-target-with-jquery-selectors
 
 # --description--
 
-การสร้าง class ของ element บางอย่างก็ไม่ได้เกี่ยวข้องกับ CSS เสมอไป ในบางกรณีเราสร้าง class เพื่อให้ง่ายต่อการเลือก element นั้นๆ ในการใช้ jQuery
+หลายๆครั้งเราก็ไม่ได้ใส่ class ให้ element เพื่อที่จะใช้ CSS เสมอไป
+บางทีเราก็ใส่ class เพื่อให้เราใช้ jQuery เลือก element ได้ง่ายขึ้น
 
-เรามาลองเพิ่ม class `target` ในทุก `button` element กัน
+เรามาลองเพิ่ม class `target` ใน `button` ทุกปุ่มกัน
 
 # --hints--
 
-ให้เพิ่ม class `target` ไปยัง `button` element ทุกอัน
+ให้เพิ่ม class `target` ใน `button` ทุกปุ่ม
 
 ```js
 assert($('.target').length > 5);

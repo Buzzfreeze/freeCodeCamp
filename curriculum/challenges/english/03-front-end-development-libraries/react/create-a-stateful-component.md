@@ -8,9 +8,15 @@ dashedName: create-a-stateful-component
 
 # --description--
 
-หนึ่งในหัวข้อที่สำคัญที่สุดใน React คือ `state' ซึ่งประกอบด้วยข้อมูลใดๆ ที่แอปพลิเคชันของคุณต้องทราบ ซึ่งสามารถเปลี่ยนแปลงได้เมื่อเวลาผ่านไป คุณต้องการให้แอปของคุณตอบสนองต่อการเปลี่ยนแปลง state และแสดงเป็น UI ที่อัปเดตเมื่อจำเป็น React นำเสนอโซลูชันที่ดีสำหรับการจัดการ state ของเว็บแอปพลิเคชันสมัยใหม่
+หนึ่งในเรื่องที่สำคัญที่สุดใน React คือ `state` 
+`state` คือสิ่งที่เก็บข้อมูลที่แอปของคุณต้องใช้ ซึ่งจะเปลี่ยนไปได้เรื่อยๆ 
+คุณต้องเขียนแอพให้เปลี่ยนไปตามการเปลี่ยนแปลง state และถ้าจำเป็นก็ต้องเปลี่ยนการแสดงผลด้วย
+React ได้สร้างวิธีการจัดการ state ของเว็บแอปยุคใหม่ที่ดีมากๆ
 
-คุณสร้าง state ใน React component โดยการประกาศ `state` property ใน component classใน `constructor` สิ่งนี้เริ่มต้น component ด้วย `state` เมื่อถูกสร้างขึ้น ต้องตั้งค่า `state` property เป็น `object` ของ JavaScript ประกาศตามโค้ดข้างล่างนี้:
+เราจะสร้าง state ใน React component ได้โดยการประกาศ property `state` ใน `constructor` ของ class component
+ซึ่งจะทำให้ component มี `state` เมื่อถูกสร้างขึ้น 
+และ `state` ต้องเป็น `object` ของ JavaScript 
+ลองดูตัวอย่าง:
 
 ```jsx
 this.state = {
@@ -18,15 +24,19 @@ this.state = {
 }
 ```
 
-คุณสามารถเข้าถึง `state` object ได้ตลอดอายุของ component ของคุณ คุณสามารถอัปเดต  แสดงผลใน UI ของคุณ และส่งผ่านเป็น props ไปยัง child component ต่างๆ  `state` object อาจซับซ้อนหรือเรียบง่ายขึ้นอยู่กับความต้องการของคุณ โปรดทราบว่าคุณต้องสร้าง class componentโดยขยาย `React.Component` เพื่อสร้าง `state` เช่นนี้
+เราจะเข้าถึง `state` ได้ตลอดตราบใดที่ยังมี component นั้นอยู่ 
+เราจะเปลี่ยนค่า `state`, ดึง `state` ไปแสดงผล, หรือส่ง `state` เป็น props ไปยัง child component ก็ได้
+เราจะเขียน `state` ให้ซับซ้อนหรือเรียบง่ายก็ได้ ขึ้นอยู่กับการใช้งาน 
+แต่การจะใช้ `state` แบบนี้ คุณต้องสร้าง class component ที่ extend มาจาก `React.Component` เท่านั้น
 
 # --instructions--
 
-มี component ใน code editor ที่พยายามแสดง `name` property จาก `state` ของมัน อย่างไรก็ตาม ไม่มี `state` ที่กำหนดไว้ เริ่มต้น component ด้วย `state` ใน `constructor` และกำหนดชื่อให้กับ `name` property
+มี component ใน code editor ที่พยายามจะแสดงค่าของ property `name` จาก `state` อยู่ แต่ตอนนี้ `state` ยังไม่ได้ถูกสร้างไว้
+ให้สร้าง `state` ใน `constructor` และระบุใส่ชื่อของคุณใน property `name`
 
 # --hints--
 
-`StatefulComponent` ควรมีอยู่และเรนเดอร์ด้วย
+ต้องมี `StatefulComponent` และต้องเรนเดอร์ได้ด้วย
 
 ```js
 assert(
@@ -39,7 +49,7 @@ assert(
 );
 ```
 
-`StatefulComponent` ควรเรนเดอร์ `div` และ `h1` element
+`StatefulComponent` ต้องเรนเดอร์ `div` และ `h1`
 
 ```js
 assert(
@@ -55,7 +65,7 @@ assert(
 );
 ```
 
-State ของ `StatefulComponent` ควรจะเริ่มต้นด้วย `name` property ที่มีค่าเป็น string
+state ของ `StatefulComponent` ต้องมี property ชื่อ `name` ที่มีค่าเป็น string
 
 ```js
 assert(
@@ -71,7 +81,7 @@ assert(
 );
 ```
 
-property `name`ใน state ของ `StatefulComponent` ควรจะต้องเรนเดอร์ใน `h1` element
+property `name` ใน state ของ `StatefulComponent` จะต้องถูกเอามาแสดงใน `h1`
 
 ```js
 assert(
@@ -99,9 +109,9 @@ ReactDOM.render(<StatefulComponent />, document.getElementById('root'))
 class StatefulComponent extends React.Component {
   constructor(props) {
     super(props);
-    // Only change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-    // Only change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
   }
   render() {
     return (

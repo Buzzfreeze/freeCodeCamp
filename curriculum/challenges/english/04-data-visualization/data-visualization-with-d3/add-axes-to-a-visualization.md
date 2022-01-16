@@ -8,16 +8,23 @@ dashedName: add-axes--a-visualization
 
 # --description--
 
-พัฒนาทักษะด้าน scatter plot โดยการเพิ่ม  x-axis และ y-axis
+เราจะทำให้ scatter plot ของเราดีขึ้นอีกโดยการเพิ่มแกน x และแกน y เข้าไป
 
-D3 มีสอง methods, `axisLeft()` และ `axisBottom()` สำหรับการ render แกน y-axis และ x-axis ตามลำดับ 
-ตัวอย่างของการสร้าง x-axis จาก `xScale` ในโจทย์ก่อนหน้า
+มี method `axisLeft()` และ `axisBottom()` ของ D3 ที่ใช้เพื่อแสดงผลแกน y และแกน x ตามลำดับ 
+ตัวอย่างของการสร้างแกน x จาก `xScale` ในแบบทดสอบที่แล้ว
 
 ```js
 const xAxis = d3.axisBottom(xScale);
 ```
 
-ขั้นตอนต่อไปสำหรับ render แกน ใน SVG canvas สามารถใช้ SVG component ได้โดย `g` element ที่หมายถึง group ไม่เหมือน  `rect`, `circle`, และ `text`, ที่แกนจะเป็นเหมือนเส้นตรงเมื่อทำการ render เพราะว่าเป็น simple shape ในขั้นตอนสุดท้ายคือ apply `transform` attribute ให้แต่ละ position บนแกนใน SVG canvas เส้นตรงทีุู่ก render จะอยู่ชิดขอบของ SVG canvas และจะไม่ปรากฏให้เห็น SVG support ถึง types ที่แตกต่างของแต่ละ `transforms` แต่สำหรับ position บนแกนจำเป็นต้องใช้ `translate` เมื่อมันถูก apply ให้กับ `g` element มันจะย้าย group ทั้งหมดลงตามค่าที่กำหนด ตามตัวอย่างข้างล่าง
+ขั้นตอนต่อไปคือเราต้องวาดแกน ใน SVG canvas 
+ในการวาดแกน เราจะใช้ `g` element (g หมายถึง group) ของ SVG component ได้
+ในการวาดเส้นแกนจะไม่เหมือน `rect`, `circle`, และ `text` เพราะว่าเส้นแกนเป็นแค่เส้นตรง เราจึงใช้ `g` element ได้ 
+และขั้นสุดท้ายคือการใช้ attribute `transform` กับแกนเพื่อเป็นการวางตำแหน่งของแกนบน SVG canvas 
+ถ้าเราไม่ใช้ `transform` เส้นเกนที่เราวาดจะไปอยู่ชิดขอบของ SVG canvas พอดี ทำให้เรามองไม่เห็นเส้นแกนนั้น 
+SVG รองรับการ `transform` ได้หลายแบบ แต่ในกรณี้นี้เราจะทำการย้ายตำแหน่งแกน จึงต้องใช้  `translate` (ขยับ)
+เมื่อเราใช้ `transfrom` กับ `g` element แล้ว จะทำการย้ายกลุ่มของ element ทั้งกลุ่มไปตามค่าที่เราระบุ 
+ลองดูตัวอย่าง:
 
 ```js
 const xAxis = d3.axisBottom(xScale);
@@ -27,22 +34,26 @@ svg.append("g")
    .call(xAxis);
 ```
 
-code ด้านบนสามารถอธิบายได้ว่า วางแกน x ไว้ที่ bottom ของ SVG canvas จากนั้น pass argument `call()` method โดยที่แกน y ก็ทำแบบเดียวกัน ยกเว้น `translate` argument ที่อยู่อยู่ในรูปของ `(x, 0)` เนื่องจาก `translate` เป็น string ใน `attr()` method ด้านบน คุณสามารถใช้วิธี concatenation เพื่อรวมค่าสำหรับ arguments
+โค้ดด้านบนจะวางแกน x ไว้ที่ส่วนล่างของ SVG canvas จากนั้นจะส่ง argument ไปยัง method `call()` โดยที่แกน y ก็จะทำแบบเดียวกัน แต่จะเปลี่ยน argument ของ `translate` เป็น `(x, 0)` แทน
+ใน method `attr()` ด้านบน จะเห็นว่า `translate` เป็น string เราจึงใช้วิธีการรวม string เพื่อสร้าง argument ได้
+(และจะเห็นว่า `translate` รับ argument สองตัว โดย argument ตัวแรกเป็นระยะขยับในแนวแกน x (ไปทางขวา) และ argument ตัวที่สองเป็นระยะขยับในแนวแกน y (ลงด้านล่าง))
 
 # --instructions--
 
-scatter plot มี x-axisอยู่แล้ว ให้สร้าง y-axis พร้อมกับ variable named `yAxis` โดยใช้ `axisLeft()` method จากนั้นให้ render แกนโดยใช้ `g` element ตรวจสอบเพื่อให้มั่นใจว่า `transform` attribute  ได้ทำการ translate แกนโดยตามจำนวน padding ได้อย่างถูกต้องและไม่มี `0` units down 
-อย่าลืม  `call()` axis
+scatter plot มีแกน x อยู่แล้ว ให้สร้างแกน y ในตัวแปร `yAxis` โดยใช้ method `axisLeft()` 
+จากนั้นให้วาดแกนลงในกราฟโดยใช้ `g` element 
+อย่าลืมว่าต้องใช้ attribute `transform` เพื่อ `translate` (ขยับ) ไปทางขวาตามค่าของ padding และขยับลง `0` หน่วย
+และอย่าลืมใช้ฟังก์ชัน `call()` กับแกนที่สร้าง
 
 # --hints--
 
-ควรจะใช้ `axisLeft()` method และ `yScale` เพื่อ passed argument.
+ต้องใช้ method `axisLeft()` และส่ง `yScale` ไปเป็น argument
 
 ```js
 assert(code.match(/\.axisLeft\(yScale\)/g));
 ```
 
-y-axis `g` element ควรมี `transform` attribute เพื่อ translate แกนจาก `(60, 0)`.
+`g` element ของแกน y ต้องมี attribute `transform` เพื่อ `translate` แกนตามค่านี้ `(60, 0)`
 
 ```js
 assert(
@@ -53,7 +64,7 @@ assert(
 );
 ```
 
-ควรเรียกใช้ `yAxis`
+ต้องใช้ฟังก์ชัน `call(yAxis)` ด้วย
 
 ```js
 assert(code.match(/\.call\(\s*yAxis\s*\)/g));
@@ -113,19 +124,19 @@ assert(code.match(/\.call\(\s*yAxis\s*\)/g));
        .attr("y", (d) => yScale(d[1]))
 
     const xAxis = d3.axisBottom(xScale);
-    // Add your code below this line
+    // เขียนโค้ดใต้บรรทัดนี้
     const yAxis = undefined;
-    // Add your code above this line
+    // เขียนโค้ดเหนือบรรทัดนี้
 
     svg.append("g")
        .attr("transform", "translate(0," + (h - padding) + ")")
        .call(xAxis);
 
-    // Add your code below this line
+    // เขียนโค้ดใต้บรรทัดนี้
 
 
 
-    // Add your code above this line
+    // เขียนโค้ดเหนือบรรทัดนี้
 
   </script>
 </body>

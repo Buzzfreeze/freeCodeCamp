@@ -8,33 +8,46 @@ dashedName: write-a-counter-with-redux
 
 # --description--
 
-ตอนนี้คุณได้เรียนรู้หลักการสำคัญของ Redux ทั้งหมดแล้ว! คุณได้เห็นวิธีสร้าง actions และ action creators, สร้าง Redux Store, ส่ง actions ของคุณกับ store และออกแบบการอัปเดต state ด้วย reducer ที่แท้จริง คุณยังได้เห็นวิธีจัดการ state ที่ซับซ้อนด้วย reducer composition และจัดการ asynchronous actions แล้ว ซึ่งเป็นตัวอย่างแบบเข้าใจง่าย แต่แนวคิดเหล่านี้เป็นหลักการสำคัญของ Redux หากคุณเข้าใจดี คุณก็พร้อมที่จะเริ่มสร้างแอป Redux ของคุณเองแล้ว แบบทดสอบต่อไปจะพูดถึงรายละเอียดบางอย่างเกี่ยวกับความไม่สามารถเปลี่ยนแปลงได้ของ `state` แต่ก่อนอื่น นี่คือการทบทวนทุกสิ่งที่คุณได้เรียนรู้ไปแล้ว
+ตอนนี้คุณได้เรียนรู้หลักการสำคัญของ Redux ทั้งหมดแล้ว! คุณได้เห็นวิธีสร้าง action และ action creator, สร้าง Redux Store, ส่ง action ไปใน store และออกแบบการอัปเดต state ด้วย reducer ที่เป็น pure function
+คุณยังได้เห็นวิธีจัดการ state ที่ซับซ้อนโดยใช้ reducer composition และจัดการ asynchronous action แล้วด้วย 
+ตัวอย่างที่ได้เรียนไปพวกนี้เป็นตัวอย่างแบบง่ายๆ แต่แนวคิดที่ได้เรียนไปเป็นหลักการสำคัญของ Redux หากคุณเข้าแนวคิดที่เราสอนไปอย่างดี คุณก็พร้อมที่จะเริ่มสร้างแอป Redux ของคุณเองแล้ว 
+แบบทดสอบต่อไปจะพูดถึงรายละเอียดบางอย่างเกี่ยวกับ immutability ของ `state` แต่ก่อนอื่น มาทบทวนทุกอย่างที่คุณเรียนไปแล้วกัน
 
 # --instructions--
 
-ในบทเรียนนี้ คุณจะใช้ตัวนับอย่างง่ายกับ Redux ตั้งแต่เริ่มต้น ข้อมูลโค้ดพื้นฐานมีให้อยู่ใน code editor แล้ว แต่คุณจะต้องเติมรายละเอียดเพิ่มเติมเอง! ใช้ชื่อที่ให้มาและกำหนด `incAction` และ `decAction` action creators, `counterReducer()`, `INCREMENT` และ `DECREMENT` action types และสุดท้ายคือ Redux `store` เมื่อคุณทำเสร็จแล้วคุณควรสามารถส่ง 'INCREMENT' หรือ 'DECREMENT' actions เพื่อเพิ่มหรือลด state ที่เก็บไว้ใน `store` ขอให้โชคดีในการสร้างแอป Redux แรกของคุณ!
+ในบทเรียนนี้ สร้างแอปที่ใช้นับเลขโดยใช้ Redux ตั้งแต่ต้นเลย 
+เรามีโค้ดให้บางส่วนใน code editor แล้ว แต่คุณจะต้องเขียนที่เหลือเอง! 
+ให้ใช้ชื่อที่ให้มาเพื่อสร้าง 
+
+1. action creator ชื่อ `incAction` และ `decAction` 
+2. ฟังก์ชัน reducer ชื่อ `counterReducer()`
+3. action type ชื่อ `INCREMENT` (เพิ่มค่า) และ `DECREMENT` (ลดค่า) และ
+4. Redux `store` 
+
+เมื่อทำเสร็จแล้วคุณต้องใช้ `INCREMENT` หรือ `DECREMENT` action เพื่อเพิ่มหรือลด state ที่เก็บไว้ใน `store` ได้
+ขอให้สนุกกับการสร้างแอป Redux แอปแรกของคุณ!
 
 # --hints--
 
-action creator `incAction` ควร return action object ด้วย `type` มีค่าเท่ากับ `INCREMENT`
+action creator `incAction` ต้องคืนค่าเป็น action object ที่มี `type` เป็น `INCREMENT`
 
 ```js
 assert(incAction().type === INCREMENT);
 ```
 
-action creator `decAction` ควร return action object ด้วย `type` มีค่าเท่ากับ `DECREMENT`
+action creator `decAction` ต้องคืนค่าเป็น action object ที่มี `type` เป็น `DECREMENT`
 
 ```js
 assert(decAction().type === DECREMENT);
 ```
 
-Redux store ควรเริ่มต้นด้วย `state` ของ 0
+Redux store ต้องมีค่า `state` เริ่มต้นเป็น 0
 
 ```js
 assert(store.getState() === 0);
 ```
 
-การส่ง `incAction` บน Redux store ควรเพิ่ม `state` ทีละ 1
+การส่ง `incAction` ไปใช้ใน Redux store ต้องทำให้ `state` เพิ่มขึ้นทีละ 1
 
 ```js
 assert(
@@ -47,7 +60,7 @@ assert(
 );
 ```
 
-การส่ง `decAction` บน Redux store ควรลด `state` ทีละ 1
+การส่ง `decAction` ไปใช้ใน Redux store ต้องทำให้ `state` ลดลงทีละ 1
 
 ```js
 assert(
@@ -60,7 +73,7 @@ assert(
 );
 ```
 
-`counterReducer` ควรเป็นฟังก์ชัน
+`counterReducer` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof counterReducer === 'function');
@@ -71,16 +84,16 @@ assert(typeof counterReducer === 'function');
 ## --seed-contents--
 
 ```js
-const INCREMENT = null; // Define a constant for increment action types
-const DECREMENT = null; // Define a constant for decrement action types
+const INCREMENT = null; // ประกาศตัวแปรค่าคงที่สำหรับใช้เป็น action type INCREMENT
+const DECREMENT = null; // ประกาศตัวแปรค่าคงที่สำหรับใช้เป็น action type DECREMENT
 
-const counterReducer = null; // Define the counter reducer which will increment or decrement the state based on the action it receives
+const counterReducer = null; // เขียน reducer ที่จะเพิ่ม/ลด ค่าของ state ทีละ 1 ตาม action type ที่ได้รับ
 
-const incAction = null; // Define an action creator for incrementing
+const incAction = null; // ประกาศฟังก์ชัน action creator สำหรับการเพิ่มค่า
 
-const decAction = null; // Define an action creator for decrementing
+const decAction = null; // ประกาศฟังก์ชัน action creator สำหรับการลดค่า
 
-const store = null; // Define the Redux store here, passing in your reducers
+const store = null; // ประกาศ Redux store ที่นี่ แล้วส่ง reducer เข้าไปด้วย
 ```
 
 # --solutions--

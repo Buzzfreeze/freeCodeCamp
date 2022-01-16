@@ -26,7 +26,7 @@ dashedName: build-a-light-bright-app
 
 **User Story:** สามารถคลิกที่ปุ่ม 'Reset All' เพื่อลบสีทั้งหมดออกจากวงกลม
 
-เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "I've completed this challenge"
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "ฉันทำภารกิจที่ท้าทายนี้เสร็จแล้ว"
 
 สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 

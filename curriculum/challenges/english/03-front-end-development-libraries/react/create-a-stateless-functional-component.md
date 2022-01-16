@@ -9,11 +9,14 @@ dashedName: create-a-stateless-functional-component
 # --description--
 
 
- Component เป็นแกนหลักของ React ทุกอย่างใน React เป็น component และคุณจะได้เรียนรู้วิธีการสร้างสิ่งนี้
+Component เป็นแกนหลักของ React เพราะทุกอย่างใน React เป็น component และตอนนี้คุณจะได้เรียนรู้วิธีการสร้าง component แล้ว
 
-มีสองวิธีในการสร้าง React component วิธีแรกคือการใช้ฟังก์ชัน JavaScript การกำหนด component ในลักษณะนี้จะสร้าง *stateless functional component* แนวคิดเกี่ยวกับ state ในแอปพลิเคชันถูกอธิบายในแบบทดสอบถัดๆ ไป ในตอนนี้ลองนึกถึง stateless component เป็น component ที่สามารถรับข้อมูลและเรนเดอร์ข้อมูลนั้นได้ แต่ไม่สามารถจัดการหรือติดตามการเปลี่ยนแปลงของข้อมูลนั้นได้ (เราจะพูดถึงวิธีที่สองในการสร้าง React component ในแบบทดสอบครั้งต่อไป)
+เราจะสร้าง React component ได้สองวิธี 
+วิธีแรกคือการใช้ฟังก์ชัน JavaScript 
+การสร้าง component ด้วยวิธีนี้จะทำให้ component เป็น *stateless functional component* (เราจะอธิบายเรื่อง state ในแบบทดสอบถัดๆไป) ตอนนี้ให้มองว่า stateless component เป็น component ที่สามารถรับข้อมูลและเรนเดอร์ข้อมูลนั้นได้ แต่ไม่สามารถจัดการหรือติดตามการเปลี่ยนแปลงของข้อมูลนั้นได้ (เราจะพูดถึงวิธีที่สองในการสร้าง React component ในแบบทดสอบหน้า)
 
-ในการสร้าง component ด้วยฟังก์ชัน คุณเพียงแค่เขียนฟังก์ชัน JavaScript ที่ return JSX หรือ `null` สิ่งสำคัญอย่างหนึ่งที่ควรทราบคือ React กำหนดให้ชื่อฟังก์ชันของคุณขึ้นต้นด้วยอักษรตัวใหญ่ ต่อไปนี้คือตัวอย่างของ stateless functional component ที่กำหนดคลาส HTML ใน JSX:
+ในการสร้าง component ด้วยฟังก์ชัน คุณแค่เขียนฟังก์ชัน JavaScript ที่คืนค่าเป็น JSX หรือ `null` สิ่งสำคัญอีกอย่างที่ต้องรู้คือ คุณต้องตั้งชื่อ functional component โดยขึ้นต้นด้วยตัวพิมพ์ใหญ่ 
+ด้านล่างเป็นตัวอย่างของ stateless functional component ที่กำหนดคลาส HTML ใน JSX:
 
 ```jsx
 const DemoComponent = function() {
@@ -25,17 +28,18 @@ const DemoComponent = function() {
 
 หลังจากได้รับการ transpile แล้ว `<div>` จะมี CSS class เป็น `customClass`
 
-เนื่องจาก JSX component แสดงถึง HTML คุณจึงสามารถรวมหลาย component เข้าด้วยกันเพื่อสร้างหน้า HTML ที่ซับซ้อนยิ่งขึ้นได้ นี่เป็นหนึ่งในข้อได้เปรียบที่สำคัญของสถาปัตยกรรม component ที่ React มีให้ มันช่วยให้คุณสามารถรวบรวม UI จาก component ที่แยกจากกันจำนวนมาก ทำให้ง่ายต่อการสร้างและบำรุงรักษาส่วน user interface ที่ซับซ้อน
+เนื่องจาก JSX component จะใช้แทน HTML คุณจึงรวม component หลายๆตัวเข้าด้วยกันเพื่อสร้างหน้า HTML ที่ซับซ้อนยิ่งขึ้นได้ 
+นี่เป็นหนึ่งในข้อได้เปรียบที่สำคัญของโครงสร้าง component ของ React ซึ่งช่วยให้คุณสร้าง UI จาก component หลายๆตัวที่อยู่คนละที่กันได้ ทำให้ง่ายต่อการสร้างและปรับปรุงส่วน UI ที่ซับซ้อน
 
 # --instructions--
 
-ใน code editor มีฟังก์ชันที่เรียกว่า `MyComponent` ทำฟังก์ชันนี้ให้สมบูรณ์เพื่อให้มันสามารถ return `div' element เดียวซึ่งมี string ข้อความบางส่วน
+ใน code editor มีฟังก์ชันที่เรียกว่า `MyComponent` เขียนฟังก์ชันนี้ให้เสร็จ โดยการคืนค่าเป็น `div` element ตัวเดียวที่มีข้อความอะไรก็ได้อยู่ภายใน
 
-**Note:** ข้อความถือเป็น child "div" element ดังนั้น คุณจะไม่สามารถใช้แท็กปิดตัวมันเองได้
+**Note:** ข้อความที่ใส่ไปจะถือเป็น child ของ `div` element ดังนั้นจะใช้ `div` ที่เป็นแท็กที่ปิดในตัวไม่ได้
 
 # --hints--
 
-`MyComponent` ควรที่จะ return JSX
+`MyComponent` ต้องคืนค่าเป็น JSX
 
 ```js
 assert(
@@ -46,7 +50,7 @@ assert(
 );
 ```
 
-`MyComponent` ควรที่จะ return `div` element เดียว
+`MyComponent` ต้องคืนค่าเป็น `div` element เดียว
 
 ```js
 assert(
@@ -57,7 +61,7 @@ assert(
 );
 ```
 
-`div` element ควรที่จะมี string ของข้อความ
+`div` ต้องมีข้อความอะไรก็ได้อยู่ข้างใน
 
 ```js
 assert(
@@ -80,11 +84,11 @@ ReactDOM.render(<MyComponent />, document.getElementById('root'))
 
 ```jsx
 const MyComponent = function() {
-  // Change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้
 
 
 
-  // Change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้
 }
 ```
 
@@ -92,12 +96,12 @@ const MyComponent = function() {
 
 ```jsx
 const MyComponent = function() {
-  // Change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้
   return (
     <div>
       Demo Solution
     </div>
   );
-  // Change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้
 }
 ```

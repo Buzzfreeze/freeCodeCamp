@@ -8,67 +8,67 @@ dashedName: boo-who
 
 # --description--
 
-ในการตรวจสอบค่าหนึ่งๆ ว่าเป็น boolean หรือไม่ ผลจากตรวจสอบจะคืนค่าเป็น `true` หรือ `false`
-โดย boolean สามารถมีค่าเป็น `true` และ `false`
+ให้สร้างฟังก์ชันที่ตรวจสอบว่าค่าที่รับเข้ามาเป็น boolean หรือไม่ และให้คืนค่าเป็น `true` ถ้าเป็น boolean หรือ `false` ถ้าไม่ใช้ boolean
+โดย boolean จะมีค่าเป็น `true` หรือ `false` เท่านั้น
 
 
 # --hints--
 
-`booWho(true)` ควรคืนค่า `true` ออกมา
+การเรียกใช้ฟังก์ชัน `booWho(true)` ต้องได้ค่าเป็น `true`
 
 ```js
 assert.strictEqual(booWho(true), true);
 ```
 
-`booWho(false)` ควรคืนค่า `true` ออกมา
+การเรียกใช้ฟังก์ชัน `booWho(false)` ต้องได้ค่าเป็น `true`
 
 ```js
 assert.strictEqual(booWho(false), true);
 ```
 
-`booWho([1, 2, 3])` ควรคืนค่า `false` ออกมา
+การเรียกใช้ฟังก์ชัน `booWho([1, 2, 3])` ต้องได้ค่าเป็น `false`
 
 ```js
 assert.strictEqual(booWho([1, 2, 3]), false);
 ```
 
-`booWho([].slice)` ควรคืนค่า `false` ออกมา
+การเรียกใช้ฟังก์ชัน `booWho([].slice)` ต้องได้ค่าเป็น `false`
 
 ```js
 assert.strictEqual(booWho([].slice), false);
 ```
 
-`booWho({ "a": 1 })` ควรคืนค่า `false` ออกมา
+การเรียกใช้ฟังก์ชัน `booWho({ "a": 1 })` ต้องได้ค่าเป็น `false`
 
 ```js
 assert.strictEqual(booWho({ a: 1 }), false);
 ```
 
-`booWho(1)` ควรคืนค่า `false` ออกมา
+การเรียกใช้ฟังก์ชัน `booWho(1)` ต้องได้ค่าเป็น `false`
 
 ```js
 assert.strictEqual(booWho(1), false);
 ```
 
-`booWho(NaN)` ควรคืนค่า `false` ออกมา
+การเรียกใช้ฟังก์ชัน `booWho(NaN)` ต้องได้ค่าเป็น `false`
 
 ```js
 assert.strictEqual(booWho(NaN), false);
 ```
 
-`booWho("a")` ควรคืนค่า `false` ออกมา
+การเรียกใช้ฟังก์ชัน `booWho("a")` ต้องได้ค่าเป็น `false`
 
 ```js
 assert.strictEqual(booWho('a'), false);
 ```
 
-`booWho("true")` ควรคืนค่า `false` ออกมา
+การเรียกใช้ฟังก์ชัน `booWho("true")` ต้องได้ค่าเป็น `false`
 
 ```js
 assert.strictEqual(booWho('true'), false);
 ```
 
-`booWho("false")` ควรคืนค่า `false` ออกมา
+การเรียกใช้ฟังก์ชัน `booWho("false")` ต้องได้ค่าเป็น `false`
 
 ```js
 assert.strictEqual(booWho('false'), false);

@@ -8,11 +8,13 @@ dashedName: use-the-delete-keyword-to-remove-object-properties
 
 # --description--
 
-ตอนนี้คุณรู้แล้วว่า object คืออะไร รวมถึงฟีเจอร์พื้นฐาน และข้อดีของ object กล่าวโดยสรุป คือ object คือที่เก็บ key-value ซึ่งยืดหยุ่น และใช้งานง่ายในการจัดโครงสร้างข้อมูล ***และ*** ใช้เวลาในการค้นหาที่รวดเร็วมาก บทเรียนที่เหลือ เราจะอธิบายการทำงานทั่วไปหลายอย่าง ที่คุณสามารถทำกับ object ได้ เพื่อให้คุณรู้สึกสบายใจที่จะใช้โครงสร้างข้อมูลที่มีประโยชน์เหล่านี้ในโปรแกรมของคุณ
+ตอนนี้คุณรู้แล้วว่า object คืออะไร รวมถึงฟีเจอร์พื้นฐาน และข้อดีของ object 
+5hถจะให้สรุป object ก็คือที่เก็บ key-value มีความเป็นอิสระ และใช้งานง่ายในการจัดโครงสร้างข้อมูล ***และ*** จะใช้เวลาน้อยมากในการดึงข้อมูลขึ้นมา 
+ในบทเรียนที่เหลือ เราจะอธิบายการใช้ object  เพื่อให้คุณใช้โครงสร้างข้อมูลนี้ในโปรแกรมของคุณ ได้อย่างสะดวกและถูกต้อง
 
-ในบทก่อนหน้านี้ เราได้เพิ่มและแก้ไขคู่ key-value ของ object ที่นี่เราจะดูว่าเราสามารถ *ลบ* คู่ key-value ออกจาก object ได้อย่างไร
+ในบทก่อนหน้านี้ เราได้เพิ่มและแก้ไขคู่ key-value ของ object ไปแล้ว ที่นี้เราจะมาดูว่าเราจะ *ลบ* คู่ key-value ออกจาก object ได้อย่างไร
 
-มาทบทวนตัวอย่าง object `foods` ของเราอีกครั้งเป็นครั้งสุดท้าย หากเราต้องการลบ key `apples` เราสามารถลบออกได้โดยใช้ keyword `delete` ดังนี้:
+ลองดู object `foods` ของเรากันอีกที ถ้าเราต้องการลบ key `apples` เราสามารถลบออกได้โดยใช้ keyword `delete` ดังนี้:
 
 ```js
 delete foods.apples;
@@ -20,11 +22,11 @@ delete foods.apples;
 
 # --instructions--
 
-จงใช้ keyword delete เพื่อลบ  `oranges`, `plums` และ key `strawberries` จาก object `foods`
+จงใช้ keyword delete เพื่อลบ key `oranges`, `plums` และ `strawberries` จาก object `foods`
 
 # --hints--
 
-object `foods` ควรมีแค่ 3 key: `apples`, `grapes`, และ `bananas`
+object `foods` ต้องเหลือ 3 key แค่สามตัวคือ `apples`, `grapes`, และ `bananas`
 
 ```js
 assert(
@@ -35,7 +37,7 @@ assert(
 );
 ```
 
-key `oranges`, `plums` และ `strawberries` ควรถูกลบโดยใช้ `delete`
+ต้องลบ key `oranges`, `plums` และ `strawberries` โดยใช้คำสั่ง `delete`
 
 ```js
 assert(
@@ -59,9 +61,9 @@ let foods = {
   strawberries: 27
 };
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 
 console.log(foods);
 ```

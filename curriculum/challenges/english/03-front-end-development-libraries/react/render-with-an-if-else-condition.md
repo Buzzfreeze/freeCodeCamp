@@ -8,17 +8,23 @@ dashedName: render-with-an-if-else-condition
 
 # --description--
 
-การประยุกต์ใช้งานอื่นๆ ของการใช้ JavaScript เพื่อควบคุมมุมมองที่เรนเดอร์ของคุณคือการผูก elements ที่ถูกเรนเดอร์กับเงื่อนไข เมื่อเงื่อนไขเป็นจริงจะเรนเดอร์มุมมองหนึ่ง เมื่อมันผิดก็เป็นมุมมองที่ต่างออกไป คุณสามารถทำได้โดยใช้คำสั่ง `if/else` มาตรฐานในเมธอด `render()` ของ React component
+การใช้ JavaScript อีกแบบหนึ่งคือ การใช้เพื่อควบคุมสิ่งที่จะเรนเดอร์ออกมา โดยใช้เงื่อนไข
+ถ้าเงื่อนไขเป็น `true` จะเรนเดอร์ออกมาแบบหนึ่ง ถ้าเป็น `false` ก็เป็นอีกแบบหนึ่ง 
+วิธีนี้จะใช้แค่คำสั่ง `if/else` แบบปกตติใน method `render()` ของ React component
 
 # --instructions--
 
-MyComponent มี `boolean` ใน state ของมัน ซึ่งจะติดตามว่าคุณต้องการแสดง element บางอย่างใน UI หรือไม่ โดยมี `button` ที่จะคอยสลับ state ของค่านี้ ตอนนี้มันจะเรนเดอร์ UI เดิมทุกครั้ง ให้เขียน`render()` method ใหม่ด้วยคำสั่ง `if/else` เพื่อที่ว่าถ้า `display` เป็น `true` คุณจะreturn ค่ามาร์กอัปปัจจุบัน หรือไม่ก็ให้ return มาร์กอัปโดยไม่มี `h1` element เมื่อเป็น `false`
+MyComponent เก็บค่า `boolean` ใน property `display` ของ state 
+ค่านี้จะใช้เพื่อดูว่าต้องแสดง element ไหนใน UI โดยจะมี `button` ที่ใช้เปลี่ยนค่านี้ใน state 
+ในตอนนี้ component จะเรนเดอร์ UI เดิมทุกครั้ง 
+ให้เขียน method `render()` ใหม่โดยใช้ `if/else` โดยถ้า `display` เป็น `true` คุณจะแสดง JSX ตัวปัจจุบัน แต่ถ้าเป็น `false` ให้แสดง JSX ที่ไม่มี `h1`
 
-**Note:** คุณต้องเขียน `if/else` ให้ผ่าน test การใช้ ternary operator จะทำให้ test ไม่ผ่านในแบบทดสอบนี้
+**Note:** ในแบบทดสอบนี้คุณต้องเขียน `if/else` แบบเต็ม เพื่อให้ test ผ่าน การใช้ ternary operator จะทำให้ test ไม่ผ่าน
+(Ternary Operator คือ syntax นี้ `condition? true: false`)
 
 # --hints--
 
-`MyComponent` ควรมีและเรนเดอร์
+ต้องมีมี `MyComponent` และต้องเรนเดอร์ได้
 
 ```js
 assert(
@@ -29,7 +35,7 @@ assert(
 );
 ```
 
-เมื่อ `display` ถูกตั้งค่าเป็น `true` จะต้องเรนเดอร์ `div`, `button` และ `h1`
+เมื่อ `display` ถูกมีค่าเป็น `true` จะต้องเรนเดอร์ `div`, `button` และ `h1`
 
 ```js
 async () => {
@@ -71,7 +77,7 @@ async () => {
 };
 ```
 
-ใน render method ควรใช้คำสั่ง `if/else` เพื่อตรวจสอบเงื่อนไขของ `this.state.display`
+ใน method render ต้องใช้คำสั่ง `if/else` เพื่อตรวจสอบเงื่อนไขของ `this.state.display`
 
 ```js
 (getUserInput) =>
@@ -106,7 +112,7 @@ class MyComponent extends React.Component {
     }));
   }
   render() {
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
 
     return (
        <div>
@@ -135,7 +141,7 @@ class MyComponent extends React.Component {
     }));
   }
   render() {
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
     if (this.state.display) {
       return (
          <div>

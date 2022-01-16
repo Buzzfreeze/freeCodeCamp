@@ -8,11 +8,13 @@ dashedName: ditch-custom-css-for-bootstrap
 
 # --description--
 
-เราสามารถทำให้โค้ดของแอป Cat Photo ดูสะอาดตาขึ้นและซับซ้อนน้อยลงโดยการแทนโค้ดในการเขียน style ต่างๆ ก่อนหน้านี้ด้วย built-in styles ของ Bootstrap
+เราสามารถทำให้โค้ดของแอป Cat Photo ดูสะอาดตาขึ้น และแอพดูทันสมัยมากขึ้น โดยการเปลี่ยน style ที่เขียนไว้เป็น Bootstrap แทน
 
-ลองลบ CSS declaration `.red-text`, `p` และ `.small-image` ออกจาก `style` element ให้เหลือแค่ `h2` และ `thick-green-border` เท่านั้น
+แต่ไม่ต้องห่วงเดี๋ยวเราจะมาปรับแต่ง CSS กันทีหลัง
 
-ลบ `p` element ที่มีลิงก์ที่ใช้งานไม่ได้อยู่ข้างในออก จากนั้นลบ class `red-text` ออกจาก `h2` element และแทนที่ด้วย class `text-primary` จาก Bootstrap
+ให้ลบ CSS ที่เป็น `.red-text`, `p` และ `.small-image` ออกจาก `style` element ให้เหลือแค่ `h2` และ `thick-green-border` เท่านั้น
+
+ลบ `p` element ที่มีลิงก์ที่ใช้งานไม่ได้อยู่ข้างในออก จากนั้นลบ class `red-text` ออกจาก `h2` element และเปลี่ยนเป็น class `text-primary` จาก Bootstrap แทน
 
 แล้วก็เอา class `smaller-image` ออกจาก `img` element อันแรก และใส่ class `img-responsive` แทน
 
@@ -30,7 +32,7 @@ assert(!$('h2').hasClass('red-text'));
 assert($('h2').hasClass('text-primary'));
 ```
 
-ฟอนต์ใน elements ต่างๆ ใน paragraph จะไม่ใช่ฟอนต์ `Monospace` อีกต่อไป
+ฟอนต์ใน element ต่างๆ ใน paragraph จะไม่ใช่ฟอนต์ `Monospace` อีกต่อไป
 
 ```js
 assert(

@@ -8,15 +8,16 @@ dashedName: give-each-element-a-unique-id
 
 # --description--
 
-เราสามารถที่จะใช้ jQuery ในการระบุเป้าหมายในแต่ละปุ่ม (button) โดยการระบุไอดีเฉพาะให้มัน
+เราใช้ jQuery เลือก element โดยใช้ id ได้ด้วย
 
-เรามาลองใส่ไอดีเฉพาะให้กับปุ่มต่างๆ โดยเริ่มจาก id ชื่อว่า `target1` ไปจนถึง `target6`
+เรามาลองใส่ id ให้กับปุ่มของเรากัน โดยให้ไล่จาก id `target1` ไปจนถึง id `target6`
 
-ให้ใส่ไอดี `target1` ถึง `target3` ในปุ่มที่อยู่ใน `div` ที่มีไอดี `#left-well` และใส่ไอดี `target4` ถึง `target6` ในปุ่มที่อยู่ใน `div` ที่มีไอดี `#right-well`
+ให้ใส่ id `target1` `target2` `target3` ในปุ่มที่อยู่ใน `div` ที่มี id เป็น `#left-well` 
+และใส่ id `target4` `target5` `target6` ในปุ่มที่อยู่ใน `div` ที่มี id เป็น `#right-well`
 
 # --hints--
 
-เพิ่มไอดี `target1` ให้แก่ปุ่ม `button` element
+ต้องมี `button` หนึ่งปุ่มที่มี id เป็น `target1`
 
 ```js
 assert(
@@ -25,7 +26,7 @@ assert(
 );
 ```
 
-เพิ่มไอดี `target2` ให้แก่ปุ่ม `button` element
+ต้องมี `button` หนึ่งปุ่มที่มี id เป็น `target2`
 
 ```js
 assert(
@@ -34,7 +35,7 @@ assert(
 );
 ```
 
-เพิ่มไอดี `target3` ให้แก่ปุ่ม `button` element
+ต้องมี `button` หนึ่งปุ่มที่มี id เป็น `target3`
 
 ```js
 assert(
@@ -43,7 +44,7 @@ assert(
 );
 ```
 
-เพิ่มไอดี `target4` ให้แก่ปุ่ม `button` element
+ต้องมี `button` หนึ่งปุ่มที่มี id เป็น `target4`
 
 ```js
 assert(
@@ -52,7 +53,7 @@ assert(
 );
 ```
 
-เพิ่มไอดี `target5` ให้แก่ปุ่ม `button` element
+ต้องมี `button` หนึ่งปุ่มที่มี id เป็น `target5`
 
 ```js
 assert(
@@ -61,7 +62,7 @@ assert(
 );
 ```
 
-เพิ่มไอดี `target6` ให้แก่ปุ่ม `button` element
+ต้องมี `button` หนึ่งปุ่มที่มี id เป็น `target6`
 
 ```js
 assert(

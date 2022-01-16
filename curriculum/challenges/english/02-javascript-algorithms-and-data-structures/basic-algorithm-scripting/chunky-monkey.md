@@ -8,11 +8,11 @@ dashedName: chunky-monkey
 
 # --description--
 
-จงเขียนฟังก์ชันที่แยก (split) array (ระบุเป็น argument แรก) ออกเป็นหลาย array ตามขนาดของ `size` (argument ที่สอง) แล้วให้ผลลัพธ์เป็น array 2 มิติ 
+จงเขียนฟังก์ชันที่จะแบ่ง array (argument แรก) ออกเป็น array ย่อยหลายๆอัน โดย array ย่อยที่แบ่งออกมาจะมีจะมีจำนวน element เท่ากับ `size` (argument ที่สอง) แล้วคืนค่าออกมาเป็น array 2 มิติ ที่มี array ย่อยที่เราแบ่งได้อยู่ข้างใน
 
 # --hints--
 
-`chunkArrayInGroups(["a", "b", "c", "d"], 2)` ควรได้ผลลัพธ์เป็น `[["a", "b"], ["c", "d"]]`.
+การเรียกใช้ฟังก์ชัน `chunkArrayInGroups(["a", "b", "c", "d"], 2)` ต้องได้ค่าเป็น `[["a", "b"], ["c", "d"]]`
 
 ```js
 assert.deepEqual(chunkArrayInGroups(['a', 'b', 'c', 'd'], 2), [
@@ -21,7 +21,7 @@ assert.deepEqual(chunkArrayInGroups(['a', 'b', 'c', 'd'], 2), [
 ]);
 ```
 
-`chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3)` ควรได้ผลลัพธ์เป็น `[[0, 1, 2], [3, 4, 5]]`.
+การเรียกใช้ฟังก์ชัน `chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3)` ต้องได้ค่าเป็น `[[0, 1, 2], [3, 4, 5]]`
 
 ```js
 assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3), [
@@ -30,7 +30,7 @@ assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3), [
 ]);
 ```
 
-`chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2)` ควรได้ผลลัพธ์เป็น `[[0, 1], [2, 3], [4, 5]]`.
+การเรียกใช้ฟังก์ชัน `chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2)` ต้องได้ค่าเป็น `[[0, 1], [2, 3], [4, 5]]`
 
 ```js
 assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2), [
@@ -40,7 +40,7 @@ assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2), [
 ]);
 ```
 
-`chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4)` ควรได้ผลลัพธ์เป็น `[[0, 1, 2, 3], [4, 5]]`.
+การเรียกใช้ฟังก์ชัน `chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4)` ต้องได้ค่าเป็น `[[0, 1, 2, 3], [4, 5]]`
 
 ```js
 assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4), [
@@ -49,7 +49,7 @@ assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4), [
 ]);
 ```
 
-`chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3)` ควรได้ผลลัพธ์เป็น `[[0, 1, 2], [3, 4, 5], [6]]`.
+การเรียกใช้ฟังก์ชัน `chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3)` ต้องได้ค่าเป็น `[[0, 1, 2], [3, 4, 5], [6]]`
 
 ```js
 assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3), [
@@ -59,7 +59,7 @@ assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3), [
 ]);
 ```
 
-`chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4)` ควรได้ผลลัพธ์เป็น `[[0, 1, 2, 3], [4, 5, 6, 7], [8]]`.
+การเรียกใช้ฟังก์ชัน `chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4)` ต้องได้ค่าเป็น `[[0, 1, 2, 3], [4, 5, 6, 7], [8]]`
 
 ```js
 assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4), [
@@ -69,7 +69,7 @@ assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4), [
 ]);
 ```
 
-`chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2)` ควรได้ผลลัพธ์เป็น `[[0, 1], [2, 3], [4, 5], [6, 7], [8]]`.
+การเรียกใช้ฟังก์ชัน `chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2)` ต้องได้ค่าเป็น `[[0, 1], [2, 3], [4, 5], [6, 7], [8]]`
 
 ```js
 assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2), [

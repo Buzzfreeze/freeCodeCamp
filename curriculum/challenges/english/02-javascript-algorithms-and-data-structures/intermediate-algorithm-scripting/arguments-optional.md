@@ -8,11 +8,11 @@ dashedName: arguments-optional
 
 # --description--
 
-ให้สร้างฟังก์ชันที่บวกค่า argument 2 ตัวเข้าด้วยกัน ถ้ามีการส่งค่าเพียง argument เดียว เข้าในฟังก์ชัน ก็ให้คืนค่าเป็นอีกฟังก์ชันที่มี argument 1 ตัว และคืนค่าเป็นผลบวก
+ให้สร้างฟังก์ชันที่บวกค่า argument 2 ตัวเข้าด้วยกัน ถ้ามีการส่งค่าเพียง argument เดียวเข้าไปในฟังก์ชัน ก็ให้คืนค่าเป็นอีกฟังก์ชันที่จะคืนค่าเป็นผลบวกถ้าส่ง argument เข้าไปอีก 1 ตัว 
 
-ตัวอย่างเช่น `addTogether(2, 3)` ควรคืนค่าเป็น `5` และ `addTogether(2)` ควรคืนค่าเป็นฟังก์ชัน
+เช่น `addTogether(2, 3)` ควรคืนค่าเป็น `5` และ `addTogether(2)` ควรคืนค่าเป็นฟังก์ชัน
 
-เมื่อมีการเรียกฟังก์ชันที่คืนค่ามา (returned function) พร้อมกับส่งค่า argument เข้าในฟังก์ชันนี้ ก็จะได้ผลลัพธ์เป็นผลบวก
+เมื่อมีการเรียกฟังก์ชันที่คืนค่ามา พร้อมกับส่งค่า argument อีกตัวเข้าไปในฟังก์ชันนี้ ก็จะได้ผลลัพธ์ออกมา
 
 ```js
 var sumTwoAnd = addTogether(2);
@@ -20,41 +20,41 @@ var sumTwoAnd = addTogether(2);
 
 `sumTwoAnd(3)` ได้ผลลัพธ์เป็น `5`
 
-หาก argument ใด argument หนึ่ง ไม่ใช่ตัวเลข ให้คืนค่าเป็น undefined
+ถ้า argument ตัวใดตัวหนึ่งไม่ใช่ตัวเลข ให้คืนค่าเป็น undefined
 
 # --hints--
 
-`addTogether(2, 3)` ควรคืนค่าเป็น 5
+`addTogether(2, 3)` ต้องคืนค่าเป็น 5
 
 ```js
 assert.deepEqual(addTogether(2, 3), 5);
 ```
 
-`addTogether(23, 30)` ควรคืนค่าเป็น 53
+`addTogether(23, 30)` ต้องคืนค่าเป็น 53
 
 ```js
 assert.deepEqual(addTogether(23, 30), 53);
 ```
 
-`addTogether(5)(7)` ควรคืนค่าเป็น 12
+`addTogether(5)(7)` ต้องคืนค่าเป็น 12
 
 ```js
 assert.deepEqual(addTogether(5)(7), 12);
 ```
 
-`addTogether("https://www.youtube.com/watch?v=dQw4w9WgXcQ")` ควรคืนค่าเป็น `undefined`
+`addTogether("https://www.youtube.com/watch?v=dQw4w9WgXcQ")` ต้องคืนค่าเป็น `undefined`
 
 ```js
 assert.isUndefined(addTogether('https://www.youtube.com/watch?v=dQw4w9WgXcQ'));
 ```
 
-`addTogether(2, "3")` ควรคืนค่าเป็น `undefined`
+`addTogether(2, "3")` ต้องคืนค่าเป็น `undefined`
 
 ```js
 assert.isUndefined(addTogether(2, '3'));
 ```
 
-`addTogether(2)([3])` ควรคืนค่าเป็น `undefined`
+`addTogether(2)([3])` ต้องคืนค่าเป็น `undefined`
 
 ```js
 assert.isUndefined(addTogether(2)([3]));

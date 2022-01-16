@@ -8,30 +8,31 @@ dashedName: set-the-childs-prototype-to-an-instance-of-the-parent
 
 # --description--
 
-แบบทดสอบที่แล้ว คุณได้เห็นขั้นตอนแรกของการสืบทอดพฤติกรรมจาก supertype (หรือ parent) `Animal` คือการสร้าง instance ใหม่ของ `Animal`
+แบบทดสอบที่แล้ว เราได้สร้าง instance ใหม่ของ `Animal` ไปแล้ว ซึ่งเป็นขั้นตอนแรกในการสืบทอดพฤติกรรมจาก supertype (หรือ parent) ที่ชื่อว่า `Animal`
 
-แบบทดสอบนี้จะกล่าวถึงขั้นตอนถัดไป นั่นคือการกำหนด `prototype` ของ subtype (หรือ child) สำหรับกรณีนี้ `Bird` เป็น instance ของ `Animal`
+แบบทดสอบนี้จะสอนขั้นตอนถัดไป นั่นคือการกำหนด `prototype` ของ subtype (หรือ child) 
+ในกรณีนี้ `Bird` จะเป็น instance ของ `Animal`:
 
 ```js
 Bird.prototype = Object.create(Animal.prototype);
 ```
 
-จากที่ได้กล่าวมาแล้วว่า `prototype` เปรียบดัง "สูตรสำเร็จ" ในการสร้าง object ดังนี้แล้ว สูตรของ `Bird` ตอนนี้ประกอบด้วย "ส่วนประกอบ" จาก `Animal`
+ถ้ายังจำได้ `prototype` จะเป็นเหมือนแม่พิมพ์ที่ใช้สร้าง object ดังนั้นถ้าใช้แม่พิมพ์เดียวกัน `Bird` ก็ต้องมีลักษณะเหมือน `Animal`
 
 ```js
 let duck = new Bird("Donald");
 duck.eat();
 ```
 
-`duck` สืบทอด properties ทุกอย่างมาจาก `Animal` รวมถึง `eat` method ด้วย
+`duck` จะสืบทอด property ทุกตัวมาจาก `Animal` รวมถึง method `eat` ด้วย
 
 # --instructions--
 
-จงปรับแก้โค้ด เพื่อให้ instance ของ `Dog` สืบทอดจาก `Animal`
+ให้แก้โค้ด เพื่อให้ instance ของ `Dog` สืบทอดมาจาก `Animal`
 
 # --hints--
 
-`Dog.prototype` ควรเป็น instance ของ `Animal`.
+`Dog.prototype` ต้องเป็น instance ของ `Animal`
 
 ```js
 assert(Animal.prototype.isPrototypeOf(Dog.prototype));
@@ -53,7 +54,7 @@ Animal.prototype = {
 
 function Dog() { }
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 
 let beagle = new Dog();

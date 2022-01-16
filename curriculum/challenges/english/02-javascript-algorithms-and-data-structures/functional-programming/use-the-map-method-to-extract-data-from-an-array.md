@@ -8,20 +8,27 @@ dashedName: use-the-map-method-to-extract-data-from-an-array
 
 # --description--
 
-ที่ผ่านมา เราได้เรียนรู้การใช้ pure function เพื่อป้องกัน side effects ในโปรแกรม นอกจากนี้ เรายังได้เห็นการทำงานของฟังก์ชันที่ประมวลผลต่อ input arguments เท่านั้น
+ที่ผ่านมา เราได้เรียนรู้การใช้ pure function เพื่อป้องกัน side effect ในโปรแกรมไปแล้ว แล้วเราก็ยังได้เห็นประโยชน์ของการที่ฟังก์ชันทำงานโดยใช้เฉพาะค่าที่เป็น input argument ไปแล้วด้วย
 
-นี่เป็นเพียงจุดเริ่มต้นเท่านั้น functional programming เป็นดั่งศูนย์กลางของทฤษฎีฟังก์ชันตามชื่อของมันเลย
+ขอยินดีด้วยที่มาถึงจุดนี้ได้ แต่เราเพิ่งเริ่มต้นเท่านั้น functional programming ถูกสร้างขึ้นจากทฤษฎีของฟังก์ชัน
 
-เราสามารถนำฟังก์ชันมาเป็น argument ส่งผ่านเข้าไปในอีกฟังก์ชันนึง และคืนค่าเป็นฟังก์ชันจากอีกฟังก์ชันนึง ฟังก์ชันถือเป็น <dfn>first class objects</dfn> ใน JavaScript ซึ่งหมายความว่า เราสามารถใช้งานฟังก์ชันได้เหมือนกับ object อื่นๆ ฟังก์ชันสามารถเก็บค่าใน variable ได้, สามารถเก็บค่าใน object ได้ หรือ สามารถส่งผ่านเป็น function argument ได้
+เราสามารถนำฟังก์ชันมาเป็น argument แล้วส่งเข้าไปในอีกฟังก์ชันนึงได้ หรือจะให้ฟังก์ชันคืนค่าเป็นฟังก์ชันอีกตัวนึงก็ได้ 
+ฟังก์ชันถือเป็น <dfn>first class object</dfn> ใน JavaScript แปลว่าเราจะใช้ฟังก์ชันได้เหมือนเป็น object ตัวนึงเลย 
+เราจะเก็บฟังก์ชันในตัวแปรหรือ object ก็ได้ หรือเราจะส่งฟังก์ชันเป็น argument ก็ได้
 
-มาลองใช้งานฟังก์ชันง่ายๆ ของ array กัน ซึ่งเป็น methods ของ array object prototype ในแบบฝึกหัดนี้ เราจะได้ใช้ `Array.prototype.map()` หรือเขียนย่อๆ ว่า `map`
+มาลองใช้งานฟังก์ชันง่ายๆ ของ array กัน ฟังก์ชันนี้เป็น method ที่อยู่ใน prototype ของ object ที่เป็น array 
+ในแบบฝึกหัดนี้ เราจะได้ใช้ `Array.prototype.map()` หรือเขียนย่อๆ ว่า `map`
 
-`map` method วนอ่านค่าแต่ละ item ของ array และคืนค่าเป็น array ตัวใหม่ที่มี item เป็นผลลัพธ์จากการรัน callback function โดย `map` method ไม่เปลี่ยนแปลงค่าของ array ตั้งต้น 
+method `map` จะวนอ่านค่าแต่ละตัวที่อยู่ใน array และคืนค่าเป็น array ตัวใหม่ โดยค่าแต่ละตัวของ array ตัวใหม่นั้นจะมาจากการเรียกใช้ callback function ที่เราระบุ โดย method `map` ไม่เปลี่ยนแปลงค่าของ array ตัวเดิม
 
-callback สามารถรับ argument ได้ 3 ค่า โดย argument แรก คือ element ปัจจุบันที่กำลังถูกอ่านค่า ส่วน argument ที่สองคือ index ของ element นั้นๆ และ argument ที่สาม คือ array ที่เรียก `map` method
+เมื่อ `map` เรียกใช้ callback function จะส่ง argument เข้าไปสามตัว 
 
-จากตัวอย่างด้านล่าง มีการใช้ `map` method กับ `users` array เพื่อคืนค่าเป็น array ตัวใหม่ที่มี element เป็นชื่อของ users เป็น element 
-เพื่อให้เห็นภาพได้ง่าย ในตัวอย่าง callback จะใช้เพียง argument แรกเท่านั้น
+- argument แรกคือ element ปัจจุบันที่กำลังถูกอ่านค่าอยู่ 
+- argument ที่สองคือ index ของ element นั้นๆ
+- argument ที่สามคือ array ที่เรียกใช้ method `map`
+
+ในตัวอย่างด้านล่าง มีการใช้ method `map` กับ array `users` เพื่อคืนค่าเป็น array ตัวใหม่ที่จะมีเฉพาะค่าของ property `name` ของ array `users`
+ใน callback ของตัวอย่างนี้ เราจะใช้แค่ argument แรกก่อน เพื่อให้เข้าใจง่าย:
 
 ```js
 const users = [
@@ -34,15 +41,18 @@ const names = users.map(user => user.name);
 console.log(names);
 ```
 
-หน้า console ควรแสดงค่า ` [ 'John', 'Amy', 'camperCat' ]`.
+บน console จะแสดง ` [ 'John', 'Amy', 'camperCat' ]`
 
 # --instructions--
 
-`watchList` array ประกอบด้วย objects ที่มีข้อมูลเกี่ยวกับภาพยนตร์ จงใช้ `map` กับ `watchList` เพื่อกำหนดค่า object ให้กับ array ตัวใหม่ โดย array ตัวใหม่นี้กำหนดชื่อตัวแปรเป็น `ratings` ซึ่ง array ตัวใหม่ควรเก็บเพียง key `title` ที่เป็นชื่อภาพยนต์ และ key `rating` ที่เป็น IMDB rating เท่านั้น แต่อย่างไรก็ตาม โค้ดที่อยู่ใน editor ตอนนี้ ใช้ `for` loop ดังนั้น คุณต้องแทนที่ loop ด้วย `map`
+ตอนนี้ array `watchList` เก็บ object ที่เก็บข้อมูลของภาพยนตร์อยู่
+จงใช้ `map` กับ `watchList` เพื่อเก็บค่า array ตัวใหม่ลงในตัวแปร `ratings` 
+โดย array `ratings` จะต้องเก็บเฉพาะค่าของ `title` ที่เป็นชื่อของภาพยนต์ และ ค่าของ `rating` ที่เป็น IMDB rating เท่านั้น 
+โค้ดที่อยู่ใน editor ตอนนี้ ใช้ `for` loop อยู่ คุณต้องเขียนใหม่โดยใช้ `map` แทน
 
 # --hints--
 
-ตัวแปร `watchList` ไม่ควรมีการเปลี่ยนแปลง
+ค่าของตัวแปร `watchList` ต้องไม่เปลี่ยนแปลง
 
 ```js
 assert(
@@ -50,19 +60,19 @@ assert(
 );
 ```
 
-โค้ดของคุณไม่ควรใช้ `for` loop
+ห้ามใช้ `for` loop ในโค้ด
 
 ```js
 assert(!code.match(/for\s*?\([\s\S]*?\)/));
 ```
 
-โค้ดของคุณควรใช้ `map` method
+ต้องใช้ method `map`
 
 ```js
 assert(code.match(/\.map/g));
 ```
 
-`ratings` ควรมีค่าเป็น `[{"title":"Inception","rating":"8.8"},{"title":"Interstellar","rating":"8.6"},{"title":"The Dark Knight","rating":"9.0"},{"title":"Batman Begins","rating":"8.3"},{"title":"Avatar","rating":"7.9"}]`.
+ตัวแปร `ratings` ต้องมีค่าเป็น `[{"title":"Inception","rating":"8.8"},{"title":"Interstellar","rating":"8.6"},{"title":"The Dark Knight","rating":"9.0"},{"title":"Batman Begins","rating":"8.3"},{"title":"Avatar","rating":"7.9"}]`.
 
 ```js
 assert.deepEqual(ratings, [
@@ -79,7 +89,7 @@ assert.deepEqual(ratings, [
 ## --seed-contents--
 
 ```js
-// The global variable
+// ตัวแปร global
 var watchList = [
   {
     "Title": "Inception",
@@ -193,14 +203,14 @@ var watchList = [
   }
 ];
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
 var ratings = [];
 for(var i=0; i < watchList.length; i++){
   ratings.push({title: watchList[i]["Title"],  rating: watchList[i]["imdbRating"]});
 }
 
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 
 console.log(JSON.stringify(ratings));
 ```

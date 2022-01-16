@@ -8,19 +8,24 @@ dashedName: give-sibling-elements-a-unique-key-attribute
 
 # --description--
 
-แบบทดสอบล่าสุดแสดงให้เห็นว่าว `map` method ถูกใช้เพื่อเรนเดอร์ element จำนวนหนึ่งแบบไดนามิกตามข้อมูลที่ user ป้อน อย่างไรก็ตามมีชิ้นส่วนสำคัญที่ขาดหายไปจากตัวอย่างนั้น เมื่อคุณสร้าง array ของ element แต่ละรายการต้องมี `key` attribute ที่ตั้งค่าเป็นค่าที่ไม่ซ้ำกัน React ใช้คีย์เหล่านี้เพื่อติดตามว่ารายการใดถูกเพิ่ม เปลี่ยนแปลง หรือลบออก ซึ่งช่วยให้กระบวนการเรนเดอร์ใหม่มีประสิทธิภาพมากขึ้นเมื่อมีการแก้ไขรายการไม่ว่าในทางใด
+ในแบบทดสอบแล้วเราจะเห็นว่า เราใช้ method `map` เพื่อเรนเดอร์ element แบบไดนามิกตามข้อมูลที่ user ป้อนเข้ามาได้
+แต่มีเรื่องสำคัญอีกเรื่องหนึ่งที่เราไม่ได้บอกคุณ คือเมื่อคุณสร้าง array ของ element แต่ละรายการต้องมี attribute `key` เป็นค่าที่ไม่ซ้ำกัน 
+React จะใช้ใช้คีย์นี้เพื่อติดตามว่ารายการไหนถูกเพิ่ม เปลี่ยนแปลง หรือลบออก ซึ่งช่วยให้การเรนเดอร์ใหม่มีประสิทธิภาพมากขึ้น เวลาที่มีการแก้ไขรายการที่แสดงผล
 
-**Note:** คีย์ต้องไม่ซ้ำกันระหว่าง element พี่น้องเท่านั้น ไม่จำเป็นต้องเป็นคีย์เฉพาะแบบ global ในแอปพลิเคชันของคุณ
+**Note:** คีย์ต้องไม่ซ้ำกันแค่ในขอบเขตของ parent เดียวกันเท่านั้น ไม่จำเป็นต้องเป็นคีย์ที่ไม่ซ้ำกับใครเลยทั้งแอป
 
 # --instructions--
 
-Code editor มี array ที่มี front end frameworks บางอันและ stateless functional component ชื่อ `Frameworks()` `Frameworks()` จำเป็นต้อง map array กับ unordered list เช่นเดียวกับแบบทดสอบที่ผ่านมา เขียน callback `map` ให้เสร็จเพื่อ return `li` element สำหรับแต่ละเฟรมเวิร์กใน `frontEndFrameworks` array แล้วตรวจสอบให้แน่ใจว่าได้กำหนด `key` attribute ให้กับ `li` แต่ละรายการ โดยตั้งค่าเป็นค่าที่ไม่ซ้ำกัน `li` element เหล่านั้นควรมีข้อความจาก `frontEndFrameworks` ด้วย
+ใน code editor มี array ของ string ชื่อ `frontEndFrameworks` และ stateless functional component ชื่อ `Frameworks()` 
+ฟังก์ชัน `Frameworks()` จำเป็นต้อง map array กับ unordered list (`ul`)เหมือนแบบทดสอบที่แล้ว 
+ให้เขียน callback ของ `map` ให้เสร็จ เพื่อให้ `renderFrameworks` เก็บค่ารายการของ `li` ที่ได้ค่ามาจาก string แต่ละตัวใน array `frontEndFrameworks` 
+แล้วอย่าลืมว่าต้องกำหนด attribute `key` ให้กับ `li` แต่ละรายการ โดยตั้งค่าเป็นค่าที่ไม่ซ้ำกัน และ `li` พวกนี้ต้องแสดง string ของ `frontEndFrameworks` ด้วย
 
-โดยปกติ คุณต้องการทำให้คีย์เป็นสิ่งที่ระบุ element ที่กำลังถูกเรนเดอร์โดยไม่ซ้ำกัน วิธีสุดท้ายคืออาจใช้ array index แต่โดยทั่วไปแล้ว คุณควรพยายามใช้ชื่อเฉพาะที่ไม่ซ้ำกัน
+โดยปกติ เราจะตั้งชื่อ `key` เป็นชื่อที่ระบุถึง element นั้นได้ โดยไม่ซ้ำกัน แต่ถ้านึกไม่ออกจะใช้เป็น index ของ array ก็ได้ แต่ก็ควรใช้ชื่อเฉพาะที่ทำให้ระบุได้ว่าเป็น element ตัวไหนมากกว่า
 
 # --hints--
 
-`Frameworks` component ควรมีและเรนเดอร์ในหน้าเพจ
+ต้องมี component `Frameworks` และต้องเรนเดอร์ได้
 
 ```js
 assert(
@@ -28,19 +33,19 @@ assert(
 );
 ```
 
-`Frameworks` ควรเรนเดอร์ `h1` element
+`Frameworks` ต้องมี `h1` อยู่ข้างใน
 
 ```js
 assert(Enzyme.mount(React.createElement(Frameworks)).find('h1').length === 1);
 ```
 
-`Frameworks` ควรเรนเดอร์ `ul` element.
+`Frameworks` ต้องมี `ul` อยู่ข้างใน
 
 ```js
 assert(Enzyme.mount(React.createElement(Frameworks)).find('ul').length === 1);
 ```
 
-`ul` tag ควรเรนเดอร์ 6 child `li` element
+แท็ก `ul` ต้องมี `li` 6 ตัวเป็น child อยู่ข้างใน
 
 ```js
 assert(
@@ -54,7 +59,7 @@ assert(
 );
 ```
 
-แต่ละ `li` element ควรมี `key` arttibute ที่ไม่ซ้ำกัน
+`li` แต่ละตัวต้องมี arttibute `key` ไม่ซ้ำกัน
 
 ```js
 assert(
@@ -73,7 +78,7 @@ assert(
 );
 ```
 
-แต่ละ `li` elem ควรมีข้อความจาก `frontEndFrameworks`
+`li` แต่ละตัวจะต้องดึง string มาจาก `frontEndFrameworks`
 
 ```js
 assert(
@@ -109,7 +114,7 @@ const frontEndFrameworks = [
 ];
 
 function Frameworks() {
-  const renderFrameworks = null; // Change this line
+  const renderFrameworks = null; // แก้โค้ดบรรทัดนี้
   return (
     <div>
       <h1>Popular Front End JavaScript Frameworks</h1>

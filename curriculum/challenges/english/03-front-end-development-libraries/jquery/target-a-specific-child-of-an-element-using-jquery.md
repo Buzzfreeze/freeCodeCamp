@@ -11,23 +11,25 @@ dashedName: target-a-specific-child-of-an-element-using-jquery
 # --description--
 
 
-คุณเห็นแล้วว่าทำไมการใช้ id attribute นั้นสะดวกสำหรับการกำหนดเป้าหมายให้กับ jQuery selector แต่ในบางกรณีเราก็ไม่จำเป็นต้องใช้ตัวไอดีในเลือกเป้าหมาย
+คุณได้เห็นแล้วว่าทำไมการใช้ id เพื่อเลือก element ใน jQuery selector ถึงสะดวก แต่ในบางทีเราก็ไม่จำเป็นต้องใช้ id ในการเลือก element ก็ได้
 
-jQuery นั้นมีวิธีการอย่างอื่นอีกในการกำหนดเป้าหมายให้กับ element ที่ถูกต้อง
+jQuery นั้นมีวิธีอื่นที่เราจะใช้เลือก element ให้ถูกตัวได้
 
-jQuery ยังใช้ CSS selector เพื่อที่จะกำหนดเป้าหมายให้กับ element ต่างๆ ได้ อย่างการใช้ `target:nth-child(n)` CSS selector ที่จะทำให้คุณสามารถเลือก element ที่ n ทั้งหมด ของ class หรือ element เป้าหมาย
+jQuery จะใช้ CSS selector เพื่อเลือก element ได้ด้วย 
+อย่างการใช้ CSS selector ที่เป็น `target:nth-child(n)`  ซึ่งจะทำให้คุณเลือก element ที่ n ของ class หรือ element ที่ระบุได้
 
-นี้คือวิธีการที่คุณจะสามารถเพิ่ม bounce class ให้แก่ element ลำดับที่สามของแต่ละ well ได้:
+ตัวอย่างด้านล่างจะเป็นการเพิ่ม class `bounce` ให้กับ element ที่สามของ well ทั้งสองตัว:
 
 ```js
 $(".target:nth-child(3)").addClass("animated bounce");
 ```
 
-มาลองทำให้ element ลูกลำดับที่ 2 ภายใน well element เกิดเอฟเฟคเด้งขึ้นมากัน โดยการเลือก element ลูก ที่มี class เป้าหมาย
+ให้ทำให้ element ลูกตัวที่สองใน well เด้งได้ 
+โดยการเลือก element ลูกตัวที่สองที่มี class เป็น `target`
 
 # --hints--
 
-Element ที่สองใน `target` element จะต้องมีเอฟเฟคเด้ง
+`target` ตัวที่สองในทั้งสอง `well` จะต้องเด้งได้
 
 ```js
 assert(
@@ -36,19 +38,19 @@ assert(
 );
 ```
 
-ซึ่งจะมีทั้งหมด 2 element ที่เด้ง
+ในหน้านี้จะมี element สองตัวที่เด้ง
 
 ```js
 assert($('.animated.bounce').length === 2);
 ```
 
-คุณควรใช้ selector `:nth-child()` เพื่อที่จะปรับแต่ง element นี้
+ต้องใช้ selector `:nth-child()` เพื่อเลือก element
 
 ```js
 assert(code.match(/\:nth-child\(/g));
 ```
 
-คุณจะต้องใช้ jQuery เท่านั้นในการเพิ่ม class ให้แก่ element
+คุณจะต้องใช้แค่ jQuery เท่านั้นในการเพิ่ม class ให้กับ element
 
 ```js
 assert(
@@ -77,7 +79,7 @@ assert(
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
@@ -118,7 +120,7 @@ assert(
   });
 </script>
 
-<!-- Only change code above this line -->
+<!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>

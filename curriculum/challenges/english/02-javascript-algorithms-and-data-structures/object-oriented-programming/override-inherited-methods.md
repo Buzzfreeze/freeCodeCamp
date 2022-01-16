@@ -8,19 +8,20 @@ dashedName: override-inherited-methods
 
 # --description--
 
-ในบทเรียนที่แล้ว คุณได้เรียนรู้ว่า object สามารถสืบทอดพฤติกรรม (methods) มาจาก object อื่น โดยอ้างอิงถึง `prototype` object
+ในบทเรียนที่แล้ว คุณรู้แล้วว่า object สามารถสืบทอดพฤติกรรม (method) มาจาก object อื่นโดยอ้างอิงถึง `prototype` object ได้ ตามตัวอย่างนี้:
 
 ```js
 ChildObject.prototype = Object.create(ParentObject.prototype);
 ```
 
-จากนั้น `ChildObject` ก็จะได้รับ methods ของตนเอง โดยการ chain (คล้องโซ๋) กับ `prototype`
+จากนั้นเราก็จะสร้าง method ให้กับ `ChildObject` โดยการ chain กับ `prototype`
 
 ```js
 ChildObject.prototype.methodName = function() {...};
 ```
 
-อย่างไรก็ตาม เราสามารถ override method (เขียนทับ method) ที่สืบทอดมาได้ โดยทำวิธีเดียวกัน นั่นคือการเพิ่ม method ให้กับ `ChildObject.prototype` โดยการใช้ชื่อ method เดียวกับ method ที่เราจะ override ตัวอย่างต่อไปนี้ที่ `Bird` override `eat()` method ที่สืบทอดจาก `Animal`
+แล้วเราก็สามารถสร้าง method มาทับ method ที่สืบทอดมาได้ วิธีทำก็เหมือนข้างบนเลยคือการเพิ่ม method ให้กับ `ChildObject.prototype` โดยการใช้ชื่อ method เดียวกับ method ที่เราจะเขียนทับ 
+ลองดูตัวอย่างด้านล่าง ที่เราจะเขียน method ใหม่มาทับ `eat()` ใน `Bird` ที่สืบทอดมาจาก `Animal`:
 
 ```js
 function Animal() { }
@@ -36,26 +37,26 @@ Bird.prototype.eat = function() {
 };
 ```
 
-ถ้าคุณมี instance `let duck = new Bird();` และคุณเรียก `duck.eat()` ต่อไปนี้เป็นวิธีการที่ JavaScript ใช้ค้นหา method ใน `prototype` chain ของ `duck`:
+ถ้าคุณมี instance `let duck = new Bird();` และเรียกใช้ `duck.eat()` JavaScript จะใช้ขั้นตอนนี้ในการหา method ใน `prototype` chain ของ `duck`:
 
-1.  `duck` => มี `eat()` กำหนดไว้หรือไม่? ไม่มี
-2.  `Bird` => มี `eat()` กำหนดไว้หรือไม่? => มี ทำการรันและหยุดค้นหาต่อ
-3.  `Animal` => มี `eat()` กำหนดไว้เช่นกัน แต่ JavaScript หยุดค้นหาใน step ก่อนหน้านี้แล้ว จึงไม่ได้ทำที่ step นี้
-4.  Object => JavaScript หยุดค้นหาก่อนถึง step นี้
+1.  `duck` => กำหนดค่าของ `eat()` ไว้หรือไม่? ไม่มี
+2.  `Bird` => กำหนดค่าของ `eat()` ไว้หรือไม่? => มี ก็จะเรียกใช้ method และหยุดหาต่อ
+3.  `Animal` => กำหนดค่าของ `eat()` ไว้เหมือนกัน แต่ JavaScript หยุดค้นหาไปแล้วเลยมาไม่ถึงขั้นนี้
+4.  Object => JavaScript หยุดค้นหาก่อนถึงขั้นนี้
 
 # --instructions--
 
-จง override `fly()` method ให้กับ `Penguin` เพื่อให้คืนค่า string `Alas, this is a flightless bird.`
+ให้เขียนทับ method `fly()` ใน `Penguin` และให้คืนค่าเป็น string `Alas, this is a flightless bird.`
 
 # --hints--
 
-`penguin.fly()` ควรคืนค่าเป็น string `Alas, this is a flightless bird.`
+การเรียกใช้ `penguin.fly()` ต้องคืนค่าเป็น string `Alas, this is a flightless bird.`
 
 ```js
 assert(penguin.fly() === 'Alas, this is a flightless bird.');
 ```
 
-`bird.fly()` method ควรคืนค่าเป็น string `I am flying!`
+method `bird.fly()` ต้องคืนค่าเป็น string `I am flying!`
 
 ```js
 assert(new Bird().fly() === 'I am flying!');
@@ -74,11 +75,11 @@ function Penguin() { }
 Penguin.prototype = Object.create(Bird.prototype);
 Penguin.prototype.constructor = Penguin;
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรทัดนี้เท่านั้น
 
 
 
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 
 let penguin = new Penguin();
 console.log(penguin.fly());

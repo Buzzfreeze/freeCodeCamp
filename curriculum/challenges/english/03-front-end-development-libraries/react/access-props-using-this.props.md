@@ -8,19 +8,21 @@ dashedName: access-props-using-this-props
 
 # --description--
 
-แบบทดสอบหลายบทที่ผ่านมาได้มีเนื้อหาครอบคลุมพื้นฐานในการส่งผ่าน props ต่างๆ ให้กับ child component แต่ถ้า child component ที่คุณส่งผ่าน props นั้นเป็น ES6 class component แทนที่จะเป็น stateless functional component หละ? ES6 class component ใช้รูปแบบที่แตกต่างกันเล็กน้อยในการเข้าถึง props ต่างๆ
+เนื้อหาของแบบทดสอบที่ผ่านๆมาได้สอนพื้นฐานในการส่ง props ให้กับ child component ไปแล้ว 
+แต่ถ้า child component ที่คุณส่ง props ไปนั้นเป็น ES6 class component แทนที่จะเป็น stateless functional component ล่ะ? 
+ES6 class component จะเข้าถึง props ต่างออกไปเล็กน้อย
 
-เมื่อใดก็ตามที่คุณอ้างถึง class component ภายในตัวมันเอง คุณสามารถใช้คีย์เวิร์ด `this` 
-เพื่อที่จะเข้าถึง props ภายใน class component คุณเพียงแค่เพิ่มคำว่า `this` ข้างหน้าโค้ดที่คุณใช้เข้าถึง ตัวอย่างเช่น ถ้า ES6 class component มี prop ชื่อว่า `data` คุณจะต้องเขียนโค้ดว่า `{this.props.data}` ใน JSX
+เวลาเราจะเรียกใช้ข้อมูลของ class component ภายในตัวเอง เราจะใช้คีย์เวิร์ด `this` 
+ในการเข้าถึง props ภายใน class component เราแค่เพิ่มคำว่า `this` ข้างหน้าโค้ดที่ใช้เข้าถึง เช่น ถ้า ES6 class component มี prop ชื่อ `data` ก็จะต้องเขียนโค้ดเป็น `{this.props.data}` ใน JSX
 
 # --instructions--
 
-แสดง instance ของ `ReturnTempPassword` component ใน parent component `ResetPassword` แล้วให้เพิ่ม prop `tempPassword` แก่ `ReturnTempPassword`
-และกำหนดค่าของ string ที่มีความยาวอย่างน้อย 8 ตัวอักษร ให้เข้าถึง `tempPassword` prop ภายใน `strong` tag ที่อยู่ภายใน `ReturnTempPassword` อีกที เพื่อให้มั่นใจว่า user จะเห็นรหัสผ่านชั่วคราวได้
+ให้เรนเดอร์ component `ReturnTempPassword` ใน parent component `ResetPassword` แล้วระบุ prop `tempPassword` ให้กับ `ReturnTempPassword` โดยกำหนดค่าเป็น string ที่มีความยาวอย่างน้อย 8 ตัวอักษร 
+จากนั้นให้อ่านค่าของ prop `tempPassword` แล้วนำมาแสดงในแท็ก `strong` ที่อยู่ภายใน `ReturnTempPassword` อีกที เพื่อให้ user เห็นค่าของ `tempPassword` ที่เราตั้งไว้
 
 # --hints--
 
-`ResetPassword` component ควรจะ return `div` element เดียว
+component `ResetPassword` ต้องคืนค่ามาเป็น `div` ตัวเดียว
 
 ```js
 assert(
@@ -31,7 +33,7 @@ assert(
 );
 ```
 
-Child ตำแหน่งที่ 4 ของ `ResetPassword` ควรจะต้องเป็น `ReturnTempPassword` component
+child ตัวที่ 4 ใน `ResetPassword` ต้องเป็น `ReturnTempPassword`
 
 ```js
 assert(
@@ -44,7 +46,7 @@ assert(
 );
 ```
 
-`ReturnTempPassword` component ควรจะต้องมี prop ที่เรียกว่า `tempPassword`
+`ReturnTempPassword` ต้องรับ prop ที่ชื่อ `tempPassword`
 
 ```js
 assert(
@@ -55,7 +57,7 @@ assert(
 );
 ```
 
-`tempPassword` prop ของ `ReturnTempPassword` ควรที่จะมีค่าเท่ากับ string ของตัวอักษร 8 ตัว
+prop `tempPassword` ของ `ReturnTempPassword` ต้องเป็น string ที่มีความยาวอย่างน้อย 8 ตัวอักษร
 
 ```js
 assert(
@@ -68,7 +70,7 @@ assert(
 );
 ```
 
-`ReturnTempPassword` component ควรที่จะแสดงรหัสผ่านที่คุณสร้างขึ้นเป็น `tempPassword` prop ภายใน `strong` tags
+`ReturnTempPassword` ต้องแสดงค่าของ prop `tempPassword` ไว้ในแท็ก `strong`
 
 ```js
 assert(
@@ -101,9 +103,9 @@ class ReturnTempPassword extends React.Component {
   render() {
     return (
         <div>
-            { /* Change code below this line */ }
+            { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
             <p>Your temporary password is: <strong></strong></p>
-            { /* Change code above this line */ }
+            { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
         </div>
     );
   }
@@ -120,9 +122,9 @@ class ResetPassword extends React.Component {
           <h2>Reset Password</h2>
           <h3>We've generated a new temporary password for you.</h3>
           <h3>Please reset this password from your account settings ASAP.</h3>
-          { /* Change code below this line */ }
+          { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
 
-          { /* Change code above this line */ }
+          { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
         </div>
     );
   }
@@ -157,9 +159,9 @@ class ResetPassword extends React.Component {
           <h2>Reset Password</h2>
           <h3>We've generated a new temporary password for you.</h3>
           <h3>Please reset this password from your account settings ASAP.</h3>
-          { /* Change code below this line */ }
+          { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
           <ReturnTempPassword tempPassword="serrPbqrPnzc" />
-          { /* Change code above this line */ }
+          { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
         </div>
     );
   }

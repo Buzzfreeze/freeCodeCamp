@@ -8,11 +8,11 @@ dashedName: palindrome-checker
 
 # --description--
 
-ให้คืนค่า `true` เมื่อ string เป็น palindrome และคืนค่า `false` หากไม่ใช่
+ให้เขียนฟังก์ชันที่คืนค่าเป็น `true` เมื่อ string ที่ส่งเข้าไปเป็น palindrome และคืนค่า `false` ถ้าไม่ใช่
 
-<dfn>palindrome</dfn> คือ คำหรือประโยคที่อ่านได้เหมือนกันทั้งจากหน้าและหลัง, ไม่คำนึงถึงเครื่องหมายวรรตอน, ตัวพิมพ์เล็กตัวพิมพ์ใหญ่ และช่องว่าง
+<dfn>palindrome</dfn> คือคำหรือประโยคที่อ่านได้เหมือนกันทั้งจากหน้าและหลัง โดยไม่สนใจเครื่องหมายวรรคตอน ตัวพิมพ์เล็กตัวพิมพ์ใหญ่ และเว้นวรรค
 
-**หมายเหตุ:** คุณต้องลบ **อักขระที่ไม่ใช่ตัวอักษรและตัวเลขทั้งหมด** (เครื่องหมายวรรคตอน, ช่องว่าง และสัญลักษณ์ต่างๆ) แล้วแปลงให้เป็นตัวอักษรพิมพ์เล็กหรือพิมพ์ใหญ่ทั้งหมด เพื่อจะได้เช็ค palindrome ได้
+**หมายเหตุ:** คุณต้องลบ **สิ่งที่ไม่ใช่ตัวอักษรและตัวเลขทั้งหมดออกจาก string** (เครื่องหมายวรรคตอน, ช่องว่าง และสัญลักษณ์ต่างๆ) แล้วแปลงให้เป็นตัวอักษรพิมพ์เล็กหรือพิมพ์ใหญ่ทั้งหมด เพื่อจะได้เช็ค palindrome ได้
 
 เราจะส่ง string ที่มีรูปแบบต่างๆ เข้าไป เช่น `racecar`, `RaceCar` และ `race CAR`
 
@@ -20,79 +20,79 @@ dashedName: palindrome-checker
 
 # --hints--
 
-`palindrome("eye")` ควรคืนค่าเป็น boolean
+`palindrome("eye")` ต้องคืนค่าเป็น boolean
 
 ```js
 assert(typeof palindrome('eye') === 'boolean');
 ```
 
-`palindrome("eye")` ควรคืนค่าเป็น `true`
+`palindrome("eye")` ต้องคืนค่าเป็น `true`
 
 ```js
 assert(palindrome('eye') === true);
 ```
 
-`palindrome("_eye")` ควรคืนค่าเป็น `true`
+`palindrome("_eye")` ต้องคืนค่าเป็น `true`
 
 ```js
 assert(palindrome('_eye') === true);
 ```
 
-`palindrome("race car")` ควรคืนค่าเป็น `true`
+`palindrome("race car")` ต้องคืนค่าเป็น `true`
 
 ```js
 assert(palindrome('race car') === true);
 ```
 
-`palindrome("not a palindrome")` ควรคืนค่าเป็น `false`
+`palindrome("not a palindrome")` ต้องคืนค่าเป็น `false`
 
 ```js
 assert(palindrome('not a palindrome') === false);
 ```
 
-`palindrome("A man, a plan, a canal. Panama")` ควรคืนค่าเป็น `true`
+`palindrome("A man, a plan, a canal. Panama")` ต้องคืนค่าเป็น `true`
 
 ```js
 assert(palindrome('A man, a plan, a canal. Panama') === true);
 ```
 
-`palindrome("never odd or even")` ควรคืนค่าเป็น `true`
+`palindrome("never odd or even")` ต้องคืนค่าเป็น `true`
 
 ```js
 assert(palindrome('never odd or even') === true);
 ```
 
-`palindrome("nope")` ควรคืนค่าเป็น `false`
+`palindrome("nope")` ต้องคืนค่าเป็น `false`
 
 ```js
 assert(palindrome('nope') === false);
 ```
 
-`palindrome("almostomla")` ควรคืนค่าเป็น `false`
+`palindrome("almostomla")` ต้องคืนค่าเป็น `false`
 
 ```js
 assert(palindrome('almostomla') === false);
 ```
 
-`palindrome("My age is 0, 0 si ega ym.")` ควรคืนค่าเป็น `true`
+`palindrome("My age is 0, 0 si ega ym.")` ต้องคืนค่าเป็น `true`
 
 ```js
 assert(palindrome('My age is 0, 0 si ega ym.') === true);
 ```
 
-`palindrome("1 eye for of 1 eye.")` ควรคืนค่าเป็น `false`
+`palindrome("1 eye for of 1 eye.")` ต้องคืนค่าเป็น `false`
 
 ```js
 assert(palindrome('1 eye for of 1 eye.') === false);
 ```
 
-`palindrome("0_0 (: /-\ :) 0-0")` ควรคืนค่าเป็น `true`
+`palindrome("0_0 (: /-\ :) 0-0")` ต้องคืนค่าเป็น `true`
 
 ```js
 assert(palindrome('0_0 (: /- :) 0-0') === true);
 ```
 
-`palindrome("five|\_/|four")` ควรคืนค่าเป็น `false`
+`palindrome("five|\_/|four")` ต้องคืนค่าเป็น `false`
 
 ```js
 assert(palindrome('five|_/|four') === false);

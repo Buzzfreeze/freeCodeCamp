@@ -8,23 +8,28 @@ dashedName: use-react-to-render-nested-components
 
 # --description--
 
-แบบทดสอบที่ผ่านมาได้แสดงให้เห็นวิธีง่ายๆ ในการรวม components สองส่วน แต่มีหลายวิธีที่คุณสามารถรวม components ด้วย React ได้
+ในแบบทดสอบที่แล้วเราได้ให้เห็นวิธีรวม component เข้าด้วยกันไปวิธีนึงแล้ว แต่ก็ยังมีวิธีอื่นที่ใช้รวม component ใน React ได้อีก
 
-การประกอบ Component เป็นหนึ่งในคุณสมบัติที่ทรงพลังของ React เมื่อคุณทำงานกับ React สิ่งสำคัญคือต้องเริ่มคิดเกี่ยวกับ user interface ของคุณในแง่ของ components ต่างๆ เช่น แอปในแบบทดสอบที่ผ่านมา คุณแบ่ง UI ของคุณออกเป็น building blocks พื้นฐาน และชิ้นส่วนเหล่านั้นจะกลายเป็น components ซึ่งจะช่วยแยกโค้ดที่รับผิดชอบในส่วน UI ออกจากโค้ดที่รับผิดชอบในการจัดการ logic ของแอปพลิเคชันของคุณ มันสามารถลดความซับซ้อนในการพัฒนาและบำรุงรักษาโปรเจคที่ซับซ้อนได้อย่างมาก
+การรวม Component เป็นอีกฟีเจอร์ที่มีประโยชน์มากๆของ React 
+ถ้าคุณใช้ React สิ่งสำคัญต้องมอง UI ของคุณว่าเป็น component เช่น แอปในแบบทดสอบที่แล้ว คุณได้แบ่ง UI ของคุณออกเป็นส่วนๆ แล้วเราก็ได้สร้าง component สำหรับแต่ละส่วนที่แบ่งออกมา 
+การแบ่ง UI ออกเป็นส่วนๆแบบนี้ จะช่วยแยกโค้ดที่จัดการ UI ออกจากโค้ดที่จัดการ logic ในแอปพลิเคชันของคุณ 
+ซึ่งจะลดความซับซ้อนในการพัฒนาและบำรุงรักษาของโปรเจคใหญ่ๆได้อย่างมาก
 
 # --instructions--
 
-มีสอง functional components ที่กำหนดไว้ใน code editor เรียกว่า `TypesOfFruit` และ `Fruits` ให้นำ `TypesOfFruit` component มาประกอบ หรือนำไป *ซ้อน* ภายใน `Fruits` component จากนั้นนำ `Fruits` component มาซ้อนไว้ใน `TypesOfFood` component ผลลัพธ์ที่ได้ควรเป็น child component ซ้อนอยู่ภายใน parent component ซึ่งซ้อนอยู่ภายใน parent component ของมันเอง!
+เราได้สร้าง functional component สองตัวไว้ให้ใน code editor แล้วคือ `TypesOfFruit` และ `Fruits` 
+ให้นำ component `TypesOfFruit` ไป*ซ้อน*ใน component `Fruits` แล้วนำ component `Fruits` ไปซ้อนใน component `TypesOfFood` อีกต่อหนึ่ง 
+ผลลัพธ์ที่ได้จะเป็น child component ซ้อนอยู่ใน parent component ที่ซ้อนอยู่ใน parent component อีกทีนึง!
 
 # --hints--
 
-`TypesOfFood` component ควร return `div` element เดียว
+component `TypesOfFood` ต้องคืนค่าเป็น `div` element ตัวเดียว
 
 ```js
 assert(Enzyme.shallow(React.createElement(TypesOfFood)).type() === 'div');
 ```
 
-`TypesOfFood` component ควร return `Fruits` component
+component `TypesOfFood` ต้องคืนค่าเป็น component `Fruits` ออกมา
 
 ```js
 assert(
@@ -33,7 +38,7 @@ assert(
 );
 ```
 
-`Fruits` component ควร return `TypesOfFruit` component
+component `Fruits` ต้องคืนค่าเป็น component `TypesOfFruit` ออกมา
 
 ```js
 assert(
@@ -42,7 +47,7 @@ assert(
 );
 ```
 
-`TypesOfFruit` component ควร return `h2` และ `ul` elements
+component `TypesOfFruit` ต้องคืนค่าเป็น `h2` และ `ul` element
 
 ```js
 assert(
@@ -79,9 +84,9 @@ const TypesOfFruit = () => {
 const Fruits = () => {
   return (
     <div>
-      { /* Change code below this line */ }
+      { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
 
-      { /* Change code above this line */ }
+      { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
     </div>
   );
 };
@@ -95,9 +100,9 @@ class TypesOfFood extends React.Component {
     return (
       <div>
         <h1>Types of Food:</h1>
-        { /* Change code below this line */ }
+        { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
 
-        { /* Change code above this line */ }
+        { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
       </div>
     );
   }
@@ -124,9 +129,9 @@ const TypesOfFruit = () => {
 const Fruits = () => {
   return (
     <div>
-      { /* Change code below this line */ }
+      { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
         <TypesOfFruit />
-      { /* Change code above this line */ }
+      { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
     </div>
   );
 };
@@ -140,9 +145,9 @@ class TypesOfFood extends React.Component {
     return (
       <div>
         <h1>Types of Food:</h1>
-        { /* Change code below this line */ }
+        { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
         <Fruits />
-        { /* Change code above this line */ }
+        { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
       </div>
     );
   }

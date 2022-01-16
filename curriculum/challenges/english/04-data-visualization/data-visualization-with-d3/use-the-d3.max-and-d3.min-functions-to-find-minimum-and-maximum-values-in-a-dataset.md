@@ -11,12 +11,14 @@ dashedName: >-
 
 # --description--
 
-D3 methods `domain()` และ `range()` ใช้กำหนด information เพื่อ scale ค่าต่างๆอ้างอิงจาก data ที่มี 
-การใช้ทั้งสอง methods ร่วมกันจะทำงานง่ายกว่า
+method `domain()` และ `range()` ของ D3 ใช้กำหนดรายละเอียดที่ใช้เพื่อ scale ค่าต่างๆตามข้อมูลที่มี 
+แต่เราก็มี method อื่นที่ใช้ง่ายกว่า
 
-หลายๆครั้งที่ set domain เราต้องใช้ค่า minimum และ maximum ของ data set โดยการ manual หาค่าเหล่านั้น ถ้าหากว่า data set มีขนาดใหญ่ จะเกิดความผิดพลาดได้ง่าย
+หลายๆครั้งที่เราตั้งค่า domain เราต้องใช้ค่าต่ำสุด และค่าสูงสุด ของชุดข้อมูล 
+การหาค่าต่ำสุดและค่าสูงสุดของชุดข้อมูลเอง อาจเกิดคววามผิดพลาดได้ง่ายหากชุดข้อมูลมีขนาดใหญ่
 
-ใน D3 มี 2 methods - `min()` และ `max()` เพื่อใช้สำหรับ return ค่าสูงสุดและต่ำสุดตามลำดับ ดังตัวอย่าง:
+ใน D3 มี method 2 ตัวคือ `min()` และ `max()` ที่ใช้หาค่าต่ำสุดและค่าสูงสุดของชุดข้อมูล 
+ลองดูตัวอย่าง:
 
 ```js
 const exampleData = [34, 234, 73, 90, 6, 52];
@@ -24,29 +26,32 @@ d3.min(exampleData)
 d3.max(exampleData)
 ```
 
-dataset อาจจะเป็นแบบ nested arrays เช่น `[x, y]` coordinate ที่ใช้ใน scatter plot ทั้ง `min()` และ `max()` methods สามารถใช้ callback function เพื่อหาค่าสูงสุดและต่ำสุดใน nested arrays ได้ โดยใช้ argument ของ callback function `d` สำหรับค่าใน inner array โดยที่ callback จะ return element จาก inner array (ค่า`x` หรือ `y` ) มาให้  
-ตัวอย่างของการหาค่า min และ max แบบ array ซ้อน arrays
+ในบางครั้งชุดข้อมูลของเราอาจเป็นแบบ array ที่ซ้อนกันอยู่ เช่น ตำแหน่ง `[x, y]` ที่ใช้ใน scatter plot 
+ถ้าเป็นแบบนี้ method `min()` และ `max()` ก็จะรับ callback function เพื่อหาค่าสูงสุดและต่ำสุดใน array ที่ซ้อนกันอยู่ได้ 
+ในตัวอย่างด้านล่าง callback function จะรับ argument `d` เป็น array ชั้นใน โดยที่ callback จะต้องคืนค่าของ array ชั้นในมาให้ (ค่า `x` หรือ `y` ) 
+ลองดูตัวอย่างการหาค่า `x` ที่ต่ำที่สุด ของ array ที่ซ้อนกันอยู่
 
 ```js
 const locationData = [[1, 7],[6, 3],[8, 3]];
 const minX = d3.min(locationData, (d) => d[0]);
 ```
 
-`minX` would have the value `1`.
+`minX` จะมีค่าเป็น `1`
 
 # --instructions--
 
-`positionData` array มี sub arrays of x, y, และ z coordinates. ให้ใช้ D3 method เพื่อหาค่า maximum ของ z coordinate (ค่าลำดับที่สาม) จาก arrays และ save ไว้ใน `output` variable
+array `positionData` มี array ย่อยที่เก็บค่าของตำแหน่ง x, y, และ z อยู่ 
+ให้ใช้ method ของ D3 เพื่อหาค่าสูงสุดของตำแหน่ง z (ค่าตัวที่สามใน array ย่อย) และเก็บลงในตัวแปรชื่อ `output`
 
 # --hints--
 
-text ใน `h2` ควรเป็น `8`
+ข้อความใน `h2` ต้องเป็น `8`
 
 ```js
 assert(output == 8 && $('h2').text() == '8');
 ```
 
-ควรใช้ `max()` method
+ต้องใช้ method `max()`
 
 ```js
 assert(
@@ -63,11 +68,11 @@ assert(
 <body>
   <script>
     const positionData = [[1, 7, -4],[6, 3, 8],[2, 9, 3]]
-    // Add your code below this line
+    // เขียนโค้ดใต้บรรทัดนี้
 
-    const output = undefined; // Change this line
+    const output = undefined; // แก้บรรทัดนี้
 
-    // Add your code above this line
+    // เขียนโค้ดเหนือบรรทัดนี้
 
     d3.select("body")
       .append("h2")

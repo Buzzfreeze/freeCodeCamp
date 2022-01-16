@@ -8,13 +8,17 @@ dashedName: use-dynamic-scales
 
 # --description--
 
-D3 `min()` และ `max()` methods ช่วยในการ set scale
+method `min()` และ `max()` ของ D3 มีประโยชน์ในการตั้งค่า scale
 
-กำหนดให้ complex data set ต้องมีการ set scale เพื่อแสดงภาพที่พอดีกับค่าอwidth และ height ของ SVG container หาต้องการ plot data ทั้งหมดใน SVG canvas เพื่อแสดงผลบนหน้า web page
+ถ้าเรามีชุดข้อมูลที่ซับซ้อน สิ่งที่สำคัญอย่างหนึ่งคือเราต้องแสดงข้อมูลให้อยู่ในขอบเขตของพื้นที่ SVG ให้ได้ SVG เพื่อที่จะได้เอาไปแสดงบนหน้าเว็บได้อย่างครบถ้วน
 
-ตัวอย่างข้างล่างคือการกำหนด x-axis scale สำหรับ scatter plot data โดยที่ `domain()` method จะส่ง information ของ raw dat ไปให้ scale ค่าก่อนทำการ plot ส่วน `range()` method จะส่ง information ของ actual space บนหน้า web page ที่จะทำการแสดงผล
+ตัวอย่างข้างล่างคือการกำหนด scale ในแกน `x` สำหรับข้อมูลที่ใช้กับกราฟแบบ scatter plot 
+โดยที่ method `domain()` จะส่งรายละเอียดของของข้อมูลดิบไปให้ scale ก่อนทำการแสดงผล 
+ส่วน method `range()` จะส่งรายละเอียดของพื้นที่แสดงผลบนหน้าเว็บของเราไปให้ scale ก่อนที่จะทำการแสดงผล
 
-ในตัวอย่างจะพบว่า domain มีค่าเริ่มจาก 0 ไปถึง maximum  ซึ่งมันใช้ `max()` method และ callback function โดยอ้างอิงจากค่า x ใน arrays โดย range ที่ใช้ใน SVG canvas จะเป็นค่า width (`w`) ที่รวมค่า padding ของ space ระหว่างแต่ละ scatter plot dots กับ พื้นที่ขอบของ SVG canvas ไปด้วย
+ในตัวอย่างจะเห็นว่า domain มีค่าตั้งแต่ 0 ไปจนถึงค่าสูงสุด โดยค่าสูงสุดถูกกำหนดโดยใช้ method `max()` และ callback function ตามค่า x ใน array 
+และ range จะใช้ความกว้าง (`w`) ของ SVG canvas โดยรวมค่า padding (การเว้นระยะ) ไปด้วย
+การเพิ่ม padding ลงไปด้วยทำให้จุดที่วาดออกมาบนกราฟ ไม่อยู่ติดกับขอบของกราฟมากเกินไป
 
 ```js
 const dataset = [
@@ -38,29 +42,33 @@ const xScale = d3.scaleLinear()
   .range([padding, w - padding]);
 ```
 
-อาจจะมีความสับสนสำหรับค่า padding กำหนดให้รูปภาพมีแกน x เป็น horizontal line จาก 0 ถึง 500 (ค่า width สำหรับ SVG canvas) และ padding อยู่ใน `range()` method ที่กำหนดให้ plot เริ่มจาก 30 ตามเส้นตรง (แทนที่ค่า 0) และไปสิ้นสุดที่ 470 (แทนที่ค่า 500)
+คุณอาจจะงงเรื่อง padding แต่ไม่เป็นไร 
+ให้ลองนึกภาพว่าแกน x เป็นเส้นแนวระนาบ (แนวนอน) ที่มีค่าตั้งแต่ 0 ถึง 500 (ค่า width ของ SVG canvas) 
+การเพิ่ม padding ไปใน method `range()` โดยให้ padding เป็น 30 จะทำให้จุดที่วาดลงในกราฟเริ่มวาดที่ตำแหน่งที่ 30 และไม่เกิน 470 (ซึ่งถ้าไม่เพิ่ม padding ลงไป จุดจะเริ่มวาดได้ตั้งแต่ 0 ไปจนถึง 500 ซึ่งมันจะติดขอบของกราฟเกินไป ซึ่งอาจทำให้การแสดงผลดูยาก)
 
 # --instructions--
 
-ใช้ `yScale` variable สร้าง linear y-axis scale โดยที่ domain ควรเริ่มจาก 0 ไปจนถึงค่า maximum ของ `y` ใน set และ range ควรใช้ค่า SVG height (`h`) ที่รวมค่า padding ไปด้วย
+ให้ใช้ตัวแปร `yScale` สร้าง linear scale บนแกน y โดยที่ `domain` ต้องเริ่มจาก 0 ไปจนถึงค่า `y` ที่สูงที่สุดในชุดข้อมูล 
+และต้องใช้ความสูงของพื้นที่ SVG (`h`) ซึ่งรวม padding ไปด้วย ในการตั้งค่า `range`
 
-**Note:** อย่าลืม plot ที่ตำแหน่ง right-side-up เมื่อกำหนด range สำหรับ y coordinates ให้ใช้ค่า argument แรกมีค่า (height - padding) ที่มากกว่า argument ที่สอง
+**Note:** อย่าลืมว่าต้องวาดกราฟให้ไม่กลับหัว 
+และเวลากำหนด range สำหรับแกน y ต้องใช้ค่าที่มาก (ความสูง - padding) เป็น argument แรก และใช้ค่าที่น้อยเป็น argument ที่สอง
 
 # --hints--
 
-text ใน `h2` ควรเป็น `30`.
+ข้อความใน `h2` ต้องเป็น `30`
 
 ```js
 assert(output == 30 && $('h2').text() == '30');
 ```
 
-`domain()` ของ yScale ควรเท่ากับ `[0, 411]`.
+`domain()` ของ yScale ต้องเป็น `[0, 411]`
 
 ```js
 assert(JSON.stringify(yScale.domain()) == JSON.stringify([0, 411]));
 ```
 
-`range()` ของ yScale ควรเท่ากับ `[470, 30]`.
+`range()` ของ yScale ต้องเป็น `[470, 30]`
 
 ```js
 assert(JSON.stringify(yScale.range()) == JSON.stringify([470, 30]));
@@ -89,23 +97,23 @@ assert(JSON.stringify(yScale.range()) == JSON.stringify([470, 30]));
     const w = 500;
     const h = 500;
 
-    // Padding between the SVG canvas boundary and the plot
+    // Padding คือช่องว่างระหว่างขอบของกราฟและจุดข้อมูล
     const padding = 30;
 
-    // Create an x and y scale
+    // สร้างสเกล x และ y
 
     const xScale = d3.scaleLinear()
                     .domain([0, d3.max(dataset, (d) => d[0])])
                     .range([padding, w - padding]);
 
-    // Add your code below this line
+    // เขียนโค้ดใต้บรรทัดนี้
 
     const yScale = undefined;
 
 
-    // Add your code above this line
+    // เขียนโค้ดเหนือบรรทัดนี้
 
-    const output = yScale(411); // Returns 30
+    const output = yScale(411); // คืนค่าเป็น 30
     d3.select("body")
       .append("h2")
       .text(output)

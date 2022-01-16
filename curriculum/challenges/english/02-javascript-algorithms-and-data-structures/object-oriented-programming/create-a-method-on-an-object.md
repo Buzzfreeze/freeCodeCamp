@@ -8,8 +8,10 @@ dashedName: create-a-method-on-an-object
 
 # --description--
 
-object สามารถมี property ชนิดพิเศษ เรียกว่า <dfn>method</dfn>
-method ก็คือ property ที่เป็นฟังก์ชัน ซึ่งกำหนดพฤติกรรม (behavior) ต่างๆ ให้กับ object ตัวอย่างต่อไปนี้เป็น object `duck` ที่มีการกำหนด mehtod
+object สามารถมี property ชนิดพิเศษ เรียกว่า <dfn>method</dfn> ได้ด้วย
+
+method ก็คือ property ที่เป็นฟังก์ชัน ซึ่งจะทำให้ object ทำอย่างอื่นได้ 
+ตัวอย่างด้านล่างเป็น object `duck` ที่มี method ด้วย
 
 ```js
 let duck = {
@@ -20,21 +22,22 @@ let duck = {
 duck.sayName();
 ```
 
-จากตัวอย่าง ได้มีการเพิ่ม method `sayName` ซึ่งเป็นฟังก์ชันที่คืนค่าเป็นประโยคที่มีชื่อของ `duck` สังเกตว่า method ที่เข้าถึง property `name` ในคำสั่ง return มีการใช้ `duck.name` ด้วย สำหรับแบบทดสอบถัดไปจะแสดงการเข้าถึง property ในอีกรูปแบบนึง 
+ในตัวอย่างจะมี method `sayName` ซึ่งเป็นฟังก์ชันที่คืนค่าเป็นประโยคที่มีชื่อของ `duck` อยู่ด้วย 
+จะเห็นว่า method ที่เข้าถึง property `name` ในคำสั่ง return มีการใช้ `duck.name` ด้วย สำหรับแบบทดสอบถัดไปจะสินวิธีการเข้าถึง property ในรูปแบบอื่น 
 
 # --instructions--
 
-ให้สร้าง object `dog` ที่มี mehtod `sayLegs` โดย method นี้ควรคืนค่าเป็นประโยค `This dog has 4 legs.`
+ให้สร้าง object `dog` ที่มี method `sayLegs` โดย method นี้ต้องคืนค่าเป็นประโยค `This dog has 4 legs.`
 
 # --hints--
 
-`dog.sayLegs()` ควรเป็นฟังก์ชัน
+`dog.sayLegs()` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof dog.sayLegs === 'function');
 ```
 
-`dog.sayLegs()` ควรคืนค่าเป็น string โดยต้องมีเครื่องหมาย เช่น . และช่องว่าง (space) ต่างๆ ตามที่กำหนด
+`dog.sayLegs()` ต้องคืนค่าเป็น string โดยต้องมีเครื่องหมายจุด (`.`) และเว้นวรรค ตามที่กำหนด
 
 ```js
 assert(dog.sayLegs() === 'This dog has 4 legs.');

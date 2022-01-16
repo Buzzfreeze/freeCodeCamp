@@ -8,19 +8,31 @@ dashedName: getting-started-with-react-redux
 
 # --description--
 
-แบบทดสอบชุดนี้จะอธิบายวิธีการใช้ Redux กับ React อันดับแรกนี่คือการทบทวนหลักการสำคัญบางประการของแต่ละเทคโนโลยี React คือไลบรารีมุมมองที่คุณจัดเตรียมไว้กับข้อมูล จากนั้นจึงเรนเดอร์มุมมองด้วยวิธีที่มีประสิทธิภาพและคาดการณ์ได้ Redux เป็นเฟรมเวิร์กการจัดการ state ที่คุณสามารถใช้เพื่อทำให้การจัดการสถานะแอปพลิเคชันของคุณง่ายขึ้น โดยปกติในแอป React Redux คุณจะสร้างร้าน Redux เดียวที่จัดการสถานะของแอปทั้งหมดของคุณ React components ของคุณจะเข้าไปใช้งานเฉพาะส่วนของข้อมูลใน store ที่เกี่ยวข้องกับบทบาทของพวกมัน จากนั้นคุณส่ง action ต่างๆ โดยตรงจาก React components ซึ่งทำให้การอัปเดต store  ทำงาน
+แบบทดสอบชุดนี้จะอธิบายวิธีการใช้ Redux กับ React 
+เรามาเริ่มที่การทบทวนหลักการสำคัญของแต่ละตัวกันก่อน 
+React คือไลบรารีการแสดงผล ที่คุณจะให้ข้อมูลเข้าไป แล้ว React ก็จะแสดงผล ออกมาให้อย่างมีประสิทธิภาพ
+ส่วน Redux เป็นเฟรมเวิร์กการจัดการ state ใช้เพื่อทำให้การจัดการ state ในแอปง่ายขึ้น 
+โดยปกติในแอป React Redux คุณจะสร้าง Redux store แค่ตัวเดียวที่จัดการ state ทั้งหมดในแอปของคุณ แล้ว React component ของคุณจะใช้งานข้อมูลของ store แค่ส่วนที่เกี่ยวข้อง 
+แล้ว React component ก็จะทำการ dispatch ซึ่งจะทำให้ค่าใน store ถูกอัปเดท
 
-แม้ว่า React component สามารถจัดการ state ของตนเองในเครื่องได้ แต่เมื่อคุณมีแอปที่ซับซ้อน โดยทั่วไป การรักษา state ของแอปไว้ในที่เดียวด้วย Redux จะเป็นวิธีดีกว่า มีข้อยกเว้นเมื่อ components แต่ละรายการอาจมี state เฉพาะสำหรับ components เหล่านั้นเท่านั้น สุดท้าย เนื่องจาก Redux ไม่ได้ออกแบบมาให้ทำงานกับ React ได้ตั้งแต่เริ่มต้น คุณจึงต้องใช้แพ็คเกจ `react-redux` มันมีวิธีให้คุณส่ง Redux `state` และ `dispatch` ไปยัง React component ของคุณเป็น `props`
+ถึง React component จะจัดการ state ของตัวเองได้ แต่พอแอปมีความซับซ้อนมากขึ้น การใช้ state ตัวเดียวใน Redux จะดีกว่า 
+ยกเว้นว่า component ตัวนั้นๆจะมี state ที่ใช้แค่ในขอบเขตของตัวเอง 
+สุดท้าย เนื่องจาก Redux ไม่ได้ออกแบบมาให้ทำงานกับ React ได้ตั้งแต่เริ่มต้น คุณจึงต้องใช้แพ็คเกจ `react-redux` ซึ่งจะทำให้ใช้ Redux `state` และ `dispatch` เป็น `props` ไปยัง React component ได้
 
-ในอีกสองสามแบบทดสอบหลังจากนี้ คุณจะต้องสร้าง React component แบบง่ายๆ ซึ่งช่วยให้คุณสามารถป้อนข้อความใหม่ได้ ข้อความเหล่านี้จะถูกเพิ่มลงใน array และนำแสดงใน view นี่ควรเป็นการทบทวนที่ดีเกี่ยวกับสิ่งที่คุณได้เรียนรู้ในบทเรียน React จากนั้นคุณจะต้องสร้าง Redux store และ actions ที่จัดการสถานะของ array ข้อความ สุดท้ายคุณจะต้องใช้ `react-redux` เพื่อเชื่อมต่อ Redux store กับ component ของคุณ ซึ่งจะแยก state ในเครื่องออกจาก Redux store
+ในแบบทดสอบต่อๆไป คุณจะต้องสร้าง React component แบบง่ายๆ ที่รับข้อความที่ผู้ใช้พิมพ์เข้ามา และข้อความนี้จะถูกเก็บลงใน array และนำไปแสดงใน view ส่วนนี้จะช่วยรื้อฟื้นความรู้ของคุณในเรื่อง React ได้
+จากนั้นคุณจะต้องสร้าง Redux store และ action ที่จัดการ state ที่เป็น array ของข้อความ 
+สุดท้ายคุณจะต้องใช้ `react-redux` เพื่อเชื่อมต่อ Redux store กับ component ของคุณ ซึ่งจะนำ state ที่อยู่ใน component ไปเก็บใน Redux store แทน
 
 # --instructions--
 
-เริ่มต้น`DisplayMessages` component ให้เพิ่ม constructor ให้กับ component นี้และเริ่มมันด้วย state ที่มี 2 property คือ: `input` ที่ตั้งค่าเป็น string ว่าง และ `messages` ที่ตั้งค่าเป็น array ว่าง
+ให้เริ่มเขียนที่ component `DisplayMessages` โดยเพิ่ม constructor และตั้งค่าให้ค่าเริ่มต้นของ state มี property 2 ตัว คือ: 
+
+1. `input` โดยให้มีค่าเป็น string ว่าง 
+2. `messages` โดยให้มีค่าเป็น array ว่าง
 
 # --hints--
 
-`DisplayMessages` component ควรเรนเดอร์ `div` element เปล่า
+component `DisplayMessages` ต้องมี `div` เปล่าอยู่ข้างใน
 
 ```js
 assert(
@@ -31,7 +43,7 @@ assert(
 );
 ```
 
-`DisplayMessages` constructor ควรถูกเรียกใช้อย่างถูกต้องด้วย `super` ส่งต่อใน `props`
+constructor ของ `DisplayMessages` ต้องเรียกใช้ `super` และส่ง `props` เข้าไปด้วย
 
 ```js
 (getUserInput) =>
@@ -46,7 +58,7 @@ assert(
   );
 ```
 
-`DisplayMessages` component ควรมี state เริ่มต้นเท่ากับ `{input: "", messages: []}`
+component `DisplayMessages` ต้องมี state เริ่มต้นเป็น `{input: "", messages: []}`
 
 ```js
 assert(
@@ -75,9 +87,9 @@ ReactDOM.render(<DisplayMessages />, document.getElementById('root'))
 
 ```jsx
 class DisplayMessages extends React.Component {
-  // Change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้
 
-  // Change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้
   render() {
     return <div />
   }

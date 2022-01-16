@@ -8,24 +8,27 @@ dashedName: copy-an-array-with-the-spread-operator
 
 # --description--
 
-แม้ว่า `slice()` ให้เราเลือกได้ว่า ต้องการคัดลอก element ใดของ array อย่างไรก็ตาม ES6 มี operator ใหม่ คือ <dfn>spread operator</dfn> ที่ช่วยให้เราคัดลอก element *ทั้งหมด* ของ array ได้อย่างง่ายดาย ตามลำดับ ด้วยรูปแบบ syntax ที่เรียบง่ายและอ่านง่าย โดย spread syntax จะมีลักษณะดังนี้: `...`
+การใช้ `slice()` ทำให้เราเลือกได้ว่าเราจะ element ไหนของ array แต่ตอนนี้ ES6 มี operator ใหม่ คือ <dfn>spread operator</dfn> ที่จะทำให้เราคัดลอก element *ทั้งหมด* ของ array ออกมาได้ง่ายๆ โดย element จะเรียงเหมือนเดิมด้วย 
+spread syntax มีหน้าตาแบบนี้: `...`
 
-ในทางปฏิบัติ เราสามารถใช้ spread operator ในการ copy array ดังนี้
+ในการใช้จริง เราจะใช้ spread operator ในการคัดลอก array ตามตัวอย่างนี้:
 
 ```js
 let thisArray = [true, true, undefined, false, null];
 let thatArray = [...thisArray];
 ```
 
-`thatArray` เท่ากับ `[true, true, undefined, false, null]` จะเห็นว่า `thisArray` ยังคงไม่เปลี่ยน และ `thatArray` ก็มี element เหมือน `thisArray`
+`thatArray` จะมีค่าเป็น `[true, true, undefined, false, null]` จะเห็นว่า `thisArray` จะไม่เปลี่ยนไป และ `thatArray` ก็จะมี element เหมือน `thisArray` เลย
 
 # --instructions--
 
-เราได้ประกาศฟังก์ชัน `copyMachine` ซึ่งรับ `arr` (array) และ `num` (number) เป็น argument ฟังก์ชันนี้ควรคืนค่าเป็น array ใหม่ที่ประกอบด้วย `num` ซึ่งเป็นสำเนา (copy) ของ `arr` เราได้เขียนโค้ดส่วนใหญ่ให้คุณแล้ว แต่ยังทำงานได้ไม่ถูกต้องนัก จงแก้ไขฟังก์ชันโดยใช้ spread operation เพื่อให้ทำงานได้อย่างถูกต้อง (คำแนะนำ: method ที่เราได้กล่าวถึงไปแล้วอาจมีประโยชน์ในที่นี้!)
+เราได้ประกาศฟังก์ชัน `copyMachine` ให้แล้ว ซึ่งรับ `arr` (array) และ `num` (number) เป็น argument 
+ฟังก์ชันนี้ต้องคืนค่าเป็น array ใหม่ที่เกิดจากการคัดลอก `arr` เป็นจำนวน `num` รอบ  เราได้เขียนโค้ดส่วนใหญ่ให้แล้ว แต่โค้ดนี้จะยังทำงานได้ไม่ถูกต้อง ให้แก้ไขฟังก์ชันโดยใช้ spread operator เพื่อให้ทำงานได้ถูกต้อง 
+(คำแนะนำ: เอา method อื่นที่เรียนไปแล้วมาใช้ด้วยก็ได้นะ!)
 
 # --hints--
 
-`copyMachine([true, false, true], 2)` ควรคืนค่า `[[true, false, true], [true, false, true]]`
+การเรียกใช้ฟังก์ชัน `copyMachine([true, false, true], 2)` ต้องได้ค่าเป็น `[[true, false, true], [true, false, true]]`
 
 ```js
 assert.deepEqual(copyMachine([true, false, true], 2), [
@@ -34,7 +37,7 @@ assert.deepEqual(copyMachine([true, false, true], 2), [
 ]);
 ```
 
-`copyMachine([1, 2, 3], 5)` ควรคืนค่า `[[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]]`
+การเรียกใช้ฟังก์ชัน `copyMachine([1, 2, 3], 5)` ต้องได้ค่าเป็น `[[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]]`
 
 ```js
 assert.deepEqual(copyMachine([1, 2, 3], 5), [
@@ -46,13 +49,13 @@ assert.deepEqual(copyMachine([1, 2, 3], 5), [
 ]);
 ```
 
-`copyMachine([true, true, null], 1)` ควรคืนค่า `[[true, true, null]]`
+การเรียกใช้ฟังก์ชัน `copyMachine([true, true, null], 1)` ต้องได้ค่าเป็น `[[true, true, null]]`
 
 ```js
 assert.deepEqual(copyMachine([true, true, null], 1), [[true, true, null]]);
 ```
 
-`copyMachine(["it works"], 3)` ควรคืนค่า `[["it works"], ["it works"], ["it works"]]`
+การเรียกใช้ฟังก์ชัน `copyMachine(["it works"], 3)` ต้องได้ค่าเป็น `[["it works"], ["it works"], ["it works"]]`
 
 ```js
 assert.deepEqual(copyMachine(['it works'], 3), [
@@ -62,7 +65,7 @@ assert.deepEqual(copyMachine(['it works'], 3), [
 ]);
 ```
 
-function `copyMachine` ควรใช้ `spread operator` กับ array `arr`
+ต้องใช้ `spread operator` กับ array `arr` ในฟังก์ชัน `copyMachine` 
 
 ```js
 assert(code.match(/\.\.\.arr/));
@@ -76,9 +79,9 @@ assert(code.match(/\.\.\.arr/));
 function copyMachine(arr, num) {
   let newArr = [];
   while (num >= 1) {
-    // Only change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-    // Only change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
     num--;
   }
   return newArr;

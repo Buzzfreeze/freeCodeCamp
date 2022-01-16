@@ -8,36 +8,36 @@ dashedName: missing-letters
 
 # --description--
 
-จงหาตัวอักษรที่หายไปในช่วงตัวอักษร (letter range) ที่ส่งเข้าไปในฟังก์ชัน แล้วคืนค่าเป็นตัวอักษรที่หายไปนั้นออกมา
+จงหาตัวอักษรที่หายไปในช่วงของตัวอักษรที่ส่งเข้าไปในฟังก์ชัน แล้วคืนค่าเป็นตัวอักษรที่หายไปนั้นออกมา (ในแบบทดสอบนี้จะมีตัวอักษรที่หายไปแค่ตัวเดียว)
 หากไม่มีตัวอักษรใดหายไปเลย ให้คืนค่าเป็น `undefined`
 
 # --hints--
 
-`fearNotLetter("abce")` ควรคืนค่าเป็น string `d`.
+`fearNotLetter("abce")` ต้องคืนค่าเป็น string `d`.
 
 ```js
 assert.deepEqual(fearNotLetter('abce'), 'd');
 ```
 
-`fearNotLetter("abcdefghjklmno")` ควรคืนค่าเป็น string `i`.
+`fearNotLetter("abcdefghjklmno")` ต้องคืนค่าเป็น string `i`.
 
 ```js
 assert.deepEqual(fearNotLetter('abcdefghjklmno'), 'i');
 ```
 
-`fearNotLetter("stvwx")` ควรคืนค่าเป็น string `u`.
+`fearNotLetter("stvwx")` ต้องคืนค่าเป็น string `u`.
 
 ```js
 assert.deepEqual(fearNotLetter('stvwx'), 'u');
 ```
 
-`fearNotLetter("bcdf")` ควรคืนค่าเป็น string `e`.
+`fearNotLetter("bcdf")` ต้องคืนค่าเป็น string `e`.
 
 ```js
 assert.deepEqual(fearNotLetter('bcdf'), 'e');
 ```
 
-`fearNotLetter("abcdefghijklmnopqrstuvwxyz")` ควรคืนค่าเป็น `undefined`.
+`fearNotLetter("abcdefghijklmnopqrstuvwxyz")` ต้องคืนค่าเป็น `undefined`.
 
 ```js
 assert.isUndefined(fearNotLetter('abcdefghijklmnopqrstuvwxyz'));

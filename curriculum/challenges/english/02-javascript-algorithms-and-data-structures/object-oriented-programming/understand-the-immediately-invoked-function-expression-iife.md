@@ -8,7 +8,7 @@ dashedName: understand-the-immediately-invoked-function-expression-iife
 
 # --description--
 
-รูปแบบปกติใน JavaScript คือการรันฟังก์ชันทันทีที่ประกาศ
+ตัวอย่างข้างล่างจะเป็นวิธีประกาศฟังก์ชัน และเรียกใช้ฟังก์ชันนั้นทันที:
 
 ```js
 (function () {
@@ -16,23 +16,23 @@ dashedName: understand-the-immediately-invoked-function-expression-iife
 })();
 ```
 
-ตัวอย่างนี้คือ การประกาศ anonymous function ซึ่งรันทันที และได้ผลลัพธ์เป็น `Chirp, chirp!`
+ตัวอย่างนี้จะประกาศ anonymous function แล้วเรียกใช้ทันที และจะแสดงผลเป็น `Chirp, chirp!` ใน console
 
-หมายเหตุ สำหรับฟังก์ชันที่ไม่มีชื่อและไม่ได้เก็บในตัวแปร เมื่อมี () อยู่ท้ายของการประกาศฟังก์ชัน จะทำให้เกิดการรันหรือเรียกฟังก์ชันนั้นขึ้นมาทำงานทันที ลักษณะแบบนี้เรียกกันว่า <dfn>immediately invoked function expression</dfn> หรือ <dfn>IIFE</dfn>
+หมายเหตุ สำหรับฟังก์ชันที่ไม่มีชื่อและไม่ได้เก็บฟังก์ชันนั้นในตัวแปร เมื่อมี () ต่อท้ายการประกาศฟังก์ชัน จะทำให้เกิดการเรียกฟังก์ชันนั้นทันที ลักษณะแบบนี้เรียกกันว่า <dfn>immediately invoked function expression</dfn> หรือ <dfn>IIFE</dfn>
 
 # --instructions--
 
-จงปรับแก้ฟังก์ชัน `makeNest` ให้กลายเป็น anonymous ที่มีการรันทันที (IIFE) และให้ลบคำสั่งการเรียกด้วยชื่อฟังก์ชัน `makeNest`
+ให้เขียนฟังก์ชัน `makeNest` ใหม่และให้ลบคำสั่งการเรียกใช้ด้วยชื่อฟังก์ชัน `makeNest` เพื่อเปลี่ยนฟังก์ชันนี้เป็น anonymous function ที่มีการเรียกใช้ทันที (IIFE) 
 
 # --hints--
 
-ฟังก์ชันควรเป็น anonymous
+ฟังก์ชันที่เขียนต้องเป็น anonymous function
 
 ```js
 assert(/\((function|\(\))(=>|\(\)){?/.test(code.replace(/\s/g, '')));
 ```
 
-ฟังก์ชันของคุณควรมี () ต่อจากการประกาศฟังก์ชัน เพื่อให้รันฟังก์ชันทันที
+ฟังก์ชันขที่เขียนต้องมี () ต่อท้ายการประกาศฟังก์ชัน เพื่อให้ฟังก์ชันทำงานทันที
 
 ```js
 assert(/\(.*(\)\(|\}\(\))\)/.test(code.replace(/[\s;]/g, '')));

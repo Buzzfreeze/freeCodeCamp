@@ -8,34 +8,34 @@ dashedName: falsy-bouncer
 
 # --description--
 
-แบบทดสอบนี้ให้นำ falsy values (ค่าเสมือนเป็นค่า false) ออกจาก array
+แบบทดสอบนี้ให้สร้างฟังก์ชันที่จะลบ falsy value (ค่าที่ถือว่าเป็น false) ทั้งหมดออกจาก array
 
-Falsy values ใน JavaScript ได้แก่ `false`, `null`, `0`, `""`, `undefined` และ `NaN`
+ใน JavaScript จะถือว่า `false`, `null`, `0`, `""`, `undefined` และ `NaN` เป็น falsy value
 
-คำแนะนำ: พยายามแปลงแต่ละค่าให้เป็น Boolean
+คำแนะนำ: พยายามแปลง element แต่ละ9y;ให้เป็น Boolean
 
 
 # --hints--
 
-`bouncer([7, "ate", "", false, 9])` ควรได้ผลลัพธ์คือ `[7, "ate", 9]`.
+การเรียกใช้ฟังก์ชัน `bouncer([7, "ate", "", false, 9])` ต้องได้ค่าเป็น `[7, "ate", 9]`.
 
 ```js
 assert.deepEqual(bouncer([7, 'ate', '', false, 9]), [7, 'ate', 9]);
 ```
 
-`bouncer(["a", "b", "c"])` ควรได้ผลลัพธ์คือ `["a", "b", "c"]`.
+การเรียกใช้ฟังก์ชัน `bouncer(["a", "b", "c"])` ต้องได้ค่าเป็น `["a", "b", "c"]`.
 
 ```js
 assert.deepEqual(bouncer(['a', 'b', 'c']), ['a', 'b', 'c']);
 ```
 
-`bouncer([false, null, 0, NaN, undefined, ""])` ควรได้ผลลัพธ์คือ `[]`.
+การเรียกใช้ฟังก์ชัน `bouncer([false, null, 0, NaN, undefined, ""])` ต้องได้ค่าเป็น `[]`.
 
 ```js
 assert.deepEqual(bouncer([false, null, 0, NaN, undefined, '']), []);
 ```
 
-`bouncer([null, NaN, 1, 2, undefined])` ควรได้ผลลัพธ์คือ `[1, 2]`.
+การเรียกใช้ฟังก์ชัน `bouncer([null, NaN, 1, 2, undefined])` ต้องได้ค่าเป็น `[1, 2]`.
 
 ```js
 assert.deepEqual(bouncer([null, NaN, 1, 2, undefined]), [1, 2]);

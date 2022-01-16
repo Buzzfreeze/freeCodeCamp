@@ -8,48 +8,49 @@ dashedName: understand-functional-programming-terminology
 
 # --description--
 
-ทีม FCC มีอารมณ์แปรปรวนและตอนนี้ต้องการชา 2 ประเภท คือ ชาเชียวและชาดำ 
-ข้อมูลทั่วไป: การที่ลูกค้ามีอารมณ์แปรปรวนเป็นเรื่องที่พบเจอได้ เป็นเรื่องปกติ
+ตอนนี้พวกเราเริ่มมีอารมณ์แปรปรวนกันแล้ว เราเลยอยากกินชา 2 แบบ คือชาเชียวและชาดำ 
+เกร็ดความรู้: ถ้าคุณเจอลูกค้าที่มีอารมณ์แปรปรวน อย่าตกใจไป มันเป็นเรื่องปกติ
 
-ตามข้อมูลดังกล่าว เราต้องกลับมาดูฟังก์ชัน `getTea` จากแบบทดสอบที่แล้ว เพื่อจัดการกับความต้องการชาที่แตกต่างกัน เราสามารถปรับแก้ `getTea` เพื่อรับค่าฟังก์ชันเป็น parameter เพื่อที่จะสามารถเปลี่ยนประเภทชาที่จัดเตรียมได้ วิธีนี้ทำให้ `getTea` มีความยืดหยุ่นและทำให้โปรแกรมเมอร์สามารถจัดการได้ดีขึ้นเมื่อความต้องการของลูกค้ามีการเปลี่ยนแปลง
+จากข้อมูลด้านบน เราต้องกลับมาดูฟังก์ชัน `getTea` จากแบบทดสอบที่แล้ว ถ้าเราอยากชงชาหลายแบบ เราจะแก้ `getTea` ให้รับค่า parameter เป็นฟังก์ชัน เพื่อที่จะเปลี่ยนชาที่ชงได้ วิธีนี้จะทำให้เรามีอิสระในการใช้ฟังก์ชัน `getTea` มากขึ้น และทำให้โปรแกรมเมอร์จัดการได้ง่ายขึ้น ถ้าความต้องการของลูกค้าเปลี่ยนไป
 
-แต่ก่อนอื่น มาดูความหมายของคำจำกัดความต่างๆ เกี่ยวกับเรื่องนี้กัน
+แต่ก่อนอื่น เรามาดูคำจำกัดความที่ใช้ใน Functional Programming กันก่อน
 
-<dfn>Callbacks</dfn> เป็นฟังก์ชันที่ถูกส่งเข้าไปยังอีกฟังก์ชันนึง เพื่อกำหนดเงื่อนไขในการรันฟังก์ชัน คุณอาจเห็นว่าฟังก์ชันเหล่านี้ถูกส่งเข้าไปเป็น parameter ของอีก method นึง ตัวอย่างเช่น `filter` ซึ่งเป็น callback function ที่บอก JavaScript ถึงเงื่อนไขของการ filter array
+<dfn>Callback</dfn> คือฟังก์ชันที่ถูกส่งเข้าไปยังอีกฟังก์ชันนึง เพื่อกำหนดเงื่อนไขในการรันฟังก์ชัน คุณน่าจะเคยเห็นฟังก์ชันเหล่านี้ถูกส่งเข้าไปเป็น parameter ใน method อื่น 
+เช่น method `filter` ซึ่ง callback function ที่เราส่งไปให้ method นี้จะเป็นตัวที่บอก JavaScript ว่าต้องทำการกรอง array ยังไง
 
-ฟังก์ชันที่สามารถถูกกำหนด (assigned) ค่าให้กับตัวแปร, ส่งผ่านเข้าไปในฟังก์ชันอื่น หรือ คืนค่าจากฟังก์ชันอื่นได้เช่นเดียวกับตัวแปรอื่นๆ เรียกว่า <dfn>first class</dfn> functions ซึ่งใน JavaScript นั้น ทุกฟังก์ชันเป็น first class function
+<dfn>First class</dfn> function คือฟังก์ชันที่เก็บลงในตัวแปรได้ ส่งเข้าไปในฟังก์ชันอื่นได้ หรือคืนออกมาจากฟังก์ชันอื่นได้ (เหมือนว่าเป็นค่าทั่วๆไป) ซึ่งใน JavaScript นั้น ทุกฟังก์ชันจะเป็น first class function ทั้งหมด
 
-ฟังก์ชันที่มี argument เป็นฟังก์ชันอื่น หรือคืนค่าเป็นฟังก์ชัน เรียกว่า <dfn>higher order</dfn> functions
+<dfn>higher order</dfn> function คือฟังก์ชันที่รับ argument เป็นฟังก์ชัน หรือคืนค่าเป็นฟังก์ชัน
 
-ฟังก์ชันที่ถูกส่งเข้าไปหรือถูกคืนค่ามาจากอีกฟังก์ชันนึง เรียกว่า <dfn>lambda</dfn>.
+ส่วน <dfn>lambda</dfn> คือฟังก์ชันที่ถูกส่งเข้าไปในฟังก์ชันื่อน หรือเป็นฟังก์ชันถูกคืนค่ามาจากอีกฟังก์ชันนึง
 
 # --instructions--
 
-จงเตรียมชาเขียว 27 ถ้วย และชาดำ 13 ถ้วย แล้วเก็บไว้ในตัวแปร `tea4GreenTeamFCC` และ `tea4BlackTeamFCC` ตามลำดับ นอกจากนี้ต้องแก้ไขฟังก์ชัน `getTea` เพื่อให้รับค่าฟังก์ชันเป็น argument แรก
+ให้ชงชาเขียว 27 แก้ว และชาดำ 13 แก้ว แล้วเก็บไว้ในตัวแปร `tea4GreenTeamFCC` และ `tea4BlackTeamFCC` ตามลำดับ และต้องแก้ไขฟังก์ชัน `getTea` เพื่อให้รับค่าฟังก์ชันเป็น argument แรกด้วย
 
-หมายเหตุ: จำนวนถ้วยชายังคงส่งเข้าฟังก์ชันเป็น argument สุดท้าย เราจะกล่าวถึงอีกครั้งในบทเรียนถัดไป
+หมายเหตุ: จำนวนแก้วชาที่ชงจะเป็น argument สุดท้ายของฟังก์ชันเหมือนเดิม เราจะคุยเรื่องนี้ในบทเรียนถัดไป
 
 # --hints--
 
-ตัวแปร `tea4GreenTeamFCC` ควรเก็บค่าชาเขียว 27 ถ้วย
+ตัวแปร `tea4GreenTeamFCC` ต้องมีค่าของชาเขียวทั้ง 27 แก้ว
 
 ```js
 assert(tea4GreenTeamFCC.length === 27);
 ```
 
-ตัวแปร `tea4GreenTeamFCC` ควรเก็บค่าชาเขียว
+ตัวแปร `tea4GreenTeamFCC` ต้องเก็บค่าของชาเขียว (`greenTea`)
 
 ```js
 assert(tea4GreenTeamFCC[0] === 'greenTea');
 ```
 
-ตัวแปร `tea4BlackTeamFCC` ควรเก็บค่าชาดำ 13 ถ้วย
+ตัวแปร `tea4BlackTeamFCC` ต้องมีค่าของชาดำทั้ง 13 แก้ว
 
 ```js
 assert(tea4BlackTeamFCC.length === 13);
 ```
 
-ตัวแปร `tea4BlackTeamFCC` ควรเก็บค่าชาดำ
+ตัวแปร `tea4BlackTeamFCC` ต้องเก็บค่าของชาดำ (`blackTea`)
 
 ```js
 assert(tea4BlackTeamFCC[0] === 'blackTea');
@@ -60,16 +61,15 @@ assert(tea4BlackTeamFCC[0] === 'blackTea');
 ## --seed-contents--
 
 ```js
-// Function that returns a string representing a cup of green tea
+// ฟังก์ชันนี้จะคืนค่าเป็น string ที่เราถือว่าเป็นชาเขียว 1 แก้ว
 const prepareGreenTea = () => 'greenTea';
 
-// Function that returns a string representing a cup of black tea
+// ฟังก์ชันนี้จะคืนค่าเป็น string ที่เราถือว่าเป็นชาดำ 1 แก้ว
 const prepareBlackTea = () => 'blackTea';
 
 /*
-Given a function (representing the tea type) and number of cups needed, the
-following function returns an array of strings (each representing a cup of
-a specific type of tea).
+ถ้าเราส่งค่าประเภทของชาที่อยากได้ และจำนวนชาที่อยากได้เข้าไปในฟังก์ชันนี้ 
+ฟังก์ชันนี้จะคืนค่าเป็น array ของ string (โดย string แต่ละตัวจะถือว่าเป็นชาหนึ่งแก้ว)
 */
 const getTea = (prepareTea, numOfCups) => {
   const teaCups = [];
@@ -81,10 +81,10 @@ const getTea = (prepareTea, numOfCups) => {
   return teaCups;
 };
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 const tea4GreenTeamFCC = null;
 const tea4BlackTeamFCC = null;
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 
 console.log(
   tea4GreenTeamFCC,

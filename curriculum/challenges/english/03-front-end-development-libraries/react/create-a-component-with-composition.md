@@ -8,9 +8,12 @@ dashedName: create-a-component-with-composition
 
 # --description--
 
-ตอนนี้เรามาดูว่าเราจะสามารถประกอบ React component หลายๆ component ด้วยกันได้อย่างไร ลองคิดดูว่าถ้าคุณกำลังทำแอปและได้สร้าง 3 component: `Navbar`, Dashboard, และ `Footer`
+ตอนนี้เรามาดูว่าเราจะสามารถประกอบ React component หลายๆตัวเข้าด้วยกันได้อย่างไร 
+ลองคิดดูว่าถ้าคุณกำลังทำแอปและได้สร้าง component 3 ตัวคือ: `Navbar`, `Dashboard`, และ `Footer`
 
-เพื่อประกอบรวม component เหล่านี้ด้วยกัน คุณต้องสร้าง `App` component ที่เป็น *parent* ที่เรนเดอร์ ทุกๆ 3 component ข้างต้นนี้เป็น *children* ในการเรนเดอร์ child component ใน React component นั้นคุณจะต้องรวมชื่อ component ที่เขียนเป็น HTML tag ที่กำหนดเองใน JSX ตัวอย่างเช่น ใน `render' method คุณสามารถเขียน:
+ในการรวม component นี้เข้าด้วยกัน เราจะสร้าง *parent* component ชื่อ `App` ที่มี component 3 ตัวนี้เป็น *children* 
+ซึ่งวิธีการคือการเขียนแท็ก HTML ที่มีชื่อของแท็กเป็นชื่อของ children component นั้นไว้ใน parent
+เช่น ใน method `render` นี้ เราจะเขียนเป็น:
 
 ```jsx
 return (
@@ -22,17 +25,20 @@ return (
 )
 ```
 
-เมื่อ React พบ HTML tag ที่กำหนดเองที่อ้างอิงถึง component อื่น (ชื่อ component ที่อยู่ใน `< />` ดังเช่นตัวอย่างข้างบน) มันจะเรนเดอร์ markup สำหรับ component นั้นที่อยู่ในตำแหน่งของ tag นั้น สิ่งนี้จะแสดงให้เห็นถึงความสัมพันธ์ของ parent/child ระหว่าง `App` component กับ `Navbar`, `Dashboard`, และ `Footer`
+เมื่อ React เห็นแท็ก HTML ที่ไปเรียก component อื่น (component ที่อยู่ใน `< />`) React จะเรนเดอร์ข้อมูลของ component นั้นในตำแหน่งที่เราวางแท็กนั้นไว้ 
+ตัวอย่างนี้จะแสดงให้เราเห็นความเป็น parent/child ของ `App` กับ `Navbar`, `Dashboard`, และ `Footer`
 
 # --instructions--
 
-ใน code editor มี component ที่ทำงานอย่างง่ายชื่อ `ChildComponent` และ class component ชื่อ `ParentComponent` ประกอบรวมทั้งสองเข้าด้วยกันโดยการเรนเดอร์ `ChildComponent` ภายใน `ParentComponent` และอย่าลืมปิด `ChildComponent` tag ด้วย `\`
+ใน code editor มี component สั้นๆที่ชื่อ `ChildComponent` และ class component ที่ชื่อ `ParentComponent` 
+ให้นำ `ChildComponent` ไปไว้ใน `ParentComponent` และอย่าลืมปิดแท็กของ `ChildComponent` ด้วย `\`
 
-**Note:** `ChildComponent` ถูกกำหนดด้วย ES6 arrow function เพราะนี่เป็นวิธีปฏิบัติทั่วไปเมื่อใช้ React อย่างไรก็ตาม โปรดทราบว่านี่เป็นเพียงฟังก์ชัน หากคุณไม่คุ้นเคยกับ arrow function syntax โปรดศึกษาที่ส่วน JavaScript เพิ่มเติม
+**Note:** เราจะเห็นว่า `ChildComponent` ถูกสร้างด้วย arrow function ของ ES6 และการใช้วิธีนี้ก็เป็นเรื่องปกติใน React
+แต่ถ้าคุณยังไม่รู้จักกับ arrow function ให้ลองไปดูที่บทเรียนเรื่อง JavaScript เพื่อทำความเข้าใจส่วนนี้ก่อน
 
 # --hints--
 
-React component ควรจะ return `div` element เดียว
+React component ต้องคืนค่าเป็น `div` element ตัวเดียว
 
 ```js
 assert(
@@ -43,7 +49,7 @@ assert(
 );
 ```
 
-Component นี้ควรจะต้อง return 2 element ที่ซ้อนอยู่ภายใน
+Component นี้ต้องคืนค่าออกมาเป็น `div` ที่มี element 2 ตัวซ้อนอยู่ข้างใน
 
 ```js
 assert(
@@ -54,7 +60,7 @@ assert(
 );
 ```
 
-Component นี้ควรจะต้อง return `ChildComponent` เป็น child ที่สอง
+Component นี้ต้องคืนค่าออกมาโดยมี `ChildComponent` เป็น child ตัวที่สอง
 
 ```js
 assert(
@@ -95,10 +101,10 @@ class ParentComponent extends React.Component {
     return (
       <div>
         <h1>I am the parent</h1>
-        { /* Change code below this line */ }
+        { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
 
 
-        { /* Change code above this line */ }
+        { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
       </div>
     );
   }
@@ -124,9 +130,9 @@ class ParentComponent extends React.Component {
     return (
       <div>
         <h1>I am the parent</h1>
-        { /* Change code below this line */ }
+        { /* แก้ไขโค้ดใต้บรรทัดนี้ */ }
         <ChildComponent />
-        { /* Change code above this line */ }
+        { /* แก้ไขโค้ดเหนือบรรทัดนี้ */ }
       </div>
     );
   }

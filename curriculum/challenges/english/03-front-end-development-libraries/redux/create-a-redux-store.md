@@ -8,29 +8,34 @@ dashedName: create-a-redux-store
 
 # --description--
 
-Redux เป็นเฟรมเวิร์กการจัดการ state ที่สามารถใช้ได้กับเทคโนโลยีเว็บต่างๆ มากมาย รวมถึง React
+Redux เป็นเฟรมเวิร์กที่ใช้จัดการ state ซึ่งใช้กับเว็บได้หลายแบบ รวมถึง React ด้วย
 
-ใน Redux มี state object เดียวที่รับผิดชอบ state ทั้งหมดของแอปพลิเคชันของคุณ ซึ่งหมายความว่าหากคุณมีแอป React ที่มี component 10 components และแต่ละ component มี local state เป็นของตัวเอง state ทั้งหมดของแอปจะถูกกำหนดโดย state object เดียวที่อยู่ใน Redux `store' นี่เป็นหลักการสำคัญประการแรกที่ต้องทำความเข้าใจเมื่อเรียนรู้ Redux: Redux store เป็นแหล่งความจริงเพียงแหล่งเดียวเมื่อพูดถึง state แอปพลิเคชัน
+ใน Redux จะใช้ object state ตัวเดียวที่รับผิดชอบ state ทั้งหมดในแอปพลิเคชันของคุณ 
+แปลว่าถ้าแอป React ของคุณมี component 10 ตัว และแต่ละ component ก็มี local state เป็นของตัวเอง state ทั้งหมดในแอปจะถูกกำหนดโดย state เดียวที่อยู่ใน Redux `store` 
+หลักการแรกที่ต้องทำความเข้าใจเมื่อเรียนรู้ Redux คือ Redux store  state จะเป็นที่เก็บข้อมูลหลักของ state ในแอปพลิเคชัน
 
-นอกจากนี้ยังหมายความว่าเมื่อใดก็ตามที่แอปของคุณต้องการอัปเดต state **ต้อง** ดำเนินการผ่าน Redux store การไหลของข้อมูลแบบทิศทางเดียวทำให้ง่ายต่อการติดตามการจัดการ state ในแอปของคุณ
+นอกจากนี้ยังหมายความว่าเมื่อใดก็ตามที่แอปของคุณต้องการอัปเดต state **ต้อง** ทำผ่าน Redux store การที่ข้อมูลไหลไปในทิศทางเดียวแบบนี้ การติดตามการจัดการ state ในแอปของคุณง่ายขึ้นมาก
 
 # --instructions--
 
-Redux `store` เป็น object ที่เก็บและจัดการแอปพลิเคชัน `state` มันมี method ที่เรียกว่า `createStore()` บน Redux object ซึ่งคุณใช้สร้าง Redux `store` method นี้ใช้ฟังก์ชัน `reducer` เป็น argument ที่จำเป็น ฟังก์ชัน `reducer` จะถูกอธิบายเพิ่มเติมในแบบทดสอบข้างหน้า และถูกกำหนดไว้ให้แล้วสำหรับคุณใน code editor เพียงแค่ใช้ `state` เป็น argument และ return `state`
+Redux `store` เป็น object ที่เก็บและจัดการ `state` ของแอป ซึ่งจะมี method ชื่อ `createStore()` ใน Redux object ซึ่งคุณใช้สร้าง Redux `store` 
+การเรียกใช้ method นี้จำเป็นต้องส่ง argument เป็นฟังก์ชัน `reducer` เข้าไป
+เราได้เขียนฟังก์ชัน `reducer` ไว้ให้แล้วใน code editor โดยจะทำแค่การรับ `state` เป็น argument และคืนค่า `state` นั้นออกมา
+เราจะอธิบายเรื่องฟังก์ชัน `reducer` ในแบบทดสอบต่อๆไป 
 
-ให้ประกาศตัวแปร `store` และกำหนดมันให้กับ `createStore()` method แล้วส่งผ่าน `reducer` เป็น argument
+ให้ประกาศตัวแปร `store` ซึ่งรับค่ามาจาก method `createStore()` แล้วส่ง `reducer` เป็น argument ให้กับ method นี้
 
-**Note:** โค้ดใน editor ใช้ ES6 default argument syntax เพื่อเริ่มต้น state นี้เพื่อเก็บค่า `5` หากคุณไม่คุ้นเคยกับ argument เริ่มต้น โปรดดู [ES6 section in the Curriculum](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/es6/set-default-parameters-for-your-functions) ซึ่งช่วยอธิบายหัวข้อนี้.
+**Note:** โค้ดใน editor ใช้ ES6 default argument syntax เพื่อให้ state มีค่า default เป็น `5` ถ้าคุณยังไม่เข้าใจเรื่อง default argument ให้ลองดูทำความเข้าใจดูใน [บทเรียนเรื่อง ES6](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/es6/set-default-parameters-for-your-functions)
 
 # --hints--
 
-ควรมี Redux store
+ต้องมี Redux store
 
 ```js
 assert(typeof store.getState === 'function');
 ```
 
-Redux store ควรมีค่าเป็น 5 สำหรับ state
+state ของ Redux store ต้องมีค่าเป็น 5
 
 
 ```js
@@ -46,9 +51,9 @@ const reducer = (state = 5) => {
   return state;
 }
 
-// Redux methods are available from a Redux object
-// For example: Redux.createStore()
-// Define the store here:
+// method ของ Redux จะเข้าถึงได้จาก Redux object
+// เช่น: Redux.createStore()
+// ให้ประกาศตัวแปร store ด้านล่างนี้:
 ```
 
 # --solutions--

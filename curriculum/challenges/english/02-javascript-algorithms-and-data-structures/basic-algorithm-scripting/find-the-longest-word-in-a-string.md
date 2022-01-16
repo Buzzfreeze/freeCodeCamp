@@ -13,7 +13,7 @@ dashedName: find-the-longest-word-in-a-string
 
 # --hints--
 
-`findLongestWordLength("The quick brown fox jumped over the lazy dog")` ควรได้ผลลัพธ์เป็นตัวเลข
+การเรียกใช้ฟังก์ชัน `findLongestWordLength("The quick brown fox jumped over the lazy dog")` ต้องได้ค่าเป็นเป็นตัวเลข
 
 ```js
 assert(
@@ -23,7 +23,7 @@ assert(
 );
 ```
 
-`findLongestWordLength("The quick brown fox jumped over the lazy dog")` ควรได้ผลลัพธ์คือ `6`.
+การเรียกใช้ฟังก์ชัน `findLongestWordLength("The quick brown fox jumped over the lazy dog")` ต้องได้ค่าเป็น `6`
 
 ```js
 assert(
@@ -31,19 +31,19 @@ assert(
 );
 ```
 
-`findLongestWordLength("May the force be with you")` ควรได้ผลลัพธ์คือ `5`.
+การเรียกใช้ฟังก์ชัน `findLongestWordLength("May the force be with you")` ต้องได้ค่าเป็น `5`
 
 ```js
 assert(findLongestWordLength('May the force be with you') === 5);
 ```
 
-`findLongestWordLength("Google do a barrel roll")` ควรได้ผลลัพธ์คือ `6`.
+การเรียกใช้ฟังก์ชัน `findLongestWordLength("Google do a barrel roll")` ต้องได้ค่าเป็น `6`
 
 ```js
 assert(findLongestWordLength('Google do a barrel roll') === 6);
 ```
 
-`findLongestWordLength("What is the average airspeed velocity of an unladen swallow")` ควรได้ผลลัพธ์คือ `8`.
+การเรียกใช้ฟังก์ชัน `findLongestWordLength("What is the average airspeed velocity of an unladen swallow")` ต้องได้ค่าเป็น `8`
 
 ```js
 assert(
@@ -53,7 +53,7 @@ assert(
 );
 ```
 
-`findLongestWordLength("What if we try a super-long word such as otorhinolaryngology")` ควรได้ผลลัพธ์คือ `19`.
+การเรียกใช้ฟังก์ชัน `findLongestWordLength("What if we try a super-long word such as otorhinolaryngology")` ต้องได้ค่าเป็น `19`
 
 ```js
 assert(

@@ -8,17 +8,24 @@ dashedName: connect-redux-to-the-messages-app
 
 # --description--
 
-เมื่อคุณเข้าใจวิธีใช้ `connect` เพื่อเชื่อมต่อ React กับ Redux แล้ว คุณสามารถใช้สิ่งที่คุณได้เรียนรู้กับ React component ที่ใช้จัดการข้อความได้
+เมื่อคุณเข้าใจวิธีใช้ `connect` เพื่อเชื่อมต่อ React กับ Redux แล้ว คุณจะเอาเรื่องนี้มาใช้กับ React component ที่จัดการกับข้อความได้
 
-ในบทเรียนที่แล้ว component ที่คุณเชื่อมต่อกับ Redux มีชื่อว่า `Presentational` และสิ่งนี้ไม่ได้เกิดขึ้นโดยบังเอิญ คำนี้ *โดยทั่วไป* หมายถึง React components ที่ไม่ได้เชื่อมต่อโดยตรงกับ Redux พวกมันมีหน้าที่รับผิดชอบในการนำเสนอ UI และทำสิ่งนี้เป็นเสมือน function ของ props ที่พวกเขาได้รับ ในทางตรงกันข้าม container components เชื่อมต่อกับ Redux โดยทั่วไปแล้วสิ่งเหล่านี้จะรับผิดชอบในปล่อย action ต่างๆ ไปยังหน่วยความจำ และมักจะส่งผ่าน state ของหน่วยความจำ ไปยัง child components เป็น props
+ในบทเรียนที่แล้ว component ที่คุณเอามาเชื่อมต่อกับ Redux มีชื่อว่า `Presentational` เราไม่ได้เลือกคำนี้มาโดยไม่ได้คิดอะไร 
+แต่การใช้คำนี้ *โดยทั่วไป*จะหมายถึง React component ที่ไม่ได้เชื่อมต่อกับ Redux โดยตรง
+component พวกนี้มีหน้าที่ในการแสดง UI โดยทำงานเป็นเหมือนฟังก์ชันที่แสดงผลตาม props ที่ได้รับ 
+แต่ก็มี component อีกแบบซึ่งทำงานตรงกันข้ามกันเลย คือ container ซึ่งเป็น component ที่เชื่อมต่อกับ Redux โดยตรง
+ปกติ container จะมีหน้าที่ dispatch action ไปยัง store และส่ง state ของ store เป็น props ไปยัง child component
 
 # --instructions--
 
-จนถึงตอนนี้ code editor มีโค้ดทั้งหมดที่คุณได้เขียนไปแล้วในบทเรียนนี้ การเปลี่ยนแปลงเพียงอย่างเดียวคือ React component ถูกเปลี่ยนชื่อเป็น `Presentational` ให้คุณสร้าง component ใหม่ที่ถูกเก็บไว้ใน constant ที่เรียกว่า `Container` ซึ่งใช้ `connect` เพื่อเชื่อมต่อ `Presentational` component กับ Redux จากนั้นใน `AppWrapper` ให้เรนเดอร์ React Redux `Provider` component ส่ง `Provider` ไปที่ Redux `store` ให้เป็น prop และเรนเดอร์ `Container` เป็น child เมื่อตั้งค่าทุกอย่างแล้ว คุณจะเห็นแอปข้อความถูกเรนเดอร์ในหน้าเพจอีกครั้ง
+ใน code editor จะมีโค้ดทั้งหมดที่คุณได้เขียนไปในบทเรียนนี้ อย่างเดียวที่ต่างคือ React component ถูกเปลี่ยนชื่อเป็น `Presentational` 
+ให้คุณสร้าง component ใหม่และเก็บลงใน const `Container` ซึ่งจะใช้ `connect` เพื่อเชื่อมต่อ `Presentational` กับ Redux 
+จากนั้นใน `AppWrapper` ให้เรนเดอร์ React Redux `Provider` component และส่ง Redux `store` เป็น prop ไปให้ `Provider` แล้วก็เรนเดอร์ `Container` เป็น child ของ `Provider` ตัวนี้
+ถ้าทำตามเงื่อนไขนี้เสร็จ คุณจะเห็นแอปถูกเรนเดอร์ในหน้าเพจอีกครั้ง
 
 # --hints--
 
-`AppWrapper` ควรเรนเดอร์ไปที่หน้าเพจ
+`AppWrapper` ต้องเรนเดอร์ไปที่หน้าเพจ
 
 ```js
 assert(
@@ -29,7 +36,7 @@ assert(
 );
 ```
 
-`Presentational` component ควรเรนเดอร์ไปที่หน้าเพจ
+`Presentational` ต้องเรนเดอร์ไปที่หน้าเพจ
 
 ```js
 assert(
@@ -40,7 +47,7 @@ assert(
 );
 ```
 
-`Presentational` component ควรเรนเดอร์ `h2`, `input`, `button` และ `ul` elements
+`Presentational` ต้องมี `h2`, `input`, `button` และ `ul` อยู่ภายใน
 
 ```js
 assert(
@@ -57,7 +64,7 @@ assert(
 );
 ```
 
-`Presentational` component ควรครับค่า `messages` จาก Redux store เป็น prop
+`Presentational` ต้องได้รับค่า `messages` เป็น prop จาก Redux store
 
 ```js
 assert(
@@ -70,7 +77,7 @@ assert(
 );
 ```
 
-`Presentational` component ควรรับ `submitMessage` action creator เป็น prop
+`Presentational` ต้องรับ `submitMessage` action creator เป็น prop
 
 ```js
 assert(
@@ -180,7 +187,7 @@ const mapDispatchToProps = (dispatch) => {
 const Provider = ReactRedux.Provider;
 const connect = ReactRedux.connect;
 
-// Define the Container component here:
+// ประกาศ component Container ตรงนี้:
 
 
 class AppWrapper extends React.Component {
@@ -188,7 +195,7 @@ class AppWrapper extends React.Component {
     super(props);
   }
   render() {
-    // Complete the return statement:
+    // เขียนคำสั่ง return ให้เสร็จตามเงื่อนไข:
     return (null);
   }
 };

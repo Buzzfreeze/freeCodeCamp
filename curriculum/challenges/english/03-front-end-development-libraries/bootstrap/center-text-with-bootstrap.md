@@ -7,9 +7,9 @@ dashedName: center-text-with-bootstrap
 ---
 
 # --description--
-เราสามารถใช้ Bootstrap กำหนดให้ heading element ให้อยู่ตำแหน่งตรงกลาง ได้ง่ายๆ เพียงแค่เพิ่ม class `text-center` ไปใน `h2` element 
+เราสามารถใช้ Bootstrap กำหนดให้ heading element ให้อยู่ตำแหน่งตรงกลาง ได้ง่ายๆ แค่เพิ่ม class `text-center` ไปใน `h2` element 
 
-อย่าลืมว่าเราสามารถเพิ่ม class ได้ หลายๆ คลาสใน element เดียวกัน โดยการเว้นวรรคระหว่างชื่อ class แต่ละ class ตามตัวอย่างนี้:
+อย่าลืมว่าเราจะมี class หลายๆอันใน element เดียวกันได้ โดยเราต้องเว้นวรรคระหว่างชื่อ class แต่ละ class ตามตัวอย่างนี้:
 
 ```html
 <h2 class="red-text text-center">your text</h2>
@@ -17,13 +17,13 @@ dashedName: center-text-with-bootstrap
 
 # --hints--
 
-ข้อความใน `h2` element จะต้องอยู่ในตำแหน่งตรงกลาง โดยการเพิ่ม class `text-center`
+ข้อความใน `h2` element จะต้องอยู่ตรงกลาง โดยใช้ class `text-center`
 
 ```js
 assert($('h2').hasClass('text-center'));
 ```
 
-ใน `h2` element ยังคงมี class `red-text` เหมือนเดิม
+ใน `h2` element ต้องมี class `red-text` อยู่เหมือนเดิม
 
 ```js
 assert($('h2').hasClass('red-text'));

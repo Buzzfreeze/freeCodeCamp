@@ -8,38 +8,42 @@ dashedName: remove-elements-from-an-array-using-slice-instead-of-splice
 
 # --description--
 
-รูปแบบทั่วไปเวลาทำงานกับ array ก็คือ คุณต้องการดึง items ออกและให้ item ที่เหลือยังคงเก็บไว้ใน array ตัวเดิม ซึ่ง JavaScript มี `splice` method ที่ทำงานดังกล่าวได้ โดยรับ argument แรก เป็น index เริ่มต้นที่ต้องการดึง item และ argument ที่สองเป็น จำนวน item ที่ต้องการดึงออก แต่เราถ้าไม่ระบุ argument ที่สอง มันจะดึง items ให้จนจบ array อย่างไรก็ตาม `splice` method จะทำการเปลี่ยนแปลง array เริ่มต้น ดังตัวอย่างต่อไปนี้
+ปกติแล้วเราจะมีโค้ดส่วนที่ทำการดึง element ออกจาก array โดยที่ไม่เปลี่ยนค่าของ array เดิม 
+ซึ่ง JavaScript มี method `splice` ที่ทำงานแบบนี้ได้ โดยจะรับ argument แรก เป็น index ที่ต้องการเริ่มดึงค่า และ argument ที่สองเป็น จำนวน element ที่ต้องการดึงออกมา แต่เราถ้าไม่ระบุ argument ที่สอง ฟังก์ชันจะดึงทุก element ตั้งแต่ index ที่ระบุไปจนถึง element สุดท้าย 
+แต่ method `splice` ก็จะลบค่าที่ดึงออกมาจาก array เดิมด้วย ลองดูตัวอย่าง:
 
 ```js
 var cities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
 cities.splice(3, 1);
 ```
 
-ในที่นี้ `splice` คืนค่าเป็น string `London` ลบค่า string นี้ออกจาก cities array ดังนั้น `cities` จะมีค่าเป็น `["Chicago", "Delhi", "Islamabad", "Berlin"]`
+ในตัวอย่างนี้ method `splice` จะคืนค่าเป็น string `London` และจะลบ string นี้ออกจาก array `cities` จะทำให้ค่าของ `cities` เปลี่ยนเป็น `["Chicago", "Delhi", "Islamabad", "Berlin"]`
 
-จากแบบทดสอบที่แล้ว เราเห็นได้ว่า `slice` method ไม่ได้เปลี่ยนแปลงค่าของ array เริ่มต้น แต่จะคืนค่าเป็น array ใหม่ที่สามารถเก็บไว้ในตัวแปรอีกตัวนึง หากยังจำได้ `slice` method รับค่า 2 arguments คือ index เริ่มต้น และ index สิ้นสุดการ slice (ไม่รวมค่าของ index สิ้นสุด) และคืนค่า items ไว้ใน array ตัวใหม่ อย่างไรก็ตาม การใช้ `slice` method แทนการใช้ `splice` จะช่วยป้องกันการเกิด side effect จากการเปลี่ยนแปลง array
+ในแบบทดสอบที่แล้วเราได้เห็นว่า method `slice` จะไม่เปลี่ยนค่าของ array เดิม และจะคืนค่าเป็น array ตัวใหม่ ที่เราจะเก็บเข้าไปในตัวแปรอื่นได้
+ถ้ายังจำได้ method `slice` รับ argument 2 ตัว คือ index เริ่มต้น และ index ที่ต้องการจบการ slice (ค่าที่ได้จะไม่รวม element ที่ตำแหน่งนี้) และคืนค่าออกมาเป็น element ที่เลือกใน array ตัวใหม่ เพราะฉะนั้นการใช้ method `slice` แทนการใช้ `splice` จะช่วยป้องกันการเกิด side effect จากการที่ array เปลี่ยนไปได้
 
 # --instructions--
 
-จงปรับแก้ฟังก์ชัน `nonMutatingSplice` โดยใช้ `slice` แทนการใช้ `splice` และภายในฟังก์ชันนี้ ให้กำหนด `cities` array จำกัดความยาวเป็น 3 และคืนค่าเป็น array ตัวใหม่ที่มีเพียง 3 items แรก
+ให้แก้ฟังก์ชัน `nonMutatingSplice` โดยใช้ `slice` แทนการใช้ `splice` 
+ฟังก์ชันนี้จะต้องทำงานโดยการรับ array `cities` เข้ามา และคืนค่าเป็น array ที่มีค่าเป็น 3 element แรกของ array `cities`
 
-ห้ามทำให้ array ตั้งต้นเปลี่ยนแปลง
+ห้ามทำให้ array เดิมเปลี่ยนแปลง
 
 # --hints--
 
-โค้ดของคุณควรใช้ `slice` method
+ต้องใช้ method `slice`
 
 ```js
 assert(code.match(/\.slice/g));
 ```
 
-โค้ดของคุณไม่ควรใช้ `splice` method
+ห้ามใช้ method `splice`
 
 ```js
 assert(!code.match(/\.?[\s\S]*?splice/g));
 ```
 
-`inputCities` array ไม่ควรมีการแก้ไขเปลี่ยนแปลง
+array `inputCities` ต้องมีค่าเหมือนเดิม
 
 ```js
 assert(
@@ -48,7 +52,7 @@ assert(
 );
 ```
 
-`nonMutatingSplice(["Chicago", "Delhi", "Islamabad", "London", "Berlin"])` ควรคืนค่าเป็น `["Chicago", "Delhi", "Islamabad"]`.
+การเรียกใช้ฟังก์ชัน `nonMutatingSplice(["Chicago", "Delhi", "Islamabad", "London", "Berlin"])` ต้องคืนค่าเป็น `["Chicago", "Delhi", "Islamabad"]`
 
 ```js
 assert(
@@ -64,10 +68,10 @@ assert(
 
 ```js
 function nonMutatingSplice(cities) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   return cities.splice(3);
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
 nonMutatingSplice(inputCities);
@@ -77,9 +81,9 @@ nonMutatingSplice(inputCities);
 
 ```js
 function nonMutatingSplice(cities) {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   return cities.slice(0,3);
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
 nonMutatingSplice(inputCities);

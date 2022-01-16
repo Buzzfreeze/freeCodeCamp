@@ -8,7 +8,8 @@ dashedName: modify-an-object-nested-within-an-object
 
 # --description--
 
-ทีนี้มาดู object ที่ซับซ้อนขึ้นอีกสักเล็กน้อยกัน Object properties สามารถซ้อนได้ในระดับความลึกตามที่ต้องการ และ value ของ property สามารถเป็นข้อมูลประเภทใดก็ได้ที่ JavaScript รองรับ รวมถึง array และ object อื่นๆ พิจารณาสิ่งต่อไปนี้:
+ทีนี้มาดู object ที่ซับซ้อนขึ้นอีกหน่อยกัน 
+property ของ object สามารถซ้อนกี่ชั้นกันได้ตามที่เราต้องการ และ value ของ property ก็สามารถเป็นข้อมูลประเภทใดก็ได้ที่ JavaScript รองรับ ซึ่งรวมถึง array และ object ด้วย ลองดูตัวอย่าง:
 
 ```js
 let nestedObject = {
@@ -26,7 +27,8 @@ let nestedObject = {
 };
 ```
 
-`nestedObject` มีสาม property : `id` (ค่าคือ number), `date` (ค่าคือ string) และ `data` (ค่าคือ object ที่มีโครงสร้างที่ซ้อนกัน) แม้ว่าโครงสร้างจะมีความซับซ้อน แต่เรายังคงใช้สัญลักษณ์เดียวกันนี้ เพื่อเข้าถึงข้อมูลที่เราต้องการได้ ในการกำหนดค่า `10` ให้กับ `busy` property ของ object `onlineStatus` เราใช้ dot notation เพื่ออ้างอิง property:
+`nestedObject` มีสาม property คือ `id` (เป็น number), `date` (เป็น string) และ `data` (เป็น object) แม้ว่าโครงสร้างจะซับซ้อน แต่เราก็จะเข้าถึงข้อมูลได้ด้วยวิธีเดิม 
+ในการกำหนดค่า `10` ให้กับ property `busy` ของ object `onlineStatus` เราใช้จะ dot notation เพื่อเข้าถึง property นั้น:
 
 ```js
 nestedObject.data.onlineStatus.busy = 10;
@@ -34,11 +36,12 @@ nestedObject.data.onlineStatus.busy = 10;
 
 # --instructions--
 
-ในที่นี้เราได้ประกาศ object `userActivity` ซึ่งมี object อื่นซ้อนอยู่ภายใน ให้ set ค่า key `online` เป็น `45`
+เราได้ประกาศ object `userActivity` ให้แเล้ว โดยจะมีมี object ซ้อนอยู่ข้างในด้วย 
+ให้เปลี่ยนค่าของ key `online` ให้เป็น `45`
 
 # --hints--
 
-`userActivity` ควรมี `id`, `date` และ `data` properties
+`userActivity` ต้องมี property `id`, `date` และ `data`
 
 ```js
 assert(
@@ -46,19 +49,19 @@ assert(
 );
 ```
 
-`userActivity` ควรมี `data` key set ไปยัง object ด้วย keys `totalUsers` และ `online`
+`userActivity` ต้องมี key ชื่อ `data` ที่มี value เป็น object ที่มี key เป็น `totalUsers` และ `online`
 
 ```js
 assert('totalUsers' in userActivity.data && 'online' in userActivity.data);
 ```
 
-property `online` ซ้อนใน `data` key ของ `userActivity` ซึ่งควรถูก set เป็น `45`
+property `online` ที่อยู่ใน key `data` ของ `userActivity` ต้องมีค่าเป็น `45`
 
 ```js
 assert(userActivity.data.online === 45);
 ```
 
-`online` property ควรถูกกำหนดค่า โดยใช้เครื่องหมายจุดหรือ brackets
+ต้องเปลี่ยนค่าของ property `online` โดยใช้เครื่อง dot หรือ bracket notation
 
 ```js
 assert.strictEqual(code.search(/online: 45/), -1);
@@ -78,9 +81,9 @@ let userActivity = {
   }
 };
 
-// Only change code below this line
+// แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 
 console.log(userActivity);
 ```

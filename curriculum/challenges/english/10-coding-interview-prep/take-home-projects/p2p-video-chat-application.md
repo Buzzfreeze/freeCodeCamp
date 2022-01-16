@@ -30,7 +30,7 @@ dashedName: p2p-video-chat-application
 
 **User Story:** หากหนึ่งในสองคนในห้องตัดการเชื่อมต่อ พวกเขาสามารถเชื่อมต่อเข้าห้องเดียวกันและสนทนากันต่อได้
 
-เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์ URL หรือ GitHub ด้านล่าง แล้วกดปุุ่ม "I've completed this challenge"
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์ URL หรือ GitHub ด้านล่าง แล้วกดปุุ่ม "ฉันทำภารกิจที่ท้าทายนี้เสร็จแล้ว"
 
 สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 

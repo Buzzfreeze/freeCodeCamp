@@ -8,24 +8,33 @@ dashedName: create-a-controlled-input
 
 # --description--
 
-แอปพลิเคชันของคุณอาจมีการโต้ตอบที่ซับซ้อนมากขึ้นระหว่าง `state` และ UI ที่แสดงผล ตัวอย่างเช่น form control element สำหรับการป้อนข้อความ เช่น `input` และ `textarea` จะคงสถานะของตนเองใน DOM เมื่อ user พิมพ์ 
-ด้วย React คุณสามารถย้ายสถานะที่ไม่แน่นอนนี้ไปยัง `state` ของ React component ได้ อินพุตของ user จะกลายเป็นส่วนหนึ่งของ `state` ของแอปพลิเคชัน ดังนั้น React จะควบคุมค่าของ input field นั้น โดยปกติหากคุณมี React component ที่มี input field ที่ผู้ใช้สามารถพิมพ์ลงไปได้ มันจะเป็นแบบฟอร์มการป้อนข้อมูลที่มีการควบคุม
+คุณอาจต้องเขียนแอปให้ `state` กับ UI ทำงานด้วยกันซับซ้อนมากขึ้น
+เช่น การใช้ form control เพื่อป้อนข้อความ อย่างการใช้ `input` และ `textarea` ซึ่งจะมี state ของตัวเองใน DOM เมื่อ user พิมพ์ข้อความเข้ามา 
+ถ้าใช้ React คุณจะย้าย state ของ element พวกนี้ไปไว้ใน `state` ของ React component ได้ 
+สิ่งที่ user กรอกเข้ามาก็จะกลายเป็นส่วนหนึ่งของ `state` ของแอป ทำให้ React จะควบคุมค่าของ input นั้นได้ 
+ถ้าคุณใส่ input ที่ user พิมพ์ลงไปได้ไว้ใน React component เราจะเรียก input นั้นว่าเป็น Controlled Input ซึ่งแปลว่า input ที่ React ควบคุมได้
 
 # --instructions—
 
-Code editor มีโครงร่างของ component ที่เรียกว่า `ControlledInput` เพื่อสร้าง `input` element ที่มีการควบคุม `state` ขอ component ได้รับการเริ่มต้นด้วย `input` property ที่มี string ว่าง ค่านี้แสดงถึงข้อความที่ user พิมพ์ลงในช่อง `input`
+ใน code editor เราได้เขียนโครงของ component ชื่อ `ControlledInput` ไว้ให้แล้ว
+แล้วตอนนี้เราก็ได้เขียนค่าเริ่มต้นของ `state` ไว้ให้แล้วด้วย ซึ่ง `state` เริ่มตต้นของ component นี้จะมี property `input` ที่มีค่าเป็น string ว่าง โดย property นี้จะเก็บข้อมูลที่ user พิมพ์เข้าไปใน input
 
-ขั้นแรก สร้าง method ชื่อ `handleChange()` ที่มีพารามิเตอร์ชื่อ `event` เมื่อเรียก method จะได้รับ `event` object ที่มี string ข้อความจาก `input` element คุณสามารถเข้าถึง string นี้ด้วย `event.target.value` ภายใน method อัปเดต`input` property ของ `state` ของ componentด้วย string ใหม่นี้
+ขั้นแรก ให้สร้าง method ชื่อ `handleChange()` ที่รับพารามิเตอร์ชื่อ `event` 
+เมื่อเรียกใช้ method ก็จะส่ง `event` object ที่มี string ที่เป็นข้อความที่พิมพ์ลงใน `input` element 
+คุณจะอ่านค่าของ string นี้ได้จาก `event.target.value` ภายใน method นี้
+แล้วให้เอา string ที่ user พิมพ์เข้ามานี้ไปอัปเดต property `input` ของ `state` ใน component นี้
 
-ใน`render` method ให้สร้าง `input` element เหนือ "h4" tag เพิ่ม `value` attribute ซึ่งเท่ากับ `input` property ของ `state` ของ component จากนั้นเพิ่ม`onChange()` event handler ที่ตั้งค่าเป็น `handleChange()` method
+ใน method `render` ให้สร้าง `input` element ไว้บน `h4` โดยให้มี attribute ชื่อ `value` เป็นค่าของ property `input` ของ `state` 
+แล้วให้ event handler ที่ชื่อ `onChange` โดยให้เรียกใช้ method `handleChange()`
 
-เมื่อคุณพิมพ์ลงในช่องใส่ข้อความ ข้อความนั้นจะถูกประมวลผลโดย `handleChange()` method ตั้งค่าเป็น `input` property ใน local `state` และแสดงผลเป็นค่าในกล่อง 'input' บนหน้าเพจ component `state` เป็นแหล่งข้อมูลเพียงแหล่งเดียวเกี่ยวกับข้อมูลที่ป้อนเข้า
+เมื่อคุณพิมพ์ข้อความลงใน `input` box ข้อความนั้นจะถูกประมวลผลโดย method `handleChange()` แล้วจะเก็บค่าลงใน property `input` ของ `state` และจะเอาค่านั้นไปแสดงผลใน `input` box บนหน้าเว็บ 
+`state` ของ component นี้ก็จะเป็นที่เดียวเท่านั้นที่เก็บข้อมูล โดยไม่สนว่าข้อมูลจะมาจากไหน
 
-สุดท้ายแต่ไม่ท้ายสุด อย่าลืมเพิ่มการ binding ที่จำเป็นใน constructor
+แล้วก็ อย่าลืมเพิ่มการ binding ที่จำเป็นใน constructor ด้วย
 
 # --hints--
 
-`ControlledInput` ควรจะต้อง return `div` element ที่มี `input` และ a `p` tag ข้างใน
+`ControlledInput` ต้องคืนค่าเป็น `div` ที่มี `input` และ `p` อยู่ข้างใน
 
 ```js
 assert(
@@ -40,7 +49,7 @@ assert(
 );
 ```
 
-สถานะของ `ControlledInput` ควรจะต้องเริ่มต้นด้วย `input` property ที่มีค่าเป็น string ว่าง
+state เริ่มต้นของ `ControlledInput` ต้องมี property `input` ที่มีค่าเป็น string ว่าง
 
 ```js
 assert.strictEqual(
@@ -49,7 +58,7 @@ assert.strictEqual(
 );
 ```
 
-การพิมพ์กรอกข้อมูลใน input element ควรจะต้องอัปเดตสถานะและค่าของ input แล้วจึงแสดงผลสถานะที่คุณพิมพ์เข้ามาใน `p` element
+การพิมพ์ข้อมูลใน input element จะต้องอัปเดต `state` และค่าของ property `input` แล้วจึงแสดงค่าของ `state` นี้ใน `p` element
 
 ```js
 async () => {
@@ -98,19 +107,19 @@ class ControlledInput extends React.Component {
     this.state = {
       input: ''
     };
-    // Change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้
 
-    // Change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้
   }
-  // Change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้
 
-  // Change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้
   render() {
     return (
       <div>
-        { /* Change code below this line */}
+        { /* แก้ไขโค้ดใต้บรรทัดนี้ */}
 
-        { /* Change code above this line */}
+        { /* แก้ไขโค้ดเหนือบรรทัดนี้ */}
         <h4>Controlled Input:</h4>
         <p>{this.state.input}</p>
       </div>
