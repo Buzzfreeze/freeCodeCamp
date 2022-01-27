@@ -8,7 +8,7 @@ dashedName: target-the-children-of-an-element-using-jquery
 
 # --description--
 
-ถ้าเรามี HTML element ที่ซ้อนกันอยู่ เราจะเรียก element ตัวข้างในว่าเป็น <dfn>children</dfn> (ลูก) ของ element ตัวนอก 
+ถ้าเรามี HTML element ที่ซ้อนกันอยู่ เราจะเรียก element ตัวข้างในว่าเป็น <dfn>children</dfn> (ลูก) ของ element ตัวนอก  
 เช่น `button` ทั้งสามปุ่มที่มีข้อความว่า `#target1` `#target2` และ `#target3` จะเป็น children ของ `<div class="well" id="left-well">` ทั้งหมดเลย
 
 jQuery มีฟังก์ชันที่เรียกว่า `children()` ที่จะทำให้คุณเข้าถึง children ของ element ที่เลือกได้

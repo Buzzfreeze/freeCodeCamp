@@ -2,38 +2,39 @@
 id: bad87fee1348bd9aedf08814
 title: Add Rounded Corners with border-radius
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cbZm2hg'
+videoUrl: "https://scrimba.com/c/cbZm2hg"
 forumTopicId: 16649
 dashedName: add-rounded-corners-with-border-radius
 ---
 
 # --description--
 
-ภาพแมวของคุณมีมุมที่แหลม พวกเราสามารถทำให้มันมนขึ้นได้ด้วย CSS property ที่ชื่อ `border-radius`
+ตอนนี้กรอบของรูปภาพคุณจะดูคมเกินไปหน่อย เรามาลองเพิ่มความโค้งให้กรอบนี้โดยใช้ CSS property ที่ชื่อ `border-radius` กัน
 
 # --instructions--
 
-คุณสามารถระบุ `border-radius` ด้วย pixels
-จงกำหนดให้ภาพแมวของคุณมี `border-radius` เท่ากับ `10px`
+คุณสามารถระบุค่าของ `border-radius` เป็น pixel ได้
 
-**Note:** challenge นี้เปิดโอกาสให้สามารถใช้ solution ที่หลากหลายได้. ยกตัวอย่างเช่น คุณอาจจะเพิ่ม `border-radius` ให้เป็น `.thick-green-border` class หรือ `.smaller-image` class.
+ให้กำหนดให้รูปน้องแมวของคุณมี `border-radius` เป็น `10px`
+
+**Note:** คุณจะเพิ่ม property `border-radius` ในคลาส `.thick-green-border` หรือคลาส `.smaller-image` ก็ได้
 
 # --hints--
 
-ภาพของคุณควรมี class `thick-green-border`.
+รูปน้องแมวต้องมีคลาส `thick-green-border` ด้วย
 
 ```js
-assert($('img').hasClass('thick-green-border'));
+assert($("img").hasClass("thick-green-border"));
 ```
 
-ภาพของคุณควรมี border radius เท่ากับ `10px`.
+รูปน้องแมวต้องมี `border-radius` เป็น `10px`
 
 ```js
 assert(
-  $('img').css('border-top-left-radius') === '10px' &&
-    $('img').css('border-top-right-radius') === '10px' &&
-    $('img').css('border-bottom-left-radius') === '10px' &&
-    $('img').css('border-bottom-right-radius') === '10px',
+  $("img").css("border-top-left-radius") === "10px" &&
+    $("img").css("border-top-right-radius") === "10px" &&
+    $("img").css("border-bottom-left-radius") === "10px" &&
+    $("img").css("border-bottom-right-radius") === "10px"
 );
 ```
 
@@ -42,7 +43,11 @@ assert(
 ## --seed-contents--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   .red-text {
     color: red;
@@ -109,7 +114,11 @@ assert(
 # --solutions--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   .red-text {
     color: red;

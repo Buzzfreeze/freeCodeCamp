@@ -2,23 +2,24 @@
 id: bad87eee1348bd9aede07836
 title: Set the id of an Element
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cN6MEc2'
+videoUrl: "https://scrimba.com/c/cN6MEc2"
 forumTopicId: 18279
 dashedName: set-the-id-of-an-element
 ---
 
 # --description--
 
-นอกเหนือจาก class, แต่ละ HTML element ยังสามารถมี `id` attribute ได้อันหนึ่ง
+นอกเหนือจากคลาสแล้ว HTML element ยังสามารถมี `id` attribute ได้ด้วย
 
-ประโยชน์ของการใช้ `id` attributes มีอยู่หลายข้อ
-หนึ่งในนั้นคือ คุณสามารถใช้ `id` เพื่อตกแต่งแค่ element เดียวได้และหลังจากนี้คุณจะได้เรียนวิธีที่คุณใช้มันเพื่อเลือกและปรับเปลี่ยน element ที่กำหนดด้วย JavaScript.
+ประโยชน์ของการใช้ `id` attribute มีอยู่หลายข้อ
+ซึ่งหนึ่งในนั้นคือ คุณสามารถใช้ `id` เพื่อแต่ง style แค่ element เดียวได้ แล้วหลังจากนี้คุณจะได้เรียนวิธีใช้ `id` เพื่อเลือกและปรับเปลี่ยน element โดยใช้ JavaScript
 
-`id` attributes ควรจะแตกต่างกัน
-Browsers ไม่ได้บังคับให้ทำ แต่มันเป็นข้อตกลงทั่วไปซึ่งเป็น best practice
-ดังนั้น จงอย่ากำหนดให้ element มากกว่า 1 ตัวมี `id` attribute อันเเดียวกัน
+`id` ของแต่ละ element ต้องไม่ซ้ำกัน
+เบราว์เซอร์ไม่ได้บังคับเงื่อนไขนี้ ต่อให้คุณใช้ `id` ซ้ำกัน เว็บของคุณก็ยังจะเปิดได้
+แต่การไม่ใช้ `id` ซ้ำกันถือเป็นมาตรฐานที่ดีในการเขียนโค้ดที่เราควรทำตาม
+ดังนั้น อย่าให้ `id` ของ element ซ้ำกัน
 
-นี่คือตัวอย่างในการกำหนดให้ `h2` element มี id ชื่อ `cat-photo-app`:
+ลองดูตัวอย่างการกำหนดให้ `h2` element โดยมี id เป็น `cat-photo-app`:
 
 ```html
 <h2 id="cat-photo-app"></h2>
@@ -26,14 +27,14 @@ Browsers ไม่ได้บังคับให้ทำ แต่มัน�
 
 # --instructions--
 
-จงกำหนดให้ `form` element มี id เป็น `cat-photo-form`.
+จงกำหนดให้ `form` element มี id เป็น `cat-photo-form`
 
 # --hints--
 
-`form` element ควรมี id เป็น `cat-photo-form`.
+`form` element ต้องมี id เป็น `cat-photo-form`
 
 ```js
-assert($('form').attr('id') === 'cat-photo-form');
+assert($("form").attr("id") === "cat-photo-form");
 ```
 
 # --seed--
@@ -41,7 +42,11 @@ assert($('form').attr('id') === 'cat-photo-form');
 ## --seed-contents--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   .red-text {
     color: red;
@@ -113,7 +118,11 @@ assert($('form').attr('id') === 'cat-photo-form');
 # --solutions--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   .red-text {
     color: red;
@@ -170,7 +179,10 @@ assert($('form').attr('id') === 'cat-photo-form');
     </ol>
   </div>
 
-  <form action="https://freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
+  <form
+    action="https://freecatphotoapp.com/submit-cat-photo"
+    id="cat-photo-form"
+  >
     <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
     <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
     <label><input type="checkbox" name="personality" checked /> Loving</label>

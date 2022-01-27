@@ -12,30 +12,30 @@ dashedName: falsy-bouncer
 
 ใน JavaScript จะถือว่า `false`, `null`, `0`, `""`, `undefined` และ `NaN` เป็น falsy value
 
-คำแนะนำ: พยายามแปลง element แต่ละ9y;ให้เป็น Boolean
+คำแนะนำ: พยายามแปลง element แต่ละตัวให้เป็น Boolean
 
 
 # --hints--
 
-การเรียกใช้ฟังก์ชัน `bouncer([7, "ate", "", false, 9])` ต้องได้ค่าเป็น `[7, "ate", 9]`.
+การเรียกใช้ฟังก์ชัน `bouncer([7, "ate", "", false, 9])` ต้องได้ค่าเป็น `[7, "ate", 9]`
 
 ```js
 assert.deepEqual(bouncer([7, 'ate', '', false, 9]), [7, 'ate', 9]);
 ```
 
-การเรียกใช้ฟังก์ชัน `bouncer(["a", "b", "c"])` ต้องได้ค่าเป็น `["a", "b", "c"]`.
+การเรียกใช้ฟังก์ชัน `bouncer(["a", "b", "c"])` ต้องได้ค่าเป็น `["a", "b", "c"]`
 
 ```js
 assert.deepEqual(bouncer(['a', 'b', 'c']), ['a', 'b', 'c']);
 ```
 
-การเรียกใช้ฟังก์ชัน `bouncer([false, null, 0, NaN, undefined, ""])` ต้องได้ค่าเป็น `[]`.
+การเรียกใช้ฟังก์ชัน `bouncer([false, null, 0, NaN, undefined, ""])` ต้องได้ค่าเป็น `[]`
 
 ```js
 assert.deepEqual(bouncer([false, null, 0, NaN, undefined, '']), []);
 ```
 
-การเรียกใช้ฟังก์ชัน `bouncer([null, NaN, 1, 2, undefined])` ต้องได้ค่าเป็น `[1, 2]`.
+การเรียกใช้ฟังก์ชัน `bouncer([null, NaN, 1, 2, undefined])` ต้องได้ค่าเป็น `[1, 2]`
 
 ```js
 assert.deepEqual(bouncer([null, NaN, 1, 2, undefined]), [1, 2]);

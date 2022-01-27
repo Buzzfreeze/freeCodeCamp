@@ -9,8 +9,8 @@ dashedName: understanding-boolean-values
 
 # --description--
 
-ข้อมูลอีกประเภทนึง คือ <dfn>Boolean</dfn> 
-Boolean มีค่าแค่สองแบบคือ `true` หรือ `false` ซึ่งก็เป็นเหมือนสวิตช์นั่นแหละ โดย `true` คือ เปิด และ `false` คือ ปิด ทั้งสองสถานะนี้แยกจากกัน
+ข้อมูลอีกประเภทนึง คือ <dfn>Boolean</dfn>  
+Boolean มีค่าแค่สองแบบคือ `true` หรือ `false` ซึ่งก็เป็นเหมือนสวิตช์นั่นแหละ โดย `true` คือ เปิด และ `false` คือ ปิด 
 
 **หมายเหตุ:** เวลาเขียนค่า boolean จะไม่เขียนไว้ใน quote และสตริง string ในรูปแบบ `"true"` กับ `"false"` จะไม่ใช่ boolean และก็ไม่มีได้ความหมายพิเศษใดๆ ใน JavaScript
 

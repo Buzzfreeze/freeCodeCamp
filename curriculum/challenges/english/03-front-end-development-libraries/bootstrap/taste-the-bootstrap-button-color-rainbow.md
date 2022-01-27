@@ -28,7 +28,7 @@ assert($('button').hasClass('btn-primary'));
 assert($('button').hasClass('btn-block') && $('button').hasClass('btn'));
 ```
 
-อย่าลืม tag ปิดสำหรับทุกๆ `button` element
+อย่าลืมแท็กปิดของ `button` element ทุกตัวด้วย
 
 ```js
 assert(

@@ -14,6 +14,7 @@ dashedName: use-provider-to-connect-redux-to-react
 
 React Redux มี API ตัวเล็กๆที่เด่นๆสองตัว คือ `Provider` และ `connect` เราจะเรียนเรื่อง `connect` กันในแบบทดสอบหน้า 
 ส่วน `Provider` นั้นเป็น wrapper component ของ React Redux ครอบแอป React ของคุณ 
+
 ตัว `Provider` นี้ช่วยให้คุณเข้าถึงฟังก์ชัน Redux `store` และ `dispatch` ได้จากทุกส่วนใน component ของคุณ 
 `Provider` นั้นรับ prop สองตัว คือ Redux store และ child component ของแอปของคุณ 
 การใช้ `Provider` สำหรับ component `App` จะเขียนโค้ดได้แบบนี้:
@@ -27,6 +28,7 @@ React Redux มี API ตัวเล็กๆที่เด่นๆสอง
 # --instructions--
 
 ตอนนี้ code editor จะแสดงโค้ด Redux และ React ที่เขียนในแบบบทดสอบที่ผ่านมา โดยจะมี Redux store, action และ component `DisplayMessages` และก็จะมี component `AppWrapper` เพิ่มมาที่ด้านล่างด้วย
+
 ให้ใช้ `AppWrapper` นี้เรนเดอร์ `Provider` จาก `ReactRedux` และส่ง Redux store ไปเป็น prop แล้วให้เรนเดอร์ `DisplayMessages` เป็น child ของของ `Provider` นี้ 
 ถ้าทำเสร็จแล้ว คุณควรเห็น React component ของคุณเรนเดอร์ไปยังหน้าเพจ
 

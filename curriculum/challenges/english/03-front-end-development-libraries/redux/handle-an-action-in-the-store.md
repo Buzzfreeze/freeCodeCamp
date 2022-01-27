@@ -10,7 +10,9 @@ dashedName: handle-an-action-in-the-store
 
 หลังจากสร้างและส่ง action เข้าไปแล้ว Redux store จำเป็นต้องรู้ว่าจะทำอะไรต่อ 
 เราจะใช้ฟังก์ชัน `reducer` เพื่อเปลี่ยนแปลง state ตาม action ที่เข้ามา 
+
 `reducer` จะรับ argument สองตัวคือ `state` และ `action` และจะต้องคืนค่าออกมาเป็น `state` ตัวใหม่เสมอ 
+
 สิ่งที่สำคัญมากๆคือ เราต้องใช้ reducer แค่นี้ **เท่านั้น** การใช้ reducer ต้องไม่ก่อให้เกิด side-effect และต้องไม่เรียกใช้ API endpoint และจะต้องไม่ทำให้เกิดผลกระทบอะไรที่เราไม่คาดคิด
 reducer จะต้องเป็นแค่ pure function ที่รับ state และ action เข้ามาแล้วคืนค่าเป็น state ใหม่เท่านั้น 
 (Pure function คือฟังก์ชันที่จะไม่อ่าน ไม่ใช้ ไม่แก้ไข ค่าหรือตัวแปรอะไรที่อยู่นอก scope ของตัวเอง)
@@ -23,9 +25,11 @@ reducer จะต้องเป็นแค่ pure function ที่รับ
 # --instructions--
 
 ใน code editor จะมีโค้ดของแบบทดสอบที่แล้ว และโค้ดของฟังก์ชัน `reducer` ให้บางส่วน
+
 ให้เขียนฟังก์ชัน `reducer` โดยใช้เงื่อนไขนี้:
 ถ้าฟังก์ชันได้รับ action ที่มี type เป็น `'LOGIN'` ให้คืนค่าเป็น state object ที่มี property `login` เป็น `true` 
 ถ้าได้รับ action ที่มี type เป็นค่าอื่นให้คืนค่าออกมาเป็น `state` ปัจจุบัน 
+
 จะเห็นว่าเราได้ส่ง `state` ปัจจุบันและ `action` เข้าไปใน reducer ให้แล้ว คุณจึงเข้าถึง type ของ action ได้โดยตรงด้วย `action.type`
 
 # --hints--

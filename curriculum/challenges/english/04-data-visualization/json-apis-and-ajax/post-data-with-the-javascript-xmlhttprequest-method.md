@@ -8,10 +8,12 @@ dashedName: post-data-with-the-javascript-xmlhttprequest-method
 
 # --description--
 
-จากตัวอย่างที่ผ่านมาเราจะสามารรับ data จาก external resource ได้ และเราสามารถส่ง data ไปให้ external resource ได้เช่นกันเหมือนกับ resource supports AJAX requests 
+ในตัวอย่างที่ผ่านๆมาก เราได้รับข้อมูลจากแหล่งข้อมูลภายนอกไปแล้ว 
+คราวนี้เรามาลองส่งข้อมูลไปให้แหล่งข้อมูลภายนอกกันบ้างดีกว่า
 
-JavaScript's `XMLHttpRequest` method iใช้เพื่อ post data ไปที่ server
-ดังตัวอย่างด้านล่าง
+method `XMLHttpRequest` ของ JavaScript ใช้เพื่อก็จะใช้เพื่อส่ง (post) ข้อมูลไปให้ server ได้
+
+ลองดูตัวอย่าง:
 
 ```js
 const xhr = new XMLHttpRequest();
@@ -27,29 +29,35 @@ const body = JSON.stringify({ userName: userName, suffix: ' loves cats!' });
 xhr.send(body);
 ```
 
- `open` method จะเรื่มต้น request `POST` เพื่อให้ URL ของ external resource และใช้ `true` Boolean เพื่อทำให้เป็น asynchronous โดย `setRequestHeader` method จะใช้กำหนดค่าให้กับ HTTP request ทีประกอบด้วย information เกี่ยวกับ sender และ request Iซึ่งจะถูกเรียกใช้หลัง `open` method แต่ก่อน `send` method parameters 2 ตัว เป็นเป็นชื้อส่วนหัว header และค่าที่กำหยดให้กับส่วน body ของส่วนหัว จากนั้น `onreadystatechange` event listener จะเปลี่ยน state ของ request โดยที่ `readyState` ของ `4` หมายถึงดำเนินการเสร็จแล้วและ`status` ของ`201` หมายถึง request สำเร็จ โดยที่ document ของ HTML สามารถอัพเดทได้ สุดท้าย `send` method จะส่ง request ไปกับค่าของ `body` ที่มี `userName` key ถูกกำหนดจาก user ใน `input` 
+ method `open` จะสร้าง `POST` request เพื่อส่งไปยัง URL ของแหล่งข้อมูลภายนอกที่เราระบุ และเราระบุ `true` ด้วยเพื่อทำให้การส่งข้อมูลครั้งนี้เป็นแบบ asynchronous 
+ method `setRequestHeader` จะใช้เพื่อกำหนด header ของ HTTP request โดยในส่วนของ header นี้จะเป็นส่วนที่เก็บข้อมูลของผู้ส่ง และข้อมูลของตัว request เอง 
+ การตั้งค่า header นี้ต้องเรียกใช้หลังจากที่เรียกใช้ method `open` แล้ว และต้องเรียกใช้ก่อนที่จะใช้ method `send` 
+ parameter 2 ตัว ที่เราส่งไปให้ `setRequestHeader` นี้คือชื่อของ header (`Content-Type`) และข้อมูลใน header นั้น (`application/json; charset=UTF-8'`) 
+ จากนั้น `onreadystatechange` event listener ใช้เพื่อจัดการการเปลี่ยนสถานะของ request โดยการที่ `readyState` มีค่าเป็น `4` แปลว่าการดำเนินการเสร็จแล้ว และการที่ `status` มีค่าเป็น `201` แปลว่า request ที่ส่งไปสำเร็จแล้ว
+ สุดท้าย method `send` จะส่ง request ไปกับค่าของ `body` โดยมีคีย์ `userName` ที่มีค่ามาจาก `input` ของผู้ใช้
 
 # --instructions--
 
-สร้าง `POST` request ให้กับ API endpoint จากนั้นพิมพ์ชื่อของงคุณใน input และคลิก `Send Message`
-AJAX function ควรจะถูกแทนที่ด้วย `Reply from Server will be here.` พร้อมกับ data จาก server
-Format จะแสดงข้อความเป็นชื่อของคุฯพร้อมกับ text ` loves cats`.
+ให้ส่ง `POST` request ไปยัง API endpoint เมื่อสร้างเสร็จให้พิมพ์ชื่อของคุณในกล่อง input และคลิก `Send Message`
+เมื่อการส่ง request เสร็จสิ้น AJAX function ของคุณต้องเปลี่ยนข้อความ `Reply from Server will be here.` เป็นข้อมูลที่ได้จาก server
+โดยข้อความที่แสดงต้องอยู่ในรูป `ชื่อของคุณ loves cats`
+(ถ้าไม่สามารถแสดงผลข้อความที่ตรงกับที่เราระบุได้ ให้ลองดู response จาก server ใหม่ แล้วดูว่าจะใช้ส่วนไหนของ response มาสร้างข้อความนี้ได้บ้าง)
 
 # --hints--
 
-ควรสร้าง`XMLHttpRequest` ขึ้นมาใหม่
+ต้องสร้าง `XMLHttpRequest` ตัวใหม่
 
 ```js
 assert(code.match(/new\s+?XMLHttpRequest\(\s*?\)/g));
 ```
 
-ควรใช้ `open` method เพื่อเริ่ม `POST` request ให้กับ server
+ต้องใช้ method `open` เพื่อเตรียมการส่ง `POST` request ไปยัง server
 
 ```js
 assert(code.match(/\.open\(\s*?('|")POST\1\s*?,\s*?url\s*?,\s*?true\s*?\)/g));
 ```
 
-ควรใช้ `setRequestHeader` 
+ต้องใช้ method `setRequestHeader` 
 
 ```js
 assert(
@@ -59,13 +67,13 @@ assert(
 );
 ```
 
-ควรจะมี `onreadystatechange` event เพื่อกำหนดให้กับ function
+ต้องมี `onreadystatechange` event handler โดยมีค่าเป็น function ที่ใช้จัดการสถานะของ request
 
 ```js
 assert(code.match(/\.onreadystatechange\s*?=/g));
 ```
 
-ควรมี element ใน class `message` และเปลี่ยน `textContent` ไปเป็น `userName loves cats`
+ต้องมี element ที่มี class เป็น `message` และเปลี่ยน `textContent` ไปเป็น `ชื่อของคุณ loves cats`
 
 ```js
 assert(
@@ -75,7 +83,7 @@ assert(
 );
 ```
 
-ควรใช้ `send` method
+ต้องใช้ method `send`
 
 ```js
 assert(code.match(/\.send\(\s*?body\s*?\)/g));
@@ -92,10 +100,10 @@ assert(code.match(/\.send\(\s*?body\s*?\)/g));
 
       const userName = document.getElementById('name').value;
       const url = 'https://jsonplaceholder.typicode.com/posts';
-      // Add your code below this line
+      // เขียนโค้ดใต้บรรทัดนี้
 
 
-      // Add your code above this line
+      // เขียนโค้ดเหนือบรรทัดนี้
     };
   });
 </script>
@@ -150,7 +158,7 @@ assert(code.match(/\.send\(\s*?body\s*?\)/g));
 
       const userName = document.getElementById('name').value;
       const url = 'https://jsonplaceholder.typicode.com/posts';
-      // Add your code below this line
+      // เขียนโค้ดใต้บรรทัดนี้
       const xhr = new XMLHttpRequest();
       xhr.open('POST', url, true);
       xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
@@ -162,7 +170,7 @@ assert(code.match(/\.send\(\s*?body\s*?\)/g));
      };
      const body = JSON.stringify({ userName: userName, suffix: ' loves cats!' });
      xhr.send(body);
-      // Add your code above this line
+      // เขียนโค้ดเหนือบรรทัดนี้
     };
   });
 </script>

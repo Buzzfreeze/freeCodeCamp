@@ -20,7 +20,7 @@ dashedName: house-our-page-within-a-bootstrap-container-fluid-div
 assert($('div').hasClass('container-fluid'));
 ```
 
-อย่าลืม tag ปิดของ `div` ด้วย
+อย่าลืมแท็กปิดของ `div` ด้วย
 
 ```js
 assert(

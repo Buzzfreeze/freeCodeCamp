@@ -9,39 +9,40 @@ dashedName: nest-many-elements-within-a-single-div-element
 
 # --description--
 
-`div` element หรือที่เรียกว่า division element, เป็น container ทั่วไปที่ใช้เก็บ element อื่น
+`div` element หรือที่เรียกว่า division element เป็น element ที่ใช้เพื่อครอบ element อื่น
 
-`div` element อาจจะเป็น HTML element ที่ถูกใช้บ่อยที่สุด
+`div` เป็น HTML element ที่ถูกใช้บ่อยที่สุด
 
-เช่นเดียวกับ non-self-closing element อันอื่น ๆ คุณสามารถเริ่ม `div` element ด้วย `<div>` และปิดมันด้วย `</div>` ที่อยู่ในอีกบรรทัด
+โดย `div` element จะต้องถูกเปิดด้วย `<div>` และปิดด้วย `</div>` 
 
 # --instructions--
 
-จงเก็บลิงค์ "Things cats love" และ "Top 3 things cats hate" ไว้ใน `div` element อันหนึ่ง
+ให้ซ้อนลิสต์ "Things cats love" และ "Top 3 things cats hate" ไว้ใน `div` element ตัวเดียวกัน
 
-Hint: จงใส่แท็กเปิด `div` tag ด้านบน "Things cats love" `p` element และแท็กปิด `div` tag ต่อจาก `ol` tag เพื่อที่ลิสต์ทั้งสองอันจะอยู่ภายใน `div` อันหนึ่ง
+Hint: ใส่แท็กเปิดของ `div` เหนือ `p` element ที่มีข้อความข้างในเป็น "Things cats love" และใส่แท็กปิดของ `div` ไว้ใต้แท็กปิดของ `ol` 
+เพื่อทำให้ลิสต์ทั้งสองตัวอยู่ใน `div` อันเดียวกัน
 
 # --hints--
 
-`p` elements ควรถูกเก็บไว้ใน `div` element.
+`p` elements ต้องซ้อนอยู่ใน `div` element
 
 ```js
 assert($('div').children('p').length > 1);
 ```
 
-`ul` element ควรถูกใส่ไว้ใน `div` element.
+`ul` element ต้องซ้อนอยู่ใน `div` element
 
 ```js
 assert($('div').children('ul').length > 0);
 ```
 
-`ol` element ควรถูกใส่ไว้ใน `div` element.
+`ol` element ต้องซ้อนอยู่ใน `div` element
 
 ```js
 assert($('div').children('ol').length > 0);
 ```
 
-`div` element ควรมีแท็กปิด
+ต้องมีแท็กปิดของ `div` element ด้วย
 
 ```js
 assert(code.match(/<\/div>/g) && code.match(/<\/div>/g).length === code.match(/<div>/g).length);

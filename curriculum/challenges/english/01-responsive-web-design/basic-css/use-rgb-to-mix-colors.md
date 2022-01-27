@@ -2,30 +2,30 @@
 id: bad82fee1348bd9aedf08721
 title: Use RGB to Mix Colors
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cm24JU6'
+videoUrl: "https://scrimba.com/c/cm24JU6"
 forumTopicId: 18368
 dashedName: use-rgb-to-mix-colors
 ---
 
 # --description--
 
-เช่นเดียวกับ hex code, คุณสามารถผสมสีที่เป็น RGB ได้โดยใช้ combination ของค่าที่ต่างกัน
+คุณสามารถผสมสีที่เป็น RGB ตามค่าของแต่สีที่ระบุได้ เหมือนกับ hex code เลย
 
 # --instructions--
 
-จงแทนที่ hex codes ใน `style` element ด้วยค่า RGB ที่ถูกต้อง
+ให้เปลี่ยน hex code ใน `style` element เป็นค่า RGB ที่ถูกต้อง
 
 <table class='table table-striped'><tbody><tr><th>Color</th><th>RGB</th></tr><tr><td>Blue</td><td><code>rgb(0, 0, 255)</code></td></tr><tr><td>Red</td><td><code>rgb(255, 0, 0)</code></td></tr><tr><td>Orchid</td><td><code>rgb(218, 112, 214)</code></td></tr><tr><td>Sienna</td><td><code>rgb(160, 82, 45)</code></td></tr></tbody></table>
 
 # --hints--
 
-`h1` element ที่มีข้อความว่า `I am red!` ควรมี `color` แดง
+`h1` ที่มีข้อความว่า `I am red!` ต้องมี `color` เป็นสีแดง
 
 ```js
-assert($('.red-text').css('color') === 'rgb(255, 0, 0)');
+assert($(".red-text").css("color") === "rgb(255, 0, 0)");
 ```
 
-คุณควรใช้ `rgb` สำหรับสีแดง
+ต้องใช้ `rgb` สำหรับสีแดง
 
 ```js
 assert(
@@ -35,13 +35,13 @@ assert(
 );
 ```
 
-`h1` element ที่มีข้อความว่า `I am orchid!` ควรมีสี `color` ดอกกล้วยไม้
+`h1` ที่มีข้อความว่า `I am orchid!` ต้องมี `color` เป็นสี orchid
 
 ```js
-assert($('.orchid-text').css('color') === 'rgb(218, 112, 214)');
+assert($(".orchid-text").css("color") === "rgb(218, 112, 214)");
 ```
 
-คุณควรใช้ `rgb` สำหรับสีดอกกล้วยไม้
+ต้องใช้ `rgb` สำหรับสี orchid
 
 ```js
 assert(
@@ -51,13 +51,13 @@ assert(
 );
 ```
 
-`h1` element ที่มีข้อความว่า `I am blue!` ควรมีสี `color` น้ำเงิน
+`h1` ที่มีข้อความว่า `I am blue!` ต้องมี `color` เป็นสีน้ำเงิน
 
 ```js
-assert($('.blue-text').css('color') === 'rgb(0, 0, 255)');
+assert($(".blue-text").css("color") === "rgb(0, 0, 255)");
 ```
 
-คุณควรใช้`rgb` สำหรับสีน้ำเงิน
+ต้องใช้ `rgb` สำหรับสีน้ำเงิน
 
 ```js
 assert(
@@ -67,13 +67,13 @@ assert(
 );
 ```
 
-`h1` element ที่มีข้อความว่า `I am sienna!` ควรมีสี `color` sienna.
+`h1` ที่มีข้อความว่า `I am sienna!` ต้องมี `color` เป็นสี sienna
 
 ```js
-assert($('.sienna-text').css('color') === 'rgb(160, 82, 45)');
+assert($(".sienna-text").css("color") === "rgb(160, 82, 45)");
 ```
 
-คุณควรใช้ `rgb` สำหรับค่าสี sienna
+ต้องใช้ `rgb` สำหรับสี sienna
 
 ```js
 assert(
@@ -126,7 +126,7 @@ assert(
     color: rgb(160, 82, 45);
   }
   .blue-text {
-    color:rgb(0, 0, 255);
+    color: rgb(0, 0, 255);
   }
 </style>
 

@@ -18,19 +18,19 @@ dashedName: title-case-a-sentence
 assert(typeof titleCase("I'm a little tea pot") === 'string');
 ```
 
-การเรียกใช้ฟังก์ชัน `titleCase("I'm a little tea pot")` ต้องได้ค่าเป็น `I'm A Little Tea Pot`.
+การเรียกใช้ฟังก์ชัน `titleCase("I'm a little tea pot")` ต้องได้ค่าเป็น `I'm A Little Tea Pot`
 
 ```js
 assert(titleCase("I'm a little tea pot") === "I'm A Little Tea Pot");
 ```
 
-การเรียกใช้ฟังก์ชัน `titleCase("sHoRt AnD sToUt")` ต้องได้ค่าเป็น `Short And Stout`.
+การเรียกใช้ฟังก์ชัน `titleCase("sHoRt AnD sToUt")` ต้องได้ค่าเป็น `Short And Stout`
 
 ```js
 assert(titleCase('sHoRt AnD sToUt') === 'Short And Stout');
 ```
 
-การเรียกใช้ฟังก์ชัน `titleCase("HERE IS MY HANDLE HERE IS MY SPOUT")` ต้องได้ค่าเป็น `Here Is My Handle Here Is My Spout`.
+การเรียกใช้ฟังก์ชัน `titleCase("HERE IS MY HANDLE HERE IS MY SPOUT")` ต้องได้ค่าเป็น `Here Is My Handle Here Is My Spout`
 
 ```js
 assert(

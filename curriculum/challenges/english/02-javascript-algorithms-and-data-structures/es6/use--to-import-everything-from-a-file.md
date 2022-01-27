@@ -8,15 +8,15 @@ dashedName: use--to-import-everything-from-a-file
 
 # --description--
 
-สมมติว่าคุณมีไฟล์และต้องการ import ข้อมูลทั้งหมดเข้ามาในไฟล์ปัจจุบัน จะทำได้โดยใช้ syntax `import * as`
+สมมติว่าคุณมีไฟล์และต้องการ import ข้อมูลทั้งหมดเข้ามาในไฟล์ปัจจุบัน จะทำได้โดยใช้ syntax `import * as`  
 ลองดูตัวอย่างการ import ข้อมูลจากไฟล์ `math_functions.js` ที่อยู่ในโฟล์เดอร์เดียวกัน:
 
 ```js
 import * as myMathModule from "./math_functions.js";
 ```
 
-คำสั่ง `import` ด้านบน จะสร้าง object ที่ชื่อว่า `myMathModule` ซึ่ง `myMathModule` นี้เป็นแค่ชื่อตัวแปร เราสามารถจะตั้งเป็นชื่ออะไรก็ได้
-object `myMathModule` นี้จะมีข้อมูลทุกอย่างที่ export จาก `math_functions.js` มา ทำให้เราเข้าถึงฟังก์ชันต่างๆ ของ `math_functions.js` ได้จาก `myMathModule` เหมือนกับเวลาที่เราเข้าถึง property ของ object ทั่วๆไป 
+คำสั่ง `import` ด้านบน จะสร้าง object ที่ชื่อว่า `myMathModule` ซึ่ง `myMathModule` นี้เป็นแค่ชื่อตัวแปร เราสามารถจะตั้งเป็นชื่ออะไรก็ได้  
+object `myMathModule` นี้จะมีข้อมูลทุกอย่างที่ export จาก `math_functions.js` มา ทำให้เราเข้าถึงฟังก์ชันต่างๆ ของ `math_functions.js` ได้จาก `myMathModule` เหมือนกับเวลาที่เราเข้าถึง property ของ object ทั่วๆไป   
 เราจะใช้ฟังก์ชัน `add` และ `subtract` ที่ import เข้ามา ได้ในรูปแบบนี้:
 
 ```js

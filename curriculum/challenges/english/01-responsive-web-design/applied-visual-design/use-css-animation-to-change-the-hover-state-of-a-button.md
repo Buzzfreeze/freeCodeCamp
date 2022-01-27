@@ -9,9 +9,9 @@ dashedName: use-css-animation-to-change-the-hover-state-of-a-button
 
 # --description--
 
-คุณสามารถใช้ CSS `@keyframes` เพื่อเปลี่ยนสีของปุ่มเมื่อมันอยู่ใน hover state
+คุณสามารถใช้ CSS `@keyframes` เพื่อเปลี่ยนสีของปุ่มเมื่อเอาเมาส์ไปชี้ได้ด้วย
 
-นี่คือตัวอย่างของการเปลี่ยนความกว้างของภาพเมื่อมันถูก hover:
+ลองดูตัวอย่างการเปลี่ยนความกว้างของภาพ เมื่อเอาเมาส์ไปชี้:
 
 ```html
 <style>
@@ -35,20 +35,20 @@ dashedName: use-css-animation-to-change-the-hover-state-of-a-button
 
 # --instructions--
 
-จงจำไว้ว่า `ms` มาจากคำว่า milliseconds
+โดย `ms` ย่อมาจาก millisecond (1/1000 วินาที)
 
-จงใช้ CSS `@keyframes` เพื่อเปลี่ยน `background-color` ของ `button` element ให้มันเป็น `#4791d0` เมื่อผู้ใช้ hovers มัน
-`@keyframes` rule ควรได้รับค่า `100%`.
+ให้ใช้ CSS `@keyframes` เพื่อเปลี่ยน `background-color` ของ `button` element ให้เป็น `#4791d0` เมื่อผู้ใช้นำเมาส์ไปชี้
+`@keyframes` rule ต้องมีค่าแค่ที่ `100%` เท่านั้น
 
 # --hints--
 
-@keyframes rule ควรใช้สีพื้นหลังของ `animation-name`
+@keyframes rule ต้องใช้ `animation-name` ที่ชื่อ `background-color`
 
 ```js
 assert(code.match(/@keyframes\s+?background-color\s*?{/g));
 ```
 
-มันควรมี rule เพิ่มมาอีกหนึ่ง rule อยู่ภายใต้ `@keyframes` ที่จะเปลี่ยน `background-color` เป็น `#4791d0` ที่ 100%
+ใน `@keyframes` ต้องมี rule เดียวเท่านั้น โดยอยู่ที่ 100% ซึ่งจะเปลี่ยนค่าของ `background-color` เป็น `#4791d0`
 
 ```js
 assert(code.match(/100%\s*?{\s*?background-color:\s*?#4791d0;\s*?}/gi));

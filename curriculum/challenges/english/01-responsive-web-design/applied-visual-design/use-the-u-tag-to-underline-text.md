@@ -2,36 +2,37 @@
 id: 587d781a367417b2b2512ab8
 title: Use the u Tag to Underline Text
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cN6aQCL'
+videoUrl: "https://scrimba.com/c/cN6aQCL"
 forumTopicId: 301082
 dashedName: use-the-u-tag-to-underline-text
 ---
 
 # --description--
 
-เพื่อที่จะขีดเส้นใต้ข้อความ คุณสามารถใช้ `u` tag
-แท็กนี้มักใช้เพื่อแสดงให้เห็นว่าข้อความส่วนนั้นมีความสำคัญ
-เมื่อใช้ `u` tag browser จะใช้ CSS ที่เขียนว่า `text-decoration: underline;` กับ element.
+เราสามารถใช้แท็ก `u` เพื่อขีดเส้นใต้ข้อความได้
+
+แท็กนี้มักใช้เพื่อแสดงให้เห็นว่าข้อความนั้นมีความสำคัญ
+เมื่อเราใช้แท็ก `u` เบราว์เซอร์จะทำให้ CSS ของ element นั้นเป็น `text-decoration: underline;`
 
 # --instructions--
 
-จงคลุม `u` tag ที่ข้อความ `Ph.D. students` เท่านั้น
+ให้ใช้แท็ก `u` ครอบข้อความ `Ph.D. students`
 
-**Note:** พยายามไม่ใช้ `u` tag หากมันสามารถทำให้เกิดความสับสนระหว่างมันกับลิงค์ได้
-Anchor tags ก็มีค่าเริ่มต้นเป็น underlined formatting
+**Note:** ให้ระวังในการใช้แท็ก `u` เพราะบางครั้งอาจทำให้ผู้ใช้สับสนได้ว่าเป็นลิงก์หรือว่าเป็นแค่การเน้นข้อความ
+เพราะว่าข้อความในแท็ก `a` ก็จะถูกขีดเส้นใต้เหมือนกัน
 
 # --hints--
 
-โค้ดของคุณควรเพิ่ม `u` tag ให้กับ markup
+ต้องใช้แท็ก `u` ในโค้ด
 
 ```js
-assert($('u').length === 1);
+assert($("u").length === 1);
 ```
 
-`u` tag ควรจะมีข้อความ `Ph.D. students` อยู่ข้างใน
+ในแท็ก `u` ต้องมีข้อความ `Ph.D. students` อยู่ข้างใน
 
 ```js
-assert($('u').text() === 'Ph.D. students');
+assert($("u").text() === "Ph.D. students");
 ```
 
 # --seed--
@@ -69,11 +70,24 @@ assert($('u').text() === 'Ph.D. students');
   <div class="cardContent">
     <div class="cardText">
       <h4>Google</h4>
-      <p>Google was founded by Larry Page and Sergey Brin while they were Ph.D. students at <strong>Stanford University</strong>.</p>
+      <p>
+        Google was founded by Larry Page and Sergey Brin while they were Ph.D.
+        students at <strong>Stanford University</strong>.
+      </p>
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
-      <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+      <a
+        href="https://en.wikipedia.org/wiki/Larry_Page"
+        target="_blank"
+        class="links"
+        >Larry Page</a
+      ><br /><br />
+      <a
+        href="https://en.wikipedia.org/wiki/Sergey_Brin"
+        target="_blank"
+        class="links"
+        >Sergey Brin</a
+      >
     </div>
   </div>
 </div>
@@ -112,11 +126,24 @@ assert($('u').text() === 'Ph.D. students');
   <div class="cardContent">
     <div class="cardText">
       <h4>Google</h4>
-      <p>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</p>
+      <p>
+        Google was founded by Larry Page and Sergey Brin while they were
+        <u>Ph.D. students</u> at <strong>Stanford University</strong>.
+      </p>
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
-      <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+      <a
+        href="https://en.wikipedia.org/wiki/Larry_Page"
+        target="_blank"
+        class="links"
+        >Larry Page</a
+      ><br /><br />
+      <a
+        href="https://en.wikipedia.org/wiki/Sergey_Brin"
+        target="_blank"
+        class="links"
+        >Sergey Brin</a
+      >
     </div>
   </div>
 </div>

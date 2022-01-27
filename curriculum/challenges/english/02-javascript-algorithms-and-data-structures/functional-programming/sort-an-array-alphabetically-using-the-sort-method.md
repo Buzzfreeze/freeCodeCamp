@@ -34,7 +34,7 @@ reverseAlpha(['l', 'h', 'z', 'b', 's']);
 
 ตัวอย่างนี้จะคืนค่าเป็น `['z', 's', 'l', 'h', 'b']`
 
-การใช้ `sort` โดยไม่ระบุ argument จะเรียงตามค่า Unicode ของตัวอักษรนั้น ซึ่งอาจจะทำให้ค่าที่ได้ผิดได้ เราจึงแนะนำให้ใช้ callback function เพื่อระบุเงื่อนไขในการเรียง element ใน array 
+การใช้ `sort` โดยไม่ระบุ argument จะเรียงตามค่า Unicode ของตัวอักษรนั้น ซึ่งอาจจะทำให้ค่าที่ได้ผิดได้ เราจึงแนะนำให้ใช้ callback function เพื่อระบุเงื่อนไขในการเรียง element ใน array  
 เมื่อ callback function (มักเรียกว่า `compareFunction`) ถูกส่งเข้าไปใน method sort ก็จะทำให้ element ใน array ถูกเรียงตามผลลัพธ์ของ `compareFunction`
 เช่น: 
 
@@ -54,7 +54,7 @@ reverseAlpha(['l', 'h', 'z', 'b', 's']);
 assert(code.match(/\.sort/g));
 ```
 
-การเรียกใช้ฟังก์ชัน `alphabeticalOrder(["a", "d", "c", "a", "z", "g"])` ต้องได้ค่าเป็น `["a", "a", "c", "d", "g", "z"]`.
+การเรียกใช้ฟังก์ชัน `alphabeticalOrder(["a", "d", "c", "a", "z", "g"])` ต้องได้ค่าเป็น `["a", "a", "c", "d", "g", "z"]`
 
 ```js
 assert(
@@ -63,7 +63,7 @@ assert(
 );
 ```
 
-การเรียกใช้ฟังก์ชัน `alphabeticalOrder(["x", "h", "a", "m", "n", "m"])` ต้องได้ค่าเป็น `["a", "h", "m", "m", "n", "x"]`.
+การเรียกใช้ฟังก์ชัน `alphabeticalOrder(["x", "h", "a", "m", "n", "m"])` ต้องได้ค่าเป็น `["a", "h", "m", "m", "n", "x"]`
 
 ```js
 assert(
@@ -72,7 +72,7 @@ assert(
 );
 ```
 
-การเรียกใช้ฟังก์ชัน `alphabeticalOrder(["a", "a", "a", "a", "x", "t"])` ต้องได้ค่าเป็น `["a", "a", "a", "a", "t", "x"]`.
+การเรียกใช้ฟังก์ชัน `alphabeticalOrder(["a", "a", "a", "a", "x", "t"])` ต้องได้ค่าเป็น `["a", "a", "a", "a", "t", "x"]`
 
 ```js
 assert(

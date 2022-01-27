@@ -2,37 +2,37 @@
 id: 587d778e367417b2b2512aab
 title: Improve Readability with High Contrast Text
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cKb3nCq'
+videoUrl: "https://scrimba.com/c/cKb3nCq"
 forumTopicId: 301017
 dashedName: improve-readability-with-high-contrast-text
 ---
 
 # --description--
 
-contrast ที่น้อยระหว่างสีของพื้นหน้าและพิ้นหลังสามารถทำให้ข้อความนั้นยากที่จะอ่าน
-contrast ที่เพียงพอช่วยให้เนื้อหาของคุณอ่านง่ายขึ้น แต่ว่า "เพียง" ที่ว่าคืออะไรกันแน่?
+การที่ของสีข้อความและสีของพื้นหลังมีคอนทราสต์ต่ำ จะทำให้ข้อความอ่านยาก
+การมีคอนทราสต์ที่เหมาะสมจะทำให้ตัวหนังสืออ่านได้ง่ายขึ้น แต่ว่า แค่ถึงจะเรียกว่า "เหมาะสม" ล่ะ?
 
-Web Content Accessibility Guidelines (WCAG) แนะนำว่า contrast ratio ของข้อความทั่วไปควรมีค่าอย่างน้อย 4.5 to 1
-อัตราส่วนนี้ถูกคำนวณโดยเปรียบเทียบ relative luminance values ของ 2 สี
-โดยมีค่าตั้งแต่ 1:1 สำหรับสีที่เหมือนกัน
+Web Content Accessibility Guidelines (WCAG) แนะนำว่าอัตราส่วนของคอนทราสต์ (contrast ratio) ของข้อความทั่วไป ควรมีค่าอย่างน้อย 4.5 ต่อ 1
+อัตราส่วนนี้จะคำนวนจากความสว่างของทั้ง 2 สี
+โดยสีที่เหมือนกันจะมีอัตราส่วนนี้เป็น 1:1
 
 # --instructions--
 
-ตัวเลือกของ Camper Cat สำหรับโพสต์ล่าสุดในบล็อกของเขาซึ่งเป็นข้อความสีเทาอ่อนบนพื้นหลังสีขาวมี contrast ratio แค่ 1.5:1 มันทำให้ยากที่จะอ่าน
-จงเปลี่ยน `color` ของข้อความจากสีเทาตอนนี้ (`#D3D3D3`) ให้เป็นสีเทาที่เข้มขึ้น (`#636363`) เพื่อช่วยให้ contrast ratio มีค่า 6:1.
+นาย Camper Cat ได้เลือกตัวอักษรสีเทาอ่อน บนพื้นหลังสีขาว ทำให้อัตราส่วนของคอนทราสต์เป็นแค่ 1.5:1 ซึ่งทำให้อ่านยากมาก
+ให้เปลี่ยน `color` ของข้อความจากสีเทาอ่อน (`#D3D3D3`) ให้เป็นสีเทาที่เข้มขึ้น (`#636363`) ซึ่งจะทำให้อัตราส่วนจองคอนทราสต์กลายเป็น 6:1
 
 # --hints--
 
-โค้ดของคุณควรเปลี่ยน `color` ของข้อความสำหรับ `body` ไปเป็นเทาที่เข้มกว่า
+ต้องเปลี่ยน `color` ของข้อความใน `body` ไปเป็นสีเทาเข้ม
 
 ```js
-assert($('body').css('color') == 'rgb(99, 99, 99)');
+assert($("body").css("color") == "rgb(99, 99, 99)");
 ```
 
-คุณไม่ควรเปลี่ยน `background-color` ของ `body`.
+ต้องไม่เปลี่ยน `background-color` ของ `body`
 
 ```js
-assert($('body').css('background-color') == 'rgb(255, 255, 255)');
+assert($("body").css("background-color") == "rgb(255, 255, 255)");
 ```
 
 # --seed--
@@ -55,14 +55,17 @@ assert($('body').css('background-color') == 'rgb(255, 255, 255)');
   <article>
     <h2>A Word on the Recent Catnip Doping Scandal</h2>
     <p>
-      The influence that catnip has on feline behavior is well-documented, and its use as an herbal supplement in
-      competitive ninja circles remains controversial. Once again, the debate to ban the substance is brought to the
-      public's attention after the high-profile win of Kittytron, a long-time proponent and user of the green stuff, at
-      the Claw of Fury tournament.
+      The influence that catnip has on feline behavior is well-documented, and
+      its use as an herbal supplement in competitive ninja circles remains
+      controversial. Once again, the debate to ban the substance is brought to
+      the public's attention after the high-profile win of Kittytron, a
+      long-time proponent and user of the green stuff, at the Claw of Fury
+      tournament.
     </p>
     <p>
-      As I've stated in the past, I firmly believe a true ninja's skills must come from within, with no external
-      influences. My own catnip use shall continue as purely recreational.
+      As I've stated in the past, I firmly believe a true ninja's skills must
+      come from within, with no external influences. My own catnip use shall
+      continue as purely recreational.
     </p>
   </article>
 </body>
@@ -86,14 +89,17 @@ assert($('body').css('background-color') == 'rgb(255, 255, 255)');
   <article>
     <h2>A Word on the Recent Catnip Doping Scandal</h2>
     <p>
-      The influence that catnip has on feline behavior is well-documented, and its use as an herbal supplement in
-      competitive ninja circles remains controversial. Once again, the debate to ban the substance is brought to the
-      public's attention after the high-profile win of Kittytron, a long-time proponent and user of the green stuff, at
-      the Claw of Fury tournament.
+      The influence that catnip has on feline behavior is well-documented, and
+      its use as an herbal supplement in competitive ninja circles remains
+      controversial. Once again, the debate to ban the substance is brought to
+      the public's attention after the high-profile win of Kittytron, a
+      long-time proponent and user of the green stuff, at the Claw of Fury
+      tournament.
     </p>
     <p>
-      As I've stated in the past, I firmly believe a true ninja's skills must come from within, with no external
-      influences. My own catnip use shall continue as purely recreational.
+      As I've stated in the past, I firmly believe a true ninja's skills must
+      come from within, with no external influences. My own catnip use shall
+      continue as purely recreational.
     </p>
   </article>
 </body>

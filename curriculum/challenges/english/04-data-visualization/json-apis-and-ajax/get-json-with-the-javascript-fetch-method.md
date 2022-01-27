@@ -8,9 +8,9 @@ dashedName: get-json-with-the-javascript-fetch-method
 
 # --description--
 
-วิธีที่จะ request external data คือเรียกใช้ JavaScript `fetch()` method ซึ่งมันจะมีค่าเท่ากับ `XMLHttpRequest`แต่ syntax ง่ายกว่า
+มีอีกวิธีที่เราจะใช้เพื่อส่ง request ไปดึงข้อมูลจากภายนอกได้ คือเรียกใช้ method `fetch()` ของ JavaScript ซึ่งจะทำงานเหมือนกับ `XMLHttpRequest` แต่ syntax จะง่ายกว่า
 
-การใช้ GET request to `/json/cats.json`
+ตัวอย่างการส่ง GET request ไปยัง `/json/cats.json`
 
 ```js
 
@@ -22,28 +22,30 @@ fetch('/json/cats.json')
 
 ```
 
-หลังจากที่ดู code
-บรรทัดแรกจะทำการ request ดังนั้น `fetch(URL)` เหมือนกับ `GET` request ให้กับ specific URL โดนที่ method นี้จะ returns Promise
+ลองดูรายละเอียดของโค้ดตัวอย่างนี้ทีละส่วน
 
-หลังจาก Promise ถูก returned ถ้า request สำเร็จ จากนั้น `then` method จะถูก executed เพื่อเปลี่ยนไปเป็น JSON format
+ในบรรทัดแรกจะเป็นการสร้าง request การ `fetch(URL)` ก็จะส่ง `GET` request ไปยัง URL ที่เราระบุ และ method นี้จะคืนค่ากลับมาเป็น Promise
 
-`then` method สามารถ returns Promise ให้กับค่าที่อยู่ถัดจาก `then` method argument ลำดับที่สองของ `then` เป็นมีค่าเป็น JSON object 
+เมื่อได้ Promise มาแล้ว ถ้า request สำเร็จ จากนั้น method `then` จะทำงาน เพื่อเปลี่ยนข้อความที่ได้รับกลับมา (response) ไปเป็น JSON 
 
-ให้เลือก element ที่จะใช้รับค่า data โดยใช้ `document.getElementById()` จากนั้นแปลง HTML code ของ element โดย insert string ที่สร้างมาจาก JSON object ที่ได้จากการ return request
+จากนั้น method `then` ก็จะคืนค่ากลับมาเป็น Promise เหมือนกัน ทำให้ method `then` ตัวต่อไปทำงาน โดย argument ของ `then` ตัวที่สองนี้จะเป็น JSON object แล้ว
+
+สุดท้ายจะเป็นการเลือก element ที่จะแสดงข้อมูล โดยใช้ `document.getElementById()` 
+จากนั้นจะเปลี่ยน HTML ของ element ที่เลือก โดยการเพิ่ม string ที่แปลงมาจาก JSON object ที่ได้จากการการส่ง request ลงไป
 
 # --instructions--
 
-ให้สร้างและส่ง `GET` request ใน freeCodeCamp Cat Photo API โดยใช้ `fetch` method แทน `XMLHttpRequest`.
+ให้สร้างและส่ง `GET` request ไปยัง Cat Photo API โดยใช้ method `fetch` แทน `XMLHttpRequest`
 
 # --hints--
 
-ครใช้ `GET` request กับ `fetch`
+ต้องส่ง `GET` request โดยใช้ method `fetch`
 
 ```js
 assert(code.match(/fetch\s*\(\s*('|")\/json\/cats\.json\1\s*\)/g));
 ```
 
-ควรใช้ `then` เพื่อเปลี่ยน response ให้ JSON
+ต้องใช้ `then` เพื่อเปลี่ยน response ให้เป็น JSON
 
 ```js
 assert(
@@ -53,13 +55,13 @@ assert(
 );
 ```
 
-ควรใช้ `then` เพื่อเปลี่ยน data เป็น JSON 
+ต้องใช้ `then` ในการรับข้อมูลที่เปลี่ยนเป็น JSON จาก `then` ตัวก่อนหน้า
 
 ```js
 assert(__helpers.removeWhiteSpace(code).match(/\.then\(\(?\w+\)?=>{[^}]*}\)/g));
 ```
 
-ควรใช้ element กับ id `message` และเปลี่ยน inner HTML ไปเป็น string ของ JSON data
+ต้องดึง element ที่มี id เป็น `message` มา และเปลี่ยน inner HTML ของ elemtn นั้นไปเป็น string ที่แปลงมาจากข้อมูล JSON ที่ได้รับมา
 
 ```js
 assert(
@@ -77,10 +79,10 @@ assert(
 <script>
   document.addEventListener('DOMContentLoaded',function(){
     document.getElementById('getMessage').onclick= () => {
-      // Add your code below this line
+      // เขียนโค้ดใต้บรรทัดนี้
 
 
-      // Add your code above this line
+      // เขียนโค้ดเหนือบรรทัดนี้
     };
   });
 </script>

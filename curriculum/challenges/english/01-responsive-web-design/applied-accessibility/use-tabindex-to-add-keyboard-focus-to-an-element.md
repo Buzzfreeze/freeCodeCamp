@@ -2,48 +2,52 @@
 id: 587d7790367417b2b2512ab0
 title: Use tabindex to Add Keyboard Focus to an Element
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cmzMDHW'
+videoUrl: "https://scrimba.com/c/cmzMDHW"
 forumTopicId: 301027
 dashedName: use-tabindex-to-add-keyboard-focus-to-an-element
 ---
 
 # --description--
 
-HTML `tabindex` attribute มี 3 ฟังก์ชั่นที่แตกต่างกันซึ่งเกี่ยวข้องกับ element ที่ keyboard สนใจ
-เมื่อมันอยู่ใน tag, มันจะบอกว่าอะไรที่ element สามารถโฟกัสได้
-ค่าของมันจะบอกพฤติกรรม (behavior) ของมัน ซึ่งจะเป็นจำนวนเต็มที่มีค่าเป็นจำนวนบวก (+) จำนวนลบ (-) หรือเลขศูนย์ (0)
+attribute `tabindex` ของ HTML จะมีการทำงานได้ 3 แบบตามการโฟกัสของ element
+โดย `tabindex` จะใช้บอกว่า element ไหนที่สามารถโฟกัสได้
+โดยค่าที่ระบุจะเป็นตัวกำหนดพฤติกรรม (behavior) ของ element โดยค่านี้ต้องเป็นจำนวนเต็ม ที่มีค่าเป็นจำนวนบวก (+) จำนวนลบ (-) หรือเลขศูนย์ (0)
 
-element ส่วนหนึ่งเช่นลิงค์และ form controls จะรับ keyboard focus โดยอัตโนมัติเมื่อผู้ใช้กดผ่านหน้านั้น ๆ
-มันจะอยู่ในลำดับเดียวกันกับ elements ที่โผล่มาใน HTML source markup (กดปุ่ม Tab Focus tag ที่มี Attribute tabindex)
-ฟังก์ชั่นที่เหมือนกันนี้สามารถส่งไปให้กับ elements ตัวอื่นได้ ยกตัวอย่างเช่น `div`, `span`, และ `p` โดยการวาง `tabindex="0"` attribute ไว้ที่พวกมัน
-นี่คือตัวอย่าง:
+element บางส่วน เช่น ลิงก์และ form control จะรองรับการใช้คีย์บอร์ดโฟกัสได้โดยอัตโนมัติเมื่อผู้ใช้กด tab ในหน้านั้น ๆ
+
+โดยลำดับของ element ที่ถูกโฟกัสจะเรียงตามในโค้ด HTML เลย โดยเรียงจากบนลงล่าง
+ซื่งเราสามารถทำให้ element ตัวอื่น (เช่น `div`, `span`, และ `p`) มีพฤติกรรมแบบนี้ได้โดยใช้ attribute `tabindex="0"`
+
+ลองดูตัวอย่าง:
 
 ```html
 <div tabindex="0">I need keyboard focus!</div>
 ```
 
-**Note:** ค่าลบของ `tabindex` บ่งบอกว่า element ตัวนั้นสามารถถูกโฟกัสได้ แต่ไม่สามารถเข้าถึงได้ด้วย keyboard
-วิธีนี้มักถูกใช้เพื่อนำความสนใจกลับไปที่เนื้อหา (เหมือนอย่างเช่น เมื่อ `div` ที่ถูกใช้เพื่อหน้าต่าง pop-up window ได้มีการเปิดใช้งาน) และมันไปไกลเกินกว่าสโคปของแบบฝึกหัดเหล่านี้
+**Note:** การที่มี `tabindex` เป็นลบ (ปกติจะใช้ -1)
+จะเป็นการบอกว่า เราสามารถโฟกัส element นั้นได้ แต่ไม่สามารถโฟกัสได้โดยการกด tab ที่ keyboard
+โดยเราจะใช้วิธีนี้เพื่อย้ายโฟกัสโดยใช้โค้ด (เช่น การเปิด pop-up ที่เป็น `div`) ซึ่งเรื่องนี้จะเกินเนื้อหาที่เราจะสอนในบทนี้ไปแล้ว
 
 # --instructions--
 
-ตัวอย่าง Camper Cat ได้สร้างแบบสำรวจขึ้นมาใหม่ 1 อันเพื่อเก็บข้อมูลเกี่ยวผู้ใช้ของเขา
-เขารู้ว่าช่องใส่ input นั้นจะมี keyboard focus โดยอัตโนมัติแต่เขาต้องการทำให้มั่นใจว่าผู้ใช้ของเขาที่ใช้ keyboard จะหยุดอ่านคำชี้แจงขณะที่กดผ่าน item ต่าง ๆ
-จงเพิ่ม `tabindex` attribute เข้าไปใน `p` tag และตั้งค่าให้ค่าของมันเป็น `0`
-Bonus - การใช้ `tabindex` ยังช่วยให้ CSS pseudo-class `:focus` สามารถทำงานบน `p` tag ได้อีกด้วย
+คราวนี้ นาย Camper Cat ได้สร้างแบบสำรวจขึ้นมาใหม่ เพื่อเก็บข้อมูลเกี่ยวกับผู้ใช้ของเขา
+เขารู้ว่าช่องใส่ input นั้นจะถูกโฟกัสโดยอัตโนมัติ แต่เขาอยากให้ผู้ใช้ของเขาที่ใช้คีย์บอร์ด จะหยุดอ่านคำชี้แจงขณะที่กด tab ผ่าน
+ให้เพิ่ม attribute `tabindex` เข้าไปในแท็ก `p` และกำหนดค่าเป็น `0`
+
+เพิ่มเติม: การใช้ `tabindex` ยังช่วยให้ CSS pseudo-class `:focus` สามารถทำงานกับแท็ก `p` ได้อีกด้วย
 
 # --hints--
 
-โค้ดของคุณควรเพิ่ม `tabindex` attribute เข้าไปใน `p` tag ที่เก็บคำชี้แจงของฟอร์มเอาไว้
+ต้องเพิ่ม attribute `tabindex` เข้าไปในแท็ก `p` ที่เก็บคำชี้แจงของฟอร์มเอาไว้
 
 ```js
-assert($('p').attr('tabindex'));
+assert($("p").attr("tabindex"));
 ```
 
-คุณควรกำหนดให้ `tabindex` attribute ของ `p` tag มีค่าเป็น 0
+attribute `tabindex` ของแท็ก `p` ต้องมีค่าเป็น 0
 
 ```js
-assert($('p').attr('tabindex') == '0');
+assert($("p").attr("tabindex") == "0");
 ```
 
 # --seed--
@@ -72,7 +76,12 @@ assert($('p').attr('tabindex') == '0');
         <legend>What level ninja are you?</legend>
         <input id="newbie" type="radio" name="levels" value="newbie" />
         <label for="newbie">Newbie Kitten</label><br />
-        <input id="intermediate" type="radio" name="levels" value="intermediate" />
+        <input
+          id="intermediate"
+          type="radio"
+          name="levels"
+          value="intermediate"
+        />
         <label for="intermediate">Developing Student</label><br />
         <input id="master" type="radio" name="levels" value="master" />
         <label for="master">9th Life Master</label>
@@ -82,7 +91,12 @@ assert($('p').attr('tabindex') == '0');
         <legend>Select your favorite weapons:</legend>
         <input id="stars" type="checkbox" name="weapons" value="stars" />
         <label for="stars">Throwing Stars</label><br />
-        <input id="nunchucks" type="checkbox" name="weapons" value="nunchucks" />
+        <input
+          id="nunchucks"
+          type="checkbox"
+          name="weapons"
+          value="nunchucks"
+        />
         <label for="nunchucks">Nunchucks</label><br />
         <input id="sai" type="checkbox" name="weapons" value="sai" />
         <label for="sai">Sai Set</label><br />
@@ -114,7 +128,9 @@ assert($('p').attr('tabindex') == '0');
   </header>
   <section>
     <form>
-      <p tabindex="0">Instructions: Fill in ALL your information then click <b>Submit</b></p>
+      <p tabindex="0">
+        Instructions: Fill in ALL your information then click <b>Submit</b>
+      </p>
 
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" /><br />
@@ -122,7 +138,12 @@ assert($('p').attr('tabindex') == '0');
         <legend>What level ninja are you?</legend>
         <input id="newbie" type="radio" name="levels" value="newbie" />
         <label for="newbie">Newbie Kitten</label><br />
-        <input id="intermediate" type="radio" name="levels" value="intermediate" />
+        <input
+          id="intermediate"
+          type="radio"
+          name="levels"
+          value="intermediate"
+        />
         <label for="intermediate">Developing Student</label><br />
         <input id="master" type="radio" name="levels" value="master" />
         <label for="master">9th Life Master</label>
@@ -132,7 +153,12 @@ assert($('p').attr('tabindex') == '0');
         <legend>Select your favorite weapons:</legend>
         <input id="stars" type="checkbox" name="weapons" value="stars" />
         <label for="stars">Throwing Stars</label><br />
-        <input id="nunchucks" type="checkbox" name="weapons" value="nunchucks" />
+        <input
+          id="nunchucks"
+          type="checkbox"
+          name="weapons"
+          value="nunchucks"
+        />
         <label for="nunchucks">Nunchucks</label><br />
         <input id="sai" type="checkbox" name="weapons" value="sai" />
         <label for="sai">Sai Set</label><br />

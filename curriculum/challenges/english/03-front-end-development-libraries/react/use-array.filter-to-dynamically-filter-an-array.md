@@ -9,8 +9,9 @@ dashedName: use-array-filter-to-dynamically-filter-an-array
 # --description--
 
 method `map` ของ array เป็นสิ่งที่จะใช้ประโยชน์ได้มากใน React 
-อีก method หนึ่งที่เกี่ยวข้องกับ `map` คือ `filter` ซึ่งจะกรองข้อมูลใน array ตามเงื่อนไข แล้วคืนค่าออกมาเป็น array ใหม่ 
+อีก method หนึ่งที่เกี่ยวข้องกับ `map` คือ `filter` ซึ่งจะกรองข้อมูลใน array ตามเงื่อนไข แล้วคืนค่าออกมาเป็น array ใหม่  
 เช่น ถ้าคุณมี array ของ user ที่ทุกคนมี property `online` ที่มีค่าเป็น `true` หรือ `false` ได้ 
+
 คุณจะกรองเฉพาะ user ที่ออนไลน์ได้โดยการเขียน:
 
 ```js
@@ -20,6 +21,7 @@ let onlineUsers = users.filter(user => user.online);
 # --instructions--
 
 ใน code editor `state` ของ `MyComponent` จะมีค่าเริ่มต้นเป็น array ของ user ซึ่ง user บางคนออนไลน์และบางคนไม่ได้ออนไลน์ 
+
 ให้กรอง array เพื่อให้คุณเห็นเฉพาะ user ที่ออนไลน์ 
 การกรองทำได้โดยการใช้ method `filter` ให้ได้ array ที่มีแค่ user ที่มี property `online` เป็น `true` 
 จากนั้น ให้ map array ที่กรองแล้วและคืนค่าออกมาเป็นรายการของ `li` ที่มีข้อความข้างในเป็น username ของ user และเก็บลงในตัวแปร `renderOnline`

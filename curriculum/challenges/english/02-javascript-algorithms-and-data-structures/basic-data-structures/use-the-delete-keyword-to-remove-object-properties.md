@@ -9,7 +9,7 @@ dashedName: use-the-delete-keyword-to-remove-object-properties
 # --description--
 
 ตอนนี้คุณรู้แล้วว่า object คืออะไร รวมถึงฟีเจอร์พื้นฐาน และข้อดีของ object 
-5hถจะให้สรุป object ก็คือที่เก็บ key-value มีความเป็นอิสระ และใช้งานง่ายในการจัดโครงสร้างข้อมูล ***และ*** จะใช้เวลาน้อยมากในการดึงข้อมูลขึ้นมา 
+ถ้าจะให้สรุป object ก็คือที่เก็บ key-value มีความเป็นอิสระ และใช้งานง่ายในการจัดโครงสร้างข้อมูล ***และ*** จะใช้เวลาน้อยมากในการดึงข้อมูลขึ้นมา 
 ในบทเรียนที่เหลือ เราจะอธิบายการใช้ object  เพื่อให้คุณใช้โครงสร้างข้อมูลนี้ในโปรแกรมของคุณ ได้อย่างสะดวกและถูกต้อง
 
 ในบทก่อนหน้านี้ เราได้เพิ่มและแก้ไขคู่ key-value ของ object ไปแล้ว ที่นี้เราจะมาดูว่าเราจะ *ลบ* คู่ key-value ออกจาก object ได้อย่างไร
@@ -22,7 +22,7 @@ delete foods.apples;
 
 # --instructions--
 
-จงใช้ keyword delete เพื่อลบ key `oranges`, `plums` และ `strawberries` จาก object `foods`
+จงใช้ keyword delete เพื่อลบ key `oranges`, `plums` และ `strawberries` ออกจาก object `foods`
 
 # --hints--
 

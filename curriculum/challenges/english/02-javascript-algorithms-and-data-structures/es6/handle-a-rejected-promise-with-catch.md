@@ -8,7 +8,7 @@ dashedName: handle-a-rejected-promise-with-catch
 
 # --description--
 
-เราจะใช้ method `catch` ใช้เมื่อ promise ของคุณถูก reject ซึ่งจะทำงานทันทีหลังจาก method `reject` ของ promise ถูกเรียกใช้ 
+เราจะใช้ method `catch` ใช้เมื่อ promise ของคุณถูก reject ซึ่งจะทำงานทันทีหลังจาก method `reject` ของ promise ถูกเรียกใช้  
 ตัวอย่างนี้จะแสดง syntax ของ method `catch`:
 
 ```js

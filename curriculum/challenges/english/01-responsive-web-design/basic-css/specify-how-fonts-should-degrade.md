@@ -2,19 +2,19 @@
 id: bad87fee1348bd9aedf08808
 title: Specify How Fonts Should Degrade
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cpVKBfQ'
+videoUrl: "https://scrimba.com/c/cpVKBfQ"
 forumTopicId: 18304
 dashedName: specify-how-fonts-should-degrade
 ---
 
 # --description--
 
-มีฟ้อนต์เริ่มต้นหลายตัวที่สามารถใช้งานได้ในทุก browser
-ฟ้อนต์พวกนี้เรียกว่า generic font family ซึ่ง `monospace`, `serif` และ `sans-serif` ก็เป็นหนึ่งในนั้น
+เบราว์เซอร์ทั่วไปจะมีฟอนต์พื้นฐาน ที่เราสามารถนำมาใช้ได้เลยโดยที่ไม่ต้องนำเข้า
+ฟอนต์พวกนี้เรียกว่า generic font family โดยจะมีฟอนต์เช่น `monospace`, `serif` และ `sans-serif` ฯลฯ
 
-เมื่อฟ้อนต์หนึ่งใช้งานไม่ได้ คุณสามารถบอก browser ให้ "degrade" ไปเป็นฟ้อนต์อื่น, ฟ้อนต์สำรอง
+ถ้าฟอนต์ตัวไหนใช้งานไม่ได้ คุณสามารถบอกเบราว์เซอร์ให้เปลี่ยนไปใช้ฟอนต์สำรองได้
 
-ยกตัวอย่างเช่น ถ้าคุณต้องการให้ element ใช้ `Helvetica` font, แต่ degrade ไปเป็น `sans-serif` font เมื่อ `Helvetica` ใช้งานไม่ได้, คุณสามารถระบุมันได้แบบนี้:
+เช่น ถ้าคุณจะเขียนให้ element ใช้ฟอนต์ `Helvetica` แต่จะให้เปลี่ยนไปใช้ฟอนต์ `sans-serif` แทน ถ้า `Helvetica` ใช้งานไม่ได้ คุณจะเขียนโค้ดได้แบบนี้:
 
 ```css
 p {
@@ -22,47 +22,51 @@ p {
 }
 ```
 
-ชื่อของ generic font family นั้นไม่ใช่ case-sensitive
-นอกจากนี้พวกมันยังไม่ต้องการ quotes เพราะมันเป็นคีย์เวิร์ดของ CSS
+และชื่อของ generic font family นั้นเป็นแบบ case-insensitive (จะใช้ตัวเล็กตัวใหญ่แบบไหนก็ได้)
+และยังไม่ต้องใช้ quote ครอบด้วย เพราะว่าฟอนต์นี้เป็นคีย์เวิร์ดของ CSS
 
 # --instructions--
 
-จงใช้ `monospace` font กับ `h2` element, เพื่อที่มันจะได้ฟ้อนต์สองอันแบบนี้ - `Lobster` และ `monospace`
+ให้เขียน CSS เพื่อให้ `h2` ใช้ฟอนต์ `monospace` เป็นฟอนต์สำรอง เมื่อเขียนแล้ว `h2` ก็จะมีฟอนต์สองตัวคือ `Lobster` และ `monospace`
 
-ในแบบฝึกหัดที่แล้ว, คุณได้นำเข้า `Lobster` font โดยใช้ `link` tag.
-ตอนนี้ จงคอมเมนต์คำสั่งนำเข้าของ `Lobster` font จาก Google Fonts เพื่อที่มันจะไม่ถูกใช้งานอีกต่อไป
-จงสังเกตการที่ `h2` element degrades ไปเป็น `monospace` font
+ในแบบฝึกหัดที่แล้ว คุณได้นำเข้าฟอนต์ `Lobster` โดยใช้แท็ก `link` ไปแล้ว
+ตอนนี้ ให้คอมเมนต์คำสั่งนำเข้าของฟอนต์ `Lobster` ของ Google Font เพื่อไม่ให้ฟอนต์นี้ใช้งานได้
+แล้วให้ลองดูว่า `h2` จะเปลี่ยนไปใช้ฟอนต์ `monospace` ได้อย่างไร
 
-**Note:** ถ้าคุณมี `Lobster` font ติดตั้งไว้ใน computer, คุณจะไม่เห็นการ degrade เพราะ browser ของคุณสามารถหาฟ้อนต์นั้นได้
+**Note:** ถ้าคอมพิวเตอร์ของคุณลงฟอนต์ `Lobster` ไว้ในเครื่อง คุณจะไม่เห็นการเปลี่ยนไปใช้ฟอนต์สำรอง เพราะว่าเบราว์เซอร์จะใช้ฟอนต์จากเครื่องของคุณแทน
 
 # --hints--
 
-h2 element ควรใช้ฟ้อนต์ `Lobster`.
+`h2` element ต้องใช้ฟอนต์ `Lobster`
 
 ```js
 assert(
-  $('h2')
-    .css('font-family')
-    .match(/^"?lobster/i),
+  $("h2")
+    .css("font-family")
+    .match(/^"?lobster/i)
 );
 ```
 
-h2 element ควร degrade ไปเป็นฟ้อนต์ `monospace` เมื่อ `Lobster` ไม่สามารถใช้งานได้
+`h2` element ต้องเปลี่ยนไปใช้ฟอนต์ `monospace` เมื่อ `Lobster` ใช้งานไม่ได้
 
 ```js
-assert(/\s*h2\s*\{\s*font-family\s*\:\s*(\'|"|)Lobster\1\s*,\s*monospace\s*;?\s*\}/gi.test(code));
+assert(
+  /\s*h2\s*\{\s*font-family\s*\:\s*(\'|"|)Lobster\1\s*,\s*monospace\s*;?\s*\}/gi.test(
+    code
+  )
+);
 ```
 
-คุณควรคอมเมนต์คำสั่งเรียกใช้ `Lobster` font จาก Google โดยการใช้ `<!--` ไว้ที่ข้างหน้า
+คุณควรคอมเมนต์คำสั่งที่ดึงฟอนต์ `Lobster` จาก Google โดยการใส่ `<!--` ไว้หน้าคำสั่ง
 
 ```js
-assert(new RegExp('<!--[^fc]', 'gi').test(code));
+assert(new RegExp("<!--[^fc]", "gi").test(code));
 ```
 
-คุณควรลงท้ายคอมเมนต์ของคุณด้วย `-->`.
+และต้องปิดคอมเมนต์ด้วยเครื่องหมาย `-->`
 
 ```js
-assert(new RegExp('[^fc]-->', 'gi').test(code));
+assert(new RegExp("[^fc]-->", "gi").test(code));
 ```
 
 # --seed--
@@ -70,7 +74,11 @@ assert(new RegExp('[^fc]-->', 'gi').test(code));
 ## --seed-contents--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   .red-text {
     color: red;

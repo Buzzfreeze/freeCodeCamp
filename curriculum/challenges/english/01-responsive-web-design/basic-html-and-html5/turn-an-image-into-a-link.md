@@ -9,10 +9,10 @@ dashedName: turn-an-image-into-a-link
 
 # --description--
 
-คุณสามารถทำให้ element กลายเป็นลิงค์ได้โดยการเก็บ element ไว้ใน `a` element
+เราสามารถเปลี่ยน element ให้กลายเป็นลิงค์ได้ด้วย!
+โดยเราต้องซ้อน element นั้นไว้ใน `a` element
 
-จงเก็บรูปของคุณไว้ใน `a` element
-นี่คือตัวอย่าง:
+ลองดูตัวอย่างการซ้อนรูปไว้ใน `a` element:
 
 ```html
 <a href="#"
@@ -22,32 +22,31 @@ dashedName: turn-an-image-into-a-link
 /></a>
 ```
 
-อย่าลืมที่จะใช้ `#` เป็น `href` property ของ `a` element เพื่อที่จะทำให้มันเป็น dead link
+ให้ทำให้ลิงก์นี้เป็น dead link โดยการทำให้ `href` ของ `a` element มีค่าเป็น `#` ด้วย
 
 # --instructions--
 
-จงวาง image element ที่มีไว้ใน `a` (_anchor_) element.
+ให้ซ้อน image element ที่มีอยู่ ไปไว้ใน `a` (_anchor_) element
 
 เมื่อคุณทำเสร็จแล้ว
-จงลอง hover บนรูปของคุณด้วย cursor
-normal pointer ของลูกศรคุณจะกลายเป็น link clicking pointer
-และตอนนี้รูปกลายเป็นลิงค์แล้ว
+ให้ลองเอาเมาส์ของคุณไปชี้ที่รูปน้องแมว คุณจะเห็นว่าเมาส์ของคุณเปลี่ยนเป็นรูปมือแล้ว
+ซึ่งแปลว่าตอนนี้รูปน้องแมวได้กลายเป็นลิงก์แล้ว!
 
 # --hints--
 
-`img` element อันหนึ่งควรถูกใส่ไว้ใน `a` element.
+`img` element ต้องซ้อนอยู่ใน `a` element
 
 ```js
 assert($('a').children('img').length > 0);
 ```
 
-`a` element ควรจะเป็น dead link ที่มี `href` attribute ที่มีค่าเป็น `#`.
+`a` element ต้องเป็น dead link ที่มี `href` attribute เป็น `#`
 
 ```js
 assert(new RegExp('#').test($('a').children('img').parent().attr('href')));
 ```
 
-`a` element แต่ละอันของคุณนั้นควรมีแท็กปิด
+`a` element ทุกตัวต้องมีแท็กปิด
 
 ```js
 assert(code.match(/<\/a>/g) && code.match(/<a/g) && code.match(/<\/a>/g).length === code.match(/<a/g).length);

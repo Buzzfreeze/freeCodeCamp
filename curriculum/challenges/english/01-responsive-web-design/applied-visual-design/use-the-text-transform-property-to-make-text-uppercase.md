@@ -2,36 +2,37 @@
 id: 587d781c367417b2b2512ac0
 title: Use the text-transform Property to Make Text Uppercase
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cvVZQSP'
+videoUrl: "https://scrimba.com/c/cvVZQSP"
 forumTopicId: 301081
 dashedName: use-the-text-transform-property-to-make-text-uppercase
 ---
 
 # --description--
 
-`text-transform` property ใน CSS มักถูกใช้เพื่อเปลี่ยนลักษณะของตัวอักษร
-มันเป็นวิธีที่สะดวกเพื่อทำให้มั่นใจว่าตัวอักษรที่ปรากฏบนหน้าเว็บนั้นถูกต้องโดยไม่ต้องเปลี่ยนเนื้อหาส่วนที่เป็นข้อความของ HTML element
+property `text-transform` ใน CSS มักถูกใช้เพื่อเปลี่ยนลักษณะของตัวอักษร
 
-ตารางข้างล่างนี้แสดงให้เห็นถึงความแตกต่างระหว่างค่า `text-transform` เมื่อใช้กับตัวอย่างข้อความ "Transform me" ด้านล่าง
+การใช้ property นี้จะทำให้เราเปลี่ยนข้อความที่แสดงผลได้ง่ายๆ โดยที่ไม่ต้องไปเปลี่ยนข้อความจริงๆ ที่อยู่ใน HTML
 
-<table class='table table-striped'><thead><tr><th>Value</th><th>Result</th></tr></thead><tbody><tr><td><code>lowercase</code></td><td>"transform me"</td></tr><tr><td><code>uppercase</code></td><td>"TRANSFORM ME"</td></tr><tr><td><code>capitalize</code></td><td>"Transform Me"</td></tr><tr><td><code>initial</code></td><td>Use the default value</td></tr><tr><td><code>inherit</code></td><td>Use the <code>text-transform</code> value from the parent element</td></tr><tr><td><code>none</code></td><td><strong>Default:</strong> Use the original text</td></tr></tbody></table>
+ลองดูตัวอยากการใช้ property `text-transform` กับข้อความ "Transform me" ด้านล่าง
+
+<table class='table table-striped'><thead><tr><th>ค่า</th><th>ผลลัพธ์</th></tr></thead><tbody><tr><td><code>lowercase</code></td><td>"transform me"</td></tr><tr><td><code>uppercase</code></td><td>"TRANSFORM ME"</td></tr><tr><td><code>capitalize</code></td><td>"Transform Me"</td></tr><tr><td><code>initial</code></td><td>ใช้ค่าเริ่มต้น</td></tr><tr><td><code>inherit</code></td><td>ใช้ค่าของ <code>text-transform</code> จาก parent element</td></tr><tr><td><code>none</code></td><td><strong>ค่าเริ่มต้น:</strong> ใช้ข้อความเดิมที่อยู่ใน HTML</td></tr></tbody></table>
 
 # --instructions--
 
-จงเปลี่ยนตัวอักษรของ `h4` ให้เป็นตัวพิมพ์ใหญ่โดยการใช้ `text-transform` property.
+ให้เปลี่ยนตัวอักษรของ `h4` ให้เป็นตัวพิมพ์ใหญ่โดยการใช้ property `text-transform`
 
 # --hints--
 
-ข้อความใน `h4` ควรเป็น `uppercase`.
+property `text-transform` ของ `h4` ต้องเป็น `uppercase`
 
 ```js
-assert($('h4').css('text-transform') === 'uppercase');
+assert($("h4").css("text-transform") === "uppercase");
 ```
 
-ข้อความดั้งเดิมของ h4 ไม่ควรจะถูกเปลี่ยน
+ต้องไม่เปลี่ยนข้อความเดิมที่อยู่ในแท็ก `h4`
 
 ```js
-assert($('h4').text() !== $('h4').text().toUpperCase());
+assert($("h4").text() !== $("h4").text().toUpperCase());
 ```
 
 # --seed--
@@ -78,14 +79,24 @@ assert($('h4').text() !== $('h4').text().toUpperCase());
       <hr />
       <p>
         <em
-          >Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at
-          <strong>Stanford University</strong>.</em
+          >Google was founded by Larry Page and Sergey Brin while they were
+          <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em
         >
       </p>
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br /><br />
-      <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+      <a
+        href="https://en.wikipedia.org/wiki/Larry_Page"
+        target="_blank"
+        class="links"
+        >Larry Page</a
+      ><br /><br />
+      <a
+        href="https://en.wikipedia.org/wiki/Sergey_Brin"
+        target="_blank"
+        class="links"
+        >Sergey Brin</a
+      >
     </div>
   </div>
 </div>
@@ -134,14 +145,24 @@ assert($('h4').text() !== $('h4').text().toUpperCase());
       <hr />
       <p>
         <em
-          >Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at
-          <strong>Stanford University</strong>.</em
+          >Google was founded by Larry Page and Sergey Brin while they were
+          <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em
         >
       </p>
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br /><br />
-      <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+      <a
+        href="https://en.wikipedia.org/wiki/Larry_Page"
+        target="_blank"
+        class="links"
+        >Larry Page</a
+      ><br /><br />
+      <a
+        href="https://en.wikipedia.org/wiki/Sergey_Brin"
+        target="_blank"
+        class="links"
+        >Sergey Brin</a
+      >
     </div>
   </div>
 </div>

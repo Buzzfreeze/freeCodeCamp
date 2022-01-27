@@ -40,7 +40,7 @@ assert(code.match(/\$\(document\)\.ready\(function\(\)\s?\{/g));
 assert(code.match(/.*\s*\}\);/g));
 ```
 
-และต้องยังมี tag ปิดของ `script` อยู่เหมือนเดิม
+และต้องยังมีแท็กปิดของ `script` อยู่เหมือนเดิม
 
 
 ```js

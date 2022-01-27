@@ -2,69 +2,75 @@
 id: 58c383d33e2e3259241f3076
 title: Use Attribute Selectors to Style Elements
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cnpymfJ'
+videoUrl: "https://scrimba.com/c/cnpymfJ"
 forumTopicId: 301092
 dashedName: use-attribute-selectors-to-style-elements
 ---
 
 # --description--
 
-คุณได้เพิ่ม `id` หรือ `class` attributes ให้กับ element ที่คุณต้องการจะตกแต่งมันโดยเฉพาะ
-ในส่วนของ id และ class selectors
-พวกนี้คือ CSS Selector อีกแบบที่คุณสามารถใช้เพื่อเลือกกลุ่มของ element เพื่อตกแต่งได้
-เราจะกลับมาใช้ CatPhotoApp อีกครั้งเพื่อฝึกการใช้ CSS Selectors
+คุณได้ลองเพิ่ม style ให้ element โดยใช้ `id` หรือ `class` ไปแล้ว
+ซึ่งรูปแบบที่คุณได้เขียนไปนั้น เราเรียกว่า id selector (`#`) และ class selector (`.`)
+โดย CSS ก็จะมี selector ตัวอื่นอีกที่จะช่วยให้เราเลือก element ที่จะตกแต่งได้ง่ายขึ้น
 
-สำหรับแบบฝึกหัดนี้, คุณจะได้ใช้ `[attr=value]` attribute selector เพื่อตกแต่ง checkbox ใน CatPhotoApp
-selector นี้จะจับคู่และตกแต่ง element ด้วยค่า attribute ตามที่ระบุ
-ยกตัวอย่างเช่น โค้ดด้านล่างจะเปลี่ยน margins ของทุก element ที่มี attribute `type` ที่เป็น `radio`: ตาม margin ดังตัวอย่างด้านล่าง
+เราจะกลับมาใช้ CatPhotoApp อีกครั้ง เพื่อฝึกการใช้ CSS Selector
+
+ในแบบฝึกหัดนี้ คุณจะได้ใช้ attribute selector ที่มีหน้าตาแบบนี้ `[attr=value]` เพื่อตกแต่ง checkbox ใน CatPhotoApp
+โดย selector นี้จะหา element ที่ตรงกับ attribute ที่เราระบุ และตกแต่ง element นั้น
+เช่น โค้ดด้านล่างจะเปลี่ยน margin ของทุก element ที่มี attribute `type` เป็น `radio`:
 
 ```css
-[type='radio'] {
+[type="radio"] {
   margin: 20px 0px 20px 0px;
 }
 ```
 
 # --instructions--
 
-โดยใช้ `type` attribute selector, ลองกำหนด checkboxes ใน CatPhotoApp ให้มี top margin เป็น 10px และมี bottom margin เป็น 15px
+ให้ใช้ attribute selector เลือก element โดยใช้ `type`
+เพื่อตกแต่ง checkbox ใน CatPhotoApp ให้มี `margin-top` เป็น `10px` และมี `margin-bottom` เป็น `15px`
 
 # --hints--
 
-`type` attribute selector ควรถูกใช้เพื่อเลือก checkboxes
-
-```js
-assert(code.match(/<style>[\s\S]*?\[\s*?type\s*?=\s*?("|')checkbox\1\s*?\]\s*?{[\s\S]*?}[\s\S]*?<\/style>/gi));
-```
-
-top margins ของ checkbox ควรมีค่าเป็น 10px
+ต้องใช้ attribute selector ที่เลือก element ตาม `type` เพื่อเลือก checkbox
 
 ```js
 assert(
-  (function () {
-    var count = 0;
-    $("[type='checkbox']").each(function () {
-      if ($(this).css('marginTop') === '10px') {
-        count++;
-      }
-    });
-    return count === 3;
-  })(),
+  code.match(
+    /<style>[\s\S]*?\[\s*?type\s*?=\s*?("|')checkbox\1\s*?\]\s*?{[\s\S]*?}[\s\S]*?<\/style>/gi
+  )
 );
 ```
 
-bottom margin ของ checkbox ควรมีค่าเป็น 15px
+`margin-top` ของ checkbox ต้องมีค่าเป็น `10px`
 
 ```js
 assert(
   (function () {
     var count = 0;
     $("[type='checkbox']").each(function () {
-      if ($(this).css('marginBottom') === '15px') {
+      if ($(this).css("marginTop") === "10px") {
         count++;
       }
     });
     return count === 3;
-  })(),
+  })()
+);
+```
+
+`margin-bottom` ของ checkbox ต้องมีค่าเป็น `15px`
+
+```js
+assert(
+  (function () {
+    var count = 0;
+    $("[type='checkbox']").each(function () {
+      if ($(this).css("marginBottom") === "15px") {
+        count++;
+      }
+    });
+    return count === 3;
+  })()
 );
 ```
 
@@ -73,7 +79,11 @@ assert(
 ## --seed-contents--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   .red-text {
     color: red;
@@ -130,7 +140,10 @@ assert(
     </ol>
   </div>
 
-  <form action="https://freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
+  <form
+    action="https://freecatphotoapp.com/submit-cat-photo"
+    id="cat-photo-form"
+  >
     <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
     <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
     <label><input type="checkbox" name="personality" checked /> Loving</label>
@@ -145,7 +158,11 @@ assert(
 # --solutions--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   .red-text {
     color: red;
@@ -174,7 +191,7 @@ assert(
   .silver-background {
     background-color: silver;
   }
-  [type='checkbox'] {
+  [type="checkbox"] {
     margin-top: 10px;
     margin-bottom: 15px;
   }
@@ -206,7 +223,10 @@ assert(
     </ol>
   </div>
 
-  <form action="https://freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
+  <form
+    action="https://freecatphotoapp.com/submit-cat-photo"
+    id="cat-photo-form"
+  >
     <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
     <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
     <label><input type="checkbox" name="personality" checked /> Loving</label>

@@ -2,22 +2,26 @@
 id: 587d778b367417b2b2512aa7
 title: Wrap Radio Buttons in a fieldset Element for Better Accessibility
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cVJVefw'
+videoUrl: "https://scrimba.com/c/cVJVefw"
 forumTopicId: 301030
 dashedName: wrap-radio-buttons-in-a-fieldset-element-for-better-accessibility
 ---
 
 # --description--
 
-หัวข้อเกี่ยวกับ form อันถัดไปจะกล่าวถึงเรื่องการเข้าถึงของ radio buttons
-แต่ละตัวเลือกนั้นจะมี `label` 1 อันกับ `for` attribute 1 อันผูกไว้กับ `id` ของ item ที่สัมพันธ์กันอย่างที่ทำพร้อมกับ challenge ก่อนหน้า
-เนื่องจาก radio buttons มักมาเป็นกลุ่มที่อนุญาตให้ผู้ใช้เลือกได้แค่ตัวเดียว จึงมีวิธีหนึ่งที่จะช่วยทำให้เห็นว่าตัวเลือกเหล่านี้เป็นเซ็ตเดียวกัน
+คราวนี้เราจะมาพูดถึง accessibility ของ radio button กัน
 
-`fieldset` tag จะต้องเก็บกลุ่มของ radio buttons ทั้งหมด
-สิ่งนี้มักใช้ `legend` tag 1 อันเพื่อให้คำอธิบายของกลุ่มตัวเลือกนั้น ซึ่ง screen readers จะอ่านแต่ละตัวเลือกที่อยู่ใน `fieldset` element.
+แต่ละตัวเลือกของ radio button นั้นจะมี `label` 1 ตัวที่มี attribute `for` ที่ผูกไว้กับ `id` ของ input เหมือนที่เราเรียนไปในบทเรียนที่แล้ว
+ปกติแล้ว เราจะให้ผู้ใช้เลือก radio button ได้แค่ตัวเดียว
+เราจึงต้องมีวิธีที่จะใช้ครอบตัวเลือกนี้ไว้ร่วมกัน
 
-`fieldset` wrapper และ `legend` tag นั้นไม่จำเป็นเมื่อแต่ละตัวเลือกมันอธิบายตัวมันเองอยู่แล้ว เช่นการเลือเพศ การใช้ `label` กับ `for` attribute ของแต่ละ radio button นั้นก็เพียงพอแล้ว
-นี่คือตัวอย่าง :
+เราจะใช้แท็ก `fieldset` ครอบตัวเลือกทั้งหมดของ radio button
+และเราก็จะใช้แท็ก `legend` เพื่อเก็บคำอธิบายของกลุ่มตัวเลือกนี้
+และ screen reader ก็จะอ่านตัวเลือกในแท็ก `fieldset`
+
+บางครั้งเราก็ไม่จำเป็นต้องใช้แท็ก `fieldset` หรือ `legend` ถ้าตัวเลือกแต่ละตัวเลือกสื่อความหายได้ชัดเจนอยู่แล้ว
+เช่น ในการเลือกเพศของผู้ใช้ เราจะใช้แค่ `label` กับ attribute `for` ของ radio button ก็เพียงพอแล้ว
+ลองดูตัวอย่าง:
 
 ```html
 <form>
@@ -35,41 +39,46 @@ dashedName: wrap-radio-buttons-in-a-fieldset-element-for-better-accessibility
 
 # --instructions--
 
-ตัวอย่าง Camper Cat ต้องการข้อมูลเกี่ยวกับระดับนินจาของผู้ใช้ของเขาเมื่อพวกเขาเหล่านั้นสมัครเข้าร่วมลิสต์อีเมล
-เขาได้เพิ่มเซ็ตของ radio buttons อันหนึ่งและเรียนรู้จากบทเรียนที่แล้วของเราในการใช้ `label` tags กับ `for` attributes กับแต่ละตัวเลือก
-อย่างไรก็ตาม โค้ดของเขายังต้องการความช่วยเหลือบางอย่าง
-จงเปลี่ยน `div` tag ที่เก็บ radio buttons ให้เป็น `fieldset` tag และจงเปลี่ยน `p` tag ข้างในมันให้เป็น `legend`.
+นาย Camper Cat ต้องการข้อมูลระดับนินจาของผู้ใช้ของเขา เมื่อผู้ใช้ของเขาลงทะเบียนอีเมล
+
+เขาได้เพิ่มรายการตัวเลือกของ radio button แล้ว และเขาได้เรียนเรื่องการใช้แท็ก `label` และ attribute `for` ในบทเรียนที่แล้วไปแล้ว
+แต่โค้ดของเขาก็ยังจะต้องปรับเพิ่มอยู่อีกหน่อย
+
+ให้เปลี่ยนแท็ก `div` ที่ครอบ radio button อยู่ ให้เป็นแท็ก `fieldset` และเปลี่ยนแท็ก `p` ข้างในให้เป็น `legend`
 
 # --hints--
 
-โค้ดของคุณควรมี `fieldset` tag ล้อมรอบเซ็ตของ radio button
+โค้ดของคุณต้องมีแท็ก `fieldset` ครอบ radio button อยู่
 
 ```js
-assert($('fieldset').length == 1);
+assert($("fieldset").length == 1);
 ```
 
-`fieldset` element ควรมีแท็กปิด
+ต้องมีแท็กปิดของ `fieldset`
 
 ```js
-assert(code.match(/<\/fieldset>/g) && code.match(/<\/fieldset>/g).length === code.match(/<fieldset>/g).length);
+assert(
+  code.match(/<\/fieldset>/g) &&
+    code.match(/<\/fieldset>/g).length === code.match(/<fieldset>/g).length
+);
 ```
 
-คุณควรมี `legend` tag เพื่อเก็บข้อความที่ถามระดับนินจาของผู้ใช้
+ต้องมีแท็ก `legend` เพื่อเก็บข้อความที่ถามระดับนินจาของผู้ใช้
 
 ```js
-assert($('legend').length == 1);
+assert($("legend").length == 1);
 ```
 
-โค้ดของคุณไม่ควรมี `div` tag ใด ๆ แล้ว
+ต้องไม่มีแท็ก `div` ในโค้ดแล้ว
 
 ```js
-assert($('div').length == 0);
+assert($("div").length == 0);
 ```
 
-โค้ดของคุณไม่ควรมี `p` tag ที่เก็บข้อความที่ถามระดับนินจากของผู้ใช้อีกต่อไปแล้ว
+ต้องไม่มีแท็ก `p` ที่เก็บข้อความที่ถามระดับนินจาของผู้ใช้ ในโค้ดแล้ว
 
 ```js
-assert($('p').length == 4);
+assert($("p").length == 4);
 ```
 
 # --seed--
@@ -92,7 +101,12 @@ assert($('p').length == 4);
         <p>What level ninja are you?</p>
         <input id="newbie" type="radio" name="levels" value="newbie" />
         <label for="newbie">Newbie Kitten</label><br />
-        <input id="intermediate" type="radio" name="levels" value="intermediate" />
+        <input
+          id="intermediate"
+          type="radio"
+          name="levels"
+          value="intermediate"
+        />
         <label for="intermediate">Developing Student</label><br />
         <input id="master" type="radio" name="levels" value="master" />
         <label for="master">Master</label>
@@ -105,26 +119,29 @@ assert($('p').length == 4);
   <article>
     <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
     <p>
-      The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses.
-      But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that
-      is lasagna...
+      The internet is littered with varying opinions on nutritional paradigms,
+      from catnip paleo to hairball cleanses. But let's turn our attention to an
+      often overlooked fitness fuel, and examine the protein-carb-NOM trifecta
+      that is lasagna...
     </p>
   </article>
   <img src="samuraiSwords.jpeg" alt="" />
   <article>
     <h2>Defeating your Foe: the Red Dot is Ours!</h2>
     <p>
-      Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning
-      stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...
+      Felines the world over have been waging war on the most persistent of
+      foes. This red nemesis combines both cunning stealth and lightning speed.
+      But chin up, fellow fighters, our time for victory may soon be near...
     </p>
   </article>
   <img src="samuraiSwords.jpeg" alt="" />
   <article>
     <h2>Is Chuck Norris a Cat Person?</h2>
     <p>
-      Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence
-      anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat
-      person?...
+      Chuck Norris is widely regarded as the premier martial artist on the
+      planet, and it's a complete coincidence anyone who disagrees with this
+      fact mysteriously disappears soon after. But the real question is, is he a
+      cat person?...
     </p>
   </article>
   <footer>&copy; 2018 Camper Cat</footer>
@@ -148,7 +165,12 @@ assert($('p').length == 4);
         <legend>What level ninja are you?</legend>
         <input id="newbie" type="radio" name="levels" value="newbie" />
         <label for="newbie">Newbie Kitten</label><br />
-        <input id="intermediate" type="radio" name="levels" value="intermediate" />
+        <input
+          id="intermediate"
+          type="radio"
+          name="levels"
+          value="intermediate"
+        />
         <label for="intermediate">Developing Student</label><br />
         <input id="master" type="radio" name="levels" value="master" />
         <label for="master">Master</label>
@@ -160,26 +182,29 @@ assert($('p').length == 4);
   <article>
     <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
     <p>
-      The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses.
-      But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that
-      is lasagna...
+      The internet is littered with varying opinions on nutritional paradigms,
+      from catnip paleo to hairball cleanses. But let's turn our attention to an
+      often overlooked fitness fuel, and examine the protein-carb-NOM trifecta
+      that is lasagna...
     </p>
   </article>
   <img src="samuraiSwords.jpeg" alt="" />
   <article>
     <h2>Defeating your Foe: the Red Dot is Ours!</h2>
     <p>
-      Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning
-      stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...
+      Felines the world over have been waging war on the most persistent of
+      foes. This red nemesis combines both cunning stealth and lightning speed.
+      But chin up, fellow fighters, our time for victory may soon be near...
     </p>
   </article>
   <img src="samuraiSwords.jpeg" alt="" />
   <article>
     <h2>Is Chuck Norris a Cat Person?</h2>
     <p>
-      Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence
-      anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat
-      person?...
+      Chuck Norris is widely regarded as the premier martial artist on the
+      planet, and it's a complete coincidence anyone who disagrees with this
+      fact mysteriously disappears soon after. But the real question is, is he a
+      cat person?...
     </p>
   </article>
   <footer>&copy; 2018 Camper Cat</footer>

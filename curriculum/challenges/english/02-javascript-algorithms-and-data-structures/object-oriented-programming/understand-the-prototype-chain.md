@@ -18,14 +18,14 @@ function Bird(name) {
 typeof Bird.prototype;
 ```
 
-จากการที่ตัว `prototype` เองก็เป็น object เพราะฉะนั้นตัว `prototype` ก็จะมี `prototype` ของตัวเองได้ 
+จากการที่ตัว `prototype` เองก็เป็น object เพราะฉะนั้นตัว `prototype` ก็จะมี `prototype` ของตัวเองได้  
 ในตัวอย่างด้านล่าง `prototype` ของ `Bird.prototype` คือ `Object.prototype`:
 
 ```js
 Object.prototype.isPrototypeOf(Bird.prototype);
 ```
 
-เอาล่ะ คุณอาจจะสงสัยว่าแล้วมันจะมีประโยชน์ยังไง 
+เอาล่ะ คุณอาจจะสงสัยว่าแล้วมันจะมีประโยชน์ยังไง  
 ถ้ายังจำ method `hasOwnProperty` จากแบบทดสอบที่แล้วได้
 
 ```js
@@ -33,9 +33,9 @@ let duck = new Bird("Donald");
 duck.hasOwnProperty("name");
 ```
 
-method `hasOwnProperty` อยู่ใน `Object.prototype` ซึ่งจะเข้าถึงได้ผ่าน `Bird.prototype` แล้วก็จะเข้าถึงได้ผ่าน `duck` อีกต่อหนึ่ง
-เราเรียกการเข้าถึง `prototype` เป็นชั้นๆนี้ว่า `prototype` chain 
-ในตัวอย่าง `prototype` chain นี้ เราจะเรียกว่า `Bird` เป็น `supertype` ของ `duck` และเรียก `duck` ว่าเป็น `subtype` ของ `Bird` 
+method `hasOwnProperty` อยู่ใน `Object.prototype` ซึ่งจะเข้าถึงได้ผ่าน `Bird.prototype` แล้วก็จะเข้าถึงได้ผ่าน `duck` อีกต่อหนึ่ง  
+เราเรียกการเข้าถึง `prototype` เป็นชั้นๆนี้ว่า `prototype` chain  
+ในตัวอย่าง `prototype` chain นี้ เราจะเรียกว่า `Bird` เป็น `supertype` ของ `duck` และเรียก `duck` ว่าเป็น `subtype` ของ `Bird`  
 ส่วน `Object` คือ `supertype` ของทั้ง `Bird` และ `duck` และ `Object` ก็เป็น `supertype` ของทุก object ใน JavaScript ด้วย ดังนั้น ทุก object จึงสามารถเรียกใช้ method `hasOwnProperty` ได้
 
 # --instructions--

@@ -10,6 +10,7 @@ dashedName: pass-props-to-a-stateless-functional-component
 
 ที่ผ่านมาเราได้เรียนเรื่องการสร้างและเขียน JSX element, functional component, และ ES6 class component ใน React ไปแล้ว
 พอเรามีพื้นฐานเรื่องพวกนี้แล้ว ก็ได้เวลาเรียนเรื่องต่อไปที่สำคัญใน React ซึ่งก็คือ **props** 
+
 ใน React เราสามารถส่ง props (หรือ properties) ไปยัง child component ได้ด้วย
 สมมติว่าเรามี component `App` ซึ่งเรนเดอร์ child component ชื่อ `Welcome` ที่เป็น stateless functional component 
 เราจะส่ง property ชื่อ `user` ไปให้ `Welcome` ได้ตามโค้ดนี้:
@@ -20,7 +21,7 @@ dashedName: pass-props-to-a-stateless-functional-component
 </App>
 ```
 
-เราจะใช้ **HTML attribute ที่เราตั้งเอง** เพื่อส่งค่าผ่านไปยัง child component 
+เราจะใช้ **HTML attribute ที่เราตั้งเอง** เพื่อส่งค่าผ่านไปยัง child component  
 ในกรณีนี้ property ชื่อ `user` ที่เราสร้างขึ้นจะถูกส่งไปยัง `Welcome` แล้ว และเพราะว่า `Welcome` เป็น stateless functional component จึงสามารถเข้าถึงค่านี้ได้ตามวิธีนี้:
 
 
@@ -29,13 +30,16 @@ const Welcome = (props) => <h1>Hello, {props.user}!</h1>
 ```
 
 ตามปกติแล้วทุกคนจะเรียกค่านี้ว่า `props` และเวลาที่เอาไปใช้กับ stateless functional component จะถือว่า `props` นี้เป็น argument ของฟังก์ชันที่คืนค่าออกมาเป็น JSX 
+
 คุณสามารถเข้าถึงค่าของ argument ในฟังก์ชันได้ แต่ถ้าใช้ class component การใช้ค่านี้จะต่างออกไปเล็กน้อย
 
 # --instructions--
 
 เราได้เขียน component ชื่อ `Calendar` และ `CurrentDate` ใน code editor ให้แล้ว
+
 เมื่อเรนเดอร์ `CurrentDate` ใน `Calendar` ให้ส่ง property ชื่อ `date` (ให้มีค่าเป็น `new Date()`) ไปยัง `CurrentDate` ด้วย
 จากนั้นให้ `CurrentDate` อ่านค่าตัวนี้จาก `props` และเอาค่าไปใส่ในแท็ก `p` 
+
 การส่ง JavaScript เข้าไปใน `props` จะต้องอยู่ในวงเล็บปีกกา เช่น `date={Date()}`
 
 # --hints--

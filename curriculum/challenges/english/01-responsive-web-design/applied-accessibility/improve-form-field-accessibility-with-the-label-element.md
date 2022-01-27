@@ -2,26 +2,27 @@
 id: 587d778a367417b2b2512aa6
 title: Improve Form Field Accessibility with the label Element
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cGJMMAN'
+videoUrl: "https://scrimba.com/c/cGJMMAN"
 forumTopicId: 301016
 dashedName: improve-form-field-accessibility-with-the-label-element
 ---
 
 # --description--
 
-การทำให้ความสามารถในการเข้าถึงดีขึ้นด้วย semantic HTML markup ถูกใช้เพื่อการใส่ชื่อและ attributes tag ที่เหมาะสม
-ในอีกหลาย ๆ แบบฝึกหัดต่อจากนี้จะกล่าวถึงสถานการณ์สำคัญ ๆ ที่ใช้ attributes ในฟอร์ม
+การเพิ่ม accessibility โดยใช้ semantic markup ของ HTML คือการใช้แท็กและ attribute ที่เหมาะสม
+ในแบบฝึกหัดต่อจากนี้ เราจะพูดถึงการใช้ attribute ในฟอร์ม
 
-`label` tag ที่เก็บข้อความของ form control item ที่ถูกกำหนดไว้ โดยทั่วไปจะเป็นชื่อหรือ label สำหรับตัวเลือกหนึ่ง ๆ
-สิ่งนี้จะผูกความหมายเข้ากับ item และช่วยให้ฟอร์มของเราอ่านได้ง่ายขึ้น
-`for` attribute บน `label` tag เกี่ยวข้องกับ `label` ที่มากับ the form control และถูกใช้โดยscreen readers (การใส่ for เมื่อ click ที่ Label จะมี cursor ที่ช่อง input นั้นๆ ถ้ากำหนด for และ id เป็นชื่อเดียวกัน)
+แท็ก `label` จะใช้ครอบข้อความของ form control ที่ถูกกำหนดไว้ โดยทั่วไปจะเป็นชื่อหรือ label สำหรับตัวเลือกหนึ่ง ๆ
+แท็กนี้จะผูกค่าเข้ากับฟอร์ม และช่วยให้ฟอร์มของเราอ่านได้ง่ายขึ้น
+แท็ก `label` ก็จะมี attribute `for` เพื่อใช้เชื่อม `label` เข้ากับ from control
+โดย screen reader จะอ่านค่าจากตรงนี้
 
-คุณได้เรียนเกี่ยวกับ radio buttons และ labels ของพวกมันในบทหนึ่งของบทเรียน Basic HTML
-ในบทนั้น พวกเราเก็บ radio button input element ไว้ใน `label` element พร้อมกับ label text เพื่อที่ข้อความจะได้ถูกคลิกได้
-อีกทางหนึ่งที่จะทำ ก็คือการใช้ `for` attribute ตามที่ได้อธิบายไว้ในบทเรียนนี้
+คุณได้เรียนเรื่อง radio button และ label ไปในบทเรียนเรื่อง Basic HTML ไปแล้ว
+ในบทนั้น พวกเราซ้อน radio button input element ไว้ใน `label` ร่วมกับข้อความของ label เพื่อให้คลิกที่ข้อความได้
+ถ้าเราใส่ id ของ input ไว้ใน for เราก็จะได้ผลแบบเดียวกัน
 
-ค่าของ `for` attribute จำเป็นต้องเหมือนกับค่าของ `id` attribute ของ form control
-นี่คือตัวอย่าง :
+ค่าของ attribute `for` จำเป็นต้องเหมือนกับค่าของ attribute `id` ของ form control
+ลองดูตัวอย่าง:
 
 ```html
 <form>
@@ -32,21 +33,21 @@ dashedName: improve-form-field-accessibility-with-the-label-element
 
 # --instructions--
 
-ตัวอย่าง Camper Cat ความหวังว่าจะมีคนสนใจโพสต์ของเขาเยอะ ๆ และต้องการที่จะใส่ฟอร์มสำหรับกรอก email เพื่อสมัครเข้าไป
-จงเพิ่ม `for` attribute บน email `label` ที่ตรงกับ `id` บนช่อง `input` ของมัน
+นาย Camper Cat หวังว่าจะมีคนสนใจโพสต์ของเขาเยอะ ๆ และต้องการที่จะใส่ฟอร์มสำหรับกรอก email เพื่อสมัครสมาชิก
+ให้เพิ่ม attribute `for` ใน `label` ที่มีข้อความเป็น email โดยระบุค่าเป็น `id` ของ `input`
 
 # --hints--
 
-โค้ดของคุณควรมี `for` attribute บน `label` tag ที่ไม่ได้ว่างเปล่า
+โค้ดของคุณต้องมี attribute `for` ในแท็ก `label` และต้องระบุค่าด้วย
 
 ```js
-assert($('label').attr('for'));
+assert($("label").attr("for"));
 ```
 
-ค่าของ `for` attribute ควรจะตรงกับค่าของ `id` ของ email `input`
+ค่าของ attribute `for` ต้องตรงกับ `id` ของ `input` ที่เอาไว้กรอกอีกเมล
 
 ```js
-assert($('label').attr('for') == 'email');
+assert($("label").attr("for") == "email");
 ```
 
 # --seed--
@@ -71,26 +72,29 @@ assert($('label').attr('for') == 'email');
   <article>
     <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
     <p>
-      The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses.
-      But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that
-      is lasagna...
+      The internet is littered with varying opinions on nutritional paradigms,
+      from catnip paleo to hairball cleanses. But let's turn our attention to an
+      often overlooked fitness fuel, and examine the protein-carb-NOM trifecta
+      that is lasagna...
     </p>
   </article>
   <img src="samuraiSwords.jpeg" alt="" />
   <article>
     <h2>Defeating your Foe: the Red Dot is Ours!</h2>
     <p>
-      Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning
-      stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...
+      Felines the world over have been waging war on the most persistent of
+      foes. This red nemesis combines both cunning stealth and lightning speed.
+      But chin up, fellow fighters, our time for victory may soon be near...
     </p>
   </article>
   <img src="samuraiSwords.jpeg" alt="" />
   <article>
     <h2>Is Chuck Norris a Cat Person?</h2>
     <p>
-      Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence
-      anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat
-      person?...
+      Chuck Norris is widely regarded as the premier martial artist on the
+      planet, and it's a complete coincidence anyone who disagrees with this
+      fact mysteriously disappears soon after. But the real question is, is he a
+      cat person?...
     </p>
   </article>
   <footer>&copy; 2018 Camper Cat</footer>
@@ -117,26 +121,29 @@ assert($('label').attr('for') == 'email');
   <article>
     <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
     <p>
-      The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses.
-      But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that
-      is lasagna...
+      The internet is littered with varying opinions on nutritional paradigms,
+      from catnip paleo to hairball cleanses. But let's turn our attention to an
+      often overlooked fitness fuel, and examine the protein-carb-NOM trifecta
+      that is lasagna...
     </p>
   </article>
   <img src="samuraiSwords.jpeg" alt="" />
   <article>
     <h2>Defeating your Foe: the Red Dot is Ours!</h2>
     <p>
-      Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning
-      stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...
+      Felines the world over have been waging war on the most persistent of
+      foes. This red nemesis combines both cunning stealth and lightning speed.
+      But chin up, fellow fighters, our time for victory may soon be near...
     </p>
   </article>
   <img src="samuraiSwords.jpeg" alt="" />
   <article>
     <h2>Is Chuck Norris a Cat Person?</h2>
     <p>
-      Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence
-      anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat
-      person?...
+      Chuck Norris is widely regarded as the premier martial artist on the
+      planet, and it's a complete coincidence anyone who disagrees with this
+      fact mysteriously disappears soon after. But the real question is, is he a
+      cat person?...
     </p>
   </article>
   <footer>&copy; 2018 Camper Cat</footer>

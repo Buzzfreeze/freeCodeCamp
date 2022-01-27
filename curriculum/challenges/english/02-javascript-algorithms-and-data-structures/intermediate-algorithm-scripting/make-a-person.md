@@ -19,7 +19,7 @@ setLastName(last)
 setFullName(firstAndLast)
 ```
 
-ลองรันเพื่อดูผลลัพธ์ของแต่ละ method โดย method ที่รับ argument 0tต้องรับ argument แค่ตัวเดียวและต้องเป็น string เท่านั้น นอกจากนี้ การแก้ไขค่าใน object ต้องทำผ่าน method เหล่านี้เท่านั้น
+ลองรันเพื่อดูผลลัพธ์ของแต่ละ method โดย method ที่รับ argument จะต้องรับ argument แค่ตัวเดียวและต้องเป็น string เท่านั้น นอกจากนี้ การแก้ไขค่าใน object ต้องทำผ่าน method เหล่านี้เท่านั้น
 
 # --hints--
 

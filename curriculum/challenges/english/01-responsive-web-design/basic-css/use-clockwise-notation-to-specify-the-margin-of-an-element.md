@@ -2,60 +2,61 @@
 id: bad87fee1348bd9afdf08726
 title: Use Clockwise Notation to Specify the Margin of an Element
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cnpybAd'
+videoUrl: "https://scrimba.com/c/cnpybAd"
 forumTopicId: 18345
 dashedName: use-clockwise-notation-to-specify-the-margin-of-an-element
 ---
 
 # --description--
 
-เรามาลองกันอีกที แต่รอบนี้จะเป็นกับ `margin`
+เรามาลองใช้ clockwise notation กับ `margin` กัน
 
-แทนที่จะระบุ element `margin-top`, `margin-right`, `margin-bottom`, และ `margin-left` properties เป็นส่วนๆ , คุณสามารถกำหนดค่าให้ทั้งหมดนี้ได้ในบรรทัดเดียว แบบนี้:
+แทนที่จะระบุ `margin-top`, `margin-right`, `margin-bottom`, และ `margin-left` ทีละตัว
+คุณสามารถระบุค่าทั้งหมดได้ในบรรทัดเดียว แบบนี้:
 
 ```css
 margin: 10px 20px 10px 20px;
 ```
 
-ค่าทั้ง 4 ตัวนี้จะเรียงกันตามเข็มนาฬิกา: บน, ขวา, ล่าง, ซ้าย, และจะให้ผลเช่นเดียวกับการใช้พวกคำสั่ง side-specific margin
+ค่าทั้ง 4 ตัวนี้จะเรียงกันตามเข็มนาฬิกา: บน, ขวา, ล่าง, ซ้าย, และจะให้ผลลัพธ์แบบเดียวกับการใช้คำสั่ง `margin-top` `margin-right` ฯลฯ
 
 # --instructions--
 
-จงใช้การเขียนตามเข็มนาฬกา (Clockwise Notation เพื่อกำหนดให้ element ที่เป็น `blue-box` class มี margin ขนาด `40px` ที่ด้านบนและซ้ายของมัน และ `20px` ที่ด้านล่างและขวา
+จงใช้การเขียนตามเข็มนาฬกา (Clockwise Notation) เพื่อกำหนด `margin` ให้คลาส `.blue-box` โดยให้ด้านบนและด้านซ้ายมีค่าเป็น `40px` และ ด้านล่างและด้านขวามีค่าเป็น `20px`
 
 # --hints--
 
-`blue-box` class ควรกำหนดให้ด้านบนของ element มี `margin` มีค่า `40px`
+คลาส `blue-box` ต้องมี `margin` ด้านบนเป็น `40px`
 
 ```js
-assert($('.blue-box').css('margin-top') === '40px');
+assert($(".blue-box").css("margin-top") === "40px");
 ```
 
-`blue-box` class ควรกำหนดให้ด้านขวาของ element มี `margin` เท่ากับ `20px`
+คลาส `blue-box` ต้องมี `margin` ด้านขวาเป็น `20px`
 
 ```js
-assert($('.blue-box').css('margin-right') === '20px');
+assert($(".blue-box").css("margin-right") === "20px");
 ```
 
-`blue-box` class ควรกำหนดให้ด้านล่างของ element มี `margin` เท่ากับ `20px`
+คลาส `blue-box` ต้องมี `margin` ด้านล่างเป็น `20px`
 
 ```js
-assert($('.blue-box').css('margin-bottom') === '20px');
+assert($(".blue-box").css("margin-bottom") === "20px");
 ```
 
-`blue-box` class ควรกำหนดให้ด้านซ้ายของ element มี `margin` เท่ากับ `40px`
+คลาส `blue-box` ต้องมี `margin` ด้านซ้ายเป็น `40px`
 
 ```js
-assert($('.blue-box').css('margin-left') === '40px');
+assert($(".blue-box").css("margin-left") === "40px");
 ```
 
-คุณควรใช้การเขียนตามเข็มนาฬกาเพื่อกำหนดเซ็ต margin ของ `blue-box` class.
+คุณควรใช้การเขียนตามเข็มนาฬิกาเพื่อกำหนด margin ของคลาส `blue-box`
 
 ```js
 assert(
   /\.blue-box\s*{[\s\S]*margin[\s]*:\s*\d+px\s+\d+px\s+\d+px\s+\d+px(;\s*[^}]+\s*}|;?\s*})/.test(
-    __helpers.removeCssComments($('style').text()),
-  ),
+    __helpers.removeCssComments($("style").text())
+  )
 );
 ```
 

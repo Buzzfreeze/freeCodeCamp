@@ -8,7 +8,7 @@ dashedName: override-inherited-methods
 
 # --description--
 
-ในบทเรียนที่แล้ว คุณรู้แล้วว่า object สามารถสืบทอดพฤติกรรม (method) มาจาก object อื่นโดยอ้างอิงถึง `prototype` object ได้ ตามตัวอย่างนี้:
+ในบทเรียนที่แล้ว คุณรู้แล้วว่า object สามารถสืบทอด method มาจาก object อื่นโดยอ้างอิงถึง `prototype` object ได้ ตามตัวอย่างนี้:
 
 ```js
 ChildObject.prototype = Object.create(ParentObject.prototype);
@@ -20,7 +20,8 @@ ChildObject.prototype = Object.create(ParentObject.prototype);
 ChildObject.prototype.methodName = function() {...};
 ```
 
-แล้วเราก็สามารถสร้าง method มาทับ method ที่สืบทอดมาได้ วิธีทำก็เหมือนข้างบนเลยคือการเพิ่ม method ให้กับ `ChildObject.prototype` โดยการใช้ชื่อ method เดียวกับ method ที่เราจะเขียนทับ 
+แล้วเราก็สามารถสร้าง method มาทับ method ที่สืบทอดมาได้ด้วย  
+วิธีทำก็เหมือนข้างบนเลยคือการเพิ่ม method ให้กับ `ChildObject.prototype` โดยการใช้ชื่อ method เดียวกับ method ที่เราจะเขียนทับ 
 ลองดูตัวอย่างด้านล่าง ที่เราจะเขียน method ใหม่มาทับ `eat()` ใน `Bird` ที่สืบทอดมาจาก `Animal`:
 
 ```js

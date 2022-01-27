@@ -17,7 +17,7 @@ dashedName: target-the-same-element-with-multiple-jquery-selectors
 3. ใช้ id: `$("#target1")`
 
 
-ถึงเราจะเรียกใช้ `.addClass()` ครั้งเดียวเพื่อเพิ่มหลายๆ class เข้าไปใน element ที่เลือกได้ 
+ถึงเราจะเรียกใช้ `.addClass()` ครั้งเดียวเพื่อเพิ่มหลายๆ class เข้าไปใน element ที่เลือกได้  
 แต่เรามาลองเพิ่ม class ให้กับ element เดียวกันโดยใช้ทั้งสามวิธีดู:
 
 เพิ่ม class `animated` ให้กับ element ทุกตัวที่มี type เป็น `button`

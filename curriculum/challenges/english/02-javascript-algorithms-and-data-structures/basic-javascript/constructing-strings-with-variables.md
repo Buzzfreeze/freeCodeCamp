@@ -9,8 +9,8 @@ dashedName: constructing-strings-with-variables
 
 # --description--
 
-คุณอาจจะอยากสร้าง string แบบ [Mad Libs](https://en.wikipedia.org/wiki/Mad_Libs) 
-ถ้าใช้เครื่องหมาย (`+`)คุณจะแทรกตัวแปรลงไปใน string ที่กำลังสร้างได้
+คุณอาจจะอยากสร้าง string แบบ [Mad Libs](https://en.wikipedia.org/wiki/Mad_Libs)  
+ถ้าใช้เครื่องหมาย (`+`) คุณจะแทรกตัวแปรลงไปใน string ที่กำลังสร้างได้
 
 ตัวอย่าง:
 

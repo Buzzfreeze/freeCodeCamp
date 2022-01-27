@@ -9,9 +9,12 @@ dashedName: use-the-lifecycle-method-componentwillmount
 # --description--
 
 React component มี method พิเศษหลายตัวที่จะทำงานตาม lifecycle ของ component 
-method พวกนี้เรียกว่า lifecycle method หรือ lifecycle hook 
+
+method พวกนี้เรียกว่า lifecycle method หรือ lifecycle hook  
 method พวกนี้จะทำให้เราจัดการ component ได้ตามช่วงของ lifecycle เช่น ก่อนการเรนเดอร์ ก่อนการอัปเดต ก่อนการรับ props ก่อนการเลิกต่อเชื่อม ฯลฯ 
+
 นี่คือตัวอย่างของ lifecycle method: `componentWillMount()` `componentDidMount()` `shouldComponentUpdate()` `componentDidUpdate()` `componentWillUnmount()` 
+
 บทเรียนต่อไปจะอธิบายครอบคลุมถึงกรณีการใช้งานพื้นฐานบางส่วนของ lifecycle methods เหล่านี้
 
 **Note:** lifecycle method ชื่อ `componentWillMount` จะถือว่าเป็น method ที่เลิกใช้งานแล้วใน React เวอร์ชัน 16.X และจะถูกถอดออกใน React เวอร์ชัน 17  [(ที่มา)](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html) 
@@ -20,7 +23,9 @@ method พวกนี้จะทำให้เราจัดการ compon
 # --instructions--
 
 method `componentWillMount()` จะถูกเรียกใช้ก่อน method `render()` เมื่อ component ถูกเชื่อมเข้ากับ DOM 
+
 ใน `componentWillMount()` ให้เขียนโค้ดเพื่อ log ข้อมูลอะไรก็ได้ใน console
+
 คุณต้องเปิดคอนโซลในเบราว์เซอร์เพื่อให้เห็น log
 
 # --hints--

@@ -2,34 +2,36 @@
 id: 587d78ad367417b2b2512af9
 title: Use the align-items Property in the Tweet Embed
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pVaDAv/cd3PNfq'
+videoUrl: "https://scrimba.com/p/pVaDAv/cd3PNfq"
 forumTopicId: 301106
 dashedName: use-the-align-items-property-in-the-tweet-embed
 ---
 
 # --description--
 
-challenge ที่แล้วได้มีการเกริ่นถึง `align-items` (แนวตั้งบนลงล่าง) property และก็ได้แสดงตัวอย่างให้ดู
-property นี้สามารถใช้ได้กับ tweet embed element บางตัวเพื่อจัด flex items ให้เรียงเป็นเส้นตรงภายในพวกมัน
+ในแบบทดสอบที่แล้วเราได้อธิบาย และลองดูตัวอย่างของ property `align-items` ไปแล้ว
+
+คราวนี้ ให้มาลองใช้ property นี้เพื่อเรียง item ดูบ้างดีกว่า
 
 # --instructions--
 
-จงเพิ่ม CSS property `align-items` ให้กับ `.follow-btn` element ของ header
-จงกำหนดให้มันมีค่า `center`
+ให้เพิ่ม CSS property `align-items` ให้กับ `.follow-btn` ของ header
+โดยให้กำหนดค่าเป็น `center`
 
 # --hints--
 
-`.follow-btn` ควรถูกแสดงผลในหน้าเว้บไซต์
-จงเช็คให้มั่นใจว่าคุณได้ปิด extension ต่าง ๆ เช่น ตัวปิดกั้นโฆษณา ไปแล้ว
+`.follow-btn` ต้องแสดงผลในเว็บไซต์ของคุณด้วย ถ้าไม่แสดงผล ให้ลองปิด extension ของเบราว์เซอร์ดูก่อน (เช่น ads block)
 
 ```js
-assert($('.follow-btn').length > 0 && $('.follow-btn').css('display') !== 'none');
+assert(
+  $(".follow-btn").length > 0 && $(".follow-btn").css("display") !== "none"
+);
 ```
 
-The `.follow-btn` element should have the `align-items` property set to a value of `center`.
+`.follow-btn` ต้องมีค่าของ property `align-items` เป็น `center`
 
 ```js
-assert($('.follow-btn').css('align-items') == 'center');
+assert($(".follow-btn").css("align-items") == "center");
 ```
 
 # --seed--
@@ -115,8 +117,8 @@ assert($('.follow-btn').css('align-items') == 'center');
 </header>
 <div id="inner">
   <p>
-    I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart,
-    you still have to work hard.
+    I meet so many people who are in search of that one trick that will help
+    them work smart. Even if you work smart, you still have to work hard.
   </p>
   <span class="date">1:32 PM - 12 Jan 2018</span>
   <hr />
@@ -215,8 +217,8 @@ assert($('.follow-btn').css('align-items') == 'center');
 </header>
 <div id="inner">
   <p>
-    I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart,
-    you still have to work hard.
+    I meet so many people who are in search of that one trick that will help
+    them work smart. Even if you work smart, you still have to work hard.
   </p>
   <span class="date">1:32 PM - 12 Jan 2018</span>
   <hr />

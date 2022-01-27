@@ -12,9 +12,9 @@ dashedName: use-higher-order-functions-map-filter-or-reduce-to-solve-a-complex-p
 
 # --instructions--
 
-ให้เขียน `squareList` โดยใช้ `map()`, `filter()` และ `reduce()` ผสมกันได้
-ฟังก์ชันนี้จะต้องคืนค่าเป็น array ที่มีค่า element แต่ละตัวเป็นเลขยกกำลังสองที่เป็นจำนวนเต็มบวกของ array ที่เป็น argument (เลขทศนิยมไม่ใช่เลขจำนวนเต็ม)
-โดยฟังก์ชันนี้รับ argument เป็น array ของเลขจำนวนจริง 
+ให้เขียน `squareList` โดยใช้ `map()`, `filter()` และ `reduce()` ผสมกันได้  
+ฟังก์ชันนี้จะต้องคืนค่าเป็น array ที่มีค่า element แต่ละตัวเป็นเลขยกกำลังสองที่เป็นจำนวนเต็มบวกของ array ที่เป็น argument (เลขทศนิยมไม่ใช่เลขจำนวนเต็ม)  
+โดยฟังก์ชันนี้รับ argument เป็น array ของเลขจำนวนจริง  
 ตัวอย่าง array ของเลขจำนวนจริง คือ `[-3, 4.8, 5, 3, -3.2]`
 
 **หมายเหตุ:** ห้ามใช้ `for` หรือ `while` loop หรือฟังก์ชัน `forEach()` ในโค้ด

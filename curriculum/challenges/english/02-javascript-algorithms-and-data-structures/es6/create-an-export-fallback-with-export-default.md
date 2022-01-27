@@ -10,7 +10,7 @@ dashedName: create-an-export-fallback-with-export-default
 
 ในบทเรียนเรื่อง `export` ที่ผ่านมา เราได้เรียน syntax ที่เรียกว่า <dfn>named export</dfn> ซึ่งทำให้เราใช้ฟังก์ชันและตัวแปรต่างๆ ในไฟล์อื่นได้
 
-แต่ยังมี `export` syntax อีกแบบที่ควรรู้ ซึ่งเรียกว่า <dfn>export default</dfn>
+แต่ยังมี `export` syntax อีกแบบที่ควรรู้ ซึ่งเรียกว่า <dfn>export default</dfn>  
 โดยปกติเราจะใช้ syntax นี้ถ้ามีการ export ค่าแค่ค่าเดียว นอกจากนี้ยังใช้เพื่อเป็น fallback สำหรับไฟล์หรือโมดูล
 
 ตัวอย่างการใช้ `export default`:

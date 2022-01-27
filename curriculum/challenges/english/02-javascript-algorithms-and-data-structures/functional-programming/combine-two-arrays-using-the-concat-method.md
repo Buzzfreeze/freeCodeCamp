@@ -8,9 +8,9 @@ dashedName: combine-two-arrays-using-the-concat-method
 
 # --description--
 
-<dfn>Concatenation</dfn> แปลว่าการเอามาต่อกัน 
-โดย JavaScript มี method `concat` ที่ใช้ได้กับทั้ง string และ array ซึ่งวิธีการใช้จะเหมือนกันเลย 
-การใช้ method นี้จะเรียกใช้กับ array ตัวแรก และจะรับ array ตัวที่สองจะเป็น argument ของ method `concat` 
+<dfn>Concatenation</dfn> แปลว่าการเอามาต่อกัน   
+โดย JavaScript มี method `concat` ที่ใช้ได้กับทั้ง string และ array ซึ่งวิธีการใช้จะเหมือนกันเลย  
+การใช้ method นี้จะเรียกใช้กับ array ตัวแรก และจะรับ array ตัวที่สองจะเป็น argument ของ method `concat`  
 method นี้จะนำ array ตัวที่สองมาต่อท้าย array ตัวแรก แต่ method นี้ไม่เปลี่ยนค่าของ array ทั้งสองตัว ลองดูตัวอย่างด้านล่าง:
 
 ```js
@@ -43,7 +43,7 @@ array `second` ต้องมีค่าเหมือนเดิม
 assert(JSON.stringify(second) === JSON.stringify([4, 5]));
 ```
 
-การเรียกใช้ฟังก์ชัน `nonMutatingConcat([1, 2, 3], [4, 5])` ต้องได้ค่าเป็น `[1, 2, 3, 4, 5]`.
+การเรียกใช้ฟังก์ชัน `nonMutatingConcat([1, 2, 3], [4, 5])` ต้องได้ค่าเป็น `[1, 2, 3, 4, 5]`
 
 ```js
 assert(

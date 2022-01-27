@@ -38,7 +38,7 @@ test(false);
 
 # --instructions--
 
-จงสร้างคำสั่ง `if` ภายในฟังก์์ชัน โดยให้คืนค่า `Yes, that was true` ถ้า parameter `wasThatTrue` มีค่าเป็น `true` และคืนค่า `No, that was false` ถ้า `wasThatTrue` มีค่าเป็น `false`
+จงสร้างคำสั่ง `if` ภายในฟังก์ชัน โดยให้คืนค่า `Yes, that was true` ถ้า parameter `wasThatTrue` มีค่าเป็น `true` และคืนค่า `No, that was false` ถ้า `wasThatTrue` มีค่าเป็น `false`
 
 # --hints--
 

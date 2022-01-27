@@ -8,68 +8,66 @@ dashedName: create-a-set-of-radio-buttons
 
 # --description--
 
-คุณสามารถใช้ <dfn>radio buttons</dfn> กับคำถามที่คุณต้องการให้ผู้ใช้เลือกเพียงคำตอบเดียวจากหลาย ๆ ตัวเลือก
+คุณสามารถใช้ <dfn>radio button</dfn> ได้ ในกรณีที่คุณมีตัวเลือกหลายๆตัวแต่ต้องการให้ผู้ใช้เลือกเพียงตัวเลือกเดียว
+(Radio button ก็เป็น `input` ประเภทหนึ่ง)
 
-Radio buttons เป็น `input` ประเภทหนึ่ง
+radio button แต่ละอันจะซ้อนอยู่ใน `label` element ของตัวเอง
+การซ้อน `input` ไว้ใน `label` จะเป็นการเชื่อมโยง Radio button `input` นั้นเข้ากับ `label` ที่ครอบอยู่โดยอัตโนมัติ
 
-radio button แต่ละอันของคุณจะถูกเก็บไว้ใน `label` element ของมันเอง
-การใส่ `input` element ไว้ใน `label` element จะเป็นการเชื่อมโยง Radio buttons input เข้ากับ label element ที่ครอบมันอยู่โดยอัตโนมัติ
+radio button ที่เป็นกลุ่มเดียวกันจะต้องมี `name` attribute เดียวกัน
+เมื่อสร้างกลุ่มของ radio button แล้ว เวลาเราเลือก radio button ตัวใดก็ตาม จะเป็นการยกเลิก button ตัวอื่นที่เลือกไว้ที่เป็นกลุ่มเดียวกันโดยอัตโนมัติ
 
-radio buttons ที่เกี่ยวข้องกันทั้งหมดควรจะมี `name` attribute เดียวกันเพื่อที่จะสร้างกลุ่มของ radio button 
-เมื่อเราสร้างกลุ่มของ radio button  เวลาเราเลือก radio button ตัวใดก็ตาม มันจะเป็นการยกเลิกการเลือก button อื่นที่อยู่ภายในกลุ่มเดียวกันโดยอัตโนมัติ เพื่อให้มั่นใจได้ว่าผู้ใช้จะเลือกเพียงตัวเลือกเดียว
-
-นี่คือตัวอย่างของการสร้าง radio button:
+ลองดูตัวอย่างการสร้าง radio button หนึ่งปุ่ม:
 
 ```html
-<label> 
-  <input type="radio" name="indoor-outdoor">Indoor 
-</label>
+<label> <input type="radio" name="indoor-outdoor" />Indoor </label>
 ```
 
-หนึ่งใน best practice คือการกำหนดให้ `for` attribute ของ `label` element มีค่าเดียวกับ `id` attribute ของ `input` element ที่สัมพันธ์กัน
-มันจะช่วยให้ assistive technology สามารถสร้างความสัมพันธ์ที่เชื่อมโยงกันระหว่าง label และ `input` element
+มีมาตรฐานในการเขียน radio button ข้อหนึ่งคือ เราควรกำหนดให้ `for` attribute ของ `label` element เป็นค่าเดียวกับ `id` attribute ของ `input` element ที่สัมพันธ์กัน
+เพื่อจะทำให้เว็บของเรารู้ว่า `label` และ `input` ตัวนั้น เป็นข้อมูลที่เกี่ยวข้องกัน
 ยกตัวอย่างเช่น:
 
 ```html
-<input id="indoor" type="radio" name="indoor-outdoor">
+<input id="indoor" type="radio" name="indoor-outdoor" />
 <label for="indoor">Indoor</label>
 ```
 
-พวกเราสามารถเก็บ `input` element ไว้ใน `label` tag ได้เช่นกัน:
+และเราก็จะต้องซ้อน `input` ไว้ในแท็ก `label` ด้วย:
 
 ```html
-<label for="indoor"> 
-  <input id="indoor" type="radio" name="indoor-outdoor">Indoor 
+<label for="indoor">
+  <input id="indoor" type="radio" name="indoor-outdoor" />Indoor
 </label>
 ```
 
 # --instructions--
 
-จงเพิ่ม radio button 2 อันที่คู่กันให้กับแบบฟอร์ม โดยแต่ละอันจะถูกเก็บไว้ใน `label` element ของมันเอง
-อันหนึ่งควรมี ตัวเลือก เป็น `indoor` และอีกอันหนึ่งควรมีตัวเลือกเป็น `outdoor`
-ทั้งสองควรจะมี `name` attribute อันเดียวกันโดยชื่อว่า `indoor-outdoor` เพื่อสร้างกลุ่มของ radio 
+ให้เพิ่ม radio button 2 อันที่คู่กันในแบบฟอร์ม โดย raidio button แต่ละอันก็ต้องซ้อนอยู่ใน `label` element ของตัวเอง
+
+โดย `label` ตัวหนึ่งต้องมีข้อความเป็น `indoor` และอีกตัวหนึ่งควรมีข้อความเป็น `outdoor`
+และ radio button ทั้งสองปุ่มต้องมี `name` attribute เป็นชื่อเดียวกัน โดยมีชื่อว่า `indoor-outdoor`
 
 # --hints--
 
-หน้าเว็บไซต์ของจะมี `radio` button element 2 อัน
+หน้าเว็บไซต์ของคุณจะต้องมี `radio` button element 2 อัน
 
 ```js
 assert($('input[type="radio"]').length > 1);
 ```
 
-radio button ของคุณควรจะถูกกำหนดให้มี `name` attribute เป็น `indoor-outdoor`
+radio button ต้องมี `name` attribute เป็น `indoor-outdoor`
 
 ```js
 assert($('input[type="radio"]').filter("[name='indoor-outdoor']").length > 1);
 ```
 
-แต่ละ radio button element คู่หนึ่งควรจะถูกเก็บไว้ใน `label` element ของมันเอง
+radio button ทั้งสองปุ่ม ต้องซ้อนอยู่ใน `label` ของตัวเอง
 
 ```js
 assert($('label > input[type="radio"]:only-child').length > 1);
 ```
 
-`label` element แต่ละอันควรคุณควรจะมีแท็กปิด
+`label` ทุกตัวต้องมีแท็กปิด
 
 ```js
 assert(
@@ -79,30 +77,30 @@ assert(
 );
 ```
 
-หนึ่งใน radio button ของคุณควรมี label เป็น `indoor`
+ต้องมี radio button ตัวหนึ่งที่มี label เป็น `indoor`
 
 ```js
 assert(
-  $('label')
+  $("label")
     .text()
     .match(/indoor/gi)
 );
 ```
 
-หนึ่งใน radio button ของคุณควรมี label เป็น `outdoor`
+ต้องมี radio button ตัวหนึ่งที่มี label เป็น `outdoor`
 
 ```js
 assert(
-  $('label')
+  $("label")
     .text()
     .match(/outdoor/gi)
 );
 ```
 
-radio button element แต่ละอันของคุณควรจะถูกใส่ไว้ใน `form` tag
+radio button ทั้งสองอันต้องอยู่ในแท็ก `form`
 
 ```js
-assert($('label').parent().get(0).tagName.match('FORM'));
+assert($("label").parent().get(0).tagName.match("FORM"));
 ```
 
 # --seed--
@@ -114,7 +112,11 @@ assert($('label').parent().get(0).tagName.match('FORM'));
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -129,7 +131,7 @@ assert($('label').parent().get(0).tagName.match('FORM'));
     <li>other cats</li>
   </ol>
   <form action="https://www.freecatphotoapp.com/submit-cat-photo">
-    <input type="text" placeholder="cat photo URL" required>
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>
@@ -141,9 +143,13 @@ assert($('label').parent().get(0).tagName.match('FORM'));
 <h2>CatPhotoApp</h2>
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
-  
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
-  
+
+  <a href="#"
+    ><img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+      alt="A cute orange cat lying on its back."
+  /></a>
+
   <p>Things cats love:</p>
   <ul>
     <li>cat nip</li>
@@ -157,9 +163,13 @@ assert($('label').parent().get(0).tagName.match('FORM'));
     <li>other cats</li>
   </ol>
   <form action="https://www.freecatphotoapp.com/submit-cat-photo">
-   <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor"> Indoor</label>
-    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <input type="text" placeholder="cat photo URL" required>
+    <label for="indoor"
+      ><input id="indoor" type="radio" name="indoor-outdoor" /> Indoor</label
+    >
+    <label for="outdoor"
+      ><input id="outdoor" type="radio" name="indoor-outdoor" /> Outdoor</label
+    ><br />
+    <input type="text" placeholder="cat photo URL" required />
     <button type="submit">Submit</button>
   </form>
 </main>

@@ -2,22 +2,24 @@
 id: 587d78b1367417b2b2512b0c
 title: Make Typography Responsive
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pzrPu4/crzN7T8'
+videoUrl: "https://scrimba.com/p/pzrPu4/crzN7T8"
 forumTopicId: 301141
 dashedName: make-typography-responsive
 ---
 
 # --description--
 
-แทนที่จะใช้ `em` หรือ `px` เพื่อกำหนดขนาดของข้อความ คุณสามารถใช้ viewport units สำหรับ responsive typography
-Viewport units (อย่างเช่น percentages) เป็นหน่วยสัมพัทธ์แต่มันขึ้นกับ item ที่แต่ต่างกัน
-Viewport units จะสัมพัทธ์กับ viewport dimensions (ความกว้าง หรือ ความสูง) ของอุปกรณ์หนึ่ง ๆ และ percentages จะสัมพันธ์กับขนาดของ parent container element
+คุณสามารถเปลี่ยนหน่วยของขนาดข้อความจากหน่วย `em` หรือ `px` ไปใช้หน่วยของ viewport (viewport unit) สำหรับการแสดงข้อความที่เปลี่ยนขนาดตามขนาดหน้าจอได้
 
-viewport units 4 อันที่แตกต่างกันคือ:
+หน่วยของ viewport ก็จะคล้ายๆกับการใช้หน่วยเปอร์เซ็นต์ เพราะว่าเป็นหน่วยที่จะอ้างอิงกับ element อื่น
 
-<ul><li><code>vw</code> (viewport width): <code>10vw</code> would be 10% of the viewport's width.</li><li><code>vh</code> (viewport height): <code>3vh</code> would be 3% of the viewport's height.</li><li><code>vmin</code> (viewport minimum): <code>70vmin</code> would be 70% of the viewport's smaller dimension (height or width).</li><li><code>vmax</code> (viewport maximum): <code>100vmax</code> would be 100% of the viewport's bigger dimension (height or width).</li></ul>
+หน่วยของ viewport จะอิงจากความกว้างหรือความสูงของอุปกรณ์ และถ้าใช้หน่วยเป็นเปอร์เซ็นต์ก็จะอ้างอิงจากขนาดของ parent element
 
-นี่คือตัวอย่างที่กำหนดให้ `body` tag มีค่า 30% ของความกว้าง viewport
+หน่วยของ viewport มีสี่แบบคือ:
+
+<ul><li><code>vw</code> (viewport width): <code>10vw</code> จะกว้างเป็น 10% ของความกว้างของ viewport</li><li><code>vh</code> (viewport height): <code>3vh</code> จะสูงเป็น 3% ของความสูงของ viewport</li><li><code>vmin</code> (viewport minimum): <code>70vmin</code> จะมีความยาวเป็น 70% ของด้านที่สั้นกว่าของ viewport (เช่น ถ้าเป็นคอมพิวเตอร์ ด้านสั้นคือความสูง ถ้าเป็นโทรศัพท์ด้านสั้นคือความกว้าง)</li><li><code>vmax</code> (viewport maximum): <code>100vmax</code> จะมีความยาวเป็น 100% ของด้านที่ยาวกว่าของ viewport (เช่น ถ้าเป็นคอมพิวเตอร์ ด้านยาวคือความกว้าว ถ้าเป็นโทรศัพท์ด้านยาวคือความสูง)</li></ul>
+
+ลองดูตัวอย่างการกำหนดให้แท็ก `body` มีความกว้างเป็น 30% ของความกว้างของ viewport
 
 ```css
 body {
@@ -27,20 +29,24 @@ body {
 
 # --instructions--
 
-จงกำหนดให้ `width` ของ `h2` tag มีค่า 80% ของความกว้าง viewport และ `width` ของพารากราฟมีค่า 75% ของ dimension ที่เล็กกว่าของ viewport
+ให้กำหนด `width` ของแท็ก `h2` เป็น 80% ของความกว้างของ viewport และ กำหนด `width` ของแท็ก `p` เป็น 75% ของด้านที่สั้นกว่าของ viewport
 
 # --hints--
 
-`h2` tag ของคุณควรมี `width` ที่มีค่า 80vw.
+แท็ก `h2` ต้องมีค่าของ `width` เป็น 80vw
 
 ```js
-assert(__helpers.removeCssComments(code).match(/h2\s*?{\s*?width:\s*?80vw;\s*?}/g));
+assert(
+  __helpers.removeCssComments(code).match(/h2\s*?{\s*?width:\s*?80vw;\s*?}/g)
+);
 ```
 
-tag `p` ควรมี `width` เป็น 75vmin.
+แท็ก `p` ต้องมีค่าของ `width` เป็น 75vmin
 
 ```js
-assert(__helpers.removeCssComments(code).match(/p\s*?{\s*?width:\s*?75vmin;\s*?}/g));
+assert(
+  __helpers.removeCssComments(code).match(/p\s*?{\s*?width:\s*?75vmin;\s*?}/g)
+);
 ```
 
 # --seed--
@@ -52,10 +58,12 @@ assert(__helpers.removeCssComments(code).match(/p\s*?{\s*?width:\s*?75vmin;\s*?}
 
 <h2>Importantus Ipsum</h2>
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel
-  vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac
-  habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse
-  pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus
+  massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet
+  lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac
+  habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem.
+  Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida
+  consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.
 </p>
 ```
 
@@ -73,9 +81,11 @@ assert(__helpers.removeCssComments(code).match(/p\s*?{\s*?width:\s*?75vmin;\s*?}
 
 <h2>Importantus Ipsum</h2>
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel
-  vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac
-  habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse
-  pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus
+  massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet
+  lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac
+  habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem.
+  Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida
+  consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.
 </p>
 ```

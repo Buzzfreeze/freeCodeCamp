@@ -29,7 +29,7 @@ assert(
 assert($('button') && $('button').length > 5);
 ```
 
-อย่าลืมปิด tag `button` ทั้ง 6 ปุ่มด้วย
+อย่าลืมแท็กปิดของ `button` ทั้ง 6 ปุ่มด้วย
 
 ```js
 assert(

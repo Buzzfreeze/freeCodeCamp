@@ -19,8 +19,8 @@ for (var i = 0; i < arr.length; i++) {
 }
 ```
 
-อย่าลืมว่า arrays เป็น zero-based index แปลว่า index สุดท้ายของ array คือ `length - 1`
-เงื่อนไขสำหรับ loop ของเราคือ `i < arr.length` ซึ่งจะหยุดการวนเมื่อ `i` เท่ากับ `length` ในกรณีนี้ loop ครั้งสุดท้ายคือเมื่อ `i === 4` 
+อย่าลืมว่า arrays เป็น zero-based index แปลว่า index สุดท้ายของ array คือ `length - 1`  
+เงื่อนไขสำหรับ loop ของเราคือ `i < arr.length` ซึ่งจะหยุดการวนเมื่อ `i` เท่ากับ `length` ในกรณีนี้ loop ครั้งสุดท้ายคือเมื่อ `i === 4`  
 ในตัวอย่างด้านบน เมื่อ `i` เท่ากับ `arr.length - 1` และแสดง `6` บน console จากนั้น `i` จะเพิ่มขึ้นเป็น `5` และจะออกจาก loop เนื่องจาก `i < arr.length` (5 < 5) เป็น `false`
 
 # --instructions--

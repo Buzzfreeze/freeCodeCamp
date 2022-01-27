@@ -8,43 +8,45 @@ dashedName: build-a-personal-portfolio-webpage
 
 # --description--
 
-**Objective:** จงสร้างแอปพลิเคชั่น [CodePen.io](https://codepen.io) ที่ทำงานคล้ายกับแอปพลิเคชั่นนี้: <https://codepen.io/freeCodeCamp/full/zNBOYG>.
+**Objective:** ลองทำแอปโดยใช้ [CodePen.io](https://codepen.io) ให้มีฟังก์ชันเหมือนกับ: <https://codepen.io/freeCodeCamp/full/zNBOYG>
 
-จงปฏิบัติตามหลักการนี้ [user stories](https://en.wikipedia.org/wiki/User_story) และทดสอบให้ผ่านทุกเทส
-จงทำตามสไตล์ของคุณเอง
+ลองดู [User Story](https://en.wikipedia.org/wiki/User_story) ข้างล่าง แล้วเขียนโค้ดตาม User Story นี้ โดยจะแต่งหน้าตาของแอปในส่วนที่ไม่ได้ระบุได้ตามที่ชอบเลย
 
-คุณสามารถใช้ HTML, JavaScript, และ CSS เพื่อทำโปรเจคนี้
-Plain CSS นั้นเป็นที่แนะนำเพราะมันคือสิ่งที่บทเรียนของเราได้กล่าวถึงมันไปหมดแล้วและคุณควรจะฝึกทักษะการใช้ plain CSS
-คุณสามารถใช้ Bootstrap หรือ SASS ได้ถ้าคุณอยากใช้
-เทคโนโลยีอื่น ๆ (อย่างเช่น jQuery, React, Angular, หรือ Vue) นั้นยังไม่แนะนำสำหรับโปรเจคนี้ โดยหากคุณจะใช้มันก็เป็นความเสี่ยงของคุณเอง
-โปรเจคอื่น ๆ หลังจากนี้จะเปิดโอกาสให้คุณได้ลองใช้เทคโนโลยีอื่น ๆ เช่น React อย่างแน่นอน
-เราพร้อมจะยอมรับและปรับปรุงปัญหาต่าง ๆ ที่เกิดขึ้นจากการใช้เทคโนโลยีที่ถูกแนะนำในโปรเจคนี้ Happy coding!
+คุณจะใช้ HTML, JavaScript, หรือ CSS เพื่อทำโปรเจคนี้ก็ได้
+แต่เราแนะนำให้ใช้ CSS แบบปกติในการทำ เพราะว่าเนื้อหาในส่วนที่เราได้สอนไป เป็นเนื้อหาในส่วนของ CSS แบบปกติ
+คุณจะใช้ Bootstrap หรือ SASS ก็ได้ถ้าคุณอยากใช้
+เรายังไม่แนะนำให้ใช้เทคโนโลยีอื่น ๆ (เช่น jQuery, React, Angular, หรือ Vue) ในโปรเจกต์นี้
+โปรเจคอื่นๆ หลังจากนี้จะเปิดโอกาสให้คุณได้ลองใช้เทคโนโลยีอื่นๆ เช่น React อย่างแน่นอน
 
-**User Story #1:** portfolio ของฉันควรมีส่วนของ welcome ที่มาพร้อมกับ id ชื่อ `welcome-section`.
+ถ้าเจอปัญหาของโปรเจกต์นี้ก็แจ้งมาได้ เราพร้อมแก้ไขปัญหาที่ใช้เทคโนโลยีที่เราบอกอยู่แล้ว
+โค้ดให้สนุกนะ!
 
-**User Story #2:** ส่วน welcome ควรมี `h1` element 1 อันที่เก็บข้อความเอาไว้
+**User Story #1:** portfolio ของฉันต้องมี section ที่มี id เป็น `welcome-section`
 
-**User Story #3:** portfolio ของฉันควรมีส่วนของ project ที่มาพร้อมกับ id ชื่อ `projects`.
+**User Story #2:** ส่วน welcome ต้องมี `h1` element 1 อันที่มีข้อความข้างใน
 
-**User Story #4:** ส่วนของ project ควรเก็บอย่างน้อย 1 element ที่มี class ชื่อ `project-tile` เพื่อเก็บโปรเจค
+**User Story #3:** portfolio ของฉันต้องมี section ที่มี id เป็น `projects`
 
-**User Story #5:** ส่วนของ project ควรเก็บลิงค์อย่างน้อย 1 อันที่จะพาไปยังโปรเจค
+**User Story #4:** section project ต้องมี element อย่างน้อย 1 ตัว ที่มีคลาสเป็น `project-tile` เพื่อเก็บโปรเจค
 
-**User Story #6:**portfolio ของฉันควรมี navbar 1 อันที่มี id ขื่อ `navbar`.
+**User Story #5:** section project ต้องมีลิงก์สำหรับพาไปยังโปรเจค อย่างน้อย 1 ลิงก์
 
-**User Story #7:** navbar ควรเก็บลิงค์อย่างน้อย 1 อันที่ฉันสามารถคลิกเพื่อผ่านไปยังส่วนต่าง ๆ ของหน้าได้
+**User Story #6:** portfolio ของฉันต้องมี navbar 1 อันที่มี id เป็น `navbar`
 
-**User Story #8:** portfolio ของฉันควรมีลิงค์ 1 อันที่มี id ชื่อ `profile-link` ที่จะช่วยเปิด GitHub ของฉันหรือ FCC profile ในแท็บใหม่
+**User Story #7:** navbar ต้องมีลิงก์อย่างน้อย 1 ลิงก์ ที่ฉันสามารถคลิกเพื่อพาไปยังส่วนต่าง ๆ ของหน้าได้
 
-**User Story #9:** portfolio ของฉันควรมี media query อย่าน้อง 1 อัน
+**User Story #8:** portfolio ของฉันต้องมีลิงก์ 1 อันที่มี id เป็น `profile-link` ที่จะเปิดหน้า GitHub ของฉันในแท็บใหม่
 
-**User Story #10:** ความสูงของส่วน welcome ควรเท่ากับความสูงของ viewport
+**User Story #9:** portfolio ของฉันต้องมี media query อย่าน้อย 1 อัน
 
-**User Story #11:** navbar ควรอยู่เหนือ viewport เสมอ
+**User Story #10:** ความสูงของ section welcome ต้องเท่ากับความสูงของ viewport
 
-คุณสามารถสร้างโปรเจคของคุณได้โดย <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> และกดคลิก `Save` เพื่อสร้าง pen ของคุณเอง หรือว่าคุณจะใช้ CDN link อันนี้เพื่อ run test ใน environment ที่คุณชอบก็ได้เช่นกัน: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
+**User Story #11:** navbar ต้องอยู่ส่วนบนสุดของ viewport เสมอ
 
-เมื่อคุณทำทุกอย่างเสร็จแล้ว จงส่ง URL ที่พาไปยังโปรเจคของคุณพร้อมกับ test ที่ผ่านทั้งหมด 
+คุณสามารถสร้างโปรเจคของคุณโดย <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>ใช้ CodePen template นี้</a> แล้วคลิก `Save` เพื่อสร้าง pen ของคุณเอง หรือคุณสามารถใช้ CDN นี้ เพื่อรันการทดสอบใน environment ที่คุณต้องการ: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
+
+ให้ submit ส่ง URL ของโปรเจคที่ทำสำเร็จและได้รันการทดสอบผ่านหมดแล้ว เมื่อเสร็จงาน
+
 # --solutions--
 
 ```html

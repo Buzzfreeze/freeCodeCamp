@@ -9,23 +9,23 @@ dashedName: override-all-other-styles-by-using-important
 
 # --description--
 
-เย้! เราพึ่งพิสูจน์ได้ว่า inline style จะเขียนทับ (overwrite) CSS declarations ทั้งหมดใน `style` element.
+เย้! เราพึ่งพิสูจน์ได้ว่า inline style จะมีความสำคัญมากกว่าการประกาศ CSS ทั้งหมดใน `style` element
 
-แต่รอก่อน มีอีกวิธีที่จะทำการเขียนทับ CSS
-มันเป็นวิธีมีระดับความสำคัญสูงจนทำให้มันสามารถเขียนทับคำสั่งที่ถูกประกาศด้วยวิธีก่อนหน้าได้
-แต่ก่อนที่เราจะทำมัน เรามาพูดเกี่ยวกับเหตุผลที่คุณต้องการที่จะเขียนทับ CSS ของคุณกันดีกว่า
+แต่เดี๋ยวก่อน ยังมีอีกวิธีที่จะเขียนทับ CSS ได้
+โดยวิธีนี้จะถือว่ามีความสำคัญสูงสุด และจะเขียนทับ CSS ทุกรูปแบบที่เราได้เรียนมาแล้วเลย
+แต่ก่อนที่เราจะได้ลองทำ เรามาคุยกันเรื่องสาเหตุที่จะต้องเขียนทับ CSS กันก่อนดีกว่า
 
-ในหลาย ๆ สถานการณ์ คุณจะได้ใช้ CSS libraries
-พวกมันอาจจะบังเอิญเขียนทับ CSS ของคุณ ดังนั้นเมื่อคุณต้องการที่ให้มั่นใจได้ว่า CSS ที่ได้เขียนไว้ให้กับ element ของคุณจะไม่ถูกเขียนทับ คุณสามารถใช้ `!important` กับมันได้
+หลายๆครั้ง คุณจะได้ใช้ CSS library
+ซึ่ง library พวกนี้อาจจะบังเอิญเขียนทับ CSS ของคุณ ดังนั้นถ้าคุณอยากให้มั่นใจได้ว่า CSS ที่คุณได้เขียนไว้ให้กับ element ของคุณจะไม่ถูกเขียนทับ คุณจะต้องใช้ `!important`
 
-กลับมาที่ `pink-text` class declaration
-จำไว้ว่า `pink-text` class นั้นถูกเขียนทับโดย subsequent class declarations, id declarations, และ inline styles ไปแล้ว
+กลับมาที่การประกาศคลาส `pink-text`
+ยังจำได้ใช่ไหมว่าคลาส `pink-text` นั้นถูกเขียนได้ทับโดย คลาสที่ประกาศทีหลัง, CSS ที่ประกาศตาม id, และ inline style
 
 # --instructions--
 
-เรามาเพิ่มคีย์เวิร์ด `!important` ให้กับ color declaration ของ pink-text element เพื่อทำให้มั่นใจ 100% ว่า `h1` element ของคุณจะเป็นสีชมพู
+เรามาเพิ่มคีย์เวิร์ด `!important` ให้กับ `color` ของ `pink-text` element เพื่อทำให้มั่นใจได้ 100% ว่า `h1` element ของคุณจะเป็นสีชมพู
 
-นี่คือตัวอย่างของวิธีการทำ:
+วิธีการใช้ `!important` จะเป็นแบบนี้:
 
 ```css
 color: red !important;
@@ -33,37 +33,37 @@ color: red !important;
 
 # --hints--
 
-`h1` element ควรมีคลาส `pink-text`.
+`h1` element ต้องมีคลาสชื่อ `pink-text`
 
 ```js
 assert($('h1').hasClass('pink-text'));
 ```
 
-`h1` element ควรมีคลาสชื่อ `blue-text`.
+`h1` element ต้องมีคลาสชื่อ `blue-text`
 
 ```js
 assert($('h1').hasClass('blue-text'));
 ```
 
-`h1` element ควรมี `id` เป็น `orange-text`.
+`h1` element ต้องมี `id` เป็น `orange-text`
 
 ```js
 assert($('h1').attr('id') === 'orange-text');
 ```
 
-`h1` element ควรมี inline style เป็น `color: white`
+`h1` element ต้องมี inline style เป็น `color: white`
 
 ```js
 assert(code.match(/<h1.*style/gi) && code.match(/<h1.*style.*color\s*?:/gi));
 ```
 
-`pink-text` class declaration ควรมีคีย์เวิร์ด `!important` เพื่อเขียนทับ declaration ตัวอื่น ๆ
+การประกาศคลาส `pink-text` ต้องมีคีย์เวิร์ด `!important` เพื่อเขียนทับการประกาศตัวอื่น ๆ
 
 ```js
 assert(code.match(/\.pink-text\s*?\{[\s\S]*?color:.*pink.*!important\s*;?[^\.]*\}/g));
 ```
 
-`h1` element ควรมีสีขมพู
+`h1` element ต้องมี `color` เป็น `pink`
 
 ```js
 assert($('h1').css('color') === 'rgb(255, 192, 203)');

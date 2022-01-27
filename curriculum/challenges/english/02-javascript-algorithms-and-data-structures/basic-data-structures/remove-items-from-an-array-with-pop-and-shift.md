@@ -9,7 +9,9 @@ dashedName: remove-items-from-an-array-with-pop-and-shift
 # --description--
 
 `push()` และ `unshift()` เป็น method ที่ทำงานตรงข้ามกับ `pop()` และ `shift()` เลย
+
 จากที่เห็นคุณน่าจะเดาได้แล้วว่า `pop()` จะใช้ดึง element ออกจากท้าย array และ `shift()` จะใช้ดึง element ออกจากหน้า array 
+
 ความต่างของ `pop()` และ `shift()` กับ `push()` และ `unshift()` ก็คือ `pop()` และ `shift()` จะไม่รับพารามิเตอร์ และทั้งสอง method จะดึง element ออกได้ทีละ 1 ตัวเท่านั้น
 
 ลองมาดูตัวอย่าง:
@@ -38,7 +40,9 @@ let popped = greetings.pop();
 
 # --instructions--
 
-เราได้ประกาศฟังก์ชัน `popShift` ซึ่งรับ array เป็น argument และคืนค่าเป็น array ใหม่ จงแก้ไขฟังก์ชันโดยใช้ `pop()` และ `shift()` เพื่อดึง element แรกและ element สุดท้ายของ array argument ออก แล้วนำ element ที่ถูกดึงออกไปเก็บในตัวแปรในฟังก์ชัน `popShift` ที่ชื่อ `popped` และ `shifted` เพื่อให้ฟังก์ชันคืนค่าเป็น array ของตัวแปรนี้
+เราได้ประกาศฟังก์ชัน `popShift` ซึ่งรับ array เป็น argument และคืนค่าเป็น array ใหม่ 
+
+จงแก้ไขฟังก์ชันโดยใช้ `pop()` และ `shift()` เพื่อดึง element แรกและ element สุดท้ายของ array argument ออก แล้วนำ element ที่ถูกดึงออกไปเก็บในตัวแปรในฟังก์ชัน `popShift` ที่ชื่อ `popped` และ `shifted` เพื่อให้ฟังก์ชันคืนค่าเป็น array ของตัวแปรนี้
 
 # --hints--
 

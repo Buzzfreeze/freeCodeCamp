@@ -106,7 +106,7 @@ assert(
 );
 ```
 
-`myDog` ต้องมี property ชื่อ  `friends` และเป็นข้อมูลประเภท `array`.
+`myDog` ต้องมี property ชื่อ  `friends` และเป็นข้อมูลประเภท `array`
 
 ```js
 assert(

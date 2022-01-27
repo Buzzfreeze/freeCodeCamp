@@ -2,42 +2,43 @@
 id: 587d781a367417b2b2512ab7
 title: Use the strong Tag to Make Text Bold
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/ceJNBSb'
+videoUrl: "https://scrimba.com/c/ceJNBSb"
 forumTopicId: 301080
 dashedName: use-the-strong-tag-to-make-text-bold
 ---
 
 # --description--
 
-เพื่อทำให้ข้อความมันหนาขึ้น คุณสามารถใช้ `strong` tag
-มันมักถูกใช้เพื่อดึงความสนใจมาที่ข้อความหรือสัญลักษณ์ที่มีความสำคัญ
-browser จะใช้ CSS ที่เป็น `font-weight: bold;` กับ element ด้วย `strong` tag
+เราสามารถใช้แท็ก `strong` เพื่อทำให้ข้อความเป็นตัวหนาได้
+ซึ่งปกติจะใช้เพื่อดึงความสนใจมาที่ข้อความหรือสัญลักษณ์ที่มีความสำคัญ
+
+เมื่อเราใช้แท็ก `strong` เบราว์เซอร์จะทำให้ CSS ของ element นั้นเป็น `font-weight: bold;`
 
 # --instructions--
 
-จงใส่ `strong` tag รอบข้อความ `Stanford University` ที่อยู่ข้างใน `p` tag (ไม่ต้องรวมกับจุด).
+ให้ใช้แท็ก `strong` ครอบข้อความ `Stanford University` ที่อยู่ข้างในแท็ก `p` (ไม่ต้องครอบจุด)
 
 # --hints--
 
-คุณควรเพิ่ม `strong` tag อันหนึ่งให้กับ markup.
+ต้องเพิ่มแท็ก `strong` ลงไปในโค้ด
 
 ```js
-assert($('strong').length == 1);
+assert($("strong").length == 1);
 ```
 
-`strong` tag ควรอยู่ใน `p` tag.
+แท็ก `strong` ต้องซ้อนอยู่ในแท็ก `p`
 
 ```js
-assert($('p').children('strong').length == 1);
+assert($("p").children("strong").length == 1);
 ```
 
-`strong` tag ควรเก็บข้อความ `Stanford University` ไว้
+ข้อความในแท็ก `strong` ต้องเป็นคำว่า `Stanford University`
 
 ```js
 assert(
-  $('strong')
+  $("strong")
     .text()
-    .match(/^Stanford University\.?$/gi),
+    .match(/^Stanford University\.?$/gi)
 );
 ```
 
@@ -76,11 +77,24 @@ assert(
   <div class="cardContent">
     <div class="cardText">
       <h4>Google</h4>
-      <p>Google was founded by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University.</p>
+      <p>
+        Google was founded by Larry Page and Sergey Brin while they were Ph.D.
+        students at Stanford University.
+      </p>
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br /><br />
-      <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+      <a
+        href="https://en.wikipedia.org/wiki/Larry_Page"
+        target="_blank"
+        class="links"
+        >Larry Page</a
+      ><br /><br />
+      <a
+        href="https://en.wikipedia.org/wiki/Sergey_Brin"
+        target="_blank"
+        class="links"
+        >Sergey Brin</a
+      >
     </div>
   </div>
 </div>
@@ -120,13 +134,24 @@ assert(
     <div class="cardText">
       <h4>Google</h4>
       <p>
-        Google was founded by Larry Page and Sergey Brin while they were Ph.D. students at
+        Google was founded by Larry Page and Sergey Brin while they were Ph.D.
+        students at
         <strong>Stanford University</strong>.
       </p>
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br /><br />
-      <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+      <a
+        href="https://en.wikipedia.org/wiki/Larry_Page"
+        target="_blank"
+        class="links"
+        >Larry Page</a
+      ><br /><br />
+      <a
+        href="https://en.wikipedia.org/wiki/Sergey_Brin"
+        target="_blank"
+        class="links"
+        >Sergey Brin</a
+      >
     </div>
   </div>
 </div>

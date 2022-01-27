@@ -9,6 +9,7 @@ dashedName: copy-array-items-using-slice
 # --description--
 
 method ต่อไปที่เราจะพูดถึงคือ `slice()` ซึ่ง `slice()` จะคัดลอก element ตามจำนวนที่กำหนดไปยัง array ใหม่โดยไม่แก้ไข array เดิม โดย `slice()` รับพารามิเตอร์แค่สองตัว — พารามิเตอร์แรกคือ index ที่จะเริ่มคัดลอก และตัวที่สองคือ index ที่จะหยุดคัดลอก (แต่ไม่รวม element ที่ index นี้) 
+
 ลองดูโค้ดตัวอย่าง:
 
 ```js

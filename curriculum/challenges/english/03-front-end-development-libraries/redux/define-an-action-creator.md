@@ -9,8 +9,10 @@ dashedName: define-an-action-creator
 # --description--
 
 หลังจากสร้าง action ได้แล้ว ขั้นตอนต่อไปคือการส่ง action ไปยัง Redux store เพื่ออัปเดต state 
+
 ในการส่ง action เข้าไปใน Redux store คุณต้องใช้ action creator 
 โดย action creator ก็เป็นแค่ฟังก์ชัน JavaScript ที่คืนค่าออกมาเป็น action 
+
 ถ้าจะให้อธิบายก็คือ action creator จะเป็นฟังก์ชันที่ใช้สร้าง object โดย object นี้จะใช้สื่อถึง action ที่เกิดขึ้น
 
 # --instructions--

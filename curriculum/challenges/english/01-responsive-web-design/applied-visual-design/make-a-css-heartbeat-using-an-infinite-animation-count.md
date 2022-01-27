@@ -2,35 +2,38 @@
 id: 587d78a8367417b2b2512ae4
 title: Make a CSS Heartbeat using an Infinite Animation Count
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cDZpDUr'
+videoUrl: "https://scrimba.com/c/cDZpDUr"
 forumTopicId: 301062
 dashedName: make-a-css-heartbeat-using-an-infinite-animation-count
 ---
 
 # --description--
 
-นี่คืออีกตัวอย่างของการทำให้ animation วนไม่หยุดด้วย `animation-iteration-count` property โดยจะใช้รูปหัวใจที่คุณสร้างขึ้นมาก่อนหน้านี้
+มาลองทำให้ animation วนไปเรื่อยๆโดยใช้ `animation-iteration-count` อีกครั้งกันดีกว่า
+คราวนี้เราจะใช้รูปหัวใจที่คุณสร้างขึ้นมาก่อนหน้านี้
 
-การเต้นของหัวใจที่มีความยาว 11 วินาทีนั้นจะประกอบไปด้วย animated piece 2 ชิ้น
-`heart` elements (รวมถึง `:before` และ `:after` pieces) จะถูก animate เพื่อเปลี่ยนขนาดโดยใช้ `transform` property, และพื้นหลัง  `div` จะถูก animate เพื่อเปลี่ยนสีของมันโดยใช้`background` property.
+animation การเต้นของหัวใจ จะมีความยาว 1 วินาที
+โดยจะมีส่วนที่เราต้องขยับสองส่วนคือ
+ส่วนแรก คือ `heart` element (รวมถึง `:before` และ `:after`) จะถูก animate เพื่อเปลี่ยนขนาดโดยใช้ property `transform` และ
+ส่วนที่สอง คือพื้นหลังของ `div` จะถูก animate เพื่อเปลี่ยนสีโดยใช้ property `background`
 
 # --instructions--
 
-จงทำให้หัวใจเต้นโดยการเพิ่ม `animation-iteration-count` property ให้กับทั้ง `back` class และ `heart` class และกำหนดให้ค่าเป็น `infinite`
-`heart:before` และ `heart:after` selectors จะไม่ต้องการ animation properties ใด ๆ
+จงทำให้หัวใจเต้น โดยการเพิ่ม property `animation-iteration-count` ให้กับทั้งคลาส `back` และ `heart` และให้กำหนดค่าเป็น `infinite`
+และเราไม่ต้องระบุ animation property ให้กับ `heart:before` และ `heart:after` selector
 
 # --hints--
 
-`animation-iteration-count` property สำหรับ `heart` class ควรมีค่าเป็น `infinite`.
+property `animation-iteration-count` ของคลาส `heart` ต้องมีค่าเป็น `infinite`
 
 ```js
-assert($('.heart').css('animation-iteration-count') == 'infinite');
+assert($(".heart").css("animation-iteration-count") == "infinite");
 ```
 
-`animation-iteration-count` property สำหรับ `back` class ควรมีค่าเป็น `infinite`
+property `animation-iteration-count` ของคลาส `back` ต้องมีค่าเป็น `infinite`
 
 ```js
-assert($('.back').css('animation-iteration-count') == 'infinite');
+assert($(".back").css("animation-iteration-count") == "infinite");
 ```
 
 # --seed--
@@ -50,7 +53,6 @@ assert($('.back').css('animation-iteration-count') == 'infinite');
     background: white;
     animation-name: backdiv;
     animation-duration: 1s;
-
   }
 
   .heart {
@@ -66,7 +68,6 @@ assert($('.back').css('animation-iteration-count') == 'infinite');
     transform: rotate(-45deg);
     animation-name: beat;
     animation-duration: 1s;
-
   }
   .heart:after {
     background-color: pink;
@@ -103,7 +104,6 @@ assert($('.back').css('animation-iteration-count') == 'infinite');
       transform: scale(0.6) rotate(-45deg);
     }
   }
-
 </style>
 <div class="back"></div>
 <div class="heart"></div>

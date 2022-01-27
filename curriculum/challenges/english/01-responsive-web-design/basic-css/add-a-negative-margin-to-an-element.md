@@ -2,30 +2,30 @@
 id: bad87fee1348bd9aedf08823
 title: Add a Negative Margin to an Element
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cnpyGs3'
+videoUrl: "https://scrimba.com/c/cnpyGs3"
 forumTopicId: 16166
 dashedName: add-a-negative-margin-to-an-element
 ---
 
 # --description--
 
-`margin` ของ element จะควบคุมขนาดช่องว่างระหว่าง `border` ของ element กับ element ที่อยู่รอบๆ
+`margin` จะควบคุมขนาดช่องว่างระหว่าง `border` ของ element กับ element ที่อยู่รอบๆ
 
-ถ้าคุณกำหนดให้ `margin` ของ element มีค่าเป็นลบ  
-element จะมีขนาดใหญ่ขึ้น โดยขยายออกทั้ง 4 ทิศ Top Right Bottom left ตามค่า Negative
+ถ้าคุณกำหนดให้ `margin` ของ element มีค่าติดลบ  
+element นั้นจะมีขนาดใหญ่ขึ้น
 
 # --instructions--
 
-จงกำหนดค่าของ `margin` ให้เป็นค่าลบเหมือนกับอันที่ใช้กับกล่องแดง
+ให้กำหนดค่าของ `margin` ให้เป็นค่าลบ เหมือนกับกล่องสีแดง
 
-จงเปลี่ยน `margin` ของกล่องฟ้าให้เป็น `-15px`, เพื่อขยายออกทั้ง 4 ทิศ Top Right Bottom left ตามค่า Negative
+ให้เปลี่ยน `margin` ของกล่องฟ้าให้เป็น `-15px`
 
 # --hints--
 
-`blue-box` class ควรกำหนดให้ element มี `-15px` เป็นค่าของ `margin`
+`margin` ของคลาส `blue-box` ต้องเป็น `-15px`
 
 ```js
-assert($('.blue-box').css('margin-top') === '-15px');
+assert($(".blue-box").css("margin-top") === "-15px");
 ```
 
 # --seed--

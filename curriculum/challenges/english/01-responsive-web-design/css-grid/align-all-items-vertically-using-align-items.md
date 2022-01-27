@@ -2,25 +2,27 @@
 id: 5a94fdf869fb03452672e45b
 title: Align All Items Vertically using align-items
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pByETK/ckzPeUv'
+videoUrl: "https://scrimba.com/p/pByETK/ckzPeUv"
 forumTopicId: 301121
 dashedName: align-all-items-vertically-using-align-items
 ---
 
 # --description--
 
-การใช้ `align-items` property กับ grid container จะกำหนดให้ item ในกริดของเราตรงกันในแนวตั้ง (column)
+เราจะใช้ property `align-items` กับ grid container เพื่อเรียง item ในกริดของเราในแนวตั้ง
 
 # --instructions--
 
-จงใช้ `align-items` เพื่อย้าย item ทั้งหมดไปที่ท้ายสุดของแต่ละ cell
+ให้ใช้ property `align-items` เพื่อย้าย item ทั้งหมดไปที่จุดล่างสุดของแต่ละ cell
 
 # --hints--
 
-`container` class ควรมี `align-items` property อันหนึ่งที่มีค่าเป็น `end`
+คลาส `container` ต้องมีค่าของ property `align-items` เป็น `end`
 
 ```js
-assert(code.match(/.container\s*?{[\s\S]*align-items\s*?:\s*?end\s*?;[\s\S]*}/gi));
+assert(
+  code.match(/.container\s*?{[\s\S]*align-items\s*?:\s*?end\s*?;[\s\S]*}/gi)
+);
 ```
 
 # --seed--
@@ -54,9 +56,9 @@ assert(code.match(/.container\s*?{[\s\S]*align-items\s*?:\s*?end\s*?;[\s\S]*}/gi
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 10px;
-    /* Only change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
 
-    /* Only change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
   }
 </style>
 

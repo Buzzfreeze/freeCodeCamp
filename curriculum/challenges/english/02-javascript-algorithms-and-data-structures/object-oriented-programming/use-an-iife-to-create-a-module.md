@@ -8,7 +8,7 @@ dashedName: use-an-iife-to-create-a-module
 
 # --description--
 
-immediately invoked function expression (IIFE) มักใช้ในการรวมกลุ่มฟังก์ชันที่เกี่ยวข้องกันเข้ามาเป็น object เดียวกัน หรือ <dfn>module</dfn> เดียวกัน 
+immediately invoked function expression (IIFE) มักใช้ในการรวมกลุ่มฟังก์ชันที่เกี่ยวข้องกันเข้ามาเป็น object เดียวกัน หรือ <dfn>module</dfn> เดียวกัน  
 เช่น ในแบบทดสอบที่ผ่านมาเราได้สร้าง mixin 2 ตัว ตามนี้:
 
 ```js
@@ -43,7 +43,7 @@ let motionModule = (function () {
 })();
 ```
 
-ตอนนี้คุณจะมี IIFE ที่คืนค่าเป็น object `motionModule` โดย object นี้จะมี property ที่เป็นพฤติกรรมต่างๆ ของ mixin ซึ่งข้อดีของการทำให้เป็นรูปแบบ module ก็คือ เราจะรวมพฤติกรรมต่างๆให้อยู่ใน object เดียว และสามารถเรียกใช้จากโค้ดส่วนอื่นได้ 
+ตอนนี้คุณจะมี IIFE ที่คืนค่าเป็น object `motionModule` โดย object นี้จะมี property ที่เป็นพฤติกรรมต่างๆ ของ mixin ซึ่งข้อดีของการทำให้เป็นรูปแบบ module ก็คือ เราจะรวมพฤติกรรมต่างๆให้อยู่ใน object เดียว และสามารถเรียกใช้จากโค้ดส่วนอื่นได้  
 ลองดูตัวอย่างการใช้งานในโค้ดด้านล่าง:
 
 ```js

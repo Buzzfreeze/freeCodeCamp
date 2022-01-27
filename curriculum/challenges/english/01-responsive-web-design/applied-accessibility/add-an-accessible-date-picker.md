@@ -2,57 +2,58 @@
 id: 587d778b367417b2b2512aa8
 title: Add an Accessible Date Picker
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cR3bRbCV'
+videoUrl: "https://scrimba.com/c/cR3bRbCV"
 forumTopicId: 301008
 dashedName: add-an-accessible-date-picker
 ---
 
 # --description--
 
-ฟอร์มมันจะรวมช่อง `input` ที่สามารถถูกใช้เพื่อสร้าง form controls หลาย ๆ แบบที่แตกต่างกันได้
-`type` attribute ใน element นี้จะบอกว่า `input` element ประเภทไหนจะถูกสร้างขึ้นมา
+ปกติเราจะใช้ฟิลด์ `input` ในฟอร์มด้วย ซึ่งฟิลด์นี้สามารถเอาไปสร้างการวิธีการส่งข้อมูลจากผู้ใช้ได้หลายแบบ
+โดย `input` จะมี attribute ชื่อ `type` ที่จะเป็นตัวควบคุมว่าจะรับข้อมูลแบบไหนจากผู้ใช้
 
-คุณอาจจะสังเกตได้ว่า input ประเภท `text` และ `submit` ใน challenge ก่อนหน้านี้และ HTML5 ได้กล่าวถึงตัวเลือกหนึ่งที่ระบุช่อง `date` 
-date picker จะแสดงในช่อง `input` เมื่อมันถูกคลิกตาม browser support ที่ใช้ โดยมันทำให้การกรอกฟอร์มนั้นง่ายขึ้นสำหรับผู้ใช้ทุกคน
+ถ้ายังจำได้ คุณจะเห็นว่าเรามี input ประเภท `text` และ `submit` ในแบบฝึกหัดที่ผ่านมาไปแล้ว
+โดยคราวนี้ HTML5 ได้เพิ่มประเภท input แบบใหม่เข้ามาคือ `date`
+โดย input แบบนี้เรียกว่า date picker ซึ่งจะทำให้ผู้ใช้เลือกข้อมูลวันที่ เดือน ปี ได้ เมื่อผู้ใช้คลิกที่ input
 
-สำหรับ browser เก่าๆ ประเภทของมันโดยค่าเริ่มต้นจะเป็น `text` ดังนั้นเราสามารถช่วยบอกผู้ใช้ว่า format ของ date input ที่ต้องการเป็นยังไง โดยการผ่านข้อความใน `label` หรือ `placeholder` 
+ในเบราว์เซอร์รุ่นเก่า ผู้ใช้จะไม่เห็น date picker แต่จะเห็นเป็นช่องกรอกข้อความธรรมดา ดังนั้นเราต้องบอกผู้ใช้ว่าอยากได้รูปแบบวันที่แบบไหน โดยใช้ข้อความใน `label` หรือ `placeholder`
 
-นี่คือตัวอย่าง:
+ลองดูตัวอย่าง:
 
 ```html
 <label for="input1">Enter a date:</label>
-<input type="date" id="input1" name="input1">
+<input type="date" id="input1" name="input1" />
 ```
 
 # --instructions--
 
-Camper Cat นั้นจัด Mortal Kombat tournament และต้องการถามผู้เข้าแข่งขันของพวกเขาว่าควรจัดงานวันไหน
-จงเพิ่ม `input` tag พร้อมกับ `type` attribute ของ `date`, `id` attribute ของ `pickdate`, และ `name` attribute ของ `date`.
+คราวนี้ นาย Camper Cat ได้จัดการแข่งขัน Mortal Kombat และต้องการถามผู้เข้าแข่งขันว่าเขาควรจัดงานวันไหน
+ให้เพิ่มแท็ก `input` ที่มี `type` เป็น `date` และมี `id` เป็น `pickdate` และมี `name` เป็น `date`
 
 # --hints--
 
-โค้ดของคุณควรเพิ่ม `input` tag สำหรับช่อง date selector 
+ต้องเพิ่มแท็ก `input` เพื่อใช้เป็น date picker
 
 ```js
-assert($('input').length == 2);
+assert($("input").length == 2);
 ```
 
-`input` tag ควรมี `type` attribute อันหนึ่งที่มีค่าเป็น `date`
+แท็ก `input` ต้องมี `type` เป็น `date`
 
 ```js
-assert($('input').attr('type') == 'date');
+assert($("input").attr("type") == "date");
 ```
 
-`input` tag ควรมี `id` attribute ที่เป็นค่าเป็น `pickdate`.
+แท็ก `input` ต้องมี `id` เป็น `pickdate`
 
 ```js
-assert($('input').attr('id') == 'pickdate');
+assert($("input").attr("id") == "pickdate");
 ```
 
-`input` tag ควรมี `name` attribute อันหนึ่งที่มีค่าเป็น `date`
+แท็ก `input` ต้องมี `name` เป็น `date`
 
 ```js
-assert($('input').attr('name') == 'date');
+assert($("input").attr("name") == "date");
 ```
 
 # --seed--
@@ -71,13 +72,11 @@ assert($('input').attr('name') == 'date');
         <p>Tell us the best date for the competition</p>
         <label for="pickdate">Preferred Date:</label>
 
-        <!-- Only change code below this line -->
+        <!-- แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น -->
 
+        <!-- แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น -->
 
-
-        <!-- Only change code above this line -->
-
-        <input type="submit" name="submit" value="Submit">
+        <input type="submit" name="submit" value="Submit" />
       </form>
     </section>
   </main>
@@ -98,8 +97,8 @@ assert($('input').attr('name') == 'date');
       <form>
         <p>Tell us the best date for the competition</p>
         <label for="pickdate">Preferred Date:</label>
-        <input type="date" id="pickdate" name="date">
-        <input type="submit" name="submit" value="Submit">
+        <input type="date" id="pickdate" name="date" />
+        <input type="submit" name="submit" value="Submit" />
       </form>
     </section>
   </main>

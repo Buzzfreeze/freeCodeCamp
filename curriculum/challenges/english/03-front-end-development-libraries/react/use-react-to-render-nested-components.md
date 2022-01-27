@@ -18,6 +18,7 @@ dashedName: use-react-to-render-nested-components
 # --instructions--
 
 เราได้สร้าง functional component สองตัวไว้ให้ใน code editor แล้วคือ `TypesOfFruit` และ `Fruits` 
+
 ให้นำ component `TypesOfFruit` ไป*ซ้อน*ใน component `Fruits` แล้วนำ component `Fruits` ไปซ้อนใน component `TypesOfFood` อีกต่อหนึ่ง 
 ผลลัพธ์ที่ได้จะเป็น child component ซ้อนอยู่ใน parent component ที่ซ้อนอยู่ใน parent component อีกทีนึง!
 

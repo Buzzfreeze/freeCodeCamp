@@ -2,46 +2,49 @@
 id: bad87fee1348bd9aefe08806
 title: Style Multiple Elements with a CSS Class
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cRkVbsQ'
+videoUrl: "https://scrimba.com/c/cRkVbsQ"
 forumTopicId: 18311
 dashedName: style-multiple-elements-with-a-css-class
 ---
 
 # --description--
 
-`class` ทำให้คุณสามารถใช้ CSS style กับ HTML element หลาย ๆ tag ได้
-คุณพิสูจน์มันได้โดยการใส่ `red-text` class ให้กับ `p` element อันแรก และลองใน class ไปลองใส่ใน tag อื่นๆ
+การใช้ `class` จะทำให้คุณใช้ style กับแท็กหลายๆแบบได้
+ให้ลองกำหนด class ของ `p` element ตัวแรกเป็น `red-text` ดู แล้วคุณจะเห็นการเปลี่ยนแปลง
 
 # --hints--
 
-`h2` element ควรมีสีแดง
+ข้อความใน `h2` ต้องเป็นสีแดง
 
 ```js
-assert($('h2').css('color') === 'rgb(255, 0, 0)');
+assert($("h2").css("color") === "rgb(255, 0, 0)");
 ```
 
-`h2` element ควรมีคลาสที่ชื่อ `red-text`.
+คลาสของ `h2` ต้องเป็น `red-text`
 
 ```js
-assert($('h2').hasClass('red-text'));
+assert($("h2").hasClass("red-text"));
 ```
 
-`p` element อันแรกควรมีสีแดง
+ข้อความใน `p` element ตัวแรกต้องเป็นสีแดง
 
 ```js
-assert($('p:eq(0)').css('color') === 'rgb(255, 0, 0)');
+assert($("p:eq(0)").css("color") === "rgb(255, 0, 0)");
 ```
 
-`p` element อันที่สองและสามไม่ควรมีสีแดง
+ข้อความใน `p` element ตัวที่สองและสามต้องไม่เป็นสีแดง
 
 ```js
-assert(!($('p:eq(1)').css('color') === 'rgb(255, 0, 0)') && !($('p:eq(2)').css('color') === 'rgb(255, 0, 0)'));
+assert(
+  !($("p:eq(1)").css("color") === "rgb(255, 0, 0)") &&
+    !($("p:eq(2)").css("color") === "rgb(255, 0, 0)")
+);
 ```
 
-`p` element ควรมีคลาสชื่อ `red-text`.
+คลาสของ `p` element ตัวแรกต้องเป็น `red-text`
 
 ```js
-assert($('p:eq(0)').hasClass('red-text'));
+assert($("p:eq(0)").hasClass("red-text"));
 ```
 
 # --seed--

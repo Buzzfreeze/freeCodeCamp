@@ -9,15 +9,15 @@ dashedName: style-the-html-body-element
 
 # --description--
 
-ตอนนี้ เรามาพูดถึง CSS inheritance กันเถอะ
+ตอนนี้ เรามาพูดถึงเรื่อง CSS inheritance กันเถอะ
 
-HTML page ทุกหน้ามี `body` element อันหนึ่ง
+HTML ทุกหน้าจะมี `body` element หนึ่งตัว
 
 # --instructions--
 
-เราสามารถพิสูจน์ได้ว่า `body` element อยู่ตรงหน้าเราโดยการกำหนดให้มันมี `background-color` สีดำ
+เราจะให้คุณพิสูจน์ว่า `body` element มีอยู่จริง โดยให้คุณกำหนดให้ `background-color` ของ `body` เป็นสีดำ
 
-เราสามารถทำเช่นนี้ได้โดยการเพิ่มโค้ดต่อไปนี้ให้กับ `style` element:
+ให้เพิ่มโค้ดนี้ใน `style` element:
 
 ```css
 body {
@@ -27,19 +27,19 @@ body {
 
 # --hints--
 
-`body` element ควรมี `background-color` เป็นสีดำ
+`body` element ต้องมี `background-color` เป็น `black`
 
 ```js
 assert($('body').css('background-color') === 'rgb(0, 0, 0)');
 ```
 
-CSS rule ควรจะถูกจะมีทั้ง curly brackets เปิดและปิด
+CSS rule ของคุณต้องใช้ `{` และ `}` ให้ถูกต้อง
 
 ```js
 assert(code.match(/<style>\s*body\s*\{\s*background.*\s*:\s*.*;\s*\}\s*<\/style>/i));
 ```
 
-CSS rule ด้วยลงท้ายด้วย semi-colon
+CSS rule ต้องลงท้ายด้วย semi-colon
 
 ```js
 assert(code.match(/<style>\s*body\s*\{\s*background.*\s*:\s*.*;\s*\}\s*<\/style>/i));

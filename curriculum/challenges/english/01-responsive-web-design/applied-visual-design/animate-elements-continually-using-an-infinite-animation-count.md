@@ -2,33 +2,34 @@
 id: 587d78a8367417b2b2512ae3
 title: Animate Elements Continually Using an Infinite Animation Count
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cVJDVfq'
+videoUrl: "https://scrimba.com/c/cVJDVfq"
 forumTopicId: 301041
 dashedName: animate-elements-continually-using-an-infinite-animation-count
 ---
 
 # --description--
 
-ในแบบฝึกหัดที่แล้วได้กล่าวถึงวิธีการใช้ animation properties บางตัวใน `@keyframes` rule
-animation property อีกอันหนึ่งก็คือ `animation-iteration-count` ซึ่งจะทำให้คุณสามารถควบคุมจำนวนครั้งที่คุณต้องการให้วนลูปได้
-นี่คือตัวอย่าง:
+ในแบบฝึกหัดที่ผ่านมา เราได้พูดถึงวิธีการใช้ animation property บางตัวใน `@keyframes` rule ไปแล้ว
+animation property อีกตัวหนึ่งที่ควรรู้จักคือ `animation-iteration-count` ซึ่งจะทำให้คุณสามารถควบคุมจำนวนครั้งที่คุณต้องการให้วนลูปได้
+
+ลองดูตัวอย่างการใช้งาน:
 
 ```css
 animation-iteration-count: 3;
 ```
 
-ในกรณีนี้ animation จะหยุดเมื่อมันได้วนทำไปครบสามครั้ง แต่มันก็เป็นไปได้ที่จะทำให้ animation วนลูปอย่างต่อเนื่องโดยการกำหนดค่าให้เป็น `infinite`
+ในกรณีนี้ animation จะทำงานสามครั้งจากนั้นก็จะหยุด แต่เราก็ทำให้ animation แสดงไปเรื่อยๆได้ โดยการตั้งค่าเป็น `infinite`
 
 # --instructions--
 
-เพื่อที่จะทำให้บอลที่กระดอนอยู่วนลูปเด้งไปมาตลอดเวลา, จงเปลี่ยน `animation-iteration-count` property ให้เป็น `infinite`
+ให้ทำให้บอลเด้งไปเด้งมาตลอดเวลา โดยการเปลี่ยน property `animation-iteration-count` ให้เป็น `infinite`
 
 # --hints--
 
-`animation-iteration-count` property ควรมีค่าเป็น `infinite`.
+property `animation-iteration-count` ควรมีค่าเป็น `infinite`
 
 ```js
-assert($('#ball').css('animation-iteration-count') == 'infinite');
+assert($("#ball").css("animation-iteration-count") == "infinite");
 ```
 
 # --seed--

@@ -9,7 +9,7 @@ dashedName: access-multi-dimensional-arrays-with-indexes
 
 # --description--
 
-ให้มองว่า <dfn>multi-dimensional</dfn> array นั้นเป็น *array ซ้อน array* เมื่อคุณใช้ bracket (`[]`) เพื่อเข้าถึง array ของคุณ ิbracket คู่แรกจะดึงข้อมูลของ array ชั้นนอกสุด (ชั้นแรก) และ bracket คู่ถัดมาจะดึง array ในชั้นถัดไป 
+ให้มองว่า <dfn>multi-dimensional</dfn> array นั้นเป็น *array ซ้อน array* เมื่อคุณใช้ bracket (`[]`) เพื่อเข้าถึง array ของคุณ bracket คู่แรกจะดึงข้อมูลของ array ชั้นนอกสุด (ชั้นแรก) และ bracket คู่ถัดมาจะดึง array ในชั้นถัดไป 
 
 **ตัวอย่าง**
 

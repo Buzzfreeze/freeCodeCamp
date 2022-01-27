@@ -20,7 +20,7 @@ dashedName: diff-two-arrays
 assert(typeof diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]) === 'object');
 ```
 
-`["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]` ต้องคืนค่าเป็น `["pink wool"]`.
+`["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]` ต้องคืนค่าเป็น `["pink wool"]`
 
 ```js
 assert.sameMembers(

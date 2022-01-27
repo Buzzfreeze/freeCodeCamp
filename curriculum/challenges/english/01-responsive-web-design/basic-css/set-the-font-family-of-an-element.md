@@ -2,16 +2,16 @@
 id: bad87fee1348bd9aede08807
 title: Set the Font Family of an Element
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/c3bvpCg'
+videoUrl: "https://scrimba.com/c/c3bvpCg"
 forumTopicId: 18278
 dashedName: set-the-font-family-of-an-element
 ---
 
 # --description--
 
-คุณสามารถกำหนดว่าจะใช้รูปแบบฟ้อนต์กับ element ใด โดยการใช้ `font-family` property.
+เราจะใช้ property `font-family` เพื่อกำหนดประเภทของฟอนต์
 
-ยกตัวอย่างเช่น ถ้าคุณต้องการกำหนดให้รูปแบบฟ้อนต์ของ `h2` element เป็น `sans-serif`, คุณสามารถเขียน CSS ได้ดังนี้:
+เช่น ถ้าคุณอยากให้ฟอนต์ของ `h2` element เป็น `sans-serif` ให้เขียน CSS แบบนี้:
 
 ```css
 h2 {
@@ -21,18 +21,18 @@ h2 {
 
 # --instructions--
 
-จงทำให้ `p` elements ทำหมดใช้ `monospace` font.
+ให้เปลี่ยนฟอนต์ของ `p` element ทั้งหมดเป็น `monospace`
 
 # --hints--
 
-`p` elements ควรใช้ฟ้อนต์ `monospace`.
+`p` element ทุกตัวต้องใช้ฟอนต์ `monospace`
 
 ```js
 assert(
-  $('p')
-    .not('.red-text')
-    .css('font-family')
-    .match(/monospace/i),
+  $("p")
+    .not(".red-text")
+    .css("font-family")
+    .match(/monospace/i)
 );
 ```
 

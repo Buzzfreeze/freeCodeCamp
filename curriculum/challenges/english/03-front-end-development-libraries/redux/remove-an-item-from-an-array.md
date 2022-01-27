@@ -13,6 +13,7 @@ dashedName: remove-an-item-from-an-array
 # --instructions--
 
 เราได้เขียน reducer และ action creator ใหม่ให้แล้ว เพื่อให้ทำการลบข้อมูลใน array ออกตาม index ที่ให้ไป 
+
 ลองเขียน reducer เพื่อให้คืนค่าเป็น state ใหม่ที่ลบข้อมูลใน index ที่ระบุออกไปแล้ว
 
 # --hints--

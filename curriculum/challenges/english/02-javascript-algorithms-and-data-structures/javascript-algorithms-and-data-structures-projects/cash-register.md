@@ -18,9 +18,9 @@ dashedName: cash-register
 
 ฟังก์ชัน `checkCashRegister()` ต้องคืนค่าเป็น object ที่มี key ที่ชื่อ `status` และ `change` 
 
-คืนค่าเป็น `{status: "INSUFFICIENT_FUNDS", change: []}` ถ้าเงินในลิ้นชักน้อยกว่าเงินที่ต้องทอน หรือมีเงินพอแต่ไม่สามารถทอนได้
+โดยคืนค่าเป็น `{status: "INSUFFICIENT_FUNDS", change: []}` ถ้าเงินในลิ้นชักน้อยกว่าเงินที่ต้องทอน หรือมีเงินพอแต่ไม่สามารถทอนได้
 
-คืนค่าเป็น `{status: "CLOSED", change: [...]}` เมื่อเงินในลิ้นชักเท่ากับเงินที่ต้องทอนพอดี โดยกำหนดให้ key `change` มีค่าเป็น array มิติของเงินที่ทอน
+โดยคืนค่าเป็น `{status: "CLOSED", change: [...]}` เมื่อเงินในลิ้นชักเท่ากับเงินที่ต้องทอนพอดี โดยกำหนดให้ key `change` มีค่าเป็น array มิติของเงินที่ทอน
 
 และคืนค่าเป็น `{status: "OPEN", change: [...]}` เมื่อเงินในลิ้นชักมากกว่าเงินที่ต้องทอน และสามารถทอนเงินได้ โดยกำหนดให้ `change` เป็น array 2 มิติของเงินที่ทอนโดยเรียงตามมูลค่าจากมากไปน้อย
 
@@ -67,7 +67,7 @@ assert.deepEqual(
 );
 ```
 
-`checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])` ต้องคืนค่าเป็น `{status: "OPEN", change: [["QUARTER", 0.5]]}`.
+`checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])` ต้องคืนค่าเป็น `{status: "OPEN", change: [["QUARTER", 0.5]]}`
 
 ```js
 assert.deepEqual(
@@ -86,7 +86,7 @@ assert.deepEqual(
 );
 ```
 
-`checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])` ต้องคืนค่าเป็น `{status: "OPEN", change: [["TWENTY", 60], ["TEN", 20], ["FIVE", 15], ["ONE", 1], ["QUARTER", 0.5], ["DIME", 0.2], ["PENNY", 0.04]]}`.
+`checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])` ต้องคืนค่าเป็น `{status: "OPEN", change: [["TWENTY", 60], ["TEN", 20], ["FIVE", 15], ["ONE", 1], ["QUARTER", 0.5], ["DIME", 0.2], ["PENNY", 0.04]]}`
 
 ```js
 assert.deepEqual(
@@ -116,7 +116,7 @@ assert.deepEqual(
 );
 ```
 
-`checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])` ต้องคืนค่าเป็น `{status: "INSUFFICIENT_FUNDS", change: []}`.
+`checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])` ต้องคืนค่าเป็น `{status: "INSUFFICIENT_FUNDS", change: []}`
 
 ```js
 assert.deepEqual(
@@ -135,7 +135,7 @@ assert.deepEqual(
 );
 ```
 
-`checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])` ต้องคืนค่าเป็น `{status: "INSUFFICIENT_FUNDS", change: []}`.
+`checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])` ต้องคืนค่าเป็น `{status: "INSUFFICIENT_FUNDS", change: []}`
 
 ```js
 assert.deepEqual(
@@ -154,7 +154,7 @@ assert.deepEqual(
 );
 ```
 
-`checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])` ต้องคืนค่าเป็น `{status: "CLOSED", change: [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]}`.
+`checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])` ต้องคืนค่าเป็น `{status: "CLOSED", change: [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]}`
 
 ```js
 assert.deepEqual(

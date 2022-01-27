@@ -22,7 +22,7 @@ Bird.prototype = Object.create(Animal.prototype);
 Bird.prototype.constructor = Bird;
 ```
 
-ถ้าคุณอยากให้ object `Bird` ทำอะไรได้มากกว่าแค่ที่สืบทอดมาจาก `Animal` เช่นในตัวอย่างนี้ที่คุณอยากให้ `Bird` มีฟังก์ชัน `fly()` ด้วย 
+ถ้าคุณอยากให้ object `Bird` ทำอะไรได้มากกว่าแค่ที่สืบทอดมาจาก `Animal` เช่นในตัวอย่างนี้ที่คุณอยากให้ `Bird` มีฟังก์ชัน `fly()` ด้วย  
 ถ้าเราจะเพิ่มฟังก์ชันให้กับ `Bird` `prototype` เราจะใช้วิธีเดียวกับการกำหนดค่าให้ฟังก์ชัน constructor อื่นๆ
 
 ```js
@@ -70,7 +70,7 @@ assert(typeof Dog.prototype.eat == 'function');
 assert('bark' in Dog.prototype);
 ```
 
-`beagle` ควรเป็น `instanceof` `Animal`.
+`beagle` ควรเป็น `instanceof` ของ `Animal`
 
 ```js
 assert(beagle instanceof Animal);

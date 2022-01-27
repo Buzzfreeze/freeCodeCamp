@@ -41,7 +41,7 @@ assert($('div.col-xs-7:has(input[type="text"])').length > 0);
 assert($('div.col-xs-5:has(button[type="submit"])').length > 0);
 ```
 
-อย่าลืม tag ปิดของ `div` ทุกตัวด้วย
+อย่าลืมแท็กปิดของ `div` ทุกตัวด้วย
 
 ```js
 assert(

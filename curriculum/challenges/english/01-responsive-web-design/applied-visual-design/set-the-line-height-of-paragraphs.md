@@ -9,16 +9,15 @@ dashedName: set-the-line-height-of-paragraphs
 
 # --description--
 
-CSS มี `line-height` property เพื่อที่จะเปลี่ยนความสูงของแต่ละเส้นใน block ของข้อความ
-ตามชื่อของมัน มันจะเปลี่ยนปริมาณของช่องว่างในแนวตั้งที่แต่ละบรรทัดของข้อความความ
+CSS มี property `line-height` ที่ใช้กำหนดความสูงของแต่ละบรรทัดของข้อความ
 
 # --instructions--
 
-จงเพิ่ม `line-height` property ให้กับ `p` tag และกำหนดให้มันมีค่า 25px
+ให้เพิ่ม property `line-height` ให้กับแท็ก `p` และกำหนดค่าให้เป็น 25px
 
 # --hints--
 
-คุณควรกำหนดให้ `line-height` ของ `p` tag มีค่า 25 pixels
+`line-height` ของแท็ก `p` ต้องมีค่าเป็น 25 pixel
 
 ```js
 assert($('p').css('line-height') == '25px');

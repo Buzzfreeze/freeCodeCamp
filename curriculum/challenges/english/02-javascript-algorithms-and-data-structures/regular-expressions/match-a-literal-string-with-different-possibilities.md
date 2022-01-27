@@ -12,8 +12,8 @@ dashedName: match-a-literal-string-with-different-possibilities
 
 เราใช้วิธีนี้หาข้อความที่มี pattern เดียวได้ แต่ถ้าเราอยากหาทีละหลายๆ pattern เราจะใช้ `alternation` หรือ `OR` operator: `|` (ปกติแล้ว `|` จะอยู่เหนือปุ่ม enter จะอยู่กับตัว ฃ หรือ ฅ)
 
-operator นี้จะทำการเช็คทั้ง pattern ที่อยู่หน้าและหลัง operator เช่น
-ถ้าเราต้องการหา string `yes` หรือ `no` เราควรกำหนด regex เป็น `/yes|no/` (ไม่ว่าจะเจอ `yes` หรือ `no` ก็จะคืนค่าเป็น `true`)
+operator นี้จะทำการเช็คทั้ง pattern ที่อยู่หน้าและหลัง operator  
+เช่น ถ้าเราต้องการหา string `yes` หรือ `no` เราควรกำหนด regex เป็น `/yes|no/` (ไม่ว่าจะเจอ `yes` หรือ `no` ก็จะคืนค่าเป็น `true`)
 
 นอกจากนี้ เรายังสามารถค้นหามากกว่า 2 pattern ได้ถ้าเพิ่ม pattern และใส่ `OR` operator เข้าไปอีก เช่น `/yes|no|maybe/`
 

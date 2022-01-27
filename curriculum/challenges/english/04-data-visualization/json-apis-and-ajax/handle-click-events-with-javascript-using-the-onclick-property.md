@@ -8,7 +8,7 @@ dashedName: handle-click-events-with-javascript-using-the-onclick-property
 
 # --description--
 
-หากคุณต้องการให้โค้ดของคุณทำงานต่อเมื่อหน้าของคุณโหลดเสร็จแล้ว ให้ attach JavaScript event ไปที่ document โดยจะเรียกว่า`DOMContentLoaded`
+ถ้าคุณต้องการให้โค้ดของคุณทำงานต่อเมื่อหน้าของคุณโหลดเสร็จแล้ว ให้ `addEventListener` ไปยัง document โดย event นี้ชื่อว่า `DOMContentLoaded`
 
 ```js
 document.addEventListener('DOMContentLoaded', function() {
@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-สามารถใช้ตัวจัดการเหตุการณ์ที่อยู่ภายใน `DOMContentLoaded` functionและจัดการ `onclick` event เมื่อ user click ที่ element id `getMessage` โดยสามารถเพิ่มโค้ดได้ตามตัวอย่างข้างล่างนี้
+แล้วในฟังก์ชัน `DOMContentLoaded` นี้ คุณค่อยเพิ่ม event handler เพื่อจัดการ event `onclick` 
+ในตัวอย่างด้านล่างจะเป็นการใช้ event handler ที่จะทำงานเมื่อผู้ใช้คลิกที่ element ที่มี id เป็น `getMessage`:
 
 ```js
 document.getElementById('getMessage').onclick = function(){};
@@ -24,17 +25,17 @@ document.getElementById('getMessage').onclick = function(){};
 
 # --instructions--
 
-เพิ่ม click event ภายใน `DOMContentLoaded` function สำหรับ element id `getMessage`
+ในฟังก์ชัน `DOMContentLoaded` ให้เพิ่ม click event ที่จะทำงานเมื่อคลิกที่ element ที่มี id เป็น `getMessage`
 
 # --hints--
 
-ควรใช้ `document.getElementById` method เพื่อเลือก `getMessage` element.
+ต้องใช้ method `document.getElementById` เพื่อเลือก element ที่มี id เป็น `getMessage` 
 
 ```js
 assert(code.match(/document\s*\.getElementById\(\s*?('|")getMessage\1\s*?\)/g));
 ```
 
-ควรเพิ่ม `onclick` event 
+ต้องเพิ่ม event `onclick`
 
 ```js
 assert(typeof document.getElementById('getMessage').onclick === 'function');
@@ -47,10 +48,10 @@ assert(typeof document.getElementById('getMessage').onclick === 'function');
 ```html
 <script>
   document.addEventListener('DOMContentLoaded', function(){
-    // Add your code below this line
+    // เขียนโค้ดใต้บรรทัดนี้
 
 
-    // Add your code above this line
+    // เขียนโค้ดเหนือบรรทัดนี้
   });
 </script>
 
@@ -96,9 +97,9 @@ assert(typeof document.getElementById('getMessage').onclick === 'function');
 ```html
 <script>
   document.addEventListener('DOMContentLoaded', function(){
-    // Add your code below this line
+    // เขียนโค้ดใต้บรรทัดนี้
     document.getElementById('getMessage').onclick = function(){ };
-    // Add your code above this line
+    // เขียนโค้ดเหนือบรรทัดนี้
   });
 </script>
 

@@ -8,39 +8,41 @@ dashedName: build-a-tribute-page
 
 # --description--
 
-**Objective:** จงสร้างแอปพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานคล้ายแอปพลิเคชั่นนี้: <https://codepen.io/freeCodeCamp/full/zNqgVx>.
+**Objective:** ลองทำแอปโดยใช้ [CodePen.io](https://codepen.io) ให้มีฟังก์ชันเหมือนกับ: <https://codepen.io/freeCodeCamp/full/zNqgVx>
 
-จงทำตามการหลัก [user stories](https://en.wikipedia.org/wiki/User_story) และทดสอบให้ผ่านทุกเทส
-จงทำตามสไตล์ของคุณเอง
+ลองดู [User Story](https://en.wikipedia.org/wiki/User_story) ข้างล่าง แล้วเขียนโค้ดตาม User Story นี้ โดยจะแต่งหน้าตาของแอปในส่วนที่ไม่ได้ระบุได้ตามที่ชอบเลย
 
-คุณสามารถใช้ HTML, JavaScript, และ CSS เพื่อทำโปรเจคนี้
-Plain CSS นั้นเป็นที่แนะนำเพราะมันคือสิ่งที่บทเรียนของเราได้กล่าวถึงมันไปหมดแล้วและคุณควรจะฝึกทักษะการใช้ plain CSS
-คุณสามารถใช้ Bootstrap หรือ SASS ได้ถ้าคุณอยากใช้
-เทคโนโลยีอื่น ๆ (อย่างเช่น jQuery, React, Angular, หรือ Vue) นั้นยังไม่แนะนำสำหรับโปรเจคนี้ โดยหากคุณจะใช้มันก็เป็นความเสี่ยงของคุณเอง
-โปรเจคอื่น ๆ หลังจากนี้จะเปิดโอกาสให้คุณได้ลองใช้เทคโนโลยีอื่น ๆ เช่น React อย่างแน่นอน
-เราพร้อมจะยอมรับและปรับปรุงปัญหาต่าง ๆ ที่เกิดขึ้นจากการใช้เทคโนโลยีที่ถูกแนะนำในโปรเจคนี้ Happy coding!
+คุณจะใช้ HTML, JavaScript, หรือ CSS เพื่อทำโปรเจคนี้ก็ได้
+แต่เราแนะนำให้ใช้ CSS แบบปกติในการทำ เพราะว่าเนื้อหาในส่วนที่เราได้สอนไป เป็นเนื้อหาในส่วนของ CSS แบบปกติ
+คุณจะใช้ Bootstrap หรือ SASS ก็ได้ถ้าคุณอยากใช้
+เรายังไม่แนะนำให้ใช้เทคโนโลยีอื่น ๆ (เช่น jQuery, React, Angular, หรือ Vue) ในโปรเจกต์นี้
+โปรเจคอื่นๆ หลังจากนี้จะเปิดโอกาสให้คุณได้ลองใช้เทคโนโลยีอื่นๆ เช่น React อย่างแน่นอน
 
-**User Story #1:** tribute page ของฉันควรมี element อันหนึ่งที่มี `id="main"` ซึ่งเก็บ elements อื่น ๆ ไว้
+ถ้าเจอปัญหาของโปรเจกต์นี้ก็แจ้งมาได้ เราพร้อมแก้ไขปัญหาที่ใช้เทคโนโลยีที่เราบอกอยู่แล้ว
+โค้ดให้สนุกนะ!
 
-**User Story #2:** ฉันควรมองเห็น element อันหนึ่งที่มี `id="title"` ซึ่งเก็บ string (หรือ text) ที่อธิบายหัวเรื่องของ tribute page (เช่น "Dr. Norman Borlaug").
+**User Story #1:** Tribute Page ต้องมี element อันหนึ่งที่มี `id="main"` ซึ่งมี element อื่นๆอยู่ด้านใน
 
-**User Story #3:** ฉันควรมองเห็น`div` element อันหนึ่งที่มี`id="img-div"`.
+**User Story #2:** ต้องมี element อันหนึ่งที่มี `id="title"` ซึ่งเก็บ string (ข้อความ) ที่เป็นหัวเรื่องของ Tribute Page (เช่น "Dr. Norman Borlaug")
 
-**User Story #4:** ภายใน `img-div` element, ฉันสามารถมองเห็น`img` element อันหนึ่งที่มี`id="image"`.
+**User Story #3:** ต้องมี `div` element อันหนึ่งที่มี `id="img-div"`
 
-**User Story #5:** ภายใน `img-div` element, ฉันสามารถมองเห็น element อันหนึ่งที่มี `id="img-caption"` ซึ่งเก็บเนื้อหาที่เป็นตัวอักษรที่อธิบายรูปภาพที่ถูกแสดงใน `img-div`.
+**User Story #4:** ใน element ที่มี id เป็น `img-div` ต้องมี `img` อันหนึ่งที่มี `id="image"`
 
-**User Story #6:** ฉันควรมองเห็น element อันหนึ่งที่มี `id="tribute-info"` ซึ่งเก็บเนื้อหาที่เป็นตัวอักษรที่อธิบายหัวเรื่องของ tribute page
+**User Story #5:** ใน element ที่มี id เป็น `img-div` element ต้องมี element อันหนึ่งที่มี `id="img-caption"` ซึ่งเก็บข้อความที่อธิบายรูปภาพที่ถูกแสดงใน `img-div`
 
-**User Story #7:** ฉันควรมองเห็น `a` element อันหนึ่งที่มี `id="tribute-link"` ซึ่งเชื่อมไปยังเว็บไซต์ข้างนอกที่เก็บข้อมูลเพิ่มเติมเกี่ยวกับหัวเรื่องของ tribute page. HINT: คุณสามารถเพิ่ม `target` attribute ให้กับ element ของคุณและกำหนดให้มันมีค่า `_blank` เพื่อที่ลิงค์ของคุณจะได้ถูกเปิดขึ้นมาแท็บใหม่ (หรือ `target="_blank"`).
+**User Story #6:** ต้องมี element อันหนึ่งที่มี `id="tribute-info"` ซึ่งเก็บข้อความที่เป็นหัวเรื่องของ Tribute Page
 
-**User Story #8:** `img` element ควรเป็นแบบ responsive หรือสามารถปรับขนาดให้เข้ากับอุปกรณ์ได้, โดยขึ้นกับความกว้างของ parent element, โดยทำให้เกินขนาด original ของมัน
+**User Story #7:** ต้องมี `a` element อันหนึ่งที่มี `id="tribute-link"` ซึ่งลิงก์ไปยังเว็บไซต์ภายนอก ที่เก็บข้อมูลเพิ่มเติมเกี่ยวกับ Tribute Page HINT: คุณสามารถเพิ่ม attribute `target` ให้กับ element ของคุณและกำหนดให้มีค่าเป็น `_blank` ได้ เพื่อให้ลิงก์เปิดขึ้นมาในแท็บใหม่ (`target="_blank"`)
 
-**User Story #9:** `img` element ควรอยู่กึ่งกลางภายใน parent element.
+**User Story #8:** `img` element ต้องเป็นแบบ responsive (ปรับขนาดให้เข้ากับอุปกรณ์ได้) โดยขึ้นกับความกว้างของ parent element ซึ่งจะต้องไม่ใหญ่เกินขนาดตั้งเดิมของรูป
 
-คุณสามารถสร้างโปรเจคของคุณได้โดย <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> และกดคลิก `Save` เพื่อสร้าง pen ของคุณเอง หรือว่าคุณจะใช้ CDN link อันนี้เพื่อ run test ใน environment ที่คุณชอบก็ได้เช่นกัน: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`.
+**User Story #9:** `img` element ต้องอยู่กลาง parent element เลย
 
-เมื่อคุณทำทุกอย่างเสร็จแล้ว จงส่ง URL ที่พาไปยังโปรเจคของคุณพร้อมกับ test ที่ผ่านทั้งหมด 
+คุณสามารถสร้างโปรเจคของคุณโดย <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>ใช้ CodePen template นี้</a> แล้วคลิก `Save` เพื่อสร้าง pen ของคุณเอง หรือคุณสามารถใช้ CDN นี้ เพื่อรันการทดสอบใน environment ที่คุณต้องการ: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
+
+ให้ submit ส่ง URL ของโปรเจคที่ทำสำเร็จและได้รันการทดสอบผ่านหมดแล้ว เมื่อเสร็จงาน
+
 # --solutions--
 
 ```html

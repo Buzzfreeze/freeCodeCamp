@@ -10,8 +10,8 @@ dashedName: match-anything-with-wildcard-period
 
 บางครั้งอาจไม่รู้ว่าตัวอักษรที่อยู๋ pattern จะต้องใช้ตัวอะไร การระบุทุกคำใน pattern ที่ต้องการ match อาจลำบากมาก แต่ยินดีด้วย เราจะขอแนะนำให้คุณรู้จักกับ wildcard character: `.` ที่จะช่วยแก้ปัญหาตรงนี้
 
-wildcard character `.` จะ match กับตัวอักษรใดก็ได้ 1 ตัว (ตัว wildcard นี้จะเรียกว่า `dot` หรือ `period` ก็ได้)
-เราจะใช้ wildcard character ได้เหมือนกับตัวอักษรอื่นๆ ใน regex 
+wildcard character `.` จะ match กับตัวอักษรใดก็ได้ 1 ตัว (ตัว wildcard นี้จะเรียกว่า `dot` หรือ `period` ก็ได้)  
+เราจะใช้ wildcard character ได้เหมือนกับตัวอักษรอื่นๆ ใน regex  
 เช่น ถ้าเราต้องการ match `hug`, `huh`, `hut` และ `hum` เราสามารถใช้ regex `/hu./` เพื่อ match คำทั้ง 4 คำได้ (การใช้ `.` ในตัวอย่างนี้จะทำให้ match ตัวอักษรอื่นด้วย เช่น `hua`,`hub`, `huc` ฯลฯ)
 
 ```js

@@ -2,29 +2,31 @@
 id: 5a9d727a424fe3d0e10cad12
 title: Use a custom CSS Variable
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cM989ck'
+videoUrl: "https://scrimba.com/c/cM989ck"
 forumTopicId: 301090
 dashedName: use-a-custom-css-variable
 ---
 
 # --description--
 
-หลังจากที่คุณสร้างตัวแปรขึ้นมา คุณสามารถกำหนดให้มันเป็นค่าของ CSS property อื่นได้โดยการอ้างอิงถึงชื่อที่คุณตั้งให้มัน
+หลังจากที่คุณสร้างตัวแปรแล้ว คุณก็จะเอาค่าไปกำหนดให้ CSS property อื่นได้แล้ว
+วิธีการก็แค่เรียกใช้ชื่อของตัวแปรแบบนี้:
 
 ```css
 background: var(--penguin-skin);
 ```
 
-โค้ดข้างบนจะเปลี่ยนพื้นหลังของ element ใดก็ตามที่คุณชี้ ไปเป็นสีเทาเพราะ ค่าในตัวแปร `--penguin-skin` คือสีเทา
-จงจำไว้ว่า style จะไม่ถูกใช้ถ้าชื่อของตัวแปรไม่ตรงกับที่ตั้งไว้เป๊ะๆ
+โค้ดข้างบนจะเปลี่ยนพื้นหลังของ element ที่คุณเลือกไปเป็นสีเทา เพราะว่าค่าในตัวแปร `--penguin-skin` คือ `gray`
+
+ที่สำคัญคือ style จะไม่ถูกใช้ถ้าชื่อของตัวแปรไม่ตรงกับที่ตั้งไว้เป๊ะๆ
 
 # --instructions--
 
-จงใช้ `--penguin-skin` แทนค่าของ `background` property ของ `penguin-top`, `penguin-bottom`, `right-hand` และ `left-hand` classes.
+ให้ใช้ตัวแปร `--penguin-skin` เป็นค่าของ property `background` ของคลาส `penguin-top`, `penguin-bottom`, `right-hand` และ `left-hand`
 
 # --hints--
 
-ตัวแปร `--penguin-skin` ควรใช้กับ `background` property ของ `penguin-top` class.
+ต้องใช้ตัวแปร `--penguin-skin` กับ property `background` ของคลาส `penguin-top`
 
 ```js
 assert(
@@ -34,7 +36,7 @@ assert(
 );
 ```
 
-ตัแปร `--penguin-skin` variable ควรใช้ถูกใช้โดย `background` property ของ `penguin-bottom` class.
+ต้องใช้ตัวแปร `--penguin-skin` กับ property `background` ของคลาส `penguin-bottom`
 
 ```js
 assert(
@@ -44,7 +46,7 @@ assert(
 );
 ```
 
-ตัวแปร `--penguin-skin` variable ควรถูกใช้โดย `background` property ของ `right-hand` class.
+ต้องใช้ตัวแปร `--penguin-skin` กับ property `background` ของคลาส `right-hand`
 
 ```js
 assert(
@@ -54,7 +56,7 @@ assert(
 );
 ```
 
-ตัวแปร `--penguin-skin` variable ควรถูกใช้โดย `background` property ของ `left-hand` class.
+ต้องใช้ตัวแปร `--penguin-skin` กับ property `background` ของคลาส `left-hand`
 
 ```js
 assert(
@@ -84,9 +86,9 @@ assert(
     top: 10%;
     left: 25%;
 
-    /* Change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้ */
     background: black;
-    /* Change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้ */
 
     width: 50%;
     height: 45%;
@@ -97,9 +99,9 @@ assert(
     top: 40%;
     left: 23.5%;
 
-    /* Change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้ */
     background: black;
-    /* Change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้ */
 
     width: 53%;
     height: 45%;
@@ -110,9 +112,9 @@ assert(
     top: 0%;
     left: -5%;
 
-    /* Change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้ */
     background: black;
-    /* Change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้ */
 
     width: 30%;
     height: 60%;
@@ -125,9 +127,9 @@ assert(
     top: 0%;
     left: 75%;
 
-    /* Change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้ */
     background: black;
-    /* Change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้ */
 
     width: 30%;
     height: 60%;
@@ -249,7 +251,7 @@ assert(
   }
 
   body {
-    background:#c6faf1;
+    background: #c6faf1;
   }
 
   .penguin * {
@@ -284,5 +286,18 @@ assert(
 # --solutions--
 
 ```html
-<style>.penguin-top {background: var(--penguin-skin);} .penguin-bottom {background: var(--penguin-skin);} .right-hand {background: var(--penguin-skin);} .left-hand {background: var(--penguin-skin);}</style>
+<style>
+  .penguin-top {
+    background: var(--penguin-skin);
+  }
+  .penguin-bottom {
+    background: var(--penguin-skin);
+  }
+  .right-hand {
+    background: var(--penguin-skin);
+  }
+  .left-hand {
+    background: var(--penguin-skin);
+  }
+</style>
 ```

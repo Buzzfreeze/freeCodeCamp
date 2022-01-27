@@ -8,8 +8,8 @@ dashedName: remove-elements-from-an-array-using-slice-instead-of-splice
 
 # --description--
 
-ปกติแล้วเราจะมีโค้ดส่วนที่ทำการดึง element ออกจาก array โดยที่ไม่เปลี่ยนค่าของ array เดิม 
-ซึ่ง JavaScript มี method `splice` ที่ทำงานแบบนี้ได้ โดยจะรับ argument แรก เป็น index ที่ต้องการเริ่มดึงค่า และ argument ที่สองเป็น จำนวน element ที่ต้องการดึงออกมา แต่เราถ้าไม่ระบุ argument ที่สอง ฟังก์ชันจะดึงทุก element ตั้งแต่ index ที่ระบุไปจนถึง element สุดท้าย 
+ปกติแล้วเราจะมีโค้ดส่วนที่ทำการดึง element ออกจาก array โดยที่ไม่เปลี่ยนค่าของ array เดิม  
+ซึ่ง JavaScript มี method `splice` ที่ทำงานแบบนี้ได้ โดยจะรับ argument แรก เป็น index ที่ต้องการเริ่มดึงค่า และ argument ที่สองเป็น จำนวน element ที่ต้องการดึงออกมา แต่เราถ้าไม่ระบุ argument ที่สอง ฟังก์ชันจะดึงทุก element ตั้งแต่ index ที่ระบุไปจนถึง element สุดท้าย  
 แต่ method `splice` ก็จะลบค่าที่ดึงออกมาจาก array เดิมด้วย ลองดูตัวอย่าง:
 
 ```js
@@ -19,12 +19,12 @@ cities.splice(3, 1);
 
 ในตัวอย่างนี้ method `splice` จะคืนค่าเป็น string `London` และจะลบ string นี้ออกจาก array `cities` จะทำให้ค่าของ `cities` เปลี่ยนเป็น `["Chicago", "Delhi", "Islamabad", "Berlin"]`
 
-ในแบบทดสอบที่แล้วเราได้เห็นว่า method `slice` จะไม่เปลี่ยนค่าของ array เดิม และจะคืนค่าเป็น array ตัวใหม่ ที่เราจะเก็บเข้าไปในตัวแปรอื่นได้
+ในแบบทดสอบที่แล้วเราได้เห็นว่า method `slice` จะไม่เปลี่ยนค่าของ array เดิม และจะคืนค่าเป็น array ตัวใหม่ ที่เราจะเก็บเข้าไปในตัวแปรอื่นได้  
 ถ้ายังจำได้ method `slice` รับ argument 2 ตัว คือ index เริ่มต้น และ index ที่ต้องการจบการ slice (ค่าที่ได้จะไม่รวม element ที่ตำแหน่งนี้) และคืนค่าออกมาเป็น element ที่เลือกใน array ตัวใหม่ เพราะฉะนั้นการใช้ method `slice` แทนการใช้ `splice` จะช่วยป้องกันการเกิด side effect จากการที่ array เปลี่ยนไปได้
 
 # --instructions--
 
-ให้แก้ฟังก์ชัน `nonMutatingSplice` โดยใช้ `slice` แทนการใช้ `splice` 
+ให้แก้ฟังก์ชัน `nonMutatingSplice` โดยใช้ `slice` แทนการใช้ `splice`  
 ฟังก์ชันนี้จะต้องทำงานโดยการรับ array `cities` เข้ามา และคืนค่าเป็น array ที่มีค่าเป็น 3 element แรกของ array `cities`
 
 ห้ามทำให้ array เดิมเปลี่ยนแปลง

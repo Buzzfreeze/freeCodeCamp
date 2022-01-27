@@ -15,10 +15,8 @@ dashedName: profile-lookup
 
 ฟังก์ชันนี้จะต้องเช็คว่าใน contact list ของเรามีรายชื่อที่ `firstName` ตรงกับ `name` ที่ใส่เข้ามาหรือไม่ และต้องเช็คด้วยว่าใน contact นี้มี property ที่ชื่อตรงกับ `prop` หรือไม่
 
-ถ้าเจอว่าเป็น `true` ทั้งคู่ให้อ่านค่าของ property นั้นและคืนค่าออกไป
-
-ถ้าใน `contacts` ไม่มีคนที่ `firstName` ตรงกับ `name` ให้คืนค่าออกไปเป็น string `No such contact`
-
+ถ้าเจอว่าเป็น `true` ทั้งคู่ให้อ่านค่าของ property นั้นและคืนค่าออกไป  
+ถ้าใน `contacts` ไม่มีคนที่ `firstName` ตรงกับ `name` ให้คืนค่าออกไปเป็น string `No such contact`  
 ถ้าเจอว่าใน contact นี้ไม่มี property ที่ชื่อตรงกับ `prop` ให้คืนค่า string `No such property`
 
 # --hints--

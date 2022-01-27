@@ -12,7 +12,7 @@ dashedName: make-images-mobile-responsive
 
 ถ้าเราอยากให้รูปนี้กว้างพอดีกับหน้าจอมือถือของเราล่ะ?
 
-ถ้าเราใช้ Bootstrap เราแค่เพิ่ม class `img-responsive` ให้กับ tag image แค่นี้รูปของเราก็จะพอดีกับความกว้างของหน้านี้แล้ว
+ถ้าเราใช้ Bootstrap เราแค่เพิ่ม class `img-responsive` ให้กับแท็ก image แค่นี้รูปของเราก็จะพอดีกับความกว้างของหน้านี้แล้ว
 
 # --hints--
 
@@ -40,7 +40,7 @@ assert(!$('img:eq(1)').hasClass('smaller-image'));
 assert($('img:eq(1)').attr('src') === 'https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg');
 ```
 
-อย่าลืมใส่ `>` เพื่อปิด tag img
+อย่าลืมใส่ `>` เพื่อปิดแท็ก img
 
 ```js
 assert(

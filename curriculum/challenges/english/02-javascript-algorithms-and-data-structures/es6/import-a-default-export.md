@@ -8,7 +8,7 @@ dashedName: import-a-default-export
 
 # --description--
 
-ในบทเรียนที่แล้ว เราได้เรียนเรื่อง `export default` และการใช้งานไป แต่ในการ import ตัว default export เราต้องเปลี่ยน syntax `import` 
+ในบทเรียนที่แล้ว เราได้เรียนเรื่อง `export default` และการใช้งานไป แต่ในการ import ตัว default export เราต้องเปลี่ยน syntax `import`  
 ในตัวอย่างด้านล่าง เรามี `add` เป็น default export ของไฟล์ `math_functions.js` แล้วเราจะ import ฟังก์ชันนี้ได้ตามนี้:
 
 ```js

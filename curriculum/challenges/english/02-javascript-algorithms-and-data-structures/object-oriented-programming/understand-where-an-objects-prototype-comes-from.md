@@ -8,7 +8,7 @@ dashedName: understand-where-an-objects-prototype-comes-from
 
 # --description--
 
-object จะสืบทอด `prototype` มาจากฟังก์ชัน constructor ที่สร้าง object นั้นมา เหมือนกับคนที่สืบทอดยีนส์มาจากพ่อแม่ 
+object จะสืบทอด `prototype` มาจากฟังก์ชัน constructor ที่สร้าง object นั้นมา เหมือนกับคนที่สืบทอดยีนส์มาจากพ่อแม่  
 ลองดูตัวอย่างเวลาใช้ `Bird` constructor สร้าง object `duck`:
 
 

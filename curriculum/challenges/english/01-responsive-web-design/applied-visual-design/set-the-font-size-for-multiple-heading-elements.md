@@ -2,72 +2,86 @@
 id: 587d781c367417b2b2512ac2
 title: Set the font-size for Multiple Heading Elements
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cPpQNT3'
+videoUrl: "https://scrimba.com/c/cPpQNT3"
 forumTopicId: 301067
 dashedName: set-the-font-size-for-multiple-heading-elements
 ---
 
 # --description--
 
-`font-size` property นั้นถูกใช้เพื่อระบุขนาดของตัวอักษรให้กับ element ที่ใช้ property นี้
-rule นี้สามารถถูกใช้กับ element หลาย ๆ อันเพื่อสร้าง visual consistency (ความสม่ำเสมอ) ของตัวอักษรในหน้าเว็บได้
-ในแบบฝึกหัดนี้ คุณจะได้กำหนดค่าของ `h1` ถึง `h6` tags เพื่อให้บาลานซ์กับขนาดของ heading
+เราสามารถใช้ property `font-size` เพื่อระบุขนาดของตัวอักษรของ element ได้
+
+เราสามารถใช้ property นี้เพื่อกำหนดความสม่ำเสมอของขนาดของตัวอักษรในหน้าเว็บของเราได้
+
+ในแบบฝึกหัดนี้ คุณจะได้กำหนดขนาดของ `h1` ถึง `h6` เพื่อให้มีความสม่ำเสมอกัน
 
 # --instructions--
 
-  <p>In the <code>style</code> tags, set the <code>font-size</code> of the:</p>
+  <p>ในแท็ก <code>style</code> ให้ใช้ <code>font-size</code> ตามนี้:</p>
 
   <ul>
-    <li><code>h1</code> tag to 68px.</li>
-    <li><code>h2</code> tag to 52px.</li>
-    <li><code>h3</code> tag to 40px.</li>
-    <li><code>h4</code> tag to 32px.</li>
-    <li><code>h5</code> tag to 21px.</li>
-    <li><code>h6</code> tag to 14px.</li>
+    <li><code>h1</code> มีขนาดตัวอักษรเป็น 68px</li>
+    <li><code>h2</code> มีขนาดตัวอักษรเป็น 52px</li>
+    <li><code>h3</code> มีขนาดตัวอักษรเป็น 40px</li>
+    <li><code>h4</code> มีขนาดตัวอักษรเป็น 32px</li>
+    <li><code>h5</code> มีขนาดตัวอักษรเป็น 21px</li>
+    <li><code>h6</code> มีขนาดตัวอักษรเป็น 14px</li>
   </ul>
 
 # --hints--
 
-คุณควรกำหนดให้ `font-size` property ของ `h1` tag มีค่า 68 pixel
+property `font-size` ของแท็ก `h1` ต้องมีค่าเป็น 68 pixel
 
 ```js
-const fontSizeOfh1 = new __helpers.CSSHelp(document).getStyle('h1')?.getPropertyValue('font-size');
-assert(fontSizeOfh1 === '68px');
+const fontSizeOfh1 = new __helpers.CSSHelp(document)
+  .getStyle("h1")
+  ?.getPropertyValue("font-size");
+assert(fontSizeOfh1 === "68px");
 ```
 
-คุณควรกำหนดให้ `font-size` property ของ `h2` tag มีค่า 52 pixels.
+property `font-size` ของแท็ก `h2` ต้องมีค่าเป็น 52 pixel
 
 ```js
-const fontSizeOfh2 = new __helpers.CSSHelp(document).getStyle('h2')?.getPropertyValue('font-size');
-assert(fontSizeOfh2 === '52px');
+const fontSizeOfh2 = new __helpers.CSSHelp(document)
+  .getStyle("h2")
+  ?.getPropertyValue("font-size");
+assert(fontSizeOfh2 === "52px");
 ```
 
-คุณควรกำหนดให้ `font-size` property ของ `h3` tag มี 40 pixels.
+property `font-size` ของแท็ก `h3` ต้องมีเป็น 40 pixel
 
 ```js
-const fontSizeOfh3 = new __helpers.CSSHelp(document).getStyle('h3')?.getPropertyValue('font-size');
-assert(fontSizeOfh3 === '40px');
+const fontSizeOfh3 = new __helpers.CSSHelp(document)
+  .getStyle("h3")
+  ?.getPropertyValue("font-size");
+assert(fontSizeOfh3 === "40px");
 ```
 
-คุณควรกำหนดให้ `font-size` property ของ `h4` tag มีค่า 32 pixels.
+property `font-size` ของแท็ก `h4` ต้องมีค่าเป็น 32 pixel
 
 ```js
-const fontSizeOfh4 = new __helpers.CSSHelp(document).getStyle('h4')?.getPropertyValue('font-size');
-assert(fontSizeOfh4 === '32px');
+const fontSizeOfh4 = new __helpers.CSSHelp(document)
+  .getStyle("h4")
+  ?.getPropertyValue("font-size");
+assert(fontSizeOfh4 === "32px");
 ```
 
-คุณควรกำหนดให้ `font-size` property ของ `h5` tag มีค่า 21 pixels.
+property `font-size` ของแท็ก `h5` ต้องมีค่าเป็น 21 pixel
 
 ```js
-const fontSizeOfh5 = new __helpers.CSSHelp(document).getStyle('h5')?.getPropertyValue('font-size');
-assert(fontSizeOfh5 === '21px');
+const fontSizeOfh5 = new __helpers.CSSHelp(document)
+  .getStyle("h5")
+  ?.getPropertyValue("font-size");
+assert(fontSizeOfh5 === "21px");
 ```
 
-คุณควรกำหนดให้ `font-size` property ของ `h6` tag มีค่า 14 pixels.
+property `font-size` ของแท็ก `h6` ต้องมีค่าเป็น 14 pixel
 
 ```js
-const fontSizeOfh6 = new __helpers.CSSHelp(document).getStyle('h6')?.getPropertyValue('font-size');
-assert(fontSizeOfh6 === '14px');
+const fontSizeOfh6 = new __helpers.CSSHelp(document)
+  .getStyle("h6")
+  ?.getPropertyValue("font-size");
+assert(fontSizeOfh6 === "14px");
 ```
 
 # --seed--

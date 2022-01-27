@@ -8,11 +8,9 @@ dashedName: change-text-with-click-events
 
 # --description--
 
-เมื่อ click ที่ event เราสามารถใช้ JavaScript เพื่อ update HTML element
+เมื่อ click event ทำงาน เราจะใช้ JavaScript เพื่ออัปเดท HTML element ได้
 
-เช่นเมื่อ user clicks ที่ `Get Message` button มันจะมีการเปลี่ยนแปลงของ text ภายใน element ที่มี class `message` เพื่อแสดง `Here is the message`
-
-เราสามารถเพิ่มการทำงานโดยเพิ่ม code ภายใน click event:
+ในโค้ดตัวอย่างด้านล่าง เมื่อผู้ใช้คลิกที่ปุ่ม `Get Message` โค้ดของเราจะไปเปลี่ยนข้อความใน element ที่มี class เป็น `message` เพื่อแสดงข้อความ `Here is the message`
 
 ```js
 document.getElementsByClassName('message')[0].textContent="Here is the message";
@@ -20,11 +18,11 @@ document.getElementsByClassName('message')[0].textContent="Here is the message";
 
 # --instructions--
 
-เพิ่ม code ใน`onclick` event เพื่อเปลี่ยน text ใน `message` element ให้แสดง `Here is the message`
+ให้เขียนโค้ดใน event `onclick` เพื่อเปลี่ยนข้อความใน element `message` ให้แสดงเป็น `Here is the message` แทน
 
 # --hints--
 
-ควรใช้ `document.getElementsByClassName` method เพื่อเลือก element ใน class `message` และ set  `textContent` ให้เป็นค่า string
+ต้องใช้ method `document.getElementsByClassName` เพื่อเลือก element ที่มี class เป็น `message` และเปลี่ยน `textContent` ให้เป็น string ตามเงื่อนไข
 
 ```js
 assert(
@@ -42,10 +40,10 @@ assert(
 <script>
   document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('getMessage').onclick = function(){
-      // Add your code below this line
+      // เขียนโค้ดใต้บรรทัดนี้
 
 
-      // Add your code above this line
+      // เขียนโค้ดเหนือบรรทัดนี้
     }
   });
 </script>
@@ -94,9 +92,9 @@ assert(
 <script>
   document.addEventListener('DOMContentLoaded',function(){
     document.getElementById('getMessage').onclick = function(){
-      // Add your code below this line
+      // เขียนโค้ดใต้บรรทัดนี้
       document.getElementsByClassName('message')[0].textContent = "Here is the message";
-      // Add your code above this line
+      // เขียนโค้ดเหนือบรรทัดนี้
     }
   });
 </script>

@@ -12,10 +12,10 @@ dashedName: positive-and-negative-lookahead
 
 lookahead มี 2 แบบคือ <dfn>positive lookahead</dfn> และ <dfn>negative lookahead</dfn>
 
-positive lookahead จะอ่าน string ชุดถัดไปว่ามีข้อมูลที่ตรงกับ search pattern ที่เราระบุไปไหม ถ้ามีค่อยกลับมาอ่าน pattern ที่อยู่ข้างหน้าแล้วดูว่า match หรือไม่ 
+positive lookahead จะอ่าน string ชุดถัดไปว่ามีข้อมูลที่ตรงกับ search pattern ที่เราระบุไปไหม ถ้ามีค่อยกลับมาอ่าน pattern ที่อยู่ข้างหน้าแล้วดูว่า match หรือไม่  
 เราจะเขียน positive lookahead แบบนี้ `(?=...)` ซึ่ง `...` คือ search pattern ที่เราจะอ่านล่วงหน้า
 
-negative lookahead จะทำตรงข้ามกัน โดยจะอ่าน string ชุดถัดไปว่าต้องไม่ตรงกับ search pattern ที่เราระบุไปถึงจะกลับมาอ่าน pattern ที่อยู่ข้างหน้าแล้วดูว่า match หรือไม่ 
+negative lookahead จะทำตรงข้ามกัน โดยจะอ่าน string ชุดถัดไปว่าต้องไม่ตรงกับ search pattern ที่เราระบุไปถึงจะกลับมาอ่าน pattern ที่อยู่ข้างหน้าแล้วดูว่า match หรือไม่  
 เราจะเขียน negative lookahead แบบนี้ `(?!...)` ซึ่ง `...` คือ search pattern ที่เราจะอ่านล่วงหน้า
 
 lookahead จะทำแค่การตรวจสอบเงื่อนไขเท่านั้น แต่จะไม่ match ข้อมูลใน search pattern ให้
@@ -31,13 +31,13 @@ quit.match(quRegex);
 noquit.match(qRegex);
 ```
 
-การเรียกใช้ method `match` ทั้งสองครั้งจะคืนค่าเป็น `["q"]`
-เรามาดูการทำงานของ positive lookahead (`quRegex`) กัน:
+การเรียกใช้ method `match` ทั้งสองครั้งจะคืนค่าเป็น `["q"]`  
+เรามาดูการทำงานของ positive lookahead (`quRegex`) กัน:  
 ก่อนที่ `quRegex` จะ match ตัว `q` regex จะทำการ lookahead เพื่อไปดูว่าข้อมูลถัดไปตรงกับ search pattern ที่ให้มาหรือเปล่า พอ regex เห็นว่าเป็น `u` ตรงกับ search pattern ที่ให้มา แล้วค่อยกลับมาทำการ match ตัวอักษร `q` ให้
 
 negative lookahead ก็จะทำงานคล้ายๆกัน แต่ว่าจะทำการ lookahead เพื่อไปดูว่าข้อมูลตัวถัดไปต้อง *ไม่ตรง* กับ search pattern แล้วค่อยทำการ match ให้
 
-ในการใช้งานจริง lookahead จะใช้ในการตรวจสอบตั้งแต่ 2 pattern ขึ้นไปใน string เดียว 
+ในการใช้งานจริง lookahead จะใช้ในการตรวจสอบตั้งแต่ 2 pattern ขึ้นไปใน string เดียว  
 ตัวอย่างด้านล่างเป็นตัวอย่างง่ายๆ เพื่อตรวจสอบว่า password ต้องมีความยาว 3 ถึง 6 ตัวอักษรและมีตัวเลขอย่างน้อย 1 ตัว
 
 ```js

@@ -9,23 +9,23 @@ dashedName: change-a-variable-for-a-specific-area
 
 # --description--
 
-เมื่อคุณสร้างตัวแปรของคุณเองใน `:root` พวกมันจะกำหนดค่าของตัวแปรตัวนั้นที่อยู่ในหน้านี้ทั้งหมด
+เมื่อคุณสร้างและกำหนดค่าของตัวแปรของคุณใน `:root` แล้ว ค่าที่ถูกกำหนดไว้นี้จะถูกเอาไปใช้ทั่วทั้งหน้า
 
-คุณสามารถเขียนตัวแปรพวกนี้ทับได้โดยการกำหนดค่าให้มันอีกครั้งที่ element ที่คุณกำหนด
+ซึ่งคุณสามารถเปลี่ยนค่าของตัวแปรนี้เฉพาะใน element ที่เลือกได้ด้วย
 
 # --instructions--
 
-จงเปลี่ยนค่าของ `--penguin-belly` ให้เป็น `white` ใน `penguin` class.
+ให้เปลี่ยนค่าของ `--penguin-belly` ให้เป็น `white` ในคลาส `penguin`
 
 # --hints--
 
-`penguin` class ควรจำกำหนดค่าใหม่ให้ตัวแปร `--penguin-belly` เป็น `white`
+ตัวแปร `--penguin-belly` ต้องถูกกำหนดค่าใหม่ให้เป็น `white` ในคลาส `penguin`
 
 ```js
 assert(code.match(/\.penguin\s*?{[\s\S]*--penguin-belly\s*?:\s*?white\s*?;[\s\S]*}/gi));
 ```
 
-`penguin` class ไม่ควรจะมี `background-color` property แล้ว
+ต้องไม่มี property `background-color` ในคลาส `penguin` แล้ว
 
 ```js
 assert(code.match(/^((?!background-color\s*?:\s*?)[\s\S])*$/g));
@@ -48,9 +48,9 @@ assert(code.match(/^((?!background-color\s*?:\s*?)[\s\S])*$/g));
   }
 
   .penguin {
-    /* Only change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
 
-    /* Only change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
     position: relative;
     margin: auto;
     display: block;

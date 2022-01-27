@@ -9,7 +9,8 @@ dashedName: quoting-strings-with-single-quotes
 
 # --description--
 
-การกำหนดค่า <dfn>string</dfn> ใน JavaScript จะเขียนด้วยเครื่องหมาย single หรือ double quote ก็ได้ แต่คุณต้องเริ่มต้นและลงท้ายด้วยเครื่องหมายประเภทเดียวกัน โดยเครื่องหมาย single และ double quote จะทำงานเหมือนกันในภาษา JavaScript ซึ่งแตกต่างจากภาษาอื่นๆ
+การกำหนดค่า <dfn>string</dfn> ใน JavaScript จะเขียนด้วยเครื่องหมาย single quote (`'`) หรือ double quote (`"`) ก็ได้ แต่คุณต้องเริ่มต้นและลงท้ายด้วยเครื่องหมายประเภทเดียวกัน  
+โดยเครื่องหมาย single และ double quote จะทำงานเหมือนกันในภาษา JavaScript ซึ่งแตกต่างจากภาษาอื่นๆ
 
 
 ```js
@@ -17,7 +18,8 @@ doubleQuoteStr = "This is a string";
 singleQuoteStr = 'This is also a string';
 ```
 
-คุณอาจเลือกใช้เครื่องหมาย quote แบบใดแบบหนึ่งถ้าคุณต้องการใช้เครื่องหมายอีกแบบใน string กรณีนี้อาจเกิดขึ้นได้ หากคุณต้องการเก็บบทสนทนาเป็น string และมีบทสนทนาอยู่ในเครื่องหมาย quote อีกกรณีหนึ่งก็คือการใช้แท็ก `<a>` ที่มี attribute ที่อยู่ในเครื่องหมาย quote ใน string
+คุณอาจเลือกใช้เครื่องหมาย quote แบบใดแบบหนึ่งถ้าคุณต้องการใช้เครื่องหมายอีกแบบใน string  
+กรณีนี้อาจเกิดขึ้นได้ ถ้าคุณต้องการเก็บบทสนทนาเป็น string และมีบทสนทนาอยู่ในเครื่องหมาย quote อีกกรณีหนึ่งก็คือการใช้แท็ก `<a>` ที่มี attribute ที่อยู่ในเครื่องหมาย quote ใน string
 
 ```js
 conversation = 'Finn exclaims to Jake, "Algebraic!"';

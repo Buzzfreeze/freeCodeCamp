@@ -20,9 +20,9 @@ let duck = new Bird("Donald");
 let canary = new Bird("Tweety");
 ```
 
-เราจะเรียก `name` และ `numLegs` ว่าเป็น <dfn>own property</dfn> เพราะว่า property สองตัวนี้ถูกกำหนดให้กับ instance โดยตรง 
-แปลว่าทั้ง `duck` และ `canary` จะมี property สองตัวนี้เป็นของตัวเอง (เราจะเรียนเรื่อง property ที่ไม่ใช่ own property ในภายหลัง)
-ทุกๆ instance ของ `Bird` ที่เราเรียนมากจนถึงตอนนี้ ต่างก็มี property นี้เป็นของตัวเองเหมือนกัน 
+เราจะเรียก `name` และ `numLegs` ว่าเป็น <dfn>own property</dfn> เพราะว่า property สองตัวนี้ถูกกำหนดให้กับ instance โดยตรง  
+แปลว่าทั้ง `duck` และ `canary` จะมี property สองตัวนี้เป็นของตัวเอง (เราจะเรียนเรื่อง property ที่ไม่ใช่ own property ในภายหลัง)  
+ทุกๆ instance ของ `Bird` ที่เราเรียนมากจนถึงตอนนี้ ต่างก็มี property นี้เป็นของตัวเองเหมือนกัน  
 ตัวอย่างด้านล่างเป็นการอ่านชื่อ property ทั้งหมดของ `duck` และเก็บค่าลงใน array `ownProps`:
 
 ```js

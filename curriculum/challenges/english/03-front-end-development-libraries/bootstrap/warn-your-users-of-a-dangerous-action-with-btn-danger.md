@@ -35,7 +35,7 @@ assert($('button.btn-block.btn').length > 2);
 assert($('button').hasClass('btn-danger'));
 ```
 
-อย่าลืม tag ปิดสำหรับ `button` element ทุกอัน
+อย่าลืมแท็กปิดของ `button` ทุกตัวด้วย
 
 ```js
 assert(

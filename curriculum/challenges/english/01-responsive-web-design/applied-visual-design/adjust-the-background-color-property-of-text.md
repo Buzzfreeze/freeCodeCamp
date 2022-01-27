@@ -9,33 +9,32 @@ dashedName: adjust-the-background-color-property-of-text
 
 # --description--
 
-แทนที่จะเปลี่ยนสีพื้นหลังหรือสีของข้อความทั้งหมดเพื่อให้อ่านเนื้อหาได้ง่าย คุณสามารถเพิ่ม `background-color` ให้กับ element ที่ล้อมรอบข้อความที่คุณต้องการที่จะเน้น
-แบบฝึกหัดนี้จะใช้ `rgba()` แทน `hex` codes หรือ `rgb()`
+คุณสามารถเปลี่ยนพื้นหลังแค่ของข้อความที่คุณต้องการจะเน้นได้ด้วย โดยการระบุ `background-color` ให้กับ element ที่คุณต้องการจะเน้นข้อความ
+ในแบบฝึกหัดนี้ ให้คุณใช้ `rgba()` หรือ `rgb()` แทนการใช้ `hex` code ในการระบุสี
 
-<blockquote>rgba stands for:<br>  r = red<br>  g = green<br>  b = blue<br>  a = alpha/level of opacity</blockquote>
+<blockquote>rgba ย่อมาจาก:<br>  r = red<br>  g = green<br>  b = blue<br>  a = alpha (ความโปร่งใสของสี)</blockquote>
 
-ค่า RGB สามารถเป็นได้ตั้งแต่ 0 ถึง 255 ค่า alpha สามารถเป็นได้ตั้งแต่ 1 (ทึบแสงที่สุด) ถึง 0 (โปร่งแสงที่สุด)
-`rgba()` นั้นเหมาะที่จะใช้ในกรณีนี้ที่สุด เนื่องจากคุณสามารถใช้ปรับค่า opacity (ค่าความสว่าง) ได้
-ซึ่งแปลว่าคุณไม่จำเป็นต้องปิดพื้นหลังทั้งหมด
+ค่า RGB สามารถเป็นได้ตั้งแต่ 0 ถึง 255 และค่า alpha สามารถเป็นได้ตั้งแต่ 1 (ทึบแสงที่สุด) ถึง 0 (โปร่งใสที่สุด)
+`rgba()` นั้นเหมาะที่จะใช้ในกรณีนี้ที่สุด เพราะว่าคุณจะปรับค่า opacity (ความโปร่งใสของสี) ได้
+ซึ่งจะทำให้พื้นหลังทะลุสีนี้ขึ้นมาได้
 
-คุณจะใช้ `background-color: rgba(45, 45, 45, 0.1)` สำหรับแบบฝึกหัดนี้
-มันจะสร้างสีเทาเข้มที่มีค่า opacity เท่ากับ 0.1.
+ให้ใช้ `background-color: rgba(45, 45, 45, 0.1)` โดยโค้ดนี้จะสร้างพื้นหลังสีเทาเข้ม ที่มี opacity เป็น 0.1
 
 # --instructions--
 
-เพื่อทำให้ข้อความดูเด่นขึ้น, จงปรับ`background-color` ของ`h4` element ให้มีค่าตามค่า `rgba()` ที่กำหนดให้
+ให้ทำให้ข้อความดูเด่นขึ้น โดยปรับ `background-color` ของ `h4` element ให้มีค่าตามค่า `rgba()` ที่กำหนดให้
 
-นอกจากนั้น จงลบ `height` property และเพิ่ม `padding` 10px ให้กับ `h4`
+และให้ลบ property `height` ออก และเพิ่ม `padding` 10px ให้กับ `h4`
 
 # --hints--
 
-โค้ดของคุณควรเพิ่ม `background-color` property ให้กับ `h4` element และกำหนดค่าให้มันเท่ากับ `rgba(45, 45, 45, 0.1)`.
+ต้องเพิ่ม property `background-color` ให้กับ `h4` element โดยให้กำหนดค่าเป็น `rgba(45, 45, 45, 0.1)`
 
 ```js
 assert(/(background-color|background):rgba\(45,45,45,0?\.1\)(;?}|;)/gi.test(code.replace(/\s/g, '')));
 ```
 
-คุณควรเพิ่ม `padding` property อันหนึ่งให้กับ `h4` elementและกำหนดให้มันมีค่า 10 pixel
+ต้องเพิ่ม property `padding` ให้กับ `h4` element โดยให้กำหนดค่าเป็น 10 pixel
 
 ```js
 assert(
@@ -46,7 +45,7 @@ assert(
 );
 ```
 
-`height` property ของ `h4` element ควรจะถูกเอาออกไป
+ต้องลบ property `height` ของ `h4` element ออก
 
 ```js
 assert(!($('h4').css('height') == '25px'));

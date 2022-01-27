@@ -8,10 +8,10 @@ dashedName: match-non-whitespace-characters
 
 # --description--
 
-เราได้เรียนเรื่องการหา whitespace โดยใช้ `\s` (`s` พิมพ์เล็ก) ไปแล้ว 
+เราได้เรียนเรื่องการหา whitespace โดยใช้ `\s` (`s` พิมพ์เล็ก) ไปแล้ว  
 เราจะหาทุกตัวอักษรยกเว้น whitespace (non-whitespace character) ได้อีกด้วย 
 
-เราจะใช้ `\S` (ใช้ `S` พิมพ์ใหญ่) ในการหา non-whitespace โดย pattern นี้จะไม่ match กับ whitespace, carriage return, tab, form feed และ new line character 
+เราจะใช้ `\S` (ใช้ `S` พิมพ์ใหญ่) ในการหา non-whitespace โดย pattern นี้จะไม่ match กับ whitespace, carriage return, tab, form feed และ new line character  
 โดย `\S` นั้นจะเหมือนกับ character class `[^ \r\t\f\n\v]`
 
 ```js

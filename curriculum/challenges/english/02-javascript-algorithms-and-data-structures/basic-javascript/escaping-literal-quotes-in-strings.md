@@ -9,7 +9,7 @@ dashedName: escaping-literal-quotes-in-strings
 
 # --description--
 
-เมื่อคุณสร้าง string คุณจำเป็นต้องเริ่มและจบด้วย single (`'`) หรือ double quote (`"`)จะเกิดอะไรขึ้นเมื่อคุณจำเป็นต้องมี `"` หรือ `'` ใน string ของคุณ
+เมื่อคุณสร้าง string คุณจำเป็นต้องเริ่มและจบด้วย single (`'`) หรือ double quote (`"`) แต่จะเกิดอะไรขึ้นเมื่อคุณจำเป็นต้องมี `"` หรือ `'` ใน string ของคุณ
 
 คุณสามารถทำให้ JavaScript มองว่าเครื่องหมายที่คุณระบุเป็นส่วนหนึ่งของ string ได้ โดยวิธีการนี้เรียกว่าการ <dfn>escape</dfn> ซึ่งทำได้โดยวางเครื่องหมาย <dfn>backslash</dfn> (`\`) ไว้หน้าเครื่องหมาย single หรือ double quote
 

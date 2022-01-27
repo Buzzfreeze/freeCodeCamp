@@ -12,7 +12,7 @@ dashedName: passing-values-to-functions-with-arguments
 <dfn>Parameter</dfn> คือตัวแปรที่ทำหน้าที่รับค่าที่เราส่งไปให้ฟังก์ชันเมื่อมีการเรียกใช้ฟังก์ชัน โดยทั่วไปแล้วในการสร้างฟังก์ชันจะกำหนด parameter ตั้งแต่หนึ่งตัวขึ้นไป ส่วนค่าจริงๆ ที่ป้อนหรือส่งเขาไปในฟังก์ชันเมื่อมีการเรียกใช้ฟังก์ชัน จะเรียกว่า <dfn>argument</dfn>
 
 
-ตัวอย่างนี้คือ function ที่มี 2 parameter คือ `param1` และ `param2`
+ตัวอย่างด้านล่างจะเป็นฟัง์ชันที่มี 2 parameter คือ `param1` และ `param2`
 
 ```js
 function testFun(param1, param2) {
@@ -20,7 +20,8 @@ function testFun(param1, param2) {
 }
 ```
 
-จากนั้นเราสามารถเรียกใช้ `testFun` ได้ตามนี้: `testFun("Hello", "World");` เราได้ส่ง string arguments เข้าไป 2 ตัว คือ `Hello` กับ `World` โดยภายในฟังก์ชันค่าของ `param1` จะเป็น string ที่มีค่าเท่ากับ `Hello` และค่าของ `param2` จะเท่ากับ จะเป็น string ที่มีค่าเท่ากับ `World`
+จากนั้นเราสามารถเรียกใช้ `testFun` ได้แบบนี้ `testFun("Hello", "World");`  
+เราได้ส่ง string argument เข้าไป 2 ตัว คือ `Hello` กับ `World` โดยภายในฟังก์ชัน ค่าของ `param1` จะเป็น string ที่มีค่าเป็น `Hello` และค่าของ `param2` จะเท่ากับ จะเป็น string ที่มีค่าเป็น `World`
 
 **หมายเหตุ** คุณสามารถเรียกใช้ `testFun` ด้วย argument อื่นก็ได้ และ parameter ก็จะรับค่าจาก argument ใหม่นั้นเข้าไปใช้งาน
 

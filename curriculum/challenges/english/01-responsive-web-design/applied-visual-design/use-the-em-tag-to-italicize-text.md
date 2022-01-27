@@ -9,22 +9,22 @@ dashedName: use-the-em-tag-to-italicize-text
 
 # --description--
 
-เพื่อที่จะได้เน้นข้อความ คุณสามารถใช้ `em` tag
-คำสั่งนี้จะแสดงข้อความเป็นตัวเอียงเมื่อ browser ได้ใช้ CSS นี้ `font-style: italic;` กับ element
+เราสามารถใช้แท็ก `em` เพื่อทำให้ข้อความดูเด่นขึ้นมาได้ (`em` ย่อมาจาก emphasize)
+เมื่อเราใช้แท็ก `em` เบราว์เซอร์จะทำให้ CSS ของ element นั้นเป็น `font-style: italic;`
 
 # --instructions--
 
-จงใส่ `em` tag รอบ content ของ paragraph tag เพื่อเน้นมัน
+ให้ใช้แท็ก `em` ครอบข้อความในแท็ก `p` เพื่อทำให้ข้อความเป็นตัวเอียง
 
 # --hints--
 
-คุณควรเพิ่ม `em` tag ให้กับ the markup.
+ต้องใช้แท็ก `em` ในโค้ด
 
 ```js
 assert($('em').length == 1);
 ```
 
-`em` tag ควรจะเก็บแค่ contents ของ `p` tag ไว้แต่ไม่ใช่ตัว `p` tag ทั้งอัน
+`em` ต้องครอบแค่ข้อความในแท็ก `p` (โดยไม่ครอบแท็ก `p` ไปด้วย) 
 
 ```js
 assert($('p').children().length == 1 && $('em').children().length == 2);

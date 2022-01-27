@@ -8,7 +8,7 @@ dashedName: match-literal-strings
 
 # --description--
 
-ในแบบทดสอบที่แล้ว เราได้ลองหาคำว่า `Hello` โดยใช้ regex `/Hello/` ซึ่ง regex นี้จะหาข้อความที่ตรงกับ string `Hello` 
+ในแบบทดสอบที่แล้ว เราได้ลองหาคำว่า `Hello` โดยใช้ regex `/Hello/` ซึ่ง regex นี้จะหาข้อความที่ตรงกับ string `Hello`  
 ด้านล่างนี้เป็นตัวอย่างการหาข้อความที่ตรงกับ string `Kevin` เป๊ะๆ:
 
 ```js

@@ -2,44 +2,46 @@
 id: bad82fee1322bd9aedf08721
 title: Understand Absolute versus Relative Units
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cN66JSL'
+videoUrl: "https://scrimba.com/c/cN66JSL"
 forumTopicId: 301089
 dashedName: understand-absolute-versus-relative-units
 ---
 
 # --description--
 
-หลาย ๆ แบบฝึกหัดที่ผ่านมาได้กำหนด margin หรือ padding ของ element หนึ่งด้วย pixels (`px`)
-Pixel เป็นหน่วยความยาวประเภทหนึ่ง โดยมันจะบอก browser ถึงขนาดและช่องว่างของมัน
-นอกจาก `px`, CSS ยังมีหน่วยความยาวอีกหลายหน่วยที่คุณสามารถใช้ได้
+ในหลายๆแบบฝึกหัดที่ผ่านมา เราได้กำหนด margin หรือ padding ของ element โดยใช้ pixel (`px`) มาตลอด
+
+pixel เป็นหน่วยความยาวประเภทหนึ่ง โดยจะใช้บอกเบราว์เซอร์ให้ปรับขนาด หรือช่องว่างตามค่านี้
+แต่นอกจาก `px` แล้ว CSS ยังมีหน่วยความยาวอีกหลายหน่วยให้คุณเลือกใช้
 
 หน่วยความยาวถูกแบ่งเป็น 2 ประเภทหลัก คือ absolute และ relative
-หน่วย absolute จะขึ้นกับขนาดจริง ๆ ของวัตถุ ยกตัวอย่างเช่น `in` และ `mm` ที่หมายถึงหน่วยนิ้วและมิลลิเมตร
-หน่วยความยาวแบบ absolute จะประมาณค่าจริงบนหน้าจอ แต่มันมีความต่างเล็กน้อยขึ้นกับความละเอียดของจอภาพ
+โดยหน่วย absolute จะขึ้นกับขนาดจริงๆของวัตถุ
+เช่น `in` และ `mm` ที่หมายถึงหน่วยนิ้วและมิลลิเมตร
+ในการใช้หน่วยความยาวแบบ absolute นั้น พอแสดงผลจริงๆ อาจไม่ตรงกับค่าที่ระบุ เพราะว่าจะขึ้นอยู่กับความละเอียดของจอภาพด้วย
 
-หน่วย relative เช่น `em` หรือ `rem` จะขึ้นกับค่าความยาวของวัตถุอื่น ยกตัวอย่างเช่น `em` จะขึ้นกับขนาดฟ้อนต์ของ element
-ถ้าคุณใช้มันเพื่อกำหนด `font-size` property, มันจะอิงกับ `font-size` ของ parent ของมัน
+หน่วย relative เช่น `em` หรือ `rem` จะขึ้นกับค่าของวัตถุอื่น เช่น `em` จะขึ้นอยู่กับขนาดฟอนต์ของ element
+ถ้าคุณใช้ `em` เพื่อกำหนด property `font-size` คุณจะได้ค่าที่อิงมาจาก `font-size` ของ parent element
 
-**Note:** มีหลายหน่วย relative ที่จะขึ้นกับขนาดของ viewport. พวกมันจะถูกกล่าวถึงใน Responsive Web Design Principles section.
+**Note:** หน่วยแบบ relative มีอีกหลายหน่วยที่จะอิงกับขนาดของหน้าจอ โดยเราจะสอนคุณในหัวข้อ Responsive Web Design Principles อีกทีหนึ่ง
 
 # --instructions--
 
-จงเพิ่ม `padding` property ให้กับ element ที่มีคลาส `red-box` และกำหนดให้มันเท่ากับ `1.5em`.
+ให้เพิ่ม property `padding` ให้กับ element ที่มีคลาสเป็น `red-box` โดยกำหนดให้มีค่าเป็น `1.5em`
 
 # --hints--
 
-`red-box` class ควรมี `padding` property
+คลาส `red-box` ต้องมีการใช้ property `padding`
 
 ```js
 assert(
-  $('.red-box').css('padding-top') != '0px' &&
-    $('.red-box').css('padding-right') != '0px' &&
-    $('.red-box').css('padding-bottom') != '0px' &&
-    $('.red-box').css('padding-left') != '0px',
+  $(".red-box").css("padding-top") != "0px" &&
+    $(".red-box").css("padding-right") != "0px" &&
+    $(".red-box").css("padding-bottom") != "0px" &&
+    $(".red-box").css("padding-left") != "0px"
 );
 ```
 
-`red-box` class ควรกำหนดให้ element มี `padding` ขนาด 1.5em
+คลาส `red-box` ต้องกำหนดให้ element มี `padding` เป็น `1.5em`
 
 ```js
 assert(code.match(/\.red-box\s*?{[\s\S]*padding\s*:\s*?1\.5em/gi));

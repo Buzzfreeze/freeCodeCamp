@@ -12,7 +12,7 @@ ES6 ทำให้การ destructuring array ง่ายเหมือน 
 
 ข้อแตกต่างที่สำคัญอย่างหนึ่งระหว่าง spread operator (`...`) และ array destructuring คือ spread operator จะแยกข้อมูลทั้งหมดของ array ออกเป็นข้อมูลที่คั่นด้วย comma คุณจึงไม่สามารถเลือก element ที่คุณต้องการกำหนดให้กับตัวแปรได้
 
-การ destructure array 0tจะให้คุณเลือก element ได้:
+แต่การ destructure array จะให้คุณเลือก element ได้:
 
 ```js
 const [a, b] = [1, 2, 3, 4, 5, 6];

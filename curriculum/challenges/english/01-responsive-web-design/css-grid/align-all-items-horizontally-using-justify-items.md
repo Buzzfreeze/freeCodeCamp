@@ -2,28 +2,34 @@
 id: 5a90376038fddaf9a66b5d3c
 title: Align All Items Horizontally using justify-items
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pByETK/cJbpECn'
+videoUrl: "https://scrimba.com/p/pByETK/cJbpECn"
 forumTopicId: 301120
 dashedName: align-all-items-horizontally-using-justify-items
 ---
 
 # --description--
 
-บางครั้ง คุณก็ต้องการให้ทุก item ใน CSS Grid เรียงตรงกัน
-คุณสามารถใช้ property ที่ได้เรียนไปก่อนหน้านี้จัดเรียงให้พวกมันตรงกันที่ละตัว หรือคุณสามารถจัดเรียงมันทั้งหมดให้ตรงกันตรงกันในแนวนอน (row)ได้ในครั้งเดียวโดยการใช้ `justify-items` กับ grid container ของคุณ
-property นี้สามารถรับค่าเดียวกันกับที่เรียนไปใน 2 challenges ก่อนหน้าได้ทั้งหมด
-ความแตกต่างก็คือมันจะย้าย **all** items ในกริดของเราไปที่การเรียงตัวที่เราต้องการ
+แล้วถ้าคุณอยากให้ทุก item ใน CSS Grid เรียงเหมือนกันล่ะ?
+
+คุณจะใช้ property ที่เราเรียนไปแล้ว เพื่อเรียง item ทีละตัวก็ได้ หรือใช้ property เดียว เพื่อเรียง item ทั้งหมดในแนวนอนก็ได้ โดยใช้ `justify-items` กับ grid container ของคุณ
+
+property นี้จะรับค่าเหมือนกับ property ที่เราเรียนไปในแบบทดสอบที่แล้ว
+ความแตกต่างก็คือ property นี้จะทำให้ **ทุก** item ในกริดของเราเรียงตัวในแบบที่เราต้องการ
 
 # --instructions--
 
-จงใช้ property นี้เพื่อจัดให้ item ทั้งหมดอยู่ตรงกลางในแนวนอน
+ให้ใช้ property นี้เพื่อเรียงให้ item ทั้งหมดอยู่ตรงกลางในแนวนอน
 
 # --hints--
 
-`container` class ควรมี `justify-items` property อันหนึ่งที่มีค่าเป็น `center`
+คลาส `container` ต้องมีค่าของ property `justify-items` เป็น `center`
 
 ```js
-assert(code.match(/.container\s*?{[\s\S]*justify-items\s*?:\s*?center\s*?;[\s\S]*}/gi));
+assert(
+  code.match(
+    /.container\s*?{[\s\S]*justify-items\s*?:\s*?center\s*?;[\s\S]*}/gi
+  )
+);
 ```
 
 # --seed--
@@ -57,9 +63,9 @@ assert(code.match(/.container\s*?{[\s\S]*justify-items\s*?:\s*?center\s*?;[\s\S]
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 10px;
-    /* Only change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
 
-    /* Only change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
   }
 </style>
 

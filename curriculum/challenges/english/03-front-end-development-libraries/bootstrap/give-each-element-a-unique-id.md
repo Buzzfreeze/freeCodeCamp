@@ -12,7 +12,7 @@ dashedName: give-each-element-a-unique-id
 
 เรามาลองใส่ id ให้กับปุ่มของเรากัน โดยให้ไล่จาก id `target1` ไปจนถึง id `target6`
 
-ให้ใส่ id `target1` `target2` `target3` ในปุ่มที่อยู่ใน `div` ที่มี id เป็น `#left-well` 
+ให้ใส่ id `target1` `target2` `target3` ในปุ่มที่อยู่ใน `div` ที่มี id เป็น `#left-well`  
 และใส่ id `target4` `target5` `target6` ในปุ่มที่อยู่ใน `div` ที่มี id เป็น `#right-well`
 
 # --hints--

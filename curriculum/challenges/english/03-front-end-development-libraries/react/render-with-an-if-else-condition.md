@@ -10,13 +10,14 @@ dashedName: render-with-an-if-else-condition
 
 การใช้ JavaScript อีกแบบหนึ่งคือ การใช้เพื่อควบคุมสิ่งที่จะเรนเดอร์ออกมา โดยใช้เงื่อนไข
 ถ้าเงื่อนไขเป็น `true` จะเรนเดอร์ออกมาแบบหนึ่ง ถ้าเป็น `false` ก็เป็นอีกแบบหนึ่ง 
-วิธีนี้จะใช้แค่คำสั่ง `if/else` แบบปกตติใน method `render()` ของ React component
+วิธีนี้จะใช้แค่คำสั่ง `if/else` แบบปกติใน method `render()` ของ React component
 
 # --instructions--
 
 MyComponent เก็บค่า `boolean` ใน property `display` ของ state 
 ค่านี้จะใช้เพื่อดูว่าต้องแสดง element ไหนใน UI โดยจะมี `button` ที่ใช้เปลี่ยนค่านี้ใน state 
 ในตอนนี้ component จะเรนเดอร์ UI เดิมทุกครั้ง 
+
 ให้เขียน method `render()` ใหม่โดยใช้ `if/else` โดยถ้า `display` เป็น `true` คุณจะแสดง JSX ตัวปัจจุบัน แต่ถ้าเป็น `false` ให้แสดง JSX ที่ไม่มี `h1`
 
 **Note:** ในแบบทดสอบนี้คุณต้องเขียน `if/else` แบบเต็ม เพื่อให้ test ผ่าน การใช้ ternary operator จะทำให้ test ไม่ผ่าน
@@ -24,7 +25,7 @@ MyComponent เก็บค่า `boolean` ใน property `display` ของ 
 
 # --hints--
 
-ต้องมีมี `MyComponent` และต้องเรนเดอร์ได้
+ต้องมี `MyComponent` และต้องเรนเดอร์ได้
 
 ```js
 assert(

@@ -43,7 +43,7 @@ assert(/for\s*\([^)]+?\)/.test(code));
 assert(code.match(/myArray.push/));
 ```
 
-`myArray` ต้องมีค่าเป็น `[9,7,5,3,1]`.
+`myArray` ต้องมีค่าเป็น `[9,7,5,3,1]`
 
 
 

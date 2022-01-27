@@ -2,27 +2,27 @@
 id: 587d78a8367417b2b2512ae5
 title: Animate Elements at Variable Rates
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cZ89WA4'
+videoUrl: "https://scrimba.com/c/cZ89WA4"
 forumTopicId: 301040
 dashedName: animate-elements-at-variable-rates
 ---
 
 # --description--
 
-มันมีหลายวิธีเพื่อปรับเปลี่ยน animation rate ของ element ที่มีการ animate ที่คล้ายกัน
-ถึงตอนนี้ มันสามารถทำได้โดยการใช้ `animation-iteration-count` property และกำหนด `@keyframes` rule
+เรามีวิธีที่จะควบคุมความเร็วของ animation ได้หลายวิธี
+ในตอนนี้เราได้เรียนวิธีการใช้ `animation-iteration-count` และกำหนด `@keyframes` rule ไปแล้ว
 
-เพื่อทำให้เห็นภาพมากขึ้น 
-animation ทางด้านขวาที่ประกอบด้วยดาว 2 ดวงที่แต่ละดวงจะลดขนาดและ opacity 20% ทุก ๆ ครั้งตาม `@keyframes` rule, ซึ่งมันจะสร้าง animation ที่ทำให้ดาวกระพริบขึ้นมา
-คุณสามารถเปลี่ยน `@keyframes` rule สำหรับหนึ่ง element แยกออกมาจากที่เหลือเพื่อที่ดาวจะได้กระพริบด้วย rate ที่ต่างกัน
+ให้ลองดู animation ทางด้านขวา คุณจะเห็นดาวสองดวง ซึ่งทั้งสองดวงจะลดขนาดและ opacity ลงเป็น 20% ตาม `@keyframes` rule
+ซึ่งจะทำให้เกิด animation ที่ทำให้ดาวกะพริบขึ้นมา
+ถ้าคุณต้องการให้ดาวสองตัวนี้มีความเร็วในการกะพริบต่างกัน คุณก็แค่ต้องแก้ `@keyframes` rule ของ element นั้น
 
 # --instructions--
 
-จงเปลี่ยน animation rate ของ element ที่มีคลาสชื่อ `star-1` โดยการเปลี่ยน `@keyframes` rule ของมันไปที่ 50%
+ให้เปลี่ยนความเร็วในการทำ animation ของ element ที่มีคลาสเป็น `star-1` โดยการเปลี่ยน `@keyframes` rule เป็น 50%
 
 # --hints--
 
-`@keyframes` rule ของ `star-1` class ความมีค่า 50%
+`@keyframes` rule ของคลาส `star-1` ต้องมีค่าเป็น 50%
 
 ```js
 assert(code.match(/twinkle-1\s*?{\s*?50%/g));

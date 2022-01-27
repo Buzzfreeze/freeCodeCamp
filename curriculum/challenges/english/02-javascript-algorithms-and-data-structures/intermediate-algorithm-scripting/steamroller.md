@@ -12,25 +12,25 @@ dashedName: steamroller
 
 # --hints--
 
-`steamrollArray([[["a"]], [["b"]]])` ต้องคืนค่าเป็น `["a", "b"]`.
+`steamrollArray([[["a"]], [["b"]]])` ต้องคืนค่าเป็น `["a", "b"]`
 
 ```js
 assert.deepEqual(steamrollArray([[['a']], [['b']]]), ['a', 'b']);
 ```
 
-`steamrollArray([1, [2], [3, [[4]]]])` ต้องคืนค่าเป็น `[1, 2, 3, 4]`.
+`steamrollArray([1, [2], [3, [[4]]]])` ต้องคืนค่าเป็น `[1, 2, 3, 4]`
 
 ```js
 assert.deepEqual(steamrollArray([1, [2], [3, [[4]]]]), [1, 2, 3, 4]);
 ```
 
-`steamrollArray([1, [], [3, [[4]]]])` ต้องคืนค่าเป็น `[1, 3, 4]`.
+`steamrollArray([1, [], [3, [[4]]]])` ต้องคืนค่าเป็น `[1, 3, 4]`
 
 ```js
 assert.deepEqual(steamrollArray([1, [], [3, [[4]]]]), [1, 3, 4]);
 ```
 
-`steamrollArray([1, {}, [3, [[4]]]])` ต้องคืนค่าเป็น `[1, {}, 3, 4]`.
+`steamrollArray([1, {}, [3, [[4]]]])` ต้องคืนค่าเป็น `[1, {}, 3, 4]`
 
 ```js
 assert.deepEqual(steamrollArray([1, {}, [3, [[4]]]]), [1, {}, 3, 4]);

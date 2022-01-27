@@ -9,6 +9,7 @@ dashedName: pass-an-array-as-props
 # --description--
 
 แบบทดสอบที่ผ่านมาแสดงให้เห็นวิธีการส่งผ่านข้อมูลจาก parent component ไปยัง child component โดยใช้ `props` หรือ properties ในแบบทดสอบนี้จะเราจะดูว่าเราจะส่ง array ไปยัง `props` ได้อย่างไร 
+
 ในการส่ง array ไปยัง JSX element เราจะต้องมองว่า array นั้นเป็น JavaScript และใส่วงเล็บปีกกาครอบ ลองดูตัวอย่าง:
 
 ```jsx
@@ -20,12 +21,13 @@ dashedName: pass-an-array-as-props
 ตอนนี้ child component จะเข้าถึง property `colors` ที่เป็น array ได้แล้ว
 แล้วเราจะใช้ method ของ array เช่น `join()` ในตอนที่อ่านค่าของ property ได้ด้วย เช่น
 `const ChildComponent = (props) => <p>{props.colors.join(', ')}</p>` 
-โค้ดด้านบนจะรวม array `colors` ให้กลายเป็น string ตัวเดียวที่ชื่อสีแต่ละชื่อจะคั่นด้วย comma และจะคืนค่าเป็น: `<p>green, blue, red</p>`
+โค้ดด้านบนจะรวม array `colors` ให้กลายเป็น string ตัวเดียวที่ชื่อสีแต่ละชื่อจะคั่นด้วยคอมม่า และจะคืนค่าเป็น: `<p>green, blue, red</p>`  
 เราจะเรียนเรื่อง method ทั่วไปอื่นๆในการแสดง array ของข้อมูลใน React ในภายหลัง
 
 # --instructions--
 
 เราได้สร้าง component `List` และ `ToDo` ใน code editor ให้แล้ว
+
 เมื่อเรนเดอร์ `List` แต่ละตัวใน `ToDo` ให้ส่ง property `tasks` เข้าไปด้วย 
 โดย property `tasks` นี้จะเป็น array ของ string เช่น `["walk dog", "workout"]`
 จากนั้นให้อ่านค่าของ array `tasks` นี้ใน `List` แล้วเอาค่าไปใส่ใน `p` element โดยใช้ `join(", ")`

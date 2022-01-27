@@ -9,7 +9,8 @@ dashedName: nesting-for-loops
 
 # --description--
 
-ถ้าเรามี array หลายมิติ (multi-dimensional array) เราสามารถใช้ logic ที่เรียนในบทเรียนที่แล้ว เพื่อ loop เข้าไปใน array และ array ที่อยู่ข้างในได้ด้วย ลองดูตัวอย่างด้านล่าง:
+ถ้าเรามี array หลายมิติ (multi-dimensional array) เราสามารถใช้ logic ที่เรียนในบทเรียนที่แล้ว เพื่อ loop เข้าไปใน array และ array ที่อยู่ข้างในได้ด้วย  
+ลองดูตัวอย่างด้านล่าง:
 
 ```js
 var arr = [

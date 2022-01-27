@@ -2,16 +2,18 @@
 id: 5a9036d038fddaf9a66b5d32
 title: Add Columns with grid-template-columns
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pByETK/c7NzDHv'
+videoUrl: "https://scrimba.com/p/pByETK/c7NzDHv"
 forumTopicId: 301117
 dashedName: add-columns-with-grid-template-columns
 ---
 
 # --description--
 
-การสร้างกริดอย่างง่าย ๆ ไม่ทำให้คุณไปได้ไกลนัก
-คุณต้องกำหนดโครงสร้างของกริดด้วย
-เพื่อที่จะเพิ่มคอลัมน์อันหนึ่งให้กับกริด จงใช้ `grid-template-columns` property ที่ grid container ตามตัวอย่างด้านล่าง :
+การสร้างแค่ grid ก็ไม่ได้ทำให้เกิดอะไรขึ้นมา คุณจึงจำเป็นต้องกำหนดโครงสร้างของ grid ด้วย
+
+เราจะใช้ property `grid-template-columns` กับ grid container เพื่อเพิ่มคอลัมน์ลงใน grid
+
+ลองดูตัวอย่าง:
 
 ```css
 .container {
@@ -20,19 +22,24 @@ dashedName: add-columns-with-grid-template-columns
 }
 ```
 
-นี่จะช่วยให้กริดของคุณมีคอลัมน์สองอันที่แต่ละอันมีขนาด 50 px
-จำนวนของ parameter ที่ `grid-template-columns` property ใช้บ่งบอกถึงจำนวนของคอลัมน์ภายในกริดและค่าในแต่ละ parameter บ่งบอกถึงขนาดความกว้างของมัน
+ตัวอย่างด้านบนจะทำให้ grid ของคุณมีคอลัมน์สองคอลัมน์ ที่กว้าง 50 px
+
+จำนวนของ parameter ใน property `grid-template-columns` จะใช้บอกจำนวนคอลัมน์ภายใน grid และค่าของ parameter จะเป็นความกว้างของคอลัมน์
 
 # --instructions--
 
-จงกำหนดให้ grid container มี 3 คอลัมน์ที่แต่ละอันมีความกว้าง `100px`
+ให้ทำให้ grid container มี 3 คอลัมน์ โดยที่แต่ละคอลัมน์กว้าง `100px`
 
 # --hints--
 
-`container` class ควรมี `grid-template-columns` property ที่มีค่า `100px` อยู่ 3 ตัว
+คลาส `container` ต้องมี property `grid-template-columns` ที่มีค่าเป็น `100px 100px 100px`
 
 ```js
-assert(code.match(/.container\s*?{[\s\S]*grid-template-columns\s*?:\s*?100px\s*?100px\s*?100px\s*?;[\s\S]*}/gi));
+assert(
+  code.match(
+    /.container\s*?{[\s\S]*grid-template-columns\s*?:\s*?100px\s*?100px\s*?100px\s*?;[\s\S]*}/gi
+  )
+);
 ```
 
 # --seed--
@@ -62,9 +69,9 @@ assert(code.match(/.container\s*?{[\s\S]*grid-template-columns\s*?:\s*?100px\s*?
     width: 100%;
     background: LightGray;
     display: grid;
-    /* Only change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
 
-    /* Only change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
   }
 </style>
 

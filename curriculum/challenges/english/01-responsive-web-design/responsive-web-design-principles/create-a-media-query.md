@@ -2,20 +2,20 @@
 id: 587d78b0367417b2b2512b08
 title: Create a Media Query
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pzrPu4/cqwKrtm'
+videoUrl: "https://scrimba.com/p/pzrPu4/cqwKrtm"
 forumTopicId: 301139
 dashedName: create-a-media-query
 ---
 
 # --description--
 
-Media Queries เป็นเทคนิคใหม่ของ CSS3 ที่จะเปลี่ยนการแสดงผลของเนื้อหาตามขนาดของ viewport
-ซึ่ง viewport คือพื้นที่ที่ผู้ใช้สามารถมองเห็นได้ด้วยตาบนเว็บเพจ และความแตกต่างของหน้าจอแสดงผลตามอุปกรณ์ที่ใช้เข้าถึงเว็บไซต์ เช่น notebook หรือ mobile
+Media Query เป็นเทคนิคใหม่ของ CSS3 ที่จะเปลี่ยนการแสดงผลของเนื้อหาตามขนาดของ viewport
+ซึ่ง viewport คือพื้นที่ที่ผู้ใช้สามารถมองเห็นได้บนเว็บ และ viewport ก็จะมีขนาดต่างกัน ตามขนาดหน้าจอของอุปกรณ์ เช่น โน๊ตบุ๊ค หรือโทรศัพท์
 
-Media Queries ประกอบด้วยประเภทของมีเดีย และถ้าประเภทของมีเดียนั้นตรงกับประเภทของอุปกรณ์ เว็บเพจก็จะแสดงออกมาตามสไตล์ที่เรากำหนด
-คุณสามารถมี selector หลายอันและกำหนดสไตล์ของ media query ตามที่คุณต้องการ
+ในการใช้ Media Query เราจะต้องระบุ media type และถ้า media type นั้นตรงกับอุปกรณ์ที่เปิดหน้าเว็บ หน้าเว็บก็จะใช้ style ที่เรากำหนด
+คุณจะใช้ selector หรือ style กี่อันก็ได้ใน media query ของคุณ
 
-นี่คือตัวอย่างของ media query ที่จะแสดงผลของเนื้อหาออมาเมื่อความกว้างของอุปกรณ์ (น้อยกว่าและเท่ากับ `100px`):
+นี่คือตัวอย่างของ media query ที่จะแสดงผลของเนื้อหาออมาเมื่อความกว้างของอุปกรณ์ น้อยกว่าหรือเท่ากับ `100px`:
 
 ```css
 @media (max-width: 100px) {
@@ -23,7 +23,7 @@ Media Queries ประกอบด้วยประเภทของมีเ
 }
 ```
 
-และ media query ข้างล่างจะแสดงผลของเนื้อหาออกมาเมื่อความสูงของอุปกรณ์ (มากกว่าหรือเท่ากับ `350px`):
+และ media query ข้างล่างจะแสดงผลของเนื้อหาออกมาเมื่อความสูงของอุปกรณ์ มากกว่าหรือเท่ากับ `350px`:
 
 ```css
 @media (min-height: 350px) {
@@ -31,33 +31,37 @@ Media Queries ประกอบด้วยประเภทของมีเ
 }
 ```
 
-จงจำไว้ว่า CSS ข้างใน media query ถูกใช้เมื่อประเภทของ media ตรงกับอุปกรณ์เท่านั้น
+และ CSS ข้างใน media query จะถูกใช้เมื่อ media type ตรงกับอุปกรณ์เท่านั้น
 
 # --instructions--
 
-จงเพิ่ม media query 1 อันเพื่อที่ `p` tag จะได้มีขนาด `font-size` เท่ากับ `10px` เมื่อความสูงของอุปกรณ์น้อยกว่าหรือเท่ากับ `800px`
+ให้เพิ่ม media query 1 อันเพื่อที่แท็ก `p` จะได้มี `font-size` เป็น `10px` เมื่อความสูงของอุปกรณ์น้อยกว่าหรือเท่ากับ `800px`
 
 # --hints--
 
-คุณควรประกาศ `@media` query สำหรับอุปกรณ์ที่มี `height` น้อยกว่าหรือเท่ากับ`800px`.
+ต้องประกาศ `@media` query สำหรับอุปกรณ์ที่มี `height` น้อยกว่าหรือเท่ากับ `800px`
 
 ```js
-const media = new __helpers.CSSHelp(document).getCSSRules('media');
-assert(media.some((x) => x.media?.mediaText?.includes('(max-height: 800px)')));
+const media = new __helpers.CSSHelp(document).getCSSRules("media");
+assert(media.some((x) => x.media?.mediaText?.includes("(max-height: 800px)")));
 ```
 
-tag `p` element ควรมี `font-size` เป็น `10px` เมื่ออุปกรณ์ `height` น้อยกว่าหรือเท่ากับ `800px`.
+แท็ก `p` ต้องมี `font-size` เป็น `10px` เมื่ออุปกรณ์มี `height` น้อยกว่าหรือเท่ากับ `800px`
 
 ```js
-const rules = new __helpers.CSSHelp(document).getRuleListsWithinMedia('(max-height: 800px)');
-assert(rules?.find((x) => x.selectorText === 'p')?.style?.fontSize === '10px');
+const rules = new __helpers.CSSHelp(document).getRuleListsWithinMedia(
+  "(max-height: 800px)"
+);
+assert(rules?.find((x) => x.selectorText === "p")?.style?.fontSize === "10px");
 ```
 
-tag `p` element ควรมีขนาดเริ่มต้น `font-size` เป็น `20px` เมื่ออุปกรณ์ `height` มากกว่า `800px`.
+แท็ก `p` ต้องมี `font-size` เริ่มต้นเป็น `20px` เมื่ออุปกรณ์มี `height` มากกว่า `800px`
 
 ```js
-const ifPFirst = new __helpers.CSSHelp(document).getCSSRules()?.find((x) => x?.selectorText === 'p' || x?.media);
-assert(ifPFirst?.style?.fontSize === '20px');
+const ifPFirst = new __helpers.CSSHelp(document)
+  .getCSSRules()
+  ?.find((x) => x?.selectorText === "p" || x?.media);
+assert(ifPFirst?.style?.fontSize === "20px");
 ```
 
 # --seed--
@@ -70,16 +74,18 @@ assert(ifPFirst?.style?.fontSize === '20px');
     font-size: 20px;
   }
 
-  /* Only change code below this line */
+  /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
 
-  /* Only change code above this line */
+  /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
 </style>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel
-  vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac
-  habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse
-  pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus
+  massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet
+  lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac
+  habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem.
+  Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida
+  consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.
 </p>
 ```
 
@@ -99,9 +105,11 @@ assert(ifPFirst?.style?.fontSize === '20px');
 </style>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus massa. Aenean erat nisl, gravida vel
-  vestibulum cursus, interdum sit amet lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac
-  habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem. Aenean sit amet consectetur sem. Suspendisse
-  pretium, purus et gravida consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis tempus
+  massa. Aenean erat nisl, gravida vel vestibulum cursus, interdum sit amet
+  lectus. Sed sit amet quam nibh. Suspendisse quis tincidunt nulla. In hac
+  habitasse platea dictumst. Ut sit amet pretium nisl. Vivamus vel mi sem.
+  Aenean sit amet consectetur sem. Suspendisse pretium, purus et gravida
+  consequat, nunc ligula ultricies diam, at aliquet velit libero a dui.
 </p>
 ```

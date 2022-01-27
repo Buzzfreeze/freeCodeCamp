@@ -8,8 +8,8 @@ dashedName: make-an-image-responsive
 
 # --description--
 
-การทำให้รูปภาพresponsive ด้วย CSS นั้นง่ายมาก ๆ
-คุณแค่ต้องเพิ่ม property เหล่านี้ให้กับรูป:
+การเปลี่ยนขนาดรูปภาพตามขนาดหน้าจอโดยใช้ CSS นั้นง่ายมาก ๆ
+คุณแค่ต้องเพิ่ม property นี้ให้รูปของคุณ:
 
 ```css
 img {
@@ -18,24 +18,24 @@ img {
 }
 ```
 
-`max-width` ที่มีค่า `100%` จะทำให้คุณมั่นใจได้ว่าขนาดของรูปจะไม่กว้างเกิน container ที่ใส่มันไว้
-และ `height` ที่มีค่า `auto` จะทำให้ขนาดของรูปมีอัตราส่วนตามของต้นฉบับ
+การตั้งค่า `max-width` ให้เป็น `100%` จะทำให้ขนาดของรูปไม่กว้างเกิน parent element และการตั้งค่า `height` ให้เป็น `auto` จะทำให้ขนาดของรูปมีอัตราส่วนตามรูปต้นฉบับ
 
 # --instructions--
 
-จงเพิ่ม style rule ให้กับ `responsive-img` class เพื่อทำให้มัน responsive
-มันควรไม่กว้างเกิน container ของมัน (ในกรณีนี้ก็คือ preview window) และมันควรจะคงอัตราส่วนภาพเท่ากับต้นฉบับ
-หลังจากคุณเพิ่มโค้ดและจงปรับขนาด preview ให้เห็นว่ารูปภาพของคุณเป็นอย่างไร
+ให้เพิ่ม style ให้กับคลาส `responsive-img` เพื่อทำให้รูปนี้เปลี่ยนขนาดตามขนาดหน้าจอ
+
+โดยรูปต้องไม่กว้างกว่า parent element (ในกรณีนี้ก็คือหน้าต่าง preview) และรูปนี้ต้องมีอัตราส่วนตามภาพต้นฉบับ
+เมื่อเพิ่มโค้ดแล้ว ให้ลองปรับขนาดหน้าต่าง preview จะได้เห็นว่ารูปภาพจะเปลี่ยนไปอย่างไร
 
 # --hints--
 
-`responsive-img` class ของคุณควรมี `max-width` ที่ถูกตั้งให้เท่ากับ `100%`.
+คลาส `responsive-img` ต้องมี `max-width` เป็น `100%`
 
 ```js
-assert(getComputedStyle($('.responsive-img')[0]).maxWidth === '100%');
+assert(getComputedStyle($(".responsive-img")[0]).maxWidth === "100%");
 ```
 
-`responsive-img` class ควรมี `height` กำหนดให้เป็น `auto`.
+คลาส `responsive-img` ต้องมี `height` เป็น `auto`
 
 ```js
 assert(code.match(/height:\s*?auto;/g));
@@ -60,7 +60,10 @@ assert(code.match(/height:\s*?auto;/g));
   src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg"
   alt="freeCodeCamp stickers set"
 />
-<img src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg" alt="freeCodeCamp stickers set" />
+<img
+  src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg"
+  alt="freeCodeCamp stickers set"
+/>
 ```
 
 # --solutions--
@@ -82,5 +85,8 @@ assert(code.match(/height:\s*?auto;/g));
   src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg"
   alt="freeCodeCamp stickers set"
 />
-<img src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg" alt="freeCodeCamp stickers set" />
+<img
+  src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg"
+  alt="freeCodeCamp stickers set"
+/>
 ```

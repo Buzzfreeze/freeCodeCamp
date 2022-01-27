@@ -8,8 +8,8 @@ dashedName: split-a-string-into-an-array-using-the-split-method
 
 # --description--
 
-method `split` จะทำการแตก string ให้เป็น array ของ string 
-method นี้มี argument ที่เป็น delimiter ซึ่งเป็นตัวอักษรที่ใช้ในการแตก string หรือ regular expression 
+method `split` จะทำการแตก string ให้เป็น array ของ string  
+method นี้มี argument ที่เป็น delimiter ซึ่งเป็นตัวอักษรที่ใช้ในการแตก string หรือ regular expression  
 เช่น ถ้า delimiter เป็นเว้นวรรค แล้ว string ของคุณเป็นประโยคในภาษาอังกฤษ คุณจะได้ผลลัพธ์เป็น array ของคำ และถ้า delimiter เป็น empty string คุณจะได้ผลลัพธ์เป็น array ของตัวอักษรที่อยู่ใน string
 
 ด้านล่างนี้แสดง 2 ตัวอย่าง โดยตัวอย่างแรกจะทำการแตก string ด้วยเว้นวรรค ส่วนตัวอย่างที่สองจะแตก string ตามตัวอักษรด้วย regular expression
@@ -22,13 +22,13 @@ var otherString = "How9are7you2today";
 var byDigits = otherString.split(/\d/);
 ```
 
-`bySpace` จะมีค่าเป็น `["Hello", "World"]` และ `byDigits` จะมีค่าเป็น `["How", "are", "you", "today"]`.
+`bySpace` จะมีค่าเป็น `["Hello", "World"]` และ `byDigits` จะมีค่าเป็น `["How", "are", "you", "today"]`
 
 เนื่องจากค่าของ string ไม่สามารถเปลี่ยนแปลงได้ (immutable) จึงทำให้การใช้ method `split` ทำได้ง่ายขึ้น
 
 # --instructions--
 
-จงใช้ method `split` ในฟังก์ชัน `splitify` เพื่อแตก `str` ให้เป็น array ของคำ โดยฟังก์ชันต้องคืนค่าเป็น array 
+จงใช้ method `split` ในฟังก์ชัน `splitify` เพื่อแตก `str` ให้เป็น array ของคำ โดยฟังก์ชันต้องคืนค่าเป็น array  
 หมายเหตุ ในบททดสอบนี้จะแบ่งคำด้วยการเว้นวรรคและเครื่องหมายแบ่งคำอื่นด้วย และใน array ที่เป็นผลลัพธ์ต้องไม่มีจุด full-stop ที่ใช้ลงท้ายประโยค
 
 # --hints--
@@ -39,7 +39,7 @@ var byDigits = otherString.split(/\d/);
 assert(code.match(/\.split/g));
 ```
 
-การเรียกใช้ฟังก์ชัน `splitify("Hello World,I-am code")` ต้องได้ค่าเป็น `["Hello", "World", "I", "am", "code"]`.
+การเรียกใช้ฟังก์ชัน `splitify("Hello World,I-am code")` ต้องได้ค่าเป็น `["Hello", "World", "I", "am", "code"]`
 
 ```js
 assert(
@@ -48,7 +48,7 @@ assert(
 );
 ```
 
-การเรียกใช้ฟังก์ชัน `splitify("Earth-is-our home")` ต้องได้ค่าเป็น `["Earth", "is", "our", "home"]`.
+การเรียกใช้ฟังก์ชัน `splitify("Earth-is-our home")` ต้องได้ค่าเป็น `["Earth", "is", "our", "home"]`
 
 ```js
 assert(
@@ -57,7 +57,7 @@ assert(
 );
 ```
 
-การเรียกใช้ฟังก์ชัน `splitify("This.is.a-sentence")` ต้องได้ค่าเป็น `["This", "is", "a", "sentence"]`.
+การเรียกใช้ฟังก์ชัน `splitify("This.is.a-sentence")` ต้องได้ค่าเป็น `["This", "is", "a", "sentence"]`
 
 ```js
 assert(

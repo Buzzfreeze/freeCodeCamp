@@ -2,41 +2,41 @@
 id: 587d78ad367417b2b2512afb
 title: Use the flex-shrink Property to Shrink Items
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pVaDAv/cd3PBfr'
+videoUrl: "https://scrimba.com/p/pVaDAv/cd3PBfr"
 forumTopicId: 301113
 dashedName: use-the-flex-shrink-property-to-shrink-items
 ---
 
 # --description--
 
-จนถึงตอนนี้ property ทั้งหมดใน challenge ได้ถูกใช้กับ (parent ของ flex items)
-อย่างไรก็ตาม ยังมีอีกหลาย property ที่มีประโยชน์สำหรับ flex items
+property ที่เราได้เรียนไปทั้งหมดในแบบทดสอบที่ผ่านมา เป็น property ที่จะใช้กับ flex container (parent ของ flex item)
+คราวนี้เราจะมาเรียน property ที่ใช้กับ flex item บ้าง
 
-อันแรกก็คือ `flex-shrink` property
-เมื่อมันถูกเรียกใช้ มันจะช่วยให้ item มีขนาดเล็กลงถ้า flex container มีขนาดเล็กเกินไป
-Item จะย่อเล็กลงเมื่อความกว้างของ parent container นั้นเล็กกว่าความกว้างรวมของ flex item ที่อยู่ข้างในมันทั้งหมด
-สรุป `flex-shrink` (ใช้กำหนดขนาดของแต่ละ item ว่าให้ย่อขนาดหรือหดตัวเท่าไหร่ใน container เมื่อเทียบกับ items อื่นๆ โดยค่าของขนาดเป็นตัวเลข(number) มีค่าเริ่มต้นเป็น 1)
+property ตัวแรกก็คือ `flex-shrink`
+ซึ่งจะใช้ย่อขนาดของ item ถ้า flex container มีขนาดเล็กเกินไป
+โดย item จะถูกย่อลงถ้าความกว้างของ parent container น้อยกว่ากว่า flex item ที่อยู่ด้านใน
 
-`flex-shrink` property จะรับค่าเป็นตัวเลข อีกค่ามัน ยิ่งทำให้ item นั้นหดเยอะกว่า item อื่น ๆ ใน container
-ยกตัวอย่างเช่น ถ้า item หนึ่งมี `flex-shrink` ที่มีค่าเป็น `1` และอีก item มี `flex-shrink` มีค่าป็น `3`, item ที่มีค่าเท่ากับ `3` จะหดเล็กลง 3 เท่าของอีกอันหนึ่ง
+`flex-shrink` จะรับค่าเป็นตัวเลข ซึ่งยิ่งถ้าเลขมาก จะยิ่งย่อขนาดมากเมื่อเทียบกับ flex item ตัวอื่นๆ ใน parent เดียวกัน (property นี้จะมีค่าเริ่มต้นเป็น `1`)
+
+เช่น ถ้าเรามี item สองตัวอยู่ใน container โดยตัวหนึ่งมี `flex-shrink` เป็น `1` และอีกตัวหนึ่งมี `flex-shrink` เป็น `3` ตัวที่มี `flex-shrink` เป็น `3` จะย่อขนาดลงเป็นสามเท่า ของตัวอื่น
 
 # --instructions--
 
-จงเพิ่ม CSS property `flex-shrink` ให้กับทั้ง `#box-1` และ `#box-2`
-จงกำหนดให้ `#box-1` มีค่า `1` และ `#box-2` มีค่าเป็น `2`
+ให้เพิ่ม CSS property `flex-shrink` ให้กับทั้ง `#box-1` และ `#box-2`
+โดยให้ `#box-1` มีค่าเป็น `1` และ `#box-2` มีค่าเป็น `2`
 
 # --hints--
 
-`#box-1` element ควรมี `flex-shrink` property เท่ากับ `1`
+`#box-1` ต้องมีค่าของ property `flex-shrink` เป็น `1`
 
 ```js
-assert($('#box-1').css('flex-shrink') == '1');
+assert($("#box-1").css("flex-shrink") == "1");
 ```
 
-The `#box-2` element should have the `flex-shrink` property set to a value of `2`.
+`#box-2` ต้องมีค่าของ property `flex-shrink` เป็น `2`
 
 ```js
-assert($('#box-2').css('flex-shrink') == '2');
+assert($("#box-2").css("flex-shrink") == "2");
 ```
 
 # --seed--

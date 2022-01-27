@@ -21,7 +21,7 @@ myObj.hasOwnProperty("top");
 myObj.hasOwnProperty("middle");
 ```
 
-การเรียกใช้คำสั่ง `hasOwnProperty` ครั้งแรกจะได้ค่าเป็น `true` แต่การเรียกใช้คำสั่งที่สองจะได้ค่าเป็น `false`
+ในตัวอย่างด้านบน การเรียกใช้คำสั่ง `hasOwnProperty` ครั้งแรกจะได้ค่าเป็น `true` แต่การเรียกใช้คำสั่งที่สองจะได้ค่าเป็น `false`
 
 # --instructions--
 

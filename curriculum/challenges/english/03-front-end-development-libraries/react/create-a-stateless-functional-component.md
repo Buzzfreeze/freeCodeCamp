@@ -12,10 +12,12 @@ dashedName: create-a-stateless-functional-component
 Component เป็นแกนหลักของ React เพราะทุกอย่างใน React เป็น component และตอนนี้คุณจะได้เรียนรู้วิธีการสร้าง component แล้ว
 
 เราจะสร้าง React component ได้สองวิธี 
+
 วิธีแรกคือการใช้ฟังก์ชัน JavaScript 
 การสร้าง component ด้วยวิธีนี้จะทำให้ component เป็น *stateless functional component* (เราจะอธิบายเรื่อง state ในแบบทดสอบถัดๆไป) ตอนนี้ให้มองว่า stateless component เป็น component ที่สามารถรับข้อมูลและเรนเดอร์ข้อมูลนั้นได้ แต่ไม่สามารถจัดการหรือติดตามการเปลี่ยนแปลงของข้อมูลนั้นได้ (เราจะพูดถึงวิธีที่สองในการสร้าง React component ในแบบทดสอบหน้า)
 
 ในการสร้าง component ด้วยฟังก์ชัน คุณแค่เขียนฟังก์ชัน JavaScript ที่คืนค่าเป็น JSX หรือ `null` สิ่งสำคัญอีกอย่างที่ต้องรู้คือ คุณต้องตั้งชื่อ functional component โดยขึ้นต้นด้วยตัวพิมพ์ใหญ่ 
+
 ด้านล่างเป็นตัวอย่างของ stateless functional component ที่กำหนดคลาส HTML ใน JSX:
 
 ```jsx
@@ -29,6 +31,7 @@ const DemoComponent = function() {
 หลังจากได้รับการ transpile แล้ว `<div>` จะมี CSS class เป็น `customClass`
 
 เนื่องจาก JSX component จะใช้แทน HTML คุณจึงรวม component หลายๆตัวเข้าด้วยกันเพื่อสร้างหน้า HTML ที่ซับซ้อนยิ่งขึ้นได้ 
+
 นี่เป็นหนึ่งในข้อได้เปรียบที่สำคัญของโครงสร้าง component ของ React ซึ่งช่วยให้คุณสร้าง UI จาก component หลายๆตัวที่อยู่คนละที่กันได้ ทำให้ง่ายต่อการสร้างและปรับปรุงส่วน UI ที่ซับซ้อน
 
 # --instructions--

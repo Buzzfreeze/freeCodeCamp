@@ -2,49 +2,53 @@
 id: 587d774e367417b2b2512aa0
 title: Wrap Content in the article Element
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cPp79S3'
+videoUrl: "https://scrimba.com/c/cPp79S3"
 forumTopicId: 301029
 dashedName: wrap-content-in-the-article-element
 ---
 
 # --description--
 
-`article` เป็นอีกหนึ่ง HTML5 elements ที่ช่วยเพื่อความหมายทางภาษาให้กับ markup ของคุณ
-`article` เป็น sectioning element และถูกใช้เพื่อเก็บเนื้อหาที่ไม่เกี่ยวข้องหรือขึ้นกับใคร
-tag อันนี้เหมาะที่จะใช้กับพวก blog entries, forum posts, และ news articles.
+`article` เป็น element ของ HTML5 อีกตัวหนึ่ง ที่จะช่วยให้โค้ดคุณอ่านรู้เรื่องมากขึ้น
+โดย `article` เป็น element ที่ใช้แบ่งส่วนของเนื้อหา และถูกใช้เพื่อเก็บเนื้อหาที่ไม่เกี่ยวข้องกับเนื้อหาส่วนอื่น หรือเนื้อหาที่อยู่เดี่ยวๆได้
+แท็กนี้เหมาะที่จะใช้กับพวก บล็อค ฟอรั่ม และเว็บข่าว
 
-การกำหนดว่าเนื้อหาควรจะอยู่เดี่ยว ๆ ได้ไหม มักจะขึ้นกับดุลยพินิจของแต่ละคนแต่คุณสามารถใช้การทดสอบพื้นฐาน 2-3 อย่างเพื่อเช็คได้
-จงถามตัวเองว่า ถ้าคุณลบบริบทที่อยู่รอบ ๆ ออกทุกอัน เนื้อหานั้นๆจะยังเข้าใจได้อยู่หรือไม่ ?
-เช่นเดียวกัน สำหรับข้อความจะยังคงเนื้อหาเดิมได้หรือเปล่าถ้ามันอยู่ใน RSS feed?
+การดูว่าเนื้อหาไหนเป็นเนื้อหาที่อยู่เดี่ยวๆได้นั้น จะขึ้นอยู่กับแต่ละคนเลย แต่คุณสามารถใช้เงื่อนไขเล็กๆน้อยๆเพื่อดูได้
 
-จงจำไว้ว่ามีความเชื่อที่ว่าการใช้ assistive technologies พึ่งพา markup ที่เป็นระเบียนและมีความหมายทางภาษาพึ่งที่จะเข้าใจงานของคุณให้ดียิ่งขึ้น
+ให้ลองดูว่า ถ้าลบเนื้อหาที่อยู่รอบๆออกทุกอัน เนื้อหานั้นๆจะยังเข้าใจได้อยู่หรือไม่?
+ถ้ายังเข้าใจได้ ก็แปลว่าเนื้อหานั้นไม่ได้เกี่ยวข้องกับเนื้อหาอื่นในหน้าเดียวกัน
 
-**Note:** `section` element เป็นเรื่องใหม่สำหรับ HTML5 และมีความต่างทางด้านภาษาเพียงเล็กน้อยเมื่อเทียบกับ `article`
-`article` นั้นถูกใช้สำหรับเนื้อหาที่อยู่เดี่ยว ๆ ได้ และ `section` นั้นถูกใช้เป็นจับกลุ่มเนื้อหาที่มีธีมเกี่ยวข้อกัน
-พวกมันสามารถถูกใช้กับอีกตัวหนึ่งได้ตามความต้องการ ยกตัวอย่างเช่น, ถ้าให้หนังสือเล่มหนึ่งเป็น `article` แล้วแต่ละบทก็คือ `section` นั่นเอง
-ส่วนในกรณีที่ไม่มีความสัมพันธ์ระหว่างกลุ่มเลยเราก็จะใช้ `div`
+อย่าลืมว่า เว็บของคุณต้องมีโค้ดที่เป็นระเบียบ และใช้แท็กให้ถูกต้อง เพื่อที่จะให้คนที่ใช้ assistive technology ใช้งานเว็บของคุณได้
 
-`<div>` - จับกลุ่มเนื้อหา
-`<section>` - จับกลุ่มเนื้อหาที่เกี่ยวข้องกัน groups related content
-`<article>` - จับกลุ่มตัวที่อยู่เดี่ยว ๆ ซึ่งเป็นตัวที่เก็บเนื้อหาของมันเอง
+**Note:** `section` เป็นแท็กใหม่ของ HTML5 ที่จะสื่อความหมายต่างจาก `article` เล็กน้อย
+โดย `article` จะใช้สำหรับเนื้อหาที่อยู่เดี่ยวๆได้ และ `section` จะใช้เพื่อจัดกลุ่มเนื้อหาที่มีความเกี่ยวข้องกัน
+โดยทั้งสองแท็กนี้ก็สามารถใช้ร่วมกันได้ด้วย เช่น
+ถ้าให้หนังสือเล่มหนึ่งเป็น `article` แล้วแต่ละบทก็คือ `section` นั่นเอง
+ส่วนในกรณีที่ไม่มีความสัมพันธ์ระหว่างกลุ่มของเนื้อหาเลย เราก็จะใช้ `div` แทน
+
+`<div>` - ใช้จับกลุ่มเนื้อหา
+
+`<section>` - ใช้จับกลุ่มเนื้อหาที่เกี่ยวข้องกัน
+
+`<article>` - ใช้จับกลุ่มเนื้อหาที่อยู่เดี่ยวๆได้
 
 # --instructions--
 
-ตัวอย่างเช่น Camper Cat ใช้ `article` tags เป็นล้อมรอบโพสต์ใน blog page ของเขา แต่เขาลืมที่จะใช้มันกับส่วนที่อยู่ด้านบน
-จงเปลี่ยน `div` tag ให้เป็น`article` tag แทน
+คราวนี้ นาย Camper Cat ใช้แท็ก `article` ครอบโพสต์ในบล็อคของเขา แต่เขาลืมที่จะใช้แท็กนี้กับเนื้อหาด้านบน
+ให้เปลี่ยนแท็ก `div` เป็นแท็ก `article` แทน
 
 # --hints--
 
-โค้ดของคุณควรมี `article` tags 3 อัน
+โค้ดของคุณต้องมีแท็ก `article` 3 อัน
 
 ```js
-assert($('article').length == 3);
+assert($("article").length == 3);
 ```
 
-โค้ดของคุณไม่ควรมี `div` tag แล้ว
+โค้ดของคุณต้องไม่มีแท็ก `div` แล้ว
 
 ```js
-assert($('div').length == 0);
+assert($("div").length == 0);
 ```
 
 # --seed--
@@ -57,9 +61,10 @@ assert($('div').length == 0);
   <div>
     <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
     <p>
-      The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses.
-      But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that
-      is lasagna...
+      The internet is littered with varying opinions on nutritional paradigms,
+      from catnip paleo to hairball cleanses. But let's turn our attention to an
+      often overlooked fitness fuel, and examine the protein-carb-NOM trifecta
+      that is lasagna...
     </p>
   </div>
 
@@ -68,8 +73,9 @@ assert($('div').length == 0);
   <article>
     <h2>Defeating your Foe: the Red Dot is Ours!</h2>
     <p>
-      Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning
-      stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...
+      Felines the world over have been waging war on the most persistent of
+      foes. This red nemesis combines both cunning stealth and lightning speed.
+      But chin up, fellow fighters, our time for victory may soon be near...
     </p>
   </article>
 
@@ -78,9 +84,10 @@ assert($('div').length == 0);
   <article>
     <h2>Is Chuck Norris a Cat Person?</h2>
     <p>
-      Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence
-      anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat
-      person?...
+      Chuck Norris is widely regarded as the premier martial artist on the
+      planet, and it's a complete coincidence anyone who disagrees with this
+      fact mysteriously disappears soon after. But the real question is, is he a
+      cat person?...
     </p>
   </article>
 </main>
@@ -94,9 +101,10 @@ assert($('div').length == 0);
   <article>
     <h2>The Garfield Files: Lasagna as Training Fuel?</h2>
     <p>
-      The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses.
-      But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that
-      is lasagna...
+      The internet is littered with varying opinions on nutritional paradigms,
+      from catnip paleo to hairball cleanses. But let's turn our attention to an
+      often overlooked fitness fuel, and examine the protein-carb-NOM trifecta
+      that is lasagna...
     </p>
   </article>
 
@@ -105,8 +113,9 @@ assert($('div').length == 0);
   <article>
     <h2>Defeating your Foe: the Red Dot is Ours!</h2>
     <p>
-      Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning
-      stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near...
+      Felines the world over have been waging war on the most persistent of
+      foes. This red nemesis combines both cunning stealth and lightning speed.
+      But chin up, fellow fighters, our time for victory may soon be near...
     </p>
   </article>
 
@@ -115,9 +124,10 @@ assert($('div').length == 0);
   <article>
     <h2>Is Chuck Norris a Cat Person?</h2>
     <p>
-      Chuck Norris is widely regarded as the premier martial artist on the planet, and it's a complete coincidence
-      anyone who disagrees with this fact mysteriously disappears soon after. But the real question is, is he a cat
-      person?...
+      Chuck Norris is widely regarded as the premier martial artist on the
+      planet, and it's a complete coincidence anyone who disagrees with this
+      fact mysteriously disappears soon after. But the real question is, is he a
+      cat person?...
     </p>
   </article>
 </main>

@@ -13,31 +13,31 @@ dashedName: missing-letters
 
 # --hints--
 
-`fearNotLetter("abce")` ต้องคืนค่าเป็น string `d`.
+`fearNotLetter("abce")` ต้องคืนค่าเป็น string `d`
 
 ```js
 assert.deepEqual(fearNotLetter('abce'), 'd');
 ```
 
-`fearNotLetter("abcdefghjklmno")` ต้องคืนค่าเป็น string `i`.
+`fearNotLetter("abcdefghjklmno")` ต้องคืนค่าเป็น string `i`
 
 ```js
 assert.deepEqual(fearNotLetter('abcdefghjklmno'), 'i');
 ```
 
-`fearNotLetter("stvwx")` ต้องคืนค่าเป็น string `u`.
+`fearNotLetter("stvwx")` ต้องคืนค่าเป็น string `u`
 
 ```js
 assert.deepEqual(fearNotLetter('stvwx'), 'u');
 ```
 
-`fearNotLetter("bcdf")` ต้องคืนค่าเป็น string `e`.
+`fearNotLetter("bcdf")` ต้องคืนค่าเป็น string `e`
 
 ```js
 assert.deepEqual(fearNotLetter('bcdf'), 'e');
 ```
 
-`fearNotLetter("abcdefghijklmnopqrstuvwxyz")` ต้องคืนค่าเป็น `undefined`.
+`fearNotLetter("abcdefghijklmnopqrstuvwxyz")` ต้องคืนค่าเป็น `undefined`
 
 ```js
 assert.isUndefined(fearNotLetter('abcdefghijklmnopqrstuvwxyz'));

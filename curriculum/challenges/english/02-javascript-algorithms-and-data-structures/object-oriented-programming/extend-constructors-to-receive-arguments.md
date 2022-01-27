@@ -8,8 +8,7 @@ dashedName: extend-constructors-to-receive-arguments
 
 # --description--
 
-
-ถึง constructor `Bird` และ `Dog` ที่ได้จากแบบทดสอบที่แล้วจะใช้งานดี แต่เราจะเห็นว่า ทุก `instance` ของนกที่สร้างจาก constructor `Bird` จะมี name เป็น Albert มี color เป็น blue และมี numLegs เป็น 2 เสมอ 
+ถึง constructor `Bird` และ `Dog` ที่ได้จากแบบทดสอบที่แล้วจะใช้งานดี แต่เราจะเห็นว่า ทุก `instance` ของนกที่สร้างจาก constructor `Bird` จะมี name เป็น Albert มี color เป็น blue และมี numLegs เป็น 2 เสมอ  
 ถ้าคุณต้องการให้นกแต่ละตัวมี name และ color ต่างกัน ก็มีวิธีที่เปลี่ยน property ของนกทีละตัวอยู่ แต่จะลำบากหน่อย ลองดูตัวอย่างด้านล่างนี้:
 
 ```js
@@ -18,7 +17,7 @@ swan.name = "Carlos";
 swan.color = "white";
 ```
 
-สมมติว่าคุณกำลังเขียนโปรแกรมเพื่อเก็บข้อมูลของนกหลายร้อยหลายพันตัวที่อยู่ในกรง เราจะเสียเวลาในการสร้างและเปลี่ยน property ของแต่ละตัวมากๆ 
+สมมติว่าคุณกำลังเขียนโปรแกรมเพื่อเก็บข้อมูลของนกหลายร้อยหลายพันตัวที่อยู่ในกรง เราจะเสียเวลาในการสร้างและเปลี่ยน property ของแต่ละตัวมากๆ  
 ถ้าคุณอยากทำให้การสร้าง object `Bird` แต่ละตัวทำได้ง่ายๆ คุณต้องออกแบบให้ constructor `Bird` สามารถรับ parameter ได้
 
 ```js
@@ -29,8 +28,8 @@ function Bird(name, color) {
 }
 ```
 
-วิธีใช้ก็คือให้ส่ง argument เข้าไปเพื่อกำหนด property ใน constructor `Bird` 
-เช่น `let cardinal = new Bird("Bruce", "red");` 
+วิธีใช้ก็คือให้ส่ง argument เข้าไปเพื่อกำหนด property ใน constructor `Bird`  
+เช่น `let cardinal = new Bird("Bruce", "red");`  
 คำสั่งนี้เป็นการสร้าง instance ใหม่ของ `Bird` โดยกำหนดให้ property `name` และ `color` มีค่าเป็น `Bruce` และ `red` ตามลำดับ ส่วน property `numLegs` ก็ยังคงมีค่าเป็น 2 ซึ่ง `cardinal` จะมี property ตามนี้:
 
 ```js

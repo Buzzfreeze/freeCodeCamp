@@ -17,7 +17,9 @@ dashedName: use-advanced-javascript-in-react-render-method
 # --instructions--
 
 ในโค้ดที่ให้มา method `render` มี array ที่ประกอบด้วย string 20 ตัว ที่ใช้ในของเล่นโบราณชื่อ Magic Eight Ball ช่วงทศวรรษ 1980 (ลอง google ดู คุณน่าจะเคยเห็นของเล่นนี้ในหนัง) 
+
 ตอนนี้ click event ของปุ่มถูกผูกไว้กับ method `ask` ดังนั้นทุกครั้งที่มีการคลิกปุ่ม จะมีการสุ่มตัวเลขและจัดเก็บเป็น `randomIndex` ใน state 
+
 ในบรรทัดที่ 52 ให้คุณลบ string `change me!` ออก และกำหนดค่าของ const `answer` ใหม่ เพื่อให้ทุกครั้งที่ component อัปเดท โค้ดของคุณจะไปดึง string จาก array `possibleAnswers` ตาม index ที่สุ่มได้ 
 และสุดท้ายให้แสดงค่าของ const `answer` ในแท็ก `p`
 

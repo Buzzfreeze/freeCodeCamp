@@ -18,8 +18,8 @@ dashedName: refactor-global-variables-out-of-functions
 
 # --instructions--
 
-จงแก้โค้ดเพื่อให้ค่าของ global array `bookList` คงที่เสมอ 
-ฟังก์ชัน `add` จะใช้เพิ่ม `bookName` เข้าไปท้าย array ที่ส่งเข้ามาในฟังก์ชัน และคืนค่าออกมาเป็น array ตัวใหม่ 
+จงแก้โค้ดเพื่อให้ค่าของ global array `bookList` คงที่เสมอ  
+ฟังก์ชัน `add` จะใช้เพิ่ม `bookName` เข้าไปท้าย array ที่ส่งเข้ามาในฟังก์ชัน และคืนค่าออกมาเป็น array ตัวใหม่  
 ส่วนฟังก์ชัน `remove` ต้องลบ `bookName` ที่ระบุออกจาก array ที่ส่งเข้ามาฟังก์ชัน
 
 **หมายเหตุ:** ทั้งสองฟังก์ชันต้องคืนค่าเป็น array และถ้าจะเพิ่ม parameter ใหม่ ต้องให้ parameter นั้นอยู่หน้า `bookName` เสมอ
@@ -40,7 +40,7 @@ assert(
 );
 ```
 
-`newBookList` ต้องมีค่าเป็น `["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae", "A Brief History of Time"]`.
+`newBookList` ต้องมีค่าเป็น `["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae", "A Brief History of Time"]`
 
 ```js
 assert(
@@ -55,7 +55,7 @@ assert(
 );
 ```
 
-`newerBookList` ต้องมีค่าเป็น `["The Hound of the Baskervilles", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"]`.
+`newerBookList` ต้องมีค่าเป็น `["The Hound of the Baskervilles", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"]`
 
 ```js
 assert(
@@ -68,7 +68,7 @@ assert(
 );
 ```
 
-`newestBookList` ต้องมีค่าเป็น `["The Hound of the Baskervilles", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae", "A Brief History of Time"]`.
+`newestBookList` ต้องมีค่าเป็น `["The Hound of the Baskervilles", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae", "A Brief History of Time"]`
 
 ```js
 assert(

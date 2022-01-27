@@ -9,26 +9,30 @@ dashedName: never-mutate-state
 # --description--
 
 เรามาถึงแบบทดสอบส่วนสุดท้ายแล้ว ซึ่งแบบทดสอบ 4 ตัวสุดท้ายนี้จะอธิบาย method ต่างๆ ในการบังคับใช้หลักของ state immutability ใน Redux 
+
 Immutable state (state ที่ไม่เปลี่ยนรูป) แปลว่าคุณจะไม่แก้ไข state โดยตรง แต่คุณจะคืนค่าเป็น state ตัวใหม่เสมอ
 
-เก็บข้อมูลของ state ของแอป Redux ทุกครั้งที่มีการเปลี่ยนแปลง คุณจะเห็นการเปลี่ยนแปลงของ state แบบนี้ `state 1`, `state 2`, `state 3`,`state 4`, `...` ฯลฯ 
+ถ้าคุณเก็บข้อมูลของ state ของแอป Redux ทุกครั้งที่มีการเปลี่ยนแปลง คุณจะเห็นการเปลี่ยนแปลงของ state แบบนี้ `state 1`, `state 2`, `state 3`,`state 4`, `...` ฯลฯ 
 โดยที่ state แต่ละตัวอาจจะมีข้อมูลคล้ายกับ state ก่อนหน้า แต่จริงๆแล้ว state แต่ละตัวจะเป็นข้อมูลคนละก้อนกัน 
 การที่ state มีความเป็น immutable ทำให้ฟีเจอร์เช่น time-travel debugging เกิดขึ้นได้
 
 Redux ไม่ได้บังคับใช้ state immutability อย่างจริงจังใน store หรือ reducer แต่โปรแกรมเมอร์จะต้องจัดการในส่วนนี้เอง เราโชคดีที่ JavaScript (โดยเฉพาะ ES6) มีเครื่องมือที่คุณใช้เพื่อบังคับให้ state ไม่เปลี่ยนรูปได้ ไม่ว่าจะเป็น `string`, `number`, `array` หรือ `object` 
+
 ถ้ายังจำเรื่อง data type ได้ string และ number เป็นข้อมูลประเภทที่ immutable อยู่แล้ว แต่ `array` หรือ `object` นั้นเป็นประเภทของข้อมูลที่ mutable 
 ในความเป็นจริง state ของคุณอาจจะเป็น `array` หรือ `object` เพราะว่าเป็นโครงสร้างข้อมูลที่ใช้เก็บข้อมูลได้หลากหลายรูปแบบ
 
 # --instructions--
 
 เราได้เขียน `store` และ `reducer` ที่ใช้จัดการ to-do item ใน code editor ให้แล้ว
+
 ให้เขียน case `ADD_TO_DO` ใน reducer ให้เสร็จ เพื่อเติม to-do ใหม่เข้าไปใน state 
+
 มีหลายวิธีที่จะทำแบบทดสอบนี้ได้ ทั้งการใช้ JavaScript แบบดั้งเดิมหรือใช้ ES6 
 ให้ลองดูว่าคุณจะหาวิธีคืนค่าเป็น array ใหม่ ที่นำข้อมูลจาก `action.todo` มาต่อท้ายได้หรือไม่
 
 # --hints--
 
-ต้องมีมี Redux store ที่มีค่าของ state เริ่มต้นเป็น array `todos` ใน code editor
+ต้องมี Redux store ที่มีค่าของ state เริ่มต้นเป็น array `todos` ใน code editor
 
 ```js
 assert(

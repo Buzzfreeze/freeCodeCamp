@@ -8,7 +8,7 @@ dashedName: learn-about-functional-programming
 
 # --description--
 
-Functional programming เป็นรูปแบบนึงของการเขียนโปรแกรมที่มีจะเขียนฟังก์ชันให้เรียบง่าย และกระทบข้อมูลที่อยู่ภายนอกขอบเขตของฟังก์ชัน 
+Functional programming เป็นรูปแบบนึงของการเขียนโปรแกรมที่มีจะเขียนฟังก์ชันให้เรียบง่าย และกระทบข้อมูลที่อยู่ภายนอกขอบเขตของฟังก์ชัน  
 โดยฟังก์ชันจะทำงานแค่ `INPUT -> PROCESS -> OUTPUT`
 
 การเขียนฟังก์ชันใน Functional programming จะใช้หลักการนี้:

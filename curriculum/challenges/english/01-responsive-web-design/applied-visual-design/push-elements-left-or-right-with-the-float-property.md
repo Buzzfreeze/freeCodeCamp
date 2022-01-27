@@ -2,34 +2,37 @@
 id: 587d78a3367417b2b2512ace
 title: Push Elements Left or Right with the float Property
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/c2MDqu2'
+videoUrl: "https://scrimba.com/c/c2MDqu2"
 forumTopicId: 301066
 dashedName: push-elements-left-or-right-with-the-float-property
 ---
 
 # --description--
 
-เครื่องมือในการกำหนดตำแหน่งอันถัดไป จะไม่ยุ่งกับ `position`แต่จะเป็นการกำหนด `float` property ของ element
-Floating element จะถูกเอาออกจาก normal flow ของ document (การไหลในหน้าเว็บเพจ) และจะถูกผลักให้ไปอยู่ `left` หรือ `right` ของ parent element ที่เก็บมันไว้
-มันมักจะถูกใช้กับ `width` property เพื่อระบุช่องว่างในแนวนอนที่ floated element ต้องการ
+เครื่องมือในการกำหนดตำแหน่งอันถัดไป จะไม่ใช้ `position` แล้ว แต่จะให้ property `float` ของ element แทน
+
+element ที่ `float` จะไม่ได้อยู่ใน normal flow ของเว็บแล้ว และจะถูกขยับไปอยู่ `left` หรือ `right` ของ parent element
+
+โดยปกติ property `float` มักถูกใช้คู่กับ `width` เพื่อระบุว่า element นี้จะมีความกว้างเท่าไหร่
 
 # --instructions--
 
-markup ที่กำหนดให้จะมีลักษณะเป็น two-column layout, ที่มี `section` และ `aside` element อยู่ข้าง ๆ กัน
-จงกำหนดให้ `#left` item มี `float` เป็น `left` และ `#right` item มี `float` เป็น `right`
+โค้ดที่เรามาให้นี้ เมื่อแก้เสร็จแล้ว จะเป็นคอลัมน์ 2 คอลัมน์ ที่มี element `section` และ `aside` อยู่ข้าง ๆ กัน
+
+ให้กำหนด `#left` ให้มีค่าของ `float` เป็น `left` และให้กำหนด `#right` ให้มีค่าของ `float` เป็น `right`
 
 # --hints--
 
-element ที่มี id `left` ควรมี `float` เป็น `left`
+element ที่มี id เป็น `left` ต้องมี `float` เป็น `left`
 
 ```js
-assert($('#left').css('float') == 'left');
+assert($("#left").css("float") == "left");
 ```
 
-element ที่มี id `right` ควรมี`float` เป็น `right`
+element ที่มี id เป็น `right` ต้องมี `float` เป็น `right`
 
 ```js
-assert($('#right').css('float') == 'right');
+assert($("#right").css("float") == "right");
 ```
 
 # --seed--

@@ -12,7 +12,7 @@ dashedName: learn-how-script-tags-and-document-ready-work
 
 ก่อนที่จะเริ่มใช้งาน jQuery นั้น เราจำเป็นจะต้องเติมบางอย่างให้กับ HTML ของเรา
 
-เริ่มจาก เพิ่ม `script` element ในส่วนบนของ HTML แล้วอย่าลืม tag ปิดด้วย
+เริ่มจาก เพิ่ม `script` element ในส่วนบนของ HTML แล้วอย่าลืมแท็กปิดด้วย
 
 เบราว์เซอร์ของคุณจะเรียกใช้ JavaScript ทุกตัวใน `script` ซึ่งรวมถึง jQuery ด้วย
 
@@ -24,7 +24,7 @@ dashedName: learn-how-script-tags-and-document-ready-work
 
 # --hints--
 
-คุณจะต้องสร้าง `script` element ให้ถูกต้องและมี tag ปิดด้วย
+คุณจะต้องสร้าง `script` element ให้ถูกต้องและมีแท็กปิดด้วย
 
 ```js
 assert(

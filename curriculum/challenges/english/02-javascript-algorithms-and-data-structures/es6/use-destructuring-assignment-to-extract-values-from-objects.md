@@ -10,7 +10,6 @@ dashedName: use-destructuring-assignment-to-extract-values-from-objects
 
 <dfn>Destructuring assignment</dfn> เป็น syntax พิเศษที่เพิ่มมาใน ES6 ที่ใช้เพื่อกำหนดค่าตัวแปรโดยการดึงค่าจาก object โดยตรง
 
-
 ลองดูโค้ดของ ES5 กันก่อน:
 
 ```js

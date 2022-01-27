@@ -8,22 +8,24 @@ dashedName: get-json-with-the-javascript-xmlhttprequest-method
 
 # --description--
 
-เราสามารถ request data จาก external source ได้โดยการใช้ APIs
+เราสามารถส่ง request เพื่อดึงข้อมูลจากแหล่งข้อมูลภายนอกได้โดยการใช้ API
 
-APIs หรือ Application Programming Interfaces เป็นเครื่องมือที่ computers ใช้เพื่อสื่อสารระหว่างกัน 
-เเราจะรียนรู้สิธีการ update HTML กับ data โดยใช้ APIs ที่เรียกว่า AJAX
+API หรือ Application Programming Interface เป็นเครื่องมือที่ คอมพิวเตอร์ใช้เพื่อสื่อสารระหว่างกัน 
+เราจะเรียนรู้วิธีการอัปเดท HTML ตามข้อมูลที่เราได้รับมาจาก API โดยเราจะดึงข้อมูลจาก API โดยใช้วิธีที่เรียกว่า AJAX
 
-web APIs จะส่ง data ในรูปแบบของ JSON (JavaScript Object Notation)
+API ส่วนใหญ่จะส่งข้อมูลมาในรูปแบบ JSON (JavaScript Object Notation)
 
-JSON syntax จะมีความคล้ายกับ JavaScript object literal notation โดยที่ JSON มี object properties และค่าที่อยู่ภายใน 
-`{` ... `}`
+syntax ของ JSON จะคล้ายกับ JavaScript object literal 
+โดย JSON มีจะมีชื่อของ property และค่าของ property นั้น อยู่ในวงเล็บปีกกา `{ }`
 
-properties และค่าจะอ้างถึง "key-value pairs"
+เราจะเรียก property และค่าของ property นั้นว่า "key-value pairs" (โดย key หมายถึงชื่อของ property และ value หมายถึงค่าของ property นั้น)
 
-JSON ที่ถูกส่งโดย APIs จะส่งเป็น `bytes`และ application จะรับมันเป็นค่า `string` ซึ่งสามารถถูกแปลงเป็น JavaScript objects ได้ แต่จะไม่ใช้ค่า default ของ JavaScript objects  ส่วน `JSON.parse` method จะแยกค่า string และโครงสร้างของ JavaScript object 
+API จะส่ง JSON มาเป็น `bytes` และแอปของเราจะรับค่ามาเป็น `string` 
+โดย string นี้จะถูกแปลงเป็น JavaScript object ได้ แต่เราจะต้องมาแปลงค่าเองโดยใช้ method `JSON.parse` 
+method นี้จะอ่านค่าของ string และแปลงค่าให้เป็น JavaScript object 
 
-เราสามารถ request JSON ได้จาก freeCodeCamp's Cat Photo API 
-โดยสามารถใชcodeข้างล่างนี้ได้
+คุณสามารถส่ง request ไปหา Cat Photo API ของเรา
+ได้โดยใช้โค้ดตัวอย่างด้านล่างนี้
 
 ```js
 const req = new XMLHttpRequest();
@@ -35,23 +37,29 @@ req.onload = function(){
 };
 ```
 
-จาก code ด้านบนจะพบว่า JavaScript `XMLHttpRequest` object มีจำนวนของ properties และ methods ที่ใช้ transfer data
-`XMLHttpRequest` object ถูกสร้างขึ้นและ save ค่าไว้ใน `req` variable จากนั้นใช้ `open` method ให้กับค่าเริ่มต้นของ request - เช่นการ request data จาก API เพื่อทำการ `GET` request argumentตัวที่สองคือ `open` ที่ URL ของ API ที่จะใช้เพื่อ request data  argumentตัวที่สามเป็นค่า Boolean โดยที่ `true` ใช้เป็น asynchronous request  ส่วน `send` method เอาไว้ใช้ส่งค่า request โดย `onload` event จะใช้แยก return data และ apply ใช้กับ `JSON.stringify` method เพื่อเปลี่ยน JavaScript object ไปเป็น string โดนที่ string จะเพิ่มไปใน message text.
+จากโค้ดด้านบนจะเห็นว่า object `XMLHttpRequest` มี property และ method หลายตัวที่ใช้ในการรับ-ส่งข้อมูล
+object `XMLHttpRequest` นี้ถูกสร้างขึ้นและเก็บลงในตัวแปร `req` 
+จากนั้นใช้ method `open` เพิ่อเตรียมส่ง request 
+`open` รับ argument แรกเป็นวิธีในการส่ง request โดยในตัวอย่างนี้เป็นการขอข้อมูลจาก API ดังนั้นประเภทของ request จึงเป็น `GET` 
+argument ตัวที่สองคือ URL ของ API ที่จะส่ง request ไปหา 
+argument ตัวที่สามรับค่า Boolean โดยถ้าเป็น `true` จะเป็นการส่ง request แบบ asynchronous
+ส่วน method `send` มีไว้เพื่อส่ง request 
+และสุดท้าย `onload` event handler จะรับข้อมูลที่ API ส่งกลับมา และใช้ method `JSON.stringify` เพื่อเปลี่ยน JavaScript object ไปเป็น string และแสดง string นั้นเป็นข้อความใน element `message`
 
 # --instructions--
 
-สร้างและส่ง `GET` request ให้กับ freeCodeCamp Cat Photo API จากนั้น click ที่ปุ่ม `Get Message` 
-AJAX function จะส่งค่า `The message will go here` text กับ raw JSON output จาก API
+ให้สร้างและส่ง `GET` request ไปยัง Cat Photo API เมื่อคลิกที่ปุ่ม `Get Message` 
+ฟังก์ชัน AJAX ที่คุณเขียนจะต้องเปลี่ยนข้อความ `The message will go here` เป็น JSON ที่ได้รับกลับมาจาก API
 
 # --hints--
 
-ควรสร้าง `XMLHttpRequest` ขึ้นมาใหม่
+โค้ดที่เขียนต้องสร้าง `XMLHttpRequest` ตัวใหม่
 
 ```js
 assert(code.match(/new\s+?XMLHttpRequest\(\s*?\)/g));
 ```
 
-ควรใช้ `open` method เพื่อเริ่มต้น `GET` request ให้กับ freeCodeCamp Cat Photo API.
+ต้องใช้ method `open` เพื่อเตรียมส่ง `GET` request ให้กับ Cat Photo API ของเรา
 
 ```js
 assert(
@@ -61,13 +69,13 @@ assert(
 );
 ```
 
-ควรใช้ `send` method เพื่อส่ง request
+ต้องใช้ method `send` เพื่อส่ง request
 
 ```js
 assert(code.match(/\.send\(\s*\)/g));
 ```
 
-ควรมี `onload` event เพื่อกำหนดค่าให้กับ function
+ต้องมี `onload` event handler ที่เก็บค่าของฟังก์ชันที่จะทำงานเมื่อได้รับข้อมูลกลับมา
 
 ```js
 assert(
@@ -75,13 +83,13 @@ assert(
 );
 ```
 
-ควรใช้ `JSON.parse` method เพื่อแยก `responseText`
+ต้องใช้ method `JSON.parse` เพื่อเปลี่ยน `responseText` ที่ได้รับกลับมาให้เป็น object
 
 ```js
 assert(code.match(/JSON\s*\.parse\(\s*.*\.responseText\s*\)/g));
 ```
 
-ควรมี element ของ class `message`และเปลี่ยน inner HTML ไปเป็น string ของ JSON data.
+ต้องมี element ที่มี class เป็น `message` และต้องเปลี่ยน inner HTML ของ element นี้เป็นไปเป็น string ของข้อมูล JSON ที่ได้รับกลับมาจาก API
 
 ```js
 assert(
@@ -99,10 +107,10 @@ assert(
 <script>
   document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('getMessage').onclick = function(){
-      // Add your code below this line
+      // เขียนโค้ดใต้บรรทัดนี้
 
 
-      // Add your code above this line
+      // เขียนโค้ดเหนือบรรทัดนี้
     };
   });
 </script>

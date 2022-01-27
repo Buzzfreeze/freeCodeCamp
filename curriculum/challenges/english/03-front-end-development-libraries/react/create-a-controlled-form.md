@@ -8,7 +8,7 @@ dashedName: create-a-controlled-form
 
 # --description--
 
-แบบทดสอบที่แล้วเราจะเห็นแล้วว่า React สามารถควบคุม state ใน element บางตัว เช่น `input` และ `textarea` ได้
+แบบทดสอบที่แล้วเราจะเห็นแล้วว่า React สามารถควบคุม state ใน element บางตัว เช่น `input` และ `textarea` ได้  
 เราจะเรียก element ที่ถูก React ควบคุม state ว่า Controlled Component
 ซึ่งการควบคุม state แบบนี้จะใช้ได้กับ form element อื่นๆ รวมถึง HTML `form` element แบบปกติด้วย
 
@@ -16,15 +16,15 @@ dashedName: create-a-controlled-form
 
 เราได้สร้าง component ชื่อ `MyForm` ไว้ให้แล้ว โดยข้างใน component นี้จะมี `form` ที่ยังไม่มีข้อมูลอยู่ด้วย และ `form` นี้ก็ได้มีการตั้งค่า submit handler ไว้แล้ว ซึ่งจะถูกเรียกใช้งานเมื่อฟอร์มถูก submit
 
-เราได้เพิ่มปุ่มที่ใช้ submit `form` ให้แล้ว คุณจะเห็นว่ามีการตั้งค่า `type` ของ `button` เป็น submit ซึ่งเป็ฯการระบุว่าปุ่มนี้จะใช้ควบคุม `form` 
-ให้คุณเพิ่ม `input` element ใน `form` และตั้งค่า attribute `value` และ `onChange()`  ให้เหมือนกับแบบทดสอบที่แล้ว 
+เราได้เพิ่มปุ่มที่ใช้ submit `form` ให้แล้ว คุณจะเห็นว่ามีการตั้งค่า `type` ของ `button` เป็น submit ซึ่งเป็นการระบุว่าปุ่มนี้จะใช้ควบคุม `form`  
+ให้คุณเพิ่ม `input` element ใน `form` และตั้งค่า attribute `value` และ `onChange()`  ให้เหมือนกับแบบทดสอบที่แล้ว  
 จากนั้นให้เขียน method `handleSubmit` โดย method นี้จะทำงานโดยการ เปลี่ยนค่าของ `submit` ใน `state` เป็นค่าปัจจุบันของ input ใน `state`
 
-**Note:** คุณต้องเรียกใช้ `event.preventDefault()` ใน submit handler เพื่อไม่ให้การ submit ไปรีเฟรชหน้าเว็บ 
+**Note:** คุณต้องเรียกใช้ `event.preventDefault()` ใน submit handler เพื่อไม่ให้การ submit ไปรีเฟรชหน้าเว็บ  
 (จริงๆแล้ว ตอนนี้เราได้ปิดการรีเฟรชหน้าเว็บไว้ให้แล้ว แต่คุณควรเรียกใช้ method ด้วยนี้เพื่อให้เข้าใจการทำงาน)้
 
-สุดท้าย ให้สร้างแท็ก `h1` ไว้ใต้ `form` ซึ่งจะดึงค่าของ `submit` จาก `state` ของ component มากแสดง
-ถ้าทำเสร็จแล้วและถูกต้อง ให้ลองพิมพ์ข้อความในช่อง input และคลิกปุ่ม `Submit!` (หรือกด Enter) จากนั้นคุณจะเห็นข้อความที่พิมพ์ลงไปแสดงบนหน้าเว็บ
+สุดท้าย ให้สร้างแท็ก `h1` ไว้ใต้ `form` ซึ่งจะดึงค่าของ `submit` จาก `state` ของ component มากแสดง  
+ถ้าทำเสร็จแล้วและถูกต้อง ให้ลองพิมพ์ข้อความในช่อง input และคลิกปุ่ม `Submit!` (หรือกด Enter)  จากนั้นคุณจะเห็นข้อความที่พิมพ์ลงไปแสดงบนหน้าเว็บ
 
 # --hints--
  

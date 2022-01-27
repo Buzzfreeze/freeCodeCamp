@@ -2,27 +2,29 @@
 id: 587d781b367417b2b2512abd
 title: Adjust the Size of a Header Versus a Paragraph Tag
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/c3bRPTz'
+videoUrl: "https://scrimba.com/c/c3bRPTz"
 forumTopicId: 301037
 dashedName: adjust-the-size-of-a-header-versus-a-paragraph-tag
 ---
 
 # --description--
 
-ขนาดฟ้อนต์ของ header tags (`h1` ถึง `h6`) ควรจะใหญ่กว่าขนาดฟ้อนต์ของ paragraph tag
-มันทำให้ผู้ใช้เข้าใจ layout และ ระดับความสำคัญจากสิ่งที่เห็นได้ง่ายขึ้น
-คุณควรใช้ `font-size` property เพื่อปรับขนาดของข้อความที่อยู่ใน element 
+ขนาดฟอนต์ของแท็ก header (`h1` ถึง `h6`) ควรจะใหญ่กว่าขนาดฟอนต์ของแท็ก `p`
+การทำแบบนี้ จะทำให้ผู้ใช้เข้าใจระดับความสำคัญของสิ่งที่เห็นได้ดีขึ้น
+
+คุณต้องใช้ property `font-size` เพื่อปรับขนาดของข้อความที่อยู่ใน element
 
 # --instructions--
 
-เพื่อที่ heading จะได้ดูใหญ่กว่า paragraph อย่างเห็นได้ชัด จงเปลี่ยน `font-size` ของ `h4` tag ให้มีค่า 27 pixel
+ให้ทำให้ขนาดของ heading ใหญ่กว่า paragraph อย่างชัดเจน
+โดยเปลี่ยน `font-size` ของแท็ก `h4` ให้มีค่าเป็น 27 pixel
 
 # --hints--
 
-โค้ดของคุณควรเพิ่ม `font-size` property ให้กับ `h4` element โดยกำหนดค่าให้มันเป็น 27 pixels.
+ต้องเพิ่ม property `font-size` ให้กับ `h4` element โดยกำหนดค่าให้เป็น 27 pixel
 
 ```js
-assert($('h4').css('font-size') == '27px');
+assert($("h4").css("font-size") == "27px");
 ```
 
 # --seed--
@@ -35,7 +37,6 @@ assert($('h4').css('font-size') == '27px');
     text-align: center;
     background-color: rgba(45, 45, 45, 0.1);
     padding: 10px;
-
   }
   p {
     text-align: justify;
@@ -62,12 +63,27 @@ assert($('h4').css('font-size') == '27px');
   <div class="cardContent">
     <div class="cardText">
       <h4>Alphabet</h4>
-      <hr>
-      <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+      <hr />
+      <p>
+        <em
+          >Google was founded by Larry Page and Sergey Brin while they were
+          <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em
+        >
+      </p>
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
-      <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+      <a
+        href="https://en.wikipedia.org/wiki/Larry_Page"
+        target="_blank"
+        class="links"
+        >Larry Page</a
+      ><br /><br />
+      <a
+        href="https://en.wikipedia.org/wiki/Sergey_Brin"
+        target="_blank"
+        class="links"
+        >Sergey Brin</a
+      >
     </div>
   </div>
 </div>
@@ -108,12 +124,27 @@ assert($('h4').css('font-size') == '27px');
   <div class="cardContent">
     <div class="cardText">
       <h4>Alphabet</h4>
-      <hr>
-      <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+      <hr />
+      <p>
+        <em
+          >Google was founded by Larry Page and Sergey Brin while they were
+          <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em
+        >
+      </p>
     </div>
     <div class="cardLinks">
-      <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
-      <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+      <a
+        href="https://en.wikipedia.org/wiki/Larry_Page"
+        target="_blank"
+        class="links"
+        >Larry Page</a
+      ><br /><br />
+      <a
+        href="https://en.wikipedia.org/wiki/Sergey_Brin"
+        target="_blank"
+        class="links"
+        >Sergey Brin</a
+      >
     </div>
   </div>
 </div>

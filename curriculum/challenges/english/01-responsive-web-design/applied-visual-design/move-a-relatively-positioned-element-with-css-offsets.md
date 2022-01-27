@@ -2,36 +2,33 @@
 id: 587d781e367417b2b2512aca
 title: Move a Relatively Positioned Element with CSS Offsets
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/c9bQEA4'
+videoUrl: "https://scrimba.com/c/c9bQEA4"
 forumTopicId: 301065
 dashedName: move-a-relatively-positioned-element-with-css-offsets
 ---
 
 # --description--
 
-CSS offsets ของ `top` หรือ `bottom`,และ `left` หรือ `right` จะบอก browser ว่าควรเลื่อน item ออกมาไกลแค่ไหนโดยอิงจากตำแหน่งที่มันเคยอยู่มาก่อน ใน normal flow หน้าเว็บเพจ
-คุณสามารถวาง element ให้ห่างจากจุดที่กำหนดได้ โดยจะย้าย element ออกจากด้านอ้างอิงซึ่งเป็นด้านตรงข้าม
-ตามที่คุณได้เห็นในแบบฝึกหัดที่แล้ว การใช้ `top` offset จะเลื่อน `h2` มาข้างบน
-เช่นเดียวกัน การใช้ `left` offset จะเลื่อน item ที่ทางซ้าย
+CSS offset ที่เป็น `top` หรือ `bottom` และ `left` หรือ `right` จะบอกเบราว์เซอร์ว่า ต้องขยับ element ออกมาไกลแค่ไหนโดยอิงจากตำแหน่งเดิมของ element นั้นใน normal flow ของหน้าเว็บ
+
+ในการขยับ element นั้น จะเป็นการขยับออกจากจุดอ้างอิง เช่น การใช้ `top` จะเลื่อน `h2` ลง หรือการใช้ `left` จะเลื่อน `h2` ไปทางขวา
 
 # --instructions--
 
-จงใช้ CSS offsets เพื่อเลื่อน `h2` ไปทางขวา 15 pixels และขึ้นไปอีก 10 pixel
+ให้ใช้ CSS offset เพื่อเลื่อน `h2` ไปทางขวา 15 pixel และเลื่อนขึ้นไปอีก 10 pixel
 
 # --hints--
 
-คุณควรใช้ CSS offset เพื่อกำหนดตำแหน่งโดยการอิงจากตำแหน่งเดิมของ `h2` ซึ่งกำหนดให้ขึ้นไปด้านบน 10px
-หรือก็คือจงเลื่อนมาออกจาก `bottom` ของตำแหน่งที่มันเคยอยู่มา 10 px
+ต้องใช้ CSS offset เพื่อกำหนดตำแหน่งโดยการอิงจากตำแหน่งเดิมของ `h2` โดยให้เลื่อน element ขึ้นไปด้านบน 10px ซึ่งจะทำได้โดยการกำหนดค่าของ `bottom` ให้เป็น 10 px
 
 ```js
-assert($('h2').css('bottom') == '10px');
+assert($("h2").css("bottom") == "10px");
 ```
 
-คุณควรใช้ CSS offset เพื่อกำหนดตำแหน่งโดยการอิงจากตำแหน่งเดิมของ `h2` ซึ่งกำหนดให้ไปทางซ้าย 15px
-หรือก็คือเลื่อนจาก `left` ของตำแหน่งที่มันเคยอยู่มา 15 px
+ต้องใช้ CSS offset เพื่อกำหนดตำแหน่งโดยการอิงจากตำแหน่งเดิมของ `h2` โดยให้เลื่อน element ไปด้านขวา 15px ซึ่งจะทำได้โดยการกำหนดค่าของ `left` ให้เป็น 15 px
 
 ```js
-assert($('h2').css('left') == '15px');
+assert($("h2").css("left") == "15px");
 ```
 
 # --seed--

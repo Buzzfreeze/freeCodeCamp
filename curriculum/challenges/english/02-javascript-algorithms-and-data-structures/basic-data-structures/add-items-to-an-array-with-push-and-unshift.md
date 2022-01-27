@@ -11,7 +11,9 @@ dashedName: add-items-to-an-array-with-push-and-unshift
 ความยาวของ array ไม่ใช่ค่าคงที่ โดยความยาวของ array จะขึ้นอยู่กับจำนวน element  และจำนวน element ก็สามารถเปลี่ยนแปลงได้ หรือที่เราเรียกกันว่า array เป็นข้อมูลแบบ <dfn>mutable</dfn> 
 ในบทเรียนนี้ เราจะเรียนรู้ method 2 ตัวที่ใช้เปลี่ยน array ได้ คือ `Array.push()` และ `Array.unshift()`
 
-ทั้งสอง method รับพารามิเตอร์เป็น element อย่างน้อย 1 ตัว แล้วแล้วจะเอา element นั้นไปใส่ลงใน array ซึ่ง method `push()` จะนำ element ไปต่อท้าย array และ `unshift()` นำ element ไปแทรกหน้า array ลองดูตัวอย่างด้านล่าง:
+ทั้งสอง method รับพารามิเตอร์เป็น element อย่างน้อย 1 ตัว แล้วแล้วจะเอา element นั้นไปใส่ลงใน array ซึ่ง method `push()` จะนำ element ไปต่อท้าย array และ `unshift()` นำ element ไปแทรกหน้า array 
+
+ลองดูตัวอย่างด้านล่าง:
 
 ```js
 let twentyThree = 'XXIII';

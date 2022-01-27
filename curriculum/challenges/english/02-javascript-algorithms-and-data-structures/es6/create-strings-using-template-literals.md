@@ -28,16 +28,16 @@ console.log(greeting);
 
 console จะแสดง string `Hello, my name is Zodiac Hasbro!` และ `I am 56 years old.`
 
-โค้ดด้านบนจะมีรายละเอียดค่อนข้างเยอะ เราจะมาดูทีละรายละเอียดกัน 
-อย่างแรก เราจะมีการใช้ backtick (`` ` ``) ในการครอบ string แทนเครื่องหมาย quote (`'` กับ `"`)
-อย่างที่สอง เราจะเห็นว่า string นี้มีสองบรรทัดทั้งในโค้ดและเอาต์พุต การใช้วิธีนี้จะทำให้เราไม่ต้องใช้ `\n` ใน string 
-อย่างที่สาม การเขียน `${variable}` จะทำให้เราไม่ต้องต่อ string ด้วยเครื่องหมาย `+` อีกต่อไป เราแค่วางตัวแปรลงใน string template แล้วครอบด้วย `${` และ `}` ก็จะเป็นการแสดงค่าของตัวแปรนั้นใน string แล้ว แล้วเราก็ยังสามารถใส่ expression อื่นๆ ลงใน string literal ของได้ เช่น `${a + b}` 
+โค้ดด้านบนจะมีรายละเอียดค่อนข้างเยอะ เราจะมาดูทีละรายละเอียดกัน  
+อย่างแรก เราจะมีการใช้ backtick (`` ` ``) ในการครอบ string แทนเครื่องหมาย quote (`'` กับ `"`)  
+อย่างที่สอง เราจะเห็นว่า string นี้มีสองบรรทัดทั้งในโค้ดและเอาต์พุต การใช้วิธีนี้จะทำให้เราไม่ต้องใช้ `\n` ใน string  
+อย่างที่สาม การเขียน `${variable}` จะทำให้เราไม่ต้องต่อ string ด้วยเครื่องหมาย `+` อีกต่อไป เราแค่วางตัวแปรลงใน string template แล้วครอบด้วย `${` และ `}` ก็จะเป็นการแสดงค่าของตัวแปรนั้นใน string แล้ว แล้วเราก็ยังสามารถใส่ expression อื่นๆ ลงใน string literal ของได้ เช่น `${a + b}`  
 วิธีใหม่นี้จะทำให้เราสร้าง string ได้ยืดหยุ่นมากขึ้น
 
 
 # --instructions--
 
-จงใช้ template literal syntax และใช้ backtick เพื่อสร้าง array ของ string ที่เป็น list element (`li`) โดยข้อความใน list element ต้องมาจาก array ของ property ที่ชื่อ `failure` ที่อยู่ใน object ที่ชื่อ `result`  และมี `class` เป็น `text-warning` 
+จงใช้ template literal syntax และใช้ backtick เพื่อสร้าง array ของ string ที่เป็น list element (`li`) โดยข้อความใน list element ต้องมาจาก array ของ property ที่ชื่อ `failure` ที่อยู่ใน object ที่ชื่อ `result`  และมี `class` เป็น `text-warning`  
 ฟังก์ชัน `makeList` ควรคืนค่าเป็น array ของ list element ที่เป็น string
 
 จงใช้ loop (loop ประเภทไหนก็ได้) เพื่อให้ได้ผลลัพธ์ตามข้อมูลด้านล่าง

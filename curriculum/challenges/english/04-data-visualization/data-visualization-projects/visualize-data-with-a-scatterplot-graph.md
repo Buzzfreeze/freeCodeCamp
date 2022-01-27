@@ -8,50 +8,50 @@ dashedName: visualize-data-with-a-scatterplot-graph
 
 # --description--
 
-**Objective:** สร้างแอพพลิเคชันจาก [CodePen.io](https://codepen.io) ที่มีfunctionเหมือนกับ  <https://codepen.io/freeCodeCamp/full/bgpXyK>.
+**Objective:** ลองทำแอปโดยใช้ [CodePen.io](https://codepen.io) ให้มีฟังก์ชันเหมือนกับ <https://codepen.io/freeCodeCamp/full/bgpXyK>.
 
 กรอกข้อมูลด้านล่าง[user stories](https://en.wikipedia.org/wiki/User_story) และทำtestทั้งหมดให้ผ่าน
 
-สามารถใช้ HTML, JavaScript, CSS, and the D3 svg-based visualization library เพื่อสร้างแกนที่มีลักษณะแบบD3และมีขีดบอกสเกลตามแนวแกนโดยอัตโนมัติ โดยขีดต้องผ่านการทดสอบจากD3 เนื่องจากต้องใช้ตำแหน่งหา elements ของกราฟ 
+ให้ใช้ HTML, JavaScript, CSS, และ library D3 
+ให้สร้างแกนของกราฟโดยใช้ property axis ของ D3 ซึ่งจะสร้างขีดที่ใช้บอกตำแหน่งบนแกน ขีดพวกนี้สำคัญเพราะว่า เราจะดูตำแหน่งของขีดพวกนี้เพื่อดูว่าโค้ดที่คุณเขียนสร้างกราฟที่ถูกต้องหรือไม่ 
+ให้อ่านวิธีการสร้างแกนจาก <https://github.com/d3/d3/blob/master/API.md#axes-d3-axis>
+ในการเขียนโค้ดให้ใช้ DOM แบบปกติ (ที่ไม่ใช่ virtual DOM) เพราะว่าถ้าใช้ frontend framework อย่าง Vue หรือ React (ที่ใช้ Virtual DOM) เราจะตรวจโค้ดของคุณไม่ได้
 
-ข้อมูลเกี่ยวกับการสร้างแกนหาเพื่มเติมได้จาก <https://github.com/d3/d3/blob/master/API.md#axes-d3-axis>
-DOM (non-virtual) elements จะถูกเรียกใช้ขณะทำการ test ถ้าหากใช้ frontend framework อย่างเช่น Vue ผลการทดสอบแบบ dynamic จะไม่ตรง เนืื่องจากframeworkเหล่านี้ไม่support D3 projects
+**User Story #1:** กราฟที่เขียนจะต้องมีชื่อกราฟ อยู่ใน element ที่มี id เป็น `"title"`
 
-**User Story #1:** สามารถแสดง title element ที่มีความสอดคล้องกับ `id="title"`.
+**User Story #2:** ต้องเขียนแกน x ที่มี id เป็น `"x-axis"`
 
-**User Story #2:** สามารถแสดงแกน x ที่มีความสอดคล้องกับ `id="x-axis"`.
+**User Story #3:** ต้องเขียนแกน y ที่มี id เป็น `"y-axis"`
 
-**User Story #3:** สามารถแสดงแกน y ที่มีความสอดคล้องกับ `id="y-axis"`.
+**User Story #4:** ให้วาดจุดข้อมูลบนกราฟตามชุดข้อมูลที่มีให้ โดยจุดข้อมูลต้องมี class เป็น `dot` 
 
-**User Story #4:** สามารถแสดงจุด(dotsฺ) ที่มี class ของ `dot` ซึ่งจะแสดงข้อมูลขณะที่ทำการplot
+**User Story #5:** จุดข้อมูลแต่ละจุดต้องมี property `data-xvalue` และ `data-yvalue` ซึ่งตรงกับค่า `x` and `y` ของจุดข้อมูลนั้น
 
-**User Story #5:** แต่ละ dot ควรจะมี properties ของ`data-xvalue` และ `data-yvalue` ที่มีความสอดคล้องกับค่าบนแกน `x` and `y` 
+**User Story #6:** ค่า `data-xvalue` และ `data-yvalue` ของจุดข้อมูลแต่ละตัว ต้องอยู่ในขอบเขตของข้อมูลจริง และต้องมีรูปแบบที่ถูกต้อง ในส่วนของ `data-xvalue` จะใช้เป็นจำนวนเต็ม (ปี) หรือ object `Date` ก็ได้ ส่วน `data-yvalue` (นาที) ให้ใข้ object `Date`
 
-**User Story #6:** ค่า `data-xvalue` และ `data-yvalue` ของแต่ละ dot ควรอยู่ใน range ของ actual data และ correct data format สำหรับ `data-xvalue` ให้ใข้ในรูปของ integers (full years) หรือ `Date` สามารถใช้ในรูปของ objects ได้เพื่อทำ test evaluation ส่วน `data-yvalue` (minutes) ให้ใข้ `Date` เป็นแบบ objects
+**User Story #7:** ค่า `data-xvalue` ต้องตรงกับตำแหน่งของจุดข้อมูลบนแกน x
 
-**User Story #7:** ค่า `data-xvalue` ควรจะสอดคล้องกับ point/value บนแกน x
+**User Story #8:** ค่า `data-yvalue` ต้องตรงกับตำแหน่งของจุดข้อมูลบนแกน y
 
-**User Story #8:** ค่า `data-yvalue` ควรจะสอดคล้องกับ point/value บนแกน y
+**User Story #9:** บนแกน y ให้แสดงเวลาโดยใช้รูปแบบ `%M:%S`
 
-**User Story #9:** สามารถแสดงป้ายกำกับของแกน y ที่มีร฿ปแบบเป็น `%M:%S` ของ time format
+**User Story #10:** บนแกน x จะแสดงปี ค.ศ. ของข้อมูล
 
-**User Story #10:** สามารถแสดงป้ายกำกับบนแกน x ที่แสดงปี 
+**User Story #11:** ตัวเลข ค.ศ บนแกน x จะต้องไม่เกินความยาวของแกน x
 
-**User Story #11:** ค่าของป้ายกำกับบนแกน x ควรอยู่ใน range ของข้อมูลสำหรับแกน x
+**User Story #12:** ตัวเลขนาทีบนแกน y จะต้องไม่เกินความยาวของแกน y
 
-**User Story #12:** ค่าของป้ายกำกับบนแกน y ควรอยู่ใน range ของข้อมูลสำหรับแกน y
+**User Story #13:** ต้องมีคำอธิบายกราฟ (legend) ที่มี id เป็น `"legend"` โดยจะอธิบายว่าสีของข้อมูลแต่ละสีหมายถึงอะไร 
 
-**User Story #13:** สามารถแสดง legend ที่มีข้อความอธิบายของ `id="legend"`.
+**User Story #14:** ถ้าเอาเมาส์ไปชี้บนจุดข้อมูล จะแสดง tooltip ที่แสดงข้อมูลของจุดข้อมูลนั้น โดย tooltip นี้จะมี id เป็น `"tooltip"` 
 
-**User Story #14:** สามารถ mouse over พื้นที่และเห็น tooltip ที่มีความสอดคล้องกับ `id="tooltip"` ที่แสดงข้อมูลเพิ่มเติมเกี่ยวกับพื้นที่
+**User Story #15:** tooltip จะต้องมี property `data-year` ตาม `data-xvalue` ของจุดข้อมูลที่เอาเมาส์ไปชี้
 
-**User Story #15:** tooltip ควรจะมี `data-year` property ที่มีความสอดคล้องกับ `data-xvalue` ที่แสดงข้อมูลเพิ่มเติมเกี่ยวกับพื้นที่
+ให้ใช้ชุดข้อมูลนี้ทำแบบทดสอบ : `https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json`
 
-datasetสำหรับprojectนี้ : `https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json`
+คุณสามารถสร้างโปรเจคของคุณโดยใช้ <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'> CodePen template </a> นี้ได้ แล้วคลิก `Save` เพื่อสร้าง pen ของคุณเอง หรือคุณสามารถใช้ CDN นี้ เพื่อรันการทดสอบใน environment ที่คุณต้องการ: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
 
-สามารถสร้างprojectจาก <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'>using this CodePen template</a> และclickที่ `Save` หรือใช้ CDN link เพื่อ run tests ในenvironmentที่ต้องการ  `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
-
-หลังจากเสร็จแล้ว ให้ส่ง URL ของ project พร้อมทั้ง tests ที่ผ่านการทดสอบทั้งหมด
+ให้ submit ส่ง URL ของโปรเจคที่ทำสำเร็จและได้รันการทดสอบผ่านหมดแล้ว เมื่อเสร็จงาน
 
 # --solutions--
 

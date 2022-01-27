@@ -8,9 +8,13 @@ dashedName: write-a-counter-with-redux
 
 # --description--
 
-ตอนนี้คุณได้เรียนรู้หลักการสำคัญของ Redux ทั้งหมดแล้ว! คุณได้เห็นวิธีสร้าง action และ action creator, สร้าง Redux Store, ส่ง action ไปใน store และออกแบบการอัปเดต state ด้วย reducer ที่เป็น pure function
+ตอนนี้คุณได้เรียนรู้หลักการสำคัญของ Redux ทั้งหมดแล้ว! 
+
+คุณได้เห็นวิธีสร้าง action และ action creator, สร้าง Redux Store, ส่ง action ไปใน store และออกแบบการอัปเดต state ด้วย reducer ที่เป็น pure function
 คุณยังได้เห็นวิธีจัดการ state ที่ซับซ้อนโดยใช้ reducer composition และจัดการ asynchronous action แล้วด้วย 
+
 ตัวอย่างที่ได้เรียนไปพวกนี้เป็นตัวอย่างแบบง่ายๆ แต่แนวคิดที่ได้เรียนไปเป็นหลักการสำคัญของ Redux หากคุณเข้าแนวคิดที่เราสอนไปอย่างดี คุณก็พร้อมที่จะเริ่มสร้างแอป Redux ของคุณเองแล้ว 
+
 แบบทดสอบต่อไปจะพูดถึงรายละเอียดบางอย่างเกี่ยวกับ immutability ของ `state` แต่ก่อนอื่น มาทบทวนทุกอย่างที่คุณเรียนไปแล้วกัน
 
 # --instructions--
@@ -25,6 +29,7 @@ dashedName: write-a-counter-with-redux
 4. Redux `store` 
 
 เมื่อทำเสร็จแล้วคุณต้องใช้ `INCREMENT` หรือ `DECREMENT` action เพื่อเพิ่มหรือลด state ที่เก็บไว้ใน `store` ได้
+
 ขอให้สนุกกับการสร้างแอป Redux แอปแรกของคุณ!
 
 # --hints--

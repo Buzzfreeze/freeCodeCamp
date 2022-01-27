@@ -2,51 +2,56 @@
 id: 587d78a6367417b2b2512add
 title: Create a Graphic Using CSS
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cEDWPs6'
+videoUrl: "https://scrimba.com/c/cEDWPs6"
 forumTopicId: 301048
 dashedName: create-a-graphic-using-css
 ---
 
 # --description--
 
-คุณสามารถสร้างรูปทรงที่น่าสนใจขึ้นมาได้โดยการใช้งาน selectors และ propertie ที่ต่างกัน
-หนึ่งในรูปง่าย ๆ ที่จะลองทำคือ รูปพระจันทร์เสี้ยว
-สำหรับแบบฝึกหัดนี้คุณจำเป็นต้องใช้ `box-shadow` property เพื่อกำหนดเงาของ element ร่วมกับ `border-radius` property ที่จะควมคุมความมนของมุมของ element
+คุณสามารถสร้างรูปทรงสวยๆขึ้นมาได้โดยใช้ selector และ property
 
-คุณจะสร้างวัตถุที่กลมและโปร่งแสงพร้อมกับเงาบาง ๆ ซึ่งจะแผ่ออกมาเล็กน้อยไปด้านข้าง
-เงานั้นจะเป็นไปตามรูปร่างของพระจันทร์ที่คุณเห็น
+เราจะลองให้คุณสร้างรูปพระจันทร์เสี้ยวดู
+โดยในแบบฝึกหัดนี้ คุณจำเป็นต้องใช้ property `box-shadow` เพื่อกำหนดเงาของ element ร่วมกับ property `border-radius` ที่จะควมคุมความโค้งของมุมของ element
 
-เพื่อที่จะสร้างวัตถุที่มีรูปร่างกลม `border-radius` property นั้นควรถูกกำหนดให้มีค่า 50%.
+คุณจะต้องสร้างวงกลม ที่ไม่มีสี โดยมีเงาที่ offset ไปด้านข้างเล็กน้อย
+โดยเงาที่สร้างขึ้นมานี้จะเป็นพระจันทร์ของคุณ (เพราะว่าวงกลมที่สร้างเป็นสีใส)
 
-คุณอาจจะยังจำได้จากแบบฝึกหัดที่แล้วว่า `box-shadow` property จะรับค่า `offset-x`, `offset-y`, `blur-radius`, `spread-radius` และค่าสีตามลำดับ
-`blur-radius` และ `spread-radius` เป็นค่าที่จะมีหรือไม่มีก็ได้
+ในการสร้างวงกลม คุณต้องกำหนด property `border-radius` ให้มีค่าเป็น 50%
+
+คุณคงจำได้ว่า property `box-shadow` จะรับค่า `offset-x`, `offset-y`, `blur-radius`, `spread-radius` และค่าสีตามลำดับ
+โดย `blur-radius` และ `spread-radius` เป็นค่าที่จะมีหรือไม่มีก็ได้
 
 # --instructions--
 
-จงใช้ element สี่เหลี่ยมใน editor เพื่อสร้างรูปพระจันทร์เสี้ยว
-ขั้นแรก จงเปลี่ยน `background-color` ให้เป็น `transparent`
-หลังจากนั้น จงกำหนดให้ `border-radius` property มีค่าเป็น 50% เพื่อทำให้มันมีรูปร่างเป็นวงกลม
-สุดท้าย จงเปลี่ยน `box-shadow` property เพื่อกำหนดให้ `offset-x` มีค่า 25px, `offset-y` มีค่า 10px, `blur-radius` มีค่า 0, `spread-radius` มีค่า 0, และสีเป็น `blue`
-Syntax : text-shadow: offset-x offset-y [blur-radius] [spread-radius] [color];
+ให้ใช้ element สี่เหลี่ยมใน editor เพื่อสร้างรูปพระจันทร์เสี้ยว
+
+ขั้นแรก ให้เปลี่ยน `background-color` ให้เป็น `transparent`
+หลังจากนั้น ให้เปลี่ยนค่าของ property `border-radius` เป็น 50% เพื่อทำให้กลายเป็นวงกลม
+สุดท้าย ให้เปลี่ยน property `box-shadow` โดยกำหนดให้ `offset-x` มีค่าเป็น 25px, `offset-y` มีค่าเป็น 10px, `blur-radius` มีค่าเป็น 0, `spread-radius` มีค่าเป็น 0, และมีสีเป็น `blue`
+
+Syntax : text-shadow: [offset-x] [offset-y] [blur-radius] [spread-radius] [color];
 
 # --hints--
 
-ค่าของ `background-color` property ควรถูกกำหหนดให้เป็น `transparent`.
+ค่าของ property `background-color` ต้องเป็น `transparent`
 
 ```js
 assert(code.match(/background-color:\s*?transparent;/gi));
 ```
 
-ค่าของ`border-radius` property ควรถูกกำหนดให้เท่ากับ `50%`.
+ค่าของ property `border-radius` ต้องเป็น `50%`
 
 ```js
 assert(code.match(/border-radius:\s*?50%;/gi));
 ```
 
-ค่าของ `box-shadow` property ควรถูกกำหนดให้เท่ากับ 25px สำหรับ `offset-x`, 10px สำหรับ `offset-y`, 0 สำหรับ `blur-radius`, 0 สำหรับ `spread-radius`, และ `blue` สำหรับสี
+property `box-shadow` ต้องกำหนดให้ `offset-x` มีค่าเป็น 25px, `offset-y` มีค่าเป็น 10px, `blur-radius` มีค่าเป็น 0, `spread-radius` มีค่าเป็น 0, และมีสีเป็น `blue`
 
 ```js
-assert(code.match(/box-shadow:\s*?25px\s+?10px\s+?0(px)?\s+?0(px)?\s+?blue\s*?;/gi));
+assert(
+  code.match(/box-shadow:\s*?25px\s+?10px\s+?0(px)?\s+?0(px)?\s+?blue\s*?;/gi)
+);
 ```
 
 # --seed--

@@ -2,26 +2,31 @@
 id: 5a9036e138fddaf9a66b5d33
 title: Add Rows with grid-template-rows
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pByETK/cbp9Pua'
+videoUrl: "https://scrimba.com/p/pByETK/cbp9Pua"
 forumTopicId: 301119
 dashedName: add-rows-with-grid-template-rows
 ---
 
 # --description--
 
-กริดที่คุณได้สร้างไปใน challenge ที่แล้วจะกำหนดจำนวนของแถวโดยอัตโนมัติ
-เพื่อที่จะปรับเปลี่ยนเป็นแถว ๆ (row) ไป, จงใช้ `grid-template-rows` property ในแบบเดียวกับที่ใช้ `grid-template-columns` ใน challenge ที่แล้ว
+ในแบบทดสอบที่แล้ว คุณได้สร้างกริดที่กำหนดจำนวนของ row โดยอัตโนมัติ
+ถ้าคุณอยากกำหนดจำนวน row เอง ให้ใช้ property `grid-template-rows`
+ซึ่ง property นี้ก็จะใช้เหมือนกับ `grid-template-columns` ที่เราได้เรียนมาแล้ว
 
 # --instructions--
 
-จงเพิ่มแถว 2 แถวให้กับกริดโดยให้แต่ละอันสูง `50px`
+ให้เพิ่ม 2 row ใน grid โดยให้แต่ละ row สูง `50px`
 
 # --hints--
 
-`container` class ควรมี `grid-template-rows` property อันหนึ่งที่มี `50px` 2 แถว
+คลาส `container` ต้องมีค่าของ property `grid-template-rows` เป็น `50px 50px`
 
 ```js
-assert(code.match(/.container\s*?{[\s\S]*grid-template-rows\s*?:\s*?50px\s*?50px\s*?;[\s\S]*}/gi));
+assert(
+  code.match(
+    /.container\s*?{[\s\S]*grid-template-rows\s*?:\s*?50px\s*?50px\s*?;[\s\S]*}/gi
+  )
+);
 ```
 
 # --seed--
@@ -52,9 +57,9 @@ assert(code.match(/.container\s*?{[\s\S]*grid-template-rows\s*?:\s*?50px\s*?50px
     background: LightGray;
     display: grid;
     grid-template-columns: 100px 100px 100px;
-    /* Only change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
 
-    /* Only change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
   }
 </style>
 

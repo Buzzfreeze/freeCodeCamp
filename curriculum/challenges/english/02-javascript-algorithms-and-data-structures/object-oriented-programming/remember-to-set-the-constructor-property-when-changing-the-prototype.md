@@ -8,7 +8,7 @@ dashedName: remember-to-set-the-constructor-property-when-changing-the-prototype
 
 # --description--
 
-การกำหนด prototype ให้มีค่าเป็น object ใหม่แบบที่เราได้เรียนมา จะทำให้เกิดผลกระทบใหญ่ๆ อย่างหนึ่งก็คือ `constructor` property จะถูกเขียนทับไปด้วย ซึ่ง `constructor` property สามารถใช้ตรวจสอบว่า instance สร้างจากฟังก์ชัน constructor ตัวไหน ซึ่งการที่ property นี้ถูกเขียนทับ จะทำให้การเรียกใช้ property นี้ ก็เกิดผลลัพธ์ที่ผิด
+การกำหนด prototype ให้มีค่าเป็น object ใหม่แบบที่เราได้เรียนมา จะทำให้เกิดผลกระทบใหญ่ๆ อย่างหนึ่งก็คือ `constructor` property จะถูกเขียนทับไปด้วย ซึ่ง `constructor` property สามารถใช้ตรวจสอบว่า instance สร้างจากฟังก์ชัน constructor ตัวไหน ซึ่งการที่ property นี้ถูกเขียนทับ จะทำให้การเรียกใช้ property นี้เกิดผลลัพธ์ที่ผิด
 
 ```js
 duck.constructor === Bird;

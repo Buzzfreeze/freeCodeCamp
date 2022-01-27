@@ -15,7 +15,7 @@ dashedName: target-a-specific-child-of-an-element-using-jquery
 
 jQuery นั้นมีวิธีอื่นที่เราจะใช้เลือก element ให้ถูกตัวได้
 
-jQuery จะใช้ CSS selector เพื่อเลือก element ได้ด้วย 
+jQuery จะใช้ CSS selector เพื่อเลือก element ได้ด้วย   
 อย่างการใช้ CSS selector ที่เป็น `target:nth-child(n)`  ซึ่งจะทำให้คุณเลือก element ที่ n ของ class หรือ element ที่ระบุได้
 
 ตัวอย่างด้านล่างจะเป็นการเพิ่ม class `bounce` ให้กับ element ที่สามของ well ทั้งสองตัว:

@@ -17,7 +17,8 @@ Animal.prototype.eat = function() {
 };
 ```
 
-แบบทดสอบนี้และแบบทดสอบถัดไปจะสอนวิธีเรียกใช้ method ของ `Animal` ภายใน `Bird` และ `Dog` โดยที่เราไม่ต้องกำหนด method เหล่านั้นอีกครั้งใน `Bird` และ `Dog` วิธีการนี้ใช้เทคนิคที่เรียกว่า inheritance (การสืบทอด) แบบทดสอบนี้จะสอนขั้นตอนแรก ก็คือ การสร้าง instance ของ `supertype` (หรือ parent) จริงๆ แล้ว คุณก็รู้วิธีสร้าง instance ของ `Animal` ไปแล้ววิธีนึง นั่นคือการใช้ `new` operator
+แบบทดสอบนี้และแบบทดสอบถัดไปจะสอนวิธีเรียกใช้ method ของ `Animal` ภายใน `Bird` และ `Dog` โดยที่เราไม่ต้องกำหนด method เหล่านั้นอีกครั้งใน `Bird` และ `Dog` วิธีการนี้ใช้เทคนิคที่เรียกว่า inheritance (การสืบทอด)  
+แบบทดสอบนี้จะสอนขั้นตอนแรก ก็คือ การสร้าง instance ของ `supertype` (หรือ parent) จริงๆ แล้ว คุณก็รู้วิธีสร้าง instance ของ `Animal` ไปแล้ววิธีนึง นั่นคือการใช้ `new` operator
 
 ```js
 let animal = new Animal();
@@ -29,7 +30,7 @@ let animal = new Animal();
 let animal = Object.create(Animal.prototype);
 ```
 
-`Object.create(obj)` จะสร้าง object ใหม่ และใช้ `obj` เป็น `prototype` ของ object ใหม่ที่เราสร้าง 
+`Object.create(obj)` จะสร้าง object ใหม่ และใช้ `obj` เป็น `prototype` ของ object ใหม่ที่เราสร้าง  
 ถ้ายังจำได้ เราเคยบอกว่า `prototype` เป็นเหมือนแม่พิมพ์ที่ใช้สร้าง object การกำหนดให้ `prototype` ของ `animal` เป็น `prototype` ของ `Animal` ก็จะเป็นการทำให้ instance `animal` ถูกสร้างด้วยพิมพ์เดียวกับ instance คัวอื่นๆ ของ `Animal`
 
 ```js

@@ -2,14 +2,14 @@
 id: bad87fee1348bd9aedf08806
 title: Change the Font Size of an Element
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/c3bvDc8'
+videoUrl: "https://scrimba.com/c/c3bvDc8"
 forumTopicId: 16777
 dashedName: change-the-font-size-of-an-element
 ---
 
 # --description--
 
-ขนาดของฟ้อนต์ถูกกำหนดด้วย `font-size` CSS property, แบบนี้:
+เราจะใช้ property `font-size` ของ CSS เพื่อกำหนดขนาดของฟอนต์:
 
 ```css
 h1 {
@@ -19,12 +19,13 @@ h1 {
 
 # --instructions--
 
-ภายใน `<style>` tag อันเดียวกันที่เก็บ `red-text` class, จงสร้าง `p` element และกำหนดให้ `font-size` มีค่า 16 pixels (`16px`).
+ให้ประกาศ CSS selector ของ `p` element และกำหนดให้ `font-size` มีค่าเป็น 16 pixel (`16px`) ในแท็ก `<style>` (อันเดียวกับที่มีคลาส `red-text` อยู่)
 
 # --hints--
 
-ระหว่าง `style` tags, จงกำหนดให้ `p` elements มี `font-size` เท่ากับ `16px`
-Browser และ Text zoom ควรมีค่าเป็น 100%
+ต้องประกาศ CSS selector ที่เปลี่ยนขนาดฟอนต์ของ `p` elements โดยให้ `font-size` เป็น `16px`
+
+ถ้าคุณซูมเบราว์เซอร์อยู่ ให้ปรับระดับการซูมเป็น 100% (ถ้าใช้ chrome ให้กด Ctrl+0)
 
 ```js
 assert(code.match(/p\s*{\s*font-size\s*:\s*16\s*px\s*;\s*}/i));

@@ -9,20 +9,20 @@ dashedName: add-event-listeners
 # --description--
 
 ที่ๆดีที่สุดในการกระกาศ event listener คือใน method `componentDidMount()`
-React มีระบบ event ของตัวเอง (synthetic event) ที่จะครอบ event แบบเดิมของเบราว์เซอร์อยู่
+React มีระบบ event ของตัวเอง (synthetic event) ที่จะครอบ event แบบเดิมของเบราว์เซอร์อยู่  
 การที่ React ใช้ระบบ event ของตัวเองจะทำให้ไม่ว่า user จะใช้เบราว์เซอร์ตัวไหน event ก็จะทำงานเหมือนกัน 
 
-คุณได้ลองใช้ event handler ของ React มาบ้างแล้ว เช่นตัว `onClick()`
-ระบบ event ของ React เหมาะสำหรับการใช้จัดการ DOM element ส่วนใหญ่ 
+คุณได้ลองใช้ event handler ของ React มาบ้างแล้ว เช่นตัว `onClick()`  
+ระบบ event ของ React เหมาะสำหรับการใช้จัดการ DOM element ส่วนใหญ่  
 แต่ถ้าคุณต้องการที่จะใช้ event handler กับ object อย่าง document หรือ window คุณต้องทำโดยตรง
 
 # --instructions--
 
-ใน method `componentDidMount()` ให้ใช้ event listener กับ event ชื่อ `keydown` โดยให้ไปเรียกใช้ `handleKeyPress()` 
+ใน method `componentDidMount()` ให้ใช้ event listener กับ event ชื่อ `keydown` โดยให้ไปเรียกใช้ `handleKeyPress()`  
 คุณต้องใช้ `document.addEventListener()` ซึ่งจะรับ argument แรกเป็นชื่อของ event (เขียนชื่อ event ใน `""` หรือ `''`) และรับ argument ที่สองเป็น callback function 
 
-แล้วใน `componentWillUnmount()` ให้ลบ event listener ตัวที่เราเพิ่มไปออก โดยส่ง argument แบบเดิมให้ `document.removeEventListener()`
-คุณควรใช้ lifecycle method ตัวนี้เพื่อล้างข้อมูลของ React component ก่อนที่เราจะลบ component ออก 
+แล้วใน `componentWillUnmount()` ให้ลบ event listener ตัวที่เราเพิ่มไปออก โดยส่ง argument แบบเดิมให้ `document.removeEventListener()`  
+คุณควรใช้ lifecycle method ตัวนี้เพื่อล้างข้อมูลของ React component ก่อนที่เราจะลบ component ออก  
 การลบ event listener ออก ก็เป็นส่วนหนึ่งของการล้างข้อมูลของ React component
 
 # --hints--

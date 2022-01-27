@@ -8,16 +8,16 @@ dashedName: add-comments-in-jsx
 
 # --description--
 
-JSX เป็น syntax ที่จะถูก compile เป็น JavaScript 
-ซึ่งในบางครั้งเพื่อให้โค้ดอ่านง่าย คุณอาจต้องเพิ่ม comment ไปในโค้ดด้วย 
+JSX เป็น syntax ที่จะถูก compile เป็น JavaScript  
+ซึ่งในบางครั้งเพื่อให้โค้ดอ่านง่าย คุณอาจต้องเพิ่ม comment ไปในโค้ดด้วย  
 โดย JSX ก็จะมีวิธีในการเขียน comment เป็นของตัวเอง
 
 ในการเขียน comment ใน JSX คุณจะต้องใช้ syntax `{/* */}` ครอบ comment นั้น
 
 # --instructions--
 
-ใน code editor ด้านขวาจะมี JSX element ที่คล้ายๆกับโค้ดที่คุณเขียนในแบบทดสอบที่แล้ว 
-ให้คุณเพิ่ม comment ตรงไหนก็ได้ใน `div` element ที่ให้มา โดยที่ไม่ต้องแก้ไข `h1` หรือ `p` element ที่มีอยู่
+ใน code editor ด้านขวาจะมี JSX element ที่คล้ายๆกับโค้ดที่คุณเขียนในแบบทดสอบที่แล้ว  
+ให้คุณเพิ่ม comment ตรงไหนก็ได้ใน `div` element ที่ให้มา  โดยที่ไม่ต้องแก้ไข `h1` หรือ `p` element ที่มีอยู่
 
 # --hints--
 

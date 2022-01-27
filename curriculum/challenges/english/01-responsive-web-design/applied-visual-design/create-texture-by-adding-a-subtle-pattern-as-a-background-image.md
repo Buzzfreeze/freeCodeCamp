@@ -2,31 +2,33 @@
 id: 587d78a5367417b2b2512ad8
 title: Create Texture by Adding a Subtle Pattern as a Background Image
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cQdwJC8'
+videoUrl: "https://scrimba.com/c/cQdwJC8"
 forumTopicId: 301052
 dashedName: create-texture-by-adding-a-subtle-pattern-as-a-background-image
 ---
 
 # --description--
 
-วิธีหนึ่งที่จะเพิ่ม texture และความน่าสนใจให้กับพื้นหลัง และทำให้มันดูโดดเด่นขึ้นก็คือการเพิ่มแพทเทิร์นง่าย ๆ เข้ามา
-หัวใจหลักของมันคือความบาลานซ์ เพราะคุณไม่ได้ต้องการให้พื้นหลังมันเด่นเกินไป
-`background` property นั้นรองรับ `url()` function เพื่อลิงค์มันไปยังรูปภาพของ texture หรือ pattern ที่เลือกไว้
-ที่อยู่ของลิงค์จะถูกเก็บระหว่าง quote 2 อันข้างในวงเล็บ
+วิธีหนึ่งที่จะเพิ่ม texture และความน่าสนใจให้กับพื้นหลัง และทำให้พื้นหลังดูโดดเด่นขึ้น ก็คือการเพิ่มแพทเทิร์นจางๆเข้ามา
+
+หัวใจหลักของการเพิ่มภาพพื้นหลังคือความสมดุล เพราะคุณไม่ได้ต้องการให้พื้นหลังเด่นเกินไป
+
+property `background` รองรับฟังก์ชัน `url()` ที่จะรับค่า URL ของ texture หรือ pattern มาเป็นพื้นหลังของ element
+โดยการระบุลิงก์จะต้องครอบด้วยเครื่องหมายคำพูด และใส่ลิงก์ไว้ในวงเล็บอีกทีหนึ่ง
 
 # --instructions--
 
-จงกำหนดให้ `background` ของทั้งหน้าด้วย `body` selector โดยใช้ url ของ `https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png`
+ให้กำหนด `background` ของทั้งหน้าโดยใช้ `body` selector และใช้ภาพพื้นหลังตาม url นี้: `https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png`
 
 # --hints--
 
-`body` element ควรมี `background` property ที่กำหนดให้ `url()` มาพร้อมกับลิงค์ที่กำหนดให้
+ต้องตั้งค่า property `background` ของ `body` element โดยใช้ `url()` และใช้ URL ที่กำหนดให้
 
 ```js
 assert(
   code.match(
-    /background(-image)?:\s*?url\(\s*("|'|)https:\/\/cdn-media-1\.freecodecamp\.org\/imgr\/MJAkxbh\.png\2\s*\)/gi,
-  ),
+    /background(-image)?:\s*?url\(\s*("|'|)https:\/\/cdn-media-1\.freecodecamp\.org\/imgr\/MJAkxbh\.png\2\s*\)/gi
+  )
 );
 ```
 
@@ -46,7 +48,7 @@ assert(
 ```html
 <style>
   body {
-    background: url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png');
+    background: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
   }
 </style>
 ```

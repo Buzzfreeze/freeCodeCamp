@@ -26,7 +26,7 @@ assert($('div.col-xs-6').not(':has(>div.well)').length < 1);
 assert($('div.row > div.col-xs-6').length > 1);
 ```
 
-อย่าลืม tag ปิดของ `div` ทุกตัวด้วย
+อย่าลืมแท็กปิดของ `div` ทุกตัวด้วย
 
 ```js
 assert(

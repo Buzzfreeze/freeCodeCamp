@@ -18,7 +18,7 @@ dashedName: use-the-filter-method-to-extract-data-from-an-array
 - argument ที่สองคือ index ของ element นั้นๆ
 - argument ที่สามคือ array ที่เรียก method `filter`
 
-ในตัวอย่างด้านล่าง จะใช้ method `filter` กับ array `users` เพื่อคืนค่าเป็น array ตัวใหม่ที่มี element เป็น user ที่มีอายุน้อยกว่า 30 ปี 
+ในตัวอย่างด้านล่าง จะใช้ method `filter` กับ array `users` เพื่อคืนค่าเป็น array ตัวใหม่ที่มี element เป็น user ที่มีอายุน้อยกว่า 30 ปี  
 ใน callback ของตัวอย่างนี้ เราจะใช้แค่ argument แรกก่อน เพื่อให้เข้าใจง่าย:
 
 ```js
@@ -32,16 +32,17 @@ const usersUnder30 = users.filter(user => user.age < 30);
 console.log(usersUnder30); 
 ```
 
-บน console จะแสดง `[ { name: 'Amy', age: 20 }, { name: 'camperCat', age: 10 } ]`.
+บน console จะแสดง `[ { name: 'Amy', age: 20 }, { name: 'camperCat', age: 10 } ]`
 
 # --instructions--
 
-ตอนนี้ array `watchList` เก็บ object ที่เก็บข้อมูลของภาพยนตร์อยู่
-จงใช้ `filter` และ `map` กับ `watchList` เพื่อเก็บค่า array ตัวใหม่ลงในตัวแปร `filteredList`
+ตอนนี้ array `watchList` เก็บ object ที่เก็บข้อมูลของภาพยนตร์อยู่  
+จงใช้ `filter` และ `map` กับ `watchList` เพื่อเก็บค่า array ตัวใหม่ลงในตัวแปร `filteredList`  
 โดยมีเงื่อนไขคือ
 
 1. แต่ละ element ใน array ตัวใหม่จะต้องมี key แค่ 2 ตัวคือ `title` และ `rating`
 2. array ตัวใหม่จะต้องเก็บค่าของ object ที่มี `imdbRating` มากกว่าหรือเท่ากับ 8.0 เท่านั้น
+
 หมายเหตุ ตอนนี้ค่าของ `rating` เก็บเป็น string อยู่ เพราะฉะนั้นต้องแปลงให้เป็น number ก่อน ถึงจะเอามาตรวจสอบค่าได้
 
 # --hints--
@@ -66,7 +67,7 @@ assert(code.match(/\s*\.\s*filter/g));
 assert(!code.match(/for\s*?\([\s\S]*?\)/g));
 ```
 
-`filteredList` ต้องมีค่าเป็น `[{"title": "Inception","rating": "8.8"},{"title": "Interstellar","rating": "8.6"},{"title": "The Dark Knight","rating": "9.0"},{"title": "Batman Begins","rating": "8.3"}]`.
+`filteredList` ต้องมีค่าเป็น `[{"title": "Inception","rating": "8.8"},{"title": "Interstellar","rating": "8.6"},{"title": "The Dark Knight","rating": "9.0"},{"title": "Batman Begins","rating": "8.3"}]`
 
 ```js
 assert.deepEqual(filteredList, [

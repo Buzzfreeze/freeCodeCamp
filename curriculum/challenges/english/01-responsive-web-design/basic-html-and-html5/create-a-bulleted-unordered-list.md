@@ -2,19 +2,19 @@
 id: bad87fee1348bd9aedf08827
 title: Create a Bulleted Unordered List
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pVMPUv/cDKVPuv'
+videoUrl: "https://scrimba.com/p/pVMPUv/cDKVPuv"
 forumTopicId: 16814
 dashedName: create-a-bulleted-unordered-list
 ---
 
 # --description--
 
-HTML มี element พิเศษอันหนึ่งไว้สำหรับสร้าง <dfn>unordered lists</dfn> หรือลิตส์ที่เป็นแบบ bullet point
+HTML มี element สำหรับสร้าง <dfn>unordered lists</dfn> หรือลิตส์ที่เป็นแบบ bullet point
 
-Unordered list (ลิสต์ที่ไม่สนใจลำดับ) จะเริ่มด้วยแท็กเปิดที่เป็น `<ul>` element และตามด้วย`<li>` element จำนวนกี่อันก็ได้
-และสุดท้ายก็จะปิดด้วยแท็กปิด `</ul>`
+Unordered list (ลิสต์ที่เรียงไม่ลำดับ) จะเปิดด้วย `<ul>` และตามด้วย`<li>` element จำนวนกี่อันก็ได้
+และสุดท้ายก็จะปิดด้วย `</ul>`
 
-ยกตัวอย่างเช่น:
+ตัวอย่างเช่น:
 
 ```html
 <ul>
@@ -23,46 +23,50 @@ Unordered list (ลิสต์ที่ไม่สนใจลำดับ) �
 </ul>
 ```
 
-โค้ดข้างบนจะสร้างลิสต์แบบ bullet point ให้กับชุดข้อความ `milk` และ `cheese`
+โค้ดข้างบนจะสร้างลิสต์แบบ bullet point โดยมีรายการด้านในเป็น `milk` และ `cheese`
 
 # --instructions--
 
-จงเอา `p` element 2 อันสุดท้ายออกไปและจงสร้าง unordered list ของสามอย่างที่แมวชอบที่ด้านล่างของหน้าเว็บไซต์
+ให้ลบ `p` element 2 อันสุดท้ายออกไป และสร้าง unordered list เป็นชื่อของสิ่งที่แมวชอบ 3 อย่าง ที่ด้านล่างของหน้าเว็บไซต์
 
 # --hints--
 
-จงสร้าง `ul` element หนึ่งอัน
+ให้สร้าง `ul` element หนึ่งอัน
 
 ```js
-assert($('ul').length > 0);
+assert($("ul").length > 0);
 ```
 
-คุณควรมี `li` element สามอันอยู่ใน `ul` element
+ต้องมี `li` element สามอันอยู่ใน `ul` element
 
 ```js
-assert($('ul li').length > 2);
+assert($("ul li").length > 2);
 ```
 
-`ul` element ควรจะมีแท็กปิด
+`ul` element ต้องมีแท็กปิด
 
 ```js
-assert(code.match(/<\/ul>/gi) && code.match(/<ul/gi) && code.match(/<\/ul>/gi).length === code.match(/<ul/gi).length);
+assert(
+  code.match(/<\/ul>/gi) &&
+    code.match(/<ul/gi) &&
+    code.match(/<\/ul>/gi).length === code.match(/<ul/gi).length
+);
 ```
 
-`li` element ควรจะมีแท็กปิด
+`li` element ต้องมีแท็กปิด
 
 ```js
 assert(
   code.match(/<\/li>/gi) &&
     code.match(/<li[\s>]/gi) &&
-    code.match(/<\/li>/gi).length === code.match(/<li[\s>]/gi).length,
+    code.match(/<\/li>/gi).length === code.match(/<li[\s>]/gi).length
 );
 ```
 
-`li` elements ไม่ควรเก็บ string เปล่า หรือ white-space เท่านั้น
+ต้องมีข้อความอยู่ด้านใน `li` element ด้วย
 
 ```js
-assert($('ul li').filter((_, item) => !$(item).text().trim()).length === 0);
+assert($("ul li").filter((_, item) => !$(item).text().trim()).length === 0);
 ```
 
 # --seed--
@@ -81,12 +85,13 @@ assert($('ul li').filter((_, item) => !$(item).text().trim()).length === 0);
   /></a>
 
   <p>
-    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot,
-    hairball run catnip eat the grass sniff.
+    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+    attack your ankles chase the red dot, hairball run catnip eat the grass
+    sniff.
   </p>
   <p>
-    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur
-    catnip scratched.
+    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
+    rip the couch sleep in the sink fluffy fur catnip scratched.
   </p>
 </main>
 ```

@@ -1,29 +1,31 @@
 ---
 id: 587d78ab367417b2b2512af0
-title: 'Use display: flex to Position Two Boxes'
+title: "Use display: flex to Position Two Boxes"
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pVaDAv/cgz3QS7'
+videoUrl: "https://scrimba.com/p/pVaDAv/cgz3QS7"
 forumTopicId: 301105
 dashedName: use-display-flex-to-position-two-boxes
 ---
 
 # --description--
 
-ในส่วนนี้จะใช้ styles ของอีก challengeเพื่อแสดงให้เห็นวิธีการใช้ CSS เพื่อจัดวาง elements ในรูปแบบที่ยืดหยุ่นขึ้น
-ในตอนแรก challenge จะอธิบายทฤษฎี แล้วหลังจากนั้นจะมี challenge ที่มีตัวอย่างการใช้งาน tweet component อย่างง่ายให้ลองทำดู
+ในส่วนนี้จะใช้แบบทดสอบสอบแบบสลับกันไปมา เพื่อแสดงวิธีการใช้ CSS ในการจัดวาง element ในรูปแบบที่เป็นอิสระมากขึ้น
+โดยในส่วนแรกของแบบทดสอบ จะเป็นการอธิบายทฤษฎี แล้วแบบทดสอบตัวถัดมา จะใช้ตัวอย่างของ component tweet ให้ลองทำดู
 
-การวาง CSS property `display: flex;` ใน element หนึ่งช่วยให้คุณสามารถใช้ flex properties แบบอื่นเพื่อสร้างหน้าที่ responsive ได้
+การใช้ property `display: flex;` ของ CSS ใน element จะทำให้คุณใช้ property ตัวอื่นของ flex ได้ ซึ่งจะทำให้หน้าของคุณเป็นแบบ responsive ได้
+
+**Responsive** คือการที่ทำให้หน้าเว็บของเราเปลี่ยนขนาด หรือเปลี่ยนการจัดรูปแบบได้ตามขนาดหน้าจอของผู้ใช้
 
 # --instructions--
 
-จงเพิ่ม CSS property `display` ให้กับ `#box-container` และจงกำหนดค่าให้มันเป็น `flex`.
+ให้เพิ่ม property `display` ให้กับ `#box-container` และให้กำหนดค่าเป็น `flex`
 
 # --hints--
 
-`#box-container` ควรมี `display` property ที่ถูกกำหนดค่าให้เป็น `flex`
+`#box-container` ต้องมี property `display` ที่มีค่าเป็น `flex`
 
 ```js
-assert($('#box-container').css('display') == 'flex');
+assert($("#box-container").css("display") == "flex");
 ```
 
 # --seed--
@@ -34,7 +36,6 @@ assert($('#box-container').css('display') == 'flex');
 <style>
   #box-container {
     height: 500px;
-
   }
 
   #box-1 {

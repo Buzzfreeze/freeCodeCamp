@@ -8,12 +8,12 @@ dashedName: return-part-of-an-array-using-the-slice-method
 
 # --description--
 
-ค่าที่ method `slice` คืนออกมาจะเป็นค่าที่คัดลอกจาก element ใน array 
+ค่าที่ method `slice` คืนออกมาจะเป็นค่าที่คัดลอกจาก element ใน array  
 method `slice` รับ arguments 2 ตัวคือ 
 
 1. index ที่ต้องการเริ่ม slice (ตัด) 
 2. index ที่ต้องการจบการ slice (ค่าที่ได้จะไม่รวม element ที่ตำแหน่งนี้) 
-
+  
 แต่ถ้าเราไม่ส่ง argument เข้าไปเลย ฟังก์ชันจะทำการตัด array ตั้งแต่ element แรกจนถึง element สุดท้าย วิธีนี้เป็นวิธีง่ายๆ ในการสร้างสำเนาทั้งชุดของ array นอกจากนี้ `slice` method ก็ไม่เปลี่ยนแปลง array เดิมด้วย แต่จะคืนค่าเป็น array ตัวใหม่เลย
 
 ตัวอย่างของการใช้งาน method นี้
@@ -23,7 +23,7 @@ var arr = ["Cat", "Dog", "Tiger", "Zebra"];
 var newArray = arr.slice(1, 3);
 ```
 
-`newArray` จะมีค่าเป็น `["Dog", "Tiger"]`.
+`newArray` จะมีค่าเป็น `["Dog", "Tiger"]`
 
 # --instructions--
 
@@ -46,7 +46,7 @@ assert(
 );
 ```
 
-การเรียกใช้ฟังก์ชัน `sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 1, 3)` ต้องได้ค่าเป็น `["Dog", "Tiger"]`.
+การเรียกใช้ฟังก์ชัน `sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 1, 3)` ต้องได้ค่าเป็น `["Dog", "Tiger"]`
 
 ```js
 assert(
@@ -55,7 +55,7 @@ assert(
 );
 ```
 
-การเรียกใช้ฟังก์ชัน `sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 0, 1)` ต้องได้ค่าเป็น `["Cat"]`.
+การเรียกใช้ฟังก์ชัน `sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 0, 1)` ต้องได้ค่าเป็น `["Cat"]`
 
 ```js
 assert(
@@ -64,7 +64,7 @@ assert(
 );
 ```
 
-การเรียกใช้ฟังก์ชัน `sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 1, 4)` ต้องได้ค่าเป็น `["Dog", "Tiger", "Zebra"]`.
+การเรียกใช้ฟังก์ชัน `sliceArray(["Cat", "Dog", "Tiger", "Zebra", "Ant"], 1, 4)` ต้องได้ค่าเป็น `["Dog", "Tiger", "Zebra"]`
 
 ```js
 assert(

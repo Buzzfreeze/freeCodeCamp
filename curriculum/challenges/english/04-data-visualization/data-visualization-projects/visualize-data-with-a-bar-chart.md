@@ -8,46 +8,46 @@ dashedName: visualize-data-with-a-bar-chart
 
 # --description--
 
-**Objective:** สร้างแอพพลิเคชันจาก [CodePen.io](https://codepen.io) ที่มีfunctionเหมือนกับ <https://codepen.io/freeCodeCamp/full/GrZVaM>.
+**Objective:** ลองทำแอปโดยใช้ [CodePen.io](https://codepen.io) ให้มีฟังก์ชันเหมือนกับ <https://codepen.io/freeCodeCamp/full/GrZVaM>.
 
-กรอกข้อมูลด้านล่าง [user stories](https://en.wikipedia.org/wiki/User_story) และทำtestทั้งหมดให้ผ่าน 
+ลองดู [User Story](https://en.wikipedia.org/wiki/User_story) ข้างล่าง แล้วเขียนโค้ดตาม User Story นี้ โดยจะแต่งหน้าตาของแอปในส่วนที่ไม่ได้ระบุได้ตามที่ชอบเลย
 
-สามารถใช้ HTML, JavaScript, CSS, and the D3 svg-based visualization library เพื่อสร้างแกนที่มีลักษณะแบบD3และมีขีดบอกสเกลตามแนวแกนโดยอัตโนมัติ โดยขีดต้องผ่านการทดสอบจากD3 เนื่องจากต้องใช้ตำแหน่งหา elements ของกราฟ 
+ให้ใช้ HTML, JavaScript, CSS, และ library D3 
+ให้สร้างแกนของกราฟโดยใช้ property axis ของ D3 ซึ่งจะสร้างขีดที่ใช้บอกตำแหน่งบนแกน ขีดพวกนี้สำคัญเพราะว่า เราจะดูตำแหน่งของขีดพวกนี้เพื่อดูว่าโค้ดที่คุณเขียนสร้างกราฟที่ถูกต้องหรือไม่ 
+ให้อ่านวิธีการสร้างแกนจาก <https://github.com/d3/d3/blob/master/API.md#axes-d3-axis>
+ในการเขียนโค้ดให้ใช้ DOM แบบปกติ (ที่ไม่ใช่ virtual DOM) เพราะว่าถ้าใช้ frontend framework อย่าง Vue หรือ React (ที่ใช้ Virtual DOM) เราจะตรวจโค้ดของคุณไม่ได้
 
-ข้อมูลเกี่ยวกับการสร้างแกนหาเพื่มเติมได้จาก <https://github.com/d3/d3/blob/master/API.md#axes-d3-axis>
-DOM (non-virtual) elements จะถูกเรียกใช้ขณะทำการ test ถ้าหากใช้ frontend framework อย่างเช่น Vue ผลการทดสอบแบบ dynamic จะไม่ตรง เนืื่องจากframeworkเหล่านี้ไม่support D3 projects
+**User Story #1:** กราฟที่เขียนจะต้องมีชื่อกราฟ อยู่ใน element ที่มี id เป็น `"title"`
 
-**User Story #1:** chart ควรจะมี title ที่มีความสอดคล้องกับ `id="title"`
+**User Story #2:** ต้องเขียนแกน x โดยใช้ element `g` โดยมี id เป็น `"x-axis"`
 
-**User Story #2:** chart ควรจะมี `g` ซึ่งเป็นelementของแกน x พร้อมค่าที่มีความสอดคล้องกับ`id="x-axis"`
+**User Story #3:** ต้องเขียนแกน y โดยใช้ element `g` โดยมี id เป็น `"y-axis"`
 
-**User Story #3:** chart ควรจะมี `g` ซึ่งเป็นelementของแกน y พร้อมค่าที่มีความสอดคล้องกับ `id="y-axis"`
+**User Story #4:** ทั้งแกน x และแกน y จะต้องมีขีดเพื่อบอกค่าของตำแหน่งบนแกน โดยขีดทั้งหมดต้องมี class เป็น `"tick"`
 
-**User Story #4:** ทั้งสองแกน(x, y)ควรมีlabels(ป้ายกำกับ)ของแต่ละแกนที่มีค่าที่สอดคล้องกันเช่น  `class="tick"`
+**User Story #5:** ต้องสร้างกราฟแท่งโดยใช้ `rect` ตามข้อมูลในชุดข้อมูล โดยกราฟแต่ละแท่งต้องมี class เป็น `"bar"`
 
-**User Story #5:** chart ควรจะมี `rect` ซึ่งเป็นelementสำหรับข้อมูลแต่ละจุด พร้อมค่าที่มีความสอดคล้องกับ`class="bar"` เพื่อแสดงข้อมูล
+**User Story #6:** กราฟทุกแท่งต้องมี property `data-date` และ `data-gdp` ที่เก็บค่าของ `date` และ `GDP` ตามลำดับ
 
-**User Story #6:** แต่ละ bar ควรจะมีproperties ของ `data-date` และ `data-gdp` ที่มีค่า `date` และ `GDP`
+**User Story #7:** property `data-date` ของกราฟทุกแท่ง ต้องตรงกับค่าที่มีให้
 
-**User Story #7:** bar elements' `data-date` properties ควรตรงกับลำดับของข้อมูลที่ระบุ
+**User Story #8:** property `data-gdp` ของกราฟทุกแท่ง ต้องตรงกับค่าที่มีให้
 
-**User Story #8:** bar elements' `data-gdp` properties ควรตรงกับลำดับของข้อมูลที่ระบุ
+**User Story #9:** กราฟทุกแท่งต้องแสดงค่า `GDP` อย่างถูกต้อง
 
-**User Story #9:** แต่ละbar element's ความสูงควรแสดงข้อมูลสอดคล้องกับ `GDP` อย่างถูกต้อง
+**User Story #10:** ค่า `data-date` ของกราฟทุกแท่งต้องตรงกับค่าที่แสดงบนแกน x
 
-**User Story #10:**  `data-date` attribute และ bar element ที่เกี่ยวข้องควรมีค่าที่สอดคล้องกับค่าบนแกน x
+**User Story #11:** ค่า `data-gdp` ของกราฟทุกแท่งต้องตรงกับค่าที่แสดงบนแกน y
 
-**User Story #11:** `data-gdp` attribute และ bar element ที่เกี่ยวข้องควรมีค่าที่สอดคล้องกับค่าบนแกน y
+**User Story #12:** ถ้านำเมาส์ไปชี้ที่แท่งของกราฟ ต้องแสดงข้อมูลของกราฟขึ้นมา โดยใช้ tooltip ที่มี id เป็น `"tooltip"` 
 
-**User Story #12:** สามารถ mouse over พื้นที่และเห็น tooltip ที่มีความสอดคล้องกับ `id="tooltip"` ที่แสดงข้อมูลเพิ่มเติมเกี่ยวกับพื้นที่
+**User Story #13:** tooltip ต้องมี property `data-date` ตามค่าของ `data-date` ของข้อมูลนั้น
 
-**User Story #13:** tooltip ควรจะมี `data-date` property ที่เกี่ยวข้องกับ `data-date` ของพื้นที่
+ให้ใช้ชุดข้อมูลนี้ทำแบบทดสอบ `https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json`
 
-datasetสำหรับprojectนี้ `https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json`
+คุณสามารถสร้างโปรเจคของคุณโดยใช้ <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'> CodePen template </a> นี้ได้ แล้วคลิก `Save` เพื่อสร้าง pen ของคุณเอง หรือคุณสามารถใช้ CDN นี้ เพื่อรันการทดสอบใน environment ที่คุณต้องการ: `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`
 
-สามารถสร้างprojectจาก <a href='https://codepen.io/pen?template=MJjpwO' target='_blank' rel='nofollow'> using this CodePen template</a> และclickที่ `Save`  หรือใช้ CDN link เพื่อ run tests ในenvironmentที่ต้องการ `https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js`.
-
-หลังจากเสร็จแล้ว ให้ส่ง URL ของ project พร้อมทั้ง tests ที่ผ่านการทดสอบทั้งหมด
+ให้ submit ส่ง URL ของโปรเจคที่ทำสำเร็จและได้รันการทดสอบผ่านหมดแล้ว เมื่อเสร็จงาน
 
 # --solutions--
 

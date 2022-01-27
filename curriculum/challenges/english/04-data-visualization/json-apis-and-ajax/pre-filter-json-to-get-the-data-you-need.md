@@ -8,11 +8,11 @@ dashedName: pre-filter-json-to-get-the-data-you-need
 
 # --description--
 
-ถ้าไม่ต้องการ render รูปแมวทั้งหมดจาก freeCodeCamp Cat Photo API เราสามารถใช่ pre-filter ใน JSON ก่อน looping พวกมัน
+ถ้าคุณไม่ต้องการแสดงรูปน้องแมวทั้งหมดที่ได้มาจาก Cat Photo API คุณสามารถกรอง (filter) ข้อมูลใน JSON ก่อนที่จะทำการวนอ่านค่าได้
 
-ให้ JSON data เก็บค่าใน array โดยใช้ `filter` method เพื่อ filter แมวที่มี `id` key มีค่าเป็น `1`
+ถ้าข้อมูล JSON เป็น array คุณจะใช้ method `filter` เพื่อกรองเฉพาะรูปน้องแมวที่มีคีย์ `id` เป็นค่าอื่นนอกจาก `1` ได้
 
-Here's the code to do this:
+ลองดูตัวอย่างการใช้ `filter`:
 
 ```js
 json = json.filter(function(val) {
@@ -22,11 +22,11 @@ json = json.filter(function(val) {
 
 # --instructions--
 
-เพื่ม `filter` ให้กับ json data เพ่ิมลบ cat กับ `id` ที่มีค่าเป็น `1`
+ให้ทำการกรองรูปน้องแมวโดยใช้ method `filter` กับข้อมูล JSON โดยให้แสดงเฉพาะรูปน้องแมวที่*ไม่*ได้มี `id` เป็น `1`
 
 # --hints--
 
-ควรใช้ `filter` method
+ต้องใช้ method `filter`
 
 ```js
 assert(code.match(/json\.filter/g));
@@ -46,10 +46,10 @@ assert(code.match(/json\.filter/g));
       req.onload=function(){
         let json = JSON.parse(req.responseText);
         let html = "";
-        // Add your code below this line
+        // เขียนโค้ดใต้บรรทัดนี้
 
 
-        // Add your code above this line
+        // เขียนโค้ดเหนือบรรทัดนี้
          json.forEach(function(val) {
            html += "<div class = 'cat'>"
 
@@ -113,12 +113,12 @@ assert(code.match(/json\.filter/g));
       req.onload = function(){
         let json = JSON.parse(req.responseText);
         let html = "";
-        // Add your code below this line
+        // เขียนโค้ดใต้บรรทัดนี้
         json = json.filter(function(val) {
           return (val.id !== 1);
         });
 
-        // Add your code above this line
+        // เขียนโค้ดเหนือบรรทัดนี้
          json.forEach(function(val) {
            html += "<div class = 'cat'>"
 

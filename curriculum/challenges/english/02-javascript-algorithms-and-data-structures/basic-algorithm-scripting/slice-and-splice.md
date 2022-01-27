@@ -13,19 +13,19 @@ dashedName: slice-and-splice
 
 # --hints--
 
-การเรียกใช้ฟังก์ชัน `frankenSplice([1, 2, 3], [4, 5], 1)` ต้องได้ค่าเป็น `[4, 1, 2, 3, 5]`.
+การเรียกใช้ฟังก์ชัน `frankenSplice([1, 2, 3], [4, 5], 1)` ต้องได้ค่าเป็น `[4, 1, 2, 3, 5]`
 
 ```js
 assert.deepEqual(frankenSplice([1, 2, 3], [4, 5], 1), [4, 1, 2, 3, 5]);
 ```
 
-การเรียกใช้ฟังก์ชัน `frankenSplice([1, 2], ["a", "b"], 1)` ต้องได้ค่าเป็น `["a", 1, 2, "b"]`.
+การเรียกใช้ฟังก์ชัน `frankenSplice([1, 2], ["a", "b"], 1)` ต้องได้ค่าเป็น `["a", 1, 2, "b"]`
 
 ```js
 assert.deepEqual(frankenSplice(testArr1, testArr2, 1), ['a', 1, 2, 'b']);
 ```
 
-การเรียกใช้ฟังก์ชัน `frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2)` ต้องได้ค่าเป็น `["head", "shoulders", "claw", "tentacle", "knees", "toes"]`.
+การเรียกใช้ฟังก์ชัน `frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2)` ต้องได้ค่าเป็น `["head", "shoulders", "claw", "tentacle", "knees", "toes"]`
 
 ```js
 assert.deepEqual(
@@ -39,7 +39,7 @@ assert.deepEqual(
 ```
 
 element ที่คัดลอกจาก array แรกไปใส่ใน array ที่สองต้องเรียงในตำแหน่งเดิม 
-การเรียกใช้ฟังก์ชัน `frankenSplice([1, 2, 3, 4], [], 0)` ต้องได้ค่าเป็น `[1, 2, 3, 4]`.
+การเรียกใช้ฟังก์ชัน `frankenSplice([1, 2, 3, 4], [], 0)` ต้องได้ค่าเป็น `[1, 2, 3, 4]`
 
 ```js
 assert.deepEqual(frankenSplice([1, 2, 3, 4], [], 0), [1, 2, 3, 4]);

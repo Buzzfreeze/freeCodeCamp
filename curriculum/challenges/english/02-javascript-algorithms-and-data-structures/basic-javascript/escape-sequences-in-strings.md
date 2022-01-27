@@ -13,14 +13,13 @@ dashedName: escape-sequences-in-strings
 การ <dfn>escape</dfn> จะจำเป็นในสองกรณีก็คือ:
 
 1.  เพื่อใช้ตัวอักษรที่ปกติจะพิมพ์ลงไปใน string ไม่ได้ เช่น carriage return (กลับไปที่ต้นบรรทัด)
-
 2.  เพื่อแสดงเครื่องหมาย quote หลายตัวใน string โดยไม่ทำให้ JavaScript เข้าใจผิด
 
 เราเรียนเรื่องนี้ไปในหัวข้อที่แล้ว
 
 <table class='table table-striped'><thead><tr><th>โค้ด</th><th>ผลลัพธ์</th></tr></thead><tbody><tr><td><code>\'</code></td><td>single quote</td></tr><tr><td><code>\"</code></td><td>double quote</td></tr><tr><td><code>\\</code></td><td>backslash</td></tr><tr><td><code>\n</code></td><td>newline (ขึ้นบรรทัดใหม่)</td></tr><tr><td><code>\r</code></td><td>carriage return (กลับไปที่ต้นบรรทัด)</td></tr><tr><td><code>\t</code></td><td>tab</td></tr><tr><td><code>\b</code></td><td>word boundary</td></tr><tr><td><code>\f</code></td><td>form feed (ขึ้นบรรทัดใหม่โดยเริ่มต้นที่ตำแหน่งเดิม)</td></tr></tbody></table>
 
-*โปรดทราบว่าตัว backslash เองก็จะต้องถูก escape เพื่อให้แสดงเป็น backslash ได้*
+*อย่าลืมว่าตัว backslash เองก็จะต้องถูก escape เพื่อให้แสดงเป็น backslash ได้*
 
 # --instructions--
 

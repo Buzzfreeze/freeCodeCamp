@@ -2,33 +2,35 @@
 id: 5a94fe6269fb03452672e462
 title: Create Flexible Layouts Using auto-fit
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pByETK/c3dPph8'
+videoUrl: "https://scrimba.com/p/pByETK/c3dPph8"
 forumTopicId: 301127
 dashedName: create-flexible-layouts-using-auto-fit
 ---
 
 # --description--
 
-`auto-fit` (ปรับให้พอดีกับ Container) ทำงานเกือบจะเหมือนกับ `auto-fill`
-ความแตกต่างเดียวของมันคือเมื่อขนาดของ container เกินกว่าขนาดรวมของทุก items, `auto-fill` จะพยายามเพิ่มแถวหรือคอลัมน์ใหม่มาเรื่อย ๆ และพวกมันจะดันให้ item ของคุณไปด้านข้าง ในขณะที่ `auto-fit` จะลบพวกแถวและคอลัมน์เปล่าของคุณและยืด item ของคุณให้มีขนาดที่พอดีกับ container
+`auto-fit` ก็จะทำงานคล้ายๆ `auto-fill` แต่จะต่างกันเรื่องเดียว
 
-**Note:** ถ้า container ของคุณไม่มีทางพอดีกับ items ได้ภายในแถวเดียว มันจะผลัก item ที่เกินลงมาอีกแถวหรือคอลัมน์หนึ่ง
+คือเมื่อขนาดของ container เกินกว่าขนาดของทุก item รวมกัน `auto-fill` จะพยายามเพิ่มแถวหรือคอลัมน์ใหม่มาเรื่อย ๆ และจะดันให้ item ของคุณไปอยู่ด้านข้าง
+ในขณะที่ `auto-fit` จะบีบแถวและคอลัมน์ที่ไม่มีข้อมูล และยืด item ของคุณให้มีขนาดที่พอดีกับ container
+
+**Note:** ถ้า container ของคุณไม่ใหญ่พอที่จะเก็บ item ได้หมดในแถวเดียว container จะผลัก item ที่เกินลงมาอีกแถวหรือคอลัมน์หนึ่ง
 
 # --instructions--
 
-ในกริดอันที่สอง, จงใช้ `auto-fit` ที่มี `repeat` เพื่อทำให้กริดเต็มไปด้วยคอลัมน์ที่มีความกว้างอย่างต่ำที่ `60px` และความกว้างมากสุดที่ `1fr`
-หลัวจากนั้น จงปรับขนาดของหน้า preview เพื่อให้เห็นความแตกต่าง
+ในกริดอันที่สอง ให้ใช้ `auto-fit` กับฟังก์ชัน `repeat` เพื่อสร้างคอลัมน์ที่กว้างอย่างน้อย `60px` แต่ไม่เกิน `1fr` ลงในกริด
+
+เมื่อทำเสร็จแล้ว ให้ลองปรับขนาดของหน้า preview เพื่อดูการทำงานของ auto-fill และ auto-fit
 
 # --hints--
 
-`container2` class ควรมี`grid-template-columns` property อันหนึ่งที่มี `repeat` และ `auto-fit`
-สิ่งนี้จะช่วยทำให้กริดของคุณเต็มไปด้วยคอลัมน์ที่มีความกว้างอย่างต่ำ `60px` และความกว้างมากสุดที่ `1fr`
+คลาส `container2` ต้องกำหนดค่าของ property `grid-template-columns` โดยใช้ `repeat` และ `auto-fit` ที่จะทำให้เกิดคอลัมน์ที่กว้างอย่างน้อย `60px` และไม่เกิน `1fr`
 
 ```js
 assert(
   code.match(
-    /.container2\s*?{[\s\S]*grid-template-columns\s*?:\s*?repeat\s*?\(\s*?auto-fit\s*?,\s*?minmax\s*?\(\s*?60px\s*?,\s*?1fr\s*?\)\s*?\)\s*?;[\s\S]*}/gi,
-  ),
+    /.container2\s*?{[\s\S]*grid-template-columns\s*?:\s*?repeat\s*?\(\s*?auto-fit\s*?,\s*?minmax\s*?\(\s*?60px\s*?,\s*?1fr\s*?\)\s*?\)\s*?;[\s\S]*}/gi
+  )
 );
 ```
 
@@ -71,11 +73,11 @@ assert(
     width: 100%;
     background: Silver;
     display: grid;
-    /* Only change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
 
     grid-template-columns: repeat(3, minmax(60px, 1fr));
 
-    /* Only change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 10px;
   }

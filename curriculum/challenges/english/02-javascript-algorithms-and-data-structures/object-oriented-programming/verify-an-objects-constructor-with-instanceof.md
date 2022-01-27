@@ -8,9 +8,9 @@ dashedName: verify-an-objects-constructor-with-instanceof
 
 # --description--
 
-เมื่อฟังก์ชัน constructor สร้าง object ใหม่ เราจะเรียกว่า object เป็น <dfn>instance</dfn> ของ constructor 
-ซึ่ง JavaScript มีวิธีให้เราตรวจสอบว่า object นั้นเป็น instance ของอะไรโดยใช้คำสั่ง `instanceof` 
-`instanceof` จะทำการเปรียบเทียบ object กับ constructor ที่ระบุแล้ว return ค่าเป็น `true` หรือ `false` ขึ้นอยู่กับว่า object นั้นมีถูกสร้างจาก constructor นั้นหรือไม่ 
+เมื่อฟังก์ชัน constructor สร้าง object ใหม่ เราจะเรียกว่า object เป็น <dfn>instance</dfn> ของ constructor  
+ซึ่ง JavaScript มีวิธีให้เราตรวจสอบว่า object นั้นเป็น instance ของอะไรโดยใช้คำสั่ง `instanceof`  
+`instanceof` จะทำการเปรียบเทียบ object กับ constructor ที่ระบุแล้ว return ค่าเป็น `true` หรือ `false` ขึ้นอยู่กับว่า object นั้นมีถูกสร้างจาก constructor นั้นหรือไม่  
 ลองดูตัวอย่างด้านล่างนี้:
 
 ```js

@@ -2,45 +2,45 @@
 id: bad87fee1248bd9aedf08824
 title: Add Different Margins to Each Side of an Element
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cg4RWh4'
+videoUrl: "https://scrimba.com/c/cg4RWh4"
 forumTopicId: 16633
 dashedName: add-different-margins-to-each-side-of-an-element
 ---
 
 # --description--
 
-บางครั้งคุณอาจจะต้องการที่จะปรับแต่ง element เพื่อที่มันจะได้มี `margin` ที่ต่างกันในแต่ละด้าน
+บางครั้ง คุณอาจจะอยากให้ `margin` แต่ละด้านไม่เท่ากัน
 
-CSS ทำให้คุณสามารถควบคุม `margin` ของทั้งสี่ด้านแยกกันได้ด้วย `margin-top`, `margin-right`, `margin-bottom`, และ `margin-left` properties.
+คุณสามารถควบคุม `margin` ของแต่ละด้านแยกกันได้ โดยใช้ property `margin-top`, `margin-right`, `margin-bottom`, และ `margin-left`
 
 # --instructions--
 
-จงกำหนดให้กล่องสีน้ำเงินมี `margin` เท่ากับ `40px` ที่ด้านบนและซ้าย และ ที่ด้านล่างและขวา มี `margin` `20px`
+ให้กำหนดค่าของ `margin` ของกล่องสีน้ำเงิน โดยให้ด้านบนและด้านซ้าย มีค่าเป็น `40px` และ ด้านล่างและด้านขวา มีค่าเป็น `20px`
 
 # --hints--
 
-`blue-box` class ควรกำหนดให้ด้านบนของelement มีค่า `margin` เท่ากับ `40px`
+คลาส `blue-box` ต้องมี `margin` ด้านบนเป็น `40px`
 
 ```js
-assert($('.blue-box').css('margin-top') === '40px');
+assert($(".blue-box").css("margin-top") === "40px");
 ```
 
-`blue-box` class ควรกำหนดให้ด้านขวาของelement มีค่า `margin` เท่ากับ `20px`
+คลาส `blue-box` ต้องมี `margin` ด้านขวาเป็น `20px`
 
 ```js
-assert($('.blue-box').css('margin-right') === '20px');
+assert($(".blue-box").css("margin-right") === "20px");
 ```
 
-`blue-box` class ควรกำหนดให้ด้านล่างของelement มีค่า `margin` เท่ากับ `20px`
+คลาส `blue-box` ต้องมี `margin` ด้านล่างเป็น `20px`
 
 ```js
-assert($('.blue-box').css('margin-bottom') === '20px');
+assert($(".blue-box").css("margin-bottom") === "20px");
 ```
 
-`blue-box` class ควรกำหนดให้ด้านซ้ายของ element มีค่า `margin` เท่ากับ `40px`
+คลาส `blue-box` ต้องมี `margin` ด้านซ้ายเป็น `40px`
 
 ```js
-assert($('.blue-box').css('margin-left') === '40px');
+assert($(".blue-box").css("margin-left") === "40px");
 ```
 
 # --seed--

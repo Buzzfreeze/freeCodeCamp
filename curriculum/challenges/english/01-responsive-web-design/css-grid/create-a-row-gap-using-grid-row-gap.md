@@ -2,25 +2,27 @@
 id: 5a9036ee38fddaf9a66b5d36
 title: Create a Row Gap using grid-row-gap
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pByETK/cPbJ2Cv'
+videoUrl: "https://scrimba.com/p/pByETK/cPbJ2Cv"
 forumTopicId: 301125
 dashedName: create-a-row-gap-using-grid-row-gap
 ---
 
 # --description--
 
-คุณสามารถเพิ่มช่องว่างระหว่างแถว (row) ของกริดโดยการใช้ `grid-row-gap` ในแบบเดียวกันกับที่คุณเพิ่มช่องว่างระหว่างคอลัมน์ใน challenge ก่อนหน้า
+การเพิ่มช่องว่างระหว่างแถว ก็จะคล้ายๆกับการเพิ่มช่องว่างระหว่างคอลัมน์ แต่คุณต้องเปลี่ยนไปใช้ property `grid-row-gap` แทน
 
 # --instructions--
 
-จงสร้างช่องว่างระหว่างแถว (row) ที่มีความสูง `5px`
+ให้กำหนดขนาดช่องว่างระหว่างแถวของ grid เป็น `5px`
 
 # --hints--
 
-`container` class ควรมี `grid-row-gap` property อันหนึ่งที่มีความสูง `5px`
+คลาส `container` ต้องมีค่าของ property `grid-row-gap` เป็น `5px`
 
 ```js
-assert(code.match(/.container\s*?{[\s\S]*grid-row-gap\s*?:\s*?5px\s*?;[\s\S]*}/gi));
+assert(
+  code.match(/.container\s*?{[\s\S]*grid-row-gap\s*?:\s*?5px\s*?;[\s\S]*}/gi)
+);
 ```
 
 # --seed--
@@ -53,9 +55,9 @@ assert(code.match(/.container\s*?{[\s\S]*grid-row-gap\s*?:\s*?5px\s*?;[\s\S]*}/g
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    /* Only change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
 
-    /* Only change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
   }
 </style>
 

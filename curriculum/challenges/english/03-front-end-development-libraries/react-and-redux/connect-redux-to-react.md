@@ -10,6 +10,7 @@ dashedName: connect-redux-to-react
 
 ตอนนี้คุณได้เขียนทั้งฟังก์ชัน `mapStateToProps()` และ `mapDispatchToProps()` แล้ว 
 คุณสามารถใช้ฟังก์ชันสองตัวนี้เพื่อ map `state` และ `dispatch` กับ `props` ของ React component ได้แล้ว 
+
 การใช้ method `connect` ของ React Redux จะทำส่วนนี้ได้ ซึ่ง method `connect` นี้รับ optional argument (optional argument คือ argument ที่จะส่งไปให้ method หรือไม่ส่งไปก็ได้) สองตัวคือ `mapStateToProps()` และ `mapDispatchToProps()` 
 สาเหตุที่เป็น optional argument ก็เพราะว่า component ของเราอาจต้องการเข้าถึงแค่ `state` แต่ไม่ต้องการเข้าถึง `dispatch` หรืออาจต้องการเข้าถึง `dispatch` แต่ไม่ต้องการเข้าถึง `state` ทำให้เราเลือกที่จะส่งแค่ argument ตัวใดตัวหนึ่งได้
 
@@ -25,6 +26,7 @@ connect(mapStateToProps, mapDispatchToProps)(MyComponent)
 # --instructions--
 
 เราได้เขียนฟังก์ชัน `mapStateToProps()` กับ `mapDispatchToProps()` และ React component ใหม่ที่ชื่อ `Presentational` ใน code editor ให้แล้ว 
+
 ให้เชื่อม component นี้กับ Redux ด้วย method `connect` โดยใช้ `ReactRedux` ที่เป็น object แบบ global และเรียกใช้โดยส่ง component `Presentational` เข้าไปทันที 
 และให้เก็บค่าลงอ `const` ตัวใหม่ที่ชื่อ `ConnectedComponent` ซึ่งจะเป็น component ที่เชื่อมต่อกับ Redux แล้ว 
 ให้ลองเปลี่ยน argument ของ `connect` เป็น `null` และดูการเปลี่ยนแปลง

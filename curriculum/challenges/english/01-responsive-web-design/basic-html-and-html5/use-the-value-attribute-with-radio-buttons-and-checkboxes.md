@@ -8,56 +8,57 @@ dashedName: use-the-value-attribute-with-radio-buttons-and-checkboxes
 
 # --description--
 
-เมื่อแบบฟอร์มถูกส่งไปแล้ว ข้อมูลจะถูกส่งไปที่ server และรวม entries ให้กับตัวเลือกที่ถูกเลือกไป
-Inputs ประเภท `radio` และ `checkbox` จะส่งค่าของมันตาม `value` attribute.
+เมื่อกดส่งแบบฟอร์ม ข้อมูลก็จะถูกส่งไปที่เซิร์ฟเวอร์ โดยจะส่งข้อมูลของตัวเลือกที่เราเลือกไปด้วย
+โดยค่าของ input ประเภท `radio` และ `checkbox` ที่ส่งไปยังเซิร์ฟเวอร์ จะดึงมาจาก `value` attribute
 
-ยกตัวอย่างเช่น:
+ตัวอย่างเช่น:
 
 ```html
 <label for="indoor"> <input id="indoor" value="indoor" type="radio" name="indoor-outdoor" />Indoor </label>
 <label for="outdoor"> <input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor" />Outdoor </label>
 ```
 
-ตอนนี้ คุณจะมี 2 `radio` input
-เมื่อผู้ใช้ส่งแบบฟอร์มโดยเลือก `indoor` option ข้อมูลจากแบบฟอร์มจะมีการเพิ่มบรรทัดที่เขียนว่า: `indoor-outdoor=indoor`
-โดยมันมาจากค่าใน `name` และ `value` attributes ของ "indoor" input
+ในตัวอย่างด้านบน คุณจะมี `radio` input 2 ตัว
+เมื่อผู้ใช้กดส่งแบบฟอร์มโดยเลือก `indoor` เว็บของเราจะส่งข้อมูลไปยังเซิร์ฟเวอร์โดยมีข้อมูลนี้ไปด้วย `indoor-outdoor=indoor`
+โดยค่าของข้อมูลนี้มาจาก attribute `name` และ `value` ของ "indoor" input
 
-ถ้าคุณเอา `value` attribute ออกไป ข้อมูลของแบบฟอร์มที่ถูกส่งมาจะใช้ค่าเริ่มต้น ซึ่งเป็น `on`
-ในกรณีนี้ ถ้าผู้ใช้คลิกที่ตัวเลือก "indoor" และส่งแบบฟอร์มนั้น ผลของข้อมูลจากแบบฟอร์มจะเป็น `indoor-outdoor=on` ซึ่งมันไม่มีประโยชน์อะไร
-ดังนั้น `value` attribute จำเป็นจะต้องถูกตั้งเป็นค่าหนึ่งไว้เพื่อระบุว่าตัวเลือกนั้นคืออะไร
+ถ้าคุณไม่ระบุ `value` attribute ข้อมูลที่ส่งไปจะมีค่าเป็น `on` แทน
+ในกรณีนี้ ถ้าผู้ใช้คลิกที่ตัวเลือก "indoor" และส่งแบบฟอร์มนั้น ผลของข้อมูลจากแบบฟอร์มจะเป็น `indoor-outdoor=on` ซึ่งจะเอาไปใช้ประโยชน์อะไรไม่ได้
+ดังนั้นการระบุค่าของ `value` attribute จึงจำเป็น จะได้รู้ว่าตัวเลือกนั้นคืออะไร
 
 # --instructions--
 
-จงกำหนดให้แต่ละ `radio` และ `checkbox` inputs มี `value` attribute
-ห้ามสร้าง radio หรือ checkbox element ขึ้นมาใหม่ จงใช้ input label text ที่เป็นตัวพิมพ์เล็กเป็นค่าของ attribute
+ให้กำหนดค่าของ `value` attribute ใน input ที่เป็น `radio` และ `checkbox` 
+โดยห้ามสร้าง radio หรือ checkbox element ขึ้นมาใหม่ 
+และให้ใช้ข้อความใน label ที่เป็นตัวพิมพ์เล็กเป็นค่าของ `value` attribute
 
 # --hints--
 
-หนึ่งใน radio button ของคุณควรมี `value` attribute เป็น `indoor`
+ต้องมี radio button ตัวหนึ่ง ที่มี `value` attribute เป็น `indoor`
 
 ```js
 assert($('label:contains("Indoor") > input[type="radio"]').filter("[value='indoor']").length > 0);
 ```
 
-หนึ่งใน radio button ของคุณควรมี `value` attribute เป็น `outdoor`
+ต้องมี radio button ตัวหนึ่ง ที่มี `value` attribute เป็น `outdoor`
 
 ```js
 assert($('label:contains("Outdoor") > input[type="radio"]').filter("[value='outdoor']").length > 0);
 ```
 
-หนึ่งใน checkbox ของคุณควรมี `value` attribute เป็น `loving`
+ต้องมี checkbox ตัวหนึ่ง ที่มี `value` attribute เป็น `loving`
 
 ```js
 assert($('label:contains("Loving") > input[type="checkbox"]').filter("[value='loving']").length > 0);
 ```
 
-หนึ่งใน checkbox ของคุณควรมี `value` attribute เป็น `lazy`
+ต้องมี checkbox ตัวหนึ่ง ที่มี `value` attribute เป็น `lazy`
 
 ```js
 assert($('label:contains("Lazy") > input[type="checkbox"]').filter("[value='lazy']").length > 0);
 ```
 
-หนึ่งใน checkbox ของคุณควรมี `value` attribute เป็น `energetic`
+ต้องมี checkbox ตัวหนึ่ง ที่มี `value` attribute เป็น `energetic`
 
 ```js
 assert($('label:contains("Energetic") > input[type="checkbox"]').filter("[value='energetic']").length > 0);

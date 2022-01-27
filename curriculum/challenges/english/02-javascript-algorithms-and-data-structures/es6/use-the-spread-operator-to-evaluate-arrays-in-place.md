@@ -21,7 +21,7 @@ var maximus = Math.max.apply(null, arr);
 ตัวแปร `maximus` จะมีค่าเป็น `89`
 
 
-ที่เราต้องใช้ `Math.max.apply(null, arr)` ก็เพราะถ้าเราใช้ `Math.max(arr)` เราจะได้ค่าเป็น `NaN` แต่ `Math.max()` ต้องการ argument ที่คั่นด้วยเครื่องหมาย comma ที่ไม่ใช่ array (เช่น `Math.max(1,2,3,4)`) ดังนั้น การใช้ spread operator เราอ่านโค้ดนี้ได้ง่ายขึ้น
+ที่เราต้องใช้ `Math.max.apply(null, arr)` ก็เพราะถ้าเราใช้ `Math.max(arr)` เราจะได้ค่าเป็น `NaN` แต่ `Math.max()` รับ argument ที่คั่นด้วยเครื่องหมายคอมม่า โดยไม่ใช่ array (เช่น `Math.max(1,2,3,4)`) ดังนั้น การใช้ spread operator จะทำให้เราอ่านโค้ดนี้ได้ง่ายขึ้น
 
 ```js
 const arr = [6, 89, 3, 45];

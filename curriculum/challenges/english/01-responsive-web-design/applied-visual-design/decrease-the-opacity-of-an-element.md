@@ -9,19 +9,19 @@ dashedName: decrease-the-opacity-of-an-element
 
 # --description--
 
-`opacity` property ใน CSS ถูกใช้เพื่อปรับ opacity, หรือในทางตรงข้ามก็คือทำให้ item โปร่งแสงนั่นเอง
+เราจะใช้ property `opacity` ใน CSS เพื่อปรับความโปร่งใสของ element นั้น
 
-<blockquote>A value of 1 is opaque, which isn't transparent at all.<br>A value of 0.5 is half see-through.<br>A value of 0 is completely transparent.</blockquote>
+<blockquote>โดยถ้ามีค่าเป็น 1 หมายความว่า element นั้นจะทึบ<br>ถ้ามีค่าเป็น 0.5 เราก็จะมองทะลุ element นั้นได้บางส่วน<br>ส่วนถ้าเป็น 0 เราจะมองทะลุ element นั้นได้เลย</blockquote>
 
-ค่าที่ถูกกำหนดให้ จะถูกใช้กับ element ทั้งอันไม่ว่ามันจะเป็นรูปที่โปร่งแสงอยู่แล้วหรือสีพื้นหน้าและพื้นหลังของกล่องข้อความ
+ซึ่งถ้าเรากำหนดค่าของ `opacity` ให้กับ element แล้ว ค่านี้จะส่งผลกับ element นั้นทั้งก้อน ไม่ว่าจะเป็นรูปที่มีความโปร่งแสงอยู่แล้ว หรือสีพื้นหน้าและพื้นหลังของข้อความก็ตาม
 
 # --instructions--
 
-จงกำหนดให้ `opacity` ของ anchor tags มีค่า 0.7 โดยใช้ `links` class เพื่อเลือกมัน
+ให้กำหนดค่า property `opacity` ของแท็ก `a` ให้มีค่าเป็น 0.7 โดยใช้ CSS class selector เพื่อเลือกคลาส `links`
 
 # --hints--
 
-คุณควรกำหนดให้ `opacity` property ของ anchor tags มีค่าเท่ากับ 0.7 โดยใส่ที่ใช้ `links` class
+property `opacity` ของแท็ก `a` ต้องมีค่าเป็น 0.7 โดยเป็นการเปลี่ยนค่าตามคลาส `links`
 
 ```js
 assert(/\.links\s*{([\s\S]*?;)*\s*opacity\s*:\s*0*\.70*\s*(;[\s\S]*?|\s*)}/.test($('style').text()));

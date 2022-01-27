@@ -2,7 +2,7 @@
 id: bad88fee1348bd9aedf08825
 title: Adjust the Padding of an Element
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cED8ZC2'
+videoUrl: "https://scrimba.com/c/cED8ZC2"
 forumTopicId: 301083
 dashedName: adjust-the-padding-of-an-element
 ---
@@ -11,27 +11,27 @@ dashedName: adjust-the-padding-of-an-element
 
 ตอนนี้ เรามาพักเรื่อง Cat Photo App ไปก่อนซักพัก แล้วมาเรียนเกี่ยวกับ styling HTML กันดีกว่า
 
-คุณอาจจะเห็นแล้วว่า HTML element ทั้งหมดเป็นสี่เหลี่ยม
+คุณอาจจะเห็นแล้วว่า HTML element จริงๆแล้วก็เป็นแค่สี่เหลี่ยม
 
-3 property สำคัญที่ควบคุมช่องว่างที่ล้อมรอบแต่ละ HTML element คือ `padding`, `border`, และ `margin`.
+property สำคัญ 3 ตัวที่ควบคุมช่องว่างที่ล้อมรอบ HTML element คือ `padding`, `border`, และ `margin`
 
-`padding` ของ element ควบคุมขนาดของช่องว่างระหว่าง content ของ element และ `border` ของมัน
+`padding` จะใช้ควบคุมขนาดของช่องว่างระหว่าง content และ `border` ของ element
 
-ตอนนี้พวกเราจะเห็นได้ว่ากล่องสีน้ำเงินและกล่องสีแดงในอยู่ในกล่องสีเหลือง 
-จงจำไว้ว่ากล่องสีแดงนั้นมี `padding` มากกว่ากล่องสีน้ำเงิน
+ตอนนี้เราจะเห็นได้ว่ากล่องสีน้ำเงินและกล่องสีแดงในอยู่ในกล่องสีเหลือง
+ให้สังเกตว่ากล่องสีแดงมี `padding` มากกว่ากล่องสีน้ำเงิน (ในตัวอย่างนี้ content ของทั้งสองกล่องคือข้อความที่เป็นคำว่า padding)
 
-เมื่อคุณเพิ่ม `padding` ของกล่องสีน้ำเงิน มันจะเพิ่มระยะห่าง (`padding`) ระหว่างข้อความและขอบที่ล้อมรอบมัน 
+เมื่อคุณเพิ่ม `padding` ของกล่องสีน้ำเงิน จะทำให้ระยะห่าง (`padding`) ระหว่างข้อความและเส้นขอบเพิ่มขึ้น
 
 # --instructions--
 
-จงเปลี่ยน `padding` ของกล่องสีน้ำเงินให้ตรงกับกล่องสีแดง
+ให้เปลี่ยน `padding` ของกล่องสีน้ำเงินให้เท่ากับกล่องสีแดง
 
 # --hints--
 
-`blue-box` class ควรกำหนดให้ element มี `padding` เป็น `20px`
+`padding` ของคลาส `blue-box` ต้องมีค่าเป็น `20px`
 
 ```js
-assert($('.blue-box').css('padding-top') === '20px');
+assert($(".blue-box").css("padding-top") === "20px");
 ```
 
 # --seed--

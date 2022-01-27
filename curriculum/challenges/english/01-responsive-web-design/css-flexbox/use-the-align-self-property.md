@@ -2,35 +2,37 @@
 id: 587d78af367417b2b2512b00
 title: Use the align-self Property
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pVaDAv/cMbvzfv'
+videoUrl: "https://scrimba.com/p/pVaDAv/cMbvzfv"
 forumTopicId: 301107
 dashedName: use-the-align-self-property
 ---
 
 # --description--
 
-`align-self` นี่เป็น property ที่ช่วยให้คุณสามารถปรับเปลี่ยนการเรียงตัวของแต่ละ item แต่ละอันได้ แทนที่จะตั้งให้มันเป็นแบบเดียวกันทีเดียว
-มันมีประโยชน์เพราะวิธีการปรับค่าอันอื่น ๆ ที่ใช้ CSS properties `float`, `clear`, และ `vertical-align` ไม่สามารถใช้ได้กับ flex items
+property สุดท้ายของ flex item ที่เราจะเรียนคือ `align-self`
+ซึ่ง property นี้จะทำให้เราปรับการเรียงของ item แต่ละตัวได้ แทนที่จะปรับรวมทุก item ที่อยู่ใน container เดียวกัน
 
-`align-self` จะรับค่าค่าเดียวกับ accepts `align-items` และจะเขียนค่าทับค่าอื่น ๆ ที่ได้มีการกำหนดไว้โดย `align-items` property.
+property นี้มีประโยชน์เพราะเราจะใช้ `float`, `clear`, และ `vertical-align` กับ flex item ไม่ได้
+
+`align-self` จะรับค่าเหมือนกับ `align-items` และจะใช้ค่านี้แทนค่าของ `align-items` ที่กำหนดไว้ใน container
 
 # --instructions--
 
-จงเพิ่ม CSS property `align-self` ให้กับทั้ง `#box-1` และ `#box-2`
-จงกำหนดให้ `#box-1` มีค่าเป็น `center` และ `#box-2` มีค่าเป็น `flex-end`.
+ให้เพิ่ม CSS property `align-self` ให้กับทั้ง `#box-1` และ `#box-2`
+โดยกำหนดให้ `#box-1` มีค่าเป็น `center` และ `#box-2` มีค่าเป็น `flex-end`
 
 # --hints--
 
-`#box-1` element ควรมี `align-self` property ที่ถูกกำหนดค่าให้เป็น `center`.
+`#box-1` ต้องมีค่าของ propery `align-self` เป็น `center`
 
 ```js
-assert($('#box-1').css('align-self') == 'center');
+assert($("#box-1").css("align-self") == "center");
 ```
 
-The `#box-2` element should have the `align-self` property set to a value of `flex-end`.
+`#box-2` ต้องมีค่าของ propery `align-self` เป็น `flex-end`
 
 ```js
-assert($('#box-2').css('align-self') == 'flex-end');
+assert($("#box-2").css("align-self") == "flex-end");
 ```
 
 # --seed--

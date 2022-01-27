@@ -23,31 +23,31 @@ dashedName: sum-all-odd-fibonacci-numbers
 assert(typeof sumFibs(1) === 'number');
 ```
 
-`sumFibs(1000)` ต้องคืนค่าเป็น 1785.
+`sumFibs(1000)` ต้องคืนค่าเป็น 1785
 
 ```js
 assert(sumFibs(1000) === 1785);
 ```
 
-`sumFibs(4000000)` ต้องคืนค่าเป็น 4613732.
+`sumFibs(4000000)` ต้องคืนค่าเป็น 4613732
 
 ```js
 assert(sumFibs(4000000) === 4613732);
 ```
 
-`sumFibs(4)` ต้องคืนค่าเป็น 5.
+`sumFibs(4)` ต้องคืนค่าเป็น 5
 
 ```js
 assert(sumFibs(4) === 5);
 ```
 
-`sumFibs(75024)` ต้องคืนค่าเป็น 60696.
+`sumFibs(75024)` ต้องคืนค่าเป็น 60696
 
 ```js
 assert(sumFibs(75024) === 60696);
 ```
 
-`sumFibs(75025)` ต้องคืนค่าเป็น 135721.
+`sumFibs(75025)` ต้องคืนค่าเป็น 135721
 
 ```js
 assert(sumFibs(75025) === 135721);

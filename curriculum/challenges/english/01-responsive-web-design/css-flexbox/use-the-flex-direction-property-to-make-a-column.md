@@ -2,27 +2,27 @@
 id: 587d78ac367417b2b2512af4
 title: Use the flex-direction Property to Make a Column
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pVaDAv/cZmWeA4'
+videoUrl: "https://scrimba.com/p/pVaDAv/cZmWeA4"
 forumTopicId: 301109
 dashedName: use-the-flex-direction-property-to-make-a-column
 ---
 
 # --description--
 
-challenge 2 อันสุดท้ายจะใช้ `flex-direction` property ที่มีค่าเป็น `row`
-property อันนี้สามารถสร้าง column อันหนึ่งได้เช่นกันโดยการซ้อน children ของ flex container เป็นชั้น ๆ 
+ในแบบทดสอบสองอันที่ผ่านมา เราได้กำหนดค่าของ property `flex-direction` ให้เป็น `row` ไปแล้ว
+และเราก็สามารถใช้ property นี้เรียง child element เป็น column ที่ซ้อนกันอยู่ได้
 
 # --instructions--
 
-จงเพิ่ม CSS property `flex-direction` ให้กับ `#box-container` element
-และจงกำหนดให้มันมีค่าเป็น `column`
+ให้เพิ่ม CSS property `flex-direction` ให้กับ `#box-container`
+และให้กำหนดค่าเป็น `column`
 
 # --hints--
 
-`#box-container` element ควรมี `flex-direction` property ที่มีค่าเป็น `column`
+`#box-container` ต้องมีค่าของ property `flex-direction` เป็น `column`
 
 ```js
-assert($('#box-container').css('flex-direction') == 'column');
+assert($("#box-container").css("flex-direction") == "column");
 ```
 
 # --seed--
@@ -34,7 +34,6 @@ assert($('#box-container').css('flex-direction') == 'column');
   #box-container {
     display: flex;
     height: 500px;
-
   }
   #box-1 {
     background-color: dodgerblue;

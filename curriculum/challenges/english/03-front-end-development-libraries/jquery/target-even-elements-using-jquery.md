@@ -12,11 +12,11 @@ dashedName: target-even-elements-using-jquery
 
 คุณสามารถเลือก element ตามตำแหน่งได้ถ้าใช้ selector `:odd` หรือ `:even`
 
-โดย `:even` (แปลว่าเลขคู่) จะเลือก element ตัวที่ 1 3 5 ฯลฯ
+โดย `:even` (แปลว่าเลขคู่) จะเลือก element ตัวที่ 1 3 5 ฯลฯ  
 และ `:odd` (แปลว่าเลขคี่) จะเลือก element ตัวที่ 2 4 6 ฯลฯ
 
-ถ้าอ่านคำอธิบายข้างบนอาจจะงงนิดนึง เพราะจะเห็นว่า odd ที่แปลว่าเลขคี่นั้นเลือก element ที่ 2 4 6 ซึ่งเป็นเลขคู่
-นั่นก็เพราะ jQuery นั้นก็ใช้ระบบ zero-based-index แปลว่า element ตัวแรกสุดจะมีตำแหน่ง (index) เป็น 0 
+ถ้าอ่านคำอธิบายข้างบนอาจจะงงนิดนึง เพราะจะเห็นว่า odd ที่แปลว่าเลขคี่นั้นเลือก element ที่ 2 4 6 ซึ่งเป็นเลขคู่  
+นั่นก็เพราะ jQuery นั้นก็ใช้ระบบ zero-based-index แปลว่า element ตัวแรกสุดจะมีตำแหน่ง (index) เป็น 0  
 เช่นถ้าเราใช้ `:odd` เราจะเลือก element ตัวที่ 2 (ตำแหน่งที่ 1) ตัวต่อมาก็จะเป็น element ตัวที่ 4 (ตำแหน่งที่ 3) และต่อไปเรื่อยๆ
 
 ตัวอย่างด้านล่างจะเป็นการเพิ่ม class ให้กับ element ที่มี class เป็น `target` และก็มีตำแหน่งเป็นเลขคี่
@@ -25,7 +25,7 @@ dashedName: target-even-elements-using-jquery
 $(".target:odd").addClass("animated shake");
 ```
 
-ให้เลือก `target` ในตำแหน่งคู่ (`even`) ทั้งหมด และเพิ่ม class `animated` และ `shake` ให้กับ element ที่เลือก 
+ให้เลือก `target` ในตำแหน่งคู่ (`even`) ทั้งหมด และเพิ่ม class `animated` และ `shake` ให้กับ element ที่เลือก  
 อย่าลืมว่า **even** จะใช้ตำแหน่งในระบบ zero-based
 
 # --hints--

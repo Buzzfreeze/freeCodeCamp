@@ -2,45 +2,45 @@
 id: bad87fee1348bd9aedf08824
 title: Add Different Padding to Each Side of an Element
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cB7mwUw'
+videoUrl: "https://scrimba.com/c/cB7mwUw"
 forumTopicId: 16634
 dashedName: add-different-padding-to-each-side-of-an-element
 ---
 
 # --description--
 
-บางครั้ง คุณอาจจะต้องการปรับแต่ง element เพื่อที่จะมี `padding` แตกต่างในแต่ละด้าน
+บางครั้ง คุณอาจจะอยากให้ `padding` แต่ละด้านไม่เท่ากัน
 
-CSS ทำให้คุณสามารถควบคุม `padding` ของแต่ละด้านแยกกันได้โดยใช้`padding-top`, `padding-right`, `padding-bottom`, และ `padding-left` properties.
+คุณสามารถควบคุม `padding` ของแต่ละด้านแยกกันได้ โดยใช้ property `padding-top`, `padding-right`, `padding-bottom`, และ `padding-left`
 
 # --instructions--
 
-จงกำหนดให้กล่องสีน้ำเงินมี `padding` เท่ากับ `40px` ที่ด้านบนและซ้าย แต่เท่ากับ `20px` ที่ด้านล่างและขวา
+ให้กำหนดค่าของ `padding` ของกล่องสีน้ำเงิน โดยให้ด้านบนและด้านซ้ายมีค่าเป็น `40px` และ ด้านล่างและด้านขวามีค่าเป็น `20px`
 
 # --hints--
 
-`blue-box` class ควรกำหนดให้ด้านบนของ element มี `padding` เท่ากับ `40px`
+คลาส `blue-box` ต้องมี `padding` ด้านบนเป็น `40px`
 
 ```js
-assert($('.blue-box').css('padding-top') === '40px');
+assert($(".blue-box").css("padding-top") === "40px");
 ```
 
-`blue-box` class ควรกำหนดให้ด้านขวาของ element มี `padding` เท่ากับ `20px`
+คลาส `blue-box` ต้องมี `padding` ด้านขวาเป็น `20px`
 
 ```js
-assert($('.blue-box').css('padding-right') === '20px');
+assert($(".blue-box").css("padding-right") === "20px");
 ```
 
-`blue-box` class ควรกำหนดให้ด้านล่างของ element มี `padding` เท่ากับ `20px`
+คลาส `blue-box` ต้องมี `padding` ด้านล่างเป็น `20px`
 
 ```js
-assert($('.blue-box').css('padding-bottom') === '20px');
+assert($(".blue-box").css("padding-bottom") === "20px");
 ```
 
-`blue-box` class ควรกำหนดให้ด้านซ้ายของ element มี `padding` เท่ากับ `40px`
+คลาส `blue-box` ต้องมี `padding` ด้านซ้ายเป็น `40px`
 
 ```js
-assert($('.blue-box').css('padding-left') === '40px');
+assert($(".blue-box").css("padding-left") === "40px");
 ```
 
 # --seed--

@@ -9,32 +9,31 @@ dashedName: animate-multiple-elements-at-variable-rates
 
 # --description--
 
-ในแบบฝึกหัดที่แล้ว คุณได้เปลี่ยน animation rate ของสอง element ที่ animate คล้ายกันโดยการเปลี่ยน `@keyframes` rule
-คุณสามารถทำเช่นนี้ได้ด้วยการใช้ `animation-duration` ของหลาย ๆ element เช่นกัน
+ในแบบฝึกหัดที่แล้ว คุณได้เปลี่ยนความเร็วของ animation ของ element สองตัวที่คล้ายกันไปแล้ว โดยการเปลี่ยน `@keyframes` rule
+คราวนี้มาลองเปลี่ยนความเร็วของ animation ของหลายๆ element โดยการใช้ `animation-duration` กัน
 
-ตรงที่ animation ทำงานใน code editor, มันมีดาวสามดวงบนฟ้าที่กำลังกระพริบอยู่โดยมีt rate เดียวกับวนเป็นลูปต่อเนื่อง
-เพื่อที่จะทำให้มันกระพริบด้วย rate ที่ต่างกัน
-คุณสามารถกำหนดให้ `animation-duration` property มีค่าที่ต่างกันในแต่ละ element
+ในส่วนที่เป็น animation ใน code editor คุณจะเห็นว่ามีดาวสามดวงกำลังกะพริบอยู่บนฟ้า ซึ่งมีความเร็วในการกะพริบเท่ากัน
+ให้เปลี่ยนค่าของ property `animation-duration` ของแต่ละ element ให้ต่างกัน เพื่อให้ดาวแต่ละดวงมีความเร็วในการกะพริบที่ต่างกัน
 
 # --instructions--
 
-จงกำหนดให้ `animation-duration` ของ element ที่เป็นคลาส `star-1`, `star-2`, และ `star-3` มีค่าเท่ากับ 1s, 0.9s, และ 1.1s ตามลำดับ
+ให้กำหนดค่า `animation-duration` ของ element ที่มีคลาสเป็น `star-1`, `star-2`, และ `star-3` มีค่าเป็น 1s, 0.9s, และ 1.1s ตามลำดับ
 
 # --hints--
 
-`animation-duration` property ของดาวที่มีคลาสชื่อ `star-1` ควรจะอยู่ที่ 1s.
+property `animation-duration` ของดาวที่มีคลาสเป็น `star-1` ต้องมีค่าเป็น 1s
 
 ```js
 assert($('.star-1').css('animation-duration') == '1s');
 ```
 
-`animation-duration` property ของดาวที่มีคลาสชื่อ `star-2` ควรจะอยู่ที่ 0.9s.
+property `animation-duration` ของดาวที่มีคลาสเป็น `star-2` ต้องมีค่าเป็น 0.9s
 
 ```js
 assert($('.star-2').css('animation-duration') == '0.9s');
 ```
 
-`animation-duration` property ของดาวที่มีคลาสชื่อ `star-3` ควรจะอยู่ที่ 1.1s.
+property `animation-duration` ของดาวที่มีคลาสเป็น `star-3` ต้องมีค่าเป็น 1.1s
 
 ```js
 assert($('.star-3').css('animation-duration') == '1.1s');

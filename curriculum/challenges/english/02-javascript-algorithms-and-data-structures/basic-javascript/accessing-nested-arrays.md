@@ -10,6 +10,7 @@ dashedName: accessing-nested-arrays
 # --description--
 
 จากที่เราได้เห็นในตัวอย่างที่แล้ว ข้อมูลภายใน object นั้นสามารถมีได้ทั้ง object ที่ซ้อนกันและ array ที่ซ้อนกัน 
+
 เราสามารถสามารถเข้าถึง array ที่ซ้อนกันได้ด้วยวิธีเดียวกับการเข้าถึง object ที่ซ้อนกัน ซึ่งก็คือการใช้ Bracket Notation 
 
 โค้ดด้านล่างเป็นตัวอย่างในการเข้าถึง array ที่ซ้อนกันอยู่:
@@ -42,7 +43,7 @@ ourPets[1].names[0];
 
 # --instructions--
 
-จงใช้เครื่องหมายจุด (Dot Notation) และวงเล็บ (Bracket Notation) ให้ดึงค่าจาก element ที่ 2 ใน property `list` ของ object ที่มี `type` เป็น `"trees"` ใน array ชื่อ `myPlants` มากำหนดให้กับตัวแปร `secondTree` 
+จงใช้เครื่องหมายจุด (Dot Notation) และวงเล็บ (Bracket Notation) เพื่อดึงค่าจาก element ที่ 2 ใน property `list` ของ object ที่มี `type` เป็น `"trees"` ใน array ชื่อ `myPlants` มากำหนดให้กับตัวแปร `secondTree` 
 
 *อย่าลืมว่า* array นั้นใช้ระบบ zero-based index คือการเริ่มนับจาก 0
 

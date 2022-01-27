@@ -2,58 +2,67 @@
 id: 587d78a9367417b2b2512ae9
 title: Use a Bezier Curve to Move a Graphic
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/c6bnRCK'
+videoUrl: "https://scrimba.com/c/c6bnRCK"
 forumTopicId: 301071
 dashedName: use-a-bezier-curve-to-move-a-graphic
 ---
 
 # --description--
 
-ในแบบฝึดหัดที่แล้วได้อภิปรายเกี่ยวกับคีย์เวิร์ด `ease-out` ที่ได้บรรยายการเปลี่ยนแปลงความเร็วของ animation ไว้ว่าเร่งความเร็วในตอนแรกแล้วลดความเร็วลงในตอนหลัง 
-ทางด้านขวา ความแตกต่างระหว่าง `ease-out` (สำหรับ element สีน้ำเงิน) และ `linear` (สำหรับ element สีแดง) ได้ถูกสาธิตไว้
-animation progression ที่คล้ายกับ `ease-out` สามารถทำได้โดยการใช้ cubic Bezier curve function ที่ทำขึ้นมาเอง
+ในแบบฝึดหัดที่ผ่านมา เราได้คุยกันเรื่องคีย์เวิร์ด `ease-out` ที่จะเร่งความเร็วของ animation ในตอนแรก และชะลอในตอนหลัง
+คราวนี้ ให้ดูในตัวอย่างด้านขวา เพื่อดูความแตกต่างระหว่าง `ease-out` (กลมๆสีน้ำเงิน) และ `linear` (กลมๆสีแดง)
+เราสามารถสร้างรูปแบบของ animation ที่คล้ายกับ `ease-out` ได้ โดยการใช้ฟังก์ชัน cubic Bezier curve ที่ทำขึ้นมาเอง
 
-โดยทั่วไป การเปลี่ยน `p1` และ `p2` anchor points จะทำให้เกิดความต่างของ Bezier curves ซึ่งจะควบคุมการ progress ของ animation. 
-นี่คือตัวอย่างค่าของ Bezier curve ที่เลียนแบบ ease-out style:
+โดยทั่วไป การเปลี่ยนตำแหน่งของ `p1` และ `p2` จะทำให้สร้าง Bezier curves ใหม่ขึ้นมา ที่จะเอาไปใช้ควบคุมความเร็วในการเกิด animation
+
+ลองดูตัวอย่าง Bezier curve ที่เลียนแบบการ ease-out:
 
 ```css
 animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
 ```
 
-จงจำไว้ว่า `cubic-bezier` function ทั้งหมดจะเริ่มด้วย `p0` ที่ (0, 0) และจบด้วย `p3` ที่ (1, 1)
-ในตัวอย่างนี้ curve จะเคลื่อนที่เร็วขึ้นตลอด Y-axis และมันจะเคลื่อนผ่าน X-axis
-ซึ่งผลลัพท์ที่ได้ก็คือ การเปลี่ยนแปลงของ animated element จะเกิดขึ้นเร็วกว่าตอนที่ animation สำหรับ segment นั้น
-ไล่ไปจนจบ curve, ความสัมพันธ์ระหว่างความเปลี่ยนแปลงของค่า x และ y จะสวนทางกัน เพราะค่า y จะเปลี่ยนจาก 1 ไป 1 (ไม่มีการเปลี่ยนแปลง)และค่า x จะเปลี่ยนค่า 0.58 ไป 1, ซึ่งทำให้ animation เปลี่ยน progress ช้ากว่าเมื่อเปลี่ยนเทียบกับข่วงระหว่าง animation
+อย่าลืมว่าฟังก์ชัน `cubic-bezier` จะมีตำแหน่งของ `p0` เป็น (0, 0) และตำแหน่งของ `p3` เป็น (1, 1) เสมอ
+
+ให้ลองดูโค้ดในตัวอย่างด้านบน แล้วนึกภาพตาม
+
+ในตัวอย่างนี้ curve จะมีความเร็วในแนวแกน Y (เริ่มที่ 0 ขยับไปที่ `p1` ก็ยังเป็น 0 และก็ขยับไปที่ `p2` ที่มีค่าเป็น 1 เลย) มากกว่าในแนวแกน X (เริ่มที่ 0 ขยับไปที่ `p1` ก็ยังเป็น 0 และก็ขยับไปที่ `p2` ที่มีค่าเป็น 0.58 เลย)
+ซึ่งผลลัพธ์ก็คือ ในการเคลื่อนที่ช่วงแรก เราจะได้ animation ที่เปลี่ยนแปลงมาก ในช่วงเวลาสั้นๆ
+
+แต่ในช่วงท้าย การเคลื่อนที่ในแนวแกน x และ y จะสลับกันแล้ว
+เพราะค่า y จะเปลี่ยนจาก 1 เป็น 1 (ไม่มีการเปลี่ยนแปลง) และค่า x จะเปลี่ยนจาก 0.58 เป็น 1
+ซึ่งผลลัพธ์ก็คือ ในการเคลื่อนที่ช่วงท้าย เราจะได้ animation ที่เปลี่ยนแปลงน้อย ในช่วงเวลาที่ยาว
 
 # --instructions--
 
-เพื่อจะได้เห็นผลของ Bezier curve นี้, จงเปลี่ยน `animation-timing-function` ของ element ที่มาพร้อมกับไอดี `red` ให้เป็น `cubic-bezier` function ที่มีค่า  x1, y1, x2, y2 เป็น 0, 0, 0.58, 1 ตามลำดับ
-สิ่งนี้จะทำให้ element ทั้งสอง animate ไปในลำดับที่คล้ายคลึงกัน
+เพื่อจะได้เห็นภาพของ Bezier curve นี้ชัดขึ้น
+ให้เปลี่ยน `animation-timing-function` ของ element ที่มี id เป็น `red` ให้เป็นฟังก์ชัน `cubic-bezier` ที่มีค่า x1, y1, x2, y2 เป็น 0, 0, 0.58, 1 ตามลำดับ
+โดย Bezier curve ตัวนี้ จะทำให้ element ทั้งสองมีการเคลื่อนไหวที่คล้ายกัน
+
 # --hints--
 
-ค่าของ `animation-timing-function` property ของ element ที่มีพร้อมกับ id `red` ควรมี `cubic-bezier` function ซึ่งมีค่า x1, y1, x2, y2 เป็น 0, 0, 0.58, 1 ตามลำดับ
+`animation-timing-function` ของ element ที่มี id เป็น `red` ต้องเป็นฟังก์ชัน `cubic-bezier` ที่มีค่า x1, y1, x2, y2 เป็น 0, 0, 0.58, 1 ตามลำดับ
 
 ```js
 assert(
-  $('#red').css('animation-timing-function') == 'cubic-bezier(0, 0, 0.58, 1)'
+  $("#red").css("animation-timing-function") == "cubic-bezier(0, 0, 0.58, 1)"
 );
 ```
 
-element ที่มีไอดีเป็น `red` ไม่ควรมี `animation-timing-function` property ที่เป็น `linear` อีกต่อไปแล้ว
+`animation-timing-function` ของ element ที่มี id เป็น `red` ต้องไม่ใช่ `linear` แล้ว
 
 ```js
-assert($('#red').css('animation-timing-function') !== 'linear');
+assert($("#red").css("animation-timing-function") !== "linear");
 ```
 
-ค่าของ `animation-timing-function` property ของ element ที่มีไอดีเป็น `blue` ไม่ควรเปลี่ยน
+`animation-timing-function` ของ element ที่มี id เป็น `blue` ต้องเป็นค่าเดิม
 
 ```js
 const blueBallAnimation = __helpers.removeWhiteSpace(
-  $('#blue').css('animation-timing-function')
+  $("#blue").css("animation-timing-function")
 );
 assert(
-  blueBallAnimation == 'ease-out' ||
-    blueBallAnimation == 'cubic-bezier(0,0,0.58,1)'
+  blueBallAnimation == "ease-out" ||
+    blueBallAnimation == "cubic-bezier(0,0,0.58,1)"
 );
 ```
 
@@ -63,7 +72,7 @@ assert(
 
 ```html
 <style>
-  .balls{
+  .balls {
     border-radius: 50%;
     position: fixed;
     width: 50px;
@@ -92,15 +101,15 @@ assert(
     }
   }
 </style>
-<div class="balls" id= "red"></div>
-<div class="balls" id= "blue"></div>
+<div class="balls" id="red"></div>
+<div class="balls" id="blue"></div>
 ```
 
 # --solutions--
 
 ```html
 <style>
-  .balls{
+  .balls {
     border-radius: 50%;
     position: fixed;
     width: 50px;
@@ -129,6 +138,6 @@ assert(
     }
   }
 </style>
-<div class="balls" id= "red"></div>
-<div class="balls" id= "blue"></div>
+<div class="balls" id="red"></div>
+<div class="balls" id="blue"></div>
 ```

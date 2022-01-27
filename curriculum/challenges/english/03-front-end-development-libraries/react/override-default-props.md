@@ -16,7 +16,7 @@ dashedName: override-default-props
 ตอนนี้ component `ShoppingCart` จะมี child component เป็น `Items` ซึ่ง component `Items` นี้มีการตั้งค่าของ default prop ที่ชื่อว่า `quantity` เป็น `0` 
 เราจะเปลี่ยนค่าของ prop `quantity` ได้โดยการส่งค่า `10` ไปให้ `quantity`
 
-**Note:** ถ้ายังจำได้ syntax ในการเพิ่ม prop ให้กับ component เหมือนกับ syntax ของ HTML attribute แต่ในบททดสอบนี้ `quantity` เป็นตัวเลขจำนวนเต็ม เราจึงต้องไม่ครอบค่านั้นด้วยเครื่องหมายคำพูด แต่ต้องครอบด้วยปีกกา เช่น `{100}` 
+**Note:** ถ้ายังจำได้ syntax ในการเพิ่ม prop ให้กับ component เหมือนกับ syntax ของ HTML attribute แต่ในบททดสอบนี้ `quantity` เป็นตัวเลขจำนวนเต็ม เราจึงต้องไม่ครอบค่านั้นด้วยเครื่องหมายคำพูด แต่ต้องครอบด้วยปีกกา เช่น `{100}`  
 syntax นี้จะบอกให้ JSX อ่านค่าในปีกกานี้เป็น JavaScript ซึ่งถ้าเราใส่เป็นเครื่องหมายคำพูด JSX จะนึกว่าค่าที่เราให้ไปนี้เป็น string
 
 # --hints--

@@ -22,13 +22,14 @@ parent ชื่อ `GameOfChance` และ child ชื่อ `Results` เร
 
 ขั้นแรก คุณจะต้องใช้ expression ที่จะคืนค่าออกมาแบบสุ่มทุกครั้งที่เรียกใช้ 
 ซึ่งคุณจะใช้ method `Math.random()` ก็ได้ โดย method นี้จะคืนค่าเป็นตัวเลขตั้งแต่ `0` ถึง `1` (ไม่รวม 1) ทุกครั้งที่มีการเรียกใช้ 
+
 ถ้าจะให้มีโอกาส ชนะ/แพ้ เป็น 50/50 ให้ใช้ `Math.random() >= .5` ใน expression นี้ 
 ตามสถิติ expression นี้จะมีโอกาสคืนค่าเป็น `true` 50% และเป็น `false` อีก 50% 
 ใน method render ให้เปลี่ยน `null` เป็น expression ตัวด้านบน
 
-ตอนนี้คุณมี expression ที่สุ่มค่าได้แล้ว 
-ต่อไป ให้เรนเดอร์ `Results` เป็น child ของ `GameOfChance` และส่ง `expression` เป็น prop ชื่อ `fiftyFifty` เข้าไปใน `Results` 
-แล้วให้เขียน ternary expression ที่จะเรนเดอร์ `h1` ที่มีข้อความว่า `You Win!` หรือ `You Lose!` ตามค่าของ prop `fiftyFifty` ที่ถูกส่งมาจาก `GameOfChance` 
+ตอนนี้คุณมี expression ที่สุ่มค่าได้แล้ว  
+ต่อไป ให้เรนเดอร์ `Results` เป็น child ของ `GameOfChance` และส่ง `expression` เป็น prop ชื่อ `fiftyFifty` เข้าไปใน `Results`  
+แล้วให้เขียน ternary expression ที่จะเรนเดอร์ `h1` ที่มีข้อความว่า `You Win!` หรือ `You Lose!` ตามค่าของ prop `fiftyFifty` ที่ถูกส่งมาจาก `GameOfChance`  
 สุดท้ายให้เขียน method `handleClick()` ให้นับจำนวนตาที่เล่นให้ถูกต้อง เพื่อให้ user รู้ว่าเล่นไปกี่ตาแล้ว 
 
 # --hints--

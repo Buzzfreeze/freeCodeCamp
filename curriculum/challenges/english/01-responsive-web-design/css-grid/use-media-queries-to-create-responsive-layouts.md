@@ -2,35 +2,37 @@
 id: 5a94fe7769fb03452672e463
 title: Use Media Queries to Create Responsive Layouts
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pByETK/cMbqeHk'
+videoUrl: "https://scrimba.com/p/pByETK/cMbqeHk"
 forumTopicId: 301138
 dashedName: use-media-queries-to-create-responsive-layouts
 ---
 
 # --description--
 
-CSS Grid CSS Grid สามารถเป็นวิธีง่าย ๆ ที่ทำให้เว็บไซต์ของคุณ responsive ได้ดีขึ้นโดยใช้ media query หรือการเรียงพื้นที่กริดใหม่
-รวมถึงเปลี่ยนขนาดของกริดและปรับเปลี่ยนการวางตัวของ item ใหม่
+เราสามารถใช้ CSS Grid เพื่อทำให้เว็บมีความเป็น responsive มากขึ้นได้ง่ายๆ โดยใช้ media query เพื่อทำการเรียงพื้นที่กริดใหม่
+เพื่อเปลี่ยนขนาดของกริด และเพื่อเปลี่ยนการวางตัวของ item ใหม่
 
-ในหน้า preview, เมื่อความกว้างของ viewport width มีค่าเกิน 300px, จำนวนของคอลั่มน์จะเพิ่มขึ้นจาก 1 เป็น 2
-พื้นที่ advert ก็จะย้ายไปอยู่ถ้าด้านซ้ายมือทั้งหมด
+ลองดูในหน้า preview
+
+เมื่อความกว้างของ viewport มีค่าเกิน 300px จำนวนของคอลัมน์จะเพิ่มขึ้นจาก 1 เป็น 2
+และพื้นที่ advert ก็จะย้ายไปอยู่ถ้าด้านซ้ายมือทั้งหมด
 
 # --instructions--
 
-เมื่อความกว้างของ viewport มีค่าเท่ากับ `400px` หรือมากกว่านั้นจะทำให้พื้นที่ header กินพื้นที่แถวบนสุดทั้งหมด ส่วนพื้นที่ footer ที่จะกินพื้นที่แถวล่างสุดทั้งหมดเช่นเดียวกัน
+จงทำให้ เมื่อความกว้างของ viewport มากกว่าหรือเท่ากับ `400px` จะทำให้พื้นที่ header กินพื้นที่แถวบนสุดทั้งแถว ส่วนพื้นที่ footer ก็จะกินพื้นที่แถวล่างสุดทั้งแถว
 
 # --hints--
 
-เมื่อ viewport มีค่าเท่ากับ `400px` หรือมากกว่านั้น `container` class ควรมี `grid-template-areas` property อันหนึ่งที่ทำให้พื้นที่ header และ footer จะกินพื้นที่แถวบนสุดและล่างสุดตามลำดับ
-ส่วนส่วนที่ใช้ advert และ content ก็จะอยู่ที่ด้านซ้ายขวาของแถวตรงกลาง
+เมื่อ viewport กว้างมากกว่าหรือเท่ากับ `400px` คลาส `container` จะต้องมีค่าของ property `grid-template-areas` เปลี่ยนไป โดยจะต้องทำให้ header กินพื้นที่แถวบนสุดทั้งแถวและ footer กินพื้นที่แถวล่างสุดทั้งแถว
+และ advert ก็ต้องไปกินพื้นที่คอลัมน์ซ้ายของแถวกลาง ส่วน content ก็ต้องไปกินพื้นที่คอลัมน์ขวาของแถวกลาง
 
 ```js
 assert(
   __helpers
     .removeCssComments(code)
     .match(
-      /@media\s*?\(\s*?min-width\s*?:\s*?400px\s*?\)[\s\S]*.container\s*?{[\s\S]*grid-template-areas\s*?:\s*?"\s*?header\s*?header\s*?"\s*?"\s*?advert\s*?content\s*?"\s*?"\s*?footer\s*?footer\s*?"\s*?;[\s\S]*}/gi,
-    ),
+      /@media\s*?\(\s*?min-width\s*?:\s*?400px\s*?\)[\s\S]*.container\s*?{[\s\S]*grid-template-areas\s*?:\s*?"\s*?header\s*?header\s*?"\s*?"\s*?advert\s*?content\s*?"\s*?"\s*?footer\s*?footer\s*?"\s*?;[\s\S]*}/gi
+    )
 );
 ```
 
@@ -70,10 +72,10 @@ assert(
     grid-template-rows: 50px auto 1fr auto;
     grid-gap: 10px;
     grid-template-areas:
-      'header'
-      'advert'
-      'content'
-      'footer';
+      "header"
+      "advert"
+      "content"
+      "footer";
   }
 
   @media (min-width: 300px) {
@@ -81,20 +83,20 @@ assert(
       grid-template-columns: auto 1fr;
       grid-template-rows: auto 1fr auto;
       grid-template-areas:
-        'advert header'
-        'advert content'
-        'advert footer';
+        "advert header"
+        "advert content"
+        "advert footer";
     }
   }
 
   @media (min-width: 400px) {
     .container {
       grid-template-areas:
-      /* Only change code below this line */
-        'advert header'
-        'advert content'
-        'advert footer';
-      /* Only change code above this line */
+      /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
+        "advert header"
+        "advert content"
+        "advert footer";
+      /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
     }
   }
 </style>
@@ -141,10 +143,10 @@ assert(
     grid-template-rows: 50px auto 1fr auto;
     grid-gap: 10px;
     grid-template-areas:
-      'header'
-      'advert'
-      'content'
-      'footer';
+      "header"
+      "advert"
+      "content"
+      "footer";
   }
 
   @media (min-width: 300px) {
@@ -152,18 +154,18 @@ assert(
       grid-template-columns: auto 1fr;
       grid-template-rows: auto 1fr auto;
       grid-template-areas:
-        'advert header'
-        'advert content'
-        'advert footer';
+        "advert header"
+        "advert content"
+        "advert footer";
     }
   }
 
   @media (min-width: 400px) {
     .container {
       grid-template-areas:
-        'header header'
-        'advert content'
-        'footer footer';
+        "header header"
+        "advert content"
+        "footer footer";
     }
   }
 </style>

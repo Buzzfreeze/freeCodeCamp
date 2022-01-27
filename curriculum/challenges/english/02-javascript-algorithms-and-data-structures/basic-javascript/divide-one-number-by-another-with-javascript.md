@@ -13,7 +13,7 @@ dashedName: divide-one-number-by-another-with-javascript
 
 JavaScript ใช้เครื่องหมาย `/` สำหรับการหาร
 
-**Example**
+**ตัวอย่าง**
 
 ```js
 myVar = 16 / 2;

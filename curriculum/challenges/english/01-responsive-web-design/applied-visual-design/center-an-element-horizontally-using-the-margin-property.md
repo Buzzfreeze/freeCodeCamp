@@ -2,29 +2,28 @@
 id: 587d78a3367417b2b2512ad0
 title: Center an Element Horizontally Using the margin Property
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cyLJqU4'
+videoUrl: "https://scrimba.com/c/cyLJqU4"
 forumTopicId: 301043
 dashedName: center-an-element-horizontally-using-the-margin-property
 ---
 
 # --description--
 
-วิธีการจัดตำแหน่งอีกอย่างก็คือการทำให้ block element อยู่ตรงกลางในแนวนอน
-วิธีหนึ่งที่ใช้ในการจัดตำแหน่งแบบนี้คือ การกำหนดให้ `margin` ของมันมีค่า auto
+วิธีการจัดตำแหน่งอีกอย่างที่ควรรู้ ก็คือการทำให้ block element อยู่ตรงกลางในแนวนอน
+วิธีหนึ่งที่ใช้ได้ คือการกำหนดให้ `margin` ของ element ให้เป็น auto
 
-วิธีนี้เหมาะที่จะใช้กับรูปภาพเช่นกัน รูปภาพนั้นเป็น inline element โดยค่าเริ่มต้น
-แต่สามารถถูกเปลี่ยนให้เป็น block element เมื่อคุณกำหนดให้ `display` property เป็น `block`
+เราใช้วิธีนี้กับรูปภาพได้เช่นกัน ซึ่งปกติแล้วโดยเริ่มต้นรูปภาพจะเป็น element แบบ inline แต่ก็เปลี่ยนเป็น block element ได้ ถ้าคุณกำหนด property `display` ให้เป็น `block`
 
 # --instructions--
 
-จงกำหนดให้ `div` ในหน้านี้อยู่ตรงกลางโดยการเพิ่ม `margin` property อันหนึ่งที่มีค่า `auto`
+ทำให้ `div` อยู่ตรงกลาง โดยการเพิ่ม property `margin` โดยให้มีค่าเป็น `auto`
 
 # --hints--
 
-`div` ควรมี `margin` ที่มีค่าเป็น `auto`
+`margin` ของ `div` ต้องมีค่าเป็น `auto`
 
 ```js
-assert(new __helpers.CSSHelp(document).getStyle('div')?.margin === 'auto');
+assert(new __helpers.CSSHelp(document).getStyle("div")?.margin === "auto");
 ```
 
 # --seed--

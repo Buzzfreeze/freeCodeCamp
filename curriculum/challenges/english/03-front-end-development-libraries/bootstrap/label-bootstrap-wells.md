@@ -36,7 +36,7 @@ assert(new RegExp('#left-well', 'gi').test($('h4').text()));
 assert(new RegExp('#right-well', 'gi').test($('h4').text()));
 ```
 
-อย่าลืม tag ปิดของ `h4` ทั้งสองตัว
+อย่าลืมแท็กปิดของ `h4` ทั้งสองตัว
 
 ```js
 assert(

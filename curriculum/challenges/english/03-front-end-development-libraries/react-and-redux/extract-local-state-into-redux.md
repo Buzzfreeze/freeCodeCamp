@@ -8,7 +8,9 @@ dashedName: extract-local-state-into-redux
 
 # --description--
 
-อีกนิดเดียว! จากที่คุณได้เขียนโค้ด Redux ทั้งหมดเพื่อให้ Redux สามารถควบคุมการจัดการ state ของแอป React ได้
+อีกนิดเดียว! 
+
+จากที่คุณได้เขียนโค้ด Redux ทั้งหมดเพื่อให้ Redux สามารถควบคุมการจัดการ state ของแอป React ได้
 เมื่อ Redux ได้เชื่อมต่อแล้ว คุณต้องแยกการจัดการ state ออกจาก component `Presentational` และเอาไปเก็บใน Redux แทน
 ถึงตอนนี้คุณจะเชื่อมต่อ Redux แล้ว แต่การจัดการ state ก็ยังเป็นแค่การจัดการในขอบเขตของ `Presentational` เท่านั้น
 
@@ -17,11 +19,11 @@ dashedName: extract-local-state-into-redux
 ให้แก้ไขโค้ดใน component `Presentational` 
 โดยขั้นแรกให้นำ property `messages` ใน local `state` ออก เราจะใช้ Redux จัดการ `messages` พวกนี้แทน
 ต่อไปให้แก้ไข method `submitMessage()` เพื่อให้ dispatch `submitNewMessage()` จาก `this.props` โดยให้ argument เป็น `input` ของ local `state`
+
 ให้ลบ property `messages` ออกจากการเรียกใช้ `this.setState()` ด้วย เพราะว่าคุณได้ลบ `messages` ออกจาก local `state` ไปแล้ว
 และสุดท้ายให้แก้ method `render()` เพื่อให้ map `messages` จาก `props` แทนที่จะเป็น `state`
 
 ถ้าแก้โค้ดตามเงื่อนไขข้างบนเสร็จแล้ว แอปจะยังคงทำงานเหมือนเดิม แต่ Redux จะเป็นตัวที่จัดการ state แทน 
-ตัวอย่างนี้ยังแสดงให้เห็นว่า component อาจมี local `state` อย่างไร: component ของคุณยังคงติดตามการป้อนข้อมูลของ user ภายในเครื่องใน `state` ของตัวเอง คุณสามารถดูวิธีที่ Redux จัดเตรียมกรอบงานการจัดการ state ที่มีประโยชน์ไว้บน React ได้อย่างไร คุณจะได้รับผลลัพธ์เดียวกันโดยใช้ React's local state เท่านั้นในตอนแรก และมักจะทำได้กับแอปี่เรียบง่ายๆ อย่างไรก็ตามหากแอปของคุณมีขนาดใหญ่ขึ้นและซับซ้อนมากขึ้น การจัดการ state ของคุณก็มีขนาดใหญ่ขึ้นและซับซ้อนมากขึ้นเช่นกัน และนี่คือปัญหาที่ใช้ Redux แก้ไขได้
 
 # --hints--
 

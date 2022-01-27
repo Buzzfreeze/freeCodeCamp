@@ -2,39 +2,45 @@
 id: 5a9d725e424fe3d0e10cad10
 title: Use CSS Variables to change several elements at once
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/c6bDECm'
+videoUrl: "https://scrimba.com/c/c6bDECm"
 forumTopicId: 301093
 dashedName: use-css-variables-to-change-several-elements-at-once
 ---
 
 # --description--
 
-<dfn>CSS Variables</dfn> เป็นวิธีที่ที่สามารถเปลี่ยน CSS style properties หลาย ๆ อันได้ในทีเดียวโดยการเปลี่ยนค่าแค่ค่าเดียว (CSS ในรูปแบบตัวแปร)
+<dfn>CSS Variable</dfn> (ตัวแปรของ CSS) เป็นวิธีที่ที่สามารถเปลี่ยน CSS style property หลายๆอันได้ในทีเดียว โดยการเปลี่ยนค่าแค่ค่าเดียว
 
-จงทำตามคำสั่งข้างล่าง และดูสิ่งที่จะเปลี่ยนแปลงจากการที่ค่าเพียงสามค่าถูกเปลี่ยน
+ให้ทำตามคำสั่งข้างล่าง และดูการปลี่ยนแปลงที่เกิดจากการเปลี่ยนค่าแค่สามค่า
 
 # --instructions--
 
-ใน `penguin` class, จงเปลี่ยน `black` ให้เป็น `gray`, และ `gray` ให้เป็น `white`, และ `yellow` ให้เป็น `orange`
+ในคลาส `penguin` ให้เปลี่ยน `black` เป็น `gray`, `gray` เป็น `white`, และ `yellow` เป็น `orange`
 
 # --hints--
 
-`penguin` class ควรประกาศตัวแปร `--penguin-skin` แล้วกำหนดค่า `gray` ให้มัน
+คลาส `penguin` ต้องประกาศตัวแปร `--penguin-skin` ซึ่งกำหนดค่าเป็น `gray`
 
 ```js
-assert(code.match(/.penguin\s*?{[\s\S]*--penguin-skin\s*?:\s*?gray\s*?;[\s\S]*}/gi));
+assert(
+  code.match(/.penguin\s*?{[\s\S]*--penguin-skin\s*?:\s*?gray\s*?;[\s\S]*}/gi)
+);
 ```
 
-`penguin` class ควรประกาศตัวแปร `--penguin-belly` แล้วกำหนดค่า `white` ให้มัน
+คลาส `penguin` ต้องประกาศตัวแปร `--penguin-belly` ซึ่งกำหนดค่าเป็น `white`
 
 ```js
-assert(code.match(/.penguin\s*?{[\s\S]*--penguin-belly\s*?:\s*?white\s*?;[\s\S]*}/gi));
+assert(
+  code.match(/.penguin\s*?{[\s\S]*--penguin-belly\s*?:\s*?white\s*?;[\s\S]*}/gi)
+);
 ```
 
-`penguin` class ควรประกาศตัวแปร `--penguin-beak` แล้วกำหนดค่า `orange` ให้มัน
+คลาส `penguin` ต้องประกาศตัวแปร `--penguin-beak` ซึ่งกำหนดค่าเป็น `orange`
 
 ```js
-assert(code.match(/.penguin\s*?{[\s\S]*--penguin-beak\s*?:\s*?orange\s*?;[\s\S]*}/gi));
+assert(
+  code.match(/.penguin\s*?{[\s\S]*--penguin-beak\s*?:\s*?orange\s*?;[\s\S]*}/gi)
+);
 ```
 
 # --seed--
@@ -44,11 +50,11 @@ assert(code.match(/.penguin\s*?{[\s\S]*--penguin-beak\s*?:\s*?orange\s*?;[\s\S]*
 ```html
 <style>
   .penguin {
-    /* Only change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
     --penguin-skin: black;
     --penguin-belly: gray;
     --penguin-beak: yellow;
-    /* Only change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
 
     position: relative;
     margin: auto;

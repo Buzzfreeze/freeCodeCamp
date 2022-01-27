@@ -8,7 +8,8 @@ dashedName: introducing-inline-styles
 
 # --description--
 
-มีอีกหลายอย่างที่จะเพิ่มศักภาพของแอป React ของคุณได้ แต่คุณอาจสงสัยในเรื่องที่ง่ายๆอีกเรื่อง เช่นการใช้ style กับ JSX element 
+มีอีกหลายอย่างที่จะเพิ่มศักภาพของแอป React ของคุณได้ แต่คุณอาจสงสัยในเรื่องที่ง่ายๆอีกเรื่อง เช่นการใช้ style กับ JSX element  
+
 คุณคงรู้แล้วว่าการใช้ style ใน JSX จะไม่เหมือนกับใน HTML เพราะ [วิธีประกาศ class ใน JSX element](/learn/front-end-development-libraries/react/define-an-html-class-in-jsx)
 
 ถ้าคุณใช้ style จาก stylesheet การนำ style มาใช้กับ JSX ก็จะไม่ต่างจาก HTML มาก 

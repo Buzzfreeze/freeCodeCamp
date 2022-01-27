@@ -29,7 +29,7 @@ assert(
 assert($('button').hasClass('btn') && $('button').hasClass('btn-default'));
 ```
 
-อย่าลืม tag ปิด สำหรับ `button` element ทุกอัน
+อย่าลืมแท็กของ `button` element ทุกอัน
 
 ```js
 assert(

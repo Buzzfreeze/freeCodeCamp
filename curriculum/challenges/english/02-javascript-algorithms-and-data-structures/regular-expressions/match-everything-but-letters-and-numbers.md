@@ -8,10 +8,10 @@ dashedName: match-everything-but-letters-and-numbers
 
 # --description--
 
-เรารู้แล้วว่าเราใช้ shortcut เพื่อ match ตัวเลขและตัวอักษรภาษาอังกฤษแบบนี้ได้ `[A-Za-z0-9_]` ถ้าใช้ `\w` 
+เรารู้แล้วว่าเราใช้ shortcut เพื่อ match ตัวเลขและตัวอักษรภาษาอังกฤษแบบนี้ได้ `[A-Za-z0-9_]` ถ้าใช้ `\w`  
 แต่บางทีเราอาจอยากหาว่ามีตัวอักษรหรือสัญลักษณ์อื่นนอกเหนือจาก `[A-Za-z0-9_]` ใน string หรือไม่
 
-เราจะมี `\W` ที่ทำงานตรงข้ามกับ `\w` เลย 
+เราจะมี `\W` ที่ทำงานตรงข้ามกับ `\w` เลย  
 ให้ลองดูดีๆ pattern นี้จะใช้ตัวพิมพ์ใหญ่ และ shortcut นี้จะทำงานเหมือนกับ [^A-Za-z0-9_]`
 
 ```js
@@ -36,7 +36,7 @@ sentence.match(shortHand);
 assert(nonAlphabetRegex.global);
 ```
 
-regex ที่เขียนต้องเจอเครื่องหมายที่ไม่ใช่ตัวอักษรในภาษาอังกฤษและตัวเลขทั้งหมด 6 ตัวใน string `The five boxing wizards jump quickly.`.
+regex ที่เขียนต้องเจอเครื่องหมายที่ไม่ใช่ตัวอักษรในภาษาอังกฤษและตัวเลขทั้งหมด 6 ตัวใน string `The five boxing wizards jump quickly.`
 
 ```js
 assert(

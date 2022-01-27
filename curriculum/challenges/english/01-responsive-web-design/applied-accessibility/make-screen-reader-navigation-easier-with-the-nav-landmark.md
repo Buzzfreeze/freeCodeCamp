@@ -2,48 +2,52 @@
 id: 587d7788367417b2b2512aa2
 title: Make Screen Reader Navigation Easier with the nav Landmark
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/czVwWSv'
+videoUrl: "https://scrimba.com/c/czVwWSv"
 forumTopicId: 301024
 dashedName: make-screen-reader-navigation-easier-with-the-nav-landmark
 ---
 
 # --description--
 
-`nav` element เป็นอีก HTML5 item ที่มี embedded landmark feature สำหรับการนำทาง (ลิงค์ไปที่อื่น) screen reader อย่างง่าย ๆ
-tag นี้ถูกใช้เพื่อเก็บลิงค์ของ navigation หลักในหน้าของคุณ
+`nav` ก็เป็นอีกหนึ่ง element ของ HTML5 ที่มีตัวช่วยสำหรับการนำทางในหน้าเว็บ สำหรับ screen reader
+เราจะใช้แท็กนี้เพื่อเก็บ navigation หลักของเว็บคุณ
 
-ถ้ามีลิงค์ที่ถูกใช้ซ้ำ ๆ อยู่ที่ด้านล่างของแต่ละหน้า มันไม่จำเป็นที่จะ markup พวกมันด้วย `nav` tag
-การใช้ `footer` (จะกล่าวถึงในแบบฝึกหัดถัดไป) ในกรณีนี้ถือว่าเพียงพอแล้ว
+ถ้ามีลิงค์ที่ถูกใช้ซ้ำ ๆ อยู่ที่ด้านล่างของแต่ละหน้า คุณไม่จำเป็นต้องครอบลิงก์พวกนั้นด้วยแท็ก `nav`
+ในกรณีนี้การใช้ `footer` (จะพูดถึงในแบบฝึกหัดหน้า) ก็เพียงพอแล้ว
 
 # --instructions--
 
-ตัวอย่างเช่น Camper Cat ได้ใส่ลิงค์ของ navigation ที่ด้านบนของหน้า training ของเขาแต่เก็บพวกมันไว้ใน `div`
-จงเปลี่ยน `div` ให้เป็น `nav` tag เพื่อปรับปรุงการเข้าถึงหน้านั้นของเขา
+นาย Camper Cat ได้ใส่ลิงค์ของ navigation ที่ด้านบนของหน้า training ของเขาแล้ว แต่ตอนนี้เขาครอบลิงก์โดยใช้แท็ก `div`
+
+ให้เปลี่ยน `div` เป็น `nav` เพื่อเพิ่ม accessibility ในหน้านี้
 
 # --hints--
 
-โค้ดของคุณควรมี `nav` tag 1 อัน
+โค้ดของคุณต้องมีแท็ก `nav` 1 อัน
 
 ```js
-assert($('nav').length == 1);
+assert($("nav").length == 1);
 ```
 
-`nav` tags ควรเก็บ `ul` และ list item ของมันไว้
+แท็ก `nav` ต้องครอบ `ul` และข้อมูลทั้งหมดของแท็กนี้ไว้
 
 ```js
-assert($('nav').children('ul').length == 1);
+assert($("nav").children("ul").length == 1);
 ```
 
-โค้ดของคุณไม่ควรมี `div` tag ใด ๆ อีกต่อไป
+ต้องไม่มีแท็ก `div` ในโค้ดแล้ว
 
 ```js
-assert($('div').length == 0);
+assert($("div").length == 0);
 ```
 
-`nav` element ควรมีแท็กปิด
+ต้องมีแท็กปิดของ `nav` ด้วย
 
 ```js
-assert(code.match(/<\/nav>/g) && code.match(/<\/nav>/g).length === code.match(/<nav>/g).length);
+assert(
+  code.match(/<\/nav>/g) &&
+    code.match(/<\/nav>/g).length === code.match(/<nav>/g).length
+);
 ```
 
 # --seed--
@@ -66,18 +70,28 @@ assert(code.match(/<\/nav>/g) && code.match(/<\/nav>/g).length === code.match(/<
   <main>
     <section id="stealth">
       <h2>Stealth &amp; Agility Training</h2>
-      <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>
+      <article>
+        <h3>Climb foliage quickly using a minimum spanning tree approach</h3>
+      </article>
       <article><h3>No training is NP-complete without parkour</h3></article>
     </section>
     <section id="combat">
       <h2>Combat Training</h2>
-      <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>
-      <article><h3>Goodbye world: 5 proven ways to knock out an opponent</h3></article>
+      <article>
+        <h3>Dispatch multiple enemies with multithreaded tactics</h3>
+      </article>
+      <article>
+        <h3>Goodbye world: 5 proven ways to knock out an opponent</h3>
+      </article>
     </section>
     <section id="weapons">
       <h2>Weapons Training</h2>
-      <article><h3>Swords: the best tool to literally divide and conquer</h3></article>
-      <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>
+      <article>
+        <h3>Swords: the best tool to literally divide and conquer</h3>
+      </article>
+      <article>
+        <h3>Breadth-first or depth-first in multi-weapon training?</h3>
+      </article>
     </section>
   </main>
 </body>
@@ -101,18 +115,28 @@ assert(code.match(/<\/nav>/g) && code.match(/<\/nav>/g).length === code.match(/<
   <main>
     <section id="stealth">
       <h2>Stealth &amp; Agility Training</h2>
-      <article><h3>Climb foliage quickly using a minimum spanning tree approach</h3></article>
+      <article>
+        <h3>Climb foliage quickly using a minimum spanning tree approach</h3>
+      </article>
       <article><h3>No training is NP-complete without parkour</h3></article>
     </section>
     <section id="combat">
       <h2>Combat Training</h2>
-      <article><h3>Dispatch multiple enemies with multithreaded tactics</h3></article>
-      <article><h3>Goodbye world: 5 proven ways to knock out an opponent</h3></article>
+      <article>
+        <h3>Dispatch multiple enemies with multithreaded tactics</h3>
+      </article>
+      <article>
+        <h3>Goodbye world: 5 proven ways to knock out an opponent</h3>
+      </article>
     </section>
     <section id="weapons">
       <h2>Weapons Training</h2>
-      <article><h3>Swords: the best tool to literally divide and conquer</h3></article>
-      <article><h3>Breadth-first or depth-first in multi-weapon training?</h3></article>
+      <article>
+        <h3>Swords: the best tool to literally divide and conquer</h3>
+      </article>
+      <article>
+        <h3>Breadth-first or depth-first in multi-weapon training?</h3>
+      </article>
     </section>
   </main>
 </body>

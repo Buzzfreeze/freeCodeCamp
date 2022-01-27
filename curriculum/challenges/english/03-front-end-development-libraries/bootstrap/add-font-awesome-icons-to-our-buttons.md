@@ -61,7 +61,7 @@ assert(
 );
 ```
 
-อย่าลืมปิด tag `i`
+อย่าลืมปิดแท็ก `i` ด้วย
 
 ```js
 assert(code.match(/<\/i>|<\/span>/g));

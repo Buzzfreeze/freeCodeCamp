@@ -24,7 +24,7 @@ users.hasOwnProperty('Alan');
 
 # --instructions--
 
-จงเขียนฟังก์ชัน `isEveryoneHere` เพื่อคืนค่า `true` ถ้า object ที่ส่งเข้าไปในฟังก์ชันมี key ครบทั้ง 4 ตัวคือ  `Alan`, `Jeff`, `Sarah` และ `Ryan` และคืนค่า false หากมั key ไม่ครบทั้ง 4 ตัว
+จงเขียนฟังก์ชัน `isEveryoneHere` เพื่อคืนค่าเป็น `true` ถ้า object ที่ส่งเข้าไปในฟังก์ชันมี key ครบทั้ง 4 ตัวคือ  `Alan`, `Jeff`, `Sarah` และ `Ryan` และคืนค่า false หากมี key ไม่ครบทั้ง 4 ตัว
 
 # --hints--
 

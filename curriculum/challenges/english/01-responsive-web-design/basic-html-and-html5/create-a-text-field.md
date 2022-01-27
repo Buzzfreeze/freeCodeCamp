@@ -9,25 +9,25 @@ dashedName: create-a-text-field
 
 # --description--
 
-ถึงตอนนี้ มาสร้างแบบฟอร์มให้กับเว็บเรากันเถอะ
+คราวนี้ มาสร้างแบบฟอร์มให้กับเว็บของเรากันเถอะ
 
 `input` element เป็นวิธีที่สะดวกมาก ๆ สำหรับการรับข้อมูลมาจากผู้ใช้ของคุณ
 
-คุณสามารถสร้าง text input ได้ดังนี้:
+คุณสามารถสร้างกล่องรับข้อความได้โดยใช้วิธีนี้:
 
 ```html
 <input type="text">
 ```
 
-จำไว้ว่า `input` elements เป็น self-closing.
+จะเห็นว่า `input` element เป็นแท็กแบบ self-closing (เป็นแท็กเปิดและปิดในตัวเอง)
 
 # --instructions--
 
-จงสร้าง `input` element ประเภท `text` ต่อจากลิสต์ของคุณ
+ให้สร้าง `input` element ที่มี type เป็น `text` ใต้ลิสต์ของคุณ
 
 # --hints--
 
-แอปของคุณควรมี `input` element ประเภท `text`
+แอปของคุณต้องมี `input` element ประเภท `text`
 
 ```js
 assert($('input[type=text]').length > 0);

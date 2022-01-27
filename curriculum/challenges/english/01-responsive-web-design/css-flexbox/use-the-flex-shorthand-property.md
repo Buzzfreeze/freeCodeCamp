@@ -2,52 +2,55 @@
 id: 587d78ae367417b2b2512afe
 title: Use the flex Shorthand Property
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pVaDAv/cbpW2tE'
+videoUrl: "https://scrimba.com/p/pVaDAv/cbpW2tE"
 forumTopicId: 301112
 dashedName: use-the-flex-shorthand-property
 ---
 
 # --description--
 
-มันมี shortcut (กำหนด flex property แบบสั้นๆ) สำหรับการกำหนด flex property หลาย ๆ อันในครั้งเดียวทั้ง
-`flex-grow`, `flex-shrink`, และ `flex-basis` properties สามารถถูกกำหนดค่าพร้อมกันทั้งหมดได้ด้วย `flex` property ดังตัวอย่างด้านล่าง
+เรามีทางลัดที่ใช้กำหนด property หลายตัวได้ในบรรทัดเดียวมาสอน
 
-ยกตัวอย่างเช่น, `flex: 1 0 10px;` จะกำหนดค่าให้ item มี `flex-grow: 1;`, `flex-shrink: 0;`, และ `flex-basis: 10px;`
+เราสามารถกำหนดค่าของ `flex-grow`, `flex-shrink`, และ `flex-basis` ได้พร้อมกัน โดยใช้ property `flex` แค่ตัวเดียว
 
-ค่าเริ่มต้นของ property คือ `flex: 0 1 auto;`
+เช่น `flex: 1 0 10px;` จะกำหนดค่าให้ item ตามนี้ `flex-grow: 1;`, `flex-shrink: 0;`, และ `flex-basis: 10px;`
+
+โดยค่าเริ่มต้นของ property นี้คือ `flex: 0 1 auto;`
 
 # --instructions--
 
-จงเพิ่ม CSS property `flex` ให้กับทั้ง `#box-1` และ `#box-2`
-จงกำหนดให้ `#box-1` มี `flex-grow` เท่ากับ `2`, `flex-shrink` เท่ากับ `2`,และ `flex-basis` เท่ากับ `150px`
-จงกำหนดให้ `#box-2` มี `flex-grow` เท่ากับ `1`, `flex-shrink` เท่ากับ `1`,และ `flex-basis` เท่ากับ `150px`
+ให้เพิ่ม CSS property `flex` ให้กับทั้ง `#box-1` และ `#box-2`
+โดยกำหนดให้ `#box-1` มี `flex-grow` เป็น `2`, `flex-shrink` เป็น `2`, และ `flex-basis` เป็น `150px`
+และกำหนดให้ `#box-2` มี `flex-grow` เป็น `1`, `flex-shrink` เป็น `1`, และ `flex-basis` เป็น `150px`
 
-ค่าเหล่านี้จะทำให้ `#box-1` ขยายจนมีขนาดเป็นสองเท่าของ `#box-2` เมื่อ container มีขนาดมากกว่า 300px และหดลงด้วยอัตราที่มากกว่า `#box-2` อยู่สองเท่าเมื่อ container มีขนาดเล็กกว่าา 300px
-300px เป็นขนาดรวมของค่า `flex-basis`ของทั้ง 2 กล่อง
+ค่าเหล่านี้จะทำให้ `#box-1` ขยายจนมีขนาดเป็นสองเท่าของ `#box-2` เมื่อ container มีขนาดมากกว่า 300px
+และหดลงมากกว่า `#box-2` สองเท่าเมื่อ container มีขนาดเล็กกว่าา 300px
+
+โดย 300px นี้ เป็นขนาดรวมของ `flex-basis` ของทั้ง 2 กล่อง
 
 # --hints--
 
-`#box-1` element ควรมี `flex` property ทีถูกกำหนดค่าให้เท่ากับ `2 2 150px`
+`#box-1` ต้องมีค่าของ property `flex` property เป็น `2 2 150px`
 
 ```js
 assert(
-  $('#box-1').css('flex-grow') == '2' &&
-    $('#box-1').css('flex-shrink') == '2' &&
-    $('#box-1').css('flex-basis') == '150px',
+  $("#box-1").css("flex-grow") == "2" &&
+    $("#box-1").css("flex-shrink") == "2" &&
+    $("#box-1").css("flex-basis") == "150px"
 );
 ```
 
-The `#box-2` element should have the `flex` property set to a value of `1 1 150px`.
+`#box-2` ต้องมีค่าของ property `flex` property เป็น `1 1 150px`
 
 ```js
 assert(
-  $('#box-2').css('flex-grow') == '1' &&
-    $('#box-2').css('flex-shrink') == '1' &&
-    $('#box-2').css('flex-basis') == '150px',
+  $("#box-2").css("flex-grow") == "1" &&
+    $("#box-2").css("flex-shrink") == "1" &&
+    $("#box-2").css("flex-basis") == "150px"
 );
 ```
 
-Your code should use the `flex` property for `#box-1` and `#box-2`.
+ต้องใช้ property `flex` เพื่อกำหนดค่าให้ `#box-1` และ `#box-2`
 
 ```js
 assert(code.match(/flex:\s*?\d\s+?\d\s+?150px;/g).length == 2);

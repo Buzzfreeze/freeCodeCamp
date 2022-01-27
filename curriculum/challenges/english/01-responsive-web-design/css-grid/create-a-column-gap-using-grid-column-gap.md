@@ -2,33 +2,38 @@
 id: 5a9036ee38fddaf9a66b5d35
 title: Create a Column Gap Using grid-column-gap
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pByETK/cVZ8vfD'
+videoUrl: "https://scrimba.com/p/pByETK/cVZ8vfD"
 forumTopicId: 301124
 dashedName: create-a-column-gap-using-grid-column-gap
 ---
 
 # --description--
 
-ถึงตอนนี้ในกริดที่คุณสร้างขึ้นมา, ทุกคอลัมน์ได้ทุกบีบให้ชิดกัน
-บางครั้ง คุณก็ต้องการช่องว่างระหว่างคอลัมน์
-จงใช้ `grid-column-gap` property เพื่อที่จะเพิ่มช่องว่างระหว่างคอลัมน์ ดังต่อไปนี้:
+ตอนนี้ทุกคอลัมน์ใน grid ที่คุณสร้างมาจะอยู่ชิดกันหมดเลย
+ถ้าอยากให้แต่ละคอลัมน์มีช่องว่างระหว่างกัน คุณต้องใช้ property `grid-column-gap`  
+
+ลองดูตัวอย่าง:
 
 ```css
 grid-column-gap: 10px;
 ```
 
-โค้ดนี้จะสร้างช่องว่างระหว่างคอลัมน์ขนาด 10px ให้กับทุกคอลัมน์
+โค้ดนี้จะสร้างช่องว่างขนาด 10px ระหว่างทุกคอลัมน์
 
 # --instructions--
 
-จงกำหนดให้คอลัมน์ในกริดมีขนาดช่องว่างกว้าง `20px`
+ให้กำหนดขนาดช่องว่างระหว่างคอลัมน์ของ grid เป็น `20px`
 
 # --hints--
 
-`container` class ควรมี `grid-column-gap` property อันหนึ่งที่มีค่า `20px`
+คลาส `container` ต้องมีค่าของ property `grid-column-gap` เป็น `20px`
 
 ```js
-assert(code.match(/.container\s*?{[\s\S]*grid-column-gap\s*?:\s*?20px\s*?;[\s\S]*}/gi));
+assert(
+  code.match(
+    /.container\s*?{[\s\S]*grid-column-gap\s*?:\s*?20px\s*?;[\s\S]*}/gi
+  )
+);
 ```
 
 # --seed--
@@ -61,9 +66,9 @@ assert(code.match(/.container\s*?{[\s\S]*grid-column-gap\s*?:\s*?20px\s*?;[\s\S]
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    /* Only change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
 
-    /* Only change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
   }
 </style>
 

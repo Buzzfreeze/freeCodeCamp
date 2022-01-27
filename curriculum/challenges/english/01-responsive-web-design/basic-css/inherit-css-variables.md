@@ -2,33 +2,35 @@
 id: 5a9d7295424fe3d0e10cad14
 title: Inherit CSS Variables
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cyLZZhZ'
+videoUrl: "https://scrimba.com/c/cyLZZhZ"
 forumTopicId: 301088
 dashedName: inherit-css-variables
 ---
 
 # --description--
 
-เมื่อคุณสร้างตัวแปร มันเป็นไปได้ที่คุณจะใช้ใน selector ที่คุณได้สร้างมันขึ้นมา
-มันยังเป็นไปได้ที่ตัวแปรนี้จะถูกใช้กับลูกหลานของ selector นั้น
-ที่เป็นเช่นนี้เพราะตัวแปร CSS จะได้ถูกถ่ายถอด เหมือนกับ property ทั่ว ๆ ไป
+เมื่อคุณสร้างตัวแปรขึ้นมาแล้ว คุณก็จะเอาไปใช้ใน CSS selector ได้ด้วย
+และตัวแปรนี้ก็ยังเอาไปใช้ในลูกหลานของ selector นั้นได้ด้วย
+ที่เป็นแบบนี้ก็เพราะตัวแปร CSS ก็ถูกถ่ายทอดได้ เหมือนกับ property ทั่วๆไป
 
-เพื่อทำให้การถ่ายถอดแบบนี้เกิดประโยชน์ ตัวแปร CSS มันจะถูกประกาศใน <dfn>:root</dfn> element.
+ปกติแล้ว ในการใช้ประโยชน์จากการถ่ายทอด ตัวแปร CSS มักจะถูกประกาศใน <dfn>:root</dfn> element
 
-`:root` เป็น <dfn>pseudo-class</dfn> selector ที่จะจับคู่กับ root element ของเอกสาร หรือปกติก็คือ `html` element
-การสร้างตัแปรไว้ที่ `:root`, จะทำให้พวกมันสามารถใช้งานได้ทุกที่และสามารถเข้าถึงได้โดย selector ตัวอื่นๆ ใน style sheet.
+`:root` เป็น <dfn>pseudo-class</dfn> selector ที่จะจับคู่กับ root element (element บนสุด) ของไฟล์ หรือปกติก็คือ `html` element
+การสร้างตัวแปรไว้ที่ `:root` จะทำให้สามารถเข้าถึงตัวแปรได้ทุกที่ รวมถึง selector ตัวอื่นๆใน stylesheet ด้วย
 
 # --instructions--
 
-จงสร้างตัวแปรที่ชื่อ`--penguin-belly` ไว้ใน `:root` selector และกำหนดให้มันมีค่าเป็น `pink`
-คุณจะเห็นได้ว่าตัวแปรตัวนั้นถูกถ่ายถอดและ child element ทั้งหมดที่ใช้มันจะมีสีชมพู
+ให้สร้างตัวแปรที่ชื่อ `--penguin-belly` ไว้ใน `:root` selector และกำหนดให้มีค่าเป็น `pink`
+คุณจะเห็นว่าตัวแปรตัวนั้นจะถูกส่งต่อไปยัง child element และทุกๆที่ ที่ใช้ตัวแปรนั้นก็จะมีสีชมพู
 
 # --hints--
 
-ตัวแปร `--penguin-belly` ควรถูกประกาศไว้ใน `:root` และถูกกำหนดค่าให้เป็น `pink`
+ต้องประกาศตัวแปร `--penguin-belly` ไว้ใน `:root` และตัวแปรนี้ต้องมีค่าเป็น `pink`
 
 ```js
-assert(code.match(/:root\s*?{[\s\S]*--penguin-belly\s*?:\s*?pink\s*?;[\s\S]*}/gi));
+assert(
+  code.match(/:root\s*?{[\s\S]*--penguin-belly\s*?:\s*?pink\s*?;[\s\S]*}/gi)
+);
 ```
 
 # --seed--
@@ -38,9 +40,9 @@ assert(code.match(/:root\s*?{[\s\S]*--penguin-belly\s*?:\s*?pink\s*?;[\s\S]*}/gi
 ```html
 <style>
   :root {
-    /* Only change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
 
-    /* Only change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
   }
 
   body {

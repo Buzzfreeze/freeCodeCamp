@@ -8,10 +8,10 @@ dashedName: complete-a-promise-with-resolve-and-reject
 
 # --description--
 
-promise นั้นมีสามสถานะ `pending`, `fulfilled` และ `rejected` 
-promise ที่คุณสร้างไปในบทที่แล้วจะอยู่ในสถานะ `pending` เพราะคุณยังไม่ได้ทำให้ promise เสร็จสิ้น
-พารามิเตอร์ `resolve` และ `reject` ที่ให้เป็น argument ของ promise จะถูกใช้ตามนี้ 
-เราจะใช้ `resolve` ถ้าต้องการให้ promise สำเร็จ และใช้ `reject` ถ้าต้องการให้ promise นั้นล้มเหลว 
+promise นั้นมีสามสถานะ `pending`, `fulfilled` และ `rejected`  
+promise ที่คุณสร้างไปในบทที่แล้วจะอยู่ในสถานะ `pending` เพราะคุณยังไม่ได้ทำให้ promise เสร็จสิ้น  
+พารามิเตอร์ `resolve` และ `reject` ที่ให้เป็น argument ของ promise จะถูกใช้ตามนี้  
+เราจะใช้ `resolve` ถ้าต้องการให้ promise สำเร็จ และใช้ `reject` ถ้าต้องการให้ promise นั้นล้มเหลว  
 โดย method สองตัวนี้จะรับค่า argument ตามตัวอย่างด้านล่าง:
 
 ```js

@@ -9,7 +9,8 @@ dashedName: comparison-with-the-strict-inequality-operator
 
 # --description--
 
-strict inequality operator (`!==`) นั้นตรงข้ามกับ strict equality operator (`===`) เลย เช่น ถ้าใช้ `!==` แล้วได้ผลลัพธ์เป็น `false` แล้วเอาข้อมูลเดียวกันมาใช้กับ `===` จะได้ค่า `true` แทน แล้วก็ strict inequality operator (`!==`) จะเหมือนกับ `===` ตรงที่จะไม่แปลงประเภทข้อมูลให้
+strict inequality operator (`!==`) นั้นตรงข้ามกับ strict equality operator (`===`) เลย  
+เช่น ถ้าใช้ `!==` แล้วได้ผลลัพธ์เป็น `false` แล้วเอาข้อมูลเดียวกันมาใช้กับ `===` จะได้ค่า `true` แทน แล้วก็ strict inequality operator (`!==`) จะเหมือนกับ `===` ตรงที่จะไม่แปลงประเภทข้อมูลให้
 
 
 **Examples**

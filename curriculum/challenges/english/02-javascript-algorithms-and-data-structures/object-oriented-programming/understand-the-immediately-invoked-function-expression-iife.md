@@ -32,7 +32,7 @@ dashedName: understand-the-immediately-invoked-function-expression-iife
 assert(/\((function|\(\))(=>|\(\)){?/.test(code.replace(/\s/g, '')));
 ```
 
-ฟังก์ชันขที่เขียนต้องมี () ต่อท้ายการประกาศฟังก์ชัน เพื่อให้ฟังก์ชันทำงานทันที
+ฟังก์ชันที่เขียนต้องมี () ต่อท้ายการประกาศฟังก์ชัน เพื่อให้ฟังก์ชันทำงานทันที
 
 ```js
 assert(/\(.*(\)\(|\}\(\))\)/.test(code.replace(/[\s;]/g, '')));

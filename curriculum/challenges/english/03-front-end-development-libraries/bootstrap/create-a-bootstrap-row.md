@@ -37,7 +37,7 @@ assert($('div').hasClass('row'));
 assert($('div.container-fluid div.row').length > 0);
 ```
 
-อย่าลืม tag ปิดของ `div` ด้วย
+อย่าลืมแท็กปิดของ `div` ด้วย
 
 ```js
 assert(

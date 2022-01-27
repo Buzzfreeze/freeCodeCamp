@@ -8,11 +8,11 @@ dashedName: create-a-component-with-composition
 
 # --description--
 
-ตอนนี้เรามาดูว่าเราจะสามารถประกอบ React component หลายๆตัวเข้าด้วยกันได้อย่างไร 
+ตอนนี้เรามาดูว่าเราจะสามารถประกอบ React component หลายๆตัวเข้าด้วยกันได้อย่างไร  
 ลองคิดดูว่าถ้าคุณกำลังทำแอปและได้สร้าง component 3 ตัวคือ: `Navbar`, `Dashboard`, และ `Footer`
 
-ในการรวม component นี้เข้าด้วยกัน เราจะสร้าง *parent* component ชื่อ `App` ที่มี component 3 ตัวนี้เป็น *children* 
-ซึ่งวิธีการคือการเขียนแท็ก HTML ที่มีชื่อของแท็กเป็นชื่อของ children component นั้นไว้ใน parent
+ในการรวม component นี้เข้าด้วยกัน เราจะสร้าง *parent* component ชื่อ `App` ที่มี component 3 ตัวนี้เป็น *children*  
+ซึ่งวิธีการคือการเขียนแท็ก HTML ที่มีชื่อของแท็กเป็นชื่อของ children component นั้นไว้ใน parent  
 เช่น ใน method `render` นี้ เราจะเขียนเป็น:
 
 ```jsx
@@ -25,15 +25,15 @@ return (
 )
 ```
 
-เมื่อ React เห็นแท็ก HTML ที่ไปเรียก component อื่น (component ที่อยู่ใน `< />`) React จะเรนเดอร์ข้อมูลของ component นั้นในตำแหน่งที่เราวางแท็กนั้นไว้ 
+เมื่อ React เห็นแท็ก HTML ที่ไปเรียก component อื่น (component ที่อยู่ใน `< />`) React จะเรนเดอร์ข้อมูลของ component นั้นในตำแหน่งที่เราวางแท็กนั้นไว้  
 ตัวอย่างนี้จะแสดงให้เราเห็นความเป็น parent/child ของ `App` กับ `Navbar`, `Dashboard`, และ `Footer`
 
 # --instructions--
 
-ใน code editor มี component สั้นๆที่ชื่อ `ChildComponent` และ class component ที่ชื่อ `ParentComponent` 
+ใน code editor มี component สั้นๆที่ชื่อ `ChildComponent` และ class component ที่ชื่อ `ParentComponent`  
 ให้นำ `ChildComponent` ไปไว้ใน `ParentComponent` และอย่าลืมปิดแท็กของ `ChildComponent` ด้วย `\`
 
-**Note:** เราจะเห็นว่า `ChildComponent` ถูกสร้างด้วย arrow function ของ ES6 และการใช้วิธีนี้ก็เป็นเรื่องปกติใน React
+**Note:** เราจะเห็นว่า `ChildComponent` ถูกสร้างด้วย arrow function ของ ES6 และการใช้วิธีนี้ก็เป็นเรื่องปกติใน React  
 แต่ถ้าคุณยังไม่รู้จักกับ arrow function ให้ลองไปดูที่บทเรียนเรื่อง JavaScript เพื่อทำความเข้าใจส่วนนี้ก่อน
 
 # --hints--

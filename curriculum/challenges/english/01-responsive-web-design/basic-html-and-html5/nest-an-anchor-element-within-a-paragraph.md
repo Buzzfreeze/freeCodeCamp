@@ -8,66 +8,69 @@ dashedName: nest-an-anchor-element-within-a-paragraph
 
 # --description--
 
-คุณสามารถเก็บลิงค์ไว้ใน text elements อื่น ๆ ได้
+คุณสามารถซ้อนลิงก์ไว้ใน element ที่เป็นข้อความได้ด้วย 
+
+แบบนี้:
 
 ```html
 <p>
-  Here's a <a target="_blank" href="https://www.freecodecamp.org"> link to www.freecodecamp.org</a> for you to follow.
+  Here's a <a target="_blank" href="https://www.careervio.com"> link to www.careervio.com</a> for you to follow.
 </p>
 ```
 
 เรามาค่อย ๆ ดูตัวอย่างนี้กันดีกว่า
-Normal text จะถูกเก็บไว้ใน `p` element:
+เราจะเริ่มจากใส่ข้อความไว้ใน `p` element ก่อน:
 
 ```html
 <p>Here's a ... for you to follow.</p>
 ```
 
-ถัดมาคือ _anchor_ element `<a>` (ซึ่งจำเป็นตัวมีแท็กปิด `</a>`):
+จากนั้นก็สร้าง _anchor_ element `<a>` (ซึ่งจำเป็นต้องมีแท็กปิด `</a>`):
 
 ```html
 <a> ... </a>
 ```
 
-`target` เป็น anchor tag attribute ที่จะระบุตำแหน่งที่จะเปิดลิงค์
-ค่า `_blank` เป็นการบอกให้เปิดลิงค์ในแท็บใหม่
-`href` เป็น anchor tag attribute ที่จะเก็บ URL address ของลิงค์นั้นไว้:
+`target` เป็น attribute ของแท็ก a ที่จะระบุตำแหน่งที่จะเปิดลิงก์
+โดยค่า `_blank` เป็นการบอกให้เปิดลิงก์ในแท็บใหม่
+
+`href` เป็น attribute ของแท็ก a ที่เป็น URL ของลิงก์นั้น:
 
 ```html
-<a href="https://www.freecodecamp.org" target="_blank"> ... </a>
+<a href="https://www.careervio.com" target="_blank"> ... </a>
 ```
 
-ข้อความ `link to www.freecodecamp.org` ที่อยู่ใน `a` element นั้นถูกเรียกว่า <dfn>anchor text</dfn> และจะแสดงลิงค์ที่ให้คลิก:
+ข้อความ `link to www.careervio.com` ที่อยู่ใน `a` element จะเรียกว่า <dfn>anchor text</dfn> ซึ่งจะเป็นลิงก์ที่คลิกได้:
 
 ```html
-<a href=" ... " target="...">link to freecodecamp.org</a>
+<a href=" ... " target="...">link to careervio.com</a>
 ```
 
-output สุดท้ายของตัวอย่างจะมีหน้าตาประมาณนี้:
+ซึ่งถ้าเขียนโค้ดตามตัวอย่างด้านบน จะมีหน้าตาประมาณนี้:
 
-Here's a <a href="https://www.freecodecamp.org" target="_blank">link to www.freecodecamp.org</a> for you to follow.
+Here's a <a href="https://www.careervio.com" target="_blank">link to www.careervio.com</a> for you to follow.
 
 # --instructions--
 
-จงเก็บ `a` element ไว้ใน `p` element อันใหม่
-ห้ามสร้าง anchor tag อันใหม่
-พารากราฟอันใหม่ควรจะมีข้อความที่เขียนว่า `View more cat photos`, โดย `cat photos` จะเป็นลิงค์และส่วนที่เหลือก็เป็นข้อความปกติ
+ให้ซ้อน `a` element ไว้ใน `p` element อันใหม่
+โดยไม่ต้องสร้างแท็ก a อันใหม่
+พารากราฟอันใหม่ต้องจะมีข้อความที่เขียนว่า `View more cat photos` โดย `cat photos` จะเป็นลิงก์ และส่วนที่เหลือก็เป็นข้อความปกติ
 
 # --hints--
 
-คุณควรมีแค่ `a` 1 element
+ในเว็บของคุณต้องมี `a` element แค่หนึ่งตัว
 
 ```js
 assert($('a').length === 1);
 ```
 
-`a` element ควรลิงค์ไปที่ "`https://www.freecatphotoapp.com`"
+`a` element ต้องลิงก์ไปที่ "`https://www.freecatphotoapp.com`"
 
 ```js
 assert($('a[href="https://www.freecatphotoapp.com"]').length === 1);
 ```
 
-`a` element ควรมี anchor text เป็น `cat photos`
+`a` element ต้องมี anchor text เป็น `cat photos`
 
 ```js
 assert(
@@ -77,19 +80,19 @@ assert(
 );
 ```
 
-คุรควรสร้าง `p` element ใหม่มา 1 element โดยตอนนี้ ควรมี `p` tag อย่างน้อย 3 element ใน HTML code ของคุณ
+ต้องสร้าง `p` element ใหม่มา 1 ตัว โดยตอนนี้ในโค้ด HTML ของคุณต้องมีแท็ก `p` อย่างน้อย 3 ตัว
 
 ```js
 assert($('p') && $('p').length > 2);
 ```
 
-`a` element ควรถูกใส่ไว้ใน `p` element อันใหม่
+`a` element ต้องอยู่ใน `p` element อันใหม่ที่เพิ่งสร้าง
 
 ```js
 assert($('a[href="https://www.freecatphotoapp.com"]').parent().is('p'));
 ```
 
-`p` element ควรมีข้อความที่เขียนว่า `View more ` (พร้อมกับช่องไฟข้างหลังมัน).
+ใน `p` element ต้องมีข้อความ `View more ` (โดยมีเว้นวรรคหลังคำว่า more)
 
 ```js
 assert(
@@ -100,7 +103,7 @@ assert(
 );
 ```
 
-`a` element <em>ไม่ควร</em> มีข้อความที่เขียนว่า `View more`.
+ต้อง<em>ไม่มี</em>คำว่า `View more` ใน `a` element 
 
 ```js
 assert(
@@ -110,13 +113,13 @@ assert(
 );
 ```
 
-`p` element แต่ละอันของคุณควรจะมีแท็กปิด
+`p` element ทุกตัวต้องมีแท็กปิด
 
 ```js
 assert(code.match(/<\/p>/g) && code.match(/<p/g) && code.match(/<\/p>/g).length === code.match(/<p/g).length);
 ```
 
-`a` element แต่ละอันของคุณควรมีแท็กปิด
+`a` element ทุกตัวต้องมีแท็กปิด
 
 ```js
 assert(code.match(/<\/a>/g) && code.match(/<a/g) && code.match(/<\/a>/g).length === code.match(/<a/g).length);

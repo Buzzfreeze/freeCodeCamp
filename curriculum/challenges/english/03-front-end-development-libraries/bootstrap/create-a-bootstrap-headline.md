@@ -24,7 +24,7 @@ dashedName: create-a-bootstrap-headline
 assert($('h3') && $('h3').length > 0);
 ```
 
-อย่าลืม tag ปิดของ `h3` element
+อย่าลืมแท็กปิดของ `h3` element
 
 ```js
 assert(

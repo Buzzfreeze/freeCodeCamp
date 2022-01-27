@@ -2,22 +2,23 @@
 id: bad87dee1348bd9aede07836
 title: Use an id Attribute to Style an Element
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cakyZfL'
+videoUrl: "https://scrimba.com/c/cakyZfL"
 forumTopicId: 18339
 dashedName: use-an-id-attribute-to-style-an-element
 ---
 
 # --description--
 
-สิ่งหนึ่งที่ทำให้ `id` attributes มันเจ๋งมาก ๆ ก็คือคุณสามารถตกแต่งมันด้วย CSS ได้เหมือนกับ class
+อย่างหนึ่งที่ทำให้ `id` attribute เจ๋งมาก ๆ ก็คือ คุณจะใช้ `id` เพื่อตกแต่ง CSS ได้เหมือนกับคลาสเลย
 
-อย่างไรก็ตาม, `id` ไม่สามารถใช้ซ้ำได้และควรใช้แค่กับ element เดียวเท่านั้น
-`id` ยังมีความสำคัญมากกว่า class
-ดังนั้นถ้าทั้งคู่ถูกใช้พร้อมกันที่ element เดียวกัน
-styles ของ `id` จะถูกใช้งาน
+อย่าลืมว่า `id` ไม่สามารถใช้ซ้ำได้ และต้องใช้แค่กับ element เดียวเท่านั้น
+และการตกแต่ง element นั้น style ของ `id` จะถูกให้ความสำคัญมากกว่า style ของคลาส
+ดังนั้นถ้า เราใช้ทั้ง style ของ id และคลาสใน element เดียวกัน
+style ของ `id` จะถูกใช้งาน
 
-นี่คือตัวอย่างของวิธีที่คุณเรียก element หนึ่งที่มี `id` attribute เป็น `cat-photo-element` และกำหนดให้มันมีสีพื้นหลังเป็นสีเขียว
-นี่คือ `style` element:
+ลองดูตัวอย่างการแต่ง element ที่มี `id` เป็น `cat-photo-element` โดยกำหนดให้พื้นหลังเป็นสีเขียว
+
+จะใช้โค้ดใน `style` element แบบนี้:
 
 ```css
 #cat-photo-element {
@@ -25,33 +26,37 @@ styles ของ `id` จะถูกใช้งาน
 }
 ```
 
-จงจำไว้ว่าภายใน `style` element ของคุณ, คุณสามารถอ้างอิง class โดยใส่ `.` ไปที่ด้านหน้าของชื่อพวกมัน
+ถ้ายังจำได้ ใน `style` element ของคุณ คุณจะประกาศคลาสได้โดยใส่ `.` ไว้หน้าชื่อคลาส
+แต่ในการประกาศ style ของ id คุณจะต้องใส่ `#` ไว้หน้า id แทน
 
 # --instructions--
 
-ลองกำหนดแบบฟอร์มที่ตอนนี้มี `id` attribute เป็น `cat-photo-form`, ให้มีพื้นหลังสีเขียว
+ให้เปลี่ยนพื้นหลังของแบบฟอร์มที่มี `id` เป็น `cat-photo-form` ให้เป็นพื้นหลังสีเขียว
 
 # --hints--
 
-`form` element ควรมี id เป็น `cat-photo-form`.
+`form` element ต้องมี id เป็น `cat-photo-form`
 
 ```js
-assert($('form').attr('id') === 'cat-photo-form');
+assert($("form").attr("id") === "cat-photo-form");
 ```
 
-`form` element ควรมี `background-color` เป็นสีเขียว
+`background-color` ของ `form` ต้องเป็น `green`
 
 ```js
-assert($('#cat-photo-form').css('background-color') === 'rgb(0, 128, 0)');
+assert($("#cat-photo-form").css("background-color") === "rgb(0, 128, 0)");
 ```
 
-`form` element ควรมี `id` attribute อันหนึ่ง
+`form` ต้องมี `id` attribute
 
 ```js
-assert(code.match(/<form.*cat-photo-form.*>/gi) && code.match(/<form.*cat-photo-form.*>/gi).length > 0);
+assert(
+  code.match(/<form.*cat-photo-form.*>/gi) &&
+    code.match(/<form.*cat-photo-form.*>/gi).length > 0
+);
 ```
 
-คุณไม่ควรกำหนดให้ `form` มี `class` หรือ `style` attributes อะไรก็ตาม
+`form` ต้องไม่มี attribute `class` และ `style`
 
 ```js
 assert(!code.match(/<form.*style.*>/gi) && !code.match(/<form.*class.*>/gi));
@@ -62,7 +67,11 @@ assert(!code.match(/<form.*style.*>/gi) && !code.match(/<form.*class.*>/gi));
 ## --seed-contents--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   .red-text {
     color: red;
@@ -119,7 +128,10 @@ assert(!code.match(/<form.*style.*>/gi) && !code.match(/<form.*class.*>/gi));
     </ol>
   </div>
 
-  <form action="https://freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
+  <form
+    action="https://freecatphotoapp.com/submit-cat-photo"
+    id="cat-photo-form"
+  >
     <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
     <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
     <label><input type="checkbox" name="personality" checked /> Loving</label>
@@ -134,7 +146,11 @@ assert(!code.match(/<form.*style.*>/gi) && !code.match(/<form.*class.*>/gi));
 # --solutions--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   .red-text {
     color: red;
@@ -195,7 +211,10 @@ assert(!code.match(/<form.*style.*>/gi) && !code.match(/<form.*class.*>/gi));
     </ol>
   </div>
 
-  <form action="https://freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
+  <form
+    action="https://freecatphotoapp.com/submit-cat-photo"
+    id="cat-photo-form"
+  >
     <label><input type="radio" name="indoor-outdoor" checked /> Indoor</label>
     <label><input type="radio" name="indoor-outdoor" /> Outdoor</label><br />
     <label><input type="checkbox" name="personality" checked /> Loving</label>

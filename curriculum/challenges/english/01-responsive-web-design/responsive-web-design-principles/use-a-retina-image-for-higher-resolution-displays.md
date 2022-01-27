@@ -2,20 +2,22 @@
 id: 587d78b1367417b2b2512b0a
 title: Use a Retina Image for Higher Resolution Displays
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pzrPu4/cVZ4Rfp'
+videoUrl: "https://scrimba.com/p/pzrPu4/cVZ4Rfp"
 forumTopicId: 301142
 dashedName: use-a-retina-image-for-higher-resolution-displays
 ---
 
 # --description--
 
-เนื่องจากอุปกรณ์ที่เชื่อมต่อกับอินเตอร์ได้มีมากขึ้น ขนาดและสเปคของอุปกรณ์จึงค่อนข้างหลากหลายและการแสดงผลที่พวกเขาใช้อาจจะมีความแตกต่างกันได้
-Pixel density เป็นส่วนที่อาจจะแตกต่างกันได้ในแต่ละอุปกรณ์และ density ที่ว่านี้เป็นที่รู้จักกันในชื่อ Pixel Per Inch(PPI) หรือ Dots Per Inch(DPI)
-หน้าจอที่เป็นที่รู้จักกันมากที่สุดอันหนึ่งคือ "Retina Display" ของApple MacBook Pro notebooks รุ่นล่าสุดและ iMac computers ทีพึ่งออกมา
-เนื่องจากความแตกต่างของ pixel density ระหว่างจอแบบ "Retina" และ "Non-Retina", รูปภาพบางรูปที่ไม่ได้ตั้งใจให้ใช้กับจอที่มีความละเอียดสูงอาจจะดู "pixelated" เมื่อแสดงผลบนจอที่มีความละเอียดสูง
+ปัจจุบันนี้โลกเรามีอุปกรณ์ที่ใช้เข้าเว็บได้มากขึ้น โดยอุปกรณ์พวกนี้จะมีขนาดแตกต่างกันมาก
 
-วิธีที่ง่ายที่สุดที่จะทำให้รูปภาพของคุณแสดงบนจอที่มีความละเอียดสูงได้อย่างไม่มีปัญหา คือการกำหนดค่า `width` และ `height` ของพวกมันมีค่าแค่ครึ่งเดียวของ original file
-นี่คือตัวอย่างของรูปภาพที่มีความสูงและความกว้างครึ่งเดียวจากขนาด original ของมัน:
+Pixel density (ความหนาแน่นของพิกเซล) ของแต่ละอุปกรณ์จะแตกต่างกัน โดยเราอาจจะคุ้นเคยกับค่านี้ในชื่อ Pixel Per Inch (PPI: พิกเซลต่อนิ้ว) หรือ Dots Per Inch (DPI:จำนวนจุดสีต่อนิ้ว)
+
+หน้าจอที่เป็นที่รู้จักกันมากที่สุดอันหนึ่งคือ "Retina Display" ของ Apple ที่ใช้ในทั้ง Apple Watch, iPhone, iPad, Macbook รุ่นใหม่ๆ
+จอแบบ Retina Display นี้จะมี pixel density ต่างจากจอปกติอย่างมาก ทำให้รูปบางรูปของเราอาจ "แตก" เมื่อใช้บนจอนี้
+
+วิธีที่ง่ายที่สุดที่จะทำให้รูปของคุณไม่แตกถ้าดูบนจอที่มีความละเอียดสูง คือการกำหนดค่า `width` และ `height` ของรูปให้เป็นแค่ครึ่งเดียวของไฟล์ต้นฉบับ
+ลองดูตัวอย่าง:
 
 ```html
 <style>
@@ -29,21 +31,21 @@ Pixel density เป็นส่วนที่อาจจะแตกต่า
 
 # --instructions--
 
-จงกำหนดให้ `width` และ `height` ของ `img` tag มีค่าแค่ครึ่งหนึ่งของค่า original ของมัน
+ให้กำหนด `width` และ `height` ของแท็ก `img` ให้มีขนาดแค่ครึ่งเดียวของรูปต้นฉบับ
 ในกรณีนี้ `height` และ `width` ของรูปต้นฉบับคือ `200px`
 
 # --hints--
 
-`img` tag ของคุณควรมีค่า `width` เท่ากับ 100 pixels.
+แท็ก `img` ต้องมี `width` เป็น 100 pixel
 
 ```js
-assert(document.querySelector('img').width === 100);
+assert(document.querySelector("img").width === 100);
 ```
 
-Your `img` tag should have a `height` of 100 pixels.
+แท็ก `img` ต้องมี `height` เป็น 100 pixel
 
 ```js
-assert(document.querySelector('img').height === 100);
+assert(document.querySelector("img").height === 100);
 ```
 
 # --seed--

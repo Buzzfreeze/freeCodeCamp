@@ -22,19 +22,19 @@ dashedName: reverse-a-string
 assert(typeof reverseString('hello') === 'string');
 ```
 
-การเรียกใช้ฟังก์ชัน `reverseString("hello")` ต้องได้ค่าเป็น string `olleh`.
+การเรียกใช้ฟังก์ชัน `reverseString("hello")` ต้องได้ค่าเป็น string `olleh`
 
 ```js
 assert(reverseString('hello') === 'olleh');
 ```
 
-การเรียกใช้ฟังก์ชัน `reverseString("Howdy")` ต้องได้ค่าเป็น string `ydwoH`.
+การเรียกใช้ฟังก์ชัน `reverseString("Howdy")` ต้องได้ค่าเป็น string `ydwoH`
 
 ```js
 assert(reverseString('Howdy') === 'ydwoH');
 ```
 
-การเรียกใช้ฟังก์ชัน `reverseString("Greetings from Earth")` ต้องได้ค่าเป็น string `htraE morf sgniteerG`.
+การเรียกใช้ฟังก์ชัน `reverseString("Greetings from Earth")` ต้องได้ค่าเป็น string `htraE morf sgniteerG`
 
 ```js
 assert(reverseString('Greetings from Earth') === 'htraE morf sgniteerG');

@@ -40,10 +40,10 @@ dashedName: create-a-complex-jsx-element
 
 ให้ใช้ `const` สร้างตัวแปร `JSX` ซึ่งจะเก็บ `div` ที่เป็น parent element และใน parent element นี้จะต้องมี child element ตามลำดับดังนี้:
 
-`h1`, `p`, และ unordered list (`ul`) ที่มี `li` 3 ตัว 
+`h1`, `p`, และ unordered list (`ul`) ที่มี `li` 3 ตัว  
 คุณจะใส่ข้อความอะไรก็ได้ใน element แต่ละอันที่เพิ่มมา
 
-**Note:** เวลาเราสร้าง element หลายๆตัวแบบนี้ เราจะใช้วงเล็บครอบ element ทั้งหมดได้ (แต่จะทำหรือไม่ก็ได้) 
+**Note:** เวลาเราสร้าง element หลายๆตัวแบบนี้ เราจะใช้วงเล็บครอบ element ทั้งหมดได้ (แต่จะทำหรือไม่ก็ได้)  
 แล้วก็จะเห็นว่าแบบทดสอบนี้ใช้ `div` ครอบ child element ทุกอันไว้ใน parent element เดียว ถ้าคุณลบ `div` ออก JSX ก็จะไม่สามารถ transpile ได้ ให้จำเรื่องนี้ไว้ให้ดีๆ เพราะต้องนำไปใช้เวลาที่จะต้องคืนค่าเป็น JSX element ใน React component
 
 # --hints--

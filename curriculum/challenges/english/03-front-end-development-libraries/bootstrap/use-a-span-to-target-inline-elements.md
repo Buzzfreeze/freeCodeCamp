@@ -8,7 +8,7 @@ dashedName: use-a-span-to-target-inline-elements
 
 # --description--
 
-คุณสามารถใช้ span ในการทำ inline element ได้นะ
+คุณสามารถใช้ span ในการทำ inline element ได้นะ  
 ยังจำตอนที่เราใช้ class `btn-block` เพื่อทำให้ปุ่มนั้นกว้างเต็มบรรทัดได้มั้ย?
 
 <button class='btn' style='background-color: rgb(0, 100, 0);  color: rgb(255, 255, 255);'>normal button</button>
@@ -53,7 +53,7 @@ assert(
 assert($('span').hasClass('text-danger'));
 ```
 
-อย่าลืม tag ปิดสำหรับ `span` element
+อย่าลืมแท็กปิดของ `span` element ด้วย
 
 ```js
 assert(

@@ -13,7 +13,7 @@ dashedName: truncate-a-string
 
 # --hints--
 
-การเรียกใช้ฟังก์ชัน `truncateString("A-tisket a-tasket A green and yellow basket", 8)` ต้องได้ค่าเป็น string `A-tisket...`.
+การเรียกใช้ฟังก์ชัน `truncateString("A-tisket a-tasket A green and yellow basket", 8)` ต้องได้ค่าเป็น string `A-tisket...`
 
 ```js
 assert(
@@ -22,7 +22,7 @@ assert(
 );
 ```
 
-การเรียกใช้ฟังก์ชัน `truncateString("Peter Piper picked a peck of pickled peppers", 11)` ต้องได้ค่าเป็น string `Peter Piper...`.
+การเรียกใช้ฟังก์ชัน `truncateString("Peter Piper picked a peck of pickled peppers", 11)` ต้องได้ค่าเป็น string `Peter Piper...`
 
 ```js
 assert(
@@ -31,7 +31,7 @@ assert(
 );
 ```
 
-การเรียกใช้ฟังก์ชัน `truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length)` ต้องได้ค่าเป็น string `A-tisket a-tasket A green and yellow basket`.
+การเรียกใช้ฟังก์ชัน `truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length)` ต้องได้ค่าเป็น string `A-tisket a-tasket A green and yellow basket`
 
 ```js
 assert(
@@ -42,7 +42,7 @@ assert(
 );
 ```
 
-การเรียกใช้ฟังก์ชัน `truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2)` ต้องได้ค่าเป็น string `A-tisket a-tasket A green and yellow basket`.
+การเรียกใช้ฟังก์ชัน `truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2)` ต้องได้ค่าเป็น string `A-tisket a-tasket A green and yellow basket`
 
 ```js
 assert(
@@ -53,13 +53,13 @@ assert(
 );
 ```
 
-การเรียกใช้ฟังก์ชัน `truncateString("A-", 1)` ต้องได้ค่าเป็น string `A...`.
+การเรียกใช้ฟังก์ชัน `truncateString("A-", 1)` ต้องได้ค่าเป็น string `A...`
 
 ```js
 assert(truncateString('A-', 1) === 'A...');
 ```
 
-การเรียกใช้ฟังก์ชัน `truncateString("Absolutely Longer", 2)` ต้องได้ค่าเป็น string `Ab...`.
+การเรียกใช้ฟังก์ชัน `truncateString("Absolutely Longer", 2)` ต้องได้ค่าเป็น string `Ab...`
 
 ```js
 assert(truncateString('Absolutely Longer', 2) === 'Ab...');

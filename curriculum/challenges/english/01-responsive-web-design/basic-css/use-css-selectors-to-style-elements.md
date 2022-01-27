@@ -2,27 +2,28 @@
 id: bad87fee1348bd9aedf08805
 title: Use CSS Selectors to Style Elements
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cJKMBT2'
+videoUrl: "https://scrimba.com/c/cJKMBT2"
 forumTopicId: 18349
 dashedName: use-css-selectors-to-style-elements
 ---
 
 # --description--
 
-มี CSS properties หลายรูปแบบที่คุณสามารถใช้เพื่อเปลี่ยนรูปร่างหน้าตาของ element ที่อยู่บนหน้าเว็บของคุณ
+CSS มี property เป็นร้อยๆตัวที่ใช้กำหนดรูปแบบหน้าตาของ element ที่อยู่บนหน้าเว็บของคุณ
 
-เมื่อคุณพิมพ์ `<h2 style="color: red;">CatPhotoApp</h2>`, คุณจะตกแต่ง `h2` element ด้วย inline CSS, ซึ่งย่อมาจาก Cascading Style Sheets
+ถ้าคุณใช้โค้ดนี้ `<h2 style="color: red;">CatPhotoApp</h2>`
+จะเป็นการตกแต่ง `h2` element โดยใช้ inline CSS (CSS ย่อมาจาก Cascading Style Sheets)
 
-นี่เป็นวิธีเพื่อระบุ style ของ element รูปแบบหนึ่ง, แต่มันยังมีวิธีที่ดีกว่าในการใช้ CSS
+โค้ดด้านบนเป็นตัวอย่างของการใช้ style กับ element รูปแบบหนึ่ง แต่ก็ยังมีอีกวิธีหนึ่งในการใช้ CSS ที่ดีกว่า
 
-ที่ด้านบนของโค้ด, จงสร้าง `style` block แบบนี้:
+ที่ด้านบนของโค้ดใน code editor ให้สร้าง `style` block แบบนี้:
 
 ```html
 <style></style>
 ```
 
-ภายใน style block อันนั้น คุณสามารถสร้าง <dfn>CSS selector</dfn> ให้กับ `h2` element ทั้งหมดได้
-ยกตัวอย่างเช่น ถ้าคุณต้องการให้ `h2` element ทั้งหมดเป็นสีแดง คุณสามารถเพิ่ม style rule อันหนึ่งเข้าไปแบบนี้ :
+โดยใน style block ที่เขียนมานี้ คุณจะเขียน <dfn>CSS selector</dfn> เพื่อให้ style มีผลกับ `h2` element ทุกตัวได้
+เช่น ถ้าคุณต้องการให้ `h2` element ทุกตัวเป็นสีแดง คุณจะเพิ่ม style rule เข้าไปแบบนี้ได้:
 
 ```html
 <style>
@@ -32,48 +33,53 @@ dashedName: use-css-selectors-to-style-elements
 </style>
 ```
 
-ควรรู้ไว้ว่า มันสำคัญมากที่จะใส่ทั้ง `{` และ `}` รอบ style rule ของแต่ละ element
-คุณยังจำเป็นต้องเช็คให้มั่นใจว่า style definition ของ element นั้นอยู่ระหว่างแท็กเปิดและปิดของ style tags
-สุดท้ายนี้ จงเช็คให้มั่นใจว่าได้เพิ่ม semicolon อันหนึ่งที่ด้านท้ายของแต่ละ style rules ของ element แล้ว
+สิ่งสำคัญคือ ต้องไม่ลืมที่จะใส่ `{` และ `}` ครอบ style rule ของแต่ละ element
+โดยที่การประกาศใช้ style แต่ละตัวของ element นั้น ต้องอยู่ใน `{` และ `}` ของ style ด้วย
+
+สุดท้าย ให้เติม semicolon (`;`) ต่อท้าย style rule ทุกตัวของ element ด้วย
 
 # --instructions--
 
-จงลบ style attribute ของ `h2` element และแทนที่ด้วยการสร้าง CSS `style` block
-จงเพิ่ม CSS ที่จำเป็นต่อการเปลี่ยน `h2` elements ทั้งหมดให้เป็นสีฟ้า
+ให้ลบ `style` attribute ของ `h2` ออก และเปลี่ยนไปใช้ CSS `style` block แทน
+และให้เขียน CSS ที่จะเปลี่ยนสีของข้อความใน `h2` element ทั้งหมดให้เป็นสีฟ้า
 
 # --hints--
 
-`style` attribute ควรถูกเอาออกจาก `h2` element
+ต้องลบ `style` ออกจาก `h2` element
 
 ```js
-assert(!$('h2').attr('style'));
+assert(!$("h2").attr("style"));
 ```
 
-คุณควรสร้าง `style` element อันหนึ่ง
+ต้องสร้าง `style` element ขึ้นมาหนึ่งตัว
 
 ```js
-assert($('style') && $('style').length >= 1);
+assert($("style") && $("style").length >= 1);
 ```
 
-`h2` element ควรมีสีฟ้า
+`color` ของ `h2` element ต้องเป็น `blue`
 
 ```js
-assert($('h2').css('color') === 'rgb(0, 0, 255)');
+assert($("h2").css("color") === "rgb(0, 0, 255)");
 ```
 
-stylesheet `h2` declaration ควรจะมี semicolon และ closing brace
+ต้องประกาศ style ของ `h2` โดยปิดด้วย `;` และ `}`
 
 ```js
 assert(code.match(/h2\s*\{\s*color\s*:.*;\s*\}/g));
 ```
 
-`style` elements ควรจะเขียนได้ถูกต้องและมีแท็กปิด
+ต้องมี `style` element และต้องมีแท็กปิดด้วย
 
 ```js
 assert(
   code.match(/<\/style>/g) &&
     code.match(/<\/style>/g).length ===
-      (code.match(/<style((\s)*((type|media|scoped|title|disabled)="[^"]*")?(\s)*)*>/g) || []).length,
+      (
+        code.match(
+          /<style((\s)*((type|media|scoped|title|disabled)="[^"]*")?(\s)*)*>/g
+        ) || []
+      ).length
 );
 ```
 

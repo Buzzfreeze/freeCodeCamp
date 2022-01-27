@@ -9,21 +9,21 @@ dashedName: make-circular-images-with-a-border-radius
 
 # --description--
 
-นอกเหนือจาก pixels, คุณสามารถระบุค่า `border-radius` โดยใช้เปอร์เซ็นได้
+คุณจะกำหนดค่าของ `border-radius` เป็นเปอร์เซ็นได้ด้วย
 
 # --instructions--
 
-จงกำหนดให้รูปแมวของคุณมี `border-radius` เป็น `50%`.
+จงกำหนดให้รูปน้องแมวของคุณมี `border-radius` เป็น `50%`
 
 # --hints--
 
-ภาพของคุณควรมี border radius ขนาด `50%`, ซึ่งทำให้มันเป็นวงรัศมี
+รูปน้องแมวต้องมี `border-radius` เป็น `50%` ซึ่งจะทำให้รูปน้องแมวเป็นวงกลม
 
 ```js
 assert(parseInt($('img').css('border-top-left-radius')) > 48);
 ```
 
-ค่าของ `border-radius` ควรระบุเป็นแบบเปอร์เซ็นโดยให้มีค่า `50%`
+ต้องระบุ `border-radius` เป็น `50%`
 
 ```js
 assert(code.match(/50%/g));

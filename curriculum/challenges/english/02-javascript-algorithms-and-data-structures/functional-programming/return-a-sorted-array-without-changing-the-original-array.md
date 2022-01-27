@@ -7,7 +7,7 @@ dashedName: return-a-sorted-array-without-changing-the-original-array
 ---
 
 # --description--
-side effect ของ method `sort` คือ method ฟังก์ชันนี้เรียงลำดับ element ใน array เดิมเลย แปลว่า method `sort` นี้ได้เปลี่ยนแปลง array ที่เรียกใช้นั่นเอง 
+side effect ของ method `sort` คือ method ฟังก์ชันนี้เรียงลำดับ element ใน array เดิมเลย แปลว่า method `sort` นี้ได้เปลี่ยนแปลง array ที่เรียกใช้นั่นเอง  
 วิธีที่ป้องกันปัญหานี้ได้ก็คือ ให้นำ array ว่าง (empty array, `[]`) มา concat กับ array ที่จะทำการ sort (ให้นึกถึง `slice` และ `concat` ที่คืนค่าเป็น array ตัวใหม่) จากนั้นค่อยเรียกใช้ method `sort`
 
 # --instructions--
@@ -28,7 +28,7 @@ assert(nonMutatingSort.toString().match(/\.sort/g));
 assert(JSON.stringify(globalArray) === JSON.stringify([5, 6, 3, 2, 9]));
 ```
 
-การเรียกใช้ฟังก์ชัน `nonMutatingSort(globalArray)` ต้องได้ค่าเป็น `[2, 3, 5, 6, 9]`.
+การเรียกใช้ฟังก์ชัน `nonMutatingSort(globalArray)` ต้องได้ค่าเป็น `[2, 3, 5, 6, 9]`
 
 ```js
 assert(
@@ -49,14 +49,14 @@ assert(!nonMutatingSort.toString().match(/\[.*?[23569].*?\]/gs));
 assert(nonMutatingSort(globalArray) !== globalArray);
 ```
 
-การเรียกใช้ฟังก์ชัน `nonMutatingSort([1, 30, 4, 21, 100000])` ต้องได้ค่าเป็น `[1, 4, 21, 30, 100000]`.
+การเรียกใช้ฟังก์ชัน `nonMutatingSort([1, 30, 4, 21, 100000])` ต้องได้ค่าเป็น `[1, 4, 21, 30, 100000]`
 
 ```js
 assert(JSON.stringify(nonMutatingSort([1, 30, 4, 21, 100000])) ===
     JSON.stringify([1, 4, 21, 30, 100000]))
 ```
 
-การเรียกใช้ฟังก์ชัน `nonMutatingSort([140000, 104, 99])` ต้องได้ค่าเป็น `[99, 104, 140000]`.
+การเรียกใช้ฟังก์ชัน `nonMutatingSort([140000, 104, 99])` ต้องได้ค่าเป็น `[99, 104, 140000]`
 
 ```js
 assert(JSON.stringify(nonMutatingSort([140000, 104, 99])) ===

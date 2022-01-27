@@ -8,7 +8,8 @@ dashedName: iterate-through-the-keys-of-an-object-with-a-for---in-statement
 
 # --description--
 
-บางครั้ง คุณอาจต้องการวนอ่านทุกคีย์ภายใน object ซึ่งต้องใช้ syntax เฉพาะใน JavaScript ที่เรียกว่าคำสั่ง <dfn>for...in</dfn> ] 
+บางครั้ง คุณอาจต้องการวนอ่านทุกคีย์ภายใน object ซึ่งต้องใช้ syntax ใน JavaScript ที่เรียกว่าคำสั่ง <dfn>for...in</dfn> ] 
+
 ลองดูตัวอย่างการใช้กับ object `users` ของเรา:
 
 ```js
@@ -26,6 +27,7 @@ for (let user in users) {
 # --instructions--
 
 เราได้ประกาศฟังก์ชัน `countOnline` ซึ่งรับ argument 1 ตัว (object `users`) ให้แล้ว
+
 ให้ใช้คำสั่ง <dfn>for...in</dfn> ภายในฟังก์ชันนี้เพื่อวนอ่าน object `users` ที่ส่งผ่านเข้าไปยังฟังก์ชัน และคืนค่าเป็นจำนวนผู้ใช้ที่มี property `online` เป็น `true` 
 โค้ดด้านล่างเป็นตัวอย่างของ object `users` ที่จะถูกส่งเข้าไปในฟังก์ชัน `countOnline` โดยผู้ใช้แต่ละคนจะมี property `online` ที่มีค่า `true` หรือ `false`
 

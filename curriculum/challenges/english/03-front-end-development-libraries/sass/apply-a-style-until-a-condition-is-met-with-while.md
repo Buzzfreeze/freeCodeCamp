@@ -11,6 +11,7 @@ dashedName: apply-a-style-until-a-condition-is-met-with-while
 คำสั่ง `@while` จะทำงานคล้ายกับ `while` loop ใน JavaScript ซึ่งจะทำงานไปจนกว่าจะถึงเงื่อนไขที่กำหนด
 
 ในตัวอย่างของ `@for` ที่ได้เรียนไป เราได้เห็นการสร้าง grid แบบง่ายๆไปแล้ว 
+
 เราสามารถใช้ `@while` เพื่อสร้าง grid แบบนั้นได้เหมือนกัน:
 
 ```scss

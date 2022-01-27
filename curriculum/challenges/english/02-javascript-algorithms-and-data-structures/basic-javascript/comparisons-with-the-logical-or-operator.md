@@ -10,7 +10,7 @@ dashedName: comparisons-with-the-logical-or-operator
 # --description--
 เครื่องหมายต่อมาคือ <dfn>logical or</dfn> operator (`||`) ซึ่งจะคืนค่าออกมาเป็น `true` ถ้าค่าของข้อมูลตัวใดตัวหนึ่งเป็น `true` (จะเป็นข้อมูลด้านซ้ายหรือด้านขวาก็ได้) แต่ถ้าไม่มีข้อมูลตัวไหนเป็น `true` เลย ก็จะคืนค่าออกมาเป็น `false` 
 
-การพิมพ์ <dfn>logical or</dfn> operator จะใช้ pipe symbols 2 อัน (`||`) ซึ่งเครื่องหมายนี้จะอยู่ใต้ปุ่ม Backspace และเหนือปุ่ม Enter บน keyboard ของคุณ (ปกติแล้วจะอยู่กับตัว ฃ, ฅ)
+การพิมพ์ <dfn>logical or</dfn> operator จะใช้ pipe symbol 2 อัน (`||`) ซึ่งเครื่องหมายนี้จะอยู่ใต้ปุ่ม Backspace และเหนือปุ่ม Enter บน keyboard ของคุณ (ปกติแล้วจะอยู่กับตัว ฃ, ฅ)
 
 ถ้าจำที่เรียนมาได้จะเข้าใจโค้ดด้านล่างนี้ได้ไม่ยาก
 

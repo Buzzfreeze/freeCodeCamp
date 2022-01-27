@@ -8,7 +8,7 @@ dashedName: use-the-every-method-to-check-that-every-element-in-an-array-meets-a
 
 # --description--
 
-เราจะใช้ method `every` กับ array เพื่อหาว่า element ทุกตัวใน array ผ่านเงื่อนไขที่เราระบุหรือไม่ 
+เราจะใช้ method `every` กับ array เพื่อหาว่า element ทุกตัวใน array ผ่านเงื่อนไขที่เราระบุหรือไม่  
 ถ้าทุก element ผ่านเงื่อนไข ก็จะคืนค่า Boolean เป็น `true` แต่ถ้ามีบาง element ไม่ผ่านเงื่อนไข ก็จะคืนค่า `false`
 
 ตัวอย่างต่อไปนี้เป็นโค้ดที่ตรวจสอบว่า ทุก element ใน `numbers` array มีค่าน้อยกว่า 10 หรือไม่

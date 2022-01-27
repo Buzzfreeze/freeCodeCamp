@@ -2,30 +2,30 @@
 id: bad87fee1348bd9aedf08822
 title: Adjust the Margin of an Element
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cVJarHW'
+videoUrl: "https://scrimba.com/c/cVJarHW"
 forumTopicId: 16654
 dashedName: adjust-the-margin-of-an-element
 ---
 
 # --description--
 
-`margin` ของ element จะควบคุมขนาดของช่องว่างระหว่าง `border` ของ element และ element รอบ ๆ
+`margin` จะควบคุมขนาดช่องว่างระหว่าง `border` ของ element กับ element ที่อยู่รอบๆ
 
-ตอนนี้ พวกเราสามารถเห็นได้ว่ากล่องสีฟ้าและกล่องสีแดในอยู่ในกล่องสีเหลือง
-จงจำไว้ว่ากล่องสีแดงนั้นมี `margin` ที่ใหญ่กว่าของกล่องสีฟ้า ซึ่งทำให้กล่องสีฟ้าดูเล็กกว่า
+ตอนนี้ เราจะเห็นว่ากล่องสีฟ้าและกล่องสีแดงอยู่ในกล่องสีเหลือง
+กล่องสีแดงมี `margin` ที่มากกว่าของกล่องสีฟ้า ทำให้กล่องสีแดงดูเล็กกว่า
 
-เมื่อคุณเพิ่ม `margin` ของกล่องสีฟ้า มันจะเพิ่มระยะระหว่างขอบมันกับ element ที่อยู่รอบ ๆ
+ถ้าคุณเพิ่ม `margin` ของกล่องสีฟ้า ระยะห่างระหว่างเส้นขอบกับ element ที่อยู่รอบๆ ก็จะเพิ่มขึ้นด้วย
 
 # --instructions--
 
-จงเปลี่ยน `margin` ของกล่องสีฟ้าเพื่อให้มันตรงกับ margin ของสีแดง
+ให้เปลี่ยน `margin` ของกล่องสีฟ้าให้เท่ากับ `margin` ของกล่องสีแดง
 
 # --hints--
 
-`blue-box` class ควรกำหนดให้ element มี `20px` เป็นค่า `margin`
+`margin` ของคลาส `blue-box` ต้องมีค่าเป็น `20px`
 
 ```js
-assert($('.blue-box').css('margin-top') === '20px');
+assert($(".blue-box").css("margin-top") === "20px");
 ```
 
 # --seed--

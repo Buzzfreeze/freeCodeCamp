@@ -10,8 +10,8 @@ dashedName: use-for-to-create-a-sass-loop
 
 คำสั่ง `@for` ของ Sass ก็ใช้เพื่อสร้าง loop เหมือนกับ `for` loop ใน JavaScript เลย
 
-`@for` จะใช้ได้สองแบบคือ "start through end" และ "start to end" ความต่างคือ 
-"start **to** end" จะ loop ไปถึง *เลขก่อนสุดท้าย* 
+`@for` จะใช้ได้สองแบบคือ "start through end" และ "start to end" ความต่างคือ  
+"start **to** end" จะ loop ไปถึง *เลขก่อนสุดท้าย*  
 ส่วน "start **through** end" จะ loop ไปถึง *เลขสุดท้าย* เลย
 
 ข้างล่างนี้เป็นตัวอย่างของ start **through**:

@@ -2,45 +2,49 @@
 id: 587d78ac367417b2b2512af6
 title: Align Elements Using the justify-content Property
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pVaDAv/c43gnHm'
+videoUrl: "https://scrimba.com/p/pVaDAv/c43gnHm"
 forumTopicId: 301102
 dashedName: align-elements-using-the-justify-content-property
 ---
 
 # --description--
 
-บางครั้ง flex item ข้างใน flex container ไม่ได้อยู่เต็มพื้นที่ทั้งหมดของ container
-มันเป็นเรื่องทั่วไปที่จะอยากบอก CSS ถึงวิธีการจัดวางให้เป็นเส้นตรงและเว้นระยะของ flex item ตามวิธีที่เราคิดไว้
-โชคดีที่ `justify-content` property นั้นมีหลายทางเลือกเพื่อที่จะรับมือกับส่วนนี้
-แต่ก่อนอื่น ยังมีคำศัพท์เทคนิคสำคัญบางคำที่ควรจะเข้าใจก่อนจะไปดูทางเลือกพวกนั้น
+บางครั้ง flex item ข้างใน flex container ไม่ได้ขยายเต็มพื้นที่ของ container
 
-[นี่เป็นรูปที่จะแสดงให้เห็นถึงการจัดแถวตามแนวคิดด้านล่าง](https://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg)
+ปกติแล้ว เราก็คงอยากบอก CSS ให้จัดวางและเว้นระยะของ child element
+ซึ่งสามารถทำได้ไม่ยาก ถ้าเราใช้ property `justify-content`
+ก่อนที่จะลองใช้ เราต้องรู้จักและเข้าใจคำศัพท์บางตัวก่อน
 
-จงจำไว้ว้าการกำหนดให้ flex container เป็นแบบ row จะเป็นการจัดวาง flex item ให้เรียงต่อกันจากซ้ายไปขวา ส่วนถ้ากำหนดเป็นแบบ column จะเป็นการจัดวางแต่ชั้น ๆ จากบนลงล่าง
-ทิศทางที่ flex item ถูกจัดเรียงในแต่ละ container นั้นจะเรียกว่า **main axis**
-สำหรับตอนนี้มันเป็นเพียงเส้นแนวนอนที่ตัดผ่านแต่ละ item สำหรับแบบ row และเป็นเส้นเส้นตั้งสำหรับแบบ column
+[ลองดูรูปที่จะช่วยให้เข้าใจคอนเซ็ปท์ด้านล่างได้ดีขึ้น](https://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg)
 
-มีหลายทางเลือกสำหรับวิธีการจัดระยะห่างของ flex items บนเส้น main axis
-หนึ่งในตัวที่มักถูกใช้บ่อย ๆ คือ `justify-content: center;` ซึ่งจะจัดให้ flex item เป็นเส้นตรงภายใน flex container
-ส่วนทางเลือกอื่น ๆ ก็จะเป็น:
+ยังจำได้ใช่ไหมว่าถ้า flex container เป็นแบบ row จะเป็นการจัดวาง flex item ให้เรียงต่อกันจากซ้ายไปขวา ส่วนถ้ากำหนดเป็นแบบ column จะเป็นการจัดวางเป็นชั้น ๆ จากบนลงล่าง
 
-<ul><li><code>flex-start</code>: aligns items to the start of the flex container. For a row, this pushes the items to the left of the container. For a column, this pushes the items to the top of the container. This is the default alignment if no <code>justify-content</code> is specified.</li><li><code>flex-end</code>: aligns items to the end of the flex container. For a row, this pushes the items to the right of the container. For a column, this pushes the items to the bottom of the container.</li><li><code>space-between</code>: aligns items to the center of the main axis, with extra space placed between the items. The first and last items are pushed to the very edge of the flex container. For example, in a row the first item is against the left side of the container, the last item is against the right side of the container, then the remaining space is distributed evenly among the other items.</li><li><code>space-around</code>: similar to <code>space-between</code> but the first and last items are not locked to the edges of the container, the space is distributed around all the items with a half space on either end of the flex container.</li><li><code>space-evenly</code>: Distributes space evenly between the flex items with a full space at either end of the flex container</li></ul>
+ทิศทางที่ flex item ถูกจัดเรียงในแต่ละ container นั้นจะเรียกว่า **main axis** (แกนหลัก)
+ในตอนนี้ main axis ของ row จะเป็นแค่เส้นแนวนอนที่ตัดผ่านแต่ละ item
+และ main axis ของ column ก็จะเป็นแค่เส้นแนวตั้ง
+
+เรามีวิธีในการจัดวาง flex item บนเส้น main axis ได้หลายแบบ
+โดยแบบที่เห็นได้บ่อยที่สุดคือ `justify-content: center;` ซึ่งจะจัดให้ flex item อยู่กลาง main axis ใน flex container เลย
+ส่วนวิธีอื่นก็จะเป็น:
+
+<ul><li><code>flex-start</code>: จะวาง item ไว้ที่จุดเริ่มต้นของ flex container เลย ซึ่งถ้าเป็น row จะทำให้ item อยู่ทางซ้ายของ container และถ้าเป็น column จะทำให้ item อยู่ส่วนบนของ container ซึ่งค่านี้จะเป็นค่าเริ่มต้น ถ้าเราไม่ได้กำหนดค่าของ <code>justify-content</code></li><li><code>flex-end</code>: จะวาง item ไว้ที่จุดสิ้นสุดของ flex container เลย ซึ่งถ้าเป็น row จะทำให้ item อยู่ทางขวาของ container และถ้าเป็น column จะทำให้ item อยู่ส่วนล่างของ container</li><li><code>space-between</code>: จะวาง item ไว้ตรงกลางของ main axis โดยมีช่องว่างระหว่าง item แต่ละตัวเล็กน้อย โดย item แรกและ item สุดท้ายจะอยู่ที่จุดเริ่มต้นและจุดสิ้นสุดของ flex container เช่น ถ้าเป็น row แล้ว item แรกจะอยู่ชิดขอบซ้ายของ container และ item สุดท้ายจะอยู่ชิดขอบขวาของ container และช่องว่างที่เหลืออยู่จะเอามาแบ่งกัน เพื่อให้ item ที่เหลือมีความห่างเท่าๆกัน</li><li><code>space-around</code>: จะคล้ายๆกับ <code>space-between</code> แต่ item แรกและ item สุดท้ายจะไม่อยู่ติดขอบของ container โดย item แต่ละตัวจะมีความห่างเท่าๆกัน และ item ที่อยู่ชิดของ container จะถูกดันออกมาจากขอบ เป็นระยะครึ่งหนึ่งของระยะห่างระหว่าง item</li><li><code>space-evenly</code>: จะทำให้แต่ละ item มีระยะห่างเท่าๆกัน โดย item ตัวแรกและตัวสุดท้ายจะอยูาห่างจากขอบของ container เป็นระยะเท่ากับระยะห่างจาก item ตัวอื่น</li></ul>
 
 # --instructions--
 
-ตัวอย่างจะช่วยเป็นเห็นการทำงานของ property นี้ได้ดียิ่งขึ้น
-จงเพิ่ม CSS property `justify-content` ให้กับ `#box-container` element และจงกำหนดให้มีค่าเป็น `center`
+ถ้าได้ลองทำดู น่าจะเข้าใจการทำงานของ property นี้ได้ดีขึ้น
+
+ให้เพิ่ม CSS property `justify-content` ให้กับ `#box-container` และกำหนดให้มีค่าเป็น `center`
 
 **Bonus**  
-จงลองใช้วิธีอื่น ๆ ของ `justify-content` property ใน code editor เพื่อให้เห็นความแตกต่างของพวกมัน
-แต่จงจำไว้ว่าเราจะใช้แค่ `center` ใน challenge นี้เท่านั้น
+ให้ลองเปลี่ยนค่าของ property `justify-content` ใน code editor เป็นค่าอื่นๆด้านบน จะได้เห็นว่าค่าแต่ละตัวมีผลต่างกันอย่างไร
+แต่ก่อนกด Run Test อย่าลืมเปลี่ยนกลับเป็น `center` ด้วย
 
 # --hints--
 
-`#box-container` element ควรมี `justify-content` property อันหนึ่งที่ถูกกำหนดให้มีค่าเป็น `center`
+`#box-container` ต้องมีค่าของ property `justify-content` เป็น `center`
 
 ```js
-assert($('#box-container').css('justify-content') == 'center');
+assert($("#box-container").css("justify-content") == "center");
 ```
 
 # --seed--

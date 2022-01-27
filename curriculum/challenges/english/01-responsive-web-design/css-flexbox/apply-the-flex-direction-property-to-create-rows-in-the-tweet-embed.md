@@ -2,37 +2,38 @@
 id: 587d78ab367417b2b2512af3
 title: Apply the flex-direction Property to Create Rows in the Tweet Embed
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pVaDAv/cJb8yuq'
+videoUrl: "https://scrimba.com/p/pVaDAv/cJb8yuq"
 forumTopicId: 301104
 dashedName: apply-the-flex-direction-property-to-create-rows-in-the-tweet-embed
 ---
 
 # --description--
 
-`header` และ `footer` ในตัวอย่างของ tweet embed นั้นมี child items ที่สามารถถูกจัดให้เป็นแถวได้โดยใช้ `flex-direction` property
-สิ่งนี้จะบอก CSS ให้จัด children เรียงกันในแนวนอน
+`header` และ `footer` ในตัวอย่างของ tweet นั้นมี child element ที่สามารถถูกจัดให้เป็น row ได้โดยใช้ property `flex-direction`
+ซึ่งจะทำให้ child element เรียงกันในแนวนอน
 
 # --instructions--
 
-จงเพิ่ม CSS property `flex-direction` ให้กับทั้ง `header` และ `footer`
-และจงกำหนดให้ค่าของมันเป็น `row`
+ให้เพิ่ม CSS property `flex-direction` ให้กับทั้ง `header` และ `footer`
+และกำหนดให้มีค่าเป็น `row`
 
 # --hints--
 
-`.follow-btn` ควรถูกแสดงผลในหน้าเว็บไชต์
-จงเช็คให้มั่นใช่ว่าคุณได้ปิด extension ต่าง ๆ เช่น ตัวปิดกั้นโฆษณาแล้ว
+`.follow-btn` ต้องแสดงผลในเว็บไซต์ของคุณด้วย ถ้าไม่แสดงผล ให้ลองปิด extension ของเบราว์เซอร์ดูก่อน (เช่น ads block)
 
 ```js
-assert($('.follow-btn').length > 0 && $('.follow-btn').css('display') !== 'none');
+assert(
+  $(".follow-btn").length > 0 && $(".follow-btn").css("display") !== "none"
+);
 ```
 
-The `header` should have a `flex-direction` property set to `row`.
+`header` ต้องมีค่าของ property `flex-direction` เป็น `row`
 
 ```js
 assert(code.match(/header\s*?{[^}]*?flex-direction:\s*?row;/g));
 ```
 
-The `footer` should have a `flex-direction` property set to `row`.
+`footer` ต้องมีค่าของ property `flex-direction` เป็น `row`
 
 ```js
 assert(code.match(/footer\s*?{[^}]*?flex-direction:\s*?row;/g));
@@ -119,8 +120,8 @@ assert(code.match(/footer\s*?{[^}]*?flex-direction:\s*?row;/g));
 </header>
 <div id="inner">
   <p>
-    I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart,
-    you still have to work hard.
+    I meet so many people who are in search of that one trick that will help
+    them work smart. Even if you work smart, you still have to work hard.
   </p>
   <span class="date">1:32 PM - 12 Jan 2018</span>
   <hr />
@@ -219,8 +220,8 @@ assert(code.match(/footer\s*?{[^}]*?flex-direction:\s*?row;/g));
 </header>
 <div id="inner">
   <p>
-    I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart,
-    you still have to work hard.
+    I meet so many people who are in search of that one trick that will help
+    them work smart. Even if you work smart, you still have to work hard.
   </p>
   <span class="date">1:32 PM - 12 Jan 2018</span>
   <hr />

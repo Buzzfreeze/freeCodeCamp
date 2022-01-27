@@ -9,7 +9,7 @@ dashedName: use-bracket-notation-to-find-the-nth-character-in-a-string
 
 # --description--
 
-# - คุณยังสามารถใช้ <dfn>bracket notation</dfn> เพื่ออ้างอิงหรือรับค่าตัวอักษรที่ตำแหน่งอื่นภายใน string ได้
+คุณยังสามารถใช้ <dfn>bracket notation</dfn> เพื่ออ้างอิงหรือรับค่าตัวอักษรที่ตำแหน่งอื่นภายใน string ได้
 
 จำได้ใช่ไหมว่าคอมพิวเตอร์จะเริ่มนับตำแหน่งจาก `0` ดังนั้นตัวอักษรตัวแรกจึงนับเป็นตัวอัษรที่ตำแหน่งศูนย์
 

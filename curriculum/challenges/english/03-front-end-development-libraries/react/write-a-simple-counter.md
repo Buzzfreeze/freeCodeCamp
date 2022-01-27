@@ -15,6 +15,7 @@ dashedName: write-a-simple-counter
 
 component `Counter` จะอ่านค่าของ `count` ใน `state` 
 โดยจะมีปุ่มสองปุ่มที่แต่ละปุ่มจะเรียกใช้ method `increment()` (เพิ่มค่า) และ `decrement()` (ลดค่า)
+
 ให้เขียน method สองตัวนี้เพื่อให้ count เพิ่มขึ้น 1 เมื่อคลิกปุ่ม `Increment!` หรือลดลง 1 เมื่อคลิกปุ่ม `Decrement!` 
 และให้สร้าง method `reset()` ที่จะทำงานเมื่อคลิกปุ่ม `Reset` แล้วจะทำให้ค่าของ count เป็น 0
 

@@ -2,30 +2,31 @@
 id: 587d78ac367417b2b2512af7
 title: Use the justify-content Property in the Tweet Embed
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pVaDAv/c43GgTa'
+videoUrl: "https://scrimba.com/p/pVaDAv/c43GgTa"
 forumTopicId: 301115
 dashedName: use-the-justify-content-property-in-the-tweet-embed
 ---
 
 # --description--
 
-challenge ที่แล้วได้แสดงให้เห็นตัวอย่างของการใช้ `justify-content` property
-สำหรับ tweet embed นั้น, property นี้สามารถถูกใช้เพื่อเรียง item ให้อยู่ตรงกันได้ภายใน `.profile-name` element.
+ในแบบทดสอบที่แล้วเราได้ลองใช้ property `justify-content` ไปแล้ว
+คราวนี้ ให้ใช้ property นี้เพื่อเรียง item ภายใน `.profile-name`
 
 # --instructions--
 
-จงเพิ่ม CSS property `justify-content` ให้กับ `.profile-name` element ของ header และจงกำหนดค่าให้กับตัวเลือกอื่น ๆ จาก challenge ที่แล้ว
+ให้เพิ่ม CSS property `justify-content` ให้กับ `.profile-name` ของ header และและกำหนดค่าของ property นี้ให้เป็นค่าไหนก็ได้ ที่เราได้เรียนมาจากแบบทดสอบที่แล้ว
 
 # --hints--
 
-`.follow-btn` ควรถูกแสดงผลในหน้าเว็บไซต์
-จงเช็คให้มั่นใจว่าคุณได้ปิด extension อย่าง ตัวปิดหกั้นโฆษณาไปแล้ว
+`.follow-btn` ต้องแสดงผลในเว็บไซต์ของคุณด้วย ถ้าไม่แสดงผล ให้ลองปิด extension ของเบราว์เซอร์ดูก่อน (เช่น ads block)
 
 ```js
-assert($('.follow-btn').length > 0 && $('.follow-btn').css('display') !== 'none');
+assert(
+  $(".follow-btn").length > 0 && $(".follow-btn").css("display") !== "none"
+);
 ```
 
-The `.profile-name` element should have the `justify-content` property set to any of these values: `center`, `flex-start`, `flex-end`, `space-between`, `space-around`, or `space-evenly`.
+`.profile-name` ต้องมีค่าของ property `justify-content` เป็น `center`, `flex-start`, `flex-end`, `space-between`, `space-around`, หรือ `space-evenly`
 
 ```js
 assert(
@@ -44,7 +45,8 @@ assert(
   body {
     font-family: Arial, sans-serif;
   }
-  header, footer {
+  header,
+  footer {
     display: flex;
     flex-direction: row;
   }
@@ -68,7 +70,8 @@ assert(
     border-radius: 3px;
     padding: 5px;
   }
-  header h3, header h4 {
+  header h3,
+  header h4 {
     display: flex;
     margin: 0;
   }
@@ -100,7 +103,11 @@ assert(
   }
 </style>
 <header>
-  <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture" class="profile-thumbnail">
+  <img
+    src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg"
+    alt="Quincy Larson's profile picture"
+    class="profile-thumbnail"
+  />
   <div class="profile-name">
     <h3>Quincy Larson</h3>
     <h4>@ossia</h4>
@@ -110,18 +117,17 @@ assert(
   </div>
 </header>
 <div id="inner">
-  <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
+  <p>
+    I meet so many people who are in search of that one trick that will help
+    them work smart. Even if you work smart, you still have to work hard.
+  </p>
   <span class="date">1:32 PM - 12 Jan 2018</span>
-  <hr>
+  <hr />
 </div>
 <footer>
   <div class="stats">
-    <div class="Retweets">
-      <strong>107</strong> Retweets
-    </div>
-    <div class="likes">
-      <strong>431</strong> Likes
-    </div>
+    <div class="Retweets"><strong>107</strong> Retweets</div>
+    <div class="likes"><strong>431</strong> Likes</div>
   </div>
   <div class="cta">
     <button class="share-btn">Share</button>
@@ -138,7 +144,8 @@ assert(
   body {
     font-family: Arial, sans-serif;
   }
-  header, footer {
+  header,
+  footer {
     display: flex;
     flex-direction: row;
   }
@@ -162,7 +169,8 @@ assert(
     border-radius: 3px;
     padding: 5px;
   }
-  header h3, header h4 {
+  header h3,
+  header h4 {
     display: flex;
     margin: 0;
   }
@@ -194,7 +202,11 @@ assert(
   }
 </style>
 <header>
-  <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture" class="profile-thumbnail">
+  <img
+    src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg"
+    alt="Quincy Larson's profile picture"
+    class="profile-thumbnail"
+  />
   <div class="profile-name">
     <h3>Quincy Larson</h3>
     <h4>@ossia</h4>
@@ -204,18 +216,17 @@ assert(
   </div>
 </header>
 <div id="inner">
-  <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
+  <p>
+    I meet so many people who are in search of that one trick that will help
+    them work smart. Even if you work smart, you still have to work hard.
+  </p>
   <span class="date">1:32 PM - 12 Jan 2018</span>
-  <hr>
+  <hr />
 </div>
 <footer>
   <div class="stats">
-    <div class="Retweets">
-      <strong>107</strong> Retweets
-    </div>
-    <div class="likes">
-      <strong>431</strong> Likes
-    </div>
+    <div class="Retweets"><strong>107</strong> Retweets</div>
+    <div class="likes"><strong>431</strong> Likes</div>
   </div>
   <div class="cta">
     <button class="share-btn">Share</button>

@@ -24,9 +24,11 @@ condition ? expressionIfTrue : expressionIfFalse;
 
 code editor มีค่าคงที่ 3 ค่าที่กำหนดไว้ใน method `render()` ของ component `CheckUserAge` คือ `buttonOne`, `buttonTwo` และ `buttonThree` 
 ซึ่งได้เขียน JSX ที่แสดง button ไว้ให้แล้ว 
+
 ขั้นแรกให้ตั้งค่าเริ่มต้นของ state ของ `CheckUserAge` ให้มี property `input` และ `userAge` โดยมีค่าเป็น string ว่าง
 
-เมื่อ component เรนเดอร์ข้อมูลแล้ว user ใช้ปุ่มเหล่านี้ได้ 
+เมื่อ component เรนเดอร์ข้อมูลแล้ว user จะใช้ปุ่มเหล่านี้ได้ 
+
 ในคำสั่ง `return` ของ component ให้เขียน ternary expression โดยมีเงื่อนไขตามนี้: 
 
 1. เมื่อโหลดหน้าเว็บครั้งแรกให้แสดงปุ่ม submit หรือ `buttonOne` 

@@ -2,32 +2,35 @@
 id: 587d78ac367417b2b2512af5
 title: Apply the flex-direction Property to Create a Column in the Tweet Embed
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pVaDAv/cnzdVC9'
+videoUrl: "https://scrimba.com/p/pVaDAv/cnzdVC9"
 forumTopicId: 301103
 dashedName: apply-the-flex-direction-property-to-create-a-column-in-the-tweet-embed
 ---
 
 # --description--
 
-tweet embed `header` และ `footer` ได้ใช้ `flex-direction` property แบบ row เช่นเดียวกันนี้ items ที่อยู่ด้านใน `.profile-name` element ก็เรียงเป็น column
+ตอนนี้ `header` และ `footer` ใช้ property `flex-direction` เป็น row อยู่
+
+คราวนี้ ให้ทำการเรียง child element ใน `.profile-name` เป็น column
 
 # --instructions--
 
-จงเพิ่ม CSS property `flex-direction` ให้กับ header's `.profile-name` element และจงกำหนดให้มันมีค่าเป็น `column`
+ให้เพิ่ม CSS property `flex-direction` ให้กับ `.profile-name` ของ header และให้กำหนดค่าเป็น `column`
 
 # --hints--
 
-`.follow-btn` ของคุณควรถูกแสดงผลออกมาใช้หน้าเว็บไซต์
-จงเช็คให้มั่นใจว่าคุณได้ปิด extension ต่าง ๆ อย่างเช่น ตัวปิดกั้นโฆษณาไปแล้ว
+`.follow-btn` ต้องแสดงผลในเว็บไซต์ของคุณด้วย ถ้าไม่แสดงผล ให้ลองปิด extension ของเบราว์เซอร์ดูก่อน (เช่น ads block)
 
 ```js
-assert($('.follow-btn').length > 0 && $('.follow-btn').css('display') !== 'none');
+assert(
+  $(".follow-btn").length > 0 && $(".follow-btn").css("display") !== "none"
+);
 ```
 
-The `.profile-name` element should have a `flex-direction` property set to `column`.
+`.profile-name` ต้องมีค่าของ property `flex-direction` เป็น `column`
 
 ```js
-assert($('.profile-name').css('flex-direction') == 'column');
+assert($(".profile-name").css("flex-direction") == "column");
 ```
 
 # --seed--
@@ -111,8 +114,8 @@ assert($('.profile-name').css('flex-direction') == 'column');
 </header>
 <div id="inner">
   <p>
-    I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart,
-    you still have to work hard.
+    I meet so many people who are in search of that one trick that will help
+    them work smart. Even if you work smart, you still have to work hard.
   </p>
   <span class="date">1:32 PM - 12 Jan 2018</span>
   <hr />
@@ -209,8 +212,8 @@ assert($('.profile-name').css('flex-direction') == 'column');
 </header>
 <div id="inner">
   <p>
-    I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart,
-    you still have to work hard.
+    I meet so many people who are in search of that one trick that will help
+    them work smart. Even if you work smart, you still have to work hard.
   </p>
   <span class="date">1:32 PM - 12 Jan 2018</span>
   <hr />

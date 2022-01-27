@@ -13,6 +13,7 @@ method `dispatch` คือ method ที่ใช้เพื่อส่ง ac
 
 จำได้ไหมว่า action creator นั้นจะคืนค่าออกมาเป็น object ที่มี property `type` ที่ใช้ระบุ action ที่เกิดขึ้น 
 จากนั้น method `dispatch` จะส่ง action object กลับไปยัง Redux store 
+
 โค้ดด้านล่างนี้ทำงานเหมือนกัน โดยจะส่ง action ที่มี type เป็น `LOGIN` ไปยัง store:
 
 ```js
@@ -24,6 +25,7 @@ store.dispatch({ type: 'LOGIN' });
 
 Redux store ใน code editor มี state เริ่มต้นซึ่งเป็น object ที่มี property ชื่อ `login` ซึ่งมีค่าเป็น `false` 
 แล้วก็ยังมี action creator ชื่อ `loginAction()` ซึ่งจะคืนค่าออกมาเป็น action ที่มี type เป็น `LOGIN` 
+
 ให้ส่ง `LOGIN` action ไปยัง Redux store โดยเรียกใช้ method `dispatch` และส่ง action ที่สร้างโดย `loginAction()` เข้าไปใน method `dispatch` ด้วย
 
 # --hints--

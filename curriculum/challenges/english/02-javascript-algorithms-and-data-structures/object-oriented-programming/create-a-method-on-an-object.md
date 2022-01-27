@@ -22,7 +22,7 @@ let duck = {
 duck.sayName();
 ```
 
-ในตัวอย่างจะมี method `sayName` ซึ่งเป็นฟังก์ชันที่คืนค่าเป็นประโยคที่มีชื่อของ `duck` อยู่ด้วย 
+ในตัวอย่างจะมี method `sayName` ซึ่งเป็นฟังก์ชันที่คืนค่าเป็นประโยคที่มีชื่อของ `duck` อยู่ด้วย  
 จะเห็นว่า method ที่เข้าถึง property `name` ในคำสั่ง return มีการใช้ `duck.name` ด้วย สำหรับแบบทดสอบถัดไปจะสินวิธีการเข้าถึง property ในรูปแบบอื่น 
 
 # --instructions--
@@ -37,7 +37,7 @@ duck.sayName();
 assert(typeof dog.sayLegs === 'function');
 ```
 
-`dog.sayLegs()` ต้องคืนค่าเป็น string โดยต้องมีเครื่องหมายจุด (`.`) และเว้นวรรค ตามที่กำหนด
+`dog.sayLegs()` ต้องคืนค่าเป็น string โดยต้องมีเครื่องหมายจุด (`.`) และเว้นวรรคตามที่กำหนด
 
 ```js
 assert(dog.sayLegs() === 'This dog has 4 legs.');

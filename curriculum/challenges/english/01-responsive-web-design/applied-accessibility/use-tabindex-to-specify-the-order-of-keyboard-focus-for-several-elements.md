@@ -2,24 +2,23 @@
 id: 587d7790367417b2b2512ab1
 title: Use tabindex to Specify the Order of Keyboard Focus for Several Elements
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cmzRRcb'
+videoUrl: "https://scrimba.com/c/cmzRRcb"
 forumTopicId: 301028
 dashedName: use-tabindex-to-specify-the-order-of-keyboard-focus-for-several-elements
 ---
 
 # --description--
 
-`tabindex` attribute ได้ระบุลำดับ element เมื่อมีการกดปุ่ม tab ที่ keyboard จะ Focus ตามลำดับค่า value ของ elementไว้เช่นกัน
-สิ่งนี้ทำได้โดยการกำหนดค่าที่เป็นค่าบวกให้ attribute
+attribute `tabindex` จะใช้ระบุลำดับที่ element ถูกเลือก เมื่อมีการกดปุ่ม tab บนคีย์บอร์ดได้ด้วย
+โดยเราจะต้องกำหนดค่าของ attribute นี้เป็นจำนวนเต็มบวก
 
-การกำหนดค่า `tabindex="1"` จะนำ keyboard focus มาที่ elementนั้นเป็นลำดับแรก
-หลังจากนั้น มันจะวนตามลำดับที่ถูกกำหรดไว้ในค่าของ `tabindex` (2, 3 เป็นต้น), ก่อนที่จะย้ายไปยังส่วนที่ `tabindex="0"`
+ถ้ากำหนดให้ `tabindex="1"` จะทำให้ element นี้ถูกโฟกัสเป็น element แรก
+หลังจากนั้น ก็จะย้ายไปโฟกัสที่ element อื่นๆ ตามลำดับของ `tabindex` (2, 3 เป็นต้น) เมื่อวนครบแล้ว ก็จะกลับไปโฟกัสที่ `tabindex="0"`
 
-มันสำคัญที่ต้องจำไว้ว่าเมื่อลำดับการกดถูกตั้งไว้แบบนี้
-มันจะเขียนทับ (override) ลำดับที่เป็นค่าเริ่มต้น (ที่ใช้ HTML source) สิ่งนี้อาจทำให้ผู้ใช้ที่ตั้งใจจะเริ่มดูจากด้านบนสับสนได้
-เทคนิคนี้อาจจะจำเป็นในบางกรณี แต่ในเชิงของความสามารถในการเข้าถึง ให้ระวังก่อนที่จะใช้มัน
+การที่เราใช้วิธีนี้ จะทำให้เบราว์เซอร์เลิกใช้วิธีแบบปกติ (เรียงลำดับ element ที่โฟกัสจากบนลงล่างตามโค้ดของ HTML)
+ซึ่งถ้าคุณกำหนดค่าไว้ไม่ดี อาจจะทำให้ผู้ใช้งงได้ เราขอให้คุณจัดการให้ดีเวลาใช้ attribute นี้
 
-นี่คือตัวอย่าง:
+ลองดูตัวอย่าง:
 
 ```html
 <div tabindex="1">I get keyboard focus, and I get it first!</div>
@@ -31,37 +30,38 @@ dashedName: use-tabindex-to-specify-the-order-of-keyboard-focus-for-several-elem
 
 # --instructions--
 
-ตัวอย่าง Camper Cat มีช่องค้นหาในหน้า Inspirational Quotes ของเขาที่เขาตั้งใจจะวางมันไว้ที่มุมขวาบนด้วย CSS
-เขาต้องการให้ `input` ของการค้นหา และ form controls สำหรับส่ง `input` เป็น item 2 ตัวแรกในลำดับการกด
-จงเพิ่ม `tabindex` attribute 1 อันและกำหนดค่า `1` ให้ `search` `input`, และอีก 1`tabindex` attribute ก็กำหนดค่า `2` ให้ `submit` `input`.
+เว็บของนาย Camper Cat มีช่องค้นหาในหน้า Inspirational Quotes ที่เขาตั้งใจจะวางไว้ที่มุมขวาบนโดยใช้ CSS
+เขาต้องการให้ `input` ของการค้นหา และ form control สำหรับส่ง `input` เป็น 2 element แรกที่จะถูกโฟกัสเมื่อกด tab
 
-อีกสิ่งที่ต้องจำไว้ก็คือ browser บางอันอาจจะพากลุ่มไปที่ตรงกลางของลำดับการกดเมื่อมี element หนึ่งถูกคลิก
-element ได้ถูกเพิ่มเข้าไปที่หน้านั้นเพื่อให้คุณมั่นใจว่าจะเริ่มที่จุดเริ่มต้นของลำดับการกดของคุณ
+ให้เพิ่ม attribute `tabindex` ใน `search` `input` และกำหนดค่าเป็น `1` และเพิ่ม attribute `tabindex` ใน `submit` `input` และกำหนดค่าเป็น `2`
+
+อีกเรื่องที่ควรรู้คือ เบราว์เซอร์บางตัวอาจย้ายลำดับการโฟกัสไปที่ element ที่ถูกคลิก
+เราเลยเพิ่ม element ที่มีคลาสเป็น overlay มาให้ เพื่อให้คุณคลิก element อื่นบนหน้าเว็บไม่ได้ และจะทำให้การกด tab ของคุณ เริ่มที่ `tabindex=1` เสมอ
 
 # --hints--
 
-โค้ดของคุณควรเพิ่ม `tabindex` attribute 1 อันให้กับ `search` `input` tag.
+แท็ก `search` `input` ต้องมี attribute `tabindex`
 
 ```js
-assert($('#search').attr('tabindex'));
+assert($("#search").attr("tabindex"));
 ```
 
-คุณควรเพิ่ม `tabindex` attribute อันหนึ่งให้กับ `submit` `input` tag.
+แท็ก `submit` `input` ต้องมี attribute `tabindex`
 
 ```js
-assert($('#submit').attr('tabindex'));
+assert($("#submit").attr("tabindex"));
 ```
 
-คุณควรกำหนดให้ `tabindex` attribute ของ `search` `input` tag มีค่าเป็น 1
+attribute `tabindex` ของแท็ก `search` `input` ต้องมีค่าเป็น 1
 
 ```js
-assert($('#search').attr('tabindex') == '1');
+assert($("#search").attr("tabindex") == "1");
 ```
 
-คุณควรกำหนดให้ `tabindex` attribute ของ `submit` `input` tag มีค่าเป็น 2
+attribute `tabindex` ของแท็ก `submit` `input` ต้องมีค่าเป็น 2
 
 ```js
-assert($('#submit').attr('tabindex') == '2');
+assert($("#submit").attr("tabindex") == "2");
 ```
 
 # --seed--
@@ -90,13 +90,15 @@ assert($('#submit').attr('tabindex') == '2');
   <h2>Inspirational Quotes</h2>
   <blockquote>
     <p>
-      &ldquo;There's no Theory of Evolution, just a list of creatures I've allowed to live.&rdquo;<br />
+      &ldquo;There's no Theory of Evolution, just a list of creatures I've
+      allowed to live.&rdquo;<br />
       - Chuck Norris
     </p>
   </blockquote>
   <blockquote>
     <p>
-      &ldquo;Wise men say forgiveness is divine, but never pay full price for late pizza.&rdquo;<br />
+      &ldquo;Wise men say forgiveness is divine, but never pay full price for
+      late pizza.&rdquo;<br />
       - TMNT
     </p>
   </blockquote>
@@ -136,18 +138,26 @@ assert($('#submit').attr('tabindex') == '2');
     <label for="search">Search:</label>
 
     <input tabindex="1" type="search" name="search" id="search" />
-    <input tabindex="2" type="submit" name="submit" value="Submit" id="submit" />
+    <input
+      tabindex="2"
+      type="submit"
+      name="submit"
+      value="Submit"
+      id="submit"
+    />
   </form>
   <h2>Inspirational Quotes</h2>
   <blockquote>
     <p>
-      &ldquo;There's no Theory of Evolution, just a list of creatures I've allowed to live.&rdquo;<br />
+      &ldquo;There's no Theory of Evolution, just a list of creatures I've
+      allowed to live.&rdquo;<br />
       - Chuck Norris
     </p>
   </blockquote>
   <blockquote>
     <p>
-      &ldquo;Wise men say forgiveness is divine, but never pay full price for late pizza.&rdquo;<br />
+      &ldquo;Wise men say forgiveness is divine, but never pay full price for
+      late pizza.&rdquo;<br />
       - TMNT
     </p>
   </blockquote>

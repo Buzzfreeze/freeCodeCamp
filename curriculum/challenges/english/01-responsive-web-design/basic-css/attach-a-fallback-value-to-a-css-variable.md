@@ -2,51 +2,52 @@
 id: 5a9d7286424fe3d0e10cad13
 title: Attach a Fallback value to a CSS Variable
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/c6bDNfp'
+videoUrl: "https://scrimba.com/c/c6bDNfp"
 forumTopicId: 301084
 dashedName: attach-a-fallback-value-to-a-css-variable
 ---
 
 # --description--
 
-เมื่อคุณใช้ตัวแปรเป็นค่าของ CSS property, คุณสามารถแนบค่า fallback (ต่อท้าย) ที่ browser ของคุณจะใช้ถ้า variable ที่ใส่ไปใช้ไม่ได้
+เมื่อคุณใช้ตัวแปรเป็นค่าของ CSS property คุณจะแนบค่า fallback ไปได้ด้วย ซึ่งเบราว์เซอร์ของคุณจะใช้ fallback ถ้าค่าของตัวแปรที่ใส่ไปใช้ไม่ได้
 
-**Note:** fallback อันนี้จะไม่ถูกใช้เพื่อเพิ่ม browser compatibility, และมันจะไม่ทำงานบน IE browsers
-จริง ๆ มันถูกใช้เพื่อที่ browser จะได้มีซักสีให้แสดงผลถ้ามันหาตัวแปรของคุณไม่เจอ
+**Note:** fallback นี้ไม่ได้ถูกใช้เพื่อเพิ่มความเข้ากันได้กับเบราว์เซอร์ และจะไม่ทำงานบน IE
+ซึ่งจริงๆแล้ว fallback จะถูกใช้เพื่อให้เบราว์เซอร์มีสีให้แสดง ถ้าหาตัวแปรไม่เจอ
 
-นี่คือวิธีที่จะทำมัน:
+ลองดูวิธีใช้ fallback:
 
 ```css
 background: var(--penguin-skin, black);
 ```
 
-โค้ดข้างบนจะกำหนดให้พื้นหลังเป็น `black` ถ้าตัวแปรของคุณไม่ได้ถูกตั้งไว้
-จงจำไว้ว่ามันอาจจะเป็นประโยชน์เวลา debug
+โค้ดข้างบนจะกำหนดให้พื้นหลังเป็น `black` ถ้าคุณไม่ได้ตั้งค่าของตัวแปร
+การใช้ fallback นี้จะมีประโยชน์เวลา debug
 
 # --instructions--
 
-มันเหมือนกับมีปัญญาบางอย่างกับตัวแปรที่เป็นค่าของ `.penguin-top` และ `.penguin-bottom` classes
-แทนที่จะแก้ความผิดพลาดที่มาจากการพิมพ์ จงเพิ่มค่า fallback ให้เป็น `black` สำหรับ `background` property ของ `.penguin-top` และ `.penguin-bottom` classes.
+เหมือนว่าตัวแปรที่ใช้ในคลาส `.penguin-top` และ `.penguin-bottom` จะมีปัญหา
+ให้คุณเพิ่ม fallback ที่มีค่าเป็น `black` ใน property `background` ของคลาส `.penguin-top` และ `.penguin-bottom`
+โดยไม่ต้องไปแก้ปัญหาของตัวแปรนั้น
 
 # --hints--
 
-ค่า fallback ที่เป็น `black` ควรจะถูกใช้ใน `background` property ของ `penguin-top` class.
+ต้องใช้ fallback ที่มีค่าเป็น `black` ใน property `background` ของคลาส `penguin-top`
 
 ```js
 assert(
   code.match(
-    /.penguin-top\s*?{[\s\S]*background\s*?:\s*?var\(\s*?--pengiun-skin\s*?,\s*?black\s*?\)\s*?;[\s\S]*}[\s\S]*.penguin-bottom\s{/gi,
-  ),
+    /.penguin-top\s*?{[\s\S]*background\s*?:\s*?var\(\s*?--pengiun-skin\s*?,\s*?black\s*?\)\s*?;[\s\S]*}[\s\S]*.penguin-bottom\s{/gi
+  )
 );
 ```
 
-ค่า fallback ที่เป็น `black` ควรจะถูกใช้ใน `background` property ของ `penguin-bottom` class.
+ต้องใช้ fallback ที่มีค่าเป็น `black` ใน property `background` ของคลาส `penguin-bottom`
 
 ```js
 assert(
   code.match(
-    /.penguin-bottom\s*?{[\s\S]*background\s*?:\s*?var\(\s*?--pengiun-skin\s*?,\s*?black\s*?\)\s*?;[\s\S]*}/gi,
-  ),
+    /.penguin-bottom\s*?{[\s\S]*background\s*?:\s*?var\(\s*?--pengiun-skin\s*?,\s*?black\s*?\)\s*?;[\s\S]*}/gi
+  )
 );
 ```
 
@@ -72,9 +73,9 @@ assert(
     top: 10%;
     left: 25%;
 
-    /* Change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้ */
     background: var(--pengiun-skin);
-    /* Change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้ */
 
     width: 50%;
     height: 45%;
@@ -85,9 +86,9 @@ assert(
     top: 40%;
     left: 23.5%;
 
-    /* Change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้ */
     background: var(--pengiun-skin);
-    /* Change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้ */
 
     width: 53%;
     height: 45%;

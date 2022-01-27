@@ -9,9 +9,10 @@ dashedName: size-your-images
 # --description--
 
 CSS มี property หนึ่งที่ชื่อ `width` ที่จะควบคุมความกว้างของ element
-เช่นเดียวกับฟ้อนต์ เราใช้ `px` (pixels) เพื่อระบุค่าความกว้างของรูปภาพ
+โดยจะใช้หน่วยเป็น `px` (pixel) เพื่อระบุค่าความกว้างของรูปภาพ
 
-ยกตัวอย่างเช่น ถ้าเราต้องการสร้าง CSS class ที่ชื่อ `larger-image` ที่จะกำหนดให้ HTML element มีความกว้างเท่ากับ 500 pixels, เราจะเขียนว่า:
+เช่น ถ้าเราต้องการสร้างคลาส CSS ที่ชื่อ `larger-image` ซึ่งจะทำให้ความกว้างของ HTML element เป็น 500 pixel
+เราจะใช้โค้ดแบบนี้:
 
 ```html
 <style>
@@ -23,26 +24,31 @@ CSS มี property หนึ่งที่ชื่อ `width` ที่จะ
 
 # --instructions--
 
-จงสร้างคลาสที่ชื่อ `smaller-image` และใช้มันเพื่อปรับขนาดของรูปภาพเพื่อที่มันจะได้กว้างแค่ 100 pixel
+ให้สร้างคลาสที่ชื่อ `smaller-image` ที่จะทำให้รูปภาพมีความกว้างเท่ากับ 100 pixel
 
 # --hints--
 
-`img` element ควรมีคลาสชื่อ `smaller-image`.
+`img` element ต้องมีคลาสเป็น `smaller-image`
 
 ```js
 assert(
-  $("img[src='https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg']")
-    .attr('class')
+  $(
+    "img[src='https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg']"
+  )
+    .attr("class")
     .trim()
     .split(/\s+/g)
-    .includes('smaller-image'),
+    .includes("smaller-image")
 );
 ```
 
 ภาพของคุณควรกว้าง 100 pixel
 
 ```js
-assert($('img').width() < 200 && code.match(/\.smaller-image\s*{\s*width\s*:\s*100px\s*(;\s*}|})/i));
+assert(
+  $("img").width() < 200 &&
+    code.match(/\.smaller-image\s*{\s*width\s*:\s*100px\s*(;\s*}|})/i)
+);
 ```
 
 # --seed--
@@ -50,7 +56,11 @@ assert($('img').width() < 200 && code.match(/\.smaller-image\s*{\s*width\s*:\s*1
 ## --seed-contents--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   .red-text {
     color: red;
@@ -106,7 +116,11 @@ assert($('img').width() < 200 && code.match(/\.smaller-image\s*{\s*width\s*:\s*1
 # --solutions--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   .red-text {
     color: red;

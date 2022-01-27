@@ -9,8 +9,10 @@ dashedName: review-using-props-with-stateless-functional-components
 # --description--
 
 คุณส่ง props ไปยัง stateless functional component เป็นแล้วใช่มั้ย?
+
 component พวกนี้จะทำงานเหมือนฟังก์ชันปกติเลย คือจะรับ props เป็น input แล้วก็คืนค่า UI ออกมาเหมือนเดิมถ้าเราส่ง props ตัวเดิมเข้าไป 
-ตอนนี้คุณอาจสงสัยแล้วว่า เอ๊ะ แล้ว state คืออะไร 
+
+ตอนนี้คุณอาจสงสัยแล้วว่า เอ๊ะ แล้ว state คืออะไร? 
 เราจะคุยกันเรื่อง state แบบละเอียดกันในแบบทดสอบหน้า 
 แต่ตอนนี้เรามารื้อฟื้นคำศัพท์ในเรื่อง component ที่เรียนไปแล้วกันก่อน
 

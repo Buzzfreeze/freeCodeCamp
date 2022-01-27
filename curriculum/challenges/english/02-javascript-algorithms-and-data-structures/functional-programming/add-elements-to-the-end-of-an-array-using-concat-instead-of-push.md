@@ -10,7 +10,7 @@ dashedName: add-elements-to-the-end-of-an-array-using-concat-instead-of-push
 
 ถ้าให้สรุป Functional programming สั้นๆก็คือการสร้างฟังก์ชันที่จะไม่เปลี่ยนแปลงค่า (non-mutating)
 
-เราได้เรียนเรื่อง method `concat` ไปในแบบฝึกหัดที่แล้ว โดย method นี้จะนำ array มาต่อกัน โดยไม่เปลี่ยนแปลง array เดิม 
+เราได้เรียนเรื่อง method `concat` ไปในแบบฝึกหัดที่แล้ว โดย method นี้จะนำ array มาต่อกัน โดยไม่เปลี่ยนแปลง array เดิม  
 ถ้าลองเปรียบเทียบ method `concat` กับ `push` ดู จะเห็นว่า `push` เพิ่ม element เข้าไปท้าย array และทำให้ค่าของ array เดิมเปลี่ยนไป ตามตัวอย่างด้านล่าง:
 
 ```js
@@ -53,7 +53,7 @@ array `second` ต้องมีค่าเหมือนเดิม
 assert(JSON.stringify(second) === JSON.stringify([4, 5]));
 ```
 
-จารเรียกใช้ฟังก์ชัน `nonMutatingPush([1, 2, 3], [4, 5])` ต้องได้ค่าเป็น `[1, 2, 3, 4, 5]`.
+จารเรียกใช้ฟังก์ชัน `nonMutatingPush([1, 2, 3], [4, 5])` ต้องได้ค่าเป็น `[1, 2, 3, 4, 5]`
 
 ```js
 assert(

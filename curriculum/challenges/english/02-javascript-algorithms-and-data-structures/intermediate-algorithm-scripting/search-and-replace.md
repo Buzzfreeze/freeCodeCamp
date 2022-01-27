@@ -16,11 +16,12 @@ argument ที่สองคือ คำที่คุณต้องกา�
 
 argument ที่สามคือ คำที่คุณจะนำไปแทนที่
 
-**หมายเหตุ:** เมื่อมีการแทนที่คำ ให้ยังคงตัวพิมพ์ใหญ่หรือตัวพิมพ์เล็กของคำเดิมไว้ เช่น ถ้าการแทนคำว่า `Book` ด้วยคำว่า `dog` ผลลัพธ์ต้องได้เป็น `Dog`
+**หมายเหตุ:** เมื่อมีการแทนที่คำ ให้รักษาตัวพิมพ์ใหญ่หรือตัวพิมพ์เล็กของคำเดิมไว้  
+เช่น ถ้าการแทนคำว่า `Book` ด้วยคำว่า `dog` ผลลัพธ์ต้องได้เป็น `Dog`
 
 # --hints--
 
-`myReplace("Let us go to the store", "store", "mall")` ต้องคืนค่าเป็น string `Let us go to the mall`.
+`myReplace("Let us go to the store", "store", "mall")` ต้องคืนค่าเป็น string `Let us go to the mall`
 
 ```js
 assert.deepEqual(
@@ -29,7 +30,7 @@ assert.deepEqual(
 );
 ```
 
-`myReplace("He is Sleeping on the couch", "Sleeping", "sitting")` ต้องคืนค่าเป็น string `He is Sitting on the couch`.
+`myReplace("He is Sleeping on the couch", "Sleeping", "sitting")` ต้องคืนค่าเป็น string `He is Sitting on the couch`
 
 ```js
 assert.deepEqual(
@@ -38,7 +39,7 @@ assert.deepEqual(
 );
 ```
 
-`myReplace("I think we should look up there", "up", "Down")` ต้องคืนค่าเป็น string `I think we should look down there`.
+`myReplace("I think we should look up there", "up", "Down")` ต้องคืนค่าเป็น string `I think we should look down there`
 
 ```js
 assert.deepEqual(
@@ -47,7 +48,7 @@ assert.deepEqual(
 );
 ```
 
-`myReplace("This has a spellngi error", "spellngi", "spelling")` ต้องคืนค่าเป็น string `This has a spelling error`.
+`myReplace("This has a spellngi error", "spellngi", "spelling")` ต้องคืนค่าเป็น string `This has a spelling error`
 
 ```js
 assert.deepEqual(
@@ -56,7 +57,7 @@ assert.deepEqual(
 );
 ```
 
-`myReplace("His name is Tom", "Tom", "john")` ต้องคืนค่าเป็น string `His name is John`.
+`myReplace("His name is Tom", "Tom", "john")` ต้องคืนค่าเป็น string `His name is John`
 
 ```js
 assert.deepEqual(
@@ -65,7 +66,7 @@ assert.deepEqual(
 );
 ```
 
-`myReplace("Let us get back to more Coding", "Coding", "algorithms")` ต้องคืนค่าเป็น string `Let us get back to more Algorithms`.
+`myReplace("Let us get back to more Coding", "Coding", "algorithms")` ต้องคืนค่าเป็น string `Let us get back to more Algorithms`
 
 ```js
 assert.deepEqual(

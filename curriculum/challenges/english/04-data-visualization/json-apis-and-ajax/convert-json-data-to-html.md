@@ -8,14 +8,17 @@ dashedName: convert-json-data-to-html
 
 # --description--
 
-สามารถดึงข้อมูลจาก JSON API เพื่อไปแสดงบน HTML
+ตอนนี้คุณได้ข้อมูลมาจาก JSON API แล้ว ได้เวลาเอาไปแสดงบน HTML แล้วล่ะ
 
-สามารถใช้ `forEach` method เพื่อ loop data ของ cat photo objects ที่อยู่ใน array เราสามารถดึง item และปรับเปลี่ยนค่าให้กับ HTML elements
+คุณจะใช้ method `forEach` เพื่อวนอ่านข้อมูลของ object รูปน้องแมว ที่อยู่ใน array ได้ 
+พอคุณอ่าน object ทีละตัวได้แล้ว คุณก็จะเปลี่ยน HTML element ได้ด้วย
 
-สร้าง html variable โดบใช้ `let html = "";`
-จากนั้น loop ข้อมูล ผ่าน JSON และเพื่ม HTML ให้กับ variable เพื่อรวม key names ไปใน `strong` tags ตามด้วยค่า value เมื่อ loop data เสร็จ จึงจะทำการ render 
+เริ่มจากการสร้างตัวแปร html โดยใช้ `let html = "";` ก่อน
 
-Here's the code that does this:
+จากนั้นวนอ่านข้อมูลของ JSON และเพื่ม HTML เข้าไปในตัวแปร โดยครอบชื่อของคีย์ไว้ในแท็ก `strong` ตามด้วยค่าของคีย์นั้น 
+หลังจากวนอ่านข้อมูลเสร็จ ค่อยเอาข้อมูลมาแสดงผล
+
+ถ้าลองเขียนตามเงื่อนไขด้านบน จะได้โค้ดแบบนี้:
 
 ```js
 let html = "";
@@ -29,11 +32,12 @@ json.forEach(function(val) {
 });
 ```
 
-**Note:** จำเป็นต้อวสร้าง HTML elements ให้กับ page ดังนั้นจะไม่สามารถ อ้างอิงได้จาก `textContent` การ`innerHTML` อาจจะเสี่ยงต่อการโจมตีแบบ cross-site scripting
+**Note:** ในบททดสอบนี้ คุณต้องสร้าง HTML element ให้กับหน้าเว็บ ทำให้จะไม่สามารถใช้ `textContent` ได้ (เพราะว่า `textContent` จะไม่แปลงแท็กที่เราใส่เป็น HTML tag ให้) 
+เราจึงให้ใช้ `innerHTML` แทน (จริงๆแล้วการใช้ `innerHTML` จะทำให้เว็บข้อเราเสี่ยงต่อการโจมตีแบบ cross-site scripting แต่เพื่อให้ง่ายต่อการเรียนรู้ ตอนนี้จึงให้ใช้วิธีนี้ไปก่อน)
 
 # --instructions--
 
-เพิ่ม a `forEach` method เพื่อ loop JSON data และสร้าง the HTML elements เพื่อแสดงค่า
+ให้ใช้ method `forEach` เพื่อวนอ่านข้อมูล JSON และสร้าง HTML element เพื่อแสดงค่า
 
 ตัวอย่าง JSON:
 
@@ -41,29 +45,28 @@ json.forEach(function(val) {
 [
   {
     "id":0,
-      "imageLink":"https://s3.amazonaws.com/freecodecamp/funny-cat.jpg",
-      "altText":"A white cat wearing a green helmet shaped melon on its head. ",
-      "codeNames":[ "Juggernaut", "Mrs. Wallace", "Buttercup"
-    ]
+    "imageLink":"https://s3.amazonaws.com/freecodecamp/funny-cat.jpg",
+    "altText":"A white cat wearing a green helmet shaped melon on its head. ",
+    "codeNames":[ "Juggernaut", "Mrs. Wallace", "Buttercup"]
   }
 ]
 ```
 
 # --hints--
 
-Your code should store the data in the `html` variable
+ต้องเขียนโค้ดให้เก็บข้อมูลลงตัวแปรชื่อ `html` ก่อนนำไปแสดง
 
 ```js
 assert(__helpers.removeWhiteSpace(code).match(/html(\+=|=html\+)/g))
 ```
 
-Your code should use a `forEach` method to loop over the JSON data from the API.
+ต้องใช้ method `forEach` ในการวนอ่านข้อมูล JSON ที่ได้จาก API
 
 ```js
 assert(code.match(/json\.forEach/g));
 ```
 
-Your code should wrap the key names in `strong` tags.
+ต้องครอบชื่อของคีย์ไว้ในแท็ก `strong`
 
 ```js
 assert(code.match(/<strong>.+<\/strong>/g));
@@ -83,10 +86,10 @@ assert(code.match(/<strong>.+<\/strong>/g));
       req.onload = function(){
         const json = JSON.parse(req.responseText);
         let html = "";
-        // Add your code below this line
+        // เขียนโค้ดใต้บรรทัดนี้
 
 
-        // Add your code above this line
+        // เขียนโค้ดเหนือบรรทัดนี้
         document.getElementsByClassName('message')[0].innerHTML = html;
       };
     };
@@ -143,7 +146,7 @@ assert(code.match(/<strong>.+<\/strong>/g));
       req.onload = function(){
         const json = JSON.parse(req.responseText);
         let html = "";
-        // Add your code below this line
+        // เขียนโค้ดใต้บรรทัดนี้
         json.forEach(function(val) {
           var keys = Object.keys(val);
           html += "<div class = 'cat'>";
@@ -152,7 +155,7 @@ assert(code.match(/<strong>.+<\/strong>/g));
         });
         html += "</div><br>";
         });
-        // Add your code above this line
+        // เขียนโค้ดเหนือบรรทัดนี้
         document.getElementsByClassName('message')[0].innerHTML = html;
       };
     };

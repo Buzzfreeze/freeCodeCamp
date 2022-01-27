@@ -28,6 +28,7 @@ let nestedObject = {
 ```
 
 `nestedObject` มีสาม property คือ `id` (เป็น number), `date` (เป็น string) และ `data` (เป็น object) แม้ว่าโครงสร้างจะซับซ้อน แต่เราก็จะเข้าถึงข้อมูลได้ด้วยวิธีเดิม 
+
 ในการกำหนดค่า `10` ให้กับ property `busy` ของ object `onlineStatus` เราใช้จะ dot notation เพื่อเข้าถึง property นั้น:
 
 ```js

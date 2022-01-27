@@ -2,22 +2,27 @@
 id: 587d781e367417b2b2512ac9
 title: Change an Element's Relative Position
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/czVmMtZ'
+videoUrl: "https://scrimba.com/c/czVmMtZ"
 forumTopicId: 301044
 dashedName: change-an-elements-relative-position
 ---
 
 # --description--
 
-CSS จะทำเหมือนกับ HTML element แต่ละตัวเป็นกล่อง ๆ (Block-level) หนึ่ง ซึ่งปกติแล้วเราจะเรียกมันว่า <dfn>CSS Box Model</dfn>
-Block-level items จะขึ้นบรรทัดใหม่โดยอัตโนมัติ (คิดถึง headings, paragraphs, และ divs) ในขณะที่ inline items จะอยู่ระหว่าง content ที่ล้อมรอบมัน (เช่น images หรือ spans)
-layout เริ่มต้นของ element ในรูปแบบนี้จะเรียกว่า <dfn>normal flow</dfn> ของ document
-แต่ CSS ได้มีการใช้ position property เพื่อเขียนทับ (overwrite) normal flow ในหลาย ๆ ครั้ง
+CSS จะมองว่า HTML element แต่ละตัวเป็นกล่องๆหนึ่ง ซึ่งเราจะเรียกว่า <dfn>CSS Box Model</dfn>
+เมื่อเราสร้าง element ที่เป็น Block-level แล้ว element นั้นจะขึ้นบรรทัดใหม่โดยอัตโนมัติ (ให้นึกถึง heading, paragraph, และ div)
+แต่ถ้าเราสร้าง element แบบ inline แล้ว element จะอยู่ในบรรทัดเดียวกับ element ตัวอื่นที่อยู่ในระดับเดียวกัน (ให้นึกถึง image หรือ span)
 
-เมื่อตำแหน่งของ element ถูกกำหนดให้เป็น `relative` มันจะทำให้คุณสามารถระบุวิธีที่ CSS ควรจะย้ายมันโดย _อิง_ กับตำแหน่งปัจจุบันของมันใน normal flow ของหน้าเว็บ
-มันทำงานควบคู่กับ CSS offset properties อย่าง `left` หรือ `right`, และ `top` หรือ `bottom`
-พวกมันจะบอกจำนวน pixels, percentages (%), หรือ ems เพื่อที่จะย้าย item จากตำแหน่งที่มันเคยถูกวางไว้
-ตัวอย่างต่อไปนี้เป็นการย้าย (position) พารากราฟให้ห่างจากด้านล่าง (bottom) ของตำแหน่งเดิมของมัน 10 pixel :
+layout พื้นฐานของ element ในรูปแบบนี้จะเรียกว่า <dfn>normal flow</dfn>
+แต่ CSS ก็มี property ชื่อ `position` ที่จะใช้เพื่อให้ทำงานแทน normal flow ได้
+
+ถ้า `position` ของ element ถูกกำหนดให้เป็น `relative`
+จะทำให้คุณสามารถย้ายตำแหน่งของ element นั้นได้โดยอ้างอิงตามตำแหน่งปัจจุบันของ element ใน normal flow
+
+โดย `position` จะใช้คู่กับ CSS offset property ตัวอื่น อย่าง `left` หรือ `right`, และ `top` หรือ `bottom`
+โดยในการขยับ element เราจะระบุค่าให้ property พวกนี้ได้โดยใช้หน่วย pixel, เปอร์เซ็นต์(%), หรือ ems
+
+ตัวอย่างด้านล่างเป็นการขยับ `p` element ขึ้น 10 pixel จากด้านล่าง (bottom):
 
 ```css
 p {
@@ -26,30 +31,29 @@ p {
 }
 ```
 
-การเปลี่ยนตำแหน่งของ element ไปเป็น relative ไม่ได้ย้ายมันออกจาก normal flow เพราะ element อื่นที่อยู่รอบ ๆ มันยังคงมีพฤติกรรมเหมือนกับตอนที่ item นั้นยังอยู่ที่ตำแหน่งเดิมของมัน
+การเปลี่ยน `position` ของ element ไปเป็น `relative` ไม่ได้ทำให้ element หลุดออกจาก normal flow เพราะงี้น element อื่นที่อยู่รอบ ๆ ก็จะยังมีพฤติกรรมเหมือนกับตอนที่ element นั้นยังอยู่ในตำแหน่งเดิม
 
-**Note:** การจัดตำแหน่งทำให้คุณมีความยืดหยุ่นและอำนาจที่จะจัดการกับ visual layout ของหน้าเว็บ
-คุณควรจำไว้ว่า ไม่ว่า element จะอยู่ตรงไหน, HTML markup ที่ทำให้มันเป็นแบบนั้นควรจะเป็นระเบียบและ make sense (เข้าใจ) เมื่ออ่านจากบนลงล่าง
-สิ่งนี้ยังทำให้ผู้พิการทางการมองเห็นใช้เพื่อเข้าถึง content ของคุณได้อีกด้วย
+**Note:** การจัดตำแหน่ง element จะทำให้คุณควบคุมการแสดงผลได้เป็นอิสระมากขึ้น แต่อย่าลืมว่าไม่ว่า element นั้นจะแสดงผลที่ตรงไหน คุณจะต้องเขียนโค้ด HTML ให้เป็นระเบียบ และอ่านรู้เรื่องถ้าอ่านจากบนลงล่าง
+เพราะว่าการที่โค้ดคุณเป็นระเบียบ จะทำให้คนที่ใช้ screen reader (เช่น คนตาบอด) ใช้งานหน้าเว็บของคุณได้
 
 # --instructions--
 
-จงเปลี่ยน `position` ของ `h2` ให้เป็น `relative`
-และจงใช้ CSS offset เพื่อย้ายมันให้ห่างจากด้านบนของตำแหน่งเดิมของมัน 15 pixel
-สังเกตว่ามันไม่กระทบกับตำแหน่งของ h1 และ p element ที่อยู่รอบ ๆ มัน
+เปลี่ยน `position` ของ `h2` ให้เป็น `relative`
+และใช้ CSS offset เพื่อขยับ `h2` จากด้านบน 15 pixel
+จะเห็นว่าการขยับ `h2` จะไม่กระทบกับ h1 และ p element
 
 # --hints--
 
-`h2` element ควรมี `position` property อันหนึ่งที่กำหนดค่าให้เป็น `relative`
+property `position` ของ `h2` element ต้องมีค่าเป็น `relative`
 
 ```js
-assert($('h2').css('position') == 'relative');
+assert($("h2").css("position") == "relative");
 ```
 
-คุณควรใช้ CSS offset เพื่อกำหนดตำแหน่งใหม่ให้ `h2` โดยอิงจากตำแหน่งเดิมซึ่งมันควรจะห่างจาก `top` ของตำแหน่งเดิมของมัน 15 pixel
+ต้องใช้ CSS offset เพื่อกำหนดตำแหน่งใหม่ให้ `h2` โดยให้มีค่า `top` เป็น 15 pixel
 
 ```js
-assert($('h2').css('top') == '15px');
+assert($("h2").css("top") == "15px");
 ```
 
 # --seed--

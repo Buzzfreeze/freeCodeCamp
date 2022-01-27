@@ -8,26 +8,26 @@ dashedName: create-a-controlled-input
 
 # --description--
 
-คุณอาจต้องเขียนแอปให้ `state` กับ UI ทำงานด้วยกันซับซ้อนมากขึ้น
-เช่น การใช้ form control เพื่อป้อนข้อความ อย่างการใช้ `input` และ `textarea` ซึ่งจะมี state ของตัวเองใน DOM เมื่อ user พิมพ์ข้อความเข้ามา 
-ถ้าใช้ React คุณจะย้าย state ของ element พวกนี้ไปไว้ใน `state` ของ React component ได้ 
-สิ่งที่ user กรอกเข้ามาก็จะกลายเป็นส่วนหนึ่งของ `state` ของแอป ทำให้ React จะควบคุมค่าของ input นั้นได้ 
+คุณอาจต้องเขียนแอปให้ `state` กับ UI ทำงานด้วยกันซับซ้อนมากขึ้น  
+เช่น การใช้ form control เพื่อป้อนข้อความ อย่างการใช้ `input` และ `textarea` ซึ่งจะมี state ของตัวเองใน DOM เมื่อ user พิมพ์ข้อความเข้ามา  
+ถ้าใช้ React คุณจะย้าย state ของ element พวกนี้ไปไว้ใน `state` ของ React component ได้  
+สิ่งที่ user กรอกเข้ามาก็จะกลายเป็นส่วนหนึ่งของ `state` ของแอป ทำให้ React จะควบคุมค่าของ input นั้นได้   
 ถ้าคุณใส่ input ที่ user พิมพ์ลงไปได้ไว้ใน React component เราจะเรียก input นั้นว่าเป็น Controlled Input ซึ่งแปลว่า input ที่ React ควบคุมได้
 
 # --instructions—
 
-ใน code editor เราได้เขียนโครงของ component ชื่อ `ControlledInput` ไว้ให้แล้ว
+ใน code editor เราได้เขียนโครงของ component ชื่อ `ControlledInput` ไว้ให้แล้ว  
 แล้วตอนนี้เราก็ได้เขียนค่าเริ่มต้นของ `state` ไว้ให้แล้วด้วย ซึ่ง `state` เริ่มตต้นของ component นี้จะมี property `input` ที่มีค่าเป็น string ว่าง โดย property นี้จะเก็บข้อมูลที่ user พิมพ์เข้าไปใน input
 
-ขั้นแรก ให้สร้าง method ชื่อ `handleChange()` ที่รับพารามิเตอร์ชื่อ `event` 
-เมื่อเรียกใช้ method ก็จะส่ง `event` object ที่มี string ที่เป็นข้อความที่พิมพ์ลงใน `input` element 
+ขั้นแรก ให้สร้าง method ชื่อ `handleChange()` ที่รับพารามิเตอร์ชื่อ `event`  
+เมื่อเรียกใช้ method ก็จะส่ง `event` object ที่มี string ที่เป็นข้อความที่พิมพ์ลงใน `input` element  
 คุณจะอ่านค่าของ string นี้ได้จาก `event.target.value` ภายใน method นี้
 แล้วให้เอา string ที่ user พิมพ์เข้ามานี้ไปอัปเดต property `input` ของ `state` ใน component นี้
 
 ใน method `render` ให้สร้าง `input` element ไว้บน `h4` โดยให้มี attribute ชื่อ `value` เป็นค่าของ property `input` ของ `state` 
 แล้วให้ event handler ที่ชื่อ `onChange` โดยให้เรียกใช้ method `handleChange()`
 
-เมื่อคุณพิมพ์ข้อความลงใน `input` box ข้อความนั้นจะถูกประมวลผลโดย method `handleChange()` แล้วจะเก็บค่าลงใน property `input` ของ `state` และจะเอาค่านั้นไปแสดงผลใน `input` box บนหน้าเว็บ 
+เมื่อคุณพิมพ์ข้อความลงใน `input` box ข้อความนั้นจะถูกประมวลผลโดย method `handleChange()` แล้วจะเก็บค่าลงใน property `input` ของ `state` และจะเอาค่านั้นไปแสดงผลใน `input` box บนหน้าเว็บ  
 `state` ของ component นี้ก็จะเป็นที่เดียวเท่านั้นที่เก็บข้อมูล โดยไม่สนว่าข้อมูลจะมาจากไหน
 
 แล้วก็ อย่าลืมเพิ่มการ binding ที่จำเป็นใน constructor ด้วย

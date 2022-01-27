@@ -20,7 +20,7 @@ dashedName: split-your-bootstrap-row
 assert($('div.row > div.col-xs-6').length > 1);
 ```
 
-อย่าลืม tag ปิดของ `div` ทุกตัวด้วย
+อย่าลืมแท็กปิดของ `div` ทุกตัวด้วย
 
 ```js
 assert(

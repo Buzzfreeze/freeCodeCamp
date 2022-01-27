@@ -8,7 +8,7 @@ dashedName: specify-exact-number-of-matches
 
 # --description--
 
-เราสามารถกำหนดจำนวนขั้นต่ำและจำนวนสูงสุดที่จะเจอ pattern ด้วย quantity specifier ที่อยู่ใน curly bracket (วงเล็บปีกกา) ได้
+เราสามารถกำหนดจำนวนขั้นต่ำและจำนวนสูงสุดที่จะเจอ pattern ด้วย quantity specifier ที่อยู่ใน curly bracket (วงเล็บปีกกา) ได้  
 แต่บางครั้งเราก็อาจอยากระบุจำนวนครั้งที่จะเจอ pattern ไปเลย
 
 จำนวนครั้งที่จะเจอ pattern นั้นทำได้โดยการนำแค่ตัวเลขนั้นมาใส่ใน curly bracket (วงเล็บปีกกา)  

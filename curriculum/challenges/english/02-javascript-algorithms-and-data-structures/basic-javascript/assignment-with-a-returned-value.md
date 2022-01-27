@@ -9,8 +9,10 @@ dashedName: assignment-with-a-returned-value
 
 # --description--
 
-หากคุณจำได้จากบทที่ผ่านมาเกี่ยวกับ 
- [Storing Values ​​with the Assignment Operator](/learn/javascript-algorithms-and-data-structures/basic-javascript/storing-values-with-the-assignment-operator) สิ่งที่อยู่ด้านขวาของเครื่องหมายเท่ากับได้รับการประมวลผลก่อนการนำไปกำหนดค่า ซึ่งหมายความว่าเราสามารส่งคืนค่าของฟังก์ชัน มากำหนดให้กับตัวแปรได้
+ถ้าคุณจำเนื้อหาของบท 
+ [Storing Values ​​with the Assignment Operator](/learn/javascript-algorithms-and-data-structures/basic-javascript/storing-values-with-the-assignment-operator) ได้
+
+ คำสั่งที่อยู่ด้านขวาของ `=` จะได้รับการประมวลผลก่อนการนำไปกำหนดค่า ซึ่งหมายความว่าเราสามารส่งคืนค่าของฟังก์ชัน มากำหนดให้กับตัวแปรได้
 
 สมมติว่าเราได้สร้างฟังก์ชัน `sum` ไว้ ซึ่งฟังก์ชันนี้จะทำการบวกตัวเลขสองตัวเข้าด้วยกัน แล้วโค้ดต่อไปนี้:
 
@@ -18,11 +20,11 @@ dashedName: assignment-with-a-returned-value
 ourSum = sum(5, 12);
 ```
 
-จะเรียก function `sum` ซึ่งคืนค่าออกมาเป็น `17` แล้วหลังจากนั้นจะนำค่าที่คืนออกมาไปกำหนดค่าให้กับตัวแปร `ourSum`
+จะเรียกฟังก์ชัน `sum` ซึ่งคืนค่าออกมาเป็น `17` แล้วหลังจากนั้นจะนำค่าที่คืนออกมาไปกำหนดค่าให้กับตัวแปร `ourSum`
 
 # --instructions--
 
-จงเรียกใช้ function `processArg` ด้วย argument `7` และนำค่าที่คืนออกมาไปกำหนดค่าให้กับตัวแปร `processed`
+จงเรียกใช้ฟังก์ชัน `processArg` ด้วย argument `7` และนำค่าที่คืนออกมาไปกำหนดค่าให้กับตัวแปร `processed`
 
 # --hints--
 
@@ -32,7 +34,7 @@ ourSum = sum(5, 12);
 assert(processed === 2);
 ```
 
-คุณต้องกำหนดค่าตัวแปร `processed` ด้วยค่าที่คืนออกมาของฟังก์ชัน `processArg`
+ตัวแปร `processed` ต้องเป็นค่าที่ได้จากฟังก์ชัน `processArg`
 
 ```js
 assert(/processed\s*=\s*processArg\(\s*7\s*\)/.test(code));

@@ -8,7 +8,7 @@ dashedName: remove-whitespace-from-start-and-end
 
 # --description--
 
-หลายๆครั้งเราจะไม่อยากได้ whitespace ที่อยู่หน้าและหลัง string 
+หลายๆครั้งเราจะไม่อยากได้ whitespace ที่อยู่หน้าและหลัง string  
 ปกติแล้วก่อนที่เราจะทำอะไรกับ string ก็ต้องนำ whitespace ที่อยู่หน้าและหลัง string ออกไปก่อน
 
 

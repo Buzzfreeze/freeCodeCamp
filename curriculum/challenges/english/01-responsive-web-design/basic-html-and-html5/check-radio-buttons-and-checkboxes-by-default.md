@@ -9,10 +9,10 @@ dashedName: check-radio-buttons-and-checkboxes-by-default
 
 # --description--
 
-คุณสามารถกำหนดให้ checkbox หรือ radio button เหมือนกับถูกเลือกไว้แล้วตั้งแต่แรก โดยการใช้ `checked` attribute
+คุณสามารถกำหนดให้ checkbox หรือ radio button ถูกเลือกไว้ตั้งแต่เปิดหน้าเว็บมาได้เลย โดยการใช้ `checked` attribute
 
-เพื่อที่จะทำแบบนี้ จงเพิ่มแค่คำว่า `checked` ให้กับข้างในของ input element
-ยกตัวอย่างเช่น:
+วิธีการคือ คุณต้องเพิ่มคำว่า `checked` ใน input element ที่คุณต้องการให้ตัวเลือกนั้นถูกเลือก
+ตัวอย่างเช่น:
 
 ```html
 <input type="radio" name="test-name" checked>
@@ -20,29 +20,29 @@ dashedName: check-radio-buttons-and-checkboxes-by-default
 
 # --instructions--
 
-จงกำหนดให้ radio button และ checkbox อันแรกของคุณเหมือนถูกเลือกไว้แล้วตั้งแต่แรก
+ทำให้ radio button และ checkbox ตัวแรก ถูกเลือกไว้ตั้งแต่แรก
 
 # --hints--
 
-radio button อันแรกในแบบฟอร์มของคุณควรจะเหมือนถูกเลือกไว้แล้วตั้งแต่แรก
+radio button อันแรกในแบบฟอร์มของคุณ ต้องถูกเลือกไว้ตั้งแต่แรก
 
 ```js
 assert($('input[type="radio"]').prop('checked'));
 ```
 
-checkbox อันแรกในแบบฟอร์มของคุณควรจะเหมือนถูกเลือกไว้แล้วตั้งแต่แรก
+checkbox อันแรกในแบบฟอร์มของคุณ ต้องถูกเลือกไว้ตั้งแต่แรก
 
 ```js
 assert($('input[type="checkbox"]').prop('checked'));
 ```
 
-คุณไม่ควรเปลี่ยนข้อความด้านในของ `Indoor` label.
+ห้ามเปลี่ยนข้อความใน `Indoor` label
 
 ```js
 assert.equal(document.querySelector('label[for="indoor"]')?.innerText?.trim(), 'Indoor');
 ```
 
-คุณไม่ควรเปลี่ยนข้อความด้านในของ `Loving` label.
+ห้ามเปลี่ยนข้อความใน `Loving` label
 
 ```js
 assert.equal(document.querySelector('label[for="loving"]')?.innerText?.trim(), 'Loving');

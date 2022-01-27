@@ -2,50 +2,53 @@
 id: 5a94fe3669fb03452672e45f
 title: Reduce Repetition Using the repeat Function
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pByETK/cQvqyHR'
+videoUrl: "https://scrimba.com/p/pByETK/cQvqyHR"
 forumTopicId: 301133
 dashedName: reduce-repetition-using-the-repeat-function
 ---
 
 # --description--
 
-เมื่อคุณใช้ `grid-template-columns` และ `grid-template-rows` เพื่อกำหนดโครงสร้างของกริด คุณได้ใส่ค่าของแต่ละแถวหรือคอลั่มน์ที่คุณสร้างขึ้น
+ตอนที่คุณใช้ `grid-template-columns` และ `grid-template-rows` เพื่อกำหนดโครงสร้างของกริด คุณจะต้องระบุค่าสำหรับแต่ละ row หรือ column
 
-สมมุติว่าคุณต้องการกริดอันหนึ่งที่มี 100 แถวที่มีความสูงเท่า ๆ กัน มันไม่ค่อยจะสมเหตุสมผลเท่าไหร่ที่จะใส่ค่า 100 ทีละอัน
-โชคดีที่มันมีวิธีที่ดีกว่านั้น วิธีนั้นก็คือการใช้ `repeat` function เพื่อระบุจำนวนครั้งที่คุณต้องการให้แถวหรือคอลั่มน์ถูกสร้างซ้ำ และก็ตามด้วย comma (,) และค่าที่คุณอยากทำซ้ำ
+สมมุติว่าคุณต้องสร้าง grid ที่มีทั้งหมด 100 row ที่มีความสูงเท่า ๆ กัน คุณจะต้องระบุค่าทีละ item ทั้งร้อยตัวซึ่งก็คงจะลำบากมาก
+แต่คุณไม่จำเป็นต้องลำบากขนาดนั้นหรอก เพราะว่าเรามีฟังก์ชัน `repeat` ให้ใช้
 
-นี่คือตัวอย่างที่จะเป็นการสร้างกริดที่มี 100 แถวโดยแต่ละแถวมีความสูง 50px
+โดยฟังก์ชันนี้จะให้คุณระบุจำนวนครั้งที่คุณต้องการให้แถวหรือคอลัมน์ถูกสร้างซ้ำ ตามด้วยคอมม่า (`,`) และค่าที่คุณอยากสร้างซ้ำ
+
+ลองดูตัวอย่างการสร้าง grid 100 ที่มี 100 row โดยแต่ละ row มีความสูง 50px:
 
 ```css
 grid-template-rows: repeat(100, 50px);
 ```
 
-คุณก็สามารถเรียกค่าเดิมซ้ำ ๆ ด้วย repeat function และใส่ function เข้าไปท่ามกลางค่าอื่น ๆ เมื่อคุณกำหนดโครงสร้างของกริด
-นี่คือหน้าตาของมัน:
+คุณสามารถใช้ฟังก์ชันนี้ เพื่อสร้างค่าซ้ำได้ทีละหลายๆค่า และก็แทรกค่าที่สร้างนั้นไปในค่าอื่นได้ งงใช่ไหม ลองดูตัวอย่างสิ:
 
 ```css
 grid-template-columns: repeat(2, 1fr 50px) 20px;
 ```
 
-ซึ่งนี่สามารถเปลี่ยนเป็น:
+ตัวอย่างด้านบนจะทำให้เกิดผลลัพธ์แบบนี้:
 
 ```css
 grid-template-columns: 1fr 50px 1fr 50px 20px;
 ```
 
-**Note:** `1fr 50px` ถูกเรียกใช้ 2 ครั้งและตามด้วย 20px.
+**Note:** จะมีการสร้าง `1fr 50px` ทั้งหมด 2 ครั้ง และจะตามด้วยค่า `20px`
 
 # --instructions--
 
-จงใช้ `repeat` เพื่อเอาการเชียนซ้ำ ๆ ออกจาก `grid-template-columns` property.
+ให้แก้ property `grid-template-columns` โดยให้เปลี่ยนไปใช้ฟังก์ชัน `repeat` แทน โดยให้ได้ผลลัพธ์ตามเดิม
 
 # --hints--
 
-`container` class ควรมี `grid-template-columns` property อันหนึ่งที่ถูกกำหนดให้สร้างคอลั่มน์ที่มีความกว้างเป็น `1fr` ซ้ำ 3 อัน
+คลาส `container` ต้องกำหนดค่าของ property `grid-template-columns` โดยใช้ฟังก์ชัน `repeat` เพื่อสร้าง `1fr` ซ้ำกัน 3 ตัว
 
 ```js
 assert(
-  code.match(/.container\s*?{[\s\S]*grid-template-columns\s*?:\s*?repeat\s*?\(\s*?3\s*?,\s*?1fr\s*?\)\s*?;[\s\S]*}/gi),
+  code.match(
+    /.container\s*?{[\s\S]*grid-template-columns\s*?:\s*?repeat\s*?\(\s*?3\s*?,\s*?1fr\s*?\)\s*?;[\s\S]*}/gi
+  )
 );
 ```
 
@@ -77,11 +80,11 @@ assert(
     width: 100%;
     background: LightGray;
     display: grid;
-    /* Only change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
 
     grid-template-columns: 1fr 1fr 1fr;
 
-    /* Only change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 10px;
   }

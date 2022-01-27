@@ -10,7 +10,7 @@ dashedName: set-the-childs-prototype-to-an-instance-of-the-parent
 
 แบบทดสอบที่แล้ว เราได้สร้าง instance ใหม่ของ `Animal` ไปแล้ว ซึ่งเป็นขั้นตอนแรกในการสืบทอดพฤติกรรมจาก supertype (หรือ parent) ที่ชื่อว่า `Animal`
 
-แบบทดสอบนี้จะสอนขั้นตอนถัดไป นั่นคือการกำหนด `prototype` ของ subtype (หรือ child) 
+แบบทดสอบนี้จะสอนขั้นตอนถัดไป นั่นคือการกำหนด `prototype` ของ subtype (หรือ child)  
 ในกรณีนี้ `Bird` จะเป็น instance ของ `Animal`:
 
 ```js

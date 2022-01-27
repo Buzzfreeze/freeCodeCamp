@@ -9,34 +9,34 @@ dashedName: prioritize-one-style-over-another
 
 # --description--
 
-บางครั้ง HTML element ของคุณอาจจะได้รับ style หลาย ๆ แบบที่แตกต่างกับอีกอันหนึ่ง
+บางครั้ง ค่าของ style ของ HTML element อาจขัดแย้งกัน
 
-ยกตัวอย่างเช่น, `h1` element ไม่สามารถสีทั้งสีเขียวและชมพูได้ในเวลาเดียวกัน
+เช่น เราไม่สามารถกำหนดให้ `h1` มีค่าของ `color` เป็น `green` หรือ `pink` พร้อมๆกันได้
 
-เรามาดูสิ่งที่จะเกิดขึ้นเมื่อเราสร้าง class ที่ทำให้ตัวอักษรเป็นสีชมพู และเพิ่มมันให้กับ element หนึ่ง
-class ของเราจะเขียนทับ `color: green;` CSS property ของ `body` element หรือเปล่า ?
+เรามาลองสร้างคลาสที่เปลี่ยน `color` เป็น `pink` กัน 
+แล้วมาดูกันว่าข้อความจะใช้สีชมพูจากตลาสใหม่ของเรา หรือว่าจะใช้ `color: green;` จาก CSS property ของ `body`
 
 # --instructions--
 
-จงสร้าง CSS class ที่ชื่อ `pink-text` ที่จะกำหนดให้ element มีสีชมพู
+ให้สร้าง CSS class ที่ชื่อ `pink-text` เพื่อทำให้สีของข้อความเป็นสีชมพู
 
-จงกำหนดให้ `h1` element มีคลาสที่ชื่อ`pink-text`.
+และให้กำหนดคลาสของ `h1` element เป็น `pink-text`
 
 # --hints--
 
-`h1` element ควรมี class `pink-text`
+`h1` element ต้องมีคลาสเป็น `pink-text`
 
 ```js
 assert($('h1').hasClass('pink-text'));
 ```
 
-Your `<style>` should have a `pink-text` CSS class that changes the `color`.
+แท็ก `<style>` ต้องมี CSS class ชื่อ `pink-text` ที่มีค่าของ `color` เป็น `pink`
 
 ```js
 assert(code.match(/\.pink-text\s*\{\s*color\s*:\s*.+\s*;?\s*\}/g));
 ```
 
-Your `h1` element should be pink.
+ตัวอักษรใน `h1` ต้องเป็นสีชมพู
 
 ```js
 assert($('h1').css('color') === 'rgb(255, 192, 203)');

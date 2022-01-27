@@ -8,18 +8,19 @@ dashedName: optimize-re-renders-with-shouldcomponentupdate
 
 # --description--
 
-จนถึงตอนนี้ ถ้ามี component ไหนที่ได้ `state` ตัวใหม่หรือ `props` ตัวใหม่ component นั้นจะเรนเดอร์ทั้งตัวเองและ child ทั้งหมดอีกครั้ง 
+จนถึงตอนนี้ ถ้ามี component ไหนที่ได้ `state` ตัวใหม่หรือ `props` ตัวใหม่ component นั้นจะเรนเดอร์ทั้งตัวเองและ child ทั้งหมดอีกครั้ง  
 การเรนเดอร์ใหม่แบบนี้เป็นเรื่องปกติ แต่ React ก็มี lifecycle method ที่คุณสามารถเรียกใช้งานได้เมื่อ child component ได้รับ `state` ตัวใหม่หรือ `props` ตัวใหม่ และกำหนดว่า component นั้นจะต้องอัปเดตหรือไม่
-method นั้นคือ `shouldComponentUpdate()` ซึ่งรับค่าของ `nextProps` และ `nextState` เป็นพารามิเตอร์
+โดย method นั้นคือ `shouldComponentUpdate()` ซึ่งรับค่าของ `nextProps` และ `nextState` เป็นพารามิเตอร์
 
-เราใช้ method ตัวนี้เพื่อเพิ่มประสิทธิภาพของแอพเราได้ 
+เราใช้ method ตัวนี้เพื่อเพิ่มประสิทธิภาพของแอพเราได้  
 เช่น ถ้าปกติแล้ว component ของคุณจะเรนเดอร์ใหม่ทุกครั้งที่ได้รับ `props` ตัวใหม่ ถึงแม้ว่า `props` จะมีค่าเหมือนเดิมก็ตาม 
 ในกรณีนี้คุณจะใช้ `shouldComponentUpdate()` ได้ โดยการเปรียบเทียบ `props` ที่เข้ามา 
-โดย method นี้ต้อง return ค่า `Boolean` ที่บอก React ว่าจะอัพเดต component หรือไม่ คุณสามารถเปรียบเทียบ props ตัวปัจจุบัน (`this.props`) กับ props ตัวใหม่ (`nextProps`) เพื่อดูว่าคุณจำเป็นต้องอัปเดตหรือไม่ และคืนค่าออกมาเป็น `true` หรือ `false`
+โดย method นี้ต้องคืนค่าเป็น `Boolean` ที่บอก React ว่าจะอัพเดต component หรือไม่ คุณสามารถเปรียบเทียบ props ตัวปัจจุบัน (`this.props`) กับ props ตัวใหม่ (`nextProps`) เพื่อดูว่าคุณจำเป็นต้องอัปเดตหรือไม่ และคืนค่าออกมาเป็น `true` หรือ `false`
 
 # --instructions--
 
 เรามี method `shouldComponentUpdate()` ใน component ชื่อ `OnlyEvens` ตอนนี้ method นี้จะคืนค่าเป็น `true` ดังนั้น `OnlyEvens` จะเรนเดอร์ใหม่ทุกครั้งที่ได้รับ `props` ตัวใหม่ 
+
 ให้แก้ไข method เพื่อให้ `OnlyEvens` อัปเดตก็ต่อเมื่อ `value` ของ props ใหม่เป็นเลขคู่ ลองคลิกปุ่ม `add` และดูลำดับของ event ใน console เมื่อ lifecycle hook ทำงาน
 
 # --hints--

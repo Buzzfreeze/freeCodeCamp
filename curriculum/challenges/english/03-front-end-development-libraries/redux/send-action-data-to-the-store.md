@@ -9,11 +9,13 @@ dashedName: send-action-data-to-the-store
 # --description--
 
 คุณรู้วิธีส่ง action ไปยัง Redux store แล้ว แต่จนถึงตอนนี้ action พวกนี้ยังไม่มีข้อมูลอื่นนอกจาก `type` เลย 
+
 คุณจะส่งข้อมูลไปพร้อมกับ action ได้ และการส่งข้อมูลแบบนี้เป็นเรื่องปกติ เพราะ action มักเกิดจากการที่ผู้ใช้ทำอะไรบางอย่าง และมีโอกาสที่ต้องส่งข้อมูลไปด้วย โดยส่วนใหญ่ Redux store มักต้องใช้ข้อมูลนี้
 
 # --instructions--
 
 เราได้เขียน action creator ชื่อ `notesReducer()` และ `addNoteText()` ไว้ให้คร่าวๆใน code editor แล้ว 
+
 ให้เขียนฟังก์ชัน `addNoteText()` ให้เสร็จ โดยฟังก์ชันนี้ต้องคืนค่าเป็น `action` object ที่มี property สองตัวคือ 
 
 1. `type` ที่มีค่าเป็น `ADD_NOTE` และ

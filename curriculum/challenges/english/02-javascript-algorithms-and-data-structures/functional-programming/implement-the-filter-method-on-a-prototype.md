@@ -12,12 +12,12 @@ dashedName: implement-the-filter-method-on-a-prototype
 
 # --instructions--
 
-ให้เขียน `Array.prototype.myFilter()` ของคุณเอง โดยให้ทำงานเหมือนกับ `Array.prototype.filter()` และห้ามใช้ method `filter` ที่มีอยู่แล้ว 
+ให้เขียน `Array.prototype.myFilter()` ของคุณเอง โดยให้ทำงานเหมือนกับ `Array.prototype.filter()` และห้ามใช้ method `filter` ที่มีอยู่แล้ว  
 เราสามารถเข้าถึง instance ของ `Array` ใน method `myFilter` ได้โดยการใช้ `this`
 
 # --hints--
 
-`new_s` ต้องมีค่าเป็น `[23, 65, 5]`.
+`new_s` ต้องมีค่าเป็น `[23, 65, 5]`
 
 ```js
 assert(JSON.stringify(new_s) === JSON.stringify([23, 65, 5]));

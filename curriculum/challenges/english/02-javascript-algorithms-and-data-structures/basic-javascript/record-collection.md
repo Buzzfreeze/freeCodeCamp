@@ -14,13 +14,9 @@ dashedName: record-collection
 
 
 - ฟังก์ชันของคุณต้องคืนค่ารายการอัลบั้มเพลงของคุณออกมาทั้งก้อนเสมอ
-
 - ถ้า `prop` ไม่ได้มีค่าเป็น `tracks` และ `value` ไม่ได้เป็น empty string (ค่าว่าง) ให้เปลี่ยน `prop` ของอัลบั้ม ให้มีค่าเป็น `value` ที่ระบุเข้ามา
-
 - ถ้า `prop` มีค่าเป็น `tracks` แต่อัลบั้มไม่มี property ที่ชื่อ `tracks` ให้สร้าง empty array และเพิ่ม `value` เข้าไปใน array นั้น
-
 - ถ้า  `prop` มีค่าเป็น `tracks` และ `value` ที่เข้ามาไม่ได้เป็น empty string ให้นำ `value` ไปต่อท้าย array ของ `tracks`
-
 - ถ้า `value` เป็น empty string ให้ลบ property ตามที่ระบุเข้ามาใน `prop` 
 
 

@@ -2,18 +2,24 @@
 id: bad87fee1348bd9aecf08801
 title: Introduction to HTML5 Elements
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pVMPUv/cBkZGpt7'
+videoUrl: "https://scrimba.com/p/pVMPUv/cBkZGpt7"
 forumTopicId: 301097
 dashedName: introduction-to-html5-elements
 ---
 
 # --description--
 
-HTML5 ได้มีการใช้ HTML tag ที่มันมีความหมายมากขึ้น นั่นรวมถึง `main`, `header`, `footer`, `nav`, `video`, `article`, `section` และอื่น ๆ
-tag พวกนี้ทำให้โครงสร้างที่อธิบายได้ด้วยตัวมันเอง ซึ่งช่วยให้โค้ดของคุณอ่านได้เข้าใจง่ายมากขึ้น และมันยังช่วยให้ Search Engine Optimization (SEO) ทำงานได้ดีขึ้นด้วย รวมถึงยังช่วยในเรื่องของความสามารถในการเข้าถึง (accessability)
-`main` HTML5 tag จะช่วยให้ search engines และนักพัฒนาคนอื่นเจอเนื้อหาหลักที่อยู่ในหน้าเว็บของคุณ
+HTML5 มีแท็ก HTML ที่อธิบายหน้าที่ของแต่ละแท็กได้ชัดเจนมากขึ้น
+เช่น `main`, `header`, `footer`, `nav`, `video`, `article`, `section` ฯลฯ
 
-ตัวอย่างการใช้ `main` element ที่มี child element 2 อันอยู่ข้างใน:
+แท็กพวกนี้จะมีหน้าที่ตามชื่อของแท็กเลย ซึ่งจะช่วยให้โค้ดของคุณอ่านได้เข้าใจง่ายมากขึ้น และยังช่วยให้ Search Engine Optimization (SEO) ทำงานได้ดีขึ้นอีกด้วย
+และก็ยังเพิ่ม accessability ของเว็บอีกด้วย
+(accessability คือการที่เบราว์เซอร์จะช่วยให้คนบางกลุ่มใช้หน้าเว็บได้ง่ายขึ้น เช่น การทำให้คนตาบอดสามารถใช้เว็บของเราได้โดยใช้ screen reader)
+
+HTML5 มีแท็กชื่อ `main` ซึ่งจะช่วยให้ search engine และนักพัฒนาคนอื่นรู้ว่าเนื้อหาหลักของเว็บคุณอยู่ตรงไหน
+
+ลองดูตัวอย่างการใช้ `main` ที่มี child element 2 อันอยู่ข้างใน
+(child element คือ element ที่ซ้อนอยู่ใน element อื่น โดย element ตัวที่อยู่ข้างนอกจะเรียกว่า parent element):
 
 ```html
 <main>
@@ -22,53 +28,56 @@ tag พวกนี้ทำให้โครงสร้างที่อธ�
 </main>
 ```
 
-**Note:** แท็กใหม่ ๆ ของ HTML5 และประโยชน์ของพวกมันนั้นจะถูกกล่าวถึงใน Applied Accessibility section
+**Note:** เราจะสอนเรื่องแท็กใหม่ๆ ของ HTML5 และประโยชน์ของแท็กนั้นในบทเรียนเรื่อง Applied Accessibility
 
 # --instructions--
 
-จงเพิ่ม `p` element อันหนึ่งที่เก็บ kitty ipsum text ดังต่อไปนี้: `Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.`
+ให้เพิ่ม `p` element อีกอันหนึ่ง โดยมีข้อความข้างในเป็น kitty ipsum ตัวนี้: `Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.`
 
-หลังจากนั้น จงสร้าง `main` element และเก็บ `p` element เพียงสองอันไว้ใน `main` element
+หลังจากนั้นให้สร้าง `main` element ครอบ `p` element ทั้งสองตัว
 
 # --hints--
 
-คุณควรมี 2 `p` element ที่มาพร้อมกับข้อความของ Kitty Ipsum text.
+คุณควรมี `p` element 2 ตัว โดยมีข้อความข้างในเป็นข้อความของ Kitty Ipsum
 
 ```js
-assert($('p').length > 1);
+assert($("p").length > 1);
 ```
 
-`p` element แต่ละอันควรจะมีแท็กปิด
+`p` element ทั้งสองตัวต้องมีแท็กปิด
 
 ```js
-assert(code.match(/<\/p>/g) && code.match(/<\/p>/g).length === code.match(/<p/g).length);
+assert(
+  code.match(/<\/p>/g) &&
+    code.match(/<\/p>/g).length === code.match(/<p/g).length
+);
 ```
 
-`p` element ควรเก็บข้อความช่วงแรกของ `kitty ipsum` ซึ่งเขียนไว้แล้วที่ด้านบน
+`p` element ต้องมีข้อความข้างในเป็น `kitty ipsum` ที่เราให้ไว้ด้านบน
 
 ```js
-assert.isTrue(/Purr\s+jump\s+eat/gi.test($('p').text()));
+assert.isTrue(/Purr\s+jump\s+eat/gi.test($("p").text()));
 ```
 
-คุณควรมี `main` element แค่อันเดียว
+ต้องมี `main` element แค่อันเดียว
 
 ```js
-assert($('main').length === 1);
+assert($("main").length === 1);
 ```
 
-`main` element ควรมี paragraph element 2 อัน children ของมัน
+ใน `main` element ต้องมี `p` element 2 อันเป็น child
 
 ```js
-assert($('main').children('p').length === 2);
+assert($("main").children("p").length === 2);
 ```
 
-แท็กเปิดของ `main` ควรมาก่อน paragraph tag อันแรก
+แท็กเปิดของ `main` ต้องอยู่ก่อนแท็ก `p` อันแรก
 
 ```js
 assert(code.match(/<main>\s*?<p>/g));
 ```
 
-แท็กปิดของ `main` ควรมาหลังจากแท็กปิดของ paragraph ที่สอง
+แท็กปิดของ `main` ต้องอยู่หลังแท็กปิดของ `p` อันที่สอง
 
 ```js
 assert(code.match(/<\/p>\s*?<\/main>/g));
@@ -82,8 +91,8 @@ assert(code.match(/<\/p>\s*?<\/main>/g));
 <h2>CatPhotoApp</h2>
 
 <p>
-  Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball
-  run catnip eat the grass sniff.
+  Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack
+  your ankles chase the red dot, hairball run catnip eat the grass sniff.
 </p>
 ```
 
@@ -93,12 +102,13 @@ assert(code.match(/<\/p>\s*?<\/main>/g));
 <h2>CatPhotoApp</h2>
 <main>
   <p>
-    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot,
-    hairball run catnip eat the grass sniff.
+    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+    attack your ankles chase the red dot, hairball run catnip eat the grass
+    sniff.
   </p>
   <p>
-    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur
-    catnip scratched.
+    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
+    rip the couch sleep in the sink fluffy fur catnip scratched.
   </p>
 </main>
 ```

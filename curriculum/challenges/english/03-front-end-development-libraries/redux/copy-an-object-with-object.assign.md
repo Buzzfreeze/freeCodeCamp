@@ -9,7 +9,9 @@ dashedName: copy-an-object-with-object-assign
 # --description--
 
 แบบทดสอบที่ผ่านมานั้น เราได้ลองจัดการกับ immutable state ที่เป็น array ไปแล้ว 
+
 คราวนี้มาดูในกรณีที่ state เป็น `object` กันบ้าง เราจะใช้ `Object.assign()` เพื่อจัดการ object โดยไม่เปลี่ยนแปลงค่าเดิม 
+
 method `Object.assign()` นี้จะอ่านค่าของ object เป้าหมายและ object ต้นทาง และแมป property จาก object ต้นทางไปยัง object เป้าหมาย โดย property ที่ชื่อตรงกันจะถูกเขียนทับโดยใช้ค่าของ property ใน object ต้นทาง
 เราจะใช้วิธีนี้ในการคัดลอก object อย่างง่ายๆ โดยการส่ง object ว่างเป็น argument แรกตามด้วย object ที่คุณต้องการคัดลอก 
 ลองดูตัวอย่าง:
@@ -23,7 +25,9 @@ const newObject = Object.assign({}, obj1, obj2);
 # --instructions--
 
 เราได้เขียน Redux state และ action ใหม่ให้แล้ว เพื่อให้จัดการกับ `state` ที่เป็น `object` 
+
 ให้แก้ไขโค้ดเพื่อให้คืนค่า `state` เป็น object ใหม่ ในกรณีที่ action type เป็น `ONLINE` โดยใน object ใหม่ให้ property มีค่าเป็น string `online` 
+
 ให้ใช้ `Object.assign()` ในการทำแบบทดสอบนี้
 
 # --hints--

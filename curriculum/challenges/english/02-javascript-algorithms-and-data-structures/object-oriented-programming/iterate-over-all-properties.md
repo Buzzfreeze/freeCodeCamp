@@ -8,7 +8,7 @@ dashedName: iterate-over-all-properties
 
 # --description--
 
-ตอนนี้คุณเรียนเรื่อง property ไปแล้ว 2 ประเภท คือ <dfn>own property</dfn> และ `prototype` property 
+ตอนนี้คุณเรียนเรื่อง property ไปแล้ว 2 ประเภท คือ <dfn>own property</dfn> และ `prototype` property  
 โดย own property คือ property ที่ถูกกำหนดโดยตรงภายใน instance ของ object ส่วน `prototype` property นั้นจะถูกกำหนดจาก `prototype`
 
 ```js

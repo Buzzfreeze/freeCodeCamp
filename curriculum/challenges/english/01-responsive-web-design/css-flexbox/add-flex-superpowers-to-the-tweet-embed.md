@@ -2,72 +2,75 @@
 id: 587d78ab367417b2b2512af1
 title: Add Flex Superpowers to the Tweet Embed
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pVaDAv/c9W7MhM'
+videoUrl: "https://scrimba.com/p/pVaDAv/c9W7MhM"
 forumTopicId: 301100
 dashedName: add-flex-superpowers-to-the-tweet-embed
 ---
 
 # --description--
 
-ทางด้านขวาคือ tweet embed ที่จะถูกใช้เป็นตัวอย่างการใช้งาน
-บาง element สามารถดูดีขึ้นได้ด้วย layout ที่แตกต่างกัน
-challenge ที่แล้วคุณได้แสดงตัวอย่างของการใช้ `display: flex`.
-ตอนนี้คุณจะได้ใช้ component หลาย ๆ ตัวใน tweet embed เพื่อเริ่มการจัดตำแหน่งให้พวกมัน
+ทางด้านขวาคือตัวอย่างของ tweet ที่เราจะนำมาใช้กัน
+เราสามารถทำให้ element บางตัวในนี้ดูดีขึ้นได้ ถ้าเราเปลี่ยน layout
+
+ในแบบทดสอบที่แล้ว คุณได้ลองใช้ property `display: flex` ไปแล้ว
+ตอนนี้คุณจะได้ใช้ property นี้ใน component ตัวอื่นๆ ใน tweet เพื่อเริ่มการจัดตำแหน่งให้สวยงาม
 
 # --instructions--
 
-จงเพิ่ม CSS property `display: flex` ให้กับ item ทุกตัวดังต่อไปนี้ - จงไว้ว่า selector ได้ถูกกำหนดไว้แล้วใน CSS:
+ให้เพิ่ม CSS property `display: flex` ให้กับ element ทุกตัวดังต่อไปนี้ (เราได้เขียน selector ให้แล้วใน CSS):
 
-`header`, the header's `.profile-name`, the header's `.follow-btn`, the header's `h3` and `h4`, the `footer`, and the footer's `.stats`.
+`header`, `.profile-name` ของ header, `.follow-btn` ของ header, `h3` และ `h4` ของ header, `footer`, และ `.stats` ของ footer
 
 # --hints--
 
-`.follow-btn` ของคุณควรจะถูกแสดงผลในหน้าเว็บไซต์ จงมั่นใจว่าคุณได้ปิด extension ต่าง ๆ เช่น ตัวปิดกั้นโฆษณา ไปหมดแล้ว
+`.follow-btn` ต้องแสดงผลในเว็บไซต์ของคุณด้วย ถ้าไม่แสดงผล ให้ลองปิด extension ของเบราว์เซอร์ดูก่อน (เช่น ads block)
 
 ```js
-assert($('.follow-btn').length > 0 && $('.follow-btn').css('display') !== 'none');
+assert(
+  $(".follow-btn").length > 0 && $(".follow-btn").css("display") !== "none"
+);
 ```
 
-tag `header` ควรมี `display` property เป็น `flex`.
+แท็ก `header` ต้องมีค่าของ property `display` เป็น `flex`
 
 ```js
-assert($('header').css('display') == 'flex');
+assert($("header").css("display") == "flex");
 ```
 
-tag `footer` ควรมี `display` property เป็น `flex`.
+แท็ก `footer` ต้องมีค่าของ property `display` เป็น `flex`
 
 ```js
-assert($('footer').css('display') == 'flex');
+assert($("footer").css("display") == "flex");
 ```
 
-tag `h3` ควรมี `display` property เป็น `flex`.
+แท็ก `h3` ต้องมีค่าของ property `display` เป็น `flex`
 
 ```js
-assert($('h3').css('display') == 'flex');
+assert($("h3").css("display") == "flex");
 ```
 
-tag `h4` ควรมี `display` property เป็น `flex`.
+แท็ก `h4` ต้องมีค่าของ property `display` เป็น `flex`
 
 ```js
-assert($('h4').css('display') == 'flex');
+assert($("h4").css("display") == "flex");
 ```
 
-Class `.profile-name` ควรมี `display` property เป็น `flex`.
+คลาส `.profile-name` ต้องมีค่าของ property `display` เป็น `flex`
 
 ```js
-assert($('.profile-name').css('display') == 'flex');
+assert($(".profile-name").css("display") == "flex");
 ```
 
-Class `.follow-btn` ควรมี `display` property เป็น `flex`.
+คลาส `.follow-btn` ต้องมีค่าของ property `display` เป็น `flex`
 
 ```js
-assert($('.follow-btn').css('display') == 'flex');
+assert($(".follow-btn").css("display") == "flex");
 ```
 
-Class `.stats` ควรมี `display` property เป็น `flex`.
+คลาส `.stats` คต้องมีค่าของ property `display` เป็น `flex`
 
 ```js
-assert($('.stats').css('display') == 'flex');
+assert($(".stats").css("display") == "flex");
 ```
 
 # --seed--
@@ -145,8 +148,8 @@ assert($('.stats').css('display') == 'flex');
 </header>
 <div id="inner">
   <p>
-    I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart,
-    you still have to work hard.
+    I meet so many people who are in search of that one trick that will help
+    them work smart. Even if you work smart, you still have to work hard.
   </p>
   <span class="date">1:32 PM - 12 Jan 2018</span>
   <hr />
@@ -243,8 +246,8 @@ assert($('.stats').css('display') == 'flex');
 </header>
 <div id="inner">
   <p>
-    I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart,
-    you still have to work hard.
+    I meet so many people who are in search of that one trick that will help
+    them work smart. Even if you work smart, you still have to work hard.
   </p>
   <span class="date">1:32 PM - 12 Jan 2018</span>
   <hr />

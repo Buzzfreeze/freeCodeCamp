@@ -9,7 +9,7 @@ dashedName: use-typeof-to-check-the-type-of-a-variable
 # --description--
 
 
-คุณสามารถใช้ `typeof` เพื่อตรวจสอบโครงสร้างหรือประเภทข้อมูลของตัวแปรได้ คำสั่งนี้มีประโยชน์ในการ debug โค้ดที่มีข้อมูลหลายประเภท 
+คุณสามารถใช้ `typeof` เพื่อตรวจสอบโครงสร้างหรือประเภทข้อมูลของตัวแปรได้ คำสั่งนี้มีประโยชน์ในการ debug โค้ดที่มีข้อมูลหลายประเภท  
 เช่น ถ้าคุณจะนำเลข 2 ตัวมาบวกกัน แต่เลขตัวนึงเป็น string ซึ่งอาจทำให้ผลลัพธ์ผิดได้ ซึ่งข้อผิดพลาดจากประเภทข้อมูลนี้อาจซ่อนอยู่ในฟังก์ชันหรือการคำนวนของเราได้ เพราะฉะนั้นคุณต้องระวังเรื่องนี้ให้ดี โดยเฉพาะเมื่อคุณใช้ข้อมูลจากภายนอกที่อยู่ในรูป JavaScript Object Notation (JSON)
 
 ลองดูตัวอย่างการใช้ `typeof`:
@@ -23,7 +23,7 @@ console.log(typeof {});
 
 console จะแสดง string `string`, `number`, `object` และ `object` ตามลำดับ
 
-JavaScript มีชนิดของข้อมูลที่เปลี่ยนแปลงไม่ได้ (immutable data type) อยู่ 6 ชนิด คือ `Boolean`, `Null`, `Undefined`, `Number`, `String` และ `Symbol` (เพิ่งมีใน ES6) และมีข้อมูลที่เปลี่ยนแปลงได้ (mutable data type) อยู่ 1 ชนิดคือ `Object` 
+JavaScript มีชนิดของข้อมูลที่เปลี่ยนแปลงไม่ได้ (immutable data type) อยู่ 6 ชนิด คือ `Boolean`, `Null`, `Undefined`, `Number`, `String` และ `Symbol` (เพิ่งมีใน ES6) และมีข้อมูลที่เปลี่ยนแปลงได้ (mutable data type) อยู่ 1 ชนิดคือ `Object`  
 *หมายเหตุ* ในทางเทคนิค array ถือว่าเป็น object ใน JavaScript
 
 # --instructions--

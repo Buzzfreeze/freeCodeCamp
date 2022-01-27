@@ -8,39 +8,49 @@ dashedName: access-the-json-data-from-an-api
 
 # --description--
 
-จากโทย์ล่าสุด เราจะเห็นวิธีการ get JSON data จาก freeCodeCamp Cat Photo API.
+ในแบบทดสอบที่แล้ว เราได้เห็นวิธีการดึงข้อมูล JSON จาก Cat Photo API ของเราไปแล้ว
 
-เพื่อเข้าใจ JSON format ให้ทำความเข้าใจ notation JavaScript ก่อน
+ก่อนที่จะไปทำความเข้าใจข้อมูลที่ได้รับกลับมาจาก API คุณควรเข้าใจรูปแบบของ JSON ก่อน 
+จำเรื่อง notation ของ JavaScript ได้มั้ย:
 
-<blockquote>[ ] -> Square brackets แสดง array<br>{ } -> Curly brackets แสดง object<br>" " -> Double quotes แสดง string เครื่องหมายเหล่านี้ใช้สำหรับ key names ใน JSON</blockquote>
+<blockquote>[ ] -> Square bracket หมายถึงข้อมูลที่เป็น array<br>{ } -> Curly bracket หมายถึงข้อมูลที่เป็น object<br>" " -> Double quote หมายถึงข้อมูลที่เป็น string และใช้เพื่อบอกชื่อของ key ใน JSON ด้วย</blockquote>
 
-structure ของ data เป็น API ที่ returns ค่าที่สำคัญเพราะมันมีอิทธิพลต่อการดึงค่าที่คุณต้องการ
+ความเข้าใจในโครงสร้างของข้อมูลที่ API ส่งกลับมาเป็นเรื่องสำคัญ เพราะว่าโครงสร้างข้อมูลนี้จะส่งผลถึงวิธีในการดึงข้อมูลที่คุณต้องการมาใช้
 
-click ปุ่ม `Get Message` เพื่อ load  freeCodeCamp Cat Photo API JSON ไปเป็น HTML
+ในหน้าต่างด้านขวา ให้ลองคลิกปุ่ม `Get Message` เพื่อดึงข้อมูล JSON จาก Cat Photo API มาแสดงเป็น HTML
 
-ในลักษณะแรหและสุดท้าย เราจะเห็นว่า JSON data มี square brackets `[ ]` หมายความว่า data แสดงเป็นแบบ array หาก JSON data มี curly `{` bracket แสดงว่าเป็น object 
-เราจะสังเกตุเห็นว่ามันมี 3 objects โดยที่ JSON data มี array ของ 3 objects และแต่ละ object จะมีข้อมูลของรูปภาพของแมว
+จะเห็นว่าตัวอักษรแรกและตัวอักษรสุดท้ายของข้อมูล JSON เป็น square bracket `[ ]` แปลว่าข้อมูลที่เราได้กลับมานี้เป็น array แต่ถ้าข้อมูล JSON นี้ถูกครอบด้วย curly bracket `{ }` ก็จะแปลว่าข้อมูลนี้เป็น object 
+ให้ลองดูข้อมูลนี้ดีๆอีกครั้ง จะเห็นว่าในข้อมูลนี้มี object 3 ตัว 
+แปลว่าข้อมูล JSON ที่เราได้มาจากการเรียก API ในครั้งนี้เป็น array ที่มี object 3 ตัวอยู่ด้านใน โดย object แต่ละตัวจะเก็บข้อมูลของรูปน้องแมว
 
-objects ประกอบไปด้วย "key-value pairs" ที่แบ่งแยกด้วย comma จากตัวอย่างของรูปแมว object แรกจะเป็น `"id":0` โดยมี `id`  เป็น และค่า `0` เป็น corresponding value เหมือนกับค่า keys สำหรับ `imageLink`, `altText`, และ `codeNames` object ของรูปแมวแต่บะรูปจะมี keys ที่เหมือนกันแต่มี corresponding value ที่ต่างกัน
+จากที่คุณได้เรียกมาจากบทเรียนที่ผ่านมา object จะมีข้อมูลข้างในเป็น "key-value pair" ที่แบ่งด้วยคอมม่า 
+จากตัวอย่างของรูปน้องแมว object แรกจะมี `"id":0` 
+โดย `id` คือคีย์ (key) และ `0` คือค่า (value) ของคีย์นั้น 
+แล้วใน object นี้ก็จะมีคีย์ตัวอื่นอีก คือ `imageLink`, `altText`, และ `codeNames` 
+ใน object ของรูปน้องแมวแต่ละตัวจะมี คีย์ที่เหมือนกันแต่มีค่าของคีย์นั้นต่างกัน
 
-ส่วนที่น่าสนใจคือ "key-value pair" ใน object คือ `"codeNames":["Juggernaut","Mrs. Wallace","ButterCup"]` โดย`codeNames` เป็น key ที่มีค่าเป็น array ของ strings 3 ค่า 
+ใน object แรกมีส่วนที่น่าสนใจอีกอย่างก็คือ `"codeNames":["Juggernaut","Mrs. Wallace","ButterCup"]` โดย `codeNames` เป็นคีย์ที่มีค่าเป็น array ของ string 3 ตัว
 
-อย่าลืมวิธีการ access data ใน arrays และ objects โดยที่ Arrays ขะใช้ bracket notation เพื่อ access specific index ของแต่ละ item ส่วน Objects สามารถใช้ได้ทั้ง bracket หรือ dot notation เพื่อเข้าถึงค่าของ property เช่น จะ prints the `altText` property แรกของรูปแมว ให้ใช้ตัวอย่างดังข้างล่าง
+ยังจำวิธีการเข้าถึงข้อมูลใน array และ object ได้อยู่ใช่ไหม? 
+เราจะเข้าถึงข้อมูลใน array ได้โดยใช้ bracket notation และระบุตำแหน่ง (index) ของข้อมูลใน array ที่เราจะเข้าถึง 
+และเราจะเข้าถึงข้อมูลใน Objects โดยใช้ bracket หรือ dot notation ก็ได้ โดยการระบุชื่อของ property ที่เราจะเข้าถึง
+ในตัวอย่างด้านล่าง เราจะแสดง property `altText` ของรูปแมวรูปแรกใน console:
+(ในตัวอย่างนี้เราเก็บข้อมูล JSON ไว้ในตัวแปรชื่อ json แล้ว)
 
 ```js
 console.log(json[0].altText);
 ```
 
-console จะแสดง string `A white cat wearing a green helmet shaped melon on its head.`.
+console จะแสดง string `A white cat wearing a green helmet shaped melon on its head.`
 
 # --instructions--
 
-สำหรับแมวที่มี `id` เป็น 2 ให้แสดงค่าออกทาง console โดยแสดงค่าลำดับที่สองของ `codeNames` array
-ควรใช้ bracket และ dot notation กับ object (saved variable `json`) เพื่อเข้าถึงค่า
+ให้แสดง string ตัวที่สองของ array `codeNames` ใน console โดยดึงค่ามาจาก object ของรูปน้องแมวที่มี `id` เป็น `2`
+ต้องใช้ bracket และ dot notation เพื่อดึงค่าออกมาจาก object (เราเก็บข้อมูลที่ได้จาก API ลงในตัวแปร `json` แล้ว)
 
 # --hints--
 
-ควรใช้ bracket และ dot notation เพื่อเข้าถึง code name และ print `Loki` ออกมาทาง console
+ต้องใช้ bracket และ dot notation เพื่อเข้าถึง `codeNames` และแสดงคำว่า `Loki` บน console
 
 ```js
 assert(
@@ -64,9 +74,9 @@ assert(
       req.onload=function(){
         const json = JSON.parse(req.responseText);
         document.getElementsByClassName('message')[0].innerHTML = JSON.stringify(json);
-        // Add your code below this line
+        // เขียนโค้ดใต้บรรทัดนี้
 
-        // Add your code above this line
+        // เขียนโค้ดเหนือบรรทัดนี้
       };
     };
   });
@@ -122,9 +132,9 @@ assert(
       req.onload=function(){
         const json = JSON.parse(req.responseText);
         document.getElementsByClassName('message')[0].innerHTML = JSON.stringify(json);
-        // Add your code below this line
+        // เขียนโค้ดใต้บรรทัดนี้
         console.log(json[2].codeNames[1]);
-        // Add your code above this line
+        // เขียนโค้ดเหนือบรรทัดนี้
       };
     };
   });

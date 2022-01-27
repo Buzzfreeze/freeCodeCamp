@@ -10,7 +10,7 @@ dashedName: everything-be-true
 
 จงตรวจสอบว่าทุก element ใน array `collection` มีค่าของ property ตามตัวแปร `pre` เป็น <dfn>truthy</dfn> หรือไม่ 
 
-สมมติว่าคุณมี array ที่ object ใน array นั้นมี `pre` เป็น property 
+สมมติว่าคุณมี array ที่ object ใน array นั้นมี `pre` เป็น property  
 ถ้าค่าของ property นี้ในทุก object เป็น `truthy` ให้คืนค่า `true` แต่ถ้าไม่ใช่ ให้คืนค่าเป็น `false`
 
 ใน JavaScript คำว่า `truthy` values หมายถึง ค่าที่แปลงเป็น Boolean แล้วได้ค่าเป็น `true`

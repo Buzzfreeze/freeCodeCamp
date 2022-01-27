@@ -22,7 +22,7 @@ var ourStr = "I come first. ";
 ourStr += "I come second.";
 ```
 
-ตัวแปร `ourStr` จะมีค่าเป็น `I come first. I come second.`.
+ตัวแปร `ourStr` จะมีค่าเป็น `I come first. I come second.`
 
 # --instructions--
 

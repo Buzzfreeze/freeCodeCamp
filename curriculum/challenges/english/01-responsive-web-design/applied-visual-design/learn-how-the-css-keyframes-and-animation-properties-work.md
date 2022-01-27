@@ -2,27 +2,33 @@
 id: 587d78a7367417b2b2512adf
 title: Learn How the CSS @keyframes and animation Properties Work
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cakprhv'
+videoUrl: "https://scrimba.com/c/cakprhv"
 forumTopicId: 301059
 dashedName: learn-how-the-css-keyframes-and-animation-properties-work
 ---
 
 # --description--
 
-เพื่อที่จะ animate element, คุณจำเป็นต้องรู้เกี่ยวกับ animation property และ `@keyframes` rule
-animation property จะควบคุมพฤติกรรมที่ animation ควรเป็น ส่วน `@keyframes` rule จะควบคุมว่าจะเกิดอะไรขึ้นระหว่าง animation
-ซึ่งมันจะมี animation property อยู่ทั้งหมด 8 อัน
-ในแบบฝึกหัดนี้จะทำ animation ง่าย ๆ โดยคลอบคลุม animation property แค่ 2 อันที่สำคัญที่สุดก่อน:
+ก่อนที่คุณจะไปทำให้ element เคลื่อนไหวได้ คุณจำเป็นต้องรู้เรื่อง animation property และ `@keyframes` rule ก่อน
+โดย animation property จะควบคุมการเคลื่อนไหว
+ส่วน `@keyframes` จะควบคุมว่าจะเกิดอะไรขึ้นระหว่างการเคลื่อนไหวนั้น
+ซึ่งจะมี animation property อยู่ทั้งหมด 8 อัน
+
+ในแบบฝึกหัดนี้เราจะทำ animation ง่าย ๆ ซึ่งจะใช้ animation property สองตัวที่สำคัญที่สุดก่อน:
 
 `animation-name` จะกำหนดชื่อของ animation ซึ่งในภายหลังจะถูกใช้โดย `@keyframes` เพื่อบอก CSS ว่า rule ไหนจะใช้กับ animation ไหน
 
 `animation-duration` จะกำหนดเวลาที่จะใช้ใน animation
 
 `@keyframes` คือวิธีที่จะระบุว่าจะเกิดอะไรขึ้นบ้างระหว่างช่วงที่ animate element อยู่
-มันสามารถทำได้โดยการกำหนด CSS properties สำหรับแต่ละ "frames" ระหว่าง animation, โดยเปอร์เซ็นที่ไล่ตั้งแต่ 0% ถึง 100%
-ถ้าคุณเปรียบเทียบมันกับหนัง CSS properties ที่เป็น 0% ก็คือการแสดงผลของ element ในฉากเปิด
-ส่วน CSS properties ที่เป็น 100% คือการแสดงผลของ element ในตอนจบก่อนที่จะมี credit ขึ้นมา
-นี่คือตัวอย่างในการใช้ `@keyframes` และ animation properties:
+ซึ่งสามารถทำได้โดยการกำหนด CSS property สำหรับแต่ละ "เฟรม" ระหว่าง animation
+โดยจะกำหนดเป็นเปอร์เซ็น ที่ไล่ตั้งแต่ 0% ถึง 100%
+
+ถ้าจะเปรียบกับหนัง
+ที่เฟรม 0% ก็คือการแสดงผลของ element ในฉากเปิด
+ส่วนที่เฟรม 100% คือการแสดงผลของ element ในตอนจบก่อนที่จะมี credit ขึ้นมา
+
+ลองดูตัวอย่างในการใช้ `@keyframes` และ animation property:
 
 ```css
 #anim {
@@ -40,49 +46,55 @@ animation property จะควบคุมพฤติกรรมที่ ani
 }
 ```
 
-สำหรับ element ที่มาพร้อมกับ `anim` id, code snippet ข้างบนจะกำหนดให้ `animation-name` เป็น `colorful` และกำหนดให้ `animation-duration` มีค่า 3 วินาที
-หลังจากนั้น `@keyframes` rule จะลิงค์เข้ากับ animation properties ที่มีชื่อว่า `colorful`
-มันจะกำหนดให้สีกลายเป็นสีน้ำเงินในตอนแรกของ animation (0%) ซึ่งจะเปลี่ยนไปเป็นสีเหลืองในตอนสุดท้าย(100%)
-คุณไม่ได้ถูกจำกัดไง้ที่การเปลี่ยนแปลงในตอนเริ่มและตอนจบเท่านั้น คุณสามารถกำหนด properties ให้กับ element ณ เปอร์เซ็นไหนระหว่าง 0% ถึง 100% ก็ได้
+ตัวอย่างโค้ดด้านบนจะกำหนดให้ element ที่มี id เป็น `anim` มีค่าของ property `animation-name` เป็น `colorful` และมีค่าของ `animation-duration` เป็น 3 วินาที
+หลังจากนั้น `@keyframes` rule จะลิงก์เข้ากับ animation property ที่มีชื่อว่า `colorful`
+โดยในตอนแรก (0%) element ที่มี id เป็น `anim` จะมี `background-color` เป็นสีน้ำเงิน และในตอนสุดท้าย (100%) จะเปลี่ยนไปเป็นสีเหลือง
+
+โค้ดของคุณจะกำหนด keyframe ไว้ที่ช่วงไหนก็ได้ ระหว่าง 0% ถึง 100%
 
 # --instructions--
 
-จงสร้าง animation ให้กับ element ที่มาพร้อมกับ id `rect`, โดยการกำหนดให้ `animation-name` มีค่าเป็น `rainbow` และ `animation-duration` เป็น 4 วินาที
-ถัดไป จงประกาศใช้ `@keyframes` rule, และกำหนดให้ `background-color` ณ ตอนเริ่ม animation (`0%`) เป็นสีฟ้า, และตรงกลางanimation (`50%`) เป็นสีเขียว และตอนจบของ animation (`100%`) เป็นสีเหลือง
+ให้สร้าง animation ให้กับ element ที่มี id เป็น `rect`
+โดยให้กำหนด `animation-name` เป็น `rainbow` และ `animation-duration` เป็น 4 วินาที
+
+ถัดไปให้ประกาศ `@keyframes` rule
+โดยกำหนดให้ `background-color` ตอนเริ่ม animation (`0%`) เป็นสีฟ้า
+ตรงกลาง animation (`50%`) เป็นสีเขียว
+และตอนจบของ animation (`100%`) เป็นสีเหลือง
 
 # --hints--
 
-element ที่มาพร้อมกับไอดี `rect` ควรมี `animation-name` property ที่มีค่าเป็น `rainbow`.
+element ที่มี id เป็น `rect` ต้องมีค่าของ `animation-name` เป็น `rainbow`
 
 ```js
-assert($('#rect').css('animation-name') == 'rainbow');
+assert($("#rect").css("animation-name") == "rainbow");
 ```
 
-element ที่มาพร้อมกับไอดี `rect` ควรมี `animation-duration` property ที่มีค่าเท่ากับ of 4s.
+element ที่มี id เป็น `rect` ต้องมีค่าของ `animation-duration` เป็น 4 วินาที
 
 ```js
-assert($('#rect').css('animation-duration') == '4s');
+assert($("#rect").css("animation-duration") == "4s");
 ```
 
-`@keyframes` rule ควรใช้ `animation-name` ที่เป็น `rainbow`
+`@keyframes` rule ต้องใช้ `animation-name` ชื่อ `rainbow`
 
 ```js
 assert(code.match(/@keyframes\s+?rainbow\s*?{/g));
 ```
 
-`@keyframes` rule ของ `rainbow` ควรใช้ `background-color` ที่เป็นสี `blue` ณ ตำแหน่งที่ 0%
+`@keyframes` rule ของ `rainbow` ต้องใช้ `background-color` เป็นสี `blue` ณ ตำแหน่งที่ 0%
 
 ```js
 assert(code.match(/0%\s*?{\s*?background-color:\s*?blue;\s*?}/gi));
 ```
 
-`@keyframes` rule ของ `rainbow` ควรใช้ `background-color` ที่เป็นสี `green` ณ ตำแหน่งที่ 50%.
+`@keyframes` rule ของ `rainbow` ต้องใช้ `background-color` เป็นสี `green` ณ ตำแหน่งที่ 50%
 
 ```js
 assert(code.match(/50%\s*?{\s*?background-color:\s*?green;\s*?}/gi));
 ```
 
-`@keyframes` rule ของ `rainbow` ควรใช้ `background-color` ที่เป็นสี `yellow` ณ ตำแหน่งที่ 100%.
+`@keyframes` rule ของ `rainbow` ต้องใช้ `background-color` เป็นสี `yellow` ณ ตำแหน่งที่ 100%
 
 ```js
 assert(code.match(/100%\s*?{\s*?background-color:\s*?yellow;\s*?}/gi));

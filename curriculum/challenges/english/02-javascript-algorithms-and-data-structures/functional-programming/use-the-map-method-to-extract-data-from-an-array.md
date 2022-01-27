@@ -45,9 +45,9 @@ console.log(names);
 
 # --instructions--
 
-ตอนนี้ array `watchList` เก็บ object ที่เก็บข้อมูลของภาพยนตร์อยู่
-จงใช้ `map` กับ `watchList` เพื่อเก็บค่า array ตัวใหม่ลงในตัวแปร `ratings` 
-โดย array `ratings` จะต้องเก็บเฉพาะค่าของ `title` ที่เป็นชื่อของภาพยนต์ และ ค่าของ `rating` ที่เป็น IMDB rating เท่านั้น 
+ตอนนี้ array `watchList` เก็บ object ที่เก็บข้อมูลของภาพยนตร์อยู่  
+จงใช้ `map` กับ `watchList` เพื่อเก็บค่า array ตัวใหม่ลงในตัวแปร `ratings`  
+โดย array `ratings` จะต้องเก็บเฉพาะค่าของ `title` ที่เป็นชื่อของภาพยนต์ และ ค่าของ `rating` ที่เป็น IMDB rating เท่านั้น  
 โค้ดที่อยู่ใน editor ตอนนี้ ใช้ `for` loop อยู่ คุณต้องเขียนใหม่โดยใช้ `map` แทน
 
 # --hints--
@@ -72,7 +72,7 @@ assert(!code.match(/for\s*?\([\s\S]*?\)/));
 assert(code.match(/\.map/g));
 ```
 
-ตัวแปร `ratings` ต้องมีค่าเป็น `[{"title":"Inception","rating":"8.8"},{"title":"Interstellar","rating":"8.6"},{"title":"The Dark Knight","rating":"9.0"},{"title":"Batman Begins","rating":"8.3"},{"title":"Avatar","rating":"7.9"}]`.
+ตัวแปร `ratings` ต้องมีค่าเป็น `[{"title":"Inception","rating":"8.8"},{"title":"Interstellar","rating":"8.6"},{"title":"The Dark Knight","rating":"9.0"},{"title":"Batman Begins","rating":"8.3"},{"title":"Avatar","rating":"7.9"}]`
 
 ```js
 assert.deepEqual(ratings, [

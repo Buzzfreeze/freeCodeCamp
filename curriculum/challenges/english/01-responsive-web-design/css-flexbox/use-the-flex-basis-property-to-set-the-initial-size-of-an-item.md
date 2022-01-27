@@ -2,45 +2,45 @@
 id: 587d78ae367417b2b2512afd
 title: Use the flex-basis Property to Set the Initial Size of an Item
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pVaDAv/c3d9nCa'
+videoUrl: "https://scrimba.com/p/pVaDAv/c3d9nCa"
 forumTopicId: 301108
 dashedName: use-the-flex-basis-property-to-set-the-initial-size-of-an-item
 ---
 
 # --description--
 
-`flex-basis` property (ปรับขนาด width) จะระบุขนาดเริ่มต้นของ item ก่อนที่ CSS จะปรับเปลี่ยนมันด้วย `flex-shrink` หรือ `flex-grow`
+property `flex-basis` จะระบุขนาดเริ่มต้นของ item ก่อน item นั้นจะโดน CSS ปรับขนาดโดยใช้ `flex-shrink` หรือ `flex-grow`
 
-หน่วยที่ถูกใช้โดย `flex-basis` property จะเหมือนกับ size properties (`px`, `em`, `%`, etc.) ตัวอื่น ๆ
-ค่าขนาดของ item ที่เป็น `auto` จะขึ้นกับเนื้อหาของมัน
+property `flex-basis` จะรับค่าเป็นหน่วยเหมือนกับ property ที่ใช้กำหนดขนาดอื่นๆ (`px`, `em`, `%`, ฯลฯ)
+โดยถ้าใช้ค่าเป็น `auto` ขนาดของ item นี้ก็จะขึ้นอยู่กับข้อมูลภายใน
 
 # --instructions--
 
-จงกำหนดขนาดเริ่มต้นของกล่องที่ใช้ `flex-basis`
-จงเพิ่ม CSS property `flex-basis` ให้กับทั้ง `#box-1` และ `#box-2`
-จงกำหนดให้ `#box-1` มีค่าเป็น `10em` และให้ `#box-2` มีค่าเป็น `20em`
+ให้กำหนดขนาดเริ่มต้นของกล่องโดยใช้ `flex-basis`
+ให้เพิ่ม CSS property `flex-basis` ให้กับทั้ง `#box-1` และ `#box-2`
+โดยกำหนดให้ `#box-1` มีค่าเป็น `10em` และให้ `#box-2` มีค่าเป็น `20em`
 
 # --hints--
 
-`#box-1` element ควรมี `flex-basis` property.
+`#box-1` ต้องมี property `flex-basis`
 
 ```js
-assert($('#box-1').css('flex-basis') != 'auto');
+assert($("#box-1").css("flex-basis") != "auto");
 ```
 
-The `#box-1` element should have a `flex-basis` value of `10em`.
+property `flex-basis` ของ `#box-1` ต้องมีค่าเป็น `10em`
 
 ```js
 assert(code.match(/#box-1\s*?{\s*?.*?\s*?.*?\s*?flex-basis:\s*?10em;/g));
 ```
 
-The `#box-2` element should have the `flex-basis` property.
+`#box-2` ต้องมี property `flex-basis`
 
 ```js
-assert($('#box-2').css('flex-basis') != 'auto');
+assert($("#box-2").css("flex-basis") != "auto");
 ```
 
-The `#box-2` element should have a `flex-basis` value of `20em`.
+property `flex-basis` ของ `#box-1` ต้องมีค่าเป็น `20em`
 
 ```js
 assert(code.match(/#box-2\s*?{\s*?.*?\s*?.*?\s*?flex-basis:\s*?20em;/g));

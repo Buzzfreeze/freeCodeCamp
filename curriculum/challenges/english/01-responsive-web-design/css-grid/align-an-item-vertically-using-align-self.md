@@ -2,24 +2,24 @@
 id: 5a90375238fddaf9a66b5d3b
 title: Align an Item Vertically using align-self
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pByETK/cmzd4fz'
+videoUrl: "https://scrimba.com/p/pByETK/cmzd4fz"
 forumTopicId: 301123
 dashedName: align-an-item-vertically-using-align-self
 ---
 
 # --description--
 
-อย่างที่คุณสามารถจัดให้มันตรงกันในแนวนอนได้, มันก็มีวิธีที่ทำให้คุณสามารถจัดเรียง item ให้ตรงกันในแนวตั้งได้เช่นกัน
-เพื่อที่จะทำเช่นนี้, คุณต้องใช้ `align-self` property กับ item อันหนึ่ง
-property อันนี้จะรับค่าเดียวกับ `justify-self` ที่อยู่ใน challenge ที่แล้ว
+คุณสามารถใช้ property `align-self` เพื่อเรียง item ในแนวตั้งได้เช่นกัน
+
+property นี้จะรับค่าเหมือนกับ `justify-self` ที่เราเรียนไปในแบบทดสอบที่แล้ว
 
 # --instructions--
 
-จงจัดเรียงให้ item ที่มี Class `item3` อยู่กลางในแนวตั้งที่ `end`
+ให้เรียง item ที่มีคลาสเป็น `item3` ให้อยู่ด้านล่าง โดยใช้ `justify-self` เป็น `end`
 
 # --hints--
 
-`item3` class ควรมี `align-self` property อันหนึ่งที่มีค่าเป็น `end`
+คลาส `item3` ต้องมีค่าของ property `align-self` เป็น `end`
 
 ```js
 assert(code.match(/.item3\s*?{[\s\S]*align-self\s*?:\s*?end\s*?;[\s\S]*}/gi));
@@ -40,9 +40,9 @@ assert(code.match(/.item3\s*?{[\s\S]*align-self\s*?:\s*?end\s*?;[\s\S]*}/gi));
 
   .item3 {
     background: PaleTurquoise;
-    /* Only change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
 
-    /* Only change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
   }
 
   .item4 {

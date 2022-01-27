@@ -8,61 +8,70 @@ dashedName: add-images-to-your-website
 
 # --description--
 
-คุณสามารถใส่รูปภาพให้กับเว็บไซต์ของเราได้โดยการใช้ `img` element และให้มันไปที่ URL ของรูปภาพที่กำหนดไว้โดยการใช้ `src` attribute
+คุณสามารถใส่รูปภาพให้กับเว็บไซต์ได้โดยการใช้ `img` element และระบุค่าของ `src` เป็น URL ของรูปภาพที่เรามีไว้ให้
 
-นี่คือตัวอย่างการสร้าง `img` element:
+ลองดูตัวอย่างการใช้ `img` element:
 
 ```html
 <img src="https://www.freecatphotoapp.com/your-image.jpg" />
 ```
 
-จำไว้ว่า `img` elements เป็นประเภท self-closing (ไม่จำเป็นต้องมีแท็กปิด)
+จะเห็นว่า `img` element เป็นแบบ self-closing (ไม่จำเป็นต้องมีแท็กปิด)
+และ `src` คือสิ่งที่เรียกว่า attribute ซึ่งเป็นส่วนที่ใช้กำหนดค่าของ element นั้น (เราจะสอนเรื่อง attribute ต่างๆในบทเรียนต่อๆไป)
 
-`img` element ทุกอันต้องมี `alt` attribute อันหนึ่ง
-ตัวอักษรที่อยู่ข้างใน `alt` attribute จะถูกใช้โดย screen reader เพื่อเพิ่มความสามารถในการเข้าถึง (accessability) และถูกแสดงผลออกมาถ้าหน้าจอหรือระบบไม่สามารถโหลดรูปภาพได้
+ซึ่ง `img` element ทุกอันต้องมี attribute อีกตัวหนึ่งคือ `alt` โดยข้อความที่อยู่ใน `alt` จะถูกใช้โดย screen reader เพื่อเพิ่ม accessability (เมื่อคนพิการทางสายตาเข้ามาหน้าเว็บเรา screen reader จะอ่านข้อความในนี้ให้เขาฟัง เพื่อให้เขารู้ว่ารูปนี้เป็นรูปอะไร) และถ้าเบราว์เซอร์ไม่สามารถแสดงรูปภาพของคุณได้ เบราว์เซอร์จะแสดงข้อความใน `alt` ออกมาแทน
 
-**Note:** ถ้ารูปภาพนั้นถูกใช้เพื่อการตกแต่งเพียงเท่านั้น การปล่อยให้ `alt` attribute ว่างไว้
+**Note:** โดยปกติแล้วถ้ารูปภาพที่เราใส่ไว้ในเว็บ เป็นรูปภาพที่เอาไว้เพื่อตกแต่งโดยไม่มีผลกับเนื้อหา เราควรปล่อยให้ `alt` attribute ว่างไว้
 
-หากเป็นไปได้ `alt` attribute ไม่ควรจะเก็บตัวอักษรพิเศษเอาไว้ ยกเว้นว่ามันจะจำเป็นจริง ๆ
+ข้อความใน `alt` attribute ไม่ควรมีตัวอักษรพิเศษ ยกเว้นว่าจะจำเป็นจริงๆเท่านั้น
 
 มาเพิ่ม `alt` attribute ให้กับตัวอย่าง `img` ข้างบนกันเถอะ:
 
 ```html
-<img src="https://www.freecatphotoapp.com/your-image.jpg" alt="A business cat wearing a necktie." />
+<img
+  src="https://www.freecatphotoapp.com/your-image.jpg"
+  alt="A business cat wearing a necktie."
+/>
 ```
 
 # --instructions--
 
-มาลองเพิ่มรูปภาพให้กับเว็บไซต์ของเรากันเถอะ:
+ให้ลองเพิ่มรูปภาพให้กับเว็บไซต์ของคุณ:
 
-ภายใน `main` element ที่สร้างเตรียมไว้แล้ว
-จงแทรก `img` element ไปข้างหน้า `p` elements ที่มีอยู่ก่อน
+ใน `main` element ที่คุณสร้างไว้แล้ว
+ให้เพิ่ม `img` element ไปหน้า `p` element
 
-ในตอนนี้ จงกำหนดให้ `src` attribute อ้างอิงไปที่ url `https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg`
+และให้ตั้งค่า `src` attribute เป็น url นี้ `https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg`
 
-สุดท้าย อย่าลืมที่จะกำหนดให้ `img` element ของคุณมี `alt` attribute ที่มาพร้อมกับข้อความที่เหมาะสม
+สุดท้าย อย่าลืมใส่ข้อความให้ `alt` attribute ของ `img` element ของคุณ
 
 # --hints--
 
-หน้าเว็บไซต์ของคุณควรมี image element หนึ่งอัน
+หน้าเว็บของคุณต้องมี image element หนึ่งอัน
 
 ```js
-assert($('img').length);
+assert($("img").length);
 ```
 
-ภาพของคุณควรมี `src` attribute หนึ่งอันที่จะอ้างอิงไปยังรูปลูกแมว
-
-```js
-assert(/^https:\/\/cdn\.freecodecamp\.org\/curriculum\/cat-photo-app\/relaxing-cat\.jpg$/i.test($('img').attr('src')));
-```
-
-`alt` attribute ของ image element ของคุณไม่ควรจะว่างเปล่า
+ภาพของคุณควรมี `src` attribute ที่จะชี้ไปยังรูปน้องแมว
 
 ```js
 assert(
-  $('img').attr('alt') &&
-    $('img').attr('alt').length &&
-    /<img\S*alt=(['"])(?!\1|>)\S+\1\S*\/?>/.test(__helpers.removeWhiteSpace(code)),
+  /^https:\/\/cdn\.freecodecamp\.org\/curriculum\/cat-photo-app\/relaxing-cat\.jpg$/i.test(
+    $("img").attr("src")
+  )
+);
+```
+
+ต้องระบุข้อความใน `alt` attribute ของ image element ของคุณด้วย
+
+```js
+assert(
+  $("img").attr("alt") &&
+    $("img").attr("alt").length &&
+    /<img\S*alt=(['"])(?!\1|>)\S+\1\S*\/?>/.test(
+      __helpers.removeWhiteSpace(code)
+    )
 );
 ```
 
@@ -74,12 +83,13 @@ assert(
 <h2>CatPhotoApp</h2>
 <main>
   <p>
-    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot,
-    hairball run catnip eat the grass sniff.
+    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+    attack your ankles chase the red dot, hairball run catnip eat the grass
+    sniff.
   </p>
   <p>
-    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur
-    catnip scratched.
+    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
+    rip the couch sleep in the sink fluffy fur catnip scratched.
   </p>
 </main>
 ```
@@ -95,12 +105,13 @@ assert(
       alt="A cute orange cat lying on its back."
   /></a>
   <p>
-    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot,
-    hairball run catnip eat the grass sniff.
+    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+    attack your ankles chase the red dot, hairball run catnip eat the grass
+    sniff.
   </p>
   <p>
-    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur
-    catnip scratched.
+    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
+    rip the couch sleep in the sink fluffy fur catnip scratched.
   </p>
 </main>
 ```

@@ -8,7 +8,7 @@ dashedName: match-letters-of-the-alphabet
 
 # --description--
 
-เราได้เรียนการใช้ <dfn>character class</dfn> เพื่อกำหนดกลุ่มของตัวอักษรที่จะ match แล้ว 
+เราได้เรียนการใช้ <dfn>character class</dfn> เพื่อกำหนดกลุ่มของตัวอักษรที่จะ match แล้ว  
 แต่เราจะเห็นว่าถ้าเราต้องการที่จะ match ตัวอักษรหลายๆตัว เราจะต้องพิมพ์เยอะมากๆ แต่ไม่ต้องห่วง regex มีฟีเจอร์ที่ทำให้คุณไม่ต้องพิมพ์เยอะขนาดนั้นด้วย
 
 ภายใน character set คุณสามารถกำหนดช่วงของตัวอักษรที่จะ match โดยใช้ hyphen character: `-`

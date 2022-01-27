@@ -20,7 +20,7 @@ var ourStr = "freeCodeCamp is ";
 ourStr += anAdjective;
 ```
 
-ตัวแปร `ourStr` จะมีค่าเป็น `freeCodeCamp is awesome!`.
+ตัวแปร `ourStr` จะมีค่าเป็น `freeCodeCamp is awesome!`
 
 # --instructions--
 

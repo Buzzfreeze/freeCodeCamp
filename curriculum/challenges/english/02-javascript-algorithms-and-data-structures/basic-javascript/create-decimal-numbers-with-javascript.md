@@ -9,7 +9,7 @@ dashedName: create-decimal-numbers-with-javascript
 
 # --description--
 
-เราสามารถเก็บตัวเลขทศนิยมไว้ในตัวแปรได้เช่นกัน โดยตัวเลขทศนิยมอาจถูกเรียกว่าเป็นตัวเลข <dfn>floating point</dfn> หรือ <dfn>floats</dfn> ก็ได้
+เราสามารถเก็บตัวเลขทศนิยมไว้ในตัวแปรได้เช่นกัน โดยตัวเลขทศนิยมจะเรียกว่าเป็นตัวเลข <dfn>floating point</dfn> หรือ <dfn>floats</dfn> ก็ได้
 
 **หมายเหตุ:** จำนวนจริงบางจำนวนจะไม่สามารถแสดงเป็น <dfn>floating point</dfn> ได้อย่างถูกต้อง ซึ่งอาจทำให้เกิดข้อผิดพลาดในการปัดเศษได้ [อ่านรายละเอียดได้ที่นี่](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Accuracy_problems)
 

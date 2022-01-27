@@ -11,7 +11,7 @@ dashedName: >-
 
 # --description--
 
-จากแบบทดสอบที่แล้ว `bird` มี public property ที่ชื่อว่า `name` สาเหตุที่เป็น public เพราะว่าจะเข้าถึงและเปลี่ยนแปลง property นี้จากภายนอก `bird` ได้ 
+จากแบบทดสอบที่แล้ว `bird` มี public property ที่ชื่อว่า `name` สาเหตุที่เป็น public เพราะว่าจะเข้าถึงและเปลี่ยนแปลง property นี้จากภายนอก `bird` ได้  
 เช่น:
 
 ```js

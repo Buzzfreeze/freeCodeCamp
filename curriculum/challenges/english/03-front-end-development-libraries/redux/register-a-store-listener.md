@@ -9,13 +9,16 @@ dashedName: register-a-store-listener
 # --description--
 
 method อีกตัวหนึ่งที่เข้าถึงได้จาก Redux `store` object คือ `store.subscribe()` 
+
 method นี้ทำให้คุณเพิ่ม listener function ให้กับ store ได้ โดยจะถูกเรียกใช้ทุกครั้งที่มีการส่ง action ให้กับ store 
 การใช้ method นี้แบบง่ายๆวิธีหนึ่งคือ การให้ฟังก์ชัน log ข้อมูลลงบน console ทุกครั้งที่ได้รับ action และ store ถูกอัปเดต
 
 # --instructions--
 
 ให้เขียน callback function ที่เพิ่มค่าของตัวแปร global ชื่อ `count` ทุกครั้งที่ store ได้รับ action และส่งฟังก์ชันนี้ไปยัง `store.subscribe()` 
+
 คุณจะเห็นว่า `store.dispatch()` ถูกเรียกใช้สามครั้งติดต่อกัน แต่ละครั้งจะส่ง action object เข้าไปโดยตรง 
+
 ให้ดู log ใน console ในระหว่างที่เกิดการอัปเดตขึ้น
 
 # --hints--

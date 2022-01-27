@@ -2,27 +2,32 @@
 id: 5a9036ee38fddaf9a66b5d37
 title: Add Gaps Faster with grid-gap
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pByETK/ca2qVtv'
+videoUrl: "https://scrimba.com/p/pByETK/ca2qVtv"
 forumTopicId: 301118
 dashedName: add-gaps-faster-with-grid-gap
 ---
 
 # --description--
 
-`grid-gap` เป็น shorthand property ทั้ง `grid-row-gap` และ `grid-column-gap` ที่เเคยทำไปแล้วใน 2 challenges ก่อนหน้า โดย `grid-gap` นั้นค่อนข้างที่จะใช้ง่ายกว่า
-ถ้า `grid-gap` มีค่าอยู่ค่าเดียว, มันจะสร้างช่องว่างระหว่างแถวและคอลัมน์ทั้งหมดออกมาขนาดหนึ่ง
-อย่างไรก็ตาม ถ้ามันมี 2 ค่า, มันจะใช้ค่าแรกเป็นระยะห่างระหว่างแถว และอีกค่าเป็นระยะห่างระหว่างคอลัมน์
+`grid-gap` เป็น property ลัดที่ใช้กำหนดค่าของทั้ง `grid-row-gap` และ `grid-column-gap` ได้พร้อมกัน
+
+ถ้าเรากำหนดค่าให้ `grid-gap` เป็นค่าเดียว ช่องว่างระหว่างแถวและช่องว่างระหว่างคอลัมน์จะเป็นค่าเดียวกัน
+และถ้าคุณกำหนดค่าให้ `grid-gap` สองค่า จะใช้ค่าแรกเป็นช่องว่างระหว่างแถว และอีกค่าเป็นช่องว่างระหว่างคอลัมน์
 
 # --instructions--
 
-จงใช้ `grid-gap` เพื่อทำให้เกิดช่องว่างระหว่างแถว (row) แนวนอน ขนาด `10px` และช่องว่างระหว่างคอลัมน์ (column) แนวตั้ง ขนาด `20px`
+ให้ใช้ `grid-gap` เพื่อทำให้เกิดช่องว่างระหว่างแถวสูง `10px` และช่องว่างระหว่างคอลัมน์กว้าง `20px`
 
 # --hints--
 
-`container` class ควรมี `grid-gap` property อันหนึ่งที่ทำให้เกิดช่องว่างระหว่างแถวขนาด `10px` และช่องว่างระหว่างคอลัมน์ขนาด `20px`
+คลาส `container` ต้องมีค่าของ property `grid-gap` ที่กำหนดให้ช่องว่างระหว่างแถวสูง `10px` และช่องว่างระหว่างคอลัมน์กว้าง `20px`
 
 ```js
-assert(code.match(/.container\s*?{[\s\S]*grid-gap\s*?:\s*?10px\s+?20px\s*?;[\s\S]*}/gi));
+assert(
+  code.match(
+    /.container\s*?{[\s\S]*grid-gap\s*?:\s*?10px\s+?20px\s*?;[\s\S]*}/gi
+  )
+);
 ```
 
 # --seed--
@@ -55,9 +60,9 @@ assert(code.match(/.container\s*?{[\s\S]*grid-gap\s*?:\s*?10px\s+?20px\s*?;[\s\S
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    /* Only change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
 
-    /* Only change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
   }
 </style>
 <div class="container">

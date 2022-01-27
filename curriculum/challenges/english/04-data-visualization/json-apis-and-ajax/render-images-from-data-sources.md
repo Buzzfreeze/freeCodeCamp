@@ -8,11 +8,11 @@ dashedName: render-images-from-data-sources
 
 # --description--
 
-จากที่ผ่านมา เราพบว่า object ใน JSON array ประกอบไปด้วย `imageLink` key ที่มีค่าเป็น URL ของรูปแมว
+จากที่ผ่านมา เราจะเห็นว่า object ใน array ของ JSON มีคีย์ชื่อ `imageLink` ที่เก็บ URL ของรูปน้องแมวอยู่
 
-เมื่อเรา looping ผ่าน objects เราสามารถใช้ `imageLink` property เพื่อแสดงรูปใน `img` element
+เมื่อเราวนอ่าน objects จะอ่านค่าของ property `imageLink` นี้เพื่อนำรูปไปแสดงใน `img` element ได้
 
-ดังตัวอย่างด้สนล่าง
+ตามตัวอย่างนี้:
 
 ```js
 html += "<img src = '" + val.imageLink + "' " + "alt='" + val.altText + "'>";
@@ -20,17 +20,17 @@ html += "<img src = '" + val.imageLink + "' " + "alt='" + val.altText + "'>";
 
 # --instructions--
 
-เพิ่ม `imageLink` และ `altText` properties ใน `img` tag
+ให้เพิ่มแท็ก `img` โดยให้มี attribute `src` เป็นค่าของ property `imageLink` และ attribute `alt` เป็นค่าของ `altText`
 
 # --hints--
 
-ควรใช้ `imageLink` property เพื่อแสดงณุป
+ต้องใช้ property `imageLink` เพื่อแสดงรูป
 
 ```js
 assert(code.match(/val\.imageLink/g));
 ```
 
-ควรใช้ `altText` สำหรับค่า `alt` attribute ของรูป
+attribute `alt` ของรูปต้องมีค่าของ property `altText`
 
 ```js
 assert(code.match(/val\.altText/g));
@@ -52,10 +52,10 @@ assert(code.match(/val\.altText/g));
         let html = "";
         json.forEach(function(val) {
           html += "<div class = 'cat'>";
-          // Add your code below this line
+          // เขียนโค้ดใต้บรรทัดนี้
 
 
-          // Add your code above this line
+          // เขียนโค้ดเหนือบรรทัดนี้
           html += "</div><br>";
         });
         document.getElementsByClassName('message')[0].innerHTML=html;
@@ -115,9 +115,9 @@ assert(code.match(/val\.altText/g));
         let html = "";
         json.forEach(function(val) {
           html += "<div class = 'cat'>";
-          // Add your code below this line
+          // เขียนโค้ดใต้บรรทัดนี้
           html += "<img src = '" + val.imageLink + "' " + "alt='" + val.altText + "'>";
-          // Add your code above this line
+          // เขียนโค้ดเหนือบรรทัดนี้
           html += "</div><br>";
         });
         document.getElementsByClassName('message')[0].innerHTML = html;

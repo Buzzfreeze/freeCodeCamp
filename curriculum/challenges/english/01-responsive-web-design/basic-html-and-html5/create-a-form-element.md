@@ -8,10 +8,11 @@ dashedName: create-a-form-element
 
 # --description--
 
-คุณสามารถสร้างแบบฟอร์มบนเว็บที่สามารถส่งข้อมูลไปที่ server ของคุณได้โดยใช้แค่ HTML เพียงอย่างเดียวเท่านั้น
-คุณสามารถทำเช่นนี้ได้โดยการเพิ่ม `action` attribute เข้าไปใน `form` element
+คุณสามารถสร้างแบบฟอร์มบนเว็บได้ โดยแบบฟอร์มนั้นสามารถส่งข้อมูลไปที่ server ของคุณได้เลย โดยใช้แค่ HTML เท่านั้น
 
-นี่คือตัวอย่าง:
+วิธีการคือต้องเพิ่ม `action` attribute ให้กับ `form` element
+
+ลองดูตัวอย่าง:
 
 ```html
 <form action="/url-where-you-want-to-submit-form-data">
@@ -19,33 +20,40 @@ dashedName: create-a-form-element
 </form>
 ```
 
+โดย action จะเป็นค่าของ URL ที่คุณจะให้แบบฟอร์มของคุณส่งข้อมูลไป
+
 # --instructions--
 
-จงเก็บ `input` element ที่สร้างแล้วไว้ใน `form` element และกำหนดให้ `action` attribute ของ `form` element มีค่าเป็น`"https://www.freecatphotoapp.com/submit-cat-photo"`
+ให้ซ้อน `input` element ที่สร้างแล้วไว้ใน `form` element และกำหนดให้ `action` attribute ของ `form` element ให้มีค่าเป็น `"https://www.freecatphotoapp.com/submit-cat-photo"`
 
 # --hints--
 
-`input` element เดิมควรถูกเก็บไว้ใน `form` element
+ต้องซ้อน `input` element ตัวเดิมไว้ใน `form` element
 
 ```js
-const inputElem = document.querySelector('form input');
-assert(inputElem.getAttribute('type') === 'text' && inputElem.getAttribute('placeholder') === 'cat photo URL');
+const inputElem = document.querySelector("form input");
+assert(
+  inputElem.getAttribute("type") === "text" &&
+    inputElem.getAttribute("placeholder") === "cat photo URL"
+);
 ```
 
-`form` should ควรมี `action` attribute ที่มีค่าเท่ากับ `https://www.freecatphotoapp.com/submit-cat-photo`
+`form` ต้องมี `action` attribute เป็น `https://www.freecatphotoapp.com/submit-cat-photo`
 
 ```js
-const action = $('form').attr('action');
-assert(action.match(/^https:\/\/(www\.)?freecatphotoapp\.com\/submit-cat-photo$/i));
+const action = $("form").attr("action");
+assert(
+  action.match(/^https:\/\/(www\.)?freecatphotoapp\.com\/submit-cat-photo$/i)
+);
 ```
 
-`form` element ควรมีแท็กเปิดและแท็กปิดที่เรียงกันอย่างถูกต้อง
+ต้องใช้แท็กเปิดและแท็กปิดของ `form` element อย่างถูกต้อง
 
 ```js
 assert(
   code.match(/<\/form>/g) &&
     code.match(/<form [^<]*>/g) &&
-    code.match(/<\/form>/g).length === code.match(/<form [^<]*>/g).length,
+    code.match(/<\/form>/g).length === code.match(/<form [^<]*>/g).length
 );
 ```
 

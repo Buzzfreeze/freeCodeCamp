@@ -22,7 +22,7 @@ ourArray.unshift("Happy");
 ```
 
 หลังจาก `shift` แล้ว `ourArray` จะมีค่าเป็น `["J", "cat"]` 
-และหลังจาก `unshift` แล้ว `ourArray` จะมีค่าเป็น `["Happy", "J", "cat"]`.
+และหลังจาก `unshift` แล้ว `ourArray` จะมีค่าเป็น `["Happy", "J", "cat"]`
 
 # --instructions--
 

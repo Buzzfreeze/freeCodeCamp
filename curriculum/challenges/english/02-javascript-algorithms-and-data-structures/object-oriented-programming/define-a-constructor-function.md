@@ -8,7 +8,7 @@ dashedName: define-a-constructor-function
 
 # --description--
 
-<dfn>constructor</dfn> เป็นฟังก์ชันที่ใช้สร้าง object ใหม่ โดยจะเป็นตัวกำหนดค่าและพฤติกรรมของ object ใหม่ที่สร้าง 
+<dfn>constructor</dfn> เป็นฟังก์ชันที่ใช้สร้าง object ใหม่ โดยจะเป็นตัวกำหนดค่าและพฤติกรรมของ object ใหม่ที่สร้าง  
 ให้เรามอง constructor ว่าเป็นพิมพ์เขียวที่ใช้สร้าง object ใหม่ 
 
 โค้ดด้านล่างเป็นตัวอย่างของการใช้ constructor:

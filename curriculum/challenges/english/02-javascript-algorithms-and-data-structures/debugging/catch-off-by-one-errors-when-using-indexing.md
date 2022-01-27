@@ -8,7 +8,7 @@ dashedName: catch-off-by-one-errors-when-using-indexing
 
 # --description--
 
-<dfn>Off by one error</dfn> (บางครั้งเรียกว่า OBOE) จะเกิดขึ้นเมื่อคุณพยายามเข้าถึง index ของ string หรือ array ที่ไม่มีอยู่ โดย index ของ JavaScript จะเริ่มที่ 0 ไม่ใช่ 1 แปลว่า index สุดท้ายจะเป็นความยาวของ string หรือ array ลบด้วย 1 (`.length - 1`)
+<dfn>Off by one error</dfn> (บางครั้งเรียกว่า OBOE) จะเกิดขึ้นเมื่อคุณพยายามเข้าถึง index ของ string หรือ array ที่ไม่มีอยู่ โดย index ของ JavaScript จะเริ่มที่ 0 ไม่ใช่ 1 แปลว่า index สุดท้ายจะเป็นความยาวของ string หรือ array ลบด้วย 1 (`.length - 1`)  
 ถ้าคุณพยายามเข้าถึง index ที่มีค่าเท่ากับความยาวของ string หรือ array โปรแกรมจะขึ้น reference error "index out of range" หรือคุณอาจได้ค่าเป็น `undefined`
 
 เวลาที่คุณเรียกใช้ method ที่จัดการ string หรือ array ที่รับ argument เป็นช่วงของ index เราแนะนำให้อ่านวิธีการใช้งาน method นั้นว่ารับค่าเป็น inclusive หรือไม่ (inclusive หมายถึง method จะใช้ค่าจาก index ที่ระบุลงไปเลย)

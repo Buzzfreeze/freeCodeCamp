@@ -2,48 +2,51 @@
 id: 587d778f367417b2b2512aae
 title: Give Links Meaning by Using Descriptive Link Text
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/c437DcV'
+videoUrl: "https://scrimba.com/c/c437DcV"
 forumTopicId: 301013
 dashedName: give-links-meaning-by-using-descriptive-link-text
 ---
 
 # --description--
 
-ผู้ใช้ screen reader (โปรแกรมอ่านหน้าจอ) มีตัวช่วยที่หลากหลายสำหรับประเภทข้อความที่จะให้มันอ่าน
-ตัวเลือกเหล่านี้รวมถึงการข้าม landmark elements, กระโดดไปที่ main content, หรืออ่านสรุปของเพจนั้นจาก heading
-อีกตัวเลือกหนึ่งคือฟังแค่ลิงค์ที่ใช้ง่ายได้บนเพจ
+ผู้ใช้ screen reader (โปรแกรมอ่านหน้าจอ) สามารถตั้งค่า screen reader เพื่อควบคุมเนื้อหาที่อ่านได้หลายแบบ
+การตั้งค่านี้รวมถึงการไปยัง landmark element, ไปยัง main content, หรืออ่านสรุปของหน้านั้นจาก heading
+อีกตัวเลือกหนึ่งคืออ่านแค่ลิงก์ที่อยู่บนหน้า
 
-Screen readers ทำแบบนี้โดยการอ่านข้อความที่ลิงค์ หรือสิ่งที่อยู่ระหว่าง anchor (`a`) tags
-การที่มีลิงค์ของลิสต์จาก "click here" หรือ "read more" links ไม่ค่อยช่วยอะไร
-ดังนั้น จงใช้ข้อความที่สั้นกระชับและอธิบายได้ดีภายใน `a` tags เพื่อผู้ใช้จะได้ข้อมูลที่เป็นประโยชน์มากขึ้น
+ถ้าใช้วิธีนี้ screen reader จะอ่านข้อความที่เป็นลิงก์ หรือข้อความในแท็ก anchor (`a`)
+การที่มีลิงก์แบบ "click here" หรือ "read more" ไม่ค่อยช่วยอะไร
+ดังนั้น ให้ใช้ข้อความที่สั้น กระชับ และมีความหมายในตัวเองภายในแท็ก `a` เพื่อผู้ใช้จะได้ข้อมูลที่เป็นประโยชน์มากขึ้น
 
 # --instructions--
 
-ข้อความที่ถูกลิงค์ที่ Camper Cat ใช้อยู่นั้นไม่อธิบายอะไรเลยหากปราศจากบริบทรอบข้าง
-จงทำให้ anchor (`a`) tag มันเก็บข้อความ `information about batteries` แทนที่จะเป็น `Click here`.
+ตอนนี้ข้อความในลิงก์ ที่ Camper Cat ใส่ไว้ ไม่ค่อยมีประโยชน์อะไร ถ้าไม่ได้ดูบริบทรอบข้าง
+ให้ย้ายแท็ก anchor (`a`) โดยนำไปครอบข้อความ `information about batteries` แทนที่จะเป็น `Click here`
 
 # --hints--
 
-คุณควรย้าย anchor `a` tags จากบริเวณรอบ ๆ คำว่า `Click here for ` เพื่อคลุมรอบ ๆ คำว่า `information about batteries`.
+ต้องย้ายแท็ก anchor `a` ที่ครอบคำว่า `Click here for ` ไปครอบคำว่า `information about batteries` แทน
 
 ```js
 assert(
-  $('a')
+  $("a")
     .text()
-    .match(/^(information about batteries)$/g),
+    .match(/^(information about batteries)$/g)
 );
 ```
 
-`a` element ควรมี `href` attribute อันหนึ่งที่เก็บ string `""`
+แท็ก `a` ต้องมี attribute `href` ที่มีค่าเป็น string `""`
 
 ```js
-assert($('a').attr('href') === '');
+assert($("a").attr("href") === "");
 ```
 
-`a` element ควรมีแท็กปิด
+ต้องมีแท็กปิดของ `a` ด้วย
 
 ```js
-assert(code.match(/<\/a>/g) && code.match(/<\/a>/g).length === code.match(/<a href=(''|"")>/g).length);
+assert(
+  code.match(/<\/a>/g) &&
+    code.match(/<\/a>/g).length === code.match(/<a href=(''|"")>/g).length
+);
 ```
 
 # --seed--
@@ -58,8 +61,9 @@ assert(code.match(/<\/a>/g) && code.match(/<\/a>/g).length === code.match(/<a hr
   <article>
     <h2>Defeating your Foe: the Red Dot is Ours!</h2>
     <p>
-      Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning
-      stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near.
+      Felines the world over have been waging war on the most persistent of
+      foes. This red nemesis combines both cunning stealth and lightning speed.
+      But chin up, fellow fighters, our time for victory may soon be near.
       <a href="">Click here</a> for information about batteries
     </p>
   </article>
@@ -76,8 +80,10 @@ assert(code.match(/<\/a>/g) && code.match(/<\/a>/g).length === code.match(/<a hr
   <article>
     <h2>Defeating your Foe: the Red Dot is Ours!</h2>
     <p>
-      Felines the world over have been waging war on the most persistent of foes. This red nemesis combines both cunning
-      stealth and lightning speed. But chin up, fellow fighters, our time for victory may soon be near. Click here for
+      Felines the world over have been waging war on the most persistent of
+      foes. This red nemesis combines both cunning stealth and lightning speed.
+      But chin up, fellow fighters, our time for victory may soon be near. Click
+      here for
       <a href="">information about batteries</a>
     </p>
   </article>

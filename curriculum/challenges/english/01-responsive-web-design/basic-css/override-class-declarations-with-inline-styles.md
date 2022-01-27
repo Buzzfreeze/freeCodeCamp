@@ -2,59 +2,60 @@
 id: bad87fee1348bd9aedf06756
 title: Override Class Declarations with Inline Styles
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cGJDRha'
+videoUrl: "https://scrimba.com/c/cGJDRha"
 forumTopicId: 18252
 dashedName: override-class-declarations-with-inline-styles
 ---
 
 # --description--
 
-และแล้วเราก็พิสูจน์ได้ว่า id declaration จะเขียนทับ class declaration, ไม่ว่ามันจถูกประกาศที่ไหนใน `style` element CSS ก็ตาม
+และเราก็พิสูจน์ไปแล้วว่า การประกาศใช้ CSS ของ id จะสำคัญกว่า CSS ของ class โดยไม่สนลำดับการประกาศใน `style` element
 
 ยังมีวิธีอื่นที่จะเขียนทับ CSS อยู่อีก
-คุณยังจำ inline styles ได้ไหม?
+คุณยังจำ inline style ได้ไหม?
 
 # --instructions--
 
-จงใช้ inline style เพื่อทำให้ `h1` element เป็นสีขาว
-จงจำไว้ว่า inline styles มีหน้าตาเช่นนี้:
+ให้ใช้ inline style เพื่อทำให้ `h1` element เป็นสีขาว
+
+ยังจำหน้าตาของ inline style ได้ไหม:
 
 ```html
 <h1 style="color: green;"></h1>
 ```
 
-ไม่ต้องสนใจ `blue-text` และ `pink-text` class ใน `h1` element.
+ไม่ต้องลบคลาส `blue-text` และ `pink-text` ใน `h1` element ออก
 
 # --hints--
 
-`h1` element ควรมีคลาส `pink-text`.
+`h1` element ต้องมีคลาส `pink-text`
 
 ```js
-assert($('h1').hasClass('pink-text'));
+assert($("h1").hasClass("pink-text"));
 ```
 
-`h1` element ควรมีคลาส `blue-text`.
+`h1` element ต้องมีคลาส `blue-text`
 
 ```js
-assert($('h1').hasClass('blue-text'));
+assert($("h1").hasClass("blue-text"));
 ```
 
-`h1` element ควรมี id เป็น `orange-text`.
+`h1` element ต้องมี id เป็น `orange-text`
 
 ```js
-assert($('h1').attr('id') === 'orange-text');
+assert($("h1").attr("id") === "orange-text");
 ```
 
-`h1` element ควรมี inline style อันหนึ่ง
+ต้องใช้ inline style ใน `h1` element
 
 ```js
-assert(document.querySelector('h1[style]'));
+assert(document.querySelector("h1[style]"));
 ```
 
-`h1` element ควรเป็นสีขาว
+`h1` element ต้องมี `color` เป็น `white`
 
 ```js
-assert($('h1').css('color') === 'rgb(255, 255, 255)');
+assert($("h1").css("color") === "rgb(255, 255, 255)");
 ```
 
 # --seed--
@@ -100,5 +101,7 @@ assert($('h1').css('color') === 'rgb(255, 255, 255)');
     color: blue;
   }
 </style>
-<h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
+<h1 id="orange-text" class="pink-text blue-text" style="color: white">
+  Hello World!
+</h1>
 ```

@@ -10,7 +10,7 @@ dashedName: use-the-reduce-method-to-analyze-data
 
 `Array.prototype.reduce()` หรือเขียนย่อๆ ว่า `reduce()` เป็น method ในการจัดการ array ที่ครอบคลุมที่สุดใน JavaScript เราจะแก้ปัญหาในการจัดการ array ได้เกือบทั้งหมดด้วย method `reduce` นี้
 
-`reduce` เป็น method ที่ใช้จัดการ array ได้หลายรูปแบบ แล้วเราก็สามารถเขียน ทั้ง `filter` และ `map` โดยใช้ `reduce` ได้
+`reduce` เป็น method ที่ใช้จัดการ array ได้หลายรูปแบบ แล้วเราก็สามารถเขียน ทั้ง `filter` และ `map` โดยใช้ `reduce` ได้  
 `reduce` จะอ่าน element ทีละตัวใน array แล้วคืนค่าออกมาตัวเดียว (คืนค่าออกมาได้ทั้ง string, number, object, array ฯลฯ) ซึ่งจะใช้ callback function เพื่ออ่านและประมวลผลแต่ละ element
 
 `reduce` จะส่ง arugument 4 ตัว ไปให้ callback function
@@ -20,11 +20,11 @@ dashedName: use-the-reduce-method-to-analyze-data
 - argument ที่สามคือ index ของ element นั้นๆ 
 - argument ที่สี่คือ array ที่เรียกใช้ method `reduce` 
 
-นอกจาก callback function แล้ว `reduce` ยังมี parameter อีกตัวนึงที่ใช้กำหนดค่าเริ่มต้นของ accumulator 
+นอกจาก callback function แล้ว `reduce` ยังมี parameter อีกตัวนึงที่ใช้กำหนดค่าเริ่มต้นของ accumulator  
 ถ้าเราไม่ได้ระบุ parameter ที่สอง ลูปรอบแรกจะถูกข้าม แล้ว element แรกของ array ก็จะกลายเป็น accumulator ในลูปรอบที่สองแทน
 
 
-ตัวอย่างด้านล่างจะใช้ `reduce` กับ array `users` แล้วคืนค่าเป็นผลรวมของอายุของ user
+ตัวอย่างด้านล่างจะใช้ `reduce` กับ array `users` แล้วคืนค่าเป็นผลรวมของอายุของ user  
 ใน callback ของตัวอย่างนี้ เราจะใช้แค่ argument แรกและ argument ที่สองเท่านั้น เพื่อให้เข้าใจง่าย:
 
 ```js
@@ -56,13 +56,13 @@ const usersObj = users.reduce((obj, user) => {
 console.log(usersObj);
 ```
 
-บน console จะแสดงค่า `{ John: 34, Amy: 20, camperCat: 10 }`.
+บน console จะแสดงค่า `{ John: 34, Amy: 20, camperCat: 10 }`
 
 # --instructions--
 
-ตอนนี้ array `watchList` เก็บ object ที่เก็บข้อมูลของภาพยนตร์อยู่
-ให้ใช้ `reduce` เพื่อหาค่าเฉลี่ยของ IMDB rating ของภาพยนต์ที่กำกับโดย `Christopher Nolan` 
-ในแบบทดสอบที่แล้ว เรารู้แล้วว่าในบางครั้งการดึงข้อมูลโดยใช้ `filter` และ `map` เราอาจสร้างตัวแปรใหม่ แล้วค่อยคืนค่า rating เฉลี่ยจากฟังก์ชัน `getRating`
+ตอนนี้ array `watchList` เก็บ object ที่เก็บข้อมูลของภาพยนตร์อยู่  
+ให้ใช้ `reduce` เพื่อหาค่าเฉลี่ยของ IMDB rating ของภาพยนต์ที่กำกับโดย `Christopher Nolan`  
+ในแบบทดสอบที่แล้ว เรารู้แล้วว่าในบางครั้งการดึงข้อมูลโดยใช้ `filter` และ `map` เราอาจสร้างตัวแปรใหม่ แล้วค่อยคืนค่า rating เฉลี่ยจากฟังก์ชัน `getRating`  
 หมายเหตุ ตอนนี้ค่าของ `rating` เก็บเป็น string อยู่ เพราะฉะนั้นต้องแปลงให้เป็น number ก่อน ถึงจะเอามาคำนวณได้
 
 # --hints--

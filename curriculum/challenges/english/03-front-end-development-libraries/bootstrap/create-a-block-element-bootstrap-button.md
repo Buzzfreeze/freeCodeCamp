@@ -17,6 +17,7 @@ dashedName: create-a-block-element-bootstrap-button
 ปุ่มนี้มีความกว้างเท่าคำว่า `Submit` เท่านั้น
 
 <button class='btn btn-default'>Submit</button>
+
 การเพิ่ม class `btn-block` จะทำให้ปุ่มนั้นๆ กลายเป็น block element แล้วความกว้างของปุ่มจะยาวตามความกว้างของหน้านั้น และ element ที่อยู่ถัดไปก็จะไปขึ้น "บรรทัดใหม่" ใต้ปุ่มที่เป็น block element ปุ่มนั้น
 
 
@@ -46,7 +47,7 @@ assert($('button').hasClass('btn') && $('button').hasClass('btn-default'));
 assert($('button').hasClass('btn-block'));
 ```
 
-อย่าลืม tag ปิด สำหรับ `button` element
+อย่าลืมแท็กปิดของ `button` element
 
 ```js
 assert(

@@ -8,7 +8,7 @@ dashedName: create-a-class-to-target-with-jquery-selectors
 
 # --description--
 
-หลายๆครั้งเราก็ไม่ได้ใส่ class ให้ element เพื่อที่จะใช้ CSS เสมอไป
+หลายๆครั้งเราก็ไม่ได้ใส่ class ให้ element เพื่อที่จะใช้ CSS เสมอไป  
 บางทีเราก็ใส่ class เพื่อให้เราใช้ jQuery เลือก element ได้ง่ายขึ้น
 
 เรามาลองเพิ่ม class `target` ใน `button` ทุกปุ่มกัน

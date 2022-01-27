@@ -43,6 +43,7 @@ this.setState(state => ({
 ตอนนี้ยังไม่มีโค้ดที่อัปเดทค่าของ property `visibility` ใน `state` ของ component 
 ค่าของ property นี้ควรสลับไปมาระหว่าง `true` กับ `false` 
 ตอนนี้ปุ่มของเรามี click handler ที่เรียกใช้งาน method `toggleVisibility()` แล้ว
+
 ให้เขียน method นี้ แล้วให้ method นี้ทำงานโดยจะส่งฟังก์ชันไปใน `setState` เพื่อให้ `visibility` ใน `state` เปลี่ยนไปเปลี่ยนมาได้
 ถ้าเราเรียกใช้ method นี้ตอนที่ `visibility` เป็น `false`  ค่าต้องถูกเปลี่ยนเป็น `true` แต่ถ้า `visibility` เป็น `true` อยู่ ก็ต้องเปลี่ยนเป็น `false`
 

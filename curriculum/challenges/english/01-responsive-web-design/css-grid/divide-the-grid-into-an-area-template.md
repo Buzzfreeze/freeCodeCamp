@@ -8,38 +8,38 @@ dashedName: divide-the-grid-into-an-area-template
 
 # --description--
 
-คุณสามารถจับกลุ่มช่องต่าง ๆ ในกริดของคุณให้เป็น <dfn>area</dfn>
-จงกำหนดชื่อให้กับพื้นที่นั้น
-จงทำมันโดยใช้ `grid-template-areas` ที่ container แบบนี้:
+คุณสามารถจับ cell ในกริดของคุณให้เป็น <dfn>area (พื้นที่)</dfn> และคุณก็จะกำหนดชื่อให้กับพื้นที่นั้นได้
+
+ในการทำแบบนี้ คุณจะต้องใช้ property `grid-template-areas` ที่ container แบบนี้:
 
 ```css
 grid-template-areas:
-  'header header header'
-  'advert content content'
-  'advert footer footer';
+  "header header header"
+  "advert content content"
+  "advert footer footer";
 ```
 
-โค้ดด้านบนจะจับกลุ่มช่องเล็ก ๆ ของกริดให้เป็น 4 ส่วน; `header`, `advert`, `content`, และ `footer`
-ทุก ๆ จะแสดงเป็นช่อง ๆ หนึ่ง และทุก ๆ เครื่องหมายคำพูดคู่หนึ่งจะเป็น 1 แถว
-สรุป grid-template-areas ได้ การกำหนดชื่อเราสามารถทำได้โดยใส่ชื่อที่เราต้องการลงไปใน grid-area ได้เลย
+โค้ดด้านบนจะจับกลุ่ม cell ของกริดให้เป็น 4 ส่วน คือ `header`, `advert`, `content`, และ `footer`
+แต่ละคำที่เราละบุไปใน property นี้ จะหมายถึง 1 cell และข้อความในเครื่องหมายคำพูด จะนับเป็น 1 row
 
 # --instructions--
 
-จงเปลี่ยน template เพื่อที่พื้นที่ `footer` จะครอบคลุมแถวล่างสุดทั้งหมด
-การกำหนดพื้นที่จะยังไม่มีผลอะไรที่มองเห็นได้ในตอนนี้
-หลังจากนี้ คุณจะทำให้ item ใช้พื้นที่เพื่อดูการทำงานของมัน
+ให้เปลี่ยน template เพื่อให้ row ล่างสุดเป็น เป็น area ที่มีชื่อว่า `footer` ทั้งหมดทุก cell
+
+ตอนนี้คุณจะยังไม่เห็นความเปลี่ยนแปลงจากการกำหนด area
+เดี๋ยวเราค่อยดูการทำงานของ area ใบแบบทดสอบถัดไป
 
 # --hints--
 
-`container` class ควรมี`grid-template-areas` property อันหนึ่งที่คล้ายกับตัวอย่าง แต่มีพื้นที่ `footer`ครอบคลุมแถวล่างสุดทั้งหมด
+คลาส `container` ต้องมีค่าของ property `grid-template-areas` คล้ายกับในตัวอย่างที่เรามีให้ แต่ area ของแถวล่างสุด ต้องมีค่าเป็น `footer` ทั้งหมด
 
 ```js
 assert(
   __helpers
     .removeCssComments(code)
     .match(
-      /.container\s*?{[\s\S]*grid-template-areas\s*?:\s*?"\s*?header\s*?header\s*?header\s*?"\s*?"\s*?advert\s*?content\s*?content\s*?"\s*?"\s*?footer\s*?footer\s*?footer\s*?"\s*?;[\s\S]*}/gi,
-    ),
+      /.container\s*?{[\s\S]*grid-template-areas\s*?:\s*?"\s*?header\s*?header\s*?header\s*?"\s*?"\s*?advert\s*?content\s*?content\s*?"\s*?"\s*?footer\s*?footer\s*?footer\s*?"\s*?;[\s\S]*}/gi
+    )
 );
 ```
 
@@ -75,11 +75,11 @@ assert(
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 10px;
     grid-template-areas:
-    /* Only change code below this line */
-      'header header header'
-      'advert content content'
-      'advert footer footer';
-    /* Only change code above this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
+      "header header header"
+      "advert content content"
+      "advert footer footer";
+    /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
   }
 </style>
 
@@ -123,9 +123,9 @@ assert(
     grid-gap: 10px;
 
     grid-template-areas:
-      'header header header'
-      'advert content content'
-      'footer footer footer';
+      "header header header"
+      "advert content content"
+      "footer footer footer";
   }
 </style>
 

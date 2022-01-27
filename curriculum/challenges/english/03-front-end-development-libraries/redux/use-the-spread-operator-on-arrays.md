@@ -20,6 +20,7 @@ let newArray = [...myArray];
 ถ้าคุณทำอะไรก็ตามที่ mutate array เช่น `newArray.push(5)` ก็จะไม่ทำให้ข้อมูลใน `myArray` เปลี่ยนแปลงไป 
 spead operator จะทำการแยกข้อมูลใน `myArray` ออก และเอาไปรวมกันใน array ใหม่ 
 ถ้าต้องการคัดลอก array และเพิ่มข้อมูลใน array ใหม่ด้วย คุณจะเขียนแบบนี้ก็ได้ `[...myArray, 'new value']` วิธีนี้จะคืนค่าเป็น array ตัวใหม่ที่ใช้ข้อมูลจาก `myArray` และมี string `new value` ต่อท้าย
+
 คุณใช้ spread syntax ได้หลายครั้งในการสร้าง array หนึ่งตัว แต่สิ่งสำคัญคือการใช้ syntax นี้จะเป็นแค่การทำ shallow copy เท่านั้น แปลว่าถ้าคุณใช้วิธีนี้กับ array หลายมิติ array ที่อยู่ชั้นในก็ยังจะเป็น array ที่ใช้ตำแหน่งใน memory ตำแหน่งเดิมอยู่ดี
 
 # --instructions--

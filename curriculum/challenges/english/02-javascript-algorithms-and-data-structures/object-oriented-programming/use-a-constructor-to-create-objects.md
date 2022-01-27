@@ -22,7 +22,7 @@ let blueBird = new Bird();
 
 **หมายเหตุ:** `this` ที่อยู่ภายใน constructor จะเป็น object ที่กำลังถูกสร้างเสมอ
 
-จะเห็นว่าเราใช้คำว่า `new` ในการเรียกใช้ constructor โดยเป็นการบอกให้ JavaScript สร้าง instance ของ `Bird` ที่ชื่อว่า `blueBird` ถ้าไม่มีคำว่า `new` ก็จะทำให้ `this` ที่อยู่ภายใน constructor ไม่สามารถชี้ไปยัง object ที่สร้างใหม่ได้ ทำให้เกิดผลลัพธ์ที่ไม่ถูกต้อง
+จะเห็นว่าเราใช้คำว่า `new` ในการเรียกใช้ constructor โดยเป็นการบอกให้ JavaScript สร้าง instance ของ `Bird` ที่ชื่อว่า `blueBird` ถ้าไม่มีคำว่า `new` ก็จะทำให้ `this` ที่อยู่ภายใน constructor ไม่สามารถชี้ไปยัง object ที่สร้างใหม่ได้ ทำให้เกิดผลลัพธ์ที่ไม่ถูกต้อง  
 ตอนนี้ `blueBird` ก็มี property เหมือนกับที่ constructor `Bird` กำหนดให้แล้ว
 
 ```js

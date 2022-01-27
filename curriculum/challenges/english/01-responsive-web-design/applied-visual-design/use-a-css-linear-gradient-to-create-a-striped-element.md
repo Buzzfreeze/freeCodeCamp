@@ -2,39 +2,43 @@
 id: 587d78a5367417b2b2512ad7
 title: Use a CSS Linear Gradient to Create a Striped Element
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/c6bmQh2'
+videoUrl: "https://scrimba.com/c/c6bmQh2"
 forumTopicId: 301072
 dashedName: use-a-css-linear-gradient-to-create-a-striped-element
 ---
 
 # --description--
 
-`repeating-linear-gradient()` function นั้นคล้ายกับ `linear-gradient()` โดยมีความต่างหลัก ๆ คือมันจะทำการใช้ gradient pattern ที่ระบุไว้ซ้ำ ๆ
-`repeating-linear-gradient()` จะรับค่าหลาย ๆ ค่า แต่เพื่อความง่าย คุณสามารถใช้แค่ค่ามุมและค่า color stop ในแบบฝึกหัดนี้
+ฟังก์ชัน `repeating-linear-gradient()` นั้นจะคล้ายกับ `linear-gradient()` โดยมีความต่างหลักๆ คือ ฟังก์ชันนี้จะใช้ gradient pattern ที่ระบุไว้ซ้ำๆ
+`repeating-linear-gradient()` จะรับค่าได้หลายแบบ แต่เพื่อความง่าย ในแบบฝึกหัดนี้เราจะให้คุณใช้แค่ค่ามุมและค่า color stop
 
 ค่ามุมจะเป็นทิศทางของ gradient
-Color stop เป็นเหมือนกับความกว้างที่จะบอกตำแหน่งที่การเปลี่ยนผ่านจะเกิดขึ้นและจะถูกกำหนดเป็นเปอร์เซ็นหรือค่าของ pixel
+ส่วน Color stop เป็นระยะที่จะเกิดการเปลี่ยนผ่านขึ้น และจะถูกกำหนดเป็นเปอร์เซ็นหรือ pixel
 
-ในตัวอย่างนี้จะสาธิตใน code editor
-gradient จะเริ่มต้นด้วยสี `yellow` ที่ 0 pixel โดยจะผสมกับสีที่สอง `blue` ที่ 40 pixel ห่างจากจุดเริ่มต้น
-เนื่องจากสีถัดไปก็อยู่แค่ที่ 40 pixels gradient จะเปลี่ยนไปเป็นสีที่สาม `green` ทันทีโดยมันจะไปผสมกับสีที่สี่ `red` ตรง 80 pixel ที่ห่างจากจุดเริ่มต้นของ gradient
+ลองดูตัวอย่างใน code editor
 
-สำหรับตัวอย่างนี้, คุณควรจะคำนึงถึง color stops เป็นคู่ ๆ ในตำแหน่งที่ทั้งสองจะผสมกัน
+gradient จะเริ่มต้นด้วยสี `yellow` ที่ 0 pixel โดยจะผสมกับสีที่สอง `blue` ที่ระยะ 40 pixel จากจุดเริ่มต้น
+และจะเห็นว่าสีที่สาม (`green`) ก็มีค่าเป็น 40 pixel สีน้ำเงินและเขียวเลยไม่ผสมกัน แต่จะเป็นการเปลี่ยนสีทันที
+และสีเขียวก็จะไปผสมกับสี `red` ที่ 80 pixel (ระยะห่างจากจุดเริ่มต้นของ gradient)
+
+ในตัวอย่างนี้ คุณจะมองภาพได้ง่ายขึ้นถ้ามอง color stop เป็นคู่ ๆ ในตำแหน่งที่สีทั้งสองจะผสมกัน:
 
 ```css
-0px [yellow -- blend -- blue] 40px [green -- blend -- red] 80px
+0px [yellow -- สีผสม -- blue] 40px [green -- สีผสม -- red] 80px
 ```
 
-ถ้าทุก ๆ ค่าของ 2 color stop เป็นสีเดียวกัน, การผสมสีจะมองไม่เห็นเพราะมันเกิดขึ้นระหว่างสีเดียวกัน ซึ่งถ้าตามด้วย hard transition ไปที่สีถัดไปคุณจะได้แถบขึ้นมา
+ถ้า color stop 2 ตัวเป็นสีเดียวกัน คุณจะไม่เห็นการผสมสี เพราะว่าเป็นการผสมสีเดียวกัน
+และถ้า color stop ตัวถัดไปเป็นสีอื่น และอยู่ใกล้มากๆ คุณจะได้แถบสีขึ้นมา
 
 # --instructions--
 
-จงสร้างแถบสีโดยการเปลี่ยนค่า `repeating-linear-gradient()` เพื่อใช้มุม gradient เท่ากับ `45deg`
-และกำหนดให้ color stops ของสองสีแรกเป็น `yellow`, และ color stop ของอีกสองสีถัดมาเป็น `black`
+ให้สร้างแถบสีโดยการเปลี่ยนค่าของ `repeating-linear-gradient()`
+โดยใช้มุม gradient เป็น `45deg`
+และกำหนดให้ color stop ของสองสีแรกเป็น `yellow`, และ color stop ของอีกสองสีถัดมาเป็น `black`
 
 # --hints--
 
-มุมของ`repeating-linear-gradient()` ควรเป็น 45deg.
+มุมของ `repeating-linear-gradient()` ต้องเป็น 45deg
 
 ```js
 assert(code.match(/background:\s*?repeating-linear-gradient\(\s*?45deg/gi));
@@ -46,25 +50,25 @@ assert(code.match(/background:\s*?repeating-linear-gradient\(\s*?45deg/gi));
 assert(!code.match(/90deg/gi));
 ```
 
-color stop ที่ 0 pixel ควรเป็น `yellow`
+color stop ที่ 0 pixel ต้องเป็นสี `yellow`
 
 ```js
 assert(code.match(/yellow\s+?0(px)?/gi));
 ```
 
-color stop ที่ 40 pixels ควรเป็น `yellow`
+color stop ที่ 40 pixel ต้องเป็นสี `yellow`
 
 ```js
 assert(code.match(/yellow\s+?40px/gi));
 ```
 
-color stop อันที่สองที่ 40 pixel ควรเป็น `black`
+color stop อันที่สองที่ 40 pixel ต้องเป็นสี `black`
 
 ```js
 assert(code.match(/yellow\s+?40px,\s*?black\s+?40px/gi));
 ```
 
-color stop อันสุดท้ายที่ 80 pixels ควรเป็น `black`
+color stop อันสุดท้ายที่ 80 pixel ต้องเป็นสี `black`
 
 ```js
 assert(code.match(/black\s+?80px/gi));
@@ -81,7 +85,13 @@ assert(code.match(/black\s+?80px/gi));
     width: 70%;
     height: 400px;
     margin: 50 auto;
-    background: repeating-linear-gradient(90deg, yellow 0px, blue 40px, green 40px, red 80px);
+    background: repeating-linear-gradient(
+      90deg,
+      yellow 0px,
+      blue 40px,
+      green 40px,
+      red 80px
+    );
   }
 </style>
 
@@ -97,7 +107,13 @@ assert(code.match(/black\s+?80px/gi));
     width: 70%;
     height: 400px;
     margin: 50 auto;
-    background: repeating-linear-gradient(45deg, yellow 0px, yellow 40px, black 40px, black 80px);
+    background: repeating-linear-gradient(
+      45deg,
+      yellow 0px,
+      yellow 40px,
+      black 40px,
+      black 80px
+    );
   }
 </style>
 <div></div>

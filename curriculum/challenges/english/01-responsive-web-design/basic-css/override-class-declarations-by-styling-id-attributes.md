@@ -2,38 +2,39 @@
 id: bad87fee1348bd8aedf06756
 title: Override Class Declarations by Styling ID Attributes
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cRkpDhB'
+videoUrl: "https://scrimba.com/c/cRkpDhB"
 forumTopicId: 18251
 dashedName: override-class-declarations-by-styling-id-attributes
 ---
 
 # --description--
 
-พวกเราพึ่งพิสูจน์ไปว่า browser อ่าน CSS จากบนลงล่างตามลำดับของ declaration
-มันหมายความว่า ถ้าเกิดมีความแตกต่างกัน
-browser จะใช้ CSS declaration ที่มาที่หลัง
-สังเกตว่าถึงพวกเราจะใส่ `blue-text` ก่อน `pink-text` ที่คลาสของ `h1` element, browser ก็จะยังดูที่ลำดับของ declaration ไม่ใช่ลำดับของการเรียกใช้งานอยู่ดี
+พวกเราพึ่งพิสูจน์ไปว่า เบราว์เซอร์อ่าน CSS จากบนลงล่างตามลำดับของการประกาศ
+แปลว่าถ้ามี property ที่ขัดแย้งกัน เบราว์เซอร์จะใช้ CSS ตัวที่ประกาศทีหลัง
+จะเห็นว่า ถึงเราจะใส่ `blue-text` ก่อน `pink-text` ใน class attribute ของ `h1` เบราว์เซอร์ก็จะยังดูที่ลำดับของการประกาศ ไม่ใช่ลำดับของการเรียกใช้งานอยู่ดี
 
-แต่มันไม่ได้จบเพียงเท่านี้
-ยังมีวิธีอื่นที่ทำให้เราสามารถเขียนทับ (overwrite) CSS ได้อีก
-คุณยังจำ id attributes ได้ไหม?
+แต่ก็ยังไม่จบเพียงเท่านี้
+ยังมีวิธีอื่นที่ทำให้เราสามารถเขียนทับ (override) CSS ได้อีก
+คุณยังจำ id attribute ได้ไหม?
 
-มาเขียนทับ `pink-text` และ `blue-text` class กันเถอะ
-นอกจากนั้นจงทำให้ `h1` element เป็นสีส้มโดยการกำหนดให้ `h1` element เป็น id หนึ่งและตกแต่ง id นั้น
+เรามาทำให้ตัวอักษรของ `h1` เป็นสีส้มโดยการ override คลาส `pink-text` และ `blue-text` กันเถอะ
+
+ซึ่งเราจะทำใด้โดยการระบุ id ให้กับ `h1` element และทำการตกแต่ง id นั้นในแท็ก style
 
 # --instructions--
 
-จงกำหนดให้ `h1` element มี `id` attribute ทีชื่อ `orange-text`
-จำไว้ว่า id styles จะเป็นอย่างนี้:
+ให้กำหนด id attribute ให้กับ `h1` element โดยให้มีค่าเป็น `orange-text`
+
+ยังจำวิธีกำหนด id ได้ใช่ไหม:
 
 ```html
 <h1 id="orange-text"></h1>
 ```
 
-พักเรื่อง `blue-text` และ `pink-text` class ที่ `h1` element ไว้ก่อน
+ไม่ต้องลบคลาส `blue-text` และ `pink-text` ของ `h1` element ออก
 
-ตอนนี้ จงสร้าง CSS declaration ให้กับ `orange-text` id ใน `style` element
-นี่เป็นตัวอย่างของหน้าตาของมัน:
+แล้วให้ประกาศ CSS ให้กับ id `orange-text` ใน `style` element
+ซึ่งจะมีหน้าตาประมาณนี้:
 
 ```css
 #brown-text {
@@ -41,50 +42,50 @@ browser จะใช้ CSS declaration ที่มาที่หลัง
 }
 ```
 
-**Note:** มันไม่เป็นปัญหาไม่ว่าคุณจะประกาศ CSS นี้ข้างบนหรือข้างล่าง `pink-text` class, เนื่องจาก `id` attribute จะมีความสำคัญกว่า
+**Note:** ไม่ว่าคุณจะประกาศ CSS ของ id ไว้เหนือ หรือใต้คลาส `pink-text` ตัว `id` attribute ก็ยังจะมีความสำคัญกว่าอยู่ดี
 
 # --hints--
 
-`h1` element ควรมีคลาส `pink-text`.
+`h1` element ต้องมีคลาส `pink-text`
 
 ```js
-assert($('h1').hasClass('pink-text'));
+assert($("h1").hasClass("pink-text"));
 ```
 
-`h1` element ควรมีคลาส `blue-text`.
+`h1` element ต้องมีคลาส `blue-text`
 
 ```js
-assert($('h1').hasClass('blue-text'));
+assert($("h1").hasClass("blue-text"));
 ```
 
-`h1` element ควรมี id เป็น `orange-text`.
+`h1` element ต้องมี id เป็น `orange-text`
 
 ```js
-assert($('h1').attr('id') === 'orange-text');
+assert($("h1").attr("id") === "orange-text");
 ```
 
-มันคือมี `h1` element แค่อันเดียวเท่านั้น
+ต้องมี `h1` element แค่ตัวเดียวเท่านั้น
 
 ```js
-assert($('h1').length === 1);
+assert($("h1").length === 1);
 ```
 
-`orange-text` id ควรมี CSS declaration อันหนึ่ง
+ต้องมีการประกาศ CSS ของ id `orange-text`
 
 ```js
 assert(code.match(/#orange-text\s*{/gi));
 ```
 
-`h1` should ไม่ควรมี `style` attributes ใด ๆ
+ต้องไม่ใช้ `style` attribute ใน `h1`
 
 ```js
 assert(!code.match(/<h1.*style.*>/gi));
 ```
 
-`h1` element ควรเป็นสีส้ม
+`h1` element ต้องมี `color` เป็น `orange`
 
 ```js
-assert($('h1').css('color') === 'rgb(255, 165, 0)');
+assert($("h1").css("color") === "rgb(255, 165, 0)");
 ```
 
 # --seed--

@@ -9,47 +9,47 @@ dashedName: set-the-font-weight-for-multiple-heading-elements
 
 # --description--
 
-คุณได้กำหนด `font-size` ของแต่ละ heading tag ในแบบฝึกหัดที่แล้ว ตอนนี้คุณจะได้ปรับค่าของ `font-weight`
+คุณได้กำหนด `font-size` ของ heading ไปแล้วในแบบฝึกหัดที่ผ่านมา คราวนี้มาลองปรับ `font-weight` ดูบ้าง
 
-`font-weight` เป็น property จะกำหนดความหนา/บางของตัวอักษรที่อยู่ใน section ของข้อความ
+`font-weight` เป็น property ที่ใช้กำหนดความหนา/บางของตัวอักษร
 
 # --instructions--
 
-<ul><li>Set the <code>font-weight</code> of the <code>h1</code> tag to 800.</li><li>Set the <code>font-weight</code> of the <code>h2</code> tag to 600.</li><li>Set the <code>font-weight</code> of the <code>h3</code> tag to 500.</li><li>Set the <code>font-weight</code> of the <code>h4</code> tag to 400.</li><li>Set the <code>font-weight</code> of the <code>h5</code> tag to 300.</li><li>Set the <code>font-weight</code> of the <code>h6</code> tag to 200.</li></ul>
+<ul><li>ตั้งค่า <code>font-weight</code> ของแท็ก <code>h1</code> ให้เป็น 800</li><li>ตั้งค่า <code>font-weight</code> ของแท็ก <code>h2</code> ให้เป็น 600</li><li>ตั้งค่า <code>font-weight</code> ของแท็ก <code>h3</code> ให้เป็น 500</li><li>ตั้งค่า <code>font-weight</code> ของแท็ก <code>h4</code> ให้เป็น 400</li><li>ตั้งค่า <code>font-weight</code> ของแท็ก <code>h5</code> ให้เป็น 300</li><li>ตั้งค่า <code>font-weight</code> ของแท็ก <code>h6</code> ให้เป็น 200</li></ul>
 
 # --hints--
 
-คุณควรกำหนด `font-weight` property ให้ `h1` tag มีค่า 800
+property `font-weight` ของแท็ก `h1` ต้องมีค่าเป็น 800
 
 ```js
 assert($('h1').css('font-weight') == '800');
 ```
 
-คุณควรกำหนด `font-weight` property ให้ `h2` tag มีค่า 600.
+property `font-weight` ของแท็ก `h2` ต้องมีค่าเป็น 600
 
 ```js
 assert($('h2').css('font-weight') == '600');
 ```
 
-คุณควรกำหนด `font-weight` property ให้ `h3` tag มีค่า 500.
+property `font-weight` ของแท็ก `h3` ต้องมีค่าเป็น 500
 
 ```js
 assert($('h3').css('font-weight') == '500');
 ```
 
-คุณควรกำหนด `font-weight` property ให้ `h4` tag มีค่า 400.
+property `font-weight` ของแท็ก `h4` ต้องมีค่าเป็น 400
 
 ```js
 assert($('h4').css('font-weight') == '400');
 ```
 
-คุณควรกำหนด `font-weight` property ให้ `h5` tag มีค่า 300.
+property `font-weight` ของแท็ก `h5` ต้องมีค่าเป็น 300
 
 ```js
 assert($('h5').css('font-weight') == '300');
 ```
 
-คุณควรกำหนด `font-weight` property ให้ `h6` tag มีค่า 200.
+property `font-weight` ของแท็ก `h6` ต้องมีค่าเป็น 200
 
 ```js
 assert($('h6').css('font-weight') == '200');

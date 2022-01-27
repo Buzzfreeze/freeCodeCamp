@@ -9,6 +9,7 @@ dashedName: access-property-names-with-bracket-notation
 # --description--
 
 ในบทเรียนเรื่อง object บทแรก เราได้พูดถึงการใช้ bracket notation เพื่อเข้าถึงค่าของ property ตามค่าของตัวแปรไปแล้ว 
+
 เช่น สมมติว่า object `foods` ของเรา ถูกใช้ในโปรแกรมสำหรับเครื่องคิดเงินในซูเปอร์มาร์เก็ต โดยเรามีฟังก์ชันที่ดึงค่าของ `selectedFood` โดยการแสกนบาร์โค้ดมาให้ และเราต้องดูว่าใน object `foods` มีอาหารนั้นอยู่หรือไม่ โค้ดอาจมีหน้าตาประมาณนี้
 
 ```js
@@ -17,6 +18,7 @@ let inventory = foods[selectedFood];
 ```
 
 โค้ดนี้จะนำค่าของตัวแปร `selectedFood` มาเป็น key และคืนค่า value ของ key นั้นใน object `foods` หรือคืนค่าเป็น `undefined` ถ้าไม่เจอ key 
+
 Bracket notation มีประโยชน์มากในกรณีนี้ เพราะบางครั้งเราอาจไม่รู้ว่ามี property อะไรบ้าง หรือเราอาจอยากเข้าถึง propery แบบอิสระมากขึ้น
 
 # --instructions--
@@ -33,7 +35,7 @@ Bracket notation มีประโยชน์มากในกรณีนี
 assert.strictEqual(typeof checkInventory, 'function');
 ```
 
-object `foods` ต้องมี key-value ตามนี้เท่านั้น: `apples: 25`, `oranges: 32`, `plums: 28`, `bananas: 13`, `grapes: 35`, `strawberries: 27`.
+object `foods` ต้องมี key-value ตามนี้เท่านั้น: `apples: 25`, `oranges: 32`, `plums: 28`, `bananas: 13`, `grapes: 35`, `strawberries: 27`
 
 ```js
 assert.deepEqual(foods, {

@@ -9,9 +9,10 @@ dashedName: use-the-css-transform-property-skewx-to-skew-an-element-along-the-x-
 
 # --description--
 
-function ถัดไปของ `transform` property คือ`skewX()`, ซึ่งมันจะทำให้ element ที่เลือกเอียงไปทางด้านใดด้านหนึ่งตามแกน  X (แนวนอน) axis โดยการกำหนดค่าองศาให้
+ฟังก์ชันถัดไปของ property `transform` คือ `skewX()` 
+ฟังก์ชันนี้จะเป็นการทำให้ element ที่เลือกเอียงไปทางด้านใดด้านหนึ่งตามแกน  X (แนวนอน) โดยจะเอียงตามองศาที่กำหนดให้
 
-โค้ดต่อไปนี้จะทำให้ paragraph element เอียงไปประมาณ -32 degrees ตามแกน X
+โค้ดด้านล่างนี้จะทำให้ p element เอียงไป -32 องศาตามแกน X
 
 ```css
 p {
@@ -21,11 +22,11 @@ p {
 
 # --instructions--
 
-จงทำให้ element ที่มี id เป็น `bottom` เอียงไป 24 degrees ตามแกน X โดยใช้ `transform` property.
+จงทำให้ element ที่มี id เป็น `bottom` เอียงไป 24 องศาตามแกน X โดยใช้ property `transform`
 
 # --hints--
 
-element ที่มี id `bottom` ควรถูกทำให้เอียงไป 24 degrees ตามแกน X
+element ที่มี id เป็น `bottom` ต้องเอียงไป 24 องศาตามแกน X
 
 ```js
 assert(code.match(/#bottom\s*?{\s*?.*?\s*?transform:\s*?skewX\(24deg\);/g));

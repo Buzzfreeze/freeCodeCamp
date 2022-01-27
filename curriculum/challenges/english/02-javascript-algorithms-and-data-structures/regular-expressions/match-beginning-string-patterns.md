@@ -10,7 +10,7 @@ dashedName: match-beginning-string-patterns
 
 ในบทเรียนที่แล้วเราจะเห็นแล้วว่าเราใช้ regular expression เพื่อทำการ match ได้หลายครั้ง แล้วเรายังใช้หา pattern ในตำแหน่งที่กำหนดใน string ได้ด้วย
 
-ในบทเรียนที่ผ่านมา เราใช้ caret character (`^`) ใน character set เพื่อสร้าง negated character set ในรูปแบบ `[^thingsThatWillNotBeMatched]` แต่ถ้าเราวาง caret character ไว้นอก character set จะเป็นการดู pattern ที่ต้น string
+ในบทเรียนที่ผ่านมา เราใช้ caret character (`^`) ใน character set เพื่อสร้าง negated character set ในรูปแบบ `[^thingsThatWillNotBeMatched]` แต่ถ้าเราวาง caret character ไว้นอก character set จะเป็นการดู pattern ที่ต้น string  
 ลองดูตัวอย่าง:
 
 ```js

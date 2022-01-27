@@ -9,8 +9,7 @@ dashedName: subtract-one-number-from-another-with-javascript
 
 # --description--
 
-เราสามารถลบตัวเลขออกจากอีกตัวเลขได้เช่นกัน
-
+เราสามารถลบตัวเลขออกจากอีกตัวเลขได้เช่นกัน  
 JavaScript ใช้เครื่องหมาย `-` สำหรับการลบ
 
 **Example**

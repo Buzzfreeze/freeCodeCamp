@@ -9,13 +9,14 @@ dashedName: use-default-props
 # --description--
 
 React ให้เราตั้งค่า default props ได้ด้วย 
-โดย default props คือค่าที่จะเอามาใช้ถ้าเราไม่ได้ระบุ prop นั้นให้ตอนนำ component มาใช้
-เช่น ถ้าคุณประกาศ `MyComponent.defaultProps = { location: 'San Francisco' }` โค้ดด้านบนแปลว่า ถ้าคุณไม่ได้ส่งค่า prop ที่ชื่อ `location` ไปให้กับ component ตัว `MyComponent` ก็จะมีค่าของ prop ที่ชื่อ `location` เป็น `San Francisco` 
+โดย default props คือค่าที่จะเอามาใช้ถ้าเราไม่ได้ระบุ prop นั้นให้ตอนนำ component มาใช้  
+เช่น ถ้าคุณประกาศ `MyComponent.defaultProps = { location: 'San Francisco' }` โค้ดด้านบนแปลว่า ถ้าคุณไม่ได้ส่งค่า prop ที่ชื่อ `location` ไปให้กับ component ตัว `MyComponent` ก็จะมีค่าของ prop ที่ชื่อ `location` เป็น `San Francisco`  
 React จะใช้ default props ถ้าเราไม่ได้ส่งค่า prop เข้าไป แต่ถ้าเราส่ง `null` เข้าไป ค่าของ props นั้นจะเป็น `null` แทน
 
 # --instructions--
 
 code editor จะมี component ชื่อ `ShoppingCart` อยู่ 
+
 ให้คุณกำหนดค่าของ default props ให้กับ component นี้ โดยให้ property ชื่อ `items` มีค่าเป็น `0`
 
 # --hints--

@@ -2,20 +2,20 @@
 id: bad88fee1348bd9aedf08816
 title: Link to Internal Sections of a Page with Anchor Elements
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pVMPUv/cyrDRUL'
+videoUrl: "https://scrimba.com/p/pVMPUv/cyrDRUL"
 forumTopicId: 301098
 dashedName: link-to-internal-sections-of-a-page-with-anchor-elements
 ---
 
 # --description--
 
-`a` (_anchor_) elements สามารถใช้เพื่อสร้าง internal link ที่พาไปยังแต่ละ section ข้างในหน้าเว็บไซต์นั้นได้ด้วย
+เราจะใช้ `a` (_anchor_) element เพื่อพาผู้ใช้ไปยังส่วนอื่นภายในหน้าเว็บของเราได้ด้วย โดยลิงก์ที่ไม่ได้พาออกไปยังเว็บอื่น จะเรียกว่าลิงก์ภายใน หรือ internal link
 
-เพื่อสร้างลิงค์ภายในหน้านั้น คุณต้องเพิ่ม `href` attribute ของลิงค์ให้กับเครื่องหมาย `#` และเพิ่มค่าของ `id` attribute ของ element ที่คุณต้องการจะนำทางไปโดยทั่วไป ก็คือตำแหน่งที่อยู่ลึกลงไปในหน้านั้น
-นอกจากนี้ คุณยังต้องเพิ่ม `id` attribute อันเดียวกับนี้ให้กับ element ที่คุณได้มีการลิงค์ไว้
-`id` เป็น attribute ที่ระบุบอกถึง element ที่แตกต่างกัน
+ในการสร้างลิงค์ภายใน คุณต้องเขียน attribute `href` โดยใช้เครื่องหมาย `#` นำหน้า attribute `id` ของ element เป้าหมายที่คุณต้องการพาผู้ใช้ไป
+และคุณยังต้องเพิ่ม attribute `id` อันเดียวกันนี้ให้กับ element ที่คุณต้องการพาผู้ใช้ไปด้วย
+โดย `id` เป็น attribute ที่ใช้ระบุ element แต่ละตัว ซึ่งในหน้าเว็บหนึ่งๆ ไม่ควรมี element หลายตัวที่ใช้ id เดียวกัน
 
-ด้านล่างจะเป็นตัวอย่างของ internal anchor link และ target element :
+ลองดูตัวอย่างของ internal anchor link และ element เป้าหมาย:
 
 ```html
 <a href="#contacts-header">Contacts</a>
@@ -23,57 +23,62 @@ dashedName: link-to-internal-sections-of-a-page-with-anchor-elements
 <h2 id="contacts-header">Contacts</h2>
 ```
 
-เมื่อผู้ใช้คลิกที่ `Contacts` link, เขาจะถูกพาไปที่ section ของเว็บเพจที่มี **Contacts** header element.
+เมื่อผู้ใช้คลิกที่ลิงก์ `Contacts` เขาจะถูกพาไปที่ส่วนของของเว็บที่มี **Contacts** header element อยู่
 
 # --instructions--
 
-จงเปลี่ยน external link ให้เป็น internal link โดยการเปลี่ยน `href` attribute ให้เป็น `"#footer"` และข้อความจาก `cat photos` เป็น `Jump to Bottom`
+ให้เปลี่ยน external link ให้เป็น internal link โดยการเปลี่ยน `href` attribute ให้เป็น `"#footer"` และเปลี่ยนข้อความจาก `cat photos` เป็น `Jump to Bottom`
 
-จงเอา `target="_blank"` attribute ออกจาก anchor tag เนื่องจากมันจะทำให้ linked document ถูกเปิดขึ้นมาในอีกหน้าหนึ่ง
+ให้ลบ `target="_blank"` attribute ออกจากแท็ก `a` เพราะว่าการตั้งค่า attribute นี้ จะทำให้เมื่อคลิกลิงก์แล้ว เบราว์เซอร์จะไปเปิดแท็บใหม่
 
-หลังจากนั้น จงเพิ่ม`id` attribute ที่มีค่าเป็น`footer` ให้ `<footer>` element ที่ด้านล่างของหน้านั้น
+หลังจากนั้น ให้เพิ่ม `id` attribute ที่มีค่าเป็น `footer` ให้กับ `<footer>` element ที่ด้านล่างของหน้านี้
+
+เมื่อทำเสร็จ ให้ลองคลิกที่ `Jump to Bottom` ดู เพื่อดูการทำงานของ internal link
 
 # --hints--
 
-มันควรมี anchor tag แค่อันเดียวในหน้านี้
+ต้องมีแท็ก `a` หนึ่งอันในหน้านี้
 
 ```js
-assert($('a').length == 1);
+assert($("a").length == 1);
 ```
 
-มันควรมี `footer` tag ในหน้านี้
+ต้องมีแท็ก `footer` ในหน้านี้
 
 ```js
-assert($('footer').length == 1);
+assert($("footer").length == 1);
 ```
 
-`a` tag ควรมี `href` attribute อันหนึ่งที่ถูกกำหนดให้เป็น "#footer"
+แท็ก `a` ต้องมี `href` attribute ที่มีค่าเป็น "#footer"
 
 ```js
-assert($('a').eq(0).attr('href') == '#footer');
+assert($("a").eq(0).attr("href") == "#footer");
 ```
 
-`a` tag ไม่ควรมี `target` attribute.
-
-```js
-assert(typeof $('a').eq(0).attr('target') == typeof undefined || $('a').eq(0).attr('target') == true);
-```
-
-ข้อความของ `a` text ควรจะเป็น "Jump to Bottom"
+แท็ก `a` ต้องไม่มี `target` attribute
 
 ```js
 assert(
-  $('a')
-    .eq(0)
-    .text()
-    .match(/Jump to Bottom/gi),
+  typeof $("a").eq(0).attr("target") == typeof undefined ||
+    $("a").eq(0).attr("target") == true
 );
 ```
 
-`footer` tag ควรจะมี `id` attribute เป็น "footer"
+ข้อความในแท็ก `a` ต้องเป็น "Jump to Bottom"
 
 ```js
-assert($('footer').eq(0).attr('id') == 'footer');
+assert(
+  $("a")
+    .eq(0)
+    .text()
+    .match(/Jump to Bottom/gi)
+);
+```
+
+แท็ก `footer` ต้องมีค่าของ `id` เป็น "footer"
+
+```js
+assert($("footer").eq(0).attr("id") == "footer");
 ```
 
 # --seed--
@@ -91,27 +96,36 @@ assert($('footer').eq(0).attr('id') == 'footer');
   />
 
   <p>
-    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot,
-    hairball run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
-    rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed
-    everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.
-  </p>
-  <p>
-    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur
-    catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase
-    the red dot, hairball run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed
+    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+    attack your ankles chase the red dot, hairball run catnip eat the grass
+    sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed
     everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
+    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+    attack your ankles chase the red dot, hairball run catnip eat the grass
+    sniff.
   </p>
   <p>
-    Meowwww loved it, hated it, loved it, hated it yet spill litter box, scratch at owner, destroy all furniture,
-    especially couch or lay on arms while you're using the keyboard. Missing until dinner time toy mouse squeak roll
-    over. With tail in the air lounge in doorway. Man running from cops stops to pet cats, goes to jail.
+    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
+    rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum
+    dolor sit amet, shed everywhere shed everywhere stretching attack your
+    ankles chase the red dot, hairball run catnip eat the grass sniff. Purr jump
+    eat the grass rip the couch scratched sunbathe, shed everywhere rip the
+    couch sleep in the sink fluffy fur catnip scratched.
   </p>
   <p>
-    Intently stare at the same spot poop in the plant pot but kitten is playing with dead mouse. Get video posted to
-    internet for chasing red dot leave fur on owners clothes meow to be let out and mesmerizing birds leave fur on
-    owners clothes or favor packaging over toy so purr for no reason. Meow to be let out play time intently sniff hand
-    run outside as soon as door open yet destroy couch.
+    Meowwww loved it, hated it, loved it, hated it yet spill litter box, scratch
+    at owner, destroy all furniture, especially couch or lay on arms while
+    you're using the keyboard. Missing until dinner time toy mouse squeak roll
+    over. With tail in the air lounge in doorway. Man running from cops stops to
+    pet cats, goes to jail.
+  </p>
+  <p>
+    Intently stare at the same spot poop in the plant pot but kitten is playing
+    with dead mouse. Get video posted to internet for chasing red dot leave fur
+    on owners clothes meow to be let out and mesmerizing birds leave fur on
+    owners clothes or favor packaging over toy so purr for no reason. Meow to be
+    let out play time intently sniff hand run outside as soon as door open yet
+    destroy couch.
   </p>
 </main>
 
@@ -131,27 +145,36 @@ assert($('footer').eq(0).attr('id') == 'footer');
   />
 
   <p>
-    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot,
-    hairball run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
-    rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed
-    everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.
-  </p>
-  <p>
-    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur
-    catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase
-    the red dot, hairball run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed
+    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+    attack your ankles chase the red dot, hairball run catnip eat the grass
+    sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed
     everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
+    Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+    attack your ankles chase the red dot, hairball run catnip eat the grass
+    sniff.
   </p>
   <p>
-    Meowwww loved it, hated it, loved it, hated it yet spill litter box, scratch at owner, destroy all furniture,
-    especially couch or lay on arms while you're using the keyboard. Missing until dinner time toy mouse squeak roll
-    over. With tail in the air lounge in doorway. Man running from cops stops to pet cats, goes to jail.
+    Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
+    rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum
+    dolor sit amet, shed everywhere shed everywhere stretching attack your
+    ankles chase the red dot, hairball run catnip eat the grass sniff. Purr jump
+    eat the grass rip the couch scratched sunbathe, shed everywhere rip the
+    couch sleep in the sink fluffy fur catnip scratched.
   </p>
   <p>
-    Intently stare at the same spot poop in the plant pot but kitten is playing with dead mouse. Get video posted to
-    internet for chasing red dot leave fur on owners clothes meow to be let out and mesmerizing birds leave fur on
-    owners clothes or favor packaging over toy so purr for no reason. Meow to be let out play time intently sniff hand
-    run outside as soon as door open yet destroy couch.
+    Meowwww loved it, hated it, loved it, hated it yet spill litter box, scratch
+    at owner, destroy all furniture, especially couch or lay on arms while
+    you're using the keyboard. Missing until dinner time toy mouse squeak roll
+    over. With tail in the air lounge in doorway. Man running from cops stops to
+    pet cats, goes to jail.
+  </p>
+  <p>
+    Intently stare at the same spot poop in the plant pot but kitten is playing
+    with dead mouse. Get video posted to internet for chasing red dot leave fur
+    on owners clothes meow to be let out and mesmerizing birds leave fur on
+    owners clothes or favor packaging over toy so purr for no reason. Meow to be
+    let out play time intently sniff hand run outside as soon as door open yet
+    destroy couch.
   </p>
 </main>
 

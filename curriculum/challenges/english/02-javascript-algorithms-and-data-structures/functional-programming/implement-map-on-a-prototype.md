@@ -8,7 +8,8 @@ dashedName: implement-map-on-a-prototype
 
 # --description--
 
-เราได้เห็นการใช้ `Array.prototype.map()` หรือ `map()` ในบทที่แล้ว method `map` จะคืนค่าเป็น array ที่มีความยาวเท่ากับ array เดิม และ method นี้จะไม่เปลี่ยนแปลง array เดิมด้วย ถ้า callback function ไม่ได้ไปแก้ค่าที่รับเข้ามา
+เราได้เห็นการใช้ `Array.prototype.map()` หรือ `map()` ในบทที่แล้ว  
+โดย method `map` จะคืนค่าเป็น array ที่มีความยาวเท่ากับ array เดิม และ method นี้จะไม่เปลี่ยนแปลง array เดิมด้วย ถ้า callback function ไม่ได้ไปแก้ค่าที่รับเข้ามา
 
 เราจะเห็นว่า `map` นี้เป็น pure function และผลลัพธ์ที่ได้ก็ขึ้นอยู่กับ input เท่านั้น แล้ว `map` ก็ยังรับ argument เป็นฟังก์ชันอีกด้วย
 
@@ -16,12 +17,12 @@ dashedName: implement-map-on-a-prototype
 
 # --instructions--
 
-ให้เขียน `Array.prototype.myMap()` ของคุณเอง โดยให้ทำงานเหมือนกับ `Array.prototype.map()` และห้ามใช้ method `map` ที่มีอยู่แล้ว 
+ให้เขียน `Array.prototype.myMap()` ของคุณเอง โดยให้ทำงานเหมือนกับ `Array.prototype.map()` และห้ามใช้ method `map` ที่มีอยู่แล้ว  
 เราสามารถเข้าถึง instance ของ `Array` ใน method `myMap` ได้โดยการใช้ `this`
 
 # --hints--
 
-`new_s` ต้องมีค่าเป็น `[46, 130, 196, 10]`.
+`new_s` ต้องมีค่าเป็น `[46, 130, 196, 10]`
 
 ```js
 assert(JSON.stringify(new_s) === JSON.stringify([46, 130, 196, 10]));

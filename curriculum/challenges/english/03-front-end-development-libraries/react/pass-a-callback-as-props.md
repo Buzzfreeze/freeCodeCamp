@@ -15,15 +15,18 @@ dashedName: pass-a-callback-as-props
 
 # --instructions--
 
-เราได้สร้าง component สามตัวไว้ใน code editor ให้แล้ว 
+เราได้สร้าง component สามตัวไว้ใน code editor ให้แล้ว  
 โดย component `MyApp` เป็น parent ที่จะมี child component เป็น `GetInput` และ `RenderInput` 
+
 ให้คุณเพิ่ม `GetInput` ใน method render ใน `MyApp` และให้ส่ง `inputValue` ใน `state` ของ `MyApp` ไปให้ `GetInput` ผ่านทาง prop ที่ชื่อ `input` 
 แล้วให้ส่ง input handler ที่ชื่อ `handleChange` ลงไป ผ่าน prop ที่ชื่อว่า `handleChange`
 
 ต่อไปให้เพิ่ม `RenderInput` ใน method `render` ของ `MyApp` จากนั้นให้ส่ง `inputValue` ของ `state` ผ่าน prop ที่ชื่อ `input` ลงไปให้ `RenderInput` 
 
 ถ้าทำตามขั้นตอนเสร็จและถูกต้องแล้ว เวลาที่คุณพิมพ์ข้อความลงในกล่องข้อความ `GetInput` จะไปเรียก handler method ของ parent (method `handleChange`) ผ่าน props ซึ่งจะไปเปลี่ยนค่า `input` ใน `state` ของ parent
-ให้ลองสังเกตการไหลของข้อมูลใน component และังเกตการที่ข้อมูลที่ใช้จะเก็บอยู่ที่เดียวคือที่ `state` ของ parent component 
+
+ให้ลองสังเกตการไหลของข้อมูลใน component และสังเกตการที่ข้อมูลที่ใช้จะเก็บอยู่ที่เดียวคือที่ `state` ของ parent component 
+
 เรายอมรับว่าตัวอย่างนี้ซับซ้อนและยากมาก แต่เราอยากให้ทำความเข้าใจให้ได้ จะได้เห็นว่าข้อมูลและ callback ส่งไป-มาระหว่าง React component ได้อย่างไร
 
 # --hints--

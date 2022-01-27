@@ -11,7 +11,7 @@ dashedName: modify-array-data-with-indexes
 
 ข้อมูลใน array นั้น <dfn>mutable</dfn> (เปลี่ยนแปลงได้) และสามารถเปลี่ยนแปลงได้อย่างอิสระ ซึ่งไม่เหมือน string ที่เราเรียนไปก่อนหน้านี้
 
-**Example**
+**ตัวอย่าง**
 
 ```js
 var ourArray = [50,40,30];

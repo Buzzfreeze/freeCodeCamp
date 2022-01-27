@@ -2,43 +2,43 @@
 id: 5a9d72ad424fe3d0e10cad16
 title: Use a media query to change a variable
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cWmL8UP'
+videoUrl: "https://scrimba.com/c/cWmL8UP"
 forumTopicId: 301091
 dashedName: use-a-media-query-to-change-a-variable
 ---
 
 # --description--
 
-ตัวแปร CSS สามารถทำให้การใช้ media queries ของคุณง่ายขึ้น
+ตัวแปร CSS สามารถทำให้การใช้ media query ของคุณง่ายขึ้น
 
-ยกตัวอย่างเช่น, เมื่อจอของคุณเล็กกว่าหรือใหญ่กว่า break point ใน media query ของคุณ
-คุณสามารถเปลี่ยนค่าของตัวแปรได้ โดยจะแสดงค่าเมื่อถึง break point ขนาดหน้าจอที่กำหนด
+ยกตัวอย่างเช่น เมื่อจอของคุณเล็กกว่าหรือใหญ่กว่า break point ใน media query ของคุณ คุณสามารถเปลี่ยนค่าของตัวแปรได้ โดยจะเปลี่ยนค่าเมื่อถึง break point ขนาดหน้าจอที่กำหนด
 
 # --instructions--
 
-ใน `:root` selector ของ `media query`, จงเปลี่ยนมันเพื่อที่ `--penguin-size` จะได้ถูกกำหนดค่าใหม่อีกครั้ง โดยให้มันมีค่าเท่ากับ `200px`
-นอกจากนี้ จงประกาศ `--penguin-skin` ขึ้นมาใหม่และกำหนดให้มันมีค่าเป็น `black`
-หลังจากนั้น จงปรับขนาดของ preview เพื่อดูว่ามันเปลี่ยนไปอย่างไร
+ให้เขียนโค้ดใน `:root` selector ของ `media query` เพื่อกำหนดค่าของ `--penguin-size` ใหม่ ให้มีค่าเป็น `200px`
+และให้กำหนดค่าของตัวแปร `--penguin-skin` ใหม่ โดยให้กำหนดค่าเป็น `black`
+
+หลังจากนั้น ให้ลองปรับขนาดหน้าจอของ preview เพื่อดูการเปลี่ยนแปลง
 
 # --hints--
 
-`:root` ควรกำหนดค่าใหม่ให้ตัวแปร `--penguin-size` เป็น `200px`
+ต้องกำหนดค่าของ `--penguin-size` ใหม่ ใน `:root` ของ `@media` โดยให้ `--penguin-size` มีค่าเป็น `200px`
 
 ```js
 assert(
   code.match(
-    /media\s*?\(\s*?max-width\s*?:\s*?350px\s*?\)\s*?{[\s\S]*:root\s*?{[\s\S]*--penguin-size\s*?:\s*?200px\s*?;[\s\S]*}[\s\S]*}/gi,
-  ),
+    /media\s*?\(\s*?max-width\s*?:\s*?350px\s*?\)\s*?{[\s\S]*:root\s*?{[\s\S]*--penguin-size\s*?:\s*?200px\s*?;[\s\S]*}[\s\S]*}/gi
+  )
 );
 ```
 
-`:root` ควรกำหนดค่าใหม่ให้ตัวแปร`--penguin-skin` เป็น `black`
+ต้องกำหนดค่าของ `--penguin-skin` ใหม่ ใน `:root` ของ `@media` โดยให้ `--penguin-skin` มีค่าเป็น `black`
 
 ```js
 assert(
   code.match(
-    /media\s*?\(\s*?max-width\s*?:\s*?350px\s*?\)\s*?{[\s\S]*:root\s*?{[\s\S]*--penguin-skin\s*?:\s*?black\s*?;[\s\S]*}[\s\S]*}/gi,
-  ),
+    /media\s*?\(\s*?max-width\s*?:\s*?350px\s*?\)\s*?{[\s\S]*:root\s*?{[\s\S]*--penguin-skin\s*?:\s*?black\s*?;[\s\S]*}[\s\S]*}/gi
+  )
 );
 ```
 
@@ -57,9 +57,9 @@ assert(
 
   @media (max-width: 350px) {
     :root {
-      /* Only change code below this line */
+      /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
 
-      /* Only change code above this line */
+      /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
     }
   }
 

@@ -20,19 +20,19 @@ dashedName: responsively-style-radio-buttons
 
 # --hints--
 
-radio button ทั้งสองจะต้องอยู่ใน `div` ที่มี class `row`
+radio button ทั้งสองจะต้องอยู่ใน `div` ที่มี class เป็น `row`
 
 ```js
 assert($('div.row:has(input[type="radio"])').length > 0);
 ```
 
-ให้นำ radio button แต่ละอันแยกไปไว้ใน `div` ที่มี class `col-xs-6` อีกที
+ให้นำ radio button แต่ละอันแยกไปไว้ใน `div` ที่มี class เป็น `col-xs-6` อีกที
 
 ```js
 assert($('div.col-xs-6:has(input[type="radio"])').length > 1);
 ```
 
-อย่าลืม tag ปิด สำหรับทุกๆ `div` elements
+อย่าลืมแท็กปิดของ `div` ทุกตัว
 
 ```js
 assert(

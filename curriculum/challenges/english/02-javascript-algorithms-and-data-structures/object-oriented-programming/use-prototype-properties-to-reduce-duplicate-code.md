@@ -12,7 +12,7 @@ dashedName: use-prototype-properties-to-reduce-duplicate-code
 
 ถ้าเรามีแค่ 2 instance เรื่องนี้ก็อาจจะไม่มีปัญหา แต่หากมีเป็นล้านๆ instance ก็จะมีตัวแปรจำนวนมากที่เก็บค่าซ้ำกัน
 
-วิธีการจัดการที่ดีกว่าคือการใช้ `prototype` ของ `Bird` โดย property ที่อยู่ใน `prototype` จะถูกใช้ร่วมกันในทุก instance ของ `Bird` 
+วิธีการจัดการที่ดีกว่าคือการใช้ `prototype` ของ `Bird` โดย property ที่อยู่ใน `prototype` จะถูกใช้ร่วมกันในทุก instance ของ `Bird`  
 ตัวอย่างด้านล่างเป็นการเพิ่ม `numLegs` เข้าไปใน `Bird prototype`:
 
 ```js
@@ -26,8 +26,8 @@ console.log(duck.numLegs);
 console.log(canary.numLegs);
 ```
 
-ให้ลองมองว่า `prototype` เป็นเหมือนแม่พิมพ์ของ instance เพราะว่าทุกๆ instance จะมี property ที่ถูกกำหนดใน `prototype` โดยอัตโนมัติ 
-และควรรู้ไว้ว่า `prototype` ของ `duck` และ `canary` ก็เป็นส่วนหนึ่งของ constructor `Bird` ซึ่งก็คือ `Bird.prototype` นั่นเอง 
+ให้ลองมองว่า `prototype` เป็นเหมือนแม่พิมพ์ของ instance เพราะว่าทุกๆ instance จะมี property ที่ถูกกำหนดใน `prototype` โดยอัตโนมัติ  
+และควรรู้ไว้ว่า `prototype` ของ `duck` และ `canary` ก็เป็นส่วนหนึ่งของ constructor `Bird` ซึ่งก็คือ `Bird.prototype` นั่นเอง  
 JavaScript object เกือบทุกตัวจะมี property ที่เป็น `prototype` ซึ่งเป็นอยู่ในฟังก์ชัน constructor ที่ใช้ในการสร้าง object นั้นๆด้วย
 
 # --instructions--

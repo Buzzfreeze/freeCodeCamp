@@ -2,32 +2,36 @@
 id: 5a9d726c424fe3d0e10cad11
 title: Create a custom CSS Variable
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cQd27Hr'
+videoUrl: "https://scrimba.com/c/cQd27Hr"
 forumTopicId: 301086
 dashedName: create-a-custom-css-variable
 ---
 
 # --description--
 
-เพื่อที่จะสร้างตัวแปร CSS, คุณแค่ต้องกำหนดให้มันมีชื่อพร้อมกับ hyphen (--) 2 อันตรงด้านหน้า และกำหนดค่าให้มันแบบนี้ :
+วิธีสร้างตัวแปร CSS นั้นไม่ยาก คุณแค่ต้องกำหนดชื่อของตัวแปร โดยใส่ hyphen (--) 2 อันไว้ด้านหน้า และกำหนดค่าให้ตัวแปรนั้น
+
+แบบนี้:
 
 ```css
 --penguin-skin: gray;
 ```
 
-โค้ดด้านบนจะสร้างตัวแปรที่ชื่อ `--penguin-skin` และกำหนดค่าให้มันเป็น `gray`
-ตอนนี้คุณสามารถใช้ตัวแปรตัวนั้นที่ไหนซักที่ใน CSS ของคุณเพื่อเปลี่ยนค่าของ element อื่นให้เป็น gray
+โค้ดด้านบนจะสร้างตัวแปรที่ชื่อ `--penguin-skin` และกำหนดค่าเป็น `gray`
+ตอนนี้คุณสามารถใช้ตัวแปรนี้ที่ไหนก็ได้ใน CSS ของคุณ เพื่อเปลี่ยนค่าของ element อื่นให้เป็น gray
 
 # --instructions--
 
-ใน `penguin` class, จงสร้างตัวแปรที่ชื่อ `--penguin-skin` และกำหนดให้มันมีค่าเป็น `gray`
+ในคลาส `penguin` ให้สร้างตัวแปรที่ชื่อ `--penguin-skin` และกำหนดค่าให้เป็น `gray`
 
 # --hints--
 
-`penguin` class ควรประกาศตัวแปร `--penguin-skin` และกำหนดค่า `gray` ให้มัน
+ต้องประกาศตัวแปร `--penguin-skin` ที่มีค่าเป็น `gray` ในคลาส `penguin`
 
 ```js
-assert(code.match(/\.penguin\s*\{[^{}]*?--penguin-skin\s*:\s*gr[ae]y\s*;[^{}]*?\}/gi));
+assert(
+  code.match(/\.penguin\s*\{[^{}]*?--penguin-skin\s*:\s*gr[ae]y\s*;[^{}]*?\}/gi)
+);
 ```
 
 # --seed--
@@ -37,9 +41,9 @@ assert(code.match(/\.penguin\s*\{[^{}]*?--penguin-skin\s*:\s*gr[ae]y\s*;[^{}]*?\
 ```html
 <style>
   .penguin {
-    /* Only change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
 
-    /* Only change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
     position: relative;
     margin: auto;
     display: block;

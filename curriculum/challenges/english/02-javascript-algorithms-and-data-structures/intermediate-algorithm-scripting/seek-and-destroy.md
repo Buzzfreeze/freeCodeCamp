@@ -8,7 +8,7 @@ dashedName: seek-and-destroy
 
 # --description--
 
-ให้เขียนฟังก์ชัน `destroyer` ที่รับ argument แรกเป็น array แล้วตามด้วย argument อื่นๆ 
+ให้เขียนฟังก์ชัน `destroyer` ที่รับ argument แรกเป็น array แล้วตามด้วย argument อื่นๆ  
 ฟังก์ชันนี้จะทำงานโดยทำการลบ element ทั้งหมดที่มีค่าเหมือนกับ argument อื่นๆ ออกจาก array ที่เป็น argument แรก 
 
 **หมายเหตุ:** คุณต้องใช้ object `arguments`

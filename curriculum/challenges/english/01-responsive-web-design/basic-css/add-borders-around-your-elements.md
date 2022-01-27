@@ -2,16 +2,17 @@
 id: bad87fee1348bd9bedf08813
 title: Add Borders Around Your Elements
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/c2MvnHZ'
+videoUrl: "https://scrimba.com/c/c2MvnHZ"
 forumTopicId: 16630
 dashedName: add-borders-around-your-elements
 ---
 
 # --description--
 
-CSS border มีคุณสมบัติเหมือนกับ `style`, `color` และ `width`
+CSS สามารถสร้างกรอบของ element ได้ด้วย ซึ่งจะมี property `style`, `color` และ `width` เหมือนกัน
 
-ยกตัวอย่างเช่น ถ้าเราต้องการสร้างกรอบสีแดงขนาด 5 pixel รอบ HTML element เราสามารถใช้ class นี้ได้:
+เช่น ถ้าเราต้องการสร้างกรอบสีแดงหนา 5 pixel รอบ HTML element
+เราจะใช้คลาสนี้ได้:
 
 ```html
 <style>
@@ -25,12 +26,12 @@ CSS border มีคุณสมบัติเหมือนกับ `style`,
 
 # --instructions--
 
-จงสร้าง class ที่ชื่อ `thick-green-border`
-คลาสนี้จะเพิ่มขอบสีเขียวขนาด 10px รอบ HTML element
-จงใส่ class ให้กับรูปแมวของคุณ
+ให้สร้างคลาสที่ชื่อ `thick-green-border`
+โดยคลาสนี้จะเพิ่มขอบสีเขียวหนา 10px รอบ HTML element
+และใส่คลาสนี้ให้กับรูปแมวของคุณ
 
-จงจำไว้ว่าคุณสามารถใส่ class หลาย ๆ อันให้กับ element โดยใช้ `class` attribute, โดยการแยกชื่อของแต่ละคลาสด้วยช่องว่าง
-ยกตัวอย่างเช่น:
+คุณจะทำให้ element หนึ่งตัวมีหลายคลาสได้โดยใช้ `class` attribute โดยคุณจะต้องแบ่งชื่อของคลาสด้วยเว้นวรรค
+เช่น:
 
 ```html
 <img class="class1 class2" />
@@ -38,38 +39,38 @@ CSS border มีคุณสมบัติเหมือนกับ `style`,
 
 # --hints--
 
-`img` element ควรมีคลาสที่ชื่อ `smaller-image`.
+`img` element ต้องมีคลาสที่ชื่อ `smaller-image`
 
 ```js
-assert($('img').hasClass('smaller-image'));
+assert($("img").hasClass("smaller-image"));
 ```
 
-`img` element ควรมีคลาสที่ชื่อ `thick-green-border`.
+`img` element ต้องมีคลาสที่ชื่อ `thick-green-border`.
 
 ```js
-assert($('img').hasClass('thick-green-border'));
+assert($("img").hasClass("thick-green-border"));
 ```
 
-ภายของคุณควรมีขอบที่กว้างขนาด `10px`.
+กรอบของรูปภาพคุณต้องมีความหนาเป็น `10px`
 
 ```js
 assert(
-  $('img').hasClass('thick-green-border') &&
-    parseInt($('img').css('border-top-width'), 10) >= 8 &&
-    parseInt($('img').css('border-top-width'), 10) <= 12,
+  $("img").hasClass("thick-green-border") &&
+    parseInt($("img").css("border-top-width"), 10) >= 8 &&
+    parseInt($("img").css("border-top-width"), 10) <= 12
 );
 ```
 
-ภาพของคุณควรมีสไตล์ของขอบเป็น `solid`.
+กรอบของภาพต้องใช้ `border-style` เป็น `solid`
 
 ```js
-assert($('img').css('border-right-style') === 'solid');
+assert($("img").css("border-right-style") === "solid");
 ```
 
-ขอบที่อยู่รอบ `img` element ควรมีสีเขียว
+`border-color` ของ `img` element ต้องเป็น `green`
 
 ```js
-assert($('img').css('border-left-color') === 'rgb(0, 128, 0)');
+assert($("img").css("border-left-color") === "rgb(0, 128, 0)");
 ```
 
 # --seed--
@@ -77,7 +78,11 @@ assert($('img').css('border-left-color') === 'rgb(0, 128, 0)');
 ## --seed-contents--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   .red-text {
     color: red;
@@ -138,7 +143,11 @@ assert($('img').css('border-left-color') === 'rgb(0, 128, 0)');
 # --solutions--
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
 <style>
   .red-text {
     color: red;

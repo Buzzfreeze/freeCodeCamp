@@ -22,13 +22,13 @@ gPhrase.match(goRegex);
 oPhrase.match(goRegex);
 ```
 
-การเรียก `match` ทั้ง 3 ครั้ง จะได้ค่าเป็น `["goooooooo"]`, `["g"]` และ `null` ตามลำดับ
+การเรียก `match` ทั้ง 3 ครั้ง จะได้ค่าเป็น `["goooooooo"]`, `["g"]` และ `null` ตามลำดับ  
 จะเห็นว่า regex จะ match ทั้งข้อความที่ไม่เจอ `o` (`"g"`) และข้อความที่เจอ `o` (`"goooooooo"`)
 
 # --instructions--
 
-คราวนี้เรากำหนดให้ตัวแปร `chewieQuote` มีค่าเริ่มต้นเป็น string `Aaaaaaaaaaaaaaaarrrgh!` (คุณจะไม่เห็นโค้ดนี้) 
-ให้สร้าง regex `chewieRegex` ที่ใช้ `*` เพื่อ match ข้อความที่มี `A` ที่ตามด้วย `a` จำนวนกี่ตัวก็ได้ (0 ตัวก็ได้) จาก `chewieQuote` 
+คราวนี้เรากำหนดให้ตัวแปร `chewieQuote` มีค่าเริ่มต้นเป็น string `Aaaaaaaaaaaaaaaarrrgh!` (คุณจะไม่เห็นโค้ดนี้)  
+ให้สร้าง regex `chewieRegex` ที่ใช้ `*` เพื่อ match ข้อความที่มี `A` ที่ตามด้วย `a` จำนวนกี่ตัวก็ได้ (0 ตัวก็ได้) จาก `chewieQuote`  
 regex นี้ไม่ต้องใช้ flag หรือ character class และต้องไม่ match กับ string อื่นๆ ด้วย
 
 # --hints--

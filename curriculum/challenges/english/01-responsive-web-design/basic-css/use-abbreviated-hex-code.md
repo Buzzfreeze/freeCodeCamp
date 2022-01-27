@@ -2,73 +2,73 @@
 id: bad87fee1348bd9aedf08719
 title: Use Abbreviated Hex Code
 challengeType: 0
-videoUrl: 'https://scrimba.com/c/cRkpKAm'
+videoUrl: "https://scrimba.com/c/cRkpKAm"
 forumTopicId: 18338
 dashedName: use-abbreviated-hex-code
 ---
 
 # --description--
 
-หลายคนรู้สึกตกใจกับจำนวนสีที่มากกว่า 16 ล้านสี
-และมันก็ยากที่เราจะจำรหัสสีพวกนั้นได้ทั้งหมด
-แต่โชคดีที่เราสามารถลดปริมาณของมันได้ โดยการย่อรหัส hex code
+หลายคนจะรู้สึกตกใจกับจำนวนสีที่มากกว่า 16 ล้านสี
+และการจำ hex code ที่ยาวถึง 6 หลักก็อาจจะยาก
+แต่ก็โชคดีที่เราสามารถย่อรหัส hex code ได้
 
-ยกตัวอย่างเช่น, hex code ของสีแดงคือ `#FF0000` เราสามารถย่อให้มันเป็น `#F00` ได้
-รูปย่อของรหัส hex code จะให้หลักหนึ่งแทนสีแดง หลักที่สองแทนสีเขียว และหลักที่สามแทนสีน้ำเงิน
+เช่น hex code ของสีแดงคือ `#FF0000` ซึ่งเราสามารถย่อให้เป็น `#F00` ได้
+รูปย่อของรหัส hex code จะให้หลักแรกแทนสีแดง หลักที่สองแทนสีเขียว และหลักที่สามแทนสีน้ำเงิน
 
-มันจะช่วยลดจำนวนของสีที่เป็นไปได้ทั้งหมดให้อยู่ที่ประมาณ 4000 สี แต่ browser จะยังแปลงให้ `#FF0000` และ `#F00` เป็นสีเดียวกัน
+ซึ่งจะทำให้สร้างสีได้ทั้งหมดประมาณ 4000 สี แต่เบราว์เซอร์ก็จะอ่านค่านี้และแปลงค่าให้ จึงทำให้ `#FF0000` และ `#F00` เป็นสีเดียวกัน
 
 # --instructions--
 
-เชิญลองใช้ hex code แบบย่อเพื่อลงสี element ให้ถูกต้อง
+ให้ลองใช้ hex code แบบย่อเพื่อเปลี่ยนสี element ให้ถูกต้อง
 
 <table class='table table-striped'><tbody><tr><th>Color</th><th>Short Hex Code</th></tr><tr><td>Cyan</td><td><code>#0FF</code></td></tr><tr><td>Green</td><td><code>#0F0</code></td></tr><tr><td>Red</td><td><code>#F00</code></td></tr><tr><td>Fuchsia</td><td><code>#F0F</code></td></tr></tbody></table>
 
 # --hints--
 
-`h1` element ที่มีข้อความว่า `I am red!` ควรมี `color` เป็นสีแดง
+`h1` ที่มีข้อความเป็น `I am red!` ต้องมี `color` เป็นสีแดง
 
 ```js
-assert($('.red-text').css('color') === 'rgb(255, 0, 0)');
+assert($(".red-text").css("color") === "rgb(255, 0, 0)");
 ```
 
-`hex code` สำหรับสีแดงที่ถูกย่อควรจะถูกใช้แทน hex code `#FF0000`.
+ต้องใช้ `hex code #FF0000` แทนคำว่า `red`
 
 ```js
 assert(code.match(/\.red-text\s*?{\s*?color\s*:\s*?#F00\s*?;?\s*?}/gi));
 ```
 
-`h1` element ที่มาพร้อมกับข้อความ `I am green!` ควรจะถูกกำหนดให้มี `color` เป็นสีเขียน
+`h1` ที่มีข้อความเป็น `I am green!` ต้องมี `color` เป็นสีเขียว
 
 ```js
-assert($('.green-text').css('color') === 'rgb(0, 255, 0)');
+assert($(".green-text").css("color") === "rgb(0, 255, 0)");
 ```
 
-`hex code` สำหรับสีเขียวที่ถูกย่อควรจะถูกใช้แทน hex code `#00FF00`.
+ต้องใช้ `hex code #00FF00` แทนคำว่า `green`
 
 ```js
 assert(code.match(/\.green-text\s*?{\s*?color\s*:\s*?#0F0\s*?;?\s*?}/gi));
 ```
 
-`h1` element ที่มาพร้อมกับข้อความ  `I am cyan!` ควรจะถูกกำหนดให้มี `color` เป็นสี cyan
+`h1` ที่มีข้อความเป็น `I am cyan!` ต้องมี `color` เป็นสี cyan
 
 ```js
-assert($('.cyan-text').css('color') === 'rgb(0, 255, 255)');
+assert($(".cyan-text").css("color") === "rgb(0, 255, 255)");
 ```
 
-`hex code` สำหรับสี cyan ที่ถูกย่อควรจะถูกใช้แทน hex code `#00FFFF`.
+ต้องใช้ `hex code #00FFFF` แทนคำว่า `cyan`
 
 ```js
 assert(code.match(/\.cyan-text\s*?{\s*?color\s*:\s*?#0FF\s*?;?\s*?}/gi));
 ```
 
-`h1` element ที่มาพร้อมกับข้อความ `I am fuchsia!` ควรจะถูกกำหนดให้มี `color` เป็นสี fuchsia
+`h1` ที่มีข้อความเป็น `I am fuchsia!` ต้องมี `color` เป็นสี fuchsia
 
 ```js
-assert($('.fuchsia-text').css('color') === 'rgb(255, 0, 255)');
+assert($(".fuchsia-text").css("color") === "rgb(255, 0, 255)");
 ```
 
-`hex code` สำหรับสี fuchsia ที่ถูกย่อควรจะถูกใช้แทน hex code `#FF00FF`.
+ต้องใช้ `hex code #FF00FF` แทนคำว่า `fuchsia`
 
 ```js
 assert(code.match(/\.fuchsia-text\s*?{\s*?color\s*:\s*?#F0F\s*?;?\s*?}/gi));
@@ -108,16 +108,16 @@ assert(code.match(/\.fuchsia-text\s*?{\s*?color\s*:\s*?#F0F\s*?;?\s*?}/gi));
 ```html
 <style>
   .red-text {
-    color: #F00;
+    color: #f00;
   }
   .fuchsia-text {
-    color: #F0F;
+    color: #f0f;
   }
   .cyan-text {
-    color: #0FF;
+    color: #0ff;
   }
   .green-text {
-    color: #0F0;
+    color: #0f0;
   }
 </style>
 

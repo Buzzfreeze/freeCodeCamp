@@ -19,7 +19,7 @@ let duck = new Bird();
 duck.constructor
 ```
 
-แต่ `duck` และ instances อื่นๆ ของ `Bird` ควรแสดงให้เห็นว่าถูกสร้างมาจาก `Bird` ไม่ใช่ `Animal` 
+แต่ `duck` และ instances อื่นๆ ของ `Bird` ควรแสดงให้เห็นว่าถูกสร้างมาจาก `Bird` ไม่ใช่ `Animal`  
 ซึ่งเราจะแก้ constructor property ของ `Bird` โดยเปลี่ยนให้เป็น object `Bird` ได้ ตามตัวอย่างด้านล่าง:
 
 ```js

@@ -2,34 +2,39 @@
 id: 5a90374338fddaf9a66b5d3a
 title: Align an Item Horizontally using justify-self
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pByETK/cJbpKHq'
+videoUrl: "https://scrimba.com/p/pByETK/cJbpKHq"
 forumTopicId: 301122
 dashedName: align-an-item-horizontally-using-justify-self
 ---
 
 # --description--
 
-ใน CSS Grid, เนื้อหาสำหรับแต่ละจะอยู่ในกล่องที่ถูกเรียกว่า <dfn>cell</dfn>
-คุณสามารถจัดเรียงตำแหน่งของเนื้อหาภายใน cell ของมันในแนวนอนได้โดยการใช้ `justify-self` property กับ grid item
-โดยค่าเริ่มต้น property นี้มีค่าเป็น `stretch`, โดยจะทำให้เนื้อหากระจายเต็มความกว้างของ cell
-CSS Grid property อันนี้รับค่าอื่นด้วยเช่นกัน:
+ใน CSS Grid เนื้อหาของแต่ละ item จะอยู่ในกล่องที่ถูกเรียกว่า <dfn>cell</dfn>
 
-`start`: aligns the content at the left of the cell,
+คุณสามารถจัดเรียงตำแหน่งในแนวนอนของเนื้อหาภายใน cell ได้โดยใช้ property `justify-self` กับ grid item
 
-`center`: aligns the content in the center of the cell,
+โดยค่าเริ่มต้นของ property จะเป็น `stretch` ซึ่งจะทำให้เนื้อหายืดเต็ม cell
 
-`end`: aligns the content at the right of the cell.
+property นี้จะรับค่าได้ดังนี้:
+
+`start`: เรียงเนื้อหาไว้ทางซ้ายของ cell
+
+`center`: เรียงเนื้อหาไว้ตรงกลาง cell
+
+`end`: เรียงเนื้อหาไว้ทางขวาของ cell
 
 # --instructions--
 
-จงใช้ `justify-self` property เพื่อจัดให้ item ที่มีคลาส `item2` อยู่ตรงกลาง
+ให้ใช้ property `justify-self` เพื่อจัดให้ item ที่มีคลาสเป็น `item2` อยู่ตรงกลาง
 
 # --hints--
 
-`item2` class ควรมี `justify-self` property อันหนึ่งที่มีค่าเป็น `center`
+คลาส `item2` ต้องมีค่าของ property `justify-self` เป็น `center`
 
 ```js
-assert(code.match(/.item2\s*?{[\s\S]*justify-self\s*?:\s*?center\s*?;[\s\S]*}/gi));
+assert(
+  code.match(/.item2\s*?{[\s\S]*justify-self\s*?:\s*?center\s*?;[\s\S]*}/gi)
+);
 ```
 
 # --seed--
@@ -44,9 +49,9 @@ assert(code.match(/.item2\s*?{[\s\S]*justify-self\s*?:\s*?center\s*?;[\s\S]*}/gi
 
   .item2 {
     background: LightSalmon;
-    /* Only change code below this line */
+    /* แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น */
 
-    /* Only change code above this line */
+    /* แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น */
   }
 
   .item3 {
