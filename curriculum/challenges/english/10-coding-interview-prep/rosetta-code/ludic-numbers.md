@@ -9,91 +9,91 @@ dashedName: ludic-numbers
 # --description--
 
 [Ludic numbers](https://oeis.org/wiki/Ludic_numbers) 
-เกี่ยวข้องกับจำนวนเฉพาะเนื่องจากถูกสร้างขึ้นโดย [Sieve of Eratosthenes](https://rosettacode.org/wiki/Sieve_of_Eratosthenes) ใช้ในการสร้างจำนวนเฉพาะ
+เกี่ยวข้องกับจำนวนเฉพาะเพราะว่าถูกสร้างขึ้นคล้ายๆกับ [Sieve of Eratosthenes](https://rosettacode.org/wiki/Sieve_of_Eratosthenes) ที่ใช้ในการสร้างจำนวนเฉพาะ
 
-ludic number ตัวแรกเป็น 1.
+ludic number ตัวแรกเป็น 1
 
-ในการสร้างตัวเลขlucid numberให้สร้างarrayของจำนวนเต็มที่เพิ่มขึ้นโดยเริ่มจาก2.
+ในการสร้าง lucud number ให้สร้าง array ของจำนวนเต็มที่เพิ่มขึ้นโดยเริ่มจาก2
 
 <code style='margin-left: 2em;'><span style='color:blue;font-weight:bold'>2</span> 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 ...</code>
 
 (Loop)
 
 <ul>
-  <li>Take the first member of the resultant array as the next ludic number <span style='color:blue;font-weight:bold'>2</span>.</li>
-  <li>Remove every <strong>2<sup>nd</sup></strong> indexed item from the array (including the first).</li>
+  <li>นำเลขตัวแรกของ array ผลลัพธ์ไปใช้เป็น lucid number ตัวต่อไป <span style='color:blue;font-weight:bold'>2</span></li>
+  <li>ลบเลขทุก <strong>2</strong> เลขออกจาก array (รวมถึงตัวแรกด้วย)</li>
   <code style='margin-left: 2em;'><span style='color:blue;font-weight:bold;'><s>2</s></span> 3 <s>4</s> 5 <s>6</s> 7 <s>8</s> 9 <s>10</s> 11 <s>12</s> 13 <s>14</s> 15 <s>16</s> 17 <s>18</s> 19 <s>20</s> 21 <s>22</s> 23 <s>24</s> 25 <s>26</s> ...</code>
 </ul>
 
 <ul>
   <li>(Unrolling a few loops...)</li>
-  <li>Take the first member of the resultant array as the next ludic number <span style='color:blue;font-weight:bold'>3</span>.</li>
-  <li>Remove every <strong>3<sup>rd</sup></strong> indexed item from the array (including the first).</li>
+  <li>นำเลขตัวแรกของ array ผลลัพธ์ไปใช้เป็น lucid number ตัวต่อไป <span style='color:blue;font-weight:bold'>3</span></li>
+  <li>ลบเลขทุก <strong>3</strong> เลขออกจาก array (รวมถึงตัวแรกด้วย)</li>
   <code style='margin-left: 2em;'><span style='color:blue;font-weight:bold'><s>3</s></span> 5 7 <s>9</s> 11 13 <s>15</s> 17 19 <s>21</s> 23 25 <s>27</s> 29 31 <s>33</s> 35 37 <s>39</s> 41 43 <s>45</s> 47 49 <s>51</s> ...</code>
 </ul>
 
 <ul>
-  <li>Take the first member of the resultant array as the next ludic number <span style='color:blue;font-weight:bold'>5</span>.</li>
-  <li>Remove every <strong>5<sup>th</sup></strong> indexed item from the array (including the first).</li>
+  <li>นำเลขตัวแรกของ array ผลลัพธ์ไปใช้เป็น lucid number ตัวต่อไป <span style='color:blue;font-weight:bold'>5</span></li>
+  <li>ลบเลขทุก <strong>5</strong> เลขออกจาก array (รวมถึงตัวแรกด้วย)</li>
   <code style='margin-left: 2em;'><span style='color:blue;font-weight:bold'><s>5</s></span> 7 11 13 17 <s>19</s> 23 25 29 31 <s>35</s> 37 41 43 47 <s>49</s> 53 55 59 61 <s>65</s> 67 71 73 77 ...</code>
 </ul>
 
 <ul>
-  <li>Take the first member of the resultant array as the next ludic number <span style='color:blue;font-weight:bold'>7</span>.</li>
-  <li>Remove every <strong>7<sup>th</sup></strong> indexed item from the array (including the first).</li>
+  <li>นำเลขตัวแรกของ array ผลลัพธ์ไปใช้เป็น lucid number ตัวต่อไป <span style='color:blue;font-weight:bold'>7</span></li>
+  <li>ลบเลขทุก <strong>7</strong> เลขออกจาก array (รวมถึงตัวแรกด้วย)</li>
   <code style='margin-left: 2em;'><span style='color:blue;font-weight:bold'><s>7</s></span> 11 13 17 23 25 29 <s>31</s> 37 41 43 47 53 55 <s>59</s> 61 67 71 73 77 83 <s>85</s> 89 91 97 ...</code>
 </ul>
 
 <ul>
   <li><big><b> ... </b></big></li>
-  <li>Take the first member of the current array as the next ludic number <span style='color:blue;font-weight:bold'>L</span>.</li>
-  <li>Remove every <strong>L<sup>th</sup></strong> indexed item from the array (including the first).</li>
+  <li>นำเลขตัวแรกของ array ผลลัพธ์ไปใช้เป็น lucid number <span style='color:blue;font-weight:bold'>L</span></li>
+  <li>ลบเลขทุก <strong>L</strong> เลขออกจาก array (รวมถึงตัวแรกด้วย)</li>
   <li><big><b> ... </b></big></li>
 </ul>
 
 # --instructions--
 
-เขียนฟังก์ชันที่ส่งคืนตัวเลขlucid numberทั้งหมดที่น้อยกว่าหรือเท่ากับจำนวนที่กำหนด
+ให้เขียนฟังก์ชันที่คืนค่า lucid number ทั้งหมดที่น้อยกว่าหรือเท่ากับจำนวนที่กำหนด
 
 # --hints--
 
-`ludic` ควรเป็น function.
+`ludic` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof ludic === 'function', '<code>ludic</code> ควร be a function.');
 ```
 
-`ludic(2)` ควร return array.
+`ludic(2)` ต้องคืนค่าเป็น array
 
 ```js
 assert(Array.isArray(ludic(2)));
 ```
 
-`ludic(2)` ควร return `[1, 2]`.
+`ludic(2)` ต้องคืนค่าเป็น `[1, 2]`
 
 ```js
 assert.deepEqual(ludic(2), [1, 2]);
 ```
 
-`ludic(3)` ควร return `[1, 2, 3]`.
+`ludic(3)` ต้องคืนค่าเป็น `[1, 2, 3]`
 
 ```js
 assert.deepEqual(ludic(3), [1, 2, 3]);
 ```
 
-`ludic(5)` ควร return `[1, 2, 3, 5]`.
+`ludic(5)` ต้องคืนค่าเป็น `[1, 2, 3, 5]`
 
 ```js
 assert.deepEqual(ludic(5), [1, 2, 3, 5]);
 ```
 
-`ludic(20)` ควร return `[1, 2, 3, 5, 7, 11, 13, 17]`.
+`ludic(20)` ต้องคืนค่าเป็น `[1, 2, 3, 5, 7, 11, 13, 17]`
 
 ```js
 assert.deepEqual(ludic(20), [1, 2, 3, 5, 7, 11, 13, 17]);
 ```
 
-`ludic(26)` ควร return `[1, 2, 3, 5, 7, 11, 13, 17, 23, 25]`.
+`ludic(26)` ต้องคืนค่าเป็น `[1, 2, 3, 5, 7, 11, 13, 17, 23, 25]`
 
 ```js
 assert.deepEqual(ludic(26), [1, 2, 3, 5, 7, 11, 13, 17, 23, 25]);

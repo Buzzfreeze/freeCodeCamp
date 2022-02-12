@@ -8,11 +8,11 @@ dashedName: problem-57-square-root-convergents
 
 # --description--
 
-แสดง square root ของ two สามารถอธิบาย infinite continued fraction.
+เราสามารถแสดงรูทของสองเป็นเศษส่วนต่อเนื่องได้
 
 <div style='text-align: center;'>$\sqrt 2 =1+ \frac 1 {2+ \frac 1 {2 +\frac 1 {2+ \dots}}}$</div>
 
-4 iterations แรก:
+โดยการวนสี่ครั้งแรกจะเป็น:
 
 $1 + \\frac 1 2 = \\frac 32 = 1.5$
 
@@ -22,31 +22,31 @@ $1 + \\frac 1 {2 + \\frac 1 {2+\\frac 1 2}} = \\frac {17}{12} = 1.41666 \\dots$
 
 $1 + \\frac 1 {2 + \\frac 1 {2+\\frac 1 {2+\\frac 1 2}}} = \\frac {41}{29} = 1.41379 \\dots$
 
-expansions ที่ 3 คือ $\\frac {99}{70}$, $\\frac {239}{169}$, และ $\\frac {577}{408}$, แต่ expansion ที่ 8, $\\frac {1393}{985}$คือตัวอย่างแรกที่มีจำนวนของ digits ใน numerator eมากกว่าจำนวนของ digits ใน denominator
+อีก 3 ครั้งถัดไปจะเป็น $\\frac {99}{70}$, $\\frac {239}{169}$, และ $\\frac {577}{408}$, แต่ในครั้งที่ 8 จะเป็น $\\frac {1393}{985}$ ซึ่งเป็นครั้งแรกที่ตัวเลขในตัวเศษมีหลักมากกว่าตัวเลขในตัวส่วน
 
-ใน `n` expansions มีเศษส่วนกี่ตัวที่มี numerator ที่มี digits มากกว่า denominator?
+ให้หาว่าในครั้งที่ `n` มีกี่ครั้งที่ตัวเลขในตัวเศษมีหลักมากกว่าตัวเลขในตัวส่วน
 
 # --hints--
 
-`squareRootConvergents(10)` ควร return number.
+`squareRootConvergents(10)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof squareRootConvergents(10) === 'number');
 ```
 
-`squareRootConvergents(10)` ควร return 1.
+`squareRootConvergents(10)` ต้องคืนค่าเป็น 1
 
 ```js
 assert.strictEqual(squareRootConvergents(10), 1);
 ```
 
-`squareRootConvergents(100)` ควร return 15.
+`squareRootConvergents(100)` ต้องคืนค่าเป็น 15
 
 ```js
 assert.strictEqual(squareRootConvergents(100), 15);
 ```
 
-`squareRootConvergents(1000)` ควร return 153.
+`squareRootConvergents(1000)` ต้องคืนค่าเป็น 153
 
 ```js
 assert.strictEqual(squareRootConvergents(1000), 153);

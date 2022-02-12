@@ -8,19 +8,16 @@ dashedName: fibonacci-n-step-number-sequences
 
 # --description--
 
-อนุกรมตัวเลขเหล่านี้เป็นการขยายความธรรมดา [Fibonacci sequence](<https://rosettacode.org/wiki/Fibonacci sequence> "Fibonacci sequence") ดังเช่น:
+อนุกรมตัวเลขเหล่านี้เป็นการใช้ [Fibonacci sequence](<https://rosettacode.org/wiki/Fibonacci sequence> "Fibonacci sequence") ที่:
 
 <ol>
-  <li>For $n = 2$ we have the Fibonacci sequence; with initial values $[1, 1]$ and $F_k^2 = F_{k-1}^2 + F_{k-2}^2$</li>
-  <li>For $n = 3$ we have the tribonacci sequence; with initial values $[1, 1, 2]$ and $F_k^3 = F_{k-1}^3 + F_{k-2}^3 + F_{k-3}^3$</li>
-  <li>For $n = 4$ we have the tetranacci sequence; with initial values $[1, 1, 2, 4]$ and $F_k^4 = F_{k-1}^4 + F_{k-2}^4 + F_{k-3}^4 + F_{k-4}^4$...</li>
-  <li>For general $n>2$ we have the Fibonacci $n$-step sequence - $F_k^n$; with initial values of the first $n$ values of the $(n-1)$'th Fibonacci $n$-step sequence $F_k^{n-1}$; and $k$'th value of this $n$'th sequence being $F_k^n = \sum_{i=1}^{(n)} {F_{k-i}^{(n)}}$</li>
+  <li>ถ้า $n = 2$ เราจะมี Fibonacci sequence ที่มีค่าเริ่มต้นเป็น $[1, 1]$ และ $F_k^2 = F_{k-1}^2 + F_{k-2}^2$</li>
+  <li>ถ้า $n = 3$ เราจะมี tribonacci sequence ที่มีค่าเริ่มต้นเป็น $[1, 1, 2]$ และ $F_k^3 = F_{k-1}^3 + F_{k-2}^3 + F_{k-3}^3$</li>
+  <li>ถ้า $n = 4$ เราจะมี tetranacci sequence ที่มีค่าเริ่มต้นเป็น $[1, 1, 2, 4]$ และ $F_k^4 = F_{k-1}^4 + F_{k-2}^4 + F_{k-3}^4 + F_{k-4}^4$...</li>
+  <li>ถ้า $n>2$ เราจะมี Fibonacci $n$-step sequence - $F_k^n$ ที่มีค่าเริ่มต้นของ $n$ ค่าแรกของค่าที่ $(n-1)$ ของ Fibonacci $n$-step sequence เป็น $F_k^{n-1}$; และค่าที่ $k$ ของค่าที่ $n$ ของ sequence เป็น $F_k^n = \sum_{i=1}^{(n)} {F_{k-i}^{(n)}}$</li>
 </ol>
 
-ค่าที่น้อยของ $n$, [Greek numeric prefixes](<https://en.wikipedia.org/wiki/Number prefix#Greek_series> "wp: Number prefix#Greek_series") 
-บางครั้งใช้เรียกชื่อแต่ละชุดแยกกัน
-
-Fibonacci $n$-step sequences:
+Fibonacci $n$-step sequence:
 
 | $n$ | Series name | Values                                                 |
 | --- | ----------- | ------------------------------------------------------ |
@@ -34,56 +31,56 @@ Fibonacci $n$-step sequences:
 | 9   | nonanacci   | 1 1 2 4 8 16 32 64 128 256 511 1021 2040 4076 8144 ... |
 | 10  | decanacci   | 1 1 2 4 8 16 32 64 128 256 512 1023 2045 4088 8172 ... |
 
-Allied sequences can be generated where the initial values are changed: The [Lucas series](<https://en.wikipedia.org/wiki/Lucas number> "wp: Lucas number") sums the two preceding values like the fibonacci series for $n=2$ but uses $\[2, 1]$ as its initial values.
+ซึ่งเราจะสร้าง sequence แบบอื่นได้ถ้าเปลี่ยนค่าเริ่มต้น โดย [Lucas series](<https://en.wikipedia.org/wiki/Lucas number> "wp: Lucas number") จะบวกสองค่าแรกเหมือนกับ fibonacci series โดยใช้ $n=2$ แต่จะใช้ $\[2, 1]$ เป็นค่าเริ่มต้นแทน
 
 # --instructions--
-เขียนฟังก์ชันเพื่อสร้างลำดับเลขFibonacci $n$-ขั้นตอนและลำดับLucas พารามิเตอร์แรกจะเป็น $n$ พารามิเตอร์ที่สองจะเป็นจำนวนขององค์ประกอบที่จะreturn พารามิเตอร์ที่สามจะระบุว่าจะส่งออกลำดับFibonacciหรือลำดับLucas หากพารามิเตอร์คือ `"f"` ให้returnลำดับFibonacci และหากเป็น `"l"` ให้returnลำดับLucas ลำดับจะต้องreturnเป็นarray
+ให้เขียนฟังก์ชันเพื่อสร้างลำดับเลข Fibonacci จำนวน $n$ ตัว และสร้างลำดับ Lucas ด้วย โดยรับพารามิเตอร์แรกเป็น $n$ พารามิเตอร์ที่สองเป็นจำนวนของ element ที่จะคืนค่าออกมา พารามิเตอร์ที่สามจะระบุว่าจะคืนค่าเป็นลำดับ Fibonacci หรือลำดับ Lucas ถ้าเป็น `"f"` ให้คืนค่าเป็นลำดับ Fibonacci และหากเป็น `"l"` ให้คืนค่าเป็นลำดับ Lucas โดยลำดับจะต้องคืนค่าเป็นเป็น array
 
 # --hints--
 
-`fib_luc` ควรเป็น function.
+`fib_luc` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof fib_luc === 'function');
 ```
 
-`fib_luc(2,10,"f")` ควร return `[1,1,2,3,5,8,13,21,34,55]`.
+`fib_luc(2,10,"f")` ต้องคืนค่าเป็น `[1,1,2,3,5,8,13,21,34,55]`
 
 ```js
 assert.deepEqual(fib_luc(2, 10, 'f'), ans[0]);
 ```
 
-`fib_luc(3,15,"f")` ควร return `[1,1,2,4,7,13,24,44,81,149,274,504,927,1705,3136]`.
+`fib_luc(3,15,"f")` ต้องคืนค่าเป็น `[1,1,2,4,7,13,24,44,81,149,274,504,927,1705,3136]`
 
 ```js
 assert.deepEqual(fib_luc(3, 15, 'f'), ans[1]);
 ```
 
-`fib_luc(4,15,"f")` ควร return `[1,1,2,4,8,15,29,56,108,208,401,773,1490,2872,5536]`.
+`fib_luc(4,15,"f")` ต้องคืนค่าเป็น `[1,1,2,4,8,15,29,56,108,208,401,773,1490,2872,5536]`
 
 ```js
 assert.deepEqual(fib_luc(4, 15, 'f'), ans[2]);
 ```
 
-`fib_luc(2,10,"l")` ควร return `[ 2, 1, 3, 4, 7, 11, 18, 29, 47, 76]`.
+`fib_luc(2,10,"l")` ต้องคืนค่าเป็น `[ 2, 1, 3, 4, 7, 11, 18, 29, 47, 76]`
 
 ```js
 assert.deepEqual(fib_luc(2, 10, 'l'), ans[3]);
 ```
 
-`fib_luc(3,15,"l")` ควร return `[ 2, 1, 3, 6, 10, 19, 35, 64, 118, 217, 399, 734, 1350, 2483, 4567 ]`.
+`fib_luc(3,15,"l")` ต้องคืนค่าเป็น `[ 2, 1, 3, 6, 10, 19, 35, 64, 118, 217, 399, 734, 1350, 2483, 4567 ]`
 
 ```js
 assert.deepEqual(fib_luc(3, 15, 'l'), ans[4]);
 ```
 
-`fib_luc(4,15,"l")` ควร return `[ 2, 1, 3, 6, 12, 22, 43, 83, 160, 308, 594, 1145, 2207, 4254, 8200 ]`.
+`fib_luc(4,15,"l")` ต้องคืนค่าเป็น `[ 2, 1, 3, 6, 12, 22, 43, 83, 160, 308, 594, 1145, 2207, 4254, 8200 ]`
 
 ```js
 assert.deepEqual(fib_luc(4, 15, 'l'), ans[5]);
 ```
 
-`fib_luc(5,15,"l")` ควร return `[ 2, 1, 3, 6, 12, 24, 46, 91, 179, 352, 692, 1360, 2674, 5257, 10335 ]`.
+`fib_luc(5,15,"l")` ต้องคืนค่าเป็น `[ 2, 1, 3, 6, 12, 24, 46, 91, 179, 352, 692, 1360, 2674, 5257, 10335 ]`
 
 ```js
 assert.deepEqual(fib_luc(5, 15, 'l'), ans[6]);

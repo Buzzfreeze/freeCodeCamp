@@ -8,44 +8,46 @@ dashedName: deepcopy
 
 # --description--
 
-เขียนฟังก์ชันที่ returns deep copy ของ object ที่กำหนด deep copy ต้องไม่ใช่ object เดียวกันกับที่ได้รับ
+เขียนฟังก์ชันที่คืนค่าเป็น deep copy ของ object ที่กำหนด 
 
-งานนี้จะไม่ทดสอบเพื่อ:
+deep copy ต้องไม่ใช่ object เดียวกันกับที่ส่งเข้าไป
+
+เราจะไม่ test:
 
 <ul>
-  <li>Objects with properties that are functions</li>
-  <li>Date objects or object with properties that are Date objects</li>
-  <li>RegEx or object with properties that are RegEx objects</li>
-  <li>Prototype copying</li>
+  <li>object ที่มี property เป็น function</li>
+  <li>Date object หรือ property ที่เป็น Date object</li>
+  <li>RegEx หรือ property ที่เป็น RegEx object</li>
+  <li>Prototype</li>
 </ul>
 
 # --hints--
 
-`deepcopy` ควรเป็น function.
+`deepcopy` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof deepcopy === 'function');
 ```
 
-`deepcopy({test: "test"})` ควร return object.
+`deepcopy({test: "test"})` ต้องคืนค่าเป็น object
 
 ```js
 assert(typeof deepcopy(obj1) === 'object');
 ```
 
-`deepcopy` ไม่ควร return object เดียวกันกับที่ให้ไว้
+`deepcopy` ต้องคืนค่าเป็นคนละ object กับที่ส่งเข้าไป
 
 ```js
 assert(deepcopy(obj2) != obj2);
 ```
 
-เมื่อส่งผ่าน object ที่มี array `deepcopy` ควร return deep copy ของ object.
+เมื่อส่ง array ของ object เข้าไปใน `deepcopy` ต้องคืนค่าเป็น deep copy ของ object นั้น
 
 ```js
 assert.deepEqual(deepcopy(obj2), obj2);
 ```
 
-เมื่อส่งผ่าน object ที่มี object อื่นๆ `deepcopy`  ควร return deep copy ของ object.
+เมื่อส่ง object ที่ซ้อนกันเข้าไปใน `deepcopy` ต้องคืนค่าเป็น deep copy ของ object นั้น
 
 ```js
 assert.deepEqual(deepcopy(obj3), obj3);

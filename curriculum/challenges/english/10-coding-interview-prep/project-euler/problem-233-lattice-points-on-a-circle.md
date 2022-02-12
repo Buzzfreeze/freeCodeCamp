@@ -8,7 +8,7 @@ dashedName: problem-233-lattice-points-on-a-circle
 
 # --description--
 
-ห้ $f(N)$ เป็นจำนวนจุดที่มีพิกัดจำนวนเต็มบนวงกลมที่ผ่าน $(0,0)$, $(N,0)$,$(0,N)$ และ $(N) ,N)$.
+ให้ $f(N)$ เป็นจำนวนจุดที่มีพิกัดเป็นจำนวนเต็มบนวงกลมที่ผ่าน $(0,0)$, $(N,0)$,$(0,N)$ และ $(N) ,N)$
 
 จะได้ว่า $f(10000) = 36$
 
@@ -16,7 +16,7 @@ dashedName: problem-233-lattice-points-on-a-circle
 
 # --hints--
 
-`latticePointsOnACircle()` ควร return `271204031455541300`.
+`latticePointsOnACircle()` ต้องคืนค่าเป็น `271204031455541300`
 
 ```js
 assert.strictEqual(latticePointsOnACircle(), 271204031455541300);

@@ -8,17 +8,19 @@ dashedName: test-if-an-object-has-a-property
 
 # --description--
 
-project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
+project นี้สร้างขึ้นจาก [Replit ตัวนี้](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-`property` ยืนยันว่า object จริงมี property ที่กำหนด 
+`property` เป็นการตรวจสอบว่า object มี property ที่กำหนด 
  
 # --instructions--
 
-ภายใน `tests/1_unit-tests.js` ภายใต้การทดสอบที่มีป้ายกำกับ `#16' ในชุด `Objects` ให้เปลี่ยน `assert' แต่ละรายการเป็น `assert.property` หรือ `assert.notProperty` เพื่อให้ผ่านการทดสอบ (ควร ประเมินค่า `true`) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน
+ในไฟล์ `tests/1_unit-tests.js` ให้ดูที่ test ใต้ `#16` ใน suite ที่ชื่อ `Objects` 
+ให้เปลี่ยน `assert` เป็น `assert.property` หรือ `assert.notProperty` เพื่อทำให้ test ผ่าน (ได้ค่าเป็น `true`) 
+อย่าแก้ไข argument ที่ส่งเข้าไปใน assert
 
 # --hints--
 
-การทดสอบทั้งหมดควรผ่าน
+test ทั้งหมดต้องผ่าน
 
 ```js
 (getUserInput) =>
@@ -32,7 +34,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `property`  กับ `notProperty`.
+ต้องเลือกใช้ method `property` หรือ `notProperty` กับ assert ตัวแรกให้ถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -50,7 +52,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `property`  กับ `notProperty`.
+ต้องเลือกใช้ method `property` หรือ `notProperty` กับ assert ตัวที่สองให้ถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -68,7 +70,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สาม - `property`  กับ `notProperty`.
+ต้องเลือกใช้ method `property` หรือ `notProperty` กับ assert ตัวที่สามให้ถูกต้อง
 
 
 ```js

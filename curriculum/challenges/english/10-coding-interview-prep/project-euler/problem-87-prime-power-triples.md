@@ -8,7 +8,7 @@ dashedName: problem-87-prime-power-triples
 
 # --description--
 
-จำนวนที่น้อยที่สุดที่แสดงเป็นผลรวมของจำนวนเฉพาะกำลังสอง prime square, prime cube และกำลังสี่เฉพาะคือ `28` อันที่จริงมีตัวเลขสี่ตัวที่ต่ำกว่าห้าสิบที่สามารถแสดงในลักษณะดังกล่าวได้:
+จำนวนที่น้อยที่สุดที่แสดงเป็นผลรวมของ จำนวนเฉพาะกำลังสอง จำนวนเฉพาะกำลังสาม และจำนวนเฉพาะกำลังสี่ คือ `28` อันที่จริงมีตัวเลขสี่ตัวที่ต่ำกว่าห้าสิบที่สามารถแสดงในลักษณะดังกล่าวได้:
 
 <div style='margin-left: 4em;'>
   28 = 2<sup>2</sup> + 2<sup>3</sup> + 2<sup>4</sup><br>
@@ -17,41 +17,41 @@ dashedName: problem-87-prime-power-triples
   47 = 2<sup>2</sup> + 3<sup>3</sup> + 2<sup>4</sup>
 </div><br>
 
-จำนวนตัวเลขที่น้อยกว่า `n` สามารถแสดงเป็นผลรวมของจำนวนเฉพาะของจำนวนเฉพาะ เลขจำนวนเฉพาะ และกำลังสี่จำนวนเฉพาะ
+ให้หาจำนวนตัวเลขที่น้อยกว่า `n` ที่สามารถแสดงเป็นผลรวมของ จำนวนเฉพาะกำลังสอง จำนวนเฉพาะกำลังสาม และจำนวนเฉพาะกำลังสี่
 
 # --hints--
 
-`primePowerTriples(50)` ควร return  number.
+`primePowerTriples(50)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof primePowerTriples(50) === 'number');
 ```
 
-`primePowerTriples(50)` ควร return `4`.
+`primePowerTriples(50)` ต้องคืนค่าเป็น `4`
 
 ```js
 assert.strictEqual(primePowerTriples(50), 4);
 ```
 
-`primePowerTriples(10035)` ควร return `684`.
+`primePowerTriples(10035)` ต้องคืนค่าเป็น `684`
 
 ```js
 assert.strictEqual(primePowerTriples(10035), 684);
 ```
 
-`primePowerTriples(500000)` ควร return `18899`.
+`primePowerTriples(500000)` ต้องคืนค่าเป็น `18899`
 
 ```js
 assert.strictEqual(primePowerTriples(500000), 18899);
 ```
 
-`primePowerTriples(5000000)` ควร return `138932`.
+`primePowerTriples(5000000)` ต้องคืนค่าเป็น `138932`
 
 ```js
 assert.strictEqual(primePowerTriples(5000000), 138932);
 ```
 
-`primePowerTriples(50000000)` ควร return `1097343`.
+`primePowerTriples(50000000)` ต้องคืนค่าเป็น `1097343`
 
 ```js
 assert.strictEqual(primePowerTriples(50000000), 1097343);

@@ -8,17 +8,17 @@ dashedName: use-model-find-to-search-your-database
 
 # --description--
 
-ในการใช้งานที่ง่ายที่สุด, `Model.find()` ยอมรับ query (อ็อบเจ็กต์ JSON) เป็นอาร์กิวเมนต์แรก จากนั้นจึงเรียกกลับ และส่งคืนอาร์เรย์ที่แมทช์กัน นอกจากนี้ยังรองรับตัวเลือกการค้นหาที่หลากหลาย ซึ่งคุณสามารถอ่านเพิ่มเติมในเอกสาร
+ฟังก์ชัน `Model.find()` จะรับ query document (JSON object) เป็น argument แรกและ callback function เป็น argument ที่สอง 
+โดยฟังก์ชันนี้จะคืนค่าเป็น array ของ object ที่มีข้อมูลตรงกับเงื่อนไขที่เราระบุไปใน query document 
+โดย query document จะรองรับเงื่อนไขหลายรูปแบบมากๆ ให้ลองอ่าน [docs](http://mongoosejs.com/docs/guide.html) ดู เพื่อทำความเข้าใจเพิ่มเติม
 
 # --instructions--
 
-แก้ไขฟังก์ชัน `findPeopleByName` เพื่อค้นหาชื่อของบุคคลทุกคน โดยใช้โค้ด <code>Model.find() -\> [Person]</code>
-
-สามารถใช้ฟังก์ชันอาร์กิวเมนต์ `personName` เป็นคีย์ในการค้นหา
+ให้แก้ไขฟังก์ชัน `findPeopleByName` เพื่อดึงข้อมูลของคนที่มีชื่อตรงกับ `personName` ที่ฟังก์ชันรับเข้ามา โดยใช้ <code>Model.find() -\> [Person]</code>
 
 # --hints--
 
-สามารถค้นหารายการทั้งหมดที่สอดคล้องกับเกณฑ์ได้สำเร็จ
+ต้องหาคนที่มีชื่อตรงกับเงื่อนไขเจอ
 
 ```js
 (getUserInput) =>

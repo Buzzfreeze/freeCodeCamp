@@ -8,7 +8,7 @@ dashedName: problem-8-largest-product-in-a-series
 
 # --description--
 
-เลขสี่หลักที่อยู่ติดกัน (adjacent digits) ในเลขหลักพัน มีค่ามากที่สุดคือ 9 × 9 × 8 × 9 = 5832.
+เลขสี่หลักที่อยู่ติดกัน (adjacent digits) ในเลขหลักพัน มีค่ามากที่สุดคือ 9 × 9 × 8 × 9 = 5832
 
 <div style='text-align: center;'>73167176531330624919225119674426574742355349194934</div>
 <div style='text-align: center;'>96983520312774506326239578318016984801869478851843</div>
@@ -31,23 +31,23 @@ dashedName: problem-8-largest-product-in-a-series
 <div style='text-align: center;'>05886116467109405077541002256983155200055935729725</div>
 <div style='text-align: center;'>71636269561882670428252483600823257530420752963450</div>
 
-หา adjacent digits `n` หลัก โดยเมื่อนำเลขแต่ละตัวมาคูณกันแล้วได้ค่ามากที่สุด และให้บอกด้วยว่าเมื่อค่าผลคูณมีค่าเป็นเท่าไหร่
+หาเลขที่อยู่ติดกัน `n` หลัก ที่มีค่ามากที่สุด และให้บอกด้วยว่าเมื่อค่าผลคูณมีค่าเป็นเท่าไหร่
 
 # --hints--
 
-`largestProductinaSeries(4)` ควร return a number
+`largestProductinaSeries(4)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof largestProductinaSeries(4) === 'number');
 ```
 
-`largestProductinaSeries(4)` ควร return 5832
+`largestProductinaSeries(4)` ต้องคืนค่าเป็น 5832
 
 ```js
 assert.strictEqual(largestProductinaSeries(4), 5832);
 ```
 
-`largestProductinaSeries(13)` ควร return 23514624000
+`largestProductinaSeries(13)` ต้องคืนค่าเป็น 23514624000
 
 ```js
 assert.strictEqual(largestProductinaSeries(13), 23514624000);

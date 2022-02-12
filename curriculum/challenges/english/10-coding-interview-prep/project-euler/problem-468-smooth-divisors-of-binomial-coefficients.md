@@ -10,7 +10,7 @@ dashedName: problem-468-smooth-divisors-of-binomial-coefficients
 
 จำนวนเต็มเรียกว่า B-smooth หากไม่มีตัวประกอบเฉพาะตัวใดที่มากกว่า $B$
 
-ให้ $SB(n)$ เป็นตัวหารเรียบ B ที่ใหญ่ที่สุดของ $n$
+ให้ $SB(n)$ เป็นตัวหาร B-smooth ที่มากที่สุดของ $n$
 
 ตัวอย่าง:
 
@@ -20,7 +20,8 @@ $$\begin{align}
   & S_{17}(2\\,496\\,144) = 5\\,712
 \end{align}$$
 
-กำหนด $F(n) = \displaystyle\sum_{B = 1}^n \sum_{r = 0}^n S_B(\displaystyle\binom{n}{r})$ ในที่นี้ $\displaystyle\binom{n}{r}$ หมายถึงสัมประสิทธิ์ทวินาม
+กำหนดให้ $F(n) = \displaystyle\sum_{B = 1}^n \sum_{r = 0}^n S_B(\displaystyle\binom{n}{r})$  
+ในที่นี้ $\displaystyle\binom{n}{r}$ หมายถึงสัมประสิทธิ์ทวินาม
 
 ตัวอย่าง:
 
@@ -30,11 +31,11 @@ $$\begin{align}
   & F(111\\,111)\bmod 1\\,000\\,000\\,993 = 22\\,156\\,169
 \end{align}$$
 
-หา $F(11\\,111\\,111)\bmod 1\\,000\\,000\\,993$.
+ให้หา $F(11\\,111\\,111)\bmod 1\\,000\\,000\\,993$
 
 # --hints--
 
-`smoothDivisorsOfBinomialCoefficients()` ควร return `852950321`.
+`smoothDivisorsOfBinomialCoefficients()` ต้องคืนค่าเป็น `852950321`
 
 ```js
 assert.strictEqual(smoothDivisorsOfBinomialCoefficients(), 852950321);

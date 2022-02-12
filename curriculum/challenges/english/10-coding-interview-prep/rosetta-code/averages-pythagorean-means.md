@@ -8,24 +8,24 @@ dashedName: averagespythagorean-means
 
 # --description--
 
-คำนวณ [Pythagorean means](<https://en.wikipedia.org/wiki/Pythagorean means> "wp: Pythagorean means") ของ set integers $1$ ผ่าน $10$ (inclusive).
+ให้คำนวณ [Pythagorean mean](<https://en.wikipedia.org/wiki/Pythagorean means> "wp: Pythagorean means") ทั้งสามตัว ของชุดตัวเลขตั้งแต่ $1$ ถึง $10$
 
-แสดง $A(x_1,\\ldots,x_n) \\geq G(x_1,\\ldots,x_n) \\geq H(x_1,\\ldots,x_n)$ ของ set ของ positive integers.
+ชุดตัวเลขนี้จะแสดงเป็นสมการได้เป็น $A(x_1,\\ldots,x_n) \\geq G(x_1,\\ldots,x_n) \\geq H(x_1,\\ldots,x_n)$ 
 
 <ul>
-  <li>The most common of the three means, the <a class='rosetta__link--rosetta' href='https://rosettacode.org/wiki/Averages/Arithmetic mean' title='Averages/Arithmetic mean' target='_blank'>arithmetic mean</a>, is the sum of the list divided by its length:<br>
+  <li>mean ที่เห็นได้บ่อยที่สุดคืน <a class='rosetta__link--rosetta' href='https://rosettacode.org/wiki/Averages/Arithmetic mean' title='Averages/Arithmetic mean' target='_blank'>arithmetic mean</a>, ซึ่งเป็นผลรวมข้อข้อมูล หารด้วยจำนวนข้อมูล<br>
   <big>$ A(x_1, \ldots, x_n) = \frac{x_1 + \cdots + x_n}{n}$</big></li>
-  <li>The <a class='rosetta__link--wiki' href='https://en.wikipedia.org/wiki/Geometric mean' title='wp: Geometric mean' target='_blank'>geometric mean</a> is the $n$th root of the product of the list:<br>
+  <li><a class='rosetta__link--wiki' href='https://en.wikipedia.org/wiki/Geometric mean' title='wp: Geometric mean' target='_blank'>geometric mean</a> คือรูทที่ $n$th ของผลรวมของชุดข้อมูล<br>
   <big>$ G(x_1, \ldots, x_n) = \sqrt[n]{x_1 \cdots x_n} $</big></li>
-  <li>The <a class='rosetta__link--wiki' href='https://en.wikipedia.org/wiki/Harmonic mean' title='wp: Harmonic mean' target='_blank'>harmonic mean</a> is $n$ divided by the sum of the reciprocal of each item in the list:<br>
+  <li>และ <a class='rosetta__link--wiki' href='https://en.wikipedia.org/wiki/Harmonic mean' title='wp: Harmonic mean' target='_blank'>harmonic mean</a> คือ $n$ หารด้วยผลรวมของส่วนกลับของข้อมูลแต่ละตัวในชุดข้อมูล<br>
   <big>$ H(x_1, \ldots, x_n) = \frac{n}{\frac{1}{x_1} + \cdots + \frac{1}{x_n}} $</big></li>
 </ul>
 
 # --instructions--
 
-เมื่อเขียนฟังก์ชันของคุณ ให้ถือว่าinputเป็นarrayของจำนวนรวมทั้งหมด
+ให้ถือว่าข้อมูลที่รับเข้าไปเป็นตัวเลขที่มีการเรียงลำดับแล้ว
 
-สำหรับคำตอบใน object รูปแบบต่อไปนี้:
+ในการคืนค่าของฟังก์ชัน ให้คืนค่าเป็น object ตามรูปแบบนี้
 
 ```js
 {
@@ -40,13 +40,13 @@ dashedName: averagespythagorean-means
 
 # --hints--
 
-`pythagoreanMeans` ควรเป็น function.
+`pythagoreanMeans` ต้องเป็นฟังก์ชัน.
 
 ```js
 assert(typeof pythagoreanMeans === 'function');
 ```
 
-`pythagoreanMeans([1, 2, ..., 10])` ควรเท่ากับเอาต์พุตเดียวกันด้านบน
+`pythagoreanMeans([1, 2, ..., 10])` ต้องคืนค่าเหมือนกับตัวอย่างผลลัพธ์ที่เรามีให้
 
 ```js
 assert.deepEqual(pythagoreanMeans(range1), answer1);

@@ -14,7 +14,7 @@ dashedName: creating-a-tcp-client
 
 ## --text--
 
-socket object method ใดให้คุณกำหนดจำนวนข้อมูลสูงสุดที่ไคลเอนต์ของคุณยอมรับได้ในครั้งเดียว
+method ไหนของ socket object ที่ใช้เพื่อกำหนดจำนวนข้อมูลสูงสุด ที่ไคลเอนต์ของคุณรับได้พร้อมกัน
 
 ## --answers--
 

@@ -8,30 +8,25 @@ dashedName: last-letter-first-letter
 
 # --description--
 
-เกมสำหรับเด็กบางเกมเกี่ยวข้องกับการเริ่มต้นด้วยคำในหมวดหมู่เฉพาะ ผู้เข้าร่วมแต่ละคนจะพูดคำหนึ่งคำ แต่คำนั้นต้องขึ้นต้นด้วยตัวอักษรสุดท้ายของคำก่อนหน้า เมื่อได้รับคำแล้วจะไม่สามารถพูดซ้ำได้ หากฝ่ายตรงข้ามไม่สามารถให้คำในประเภทได้ พวกเขาจะออกจากเกม
+เกมต่อคำคือเกมที่จะนำตัวอักษรสุดท้ายของคำก่อนหน้ามาเป็น ตัวอักษรตัวแรกของคำใหม่
 
-เช่น category ของ "สัตว์" เป็น 
+เช่น  
 
-<pre>Child 1: dog
-Child 2: goldfish
-Child 1: hippopotamus
-Child 2: snake
-...
-</pre>
+dog -> goldfish -> hippopotamus -> snake -> ฯลฯ
 
 # --instructions--
 
-เขียนฟังก์ชันที่รับอาร์เรย์inputของคำ ฟังก์ชันควรส่งคืนอาร์เรย์ของคำโดยที่ตัวอักษรตัวแรกของแต่ละคำเหมือนกับอักษรตัวสุดท้ายของคำก่อนหน้า ใช้เฉพาะคำในอาร์เรย์input และเมื่อใช้คำแล้วจะไม่สามารถทำซ้ำได้ ควรเลือกและจัดลำดับคำในอาร์เรย์ส่งคืนเพื่อให้มีความยาวสูงสุด
+ให้เขียนฟังก์ชันที่รับค่าเป็น array ของคำ จากนั้นนำคำนั้นมาต่อกันในรูปแบบของเกมต่อคำ เพื่อสร้างชุดรูปแบบให้ได้ยาวที่สุด โดยห้ามใช้คำซ้ำ
 
 # --hints--
 
-`findLongestChain` ควรเป็น function.
+`findLongestChain` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof findLongestChain == 'function');
 ```
 
-`findLongestChain(["certain", "each", "game", "involves", "starting", "with", "word"])` ควร return array.
+`findLongestChain(["certain", "each", "game", "involves", "starting", "with", "word"])` ต้องคืนค่าเป็น array
 
 ```js
 assert(
@@ -49,7 +44,7 @@ assert(
 );
 ```
 
-`findLongestChain(["certain", "each", "game", "involves", "starting", "with", "word"])` ควร return `["involves", "starting", "game", "each"]`.
+`findLongestChain(["certain", "each", "game", "involves", "starting", "with", "word"])` ต้องคืนค่าเป็น `["involves", "starting", "game", "each"]`
 
 ```js
 assert.deepEqual(
@@ -66,7 +61,7 @@ assert.deepEqual(
 );
 ```
 
-`findLongestChain(["audino", "bagon", "kangaskhan", "banette", "bidoof", "braviary", "exeggcute", "yamask"])` ควร return `["braviary", "yamask", "kangaskhan"]`
+`findLongestChain(["audino", "bagon", "kangaskhan", "banette", "bidoof", "braviary", "exeggcute", "yamask"])` ต้องคืนค่าเป็น `["braviary", "yamask", "kangaskhan"]`
 
 ```js
 assert.deepEqual(
@@ -84,7 +79,7 @@ assert.deepEqual(
 );
 ```
 
-`findLongestChain(["harp", "poliwrath", "poochyena", "porygon2", "porygonz", "archana"])` ควร return `["poliwrath", "harp", "poochyena", "archana"]`.
+`findLongestChain(["harp", "poliwrath", "poochyena", "porygon2", "porygonz", "archana"])` ต้องคืนค่าเป็น `["poliwrath", "harp", "poochyena", "archana"]`
 
 ```js
 assert.deepEqual(
@@ -100,7 +95,7 @@ assert.deepEqual(
 );
 ```
 
-`findLongestChain(["scolipede", "elephant", "zeaking", "sealeo", "silcoon", "tigers"])` ควร return `["scolipede", "elephant", "tigers", "sealeo"]`.
+`findLongestChain(["scolipede", "elephant", "zeaking", "sealeo", "silcoon", "tigers"])` ต้องคืนค่าเป็น `["scolipede", "elephant", "tigers", "sealeo"]`
 
 ```js
 assert.deepEqual(
@@ -116,7 +111,7 @@ assert.deepEqual(
 );
 ```
 
-`findLongestChain(["loudred", "lumineon", "lunatone", "machamp", "magnezone", "nosepass", "petilil", "pidgeotto", "pikachu"])` ควร return `["machamp", "petilil", "lumineon", "nosepass"]`.
+`findLongestChain(["loudred", "lumineon", "lunatone", "machamp", "magnezone", "nosepass", "petilil", "pidgeotto", "pikachu"])` ต้องคืนค่าเป็น `["machamp", "petilil", "lumineon", "nosepass"]`
 
 ```js
 assert.deepEqual(

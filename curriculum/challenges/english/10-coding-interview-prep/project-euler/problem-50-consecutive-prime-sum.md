@@ -8,31 +8,31 @@ dashedName: problem-50-consecutive-prime-sum
 
 # --description--
 
-เลข prime 41 สามารถเขียนผลรวมได้เป็นแบบ consecutive primes
+เลข 41 ที่เป็นจำนวนเฉพาะ สามารถเขียนผลรวมได้เป็นแบบ consecutive prime คือ
 
 <div style='text-align: center;'>41 = 2 + 3 + 5 + 7 + 11 + 13</div>
 
-ค่าที่ยาวที่สุดเมื่อ sum consecutive primes ที่น้อยกว่า 1000
+ค่านี้เป็นค่าที่ยาวที่สุดเมื่อบวก consecutive prime ที่น้อยกว่า 1000
 
-ค่าที่ยาวที่สุดเมื่อ sum consecutive primes ที่น้อยกว่า 10 มีทั้งหมด 21 จำนวนและเท่ากับ 953.
+ค่าที่ยาวที่สุดเมื่อบวก consecutive prime ที่น้อยกว่า 10 มีทั้งหมด 21 จำนวนและมีค่าเป็น 953
 
-ค่า prime ที่ต่ำกว่า one-million เขียนเป็นผลรวมของ consecutive primes ได้เท่ากับเท่าไหร่
+ค่า prime ที่ต่ำกว่า 1 ล้าน เขียนเป็นผลรวมของ consecutive primes ได้เท่ากับเท่าไหร่
 
 # --hints--
 
-`consecutivePrimeSum(1000)` ควร return number
+`consecutivePrimeSum(1000)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof consecutivePrimeSum(1000) === 'number');
 ```
 
-`consecutivePrimeSum(1000)` ควร return 953.
+`consecutivePrimeSum(1000)` ต้องคืนค่าเป็น 953
 
 ```js
 assert.strictEqual(consecutivePrimeSum(1000), 953);
 ```
 
-`consecutivePrimeSum(1000000)` ควร return 997651.
+`consecutivePrimeSum(1000000)` ต้องคืนค่าเป็น 997651
 
 ```js
 assert.strictEqual(consecutivePrimeSum(1000000), 997651);

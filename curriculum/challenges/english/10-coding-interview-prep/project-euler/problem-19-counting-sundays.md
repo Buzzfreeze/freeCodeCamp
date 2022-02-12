@@ -11,34 +11,34 @@ dashedName: problem-19-counting-sundays
 จากข้อมูลข้างล่าง
 
 <ul>
-  <li>1 Jan 1900 was a Monday.</li>
-  <li>Thirty days has September,<br>April, June and November.<br>All the rest have thirty-one,<br>Saving February alone,<br>Which has twenty-eight, rain or shine.<br>And on leap years, twenty-nine.</li>
-  <li>A leap year occurs on any year evenly divisible by 4, but not on a century unless it is divisible by 400.</li>
+  <li>1 มกราคม 1900 เป็นวันจันทร์</li>
+  <li>เดือนที่มี 30 วันคือ กันยายน <br>เมษายน มิถุนายน และพฤศจิกายน<br>เดือนที่เหลือมี 30 วัน<br>ยกเว้นกุมภาพันธ์<br>ที่จะมี 28 วัน<br>และมี 29 วันในปีอธิกสุรทิน</li>
+  <li>ปีอธิกสุรทินคือปีที่หาร 4 ลงตัว แต่ต้องไม่เป็นปีที่หาร 100 ลงตัว ยกเว้นว่าจะหาร 400 ลงตัวด้วย</li>
 </ul>
 
-มีวันอาทิตย์กี่วันที่เป็นวันแรกของเดือนในช่วงศตวรรษที่ 20 (1 Jan 1901 to 31 Dec 2000)?
+มีวันอาทิตย์กี่วันที่เป็นวันแรกของเดือนในช่วงศตวรรษที่ 20 (1 มกราคม 1901 to 31 ธันวาคม 2000)?
 
 # --hints--
 
-`countingSundays(1943, 1946)` ควร return number.
+`countingSundays(1943, 1946)` ต้องคืนค่าเป็น number
 
 ```js
 assert(typeof countingSundays(1943, 1946) === 'number');
 ```
 
-`countingSundays(1943, 1946)` ควร return 6.
+`countingSundays(1943, 1946)` ต้องคืนค่าเป็น 6
 
 ```js
 assert.strictEqual(countingSundays(1943, 1946), 6);
 ```
 
-`countingSundays(1995, 2000)` ควร return 10.
+`countingSundays(1995, 2000)` ต้องคืนค่าเป็น 10
 
 ```js
 assert.strictEqual(countingSundays(1995, 2000), 10);
 ```
 
-`countingSundays(1901, 2000)` ควร return 171.
+`countingSundays(1901, 2000)` ต้องคืนค่าเป็น 171
 
 ```js
 assert.strictEqual(countingSundays(1901, 2000), 171);

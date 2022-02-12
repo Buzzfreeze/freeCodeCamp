@@ -10,43 +10,43 @@ dashedName: evaluate-binomial-coefficients
 
 เขียนฟังก์ชันเพื่อคำนวณสัมประสิทธิ์ทวินามสำหรับค่าที่กำหนดของ n และ k
 
-สูตรนี้แนะนำ:
+แนะนำให้ใช้สูตรนี้:
 
 $\\binom{n}{k} = \\frac{n!}{(n-k)!k!} = \\frac{n(n-1)(n-2)\\ldots(n-k+1)}{k(k-1)(k-2)\\ldots 1}$
 
 # --hints--
 
-`binom` ควรเป็น function.
+`binom` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof binom === 'function');
 ```
 
-`binom(5,3)` ควร return 10.
+`binom(5,3)` ต้องคืนค่าเป็น 10
 
 ```js
 assert.equal(binom(5, 3), 10);
 ```
 
-`binom(7,2)` ควร return 21.
+`binom(7,2)` ต้องคืนค่าเป็น 21
 
 ```js
 assert.equal(binom(7, 2), 21);
 ```
 
-`binom(10,4)` ควร return 210.
+`binom(10,4)` ต้องคืนค่าเป็น 210
 
 ```js
 assert.equal(binom(10, 4), 210);
 ```
 
-`binom(6,1)` ควร return 6.
+`binom(6,1)` ต้องคืนค่าเป็น 6
 
 ```js
 assert.equal(binom(6, 1), 6);
 ```
 
-`binom(12,8)` ควร return 495.
+`binom(12,8)` ต้องคืนค่าเป็น 495
 
 ```js
 assert.equal(binom(12, 8), 495);

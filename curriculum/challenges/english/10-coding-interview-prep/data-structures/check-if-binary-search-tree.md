@@ -8,17 +8,17 @@ dashedName: check-if-tree-is-binary-search-tree
 
 # --description--
 
-เนื่องจากคุณรู้อยู่แล้วว่าแผนผังการค้นหาแบบไบนารีคืออะไร แบบทดสอบนี้จะสร้างวิธีการที่คุณสามารถบอกได้ว่า tree เป็น tree การค้นหาแบบไบนารีหรือไม่
+เนื่องจากคุณรู้อยู่แล้วว่า binary search tree คืออะไร แบบทดสอบนี้จะสร้างวิธีการที่คุณสามารถบอกได้ว่า tree เป็น binary search tree หรือไม่
 
-ความแตกต่างที่สำคัญของแผนผังการค้นหาแบบไบนารีคือ node ต่างๆ ได้รับการจัดลำดับอย่างเป็นระเบียบ node มี child node ไม่เกิน 2 node (วางไว้ทางด้านขวาและ/หรือซ้าย) ขึ้นอยู่กับว่าค่าของ node ย่อยมากกว่าหรือเท่ากับ (ขวา) หรือน้อยกว่า (ซ้าย) parent node หรือไม่
+ความแตกต่างที่สำคัญของ binary search tree คือ node ต่างๆ ได้รับการจัดลำดับอย่างเป็นระเบียบ โดยแต่ละ node จะมี child node ไม่เกิน 2 node (วางไว้ทางด้านขวาและ/หรือซ้าย) ขึ้นอยู่กับว่าค่าของ node ย่อยมากกว่าหรือเท่ากับ (ขวา) หรือน้อยกว่า (ซ้าย) parent node
 
 # --instructions--
 
-ในแบบทดสอบนี้ คุณจะต้องสร้าง utility สำหรับ tree ของคุณ เขียน JavaScript method `isBinarySearchTree` ซึ่งรับ tree เป็นอินพุตและ return ค่าบูลีนไม่ว่าทรีจะเป็น tree การค้นหาแบบไบนารีหรือไม่ ใช้การเรียกซ้ำทุกครั้งที่ทำได้
+ในแบบทดสอบนี้ คุณจะต้องเขียน JavaScript method `isBinarySearchTree` ซึ่งรับค่า tree และคืนค่าเป็น boolean เพื่อเแสดงว่าข้อมูลที่ส่งเข้ามา เป็น binary search tree หรือไม่ (พยายามใช้ recursion ทุกที่ที่ใช้ได้)
 
 # --hints--
 
-Binary Search Tree ควร return ค่าเป็น true เมื่อได้รับการตรวจสอบจาก `isBinarySearchTree()`
+เมื่อใส่ Binary Search Tree ของคุณลงใน `isBinarySearchTree()` ต้องคืนค่าเป็น true 
 
 ```js
 assert(
@@ -88,9 +88,9 @@ function BinarySearchTree() {
   this.root = null;
 }
 function isBinarySearchTree(tree) {
-  // Only change code below this line
-  
-  // Only change code above this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
+
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 ```
 

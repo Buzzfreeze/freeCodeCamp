@@ -8,9 +8,11 @@ dashedName: top-rank-per-group
 
 # --description--
 
-ค้นหาข้อมูลอันดับ `n` อันดับต้น ๆ ในแต่ละกลุ่ม โดยที่ `n` ถูกจัดเป็นพารามิเตอร์ ชื่อของอันดับและกลุ่มยังถูกระบุเป็นพารามิเตอร์
+ค้นหาข้อมูลอันดับ `n` ในแต่ละกลุ่ม
 
-กำหนดข้อมูลต่อไปนี้:
+โดยฟังก์ชันจะรับค่า `n` ชื่อของการจัดอันดับ และกลุ่ม เป็นพารามิเตอร์ด้วย
+
+กำหนดให้มีข้อมูลเป็น:
 
 ```js
 testData1 = [
@@ -30,13 +32,13 @@ testData1 = [
 ];
 ```
 
-สามารถจัดอันดับพนักงาน 10 อันดับแรกในแต่ละแผนกโดยโทร:
+จะสามารถจัดอันดับพนักงาน 10 อันดับแรกในแต่ละแผนกได้ โดยเรียกใช้:
 
 ```js
 topRankPerGroup(10, testData1, 'dept', 'salary')
 ```
 
-กำหนดข้อมูลต่อไปนี้:
+กำหนดให้มีข้อมูลเป็น:
 
 ```js
 testData2 = [
@@ -48,15 +50,15 @@ testData2 = [
 ];
 ```
 
-สามารถจัดอันดับภาพยนตร์ที่มีคะแนนสูงสุดในแต่ละประเภทโดยโทร:
+จะสามารถจัดอันดับภาพยนตร์ที่มีคะแนนสูงสุดในแต่ละประเภทได้ โดยเรียกใช้:
 
 ```js
 topRankPerGroup(1, testData2, 'genre', 'rating')
 ```
 
-ฟังก์ชันควรส่งคืนอาร์เรย์ที่มีอาร์เรย์สำหรับแต่ละกลุ่มที่มีobject`n` ด้านบน
+ฟังก์ชันต้องคืนค่าเป็น array โดยใน array จะต้องมีรายการของ object `n` ตัวแรกที่เรียงลำดับตามเงื่อนไข
 
-ตัวอย่างเช่น ข้อมูลที่กำหนด:
+ตัวอย่างเช่น ถ้ามีข้อมูลเป็น:
 
 ```js
 [
@@ -69,7 +71,7 @@ topRankPerGroup(1, testData2, 'genre', 'rating')
 ];
 ```
 
-พนักงานอันดับสองอันดับแรกในแต่ละแผนกตามเงินเดือนจะเป็น:
+แล้วจะมีผลลัพธ์ของการหาพนักงานที่มีเงินเดือนสูงสุดสองอันดับแรกของแต่ละแผนก จะเป็น:
 
 ```js
 [ [ { name: 'Kim Arlich', id: 'E10001', salary: 57000, dept: 'D050' },
@@ -80,37 +82,37 @@ topRankPerGroup(1, testData2, 'genre', 'rating')
 
 # --hints--
 
-`topRankPerGroup` ควรเป็น function.
+`topRankPerGroup` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof topRankPerGroup === 'function');
 ```
 
-`topRankPerGroup` ควรส่งคืนค่าที่ไม่ได้กำหนดในค่าลบ n
+`topRankPerGroup` ต้องคืนค่าเป็น undefined ถ้า n เป็นค่าลบ
 
 ```js
 assert(typeof topRankPerGroup(-1, []) === 'undefined');
 ```
 
-สำหรับ `topRankPerGroup(10, testData1, 'dept', 'salary')`, ผลลัพธ์แรกในกลุ่มแรกควรเป็น `{ name: 'John Rappl', id: 'E21437', salary: 47000, dept: 'D050'}`.
+ถ้าเรียกใช้ `topRankPerGroup(10, testData1, 'dept', 'salary')`, ผลลัพธ์แรกในกลุ่มแรกควรเป็น `{ name: 'John Rappl', id: 'E21437', salary: 47000, dept: 'D050'}`.
 
 ```js
 assert.deepEqual(res1[0][0], { name: 'John Rappl', id: 'E21437', salary: 47000, dept: 'D050'});
 ```
 
-สำหรับ `topRankPerGroup(10, testData1, 'dept', 'salary')`, ผลลัพธ์สุดท้ายในกลุ่มสุดท้ายควรเป็น `{ name: 'Adam Smith', id: 'E63535', salary: 18000, dept: 'D202' }`.
+ถ้าเรียกใช้ `topRankPerGroup(10, testData1, 'dept', 'salary')`, ผลลัพธ์สุดท้ายในกลุ่มสุดท้ายควรเป็น `{ name: 'Adam Smith', id: 'E63535', salary: 18000, dept: 'D202' }`.
 
 ```js
 assert.deepEqual(res1[3][3], { name: 'Adam Smith', id: 'E63535', salary: 18000, dept: 'D202' });
 ```
 
-`topRankPerGroup(1, ...)` ควร return เฉพาะผลการจัดอันดับสูงสุดต่อกลุ่ม.
+`topRankPerGroup(1, ...)` ต้องคืนค่าเฉพาะอันดับสูงสุดของแต่ละกลุ่ม
 
 ```js
 assert.equal(res2[2].length, 1);
 ```
 
-`topRankPerGroup(2, ...)` ควร return สองผลการจัดอันดับต่อกลุ่ม
+`topRankPerGroup(2, ...)` ต้องคืนค่าเฉพาะสองอันดับแรกของแต่ละกลุ่ม
 
 ```js
 assert.equal(res3[2][1].name, 'Maze Runner');

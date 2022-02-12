@@ -8,13 +8,15 @@ dashedName: split-a-character-string-based-on-change-of-character
 
 # --description--
 
-แยกstring (อักขระ) ออกเป็นstringที่คั่นด้วยเครื่องหมายจุลภาค (พร้อมช่องว่าง) ตามการเปลี่ยนแปลงของอักขระ (ซ้ายไปขวา) ช่องว่างควรถือเป็นอักขระอื่น (ยกเว้นจะมีปัญหาในการแสดงอย่างชัดเจน) เช่นเดียวกับเครื่องหมายจุลภาค ตัวอย่างเช่น string:
+ให้แยกสตริงออกเป็นสตริงที่คั่นด้วยคอมม่า (มีเว้นวรรค) ตามการเปลี่ยนแปลงของตัวอักษร (ซ้ายไปขวา) ช่องว่างควรถือเป็นตัวอักษรอื่น เช่นเดียวกับเครื่องหมายจุลภาค 
+
+ลองดูตัวอย่าง:
 
 <pre>
 "gHHH5YY++///\\"
 </pre>
 
-ควร split:
+จะต้องแยกเป็น:
 
 <pre>
 ["g", "HHH", "5", "YY", "++", "///", "\\" ];
@@ -22,25 +24,25 @@ dashedName: split-a-character-string-based-on-change-of-character
 
 # --hints--
 
-`split` ควรเป็น function.
+`split` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof split == 'function');
 ```
 
-`split("hello")` ควร return array.
+`split("hello")` ต้องคืนค่าเป็น array
 
 ```js
 assert(Array.isArray(split('hello')));
 ```
 
-`split("hello")` ควร return `["h", "e", "ll", "o"]`.
+`split("hello")` ต้องคืนค่าเป็น `["h", "e", "ll", "o"]`
 
 ```js
 assert.deepEqual(split('hello'), ['h', 'e', 'll', 'o']);
 ```
 
-`split("commission")` ควร return `["c", "o", "mm", "i", "ss", "i", "o", "n"]`.
+`split("commission")` ต้องคืนค่าเป็น `["c", "o", "mm", "i", "ss", "i", "o", "n"]`
 
 ```js
 assert.deepEqual(split('commission'), [
@@ -55,7 +57,7 @@ assert.deepEqual(split('commission'), [
 ]);
 ```
 
-`split("ssss----====llloooo")` ควร return `["ssss", "----", "====", "lll", "oooo"]`.
+`split("ssss----====llloooo")` ต้องคืนค่าเป็น `["ssss", "----", "====", "lll", "oooo"]`
 
 ```js
 assert.deepEqual(split('ssss----====llloooo'), [
@@ -67,7 +69,7 @@ assert.deepEqual(split('ssss----====llloooo'), [
 ]);
 ```
 
-`split("sssmmmaaammmaaat")` ควร return `["sss", "mmm", "aaa", "mmm", "aaa", "t"]`.
+`split("sssmmmaaammmaaat")` ต้องคืนค่าเป็น `["sss", "mmm", "aaa", "mmm", "aaa", "t"]`
 
 ```js
 assert.deepEqual(split('sssmmmaaammmaaat'), [
@@ -80,7 +82,7 @@ assert.deepEqual(split('sssmmmaaammmaaat'), [
 ]);
 ```
 
-`split("gHHH5YY++///\\")` ควร return `["g", "HHH", "5", "YY", "++", "///", "\\"]`.
+`split("gHHH5YY++///\\")` ต้องคืนค่าเป็น `["g", "HHH", "5", "YY", "++", "///", "\\"]`
 
 ```js
 assert.deepEqual(split('gHHH5YY++///\\'), [

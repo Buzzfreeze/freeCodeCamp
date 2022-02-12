@@ -8,21 +8,22 @@ dashedName: file-metadata-microservice
 
 # --description--
 
-สร้างแอพแบบ full stack ด้วย JavaScript ที่ทำงานคล้ายกับเว็บไซต์ <https://file-metadata-microservice.freecodecamp.rocks/>  การทำโปรเจคนี้ คุณจะต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งดังต่อไปนี้
+ให้สร้างแอปแบบ full stack โดยใช้ JavaScript ที่ทำงานคล้ายกับเว็บไซต์นี้ <https://file-metadata-microservice.freecodecamp.rocks/>  
+ในการทำโปรเจคนี้ คุณจะต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งดังต่อไปนี้
 
-- Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-filemetadata/)  ในการทำโปรเจค โดยทำให้เสร็จทีละส่วน
-- ใช้เว็บไซต์ [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-filemetadata) ในการทำโปรเจคให้เสร็จสมบูรณ์
-- ใช้ตัวสร้างไซต์ที่คุณเลือก ทำโปรเจคให้เสร็จสมบูรณ์ และอย่าลืมรวมไฟล์ทั้งหมดจาก GitHub repo ของคุณด้วย
+- ให้ Clone repoisitory จาก [GitHub](https://github.com/freeCodeCamp/boilerplate-project-filemetadata/) มา และทำแบบทดสอบบนเครื่องของคุณเอง
+- สร้างจากโปรเจกต์ของเราในเว็บไซต์ [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-filemetadata)
+- ใช้เครื่องมือสร้างเว็บอื่นๆ และอย่าลืมเก็บไฟล์ไว้ใน GitHub repo ของคุณด้วย
 
-เมื่อคุณทำเสร็จแล้ว ตรวจสอบให้แน่ใจด้วยว่า ไฟล์โปรเจคของคุณอยู่ในสถานะที่ทุกคนสามารถมองเห็นได้(public) หลังจากนั้นส่งลิงก์ URL ไว้ใน `Solution Link` หรือส่งลิงก์ซอร์สโค้ดของโปรเจคไว้ใน `GitHub Link` อีกช่องทางหนึ่งก็ได้
+เมื่อคุณทำเสร็จแล้ว ให้อัปโหลดโปรเจกต์ของคุณขึ้นโฮสต์ และเปิดเป็น public จากนั้นให้ส่งลิงก์เข้าไปใน `Link คำตอบ` และจะส่งลิงก์ของ source code เข้าไปใน `GitHub Link` ด้วยก็ได้
 
 # --instructions--
 
-**HINT:** คุณสามารถใช้  `multer` npm ในการอัพโหลดไฟล์
+**HINT:** สามารถใช้ npm package ที่ชื่อ `multer` เพื่อจัดการการอัพโหลดไฟล์ได้
 
 # --hints--
 
-คุณควรที่จะให้แหล่งโปรเจคของคุณ ไม่ใช่ตัวอย่างจาก URL
+ให้ส่งลิงก์โปรเจกต์ของคุณ ไม่ใช่ URL ตัวอย่างของเรา
 
 ```js
 (getUserInput) => {
@@ -34,7 +35,7 @@ dashedName: file-metadata-microservice
 };
 ```
 
-คุณสามารถส่งแบบฟอร์มที่มีการอัปโหลดไฟล์
+ต้องส่ง form ที่มีการอัปโหลดไฟล์ได้
 
 ```js
 async (getUserInput) => {
@@ -45,7 +46,7 @@ async (getUserInput) => {
 };
 ```
 
-แบบฟอร์มที่ใส่ค่าในฟิล์ด ต้องมีแอตทริบิวต์ `name` เพื่อที่จะตั้งค่า `upfile`
+form ตัวที่ใช้อัปโหลดไฟล์ต้องมี attribute `name` เป็น `upfile`
 
 
 ```js
@@ -57,7 +58,7 @@ async (getUserInput) => {
 };
 ```
 
-เมื่อคุณส่งไฟล์แล้ว คุณจะได้รับไฟล์ประเภท `name`, `type`, และ `size` เป็นไบต์ภายในการตอบกลับ(respond) ของ JSON
+เมื่อคุณส่งไปไฟล์แล้ว คุณจะต้องได้ response เป็น JSON object ที่มี property `name`, `type`, และ `size` (เป็นไบต์) ตามข้อมูลของไฟล์ที่ส่งไป
 
 ```js
 async (getUserInput) => {

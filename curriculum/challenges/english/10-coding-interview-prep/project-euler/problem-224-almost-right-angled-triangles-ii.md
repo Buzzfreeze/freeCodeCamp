@@ -8,13 +8,13 @@ dashedName: problem-224-almost-right-angled-triangles-ii
 
 # --description--
 
-เรียกสามเหลี่ยมด้านเท่าจำนวนเต็มที่มีด้าน $a ≤ b ≤ c$ เป็นแบบป้าน ถ้าด้านตรง $a^2 + b^2 = c^2 - 1$
+เรียกสามเหลี่ยมด้านเท่า ที่แต่ละด้านเป็นจำนวนเต็มที่ $a ≤ b ≤ c$ และ $a^2 + b^2 = c^2 - 1$ ว่าสามเหลี่ยมแบบ barely obtuse
 
-มีสามเหลี่ยมป้านกี่รูปที่มีเส้นรอบวง $≤ 75\\,000\\,000$
+มีสามเหลี่ยมแบบ barely obtuse กี่รูปที่มีเส้นรอบวงเท่ากับ $≤ 75\\,000\\,000$?
 
 # --hints--
 
-`almostRightAngledTrianglesTwo()` ควร return `4137330`.
+`almostRightAngledTrianglesTwo()` ต้องคืนค่าเป็น `4137330`
 
 ```js
 assert.strictEqual(almostRightAngledTrianglesTwo(), 4137330);

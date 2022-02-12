@@ -8,9 +8,9 @@ dashedName: problem-102-triangle-containment
 
 # --description--
 
-จุดที่แตกต่างกันสามจุดจะถูกพล็อตแบบสุ่มบนระนาบคาร์ทีเซียน โดยที่ -1000 ≤ x, y ≤ 1000 เพื่อให้เกิดรูปสามเหลี่ยม
+จุดสามจุดจะถูกพล็อตแบบสุ่มบนระนาบคาร์ทีเซียน โดยที่ -1000 ≤ x และ y ≤ 1000 เพื่อให้เกิดรูปสามเหลี่ยม
 
-พิจารณารูปสามเหลี่ยมสองรูปต่อไปนี้:
+ลองพิจารณารูปสามเหลี่ยมสองรูปต่อไปนี้:
 
 ```js
 const exampleTriangles = [
@@ -19,32 +19,32 @@ const exampleTriangles = [
 ];
 ```
 
-สามารถตรวจสอบได้ว่าสามเหลี่ยมแรกมีจุดกำเนิด ในขณะที่สามเหลี่ยมที่สองไม่มี
+เราสามารถตรวจสอบได้ว่าสามเหลี่ยมแรกมีจุดกำเนิด (0,0) อยู่ในสามเหลึ่ยม ในขณะที่สามเหลี่ยมที่สองมีจุดกำเนิดอยู่นอกสามเหลี่ยม
 
 ใช้อาร์เรย์ `triangles` ที่มีพิกัดของสามเหลี่ยม หาจำนวนสามเหลี่ยมที่ด้านในมีจุดกำเนิด
 
 
 # --hints--
 
-`triangleContainment(exampleTriangles)` ควร return number.
+`triangleContainment(exampleTriangles)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof triangleContainment(_exampleTriangles) === 'number');
 ```
 
-`triangleContainment(exampleTriangles)` ควร return `1`.
+`triangleContainment(exampleTriangles)` ต้องคืนค่าเป็น `1`
 
 ```js
 assert.strictEqual(triangleContainment(_exampleTriangles), 1);
 ```
 
-`triangleContainment(testTriangles1)` ควร return `19`.
+`triangleContainment(testTriangles1)` ต้องคืนค่าเป็น `19`
 
 ```js
 assert.strictEqual(triangleContainment(_testTriangles1), 19);
 ```
 
-`triangleContainment(testTriangles2)` ควร return `228`.
+`triangleContainment(testTriangles2)` ต้องคืนค่าเป็น `228`
 
 ```js
 assert.strictEqual(triangleContainment(_testTriangles2), 228);

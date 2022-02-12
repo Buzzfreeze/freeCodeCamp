@@ -8,7 +8,7 @@ dashedName: problem-137-fibonacci-golden-nuggets
 
 # --description--
 
-พิจารณาอนุกรมพหุนามอนันต์ $A_{F}(x) = xF_1 + x^2F_2 + x^3F_3 + \ldots$ โดยที่ $F_k$ คือพจน์ที่ $k$th ในลำดับfibonacci: $1, 1, 2, 3, 5, 8, \ldots$; นั่นคือ $F_k = F_{k − 1} + F_{k − 2}, F_1 ​​= 1$ และ $F_2 = 1$
+พิจารณาอนุกรมพหุนามอนันต์ $A_{F}(x) = xF_1 + x^2F_2 + x^3F_3 + \ldots$ โดยที่ $F_k$ คือพจน์ที่ $k$ ในลำดับfibonacci: $1, 1, 2, 3, 5, 8, \ldots$; นั่นคือ $F_k = F_{k − 1} + F_{k − 2}, F_1 ​​= 1$ และ $F_2 = 1$
 
 สำหรับปัญหานี้ เราจะสนใจค่าของ $x$ ซึ่ง $A_{F}(x)$ เป็นจำนวนเต็มบวก
 
@@ -27,13 +27,13 @@ A_F(\frac{1}{2}) & = (\frac{1}{2}) × 1 + {(\frac{1}{2})}^2 × 1 + {(\frac{1}{2}
 | $\frac{\sqrt{89} − 5}{8}$ | $4$      |
 | $\frac{\sqrt{34} − 3}{5}$ | $5$      |
 
-เราจะเรียก $A_F(x)$ ว่า golden nugget ถ้า $x$ มีเหตุผล เพราะมันหายากขึ้นเรื่อยๆ ตัวอย่างเช่น golden nugget ที่ 10 คือ 74049690
+เราจะเรียก $A_F(x)$ ว่า golden nugget ถ้า $x$ เป็นจำนวนตรรกยะ เช่น golden nugget ที่ 10 คือ 74049690
 
-หาค่าในลำดับที่ 15th golden nugget.
+ให้หาค่าในลำดับที่ 15 ของ golden nugget
 
 # --hints--
 
-`goldenNugget()` ควร return `1120149658760`.
+`goldenNugget()` ต้องคืนค่าเป็น `1120149658760`
 
 ```js
 assert.strictEqual(goldenNugget(), 1120149658760);

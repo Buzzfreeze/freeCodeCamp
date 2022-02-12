@@ -8,29 +8,29 @@ dashedName: element-wise-operations
 
 # --description--
 
-ใช้การดำเนินการ basic element-wise matrix-matrix และ scalar-matrix operations.
+ใช้เขียนฟังก์ชันที่ดำเนินการแบบ matrix-matrix และ scalar-matrix
 
-**Implement:**
+**ให้ฟังก์ชันของคุณทำงานได้ดังนี้:**
 
 <ul>
-  <li>addition</li>
-  <li>subtraction</li>
-  <li>multiplication</li>
-  <li>division</li>
-  <li>exponentiation</li>
+  <li>บวก</li>
+  <li>ลบ</li>
+  <li>คุณ</li>
+  <li>หาร</li>
+  <li>ยกกำลัง</li>
 </ul>
 
-พารามิเตอร์แรกจะเป็นการดำเนินการที่จะดำเนินการ เช่น "m_add" สำหรับการเติมเมทริกซ์และ "s_add" สำหรับการบวกสเกลาร์ พารามิเตอร์ที่สองและสามจะเป็นเมทริกซ์ที่จะดำเนินการ
+พารามิเตอร์แรกจะเป็นการดำเนินการที่จะดำเนินการ เช่น "m_add" สำหรับบวกเมทริกซ์และ "s_add" สำหรับการบวกสเกลาร์ พารามิเตอร์ที่สองและสามจะเป็นเมทริกซ์ที่จะดำเนินการ
 
 # --hints--
 
-`operation` ควรเป็น function.
+`operation` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof operation === 'function');
 ```
 
-`operation("m_add",[[1,2],[3,4]],[[1,2],[3,4]])` ควร return `[[2,4],[6,8]]`.
+`operation("m_add",[[1,2],[3,4]],[[1,2],[3,4]])` ต้องคืนค่าเป็น `[[2,4],[6,8]]`
 
 ```js
 assert.deepEqual(
@@ -52,7 +52,7 @@ assert.deepEqual(
 );
 ```
 
-`operation("s_add",[[1,2],[3,4]],2)` ควร return `[[3,4],[5,6]]`.
+`operation("s_add",[[1,2],[3,4]],2)` ต้องคืนค่าเป็น `[[3,4],[5,6]]`
 
 ```js
 assert.deepEqual(
@@ -71,7 +71,7 @@ assert.deepEqual(
 );
 ```
 
-`operation("m_sub",[[1,2],[3,4]],[[1,2],[3,4]])` ควร return `[[0,0],[0,0]]`.
+`operation("m_sub",[[1,2],[3,4]],[[1,2],[3,4]])` ต้องคืนค่าเป็น `[[0,0],[0,0]]`
 
 ```js
 assert.deepEqual(
@@ -93,7 +93,7 @@ assert.deepEqual(
 );
 ```
 
-`operation("m_mult",[[1,2],[3,4]],[[1,2],[3,4]])` ควร return `[[1,4],[9,16]]`.
+`operation("m_mult",[[1,2],[3,4]],[[1,2],[3,4]])` ต้องคืนค่าเป็น `[[1,4],[9,16]]`
 
 ```js
 assert.deepEqual(
@@ -115,7 +115,7 @@ assert.deepEqual(
 );
 ```
 
-`operation("m_div",[[1,2],[3,4]],[[1,2],[3,4]])` ควร return `[[1,1],[1,1]]`.
+`operation("m_div",[[1,2],[3,4]],[[1,2],[3,4]])` ต้องคืนค่าเป็น `[[1,1],[1,1]]`
 
 ```js
 assert.deepEqual(
@@ -137,7 +137,7 @@ assert.deepEqual(
 );
 ```
 
-`operation("m_exp",[[1,2],[3,4]],[[1,2],[3,4]])` ควร return `[[1,4],[27,256]]`.
+`operation("m_exp",[[1,2],[3,4]],[[1,2],[3,4]])` ต้องคืนค่าเป็น `[[1,4],[27,256]]`
 
 ```js
 assert.deepEqual(
@@ -159,7 +159,7 @@ assert.deepEqual(
 );
 ```
 
-`operation("m_add",[[1,2,3,4],[5,6,7,8]],[[9,10,11,12],[13,14,15,16]])` ควร return `[[10,12,14,16],[18,20,22,24]]`.
+`operation("m_add",[[1,2,3,4],[5,6,7,8]],[[9,10,11,12],[13,14,15,16]])` ต้องคืนค่าเป็น `[[10,12,14,16],[18,20,22,24]]`
 
 ```js
 assert.deepEqual(

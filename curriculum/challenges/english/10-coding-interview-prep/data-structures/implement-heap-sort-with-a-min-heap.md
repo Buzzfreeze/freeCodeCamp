@@ -8,17 +8,27 @@ dashedName: implement-heap-sort-with-a-min-heap
 
 # --description--
 
-ตอนนี้เราสามารถเพิ่มและลบ element ได้แล้ว มาดูกันว่า applications heaps สามารถนำไปใช้อะไรได้บ้าง โดยทั่วไปแล้ว heap จะใช้เพื่อนำ priority queues ไปใช้ เนื่องจากจะจัดเก็บรายการที่มีมูลค่าสูงสุดหรือน้อยที่สุดในตำแหน่งแรกเสมอ นอกจากนี้ยังใช้เพื่อนำอัลกอริธึมการเรียงลำดับที่เรียกว่า heap sort ไปใช้ เราจะดูวิธีการทำสิ่งนี้ที่นี่ heap sort ใช้ heap ขั้นต่ำ ซึ่งตรงกันข้ามกับ heap สูงสุด  heap ขั้นต่ำจะเก็บองค์ประกอบที่มีค่าน้อยที่สุดในตำแหน่งรูทเสมอ
+เราสามารถเพิ่มและลบ element ได้แล้ว คราวนี้มาดูวิธีการเอา heap ไปใช้จริงกันบ้าง 
 
-heap sort ทำงานโดยนำ array ที่ไม่เรียงลำดับ เพิ่มแต่ละรายการใน array ลงใน heap ขั้นต่ำ จากนั้นแยกทุกรายการออกจาก heap ขั้นต่ำไปยัง array ใหม่ โครงสร้าง heap ขั้นต่ำช่วยให้แน่ใจว่า array ใหม่จะมีรายการดั้งเดิมโดยเรียงลำดับจากน้อยไปมาก นี่เป็นหนึ่งในอัลกอริธึมการเรียงลำดับที่มีประสิทธิภาพมากที่สุดโดยมีค่า เคสเฉลี่ยและเคสที่แย่ที่สุดที่ O(nlog(n))
+โดยทั่วไปแล้วเราจะใช้ heap เพื่อสร้าง priority queue เพราะว่า queue แบบนี้จะเก็บข้อมูลที่มีค่ามากหรือน้อยที่สุดในตำแหน่งแรกเสมอ นอกจากนี้ยังใช้สำหรับการสร้างอัลกอริธึมการเรียงลำดับชื่อ heap sort ด้วย 
+
+heap sort จะใช้ min heap ขั้นต่ำ (ตรงกันข้ามกับ max heap) โดย min heap จะเก็บ element ที่มีค่าน้อยที่สุดที่ root เสมอ
+
+heap sort ทำงานการโดยนำข้อมูลแต่ละตัวจาก array ที่ไม่เรียงลำดับ มาเพิ่มลงในลงใน min heap แล้วดึงค่าทั้งหมดออกจาก min heap ไปยัง array ใหม่ 
+
+ซึ่งโครงสร้างของ min heap จะทำให้ array เป็นการนำค่าเดิมมาเรียงจากน้อยไปมาก นี่เป็นหนึ่งในอัลกอริธึมการเรียงลำดับที่มีประสิทธิภาพมากที่สุดโดยมีทั้ง average case และ worst case เป็น O(nlog(n))
 
 # --instructions--
 
-ลองใช้ heap sort ด้วย heap ขั้นต่ำ อย่าลังเลที่จะปรับโค้ด heap สูงสุดของคุณที่นี่ สร้าง `MinHeap` object ด้วย `insert`, `remove` และ `sort` method  โดยที่ `sort` method ควร return array ของ element ทั้งหมดใน heap ขั้นต่ำที่เรียงลำดับจากน้อยไปมาก
+ให้ลองทำการ heap sort โดยใช้ min heap  
+
+คุณจะแก้โค้ด max heap ที่เราสร้างไว้ให้แล้วก็ได้ถ้าต้องการ 
+
+ให้สร้าง `MinHeap` object โดยมี method `insert`, `remove` และ `sort` และ method `sort` ต้องคืนค่าเป็น array ของ element ทั้งหมดใน min heap ที่เรียงลำดับจากน้อยไปมาก
 
 # --hints--
 
-ควรมีโครงสร้างข้อมูล MinHeap
+ต้องมีโครงสร้างข้อมูล MinHeap
 
 ```js
 assert(
@@ -32,7 +42,7 @@ assert(
 );
 ```
 
-MinHeap ควรมี method ที่เรียกว่า insert
+MinHeap ต้องมี method ชื่อ `insert`
 
 ```js
 assert(
@@ -48,7 +58,7 @@ assert(
 );
 ```
 
-MinHeap ควรมี method ที่เรียกว่า remove
+MinHeap ต้องมี method ชื่อ `remove`
 
 ```js
 assert(
@@ -64,7 +74,7 @@ assert(
 );
 ```
 
-MinHeap ควรมี method ที่เรียกว่า sort
+MinHeap ต้องมี method ชื่อ `sort`
 
 ```js
 assert(
@@ -80,7 +90,7 @@ assert(
 );
 ```
 
-Sort method ควร return array ที่มีรายการทั้งหมดที่ถูกเพิ่มไปยัง heap ขั้นต่ำ ที่เรียงลำดับแล้ว
+method `sort` ต้องคืนค่าเป็น array ของ element ทั้งหมดใน min heap ที่เรียงลำดับจากน้อยไปมากแล้ว
 
 ```js
 assert(
@@ -120,7 +130,7 @@ function isSorted(a){
       return false;
   return true;
 }
-// Generate a randomly filled array
+// สร้าง array ที่มีค่าแบบสุ่ม
 function createRandomArray(size = 5){
   let a = new Array(size);
   for(let i = 0; i < size; i++)
@@ -131,9 +141,9 @@ function createRandomArray(size = 5){
 const array = createRandomArray(25);
 
 var MinHeap = function() {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 };
 ```
 

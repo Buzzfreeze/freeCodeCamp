@@ -8,25 +8,30 @@ dashedName: create-and-save-a-record-of-a-model
 
 # --description--
 
-ในโจทย์นี้ คุณจะต้องสร้างและบันทึกข้อมูลของโมเดลให้ได้
+ในแบบทดสอบนี้ คุณจะต้องสร้างและเก็บข้อมูลของโมเดลให้ได้
 
 # --instructions--
 
-ภายในฟังก์ชัน `createAndSavePerson` ให้สร้างตัวอย่างเอกสารโดยใช้ตัวสร้างโมเดล `Person` ที่คุณสร้างไว้ก่อนหน้านี้ ส่งผ่านอ็อบเจ็กท์ `name`, `age`, และ `favoriteFoods`  ประเภทเหล่านี้ต้องสอดคล้องกับ `personSchema` จากนั้นเรียก `document.save()` บนตัวอย่างเอกสารที่ส่งคืน โดยส่งการเรียกกลับให้ใช้ Node 
-นี่เป็นรูปแบบทั่วไปของวิธี CRUD โดยต่อไปนี้ทั้งหมดจะใช้ฟังก์ชันเรียกกลับเป็นอาร์กิวเมนต์สุดท้าย
+ภายในฟังก์ชัน `createAndSavePerson` ให้สร้าง instance ของ document โดยใช้ constructor ของ `Person` ที่คุณสร้างไว้ก่อนหน้านี้ 
+และให้ส่ง object ที่มีฟิลด์เป็น `name`, `age`, และ `favoriteFoods` เข้าไปใน constructor  
+โดยประเภทของข้อมูลในแต่ละฟิลด์ จะต้องตรงกับประเภทของข้อมูลที่กำหนดไว้ใน `personSchema` 
+จากนั้นให้เรียกใช้ `document.save()` กับ document ที่ได้จากการเรียกใช้ constructor นั้น 
+และให้ส่ง callback function เข้าไปใน `.save()` โดยใช้รูปแบบมาตรฐานของ Node (ถ้าจำไม่ได้ให้ไปดูแบบทดสอบที่แล้ว)
+
+โดยปกติแล้ว ฟังก์ชันที่ทำการดำเนินการ CRUD (Create Read Update Delete) จะรับ callback function เป็น argument ตัวสุดท้าย
 
 ```js
-/* Example */
+/* ตัวอย่าง */
 
 // ...
 person.save(function(err, data) {
-  //   ...do your stuff here...
+  //   ...ให้โค้ดทำงานที่นี่...
 });
 ```
 
 # --hints--
 
-การสร้างและการบันทึกใน db ควรที่จะสำเร็จ
+ต้องทำการสร้างและการบันทึกใน database สำเร็จ
 
 ```js
 (getUserInput) =>

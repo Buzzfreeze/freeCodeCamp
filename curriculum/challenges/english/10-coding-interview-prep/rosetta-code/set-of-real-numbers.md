@@ -8,7 +8,9 @@ dashedName: set-of-real-numbers
 
 # --description--
 
-จำนวนจริงทั้งหมดอยู่ในsetที่นับไม่ได้ ℝ ในบรรดาsetย่อยที่เป็นconvex sets แต่ละsetแสดงเป็นช่วงระหว่างจำนวนจริงสองจำนวน *a* และ *b* โดยที่ *a* ≤ *b* มีสี่กรณีสำหรับความหมายของ "ระหว่าง" ขึ้นอยู่กับขอบเขตที่เปิดหรือปิด:
+จำนวนจริงทั้งหมดอยู่ในเซ็ทที่นับไม่ได้ ℝ 
+
+ในบรรดาเซ็ทย่อยที่เป็นเซ็ท convex  แต่ละเซ็ทแสดงเป็นช่วงระหว่างจำนวนจริงสองจำนวน *a* และ *b* โดยที่ *a* ≤ *b* มีสี่กรณีสำหรับความหมายของ "ระหว่าง" ขึ้นอยู่กับขอบเขตที่เปิดหรือปิด:
 
 <ul>
   <li>[<i>a</i>, <i>b</i>]: {<i>x</i> | <i>a</i> ≤ <i>x</i> and <i>x</i> ≤ <i>b</i> }</li>
@@ -17,52 +19,54 @@ dashedName: set-of-real-numbers
   <li>(<i>a</i>, <i>b</i>]: {<i>x</i> | <i>a</i> < <i>x</i> and <i>x</i> ≤ <i>b</i> }</li>
 </ul>
 
-Note ถ้า *a* = *b* ของทั้ง4กรณีเป็น \[*a*, *a*] จะเป็นรูปแบบ non-empty.
+Note ถ้า *a* = *b* ของทั้ง4กรณีเป็น \[*a*, *a*] จะเป็นรูปแบบ non-empty
 
 **Task**
 
 <ul>
-  <li>Devise a way to represent any set of real numbers, for the definition of "any" in the implementation notes below.</li>
-  <li>Provide methods for these common set operations (<i>x</i> is a real number; <i>A</i> and <i>B</i> are sets):</li>
+  <li>ให้หาวิธีแสดงเซ็ทของจำนวนจริงใดๆ</li>
+  <li>ให้เขียน method สำหรับการดำเนินการเหล่านี้ (โดยที่ <i>x</i> เป็นจำนวนจริง และ <i>A</i> และ <i>B</i> เป็นเซ็ท):</li>
   <ul>
     <li>
-      <i>x</i> ∈ <i>A</i>: determine if <i>x</i> is an element of <i>A</i><br>
-      example: 1 is in [1, 2), while 2, 3, ... are not.
+      <i>x</i> ∈ <i>A</i>: หาว่า <i>x</i> เป็นสมาชิกของ <i>A</i> หรือไม่<br>
+      ตัวอย่าง: 1 เป็นสมาชิกของ [1, 2), แต่ 2, 3, ... ไม่เป็น
     </li>
     <li>
-      <i>A</i> ∪ <i>B</i>: union of <i>A</i> and <i>B</i>, i.e. {<i>x</i> | <i>x</i> ∈ <i>A</i> or <i>x</i> ∈ <i>B</i>}<br>
-      example: [0, 2) ∪ (1, 3) = [0, 3); [0, 1) ∪ (2, 3] = well, [0, 1) ∪ (2, 3]
+      <i>A</i> ∪ <i>B</i>:  <i>A</i> union <i>B</i> เช่น {<i>x</i> | <i>x</i> ∈ <i>A</i> หรือ <i>x</i> ∈ <i>B</i>}<br>
+      ตัวอย่าง: [0, 2) ∪ (1, 3) = [0, 3); [0, 1) ∪ (2, 3] = well, [0, 1) ∪ (2, 3]
     </li>
     <li>
-      <i>A</i> ∩ <i>B</i>: intersection of <i>A</i> and <i>B</i>, i.e. {<i>x</i> | <i>x</i> ∈ <i>A</i> and <i>x</i> ∈ <i>B</i>}<br>
-      example: [0, 2) ∩ (1, 3) = (1, 2); [0, 1) ∩ (2, 3] = empty set
+      <i>A</i> ∩ <i>B</i>: <i>A</i> intersect <i>B</i> เช่น {<i>x</i> | <i>x</i> ∈ <i>A</i> และ <i>x</i> ∈ <i>B</i>}<br>
+      ตัวอย่าง: [0, 2) ∩ (1, 3) = (1, 2); [0, 1) ∩ (2, 3] = เซ็ทว่าง
     </li>
     <li>
-      <i>A</i> - <i>B</i>: difference between <i>A</i> and <i>B</i>, also written as <i>A</i> \ <i>B</i>, i.e. {<i>x</i> | <i>x</i> ∈ <i>A</i> and <i>x</i> ∉ <i>B</i>}<br>
-      example: [0, 2) − (1, 3) = [0, 1]
+      <i>A</i> - <i>B</i>: ผลต่างระหว่าง <i>A</i> และ <i>B</i> หรือเขียนได้อีกแบบเป็น <i>A</i> \ <i>B</i> เช่น{<i>x</i> | <i>x</i> ∈ <i>A</i> and <i>x</i> ∉ <i>B</i>}<br>
+      ตัวอย่าง: [0, 2) − (1, 3) = [0, 1]
     </li>
   </ul>
 </ul>
 
 # --instructions--
 
-เขียนฟังก์ชันที่รับ 2 object โดยที่stringและarrayเป็นพารามิเตอร์ object แสดงถึงsetและมีattribute: `low`, `high` และ `rangeType` 
+ให้เขียนฟังก์ชันที่รับพารามิเตอร์ 2 ตัว โดยเป็นสตริงและ array ของ object
 
-`rangeType`  สามารถมีค่าได้ 0, 1, 2 และ 3 สำหรับ `CLOSED`, `BOTH_OPEN`, `LEFT_OPEN` และ `RIGHT_OPEN` ตามลำดับ ฟังก์ชันควรใช้setโดยใช้ข้อมูลนี้
+object ที่เป็นเซ็ทจะต้องมี attribute `low`, `high` และ `rangeType` 
 
-stringแสดงถึงการดำเนินการที่จะดำเนินการในset อาจเป็น: `"union"`, `"intersect"` และ `"subtract"` (ความแตกต่าง)
+`rangeType` จะมีค่าเป็น 0, 1, 2 หรือ 3 ซึ่งแทนที่ค่า `CLOSED`, `BOTH_OPEN`, `LEFT_OPEN` และ `RIGHT_OPEN` ตามลำดับ ฟังก์ชันต้องดูรูปแบบของเซ็ทตามข้อมูลนี้
 
-หลังจากดำเนินการ ฟังก์ชันควรตรวจสอบว่าค่าในarrayมีอยู่ในsetผลลัพธ์หรือไม่ และเก็บค่าbooleanที่สอดคล้องกันไปยังarray ฟังก์ชันควรส่งคืนarrayนี้
+สตริงเป็นตัวกำหนดการดำเนินการ ซึ่งจะมีค่าเป็น `"union"`, `"intersect"` และ `"subtract"`
+
+หลังจากดำเนินการ ฟังก์ชันควรตรวจสอบว่าค่าใน array มีอยู่ในเซ็ทผลลัพธ์หรือไม่ และเก็บค่า boolean ไว้ใน array ตามตำแหน่งของเซ็ทนั้น และคืนค่า array นี้ออกมา
 
 # --hints--
 
-`realSet` ควรเป็น function.
+`realSet` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof realSet == 'function');
 ```
 
-`realSet({"low":0, "high":1, `rangeType` :2}, {"low":0, "high":2, `rangeType` :3}, "union", [1, 2, 3])` ควร return array.
+`realSet({"low":0, "high":1, "rangeType" :2}, {"low":0, "high":2, "rangeType" :3}, "union", [1, 2, 3])` ต้องคืนค่าเป็น array
 
 ```js
 assert(
@@ -77,7 +81,7 @@ assert(
 );
 ```
 
-`realSet({"low":0, "high":1, `rangeType` :2}, {"low":0, "high":2, `rangeType` :3}, "union", [1, 2, 3])` ควร return `[true, false, false]`.
+`realSet({"low":0, "high":1, "rangeType" :2}, {"low":0, "high":2, "rangeType" :3}, "union", [1, 2, 3])` ต้องคืนค่าเป็น `[true, false, false]`
 
 ```js
 assert.deepEqual(
@@ -91,7 +95,7 @@ assert.deepEqual(
 );
 ```
 
-`realSet({"low":0, "high":2, `rangeType` :3}, {"low":1, "high":2, `rangeType` :2}, "intersect", [0, 1, 2])` ควร return `[false, false, false]`.
+`realSet({"low":0, "high":2, "rangeType" :3}, {"low":1, "high":2, "rangeType" :2}, "intersect", [0, 1, 2])` ต้องคืนค่าเป็น `[false, false, false]`
 
 ```js
 assert.deepEqual(
@@ -105,7 +109,7 @@ assert.deepEqual(
 );
 ```
 
-`realSet({"low":0, "high":3, `rangeType` :3}, {"low":0, "high":1, `rangeType` :1}, "subtract", [0, 1, 2])` ควร return `[true, true, true]`.
+`realSet({"low":0, "high":3, "rangeType" :3}, {"low":0, "high":1, "rangeType" :1}, "subtract", [0, 1, 2])` ต้องคืนค่าเป็น `[true, true, true]`
 
 ```js
 assert.deepEqual(
@@ -119,7 +123,7 @@ assert.deepEqual(
 );
 ```
 
-`realSet({"low":0, "high":3, `rangeType` :3}, {"low":0, "high":1, `rangeType` :0}, "subtract", [0, 1, 2])` ควร return `[false, false, true]`.
+`realSet({"low":0, "high":3, "rangeType" :3}, {"low":0, "high":1, "rangeType" :0}, "subtract", [0, 1, 2])` ต้องคืนค่าเป็น `[false, false, true]`
 
 ```js
 assert.deepEqual(
@@ -133,7 +137,7 @@ assert.deepEqual(
 );
 ```
 
-`realSet({"low":0, "high":33, `rangeType` :1}, {"low":30, "high":31, `rangeType` :0}, "intersect", [30, 31, 32])` ควร return `[true, true, false]`.
+`realSet({"low":0, "high":33, "rangeType" :1}, {"low":30, "high":31, "rangeType" :0}, "intersect", [30, 31, 32])` ต้องคืนค่าเป็น `[true, true, false]`
 
 ```js
 assert.deepEqual(

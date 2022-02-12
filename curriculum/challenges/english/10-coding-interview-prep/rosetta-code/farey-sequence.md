@@ -10,16 +10,16 @@ dashedName: farey-sequence
 
 [Farey sequence](<https://en.wikipedia.org/wiki/Farey sequence> "wp: Farey sequence") <code>F<sub>n</sub></code> ของลำดับ `n` คือลำดับของเศษส่วนที่ลดลงอย่างสมบูรณ์ระหว่าง `0` และ `1` ซึ่งเมื่ออยู่ในพจน์ที่ต่ำที่สุด จะมีตัวส่วนน้อยกว่าหรือเท่ากับ `n` จัดเรียงตามขนาดที่เพิ่มขึ้น
 
-*Farey sequence* บางครั้งเรียกว่า *Farey series* อย่างไม่ถูกต้อง
+บางคนจะเรียก *Farey sequence* ว่า *Farey series* ซึ่งชื่อนี้ไม่ถูกต้อง
 
-ลำดับ Farey แต่ละลำดับ:
+Farey sequence แต่ละตัวจะต้อง:
 
 <ul>
-  <li>starts with the value  0,  denoted by the fraction  $ \frac{0}{1} $</li>
-  <li>ends with the value  1,  denoted by the fraction  $ \frac{1}{1}$.</li>
+  <li>เริ่มที่ 0 ซึ่งมาจาก $ \frac{0}{1}$</li>
+  <li>จบที่ 1 ซึ่งมาจาก $ \frac{1}{1}$</li>
 </ul>
 
-Farey sequences ของลำดับ `1` ถึง `5` เป็น:
+Farey sequence ของ `1` ถึง `5` เป็น:
 
 <ul>
   <li style='list-style: none;'>${\bf\it{F}}_1 = \frac{0}{1}, \frac{1}{1}$</li>
@@ -31,35 +31,35 @@ Farey sequences ของลำดับ `1` ถึง `5` เป็น:
 
 # --instructions--
 
-เขียนฟังก์ชันที่ส่งคืนลำดับแฟรี่ของคำสั่ง `n` ฟังก์ชันควรมีหนึ่งพารามิเตอร์ที่เป็น `n`ควรส่งคืนลำดับเป็นarray
+ให้เขียนฟังก์ชันที่คืนค่าเป็น Farey sequence ของ `n` ให้ฟังก์ชันรับพารามิตเตอร์ `n` และคืนค่าเป็น array
 
 # --hints--
 
-`farey` ควรเป็น function.
+`farey` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof farey === 'function');
 ```
 
-`farey(3)` ควร return array
+`farey(3)` ต้องคืนค่าเป็น array
 
 ```js
 assert(Array.isArray(farey(3)));
 ```
 
-`farey(3)` ควร return `["1/3","1/2","2/3"]`
+`farey(3)` ต้องคืนค่าเป็น `["1/3","1/2","2/3"]`
 
 ```js
 assert.deepEqual(farey(3), ['1/3', '1/2', '2/3']);
 ```
 
-`farey(4)` ควร return `["1/4","1/3","1/2","2/4","2/3","3/4"]`
+`farey(4)` ต้องคืนค่าเป็น `["1/4","1/3","1/2","2/4","2/3","3/4"]`
 
 ```js
 assert.deepEqual(farey(4), ['1/4', '1/3', '1/2', '2/4', '2/3', '3/4']);
 ```
 
-`farey(5)` ควร return `["1/5","1/4","1/3","2/5","1/2","2/4","3/5","2/3","3/4","4/5"]`
+`farey(5)` ต้องคืนค่าเป็น `["1/5","1/4","1/3","2/5","1/2","2/4","3/5","2/3","3/4","4/5"]`
 
 ```js
 assert.deepEqual(farey(5), [

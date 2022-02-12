@@ -23,13 +23,14 @@ dashedName: problem-140-modified-fibonacci-golden-nuggets
 | $\frac{\sqrt{137} − 5}{14}$ | $4$      |
 | $\frac{1}{2}$               | $5$      |
 
-เราจะเรียก $A_G(x)$ ว่า golden nuggets  ถ้า $x$ เป็นเหตุเป็นผลเพราะมันหายากขึ้นเรื่อยๆ ตัวอย่างเช่น golden nuggets ตัวที่ 20 คือ 211345365
+เราจะเรียก $A_G(x)$ ว่า golden nugget  
+ถ้า $x$ เป็นจำนวนตรรกยะ เช่น golden nugget ตัวที่ 20 คือ 211345365
 
-หาผลรวมของ golden nuggets 30 ลำดับแรก
+ให้หาผลรวมของ golden nugget 30 ลำดับแรก
 
 # --hints--
 
-`modifiedGoldenNuggets()` ควร return `5673835352990`
+`modifiedGoldenNuggets()` ต้องคืนค่าเป็น `5673835352990`
 
 ```js
 assert.strictEqual(modifiedGoldenNuggets(), 5673835352990);

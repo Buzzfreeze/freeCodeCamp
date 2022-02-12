@@ -8,47 +8,46 @@ dashedName: sorting-algorithmsbead-sort
 
 # --description--
 
-Sort array ของ positive integers ใช้ [Bead Sort Algorithm](https://en.wikipedia.org/wiki/Bead_sort).
+ให้ sort array ของจำนวนเต็มบวกโดยใช้ [Bead Sort Algorithm](https://en.wikipedia.org/wiki/Bead_sort).
 
-*bead sort* รู้จักในนามของ *gravity sort*.
+*bead sort* จะเรียกกันอีกชื่อว่า *gravity sort*
 
-algorithm มี O(S) โดยที่ S คือผลรวมของจำนวนเต็มในชุดinput: แต่ละลูกปัดจะถูกย้ายทีละรายการ
+อัลกอริทึมนี้เป็น O(S) โดยที่ S คือผลรวมของจำนวนเต็มใน input
 
-กรณีนี้เป็นกรณีที่มีการใช้การจัดเรียงลูกปัด โดยไม่มีกลไกช่วยในการค้นหาพื้นที่ว่างด้านล่างลูกปัด เช่น ในการใช้งานซอฟต์แวร์
 
 # --hints--
 
-`beadSort` ควรเป็น function.
+`beadSort` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof beadSort == 'function');
 ```
 
-`beadSort([25, 32, 12, 7, 20])` ควร return array.
+`beadSort([25, 32, 12, 7, 20])` ต้องคืนค่าเป็น array
 
 ```js
 assert(Array.isArray(beadSort([25, 32, 12, 7, 20])));
 ```
 
-`beadSort([25, 32, 12, 7, 20])` ควร return `[7, 12, 20, 25, 32]`.
+`beadSort([25, 32, 12, 7, 20])` ต้องคืนค่าเป็น `[7, 12, 20, 25, 32]`
 
 ```js
 assert.deepEqual(beadSort([25, 32, 12, 7, 20]), [7, 12, 20, 25, 32]);
 ```
 
-`beadSort([38, 45, 35, 8, 13])` ควร return `[8, 13, 35, 38, 45]`.
+`beadSort([38, 45, 35, 8, 13])` ต้องคืนค่าเป็น `[8, 13, 35, 38, 45]`
 
 ```js
 assert.deepEqual(beadSort([38, 45, 35, 8, 13]), [8, 13, 35, 38, 45]);
 ```
 
-`beadSort([43, 36, 20, 34, 24])` ควร return `[20, 24, 34, 36, 43]`.
+`beadSort([43, 36, 20, 34, 24])` ต้องคืนค่าเป็น `[20, 24, 34, 36, 43]`
 
 ```js
 assert.deepEqual(beadSort([43, 36, 20, 34, 24]), [20, 24, 34, 36, 43]);
 ```
 
-`beadSort([12, 33, 26, 18, 1, 16, 38])` ควร return `[1, 12, 16, 18, 26, 33, 38]`.
+`beadSort([12, 33, 26, 18, 1, 16, 38])` ต้องคืนค่าเป็น `[1, 12, 16, 18, 26, 33, 38]`
 
 ```js
 assert.deepEqual(beadSort([12, 33, 26, 18, 1, 16, 38]), [
@@ -62,7 +61,7 @@ assert.deepEqual(beadSort([12, 33, 26, 18, 1, 16, 38]), [
 ]);
 ```
 
-`beadSort([3, 39, 48, 16, 1, 4, 29])` ควร return `[1, 3, 4, 16, 29, 39, 48]`.
+`beadSort([3, 39, 48, 16, 1, 4, 29])` ต้องคืนค่าเป็น `[1, 3, 4, 16, 29, 39, 48]`
 
 ```js
 assert.deepEqual(beadSort([3, 39, 48, 16, 1, 4, 29]), [

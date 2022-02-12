@@ -8,7 +8,7 @@ dashedName: date-manipulation
 
 # --description--
 
-กำหนดstringวันที่ใน EST ให้ส่งออกวันที่ที่กำหนดเป็นstringโดยเพิ่มเวลา 12 ชั่วโมง ควรรักษาเขตเวลาไว้
+ถ้าสตริงอยู่ในหน่วยเวลา EST ให้คืนค่าเป็นวันที่ที่ส่งเข้าไป และบวกเพิ่ม 12 ชั่วโมง โดยต้องมี time zone เหมือนเดิม
 
 ตัวอย่าง input: `"March 6 2009 7:30pm EST"`
 
@@ -16,19 +16,19 @@ dashedName: date-manipulation
 
 # --hints--
 
-`add12Hours` ควรเป็น function.
+`add12Hours` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof add12Hours === 'function');
 ```
 
-`add12Hours(dateString)` ควร return string.
+`add12Hours(dateString)` ต้องคืนค่าเป็นสตริง
 
 ```js
 assert(typeof add12Hours('January 17 2017 11:43am EST') === 'string');
 ```
 
-`add12Hours("January 17 2017 11:43am EST")` ควร return `"January 17 2017 11:43pm EST"`
+`add12Hours("January 17 2017 11:43am EST")` ต้องคืนค่าเป็น `"January 17 2017 11:43pm EST"`
 
 ```js
 assert(
@@ -36,25 +36,25 @@ assert(
 );
 ```
 
-ควร handle day change. `add12Hours("March 6 2009 7:30pm EST")` ควร return `"March 7 2009 7:30am EST"`
+ต้องรองรับการเปลี่ยนวัน `add12Hours("March 6 2009 7:30pm EST")` ต้องคืนค่าเป็น `"March 7 2009 7:30am EST"`
 
 ```js
 assert(add12Hours('March 6 2009 7:30pm EST') === 'March 7 2009 7:30am EST');
 ```
 
-ควร handle month change in a leap years. `add12Hours("February 29 2004 9:15pm EST")` ควร return `"March 1 2004 9:15am EST"`
+ต้องรองรับการเปลี่ยนเดือนในปีอธิกสุรทิน `add12Hours("February 29 2004 9:15pm EST")` ต้องคืนค่าเป็น `"March 1 2004 9:15am EST"`
 
 ```js
 assert(add12Hours('February 29 2004 9:15pm EST') === 'March 1 2004 9:15am EST');
 ```
 
-ควร handle month change in a common years. `add12Hours("February 28 1999 3:15pm EST")` ควร return `"March 1 1999 3:15am EST"`
+ต้องรองรับการเปลี่ยนเดือนในปีปกติ `add12Hours("February 28 1999 3:15pm EST")` ต้องคืนค่าเป็น `"March 1 1999 3:15am EST"`
 
 ```js
 assert(add12Hours('February 28 1999 3:15pm EST') === 'March 1 1999 3:15am EST');
 ```
 
-ควร handle year change. `add12Hours("December 31 2020 1:45pm EST")` ควร return `"January 1 2021 1:45am EST"`
+ต้องรองรับการเปลี่ยนปี `add12Hours("December 31 2020 1:45pm EST")` ต้องคืนค่าเป็น `"January 1 2021 1:45am EST"`
 
 ```js
 assert(

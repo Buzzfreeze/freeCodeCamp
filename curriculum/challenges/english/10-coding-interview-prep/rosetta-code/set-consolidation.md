@@ -8,58 +8,59 @@ dashedName: set-consolidation
 
 # --description--
 
-ให้ set item 2 set ถ้าitemใด ๆ เหมือนกับในsetใด ๆ ผลลัพธ์ของการใช้ *consolidation* กับsetเหล่านั้นคือ set ของ set ที่มีเนื้อหาคือ:
+ผลของการ *consolidation* ของเซ็ทสองเซ็ทคือ:
 
 <ul>
-  <li>The two input sets if no common item exists between the two input sets of items.</li>
-  <li>The single set that is the union of the two input sets if they share a common item.</li>
+  <li>เซ็ททั้งสองเซ็ท ถ้าเซ็ททั้งสองนั้นไม่มีข้อมูลที่เหมือนกันเลย</li>
+  <li>เซ็ทที่เกิดจากสองเซ็ทนั้น union กัน ถ้าสองเซ็ทนั้นมีข้อมูลที่เหมือนกัน</li>
 </ul>
 
-ให้ N setของitemโดยที่ N > 2 ผลลัพธ์จะเหมือนกับการแทนที่setค่าผสมทั้งหมดของสองsetซ้ำๆ โดยการรวมitemจนกว่าจะไม่มีการรวมเพิ่มเติมระหว่างคู่ของset ถ้ายังไม่มี N &lt; 2 สามารถส่งคืนค่าได้
+ถ้ามีเซ็ทจะนวน N เซ็ท โดยที่ N > 2 จะทำการ consolidation ระหว่างเซ็ทไปเรื่อยๆ จนกว่าจะไม่สามารถทำการ consolidation ได้แล้ว แต่ถ้า N &lt; 2 จะไม่มีความหมาย ให้คืนค่าเป็น input ได้เลย
 
 เช่น:
 
 **Example 1:**
 
-ให้setทั้งสองset `{A,B}` และ `{C,D}` ดังนั้นจึงไม่มีองค์ประกอบทั่วไประหว่างsetและผลลัพธ์จะเหมือนกับinput
+ถ้ามีเซ็ทเป็น `{A,B}` และ `{C,D}` สองเซ็ทนี้ไม่มีข้อมูลที่เหมือนกัน ให้คืนค่าเป็นทั้งสองเซ็ทนี้ได้เลย
 
 **Example 2:**
 
-จากสองset `{A,B}` และ `{B,D}` จึงมีองค์ประกอบทั่วไป `B` ระหว่างsetและผลลัพธ์คือsetเดียว `{B,D,A}` (โปรดทราบว่าลำดับของitemในsetนั้นไม่มีสาระสำคัญ: `{A,B,D}` เหมือนกับ `{B,D,A}` และ `{D,A,B}` เป็นต้น)
+ถ้ามีเซ็ทเป็น `{A,B}` และ `{B,D}` ทั้งสองเซ็ทจะมี `B` ที่เหมือนกันทำให้ผลลัพธ์เป็น `{B,D,A}` (ลำดับของข้อมูลในเซ็ทไม่มีความสำคัญ ทำให้ `{A,B,D}` มีค่าเท่ากับ `{B,D,A}` และ `{D,A,B}`)
 
 **Example 3:**
 
-จากทั้งสามset `{A,B}` และ `{C,D}` และ `{D,B}` จะไม่มีองค์ประกอบร่วมกันระหว่างset `{A,B}` และ `{C,D} ` แต่set `{A,B}` และ `{D,B}` ใช้องค์ประกอบร่วมกันที่รวมเข้าด้วยกันเพื่อสร้างผลลัพธ์ `{B,D,A}` ในการตรวจสอบผลลัพธ์นี้ด้วยsetที่เหลือ `{C,D}` พวกเขาใช้องค์ประกอบร่วมกันและรวมเข้ากับผลลัพธ์สุดท้ายของsetเดียว `{A,B,C,D}`
+ถ้ามีเซ็ทเป็น `{A,B}` และ `{C,D}` และ `{D,B}`  
+เซ็ท `{A,B}` และ `{C,D}` จะไม่มีข้อมูลที่เหมือนกัน แต่เซ็ท `{A,B}` และ `{D,B}` ทั้งสองเซ็ทจะมี `B` ที่เหมือนกันทำให้ผลลัพธ์เป็น `{B,D,A}` และก็นำเซ็ทนี้มาเทียบกับเซ็ท `{C,D}` อีกที ทำให้ได้ผลลัพธ์เป็น `{A,B,C,D}`
 
 **Example 4:**
 
-การรวมตัวของห้าset:
+ถ้ามีเซ็ทเป็น:
 
-`{H,I,K}`, `{A,B}`, `{C,D}`, `{D,B}`, and `{F,G,H}`
+`{H,I,K}`, `{A,B}`, `{C,D}`, `{D,B}`, และ `{F,G,H}`
 
-2 sets:
+จะได้ผลลัพธ์เป็น 2 เซ็ทนี้:
 
-`{A, C, B, D}`, และ `{G, F, I, H, K}`
+`{A, C, B, D}` และ `{G, F, I, H, K}`
 
 # --instructions--
 
-เขียนฟังก์ชันที่รับarrayของatringเป็นพารามิเตอร์ แต่ละatringแสดงถึงsetที่มีอักขระที่แสดงถึงองค์ประกอบของset ฟังก์ชันควรส่งคืนarray 2D ที่มีรวม set หมายเหตุ: ควรจัดเรียงแต่ละset
+ให้เขียนฟังก์ชันที่รับค่า array ของสตริง และคืนค่าเป็น array ที่เกิดจากการ consolidation
 
 # --hints--
 
-`setConsolidation` ควรเป็น function.
+`setConsolidation` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof setConsolidation === 'function');
 ```
 
-`setConsolidation(["AB", "CD"])` ควร return array.
+`setConsolidation(["AB", "CD"])` ต้องคืนค่าเป็น array
 
 ```js
 assert(Array.isArray(setConsolidation(['AB', 'CD'])));
 ```
 
-`setConsolidation(["AB", "CD"])` ควร return `[["C", "D"], ["A", "B"]]`.
+`setConsolidation(["AB", "CD"])` ต้องคืนค่าเป็น `[["C", "D"], ["A", "B"]]`
 
 ```js
 assert.deepEqual(setConsolidation(['AB', 'CD']), [
@@ -68,19 +69,19 @@ assert.deepEqual(setConsolidation(['AB', 'CD']), [
 ]);
 ```
 
-`setConsolidation(["AB", "BD"])` ควร return `[["A", "B", "D"]]`.
+`setConsolidation(["AB", "BD"])` ต้องคืนค่าเป็น `[["A", "B", "D"]]`
 
 ```js
 assert.deepEqual(setConsolidation(['AB', 'BD']), [['A', 'B', 'D']]);
 ```
 
-`setConsolidation(["AB", "CD", "DB"])` ควร return `[["A", "B", "C", "D"]]`.
+`setConsolidation(["AB", "CD", "DB"])` ต้องคืนค่าเป็น `[["A", "B", "C", "D"]]`
 
 ```js
 assert.deepEqual(setConsolidation(['AB', 'CD', 'DB']), [['A', 'B', 'C', 'D']]);
 ```
 
-`setConsolidation(["HIK", "AB", "CD", "DB", "FGH"])` ควร return `[["F", "G", "H", "I", "K"], ["A", "B", "C", "D"]]`.
+`setConsolidation(["HIK", "AB", "CD", "DB", "FGH"])` ต้องคืนค่าเป็น `[["F", "G", "H", "I", "K"], ["A", "B", "C", "D"]]`
 
 ```js
 assert.deepEqual(setConsolidation(['HIK', 'AB', 'CD', 'DB', 'FGH']), [

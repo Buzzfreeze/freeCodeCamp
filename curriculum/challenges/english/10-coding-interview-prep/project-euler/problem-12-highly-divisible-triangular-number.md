@@ -8,12 +8,13 @@ dashedName: problem-12-highly-divisible-triangular-number
 
 # --description--
 
-ลำดับของ triangle numbers ได้จากผลบวกของจำนวน ดังนั้นค่า triangle number เจ็ดลำดับเป็น 1 + 2 + 3 + 4 + 5 + 6 + 7 = 28. 
-ค่าสิบลำดับแรกจะเป็น
+ลำดับของ triangle number ได้จากผลบวกของจำนวนธรรมชาติ  
+ดังนั้นค่า triangle number ตัวที่เจ็ดจะเป็น 1 + 2 + 3 + 4 + 5 + 6 + 7 = 28.  
+โดยค่าสิบตัวแรกจะเป็น
 
 <div style='text-align: center;'>1, 3, 6, 10, 15, 21, 28, 36, 45, 55, ...</div>
 
-list ของ factor ของ triangle numbers ของเจ็ดลำดับแรกเป็น:
+ตัวประกอบของ triangle number ของเจ็ดตัวแรกคือ:
 
 <div style='padding-left: 4em;'><b>1:</b> 1</div>
 <div style='padding-left: 4em;'><b>3:</b> 1, 3</div>
@@ -24,41 +25,41 @@ list ของ factor ของ triangle numbers ของเจ็ดลำด�
 <div style='padding-left: 4em;'><b>28:</b> 1, 2, 4, 7, 14, 28</div>
 
 เราจะเห็นว่า 28 เป็น triangle number ตัวแรกที่มีตัวหารมากกว่าห้าตัว
-ค่าของ triangle number ตัวแรกที่มีตัวหารมากกว่า `n` ตัวคืออะไร
+ให้หาค่าของ triangle number ตัวแรกที่มีตัวหารมากกว่า `n` ตัว
 
 # --hints--
 
-`divisibleTriangleNumber(5)` ควร return number
+`divisibleTriangleNumber(5)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof divisibleTriangleNumber(5) === 'number');
 ```
 
-`divisibleTriangleNumber(5)` ควร return 28
+`divisibleTriangleNumber(5)` ต้องคืนค่าเป็น 28
 
 ```js
 assert.strictEqual(divisibleTriangleNumber(5), 28);
 ```
 
-`divisibleTriangleNumber(23)` ควร return 630
+`divisibleTriangleNumber(23)` ต้องคืนค่าเป็น 630
 
 ```js
 assert.strictEqual(divisibleTriangleNumber(23), 630);
 ```
 
-`divisibleTriangleNumber(167)` ควร return 1385280
+`divisibleTriangleNumber(167)` ต้องคืนค่าเป็น 1385280
 
 ```js
 assert.strictEqual(divisibleTriangleNumber(167), 1385280);
 ```
 
-`divisibleTriangleNumber(374)` ควร return 17907120
+`divisibleTriangleNumber(374)` ต้องคืนค่าเป็น 17907120
 
 ```js
 assert.strictEqual(divisibleTriangleNumber(374), 17907120);
 ```
 
-`divisibleTriangleNumber(500)` ควร return 76576500
+`divisibleTriangleNumber(500)` ต้องคืนค่าเป็น 76576500
 
 ```js
 assert.strictEqual(divisibleTriangleNumber(500), 76576500);

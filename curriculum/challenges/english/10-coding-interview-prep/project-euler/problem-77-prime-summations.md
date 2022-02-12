@@ -8,7 +8,7 @@ dashedName: problem-77-prime-summations
 
 # --description--
 
-เป็นไปได้ที่จะเขียนสิบเป็นผลรวมของจำนวนเฉพาะในห้าวิธีที่แตกต่างกัน:
+เราสามารถเขียนจำนวนเฉพาะที่บวกกันได้ 10 ได้ห้าวิธี
 
 <div style='margin-left: 4em;'>
   7 + 3<br>
@@ -18,29 +18,29 @@ dashedName: problem-77-prime-summations
   2 + 2 + 2 + 2 + 2<br><br>
 </div>
 
-ค่าแรกที่สามารถเขียนเป็นผลรวมของจำนวนเฉพาะมากกว่า `n` คืออะไร
+ค่าแรกที่สามารถเขียนเป็นผลรวมของจำนวนเฉพาะที่มากกว่า `n` คือค่าไหน
 
 # --hints--
 
-`primeSummations(5)` ควร return a number.
+`primeSummations(5)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof primeSummations(5) === 'number');
 ```
 
-`primeSummations(5)` ควร return `11`.
+`primeSummations(5)` ต้องคืนค่าเป็น `11`
 
 ```js
 assert.strictEqual(primeSummations(5), 11);
 ```
 
-`primeSummations(100)` ควร return `31`.
+`primeSummations(100)` ต้องคืนค่าเป็น `31`
 
 ```js
 assert.strictEqual(primeSummations(100), 31);
 ```
 
-`primeSummations(1000)` ควร return `53`.
+`primeSummations(1000)` ต้องคืนค่าเป็น `53`
 
 ```js
 assert.strictEqual(primeSummations(1000), 53);

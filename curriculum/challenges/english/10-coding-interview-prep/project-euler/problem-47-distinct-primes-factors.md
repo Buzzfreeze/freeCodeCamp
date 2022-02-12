@@ -8,14 +8,14 @@ dashedName: problem-47-distinct-primes-factors
 
 # --description--
 
-สองลำดับแรกของตัวเลขที่เรียงติดกันมีสองค่าที่เป็น distinct prime factors เป็น:
+สองลำดับแรกของตัวเลขที่เรียงติดกันมีสองค่าที่เป็น distinct prime factor เป็น:
 
 <div style='padding-left: 4em;'>
   14 = 2 × 7<br>
   15 = 3 × 5
 </div>
 
-สามลำดับแรกของตัวเลขที่เรียงติดกันมีสามค่าที่เป็น distinct prime factors เป็น:
+สามลำดับแรกของตัวเลขที่เรียงติดกันมีสามค่าที่เป็น distinct prime factor เป็น:
 
 <div style='padding-left: 4em;'>
   644 = 2<sup>2</sup> × 7 × 23<br>
@@ -23,30 +23,30 @@ dashedName: problem-47-distinct-primes-factors
   646 = 2 × 17 × 19
 </div>
 
-หาค่าสี่ลำดับแรกของตัวเลขที่เรียงติดกันมีสี่ค่าที่เป็น distinct prime factors
+ให้หาค่าสี่ลำดับแรกของตัวเลขที่เรียงติดกันมีสี่ค่าที่เป็น distinct prime factor
 และค่าตัวแรกคืออะไร
 
 # --hints--
 
-`distinctPrimeFactors(2, 2)` ควร return number
+`distinctPrimeFactors(2, 2)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof distinctPrimeFactors(2, 2) === 'number');
 ```
 
-`distinctPrimeFactors(2, 2)` ควร return 14.
+`distinctPrimeFactors(2, 2)` ต้องคืนค่าเป็น 14.
 
 ```js
 assert.strictEqual(distinctPrimeFactors(2, 2), 14);
 ```
 
-`distinctPrimeFactors(3, 3)` ควร return 644.
+`distinctPrimeFactors(3, 3)` ต้องคืนค่าเป็น 644.
 
 ```js
 assert.strictEqual(distinctPrimeFactors(3, 3), 644);
 ```
 
-`distinctPrimeFactors(4, 4)` ควร return 134043.
+`distinctPrimeFactors(4, 4)` ต้องคืนค่าเป็น 134043.
 
 ```js
 assert.strictEqual(distinctPrimeFactors(4, 4), 134043);

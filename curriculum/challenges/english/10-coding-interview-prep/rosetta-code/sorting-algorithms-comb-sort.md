@@ -8,27 +8,27 @@ dashedName: sorting-algorithmscomb-sort
 
 # --description--
 
-Implement a *comb sort*.
+ให้เขียนฟังก์ชันที่ทำการ sort array โดยใช้ *comb sort*.
 
-**Comb Sort** เป็นตัวแปรของ [Bubble Sort](<https://rosettacode.org/wiki/Bubble Sort>).
+**Comb Sort** ก็พัฒนามาจาก [Bubble Sort](<https://rosettacode.org/wiki/Bubble Sort>)
 
-เช่นเดียวกับ [Shell sort](<https://rosettacode.org/wiki/Shell sort>) การจัดเรียงแบบหวีจะเพิ่มช่องว่างที่ใช้ในการเปรียบเทียบและการแลกเปลี่ยน
+โดยจะเหมือนกับ [Shell sort](<https://rosettacode.org/wiki/Shell sort>) ตรงที่ Comb Sort จะเพิ่มช่องว่างเพื่อใช้ในการเปรียบเทียบ และการเปลี่ยนค่า
 
 การหารช่องว่างด้วย $(1-e^{-\\varphi})^{-1} \\ประมาณ 1.247330950103979$ ได้ผลดีที่สุด แต่ 1.3 อาจใช้งานได้จริงมากกว่า
 
-การใช้งานบางอย่างใช้การเรียงลำดับการแทรกเมื่อช่องว่างน้อยกว่าจำนวนหนึ่ง
+ในบางครั้ง จะเปลี่ยนไปใช้ insertion sort เมื่อ ช่องว่างน้อยกว่าค่าที่กำหนด
 
-**Also see**
+**ลองดูที่**
 
 <ul>
-  <li>the Wikipedia article: <a href='https://en.wikipedia.org/wiki/Comb sort' target='_blank'>Comb sort</a>.</li>
+  <li>Wikipedia: <a href='https://en.wikipedia.org/wiki/Comb sort' target='_blank'>Comb sort</a></li>
 </ul>
 
-Variants:
+Sort แบบอื่นๆ:
 
 <ul>
-  <li>Combsort11 makes sure the gap ends in (11, 8, 6, 4, 3, 2, 1), which is significantly faster than the other two possible endings.</li>
-  <li>Combsort with different endings changes to a more efficient sort when the data is almost sorted (when the gap is small). Comb sort with a low gap isn't much better than the Bubble Sort.</li>
+  <li>Combsort11 ทำให้ช่องว่างหยุดที่ (11, 8, 6, 4, 3, 2, 1) ซึ่งจะทำให้เร็วกว่าแบบอื่นมาก</li>
+  <li>Combsort ที่มีค่าจบต่างกันจะทำให้ประสิทธิภาพต่างกัน และถ้ามีช่องว่างน้อยมากๆ ก็จะไม่ได้ดีกว่า Bubble Sort มากนัก</li>
 </ul>
 
 Pseudocode:
@@ -58,41 +58,42 @@ Pseudocode:
 </pre>
 
 # --instructions--
-เขียนฟังก์ชันที่เรียงลำดับarrayที่กำหนดโดยใช้การเรียงลำดับแบบComb sort
+
+ให้เขียนฟังก์ชันที่รับค่าเป็น array และคืนค่าเป็น array ที่เรียงลำดับโดยใช้ Comb sort
 
 # --hints--
 
-`combSort` ควรเป็น function.
+`combSort` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof combSort == 'function');
 ```
 
-`combSort([25, 32, 12, 7, 20])` ควร return array.
+`combSort([25, 32, 12, 7, 20])` ต้องคืนค่าเป็น array
 
 ```js
 assert(Array.isArray(combSort([25, 32, 12, 7, 20])));
 ```
 
-`combSort([25, 32, 12, 7, 20])` ควร return `[7, 12, 20, 25, 32]`.
+`combSort([25, 32, 12, 7, 20])` ต้องคืนค่าเป็น `[7, 12, 20, 25, 32]`
 
 ```js
 assert.deepEqual(combSort([25, 32, 12, 7, 20]), [7, 12, 20, 25, 32]);
 ```
 
-`combSort([38, 45, 35, 8, 13])` ควร return `[8, 13, 35, 38, 45]`.
+`combSort([38, 45, 35, 8, 13])` ต้องคืนค่าเป็น `[8, 13, 35, 38, 45]`
 
 ```js
 assert.deepEqual(combSort([38, 45, 35, 8, 13]), [8, 13, 35, 38, 45]);
 ```
 
-`combSort([43, 36, 20, 34, 24])` ควร return `[20, 24, 34, 36, 43]`.
+`combSort([43, 36, 20, 34, 24])` ต้องคืนค่าเป็น `[20, 24, 34, 36, 43]`
 
 ```js
 assert.deepEqual(combSort([43, 36, 20, 34, 24]), [20, 24, 34, 36, 43]);
 ```
 
-`combSort([12, 33, 26, 18, 1, 16, 38])` ควร return `[1, 12, 16, 18, 26, 33, 38]`.
+`combSort([12, 33, 26, 18, 1, 16, 38])` ต้องคืนค่าเป็น `[1, 12, 16, 18, 26, 33, 38]`
 
 ```js
 assert.deepEqual(combSort([12, 33, 26, 18, 1, 16, 38]), [
@@ -106,7 +107,7 @@ assert.deepEqual(combSort([12, 33, 26, 18, 1, 16, 38]), [
 ]);
 ```
 
-`combSort([3, 39, 48, 16, 1, 4, 29])` ควร return `[1, 3, 4, 16, 29, 39, 48]`.
+`combSort([3, 39, 48, 16, 1, 4, 29])` ต้องคืนค่าเป็น `[1, 3, 4, 16, 29, 39, 48]`
 
 ```js
 assert.deepEqual(combSort([3, 39, 48, 16, 1, 4, 29]), [

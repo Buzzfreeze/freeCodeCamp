@@ -8,21 +8,27 @@ dashedName: state-name-puzzle
 
 # --description--
 
-งานนี้ได้รับแรงบันดาลใจจาก "การเล่นคำ" คอลัมน์ DDJ ของมาร์ค เนลสัน และหนึ่งในเกมไขปริศนาประจำสัปดาห์จาก Will Shortz ใน NPR Weekend Edition [\[1\]](https://www.npr.org/templates/story/story.php?storyId=9264290) และเดิมมีสาเหตุมาจาก David Edelheit ความท้าทายคือการนำชื่อของรัฐสองรัฐในสหรัฐฯ มาผสมกัน จากนั้นจึงจัดเรียงตัวอักษรใหม่เพื่อสร้างชื่อของรัฐสองรัฐ *ที่แตกต่างกัน* (เพื่อให้ชื่อรัฐทั้งสี่แตกต่างกัน) รัฐเหล่านี้คืออะไร? ปัญหาได้รับการเผยแพร่ใหม่บน [เว็บการสนทนาของ Unicon](https://tapestry.tucson.az.us/twiki/bin/view/Main/StateNamesPuzzle) ซึ่งรวมถึงโซลูชันต่างๆ พร้อมการวิเคราะห์ เทคนิคหลายอย่างอาจมีประโยชน์ และคุณอาจต้องการอ้างอิงถึง[การกำหนดหมายเลข Gödel](https://en.wikipedia.org/wiki/Goedel_numbering), [ความสัมพันธ์ที่เท่าเทียมกัน](https://en.wikipedia.org/wiki/Equivalence_relation ) และ [คลาสเทียบเท่า](https://en.wikipedia.org/wiki/Equivalence_classes) ข้อดีพื้นฐานของสิ่งเหล่านี้ถูกกล่าวถึงในเว็บอภิปราย Unicon ความท้าทายที่สองในรูปแบบของรัฐใหม่ที่สมมติขึ้นก็ถูกนำเสนอเช่นกัน
+แบบฝึกหัดนี้ได้รับแรงบันดาลใจจากคอลัมน์ DDJ "Wordplay" ของ Mark Nelson และหนึ่งในเกมไขปริศนาประจำสัปดาห์ของ Will Shortz ใน NPR Weekend Edition [\[1\]](https://www.npr.org/templates/story/story.php?storyId=9264290) และเดิมถูกสร้างโดย David Edelheit 
+
+ให้นำชื่อของรัฐสองรัฐในสหรัฐฯ มาผสมกัน จากนั้นจึงจัดเรียงตัวอักษรใหม่เพื่อสร้างชื่อของรัฐอีกสองรัฐ *ที่ต่างกัน* (ตอนนี้เราจะมีชื่อรัฐทั้งหมดสี่รัฐแล้ว) 
+
+คำถามคือ ชื่อรัฐทั้งสี่รัฐนี้คืออะไร? ปัญหาได้รับการเผยแพร่ใหม่บน [Unicon Discussion Web](https://tapestry.tucson.az.us/twiki/bin/view/Main/StateNamesPuzzle) ซึ่งรวมถึงโซลูชันต่างๆ พร้อมการวิเคราะห์ เทคนิคหลายอย่างอาจมีประโยชน์ และคุณอาจต้องการอ้างอิงถึง[หมายเลข Gödel](https://en.wikipedia.org/wiki/Goedel_numbering), [equivalence relations](https://en.wikipedia.org/wiki/Equivalence_relation ) และ [equivalence classes](https://en.wikipedia.org/wiki/Equivalence_classes) 
 
 # --instructions--
 
-เขียนฟังก์ชันเพื่อแก้ปัญหาสำหรับarrayของชื่อรัฐที่กำหนด ฟังก์ชันควรส่งคืนarray แต่ละองค์ประกอบควรเป็นวัตถุในรูปแบบนี้: `{"from":[],"to":[]}` array "from" ควรมีชื่อดั้งเดิมและarray "to" ควรมีชื่อผลลัพธ์
+ให้เขียนฟังก์ชันเพื่อแก้ปัญหาสำหรับ array ของชื่อรัฐที่กำหนด ฟังก์ชันต้องคืนค่าเป็น array โดยแต่ละ element ใน array ต้องมีหน้าตาแบบนี้ `{"from":[],"to":[]}` 
+
+โดย "from" ต้องเป็นชื่อรัฐเดิม "to" เป็นชื่อรัฐใหม่
 
 # --hints--
 
-`solve` ควรเป็น function.
+`solve` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof solve == 'function');
 ```
 
-`solve(["New Mexico", "New York", "North Carolina ", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota"])` ควร return an array.
+`solve(["New Mexico", "New York", "North Carolina ", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota"])` ต้องคืนค่าเป็น array
 
 ```js
 assert(
@@ -44,7 +50,7 @@ assert(
 );
 ```
 
-`solve(["New Mexico", "New York", "North Carolina ", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota"])` ควร return `[{ from: ["North Carolina ", "South Dakota"], to: ["North Dakota", "South Carolina"] }]`.
+`solve(["New Mexico", "New York", "North Carolina ", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota"])` ต้องคืนค่าเป็น `[{ from: ["North Carolina ", "South Dakota"], to: ["North Dakota", "South Carolina"] }]`.
 
 ```js
 assert.deepEqual(
@@ -70,7 +76,7 @@ assert.deepEqual(
 );
 ```
 
-`solve(["New York", "New Kory", "Wen Kory", "York New", "Kory New", "New Kory"])` ควร return `[{ from: ["New Kory", "New York"], to: ["Wen Kory", "York New"] }, { from: ["New Kory", "New York"], to: ["Kory New", "Wen Kory"] }, { from: ["New Kory", "New York"], to: ["Kory New", "York New"] }, { from: ["New York", "Wen Kory"], to: ["New Kory", "York New"] }, { from: ["New York", "Wen Kory"], to: ["Kory New", "New Kory"] }, { from: ["New York", "Wen Kory"], to: ["Kory New", "York New"] }, { from: ["New York", "York New"], to: ["New Kory", "Wen Kory"] }, { from: ["New York", "York New"], to: ["Kory New", "New Kory"] }, { from: ["New York", "York New"], to: ["Kory New", "Wen Kory"] }, { from: ["Kory New", "New York"], to: ["New Kory", "Wen Kory"] }, { from: ["Kory New", "New York"], to: ["New Kory", "York New"] }, { from: ["Kory New", "New York"], to: ["Wen Kory", "York New"] }, { from: ["New Kory", "Wen Kory"], to: ["Kory New", "York New"] }, { from: ["New Kory", "York New"], to: ["Kory New", "Wen Kory"] }, { from: ["Kory New", "New Kory"], to: ["Wen Kory", "York New"] }]`.
+`solve(["New York", "New Kory", "Wen Kory", "York New", "Kory New", "New Kory"])` ต้องคืนค่าเป็น `[{ from: ["New Kory", "New York"], to: ["Wen Kory", "York New"] }, { from: ["New Kory", "New York"], to: ["Kory New", "Wen Kory"] }, { from: ["New Kory", "New York"], to: ["Kory New", "York New"] }, { from: ["New York", "Wen Kory"], to: ["New Kory", "York New"] }, { from: ["New York", "Wen Kory"], to: ["Kory New", "New Kory"] }, { from: ["New York", "Wen Kory"], to: ["Kory New", "York New"] }, { from: ["New York", "York New"], to: ["New Kory", "Wen Kory"] }, { from: ["New York", "York New"], to: ["Kory New", "New Kory"] }, { from: ["New York", "York New"], to: ["Kory New", "Wen Kory"] }, { from: ["Kory New", "New York"], to: ["New Kory", "Wen Kory"] }, { from: ["Kory New", "New York"], to: ["New Kory", "York New"] }, { from: ["Kory New", "New York"], to: ["Wen Kory", "York New"] }, { from: ["New Kory", "Wen Kory"], to: ["Kory New", "York New"] }, { from: ["New Kory", "York New"], to: ["Kory New", "Wen Kory"] }, { from: ["Kory New", "New Kory"], to: ["Wen Kory", "York New"] }]`.
 
 ```js
 assert.deepEqual(

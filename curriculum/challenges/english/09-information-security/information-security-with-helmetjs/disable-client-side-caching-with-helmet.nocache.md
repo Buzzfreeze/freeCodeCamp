@@ -8,18 +8,18 @@ dashedName: disable-client-side-caching-with-helmet-nocache
 
 # --description--
 
-โปรดทราบว่าโปรเจคนี้ถูกสร้างจากโปรเจคเริ่มต้นบน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec) หรือโคลนมาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/)
+project นี้สร้างขึ้นจาก [Replit ตัวนี้](https://replit.com/github/freeCodeCamp/boilerplate-infosec) หรือ clone มาจาก [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-infosec/)
 
-หากคุณกำลังปล่อยการอัปเดตสำหรับเว็บไซต์ของคุณ และคุณต้องการให้ผู้ใช้ดาวน์โหลดเวอร์ชันที่ใหม่กว่าเสมอ คุณสามารถ (ลอง) ปิดใช้งานการแคชบนเบราว์เซอร์ของ client ได้ กรณีนี้ก็สามารถเป็นประโยชน์ในการพัฒนาได้เช่นกัน การแคชมีประโยชน์ด้านประสิทธิภาพ ซึ่งคุณจะเสียมันไป ดังนั้นใช้ตัวเลือกนี้เมื่อมีความจำเป็นจริงเท่านั้น
+ถ้าคุณอัปเดตเว็บไซต์ของคุณ และคุณต้องการให้ผู้ใช้ดาวน์โหลดเวอร์ชันที่ใหม่ที่สุดเสมอ คุณสามารถพยายามปิดใช้งานการแคชบนเบราว์เซอร์บน client ได้  
+ซึ่งเราจะใช้ฟังก์ชันนี้ระหว่างเขียนเว็บก็ได้เช่นกัน การแคชจะเพิ่มประสิทธิภาพของหน้าเว็บ ถ้าปิดไว้เว็บของคุณอาจช้าลง ดังนั้นใช้ตัวเลือกนี้เมื่อมีความจำเป็นจริงๆเท่านั้น
 
 # --instructions--
 
-ให้ใช้ `helmet.noCache()` method บนเซิร์ฟเวอร์ของคุณ
-Use the `helmet.noCache()` method on your server.
+ให้ใช้ method `helmet.noCache()` ในเซิร์ฟเวอร์ของคุณ
 
 # --hints--
 
-helmet.noCache() middleware ควรถูกติดตั้งอย่างถูกต้อง
+ต้องใช้ middleware `helmet.noCache()` อย่างถูกต้อง
 
 ```js
 (getUserInput) =>

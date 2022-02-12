@@ -8,13 +8,13 @@ dashedName: run-functional-tests-using-a-headless-browser
 
 # --description--
 
-Project นี้ สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
+project นี้สร้างขึ้นจาก [Replit ตัวนี้](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-บนหน้า page มีแบบฟอร์มป้อนข้อมูล โดยฟอร์มส่งข้อมูลไปยังปลายทาง `PUT /travellers` ตามคำขอ AJAX 
+บนหน้าเว็บจะมี form ที่ให้ป้อนข้อมูลได้ โดยจะส่งข้อมูลไปยัง endpoint `PUT /travellers` โดยใช้การส่ง request แบบ AJAX
 
-เมื่อคำขอเสร็จสมบูรณ์ client code จะเพิ่ม `<div>` ต่อท้ายซึ่งมีข้อมูลในการ response ต่อ DOM
+เมื่อการส่ง request เสร็จสมบูรณ์ โค้ดในฝั่ง client จะเพิ่ม `<div>` ที่มีข้อมูลจาก response ไปยัง DOM
 
-ตัวอย่างวิธีการใช้ Zombie.js เพื่อโต้ตอบกับแบบฟอร์ม: 
+ตัวอย่างวิธีการใช้ Zombie.js เพื่อใช้งานแบบฟอร์ม: 
 
 ```js
 test('Submit the surname "Polo" in the HTML form', function (done) {
@@ -31,39 +31,39 @@ test('Submit the surname "Polo" in the HTML form', function (done) {
 ```
 
 
-ขั้นแรก วิธี `fill` ของ object `browser`  เติมฟิลด์ `surname` ของแบบฟอร์มด้วยค่า `'Polo'` `fill' ส่งคืน promise ดังนั้น 'then' จะถูกตรึงเอาไว้
+ในขั้นตอนแรก method `fill` ของ object `browser` จะกรอกข้อมูลลงในฟิลด์ `surname` ของแบบฟอร์มด้วยคำว่า `'Polo'` และ method `fill` จะคืนค่าเป็น promise เราจึงใช้ `then` เชื่อมกับ method นี้ไว้
 
-ภายใน callback `then` เมธอด "pressButton" ของ object `browser` จะใช้เพื่อเรียกใช้ event listener `submit` ของแบบฟอร์ม เมธอด `pressButton' เป็นแบบ asynchronous
+ภายใน callback ของ `then` เราจะใช้ method `pressButton` ของ object `browser` จะใช้เพื่อเรียกใช้ event listener `submit` ของ form ซึ่ง method `pressButton` นี้จะเป็นแบบ asynchronous
 
-จากนั้น เมื่อได้รับการตอบกลับจากคำขอ AJAX แล้ว จะมีการยืนยันดังนี้:
+จากนั้น เมื่อได้รับการตอบกลับ AJAX request แล้ว เราจะ assert ค่าตามนี้:
 
-1. สถานะของการตอบกลับคือ `200`
+1. status ของ response เป็น `200`
 2. ข้อความภายใน element `<span id='name'></span>` ตรงกับ `'Marco'`
 3. ข้อความภายใน element `<span id='surname'></span>` ตรงกับ `'Polo'`
-4. มี element `1` `<span id='dates'></span>`
+4. มี element `<span id='dates'></span>` ทั้งหมด `1` ตัว
 
-ในที่สุด การเรียกกลับที่ `done` จะถูกเรียกใช้ ซึ่งเป็นสิ่งจำเป็น เนื่องเป็นการทดสอบแบบ asynchronous
+สุดท้ายจะเรียกใช้ callback method `done` ซึ่งจำเป็นต้องเรียกใช้ เพราะว่าเป็นการทดสอบแบบ asynchronous
 
 
 # --instructions--
 
-ภายใน `tests/2_functional-tests.js` ใน `'ส่งนามสกุล "Colombo" ในรูปแบบ HTML'` test (`// #5`) ให้ automate ต่อไปนี้:
+ในไฟล์ `tests/2_functional-tests.js` ใน test ที่ชื่อ `'Submit the surname "Colombo" in the HTML form` (`// #5`) ให้ใช้ Zombie.js ทำตามเงื่อนไขนี้โดยอัตโนมัติ:
 
-1. กรอกแบบฟอร์มด้วยนามสกุล `Colombo`
-2. กดปุ่มส่ง 
+1. กรอกฟิลด์ `surname` ในฟอร์มด้วยคำว่า `Colombo`
+2. กดปุ่มส่ง
 
-และภายใน callback `pressButton':
+และภายใน callback function ของ `pressButton` ให้ทำตามเงื่อนไขนี้:
 
-1. ยืนยันว่าสถานะ OK `200`
-2. ยืนยันว่าข้อความภายใน element `span#name' คือ `'Cristoforo'`
-3. ยืนยันว่าข้อความภายใน element `span#surname' คือ `'Colombo'`
-4. ยืนยันว่า element `span#dates` มีอยู่และจำนวนนับ คือ `1`
+1. ตรวจสอบว่า status เป็น `200`
+2. ตรวจสอบว่าข้อความภายใน element `span#name` เป็น `'Cristoforo'`
+3. ตรวจสอบว่าข้อความภายใน element `span#surname` เป็น `'Colombo'`
+4. ตรวจสอบว่า element `span#dates` มีอยู่ `1` ตัว
 
-อย่าลืมลบการเรียก `assert.fail()` 
+อย่าลืมลบการเรียกใช้ `assert.fail()` ออกด้วย
 
 # --hints--
 
-ควรผ่านการทดสอบทั้งหมด
+test ทั้งหมดต้องผ่าน
 
 ```js
 (getUserInput) =>
@@ -77,7 +77,7 @@ test('Submit the surname "Polo" in the HTML form', function (done) {
   );
 ```
 
-ผู้เรียนควรยืนยันว่า request เบราว์เซอร์ที่ไม่มี head สำเร็จ 
+ต้องตรวจสอบว่าการส่ง request โดยใช้ headless browser สำเร็จ
 
 ```js
 (getUserInput) =>
@@ -91,7 +91,7 @@ test('Submit the surname "Polo" in the HTML form', function (done) {
   );
 ```
 
-ผู้เรียนควรยืนยันว่าข้อความภายใน element "span#name" คือ "Cristoforo" 
+ต้องตรวจสอบว่าข้อความภายใน element `span#name` เป็น `'Cristoforo'` 
 
 ```js
 (getUserInput) =>
@@ -107,7 +107,7 @@ test('Submit the surname "Polo" in the HTML form', function (done) {
   );
 ```
 
-ผู้เรียนควรยืนยันว่าข้อความภายใน element "span#surname" คือ `'Colombo'`.
+ต้องตรวจสอบว่าข้อความภายใน element `span#surname` เป็น `'Colombo'`
 
 ```js
 (getUserInput) =>
@@ -123,7 +123,7 @@ test('Submit the surname "Polo" in the HTML form', function (done) {
   );
 ```
 
-ผู้เรียนควรยืนยันว่าข้อความภายใน  element `span#dates` มีอยู่และจำนวนนับ คือ `1`
+ต้องตรวจสอบว่า element `span#dates` มีอยู่ `1` ตัว
 
 ```js
 (getUserInput) =>

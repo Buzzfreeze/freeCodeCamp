@@ -10,15 +10,18 @@ dashedName: mitigate-the-risk-of-cross-site-scripting-xss-attacks-with-helmet-xs
 
 # --description--
 
-โปรดทราบว่าโปรเจคนี้ถูกสร้างจากโปรเจคเริ่มต้นบน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec) หรือโคลนมาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
+project นี้สร้างขึ้นจาก [Replit ตัวนี้](https://replit.com/github/freeCodeCamp/boilerplate-infosec) หรือ clone มาจาก [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-infosec/)
 
 Cross-site scripting (XSS) เป็นการโจมตีประเภทหนึ่งซึ่งมีการแทรกสคริปต์ที่เป็นอันตรายลงในหน้าเว็บที่มีช่องโหว่ โดยมีวัตถุประสงค์เพื่อขโมยข้อมูลที่ละเอียดอ่อน เช่น session cookies หรือรหัสผ่าน
 
-กฎพื้นฐานในการลดความเสี่ยงของการโจมตี XSS นั้นง่ายมาก คือ “อย่าเชื่อถือข้อมูลที่ผู้ใช้ input เข้ามา” ในฐานะนักพัฒนาคุณควรล้าง input ทั้งหมดที่มาจากภายนอกอยู่เสมอ ซึ่งรวมถึงข้อมูลที่มาจากฟอร์ม, GET query url, และแม้แต่จาก POST bodies ก็ตาม การฆ่าเชื้อ (Sanitizing) หมายความว่าคุณควรค้นหาและเข้ารหัสอักขระที่อาจเป็นอันตรายเช่น &lt;, >
+กฎพื้นฐานในการลดความเสี่ยงของการโจมตี XSS นั้นง่ายมาก คือ “อย่าเชื่อถือข้อมูลที่ผู้ใช้ input เข้ามา” ในฐานะนักพัฒนาคุณควรตรวจสอบ input ทั้งหมดที่มาจากภายนอก ซึ่งรวมถึงข้อมูลที่มาจากฟอร์ม, query url ของ GET, หรือแม้แต่ body ของ POST ก็ตาม 
+การ Sanitizing แปลว่าการค้นหาและเข้ารหัสตัวอักษรที่อาจเป็นอันตรายเช่น &lt; หรือ >
 
-เบราว์เซอร์สมัยใหม่สามารถช่วยลดความเสี่ยงด้วยการใช้ software strategies ที่ดีกว่า บ่อยครั้งสิ่งเหล่านี้สามารถกำหนดค่าได้ผ่าน http header
+เบราว์เซอร์สมัยใหม่จะมีคุณสมบัติที่ช่วยลดความเสี่ยงได้ด้วย ซึ่งส่วนใหญ่จะกำหนดค่าได้โดยใช้ http header
 
-X-XSS-Protection HTTP header เป็นการป้องกันขั้นพื้นฐาน เบราว์เซอร์ตรวจพบสคริปต์ที่เป็นไปได้ที่ถูกยิงเข้ามาโดยใช้ตัวกรองการวิเคราะห์พฤติกรรม (heuristic filter) หากเปิดใช้งาน header แล้วเบราว์เซอร์จะเปลี่ยนรหัสสคริปต์ ทำให้เป็นกลาง ยังคงมีการสนับสนุนการทำงานในส่วนนี้ที่จำกัด
+HTTP header X-XSS-Protection เป็นการป้องกันขั้นพื้นฐาน 
+เบราว์เซอร์จะตรวจสอบสคริปต์ที่ถูก inject เข้ามาโดยใช้ heuristic filter 
+หากเปิดใช้งาน header เบราว์เซอร์จะทำการซ่อนโค้ดส่วนที่เป็นอันตราย แต่ก็ยังจะมีข้อจำกัดในการใช้งาน header นี้อยู่
 
 # --instructions--
 
@@ -26,7 +29,7 @@ X-XSS-Protection HTTP header เป็นการป้องกันขั้
 
 # --hints--
 
-helmet.xssFilter() middleware ควรถูกติดตั้งอย่างถูกต้อง
+ต้องใช้ middleware `helmet.xssFilter()` อย่างถูกต้อง
 
 ```js
 (getUserInput) =>

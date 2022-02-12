@@ -8,9 +8,9 @@ dashedName: sorting-algorithmsstooge-sort
 
 # --description--
 
-เขียนฟังก์ชันเพื่อดำเนินการ [Stooge Sort](<https://en.wikipedia.org/wiki/Stooge sort>) บนarrayของจำนวนเต็ม ฟังก์ชันควรส่งคืนarrayที่เรียงลำดับ
+ให้เขียนฟังก์ชันเพื่อเรียง array ของจำนวนเต็ม โดยใช้ [Stooge Sort](<https://en.wikipedia.org/wiki/Stooge sort>)
 
-algorithm Stooge Sort มีดังนี้:
+อัลกอริทึมของ Stooge Sort คือ:
 
 <pre><b>algorithm</b> stoogesort(<b>array</b> L, i = 0, j = <b>length</b>(L)-1)
   <b>if</b> L[j] &#x3C; L[i] <b>then</b>
@@ -25,37 +25,37 @@ algorithm Stooge Sort มีดังนี้:
 
 # --hints--
 
-`stoogeSort` ควรเป็น function.
+`stoogeSort` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof stoogeSort == 'function');
 ```
 
-`stoogeSort([25, 32, 12, 7, 20])` ควร return array.
+`stoogeSort([25, 32, 12, 7, 20])` ต้องคืนค่าเป็น array
 
 ```js
 assert(Array.isArray(stoogeSort([25, 32, 12, 7, 20])));
 ```
 
-`stoogeSort([25, 32, 12, 7, 20])` ควร return `[7, 12, 20, 25, 32]`.
+`stoogeSort([25, 32, 12, 7, 20])` ต้องคืนค่าเป็น `[7, 12, 20, 25, 32]`
 
 ```js
 assert.deepEqual(stoogeSort([25, 32, 12, 7, 20]), [7, 12, 20, 25, 32]);
 ```
 
-`stoogeSort([38, 45, 35, 8, 13])` ควร return `[8, 13, 35, 38, 45]`.
+`stoogeSort([38, 45, 35, 8, 13])` ต้องคืนค่าเป็น `[8, 13, 35, 38, 45]`
 
 ```js
 assert.deepEqual(stoogeSort([38, 45, 35, 8, 13]), [8, 13, 35, 38, 45]);
 ```
 
-`stoogeSort([43, 36, 20, 34, 24])` ควร return `[20, 24, 34, 36, 43]`.
+`stoogeSort([43, 36, 20, 34, 24])` ต้องคืนค่าเป็น `[20, 24, 34, 36, 43]`
 
 ```js
 assert.deepEqual(stoogeSort([43, 36, 20, 34, 24]), [20, 24, 34, 36, 43]);
 ```
 
-`stoogeSort([12, 33, 26, 18, 1, 16, 38])` ควร return `[1, 12, 16, 18, 26, 33, 38]`.
+`stoogeSort([12, 33, 26, 18, 1, 16, 38])` ต้องคืนค่าเป็น `[1, 12, 16, 18, 26, 33, 38]`
 
 ```js
 assert.deepEqual(stoogeSort([12, 33, 26, 18, 1, 16, 38]), [
@@ -69,7 +69,7 @@ assert.deepEqual(stoogeSort([12, 33, 26, 18, 1, 16, 38]), [
 ]);
 ```
 
-`stoogeSort([3, 39, 48, 16, 1, 4, 29])` ควร return `[1, 3, 4, 16, 29, 39, 48]`.
+`stoogeSort([3, 39, 48, 16, 1, 4, 29])` ต้องคืนค่าเป็น `[1, 3, 4, 16, 29, 39, 48]`
 
 ```js
 assert.deepEqual(stoogeSort([3, 39, 48, 16, 1, 4, 29]), [

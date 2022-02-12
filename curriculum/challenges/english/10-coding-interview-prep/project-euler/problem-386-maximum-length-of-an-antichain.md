@@ -12,19 +12,19 @@ dashedName: problem-386-maximum-length-of-an-antichain
 
 เซตย่อย $A$ ของ $S(n)$ เรียกว่า antichain ของ $S(n)$ ถ้า $A$ มีองค์ประกอบเพียงตัวเดียว หรือถ้าไม่มีองค์ประกอบของ $A$ ที่แบ่งองค์ประกอบอื่นๆ ของ $A $.
 
-ตัวอย่างเช่น: $S(30) = \\{1, 2, 3, 5, 6, 10, 15, 30\\}$
+เช่น $S(30) = \\{1, 2, 3, 5, 6, 10, 15, 30\\}$
 
 $\\{2, 5, 6\\}$ ไม่ใช่ antichain ของ $S(30)$
 
-$\\{2, 3, 5\\}$ เป็นantichainของ $S(30)$
+$\\{2, 3, 5\\}$ เป็น antichain ของ $S(30)$
 
-ให้ $N(n)$ เป็นความยาวสูงสุดของantichainของ $S(n)$
+ให้ $N(n)$ เป็นความยาวสูงสุดของ antichain ของ $S(n)$
 
-หา $\sum N(n)$ สำหรับ $1 ≤ n ≤ {10}^8$
+ให้หา $\sum N(n)$ ถ้า $1 ≤ n ≤ {10}^8$
 
 # --hints--
 
-`maximumLengthOfAntichain()` ควร return `528755790`.
+`maximumLengthOfAntichain()` ต้องคืนค่าเป็น `528755790`
 
 ```js
 assert.strictEqual(maximumLengthOfAntichain(), 528755790);

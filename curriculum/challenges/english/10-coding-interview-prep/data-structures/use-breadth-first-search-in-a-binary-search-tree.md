@@ -8,17 +8,30 @@ dashedName: use-breadth-first-search-in-a-binary-search-tree
 
 # --description--
 
-เราจะแนะนำวิธีการ tree traversal method หรือ การค้นหาแบบกว้างก่อน ตรงกันข้ามกับวิธีการค้นหาที่เน้นความลึกจากแบบทดสอบครั้งก่อน การค้นหาแบบกว้างก่อนจะสำรวจโหนดทั้งหมดในระดับที่กำหนดภายใน tree ก่อนที่จะดำเนินการต่อไปในระดับถัดไป โดยปกติ queue จะถูกใช้เป็นโครงสร้างข้อมูลตัวช่วยในการออกแบบอัลกอริธึมการค้นหาแบบกว้างก่อน
+เราจะแนะนำวิธีการอ่านข้อมูลในโครงสร้างข้อมูลแบบ tree อีกแบบหนึ่ง ซึ่งก็คือ การค้นหาตามแนวกว้าง (breadth-first search)
+วิธีนี้จะตรงกันข้ามกับวิธี depth-first search ที่เราได้เรียนไปในแบบทดสอบที่แล้ว
 
-ในวิธีนี้ เราเริ่มต้นด้วยการเพิ่ม root node ไปยัง queue จากนั้นเราเริ่มการวนซ้ำตรงที่เรา dequeue รายการแรกใน queue เพิ่มลงใน array ใหม่ จากนั้นตรวจสอบ child subtrees ทั้งสองรายการ ถ้า child ของมันไม่เป็น null พวกเขาจะถูก enqueued กระบวนการนี้จะดำเนินต่อไปจนกว่า queue จะว่าง
+การค้นหาตามแนวกว้างจะอ่านค่าของ node ทั้งหมดในระดับที่กำหนดใน tree แล้วจึงอ่านค่า node ในลำดับถัดไป ปกติแล้วเราจะใช้ queue เพื่อช่วยในการออกแบบอัลกอริธึมการค้นหาตามแนวกว้าง
+
+ในวิธี breadth-first search นี้ เราจะเริ่มจาก
+
+1. เพิ่ม root node ลงใน queue 
+2. ลูปข้อมูลใน queue โดยทำการ dequeue ข้อมูลแรกใน queue แล้วนำค่าของข้อมูลนั้นไปเก็บลงในอีก array นึง
+3. อ่านค่าของ child subtree ทั้งสองตัวของข้อมูลนั้น 
+4. ถ้า child ไม่เป็น null เราจะนำ child node นั้นไปเพิ่มลงใน queue 
+5. ทำไปเรื่อยๆ จนกว่า queue จะว่าง
 
 # --instructions--
 
-มาสร้างวิธีการค้นหาแบบกว้างก่อน (breadth-first search method) ใน tree ของเราที่ชื่อว่า `levelOrder` เมธอดนี้ควร return array ที่มีค่าของ tree node ทั้งหมด โดยสำรวจในลักษณะกว้างก่อน ให้แน่ใจว่ามันจะ return ค่าใน array ไม่ใช่ตัว node เอง ควรข้ามระดับจากซ้ายไปขวา ต่อไปเรามาเขียน method ที่คล้ายกันที่เรียกว่า `reverseLevelOrder` ซึ่งทำการค้นหาแบบเดียวกัน แต่ในทิศทางย้อนกลับ (จากขวาไปซ้าย) ในแต่ละระดับ
+ลองใช้ breadth-first search ใน method ที่ชื่อว่า `levelOrder` 
+
+method นี้ต้องคืนค่าเป็น array ที่มีค่าของ tree node ทั้งหมด เรียงตามลำดับแบบ breadth-first ให้คืนค่าเป็นค่าใน array ไม่ใช่ตัว node เอง และในการอ่านค่า ต้องเรียงจากซ้ายไปขวา 
+
+แล้วให้เขียน method ที่คล้ายกันชื่อ `reverseLevelOrder` ซึ่งทำการค้นหาแบบเดียวกัน แต่ในทิศทางย้อนกลับ (จากขวาไปซ้าย)
 
 # --hints--
 
-ควรมี `BinarySearchTree` data structure
+ต้องมีโครงสร้างข้อมูลแบบ `BinarySearchTree`
 
 ```js
 assert(
@@ -32,7 +45,7 @@ assert(
 );
 ```
 
-Binary search tree ควรมี method ที่เรียกว่า `levelOrder`
+Binary search tree ต้องมี method ชื่อ `levelOrder`
 
 ```js
 assert(
@@ -48,7 +61,7 @@ assert(
 );
 ```
 
-Binary search tree ควรมี method ที่เรียกว่า `reverseLevelOrder`.
+Binary search tree ต้องมี method ชื่อ `reverseLevelOrder`
 
 ```js
 assert(
@@ -64,7 +77,7 @@ assert(
 );
 ```
 
-`levelOrder` method ควร return array ของค่าต่างๆ  tree node ที่ได้ถูกสำรวจในลำดับตามระดับ
+method `levelOrder` ต้องคืนค่าเป็น array ของค่าทั้งหมดใน tree node ที่เรียงตามลำดับการอ่านค่าแบบ breath-first
 
 ```js
 assert(
@@ -94,7 +107,7 @@ assert(
 );
 ```
 
-`reverseLevelOrder` method ควร return array ของค่าต่างๆ  tree node ที่ได้ถูกสำรวจในลำดับที่กลับกันของระดับ
+method `levelOrder` ต้องคืนค่าเป็น array ของค่าทั้งหมดใน tree node ที่เรียงตามลำดับการอ่านค่าแบบ breath-first แบบย้อนกลับ
 
 ```js
 assert(
@@ -124,7 +137,7 @@ assert(
 );
 ```
 
-`levelOrder` method ควร return `null` สำหรับ tree ที่ว่างเปล่า
+method `levelOrder` ต้องคืนค่าเป็น `null` ถ้าไม่มีข้อมูลใน tree
 
 ```js
 assert(
@@ -143,7 +156,7 @@ assert(
 );
 ```
 
-`reverseLevelOrder` method ควร return `null` สำหรับ tree ที่ว่างเปล่า
+method `reverseLevelOrder` ต้องคืนค่าเป็น `null` ถ้าไม่มีข้อมูลใน tree
 
 ```js
 assert(
@@ -213,9 +226,9 @@ function Node(value) {
 }
 function BinarySearchTree() {
   this.root = null;
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 ```
 
@@ -230,7 +243,7 @@ function Node(value) {
 }
 function BinarySearchTree() {
   this.root = null;
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   this.levelOrder = (root = this.root) => {
     if(!root) return null;
     let queue = [root];
@@ -256,6 +269,6 @@ function BinarySearchTree() {
     }
     return results;
   }
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 ```

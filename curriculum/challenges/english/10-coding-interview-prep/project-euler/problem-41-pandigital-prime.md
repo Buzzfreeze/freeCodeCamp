@@ -8,25 +8,25 @@ dashedName: problem-41-pandigital-prime
 
 # --description--
 
-`n`-digit number เป็น pandigital ถ้าทำให้ทุกจาก digits 1 ถึง `n` มีเลขไม่ซ้ำกัน เช่น 2143 เป็น 4-digit pandigital และเป็นเลข prime
+เลข `n` หลักจะเป็น pandigital เมื่อใช้เลขครบทุกตัวตั้งแต่ 1 ถึง `n` เช่น 2143 เป็นเลข 4 หลักที่เป็นทั้ง pandigital และจำนวนเฉพาะ
 
-หาค่ามากที่สุดของ `n`-length digit pandigital prime 
+ให้หาเลข `n` หลักที่เป็นทั้ง pandigital และจำนวนเฉพาะที่มากที่สุด
 
 # --hints--
 
-`pandigitalPrime(4)` ควร return number.
+`pandigitalPrime(4)` ต้องคืนค่าเป็น number
 
 ```js
 assert(typeof pandigitalPrime(4) === 'number');
 ```
 
-`pandigitalPrime(4)` ควร return 4231.
+`pandigitalPrime(4)` ต้องคืนค่าเป็น 4231
 
 ```js
 assert(pandigitalPrime(4) == 4231);
 ```
 
-`pandigitalPrime(7)` ควร return 7652413.
+`pandigitalPrime(7)` ต้องคืนค่าเป็น 7652413
 
 ```js
 assert(pandigitalPrime(7) == 7652413);

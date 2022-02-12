@@ -8,21 +8,21 @@ dashedName: 9-billion-names-of-god-the-integer
 
 # --description--
 
-งานนี้เป็นรูปแบบของ [short story โดย Arthur C. Clarke](<https://en.wikipedia.org/wiki/The Nine Billion Names of God#Plot_summary> "wp: The Nine Billion Names of God#Plot_summary").
+แบบฝึกหัดนี้อ้างอิงมาจาก [เรื่องสั้นของ Arthur C. Clarke](<https://en.wikipedia.org/wiki/The Nine Billion Names of God#Plot_summary> "wp: The Nine Billion Names of God#Plot_summary")
 
 (แก้ปัญหาควรตระหนักถึงผลที่ตามมาของการทำงานนี้ให้สำเร็จ)
 
-โดยละเอียดเพื่อระบุว่า "name" หมายถึง:
+โดยในที่นี้เราจะให้ชื่อของพระเจ้าเป็นดังนี้:
 
 <ul>
-  <li>The integer 1 has 1 name "1".</li>
-  <li>The integer 2 has 2 names "1+1" and "2".</li>
-  <li>The integer 3 has 3 names "1+1+1", "2+1",  and "3".</li>
-  <li>The integer 4 has 5 names "1+1+1+1", "2+1+1", "2+2", "3+1", "4".</li>
-  <li>The integer 5 has 7 names "1+1+1+1+1", "2+1+1+1", "2+2+1", "3+1+1", "3+2", "4+1", "5".</li>
+  <li>ตัวเลข 1 มี 1 ชื่อคือ "1"</li>
+  <li>ตัวเลข 2 มี 2 ชื่อคือ "1+1" และ "2"</li>
+  <li>ตัวเลข 3 มี 3 ชื่อคือ "1+1+1", "2+1",  และ "3"</li>
+  <li>ตัวเลข 4 มี 5 ชื่อคือ "1+1+1+1", "2+1+1", "2+2", "3+1", "4"</li>
+  <li>ตัวเลข 5 มี 7 ชื่อคือ "1+1+1+1+1", "2+1+1+1", "2+2+1", "3+1+1", "3+2", "4+1", "5"</li>
 </ul>
 
-สามารถเห็นภาพได้ในรูปแบบต่อไปนี้:
+ซึ่งแปลงเป็นภาพได้แบบนี้:
 
 <pre>          
           1
@@ -33,53 +33,53 @@ dashedName: 9-billion-names-of-god-the-integer
 1   3   3   2   1   1
 </pre>
 
-โดยที่แถว $n$ ตรงกับจำนวนเต็ม $n$ และแต่ละคอลัมน์ $C$ ในแถว $m$ จากซ้ายไปขวาจะสอดคล้องกับจำนวนชื่อที่ขึ้นต้นด้วย $C$
+โดยแถวที่ $n$ มีตรงตามตัวเลข $n$ และแต่ละคอลัมน์ $C$ ในแถว $m$ จากซ้ายไปขวาจะสอดคล้องกับจำนวนชื่อที่ขึ้นต้นด้วย $C$
 
-นอกจากนี้ โปรดทราบว่าผลรวมของแถวที่ $n$-th $P(n)$ เป็น partition function.
+นอกจากนี้ จะเห็นว่าผลลรวมของแถวที่ $n$ หรือ $P(n)$ เป็นฟังก์ชันแบ่งส่วน
 
 # --instructions--
 
-ใช้ฟังก์ชันที่ return ค่าผลรวมของแถวที่ $n$-th
+ให้สร้างฟังก์ชันที่คืนค่าเป็นผลรวมของแถวที่ $n$
 
 # --hints--
 
-`numberOfNames` ควรเป็น function.
+`numberOfNames` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof numberOfNames === 'function');
 ```
 
-`numberOfNames(5)` ควรเท่ากับ 7.
+`numberOfNames(5)` ต้องมีค่าเป็น 7
 
 ```js
 assert.equal(numberOfNames(5), 7);
 ```
 
-`numberOfNames(12)` ควรเท่ากับ 77.
+`numberOfNames(12)` ต้องมีค่าเป็น 77
 
 ```js
 assert.equal(numberOfNames(12), 77);
 ```
 
-`numberOfNames(18)` ควรเท่ากับ 385.
+`numberOfNames(18)` ต้องมีค่าเป็น 385
 
 ```js
 assert.equal(numberOfNames(18), 385);
 ```
 
-`numberOfNames(23)` ควรเท่ากับ 1255.
+`numberOfNames(23)` ต้องมีค่าเป็น 1255
 
 ```js
 assert.equal(numberOfNames(23), 1255);
 ```
 
-`numberOfNames(42)` ควรเท่ากับ 53174.
+`numberOfNames(42)` ต้องมีค่าเป็น 53174
 
 ```js
 assert.equal(numberOfNames(42), 53174);
 ```
 
-`numberOfNames(123)` ควรเท่ากับ 2552338241.
+`numberOfNames(123)` ต้องมีค่าเป็น 2552338241
 
 ```js
 assert.equal(numberOfNames(123), 2552338241);

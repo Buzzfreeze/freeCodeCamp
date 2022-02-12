@@ -8,17 +8,18 @@ dashedName: exercise-tracker
 
 # --description--
 
-สร้างแอพแบบ full stack ด้วย JavaScript ที่ทำงานคล้ายกับเว็บไซต์ <https://exercise-tracker.freecodecamp.rocks/>  การทำโปรเจคนี้ คุณจะต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งดังต่อไปนี้
+ให้สร้างแอปแบบ full stack โดยใช้ JavaScript ที่ทำงานคล้ายกับเว็บไซต์นี้ <https://exercise-tracker.freecodecamp.rocks/>  
+ในการทำโปรเจคนี้ คุณจะต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งดังต่อไปนี้
 
-- clone  [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-exercisetracker/)  ในการทำโปรเจค โดยทำให้เสร็จทีละส่วน
-- ใช้เว็บไซต์ [Replit starter project ของพวกเรา](https://replit.com/github/freeCodeCamp/boilerplate-project-exercisetracker) ในการทำโปรเจคให้เสร็จสมบูรณ์
-- ใช้ตัวสร้างไซต์ที่คุณเลือก ทำโปรเจคให้เสร็จสมบูรณ์ และอย่าลืมรวมไฟล์ทั้งหมดจาก GitHub repo ของคุณด้วย
+- ให้ Clone repoisitory จาก [GitHub](https://github.com/freeCodeCamp/boilerplate-project-exercisetracker/) มา และทำแบบทดสอบบนเครื่องของคุณเอง
+- สร้างจากโปรเจกต์ของเราในเว็บไซต์ [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-exercisetracker)
+- ใช้เครื่องมือสร้างเว็บอื่นๆ และอย่าลืมเก็บไฟล์ไว้ใน GitHub repo ของคุณด้วย
 
-เมื่อคุณทำเสร็จแล้ว ตรวจสอบให้แน่ใจด้วยว่า ไฟล์โปรเจคของคุณอยู่ในสถานะที่ทุกคนสามารถมองเห็นได้(public) หลังจากนั้นส่งลิงก์ URL ไว้ใน `Solution Link` หรือส่งลิงก์ซอร์สโค้ดของโปรเจคไว้ใน `GitHub Link` อีกช่องทางหนึ่งก็ได้
+เมื่อคุณทำเสร็จแล้ว ให้อัปโหลดโปรเจกต์ของคุณขึ้นโฮสต์ และเปิดเป็น public จากนั้นให้ส่งลิงก์เข้าไปใน `Link คำตอบ` และจะส่งลิงก์ของ source code เข้าไปใน `GitHub Link` ด้วยก็ได้
 
 # --instructions--
 
-คำตอบ(responses) ของคุณควรที่จะมีโครงสร้างตามต่อไปนี้
+response ของ API ที่คุณเขียนต้องมีโครงสร้างตามนี้
 
 Exercise:
 
@@ -56,11 +57,11 @@ Log:
 }
 ```
 
-**Hint:** สำหรับคุณสมบัติ `date` , และวิธี `toDateString` ของ  `Date` API สามารถใช้เป็นผลลัพธ์หรือคำตอบที่คาดหวังได้
+**Hint:** เราแนะให้ใช้ method `toDateString` ของ `Date` API ในการเก็บค่าลง property `date` เพราะว่า string ที่ได้จะแน่นอนกว่า
 
 # --hints--
 
-คุณควรที่จะให้แหล่งโปรเจคของคุณ ไม่ใช่ตัวอย่างจาก URL
+ให้ส่งลิงก์โปรเจกต์ของคุณ ไม่ใช่ URL ตัวอย่างของเรา
 
 ```js
 (getUserInput) => {
@@ -71,7 +72,7 @@ Log:
 };
 ```
 
-คุณสามารถใช้ `POST` ไปที่ `/api/users` พร้อมกับข้อมูลแบบฟอร์ม `username` เพื่อสร้างยูเซอร์(USER)ใหม่
+เมื่อส่ง `POST` request ไปที่ `/api/users` โดยมี form data `username` เพื่อสร้างผู้ใช้ใหม่ได้
 
 ```js
 async (getUserInput) => {
@@ -88,7 +89,7 @@ async (getUserInput) => {
 };
 ```
 
-คำตอบที่ตอบกลับจาก `POST /api/users` ด้วยรูปแบบข้อมูล `username` จะเป็นวัตถุ(object)ที่มีคุณสมบัติ `username` และ `_id`
+เมื่อส่ง request ไปยัง `POST /api/users` โดยมี form data `username` จะต้องได้ response เป็น object ที่มี property ชื่อ `username` และ `_id`
 
 ```js
 async (getUserInput) => {
@@ -108,7 +109,7 @@ async (getUserInput) => {
 };
 ```
 
-คุณสามารถสร้างคำสั่ง `GET` ที่`/api/users` เพื่อรับรายชื่อผู้ใช้(user)ทั้งหมด
+เมื่อส่ง `GET` request ไปที่ `/api/users` ต้องได้ชื่อผู้ใช้ทั้งหมดกลับมา
 
 ```js
 async(getUserInput) => {
@@ -121,7 +122,7 @@ async(getUserInput) => {
 };
 ```
 
-คำสั่ง `GET` ที่ `/api/users` ในการคืนค่าอาร์เรย์(array)
+เมื่อส่ง `GET` request ไปที่ `/api/users` ต้องได้ค่าที่คืนมาเป็น array
 
 ```js
 async(getUserInput) => {
@@ -136,7 +137,7 @@ async(getUserInput) => {
 };
 ```
 
-แต่ละเอเลเมนท์ในอาร์เรย์จะส่งคืนจาก `GET /api/users` จะเป็นอ็อบเจ็กต์ตามตัวอักษรที่มี `username` และ  `_id` ของผู้ใช้
+ข้อมูลทุกตัวใน array ที่ได้จาก `GET /api/users` จะต้องเป็น object ที่มี property `username` และ `_id` ของผู้ใช้
 
 ```js
 async(getUserInput) => {
@@ -156,7 +157,7 @@ async(getUserInput) => {
 };
 ```
 
-คุณสามารถใช้ `POST` เป็น `/api/users/:_id/exercises` ด้วยรูปแบบข้อมูล `description`, `duration` หรือจะใช้ `date`  ในกรณีที่ไม่ได้ระบุวันที่ ระบบจะใช้วันที่ปัจจุบัน 
+ต้องส่ง `POST` request ไปที่ `/api/users/:_id/exercises` ได้ ถ้าใช้ form data `description`, `duration` และ `date` (`date` จะส่งหรือไม่ส่งก็ได้ ถ้าไม่ส่งระบบจะใช้วันที่ปัจจุบัน)
 
 ```js
 async (getUserInput) => {
@@ -190,7 +191,7 @@ async (getUserInput) => {
 };
 ```
 
-คำตอบที่ตอบกลับจาก `POST /api/users/:_id/exercises` จะเป็นออบเจ็กต์ของผู้ใช้กับเพิ่ม exercise ฟิลด์
+response ที่ได้จาก `POST /api/users/:_id/exercises` ต้องเป็น object `User` ที่เพิ่มฟิลด์ exercise เข้าไป
 
 ```js
 async (getUserInput) => {
@@ -229,7 +230,7 @@ async (getUserInput) => {
 };
 ```
 
-คุณสามารถสร้างคำสั่ง `GET` ที่ `/api/users/:_id/logs` เพื่อดึงบันทึก exercise ทั้งหมดของผู้ใช้
+เมื่อส่ง `GET` request ไปที่ `/api/users/:_id/logs` ต้องได้ค่าที่คืนมาเป็น ข้อมูลการออกกำลังการของผู้ใช้คนนี้ในรูปแบบ `Log`
 
 ```js
 async (getUserInput) => {
@@ -268,7 +269,7 @@ async (getUserInput) => {
 };
 ```
 
-คำขอที่ส่งไปยังบันทึกของผู้ใช้ `GET /api/users/:_id/logs` จะคืนค่าออบเจ็กต์ของผู้ใช้ โดยมีคุณสมบัติ `count` แทนจำนวน exercise ที่เป็นของผู้ใช้รายนั้น
+เมื่อส่ง `GET` request ไปที่ `/api/users/:_id/logs` จะต้องได้ค่าที่คืนมาเป็น object `User` ที่มี property `count` ซึ่งเป็นจำนวนของ exercise ของผู้ใช้รายนั้น
 
 ```js
 async (getUserInput) => {
@@ -309,7 +310,7 @@ async (getUserInput) => {
 };
 ```
 
-คำสั่ง `GET` ที่ `/api/users/:id/logs` จะคืนค่าอ็อบเจ็กต์ของผู้ใช้ในรูปแบบของอาร์เรย์ `log` โดยจะเป็น exercise ทั้งหมดที่เพิ่มเข้ามา
+เมื่อส่ง `GET` request ไปที่ `/api/users/:id/logs` จะต้องได้ค่าที่คืนมาเป็น object `User` ที่มี property `log` ที่เป็น array โดยมีค่าของ exercise ทั้งหมดของผู้ใช้คนนั้น
 
 ```js
 async(getUserInput) => {
@@ -353,7 +354,7 @@ async(getUserInput) => {
 };
 ```
 
-สมาชิกแต่ละตัวในอาร์เรย์ `log` ที่ส่งคืนจาก `GET /api/users/:id/logs` จะเป็นอ็อบเจ็กต์ที่อยู่ในรูปแบบของคุณสมบัติ `description`, `duration`, และ `date`
+ข้อมูลทุกตัวใน array `log` ที่ได้จาก `GET /api/users/:id/logs` จะต้องเป็น object ที่มี property ชื่อ `description`, `duration`, และ `date`
 
 ```js
 async(getUserInput) => {
@@ -400,7 +401,7 @@ async(getUserInput) => {
 };
 ```
 
-คุณสมบัติ `description` ของอ็อบเจ็กต์ใดๆ ในอาร์เรย์ `log` ที่ส่งคืนจาก `GET /api/users/:id/logs` ควรจะเป็นค่าสตริง(string)
+property `description` ของทุก object ใน array `log` ที่ได้จาก `GET /api/users/:id/logs` ต้องเป็น string
 
 ```js
 async(getUserInput) => {
@@ -447,7 +448,7 @@ async(getUserInput) => {
 };
 ```
 
-คุณสมบัติ `duration` ของอ็อบเจ็กต์ใดๆ ของอาร์เรย์ `log` ที่ส่งคืนจาก `GET /api/users/:id/logs` ควรจะเป็นค่าตัวเลข
+property `duration` ของทุก object ใน array `log` ที่ได้จาก `GET /api/users/:id/logs` ต้องเป็นตัวเลข
 
 ```js
 async(getUserInput) => {
@@ -494,7 +495,7 @@ async(getUserInput) => {
 };
 ```
 
-คุณสมบัติ `date` ของอ็อบเจ็กต์ใดๆ ในอาร์เรย์ `log` ที่ส่งคืนจาก `GET /api/users/:id/logs` ควรเป็นสตริง(string).. โดยใช้รูปแบบ `dateString` ของ `Date` API
+property `date` ของทุก object ใน array `log` ที่ได้จาก `GET /api/users/:id/logs` ต้องเป็น string ที่ได้จากการใช้ method `dateString` ของ `Date` API
 
 ```js
 async(getUserInput) => {
@@ -541,7 +542,7 @@ async(getUserInput) => {
 };
 ```
 
-คุณสามารถเพิ่มพารามิเตอร์ `from`, `to` และ `limit` ที่คำสั่ง `GET /api/users/:_id/logs` เพื่อดึงบันทึกส่วนหนึ่งของผู้ใช้ โดย `from` และ `to` จะเป็นวันที่ในรูปแบบ `yyyy-mm-dd` และ `limit` จะเป็นตัวเลขของจำนวนบันทึกที่จะส่งกลับ
+เมื่อเพิ่ม parameter `from`, `to` และ `limit` ไปในการส่ง `GET` request ไปที่ `/api/users/:_id/logs` จะต้องคืนค่าเป็น log ของผู้ใช้คนนั้น ตามเงื่อนไขที่ระบุ โดย `from` และ `to` จะเป็นวันที่ในรูปแบบ `yyyy-mm-dd` และ `limit` จะเป็นตัวเลขของจำนวน log ที่จะส่งกลับ
 
 ```js
 async (getUserInput) => {

@@ -8,51 +8,51 @@ dashedName: vector-dot-product
 
 # --description--
 
-เวกเตอร์สามารถมีค่าอย่างน้อยหนึ่งค่าที่แสดงโดยcollectionที่เรียงลำดับ ตัวอย่างอาจเป็น(x), (x, y), หรือ (x, y, z).
+เวกเตอร์สามารถมีค่าเป็น (x), (x, y), หรือ (x, y, z) หรือมากกว่านี้ก็ได้
 
 # --instructions--
 
-เขียนฟังก์ชันที่ใช้เวกเตอร์สองตัว (แสดงเป็นอาร์เรย์หนึ่งมิติ) เป็นอินพุตและคำนวณผลคูณของจุด ฟังก์ชันของคุณควรส่งคืน `null` สำหรับอินพุตที่ไม่ถูกต้อง เช่น เวกเตอร์ที่มีความยาวต่างกัน หรือส่งผ่านอย่างอื่นที่ไม่ใช่เวกเตอร์สองตัว
+ให้เขียนฟังก์ชันที่คืนค่าเป็น Dot product ของเวกเตอร์สองตัว และให้คืนค่าเป็น `null` ถ้าเวกเตอร์ที่ระบุไม่ถูกต้อง
 
 # --hints--
 
-`dotProduct` ควรเป็น function.
+`dotProduct` ต้องเป็นฟังก์ชัน
 
 ```js
 assert.equal(typeof dotProduct, 'function');
 ```
 
-`dotProduct()` ควร return `null`.
+`dotProduct()` ต้องคืนค่าเป็น `null`
 
 ```js
 assert.equal(dotProduct(), null);
 ```
 
-`dotProduct([1], [1])` ควร return `1`.
+`dotProduct([1], [1])` ต้องคืนค่าเป็น `1`
 
 ```js
 assert.equal(dotProduct([1], [1]), 1);
 ```
 
-`dotProduct([1], [1, 2])` ควร return `null`.
+`dotProduct([1], [1, 2])` ต้องคืนค่าเป็น `null`
 
 ```js
 assert.equal(dotProduct([1], [1, 2]), null);
 ```
 
-`dotProduct([1, 3, -5], [4, -2, -1])` ควร return `3`.
+`dotProduct([1, 3, -5], [4, -2, -1])` ต้องคืนค่าเป็น `3`
 
 ```js
 assert.equal(dotProduct([1, 3, -5], [4, -2, -1]), 3);
 ```
 
-`dotProduct([3, 2, 1], [2, 4, 2], [5, 3, 1])` ควร return `null`.
+`dotProduct([3, 2, 1], [2, 4, 2], [5, 3, 1])` ต้องคืนค่าเป็น `null`
 
 ```js
 assert.equal(dotProduct([3, 2, 1], [2, 4, 2], [5, 3, 1]), null);
 ```
 
-`dotProduct([ 0, 3, 6, 9, 12 ], [ 0, 4, 8, 12, 16 ])` ควร return `360`.
+`dotProduct([ 0, 3, 6, 9, 12 ], [ 0, 4, 8, 12, 16 ])` ต้องคืนค่าเป็น `360`
 
 ```js
 assert.equal(dotProduct([ 0, 3, 6, 9, 12 ], [ 0, 4, 8, 12, 16 ]), 360);

@@ -12,11 +12,11 @@ dashedName: problem-249-prime-subset-sums
 
 หาจำนวนเซตย่อยของ $S$ ผลรวมขององค์ประกอบที่เป็นจำนวนเฉพาะ
 
-ป้อนตัวเลข 16 หลักขวาสุดเป็นคำตอบ
+ให้คืนค่าเป็นเลข 16 หลักขวาสุด
 
 # --hints--
 
-`primeSubsetSums()` ควรreturn `9275262564250418`.
+`primeSubsetSums()` ต้องคืนค่าเป็น `9275262564250418`
 
 ```js
 assert.strictEqual(primeSubsetSums(), 9275262564250418);

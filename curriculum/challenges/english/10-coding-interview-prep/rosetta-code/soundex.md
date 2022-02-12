@@ -8,86 +8,86 @@ dashedName: soundex
 
 # --description--
 
-Soundex เป็นalgorithmธึมสำหรับสร้างindexสำหรับคำตามการออกเสียง เป้าหมายคือการเข้ารหัสคำพ้องเสียงกับการแสดงเดียวกันเพื่อให้สามารถจับคู่ได้แม้ว่าจะมีการสะกดต่างกันเล็กน้อย (จาก [บทความ WP](https://en.wikipedia.org/wiki/soundex)) มีปัญหาสำคัญในการใช้งานหลายอย่างที่เกี่ยวข้องกับการแยกพยัญชนะสองตัวที่มีรหัส soundex เดียวกัน! ตาม [กฎอย่างเป็นทางการ](https://www.archives.gov/research/census/soundex.html) ดังนั้นตรวจสอบเช่น ถ้า **Ashcraft** ถูก code เป็น **A-261**.
+Soundex เป็นอัลกอริทึมสำหรับสร้าง index สำหรับคำตามการออกเสียง เป้าหมายคือการเข้ารหัสคำพ้องเสียงกับการแสดงเดียวกันเพื่อให้สามารถจับคู่ได้แม้ว่าจะมีการสะกดต่างกันเล็กน้อย (จาก [บทความ WP](https://en.wikipedia.org/wiki/soundex)) มีปัญหาสำคัญในการใช้งานหลายอย่างที่เกี่ยวข้องกับการแยกพยัญชนะสองตัวที่มีรหัส soundex เดียวกัน! ตาม [กฎอย่างเป็นทางการ](https://www.archives.gov/research/census/soundex.html) ดังนั้นตรวจสอบ เช่นถ้า **Ashcraft** ถูก code เป็น **A-261**
 
 <ul>
-  <li>If a vowel (A, E, I, O, U) separates two consonants that have the same soundex code, the consonant to the right of the vowel is coded. Tymczak is coded as T-522 (T, 5 for the M, 2 for the C, Z ignored (see "Side-by-Side" rule above), 2 for the K). Since the vowel "A" separates the Z and K, the K is coded.</li>
-  <li>If "H" or "W" separate two consonants that have the same soundex code, the consonant to the right of the vowel is not coded. Example: Ashcraft is coded A-261 (A, 2 for the S, C ignored, 6 for the R, 1 for the F). It is not coded A-226.</li>
+  <li>ถ้าสระ (A, E, I, O, U) คั่นกลางระหว่างพยัญชนะที่มี soundex code เดียวกัน จะเป็น code พยัญชนะทางด้านขวา เช่น Tymczak จะเปลงเป็น T-522 (T, 5 แทนที่ M, 2 แทนที่ C, ไม่สนใจ Z (ลองดูกฏเรื่อง "Side-by-Side" ด้านบน), 2 แทนที่ K) เมื่อสระ "A" คั่นกลางระหว่าง Z และ K จะทำให้ K นั้นเป็น code</li>
+  <li>ถ้า "H" หรือ "W" คั่นกลางระหว่างพยัญชนะสองตัวที่มี soundex code เดียวกัน พยัญชนะทางด้านขวาต้องไม่เป็น code เช่น: Ashcraft จะแปลงเป็น A-261 (A, 2 แทนที่ S, ไม่สนใจ C, 6 แทนที่ R, 1 แทนที่ F) ไม่ใช่ A-226</li>
 </ul>
 
 # --instructions--
 
-เขียนฟังก์ชันที่รับstringเป็นพารามิเตอร์และส่งกลับstringที่เข้ารหัส
+เขียนฟังก์ชันที่รับสตริงเป็นพารามิเตอร์และคือค่าเป็นสตริงที่แปลงแล้ว
 
 # --hints--
 
-`soundex` ควรเป็น function.
+`soundex` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof soundex == 'function');
 ```
 
-`soundex("Soundex")` ควร return string.
+`soundex("Soundex")` ต้องคืนค่าเป็นสตริง
 
 ```js
 assert(typeof soundex('Soundex') == 'string');
 ```
 
-`soundex("Soundex")` ควร return `"S532"`.
+`soundex("Soundex")` ต้องคืนค่าเป็น `"S532"`
 
 ```js
 assert.equal(soundex('Soundex'), 'S532');
 ```
 
-`soundex("Example")` ควร return `"E251"`.
+`soundex("Example")` ต้องคืนค่าเป็น `"E251"`
 
 ```js
 assert.equal(soundex('Example'), 'E251');
 ```
 
-`soundex("Sownteks")` ควร return `"S532"`.
+`soundex("Sownteks")` ต้องคืนค่าเป็น `"S532"`
 
 ```js
 assert.equal(soundex('Sownteks'), 'S532');
 ```
 
-`soundex("Ekzampul")` ควร return `"E251"`.
+`soundex("Ekzampul")` ต้องคืนค่าเป็น `"E251"`
 
 ```js
 assert.equal(soundex('Ekzampul'), 'E251');
 ```
 
-`soundex("Euler")` ควร return `"E460"`.
+`soundex("Euler")` ต้องคืนค่าเป็น `"E460"`
 
 ```js
 assert.equal(soundex('Euler'), 'E460');
 ```
 
-`soundex("Gauss")` ควร return `"G200"`.
+`soundex("Gauss")` ต้องคืนค่าเป็น `"G200"`
 
 ```js
 assert.equal(soundex('Gauss'), 'G200');
 ```
 
-`soundex("Hilbert")` ควร return `"H416"`.
+`soundex("Hilbert")` ต้องคืนค่าเป็น `"H416"`
 
 ```js
 assert.equal(soundex('Hilbert'), 'H416');
 ```
 
-`soundex("Knuth")` ควร return `"K530"`.
+`soundex("Knuth")` ต้องคืนค่าเป็น `"K530"`
 
 ```js
 assert.equal(soundex('Knuth'), 'K530');
 ```
 
-`soundex("Lloyd")` ควร return `"L300"`.
+`soundex("Lloyd")` ต้องคืนค่าเป็น `"L300"`
 
 ```js
 assert.equal(soundex('Lloyd'), 'L300');
 ```
 
-`soundex("Lukasiewicz")` ควร return `"L222"`.
+`soundex("Lukasiewicz")` ต้องคืนค่าเป็น `"L222"`
 
 ```js
 assert.equal(soundex('Lukasiewicz'), 'L222');

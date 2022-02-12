@@ -14,11 +14,11 @@ dashedName: problem-235-an-arithmetic-geometric-sequence
 
 หาค่าของ $r$ ซึ่ง $s(5000) = -600\\,000\\,000\\,000$
 
-ให้คำตอบของคุณปัดเศษเป็น 12 ตำแหน่งหลังจุดทศนิยม
+ให้ตอบเป็นทศนิยมปัดเศษ 12 ตำแหน่ง
 
 # --hints--
 
-`arithmeticGeometricSequence()` ควร return `1.002322108633`.
+`arithmeticGeometricSequence()` ต้องคืนค่าเป็น `1.002322108633`
 
 ```js
 assert.strictEqual(arithmeticGeometricSequence(), 1.002322108633);

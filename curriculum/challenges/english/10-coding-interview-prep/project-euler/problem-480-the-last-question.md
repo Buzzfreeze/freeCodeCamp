@@ -8,13 +8,13 @@ dashedName: problem-480-the-last-question
 
 # --description--
 
-พิจารณาคำทั้งหมดที่สามารถเกิดขึ้นได้โดยการเลือกตัวอักษรในลำดับใดก็ได้จากวลี:
+พิจารณาคำทั้งหมดที่สามารถเกิดขึ้นได้ โดยการเลือกตัวอักษรในลำดับใดก็ได้จากวลี:
 
 $$\mathbf{\text{thereisasyetinsufficientdataforameaningfulanswer}}$$
 
-สมมติว่าตัวอักษรที่มี 15 ตัวอักษรหรือน้อยกว่านั้นเรียงตามลำดับตัวอักษรและเรียงลำดับโดยเริ่มจาก 1
+สมมติว่าตัวอักษรที่มี 15 ตัวอักษรหรือน้อยกว่านั้น เรียงตามลำดับตัวอักษรและเรียงลำดับโดยเริ่มจาก 1
 
-list จะมี:
+รายการจะเป็น:
 
 $$\begin{align}
   & 1: \text{a} \\\\
@@ -46,11 +46,12 @@ $$\begin{align}
   & 525069350231428029: \text{ywuuttttssssrrr} \\\\
 \end{align}$$
 
-กำหนด $P(w)$ ที่มีตำแหน่งของคำเป็น $w$.
+กำหนดให้ $P(w)$ เป็นตำแหน่งของคำ $w$
 
-กำหนด $W(p)$ ที่ตำอยู่ในตำแหน่ง $p$.
+กำหนดให้ $W(p)$ เป็นคำในตำแหน่ง $p$
 
-จะเห็นว่า $P(w)$ และ $W(p)$ จะกลับกัน $P(W(p)) = p$ และ $W(P(w)) = w$.
+จะเห็นว่า $P(w)$ และ $W(p)$ เป็นฟังก์ชันตรงกันข้ามกัน  
+$P(W(p)) = p$ และ $W(P(w)) = w$
 
 เช่น
 
@@ -64,17 +65,17 @@ $$\begin{align}
 ให้หา
 $$W(P(\text{legionary}) + P(\text{calorimeters}) - P(\text{annihilate}) + P(\text{orchestrated}) - P(\text{fluttering})).$$
 
-ให้คำตอบโดยใช้อักษรตัวพิมพ์เล็ก (no punctuation or space).
+ให้ตอบโดยใช้อักษรตัวพิมพ์เล็ก (ไม่ต้องมีจุด หรือเว้นวรรค)
 
 # --hints--
 
-`euler480()` ควร return string.
+`euler480()` ต้องคืนค่าเป็นสตริง
 
 ```js
 assert(typeof euler480() === 'string');
 ```
 
-`euler480()` ควร return string `turnthestarson`.
+`euler480()` ต้องคืนค่าเป็นสตริง `turnthestarson`
 
 ```js
 assert.strictEqual(euler480(), 'turnthestarson');

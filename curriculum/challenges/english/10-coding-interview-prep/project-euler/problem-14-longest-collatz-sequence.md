@@ -18,51 +18,49 @@ dashedName: problem-14-longest-collatz-sequence
 
 <div style='text-align: center;'>13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1</div>
 
-เราสามารถเห็นลำดับ (เริ่มจาก 13 และสิ้นสุดที่ 1) ทั้งหมด 10 ลำดับ แม้ว่ายังไม่ได้ถูกพิสูจน์ (Collatz Problem) แต่ไม่ว่าจะหาเริ่มจากจำนวนไหนก็ตามก็จะสิ้นสดที่1
+เราสามารถเห็นลำดับ (เริ่มจาก 13 และสิ้นสุดที่ 1) ทั้งหมด 10 ลำดับ แม้ว่ายังไม่ได้ถูกพิสูจน์ (Collatz Problem) แต่ไม่ว่าจะหาเริ่มจากจำนวนไหนก็ตามก็จะสิ้นสุดที่1
 
-ให้จำนวนที่เริ่มอยู่ภายใต้ `limit` จะมีความยาวที่สุดของลำดับตัวเลขเป็นเท่าไหร่
-
-**Note:** เริ่มจากค่าหนึ่งล้านได้
+ให้หาจำนวนเริ่มต้นที่น้อยกว่า `limit` ที่สร้างลำดับตัวเลขที่ยาวที่สุด
 
 # --hints--
 
-`longestCollatzSequence(14)` ควร return number
+`longestCollatzSequence(14)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof longestCollatzSequence(14) === 'number');
 ```
 
-`longestCollatzSequence(14)` ควร return 9
+`longestCollatzSequence(14)` ต้องคืนค่าเป็น 9
 
 ```js
 assert.strictEqual(longestCollatzSequence(14), 9);
 ```
 
-`longestCollatzSequence(5847)` ควร return 3711
+`longestCollatzSequence(5847)` ต้องคืนค่าเป็น 3711
 
 ```js
 assert.strictEqual(longestCollatzSequence(5847), 3711);
 ```
 
-`longestCollatzSequence(46500)` ควร return 35655
+`longestCollatzSequence(46500)` ต้องคืนค่าเป็น 35655
 
 ```js
 assert.strictEqual(longestCollatzSequence(46500), 35655);
 ```
 
-`longestCollatzSequence(54512)` ควร return 52527
+`longestCollatzSequence(54512)` ต้องคืนค่าเป็น 52527
 
 ```js
 assert.strictEqual(longestCollatzSequence(54512), 52527);
 ```
 
-`longestCollatzSequence(100000)` ควร return 77031
+`longestCollatzSequence(100000)` ต้องคืนค่าเป็น 77031
 
 ```js
 assert.strictEqual(longestCollatzSequence(100000), 77031);
 ```
 
-`longestCollatzSequence(1000000)` ควร return 837799
+`longestCollatzSequence(1000000)` ต้องคืนค่าเป็น 837799
 
 ```js
 assert.strictEqual(longestCollatzSequence(1000000), 837799);

@@ -8,23 +8,24 @@ dashedName: test-if-a-value-falls-within-a-specific-range
 
 # --description--
 
-project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
+project นี้สร้างขึ้นจาก [Replit ตัวนี้](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
 ```javascript
 .approximately(actual, expected, delta, [message])
 ```
 
-ยืนยันว่า `actual` เท่ากับ `expected` ภายในช่วง +/- `delta`
+`approximately` จะตรวจสอบว่า `actual` จะมีค่าเท่ากับ `expected` ภายในช่วง +/- ไม่เกิน `delta` หรือไม่
 
 # --instructions--
 
-ภายใน `tests/1_unit-tests.js` ภายใต้การทดสอบที่ระบุว่า "#10" ในชุด `Comparisons` ให้เปลี่ยน `assert` แต่ละรายการเป็น `assert.approximately` เพื่อให้ผ่านการทดสอบ (ควรประเมินค่า `true`)
+ในไฟล์ `tests/1_unit-tests.js` ให้ดูที่ test ใต้ `#10` ใน suite ที่ชื่อ `Comparisons`  
+ให้เปลี่ยน `assert` เป็น `assert.approximately` เพื่อทำให้ test ผ่าน (ได้ค่าเป็น `true`) 
 
-เลือกช่วงต่ำสุด (parameter ที่ 3) เพื่อให้การทดสอบผ่านเสมอ ควรน้อยกว่า 1
+ให้เปลี่ยน parameter ตัวที่ 3 เพื่อให้ test ผ่าน โดยค่านี้ต้องน้อยกว่า 1
 
 # --hints--
 
-การทดสอบทั้งหมดควรผ่าน
+test ทั้งหมดต้องผ่าน
 
 ```js
 (getUserInput) =>
@@ -38,7 +39,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกช่วงที่ถูกต้องสำหรับการยืนยันครั้งแรก -`approximately(actual, expected, range)`
+ต้องเลือกค่า `range` ของ `approximately(actual, expected, range)` ที่ใช้กับ assert ตัวแรกให้ถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -57,7 +58,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกช่วงที่ถูกต้องสำหรับการยืนยันครั้งที่สอง -`approximately(actual, expected, range)`
+ต้องเลือกค่า `range` ของ `approximately(actual, expected, range)` ที่ใช้กับ assert ตัวที่สองให้ถูกต้อง
 
 ```js
 (getUserInput) =>

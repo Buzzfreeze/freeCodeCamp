@@ -8,33 +8,35 @@ dashedName: problem-22-names-scores
 
 # --description--
 
-ใช้ `names` array ที่กำหนดใน background ที่มี 5000 ชื่อ เริ่มจากy sorting ตาม alphabetical order จากนั้นใช้ alphabetical value ของแต่ละชื่อคูณด้วยค่าจาก alphabetical position ใน list เพื่อให้ name score
+เราได้ประกาศ array `names` ไว้ให้แล้ว แต่คุณจะไม่เห็นค่านี้ โดย array นี้จะมีข้อมูลเป็นสตริงทั้งหมด 5000 ชื่อ 
 
-ตัวอย่างเช่นเมื่อ list ถูก sorted alphabetical order, ชื่อ COLIN, จะมีค่าเป็น 3 + 15 + 12 + 9 + 14 = 53, คือชื่อลำดับที่ 938 ใน list. ดังนั้น COLIN จะมี score เป็น 938 × 53 = 49714
+ให้คุณทำการเรียงชื่อตามตัวอักษร จากนั้นใช้ค่าของแต่ละตัวอักษรคุณกับตำแหน่งของชื่อนั้นใน array เพื่อคำนวนคะแนนของชื่อนั้น
 
-ค่าทั้งหมดของ name scores ใน array เป็นเท่าไหร่
+เช่น ชื่อ COLIN จะมีค่าเป็น 3 + 15 + 12 + 9 + 14 = 53 และเป็นชื่อลำดับที่ 938 ใน array ดังนั้น COLIN จะมีคะแนนเป็น 938 × 53 = 49714
+
+ให้คำนวนหาผลรวมของคะแนนใน array
 
 # --hints--
 
-`namesScores(test1)` ควร return number
+`namesScores(test1)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof namesScores(test1) === 'number');
 ```
 
-`namesScores(test1)` ควร return 791.
+`namesScores(test1)` ต้องคืนค่าเป็น 791
 
 ```js
 assert.strictEqual(namesScores(test1), 791);
 ```
 
-`namesScores(test2)` ควร return 1468.
+`namesScores(test2)` ต้องคืนค่าเป็น 1468
 
 ```js
 assert.strictEqual(namesScores(test2), 1468);
 ```
 
-`namesScores(names)` ควร return 871198282.
+`namesScores(names)` ต้องคืนค่าเป็น 871198282
 
 ```js
 assert.strictEqual(namesScores(names), 871198282);

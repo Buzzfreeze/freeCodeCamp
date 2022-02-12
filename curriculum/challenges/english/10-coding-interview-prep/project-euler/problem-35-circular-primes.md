@@ -8,55 +8,55 @@ dashedName: problem-35-circular-primes
 
 # --description--
 
-จำนวน 197 เรียกว่า circular prime เพราะว่าสามารถ rotations ทุก digits ได้เป็น 197, 971, และ 719 และทุกจำนวนเป็นเลข prime
+จำนวน 197 เรียกว่า circular prime เพราะว่าสามารถสลับเลขทุกหลัก ซึ่งจะได้ค่าเป็น 197, 971, และ 719 และทุกจำนวนเป็นจำนวนเฉพาะ
 
-มี 13 จำนวนที่เป็น primes ท่ีน้อยกว่า 100: 2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, and 97.
+มี circular prime ที่น้อยกว่า 100 ทั้งหมด 13 ตัวคือ 2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, and 97.
 
-มี circular primes กี่จำนวนที่น้อยกว่าค่า `n`, ขณะที่ 100 ≤ `n` ≤ 1000000?
+ให้หาจำนวนของ circular primes ที่น้อยกว่า `n` โดยที่ 100 ≤ `n` ≤ 1000000?
 
 **Note:**  
 
-Circular primes สามารถ rotation ได้เกิน `n`.
+Circular primes สามารถสลับได้เกิน `n` ครั้ง
 
 # --hints--
 
-`circularPrimes(100)` ควร return number.
+`circularPrimes(100)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof circularPrimes(100) === 'number');
 ```
 
-`circularPrimes(100)` ควร return 13.
+`circularPrimes(100)` ต้องคืนค่าเป็น 13
 
 ```js
 assert(circularPrimes(100) == 13);
 ```
 
-`circularPrimes(100000)` ควร return 43.
+`circularPrimes(100000)` ต้องคืนค่าเป็น 43
 
 ```js
 assert(circularPrimes(100000) == 43);
 ```
 
-`circularPrimes(250000)` ควร return 45.
+`circularPrimes(250000)` ต้องคืนค่าเป็น 45
 
 ```js
 assert(circularPrimes(250000) == 45);
 ```
 
-`circularPrimes(500000)` ควร return 49.
+`circularPrimes(500000)` ต้องคืนค่าเป็น 49
 
 ```js
 assert(circularPrimes(500000) == 49);
 ```
 
-`circularPrimes(750000)` ควร return 49.
+`circularPrimes(750000)` ต้องคืนค่าเป็น 49
 
 ```js
 assert(circularPrimes(750000) == 49);
 ```
 
-`circularPrimes(1000000)` ควร return 55.
+`circularPrimes(1000000)` ต้องคืนค่าเป็น 55
 
 ```js
 assert(circularPrimes(1000000) == 55);

@@ -8,27 +8,37 @@ dashedName: create-a-priority-queue-class
 
 # --description--
 
-ในแบบทดสอบนี้ คุณจะต้องสร้าง Priority Queue ซึ่งเป็น queue ชนิดพิเศษที่รายการอาจมีข้อมูลเพิ่มเติมซึ่งระบุลำดับความสำคัญของพวกมันเอง นี่อาจใช้แทนจำนวนเต็มได้ ลำดับความสำคัญของรายการจะแทนที่ลำดับการจัดวางในการพิจารณาว่ารายการลำดับจะถูก dequeue หากรายการที่มีลำดับความสำคัญสูงกว่าถูกจัด queue ไว้หลังรายการที่มีลำดับความสำคัญต่ำกว่า รายการที่มีลำดับความสำคัญสูงกว่าจะถูก dequeue ก่อนรายการอื่นๆ ทั้งหมด
+ในแบบทดสอบนี้ คุณจะต้องสร้าง Priority Queue ซึ่งเป็น queue ชนิดพิเศษที่แต่ละรายการจะมีข้อมูลเพิ่มเติมที่ใช้ระบุลำดับความสำคัญของข้อมูล (ลำดับของความสำคัญจะแทนด้วยจำนวนเต็ม) 
+โดยจะใช้ลำดับความสำคัญในการพิจารณาว่าข้อมูลตัวไหนจะถูก dequeue ก่อนหรือหลัง 
+เช่น ถ้าข้อมูลที่มีลำดับความสำคัญสูงกว่าถูกจัด queue ไว้หลังรายการที่มีลำดับความสำคัญต่ำกว่า ข้อมูลที่มีลำดับความสำคัญสูงกว่าจะถูก dequeue ก่อนรายการอื่นๆ ทั้งหมด
 
-ตัวอย่างเช่น สมมติว่าเรามี priority queue ที่มีสามรายการ:
+เช่น สมมติว่าเรามี priority queue ที่มีข้อมูลสามตัว:
 
 ```js
 [['kitten', 2], ['dog', 2], ['rabbit', 2]]
 ```
 
-ในที่นี้ค่าที่สอง (จำนวนเต็ม) แสดงถึงลำดับความสำคัญของรายการ หากเราจัด queue  `['human', 1]` ด้วยลำดับความสำคัญ `1` (สมมติว่าลำดับความสำคัญต่ำกว่าจะได้รับลำดับความสำคัญมากกว่า) มันจะเป็นรายการแรกที่จะถูก dequeue คอลเลกชันจะมีลักษณะดังนี้:
+ค่าที่สองใน array ย่อย (ที่เป็นจำนวนเต็ม) จะเป็นค่าของลำดับความสำคัญ ถ้าเราทำการ enqueue  `['human', 1]` ที่มีลำดับความสำคัญเป็น `1` (สมมติว่าเลขน้อย แปลว่าสำคัญมากกว่า) ข้อมูลนี้มันจะเป็นข้อมูลแรกที่จะถูก dequeue โดยคอลเลกชันจะมีลักษณะดังนี้:
 
 ```js
 [['human', 1], ['kitten', 2], ['dog', 2], ['rabbit', 2]]
 ```
 
-เราได้เริ่มเขียน `PriorityQueue` ใน code editor แล้ว คุณจะต้องเพิ่ม `enqueue` method สำหรับการเพิ่มรายการที่มีลำดับความสำคัญ `dequeue` method สำหรับการลบและ return รายการ `size` method เพื่อ return จำนวนรายการใน queue  `front` method เพื่อ return element ที่ด้านหน้าของ queue  และสุดท้ายคือ `isEmpty` method ที่จะ return `true` หาก queue ว่างหรือ `false` หากไม่ใช่
+เราได้เขียน `PriorityQueue` ใน code editor ให้บางส่วนแล้ว 
+คุณจะต้องเพิ่ม method ตามเงื่อนไขนี้
 
-`enqueue` ควรยอมรับรายการที่มีรูปแบบที่แสดงด้านบน (`['human', 1]`) โดยที่ `1` แสดงถึงลำดับความสำคัญ `dequeue` และ `front` ควร return เฉพาะชื่อของรายการ ไม่ใช่ลำดับความสำคัญ
+1. method `enqueue` เพื่อการเพิ่มข้อมูลที่ระบุลำดับความสำคัญ
+2. method `dequeue` เพื่อการลบและคืนค่าข้อมูลออกมา
+3. method `size` ที่จะคืนค่าเป็นจำนวนข้อมูลใน queue  
+4. method `front` ที่จะคืนค่าเป็น element ที่ด้านหน้าของ queue และสุดท้ายคือ 
+5. method `isEmpty` ที่จะคืนค่าเป็น `true` หาก queue ว่างหรือ `false` หากมีข้อมูลใน queue
+
+`enqueue` ต้องรับข้อมูลที่มีรูปแบบตามนี้เท่านั้น `['human', 1]` โดยที่ `1` แสดงถึงลำดับความสำคัญ 
+`dequeue` และ `front` ควร ต้องคืนค่ามาเฉพาะชื่อของข้อมูล โดยไม่ต้องคืนลำดับความสำคัญมาด้วย
 
 # --hints--
 
-`PriorityQueue` class ควรมี `enqueue` method
+class `PriorityQueue` ควรมี method `enqueue`
 
 ```js
 assert(
@@ -39,7 +49,7 @@ assert(
 );
 ```
 
-`PriorityQueue` class ควรมี `dequeue` method
+class `PriorityQueue` ควรมี method `dequeue`
 
 ```js
 assert(
@@ -50,7 +60,7 @@ assert(
 );
 ```
 
-`PriorityQueue` class ควรมี `size` method
+class `PriorityQueue` ควรมี method `size`
 
 ```js
 assert(
@@ -61,7 +71,7 @@ assert(
 );
 ```
 
-`PriorityQueue` class ควรมี `front` method
+class `PriorityQueue` ควรมี method `front`
 
 ```js
 assert(
@@ -72,7 +82,7 @@ assert(
 );
 ```
 
-`PriorityQueue` class ควรมี `isEmpty` method
+class `PriorityQueue` ควรมี method `isEmpty`
 
 ```js
 assert(
@@ -83,7 +93,7 @@ assert(
 );
 ```
 
-`PriorityQueue` class ควรติดตามจำนวนปัจจุบันของรายการโดยการใช้ `size` method อย่างถูกต้อง เมื่อรายการนั้นๆ ถูก enqueue หรือ dequeue
+class `PriorityQueue` ควรติดตามจำนวนปัจจุบันของรายการโดยการใช้ method `size` อย่างถูกต้อง เมื่อรายการนั้นๆ ถูก enqueue หรือ dequeue
 
 ```js
 assert(
@@ -102,8 +112,7 @@ assert(
 );
 ```
 
-`front` method ควร return รายการที่อยู่ด้านหน้าของ queue เมื่อเมื่อรายการนั้นๆ ถูก enqueue หรือ dequeue
-อย่างถูกต้อง
+method `front` ควรคืนค่าเป็นรายการที่อยู่ด้านหน้าของ queue เมื่อเมื่อรายการนั้นๆ ถูก enqueue หรือ dequeue อย่างถูกต้อง
 
 ```js
 assert(
@@ -130,7 +139,7 @@ assert(
 );
 ```
 
-`isEmpty` method ควร return `true` เมื่อ `queue นั้นว่างเปล่า
+method `isEmpty` ควรคืนค่าเป็น `true` เมื่อ `queue นั้นว่างเปล่า
 
 ```js
 assert(
@@ -146,7 +155,7 @@ assert(
 );
 ```
 
-priority queue ควร return รายการที่มีลำดับความสำคัญมากกว่าก่อนรายการที่มีน้อยกว่า หรือ return รายการในลำดับ in first-in-first-out  
+priority queue ควรคืนค่าเป็นรายการที่มีลำดับความสำคัญมากกว่าก่อนรายการที่มีน้อยกว่า หรือคืนค่าออกมาในแบบ first-in-first-out  
 
 ```js
 assert(
@@ -180,9 +189,9 @@ function PriorityQueue () {
   this.printCollection = function() {
     console.log(this.collection);
   };
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 ```
 
@@ -194,7 +203,7 @@ function PriorityQueue() {
   this.printCollection = function () {
     console.log(this.collection);
   };
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   this.enqueue = function (newitem) {
     if (this.isEmpty()) {
       return this.collection.push(newitem);
@@ -227,6 +236,6 @@ function PriorityQueue() {
   this.isEmpty = function () {
     return this.size() > 0 ? false : true;
   };
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 ```

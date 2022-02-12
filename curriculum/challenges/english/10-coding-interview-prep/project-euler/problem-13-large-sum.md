@@ -8,7 +8,7 @@ dashedName: problem-13-large-sum
 
 # --description--
 
-10 หลักแรกของผลรวมของผลรวมของตัวเลขหนึ่งร้อย 50 หลักต่อไปนี้
+ให้หา 10 หลักแรกของผลรวมของจากการบวกเลขความยาว 100 หลัก 50 ตัวนี้เข้าด้วยกัน
 
 <div style='padding-left: 4em;'>
   37107287533902102798797998220837590246510135740250<br>
@@ -115,19 +115,19 @@ dashedName: problem-13-large-sum
 
 # --hints--
 
-`largeSum(testNums)` ควร return  number
+`largeSum(testNums)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof largeSum(testNums) === 'number');
 ```
 
-`largeSum(testNums)` ควร return 8348422521
+`largeSum(testNums)` ต้องคืนค่าเป็น 8348422521
 
 ```js
 assert.strictEqual(largeSum(testNums), 8348422521);
 ```
 
-`largeSum(fiftyDigitNums)` ควร return 5537376230
+`largeSum(fiftyDigitNums)` ต้องคืนค่าเป็น 5537376230
 
 ```js
 assert.strictEqual(largeSum(fiftyDigitNums), 5537376230);

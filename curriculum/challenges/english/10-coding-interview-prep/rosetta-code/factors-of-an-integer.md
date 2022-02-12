@@ -8,31 +8,30 @@ dashedName: factors-of-an-integer
 
 # --description--
 
-เขียนฟังก์ชันที่returnจำนวนเต็มบวกเป็นarray
+เขียนฟังก์ชันที่คืนค่าเป็นตัวประกอบของจำนวนเต็มบวกเป็น array
 
-ปัจจัยเหล่านี้เป็นจำนวนเต็มบวกโดยที่ตัวเลขที่กำลังแยกตัวประกอบสามารถแบ่งออกเพื่อให้ได้ผลลัพธ์เป็นจำนวนเต็มบวก
 
 # --hints--
 
-`factors` ควรเป็น function.
+`factors` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof factors === 'function');
 ```
 
-`factors(45)` ควร return `[1,3,5,9,15,45]`.
+`factors(45)` ต้องคืนค่าเป็น `[1,3,5,9,15,45]`
 
 ```js
 assert.deepEqual(factors(45), ans[0]);
 ```
 
-`factors(53)` ควร return `[1,53]`.
+`factors(53)` ต้องคืนค่าเป็น `[1,53]`
 
 ```js
 assert.deepEqual(factors(53), ans[1]);
 ```
 
-`factors(64)` ควร return `[1,2,4,8,16,32,64]`.
+`factors(64)` ต้องคืนค่าเป็น `[1,2,4,8,16,32,64]`
 
 ```js
 assert.deepEqual(factors(64), ans[2]);

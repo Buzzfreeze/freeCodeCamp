@@ -8,32 +8,41 @@ dashedName: implementation-of-social-authentication-ii
 
 # --description--
 
-ส่วนสุดท้ายของการตั้งค่าการรับรองความถูกต้อง GitHub ของคุณคือการสร้างกลยุทธ์เอง จะต้องเพิ่ม dependency ของ `passport-github@~1.1.0` ให้กับโปรเจ็กต์ และต้องมีใน `auth.js` ของคุณเป็น `GithubStrategy` ดังนี้: `const GitHubStrategy = require('passport-github').Strategy;` อย่าลืมกำหนดและกำหนดค่า `dotenv เพื่อใช้ตัวแปรสภาพแวดล้อม
+ส่วนสุดท้ายของการตั้งค่าการ authenticate โดยใช้ GitHub ตือการสร้าง strategy
+คุณจะต้องเพิ่ม dependency ของ `passport-github@~1.1.0` ให้กับโปรเจ็กต์ และทำการ require ใน `auth.js` โดยใช้โค้ดนี้: `const GitHubStrategy = require('passport-github').Strategy;` 
+อย่าลืมเรียกใช้และกำหนดค่า `dotenv` ด้วย เพื่อให้ใช้ `process.env` ได้
 
-ในการตั้งค่ากลยุทธ์ GitHub คุณต้องบอกให้ Passport ใช้ "GitHubStrategy" ที่สร้างอินสแตนซ์ ซึ่งยอมรับ 2 อาร์กิวเมนต์: object (ประกอบด้วย "clientID", "clientSecret" และ "callbackURL") และฟังก์ชันที่จะเรียกเมื่อ ผู้ใช้ได้รับการพิสูจน์ตัวตนเรียบร้อยแล้ว ซึ่งจะเป็นตัวกำหนดว่าเป็นผู้ใช้รายใหม่หรือไม่ และฟิลด์ใดที่จะบันทึกในขั้นต้นในวัตถุฐานข้อมูลของผู้ใช้ นี่เป็นเรื่องปกติในหลาย ๆ กลยุทธ์ แต่บางคนอาจต้องการข้อมูลเพิ่มเติมตามที่ระบุไว้ใน GitHub README ของกลยุทธ์เฉพาะนั้น ตัวอย่างเช่น Google ต้องมี *ขอบเขต* ซึ่งกำหนดว่าคำขอของคุณ ต้องการให้ส่งคืนข้อมูลประเภทใด และขอให้ผู้ใช้อนุมัติการเข้าถึงดังกล่าว กลยุทธ์ปัจจุบันที่เรากำลังดำเนินการได้อธิบายการใช้งานที่นี่ [here](https://github.com/jaredhanson/passport-github/) แต่เรากำลังทำทั้งหมดบน freeCodeCamp !
+ในการตั้งค่า GitHub strategy คุณจะต้องสร้าง instance ของ `GitHubStrategy` และส่งไปให้ Passport 
+ซึ่งในการสร้าง instance ของ `GitHubStrategy` จะต้องส่ง argument ไปสองตัว 2 คือ object (ที่มี `clientID`, `clientSecret` และ `callbackURL`) และฟังก์ชันที่จะเรียกใช้เมื่อผู้ใช้ได้รับการ authenticate เรียบร้อยแล้ว ฟังก์ชันนี้จะเป็นตัวกำหนดว่าเป็นผู้ใช้รายใหม่หรือไม่ และจะเก็บข้อมูลอะไรของผู้ใช้ลงฐานข้อมูล 
 
-กลยุทธ์ใหม่ของคุณควรมีลักษณะดังนี้:
+strategy ทั่วๆไปจะทำตามนี้ แต่บาง strategy จะต้องให้เราเก็บข้อมูลบางอย่างเพิ่ม ให้ไปดูใน GitHub README ของ strategy นั้นๆว่าต้องทำอย่างไร 
+เช่น ถ้าใช้ Google ต้องกำหนด *scope* ด้วยว่าแอปของคุณจะเข้าถึงข้อมูลอะไรของผู้ใช้ได้บ้าง และต้องขอให้ผู้ใช้อนุมัติการเข้าถึงข้อมูลนั้น 
+
+strategy ที่เราใช้อยู่มีวิธีใช้เขียนไว้ [ที่นี่](https://github.com/jaredhanson/passport-github/) แต่เราจะสอนคุณเรื่องนี้ทั้งหมดบนเว็บของเรานี่แหละ!
+
+strategy ใหม่ของคุณควรมีลักษณะดังนี้:
 
 ```js
 passport.use(new GitHubStrategy({
   clientID: process.env.GITHUB_CLIENT_ID,
   clientSecret: process.env.GITHUB_CLIENT_SECRET,
-  callbackURL: /*INSERT CALLBACK URL ENTERED INTO GITHUB HERE*/
+  callbackURL: /*ใส่ callback url ตัวเดียวกับที่ระบุไปใน Github ที่นี่*/
 },
   function(accessToken, refreshToken, profile, cb) {
     console.log(profile);
-    //Database logic here with callback containing our user object
+    // ใช้ฐานข้อมูล และเรียก callback โดยส่ง userobject ไปด้วยที่นี่
   }
 ));
 ```
 
-การรับรองความถูกต้องยังไม่สำเร็จ และจริง ๆ แล้วจะทำให้เกิดข้อผิดพลาดโดยไม่มี logic ฐานข้อมูลและ callback แต่ควรบันทึกโปรไฟล์ GitHub ของผู้เรียนไปที่ console หากต้องการลอง! 
+พอมาถึงตรงนี้การ authenticate ของคุณก็จะยังไม่เสร็จ เพราะว่ายังไม่ได้ใช้งานฐานข้อมูล และ callback 
+แต่ถ้าลองรันโค้ด ก็จะต้องเห็น profile GitHub ใน console แล้ว
 
-ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [here](https://gist.github.com/camperbot/ff3a1166684c1b184709ac0bee30dee6).
+ให้ส่ง URL ของเว็บคุณมาเมื่อทำเสร็จแล้ว ถ้าพบข้อผิดพลาด ให้ลองดูตัวอย่าง project ที่เสร็จสิ้นแล้วได้ [ที่นี่](https://gist.github.com/camperbot/ff3a1166684c1b184709ac0bee30dee6)
 
 # --hints--
 
-passport-github dependency ควรเพิ่ม
+ต้องใช้ dependency passport-github
 
 ```js
 (getUserInput) =>
@@ -52,7 +61,7 @@ passport-github dependency ควรเพิ่ม
   );
 ```
 
-passport-github ต้องใช้
+ต้องทำการ require passport-github
 
 ```js
 (getUserInput) =>
@@ -70,7 +79,7 @@ passport-github ต้องใช้
   );
 ```
 
-GitHub strategy should be setup correctly thus far.
+ต้องตั้งค่า GitHub strategy ให้ถูกต้อง
 
 ```js
 (getUserInput) =>

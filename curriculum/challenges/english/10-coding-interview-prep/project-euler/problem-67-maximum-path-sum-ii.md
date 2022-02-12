@@ -8,7 +8,7 @@ dashedName: problem-67-maximum-path-sum-ii
 
 # --description--
 
-โดยเริ่มจากด้านบนของสามเหลี่ยมด้านล่างแล้วเลื่อนไปยังตัวเลขที่อยู่ติดกันในแถวด้านล่าง ผลรวมสูงสุดจากบนลงล่างคือ 23
+เริ่มจากด้านบนของสามเหลี่ยม แล้วลงไปด้านล่าง จากนั้นเลื่อนไปยังตัวเลขที่อยู่ติดกันในแถวด้านล่าง ผลรวมสูงสุดจากบนลงล่างคือ 23
 
 <div style='text-align: center;'>
   <strong style='color: red;'>3</strong><br>
@@ -17,30 +17,30 @@ dashedName: problem-67-maximum-path-sum-ii
   8 5 <strong style='color: red;'>9</strong> 3
 </div>
 
-โดย 3 + 7 + 4 + 9 = 23.
+โดยเป็น 3 + 7 + 4 + 9 = 23
 
 
 หาผลรวมสูงสุดจากบนลงล่างใน `numTriangle` 2D array กำหนดไว้ในพื้นหลังที่มีรูปสามเหลี่ยมที่มีหนึ่งร้อยแถว
 
 **Note:** 
-นี่เป็นปัญหาที่ 18 เวอร์ชันที่ยากกว่ามาก ไม่สามารถลองทุกเส้นทางเพื่อแก้ปัญหานี้ได้ เนื่องจากมี 2<sup>99</sup>  หากคุณตรวจสอบได้หนึ่งล้านล้าน (10<sup>12</sup>) 
-เส้นทางทุกวินาทีจะใช้เวลากว่าสองหมื่นล้านปีในการตรวจสอบทั้งหมด มีอัลกอริธึมที่มีประสิทธิภาพในการแก้ปัญหา ;o)
+นี่เป็นโจทย์ข้อที่ 18 ในเวอร์ชันที่ยากกว่ามาก คุณไม่สามารถลองทุกเส้นทางเพื่อแก้ปัญหานี้ได้ เนื่องจากมีทั้งหมด 2<sup>99</sup> เส้นทาง หากคุณตรวจสอบได้หนึ่งล้านล้าน (10<sup>12</sup>) 
+เส้นทางต่อวินาที จะใช้เวลากว่าสองหมื่นล้านปีในการตรวจสอบทั้งหมด แต่มีอัลกอริธึมที่ใช้แก้ปัญหาได้โดยใช้เวลาไม่เยอะ ;o)
 
 # --hints--
 
-`maximumPathSumII(testTriangle)` ควร return number.
+`maximumPathSumII(testTriangle)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof maximumPathSumII(_testTriangle) === 'number');
 ```
 
-`maximumPathSumII(testTriangle)` ควร return 23.
+`maximumPathSumII(testTriangle)` ต้องคืนค่าเป็น 23
 
 ```js
 assert.strictEqual(maximumPathSumII(_testTriangle), 23);
 ```
 
-`maximumPathSumII(numTriangle)` ควร return 7273.
+`maximumPathSumII(numTriangle)` ต้องคืนค่าเป็น 7273
 
 ```js
 assert.strictEqual(maximumPathSumII(_numTriangle), 7273);

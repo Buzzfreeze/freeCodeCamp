@@ -12,13 +12,13 @@ dashedName: discordian-date
 
 # --hints--
 
-`discordianDate` ควรเป็น function.
+`discordianDate` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof discordianDate === 'function');
 ```
 
-`discordianDate(new Date(2010, 6, 22))` ควร return `"Pungenday, the 57th day of Confusion in the YOLD 3176"`.
+`discordianDate(new Date(2010, 6, 22))` ต้องคืนค่าเป็น `"Pungenday, the 57th day of Confusion in the YOLD 3176"`
 
 ```js
 assert(
@@ -27,7 +27,7 @@ assert(
 );
 ```
 
-`discordianDate(new Date(2012, 1, 28))` ควร return `"Prickle-Prickle, the 59th day of Chaos in the YOLD 3178"`.
+`discordianDate(new Date(2012, 1, 28))` ต้องคืนค่าเป็น `"Prickle-Prickle, the 59th day of Chaos in the YOLD 3178"`
 
 ```js
 assert(
@@ -36,7 +36,7 @@ assert(
 );
 ```
 
-`discordianDate(new Date(2012, 1, 29))` ควร return `"Setting Orange, the 60th day of Chaos in the YOLD 3178. Celebrate St. Tib\'s Day!"`.
+`discordianDate(new Date(2012, 1, 29))` ต้องคืนค่าเป็น `"Setting Orange, the 60th day of Chaos in the YOLD 3178. Celebrate St. Tib\'s Day!"`
 
 ```js
 assert(
@@ -45,7 +45,7 @@ assert(
 );
 ```
 
-`discordianDate(new Date(2012, 2, 1))` ควร return `"Setting Orange, the 60th day of Chaos in the YOLD 3178"`.
+`discordianDate(new Date(2012, 2, 1))` ต้องคืนค่าเป็น `"Setting Orange, the 60th day of Chaos in the YOLD 3178"`
 
 ```js
 assert(
@@ -54,7 +54,7 @@ assert(
 );
 ```
 
-`discordianDate(new Date(2010, 0, 5))` ควร return `"Setting Orange, the 5th day of Chaos in the YOLD 3176. Celebrate Mungday!"`.
+`discordianDate(new Date(2010, 0, 5))` ต้องคืนค่าเป็น `"Setting Orange, the 5th day of Chaos in the YOLD 3176. Celebrate Mungday!"`
 
 ```js
 assert(
@@ -63,7 +63,7 @@ assert(
 );
 ```
 
-`discordianDate(new Date(2011, 4, 3))` ควร return `"Pungenday, the 50th day of Discord in the YOLD 3177. Celebrate Discoflux!"`.
+`discordianDate(new Date(2011, 4, 3))` ต้องคืนค่าเป็น `"Pungenday, the 50th day of Discord in the YOLD 3177. Celebrate Discoflux!"`
 
 ```js
 assert(
@@ -72,7 +72,7 @@ assert(
 );
 ```
 
-`discordianDate(new Date(2015, 9, 19))` ควร return `"Boomtime, the 73rd day of Bureaucracy in the YOLD 3181"`.
+`discordianDate(new Date(2015, 9, 19))` ต้องคืนค่าเป็น `"Boomtime, the 73rd day of Bureaucracy in the YOLD 3181"`
 
 ```js
 assert(

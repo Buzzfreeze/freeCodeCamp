@@ -8,11 +8,11 @@ dashedName: deal-cards-for-freecell
 
 # --description--
 
-*FreeCell* เป็นเกมไพ่โซลิแทร์ที่ Paul Alfille แนะนำให้รู้จักกับระบบ PLATO ในปี 1978 Jim Horne ที่ Microsoft เปลี่ยนชื่อเป็น FreeCell และนำเกมกลับมาใช้ใหม่ [DOS](https://rosettacode.org/wiki/DOS "DOS") จาก [Windows](https://rosettacode.org/wiki/Windows "Windows")รุ่นนี้แนะนำข้อตกลงที่มีหมายเลข 32000
+*FreeCell* เป็นเกมไพ่โซลิแทร์ที่ Paul Alfille grเพิเข้าไปในระบบ PLATO ในปี 1978 จากนั้น Jim Horne จาก Microsoft จึงได้เปลี่ยนชื่อเป็น FreeCell และนำเกมกลับมาลงไว้ใน [DOS](https://rosettacode.org/wiki/DOS "DOS") และ [Windows](https://rosettacode.org/wiki/Windows "Windows")
 
-เมื่อเกมได้รับความนิยม Jim Horne ได้เปิดเผยalgorithm และการใช้งาน FreeCell อื่นๆ ก็เริ่มทำซ้ำข้อตกลงของ Microsoft ข้อตกลงเหล่านี้มีหมายเลขตั้งแต่ 1 ถึง 32000 เวอร์ชันที่ใหม่กว่าจาก Microsoft มี 1 ล้านดีล โดยมีหมายเลขตั้งแต่ 1 ถึง 1000000 การใช้งานบางอย่างอนุญาตให้มีตัวเลขที่อยู่นอกช่วงนั้น
+เมื่อเกมได้รับความนิยม Jim Horne ก็ได้เปิดเผยอัลกอริทึมของเกมนี้ออกมา
 
-algorithm ใช้ [linear congruential generator](<https://rosettacode.org/wiki/linear congruential generator> "linear congruential generator") จาก Microsoft C:
+อัลกอริทึมนี้ใช้ [linear congruential generator](<https://rosettacode.org/wiki/linear congruential generator> "linear congruential generator") ของ Microsoft C:
 
 <ul>
   <li>$state_{n + 1} \equiv 214013 \times state_n + 2531011 \pmod{2^{31}}$</li>
@@ -20,24 +20,24 @@ algorithm ใช้ [linear congruential generator](<https://rosettacode.org/wik
   <li>$rand_n$ is in range 0 to 32767.</li>
 </ul>
 
-algorithm:
+อัลกอริทึมจะดำเนินการดังนี้:
 
 <ol>
-  <li>Seed the RNG with the number of the deal.
-  </li><li>Create an <a href='https://rosettacode.org/wiki/array' title='array' target='_blank'>array</a> of 52 cards: Ace of Clubs, Ace of Diamonds, Ace of Hearts, Ace of Spades, 2 of Clubs, 2 of Diamonds, and so on through the ranks: Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King. The array indexes are 0 to 51, with Ace of Clubs at 0, and King of Spades at 51.</li>
-  <li>Until the array is empty:</li>
-  <li>Choose a random card at index ≡ next random number (mod array length).</li>
+  <li>Seed RNG โดยใช้ตัวจำนวนไพ่ที่หยิบ
+  </li><li>สร้าง <a href='https://rosettacode.org/wiki/array' title='array' target='_blank'>array</a> ของไพ่ทั้ง 52 ใบ: A โพธิ์ดำ, A ข้าวหลามตัด, A โพธิ์แดง, A ดอกจิก, 2 โพธิ์ดำ, 2 ข้าวหลามตัด, ไปเรื่อยๆ โดยจะมี: A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K และ array จะมี index ตั้งแต่ 0 ถึง 51, โดยที่มี A โพธิ์ดำ เป็น 0, และ K ดอกจิก เป็น 51</li>
+  <li>จนกว่า array จะว่าง:</li>
+  <li>เลือกไพ่แบบสุ่มที่ index ≡ เลขสุ่มตัวต่อไป (mod ความยาวของ array)</li>
     <ul>
-      <li>Swap this random card with the last card of the array.</li>
-      <li>Remove this random card from the array. (Array length goes down by 1.)</li>
-      <li>Deal this random card.</li>
+      <li>สลับไพ่ใบที่สุ่มมานี้กับไพ่ใบสุดท้ายใน array</li>
+      <li>ลบไพ่ที่สุ่มมานี้ออกจาก array (ความยาวของ array ลดลง 1)</li>
+      <li>หยิบไพ่ที่สุ่มใบนี้ขึ้นมา</li>
     </ul>
-  <li>Deal all 52 cards, face up, across 8 columns. The first 8 cards go in 8 columns, the next 8 cards go on the first 8 cards, and so on.</li>
+  <li>หยิบไพ่ทั้ง 52 ใบ เปิดไพ่ออกมาและวางไว้ 8 แถว ไพ่ 8 แปดใบแรกจะไปอยู่ในแถวทั้ง 8 แถว และไพ่ 8 ไปถัดไปจะไปวางทับ 8 ใบแรกไปเรื่อยๆ</li>
 </ol>
 
-**Example:**
+**ตัวอย่าง:**
 
-**Order to deal cards**
+**ลำดับการหยิบไพ่**
 
 <pre> 1  2  3  4  5  6  7  8
  9 10 11 12 13 14 15 16
@@ -77,37 +77,37 @@ algorithm:
 
 # --instructions--
 
-เขียนฟังก์ชันเพื่อใช้หมายเลขdealsและไพ่แจกในลำดับเดียวกับalgorithmนี้ ฟังก์ชันต้องส่งคืนarrayสองมิติที่แสดงถึงบอร์ด FreeCell
+ให้เขียนฟังก์ชันเพื่อใช้หมายเลขdealsและไพ่แจกในลำดับเดียวกับอัลกอริทึมนี้ ฟังก์ชันต้องส่งคืนarrayสองมิติที่แสดงถึงบอร์ด FreeCell
 
-Deals นี้ยังสามารถตรวจสอบกับ [FreeCell solutions to 1000000 games](https://freecellgamesolutions.com/). (Summon a video solution, and it displays the initial deal.)
+ให้ลองตรวจสอบการหยิบไพ่กับ [FreeCell solutions to 1000000 games](https://freecellgamesolutions.com/)
 
 # --hints--
 
-`dealFreeCell` ควรเป็น function.
+`dealFreeCell` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof dealFreeCell === 'function');
 ```
 
-`dealFreeCell(seed)` ควร return object.
+`dealFreeCell(seed)` ต้องคืนค่าเป็น object
 
 ```js
 assert(typeof dealFreeCell(1) === 'object');
 ```
 
-`dealFreeCell(seed)` ควร return array ที่ความยาวเป็น 7.
+`dealFreeCell(seed)` ต้องคืนค่าเป็น array ที่มี 7 element
 
 ```js
 assert(dealFreeCell(1).length === 7);
 ```
 
-`dealFreeCell(1)` ควร return array ที่ระบุ "Game #1"
+`dealFreeCell(1)` ต้องคืนค่าเป็น array ของ "Game #1"
 
 ```js
 assert.deepEqual(dealFreeCell(1), game1);
 ```
 
-`dealFreeCell(617)` ควร return array ที่ระบุ "Game #617"
+`dealFreeCell(617)` ต้องคืนค่าเป็น array ของ "Game #617"
 
 ```js
 assert.deepEqual(dealFreeCell(617), game617);

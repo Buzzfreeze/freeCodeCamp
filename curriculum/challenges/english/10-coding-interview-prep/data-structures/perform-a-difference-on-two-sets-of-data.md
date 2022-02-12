@@ -8,13 +8,13 @@ dashedName: perform-a-difference-on-two-sets-of-data
 
 # --description--
 
-ในแบบฝึกหัดนี้ เราจะทำการเปลี่ยนแปลงกับข้อมูล 2 set เราจะสร้าง method ในโครงสร้างข้อมูล `Set` ที่เรียกว่า `difference` ความแตกต่างของ set ควรเปรียบเทียบสอง set นั้นและ return รายการที่มีอยู่ใน set แรกที่ไม่อยู่ใน set ที่สอง วิธีนี้ควรใช้ `set` อีก set หนึ่งเป็น argument และ return ความแตกต่าง `difference` ของทั้งสองชุด
+ในแบบฝึกหัดนี้ เราจะหาความต่างของ set 2 ตัว โดยเราจะสร้าง method ในโครงสร้างข้อมูล `Set` ที่เรียกว่า `difference` การหาความแตกต่างของ set ต้องเปรียบเทียบค่าของสอง set นั้น และคืนค่าเป็นรายการที่มีอยู่ใน set แรกแต่ไม่อยู่ใน set ที่สอง method นี้ต้องรับ `set` เป็น argument และ คืนค่าเป็น `difference` ของทั้งสองช set
 
-ตัวอย่างเช่น ถ้าหากกำหนดให้มี `setA = ['a','b','c']` และ `setB = ['a','b','d','e']` แล้ว คามแตกต่างของ setA และ setB คือ `setA.difference(setB) = ['c']`
+ตัวอย่างเช่น ถ้าหากกำหนดให้มี `setA = ['a','b','c']` และ `setB = ['a','b','d','e']` แล้ว ความแตกต่างของ setA และ setB คือ `setA.difference(setB) = ['c']`
 
 # --hints--
 
-คลาส `Set` ของคุณควรมี `difference` method
+class `Set` ของคุณควรมี method `difference`
 
 ```js
 assert(
@@ -25,7 +25,7 @@ assert(
 );
 ```
 
-`difference` method ของคุณควร return collection ที่ถูกต้อง
+method `difference` ของคุณควรคืนค่าเป็ฯ collection ที่ถูกต้อง
 
 ```js
 assert(
@@ -57,15 +57,15 @@ class Set {
     this.dictionary = {};
     this.length = 0;
   }
-  // This method will check for the presence of an element and return true or false
+  // method นี้จะอ่านว่ามีค่าอยู่ใน set แล้วหรือไม่ และคืนค่าเป็น true หรือ false
   has(element) {
     return this.dictionary[element] !== undefined;
   }
-  // This method will return all the values in the set
+  // method นี้จะคืนค่าเป็นค่าทั้งหมดที่อยู่ใน set
   values() {
     return Object.keys(this.dictionary);
   }
-  // This method will add an element to the set
+  // method นี้จะใช้เพิ่ม element ลงไปใน set
   add(element) {
     if (!this.has(element)) {
       this.dictionary[element] = true;
@@ -75,7 +75,7 @@ class Set {
 
     return false;
   }
-  // This method will remove an element from a set
+  // method นี้จะใช้ลบ element ออกจาก set
   remove(element) {
     if (this.has(element)) {
       delete this.dictionary[element];
@@ -85,11 +85,11 @@ class Set {
 
     return false;
   }
-  // This method will return the size of the set
+  // method นี้จะคืนค่าเป็นจำนวนข้อมูลใน set
   size() {
     return this.length;
   }
-  // This is our union method 
+  // method นี้ใช้ union 
   union(set) {
     const newSet = new Set();
     this.values().forEach(value => {
@@ -101,7 +101,7 @@ class Set {
 
     return newSet;
   }
-  // This is our intersection method
+  // method นี้ใช้ intersection 
   intersection(set) {
     const newSet = new Set();
 
@@ -123,9 +123,9 @@ class Set {
 
     return newSet;
   }
-  // Only change code below this line
-  
-  // Only change code above this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
+
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 ```
 

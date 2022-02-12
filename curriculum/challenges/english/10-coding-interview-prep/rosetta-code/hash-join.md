@@ -8,38 +8,40 @@ dashedName: hash-join
 
 # --description--
 
-An [inner join](https://www.freecodecamp.org/news/sql-join-types-inner-join-vs-outer-join-example/#how-to-use-an-inner-join-in-sql "news: SQL Join Types – Inner Join VS Outer Join Example#How to Use an INNER JOIN in SQL") เป็นการดำเนินการที่รวมตารางข้อมูลสองตารางเป็นตารางเดียว โดยยึดตามค่าคอลัมน์ที่ตรงกัน วิธีที่ง่ายที่สุดในการดำเนินการนี้คือ algorithm [nested loop join](<https://en.wikipedia.org/wiki/Nested loop join> "wp: Nested loop join") แต่ทางเลือกที่ปรับขนาดได้มากกว่าคือ algorithm  [hash join](<https://en.wikipedia.org/wiki/hash join> "wp: hash join") algorithm.
+[inner join](https://www.freecodecamp.org/news/sql-join-types-inner-join-vs-outer-join-example/#how-to-use-an-inner-join-in-sql "news: SQL Join Types – Inner Join VS Outer Join Example#How to Use an INNER JOIN in SQL") เป็นการดำเนินการที่รวมตารางข้อมูลสองตารางเป็นตารางเดียว โดยยึดตามค่าคอลัมน์ที่ตรงกัน วิธีที่ง่ายที่สุดในการดำเนินการนี้คือการใช้อัลกอริทึม [nested loop join](<https://en.wikipedia.org/wiki/Nested loop join> "wp: Nested loop join") แต่อัลกอริทึมที่ดีกว่าคือ [hash join](<https://en.wikipedia.org/wiki/hash join> "wp: hash join")
 
-"hash join" algorithm ,ulv' steps:
+อัลกอริทึม "hash join" มีสองขั้นตอนคือ
 
 <ol>
-  <li><strong>Hash phase:</strong> Create a <a href='https://en.wikipedia.org/wiki/Multimap' title='wp: Multimap' target='_blank'>multimap</a> from one of the two tables, mapping from each join column value to all the rows that contain it.</li>
+  <li><strong>Hash phase:</strong> สร้าง <a href='https://en.wikipedia.org/wiki/Multimap' title='wp: Multimap' target='_blank'>multimap</a> จากหนึ่งในสองตาราง และ map คอลัมน์กับแต่ละแถวที่มีค่านั้น</li>
   <ul>
-    <li>The multimap must support hash-based lookup which scales better than a simple linear search, because that's the whole point of this algorithm.</li>
-    <li>Ideally we should create the multimap for the smaller table, thus minimizing its creation time and memory size.</li>
+    <li>multimap ต้องรองรับการ lookup แบบ hash-based ซึ่งทำงานได้ดีกว่า linear search</li>
+    <li>ในเชิงทฤษฏี เราต้องสร้าง multimap ของตารางที่ข้อมูลน้อยกว่า เพื่อลดเวลาในการสร้างและลดหน่วยความจำที่ใช้</li>
   </ul>
-  <li><strong>Join phase:</strong> Scan the other table, and find matching rows by looking in the multimap created before.</li>
+  <li><strong>Join phase:</strong> อ่านค่าของอีกตารางหนึ่ง และหาค่าของแถวที่ตรงกับ multimap ที่สร้างไว้</li>
 </ol>
 
-pseudo-code, algorithm สามารถอธิบายได้เป็น:
+อัลกอริทึมนี้จะเขียนเป็น pseudo-code ได้แบบนี้
 
-<pre><strong>let</strong> <i>A</i> = the first input table (or ideally, the larger one)
-<strong>let</strong> <i>B</i> = the second input table (or ideally, the smaller one)
-<strong>let</strong> <i>j<sub>A</sub></i> = the join column ID of table <i>A</i>
-<strong>let</strong> <i>j<sub>B</sub></i> = the join column ID of table <i>B</i>
-<strong>let</strong> <i>M<sub>B</sub></i> = a multimap for mapping from single values to multiple rows of table <i>B</i> (starts out empty)
-<strong>let</strong> <i>C</i> = the output table (starts out empty)
-<strong>for each</strong> row <i>b</i> in table <i>B</i>:
-  <strong>place</strong> <i>b</i> in multimap <i>M<sub>B</sub></i> under key <i>b(j<sub>B</sub>)</i>
-<strong>for each</strong> row <i>a</i> in table <i>A</i>:
-  <strong>for each</strong> row <i>b</i> in multimap <i>M<sub>B</sub></i> under key <i>a(j<sub>A</sub>)</i>:
-    <strong>let</strong> <i>c</i> = the concatenation of row <i>a</i> and row <i>b</i>
-    <strong>place</strong> row <i>c</i> in table <i>C</i>
+<pre><strong>let</strong> <i>A</i> = ตารางแรก (หรือตารางที่ข้อมูลเยอะกว่า)
+<strong>let</strong> <i>B</i> = ตารางที่สอง (หรือตารางที่มีข้อมู,น้อยกว่า)
+<strong>let</strong> <i>j<sub>A</sub></i> = ID ของคอลัมน์ที่จะ join ของตาราง <i>A</i>
+<strong>let</strong> <i>j<sub>B</sub></i> = ID ของคอลัมน์ที่จะ join ของตาราง <i>B</i>
+<strong>let</strong> <i>M<sub>B</sub></i> = multimap สำหรับ map ค่าค่าเดียวไปยังหลายๆแถวของตาราง <i>B</i> (เริ่มต้นจากไม่มีค่าเลย)
+<strong>let</strong> <i>C</i> = ตารางผลลัพธ์ (เริ่มต้นจากไม่มีค่าเลย)
+<strong>for each</strong> แถว <i>b</i> ในตาราง <i>B</i>:
+  <strong>place</strong> <i>b</i> ใน multimap <i>M<sub>B</sub></i> โดยใช้คีย์เป็น <i>b(j<sub>B</sub>)</i>
+<strong>for each</strong> แถว <i>a</i> ในตาราง <i>A</i>:
+  <strong>for each</strong> แถว <i>b</i> ใน multimap <i>M<sub>B</sub></i> โดยใช้คีย์เป็น <i>a(j<sub>A</sub>)</i>:
+    <strong>let</strong> <i>c</i> = ผลรวมของแถว <i>a</i> และแถว <i>b</i>
+    <strong>place</strong> แถว <i>c</i> ในตาราง <i>C</i>
 </pre>
 
 # --instructions--
 
-ใช้อัลกอริธึม "hash join" เป็นฟังก์ชันและแสดงให้เห็นว่าผ่านการทดสอบกรณีด้านล่าง ฟังก์ชันควรยอมรับสองarrayของobjectและreturn arrayของobjectที่รวมกัน
+ให้เขียนฟังก์ชันที่ใช้ "hash join" และ test ให้ผ่าน 
+
+ฟังก์ชันนี้ต้องรับค่าเป็น array ของ object สอง array และคืนค่าเป็น array ของ object ที่เกิดจากการ join สอง array นั้น
 
 **Input**
 
@@ -143,13 +145,13 @@ pseudo-code, algorithm สามารถอธิบายได้เป็น
 
 # --hints--
 
-`hashJoin` ควรเป็น function.
+`hashJoin` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof hashJoin === 'function');
 ```
 
-`hashJoin([{ age: 27, name: "Jonah" }, { age: 18, name: "Alan" }, { age: 28, name: "Glory" }, { age: 18, name: "Popeye" }, { age: 28, name: "Alan" }], [{ character: "Jonah", nemesis: "Whales" }, { character: "Jonah", nemesis: "Spiders" }, { character: "Alan", nemesis: "Ghosts" }, { character:"Alan", nemesis: "Zombies" }, { character: "Glory", nemesis: "Buffy" }, { character: "Bob", nemesis: "foo" }])` should return `[{"A_age": 27,"A_name": "Jonah", "B_character": "Jonah", "B_nemesis": "Whales"}, {"A_age": 27,"A_name": "Jonah", "B_character": "Jonah", "B_nemesis": "Spiders"}, {"A_age": 18,"A_name": "Alan", "B_character": "Alan", "B_nemesis": "Ghosts"}, {"A_age": 18,"A_name": "Alan", "B_character": "Alan", "B_nemesis": "Zombies"}, {"A_age": 28,"A_name": "Glory", "B_character": "Glory", "B_nemesis": "Buffy"}, {"A_age": 28,"A_name": "Alan", "B_character": "Alan", "B_nemesis": "Ghosts"}, {"A_age": 28,"A_name": "Alan", "B_character": "Alan", "B_nemesis": "Zombies"}]`
+`hashJoin([{ age: 27, name: "Jonah" }, { age: 18, name: "Alan" }, { age: 28, name: "Glory" }, { age: 18, name: "Popeye" }, { age: 28, name: "Alan" }], [{ character: "Jonah", nemesis: "Whales" }, { character: "Jonah", nemesis: "Spiders" }, { character: "Alan", nemesis: "Ghosts" }, { character:"Alan", nemesis: "Zombies" }, { character: "Glory", nemesis: "Buffy" }, { character: "Bob", nemesis: "foo" }])` ต้องคืนค่าเป็น `[{"A_age": 27,"A_name": "Jonah", "B_character": "Jonah", "B_nemesis": "Whales"}, {"A_age": 27,"A_name": "Jonah", "B_character": "Jonah", "B_nemesis": "Spiders"}, {"A_age": 18,"A_name": "Alan", "B_character": "Alan", "B_nemesis": "Ghosts"}, {"A_age": 18,"A_name": "Alan", "B_character": "Alan", "B_nemesis": "Zombies"}, {"A_age": 28,"A_name": "Glory", "B_character": "Glory", "B_nemesis": "Buffy"}, {"A_age": 28,"A_name": "Alan", "B_character": "Alan", "B_nemesis": "Ghosts"}, {"A_age": 28,"A_name": "Alan", "B_character": "Alan", "B_nemesis": "Zombies"}]`
 
 ```js
 assert.deepEqual(hashJoin(hash1, hash2), res);

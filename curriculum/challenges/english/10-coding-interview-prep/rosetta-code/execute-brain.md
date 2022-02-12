@@ -8,11 +8,15 @@ dashedName: execute-brain
 
 # --description--
 
-เขียนฟังก์ชันเพื่อใช้ interpreters Brain\*\*\*\* ฟังก์ชันจะใช้stringเป็นparameterและควร retrun stringเป็นoutputรายละเอียดเพิ่มเติมได้รับด้านล่าง:
+ให้เขียนฟังก์ชันเพื่อทำงานเป็น Brain\*\*\*\* interpreter 
 
-RCBF เป็น set ของ [Brainf\*\*\*](https://rosettacode.org/wiki/Brainf*** "Brainf\*\*\*") compilers และ interpretersเขียนสำหรับ Rosetta Code ในหลายๆภาษา
+ฟังก์ชันต้องรับสตริงเป็น parameter และต้องคืนค่าเป็นสตริง 
 
-ด้านล่างนี้เป็นลิงค์ไปยังแต่ละเวอร์ชั่นของ RCBF
+ให้อ่านรายละเอียดเพิ่มเติมด้านล่าง:
+
+RCBF เป็นกลุ่ม compiler ของ [Brainf\*\*\*](https://rosettacode.org/wiki/Brainf*** "Brainf\*\*\*") และเป็น interpreter ของ Rosetta Code ในหลายๆภาษา
+
+ด้านล่างนี้เป็นลิงก์ไปยังแต่ละเวอร์ชั่นของ RCBF
 การใช้งานจำเป็นต้องปฏิบัติตามคำแนะนำต่อไปนี้อย่างถูกต้องเท่านั้น:
 
 | Command           | Description                                                                        |
@@ -30,31 +34,31 @@ RCBF เป็น set ของ [Brainf\*\*\*](https://rosettacode.org/wiki/Brai
 
 # --hints--
 
-`brain(bye)` ควร return string
+`brain(bye)` ต้องคืนค่าเป็นสตริง
 
 ```js
 assert(typeof brain(bye) === 'string');
 ```
 
-`brain("++++++[>++++++++++<-]>+++++.")` ควร return "A"
+`brain("++++++[>++++++++++<-]>+++++.")` ต้องคืนค่าเป็น "A"
 
 ```js
 assert.equal(brain('++++++[>++++++++++<-]>+++++.'), 'A');
 ```
 
-`brain(bye)` ควร return `Goodbye, World!\r\n`
+`brain(bye)` ต้องคืนค่าเป็น `Goodbye, World!\r\n`
 
 ```js
 assert.equal(brain(bye), 'Goodbye, World!\r\n');
 ```
 
-`brain(hello)` ควร return `Hello World!\n`
+`brain(hello)` ต้องคืนค่าเป็น `Hello World!\n`
 
 ```js
 assert.equal(brain(hello), 'Hello World!\n');
 ```
 
-`brain(fib)` ควร return `1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89`
+`brain(fib)` ต้องคืนค่าเป็น `1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89`
 
 ```js
 assert.equal(brain(fib), '1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89');

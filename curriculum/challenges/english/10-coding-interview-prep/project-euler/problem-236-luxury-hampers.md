@@ -27,17 +27,17 @@ dashedName: problem-236-luxury-hampers
 
 มี 35 $m > 1$ ซึ่งผลลัพธ์ที่น่าประหลาดใจนี้อาจเกิดขึ้นได้ ค่าที่น้อยที่สุดคือ $\frac{1476}{1475}$
 
-มูลค่าสูงสุดที่เป็นไปได้ของ $m$ คือเท่าใด ให้คำตอบของคุณเป็นสตริงโดยลดเศษส่วนเป็นพจน์ต่ำสุด ในรูปแบบ "u/v"
+ค่าสูงสุดที่เป็นไปได้ของ $m$ คือเท่าใด ให้ตอบเป็นสตริงแบบ เศษส่วนอย่างต่ำ ในรูป "u/v"
 
 # --hints--
 
-`luxuryHampers()` ควร return string.
+`luxuryHampers()` ต้องคืนค่าเป็นสตริง
 
 ```js
 assert(typeof luxuryHampers() === 'string');
 ```
 
-`luxuryHampers()` ควร return string `123/59`.
+`luxuryHampers()` ต้องคืนค่าเป็นสตริง `123/59`
 
 ```js
 assert.strictEqual(luxuryHampers(), '123/59');

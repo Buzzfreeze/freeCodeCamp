@@ -8,57 +8,59 @@ dashedName: lucas-lehmer-test
 
 # --description--
 
-Lucas-Lehmer Test: สำหรับ $p$ odd prime Mersenne number $2^p-1$ เป็นไพรม์ก็ต่อเมื่อ $2^p-1$ หารด้วย $S(p-1)$ เมื่อ $S(n+1)=(S(n))^2-2$, และ $S(1)=4$.
+Lucas-Lehmer Test
+
+ถ้าให้ $p$ เป็นจำนวนเฉพาะที่เป็นเลขคี่ แล้ว Mersenne number $2^p-1$ จะเป็นจำนวนเฉพาะก็ต่อเมื่อ $2^p-1$ หารด้วย $S(p-1)$ เมื่อ $S(n+1)=(S(n))^2-2$ และ $S(1)=4$
 
 # --instructions--
 
-เขียนฟังก์ชันที่ส่งคืนว่าตัวเลข Mersenne ที่ระบุนั้นเป็นจำนวนเฉพาะหรือไม่
+ให้เขียนฟังก์ชันที่คืนค่าว่า Mersenne number ที่ระบุนั้นเป็นจำนวนเฉพาะหรือไม่
 
 # --hints--
 
-`lucasLehmer` ควรเป็น function.
+`lucasLehmer` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof lucasLehmer == 'function');
 ```
 
-`lucasLehmer(11)` ควร return boolean.
+`lucasLehmer(11)` ต้องคืนค่าเป็น boolean
 
 ```js
 assert(typeof lucasLehmer(11) == 'boolean');
 ```
 
-`lucasLehmer(11)` ควร return `false`.
+`lucasLehmer(11)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(lucasLehmer(11), false);
 ```
 
-`lucasLehmer(15)` ควร return `false`.
+`lucasLehmer(15)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(lucasLehmer(15), false);
 ```
 
-`lucasLehmer(13)` ควร return `true`.
+`lucasLehmer(13)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(lucasLehmer(13), true);
 ```
 
-`lucasLehmer(17)` ควร return `true`.
+`lucasLehmer(17)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(lucasLehmer(17), true);
 ```
 
-`lucasLehmer(19)` ควร return `true`.
+`lucasLehmer(19)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(lucasLehmer(19), true);
 ```
 
-`lucasLehmer(21)` ควร return `false`.
+`lucasLehmer(21)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(lucasLehmer(21), false);

@@ -12,7 +12,7 @@ dashedName: problem-108-diophantine-reciprocals-i
 
 $$\frac{1}{x} + \frac{1}{y} = \frac{1}{n}$$
 
-สำหรับ `n` = 4 มีวิธีแก้ปัญหาที่แตกต่างกันสามประการ:
+ถ้า `n` = 4 เราจะมีสามการได้สามแบบ:
 
 $$\begin{align}
   & \frac{1}{5} + \frac{1}{20} = \frac{1}{4}\\\\
@@ -22,11 +22,11 @@ $$\begin{align}
   & \frac{1}{8} + \frac{1}{8} = \frac{1}{4}
 \end{align}$$
 
-อะไรคือค่าที่น้อยที่สุดของ `n` ซึ่งจำนวนของคำตอบที่แตกต่างกันเกินหนึ่งพัน
+ให้หา `n` ที่น้อยที่สุดที่ทำให้เกิดสมการที่แตกต่างกันได้มากกว่า 1000 รูปแบบ
 
 # --hints--
 
-`diophantineOne()` ควร return `180180`.
+`diophantineOne()` ควรต้องคืนค่าเป็น `180180`
 
 ```js
 assert.strictEqual(diophantineOne(), 180180);

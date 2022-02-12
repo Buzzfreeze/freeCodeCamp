@@ -9,39 +9,37 @@ dashedName: lychrel-numbers
 # --description--
 
 <ol>
-  <li>Take an integer <code>n₀</code>, greater than zero.</li>
-  <li>Form the next number <code>n</code> of the series by reversing <code>n₀</code> and adding it to <code>n₀</code></li>
-  <li>Stop when <code>n</code> becomes palindromic - i.e. the digits of <code>n</code> in reverse order == <code>n</code>.</li>
+  <li>รับค่าจำนวนเต็ม <code>n₀</code> ที่มากกว่า 0</li>
+  <li>สร้างจำนวน <code>n</code> ตัวต่อไป โดยกลับค่าของ <code>n₀</code> และนำไปบวกกับ <code>n₀</code></li>
+  <li>ให้หยุดเมื่อ <code>n</code> เป็น palindrome - เช่น เมื่อกลับด้าน <code>n</code> แล้วจะมีค่าเท่ากับ <code>n</code> ที่ยังไม่กลับด้าน</li>
 </ol>
 
-ความสัมพันธ์ที่เกิดซ้ำข้างต้นเมื่อนำไปใช้กับตัวเลขเริ่มต้นส่วนใหญ่ `n` = 1, 2, ... สิ้นสุดลงใน palindrome ค่อนข้างเร็ว
-
-เช่น `n₀` = 12 จะได้:
+เช่นถ้า `n₀` = 12 จะได้:
 
 ```bash
 12
-12 + 21 = 33,  a palindrome!
+12 + 21 = 33,  palindrome!
 ```
 
-And if `n₀` = 55 we get:
+และถ้า `n₀` = 55 จะได้:
 
 ```bash
 55
 55 + 55 = 110
-110 + 011 = 121,  a palindrome!
+110 + 011 = 121,  palindrome!
 ```
 
-ขอให้สังเกตว่าการตรวจสอบพาลินโดรมเกิดขึ้น *after* เพิ่มเติม
+เราจะตรวจสอบการเป็น palindrome หลังจากทำการบวกเลขแล้ว
 
-ตัวเลขเริ่มต้นบางตัวดูเหมือนจะดำเนินต่อไปตลอดกาล ความสัมพันธ์ที่เกิดซ้ำสำหรับ 196 คำนวณจากการทำซ้ำหลายล้านครั้งโดยสร้างตัวเลขที่มีหลักล้าน โดยไม่สร้างพาลินโดรม ตัวเลขเหล่านี้ที่ไม่ได้ลงท้ายด้วยพาลินโดรมเรียกว่า **Lychrel numbers**
+ถ้าใช้เลข 196 จะไม่เกิด palindrome ถึงแม่ว่าจะทำการคำนวณไปเป็นล้านครั้ง โโยเราจะเรียกเลขที่ไม่เกิด palindrome นี้ว่า **Lychrel numbers**
 
-สำหรับวัตถุประสงค์ของงานนี้ หมายเลข Lychrel คือหมายเลขเริ่มต้นใดๆ ที่ไม่อยู่ใน palindrome ภายใน 500 (หรือมากกว่า) การวนซ้ำ
+ในแบบทดสอบนี้ให้ถือว่าเลขที่มีการดำเนินการเกิน 500 ครั้งแล้วยังไม่เจอ palindrome เป็น **Lychrel numbers**
 
 **Seed and related Lychrel numbers:**
 
-จำนวนเต็มใดๆ ที่ผลิตในลำดับของหมายเลข Lychrel จะเป็นเลข Lychrel ด้วย
+จำนวนเต็มใดๆ ที่อยู่ในลำดับของ Lychrel number จะเป็น Lychrel number ด้วย
 
-โดยทั่วไป ลำดับใดๆ จากหมายเลข Lychrel หนึ่งหมายเลข *might* มาบรรจบกันเพื่อรวมลำดับจากตัวเลือกหมายเลข Lychrel ก่อนหน้า ตัวอย่างเช่น ลำดับของตัวเลข 196 และ 689 เริ่มต้น:
+โดยทั่วไป ลำดับใดๆ จาก Lychrel number หนึ่งหมายเลข *อาจ* มาบรรจบกันเพื่อรวมลำดับจากตัวเลือก Lychrel number ก่อนหน้า ตัวอย่างเช่น ลำดับของตัวเลข 196 และ 689 เริ่มต้น:
 
 ```bash
     196
@@ -60,56 +58,55 @@ And if `n₀` = 55 we get:
 
 ดังนั้นเราจะเห็นว่าลำดับที่ขึ้นต้นด้วย 689 มาบรรจบกัน และดำเนินต่อไปด้วยตัวเลขเดียวกันกับลำดับที่สำหรับ 196
 
-ด้วยเหตุนี้ เราจึงสามารถแบ่งหมายเลข Lychrel ให้เป็นจริงได้ **Seed** ผู้สมัครหมายเลข Lychrel และ **Related** ตัวเลขที่ไม่สร้าง palindromes แต่มีจำนวนเต็มในลำดับที่มองว่าเป็นส่วนหนึ่งของลำดับที่สร้างจากหมายเลข Lychrel ที่ต่ำกว่า .
 # --instructions--
 
-เขียนฟังก์ชันที่ใช้ตัวเลขเป็นพารามิเตอร์ คืนค่า จริง หากตัวเลขนั้นเป็นหมายเลข Lynchrel มิฉะนั้นให้return false จำไว้ว่าขีดจำกัดการวนซ้ำคือ 500
+ให้เขียนฟังก์ชันที่รับตัวเลขเป็นพารามิเตอร์ และตรวจสอบว่าเลขนั้นเป็น Lychrel number หรือไม่
 
 # --hints--
 
-`isLychrel` ควรเป็น function.
+`isLychrel` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof isLychrel === 'function');
 ```
 
-`isLychrel(12)` ควร return boolean.
+`isLychrel(12)` ต้องคืนค่าเป็น boolean
 
 ```js
 assert(typeof isLychrel(12) === 'boolean');
 ```
 
-`isLychrel(12)` ควร return `false`.
+`isLychrel(12)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isLychrel(12), false);
 ```
 
-`isLychrel(55)` ควร return `false`.
+`isLychrel(55)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isLychrel(55), false);
 ```
 
-`isLychrel(196)` ควร return `true`.
+`isLychrel(196)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isLychrel(196), true);
 ```
 
-`isLychrel(879)` ควร return `true`.
+`isLychrel(879)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isLychrel(879), true);
 ```
 
-`isLychrel(44987)` ควร return `false`.
+`isLychrel(44987)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isLychrel(44987), false);
 ```
 
-`isLychrel(7059)` ควร return `true`.
+`isLychrel(7059)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isLychrel(7059), true);

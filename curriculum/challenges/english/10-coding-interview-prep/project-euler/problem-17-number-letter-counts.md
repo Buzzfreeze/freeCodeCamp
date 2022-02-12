@@ -8,33 +8,33 @@ dashedName: problem-17-number-letter-counts
 
 # --description--
 
-ถ้าจำนวนของ 1 ถึง 5 ถูกเขียนเป็นคำเช่น: one, two, three, four, five, และมี 3 + 3 + 5 + 4 + 4 = 19 ตัวอักษรที่ใช้ทั้งหทด
+ถ้าจำนวนของ 1 ถึง 5 ถูกเขียนเป็นคำเช่น: one, two, three, four, five, และมี 3 + 3 + 5 + 4 + 4 = 19 เป็นจำนวนตัวอักษรที่ใช้ทั้งหมด
 
-ทุกจำนวนจาก 1 ไปจนถึง `limit` ถูกเขียนเป็นคำ, จะมีกกี่ตัวอักษรที่ถูกใช้?
+ถ้าทุกจำนวนตั้งแต่ 1 ไปจนถึง `limit` ถูกเขียนเป็นคำ จะใช้ตัวอักษรกี่ตัว?
 
-**Note:** ไม่ต้องนับ spaces หรือ hyphens ตัวอย่างเช่น 342 (three hundred and forty-two) มี 23 ตัวอักษร และ 115 (one hundred and fifteen) มี 20 ตัวอักษร ใช้ "and" เมื่อเขียนจำนวนเป็นแบบ British usage
+**Note:** ไม่ต้องนับเว้นวรรคหรือขีดกลาง เช่น 342 (three hundred and forty-two) มี 23 ตัวอักษร และ 115 (one hundred and fifteen) มี 20 ตัวอักษร ใช้ "and" เมื่อเขียนจำนวนเป็นแบบ British
 
 # --hints--
 
-`numberLetterCounts(5)` ควร return number
+`numberLetterCounts(5)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof numberLetterCounts(5) === 'number');
 ```
 
-`numberLetterCounts(5)` ควร return 19
+`numberLetterCounts(5)` ต้องคืนค่าเป็น 19
 
 ```js
 assert.strictEqual(numberLetterCounts(5), 19);
 ```
 
-`numberLetterCounts(150)` ควร return 1903
+`numberLetterCounts(150)` ต้องคืนค่าเป็น 1903
 
 ```js
 assert.strictEqual(numberLetterCounts(150), 1903);
 ```
 
-`numberLetterCounts(1000)` ควร return 21124
+`numberLetterCounts(1000)` ต้องคืนค่าเป็น 21124
 
 ```js
 assert.strictEqual(numberLetterCounts(1000), 21124);

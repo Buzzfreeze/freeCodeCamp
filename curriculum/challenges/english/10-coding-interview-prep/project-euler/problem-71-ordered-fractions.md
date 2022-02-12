@@ -8,49 +8,49 @@ dashedName: problem-71-ordered-fractions
 
 # --description--
 
-Consider the fraction, $\frac{n}{d}$, where `n` and `d` are positive integers. If `n` &lt; `d` and highest common factor, ${{HCF}(n, d)} = 1$, it is called a reduced proper fraction.
+ลองดูฟังก์ชัน, $\frac{n}{d}$, เมื่อ `n` และ `d` เป็ฯจำนวนเต็มบวก ถ้า `n` &lt; `d` และ ตัวหารร่วมมาก, ${{HCF}(n, d)} = 1$ แล้วจะถือว่าเป็น reduced proper fraction.
 
-If we list the set of reduced proper fractions for `d` ≤ 8 in ascending order of size, we get:
+ถ้าเราเขียน reduced proper fraction ของ `d` ≤ 8 ทั้งหมด เรียงตามขนาด เราจะได้เป็น:
 
 $$\frac{1}{8}, \frac{1}{7}, \frac{1}{6}, \frac{1}{5}, \frac{1}{4}, \frac{2}{7}, \frac{1}{3}, \frac{3}{8}, \frac{\textbf2}{\textbf5}, \frac{3}{7}, \frac{1}{2}, \frac{4}{7}, \frac{3}{5}, \frac{5}{8}, \frac{2}{3}, \frac{5}{7}, \frac{3}{4}, \frac{4}{5}, \frac{5}{6}, \frac{6}{7}, \frac{7}{8}$$
 
 จะเห็นได้ว่า $\frac{2}{5}$ เป็นเศษส่วนทางซ้ายของ $\frac{3}{7}$
 
-โดยแสดงsetเศษส่วนที่เหมาะสมที่ลดแล้วสำหรับ `d` ≤ `limit` เรียงลำดับขนาดจากน้อยไปหามาก ให้หาตัวเศษของเศษส่วนทางซ้ายของ $\frac{3}{7}$.
+ให้เขียนรายการของ reduced proper fraction `d` ≤ `limit` โดยเรียงลำดับขนาดจากน้อยไปหามาก ให้หาตัวเศษของเศษส่วนทางซ้ายของ $\frac{3}{7}$
 
 # --hints--
 
-`orderedFractions(8)` ควร return number.
+`orderedFractions(8)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof orderedFractions(8) === 'number');
 ```
 
-`orderedFractions(8)` ควร return `2`.
+`orderedFractions(8)` ต้องคืนค่าเป็น `2`
 
 ```js
 assert.strictEqual(orderedFractions(8), 2);
 ```
 
-`orderedFractions(10)` ควร return `2`.
+`orderedFractions(10)` ต้องคืนค่าเป็น `2`
 
 ```js
 assert.strictEqual(orderedFractions(10), 2);
 ```
 
-`orderedFractions(9994)` ควร return `4283`.
+`orderedFractions(9994)` ต้องคืนค่าเป็น `4283`
 
 ```js
 assert.strictEqual(orderedFractions(9994), 4283);
 ```
 
-`orderedFractions(500000)` ควร return `214283`.
+`orderedFractions(500000)` ต้องคืนค่าเป็น `214283`
 
 ```js
 assert.strictEqual(orderedFractions(500000), 214283);
 ```
 
-`orderedFractions(1000000)` ควร return `428570`.
+`orderedFractions(1000000)` ต้องคืนค่าเป็น `428570`
 
 ```js
 assert.strictEqual(orderedFractions(1000000), 428570);

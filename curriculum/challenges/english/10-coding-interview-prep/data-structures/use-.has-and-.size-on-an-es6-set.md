@@ -8,7 +8,7 @@ dashedName: use--has-and--size-on-an-es6-set
 
 # --description--
 
-เรามาลองดู .has และ .size method ที่มีให้บน ES6 Set object กัน
+เรามาลองดู method .has และ .size ใน object Set ของ ES6 กัน
 
 เริ่มด้วยการสร้าง ES6 Set
 
@@ -16,13 +16,13 @@ dashedName: use--has-and--size-on-an-es6-set
 var set = new Set([1,2,3]);
 ```
 
-.has method จะตรวจสอบว่ามีค่าใดบรรจุอยู่ใน set หรือไม่
+method `.has` จะตรวจสอบว่ามีค่าที่ระบุใน set หรือไม่
 
 ```js
 var hasTwo = set.has(2);
 ```
 
-.size method จะ return จำนวนเต็มที่แสดงถึงขนาดของ set
+method `.size` จะคืนค่าเป็นจำนวนข้อมูลใน set เป็นจำวนเต็ม
 
 ```js
 var howBig = set.size;
@@ -30,11 +30,11 @@ var howBig = set.size;
 
 # --instructions--
 
-ในแบบฝึกหัดนี้ เราจะส่ง array และค่าไปยังฟังก์ชัน checkSet() ฟังก์ชันของคุณควรสร้าง ES6 set จาก array argument ค้นหาว่า set มี argument ค่าหรือไม่ หาขนาดของ set และ return ค่าทั้งสองค่าใน array
+ในแบบฝึกหัดนี้ เราจะส่ง array (`arrToBeSet`) และค่า (`checkValue`) ไปยังฟังก์ชัน checkSet() ฟังก์ชันของคุณควรสร้าง Set ของ ES6 จาก argument ที่เป็น array และหาว่า set มีค่าของ `checkValue` หรือไม่ จากนั้นให้หาขนาดของ set และคืนค่าทั้งสองออกมาเป็น array
 
 # --hints--
 
-`checkSet([4, 5, 6], 3)` ควร return [ false, 3 ]
+`checkSet([4, 5, 6], 3)` ต้องคืนค่าเป็น [ false, 3 ]
 
 ```js
 assert(
@@ -52,9 +52,9 @@ assert(
 ```js
 function checkSet(arrToBeSet, checkValue){
 
-   // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-   // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 
 }
 ```

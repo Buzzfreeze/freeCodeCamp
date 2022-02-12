@@ -12,15 +12,15 @@ dashedName: problem-440-gcd-and-tiling
 
 <img class="img-responsive center-block" alt="ten blocks 1x1 with single decimal digit on top, and 1x2 block" src="https://cdn.freecodecamp.org/curriculum/project-euler/gcd-and-tiling-1.png" style="background-color: white; padding: 10px;">
 
-ตัวอย่างเช่น ต่อไปนี้คือวิธีบางส่วนในการเรียงต่อกันกระดานที่มีความยาว $n = 8$
+เช่น ต่อไปนี้คือวิธีบางส่วนในการเรียงกระดานที่มีความยาว $n = 8$
 
 <img class="img-responsive center-block" alt="examples of ways to tile a board of length n = 8" src="https://cdn.freecodecamp.org/curriculum/project-euler/gcd-and-tiling-2.png" style="background-color: white; padding: 10px;">
 
 ให้ $T(n)$ เป็นจำนวนวิธีการเรียงต่อกันของกระดานที่มีความยาว $n$ ตามที่อธิบายไว้ข้างต้น
 
-ตัวอย่างเช่น $T(1) = 10$ และ $T(2) = 101$
+เช่น $T(1) = 10$ และ $T(2) = 101$
 
-ให้ $S(L)$ เป็นผลรวมสามเท่า $\sum_{a, b, c} gcd(T(c^a), T(c^b))$ สำหรับ $1 ≤ a, b, c ≤ L$
+ให้ $S(L)$ เป็นผลรวมของ $\sum_{a, b, c} gcd(T(c^a), T(c^b))$ เมื่อ $1 ≤ a, b, c ≤ L$
 
 ตัวอย่างเช่น
 
@@ -30,11 +30,11 @@ $$\begin{align}
   & S(4)\bmod 987\\,898\\,789 = 670\\,616\\,280.
 \end{align}$$
 
-หา $S(2000)\bmod 987\\,898\\,789$.
+ให้หา $S(2000)\bmod 987\\,898\\,789$
 
 # --hints--
 
-`gcdAndTiling()` ควร return `970746056`.
+`gcdAndTiling()` ต้องคืนค่าเป็น `970746056`
 
 ```js
 assert.strictEqual(gcdAndTiling(), 970746056);

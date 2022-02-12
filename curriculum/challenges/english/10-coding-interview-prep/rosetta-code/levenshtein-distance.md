@@ -9,73 +9,74 @@ dashedName: levenshtein-distance
 # --description--
 
 
-ในทฤษฎีสารสนเทศและวิทยาการคอมพิวเตอร์ **Levenshtein distance** เป็น [metric](<https://en.wikipedia.org/wiki/string metric>) 
-สำหรับวัดปริมาณความแตกต่างระหว่างสองลำดับ (i.e. an [edit distance](<https://en.wikipedia.org/wiki/edit distance>)). ระยะห่าง Levenshtein ระหว่างสองstringถูกกำหนดให้เป็นจำนวนการแก้ไขขั้นต่ำที่จำเป็นในการแปลงstringหนึ่งเป็นstringอื่น โดยการดำเนินการแก้ไขที่อนุญาตคือการแทรก การลบ หรือการแทนที่อักขระตัวเดียว
+**Levenshtein distance** เป็น [metric](<https://en.wikipedia.org/wiki/string metric>) 
+สำหรับวัดปริมาณความแตกต่างระหว่างสอง sequence (เช่น [edit distance](<https://en.wikipedia.org/wiki/edit distance>)) 
+
+โดย Levenshtein distance ของสตริงสองตัวจะเป็นจำนวนครั้งที่ต้องแก้ไขสตริง เพื่อเปลี่ยนให้สร้างสองตัวนั้นมีค่าเหมือนกัน โดยการดำเนินการแก้ไขที่ทำได้คือการแทรก การลบ หรือการแทนที่ตัวอักษรตัวเดียว
 
 เช่น:
 
-ระยะทาง Levenshtein ระหว่าง "**kitten**"และ "**sitting**" คือ 3
-เนื่องจากการแก้ไขสามรายการต่อไปนี้เปลี่ยนเป็นการแก้ไขอื่น และไม่มีวิธีการแก้ไขน้อยกว่าสามรายการ:
+Levenshtein distance ของ "**kitten**"และ "**sitting**" คือ 3
+การแก้ไขที่ต่ำที่สุดที่จะทำให้สตริงสองตัวนี้เหมือนกันได้มี 3 ขั้นตอน ดังนี้:
 
 <ul>
-  <li><strong>k</strong>itten   <strong>s</strong>itten    (substitution of 'k' with 's')</li>
-  <li>sitt<strong>e</strong>n   sitt<strong>i</strong>n    (substitution of 'e' with 'i')</li>
-  <li>sittin   sittin<strong>g</strong>    (insert 'g' at the end).</li>
+  <li><strong>k</strong>itten   <strong>s</strong>itten    (แทนที่ 'k' ด้วย 's')</li>
+  <li>sitt<strong>e</strong>n   sitt<strong>i</strong>n    (แทนที่ 'e' ด้วย 'i')</li>
+  <li>sittin   sittin<strong>g</strong>    (แทรก 'g' ต่อท้าย)</li>
 </ul>
 
-*The Levenshtein distance between "**rosettacode**", "**raisethysword**" is **8**.*
+*Levenshtein distance ของ "**rosettacode**", "**raisethysword**" คือ **8***
 
-*The distance between two strings is same as that when both strings are reversed.*
 
 # --instructions--
 
-เขียนฟังก์ชันที่ส่งคืนระยะห่าง Levenshtein ระหว่างสองstringที่กำหนดเป็นพารามิเตอร์
+ให้เขียนฟังก์ชันที่รับค่าเป็นสตริงและคืนค่าเป็น Levenshtein distance ของสองสตริงนั้น
 
 # --hints--
 
-`levenshtein` ควรเป็น function.
+`levenshtein` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof levenshtein == 'function');
 ```
 
-`levenshtein("mist", "dist")` ควร return number.
+`levenshtein("mist", "dist")` ต้องคืนค่าเป็น number
 
 ```js
 assert(typeof levenshtein('mist', 'dist') == 'number');
 ```
 
-`levenshtein("mist", "dist")` ควร return `1`.
+`levenshtein("mist", "dist")` ต้องคืนค่าเป็น `1`
 
 ```js
 assert.equal(levenshtein('mist', 'dist'), 1);
 ```
 
-`levenshtein("tier", "tor")` ควร return `2`.
+`levenshtein("tier", "tor")` ต้องคืนค่าเป็น `2`
 
 ```js
 assert.equal(levenshtein('tier', 'tor'), 2);
 ```
 
-`levenshtein("kitten", "sitting")` ควร return `3`.
+`levenshtein("kitten", "sitting")` ต้องคืนค่าเป็น `3`
 
 ```js
 assert.equal(levenshtein('kitten', 'sitting'), 3);
 ```
 
-`levenshtein("stop", "tops")` ควร return `2`.
+`levenshtein("stop", "tops")` ต้องคืนค่าเป็น `2`
 
 ```js
 assert.equal(levenshtein('stop', 'tops'), 2);
 ```
 
-`levenshtein("rosettacode", "raisethysword")` ควร return `8`.
+`levenshtein("rosettacode", "raisethysword")` ต้องคืนค่าเป็น `8`
 
 ```js
 assert.equal(levenshtein('rosettacode', 'raisethysword'), 8);
 ```
 
-`levenshtein("mississippi", "swiss miss")` ควร return `8`.
+`levenshtein("mississippi", "swiss miss")` ต้องคืนค่าเป็น `8`
 
 ```js
 assert.equal(levenshtein('mississippi', 'swiss miss'), 8);

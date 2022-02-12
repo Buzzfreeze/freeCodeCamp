@@ -8,7 +8,7 @@ dashedName: problem-147-rectangles-in-cross-hatched-grids
 
 # --description--
 
-ในตารางแบบ cross-hatch ขนาด 3x2 สามารถใส่รูปสี่เหลี่ยมผืนผ้าที่แตกต่างกันทั้งหมด 37 รูปภายในตารางนั้นตามที่ระบุไว้ในภาพร่าง
+ในตารางแบบ cross-hatch ขนาด 3x2 สามารถใส่รูปสี่เหลี่ยมผืนผ้าที่แตกต่างกันทั้งหมด 37 รูปภายในตารางนั้นตามที่ระบุในภาพ
 
 <img class="img-responsive center-block" alt="ways of situating different rectangles wihtin cross-hatched 3x2 grid" src="https://cdn.freecodecamp.org/curriculum/project-euler/rectangles-in-cross-hatched-grids.png" style="background-color: white; padding: 10px;">
 
@@ -29,7 +29,7 @@ $$\begin{array}{|c|c|}
 
 # --hints--
 
-`crossHatchedRectangles()` ควร return `846910284`.
+`crossHatchedRectangles()` ต้องคืนค่าเป็น `846910284`
 
 ```js
 assert.strictEqual(crossHatchedRectangles(), 846910284);

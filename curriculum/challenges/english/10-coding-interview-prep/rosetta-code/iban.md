@@ -9,62 +9,62 @@ dashedName: iban
 # --description--
 
 [International Bank Account Number (IBAN)](https://en.wikipedia.org/wiki/International_Bank_Account_Number) 
-เป็นวิธีที่ตกลงกันในระดับสากลในการระบุบัญชีธนาคารข้ามพรมแดนของประเทศโดยลดความเสี่ยงในการเผยแพร่
- [transcription errors](https://en.wikipedia.org/wiki/Transcription_error).
+เป็นข้อตกลงในระดับสากลในการระบุบัญชีธนาคารข้ามพรมแดนของประเทศ โดยลดความเสี่ยงในการเกิด
+ [transcription error](https://en.wikipedia.org/wiki/Transcription_error)
 
-IBAN ประกอบด้วยอักขระที่เป็นตัวอักษรและตัวเลขคละกันสูงสุด 34 ตัว:
+IBAN ประกอบด้วยอักขระที่เป็นตัวอักษรและตัวเลขคละกันสูงสุด 34 ตัว ตามหลักการนี้
 
 <ul>
-  <li>first the two-letter ISO 3166-1 alpha-2 country code</li>
-  <li>then two check digits, and</li>
-  <li>finally a country-specific Basic Bank Account Number (BBAN).</li>
+  <li>สองตัวอักษรแรกเป็นรหัสประเทศแบบ ISO 3166-1 alpha-2</li>
+  <li>และตามด้วย check digit สองตัว</li>
+  <li>สุดท้ายจะเป็นหมายเลขบัญชีของธนาคาร (Basic Bank Account Number: BBAN)</li>
 </ul>
 
 หมายเลขตรวจสอบช่วยให้สามารถตรวจสอบความถูกต้องของหมายเลขบัญชีธนาคารเพื่อยืนยันความถูกต้องได้แม้กระทั่งก่อนทำธุรกรรม
 
 # --instructions--
 
-เขียนฟังก์ชันที่ใช้สตริง IBAN เป็นพารามิเตอร์ ถ้ามันถูกต้องreturn true มิฉะนั้นให้return false
+ให้เขียนฟังก์ชันที่รับสตริง IBAN เป็นพารามิเตอร์ ถ้ารูปแบบของสตริงถูกต้องให้คืนค่าเป็น true ถ้าไม่ถูกให้คืนค่าเป็น false
 
 # --hints--
 
-`isValid` ควรเป็น function.
+`isValid` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof isValid == 'function');
 ```
 
-`isValid("GB82 WEST 1234 5698 7654 32")` ควร return boolean.
+`isValid("GB82 WEST 1234 5698 7654 32")` ต้องคืนค่าเป็น boolean
 
 ```js
 assert(typeof isValid('GB82 WEST 1234 5698 7654 32') == 'boolean');
 ```
 
-`isValid("GB82 WEST 1234 5698 7654 32")` ควร return `true`.
+`isValid("GB82 WEST 1234 5698 7654 32")` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isValid('GB82 WEST 1234 5698 7654 32'), true);
 ```
 
-`isValid("GB82 WEST 1.34 5698 7654 32")` ควร return `false`.
+`isValid("GB82 WEST 1.34 5698 7654 32")` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isValid('GB82 WEST 1.34 5698 7654 32'), false);
 ```
 
-`isValid("GB82 WEST 1234 5698 7654 325")` ควร return `false`.
+`isValid("GB82 WEST 1234 5698 7654 325")` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isValid('GB82 WEST 1234 5698 7654 325'), false);
 ```
 
-`isValid("GB82 TEST 1234 5698 7654 32")` ควร return `false`.
+`isValid("GB82 TEST 1234 5698 7654 32")` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isValid('GB82 TEST 1234 5698 7654 32'), false);
 ```
 
-`isValid("SA03 8000 0000 6080 1016 7519")` ควร return `true`.
+`isValid("SA03 8000 0000 6080 1016 7519")` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isValid('SA03 8000 0000 6080 1016 7519'), true);

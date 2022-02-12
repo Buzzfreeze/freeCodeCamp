@@ -8,67 +8,58 @@ dashedName: taxicab-numbers
 
 # --description--
 
-[taxicab number](<https://en.wikipedia.org/wiki/Hardy–Ramanujan number> "wp: Hardy–Ramanujan number") (the definition that is being used here) เป็นจำนวนเต็มบวกที่สามารถแสดงเป็นผลรวมของลูกบาศก์บวกสองก้อนได้มากกว่าหนึ่งวิธี
+[taxicab number](<https://en.wikipedia.org/wiki/Hardy–Ramanujan number> "wp: Hardy–Ramanujan number") เป็นจำนวนเต็มบวก ที่สามารถแสดงเป็นผลรวมของเลขยกกำลังสามได้มากกว่าหนึ่งวิธี
 
-วิธีแรห taxicab number คือ `1729` ดังเช่น:
+โดย taxicab number ตัวแรกคือ `1729` เพราะ:
 
-1<sup>3</sup> + 12<sup>3</sup> and
+1<sup>3</sup> + 12<sup>3</sup> และ
 
-9<sup>3</sup> + 10<sup>3</sup>.
-
-Taxicab numbers จะอยู่ในรูปแบบ:
-
-<ul>
-  <li>taxi numbers</li>
-  <li>taxi-cab numbers</li>
-  <li>taxi cab numbers</li>
-  <li>Hardy-Ramanujan numbers</li>
-</ul>
+9<sup>3</sup> + 10<sup>3</sup>
 
 # --instructions--
 
-เขียนฟังก์ชันที่ส่งคืนหมายเลขรถแท็กซี่ `n` ต่ำสุด สำหรับหมายเลขรถแท็กซี่แต่ละหมายเลข ให้แสดงหมายเลขและลูกบาศก์ที่เป็นส่วนประกอบ
+ให้เขียนฟังก์ชันเพื่อหา taxicab number `n` ตัวแรก โดยให้คืนค่าเป็น array ของค่านั้น
 
 **See also:**
 
 <ul>
-  <li><a href='https://oeis.org/A001235' target='_blank'>A001235 taxicab numbers</a> on The On-Line Encyclopedia of Integer Sequences.</li>
-  <li><a href='https://en.wikipedia.org/wiki/Taxicab_number' target='_blank'>taxicab number</a> on Wikipedia.</li>
+  <li><a href='https://oeis.org/A001235' target='_blank'>A001235 taxicab numbers</a> ที่ The On-Line Encyclopedia of Integer Sequences</li>
+  <li><a href='https://en.wikipedia.org/wiki/Taxicab_number' target='_blank'>taxicab number</a> บน Wikipedia</li>
 </ul>
 
 # --hints--
 
-`taxicabNumbers` ควรเป็น function.
+`taxicabNumbers` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof taxicabNumbers === 'function');
 ```
 
-`taxicabNumbers` ควร return array.
+`taxicabNumbers` ต้องคืนค่าเป็น array
 
 ```js
 assert(typeof taxicabNumbers(2) === 'object');
 ```
 
-`taxicabNumbers` ควร return array ของ numbers.
+`taxicabNumbers` ต้องคืนค่าเป็น array ของตัวเลข
 
 ```js
 assert(typeof taxicabNumbers(100)[0] === 'number');
 ```
 
-`taxicabNumbers(4)` ควร return [1729, 4104, 13832, 20683].
+`taxicabNumbers(4)` ต้องคืนค่าเป็น `[1729, 4104, 13832, 20683]`
 
 ```js
 assert.deepEqual(taxicabNumbers(4), res4);
 ```
 
-`taxicabNumbers(25)` ควร return [1729, 4104, 13832, 20683, 32832, 39312, 40033, 46683, 64232, 65728, 110656, 110808, 134379, 149389, 165464, 171288, 195841, 216027, 216125, 262656, 314496, 320264, 327763, 373464, 402597]
+`taxicabNumbers(25)` ต้องคืนค่าเป็น `[1729, 4104, 13832, 20683, 32832, 39312, 40033, 46683, 64232, 65728, 110656, 110808, 134379, 149389, 165464, 171288, 195841, 216027, 216125, 262656, 314496, 320264, 327763, 373464, 402597]`
 
 ```js
 assert.deepEqual(taxicabNumbers(25), res25);
 ```
 
-`taxicabNumbers(39)` resulting numbers from 20 - 29 ควร be [314496,320264,327763,373464,402597,439101,443889,513000,513856].
+`taxicabNumbers(39)` ของค่าตั้งแต่ 20 ถึง 29 ต้องเป็น `[314496,320264,327763,373464,402597,439101,443889,513000,513856]`
 
 ```js
 assert.deepEqual(taxicabNumbers(39).slice(20, 29), res39From20To29);

@@ -8,83 +8,83 @@ dashedName: semiprime
 
 # --description--
 
-Semiprime numbers 
-เป็นจำนวนเป็นผลคูณของสองเท่ากัน (สามารถเท่ากัน) [prime numbers](https://rosettacode.org/wiki/prime_number).
+Semiprime number 
+เป็นผลคุณของจำนวนเฉพาะ (จะเป็นจำนวนเฉพาะตัวเดียวกันก็ได้) [prime numbers](https://rosettacode.org/wiki/prime_number).
 
 <pre>1679  =  23 x 73</pre>
 
 # --instructions--
-เขียนฟังก์ชันที่ returns true หากตัวเลขเป็น semiprime หรือ false หากไม่ใช่
+ให้เขียนฟังก์ชันที่คืนค่าเป็น true ถ้าตัวเลขเป็น semiprime หรือ false ถ้าไม่ใช่ semiprime
 
 # --hints--
 
-`isSemiPrime` ควรเป็น function.
+`isSemiPrime` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof isSemiPrime === 'function');
 ```
 
-`isSemiPrime(100)` ควร return boolean.
+`isSemiPrime(100)` ต้องคืนค่าเป็น boolean
 
 ```js
 assert(typeof isSemiPrime(100) === 'boolean');
 ```
 
-`isSemiPrime(100)` ควร return `false`.
+`isSemiPrime(100)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isSemiPrime(100), false);
 ```
 
-`isSemiPrime(504)` ควร return `false`.
+`isSemiPrime(504)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isSemiPrime(504), false);
 ```
 
-`isSemiPrime(4)` ควร return `true`.
+`isSemiPrime(4)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isSemiPrime(4), true);
 ```
 
-`isSemiPrime(46)` ควร return `true`.
+`isSemiPrime(46)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isSemiPrime(46), true);
 ```
 
-`isSemiPrime(13)` ควร return `false`.
+`isSemiPrime(13)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isSemiPrime(13), false);
 ```
 
-`isSemiPrime(74)` ควร return `true`.
+`isSemiPrime(74)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isSemiPrime(74), true);
 ```
 
-`isSemiPrime(1679)` ควร return `true`.
+`isSemiPrime(1679)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isSemiPrime(1679), true);
 ```
 
-`isSemiPrime(2)` ควร return `false`.
+`isSemiPrime(2)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isSemiPrime(2), false);
 ```
 
-`isSemiPrime(95)` ควร return `true`.
+`isSemiPrime(95)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isSemiPrime(95), true);
 ```
 
-`isSemiPrime(124)` ควร return `false`.
+`isSemiPrime(124)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isSemiPrime(124), false);

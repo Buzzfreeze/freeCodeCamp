@@ -8,144 +8,148 @@ dashedName: zeckendorf-number-representation
 
 # --description--
 
-เช่นเดียวกับตัวเลขที่สามารถแสดงเป็นสัญลักษณ์ระบุตำแหน่งเป็นผลรวมของการทวีคูณของกำลังสิบ (ทศนิยม) หรือ binary; จำนวนเต็มบวกทั้งหมดสามารถแสดงเป็นผลรวมของหนึ่งหรือศูนย์คูณสมาชิกที่แตกต่างกันของFibonacci series โปรดจำไว้ว่าตัวเลขFibonacciที่แตกต่างกันหกตัวแรกคือ: `1, 2, 3, 5, 8, 13`
+ถ้ายังจำได้ เลข Fibonacci หกตัวแรกคือ `1, 2, 3, 5, 8, 13`
 
-เลขทศนิยมสิบเอ็ดสามารถเขียนเป็น `0*13 + 1*8 + 0*5 + 1*3 + 0*2 + 0*1` หรือ `010100` ในสัญกรณ์ตำแหน่งโดยที่คอลัมน์แทนการคูณโดยสมาชิกเฉพาะของ ลำดับ ศูนย์นำหน้าจะลดลงเพื่อให้ทศนิยม 11 ตำแหน่งกลายเป็น `10100` 10100 ไม่ใช่วิธีเดียวที่จะสร้าง 11 จากตัวเลขFibonacciได้ อย่างไรก็ตาม `0*13 + 1*8 + 0*5 + 0*3 + 1*2 + 1*1` หรือ 010011 จะแสดงทศนิยม 11 ด้วย สำหรับค่าจริง หมายเลข Zeckendorf มีข้อจำกัดเพิ่มเติมว่า *ไม่สามารถใช้หมายเลข Fibonacci สองหมายเลขติดต่อกันได้* ซึ่งนำไปสู่คำตอบที่ไม่ซ้ำแบบเดิม
+เลขสิบเอ็ดฐานสิบสามารถเขียนได้เป็น `0*13 + 1*8 + 0*5 + 1*3 + 0*2 + 0*1` หรือ `010100`  
+โดยเราสามารถตัดเลข 0 ด้านหน้าออกได้ซึ่งทำให้ 11 เป็น `10100` ในฐานสอง
+แต่เราสามารถสร้างเลข 11 จาก Fibonacci ได้ด้วย โดยใช้เป็น `0*13 + 1*8 + 0*5 + 0*3 + 1*2 + 1*1` หรือ 010011 ซึ่งเป็นค่าของ 11 ฐานสิบด้วย
+
+โดยเลข Zeckendorf มีข้อจำกัดเพิ่มเติมว่า *ไม่สามารถใช้เลข Fibonacci สองเลขติดต่อกันได้* 
 
 # --instructions--
 
-เขียนฟังก์ชันที่สร้างและส่งกลับการแสดงตัวเลข Zeckendorf ของ `n`.
+ให้เขียนฟังก์ชันที่รับค่า `n` แล้วนำไปแสดงแบบ Zeckendorf
 
 # --hints--
 
-`zeckendorf` ควรเป็น function.
+`zeckendorf` ต้องเป็นฟังก์ชัน
 
 ```js
 assert.equal(typeof zeckendorf, 'function');
 ```
 
-`zeckendorf(0)` ควร return `0`.
+`zeckendorf(0)` ต้องคืนค่าเป็น `0`
 
 ```js
 assert.equal(zeckendorf(0), 0);
 
 ```
 
-`zeckendorf(1)` ควร return `1`.
+`zeckendorf(1)` ต้องคืนค่าเป็น `1`
 
 ```js
 assert.equal(zeckendorf(1), 1);
 ```
 
-`zeckendorf(2)` ควร return `10`.
+`zeckendorf(2)` ต้องคืนค่าเป็น `10`
 
 ```js
 assert.equal(zeckendorf(2), 10);
 ```
 
-`zeckendorf(3)` ควร return `100`.
+`zeckendorf(3)` ต้องคืนค่าเป็น `100`
 
 ```js
 assert.equal(zeckendorf(3), 100);
 ```
 
-`zeckendorf(4)` ควร return `101`.
+`zeckendorf(4)` ต้องคืนค่าเป็น `101`
 
 ```js
 assert.equal(zeckendorf(4), 101);
 ```
 
-`zeckendorf(5)` ควร return `1000`.
+`zeckendorf(5)` ต้องคืนค่าเป็น `1000`
 
 ```js
 assert.equal(zeckendorf(5), 1000);
 ```
 
-`zeckendorf(6)` ควร return `1001`.
+`zeckendorf(6)` ต้องคืนค่าเป็น `1001`
 
 ```js
 assert.equal(zeckendorf(6), 1001);
 ```
 
-`zeckendorf(7)` ควร return `1010`.
+`zeckendorf(7)` ต้องคืนค่าเป็น `1010`
 
 ```js
 assert.equal(zeckendorf(7), 1010);
 ```
 
-`zeckendorf(8)` ควร return `10000`.
+`zeckendorf(8)` ต้องคืนค่าเป็น `10000`
 
 ```js
 assert.equal(zeckendorf(8), 10000);
 ```
 
-`zeckendorf(9)` ควร return `10001`.
+`zeckendorf(9)` ต้องคืนค่าเป็น `10001`
 
 ```js
 assert.equal(zeckendorf(9), 10001);
 ```
 
-`zeckendorf(10)` ควร return `10010`.
+`zeckendorf(10)` ต้องคืนค่าเป็น `10010`
 
 ```js
 assert.equal(zeckendorf(10), 10010);
 ```
 
-`zeckendorf(11)` ควร return `10100`.
+`zeckendorf(11)` ต้องคืนค่าเป็น `10100`
 
 ```js
 assert.equal(zeckendorf(11), 10100);
 ```
 
-`zeckendorf(12)` ควร return `10101`.
+`zeckendorf(12)` ต้องคืนค่าเป็น `10101`
 
 ```js
 assert.equal(zeckendorf(12), 10101);
 ```
 
-`zeckendorf(13)` ควร return `100000`.
+`zeckendorf(13)` ต้องคืนค่าเป็น `100000`
 
 ```js
 assert.equal(zeckendorf(13), 100000);
 ```
 
-`zeckendorf(14)` ควร return `100001`.
+`zeckendorf(14)` ต้องคืนค่าเป็น `100001`
 
 ```js
 assert.equal(zeckendorf(14), 100001);
 ```
 
-`zeckendorf(15)` ควร return `100010`.
+`zeckendorf(15)` ต้องคืนค่าเป็น `100010`
 
 ```js
 assert.equal(zeckendorf(15), 100010);
 ```
 
-`zeckendorf(16)` ควร return `100100`.
+`zeckendorf(16)` ต้องคืนค่าเป็น `100100`
 
 ```js
 assert.equal(zeckendorf(16), 100100);
 ```
 
-`zeckendorf(17)` ควร return `100101`.
+`zeckendorf(17)` ต้องคืนค่าเป็น `100101`
 
 ```js
 assert.equal(zeckendorf(17), 100101);
 ```
 
-`zeckendorf(18)` ควร return `101000`.
+`zeckendorf(18)` ต้องคืนค่าเป็น `101000`
 
 ```js
 assert.equal(zeckendorf(18), 101000);
 ```
 
-`zeckendorf(19)` ควร return `101001`.
+`zeckendorf(19)` ต้องคืนค่าเป็น `101001`
 
 ```js
 assert.equal(zeckendorf(19), 101001);
 ```
 
-`zeckendorf(20)` ควร return `101010`.
+`zeckendorf(20)` ต้องคืนค่าเป็น `101010`
 
 ```js
 assert.equal(zeckendorf(20), 101010);

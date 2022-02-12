@@ -8,25 +8,27 @@ dashedName: problem-4-largest-palindrome-product
 
 # --description--
 
-palindromic number คือเลขที่ไม่ว่าจะอ่านจากหน้าไปหลังหรือหลังมาหน้าจะได้จำนวนที่มีค่าเท่ากัน ค่าที่มากที่่สุดของ palindrome เกิดจากการคูณกันของเลขสองหลักจำนวนสองตัวคือ 9009 = 91 × 99.
+palindromic number คือเลขที่ไม่ว่าจะอ่านจากหน้าไปหลังหรือหลังมาหน้าจะได้จำนวนที่มีค่าเท่ากัน 
 
-หาค่ามากที่สุดของ palindrome ที่ได้จากการคูณกันของ `n`หลัก สองจำนวน
+palindrome ที่มากที่สุดที่เกิดจากการคูณกันของเลขสองหลักคือ 9009 = 91 × 99.
+
+ให้หา palindrome ที่มากที่สุดที่ได้จากการคูณกันของเลข `n` หลัก สองจำนวน
 
 # --hints--
 
-`largestPalindromeProduct(2)` ควร return เป็น number
+`largestPalindromeProduct(2)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof largestPalindromeProduct(2) === 'number');
 ```
 
-`largestPalindromeProduct(2)` ควร return เป็น 9009
+`largestPalindromeProduct(2)` ต้องคืนค่าเป็น 9009
 
 ```js
 assert.strictEqual(largestPalindromeProduct(2), 9009);
 ```
 
-`largestPalindromeProduct(3)` ควร return เป็น 906609
+`largestPalindromeProduct(3)` ต้องคืนค่าเป็น 906609
 
 ```js
 assert.strictEqual(largestPalindromeProduct(3), 906609);

@@ -9,11 +9,11 @@ dashedName: problem-172-investigating-numbers-with-few-repeated-digits
 # --description--
 
 
-มีตัวเลข 18 หลัก $n$ กี่ตัว (ไม่มีศูนย์นำหน้า) ที่ไม่มีตัวเลขใดเกิดขึ้นมากกว่าสามครั้งใน $n$
+มีตัวเลข $n$ ที่มี 18 หลักกี่ตัว (ไม่มีศูนย์นำหน้า) ที่ไม่มีตัวเลขใดเกิดขึ้นมากกว่าสามครั้งใน $n$
 
 # --hints--
 
-`numbersWithRepeatedDigits()` ควร return `227485267000992000`.
+`numbersWithRepeatedDigits()` ต้องคืนค่าเป็น `227485267000992000`
 
 ```js
 assert.strictEqual(numbersWithRepeatedDigits(), 227485267000992000);

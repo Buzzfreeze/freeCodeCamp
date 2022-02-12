@@ -8,16 +8,16 @@ dashedName: delete-one-document-using-model-findbyidandremove
 
 # --description--
 
-`findByIdAndRemove` และ `findOneAndRemove` เหมือนกับวิธีการอัพเดทครั้งก่อน พวกนี้ทำหน้าที่ส่งเอกสารที่ถูกนำออกไปยังฐานข้อมูล bd 
-โดยปกติ แล้วจะใช้อาร์กิวเมนต์ของฟังก์ชัน `personId` เป็นคีย์ค้นหา
+method `findByIdAndRemove` และ `findOneAndRemove` จะทำงานเหมือนกับ method ที่ใช้อัปเดทที่เราเพิ่งได้เรียนไป
 
 # --instructions--
 
-แก้ไขฟังก์ชัน `removeById` เพื่อที่จะลบผู้ใช้ 1 คนออกจาก `_id` คุณควรที่จะใช้วิธีใดวิธีหนึ่งจาก 2 อันนี้ `findByIdAndRemove()` หรือ `findOneAndRemove()`
+ให้แก้ไขฟังก์ชัน `removeById` เพื่อที่จะลบคน 1 คนที่มี `_id` ตรงกับ  `personId` ออกจากฐานข้อมูล  
+โดยให้เลือกใช้ `findByIdAndRemove()` หรือ `findOneAndRemove()`
 
 # --hints--
 
-สามารถลบไอเทมทีละ 1 ชิ้นได้สำเร็จ
+ต้องลบข้อมูลหนึ่งข้อมูลได้สำเร็จ
 
 ```js
 (getUserInput) =>

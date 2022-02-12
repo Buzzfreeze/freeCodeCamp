@@ -8,8 +8,9 @@ dashedName: problem-75-singular-integer-right-triangles
 
 # --description--
 
-ปรากฎว่า 12 ซม. เป็นความยาวของเส้นลวดที่เล็กที่สุดที่สามารถโค้งงอเพื่อสร้างสามเหลี่ยมมุมฉากด้านจำนวนเต็มได้
-ในลักษณะเดียว แต่มีตัวอย่างอีกมากมาย
+เราพบว่าความยาวของเส้นลวดที่สั้นที่สุดที่สามารถดัดเพื่อสร้างสามเหลี่ยมมุมฉากด้านจำนวนเต็มได้ เป็น 12 ซม.
+
+แต่ก็มีตัวอย่างอื่นอีก
 
 <div style='margin-left: 4em;'>
   <strong>12 cm:</strong> (3,4,5)<br>
@@ -20,41 +21,41 @@ dashedName: problem-75-singular-integer-right-triangles
   <strong>48 cm:</strong> (12,16,20)<br><br>
 </div>
 
-นทางตรงกันข้าม ความยาวของเส้นลวด เช่น 20 ซม. ไม่สามารถโค้งงอให้เป็นรูปสามเหลี่ยมมุมฉากด้านจำนวนเต็มไม่ได้ และความยาวอื่นๆ ยอมให้พบวิธีแก้ปัญหามากกว่าหนึ่งวิธี ตัวอย่างเช่น การใช้ 120 ซม. สามารถสร้างสามเหลี่ยมมุมฉากด้านจำนวนเต็มที่แตกต่างกันสามรูป
+ในทางตรงกันข้าม ความยาวของเส้นลวด เช่น 20 ซม. จะดัดให้เป็นรูปสามเหลี่ยมมุมฉากด้านจำนวนเต็มไม่ได้ และความยาวอื่นๆ ยอมให้พบวิธีแก้ปัญหามากกว่าหนึ่งวิธี เช่น การใช้ 120 ซม. จะสร้างสามเหลี่ยมมุมฉากด้านจำนวนเต็มที่แตกต่างกันได้สามรูป
 
 <div style='margin-left: 4em;'>
   <strong>120 cm:</strong> (30,40,50), (20,48,52), (24,45,51)<br><br>
 </div>
 
-เนื่องจาก L คือความยาวของเส้นลวด สำหรับค่าของ L ≤ `n` สามารถสร้างมุมขวาด้านจำนวนเต็มของสามเหลี่ยมได้กี่ค่า
+ให้ L คือความยาวของเส้นลวด ถ้า L ≤ `n` จะสร้างสามเหลี่ยมมุมฉากที่มีด้านเป็นจำนวนเต็มได้กี่รูปแบบ
 
 # --hints--
 
-`singularIntRightTriangles(48)` ควร return number.
+`singularIntRightTriangles(48)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof singularIntRightTriangles(48) === 'number');
 ```
 
-`singularIntRightTriangles(48)` ควร return `6`.
+`singularIntRightTriangles(48)` ต้องคืนค่าเป็น `6`
 
 ```js
 assert.strictEqual(singularIntRightTriangles(48), 6);
 ```
 
-`singularIntRightTriangles(700000)` ควร return `75783`.
+`singularIntRightTriangles(700000)` ต้องคืนค่าเป็น `75783`
 
 ```js
 assert.strictEqual(singularIntRightTriangles(700000), 75783);
 ```
 
-`singularIntRightTriangles(1000000)` ควร return `107876`.
+`singularIntRightTriangles(1000000)` ต้องคืนค่าเป็น `107876`
 
 ```js
 assert.strictEqual(singularIntRightTriangles(1000000), 107876);
 ```
 
-`singularIntRightTriangles(1500000)` ควร return `161667`.
+`singularIntRightTriangles(1500000)` ต้องคืนค่าเป็น `161667`
 
 ```js
 assert.strictEqual(singularIntRightTriangles(1500000), 161667);

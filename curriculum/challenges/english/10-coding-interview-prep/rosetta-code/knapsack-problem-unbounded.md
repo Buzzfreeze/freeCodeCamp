@@ -8,21 +8,15 @@ dashedName: knapsack-problemunbounded
 
 # --description--
 
-นักเดินทางคนหนึ่งถูกเบี่ยงทางและต้องแวะพักที่แชงกรี-ลาโดยไม่ได้วางแผนไว้ เมื่อเลือกที่จะออกไป เขาได้รับอนุญาตให้นำสิ่งของที่มีอยู่ไปมากเท่าที่เขาชอบ ตราบใดที่มันใส่ลงในเป้ของเขาได้พอดี และเขาสามารถพกติดตัวไปได้
-
-เขารู้ว่าเขาสามารถบรรทุกได้ไม่เกินค่าน้ำหนักสูงสุดโดยรวม และความจุของเป้ของเขามีปริมาณจำกัด
-
-เมื่อมองเหนือบาร์โค้ดของสินค้าที่เขาพบน้ำหนักและปริมาตร เขาขุดสำเนาเอกสารทางการเงินฉบับล่าสุดออกมาแล้วหามูลค่าของแต่ละรายการ
-
-เขาสามารถรับสิ่งของใดก็ได้ทั้งหน่วยเท่านั้น แต่มีสิ่งของอื่น ๆ มากกว่าที่เขาสามารถพกติดตัวได้
+คราวนี้ให้ลองเลือกสิ่งของโดยมีข้อจำกัดสองอย่างคือ น้ำหนักต้องไม่เกิน และปริมาตร ก็ต้องไม่เกินด้วยเช่นกัน แต่ตอนนี้คุณจะแบ่งของออกแบบในแบบทดสอบที่แล้วไม่ได้แล้วนะ
 
 # --instructions--
 
-เขียนฟังก์ชันที่รับอาร์เรย์ของobject น้ำหนักสูงสุด และปริมาณสูงสุดเป็นพารามิเตอร์ แต่ละobjectมี 4 attribute: ชื่อ ค่า น้ำหนัก และปริมาณ ฟังก์ชันนี้ควรคืนค่าสูงสุดของสิ่งของที่ผู้เดินทางสามารถนำติดตัวไปได้
+ให้เขียนฟังก์ชันที่รับ array ของ object, ค่าน้ำหนักสูงสุด, และปริมาตรสูงสุด จากนั้นจึงคำนวณน้ำหนักสูงสุดที่เป็นไปได้จากการเลือก object ใน array
 
 # --hints--
 
-`knapsackUnbounded([{ name:"panacea", value:3000, weight:0.3, volume:0.025 }, { name:"ichor", value:1800, weight:0.2, volume:0.015 }, { name:"gold", value:2500, weight:2, volume:0.002 }], 25, 0.25)` ควร return `54500`.
+`knapsackUnbounded([{ name:"panacea", value:3000, weight:0.3, volume:0.025 }, { name:"ichor", value:1800, weight:0.2, volume:0.015 }, { name:"gold", value:2500, weight:2, volume:0.002 }], 25, 0.25)` ต้องคืนค่าเป็น `54500`
 
 ```js
 assert.equal(
@@ -39,7 +33,7 @@ assert.equal(
 );
 ```
 
-`knapsackUnbounded([{ name:"panacea", value:3000, weight:0.3, volume:0.025 }, { name:"ichor", value:1800, weight:0.2, volume:0.015 }, { name:"gold", value:2500, weight:2, volume:0.002 }], 55, 0.25)` ควร return `88400`.
+`knapsackUnbounded([{ name:"panacea", value:3000, weight:0.3, volume:0.025 }, { name:"ichor", value:1800, weight:0.2, volume:0.015 }, { name:"gold", value:2500, weight:2, volume:0.002 }], 55, 0.25)` ต้องคืนค่าเป็น `88400`
 
 ```js
 assert.equal(
@@ -56,7 +50,7 @@ assert.equal(
 );
 ```
 
-`knapsackUnbounded([{ name:"panacea", value:3000, weight:0.3, volume:0.025 }, { name:"ichor", value:1800, weight:0.2, volume:0.015 }, { name:"gold", value:2500, weight:2, volume:0.002 }], 25, 0.15)` ควร return `42500`.
+`knapsackUnbounded([{ name:"panacea", value:3000, weight:0.3, volume:0.025 }, { name:"ichor", value:1800, weight:0.2, volume:0.015 }, { name:"gold", value:2500, weight:2, volume:0.002 }], 25, 0.15)` ต้องคืนค่าเป็น `42500`
 
 ```js
 assert.equal(
@@ -73,7 +67,7 @@ assert.equal(
 );
 ```
 
-`knapsackUnbounded([{ name:"panacea", value:3000, weight:0.3, volume:0.025 }, { name:"ichor", value:1800, weight:0.2, volume:0.015 }, { name:"gold", value:2500, weight:2, volume:0.002 }], 35, 0.35)` ควร return `75900`.
+`knapsackUnbounded([{ name:"panacea", value:3000, weight:0.3, volume:0.025 }, { name:"ichor", value:1800, weight:0.2, volume:0.015 }, { name:"gold", value:2500, weight:2, volume:0.002 }], 35, 0.35)` ต้องคืนค่าเป็น `75900`
 
 ```js
 assert.equal(
@@ -90,7 +84,7 @@ assert.equal(
 );
 ```
 
-`knapsackUnbounded([{ name:"panacea", value:3000, weight:0.3, volume:0.025 }, { name:"ichor", value:1800, weight:0.2, volume:0.015 }, { name:"gold", value:2500, weight:2, volume:0.002 }], 15, 0.25)` ควร return `43200`.
+`knapsackUnbounded([{ name:"panacea", value:3000, weight:0.3, volume:0.025 }, { name:"ichor", value:1800, weight:0.2, volume:0.015 }, { name:"gold", value:2500, weight:2, volume:0.002 }], 15, 0.25)` ต้องคืนค่าเป็น `43200`
 
 ```js
 assert.equal(

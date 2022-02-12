@@ -8,7 +8,7 @@ dashedName: problem-38-pandigital-multiples
 
 # --description--
 
-จำนวนเลข 192 คูณโดย of 1, 2, และ 3:
+เมื่อนำ 192 ไปคุณด้วย 1, 2, และ 3 จะเป็น
 
 $$\begin{align}
   192 × 1 = 192\\\\
@@ -16,7 +16,7 @@ $$\begin{align}
   192 × 3 = 576\\\\
 \end{align}$$
 
-ผลคูณจะมีเลข 1 ถึง 9 เมื่อนำมาเรียงตือ 192384576 เราจะเรียกว่า 192384576 เป็น concatenated product ของ 192 และ (1, 2, 3)
+ผลคูณจะมีเลข 1 ถึง 9 เมื่อนำมาเรียงตือ 192384576 จะเป็น pandigital และเราจะเรียกว่า 192384576 เป็น concatenated product ของ 192 และ (1, 2, 3)
 
 หาเริ่มจาก 9 และคูณโดย 1, 2, 3, 4, และ 5 เป็น pandigital 918273645 ที่เป็น concatenated product ของ 9 และ (1, 2, 3, 4, 5).
 
@@ -24,19 +24,19 @@ $$\begin{align}
 
 # --hints--
 
-`pandigitalMultiples(8)` ควร return a number.
+`pandigitalMultiples(8)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof pandigitalMultiples(8) === 'number');
 ```
 
-`pandigitalMultiples(8)` ควร return `78156234`.
+`pandigitalMultiples(8)` ต้องคืนค่าเป็น `78156234`
 
 ```js
 assert.strictEqual(pandigitalMultiples(8), 78156234);
 ```
 
-`pandigitalMultiples(9)` ควร return `932718654`.
+`pandigitalMultiples(9)` ต้องคืนค่าเป็น `932718654`
 
 ```js
 assert.strictEqual(pandigitalMultiples(9), 932718654);

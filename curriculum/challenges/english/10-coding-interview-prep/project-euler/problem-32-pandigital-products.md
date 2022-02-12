@@ -8,48 +8,49 @@ dashedName: problem-32-pandigital-products
 
 # --description--
 
-จำนวน `n`-digit number เป็น pandigital ถ้าใช้ทุก digits จาก 1 ถึง `n` digit ละครั้ง
-เช่น 5-digit number, 15234, มี 1 ถึง 5 เป็น pandigital
+ตัวเลขที่มี `n` หลัก เป็น pandigital ถ้าใช้เลขทุกตัวตั้งแต่ 1 ถึง `n`
 
-ตัวคูณของ 7254 มาจาก 39 × 186 = 7254 ที่มีทั้งตัวคูณและผลคูณมาจาก 1 ถึง 9 เป็นแบบ pandigital
+เช่น 15234 เป็นตัวเลข 5 หลักและใช้เลขทุกตัวตั้งแต่ 1 ถึง 5 เพราะฉะนั้น เลขนี้จะเป็น pandigital
 
-หาผลรวมของทั้งตัวคูณและผลคูณที่มีตัวเลขประกอบตั้งแต่ 1 ถึง `n` pandigital
+คราวนี้ลองดูที่ 7254 ซึ่ง 39 × 186 = 7254 ซึ่งสมการนี้ใช้ตัวเลขครบ ตั้งแต่ 1 ถึง 9 เลย ก็จะถือว่าเป็นสมการแบบ pandigital
 
-**Hint:** บางผลลัพธ์มีมากกว่าหนึ่งวิธี ทำให้แน่ใจเมื่อนำผลลัพธ์มารวมกัน
+ให้หาผลรวมของทั้งตัวคูณและผลคูณที่มีตัวเลขประกอบตั้งแต่ 1 ถึง `n` pandigital
+
+**Hint:** บางผลลัพธ์มีมากกว่าหนึ่งวิธี ต้องลองดูทุกวิธี
 
 # --hints--
 
-`pandigitalProducts(4)` ควร return number.
+`pandigitalProducts(4)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof pandigitalProducts(4) === 'number');
 ```
 
-`pandigitalProducts(4)` ควร return `12`.
+`pandigitalProducts(4)` ต้องคืนค่าเป็น `12`
 
 ```js
 assert.strictEqual(pandigitalProducts(4), 12);
 ```
 
-`pandigitalProducts(6)` ควร return `162`.
+`pandigitalProducts(6)` ต้องคืนค่าเป็น `162`
 
 ```js
 assert.strictEqual(pandigitalProducts(6), 162);
 ```
 
-`pandigitalProducts(7)` ควร return `0`.
+`pandigitalProducts(7)` ต้องคืนค่าเป็น `0`
 
 ```js
 assert.strictEqual(pandigitalProducts(7), 0);
 ```
 
-`pandigitalProducts(8)` ควร return `13458`.
+`pandigitalProducts(8)` ต้องคืนค่าเป็น `13458`
 
 ```js
 assert.strictEqual(pandigitalProducts(8), 13458);
 ```
 
-`pandigitalProducts(9)` ควร return `45228`.
+`pandigitalProducts(9)` ต้องคืนค่าเป็น `45228`.
 
 ```js
 assert.strictEqual(pandigitalProducts(9), 45228);

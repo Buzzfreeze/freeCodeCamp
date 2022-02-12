@@ -20,7 +20,7 @@ dashedName: problem-257-angular-bisectors
 
 # --hints--
 
-`angularBisectors()` ควร return `139012411`.
+`angularBisectors()` ต้องคืนค่าเป็น `139012411`
 
 ```js
 assert.strictEqual(angularBisectors(), 139012411);

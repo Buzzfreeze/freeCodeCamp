@@ -8,41 +8,41 @@ dashedName: cumulative-standard-deviation
 
 # --description--
 
-เขียนฟังก์ชันที่รับarrayของตัวเลขเป็นparameterและ return [standard deviation](<https://en.wikipedia.org/wiki/Standard Deviation>) ของseries.
+ให้เขียนฟังก์ชันที่รับค่าเป็น array ของตัวเลข และให้หา [ค่าเบี่ยงเบนมาตรฐาน(SD)](<https://en.wikipedia.org/wiki/Standard Deviation>) ของชุดตัวเลขนั้น
 
 # --hints--
 
-`standardDeviation` ควรเป็น function.
+`standardDeviation` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof standardDeviation == 'function');
 ```
 
-`standardDeviation([2, 4, 4, 4, 5, 5, 7, 9])` ควร return number.
+`standardDeviation([2, 4, 4, 4, 5, 5, 7, 9])` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof standardDeviation([2, 4, 4, 4, 5, 5, 7, 9]) == 'number');
 ```
 
-`standardDeviation([2, 4, 4, 4, 5, 5, 7, 9])` ควร return `2`.
+`standardDeviation([2, 4, 4, 4, 5, 5, 7, 9])` ต้องคืนค่าเป็น `2`
 
 ```js
 assert.equal(standardDeviation([2, 4, 4, 4, 5, 5, 7, 9]), 2);
 ```
 
-`standardDeviation([600, 470, 170, 430, 300])` ควร return `147.323`.
+`standardDeviation([600, 470, 170, 430, 300])` ต้องคืนค่าเป็น `147.323`
 
 ```js
 assert.equal(standardDeviation([600, 470, 170, 430, 300]), 147.323);
 ```
 
-`standardDeviation([75, 83, 96, 100, 121, 125])` ควร return `18.239`.
+`standardDeviation([75, 83, 96, 100, 121, 125])` ต้องคืนค่าเป็น `18.239`
 
 ```js
 assert.equal(standardDeviation([75, 83, 96, 100, 121, 125]), 18.239);
 ```
 
-`standardDeviation([23, 37, 45, 49, 56, 63, 63, 70, 72, 82])` ควร return `16.87`.
+`standardDeviation([23, 37, 45, 49, 56, 63, 63, 70, 72, 82])` ต้องคืนค่าเป็น `16.87`
 
 ```js
 assert.equal(

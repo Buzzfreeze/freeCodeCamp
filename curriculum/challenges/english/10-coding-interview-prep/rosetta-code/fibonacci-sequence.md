@@ -8,43 +8,43 @@ dashedName: fibonacci-sequence
 
 # --description--
 
-เขียน function เพื่อหา <code>n<sup>th</sup></code> Fibonacci number.
+ให้เขียนฟังก์ชันเพื่อหาเลข Fibonacci ตัวที่ <code>n</code>
 
-The <code>n<sup>th</sup></code> Fibonacci number กำหนดโดย:
+เลข Fibonacci ตัวที่ <code>n</code> จะหาได้จาก:
 
 <code>F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub></code>
 
-สองเทอมแรกของซีรีส์คือ 0 และ 1.
+โดยเลขสองตัวแรกของลำดับจะเป็น 0 กับ 1
 
-ดังนั้น series คือ: 0, 1, 1, 2, 3, 5, 8, 13...
+ดังนั้นลำดับ Fibonacci จะมีค่าเป็น 0, 1, 1, 2, 3, 5, 8, 13...
 
 # --hints--
 
-`fibonacci` ควรเป็น function.
+`fibonacci` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof fibonacci === 'function');
 ```
 
-`fibonacci(2)` ควร return number.
+`fibonacci(2)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof fibonacci(2) == 'number');
 ```
 
-`fibonacci(3)` ควร return 2.
+`fibonacci(3)` ต้องคืนค่าเป็น 2
 
 ```js
 assert.equal(fibonacci(3), 2);
 ```
 
-`fibonacci(5)` ควร return 5.
+`fibonacci(5)` ต้องคืนค่าเป็น 5
 
 ```js
 assert.equal(fibonacci(5), 5);
 ```
 
-`fibonacci(10)` ควร return 55.
+`fibonacci(10)` ต้องคืนค่าเป็น 55
 
 ```js
 assert.equal(fibonacci(10), 55);

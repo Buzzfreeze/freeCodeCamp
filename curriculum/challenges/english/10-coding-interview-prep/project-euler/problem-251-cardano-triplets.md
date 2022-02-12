@@ -14,13 +14,13 @@ $$\sqrt[3]{a + b \sqrt{c}} + \sqrt[3]{a - b \sqrt{c}} = 1$$
 
 ตัวอย่างเช่น (2,1,5) คือ Cardano Triplet
 
-มี 149 Cardano Triplets ซึ่ง $a + b + c ≤ 1,000$
+มี Cardano Triplet ทั้งหมด 149 ตัวที่ $a + b + c ≤ 1,000$
 
-หาจำนวน Cardano Triplets ที่มีอยู่เพื่อให้ $a + b + c ≤ 110\\,000\\,000$
+ให้หาจำนวน Cardano Triplet ทั้งหมดที่ $a + b + c ≤ 110\\,000\\,000$
 
 # --hints--
 
-`cardanoTriplets()` ควร return `18946051`.
+`cardanoTriplets()` ต้องคืนค่าเป็น `18946051`
 
 ```js
 assert.strictEqual(cardanoTriplets(), 18946051);

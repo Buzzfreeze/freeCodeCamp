@@ -8,77 +8,75 @@ dashedName: kaprekar-numbers
 
 # --description--
 
-positive integer เป็น [Kaprekar number](<https://en.wikipedia.org/wiki/Kaprekar number>) if:
+จำนวนเต็มบวกจะเป็น [Kaprekar number](<https://en.wikipedia.org/wiki/Kaprekar number>) เมื่อ:
 
 <ul>
-  <li>It is 1, or,</li>
-  <li>The decimal representation of its square may be split once into two parts consisting of positive integers which sum to the original number. </li>
+  <li>เป็น 1 หรือ</li>
+  <li>ค่ากำลังสองของเลขนั้นในฐาน 10 จะสามารถแบ่งเป็นสองส่วนและนำมาบวกกันได้เลขนั้น </li>
 </ul>
 
-โปรดทราบว่าการแยกส่วนซึ่งส่งผลให้ส่วนที่ประกอบด้วย 0 ล้วนไม่ถูกต้อง เนื่องจาก 0 ไม่ถือเป็นค่าบวก
-
-ตัวอย่างตัวเลข Kaprekar:
+ตัวอย่าง:
 
 <ul>
-  <li><code>2223</code> is a Kaprekar number, as <code>2223 * 2223 = 4941729</code>, <code>4941729</code> may be split to <code>494</code> and <code>1729</code>, and <code>494 + 1729 = 2223</code></li>
-  <li>The series of Kaprekar numbers is known as <a href='https://oeis.org/A006886' target='_blank'>A006886</a>, and begins as <code>1, 9, 45, 55, ...</code></li>
+  <li><code>2223</code> เป็น Kaprekar number เพราะ <code>2223 * 2223 = 4941729</code> แล้ว <code>4941729</code> จะแยกได้เป็น <code>494</code> และ <code>1729</code> จากนั้น <code>494 + 1729 = 2223</code></li>
+  <li>ชุดตัวเลขของ Kaprekar number จะเรียกว่าเป็น <a href='https://oeis.org/A006886' target='_blank'>A006886</a> ซึ่งจะมีข้อมูลตัวแรกๆเป็น <code>1, 9, 45, 55, ...</code></li>
 </ul>
 
 # --instructions--
 
-เขียนฟังก์ชันที่ใช้ตัวเลข $n$ ฐาน $bs$ และคืนค่า จริง หากตัวเลขนั้นเป็นตัวเลข Kaprekar สำหรับฐานที่กำหนด มิฉะนั้น ฟังก์ชันจะส่งกลับค่าเท็จ
+ให้เขียนฟังก์ชันที่รับค่า $n$ ฐาน $bs$ และคืนค่าเป็น true หากตัวเลขนั้นเป็นตัวเลข Kaprekar สำหรับฐานที่กำหนด
 
 # --hints--
 
-`isKaprekar` ควรเป็น function.
+`isKaprekar` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof isKaprekar == 'function');
 ```
 
-`isKaprekar(1, 10)` ควร return boolean.
+`isKaprekar(1, 10)` ต้องคืนค่าเป็น boolean
 
 ```js
 assert(typeof isKaprekar(1, 10) == 'boolean');
 ```
 
-`isKaprekar(1, 10)` ควร return `true`.
+`isKaprekar(1, 10)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isKaprekar(1, 10), true);
 ```
 
-`isKaprekar(9, 10)` ควร return `true`.
+`isKaprekar(9, 10)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isKaprekar(9, 10), true);
 ```
 
-`isKaprekar(2223, 10)` ควร return `true`.
+`isKaprekar(2223, 10)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isKaprekar(2223, 10), true);
 ```
 
-`isKaprekar(22823, 10)` ควร return `false`.
+`isKaprekar(22823, 10)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isKaprekar(22823, 10), false);
 ```
 
-`isKaprekar(9, 17)` ควร return `false`.
+`isKaprekar(9, 17)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isKaprekar(9, 17), false);
 ```
 
-`isKaprekar(225, 17)` ควร return `true`.
+`isKaprekar(225, 17)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isKaprekar(225, 17), true);
 ```
 
-`isKaprekar(999, 17)` ควร return `false`.
+`isKaprekar(999, 17)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isKaprekar(999, 17), false);

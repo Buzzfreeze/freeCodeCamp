@@ -8,43 +8,43 @@ dashedName: problem-56-powerful-digit-sum
 
 # --description--
 
-googol ($10^{100}$) เป็นเลขที่มีค่ามาก: 1 ตามด้วย one-hundred zeros $100^{100}$ ใหญ่จนแทบจินตนาการไม่ออก 1 ตามด้วย two-hundred zeros แม้จะมีขนาดแต่ผลรวมของหลักในแต่ละตัวเลขมีเพียง 1
+googol ($10^{100}$) เป็นเลขที่มีค่าสูงมากๆ คือเป็นเลข 1 ตามด้วย 0 อีก 100 ตัว และ $100^{100}$ เป็นเลข 1 ตามด้วย 0 อีก 200 ตัว ถึงจะดูเยอะ แต่พอบวกค่าแต่ละหลักเข้าด้วยกันกลับมีค่าแค่ 1 เท่านั้น
 
-พิจารณา natural numbers ของรูปแบบ $a^b$, โดยที่ `a`, `b` &lt; `n`, ค่าสูงสุดของ digital sum เท่ากับเท่าไหร่
+ถ้าตัวเลขอยู่ในรูป $a^b$ โดยที่ `a`, `b` &lt; `n` ให้หาผลรวมสูงสุดของเลขแต่ละหลักเท่ากับเท่าไหร่
 
 # --hints--
 
-`powerfulDigitSum(3)` ควร return number.
+`powerfulDigitSum(3)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof powerfulDigitSum(3) === 'number');
 ```
 
-`powerfulDigitSum(3)` ควร return `4`.
+`powerfulDigitSum(3)` ต้องคืนค่าเป็น `4`
 
 ```js
 assert.strictEqual(powerfulDigitSum(3), 4);
 ```
 
-`powerfulDigitSum(10)` ควร return `45`.
+`powerfulDigitSum(10)` ต้องคืนค่าเป็น `45`
 
 ```js
 assert.strictEqual(powerfulDigitSum(10), 45);
 ```
 
-`powerfulDigitSum(50)` ควร return `406`.
+`powerfulDigitSum(50)` ต้องคืนค่าเป็น `406`
 
 ```js
 assert.strictEqual(powerfulDigitSum(50), 406);
 ```
 
-`powerfulDigitSum(75)` ควร return `684`.
+`powerfulDigitSum(75)` ต้องคืนค่าเป็น `684`
 
 ```js
 assert.strictEqual(powerfulDigitSum(75), 684);
 ```
 
-`powerfulDigitSum(100)` ควร return `972`.
+`powerfulDigitSum(100)` ต้องคืนค่าเป็น `972`
 
 ```js
 assert.strictEqual(powerfulDigitSum(100), 972);

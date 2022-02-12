@@ -8,75 +8,75 @@ dashedName: stern-brocot-sequence
 
 # --description--
 
-ให้สร้างลำดับ Stern-Brocot จะถูกสร้างขึ้นโดยalgorithmที่คล้ายกับที่ใช้ในการสร้าง [ลำดับ Fibonacci](<https://rosettacode.org/wiki/Fibonacci sequence>)
+ให้สร้างลำดับ Stern-Brocot โดยใช้อัลกอริทึมที่คล้ายกับที่ใช้ในการสร้าง [ลำดับ Fibonacci](<https://rosettacode.org/wiki/Fibonacci sequence>)
 
 <ol>
-  <li>The first and second members of the sequence are both 1:</li>
+  <li>ค่าแรกและค่าที่สองของลำดับเป็น 1 ทั้งคู่:</li>
     <ul><li>1, 1</li></ul>
-  <li>Start by considering the second member of the sequence</li>
-  <li>Sum the considered member of the sequence and its precedent, (1 + 1) = 2, and append it to the end of the
-    sequence:</li>
+  <li>เริ่มจากการดูค่าที่สองของลำดับ</li>
+  <li>บวกค่านั้นกับค่าก่อนหน้า (1 + 1) = 2 และนำไปต่อท้ายลำดับ:</li>
     <ul><li>1, 1, 2</li></ul>
-  <li>Append the considered member of the sequence to the end of the sequence:</li>
+  <li>นำค่านั้นไปต่อท้ายลำดับ:</li>
     <ul><li>1, 1, 2, 1</li></ul>
-  <li>Consider the next member of the series, (the third member i.e. 2)</li>
-  <li>GOTO 3 </li>
+  <li>ดูค่าถัดไปในลำดับ (ค่าที่สามในตัวอย่างนี้มีค่าเป็น 2)</li>
+  <li>กลับไปทำซ้ำข้อที่ 3 </li>
     <ul>
       <li></li>
-      <li> ─── Expanding another loop we get: ───</li>
+      <li> ─── ทำซ้ำ ───</li>
       <li></li>
     </ul>
-  <li>Sum the considered member of the sequence and its precedent, (2 + 1) = 3, and append it to the end of the
-    sequence:</li>
+  <li>บวกค่านั้นกับค่าก่อนหน้า (2 + 1) = 3 และนำไปต่อท้ายลำดับ:</li>
     <ul><li>1, 1, 2, 1, 3</li></ul>
-  <li>Append the considered member of the sequence to the end of the sequence:</li>
+  <li>นำค่านั้นไปต่อท้ายลำดับ:</li>
     <ul><li>1, 1, 2, 1, 3, 2</li></ul>
-  <li>Consider the next member of the series, (the fourth member i.e. 1)</li>
+  <li>ดูค่าถัดไปในลำดับ (ค่าที่สี่ในตัวอย่างนี้มีค่าเป็น 1)</li>
 </ol>
 
 # --instructions--
 
-สร้างฟังก์ชันที่return indexในลำดับ Stern-Brocot ซึ่งพบ $ n $ เป็นครั้งแรก โดยลำดับจะถูกสร้างขึ้นด้วยวิธีการที่ระบุไว้ข้างต้น โปรดทราบว่าลำดับนี้ใช้การจัดทำดัชนีแบบอิง 1 รายการ
+ให้เขียนฟังก์ชันที่รับค่า $n$ และคืนค่า index ของลำดับแบบ Stern-Brocot ที่มีค่าตรงกับ $n$
+
+ลำดับนี้ใช้ index แบบ 1-based (index เริ่มที่ 1)
 
 # --hints--
 
-`sternBrocot` ควรเป็น function.
+`sternBrocot` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof sternBrocot == 'function');
 ```
 
-`sternBrocot(2)` คสร return number.
+`sternBrocot(2)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof sternBrocot(2) == 'number');
 ```
 
-`sternBrocot(2)` คสร return `3`.
+`sternBrocot(2)` ต้องคืนค่าเป็น `3`
 
 ```js
 assert.equal(sternBrocot(2), 3);
 ```
 
-`sternBrocot(3)` คสร return `5`.
+`sternBrocot(3)` ต้องคืนค่าเป็น `5`
 
 ```js
 assert.equal(sternBrocot(3), 5);
 ```
 
-`sternBrocot(5)` คสร return `11`.
+`sternBrocot(5)` ต้องคืนค่าเป็น `11`
 
 ```js
 assert.equal(sternBrocot(5), 11);
 ```
 
-`sternBrocot(7)` คสร return `19`.
+`sternBrocot(7)` ต้องคืนค่าเป็น `19`
 
 ```js
 assert.equal(sternBrocot(7), 19);
 ```
 
-`sternBrocot(10)` คสร return `39`.
+`sternBrocot(10)` ต้องคืนค่าเป็น `39`
 
 ```js
 assert.equal(sternBrocot(10), 39);

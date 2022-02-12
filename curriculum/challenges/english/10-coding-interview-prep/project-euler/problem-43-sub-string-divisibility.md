@@ -8,49 +8,51 @@ dashedName: problem-43-sub-string-divisibility
 
 # --description--
 
-เลข 1406357289 มี 0 ถึง 9 pandigital number เพราะว่าประกอบด้วย digits จาก 0 ถึง 9 แต่มันประกอบด้วยคุณสมบัติการแบ่ง string ย่อยที่น่าสนใจ
+เลข 1406357289 เป็น pandigital เพราะมีตัวเลขตั้งแต่ 0 ถึง 9 
 
-ให้ $d_1$ เป็น $1^{st}$ digit, $d_2$ เป็น $2^{nd}$ digit ตามลำดับ 
+แต่มีเรื่องน่าสนใจอีกอย่างคือ:
 
-- ${d_2}{d_3}{d_4} = 406$ is divisible by 2
-- ${d_3}{d_4}{d_5} = 063$ is divisible by 3
-- ${d_4}{d_5}{d_6} = 635$ is divisible by 5
-- ${d_5}{d_6}{d_7} = 357$ is divisible by 7
-- ${d_6}{d_7}{d_8} = 572$ is divisible by 11
-- ${d_7}{d_8}{d_9} = 728$ is divisible by 13
-- ${d_8}{d_9}{d_{10}} = 289$ is divisible by 17
+ให้ $d_1$ เป็นเลขหลักที่ $1$ และ $d_2$ เป็นเลขหลักที่ $2$ ฯลฯ
 
-จากผลรวมตั้งแต่ 0 ถึง `n` pandigital numbers กับ sub-strings เติมจาก`n - 2` ของการแบ่งproperties
+- ${d_2}{d_3}{d_4} = 406$ จะหาร 2 ลงตัว
+- ${d_3}{d_4}{d_5} = 063$ จะหาร 3 ลงตัว
+- ${d_4}{d_5}{d_6} = 635$ จะหาร 5 ลงตัว
+- ${d_5}{d_6}{d_7} = 357$ จะหาร 7 ลงตัว
+- ${d_6}{d_7}{d_8} = 572$ จะหาร 11 ลงตัว
+- ${d_7}{d_8}{d_9} = 728$ จะหาร 13 ลงตัว
+- ${d_8}{d_9}{d_{10}} = 289$ จะหาร 17 ลงตัว
 
-**Note:** Pandigital numbers เริ่มจาก `0` ถูกพิจารณาเป็น result
+ให้หาผลรวมของเลขที่เป็น pandigital ตั้งแต่ 0 ถึง `n` โดยที่มีคุณสมบัติเหมือนด้านบน  
+
+**Note:** Pandigital ที่จะดูให้เริ่มจาก `0` เลย
 
 # --hints--
 
-`substringDivisibility(5)` ควร return number.
+`substringDivisibility(5)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof substringDivisibility(5) === 'number');
 ```
 
-`substringDivisibility(5)` ควร return `12444480`.
+`substringDivisibility(5)` ต้องคืนค่าเป็น `12444480`
 
 ```js
 assert.strictEqual(substringDivisibility(5), 12444480)
 ```
 
-`substringDivisibility(7)` ควร return `1099210170`.
+`substringDivisibility(7)` ต้องคืนค่าเป็น `1099210170`
 
 ```js
 assert.strictEqual(substringDivisibility(7), 1099210170)
 ```
 
-`substringDivisibility(8)` ควร return `1113342912`.
+`substringDivisibility(8)` ต้องคืนค่าเป็น `1113342912`
 
 ```js
 assert.strictEqual(substringDivisibility(8), 1113342912)
 ```
 
-`substringDivisibility(9)` ควร return `16695334890`.
+`substringDivisibility(9)` ต้องคืนค่าเป็น `16695334890`
 
 ```js
 assert.strictEqual(substringDivisibility(9), 16695334890)

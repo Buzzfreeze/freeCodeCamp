@@ -8,7 +8,8 @@ dashedName: create-a-set-class
 
 # --description--
 
-ในแบบฝึกหัดนี้ เราจะสร้างคลาสที่ชื่อว่า `Set` เพื่อจำลอง abstract data structure ที่เรียกว่า "set" Set เป็นเหมือน array แต่ไม่สามารถมีค่าที่ซ้ำกันได้ การใช้งานทั่วไปสำหรับชุดคือการตรวจสอบว่ามีรายการนั้นอยู่หรือไม่ เราสามารถดูว่า `Set` object ของ ES6 ทำงานอย่างไรในตัวอย่างด้านล่าง:
+ในแบบฝึกหัดนี้ เราจะสร้างคลาสที่ชื่อว่า `Set` เพื่อจำลองโครงสร้างข้อมูลที่เรียกว่า "set" 
+Set เป็นเหมือน array แต่ไม่สามารถมีค่าที่ซ้ำกันได้ การใช้งานทั่วไปสำหรับ set คือการตรวจสอบว่ามีรายการนั้นอยู่หรือไม่ ลองดูวิธีการทำงานของ object `Set` ของ ES6 ในตัวอย่าง:
 
 ```js
 const set1 = new Set([1, 2, 3, 5, 5, 2, 0]);
@@ -20,17 +21,20 @@ console.log(set1.has(6));
 // output: false
 ```
 
-ขั้นแรก เราจะสร้าง add method ที่เพิ่มค่าให้กับคอลเลกชัน set ของเรา ตราบใดที่ยังไม่มีค่านั้นอยู่ใน set นี้อยู่แล้ว จากนั้นเราจะสร้าง remove method ที่ลบค่าออกจากคอลเลกชัน set หากมีอยู่แล้ว และสุดท้าย เราจะสร้าง size method ที่ return จำนวน element ภายในคอลเลกชัน set
+ขั้นแรก เราจะสร้าง method add ที่จะเพิ่มข้อมูลลงในคอลเลกชัน set ของเรา ถ้าใน set ยังไม่มีข้อมูลนี้ 
+จากนั้นเราจะสร้าง method remove ที่ลบข้อมูลออกจากคอลเลกชัน set และสุดท้าย เราจะสร้าง method size ที่คืนค่าเป็นจำนวน element ภายในคอลเลกชัน set
 
 # --instructions--
 
-สร้าง `add` method ที่เพิ่มค่าที่ไม่ซ้ำกันให้กับคอลเล็กชัน set และ return `true` หากเพิ่มค่าสำเร็จและ `false` หากไม่เป็นเช่นนั้น
+สร้าง method `add` ที่ใช้เพิ่มข้อมูลที่ยังไม่มีลงในคอลเล็กชัน set และคืนค่าเป็น `true` หากเพิ่มข้อมูลสำเร็จและ `false` หากไม่สำเร็จ
 
-สร้าง `remove` method ที่ยอมรับค่าและตรวจสอบว่ามีอยู่ใน set หรือไม่ หากเป็นเช่นนั้น method นี้ควรลบออกจากคอลเล็กชัน set และ return เป็น `true` มิฉะนั้นควร return ค่าเป็น `false` สร้าง `size` method ที่ส่งคืนขนาดของคอลเล็กชัน set
+สร้าง method `remove` ที่รับข้อมูล และตรวจสอบว่ามีข้อมูลอยู่ใน set หรือไม่ ถ้ามี ต้องลบข้อมูลนี้ออกจากคอลเล็กชัน และคืนค่าเป็น `true` แต่ถ้าไม่มีต้องคืนค่าเป็น `false` 
+
+สร้าง method `size` ที่คืนค่าเป็นขนาดของคอลเล็กชัน set
 
 # --hints--
 
-`Set` class ของคุณควรมี `add` method
+class `Set` ของคุณควรมี method `add`
 
 ```js
 assert(
@@ -41,7 +45,7 @@ assert(
 );
 ```
 
-`add` method ของคุณไม่ควรเพิ่มค่าที่มีอยู่แล้วเข้าไป
+method `add` ของคุณไม่ควรเพิ่มค่าที่มีอยู่แล้วเข้าไป
 
 ```js
 assert(
@@ -56,7 +60,7 @@ assert(
 );
 ```
 
-`add` method ของคุณควร return `true` เมื่อค่าถูกเพิ่มเข้าไปได้สำเร็จ
+method `add` ของคุณต้องคืนค่าเป็น `true` เมื่อค่าถูกเพิ่มเข้าไปได้สำเร็จ
 
 ```js
 assert(
@@ -68,7 +72,7 @@ assert(
 );
 ```
 
-`add` method ควร return `false` เมื่อมีการเพิ่มค่าที่ซ้ำกัน
+method `add` ต้องคืนค่าเป็น `false` เมื่อมีการเพิ่มค่าที่ซ้ำกัน
 
 ```js
 assert(
@@ -81,7 +85,7 @@ assert(
 );
 ```
 
-`Set` class ของคุณควรมี `remove` method
+class `Set` ของคุณควรมี method `remove`
 
 ```js
 assert(
@@ -92,7 +96,7 @@ assert(
 );
 ```
 
-`remove` method ของคุณควรจะลบแค่ค่าที่มีอยู่ set อยู่แล้วเท่านั้น
+method `remove` ของคุณควรจะลบแค่ค่าที่มีอยู่ใน set อยู่แล้วเท่านั้น
 
 ```js
 assert.deepEqual(
@@ -107,7 +111,7 @@ assert.deepEqual(
 );
 ```
 
-`remove` method ของคุณควรลบรายการที่กำหนดออกจาก set
+method `remove` ของคุณควรลบรายการที่กำหนดออกจาก set
 
 ```js
 assert(
@@ -122,7 +126,7 @@ assert(
 );
 ```
 
-`Set` class ของคุณควรมี `size` method
+class `Set` ของคุณควรมี method `size`
 
 ```js
 assert(
@@ -133,7 +137,7 @@ assert(
 );
 ```
 
-`size` method ควร return จำนวนของ element ในคอลเลกชันนั้น
+method `size` ต้องคืนค่าเป็นจำนวนของ element ในคอลเลกชันนั้น
 
 ```js
 assert(
@@ -159,19 +163,19 @@ class Set {
     this.length = 0;
   }
 
-  // This method will check for the presence of an element and return true or false
+  // method นี้จะอ่านว่ามีค่าอยู่ใน set แล้วหรือไม่ และคืนค่าเป็น true หรือ false
   has(element) {
     return this.dictionary[element] !== undefined;
   }
 
-  // This method will return all the values in the set
+  // method นี้จะคืนค่าเป็นค่าทั้งหมดที่อยู่ใน set
   values() {
     return Object.values(this.dictionary);
   }
 
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 ```
 

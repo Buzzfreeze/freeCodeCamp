@@ -8,27 +8,27 @@ dashedName: use-spread-and-notes-for-es5-set-integration
 
 # --description--
 
-คุณจำ `…` ที่เป็น ES6 spread operator ได้หรือไม่?
+คุณจำ `…` ที่เป็น spread operator ของ ES6 ได้ไหม?
 
-`…` สามารถรับค่า iterable object ใน ES6 และเปลี่ยนพวกมันเป็น array
+`…` จะรับค่า iterable object (object ที่วนอ่านค่าได้) ใน ES6 และเปลี่ยน object นั้นเป็น array
 
-มาลองสร้าง Set และตรวจสอบฟังก์ชันขอ spread กัน
+มาลองสร้าง Set และลองใช้ spread กัน
 
 ```js
 var set = new Set([1,2,3]);
 var setToArr = [...set]
-console.log(setToArr) // returns [ 1, 2, 3 ]
+console.log(setToArr) // คืนค่าเป็น [ 1, 2, 3 ]
 ```
 
 # --instructions--
 
-ในแบบฝึกหัดนี้เราจะส่งผ่าน set object ไปยัง `checkSet` function แล้วมันควร return array ที่มีค่าของ Set อยู่
+ในแบบฝึกหัดนี้เราจะส่ง set object ไปยังฟังก์ชัน `checkSet` แล้วฟังก์ชันนี้จะต้องคืนค่าเป็น array ที่สร้างจาก Set นั้น
 
-ตอนนี้คุณเรียนรู้การใช้งาน ES6 `Set()` object เป็นที่เรียบร้อยแล้ว เยี่ยมมาก!
+คราวนี้คุณก็จะใช้ `Set()` object ของ ES6 เป็นแล้ว เยี่ยมมาก!
 
 # --hints--
 
-`checkSet(new Set([1,2,3,4,5,6,7])` ควร return `[1, 2, 3, 4, 5, 6, 7]`.
+`checkSet(new Set([1,2,3,4,5,6,7])` ต้องคืนค่าเป็น `[1, 2, 3, 4, 5, 6, 7]`.
 
 ```js
 assert(
@@ -45,9 +45,9 @@ assert(
 
 ```js
 function checkSet(set){
-   // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-   // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 ```
 

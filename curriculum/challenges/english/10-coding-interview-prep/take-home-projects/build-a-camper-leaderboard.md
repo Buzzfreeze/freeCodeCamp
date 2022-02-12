@@ -20,7 +20,7 @@ dashedName: build-a-freecodecamp-forum-homepage
 
 **Hint:** เพื่อรับ 30 โพสต์ล่าสุด: <https://forum-proxy.freecodecamp.rocks/latest>.
 
-เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "ฉันทำภารกิจที่ท้าทายนี้เสร็จแล้ว"
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "I've completed this challenge"
 
 สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 

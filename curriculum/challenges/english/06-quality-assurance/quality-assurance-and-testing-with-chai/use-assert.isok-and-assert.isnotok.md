@@ -8,19 +8,22 @@ dashedName: use-assert-isok-and-assert-isnotok
 
 # --description--
 
-project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
+project นี้สร้างขึ้นจาก [Replit ตัวนี้](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-`isOk()` จะทดสอบหาค่าที่เป็น true และ `isNotOk()` จะทดสอบหาค่าที่เป็น false
+`isOk()` ดูว่าค่าเป็น truthy (เสมือนว่าเป็น true) หรือไม่ และ  
+`isNotOk()` ดูว่าค่าเป็น falsey (เสมือนว่าเป็น false) หรือไม่
 
-หากต้องการเรียนรู้เพิ่มเติมเกี่ยวกับค่าความจริง (true) และค่าเท็จ (false) ลองไปดู challenge ที่ [Falsy Bouncer](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/falsy-bouncer)
+ถ้ายังไม่เข้าใจเรื่องค่าที่เป็น truthy หรือ falsey ให้ลองดูที่แบบทดสอบ [Falsy Bouncer](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/falsy-bouncer)
 
 # --instructions--
 
-ภายใน `tests/1_unit-tests.js` ภายใต้การทดสอบที่มีป้ายกำกับ `#3' ในชุด `Basic Assertions` ให้เปลี่ยน `assert' แต่ละรายการเป็น `assert.isOk()` หรือ `asssert.isNotOk()` เพื่อทำ ผ่านการทดสอบ (ควรประเมินค่า `true`) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน
+ในไฟล์ `tests/1_unit-tests.js` ให้ดูที่ test ใต้ `#3` ใน suite ที่ชื่อ `Basic Assertions`  
+ให้เปลี่ยน `assert` เป็น `assert.isOk()` หรือ `asssert.isNotOk()` เพื่อทำให้ test ผ่าน (ได้ค่าเป็น `true`) 
+อย่าแก้ไข argument ที่ส่งเข้าไปใน assert
 
 # --hints--
 
-การทดสอบทั้งหมดควรผ่าน
+test ทั้งหมดต้องผ่าน
 
 ```js
 (getUserInput) =>
@@ -34,7 +37,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `isOk` กับ `isNotOk`
+ต้องเลือกใช้ method `isOk` หรือ `isNotOk` กับ assert ตัวแรกให้ถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -48,7 +51,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `isOk` กับ `isNotOk`
+ต้องเลือกใช้ method `isOk` หรือ `isNotOk` กับ assert ตัวที่สองให้ถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -62,7 +65,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สาม - `isOk` กับ `isNotOk`
+ต้องเลือกใช้ method `isOk` หรือ `isNotOk` กับ assert ตัวที่สามให้ถูกต้อง
 
 ```js
 (getUserInput) =>

@@ -8,13 +8,15 @@ dashedName: problem-197-investigating-the-behaviour-of-a-recursively-defined-seq
 
 # --description--
 
-กำหนดให้เป็นฟังก์ชัน $f(x) = ⌊{2}^{30.403243784 - x^2}⌋ × {10}^{-9}$ ( ⌊ ⌋ คือฟังก์ชันพื้น) ลำดับที่ $u_n$ ถูกกำหนด โดย $u_0 = -1$ และ $u_{n + 1} = f(u_n)$
+กำหนดให้ฟังก์ชัน $f(x) = ⌊{2}^{30.403243784 - x^2}⌋ × {10}^{-9}$ ( ⌊ ⌋ คือฟังก์ชันพื้น)  
 
-หา $u_n + u_{n + 1}$ สำหรับ $n = {10}^{12}$ ให้คำตอบด้วยตัวเลข 9 หลักหลังจุดทศนิยม
+ลำดับ $u_n$ ถูกกำหนดโดย $u_0 = -1$ และ $u_{n + 1} = f(u_n)$
+
+ให้หา $u_n + u_{n + 1}$ ถ้า $n = {10}^{12}$ ทศนิยม 9 หลัก
 
 # --hints--
 
-`recursivelyDefinedSequence()` ควร return `1.710637717`.
+`recursivelyDefinedSequence()` ต้องคืนค่าเป็น `1.710637717`
 
 ```js
 assert.strictEqual(recursivelyDefinedSequence(), 1.710637717);

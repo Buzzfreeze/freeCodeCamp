@@ -8,43 +8,44 @@ dashedName: problem-42-coded-triangle-numbers
 
 # --description--
 
-`n`<sup>th</sup> term ของ sequence ของ triangle numbers ถูกกำหนดโดย `tn` = ½`n`(`n`+1)
-ดังนั้น 10 ค่าแรกของ triangle numbers เป็น
+ค่าที่ `n` ของ sequence ของ triangle number จะมีสมการเป็น `tn` = ½`n`(`n`+1)
+ดังนั้น 10 ค่าแรกของ triangle number จะเป็น
 
 <div style='margin-left: 4em;'>1, 3, 6, 10, 15, 21, 28, 36, 45, 55, ...</div>
 
-เปลี่ยนทุก letter ในคำให้มีค่าตาม alphabetical position และเพิ่มค่าจาก form ของคำ
-เช่น SKY มีค่าเป็น 19 + 11 + 25 = 55 = `t`<sub>10</sub>. ถ้ามีค่าเป็น triangle number จะเรียกเป็น triangle word
+ถ้าเรามีคำๆหนึ่ง และเปลี่ยนทุกตัวอักษรในคำนั้นให้เป็นตำเลขตามลำดับอักษร และบวกค่านั้นเข้าด้วยกัน เราจะได้ค่าขของคำนั้น 
+เช่น SKY มีค่าเป็น 19 + 11 + 25 = 55 = `t`<sub>10</sub> 
+ถ้าคำไหนมีค่าเป็น triangle number จะเรียกเป็น triangle word
 
-ใช้คำใน array ของ `n`-length หาว่ามี triangle words กี่คำ
+ให้อ่านค่าของ element ใน array `n` ตัวแรก เพื่อหาว่ามี triangle word กี่คำ
 
 # --hints--
 
-`codedTriangleNumbers(1400)` ควร return number.
+`codedTriangleNumbers(1400)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof codedTriangleNumbers(1400) === 'number');
 ```
 
-`codedTriangleNumbers(1400)` ควร return 129.
+`codedTriangleNumbers(1400)` ต้องคืนค่าเป็น 129
 
 ```js
 assert(codedTriangleNumbers(1400) == 129);
 ```
 
-`codedTriangleNumbers(1500)` ควร return 137.
+`codedTriangleNumbers(1500)` ต้องคืนค่าเป็น 137
 
 ```js
 assert(codedTriangleNumbers(1500) == 137);
 ```
 
-`codedTriangleNumbers(1600)` ควร return 141.
+`codedTriangleNumbers(1600)` ต้องคืนค่าเป็น 141
 
 ```js
 assert(codedTriangleNumbers(1600) == 141);
 ```
 
-`codedTriangleNumbers(1786)` ควร return 162.
+`codedTriangleNumbers(1786)` ต้องคืนค่าเป็น 162
 
 ```js
 assert(codedTriangleNumbers(1786) == 162);

@@ -8,23 +8,25 @@ dashedName: problem-33-digit-cancelling-fractions
 
 # --description--
 
-เศษส่วน <sup>49</sup>/<sub>98</sub> เป็น curious fraction ในฐานะนักคณิตศาสตร์ที่ไม่มีประสบการณ์ในการพยายามลดความซับซ้อนอาจเชื่ออย่างผิด ๆ ว่า <sup>49</sup>/<sub>98</sub> = <sup>4</sup>/<sub>8</sub>ซึ่งถูกต้องได้มาจากการยกเลิก 9s
+เศษส่วน <sup>49</sup>/<sub>98</sub> เป็น curious fraction 
 
-พิจารณาเศษส่วนเช่น <sup>30</sup>/<sub>50</sub> = <sup>3</sup>/<sub>5</sub>
+เพราะว่ามีบางคนคิดว่า <sup>49</sup>/<sub>98</sub> = <sup>4</sup>/<sub>8</sub> โดยใช้ 9 ตัด 9 ได้ ซึ่งผลลัพธ์ถูก แต่วิธีการคิดผิด
 
-มี 4 non-trivial ตัวอย่างเช่น fraction ที่มีค่าน้อยกว่าหนึ่ง ประกอบด้วย 2 digits ทั้งของ numerator และ denominator
+ลองดูเศษส่วน เช่น <sup>30</sup>/<sub>50</sub> = <sup>3</sup>/<sub>5</sub>
 
-ผลคูณของเศษส่วนสี่จำนวน กำหนดให้มีผลคูณร่วมที่นอยที่สุดร่วมกัน โดยหาค่าของตัวส่วน(denominator)
+มีเศษส่วนแบบนี้อีก 4 ตัว ที่มีค่าน้อยกว่า 1 และมีทั้งตัวเศษ และตัวส่วนเป็นเลข 2 หลัก
+
+ให้คูณเศษส่วนทั้งสี่ตัวนี้เข้าด้วยกัน และคืนค่าเป็นตัวส่วนออกมา
 
 # --hints--
 
-`digitCancellingFractions()` ควร return number.
+`digitCancellingFractions()` ต้องคืนค่าเป็น number
 
 ```js
 assert(typeof digitCancellingFractions() === 'number');
 ```
 
-`digitCancellingFractions()` ควร return 100.
+`digitCancellingFractions()` ต้องคืนค่าเป็น 100
 
 ```js
 assert.strictEqual(digitCancellingFractions(), 100);

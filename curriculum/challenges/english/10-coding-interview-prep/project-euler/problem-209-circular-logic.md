@@ -8,7 +8,8 @@ dashedName: problem-209-circular-logic
 
 # --description--
 
-ตารางความจริงbinary $k$-input เป็นแผนที่จากบิตอินพุต $k$ (เลขฐานสอง 0 [false] หรือ 1 [true]) ถึง 1 บิตเอาต์พุต ตัวอย่างเช่น ตารางความจริงbinaryอินพุต $2$-input สำหรับฟังก์ชันตรรกะ $AND$ และ $XOR$ คือ:
+ตารางแบบ binary จาก $k$-input เป็น map มาจากบิตอินพุต $k$ (เลขฐานสอง 0 เป็น [false] และ 1 เป็น [true]) 
+ตัวอย่างเช่น ตาราง $2$ สำหรับฟังก์ชันตรรกะ $AND$ และ $XOR$ คือ:
 
 | x | y | x AND y |
 |---|---|---------|
@@ -24,15 +25,15 @@ dashedName: problem-209-circular-logic
 | 1 | 0 |    1    |
 | 1 | 1 |    0    |
 
-$6$-input binary ตาม truth tables, $τ$, satisfy formula มีเท่าไหร่
+ข้อมูลในตารางนี้ เมื่อเป็น $6$-input binary เมื่อตรวจสอบตามสมการด้านล่าง มีจำนวนเท่าใด
 
 $$τ(a, b, c, d, e, f) \\; AND \\; τ(b, c, d, e, f, a \\; XOR \\; (b \\; AND \\; c)) = 0$$
 
-สำหรับทุก $6$-bit inputs ($a$, $b$, $c$, $d$, $e$, $f$)?
+สำหรับทั้ง $6$-bit input ($a$, $b$, $c$, $d$, $e$, $f$)
 
 # --hints--
 
-`circularLogic()` ควร return `15964587728784`.
+`circularLogic()` ต้องคืนค่าเป็น `15964587728784`
 
 ```js
 assert.strictEqual(circularLogic(), 15964587728784);

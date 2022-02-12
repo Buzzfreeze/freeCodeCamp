@@ -8,34 +8,33 @@ dashedName: problem-15-lattice-paths
 
 # --description--
 
-เริ่มจาก top left corner ของ 2×2 gridและสามารถเลื่อนไปได้แค่ทางขวาและลง 
-มีทั้งหมด 6 routes ไปที่ bottom right corner
+เริ่มจากมุมซ้ายบนของกริดขนาด 2×2 ให้เคลื่อนที่ไปยังมุมขวาล่าง โดยคุณจะสามารถเคลื่อนที่ได้แค่สองทิศทางคือ ไปทางขวากับลงล่าง
 
 <img class="img-responsive center-block" alt="a diagram of 6 2 by 2 grids showing all the routes to the bottom right corner" src="https://cdn-media-1.freecodecamp.org/project-euler/1Atixoj.gif" style="background-color: white; padding: 10px;">
 
-มีกี่ routes ที่สามารถให้ `gridSize`
+ให้หาจำนานเส้นทางตามกริดขนาด `gridSize`
 
 # --hints--
 
-`latticePaths(4)` ควร return number
+`latticePaths(4)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof latticePaths(4) === 'number');
 ```
 
-`latticePaths(4)` ควร return 70
+`latticePaths(4)` ต้องคืนค่าเป็น 70
 
 ```js
 assert.strictEqual(latticePaths(4), 70);
 ```
 
-`latticePaths(9)` ควร return 48620
+`latticePaths(9)` ต้องคืนค่าเป็น 48620
 
 ```js
 assert.strictEqual(latticePaths(9), 48620);
 ```
 
-`latticePaths(20)` ควร return 137846528820
+`latticePaths(20)` ต้องคืนค่าเป็น 137846528820
 
 ```js
 assert.strictEqual(latticePaths(20), 137846528820);

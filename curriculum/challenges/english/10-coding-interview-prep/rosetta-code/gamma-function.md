@@ -8,51 +8,51 @@ dashedName: gamma-function
 
 # --description--
 
-ใช้หนึ่งalgorithm (หรือมากกว่า) เพื่อคำนวณ [Gamma](<https://en.wikipedia.org/wiki/Gamma function>) ($\\Gamma$) function (in the real field only).
+ให้คำนวณฟังก์ชัน [Gamma](<https://en.wikipedia.org/wiki/Gamma function>) ($\\Gamma$)
 
-Gamma function สามารถกำหนด:
+สมการของฟังก์ชัน Gamma คือ:
 
 <div style='padding-left: 4em;'><big><big>$\Gamma(x) = \displaystyle\int_0^\infty t^{x-1}e^{-t} dt$</big></big></div>
 
 # --hints--
 
-`gamma` ควรเป็น function.
+`gamma` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof gamma == 'function');
 ```
 
-`gamma(.1)` ควร return number.
+`gamma(.1)` ต้องคืนค่าเป็น number
 
 ```js
 assert(typeof gamma(0.1) == 'number');
 ```
 
-`gamma(.1)` ควร return `9.513507698668736`.
+`gamma(.1)` ต้องคืนค่าเป็น `9.513507698668736`
 
 ```js
 assert.equal(round(gamma(0.1)), round(9.513507698668736));
 ```
 
-`gamma(.2)` ควร return `4.590843711998803`.
+`gamma(.2)` ต้องคืนค่าเป็น `4.590843711998803`
 
 ```js
 assert.equal(round(gamma(0.2)), round(4.590843711998803));
 ```
 
-`gamma(.3)` ควร return `2.9915689876875904`.
+`gamma(.3)` ต้องคืนค่าเป็น `2.9915689876875904`
 
 ```js
 assert.equal(round(gamma(0.3)), round(2.9915689876875904));
 ```
 
-`gamma(.4)` ควร return `2.218159543757687`.
+`gamma(.4)` ต้องคืนค่าเป็น `2.218159543757687`
 
 ```js
 assert.equal(round(gamma(0.4)), round(2.218159543757687));
 ```
 
-`gamma(.5)` ควร return `1.7724538509055159`.
+`gamma(.5)` ต้องคืนค่าเป็น `1.7724538509055159`
 
 ```js
 assert.equal(round(gamma(0.5)), round(1.7724538509055159));

@@ -9,30 +9,30 @@ dashedName: babbage-problem
 # --description--
 
 [Charles Babbage](https://en.wikipedia.org/wiki/Charles_Babbage "wp: Charles_Babbage"), 
-มองไปข้างหน้าถึงปัญหาต่างๆ ที่เครื่องมือวิเคราะห์ของเขาจะสามารถแก้ไขได้ โดยยกตัวอย่างดังนี้:
+ได้เจอปัญหานี้
 
 <blockquote>
-  What is the smallest positive integer whose square ends in the digits 269,696?
+  จำนวนเต็มบวกที่น้อยที่สุด ที่มีผลลัพธ์ของค่ายกกำลังสองลงท้ายด้วย 269,696 คือเลขอะไร?
   <footer style='margin-left: 2em;'>Babbage, letter to Lord Bowden, 1837; see Hollingdale and Tootill, <i>Electronic Computers</i>, second edition, 1970, p. 125.</footer>
 </blockquote>
 
-เขาคิดว่าคำตอบอาจเป็น 99,736 ซึ่งกำลังสองคือ 9,947,269,696 แต่เขาไม่แน่ใจ
+เขาคิดว่าคำตอบอาจเป็น 99,736 ซึ่งกำลังสองคือ 9,947,269,696 แต่เขาไม่แน่ใจในคำตอบของตัวเอง
 
 ภารกิจคือค้นหาว่า Babbage มีคำตอบที่ถูกต้องหรือไม่
 
 # --instructions--
 
-ใช้ฟังก์ชันเพื่อคืนค่าจำนวนเต็มที่ต่ำที่สุดที่ตรงกับปัญหาแบบ Babbage ถ้าแบบเบจพูดถูก คำตอบต้อง return ในรูปของ Babbage 
+ให้เขียนฟังก์ชันเพื่อหาว่าเลขที่ Babbage ต้องการคือเลขอะไร
 
 # --hints--
 
-`babbage` ควรเป็น function.
+`babbage` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof babbage === 'function');
 ```
 
-`babbage(99736, 269696)` ไม่ควร return 99736 (มีคำตอบที่น้อยกว่า)
+ผลลัพธ์ของ `babbage(99736, 269696)` ต้องไม่ใช้ 99736 (ต้องได้น้อยกว่านี้)
 
 ```js
 assert.equal(babbage(babbageAns, endDigits), answer);

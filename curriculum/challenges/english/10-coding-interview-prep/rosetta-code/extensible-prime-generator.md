@@ -8,29 +8,29 @@ dashedName: extensible-prime-generator
 
 # --description--
 
-เขียนตัวกำเนิดของจำนวนเฉพาะตามลำดับที่จะปรับโดยอัตโนมัติเพื่อรองรับการสร้างจำนวนเฉพาะที่มีค่ามากพอสมควร
+ให้เขียนฟังก์ชันสำหรับสร้างจำนวนเฉพาะตามลำดับที่จะปรับโดยอัตโนมัติเพื่อรองรับการสร้างจำนวนเฉพาะที่มีค่ามากพอสมควร
 
-เครื่องกำเนิดไฟฟ้าควรจะสามารถ:
+โดยฟังก์ชันจะต้อง:
 
 <ul>
-  <li>Show the first <code>n</code> prime numbers</li>
-  <li>Show the prime numbers in a range</li>
-  <li>Show the number of primes in a range</li>
-  <li>Show the <code>n<sup>th</sup></code> prime number</li>
+  <li>แสดงจำนวนเฉพาะ <code>n</code> ตัวแรก</li>
+  <li>แสดงจำนวนเฉพาะในช่วงที่ระบุ</li>
+  <li>แสดงจำนวนของจำนวนเฉพาะในช่วงที่ระบุ</li>
+  <li>แสดงจำนวนเฉพาะตัวที่ <code>n</code></li>
 </ul>
 
 
-ฟังก์ชันควรมีสองparameter ตัวแรกจะได้รับ `n` หรือ range เป็นarray ตัวที่สองจะได้รับbooleanที่ระบุว่าฟังก์ชันreturnจำนวนเฉพาะเป็นarrayหรือตัวเลขเดี่ยว (จำนวนเฉพาะในช่วง หรือ <code>n<sup>th</sup></code> prime). ตามparameter ฟังก์ชันควรreturnarray
+ฟังก์ชันจะรับ parameter สองตัว ตัวแรกจะเป็น `n` หรือช่วงของตัวเลขเฉพาะที่ต้องการ โดยรับเป็น array ตัวที่สองจะรับเป็น boolean ที่จะใช้บอกว่าให้คืนค่าเป็นจำนวนเฉพาะในช่วงที่ระบุ หรือคืนค่าเป็นจำนวนเฉพาะตัวที่ <code>n</code> ฟังก์ชันนี้ต้องคืนค่าเป็น array
 
 # --hints--
 
-`primeGenerator` ควร ป็นfunction.
+`primeGenerator` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof primeGenerator === 'function');
 ```
 
-`primeGenerator(20, true)` ควร return `[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]`.
+`primeGenerator(20, true)` ต้องคืนค่าเป็น `[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]`
 
 ```js
 assert.deepEqual(primeGenerator(20, true), [
@@ -57,7 +57,7 @@ assert.deepEqual(primeGenerator(20, true), [
 ]);
 ```
 
-`primeGenerator([100, 150], true)` ควร return `[101, 103, 107, 109, 113, 127, 131, 137, 139, 149]`.
+`primeGenerator([100, 150], true)` ต้องคืนค่าเป็น `[101, 103, 107, 109, 113, 127, 131, 137, 139, 149]`
 
 ```js
 assert.deepEqual(primeGenerator([100, 150], true), [
@@ -74,13 +74,13 @@ assert.deepEqual(primeGenerator([100, 150], true), [
 ]);
 ```
 
-`primeGenerator([7700, 8000], false)` ควร return `30`.
+`primeGenerator([7700, 8000], false)` ต้องคืนค่าเป็น `30`
 
 ```js
 assert.equal(primeGenerator([7700, 8000], false), 30);
 ```
 
-`primeGenerator(10000, false)` ควร return `104729`.
+`primeGenerator(10000, false)` ต้องคืนค่าเป็น `104729`
 
 ```js
 assert.equal(primeGenerator(10000, false), 104729);

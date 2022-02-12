@@ -8,31 +8,29 @@ dashedName: hofstadter-figure-figure-sequences
 
 # --description--
 
-จำนวนเต็มบวกสองลำดับนี้ถูกกำหนดเป็น:
+กำหนดให้จำนวนเต็มบวกสองชุดมีสมการเป็น
 
 $R(1)=1\\ ;\\ S(1)=2 \\\\R(n)=R(n-1)+S(n-1), \\quad n>1.$
 
-ลำดับ $S(n)$ ถูกกำหนดเพิ่มเติมเป็นลำดับของจำนวนเต็มบวกที่ไม่มีอยู่ใน $R(n)$
+โดยลำดับ $S(n)$ จะเป็นชุดตัวเลขจำนวนเต็มบวกที่ไม่อยู่ใน $R(n)$
 
-ลำดับ $R$ เริ่มต้น:
+ลำดับ $R$ จะเริ่มต้นด้วยค่า
 
 <pre>1, 3, 7, 12, 18, ...</pre>
 
-ลำดับ $S$ เริ่มต้น:
+ลำดับ $S$ จะเริ่มต้นด้วยค่า
 
 <pre>2, 4, 5, 6, 8, ...</pre>
 
 # --instructions--
 
-สร้างสองฟังก์ชันชื่อ `ffr` และ `ffs` ซึ่งเมื่อได้รับ `n` return `R(n)` หรือ `S(n)` ตามลำดับ (โปรดทราบว่า R(1) = 1 และ S(1) = 2 เพื่อหลีกเลี่ยงข้อผิดพลาดแบบแยกส่วน)
+ให้สร้างสองฟังก์ชันชื่อ `ffr` และ `ffs` ซึ่งรับค่าเป็น `n` และคืนค่าเป็น `R(n)` หรือ `S(n)` ตามลำดับ (ให้ R(1) = 1 และ S(1) = 2 เพื่อป้องกัน off-by-one error)
 
-ไม่มีค่าสูงสุดสำหรับ `n`
-
-**References**
+**อ้างอิง**
 
 <ul>
   <li>
-    Sloane's <a href='https://oeis.org/A005228' target='_blank'>A005228</a> and <a href='https://oeis.org/A030124' target='_blank'>A030124</a>.
+    Sloane <a href='https://oeis.org/A005228' target='_blank'>A005228</a> และ <a href='https://oeis.org/A030124' target='_blank'>A030124</a>.
   </li>
   <li>
     Wikipedia: <a href='https://en.wikipedia.org/wiki/Hofstadter_sequence#Hofstadter_Figure-Figure_sequences' title='wp: Hofstadter_sequence#Hofstadter_Figure-Figure_sequences' target='_blank'>Hofstadter Figure-Figure sequences</a>.
@@ -41,73 +39,73 @@ $R(1)=1\\ ;\\ S(1)=2 \\\\R(n)=R(n-1)+S(n-1), \\quad n>1.$
 
 # --hints--
 
-`ffr` ควรเป็น function.
+`ffr` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof ffr === 'function');
 ```
 
-`ffs` ควรเป็น function.
+`ffs` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof ffs === 'function');
 ```
 
-`ffr` ควร return integer.
+`ffr` ต้องคืนค่าเป็นจำนวน int
 
 ```js
 assert(Number.isInteger(ffr(1)));
 ```
 
-`ffs` ควร return integer.
+`ffs` ต้องคืนค่าเป็นจำนวน int
 
 ```js
 assert(Number.isInteger(ffs(1)));
 ```
 
-`ffr(10)` ควร return `69`
+`ffr(10)` ต้องคืนค่าเป็น `69`
 
 ```js
 assert.equal(ffr(ffrParamRes[0][0]), ffrParamRes[0][1]);
 ```
 
-`ffr(50)` ควร return `1509`
+`ffr(50)` ต้องคืนค่าเป็น `1509`
 
 ```js
 assert.equal(ffr(ffrParamRes[1][0]), ffrParamRes[1][1]);
 ```
 
-`ffr(100)` ควร return `5764`
+`ffr(100)` ต้องคืนค่าเป็น `5764`
 
 ```js
 assert.equal(ffr(ffrParamRes[2][0]), ffrParamRes[2][1]);
 ```
 
-`ffr(1000)` ควร return `526334`
+`ffr(1000)` ต้องคืนค่าเป็น `526334`
 
 ```js
 assert.equal(ffr(ffrParamRes[3][0]), ffrParamRes[3][1]);
 ```
 
-`ffs(10)` ควร return `14`
+`ffs(10)` ต้องคืนค่าเป็น `14`
 
 ```js
 assert.equal(ffs(ffsParamRes[0][0]), ffsParamRes[0][1]);
 ```
 
-`ffs(50)` ควร return `59`
+`ffs(50)` ต้องคืนค่าเป็น `59`
 
 ```js
 assert.equal(ffs(ffsParamRes[1][0]), ffsParamRes[1][1]);
 ```
 
-`ffs(100)` ควร return `112`
+`ffs(100)` ต้องคืนค่าเป็น `112`
 
 ```js
 assert.equal(ffs(ffsParamRes[2][0]), ffsParamRes[2][1]);
 ```
 
-`ffs(1000)` ควร return `1041`
+`ffs(1000)` ต้องคืนค่าเป็น `1041`
 
 ```js
 assert.equal(ffs(ffsParamRes[3][0]), ffsParamRes[3][1]);

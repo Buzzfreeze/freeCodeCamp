@@ -8,46 +8,46 @@ dashedName: problem-85-counting-rectangles
 
 # --description--
 
-จากการนับอย่างระมัดระวังจะเห็นว่าตารางสี่เหลี่ยมขนาด 3 คูณ 2 มีสิบแปดสี่เหลี่ยม:
+ถ้าลองนับจะเห็นว่าตารางสี่เหลี่ยมขนาด 3 คูณ 2 มีสี่เหลี่ยมสิบแปดตัว:
 
 <img class="img-responsive center-block" alt="a diagram of the different rectangles found within a 3 by 2 rectangular grid" src="https://cdn-media-1.freecodecamp.org/project-euler/counting-rectangles.png" style="background-color: white; padding: 10px;">
 
 
-แม้ว่าจะไม่มีตารางสี่เหลี่ยมที่มีสี่เหลี่ยมที่มี `n` อยู่ก็ตาม ให้หาพื้นที่ของตารางด้วยวิธีแก้ปัญหาที่ใกล้ที่สุด
+ให้หาจำนวนกริดของสี่เหลี่ยนที่ทำให้มีสี่เหลี่ยมก้านในเป็น `n` ถ้าไม่เจอให้เอาค่าที่ใกล้ที่สุด
 
 # --hints--
 
-`countingRectangles(18)` ควร return a number.
+`countingRectangles(18)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof countingRectangles(18) === 'number');
 ```
 
-`countingRectangles(18)` ควร return `6`.
+`countingRectangles(18)` ต้องคืนค่าเป็น `6`
 
 ```js
 assert.strictEqual(countingRectangles(18), 6);
 ```
 
-`countingRectangles(250)` ควร return `22`.
+`countingRectangles(250)` ต้องคืนค่าเป็น `22`
 
 ```js
 assert.strictEqual(countingRectangles(250), 22);
 ```
 
-`countingRectangles(50000)` ควร return `364`.
+`countingRectangles(50000)` ต้องคืนค่าเป็น `364`
 
 ```js
 assert.strictEqual(countingRectangles(50000), 364);
 ```
 
-`countingRectangles(1000000)` ควร return `1632`.
+`countingRectangles(1000000)` ต้องคืนค่าเป็น `1632`
 
 ```js
 assert.strictEqual(countingRectangles(1000000), 1632);
 ```
 
-`countingRectangles(2000000)` ควร return `2772`.
+`countingRectangles(2000000)` ต้องคืนค่าเป็น `2772`
 
 ```js
 assert.strictEqual(countingRectangles(2000000), 2772);

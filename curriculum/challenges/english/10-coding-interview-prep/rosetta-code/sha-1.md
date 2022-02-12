@@ -8,59 +8,59 @@ dashedName: sha-1
 
 # --description--
 
-**SHA-1** หรือ **SHA1** เป็น one-way hash function; โดยการคำนวน 160-bit message digest.
+**SHA-1** หรือ **SHA1** เป็น one-way hash function โดยการคำนวน 160-bit message digest
 
-SHA-1 ใช้งานใน security protocols เช่น HTTPS websites ใช้ RSA กับ SHA-1 เพื่อความปลอดภับมรการเชื่อมต่อ
+SHA-1 ใช้งานใน security protocol เช่น HTTPS โดยใช้ RSA ร่วมกับ SHA-1 เพื่อความปลอดภับมรการเชื่อมต่อ
 
-BitTorrent ใช้ SHA-1 เพื่อ verify downloads.
+BitTorrent ใช้ SHA-1 เพื่อตรวจสอบการดาวน์โหลด
 
-Git และ Mercurial ใช้ SHA-1 digests เพื่อยืนยันการ commits.
+Git และ Mercurial ใช้ SHA-1 digest เพื่อยืนยันการ commit
 
-US government standard [FIPS 180-1](https://rosettacode.org/wiki/SHA-1/FIPS-180-1) ได้กำหนด SHA-1.
+มาตรฐาน SHA-1 กำหนดจาก US government standard [FIPS 180-1](https://rosettacode.org/wiki/SHA-1/FIPS-180-1) 
 
 # --instructions--
 
-เขียน function ที่ returns SHA-1 message digest สำหรับ string ที่กำหนดให้
+ให้เขียนฟังก์ชันที่คืนค่าเป็น SHA-1 ของสตริงที่กำหนดให้
 
 # --hints--
 
-`SHA1` ควรเป็น function.
+`SHA1` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof SHA1 === 'function');
 ```
 
-`SHA1("abc")` ควร return string.
+`SHA1("abc")` ต้องคืนค่าเป็นสตริง
 
 ```js
 assert(typeof SHA1('abc') === 'string');
 ```
 
-`SHA1("abc")` ควร return `"a9993e364706816aba3e25717850c26c9cd0d89d"`.
+`SHA1("abc")` ต้องคืนค่าเป็น `"a9993e364706816aba3e25717850c26c9cd0d89d"`
 
 ```js
 assert.equal(SHA1('abc'), 'a9993e364706816aba3e25717850c26c9cd0d89d');
 ```
 
-`SHA1("Rosetta Code")` ควร return `"48c98f7e5a6e736d790ab740dfc3f51a61abe2b5"`.
+`SHA1("Rosetta Code")` ต้องคืนค่าเป็น `"48c98f7e5a6e736d790ab740dfc3f51a61abe2b5"`
 
 ```js
 assert.equal(SHA1('Rosetta Code'), '48c98f7e5a6e736d790ab740dfc3f51a61abe2b5');
 ```
 
-`SHA1("Hello world")` ควร return `"7b502c3a1f48c8609ae212cdfb639dee39673f5e"`.
+`SHA1("Hello world")` ต้องคืนค่าเป็น `"7b502c3a1f48c8609ae212cdfb639dee39673f5e"`
 
 ```js
 assert.equal(SHA1('Hello world'), '7b502c3a1f48c8609ae212cdfb639dee39673f5e');
 ```
 
-`SHA1("Programming")` ควร return `"d1a946bf8b2f2a7292c250063ee28989d742cd4b"`.
+`SHA1("Programming")` ต้องคืนค่าเป็น `"d1a946bf8b2f2a7292c250063ee28989d742cd4b"`
 
 ```js
 assert.equal(SHA1('Programming'), 'd1a946bf8b2f2a7292c250063ee28989d742cd4b');
 ```
 
-`SHA1("is Awesome")` ควร return `"6537205da59c72b57ed3881843c2d24103d683a3"`.
+`SHA1("is Awesome")` ต้องคืนค่าเป็น `"6537205da59c72b57ed3881843c2d24103d683a3"`
 
 ```js
 assert.equal(SHA1('is Awesome'), '6537205da59c72b57ed3881843c2d24103d683a3');

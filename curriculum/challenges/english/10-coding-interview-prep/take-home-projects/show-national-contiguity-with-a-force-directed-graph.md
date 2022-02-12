@@ -8,21 +8,22 @@ dashedName: show-national-contiguity-with-a-force-directed-graph
 
 # --description--
 
-**เป้าหมายของโปรเจคนี้ :** สร้างแอพพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานเหมือนกับลิงค์นี้ : <https://codepen.io/freeCodeCamp/full/xVopBo>.
+**เป้าหมายของโปรเจคนี้ :** ลองสร้างแอปโดยใช้ [CodePen.io](https://codepen.io) ให้มีฟังก์ชันเหมือนกับ : <https://codepen.io/freeCodeCamp/full/xVopBo>
 
-ดูว่าผู้ใช้งานอยากได้อะไร [user stories](https://en.wikipedia.org/wiki/User_story). สามารถใช้ ไลบรารีหรือ API ใดก็ได้ที่ต้องการ
+ให้เขียนแอปเพื่อให้ทำงานได้ตาม [User Story](https://en.wikipedia.org/wiki/User_story) ด้านล่าง คุณจะใช้ไลบรารีหรือ API ตัวไหนก็ได้ และจะจัดแต่งหน้าตาของแอปอย่างไรก็ได้
 
-**User Story:** สามารถเห็นกราฟ My map ซึ่งแสดงว่า ประเทศใดที่มีพรมแดนร่วมกันบ้าง
+**User Story:** สามารถเห็นกราฟแบบ Force-Directed ที่แสดงว่า ประเทศใดที่มีพรมแดนร่วมกันบ้าง
 
-**User Story:** เห็นธงของแต่ละประเทศบนโหนด
+**User Story:** จะมีธงของแต่ละประเทศในแต่ละโหนด
 
-**Hint:** ชุดข้อมูลทีจะใช้สร้าง: <https://raw.githubusercontent.com/DealPete/forceDirected/master/countries.json>
+**Hint:** ให้ใช้ชุดข้อมูลนี้เพื่อสร้างกราฟ: <https://raw.githubusercontent.com/DealPete/forceDirected/master/countries.json>
 
-**Hint:** สามารถสร้าง spritesheet ของธงประจำชาติได้จากนี่ที่ <https://www.flag-sprites.com>.
+**Hint:** สามารถสร้าง spritesheet ของธงชาติได้จากที่นี่ <https://www.flag-sprites.com>.
 
-เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "ฉันทำภารกิจที่ท้าทายนี้เสร็จแล้ว"
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงก์โปรเจคของ CodePen ด้านล่าง แล้วกดปุุ่ม "ฉันทำภารกิจท้าทายนี้เสร็จแล้ว"
 
-สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
+คุณสามารถขอคำแนะนำเกี่ยวกับโปรเจคนี้ได้ที่ forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409)
+
 
 # --solutions--
 

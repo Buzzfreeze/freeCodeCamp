@@ -8,7 +8,10 @@ dashedName: reverse-a-doubly-linked-list
 
 # --description--
 
-มาสร้าง method เพิ่มอีกหนึ่ง method สำหรับ doubly linked list ของเราที่เรียกว่า reverse ซึ่งจะกลับลิสต์เข้าที่ เมื่อดำเนินการตาม method แล้ว head ควรชี้ไปที่ tail ก่อนหน้า และ tail ควรชี้ไปที่ส่วน head ก่อนหน้า ตอนนี้หากเราสำรวจลิสต์จากหัวถึงท้าย เราควรพบกับ node ในลำดับที่กลับกันเมื่อเทียบกับลิสต์เดิม การพยายามย้อนกลับลิสต์ว่างควร return ค่าเป็น null
+มาสร้าง method ชื่อ reverse ใน doubly linked list กัน 
+ซึ่ง method นี้จะต้องทำการเปลี่ยนให้ head ชี้ไปที่ tail เดิม และ tail ชี้ไปที่ head เดิม 
+ตอนนี้หากเราอ่านค่าลิสต์จาก head ไป tail เราจะต้องเห็นว่าลำดับของ node กลับด้านจากก่อนเรียกใช้ method นี้ 
+ถ้าเรียกใช้ method นี้ในลิสต์ว่าง ควรคืนค่าเป็น null
 
 # --hints--
 
@@ -26,7 +29,7 @@ assert(
 );
 ```
 
-DoublyLinkedList ควรมี method ที่เรียกว่า reverse
+DoublyLinkedList ควรมี method ชื่อ reverse
 
 ```js
 assert(
@@ -43,7 +46,7 @@ assert(
 );
 ```
 
-การย้อนกลับลิสต์ที่ว่างเปล่าควร return null
+ถ้าเรียกใช้ method reverse ในลิสต์ว่าง ควรคืนค่าเป็น null
 
 ```js
 assert(
@@ -57,7 +60,7 @@ assert(
 );
 ```
 
-Reverse method ควรจัดเรียงลิสต์ใหม่แบบย้อนกลับ
+method reverse ควรจัดเรียงลิสต์ใหม่แบบย้อนหลัง
 
 ```js
 assert(
@@ -77,7 +80,7 @@ assert(
 );
 ```
 
-การอ้างอิงต่อไปและก่อนหน้าควรเป็นดังเดิมเมื่อลิสต์ถูกย้อนกลับ
+การอ้างอิงของ prev และ next ควรเป็นดังเดิมเมื่อลิสต์ถูกย้อน
 
 ```js
 assert(
@@ -164,9 +167,9 @@ var Node = function(data, prev) {
 var DoublyLinkedList = function() {
   this.head = null;
   this.tail = null;
-  // Only change code below this line
-  
-  // Only change code above this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
+
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 };
 ```
 

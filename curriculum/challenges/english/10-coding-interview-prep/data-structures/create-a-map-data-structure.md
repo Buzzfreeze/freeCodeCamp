@@ -8,20 +8,26 @@ dashedName: create-a-map-data-structure
 
 # --description--
 
-แบบทดสอบต่อไปจะพูดครอบคลุมถึง map และ hash table (ตารางแฮช)  Map คือโครงสร้างข้อมูลที่จัดเก็บ key-value pairs  ใน JavaScript สิ่งเหล่านี้ก็คือ object อย่างนึง Map ให้การค้นหารายการที่เก็บไว้อย่างรวดเร็วตามค่าคีย์และเป็นโครงสร้างข้อมูลทั่วไปที่เป็นประโยชน์
+แบบทดสอบต่อไปจะครอบคลุมเรื่อง map และ hash table (ตารางแฮช)  
+Map คือโครงสร้างข้อมูลที่จัดเก็บ key-value pair ซึ่งใน JavaScript ข้อมูลรูปแบบนี้ก็คือ object อย่างนึง 
+Map จะใช้เพื่อดึงข้อมูลโดยใช้คีย์ได้อย่างรวดเร็ว และเป็นโครงสร้างข้อมูลที่เป็นประโยชน์ และถูกใช้บ่อยมากๆ
 
 # --instructions--
 
-มาฝึกสร้าง map ของตัวเองกันเถอะ เนื่องจาก JavaScript object มีโครงสร้าง map ที่มีประสิทธิภาพมากกว่าสิ่งที่เราจะสามารถเขียนได้ที่นี่จึงนำมาเป็นตัวอย่างเพื่อเป็นแบบฝึกหัดการเรียนรู้ อย่างไรก็ตามเราสามารถสร้าง operation  บางอย่างบน JavaScript object อย่างจำกัด จะเป็นอย่างไรถ้าเราต้องการสร้าง operation ที่กำหนดเอง ใช้ `Map` object ที่ให้ไว้ที่นี่เป็น wrapper รอบ `object` ของ JavaScript สร้าง method และ operation ต่อไปนี้บน Map object:
+มาฝึกสร้าง map ของตัวเองกันเถอะ 
+จริงๆแล้ว JavaScript object มีโครงสร้าง map ที่มีประสิทธิภาพเกินกว่าที่เราจะเขียนได้ที่นี่ เราจึงจะให้เขียน map ในรูปแบบง่ายๆ เพื่อให้คุณเรียนรู้วิธีการทำงานได้สะดวก
+การทำการดำเนินการกับ JavaScript object จะมีการดำเนินการพื้นฐานให้เราไม่มาก แต่จะทำอย่างไรถ้าเราอยากเพิ่มการดำเนินการอื่นเข้าไปใน object? 
+เราจะใช้ object `Map` ครอบ `object` ของ JavaScript เพื่อสร้าง method และหรือการดำเนินการเองได้ 
+ให้สร้างการดำเนินการใน Map object ตามเงื่อนไขด้านล่างนี้:
 
 <ul>
-<li><code>add</code> accepts a <code>key, value</code> pair to add to the map.</li>
-<li><code>remove</code> accepts a key and removes the associated <code>key, value</code> pair</li>
-<li><code>get</code> accepts a <code>key</code> and returns the stored <code>value</code></li>
-<li><code>has</code> accepts a <code>key</code> and returns <dfn>true</dfn> if the key exists or <dfn>false</dfn> if it doesn't.</li>
-<li><code>values</code> returns an array of all the values in the map</li>
-<li><code>size</code> returns the number of items in the map</li>
-<li><code>clear</code> empties the map</li>
+<li><code>add</code> รับค่า <code>key, value</code> และเพิ่มเข้าไปใน map</li>
+<li><code>remove</code> รับค่า key และลบ <code>key, value</code> ที่ตรงกับ key ที่ระบุออก</li>
+<li><code>get</code> รับค่า <code>key</code> และคืนค่าเป็น <code>value</code> ของคีย์นั้น</li>
+<li><code>has</code> รับค่า <code>key</code> และคืนค่าเป็น <dfn>true</dfn> ถ้ามี key นั้นอยู่ หรือคืนค่าเป็น <dfn>false</dfn> ถ้าไม่มี key นั้น</li>
+<li><code>values</code> คืนค่าเป็น array ของ value ทั้งหมดใน map </li>
+<li><code>size</code> คืนค่าเป็นจำนวนข้อมูลใน map</li>
+<li><code>clear</code> ล้าง map</li>
 </ul>
 
 # --hints--
@@ -62,7 +68,7 @@ assert(
 );
 ```
 
-Add method ควรเพิ่มรายการไปยัง map
+method `add` ควรเพิ่มข้อมูลไปยัง map
 
 ```js
 assert(
@@ -79,7 +85,7 @@ assert(
 );
 ```
 
-Has method ควร return true เมื่อเพิ่มรายการและ false เมื่อไม่มีรายการนั้นๆ
+method `has` ควรคืนค่าเป็น true มีข้อมูลและ false เมื่อไม่มีข้อมูลนั้นๆ
 
 ```js
 assert(
@@ -94,7 +100,7 @@ assert(
 );
 ```
 
-Get method ควรรับ key เป็น input และ return ค่าที่เกี่ยวข้องนั้นๆ
+method `get` ควรรับ key เป็น input และคืนค่าเป็น value ของ key นั้นๆ
 
 ```js
 assert(
@@ -109,7 +115,7 @@ assert(
 );
 ```
 
-Values method ควร return ค่าทั้งหมดที่ถูกเก็บอยู่ใน map ในรูปแบบ string ใน array
+method `values` ควรคืนค่าเป็นค่าทั้งหมดที่ถูกเก็บอยู่ใน map เป็น array
 
 ```js
 assert(
@@ -131,7 +137,7 @@ assert(
 );
 ```
 
-Clear method ควรลบข้อมูลทั้งหมดให้ map ว่างเปล่าและ size method ควร return จำนวนของรายการที่มีใน map
+method `clear` ควรลบข้อมูลออกจาก map และ method `size` ควรคืนค่าเป็นจำนวนของข้อมูลที่มีใน map
 
 ```js
 assert(
@@ -157,9 +163,9 @@ assert(
 ```js
 var Map = function() {
   this.collection = {};
-  // Only change code below this line
-  
-  // Only change code above this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
+
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 };
 ```
 

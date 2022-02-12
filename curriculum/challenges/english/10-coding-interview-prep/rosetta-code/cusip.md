@@ -8,70 +8,70 @@ dashedName: cusip
 
 # --description--
 
-**CUSIP** คือรหัสตัวอักษรและตัวเลขเก้าตัวที่ระบุความปลอดภัยทางการเงินของอเมริกาเหนือเพื่อวัตถุประสงค์ในการอำนวยความสะดวกในการหักบัญชีและการชำระเงินของการซื้อขาย CUSIP ได้รับการรับรองเป็นมาตรฐานแห่งชาติของอเมริกาภายใต้มาตรฐานที่ได้รับการรับรอง X9.6.
+**CUSIP** คือรหัสตัวอักษรและตัวเลขเก้าตัว ที่ระบุความปลอดภัยทางการเงินของอเมริกาเหนือเพื่อวัตถุประสงค์ในการอำนวยความสะดวกในการหักบัญชีและการชำระเงินของการซื้อขาย CUSIP ได้รับการรับรองเป็นมาตรฐานแห่งชาติของอเมริกา ภายใต้มาตรฐานที่ได้รับการรับรอง X9.6
 
 # --instructions--
 
 
-เขียนฟังก์ชันที่ใช้stringเป็นพารามิเตอร์และตรวจสอบว่าstringนั้นถูกต้อง CUSIP หรือไม่
+ให้เขียนฟังก์ชันที่รับค่าเป็นสตริง และตรวจสอบนั้นว่าสตริงนั้นถูกต้องตามหลักของ CUSIP หรือไม่
 
 # --hints--
 
-`isCusip` ควรเป็น function.
+`isCusip` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof isCusip == 'function');
 ```
 
-`isCusip("037833100")` ควร return boolean.
+`isCusip("037833100")` ต้องคืนค่าเป็น boolean
 
 ```js
 assert(typeof isCusip('037833100') == 'boolean');
 ```
 
-`isCusip("037833100")` ควร return `true`.
+`isCusip("037833100")` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isCusip('037833100'), true);
 ```
 
-`isCusip("17275R102")` ควร return `true`.
+`isCusip("17275R102")` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isCusip('17275R102'), true);
 ```
 
-`isCusip("38259P50a")` ควร return `false`.
+`isCusip("38259P50a")` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isCusip('38259P50a'), false);
 ```
 
-`isCusip("38259P508")` ควร return `true`.
+`isCusip("38259P508")` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isCusip('38259P508'), true);
 ```
 
-`isCusip("38259P50#")` ควร return `false`.
+`isCusip("38259P50#")` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isCusip('38259P50#'), false);
 ```
 
-`isCusip("68389X105")` ควร return `true`.
+`isCusip("68389X105")` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isCusip('68389X105'), true);
 ```
 
-`isCusip("68389X106")` ควร return `false`.
+`isCusip("68389X106")` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isCusip('68389X106'), false);
 ```
 
-`isCusip("5949181")` ควร return `false`.
+`isCusip("5949181")` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isCusip('5949181'), false);

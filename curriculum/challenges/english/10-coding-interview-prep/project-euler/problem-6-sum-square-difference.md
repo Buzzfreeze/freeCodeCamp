@@ -15,31 +15,31 @@ dashedName: problem-6-sum-square-difference
 กำลังสองของผลรวมตัวเลขสิบตัวแรกคือ
 <div style='text-align: center;'>(1 + 2 + ... + 10)<sup>2</sup> = 55<sup>2</sup> = 3025</div>
 
-กำลังสองของผลรวมตัวเลขสิบตัวแรกและผลรวมของกำลังสองของตัวเลขสิบตัวแรก มีค่าแตกต่างกันคือ 3025 − 385 = 2640.
+กำลังสองของผลรวมตัวเลขสิบตัวแรก และผลรวมของกำลังสองของตัวเลขสิบตัวแรก มีค่าแตกต่างกันเป็น 3025 − 385 = 2640
 
 หาความแตกต่างระหว่างผลรวมของกำลังสองของตัวเลข `n` ตัวและกำลังสองของผลรวมตัวเลขสิบตัวแรก
 
 # --hints--
 
-`sumSquareDifference(10)` ควร return เป็น number
+`sumSquareDifference(10)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof sumSquareDifference(10) === 'number');
 ```
 
-`sumSquareDifference(10)` ควร return เป็น 2640
+`sumSquareDifference(10)` ต้องคืนค่าเป็น 2640
 
 ```js
 assert.strictEqual(sumSquareDifference(10), 2640);
 ```
 
-`sumSquareDifference(20)` ควร return เป็น 41230
+`sumSquareDifference(20)` ต้องคืนค่าเป็น 41230
 
 ```js
 assert.strictEqual(sumSquareDifference(20), 41230);
 ```
 
-`sumSquareDifference(100)` ควร return เป็น 25164150
+`sumSquareDifference(100)` ต้องคืนค่าเป็น 25164150
 
 ```js
 assert.strictEqual(sumSquareDifference(100), 25164150);

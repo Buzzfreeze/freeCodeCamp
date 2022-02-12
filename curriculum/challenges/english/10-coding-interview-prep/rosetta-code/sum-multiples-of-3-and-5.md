@@ -8,47 +8,47 @@ dashedName: sum-multiples-of-3-and-5
 
 # --description--
 
-วัตถุประสงค์คือเพื่อเขียนฟังก์ชันที่หาผลรวมของผลคูณ บวกกันทั้งหมดของ 3 หรือ 5 ด้านล่าง *n*.
+ให้เขียนฟังก์ชันที่หาผลรวมของเลขที่มีตัวประกอบเป็น 3 หรือ 5 แต่น้อยกว่า *n*
 
 # --hints--
 
-`sumMults` ควรเป็น function.
+`sumMults` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof sumMults == 'function');
 ```
 
-`sumMults(10)` ควร return number.
+`sumMults(10)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof sumMults(10) == 'number');
 ```
 
-`sumMults(10)` ควร return `23`.
+`sumMults(10)` ต้องคืนค่าเป็น `23`
 
 ```js
 assert.equal(sumMults(10), 23);
 ```
 
-`sumMults(100)` ควร return `2318`.
+`sumMults(100)` ต้องคืนค่าเป็น `2318`
 
 ```js
 assert.equal(sumMults(100), 2318);
 ```
 
-`sumMults(1000)` ควร return `233168`.
+`sumMults(1000)` ต้องคืนค่าเป็น `233168`
 
 ```js
 assert.equal(sumMults(1000), 233168);
 ```
 
-`sumMults(10000)` ควร return `23331668`.
+`sumMults(10000)` ต้องคืนค่าเป็น `23331668`
 
 ```js
 assert.equal(sumMults(10000), 23331668);
 ```
 
-`sumMults(100000)` ควร return `2333316668`.
+`sumMults(100000)` ต้องคืนค่าเป็น `2333316668`
 
 ```js
 assert.equal(sumMults(100000), 2333316668);

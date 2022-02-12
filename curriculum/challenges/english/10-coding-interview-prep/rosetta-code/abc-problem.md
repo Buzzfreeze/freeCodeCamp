@@ -8,7 +8,9 @@ dashedName: abc-problem
 
 # --description--
 
-คุณจะได้รับชุดบล็อก ABC (เช่น บล็อกตัวอักษรในวัยเด็ก) มี 20 บล็อกที่มีตัวอักษรสองตัวในแต่ละบล็อก รับประกันตัวอักษรที่สมบูรณ์ในทุกด้านของบล็อก collectionตัวอย่างของบล็อก:
+สมมติว่ามีกล่องสี่เหลี่ยมทั้งหมด 20 กล่อง โดยที่แต่ละกล่องจะมีตัวอักษรอยู่บนสองหน้าของกล่องนั้น 
+
+ลองดูชุดบล็อคตัวอย่าง:
 
 <pre>(B O)
 (X K)
@@ -32,62 +34,64 @@ dashedName: abc-problem
 (Z M)
 </pre>
 
+จากตัวอย่างด้านบน จะทำให้มีกล่องแรก ที่มี B อยู่บนหน้าหนึ่ง O อยู่อีกหน้าหนึ่ง กล่องที่สองมี X อยู่บนหน้าหนึ่ง และมี K อยู่บนอีกหน้าหนึ่ง
+
 # --instructions--
 
-ใช้ฟังก์ชันที่รับstring (คำ) และกำหนดว่าคำนั้นสามารถสะกดด้วยชุดบล็อกที่กำหนดได้หรือไม่
+ให้สร้างฟังก์ชันที่รับค่าเป็น string และตรวจสอบว่าเราสามารถนำกล่องที่มีมาต่อให้เป็นคำนั้นได้หรือไม่
 
-กฎบางประการที่ควรทราบ:
+กฏที่ต้องรู้คือ
 
 <ul>
-  <li>Once a letter on a block is used, that block cannot be used again.</li>
-  <li>The function should be case-insensitive.</li>
+  <li>เมื่อใช้ตัวอักษรในบล็อคนั้นแล้ว จะใช้อีกไม่ได้</li>
+  <li>ฟังก์ชันต้องเป็น case-insensitive</li>
 </ul>
 
 # --hints--
 
-`canMakeWord` ควรเป็น function.
+`canMakeWord` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof canMakeWord === 'function');
 ```
 
-`canMakeWord` ควร return boolean.
+`canMakeWord` ต้องคืนค่าเป็น boolean
 
 ```js
 assert(typeof canMakeWord('hi') === 'boolean');
 ```
 
-`canMakeWord("bark")` ควร return true.
+`canMakeWord("bark")` ต้องคืนค่าเป็น true
 
 ```js
 assert(canMakeWord(words[0]));
 ```
 
-`canMakeWord("BooK")` ควร return false.
+`canMakeWord("BooK")` ต้องคืนค่าเป็น false
 
 ```js
 assert(!canMakeWord(words[1]));
 ```
 
-`canMakeWord("TReAT")` ควร return true.
+`canMakeWord("TReAT")` ต้องคืนค่าเป็น true
 
 ```js
 assert(canMakeWord(words[2]));
 ```
 
-`canMakeWord("COMMON")` ควร return false.
+`canMakeWord("COMMON")` ต้องคืนค่าเป็น false
 
 ```js
 assert(!canMakeWord(words[3]));
 ```
 
-`canMakeWord("squAD")` ควร return true.
+`canMakeWord("squAD")` ต้องคืนค่าเป็น true
 
 ```js
 assert(canMakeWord(words[4]));
 ```
 
-`canMakeWord("conFUSE")` ควร return true.
+`canMakeWord("conFUSE")` ต้องคืนค่าเป็น true
 
 ```js
 assert(canMakeWord(words[5]));

@@ -8,7 +8,7 @@ dashedName: problem-151-paper-sheets-of-standard-sizes-an-expected-value-problem
 
 # --description--
 
-โรงพิมพ์แห่งหนึ่งดำเนินการ 16 ชุด (งาน) ทุกสัปดาห์ และแต่ละชุดต้องใช้กระดาษป้องกันสีพิเศษขนาด A5 แผ่นหนึ่ง
+โรงพิมพ์แห่งหนึ่งพิมพ์ข้อมูล 16 ชุดทุกสัปดาห์ และแต่ละชุดต้องใช้กระดาษพิเศษขนาด A5 แผ่นหนึ่ง
 
 ทุกเช้าวันจันทร์ หัวหน้าจะเปิดซองใหม่ซึ่งมีกระดาษพิเศษขนาด A1 แผ่นใหญ่
 
@@ -18,7 +18,7 @@ dashedName: problem-151-paper-sheets-of-standard-sizes-an-expected-value-problem
 
 <img class="img-responsive center-block" alt="A1-size sheet split into: A2, A3, A4 and two A5 sheets" src="https://cdn.freecodecamp.org/curriculum/project-euler/paper-sheets-of-standard-sizes-an-expected-value-problem.png" style="background-color: white; padding: 10px;">
 
-นตอนต้นของแต่ละชุดต่อๆ มา เขาสุ่มหยิบกระดาษหนึ่งแผ่นจากซองจดหมาย ถ้าเป็นขนาด A5 เขาจะใช้มัน หากมีขนาดใหญ่ขึ้น เขาจะทำซ้ำขั้นตอน 'ตัดครึ่ง' จนกว่าเขาจะได้สิ่งที่ต้องการ และกระดาษที่เหลือจะถูกใส่กลับเข้าไปในซองจดหมายเสมอ
+ตอนต้นของแต่ละชุดต่อๆ มา เขาสุ่มหยิบกระดาษหนึ่งแผ่นจากซองจดหมาย ถ้าเป็นขนาด A5 เขาจะใช้มัน หากมีขนาดใหญ่ขึ้น เขาจะทำซ้ำขั้นตอน 'ตัดครึ่ง' จนกว่าเขาจะได้สิ่งที่ต้องการ และกระดาษที่เหลือจะถูกใส่กลับเข้าไปในซองจดหมายเสมอ
 
 ไม่รวมชุดแรกและชุดสุดท้ายของสัปดาห์ ให้หาจำนวนครั้งที่คาดหวัง (ในแต่ละสัปดาห์) ที่หัวหน้าคนงานพบกระดาษแผ่นเดียวในซองจดหมาย
 
@@ -26,7 +26,7 @@ dashedName: problem-151-paper-sheets-of-standard-sizes-an-expected-value-problem
 
 # --hints--
 
-`expectedValueProblem()` ควร return `0.464399`.
+`expectedValueProblem()` ต้องคืนค่าเป็น `0.464399`
 
 ```js
 assert.strictEqual(expectedValueProblem(), 0.464399);

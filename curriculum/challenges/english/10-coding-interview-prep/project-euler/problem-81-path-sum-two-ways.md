@@ -9,7 +9,7 @@ dashedName: problem-81-path-sum-two-ways
 # --description--
 
 
-ในเมทริกซ์ขนาด 5 คูณ 5 ด้านล่าง ผลรวมของเส้นทางต่ำสุดจากซ้ายบนไปขวาล่าง โดย **only moving to the right and down**, ถูกระบุด้วยตัวหนาสีแดงและมีค่าเท่ากับ `2427`.
+ในเมทริกซ์ขนาด 5 คูณ 5 ด้านล่าง ผลรวมของเส้นทางต่ำสุดจากซ้ายบนไปขวาล่าง โดย **เคลื่อนที่ไปทางขวา และลงล่างเท่านั้น** ถูกระบุด้วยตัวหนาสีแดงและมีค่าเท่ากับ `2427`
 
   $$\begin{pmatrix}
   \color{red}{131} & 673 & 234 & 103 & 18\\\\
@@ -19,23 +19,23 @@ dashedName: problem-81-path-sum-two-ways
   805 & 732 & 524 & \color{red}{37} & \color{red}{331}
   \end{pmatrix}$$
 
-หาผลรวมเส้นทางขั้นต่ำจากซ้ายบนไปขวาล่างโดยเลื่อนไปทางขวาและลงเท่านั้น `matrix` 2D array แทนเมทริกซ์ ขนาดเมทริกซ์สูงสุดที่ใช้ในการทดสอบคือ 80 คูณ 80
+หาผลรวมเส้นทางขั้นต่ำจากซ้ายบนไปขวาล่างโดยเลื่อนไปทางขวาและลงเท่านั้น ให้ `matrix` 2D array แทนเมทริกซ์ ขนาดเมทริกซ์สูงสุดที่ใช้ในการทดสอบคือ 80 คูณ 80
 
 # --hints--
 
-`pathSumTwoWays(testMatrix1)` ควร return number.
+`pathSumTwoWays(testMatrix1)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof pathSumTwoWays(_testMatrix1) === 'number');
 ```
 
-`pathSumTwoWays(testMatrix1)` ควร return `2427`.
+`pathSumTwoWays(testMatrix1)` ต้องคืนค่าเป็น `2427`
 
 ```js
 assert.strictEqual(pathSumTwoWays(_testMatrix1), 2427);
 ```
 
-`pathSumTwoWays(testMatrix2)` ควร return `427337`.
+`pathSumTwoWays(testMatrix2)` ต้องคืนค่าเป็น `427337`
 
 ```js
 assert.strictEqual(pathSumTwoWays(_testMatrix2), 427337);
@@ -145,7 +145,7 @@ function pathSumTwoWays(matrix) {
   return true;
 }
 
-// Only change code above this line
+// แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 
 const testMatrix1 = [
   [131, 673, 234, 103, 18],

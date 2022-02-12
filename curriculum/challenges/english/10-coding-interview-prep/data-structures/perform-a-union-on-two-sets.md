@@ -8,13 +8,13 @@ dashedName: perform-a-union-on-two-sets
 
 # --description--
 
-ในแบบฝึกหัดนี้ เราจะทำการ union ข้อมูลสอง set เข้าด้วยกัน เราจะสร้าง method ในโครงสร้างข้อมูล `Set` ที่เรียกว่า `union` โดยที่ method นี้ควรใช้ `Set` อื่นเป็น argument และ return `union` ของทั้งสอง set  ยกเว้นค่าที่ซ้ำกัน
+ในแบบฝึกหัดนี้ เราจะทำการ union ข้อมูลสอง set เข้าด้วยกัน เราจะสร้าง method ในโครงสร้างข้อมูล `Set` ที่เรียกว่า `union` โดยที่ method นี้ควรใช้ `Set` อื่นเป็น argument และ8noค่าเป็นผลของการ `union` ของทั้งสอง set โดยลบค่าที่ซ้ำกันออก
 
 ยกตัวอย่างเช่น ถ้าหากมี `setA = ['a','b','c']` และ `setB = ['a','b','d','e']` แล้ว union ของ setA และ setB คือ `setA.union(setB) = ['a', 'b', 'c', 'd', 'e']`
 
 # --hints--
 
-`Set` คลาสของคุณควรมี `union` method
+class `Set` ของคุณควรมี method `union`
 
 ```js
 assert(
@@ -25,7 +25,7 @@ assert(
 );
 ```
 
-Union ของ Set ควรประกอบด้วยค่า ["a", "b", "c"] และ Set ที่ประกอบด้วย ["c", "d"] ซึ่งควรจะได้ผลลัพธ์ของ return Set ใหม่ที่มีค่าเป็น ["a", "b", "c", "d"]
+Union ของ Set ที่มีค่าเป็น ["a", "b", "c"] และ Set ที่มีค่าเป็น ["c", "d"] ต้องผลลัพธ์เป็น Set ที่มีค่าเป็น ["a", "b", "c", "d"]
 
 ```js
 assert(
@@ -61,15 +61,15 @@ class Set {
     this.dictionary = {};
     this.length = 0;
   }
-  // This method will check for the presence of an element and return true or false
+  // method นี้จะอ่านว่ามีค่าอยู่ใน set แล้วหรือไม่ และคืนค่าเป็น true หรือ false
   has(element) {
     return this.dictionary[element] !== undefined;
   }
-  // This method will return all the values in the set
+  // method นี้จะคืนค่าเป็นค่าทั้งหมดที่อยู่ใน set
   values() {
     return Object.values(this.dictionary);
   }
-  // This method will add an element to the set
+  // method นี้จะใช้เพิ่ม element ลงไปใน set
   add(element) {
     if (!this.has(element)) {
       this.dictionary[element] = element;
@@ -79,7 +79,7 @@ class Set {
 
     return false;
   }
-  // This method will remove an element from a set
+  // method นี้จะใช้ลบ element ออกจาก set
   remove(element) {
     if (this.has(element)) {
       delete this.dictionary[element];
@@ -89,13 +89,14 @@ class Set {
 
     return false;
   }
-  // This method will return the size of the set
+  // method นี้จะคืนค่าเป็นจำนวนข้อมูลใน set
   size() {
     return this.length;
   }
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-  // Only change code above this line
+
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 ```
 

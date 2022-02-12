@@ -12,7 +12,7 @@ dashedName: problem-74-digit-factorial-chains
 
 $$1! + 4! + 5! = 1 + 24 + 120 = 145$$
 
-บางทีที่รู้จักกันน้อยกว่าคือ 169 เพราะมันสร้าง chain ของตัวเลขที่ยาวที่สุดที่เชื่อมโยงกลับไปที่ 169; ปรากฎว่ามีเพียงสาม loop ที่มีอยู่:
+อีกตัวที่เป็นที่รู้จักน้อยกว่าคือ 169 โดยเลขนี้จะสร้างชุดของตัวเลขที่ยาวที่สุดที่เชื่อมโยงกลับไปที่ 169; โดยชุดตัวเลขนี้มีแค่สามลูป คือ:
 
 $$\begin{align}
 &169 → 363601 → 1454 → 169\\\\
@@ -21,7 +21,7 @@ $$\begin{align}
 \end{align}$$
 
 
-ไม่ยากเลยที่จะพิสูจน์ว่าในที่สุดทุก ๆ หมายเลขเริ่มต้นจะติดอยู่ในloopในที่สุด ตัวอย่างเช่น,
+ไม่ยากเลยที่จะพิสูจน์ว่าในที่สุดทุก ๆ หมายเลขเริ่มต้นจะติดอยู่ในloopในที่สุด ตัวอย่างเช่น:
 
 $$\begin{align}
 &69 → 363600 → 1454 → 169 → 363601\\ (→ 1454)\\\\
@@ -31,35 +31,35 @@ $$\begin{align}
 
 เริ่มต้นด้วย 69 ทำให้เกิด chain ของคำศัพท์ที่ไม่ซ้ำห้าคำ แต่ chain ที่ไม่ซ้ำที่ยาวที่สุดที่มีจำนวนเริ่มต้นต่ำกว่าหนึ่งล้านคือ 60 terms
 
-มีกี่ chains ที่เริ่มด้วยค่าที่ต่ำกว่า`n`มี 60 ค่าที่ไม่ซ้ำกัน
+มีกี่ชุดตัวเลขที่เริ่มด้วยค่าที่ต่ำกว่า `n` โดยมี 60 ค่าที่ไม่ซ้ำกัน
 
 # --hints--
 
-`digitFactorialChains(2000)` ควร return number.
+`digitFactorialChains(2000)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof digitFactorialChains(2000) === 'number');
 ```
 
-`digitFactorialChains(2000)` ควร return `6`.
+`digitFactorialChains(2000)` ต้องคืนค่าเป็น `6`
 
 ```js
 assert.strictEqual(digitFactorialChains(2000), 6);
 ```
 
-`digitFactorialChains(100000)` ควร return `42`.
+`digitFactorialChains(100000)` ต้องคืนค่าเป็น `42`
 
 ```js
 assert.strictEqual(digitFactorialChains(100000), 42);
 ```
 
-`digitFactorialChains(500000)` ควร return `282`.
+`digitFactorialChains(500000)` ต้องคืนค่าเป็น `282`
 
 ```js
 assert.strictEqual(digitFactorialChains(500000), 282);
 ```
 
-`digitFactorialChains(1000000)` ควร return `402`.
+`digitFactorialChains(1000000)` ต้องคืนค่าเป็น `402`
 
 ```js
 assert.strictEqual(digitFactorialChains(1000000), 402);

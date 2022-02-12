@@ -8,21 +8,20 @@ dashedName: gaussian-elimination
 
 # --description--
 
-เขียน function เพื่อแก้ปัญหา \\(Ax = b\\) โดยใช้ Gaussian elimination จาก backwards substitution.
+ให้เขียนฟังก์ชันเพื่อแก้โจทย์ \\(Ax = b\\) โดยใช้ Gaussian elimination และ backwards substitution
 
-\\(A\\) เป็น \\(n \\times n\\) matrix. \\(x\\) และ \\(b\\) เป็น \\(n\\) โดยมี 1 vectors.
+\\(A\\) เป็นเมทริกซ์ \\(n \\times n\\) โดยที่ \\(x\\) และ \\(b\\) เป็น \\(n\\) โดยมี 1 vector
 
-เพื่อปรับปรุงความแม่นยำ โปรดใช้การหมุนและปรับขนาดบางส่วน
 
 # --hints--
 
-`gaussianElimination` ควรเป็น function.
+`gaussianElimination` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof gaussianElimination == 'function');
 ```
 
-`gaussianElimination([[1,1],[1,-1]], [5,1])` ควร return array.
+`gaussianElimination([[1,1],[1,-1]], [5,1])` ต้องคืนค่าเป็น array
 
 ```js
 assert(
@@ -38,7 +37,7 @@ assert(
 );
 ```
 
-`gaussianElimination([[1,1],[1,-1]], [5,1])` ควร return `[ 3, 2 ]`.
+`gaussianElimination([[1,1],[1,-1]], [5,1])` ต้องคืนค่าเป็น `[ 3, 2 ]`
 
 ```js
 assert.deepEqual(
@@ -53,7 +52,7 @@ assert.deepEqual(
 );
 ```
 
-`gaussianElimination([[2,3],[2,1]] , [8,4])` ควร return `[ 1, 2 ]`.
+`gaussianElimination([[2,3],[2,1]] , [8,4])` ต้องคืนค่าเป็น `[ 1, 2 ]`
 
 ```js
 assert.deepEqual(
@@ -68,7 +67,7 @@ assert.deepEqual(
 );
 ```
 
-`gaussianElimination([[1,3],[5,-2]], [14,19])` ควร return `[ 5, 3 ]`.
+`gaussianElimination([[1,3],[5,-2]], [14,19])` ต้องคืนค่าเป็น `[ 5, 3 ]`
 
 ```js
 assert.deepEqual(
@@ -83,7 +82,7 @@ assert.deepEqual(
 );
 ```
 
-`gaussianElimination([[1,1],[5,-1]] , [10,14])` ควร return `[ 4, 6 ]`.
+`gaussianElimination([[1,1],[5,-1]] , [10,14])` ต้องคืนค่าเป็น `[ 4, 6 ]`
 
 ```js
 assert.deepEqual(
@@ -98,7 +97,7 @@ assert.deepEqual(
 );
 ```
 
-`gaussianElimination([[1,2,3],[4,5,6],[7,8,8]] , [6,15,23])` ควร return `[ 1, 1, 1 ]`.
+`gaussianElimination([[1,2,3],[4,5,6],[7,8,8]] , [6,15,23])` ต้องคืนค่าเป็น `[ 1, 1, 1 ]`
 
 ```js
 assert.deepEqual(

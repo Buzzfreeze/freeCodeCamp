@@ -8,7 +8,7 @@ dashedName: problem-30-digit-n-powers
 
 # --description--
 
-มีสามจำนวนสามารถเขียนเป็นผลรวมของเลขยกกำลังสี่ของตัวเลขในแต่ละหลัก
+มีแค่สามจำนวนที่สามารถเขียนเป็นผลรวมของเลขยกกำลังสี่ของตัวเลขในแต่ละหลัก
 
 <div style='margin-left: 4em;'>
   1634 = 1<sup>4</sup> + 6<sup>4</sup> + 3<sup>4</sup> + 4<sup>4</sup><br>
@@ -16,39 +16,39 @@ dashedName: problem-30-digit-n-powers
   9474 = 9<sup>4</sup> + 4<sup>4</sup> + 7<sup>4</sup> + 4<sup>4</sup><br>
 </div>
 
-ขณะที่ 1 = 1<sup>4</sup> ไม่ถูกรวมไปด้วย
+เราจะไม่รวม 1 = 1<sup>4</sup> ไปด้วย
 
-ผลรวมคือ 1634 + 8208 + 9474 = 19316.
+ผลรวมคือ 1634 + 8208 + 9474 = 19316
 
-หาผลรวมของจำนวน `n` ที่ถูกยกกำลังด้วยจำนวน digits ของตัวมันเอง
+หาผลรวมของจำนวน ที่สามารถเขียนในรูปเลขแต่ละหลักยกกำลัง `n` ได้
 
 # --hints--
 
-`digitnPowers(2)` ควร return number.
+`digitnPowers(2)` ต้องคืนค่าเป็น number
 
 ```js
 assert(typeof digitnPowers(2) === 'number');
 ```
 
-`digitnPowers(2)` ควร return 0.
+`digitnPowers(2)` ต้องคืนค่าเป็น 0
 
 ```js
 assert(digitnPowers(2) == 0);
 ```
 
-`digitnPowers(3)` ควร return 1301.
+`digitnPowers(3)` ต้องคืนค่าเป็น 1301
 
 ```js
 assert(digitnPowers(3) == 1301);
 ```
 
-`digitnPowers(4)` ควร return 19316.
+`digitnPowers(4)` ต้องคืนค่าเป็น 19316
 
 ```js
 assert(digitnPowers(4) == 19316);
 ```
 
-`digitnPowers(5)` ควร return 443839.
+`digitnPowers(5)` ต้องคืนค่าเป็น 443839
 
 ```js
 assert(digitnPowers(5) == 443839);

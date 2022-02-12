@@ -8,34 +8,36 @@ dashedName: towers-of-hanoi
 
 # --description--
 
-แก้ปัญหา [Towers of Hanoi](https://en.wikipedia.org/wiki/Towers_of_Hanoi "wp: Towers_of_Hanoi").
+ให้เขียนฟังก์ชันเพื่อแก้โจทย์ [Towers of Hanoi](https://en.wikipedia.org/wiki/Towers_of_Hanoi "wp: Towers_of_Hanoi")
 
-คำตอบของคุณควรยอมรับจำนวนดิสก์เป็นพารามิเตอร์แรก และสตริงสามสตริงที่ใช้ระบุstacks of discsสามชุด `towerOfHanoi(4, 'A', 'B', 'C')`. ฟังก์ชันควรส่งคืนอาร์เรย์ของอาร์เรย์ที่มีรายการย้าย แหล่งที่มา -> ปลายทาง
+ฟังก์ชันของคุณต้องรับพารามิเตอร์แรกเป็น จำนวนแผ่นวงกลม และตามด้วยสตริงสามตัวสำหรับการเรียงชั้นของแผ่นนั้น เช่น `towerOfHanoi(4, 'A', 'B', 'C')`
 
-เช่น array `[['A', 'C'], ['B', 'A']]` ระบุว่าการย้ายครั้งแรกคือการย้ายแผ่นดิสก์จากกอง A ไปยัง C และการย้ายครั้งที่ 2 คือการย้ายแผ่นดิสก์จากกอง B ไปยัง A
+โดยฟังก์ชันต้องคืนค่าเป็น array ของ array ที่เป็นวิธีการขยับแผ่นวงกลม
+
+เช่น array `[['A', 'C'], ['B', 'A']]` จะระบุว่าการย้ายครั้งแรกคือการย้ายแผ่นวงกลมจากกอง A ไปยัง C และการย้ายครั้งที่ 2 คือการย้ายแผ่นวงกลมจากกอง B ไปยัง A
 <p></p>
 
 # --hints--
 
-`towerOfHanoi` ควรเป็น function.
+`towerOfHanoi` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof towerOfHanoi === 'function');
 ```
 
-`towerOfHanoi(3, ...)` ควร return ว่าย้าย 7 ครั้ง.
+`towerOfHanoi(3, ...)` คืนค่าว่ามีการย้าย 7 ครั้ง
 
 ```js
 assert(res3.length === 7);
 ```
 
-`towerOfHanoi(3, 'A', 'B', 'C')` ควร return `[['A','B'], ['A','C'], ['B','C'], ['A','B'], ['C','A'], ['C','B'], ['A','B']]`.
+`towerOfHanoi(3, 'A', 'B', 'C')` ต้องคืนค่าเป็น `[['A','B'], ['A','C'], ['B','C'], ['A','B'], ['C','A'], ['C','B'], ['A','B']]`.
 
 ```js
 assert.deepEqual(towerOfHanoi(3, 'A', 'B', 'C'), res3Moves);
 ```
 
-`towerOfHanoi(5, "X", "Y", "Z")` ย้ายครั้งที่สิบควรเป็น Y -> X.
+`towerOfHanoi(5, "X", "Y", "Z")` ต้องมีการย้ายครั้งที่สิบเป็น Y -> X
 
 ```js
 assert.deepEqual(res5[9], ['Y', 'X']);

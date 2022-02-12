@@ -8,17 +8,19 @@ dashedName: use-regular-expressions-to-test-a-string
 
 # --description--
 
-project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
+project นี้สร้างขึ้นจาก [Replit ตัวนี้](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-`match()` ยืนยันว่าค่าจริงตรงกับ regular expression ของอาร์กิวเมนต์ที่สอง
+`match()` จะเป็นการตรวจสอบว่า string ที่ระบุ (argument แรก) match กับ regular expression (argument ที่สอง) หรือไม่ 
 
 # --instructions--
 
-ภายใน `tests/1_unit-tests.js` ภายใต้การทดสอบที่มีป้ายกำกับ "#15" ในชุด `Strings` ให้เปลี่ยน `assert` แต่ละรายการเป็น `assert.match`หรือ `assert.notMatch` เพื่อให้ผ่านการทดสอบ (ควรประเมินค่า  `true`) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน
+ในไฟล์ `tests/1_unit-tests.js` ให้ดูที่ test ใต้ `#15` ใน suite ที่ชื่อ `Strings`  
+ให้เปลี่ยน `assert` เป็น `assert.match` หรือ `assert.notMatch` เพื่อทำให้ test ผ่าน (ได้ค่าเป็น `true`) 
+อย่าแก้ไข argument ที่ส่งเข้าไปใน assert
 
 # --hints--
 
-การทดสอบทั้งหมดควรผ่าน
+test ทั้งหมดต้องผ่าน
 
 ```js
 (getUserInput) =>
@@ -32,7 +34,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `match` กับ  `notMatch`
+ต้องเลือกใช้ method `match` หรือ `notMatch` กับ assert ตัวแรกให้ถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -50,7 +52,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `match` กับ  `notMatch`
+ต้องเลือกใช้ method `match` หรือ `notMatch` กับ assert ตัวที่สองให้ถูกต้อง
 
 ```js
 (getUserInput) =>

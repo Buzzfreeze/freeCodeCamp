@@ -8,13 +8,13 @@ dashedName: problem-66-diophantine-equation
 
 # --description--
 
-พิจารณา quadratic Diophantine equations:
+พิจารณา quadratic Diophantine equation นี้:
 
 <div style='text-align: center;'>x<sup>2</sup> – Dy<sup>2</sup> = 1</div>
 
-เช่นเมื่อ D=13 มี solution ของ x เป็น 649<sup>2</sup> – 13×180<sup>2</sup> = 1.
+เช่นเมื่อ D=13 มี solution ของ x เป็น 649<sup>2</sup> – 13×180<sup>2</sup> = 1
 
-สามารถสันนิษฐานได้ว่าไม่มีคำตอบในจำนวนเต็มบวก เมื่อ Dเป็น square
+สามารถสันนิษฐานได้ว่าไม่มีคำตอบในจำนวนเต็มบวก เมื่อ D เป็น square
 
 หาค่า solutions ของ x สำหรับ D = {2, 3, 5, 6, 7}:
 
@@ -26,43 +26,43 @@ dashedName: problem-66-diophantine-equation
   8<sup>2</sup> – 7×3<sup>2</sup> = 1<br>
 </div>
 
-เมื่อดู solutions ใน `x` สำหรับ D ≤ 7 ค่ามากสุดเป็น `x` ที่ถูกกำหนด D=5.
+เมื่อดู solutions ใน `x` สำหรับ D ≤ 7 ค่ามากสุดเป็น `x` ที่ถูกกำหนด D=5
 
-หาค่าของ D ≤ `n` ใน solutions ของ `x` ที่ค่ามากสุดของ `x` ถูกกำหนด
+หาค่าของ D ≤ `n` ใน solutions ของ `x` โดยให้ `x` มีค่ามากที่สุด
 
 # --hints--
 
-`diophantineEquation(7)` ควร return number.
+`diophantineEquation(7)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof diophantineEquation(7) === 'number');
 ```
 
-`diophantineEquation(7)` ควร return `5`.
+`diophantineEquation(7)` ต้องคืนค่าเป็น `5`
 
 ```
 assert.strictEqual(diophantineEquation(7), 5);
 ```
 
-`diophantineEquation(100)` ควร return `61`.
+`diophantineEquation(100)` ต้องคืนค่าเป็น `61`
 
 ```
 assert.strictEqual(diophantineEquation(100), 61);
 ```
 
-`diophantineEquation(409)` ควร return `409`.
+`diophantineEquation(409)` ต้องคืนค่าเป็น `409`
 
 ```
 assert.strictEqual(diophantineEquation(409), 409);
 ```
 
-`diophantineEquation(500)` ควร return `421`.
+`diophantineEquation(500)` ต้องคืนค่าเป็น `421`
 
 ```
 assert.strictEqual(diophantineEquation(500), 421);
 ```
 
-`diophantineEquation(1000)` ควร return `661`.
+`diophantineEquation(1000)` ต้องคืนค่าเป็น `661`
 
 ```js
 assert.strictEqual(diophantineEquation(1000), 661);

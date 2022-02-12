@@ -8,21 +8,21 @@ dashedName: problem-453-lattice-quadrilaterals
 
 # --description--
 
-รูปสี่เหลี่ยมธรรมดาคือรูปหลายเหลี่ยมที่มีจุดยอดต่างกันสี่จุด ไม่มีมุมตรงและไม่ตัดกัน
+รูปสี่เหลี่ยมธรรมดา คือรูปหลายเหลี่ยมที่มีจุดยอดต่างกันสี่จุด ไม่มีมุมตรง และไม่ตัดกัน
 
-ให้ $Q(m, n)$ เป็นจำนวนของรูปสี่เหลี่ยมธรรมดาที่มีจุดยอดเป็นจุดแลตทิซที่มีพิกัด ($x$, $y$) เท่ากับ $0 ≤ x ≤ m$ และ $0 ≤ y ≤ n$
+ให้ $Q(m, n)$ เป็นจำนวนของรูปสี่เหลี่ยมธรรมดาที่มีจุดยอดเป็นจุดที่มีพิกัด ($x$, $y$) เป็น $0 ≤ x ≤ m$ และ $0 ≤ y ≤ n$
 
-ตัวอย่างเช่น $Q(2, 2) = 94$ ดังที่แสดงด้านล่าง
+เช่น $Q(2, 2) = 94$ ดังที่แสดงด้านล่าง
 
 <img class="img-responsive center-block" alt="94 quadrilaterals whose vertices are lattice points with coordinates (x, y) satiffying 0 &le; x &le; m and 0 &le; y &le; n" src="https://cdn.freecodecamp.org/curriculum/project-euler/lattice-quadrilaterals.png" style="background-color: white; padding: 10px;">
 
-นอกจากนี้ยังสามารถตรวจสอบได้ว่า $Q(3, 7) = 39\\,590$, $Q(12, 3) = 309\\,000$ และ $Q(123, 45) = 70\\,542\ \,215\\,894\\,646$.
+นอกจากนี้ $Q(3, 7) = 39\\,590$, $Q(12, 3) = 309\\,000$ และ $Q(123, 45) = 70\\,542\ \,215\\,894\\,646$
 
-หา $Q(12\\,345, 6\\,789)\bmod 135\\,707\\,531$.
+ให้หา $Q(12\\,345, 6\\,789)\bmod 135\\,707\\,531$.
 
 # --hints--
 
-`latticeQuadrilaterals()` ควร return `104354107`.
+`latticeQuadrilaterals()` ต้องคืนค่าเป็น `104354107`
 
 ```js
 assert.strictEqual(latticeQuadrilaterals(), 104354107);

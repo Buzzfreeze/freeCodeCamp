@@ -8,12 +8,12 @@ dashedName: problem-88-product-sum-numbers
 
 # --description--
 
-จำนวนธรรมชาติ `N` ที่สามารถเขียนเป็นผลรวมและผลคูณของsetที่กำหนดของจำนวนธรรมชาติอย่างน้อยสองตัว $\\{a_1, a_2, \ldots , a_k\\}$ เรียกว่าผลรวมผลคูณ จำนวน: $N = a_1 + a_2 + \cdots + a_k = a_1 × a_2 × \cdots × a_k$
+จำนวนธรรมชาติ `N` ที่สามารถเขียนเป็นผลรวม และผลคูณของเซ็ทที่กำหนดของจำนวนธรรมชาติอย่างน้อยสองตัว $\\{a_1, a_2, \ldots , a_k\\}$ เรียกว่าผลรวมผลคูณ จำนวน: $N = a_1 + a_2 + \cdots + a_k = a_1 × a_2 × \cdots × a_k$
 
 เช่น 6 = 1 + 2 + 3 = 1 × 2 × 3.
 
 
-สำหรับsetขนาดที่กำหนด `k` เราจะเรียก N ที่เล็กที่สุดด้วยคุณสมบัตินี้ว่าหมายเลขผลรวมขั้นต่ำ จำนวนรวมขั้นต่ำสำหรับsetขนาด `k` = 2, 3, 4, 5 และ 6 มีดังนี้
+สำหรับเซ็ทขนาดที่กำหนด `k` เราจะเรียก N ที่เล็กที่สุดด้วยคุณสมบัตินี้ว่าหมายเลขผลรวมขั้นต่ำ จำนวนรวมขั้นต่ำสำหรับเซ็ทขนาด `k` = 2, 3, 4, 5 และ 6 มีดังนี้
 
 <div style='margin-left: 4em;'>
   <var>k</var>=2: 4 = 2 × 2 = 2 + 2<br>
@@ -23,46 +23,46 @@ dashedName: problem-88-product-sum-numbers
   <var>k</var>=6: 12 = 1 × 1 × 1 × 1 × 2 × 6 = 1 + 1 + 1 + 1 + 2 + 6
 </div><br>
 
-สำหรับ 2 ≤ `k` ≤ 6 ผลรวมของจำนวนรวมขั้นต่ำคือ 4 + 6 + 8 + 12 = 30 โปรดทราบว่า `8` จะถูกนับเพียงครั้งเดียวในผลรวม
+สำหรับ 2 ≤ `k` ≤ 6 ผลรวมของจำนวนรวมขั้นต่ำคือ 4 + 6 + 8 + 12 = 30 จะเห็นว่า `8` จะถูกนับเพียงครั้งเดียวในผลรวม
 
 
-อันที่จริง เนื่องจากชุดที่สมบูรณ์ของจำนวนผลรวมขั้นต่ำสำหรับ 2 ≤ `k` ≤ 12 คือ $\\{4, 6, 8, 12, 15, 16\\}$ ผลรวมคือ `61`
+อันที่จริง เนื่องจากเซ็ทที่สมบูรณ์ของจำนวนผลรวมขั้นต่ำสำหรับ 2 ≤ `k` ≤ 12 คือ $\\{4, 6, 8, 12, 15, 16\\}$ ผลรวมคือ `61`
 
 ผลรวมของตัวเลขผลรวมขั้นต่ำทั้งหมดสำหรับ 2 ≤ `k` ≤ `limit` เป็นเท่าใด
 
 # --hints--
 
-`productSumNumbers(6)` ควร return number.
+`productSumNumbers(6)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof productSumNumbers(6) === 'number');
 ```
 
-`productSumNumbers(6)` ควร return `30`.
+`productSumNumbers(6)` ต้องคืนค่าเป็น `30`
 
 ```js
 assert.strictEqual(productSumNumbers(6), 30);
 ```
 
-`productSumNumbers(12)` ควร return `61`.
+`productSumNumbers(12)` ต้องคืนค่าเป็น `61`
 
 ```js
 assert.strictEqual(productSumNumbers(12), 61);
 ```
 
-`productSumNumbers(300)` ควร return `12686`.
+`productSumNumbers(300)` ต้องคืนค่าเป็น `12686`
 
 ```js
 assert.strictEqual(productSumNumbers(300), 12686);
 ```
 
-`productSumNumbers(6000)` ควร return `2125990`.
+`productSumNumbers(6000)` ต้องคืนค่าเป็น `2125990`
 
 ```js
 assert.strictEqual(productSumNumbers(6000), 2125990);
 ```
 
-`productSumNumbers(12000)` ควร return `7587457`.
+`productSumNumbers(12000)` ต้องคืนค่าเป็น `7587457`
 
 ```js
 assert.strictEqual(productSumNumbers(12000), 7587457);

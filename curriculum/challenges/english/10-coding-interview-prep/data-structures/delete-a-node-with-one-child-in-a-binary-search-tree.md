@@ -8,15 +8,27 @@ dashedName: delete-a-node-with-one-child-in-a-binary-search-tree
 
 # --description--
 
-ตอนนี้เราสามารถลบ leaf node ได้แล้ว ไปต่อที่กรณีที่สองกันเลย: การลบ node ที่มีหนึ่ง child สำหรับกรณีนี้สมมติว่าเรามี tree ที่มี node ต่อไปนี้ 1 — 2 — 3 โดยที่ 1 คือ root ในการลบ 2 เราเพียงแค่ต้องทำการอ้างอิงที่ถูกต้องใน 1 จุดถึง 3 โดยทั่วไปแล้วในการลบ node ที่มีเพียง child เดียว เราทำให้ node หลักนั้นอ้างอิง node ถัดไปใน tree 
+ตอนนี้เราลบ leaf node ได้แล้ว ไปต่อที่กรณีที่สองกันเลย ซึ่งก็คือ การลบ node ที่มี child หนึ่งตัว
+
+ในกรณีนี้ สมมติว่าเรามี tree ที่มี node เป็น 1 — 2 — 3 โดยที่ 1 คือ root  
+ในการลบ 2 เราแค่ต้องทำให้ 1 มี right เป็น 3  
+ปกติแล้วในการลบ node ที่มี child ตัวเดียว เราจะทำให้ parent node นั้นอ้างอิง node ถัดไปใน tree 
 
 # --instructions--
 
-เราได้จัดเตรียมโค้ดบางส่วนไว้ใน `remove` method ของเราซึ่งทำงานได้ดีจากแบบทดสอบครั้งที่แล้ว เราค้นหาเป้าหมายที่จะลบและ parent ของมัน และกำหนดจำนวน child ที่ node เป้าหมายมี มาเพิ่มกรณีต่อไปที่นี่สำหรับ node เป้าหมายที่มีเพียง child เดียว ที่นี่เราจะต้องพิจารณาว่า child เดียวเป็นกิ่งซ้ายหรือขวาใน tree จากนั้นตั้งค่าการอ้างอิงที่ถูกต้องใน  parent ให้ชี้ไปที่ node นี้ นอกจากนี้เรามาพิจารณากรณีที่เป้าหมายเป็น root node (ซึ่งหมายความว่า parent node จะเป็น `null`) อย่าลังเลที่จะเขียนโค้ดทับโค้ดเริ่มต้นทั้งหมดด้วยโค้ดของคุณเองตราบเท่าที่มันผ่านการทดสอบ
+เราได้เขียนโค้ดใน method `remove` ซึ่งใช้แก้โจทย์ในแบบทดสอบที่แล้วไว้ให้แล้ว 
+
+ซึ่งจะหา node ที่จะลบและ parent ของ node นั้น และเก็บจำนวนของ child ของ node ที่จะลบ 
+
+คราวนี้ให้เขียนโค้ดให้รองรับกรณีที่ node ที่จะลบมี child ตัวเดียว เราต้องดูว่า child ตัวเดียวที่มีนั้นเป็น left หรือ right ใน tree จากนั้นให้เปลี่ยนให้ parent ให้ชี้ไปที่ node นี้ 
+
+และต้องจัดการการลบ root node ได้ด้วย (แปลว่า parent node จะเป็น `null`) 
+
+คุณจะเปลี่ยนโค้ดที่เรามีให้เป็นโค้ดของคุณจากแบบทดสอบที่แล้วก็ได้
 
 # --hints--
 
-ควรมีโคงสร้างข้อมูล `BinarySearchTree`
+ต้องมีโครงสร้างข้อมูล `BinarySearchTree`
 
 ```js
 assert(
@@ -30,7 +42,7 @@ assert(
 );
 ```
 
-binary search tree ควรมี method ที่เรียกว่า `remove`
+ใน binary search tree ต้องมี method ชื่อ `remove`
 
 ```js
 assert(
@@ -46,7 +58,7 @@ assert(
 );
 ```
 
-การพยายามลบ element ที่ไม่มีอยู่ควร return `null`
+ถ้าไม่เจอ element ที่จะลบ method `remove` จะต้องคืนค่าเป็น `null`
 
 ```js
 assert(
@@ -65,7 +77,7 @@ assert(
 );
 ```
 
-ถ้าหาก root node ไม่มี child การลบมันควรตั้งค่า root เป็น `null`
+ถ้า root node ไม่มี child แล้วเราลบ root node นั้น เราต้องตั้งค่า root node ให้เป็น `null`
 
 ```js
 assert(
@@ -86,7 +98,7 @@ assert(
 );
 ```
 
-`remove` method ควรลบ leaf node ออกจาก tree
+method `remove` ต้องลบ leaf node ออกจาก tree
 
 ```js
 assert(
@@ -114,7 +126,7 @@ assert(
 );
 ```
 
-`remove` method ควรลบ node ที่มี child เดียว
+method `remove` ต้องลบ node ที่มี child ตัวเดียวได้
 
 ```js
 assert(
@@ -140,7 +152,7 @@ assert(
 );
 ```
 
-การลบ root ใน tree ที่มีสอง node ควรตั้งค่า node ที่สองเป็น root
+ถ้าใน tree มีสอง node แล้วเราลบ root node ออกไป เราต้องทำให้ node ที่สองเป็น root
 
 ```js
 assert(
@@ -238,7 +250,7 @@ function BinarySearchTree() {
     }
     var target;
     var parent = null;
-    // Find the target value and its parent
+    // หาค่าของ node ที่จะลบ และหา parent ของ node นั้น
     (function findValue(node = this.root) {
       if (value == node.value) {
         target = node;
@@ -257,10 +269,10 @@ function BinarySearchTree() {
     if (target === null) {
       return null;
     }
-    // Count the children of the target to delete
+    // นับจำนวน child ของ node ที่จะลบ
     var children =
       (target.left !== null ? 1 : 0) + (target.right !== null ? 1 : 0);
-    // Case 1: Target has no children
+    // กรณีที่ 1: node ที่จะลบไม่มี child
     if (children === 0) {
       if (target == this.root) {
         this.root = null;
@@ -272,8 +284,8 @@ function BinarySearchTree() {
         }
       }
     }
-    // Case 2: Target has one child
-    // Only change code below this line
+    // กรณีที่ 2: node ที่จะลบมี child หนึ่งตัว
+    // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   };
 }
 ```

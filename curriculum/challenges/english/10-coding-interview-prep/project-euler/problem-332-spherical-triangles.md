@@ -8,7 +8,7 @@ dashedName: problem-332-spherical-triangles
 
 # --description--
 
-สามเหลี่ยมทรงกลมคือรูปที่เกิดขึ้นบนพื้นผิวของทรงกลมโดยมีส่วนโค้งวงกลมขนาดใหญ่สามส่วนตัดกันเป็นคู่ในจุดยอดสามจุด
+สามเหลี่ยมทรงกลม คือรูปที่เกิดขึ้นบนพื้นผิวของทรงกลม โดยมีส่วนโค้งวงกลมขนาดใหญ่สามส่วนตัดกันเป็นคู่ในจุดยอดสามจุด
 
 <img class="img-responsive center-block" alt="spherical triangle formed on the surface of a sphere" src="https://cdn.freecodecamp.org/curriculum/project-euler/spherical-triangles.jpg" style="background-color: white; padding: 10px;">
 
@@ -26,7 +26,7 @@ dashedName: problem-332-spherical-triangles
 
 # --hints--
 
-`sphericalTriangles()` ควร return `2717.751525`.
+`sphericalTriangles()` ต้องคืนค่าเป็น `2717.751525`
 
 ```js
 assert.strictEqual(sphericalTriangles(), 2717.751525);

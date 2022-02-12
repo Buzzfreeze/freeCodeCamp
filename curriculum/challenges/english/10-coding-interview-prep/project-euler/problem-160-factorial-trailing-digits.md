@@ -10,7 +10,7 @@ dashedName: problem-160-factorial-trailing-digits
 
 สำหรับ $N$ ใดๆ ให้ $f(N)$ เป็นตัวเลขห้าหลักสุดท้ายก่อนเลขศูนย์ต่อท้ายใน $N!$
 
-ตัวอย่างเช่น,
+เช่น
 
 $$\begin{align}
   & 9! = 362880 \\; \text{so} \\; f(9) = 36288 \\\\
@@ -18,11 +18,11 @@ $$\begin{align}
   & 20! = 2432902008176640000 \\; \text{so} \\; f(20) = 17664
 \end{align}$$
 
-หา $f(1,000,000,000,000)$
+ให้หา $f(1,000,000,000,000)$
 
 # --hints--
 
-`factorialTrailingDigits()` ควร return `16576`.
+`factorialTrailingDigits()` ต้องคืนค่าเป็น `16576`
 
 ```js
 assert.strictEqual(factorialTrailingDigits(), 16576);

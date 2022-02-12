@@ -8,11 +8,14 @@ dashedName: word-wrap
 
 # --description--
 
-แม้กระทั่งทุกวันนี้ ด้วยfontตามสัดส่วนและlayoutที่ซับซ้อน ยังมีบางกรณีที่คุณต้องตัดข้อความในคอลัมน์ที่ระบุ งานพื้นฐานคือการตัดย่อหน้าของข้อความด้วยวิธีง่ายๆ
+ให้ลองเขียนฟังก์ชันที่ทำการตัดข้อความ (Wrap Text)
 
 # --instructions--
 
-เขียนฟังก์ชันที่สามารถตัดข้อความนี้ให้เป็นอักขระจำนวนเท่าใดก็ได้ ตัวอย่างเช่น ข้อความที่มีอักขระ 80 ตัวควรมีลักษณะดังนี้:
+ให้เขียนฟังก์ชันที่ตัดข้อความตามความยาวที่ระบุ 
+
+
+โดยถ้าตัดข้อความให้มีความยาว 80 ตัวอักษรต้องมีลักษณะดังนี้:
 
 <pre>
 Wrap text using a more sophisticated algorithm such as the Knuth and Plass TeX
@@ -23,37 +26,37 @@ than a simple minimum length algorithm.
 
 # --hints--
 
-wrap ควรเป็น function.
+`wrap` ต้องเป็นฟังก์ชัน
 
 ```js
 assert.equal(typeof wrap, 'function');
 ```
 
-wrap ควร return a string.
+`wrap` ต้องคืนค่าเป็นสตริง
 
 ```js
 assert.equal(typeof wrap('abc', 10), 'string');
 ```
 
-wrap(80) ควร return 4 lines.
+`wrap(80)` ต้องคืนค่าเป็นสตริงที่แบ่งเป็น 4 บรรทัด
 
 ```js
 assert(wrapped80.split('\n').length === 4);
 ```
 
-`wrap` function ควร return ตาม text.
+`wrap` ต้องคืนค่าเป็นสตริงตามที่ส่งเข้าไป
 
 ```js
 assert.equal(wrapped80.split('\n')[0], firstRow80);
 ```
 
-wrap(42) ควร return 7 lines.
+`wrap(42)` ต้องคืนค่าเป็นสตริงที่แบ่งเป็น 7 บรรทัด
 
 ```js
 assert(wrapped42.split('\n').length === 7);
 ```
 
-`wrap` function ควร return ตาม text.
+`wrap` ต้องคืนค่าเป็นสตริงตามที่ส่งเข้าไป
 
 ```js
 assert.equal(wrapped42.split('\n')[0], firstRow42);

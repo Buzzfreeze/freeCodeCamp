@@ -8,9 +8,10 @@ dashedName: problem-244-sliders
 
 # --description--
 
-เกม Fifteen Puzzle ที่นี่ แทนที่จะเป็นแผ่นเรียงเลข เรามีไพ่สีแดงเจ็ดใบและไพ่สีฟ้าแปดแผ่น
+คุณคงรู้จักเกม Fifteen Puzzle แต่เราจะเปลี่ยนแผ่นตัวเลขเป็น แผ่นสีฟ้าแปดแผ่น และสีแดงเจ็ดแผ่น
 
-การย้ายจะแสดงด้วยอักษรตัวแรกของทิศทาง (ซ้าย ขวา ขึ้น ลง) ที่แผ่นถูกเลื่อน เช่น เริ่มจากการกำหนดค่า ($S$) ตามลำดับ $LULUR$ เราไปถึงการกำหนดค่า ($E$):
+การย้ายจะแสดงด้วยอักษรตัวแรกของทิศทาง (ซ้าย (L) ขวา (R) ขึ้น (U) ลง(D)) ที่แผ่นถูกเลื่อน  
+เช่น ถ้าเราเริ่มจาก $S$ แล้วเราใช้การย้ายแผ่นแบบ $LULUR$ เราจะได้ $E$:
 
 ($S$) <img class="img-responsive" alt="configuration S" src="https://cdn.freecodecamp.org/curriculum/project-euler/sliders-1.gif" style="display: inline-block; background-color: white; padding: 10px;">, ($E$) <img class="img-responsive" alt="configuration E" src="https://cdn.freecodecamp.org/curriculum/project-euler/sliders-2.gif" style="display: inline-block; background-color: white; padding: 10px;">
 
@@ -38,11 +39,11 @@ $$\begin{array}{|c|c|}
 
 ($S$) <img class="img-responsive center-block" alt="configuration S" src="https://cdn.freecodecamp.org/curriculum/project-euler/sliders-3.gif" style="display: inline-block; background-color: white; padding: 10px;">, ($T$) <img class="img-responsive center-block" alt="configuration T" src="https://cdn.freecodecamp.org/curriculum/project-euler/sliders-4.gif" style="display: inline-block; background-color: white; padding: 10px;">
 
-ผลรวมของchecksumทั้งหมดสำหรับเส้นทางที่มีความยาวน้อยที่สุดคือเท่าใด
+ผลรวมของ checksum ทั้งหมดสำหรับเส้นทางที่มีความยาวน้อยที่สุดคือเท่าใด
 
 # --hints--
 
-`sliders()` ควร return `96356848`.
+`sliders()` ต้องคืนค่าเป็น `96356848`
 
 ```js
 assert.strictEqual(sliders(), 96356848);

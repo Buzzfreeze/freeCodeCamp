@@ -8,43 +8,43 @@ dashedName: problem-31-coin-sums
 
 # --description--
 
-สกุลเงินในอังกฤษคือ pound, £, และ pence, p, และมี 8 coins ในกระแส:
+สกุลเงินในอังกฤษคือ ปอนด์ (£) และ เพนนี (p) และมีเหรียญ 8 แบบ:
 
 <div style='margin-left: 4em;'>1p, 2p, 5p, 10p, 20p, 50p, £1 (100p) and £2 (200p).</div>
 
-ถ้าจะใช้ £2 มีวิธี:
+ถ้าเราจะรวมเงินให้ได้ £2 จะนวมได้ดังนี้:
 
 <div style='margin-left: 4em;'>1×£1 + 1×50p + 2×20p + 1×5p + 1×2p + 3×1p</div>
 
-มีกี่วิธีที่ `n` pence ที่จะใช้ได้กับทุก coins?
+ให้หาจำนวนวิธีที่สามารถรวมเงินให้เป็น `n` เพนนีได้?
 
 # --hints--
 
-`coinSums(50)` ควร return number.
+`coinSums(50)` ต้องคืนค่าเป็น number
 
 ```js
 assert(typeof coinSums(50) === 'number');
 ```
 
-`coinSums(50)` ควร return 451.
+`coinSums(50)` ต้องคืนค่าเป็น 451
 
 ```js
 assert(coinSums(50) == 451);
 ```
 
-`coinSums(100)` ควร return 4563.
+`coinSums(100)` ต้องคืนค่าเป็น 4563
 
 ```js
 assert(coinSums(100) == 4563);
 ```
 
-`coinSums(150)` ควร return 21873.
+`coinSums(150)` ต้องคืนค่าเป็น 21873
 
 ```js
 assert(coinSums(150) == 21873);
 ```
 
-`coinSums(200)` ควร return 73682.
+`coinSums(200)` ต้องคืนค่าเป็น 73682
 
 ```js
 assert(coinSums(200) == 73682);

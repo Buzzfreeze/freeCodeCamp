@@ -8,9 +8,9 @@ dashedName: balanced-brackets
 
 # --description--
 
-ตรวจสอบว่าstringของวงเล็บที่สร้างขึ้นมีความสมดุลหรือไม่ นั่นคือ ไม่ว่าจะประกอบด้วยวงเล็บเปิด/ปิดทั้งหมดหรือไม่ (ตามลำดับ) ซึ่งไม่มีวงเล็บผิดพลาด
+ให้ตรวจสอบว่าสตริงที่ส่งไปมีการใช้วงเล็บเปิด-ปิดถูกต้องหรือไม่
 
-**Examples:**
+**ตัวอย่าง:**
 | Input                     | Output |
 | ------------------------- | ------ |
 | <code>\[]</code>          | true   |
@@ -22,115 +22,115 @@ dashedName: balanced-brackets
 
 # --hints--
 
-`isBalanced` ควรเป็น function.
+`isBalanced` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof isBalanced === 'function');
 ```
 
-`isBalanced("[]")` ควร return true.
+`isBalanced("[]")` ต้องคืนค่าเป็น true
 
 ```js
 assert(isBalanced(testCases[0]));
 ```
 
-`isBalanced("]][[[][][][]][")` ควร return false.
+`isBalanced("]][[[][][][]][")` ต้องคืนค่าเป็น false
 
 ```js
 assert(!isBalanced(testCases[1]));
 ```
 
-`isBalanced("[][[[[][][[[]]]]]]")` ควร return true.
+`isBalanced("[][[[[][][[[]]]]]]")` ต้องคืนค่าเป็น true
 
 ```js
 assert(isBalanced(testCases[2]));
 ```
 
-`isBalanced("][")` ควร return false.
+`isBalanced("][")` ต้องคืนค่าเป็น false
 
 ```js
 assert(!isBalanced(testCases[3]));
 ```
 
-`isBalanced("[[[]]]][[]")` ควร return false.
+`isBalanced("[[[]]]][[]")` ต้องคืนค่าเป็น false
 
 ```js
 assert(!isBalanced(testCases[4]));
 ```
 
-`isBalanced("][[]")` ควร return false.
+`isBalanced("][[]")` ต้องคืนค่าเป็น false
 
 ```js
 assert(!isBalanced(testCases[5]));
 ```
 
-`isBalanced("][[][]][[[]]")` ควร return false.
+`isBalanced("][[][]][[[]]")` ต้องคืนค่าเป็น false
 
 ```js
 assert(!isBalanced(testCases[6]));
 ```
 
-`isBalanced("[[][]]][")` ควร return false.
+`isBalanced("[[][]]][")` ต้องคืนค่าเป็น false
 
 ```js
 assert(!isBalanced(testCases[7]));
 ```
 
-`isBalanced("[[[]]][[]]]][][[")` ควร return false.
+`isBalanced("[[[]]][[]]]][][[")` ต้องคืนค่าเป็น false
 
 ```js
 assert(!isBalanced(testCases[8]));
 ```
 
-`isBalanced("[]][[]]][[[[][]]")` ควร return false.
+`isBalanced("[]][[]]][[[[][]]")` ต้องคืนค่าเป็น false
 
 ```js
 assert(!isBalanced(testCases[9]));
 ```
 
-`isBalanced("][]][[][")` ควร return false.
+`isBalanced("][]][[][")` ต้องคืนค่าเป็น false
 
 ```js
 assert(!isBalanced(testCases[10]));
 ```
 
-`isBalanced("[[]][[][]]")` ควร return true.
+`isBalanced("[[]][[][]]")` ต้องคืนค่าเป็น true
 
 ```js
 assert(isBalanced(testCases[11]));
 ```
 
-`isBalanced("[[]]")` ควร return true.
+`isBalanced("[[]]")` ต้องคืนค่าเป็น true
 
 ```js
 assert(isBalanced(testCases[12]));
 ```
 
-`isBalanced("]][]][[]][[[")` ควร return false.
+`isBalanced("]][]][[]][[[")` ต้องคืนค่าเป็น false
 
 ```js
 assert(!isBalanced(testCases[13]));
 ```
 
-`isBalanced("][]][][[")` ควร return false.
+`isBalanced("][]][][[")` ต้องคืนค่าเป็น false
 
 ```js
 assert(!isBalanced(testCases[14]));
 ```
 
-`isBalanced("][][")` ควร return false.
+`isBalanced("][][")` ต้องคืนค่าเป็น false
 
 ```js
 assert(!isBalanced(testCases[15]));
 ```
 
-`isBalanced("[]]]")` ควร return false.
+`isBalanced("[]]]")` ต้องคืนค่าเป็น false
 
 ```js
 assert(!isBalanced(testCases[16]));
 ```
 
-`isBalanced("")` ควร return true.
+`isBalanced("")` ต้องคืนค่าเป็น true
 
 ```js
 assert(isBalanced(testCases[17]));

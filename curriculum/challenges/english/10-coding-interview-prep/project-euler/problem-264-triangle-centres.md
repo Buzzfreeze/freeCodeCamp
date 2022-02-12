@@ -15,9 +15,9 @@ dashedName: problem-264-triangle-centres
 - Circumcentre ที่จุดกำเนิด O.
 - Orthocentre ที่จุด H(5, 0).
 
-มีเก้ารูปสามเหลี่ยมดังกล่าวที่มี $\text{perimeter} ≤ 50$
+มีเก้ารูปสามเหลี่ยมดังกล่าวที่มี $\text{เส้นรอบรูป} ≤ 50$
 
-เรียงและเรียงจากน้อยไปมากของperimeterได้แก่
+เรียงและเรียงจากน้อยไปมากของเส้นรอบรูปได้แก่
 
 <table>
   <tbody>
@@ -35,18 +35,18 @@ A(8, 1), B(1, -8), C(-4, 7)<br>
 A(2, 9), B(9, -2), C(-6, -7)<br>
 A(9, 2), B(2, -9), C(-6, 7)<br>
       </td>
-      <td><img class="img-responsive center-block" alt="nine triangles ABC with perimeter ≤ 50" src="https://cdn.freecodecamp.org/curriculum/project-euler/triangle-centres.gif" style="background-color: white; padding: 10px;"></td>
+      <td><img class="img-responsive center-block" alt="nine triangles ABC with เส้นรอบรูป ≤ 50" src="https://cdn.freecodecamp.org/curriculum/project-euler/triangle-centres.gif" style="background-color: white; padding: 10px;"></td>
     </tr>
   </tbody>
 </table>
 
 ผลรวมของเส้นรอบรูป ปัดเศษเป็นทศนิยมสี่ตำแหน่ง คือ 291.0089
 
-หาสามเหลี่ยมดังกล่าวทั้งหมดที่มี $\text{perimeter} ≤ {10}^5$ ป้อนเป็นคำตอบของคุณเป็นผลรวมของperimeterที่ปัดเศษทศนิยมสี่ตำแหน่ง
+หาสามเหลี่ยมดังกล่าวทั้งหมดที่มี $\text{เส้นรอบรูป} ≤ {10}^5$ ให้คืนค่าคำตอบเป็นผลรวมของเส้นรอบรูป โดยปัดทศนิยม 4 ตำแหน่ง
 
 # --hints--
 
-`triangleCentres()` ควร return `2816417.1055`.
+`triangleCentres()` ต้องคืนค่าเป็น `2816417.1055`
 
 ```js
 assert.strictEqual(triangleCentres(), 2816417.1055);

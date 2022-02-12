@@ -8,13 +8,13 @@ dashedName: hide-potentially-dangerous-information-using-helmet-hidepoweredby
 
 # --description--
 
-โปรดทราบว่าโปรเจคนี้ถูกสร้างจากโปรเจคเริ่มต้นบน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec) หรือโคลนมาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/)
+project นี้สร้างขึ้นจาก [Replit ตัวนี้](https://replit.com/github/freeCodeCamp/boilerplate-infosec) หรือ clone มาจาก [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-infosec/)
 
-แฮกเกอร์สามารถใช้ประโยชน์จากช่องโหว่ที่ทราบใน Express/Node หากพบว่าไซต์ของคุณขับเคลื่อนโดย Express `X-Powered-By: Express` จะถูกส่งไปในทุกคำขอที่มาจาก Express โดยค่าเริ่มต้น ใช้ `helmet.hidePoweredBy()` middleware เพื่อลบ X-Powered-By header
+แฮกเกอร์สามารถใช้ประโยชน์จากช่องโหว่ของ Express/Node ถ้าเขารู้ว่าเว็บของคุณใช้งาน Express อยู่ ซึ่งทุกคำขอที่มาจาก Express จะมี header `X-Powered-By: Express` นี้เป็นค่าเริ่มต้น ให้ใช้ middleware `helmet.hidePoweredBy()` เพื่อลบ header `X-Powered-By` ออก
 
 # --hints--
 
-helmet.hidePoweredBy() middleware ควรถูกติดตั้งอย่างถูกต้อง
+ต้องใช้ middleware `helmet.hidePoweredBy()` อย่างถูกต้อง
 
 ```js
 (getUserInput) =>

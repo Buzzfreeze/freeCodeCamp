@@ -8,15 +8,15 @@ dashedName: date-format
 
 # --description--
 
-Return array with strings ของวันที่ปัจจุบันสองตัว ตามด้านล่าง:
+ให้คืนค่าเป็น array ของสตริงของวันที่ปัจจุบันสองตัว ตามเงื่อนไขด้านล่าง:
 
-- ลำดับวันที่ของstringแรกควรเป็นหมายเลขปี หมายเลขเดือน และหมายเลขวันที่คั่นด้วยเครื่องหมายขีดกลาง (`-`)
-- ปีของstringแรกควรมีความยาวสี่หลัก
-- เดือนและวันของstringแรกไม่ควรมีเลขศูนย์นำหน้า
-- ชื่อวันและเดือนของstringที่สองไม่ควรเป็นตัวย่อ
-- วันที่ของstringที่สองไม่ควรมีเลขศูนย์นำหน้า
+- สตริงตัวแรกควรเป็น ปี เดือน และวันที่ โดยคั่นด้วยเครื่องหมายขีดกลาง (`-`)
+- ปีของสตริงตัวแรกควรมีความยาวสี่หลัก
+- เดือนและวันของสตริงตัวแรกไม่ควรมีเลขศูนย์นำหน้า
+- ชื่อวันและเดือนของสตริงที่สองไม่ควรเป็นตัวย่อ
+- วันที่ของสตริงตัวที่สองไม่ควรมีเลขศูนย์นำหน้า
 
-ตัวอย่าง outputs:
+ตัวอย่าง output:
 
 ```js
 ['2007-11-23', 'Friday, November 23, 2007']
@@ -25,25 +25,25 @@ Return array with strings ของวันที่ปัจจุบันส
 
 # --hints--
 
-`getDateFormats` ควรเป็น function.
+`getDateFormats` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof getDateFormats === 'function');
 ```
 
-`getDateFormats` ควร return object.
+`getDateFormats` ต้องคืนค่าเป็น object
 
 ```js
 assert(typeof getDateFormats() === 'object');
 ```
 
-`getDateFormats` ควร return array มี 2 elements.
+`getDateFormats` ต้องคืนค่าเป็น array ที่มี 2 elements
 
 ```js
 assert(getDateFormats().length === 2);
 ```
 
-`getDateFormats` ควร return วันที่ถูกต้องในรูปแบบที่ถูกต้อง
+`getDateFormats` ต้องคืนค่าเป็นวันที่ถูกต้องในรูปแบบที่ระบุ
 
 ```js
 assert.deepEqual(getDateFormats(), dates, equalsMessage);
@@ -64,7 +64,7 @@ const getDateSolution = () => {
 };
 
 const dates = getDateSolution();
-const equalsMessage = `message: <code>getDataFormats()</code> ควร return <code>["${dates[0]}", "${dates[1]}"]</code>.`;
+const equalsMessage = `message: <code>getDataFormats()</code> ต้องคืนค่าเป็น <code>["${dates[0]}", "${dates[1]}"]</code>.`;
 ```
 
 ## --seed-contents--

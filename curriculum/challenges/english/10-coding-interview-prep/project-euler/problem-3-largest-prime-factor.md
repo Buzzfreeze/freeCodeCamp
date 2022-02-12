@@ -8,55 +8,55 @@ dashedName: problem-3-largest-prime-factor
 
 # --description--
 
-จำนวนเฉพาะ(Prime Number) ของ 13195 คือ 5, 7, 13 และ 29
+ตัวประกอบจำนวนเฉพาะ (Prime Number) ของ 13195 คือ 5, 7, 13 และ 29
 
-ค่าที่มากที่สุดชองจำนวนเฉพาะ(Prime Number) ของ `number` คืออะไร
+ให้หาตัวประกอบจำนวนเฉพาะ ที่มากที่สุดของ `number`
 
 # --hints--
 
-`largestPrimeFactor(2)` ควร return เป็น number
+`largestPrimeFactor(2)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof largestPrimeFactor(2) === 'number');
 ```
 
-`largestPrimeFactor(2)` ควร return เป็น 2
+`largestPrimeFactor(2)` ต้องคืนค่าเป็น 2
 
 ```js
 assert.strictEqual(largestPrimeFactor(2), 2);
 ```
 
-`largestPrimeFactor(3)` ควร return เป็น 3
+`largestPrimeFactor(3)` ต้องคืนค่าเป็น 3
 
 ```js
 assert.strictEqual(largestPrimeFactor(3), 3);
 ```
 
-`largestPrimeFactor(5)` ควร return เป็น 5
+`largestPrimeFactor(5)` ต้องคืนค่าเป็น 5
 
 ```js
 assert.strictEqual(largestPrimeFactor(5), 5);
 ```
 
-`largestPrimeFactor(7)` ควร return เป็น 7
+`largestPrimeFactor(7)` ต้องคืนค่าเป็น 7
 
 ```js
 assert.strictEqual(largestPrimeFactor(7), 7);
 ```
 
-`largestPrimeFactor(8)` ควร return เป็น 2
+`largestPrimeFactor(8)` ต้องคืนค่าเป็น 2
 
 ```js
 assert.strictEqual(largestPrimeFactor(8), 2);
 ```
 
-`largestPrimeFactor(13195)` ควร return เป็น 29
+`largestPrimeFactor(13195)` ต้องคืนค่าเป็น 29
 
 ```js
 assert.strictEqual(largestPrimeFactor(13195), 29);
 ```
 
-`largestPrimeFactor(600851475143)` ควร return เป็น 6857
+`largestPrimeFactor(600851475143)` ต้องคืนค่าเป็น 6857
 
 ```js
 assert.strictEqual(largestPrimeFactor(600851475143), 6857);

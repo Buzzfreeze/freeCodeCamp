@@ -8,7 +8,9 @@ dashedName: sedols
 
 # --description--
 
-สำหรับรายการตัวเลข 6 หลัก [SEDOL](https://en.wikipedia.org/wiki/SEDOL "wp: SEDOL")s 6 หลัก ให้คำนวณและต่อท้ายsum check นั่นคือ กำหนดstring inputทางด้านซ้าย ฟังก์ชันของคุณควรส่งคืนstring ที่เกี่ยวข้องทางด้านขวา:
+กำหนดให้ [SEDOL](https://en.wikipedia.org/wiki/SEDOL "wp: SEDOL") เป็นข้อมูล 6 หลัก 
+
+ให้คำนวน check sum โดยต้องได้ค่าตามนี้:
 
 <pre>
 710889 => 7108899
@@ -24,36 +26,35 @@ B0YBKT => B0YBKT7
 B00030 => B000300
 </pre>
 
-Check แต่ละ input อยู่ใน form ที่ถูกต้อง 
-โดยเฉพาะในส่วนที่เกี่ยวกับอักขระที่ถูกต้องที่อนุญาตใน string SEDOL ฟังก์ชันของคุณควรส่งคืน `null` ใน input ที่ไม่ถูกต้อง
+ต้องตรวจสอบว่า input ถูกต้องด้วย ถ้า input ไม่ถูกต้องให้คืนค่าเป็น `null` 
 
 # --hints--
 
-`sedol` ควรเป็น function.
+`sedol` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof sedol === 'function');
 ```
 
-`sedol('a')` ควร return null.
+`sedol('a')` ต้องคืนค่าเป็น null
 
 ```js
 assert(sedol('a') === null);
 ```
 
-`sedol('710889')` ควร return '7108899'.
+`sedol('710889')` ต้องคืนค่าเป็น '7108899'
 
 ```js
 assert(sedol('710889') === '7108899');
 ```
 
-`sedol('BOATER')` ควร return null.
+`sedol('BOATER')` ต้องคืนค่าเป็น null
 
 ```js
 assert(sedol('BOATER') === null);
 ```
 
-`sedol('228276')` ควร return '2282765'.
+`sedol('228276')` ต้องคืนค่าเป็น '2282765'
 
 ```js
 assert(sedol('228276') === '2282765');

@@ -8,7 +8,7 @@ dashedName: problem-114-counting-block-combinations-i
 
 # --description--
 
-แถวที่วัดความยาวเจ็ดหน่วยมีบล็อกสีแดงที่มีความยาวขั้นต่ำสามหน่วยวางบนนั้น ดังนั้นบล็อกสีแดงสองบล็อก (ซึ่งอนุญาตให้มีความยาวต่างกัน) ถูกคั่นด้วยสี่เหลี่ยมสีดำอย่างน้อยหนึ่งอัน มีสิบเจ็ดวิธีในการทำเช่นนี้
+แถวที่ยาวเจ็ดหน่วยมีบล็อกสีแดงที่มีความยาวอย่างน้อยสามหน่วยอยู่ข้างใน ดังนั้นบล็อกสีแดงสองบล็อก (ซึ่งอนุญาตให้มีความยาวต่างกัน) ถูกคั่นด้วยสี่เหลี่ยมสีดำอย่างน้อยหนึ่งอัน มีสิบเจ็ดวิธีในการทำเช่นนี้
 
 <img class="img-responsive center-block" alt="Possible ways of placing block with a minimum length of three units, on a row with length of seven units" src="https://cdn.freecodecamp.org/curriculum/project-euler/counting-block-combinations-i.png" style="background-color: white; padding: 10px;">
 
@@ -19,7 +19,7 @@ dashedName: problem-114-counting-block-combinations-i
 
 # --hints--
 
-`countingBlockOne()` ควร return `16475640049`.
+`countingBlockOne()` ต้องคืนค่าเป็น `16475640049`
 
 ```js
 assert.strictEqual(countingBlockOne(), 16475640049);

@@ -8,17 +8,20 @@ dashedName: test-if-a-value-is-of-a-specific-data-structure-type
 
 # --description--
 
-project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
+project นี้สร้างขึ้นจาก [Replit ตัวนี้](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-`#typeOf` ยืนยันว่าประเภทของค่านั้นเป็น string ที่กำหนด ตามที่กำหนดโดย `Object.prototype.toString'
+`#typeOf` เป็นการตรวจสอบว่าประเภทของข้อมูลตรงกับ string ที่ระบุ เหมือนกับการใช้ `Object.prototype.toString`
 
 # --instructions--
 
-ภายใน `tests/1_unit-tests.js` ภายใต้การทดสอบที่มีป้ายกำกับ `#17` ในชุด `Objects` ให้เปลี่ยน `assert` แต่ละรายการเป็น `assert.typeOf` หรือ `assert.notTypeOf` เพื่อให้ผ่านการทดสอบ (ควร ประเมินค่า `true`) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน
+ในไฟล์ `tests/1_unit-tests.js` ให้ดูที่ test ใต้ `#17` ใน suite ที่ชื่อ `Objects` 
+ให้เปลี่ยน `assert` เป็น `assert.typeOf` หรือ `assert.notTypeOf` เพื่อทำให้ test ผ่าน (ได้ค่าเป็น `true`) 
+อย่าแก้ไข argument ที่ส่งเข้าไปใน assert
 
 # --hints--
 
-การทดสอบทั้งหมดควรผ่าน
+test ทั้งหมดต้องผ่าน
+
 
 ```js
 (getUserInput) =>
@@ -32,7 +35,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `typeOf` กับ `notTypeOf`
+ต้องเลือกใช้ method `typeOf` หรือ `notTypeOf` กับ assert ตัวแรกให้ถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -50,7 +53,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `typeOf` กับ `notTypeOf`
+ต้องเลือกใช้ method `typeOf` หรือ `notTypeOf` กับ assert ตัวที่สองให้ถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -68,7 +71,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สาม - `typeOf` กับ `notTypeOf`
+ต้องเลือกใช้ method `typeOf` หรือ `notTypeOf` กับ assert ตัวที่สามให้ถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -86,7 +89,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สี่ - `typeOf` กับ `notTypeOf`
+ต้องเลือกใช้ method `typeOf` หรือ `notTypeOf` กับ assert ตัวที่สี่ให้ถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -104,7 +107,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่ห้า - `typeOf` กับ `notTypeOf`
+ต้องเลือกใช้ method `typeOf` หรือ `notTypeOf` กับ assert ตัวที่ห้าให้ถูกต้อง
 
 ```js
 (getUserInput) =>

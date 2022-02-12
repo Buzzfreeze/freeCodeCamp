@@ -8,10 +8,10 @@ dashedName: test-for-truthiness
 
 # --description--
 
-project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
+project นี้สร้างขึ้นจาก [Replit ตัวนี้](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
 
-`isTrue()` จะทดสอบหาค่า boolean `true` และ `isNotTrue()` จะส่งผ่านเมื่อได้รับค่าใดๆ ยกเว้นค่า boolean ของ `true' 
+method `isTrue()` จะผ่านถ้าได้ค่าเป็น boolean `true` และ `isNotTrue()` จะผ่านถ้าได้ค่าที่ไม่ใช่ boolean `true`
 
 ```js
 assert.isTrue(true, 'This will pass with the boolean value true');
@@ -19,15 +19,18 @@ assert.isTrue('true', 'This will NOT pass with the string value "true"');
 assert.isTrue(1, 'This will NOT pass with the number value 1');
 ```
 
-`isFalse()` และ `isNotFalse()` ก็มีอยู่เช่นกัน และทำงานคล้ายกับคู่จริง ยกเว้นว่ามองหาค่าบูลีนของ `false' 
+มี method `isFalse()` และ `isNotFalse()` อยู่ด้วยเช่นกัน และแล้วก็จะทำงานคล้ายๆกับ `isTrue()`
+และ `isNotTrue()` แต่ว่าจะใช้ดูค่าที่เป็น `false` แทน
 
 # --instructions--
 
-ภายใน `tests/1_unit-tests.js` ภายใต้การทดสอบที่มีป้ายกำกับ `#4' ในชุด `Basic Assertions` ให้เปลี่ยน `assert' แต่ละรายการเป็น `assert.isTrue` หรือ `asssert.isNotTrue` เพื่อให้ผ่านการทดสอบ ( ควรประเมินเป็นค่า `true`) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน 
+ในไฟล์ `tests/1_unit-tests.js` ให้ดูที่ test ใต้ `#4` ใน suite ที่ชื่อ `Basic Assertions`  
+ให้เปลี่ยน `assert` เป็น `assert.isTrue` หรือ `asssert.isNotTrue` เพื่อทำให้ test ผ่าน (ได้ค่าเป็น `true`) 
+อย่าแก้ไข argument ที่ส่งเข้าไปใน assert
 
 # --hints--
 
-การทดสอบทั้งหมดควรผ่าน 
+test ทั้งหมดต้องผ่าน
 
 ```js
 (getUserInput) =>
@@ -41,7 +44,7 @@ assert.isTrue(1, 'This will NOT pass with the number value 1');
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `isTrue` กับ `isNotTrue`
+ต้องเลือกใช้ method `isTrue` หรือ `isNotTrue` กับ assert ตัวแรกให้ถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -55,7 +58,7 @@ assert.isTrue(1, 'This will NOT pass with the number value 1');
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `isTrue` กับ `isNotTrue`
+ต้องเลือกใช้ method `isTrue` หรือ `isNotTrue` กับ assert ตัวที่สองให้ถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -73,7 +76,7 @@ assert.isTrue(1, 'This will NOT pass with the number value 1');
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สาม - `isTrue` กับ `isNotTrue` 
+ต้องเลือกใช้ method `isTrue` หรือ `isNotTrue` กับ assert ตัวที่สามให้ถูกต้อง
 
 ```js
 (getUserInput) =>

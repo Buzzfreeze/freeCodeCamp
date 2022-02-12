@@ -8,9 +8,9 @@ dashedName: zig-zag-matrix
 
 # --description--
 
-'zig-zag' array เป็นการจัดเรียงกำลังสองของจำนวนเต็ม $N^2$ ตัวแรก โดยที่ตัวเลขจะเพิ่มขึ้นตามลำดับเมื่อzig-zag ไปตาม array [anti-diagonals](https://en.wiktionary.org/wiki/antidiagonal).
+array 'zig-zag' เป็นการจัดเรียงกำลังสองของจำนวนเต็ม $N^2$ ตัวแรก โดยที่ตัวเลขจะเพิ่มขึ้นตามลำดับเมื่อ zig-zag ไปตาม [แนวขวาง](https://en.wiktionary.org/wiki/antidiagonal)
 
-ตัวอย่างเช่น สำหรับinput "5" ควรสร้างผลลัพธ์ต่อไปนี้:
+เช่นถ้า input เป็น `5` จะสร้าง array ในรูปแบบนี้:
 
 <pre>
  0  1  5  6 14
@@ -22,41 +22,41 @@ dashedName: zig-zag-matrix
 
 # --instructions--
 
-เขียนฟังก์ชันที่ใช้ขนาดของzig-zag-matrix และส่งกลับmatrixที่สอดคล้องกันเป็นarrayสองมิติ
+ให้เขียนฟังก์ชันที่รับค่าขนาดของเมตริกซ์ zig-zag และคืนค่าเป็น array สองมิติที่เป็นค่าของ zig-zag นั้น
 
 # --hints--
 
-ZigZagMatrix ควรเป็น function.
+`ZigZagMatrix` ต้องเป็นฟังก์ชัน
 
 ```js
 assert.equal(typeof ZigZagMatrix, 'function');
 ```
 
-ZigZagMatrix ควร return array.
+`ZigZagMatrix` ต้องคืนค่าเป็น array
 
 ```js
 assert.equal(typeof ZigZagMatrix(1), 'object');
 ```
 
-ZigZagMatrix ควร return an array of nested arrays.
+`ZigZagMatrix` ต้องคืนค่าเป็น array ซ้อน array
 
 ```js
 assert.equal(typeof ZigZagMatrix(1)[0], 'object');
 ```
 
-ZigZagMatrix(1) ควร return \[[0]].
+`ZigZagMatrix(1)` ต้องคืนค่าเป็น \[[0]]
 
 ```js
 assert.deepEqual(ZigZagMatrix(1), zm1);
 ```
 
-ZigZagMatrix(2) ควร return \[[0, 1], [2, 3]].
+`ZigZagMatrix(2)` ต้องคืนค่าเป็น \[[0, 1], [2, 3]]
 
 ```js
 assert.deepEqual(ZigZagMatrix(2), zm2);
 ```
 
-ZigZagMatrix(5) ควร return specified matrix.
+`ZigZagMatrix(5)` ต้องคืนค่าเป็นเมตริกซ์ที่ถูกต้อง
 
 ```js
 assert.deepEqual(ZigZagMatrix(5), zm5);

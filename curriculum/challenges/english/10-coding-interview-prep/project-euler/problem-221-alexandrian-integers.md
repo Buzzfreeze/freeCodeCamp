@@ -17,13 +17,14 @@ and
 $$\frac{1}{A} = \frac{1}{p} + \frac{1}{q} + \frac{1}{r}$$
 
 
-ตัวอย่างเช่น 630 เป็น Alexandrian integer ($p = 5$, $q = −7$, $r = −18$) อันที่จริง 630 เป็น Alexandrian integer ที่ 6 โดย Alexandrian integer 6 ตัวแรกคือ: 6, 42, 120, 156, 420 และ 630
+เช่น 630 เป็น Alexandrian integer ($p = 5$, $q = −7$, $r = −18$)  
+โดย 630 เป็น Alexandrian integer ตัวที่ 6 เพราะ Alexandrian integer 6 ตัวแรกคือ 6, 42, 120, 156, 420 และ 630
 
-หาลำดับที่ 150000th Alexandrian integer.
+หา Alexandrian integer ตัวที่ 150,000
 
 # --hints--
 
-`alexandrianIntegers()` ควร return `1884161251122450`.
+`alexandrianIntegers()` ต้องคืนค่าเป็น `1884161251122450`
 
 ```js
 assert.strictEqual(alexandrianIntegers(), 1884161251122450);

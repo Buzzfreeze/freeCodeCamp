@@ -8,7 +8,7 @@ dashedName: problem-83-path-sum-four-ways
 
 # --description--
 
-**Note:** ปัญหา 81 เวอร์ชันที่ท้าทายมากขึ้นอย่างเห็นได้ชัด
+**Note:** โจทย์ข้อนี้เป็นโจทย์ข้อ 81 เวอร์ชันที่ยากขึ้น
 
 ในเมทริกซ์ขนาด 5 คูณ 5 ด้านล่าง ผลรวมของเส้นทางขั้นต่ำจากบนซ้ายไปขวาล่าง โดยเลื่อนไปทางซ้าย ขวา ขึ้น และลง จะแสดงด้วยสีแดงตัวหนาและเท่ากับ `2297`
 
@@ -24,19 +24,19 @@ dashedName: problem-83-path-sum-four-ways
 
 # --hints--
 
-`pathSumFourWays(testMatrix1)` ควร return number.
+`pathSumFourWays(testMatrix1)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof pathSumFourWays(_testMatrix1) === 'number');
 ```
 
-`pathSumFourWays(testMatrix1)` ควร return `2297`.
+`pathSumFourWays(testMatrix1)` ต้องคืนค่าเป็น `2297`
 
 ```js
 assert.strictEqual(pathSumFourWays(_testMatrix1), 2297);
 ```
 
-`pathSumFourWays(testMatrix2)` ควร return `425185`.
+`pathSumFourWays(testMatrix2)` ต้องคืนค่าเป็น `425185`
 
 ```js
 assert.strictEqual(pathSumFourWays(_testMatrix2), 425185);

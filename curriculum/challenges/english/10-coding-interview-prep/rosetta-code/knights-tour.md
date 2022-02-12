@@ -8,51 +8,55 @@ dashedName: knights-tour
 
 # --description--
 
-[Knight's Tour](https://en.wikipedia.org/wiki/Knight%27s_tour) ปัญหา: คุณมีกระดานหมากรุก `w` \* `h` ว่างเปล่า แต่สำหรับอัศวินคนเดียวในตาราง อัศวินต้องทำตามลำดับการเคลื่อนไหวทางกฎหมายที่ส่งผลให้อัศวินไปทุกตารางบนกระดานหมากรุกเพียงครั้งเดียว โปรดทราบว่า *not* เป็นข้อกำหนดให้ `closed` ทัวร์ นั่นคืออัศวินไม่จำเป็นต้องจบภายในตำแหน่งเริ่มต้นเพียงครั้งเดียว
+โจทย์ปัญหา [Knight's Tour](https://en.wikipedia.org/wiki/Knight%27s_tour) 
+
+คุณมีกระดานหมากรุกขนาด `w` \* `h` และบนกระดานนั้นมีม้า 1 ตัว
+
+ม้าตัวนี้ต้องเดินไปบนกระดานครบทุกช่อง โดยห้ามเหยียบทับช่องเดิม และไม่จำเป็นต้องกลับมาหยุดที่ช่องเริ่มต้น
 
 # --instructions--
 
-เขียนฟังก์ชันที่ใช้ `w` และ `h` เป็นพารามิเตอร์และส่งกลับจำนวนตำแหน่งเริ่มต้นจากตำแหน่งที่เป็นไปได้ที่จะบรรลุภารกิจตามที่ระบุไว้ข้างต้น
+ให้เขียนฟังก์ชันที่รับค่า `w` และ `h` และให้คืนค่าเป็นจำนวนตำแหน่งเริ่มต้นที่จะทำให้ม้าเดินไปได้ครบทุกช่อง
 
 # --hints--
 
-`knightTour` ควรเป็น function.
+`knightTour` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof knightTour == 'function');
 ```
 
-`knightTour(6, 6)` ควร return number.
+`knightTour(6, 6)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof knightTour(6, 6) == 'number');
 ```
 
-`knightTour(6, 6)` ควร return `36`.
+`knightTour(6, 6)` ต้องคืนค่าเป็น `36`
 
 ```js
 assert.equal(knightTour(6, 6), 36);
 ```
 
-`knightTour(5, 6)` ควร return `30`.
+`knightTour(5, 6)` ต้องคืนค่าเป็น `30`
 
 ```js
 assert.equal(knightTour(5, 6), 30);
 ```
 
-`knightTour(4, 6)` ควร return `12`.
+`knightTour(4, 6)` ต้องคืนค่าเป็น `12`
 
 ```js
 assert.equal(knightTour(4, 6), 12);
 ```
 
-`knightTour(7, 3)` ควร return `10`.
+`knightTour(7, 3)` ต้องคืนค่าเป็น `10`
 
 ```js
 assert.equal(knightTour(7, 3), 10);
 ```
 
-`knightTour(8, 6)` ควร return `48`.
+`knightTour(8, 6)` ต้องคืนค่าเป็น `48`
 
 ```js
 assert.equal(knightTour(8, 6), 48);

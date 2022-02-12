@@ -8,9 +8,9 @@ dashedName: problem-157-solving-the-diophantine-equation
 
 # --description--
 
-พิจารณาสมการdiophantine $\frac{1}{a} + \frac{1}{b} = \frac{p}{{10}^n}$ กับ $a$, $b$, $p$, $ n$ จำนวนเต็มบวกและ $a ≤ b$
+พิจารณาสมการ diophantine $\frac{1}{a} + \frac{1}{b} = \frac{p}{{10}^n}$ โดยมี $a$, $b$, $p$, $ n$ เป็นจำนวนเต็มบวกและ $a ≤ b$
 
-สำหรับ $n = 1$ สมการนี้มีคำตอบ 20 ข้อที่แสดงด้านล่าง:
+ถ้า $n = 1$ สมการนี้มีคำตอบ 20 ข้อดังนี้
 
 $$\begin{array}{lllll}
   \frac{1}{1}  + \frac{1}{1}  = \frac{20}{10} & \frac{1}{1} + \frac{1}{2}  = \frac{15}{10}
@@ -27,11 +27,11 @@ $$\begin{array}{lllll}
 & \frac{1}{20} + \frac{1}{20}  = \frac{1}{10}
 \end{array}$$
 
-สมการนี้มีคำตอบสำหรับ $1 ≤ n ≤ 9$ กี่คำตอบ?
+สมการนี้มีกี่คำตอบ ถ้า $1 ≤ n ≤ 9$
 
 # --hints--
 
-`diophantineEquation()` ควร return `53490`.
+`diophantineEquation()` ต้องคืนค่าเป็น `53490`
 
 ```js
 assert.strictEqual(diophantineEquation(), 53490);

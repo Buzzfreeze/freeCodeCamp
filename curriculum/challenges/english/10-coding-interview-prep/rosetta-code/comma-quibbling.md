@@ -8,20 +8,20 @@ dashedName: comma-quibbling
 
 # --description--
 
-Comma quibbling เป็นงานที่ Eric Lippert กำหนดไว้ใน [blog](https://blogs.msdn.com/b/ericlippert/archive/2009/04/15/comma-quibbling.aspx).
+Comma quibbling เป็นโจทย์ที่ Eric Lippert เขียนไว้ใน [บล็อกบองเข้า](https://blogs.msdn.com/b/ericlippert/archive/2009/04/15/comma-quibbling.aspx).
 
 # --instructions--
 
-เขียนฟังก์ชันเพื่อสร้างoutput string ซึ่งเป็นการรวมคำ input จาก list/sequence โดยที่:
+ให้เขียนฟังก์ชันี่คืนค่าเป็นสตริง โดยเชื่อมคำที่ระบุเข้าไปตามหลักเกณฑ์นี้
 
 <ol>
-  <li>An input of no words produces the output string of just the two brace characters (<code>"{}"</code>)</li>
-  <li>An input of just one word, e.g. <code>["ABC"]</code>, produces the output string of the word inside the two braces, e.g. <code>"{ABC}"</code></li>
-  <li>An input of two words, e.g. <code>["ABC", "DEF"]</code>, produces the output string of the two words inside the two braces with the words separated by the string <code>" and "</code>, e.g. <code>"{ABC and DEF}"</code></li>
-  <li>An input of three or more words, e.g. <code>["ABC", "DEF", "G", "H"]</code>, produces the output string of all but the last word separated by <code>", "</code> with the last word separated by <code>" and "</code> and all within braces; e.g. <code>"{ABC, DEF, G and H}"</code></li>
+  <li>ถ้าไม่ระบุคำ ให้คืนค่าเป็น (<code>"{}"</code>)</li>
+  <li>ถ้าระบุหนึ่งคำ เช่น <code>["ABC"]</code> จะคืนค่าเป็น <code>"{ABC}"</code></li>
+  <li>ถ้าระบุสองคำ เช่น <code>["ABC", "DEF"]</code> จะคืนค่าเป็นคำที่คั่นด้วย <code>" and "</code> เช่น <code>"{ABC and DEF}"</code></li>
+  <li>ถ้าระบุมากกว่าสองคำ เช่น <code>["ABC", "DEF", "G", "H"]</code> จะคืนค่าเป็นคำที่คั่นด้วย <code>", "</code> แต่จะคั่นคำสุดท้ายด้วย <code>" and "</code> และครอบข้อความทั้งหมดไว้ในปีกกา <code>"{ABC, DEF, G and H}"</code></li>
 </ol>
 
-Test function ด้วยชุดข้อมูลต่อไปนี้ที่แสดงผลลัพธ์ของคุณที่นี่ในหน้านี้:
+ให้ลองทดสอบฟังก์ชันด้วยชุดข้อมูลนี้:
 
 <ul>
   <li>[] # (No input words).</li>
@@ -30,41 +30,41 @@ Test function ด้วยชุดข้อมูลต่อไปนี้ท
   <li>["ABC", "DEF", "G", "H"]</li>
 </ul>
 
-**Note:** สมมติว่าคำเป็น non-empty strings ตัวพิมพ์ใหญ่
+**Note:** ในการทำสอบจะถือว่า string ทุกตัวมีข้อความอยู่ด้านใน และตัวอักษรทั้งหมดจะเป็นตัวพิมพ์ใหญ่
 
 # --hints--
 
-`quibble` ควรเป็น function.
+`quibble` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof quibble === 'function');
 ```
 
-`quibble(["ABC"])` ควร return string.
+`quibble(["ABC"])` ต้องคืนค่าเป็นสตริง
 
 ```js
 assert(typeof quibble(['ABC']) === 'string');
 ```
 
-`quibble([])` ควร return "{}".
+`quibble([])` ต้องคืนค่าเป็น "{}"
 
 ```js
 assert.equal(quibble(testCases[0]), results[0]);
 ```
 
-`quibble(["ABC"])` ควร return "{ABC}".
+`quibble(["ABC"])` ต้องคืนค่าเป็น "{ABC}"
 
 ```js
 assert.equal(quibble(testCases[1]), results[1]);
 ```
 
-`quibble(["ABC", "DEF"])` ควร return "{ABC and DEF}".
+`quibble(["ABC", "DEF"])` ต้องคืนค่าเป็น "{ABC and DEF}"
 
 ```js
 assert.equal(quibble(testCases[2]), results[2]);
 ```
 
-`quibble(["ABC", "DEF", "G", "H"])` ควร return "{ABC,DEF,G and H}".
+`quibble(["ABC", "DEF", "G", "H"])` ต้องคืนค่าเป็น "{ABC,DEF,G and H}"
 
 ```js
 assert.equal(quibble(testCases[3]), results[3]);

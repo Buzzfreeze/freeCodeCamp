@@ -21,31 +21,31 @@ dashedName: problem-91-right-triangles-with-integer-coordinates
 
 # --hints--
 
-`rightTrianglesIntCoords(2)` ควร return number.
+`rightTrianglesIntCoords(2)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof rightTrianglesIntCoords(2) === 'number');
 ```
 
-`rightTrianglesIntCoords(2)` ควร return `14`.
+`rightTrianglesIntCoords(2)` ต้องคืนค่าเป็น `14`
 
 ```js
 assert.strictEqual(rightTrianglesIntCoords(2), 14);
 ```
 
-`rightTrianglesIntCoords(10)` ควร return `448`.
+`rightTrianglesIntCoords(10)` ต้องคืนค่าเป็น `448`
 
 ```js
 assert.strictEqual(rightTrianglesIntCoords(10), 448);
 ```
 
-`rightTrianglesIntCoords(25)` ควร return `3207`.
+`rightTrianglesIntCoords(25)` ต้องคืนค่าเป็น `3207`
 
 ```js
 assert.strictEqual(rightTrianglesIntCoords(25), 3207);
 ```
 
-`rightTrianglesIntCoords(50)` ควร return `14234`.
+`rightTrianglesIntCoords(50)` ต้องคืนค่าเป็น `14234`
 
 ```js
 assert.strictEqual(rightTrianglesIntCoords(50), 14234);

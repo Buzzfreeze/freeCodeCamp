@@ -8,24 +8,34 @@ dashedName: create-an-es6-javascript-map
 
 # --description--
 
-JavaScript เวอร์ชันใหม่มี Map object ในตัวซึ่งมีฟังก์ชันการทำงานส่วนใหญ่ที่เราได้เขียนมาแล้วในแบบทดสอบที่ผ่านมา Map object นี้แม้ว่าจะคล้ายกับ JavaScript object ปกติ แต่ก็มีฟังก์ชันที่มีประโยชน์บางอย่างที่ object ปกติขาดไป ตัวอย่างเช่น ES6 Map ที่ติดตามลำดับการแทรกของรายการที่เพิ่มเข้าไป ลองมาดูภาพรวมที่เข้าใจได้ยิ่งขึ้นของ method: `.has(key)` return ค่า true หรือ false ตามการมีอยู่ของคีย์, `.get(key)` return ค่าที่เกี่ยวข้องกับคีย์, `.set(key, value)` ตั้งค่า key value pair ใหม่, `.delete(key)` ลบ key value pair, `.clear()` ลบ key value pair ทั้งหมด, `.entries()` return ค่า array ของคีย์ทั้งหมดตามลำดับการแทรก, `.values()` return array ของค่าทั้งหมดในลำดับการแทรก
+JavaScript เวอร์ชันใหม่มี Map object ให้เราแล้วโดยที่ไม่ต้องเขียนเอง โดยจะมีฟังก์ชันที่เราเขียนกันมาในแบบทดสอบที่แล้วทั้งหมด 
+ถึงแม้ Map object จะคล้ายกับ JavaScript object ปกติ แต่ก็มีฟังก์ชันที่มีประโยชน์บางอย่างที่ object ปกติขาดไป ตัวอย่างเช่น ES6 Map จะเก็บลำดับของข้อมูลที่เพิ่มเข้าไปด้วย 
+ลองมาดูภาพรวมของ method กัน: 
+`.has(key)` จะคืนค่าเป็น true หรือ false ตามการมีอยู่ของคีย์
+`.get(key)` จะคืนค่าเป็นค่าของคีย์นั้น
+`.set(key, value)` จะตั้งค่า key value pair ใหม่
+`.delete(key)` จะลบ key value pair นั้น
+`.clear()` จะลบ key value pair ทั้งหมด
+`.entries()` จะคืนค่าเป็น array ของคีย์ทั้งหมดตามลำดับที่เพิ่มเข้าไป
+`.values()` จะคืนค่าเป็น array ของค่าทั้งหมดตามลำดับที่เพิ่มเข้าไป
 
 # --instructions--
 
-กำหนด JavaScript Map object และกำหนดตัวแปรชื่อ myMap ให้กับ object นั้น เพิ่มคีย์และ value pair `freeCodeCamp` `Awesome!` ลงไป
+ให้ประกาศ JavaScript Map object และเก็บตัวแปรชื่อ myMap 
+จากนั้นเพิ่มคีย์ `CareerVio` ที่มีค่าเป็น `Awesome!` ลงไป
 
 # --hints--
 
-ควรมี myMap object
+ต้องมี object ชื่อ myMap
 
 ```js
 assert(typeof myMap === 'object');
 ```
 
-myMap ควรมี key value pair `freeCodeCamp` และ `Awesome!` ข้างใน
+myMap ต้องมี `CareerVio` ที่มีค่าเป็น `Awesome!` อยู่ข้างใน
 
 ```js
-assert(myMap.get('freeCodeCamp') === 'Awesome!');
+assert(myMap.get('CareerVio') === 'Awesome!');
 ```
 
 # --seed--
@@ -41,5 +51,5 @@ assert(myMap.get('freeCodeCamp') === 'Awesome!');
 ```js
 const myMap = new Map();
 
-myMap.set("freeCodeCamp", "Awesome!");
+myMap.set("CareerVio", "Awesome!");
 ```

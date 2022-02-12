@@ -8,7 +8,7 @@ dashedName: problem-11-largest-product-in-a-grid
 
 # --description--
 
-ภายใน 20×20 grid ด้านล่าง, มีสี่จำนวนที่เป็นเส้นทแยง(diagonal line) จะถูกmarkเป็นสี่แดง
+ภายในกริดขนาด 20×20 ด้านล่าง มีสี่จำนวนที่เป็นเส้นทแยง(diagonal line) ที่เป็นสีแดง
 
 <div style='text-align: center;'>
   08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08<br>
@@ -33,25 +33,25 @@ dashedName: problem-11-largest-product-in-a-grid
   01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48<br>
 </div>
 
-ผลคูณของจำนวนพวกนั้นคือ 26 × 63 × 78 × 14 = 1788696.
+ผลคูณของจำนวนนั้นคือ 26 × 63 × 78 × 14 = 1788696
 
-ให้หาผลคูณสูงสุดของจำนวนสี่จำนวนที่ติดกันอยู่ใน direction เดียวกัน (up, down, left, right, or diagonally) ใน `arr` grid
+ให้หาผลคูณสูงสุดของจำนวนสี่จำนวนที่ติดกันอยู่ในทิศทางเดียวกัน (ขึ้น, ลง, ซ้าย, ขวา, หรือติดกันแบบเฉียงๆ) ในกริด `arr`
 
 # --hints--
 
-`largestGridProduct(testGrid)` ควร return number
+`largestGridProduct(testGrid)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof largestGridProduct(testGrid) === 'number');
 ```
 
-`largestGridProduct(testGrid)` ควร return 14169081
+`largestGridProduct(testGrid)` ต้องคืนค่าเป็น 14169081
 
 ```js
 assert.strictEqual(largestGridProduct(testGrid), 14169081);
 ```
 
-`largestGridProduct(grid)` ควร return 70600674
+`largestGridProduct(grid)` ต้องคืนค่าเป็น 70600674
 
 ```js
 assert.strictEqual(largestGridProduct(grid), 70600674);

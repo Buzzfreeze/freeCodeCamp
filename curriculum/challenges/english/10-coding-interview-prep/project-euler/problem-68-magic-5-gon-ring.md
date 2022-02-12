@@ -8,11 +8,11 @@ dashedName: problem-68-magic-5-gon-ring
 
 # --description--
 
-พิจารณา "magic" 3-gon ring เติม numbers 1 ถึง 6 และแต่ละ line ให้เพิ่มจนถึง 9
+พิจารณา "magic" 3-gon ring เติมเลข 1 ถึง 6 และแต่ละเส้นจะบวกกันได้ 9
 
 <img class="img-responsive center-block" alt="a completed example of a 3-gon ring" src="https://cdn-media-1.freecodecamp.org/project-euler/3-gon-ring.png" style="background-color: white; padding: 10px;">
 
-Working **clockwise**, และเริ่มจากกลุ่มที่มีโหนดภายนอกต่ำสุดที่เป็นตัวเลข (4,3,2 ในตัวอย่างนี้) แต่ละโซลูชันสามารถอธิบายได้ไม่ซ้ำกัน ตัวอย่างเช่น วิธีแก้ปัญหาข้างต้นสามารถอธิบายได้โดยชุด: 4,3,2; 6,2,1; 5,1,3.
+ให้ทำงาน **ตามเข็มนาฬิกา**, และเริ่มจากกลุ่มที่มีโหนดภายนอกต่ำสุด (4,3,2 ในตัวอย่างนี้) แต่ละโซลูชันสามารถอธิบายได้ไม่ซ้ำกัน ตัวอย่างเช่น วิธีแก้ปัญหาข้างต้นสามารถอธิบายได้โดยชุด: 4,3,2; 6,2,1; 5,1,3.
 
 เป็นไปได้ที่จะทำให้แหวนสมบูรณ์ด้วยผลรวมที่แตกต่างกันสี่แบบ: 9, 10, 11 และ 12 มีทั้งหมดแปดวิธี
 
@@ -31,22 +31,22 @@ Working **clockwise**, และเริ่มจากกลุ่มที่
 
 </div>
 
-โดยการเชื่อมแต่ละกลุ่มเข้าด้วยกัน สามารถสร้างstringที่มีตัวเลข 9 หลักได้stringสูงสุดสำหรับวงแหวน 3 เหลี่ยมคือ 432621513
+การเชื่อมแต่ละกลุ่มเข้าด้วยกันจะร้างสตริงที่มีตัวเลข 9 หลักได้ สตริงสูงสุดสำหรับวงแหวนนี้คือ 432621513
 
 
-การใช้ตัวเลข 1 ถึง 10 และขึ้นอยู่กับการจัดเรียง สามารถสร้างstring 16 และ 17 หลักได้ สูงสุดเท่าไหร่ **16-digit** string สำหรับ "magic" 5-gon ring
+การใช้ตัวเลข 1 ถึง 10 และขึ้นอยู่กับการจัดเรียง สามารถสร้างสตริง 16 และ 17 หลักได้ สูงสุดเท่าไหร่ **16-digit** สตริง สำหรับ "magic" 5-gon ring
 
 <img class="img-responsive center-block" alt="a blank diagram of a 5-gon ring" src="https://cdn-media-1.freecodecamp.org/project-euler/5-gon-ring.png" style="background-color: white; padding: 10px;">
 
 # --hints--
 
-`magic5GonRing()` ควร return a number.
+`magic5GonRing()` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof magic5GonRing() === 'number');
 ```
 
-`magic5GonRing()` ควร return 6531031914842725.
+`magic5GonRing()` ต้องคืนค่าเป็น 6531031914842725
 
 ```js
 assert.strictEqual(magic5GonRing(), 6531031914842725);

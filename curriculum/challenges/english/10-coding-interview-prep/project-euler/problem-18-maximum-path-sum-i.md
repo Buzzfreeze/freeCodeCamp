@@ -8,7 +8,7 @@ dashedName: problem-18-maximum-path-sum-i
 
 # --description--
 
-เริ่มจาก top ของสามเหลี่ยมด้านล่างและเคลื่อนจากจำนวนเลขที่ต่อเนื่องกันในแถวข้างล่าง
+เริ่มจากจุดบนสุดของสามเหลี่ยมด้านล่าง และเคลื่อนจากจำนวนเลขที่ต่อเนื่องกันในแถวข้างล่าง
 ค่าที่สูงที่สุดจากบนลงล่างคือ 23
 
 <span style='display: block; text-align: center;'>
@@ -18,8 +18,8 @@ dashedName: problem-18-maximum-path-sum-i
   8 5 <strong style='color: red;'>9</strong> 3
 </span>
 
-ดังเช่น 3 + 7 + 4 + 9 = 23
-หาค่าสูงสุดจากบนลงล่างของสามเหลี่ยมข้างล่าง:
+เพราะว่า 3 + 7 + 4 + 9 = 23
+ให้หาค่าสูงสุดจากบนลงล่างของสามเหลี่ยมข้างล่าง:
 
 75  
 95 64  
@@ -40,19 +40,19 @@ dashedName: problem-18-maximum-path-sum-i
 
 # --hints--
 
-`maximumPathSumI(testTriangle)` ควร return number
+`maximumPathSumI(testTriangle)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof maximumPathSumI(testTriangle) === 'number');
 ```
 
-`maximumPathSumI(testTriangle)` ควร return 23
+`maximumPathSumI(testTriangle)` ต้องคืนค่าเป็น 23
 
 ```js
 assert.strictEqual(maximumPathSumI(testTriangle), 23);
 ```
 
-`maximumPathSumI(numTriangle)` ควร return 1074
+`maximumPathSumI(numTriangle)` ต้องคืนค่าเป็น 1074
 
 ```js
 assert.strictEqual(maximumPathSumI(numTriangle), 1074);

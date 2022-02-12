@@ -8,17 +8,18 @@ dashedName: timestamp-microservice
 
 # --description--
 
-สร้างแอพแบบ full stack ด้วย JavaScript ที่ทำงานคล้ายกับเว็บไซต์ <https://timestamp-microservice.freecodecamp.rocks/>  การทำโปรเจคนี้ คุณจะต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งดังต่อไปนี้
+ให้สร้างแอปแบบ full stack โดยใช้ JavaScript ที่ทำงานคล้ายกับเว็บไซต์นี้ <https://timestamp-microservice.freecodecamp.rocks/>  
+ในการทำโปรเจคนี้ คุณจะต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งดังต่อไปนี้
 
--   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-timestamp/) ในการทำโปรเจค โดยทำให้เสร็จทีละส่วน
--   ใช้เว็บไซต์ [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-timestamp) ในการทำโปรเจคให้เสร็จสมบูรณ์
--   ใช้ตัวสร้างไซต์ที่คุณเลือก ทำโปรเจคให้เสร็จสมบูรณ์ และอย่าลืมรวมไฟล์ทั้งหมดจาก GitHub repo ของคุณด้วย
+- ให้ Clone repoisitory จาก [GitHub](https://github.com/freeCodeCamp/boilerplate-project-timestamp/) มา และทำแบบทดสอบบนเครื่องของคุณเอง
+- สร้างจากโปรเจกต์ของเราในเว็บไซต์ [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-timestamp)
+- ใช้เครื่องมือสร้างเว็บอื่นๆ และอย่าลืมเก็บไฟล์ไว้ใน GitHub repo ของคุณด้วย
 
-เมื่อคุณทำเสร็จแล้ว ตรวจสอบให้แน่ใจด้วยว่า ไฟล์โปรเจคของคุณอยู่ในสถานะที่ทุกคนสามารถมองเห็นได้(public) หลังจากนั้นส่งลิงก์ URL ไว้ใน `Solution Link` หรือส่งลิงก์ซอร์สโค้ดของโปรเจคไว้ใน `GitHub Link` อีกช่องทางหนึ่งก็ได้
+เมื่อคุณทำเสร็จแล้ว ให้อัปโหลดโปรเจกต์ของคุณขึ้นโฮสต์ และเปิดเป็น public จากนั้นให้ส่งลิงก์เข้าไปใน `Link คำตอบ` และจะส่งลิงก์ของ source code เข้าไปใน `GitHub Link` ด้วยก็ได้
 
 # --hints--
 
-คุณควรที่จะให้แหล่งโปรเจคของคุณ ไม่ใช่ตัวอย่างจาก URL
+ให้ส่งลิงก์โปรเจกต์ของคุณ ไม่ใช่ URL ตัวอย่างของเรา
 
 ```js
 (getUserInput) => {
@@ -28,7 +29,7 @@ dashedName: timestamp-microservice
 };
 ```
 
-คำขอ `/api/:date?` พร้อมกับวันที่ที่ถูกต้อง ควรที่จะคืนค่าอ็อบเจ็กต์ของ JSON ด้วย `unix` คีย์ ซึ่งก็คือ Unix timestamp ของวันที่อินพุตในหน่วยของมิลลิวินาที
+การส่ง request ไปยัง `/api/:date?` พร้อมกับวันที่ที่ถูกต้อง ต้องคืนค่าเป็น JSON object ที่มีคีย์ชื่อ `unix` และมีค่าเป็น Unix timestamp ของวันที่ที่ส่งไปในหน่วยมิลลิวินาที
 
 ```js
 (getUserInput) =>
@@ -46,7 +47,7 @@ dashedName: timestamp-microservice
   );
 ```
 
-คำขอ `/api/:date?` พร้อมกับวันที่ที่ถูกต้อง ควรที่จะคืนค่าอ็อบเจ็กต์ของ JSON ด้วย `utc` คีย์ นั่นคือสตริงของวันที่อินพุตในรูปแบของ `Thu, 01 Jan 1970 00:00:00 GMT`
+การส่ง request ไปยัง `/api/:date?` พร้อมกับวันที่ที่ถูกต้อง ต้องคืนค่าเป็น JSON object ที่มีคีย์ชื่อ `utc` และมีค่าเป็นวันที่ที่ส่งไปในรูปแบบ string เช่น `Thu, 01 Jan 1970 00:00:00 GMT`
 
 ```js
 (getUserInput) =>
@@ -64,7 +65,7 @@ dashedName: timestamp-microservice
   );
 ```
 
-คำขอที่ `/api/1451001600000` ควรที่จะคืนค่า `{ unix: 1451001600000, utc: "Fri, 25 Dec 2015 00:00:00 GMT" }`
+การส่ง request ไปที่ `/api/1451001600000` ต้องคืนค่ากลับมาเป็น `{ unix: 1451001600000, utc: "Fri, 25 Dec 2015 00:00:00 GMT" }`
 
 ```js
 (getUserInput) =>
@@ -81,7 +82,7 @@ dashedName: timestamp-microservice
   );
 ```
 
-โปรเจคของคุณสามารถจัดการวันที่ได้ด้วยการวิคราะห์คำได้เป็นอย่างดี โดยการใช้ `new Date(date_string)`
+ถ้าส่งวันที่ที่ parse ได้โดยใช้ `new Date(date_string)` ไป โปรเจคของคุณต้องทำงานได้
 
 ```js
 (getUserInput) =>
@@ -98,7 +99,7 @@ dashedName: timestamp-microservice
   );
 ```
 
-หากเราอินพุตค่าสตริงวันที่ไม่ถูกต้อง API จะส่งคืนค่าอ็อบเจ็กต์ในรูปแบบ `{ error : "Invalid Date" }`
+ถ้า `new Date(date_string)` parse วันที่ไม่ได้ แล้ว API ของคุณต้องคืนค่าเป็น `{ error : "Invalid Date" }`
 
 ```js
 (getUserInput) =>
@@ -112,7 +113,7 @@ dashedName: timestamp-microservice
   );
 ```
 
-ในส่วนของพารามิเตอร์วันที่ที่ว่างเปล่า ระบบจะส่งคืนค่าเป็นเวลา ปัจจุบันในรูปแบบของอ็อบเจ็กต์ของ JSON พร้อมกับ `unix` คีย์
+ถ้าไม่ได้ส่งวันที่ไป ต้องคืนค่าเป็น JSON object ที่มีคีย์ชื่อ `unix` โดยมีค่าเป็นเวลาปัจจุบัน
 
 ```js
 (getUserInput) =>
@@ -127,7 +128,7 @@ dashedName: timestamp-microservice
   );
 ```
 
-พารามิเตอร์วันที่ที่ว่างเปล่า ระบบจะส่งคืนค่าเป็นเวลา ปัจจุบันในรูปแบบของอ็อบเจ็กต์ของ JSON พร้อมกับ `utc` คีย์
+ถ้าไม่ได้ส่งวันที่ไป ต้องคืนค่าเป็น JSON object ที่มีคีย์ชื่อ `utc` โดยมีค่าเป็นเวลาปัจจุบัน
 
 ```js
 (getUserInput) =>

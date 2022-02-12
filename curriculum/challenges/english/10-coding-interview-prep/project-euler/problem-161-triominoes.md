@@ -8,13 +8,13 @@ dashedName: problem-161-triominoes
 
 # --description--
 
-triomino เป็นรูปทรงที่ประกอบด้วยสี่เหลี่ยมสามช่องที่เชื่อมกันที่ขอบ
+triomino เป็นรูปทรงที่ประกอบด้วยสี่เหลี่ยมสามอันที่เชื่อมกันที่ขอบ
 
-มีสองรูปแบบพื้นฐาน
+โดยมีสองรูปแบบพื้นฐานคือ
 
 <img class="img-responsive center-block" alt="two basic triominoes forms" src="https://cdn.freecodecamp.org/curriculum/project-euler/triominoes-1.gif" style="background-color: white; padding: 10px;">
 
-หากคำนึงถึงทิศทางที่เป็นไปได้ทั้งหมดมีหก
+ถ้าคำนึงถึงทิศทางด้วย จะมีรูปแบบที่เป็นไปได้ทั้งหมดมีหกแบบ
 
 <img class="img-responsive center-block" alt="triominoes forms including orientation" src="https://cdn.freecodecamp.org/curriculum/project-euler/triominoes-2.gif" style="background-color: white; padding: 10px;">
 
@@ -23,11 +23,11 @@ triomino เป็นรูปทรงที่ประกอบด้วย�
 <img class="img-responsive center-block" alt="animation showing 41 ways of filling 2x9 grid with triominoes" src="https://cdn.freecodecamp.org/curriculum/project-euler/triominoes-3.gif" style="background-color: white; padding: 10px;">
 
 
-ตาราง 9 คูณ 12 สามารถเรียงต่อกันด้วยวิธีtriominoesได้กี่วิธี 
+ตาราง 9 คูณ 12 สามารถเรียงต่อกันด้วยวิธี triominoe ได้กี่วิธี 
 
 # --hints--
 
-`triominoes()` should return `20574308184277972`.
+`triominoes()` ต้องคืนค่าเป็น `20574308184277972`
 
 ```js
 assert.strictEqual(triominoes(), 20574308184277972);

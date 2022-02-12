@@ -8,27 +8,27 @@ dashedName: longest-string-challenge
 
 # --description--
 
-หาstringที่ยาวที่สุดในบรรดาstringที่กำหนด
+หาสตริงที่ยาวที่สุดในบรรดาสตริงที่กำหนด
 
 # --instructions--
 
-เขียนฟังก์ชันที่รับarrayของstringและส่งกลับstringที่มีความยาวเท่ากับความยาวที่ยาวที่สุด
+ให้เขียนฟังก์ชันที่รับค่า array ของสตริง และคืนค่าเป็น array ของสตริงที่มีความยาวมากที่สุด
 
 # --hints--
 
-`longestString` ควรเป็น function.
+`longestString` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof longestString == 'function');
 ```
 
-`longestString(["a", "bb", "ccc", "ee", "f", "ggg"])` ควร return array.
+`longestString(["a", "bb", "ccc", "ee", "f", "ggg"])` ต้องคืนค่าเป็น array
 
 ```js
 assert(Array.isArray(longestString(['a', 'bb', 'ccc', 'ee', 'f', 'ggg'])));
 ```
 
-`longestString(["a", "bb", "ccc", "ee", "f", "ggg"])` ควร return `["ccc", "ggg"]'`.
+`longestString(["a", "bb", "ccc", "ee", "f", "ggg"])` ต้องคืนค่าเป็น `["ccc", "ggg"]'`
 
 ```js
 assert.deepEqual(longestString(['a', 'bb', 'ccc', 'ee', 'f', 'ggg']), [
@@ -37,7 +37,7 @@ assert.deepEqual(longestString(['a', 'bb', 'ccc', 'ee', 'f', 'ggg']), [
 ]);
 ```
 
-`longestString(["afedg", "bb", "sdccc", "efdee", "f", "geegg"])` ควร return `["afedg", "sdccc", "efdee", "geegg"]`.
+`longestString(["afedg", "bb", "sdccc", "efdee", "f", "geegg"])` ต้องคืนค่าเป็น `["afedg", "sdccc", "efdee", "geegg"]`
 
 ```js
 assert.deepEqual(
@@ -46,7 +46,7 @@ assert.deepEqual(
 );
 ```
 
-`longestString(["a", "bhghgb", "ccc", "efde", "fssdrr", "ggg"])` ควร return `["bhghgb", "fssdrr"]`.
+`longestString(["a", "bhghgb", "ccc", "efde", "fssdrr", "ggg"])` ต้องคืนค่าเป็น `["bhghgb", "fssdrr"]`
 
 ```js
 assert.deepEqual(
@@ -55,7 +55,7 @@ assert.deepEqual(
 );
 ```
 
-`longestString(["ahgfhg", "bdsfsb", "ccc", "ee", "f", "ggdsfg"])` ควร return `["ahgfhg", "bdsfsb", "ggdsfg"]`.
+`longestString(["ahgfhg", "bdsfsb", "ccc", "ee", "f", "ggdsfg"])` ต้องคืนค่าเป็น `["ahgfhg", "bdsfsb", "ggdsfg"]`
 
 ```js
 assert.deepEqual(
@@ -64,7 +64,7 @@ assert.deepEqual(
 );
 ```
 
-`longestString(["a", "bbdsf", "ccc", "edfe", "gzzzgg"])` ควร return `["gzzzgg"]`.
+`longestString(["a", "bbdsf", "ccc", "edfe", "gzzzgg"])` ต้องคืนค่าเป็น `["gzzzgg"]`
 
 ```js
 assert.deepEqual(longestString(['a', 'bbdsf', 'ccc', 'edfe', 'gzzzgg']), [

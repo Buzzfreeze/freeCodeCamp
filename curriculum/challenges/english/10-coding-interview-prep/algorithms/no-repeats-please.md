@@ -8,13 +8,13 @@ dashedName: no-repeats-please
 
 # --description--
 
-จงหาค่าของ จำนวนการเรียงสับเปลี่ยนของตัวอักษรที่ให้มา โดยตัวที่ต่อเนื่องกันต้องไม่ซ้ำกัน
+จงหาค่าของ จำนวนการเรียงสับเปลี่ยนของตัวอักษรที่ให้มา โดยตัวที่อักษรที่ติดกันต้องไม่ซ้ำกัน
 
-สมมุติให้ ตัวอักษรที่ให้มาไม่ซ้ำกัน  
+โดยให้มองว่าตัวอักษรแต่ละตัวที่ให้มาเป็นคนละตัวกัน  
 
-ตัวอย่าง `aab`  จะได้คำตอบเป็น 2 เนื่องจากมีการเปลี่ยนลำดับทั้งหมด 6 แบบ (`aab`, `aab`, `aba`, `aba`, `baa`, `baa`)
+เช่น ถ้าส่ง string `aab` เข้าไป จะได้คำตอบเป็น 2 เนื่องจากมีจำนวนการเรียงสับเปลี่ยนของตัวอักษรทั้งหมด 6 แบบ (`aab`, `aab`, `aba`, `aba`, `baa`, `baa`)
 
-แต่มีเพียง 2 แบบเท่านั้นที่ตัวต่อเนื่องกันไม่ซ้ำกัน (`aba` และ `aba`)
+แต่มีเพียง 2 แบบเท่านั้นที่อักษรที่ติดกันไม่ซ้ำกัน (คือ `aba` และ `aba`)
 
 # --hints--
 
@@ -24,55 +24,55 @@ dashedName: no-repeats-please
 assert.isNumber(permAlone('aab'));
 ```
 
-`permAlone("aab")` ควรได้ผลลัพธ์เป็น 2.
+`permAlone("aab")` ควรได้ผลลัพธ์เป็น 2
 
 ```js
 assert.strictEqual(permAlone('aab'), 2);
 ```
 
-`permAlone("aaa")` ควรได้ผลลัพธ์เป็น 0.
+`permAlone("aaa")` ควรได้ผลลัพธ์เป็น 0
 
 ```js
 assert.strictEqual(permAlone('aaa'), 0);
 ```
 
-`permAlone("aabb")` ควรได้ผลลัพธ์เป็น 8.
+`permAlone("aabb")` ควรได้ผลลัพธ์เป็น 8
 
 ```js
 assert.strictEqual(permAlone('aabb'), 8);
 ```
 
-`permAlone("abcdefa")` ควรได้ผลลัพธ์เป็น 3600.
+`permAlone("abcdefa")` ควรได้ผลลัพธ์เป็น 3600
 
 ```js
 assert.strictEqual(permAlone('abcdefa'), 3600);
 ```
 
-`permAlone("abfdefa")` ควรได้ผลลัพธ์เป็น 2640.
+`permAlone("abfdefa")` ควรได้ผลลัพธ์เป็น 2640
 
 ```js
 assert.strictEqual(permAlone('abfdefa'), 2640);
 ```
 
-`permAlone("zzzzzzzz")` ควรได้ผลลัพธ์เป็น 0.
+`permAlone("zzzzzzzz")` ควรได้ผลลัพธ์เป็น 0
 
 ```js
 assert.strictEqual(permAlone('zzzzzzzz'), 0);
 ```
 
-`permAlone("a")` ควรได้ผลลัพธ์เป็น 1.
+`permAlone("a")` ควรได้ผลลัพธ์เป็น 1
 
 ```js
 assert.strictEqual(permAlone('a'), 1);
 ```
 
-`permAlone("aaab")` ควรได้ผลลัพธ์เป็น 0.
+`permAlone("aaab")` ควรได้ผลลัพธ์เป็น 0
 
 ```js
 assert.strictEqual(permAlone('aaab'), 0);
 ```
 
-`permAlone("aaabb")` ควรได้ผลลัพธ์เป็น 12.
+`permAlone("aaabb")` ควรได้ผลลัพธ์เป็น 12
 
 ```js
 assert.strictEqual(permAlone('aaabb'), 12);

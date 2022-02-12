@@ -8,7 +8,7 @@ dashedName: problem-28-number-spiral-diagonals
 
 # --description--
 
-เริ่มจาก 1 aและเลื่อนไปทางขวาตามเข็มนาฬิกาแบบ 5 ต่อ 5 spiral ตามสูตรด้านล่าง:
+เริ่มจาก 1 และเลื่อนไปทางขวาตามเข็มนาฬิกา ตามข้อมูลด้านล่าง:
 
 <div style='padding-left: 4em;'>
   <div style='color: red; display: inline;'>21</div> 22 23 24 <div style='color: red; display: inline;'>25</div><br>
@@ -18,37 +18,37 @@ dashedName: problem-28-number-spiral-diagonals
   <div style='color: red; display: inline;'>17</div> 16 15 14 <div style='color: red; display: inline;'>13</div><br>
 </div>
 
-ผลรวมของ diagonals คือ 101
+ผลรวมของค่าในแนวทะแยงคือ 101
 
-ให้หาผลรวมของ diagonals ใน `n` ต่อ `n` spiral จากวิธีเดียวกัน
+ให้หาผลรวมของค่าในแนวทะแยงในพื้นที่ขนาด `n`x`n`
 
 # --hints--
 
-`spiralDiagonals(101)` ควร return number.
+`spiralDiagonals(101)` ต้องคืนค่าเป็น number
 
 ```js
 assert(typeof spiralDiagonals(101) === 'number');
 ```
 
-`spiralDiagonals(101)` ควร return 692101.
+`spiralDiagonals(101)` ต้องคืนค่าเป็น 692101
 
 ```js
 assert(spiralDiagonals(101) == 692101);
 ```
 
-`spiralDiagonals(303)` ควร return 18591725.
+`spiralDiagonals(303)` ต้องคืนค่าเป็น 18591725
 
 ```js
 assert(spiralDiagonals(303) == 18591725);
 ```
 
-`spiralDiagonals(505)` ควร return 85986601.
+`spiralDiagonals(505)` ต้องคืนค่าเป็น 85986601
 
 ```js
 assert(spiralDiagonals(505) == 85986601);
 ```
 
-`spiralDiagonals(1001)` ควร return 669171001.
+`spiralDiagonals(1001)` ต้องคืนค่าเป็น 669171001
 
 ```js
 assert(spiralDiagonals(1001) == 669171001);

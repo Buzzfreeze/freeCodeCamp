@@ -8,31 +8,33 @@ dashedName: build-a-simon-game
 
 # --description--
 
-**เป้าหมายของโปรเจคนี้ :** สร้างแอพพลิเคชั่น [CodePen.io](https://codepen.io) ที่มีการทำงานเหมือนกับลิงค์นี้ : [https://codepen.io/freeCodeCamp/full/obYBjE](https://codepen.io/freeCodeCamp/full/obYBjE).
+**เป้าหมายของโปรเจคนี้ :** ลองสร้างแอปโดยใช้ [CodePen.io](https://codepen.io) ให้มีฟังก์ชันเหมือนกับ : <https://codepen.io/freeCodeCamp/full/obYBjE>
 
-ดูว่าผู้ใช้งานอยากได้อะไร [user stories](https://en.wikipedia.org/wiki/User_story). สามารถใช้ ไลบรารีหรือ API ใดก็ได้ที่ต้องการ
+ให้เขียนแอปเพื่อให้ทำงานได้ตาม [User Story](https://en.wikipedia.org/wiki/User_story) ด้านล่าง คุณจะใช้ไลบรารีหรือ API ตัวไหนก็ได้ และจะจัดแต่งหน้าตาของแอปอย่างไรก็ได้
 
-**User Story:** จะขึ้นชุดการกดปุ่มแบบสุ่ม
+ให้ลองเข้าลิงก์ตัวอย่างและลองเล่นเกมดู จะได้เข้าใจหลักการของเกมนี้ก่อนเริ่มเขียนโค้ด
 
-**User Story:** ทุกครั้งที่กดชุดการกดปุ่มที่ถูกต้องเข้าไป จะเห็นการกดปุ่มแบบเดียวกันแต่มีขั้นตอนเพิ่มเติม
+**User Story:** หน้านี้จะสร้าง pattern การกดปุ่มแบบสุ่มให้
 
-**User Story:** เมื่อกดปุ่มเองกับเมื่อกดปุ่มตามชุดการกด จะได้ยินเสียงที่สอดคล้องกับแต่ละปุ่ม
+**User Story:** เมื่อกดปุ่มตาม pattern ถูกต้อง หน้าเว็บจะแสดง pattern เดิม และเพิ่มปุ่มใหม่เข้าไป
+
+**User Story:** เมื่อกดปุ่มหรือเมื่อแสดง pattern การกดให้ดู จะได้ยินเสียงตามปุ่มที่กด
 
 **User Story:** ถ้ากดปุ่มผิด จะขึ้นว่ากดผิด จากนั้นจะขึ้นปุ่มให้เริ่มใหม่อีกครั้ง
 
-**User Story:** สามารถดูจำนวนระดับขั้น ในการกดปัจจุบันได้
+**User Story:** สามารถดูจำนวนลำดับขั้นในการกดปัจจุบันได้
 
 **User Story:** สามารถกดปุ่มเพื่อรีสตาร์ทได้ และเกมจะกลับไปที่ระดับเริ่มต้น
 
-**User Story:** สามารถเล่นโหมดที่ยากขึ้นได้ โดยหากกดปุ่มผิด ระบบจะแจ้งว่ากดผิด แล้วเกมจะรีสตาร์ทโดยจะกลับไประดับเริ่มต้น
+**User Story:** สามารถเล่นโหมดที่ยากขึ้นได้ โดยหากกดปุ่มผิดระบบจะแจ้งว่ากดผิด แล้วเกมจะรีสตาร์ทโดยจะกลับไประดับเริ่มต้น
 
 **User Story:** จะชนะเกมเมื่อผ่านระดับที่ 20 โดยจะขึ้นว่า เป็นผู้ชนะ จากนั้นเกมจะเริ่มต้นใหม่
 
-**Hint:** ไฟล์ mp3 ไว้ใช้สำหรับปุ่มต่างๆ: `https://s3.amazonaws.com/freecodecamp/simonSound1.mp3`, `https://s3.amazonaws.com/freecodecamp/simonSound2.mp3`, `https://s3.amazonaws.com/freecodecamp/simonSound3.mp3`, `https://s3.amazonaws.com/freecodecamp/simonSound4.mp3`.
+**Hint:** ไฟล์ mp3 ไว้ใช้สำหรับปุ่มต่างๆ: `https://s3.amazonaws.com/freecodecamp/simonSound1.mp3`, `https://s3.amazonaws.com/freecodecamp/simonSound2.mp3`, `https://s3.amazonaws.com/freecodecamp/simonSound3.mp3`, `https://s3.amazonaws.com/freecodecamp/simonSound4.mp3`
 
-เมื่อทำเสร็จแล้ว ให้ใส่ลิงค์โปรเจค CodePen ด้านล่าง แล้วกดปุุ่ม "ฉันทำภารกิจที่ท้าทายนี้เสร็จแล้ว"
+เมื่อทำเสร็จแล้ว ให้ใส่ลิงก์โปรเจคของ CodePen ด้านล่าง แล้วกดปุุ่ม "ฉันทำภารกิจท้าทายนี้เสร็จแล้ว"
 
-สามารถขอคำแนะนำเกี่ยวกับโปรเจคของคุณโดยการแชร์ลงใน forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
+คุณสามารถขอคำแนะนำเกี่ยวกับโปรเจคนี้ได้ที่ forum [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409)
 
 # --solutions--
 

@@ -10,43 +10,34 @@ dashedName: subleq
 
 [Subleq](https://rosettacode.org/wiki/eso:Subleq) เป็นตัวอย่างของ [One-Instruction Set Computer (OISC)](https://en.wikipedia.org/wiki/One_instruction_set_computer).
 
-ได้รับการตั้งชื่อตามคำสั่งเดียว ซึ่งก็คือ **SU**btract และ **B** ranch if **L**ess than หรือ **EQ**ual
-ไปเป็นศูนย์
+Subleq ย่อมาจาก **SU**btract and **B** ranch if **L**ess than or **EQ**ual to zero
 
-งานของคุณคือสร้างล่ามที่เลียนแบบเครื่องดังกล่าว
+ให้สร้าง interpreter ที่ทำงานเหมือนเครื่อง Subleq นี้
 
-หน่วยความจำของเครื่องประกอบด้วยarrayของจำนวนเต็มที่ลงนาม ขนาดคำที่เหมาะสมใด ๆ ก็ใช้ได้ แต่หน่วยความจำต้อง
+หน่วยความจำของเครื่องจะเป็น array ของ signed integer 
+แต่หน่วยความจำนี้จะต้องเก็บได้ทั้งจำนวนเต็มบวก และจำนวนเต็มลบ
 
-สามารถถือจำนวนลบเป็นบวกได้
-
-การดำเนินการเริ่มต้นด้วยตัวชี้คำสั่งที่มุ่งไปที่คำแรกซึ่งเป็นที่อยู่ 0 ดำเนินการดังนี้:
+การดำเนินการจะให้ pointer ชี้ไปยังตำแหน่ง 0 โดยดำเนินการดังนี้:
 
 <ol>
-  <li>Let A, B, and C be the value stored in the three consecutive words in memory starting at the instruction pointer.</li>
-  <li>Advance the instruction pointer 3 words to point at the address after the one containing C.</li>
-  <li>If A is -1, then a character is read from standard input and its code point stored in the address given by B. C
-    is unused.</li>
-  <li>If B is -1, then the number contained in the address given by A is interpreted as a code point and the
-    corresponding character output. C is again unused.</li>
-  <li>Otherwise, both A and B are treated as the addresses of memory locations. The number contained in the address
-    given by A is subtracted from the number at the address given by B (and the result stored back in address B). If
-    the result is zero or negative, the value C becomes the new instruction pointer.</li>
-  <li>If the instruction pointer becomes negative, execution halts.</li>
+  <li>ถ้าให้ A, B, และ C เป็นค่าที่เก็บอยู่ในหน่วยความจำสามส่วน โดยเริ่มที่ pointer</li>
+  <li>ให้ขยับ pointer ไปอยู่หลัง C</li>
+  <li>ถ้า A เป็น -1 แล้วจะอ่านค่าตัวอักษรตามปกติตามตำแหน่งที่ระบุใน B โดยจะยังไม่ได้ใช้ C</li>
+  <li>ถ้า B เป็น -1 แล้วตัวเลขจะเก็บในตำแหน่งตามที่ระบุใน A จะเป็นตำแหน่ง code โดยจะยังไม่ได้ใช้ C</li>
+  <li>ถ้าไม่ตรงกับเงื่อนไขด้านบน จะมองทั้ง A และ B เป็นตำแหน่งของหน่วยความจำ และจะนำตัวเลขจากตำแหน่งที่ระบุโดย A ไปลบด้วยตัวเลขจากตำแหน่งที่ระบุโดย B (และนำผลลัพธ์กลับไปเก็บใน B) ถ้าผลลัพธ์เป็นศูนย์หรือติดลบ ตำแหน่ง C จะกลายเป็น pointer ตัวใหม่</li>
+  <li>ถ้า pointer ติดลบ ให้หยุดการทำงาน</li>
 </ol>
 
-ที่อยู่เชิงลบอื่นๆ นอกเหนือจาก -1 อาจถือว่าเทียบเท่ากับ -1 หรือสร้างข้อผิดพลาดตามที่เห็นสมควร
+ตำแหน่งอื่นๆนอกเหนือจาก -1 ให้ถือว่าเป็น -1 หรือจะมองเป็น error ก็ได้ แล้วแต่ต้องการ
 
-โซลูชันของคุณควรยอมรับโปรแกรมที่จะรันบนเครื่อง แยกจากinputที่ป้อนไปยังโปรแกรมเอง
+โซลูชันของคุณควรยอมรับโปรแกรมที่จะรันบนเครื่อง แยกจาก input ที่ป้อนไปยังโปรแกรมเอง
 
-โปรแกรมนี้ควรอยู่ใน "รหัสเครื่อง" ดิบย่อย - ตัวเลขทศนิยมที่คั่นด้วยช่องว่าง โดยไม่มีชื่อสัญลักษณ์หรือ
-
-ส่วนขยายระดับassemblyอื่น ๆ ที่จะโหลดลงในหน่วยความจำโดยเริ่มต้นที่ที่อยู่ 0 แสดงผลลัพธ์ของโซลูชันของคุณเมื่อ
-
-เลี้ยง "สวัสดีชาวโลก!" โปรแกรม. (โปรดทราบว่าตัวอย่างถือว่า ASCII หรือ superset ของมัน เช่น Latin-N . ใดๆ
+โปรแกรมนี้ต้องเป็น raw subleq "machine code" - ตัวเลขทศนิยมที่คั่นด้วยช่องว่าง โดยไม่มีชื่อสัญลักษณ์หรือ ส่วนขยายระดับ assembly อื่น ๆ ที่จะโหลดลงในหน่วยความจำโดยเริ่มต้นที่ตำแหน่ง 0  
+แสดงผลลัพธ์ของโซลูชันของคุณเมื่อ ส่งค่าโปรแกรม "Hello, Wold!" เข้าไป
 
 <pre>15 17 -1 17 -1 -1 16 1 -1 16 3 -1 15 15 0 0 -1 72 101 108 108 111 44 32 119 111 114 108 100 33 10 0</pre>
 
-ซึ่งสอดคล้องกับสิ่งนี้ใน hypothetical assembler language:
+ซึ่งสอดคล้องกับ hypothetical assembler language:
 
 <pre>start:
     zero, message, -1
@@ -61,19 +52,18 @@ message: "Hello, world!\n\0"
 
 # --instructions--
 
-เขียนฟังก์ชันที่ใช้arrayของจำนวนเต็มเป็นพารามิเตอร์ นี่แสดงถึงองค์ประกอบหน่วยความจำ ฟังก์ชั่น
-
-ควรตีความลำดับและส่งคืนสตริงเอาต์พุต สำหรับงานนี้ สมมติว่าไม่มีอินพุตมาตรฐาน
+ให้เขียนฟังก์ชันที่รับค่าเป็น array ของจำนวนเต็ม ซึ่งแสดงถึงหน่วยความจำ
+ฟังก์ชันนี้ต้อง intepret sequence และคืนค่าเป็นสตริง
 
 # --hints--
 
-`Subleq` ควรเป็น function.
+`Subleq` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof Subleq == 'function');
 ```
 
-`Subleq([15, 17, -1, 17, -1, -1, 16, 1, -1, 16, 3, -1, 15, 15, 0, 0, -1, 72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33, 0])` ควร return string.
+`Subleq([15, 17, -1, 17, -1, -1, 16, 1, -1, 16, 3, -1, 15, 15, 0, 0, -1, 72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33, 0])` ต้องคืนค่าเป็นสตริง
 
 ```js
 assert(
@@ -113,7 +103,7 @@ assert(
 );
 ```
 
-`Subleq([15, 17, -1, 17, -1, -1, 16, 1, -1, 16, 3, -1, 15, 15, 0, 0, -1, 72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33, 0])` ควร return `"Hello, world!"`.
+`Subleq([15, 17, -1, 17, -1, -1, 16, 1, -1, 16, 3, -1, 15, 15, 0, 0, -1, 72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33, 0])` ต้องคืนค่าเป็น `"Hello, world!"`
 
 ```js
 assert.equal(

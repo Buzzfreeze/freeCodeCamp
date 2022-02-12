@@ -8,50 +8,69 @@ dashedName: insert-an-element-into-a-max-heap
 
 # --description--
 
-ตอนนี้เราจะไปต่อที่โครงสร้างข้อมูล tree อื่น ซึ่งก็คือ binary heap ที่ เป็น binary tree ที่เรียงลำดับบางส่วนซึ่งตรงตามคุณสมบัติของ heap  คุณสมบัติ heap ระบุความสัมพันธ์ระหว่าง parent node และ child node คุณอาจมี heap สูงสุด ซึ่ง parent node ทั้งหมดมีค่ามากกว่าหรือเท่ากับ child node หรือ heap ขั้นต่ำ ซึ่งเป็นกรณีกลับกัน  binary heap ยังเป็น binary tree ที่สมบูรณ์อีกด้วย ซึ่งหมายความว่าทุกระดับของ tree เต็มแล้ว และหากระดับสุดท้ายเต็มบางส่วน  tree จะถูกเติมจากซ้ายไปขวา
+มาต่อกันที่ tree อีกรูปแบบหนึ่งคือ binary heap 
 
-แม้ว่า binary heap อาจถูกนำไปใช้เป็นโครงสร้างแบบ tree ที่มี node ที่มีการอ้างอิงด้านซ้ายและขวา การเรียงลำดับบางส่วนตามคุณสมบัติของ heap ช่วยให้เราสามารถแสดง heap ด้วย array ได้ ความสัมพันธ์ระหว่าง parent และ child คือสิ่งที่เราสนใจ และด้วยการคำนวณทางคณิตศาสตร์อย่างง่าย เราสามารถคำนวณ child ของ parent และ parent ของ  childe node ใดๆ
+binary heap เป็น binary tree ที่มีการเรียงลำดับแค่บางส่วน ซึ่งตรงตามคุณสมบัติของ heap โดยคุณสมบัติ heap จะระบุความสัมพันธ์ระหว่าง parent node และ child node 
 
-ตัวอย่าง ลองดู array นี้ที่แสดงถึง binary min heap:
+โดย max heap คือโครงสร้างที่ parent node ทั้งหมดมีค่ามากกว่าหรือเท่ากับ child node 
+และ min heap คือโครงสร้างที่ตรงข้ามกับ max heap  
+
+binary heap ยังเป็น binary tree ที่สมบูรณ์อีกด้วย แปลว่าทุกระดับของ tree จะมีข้อมูล และถ้าระดับสุดท้ายมีข้อมูลไม่ครบ ข้อมูลใน tree จะถูกเติมจากซ้ายไปขวา
+
+แม้ว่า binary heap อาจถูกนำไปใช้เป็นโครงสร้างแบบ tree ที่มี node ที่มีการอ้างอิงด้านซ้ายและขวา การเรียงลำดับบางส่วนตามคุณสมบัติของ heap ช่วยให้เราสามารถแสดง heap เป็น array ได้ 
+
+เพราะว่าเราสนใจแค่ความสัมพันธ์ระหว่าง parent และ child และจะทำให้เราคำนวณ child ของ parent และ parent ของ childe node ตัวไหนก็ได้ ได้ง่ายๆ
+
+ลองดูตัวอย่าง  
+array นี้เป็น binary min heap:
 
 ```js
 [ 6, 22, 30, 37, 63, 48, 42, 76 ]
 ```
 
- Root node `6` เป็น element แรก child ของมันคือ `22` และ `30` หากเราดูที่ความสัมพันธ์ระหว่างดัชนี array ของค่าเหล่านี้ สำหรับ index `i` child คือ `2 * i + 1` และ `2 * i + 2` ในทำนองเดียวกัน element ที่ index `0` เป็น parent ของสอง child นี้ที่ index `1` และ `2` โดยทั่วไปแล้วเราสามารถค้นหา parent ของ node ที่ index ใดก็ได้ดังต่อไปนี้: `Math.floor((i - 1) / 2)` รูปแบบเหล่านี้จะเป็นจริงเมื่อ binary tree สามารถมีได้ขึ้นทุกขนาด สุดท้ายเราสามารถปรับเปลี่ยนเล็กน้อยเพื่อให้การคำนวณนี้ง่ายยิ่งขึ้นโดยข้าม element แรกใน array  การทำเช่นนี้จะสร้างความสัมพันธ์ต่อไปนี้สำหรับ element ใดๆ ที่ index `i` ที่ระบุ:
+root node คือ element แรกที่เป็น `6` ซึ่งมี child เป็น `22` และ `30` หากเราดูที่ความสัมพันธ์ระหว่าง index ของ array ของค่าเหล่านี้ จะเห็นว่า index `i` จะมี child เป็น `2 * i + 1` และ `2 * i + 2`  
+ทำให้ element ที่ index `0` เป็น parent ของสอง child ที่ index `1` และ `2` 
 
-The root node is the first element, `6`. Its children are `22` and `30`. If we look at the relationship between the array indices of these values, for index `i` the children are `2 * i + 1` and `2 * i + 2`. Similarly, the element at index `0` is the parent of these two children at indices `1` and `2`. More generally, we can find the parent of a node at any index with the following: `Math.floor((i - 1) / 2)`. These patterns will hold true as the binary tree grows to any size. Finally, we can make a slight adjustment to make this arithmetic even easier by skipping the first element in the array. Doing this creates the following relationship for any element at a given index `i`:
+ถ้าเราอยากหาว่า node i มี parent เป็น element ไหน เราจะหาได้จากสมการนี้ `Math.floor((i - 1) / 2)` 
+ซึ่งความสัมพันธ์นี้จะเป็นจริงเสมอ ไม่ว่า binary tree จะมีขนาดเท่าไหร่ 
 
-ตัวอย่าง array:
-Example array representation:
+ซึ่งถ้าเราข้าม element แรกใน array การคำนวนก็จะง่ายขึ้นอีก 
+
+ลองดูตัวอย่าง:
 
 ```js
 [ null, 6, 22, 30, 37, 63, 48, 42, 76 ]
 ```
 
-Element ของ child ทางซ้าย คือ  `i * 2`
+child ทางซ้ายของ element คือ  `i * 2`
 
-Element ของ child ทางขวา คือ `i * 2 + 1`
+child ทางขวาของ element คือ `i * 2 + 1`
 
-Element ของ parent คือ `Math.floor(i / 2)`
+และ parent element คือ `Math.floor(i / 2)`
 
-เมื่อคุณเรียนรู้เกี่ยวกับสมการคณิตศาสตร์แล้ว โดยการใช้การแสดง array จะมีประโยชน์มาก เนื่องจากตำแหน่งของ node สามารถระบุได้อย่างรวดเร็วด้วยสมการนี้ และการใช้หน่วยความจำจะลดลงเนื่องจากคุณไม่จำเป็นต้องรักษาการอ้างอิงไปยัง child node
+เมื่อคุณเข้าใจสมการแล้ว การที่เราแสดงโครงสร้างนี้ในรูปแบบ array จะมีประโยชน์มาก เพราะว่าเราสามารถระบุตำแหน่งของ node ด้วยสมการได้อย่างรวดเร็ว และจะใช้หน่วยความจำน้อยลงด้วย เพราะว่าคุณไม่ต้องทำการอ้างอิง child node
 
 # --instructions--
 
-คำแนะนำ: เราลองจะสร้าง heap สูงสุด เริ่มต้นด้วยการสร้าง `insert` method  ซึ่งเพิ่ม element ลงใน heap ของเรา ในระหว่างการเพิ่มจำเป็นต้องรักษาคุณสมบัติของ heap อยู่เสมอ สำหรับ heap สูงสุด หมายความว่า root element ควรมีค่ามากที่สุดใน tree เสมอ และ parent node ทั้งหมดควรมากกว่า child สำหรับการนำ heap ไปใช้งาน array  โดยทั่วไปสามารถทำได้ในสามขั้นตอน:
+เราลองจะสร้าง max heap กัน 
+
+เริ่มต้นด้วยการสร้าง method `insert` ซึ่งจะเพิ่ม element ลงใน heap ของเรา ในระหว่างการเพิ่มข้อมูล คุณจำเป็นต้องรักษาคุณสมบัติของ heap ไว้ตลอด 
+
+โดยคุณสมบัติของ max heap คือ root element ต้องมีค่ามากที่สุดใน tree เสมอ และ parent node ต้องมีค่ามากกว่า child เสมอ
+
+และเราจะสามารถแปล heap เป็น array ได้โดยใช้สามขั้นตอนนี้:
 
 <ol>
-  <li>เพิ่ม element ใหม่ไปยังท้ายสุดของ array</li>
-  <li>ถ้า element นั้นใหญ่กว่า parent ของมัน ให้สลับค่ามัน</li>
-  <li>สลับไปเรื่อยๆ จนกว่า element ใหม่นั้นจะน้อยกว่า parent ของมันหรือคุณสลับไปจนถึง root ของ tree แล้ว</li>
+  <li>เพิ่ม element ใหม่ไปยังท้าย array</li>
+  <li>ถ้า element นั้นมากกว่า parent ของ ให้สลับค่ากับ parent</li>
+  <li>สลับไปเรื่อยๆ จนกว่า element ใหม่นั้นจะมีค่าน้อยกว่า parent หรือคุณสลับไปจนถึง root ของ tree แล้ว</li>
 </ol>
 
-สุดท้าย เพิ่ม `print` method ซึ่ง return array ของรายการทั้งหมดที่เพิ่มลงใน heap 
+สุดท้าย ให้เพิ่ม method `print` ซึ่งจะคืนค่าเป็น array ของรายการทั้งหมดที่เพิ่มลงใน heap 
 
 # --hints--
 
-ควรมีโครงสร้างข้อมูล MaxHeap
+ต้องมีโครงสร้างข้อมูล MaxHeap
 
 ```js
 assert(
@@ -65,7 +84,7 @@ assert(
 );
 ```
 
-MaxHeap ควรมี method ที่เรียกว่า insert
+MaxHeap ต้องมี method ชื่อ insert
 
 ```js
 assert(
@@ -81,7 +100,7 @@ assert(
 );
 ```
 
-MaxHeap ควรมี method ที่เรียกว่า print
+MaxHeap ต้องมี method ชื่อ print
 
 ```js
 assert(
@@ -97,7 +116,7 @@ assert(
 );
 ```
 
-Insert method ควรเพิ่ม element ตามคุรสมบัติของ max heap
+method `insert` ต้องพิ่ม element ตามคุณสมบัติของ max heap
 
 ```js
 assert(
@@ -125,9 +144,9 @@ assert(
 
 ```js
 var MaxHeap = function() {
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
     
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 };
 ```
 
@@ -135,7 +154,7 @@ var MaxHeap = function() {
 
 ```js
 var MaxHeap = function() {
-    // Only change code below this line
+    // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
     this.heap = [];
     this.parent = index => {
       return Math.floor((index - 1) / 2);
@@ -159,6 +178,6 @@ var MaxHeap = function() {
     this.print = () => {
       return this.heap;
     }
-    // Only change code above this line
+    // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 };
 ```

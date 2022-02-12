@@ -8,15 +8,15 @@ dashedName: problem-190-maximising-a-weighted-product
 
 # --description--
 
-ให้ $S_m = (x_1, x_2, \ldots, x_m)$ เป็น $m$-tuple ของจำนวนจริงบวกที่มี $x_1 + x_2 + \cdots + x_m = m$ ซึ่ง $P_m = x_1 \times {x_2} ^2 \times \cdots \times {x_m}^m$ ถูกขยายให้ใหญ่สุด
+ให้ $S_m = (x_1, x_2, \ldots, x_m)$ เป็น $m$-tuple ของจำนวนจริงบวกที่มี $x_1 + x_2 + \cdots + x_m = m$ ซึ่ง $P_m = x_1 \times {x_2} ^2 \times \cdots \times {x_m}^m$ มีค่าสูงสุด
 
-ตัวอย่างเช่น สามารถยืนยันได้ว่า $[P_{10}] = 4112$ ([ ] คือฟังก์ชันส่วนจำนวนเต็ม)
+เช่น เราสามารถพิสูจน์ได้ว่า $[P_{10}] = 4112$ ([ ] คือจำนวนเต็มของฟังก์ชัน)
 
-หา $\sum {[P_m]}$ สำหรับ $2 ≤ m ≤ 15$
+ให้หา $\sum {[P_m]}$ ถ้า $2 ≤ m ≤ 15$
 
 # --hints--
 
-`maximisingWeightedProduct()` ควร return `371048281`.
+`maximisingWeightedProduct()` ต้องคืนค่าเป็น `371048281`
 
 ```js
 assert.strictEqual(maximisingWeightedProduct(), 371048281);

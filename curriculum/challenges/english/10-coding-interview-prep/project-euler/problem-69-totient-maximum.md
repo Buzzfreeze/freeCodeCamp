@@ -8,8 +8,8 @@ dashedName: problem-69-totient-maximum
 
 # --description--
 
-Euler's Totient function, ${\phi}(n)$ (phi function)
-ใช้เพื่อกำหนดจำนวนตัวเลขที่น้อยกว่า `n` ซึ่งค่อนข้างสำคัญสำหรับ `n` ตัวอย่างเช่น เนื่องจาก 1, 2, 4, 5, 7 และ 8 มีค่าน้อยกว่าเก้าและค่อนข้างเฉพาะกับเก้า ${\phi}(9) = 6$
+Euler's Totient function หรือ ${\phi}(n)$ (phi function)
+ใช้เพื่อกำหนดจำนวนตัวเลขที่น้อยกว่า `n` ซึ่งค่อนข้างสำคัญสำหรับ `n` ตัวอย่างเช่น เนื่องจาก 1, 2, 4, 5, 7 และ 8 มีค่าน้อยกว่าเก้าและหารเก้าไม่ลงตัว ${\phi}(9) = 6$
 <div style='margin-left: 4em;'>
 
 | $n$ | $\text{Relatively Prime}$ | $\displaystyle{\phi}(n)$ | $\displaystyle\frac{n}{{\phi}(n)}$ |
@@ -26,37 +26,37 @@ Euler's Totient function, ${\phi}(n)$ (phi function)
 
 </div>
 
-จะเห็นได้ว่า `n` = 6 มีค่าสูงสุด $\displaystyle\frac{n}{{\phi}(n)}$ สำหรับ `n` ≤ 10.
+จะเห็นได้ว่า `n` = 6 มีค่าสูงสุด $\displaystyle\frac{n}{{\phi}(n)}$ สำหรับ `n` ≤ 10
 
 หาค่า `n` ≤ `limit` สำหรับ $\displaystyle\frac{n}{{\phi(n)}}$ ที่สูงสุด
 
 # --hints--
 
-`totientMaximum(10)` ควร return number.
+`totientMaximum(10)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof totientMaximum(10) === 'number');
 ```
 
-`totientMaximum(10)` ควร return `6`.
+`totientMaximum(10)` ต้องคืนค่าเป็น `6`
 
 ```js
 assert.strictEqual(totientMaximum(10), 6);
 ```
 
-`totientMaximum(10000)` ควร return `2310`.
+`totientMaximum(10000)` ต้องคืนค่าเป็น `2310`
 
 ```js
 assert.strictEqual(totientMaximum(10000), 2310);
 ```
 
-`totientMaximum(500000)` ควร return `30030`.
+`totientMaximum(500000)` ต้องคืนค่าเป็น `30030`
 
 ```js
 assert.strictEqual(totientMaximum(500000), 30030);
 ```
 
-`totientMaximum(1000000)` ควร return `510510`.
+`totientMaximum(1000000)` ต้องคืนค่าเป็น `510510`
 
 ```js
 assert.strictEqual(totientMaximum(1000000), 510510);

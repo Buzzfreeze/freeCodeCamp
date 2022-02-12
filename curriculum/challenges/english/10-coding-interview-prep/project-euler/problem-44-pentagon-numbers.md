@@ -8,23 +8,25 @@ dashedName: problem-44-pentagon-numbers
 
 # --description--
 
-Pentagonal numbers ถูกกำหนดโดย P<sub>n</sub>=`n`(3`n`−1)/2 และสิบจำนวนแรกของ pentagonal numbers เป็น
+Pentagonal number จะใช้สมการ P<sub>n</sub>=`n`(3`n`−1)/2 เลขสิบตัวแรกของ pentagonal number คือ
 
 1, 5, 12, 22, 35, 51, 70, 92, 117, 145, ...
 
-เราจะเห็นว่า P<sub>4</sub> + P<sub>7</sub> = 22 + 70 = 92 = P<sub>8</sub>. อย่างไรก็ตามผลต่างคือ 70 − 22 = 48 ไม่ได้เป็น pentagonal
+เราจะเห็นว่า P<sub>4</sub> + P<sub>7</sub> = 22 + 70 = 92 = P<sub>8</sub> อย่างไรก็ตามผลต่างของเลขนี้ 70 − 22 = 48 ไม่ได้เป็น pentagonal number
 
-หาคู่ของ pentagonal numbers P<sub>j</sub> and P<sub>k</sub> ที่มีผลรวมและผลต่างเป็น pentagonal และ D = |P<sub>k</sub> − P<sub>j</sub>| มีค่าน้อยที่สุด ค่าของ D คืออะไร
+หาคู่ของ pentagonal number P<sub>j</sub> and P<sub>k</sub> ที่มีผลรวมและผลต่างเป็น pentagonal number โดยที่ D = |P<sub>k</sub> − P<sub>j</sub>| มีค่าน้อยที่สุด 
+
+ค่าของ D คืออะไร?
 
 # --hints--
 
-`pentagonNumbers()` ควร return number.
+`pentagonNumbers()` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof pentagonNumbers() === 'number');
 ```
 
-`pentagonNumbers()` ควร return 5482660.
+`pentagonNumbers()` ต้องคืนค่าเป็น 5482660
 
 ```js
 assert.strictEqual(pentagonNumbers(), 5482660);

@@ -8,7 +8,9 @@ dashedName: cut-a-rectangle
 
 # --description--
 
-สี่เหลี่ยมที่กำหนดให้สร้างจาก *m* × *n* สี่เหลี่ยม ถ้า *m* และ *n* ไม่เป็นเลขคี่ทั้งคู่ ก็เป็นไปได้ที่จะตัดเส้นทางผ่านสี่เหลี่ยมผืนผ้าตามขอบสี่เหลี่ยมเพื่อให้สี่เหลี่ยมนั้นแยกออกเป็นสองส่วนเชื่อมต่อกันที่มีรูปร่างเหมือนกัน (หลังจากหมุนชิ้นใดชิ้นหนึ่งไป 180 °) เส้นทางดังกล่าวทั้งหมดสำหรับสี่เหลี่ยม 2 × 2 และ 4 × 3 แสดงอยู่ด้านล่าง
+สี่เหลี่ยมผืนผ้าจะสร้างจากสี่เหลี่ยม *m* × *n*
+
+ถ้า *m* และ *n* ไม่เป็นเลขคี่ทั้งคู่ ก็เป็นไปได้ที่จะตัดเส้นทางผ่านสี่เหลี่ยมผืนผ้าตามขอบสี่เหลี่ยม เพื่อให้สี่เหลี่ยมนั้นแยกออกเป็นสองส่วนเชื่อมต่อกันที่มีรูปร่างเหมือนกัน (เมื่อหมุนชิ้นใดชิ้นหนึ่งไป 180°) เส้นทางทั้งหมดสำหรับสี่เหลี่ยม 2 × 2 และ 4 × 3 แสดงอยู่ด้านล่าง
 
 <div style="width: 100%; text-align: center;">
   <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="520" height="170" aria-hidden="true" alt="Diagram showing the possible paths for 2 by 2 and 4 by 3 rectangles">
@@ -92,47 +94,47 @@ dashedName: cut-a-rectangle
 
 # --instructions--
 
-เขียนฟังก์ชันที่คำนวณจำนวนวิธีต่างๆ ในการตัดสี่เหลี่ยม *m* × *n*
+ให้เขียนฟังก์ชันที่คำนวณจำนวนวิธีในการตัดสี่เหลี่ยมขนาด *m* × *n*
 
 # --hints--
 
-`cutRectangle` ควรเป็น function.
+`cutRectangle` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof cutRectangle == 'function');
 ```
 
-`cutRectangle(2, 2)` ควร return number.
+`cutRectangle(2, 2)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof cutRectangle(2, 2) == 'number');
 ```
 
-`cutRectangle(2, 2)` ควร return `2`.
+`cutRectangle(2, 2)` ต้องคืนค่าเป็น `2`
 
 ```js
 assert.equal(cutRectangle(2, 2), 2);
 ```
 
-`cutRectangle(4, 3)` ควร return `9`.
+`cutRectangle(4, 3)` ต้องคืนค่าเป็น `9`
 
 ```js
 assert.equal(cutRectangle(4, 3), 9);
 ```
 
-`cutRectangle(4, 4)` ควร return `22`.
+`cutRectangle(4, 4)` ต้องคืนค่าเป็น `22`
 
 ```js
 assert.equal(cutRectangle(4, 4), 22);
 ```
 
-`cutRectangle(8, 3)` ควร return `53`.
+`cutRectangle(8, 3)` ต้องคืนค่าเป็น `53`
 
 ```js
 assert.equal(cutRectangle(8, 3), 53);
 ```
 
-`cutRectangle(7, 4)` ควร return `151`.
+`cutRectangle(7, 4)` ต้องคืนค่าเป็น `151`
 
 ```js
 assert.equal(cutRectangle(7, 4), 151);

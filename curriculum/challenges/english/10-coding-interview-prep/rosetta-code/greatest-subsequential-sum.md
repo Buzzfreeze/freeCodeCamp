@@ -8,31 +8,33 @@ dashedName: greatest-subsequential-sum
 
 # --description--
 
-กำหนดลำดับของจำนวนเต็ม ให้ค้นหาลำดับต่อเนื่องที่เพิ่มผลรวมขององค์ประกอบให้มากที่สุด นั่นคือ ไม่มีองค์ประกอบของลำดับย่อย(subsequence)เดียวอื่นใดรวมกันเป็นค่าที่มากกว่าค่านี้
+ถ้ามีลำดับของจำนวนเต็มลำดับหนึ่ง ให้ค้นหาลำดับต่อเนื่องที่มีผลรวมขององค์ประกอบมากที่สุด แปลว่า ต้องไม่มีองค์ประกอบของลำดับย่อย (subsequence) ที่รวมกันแล้วมีค่ามากกว่าค่านี้
 
-ลำดับย่อยที่ว่างเปล่าจะถือว่ามีผลรวมของ \\( 0 \\); ดังนั้นหากองค์ประกอบทั้งหมดเป็นค่าลบ ผลลัพธ์จะต้องเป็นลำดับที่ว่างเปล่า
+ลำดับย่อยที่ว่างเปล่าจะถือว่ามีผลรวมเป็น \\( 0 \\); ดังนั้นหากองค์ประกอบทั้งหมดเป็นค่าลบ ผลลัพธ์จะต้องเป็นลำดับที่ว่างเปล่า
+
+ถ้ายังไม่เข้าใจลองดูตัวอย่างใน test ว่าผลลัพธ์ต้องเป็นอย่างไร
 
 # --hints--
 
-`maximumSubsequence` ควรเป็น function.
+`maximumSubsequence` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof maximumSubsequence == 'function');
 ```
 
-`maximumSubsequence([ 1, 2, -1, 3, 10, -10 ])` ควร return array.
+`maximumSubsequence([ 1, 2, -1, 3, 10, -10 ])` ต้องคืนค่าเป็น array
 
 ```js
 assert(Array.isArray(maximumSubsequence([1, 2, -1, 3, 10, -10])));
 ```
 
-`maximumSubsequence([ 1, 2, -1, 3, 10, -10 ])` ควร return `[ 1, 2, -1, 3, 10 ]`.
+`maximumSubsequence([ 1, 2, -1, 3, 10, -10 ])` ต้องคืนค่าเป็น `[ 1, 2, -1, 3, 10 ]`
 
 ```js
 assert.deepEqual(maximumSubsequence([1, 2, -1, 3, 10, -10]), [1, 2, -1, 3, 10]);
 ```
 
-`maximumSubsequence([ 0, 8, 10, -2, -4, -1, -5, -3 ])` ควร return `[ 0, 8, 10 ]`.
+`maximumSubsequence([ 0, 8, 10, -2, -4, -1, -5, -3 ])` ต้องคืนค่าเป็น `[ 0, 8, 10 ]`
 
 ```js
 assert.deepEqual(maximumSubsequence([0, 8, 10, -2, -4, -1, -5, -3]), [
@@ -42,25 +44,25 @@ assert.deepEqual(maximumSubsequence([0, 8, 10, -2, -4, -1, -5, -3]), [
 ]);
 ```
 
-`maximumSubsequence([ 9, 9, -10, 1 ])` ควร return `[ 9, 9 ]`.
+`maximumSubsequence([ 9, 9, -10, 1 ])` ต้องคืนค่าเป็น `[ 9, 9 ]`
 
 ```js
 assert.deepEqual(maximumSubsequence([9, 9, -10, 1]), [9, 9]);
 ```
 
-`maximumSubsequence([ 7, 1, -5, -3, -8, 1 ])` ควร return `[ 7, 1 ]`.
+`maximumSubsequence([ 7, 1, -5, -3, -8, 1 ])` ต้องคืนค่าเป็น `[ 7, 1 ]`
 
 ```js
 assert.deepEqual(maximumSubsequence([7, 1, -5, -3, -8, 1]), [7, 1]);
 ```
 
-`maximumSubsequence([ -3, 6, -1, 4, -4, -6 ])` ควร return `[ 6, -1, 4 ]`.
+`maximumSubsequence([ -3, 6, -1, 4, -4, -6 ])` ต้องคืนค่าเป็น `[ 6, -1, 4 ]`
 
 ```js
 assert.deepEqual(maximumSubsequence([-3, 6, -1, 4, -4, -6]), [6, -1, 4]);
 ```
 
-`maximumSubsequence([ -1, -2, 3, 5, 6, -2, -1, 4, -4, 2, -1 ])` ควร return `[ 3, 5, 6, -2, -1, 4 ]`.
+`maximumSubsequence([ -1, -2, 3, 5, 6, -2, -1, 4, -4, 2, -1 ])` ต้องคืนค่าเป็น `[ 3, 5, 6, -2, -1, 4 ]`
 
 ```js
 assert.deepEqual(maximumSubsequence([-1, -2, 3, 5, 6, -2, -1, 4, -4, 2, -1]), [

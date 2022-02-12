@@ -14,7 +14,7 @@ dashedName: understanding-sockets-and-creating-a-tcp-server
 
 ## --text--
 
-Which of the following functions creates a socket object?
+ฟังก์ชันไหนใช้เพื่อสร้าง object socket?
 
 ## --answers--
 

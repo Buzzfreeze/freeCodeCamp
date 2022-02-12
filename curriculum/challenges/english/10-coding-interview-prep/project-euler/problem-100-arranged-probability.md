@@ -1,6 +1,6 @@
 ---
 id: 5900f3d01000cf542c50fee3
-title: 'Problem 100: Arranged probability'
+title: "Problem 100: Arranged probability"
 challengeType: 5
 forumTopicId: 301724
 dashedName: problem-100-arranged-probability
@@ -8,48 +8,47 @@ dashedName: problem-100-arranged-probability
 
 # --description--
 
-
-ถ้ากล่องหนึ่งมีแผ่นสี 21 แผ่น ประกอบด้วยแผ่นสีน้ำเงิน 15 แผ่น และแผ่นสีแดง 6 แผ่น และสุ่มหยิบแผ่นสองแผ่น จะเห็นได้ว่าความน่าจะเป็นที่จะได้แผ่นสีน้ำเงินสองแผ่น
+ถ้ากล่องหนึ่งมีแผ่นสี 21 แผ่น ประกอบด้วยแผ่นสีน้ำเงิน 15 แผ่น และแผ่นสีแดง 6 แผ่น และสุ่มหยิบแผ่นสองแผ่น จะเห็นได้ว่าความน่าจะเป็นที่จะได้แผ่นสีน้ำเงินสองแผ่น คือ
 
 $${P(BB)} = \frac{15}{21}×\frac{14}{20} = \frac{1}{2}$$
 
 การจัดเรียงครั้งต่อไปซึ่งมีโอกาส 50% ที่จะสุ่มเลือกแผ่นสีน้ำเงินสองแผ่น คือกล่องที่ประกอบด้วยแผ่นสีน้ำเงิน 85 แผ่นและแผ่นสีแดง 35 แผ่น
 
-จากการจัดเรียงที่ครั้งแรกที่มีดิสก์ `limit` ทั้งหมด ให้หาจำนวนดิสก์สีน้ำเงินที่ในกล่องจะมี
+ให้หาจำนวนแผ่นสีน้ำเงินที่ต้องมีในกล่อง เพื่อหยิบแผ่นให้ได้อย่างน้อย `limit` แผ่น
 
 # --hints--
 
-`arrangedProbability(20)` ควร return number.
+`arrangedProbability(20)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
-assert(typeof arrangedProbability(10) === 'number');
+assert(typeof arrangedProbability(10) === "number");
 ```
 
-`arrangedProbability(20)` ควร return `15`.
+`arrangedProbability(20)` ต้องคืนค่าเป็น `15`
 
 ```js
 assert.strictEqual(arrangedProbability(20), 15);
 ```
 
-`arrangedProbability(100)` ควร return `85`.
+`arrangedProbability(100)` ต้องคืนค่าเป็น `85`
 
 ```js
 assert.strictEqual(arrangedProbability(100), 85);
 ```
 
-`arrangedProbability(100000)` ควร return `97513`.
+`arrangedProbability(100000)` ต้องคืนค่าเป็น `97513`
 
 ```js
 assert.strictEqual(arrangedProbability(100000), 97513);
 ```
 
-`arrangedProbability(1000000000)` ควร return `3822685023`.
+`arrangedProbability(1000000000)` ต้องคืนค่าเป็น `3822685023`
 
 ```js
 assert.strictEqual(arrangedProbability(1000000000), 3822685023);
 ```
 
-`arrangedProbability(1000000000000)` ควร return `756872327473`.
+`arrangedProbability(1000000000000)` ต้องคืนค่าเป็น `756872327473`
 
 ```js
 assert.strictEqual(arrangedProbability(1000000000000), 756872327473);
@@ -61,7 +60,6 @@ assert.strictEqual(arrangedProbability(1000000000000), 756872327473);
 
 ```js
 function arrangedProbability(limit) {
-
   return true;
 }
 

@@ -8,49 +8,49 @@ dashedName: factorial
 
 # --description--
 
-เขียน function เพื่อ return factorial ของจำนวน.
+ให้เขียนฟังก์ชันเพื่อให้คืนค่าเป็น factorial ของเลขที่ระบุ
 
-Factorial ของจำนวนกำหนดโดย:
+Factorial ของตัวเลขจะหาได้โดย:
 
 <pre><big>n! = n * (n-1) * (n-2) * ..... * 1</big>
 </pre>
 
-For example:
+เช่น:
 
 <ul>
   <li><code>3! = 3 * 2 * 1 = 6</code></li>
   <li><code>4! = 4 * 3 * 2 * 1 = 24</code></li>
 </ul>
 
-**Note:** `0! = 1`
+**จะเห็นว่า** `0! = 1`
 
 # --hints--
 
-`factorial` ควรเป็นfunction.
+`factorial` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof factorial === 'function');
 ```
 
-`factorial(2)` ควร return number.
+`factorial(2)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof factorial(2) === 'number');
 ```
 
-`factorial(3)` ควร return 6.
+`factorial(3)` ต้องคืนค่าเป็น 6
 
 ```js
 assert.equal(factorial(3), 6);
 ```
 
-`factorial(5)` ควร return 120.
+`factorial(5)` ต้องคืนค่าเป็น 120
 
 ```js
 assert.equal(factorial(5), 120);
 ```
 
-`factorial(10)` ควร return 3,628,800.
+`factorial(10)` ต้องคืนค่าเป็น 3,628,800
 
 ```js
 assert.equal(factorial(10), 3628800);

@@ -8,7 +8,7 @@ dashedName: problem-58-spiral-primes
 
 # --description--
 
-เริ่มจาก 1 และ spiralling anticlockwise โดยวิธีด้านล่าง  square spiral และ side length 7 จะอยู่ในรูปของ
+เริ่มจาก 1 และหมุนทวนเข็มนาฬิกาเป็นก้อนหอย จะได้รูปด้านล่างี่มีด้านละ 7 เลข
 
 <div style='text-align: center;'>
   <strong><span style='color: red;'>37</span></strong> 36 35 34 33 32 <strong><span style='color: red;'>31</span></strong><br>
@@ -26,25 +26,25 @@ odd squares ตาม bottom right diagonal แต่มี 8 จาก 13 numbe
 
 # --hints--
 
-`spiralPrimes(50)` ควร return number.
+`spiralPrimes(50)` ต้องเป็นตัวเลข
 
 ```js
 assert(typeof spiralPrimes(50) === 'number');
 ```
 
-`spiralPrimes(50)` ควร return `11`.
+`spiralPrimes(50)` ต้องเป็น `11`
 
 ```js
 assert.strictEqual(spiralPrimes(50), 11);
 ```
 
-`spiralPrimes(15)` ควร return `981`.
+`spiralPrimes(15)` ต้องเป็น `981`
 
 ```js
 assert.strictEqual(spiralPrimes(15), 981);
 ```
 
-`spiralPrimes(10)` ควร return `26241`.
+`spiralPrimes(10)` ต้องเป็น `26241`
 
 ```js
 assert.strictEqual(spiralPrimes(10), 26241);

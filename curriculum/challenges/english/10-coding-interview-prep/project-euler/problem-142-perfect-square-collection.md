@@ -8,11 +8,11 @@ dashedName: problem-142-perfect-square-collection
 
 # --description--
 
-หา $x + y + z$ ที่เล็กที่สุดด้วยจำนวนเต็ม $x > y > z > 0$ เพื่อให้ $x + y$, $x − y$, $x + z$, $x − z$, $y + z$, $y − z$ เป็นกำลังสองสมบูรณ์
+ให้หา $x + y + z$ ที่น้อยที่สุดที่เป็นจำนวนเต็ม โดย $x > y > z > 0$ เพื่อให้ $x + y$, $x − y$, $x + z$, $x − z$, $y + z$, $y − z$ เป็นกำลังสองสมบูรณ์
 
 # --hints--
 
-`perfectSquareCollection()` ควร return `1006193`.
+`perfectSquareCollection()` ต้องคืนค่าเป็น `1006193`
 
 ```js
 assert.strictEqual(perfectSquareCollection(), 1006193);

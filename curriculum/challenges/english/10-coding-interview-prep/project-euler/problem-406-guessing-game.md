@@ -42,11 +42,11 @@ $$\begin{align}
 
 ให้ $F_k$ เป็นตัวเลขFibonacci: $F_k = F_{k - 1} + F_{k - 2}$ ด้วยตัวพิมพ์พื้นฐาน $F_1 = F_2 = 1$
 
-ค้นหา $\displaystyle\sum_{k = 1}^{30} C({10}^{12}, \sqrt{k}, \sqrt{F_k})$ และให้คำตอบของคุณปัดเศษทศนิยม 8 ตำแหน่งหลัง จุดทศนิยม
+ให้หาค่าของ $\displaystyle\sum_{k = 1}^{30} C({10}^{12}, \sqrt{k}, \sqrt{F_k})$ และให้ตอบเป็นทศนิยมแปดตำแหน่ง
 
 # --hints--
 
-`guessingGame()` ควร return `36813.12757207`.
+`guessingGame()` ต้องคืนค่าเป็น `36813.12757207`
 
 ```js
 assert.strictEqual(guessingGame(), 36813.12757207);

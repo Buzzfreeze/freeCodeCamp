@@ -8,37 +8,37 @@ dashedName: problem-48-self-powers
 
 # --description--
 
-series 1<sup>1</sup> + 2<sup>2</sup> + 3<sup>3</sup> + ... + 10<sup>10</sup> = 10405071317.
+ชุดตัวเลข 1<sup>1</sup> + 2<sup>2</sup> + 3<sup>3</sup> + ... + 10<sup>10</sup> = 10405071317
 
-หา 10 digits สุดท้ายของ series 1<sup>1</sup> + 2<sup>2</sup> + 3<sup>3</sup> + ... + 1000<sup>1000</sup>.
+ให้หาเลข 10 หลักสุดท้ายของชุดตัวเลข 1<sup>1</sup> + 2<sup>2</sup> + 3<sup>3</sup> + ... + 1000<sup>1000</sup>
 
 # --hints--
 
-`selfPowers(10, 3)` ควร return number.
+`selfPowers(10, 3)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof selfPowers(10, 3) === 'number');
 ```
 
-`selfPowers(10, 3)` ควร return 317.
+`selfPowers(10, 3)` ต้องคืนค่าเป็น 317
 
 ```js
 assert.strictEqual(selfPowers(10, 3), 317);
 ```
 
-`selfPowers(150, 6)` ควร return 29045.
+`selfPowers(150, 6)` ต้องคืนค่าเป็น 29045
 
 ```js
 assert.strictEqual(selfPowers(150, 6), 29045);
 ```
 
-`selfPowers(673, 7)` ควร return 2473989.
+`selfPowers(673, 7)` ต้องคืนค่าเป็น 2473989
 
 ```js
 assert.strictEqual(selfPowers(673, 7), 2473989);
 ```
 
-`selfPowers(1000, 10)` ควร return 9110846700.
+`selfPowers(1000, 10)` ต้องคืนค่าเป็น 9110846700
 
 ```js
 assert.strictEqual(selfPowers(1000, 10), 9110846700);

@@ -14,11 +14,11 @@ dashedName: problem-373-circumscribed-circles
 
 $S(100) = 4\\,950$ และ $S(1\\,200) = 1\\,653\\,605$
 
-หา $S({10}^7)$
+ให้หา $S({10}^7)$
 
 # --hints--
 
-`circumscribedCircles()` ควร return `727227472448913`.
+`circumscribedCircles()` ต้องคืนค่าเป็น `727227472448913`
 
 ```js
 assert.strictEqual(circumscribedCircles(), 727227472448913);

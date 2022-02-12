@@ -8,73 +8,73 @@ dashedName: problem-63-powerful-digit-counts
 
 # --description--
 
-5-digit number, 16807 = 7<sup>5</sup> มีกำลัง 5 เหมือนกับ 9-digit number, 134217728 = 8<sup>9</sup>, มีกำลัง 9
+เลข 5 หลัก 16807 = 7<sup>5</sup> มีกำลัง 5 เหมือนกัน และเลข 9 หลัก 134217728 = 8<sup>9</sup> ก็มีกำลัง 9 เหมือนกัน
 
-ทำ function ที่ returns positive integers ที่มีความยาว `n` และมี `n`th power
+ให้เขียนฟังก์ชันเพื่อหาจำนวนเต็มบวกที่มีความยาวเป็น `n` เป็นค่าของ `n` ยกกำลัง
 
 # --hints--
 
-`powerfulDigitCounts(1)` ควร return number.
+`powerfulDigitCounts(1)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof powerfulDigitCounts(1) === 'number');
 ```
 
-`powerfulDigitCounts(1)` ควร return `9`.
+`powerfulDigitCounts(1)` ต้องคืนค่าเป็น `9`
 
 ```js
 assert.strictEqual(powerfulDigitCounts(1), 9);
 ```
 
-`powerfulDigitCounts(2)` ควร return `6`.
+`powerfulDigitCounts(2)` ต้องคืนค่าเป็น `6`
 
 ```js
 assert.strictEqual(powerfulDigitCounts(2), 6);
 ```
 
-`powerfulDigitCounts(3)` ควร return `5`.
+`powerfulDigitCounts(3)` ต้องคืนค่าเป็น `5`
 
 ```js
 assert.strictEqual(powerfulDigitCounts(3), 5);
 ```
 
-`powerfulDigitCounts(4)` ควร return `4`.
+`powerfulDigitCounts(4)` ต้องคืนค่าเป็น `4`
 
 ```js
 assert.strictEqual(powerfulDigitCounts(4), 4);
 ```
 
-`powerfulDigitCounts(5)` ควร return `3`.
+`powerfulDigitCounts(5)` ต้องคืนค่าเป็น `3`
 
 ```js
 assert.strictEqual(powerfulDigitCounts(5), 3);
 ```
 
-`powerfulDigitCounts(6)` ควร return `3`.
+`powerfulDigitCounts(6)` ต้องคืนค่าเป็น `3`
 
 ```js
 assert.strictEqual(powerfulDigitCounts(6), 3);
 ```
 
-`powerfulDigitCounts(7)` ควร return `2`.
+`powerfulDigitCounts(7)` ต้องคืนค่าเป็น `2`
 
 ```js
 assert.strictEqual(powerfulDigitCounts(7), 2);
 ```
 
-`powerfulDigitCounts(8)` ควร return `2`.
+`powerfulDigitCounts(8)` ต้องคืนค่าเป็น `2`
 
 ```js
 assert.strictEqual(powerfulDigitCounts(8), 2);
 ```
 
-`powerfulDigitCounts(10)` ควร return `2`.
+`powerfulDigitCounts(10)` ต้องคืนค่าเป็น `2`
 
 ```js
 assert.strictEqual(powerfulDigitCounts(10), 2);
 ```
 
-`powerfulDigitCounts(21)` ควร return `1`.
+`powerfulDigitCounts(21)` ต้องคืนค่าเป็น `1`
 
 ```js
 assert.strictEqual(powerfulDigitCounts(21), 1);

@@ -8,65 +8,63 @@ dashedName: tokenize-a-string-with-escaping
 
 # --description--
 
-เขียนฟังก์ชันหรือโปรแกรมที่สามารถแยกสตริงที่อักขระตัวคั่นแต่ละตัวที่ไม่มีการ Escape เกิดขึ้น
+ให้เขียนฟังก์ชันหรือโปรแกรมที่สามารถแยกสตริงที่ตำแหน่งตัวอักษรที่ระบุได้
 
-ควรยอมรับพารามิเตอร์inputสามตัว:
+ฟังก์ชันนี้ต้องรับพารามิเตอร์สามตัว คือ
 
 <ul>
-  <li>The <strong>string</strong></li>
-  <li>The <strong>separator character</strong></li>
-  <li>The <strong>escape character</strong></li>
+  <li><strong>สตริง</strong></li>
+  <li><strong>ตัวอักษรที่ใช้แยกสตริง</strong></li>
+  <li><strong>escape character ของตัวอักษรที่ใช้แยกสตริง</strong></li>
 </ul>
 
-ควรแสดงรายการstring
+ซึ่งต้องคืนค่าเป็น array ของสตริงที่แยกแล้ว
 
 กฎสำหรับการแยก:
 
 <ul>
-  <li>The fields that were separated by the separators, become the elements of the output list.</li>
-  <li>Empty fields ควร be preserved, even at the start and end.</li>
+  <li>สตริงที่ถูกแยกจะกลายเป็น element ของผลลัพธ์</li>
+  <li>ถ้าแยกแล้วได้สตริงว่าง ก็ต้องคืนค่าสตริงว่างนั้นออกมาด้วย ถึงแม้จะอยู่ที่ส่วนต้นหรือท้ายสตริงก็ตาม</li>
 </ul>
 
-กฎสำหรับการแยก:
+กฎสำหรับการ escape:
 
 <ul>
-  <li>"Escaped" means preceded by an occurrence of the escape character that is not already escaped itself.</li>
-  <li>When the escape character precedes a character that has no special meaning, it still counts as an escape (but does not do anything special).</li>
-  <li>Each occurrences of the escape character that was used to escape something, ควร not become part of the output.</li>
+  <li>ตัวอักษรที่ถูก Escape จะต้องถูกนำหน้าด้วย escape character</li>
+  <li>ถ้า escape character นำหน้าตัวอักษรที่ไม่ได้มีความพิเศษ ก็ให้ถือว่าเป็นการ escape เหมือนกันแต่ไม่ต้องทำอะไรพิเศษ</li>
+  <li>การใช้ escape character ต้องไม่ทำให้ escape character ปรากฏในผลลัพธ์</li>
 </ul>
 
-แสดงให้เห็นว่าฟังก์ชันของคุณตรงตามกรณีทดสอบต่อไปนี้:
-
-รับสตริง
+ถ้ามีสตริงเป็น
 
 <pre>one^|uno||three^^^^|four^^^|^cuatro|</pre>
 
-and using `|` as a separator and `^` as escape character, your function ควร output the following array:
+และใช้ `|` เป็นตัวแยก และ `^` เป็น escape character ฟังก์ชันของคุณต้องคืนค่าเป็น array นี้:
 
 <pre>  ['one|uno', '', 'three^^', 'four^|cuatro', '']
 </pre>
 
 # --hints--
 
-`tokenize` ควรเป็น function.
+`tokenize` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof tokenize === 'function');
 ```
 
-`tokenize` ควร return array.
+`tokenize` ต้องคืนค่าเป็น array
 
 ```js
 assert(typeof tokenize('a', 'b', 'c') === 'object');
 ```
 
-`tokenize('one^|uno||three^^^^|four^^^|^cuatro|', '|', '^')` ควร return `['one|uno', '', 'three^^', 'four^|cuatro', '']`
+`tokenize('one^|uno||three^^^^|four^^^|^cuatro|', '|', '^')` ต้องคืนค่าเป็น `['one|uno', '', 'three^^', 'four^|cuatro', '']`
 
 ```js
 assert.deepEqual(tokenize(testStr1, '|', '^'), res1);
 ```
 
-`tokenize('a@&bcd&ef&&@@hi', '&', '@')` ควร return `['a&bcd', 'ef', '', '@hi']`
+`tokenize('a@&bcd&ef&&@@hi', '&', '@')` ต้องคืนค่าเป็น `['a&bcd', 'ef', '', '@hi']`
 
 ```js
 assert.deepEqual(tokenize(testStr2, '&', '@'), res2);

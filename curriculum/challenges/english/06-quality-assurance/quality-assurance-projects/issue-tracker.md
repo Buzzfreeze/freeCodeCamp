@@ -8,43 +8,43 @@ dashedName: issue-tracker
 
 # --description--
 
-สร้างแอพ full stack JavaScript ซึ่งมีฟังก์ชันการทำงานคล้าย link นี้ : <https://issue-tracker.freecodecamp.rocks/>  ทำงานใน project นี้ เขียน code โดยใช้วิธีใดวิธีหนึ่งต่อไปนี้: 
+ให้สร้างแอปแบบ full stack โดยใช้ JavaScript ที่ทำงานคล้ายกับเว็บไซต์นี้ <https://issue-tracker.freecodecamp.rocks/>  
+ในการทำโปรเจคนี้ คุณจะต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งดังต่อไปนี้
 
-- ทำการ clone repo [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-project-issuetracker/) เพื่อสร้าง project ในนั้นให้สำเร็จ
-- ใช้  project เริ่มต้นจาก [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-issuetracker) เพื่อสร้าง project ให้สำเร็จ
-- ใช้ site builder ที่ผู้เรียนเลือก เพื่อสร้าง project ให้เสร็จ อย่าลืมรวมไฟล์ทั้งหมดจาก repo GitHub 
+- ให้ Clone repoisitory จาก [GitHub](https://github.com/freeCodeCamp/boilerplate-project-issuetracker/) มา และทำแบบทดสอบบนเครื่องของคุณเอง
+- สร้างจากโปรเจกต์ของเราในเว็บไซต์ [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-issuetracker)
+- ใช้เครื่องมือสร้างเว็บอื่นๆ และอย่าลืมเก็บไฟล์ไว้ใน GitHub repo ของคุณด้วย
 
-เมื่อผู้เรียนทำเสร็จแล้ว ตรวจสอบให้แน่ใจว่าตัว Demo ของ project ของคุณตั้งค่า Host เป็น Public จากนั้นส่ง URL ไปที่ช่อง `Solution Link` หรือส่งลิงก์ไปยัง source code ของ project ผู้เรียน ตรง `GitHub Link`
+เมื่อคุณทำเสร็จแล้ว ให้อัปโหลดโปรเจกต์ของคุณขึ้นโฮสต์ และเปิดเป็น public จากนั้นให้ส่งลิงก์เข้าไปใน `Link คำตอบ` และจะส่งลิงก์ของ source code เข้าไปใน `GitHub Link` ด้วยก็ได้
 
 # --instructions--
 
-- logic ทั้งหมดสามารถเข้าไปดูที่ `/components/translator.js`
 - สร้าง route ที่จำเป็นใน `/routes/api.js`
-- สร้างการทดสอบการทำงาน (functional tests) ทั้งหมดใน `tests/2_functional-tests.js`
-- Copy ไฟล์ `sample.env` ไปที่ `.env` และตั้งตัวแปรอย่างเหมาะสม 
-- หากต้องการ run code ทดสอบ uncomment ให้ตั้งค่า `NODE_ENV=test` ในไฟล์ ".env"
-- ในการ run code ทดสอบใน console ให้ใช้คำสั่ง `npm run test` หากต้องการเปิด console ของ Replit ให้ใช้คีย์ลัด Ctrl+Shift+P (Cmd หากใช้ Mac) แล้วพิมพ์คำว่า "open shell" 
+- สร้าง functional test ทั้งหมดใน `tests/2_functional-tests.js`
+- Copy ข้อมูลในไฟล์ `sample.env` ไปวางใน `.env` และตั้งค่าตัวแปรให้เหมาะสม 
+- หากต้องการใช้ test ให้ uncomment `NODE_ENV=test` ในไฟล์ `.env`
+- หากต้องการใช้ test ใน console ให้ใช้คำสั่ง `npm run test` หากต้องการเปิด console ของ Replit ให้ใช้คีย์ลัด Ctrl+Shift+P (Cmd หากใช้ Mac) แล้วพิมพ์คำว่า "open shell" 
 
 เขียนการทดสอบต่อไปนี้ใน `tests/2_functional-tests.js`: 
 
-- สร้าง issue กับทุก field: POST คำขอไปยัง `/api/issues/{project}`
-- สร้าง issue กับ field ที่จำเป็นเท่านั้น: POST คำขอไปยัง `/api/issues/{project}`
-- สร้าง issue กับ field จำเป็นที่ขาดหายไป: POST คำขอไปยัง `/api/issues/{project}`
-- ดูหลาย issue ที่เกิดบน Project: GET รับคำขอไปที่ `/api/issues/{project}`
-- ดูหลาย issue ที่เกิดบน Project ที่มีตัวกรองเดียว (filter): GET รับคำขอไปที่ `/api/issues/{project}`
-- ดูหลาย issue ที่เกิดบน Project ที่มีตัวกรองหลายตัว (multiple filters): GET  รับคำขอไปที่ `/api/issues/{project}`
-- อัปเดตหนึ่ง field ที่เกี่ยวกับ issue : PUT คำขอไปที่ `/api/issues/{project}`
-- อัปเดตหลาย field ที่เกี่ยวกับ issue: PUT คำขอไปที่ `/api/issues/{project}`
-- อัปเดต issue ที่ไม่มี `_id': PUT คำขอไปที่ `/api/issues/{project}`
-- อัปเดต issue ที่ไม่มีช่องให้อัปเดต: PUT คำขอไปที่ `/api/issues/{project}`
-- อัปเดต issue ด้วย `_id' ที่ไม่ถูกต้อง: PUT คำขอไปที่ `/api/issues/{project}`
-- Delete ตัว issue: DELETE คำขอไปยัง `/api/issues/{project}`
-- Delete ตัว issueที่มี `_id' ไม่ถูกต้อง: DELETE คำขอไปยัง `/api/issues/{project}`
-- Delete ตัว issueที่ไม่มี `_id': DELETE คำขอไปยัง `/api/issues/{project}` 
+- สร้าง issue ที่มีข้อมูลครบทุกฟิลด์: ส่ง POST request ไปยัง `/api/issues/{project}`
+- สร้าง issue โดยใช้ฟิลด์ที่จำเป็นเท่านั้น: ส่ง POST request ไปยัง `/api/issues/{project}`
+- สร้าง issue โดยใช้ฟิลด์ที่จำเป็นไม่ครบ: ส่ง POST request ไปยัง `/api/issues/{project}`
+- ดู issue ของ Project: ส่ง GET request ไปยัง `/api/issues/{project}`
+- ดู issue ของ Project โดยใช้ filter ตัวเดียว: ส่ง GET request ไปยัง `/api/issues/{project}`
+- ดู issue ของ Project โดยใช้ filter หลายตัว: ส่ง GET request ไปยัง `/api/issues/{project}`
+- อัปเดตหนึ่งฟิลด์ของ issue : ส่ง PUT request ไปยัง `/api/issues/{project}`
+- อัปเดตหลายฟิลด์ของ issue: ส่ง PUT request ไปยัง `/api/issues/{project}`
+- อัปเดต issue โดยไม่ส่ง `_id` ไป: ส่ง PUT request ไปยัง `/api/issues/{project}`
+- อัปเดต issue โดยไม่ได้เปลี่ยนค่า: ส่ง PUT request ไปยัง `/api/issues/{project}`
+- อัปเดต issue โดยใช้ `_id` ที่ไม่ถูกต้อง: ส่ง PUT request ไปยัง `/api/issues/{project}`
+- Delete issue: ส่ง DELETE request ไปยัง `/api/issues/{project}`
+- Delete issue โดยใช้ `_id` ที่ไม่ถูกต้อง: ส่ง DELETE request ไปยัง `/api/issues/{project}`
+- Delete issue โดยไม่ส่ง `_id` ไป: ส่ง DELETE request ไปยัง `/api/issues/{project}` 
 
 # --hints--
 
-ผู้เรียนสามารถจัดหา project ของผู้เรียนเองได้ โดยไม่ใช้ URL ตัวอย่าง 
+ให้ส่งลิงก์โปรเจกต์ของคุณ ไม่ใช่ URL ตัวอย่างของเรา
 
 ```js
 (getUserInput) => {
@@ -52,7 +52,7 @@ dashedName: issue-tracker
 };
 ```
 
-ผู้เรียนส่งคำขอ "POST" ไปที่ "/api/issues/{projectname}" ได้ด้วยข้อมูลในแบบฟอร์มที่มีช่องที่ต้องระบุ "issue_title", "issue_text", "created_by" และ "assigned_to" และ "status_text" หรือไม่ก็ได้ 
+สามารถส่ง `POST` request ไปยัง `/api/issues/{projectname}` ได้ โดยใช้ form โดยจำเป็นต้องระบุ `issue_title`, `issue_text`, `created_by` และในส่วน `assigned_to` และ `status_text` จะระบุหรือไม่ก็ได้
 
 ```js
 async (getUserInput) => {
@@ -74,7 +74,7 @@ async (getUserInput) => {
 };
 ```
 
-คำขอ `POST` ถึง `/api/issues/{projectname}` จะส่งคืน object ที่สร้างขึ้น และต้องรวม field ที่ส่งทั้งหมด field ตัวเลือกที่ยกเว้นจะถูกคืนค่าเป็น string ว่าง นอกจากนี้ ให้รวม `created_on` (วันที่/เวลา), `updated_on` (วันที่/เวลา), `open' open` (boolean, `true` for open - default value, `false` for closed) และ `_id` 
+เมื่อส่ง `POST` request ไปยัง `/api/issues/{projectname}` จะได้ object ที่สร้างขึ้นคืนมา ซึ่งมีค่าของฟิลด์ที่ส่งไปทั้งหมด โดยฟิลด์ที่ไม่ระบุจะมีค่าเป็น string ว่าง นอกจากนี้ จะมีฟิลด์ `created_on` (date/time), `updated_on` (date/time), `open' open` (boolean, `true` ถ้า issue เปิดอยู่ - เป็นค่า default, `false` ถ้า issue ถูกปิดแล้ว) และ `_id` ด้วย
 
 ```js
 async (getUserInput) => {
@@ -108,7 +108,7 @@ async (getUserInput) => {
 };
 ```
 
-หากผู้เรียนส่งคำขอ "POST" ไปยัง `/api/issues/{projectname}` โดยไม่มี field ที่จำเป็น การส่งคืนจะเกิด error `{ error: 'required field(s) missing' }` 
+เมื่อส่ง `POST` request ไปยัง `/api/issues/{projectname}` โดยไม่ระบุฟิลด์ที่จำเป็น จะคืนค่า error กลับมา `{ error: 'required field(s) missing' }` 
 
 ```js
 async (getUserInput) => {
@@ -126,7 +126,7 @@ async (getUserInput) => {
 };
 ```
 
-ผู้เรียนสามารถส่งคำขอ `GET` ไปที่ `/api/issues/{projectname}` สำหรับarray ของissues ทั้งหมดสำหรับเฉพาะ `projectname' นั้น โดยมี field ทั้งหมดสำหรับแต่ละissue
+เมื่อส่ง `GET` request ไปยัง `/api/issues/{projectname}` จะได้ array ของ issue ทั้งหมดของ `projectname` นั้นกลับมา โดยแต่ละ issue จะมีค่าครบทุกฟิลด์
 
 ```js
 async (getUserInput) => {
@@ -173,7 +173,7 @@ async (getUserInput) => {
 };
 ```
 
-ผู้เรียนสามารถส่งคำขอ `GET` ไปที่ `/api/issues/{projectname}` และกรอง (filter) คำขอโดยส่งผ่าน field และ value ใดๆ ไปเป็นข้อความค้นหา URL (เช่น `/api/issues/{project}?open= false`) ผู้เรียนสามารถส่งคู่ field/value ได้ตั้งแต่หนึ่งคู่ขึ้นไปในครั้งเดียว 
+สามารถส่ง `GET` request ไปยัง `/api/issues/{projectname}` โดยใช้ filter ด้วยได้ ซึ่ง filter จะเป็น URL query string (เช่น `/api/issues/{project}?open= false`) โดยจะส่ง field/value ของ query string ได้มากกว่าหนึ่งคู่ 
 
 ```js
 async (getUserInput) => {
@@ -214,7 +214,7 @@ async (getUserInput) => {
 };
 ```
 
-ผู้เรียนส่งคำขอ "PUT" ไปที่ "/api/issues/{projectname}" ได้ โดยใช้ "_id" และช่องที่จะอัปเดตอย่างน้อย 1 field // เมื่อทำสำเร็จ ตรง field `updated_on` ควรได้รับการอัปเดต และค่าที่ส่งคืนควรเป็น `{ result: 'successfully updated', '_id': _id }` 
+สามารถส่ง `PUT` request ไปยัง `/api/issues/{projectname}` ได้ โดยระบุ `_id` และฟิลด์ที่จะอัปเดทอย่างน้อยหนึ่งฟิลด์ เมื่อทำสำเร็จฟิลด์ `updated_on` ต้องถูกอัปเดตด้วย และค่าที่ได้คืนมาต้องเป็น `{ result: 'successfully updated', '_id': _id }` 
 
 ```js
 async (getUserInput) => {
@@ -249,7 +249,7 @@ async (getUserInput) => {
 };
 ```
 
-เมื่อคำขอ "PUT" ที่ส่งไปยัง `/api/issues/{projectname}` ไม่รวม `_id` .ให้ค่าที่ส่งคืนคือ `{ error: 'missing _id' }` 
+เมื่อส่ง `PUT` request ไปยัง `/api/issues/{projectname}` โดยไม่ระบุ `_id` ต้องได้ค่าคืนมาเป็น `{ error: 'missing _id' }` 
 
 ```js
 async (getUserInput) => {
@@ -265,7 +265,7 @@ async (getUserInput) => {
 };
 ```
 
-เมื่อคำขอ "PUT" ที่ส่งไปยัง `/api/issues/{projectname}` ไม่มีช่องอัปเดต ค่าที่ส่งคืนคือ `{ error: 'no update field(s) send', '_id': _id }` สำหรับ error อื่นๆ ค่าที่ส่งคืนคือ `{ error: 'could not update', '_id': _id }` 
+เมื่อส่ง `PUT` request ไปยัง `/api/issues/{projectname}` โดยไม่ระบุฟิลด์ที่จะอัปเดต ค่าที่ได้กลับมาต้องเป็น `{ error: 'no update field(s) send', '_id': _id }` แต่ถ้าเป็น error อื่นๆ ค่าที่ได้กลับมาต้องเป็น `{ error: 'could not update', '_id': _id }` 
 
 ```js
 async (getUserInput) => {
@@ -296,7 +296,7 @@ async (getUserInput) => {
 
 ```
 
-ผู้เรียนสามารถส่งคำขอ `DELETE` ไปที่ `/api/issues/{projectname}` ด้วย `_id` เพื่อลบ issue ที่เกิด หากไม่มีการส่ง `_id' ค่าที่ส่งคืนจะเป็น `{ error: 'missing _id' }` เมื่อสำเร็จ ค่าที่ส่งคืนคือ `{ result: 'successfully deleted', '_id': _id }` หากล้มเหลว ค่าที่ส่งคืนคือ `{ error: 'could not delete', '_id': _id }` 
+สามารถส่ง `DELETE` request ไปยัง `/api/issues/{projectname}` ได้ โดยการระบุ `_id` ของ issue ที่ต้องการจะลบไปด้วย ถ้าไม่ระบุ `_id` ค่าที่ได้กลับมาต้องเป็น `{ error: 'missing _id' }` ถ้าลบสำเร็จ ค่าที่ได้กลับมาต้องเป็น `{ result: 'successfully deleted', '_id': _id }` ถ้าลบไม่ได้ ค่าที่ได้กลับมาต้องเป็น `{ error: 'could not delete', '_id': _id }` 
 
 ```js
 async (getUserInput) => {
@@ -338,7 +338,7 @@ async (getUserInput) => {
 };
 ```
 
-การทดสอบการใช้งาน (functional tests) ทั้งหมด 14 รายการเสร็จสมบูรณ์และผ่าน 
+functional tests ทั้งหมด 14 ตัวต้องเสร็จสมบูรณ์และผ่าน 
 
 ```js
 async (getUserInput) => {

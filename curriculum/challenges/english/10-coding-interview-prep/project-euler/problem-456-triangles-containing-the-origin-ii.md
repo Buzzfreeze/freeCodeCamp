@@ -8,7 +8,7 @@ dashedName: problem-456-triangles-containing-the-origin-ii
 
 # --description--
 
-กำหนด
+กำหนดให้
 
 $$\begin{align}
   & x_n = ({1248}^n\bmod 32323) - 16161 \\\\
@@ -17,11 +17,12 @@ $$\begin{align}
 \end{align}$$
 
 เช่น
+
 $$P_8 = \\{(-14913, -6630), (-10161, 5625), (5226, 11896), (8340, -10778), (15852, -5203), (-15165, 11295), (-1427, -14495), (12407, 1060)\\}$$
 
 ให้ $C(n)$ เป็นจำนวนสามเหลี่ยมที่มีจุดยอดอยู่ใน $P_n$ ซึ่งมีจุดกำเนิดอยู่ภายใน
 
-Examples:
+ตัวอย่างเช่น:
 
 $$\begin{align}
   & C(8) = 20 \\\\
@@ -29,11 +30,11 @@ $$\begin{align}
   & C(40\\,000) = 2\\,666\\,610\\,948\\,988
 \end{align}$$
 
-หา $C(2\\,000\\,000)$.
+ให้หา $C(2\\,000\\,000)$
 
 # --hints--
 
-`trianglesContainingOriginTwo()` ควร return `333333208685971500`.
+`trianglesContainingOriginTwo()` ต้องคืนค่าเป็น `333333208685971500`
 
 ```js
 assert.strictEqual(trianglesContainingOriginTwo(), 333333208685971500);

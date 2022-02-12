@@ -8,82 +8,82 @@ dashedName: compare-a-list-of-strings
 
 # --description--
 
-กำหนดให้ [list](https://en.wikipedia.org/wiki/List_(abstract_data_type) "wp: List\_(abstract_data_type)") ของ strings ใช้ฟังก์ชันสำหรับแต่ละเงื่อนไขต่อไปนี้:
+ให้เขียนฟังก์ชันสองฟังก์ชัน โดยแต่ละฟังก์ชันต้องทำตามเงื่อนไขนี้
 
 <ul>
-  <li>test if they are all lexically equal</li>
-  <li>test if every string is lexically less than the one after it  (i.e. whether the list is in strict ascending order)</li>
+  <li>ตรวจสอบว่าคำทุกคำเหมือนกันหรือไม่</li>
+  <li>ตรวจสอบว่าคำแต่ละคำใน array มีความคล้ายกันลดลงจ้ายซ้ายไปขวาหรือไม่</li>
 </ul>
 
 # --hints--
 
-`allEqual` ควรเป็น function.
+`allEqual` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof allEqual === 'function');
 ```
 
-`azSorted` ควรเป็น function.
+`azSorted` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof azSorted === 'function');
 ```
 
-`allEqual(["AA", "AA", "AA", "AA"])` ควร return true.
+`allEqual(["AA", "AA", "AA", "AA"])` ต้องคืนค่าเป็น true
 
 ```js
 assert(allEqual(testCases[0]));
 ```
 
-`azSorted(["AA", "AA", "AA", "AA"])` ควร return false.
+`azSorted(["AA", "AA", "AA", "AA"])` ต้องคืนค่าเป็น false
 
 ```js
 assert(!azSorted(testCases[0]));
 ```
 
-`allEqual(["AA", "ACB", "BB", "CC"])` ควร return false.
+`allEqual(["AA", "ACB", "BB", "CC"])` ต้องคืนค่าเป็น false
 
 ```js
 assert(!allEqual(testCases[1]));
 ```
 
-`azSorted(["AA", "ACB", "BB", "CC"])` ควร return true.
+`azSorted(["AA", "ACB", "BB", "CC"])` ต้องคืนค่าเป็น true
 
 ```js
 assert(azSorted(testCases[1]));
 ```
 
-`allEqual([])` ควร return true.
+`allEqual([])` ต้องคืนค่าเป็น true
 
 ```js
 assert(allEqual(testCases[2]));
 ```
 
-`azSorted([])` ควร return true.
+`azSorted([])` ต้องคืนค่าเป็น true
 
 ```js
 assert(azSorted(testCases[2]));
 ```
 
-`allEqual(["AA"])` ควร return true.
+`allEqual(["AA"])` ต้องคืนค่าเป็น true
 
 ```js
 assert(allEqual(testCases[3]));
 ```
 
-`azSorted(["AA"])` ควร return true.
+`azSorted(["AA"])` ต้องคืนค่าเป็น true
 
 ```js
 assert(azSorted(testCases[3]));
 ```
 
-`allEqual(["BB", "AA"])` ควร return false.
+`allEqual(["BB", "AA"])` ต้องคืนค่าเป็น false
 
 ```js
 assert(!allEqual(testCases[4]));
 ```
 
-`azSorted(["BB", "AA"])` ควร return false.
+`azSorted(["BB", "AA"])` ต้องคืนค่าเป็น false
 
 ```js
 assert(!azSorted(testCases[4]));

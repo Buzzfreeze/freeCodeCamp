@@ -8,41 +8,49 @@ dashedName: accumulator-factory
 
 # --description--
 
-ปัญหาจาก [Paul Graham](https://en.wikipedia.org/wiki/Paul_Graham_(programmer)) คือการสร้างฟังก์ชันที่รับargument (ตัวเลข) เดียวและส่งคืนฟังก์ชันอื่นที่เป็นตัวสะสม ในทางกลับกัน ฟังก์ชันตัวสะสมที่ส่งคืนก็รับargumentตัวเลขเพียงตัวเดียว และส่งกลับผลรวมของค่าตัวเลขทั้งหมดที่ส่งผ่านไปยังตัวสะสมนั้นจนถึงตอนนี้ (รวมถึงค่าเริ่มต้นที่ส่งผ่านเมื่อสร้างตัวสะสม)
+โจทย์นี้มาจาก [Paul Graham](https://en.wikipedia.org/wiki/Paul_Graham_(programmer)) 
 
 # --instructions--
 
-สร้างฟังก์ชันที่ใช้ตัวเลข $n$ และสร้างฟังก์ชันตัวสะสมที่ส่งคืนผลรวมของทุกหมายเลขที่เคยส่งไปให้
+ให้สร้างฟังก์ชันที่รับตัวเลขหนึ่งตัว และจะคืนค่าเป็นฟังก์ชันที่รับตัวเลขอีกหนึ่งตัว และเมื่อเรียกใช้ฟังก์ชันที่ได้รับกลับมาโดยระบุตัวเลขไป จะรวมตัวเลขนั้นเข้าเป็นผลรวม และจะเรียกใช้ฟังก์ชันที่ได้รับกลับมาเพื่อเพิ่มผลรวมได้เรื่อยๆ 
 
-**Rules:**
+เช่น
 
-อย่าใช้ global variables.
+``` js
+let acc = accumulator(1)
+acc(2)
+acc(3)
+console.log(acc(4))
+```
 
-**Hint:**
+จะแสดงค่า 10 บนคอนโซล
 
-Closures save outer state.
+**กฏ:**
+
+ห้ามใช้ global variables
+
 
 # --hints--
 
-`accumulator` ควรเป็น function.
+`accumulator` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof accumulator === 'function');
 ```
 
-`accumulator(0)` ควร return function.
+`accumulator(0)` ต้องคืนค่าเป็นฟังก์ชัน
 
 ```js
 assert(typeof accumulator(0) === 'function');
 ```
 
-`accumulator(0)(2)` ควร return number.
+`accumulator(0)(2)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof accumulator(0)(2) === 'number');
 ```
 
-Passing in the values 3, -4, 1.5, and 5 ควร return 5.5.
+การส่งค่าเข้าไปเป็น 3, -4, 1.5, และ 5 ต้องคืนค่าเป็น 5.5
 
 ```js
 assert(testFn(5) === 5.5);

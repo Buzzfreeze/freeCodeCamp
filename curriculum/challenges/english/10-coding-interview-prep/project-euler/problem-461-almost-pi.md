@@ -10,41 +10,41 @@ dashedName: problem-461-almost-pi
 
 ให้ `f(k, n)` = $e^\frac{k}{n} - 1$ สำหรับจำนวนเต็มที่ไม่เป็นลบ `k`
 
-อย่างน่าทึ่ง `f(6, 200) + f(75, 200) + f(89, 200) + f(226, 200)` = 3.1415926… ≈ π
+เราจะพบว่า `f(6, 200) + f(75, 200) + f(89, 200) + f(226, 200)` = 3.1415926… ≈ π
 
-อันที่จริง มันเป็นค่าประมาณที่ดีที่สุดของ π ของรูปแบบ `f(a, 200) + f(b, 200) + f(c, 200) + f(d, 200)`
+ซึ่งเป็นค่าประมาณที่ดีที่สุดของ π ในรูปแบบ `f(a, 200) + f(b, 200) + f(c, 200) + f(d, 200)`
 
-ให้ `almostPi(n)` = a<sup>2</sup> + b<sup>2</sup> + c<sup>2</sup> + d<sup>2</sup> สำหรับ a, b, c, d ที่ลดข้อผิดพลาด: $\lvert f(a,n) + f(b,n) + f(c,n) + f(d,n) - \Pi\rvert$
+ให้ `almostPi(n)` = a<sup>2</sup> + b<sup>2</sup> + c<sup>2</sup> + d<sup>2</sup> สำหรับ a, b, c, d เพื่อลดข้อผิดพลาด $\lvert f(a,n) + f(b,n) + f(c,n) + f(d,n) - \Pi\rvert$
 
-ได้รับ `almostPi(200)` = 6<sup>2</sup> + 75<sup>2</sup> + 89<sup>2</sup> + 226<sup>2</sup> = 64658.
+กำหนดให้ `almostPi(200)` = 6<sup>2</sup> + 75<sup>2</sup> + 89<sup>2</sup> + 226<sup>2</sup> = 64658
 
 # --hints--
 
-`almostPi` ควรเป็น function.
+`almostPi` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof almostPi === 'function')
 ```
 
-`almostPi` ควร return number.
+`almostPi` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert.strictEqual(typeof almostPi(10), 'number');
 ```
 
-`almostPi(29)` ควร return `1208`.
+`almostPi(29)` ต้องคืนค่าเป็น `1208`
 
 ```js
 assert.strictEqual(almostPi(29), 1208);
 ```
 
-`almostPi(50)` ควร return `4152`.
+`almostPi(50)` ต้องคืนค่าเป็น `4152`
 
 ```js
 assert.strictEqual(almostPi(50), 4152);
 ```
 
-`almostPi(200)` ควร return `64658`.
+`almostPi(200)` ต้องคืนค่าเป็น `64658`
 
 ```js
 assert.strictEqual(almostPi(200), 64658);

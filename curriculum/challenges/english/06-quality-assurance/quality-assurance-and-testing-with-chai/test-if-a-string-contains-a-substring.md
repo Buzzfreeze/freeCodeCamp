@@ -8,17 +8,21 @@ dashedName: test-if-a-string-contains-a-substring
 
 # --description--
 
-project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
+project นี้สร้างขึ้นจาก [Replit ตัวนี้](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-`include()` และ `notInclude()` ใช้ได้กับ string ด้วยเช่นกัน! `include()` ยืนยันว่า string แท้จริงมี substring ที่ต้องการ
+เราใช้ method `include()` และ `notInclude()` กับ string ได้ด้วยเหมือนกัน!  
+`include()` จะตรวจสอบว่าใน string (argument แรก) มี substring ที่เราระบุ (argument ที่สอง) หรือไม่
 
 # --instructions--
 
-ภายใน `tests/1_unit-tests.js`  ภายใต้การทดสอบที่มีป้ายกำกับ "#14" ในชุด `Strings`  ให้เปลี่ยน `assert`  แต่ละรายการเป็น `assert.include` หรือ `assert.notInclude`  เพื่อให้ผ่านการทดสอบ (ควร ประเมินค่า `true` ) อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน
+ในไฟล์ `tests/1_unit-tests.js` ให้ดูที่ test ใต้ `#14` ใน suite ที่ชื่อ `Strings`  
+ให้เปลี่ยน `assert` เป็น `assert.include` หรือ `assert.notInclude` เพื่อทำให้ test ผ่าน (ได้ค่าเป็น `true`) 
+อย่าแก้ไข argument ที่ส่งเข้าไปใน assert
 
 # --hints--
 
-การทดสอบทั้งหมดควรผ่าน
+test ทั้งหมดต้องผ่าน
+
 
 ```js
 (getUserInput) =>
@@ -32,7 +36,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งแรก - `include`  กับ `notInclude`
+ต้องเลือกใช้ method `include` หรือ `notInclude` กับ assert ตัวแรกให้ถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -50,7 +54,7 @@ project นี้สร้างขึ้นจาก project เริ่มต
   );
 ```
 
-ผู้เรียนควรเลือกวิธีที่ถูกต้องสำหรับการยืนยันครั้งที่สอง - `include`  กับ `notInclude`
+ต้องเลือกใช้ method `include` หรือ `notInclude` กับ assert ตัวที่สองให้ถูกต้อง
 
 ```js
 (getUserInput) =>

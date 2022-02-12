@@ -8,7 +8,14 @@ dashedName: find-the-minimum-and-maximum-value-in-a-binary-search-tree
 
 # --description--
 
-ในแบบทดสอบนี้ คุณจะต้องสร้างสอง method คือ `findMin` และ `findMax` โดยที่ method เหล่านี้ควร return ค่าต่ำสุดและสูงสุดที่เก็บไว้ใน binary search tree (ไม่ต้องกังวลกับการเพิ่มค่าให้กับ tree ในตอนนี้ เราได้เพิ่มบางส่วนในหลังบ้านของเราแล้ว) หากคุณติดขัดให้พิจารณาค่าคงที่ที่ต้องเป็นจริงสำหรับ binary search trees: แต่ละ	 tree ย่อยทางซ้ายมีค่าน้อยกว่าหรือเท่ากับ parent  และ tree ย่อยทางขวาแต่ละ tree มากกว่าหรือเท่ากับ parent สมมุติว่าต้นไม้ของเราสามารถเก็บได้เฉพาะค่าจำนวนเต็มเท่านั้น หาก tree ว่างเปล่า method ทั้งสองควร return ค่าเป็น `null`
+ในแบบทดสอบนี้ คุณจะต้องสร้างสอง method คือ `findMin` และ `findMax` โดยที่ method เหล่านี้9ต้งคืนค่าเป็นค่าต่ำสุดและสูงสุดที่เก็บไว้ใน binary search tree (ไม่ต้องกังวลกับการเพิ่มลงใน tree ในตอนนี้ เราได้เพิ่มบางส่วนในหลังบ้านของเราแล้ว) 
+หากติดปัญหา ให้ลองย้อนดูกฏของ binary search tree อีกครั้ง: 
+
+1. แต่ละ tree ย่อยทางซ้ายมีค่าน้อยกว่าหรือเท่ากับ parent  
+2. แต่ละ tree ย่อยทางขวาแต่ละ tree มากกว่าหรือเท่ากับ parent
+
+ตอนนี้ให้สมมุติว่าต้นไม้ของเราเก็บเฉพาะค่าจำนวนเต็มเท่านั้น 
+หากไม่มีข้อมูลใน tree ให้ method สองตัวนี้คืนค่าเป็น `null`
 
 # --hints--
 
@@ -26,7 +33,7 @@ assert(
 );
 ```
 
-binary search tree ควรมี method ที่เรียกว่า `findMin`	
+binary search tree ควรมี method ที่ชื่อ `findMin`	
 
 ```js
 assert(
@@ -42,7 +49,7 @@ assert(
 );
 ```
 
-binary search tree ควรมี method ที่เรียกว่า `findMax`	
+binary search tree ควรมี method ที่ชื่อ `findMax`	
 
 ```js
 assert(
@@ -58,7 +65,7 @@ assert(
 );
 ```
 
-`findMin` method ควร return ค่าน้อยสุดใน binary search tree
+method `findMin` ต้องคืนค่าเป็นค่าที่น้อยที่สุดใน binary search tree
 
 ```js
 assert(
@@ -85,7 +92,7 @@ assert(
 );
 ```
 
-`findMax` method ควร return ค่ามากสุดใน binary search tree
+method `findMax` ต้องคืนค่าเป็นค่าที่มากที่สุดใน binary search tree
 
 ```js
 assert(
@@ -112,7 +119,7 @@ assert(
 );
 ```
 
-`findMin` และ `findMax` methods ควร return `null` สำหรับ tree ที่ว่างเปล่า
+method `findMin` และ `findMax` ต้องคืนค่าเป็น `null` ถ้าไม่มีข้อมูลใน tree 
 
 ```js
 assert(
@@ -186,9 +193,9 @@ function Node(value) {
 }
 function BinarySearchTree() {
   this.root = null;
-  // Only change code below this line
-  
-  // Only change code above this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
+
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 ```
 

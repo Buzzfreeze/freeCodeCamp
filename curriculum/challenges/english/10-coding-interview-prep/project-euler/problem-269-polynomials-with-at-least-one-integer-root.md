@@ -24,11 +24,11 @@ dashedName: problem-269-polynomials-with-at-least-one-integer-root
 
 สามารถตรวจสอบได้ว่า $Z(100\\,000)$ คือ 14696
 
-หาค่า $Z({10}^{16})$?
+ให้หาค่าของ $Z({10}^{16})$
 
 # --hints--
 
-`polynomialsWithOneIntegerRoot()` ควร return `1311109198529286`.
+`polynomialsWithOneIntegerRoot()` ต้องคืนค่าเป็น `1311109198529286`
 
 ```js
 assert.strictEqual(polynomialsWithOneIntegerRoot(), 1311109198529286);

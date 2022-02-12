@@ -10,35 +10,35 @@ dashedName: problem-10-summation-of-primes
 
 ผลรวมของจำนวนเฉพาะที่ต่ำกว่า 10 คือ 2 + 3 + 5 + 7 = 17
 
-หาผลบอกของจำนวนเฉพาะที่มีค่าต่ำกว่า `n`
+หาผลรวมของจำนวนเฉพาะที่มีค่าต่ำกว่า `n`
 
 # --hints--
 
-`primeSummation(17)` ควร return number
+`primeSummation(17)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof primeSummation(17) === 'number');
 ```
 
-`primeSummation(17)` ควร return 41
+`primeSummation(17)` ต้องคืนค่าเป็น 41
 
 ```js
 assert.strictEqual(primeSummation(17), 41);
 ```
 
-`primeSummation(2001)` ควร return 277050
+`primeSummation(2001)` ต้องคืนค่าเป็น 277050
 
 ```js
 assert.strictEqual(primeSummation(2001), 277050);
 ```
 
-`primeSummation(140759)` ควร return 873608362
+`primeSummation(140759)` ต้องคืนค่าเป็น 873608362
 
 ```js
 assert.strictEqual(primeSummation(140759), 873608362);
 ```
 
-`primeSummation(2000000)` ควร return 142913828922
+`primeSummation(2000000)` ต้องคืนค่าเป็น 142913828922
 
 ```js
 assert.strictEqual(primeSummation(2000000), 142913828922);

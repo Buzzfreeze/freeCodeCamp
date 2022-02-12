@@ -8,7 +8,7 @@ dashedName: problem-78-coin-partitions
 
 # --description--
 
-ให้ ${p}(n)$ แทนจำนวนวิธีต่างๆ ที่เหรียญ `n` สามารถแยกออกเป็นกองได้ ตัวอย่างเช่น สามารถแยกเหรียญห้าเหรียญออกเป็นกองได้เจ็ดวิธี ดังนั้น ${p}(5) = 7$
+ให้ ${p}(n)$ แทนจำนวนวิธีต่างๆ ที่เหรียญจำนวน `n` เหรียญสามารถแยกออกเป็นกองได้ เช่น สามารถแยกเหรียญห้าเหรียญออกเป็นกองได้เจ็ดวิธี ดังนั้น ${p}(5) = 7$
 
 <div style='text-align: center;'>
 
@@ -24,35 +24,35 @@ dashedName: problem-78-coin-partitions
 
 </div><br>
 
-ค้นหาค่าที่น้อยที่สุดของ `n` ซึ่ง ${p}(n)$ หารด้วย `divisor` ลงตัว
+ให้หาค่า `n` ที่ต่ำที่สุด ที่ ${p}(n)$ หารด้วย `divisor` ลงตัว
 
 # --hints--
 
-`coinPartitions(7)` ควร return number.
+`coinPartitions(7)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof coinPartitions(7) === 'number');
 ```
 
-`coinPartitions(7)` ควร return `5`.
+`coinPartitions(7)` ต้องคืนค่าเป็น `5`
 
 ```js
 assert.strictEqual(coinPartitions(7), 5);
 ```
 
-`coinPartitions(10000)` ควร return `599`.
+`coinPartitions(10000)` ต้องคืนค่าเป็น `599`
 
 ```js
 assert.strictEqual(coinPartitions(10000), 599);
 ```
 
-`coinPartitions(100000)` ควร return `11224`.
+`coinPartitions(100000)` ต้องคืนค่าเป็น `11224`
 
 ```js
 assert.strictEqual(coinPartitions(100000), 11224);
 ```
 
-`coinPartitions(1000000)` ควร return `55374`.
+`coinPartitions(1000000)` ต้องคืนค่าเป็น `55374`
 
 ```js
 assert.strictEqual(coinPartitions(1000000), 55374);

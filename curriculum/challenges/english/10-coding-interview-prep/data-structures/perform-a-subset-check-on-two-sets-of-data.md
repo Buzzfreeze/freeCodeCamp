@@ -8,13 +8,13 @@ dashedName: perform-a-subset-check-on-two-sets-of-data
 
 # --description--
 
-ในแบบฝึกหัดนี้ เราจะทำการทดสอบ subset กับข้อมูล 2 set เราจะสร้าง method ในโครงสร้างข้อมูล `Set` ที่เรียกว่า `isSubsetOf` วิธีนี้จะเปรียบเทียบ set แรกกับ set ที่สอง และหาก set แรกมีองค์ประกอบทุกอย่างเหมือนใน set ที่สอง จะreturn `true`
+ในแบบฝึกหัดนี้ เราจะทำการทดสอบ subset กับข้อมูล 2 set โดยเราจะสร้าง method ในโครงสร้างข้อมูล `Set` ที่เรียกว่า `isSubsetOf` วิธีนี้จะเปรียบเทียบ set แรกกับ set ที่สอง และหาก set แรกมีองค์ประกอบทุกอย่างเหมือนใน set ที่สอง จะคืนค่าเป็น `true`
 
-ยกตัวอย่างเช่น หากกำหนดให้มี `setA = ['a','b']` และ `setB = ['a','b','c','d']` ดังนั้นแล้ว `setA` ก็คือ subset ของ `setB` ดังนั้น `setA.isSubsetOf(setB)` ควร return `true`
+ยกตัวอย่างเช่น หากกำหนดให้มี `setA = ['a','b']` และ `setB = ['a','b','c','d']` แล้ว `setA` ก็คือ subset ของ `setB` ดังนั้น `setA.isSubsetOf(setB)` ควรคืนค่าเป็น `true`
 
 # --hints--
 
-คลาส `Set` ของคุณควรมี `isSubsetOf` method
+class `Set` ของคุณควรมี method `isSubsetOf`
 
 ```js
 assert(
@@ -43,7 +43,7 @@ assert(
 );
 ```
 
-`['a', 'b'].isSubsetOf(['a', 'b', 'c', 'd'])` ควร return `true`
+`['a', 'b'].isSubsetOf(['a', 'b', 'c', 'd'])` ควรคืนค่าเป็น `true`
 
 ```js
 assert(
@@ -62,7 +62,7 @@ assert(
 );
 ```
 
-`['a', 'b', 'c'].isSubsetOf(['a', 'b'])` ควร return `false`
+`['a', 'b', 'c'].isSubsetOf(['a', 'b'])` ควรคืนค่าเป็น `false`
 
 ```js
 assert(
@@ -80,7 +80,7 @@ assert(
 );
 ```
 
-`[].isSubsetOf([])` ควร return `true`
+`[].isSubsetOf([])` ควรคืนค่าเป็น `true`
 
 ```js
 assert(
@@ -93,7 +93,7 @@ assert(
 );
 ```
 
-`['a', 'b'].isSubsetOf(['c', 'd'])` ควร return `false`
+`['a', 'b'].isSubsetOf(['c', 'd'])` ควรคืนค่าเป็น `false`
 
 ```js
 assert(
@@ -121,15 +121,15 @@ class Set {
     this.dictionary = {};
     this.length = 0;
   }
-  // This method will check for the presence of an element and return true or false
+  // method นี้จะอ่านว่ามีค่าอยู่ใน set แล้วหรือไม่ และคืนค่าเป็น true หรือ false
   has(element) {
     return this.dictionary[element] !== undefined;
   }
-  // This method will return all the values in the set
+  // method นี้จะคืนค่าเป็นค่าทั้งหมดที่อยู่ใน set
   values() {
     return Object.keys(this.dictionary);
   }
-  // This method will add an element to the set
+  // method นี้จะใช้เพิ่ม element ลงไปใน set
   add(element) {
     if (!this.has(element)) {
       this.dictionary[element] = true;
@@ -139,7 +139,7 @@ class Set {
 
     return false;
   }
-  // This method will remove an element from a set
+  // method นี้จะใช้ลบ element ออกจาก set
   remove(element) {
     if (this.has(element)) {
       delete this.dictionary[element];
@@ -149,11 +149,11 @@ class Set {
 
     return false;
   }
-  // This method will return the size of the set
+  // method นี้จะคืนค่าเป็นจำนวนข้อมูลใน set
   size() {
     return this.length;
   }
-  // This is our union method 
+  // method นี้ใช้ union 
   union(set) {
     const newSet = new Set();
     this.values().forEach(value => {
@@ -165,7 +165,7 @@ class Set {
 
     return newSet;
   }
-  // This is our intersection method
+  // method นี้ใช้ intersection 
   intersection(set) {
     const newSet = new Set();
 
@@ -199,9 +199,9 @@ class Set {
 
     return newSet;
   }
-  // Only change code below this line
-  
-  // Only change code above this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
+
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 ```
 

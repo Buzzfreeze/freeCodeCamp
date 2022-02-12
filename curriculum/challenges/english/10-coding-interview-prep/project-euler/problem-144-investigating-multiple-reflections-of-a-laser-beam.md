@@ -20,7 +20,7 @@ dashedName: problem-144-investigating-multiple-reflections-of-a-laser-beam
   <img class="img-responsive center-block" alt="animation with first 10 relfections of the beam" src="https://cdn.freecodecamp.org/curriculum/project-euler/investigating-multiple-reflections-of-a-laser-beam-2.gif" style="display: inline-block; background-color: white; padding: 10px;">
 </div><br>
 
-ลำแสงในปัญหานี้เริ่มต้นที่จุด (0.0, 10.1) นอกเซลล์สีขาว และลำแสงกระทบกระจกก่อน (1.4, -9.6)
+ลำแสงในโจทย์นี้เริ่มต้นที่จุด (0.0, 10.1) นอกเซลล์สีขาว และลำแสงกระทบกระจกก่อน (1.4, -9.6)
 
 แต่ละครั้งที่ลำแสงเลเซอร์กระทบพื้นผิวของวงรี มันจะเป็นไปตามกฎการสะท้อนปกติ "มุมตกกระทบเท่ากับมุมสะท้อน" กล่าวคือทั้งลำแสงตกกระทบและลำแสงสะท้อนทำมุมเดียวกันกับเส้นตั้งฉากที่จุดตกกระทบ
 
@@ -32,7 +32,7 @@ dashedName: problem-144-investigating-multiple-reflections-of-a-laser-beam
 ลำแสงกระทบพื้นผิวภายในของเซลล์สีขาวกี่ครั้งก่อนออกจากเซลล์?
 # --hints--
 
-`laserBeamReflections()` ควร return `354`.
+`laserBeamReflections()` ต้องคืนค่าเป็น `354`
 
 ```js
 assert.strictEqual(laserBeamReflections(), 354);

@@ -8,29 +8,33 @@ dashedName: lzw-compression
 
 # --description--
 
-Lempel-Ziv-Welch (LZW) algorithm ให้ loss-less data compression.
+Lempel-Ziv-Welch (LZW) อัลกอริทีมจะใช้เพื่อทำการ loss-less data compression
 
-คุณสามารถอ่านคำอธิบายแบบเต็มได้ใน [Wikipedia article](https://en.wikipedia.org/wiki/Lempel-Ziv-Welch) 
+ลองอ่านข้อมูลเพิ่มเติมใน [Wikipedia](https://en.wikipedia.org/wiki/Lempel-Ziv-Welch) 
 
 # --instructions--
 
-เขียนฟังก์ชันที่ใช้พารามิเตอร์สองตัว พารามิเตอร์แรกคือbooleanโดยที่ `true` หมายถึงการบีบอัด และ `false` หมายถึงคลายการบีบอัด พารามิเตอร์ที่สองอาจเป็นstringหรือarrayที่จะประมวลผล หากเป็นstringที่จะบีบอัด ให้ส่งคืนarrayของตัวเลข หากเป็นarrayของตัวเลขที่จะคลายการบีบอัด ให้คืนค่าstring
+ให้เขียนฟังก์ชันที่รับพารามิเตอร์สองตัว 
+
+พารามิเตอร์แรกคือ boolean ซึ่งถ้าเป็น `true` ให้ทำการ compress และถ้าเป็น `false` ให้ทำการ decompress 
+
+พารามิเตอร์ที่สองจะเป็นสตริงหรือ array ก็ได้ ถ้าเป็นสตริง เมื่อทำการ compress แล้วให้คืนค่าเป็น array ของตัวเลข ถ้าเป็น array ให้คืนค่าเป็น string
 
 # --hints--
 
-`LZW` ควรเป็น function.
+`LZW` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof LZW === 'function');
 ```
 
-`LZW(true, "TOBEORNOTTOBEORTOBEORNOT")` ควร return array.
+`LZW(true, "TOBEORNOTTOBEORTOBEORNOT")` ต้องคืนค่าเป็น array
 
 ```js
 assert(Array.isArray(LZW(true, 'TOBEORNOTTOBEORTOBEORNOT')));
 ```
 
-`LZW(false, [84, 79, 66, 69, 79, 82, 78, 79, 84, 256, 258, 260, 265, 259, 261, 263])` ควร return string.
+`LZW(false, [84, 79, 66, 69, 79, 82, 78, 79, 84, 256, 258, 260, 265, 259, 261, 263])` ต้องคืนค่าเป็น string
 
 ```js
 assert(
@@ -55,7 +59,7 @@ assert(
 );
 ```
 
-`LZW(true, "TOBEORNOTTOBEORTOBEORNOT")` ควร return `[84, 79, 66, 69, 79, 82, 78, 79, 84, 256, 258, 260, 265, 259, 261, 263]`.
+`LZW(true, "TOBEORNOTTOBEORTOBEORNOT")` ต้องคืนค่าเป็น `[84, 79, 66, 69, 79, 82, 78, 79, 84, 256, 258, 260, 265, 259, 261, 263]`
 
 ```js
 assert.deepEqual(LZW(true, 'TOBEORNOTTOBEORTOBEORNOT'), [
@@ -78,7 +82,7 @@ assert.deepEqual(LZW(true, 'TOBEORNOTTOBEORTOBEORNOT'), [
 ]);
 ```
 
-`LZW(false, [84, 79, 66, 69, 79, 82, 78, 79, 84, 256, 258, 260, 265, 259, 261, 263])` ควร return `"TOBEORNOTTOBEORTOBEORNOT"`.
+`LZW(false, [84, 79, 66, 69, 79, 82, 78, 79, 84, 256, 258, 260, 265, 259, 261, 263])` ต้องคืนค่าเป็น `"TOBEORNOTTOBEORTOBEORNOT"`
 
 ```js
 assert.equal(
@@ -104,7 +108,7 @@ assert.equal(
 );
 ```
 
-`LZW(true, "0123456789")` ควร return `[48, 49, 50, 51, 52, 53, 54, 55, 56, 57]`.
+`LZW(true, "0123456789")` ต้องคืนค่าเป็น `[48, 49, 50, 51, 52, 53, 54, 55, 56, 57]`
 
 ```js
 assert.deepEqual(LZW(true, '0123456789'), [
@@ -121,7 +125,7 @@ assert.deepEqual(LZW(true, '0123456789'), [
 ]);
 ```
 
-`LZW(false, [48, 49, 50, 51, 52, 53, 54, 55, 56, 57])` ควร return `"0123456789"`.
+`LZW(false, [48, 49, 50, 51, 52, 53, 54, 55, 56, 57])` ต้องคืนค่าเป็น `"0123456789"`
 
 ```js
 assert.equal(
@@ -130,13 +134,13 @@ assert.equal(
 );
 ```
 
-`LZW(true, "BABAABAAA")` ควร return `[66, 65, 256, 257, 65, 260]`.
+`LZW(true, "BABAABAAA")` ต้องคืนค่าเป็น `[66, 65, 256, 257, 65, 260]`
 
 ```js
 assert.deepEqual(LZW(true, 'BABAABAAA'), [66, 65, 256, 257, 65, 260]);
 ```
 
-`LZW(false, [66, 65, 256, 257, 65, 260])` ควร return `"BABAABAAA"`.
+`LZW(false, [66, 65, 256, 257, 65, 260])` ต้องคืนค่าเป็น `"BABAABAAA"`
 
 ```js
 assert.equal(LZW(false, [66, 65, 256, 257, 65, 260]), 'BABAABAAA');

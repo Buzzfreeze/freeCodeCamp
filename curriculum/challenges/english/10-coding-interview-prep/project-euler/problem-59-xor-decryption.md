@@ -21,13 +21,13 @@ dashedName: problem-59-xor-decryption
 
 # --hints--
 
-`XORDecryption(cipher)` ควร return number.
+`XORDecryption(cipher)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof XORDecryption(cipher) === 'number');
 ```
 
-`XORDecryption(cipher)` ควร return 129448.
+`XORDecryption(cipher)` ต้องคืนค่าเป็น 129448
 
 ```js
 assert.strictEqual(XORDecryption(cipher), 129448);

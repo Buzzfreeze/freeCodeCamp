@@ -8,38 +8,38 @@ dashedName: problem-62-cubic-permutations
 
 # --description--
 
-cube, 41063625 ($345^3$) สามารถเรียงสับเปลี่ยนเพื่อผลิตลูกบาศก์อีกสองก้อน: 56623104 ($384^3$) และ 66430125 ($405^3$) ซึ่ง 41063625 จะเล็กที่สุดเมื่อมี 3 permutations -v' digits ที่เป็น cube
+41063625 ($345^3$) สามารถสับเปลี่ยนเพื่อสร้างเป็นเลขยกกำลังอีกสองเลขคือ 56623104 ($384^3$) และ 66430125 ($405^3$) ซึ่ง 41063625 จะน้อยที่สุดเมื่อมี 3 permutations ของเลขสามหลัก
 
-หาค่าลูกบาศก์ที่น้อยที่สุดของ `n` permutations โดยตัวเลขของมันคือลูกบาศก์
+หาค่าเลขยกกำลังที่น้อยที่สุดของ `n` permutation โดยตัวเลขคือเลขยกกำลัง
 
 
 # --hints--
 
-`cubicPermutations(2)` ควร return number.
+`cubicPermutations(2)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof cubicPermutations(2) === 'number');
 ```
 
-`cubicPermutations(2)` ควร return `125`.
+`cubicPermutations(2)` ต้องคืนค่าเป็น `125`
 
 ```js
 assert.strictEqual(cubicPermutations(2), 125);
 ```
 
-`cubicPermutations(3)` ควร return `41063625`.
+`cubicPermutations(3)` ต้องคืนค่าเป็น `41063625`
 
 ```js
 assert.strictEqual(cubicPermutations(3), 41063625);
 ```
 
-`cubicPermutations(4)` ควร return `1006012008`.
+`cubicPermutations(4)` ต้องคืนค่าเป็น `1006012008`
 
 ```js
 assert.strictEqual(cubicPermutations(4), 1006012008);
 ```
 
-`cubicPermutations(5)` ควร return `127035954683`.
+`cubicPermutations(5)` ต้องคืนค่าเป็น `127035954683`
 
 ```js
 assert.strictEqual(cubicPermutations(5), 127035954683);

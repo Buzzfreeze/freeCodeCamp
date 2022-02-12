@@ -14,13 +14,15 @@ dashedName: problem-401-sum-of-squares-of-divisors
 
 ให้ $\sigma_2(n)$ แทนผลรวมกำลังสองของตัวหารของ $n$ ดังนั้น $\sigma_2(6) = 50$
 
-ให้ $\Sigma_2$ แทนฟังก์ชันสรุปของ $\sigma_2$ นั่นคือ $\Sigma_2(n) = \sum \sigma_2(i)$ สำหรับ $i=1$ ถึง $n$ 6 ค่าแรกของ $\Sigma_2$ คือ: 1, 6, 16, 37, 63 และ 113
+ให้ $\Sigma_2$ แทนฟังก์ชันสรุปของ $\sigma_2$  
+นั่นคือ $\Sigma_2(n) = \sum \sigma_2(i)$ สำหรับ $i=1$ ถึง $n$  
+6 ค่าแรกของ $\Sigma_2$ คือ: 1, 6, 16, 37, 63 และ 113
 
-หา $\Sigma_2({10}^{15})$ modulo ${10}^9$
+ให้หา $\Sigma_2({10}^{15})$ mod ${10}^9$
 
 # --hints--
 
-`sumOfSquaresDivisors()` ควร return `281632621`.
+`sumOfSquaresDivisors()` ต้องคืนค่าเป็น `281632621`
 
 ```js
 assert.strictEqual(sumOfSquaresDivisors(), 281632621);

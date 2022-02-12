@@ -8,23 +8,25 @@ dashedName: 24-game
 
 # --description--
 
-[24 Game](https://en.wikipedia.org/wiki/24_Game) ทดสอบ person's mental arithmetic
+คุณคงรู้จัก [เกม 24](https://en.wikipedia.org/wiki/24_Game) แล้วใช่มั้ย?
 
-จุดมุ่งหมายของเกมคือการจัดเรียงตัวเลขสี่ตัวในลักษณะที่เมื่อประเมินผลคือ 24
+เกมนี้จะให้คุณทำการ บวก ลบ คูณ หาร เลขที่มีให้ทั้ง 4 ตัว เพื่อทำให้ได้ผลลัพธ์เป็น 24
 
 # --instructions--
 
-ใช้ฟังก์ชันที่รับstringของตัวเลขสี่หลักเป็นargument โดยแต่ละหลักตั้งแต่ 1 ถึง 9 (รวม) โดยอนุญาตให้ทำซ้ำได้ และส่งกลับนิพจน์ทางคณิตศาสตร์ที่ประเมินเป็นตัวเลข 24 หากไม่มีคำตอบดังกล่าว ให้ส่งคืน "no solution" มีอยู่
+ให้เขียนฟังก์ชันที่รับค่าเป็นสตริงที่มีตัวเลขสี่หลัก โดยแต่ละหลักมีค่าได้ตั้งแต่ 1 ถึง 9  และเลขซ้ำได้ 
 
-**Rules:**
+ให้ฟังก์ชันนี้คืนค่าเป็นวิธีการคำนวณที่จะทำให้ได้ค่าเป็น 24 ถ้าไม่มีทางได้ 24 ให้คืนค่าเป็นสตริง "no solution exists"
+
+**กฏ:**
 <ul>
-  <li> Only the following operators/functions are allowed: multiplication, division, addition, subtraction. </li>
-  <li> Division ควร use floating point or rational arithmetic, etc, to preserve remainders. </li>
-  <li> Forming multiple digit numbers from the supplied digits is disallowed. (So an answer of 12+12 when given 1, 2, 2, and 1 is wrong). </li>
-  <li> The order of the digits when given does not have to be preserved. </li>
+  <li> ใช้ได้แค่ บวก ลบ คูณ หาร เท่านั้น </li>
+  <li> การหารต้องใช้เลขแบบ floating point ด้วย เพื่อทำให้เศษไม่หายไป </li>
+  <li> ห้ามใช้เลขเพื่อสร้างเป็นเลขใหม่ (เช่น ถ้าเราให้เลขไปเป็น  1, 2, 2, 1 แล้วคุณคืนค่าผลลัพธ์มาเป็น 12+12 จะถือว่าผิด)</li>
+  <li> เรียงลำดับเลขได้ตามสบายเลย ไม่ต้องอิงตามลำดับที่ส่งเข้าไปในฟังก์ชันก็ได้ </li>
 </ul>
 
-| Example input                 | Example output            |
+| ตัวอย่าง input                  | ตัวอย่าง output             |
 | ----------------------------- | ------------------------- |
 | <code>solve24("4878");</code> | <code>(7-8/8)\*4</code>   |
 | <code>solve24("1234");</code> | <code>3\*1\*4\*2</code>   |
@@ -33,31 +35,31 @@ dashedName: 24-game
 
 # --hints--
 
-`solve24` ควรเป็น function.
+`solve24` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof solve24 === 'function');
 ```
 
-`solve24("4878")` ควร return `(7-8/8)*4` or `4*(7-8/8)`
+`solve24("4878")` ต้องคืนค่าเป็น `(7-8/8)*4` หรือ `4*(7-8/8)`
 
 ```js
 assert(include(answers[0], removeParentheses(solve24(testCases[0]))));
 ```
 
-`solve24("1234")` ควร return arrangement `1*2*3*4`
+`solve24("1234")` ต้องคืนค่าเป็น `1*2*3*4`
 
 ```js
 assert(include(answers[1], removeParentheses(solve24(testCases[1]))));
 ```
 
-`solve24("6789")` ควร return `(6*8)/(9-7)` or `(8*6)/(9-7)`
+`solve24("6789")` ต้องคืนค่าเป็น `(6*8)/(9-7)` หรือ `(8*6)/(9-7)`
 
 ```js
 assert(include(answers[2], removeParentheses(solve24(testCases[2]))));
 ```
 
-`solve24("1127")` ควร return permutation of `(1+7)*(1+2)`
+`solve24("1127")` ต้องคืนค่าเป็น `(1+7)*(1+2)`
 
 ```js
 assert(include(answers[3], removeParentheses(solve24(testCases[3]))));

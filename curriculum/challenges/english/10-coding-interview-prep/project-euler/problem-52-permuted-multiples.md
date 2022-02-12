@@ -8,25 +8,25 @@ dashedName: problem-52-permuted-multiples
 
 # --description--
 
-จำนวน 125874 และ 251748(สองเท่าของค่าแรก) มี digits ที่เหมือนกัน แต่ลำดับต่างกัน
+จำนวน 125874 และ 251748(สองเท่าของค่าแรก) มีตัวเลขที่เหมือนกัน แต่ลำดับต่างกัน
 
-หา integer ที่น้อยที่สุดและเป็นค่าบวก ที่คูณด้วย integers $\\{2, 3, \ldots, n\\}$, และมีลำดับที่เหมือนกัน
+หาจำนวนเต็มที่น้อยที่สุดและเป็นค่าบวก ที่คูณด้วยจำนวนเต็ม $\\{2, 3, \ldots, n\\}$, แล้วมียังมีเลขเหมือนเดิม
 
 # --hints--
 
-`permutedMultiples(2)` ควร return number.
+`permutedMultiples(2)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof permutedMultiples(2) === 'number');
 ```
 
-`permutedMultiples(2)` ควร return `125874`.
+`permutedMultiples(2)` ต้องคืนค่าเป็น `125874`
 
 ```js
 assert.strictEqual(permutedMultiples(2), 125874);
 ```
 
-`permutedMultiples(6)` ควร return `142857`.
+`permutedMultiples(6)` ต้องคืนค่าเป็น `142857`
 
 ```js
 assert.strictEqual(permutedMultiples(6), 142857);

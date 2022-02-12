@@ -8,11 +8,13 @@ dashedName: problem-179-consecutive-positive-divisors
 
 # --description--
 
-หาจำนวนเต็ม $1 &lt; น &lt; {10}^7$ ซึ่ง $n$ และ $n + 1$ มีจำนวนตัวหารบวกเท่ากัน ตัวอย่างเช่น 14 มีตัวหารบวก 1, 2, 7, 14 ในขณะที่ 15 มี 1, 3, 5, 15
+ให้หาจำนวนเต็ม $1 &lt; n &lt; {10}^7$ โดย $n$ และ $n + 1$ มีจำนวนตัวหารบวกเท่ากัน 
+
+เช่น 14 มีตัวหารบวกเป็น 1, 2, 7, 14 ในขณะที่ 15 มี 1, 3, 5, 15
 
 # --hints--
 
-`consecutivePositiveDivisors()` ควร return `986262`.
+`consecutivePositiveDivisors()` ต้องคืนค่าเป็น `986262`
 
 ```js
 assert.strictEqual(consecutivePositiveDivisors(), 986262);

@@ -8,19 +8,26 @@ dashedName: search-within-a-linked-list
 
 # --description--
 
-มาเพิ่ม method ที่เป็นประโยชน์อีกสองสาม method ในคลาส linked list ของเรา จะเป็นประโยชน์เพียงใดถ้าเราสามารถบอกได้ว่าลิสต์ของเราว่างเปล่าหรือไม่ เช่นเดียวกับคลาส `Stack` และ `Queue`
+มาเพิ่ม method ที่เหลือ ที่จะต้องใช้ในคลาส linked list ของเรากัน 
+จะดีมั้ยถ้าเราจะดูได้ว่าใน linked list ของเรามีข้อมูลอยู่หรือเปล่า เหมือนกับ method ที่เรามีในคลาส `Stack` และ `Queue`
 
-เราควรจะสามารถค้นหา element เฉพาะใน linked list ของเราได้ การสำรวจโครงสร้างข้อมูลเป็นสิ่งที่คุณจะต้องการฝึกฝนอย่างมาก! มาสร้าง `indexOf` method ที่รับ `element` เป็น argument และ return `index` ของ element นั้นใน linked list หากไม่พบ element ใน linked list ให้ return `-1`
+เราควรจะสามารถค้นหา element ที่ระบุ ใน linked list ของเราได้ 
+การดูข้อมูลในโครงสร้างข้อมูลเป็นเรื่องจำเป็นที่ต้องฝึกฝน! 
+ให้สร้าง method `indexOf` ที่รับ `element` เป็น argument และคืนค่าเป็น `index` ของ element นั้นใน linked list ถ้าไม่เจอ element นั้นใน linked list ให้คืนค่าเป็น `-1`
 
-เรามาลองใช้ method ที่ทำตรงกันข้ามกัน: `elementAt` method ที่ใช้ `index` เป็น argument และ return `element` ที่ `index` ที่กำหนด หากไม่พบ `element` ให้ return `undefined`
+และให้สร้าง method ที่ทำตรงกันข้ามกัน คือ method `elementAt` ที่รับ `index` เป็น argument และคืนค่าเป็น `element` ที่ `index` ที่ระบุ ถ้าไม่เจอ `element` นั้น ให้คืนค่าเป็น `undefined`
 
 # --instructions--
 
-เขียน `isEmpty` method ที่ตรวจสอบว่า linked list ว่างเปล่าหรือไม่ และ `indexOf` method ที่ return `index` ของ element ที่กำหนด และ `elementAt` ที่ return `element` ที่ `index` ที่กำหนด
+ให้เขียน method ตามเงื่อนไขนี้
+
+1. method `isEmpty` ที่ตรวจสอบว่า linked list ว่างเปล่าหรือไม่ 
+2. method `indexOf` ที่จะคืนค่าเป็น `index` ของ element ที่ระบุ และ
+3. method `elementAt` ที่จะคืนค่าเป็น `element` ที่ `index` ที่ระบุ
 
 # --hints--
 
-คลาส `LinkedList` ของคุณควรมี `isEmpty` method
+คลาส `LinkedList` ของคุณควรมี method `isEmpty`
 
 ```js
 assert(
@@ -31,7 +38,7 @@ assert(
 );
 ```
 
-`isEmpty` method ควร return `false` เมื่อ linked list นั้นมี element อย่างน้อยหนึ่ง element
+method `isEmpty` ควรคืนค่าเป็น `false` เมื่อ linked list นั้นมี element อย่างน้อยหนึ่ง element
 
 ```js
 assert(
@@ -45,7 +52,7 @@ assert(
 );
 ```
 
-`isEmpty` method ของคุณควร return `true` เมื่อ linked list นั้นไม่มี element ใดๆ อยู่
+method `isEmpty` ของคุณควรคืนค่าเป็น `true` เมื่อ linked list นั้นไม่มี element ใดๆ อยู่
 
 ```js
 assert(
@@ -56,7 +63,7 @@ assert(
 );
 ```
 
-คลาส `LinkedList` ของคุณควรมี `indexOf` method
+คลาส `LinkedList` ของคุณควรมี method `indexOf`
 
 ```js
 assert(
@@ -67,7 +74,7 @@ assert(
 );
 ```
 
-`indexOf` method ของคุณควร return index ของ element ที่กำหนดที่ถูกพบใน linked list
+method `indexOf` ของคุณควรคืนค่าเป็น index ของ element ที่ระบุใน linked list
 
 ```js
 assert(
@@ -81,7 +88,7 @@ assert(
 );
 ```
 
-`indexOf` method ของคุณควร return `-1` ถ้าหาก element ที่กำหนดไม่ได้ถูกพบใน linked list
+method `indexOf` ของคุณควรคืนค่าเป็น `-1` ถ้าหาก element ที่ระบุไม่มีอยู่ใน linked list
 
 ```js
 assert(
@@ -95,7 +102,7 @@ assert(
 );
 ```
 
-คลาส `LinkedList` ของคุณควรมี `elementAt` method
+คลาส `LinkedList` ของคุณควรมี method `elementAt`
 
 ```js
 assert(
@@ -106,7 +113,7 @@ assert(
 );
 ```
 
-`elementAt` method ควร return element ที่ถูกพบตรง index ที่กำหนดใน linked list
+method `elementAt` ควรคืนค่าเป็น element ที่ index ที่ระบุใน linked list
 
 ```js
 assert(
@@ -120,7 +127,7 @@ assert(
 );
 ```
 
-`elementAt` method ของคุณควร return `undefined` ถ้าหาก element ที่กำหนดไม่ได้ถูกค้นพบตรง index ที่กำหนดใน linked list
+method `elementAt` ของคุณควรคืนค่าเป็น `undefined` ถ้าไม่พบ element ตาม index ที่ระบุใน linked list
 
 ```js
 assert(
@@ -190,9 +197,9 @@ function LinkedList() {
     length --;
   };
 
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 ```
 

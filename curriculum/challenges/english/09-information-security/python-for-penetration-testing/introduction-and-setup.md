@@ -14,19 +14,19 @@ dashedName: introduction-and-setup
 
 ## --text--
 
-What code editor and extension does the instructor recommend for developing penetration testing tools in Python?
+code editor และ extension ตัวไหนที่เราแนะนำให้ใช้เพื่อทำการ pen test โดยใช้ Python?
 
 ## --answers--
 
-Atom and the atom-python-run extension.
+Atom และ extension ชื่อ atom-python-run
 
 ---
 
-VSCode and Microsoft's Python extension.
+VSCode และ extension ชื่อ Microsoft's Python
 
 ---
 
-Sublime Text and the Anaconda package.
+Sublime Text และ package ชื่อ Anaconda
 
 ## --video-solution--
 

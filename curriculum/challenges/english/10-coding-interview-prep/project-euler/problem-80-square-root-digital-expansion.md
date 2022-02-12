@@ -8,34 +8,33 @@ dashedName: problem-80-square-root-digital-expansion
 
 # --description--
 
-เป็นที่ทราบกันดีว่าหากรากที่สองของจำนวนธรรมชาติไม่ใช่จำนวนเต็ม แสดงว่าไม่ลงตัว การขยายทศนิยมของรากที่สองนั้นไม่มีที่สิ้นสุดโดยไม่มีรูปแบบซ้ำเลย
+เป็นที่ทราบกันดีว่าถ้ารากที่สองของจำนวนธรรมชาติไม่ใช่จำนวนเต็ม แสดงว่าไม่ลงตัว การขยายทศนิยมของรากที่สองนั้นไม่มีที่สิ้นสุดโดยไม่มีรูปแบบซ้ำเลย
 
-รากที่สองของสองคือ
- `1.41421356237309504880...`, และผลรวมของทศนิยมหลักร้อยหลักร้อยเป็น `475`.
+รากที่สองของ 2 คือ `1.41421356237309504880...`, และผลรวมของทศนิยมหลักร้อยเป็น `475`
 
-สำหรับจำนวนธรรมชาติ `n` แรก ให้หาผลรวมดิจิทัลของหลักทศนิยมหนึ่งร้อยหลักแรกสำหรับรากที่สองที่ไม่ลงตัวทั้งหมด
+สำหรับจำนวนธรรมชาติ `n` ตัวแรก ให้หาผลรวมดิจิทัลของหลักทศนิยมหนึ่งร้อยหลักแรกสำหรับรากที่สองที่ไม่ลงตัวทั้งหมด
 
 # --hints--
 
-`sqrtDigitalExpansion(2)` ควร return number.
+`sqrtDigitalExpansion(2)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof sqrtDigitalExpansion(2) === 'number');
 ```
 
-`sqrtDigitalExpansion(2)` ควร return `475`.
+`sqrtDigitalExpansion(2)` ต้องคืนค่าเป็น `475`
 
 ```js
 assert.strictEqual(sqrtDigitalExpansion(2), 475);
 ```
 
-`sqrtDigitalExpansion(50)` ควร return `19543`.
+`sqrtDigitalExpansion(50)` ต้องคืนค่าเป็น `19543`
 
 ```js
 assert.strictEqual(sqrtDigitalExpansion(50), 19543);
 ```
 
-`sqrtDigitalExpansion(100)` ควร return `40886`.
+`sqrtDigitalExpansion(100)` ต้องคืนค่าเป็น `40886`
 
 ```js
 assert.strictEqual(sqrtDigitalExpansion(100), 40886);

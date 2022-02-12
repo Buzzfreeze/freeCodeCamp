@@ -8,12 +8,12 @@ dashedName: run-functional-tests-on-api-endpoints-using-chai-http
 
 # --description--
 
-Project นี้ สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/)
+project นี้สร้างขึ้นจาก [Replit ตัวนี้](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
 
-Mocha ให้ผู้เรียนทดสอบการทำงานแบบ asynchronous เช่น การเรียกไปยังจุดปลาย API ด้วยปลั๊กอินชื่อ `chai-http`
+เราจะใช้ Mocha เพื่อ test การทำงานแบบ asynchronous (เช่น การเรียกใช้ API endpoint) ได้ด้วยปลั๊กอินชื่อ `chai-http`
 
-ต่อไปนี้คือตัวอย่างการทดสอบโดยใช้ `chai-http` สำหรับชุดชื่อ `'GET /hello?name=[name] => "hello [name]"'`: 
+ด้านล่างเป็นตัวอย่างการ test โดยใช้ `chai-http` ของ suite ชื่อ `'GET /hello?name=[name] => "hello [name]"'`: 
 
 ```js
 suite('GET /hello?name=[name] => "hello [name]"', function () {
@@ -30,21 +30,23 @@ suite('GET /hello?name=[name] => "hello [name]"', function () {
 });
 ```
 
-การทดสอบจะส่งคำขอ "GET" ไปยังเซิร์ฟเวอร์โดยใช้ชื่อเป็นสตริงการสืบค้น URL (`?name=John`) ในฟังก์ชันการเรียกกลับของเมธอด `end` วัตถุการตอบสนอง (`res`) ที่ได้รับและมีคุณสมบัติ `status'
+การ test จะส่ง request แบบ `GET` ไปยังเซิร์ฟเวอร์โดยใช้ ืname เป็น query string (`?name=John`) และใน callback function ของ method `end` จะได้รับค่าที่คืนกลับมา (`res`) โดยมี property ชื่อ `status`
 
-`assert.equal` ตัวแรกจะตรวจสอบว่าสถานะเท่ากับ `200` หรือไม่ `assert.equal` ที่สองตรวจสอบว่า string ตอบกลับ (`res.text`) เท่ากับ `"hello John"`
+`assert.equal` ตัวแรกจะตรวจสอบว่า `status` เป็น `200` หรือไม่  
+`assert.equal` ตัวที่สองตรวจสอบว่า string ของค่าที่คืนกลับมา (`res.text`) เป็น `"hello John"` หรือไม่
 
-นอกจากนี้ ให้สังเกตพารามิเตอร์ `done` ในฟังก์ชันเรียกกลับของการทดสอบ การเรียกโดยไม่มีอาร์กิวเมนต์ เมื่อสิ้นสุดการทดสอบจำเป็นต้องส่งสัญญาณว่าการดำเนินการแบบ asynchronous เสร็จสมบูรณ์ 
+นอกจากนี้ จะเห็นว่า `done` ใน callback function ของการ test จะถูกเรียกใช้โดยไม่ส่ง argument เข้าไป การเรียกใช้ฟังก์ชันนี้เป็นการบอกว่าการดำเนินการแบบ asynchronous เสร็จสมบูรณ์
 
 # --instructions--
 
-ภายใน `tests/2_functional-tests.js` ให้แก้ไข `'Test GET /hello with no name'` test (`// #1`) เพื่อยืนยัน `status` และ `text` ของการตอบกลับ เพื่อทำให้ผ่านการทดสอบ // อย่าแก้ไขอาร์กิวเมนต์ที่ส่งผ่านไปยังการยืนยัน
+ในไฟล์ `tests/2_functional-tests.js` ให้แก้ไข test ที่ชื่อ `'Test GET /hello with no name'` (`// #1`) เพื่อทำให้การ assert `status` และ `text` ผ่าน
+อย่าแก้ไข argument ที่ส่งเข้าไปใน assert
 
-ไม่ควรมีการสืบค้น URL หากไม่มีการสืบค้นชื่อ URL ปลายทางจะตอบกลับด้วย `hello Guest' 
+ในแบบทดสอบนี้จะยังไม่ต้องมี query string โดย endpoint จะคืนค่ามาเป็น `hello Guest` ถ้าไม่ได้ส่ง query string ไป
 
 # --hints--
 
-ควรผ่านการทดสอบทั้งหมด
+test ทั้งหมดต้องผ่าน
 
 ```js
 (getUserInput) =>
@@ -58,7 +60,7 @@ suite('GET /hello?name=[name] => "hello [name]"', function () {
   );
 ```
 
-ผู้เรียนควรทดสอบ `res.status` เป็น 200
+ต้องตรวจสอบว่า `res.status` == 200
 
 ```js
 (getUserInput) =>
@@ -74,7 +76,7 @@ suite('GET /hello?name=[name] => "hello [name]"', function () {
   );
 ```
 
-ผู้เรียนควรทดสอบ `res.text` == `'hello Guest'`
+ต้องตรวจสอบว่า `res.text` == `'hello Guest'`
 
 ```js
 (getUserInput) =>

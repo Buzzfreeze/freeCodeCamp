@@ -8,7 +8,7 @@ dashedName: problem-463-a-weird-recurrence-relation
 
 # --description--
 
-ฟังก์ชัน $f$ ถูกกำหนดสำหรับจำนวนเต็มบวกทั้งหมดดังนี้:
+กำหนดให้ฟังก์ชัน $f$ ดำเนินการกับจำนวนเต็มบวกดังนี้:
 
 $$\begin{align}
   & f(1) = 1 \\\\
@@ -18,15 +18,15 @@ $$\begin{align}
   & f(4n + 3) = 3f(2n + 1) - 2f(n)
 \end{align}$$
 
-function $S(n)$ กำหนด $\sum_{i=1}^{n} f(i)$.
+ฟังก์ชัน $S(n)$ คือ $\sum_{i=1}^{n} f(i)$.
 
 $S(8) = 22$ และ $S(100) = 3604$.
 
-หา $S(3^{37})$ คำตอบมี 9 หลัก
+ให้หา $S(3^{37})$ โดยตอบเป็นเลขเก้าหลักสุดท้าย
 
 # --hints--
 
-`weirdRecurrenceRelation()` ควร return `808981553`.
+`weirdRecurrenceRelation()` ต้องคืนค่าเป็น `808981553`
 
 ```js
 assert.strictEqual(weirdRecurrenceRelation(), 808981553);

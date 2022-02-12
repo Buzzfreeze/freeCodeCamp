@@ -8,22 +8,23 @@ dashedName: problem-237-tours-on-a-4-x-n-playing-board
 
 # --description--
 
-ให้ $T(n)$ เป็นจำนวนทัวร์บนกระดานเล่น 4 × $n$ ในลักษณะที่ว่า:
+ให้ $T(n)$ เป็นจำนวนการเดินบนกระดาน 4 × $n$ โดยมีเงื่อนไขดังนี้
 
-- ทัวร์เริ่มต้นที่มุมบนซ้าย
-- ทัวร์ประกอบด้วยการเคลื่อนไหวที่ขึ้น ลง ซ้าย หรือขวาหนึ่งตาราง
-- ทัวร์เข้าชมแต่ละตารางเพียงครั้งเดียว
-- ทัวร์สิ้นสุดที่มุมล่างซ้าย
+- การเดินเริ่มต้นที่มุมบนซ้าย
+- การเดินประกอบด้วยการเคลื่อนไหวที่ขึ้น ลง ซ้าย หรือขวาหนึ่งตาราง
+- การเดินจะผ่านแต่ละตารางเพียงครั้งเดียว
+- การเดินสิ้นสุดที่มุมล่างซ้าย
 
-แผนภาพแสดงหนึ่งทัวร์บนกระดาน 4 × 10:
+แผนภาพแสดงการเดินบนกระดาน 4 × 10 หนึ่งแบบ
 
 <img class="img-responsive center-block" alt="one tour over 4 x 10 board" src="https://cdn.freecodecamp.org/curriculum/project-euler/tours-on-a-4-x-n-playing-board.gif" style="background-color: white; padding: 10px;">
 
-$T(10)$ คือ 2329 $T({10}^{12})$ modulo ${10}^8$ คืออะไร
+ถ้า $T(10)$ เป็น 2329  
+แล้ว $T({10}^{12})$ modulo ${10}^8$ เป็นเท่าใด
 
 # --hints--
 
-`toursOnPlayingBoard()` ควร return `15836928`.
+`toursOnPlayingBoard()` ต้องคืนค่าเป็น `15836928`
 
 ```js
 assert.strictEqual(toursOnPlayingBoard(), 15836928);

@@ -8,7 +8,7 @@ dashedName: problem-29-distinct-powers
 
 # --description--
 
-พิจารณา integer ที่รวมกันของ ab สำหรับ 2 ≤ a ≤ 5 และ 2 ≤ b ≤ 5:
+ลองดูจำนวนเต็มทุกตัวในรูป a<sup>b</sup> โดย 2 ≤ a ≤ 5 และ 2 ≤ b ≤ 5:
 
 <div style='padding-left: 4em;'>
   2<sup>2</sup>=4, 2<sup>3</sup>=8, 2<sup>4</sup>=16, 2<sup>5</sup>=32 <br>
@@ -17,41 +17,41 @@ dashedName: problem-29-distinct-powers
   5<sup>2</sup>=25, 5<sup>3</sup>=125, 5<sup>4</sup>=625, 5<sup>5</sup>=3125 <br>
 </div>
 
-ถ้าพวกมันถูกแทนที่ตามลำดับใน numerical โดยไม่ลบจำนวนที่ซ้ำออก, เราจะได้ลำดับ sequence 15 แบบ
+ถ้าเรานำเลขพวกนี้มาเรียงลำดับและลบจำนวนที่ซ้ำกันออก เราจะได้รายการข้อมูลดังนี้
 
 <div style='padding-left: 4em;'>
   4, 8, 9, 16, 25, 27, 32, 64, 81, 125, 243, 256, 625, 1024, 3125
 </div>
 
-มีรูปแบบของ sequence กี่แบบที่ได้จาก `ab` สำหรับ 2 ≤ `a` ≤ `n` และ 2 ≤ `b` ≤ `n`
+ให้หาว่าจะมีรูปแบบรายการได้กี่แบบ ถ้า a<sup>b</sup> โดย 2 ≤ `a` ≤ `n` และ 2 ≤ `b` ≤ `n`
 
 # --hints--
 
-`distinctPowers(15)` ควร return number.
+`distinctPowers(15)` ต้องคืนค่าเป็น number
 
 ```js
 assert(typeof distinctPowers(15) === 'number');
 ```
 
-`distinctPowers(15)` ควร return 177.
+`distinctPowers(15)` ต้องคืนค่าเป็น 177
 
 ```js
 assert.strictEqual(distinctPowers(15), 177);
 ```
 
-`distinctPowers(20)` ควร return 324.
+`distinctPowers(20)` ต้องคืนค่าเป็น 324
 
 ```js
 assert.strictEqual(distinctPowers(20), 324);
 ```
 
-`distinctPowers(25)` ควร return 519.
+`distinctPowers(25)` ต้องคืนค่าเป็น 519
 
 ```js
 assert.strictEqual(distinctPowers(25), 519);
 ```
 
-`distinctPowers(30)` ควร return 755.
+`distinctPowers(30)` ต้องคืนค่าเป็น 755
 
 ```js
 assert.strictEqual(distinctPowers(30), 755);

@@ -8,9 +8,9 @@ dashedName: equilibrium-index
 
 # --description--
 
-ดัชนีดุลยภาพของลำดับคือดัชนีของลำดับซึ่งผลรวมขององค์ประกอบที่ดัชนีล่างจะเท่ากับผลรวมขององค์ประกอบที่ดัชนีที่สูงกว่า
+ดัชนีดุลยภาพของลำดับคือ ดัชนี (index) ของลำดับ ที่ผลรวมของตัวเลขที่ดัชนีน้อยกว่าจะเท่ากับผลของตัวเลขที่ดัชนีที่สูงกว่า
 
-ตัวอย่างเช่น ในลำดับ $A$:
+เช่น ในลำดับ $A$:
 
 <ul style='list-style: none;'>
   <li><big>$A_0 = -7$</big></li>
@@ -28,61 +28,58 @@ dashedName: equilibrium-index
   <li><big>$A_0 + A_1 + A_2 = A_4 + A_5 + A_6$</big></li>
 </ul>
 
-`6` เป็นดัชนีดุลยภาพเพราะว่า:
+`6` ก็เป็นดัชนีดุลยภาพเพราะว่า:
 
 <ul style='list-style: none;'>
   <li><big>$A_0 + A_1 + A_2 + A_3 + A_4 + A_5 = 0$</big></li>
 </ul>
 
-(sum of zero elements is zero)
-
-`7` ไม่ใช่ดัชนีดุลยภาพ เนื่องจากไม่ใช่ดัชนีที่ถูกต้องของลำดับ $A$.
+`7` ไม่ใช่ดัชนีดุลยภาพ เนื่องจากไม่ใช่ดัชนีที่ถูกต้องของลำดับ $A$
 
 # --instructions--
 
-เขียนฟังก์ชันที่ส่งกลับดัชนีสมดุล (ถ้ามี) เมื่อได้รับลำดับ
+ให้เขียนฟังก์ชันคืนค่าดัชนีดุลยภาพของลำดับ
 
-สมมติว่าลำดับอาจยาวมาก
 
 # --hints--
 
-`equilibrium` ควรเป็น function.
+`equilibrium` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof equilibrium === 'function');
 ```
 
-`equilibrium([-7, 1, 5, 2, -4, 3, 0])` ควร return `[3,6]`.
+`equilibrium([-7, 1, 5, 2, -4, 3, 0])` ต้องคืนค่าเป็น `[3,6]`
 
 ```js
 assert.deepEqual(equilibrium(equilibriumTests[0]), ans[0]);
 ```
 
-`equilibrium([2, 4, 6])` ควร return `[]`.
+`equilibrium([2, 4, 6])` ต้องคืนค่าเป็น `[]`
 
 ```js
 assert.deepEqual(equilibrium(equilibriumTests[1]), ans[1]);
 ```
 
-`equilibrium([2, 9, 2])` ควร return `[1]`.
+`equilibrium([2, 9, 2])` ต้องคืนค่าเป็น `[1]`
 
 ```js
 assert.deepEqual(equilibrium(equilibriumTests[2]), ans[2]);
 ```
 
-`equilibrium([1, -1, 1, -1, 1, -1, 1])` ควร return `[0,1,2,3,4,5,6]`.
+`equilibrium([1, -1, 1, -1, 1, -1, 1])` ต้องคืนค่าเป็น `[0,1,2,3,4,5,6]`
 
 ```js
 assert.deepEqual(equilibrium(equilibriumTests[3]), ans[3]);
 ```
 
-`equilibrium([1])` ควร return `[0]`.
+`equilibrium([1])` ต้องคืนค่าเป็น `[0]`
 
 ```js
 assert.deepEqual(equilibrium(equilibriumTests[4]), ans[4]);
 ```
 
-`equilibrium([])` ควร return `[]`.
+`equilibrium([])` ต้องคืนค่าเป็น `[]`
 
 ```js
 assert.deepEqual(equilibrium(equilibriumTests[5]), ans[5]);

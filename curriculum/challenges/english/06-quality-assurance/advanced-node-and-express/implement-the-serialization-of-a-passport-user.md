@@ -8,43 +8,49 @@ dashedName: implement-the-serialization-of-a-passport-user
 
 # --description--
 
-ขณะนี้ เราไม่ได้โหลด object ผู้ใช้จริงเนื่องจากเรายังไม่ได้ตั้งค่าฐานข้อมูลของเรา ซึ่งสามารถทำได้หลายวิธี แต่สำหรับโครงการของเรา เราจะเชื่อมต่อกับฐานข้อมูลหนึ่งครั้งเมื่อเราเริ่มเซิร์ฟเวอร์และคงการเชื่อมต่อแบบถาวรตลอดวงจรชีวิตทั้งหมดของแอป ในการดำเนินการนี้ ให้เพิ่ม string การเชื่อมต่อของฐานข้อมูลของคุณ (เช่น: `mongodb+srv://:@cluster0-jvwxi.mongodb.net/?retryWrites=true&w=majority`) ให้กับตัวแปรสภาพแวดล้อม `MONGO_URI` ใช้ในไฟล์ `connection.js`
+ในตอนนี้เรายัง เราไม่มี user object จริงๆ เพราะเรายังไม่ได้ตั้งค่าฐานข้อมูล 
 
-*คุณสามารถตั้งค่าฐานข้อมูลฟรีบน [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)*
+คุณจะตั้งค่าฐานข้อมูลได้หลายวิธี แต่ใน project นี้ เราจะเชื่อมต่อกับฐานข้อมูลหนึ่งครั้งเมื่อเซิร์ฟเวอร์เริ่มทำงาน และทำการเชื่อมต่อแบบถาวรไปจนกว่าจะปิดเซิร์ฟเวอร์  
+ให้เก็บ connection string ของฐานข้อมูลของคุณ (เช่น: `mongodb+srv://:@cluster0-jvwxi.mongodb.net/?retryWrites=true&w=majority`) ใน environmental variable ชื่อ `MONGO_URI` ซึ่งจะเอาไปใช้ในไฟล์ `connection.js`
 
-ตอนนี้เราต้องการเชื่อมต่อกับฐานข้อมูลของเราแล้วเริ่มฟังคำขอ จุดประสงค์ของการดำเนินการนี้คือไม่อนุญาตให้มีการร้องขอก่อนที่จะเชื่อมต่อฐานข้อมูลของเราหรือหากมีข้อผิดพลาดของฐานข้อมูล ในการทำให้สำเร็จ จะต้องรวมการซีเรียลไลซ์เซชั่นและเส้นทางของแอพด้วย code ต่อไปนี้:
+*คุณสามารถสร้างฐานข้อมูลฟรีได้บน [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)*
+
+คราวนี้ ถึงเวลาเชื่อมต่อกับฐานข้อมูลแล้วเริ่มรอ request ได้เลย
+จุดประสงค์ของการดำเนินการนี้ เราจะไม่ยอมรับ request ก่อนที่จะเชื่อมต่อฐานข้อมูลได้สำเร็จ หรือถ้ามีข้อผิดพลาดของฐานข้อมูล 
+
+ในการทำแบบนี้ เราต้องครอบการ serialization และการประกาศ route แบบในตัวอย่างนี้:
 
 ```js
 myDB(async client => {
   const myDataBase = await client.db('database').collection('users');
 
-  // Be sure to change the title
+  // อย่าลืมเปลี่ยน title
   app.route('/').get((req, res) => {
-    //Change the response to render the Pug template
+    //เปลี่ยน response เพื่อให้ใช้ Pug template
     res.render('pug', {
       title: 'Connected to Database',
       message: 'Please login'
     });
   });
 
-  // Serialization and deserialization here...
+  // ใช้การ Serialization และ deserialization ที่นี่...
 
-  // Be sure to add this...
+  // อย่าลืมการ catch ด้วย...
 }).catch(e => {
   app.route('/').get((req, res) => {
     res.render('pug', { title: e, message: 'Unable to login' });
   });
 });
-// app.listen out here...
+// เรียกใช้ app.listen ที่นี่...
 ```
 
-ตรวจสอบให้แน่ใจว่าได้ยกเลิกการใส่เครื่องหมายรหัส `myDataBase` ใน `deserializeUser` และแก้ไข `done(null, null)` ของคุณเพื่อรวม `doc`
+อย่าลืมเอา comment ของ `myDataBase` ใน `deserializeUser` ออก และเปลี่ยนการเรียกใช้ `done(null, null)` ให้ส่ง `doc` เข้าไปใน callback function ด้วย (เป็น argument ที่สองนะ)
 
-ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [here](https://gist.github.com/camperbot/175f2f585a2d8034044c7e8857d5add7).
+ให้ส่ง URL ของเว็บคุณมาเมื่อทำเสร็จแล้ว ถ้าพบข้อผิดพลาด ให้ลองดูตัวอย่าง project ที่เสร็จสิ้นแล้วได้ [ที่นี่](https://gist.github.com/camperbot/175f2f585a2d8034044c7e8857d5add7)
 
 # --hints--
 
-ควรมีการเชื่อมต่อฐานข้อมูล
+ต้องมีการเชื่อมต่อกับฐานข้อมูล
 
 ```js
 (getUserInput) =>
@@ -62,7 +68,7 @@ myDB(async client => {
   );
 ```
 
-ตอนนี้การดีซีเรียลไลซ์เซชั่นควรจะถูกต้อง โดยใช้ฐานข้อมูล และ `done(null, null)` ควรถูกเรียกด้วย `doc`
+`deserializeUser` ต้องใช้ฐานข้อมูล และเปลี่ยนการเรียกใช้ `done(null, null)` ให้ส่ง `doc` เข้าไปใน callback function ด้วย
 
 ```js
 (getUserInput) =>

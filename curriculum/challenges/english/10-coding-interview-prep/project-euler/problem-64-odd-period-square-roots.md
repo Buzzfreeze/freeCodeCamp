@@ -8,7 +8,7 @@ dashedName: problem-64-odd-period-square-roots
 
 # --description--
 
-ทุก square roots เป็น periodic เมื่อเขียนแบบ continued fractions และเขียนในรูปแบบของ
+ทุก square root เป็น periodic เมื่อเขียนแบบ continued fraction และเขียนในรูปแบบของ
 
 $\\displaystyle \\quad \\quad \\sqrt{N}=a_0+\\frac 1 {a_1+\\frac 1 {a_2+ \\frac 1 {a3+ \\dots}}}$
 
@@ -68,31 +68,31 @@ $\\quad \\quad \\sqrt{13}=\[3;(1,1,1,1,6)]$, period = 5
 
 # --hints--
 
-`oddPeriodSqrts(13)` ควร return number.
+`oddPeriodSqrts(13)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof oddPeriodSqrts(13) === 'number');
 ```
 
-`oddPeriodSqrts(500)` ควร return `83`.
+`oddPeriodSqrts(500)` ต้องคืนค่าเป็น `83`
 
 ```js
 assert.strictEqual(oddPeriodSqrts(500), 83);
 ```
 
-`oddPeriodSqrts(1000)` ควร return `152`.
+`oddPeriodSqrts(1000)` ต้องคืนค่าเป็น `152`
 
 ```js
 assert.strictEqual(oddPeriodSqrts(1000), 152);
 ```
 
-`oddPeriodSqrts(5000)` ควร return `690`.
+`oddPeriodSqrts(5000)` ต้องคืนค่าเป็น `690`
 
 ```js
 assert.strictEqual(oddPeriodSqrts(5000), 690);
 ```
 
-`oddPeriodSqrts(10000)` ควร return `1322`.
+`oddPeriodSqrts(10000)` ต้องคืนค่าเป็น `1322`
 
 ```js
 assert.strictEqual(oddPeriodSqrts(10000), 1322);

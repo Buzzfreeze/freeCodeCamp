@@ -8,42 +8,43 @@ dashedName: problem-72-counting-fractions
 
 # --description--
 
-จากเศษส่วน $\frac{n}{d}$ ที่ `n` และ `d` เป็น positive integers ถ้า `n` &lt; `d` และ มี common factor มีค่าสูงสุด, ${HCF}(n, d) = 1$ เรียกว่า เศษส่วนที่ตัดทอน
-ถ้า list set เศษส่วนที่ตัดทอนสำหรับ `d` ≤ 8 จากน้อยไปมากของขนาด เราได้รับ:
+จากเศษส่วน $\frac{n}{d}$ ที่ `n` และ `d` เป็นจำนวนเต็มบวก ถ้า `n` &lt; `d` และ มีตัวประกอบร่วมมีค่าสูงสุด, ${HCF}(n, d) = 1$ เรียกว่า reduced proper fraction
+
+ถ้าเราเขียน reduced proper fraction ของ `d` ≤ 8 ทั้งหมด เรียงตามขนาด เราจะได้เป็น:
 
 $$\frac{1}{8}, \frac{1}{7}, \frac{1}{6}, \frac{1}{5}, \frac{1}{4}, \frac{2}{7}, \frac{1}{3}, \frac{3}{8}, \frac{2}{5}, \frac{3}{7}, \frac{1}{2}, \frac{4}{7}, \frac{3}{5}, \frac{5}{8}, \frac{2}{3}, \frac{5}{7}, \frac{3}{4}, \frac{4}{5}, \frac{5}{6}, \frac{6}{7}, \frac{7}{8}$$
 
-จะเห็นว่ามี `21` elements ใน set
+จะเห็นว่ามี `21` element ในเซ็ท
 
-มีกี่ elements ที่มี set ของเศษส่วนที่ตัดทอนเมื่อ `d` ≤ `limit`
+มีกี่ element อยู่ในเซ็ทของ reduced proper fraction เมื่อ `d` ≤ `limit`
 
 # --hints--
 
-`countingFractions(8)` ควร return number.
+`countingFractions(8)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof countingFractions(8) === 'number');
 ```
 
-`countingFractions(8)` ควร return `21`.
+`countingFractions(8)` ต้องคืนค่าเป็น `21`
 
 ```js
 assert.strictEqual(countingFractions(8), 21);
 ```
 
-`countingFractions(20000)` ควร return `121590395`.
+`countingFractions(20000)` ต้องคืนค่าเป็น `121590395`
 
 ```js
 assert.strictEqual(countingFractions(20000), 121590395);
 ```
 
-`countingFractions(500000)` ควร return `75991039675`.
+`countingFractions(500000)` ต้องคืนค่าเป็น `75991039675`
 
 ```js
 assert.strictEqual(countingFractions(500000), 75991039675);
 ```
 
-`countingFractions(1000000)` ควร return `303963552391`.
+`countingFractions(1000000)` ต้องคืนค่าเป็น `303963552391`
 
 ```js
 assert.strictEqual(countingFractions(1000000), 303963552391);

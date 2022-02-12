@@ -14,17 +14,17 @@ dashedName: problem-302-strong-achilles-numbers
 
 จำนวนเต็มบวก $n$ คือจำนวน Achilles ถ้า $n$ ทรงพลังแต่ไม่ใช่กำลังสมบูรณ์ ตัวอย่างเช่น 864 และ 1800 เป็นตัวเลขจุดอ่อน: $864 = 2^5 \times 3^3$ และ $1800 = 2^3 \times 3^2 \times 5^2$
 
-เราจะเรียกจำนวนเต็มบวก $S$ เป็นจำนวนStrong Achilles numbers ถ้าทั้ง $S$ และ $φ(S)$ เป็นจำนวนจุดอ่อน $φ$ หมายถึง ฟังก์ชันtotientของออยเลอร์
+เราจะเรียกจำนวนเต็มบวก $S$ เป็นจำนวน Strong Achilles ถ้าทั้ง $S$ และ $φ(S)$ เป็นจำนวนจุดอ่อน $φ$ หมายถึง ฟังก์ชันtotientของออยเลอร์
 
-ตัวอย่างเช่น 864 เป็นตัวเลขStrong Achilles numbers: $φ(864) = 288 = 2^5 \times 3^2$ อย่างไรก็ตาม 1800 ไม่ใช่ตัวเลขStrong Achilles numbersเพราะ: $φ(1800) = 480 = 2^5 \times 3^1 \times 5^1$
+ตัวอย่างเช่น 864 เป็นตัวเลข Strong Achilles : $φ(864) = 288 = 2^5 \times 3^2$ อย่างไรก็ตาม 1800 ไม่ใช่ตัวเลข Strong Achilles เพราะ: $φ(1800) = 480 = 2^5 \times 3^1 \times 5^1$
 
-มีตัวเลขStrong Achilles numbers 7 ตัวที่ต่ำกว่า ${10}^4$ และ 656 ต่ำกว่า ${10}^8$
+มีตัวเลข Strong Achilles 7 ตัวที่ต่ำกว่า ${10}^4$ และ 656 ต่ำกว่า ${10}^8$
 
-จำนวนStrong Achilles numbersมีจำนวนเท่าใดที่ต่ำกว่า ${10}^{18}$
+มีเลข Strong Achilles กี่ตัวที่ต่ำกว่า ${10}^{18}$
 
 # --hints--
 
-`strongAchillesNumbers()` ควร return `1170060`.
+`strongAchillesNumbers()` ต้องคืนค่าเป็น `1170060`
 
 ```js
 assert.strictEqual(strongAchillesNumbers(), 1170060);

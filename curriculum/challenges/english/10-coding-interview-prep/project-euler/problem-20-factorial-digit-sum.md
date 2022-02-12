@@ -10,44 +10,44 @@ dashedName: problem-20-factorial-digit-sum
 
 `n`! คือ `n` × (`n` − 1) × ... × 3 × 2 × 1
 
-ตัวอย่างเช่น 10! = 10 × 9 × ... × 3 × 2 × 1 = 3628800,  
-และผลรวมของทุก digit ของ 10! คือ 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
+เช่น 10! = 10 × 9 × ... × 3 × 2 × 1 = 3628800,  
+และผลรวมของตัวเลขทุกหลักของ 10! คือ 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
 
-หาผลรวมของ digits `n`!
+หาผลรวมของตัวเลขทุกหลักของ `n`!
 
 # --hints--
 
-`sumFactorialDigits(10)` ควร return number
+`sumFactorialDigits(10)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof sumFactorialDigits(10) === 'number');
 ```
 
-`sumFactorialDigits(10)` ควร return 27.
+`sumFactorialDigits(10)` ต้องคืนค่าเป็น 27
 
 ```js
 assert.strictEqual(sumFactorialDigits(10), 27);
 ```
 
-`sumFactorialDigits(25)` ควร return 72.
+`sumFactorialDigits(25)` ต้องคืนค่าเป็น 72
 
 ```js
 assert.strictEqual(sumFactorialDigits(25), 72);
 ```
 
-`sumFactorialDigits(50)` ควร return 216.
+`sumFactorialDigits(50)` ต้องคืนค่าเป็น 216
 
 ```js
 assert.strictEqual(sumFactorialDigits(50), 216);
 ```
 
-`sumFactorialDigits(75)` ควร return 432.
+`sumFactorialDigits(75)` ต้องคืนค่าเป็น 432
 
 ```js
 assert.strictEqual(sumFactorialDigits(75), 432);
 ```
 
-`sumFactorialDigits(100)` ควร return 648.
+`sumFactorialDigits(100)` ต้องคืนค่าเป็น 648
 
 ```js
 assert.strictEqual(sumFactorialDigits(100), 648);

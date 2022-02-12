@@ -8,60 +8,61 @@ dashedName: sudoku-solver
 
 # --description--
 
-สร้างแอพ full stack JavaScript ซึ่งมีฟังก์ชันการทำงานคล้าย link นี้ : <https://sudoku-solver.freecodecamp.rocks/>  ทำงานใน project นี้ เขียน code โดยใช้วิธีใดวิธีหนึ่งต่อไปนี้: 
+ให้สร้างแอปแบบ full stack โดยใช้ JavaScript ที่ทำงานคล้ายกับเว็บไซต์นี้ <https://sudoku-solver.freecodecamp.rocks/>  
+ในการทำโปรเจคนี้ คุณจะต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งดังต่อไปนี้
 
-- ทำการ clone repo [GitHub นี้](https://github.com/freecodecamp/boilerplate-project-sudoku-solver) เพื่อสร้าง project ในนั้นให้สำเร็จ
-- ใช้  project เริ่มต้นจาก [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-sudoku-solver) เพื่อสร้าง project ให้สำเร็จ
-- ใช้ site builder ที่ผู้เรียนเลือก เพื่อสร้าง project ให้เสร็จ อย่าลืมรวมไฟล์ทั้งหมดจาก repo GitHub 
+- ให้ Clone repoisitory จาก [GitHub](https://github.com/freeCodeCamp/boilerplate-project-sudoku-solver/) มา และทำแบบทดสอบบนเครื่องของคุณเอง
+- สร้างจากโปรเจกต์ของเราในเว็บไซต์ [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-sudoku-solver)
+- ใช้เครื่องมือสร้างเว็บอื่นๆ และอย่าลืมเก็บไฟล์ไว้ใน GitHub repo ของคุณด้วย
 
-เมื่อผู้เรียนทำเสร็จแล้ว ตรวจสอบให้แน่ใจว่าตัว Demo ของ project ของคุณตั้งค่า Host เป็น Public จากนั้นส่ง URL ไปที่ช่อง `Solution Link` หรือส่งลิงก์ไปยัง source code ของ project ผู้เรียน ตรง `GitHub Link`
+เมื่อคุณทำเสร็จแล้ว ให้อัปโหลดโปรเจกต์ของคุณขึ้นโฮสต์ และเปิดเป็น public จากนั้นให้ส่งลิงก์เข้าไปใน `Link คำตอบ` และจะส่งลิงก์ของ source code เข้าไปใน `GitHub Link` ด้วยก็ได้
 
 # --instructions--
 
-- puzzle logic ทั้งหมด สามารถไปที่ `/controllers/sudoku-solver.js`
-  - ฟังก์ชัน `validate` ควรใช้อักขระปริศนาที่กำหนด และตรวจสอบเพื่อดูว่ามีอักขระที่ถูกต้อง 81 ตัวสำหรับอินพุตหรือไม่
-  - ฟังก์ชัน `check` ควรตรวจสอบกับสถานะ *ปัจจุบัน* ของกระดาน
-  - ฟังก์ชัน `solve` ควรจัดการกับการแก้อักขระปริศนาที่ถูกต้อง ไม่ใช่แค่อินพุตทดสอบและวิธีแก้ปัญหา คาดหวังให้ผู้เรียนเขียน logic เพื่อแก้ปัญหานี้
-- logic การกำหนดเส้นทางทั้งหมดสามารถไปที่ `/routes/api.js`
-- ดูไฟล์ `puzzle-strings.js` ใน `/controllers' สำหรับปริศนาตัวอย่างที่แอปพลิเคชันควรแก้
-- หากต้องการchallenge ในหน้านี้ ให้ตั้งค่า "NODE_ENV" เป็น "test" โดยไม่มีเครื่องหมายคำพูดในไฟล์ ".env"
-- ในการรันการทดสอบในคอนโซล ให้ใช้คำสั่ง `npm run test` หากต้องการเปิดคอนโซล Replit ให้กด Ctrl+Shift+P (Cmd หากใช้ Mac) แล้วพิมพ์ "open shell" 
+- ให้เขียน puzzle logic ทั้งหมดใน `/controllers/sudoku-solver.js`
+  - ฟังก์ชัน `validate` ต้องรับค่าเป็น string ของ puzzle และตรวจสอบเพื่อดูว่ามี รืยีะ เป็นตัวอักษรที่ถูกต้องทั้งหมด 81 ตัวหรือไม่
+  - ฟังก์ชัน `check` ต้องตรวจสอบข้อมูล *ปัจจุบัน* ของกระดาน
+  - ฟังก์ชัน `solve` ต้องระบุค่าทั้งหมดของตัวเลขที่อยู่ในกระดาน sudoku ออกมา คุณต้องเขียน logic เพื่อลงตัวเลขครบทุกตัวในกระดานให้ได้อย่างถูกต้อง
+- ให้เขียน logic ของการ route ทั้งหมดใน `/routes/api.js`
+- ดูไฟล์ `puzzle-strings.js` ใน `/controllers` สำหรับตัวอย่างกระดาน sudoku ที่แอปพลิเคชันควรแก้ได้
+- หากต้องการใช้ test ให้ตั้งค่า `NODE_ENV` เป็น `test` (โดยไม่มีเครื่องหมายคำพูด) ในไฟล์ `.env`
+- หากต้องการ test ในคอนโซล ให้ใช้คำสั่ง `npm run test` หากต้องการเปิดคอนโซล Replit ให้กด Ctrl+Shift+P (Cmd หากใช้ Mac) แล้วพิมพ์ "open shell" 
 
-เขียนการทดสอบต่อไปนี้ใน `tests/1_unit-tests.js`:
+เขียนการทดสอบ logic ต่อไปนี้ใน `tests/1_unit-tests.js`:
 
-- logic จัดการอักขระปริศนาที่ถูกต้อง 81 อักขระ
-- logic จัดการกับอักขระปริศนาที่มีอักขระที่ไม่ถูกต้อง (ไม่ใช่ 1-9 หรือ `.`)
-- logic จัดการกับอักขระปริศนาที่มีความยาวไม่เกิน 81 อักขระ
-- logic จัดการตำแหน่งแถวที่ถูกต้อง
-- logic จัดการตำแหน่งแถวที่ไม่ถูกต้อง
-- logic จัดการตำแหน่งคอลัมน์ที่ถูกต้อง
-- logic จัดการตำแหน่งคอลัมน์ที่ไม่ถูกต้อง
-- logic จัดการตำแหน่งที่ถูกต้อง (ตาราง 3x3)
-- logic จัดการกับตำแหน่งที่ไม่ถูกต้อง (ตาราง 3x3)
-- อักขระปริศนาที่ถูกต้องผ่านตัวแก้
-- อักขระปริศนาที่ไม่ถูกต้อง ล้มเหลวในการแก้
-- Solver คืนค่าบอกวิธีแก้ปัญหาสำหรับ puzzle ที่ไม่เสร็จสมบูรณ์ 
+- logic ที่ใช้จัดการเมื่อ string ของ sudoku ทั้ง 81 ตัวอักษรถูกต้อง
+- logic ที่ใช้จัดการเมื่อ string ของ sudoku ไม่ถูกต้อง (ไม่ใช่ 1-9 หรือ `.`)
+- logic ที่ใช้จัดการเมื่อ string ของ sudoku มีความยาวไม่ถึง 81
+- logic ที่ใช้จัดการตำแหน่งแถวที่ถูกต้อง
+- logic ที่ใช้จัดการตำแหน่งแถวที่ไม่ถูกต้อง
+- logic ที่ใช้จัดการตำแหน่งคอลัมน์ที่ถูกต้อง
+- logic ที่ใช้จัดการตำแหน่งคอลัมน์ที่ไม่ถูกต้อง
+- logic ที่ใช้จัดการตาราง (region) ที่ถูกต้อง (ตาราง 3x3)
+- logic ที่ใช้จัดการตารางที่ไม่ถูกต้อง (ตาราง 3x3)
+- test เมื่อส่ง string ของ sudoku ที่ถูกต้อง ไปในฟังก์ชันที่ใช้หาคำตอบ (solver)
+- test เมื่อส่ง string ของ sudoku ที่ไม่ถูกต้อง ไปในฟังก์ชันที่ใช้หาคำตอบ
+- Solver ต้องคืนค่ามาเป็นตาราง sudoku ที่กรอกตัวเลขทั้งหมดครบแล้ว 
 
 เขียนการทดสอบต่อไปนี้ใน  `tests/2_functional-tests.js`
 
-- แก้ puzzle ด้วยอักขระตัวต่อที่ถูกต้อง: POST คำขอไปที่ `/api/solve`
-- แก้ puzzle ด้วยอักขระปริศนาที่ขาดหายไป: POST คำขอไปที่ `/api/solve`
-- แก้ puzzle ด้วยอักขระที่ไม่ถูกต้อง: POST คำขอไปที่ `/api/solve`
-- แก้ puzzle ที่มีความยาวไม่ถูกต้อง: POST คำขอไปที่ `/api/solve`
-- แก้ puzzle ที่ไม่สามารถแก้ไขได้: POST คำขอไปที่ `/api/solve`
-- ตรวจสอบตำแหน่ง puzzle ที่มีทุกช่อง: POST คำขอไปที่ `/api/check`
-- ตรวจสอบตำแหน่ง puzzle ที่ขัดแย้งตำแหน่งเดียว: POST คำขอไปที่ `/api/check`
-- ตรวจสอบตำแหน่ง puzzle ที่ขัดแย้งกันหลายตำแหน่ง: POST คำขอไปที่ `/api/check`
-- ตรวจสอบตำแหน่ง puzzle ที่ขัดแย้งของตำแหน่งทั้งหมด: โพสต์คำขอไปที่ `/api/check`
-- ตรวจสอบตำแหน่ง puzzle ที่ไม่มีฟิลด์บังคับ:  POST คำขอไปที่ `/api/check`
-- ตรวจสอบตำแหน่ง puzzle ที่มีอักขระที่ไม่ถูกต้อง: POST คำขอไปที่ `/api/check`
-- ตรวจสอบตำแหน่งของ puzzle ที่มีความยาวไม่ถูกต้อง: POST คำขอไปที่ `/api/check`
-- ตรวจสอบตำแหน่ง puzzle ที่มีพิกัดตำแหน่งที่ไม่ถูกต้อง: POST คำขอไปที่`/api/check`
-- ตรวจสอบตำแหน่ง puzzle ด้วยค่าตำแหน่งที่ไม่ถูกต้อง: POST คำขอไปที่ `/api/check` 
+- การแก้ sudoku เมื่อส่ง string ของ sudoku ที่ถูกต้องเข้าไป: POST คำขอไปที่ `/api/solve`
+- การแก้ sudoku เมื่อไม่ส่ง string ของ sudoku เข้าไป: POST คำขอไปที่ `/api/solve`
+- การแก้ sudoku เมื่อส่ง string ของ sudoku ที่ไม่ถูกต้องเข้าไป: POST คำขอไปที่ `/api/solve`
+- การแก้ sudoku เมื่อส่ง string ของ sudoku ที่ไม่ครบเข้าไป: POST คำขอไปที่ `/api/solve`
+- การแก้ sudoku เมื่อส่ง string ของ sudoku ที่ไม่สามารถแก้ไขได้เข้าไป: POST คำขอไปที่ `/api/solve`
+- ตรวจสอบตัวเลขที่ลงในกระดาน โดยส่งค่าครบทุกฟิลด์: POST คำขอไปที่ `/api/check`
+- ตรวจสอบตัวเลขที่ลงในกระดาน ที่มีค่าผิดตำแหน่งเดียว: POST คำขอไปที่ `/api/check`
+- ตรวจสอบตัวเลขที่ลงในกระดาน ที่มีค่าผิดหลายตำแหน่ง: POST คำขอไปที่ `/api/check`
+- ตรวจสอบตัวเลขที่ลงในกระดาน ที่มีค่าผิดทุกตำแหน่ง: โพสต์คำขอไปที่ `/api/check`
+- ตรวจสอบตัวเลขที่ลงในกระดาน โดยไม่ระบุฟิลด์ที่บังคับ:  POST คำขอไปที่ `/api/check`
+- ตรวจสอบตัวเลขที่ลงในกระดาน ที่มีตัวอักษรที่ไม่ถูกต้อง: POST คำขอไปที่ `/api/check`
+- ตรวจสอบตัวเลขที่ลงในกระดาน ที่มีความยาวไม่ถูกต้อง: POST คำขอไปที่ `/api/check`
+- ตรวจสอบตัวเลขที่ลงในกระดาน ที่มีพิกัดตำแหน่งที่ไม่ถูกต้อง: POST คำขอไปที่`/api/check`
+- ตรวจสอบตัวเลขที่ลงในกระดาน ด้วยค่าตำแหน่งที่ไม่ถูกต้อง: POST คำขอไปที่ `/api/check` 
 
 # --hints--
 
-ผู้เรียนควรจัดทำ project ของผู้เรียนเอง โดยไม่ใช้ URL ตัวอย่าง 
+ให้ส่งลิงก์โปรเจกต์ของคุณ ไม่ใช่ URL ตัวอย่างของเรา
 
 ```js
 (getUserInput) => {
@@ -70,7 +71,7 @@ dashedName: sudoku-solver
 };
 ```
 
-ผู้เรียนสามารถ `POST` `/api/solve` ด้วยข้อมูลในแบบฟอร์มที่มี `puzzle` ซึ่งจะเป็น string ที่ประกอบด้วยผสมกันระหว่างตัวเลข (1-9) และจุด `.` เพื่อแสดงถึงช่องว่าง object ที่ส่งคืนจะมีคุณสมบัติ `solution` puzzle ที่แก้ไขแล้ว 
+สามารถส่ง `POST` request ไปยัง `/api/solve` โดยใช้ form data ที่มีฟิลด์ `puzzle` (เป็น string) ได้ โดยฟิลด์นี้จะเป็นผสมกันระหว่างตัวเลข (1-9) และจุด `.` เพื่อแสดงถึงช่องว่าง และจะต้องคืนค่าเป็น object ที่มี property `solution` เป็นค่าของตาราง sudoku ที่มีตัวเลขครบทุกตัว 
 
 ```js
 async (getUserInput) => {
@@ -89,7 +90,7 @@ async (getUserInput) => {
 };
 ```
 
-หาก object ที่ส่งไปยัง `/api/solve' ไม่มี `puzzle' ค่าที่ส่งคืนจะเป็น `{ error: 'Required field missing' }` 
+หาก object ที่ส่งไปยัง `/api/solve` ไม่มี `puzzle` จะต้องคืนค่าเป็น `{ error: 'Required field missing' }` 
 
 ```js
 async (getUserInput) => {
@@ -107,7 +108,7 @@ async (getUserInput) => {
 };
 ```
 
-หาก puzzle ที่ส่งไปยัง `/api/solve` มีค่าที่ไม่ใช่ตัวเลขหรือจุด ค่าที่ส่งคืนจะเป็น `{ error: 'Invalid characters in puzzle' }` 
+หาก puzzle ที่ส่งไปยัง `/api/solve` มีค่าที่ไม่ใช่ตัวเลขหรือจุด จะต้องคืนค่าเป็น `{ error: 'Invalid characters in puzzle' }` 
 
 ```js
 async (getUserInput) => {
@@ -125,7 +126,7 @@ async (getUserInput) => {
 };
 ```
 
-หาก puzzle ที่ส่งไปยัง `/api/solve` มากกว่าหรือน้อยกว่า 81 อักขระ ค่าที่ส่งคืนจะเป็น `{ error: 'Expected puzzle to be 81 characters long' }`
+หาก puzzle ที่ส่งไปยัง `/api/solve` มีความยาวไม่เท่ากับ 81 ตัวอักษร จะต้องคืนค่าเป็น `{ error: 'Expected puzzle to be 81 characters long' }`
 
 ```js
 async (getUserInput) => {
@@ -143,7 +144,7 @@ async (getUserInput) => {
 };
 ```
 
-หาก puzzle ที่ส่งไปยัง `/api/solve` ไม่ถูกต้องหรือไม่สามารถแก้ไขได้ ค่าที่ส่งคืนจะเป็น  `{ error: 'Puzzle cannot be solved' }`
+หาก puzzle ที่ส่งไปยัง `/api/solve` ไม่ถูกต้อง หรือไม่สามารถหาคำตอบได้ จะต้องคืนค่าเป็น  `{ error: 'Puzzle cannot be solved' }`
 
 ```js
 async (getUserInput) => {
@@ -161,7 +162,7 @@ async (getUserInput) => {
 };
 ```
 
-ผู้เรียนสามารถ "POST" เป็น "/api/check" object ที่มี `puzzle`, `coordinate` และ `value` โดยที่ `coordinate`  คือตัวอักษร A-I ระบุแถว ตามด้วยตัวเลข 1-9 ที่ระบุคอลัมน์ และ `value` คือตัวเลขตั้งแต่ 1-9 
+สามารถส่ง `POST` request ไปยัง `/api/check` ได้ โดยส่งเป็น object ที่มี propperty `puzzle`, `coordinate` และ `value` โดยที่ `coordinate` คือตัวอักษร A-I ที่ใช้ระบุแถว ตามด้วยตัวเลข 1-9 ที่ใช้ระบุคอลัมน์ และ `value` คือตัวเลขตั้งแต่ 1-9 
 
 ```js
 async (getUserInput) => {
@@ -180,7 +181,7 @@ async (getUserInput) => {
 };
 ```
 
-ค่าที่ส่งคืนจาก `POST` ถึง `/api/check`" จะเป็น object ที่มีคุณสมบัติ `valid`ซึ่งเป็น `true` หากวางตัวเลขไว้ที่พิกัดที่ให้ไว้ และจะเป็น `false` หากตัวเลขนั้นไม่ใช่ หากเป็นเท็จ object ที่ส่งคืนจะมีคุณสมบัติ `conflict ซึ่งเป็น array ที่มีสตริง `"row"` , `"column"` และ/หรือ `"region"`  ทั้งนี้ขึ้นอยู่กับว่าตำแหน่งใดไม่ถูกต้อง 
+response ที่ได้จากการส่ง `POST` request ไปยัง `/api/check` จะเป็น object ที่มี property `valid` เป็น `true` ถ้าตัวเลขในตำแหน่งที่ระบุถูกต้อง และจะเป็น `false` ถ้าเลขนั้นผิด และถ้าเลขผิด object ที่ส่งคืนมาจะมี property `conflict` ซึ่งเป็น array ที่มีสตริง `"row"` , `"column"` และ/หรือ `"region"`  ทั้งนี้ขึ้นอยู่กับว่าตำแหน่งใดไม่ถูกต้อง 
 
 ```js
 async (getUserInput) => {
@@ -203,7 +204,7 @@ async (getUserInput) => {
 };
 ```
 
-หาก `value` ที่ส่งไปยัง "/api/check" ถูกวางไว้ใน `puzzle`บน `coordinate` นั้น ค่าที่ส่งคืนจะเป็น object ที่มีคุณสมบัติ `valid` โดยมี `true`หาก `value`  ไม่ขัดแย้งกัน 
+ถ้า `value` ที่ส่งไปยัง `/api/check` มีค่าใน `puzzle` ใน `coordinate` นั้นแล้ว จะต้องคืนค่าเป็น object ที่มี property `valid` เป็น `true` ถ้า `value` ถูก 
 
 ```js
 async (getUserInput) => {
@@ -222,7 +223,7 @@ async (getUserInput) => {
 };
 ```
 
-หาก puzzle ที่ส่งไปยัง `/api/check` มีค่าที่ไม่ใช่ตัวเลขหรือจุด ค่าที่ส่งคืนจะเป็น `{ error: 'Invalid characters in puzzle' }` 
+ถ้า `puzzle` ที่ส่งไปยัง `/api/check` มีค่าที่ไม่ใช่ตัวเลขหรือจุด จะต้องคืนค่าเป็น `{ error: 'Invalid characters in puzzle' }` 
 
 ```js
 async (getUserInput) => {
@@ -242,7 +243,7 @@ async (getUserInput) => {
 };
 ```
 
-หากpuzzle ที่ส่งไปยัง `/api/check' นั้นมากกว่าหรือน้อยกว่า 81 อักขระ ค่าที่ส่งคืนจะเป็น `{ error: 'Expected puzzle to be 81 characters long' }` 
+ถ้า `puzzle` ที่ส่งไปยัง `/api/check` มีความยาวไม่เท่ากับ 81 ตัวอักษร จะต้องคืนค่าเป็น `{ error: 'Expected puzzle to be 81 characters long' }` 
 
 ```js
 async (getUserInput) => {
@@ -262,7 +263,7 @@ async (getUserInput) => {
 };
 ```
 
-หาก object ที่ส่งไปยัง "/api/check" ไม่มี `puzzle`, `coordinate`  หรือ `value`ค่าที่ส่งคืนจะเป็น `{ error: Required field(s) missing }`
+ถ้า object ที่ส่งไปยัง `/api/check` ไม่มี property `puzzle`, `coordinate`  หรือ `value` จะต้องคืนค่าเป็น `{ error: Required field(s) missing }`
 
 ```js
 async (getUserInput) => {
@@ -280,7 +281,7 @@ async (getUserInput) => {
 };
 ```
 
-หากพิกัดที่ส่งไปยัง `api/check` ไม่ชี้ไปที่ grid cell ที่มีอยู่ ค่าที่ส่งคืนจะเป็น`{ error: 'Invalid coordinate'}`
+ถ้า `coordinate` ที่ส่งไปยัง `api/check` ไม่ถูกต้อง จะต้องคืนค่าเป็น`{ error: 'Invalid coordinate'}`
 
 ```js
 async (getUserInput) => {
@@ -300,7 +301,7 @@ async (getUserInput) => {
 };
 ```
 
-หาก `value` ที่ส่งไปยัง `/api/check` ไม่ใช่ตัวเลขระหว่าง 1 ถึง 9 ค่าที่ส่งคืนจะเป็น `{ error: 'Invalid value' }` 
+ถ้า `value` ที่ส่งไปยัง `/api/check` ไม่ใช่ตัวเลขระหว่าง 1 ถึง 9 จะต้องคืนค่าเป็น `{ error: 'Invalid value' }` 
 
 ```js
 async (getUserInput) => {
@@ -320,7 +321,7 @@ async (getUserInput) => {
 };
 ```
 
-การทดสอบ (unit test) ทั้งหมด 12 หน่วยเสร็จสมบูรณ์ และผ่าน ให้ไปดูที่ `/tests/1_unit-tests.js` สำหรับดูวิธีการเขียน Test ที่คาดหวังให้ผู้เรียนควรเขียน
+unit test ทั้งหมด 12 รายการต้องเสร็จสมบูรณ์ และผ่าน ให้ไปดูที่ `/tests/1_unit-tests.js` เพื่อดู Test ที่ต้องเขียน
 
 ```js
 async (getUserInput) => {
@@ -343,7 +344,7 @@ async (getUserInput) => {
 };
 ```
 
-การทดสอบ functional test ทั้ง 14 แบบ เสร็จสมบูรณ์และผ่าน ให้ไปดูที่ `/tests/2_functional-tests.js` สำหรับฟังก์ชันที่ให้ผู้เรียนควรเขียน
+functional test ทั้ง 14 รายการต้องเสร็จสมบูรณ์และผ่าน ให้ไปดูที่ `/tests/2_functional-tests.js` เพื่อดูฟังก์ชันที่ต้องเขียน
 
 ```js
 async (getUserInput) => {

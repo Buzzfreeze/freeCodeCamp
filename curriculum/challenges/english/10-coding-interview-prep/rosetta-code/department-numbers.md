@@ -8,23 +8,23 @@ dashedName: department-numbers
 
 # --description--
 
-มีเมืองที่มีการจัดระเบียบสูงซึ่งได้ตัดสินใจกำหนดหมายเลขให้กับแต่ละแผนกของตน:
+เมืองที่มีการจัดระเบียบอย่างดี ได้ตัดสินใจกำหนดหมายเลขให้กับแต่ละหน่วยงานของเมือง:
 
 <ul>
-  <li>Police department</li>
-  <li>Sanitation department</li>
-  <li>Fire department</li>
+  <li>Police department (หน่วยงานตำรวจ)</li>
+  <li>Sanitation department (หน่วยงานสุขาภิบาล)</li>
+  <li>Fire department (หน่วยงานดับเพลิง)</li>
 </ul>
 
-แต่ละแผนกสามารถมีตัวเลขได้ตั้งแต่ 1 ถึง 7 (รวม)
+แต่ละหน่วยงานสามารถมีตัวเลขได้ตั้งแต่ 1 ถึง 7
 
-หมายเลขแผนกทั้งสามจะต้องไม่ซ้ำกัน (ต่างกัน) และต้องรวมกันเป็นเลข 12
+หมายเลขหน่วยงานทั้งสามจะต้องไม่ซ้ำกัน และต้องบวกกันได้ 12
 
-ผบ.ตร.ไม่ชอบเลขคี่และอยากได้เลขคู่ประจำแผนก
+ผบ.ตร.ไม่ชอบเลขคี่และอยากได้เลขคู่ประจำหน่วยงาน
 
 # --instructions--
 
-เขียนโปรแกรมที่ return valid combinations เป็น array
+ให้เขียนโปรแกรมที่คืนค่าเป็น array ของรูปแบบการผสมตัวเลข
 
 ```js
 [2, 3, 7] [2, 4, 6] [2, 6, 4]
@@ -36,25 +36,25 @@ dashedName: department-numbers
 
 # --hints--
 
-`combinations` ควรเป็น function.
+`combinations` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof combinations === 'function');
 ```
 
-`combinations([1, 2, 3], 6)` ควร return Array.
+`combinations([1, 2, 3], 6)` ต้องคืนค่าเป็น array
 
 ```js
 assert(Array.isArray(combinations([1, 2, 3], 6)));
 ```
 
-`combinations([1, 2, 3, 4, 5, 6, 7], 12)` ควร return array มีความยาว 14.
+`combinations([1, 2, 3, 4, 5, 6, 7], 12)` ต้องคืนค่าเป็น array ที่มี 14 element
 
 ```js
 assert(combinations(nums, total).length === len);
 ```
 
-`combinations([1, 2, 3, 4, 5, 6, 7], 12)` ควร return ทุก valid combinations.
+`combinations([1, 2, 3, 4, 5, 6, 7], 12)` ต้องคืนค่าเป็นรูปแบบการผสมตัวเลขทุกรูปแบบ
 
 ```js
 assert.deepEqual(combinations(nums, total), result);

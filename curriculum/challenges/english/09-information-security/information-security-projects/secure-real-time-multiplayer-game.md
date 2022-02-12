@@ -8,20 +8,24 @@ dashedName: secure-real-time-multiplayer-game
 
 # --description--
 
-การพัฒนาเกม 2D real time multiplayer โดยใช้ HTML Canvas API และ [Socket.io](https://socket.io/) ที่มีฟังก์ชันเหมือนกับ: <https://secure-real-time-multiplayer-game.freecodecamp.rocks/> ในการทำโปรเจคนี้จะทำให้คุณเขียนโค้ด ที่มี method ต่างๆ ด้านล่างนี้: 
+ลองสร้างเกมแบบ 2D Real Time Multiplayer โดยใช้ HTML Canvas API และ [Socket.io](https://socket.io/) โดยให้เกมมีฟังก์ชันเหมือนกับ: <https://stock-price-checker.freecodecamp.rocks/>
 
-- Clone [Github repo นี้](https://github.com/freeCodeCamp/boilerplate-project-secure-real-time-multiplayer-game/) แล้วนำมาใช้กับโปรเจคของคุณบนเครื่องของคุณเอง
-- ให้ใช้ [โปรเจค  Replit starter ของเรา](https://replit.com/github/freeCodeCamp/boilerplate-project-secure-real-time-multiplayer-game) กับโปรเจคนี้
-- ใช้ตัวสร้างเว็บไซต์ที่คุณต้องการในการทำโปรเจคนี้ อย่าลืมรวมไฟล์ทั้งหมดจาด Github repo ของเราลงไปด้วย
-เมื่อทำโปรเจคนี้เสร็จแล้ว ให้อัปโหลดงานเดโมที่ใช้งานได้ไปบนโฮสต์ที่ไหนก็ได้ที่เป็น public หลังจากนั้นส่ง URL นั้นมาในช่อง `Solution Link` และคุณสามารถส่งลิงก์ source code ของโปรเจคคุณมาในช่อง `GitHub Link` ด้วยหรือไม่ก็ได้
+ให้วิธีทำแบบฝึกหัดในบทเรียนนี้ โดยเลือกจากวิธีด้านล่างนี้:
+
+- ให้ Clone repoisitory จาก [GitHub](https://github.com/freeCodeCamp/boilerplate-project-secure-real-time-multiplayer-game/) มา และทำแบบทดสอบบนเครื่องของคุณเอง
+- สร้างจากโปรเจกต์ของเราในเว็บไซต์ [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-secure-real-time-multiplayer-game)
+- ใช้เครื่องมือสร้างเว็บอื่นๆ และอย่าลืมเก็บไฟล์ไว้ใน GitHub repo ของคุณด้วย
+
+เมื่อคุณทำเสร็จแล้ว ให้อัปโหลดโปรเจกต์ของคุณขึ้นโฮสต์ และเปิดเป็น public จากนั้นให้ส่งลิงก์เข้าไปใน `Link คำตอบ` และจะส่งลิงก์ source code ของโปรเจคคุณมาในช่อง `GitHub Link` ด้วยก็ได้
 
 # --instructions--
 
-**Note**: ต้องใช้ `helmet@^3.21.3` สำหรับ user stories. ซึ่งหมายความว่าคุณต้องใช้ Helmet’s docs ของเวอร์ชันก่อนหน้านี้สำหรับข้อมูลในการทำ user stories ให้สำเร็จ
+**Note**: ในการเขียนโค้ดตาม user story คุณจะต้องใช้ `helmet@^3.21.3`
+ซึ่งหมายความว่าคุณต้องใช้ docs ของ Helmet รุ่นเก่า เพื่อเขียนโค้ดตาม user story
 
 # --hints--
 
-คุณสามารถสร้างโปรเจ็คของคุณเองได้โดยไม่ต้องใช้ URL ตัวอย่าง
+ให้ส่งลิงก์โปรเจกต์ของคุณ ไม่ใช่ URL ตัวอย่างของเรา
 
 
 ```js
@@ -40,73 +44,73 @@ dashedName: secure-real-time-multiplayer-game
 
 ```
 
-ผู้เล่นแต่ละคนมีอวาตาร์
+ผู้เล่นทุกคนต้องมีอวาตาร์
 
 ```js
 
 ```
 
-ผู้เล่นแต่ละคนจะถูกแทนค่าด้วย object ที่ถูกสร้างโดย `Player` class ในไฟล์  `Player.mjs`
+ผู้เล่นแต่ละคนจะเป็น object ที่ถูกสร้างโดย class `Player` ในไฟล์  `Player.mjs`
 
 ```js
 
 ```
 
-ให้อย่างน้อย player object แต่ละอันจะต้องมี `id` เฉพาะ, `score` และ `x` กับ `y` coordinates ที่แสดงถึงตำแหน่งที่อยู่ปัจจุบันของผู้เล่น
+player object แต่ละตัวจะต้องมี property อย่างน้อยตามนี้ unique `id`, `score` และ coordinate `x` กับ `y` ที่แสดงถึงตำแหน่งปัจจุบันของผู้เล่น
 
 ```js
 
 ```
 
-ให้เกมต้องมีต้องมีชนิดของ collectible item อย่างน้อย 1 ชนิด ให้สร้าง `Collectible` class ใน `Collectible.mjs` ให้สำเร็จเพื่อทำให้เกิด collectible item นี้
+ให้เกมต้องมีต้องมีไอเทมที่ให้ผู้เล่นเก็บได้ (collectible item) อย่างน้อย 1 ชนิด โดยให้เขียน class `Collectible` ใน `Collectible.mjs` เพื่อสร้าง item นี้
 
 ```js
 
 ```
 
-ให้อย่างน้อย collectible item object แต่ละอันที่ถูกสร้างโดย `Collectible` class ควรจะต้องมี `id` เฉพาะ, `value`, `x` กับ `y` coordinates ที่แสดงถึงตำแหน่งที่อยู่ปัจจุบันของไอเทมนั้น
+object ของไอเทมที่ถูกสร้างโดย class `Collectible` จะต้องมี unique `id`, `value` และ coordinate `x` กับ `y` ที่แสดงถึงตำแหน่งปัจจุบันของไอเทมนั้น
 
 ```js
 
 ```
 
-ผู้เล่นสามารถใช้คีย์ WASD และ/หรือ ลูกศร เพื่อเคลื่อนที่อวาตาร์ของตัวเองด้วย เขียน `movePlayer` method ใน `Player.mjs` ให้สำเร็จเพื่อทำให้เงื่อนไขนี้เกิดขึ้น
+ผู้เล่นสามารถใช้ปุ่ม WASD และ/หรือ ลูกศร เพื่อขยับอวาตาร์ของตัวเองได้ โดยให้เขียน method `movePlayer` ใน `Player.mjs` ตามเงื่อนไขนี้
 
 ```js
 
 ```
 
-`movePlayer` method ควรยอมรับ 2 argument คือ สตริงของ "up", "down", "left", หรือ "right" และ และตัวเลขของจำนวนพิกเซลที่ตำแหน่งของผู้เล่นที่จะเคลื่อนไป `movePlayer` ควรจะปรับ `x` กับ `y` coordinates ของ player object ที่มันถูกเรียกใช้
+method `movePlayer` ต้องรับ argument 2 ตัว คือสตริง "up", "down", "left", หรือ "right" และตัวเลขจำนวนพิกเซลที่ผู้เล่นเคลื่อนที่ไป โดย `movePlayer` จะต้องไปเปลี่ยน coordinate `x` กับ `y` ของ player object ที่ถูกเรียกใช้
 
 ```js
 
 ```
 
-คะแนนของผู้เล่นควรใช้ในการคำนวณอันดับของผู้เล่นต่อผู้เล่นคนอื่นๆ เขียน `calculateRank` method ให้สำเร็จใน `Player` class เพื่อให้เงื่อนไขนี้เกิดขึ้น
+ต้องใช้คะแนนของผู้เล่นไปกำหนดอันดับของผู้เล่นจากผู้เล่นทั้งหมด โดยให้เขียน method `calculateRank` ใน class `Player` เพื่อทำตามเงื่อนไขนี้
 
 ```js
 
 ```
 
-`calculateRank` method ควรยอมรับ array ของ object ที่แสดงถึงที่เชื่อมต่อกันทั้งหมด และ return สตริง `Rank: currentRanking/totalPlayers` ตัวอย่างเช่น สมมติว่าในเกมมีผู้เล่นสองคน หากผู้เล่น A มีคะแนนเท่ากับ 3 และ ผู้เล่นบีมี 5 คะแนน `calculateRank` สำหรับผู้เล่น A จะต้อง return `Rank: 2/2`
+method `calculateRank` ต้องรับค่าเป็น array ของ object ที่เป็นผู้เล่นที่เล่นอยู่ทั้งหมด และคืนค่าเป็นสตริง `Rank: currentRanking/totalPlayers` เช่น สมมติว่าในเกมมีผู้เล่นสองคน หากผู้เล่น A มี 3 คะแนน และ ผู้เล่น B มี 5 คะแนน method `calculateRank` ของผู้เล่น A ต้องคืนค่าเป็น `Rank: 2/2`
 
 ```js
 
 ```
 
-ผู้เล่นสามารถรวบรวมกับ collectible item ได้ เขียน `collision` method ให้สำเร็จ เพื่อให้เงื่อนไขนี้เกิดขึ้น
+ผู้เล่นสามารถเก็บไอเทมได้ โดยให้เขียน method `collision` เพื่อทำตามเงื่อนไขนี้
 
 ```js
 
 ```
 
-`collision` method ควรยอมรับ collectible item's object เป็น argument ถ้าอวาตาร์ของผู้เล่นรวมไอเทมได้ `collision` method ควร retrun `true`
+method `collision` ต้องรับ argument เป็น object ของไอเทม ถ้าอวาตาร์ของผู้เล่นเก็บไอเทมได้ method `collision` ต้องคืนค่าเป็น `true`
 
 ```js
 
 ```
 
-ผู้เล่นทุกคนจะได้รับการซิงค์
+ผู้เล่นทุกคนจะได้รับการอัพเดทข้อมูลทั้งหมดอยู่ตลอด
 
 ```js
 
@@ -118,7 +122,7 @@ dashedName: secure-real-time-multiplayer-game
 
 ```
 
-ป้องกันไม่ให้ client พยายามเดา/เซาะหา MIME type
+ต้องป้องกันไม่ให้ client เดาหรือ siff MIME type ได้
 
 ```js
 async (getUserInput) => {
@@ -128,7 +132,7 @@ async (getUserInput) => {
 };
 ```
 
-ป้องกันการโจมตีจาก cross-site scripting (XSS)
+ต้องป้องกันการโจมตีจาก cross-site scripting (XSS)
 
 ```js
 async (getUserInput) => {
@@ -138,7 +142,7 @@ async (getUserInput) => {
 };
 ```
 
-ไม่มีสิ่งใดจากเว็บไซต์ถูกแคชใน client
+ข้อมูลของเว็บไซต์เราต้องไม่ถูกแคชใน client
 
 ```js
 async (getUserInput) => {
@@ -154,7 +158,7 @@ async (getUserInput) => {
 };
 ```
 
-ในส่วน header ให้มีข้อความว่า the site is powered by "PHP 7.4.3" ถึงแม้ว่ามันจะไม่ก็ตาม (เป็นมาตรการรักษาความปลอดภัย)
+ให้เก็บค่าของ header x-powered-by เป็น "PHP 7.4.3" ถึงแม้ว่าจริงๆแล้วจะไม่ได้ใช้ PHP ก็ตาม (เป็นมาตรการรักษาความปลอดภัย)
 
 ```js
 async (getUserInput) => {

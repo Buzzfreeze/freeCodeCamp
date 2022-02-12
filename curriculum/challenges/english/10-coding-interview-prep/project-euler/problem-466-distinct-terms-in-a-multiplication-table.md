@@ -8,9 +8,9 @@ dashedName: problem-466-distinct-terms-in-a-multiplication-table
 
 # --description--
 
-ให้ $P(m,n)$ เป็นจำนวนใน $m×n$ multiplication table.
+ให้ $P(m,n)$ เป็นเลข $m×n$ ในตารางสูตรคูณ
 
-ตัวอย่าง 3×4 multiplication table :
+ตัวอย่าง ตารางสูตรคูณ 3×4:
 
 $$\begin{array}{c}
   ×          & \mathbf{1} & \mathbf{2} & \mathbf{3} & \mathbf{4}  \\\\
@@ -19,7 +19,7 @@ $$\begin{array}{c}
   \mathbf{3} & 3          & 6          & 9          & 12
 \end{array}$$
 
-มี 8 ค่า {1, 2, 3, 4, 6, 8, 9, 12}, ดังนั้น $P(3, 4) = 8$.
+มี 8 ค่า {1, 2, 3, 4, 6, 8, 9, 12} ดังนั้น $P(3, 4) = 8$
 
 กำหนดให้:
 
@@ -29,11 +29,11 @@ $$\begin{align}
   & P(32, {10}^{15}) = 13\\,826\\,382\\,602\\,124\\,302. \\\\
 \end{align}$$
 
-ให้หา $P(64, {10}^{16})$.
+ให้หา $P(64, {10}^{16})$
 
 # --hints--
 
-`multiplicationTable()` ควร return `258381958195474750`.
+`multiplicationTable()` ต้องคืนค่าเป็น `258381958195474750`
 
 ```js
 assert.strictEqual(multiplicationTable(), 258381958195474750);

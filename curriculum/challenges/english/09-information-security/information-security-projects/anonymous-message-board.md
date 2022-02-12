@@ -8,38 +8,40 @@ dashedName: anonymous-message-board
 
 # --description--
 
-ลองสร้างแอป full stack จาก JavaScript ที่มีฟังก์ชันเหมือนกับ: <https://anonymous-message-board.freecodecamp.rocks/>
+ลองสร้างแอปแบบ full stack โดยใช้ JavaScript โดยให้แอปมีฟังก์ชันเหมือนกับ: <https://anonymous-message-board.freecodecamp.rocks/>
 
-ในการทำโปรเจคนี้จะทำให้คุณเขียนโค้ด ที่มี method ต่างๆ ด้านล่างนี้: 
+เนื่องจาก API ราคาหุ้นที่เชื่อถือได้ทั้งหมดต้องใช้ API Key เราจึงสร้างวิธีแก้ปัญหาชั่วคราว โดยให้ใช้ [Link นี้](https://stock-price-checker-proxy.freecodecamp.rocks/) เพื่อดึงข้อมูลราคาหุ้นโดยที่ไม่ต้องลงทะเบียนคีย์ของคุณเอง
 
-- Clone [Github repo นี้](https://github.com/freeCodeCamp/boilerplate-project-messageboard/) แล้วนำมาใช้กับโปรเจคของคุณบนเครื่องของคุณเอง
-- ให้ใช้ [โปรเจค  Replit starter ของเรา](https://replit.com/github/freeCodeCamp/boilerplate-project-messageboard)  กับโปรเจคนี้
-- ใช้ตัวสร้างเว็บไซต์ที่คุณต้องการในการทำโปรเจคนี้ อย่าลืมรวมไฟล์ทั้งหมดจาด Github repo ของเราลงไปด้วย
+ให้วิธีทำแบบฝึกหัดในบทเรียนนี้ โดยเลือกจากวิธีด้านล่างนี้:
 
-เมื่อทำโปรเจคนี้เสร็จแล้ว ให้อัปโหลดงานเดโมที่ใช้งานได้ไปบนโฮสต์ที่ไหนก็ได้ที่เป็น public หลังจากนั้นส่ง URL นั้นมาในช่อง `Solution Link` และคุณสามารถส่งลิงก์ source code ของโปรเจคคุณมาในช่อง `GitHub Link` ด้วยหรือไม่ก็ได้
+- ให้ Clone repoisitory จาก [GitHub](https://github.com/freeCodeCamp/boilerplate-project-messageboard/) มา และทำแบบทดสอบบนเครื่องของคุณเอง
+- สร้างจากโปรเจกต์ของเราในเว็บไซต์ [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-messageboard)
+- ใช้เครื่องมือสร้างเว็บอื่นๆ และอย่าลืมเก็บไฟล์ไว้ใน GitHub repo ของคุณด้วย
+
+เมื่อคุณทำเสร็จแล้ว ให้อัปโหลดโปรเจกต์ของคุณขึ้นโฮสต์ และเปิดเป็น public จากนั้นให้ส่งลิงก์เข้าไปใน `Link คำตอบ` และจะส่งลิงก์ source code ของโปรเจคคุณมาในช่อง `GitHub Link` ด้วยก็ได้
 
 # --instructions--
 
-1. ตั้งค่า `NODE_ENV` เพื่อทดสอบโดยไม่ใส่เครื่องหมายคำพูด เมื่อพร้อมที่จะเขียนการทดสอบและ DB ไปยังสตริงการเชื่อมต่อฐานข้อมูลของคุณ (ใน `.env`)
+1. ในไฟล์ `.env` ให้ตั้งค่า `NODE_ENV` ให้เป็น `test` (โดยต้องไม่ใส่เครื่องหมายคำพูด) เมื่อต้องการทดสอบ และเก็บค่า connection string ของ MongoDB ใน `DB` 
 2. แนะนำให้สร้าง controllers/handlers และ handle routing ใน `routes/api.js`
-3. คุณสามารถเพิ่มฟีเจอร์ด้านความปลอดภัยต่างๆ ในไฟล์ `server.js`
+3. ให้เพิ่มฟีเจอร์ด้านความปลอดภัยต่างๆ ในไฟล์ `server.js`
 
-เขียน test ต่างๆ ด้านล่างนี้ ใน `tests/2_functional-tests.js`
+เขียน test ข้างล่างนี้ใน `tests/2_functional-tests.js`:
 
-- สร้าง thread ใหม่คือ: ใช้ POST ที่เรียกไปยัง `/api/threads/{board}`
-- สามารถดู 10  thread ล่าสุดโดยมีการตอบกลับ 3 ครั้งในแต่ละ thread : ใช้ GET เรียกไปที่ `/api/threads/{board}`
-- ลบ thread ด้วยพาสเวิร์ดที่ไม่ถูกต้อง: ใช้ DELETE เรียกไปยัง `/api/threads/{board}` กับ `delete_password` ที่ไม่ถูกต้อง
-- ลบ thread ด้วยพาสเวิร์ดที่ถูกต้อง: ใช้ DELETE เรียกไปยัง `/api/threads/{board}` กับ `delete_password` ที่ถูกต้อง
-- รายงาน thread : ใช้ PUT เรียกไปยัง `/api/threads/{board}`
-- สร้าง reply ใหม่: ใช้ POST เรียกไปยัง `/api/replies/{board}`
-- ดู thread เดียวพร้อมกับ reply ทั้งหมด: ใช้ GET เรียกไปยัง `/api/replies/{board}`
-- ลบ reply ด้วยพาสเวิร์ดที่ไม่ถูกต้อง: ใช้ DELETE เรียกไปยัง `/api/replies/{board}` กับ `delete_password` ที่ไม่ถูกต้อง
-- ลบ reply ด้วยพาสเวิร์ดที่ถูกต้อง: ใช้ DELETE เรียกไปยัง `/api/replies/{board}` กับ `delete_password` ที่ถูกต้อง
-- รายงาน reply: ใช้ PUT เรียกไปยัง `/api/replies/{board}`
+- สร้าง thread ใหม่: ส่ง POST request ไปยัง `/api/threads/{board}`
+- ดู 10 thread ล่าสุดโดยแต่ละ thread มี reply 3 ครั้ง: ส่ง GET request ไปยัง `/api/threads/{board}`
+- ลบ thread โดยใช้พาสเวิร์ดผิด: ส่ง DELETE request ไปยัง `/api/threads/{board}` โดย `delete_password` ผิด
+- ลบ thread โดยใช้พาสเวิร์ดที่ถูกต้อง: ส่ง DELETE request ไปยัง `/api/threads/{board}` โดย `delete_password` ถูก
+- รายงาน thread: ส่ง PUT request ไปยัง `/api/threads/{board}`
+- สร้าง reply ใหม่: ส่ง POST request ไปยัง `/api/replies/{board}`
+- ดู thread เดียวพร้อมกับ reply ทั้งหมด: ส่ง GET request ไปยัง `/api/replies/{board}`
+- ลบ reply โดยใช้พาสเวิร์ดผิด: ส่ง DELETE request ไปยัง `/api/replies/{board}` โดย `delete_password` ผิด
+- ลบ reply โดยใช้พาสเวิร์ดที่ถูกต้อง: ส่ง DELETE request ไปยัง `/api/replies/{board}` โดย `delete_password` ถูก
+- รายงาน reply: ส่ง PUT request ไปยัง `/api/replies/{board}`
 
 # --hints--
 
-คุณสามารถสร้างโปรเจ็คของคุณเองได้โดยไม่ต้องใช้ URL ตัวอย่าง
+ให้ส่งลิงก์โปรเจกต์ของคุณ ไม่ใช่ URL ตัวอย่างของเรา
 
 ```js
 (getUserInput) => {
@@ -51,7 +53,7 @@ dashedName: anonymous-message-board
 };
 ```
 
-อนุญาตให้โหลดเว็บไซต์ของคุณใน iFrame บนหน้าเพจของคุณเองเท่านั้น
+อนุญาตให้โหลดเว็บไซต์ของคุณใน iFrame บนหน้าเว็บของคุณเองเท่านั้น
 
 ```js
 async (getUserInput) => {
@@ -71,7 +73,7 @@ async (getUserInput) => {
 };
 ```
 
-อนุญาตให้ไซต์ของคุณส่ง referrer สำหรับหน้าเพจของคุณเองเท่านั้น
+ต้องตั้งค่า referrer-policy เป็น `same-origin`
 
 ```js
 async (getUserInput) => {
@@ -81,7 +83,7 @@ async (getUserInput) => {
 };
 ```
 
-คุณสามารถส่ง POST request ไปยัง `/api/threads/{board}` พร้อมกับข้อมูลของฟอร์มที่มี `text` และ `delete_password` ซึ่งข้อมูลที่ถูกเซฟจะต้องมีรายละเอียดอย่างน้อย ดังนี้ `_id`, `text`, `created_on`(วัน & เวลา), `bumped_on`(วัน & เวลา, เริ่มต้นพร้อมกับ `created_on`), `reported` (boolean), `delete_password`, & `replies` (array)
+ต้องส่ง POST request ไปยัง `/api/threads/{board}` ได้ โดยส่งไปพร้อมกับ form data ที่มีฟิลด์ `text` และ `delete_password` ซึ่งข้อมูลที่ถูกเซฟจะต้องมีรายละเอียด (อย่างน้อย) ตามนี้ `_id`, `text`, `created_on`(วัน&เวลา), `bumped_on`(วัน&เวลา, ค่าเริ่มต้นเป็นค่าเดียวกับ `created_on`), `reported` (boolean), `delete_password`, และ `replies` (array)
 
 ```js
 async (getUserInput) => {
@@ -113,43 +115,43 @@ async (getUserInput) => {
 };
 ```
 
-คุณสามารถส่ง POST request ไปยัง `/api/replies/{board}` พร้อมกับข้อมูลของฟอร์มที่มี `text`, `delete_password`, และ `thread_id` สิ่งเหล่านี้จะไปอัปเดตข้อมูลวันที่ `bumped_on` ให้กับ วันของ comment ต่างๆ ใน `replies` array ของ thread  object ที่จะถูกเซฟจะต้องมี property อย่างน้อย ดังนี้ `_id`, `text`, `created_on`, `delete_password`, และ `reported`
+ต้องส่ง POST request ไปยัง `/api/replies/{board}` ได้ โดยส่งไปพร้อมกับ form data ที่มีฟิลด์ `text`, `delete_password`, และ `thread_id` โดยจะไปอัปเดท `bumped_on` ให้เป็นค่าของวันที่ตอบกลับ thread นี้ และใน array `replies` ของ thread ค่าของ object reply ที่จะถูกเซฟจะต้องมี property (อย่างน้อย) ดังนี้ `_id`, `text`, `created_on`, `delete_password`, และ `reported`
 
 ```js
 
 ```
 
-คุณสามารถส่ง GET request ไปยัง `/api/threads/{board}` สิ่งที่ return มาจะเป็น array ของ thread ที่มีข้อมูลอัปเดตเข้ามาล่าสุดพร้อมแสดง 3 reply ล่าสุดของแต่ละ thread นั้นทั้งหมด 10  thread  ในส่วนของ `reported` และ `delete_password` จะไม่ถูกส่งไปยังฝั่ง client
+ต้องส่ง GET request ไปยัง `/api/threads/{board}` ได้ โดยค่าที่คืนมาจะเป็น array ของ thread 10 ตัว ที่มีค่า `bumped_on` ใหม่ที่สุด พร้อมแสดง reply 3 ตัวล่าสุดของแต่ละ thread ในส่วนของ `reported` และ `delete_password` จะไม่ถูกส่งไปยังฝั่ง client
 
 ```js
 
 ```
 
-คุณสามารถส่ง GET request ไปยัง `/api/replies/{board}?thread_id={thread_id}` ซึ่ง return จะเป็น thread นั้นพร้อม reply ของมันทั้งหมดด้วย และยังไม่รวมส่วนที่เหมือนกันของ test ก่อนหน้านี้จากฝั่ง client
+ต้องส่ง GET request ไปยัง `/api/replies/{board}?thread_id={thread_id}` ได้ โดยค่าที่คืนมาจะเป็น thread นั้นพร้อม reply ทั้งหมดของ thread นั้น ในส่วนของ `reported` และ `delete_password` จะไม่ถูกส่งไปยังฝั่ง client
 
 ```js
 
 ```
 
-คุณสามารถส่ง DELETE request ไปยัง `/api/threads/{board}` และส่งผ่าน `thread_id` และ `delete_password` เพื่อลบ thread  ซึ่งจะ return สตริง `incorrect password` หรือ `success`
+ต้องส่ง DELETE request ไปยัง `/api/threads/{board}` ได้ โดยส่งค่า `thread_id` และ `delete_password` ไปเพื่อลบ thread  โดยค่าที่คืนมาจะเป็น string `incorrect password` หรือ `success` 
 
 ```js
 
 ```
 
-คุณสามารถส่ง DELETE request ไปยัง `/api/replies/{board}` ส่งผ่าน `thread_id`, `reply_id`, และ `delete_password` ซึ่งจะ return สตริง `incorrect password` หรือ `success` ถ้าเป็น success แล้ว ข้อความของ `reply_id` จะเปลี่ยนเป็น `[deleted]`
+ต้องส่ง DELETE request ไปยัง `/api/replies/{board}` ได้ โดยส่งค่า `thread_id`, `reply_id`, และ `delete_password` ไป โดยค่าที่คืนมาจะเป็น string `incorrect password` หรือ `success` ถ้าเป็น success แล้ว ข้อความของ `reply_id` จะเปลี่ยนเป็น `[deleted]`
 
 ```js
 
 ```
 
-คุณสามารถส่ง PUT request ไปยัง `/api/threads/{board}` ส่งผ่าน `thread_id` ซึ่งจะ return สตริง `success` ค่าของ `report` ของ `thread_id จะถูกเปลี่ยนเป็น `true`
+ต้องส่ง PUT request ไปยัง `/api/threads/{board}` ได้ โดยส่งค่า `thread_id` ไป โดยค่าที่คืนมาจะเป็น string `success` และค่า `reported ` ของ `thread_id` นั้นจะถูกเปลี่ยนเป็น `true`
 
 ```js
 
 ```
 
-คุณสามารถส่ง PUT request ไปยัง `/api/replies/{board}` ส่งผ่าน `thread_id` และ `reply_id` ซึ่งจะ return สตริง `success` `success` ค่าของ `report` ของ `reply_id จะถูกเปลี่ยนเป็น `true`
+ต้องส่ง PUT request ไปยัง `/api/replies/{board}` ได้ โดยส่งค่า `thread_id` และ `reply_id` ไป โดยค่าที่คืนมาจะเป็น string `success` และค่า `report` ของ `reply_id` นั้นจะถูกเปลี่ยนเป็น `true`
 
 ```js
 

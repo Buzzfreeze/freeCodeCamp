@@ -8,25 +8,26 @@ dashedName: personal-library
 
 # --description--
 
-สร้างแอพ full stack JavaScript ซึ่งมีฟังก์ชันการทำงานคล้าย link นี้ : <https://personal-library.freecodecamp.rocks/>  ทำงานใน project นี้ เขียน code โดยใช้วิธีใดวิธีหนึ่งต่อไปนี้: 
+ให้สร้างแอปแบบ full stack โดยใช้ JavaScript ที่ทำงานคล้ายกับเว็บไซต์นี้ <https://personal-library.freecodecamp.rocks/>  
+ในการทำโปรเจคนี้ คุณจะต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งดังต่อไปนี้
 
-- ทำการ clone repo [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-project-library) เพื่อสร้าง project ในนั้นให้สำเร็จ
-- ใช้  project เริ่มต้นจาก [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-library) เพื่อสร้าง project ให้สำเร็จ
-- ใช้ site builder ที่ผู้เรียนเลือก เพื่อสร้าง project ให้เสร็จ อย่าลืมรวมไฟล์ทั้งหมดจาก repo GitHub 
+- ให้ Clone repoisitory จาก [GitHub](https://github.com/freeCodeCamp/boilerplate-project-library/) มา และทำแบบทดสอบบนเครื่องของคุณเอง
+- สร้างจากโปรเจกต์ของเราในเว็บไซต์ [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-library)
+- ใช้เครื่องมือสร้างเว็บอื่นๆ และอย่าลืมเก็บไฟล์ไว้ใน GitHub repo ของคุณด้วย
 
-เมื่อผู้เรียนทำเสร็จแล้ว ตรวจสอบให้แน่ใจว่าตัว Demo ของ project ของคุณตั้งค่า Host เป็น Public จากนั้นส่ง URL ไปที่ช่อง `Solution Link` หรือส่งลิงก์ไปยัง source code ของ project ผู้เรียน ตรง `GitHub Link`
+เมื่อคุณทำเสร็จแล้ว ให้อัปโหลดโปรเจกต์ของคุณขึ้นโฮสต์ และเปิดเป็น public จากนั้นให้ส่งลิงก์เข้าไปใน `Link คำตอบ` และจะส่งลิงก์ของ source code เข้าไปใน `GitHub Link` ด้วยก็ได้
 
 # --instructions--
 
-1. เพิ่ม string การเชื่อมต่อ MongoDB ไปที่ `.env' โดยไม่มีเครื่องหมายคำพูดเป็น `DB`
+1. ให้เพิ่ม connection string ของ MongoDB ไว้ใน `.env` โดยไม่มีเครื่องหมายคำพูด โดยเก็บเป็นตัวแปร `DB`
      ตัวอย่าง: `DB=mongodb://admin:pass@1234.mlab.com:1234/fccpersonallib`
-2. ในไฟล์ ".env" ของคุณ ให้ตั้งค่า "NODE_ENV" เป็น "ทดสอบ" โดยไม่มีเครื่องหมายคำพูด
+2. ในไฟล์ `.env` ของคุณ ให้ตั้งค่า `NODE_ENV` เป็น `test` โดยไม่มีเครื่องหมายคำพูด
 3. ต้องสร้าง route ทั้งหมดภายใน `routes/api.js`
 4. จะต้องสร้างการทดสอบการทำงานทั้งหมดใน `tests/2_functional-tests.js` 
 
 # --hints--
 
-ผู้เรียนสามารถจัดหา project ของผู้เรียนเองได้ โดยไม่ใช้ URL ตัวอย่าง 
+ให้ส่งลิงก์โปรเจกต์ของคุณ ไม่ใช่ URL ตัวอย่างของเรา
 
 ```js
 (getUserInput) => {
@@ -36,7 +37,7 @@ dashedName: personal-library
 };
 ```
 
-ผู้เรียนสามารถส่งคำขอ <b>POST</b> request ไปที่ `/api/books` โดยมี `title' เป็นส่วนหนึ่งของข้อมูลในแบบฟอร์มเพื่อ add หนังสือ การ response จะเป็น object ที่มี `title` และ "_id" ที่ไม่ซ้ำกันเป็น key หลัก หากไม่มี `title`อยู่ในคำขอ การ response ส่งคืนควรเป็น string `missing required field title`
+สามารถส่ง <b>POST</b> request ไปที่ `/api/books` ได้ โดยระบุ `title` เป็น form data เพื่อเพิ่มหนังสือในฐานข้อมูล โดยค่าที่คืนกลับมาจะเป็น object ที่มี `title` และ unique `_id` เป็น key หลัก ถ้าไม่ระบุ `title` ใน request โดยค่าที่คืนกลับมาจะเป็น string `missing required field title`
 
 ```js
 async (getUserInput) => {
@@ -57,7 +58,7 @@ async (getUserInput) => {
 };
 ```
 
-ผู้เรียนสามารถส่งคำขอ <b>GET</b> request ไปที่ `/api/books` และรับ JSON ที่แสดงถึงหนังสือทั้งหมดได้ โดย JSON จะ response เป็น array ของ object โดยแต่ละ object (หนังสือ) ประกอบด้วย`title`, `_id` และ `commentcount`
+สามารถส่ง <b>GET</b> request ไปที่ `/api/books` ได้ โดยค่าที่คืนกลับมาจะเป็น JSON ที่แสดงถึงหนังสือทั้งหมด โดย JSON ที่คืนกลับมาจะเป็น array ของ object โดยแต่ละ object (หนังสือ) จะมี property `title`, `_id` และ `commentcount`
 
 ```js
 async (getUserInput) => {
@@ -86,7 +87,7 @@ async (getUserInput) => {
 
 ```
 
-ผู้เรียนสามารถส่งคำขอ <b>GET</b> request ไปที่ `/api/books/{_id}` เพื่อดึงobject เดี่ยวของหนังสือที่มีคุณสมบัติ array ประกอบด้วย `title', `_id` และ `comments`  ( array จะว่าง หากไม่มีความคิดเห็น) หากไม่พบหนังสือ ให้ส่งคืน string `no book exists`
+สามารถส่ง <b>GET</b> request ไปที่ `/api/books/{_id}` เพื่อดึง object หนังสือ ที่มี property `title`, `_id` และ array `comments` (array จะว่าง หากไม่มีความคิดเห็น) หากไม่พบหนังสือ ให้ส่งคืน string `no book exists`
 
 ```js
 async (getUserInput) => {
@@ -110,7 +111,7 @@ async (getUserInput) => {
 };
 ```
 
-ผู้เรียนสามารถส่งคำขอ <b>POST</b> ที่มี `comment`เป็นข้อมูลเนื้อหาของแบบฟอร์มไปที่ `/api/books/{_id}` เพื่อเพิ่มความคิดเห็นในหนังสือ การตอบกลับจะเป็น object หนังสือที่คล้ายกับคำขอ <b>GET</b> `/api/books/{_id}` ในการทดสอบก่อนหน้านี้ หากไม่มี `comment` อยู่ในคำขอ ให้ส่งคืน string `missing required field comment`หากไม่พบหนังสือ ให้ส่งคืน string`no book exists`
+สามารถส่ง <b>POST</b> request ที่มี `comment` เป็น form data ไปที่ `/api/books/{_id}` ได้ โดยจะไปเพิ่ม comment ของหนังสือ การตอบกลับจะเป็น object หนังสือที่คล้ายกับ <b>GET</b> request `/api/books/{_id}` ในการทดสอบก่อนหน้านี้ หากไม่มี `comment` อยู่ใน request ให้คืนค่าเป็น string `missing required field comment` หากไม่พบหนังสือ ให้คืนค่าเป็น string `no book exists`
 
 ```js
 async (getUserInput) => {
@@ -148,7 +149,7 @@ async (getUserInput) => {
 };
 ```
 
-ผู้เรียนสามารถส่งคำขอ <b>DELETE</b> request ไปที่ `/api/books/{_id}` เพื่อลบหนังสือออกจากคอลเลกชั่น หากสำเร็จ การ response ที่ส่งคืนจะเป็น string `delete successful`หากไม่พบหนังสือ ให้ส่งคืน string `no book exists`
+สามารถส่ง <b>DELETE</b> request ไปที่ `/api/books/{_id}` เพื่อลบหนังสือออกจาก collection ได้ ถ้าลบสำเร็จ จะคืนค่าเป็น string `delete successful` ถ้าไม่พบหนังสือ ให้คืนค่าเป็น string `no book exists`
 
 ```js
 async (getUserInput) => {
@@ -172,7 +173,7 @@ async (getUserInput) => {
 };
 ```
 
-ผู้เรียนสามารถส่งคำขอ <b>DELETE</b> request ไปที่ `/api/books` เพื่อลบหนังสือทั้งหมดในฐานข้อมูล หากสำเร็จ การ response ที่ส่งคืนจะเป็น string `'complete delete successful`  
+สามารถส่ง <b>DELETE</b> request ไปที่ `/api/books` เพื่อลบหนังสือทั้งหมดในฐานข้อมูลได้ ถ้าสำเร็จ ให้คืนค่าเป็น string `'complete delete successful`  
 
 ```js
 async (getUserInput) => {
@@ -189,7 +190,7 @@ async (getUserInput) => {
 };
 ```
 
-การทดสอบการใช้งาน (functional tests) ทั้งหมด 10 รายการเสร็จสมบูรณ์และผ่าน 
+functional test ทั้งหมด 10 รายการต้องเสร็จสมบูรณ์และผ่าน 
 
 ```js
 async (getUserInput) => {

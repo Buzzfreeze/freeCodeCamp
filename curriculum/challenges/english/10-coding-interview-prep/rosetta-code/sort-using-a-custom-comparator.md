@@ -8,17 +8,17 @@ dashedName: sort-using-a-custom-comparator
 
 # --description--
 
-เขียนฟังก์ชันเพื่อจัดเรียงarray (หรือรายการ) ของstringโดยเรียงลำดับจากมากไปหาน้อย และเรียงลำดับจากน้อยไปหามากสำหรับstringที่มีความยาวเท่ากัน
+เขียนฟังก์ชันเพื่อ soty array ของสตริง โดยเรียงลำดับจากสตริงที่มีความยาวมากไปหาความยาวน้อย และถ้าสตริงยาวเท่ากัน ให้เรียงตามลำดับตัวอักษร
 
 # --hints--
 
-`lengthSorter` ควรเป็น function.
+`lengthSorter` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof lengthSorter == 'function');
 ```
 
-`lengthSorter(["Here", "are", "some", "sample", "strings", "to", "be", "sorted"])` ควร return array.
+`lengthSorter(["Here", "are", "some", "sample", "strings", "to", "be", "sorted"])` ต้องคืนค่าเป็น array
 
 ```js
 assert(
@@ -37,7 +37,7 @@ assert(
 );
 ```
 
-`lengthSorter(["Here", "are", "some", "sample", "strings", "to", "be", "sorted"])` ควร return `["strings", "sample", "sorted", "Here", "some", "are", "be", "to"]`.
+`lengthSorter(["Here", "are", "some", "sample", "strings", "to", "be", "sorted"])` ต้องคืนค่าเป็น `["strings", "sample", "sorted", "Here", "some", "are", "be", "to"]`
 
 ```js
 assert.deepEqual(
@@ -55,7 +55,7 @@ assert.deepEqual(
 );
 ```
 
-`lengthSorter(["I", "hope", "your", "day", "is", "going", "good", "?"])` ควร return `["going", "good", "hope", "your", "day", "is", "?","I"]`.
+`lengthSorter(["I", "hope", "your", "day", "is", "going", "good", "?"])` ต้องคืนค่าเป็น `["going", "good", "hope", "your", "day", "is", "?","I"]`
 
 ```js
 assert.deepEqual(
@@ -64,7 +64,7 @@ assert.deepEqual(
 );
 ```
 
-`lengthSorter(["Mine", "is", "going", "great"])` ควร return `["going", "great", "Mine", "is"]`.
+`lengthSorter(["Mine", "is", "going", "great"])` ต้องคืนค่าเป็น `["going", "great", "Mine", "is"]`
 
 ```js
 assert.deepEqual(lengthSorter(['Mine', 'is', 'going', 'great']), [
@@ -75,7 +75,7 @@ assert.deepEqual(lengthSorter(['Mine', 'is', 'going', 'great']), [
 ]);
 ```
 
-`lengthSorter(["Have", "fun", "sorting", "!!"])` ควร return `["sorting", "Have", "fun", "!!"]`.
+`lengthSorter(["Have", "fun", "sorting", "!!"])` ต้องคืนค่าเป็น `["sorting", "Have", "fun", "!!"]`
 
 ```js
 assert.deepEqual(lengthSorter(['Have', 'fun', 'sorting', '!!']), [
@@ -86,7 +86,7 @@ assert.deepEqual(lengthSorter(['Have', 'fun', 'sorting', '!!']), [
 ]);
 ```
 
-`lengthSorter(["Everything", "is", "good", "!!"])` ควร return `["Everything", "good", "!!", "is"]`.
+`lengthSorter(["Everything", "is", "good", "!!"])` ต้องคืนค่าเป็น `["Everything", "good", "!!", "is"]`
 
 ```js
 assert.deepEqual(lengthSorter(['Everything', 'is', 'good', '!!']), [

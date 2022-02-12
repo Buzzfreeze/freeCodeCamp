@@ -8,27 +8,29 @@ dashedName: circles-of-given-radius-through-two-points
 
 # --description--
 
-ให้จุดสองจุดบนระนาบและรัศมี โดยปกติวงกลมสองวงของรัศมีที่กำหนดสามารถลากผ่านจุดได้
+ถ้ามีจุดสองจุดบนระนาบและมีรัศมี โดยปกติเราจะสามารถวาดวงกลมที่มีรัศมีที่กำหนดได้สองวง โดยให้เส้นรอบวงของวงกลมทั้งสองวงนั้นทับจุดสองจุดนั้นได้
 
 **Exceptions:**
 
 <ul>
-  <li>A radius of zero ควร be treated as never describing circles (except in the case where the points are coincident).</li>
-  <li>If the points are coincident then an infinite number of circles with the point on their circumference can be drawn, unless the radius is equal to zero as well which then collapses the circles to a point.</li>
-  <li>If the points form a diameter then return a single circle.</li>
-  <li>If the points are too far apart then no circles can be drawn.</li>
+  <li>ถ้ารัศมีเป็น 0 ต้องตีความว่าวาดวงกลมไม่ได้ (ยกเว้นในกรณีที่จุดสองจุดทับกัน).</li>
+  <li>ถ้าจุดสองจุดทับกัน จะทำให้วาดวงกลมที่ทับกับจุดนั้นได้ไม่จำกัด ยกเว้นในกรณีที่รัศมีเป็น 0 ซึ่งจะทำให้วงกลมกลายเป็นจุด</li>
+  <li>ถ้าระยะระหว่างจุดสองจุดนั้นเป็นเส้นผ่านศูนย์กลาง ให้คืนค่าเป็นวงกลมวงเดียว</li>
+  <li>ถ้าสองจุดนั้นอยู่ห่างกันเกินไปจะวาดวงกลมไม่ได้</li>
 </ul>
 
 # --instructions--
 
-ใช้ฟังก์ชันที่รับสองจุดและรัศมีและส่งกลับวงกลมสองวงผ่านจุดเหล่านั้น สำหรับวงกลมผลลัพธ์แต่ละวง ให้ระบุพิกัดสำหรับจุดศูนย์กลางของแต่ละวงกลมที่ปัดเศษเป็นทศนิยมสี่หลัก ส่งกลับแต่ละพิกัดเป็นarray และพิกัดเป็นarrayของarray
+ให้เขียนฟังก์ชันที่รับค่าจุดสองจุดและรัศมี และคืนค่าเป็นวงกลมที่มีรัศมีทับจุดสองจุดนั้น
 
-**For edge cases, return the following:**
+สำหรับวงกลมผลลัพธ์แต่ละวง ให้ระบุพิกัดสำหรับจุดศูนย์กลางของแต่ละวงกลมที่ปัดเศษเป็นทศนิยมสี่หลัก และคืนค่าแต่ละพิกัดเป็น array และคืนค่าพิกัดทั้งหมดเป็น array ของ array
+
+**สำหรับกรณีพิเศษ ให้คืนค่าดังนี้:**
 
 <ul>
-  <li>If points are on the diameter, return one point. If the radius is also zero however, return <code>"Radius Zero"</code>.</li>
-  <li>If points are coincident, return <code>"Coincident point. Infinite solutions"</code>.</li>
-  <li>If points are farther apart than the diameter, return <code>"No intersection. Points further apart than circle diameter"</code>.</li>
+  <li>ถ้าจุดนั้นอยู่บนเส้นผ่านศูนย์กลางให้คืนค่าแค่จุดเดียว แต่ถ้ารัศมีเป็น 0 ให้คืนค่าเป็น <code>"Radius Zero"</code></li>
+  <li>ถ้าจุดอยู่ทับกัน ให้คืนค่าเป็น <code>"Coincident point. Infinite solutions"</code></li>
+  <li>ถ้าจุดอยู่ห่างกันเกินกว่าความยาวของเส้นผ่านศูนย์กลาง ให้คืนค่าเป็น <code>"No intersection. Points further apart than circle diameter"</code></li>
 </ul>
 
 **Sample inputs:**
@@ -43,37 +45,37 @@ dashedName: circles-of-given-radius-through-two-points
 
 # --hints--
 
-`getCircles` ควรเป็น function.
+`getCircles` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof getCircles === 'function');
 ```
 
-`getCircles([0.1234, 0.9876], [0.8765, 0.2345], 2.0)` ควร return `[[1.8631, 1.9742], [-0.8632, -0.7521]]`.
+`getCircles([0.1234, 0.9876], [0.8765, 0.2345], 2.0)` ต้องคืนค่าเป็น `[[1.8631, 1.9742], [-0.8632, -0.7521]]`
 
 ```js
 assert.deepEqual(getCircles(...testCases[0]), answers[0]);
 ```
 
-`getCircles([0.0000, 2.0000], [0.0000, 0.0000], 1.0)` ควร return `[0, 1]`
+`getCircles([0.0000, 2.0000], [0.0000, 0.0000], 1.0)` ต้องคืนค่าเป็น `[0, 1]`
 
 ```js
 assert.deepEqual(getCircles(...testCases[1]), answers[1]);
 ```
 
-`getCircles([0.1234, 0.9876], [0.1234, 0.9876], 2.0)` ควร return `Coincident point. Infinite solutions`
+`getCircles([0.1234, 0.9876], [0.1234, 0.9876], 2.0)` ต้องคืนค่าเป็น `Coincident point. Infinite solutions`
 
 ```js
 assert.deepEqual(getCircles(...testCases[2]), answers[2]);
 ```
 
-`getCircles([0.1234, 0.9876], [0.8765, 0.2345], 0.5)` ควร return `No intersection. Points further apart than circle diameter`
+`getCircles([0.1234, 0.9876], [0.8765, 0.2345], 0.5)` ต้องคืนค่าเป็น `No intersection. Points further apart than circle diameter`
 
 ```js
 assert.deepEqual(getCircles(...testCases[3]), answers[3]);
 ```
 
-`getCircles([0.1234, 0.9876], [0.1234, 0.9876], 0.0)` ควร return `Radius Zero`
+`getCircles([0.1234, 0.9876], [0.1234, 0.9876], 0.0)` ต้องคืนค่าเป็น `Radius Zero`
 
 ```js
 assert.deepEqual(getCircles(...testCases[4]), answers[4]);

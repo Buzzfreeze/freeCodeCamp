@@ -8,7 +8,7 @@ dashedName: sort-disjoint-sublist
 
 # --description--
 
-เมื่อกำหนดlist of valuesและชุดของindicesจำนวนเต็มลงในlist of valuesนั้น ภารกิจคือการจัดเรียงค่าที่indicesที่กำหนด แต่คงค่าไว้ที่indicesนอกชุดของค่าที่จะจัดเรียง
+เมื่อกำหนด list of values และชุดของ indices จำนวนเต็มลงใน list of values นั้น ให้ทำการจัดเรียงค่าตาม indices ที่กำหนด แต่คงค่าไว้ที่ indices นอกชุดของค่าที่จะจัดเรียง
 
 ทำให้ฟังก์ชันของคุณทำงานกับlist of valuesและชุดindicesต่อไปนี้:
 
@@ -24,19 +24,19 @@ indices(0-based): {6, 1, 7}
 
 # --hints--
 
-`sortDisjoint` ควรเป็น function.
+`sortDisjoint` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof sortDisjoint == 'function');
 ```
 
-`sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [6, 1, 7])` ควร return array.
+`sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [6, 1, 7])` ต้องคืนค่าเป็น array
 
 ```js
 assert(Array.isArray(sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [6, 1, 7])));
 ```
 
-`sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [6, 1, 7])` ควร return `[7, 0, 5, 4, 3, 2, 1, 6]`.
+`sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [6, 1, 7])` ต้องคืนค่าเป็น `[7, 0, 5, 4, 3, 2, 1, 6]`
 
 ```js
 assert.deepEqual(sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [6, 1, 7]), [
@@ -51,7 +51,7 @@ assert.deepEqual(sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [6, 1, 7]), [
 ]);
 ```
 
-`sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [1, 2, 5, 6])` ควร return `[7, 1, 2, 4, 3, 5, 6, 0]`.
+`sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [1, 2, 5, 6])` ต้องคืนค่าเป็น `[7, 1, 2, 4, 3, 5, 6, 0]`
 
 ```js
 assert.deepEqual(sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [1, 2, 5, 6]), [
@@ -66,7 +66,7 @@ assert.deepEqual(sortDisjoint([7, 6, 5, 4, 3, 2, 1, 0], [1, 2, 5, 6]), [
 ]);
 ```
 
-`sortDisjoint([8, 7, 6, 5, 4, 3, 2, 1], [6, 1, 7])` ควร return `[8, 1, 6, 5, 4, 3, 2, 7]`.
+`sortDisjoint([8, 7, 6, 5, 4, 3, 2, 1], [6, 1, 7])` ต้องคืนค่าเป็น `[8, 1, 6, 5, 4, 3, 2, 7]`
 
 ```js
 assert.deepEqual(sortDisjoint([8, 7, 6, 5, 4, 3, 2, 1], [6, 1, 7]), [
@@ -81,7 +81,7 @@ assert.deepEqual(sortDisjoint([8, 7, 6, 5, 4, 3, 2, 1], [6, 1, 7]), [
 ]);
 ```
 
-`sortDisjoint([8, 7, 6, 5, 4, 3, 2, 1], [1, 3, 5, 6])` ควร return `[8, 2, 6, 3, 4, 5, 7, 1]`.
+`sortDisjoint([8, 7, 6, 5, 4, 3, 2, 1], [1, 3, 5, 6])` ต้องคืนค่าเป็น `[8, 2, 6, 3, 4, 5, 7, 1]`
 
 ```js
 assert.deepEqual(sortDisjoint([8, 7, 6, 5, 4, 3, 2, 1], [1, 3, 5, 6]), [
@@ -96,7 +96,7 @@ assert.deepEqual(sortDisjoint([8, 7, 6, 5, 4, 3, 2, 1], [1, 3, 5, 6]), [
 ]);
 ```
 
-`sortDisjoint([6, 1, 7, 1, 3, 5, 6], [6, 1, 5, 4])` ควร return `[6, 1, 7, 1, 3, 5, 6]`.
+`sortDisjoint([6, 1, 7, 1, 3, 5, 6], [6, 1, 5, 4])` ต้องคืนค่าเป็น `[6, 1, 7, 1, 3, 5, 6]`
 
 ```js
 assert.deepEqual(sortDisjoint([6, 1, 7, 1, 3, 5, 6], [6, 1, 5, 4]), [

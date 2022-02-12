@@ -8,7 +8,7 @@ dashedName: problem-65-convergents-of-e
 
 # --description--
 
-square root ของ 2 สามารถเขียนในรูป infinite continued fraction
+square root ของ 2 สามารถเขียนในรูป infinite continued fraction ได้เป็น
 
 $\\sqrt{2} = 1 + \\dfrac{1}{2 + \\dfrac{1}{2 + \\dfrac{1}{2 + \\dfrac{1}{2 + ...}}}}$
 
@@ -29,37 +29,37 @@ $2, 3, \\dfrac{8}{3}, \\dfrac{11}{4}, \\dfrac{19}{7}, \\dfrac{87}{32}, \\dfrac{1
 
 # --hints--
 
-`convergentsOfE(10)` ควร return number.
+`convergentsOfE(10)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof convergentsOfE(10) === 'number');
 ```
 
-`convergentsOfE(10)` ควร return `17`.
+`convergentsOfE(10)` ต้องคืนค่าเป็น `17`
 
 ```js
 assert.strictEqual(convergentsOfE(10), 17);
 ```
 
-`convergentsOfE(30)` ควร return `53`.
+`convergentsOfE(30)` ต้องคืนค่าเป็น `53`
 
 ```js
 assert.strictEqual(convergentsOfE(30), 53);
 ```
 
-`convergentsOfE(50)` ควร return `91`.
+`convergentsOfE(50)` ต้องคืนค่าเป็น `91`
 
 ```js
 assert.strictEqual(convergentsOfE(50), 91);
 ```
 
-`convergentsOfE(70)` ควร return `169`.
+`convergentsOfE(70)` ต้องคืนค่าเป็น `169`
 
 ```js
 assert.strictEqual(convergentsOfE(70), 169);
 ```
 
-`convergentsOfE(100)` ควร return `272`.
+`convergentsOfE(100)` ต้องคืนค่าเป็น `272`
 
 ```js
 assert.strictEqual(convergentsOfE(100), 272);

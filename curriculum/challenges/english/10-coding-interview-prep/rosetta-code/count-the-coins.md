@@ -8,51 +8,51 @@ dashedName: count-the-coins
 
 # --description--
 
-เหรียญทั่วไปมีสี่ประเภทใน [US](https://en.wikipedia.org/wiki/United_States) currency:
+ใน [อเมริกา](https://en.wikipedia.org/wiki/United_States) จะมีเหรียญสี่ประเภท:
 
 <ul>
-  <li>quarters (25 cents)</li>
-  <li>dimes (10 cents)</li>
-  <li>nickels (5 cents), and</li>
-  <li>pennies (1 cent)</li>
+  <li>quarter (25 cent)</li>
+  <li>dime (10 cent)</li>
+  <li>nickel (5 cent) และ</li>
+  <li>penny (1 cen)</li>
 </ul>
 
-<p>There are six ways to make change for 15 cents:</p>
+<p>ในการทอนเหรียญให้มีมูลค่า 15 cent จะทำให้หกแบบ:</p>
 
 <ul>
-  <li>A dime and a nickel</li>
-  <li>A dime and 5 pennies</li>
+  <li>1 dime และ 1 nickel</li>
+  <li>1 dime และ 5 penny</li>
   <li>3 nickels</li>
-  <li>2 nickels and 5 pennies</li>
-  <li>A nickel and 10 pennies</li>
-  <li>15 pennies</li>
+  <li>2 nickels และ 5 penny</li>
+  <li>1 nickel และ 10 penny</li>
+  <li>15 penny</li>
 </ul>
 
 # --instructions--
 
-ใช้ฟังก์ชันเพื่อกำหนดจำนวนวิธีที่จะทำการเปลี่ยนแปลงสำหรับข้อมูลป้อนเข้า `cents` ซึ่งหมายถึงจำนวนเงินเพนนีของสหรัฐฯ โดยใช้เหรียญทั่วไปเหล่านี้
+ให้เขียนฟังก์ชันเพื่อนับว่าจะสามารถทอนเงินได้กี่แบบ โดยฟังก์ชันต้องรับค่าเป็น `cents`
 
 # --hints--
 
-`countCoins` ควรเป็น function.
+`countCoins` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof countCoins === 'function');
 ```
 
-`countCoins(15)` ควร return `6`.
+`countCoins(15)` ต้องคืนค่าเป็น `6`
 
 ```js
 assert.equal(countCoins(15), 6);
 ```
 
-`countCoins(85)` ควร return `163`.
+`countCoins(85)` ต้องคืนค่าเป็น `163`
 
 ```js
 assert.equal(countCoins(85), 163);
 ```
 
-`countCoins(100)` ควร return `242`.
+`countCoins(100)` ต้องคืนค่าเป็น `242`
 
 ```js
 assert.equal(countCoins(100), 242);

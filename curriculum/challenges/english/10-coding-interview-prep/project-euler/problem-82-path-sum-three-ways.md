@@ -10,7 +10,7 @@ dashedName: problem-82-path-sum-three-ways
 
 **Note:** ปัญหา 81 ที่ท้าทายยิ่งขึ้น
 
-ผลรวมของพาธที่น้อยที่สุดในเมทริกซ์ขนาด 5 คูณ 5 ด้านล่าง โดยเริ่มต้นในเซลล์ใดๆ ในคอลัมน์ด้านซ้ายและสิ้นสุดในเซลล์ใดๆ ในคอลัมน์ด้านขวา และมีเพียงการเลื่อนขึ้น ลง และขวาเท่านั้นที่แสดงด้วยสีแดงและตัวหนา ผลรวมเท่ากับ `994`.
+ผลรวมของเส้นทางที่สั้นที่สุดในเมทริกซ์ขนาด 5 คูณ 5 ด้านล่าง โดยเริ่มต้นในเซลล์ใดๆ ในคอลัมน์ด้านซ้ายและสิ้นสุดในเซลล์ใดๆ ในคอลัมน์ด้านขวา และมีเพียงการเลื่อนขึ้น ลง และขวาเท่านั้นที่แสดงด้วยสีแดงและตัวหนา ผลรวมเท่ากับ `994`
 
   $$\begin{pmatrix}
   131 & 673 & \color{red}{234} & \color{red}{103} & \color{red}{18}\\\\
@@ -24,19 +24,19 @@ dashedName: problem-82-path-sum-three-ways
 
 # --hints--
 
-`pathSumThreeWays(testMatrix1)` should return a number.
+`pathSumThreeWays(testMatrix1)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof pathSumThreeWays(_testMatrix1) === 'number');
 ```
 
-`pathSumThreeWays(testMatrix1)` should return `994`.
+`pathSumThreeWays(testMatrix1)` ต้องคืนค่าเป็น `994`
 
 ```js
 assert.strictEqual(pathSumThreeWays(_testMatrix1), 994);
 ```
 
-`pathSumThreeWays(testMatrix2)` should return `260324`.
+`pathSumThreeWays(testMatrix2)` ต้องคืนค่าเป็น `260324`
 
 ```js
 assert.strictEqual(pathSumThreeWays(_testMatrix2), 260324);

@@ -8,7 +8,7 @@ dashedName: problem-76-counting-summations
 
 # --description--
 
-เป็นไปได้ที่จะเขียนห้าเป็นผลรวม ในหกวิธีที่แตกต่างกัน
+เราสามารถเขียนเลขที่บวกกันได้ 5 ได้หกวิธี
 
 <div style='margin-left: 4em;'>
   4 + 1<br>
@@ -19,35 +19,35 @@ dashedName: problem-76-counting-summations
   1 + 1 + 1 + 1 + 1<br><br>
 </div>
 
-สามารถเขียน `n' เป็นผลรวมของจำนวนเต็มบวกอย่างน้อยสองจำนวนได้กี่วิธี
+เราสามารถเขียนเลขที่บวกกันได้ `n` ได้กี่วิธี?
 
 # --hints--
 
-`countingSummations(5)` ควร return number
+`countingSummations(5)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof countingSummations(5) === 'number');
 ```
 
-`countingSummations(5)` ควร return `6`.
+`countingSummations(5)` ต้องคืนค่าเป็น `6`
 
 ```js
 assert.strictEqual(countingSummations(5), 6);
 ```
 
-`countingSummations(20)` ควร return `626`.
+`countingSummations(20)` ต้องคืนค่าเป็น `626`
 
 ```js
 assert.strictEqual(countingSummations(20), 626);
 ```
 
-`countingSummations(50)` ควร return `204225`.
+`countingSummations(50)` ต้องคืนค่าเป็น `204225`
 
 ```js
 assert.strictEqual(countingSummations(50), 204225);
 ```
 
-`countingSummations(100)` ควร return `190569291`.
+`countingSummations(100)` ต้องคืนค่าเป็น `190569291`
 
 ```js
 assert.strictEqual(countingSummations(100), 190569291);

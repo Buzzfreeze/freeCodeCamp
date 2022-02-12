@@ -8,15 +8,21 @@ dashedName: set-up-passport
 
 # --description--
 
-คราวนี้ จะตั้งค่า *Passport* เพื่อให้เราสามารถเริ่มอนุญาตให้ผู้ใช้ลงทะเบียนหรือเข้าสู่ระบบบัญชีได้! นอกจาก Passport แล้ว เราจะใช้ Express-session เพื่อจัดการเซสชัน การใช้มิดเดิลแวร์นี้จะบันทึก ID เซสชันเป็น cookie ในไคลเอนต์ และทำให้เราสามารถเข้าถึงข้อมูลเซสชันโดยใช้ ID นั้นบนเซิร์ฟเวอร์ วิธีนี้ช่วยให้ข้อมูลบัญชีส่วนบุคคลไม่อยู่ใน cookie ที่ลูกค้าใช้เพื่อยืนยันกับเซิร์ฟเวอร์ของเรา ข้อมูลเหล่านั้นได้รับการตรวจสอบสิทธิ์แล้ว และเพียงเก็บ *key* เพื่อเข้าถึงข้อมูลที่จัดเก็บไว้ในเซิร์ฟเวอร์
+ได้เวลาทำให้ผู้ใช้ลงทะเบียนหรือเข้าสู่ระบบบัญชีได้แล้ว โดยเราจะใช้ *Passport* กัน
 
-ในการตั้งค่า Passport สำหรับใช้ใน project จะต้องเพิ่มเป็น dependency ก่อนใน package.json ของคุณ `passport@~0.4.1`
+นอกจาก Passport แล้ว เราจะใช้ Express-session เพื่อจัดการเซสชันด้วย
+การใช้มิดเดิลแวร์นี้จะเก็บ session id เป็น cookie ในฝั่ง client และทำให้เราสามารถเข้าถึงข้อมูลเซสชันโดยใช้ id บนเซิร์ฟเวอร์ได้ 
+วิธีนี้ช่วยให้ข้อมูลบัญชีส่วนบุคคลที่ใช้เพื่อยืนยันการเข้าสู่ระบบ ไม่ถูกเก็บใน cookie แต่ cookie จะเก็บแค่ *key* เพื่อเข้าถึงข้อมูลที่จัดเก็บไว้ในเซิร์ฟเวอร์แทน
 
-นอกจากนี้ เพิ่ม Express-session เป็นการขึ้นต่อกันตอนนี้ด้วย Express-session มีฟีเจอร์ขั้นสูงมากมายที่สามารถใช้ได้ แต่สำหรับตอนนี้ เราจะใช้แค่พื้นฐานเท่านั้น! `express-session@~1.17.1`
+ในการตั้งค่า Passport สำหรับใช้ใน project จะต้องเพิ่มเป็น dependency `passport@~0.4.1` ก่อนใน package.json ของคุณ 
 
-คุณจะต้องตั้งค่าเซสชันทันทีและเริ่มต้น Passport อย่าลืมสร้างตัวแปร 'session' และ 'passport' เพื่อให้ต้องใช้ 'express-session' และ 'passport' ตามลำดับ
+และให้เพิ่ม Express-session เป็น dependency โดยใช้ `express-session@~1.17.1`
+โดย Express-session มีฟีเจอร์ขั้นสูงอีกหลายตัว แต่ตอนนี้เราจะใช้แค่ตัวพื้นฐานกันก่อน 
 
-ในการตั้งค่าแอปด่วนเพื่อใช้เซสชัน เราจะกำหนดตัวเลือกพื้นฐานเพียงไม่กี่ตัว อย่าลืมเพิ่ม 'SESSION_SECRET' ลงในไฟล์ .env และกำหนดค่าแบบสุ่ม ใช้สำหรับคำนวณแฮชที่ใช้ในการเข้ารหัส cookie!
+ตอนนี้คุณจะต้องตั้งค่าเซสชัน และใช้ Passport ให้สร้างตัวแปร 'session' และ 'passport' โดยใช้การ `require()` 'express-session' และ 'passport' ตามลำดับ
+
+ในการตั้งค่า Express เพื่อใช้เซสชัน เราจะตั้งค่าข้อมูลแค่ไม่กี่ตัว 
+อย่าลืมเพิ่ม 'SESSION_SECRET' ลงในไฟล์ .env และกำหนดค่าให้ตัวแปรนี้แบบสุ่มด้วย เราจะใช้ตัวแปรนี้คำนวณ hash ที่ใช้ในการเข้ารหัส cookie
 
 ```js
 app.use(session({
@@ -27,14 +33,13 @@ app.use(session({
 }));
 ```
 
-As well you can go ahead and tell your express app to **use** 'passport.initialize()' and 'passport.session()'. (For example, `app.use(passport.initialize());`)
-เรายังสามารถบอก express app ว่า **use** 'passport.initialize()' และ 'passport.session()' (ตัวอย่างเช่น `app.use(passport.initialize());`)
+และให้ทำการเรียกใช้ `app.use(passport.initialize())` และ `app.use(passport.session())`
 
-ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [here](https://gist.github.com/camperbot/4068a7662a2f9f5d5011074397d6788c).
+ให้ส่ง URL ของเว็บคุณมาเมื่อทำเสร็จแล้ว ถ้าพบข้อผิดพลาด ให้ลองดูตัวอย่าง project ที่เสร็จสิ้นแล้วได้ [ที่นี่](https://gist.github.com/camperbot/4068a7662a2f9f5d5011074397d6788c)
 
 # --hints--
 
-Passport และ Express-session ควรเป็น dependency
+ต้องกำหนด Passport และ Express-session เป็น dependency
 
 ```js
 (getUserInput) =>
@@ -58,7 +63,7 @@ Passport และ Express-session ควรเป็น dependency
   );
 ```
 
-จำเป็นต้องมี dependency อย่างถูกต้อง 
+ต้องทำการ `require()` dependency อย่างถูกต้อง 
 
 ```js
 (getUserInput) =>
@@ -81,7 +86,7 @@ Passport และ Express-session ควรเป็น dependency
   );
 ```
 
-Express app ควรใช้ dependency ใหม่
+ต้องทำการเรียกใช้ `app.use()` passport ตามเงื่อนไขที่กำหนด
 
 ```js
 (getUserInput) =>
@@ -104,7 +109,7 @@ Express app ควรใช้ dependency ใหม่
   );
 ```
 
-ควรตั้งค่าความลับของเซสชันและเซสชันอย่างถูกต้อง
+ต้องตั้งค่า session secret กับตัวแปร SESSION_SECRET ให้ถูกต้อง
 
 ```js
 (getUserInput) =>

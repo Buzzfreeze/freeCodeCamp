@@ -8,25 +8,23 @@ dashedName: general-fizzbuzz
 
 # --description--
 
-เขียน [FizzBuzz](https://rosettacode.org/wiki/FizzBuzz) เวอร์ชันทั่วไปที่ใช้ได้กับรายการปัจจัยต่างๆ ควบคู่ไปกับคำพูด
+ให้เขียน [FizzBuzz](https://rosettacode.org/wiki/FizzBuzz) ที่ทำงานได้กับเงื่อนไขทุกรูปแบบ
 
-นี่เป็นการใช้งาน "fizzbuzz" โดยพื้นฐานแล้วซึ่งมีการกำหนดกฎของเกมให้กับผู้ใช้ สร้างฟังก์ชันเพื่อใช้สิ่งนี้ ฟังก์ชันควรใช้พารามิเตอร์สองตัว
+โดยฟังก์ชันนี้จะรับพารามิเตอร์แรกเป็นเงื่อนไขแบบนี้ `[ [3, "Fizz"] , [5, "Buzz"] ]`
 
-อันดับแรกจะเป็นarrayที่มีกฎ FizzBuzz ตัวอย่างเช่น: `[ [3, "Fizz"] , [5, "Buzz"] ]`
+ซึ่งหมายความว่า ถ้าเลขหาร 3 ลงตัว ให้คืนค่าเป็นสตริง `Fizz` ถ้าหาร 5 ลงตัว ให้คืนค่าเป็น `Buzz` ถ้าหารทั้ง 3 และ 5 ลงตัว ให้คืนค่าเป็น `FizzBuzz`
 
-สิ่งนี้บ่งชี้ว่า ควรพิมพ์ "Fizz" หากตัวเลขเป็นทวีคูณของ 3 และ "Buzz" หากเป็นพหุคูณของ 5 หากเป็นพหุคูณของทั้งสอง stringควรต่อกันตามลำดับที่ระบุในarray ในกรณีนี้ 'FizzBuzz' หากตัวเลขเป็นทวีคูณของ 3 และ 5
-
-พารามิเตอร์ที่สองคือตัวเลขที่ฟังก์ชันควรreturn stringตามที่ระบุไว้ข้างต้น
+และฟังก์ชันจะรับพารามิเตอร์ที่สองเป็นตัวเลขที่จะนำไปเข้าเงื่อนไข
 
 # --hints--
 
-`genFizzBuzz` ควรเป็น function.
+`genFizzBuzz` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof genFizzBuzz == 'function');
 ```
 
-`genFizzBuzz([[3, "Fizz"],[5, "Buzz"]], 6)` ควร return string.
+`genFizzBuzz([[3, "Fizz"],[5, "Buzz"]], 6)` ต้องคืนค่าเป็นสตริง
 
 ```js
 assert(
@@ -40,7 +38,7 @@ assert(
 );
 ```
 
-`genFizzBuzz([[3, "Fizz"],[5, "Buzz"]], 6)` ควร return `"Fizz"`.
+`genFizzBuzz([[3, "Fizz"],[5, "Buzz"]], 6)` ต้องคืนค่าเป็น `"Fizz"`
 
 ```js
 assert.equal(
@@ -55,7 +53,7 @@ assert.equal(
 );
 ```
 
-`genFizzBuzz([[3, "Fizz"],[5, "Buzz"]], 10)` ควร return `"Buzz"`.
+`genFizzBuzz([[3, "Fizz"],[5, "Buzz"]], 10)` ต้องคืนค่าเป็น `"Buzz"`
 
 ```js
 assert.equal(
@@ -70,7 +68,7 @@ assert.equal(
 );
 ```
 
-`genFizzBuzz([[3, "Buzz"],[5, "Fizz"]], 12)` ควร return `"Buzz"`.
+`genFizzBuzz([[3, "Buzz"],[5, "Fizz"]], 12)` ต้องคืนค่าเป็น `"Buzz"`
 
 ```js
 assert.equal(
@@ -85,7 +83,7 @@ assert.equal(
 );
 ```
 
-`genFizzBuzz([[3, "Buzz"],[5, "Fizz"]], 13)` ควร return `"13"`.
+`genFizzBuzz([[3, "Buzz"],[5, "Fizz"]], 13)` ต้องคืนค่าเป็น `"13"`
 
 ```js
 assert.equal(
@@ -100,7 +98,7 @@ assert.equal(
 );
 ```
 
-`genFizzBuzz([[3, "Buzz"],[5, "Fizz"]], 15)` ควร return `"BuzzFizz"`.
+`genFizzBuzz([[3, "Buzz"],[5, "Fizz"]], 15)` ต้องคืนค่าเป็น `"BuzzFizz"`
 
 ```js
 assert.equal(
@@ -115,7 +113,7 @@ assert.equal(
 );
 ```
 
-`genFizzBuzz([[3, "Fizz"],[5, "Buzz"]], 15)` ควร return `"FizzBuzz"`.
+`genFizzBuzz([[3, "Fizz"],[5, "Buzz"]], 15)` ต้องคืนค่าเป็น `"FizzBuzz"`
 
 ```js
 assert.equal(
@@ -130,7 +128,7 @@ assert.equal(
 );
 ```
 
-`genFizzBuzz([[3, "Fizz"],[5, "Buzz"],[7, "Baxx"]], 105)` ควร return `"FizzBuzzBaxx"`.
+`genFizzBuzz([[3, "Fizz"],[5, "Buzz"],[7, "Baxx"]], 105)` ต้องคืนค่าเป็น `"FizzBuzzBaxx"`
 
 ```js
 assert.equal(

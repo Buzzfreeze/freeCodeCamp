@@ -8,19 +8,19 @@ dashedName: problem-215-crack-free-walls
 
 # --description--
 
-พิจารณาปัญหาการสร้างกำแพงจากอิฐ 2×1 และ 3×1 (ขนาดแนวนอน×แนวตั้ง) เพื่อให้มีความแข็งแรงมากขึ้น ช่องว่างระหว่างอิฐในแนวนอนจะไม่เรียงเป็นชั้นๆ แตก".
+พิจารณาปัญหาการสร้างกำแพงจากอิฐขนาด 2×1 และ 3×1 (กว้าง×สูง) โดยการสร้างกำแพงให้แข็งแรง จะต้องทำให้รอยต่อในแนวตั้งไม่ต่อกัน
 
-ตัวอย่างเช่น ผนังขนาด 9×3 ต่อไปนี้ไม่ยอมรับเนื่องจากรอยแตกที่ทำงานเป็นสีแดง:
+เช่น ผนังขนาด 9×3 นี้จะไม่แข็งแรงเพราะมีรอยต่อสีแดง:
 
 <img class="img-responsive center-block" alt="9x3 wall with one lined up gap between horizontally-adjacent bricks" src="https://cdn.freecodecamp.org/curriculum/project-euler/crack-free-walls.gif" style="background-color: white; padding: 10px;">
 
-มีแปดวิธีในการสร้างกำแพง 9×3 ที่ไม่มีการแตกร้าว เขียนเป็น $W(9,3) = 8$
+มีแปดวิธีในการสร้างกำแพง 9×3 ที่ไม่มีรอยต่อที่ไม่แข็งแรง โดยเขียนเป็น $W(9,3) = 8$
 
-คำนวณ $W(32,10)$
+ให้หาค่าของ $W(32,10)$
 
 # --hints--
 
-`crackFreeWalls()` ควร return `806844323190414`.
+`crackFreeWalls()` ต้องคืนค่าเป็น `806844323190414`
 
 ```js
 assert.strictEqual(crackFreeWalls(), 806844323190414);

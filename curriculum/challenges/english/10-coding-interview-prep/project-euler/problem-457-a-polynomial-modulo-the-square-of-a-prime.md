@@ -8,19 +8,19 @@ dashedName: problem-457-a-polynomial-modulo-the-square-of-a-prime
 
 # --description--
 
-ให้ $f(n) = n^2 - 3n - 1$.
+ให้ $f(n) = n^2 - 3n - 1$
 
-ให้ $p$ เป็น prime.
+ให้ $p$ เป็นจำนวนเฉพาะ
 
 ให้ $R(p)$ เป็นจำนวนเต็มบวกที่เล็กที่สุด $n$ โดยที่ $f(n)\bmod p^2 = 0$ ถ้าจำนวนเต็มดังกล่าว $n$ มีอยู่ มิฉะนั้น $R(p) = 0$
 
 ให้ $SR(L)$ เป็น $\sum R(p)$ สำหรับจำนวนเฉพาะทั้งหมดไม่เกิน $L$
 
-หา $SR({10}^7)$.
+ให้หา $SR({10}^7)$
 
 # --hints--
 
-`polynomialModuloSquareOfPrime()` ควร return `2647787126797397000`.
+`polynomialModuloSquareOfPrime()` ต้องคืนค่าเป็น `2647787126797397000`
 
 ```js
 assert.strictEqual(polynomialModuloSquareOfPrime(), 2647787126797397000);

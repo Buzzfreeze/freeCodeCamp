@@ -8,7 +8,7 @@ dashedName: problem-92-square-digit-chains
 
 # --description--
 
-ห่วงโซ่จำนวนถูกสร้างขึ้นโดยการเพิ่มกำลังสองของหลักอย่างต่อเนื่องในตัวเลขเพื่อสร้างตัวเลขใหม่จนกว่าจะมีคนเห็นมาก่อน
+ห่วงโซ่จำนวนถูกสร้างขึ้น โดยการเพิ่มกำลังสองของหลักอย่างต่อเนื่องในตัวเลข เพื่อสร้างตัวเลขใหม่ จนกว่าจะเปิดตัวเลขที่เคยเกิดขึ้นแล้ว
 
 เช่น
 
@@ -17,37 +17,37 @@ $$\begin{align}
   & 85 → \boldsymbol{89} → 145 → 42 → 20 → 4 → 16 → 37 → 58 → \boldsymbol{89}\\\\
 \end{align}$$
 
-ดังนั้นโซ่ใด ๆ ที่มาถึง 1 หรือ 89 จะติดอยู่ในวงที่ไม่มีที่สิ้นสุด สิ่งที่น่าทึ่งที่สุดคือทุก ๆ หมายเลขเริ่มต้นจะถึง 1 หรือ 89 ในที่สุด
+ดังนั้นห่วงโซ่ใดๆที่มาถึง 1 หรือ 89 จะติดอยู่ในวงที่ไม่มีที่สิ้นสุด สิ่งที่น่าทึ่งที่สุดคือทุกๆหมายเลขจะถึง 1 หรือ 89 ในที่สุด
 
-จำนวนเริ่มต้นที่ต่ำกว่า`limit` ถึง 89 เป็นเท่าไหร่
+จำนวนเริ่มต้นที่ต่ำกว่า `limit` ถึง 89 เป็นเท่าไหร่
 
 # --hints--
 
-`squareDigitChains(100)` ควร return number.
+`squareDigitChains(100)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof squareDigitChains(100) === 'number');
 ```
 
-`squareDigitChains(100)` ควร return `80`.
+`squareDigitChains(100)` ต้องคืนค่าเป็น `80`
 
 ```js
 assert.strictEqual(squareDigitChains(100), 80);
 ```
 
-`squareDigitChains(1000)` ควร return `857`.
+`squareDigitChains(1000)` ต้องคืนค่าเป็น `857`
 
 ```js
 assert.strictEqual(squareDigitChains(1000), 857);
 ```
 
-`squareDigitChains(100000)` ควร return `85623`.
+`squareDigitChains(100000)` ต้องคืนค่าเป็น `85623`
 
 ```js
 assert.strictEqual(squareDigitChains(100000), 85623);
 ```
 
-`squareDigitChains(10000000)` ควร return `8581146`.
+`squareDigitChains(10000000)` ต้องคืนค่าเป็น `8581146`
 
 ```js
 assert.strictEqual(squareDigitChains(10000000), 8581146);

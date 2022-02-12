@@ -7,37 +7,41 @@ dashedName: simulate-actions-using-a-headless-browser
 
 # --description--
 
-project นี้สร้างขึ้นจาก project เริ่มต้นต่อไปนี้บน [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone แบบมาจาก [GitHub](https://github.com) /freeCodeCamp/boilerplate-mochachai/).
+project นี้สร้างขึ้นจาก [Replit ตัวนี้](https://replit.com/github/freeCodeCamp/boilerplate-mochachai) หรือ clone มาจาก [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-mochachai/)
 
-ใน challenges ครั้งต่อไป ผู้เรียนจะต้องจำลองการโต้ตอบของคน กับหน้าเว็บโดยใช้ headless browser
+ในแบบทดสอบต่อไป คุณจะต้องจำลองการที่คนใช้งานหน้าเว็บ โดยใช้ headless browser
 
-headless browser คือเว็บเบราว์เซอร์ที่ไม่มี GUI สามารถแสดงผลและแปลง HTML, CSS และ JavaScript ได้เช่นเดียวกับเบราว์เซอร์ทั่วไป ทำให้มีประโยชน์อย่างยิ่งสำหรับการทดสอบหน้าเว็บ
+headless browser คือเว็บเบราว์เซอร์ที่ไม่มี GUI แต่สามารถประมวลผล HTML, CSS และ JavaScript ได้เหมือนกับเบราว์เซอร์ทั่วไป ทำให้มีประโยชน์ในการใช้ทดสอบหน้าเว็บ
 
-สำหรับ challenge ต่อไปนี้ ผู้เรียนจะต้องใช้ Zombie.js ซึ่งเป็น headless browser ที่มีน้ำหนักเบาซึ่งไม่ต้องอาศัยไบนารีเพิ่มเติมในการติดตั้ง ฟีเจอร์นี้ทำให้ใช้งานได้ในสภาพแวดล้อมที่จำกัด เช่น Replit แต่มีตัวเลือกheadless browser อื่น ๆ ที่มีประสิทธิภาพมากกว่า
+ในแบบฝึกหัดนี้ คุณจะต้องใช้ Zombie.js ซึ่งเป็น headless browser ที่ไม่หนักเครื่อง และใช้ได้โดยไม่ต้องติดตั้งอะไรเพิ่มเติม 
+ฟีเจอร์นี้ทำให้คุณใช้ Zombie.js ได้แค่บางสภาพแวดล้อม เช่น Replit 
+แต่ว่าก็มี headless browser ตัวอื่น ๆ ที่มีประสิทธิภาพมากกว่านี้อยู่เหมือนกัน
 
-Mocha อนุญาตให้เรียกใช้ code ก่อนที่จะทำการทดสอบจริง สิ่งนี้มีประโยชน์ในการทำสิ่งต่างๆ เช่น เพิ่มรายการลงในฐานข้อมูล ซึ่งจะใช้ในการทดสอบที่เหลือ
+ถ้าใช้ Mocha เราจะสามารถรันโค้ด ก่อนที่จะทำการทดสอบได้ด้วย 
+การรันโค้ดก่อนทดสอบจะมีประโยชน์หลายอย่าง เช่น การเพิ่มข้อมูลลงในฐานข้อมูล ก่อนที่จะเอาข้อมูลนั้นไปใช้ในการทดสอบ
 
-เมื่อใช้ headless browserว ก่อนทำการทดสอบ จะต้อง **ไปที่** หน้าที่จะทดสอบ
+เมื่อใช้ headless browser ก่อนทำการทดสอบจะต้อง**ไปที่**หน้าที่จะทดสอบ
 
-hook `suiteSetup` ทำงานเพียงครั้งเดียวที่จุดเริ่มต้นของชุดทดสอบ
+hook `suiteSetup` จะทำงานแค่ครั้งเดียวที่จุดเริ่มต้นของ test suite
 
-มี hook ประเภทอื่นๆ อีกหลายประเภทที่สามารถรันโค้ดก่อนการทดสอบแต่ละครั้ง หลังการทดสอบแต่ละครั้ง หรือเมื่อสิ้นสุดชุดการทดสอบ ดูเอกสาร Mocha สำหรับข้อมูลเพิ่มเติม 
+มี hook ประเภทอื่นๆ อีกหลายประเภท ที่สามารถรันโค้ดก่อนและหลังการทดสอบแต่ละครั้ง หรือเมื่อจบแต่ละ test suite ได้ 
+ให้ดู docs ของ Mocha เพื่ออ่านรายละเอียด 
 
 # --instructions--
 
-ภายใน "tests/2_functional-tests.js" หลังจากประกาศ `Browser` ให้เพิ่ม URL โปรเจ็กต์ของผู้เรียนไปที่ property `site` ของตัวแปร: 
+ในไฟล์ `tests/2_functional-tests.js` หลังจากประกาศ `Browser` ให้เพิ่ม URL โปรเจ็กต์ของคุณไปที่ property `site` ของตัวแปร: 
 
 ```js
-Browser.site = 'https://boilerplate-mochachai.your-username.repl.co'; // Your URL here
+Browser.site = 'https://boilerplate-mochachai.your-username.repl.co'; // ใส่ URL ของคุณที่นี่
 ```
 
-จากนั้นที่ระดับ root ของชุด `'Functional Tests with Zombie.js'`  ให้สร้างอินสแตนซ์ใหม่ของ object `Browser` ด้วย code ต่อไปนี้:
+จากนั้นที่ชั้นนอกสุดของ suite ที่ชื่อ `'Functional Tests with Zombie.js'` ให้สร้าง instance ใหม่ของ object `Browser` ด้วยโค้ดด้านล่างนี้:
 
 ```js
 const browser = new Browser();
 ```
 
-และใช้ hook  "suiteSetup" เพื่อกำหนดเส้นทาง route `browser` ไปยังเส้นทาง `/`ด้วย code ต่อไปนี้: 
+และใช้ hook `suiteSetup` เพื่อกำหนด route ของ `browser` ไปยัง `/` ด้วยโค้ดด้านล่างนี้: 
 
 ```js
 suiteSetup(function(done) {
@@ -47,7 +51,7 @@ suiteSetup(function(done) {
 
 # --hints--
 
-การทดสอบทั้งหมดควรผ่าน 
+test ทั้งหมดต้องผ่าน
 
 ```js
 (getUserInput) =>

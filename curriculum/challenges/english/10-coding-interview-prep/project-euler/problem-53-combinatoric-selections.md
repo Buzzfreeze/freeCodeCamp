@@ -8,45 +8,45 @@ dashedName: problem-53-combinatoric-selections
 
 # --description--
 
-มี 10 วิธีจากการเลือก 3 ใน 5 ของ 12345:
+เราสามารถเลือกเลข 3 เลขออกมาจาก 5 เลขนี้ 12345 ได้สิบวิธี:
 
 <div style='text-align: center;'>123, 124, 125, 134, 135, 145, 234, 235, 245, and 345</div>
 
-ใน combinatorics เราใช้ notation, $\\displaystyle \\binom 5 3 = 10$
+ใน combinatoric เราใช้ $\\displaystyle \\binom 5 3 = 10$
 
-โดยทั่วไปใช้ $\\displaystyle \\binom n r = \\dfrac{n!}{r!(n-r)!}$, where $r \\le n$, $n! = n \\times (n-1) \\times ... \\times 3 \\times 2 \\times 1$, และ $0! = 1$.
+โดยทั่วไปใช้ $\\displaystyle \\binom n r = \\dfrac{n!}{r!(n-r)!}$, เมื่อ $r \\le n$, $n! = n \\times (n-1) \\times ... \\times 3 \\times 2 \\times 1$, และ $0! = 1$
 
-จะไม่ถึง $n = 23$ ที่มีค่าเกิน one-million: $\\displaystyle \\binom {23} {10} = 1144066$.
+โดยค่าจะเริ่มมากกว่าหนึ่งล้านเมื่อ $n = 23$ : $\\displaystyle \\binom {23} {10} = 1144066$.
 
-มีกี่ค่าที่ $\\displaystyle \\binom n r$ for $1 \\le n \\le 100$ มากกว่า one-million
+มีกี่ค่าที่ $\\displaystyle \\binom n r$ for $1 \\le n \\le 100$ มากกว่าหนึ่งล้าน
 
 # --hints--
 
-`combinatoricSelections(1000)` ควร return number.
+`combinatoricSelections(1000)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof combinatoricSelections(1000) === 'number');
 ```
 
-`combinatoricSelections(1000)` ควร return 4626.
+`combinatoricSelections(1000)` ต้องคืนค่าเป็น 4626
 
 ```js
 assert.strictEqual(combinatoricSelections(1000), 4626);
 ```
 
-`combinatoricSelections(10000)` ควร return 4431.
+`combinatoricSelections(10000)` ต้องคืนค่าเป็น 4431
 
 ```js
 assert.strictEqual(combinatoricSelections(10000), 4431);
 ```
 
-`combinatoricSelections(100000)` ควร return 4255.
+`combinatoricSelections(100000)` ต้องคืนค่าเป็น 4255
 
 ```js
 assert.strictEqual(combinatoricSelections(100000), 4255);
 ```
 
-`combinatoricSelections(1000000)` ควร return 4075.
+`combinatoricSelections(1000000)` ต้องคืนค่าเป็น 4075
 
 ```js
 assert.strictEqual(combinatoricSelections(1000000), 4075);

@@ -14,7 +14,7 @@ dashedName: developing-an-nmap-scanner-part-1
 
 ## --text--
 
-ข้อใดคือคำสั่งที่ถูกต้องเพื่อติดตั้ง Pythin เวอร์ชัน 3 ของ `python-nmap` library
+ข้อใดคือคำสั่งที่ใช้ติดตั้ง library `python-nmap` ของ Python 3
 
 ## --answers--
 

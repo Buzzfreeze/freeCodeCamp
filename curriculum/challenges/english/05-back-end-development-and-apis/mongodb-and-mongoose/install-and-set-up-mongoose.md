@@ -8,21 +8,24 @@ dashedName: install-and-set-up-mongoose
 
 # --description--
 
-การทำงานกับโจทย์ท้าทายเหล่านี้ คุณต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งต่อไปนี้:
+ให้เลือกวิธีทำแบบฝึกหัดในบทเรียนนี้ จากวิธีด้านล่างนี้:
 
-- เลียนแบบเว็บไซต์ [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-mongomongoose/) ในการทำโปรเจค โดยทำให้เสร็จทีละส่วน
-- ใช้เว็บไซต์ [Replit starter project ของพวกเรา](https://replit.com/github/freeCodeCamp/boilerplate-mongomongoose) ในการทำโปรเจคให้เสร็จสมบูรณ์
-- ใช้ตัวสร้างไซต์ที่คุณเลือก ทำโปรเจคให้เสร็จสมบูรณ์ และอย่าลืมรวมไฟล์ทั้งหมดจาก GitHub repo ของคุณด้วย
+- ให้ Clone repoisitory จาก [GitHub](https://github.com/freeCodeCamp/boilerplate-mongomongoose/) มา และทำแบบทดสอบบนเครื่องของคุณเอง
+- สร้างจากโปรเจกต์ของเราในเว็บไซต์ [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mongomongoose)
+- ใช้เครื่องมือสร้างเว็บอื่นๆ และอย่าลืมเก็บไฟล์ไว้ใน GitHub repo ของคุณด้วย
 
-เมื่อคุณทำเสร็จแล้ว ตรวจสอบให้แน่ใจด้วยว่า ไฟล์โปรเจคของคุณอยู่ในสถานะที่ทุกคนสามารถมองเห็นได้(public) หลังจากนั้นส่งลิงก์ URL ไว้ใน `Solution Link` 
+เมื่อคุณทำเสร็จแล้ว ให้อัปโหลดโปรเจกต์ของคุณขึ้นโฮสต์ และเปิดเป็น public จากนั้นให้ส่งลิงก์เข้าไปใน `Link คำตอบ`
 
-ในโจทย์นี้ คุณควรมี่จะตั้งค่าให้ MongoDB Atlas เป็นฐานข้อมูลและนำเข้าแพ็คเกจที่จำเป็นเพื่อการเชื่อมต่อ
+ในแบบทดสอบนี้ คุณต้องตั้งค่าให้ MongoDB Atlas เป็นฐานข้อมูล และนำเข้าแพ็คเกจที่จำเป็นสำหรับการเชื่อมต่อกับฐานข้อมูล
 
-ตาม <a href='https://www.freecodecamp.org/news/get-started-with-mongodb-atlas/' rel='noopener noreferrer' target='_blank'>this tutorial</a> เพื่อตั้งค่าฐานข้อมูลบน MongoDB Atlas.
+ให้ทำตาม <a href='https://www.freecodecamp.org/news/get-started-with-mongodb-atlas/' rel='noopener noreferrer' target='_blank'>ตัวอย่างนี้</a> สร้างฐานข้อมูลบน MongoDB Atlas
 
 # --instructions--
 
-เพิ่ม `mongodb@~3.6.0` และ `mongoose@~5.4.0` ลงบนโปรเจค `package.json` หลังจากนั้น ต้องการ mongoose เป็น`mongoose` ใน `myApp.js` เพื่อสร้างไฟล์ `.env` และเพิ่มตัวแปร `MONGO_URI` ลงไป โดยค่าควรเป็น URI ฐานข้อมูลบน MongoDB Atlas ของคุณ อย่าลืมล้อมรอบ URI ด้วยเครื่องหมายคำพูด(') หรือ (") และจำไว้ว่าคุณไม่สามารถใช้ช่องว่างรอบ `=` ในตัวแปรสภาพแวดล้อมได้ ตัวอย่างเช่น `MONGO_URI='VALUE'` เมื่อคุณทำเสร็จแล้ว ให้เชื่อมต่อกับฐานข้อมูลโดยใช้ซินแทคต่อไปนี้:
+ให้เพิ่ม `mongodb@~3.6.0` และ `mongoose@~5.4.0` ลงใน `package.json` และให้เขียน `const mongoose = require("mongoose")` ใน `myApp.js` 
+จากนั้นให้สร้างไฟล์ `.env` และเพิ่มตัวแปร `MONGO_URI` ลงไป โดยค่าของตัวแปรนี้จะต้องเป็น URI ของฐานข้อมูล MongoDB Atlas ของคุณ  
+อย่าลืมครอบ URI ด้วยเครื่องหมายคำพูด (`''` หรือ `""`) และอย่าลืมว่าจะใช้วงเล็บหน้าหรือหลังเครื่องหมาย `=` ในการประกาศ environmental variable ไม่ได้ เช่น `MONGO_URI='VALUE'` 
+เมื่อคุณทำเสร็จแล้ว ให้เชื่อมต่อกับฐานข้อมูลโดยใช้ syntax นี้:
 
 ```js
 mongoose.connect(<Your URI>, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -30,7 +33,7 @@ mongoose.connect(<Your URI>, { useNewUrlParser: true, useUnifiedTopology: true }
 
 # --hints--
 
-"mongodb" dependency ควรอยู่ใน package.json
+ใน package.json ต้องมี dependency ของ "mongodb" 
 
 ```js
 (getUserInput) =>
@@ -45,7 +48,7 @@ mongoose.connect(<Your URI>, { useNewUrlParser: true, useUnifiedTopology: true }
   );
 ```
 
-"mongoose" dependency ควรอยู่ใน package.json
+ใน package.json ต้องมี dependency ของ "mongoose" 
 
 ```js
 (getUserInput) =>
@@ -60,7 +63,7 @@ mongoose.connect(<Your URI>, { useNewUrlParser: true, useUnifiedTopology: true }
   );
 ```
 
-"mongoose" ควรเชื่อมต่อกับฐานข้อมูล
+ต้องใช้ "mongoose" เชื่อมต่อกับฐานข้อมูล
 
 ```js
 (getUserInput) =>

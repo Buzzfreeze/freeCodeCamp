@@ -7,53 +7,54 @@ dashedName: leap-year
 ---
 
 # --description--
-กำหนดว่าปีนั้นเป็นปีอธิกสุรทิน(leap year)ในGregorian calendarหรือไม่
+
+ให้เช็คว่าปีนั้นเป็นปีอธิกสุรทิน (leap year) หรือไม่
 
 # --hints--
 
-`isLeapYear` ควรเป็น function.
+`isLeapYear` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof isLeapYear == 'function');
 ```
 
-`isLeapYear()` ควร return boolean.
+`isLeapYear()` ต้องคืนค่าเป็น boolean
 
 ```js
 assert(typeof isLeapYear(2018) == 'boolean');
 ```
 
-`isLeapYear(2018)` ควร return `false`.
+`isLeapYear(2018)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isLeapYear(2018), false);
 ```
 
-`isLeapYear(2016)` ควร return `true`.
+`isLeapYear(2016)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isLeapYear(2016), true);
 ```
 
-`isLeapYear(2000)` ควร return `true`.
+`isLeapYear(2000)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isLeapYear(2000), true);
 ```
 
-`isLeapYear(1900)` ควร return `false`.
+`isLeapYear(1900)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isLeapYear(1900), false);
 ```
 
-`isLeapYear(1996)` ควร return `true`.
+`isLeapYear(1996)` ต้องคืนค่าเป็น `true`
 
 ```js
 assert.equal(isLeapYear(1996), true);
 ```
 
-`isLeapYear(1800)` ควร return `false`.
+`isLeapYear(1800)` ต้องคืนค่าเป็น `false`
 
 ```js
 assert.equal(isLeapYear(1800), false);

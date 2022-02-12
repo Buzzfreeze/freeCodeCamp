@@ -25,17 +25,17 @@ $$\begin{align}
   & a(2) = \frac{2e − 3}{1!} + \frac{e − 1}{2!} + \frac{1}{3!} + \ldots = \frac{7}{2} e − 6
 \end{align}$$
 
-กับ $e = 2.7182818\ldots$ เป็น Euler's constant.
+กับ $e = 2.7182818\ldots$ เป็น Euler's constant
 
-สามารถแสดงว่า $a(n)$ อยู่ในรูปแบบ $\displaystyle\frac{A(n)e + B(n)}{n!}$ สำหรับจำนวนเต็ม $A(n)$ และ $B(n )$.
+จะแสดง $a(n)$ เป็น $\displaystyle\frac{A(n)e + B(n)}{n!}$ ได้ถ้า $A(n)$ และ $B(n )$ เป็นจำนวนเต็ม
 
-ตัวอย่างเช่น $\displaystyle a(10) = \frac{328161643e − 652694486}{10!}$
+เช่น $\displaystyle a(10) = \frac{328161643e − 652694486}{10!}$
 
-หา $A({10}^9)$ + $B({10}^9)$ แล้วให้คำตอบ $\bmod 77\\,777\\,777$
+ให้หา $A({10}^9)$ + $B({10}^9)$ แล้วตอบโดย $\bmod 77\\,777\\,777$
 
 # --hints--
 
-`eulersNumber()` ควร return `15955822`.
+`eulersNumber()` ต้องคืนค่าเป็น `15955822`
 
 ```js
 assert.strictEqual(eulersNumber(), 15955822);

@@ -8,37 +8,37 @@ dashedName: problem-40-champernownes-constant
 
 # --description--
 
-irrational decimal fraction หาจากการต่อกันของจำนวนที่มีค่าบวก:
+irrational decimal fraction เกิดจากการนำจำนวนเต็มบวกมาต่อกัน:
 
 0.12345678910**1**112131415161718192021...
 
-เห็นว่า 12<sup>th</sup> digit ของเศษส่วนคือ 1.
+จะเห็นว่า เลขหลักที่ 12 ของเศษส่วนคือ 1
 
-ถ้า *d<sub>n</sub>* แสดงถึง *n*<sup>th</sup> digit ของเศษส่วน ให้หาค่าของ
+ถ้า *d<sub>n</sub>* เป็นเลขหลักที่ *n* ของเศษส่วน ให้หาค่าของ
 
 d<sub>1</sub> × d<sub>10</sub> × d<sub>100</sub> × d<sub>1000</sub> × d<sub>10000</sub> × d<sub>100000</sub> × d<sub>1000000</sub>
 
 # --hints--
 
-`champernownesConstant(100)` ควร return number.
+`champernownesConstant(100)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof champernownesConstant(100) === 'number');
 ```
 
-`champernownesConstant(100)` ควร return 5.
+`champernownesConstant(100)` ต้องคืนค่าเป็น 5
 
 ```js
 assert.strictEqual(champernownesConstant(100), 5);
 ```
 
-`champernownesConstant(1000)` ควร return 15.
+`champernownesConstant(1000)` ต้องคืนค่าเป็น 15
 
 ```js
 assert.strictEqual(champernownesConstant(1000), 15);
 ```
 
-`champernownesConstant(1000000)` ควร return 210.
+`champernownesConstant(1000000)` ต้องคืนค่าเป็น 210
 
 ```js
 assert.strictEqual(champernownesConstant(1000000), 210);

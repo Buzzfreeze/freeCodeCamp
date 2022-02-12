@@ -8,11 +8,19 @@ dashedName: serialization-of-a-user-object
 
 # --description--
 
-Serialization และ deserialization เป็นแนวคิดที่สำคัญเกี่ยวกับการรับรองความถูกต้อง การทำให้ object เป็น Serialization หมายถึงการแปลงเนื้อหาให้เป็น *key* ขนาดเล็ก ซึ่งสามารถดีซีเรียลไลซ์ให้เป็น object ดั้งเดิมได้ ช่วยให้เราทราบว่าใครติดต่อกับเซิร์ฟเวอร์ โดยไม่ต้องส่งข้อมูลการรับรองความถูกต้อง เช่น ชื่อผู้ใช้และรหัสผ่าน ในแต่ละคำขอสำหรับหน้าใหม่
+Serialization และ deserialization เป็นสิ่งสำคัญที่ใช้ในการ Authenticate 
 
-ในการตั้งค่าอย่างถูกต้อง เราจำเป็นต้องมีฟังก์ชัน Serialization และ deserialization ใน Passport เราสร้างสิ่งเหล่านี้ด้วย `passport.serializeUser( OURFUNCTION )` และ `passport.deserializeUser( OURFUNCTION )`
+การ serialize object แปลว่าการแปลงข้อมูลให้เป็น *key* ซึ่งจะ deserialize ให้กลับเป็น object เดิมได้ 
+วิธีนี้จะทำให้เรารู้ว่าใครกำลังคุยกับเซิร์ฟเวอร์อยู่ โดยไม่ต้องส่งข้อมูลที่ใช้ Authenticate (เช่น ชื่อผู้ใช้และรหัสผ่าน) ทุกครั้งที่ผู้ใช้เปลี่ยนหน้าหรือส่ง request ใหม่
 
-`serializeUser` ถูกเรียกด้วย 2 อาร์กิวเมนต์ object ผู้ใช้แบบเต็มและการเรียกกลับที่ใช้โดย passport คีย์ที่ไม่ซ้ำเพื่อระบุว่าผู้ใช้รายนั้นควรถูกส่งคืนในการเรียกกลับ คีย์ที่ง่ายที่สุดที่จะใช้เป็น `_id` ของผู้ใช้ใน object ควรไม่ซ้ำกันเนื่องจาก MongoDB สร้าง ในทำนองเดียวกัน `deserializeUser` ถูกเรียกด้วยคีย์นั้นและฟังก์ชันเรียกกลับสำหรับพาสปอร์ตด้วย แต่คราวนี้ เราต้องใช้คีย์นั้นและส่งคืนออบเจ็กต์ผู้ใช้ทั้งหมดไปยังคอลแบ็ก ในการค้นหาคำค้นหาสำหรับ Mongo `_id` คุณจะต้องสร้าง `const ObjectID = require('mongodb').ObjectID;` จากนั้นจึงจะใช้เรียก `new ObjectID(THE_ID)` อย่าลืมเพิ่ม `mongodb@~3.6.0` เป็น dependency สามารถเห็นได้ในตัวอย่างด้านล่าง:
+ในการตั้งค่าให้ถูกต้อง เราจำเป็นต้องมีฟังก์ชัน serialization และ deserialization ใน Passport ซึ่งจะสร้างได้โดยการใช้ `passport.serializeUser( ฟังก์ชันของเรา )` และ `passport.deserializeUser( ฟังก์ชันของเรา )`
+
+การเรียกใช้ฟังก์ชัน `serializeUser` จะต้องส่ง argument ไปสองตัว คือ user object แบบเต็ม และ callback function ที่ passport จะเรียกใช้
+โดย passport จะเรียกใช้ callback function โดยส่ง unique key (ค่าที่ไม่ซ้ำกัน) ที่ใช้ระบุผู้ใช้คนนั้นกลับมา คีย์ที่ใช้ง่ายที่สุดคือ `_id` ของ user object 
+ซึ่งค่านี้จะเป็น unique key เพราะเป็นค่าที่ถูกระบุโดย MongoDB  
+
+โดย `deserializeUser` ก็จะทำงานคล้ายๆกัน โดยจะรับค่าเป็น unique key และ cakkback function ที่ passport จะเรียกใช้ แต่คราวนี้ เราต้องใช้คีย์นั้น และคืนค่าเป็น user object แบบเต็มไปยัง cakkback function 
+ในการค้นหาผู้ใช้ใน Mongo โดยใช้ `_id` คุณจะต้องประกาศ `const ObjectID = require('mongodb').ObjectID;` จากนั้นจึงจะใช้เรียก `new ObjectID(THE_ID)` อย่าลืมเพิ่ม `mongodb@~3.6.0` เป็น dependency ตามตัวอย่างด้านล่าง:
 
 ```js
 passport.serializeUser((user, done) => {
@@ -26,13 +34,14 @@ passport.deserializeUser((id, done) => {
 });
 ```
 
-หมายเหตุ: "deserializeUser" นี้จะทำให้เกิดข้อผิดพลาดจนกว่าเราจะตั้งค่า DB ในขั้นตอนถัดไป ดังนั้นสำหรับตอนนี้ให้แสดงความคิดเห็นเกี่ยวกับบล็อกทั้งหมดและเพียงแค่เรียก`done(null, null)`ในฟังก์ชัน  `deserializeUser` 
+หมายเหตุ: ตอนนี้ "deserializeUser" จะยังมี error อยู่ แต่เราจะไปแก้ error นี้ ในการตั้งค่าฐานข้อมูลในขั้นตอนถัดไป 
+เพราะฉะนั้นในตอนนี้ในฟังก์ชัน  `deserializeUser` ให้ comment โค้ดทั้งหมดและเรียกใช้ `done(null, null)` ไปก่อน
 
-ส่งเพจของผู้เรียน เมื่อคิดว่าทำถูกต้องแล้ว หากพบข้อผิดพลาด สามารถตรวจสอบ project ที่เสร็จสิ้นได้ [here](https://gist.github.com/camperbot/7068a0d09e61ec7424572b366751f048).
+ให้ส่ง URL ของเว็บคุณมาเมื่อทำเสร็จแล้ว ถ้าพบข้อผิดพลาด ให้ลองดูตัวอย่าง project ที่เสร็จสิ้นแล้วได้ [ที่นี่](https://gist.github.com/camperbot/7068a0d09e61ec7424572b366751f048)
 
 # --hints--
 
-ผู้เรียนควรทำ serialize การทำงานของผู้ใช้ถูกต้อง
+ต้องทำการ serialize ผู้ใช้ให้ถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -55,7 +64,7 @@ passport.deserializeUser((id, done) => {
   );
 ```
 
-ผู้เรียนควรทำ deserializeฟังก์ชันของผู้ใช้อย่างถูกต้อง
+ต้องทำการ deserialize ผู้ใช้ให้ถูกต้อง
 
 ```js
 (getUserInput) =>
@@ -78,7 +87,7 @@ passport.deserializeUser((id, done) => {
   );
 ```
 
-MongoDB ควรเป็น dependency
+ต้องมี MongoDB เป็น dependency
 
 ```js
 (getUserInput) =>
@@ -97,7 +106,7 @@ MongoDB ควรเป็น dependency
   );
 ```
 
-จำเป็นต้องมี Mongodb อย่างถูกต้องรวมถึง ObjectId
+ต้อง require Mongodb และ ObjectId อย่างถูกต้อง
 
 ```js
 (getUserInput) =>

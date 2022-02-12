@@ -8,11 +8,17 @@ dashedName: invert-a-binary-tree
 
 # --description--
 
-ที่นี่เราจะสร้างฟังก์ชันเพื่อสลับ binary tree จาก binary tree เราต้องการสร้าง tree ใหม่ที่มีคุรสมบัติเทียบเท่ากับ tree นี้ การเรียกใช้การสำรวจผ่านแบบไม่เรียงลำดับบน tree ที่กลับหัวจะสำรวจ node ในลำดับที่กลับกันเมื่อเปรียบเทียบกับการสำรวจผ่านแบบไม่เรียงลำดับของ tree ดั้งเดิม เขียน method ที่เรียกว่า `invert` บน binary treeของเรา การเรียก method นี้ควรกลับโครงสร้าง tree ปัจจุบัน ตามหลักการแล้วเราต้องการทำสิ่งนี้ในตำแหน่งในเวลาเชิงเส้น นั่นคือเราเข้าหาแต่ละ node เพียงครั้งเดียวและเราปรับเปลี่ยนโครงสร้างต้นไม้ที่มีอยู่ในขณะที่เราเข้าหาโดยไม่ต้องใช้หน่วยความจำเพิ่มเติม ขอให้โชคดี!
+คราวนี้ให้สร้างฟังก์ชันเพื่อกลับข้าง binary tree 
+
+โดยให้ตั้งชื่อ method นี้ว่า `invert` ที่จะทำการกลับข้าง binary tree (กลับซ้าย-ขวา เหมือนส่งกระจก) การเรียกใช้ method นี้จะต้องกลับข้าวโครงสร้าง tree ที่มีอยู่ 
+
+ซึ่งตามหลักการแล้วเราต้องทำให้ฟังก์ชันนี้อ่านค่าแต่ละ node แค่ครั้งเดียว พร้อมๆกับการปรับโครงสร้างไปด้วย โดยไม่ต้องใช้หน่วยความจำเพิ่มเติม 
+
+ขอให้โชคดี!
 
 # --hints--
 
-ควรมีโครงสร้างข้อมูล `BinarySearchTree`
+ต้องมีโครงสร้างข้อมูล `BinarySearchTree`
 
 ```js
 assert(
@@ -26,7 +32,7 @@ assert(
 );
 ```
 
-binary search tree ควรมี method ที่เรียกว่า `invert`
+ใน binary search tree ต้องมี method ชื่อ `invert`
 
 ```js
 assert(
@@ -42,7 +48,7 @@ assert(
 );
 ```
 
-`invert` method ควรกลับโครงสร้างของ tree อย่างถูกต้อง
+method `invert` ต้องกลับข้างโครงสร้างของ tree ให้ถูกต้อง
 
 ```js
 assert(
@@ -70,7 +76,7 @@ assert(
 );
 ```
 
-การกลับ tree ที่ว่างเปล่าควร return `null`
+การกลับข้าง tree ที่ไม่มีข้อมูลอยู่ด้านใน ต้องคืนค่าเป็น `null`
 
 ```js
 assert(
@@ -159,9 +165,9 @@ function Node(value) {
 }
 function BinarySearchTree() {
   this.root = null;
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   
-  // Only change code above this line
+  // แก้ไขโค้เหนือบรรทัดนี้เท่านั้น
 }
 ```
 
@@ -176,7 +182,7 @@ function Node(value) {
 }
 function BinarySearchTree() {
   this.root = null;
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
   this.invert = function(node = this.root) {
     if (node) {
       const temp = node.left;
@@ -187,6 +193,6 @@ function BinarySearchTree() {
     }
     return node;
   }
-    // Only change code above this line
+    // แก้ไขโค้เหนือบรรทัดนี้เท่านั้น
 }
 ```

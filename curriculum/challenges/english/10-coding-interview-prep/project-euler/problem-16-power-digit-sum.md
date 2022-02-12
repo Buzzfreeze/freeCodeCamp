@@ -8,31 +8,31 @@ dashedName: problem-16-power-digit-sum
 
 # --description--
 
-2<sup>15</sup> = 32768 และผลรวมของทุก digit เป็น is 3 + 2 + 7 + 6 + 8 = 26
+2<sup>15</sup> = 32768 จะมีผลรวมของเลขทุกหลักเป็น is 3 + 2 + 7 + 6 + 8 = 26
 
-ผลรวมของทุก digit ของ 2<sup><code>exponent</code></sup> เป็นเท่าไหร่
+ผลรวมของเลขทุกหลักของ 2<sup><code>exponent</code></sup> เป็นเท่าไหร่
 
 # --hints--
 
-`powerDigitSum(15)` ควร return number
+`powerDigitSum(15)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof powerDigitSum(15) === 'number');
 ```
 
-`powerDigitSum(15)` ควร return 26
+`powerDigitSum(15)` ต้องคืนค่าเป็น 26
 
 ```js
 assert.strictEqual(powerDigitSum(15), 26);
 ```
 
-`powerDigitSum(128)` ควร return 166
+`powerDigitSum(128)` ต้องคืนค่าเป็น 166
 
 ```js
 assert.strictEqual(powerDigitSum(128), 166);
 ```
 
-`powerDigitSum(1000)` ควร return 1366
+`powerDigitSum(1000)` ต้องคืนค่าเป็น 1366
 
 ```js
 assert.strictEqual(powerDigitSum(1000), 1366);

@@ -8,21 +8,21 @@ dashedName: problem-49-prime-permutations
 
 # --description--
 
-arithmetic sequence 1487, 4817, 8147 ของแต่ละตัวถูกเพิ่มจาก 3330 มีสองวิธีที่เป็น unusual: (i) แต่ละตัวเป็นค่า prime และ (ii) แต่ละ digit สามารถเป็น permutations ของเลขอื่นได้
+arithmetic sequence 1487, 4817, 8147 จะมีค่าของแต่ละตัวเพิ่มขึ้นครั้งละ 3330 จะมีเรื่องที่แปลกสองอย่างคือ: (1) แต่ละตัวจะเป็นจำนวนเฉพาะ และ (2) แต่ละหลักก็สามารถเป็น permutation ของเลขอื่นได้
 
-ไม่มี arithmetic sequences ที่เกิดจาก 1-, 2-, หรือ 3-digit primes มีคุณสมบัตินี้แต่มี 4-digit เพิ่ม sequence
+ไม่มี arithmetic sequence ของจำนวนเฉพาะ 3 ตัวที่เป็ร 1 2 หรือ 3 หลักที่มีคุณสมบัตินี้ คุณสมบัตินี้มีแค่ใน sequence จำนวนเฉพาะสี่หลักเท่านั้น
 
-12-digit number ที่มีรูปแบบของ concatenating ทั้งหมด 3 terms ใน sequence นี้คืออะไร
+ให้หาว่า sequence แบบนี้อีกชุดหนึ่งในจำนวนเฉพาะสี่หลัก และคืนค่าเป็นเลข 4 หลักสามตัวนั้นเชื่อมต่อกัน
 
 # --hints--
 
-`primePermutations()` ควร return number.
+`primePermutations()` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof primePermutations() === 'number');
 ```
 
-`primePermutations()` ควร return 296962999629.
+`primePermutations()` ต้องคืนค่าเป็น 296962999629
 
 ```js
 assert.strictEqual(primePermutations(), 296962999629);

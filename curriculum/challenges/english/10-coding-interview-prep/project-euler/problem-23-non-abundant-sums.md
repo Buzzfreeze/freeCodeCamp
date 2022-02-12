@@ -8,43 +8,42 @@ dashedName: problem-23-non-abundant-sums
 
 # --description--
 
-perfect number จะมีผลรวมของตัวหารที่มีค่าน้อยกว่าตัวมัน เท่ากับจำนวนตัวมันเอง 
-เช่นผลนวมของเลขที่หารด้วย 28 ลงตัวมี 1 + 2 + 4 + 7 + 14 = 28 ดังนั้น 28 เป็น perfect number
+perfect number จะมีผลรวมของตัวหาร เท่ากับตัวเอง
 
-เมื่อจำนวน `n` มีผลรวมของตัวหารมากกว่า `n` จะเรียกว่า abundant number
+เช่น ผลรวมของตัวหารของ 28 คือ 1 + 2 + 4 + 7 + 14 = 28 ดังนั้น 28 เป็น perfect number
 
-เช่น 12 เป็นเลขน้อยสุดของ abundant number 1 + 2 + 3 + 4 + 6 = 16, จำนวนที่น้อยที่สุดสามารถเป็นผลรวมของ abundant numbers สองตัวคือ 24 
-เราสามารถแสดงค่าที่มากกว่า 28123 สามารถเขียนเป็นผลรวมของ abundant numbers สองตัวได้ อย่าไรก็ตาม upper limit ไม่สามารถถูกลดได้แม้จะทราบค่าที่มากที่สุดและไม่สามารถอธิบายในรูปค่าผลรวมของ abundant numbers ที่น้อยกว่า limit ได้
+ถ้าผลรวมของตัวหารของ `n` มีค่าน้อยกว่า `n` จะเรียกว่า deficient number 
+ถ้าผลรวมของตัวหารของ `n` มีค่ามากกว่า `n` จะเรียกว่า abundant number
 
-หาผลรวมของค่าบวกทุกค่าที่ &lt;= `n` ไม่สามารถเขียนในรูปของ abundant numbers สองจำนวนได้
+ให้หาผลรวมของจำนวนเต็มบวกทุกตัวที่มีค่าน้อยกว่า `n` ที่ไม่ได้มีค่าเป็นผลรวมของ abundant number สองตัว
 
 # --hints--
 
-`sumOfNonAbundantNumbers(10000)` ควร return number.
+`sumOfNonAbundantNumbers(10000)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof sumOfNonAbundantNumbers(10000) === 'number');
 ```
 
-`sumOfNonAbundantNumbers(10000)` ควร return 3731004.
+`sumOfNonAbundantNumbers(10000)` ต้องคืนค่าเป็น 3731004
 
 ```js
 assert(sumOfNonAbundantNumbers(10000) === 3731004);
 ```
 
-`sumOfNonAbundantNumbers(15000)` ควร return 4039939.
+`sumOfNonAbundantNumbers(15000)` ต้องคืนค่าเป็น 4039939
 
 ```js
 assert(sumOfNonAbundantNumbers(15000) === 4039939);
 ```
 
-`sumOfNonAbundantNumbers(20000)` ควร return 4159710.
+`sumOfNonAbundantNumbers(20000)` ต้องคืนค่าเป็น 4159710
 
 ```js
 assert(sumOfNonAbundantNumbers(20000) === 4159710);
 ```
 
-`sumOfNonAbundantNumbers(28123)` ควร return 4179871.
+`sumOfNonAbundantNumbers(28123)` ต้องคืนค่าเป็น 4179871
 
 ```js
 assert(sumOfNonAbundantNumbers(28123) === 4179871);

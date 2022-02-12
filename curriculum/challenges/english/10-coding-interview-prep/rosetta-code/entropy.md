@@ -8,7 +8,7 @@ dashedName: entropy
 
 # --description--
 
-คำนวน Shannon entropy H ของ input string.
+คำนวน Shannon entropy H ของสตริงที่ระบุ
 
 จากตัวแปรสุ่ม $X$ ที่เป็นสตริงของ $N$ "สัญลักษณ์" (อักขระทั้งหมด) ซึ่งประกอบด้วยอักขระที่แตกต่างกัน $n$ (n=2 สำหรับไบนารี) Shannon entropy ของ X ในหน่วยบิต/สัญลักษณ์คือ
 
@@ -18,43 +18,43 @@ $H_2(X) = -\\sum\_{i=1}^n \\frac{count_i}{N} \\log_2 \\left(\\frac{count_i}{N}\\
 
 # --hints--
 
-`entropy` ควรเป็น function.
+`entropy` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof entropy === 'function');
 ```
 
-`entropy("0")` ควร return `0`
+`entropy("0")` ต้องคืนค่าเป็น `0`
 
 ```js
 assert.equal(entropy('0'), 0);
 ```
 
-`entropy("01")` ควร return `1`
+`entropy("01")` ต้องคืนค่าเป็น `1`
 
 ```js
 assert.equal(entropy('01'), 1);
 ```
 
-`entropy("0123")` ควร return `2`
+`entropy("0123")` ต้องคืนค่าเป็น `2`
 
 ```js
 assert.equal(entropy('0123'), 2);
 ```
 
-`entropy("01234567")` ควร return `3`
+`entropy("01234567")` ต้องคืนค่าเป็น `3`
 
 ```js
 assert.equal(entropy('01234567'), 3);
 ```
 
-`entropy("0123456789abcdef")` ควร return `4`
+`entropy("0123456789abcdef")` ต้องคืนค่าเป็น `4`
 
 ```js
 assert.equal(entropy('0123456789abcdef'), 4);
 ```
 
-`entropy("1223334444")` ควร return `1.8464393446710154`
+`entropy("1223334444")` ต้องคืนค่าเป็น `1.8464393446710154`
 
 ```js
 assert.equal(entropy('1223334444'), 1.8464393446710154);

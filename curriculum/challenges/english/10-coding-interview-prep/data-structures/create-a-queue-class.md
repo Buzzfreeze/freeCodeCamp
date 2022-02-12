@@ -8,19 +8,28 @@ dashedName: create-a-queue-class
 
 # --description--
 
-เช่นเดียวกับ stacks  ในส่วนของ queue นั้นก็คือชุดของ element แต่ต่างจาก stacks ตรงที่  queue เป็นไปตามหลักการ FIFO (First-In First-Out) element ที่เพิ่มไปยัง queue จะถูกผลักไปที่ส่วนหางหรือส่วนท้ายของ queue และอนุญาตให้ลบเฉพาะ element ที่อยู่ด้านหน้าของ queue เท่านั้น
+queue ก็จะเหมือนกับ stack โดยเป็นชุดข้อมูลของ element แต่ต่างจาก stack ตรงที่ queue เป็นไปตามหลักการ FIFO (First-In First-Out) 
+โดย element ที่เพิ่มไปยัง queue จะถูกเติมไปที่ส่วนท้ายของ queue และอนุญาตให้ลบเฉพาะ element ที่อยู่ด้านหน้าของ queue เท่านั้น
 
-เราสามารถใช้ array เพื่อเป็น queue ได้ แต่เช่นเดียวกับ stacks เราต้องการจำกัดจำนวนการควบคุมที่เรามีเหนือ queueของเรา
+เราสามารถใช้ array เพื่อเป็น queue ได้ แต่เราต้องการจำกัดการควบคุม queue ของเรา เหมือนกับที่เราทำกับ stack
 
-Method หลักสอง method ของคลาส queue คือ enqueue และ dequeue method โดย enqueue method จะ push element ไปที่ส่วนท้ายของ queue และ dequeue method จะลบและ return element ที่ด้านหน้าของ queue ยังมี method อื่นๆ ที่มีประโยชน์ ได้แก่  front, size และ isEmpty methods
+method หลักสองตัวของคลาส Queue คือ method enqueue และ dequeue \
+โดย method enqueue จะ push element ไปที่ส่วนท้ายของ queue และ method dequeue จะลบและคืนค่า element แรกของ queue ออกมา 
+และยังมี method อื่นๆ ที่มีประโยชน์ คือ method front, size และ isEmpty
 
 # --instructions--
 
-เขียน `enqueue` method ที่ผลัก element ไปที่ส่วนท้ายของ queue `dequeue` method ที่จะลบและ return element ด้านหน้า `front` method ที่ช่วยให้เราเห็น element ด้านหน้า `size` method ที่แสดงความยาวและ `isEmpty` method เพื่อตรวจสอบว่า queue ว่างหรือไม่
+เขียน method ตามเงื่อนไขนี้
+
+1. method `enqueue` ที่เติม element ไปที่ส่วนท้ายของ queue 
+2. method `dequeue` ที่จะลบและคืนค่าเป็น element ด้านหน้าออกมา 
+3. method `front` ที่คืนค่าเป็น element ด้านหน้าออกมา
+4. method `size` ที่แสดงความยาวของ queue และ 
+5. method `isEmpty` เพื่อตรวจสอบว่า queue ว่างหรือไม่
 
 # --hints--
 
-`Queue` class ของคุณควรมี `enqueue` method
+class `Queue` ของคุณควรมี method `enqueue`
 
 ```js
 assert(
@@ -31,7 +40,7 @@ assert(
 );
 ```
 
-`Queue` class ของคุณควรมี `dequeue` method
+class `Queue` ของคุณควรมี method `dequeue`
 
 ```js
 assert(
@@ -42,7 +51,7 @@ assert(
 );
 ```
 
-`Queue` class ของคุณควรมี `front` method
+class `Queue` ของคุณควรมี method `front`
 
 ```js
 assert(
@@ -53,7 +62,7 @@ assert(
 );
 ```
 
-`Queue` class ของคุณควรมี `size` method
+class `Queue` ของคุณควรมี method `size`
 
 ```js
 assert(
@@ -64,7 +73,7 @@ assert(
 );
 ```
 
-`Queue` class ของคุณควรมี `isEmpty` method
+class `Queue` ของคุณควรมี method `isEmpty`
 
 ```js
 assert(
@@ -75,7 +84,7 @@ assert(
 );
 ```
 
-`dequeue` method ควรลบและ return element แรกของ queue
+method `dequeue` ควรลบและคืนค่าเป็น element แรกของ queue
 
 ```js
 assert(
@@ -88,7 +97,7 @@ assert(
 );
 ```
 
-`front` method ควร return ค่าของ element แรกของ queue
+method `front` ควรคืนค่าเป็น element แรกของ queue
 
 ```js
 assert(
@@ -101,7 +110,7 @@ assert(
 );
 ```
 
-`size` method ควร return ความยาวของ queue
+method `size` ควรคืนค่าเป็นความยาวของ queue
 
 ```js
 assert(
@@ -113,7 +122,7 @@ assert(
 );
 ```
 
-`isEmpty` method ควร return `false` ถ้าหากมี element อยู่ใน queue
+method `isEmpty` ควรคืนค่าเป็น `false` ถ้าหากมี element อยู่ใน queue
 
 ```js
 assert(
@@ -135,9 +144,10 @@ function Queue() {
   this.print = function() {
     console.log(collection);
   };
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-  // Only change code above this line
+
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 }
 ```
 

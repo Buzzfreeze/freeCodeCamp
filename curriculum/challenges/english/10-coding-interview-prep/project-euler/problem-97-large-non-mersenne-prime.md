@@ -1,6 +1,6 @@
 ---
 id: 5900f3ce1000cf542c50fee0
-title: 'Problem 97: Large non-Mersenne prime'
+title: "Problem 97: Large non-Mersenne prime"
 challengeType: 5
 forumTopicId: 302214
 dashedName: problem-97-large-non-mersenne-prime
@@ -8,42 +8,44 @@ dashedName: problem-97-large-non-mersenne-prime
 
 # --description--
 
-prime แรกที่รู้จักซึ่งพบว่ามีจำนวนเกินหนึ่งล้านหลักถูกค้นพบในปี 2542 และเป็นMersenne prime ในรูปแบบ $2^{6972593} − 1$; มีตัวเลข 2,098,960 หลักพอดี ต่อมาพบMersenne prime อื่นๆ ในรูปแบบ $2^p − 1$ ซึ่งมีตัวเลขมากกว่า
+จำนวนเฉพาะตัวแรกที่มีจำนวนเกินหนึ่งล้านหลักถูกค้นพบในปี 2542 และเป็น Mersenne prime ในรูปแบบ $2^{6972593} − 1$ ซึ่งมีตัวเลข 2,098,960 หลักพอดี
 
-อย่างไรก็ตาม ในปี 2547 พบไพรม์ที่ไม่ใช่ Mersenne prime จำนวนมากซึ่งมีตัวเลข 2,357,207 หลัก: $28433 × 2^{7830457} + 1$
+ต่อมาได้มีการพบ Mersenne prime ตัวอื่นๆในรูป $2^p − 1$ ซึ่งมีตัวเลขมากกว่ามากเคยค้นพบก่อนหน้านี้
 
-ค้นหาสิบหลักสุดท้ายของจำนวนเฉพาะที่ไม่ใช่ Mersenne prime ในรูปแบบ $multiplier × 2^{power} + 1$
+แต่ในปี 2547 ได้มีการพบจำนวนเฉพาะที่ไม่ใช่ Mersenne prime ซึ่งมีตัวเลขถึง 2,357,207 หลัก: $28433 × 2^{7830457} + 1$
+
+ให้ค้นหาสิบหลักสุดท้ายของจำนวนเฉพาะที่ไม่ใช่ Mersenne prime ในรูปแบบ $multiplier × 2^{power} + 1$
 
 # --hints--
 
-`largeNonMersennePrime(19, 6833086)` ควร return a string.
+`largeNonMersennePrime(19, 6833086)` ต้องคืนค่าเป็นสตริง
 
 ```js
-assert(typeof largeNonMersennePrime(19, 6833086) === 'string');
+assert(typeof largeNonMersennePrime(19, 6833086) === "string");
 ```
 
-`largeNonMersennePrime(19, 6833086)` ควร return the string `3637590017`.
+`largeNonMersennePrime(19, 6833086)` ต้องคืนค่าเป็นสตริง `3637590017`
 
 ```js
-assert.strictEqual(largeNonMersennePrime(19, 6833086), '3637590017');
+assert.strictEqual(largeNonMersennePrime(19, 6833086), "3637590017");
 ```
 
-`largeNonMersennePrime(27, 7046834)` ควร return the string `0130771969`.
+`largeNonMersennePrime(27, 7046834)` ต้องคืนค่าเป็นสตริง `0130771969`
 
 ```js
-assert.strictEqual(largeNonMersennePrime(27, 7046834), '0130771969');
+assert.strictEqual(largeNonMersennePrime(27, 7046834), "0130771969");
 ```
 
-`largeNonMersennePrime(6679881, 6679881)` ควร return the string `4455386113`.
+`largeNonMersennePrime(6679881, 6679881)` ต้องคืนค่าเป็นสตริง `4455386113`
 
 ```js
-assert.strictEqual(largeNonMersennePrime(6679881, 6679881), '4455386113');
+assert.strictEqual(largeNonMersennePrime(6679881, 6679881), "4455386113");
 ```
 
-`largeNonMersennePrime(28433, 7830457)` ควร return the string `8739992577`.
+`largeNonMersennePrime(28433, 7830457)` ต้องคืนค่าเป็นสตริง `8739992577`
 
 ```js
-assert.strictEqual(largeNonMersennePrime(28433, 7830457), '8739992577');
+assert.strictEqual(largeNonMersennePrime(28433, 7830457), "8739992577");
 ```
 
 # --seed--
@@ -52,7 +54,6 @@ assert.strictEqual(largeNonMersennePrime(28433, 7830457), '8739992577');
 
 ```js
 function largeNonMersennePrime(multiplier, power) {
-
   return true;
 }
 
@@ -83,6 +84,6 @@ function largeNonMersennePrime(multiplier, power) {
   );
   const lastDigits = (digitsAfterMultiply + 1) % mod;
 
-  return lastDigits.toString().padStart(10, '0');
+  return lastDigits.toString().padStart(10, "0");
 }
 ```

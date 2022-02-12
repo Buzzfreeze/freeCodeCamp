@@ -8,43 +8,43 @@ dashedName: sorting-algorithmsstrand-sort
 
 # --description--
 
-เขียนฟังก์ชันเพื่อจัดเรียงarrayโดยใช้ [Strand sort](<https://en.wikipedia.org/wiki/Strand sort>) ฟังก์ชันควรส่งคืนarrayที่เรียงลำดับ
+ให้เขียนฟังก์ชันเพื่อเรียง array ของจำนวนเต็ม โดยใช้ [Strand sort](<https://en.wikipedia.org/wiki/Strand sort>) 
 
-นี่เป็นวิธีการจัดเรียงหมายเลขโดยแยกลำดับที่สั้นกว่าของหมายเลขที่จัดเรียงแล้วออกจากรายการที่ไม่มีการเรียงลำดับ
+วิธีการนี้จะทำการแยก array ย่อยที่เรียงลำดับแล้วออกมาจาก array ที่ยังไม่ได้เรียงลำดับ
 
 # --hints--
 
-`strandSort` ควรเป็น function.
+`strandSort` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof strandSort == 'function');
 ```
 
-`strandSort([25, 32, 12, 7, 20])` ควร return array.
+`strandSort([25, 32, 12, 7, 20])` ต้องคืนค่าเป็น array
 
 ```js
 assert(Array.isArray(strandSort([25, 32, 12, 7, 20])));
 ```
 
-`strandSort([25, 32, 12, 7, 20])` ควร return `[7, 12, 20, 25, 32]`.
+`strandSort([25, 32, 12, 7, 20])` ต้องคืนค่าเป็น `[7, 12, 20, 25, 32]`
 
 ```js
 assert.deepEqual(strandSort([25, 32, 12, 7, 20]), [7, 12, 20, 25, 32]);
 ```
 
-`strandSort([38, 45, 35, 8, 13])` ควร return `[8, 13, 35, 38, 45]`.
+`strandSort([38, 45, 35, 8, 13])` ต้องคืนค่าเป็น `[8, 13, 35, 38, 45]`
 
 ```js
 assert.deepEqual(strandSort([38, 45, 35, 8, 13]), [8, 13, 35, 38, 45]);
 ```
 
-`strandSort([43, 36, 20, 34, 24])` ควร return `[20, 24, 34, 36, 43]`.
+`strandSort([43, 36, 20, 34, 24])` ต้องคืนค่าเป็น `[20, 24, 34, 36, 43]`
 
 ```js
 assert.deepEqual(strandSort([43, 36, 20, 34, 24]), [20, 24, 34, 36, 43]);
 ```
 
-`strandSort([12, 33, 26, 18, 1, 16, 38])` ควร return `[1, 12, 16, 18, 26, 33, 38]`.
+`strandSort([12, 33, 26, 18, 1, 16, 38])` ต้องคืนค่าเป็น `[1, 12, 16, 18, 26, 33, 38]`
 
 ```js
 assert.deepEqual(strandSort([12, 33, 26, 18, 1, 16, 38]), [
@@ -58,7 +58,7 @@ assert.deepEqual(strandSort([12, 33, 26, 18, 1, 16, 38]), [
 ]);
 ```
 
-`strandSort([3, 39, 48, 16, 1, 4, 29])` ควร return `[1, 3, 4, 16, 29, 39, 48]`.
+`strandSort([3, 39, 48, 16, 1, 4, 29])` ต้องคืนค่าเป็น `[1, 3, 4, 16, 29, 39, 48]`
 
 ```js
 assert.deepEqual(strandSort([3, 39, 48, 16, 1, 4, 29]), [

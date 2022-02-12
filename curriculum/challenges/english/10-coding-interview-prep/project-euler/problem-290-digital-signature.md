@@ -8,11 +8,11 @@ dashedName: problem-290-digital-signature
 
 # --description--
 
-จำนวนเต็ม $0 ≤ n &lt; {10}^{18}$ มีคุณสมบัติที่ผลรวมของหลักของ $n$ เท่ากับผลรวมของหลัก $137n$ หรือไม่
+จำนวนเต็มกี่ตัวที่ $0 ≤ n &lt; {10}^{18}$ ที่ผลรวมของหลักของ $n$ เท่ากับผลรวมของหลักที่ $137n$
 
 # --hints--
 
-`digitalSignature()` ควร return `20444710234716470`.
+`digitalSignature()` ต้องคืนค่าเป็น `20444710234716470`
 
 ```js
 assert.strictEqual(digitalSignature(), 20444710234716470);

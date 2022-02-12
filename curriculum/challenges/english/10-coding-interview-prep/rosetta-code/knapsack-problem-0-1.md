@@ -8,17 +8,17 @@ dashedName: knapsack-problem0-1
 
 # --description--
 
- 0-1 knapsack problem ถูกกำหนดโดย:
+โจทย์ 0-1 knapsack คือ:
 
-คุณจะได้รับอาร์เรย์ของobjectที่แสดงถึงรายการที่จะใส่ในเป้ objectมีคุณลักษณะ 3 อย่าง ได้แก่ ชื่อ น้ำหนัก และมูลค่า ต้องเลือกรายการเพื่อให้น้ำหนักรวมไม่เกินน้ำหนักสูงสุดและค่าจะถูกขยายให้ใหญ่สุด.
+คุณจะได้รับ array ของ object โดย object จะมี attribute 3 ตัวคือ name weight และ value คุณต้องเลือกข้อมูลใน array ให้ weight รวมไม่เกินค่าที่กำหนด และมี value มากที่สุด
 
 # --instructions--
 
-เขียนฟังก์ชั่นแก้ปัญหาknapsack ฟังก์ชันนี้กำหนดอาร์เรย์ของobjectและน้ำหนักสูงสุดเป็นพารามิเตอร์ ควรส่งคืนมูลค่ารวมสูงสุดที่เป็นไปได้
+ให้เขียนฟังก์ชันที่รับ array ของ object และรับค่าน้ำหนักสูงสุด จากนั้นจึงคำนวณน้ำหนักสูงสุดที่เป็นไปได้จากการเลือก object ใน array
 
 # --hints--
 
-`knapsack([{ name:'map', weight:9, value:150 }, { name:'compass', weight:13, value:35 }, { name:'water', weight:153, value:200 }, { name:'sandwich', weight:50, value:160 }, { name:'glucose', weight:15, value:60 }, { name:'tin', weight:68, value:45 }, { name:'banana', weight:27, value:60 }, { name:'apple', weight:39, value:40 }], 100)` ควร return `405`.
+`knapsack([{ name:'map', weight:9, value:150 }, { name:'compass', weight:13, value:35 }, { name:'water', weight:153, value:200 }, { name:'sandwich', weight:50, value:160 }, { name:'glucose', weight:15, value:60 }, { name:'tin', weight:68, value:45 }, { name:'banana', weight:27, value:60 }, { name:'apple', weight:39, value:40 }], 100)` ต้องคืนค่าเป็น `405`
 
 ```js
 assert.equal(
@@ -39,7 +39,7 @@ assert.equal(
 );
 ```
 
-`knapsack([{ name:'map', weight:9, value:150 }, { name:'compass', weight:13, value:35 }, { name:'water', weight:153, value:200 }, { name:'sandwich', weight:50, value:160 }, { name:'glucose', weight:15, value:60 }, { name:'tin', weight:68, value:45 }, { name:'banana', weight:27, value:60 }, { name:'apple', weight:39, value:40 }], 200)` ควร return `510`.
+`knapsack([{ name:'map', weight:9, value:150 }, { name:'compass', weight:13, value:35 }, { name:'water', weight:153, value:200 }, { name:'sandwich', weight:50, value:160 }, { name:'glucose', weight:15, value:60 }, { name:'tin', weight:68, value:45 }, { name:'banana', weight:27, value:60 }, { name:'apple', weight:39, value:40 }], 200)` ต้องคืนค่าเป็น `510`
 
 ```js
 assert.equal(
@@ -60,7 +60,7 @@ assert.equal(
 );
 ```
 
-`knapsack([{ name:'cheese', weight:23, value:30 }, { name:'beer', weight:52, value:10 }, { name:'suntan cream', weight:11, value:70 }, { name:'camera', weight:32, value:30 }, { name:'T-shirt', weight:24, value:15 }, { name:'trousers', weight:48, value:10 }, { name:'umbrella', weight:73, value:40 }], 100)` ควร return `145`.
+`knapsack([{ name:'cheese', weight:23, value:30 }, { name:'beer', weight:52, value:10 }, { name:'suntan cream', weight:11, value:70 }, { name:'camera', weight:32, value:30 }, { name:'T-shirt', weight:24, value:15 }, { name:'trousers', weight:48, value:10 }, { name:'umbrella', weight:73, value:40 }], 100)` ต้องคืนค่าเป็น `145`
 
 ```js
 assert.equal(
@@ -80,7 +80,7 @@ assert.equal(
 );
 ```
 
-`knapsack([{ name:'cheese', weight:23, value:30 }, { name:'beer', weight:52, value:10 }, { name:'suntan cream', weight:11, value:70 }, { name:'camera', weight:32, value:30 }, { name:'T-shirt', weight:24, value:15 }, { name:'trousers', weight:48, value:10 }, { name:'umbrella', weight:73, value:40 }], 200)` ควร return `185`.
+`knapsack([{ name:'cheese', weight:23, value:30 }, { name:'beer', weight:52, value:10 }, { name:'suntan cream', weight:11, value:70 }, { name:'camera', weight:32, value:30 }, { name:'T-shirt', weight:24, value:15 }, { name:'trousers', weight:48, value:10 }, { name:'umbrella', weight:73, value:40 }], 200)` ต้องคืนค่าเป็น `185`
 
 ```js
 assert.equal(
@@ -100,7 +100,7 @@ assert.equal(
 );
 ```
 
-`knapsack([{ name:'waterproof trousers', weight:42, value:70 }, { name:'waterproof overclothes', weight:43, value:75 }, { name:'note-case', weight:22, value:80 }, { name:'sunglasses', weight:7, value:20 }, { name:'towel', weight:18, value:12 }, { name:'socks', weight:4, value:50 }, { name:'book', weight:30, value:10 }], 100)` ควร return `237`.
+`knapsack([{ name:'waterproof trousers', weight:42, value:70 }, { name:'waterproof overclothes', weight:43, value:75 }, { name:'note-case', weight:22, value:80 }, { name:'sunglasses', weight:7, value:20 }, { name:'towel', weight:18, value:12 }, { name:'socks', weight:4, value:50 }, { name:'book', weight:30, value:10 }], 100)` ต้องคืนค่าเป็น `237`
 
 ```js
 assert.equal(
@@ -120,7 +120,7 @@ assert.equal(
 );
 ```
 
-`knapsack([{ name:'waterproof trousers', weight:42, value:70 }, { name:'waterproof overclothes', weight:43, value:75 }, { name:'note-case', weight:22, value:80 }, { name:'sunglasses', weight:7, value:20 }, { name:'towel', weight:18, value:12 }, { name:'socks', weight:4, value:50 }, { name:'book', weight:30, value:10 }], 200)` ควร return `317`.'
+`knapsack([{ name:'waterproof trousers', weight:42, value:70 }, { name:'waterproof overclothes', weight:43, value:75 }, { name:'note-case', weight:22, value:80 }, { name:'sunglasses', weight:7, value:20 }, { name:'towel', weight:18, value:12 }, { name:'socks', weight:4, value:50 }, { name:'book', weight:30, value:10 }], 200)` ต้องคืนค่าเป็น `317`
 
 ```js
 assert.equal(

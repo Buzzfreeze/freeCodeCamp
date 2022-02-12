@@ -8,11 +8,11 @@ dashedName: problem-107-minimal-network
 
 # --description--
 
-เครือข่ายที่ไม่ระบุทิศทางต่อไปนี้ประกอบด้วยจุดยอดเจ็ดจุดและขอบสิบสองด้านโดยมีน้ำหนักรวม 243
+เครือข่ายที่ไม่ระบุทิศทางต่อไปนี้ประกอบด้วย 7 จุดและ 12 ด้านโดยมีน้ำหนักรวมเป็น 243
 
 <img class="img-responsive center-block" alt="Network with seven vertices and twelve edges" src="https://cdn.freecodecamp.org/curriculum/project-euler/minimal-network-1.png" style="background-color: white; padding: 10px;">
 
-เครือข่ายเดียวกันสามารถแสดงด้วยเมทริกซ์ด้านล่าง
+เครือข่ายนี้จะเปลี่ยนเป็นเมทริกซ์ได้ดังนี้:
 
 |   | A  | B  | C  | D  | E  | F  | G  |
 |---|----|----|----|----|----|----|----|
@@ -24,15 +24,16 @@ dashedName: problem-107-minimal-network
 | F | -  | -  | 31 | 19 | -  | -  | 27 |
 | G | -  | -  | -  | 23 | 11 | 27 | -  |
 
-อย่างไรก็ตาม เป็นไปได้ที่จะเพิ่มประสิทธิภาพเครือข่ายโดยลบขอบบางส่วนออก และยังคงตรวจสอบให้แน่ใจว่าจุดทั้งหมดบนเครือข่ายยังคงเชื่อมต่ออยู่ เครือข่ายที่สามารถประหยัดได้สูงสุดแสดงอยู่ด้านล่าง มีน้ำหนัก 93 เท่ากับประหยัด 243 − 93 = 150 จากเครือข่ายเดิม
+giklเรารถลดน้ำหนักของเครือข่ายได้โดยการลบด้านบางด้านออก แต่ยังให้ทุกจุดเชื่อมต่อกันอยู่ โดยจะทำให้น้ำหนักลดลงเหลือ 93 เท่ากับประหยัดไป 243 − 93 = 150 จากเครือข่ายเดิม
 
 <img class="img-responsive center-block" alt="Network wtih seven vertices and left six edges: AB, BD, CA, DE, DF, EG" src="https://cdn.freecodecamp.org/curriculum/project-euler/minimal-network-2.png" style="background-color: white; padding: 10px;">
 
-การใช้ `network` ซึ่งเป็น2D arrayที่แทนเครือข่ายในรูปแบบเมทริกซ์ ค้นหาการประหยัดสูงสุดที่สามารถทำได้โดยการเอาขอบที่ซ้ำซ้อนออกในขณะที่ทำให้แน่ใจว่าเครือข่ายยังคงเชื่อมต่ออยู่ จุดยอดที่ไม่มีการเชื่อมต่อจะแสดงด้วย `-1`
+ให้ใช้ array 2 มิติ `network` (ที่แทนเครือข่ายในรูปแบบเมทริกซ์) เพื่อลดน้ำหนักของเครือข่าย และหาน้ำหนักที่จะลดได้ โดยให้แต่ละจุดยังเชื่อมต่อกันอยู่  
+จุดที่ไม่มีการเชื่อมต่อจะแสดงเป็น `-1`
 
 # --hints--
 
-`minimalNetwork(testNetwork)` ควร return `259679`.
+`minimalNetwork(testNetwork)` ต้องคืนค่าเป็น `259679`
 
 ```js
 assert.strictEqual(minimalNetwork(_testNetwork), 259679);

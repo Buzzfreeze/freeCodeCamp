@@ -8,33 +8,34 @@ dashedName: problem-51-prime-digit-replacements
 
 # --description--
 
-แทนที่ 1st digit ด้วย 2-digit number \*3, จะได้ค่าที่เป็นไปได้มั้งหมดคือ 13, 23, 43, 53, 73, and 83 และทุกค่าเป็นค่า prime.
+การเปลี่ยนเลขหลักที่ 1 ของเลขสองหลักที่ลงท้ายด้วย 3 จะมีทั้งหมดเก้าค่า ซึ่งหกในเก้าค่านั้นเป็นจำนวนเฉพาะ คือ 13, 23, 43, 53, 73, และ 83
 
-แทนที่ 3rd และ 4th digits ด้วย 56\*\*3 ที่มี digit เดียวกัน จะมี 5-digit number ที่มี primes 7 ตัว ใน generated numbers 10 ตัวและผลลัพธ์คือ: 56003, 56113, 56333, 56443, 56663, 56773, และ 56993. ดังนั้น 56003 เป็นค่าแรกที่มีค่าน้อยที่สุดในกลุ่มนี้
+การแทนที่เลขหลักที่ 3 และหลักที่ 4 ให้เป็นเลขเดียวกัน ในรูป 56\*\*3 จะทำให้เกิดเลขห้าหลัก ที่เป็นจำนวนเฉพาะ 7 ตัว ใน จากทั้งหมด 10 ตัว คือ 56003, 56113, 56333, 56443, 56663, 56773, และ 56993  
+ดังนั้น 56003 เป็นค่าแรกที่มีค่าน้อยที่สุดในกลุ่มนี้
 
-หาค่า prime ที่น้อยที่สุด โดยแทนค่าของตัวเลข (ไม่จำเป็นต้องเป็น adjacent digits) ที่อยู่ digit เดียวกัน `n` prime 
+ให้หาจำนวนเฉพาะที่น้อยที่สุด ที่เป็นส่วนหนึ่งของกลุ่มจำนวนเฉพาะที่จะยังเปลี่ยนจำนวนเฉพาะ อยู่เมื่อเปลี่ยนค่าตัวเลข โดยกลุ่มนั้นต้องมีจำนวน `n` ตัว
 
 # --hints--
 
-`primeDigitReplacements(6)` ควร return number
+`primeDigitReplacements(6)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof primeDigitReplacements(6) === 'number');
 ```
 
-`primeDigitReplacements(6)` ควร return `13`.
+`primeDigitReplacements(6)` ต้องคืนค่าเป็น `13`
 
 ```js
 assert.strictEqual(primeDigitReplacements(6), 13);
 ```
 
-`primeDigitReplacements(7)` ควร return `56003`.
+`primeDigitReplacements(7)` ต้องคืนค่าเป็น `56003`
 
 ```js
 assert.strictEqual(primeDigitReplacements(7), 56003);
 ```
 
-`primeDigitReplacements(8)` ควร return `121313`.
+`primeDigitReplacements(8)` ต้องคืนค่าเป็น `121313`
 
 ```js
 assert.strictEqual(primeDigitReplacements(8), 121313);

@@ -8,7 +8,7 @@ dashedName: problem-46-goldbachs-other-conjecture
 
 # --description--
 
-สมมติว่า Christian Goldbach ทุกๆตัวของเลขคี่เป็น composite number สามารถเขียนเป็นผรวมของ prime และ twice square
+Christian Goldbach ได้เสนอว่า จำนวนประกอบที่เป็นเลขคี่ทุกตัวจะเป็นผลลัพธ์ของจำนวนเฉพาะ บวกกับสองคูณเลขกำลังสอง
 
 <div style='margin-left: 2em;'>
   9 = 7 + 2×1<sup>2</sup><br>
@@ -19,19 +19,19 @@ dashedName: problem-46-goldbachs-other-conjecture
   33 = 31 + 2×1<sup>2</sup>
 </div>
 
-ถ้าเป็น conjecture จะผิด
+แต่คำพูดนี้ผิด
 
-ค่าที่น้อยที่สุดของ odd composite ที่ไม่สามารถเขียนในรูปผลรวมของ prime และ twice square
+จำนวนประกอบที่เป็นเลขคี่ที่น้อยที่สุด ที่ทำให้คำพูดนี้ผิด
 
 # --hints--
 
-`goldbachsOtherConjecture()` ควร return number.
+`goldbachsOtherConjecture()` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof goldbachsOtherConjecture() === 'number');
 ```
 
-`goldbachsOtherConjecture()` ควร return 5777.
+`goldbachsOtherConjecture()` ต้องคืนค่าเป็น 5777
 
 ```js
 assert.strictEqual(goldbachsOtherConjecture(), 5777);

@@ -8,52 +8,53 @@ dashedName: metric-imperial-converter
 
 # --description--
 
-สร้างแอพ full stack JavaScript ซึ่งมีฟังก์ชันการทำงานคล้าย link นี้ : <https://issue-tracker.freecodecamp.rocks/>  ทำงานใน project นี้ เขียน code โดยใช้วิธีใดวิธีหนึ่งต่อไปนี้: 
+ให้สร้างแอปแบบ full stack โดยใช้ JavaScript ที่ทำงานคล้ายกับเว็บไซต์นี้ <https://metric-imperial-converter.freecodecamp.rocks/>  
+ในการทำโปรเจคนี้ คุณจะต้องเขียนโค้ดโดยใช้วิธีใดวิธีหนึ่งดังต่อไปนี้
 
-- ทำการ clone repo [GitHub นี้](https://github.com/freeCodeCamp/boilerplate-project-metricimpconverter/) เพื่อสร้าง project ในนั้นให้สำเร็จ
-- ใช้  project เริ่มต้นจาก [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-metricimpconverter) เพื่อสร้าง project ให้สำเร็จ
-- ใช้ site builder ที่ผู้เรียนเลือก เพื่อสร้าง project ให้เสร็จ อย่าลืมรวมไฟล์ทั้งหมดจาก repo GitHub 
+- ให้ Clone repoisitory จาก [GitHub](https://github.com/freeCodeCamp/boilerplate-project-metricimpconverter/) มา และทำแบบทดสอบบนเครื่องของคุณเอง
+- สร้างจากโปรเจกต์ของเราในเว็บไซต์ [Replit](https://replit.com/github/freeCodeCamp/boilerplate-project-metricimpconverter)
+- ใช้เครื่องมือสร้างเว็บอื่นๆ และอย่าลืมเก็บไฟล์ไว้ใน GitHub repo ของคุณด้วย
 
-เมื่อผู้เรียนทำเสร็จแล้ว ตรวจสอบให้แน่ใจว่าตัว Demo ของ project ของคุณตั้งค่า Host เป็น Public จากนั้นส่ง URL ไปที่ช่อง `Solution Link` หรือส่งลิงก์ไปยัง source code ของ project ผู้เรียน ตรง `GitHub Link`
+เมื่อคุณทำเสร็จแล้ว ให้อัปโหลดโปรเจกต์ของคุณขึ้นโฮสต์ และเปิดเป็น public จากนั้นให้ส่งลิงก์เข้าไปใน `Link คำตอบ` และจะส่งลิงก์ของ source code เข้าไปใน `GitHub Link` ด้วยก็ได้
 
 # --instructions--
 
-- สร้าง conversion logic ที่จำเป็น ใน `/controllers/convertHandler.js`
+- สร้าง logic ที่ใช้แปลงหน่วยใน `/controllers/convertHandler.js`
 - สร้าง route ที่จำเป็นใน `/routes/api.js`
-- Copy ไฟล์ `sample.env` ไปที่ `.env` และตั้งตัวแปรอย่างเหมาะสม 
-- หากต้องการ run code ทดสอบ uncomment ให้ตั้งค่า `NODE_ENV=test` ในไฟล์ ".env"
-- ในการ run code ทดสอบใน console ให้ใช้คำสั่ง `npm run test` หากต้องการเปิด console ของ Replit ให้ใช้คีย์ลัด Ctrl+Shift+P (Cmd หากใช้ Mac) แล้วพิมพ์คำว่า "open shell" 
+- Copy ข้อมูลในไฟล์ `sample.env` ไปวางใน `.env` และตั้งค่าตัวแปรให้เหมาะสม 
+- หากต้องการใช้ test ให้ uncomment `NODE_ENV=test` ในไฟล์ `.env`
+- หากต้องการใช้ test ใน console ให้ใช้คำสั่ง `npm run test` หากต้องการเปิด console ของ Replit ให้ใช้คีย์ลัด Ctrl+Shift+P (Cmd หากใช้ Mac) แล้วพิมพ์คำว่า "open shell" 
 
 เขียนการทดสอบต่อไปนี้ใน `tests/1_unit-tests.js`:
 
-- `convertHandler' ควรอ่านอินพุตจำนวนเต็มอย่างถูกต้อง
-- `convertHandler' ควรอ่านอินพุตตัวเลขทศนิยมอย่างถูกต้อง
-- `convertHandler' ควรอ่านอินพุตที่เป็นเศษส่วนอย่างถูกต้อง
-- `convertHandler' ควรอ่านอินพุตที่เป็นเศษส่วนด้วยทศนิยมอย่างถูกต้อง
-- `convertHandler' ควรส่งคืนค่า Errror ในเศษส่วนสองครั้งอย่างถูกต้อง (เช่น `3/2/3`)
-- `convertHandler' ควรตั้งค่าเริ่มต้นเป็นอินพุตตัวเลขอย่างถูกต้องเป็น '1' เมื่อไม่มีการป้อนตัวเลข
-- `convertHandler' ควรอ่านแต่ละหน่วยอินพุตที่ถูกต้องอย่างถูกต้อง
-- `convertHandler' ควรส่งคืนข้อผิดพลาดอย่างถูกต้องสำหรับหน่วยอินพุตที่ไม่ถูกต้อง
-- `convertHandler' ควรส่งคืนหน่วยส่งคืนที่ถูกต้องสำหรับแต่ละหน่วยอินพุตที่ถูกต้อง
-- `convertHandler' ควรส่งคืนหน่วยสตริงที่สะกดอย่างถูกต้องสำหรับแต่ละหน่วยอินพุตที่ถูกต้อง
-- `convertHandler' ควรแปลง 'gal' เป็น 'L' อย่างถูกต้อง
-- `convertHandler' ควรแปลง 'L' เป็น 'gal' อย่างถูกต้อง
-- `convertHandler' ควรแปลง 'mi' เป็น 'km' อย่างถูกต้อง
-- `convertHandler' ควรแปลง 'km' เป็น 'mi' อย่างถูกต้อง
-- `convertHandler' ควรแปลง `lbs' เป็น 'kg' อย่างถูกต้อง
-- `convertHandler' ควรแปลง 'kg' เป็น 'lbs' อย่างถูกต้อง 
+- `convertHandler` ต้องอ่าน input ที่เป็นจำนวนเต็มอย่างถูกต้อง
+- `convertHandler` ต้องอ่าน input ที่เป็นตัวเลขทศนิยมอย่างถูกต้อง
+- `convertHandler` ต้องอ่าน input ที่เป็นเศษส่วนอย่างถูกต้อง
+- `convertHandler` ต้องอ่าน input ที่เป็นเศษส่วนทศนิยมอย่างถูกต้อง
+- `convertHandler` ต้องคืนค่าเป็น Errror เมื่อใช้เศษส่วนซ้อนกัน (เช่น `3/2/3`)
+- `convertHandler` ต้องตั้งค่า default ของ input ตัวเลขเป็น '1' เมื่อไม่มีการป้อนตัวเลข
+- `convertHandler` ต้องอ่านค่าหน่วยของ input อย่างถูกต้อง
+- `convertHandler` ต้องคืนค่าเป็น Errror เมื่อหน่วยของ input ไม่ถูกต้อง
+- `convertHandler` หน่วยที่คืนค่าออกมาต้องถูกต้อง
+- `convertHandler` หน่วยที่ไม่ใช่ตัวย่อต้องถูกต้อง
+- `convertHandler` ต้องแปลง `gal` เป็น `L` อย่างถูกต้อง
+- `convertHandler` ต้องแปลง `L` เป็น `gal` อย่างถูกต้อง
+- `convertHandler` ต้องแปลง `mi` เป็น `km` อย่างถูกต้อง
+- `convertHandler` ต้องแปลง `km` เป็น `mi` อย่างถูกต้อง
+- `convertHandler` ต้องแปลง `lbs` เป็น `kg` อย่างถูกต้อง
+- `convertHandler` ต้องแปลง `kg` เป็น `lbs` อย่างถูกต้อง 
 
 เขียนการทดสอบต่อไปนี้ใน `tests/2_functional-tests.js`:
 
-- แปลงอินพุตที่ถูกต้อง เช่น `10L`: `GET` request ไปยัง `/api/convert`
-- แปลงอินพุตที่ไม่ถูกต้อง เช่น `32g`: `GET` request ไปยัง `/api/convert`
-- แปลงตัวเลขที่ไม่ถูกต้อง เช่น `3/7.2/4kg`: `GET` request ไปยัง `/api/convert`
-- แปลงตัวเลขและหน่วยที่ไม่ถูกต้อง เช่น `3/7.2/4kilomegagram`: `GET` request ไปยัง `/api/convert`
-- แปลงโดยไม่มีตัวเลข เช่น `kg`: `GET` request ไปยัง `/api/convert` 
+- แปลงอินพุตที่ถูกต้อง เช่น `10L`: ส่ง `GET` request ไปยัง `/api/convert`
+- แปลงอินพุตที่ไม่ถูกต้อง เช่น `32g`: ส่ง `GET` request ไปยัง `/api/convert`
+- แปลงตัวเลขที่ไม่ถูกต้อง เช่น `3/7.2/4kg`: ส่ง `GET` request ไปยัง `/api/convert`
+- แปลงตัวเลขและหน่วยที่ไม่ถูกต้อง เช่น `3/7.2/4kilomegagram`: ส่ง `GET` request ไปยัง `/api/convert`
+- แปลงโดยไม่มีตัวเลข เช่น `kg`: ส่ง `GET` request ไปยัง `/api/convert` 
 
 # --hints--
 
-ผู้เรียนควรจัดทำ project ของผู้เรียนเอง โดยไม่ใช้ URL ตัวอย่าง 
+ให้ส่งลิงก์โปรเจกต์ของคุณ ไม่ใช่ URL ตัวอย่างของเรา
 
 ```js
 getUserInput => {
@@ -65,13 +66,13 @@ getUserInput => {
 };
 ```
 
-ผู้เรียนสามารถ `GET` `/api/convert` ด้วยพารามิเตอร์เดียวที่มีตัวเลขและหน่วยที่ยอมรับและแปลงได้ (Hint: แยกอินพุตโดยมองหา index ของอักขระตัวแรกที่จะเป็นจุดเริ่มต้นของหน่วย) 
+ในการส่ง `GET` request ไปยัง `/api/convert` โดยใช้พารามิเตอร์เดียวที่ใช้ตัวเลขและหน่วยที่ถูกต้อง ต้องแปลงหน่วยได้ (Hint: ให้ split input และหา index ของตัวอักษรตัวแรก โดยตำแหน่งนี้จะเป็นตำแหน่งเริ่มต้นของหน่วยวัด) 
 
 ```js
 
 ```
 
-ผู้เรียนสามารถแปลง `'gal'` เป็น `'L'` และในทางกลับกันได้ (1 แกลลอน เท่ากับ 3.78541 ลิตร) 
+ต้องแปลง `'gal'` เป็น `'L'` และแปลงกลับได้ (1 gal เป็น 3.78541 L) 
 
 ```js
 async getUserInput => {
@@ -94,7 +95,7 @@ async getUserInput => {
 };
 ```
 
-ผู้เรียนสามารถแปลง `'lbs'` เป็น `'kg'`  และในทางกลับกันได้ (1 ปอนด์ เท่ากับ 0.453592 กก.) 
+ต้องแปลง `'lbs'` เป็น `'kg'`  และแปลงกลับได้ (1 lbs เป็น 0.453592 kg) 
 
 ```js
 async getUserInput => {
@@ -117,7 +118,7 @@ async getUserInput => {
 };
 ```
 
-ผู้เรียนสามารถแปลง `'mi'` เป็น `'km'` และในทางกลับกันได้ (1 ไมล์ เท่ากับ 1.60934 km) 
+ต้องแปลง `'mi'` เป็น `'km'` และแปลงกลับได้ (1 mi เป็น 1.60934 km) 
 
 ```js
 async getUserInput => {
@@ -140,7 +141,7 @@ async getUserInput => {
 };
 ```
 
-หน่วยรับเข้าทั้งหมดควรรับทั้งตัวพิมพ์ใหญ่และตัวพิมพ์เล็กได้ แต่ควรส่งคืนทั้ง "initUnit" และ "returnUnit" เป็นตัวพิมพ์เล็ก ยกเว้นลิตร (liter) ซึ่งควรแสดงเป็นตัวพิมพ์ใหญ่ "L" 
+หน่วยของ input ต้องเป็นได้ทั้งทั้งตัวพิมพ์ใหญ่และตัวพิมพ์เล็ก แต่ค่าที่คืนออกมาใน "initUnit" และ "returnUnit" ต้องเป็นตัวพิมพ์เล็ก ยกเว้นลิตร (liter) ซึ่งควรแสดงเป็นตัวพิมพ์ใหญ่ `'L'` 
 
 ```js
 async getUserInput => {
@@ -191,7 +192,6 @@ async getUserInput => {
 };
 ```
 
-If both the unit and number are invalid, returned will be `'invalid number and unit'`.
 หากทั้งหน่วยและเลขไม่ถูกต้อง จะคืนค่าเป็น `'invalid number and unit'`
 
 ```js
@@ -210,7 +210,7 @@ async getUserInput => {
 };
 ```
 
-สามารถใช้เศษส่วน ทศนิยม หรือทั้งสองอย่างในพารามิเตอร์ (เช่น 5, 1/2, 2.5/6) แต่ถ้าไม่ได้ระบุอะไรเลย ค่าเริ่มต้นจะอยู่ที่ 1 
+สามารถใช้เศษส่วน ทศนิยม หรือทั้งสองอย่างในพารามิเตอร์ได้ (เช่น 5, 1/2, 2.5/6) แต่ถ้าไม่ได้ระบุอะไรเลย ค่า default จะเป็น 1 
 
 ```js
 async getUserInput => {
@@ -241,7 +241,7 @@ async getUserInput => {
 };
 ```
 
-การคืนค่าของจะประกอบด้วย `initNum`, `initUnit`, `returnNum`, `returnUnit` และ `string' ที่สะกดหน่วยในรูปแบบ `'{initNum} {initUnitString} ที่แปลงเป็น {returnNum} {returnUnitString}'` โดยให้ผลเป็นทศนิยม 5 ตำแหน่ง 
+ค่าที่คืนมาจะต้องมี property `initNum`, `initUnit`, `returnNum`, `returnUnit` และ `string` ที่สะกดหน่วยในรูปแบบ `'{initNum} {initUnitString} ที่แปลงเป็น {returnNum} {returnUnitString}'` โดยให้ผลลัพย์เป็นทศนิยม 5 ตำแหน่ง 
 
 ```js
 async getUserInput => {
@@ -258,7 +258,7 @@ async getUserInput => {
 };
 ```
 
-การทดสอบทั้ง 16 หน่วยเสร็จสมบูรณ์และผ่าน 
+การทดสอบทั้ง 16 ตัวต้องเสร็จสมบูรณ์และผ่าน 
 
 ```js
 async getUserInput => {
@@ -283,7 +283,7 @@ async getUserInput => {
 };
 ```
 
-การทดสอบการใช้งาน (functional tests) ทั้งหมด 5 รายการเสร็จสมบูรณ์และผ่าน
+functional test ทั้งหมด 5 ตัวต้องเสร็จสมบูรณ์และผ่าน
  
 ```js
 async getUserInput => {

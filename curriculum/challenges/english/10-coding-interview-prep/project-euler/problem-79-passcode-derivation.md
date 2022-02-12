@@ -8,33 +8,33 @@ dashedName: problem-79-passcode-derivation
 
 # --description--
 
-วิธีการรักษาความปลอดภัยทั่วไปที่ใช้สำหรับธนาคารออนไลน์คือการขอให้ผู้ใช้สุ่มอักขระสามตัวจากรหัสผ่าน ตัวอย่างเช่น หากรหัสผ่านคือ `531278` พวกเขาอาจถามถึงอักขระที่ 2, 3 และ 5 คำตอบที่คาดหวังจะเป็น: `317`
+วิธีการรักษาความปลอดภัยทั่วไปที่ใช้สำหรับธนาคารออนไลน์คือการขอให้ผู้ใช้สุ่มอักขระสามตัวจากรหัสผ่าน เช่น หากรหัสผ่านคือ `531278` พวกเขาอาจถามถึงอักขระที่ 2, 3 และ 5 คำตอบที่คาดหวังจะเป็น: `317`
 
 arrays, `keylog1`, `keylog2`, และ `keylog3`, มีการพยายามเข้าสู่ระบบสำเร็จห้าสิบครั้ง
 
-เนื่องจากมีการถามอักขระสามตัวตามลำดับเสมอ ให้วิเคราะห์arrayเพื่อกำหนดรหัสผ่านลับที่สั้นที่สุดเท่าที่จะเป็นไปได้ซึ่งไม่ทราบความยาว
+เนื่องจากมีการถามอักขระสามตัวตามลำดับเสมอ ให้วิเคราะห์ array เพื่อกำหนดรหัสผ่านลับที่สั้นที่สุดเท่าที่จะเป็นไปได้ซึ่งไม่ทราบความยาว
 
 # --hints--
 
-`passcodeDerivation(keylog1)` ควร return number.
+`passcodeDerivation(keylog1)` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof passcodeDerivation(_keylog1) === 'number');
 ```
 
-`passcodeDerivation(keylog1)` ควร return `531278`.
+`passcodeDerivation(keylog1)` ต้องคืนค่าเป็น `531278`
 
 ```js
 assert.strictEqual(passcodeDerivation(_keylog1), 531278);
 ```
 
-`passcodeDerivation(keylog2)` ควร return `1230567`.
+`passcodeDerivation(keylog2)` ต้องคืนค่าเป็น `1230567`
 
 ```js
 assert.strictEqual(passcodeDerivation(_keylog2), 1230567);
 ```
 
-`passcodeDerivation(keylog3)` ควร return `73162890`.
+`passcodeDerivation(keylog3)` ต้องคืนค่าเป็น `73162890`
 
 ```js
 assert.strictEqual(passcodeDerivation(_keylog3), 73162890);

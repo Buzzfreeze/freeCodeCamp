@@ -8,27 +8,27 @@ dashedName: convert-seconds-to-compound-duration
 
 # --description--
 
-ใช้ function:
+ห้เขียนฟังก์ชันตามเงื่อนไขนี้
 
 <ul>
-  <li>takes a positive integer representing a duration in seconds as input (e.g., <code>100</code>), and</li>
-  <li>returns a string which shows the same duration decomposed into weeks, days, hours, minutes, and seconds as detailed below (e.g., <code>1 min, 40 sec</code>).</li>
+  <li>รับค่าจำนวนเต็มบวกที่เป็นค่าของจำนวนวินาที (เช่น <code>100</code>) แล้ว</li>
+  <li>คืนค่าเป็นสตริงของจำนวนวินาทีนั้น ในหน่วย อาทิตย์ วัน ชั่วโมง นาที และวินาที ตามเงื่อนไขด้านล่าง (เช่น <code>1 min, 40 sec</code>)</li>
 </ul>
 
 แสดงให้เห็นว่าผ่านการทดสอบสามกรณีต่อไปนี้:
 
 <div style='font-size:115%; font-weight: bold;'>Test Cases</div>
 
-| Input number | Output number                         |
+| ข้อมูลที่ส่งเข้าไป | ข้อมูลที่ส่งออกมา                         |
 | ------------ | ------------------------------------- |
 | 7259         | <code>2 hr, 59 sec</code>             |
 | 86400        | <code>1 d</code>                      |
 | 6000000      | <code>9 wk, 6 d, 10 hr, 40 min</code> |
 
-<div style="font-size:115%; font-weight: bold;">Details</div>
+<div style="font-size:115%; font-weight: bold;">เงื่อนไข</div>
 <ul>
   <li>
-    The following five units ควร be used:
+    ต้องใช้หน่วยดังนี้:
 
 | Unit   | Suffix used in Output | Conversion            |
 | ------ | --------------------- | --------------------- |
@@ -40,37 +40,37 @@ dashedName: convert-seconds-to-compound-duration
 
   </li>
   <li>
-    However, <strong>only</strong> include quantities with non-zero values in the output (e.g., return <code>1 d</code> and not <code>0 wk, 1 d, 0 hr, 0 min, 0 sec</code>).
+    ต้องระบุ<strong>เฉพาะ</strong>หน่วยที่ไม่เป็น 0 เท่านั้น (เช่น คืนค่าเป็น <code>1 d</code> ไม่ใช่ <code>0 wk, 1 d, 0 hr, 0 min, 0 sec</code>)
   </li>
   <li>
-    Give larger units precedence over smaller ones as much as possible (e.g., return <code>2 min, 10 sec</code> and not <code>1 min, 70 sec</code> or <code>130 sec</code>).
+    ให้ใช้หน่อยที่ใหญ่กว่าเสมอ (เช่น ให้คืนค่าเป็น <code>2 min, 10 sec</code> แต่ไม่ใช่ <code>1 min, 70 sec</code> และไม่ใช่ <code>130 sec</code>).
   </li>
   <li>
-    Mimic the formatting shown in the test-cases (quantities sorted from largest unit to smallest and separated by comma+space; value and unit of each quantity separated by space).
+    ให้คืนค่าให้เหมือนกับ test case ด้านล่างให้มากที่สุด (เรียงหน่วยจากหน่วยใหญ่ ไปหน่วยเล็ก และคั่นแต่ละหน่วยด้วยคอมม่า + เว้นวรรค และคั่นระหว่างค่าและหน่วยด้วยเว้นวรรค)
   </li>
 </ul>
 
 # --hints--
 
-`convertSeconds` ควรเป็น function.
+`convertSeconds` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof convertSeconds === 'function');
 ```
 
-`convertSeconds(7259)` ควร return `2 hr, 59 sec`.
+`convertSeconds(7259)` ต้องคืนค่าเป็น `2 hr, 59 sec`
 
 ```js
 assert.equal(convertSeconds(testCases[0]), results[0]);
 ```
 
-`convertSeconds(86400)` ควร return `1 d`.
+`convertSeconds(86400)` ต้องคืนค่าเป็น `1 d`
 
 ```js
 assert.equal(convertSeconds(testCases[1]), results[1]);
 ```
 
-`convertSeconds(6000000)` ควร return `9 wk, 6 d, 10 hr, 40 min`.
+`convertSeconds(6000000)` ต้องคืนค่าเป็น `9 wk, 6 d, 10 hr, 40 min`
 
 ```js
 assert.equal(convertSeconds(testCases[2]), results[2]);

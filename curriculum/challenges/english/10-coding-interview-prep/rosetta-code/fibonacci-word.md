@@ -8,33 +8,33 @@ dashedName: fibonacci-word
 
 # --description--
 
-Fibonacci Word อาจถูกสร้างขึ้นในลักษณะที่คล้ายคลึงกับ Fibonacci Sequence [as described here](https://hal.archives-ouvertes.fr/docs/00/36/79/72/PDF/The_Fibonacci_word_fractal.pdf):
+Fibonacci Word จะคล้ายกับ Fibonacci Sequence [ลองอ่านที่นี่](https://hal.archives-ouvertes.fr/docs/00/36/79/72/PDF/The_Fibonacci_word_fractal.pdf):
 
-<pre>Define  F_Word<sub>1</sub>  as  <strong>1</strong>
-Define  F_Word<sub>2</sub>  as  <strong>0</strong>
-Form   F_Word<sub>3</sub>  as  F_Word<sub>2</sub>   concatenated with  F_Word<sub>1</sub>   i.e.:  <strong>01</strong>
-Form   F_Word<sub>n</sub>  as  F_Word<sub>n-1</sub>  concatenated with  F_word<sub>n-2</sub>
+<pre>ประกาศ  F_Word<sub>1</sub>  เป็น  <strong>1</strong>
+ประกาศ  F_Word<sub>2</sub>  เป็น  <strong>0</strong>
+สร้าง   F_Word<sub>3</sub>  โดยนำ  F_Word<sub>2</sub>   มาเชื่อมกับ  F_Word<sub>1</sub>   เช่น:  <strong>01</strong>
+สร้าง   F_Word<sub>n</sub>  โดยนำ  F_Word<sub>n-1</sub>  มาเชื่อมกับ  F_word<sub>n-2</sub>
 </pre>
 
 # --instructions--
 
-เขียนฟังก์ชันเพื่อคืนค่าคำFibonacci สูงถึง `n` `n` จะถูกจัดเตรียมเป็นพารามิเตอร์ของฟังก์ชัน ฟังก์ชันควร return array ของ object วัตถุควรอยู่ในรูปแบบ: `{ N: 1, Length: 1, Entropy: 0, Word: '1' }`.
+ให้เขียนฟังก์ชันเพื่อคืนค่า Fibonacci Word ไปจนถึงจำนวนที่ `n` โดยที่ฟังก์ชันนี้จะต้องรับพารามิเตอร์ `n` และฟังก์ชันต้องคืนค่าเป็น array ของ object โดย object ต้องมีรูปแบบเป็น `{ N: 1, Length: 1, Entropy: 0, Word: '1' }`.
 
 # --hints--
 
-`fibWord` ควรเป็น function.
+`fibWord` ต้องคืนค่าเป็น
 
 ```js
 assert(typeof fibWord === 'function');
 ```
 
-`fibWord(5)` ควร return array.
+`fibWord(5)` ต้องคืนค่าเป็น array
 
 ```js
 assert(Array.isArray(fibWord(5)));
 ```
 
-`fibWord(5)` ควร return `[{ N:1, Length:1, Entropy:0, Word:"1" },{ N:2, Length:1, Entropy:0, Word:"0" },{ N:3, Length:2, Entropy:1, Word:"01" },{ N:4, Length:3, Entropy:0.9182958340544896, Word:"010" },{ N:5, Length:5, Entropy:0.9709505944546688, Word:"01001" }]`.
+`fibWord(5)` ต้องคืนค่าเป็น `[{ N:1, Length:1, Entropy:0, Word:"1" },{ N:2, Length:1, Entropy:0, Word:"0" },{ N:3, Length:2, Entropy:1, Word:"01" },{ N:4, Length:3, Entropy:0.9182958340544896, Word:"010" },{ N:5, Length:5, Entropy:0.9709505944546688, Word:"01001" }]`
 
 ```js
 assert.deepEqual(fibWord(5), ans);

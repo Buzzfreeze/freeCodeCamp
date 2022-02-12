@@ -8,7 +8,9 @@ dashedName: sorting-algorithmspermutation-sort
 
 # --description--
 
-เขียนฟังก์ชันเพื่อใช้การเรียงลำดับการเรียงสับเปลี่ยน ซึ่งดำเนินการโดยสร้างการเรียงสับเปลี่ยนที่เป็นไปได้ของarray inputจนกว่าจะพบการเรียงลำดับ ฟังก์ชันควรส่งคืนarrayที่เรียงลำดับ
+ให้เขียนฟังก์ชันเพื่อทำการเรียง array โดยใช้ permutation sort
+
+permutation sort จะทำการลองสลับ array ใหม่ไปเรื่อย ๆ จนกว่าจะเจอการเรียงที่ถูกต้อง
 
 Pseudocode:
 
@@ -19,37 +21,37 @@ Pseudocode:
 
 # --hints--
 
-`permutationSort` ควรเป็น function.
+`permutationSort` ต้องเป็นฟังก์ชัน
 
 ```js
 assert(typeof permutationSort == 'function');
 ```
 
-`permutationSort([25, 32, 12, 7, 20])` ควร return array.
+`permutationSort([25, 32, 12, 7, 20])` ต้องคืนค่าเป็น array
 
 ```js
 assert(Array.isArray(permutationSort([25, 32, 12, 7, 20])));
 ```
 
-`permutationSort([25, 32, 12, 7, 20])` ควร return `[7, 12, 20, 25, 32]`.
+`permutationSort([25, 32, 12, 7, 20])` ต้องคืนค่าเป็น `[7, 12, 20, 25, 32]`
 
 ```js
 assert.deepEqual(permutationSort([25, 32, 12, 7, 20]), [7, 12, 20, 25, 32]);
 ```
 
-`permutationSort([38, 45, 35, 8, 13])` ควร return `[8, 13, 35, 38, 45]`.
+`permutationSort([38, 45, 35, 8, 13])` ต้องคืนค่าเป็น `[8, 13, 35, 38, 45]`
 
 ```js
 assert.deepEqual(permutationSort([38, 45, 35, 8, 13]), [8, 13, 35, 38, 45]);
 ```
 
-`permutationSort([43, 36, 20, 34, 24])` ควร return `[20, 24, 34, 36, 43]`.
+`permutationSort([43, 36, 20, 34, 24])` ต้องคืนค่าเป็น `[20, 24, 34, 36, 43]`
 
 ```js
 assert.deepEqual(permutationSort([43, 36, 20, 34, 24]), [20, 24, 34, 36, 43]);
 ```
 
-`permutationSort([12, 33, 26, 18, 1, 16, 38])` ควร return `[1, 12, 16, 18, 26, 33, 38]`.
+`permutationSort([12, 33, 26, 18, 1, 16, 38])` ต้องคืนค่าเป็น `[1, 12, 16, 18, 26, 33, 38]`
 
 ```js
 assert.deepEqual(permutationSort([12, 33, 26, 18, 1, 16, 38]), [
@@ -63,7 +65,7 @@ assert.deepEqual(permutationSort([12, 33, 26, 18, 1, 16, 38]), [
 ]);
 ```
 
-`permutationSort([3, 39, 48, 16, 1, 4, 29])` ควร return `[1, 3, 4, 16, 29, 39, 48]`.
+`permutationSort([3, 39, 48, 16, 1, 4, 29])` ต้องคืนค่าเป็น `[1, 3, 4, 16, 29, 39, 48]`
 
 ```js
 assert.deepEqual(permutationSort([3, 39, 48, 16, 1, 4, 29]), [

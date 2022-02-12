@@ -8,21 +8,28 @@ dashedName: remove-an-element-from-a-max-heap
 
 # --description--
 
-ตอนนี้เราสามารถเพิ่ม element ลงใน heap ของเราแล้ว มาดูกันว่าเราจะลบ element ได้อย่างไร การลบและการแทรก element ทั้งสองวิธีต้องใช้ตรรกะที่คล้ายคลึงกัน ใน heap สูงสุดคุณมักจะต้องการลบค่าที่มากที่สุดออกไป ดังนั้นนี่จึงเกี่ยวข้องกับการแยกค่าออกจาก root ของ tree ของเรา สิ่งนี้จะทำลาย heap property ของ tree ของเรา ดังนั้นเราต้องสร้างมันขึ้นมาใหม่ในทางใดทางหนึ่ง โดยทั่วไปสำหรับ heap สูงสุด ทำได้ด้วยวิธีต่อไปนี้:
+เราเพิ่ม element ลงใน heap เป็นแล้ว คราวนี้มาดูวิธีการลบ element บ้างดีกว่า 
+
+การลบและการเพิ่ม element ก็มี logic คล้ายๆกัน  
+โดยใน max heap คุณมักจะต้องการลบค่าที่มากที่สุดออก ซึ่งก็เท่ากับว่าเป็นการลบ root ของ tree ออก ซึ่งการลบ root ออกแบบนี้จะเป็นการทำให้คุณสมบัติของ heap หายไป ทำให้เราต้องสร้างคุณสมบัติของ heap ขึ้นมากใหม่  
+
+โดยทั่วไปเราจะใช้วิธ๊นี้ใน max heap:
 
 <ol>
-  <li>ย้าย element สุดท้ายใน heap ไปในตำแหน่ง root</li>
-  <li>ถ้าหาก child ใดๆ ของ root นั้นมากกว่า root ให้สลับ root กับ child ตัวที่มีค่ามากกว่ามัน</li>
-  <li>สลับต่อไปเรื่อยๆ จน parent ทั้งหมดนั้นมีค่ามากกว่า child ทั้งสองของมัน หรือคุณทำไปจนถึงระดับสุดท้ายของ tree</li>
+  <li>ย้าย element สุดท้ายใน heap ไปไว้ที่ root</li>
+  <li>ถ้ามี child ตัวไหนมีค่ามากกว่า root ให้สลับ root กับ child ตัวนั้น</li>
+  <li>สลับต่อไปเรื่อยๆ จน parent ทั้งหมดนั้นมีค่ามากกว่า child ทั้งสองตัว หรือคุณทำไปจนถึงระดับล่างสุดของ tree</li>
 </ol>
 
 # --instructions--
 
-คำแนะนำ: เพิ่ม method ให้กับ heap สูงสุดของเราที่เรียกว่า `remove` โดยที่ method นี้ควรคืนค่าสูงสุดที่เพิ่มไปยัง heap สูงสุดแล้วลบออกจาก heap  นอกจากนี้ยังควรจัดลำดับ heap ใหม่เพื่อรักษาคุณสมบัติของ heap  หลังจากลบ element แล้ว element ที่ค่ามากที่สุดถัดไปที่เหลืออยู่ใน heap ควรกลายเป็นรูท
+ให้เพิ่ม method `remove` ให้กับ heap ของเรา โดยที่ method นี้ควรคืนค่าสูงสุดใน max heap ออกมา แล้วลบค่านั้นออกจาก heap ด้วย 
+
+นอกจากนี้ยังต้องจัดลำดับ heap ใหม่เพื่อรักษาคุณสมบัติของ heap  หลังจากลบ element แล้ว และ element ตัวที่มีค่ามากที่สุดที่เหลืออยู่ใน heap ต้องกลายเป็น root
 
 # --hints--
 
-ควรมีโครงสร้างข้อมูล Max Heap
+ต้องมีโครงสร้างข้อมูล Max Heap
 
 ```js
 assert(
@@ -36,7 +43,7 @@ assert(
 );
 ```
 
-MaxHeap ควรมี method ที่เรียกว่า print
+ต้องมี method `print` ใน MaxHeap
 
 ```js
 assert(
@@ -52,7 +59,7 @@ assert(
 );
 ```
 
-MaxHeap ควรมี method ที่เรียกว่า insert
+ต้องมี method `insert` ใน MaxHeap
 
 ```js
 assert(
@@ -68,7 +75,7 @@ assert(
 );
 ```
 
-MaxHeap ควรมี method ที่เรียกว่า remove
+ต้องมี method `remove` ใน MaxHeap
 
 ```js
 assert(
@@ -84,7 +91,7 @@ assert(
 );
 ```
 
-remove method ควรลบ element ที่มีค่ามากที่สุกออกจาก max heap ขณะที่ยังคงคุณสมบัติของ max heap ไว้
+method `remove` ต้องลบ element ที่มีค่ามากที่สุดออกจาก max heap ในขณะที่ยังคงคุณสมบัติของ max heap ไว้
 
 ```js
 assert(
@@ -138,9 +145,9 @@ var MaxHeap = function () {
   this.print = () => {
     return this.heap;
   }
-  // Only change code below this line
+  // แก้ไขโค้ดใต้บรรทัดนี้เท่านั้น
 
-  // Only change code above this line
+  // แก้ไขโค้ดเหนือบรรทัดนี้เท่านั้น
 };
 ```
 

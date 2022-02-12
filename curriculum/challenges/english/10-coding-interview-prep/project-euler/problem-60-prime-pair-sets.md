@@ -15,13 +15,13 @@ dashedName: problem-60-prime-pair-sets
 
 # --hints--
 
-`primePairSets()` ควร return number.
+`primePairSets()` ต้องคืนค่าเป็นตัวเลข
 
 ```js
 assert(typeof primePairSets() === 'number');
 ```
 
-`primePairSets()` ควร return 26033.
+`primePairSets()` ต้องคืนค่าเป็น 26033
 
 ```js
 assert.strictEqual(primePairSets(), 26033);

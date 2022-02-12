@@ -8,27 +8,27 @@ dashedName: vector-cross-product
 
 # --description--
 
-เวกเตอร์ถูกกำหนดให้มีสามมิติตามที่แสดงโดยcollectionของตัวเลขสามตัว: (X, Y, Z).
+เวกเตอร์สามมิติจะมีค่าทั้งหมดสามค่า (X, Y, Z)
 
 # --instructions--
 
-เขียนฟังก์ชันที่ใช้เวกเตอร์ (อาร์เรย์) สองตัวเป็นinputและคำนวณผลคูณของพวกมัน ฟังก์ชันของคุณควรส่งคืน "null" สำหรับinputที่ไม่ถูกต้อง เช่น เวกเตอร์ที่มีความยาวต่างกัน
+ให้เขียนฟังก์ชันที่รับเวกเตอร์สามมิติเป็น array และคืนค่าเป็นผลคูณของเวกเตอร์นั้นในรูปแบบ array
 
 # --hints--
 
-`crossProduct` ควรเป็น function.
+`crossProduct` ต้องเป็นฟังก์ชัน
 
 ```js
 assert.equal(typeof crossProduct, 'function');
 ```
 
-`crossProduct()` ควร return null.
+`crossProduct()` ต้องคืนค่าเป็น null
 
 ```js
 assert.equal(crossProduct(), null);
 ```
 
-`crossProduct([1, 2, 3], [4, 5, 6])` ควร return `[-3, 6, -3]`.
+`crossProduct([1, 2, 3], [4, 5, 6])` ต้องคืนค่าเป็น `[-3, 6, -3]`
 
 ```js
 assert.deepEqual(res12, exp12);
